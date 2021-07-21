@@ -53,6 +53,8 @@ public enum ElasticMapReduceActions implements Action {
     DescribeJobFlows("elasticmapreduce:DescribeJobFlows"),
     /** Action for the DescribeNotebookExecution operation. */
     DescribeNotebookExecution("elasticmapreduce:DescribeNotebookExecution"),
+    /** Action for the DescribeReleaseLabel operation. */
+    DescribeReleaseLabel("elasticmapreduce:DescribeReleaseLabel"),
     /** Action for the DescribeSecurityConfiguration operation. */
     DescribeSecurityConfiguration("elasticmapreduce:DescribeSecurityConfiguration"),
     /** Action for the DescribeStep operation. */
@@ -77,6 +79,8 @@ public enum ElasticMapReduceActions implements Action {
     ListInstances("elasticmapreduce:ListInstances"),
     /** Action for the ListNotebookExecutions operation. */
     ListNotebookExecutions("elasticmapreduce:ListNotebookExecutions"),
+    /** Action for the ListReleaseLabels operation. */
+    ListReleaseLabels("elasticmapreduce:ListReleaseLabels"),
     /** Action for the ListSecurityConfigurations operation. */
     ListSecurityConfigurations("elasticmapreduce:ListSecurityConfigurations"),
     /** Action for the ListSteps operation. */

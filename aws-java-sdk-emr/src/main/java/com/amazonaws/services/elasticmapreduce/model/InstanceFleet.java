@@ -122,8 +122,7 @@ public class InstanceFleet implements Serializable, Cloneable, StructuredPojo {
     private Integer provisionedSpotCapacity;
     /**
      * <p>
-     * The specification for the instance types that comprise an instance fleet. Up to five unique instance
-     * specifications may be defined for each instance fleet.
+     * An array of specifications for the instance types that comprise an instance fleet.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<InstanceTypeSpecification> instanceTypeSpecifications;
@@ -703,12 +702,10 @@ public class InstanceFleet implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The specification for the instance types that comprise an instance fleet. Up to five unique instance
-     * specifications may be defined for each instance fleet.
+     * An array of specifications for the instance types that comprise an instance fleet.
      * </p>
      * 
-     * @return The specification for the instance types that comprise an instance fleet. Up to five unique instance
-     *         specifications may be defined for each instance fleet.
+     * @return An array of specifications for the instance types that comprise an instance fleet.
      */
 
     public java.util.List<InstanceTypeSpecification> getInstanceTypeSpecifications() {
@@ -720,13 +717,11 @@ public class InstanceFleet implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The specification for the instance types that comprise an instance fleet. Up to five unique instance
-     * specifications may be defined for each instance fleet.
+     * An array of specifications for the instance types that comprise an instance fleet.
      * </p>
      * 
      * @param instanceTypeSpecifications
-     *        The specification for the instance types that comprise an instance fleet. Up to five unique instance
-     *        specifications may be defined for each instance fleet.
+     *        An array of specifications for the instance types that comprise an instance fleet.
      */
 
     public void setInstanceTypeSpecifications(java.util.Collection<InstanceTypeSpecification> instanceTypeSpecifications) {
@@ -740,8 +735,7 @@ public class InstanceFleet implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The specification for the instance types that comprise an instance fleet. Up to five unique instance
-     * specifications may be defined for each instance fleet.
+     * An array of specifications for the instance types that comprise an instance fleet.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -750,8 +744,7 @@ public class InstanceFleet implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param instanceTypeSpecifications
-     *        The specification for the instance types that comprise an instance fleet. Up to five unique instance
-     *        specifications may be defined for each instance fleet.
+     *        An array of specifications for the instance types that comprise an instance fleet.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -767,13 +760,11 @@ public class InstanceFleet implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The specification for the instance types that comprise an instance fleet. Up to five unique instance
-     * specifications may be defined for each instance fleet.
+     * An array of specifications for the instance types that comprise an instance fleet.
      * </p>
      * 
      * @param instanceTypeSpecifications
-     *        The specification for the instance types that comprise an instance fleet. Up to five unique instance
-     *        specifications may be defined for each instance fleet.
+     *        An array of specifications for the instance types that comprise an instance fleet.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

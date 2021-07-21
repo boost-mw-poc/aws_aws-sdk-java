@@ -1422,7 +1422,7 @@ public interface AWSkendraAsync extends AWSkendra {
 
     /**
      * <p>
-     * Enables you to provide feedback to Amazon Kendra to improve the performance of the service.
+     * Enables you to provide feedback to Amazon Kendra to improve the performance of your index.
      * </p>
      * 
      * @param submitFeedbackRequest
@@ -1435,7 +1435,7 @@ public interface AWSkendraAsync extends AWSkendra {
 
     /**
      * <p>
-     * Enables you to provide feedback to Amazon Kendra to improve the performance of the service.
+     * Enables you to provide feedback to Amazon Kendra to improve the performance of your index.
      * </p>
      * 
      * @param submitFeedbackRequest

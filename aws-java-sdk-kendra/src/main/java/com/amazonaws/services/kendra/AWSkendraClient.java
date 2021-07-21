@@ -2450,7 +2450,7 @@ public class AWSkendraClient extends AmazonWebServiceClient implements AWSkendra
 
     /**
      * <p>
-     * Enables you to provide feedback to Amazon Kendra to improve the performance of the service.
+     * Enables you to provide feedback to Amazon Kendra to improve the performance of your index.
      * </p>
      * 
      * @param submitFeedbackRequest

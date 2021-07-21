@@ -33,14 +33,14 @@ public class CreateDatasetGroupRequest extends com.amazonaws.AmazonWebServiceReq
     private String name;
     /**
      * <p>
-     * The ARN of the IAM role that has permissions to access the KMS key. Supplying an IAM role is only valid when also
-     * specifying a KMS key.
+     * The ARN of the Identity and Access Management (IAM) role that has permissions to access the Key Management
+     * Service (KMS) key. Supplying an IAM role is only valid when also specifying a KMS key.
      * </p>
      */
     private String roleArn;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of a KMS key used to encrypt the datasets.
+     * The Amazon Resource Name (ARN) of a Key Management Service (KMS) key used to encrypt the datasets.
      * </p>
      */
     private String kmsKeyArn;
@@ -87,13 +87,13 @@ public class CreateDatasetGroupRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The ARN of the IAM role that has permissions to access the KMS key. Supplying an IAM role is only valid when also
-     * specifying a KMS key.
+     * The ARN of the Identity and Access Management (IAM) role that has permissions to access the Key Management
+     * Service (KMS) key. Supplying an IAM role is only valid when also specifying a KMS key.
      * </p>
      * 
      * @param roleArn
-     *        The ARN of the IAM role that has permissions to access the KMS key. Supplying an IAM role is only valid
-     *        when also specifying a KMS key.
+     *        The ARN of the Identity and Access Management (IAM) role that has permissions to access the Key Management
+     *        Service (KMS) key. Supplying an IAM role is only valid when also specifying a KMS key.
      */
 
     public void setRoleArn(String roleArn) {
@@ -102,12 +102,12 @@ public class CreateDatasetGroupRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The ARN of the IAM role that has permissions to access the KMS key. Supplying an IAM role is only valid when also
-     * specifying a KMS key.
+     * The ARN of the Identity and Access Management (IAM) role that has permissions to access the Key Management
+     * Service (KMS) key. Supplying an IAM role is only valid when also specifying a KMS key.
      * </p>
      * 
-     * @return The ARN of the IAM role that has permissions to access the KMS key. Supplying an IAM role is only valid
-     *         when also specifying a KMS key.
+     * @return The ARN of the Identity and Access Management (IAM) role that has permissions to access the Key
+     *         Management Service (KMS) key. Supplying an IAM role is only valid when also specifying a KMS key.
      */
 
     public String getRoleArn() {
@@ -116,13 +116,13 @@ public class CreateDatasetGroupRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The ARN of the IAM role that has permissions to access the KMS key. Supplying an IAM role is only valid when also
-     * specifying a KMS key.
+     * The ARN of the Identity and Access Management (IAM) role that has permissions to access the Key Management
+     * Service (KMS) key. Supplying an IAM role is only valid when also specifying a KMS key.
      * </p>
      * 
      * @param roleArn
-     *        The ARN of the IAM role that has permissions to access the KMS key. Supplying an IAM role is only valid
-     *        when also specifying a KMS key.
+     *        The ARN of the Identity and Access Management (IAM) role that has permissions to access the Key Management
+     *        Service (KMS) key. Supplying an IAM role is only valid when also specifying a KMS key.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -133,11 +133,11 @@ public class CreateDatasetGroupRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of a KMS key used to encrypt the datasets.
+     * The Amazon Resource Name (ARN) of a Key Management Service (KMS) key used to encrypt the datasets.
      * </p>
      * 
      * @param kmsKeyArn
-     *        The Amazon Resource Name (ARN) of a KMS key used to encrypt the datasets.
+     *        The Amazon Resource Name (ARN) of a Key Management Service (KMS) key used to encrypt the datasets.
      */
 
     public void setKmsKeyArn(String kmsKeyArn) {
@@ -146,10 +146,10 @@ public class CreateDatasetGroupRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of a KMS key used to encrypt the datasets.
+     * The Amazon Resource Name (ARN) of a Key Management Service (KMS) key used to encrypt the datasets.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of a KMS key used to encrypt the datasets.
+     * @return The Amazon Resource Name (ARN) of a Key Management Service (KMS) key used to encrypt the datasets.
      */
 
     public String getKmsKeyArn() {
@@ -158,11 +158,11 @@ public class CreateDatasetGroupRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of a KMS key used to encrypt the datasets.
+     * The Amazon Resource Name (ARN) of a Key Management Service (KMS) key used to encrypt the datasets.
      * </p>
      * 
      * @param kmsKeyArn
-     *        The Amazon Resource Name (ARN) of a KMS key used to encrypt the datasets.
+     *        The Amazon Resource Name (ARN) of a Key Management Service (KMS) key used to encrypt the datasets.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

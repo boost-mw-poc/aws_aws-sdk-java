@@ -42,8 +42,8 @@ public class UpdateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * Lists the service instances to add and the existing service instances to remain. Omit the existing service
      * instances to delete from the list. <i>Don't</i> include edits to the existing service instances or pipeline. For
      * more information, see <i>Edit a service</i> in the <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-svc-update.html">AWS Proton Administration
-     * Guide</a> or the <a href="https://docs.aws.amazon.com/proton/latest/userguide/ug-svc-update.html">AWS Proton User
+     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-svc-update.html">AWS Proton Administrator Guide</a>
+     * or the <a href="https://docs.aws.amazon.com/proton/latest/userguide/ug-svc-update.html">AWS Proton User
      * Guide</a>.
      * </p>
      */
@@ -134,8 +134,8 @@ public class UpdateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * Lists the service instances to add and the existing service instances to remain. Omit the existing service
      * instances to delete from the list. <i>Don't</i> include edits to the existing service instances or pipeline. For
      * more information, see <i>Edit a service</i> in the <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-svc-update.html">AWS Proton Administration
-     * Guide</a> or the <a href="https://docs.aws.amazon.com/proton/latest/userguide/ug-svc-update.html">AWS Proton User
+     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-svc-update.html">AWS Proton Administrator Guide</a>
+     * or the <a href="https://docs.aws.amazon.com/proton/latest/userguide/ug-svc-update.html">AWS Proton User
      * Guide</a>.
      * </p>
      * 
@@ -143,7 +143,7 @@ public class UpdateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        Lists the service instances to add and the existing service instances to remain. Omit the existing service
      *        instances to delete from the list. <i>Don't</i> include edits to the existing service instances or
      *        pipeline. For more information, see <i>Edit a service</i> in the <a
-     *        href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-svc-update.html">AWS Proton Administration
+     *        href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-svc-update.html">AWS Proton Administrator
      *        Guide</a> or the <a href="https://docs.aws.amazon.com/proton/latest/userguide/ug-svc-update.html">AWS
      *        Proton User Guide</a>.
      */
@@ -157,15 +157,15 @@ public class UpdateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * Lists the service instances to add and the existing service instances to remain. Omit the existing service
      * instances to delete from the list. <i>Don't</i> include edits to the existing service instances or pipeline. For
      * more information, see <i>Edit a service</i> in the <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-svc-update.html">AWS Proton Administration
-     * Guide</a> or the <a href="https://docs.aws.amazon.com/proton/latest/userguide/ug-svc-update.html">AWS Proton User
+     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-svc-update.html">AWS Proton Administrator Guide</a>
+     * or the <a href="https://docs.aws.amazon.com/proton/latest/userguide/ug-svc-update.html">AWS Proton User
      * Guide</a>.
      * </p>
      * 
      * @return Lists the service instances to add and the existing service instances to remain. Omit the existing
      *         service instances to delete from the list. <i>Don't</i> include edits to the existing service instances
      *         or pipeline. For more information, see <i>Edit a service</i> in the <a
-     *         href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-svc-update.html">AWS Proton Administration
+     *         href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-svc-update.html">AWS Proton Administrator
      *         Guide</a> or the <a href="https://docs.aws.amazon.com/proton/latest/userguide/ug-svc-update.html">AWS
      *         Proton User Guide</a>.
      */
@@ -179,8 +179,8 @@ public class UpdateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * Lists the service instances to add and the existing service instances to remain. Omit the existing service
      * instances to delete from the list. <i>Don't</i> include edits to the existing service instances or pipeline. For
      * more information, see <i>Edit a service</i> in the <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-svc-update.html">AWS Proton Administration
-     * Guide</a> or the <a href="https://docs.aws.amazon.com/proton/latest/userguide/ug-svc-update.html">AWS Proton User
+     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-svc-update.html">AWS Proton Administrator Guide</a>
+     * or the <a href="https://docs.aws.amazon.com/proton/latest/userguide/ug-svc-update.html">AWS Proton User
      * Guide</a>.
      * </p>
      * 
@@ -188,7 +188,7 @@ public class UpdateServiceRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        Lists the service instances to add and the existing service instances to remain. Omit the existing service
      *        instances to delete from the list. <i>Don't</i> include edits to the existing service instances or
      *        pipeline. For more information, see <i>Edit a service</i> in the <a
-     *        href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-svc-update.html">AWS Proton Administration
+     *        href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-svc-update.html">AWS Proton Administrator
      *        Guide</a> or the <a href="https://docs.aws.amazon.com/proton/latest/userguide/ug-svc-update.html">AWS
      *        Proton User Guide</a>.
      * @return Returns a reference to this object so that method calls can be chained together.

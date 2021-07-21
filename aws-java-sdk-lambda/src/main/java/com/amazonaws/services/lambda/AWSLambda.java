@@ -590,6 +590,8 @@ public interface AWSLambda {
      *         One of the parameters in the request is invalid.
      * @throws TooManyRequestsException
      *         The request throughput limit was exceeded.
+     * @throws ResourceConflictException
+     *         The resource already exists, or another operation is in progress.
      * @sample AWSLambda.DeleteFunctionEventInvokeConfig
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/DeleteFunctionEventInvokeConfig"
      *      target="_top">AWS API Documentation</a>
@@ -1519,6 +1521,8 @@ public interface AWSLambda {
      *         One of the parameters in the request is invalid.
      * @throws TooManyRequestsException
      *         The request throughput limit was exceeded.
+     * @throws ResourceConflictException
+     *         The resource already exists, or another operation is in progress.
      * @sample AWSLambda.PutFunctionEventInvokeConfig
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/PutFunctionEventInvokeConfig"
      *      target="_top">AWS API Documentation</a>
@@ -1874,6 +1878,8 @@ public interface AWSLambda {
      *         One of the parameters in the request is invalid.
      * @throws TooManyRequestsException
      *         The request throughput limit was exceeded.
+     * @throws ResourceConflictException
+     *         The resource already exists, or another operation is in progress.
      * @sample AWSLambda.UpdateFunctionEventInvokeConfig
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/UpdateFunctionEventInvokeConfig"
      *      target="_top">AWS API Documentation</a>

@@ -92,8 +92,8 @@ public class InstanceGroup implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * </note>
      * <p>
-     * The list of configurations supplied for an EMR cluster instance group. You can specify a separate configuration
-     * for each instance group (master, core, and task).
+     * The list of configurations supplied for an Amazon EMR cluster instance group. You can specify a separate
+     * configuration for each instance group (master, core, and task).
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<Configuration> configurations;
@@ -589,8 +589,8 @@ public class InstanceGroup implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * </note>
      * <p>
-     * The list of configurations supplied for an EMR cluster instance group. You can specify a separate configuration
-     * for each instance group (master, core, and task).
+     * The list of configurations supplied for an Amazon EMR cluster instance group. You can specify a separate
+     * configuration for each instance group (master, core, and task).
      * </p>
      * 
      * @return <p>
@@ -598,7 +598,7 @@ public class InstanceGroup implements Serializable, Cloneable, StructuredPojo {
      *         </p>
      *         </note>
      *         <p>
-     *         The list of configurations supplied for an EMR cluster instance group. You can specify a separate
+     *         The list of configurations supplied for an Amazon EMR cluster instance group. You can specify a separate
      *         configuration for each instance group (master, core, and task).
      */
 
@@ -616,8 +616,8 @@ public class InstanceGroup implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * </note>
      * <p>
-     * The list of configurations supplied for an EMR cluster instance group. You can specify a separate configuration
-     * for each instance group (master, core, and task).
+     * The list of configurations supplied for an Amazon EMR cluster instance group. You can specify a separate
+     * configuration for each instance group (master, core, and task).
      * </p>
      * 
      * @param configurations
@@ -626,7 +626,7 @@ public class InstanceGroup implements Serializable, Cloneable, StructuredPojo {
      *        </p>
      *        </note>
      *        <p>
-     *        The list of configurations supplied for an EMR cluster instance group. You can specify a separate
+     *        The list of configurations supplied for an Amazon EMR cluster instance group. You can specify a separate
      *        configuration for each instance group (master, core, and task).
      */
 
@@ -646,8 +646,8 @@ public class InstanceGroup implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * </note>
      * <p>
-     * The list of configurations supplied for an EMR cluster instance group. You can specify a separate configuration
-     * for each instance group (master, core, and task).
+     * The list of configurations supplied for an Amazon EMR cluster instance group. You can specify a separate
+     * configuration for each instance group (master, core, and task).
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -661,7 +661,7 @@ public class InstanceGroup implements Serializable, Cloneable, StructuredPojo {
      *        </p>
      *        </note>
      *        <p>
-     *        The list of configurations supplied for an EMR cluster instance group. You can specify a separate
+     *        The list of configurations supplied for an Amazon EMR cluster instance group. You can specify a separate
      *        configuration for each instance group (master, core, and task).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -683,8 +683,8 @@ public class InstanceGroup implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * </note>
      * <p>
-     * The list of configurations supplied for an EMR cluster instance group. You can specify a separate configuration
-     * for each instance group (master, core, and task).
+     * The list of configurations supplied for an Amazon EMR cluster instance group. You can specify a separate
+     * configuration for each instance group (master, core, and task).
      * </p>
      * 
      * @param configurations
@@ -693,7 +693,7 @@ public class InstanceGroup implements Serializable, Cloneable, StructuredPojo {
      *        </p>
      *        </note>
      *        <p>
-     *        The list of configurations supplied for an EMR cluster instance group. You can specify a separate
+     *        The list of configurations supplied for an Amazon EMR cluster instance group. You can specify a separate
      *        configuration for each instance group (master, core, and task).
      * @return Returns a reference to this object so that method calls can be chained together.
      */

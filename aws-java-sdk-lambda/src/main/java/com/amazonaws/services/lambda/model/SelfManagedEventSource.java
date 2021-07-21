@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The Self-Managed Apache Kafka cluster for your event source.
+ * The self-managed Apache Kafka cluster for your event source.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/SelfManagedEventSource" target="_top">AWS API

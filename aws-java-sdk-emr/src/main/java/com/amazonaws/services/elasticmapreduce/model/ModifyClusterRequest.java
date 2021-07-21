@@ -34,7 +34,9 @@ public class ModifyClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
     /**
      * <p>
      * The number of steps that can be executed concurrently. You can specify a minimum of 1 step and a maximum of 256
-     * steps.
+     * steps. We recommend that you do not change this parameter while steps are running or the
+     * <code>ActionOnFailure</code> setting may not behave as expected. For more information see
+     * <a>Step$ActionOnFailure</a>.
      * </p>
      */
     private Integer stepConcurrencyLevel;
@@ -82,12 +84,16 @@ public class ModifyClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
     /**
      * <p>
      * The number of steps that can be executed concurrently. You can specify a minimum of 1 step and a maximum of 256
-     * steps.
+     * steps. We recommend that you do not change this parameter while steps are running or the
+     * <code>ActionOnFailure</code> setting may not behave as expected. For more information see
+     * <a>Step$ActionOnFailure</a>.
      * </p>
      * 
      * @param stepConcurrencyLevel
      *        The number of steps that can be executed concurrently. You can specify a minimum of 1 step and a maximum
-     *        of 256 steps.
+     *        of 256 steps. We recommend that you do not change this parameter while steps are running or the
+     *        <code>ActionOnFailure</code> setting may not behave as expected. For more information see
+     *        <a>Step$ActionOnFailure</a>.
      */
 
     public void setStepConcurrencyLevel(Integer stepConcurrencyLevel) {
@@ -97,11 +103,15 @@ public class ModifyClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
     /**
      * <p>
      * The number of steps that can be executed concurrently. You can specify a minimum of 1 step and a maximum of 256
-     * steps.
+     * steps. We recommend that you do not change this parameter while steps are running or the
+     * <code>ActionOnFailure</code> setting may not behave as expected. For more information see
+     * <a>Step$ActionOnFailure</a>.
      * </p>
      * 
      * @return The number of steps that can be executed concurrently. You can specify a minimum of 1 step and a maximum
-     *         of 256 steps.
+     *         of 256 steps. We recommend that you do not change this parameter while steps are running or the
+     *         <code>ActionOnFailure</code> setting may not behave as expected. For more information see
+     *         <a>Step$ActionOnFailure</a>.
      */
 
     public Integer getStepConcurrencyLevel() {
@@ -111,12 +121,16 @@ public class ModifyClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
     /**
      * <p>
      * The number of steps that can be executed concurrently. You can specify a minimum of 1 step and a maximum of 256
-     * steps.
+     * steps. We recommend that you do not change this parameter while steps are running or the
+     * <code>ActionOnFailure</code> setting may not behave as expected. For more information see
+     * <a>Step$ActionOnFailure</a>.
      * </p>
      * 
      * @param stepConcurrencyLevel
      *        The number of steps that can be executed concurrently. You can specify a minimum of 1 step and a maximum
-     *        of 256 steps.
+     *        of 256 steps. We recommend that you do not change this parameter while steps are running or the
+     *        <code>ActionOnFailure</code> setting may not behave as expected. For more information see
+     *        <a>Step$ActionOnFailure</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

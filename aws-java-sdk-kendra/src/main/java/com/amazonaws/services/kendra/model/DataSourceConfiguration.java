@@ -78,6 +78,12 @@ public class DataSourceConfiguration implements Serializable, Cloneable, Structu
     private GoogleDriveConfiguration googleDriveConfiguration;
 
     private WebCrawlerConfiguration webCrawlerConfiguration;
+    /**
+     * <p>
+     * Provides the configuration information to connect to WorkDocs as your data source.
+     * </p>
+     */
+    private WorkDocsConfiguration workDocsConfiguration;
 
     /**
      * <p>
@@ -426,6 +432,46 @@ public class DataSourceConfiguration implements Serializable, Cloneable, Structu
     }
 
     /**
+     * <p>
+     * Provides the configuration information to connect to WorkDocs as your data source.
+     * </p>
+     * 
+     * @param workDocsConfiguration
+     *        Provides the configuration information to connect to WorkDocs as your data source.
+     */
+
+    public void setWorkDocsConfiguration(WorkDocsConfiguration workDocsConfiguration) {
+        this.workDocsConfiguration = workDocsConfiguration;
+    }
+
+    /**
+     * <p>
+     * Provides the configuration information to connect to WorkDocs as your data source.
+     * </p>
+     * 
+     * @return Provides the configuration information to connect to WorkDocs as your data source.
+     */
+
+    public WorkDocsConfiguration getWorkDocsConfiguration() {
+        return this.workDocsConfiguration;
+    }
+
+    /**
+     * <p>
+     * Provides the configuration information to connect to WorkDocs as your data source.
+     * </p>
+     * 
+     * @param workDocsConfiguration
+     *        Provides the configuration information to connect to WorkDocs as your data source.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DataSourceConfiguration withWorkDocsConfiguration(WorkDocsConfiguration workDocsConfiguration) {
+        setWorkDocsConfiguration(workDocsConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -454,7 +500,9 @@ public class DataSourceConfiguration implements Serializable, Cloneable, Structu
         if (getGoogleDriveConfiguration() != null)
             sb.append("GoogleDriveConfiguration: ").append(getGoogleDriveConfiguration()).append(",");
         if (getWebCrawlerConfiguration() != null)
-            sb.append("WebCrawlerConfiguration: ").append(getWebCrawlerConfiguration());
+            sb.append("WebCrawlerConfiguration: ").append(getWebCrawlerConfiguration()).append(",");
+        if (getWorkDocsConfiguration() != null)
+            sb.append("WorkDocsConfiguration: ").append(getWorkDocsConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -505,6 +553,10 @@ public class DataSourceConfiguration implements Serializable, Cloneable, Structu
             return false;
         if (other.getWebCrawlerConfiguration() != null && other.getWebCrawlerConfiguration().equals(this.getWebCrawlerConfiguration()) == false)
             return false;
+        if (other.getWorkDocsConfiguration() == null ^ this.getWorkDocsConfiguration() == null)
+            return false;
+        if (other.getWorkDocsConfiguration() != null && other.getWorkDocsConfiguration().equals(this.getWorkDocsConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -522,6 +574,7 @@ public class DataSourceConfiguration implements Serializable, Cloneable, Structu
         hashCode = prime * hashCode + ((getConfluenceConfiguration() == null) ? 0 : getConfluenceConfiguration().hashCode());
         hashCode = prime * hashCode + ((getGoogleDriveConfiguration() == null) ? 0 : getGoogleDriveConfiguration().hashCode());
         hashCode = prime * hashCode + ((getWebCrawlerConfiguration() == null) ? 0 : getWebCrawlerConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getWorkDocsConfiguration() == null) ? 0 : getWorkDocsConfiguration().hashCode());
         return hashCode;
     }
 

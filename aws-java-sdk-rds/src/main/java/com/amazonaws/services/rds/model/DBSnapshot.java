@@ -43,7 +43,8 @@ public class DBSnapshot implements Serializable, Cloneable {
     private String dBInstanceIdentifier;
     /**
      * <p>
-     * Specifies when the snapshot was taken in Coordinated Universal Time (UTC).
+     * Specifies when the snapshot was taken in Coordinated Universal Time (UTC). Changes for the copy when the snapshot
+     * is copied.
      * </p>
      */
     private java.util.Date snapshotCreateTime;
@@ -140,8 +141,8 @@ public class DBSnapshot implements Serializable, Cloneable {
     private String sourceRegion;
     /**
      * <p>
-     * The DB snapshot Amazon Resource Name (ARN) that the DB snapshot was copied from. It only has value in case of
-     * cross-customer or cross-region copy.
+     * The DB snapshot Amazon Resource Name (ARN) that the DB snapshot was copied from. It only has a value in the case
+     * of a cross-account or cross-Region copy.
      * </p>
      */
     private String sourceDBSnapshotIdentifier;
@@ -210,6 +211,13 @@ public class DBSnapshot implements Serializable, Cloneable {
     private String dbiResourceId;
 
     private com.amazonaws.internal.SdkInternalList<Tag> tagList;
+    /**
+     * <p>
+     * Specifies the time of the CreateDBSnapshot operation in Coordinated Universal Time (UTC). Doesn't change when the
+     * snapshot is copied.
+     * </p>
+     */
+    private java.util.Date originalSnapshotCreateTime;
 
     /**
      * <p>
@@ -293,11 +301,13 @@ public class DBSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies when the snapshot was taken in Coordinated Universal Time (UTC).
+     * Specifies when the snapshot was taken in Coordinated Universal Time (UTC). Changes for the copy when the snapshot
+     * is copied.
      * </p>
      * 
      * @param snapshotCreateTime
-     *        Specifies when the snapshot was taken in Coordinated Universal Time (UTC).
+     *        Specifies when the snapshot was taken in Coordinated Universal Time (UTC). Changes for the copy when the
+     *        snapshot is copied.
      */
 
     public void setSnapshotCreateTime(java.util.Date snapshotCreateTime) {
@@ -306,10 +316,12 @@ public class DBSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies when the snapshot was taken in Coordinated Universal Time (UTC).
+     * Specifies when the snapshot was taken in Coordinated Universal Time (UTC). Changes for the copy when the snapshot
+     * is copied.
      * </p>
      * 
-     * @return Specifies when the snapshot was taken in Coordinated Universal Time (UTC).
+     * @return Specifies when the snapshot was taken in Coordinated Universal Time (UTC). Changes for the copy when the
+     *         snapshot is copied.
      */
 
     public java.util.Date getSnapshotCreateTime() {
@@ -318,11 +330,13 @@ public class DBSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies when the snapshot was taken in Coordinated Universal Time (UTC).
+     * Specifies when the snapshot was taken in Coordinated Universal Time (UTC). Changes for the copy when the snapshot
+     * is copied.
      * </p>
      * 
      * @param snapshotCreateTime
-     *        Specifies when the snapshot was taken in Coordinated Universal Time (UTC).
+     *        Specifies when the snapshot was taken in Coordinated Universal Time (UTC). Changes for the copy when the
+     *        snapshot is copied.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -943,13 +957,13 @@ public class DBSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The DB snapshot Amazon Resource Name (ARN) that the DB snapshot was copied from. It only has value in case of
-     * cross-customer or cross-region copy.
+     * The DB snapshot Amazon Resource Name (ARN) that the DB snapshot was copied from. It only has a value in the case
+     * of a cross-account or cross-Region copy.
      * </p>
      * 
      * @param sourceDBSnapshotIdentifier
-     *        The DB snapshot Amazon Resource Name (ARN) that the DB snapshot was copied from. It only has value in case
-     *        of cross-customer or cross-region copy.
+     *        The DB snapshot Amazon Resource Name (ARN) that the DB snapshot was copied from. It only has a value in
+     *        the case of a cross-account or cross-Region copy.
      */
 
     public void setSourceDBSnapshotIdentifier(String sourceDBSnapshotIdentifier) {
@@ -958,12 +972,12 @@ public class DBSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The DB snapshot Amazon Resource Name (ARN) that the DB snapshot was copied from. It only has value in case of
-     * cross-customer or cross-region copy.
+     * The DB snapshot Amazon Resource Name (ARN) that the DB snapshot was copied from. It only has a value in the case
+     * of a cross-account or cross-Region copy.
      * </p>
      * 
-     * @return The DB snapshot Amazon Resource Name (ARN) that the DB snapshot was copied from. It only has value in
-     *         case of cross-customer or cross-region copy.
+     * @return The DB snapshot Amazon Resource Name (ARN) that the DB snapshot was copied from. It only has a value in
+     *         the case of a cross-account or cross-Region copy.
      */
 
     public String getSourceDBSnapshotIdentifier() {
@@ -972,13 +986,13 @@ public class DBSnapshot implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The DB snapshot Amazon Resource Name (ARN) that the DB snapshot was copied from. It only has value in case of
-     * cross-customer or cross-region copy.
+     * The DB snapshot Amazon Resource Name (ARN) that the DB snapshot was copied from. It only has a value in the case
+     * of a cross-account or cross-Region copy.
      * </p>
      * 
      * @param sourceDBSnapshotIdentifier
-     *        The DB snapshot Amazon Resource Name (ARN) that the DB snapshot was copied from. It only has value in case
-     *        of cross-customer or cross-region copy.
+     *        The DB snapshot Amazon Resource Name (ARN) that the DB snapshot was copied from. It only has a value in
+     *        the case of a cross-account or cross-Region copy.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1518,6 +1532,52 @@ public class DBSnapshot implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * Specifies the time of the CreateDBSnapshot operation in Coordinated Universal Time (UTC). Doesn't change when the
+     * snapshot is copied.
+     * </p>
+     * 
+     * @param originalSnapshotCreateTime
+     *        Specifies the time of the CreateDBSnapshot operation in Coordinated Universal Time (UTC). Doesn't change
+     *        when the snapshot is copied.
+     */
+
+    public void setOriginalSnapshotCreateTime(java.util.Date originalSnapshotCreateTime) {
+        this.originalSnapshotCreateTime = originalSnapshotCreateTime;
+    }
+
+    /**
+     * <p>
+     * Specifies the time of the CreateDBSnapshot operation in Coordinated Universal Time (UTC). Doesn't change when the
+     * snapshot is copied.
+     * </p>
+     * 
+     * @return Specifies the time of the CreateDBSnapshot operation in Coordinated Universal Time (UTC). Doesn't change
+     *         when the snapshot is copied.
+     */
+
+    public java.util.Date getOriginalSnapshotCreateTime() {
+        return this.originalSnapshotCreateTime;
+    }
+
+    /**
+     * <p>
+     * Specifies the time of the CreateDBSnapshot operation in Coordinated Universal Time (UTC). Doesn't change when the
+     * snapshot is copied.
+     * </p>
+     * 
+     * @param originalSnapshotCreateTime
+     *        Specifies the time of the CreateDBSnapshot operation in Coordinated Universal Time (UTC). Doesn't change
+     *        when the snapshot is copied.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DBSnapshot withOriginalSnapshotCreateTime(java.util.Date originalSnapshotCreateTime) {
+        setOriginalSnapshotCreateTime(originalSnapshotCreateTime);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1586,7 +1646,9 @@ public class DBSnapshot implements Serializable, Cloneable {
         if (getDbiResourceId() != null)
             sb.append("DbiResourceId: ").append(getDbiResourceId()).append(",");
         if (getTagList() != null)
-            sb.append("TagList: ").append(getTagList());
+            sb.append("TagList: ").append(getTagList()).append(",");
+        if (getOriginalSnapshotCreateTime() != null)
+            sb.append("OriginalSnapshotCreateTime: ").append(getOriginalSnapshotCreateTime());
         sb.append("}");
         return sb.toString();
     }
@@ -1718,6 +1780,10 @@ public class DBSnapshot implements Serializable, Cloneable {
             return false;
         if (other.getTagList() != null && other.getTagList().equals(this.getTagList()) == false)
             return false;
+        if (other.getOriginalSnapshotCreateTime() == null ^ this.getOriginalSnapshotCreateTime() == null)
+            return false;
+        if (other.getOriginalSnapshotCreateTime() != null && other.getOriginalSnapshotCreateTime().equals(this.getOriginalSnapshotCreateTime()) == false)
+            return false;
         return true;
     }
 
@@ -1755,6 +1821,7 @@ public class DBSnapshot implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getProcessorFeatures() == null) ? 0 : getProcessorFeatures().hashCode());
         hashCode = prime * hashCode + ((getDbiResourceId() == null) ? 0 : getDbiResourceId().hashCode());
         hashCode = prime * hashCode + ((getTagList() == null) ? 0 : getTagList().hashCode());
+        hashCode = prime * hashCode + ((getOriginalSnapshotCreateTime() == null) ? 0 : getOriginalSnapshotCreateTime().hashCode());
         return hashCode;
     }
 

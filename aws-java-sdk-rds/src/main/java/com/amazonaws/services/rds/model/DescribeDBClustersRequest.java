@@ -53,8 +53,26 @@ public class DescribeDBClustersRequest extends com.amazonaws.AmazonWebServiceReq
      * <ul>
      * <li>
      * <p>
+     * <code>clone-group-id</code> - Accepts clone group identifiers. The results list will only include information
+     * about the DB clusters associated with these clone groups.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>db-cluster-id</code> - Accepts DB cluster identifiers and DB cluster Amazon Resource Names (ARNs). The
      * results list will only include information about the DB clusters identified by these ARNs.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>domain</code> - Accepts Active Directory directory IDs. The results list will only include information
+     * about the DB clusters associated with these domains.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>engine</code> - Accepts engine names. The results list will only include information about the DB clusters
+     * for these engines.
      * </p>
      * </li>
      * </ul>
@@ -203,8 +221,26 @@ public class DescribeDBClustersRequest extends com.amazonaws.AmazonWebServiceReq
      * <ul>
      * <li>
      * <p>
+     * <code>clone-group-id</code> - Accepts clone group identifiers. The results list will only include information
+     * about the DB clusters associated with these clone groups.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>db-cluster-id</code> - Accepts DB cluster identifiers and DB cluster Amazon Resource Names (ARNs). The
      * results list will only include information about the DB clusters identified by these ARNs.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>domain</code> - Accepts Active Directory directory IDs. The results list will only include information
+     * about the DB clusters associated with these domains.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>engine</code> - Accepts engine names. The results list will only include information about the DB clusters
+     * for these engines.
      * </p>
      * </li>
      * </ul>
@@ -216,8 +252,26 @@ public class DescribeDBClustersRequest extends com.amazonaws.AmazonWebServiceReq
      *         <ul>
      *         <li>
      *         <p>
+     *         <code>clone-group-id</code> - Accepts clone group identifiers. The results list will only include
+     *         information about the DB clusters associated with these clone groups.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
      *         <code>db-cluster-id</code> - Accepts DB cluster identifiers and DB cluster Amazon Resource Names (ARNs).
      *         The results list will only include information about the DB clusters identified by these ARNs.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>domain</code> - Accepts Active Directory directory IDs. The results list will only include
+     *         information about the DB clusters associated with these domains.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>engine</code> - Accepts engine names. The results list will only include information about the DB
+     *         clusters for these engines.
      *         </p>
      *         </li>
      */
@@ -239,8 +293,26 @@ public class DescribeDBClustersRequest extends com.amazonaws.AmazonWebServiceReq
      * <ul>
      * <li>
      * <p>
+     * <code>clone-group-id</code> - Accepts clone group identifiers. The results list will only include information
+     * about the DB clusters associated with these clone groups.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>db-cluster-id</code> - Accepts DB cluster identifiers and DB cluster Amazon Resource Names (ARNs). The
      * results list will only include information about the DB clusters identified by these ARNs.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>domain</code> - Accepts Active Directory directory IDs. The results list will only include information
+     * about the DB clusters associated with these domains.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>engine</code> - Accepts engine names. The results list will only include information about the DB clusters
+     * for these engines.
      * </p>
      * </li>
      * </ul>
@@ -253,8 +325,26 @@ public class DescribeDBClustersRequest extends com.amazonaws.AmazonWebServiceReq
      *        <ul>
      *        <li>
      *        <p>
+     *        <code>clone-group-id</code> - Accepts clone group identifiers. The results list will only include
+     *        information about the DB clusters associated with these clone groups.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
      *        <code>db-cluster-id</code> - Accepts DB cluster identifiers and DB cluster Amazon Resource Names (ARNs).
      *        The results list will only include information about the DB clusters identified by these ARNs.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>domain</code> - Accepts Active Directory directory IDs. The results list will only include
+     *        information about the DB clusters associated with these domains.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>engine</code> - Accepts engine names. The results list will only include information about the DB
+     *        clusters for these engines.
      *        </p>
      *        </li>
      */
@@ -278,8 +368,26 @@ public class DescribeDBClustersRequest extends com.amazonaws.AmazonWebServiceReq
      * <ul>
      * <li>
      * <p>
+     * <code>clone-group-id</code> - Accepts clone group identifiers. The results list will only include information
+     * about the DB clusters associated with these clone groups.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>db-cluster-id</code> - Accepts DB cluster identifiers and DB cluster Amazon Resource Names (ARNs). The
      * results list will only include information about the DB clusters identified by these ARNs.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>domain</code> - Accepts Active Directory directory IDs. The results list will only include information
+     * about the DB clusters associated with these domains.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>engine</code> - Accepts engine names. The results list will only include information about the DB clusters
+     * for these engines.
      * </p>
      * </li>
      * </ul>
@@ -297,8 +405,26 @@ public class DescribeDBClustersRequest extends com.amazonaws.AmazonWebServiceReq
      *        <ul>
      *        <li>
      *        <p>
+     *        <code>clone-group-id</code> - Accepts clone group identifiers. The results list will only include
+     *        information about the DB clusters associated with these clone groups.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
      *        <code>db-cluster-id</code> - Accepts DB cluster identifiers and DB cluster Amazon Resource Names (ARNs).
      *        The results list will only include information about the DB clusters identified by these ARNs.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>domain</code> - Accepts Active Directory directory IDs. The results list will only include
+     *        information about the DB clusters associated with these domains.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>engine</code> - Accepts engine names. The results list will only include information about the DB
+     *        clusters for these engines.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -324,8 +450,26 @@ public class DescribeDBClustersRequest extends com.amazonaws.AmazonWebServiceReq
      * <ul>
      * <li>
      * <p>
+     * <code>clone-group-id</code> - Accepts clone group identifiers. The results list will only include information
+     * about the DB clusters associated with these clone groups.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>db-cluster-id</code> - Accepts DB cluster identifiers and DB cluster Amazon Resource Names (ARNs). The
      * results list will only include information about the DB clusters identified by these ARNs.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>domain</code> - Accepts Active Directory directory IDs. The results list will only include information
+     * about the DB clusters associated with these domains.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>engine</code> - Accepts engine names. The results list will only include information about the DB clusters
+     * for these engines.
      * </p>
      * </li>
      * </ul>
@@ -338,8 +482,26 @@ public class DescribeDBClustersRequest extends com.amazonaws.AmazonWebServiceReq
      *        <ul>
      *        <li>
      *        <p>
+     *        <code>clone-group-id</code> - Accepts clone group identifiers. The results list will only include
+     *        information about the DB clusters associated with these clone groups.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
      *        <code>db-cluster-id</code> - Accepts DB cluster identifiers and DB cluster Amazon Resource Names (ARNs).
      *        The results list will only include information about the DB clusters identified by these ARNs.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>domain</code> - Accepts Active Directory directory IDs. The results list will only include
+     *        information about the DB clusters associated with these domains.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>engine</code> - Accepts engine names. The results list will only include information about the DB
+     *        clusters for these engines.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

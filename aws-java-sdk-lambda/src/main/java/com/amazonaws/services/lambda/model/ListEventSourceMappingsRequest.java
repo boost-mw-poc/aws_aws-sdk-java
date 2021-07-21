@@ -96,7 +96,8 @@ public class ListEventSourceMappingsRequest extends com.amazonaws.AmazonWebServi
     private String marker;
     /**
      * <p>
-     * The maximum number of event source mappings to return.
+     * The maximum number of event source mappings to return. Note that ListEventSourceMappings returns a maximum of 100
+     * items in each response, even if you set the number higher.
      * </p>
      */
     private Integer maxItems;
@@ -524,11 +525,13 @@ public class ListEventSourceMappingsRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The maximum number of event source mappings to return.
+     * The maximum number of event source mappings to return. Note that ListEventSourceMappings returns a maximum of 100
+     * items in each response, even if you set the number higher.
      * </p>
      * 
      * @param maxItems
-     *        The maximum number of event source mappings to return.
+     *        The maximum number of event source mappings to return. Note that ListEventSourceMappings returns a maximum
+     *        of 100 items in each response, even if you set the number higher.
      */
 
     public void setMaxItems(Integer maxItems) {
@@ -537,10 +540,12 @@ public class ListEventSourceMappingsRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The maximum number of event source mappings to return.
+     * The maximum number of event source mappings to return. Note that ListEventSourceMappings returns a maximum of 100
+     * items in each response, even if you set the number higher.
      * </p>
      * 
-     * @return The maximum number of event source mappings to return.
+     * @return The maximum number of event source mappings to return. Note that ListEventSourceMappings returns a
+     *         maximum of 100 items in each response, even if you set the number higher.
      */
 
     public Integer getMaxItems() {
@@ -549,11 +554,13 @@ public class ListEventSourceMappingsRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The maximum number of event source mappings to return.
+     * The maximum number of event source mappings to return. Note that ListEventSourceMappings returns a maximum of 100
+     * items in each response, even if you set the number higher.
      * </p>
      * 
      * @param maxItems
-     *        The maximum number of event source mappings to return.
+     *        The maximum number of event source mappings to return. Note that ListEventSourceMappings returns a maximum
+     *        of 100 items in each response, even if you set the number higher.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

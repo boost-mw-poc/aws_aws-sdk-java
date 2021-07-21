@@ -200,6 +200,10 @@ public class DBSnapshotStaxUnmarshaller implements Unmarshaller<DBSnapshot, Stax
                     continue;
                 }
 
+                if (context.testExpression("OriginalSnapshotCreateTime", targetDepth)) {
+                    dBSnapshot.setOriginalSnapshotCreateTime(DateStaxUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return dBSnapshot;

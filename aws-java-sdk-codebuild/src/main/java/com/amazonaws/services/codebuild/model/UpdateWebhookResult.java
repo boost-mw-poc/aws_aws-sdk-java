@@ -25,18 +25,18 @@ public class UpdateWebhookResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * Information about a repository's webhook that is associated with a project in CodeBuild.
+     * Information about a repository's webhook that is associated with a project in AWS CodeBuild.
      * </p>
      */
     private Webhook webhook;
 
     /**
      * <p>
-     * Information about a repository's webhook that is associated with a project in CodeBuild.
+     * Information about a repository's webhook that is associated with a project in AWS CodeBuild.
      * </p>
      * 
      * @param webhook
-     *        Information about a repository's webhook that is associated with a project in CodeBuild.
+     *        Information about a repository's webhook that is associated with a project in AWS CodeBuild.
      */
 
     public void setWebhook(Webhook webhook) {
@@ -45,10 +45,10 @@ public class UpdateWebhookResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * Information about a repository's webhook that is associated with a project in CodeBuild.
+     * Information about a repository's webhook that is associated with a project in AWS CodeBuild.
      * </p>
      * 
-     * @return Information about a repository's webhook that is associated with a project in CodeBuild.
+     * @return Information about a repository's webhook that is associated with a project in AWS CodeBuild.
      */
 
     public Webhook getWebhook() {
@@ -57,11 +57,11 @@ public class UpdateWebhookResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * Information about a repository's webhook that is associated with a project in CodeBuild.
+     * Information about a repository's webhook that is associated with a project in AWS CodeBuild.
      * </p>
      * 
      * @param webhook
-     *        Information about a repository's webhook that is associated with a project in CodeBuild.
+     *        Information about a repository's webhook that is associated with a project in AWS CodeBuild.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

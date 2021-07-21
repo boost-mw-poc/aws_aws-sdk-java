@@ -44,6 +44,10 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * If you use more than 2 layers, you receive a <code>ValidationException</code> exception with the message "
  * <code>AttributeFilter</code> cannot have a depth of more than 2."
  * </p>
+ * <p>
+ * If you use more than 10 attribute filters, you receive a <code>ValidationException</code> exception with the message
+ * "<code>AttributeFilter</code> cannot have a length of more than 10".
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kendra-2019-02-03/AttributeFilter" target="_top">AWS API
  *      Documentation</a>

@@ -237,6 +237,19 @@ public class AbstractAmazonElasticMapReduceAsync extends AbstractAmazonElasticMa
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeReleaseLabelResult> describeReleaseLabelAsync(DescribeReleaseLabelRequest request) {
+
+        return describeReleaseLabelAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeReleaseLabelResult> describeReleaseLabelAsync(DescribeReleaseLabelRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeReleaseLabelRequest, DescribeReleaseLabelResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeSecurityConfigurationResult> describeSecurityConfigurationAsync(DescribeSecurityConfigurationRequest request) {
 
         return describeSecurityConfigurationAsync(request, null);
@@ -413,6 +426,19 @@ public class AbstractAmazonElasticMapReduceAsync extends AbstractAmazonElasticMa
     @Override
     public java.util.concurrent.Future<ListNotebookExecutionsResult> listNotebookExecutionsAsync(ListNotebookExecutionsRequest request,
             com.amazonaws.handlers.AsyncHandler<ListNotebookExecutionsRequest, ListNotebookExecutionsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListReleaseLabelsResult> listReleaseLabelsAsync(ListReleaseLabelsRequest request) {
+
+        return listReleaseLabelsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListReleaseLabelsResult> listReleaseLabelsAsync(ListReleaseLabelsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListReleaseLabelsRequest, ListReleaseLabelsResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

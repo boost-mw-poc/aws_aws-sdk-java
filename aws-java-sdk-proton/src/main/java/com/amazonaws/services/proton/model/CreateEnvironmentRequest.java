@@ -37,7 +37,7 @@ public class CreateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
      * infrastructure resources to an environment account. You must include either the
      * <code>environmentAccountConnectionId</code> or <code>protonServiceRoleArn</code> parameter and value. For more
      * information, see <a href="proton/latest/adminguide/ag-env-account-connections.html">Environment account
-     * connections</a> in the <i>AWS Proton Administration guide</i>.
+     * connections</a> in the <i>AWS Proton Administrator guide</i>.
      * </p>
      */
     private String environmentAccountConnectionId;
@@ -59,15 +59,15 @@ public class CreateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
      * <p>
      * A link to a YAML formatted spec file that provides inputs as defined in the environment template bundle schema
      * file. For more information, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-managing-environments.html">Environments</a> in the
-     * <i>AWS Proton Administration Guide</i>.
+     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-environments.html">Environments</a> in the <i>AWS
+     * Proton Administrator Guide</i>.
      * </p>
      */
     private String spec;
     /**
      * <p>
      * Create tags for your environment. For more information, see <i>AWS Proton resources and tagging</i> in the <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">AWS Proton Administration Guide</a> or
+     * href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">AWS Proton Administrator Guide</a> or
      * <a href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">AWS Proton User Guide</a>.
      * </p>
      */
@@ -87,8 +87,8 @@ public class CreateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * The name of the environment template. For more information, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-env-templates.html">Environment Templates</a> in
-     * the <i>AWS Proton Administration Guide</i>.
+     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-templates.html">Environment Templates</a> in the
+     * <i>AWS Proton Administrator Guide</i>.
      * </p>
      */
     private String templateName;
@@ -139,7 +139,7 @@ public class CreateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
      * infrastructure resources to an environment account. You must include either the
      * <code>environmentAccountConnectionId</code> or <code>protonServiceRoleArn</code> parameter and value. For more
      * information, see <a href="proton/latest/adminguide/ag-env-account-connections.html">Environment account
-     * connections</a> in the <i>AWS Proton Administration guide</i>.
+     * connections</a> in the <i>AWS Proton Administrator guide</i>.
      * </p>
      * 
      * @param environmentAccountConnectionId
@@ -147,7 +147,7 @@ public class CreateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
      *        infrastructure resources to an environment account. You must include either the
      *        <code>environmentAccountConnectionId</code> or <code>protonServiceRoleArn</code> parameter and value. For
      *        more information, see <a href="proton/latest/adminguide/ag-env-account-connections.html">Environment
-     *        account connections</a> in the <i>AWS Proton Administration guide</i>.
+     *        account connections</a> in the <i>AWS Proton Administrator guide</i>.
      */
 
     public void setEnvironmentAccountConnectionId(String environmentAccountConnectionId) {
@@ -160,14 +160,14 @@ public class CreateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
      * infrastructure resources to an environment account. You must include either the
      * <code>environmentAccountConnectionId</code> or <code>protonServiceRoleArn</code> parameter and value. For more
      * information, see <a href="proton/latest/adminguide/ag-env-account-connections.html">Environment account
-     * connections</a> in the <i>AWS Proton Administration guide</i>.
+     * connections</a> in the <i>AWS Proton Administrator guide</i>.
      * </p>
      * 
      * @return The ID of the environment account connection that you provide if you're provisioning your environment
      *         infrastructure resources to an environment account. You must include either the
      *         <code>environmentAccountConnectionId</code> or <code>protonServiceRoleArn</code> parameter and value. For
      *         more information, see <a href="proton/latest/adminguide/ag-env-account-connections.html">Environment
-     *         account connections</a> in the <i>AWS Proton Administration guide</i>.
+     *         account connections</a> in the <i>AWS Proton Administrator guide</i>.
      */
 
     public String getEnvironmentAccountConnectionId() {
@@ -180,7 +180,7 @@ public class CreateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
      * infrastructure resources to an environment account. You must include either the
      * <code>environmentAccountConnectionId</code> or <code>protonServiceRoleArn</code> parameter and value. For more
      * information, see <a href="proton/latest/adminguide/ag-env-account-connections.html">Environment account
-     * connections</a> in the <i>AWS Proton Administration guide</i>.
+     * connections</a> in the <i>AWS Proton Administrator guide</i>.
      * </p>
      * 
      * @param environmentAccountConnectionId
@@ -188,7 +188,7 @@ public class CreateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
      *        infrastructure resources to an environment account. You must include either the
      *        <code>environmentAccountConnectionId</code> or <code>protonServiceRoleArn</code> parameter and value. For
      *        more information, see <a href="proton/latest/adminguide/ag-env-account-connections.html">Environment
-     *        account connections</a> in the <i>AWS Proton Administration guide</i>.
+     *        account connections</a> in the <i>AWS Proton Administrator guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -293,15 +293,15 @@ public class CreateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
      * <p>
      * A link to a YAML formatted spec file that provides inputs as defined in the environment template bundle schema
      * file. For more information, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-managing-environments.html">Environments</a> in the
-     * <i>AWS Proton Administration Guide</i>.
+     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-environments.html">Environments</a> in the <i>AWS
+     * Proton Administrator Guide</i>.
      * </p>
      * 
      * @param spec
      *        A link to a YAML formatted spec file that provides inputs as defined in the environment template bundle
      *        schema file. For more information, see <a
-     *        href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-managing-environments.html">Environments</a>
-     *        in the <i>AWS Proton Administration Guide</i>.
+     *        href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-environments.html">Environments</a> in the
+     *        <i>AWS Proton Administrator Guide</i>.
      */
 
     public void setSpec(String spec) {
@@ -312,14 +312,14 @@ public class CreateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
      * <p>
      * A link to a YAML formatted spec file that provides inputs as defined in the environment template bundle schema
      * file. For more information, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-managing-environments.html">Environments</a> in the
-     * <i>AWS Proton Administration Guide</i>.
+     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-environments.html">Environments</a> in the <i>AWS
+     * Proton Administrator Guide</i>.
      * </p>
      * 
      * @return A link to a YAML formatted spec file that provides inputs as defined in the environment template bundle
      *         schema file. For more information, see <a
-     *         href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-managing-environments.html"
-     *         >Environments</a> in the <i>AWS Proton Administration Guide</i>.
+     *         href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-environments.html">Environments</a> in the
+     *         <i>AWS Proton Administrator Guide</i>.
      */
 
     public String getSpec() {
@@ -330,15 +330,15 @@ public class CreateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
      * <p>
      * A link to a YAML formatted spec file that provides inputs as defined in the environment template bundle schema
      * file. For more information, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-managing-environments.html">Environments</a> in the
-     * <i>AWS Proton Administration Guide</i>.
+     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-environments.html">Environments</a> in the <i>AWS
+     * Proton Administrator Guide</i>.
      * </p>
      * 
      * @param spec
      *        A link to a YAML formatted spec file that provides inputs as defined in the environment template bundle
      *        schema file. For more information, see <a
-     *        href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-managing-environments.html">Environments</a>
-     *        in the <i>AWS Proton Administration Guide</i>.
+     *        href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-environments.html">Environments</a> in the
+     *        <i>AWS Proton Administrator Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -350,13 +350,13 @@ public class CreateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * Create tags for your environment. For more information, see <i>AWS Proton resources and tagging</i> in the <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">AWS Proton Administration Guide</a> or
+     * href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">AWS Proton Administrator Guide</a> or
      * <a href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">AWS Proton User Guide</a>.
      * </p>
      * 
      * @return Create tags for your environment. For more information, see <i>AWS Proton resources and tagging</i> in
      *         the <a href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">AWS Proton
-     *         Administration Guide</a> or <a
+     *         Administrator Guide</a> or <a
      *         href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">AWS Proton User Guide</a>.
      */
 
@@ -367,13 +367,13 @@ public class CreateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * Create tags for your environment. For more information, see <i>AWS Proton resources and tagging</i> in the <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">AWS Proton Administration Guide</a> or
+     * href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">AWS Proton Administrator Guide</a> or
      * <a href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">AWS Proton User Guide</a>.
      * </p>
      * 
      * @param tags
      *        Create tags for your environment. For more information, see <i>AWS Proton resources and tagging</i> in the
-     *        <a href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">AWS Proton Administration
+     *        <a href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">AWS Proton Administrator
      *        Guide</a> or <a href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">AWS Proton User
      *        Guide</a>.
      */
@@ -390,7 +390,7 @@ public class CreateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * Create tags for your environment. For more information, see <i>AWS Proton resources and tagging</i> in the <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">AWS Proton Administration Guide</a> or
+     * href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">AWS Proton Administrator Guide</a> or
      * <a href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">AWS Proton User Guide</a>.
      * </p>
      * <p>
@@ -401,7 +401,7 @@ public class CreateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
      * 
      * @param tags
      *        Create tags for your environment. For more information, see <i>AWS Proton resources and tagging</i> in the
-     *        <a href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">AWS Proton Administration
+     *        <a href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">AWS Proton Administrator
      *        Guide</a> or <a href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">AWS Proton User
      *        Guide</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -420,13 +420,13 @@ public class CreateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * Create tags for your environment. For more information, see <i>AWS Proton resources and tagging</i> in the <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">AWS Proton Administration Guide</a> or
+     * href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">AWS Proton Administrator Guide</a> or
      * <a href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">AWS Proton User Guide</a>.
      * </p>
      * 
      * @param tags
      *        Create tags for your environment. For more information, see <i>AWS Proton resources and tagging</i> in the
-     *        <a href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">AWS Proton Administration
+     *        <a href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">AWS Proton Administrator
      *        Guide</a> or <a href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">AWS Proton User
      *        Guide</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -520,14 +520,14 @@ public class CreateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * The name of the environment template. For more information, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-env-templates.html">Environment Templates</a> in
-     * the <i>AWS Proton Administration Guide</i>.
+     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-templates.html">Environment Templates</a> in the
+     * <i>AWS Proton Administrator Guide</i>.
      * </p>
      * 
      * @param templateName
      *        The name of the environment template. For more information, see <a
-     *        href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-env-templates.html">Environment
-     *        Templates</a> in the <i>AWS Proton Administration Guide</i>.
+     *        href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-templates.html">Environment Templates</a> in
+     *        the <i>AWS Proton Administrator Guide</i>.
      */
 
     public void setTemplateName(String templateName) {
@@ -537,13 +537,13 @@ public class CreateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * The name of the environment template. For more information, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-env-templates.html">Environment Templates</a> in
-     * the <i>AWS Proton Administration Guide</i>.
+     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-templates.html">Environment Templates</a> in the
+     * <i>AWS Proton Administrator Guide</i>.
      * </p>
      * 
      * @return The name of the environment template. For more information, see <a
-     *         href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-env-templates.html">Environment
-     *         Templates</a> in the <i>AWS Proton Administration Guide</i>.
+     *         href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-templates.html">Environment Templates</a>
+     *         in the <i>AWS Proton Administrator Guide</i>.
      */
 
     public String getTemplateName() {
@@ -553,14 +553,14 @@ public class CreateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * The name of the environment template. For more information, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-env-templates.html">Environment Templates</a> in
-     * the <i>AWS Proton Administration Guide</i>.
+     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-templates.html">Environment Templates</a> in the
+     * <i>AWS Proton Administrator Guide</i>.
      * </p>
      * 
      * @param templateName
      *        The name of the environment template. For more information, see <a
-     *        href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-env-templates.html">Environment
-     *        Templates</a> in the <i>AWS Proton Administration Guide</i>.
+     *        href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-templates.html">Environment Templates</a> in
+     *        the <i>AWS Proton Administrator Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

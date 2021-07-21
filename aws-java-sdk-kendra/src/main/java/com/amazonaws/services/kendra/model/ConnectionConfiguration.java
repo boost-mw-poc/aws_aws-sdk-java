@@ -55,12 +55,12 @@ public class ConnectionConfiguration implements Serializable, Cloneable, Structu
     private String tableName;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of credentials stored in AWS Secrets Manager. The credentials should be a
+     * The Amazon Resource Name (ARN) of credentials stored in Secrets Manager. The credentials should be a
      * user/password pair. For more information, see <a
      * href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-database.html">Using a Database Data Source</a>.
-     * For more information about AWS Secrets Manager, see <a
-     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html"> What Is AWS Secrets Manager </a>
-     * in the <i> Secrets Manager </i> user guide.
+     * For more information about Secrets Manager, see <a
+     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html"> What Is Secrets Manager</a> in the
+     * <i> Secrets Manager </i> user guide.
      * </p>
      */
     private String secretArn;
@@ -233,21 +233,21 @@ public class ConnectionConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of credentials stored in AWS Secrets Manager. The credentials should be a
+     * The Amazon Resource Name (ARN) of credentials stored in Secrets Manager. The credentials should be a
      * user/password pair. For more information, see <a
      * href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-database.html">Using a Database Data Source</a>.
-     * For more information about AWS Secrets Manager, see <a
-     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html"> What Is AWS Secrets Manager </a>
-     * in the <i> Secrets Manager </i> user guide.
+     * For more information about Secrets Manager, see <a
+     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html"> What Is Secrets Manager</a> in the
+     * <i> Secrets Manager </i> user guide.
      * </p>
      * 
      * @param secretArn
-     *        The Amazon Resource Name (ARN) of credentials stored in AWS Secrets Manager. The credentials should be a
+     *        The Amazon Resource Name (ARN) of credentials stored in Secrets Manager. The credentials should be a
      *        user/password pair. For more information, see <a
      *        href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-database.html">Using a Database Data
-     *        Source</a>. For more information about AWS Secrets Manager, see <a
-     *        href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html"> What Is AWS Secrets Manager
-     *        </a> in the <i> Secrets Manager </i> user guide.
+     *        Source</a>. For more information about Secrets Manager, see <a
+     *        href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html"> What Is Secrets Manager</a>
+     *        in the <i> Secrets Manager </i> user guide.
      */
 
     public void setSecretArn(String secretArn) {
@@ -256,20 +256,20 @@ public class ConnectionConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of credentials stored in AWS Secrets Manager. The credentials should be a
+     * The Amazon Resource Name (ARN) of credentials stored in Secrets Manager. The credentials should be a
      * user/password pair. For more information, see <a
      * href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-database.html">Using a Database Data Source</a>.
-     * For more information about AWS Secrets Manager, see <a
-     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html"> What Is AWS Secrets Manager </a>
-     * in the <i> Secrets Manager </i> user guide.
+     * For more information about Secrets Manager, see <a
+     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html"> What Is Secrets Manager</a> in the
+     * <i> Secrets Manager </i> user guide.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of credentials stored in AWS Secrets Manager. The credentials should be a
+     * @return The Amazon Resource Name (ARN) of credentials stored in Secrets Manager. The credentials should be a
      *         user/password pair. For more information, see <a
      *         href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-database.html">Using a Database Data
-     *         Source</a>. For more information about AWS Secrets Manager, see <a
-     *         href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html"> What Is AWS Secrets
-     *         Manager </a> in the <i> Secrets Manager </i> user guide.
+     *         Source</a>. For more information about Secrets Manager, see <a
+     *         href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html"> What Is Secrets
+     *         Manager</a> in the <i> Secrets Manager </i> user guide.
      */
 
     public String getSecretArn() {
@@ -278,21 +278,21 @@ public class ConnectionConfiguration implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of credentials stored in AWS Secrets Manager. The credentials should be a
+     * The Amazon Resource Name (ARN) of credentials stored in Secrets Manager. The credentials should be a
      * user/password pair. For more information, see <a
      * href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-database.html">Using a Database Data Source</a>.
-     * For more information about AWS Secrets Manager, see <a
-     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html"> What Is AWS Secrets Manager </a>
-     * in the <i> Secrets Manager </i> user guide.
+     * For more information about Secrets Manager, see <a
+     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html"> What Is Secrets Manager</a> in the
+     * <i> Secrets Manager </i> user guide.
      * </p>
      * 
      * @param secretArn
-     *        The Amazon Resource Name (ARN) of credentials stored in AWS Secrets Manager. The credentials should be a
+     *        The Amazon Resource Name (ARN) of credentials stored in Secrets Manager. The credentials should be a
      *        user/password pair. For more information, see <a
      *        href="https://docs.aws.amazon.com/kendra/latest/dg/data-source-database.html">Using a Database Data
-     *        Source</a>. For more information about AWS Secrets Manager, see <a
-     *        href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html"> What Is AWS Secrets Manager
-     *        </a> in the <i> Secrets Manager </i> user guide.
+     *        Source</a>. For more information about Secrets Manager, see <a
+     *        href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html"> What Is Secrets Manager</a>
+     *        in the <i> Secrets Manager </i> user guide.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

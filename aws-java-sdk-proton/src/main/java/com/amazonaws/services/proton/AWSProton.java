@@ -58,7 +58,7 @@ import com.amazonaws.services.proton.waiters.AWSProtonWaiters;
  * </p>
  * <p>
  * To learn more about AWS Proton administration, see the <a
- * href="https://docs.aws.amazon.com/proton/latest/adminguide/Welcome.html">AWS Proton Administration Guide</a>.
+ * href="https://docs.aws.amazon.com/proton/latest/adminguide/Welcome.html">AWS Proton Administrator Guide</a>.
  * </p>
  * <p>
  * To learn more about deploying serverless and containerized applications on AWS Proton, see the <a
@@ -131,10 +131,81 @@ import com.amazonaws.services.proton.waiters.AWSProtonWaiters;
  * </p>
  * </li>
  * </ul>
- * 
- * <pre>
- * <code> &lt;p&gt; &lt;b&gt;Idempotent delete APIs&lt;/b&gt; &lt;/p&gt; &lt;p&gt;Given a request action that has succeeded:&lt;/p&gt; &lt;p&gt;When you retry the request with an API from this group and the resource was deleted, its metadata is returned in the response.&lt;/p&gt; &lt;p&gt;If you retry and the resource doesn't exist, the response is empty.&lt;/p&gt; &lt;p&gt;In both cases, the retry succeeds.&lt;/p&gt; &lt;p&gt;Idempotent delete APIs:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;DeleteEnvironmentTemplate&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;DeleteEnvironmentTemplateVersion&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;DeleteServiceTemplate&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;DeleteServiceTemplateVersion&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;DeleteEnvironmentAccountConnection&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt; &lt;b&gt;Asynchronous idempotent delete APIs&lt;/b&gt; &lt;/p&gt; &lt;p&gt;Given a request action that has succeeded:&lt;/p&gt; &lt;p&gt;If you retry the request with an API from this group, if the original request delete operation status is &lt;code&gt;DELETE_IN_PROGRESS&lt;/code&gt;, the retry returns the resource detail data in the response without performing any further actions.&lt;/p&gt; &lt;p&gt;If the original request delete operation is complete, a retry returns an empty response.&lt;/p&gt; &lt;p&gt;Asynchronous idempotent delete APIs:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;DeleteEnvironment&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;DeleteService&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; </code>
- * </pre>
+ * <p>
+ * <b>Idempotent delete APIs</b>
+ * </p>
+ * <p>
+ * Given a request action that has succeeded:
+ * </p>
+ * <p>
+ * When you retry the request with an API from this group and the resource was deleted, its metadata is returned in the
+ * response.
+ * </p>
+ * <p>
+ * If you retry and the resource doesn't exist, the response is empty.
+ * </p>
+ * <p>
+ * In both cases, the retry succeeds.
+ * </p>
+ * <p>
+ * Idempotent delete APIs:
+ * </p>
+ * <ul>
+ * <li>
+ * <p>
+ * DeleteEnvironmentTemplate
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * DeleteEnvironmentTemplateVersion
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * DeleteServiceTemplate
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * DeleteServiceTemplateVersion
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * DeleteEnvironmentAccountConnection
+ * </p>
+ * </li>
+ * </ul>
+ * <p>
+ * <b>Asynchronous idempotent delete APIs</b>
+ * </p>
+ * <p>
+ * Given a request action that has succeeded:
+ * </p>
+ * <p>
+ * If you retry the request with an API from this group, if the original request delete operation status is
+ * <code>DELETE_IN_PROGRESS</code>, the retry returns the resource detail data in the response without performing any
+ * further actions.
+ * </p>
+ * <p>
+ * If the original request delete operation is complete, a retry returns an empty response.
+ * </p>
+ * <p>
+ * Asynchronous idempotent delete APIs:
+ * </p>
+ * <ul>
+ * <li>
+ * <p>
+ * DeleteEnvironment
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * DeleteService
+ * </p>
+ * </li>
+ * </ul>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public interface AWSProton {
@@ -155,7 +226,7 @@ public interface AWSProton {
      * </p>
      * <p>
      * For more information, see <a href="proton/latest/adminguide/ag-env-account-connections.html">Environment account
-     * connections</a> in the <i>AWS Proton Administration guide</i>.
+     * connections</a> in the <i>AWS Proton Administrator guide</i>.
      * </p>
      * 
      * @param acceptEnvironmentAccountConnectionRequest
@@ -184,7 +255,7 @@ public interface AWSProton {
      * Attempts to cancel an environment deployment on an <a>UpdateEnvironment</a> action, if the deployment is
      * <code>IN_PROGRESS</code>. For more information, see <a
      * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-env-update.html">Update an environment</a> in the
-     * <i>AWS Proton Administration guide</i>.
+     * <i>AWS Proton Administrator guide</i>.
      * </p>
      * <p>
      * The following list includes potential cancellation scenarios.
@@ -232,7 +303,7 @@ public interface AWSProton {
      * <p>
      * Attempts to cancel a service instance deployment on an <a>UpdateServiceInstance</a> action, if the deployment is
      * <code>IN_PROGRESS</code>. For more information, see <i>Update a service instance</i> in the <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-svc-instance-update.html">AWS Proton Administration
+     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-svc-instance-update.html">AWS Proton Administrator
      * guide</a> or the <a href="https://docs.aws.amazon.com/proton/latest/userguide/ug-svc-instance-update.html">AWS
      * Proton User guide</a>.
      * </p>
@@ -282,7 +353,7 @@ public interface AWSProton {
      * <p>
      * Attempts to cancel a service pipeline deployment on an <a>UpdateServicePipeline</a> action, if the deployment is
      * <code>IN_PROGRESS</code>. For more information, see <i>Update a service pipeline</i> in the <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-svc-pipeline-update.html">AWS Proton Administration
+     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-svc-pipeline-update.html">AWS Proton Administrator
      * guide</a> or the <a href="https://docs.aws.amazon.com/proton/latest/userguide/ug-svc-pipeline-update.html">AWS
      * Proton User guide</a>.
      * </p>
@@ -333,7 +404,7 @@ public interface AWSProton {
      * Deploy a new environment. An AWS Proton environment is created from an environment template that defines
      * infrastructure and resources that can be shared across services. For more information, see the <a
      * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-environments.html">Environments</a> in the <i>AWS
-     * Proton Administration Guide.</i>
+     * Proton Administrator Guide.</i>
      * </p>
      * 
      * @param createEnvironmentRequest
@@ -341,7 +412,7 @@ public interface AWSProton {
      * @throws ServiceQuotaExceededException
      *         A quota was exceeded. For more information, see <a
      *         href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-limits.html">AWS Proton Quotas</a> in the
-     *         <i>AWS Proton Administration Guide</i>.
+     *         <i>AWS Proton Administrator Guide</i>.
      * @throws ValidationException
      *         The input is invalid or an out-of-range value was supplied for the input parameter.
      * @throws AccessDeniedException
@@ -363,13 +434,13 @@ public interface AWSProton {
     /**
      * <p>
      * Create an environment account connection in an environment account so that environment infrastructure resources
-     * can be provisioned in the environment account from the management account.
+     * can be provisioned in the environment account from a management account.
      * </p>
      * <p>
      * An environment account connection is a secure bi-directional connection between a <i>management account</i> and
      * an <i>environment account</i> that maintains authorization and permissions. For more information, see <a
      * href="proton/latest/adminguide/ag-env-account-connections.html">Environment account connections</a> in the <i>AWS
-     * Proton Administration guide</i>.
+     * Proton Administrator guide</i>.
      * </p>
      * 
      * @param createEnvironmentAccountConnectionRequest
@@ -377,7 +448,7 @@ public interface AWSProton {
      * @throws ServiceQuotaExceededException
      *         A quota was exceeded. For more information, see <a
      *         href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-limits.html">AWS Proton Quotas</a> in the
-     *         <i>AWS Proton Administration Guide</i>.
+     *         <i>AWS Proton Administrator Guide</i>.
      * @throws ValidationException
      *         The input is invalid or an out-of-range value was supplied for the input parameter.
      * @throws AccessDeniedException
@@ -398,8 +469,8 @@ public interface AWSProton {
     /**
      * <p>
      * Create an environment template for AWS Proton. For more information, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-env-templates.html">Environment Templates</a> in
-     * the <i>AWS Proton Administration Guide</i>.
+     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-templates.html">Environment Templates</a> in the
+     * <i>AWS Proton Administrator Guide</i>.
      * </p>
      * <p>
      * You can create an environment template in one of the two following ways:
@@ -417,8 +488,8 @@ public interface AWSProton {
      * provisioned infrastructure that you manage. AWS Proton <i>doesn't</i> manage your existing provisioned
      * infrastructure. To create an environment template for customer provisioned and managed infrastructure, include
      * the <code>provisioning</code> parameter and set the value to <code>CUSTOMER_MANAGED</code>. For more information,
-     * see <a href="https://docs.aws.amazon.com/proton/latest/adminguide/env-template-v1.html">Register and publish an
-     * environment template</a> in the <i>AWS Proton Administration Guide</i>.
+     * see <a href="https://docs.aws.amazon.com/proton/latest/adminguide/template-create.html">Register and publish an
+     * environment template</a> in the <i>AWS Proton Administrator Guide</i>.
      * </p>
      * </li>
      * </ul>
@@ -428,7 +499,7 @@ public interface AWSProton {
      * @throws ServiceQuotaExceededException
      *         A quota was exceeded. For more information, see <a
      *         href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-limits.html">AWS Proton Quotas</a> in the
-     *         <i>AWS Proton Administration Guide</i>.
+     *         <i>AWS Proton Administrator Guide</i>.
      * @throws ValidationException
      *         The input is invalid or an out-of-range value was supplied for the input parameter.
      * @throws AccessDeniedException
@@ -457,7 +528,7 @@ public interface AWSProton {
      * @throws ServiceQuotaExceededException
      *         A quota was exceeded. For more information, see <a
      *         href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-limits.html">AWS Proton Quotas</a> in the
-     *         <i>AWS Proton Administration Guide</i>.
+     *         <i>AWS Proton Administrator Guide</i>.
      * @throws ValidationException
      *         The input is invalid or an out-of-range value was supplied for the input parameter.
      * @throws AccessDeniedException
@@ -481,7 +552,7 @@ public interface AWSProton {
      * Create an AWS Proton service. An AWS Proton service is an instantiation of a service template and often includes
      * several service instances and pipeline. For more information, see <a
      * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-services.html">Services</a> in the <i>AWS Proton
-     * Administration Guide</i> and <a
+     * Administrator Guide</i> and <a
      * href="https://docs.aws.amazon.com/proton/latest/userguide/ug-service.html">Services</a> in the <i>AWS Proton User
      * Guide</i>.
      * </p>
@@ -491,7 +562,7 @@ public interface AWSProton {
      * @throws ServiceQuotaExceededException
      *         A quota was exceeded. For more information, see <a
      *         href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-limits.html">AWS Proton Quotas</a> in the
-     *         <i>AWS Proton Administration Guide</i>.
+     *         <i>AWS Proton Administrator Guide</i>.
      * @throws ValidationException
      *         The input is invalid or an out-of-range value was supplied for the input parameter.
      * @throws AccessDeniedException
@@ -518,7 +589,7 @@ public interface AWSProton {
      * repository. AWS Proton then deploys and manages the infrastructure defined by the selected service template. For
      * more information, see <a
      * href="https://docs.aws.amazon.com/proton/latest/adminguide/managing-svc-templates.html">Service Templates</a> in
-     * the <i>AWS Proton Administration Guide</i>.
+     * the <i>AWS Proton Administrator Guide</i>.
      * </p>
      * 
      * @param createServiceTemplateRequest
@@ -526,7 +597,7 @@ public interface AWSProton {
      * @throws ServiceQuotaExceededException
      *         A quota was exceeded. For more information, see <a
      *         href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-limits.html">AWS Proton Quotas</a> in the
-     *         <i>AWS Proton Administration Guide</i>.
+     *         <i>AWS Proton Administrator Guide</i>.
      * @throws ValidationException
      *         The input is invalid or an out-of-range value was supplied for the input parameter.
      * @throws AccessDeniedException
@@ -555,7 +626,7 @@ public interface AWSProton {
      * @throws ServiceQuotaExceededException
      *         A quota was exceeded. For more information, see <a
      *         href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-limits.html">AWS Proton Quotas</a> in the
-     *         <i>AWS Proton Administration Guide</i>.
+     *         <i>AWS Proton Administrator Guide</i>.
      * @throws ValidationException
      *         The input is invalid or an out-of-range value was supplied for the input parameter.
      * @throws AccessDeniedException
@@ -611,7 +682,7 @@ public interface AWSProton {
      * </p>
      * <p>
      * For more information, see <a href="proton/latest/adminguide/ag-env-account-connections.html">Environment account
-     * connections</a> in the <i>AWS Proton Administration guide</i>.
+     * connections</a> in the <i>AWS Proton Administrator guide</i>.
      * </p>
      * 
      * @param deleteEnvironmentAccountConnectionRequest
@@ -828,7 +899,7 @@ public interface AWSProton {
      * </p>
      * <p>
      * For more information, see <a href="proton/latest/adminguide/ag-env-account-connections.html">Environment account
-     * connections</a> in the <i>AWS Proton Administration guide</i>.
+     * connections</a> in the <i>AWS Proton Administrator guide</i>.
      * </p>
      * 
      * @param getEnvironmentAccountConnectionRequest
@@ -994,7 +1065,7 @@ public interface AWSProton {
      * </p>
      * <p>
      * For more information, see <a href="proton/latest/adminguide/ag-env-account-connections.html">Environment account
-     * connections</a> in the <i>AWS Proton Administration guide</i>.
+     * connections</a> in the <i>AWS Proton Administrator guide</i>.
      * </p>
      * 
      * @param listEnvironmentAccountConnectionsRequest
@@ -1171,7 +1242,7 @@ public interface AWSProton {
     /**
      * <p>
      * List tags for a resource. For more information, see <i>AWS Proton resources and tagging</i> in the <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">AWS Proton Administration Guide</a> or
+     * href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">AWS Proton Administrator Guide</a> or
      * <a href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">AWS Proton User Guide</a>.
      * </p>
      * 
@@ -1206,7 +1277,7 @@ public interface AWSProton {
      * </p>
      * <p>
      * For more information, see <a href="proton/latest/adminguide/ag-env-account-connections.html">Environment account
-     * connections</a> in the <i>AWS Proton Administration guide</i>.
+     * connections</a> in the <i>AWS Proton Administrator guide</i>.
      * </p>
      * 
      * @param rejectEnvironmentAccountConnectionRequest
@@ -1233,7 +1304,7 @@ public interface AWSProton {
     /**
      * <p>
      * Tag a resource. For more information, see <i>AWS Proton resources and tagging</i> in the <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">AWS Proton Administration Guide</a> or
+     * href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">AWS Proton Administrator Guide</a> or
      * <a href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">AWS Proton User Guide</a>.
      * </p>
      * 
@@ -1260,7 +1331,7 @@ public interface AWSProton {
     /**
      * <p>
      * Remove a tag from a resource. For more information, see <i>AWS Proton resources and tagging</i> in the <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">AWS Proton Administration Guide</a> or
+     * href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">AWS Proton Administrator Guide</a> or
      * <a href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">AWS Proton User Guide</a>.
      * </p>
      * 
@@ -1317,7 +1388,7 @@ public interface AWSProton {
      * </p>
      * <p>
      * You can only update to a new environment account connection if it was created in the same environment account
-     * that the current environment account connection was created in and associated with the current environment.
+     * that the current environment account connection was created in and is associated with the current environment.
      * </p>
      * <p>
      * If the environment <i>isn't</i> associated with an environment account connection, <i>don't</i> update or include
@@ -1403,7 +1474,7 @@ public interface AWSProton {
      * </p>
      * <p>
      * For more information, see <a href="proton/latest/adminguide/ag-env-account-connections.html">Environment account
-     * connections</a> in the <i>AWS Proton Administration guide</i>.
+     * connections</a> in the <i>AWS Proton Administrator guide</i>.
      * </p>
      * 
      * @param updateEnvironmentAccountConnectionRequest
@@ -1499,7 +1570,7 @@ public interface AWSProton {
      * @throws ServiceQuotaExceededException
      *         A quota was exceeded. For more information, see <a
      *         href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-limits.html">AWS Proton Quotas</a> in the
-     *         <i>AWS Proton Administration Guide</i>.
+     *         <i>AWS Proton Administrator Guide</i>.
      * @throws ValidationException
      *         The input is invalid or an out-of-range value was supplied for the input parameter.
      * @throws AccessDeniedException

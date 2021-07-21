@@ -146,7 +146,7 @@ public class UpdateEventSourceMappingRequest extends com.amazonaws.AmazonWebServ
     private Integer parallelizationFactor;
     /**
      * <p>
-     * An array of the authentication protocol, or the VPC components to secure your event source.
+     * An array of authentication protocols or VPC components required to secure your event source.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<SourceAccessConfiguration> sourceAccessConfigurations;
@@ -938,10 +938,10 @@ public class UpdateEventSourceMappingRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * An array of the authentication protocol, or the VPC components to secure your event source.
+     * An array of authentication protocols or VPC components required to secure your event source.
      * </p>
      * 
-     * @return An array of the authentication protocol, or the VPC components to secure your event source.
+     * @return An array of authentication protocols or VPC components required to secure your event source.
      */
 
     public java.util.List<SourceAccessConfiguration> getSourceAccessConfigurations() {
@@ -953,11 +953,11 @@ public class UpdateEventSourceMappingRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * An array of the authentication protocol, or the VPC components to secure your event source.
+     * An array of authentication protocols or VPC components required to secure your event source.
      * </p>
      * 
      * @param sourceAccessConfigurations
-     *        An array of the authentication protocol, or the VPC components to secure your event source.
+     *        An array of authentication protocols or VPC components required to secure your event source.
      */
 
     public void setSourceAccessConfigurations(java.util.Collection<SourceAccessConfiguration> sourceAccessConfigurations) {
@@ -971,7 +971,7 @@ public class UpdateEventSourceMappingRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * An array of the authentication protocol, or the VPC components to secure your event source.
+     * An array of authentication protocols or VPC components required to secure your event source.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -980,7 +980,7 @@ public class UpdateEventSourceMappingRequest extends com.amazonaws.AmazonWebServ
      * </p>
      * 
      * @param sourceAccessConfigurations
-     *        An array of the authentication protocol, or the VPC components to secure your event source.
+     *        An array of authentication protocols or VPC components required to secure your event source.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -996,11 +996,11 @@ public class UpdateEventSourceMappingRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * An array of the authentication protocol, or the VPC components to secure your event source.
+     * An array of authentication protocols or VPC components required to secure your event source.
      * </p>
      * 
      * @param sourceAccessConfigurations
-     *        An array of the authentication protocol, or the VPC components to secure your event source.
+     *        An array of authentication protocols or VPC components required to secure your event source.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

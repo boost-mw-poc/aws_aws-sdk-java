@@ -81,7 +81,10 @@ public class JobFlowInstancesConfig implements Serializable, Cloneable, Structur
     private PlacementType placement;
     /**
      * <p>
-     * Specifies whether the cluster should remain available after completing all steps.
+     * Specifies whether the cluster should remain available after completing all steps. Defaults to <code>true</code>.
+     * For more information about configuring cluster termination, see <a
+     * href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-termination.html">Control Cluster
+     * Termination</a> in the <i>EMR Management Guide</i>.
      * </p>
      */
     private Boolean keepJobFlowAliveWhenNoSteps;
@@ -126,13 +129,15 @@ public class JobFlowInstancesConfig implements Serializable, Cloneable, Structur
     private com.amazonaws.internal.SdkInternalList<String> ec2SubnetIds;
     /**
      * <p>
-     * The identifier of the Amazon EC2 security group for the master node.
+     * The identifier of the Amazon EC2 security group for the master node. If you specify
+     * <code>EmrManagedMasterSecurityGroup</code>, you must also specify <code>EmrManagedSlaveSecurityGroup</code>.
      * </p>
      */
     private String emrManagedMasterSecurityGroup;
     /**
      * <p>
-     * The identifier of the Amazon EC2 security group for the core and task nodes.
+     * The identifier of the Amazon EC2 security group for the core and task nodes. If you specify
+     * <code>EmrManagedSlaveSecurityGroup</code>, you must also specify <code>EmrManagedMasterSecurityGroup</code>.
      * </p>
      */
     private String emrManagedSlaveSecurityGroup;
@@ -562,11 +567,17 @@ public class JobFlowInstancesConfig implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Specifies whether the cluster should remain available after completing all steps.
+     * Specifies whether the cluster should remain available after completing all steps. Defaults to <code>true</code>.
+     * For more information about configuring cluster termination, see <a
+     * href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-termination.html">Control Cluster
+     * Termination</a> in the <i>EMR Management Guide</i>.
      * </p>
      * 
      * @param keepJobFlowAliveWhenNoSteps
-     *        Specifies whether the cluster should remain available after completing all steps.
+     *        Specifies whether the cluster should remain available after completing all steps. Defaults to
+     *        <code>true</code>. For more information about configuring cluster termination, see <a
+     *        href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-termination.html">Control Cluster
+     *        Termination</a> in the <i>EMR Management Guide</i>.
      */
 
     public void setKeepJobFlowAliveWhenNoSteps(Boolean keepJobFlowAliveWhenNoSteps) {
@@ -575,10 +586,16 @@ public class JobFlowInstancesConfig implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Specifies whether the cluster should remain available after completing all steps.
+     * Specifies whether the cluster should remain available after completing all steps. Defaults to <code>true</code>.
+     * For more information about configuring cluster termination, see <a
+     * href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-termination.html">Control Cluster
+     * Termination</a> in the <i>EMR Management Guide</i>.
      * </p>
      * 
-     * @return Specifies whether the cluster should remain available after completing all steps.
+     * @return Specifies whether the cluster should remain available after completing all steps. Defaults to
+     *         <code>true</code>. For more information about configuring cluster termination, see <a
+     *         href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-termination.html">Control Cluster
+     *         Termination</a> in the <i>EMR Management Guide</i>.
      */
 
     public Boolean getKeepJobFlowAliveWhenNoSteps() {
@@ -587,11 +604,17 @@ public class JobFlowInstancesConfig implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Specifies whether the cluster should remain available after completing all steps.
+     * Specifies whether the cluster should remain available after completing all steps. Defaults to <code>true</code>.
+     * For more information about configuring cluster termination, see <a
+     * href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-termination.html">Control Cluster
+     * Termination</a> in the <i>EMR Management Guide</i>.
      * </p>
      * 
      * @param keepJobFlowAliveWhenNoSteps
-     *        Specifies whether the cluster should remain available after completing all steps.
+     *        Specifies whether the cluster should remain available after completing all steps. Defaults to
+     *        <code>true</code>. For more information about configuring cluster termination, see <a
+     *        href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-termination.html">Control Cluster
+     *        Termination</a> in the <i>EMR Management Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -602,10 +625,16 @@ public class JobFlowInstancesConfig implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Specifies whether the cluster should remain available after completing all steps.
+     * Specifies whether the cluster should remain available after completing all steps. Defaults to <code>true</code>.
+     * For more information about configuring cluster termination, see <a
+     * href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-termination.html">Control Cluster
+     * Termination</a> in the <i>EMR Management Guide</i>.
      * </p>
      * 
-     * @return Specifies whether the cluster should remain available after completing all steps.
+     * @return Specifies whether the cluster should remain available after completing all steps. Defaults to
+     *         <code>true</code>. For more information about configuring cluster termination, see <a
+     *         href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-termination.html">Control Cluster
+     *         Termination</a> in the <i>EMR Management Guide</i>.
      */
 
     public Boolean isKeepJobFlowAliveWhenNoSteps() {
@@ -917,11 +946,14 @@ public class JobFlowInstancesConfig implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The identifier of the Amazon EC2 security group for the master node.
+     * The identifier of the Amazon EC2 security group for the master node. If you specify
+     * <code>EmrManagedMasterSecurityGroup</code>, you must also specify <code>EmrManagedSlaveSecurityGroup</code>.
      * </p>
      * 
      * @param emrManagedMasterSecurityGroup
-     *        The identifier of the Amazon EC2 security group for the master node.
+     *        The identifier of the Amazon EC2 security group for the master node. If you specify
+     *        <code>EmrManagedMasterSecurityGroup</code>, you must also specify
+     *        <code>EmrManagedSlaveSecurityGroup</code>.
      */
 
     public void setEmrManagedMasterSecurityGroup(String emrManagedMasterSecurityGroup) {
@@ -930,10 +962,13 @@ public class JobFlowInstancesConfig implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The identifier of the Amazon EC2 security group for the master node.
+     * The identifier of the Amazon EC2 security group for the master node. If you specify
+     * <code>EmrManagedMasterSecurityGroup</code>, you must also specify <code>EmrManagedSlaveSecurityGroup</code>.
      * </p>
      * 
-     * @return The identifier of the Amazon EC2 security group for the master node.
+     * @return The identifier of the Amazon EC2 security group for the master node. If you specify
+     *         <code>EmrManagedMasterSecurityGroup</code>, you must also specify
+     *         <code>EmrManagedSlaveSecurityGroup</code>.
      */
 
     public String getEmrManagedMasterSecurityGroup() {
@@ -942,11 +977,14 @@ public class JobFlowInstancesConfig implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The identifier of the Amazon EC2 security group for the master node.
+     * The identifier of the Amazon EC2 security group for the master node. If you specify
+     * <code>EmrManagedMasterSecurityGroup</code>, you must also specify <code>EmrManagedSlaveSecurityGroup</code>.
      * </p>
      * 
      * @param emrManagedMasterSecurityGroup
-     *        The identifier of the Amazon EC2 security group for the master node.
+     *        The identifier of the Amazon EC2 security group for the master node. If you specify
+     *        <code>EmrManagedMasterSecurityGroup</code>, you must also specify
+     *        <code>EmrManagedSlaveSecurityGroup</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -957,11 +995,14 @@ public class JobFlowInstancesConfig implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The identifier of the Amazon EC2 security group for the core and task nodes.
+     * The identifier of the Amazon EC2 security group for the core and task nodes. If you specify
+     * <code>EmrManagedSlaveSecurityGroup</code>, you must also specify <code>EmrManagedMasterSecurityGroup</code>.
      * </p>
      * 
      * @param emrManagedSlaveSecurityGroup
-     *        The identifier of the Amazon EC2 security group for the core and task nodes.
+     *        The identifier of the Amazon EC2 security group for the core and task nodes. If you specify
+     *        <code>EmrManagedSlaveSecurityGroup</code>, you must also specify
+     *        <code>EmrManagedMasterSecurityGroup</code>.
      */
 
     public void setEmrManagedSlaveSecurityGroup(String emrManagedSlaveSecurityGroup) {
@@ -970,10 +1011,13 @@ public class JobFlowInstancesConfig implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The identifier of the Amazon EC2 security group for the core and task nodes.
+     * The identifier of the Amazon EC2 security group for the core and task nodes. If you specify
+     * <code>EmrManagedSlaveSecurityGroup</code>, you must also specify <code>EmrManagedMasterSecurityGroup</code>.
      * </p>
      * 
-     * @return The identifier of the Amazon EC2 security group for the core and task nodes.
+     * @return The identifier of the Amazon EC2 security group for the core and task nodes. If you specify
+     *         <code>EmrManagedSlaveSecurityGroup</code>, you must also specify
+     *         <code>EmrManagedMasterSecurityGroup</code>.
      */
 
     public String getEmrManagedSlaveSecurityGroup() {
@@ -982,11 +1026,14 @@ public class JobFlowInstancesConfig implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The identifier of the Amazon EC2 security group for the core and task nodes.
+     * The identifier of the Amazon EC2 security group for the core and task nodes. If you specify
+     * <code>EmrManagedSlaveSecurityGroup</code>, you must also specify <code>EmrManagedMasterSecurityGroup</code>.
      * </p>
      * 
      * @param emrManagedSlaveSecurityGroup
-     *        The identifier of the Amazon EC2 security group for the core and task nodes.
+     *        The identifier of the Amazon EC2 security group for the core and task nodes. If you specify
+     *        <code>EmrManagedSlaveSecurityGroup</code>, you must also specify
+     *        <code>EmrManagedMasterSecurityGroup</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

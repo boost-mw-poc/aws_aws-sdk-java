@@ -69,7 +69,7 @@ public class InstanceTypeSpecification implements Serializable, Cloneable, Struc
     private com.amazonaws.internal.SdkInternalList<Configuration> configurations;
     /**
      * <p>
-     * The configuration of Amazon Elastic Block Storage (Amazon EBS) attached to each instance as defined by
+     * The configuration of Amazon Elastic Block Store (Amazon EBS) attached to each instance as defined by
      * <code>InstanceType</code>.
      * </p>
      */
@@ -342,11 +342,11 @@ public class InstanceTypeSpecification implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The configuration of Amazon Elastic Block Storage (Amazon EBS) attached to each instance as defined by
+     * The configuration of Amazon Elastic Block Store (Amazon EBS) attached to each instance as defined by
      * <code>InstanceType</code>.
      * </p>
      * 
-     * @return The configuration of Amazon Elastic Block Storage (Amazon EBS) attached to each instance as defined by
+     * @return The configuration of Amazon Elastic Block Store (Amazon EBS) attached to each instance as defined by
      *         <code>InstanceType</code>.
      */
 
@@ -359,12 +359,12 @@ public class InstanceTypeSpecification implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The configuration of Amazon Elastic Block Storage (Amazon EBS) attached to each instance as defined by
+     * The configuration of Amazon Elastic Block Store (Amazon EBS) attached to each instance as defined by
      * <code>InstanceType</code>.
      * </p>
      * 
      * @param ebsBlockDevices
-     *        The configuration of Amazon Elastic Block Storage (Amazon EBS) attached to each instance as defined by
+     *        The configuration of Amazon Elastic Block Store (Amazon EBS) attached to each instance as defined by
      *        <code>InstanceType</code>.
      */
 
@@ -379,7 +379,7 @@ public class InstanceTypeSpecification implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The configuration of Amazon Elastic Block Storage (Amazon EBS) attached to each instance as defined by
+     * The configuration of Amazon Elastic Block Store (Amazon EBS) attached to each instance as defined by
      * <code>InstanceType</code>.
      * </p>
      * <p>
@@ -389,7 +389,7 @@ public class InstanceTypeSpecification implements Serializable, Cloneable, Struc
      * </p>
      * 
      * @param ebsBlockDevices
-     *        The configuration of Amazon Elastic Block Storage (Amazon EBS) attached to each instance as defined by
+     *        The configuration of Amazon Elastic Block Store (Amazon EBS) attached to each instance as defined by
      *        <code>InstanceType</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -406,12 +406,12 @@ public class InstanceTypeSpecification implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The configuration of Amazon Elastic Block Storage (Amazon EBS) attached to each instance as defined by
+     * The configuration of Amazon Elastic Block Store (Amazon EBS) attached to each instance as defined by
      * <code>InstanceType</code>.
      * </p>
      * 
      * @param ebsBlockDevices
-     *        The configuration of Amazon Elastic Block Storage (Amazon EBS) attached to each instance as defined by
+     *        The configuration of Amazon Elastic Block Store (Amazon EBS) attached to each instance as defined by
      *        <code>InstanceType</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

@@ -40,7 +40,7 @@ public class OnDemandCapacityReservationOptions implements Serializable, Cloneab
      * launched according to the On-Demand allocation strategy (<code>lowest-price</code>).
      * </p>
      * <p>
-     * If you do not specify a value, the fleet fulfils the On-Demand capacity according to the chosen On-Demand
+     * If you do not specify a value, the fleet fulfills the On-Demand capacity according to the chosen On-Demand
      * allocation strategy.
      * </p>
      */
@@ -84,7 +84,7 @@ public class OnDemandCapacityReservationOptions implements Serializable, Cloneab
      * launched according to the On-Demand allocation strategy (<code>lowest-price</code>).
      * </p>
      * <p>
-     * If you do not specify a value, the fleet fulfils the On-Demand capacity according to the chosen On-Demand
+     * If you do not specify a value, the fleet fulfills the On-Demand capacity according to the chosen On-Demand
      * allocation strategy.
      * </p>
      * 
@@ -98,7 +98,7 @@ public class OnDemandCapacityReservationOptions implements Serializable, Cloneab
      *        target capacity is launched according to the On-Demand allocation strategy (<code>lowest-price</code>).
      *        </p>
      *        <p>
-     *        If you do not specify a value, the fleet fulfils the On-Demand capacity according to the chosen On-Demand
+     *        If you do not specify a value, the fleet fulfills the On-Demand capacity according to the chosen On-Demand
      *        allocation strategy.
      * @see OnDemandCapacityReservationUsageStrategy
      */
@@ -119,7 +119,7 @@ public class OnDemandCapacityReservationOptions implements Serializable, Cloneab
      * launched according to the On-Demand allocation strategy (<code>lowest-price</code>).
      * </p>
      * <p>
-     * If you do not specify a value, the fleet fulfils the On-Demand capacity according to the chosen On-Demand
+     * If you do not specify a value, the fleet fulfills the On-Demand capacity according to the chosen On-Demand
      * allocation strategy.
      * </p>
      * 
@@ -133,8 +133,8 @@ public class OnDemandCapacityReservationOptions implements Serializable, Cloneab
      *         <code>lowest-price</code>).
      *         </p>
      *         <p>
-     *         If you do not specify a value, the fleet fulfils the On-Demand capacity according to the chosen On-Demand
-     *         allocation strategy.
+     *         If you do not specify a value, the fleet fulfills the On-Demand capacity according to the chosen
+     *         On-Demand allocation strategy.
      * @see OnDemandCapacityReservationUsageStrategy
      */
 
@@ -154,7 +154,7 @@ public class OnDemandCapacityReservationOptions implements Serializable, Cloneab
      * launched according to the On-Demand allocation strategy (<code>lowest-price</code>).
      * </p>
      * <p>
-     * If you do not specify a value, the fleet fulfils the On-Demand capacity according to the chosen On-Demand
+     * If you do not specify a value, the fleet fulfills the On-Demand capacity according to the chosen On-Demand
      * allocation strategy.
      * </p>
      * 
@@ -168,7 +168,7 @@ public class OnDemandCapacityReservationOptions implements Serializable, Cloneab
      *        target capacity is launched according to the On-Demand allocation strategy (<code>lowest-price</code>).
      *        </p>
      *        <p>
-     *        If you do not specify a value, the fleet fulfils the On-Demand capacity according to the chosen On-Demand
+     *        If you do not specify a value, the fleet fulfills the On-Demand capacity according to the chosen On-Demand
      *        allocation strategy.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see OnDemandCapacityReservationUsageStrategy
@@ -191,7 +191,7 @@ public class OnDemandCapacityReservationOptions implements Serializable, Cloneab
      * launched according to the On-Demand allocation strategy (<code>lowest-price</code>).
      * </p>
      * <p>
-     * If you do not specify a value, the fleet fulfils the On-Demand capacity according to the chosen On-Demand
+     * If you do not specify a value, the fleet fulfills the On-Demand capacity according to the chosen On-Demand
      * allocation strategy.
      * </p>
      * 
@@ -205,7 +205,7 @@ public class OnDemandCapacityReservationOptions implements Serializable, Cloneab
      *        target capacity is launched according to the On-Demand allocation strategy (<code>lowest-price</code>).
      *        </p>
      *        <p>
-     *        If you do not specify a value, the fleet fulfils the On-Demand capacity according to the chosen On-Demand
+     *        If you do not specify a value, the fleet fulfills the On-Demand capacity according to the chosen On-Demand
      *        allocation strategy.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see OnDemandCapacityReservationUsageStrategy

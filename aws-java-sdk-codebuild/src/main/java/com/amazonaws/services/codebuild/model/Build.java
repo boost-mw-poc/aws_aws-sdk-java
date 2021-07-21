@@ -112,7 +112,7 @@ public class Build implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/codebuild/latest/userguide/sample-source-version.html">Source Version Sample
-     * with CodeBuild</a> in the <i>CodeBuild User Guide</i>.
+     * with CodeBuild</a> in the <i>AWS CodeBuild User Guide</i>.
      * </p>
      */
     private String sourceVersion;
@@ -123,12 +123,12 @@ public class Build implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * For CodeCommit, GitHub, GitHub Enterprise, and BitBucket, the commit ID.
+     * For AWS CodeCommit, GitHub, GitHub Enterprise, and BitBucket, the commit ID.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For CodePipeline, the source revision provided by CodePipeline.
+     * For AWS CodePipeline, the source revision provided by AWS CodePipeline.
      * </p>
      * </li>
      * <li>
@@ -141,7 +141,7 @@ public class Build implements Serializable, Cloneable, StructuredPojo {
     private String resolvedSourceVersion;
     /**
      * <p>
-     * The name of the CodeBuild project.
+     * The name of the AWS CodeBuild project.
      * </p>
      */
     private String projectName;
@@ -171,7 +171,7 @@ public class Build implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * For CodeCommit: the commit ID, branch, or Git tag to use.
+     * For AWS CodeCommit: the commit ID, branch, or Git tag to use.
      * </p>
      * </li>
      * <li>
@@ -229,13 +229,14 @@ public class Build implements Serializable, Cloneable, StructuredPojo {
     private String serviceRole;
     /**
      * <p>
-     * Information about the build's logs in CloudWatch Logs.
+     * Information about the build's logs in Amazon CloudWatch Logs.
      * </p>
      */
     private LogsLocation logs;
     /**
      * <p>
-     * How long, in minutes, for CodeBuild to wait before timing out this build if it does not get marked as completed.
+     * How long, in minutes, for AWS CodeBuild to wait before timing out this build if it does not get marked as
+     * completed.
      * </p>
      */
     private Integer timeoutInMinutes;
@@ -258,18 +259,19 @@ public class Build implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * If CodePipeline started the build, the pipeline's name (for example, <code>codepipeline/my-demo-pipeline</code>).
+     * If AWS CodePipeline started the build, the pipeline's name (for example,
+     * <code>codepipeline/my-demo-pipeline</code>).
      * </p>
      * </li>
      * <li>
      * <p>
-     * If an Identity and Access Management user started the build, the user's name (for example,
+     * If an AWS Identity and Access Management (IAM) user started the build, the user's name (for example,
      * <code>MyUserName</code>).
      * </p>
      * </li>
      * <li>
      * <p>
-     * If the Jenkins plugin for CodeBuild started the build, the string <code>CodeBuild-Jenkins-Plugin</code>.
+     * If the Jenkins plugin for AWS CodeBuild started the build, the string <code>CodeBuild-Jenkins-Plugin</code>.
      * </p>
      * </li>
      * </ul>
@@ -277,8 +279,8 @@ public class Build implements Serializable, Cloneable, StructuredPojo {
     private String initiator;
     /**
      * <p>
-     * If your CodeBuild project accesses resources in an Amazon VPC, you provide this parameter that identifies the VPC
-     * ID and the list of security group IDs and subnet IDs. The security groups and subnets must belong to the same
+     * If your AWS CodeBuild project accesses resources in an Amazon VPC, you provide this parameter that identifies the
+     * VPC ID and the list of security group IDs and subnet IDs. The security groups and subnets must belong to the same
      * VPC. You must provide at least one security group and one subnet ID.
      * </p>
      */
@@ -291,7 +293,8 @@ public class Build implements Serializable, Cloneable, StructuredPojo {
     private NetworkInterface networkInterface;
     /**
      * <p>
-     * The Key Management Service customer master key (CMK) to be used for encrypting the build output artifacts.
+     * The AWS Key Management Service (AWS KMS) customer master key (CMK) to be used for encrypting the build output
+     * artifacts.
      * </p>
      * <note>
      * <p>
@@ -310,10 +313,10 @@ public class Build implements Serializable, Cloneable, StructuredPojo {
      * A list of exported environment variables for this build.
      * </p>
      * <p>
-     * Exported environment variables are used in conjunction with CodePipeline to export environment variables from the
-     * current build stage to subsequent stages in the pipeline. For more information, see <a
+     * Exported environment variables are used in conjunction with AWS CodePipeline to export environment variables from
+     * the current build stage to subsequent stages in the pipeline. For more information, see <a
      * href="https://docs.aws.amazon.com/codepipeline/latest/userguide/actions-variables.html">Working with
-     * variables</a> in the <i>CodePipeline User Guide</i>.
+     * variables</a> in the <i>AWS CodePipeline User Guide</i>.
      * </p>
      */
     private java.util.List<ExportedEnvironmentVariable> exportedEnvironmentVariables;
@@ -993,7 +996,7 @@ public class Build implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/codebuild/latest/userguide/sample-source-version.html">Source Version Sample
-     * with CodeBuild</a> in the <i>CodeBuild User Guide</i>.
+     * with CodeBuild</a> in the <i>AWS CodeBuild User Guide</i>.
      * </p>
      * 
      * @param sourceVersion
@@ -1003,7 +1006,7 @@ public class Build implements Serializable, Cloneable, StructuredPojo {
      *        <p>
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/codebuild/latest/userguide/sample-source-version.html">Source Version
-     *        Sample with CodeBuild</a> in the <i>CodeBuild User Guide</i>.
+     *        Sample with CodeBuild</a> in the <i>AWS CodeBuild User Guide</i>.
      */
 
     public void setSourceVersion(String sourceVersion) {
@@ -1018,7 +1021,7 @@ public class Build implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/codebuild/latest/userguide/sample-source-version.html">Source Version Sample
-     * with CodeBuild</a> in the <i>CodeBuild User Guide</i>.
+     * with CodeBuild</a> in the <i>AWS CodeBuild User Guide</i>.
      * </p>
      * 
      * @return Any version identifier for the version of the source code to be built. If <code>sourceVersion</code> is
@@ -1027,7 +1030,7 @@ public class Build implements Serializable, Cloneable, StructuredPojo {
      *         <p>
      *         For more information, see <a
      *         href="https://docs.aws.amazon.com/codebuild/latest/userguide/sample-source-version.html">Source Version
-     *         Sample with CodeBuild</a> in the <i>CodeBuild User Guide</i>.
+     *         Sample with CodeBuild</a> in the <i>AWS CodeBuild User Guide</i>.
      */
 
     public String getSourceVersion() {
@@ -1042,7 +1045,7 @@ public class Build implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/codebuild/latest/userguide/sample-source-version.html">Source Version Sample
-     * with CodeBuild</a> in the <i>CodeBuild User Guide</i>.
+     * with CodeBuild</a> in the <i>AWS CodeBuild User Guide</i>.
      * </p>
      * 
      * @param sourceVersion
@@ -1052,7 +1055,7 @@ public class Build implements Serializable, Cloneable, StructuredPojo {
      *        <p>
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/codebuild/latest/userguide/sample-source-version.html">Source Version
-     *        Sample with CodeBuild</a> in the <i>CodeBuild User Guide</i>.
+     *        Sample with CodeBuild</a> in the <i>AWS CodeBuild User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1068,12 +1071,12 @@ public class Build implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * For CodeCommit, GitHub, GitHub Enterprise, and BitBucket, the commit ID.
+     * For AWS CodeCommit, GitHub, GitHub Enterprise, and BitBucket, the commit ID.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For CodePipeline, the source revision provided by CodePipeline.
+     * For AWS CodePipeline, the source revision provided by AWS CodePipeline.
      * </p>
      * </li>
      * <li>
@@ -1088,12 +1091,12 @@ public class Build implements Serializable, Cloneable, StructuredPojo {
      *        <ul>
      *        <li>
      *        <p>
-     *        For CodeCommit, GitHub, GitHub Enterprise, and BitBucket, the commit ID.
+     *        For AWS CodeCommit, GitHub, GitHub Enterprise, and BitBucket, the commit ID.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        For CodePipeline, the source revision provided by CodePipeline.
+     *        For AWS CodePipeline, the source revision provided by AWS CodePipeline.
      *        </p>
      *        </li>
      *        <li>
@@ -1114,12 +1117,12 @@ public class Build implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * For CodeCommit, GitHub, GitHub Enterprise, and BitBucket, the commit ID.
+     * For AWS CodeCommit, GitHub, GitHub Enterprise, and BitBucket, the commit ID.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For CodePipeline, the source revision provided by CodePipeline.
+     * For AWS CodePipeline, the source revision provided by AWS CodePipeline.
      * </p>
      * </li>
      * <li>
@@ -1133,12 +1136,12 @@ public class Build implements Serializable, Cloneable, StructuredPojo {
      *         <ul>
      *         <li>
      *         <p>
-     *         For CodeCommit, GitHub, GitHub Enterprise, and BitBucket, the commit ID.
+     *         For AWS CodeCommit, GitHub, GitHub Enterprise, and BitBucket, the commit ID.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         For CodePipeline, the source revision provided by CodePipeline.
+     *         For AWS CodePipeline, the source revision provided by AWS CodePipeline.
      *         </p>
      *         </li>
      *         <li>
@@ -1159,12 +1162,12 @@ public class Build implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * For CodeCommit, GitHub, GitHub Enterprise, and BitBucket, the commit ID.
+     * For AWS CodeCommit, GitHub, GitHub Enterprise, and BitBucket, the commit ID.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For CodePipeline, the source revision provided by CodePipeline.
+     * For AWS CodePipeline, the source revision provided by AWS CodePipeline.
      * </p>
      * </li>
      * <li>
@@ -1179,12 +1182,12 @@ public class Build implements Serializable, Cloneable, StructuredPojo {
      *        <ul>
      *        <li>
      *        <p>
-     *        For CodeCommit, GitHub, GitHub Enterprise, and BitBucket, the commit ID.
+     *        For AWS CodeCommit, GitHub, GitHub Enterprise, and BitBucket, the commit ID.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        For CodePipeline, the source revision provided by CodePipeline.
+     *        For AWS CodePipeline, the source revision provided by AWS CodePipeline.
      *        </p>
      *        </li>
      *        <li>
@@ -1202,11 +1205,11 @@ public class Build implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the CodeBuild project.
+     * The name of the AWS CodeBuild project.
      * </p>
      * 
      * @param projectName
-     *        The name of the CodeBuild project.
+     *        The name of the AWS CodeBuild project.
      */
 
     public void setProjectName(String projectName) {
@@ -1215,10 +1218,10 @@ public class Build implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the CodeBuild project.
+     * The name of the AWS CodeBuild project.
      * </p>
      * 
-     * @return The name of the CodeBuild project.
+     * @return The name of the AWS CodeBuild project.
      */
 
     public String getProjectName() {
@@ -1227,11 +1230,11 @@ public class Build implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the CodeBuild project.
+     * The name of the AWS CodeBuild project.
      * </p>
      * 
      * @param projectName
-     *        The name of the CodeBuild project.
+     *        The name of the AWS CodeBuild project.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1435,7 +1438,7 @@ public class Build implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * For CodeCommit: the commit ID, branch, or Git tag to use.
+     * For AWS CodeCommit: the commit ID, branch, or Git tag to use.
      * </p>
      * </li>
      * <li>
@@ -1465,7 +1468,7 @@ public class Build implements Serializable, Cloneable, StructuredPojo {
      *         <ul>
      *         <li>
      *         <p>
-     *         For CodeCommit: the commit ID, branch, or Git tag to use.
+     *         For AWS CodeCommit: the commit ID, branch, or Git tag to use.
      *         </p>
      *         </li>
      *         <li>
@@ -1501,7 +1504,7 @@ public class Build implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * For CodeCommit: the commit ID, branch, or Git tag to use.
+     * For AWS CodeCommit: the commit ID, branch, or Git tag to use.
      * </p>
      * </li>
      * <li>
@@ -1532,7 +1535,7 @@ public class Build implements Serializable, Cloneable, StructuredPojo {
      *        <ul>
      *        <li>
      *        <p>
-     *        For CodeCommit: the commit ID, branch, or Git tag to use.
+     *        For AWS CodeCommit: the commit ID, branch, or Git tag to use.
      *        </p>
      *        </li>
      *        <li>
@@ -1573,7 +1576,7 @@ public class Build implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * For CodeCommit: the commit ID, branch, or Git tag to use.
+     * For AWS CodeCommit: the commit ID, branch, or Git tag to use.
      * </p>
      * </li>
      * <li>
@@ -1609,7 +1612,7 @@ public class Build implements Serializable, Cloneable, StructuredPojo {
      *        <ul>
      *        <li>
      *        <p>
-     *        For CodeCommit: the commit ID, branch, or Git tag to use.
+     *        For AWS CodeCommit: the commit ID, branch, or Git tag to use.
      *        </p>
      *        </li>
      *        <li>
@@ -1652,7 +1655,7 @@ public class Build implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * For CodeCommit: the commit ID, branch, or Git tag to use.
+     * For AWS CodeCommit: the commit ID, branch, or Git tag to use.
      * </p>
      * </li>
      * <li>
@@ -1683,7 +1686,7 @@ public class Build implements Serializable, Cloneable, StructuredPojo {
      *        <ul>
      *        <li>
      *        <p>
-     *        For CodeCommit: the commit ID, branch, or Git tag to use.
+     *        For AWS CodeCommit: the commit ID, branch, or Git tag to use.
      *        </p>
      *        </li>
      *        <li>
@@ -1946,11 +1949,11 @@ public class Build implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Information about the build's logs in CloudWatch Logs.
+     * Information about the build's logs in Amazon CloudWatch Logs.
      * </p>
      * 
      * @param logs
-     *        Information about the build's logs in CloudWatch Logs.
+     *        Information about the build's logs in Amazon CloudWatch Logs.
      */
 
     public void setLogs(LogsLocation logs) {
@@ -1959,10 +1962,10 @@ public class Build implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Information about the build's logs in CloudWatch Logs.
+     * Information about the build's logs in Amazon CloudWatch Logs.
      * </p>
      * 
-     * @return Information about the build's logs in CloudWatch Logs.
+     * @return Information about the build's logs in Amazon CloudWatch Logs.
      */
 
     public LogsLocation getLogs() {
@@ -1971,11 +1974,11 @@ public class Build implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Information about the build's logs in CloudWatch Logs.
+     * Information about the build's logs in Amazon CloudWatch Logs.
      * </p>
      * 
      * @param logs
-     *        Information about the build's logs in CloudWatch Logs.
+     *        Information about the build's logs in Amazon CloudWatch Logs.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1986,11 +1989,12 @@ public class Build implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * How long, in minutes, for CodeBuild to wait before timing out this build if it does not get marked as completed.
+     * How long, in minutes, for AWS CodeBuild to wait before timing out this build if it does not get marked as
+     * completed.
      * </p>
      * 
      * @param timeoutInMinutes
-     *        How long, in minutes, for CodeBuild to wait before timing out this build if it does not get marked as
+     *        How long, in minutes, for AWS CodeBuild to wait before timing out this build if it does not get marked as
      *        completed.
      */
 
@@ -2000,10 +2004,11 @@ public class Build implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * How long, in minutes, for CodeBuild to wait before timing out this build if it does not get marked as completed.
+     * How long, in minutes, for AWS CodeBuild to wait before timing out this build if it does not get marked as
+     * completed.
      * </p>
      * 
-     * @return How long, in minutes, for CodeBuild to wait before timing out this build if it does not get marked as
+     * @return How long, in minutes, for AWS CodeBuild to wait before timing out this build if it does not get marked as
      *         completed.
      */
 
@@ -2013,11 +2018,12 @@ public class Build implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * How long, in minutes, for CodeBuild to wait before timing out this build if it does not get marked as completed.
+     * How long, in minutes, for AWS CodeBuild to wait before timing out this build if it does not get marked as
+     * completed.
      * </p>
      * 
      * @param timeoutInMinutes
-     *        How long, in minutes, for CodeBuild to wait before timing out this build if it does not get marked as
+     *        How long, in minutes, for AWS CodeBuild to wait before timing out this build if it does not get marked as
      *        completed.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -2126,18 +2132,19 @@ public class Build implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * If CodePipeline started the build, the pipeline's name (for example, <code>codepipeline/my-demo-pipeline</code>).
+     * If AWS CodePipeline started the build, the pipeline's name (for example,
+     * <code>codepipeline/my-demo-pipeline</code>).
      * </p>
      * </li>
      * <li>
      * <p>
-     * If an Identity and Access Management user started the build, the user's name (for example,
+     * If an AWS Identity and Access Management (IAM) user started the build, the user's name (for example,
      * <code>MyUserName</code>).
      * </p>
      * </li>
      * <li>
      * <p>
-     * If the Jenkins plugin for CodeBuild started the build, the string <code>CodeBuild-Jenkins-Plugin</code>.
+     * If the Jenkins plugin for AWS CodeBuild started the build, the string <code>CodeBuild-Jenkins-Plugin</code>.
      * </p>
      * </li>
      * </ul>
@@ -2147,19 +2154,20 @@ public class Build implements Serializable, Cloneable, StructuredPojo {
      *        <ul>
      *        <li>
      *        <p>
-     *        If CodePipeline started the build, the pipeline's name (for example,
+     *        If AWS CodePipeline started the build, the pipeline's name (for example,
      *        <code>codepipeline/my-demo-pipeline</code>).
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        If an Identity and Access Management user started the build, the user's name (for example,
+     *        If an AWS Identity and Access Management (IAM) user started the build, the user's name (for example,
      *        <code>MyUserName</code>).
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        If the Jenkins plugin for CodeBuild started the build, the string <code>CodeBuild-Jenkins-Plugin</code>.
+     *        If the Jenkins plugin for AWS CodeBuild started the build, the string
+     *        <code>CodeBuild-Jenkins-Plugin</code>.
      *        </p>
      *        </li>
      */
@@ -2175,18 +2183,19 @@ public class Build implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * If CodePipeline started the build, the pipeline's name (for example, <code>codepipeline/my-demo-pipeline</code>).
+     * If AWS CodePipeline started the build, the pipeline's name (for example,
+     * <code>codepipeline/my-demo-pipeline</code>).
      * </p>
      * </li>
      * <li>
      * <p>
-     * If an Identity and Access Management user started the build, the user's name (for example,
+     * If an AWS Identity and Access Management (IAM) user started the build, the user's name (for example,
      * <code>MyUserName</code>).
      * </p>
      * </li>
      * <li>
      * <p>
-     * If the Jenkins plugin for CodeBuild started the build, the string <code>CodeBuild-Jenkins-Plugin</code>.
+     * If the Jenkins plugin for AWS CodeBuild started the build, the string <code>CodeBuild-Jenkins-Plugin</code>.
      * </p>
      * </li>
      * </ul>
@@ -2195,19 +2204,20 @@ public class Build implements Serializable, Cloneable, StructuredPojo {
      *         <ul>
      *         <li>
      *         <p>
-     *         If CodePipeline started the build, the pipeline's name (for example,
+     *         If AWS CodePipeline started the build, the pipeline's name (for example,
      *         <code>codepipeline/my-demo-pipeline</code>).
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         If an Identity and Access Management user started the build, the user's name (for example,
+     *         If an AWS Identity and Access Management (IAM) user started the build, the user's name (for example,
      *         <code>MyUserName</code>).
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         If the Jenkins plugin for CodeBuild started the build, the string <code>CodeBuild-Jenkins-Plugin</code>.
+     *         If the Jenkins plugin for AWS CodeBuild started the build, the string
+     *         <code>CodeBuild-Jenkins-Plugin</code>.
      *         </p>
      *         </li>
      */
@@ -2223,18 +2233,19 @@ public class Build implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * If CodePipeline started the build, the pipeline's name (for example, <code>codepipeline/my-demo-pipeline</code>).
+     * If AWS CodePipeline started the build, the pipeline's name (for example,
+     * <code>codepipeline/my-demo-pipeline</code>).
      * </p>
      * </li>
      * <li>
      * <p>
-     * If an Identity and Access Management user started the build, the user's name (for example,
+     * If an AWS Identity and Access Management (IAM) user started the build, the user's name (for example,
      * <code>MyUserName</code>).
      * </p>
      * </li>
      * <li>
      * <p>
-     * If the Jenkins plugin for CodeBuild started the build, the string <code>CodeBuild-Jenkins-Plugin</code>.
+     * If the Jenkins plugin for AWS CodeBuild started the build, the string <code>CodeBuild-Jenkins-Plugin</code>.
      * </p>
      * </li>
      * </ul>
@@ -2244,19 +2255,20 @@ public class Build implements Serializable, Cloneable, StructuredPojo {
      *        <ul>
      *        <li>
      *        <p>
-     *        If CodePipeline started the build, the pipeline's name (for example,
+     *        If AWS CodePipeline started the build, the pipeline's name (for example,
      *        <code>codepipeline/my-demo-pipeline</code>).
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        If an Identity and Access Management user started the build, the user's name (for example,
+     *        If an AWS Identity and Access Management (IAM) user started the build, the user's name (for example,
      *        <code>MyUserName</code>).
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        If the Jenkins plugin for CodeBuild started the build, the string <code>CodeBuild-Jenkins-Plugin</code>.
+     *        If the Jenkins plugin for AWS CodeBuild started the build, the string
+     *        <code>CodeBuild-Jenkins-Plugin</code>.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -2269,15 +2281,15 @@ public class Build implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * If your CodeBuild project accesses resources in an Amazon VPC, you provide this parameter that identifies the VPC
-     * ID and the list of security group IDs and subnet IDs. The security groups and subnets must belong to the same
+     * If your AWS CodeBuild project accesses resources in an Amazon VPC, you provide this parameter that identifies the
+     * VPC ID and the list of security group IDs and subnet IDs. The security groups and subnets must belong to the same
      * VPC. You must provide at least one security group and one subnet ID.
      * </p>
      * 
      * @param vpcConfig
-     *        If your CodeBuild project accesses resources in an Amazon VPC, you provide this parameter that identifies
-     *        the VPC ID and the list of security group IDs and subnet IDs. The security groups and subnets must belong
-     *        to the same VPC. You must provide at least one security group and one subnet ID.
+     *        If your AWS CodeBuild project accesses resources in an Amazon VPC, you provide this parameter that
+     *        identifies the VPC ID and the list of security group IDs and subnet IDs. The security groups and subnets
+     *        must belong to the same VPC. You must provide at least one security group and one subnet ID.
      */
 
     public void setVpcConfig(VpcConfig vpcConfig) {
@@ -2286,14 +2298,14 @@ public class Build implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * If your CodeBuild project accesses resources in an Amazon VPC, you provide this parameter that identifies the VPC
-     * ID and the list of security group IDs and subnet IDs. The security groups and subnets must belong to the same
+     * If your AWS CodeBuild project accesses resources in an Amazon VPC, you provide this parameter that identifies the
+     * VPC ID and the list of security group IDs and subnet IDs. The security groups and subnets must belong to the same
      * VPC. You must provide at least one security group and one subnet ID.
      * </p>
      * 
-     * @return If your CodeBuild project accesses resources in an Amazon VPC, you provide this parameter that identifies
-     *         the VPC ID and the list of security group IDs and subnet IDs. The security groups and subnets must belong
-     *         to the same VPC. You must provide at least one security group and one subnet ID.
+     * @return If your AWS CodeBuild project accesses resources in an Amazon VPC, you provide this parameter that
+     *         identifies the VPC ID and the list of security group IDs and subnet IDs. The security groups and subnets
+     *         must belong to the same VPC. You must provide at least one security group and one subnet ID.
      */
 
     public VpcConfig getVpcConfig() {
@@ -2302,15 +2314,15 @@ public class Build implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * If your CodeBuild project accesses resources in an Amazon VPC, you provide this parameter that identifies the VPC
-     * ID and the list of security group IDs and subnet IDs. The security groups and subnets must belong to the same
+     * If your AWS CodeBuild project accesses resources in an Amazon VPC, you provide this parameter that identifies the
+     * VPC ID and the list of security group IDs and subnet IDs. The security groups and subnets must belong to the same
      * VPC. You must provide at least one security group and one subnet ID.
      * </p>
      * 
      * @param vpcConfig
-     *        If your CodeBuild project accesses resources in an Amazon VPC, you provide this parameter that identifies
-     *        the VPC ID and the list of security group IDs and subnet IDs. The security groups and subnets must belong
-     *        to the same VPC. You must provide at least one security group and one subnet ID.
+     *        If your AWS CodeBuild project accesses resources in an Amazon VPC, you provide this parameter that
+     *        identifies the VPC ID and the list of security group IDs and subnet IDs. The security groups and subnets
+     *        must belong to the same VPC. You must provide at least one security group and one subnet ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2361,7 +2373,8 @@ public class Build implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Key Management Service customer master key (CMK) to be used for encrypting the build output artifacts.
+     * The AWS Key Management Service (AWS KMS) customer master key (CMK) to be used for encrypting the build output
+     * artifacts.
      * </p>
      * <note>
      * <p>
@@ -2375,8 +2388,8 @@ public class Build implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param encryptionKey
-     *        The Key Management Service customer master key (CMK) to be used for encrypting the build output
-     *        artifacts.</p> <note>
+     *        The AWS Key Management Service (AWS KMS) customer master key (CMK) to be used for encrypting the build
+     *        output artifacts.</p> <note>
      *        <p>
      *        You can use a cross-account KMS key to encrypt the build output artifacts if your service role has
      *        permission to that key.
@@ -2393,7 +2406,8 @@ public class Build implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Key Management Service customer master key (CMK) to be used for encrypting the build output artifacts.
+     * The AWS Key Management Service (AWS KMS) customer master key (CMK) to be used for encrypting the build output
+     * artifacts.
      * </p>
      * <note>
      * <p>
@@ -2406,8 +2420,8 @@ public class Build implements Serializable, Cloneable, StructuredPojo {
      * format <code>alias/&lt;alias-name&gt;</code>).
      * </p>
      * 
-     * @return The Key Management Service customer master key (CMK) to be used for encrypting the build output
-     *         artifacts.</p> <note>
+     * @return The AWS Key Management Service (AWS KMS) customer master key (CMK) to be used for encrypting the build
+     *         output artifacts.</p> <note>
      *         <p>
      *         You can use a cross-account KMS key to encrypt the build output artifacts if your service role has
      *         permission to that key.
@@ -2424,7 +2438,8 @@ public class Build implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Key Management Service customer master key (CMK) to be used for encrypting the build output artifacts.
+     * The AWS Key Management Service (AWS KMS) customer master key (CMK) to be used for encrypting the build output
+     * artifacts.
      * </p>
      * <note>
      * <p>
@@ -2438,8 +2453,8 @@ public class Build implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param encryptionKey
-     *        The Key Management Service customer master key (CMK) to be used for encrypting the build output
-     *        artifacts.</p> <note>
+     *        The AWS Key Management Service (AWS KMS) customer master key (CMK) to be used for encrypting the build
+     *        output artifacts.</p> <note>
      *        <p>
      *        You can use a cross-account KMS key to encrypt the build output artifacts if your service role has
      *        permission to that key.
@@ -2461,18 +2476,18 @@ public class Build implements Serializable, Cloneable, StructuredPojo {
      * A list of exported environment variables for this build.
      * </p>
      * <p>
-     * Exported environment variables are used in conjunction with CodePipeline to export environment variables from the
-     * current build stage to subsequent stages in the pipeline. For more information, see <a
+     * Exported environment variables are used in conjunction with AWS CodePipeline to export environment variables from
+     * the current build stage to subsequent stages in the pipeline. For more information, see <a
      * href="https://docs.aws.amazon.com/codepipeline/latest/userguide/actions-variables.html">Working with
-     * variables</a> in the <i>CodePipeline User Guide</i>.
+     * variables</a> in the <i>AWS CodePipeline User Guide</i>.
      * </p>
      * 
      * @return A list of exported environment variables for this build.</p>
      *         <p>
-     *         Exported environment variables are used in conjunction with CodePipeline to export environment variables
-     *         from the current build stage to subsequent stages in the pipeline. For more information, see <a
+     *         Exported environment variables are used in conjunction with AWS CodePipeline to export environment
+     *         variables from the current build stage to subsequent stages in the pipeline. For more information, see <a
      *         href="https://docs.aws.amazon.com/codepipeline/latest/userguide/actions-variables.html">Working with
-     *         variables</a> in the <i>CodePipeline User Guide</i>.
+     *         variables</a> in the <i>AWS CodePipeline User Guide</i>.
      */
 
     public java.util.List<ExportedEnvironmentVariable> getExportedEnvironmentVariables() {
@@ -2484,19 +2499,19 @@ public class Build implements Serializable, Cloneable, StructuredPojo {
      * A list of exported environment variables for this build.
      * </p>
      * <p>
-     * Exported environment variables are used in conjunction with CodePipeline to export environment variables from the
-     * current build stage to subsequent stages in the pipeline. For more information, see <a
+     * Exported environment variables are used in conjunction with AWS CodePipeline to export environment variables from
+     * the current build stage to subsequent stages in the pipeline. For more information, see <a
      * href="https://docs.aws.amazon.com/codepipeline/latest/userguide/actions-variables.html">Working with
-     * variables</a> in the <i>CodePipeline User Guide</i>.
+     * variables</a> in the <i>AWS CodePipeline User Guide</i>.
      * </p>
      * 
      * @param exportedEnvironmentVariables
      *        A list of exported environment variables for this build.</p>
      *        <p>
-     *        Exported environment variables are used in conjunction with CodePipeline to export environment variables
-     *        from the current build stage to subsequent stages in the pipeline. For more information, see <a
+     *        Exported environment variables are used in conjunction with AWS CodePipeline to export environment
+     *        variables from the current build stage to subsequent stages in the pipeline. For more information, see <a
      *        href="https://docs.aws.amazon.com/codepipeline/latest/userguide/actions-variables.html">Working with
-     *        variables</a> in the <i>CodePipeline User Guide</i>.
+     *        variables</a> in the <i>AWS CodePipeline User Guide</i>.
      */
 
     public void setExportedEnvironmentVariables(java.util.Collection<ExportedEnvironmentVariable> exportedEnvironmentVariables) {
@@ -2513,10 +2528,10 @@ public class Build implements Serializable, Cloneable, StructuredPojo {
      * A list of exported environment variables for this build.
      * </p>
      * <p>
-     * Exported environment variables are used in conjunction with CodePipeline to export environment variables from the
-     * current build stage to subsequent stages in the pipeline. For more information, see <a
+     * Exported environment variables are used in conjunction with AWS CodePipeline to export environment variables from
+     * the current build stage to subsequent stages in the pipeline. For more information, see <a
      * href="https://docs.aws.amazon.com/codepipeline/latest/userguide/actions-variables.html">Working with
-     * variables</a> in the <i>CodePipeline User Guide</i>.
+     * variables</a> in the <i>AWS CodePipeline User Guide</i>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -2527,10 +2542,10 @@ public class Build implements Serializable, Cloneable, StructuredPojo {
      * @param exportedEnvironmentVariables
      *        A list of exported environment variables for this build.</p>
      *        <p>
-     *        Exported environment variables are used in conjunction with CodePipeline to export environment variables
-     *        from the current build stage to subsequent stages in the pipeline. For more information, see <a
+     *        Exported environment variables are used in conjunction with AWS CodePipeline to export environment
+     *        variables from the current build stage to subsequent stages in the pipeline. For more information, see <a
      *        href="https://docs.aws.amazon.com/codepipeline/latest/userguide/actions-variables.html">Working with
-     *        variables</a> in the <i>CodePipeline User Guide</i>.
+     *        variables</a> in the <i>AWS CodePipeline User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2549,19 +2564,19 @@ public class Build implements Serializable, Cloneable, StructuredPojo {
      * A list of exported environment variables for this build.
      * </p>
      * <p>
-     * Exported environment variables are used in conjunction with CodePipeline to export environment variables from the
-     * current build stage to subsequent stages in the pipeline. For more information, see <a
+     * Exported environment variables are used in conjunction with AWS CodePipeline to export environment variables from
+     * the current build stage to subsequent stages in the pipeline. For more information, see <a
      * href="https://docs.aws.amazon.com/codepipeline/latest/userguide/actions-variables.html">Working with
-     * variables</a> in the <i>CodePipeline User Guide</i>.
+     * variables</a> in the <i>AWS CodePipeline User Guide</i>.
      * </p>
      * 
      * @param exportedEnvironmentVariables
      *        A list of exported environment variables for this build.</p>
      *        <p>
-     *        Exported environment variables are used in conjunction with CodePipeline to export environment variables
-     *        from the current build stage to subsequent stages in the pipeline. For more information, see <a
+     *        Exported environment variables are used in conjunction with AWS CodePipeline to export environment
+     *        variables from the current build stage to subsequent stages in the pipeline. For more information, see <a
      *        href="https://docs.aws.amazon.com/codepipeline/latest/userguide/actions-variables.html">Working with
-     *        variables</a> in the <i>CodePipeline User Guide</i>.
+     *        variables</a> in the <i>AWS CodePipeline User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

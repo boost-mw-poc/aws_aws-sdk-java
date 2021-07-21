@@ -35,7 +35,7 @@ public class ProjectArtifacts implements Serializable, Cloneable, StructuredPojo
      * <ul>
      * <li>
      * <p>
-     * <code>CODEPIPELINE</code>: The build project has build output generated through CodePipeline.
+     * <code>CODEPIPELINE</code>: The build project has build output generated through AWS CodePipeline.
      * </p>
      * <note>
      * <p>
@@ -62,8 +62,8 @@ public class ProjectArtifacts implements Serializable, Cloneable, StructuredPojo
      * <ul>
      * <li>
      * <p>
-     * If <code>type</code> is set to <code>CODEPIPELINE</code>, CodePipeline ignores this value if specified. This is
-     * because CodePipeline manages its build output locations instead of CodeBuild.
+     * If <code>type</code> is set to <code>CODEPIPELINE</code>, AWS CodePipeline ignores this value if specified. This
+     * is because AWS CodePipeline manages its build output locations instead of AWS CodeBuild.
      * </p>
      * </li>
      * <li>
@@ -82,14 +82,14 @@ public class ProjectArtifacts implements Serializable, Cloneable, StructuredPojo
     private String location;
     /**
      * <p>
-     * Along with <code>namespaceType</code> and <code>name</code>, the pattern that CodeBuild uses to name and store
-     * the output artifact:
+     * Along with <code>namespaceType</code> and <code>name</code>, the pattern that AWS CodeBuild uses to name and
+     * store the output artifact:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * If <code>type</code> is set to <code>CODEPIPELINE</code>, CodePipeline ignores this value if specified. This is
-     * because CodePipeline manages its build output names instead of CodeBuild.
+     * If <code>type</code> is set to <code>CODEPIPELINE</code>, AWS CodePipeline ignores this value if specified. This
+     * is because AWS CodePipeline manages its build output names instead of AWS CodeBuild.
      * </p>
      * </li>
      * <li>
@@ -114,14 +114,14 @@ public class ProjectArtifacts implements Serializable, Cloneable, StructuredPojo
     private String path;
     /**
      * <p>
-     * Along with <code>path</code> and <code>name</code>, the pattern that CodeBuild uses to determine the name and
+     * Along with <code>path</code> and <code>name</code>, the pattern that AWS CodeBuild uses to determine the name and
      * location to store the output artifact:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * If <code>type</code> is set to <code>CODEPIPELINE</code>, CodePipeline ignores this value if specified. This is
-     * because CodePipeline manages its build output names instead of CodeBuild.
+     * If <code>type</code> is set to <code>CODEPIPELINE</code>, AWS CodePipeline ignores this value if specified. This
+     * is because AWS CodePipeline manages its build output names instead of AWS CodeBuild.
      * </p>
      * </li>
      * <li>
@@ -158,14 +158,14 @@ public class ProjectArtifacts implements Serializable, Cloneable, StructuredPojo
     private String namespaceType;
     /**
      * <p>
-     * Along with <code>path</code> and <code>namespaceType</code>, the pattern that CodeBuild uses to name and store
-     * the output artifact:
+     * Along with <code>path</code> and <code>namespaceType</code>, the pattern that AWS CodeBuild uses to name and
+     * store the output artifact:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * If <code>type</code> is set to <code>CODEPIPELINE</code>, CodePipeline ignores this value if specified. This is
-     * because CodePipeline manages its build output names instead of CodeBuild.
+     * If <code>type</code> is set to <code>CODEPIPELINE</code>, AWS CodePipeline ignores this value if specified. This
+     * is because AWS CodePipeline manages its build output names instead of AWS CodeBuild.
      * </p>
      * </li>
      * <li>
@@ -215,8 +215,8 @@ public class ProjectArtifacts implements Serializable, Cloneable, StructuredPojo
      * <ul>
      * <li>
      * <p>
-     * If <code>type</code> is set to <code>CODEPIPELINE</code>, CodePipeline ignores this value if specified. This is
-     * because CodePipeline manages its build output artifacts instead of CodeBuild.
+     * If <code>type</code> is set to <code>CODEPIPELINE</code>, AWS CodePipeline ignores this value if specified. This
+     * is because AWS CodePipeline manages its build output artifacts instead of AWS CodeBuild.
      * </p>
      * </li>
      * <li>
@@ -232,13 +232,13 @@ public class ProjectArtifacts implements Serializable, Cloneable, StructuredPojo
      * <ul>
      * <li>
      * <p>
-     * <code>NONE</code>: CodeBuild creates in the output bucket a folder that contains the build output. This is the
-     * default if <code>packaging</code> is not specified.
+     * <code>NONE</code>: AWS CodeBuild creates in the output bucket a folder that contains the build output. This is
+     * the default if <code>packaging</code> is not specified.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>ZIP</code>: CodeBuild creates in the output bucket a ZIP file that contains the build output.
+     * <code>ZIP</code>: AWS CodeBuild creates in the output bucket a ZIP file that contains the build output.
      * </p>
      * </li>
      * </ul>
@@ -268,6 +268,8 @@ public class ProjectArtifacts implements Serializable, Cloneable, StructuredPojo
      */
     private String artifactIdentifier;
 
+    private String bucketOwnerAccess;
+
     /**
      * <p>
      * The type of build output artifact. Valid values include:
@@ -275,7 +277,7 @@ public class ProjectArtifacts implements Serializable, Cloneable, StructuredPojo
      * <ul>
      * <li>
      * <p>
-     * <code>CODEPIPELINE</code>: The build project has build output generated through CodePipeline.
+     * <code>CODEPIPELINE</code>: The build project has build output generated through AWS CodePipeline.
      * </p>
      * <note>
      * <p>
@@ -299,7 +301,7 @@ public class ProjectArtifacts implements Serializable, Cloneable, StructuredPojo
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>CODEPIPELINE</code>: The build project has build output generated through CodePipeline.
+     *        <code>CODEPIPELINE</code>: The build project has build output generated through AWS CodePipeline.
      *        </p>
      *        <note>
      *        <p>
@@ -330,7 +332,7 @@ public class ProjectArtifacts implements Serializable, Cloneable, StructuredPojo
      * <ul>
      * <li>
      * <p>
-     * <code>CODEPIPELINE</code>: The build project has build output generated through CodePipeline.
+     * <code>CODEPIPELINE</code>: The build project has build output generated through AWS CodePipeline.
      * </p>
      * <note>
      * <p>
@@ -353,7 +355,7 @@ public class ProjectArtifacts implements Serializable, Cloneable, StructuredPojo
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>CODEPIPELINE</code>: The build project has build output generated through CodePipeline.
+     *         <code>CODEPIPELINE</code>: The build project has build output generated through AWS CodePipeline.
      *         </p>
      *         <note>
      *         <p>
@@ -384,7 +386,7 @@ public class ProjectArtifacts implements Serializable, Cloneable, StructuredPojo
      * <ul>
      * <li>
      * <p>
-     * <code>CODEPIPELINE</code>: The build project has build output generated through CodePipeline.
+     * <code>CODEPIPELINE</code>: The build project has build output generated through AWS CodePipeline.
      * </p>
      * <note>
      * <p>
@@ -408,7 +410,7 @@ public class ProjectArtifacts implements Serializable, Cloneable, StructuredPojo
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>CODEPIPELINE</code>: The build project has build output generated through CodePipeline.
+     *        <code>CODEPIPELINE</code>: The build project has build output generated through AWS CodePipeline.
      *        </p>
      *        <note>
      *        <p>
@@ -441,7 +443,7 @@ public class ProjectArtifacts implements Serializable, Cloneable, StructuredPojo
      * <ul>
      * <li>
      * <p>
-     * <code>CODEPIPELINE</code>: The build project has build output generated through CodePipeline.
+     * <code>CODEPIPELINE</code>: The build project has build output generated through AWS CodePipeline.
      * </p>
      * <note>
      * <p>
@@ -465,7 +467,7 @@ public class ProjectArtifacts implements Serializable, Cloneable, StructuredPojo
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>CODEPIPELINE</code>: The build project has build output generated through CodePipeline.
+     *        <code>CODEPIPELINE</code>: The build project has build output generated through AWS CodePipeline.
      *        </p>
      *        <note>
      *        <p>
@@ -496,7 +498,7 @@ public class ProjectArtifacts implements Serializable, Cloneable, StructuredPojo
      * <ul>
      * <li>
      * <p>
-     * <code>CODEPIPELINE</code>: The build project has build output generated through CodePipeline.
+     * <code>CODEPIPELINE</code>: The build project has build output generated through AWS CodePipeline.
      * </p>
      * <note>
      * <p>
@@ -520,7 +522,7 @@ public class ProjectArtifacts implements Serializable, Cloneable, StructuredPojo
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>CODEPIPELINE</code>: The build project has build output generated through CodePipeline.
+     *        <code>CODEPIPELINE</code>: The build project has build output generated through AWS CodePipeline.
      *        </p>
      *        <note>
      *        <p>
@@ -553,8 +555,8 @@ public class ProjectArtifacts implements Serializable, Cloneable, StructuredPojo
      * <ul>
      * <li>
      * <p>
-     * If <code>type</code> is set to <code>CODEPIPELINE</code>, CodePipeline ignores this value if specified. This is
-     * because CodePipeline manages its build output locations instead of CodeBuild.
+     * If <code>type</code> is set to <code>CODEPIPELINE</code>, AWS CodePipeline ignores this value if specified. This
+     * is because AWS CodePipeline manages its build output locations instead of AWS CodeBuild.
      * </p>
      * </li>
      * <li>
@@ -575,8 +577,8 @@ public class ProjectArtifacts implements Serializable, Cloneable, StructuredPojo
      *        <ul>
      *        <li>
      *        <p>
-     *        If <code>type</code> is set to <code>CODEPIPELINE</code>, CodePipeline ignores this value if specified.
-     *        This is because CodePipeline manages its build output locations instead of CodeBuild.
+     *        If <code>type</code> is set to <code>CODEPIPELINE</code>, AWS CodePipeline ignores this value if
+     *        specified. This is because AWS CodePipeline manages its build output locations instead of AWS CodeBuild.
      *        </p>
      *        </li>
      *        <li>
@@ -603,8 +605,8 @@ public class ProjectArtifacts implements Serializable, Cloneable, StructuredPojo
      * <ul>
      * <li>
      * <p>
-     * If <code>type</code> is set to <code>CODEPIPELINE</code>, CodePipeline ignores this value if specified. This is
-     * because CodePipeline manages its build output locations instead of CodeBuild.
+     * If <code>type</code> is set to <code>CODEPIPELINE</code>, AWS CodePipeline ignores this value if specified. This
+     * is because AWS CodePipeline manages its build output locations instead of AWS CodeBuild.
      * </p>
      * </li>
      * <li>
@@ -624,8 +626,8 @@ public class ProjectArtifacts implements Serializable, Cloneable, StructuredPojo
      *         <ul>
      *         <li>
      *         <p>
-     *         If <code>type</code> is set to <code>CODEPIPELINE</code>, CodePipeline ignores this value if specified.
-     *         This is because CodePipeline manages its build output locations instead of CodeBuild.
+     *         If <code>type</code> is set to <code>CODEPIPELINE</code>, AWS CodePipeline ignores this value if
+     *         specified. This is because AWS CodePipeline manages its build output locations instead of AWS CodeBuild.
      *         </p>
      *         </li>
      *         <li>
@@ -652,8 +654,8 @@ public class ProjectArtifacts implements Serializable, Cloneable, StructuredPojo
      * <ul>
      * <li>
      * <p>
-     * If <code>type</code> is set to <code>CODEPIPELINE</code>, CodePipeline ignores this value if specified. This is
-     * because CodePipeline manages its build output locations instead of CodeBuild.
+     * If <code>type</code> is set to <code>CODEPIPELINE</code>, AWS CodePipeline ignores this value if specified. This
+     * is because AWS CodePipeline manages its build output locations instead of AWS CodeBuild.
      * </p>
      * </li>
      * <li>
@@ -674,8 +676,8 @@ public class ProjectArtifacts implements Serializable, Cloneable, StructuredPojo
      *        <ul>
      *        <li>
      *        <p>
-     *        If <code>type</code> is set to <code>CODEPIPELINE</code>, CodePipeline ignores this value if specified.
-     *        This is because CodePipeline manages its build output locations instead of CodeBuild.
+     *        If <code>type</code> is set to <code>CODEPIPELINE</code>, AWS CodePipeline ignores this value if
+     *        specified. This is because AWS CodePipeline manages its build output locations instead of AWS CodeBuild.
      *        </p>
      *        </li>
      *        <li>
@@ -699,14 +701,14 @@ public class ProjectArtifacts implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * Along with <code>namespaceType</code> and <code>name</code>, the pattern that CodeBuild uses to name and store
-     * the output artifact:
+     * Along with <code>namespaceType</code> and <code>name</code>, the pattern that AWS CodeBuild uses to name and
+     * store the output artifact:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * If <code>type</code> is set to <code>CODEPIPELINE</code>, CodePipeline ignores this value if specified. This is
-     * because CodePipeline manages its build output names instead of CodeBuild.
+     * If <code>type</code> is set to <code>CODEPIPELINE</code>, AWS CodePipeline ignores this value if specified. This
+     * is because AWS CodePipeline manages its build output names instead of AWS CodeBuild.
      * </p>
      * </li>
      * <li>
@@ -729,13 +731,13 @@ public class ProjectArtifacts implements Serializable, Cloneable, StructuredPojo
      * </p>
      * 
      * @param path
-     *        Along with <code>namespaceType</code> and <code>name</code>, the pattern that CodeBuild uses to name and
-     *        store the output artifact:</p>
+     *        Along with <code>namespaceType</code> and <code>name</code>, the pattern that AWS CodeBuild uses to name
+     *        and store the output artifact:</p>
      *        <ul>
      *        <li>
      *        <p>
-     *        If <code>type</code> is set to <code>CODEPIPELINE</code>, CodePipeline ignores this value if specified.
-     *        This is because CodePipeline manages its build output names instead of CodeBuild.
+     *        If <code>type</code> is set to <code>CODEPIPELINE</code>, AWS CodePipeline ignores this value if
+     *        specified. This is because AWS CodePipeline manages its build output names instead of AWS CodeBuild.
      *        </p>
      *        </li>
      *        <li>
@@ -763,14 +765,14 @@ public class ProjectArtifacts implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * Along with <code>namespaceType</code> and <code>name</code>, the pattern that CodeBuild uses to name and store
-     * the output artifact:
+     * Along with <code>namespaceType</code> and <code>name</code>, the pattern that AWS CodeBuild uses to name and
+     * store the output artifact:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * If <code>type</code> is set to <code>CODEPIPELINE</code>, CodePipeline ignores this value if specified. This is
-     * because CodePipeline manages its build output names instead of CodeBuild.
+     * If <code>type</code> is set to <code>CODEPIPELINE</code>, AWS CodePipeline ignores this value if specified. This
+     * is because AWS CodePipeline manages its build output names instead of AWS CodeBuild.
      * </p>
      * </li>
      * <li>
@@ -792,13 +794,13 @@ public class ProjectArtifacts implements Serializable, Cloneable, StructuredPojo
      * the output bucket at <code>MyArtifacts/MyArtifact.zip</code>.
      * </p>
      * 
-     * @return Along with <code>namespaceType</code> and <code>name</code>, the pattern that CodeBuild uses to name and
-     *         store the output artifact:</p>
+     * @return Along with <code>namespaceType</code> and <code>name</code>, the pattern that AWS CodeBuild uses to name
+     *         and store the output artifact:</p>
      *         <ul>
      *         <li>
      *         <p>
-     *         If <code>type</code> is set to <code>CODEPIPELINE</code>, CodePipeline ignores this value if specified.
-     *         This is because CodePipeline manages its build output names instead of CodeBuild.
+     *         If <code>type</code> is set to <code>CODEPIPELINE</code>, AWS CodePipeline ignores this value if
+     *         specified. This is because AWS CodePipeline manages its build output names instead of AWS CodeBuild.
      *         </p>
      *         </li>
      *         <li>
@@ -826,14 +828,14 @@ public class ProjectArtifacts implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * Along with <code>namespaceType</code> and <code>name</code>, the pattern that CodeBuild uses to name and store
-     * the output artifact:
+     * Along with <code>namespaceType</code> and <code>name</code>, the pattern that AWS CodeBuild uses to name and
+     * store the output artifact:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * If <code>type</code> is set to <code>CODEPIPELINE</code>, CodePipeline ignores this value if specified. This is
-     * because CodePipeline manages its build output names instead of CodeBuild.
+     * If <code>type</code> is set to <code>CODEPIPELINE</code>, AWS CodePipeline ignores this value if specified. This
+     * is because AWS CodePipeline manages its build output names instead of AWS CodeBuild.
      * </p>
      * </li>
      * <li>
@@ -856,13 +858,13 @@ public class ProjectArtifacts implements Serializable, Cloneable, StructuredPojo
      * </p>
      * 
      * @param path
-     *        Along with <code>namespaceType</code> and <code>name</code>, the pattern that CodeBuild uses to name and
-     *        store the output artifact:</p>
+     *        Along with <code>namespaceType</code> and <code>name</code>, the pattern that AWS CodeBuild uses to name
+     *        and store the output artifact:</p>
      *        <ul>
      *        <li>
      *        <p>
-     *        If <code>type</code> is set to <code>CODEPIPELINE</code>, CodePipeline ignores this value if specified.
-     *        This is because CodePipeline manages its build output names instead of CodeBuild.
+     *        If <code>type</code> is set to <code>CODEPIPELINE</code>, AWS CodePipeline ignores this value if
+     *        specified. This is because AWS CodePipeline manages its build output names instead of AWS CodeBuild.
      *        </p>
      *        </li>
      *        <li>
@@ -892,14 +894,14 @@ public class ProjectArtifacts implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * Along with <code>path</code> and <code>name</code>, the pattern that CodeBuild uses to determine the name and
+     * Along with <code>path</code> and <code>name</code>, the pattern that AWS CodeBuild uses to determine the name and
      * location to store the output artifact:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * If <code>type</code> is set to <code>CODEPIPELINE</code>, CodePipeline ignores this value if specified. This is
-     * because CodePipeline manages its build output names instead of CodeBuild.
+     * If <code>type</code> is set to <code>CODEPIPELINE</code>, AWS CodePipeline ignores this value if specified. This
+     * is because AWS CodePipeline manages its build output names instead of AWS CodeBuild.
      * </p>
      * </li>
      * <li>
@@ -934,13 +936,13 @@ public class ProjectArtifacts implements Serializable, Cloneable, StructuredPojo
      * </p>
      * 
      * @param namespaceType
-     *        Along with <code>path</code> and <code>name</code>, the pattern that CodeBuild uses to determine the name
-     *        and location to store the output artifact:</p>
+     *        Along with <code>path</code> and <code>name</code>, the pattern that AWS CodeBuild uses to determine the
+     *        name and location to store the output artifact:</p>
      *        <ul>
      *        <li>
      *        <p>
-     *        If <code>type</code> is set to <code>CODEPIPELINE</code>, CodePipeline ignores this value if specified.
-     *        This is because CodePipeline manages its build output names instead of CodeBuild.
+     *        If <code>type</code> is set to <code>CODEPIPELINE</code>, AWS CodePipeline ignores this value if
+     *        specified. This is because AWS CodePipeline manages its build output names instead of AWS CodeBuild.
      *        </p>
      *        </li>
      *        <li>
@@ -981,14 +983,14 @@ public class ProjectArtifacts implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * Along with <code>path</code> and <code>name</code>, the pattern that CodeBuild uses to determine the name and
+     * Along with <code>path</code> and <code>name</code>, the pattern that AWS CodeBuild uses to determine the name and
      * location to store the output artifact:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * If <code>type</code> is set to <code>CODEPIPELINE</code>, CodePipeline ignores this value if specified. This is
-     * because CodePipeline manages its build output names instead of CodeBuild.
+     * If <code>type</code> is set to <code>CODEPIPELINE</code>, AWS CodePipeline ignores this value if specified. This
+     * is because AWS CodePipeline manages its build output names instead of AWS CodeBuild.
      * </p>
      * </li>
      * <li>
@@ -1022,13 +1024,13 @@ public class ProjectArtifacts implements Serializable, Cloneable, StructuredPojo
      * in <code>MyArtifacts/&lt;build-ID&gt;/MyArtifact.zip</code>.
      * </p>
      * 
-     * @return Along with <code>path</code> and <code>name</code>, the pattern that CodeBuild uses to determine the name
-     *         and location to store the output artifact:</p>
+     * @return Along with <code>path</code> and <code>name</code>, the pattern that AWS CodeBuild uses to determine the
+     *         name and location to store the output artifact:</p>
      *         <ul>
      *         <li>
      *         <p>
-     *         If <code>type</code> is set to <code>CODEPIPELINE</code>, CodePipeline ignores this value if specified.
-     *         This is because CodePipeline manages its build output names instead of CodeBuild.
+     *         If <code>type</code> is set to <code>CODEPIPELINE</code>, AWS CodePipeline ignores this value if
+     *         specified. This is because AWS CodePipeline manages its build output names instead of AWS CodeBuild.
      *         </p>
      *         </li>
      *         <li>
@@ -1069,14 +1071,14 @@ public class ProjectArtifacts implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * Along with <code>path</code> and <code>name</code>, the pattern that CodeBuild uses to determine the name and
+     * Along with <code>path</code> and <code>name</code>, the pattern that AWS CodeBuild uses to determine the name and
      * location to store the output artifact:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * If <code>type</code> is set to <code>CODEPIPELINE</code>, CodePipeline ignores this value if specified. This is
-     * because CodePipeline manages its build output names instead of CodeBuild.
+     * If <code>type</code> is set to <code>CODEPIPELINE</code>, AWS CodePipeline ignores this value if specified. This
+     * is because AWS CodePipeline manages its build output names instead of AWS CodeBuild.
      * </p>
      * </li>
      * <li>
@@ -1111,13 +1113,13 @@ public class ProjectArtifacts implements Serializable, Cloneable, StructuredPojo
      * </p>
      * 
      * @param namespaceType
-     *        Along with <code>path</code> and <code>name</code>, the pattern that CodeBuild uses to determine the name
-     *        and location to store the output artifact:</p>
+     *        Along with <code>path</code> and <code>name</code>, the pattern that AWS CodeBuild uses to determine the
+     *        name and location to store the output artifact:</p>
      *        <ul>
      *        <li>
      *        <p>
-     *        If <code>type</code> is set to <code>CODEPIPELINE</code>, CodePipeline ignores this value if specified.
-     *        This is because CodePipeline manages its build output names instead of CodeBuild.
+     *        If <code>type</code> is set to <code>CODEPIPELINE</code>, AWS CodePipeline ignores this value if
+     *        specified. This is because AWS CodePipeline manages its build output names instead of AWS CodeBuild.
      *        </p>
      *        </li>
      *        <li>
@@ -1160,14 +1162,14 @@ public class ProjectArtifacts implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * Along with <code>path</code> and <code>name</code>, the pattern that CodeBuild uses to determine the name and
+     * Along with <code>path</code> and <code>name</code>, the pattern that AWS CodeBuild uses to determine the name and
      * location to store the output artifact:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * If <code>type</code> is set to <code>CODEPIPELINE</code>, CodePipeline ignores this value if specified. This is
-     * because CodePipeline manages its build output names instead of CodeBuild.
+     * If <code>type</code> is set to <code>CODEPIPELINE</code>, AWS CodePipeline ignores this value if specified. This
+     * is because AWS CodePipeline manages its build output names instead of AWS CodeBuild.
      * </p>
      * </li>
      * <li>
@@ -1202,13 +1204,13 @@ public class ProjectArtifacts implements Serializable, Cloneable, StructuredPojo
      * </p>
      * 
      * @param namespaceType
-     *        Along with <code>path</code> and <code>name</code>, the pattern that CodeBuild uses to determine the name
-     *        and location to store the output artifact:</p>
+     *        Along with <code>path</code> and <code>name</code>, the pattern that AWS CodeBuild uses to determine the
+     *        name and location to store the output artifact:</p>
      *        <ul>
      *        <li>
      *        <p>
-     *        If <code>type</code> is set to <code>CODEPIPELINE</code>, CodePipeline ignores this value if specified.
-     *        This is because CodePipeline manages its build output names instead of CodeBuild.
+     *        If <code>type</code> is set to <code>CODEPIPELINE</code>, AWS CodePipeline ignores this value if
+     *        specified. This is because AWS CodePipeline manages its build output names instead of AWS CodeBuild.
      *        </p>
      *        </li>
      *        <li>
@@ -1249,14 +1251,14 @@ public class ProjectArtifacts implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * Along with <code>path</code> and <code>name</code>, the pattern that CodeBuild uses to determine the name and
+     * Along with <code>path</code> and <code>name</code>, the pattern that AWS CodeBuild uses to determine the name and
      * location to store the output artifact:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * If <code>type</code> is set to <code>CODEPIPELINE</code>, CodePipeline ignores this value if specified. This is
-     * because CodePipeline manages its build output names instead of CodeBuild.
+     * If <code>type</code> is set to <code>CODEPIPELINE</code>, AWS CodePipeline ignores this value if specified. This
+     * is because AWS CodePipeline manages its build output names instead of AWS CodeBuild.
      * </p>
      * </li>
      * <li>
@@ -1291,13 +1293,13 @@ public class ProjectArtifacts implements Serializable, Cloneable, StructuredPojo
      * </p>
      * 
      * @param namespaceType
-     *        Along with <code>path</code> and <code>name</code>, the pattern that CodeBuild uses to determine the name
-     *        and location to store the output artifact:</p>
+     *        Along with <code>path</code> and <code>name</code>, the pattern that AWS CodeBuild uses to determine the
+     *        name and location to store the output artifact:</p>
      *        <ul>
      *        <li>
      *        <p>
-     *        If <code>type</code> is set to <code>CODEPIPELINE</code>, CodePipeline ignores this value if specified.
-     *        This is because CodePipeline manages its build output names instead of CodeBuild.
+     *        If <code>type</code> is set to <code>CODEPIPELINE</code>, AWS CodePipeline ignores this value if
+     *        specified. This is because AWS CodePipeline manages its build output names instead of AWS CodeBuild.
      *        </p>
      *        </li>
      *        <li>
@@ -1340,14 +1342,14 @@ public class ProjectArtifacts implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * Along with <code>path</code> and <code>namespaceType</code>, the pattern that CodeBuild uses to name and store
-     * the output artifact:
+     * Along with <code>path</code> and <code>namespaceType</code>, the pattern that AWS CodeBuild uses to name and
+     * store the output artifact:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * If <code>type</code> is set to <code>CODEPIPELINE</code>, CodePipeline ignores this value if specified. This is
-     * because CodePipeline manages its build output names instead of CodeBuild.
+     * If <code>type</code> is set to <code>CODEPIPELINE</code>, AWS CodePipeline ignores this value if specified. This
+     * is because AWS CodePipeline manages its build output names instead of AWS CodeBuild.
      * </p>
      * </li>
      * <li>
@@ -1390,13 +1392,13 @@ public class ProjectArtifacts implements Serializable, Cloneable, StructuredPojo
      * </ul>
      * 
      * @param name
-     *        Along with <code>path</code> and <code>namespaceType</code>, the pattern that CodeBuild uses to name and
-     *        store the output artifact:</p>
+     *        Along with <code>path</code> and <code>namespaceType</code>, the pattern that AWS CodeBuild uses to name
+     *        and store the output artifact:</p>
      *        <ul>
      *        <li>
      *        <p>
-     *        If <code>type</code> is set to <code>CODEPIPELINE</code>, CodePipeline ignores this value if specified.
-     *        This is because CodePipeline manages its build output names instead of CodeBuild.
+     *        If <code>type</code> is set to <code>CODEPIPELINE</code>, AWS CodePipeline ignores this value if
+     *        specified. This is because AWS CodePipeline manages its build output names instead of AWS CodeBuild.
      *        </p>
      *        </li>
      *        <li>
@@ -1445,14 +1447,14 @@ public class ProjectArtifacts implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * Along with <code>path</code> and <code>namespaceType</code>, the pattern that CodeBuild uses to name and store
-     * the output artifact:
+     * Along with <code>path</code> and <code>namespaceType</code>, the pattern that AWS CodeBuild uses to name and
+     * store the output artifact:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * If <code>type</code> is set to <code>CODEPIPELINE</code>, CodePipeline ignores this value if specified. This is
-     * because CodePipeline manages its build output names instead of CodeBuild.
+     * If <code>type</code> is set to <code>CODEPIPELINE</code>, AWS CodePipeline ignores this value if specified. This
+     * is because AWS CodePipeline manages its build output names instead of AWS CodeBuild.
      * </p>
      * </li>
      * <li>
@@ -1494,13 +1496,13 @@ public class ProjectArtifacts implements Serializable, Cloneable, StructuredPojo
      * </li>
      * </ul>
      * 
-     * @return Along with <code>path</code> and <code>namespaceType</code>, the pattern that CodeBuild uses to name and
-     *         store the output artifact:</p>
+     * @return Along with <code>path</code> and <code>namespaceType</code>, the pattern that AWS CodeBuild uses to name
+     *         and store the output artifact:</p>
      *         <ul>
      *         <li>
      *         <p>
-     *         If <code>type</code> is set to <code>CODEPIPELINE</code>, CodePipeline ignores this value if specified.
-     *         This is because CodePipeline manages its build output names instead of CodeBuild.
+     *         If <code>type</code> is set to <code>CODEPIPELINE</code>, AWS CodePipeline ignores this value if
+     *         specified. This is because AWS CodePipeline manages its build output names instead of AWS CodeBuild.
      *         </p>
      *         </li>
      *         <li>
@@ -1549,14 +1551,14 @@ public class ProjectArtifacts implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * Along with <code>path</code> and <code>namespaceType</code>, the pattern that CodeBuild uses to name and store
-     * the output artifact:
+     * Along with <code>path</code> and <code>namespaceType</code>, the pattern that AWS CodeBuild uses to name and
+     * store the output artifact:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * If <code>type</code> is set to <code>CODEPIPELINE</code>, CodePipeline ignores this value if specified. This is
-     * because CodePipeline manages its build output names instead of CodeBuild.
+     * If <code>type</code> is set to <code>CODEPIPELINE</code>, AWS CodePipeline ignores this value if specified. This
+     * is because AWS CodePipeline manages its build output names instead of AWS CodeBuild.
      * </p>
      * </li>
      * <li>
@@ -1599,13 +1601,13 @@ public class ProjectArtifacts implements Serializable, Cloneable, StructuredPojo
      * </ul>
      * 
      * @param name
-     *        Along with <code>path</code> and <code>namespaceType</code>, the pattern that CodeBuild uses to name and
-     *        store the output artifact:</p>
+     *        Along with <code>path</code> and <code>namespaceType</code>, the pattern that AWS CodeBuild uses to name
+     *        and store the output artifact:</p>
      *        <ul>
      *        <li>
      *        <p>
-     *        If <code>type</code> is set to <code>CODEPIPELINE</code>, CodePipeline ignores this value if specified.
-     *        This is because CodePipeline manages its build output names instead of CodeBuild.
+     *        If <code>type</code> is set to <code>CODEPIPELINE</code>, AWS CodePipeline ignores this value if
+     *        specified. This is because AWS CodePipeline manages its build output names instead of AWS CodeBuild.
      *        </p>
      *        </li>
      *        <li>
@@ -1661,8 +1663,8 @@ public class ProjectArtifacts implements Serializable, Cloneable, StructuredPojo
      * <ul>
      * <li>
      * <p>
-     * If <code>type</code> is set to <code>CODEPIPELINE</code>, CodePipeline ignores this value if specified. This is
-     * because CodePipeline manages its build output artifacts instead of CodeBuild.
+     * If <code>type</code> is set to <code>CODEPIPELINE</code>, AWS CodePipeline ignores this value if specified. This
+     * is because AWS CodePipeline manages its build output artifacts instead of AWS CodeBuild.
      * </p>
      * </li>
      * <li>
@@ -1678,13 +1680,13 @@ public class ProjectArtifacts implements Serializable, Cloneable, StructuredPojo
      * <ul>
      * <li>
      * <p>
-     * <code>NONE</code>: CodeBuild creates in the output bucket a folder that contains the build output. This is the
-     * default if <code>packaging</code> is not specified.
+     * <code>NONE</code>: AWS CodeBuild creates in the output bucket a folder that contains the build output. This is
+     * the default if <code>packaging</code> is not specified.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>ZIP</code>: CodeBuild creates in the output bucket a ZIP file that contains the build output.
+     * <code>ZIP</code>: AWS CodeBuild creates in the output bucket a ZIP file that contains the build output.
      * </p>
      * </li>
      * </ul>
@@ -1696,8 +1698,8 @@ public class ProjectArtifacts implements Serializable, Cloneable, StructuredPojo
      *        <ul>
      *        <li>
      *        <p>
-     *        If <code>type</code> is set to <code>CODEPIPELINE</code>, CodePipeline ignores this value if specified.
-     *        This is because CodePipeline manages its build output artifacts instead of CodeBuild.
+     *        If <code>type</code> is set to <code>CODEPIPELINE</code>, AWS CodePipeline ignores this value if
+     *        specified. This is because AWS CodePipeline manages its build output artifacts instead of AWS CodeBuild.
      *        </p>
      *        </li>
      *        <li>
@@ -1713,13 +1715,13 @@ public class ProjectArtifacts implements Serializable, Cloneable, StructuredPojo
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>NONE</code>: CodeBuild creates in the output bucket a folder that contains the build output. This is
-     *        the default if <code>packaging</code> is not specified.
+     *        <code>NONE</code>: AWS CodeBuild creates in the output bucket a folder that contains the build output.
+     *        This is the default if <code>packaging</code> is not specified.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>ZIP</code>: CodeBuild creates in the output bucket a ZIP file that contains the build output.
+     *        <code>ZIP</code>: AWS CodeBuild creates in the output bucket a ZIP file that contains the build output.
      *        </p>
      *        </li>
      *        </ul>
@@ -1738,8 +1740,8 @@ public class ProjectArtifacts implements Serializable, Cloneable, StructuredPojo
      * <ul>
      * <li>
      * <p>
-     * If <code>type</code> is set to <code>CODEPIPELINE</code>, CodePipeline ignores this value if specified. This is
-     * because CodePipeline manages its build output artifacts instead of CodeBuild.
+     * If <code>type</code> is set to <code>CODEPIPELINE</code>, AWS CodePipeline ignores this value if specified. This
+     * is because AWS CodePipeline manages its build output artifacts instead of AWS CodeBuild.
      * </p>
      * </li>
      * <li>
@@ -1755,13 +1757,13 @@ public class ProjectArtifacts implements Serializable, Cloneable, StructuredPojo
      * <ul>
      * <li>
      * <p>
-     * <code>NONE</code>: CodeBuild creates in the output bucket a folder that contains the build output. This is the
-     * default if <code>packaging</code> is not specified.
+     * <code>NONE</code>: AWS CodeBuild creates in the output bucket a folder that contains the build output. This is
+     * the default if <code>packaging</code> is not specified.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>ZIP</code>: CodeBuild creates in the output bucket a ZIP file that contains the build output.
+     * <code>ZIP</code>: AWS CodeBuild creates in the output bucket a ZIP file that contains the build output.
      * </p>
      * </li>
      * </ul>
@@ -1772,8 +1774,8 @@ public class ProjectArtifacts implements Serializable, Cloneable, StructuredPojo
      *         <ul>
      *         <li>
      *         <p>
-     *         If <code>type</code> is set to <code>CODEPIPELINE</code>, CodePipeline ignores this value if specified.
-     *         This is because CodePipeline manages its build output artifacts instead of CodeBuild.
+     *         If <code>type</code> is set to <code>CODEPIPELINE</code>, AWS CodePipeline ignores this value if
+     *         specified. This is because AWS CodePipeline manages its build output artifacts instead of AWS CodeBuild.
      *         </p>
      *         </li>
      *         <li>
@@ -1789,13 +1791,13 @@ public class ProjectArtifacts implements Serializable, Cloneable, StructuredPojo
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>NONE</code>: CodeBuild creates in the output bucket a folder that contains the build output. This
-     *         is the default if <code>packaging</code> is not specified.
+     *         <code>NONE</code>: AWS CodeBuild creates in the output bucket a folder that contains the build output.
+     *         This is the default if <code>packaging</code> is not specified.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>ZIP</code>: CodeBuild creates in the output bucket a ZIP file that contains the build output.
+     *         <code>ZIP</code>: AWS CodeBuild creates in the output bucket a ZIP file that contains the build output.
      *         </p>
      *         </li>
      *         </ul>
@@ -1814,8 +1816,8 @@ public class ProjectArtifacts implements Serializable, Cloneable, StructuredPojo
      * <ul>
      * <li>
      * <p>
-     * If <code>type</code> is set to <code>CODEPIPELINE</code>, CodePipeline ignores this value if specified. This is
-     * because CodePipeline manages its build output artifacts instead of CodeBuild.
+     * If <code>type</code> is set to <code>CODEPIPELINE</code>, AWS CodePipeline ignores this value if specified. This
+     * is because AWS CodePipeline manages its build output artifacts instead of AWS CodeBuild.
      * </p>
      * </li>
      * <li>
@@ -1831,13 +1833,13 @@ public class ProjectArtifacts implements Serializable, Cloneable, StructuredPojo
      * <ul>
      * <li>
      * <p>
-     * <code>NONE</code>: CodeBuild creates in the output bucket a folder that contains the build output. This is the
-     * default if <code>packaging</code> is not specified.
+     * <code>NONE</code>: AWS CodeBuild creates in the output bucket a folder that contains the build output. This is
+     * the default if <code>packaging</code> is not specified.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>ZIP</code>: CodeBuild creates in the output bucket a ZIP file that contains the build output.
+     * <code>ZIP</code>: AWS CodeBuild creates in the output bucket a ZIP file that contains the build output.
      * </p>
      * </li>
      * </ul>
@@ -1849,8 +1851,8 @@ public class ProjectArtifacts implements Serializable, Cloneable, StructuredPojo
      *        <ul>
      *        <li>
      *        <p>
-     *        If <code>type</code> is set to <code>CODEPIPELINE</code>, CodePipeline ignores this value if specified.
-     *        This is because CodePipeline manages its build output artifacts instead of CodeBuild.
+     *        If <code>type</code> is set to <code>CODEPIPELINE</code>, AWS CodePipeline ignores this value if
+     *        specified. This is because AWS CodePipeline manages its build output artifacts instead of AWS CodeBuild.
      *        </p>
      *        </li>
      *        <li>
@@ -1866,13 +1868,13 @@ public class ProjectArtifacts implements Serializable, Cloneable, StructuredPojo
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>NONE</code>: CodeBuild creates in the output bucket a folder that contains the build output. This is
-     *        the default if <code>packaging</code> is not specified.
+     *        <code>NONE</code>: AWS CodeBuild creates in the output bucket a folder that contains the build output.
+     *        This is the default if <code>packaging</code> is not specified.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>ZIP</code>: CodeBuild creates in the output bucket a ZIP file that contains the build output.
+     *        <code>ZIP</code>: AWS CodeBuild creates in the output bucket a ZIP file that contains the build output.
      *        </p>
      *        </li>
      *        </ul>
@@ -1893,8 +1895,8 @@ public class ProjectArtifacts implements Serializable, Cloneable, StructuredPojo
      * <ul>
      * <li>
      * <p>
-     * If <code>type</code> is set to <code>CODEPIPELINE</code>, CodePipeline ignores this value if specified. This is
-     * because CodePipeline manages its build output artifacts instead of CodeBuild.
+     * If <code>type</code> is set to <code>CODEPIPELINE</code>, AWS CodePipeline ignores this value if specified. This
+     * is because AWS CodePipeline manages its build output artifacts instead of AWS CodeBuild.
      * </p>
      * </li>
      * <li>
@@ -1910,13 +1912,13 @@ public class ProjectArtifacts implements Serializable, Cloneable, StructuredPojo
      * <ul>
      * <li>
      * <p>
-     * <code>NONE</code>: CodeBuild creates in the output bucket a folder that contains the build output. This is the
-     * default if <code>packaging</code> is not specified.
+     * <code>NONE</code>: AWS CodeBuild creates in the output bucket a folder that contains the build output. This is
+     * the default if <code>packaging</code> is not specified.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>ZIP</code>: CodeBuild creates in the output bucket a ZIP file that contains the build output.
+     * <code>ZIP</code>: AWS CodeBuild creates in the output bucket a ZIP file that contains the build output.
      * </p>
      * </li>
      * </ul>
@@ -1928,8 +1930,8 @@ public class ProjectArtifacts implements Serializable, Cloneable, StructuredPojo
      *        <ul>
      *        <li>
      *        <p>
-     *        If <code>type</code> is set to <code>CODEPIPELINE</code>, CodePipeline ignores this value if specified.
-     *        This is because CodePipeline manages its build output artifacts instead of CodeBuild.
+     *        If <code>type</code> is set to <code>CODEPIPELINE</code>, AWS CodePipeline ignores this value if
+     *        specified. This is because AWS CodePipeline manages its build output artifacts instead of AWS CodeBuild.
      *        </p>
      *        </li>
      *        <li>
@@ -1945,13 +1947,13 @@ public class ProjectArtifacts implements Serializable, Cloneable, StructuredPojo
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>NONE</code>: CodeBuild creates in the output bucket a folder that contains the build output. This is
-     *        the default if <code>packaging</code> is not specified.
+     *        <code>NONE</code>: AWS CodeBuild creates in the output bucket a folder that contains the build output.
+     *        This is the default if <code>packaging</code> is not specified.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>ZIP</code>: CodeBuild creates in the output bucket a ZIP file that contains the build output.
+     *        <code>ZIP</code>: AWS CodeBuild creates in the output bucket a ZIP file that contains the build output.
      *        </p>
      *        </li>
      *        </ul>
@@ -1970,8 +1972,8 @@ public class ProjectArtifacts implements Serializable, Cloneable, StructuredPojo
      * <ul>
      * <li>
      * <p>
-     * If <code>type</code> is set to <code>CODEPIPELINE</code>, CodePipeline ignores this value if specified. This is
-     * because CodePipeline manages its build output artifacts instead of CodeBuild.
+     * If <code>type</code> is set to <code>CODEPIPELINE</code>, AWS CodePipeline ignores this value if specified. This
+     * is because AWS CodePipeline manages its build output artifacts instead of AWS CodeBuild.
      * </p>
      * </li>
      * <li>
@@ -1987,13 +1989,13 @@ public class ProjectArtifacts implements Serializable, Cloneable, StructuredPojo
      * <ul>
      * <li>
      * <p>
-     * <code>NONE</code>: CodeBuild creates in the output bucket a folder that contains the build output. This is the
-     * default if <code>packaging</code> is not specified.
+     * <code>NONE</code>: AWS CodeBuild creates in the output bucket a folder that contains the build output. This is
+     * the default if <code>packaging</code> is not specified.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>ZIP</code>: CodeBuild creates in the output bucket a ZIP file that contains the build output.
+     * <code>ZIP</code>: AWS CodeBuild creates in the output bucket a ZIP file that contains the build output.
      * </p>
      * </li>
      * </ul>
@@ -2005,8 +2007,8 @@ public class ProjectArtifacts implements Serializable, Cloneable, StructuredPojo
      *        <ul>
      *        <li>
      *        <p>
-     *        If <code>type</code> is set to <code>CODEPIPELINE</code>, CodePipeline ignores this value if specified.
-     *        This is because CodePipeline manages its build output artifacts instead of CodeBuild.
+     *        If <code>type</code> is set to <code>CODEPIPELINE</code>, AWS CodePipeline ignores this value if
+     *        specified. This is because AWS CodePipeline manages its build output artifacts instead of AWS CodeBuild.
      *        </p>
      *        </li>
      *        <li>
@@ -2022,13 +2024,13 @@ public class ProjectArtifacts implements Serializable, Cloneable, StructuredPojo
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>NONE</code>: CodeBuild creates in the output bucket a folder that contains the build output. This is
-     *        the default if <code>packaging</code> is not specified.
+     *        <code>NONE</code>: AWS CodeBuild creates in the output bucket a folder that contains the build output.
+     *        This is the default if <code>packaging</code> is not specified.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>ZIP</code>: CodeBuild creates in the output bucket a ZIP file that contains the build output.
+     *        <code>ZIP</code>: AWS CodeBuild creates in the output bucket a ZIP file that contains the build output.
      *        </p>
      *        </li>
      *        </ul>
@@ -2215,6 +2217,55 @@ public class ProjectArtifacts implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * @param bucketOwnerAccess
+     * @see BucketOwnerAccess
+     */
+
+    public void setBucketOwnerAccess(String bucketOwnerAccess) {
+        this.bucketOwnerAccess = bucketOwnerAccess;
+    }
+
+    /**
+     * @return
+     * @see BucketOwnerAccess
+     */
+
+    public String getBucketOwnerAccess() {
+        return this.bucketOwnerAccess;
+    }
+
+    /**
+     * @param bucketOwnerAccess
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see BucketOwnerAccess
+     */
+
+    public ProjectArtifacts withBucketOwnerAccess(String bucketOwnerAccess) {
+        setBucketOwnerAccess(bucketOwnerAccess);
+        return this;
+    }
+
+    /**
+     * @param bucketOwnerAccess
+     * @see BucketOwnerAccess
+     */
+
+    public void setBucketOwnerAccess(BucketOwnerAccess bucketOwnerAccess) {
+        withBucketOwnerAccess(bucketOwnerAccess);
+    }
+
+    /**
+     * @param bucketOwnerAccess
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see BucketOwnerAccess
+     */
+
+    public ProjectArtifacts withBucketOwnerAccess(BucketOwnerAccess bucketOwnerAccess) {
+        this.bucketOwnerAccess = bucketOwnerAccess.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -2243,7 +2294,9 @@ public class ProjectArtifacts implements Serializable, Cloneable, StructuredPojo
         if (getEncryptionDisabled() != null)
             sb.append("EncryptionDisabled: ").append(getEncryptionDisabled()).append(",");
         if (getArtifactIdentifier() != null)
-            sb.append("ArtifactIdentifier: ").append(getArtifactIdentifier());
+            sb.append("ArtifactIdentifier: ").append(getArtifactIdentifier()).append(",");
+        if (getBucketOwnerAccess() != null)
+            sb.append("BucketOwnerAccess: ").append(getBucketOwnerAccess());
         sb.append("}");
         return sb.toString();
     }
@@ -2294,6 +2347,10 @@ public class ProjectArtifacts implements Serializable, Cloneable, StructuredPojo
             return false;
         if (other.getArtifactIdentifier() != null && other.getArtifactIdentifier().equals(this.getArtifactIdentifier()) == false)
             return false;
+        if (other.getBucketOwnerAccess() == null ^ this.getBucketOwnerAccess() == null)
+            return false;
+        if (other.getBucketOwnerAccess() != null && other.getBucketOwnerAccess().equals(this.getBucketOwnerAccess()) == false)
+            return false;
         return true;
     }
 
@@ -2311,6 +2368,7 @@ public class ProjectArtifacts implements Serializable, Cloneable, StructuredPojo
         hashCode = prime * hashCode + ((getOverrideArtifactName() == null) ? 0 : getOverrideArtifactName().hashCode());
         hashCode = prime * hashCode + ((getEncryptionDisabled() == null) ? 0 : getEncryptionDisabled().hashCode());
         hashCode = prime * hashCode + ((getArtifactIdentifier() == null) ? 0 : getArtifactIdentifier().hashCode());
+        hashCode = prime * hashCode + ((getBucketOwnerAccess() == null) ? 0 : getBucketOwnerAccess().hashCode());
         return hashCode;
     }
 

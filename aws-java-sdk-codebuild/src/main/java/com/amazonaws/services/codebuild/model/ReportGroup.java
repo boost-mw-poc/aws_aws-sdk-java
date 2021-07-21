@@ -85,7 +85,7 @@ public class ReportGroup implements Serializable, Cloneable, StructuredPojo {
      * A list of tag key and value pairs associated with this report group.
      * </p>
      * <p>
-     * These tags are available for use by Amazon Web Services services that support CodeBuild report group tags.
+     * These tags are available for use by AWS services that support AWS CodeBuild report group tags.
      * </p>
      */
     private java.util.List<Tag> tags;
@@ -485,13 +485,12 @@ public class ReportGroup implements Serializable, Cloneable, StructuredPojo {
      * A list of tag key and value pairs associated with this report group.
      * </p>
      * <p>
-     * These tags are available for use by Amazon Web Services services that support CodeBuild report group tags.
+     * These tags are available for use by AWS services that support AWS CodeBuild report group tags.
      * </p>
      * 
      * @return A list of tag key and value pairs associated with this report group. </p>
      *         <p>
-     *         These tags are available for use by Amazon Web Services services that support CodeBuild report group
-     *         tags.
+     *         These tags are available for use by AWS services that support AWS CodeBuild report group tags.
      */
 
     public java.util.List<Tag> getTags() {
@@ -503,13 +502,13 @@ public class ReportGroup implements Serializable, Cloneable, StructuredPojo {
      * A list of tag key and value pairs associated with this report group.
      * </p>
      * <p>
-     * These tags are available for use by Amazon Web Services services that support CodeBuild report group tags.
+     * These tags are available for use by AWS services that support AWS CodeBuild report group tags.
      * </p>
      * 
      * @param tags
      *        A list of tag key and value pairs associated with this report group. </p>
      *        <p>
-     *        These tags are available for use by Amazon Web Services services that support CodeBuild report group tags.
+     *        These tags are available for use by AWS services that support AWS CodeBuild report group tags.
      */
 
     public void setTags(java.util.Collection<Tag> tags) {
@@ -526,7 +525,7 @@ public class ReportGroup implements Serializable, Cloneable, StructuredPojo {
      * A list of tag key and value pairs associated with this report group.
      * </p>
      * <p>
-     * These tags are available for use by Amazon Web Services services that support CodeBuild report group tags.
+     * These tags are available for use by AWS services that support AWS CodeBuild report group tags.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -537,7 +536,7 @@ public class ReportGroup implements Serializable, Cloneable, StructuredPojo {
      * @param tags
      *        A list of tag key and value pairs associated with this report group. </p>
      *        <p>
-     *        These tags are available for use by Amazon Web Services services that support CodeBuild report group tags.
+     *        These tags are available for use by AWS services that support AWS CodeBuild report group tags.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -556,13 +555,13 @@ public class ReportGroup implements Serializable, Cloneable, StructuredPojo {
      * A list of tag key and value pairs associated with this report group.
      * </p>
      * <p>
-     * These tags are available for use by Amazon Web Services services that support CodeBuild report group tags.
+     * These tags are available for use by AWS services that support AWS CodeBuild report group tags.
      * </p>
      * 
      * @param tags
      *        A list of tag key and value pairs associated with this report group. </p>
      *        <p>
-     *        These tags are available for use by Amazon Web Services services that support CodeBuild report group tags.
+     *        These tags are available for use by AWS services that support AWS CodeBuild report group tags.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -36,8 +36,8 @@ public class S3DataConfig implements Serializable, Cloneable, StructuredPojo {
     private String path;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Amazon Key Management Service (KMS) key that Amazon Personalize uses to
-     * encrypt or decrypt the input and output files of a batch inference job.
+     * The Amazon Resource Name (ARN) of the Key Management Service (KMS) key that Amazon Personalize uses to encrypt or
+     * decrypt the input and output files of a batch inference job.
      * </p>
      */
     private String kmsKeyArn;
@@ -84,13 +84,13 @@ public class S3DataConfig implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Amazon Key Management Service (KMS) key that Amazon Personalize uses to
-     * encrypt or decrypt the input and output files of a batch inference job.
+     * The Amazon Resource Name (ARN) of the Key Management Service (KMS) key that Amazon Personalize uses to encrypt or
+     * decrypt the input and output files of a batch inference job.
      * </p>
      * 
      * @param kmsKeyArn
-     *        The Amazon Resource Name (ARN) of the Amazon Key Management Service (KMS) key that Amazon Personalize uses
-     *        to encrypt or decrypt the input and output files of a batch inference job.
+     *        The Amazon Resource Name (ARN) of the Key Management Service (KMS) key that Amazon Personalize uses to
+     *        encrypt or decrypt the input and output files of a batch inference job.
      */
 
     public void setKmsKeyArn(String kmsKeyArn) {
@@ -99,12 +99,12 @@ public class S3DataConfig implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Amazon Key Management Service (KMS) key that Amazon Personalize uses to
-     * encrypt or decrypt the input and output files of a batch inference job.
+     * The Amazon Resource Name (ARN) of the Key Management Service (KMS) key that Amazon Personalize uses to encrypt or
+     * decrypt the input and output files of a batch inference job.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the Amazon Key Management Service (KMS) key that Amazon Personalize
-     *         uses to encrypt or decrypt the input and output files of a batch inference job.
+     * @return The Amazon Resource Name (ARN) of the Key Management Service (KMS) key that Amazon Personalize uses to
+     *         encrypt or decrypt the input and output files of a batch inference job.
      */
 
     public String getKmsKeyArn() {
@@ -113,13 +113,13 @@ public class S3DataConfig implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the Amazon Key Management Service (KMS) key that Amazon Personalize uses to
-     * encrypt or decrypt the input and output files of a batch inference job.
+     * The Amazon Resource Name (ARN) of the Key Management Service (KMS) key that Amazon Personalize uses to encrypt or
+     * decrypt the input and output files of a batch inference job.
      * </p>
      * 
      * @param kmsKeyArn
-     *        The Amazon Resource Name (ARN) of the Amazon Key Management Service (KMS) key that Amazon Personalize uses
-     *        to encrypt or decrypt the input and output files of a batch inference job.
+     *        The Amazon Resource Name (ARN) of the Key Management Service (KMS) key that Amazon Personalize uses to
+     *        encrypt or decrypt the input and output files of a batch inference job.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -42,7 +42,8 @@ public class ListClustersRequest extends com.amazonaws.AmazonWebServiceRequest i
     private java.util.Date createdBefore;
     /**
      * <p>
-     * The cluster state filters to apply when listing clusters.
+     * The cluster state filters to apply when listing clusters. Clusters that change state while this action runs may
+     * be not be returned as expected in the list of clusters.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> clusterStates;
@@ -135,10 +136,12 @@ public class ListClustersRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The cluster state filters to apply when listing clusters.
+     * The cluster state filters to apply when listing clusters. Clusters that change state while this action runs may
+     * be not be returned as expected in the list of clusters.
      * </p>
      * 
-     * @return The cluster state filters to apply when listing clusters.
+     * @return The cluster state filters to apply when listing clusters. Clusters that change state while this action
+     *         runs may be not be returned as expected in the list of clusters.
      * @see ClusterState
      */
 
@@ -151,11 +154,13 @@ public class ListClustersRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The cluster state filters to apply when listing clusters.
+     * The cluster state filters to apply when listing clusters. Clusters that change state while this action runs may
+     * be not be returned as expected in the list of clusters.
      * </p>
      * 
      * @param clusterStates
-     *        The cluster state filters to apply when listing clusters.
+     *        The cluster state filters to apply when listing clusters. Clusters that change state while this action
+     *        runs may be not be returned as expected in the list of clusters.
      * @see ClusterState
      */
 
@@ -170,7 +175,8 @@ public class ListClustersRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The cluster state filters to apply when listing clusters.
+     * The cluster state filters to apply when listing clusters. Clusters that change state while this action runs may
+     * be not be returned as expected in the list of clusters.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -179,7 +185,8 @@ public class ListClustersRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </p>
      * 
      * @param clusterStates
-     *        The cluster state filters to apply when listing clusters.
+     *        The cluster state filters to apply when listing clusters. Clusters that change state while this action
+     *        runs may be not be returned as expected in the list of clusters.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ClusterState
      */
@@ -196,11 +203,13 @@ public class ListClustersRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The cluster state filters to apply when listing clusters.
+     * The cluster state filters to apply when listing clusters. Clusters that change state while this action runs may
+     * be not be returned as expected in the list of clusters.
      * </p>
      * 
      * @param clusterStates
-     *        The cluster state filters to apply when listing clusters.
+     *        The cluster state filters to apply when listing clusters. Clusters that change state while this action
+     *        runs may be not be returned as expected in the list of clusters.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ClusterState
      */
@@ -212,11 +221,13 @@ public class ListClustersRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The cluster state filters to apply when listing clusters.
+     * The cluster state filters to apply when listing clusters. Clusters that change state while this action runs may
+     * be not be returned as expected in the list of clusters.
      * </p>
      * 
      * @param clusterStates
-     *        The cluster state filters to apply when listing clusters.
+     *        The cluster state filters to apply when listing clusters. Clusters that change state while this action
+     *        runs may be not be returned as expected in the list of clusters.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ClusterState
      */

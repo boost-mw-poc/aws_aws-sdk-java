@@ -33,7 +33,7 @@ public class ModifyInstanceFleetRequest extends com.amazonaws.AmazonWebServiceRe
     private String clusterId;
     /**
      * <p>
-     * The unique identifier of the instance fleet.
+     * The configuration parameters of the instance fleet.
      * </p>
      */
     private InstanceFleetModifyConfig instanceFleet;
@@ -80,11 +80,11 @@ public class ModifyInstanceFleetRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The unique identifier of the instance fleet.
+     * The configuration parameters of the instance fleet.
      * </p>
      * 
      * @param instanceFleet
-     *        The unique identifier of the instance fleet.
+     *        The configuration parameters of the instance fleet.
      */
 
     public void setInstanceFleet(InstanceFleetModifyConfig instanceFleet) {
@@ -93,10 +93,10 @@ public class ModifyInstanceFleetRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The unique identifier of the instance fleet.
+     * The configuration parameters of the instance fleet.
      * </p>
      * 
-     * @return The unique identifier of the instance fleet.
+     * @return The configuration parameters of the instance fleet.
      */
 
     public InstanceFleetModifyConfig getInstanceFleet() {
@@ -105,11 +105,11 @@ public class ModifyInstanceFleetRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The unique identifier of the instance fleet.
+     * The configuration parameters of the instance fleet.
      * </p>
      * 
      * @param instanceFleet
-     *        The unique identifier of the instance fleet.
+     *        The configuration parameters of the instance fleet.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -16,8 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The specified Amazon Web Services resource cannot be created, because an Amazon Web Services resource with the same
- * settings already exists.
+ * The specified AWS resource cannot be created, because an AWS resource with the same settings already exists.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

@@ -30,8 +30,7 @@ public class ScriptBootstrapActionConfig implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * Location of the script to run during a bootstrap action. Can be either a location in Amazon S3 or on a local file
-     * system.
+     * Location in Amazon S3 of the script to run during a bootstrap action.
      * </p>
      */
     private String path;
@@ -54,8 +53,7 @@ public class ScriptBootstrapActionConfig implements Serializable, Cloneable, Str
      * methods to initialize any additional object members.
      * 
      * @param path
-     *        Location of the script to run during a bootstrap action. Can be either a location in Amazon S3 or on a
-     *        local file system.
+     *        Location in Amazon S3 of the script to run during a bootstrap action.
      * @param args
      *        A list of command line arguments to pass to the bootstrap action script.
      */
@@ -66,13 +64,11 @@ public class ScriptBootstrapActionConfig implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * Location of the script to run during a bootstrap action. Can be either a location in Amazon S3 or on a local file
-     * system.
+     * Location in Amazon S3 of the script to run during a bootstrap action.
      * </p>
      * 
      * @param path
-     *        Location of the script to run during a bootstrap action. Can be either a location in Amazon S3 or on a
-     *        local file system.
+     *        Location in Amazon S3 of the script to run during a bootstrap action.
      */
 
     public void setPath(String path) {
@@ -81,12 +77,10 @@ public class ScriptBootstrapActionConfig implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * Location of the script to run during a bootstrap action. Can be either a location in Amazon S3 or on a local file
-     * system.
+     * Location in Amazon S3 of the script to run during a bootstrap action.
      * </p>
      * 
-     * @return Location of the script to run during a bootstrap action. Can be either a location in Amazon S3 or on a
-     *         local file system.
+     * @return Location in Amazon S3 of the script to run during a bootstrap action.
      */
 
     public String getPath() {
@@ -95,13 +89,11 @@ public class ScriptBootstrapActionConfig implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * Location of the script to run during a bootstrap action. Can be either a location in Amazon S3 or on a local file
-     * system.
+     * Location in Amazon S3 of the script to run during a bootstrap action.
      * </p>
      * 
      * @param path
-     *        Location of the script to run during a bootstrap action. Can be either a location in Amazon S3 or on a
-     *        local file system.
+     *        Location in Amazon S3 of the script to run during a bootstrap action.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

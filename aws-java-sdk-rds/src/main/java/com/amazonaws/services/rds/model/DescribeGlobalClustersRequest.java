@@ -44,19 +44,8 @@ public class DescribeGlobalClustersRequest extends com.amazonaws.AmazonWebServic
     private String globalClusterIdentifier;
     /**
      * <p>
-     * A filter that specifies one or more global DB clusters to describe.
+     * This parameter isn't currently supported.
      * </p>
-     * <p>
-     * Supported filters:
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * <code>db-cluster-id</code> - Accepts DB cluster identifiers and DB cluster Amazon Resource Names (ARNs). The
-     * results list will only include information about the DB clusters identified by these ARNs.
-     * </p>
-     * </li>
-     * </ul>
      */
     private com.amazonaws.internal.SdkInternalList<Filter> filters;
     /**
@@ -187,31 +176,10 @@ public class DescribeGlobalClustersRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * A filter that specifies one or more global DB clusters to describe.
+     * This parameter isn't currently supported.
      * </p>
-     * <p>
-     * Supported filters:
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * <code>db-cluster-id</code> - Accepts DB cluster identifiers and DB cluster Amazon Resource Names (ARNs). The
-     * results list will only include information about the DB clusters identified by these ARNs.
-     * </p>
-     * </li>
-     * </ul>
      * 
-     * @return A filter that specifies one or more global DB clusters to describe.</p>
-     *         <p>
-     *         Supported filters:
-     *         </p>
-     *         <ul>
-     *         <li>
-     *         <p>
-     *         <code>db-cluster-id</code> - Accepts DB cluster identifiers and DB cluster Amazon Resource Names (ARNs).
-     *         The results list will only include information about the DB clusters identified by these ARNs.
-     *         </p>
-     *         </li>
+     * @return This parameter isn't currently supported.
      */
 
     public java.util.List<Filter> getFilters() {
@@ -223,32 +191,11 @@ public class DescribeGlobalClustersRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * A filter that specifies one or more global DB clusters to describe.
+     * This parameter isn't currently supported.
      * </p>
-     * <p>
-     * Supported filters:
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * <code>db-cluster-id</code> - Accepts DB cluster identifiers and DB cluster Amazon Resource Names (ARNs). The
-     * results list will only include information about the DB clusters identified by these ARNs.
-     * </p>
-     * </li>
-     * </ul>
      * 
      * @param filters
-     *        A filter that specifies one or more global DB clusters to describe.</p>
-     *        <p>
-     *        Supported filters:
-     *        </p>
-     *        <ul>
-     *        <li>
-     *        <p>
-     *        <code>db-cluster-id</code> - Accepts DB cluster identifiers and DB cluster Amazon Resource Names (ARNs).
-     *        The results list will only include information about the DB clusters identified by these ARNs.
-     *        </p>
-     *        </li>
+     *        This parameter isn't currently supported.
      */
 
     public void setFilters(java.util.Collection<Filter> filters) {
@@ -262,19 +209,8 @@ public class DescribeGlobalClustersRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * A filter that specifies one or more global DB clusters to describe.
+     * This parameter isn't currently supported.
      * </p>
-     * <p>
-     * Supported filters:
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * <code>db-cluster-id</code> - Accepts DB cluster identifiers and DB cluster Amazon Resource Names (ARNs). The
-     * results list will only include information about the DB clusters identified by these ARNs.
-     * </p>
-     * </li>
-     * </ul>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setFilters(java.util.Collection)} or {@link #withFilters(java.util.Collection)} if you want to override
@@ -282,17 +218,7 @@ public class DescribeGlobalClustersRequest extends com.amazonaws.AmazonWebServic
      * </p>
      * 
      * @param filters
-     *        A filter that specifies one or more global DB clusters to describe.</p>
-     *        <p>
-     *        Supported filters:
-     *        </p>
-     *        <ul>
-     *        <li>
-     *        <p>
-     *        <code>db-cluster-id</code> - Accepts DB cluster identifiers and DB cluster Amazon Resource Names (ARNs).
-     *        The results list will only include information about the DB clusters identified by these ARNs.
-     *        </p>
-     *        </li>
+     *        This parameter isn't currently supported.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -308,32 +234,11 @@ public class DescribeGlobalClustersRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * A filter that specifies one or more global DB clusters to describe.
+     * This parameter isn't currently supported.
      * </p>
-     * <p>
-     * Supported filters:
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * <code>db-cluster-id</code> - Accepts DB cluster identifiers and DB cluster Amazon Resource Names (ARNs). The
-     * results list will only include information about the DB clusters identified by these ARNs.
-     * </p>
-     * </li>
-     * </ul>
      * 
      * @param filters
-     *        A filter that specifies one or more global DB clusters to describe.</p>
-     *        <p>
-     *        Supported filters:
-     *        </p>
-     *        <ul>
-     *        <li>
-     *        <p>
-     *        <code>db-cluster-id</code> - Accepts DB cluster identifiers and DB cluster Amazon Resource Names (ARNs).
-     *        The results list will only include information about the DB clusters identified by these ARNs.
-     *        </p>
-     *        </li>
+     *        This parameter isn't currently supported.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

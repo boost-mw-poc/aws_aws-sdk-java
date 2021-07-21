@@ -74,8 +74,8 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
     private String logUri;
     /**
      * <p>
-     * The AWS KMS customer master key (CMK) used for encrypting log files. This attribute is only available with EMR
-     * version 5.30.0 and later, excluding EMR 6.0.0.
+     * The KMS key used for encrypting log files. This attribute is only available with EMR version 5.30.0 and later,
+     * excluding EMR 6.0.0.
      * </p>
      */
     private String logEncryptionKmsKeyId;
@@ -118,12 +118,20 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
     private Boolean terminationProtected;
     /**
      * <p>
-     * Indicates whether the cluster is visible to all IAM users of the AWS account associated with the cluster. The
-     * default value, <code>true</code>, indicates that all IAM users in the AWS account can perform cluster actions if
-     * they have the proper IAM policy permissions. If this value is <code>false</code>, only the IAM user that created
-     * the cluster can perform actions. This value can be changed on a running cluster by using the
-     * <a>SetVisibleToAllUsers</a> action. You can override the default value of <code>true</code> when you create a
-     * cluster by using the <code>VisibleToAllUsers</code> parameter of the <code>RunJobFlow</code> action.
+     * Indicates whether the cluster is visible to IAM principals in the account associated with the cluster. When
+     * <code>true</code>, IAM principals in the account can perform EMR cluster actions on the cluster that their IAM
+     * policies allow. When <code>false</code>, only the IAM principal that created the cluster and the account root
+     * user can perform EMR actions, regardless of IAM permissions policies attached to other IAM principals.
+     * </p>
+     * <p>
+     * The default value is <code>false</code> if a value is not provided when creating a cluster using the EMR API
+     * <a>RunJobFlow</a> command or the CLI <a
+     * href="https://docs.aws.amazon.com/cli/latest/reference/emr/create-cluster.html">create-cluster</a> command. The
+     * default value is <code>true</code> when a cluster is created using the Management Console. IAM principals that
+     * are allowed to perform actions on the cluster can use the <a>SetVisibleToAllUsers</a> action to change the value
+     * on a running cluster. For more information, see <a href=
+     * "https://docs.aws.amazon.com/emr/latest/ManagementGuide/security_iam_emr-with-iam.html#security_set_visible_to_all_users"
+     * >Understanding the EMR Cluster VisibleToAllUsers Setting</a> in the <i>Amazon EMR Management Guide</i>.
      * </p>
      */
     private Boolean visibleToAllUsers;
@@ -141,7 +149,8 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
     private com.amazonaws.internal.SdkInternalList<Tag> tags;
     /**
      * <p>
-     * The IAM role that will be assumed by the Amazon EMR service to access AWS resources on your behalf.
+     * The IAM role that will be assumed by the Amazon EMR service to access Amazon Web Services resources on your
+     * behalf.
      * </p>
      */
     private String serviceRole;
@@ -605,13 +614,13 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS KMS customer master key (CMK) used for encrypting log files. This attribute is only available with EMR
-     * version 5.30.0 and later, excluding EMR 6.0.0.
+     * The KMS key used for encrypting log files. This attribute is only available with EMR version 5.30.0 and later,
+     * excluding EMR 6.0.0.
      * </p>
      * 
      * @param logEncryptionKmsKeyId
-     *        The AWS KMS customer master key (CMK) used for encrypting log files. This attribute is only available with
-     *        EMR version 5.30.0 and later, excluding EMR 6.0.0.
+     *        The KMS key used for encrypting log files. This attribute is only available with EMR version 5.30.0 and
+     *        later, excluding EMR 6.0.0.
      */
 
     public void setLogEncryptionKmsKeyId(String logEncryptionKmsKeyId) {
@@ -620,12 +629,12 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS KMS customer master key (CMK) used for encrypting log files. This attribute is only available with EMR
-     * version 5.30.0 and later, excluding EMR 6.0.0.
+     * The KMS key used for encrypting log files. This attribute is only available with EMR version 5.30.0 and later,
+     * excluding EMR 6.0.0.
      * </p>
      * 
-     * @return The AWS KMS customer master key (CMK) used for encrypting log files. This attribute is only available
-     *         with EMR version 5.30.0 and later, excluding EMR 6.0.0.
+     * @return The KMS key used for encrypting log files. This attribute is only available with EMR version 5.30.0 and
+     *         later, excluding EMR 6.0.0.
      */
 
     public String getLogEncryptionKmsKeyId() {
@@ -634,13 +643,13 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS KMS customer master key (CMK) used for encrypting log files. This attribute is only available with EMR
-     * version 5.30.0 and later, excluding EMR 6.0.0.
+     * The KMS key used for encrypting log files. This attribute is only available with EMR version 5.30.0 and later,
+     * excluding EMR 6.0.0.
      * </p>
      * 
      * @param logEncryptionKmsKeyId
-     *        The AWS KMS customer master key (CMK) used for encrypting log files. This attribute is only available with
-     *        EMR version 5.30.0 and later, excluding EMR 6.0.0.
+     *        The KMS key used for encrypting log files. This attribute is only available with EMR version 5.30.0 and
+     *        later, excluding EMR 6.0.0.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -919,22 +928,37 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Indicates whether the cluster is visible to all IAM users of the AWS account associated with the cluster. The
-     * default value, <code>true</code>, indicates that all IAM users in the AWS account can perform cluster actions if
-     * they have the proper IAM policy permissions. If this value is <code>false</code>, only the IAM user that created
-     * the cluster can perform actions. This value can be changed on a running cluster by using the
-     * <a>SetVisibleToAllUsers</a> action. You can override the default value of <code>true</code> when you create a
-     * cluster by using the <code>VisibleToAllUsers</code> parameter of the <code>RunJobFlow</code> action.
+     * Indicates whether the cluster is visible to IAM principals in the account associated with the cluster. When
+     * <code>true</code>, IAM principals in the account can perform EMR cluster actions on the cluster that their IAM
+     * policies allow. When <code>false</code>, only the IAM principal that created the cluster and the account root
+     * user can perform EMR actions, regardless of IAM permissions policies attached to other IAM principals.
+     * </p>
+     * <p>
+     * The default value is <code>false</code> if a value is not provided when creating a cluster using the EMR API
+     * <a>RunJobFlow</a> command or the CLI <a
+     * href="https://docs.aws.amazon.com/cli/latest/reference/emr/create-cluster.html">create-cluster</a> command. The
+     * default value is <code>true</code> when a cluster is created using the Management Console. IAM principals that
+     * are allowed to perform actions on the cluster can use the <a>SetVisibleToAllUsers</a> action to change the value
+     * on a running cluster. For more information, see <a href=
+     * "https://docs.aws.amazon.com/emr/latest/ManagementGuide/security_iam_emr-with-iam.html#security_set_visible_to_all_users"
+     * >Understanding the EMR Cluster VisibleToAllUsers Setting</a> in the <i>Amazon EMR Management Guide</i>.
      * </p>
      * 
      * @param visibleToAllUsers
-     *        Indicates whether the cluster is visible to all IAM users of the AWS account associated with the cluster.
-     *        The default value, <code>true</code>, indicates that all IAM users in the AWS account can perform cluster
-     *        actions if they have the proper IAM policy permissions. If this value is <code>false</code>, only the IAM
-     *        user that created the cluster can perform actions. This value can be changed on a running cluster by using
-     *        the <a>SetVisibleToAllUsers</a> action. You can override the default value of <code>true</code> when you
-     *        create a cluster by using the <code>VisibleToAllUsers</code> parameter of the <code>RunJobFlow</code>
-     *        action.
+     *        Indicates whether the cluster is visible to IAM principals in the account associated with the cluster.
+     *        When <code>true</code>, IAM principals in the account can perform EMR cluster actions on the cluster that
+     *        their IAM policies allow. When <code>false</code>, only the IAM principal that created the cluster and the
+     *        account root user can perform EMR actions, regardless of IAM permissions policies attached to other IAM
+     *        principals.</p>
+     *        <p>
+     *        The default value is <code>false</code> if a value is not provided when creating a cluster using the EMR
+     *        API <a>RunJobFlow</a> command or the CLI <a
+     *        href="https://docs.aws.amazon.com/cli/latest/reference/emr/create-cluster.html">create-cluster</a>
+     *        command. The default value is <code>true</code> when a cluster is created using the Management Console.
+     *        IAM principals that are allowed to perform actions on the cluster can use the <a>SetVisibleToAllUsers</a>
+     *        action to change the value on a running cluster. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/emr/latest/ManagementGuide/security_iam_emr-with-iam.html#security_set_visible_to_all_users"
+     *        >Understanding the EMR Cluster VisibleToAllUsers Setting</a> in the <i>Amazon EMR Management Guide</i>.
      */
 
     public void setVisibleToAllUsers(Boolean visibleToAllUsers) {
@@ -943,21 +967,36 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Indicates whether the cluster is visible to all IAM users of the AWS account associated with the cluster. The
-     * default value, <code>true</code>, indicates that all IAM users in the AWS account can perform cluster actions if
-     * they have the proper IAM policy permissions. If this value is <code>false</code>, only the IAM user that created
-     * the cluster can perform actions. This value can be changed on a running cluster by using the
-     * <a>SetVisibleToAllUsers</a> action. You can override the default value of <code>true</code> when you create a
-     * cluster by using the <code>VisibleToAllUsers</code> parameter of the <code>RunJobFlow</code> action.
+     * Indicates whether the cluster is visible to IAM principals in the account associated with the cluster. When
+     * <code>true</code>, IAM principals in the account can perform EMR cluster actions on the cluster that their IAM
+     * policies allow. When <code>false</code>, only the IAM principal that created the cluster and the account root
+     * user can perform EMR actions, regardless of IAM permissions policies attached to other IAM principals.
+     * </p>
+     * <p>
+     * The default value is <code>false</code> if a value is not provided when creating a cluster using the EMR API
+     * <a>RunJobFlow</a> command or the CLI <a
+     * href="https://docs.aws.amazon.com/cli/latest/reference/emr/create-cluster.html">create-cluster</a> command. The
+     * default value is <code>true</code> when a cluster is created using the Management Console. IAM principals that
+     * are allowed to perform actions on the cluster can use the <a>SetVisibleToAllUsers</a> action to change the value
+     * on a running cluster. For more information, see <a href=
+     * "https://docs.aws.amazon.com/emr/latest/ManagementGuide/security_iam_emr-with-iam.html#security_set_visible_to_all_users"
+     * >Understanding the EMR Cluster VisibleToAllUsers Setting</a> in the <i>Amazon EMR Management Guide</i>.
      * </p>
      * 
-     * @return Indicates whether the cluster is visible to all IAM users of the AWS account associated with the cluster.
-     *         The default value, <code>true</code>, indicates that all IAM users in the AWS account can perform cluster
-     *         actions if they have the proper IAM policy permissions. If this value is <code>false</code>, only the IAM
-     *         user that created the cluster can perform actions. This value can be changed on a running cluster by
-     *         using the <a>SetVisibleToAllUsers</a> action. You can override the default value of <code>true</code>
-     *         when you create a cluster by using the <code>VisibleToAllUsers</code> parameter of the
-     *         <code>RunJobFlow</code> action.
+     * @return Indicates whether the cluster is visible to IAM principals in the account associated with the cluster.
+     *         When <code>true</code>, IAM principals in the account can perform EMR cluster actions on the cluster that
+     *         their IAM policies allow. When <code>false</code>, only the IAM principal that created the cluster and
+     *         the account root user can perform EMR actions, regardless of IAM permissions policies attached to other
+     *         IAM principals.</p>
+     *         <p>
+     *         The default value is <code>false</code> if a value is not provided when creating a cluster using the EMR
+     *         API <a>RunJobFlow</a> command or the CLI <a
+     *         href="https://docs.aws.amazon.com/cli/latest/reference/emr/create-cluster.html">create-cluster</a>
+     *         command. The default value is <code>true</code> when a cluster is created using the Management Console.
+     *         IAM principals that are allowed to perform actions on the cluster can use the <a>SetVisibleToAllUsers</a>
+     *         action to change the value on a running cluster. For more information, see <a href=
+     *         "https://docs.aws.amazon.com/emr/latest/ManagementGuide/security_iam_emr-with-iam.html#security_set_visible_to_all_users"
+     *         >Understanding the EMR Cluster VisibleToAllUsers Setting</a> in the <i>Amazon EMR Management Guide</i>.
      */
 
     public Boolean getVisibleToAllUsers() {
@@ -966,22 +1005,37 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Indicates whether the cluster is visible to all IAM users of the AWS account associated with the cluster. The
-     * default value, <code>true</code>, indicates that all IAM users in the AWS account can perform cluster actions if
-     * they have the proper IAM policy permissions. If this value is <code>false</code>, only the IAM user that created
-     * the cluster can perform actions. This value can be changed on a running cluster by using the
-     * <a>SetVisibleToAllUsers</a> action. You can override the default value of <code>true</code> when you create a
-     * cluster by using the <code>VisibleToAllUsers</code> parameter of the <code>RunJobFlow</code> action.
+     * Indicates whether the cluster is visible to IAM principals in the account associated with the cluster. When
+     * <code>true</code>, IAM principals in the account can perform EMR cluster actions on the cluster that their IAM
+     * policies allow. When <code>false</code>, only the IAM principal that created the cluster and the account root
+     * user can perform EMR actions, regardless of IAM permissions policies attached to other IAM principals.
+     * </p>
+     * <p>
+     * The default value is <code>false</code> if a value is not provided when creating a cluster using the EMR API
+     * <a>RunJobFlow</a> command or the CLI <a
+     * href="https://docs.aws.amazon.com/cli/latest/reference/emr/create-cluster.html">create-cluster</a> command. The
+     * default value is <code>true</code> when a cluster is created using the Management Console. IAM principals that
+     * are allowed to perform actions on the cluster can use the <a>SetVisibleToAllUsers</a> action to change the value
+     * on a running cluster. For more information, see <a href=
+     * "https://docs.aws.amazon.com/emr/latest/ManagementGuide/security_iam_emr-with-iam.html#security_set_visible_to_all_users"
+     * >Understanding the EMR Cluster VisibleToAllUsers Setting</a> in the <i>Amazon EMR Management Guide</i>.
      * </p>
      * 
      * @param visibleToAllUsers
-     *        Indicates whether the cluster is visible to all IAM users of the AWS account associated with the cluster.
-     *        The default value, <code>true</code>, indicates that all IAM users in the AWS account can perform cluster
-     *        actions if they have the proper IAM policy permissions. If this value is <code>false</code>, only the IAM
-     *        user that created the cluster can perform actions. This value can be changed on a running cluster by using
-     *        the <a>SetVisibleToAllUsers</a> action. You can override the default value of <code>true</code> when you
-     *        create a cluster by using the <code>VisibleToAllUsers</code> parameter of the <code>RunJobFlow</code>
-     *        action.
+     *        Indicates whether the cluster is visible to IAM principals in the account associated with the cluster.
+     *        When <code>true</code>, IAM principals in the account can perform EMR cluster actions on the cluster that
+     *        their IAM policies allow. When <code>false</code>, only the IAM principal that created the cluster and the
+     *        account root user can perform EMR actions, regardless of IAM permissions policies attached to other IAM
+     *        principals.</p>
+     *        <p>
+     *        The default value is <code>false</code> if a value is not provided when creating a cluster using the EMR
+     *        API <a>RunJobFlow</a> command or the CLI <a
+     *        href="https://docs.aws.amazon.com/cli/latest/reference/emr/create-cluster.html">create-cluster</a>
+     *        command. The default value is <code>true</code> when a cluster is created using the Management Console.
+     *        IAM principals that are allowed to perform actions on the cluster can use the <a>SetVisibleToAllUsers</a>
+     *        action to change the value on a running cluster. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/emr/latest/ManagementGuide/security_iam_emr-with-iam.html#security_set_visible_to_all_users"
+     *        >Understanding the EMR Cluster VisibleToAllUsers Setting</a> in the <i>Amazon EMR Management Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -992,21 +1046,36 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Indicates whether the cluster is visible to all IAM users of the AWS account associated with the cluster. The
-     * default value, <code>true</code>, indicates that all IAM users in the AWS account can perform cluster actions if
-     * they have the proper IAM policy permissions. If this value is <code>false</code>, only the IAM user that created
-     * the cluster can perform actions. This value can be changed on a running cluster by using the
-     * <a>SetVisibleToAllUsers</a> action. You can override the default value of <code>true</code> when you create a
-     * cluster by using the <code>VisibleToAllUsers</code> parameter of the <code>RunJobFlow</code> action.
+     * Indicates whether the cluster is visible to IAM principals in the account associated with the cluster. When
+     * <code>true</code>, IAM principals in the account can perform EMR cluster actions on the cluster that their IAM
+     * policies allow. When <code>false</code>, only the IAM principal that created the cluster and the account root
+     * user can perform EMR actions, regardless of IAM permissions policies attached to other IAM principals.
+     * </p>
+     * <p>
+     * The default value is <code>false</code> if a value is not provided when creating a cluster using the EMR API
+     * <a>RunJobFlow</a> command or the CLI <a
+     * href="https://docs.aws.amazon.com/cli/latest/reference/emr/create-cluster.html">create-cluster</a> command. The
+     * default value is <code>true</code> when a cluster is created using the Management Console. IAM principals that
+     * are allowed to perform actions on the cluster can use the <a>SetVisibleToAllUsers</a> action to change the value
+     * on a running cluster. For more information, see <a href=
+     * "https://docs.aws.amazon.com/emr/latest/ManagementGuide/security_iam_emr-with-iam.html#security_set_visible_to_all_users"
+     * >Understanding the EMR Cluster VisibleToAllUsers Setting</a> in the <i>Amazon EMR Management Guide</i>.
      * </p>
      * 
-     * @return Indicates whether the cluster is visible to all IAM users of the AWS account associated with the cluster.
-     *         The default value, <code>true</code>, indicates that all IAM users in the AWS account can perform cluster
-     *         actions if they have the proper IAM policy permissions. If this value is <code>false</code>, only the IAM
-     *         user that created the cluster can perform actions. This value can be changed on a running cluster by
-     *         using the <a>SetVisibleToAllUsers</a> action. You can override the default value of <code>true</code>
-     *         when you create a cluster by using the <code>VisibleToAllUsers</code> parameter of the
-     *         <code>RunJobFlow</code> action.
+     * @return Indicates whether the cluster is visible to IAM principals in the account associated with the cluster.
+     *         When <code>true</code>, IAM principals in the account can perform EMR cluster actions on the cluster that
+     *         their IAM policies allow. When <code>false</code>, only the IAM principal that created the cluster and
+     *         the account root user can perform EMR actions, regardless of IAM permissions policies attached to other
+     *         IAM principals.</p>
+     *         <p>
+     *         The default value is <code>false</code> if a value is not provided when creating a cluster using the EMR
+     *         API <a>RunJobFlow</a> command or the CLI <a
+     *         href="https://docs.aws.amazon.com/cli/latest/reference/emr/create-cluster.html">create-cluster</a>
+     *         command. The default value is <code>true</code> when a cluster is created using the Management Console.
+     *         IAM principals that are allowed to perform actions on the cluster can use the <a>SetVisibleToAllUsers</a>
+     *         action to change the value on a running cluster. For more information, see <a href=
+     *         "https://docs.aws.amazon.com/emr/latest/ManagementGuide/security_iam_emr-with-iam.html#security_set_visible_to_all_users"
+     *         >Understanding the EMR Cluster VisibleToAllUsers Setting</a> in the <i>Amazon EMR Management Guide</i>.
      */
 
     public Boolean isVisibleToAllUsers() {
@@ -1161,11 +1230,13 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The IAM role that will be assumed by the Amazon EMR service to access AWS resources on your behalf.
+     * The IAM role that will be assumed by the Amazon EMR service to access Amazon Web Services resources on your
+     * behalf.
      * </p>
      * 
      * @param serviceRole
-     *        The IAM role that will be assumed by the Amazon EMR service to access AWS resources on your behalf.
+     *        The IAM role that will be assumed by the Amazon EMR service to access Amazon Web Services resources on
+     *        your behalf.
      */
 
     public void setServiceRole(String serviceRole) {
@@ -1174,10 +1245,12 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The IAM role that will be assumed by the Amazon EMR service to access AWS resources on your behalf.
+     * The IAM role that will be assumed by the Amazon EMR service to access Amazon Web Services resources on your
+     * behalf.
      * </p>
      * 
-     * @return The IAM role that will be assumed by the Amazon EMR service to access AWS resources on your behalf.
+     * @return The IAM role that will be assumed by the Amazon EMR service to access Amazon Web Services resources on
+     *         your behalf.
      */
 
     public String getServiceRole() {
@@ -1186,11 +1259,13 @@ public class Cluster implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The IAM role that will be assumed by the Amazon EMR service to access AWS resources on your behalf.
+     * The IAM role that will be assumed by the Amazon EMR service to access Amazon Web Services resources on your
+     * behalf.
      * </p>
      * 
      * @param serviceRole
-     *        The IAM role that will be assumed by the Amazon EMR service to access AWS resources on your behalf.
+     *        The IAM role that will be assumed by the Amazon EMR service to access Amazon Web Services resources on
+     *        your behalf.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

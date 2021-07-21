@@ -59,8 +59,7 @@ public class DatasetImportJob implements Serializable, Cloneable, StructuredPojo
     private DataSource dataSource;
     /**
      * <p>
-     * The ARN of the AWS Identity and Access Management (IAM) role that has permissions to read from the Amazon S3 data
-     * source.
+     * The ARN of the IAM role that has permissions to read from the Amazon S3 data source.
      * </p>
      */
     private String roleArn;
@@ -252,13 +251,11 @@ public class DatasetImportJob implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The ARN of the AWS Identity and Access Management (IAM) role that has permissions to read from the Amazon S3 data
-     * source.
+     * The ARN of the IAM role that has permissions to read from the Amazon S3 data source.
      * </p>
      * 
      * @param roleArn
-     *        The ARN of the AWS Identity and Access Management (IAM) role that has permissions to read from the Amazon
-     *        S3 data source.
+     *        The ARN of the IAM role that has permissions to read from the Amazon S3 data source.
      */
 
     public void setRoleArn(String roleArn) {
@@ -267,12 +264,10 @@ public class DatasetImportJob implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The ARN of the AWS Identity and Access Management (IAM) role that has permissions to read from the Amazon S3 data
-     * source.
+     * The ARN of the IAM role that has permissions to read from the Amazon S3 data source.
      * </p>
      * 
-     * @return The ARN of the AWS Identity and Access Management (IAM) role that has permissions to read from the Amazon
-     *         S3 data source.
+     * @return The ARN of the IAM role that has permissions to read from the Amazon S3 data source.
      */
 
     public String getRoleArn() {
@@ -281,13 +276,11 @@ public class DatasetImportJob implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The ARN of the AWS Identity and Access Management (IAM) role that has permissions to read from the Amazon S3 data
-     * source.
+     * The ARN of the IAM role that has permissions to read from the Amazon S3 data source.
      * </p>
      * 
      * @param roleArn
-     *        The ARN of the AWS Identity and Access Management (IAM) role that has permissions to read from the Amazon
-     *        S3 data source.
+     *        The ARN of the IAM role that has permissions to read from the Amazon S3 data source.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

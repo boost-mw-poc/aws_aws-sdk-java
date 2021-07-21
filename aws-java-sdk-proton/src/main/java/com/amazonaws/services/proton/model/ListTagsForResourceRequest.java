@@ -40,7 +40,7 @@ public class ListTagsForResourceRequest extends com.amazonaws.AmazonWebServiceRe
     private String nextToken;
     /**
      * <p>
-     * The ARN of the resource for the listed tags.
+     * The Amazon Resource Name (ARN) of the resource for the listed tags.
      * </p>
      */
     private String resourceArn;
@@ -133,11 +133,11 @@ public class ListTagsForResourceRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The ARN of the resource for the listed tags.
+     * The Amazon Resource Name (ARN) of the resource for the listed tags.
      * </p>
      * 
      * @param resourceArn
-     *        The ARN of the resource for the listed tags.
+     *        The Amazon Resource Name (ARN) of the resource for the listed tags.
      */
 
     public void setResourceArn(String resourceArn) {
@@ -146,10 +146,10 @@ public class ListTagsForResourceRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The ARN of the resource for the listed tags.
+     * The Amazon Resource Name (ARN) of the resource for the listed tags.
      * </p>
      * 
-     * @return The ARN of the resource for the listed tags.
+     * @return The Amazon Resource Name (ARN) of the resource for the listed tags.
      */
 
     public String getResourceArn() {
@@ -158,11 +158,11 @@ public class ListTagsForResourceRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The ARN of the resource for the listed tags.
+     * The Amazon Resource Name (ARN) of the resource for the listed tags.
      * </p>
      * 
      * @param resourceArn
-     *        The ARN of the resource for the listed tags.
+     *        The Amazon Resource Name (ARN) of the resource for the listed tags.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

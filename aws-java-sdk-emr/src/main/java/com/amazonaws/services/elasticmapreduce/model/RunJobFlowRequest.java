@@ -43,9 +43,8 @@ public class RunJobFlowRequest extends com.amazonaws.AmazonWebServiceRequest imp
     private String logUri;
     /**
      * <p>
-     * The AWS KMS customer master key (CMK) used for encrypting log files. If a value is not provided, the logs remain
-     * encrypted by AES-256. This attribute is only available with Amazon EMR version 5.30.0 and later, excluding Amazon
-     * EMR 6.0.0.
+     * The KMS key used for encrypting log files. If a value is not provided, the logs remain encrypted by AES-256. This
+     * attribute is only available with Amazon EMR version 5.30.0 and later, excluding Amazon EMR 6.0.0.
      * </p>
      */
     private String logEncryptionKmsKeyId;
@@ -191,9 +190,17 @@ public class RunJobFlowRequest extends com.amazonaws.AmazonWebServiceRequest imp
     private com.amazonaws.internal.SdkInternalList<Configuration> configurations;
     /**
      * <p>
-     * A value of <code>true</code> indicates that all IAM users in the AWS account can perform cluster actions if they
-     * have the proper IAM policy permissions. This is the default. A value of <code>false</code> indicates that only
-     * the IAM user who created the cluster can perform actions.
+     * Set this value to <code>true</code> so that IAM principals in the account associated with the cluster can perform
+     * EMR actions on the cluster that their IAM policies allow. This value defaults to <code>false</code> for clusters
+     * created using the EMR API or the CLI <a
+     * href="https://docs.aws.amazon.com/cli/latest/reference/emr/create-cluster.html">create-cluster</a> command.
+     * </p>
+     * <p>
+     * When set to <code>false</code>, only the IAM principal that created the cluster and the account root user can
+     * perform EMR actions for the cluster, regardless of the IAM permissions policies attached to other IAM principals.
+     * For more information, see <a href=
+     * "https://docs.aws.amazon.com/emr/latest/ManagementGuide/security_iam_emr-with-iam.html#security_set_visible_to_all_users"
+     * >Understanding the EMR Cluster VisibleToAllUsers Setting</a> in the <i>Amazon EMR Management Guide</i>.
      * </p>
      */
     private Boolean visibleToAllUsers;
@@ -207,7 +214,8 @@ public class RunJobFlowRequest extends com.amazonaws.AmazonWebServiceRequest imp
     private String jobFlowRole;
     /**
      * <p>
-     * The IAM role that will be assumed by the Amazon EMR service to access AWS resources on your behalf.
+     * The IAM role that will be assumed by the Amazon EMR service to access Amazon Web Services resources on your
+     * behalf.
      * </p>
      */
     private String serviceRole;
@@ -416,15 +424,14 @@ public class RunJobFlowRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The AWS KMS customer master key (CMK) used for encrypting log files. If a value is not provided, the logs remain
-     * encrypted by AES-256. This attribute is only available with Amazon EMR version 5.30.0 and later, excluding Amazon
-     * EMR 6.0.0.
+     * The KMS key used for encrypting log files. If a value is not provided, the logs remain encrypted by AES-256. This
+     * attribute is only available with Amazon EMR version 5.30.0 and later, excluding Amazon EMR 6.0.0.
      * </p>
      * 
      * @param logEncryptionKmsKeyId
-     *        The AWS KMS customer master key (CMK) used for encrypting log files. If a value is not provided, the logs
-     *        remain encrypted by AES-256. This attribute is only available with Amazon EMR version 5.30.0 and later,
-     *        excluding Amazon EMR 6.0.0.
+     *        The KMS key used for encrypting log files. If a value is not provided, the logs remain encrypted by
+     *        AES-256. This attribute is only available with Amazon EMR version 5.30.0 and later, excluding Amazon EMR
+     *        6.0.0.
      */
 
     public void setLogEncryptionKmsKeyId(String logEncryptionKmsKeyId) {
@@ -433,14 +440,13 @@ public class RunJobFlowRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The AWS KMS customer master key (CMK) used for encrypting log files. If a value is not provided, the logs remain
-     * encrypted by AES-256. This attribute is only available with Amazon EMR version 5.30.0 and later, excluding Amazon
-     * EMR 6.0.0.
+     * The KMS key used for encrypting log files. If a value is not provided, the logs remain encrypted by AES-256. This
+     * attribute is only available with Amazon EMR version 5.30.0 and later, excluding Amazon EMR 6.0.0.
      * </p>
      * 
-     * @return The AWS KMS customer master key (CMK) used for encrypting log files. If a value is not provided, the logs
-     *         remain encrypted by AES-256. This attribute is only available with Amazon EMR version 5.30.0 and later,
-     *         excluding Amazon EMR 6.0.0.
+     * @return The KMS key used for encrypting log files. If a value is not provided, the logs remain encrypted by
+     *         AES-256. This attribute is only available with Amazon EMR version 5.30.0 and later, excluding Amazon EMR
+     *         6.0.0.
      */
 
     public String getLogEncryptionKmsKeyId() {
@@ -449,15 +455,14 @@ public class RunJobFlowRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The AWS KMS customer master key (CMK) used for encrypting log files. If a value is not provided, the logs remain
-     * encrypted by AES-256. This attribute is only available with Amazon EMR version 5.30.0 and later, excluding Amazon
-     * EMR 6.0.0.
+     * The KMS key used for encrypting log files. If a value is not provided, the logs remain encrypted by AES-256. This
+     * attribute is only available with Amazon EMR version 5.30.0 and later, excluding Amazon EMR 6.0.0.
      * </p>
      * 
      * @param logEncryptionKmsKeyId
-     *        The AWS KMS customer master key (CMK) used for encrypting log files. If a value is not provided, the logs
-     *        remain encrypted by AES-256. This attribute is only available with Amazon EMR version 5.30.0 and later,
-     *        excluding Amazon EMR 6.0.0.
+     *        The KMS key used for encrypting log files. If a value is not provided, the logs remain encrypted by
+     *        AES-256. This attribute is only available with Amazon EMR version 5.30.0 and later, excluding Amazon EMR
+     *        6.0.0.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1704,15 +1709,31 @@ public class RunJobFlowRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * A value of <code>true</code> indicates that all IAM users in the AWS account can perform cluster actions if they
-     * have the proper IAM policy permissions. This is the default. A value of <code>false</code> indicates that only
-     * the IAM user who created the cluster can perform actions.
+     * Set this value to <code>true</code> so that IAM principals in the account associated with the cluster can perform
+     * EMR actions on the cluster that their IAM policies allow. This value defaults to <code>false</code> for clusters
+     * created using the EMR API or the CLI <a
+     * href="https://docs.aws.amazon.com/cli/latest/reference/emr/create-cluster.html">create-cluster</a> command.
+     * </p>
+     * <p>
+     * When set to <code>false</code>, only the IAM principal that created the cluster and the account root user can
+     * perform EMR actions for the cluster, regardless of the IAM permissions policies attached to other IAM principals.
+     * For more information, see <a href=
+     * "https://docs.aws.amazon.com/emr/latest/ManagementGuide/security_iam_emr-with-iam.html#security_set_visible_to_all_users"
+     * >Understanding the EMR Cluster VisibleToAllUsers Setting</a> in the <i>Amazon EMR Management Guide</i>.
      * </p>
      * 
      * @param visibleToAllUsers
-     *        A value of <code>true</code> indicates that all IAM users in the AWS account can perform cluster actions
-     *        if they have the proper IAM policy permissions. This is the default. A value of <code>false</code>
-     *        indicates that only the IAM user who created the cluster can perform actions.
+     *        Set this value to <code>true</code> so that IAM principals in the account associated with the cluster can
+     *        perform EMR actions on the cluster that their IAM policies allow. This value defaults to
+     *        <code>false</code> for clusters created using the EMR API or the CLI <a
+     *        href="https://docs.aws.amazon.com/cli/latest/reference/emr/create-cluster.html">create-cluster</a>
+     *        command.</p>
+     *        <p>
+     *        When set to <code>false</code>, only the IAM principal that created the cluster and the account root user
+     *        can perform EMR actions for the cluster, regardless of the IAM permissions policies attached to other IAM
+     *        principals. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/emr/latest/ManagementGuide/security_iam_emr-with-iam.html#security_set_visible_to_all_users"
+     *        >Understanding the EMR Cluster VisibleToAllUsers Setting</a> in the <i>Amazon EMR Management Guide</i>.
      */
 
     public void setVisibleToAllUsers(Boolean visibleToAllUsers) {
@@ -1721,14 +1742,30 @@ public class RunJobFlowRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * A value of <code>true</code> indicates that all IAM users in the AWS account can perform cluster actions if they
-     * have the proper IAM policy permissions. This is the default. A value of <code>false</code> indicates that only
-     * the IAM user who created the cluster can perform actions.
+     * Set this value to <code>true</code> so that IAM principals in the account associated with the cluster can perform
+     * EMR actions on the cluster that their IAM policies allow. This value defaults to <code>false</code> for clusters
+     * created using the EMR API or the CLI <a
+     * href="https://docs.aws.amazon.com/cli/latest/reference/emr/create-cluster.html">create-cluster</a> command.
+     * </p>
+     * <p>
+     * When set to <code>false</code>, only the IAM principal that created the cluster and the account root user can
+     * perform EMR actions for the cluster, regardless of the IAM permissions policies attached to other IAM principals.
+     * For more information, see <a href=
+     * "https://docs.aws.amazon.com/emr/latest/ManagementGuide/security_iam_emr-with-iam.html#security_set_visible_to_all_users"
+     * >Understanding the EMR Cluster VisibleToAllUsers Setting</a> in the <i>Amazon EMR Management Guide</i>.
      * </p>
      * 
-     * @return A value of <code>true</code> indicates that all IAM users in the AWS account can perform cluster actions
-     *         if they have the proper IAM policy permissions. This is the default. A value of <code>false</code>
-     *         indicates that only the IAM user who created the cluster can perform actions.
+     * @return Set this value to <code>true</code> so that IAM principals in the account associated with the cluster can
+     *         perform EMR actions on the cluster that their IAM policies allow. This value defaults to
+     *         <code>false</code> for clusters created using the EMR API or the CLI <a
+     *         href="https://docs.aws.amazon.com/cli/latest/reference/emr/create-cluster.html">create-cluster</a>
+     *         command.</p>
+     *         <p>
+     *         When set to <code>false</code>, only the IAM principal that created the cluster and the account root user
+     *         can perform EMR actions for the cluster, regardless of the IAM permissions policies attached to other IAM
+     *         principals. For more information, see <a href=
+     *         "https://docs.aws.amazon.com/emr/latest/ManagementGuide/security_iam_emr-with-iam.html#security_set_visible_to_all_users"
+     *         >Understanding the EMR Cluster VisibleToAllUsers Setting</a> in the <i>Amazon EMR Management Guide</i>.
      */
 
     public Boolean getVisibleToAllUsers() {
@@ -1737,15 +1774,31 @@ public class RunJobFlowRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * A value of <code>true</code> indicates that all IAM users in the AWS account can perform cluster actions if they
-     * have the proper IAM policy permissions. This is the default. A value of <code>false</code> indicates that only
-     * the IAM user who created the cluster can perform actions.
+     * Set this value to <code>true</code> so that IAM principals in the account associated with the cluster can perform
+     * EMR actions on the cluster that their IAM policies allow. This value defaults to <code>false</code> for clusters
+     * created using the EMR API or the CLI <a
+     * href="https://docs.aws.amazon.com/cli/latest/reference/emr/create-cluster.html">create-cluster</a> command.
+     * </p>
+     * <p>
+     * When set to <code>false</code>, only the IAM principal that created the cluster and the account root user can
+     * perform EMR actions for the cluster, regardless of the IAM permissions policies attached to other IAM principals.
+     * For more information, see <a href=
+     * "https://docs.aws.amazon.com/emr/latest/ManagementGuide/security_iam_emr-with-iam.html#security_set_visible_to_all_users"
+     * >Understanding the EMR Cluster VisibleToAllUsers Setting</a> in the <i>Amazon EMR Management Guide</i>.
      * </p>
      * 
      * @param visibleToAllUsers
-     *        A value of <code>true</code> indicates that all IAM users in the AWS account can perform cluster actions
-     *        if they have the proper IAM policy permissions. This is the default. A value of <code>false</code>
-     *        indicates that only the IAM user who created the cluster can perform actions.
+     *        Set this value to <code>true</code> so that IAM principals in the account associated with the cluster can
+     *        perform EMR actions on the cluster that their IAM policies allow. This value defaults to
+     *        <code>false</code> for clusters created using the EMR API or the CLI <a
+     *        href="https://docs.aws.amazon.com/cli/latest/reference/emr/create-cluster.html">create-cluster</a>
+     *        command.</p>
+     *        <p>
+     *        When set to <code>false</code>, only the IAM principal that created the cluster and the account root user
+     *        can perform EMR actions for the cluster, regardless of the IAM permissions policies attached to other IAM
+     *        principals. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/emr/latest/ManagementGuide/security_iam_emr-with-iam.html#security_set_visible_to_all_users"
+     *        >Understanding the EMR Cluster VisibleToAllUsers Setting</a> in the <i>Amazon EMR Management Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1756,14 +1809,30 @@ public class RunJobFlowRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * A value of <code>true</code> indicates that all IAM users in the AWS account can perform cluster actions if they
-     * have the proper IAM policy permissions. This is the default. A value of <code>false</code> indicates that only
-     * the IAM user who created the cluster can perform actions.
+     * Set this value to <code>true</code> so that IAM principals in the account associated with the cluster can perform
+     * EMR actions on the cluster that their IAM policies allow. This value defaults to <code>false</code> for clusters
+     * created using the EMR API or the CLI <a
+     * href="https://docs.aws.amazon.com/cli/latest/reference/emr/create-cluster.html">create-cluster</a> command.
+     * </p>
+     * <p>
+     * When set to <code>false</code>, only the IAM principal that created the cluster and the account root user can
+     * perform EMR actions for the cluster, regardless of the IAM permissions policies attached to other IAM principals.
+     * For more information, see <a href=
+     * "https://docs.aws.amazon.com/emr/latest/ManagementGuide/security_iam_emr-with-iam.html#security_set_visible_to_all_users"
+     * >Understanding the EMR Cluster VisibleToAllUsers Setting</a> in the <i>Amazon EMR Management Guide</i>.
      * </p>
      * 
-     * @return A value of <code>true</code> indicates that all IAM users in the AWS account can perform cluster actions
-     *         if they have the proper IAM policy permissions. This is the default. A value of <code>false</code>
-     *         indicates that only the IAM user who created the cluster can perform actions.
+     * @return Set this value to <code>true</code> so that IAM principals in the account associated with the cluster can
+     *         perform EMR actions on the cluster that their IAM policies allow. This value defaults to
+     *         <code>false</code> for clusters created using the EMR API or the CLI <a
+     *         href="https://docs.aws.amazon.com/cli/latest/reference/emr/create-cluster.html">create-cluster</a>
+     *         command.</p>
+     *         <p>
+     *         When set to <code>false</code>, only the IAM principal that created the cluster and the account root user
+     *         can perform EMR actions for the cluster, regardless of the IAM permissions policies attached to other IAM
+     *         principals. For more information, see <a href=
+     *         "https://docs.aws.amazon.com/emr/latest/ManagementGuide/security_iam_emr-with-iam.html#security_set_visible_to_all_users"
+     *         >Understanding the EMR Cluster VisibleToAllUsers Setting</a> in the <i>Amazon EMR Management Guide</i>.
      */
 
     public Boolean isVisibleToAllUsers() {
@@ -1824,11 +1893,13 @@ public class RunJobFlowRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The IAM role that will be assumed by the Amazon EMR service to access AWS resources on your behalf.
+     * The IAM role that will be assumed by the Amazon EMR service to access Amazon Web Services resources on your
+     * behalf.
      * </p>
      * 
      * @param serviceRole
-     *        The IAM role that will be assumed by the Amazon EMR service to access AWS resources on your behalf.
+     *        The IAM role that will be assumed by the Amazon EMR service to access Amazon Web Services resources on
+     *        your behalf.
      */
 
     public void setServiceRole(String serviceRole) {
@@ -1837,10 +1908,12 @@ public class RunJobFlowRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The IAM role that will be assumed by the Amazon EMR service to access AWS resources on your behalf.
+     * The IAM role that will be assumed by the Amazon EMR service to access Amazon Web Services resources on your
+     * behalf.
      * </p>
      * 
-     * @return The IAM role that will be assumed by the Amazon EMR service to access AWS resources on your behalf.
+     * @return The IAM role that will be assumed by the Amazon EMR service to access Amazon Web Services resources on
+     *         your behalf.
      */
 
     public String getServiceRole() {
@@ -1849,11 +1922,13 @@ public class RunJobFlowRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The IAM role that will be assumed by the Amazon EMR service to access AWS resources on your behalf.
+     * The IAM role that will be assumed by the Amazon EMR service to access Amazon Web Services resources on your
+     * behalf.
      * </p>
      * 
      * @param serviceRole
-     *        The IAM role that will be assumed by the Amazon EMR service to access AWS resources on your behalf.
+     *        The IAM role that will be assumed by the Amazon EMR service to access Amazon Web Services resources on
+     *        your behalf.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

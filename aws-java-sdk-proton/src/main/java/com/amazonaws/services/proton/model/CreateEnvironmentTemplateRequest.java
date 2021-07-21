@@ -58,7 +58,7 @@ public class CreateEnvironmentTemplateRequest extends com.amazonaws.AmazonWebSer
     /**
      * <p>
      * Create tags for your environment template. For more information, see <i>AWS Proton resources and tagging</i> in
-     * the <a href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">AWS Proton Administration
+     * the <a href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">AWS Proton Administrator
      * Guide</a> or <a href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">AWS Proton User
      * Guide</a>.
      * </p>
@@ -291,14 +291,14 @@ public class CreateEnvironmentTemplateRequest extends com.amazonaws.AmazonWebSer
     /**
      * <p>
      * Create tags for your environment template. For more information, see <i>AWS Proton resources and tagging</i> in
-     * the <a href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">AWS Proton Administration
+     * the <a href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">AWS Proton Administrator
      * Guide</a> or <a href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">AWS Proton User
      * Guide</a>.
      * </p>
      * 
      * @return Create tags for your environment template. For more information, see <i>AWS Proton resources and
      *         tagging</i> in the <a href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">AWS
-     *         Proton Administration Guide</a> or <a
+     *         Proton Administrator Guide</a> or <a
      *         href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">AWS Proton User Guide</a>.
      */
 
@@ -309,7 +309,7 @@ public class CreateEnvironmentTemplateRequest extends com.amazonaws.AmazonWebSer
     /**
      * <p>
      * Create tags for your environment template. For more information, see <i>AWS Proton resources and tagging</i> in
-     * the <a href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">AWS Proton Administration
+     * the <a href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">AWS Proton Administrator
      * Guide</a> or <a href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">AWS Proton User
      * Guide</a>.
      * </p>
@@ -317,7 +317,7 @@ public class CreateEnvironmentTemplateRequest extends com.amazonaws.AmazonWebSer
      * @param tags
      *        Create tags for your environment template. For more information, see <i>AWS Proton resources and
      *        tagging</i> in the <a href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">AWS
-     *        Proton Administration Guide</a> or <a
+     *        Proton Administrator Guide</a> or <a
      *        href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">AWS Proton User Guide</a>.
      */
 
@@ -333,7 +333,7 @@ public class CreateEnvironmentTemplateRequest extends com.amazonaws.AmazonWebSer
     /**
      * <p>
      * Create tags for your environment template. For more information, see <i>AWS Proton resources and tagging</i> in
-     * the <a href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">AWS Proton Administration
+     * the <a href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">AWS Proton Administrator
      * Guide</a> or <a href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">AWS Proton User
      * Guide</a>.
      * </p>
@@ -346,7 +346,7 @@ public class CreateEnvironmentTemplateRequest extends com.amazonaws.AmazonWebSer
      * @param tags
      *        Create tags for your environment template. For more information, see <i>AWS Proton resources and
      *        tagging</i> in the <a href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">AWS
-     *        Proton Administration Guide</a> or <a
+     *        Proton Administrator Guide</a> or <a
      *        href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">AWS Proton User Guide</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -364,7 +364,7 @@ public class CreateEnvironmentTemplateRequest extends com.amazonaws.AmazonWebSer
     /**
      * <p>
      * Create tags for your environment template. For more information, see <i>AWS Proton resources and tagging</i> in
-     * the <a href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">AWS Proton Administration
+     * the <a href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">AWS Proton Administrator
      * Guide</a> or <a href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">AWS Proton User
      * Guide</a>.
      * </p>
@@ -372,7 +372,7 @@ public class CreateEnvironmentTemplateRequest extends com.amazonaws.AmazonWebSer
      * @param tags
      *        Create tags for your environment template. For more information, see <i>AWS Proton resources and
      *        tagging</i> in the <a href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">AWS
-     *        Proton Administration Guide</a> or <a
+     *        Proton Administrator Guide</a> or <a
      *        href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">AWS Proton User Guide</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

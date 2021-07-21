@@ -43,7 +43,7 @@ public class CreateEnvironmentTemplateVersionRequest extends com.amazonaws.Amazo
      * To create a new minor version of the environment template, include a <code>majorVersion</code>.
      * </p>
      * <p>
-     * To create a new major and minor version of the environment template, exclude <code>majorVersion</code>.
+     * To create a new major and minor version of the environment template, <i>exclude</i> <code>majorVersion</code>.
      * </p>
      */
     private String majorVersion;
@@ -157,13 +157,14 @@ public class CreateEnvironmentTemplateVersionRequest extends com.amazonaws.Amazo
      * To create a new minor version of the environment template, include a <code>majorVersion</code>.
      * </p>
      * <p>
-     * To create a new major and minor version of the environment template, exclude <code>majorVersion</code>.
+     * To create a new major and minor version of the environment template, <i>exclude</i> <code>majorVersion</code>.
      * </p>
      * 
      * @param majorVersion
      *        To create a new minor version of the environment template, include a <code>majorVersion</code>.</p>
      *        <p>
-     *        To create a new major and minor version of the environment template, exclude <code>majorVersion</code>.
+     *        To create a new major and minor version of the environment template, <i>exclude</i>
+     *        <code>majorVersion</code>.
      */
 
     public void setMajorVersion(String majorVersion) {
@@ -175,12 +176,13 @@ public class CreateEnvironmentTemplateVersionRequest extends com.amazonaws.Amazo
      * To create a new minor version of the environment template, include a <code>majorVersion</code>.
      * </p>
      * <p>
-     * To create a new major and minor version of the environment template, exclude <code>majorVersion</code>.
+     * To create a new major and minor version of the environment template, <i>exclude</i> <code>majorVersion</code>.
      * </p>
      * 
      * @return To create a new minor version of the environment template, include a <code>majorVersion</code>.</p>
      *         <p>
-     *         To create a new major and minor version of the environment template, exclude <code>majorVersion</code>.
+     *         To create a new major and minor version of the environment template, <i>exclude</i>
+     *         <code>majorVersion</code>.
      */
 
     public String getMajorVersion() {
@@ -192,13 +194,14 @@ public class CreateEnvironmentTemplateVersionRequest extends com.amazonaws.Amazo
      * To create a new minor version of the environment template, include a <code>majorVersion</code>.
      * </p>
      * <p>
-     * To create a new major and minor version of the environment template, exclude <code>majorVersion</code>.
+     * To create a new major and minor version of the environment template, <i>exclude</i> <code>majorVersion</code>.
      * </p>
      * 
      * @param majorVersion
      *        To create a new minor version of the environment template, include a <code>majorVersion</code>.</p>
      *        <p>
-     *        To create a new major and minor version of the environment template, exclude <code>majorVersion</code>.
+     *        To create a new major and minor version of the environment template, <i>exclude</i>
+     *        <code>majorVersion</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

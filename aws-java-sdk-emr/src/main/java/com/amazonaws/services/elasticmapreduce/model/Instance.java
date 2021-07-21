@@ -96,7 +96,7 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
     private String instanceType;
     /**
      * <p>
-     * The list of EBS volumes that are attached to this instance.
+     * The list of Amazon EBS volumes that are attached to this instance.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<EbsVolume> ebsVolumes;
@@ -576,10 +576,10 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The list of EBS volumes that are attached to this instance.
+     * The list of Amazon EBS volumes that are attached to this instance.
      * </p>
      * 
-     * @return The list of EBS volumes that are attached to this instance.
+     * @return The list of Amazon EBS volumes that are attached to this instance.
      */
 
     public java.util.List<EbsVolume> getEbsVolumes() {
@@ -591,11 +591,11 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The list of EBS volumes that are attached to this instance.
+     * The list of Amazon EBS volumes that are attached to this instance.
      * </p>
      * 
      * @param ebsVolumes
-     *        The list of EBS volumes that are attached to this instance.
+     *        The list of Amazon EBS volumes that are attached to this instance.
      */
 
     public void setEbsVolumes(java.util.Collection<EbsVolume> ebsVolumes) {
@@ -609,7 +609,7 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The list of EBS volumes that are attached to this instance.
+     * The list of Amazon EBS volumes that are attached to this instance.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -618,7 +618,7 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param ebsVolumes
-     *        The list of EBS volumes that are attached to this instance.
+     *        The list of Amazon EBS volumes that are attached to this instance.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -634,11 +634,11 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The list of EBS volumes that are attached to this instance.
+     * The list of Amazon EBS volumes that are attached to this instance.
      * </p>
      * 
      * @param ebsVolumes
-     *        The list of EBS volumes that are attached to this instance.
+     *        The list of Amazon EBS volumes that are attached to this instance.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

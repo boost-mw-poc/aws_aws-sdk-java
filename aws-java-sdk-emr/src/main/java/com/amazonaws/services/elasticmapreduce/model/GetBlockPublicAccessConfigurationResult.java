@@ -45,9 +45,10 @@ public class GetBlockPublicAccessConfigurationResult extends com.amazonaws.Amazo
     private BlockPublicAccessConfiguration blockPublicAccessConfiguration;
     /**
      * <p>
-     * Properties that describe the AWS principal that created the <code>BlockPublicAccessConfiguration</code> using the
-     * <code>PutBlockPublicAccessConfiguration</code> action as well as the date and time that the configuration was
-     * created. Each time a configuration for block public access is updated, Amazon EMR updates this metadata.
+     * Properties that describe the Amazon Web Services principal that created the
+     * <code>BlockPublicAccessConfiguration</code> using the <code>PutBlockPublicAccessConfiguration</code> action as
+     * well as the date and time that the configuration was created. Each time a configuration for block public access
+     * is updated, Amazon EMR updates this metadata.
      * </p>
      */
     private BlockPublicAccessConfigurationMetadata blockPublicAccessConfigurationMetadata;
@@ -170,16 +171,17 @@ public class GetBlockPublicAccessConfigurationResult extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * Properties that describe the AWS principal that created the <code>BlockPublicAccessConfiguration</code> using the
-     * <code>PutBlockPublicAccessConfiguration</code> action as well as the date and time that the configuration was
-     * created. Each time a configuration for block public access is updated, Amazon EMR updates this metadata.
+     * Properties that describe the Amazon Web Services principal that created the
+     * <code>BlockPublicAccessConfiguration</code> using the <code>PutBlockPublicAccessConfiguration</code> action as
+     * well as the date and time that the configuration was created. Each time a configuration for block public access
+     * is updated, Amazon EMR updates this metadata.
      * </p>
      * 
      * @param blockPublicAccessConfigurationMetadata
-     *        Properties that describe the AWS principal that created the <code>BlockPublicAccessConfiguration</code>
-     *        using the <code>PutBlockPublicAccessConfiguration</code> action as well as the date and time that the
-     *        configuration was created. Each time a configuration for block public access is updated, Amazon EMR
-     *        updates this metadata.
+     *        Properties that describe the Amazon Web Services principal that created the
+     *        <code>BlockPublicAccessConfiguration</code> using the <code>PutBlockPublicAccessConfiguration</code>
+     *        action as well as the date and time that the configuration was created. Each time a configuration for
+     *        block public access is updated, Amazon EMR updates this metadata.
      */
 
     public void setBlockPublicAccessConfigurationMetadata(BlockPublicAccessConfigurationMetadata blockPublicAccessConfigurationMetadata) {
@@ -188,15 +190,16 @@ public class GetBlockPublicAccessConfigurationResult extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * Properties that describe the AWS principal that created the <code>BlockPublicAccessConfiguration</code> using the
-     * <code>PutBlockPublicAccessConfiguration</code> action as well as the date and time that the configuration was
-     * created. Each time a configuration for block public access is updated, Amazon EMR updates this metadata.
+     * Properties that describe the Amazon Web Services principal that created the
+     * <code>BlockPublicAccessConfiguration</code> using the <code>PutBlockPublicAccessConfiguration</code> action as
+     * well as the date and time that the configuration was created. Each time a configuration for block public access
+     * is updated, Amazon EMR updates this metadata.
      * </p>
      * 
-     * @return Properties that describe the AWS principal that created the <code>BlockPublicAccessConfiguration</code>
-     *         using the <code>PutBlockPublicAccessConfiguration</code> action as well as the date and time that the
-     *         configuration was created. Each time a configuration for block public access is updated, Amazon EMR
-     *         updates this metadata.
+     * @return Properties that describe the Amazon Web Services principal that created the
+     *         <code>BlockPublicAccessConfiguration</code> using the <code>PutBlockPublicAccessConfiguration</code>
+     *         action as well as the date and time that the configuration was created. Each time a configuration for
+     *         block public access is updated, Amazon EMR updates this metadata.
      */
 
     public BlockPublicAccessConfigurationMetadata getBlockPublicAccessConfigurationMetadata() {
@@ -205,16 +208,17 @@ public class GetBlockPublicAccessConfigurationResult extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * Properties that describe the AWS principal that created the <code>BlockPublicAccessConfiguration</code> using the
-     * <code>PutBlockPublicAccessConfiguration</code> action as well as the date and time that the configuration was
-     * created. Each time a configuration for block public access is updated, Amazon EMR updates this metadata.
+     * Properties that describe the Amazon Web Services principal that created the
+     * <code>BlockPublicAccessConfiguration</code> using the <code>PutBlockPublicAccessConfiguration</code> action as
+     * well as the date and time that the configuration was created. Each time a configuration for block public access
+     * is updated, Amazon EMR updates this metadata.
      * </p>
      * 
      * @param blockPublicAccessConfigurationMetadata
-     *        Properties that describe the AWS principal that created the <code>BlockPublicAccessConfiguration</code>
-     *        using the <code>PutBlockPublicAccessConfiguration</code> action as well as the date and time that the
-     *        configuration was created. Each time a configuration for block public access is updated, Amazon EMR
-     *        updates this metadata.
+     *        Properties that describe the Amazon Web Services principal that created the
+     *        <code>BlockPublicAccessConfiguration</code> using the <code>PutBlockPublicAccessConfiguration</code>
+     *        action as well as the date and time that the configuration was created. Each time a configuration for
+     *        block public access is updated, Amazon EMR updates this metadata.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

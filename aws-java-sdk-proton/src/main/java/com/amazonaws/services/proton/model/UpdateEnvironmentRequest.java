@@ -88,7 +88,7 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      * <p>
      * You can only update to a new environment account connection if it was created in the same environment account
-     * that the current environment account connection was created in and associated with the current environment.
+     * that the current environment account connection was created in and is associated with the current environment.
      * </p>
      */
     private String environmentAccountConnectionId;
@@ -100,7 +100,8 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
     private String name;
     /**
      * <p>
-     * The ARN of the AWS Proton service role that allows AWS Proton to make API calls to other services your behalf.
+     * The Amazon Resource Name (ARN) of the AWS Proton service role that allows AWS Proton to make API calls to other
+     * services your behalf.
      * </p>
      */
     private String protonServiceRoleArn;
@@ -584,14 +585,14 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      * <p>
      * You can only update to a new environment account connection if it was created in the same environment account
-     * that the current environment account connection was created in and associated with the current environment.
+     * that the current environment account connection was created in and is associated with the current environment.
      * </p>
      * 
      * @param environmentAccountConnectionId
      *        The ID of the environment account connection.</p>
      *        <p>
      *        You can only update to a new environment account connection if it was created in the same environment
-     *        account that the current environment account connection was created in and associated with the current
+     *        account that the current environment account connection was created in and is associated with the current
      *        environment.
      */
 
@@ -605,13 +606,13 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      * <p>
      * You can only update to a new environment account connection if it was created in the same environment account
-     * that the current environment account connection was created in and associated with the current environment.
+     * that the current environment account connection was created in and is associated with the current environment.
      * </p>
      * 
      * @return The ID of the environment account connection.</p>
      *         <p>
      *         You can only update to a new environment account connection if it was created in the same environment
-     *         account that the current environment account connection was created in and associated with the current
+     *         account that the current environment account connection was created in and is associated with the current
      *         environment.
      */
 
@@ -625,14 +626,14 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
      * </p>
      * <p>
      * You can only update to a new environment account connection if it was created in the same environment account
-     * that the current environment account connection was created in and associated with the current environment.
+     * that the current environment account connection was created in and is associated with the current environment.
      * </p>
      * 
      * @param environmentAccountConnectionId
      *        The ID of the environment account connection.</p>
      *        <p>
      *        You can only update to a new environment account connection if it was created in the same environment
-     *        account that the current environment account connection was created in and associated with the current
+     *        account that the current environment account connection was created in and is associated with the current
      *        environment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -684,12 +685,13 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The ARN of the AWS Proton service role that allows AWS Proton to make API calls to other services your behalf.
+     * The Amazon Resource Name (ARN) of the AWS Proton service role that allows AWS Proton to make API calls to other
+     * services your behalf.
      * </p>
      * 
      * @param protonServiceRoleArn
-     *        The ARN of the AWS Proton service role that allows AWS Proton to make API calls to other services your
-     *        behalf.
+     *        The Amazon Resource Name (ARN) of the AWS Proton service role that allows AWS Proton to make API calls to
+     *        other services your behalf.
      */
 
     public void setProtonServiceRoleArn(String protonServiceRoleArn) {
@@ -698,11 +700,12 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The ARN of the AWS Proton service role that allows AWS Proton to make API calls to other services your behalf.
+     * The Amazon Resource Name (ARN) of the AWS Proton service role that allows AWS Proton to make API calls to other
+     * services your behalf.
      * </p>
      * 
-     * @return The ARN of the AWS Proton service role that allows AWS Proton to make API calls to other services your
-     *         behalf.
+     * @return The Amazon Resource Name (ARN) of the AWS Proton service role that allows AWS Proton to make API calls to
+     *         other services your behalf.
      */
 
     public String getProtonServiceRoleArn() {
@@ -711,12 +714,13 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The ARN of the AWS Proton service role that allows AWS Proton to make API calls to other services your behalf.
+     * The Amazon Resource Name (ARN) of the AWS Proton service role that allows AWS Proton to make API calls to other
+     * services your behalf.
      * </p>
      * 
      * @param protonServiceRoleArn
-     *        The ARN of the AWS Proton service role that allows AWS Proton to make API calls to other services your
-     *        behalf.
+     *        The Amazon Resource Name (ARN) of the AWS Proton service role that allows AWS Proton to make API calls to
+     *        other services your behalf.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -72,11 +72,11 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
     private ServicePipeline pipeline;
     /**
      * <p>
-     * The ARN of the repository connection. For more information, see <a
+     * The Amazon Resource Name (ARN) of the repository connection. For more information, see <a
      * href="https://docs.aws.amazon.com/proton/latest/adminguide/setting-up-for-service.html#setting-up-vcontrol">Set
-     * up a repository connection</a> in the <i>AWS Proton Administration Guide</i> and <a
-     * href="https://docs.aws.amazon.com/proton/latest/userguide/ug-getting-started.html#getting-started-step1">Getting
-     * started</a> in the <i>AWS Proton User Guide</i>.
+     * up a repository connection</a> in the <i>AWS Proton Administrator Guide</i> and <a
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/proton-setup.html#setup-repo-connection">Setting up
+     * with AWS Proton</a> in the <i>AWS Proton User Guide</i>.
      * </p>
      */
     private String repositoryConnectionArn;
@@ -393,19 +393,19 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ARN of the repository connection. For more information, see <a
+     * The Amazon Resource Name (ARN) of the repository connection. For more information, see <a
      * href="https://docs.aws.amazon.com/proton/latest/adminguide/setting-up-for-service.html#setting-up-vcontrol">Set
-     * up a repository connection</a> in the <i>AWS Proton Administration Guide</i> and <a
-     * href="https://docs.aws.amazon.com/proton/latest/userguide/ug-getting-started.html#getting-started-step1">Getting
-     * started</a> in the <i>AWS Proton User Guide</i>.
+     * up a repository connection</a> in the <i>AWS Proton Administrator Guide</i> and <a
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/proton-setup.html#setup-repo-connection">Setting up
+     * with AWS Proton</a> in the <i>AWS Proton User Guide</i>.
      * </p>
      * 
      * @param repositoryConnectionArn
-     *        The ARN of the repository connection. For more information, see <a href=
+     *        The Amazon Resource Name (ARN) of the repository connection. For more information, see <a href=
      *        "https://docs.aws.amazon.com/proton/latest/adminguide/setting-up-for-service.html#setting-up-vcontrol">Set
-     *        up a repository connection</a> in the <i>AWS Proton Administration Guide</i> and <a
-     *        href="https://docs.aws.amazon.com/proton/latest/userguide/ug-getting-started.html#getting-started-step1"
-     *        >Getting started</a> in the <i>AWS Proton User Guide</i>.
+     *        up a repository connection</a> in the <i>AWS Proton Administrator Guide</i> and <a
+     *        href="https://docs.aws.amazon.com/proton/latest/userguide/proton-setup.html#setup-repo-connection">Setting
+     *        up with AWS Proton</a> in the <i>AWS Proton User Guide</i>.
      */
 
     public void setRepositoryConnectionArn(String repositoryConnectionArn) {
@@ -414,18 +414,18 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ARN of the repository connection. For more information, see <a
+     * The Amazon Resource Name (ARN) of the repository connection. For more information, see <a
      * href="https://docs.aws.amazon.com/proton/latest/adminguide/setting-up-for-service.html#setting-up-vcontrol">Set
-     * up a repository connection</a> in the <i>AWS Proton Administration Guide</i> and <a
-     * href="https://docs.aws.amazon.com/proton/latest/userguide/ug-getting-started.html#getting-started-step1">Getting
-     * started</a> in the <i>AWS Proton User Guide</i>.
+     * up a repository connection</a> in the <i>AWS Proton Administrator Guide</i> and <a
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/proton-setup.html#setup-repo-connection">Setting up
+     * with AWS Proton</a> in the <i>AWS Proton User Guide</i>.
      * </p>
      * 
-     * @return The ARN of the repository connection. For more information, see <a
+     * @return The Amazon Resource Name (ARN) of the repository connection. For more information, see <a
      *         href="https://docs.aws.amazon.com/proton/latest/adminguide/setting-up-for-service.html#setting-up-vcontrol"
-     *         >Set up a repository connection</a> in the <i>AWS Proton Administration Guide</i> and <a href=
-     *         "https://docs.aws.amazon.com/proton/latest/userguide/ug-getting-started.html#getting-started-step1"
-     *         >Getting started</a> in the <i>AWS Proton User Guide</i>.
+     *         >Set up a repository connection</a> in the <i>AWS Proton Administrator Guide</i> and <a
+     *         href="https://docs.aws.amazon.com/proton/latest/userguide/proton-setup.html#setup-repo-connection"
+     *         >Setting up with AWS Proton</a> in the <i>AWS Proton User Guide</i>.
      */
 
     public String getRepositoryConnectionArn() {
@@ -434,19 +434,19 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ARN of the repository connection. For more information, see <a
+     * The Amazon Resource Name (ARN) of the repository connection. For more information, see <a
      * href="https://docs.aws.amazon.com/proton/latest/adminguide/setting-up-for-service.html#setting-up-vcontrol">Set
-     * up a repository connection</a> in the <i>AWS Proton Administration Guide</i> and <a
-     * href="https://docs.aws.amazon.com/proton/latest/userguide/ug-getting-started.html#getting-started-step1">Getting
-     * started</a> in the <i>AWS Proton User Guide</i>.
+     * up a repository connection</a> in the <i>AWS Proton Administrator Guide</i> and <a
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/proton-setup.html#setup-repo-connection">Setting up
+     * with AWS Proton</a> in the <i>AWS Proton User Guide</i>.
      * </p>
      * 
      * @param repositoryConnectionArn
-     *        The ARN of the repository connection. For more information, see <a href=
+     *        The Amazon Resource Name (ARN) of the repository connection. For more information, see <a href=
      *        "https://docs.aws.amazon.com/proton/latest/adminguide/setting-up-for-service.html#setting-up-vcontrol">Set
-     *        up a repository connection</a> in the <i>AWS Proton Administration Guide</i> and <a
-     *        href="https://docs.aws.amazon.com/proton/latest/userguide/ug-getting-started.html#getting-started-step1"
-     *        >Getting started</a> in the <i>AWS Proton User Guide</i>.
+     *        up a repository connection</a> in the <i>AWS Proton Administrator Guide</i> and <a
+     *        href="https://docs.aws.amazon.com/proton/latest/userguide/proton-setup.html#setup-repo-connection">Setting
+     *        up with AWS Proton</a> in the <i>AWS Proton User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -33,13 +33,13 @@ public class CreateStudioSessionMappingRequest extends com.amazonaws.AmazonWebSe
     private String studioId;
     /**
      * <p>
-     * The globally unique identifier (GUID) of the user or group from the AWS SSO Identity Store. For more information,
-     * see <a href=
+     * The globally unique identifier (GUID) of the user or group from the Amazon Web Services SSO Identity Store. For
+     * more information, see <a href=
      * "https://docs.aws.amazon.com/singlesignon/latest/IdentityStoreAPIReference/API_User.html#singlesignon-Type-User-UserId"
      * >UserId</a> and <a href=
      * "https://docs.aws.amazon.com/singlesignon/latest/IdentityStoreAPIReference/API_Group.html#singlesignon-Type-Group-GroupId"
-     * >GroupId</a> in the <i>AWS SSO Identity Store API Reference</i>. Either <code>IdentityName</code> or
-     * <code>IdentityId</code> must be specified.
+     * >GroupId</a> in the <i>Amazon Web Services SSO Identity Store API Reference</i>. Either <code>IdentityName</code>
+     * or <code>IdentityId</code> must be specified.
      * </p>
      */
     private String identityId;
@@ -49,8 +49,8 @@ public class CreateStudioSessionMappingRequest extends com.amazonaws.AmazonWebSe
      * "https://docs.aws.amazon.com/singlesignon/latest/IdentityStoreAPIReference/API_User.html#singlesignon-Type-User-UserName"
      * >UserName</a> and <a href=
      * "https://docs.aws.amazon.com/singlesignon/latest/IdentityStoreAPIReference/API_Group.html#singlesignon-Type-Group-DisplayName"
-     * >DisplayName</a> in the <i>AWS SSO Identity Store API Reference</i>. Either <code>IdentityName</code> or
-     * <code>IdentityId</code> must be specified.
+     * >DisplayName</a> in the <i>Amazon Web Services SSO Identity Store API Reference</i>. Either
+     * <code>IdentityName</code> or <code>IdentityId</code> must be specified.
      * </p>
      */
     private String identityName;
@@ -62,8 +62,11 @@ public class CreateStudioSessionMappingRequest extends com.amazonaws.AmazonWebSe
     private String identityType;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) for the session policy that will be applied to the user or group. Session policies
-     * refine Studio user permissions without the need to use multiple IAM user roles.
+     * The Amazon Resource Name (ARN) for the session policy that will be applied to the user or group. You should
+     * specify the ARN for the session policy that you want to apply, not the ARN of your user role. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-studio-user-role.html">Create an EMR Studio User
+     * Role with Session Policies</a>.
      * </p>
      */
     private String sessionPolicyArn;
@@ -110,23 +113,23 @@ public class CreateStudioSessionMappingRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The globally unique identifier (GUID) of the user or group from the AWS SSO Identity Store. For more information,
-     * see <a href=
+     * The globally unique identifier (GUID) of the user or group from the Amazon Web Services SSO Identity Store. For
+     * more information, see <a href=
      * "https://docs.aws.amazon.com/singlesignon/latest/IdentityStoreAPIReference/API_User.html#singlesignon-Type-User-UserId"
      * >UserId</a> and <a href=
      * "https://docs.aws.amazon.com/singlesignon/latest/IdentityStoreAPIReference/API_Group.html#singlesignon-Type-Group-GroupId"
-     * >GroupId</a> in the <i>AWS SSO Identity Store API Reference</i>. Either <code>IdentityName</code> or
-     * <code>IdentityId</code> must be specified.
+     * >GroupId</a> in the <i>Amazon Web Services SSO Identity Store API Reference</i>. Either <code>IdentityName</code>
+     * or <code>IdentityId</code> must be specified.
      * </p>
      * 
      * @param identityId
-     *        The globally unique identifier (GUID) of the user or group from the AWS SSO Identity Store. For more
-     *        information, see <a href=
+     *        The globally unique identifier (GUID) of the user or group from the Amazon Web Services SSO Identity
+     *        Store. For more information, see <a href=
      *        "https://docs.aws.amazon.com/singlesignon/latest/IdentityStoreAPIReference/API_User.html#singlesignon-Type-User-UserId"
      *        >UserId</a> and <a href=
      *        "https://docs.aws.amazon.com/singlesignon/latest/IdentityStoreAPIReference/API_Group.html#singlesignon-Type-Group-GroupId"
-     *        >GroupId</a> in the <i>AWS SSO Identity Store API Reference</i>. Either <code>IdentityName</code> or
-     *        <code>IdentityId</code> must be specified.
+     *        >GroupId</a> in the <i>Amazon Web Services SSO Identity Store API Reference</i>. Either
+     *        <code>IdentityName</code> or <code>IdentityId</code> must be specified.
      */
 
     public void setIdentityId(String identityId) {
@@ -135,22 +138,22 @@ public class CreateStudioSessionMappingRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The globally unique identifier (GUID) of the user or group from the AWS SSO Identity Store. For more information,
-     * see <a href=
+     * The globally unique identifier (GUID) of the user or group from the Amazon Web Services SSO Identity Store. For
+     * more information, see <a href=
      * "https://docs.aws.amazon.com/singlesignon/latest/IdentityStoreAPIReference/API_User.html#singlesignon-Type-User-UserId"
      * >UserId</a> and <a href=
      * "https://docs.aws.amazon.com/singlesignon/latest/IdentityStoreAPIReference/API_Group.html#singlesignon-Type-Group-GroupId"
-     * >GroupId</a> in the <i>AWS SSO Identity Store API Reference</i>. Either <code>IdentityName</code> or
-     * <code>IdentityId</code> must be specified.
+     * >GroupId</a> in the <i>Amazon Web Services SSO Identity Store API Reference</i>. Either <code>IdentityName</code>
+     * or <code>IdentityId</code> must be specified.
      * </p>
      * 
-     * @return The globally unique identifier (GUID) of the user or group from the AWS SSO Identity Store. For more
-     *         information, see <a href=
+     * @return The globally unique identifier (GUID) of the user or group from the Amazon Web Services SSO Identity
+     *         Store. For more information, see <a href=
      *         "https://docs.aws.amazon.com/singlesignon/latest/IdentityStoreAPIReference/API_User.html#singlesignon-Type-User-UserId"
      *         >UserId</a> and <a href=
      *         "https://docs.aws.amazon.com/singlesignon/latest/IdentityStoreAPIReference/API_Group.html#singlesignon-Type-Group-GroupId"
-     *         >GroupId</a> in the <i>AWS SSO Identity Store API Reference</i>. Either <code>IdentityName</code> or
-     *         <code>IdentityId</code> must be specified.
+     *         >GroupId</a> in the <i>Amazon Web Services SSO Identity Store API Reference</i>. Either
+     *         <code>IdentityName</code> or <code>IdentityId</code> must be specified.
      */
 
     public String getIdentityId() {
@@ -159,23 +162,23 @@ public class CreateStudioSessionMappingRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The globally unique identifier (GUID) of the user or group from the AWS SSO Identity Store. For more information,
-     * see <a href=
+     * The globally unique identifier (GUID) of the user or group from the Amazon Web Services SSO Identity Store. For
+     * more information, see <a href=
      * "https://docs.aws.amazon.com/singlesignon/latest/IdentityStoreAPIReference/API_User.html#singlesignon-Type-User-UserId"
      * >UserId</a> and <a href=
      * "https://docs.aws.amazon.com/singlesignon/latest/IdentityStoreAPIReference/API_Group.html#singlesignon-Type-Group-GroupId"
-     * >GroupId</a> in the <i>AWS SSO Identity Store API Reference</i>. Either <code>IdentityName</code> or
-     * <code>IdentityId</code> must be specified.
+     * >GroupId</a> in the <i>Amazon Web Services SSO Identity Store API Reference</i>. Either <code>IdentityName</code>
+     * or <code>IdentityId</code> must be specified.
      * </p>
      * 
      * @param identityId
-     *        The globally unique identifier (GUID) of the user or group from the AWS SSO Identity Store. For more
-     *        information, see <a href=
+     *        The globally unique identifier (GUID) of the user or group from the Amazon Web Services SSO Identity
+     *        Store. For more information, see <a href=
      *        "https://docs.aws.amazon.com/singlesignon/latest/IdentityStoreAPIReference/API_User.html#singlesignon-Type-User-UserId"
      *        >UserId</a> and <a href=
      *        "https://docs.aws.amazon.com/singlesignon/latest/IdentityStoreAPIReference/API_Group.html#singlesignon-Type-Group-GroupId"
-     *        >GroupId</a> in the <i>AWS SSO Identity Store API Reference</i>. Either <code>IdentityName</code> or
-     *        <code>IdentityId</code> must be specified.
+     *        >GroupId</a> in the <i>Amazon Web Services SSO Identity Store API Reference</i>. Either
+     *        <code>IdentityName</code> or <code>IdentityId</code> must be specified.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -190,8 +193,8 @@ public class CreateStudioSessionMappingRequest extends com.amazonaws.AmazonWebSe
      * "https://docs.aws.amazon.com/singlesignon/latest/IdentityStoreAPIReference/API_User.html#singlesignon-Type-User-UserName"
      * >UserName</a> and <a href=
      * "https://docs.aws.amazon.com/singlesignon/latest/IdentityStoreAPIReference/API_Group.html#singlesignon-Type-Group-DisplayName"
-     * >DisplayName</a> in the <i>AWS SSO Identity Store API Reference</i>. Either <code>IdentityName</code> or
-     * <code>IdentityId</code> must be specified.
+     * >DisplayName</a> in the <i>Amazon Web Services SSO Identity Store API Reference</i>. Either
+     * <code>IdentityName</code> or <code>IdentityId</code> must be specified.
      * </p>
      * 
      * @param identityName
@@ -199,8 +202,8 @@ public class CreateStudioSessionMappingRequest extends com.amazonaws.AmazonWebSe
      *        "https://docs.aws.amazon.com/singlesignon/latest/IdentityStoreAPIReference/API_User.html#singlesignon-Type-User-UserName"
      *        >UserName</a> and <a href=
      *        "https://docs.aws.amazon.com/singlesignon/latest/IdentityStoreAPIReference/API_Group.html#singlesignon-Type-Group-DisplayName"
-     *        >DisplayName</a> in the <i>AWS SSO Identity Store API Reference</i>. Either <code>IdentityName</code> or
-     *        <code>IdentityId</code> must be specified.
+     *        >DisplayName</a> in the <i>Amazon Web Services SSO Identity Store API Reference</i>. Either
+     *        <code>IdentityName</code> or <code>IdentityId</code> must be specified.
      */
 
     public void setIdentityName(String identityName) {
@@ -213,16 +216,16 @@ public class CreateStudioSessionMappingRequest extends com.amazonaws.AmazonWebSe
      * "https://docs.aws.amazon.com/singlesignon/latest/IdentityStoreAPIReference/API_User.html#singlesignon-Type-User-UserName"
      * >UserName</a> and <a href=
      * "https://docs.aws.amazon.com/singlesignon/latest/IdentityStoreAPIReference/API_Group.html#singlesignon-Type-Group-DisplayName"
-     * >DisplayName</a> in the <i>AWS SSO Identity Store API Reference</i>. Either <code>IdentityName</code> or
-     * <code>IdentityId</code> must be specified.
+     * >DisplayName</a> in the <i>Amazon Web Services SSO Identity Store API Reference</i>. Either
+     * <code>IdentityName</code> or <code>IdentityId</code> must be specified.
      * </p>
      * 
      * @return The name of the user or group. For more information, see <a href=
      *         "https://docs.aws.amazon.com/singlesignon/latest/IdentityStoreAPIReference/API_User.html#singlesignon-Type-User-UserName"
      *         >UserName</a> and <a href=
      *         "https://docs.aws.amazon.com/singlesignon/latest/IdentityStoreAPIReference/API_Group.html#singlesignon-Type-Group-DisplayName"
-     *         >DisplayName</a> in the <i>AWS SSO Identity Store API Reference</i>. Either <code>IdentityName</code> or
-     *         <code>IdentityId</code> must be specified.
+     *         >DisplayName</a> in the <i>Amazon Web Services SSO Identity Store API Reference</i>. Either
+     *         <code>IdentityName</code> or <code>IdentityId</code> must be specified.
      */
 
     public String getIdentityName() {
@@ -235,8 +238,8 @@ public class CreateStudioSessionMappingRequest extends com.amazonaws.AmazonWebSe
      * "https://docs.aws.amazon.com/singlesignon/latest/IdentityStoreAPIReference/API_User.html#singlesignon-Type-User-UserName"
      * >UserName</a> and <a href=
      * "https://docs.aws.amazon.com/singlesignon/latest/IdentityStoreAPIReference/API_Group.html#singlesignon-Type-Group-DisplayName"
-     * >DisplayName</a> in the <i>AWS SSO Identity Store API Reference</i>. Either <code>IdentityName</code> or
-     * <code>IdentityId</code> must be specified.
+     * >DisplayName</a> in the <i>Amazon Web Services SSO Identity Store API Reference</i>. Either
+     * <code>IdentityName</code> or <code>IdentityId</code> must be specified.
      * </p>
      * 
      * @param identityName
@@ -244,8 +247,8 @@ public class CreateStudioSessionMappingRequest extends com.amazonaws.AmazonWebSe
      *        "https://docs.aws.amazon.com/singlesignon/latest/IdentityStoreAPIReference/API_User.html#singlesignon-Type-User-UserName"
      *        >UserName</a> and <a href=
      *        "https://docs.aws.amazon.com/singlesignon/latest/IdentityStoreAPIReference/API_Group.html#singlesignon-Type-Group-DisplayName"
-     *        >DisplayName</a> in the <i>AWS SSO Identity Store API Reference</i>. Either <code>IdentityName</code> or
-     *        <code>IdentityId</code> must be specified.
+     *        >DisplayName</a> in the <i>Amazon Web Services SSO Identity Store API Reference</i>. Either
+     *        <code>IdentityName</code> or <code>IdentityId</code> must be specified.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -315,13 +318,19 @@ public class CreateStudioSessionMappingRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) for the session policy that will be applied to the user or group. Session policies
-     * refine Studio user permissions without the need to use multiple IAM user roles.
+     * The Amazon Resource Name (ARN) for the session policy that will be applied to the user or group. You should
+     * specify the ARN for the session policy that you want to apply, not the ARN of your user role. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-studio-user-role.html">Create an EMR Studio User
+     * Role with Session Policies</a>.
      * </p>
      * 
      * @param sessionPolicyArn
-     *        The Amazon Resource Name (ARN) for the session policy that will be applied to the user or group. Session
-     *        policies refine Studio user permissions without the need to use multiple IAM user roles.
+     *        The Amazon Resource Name (ARN) for the session policy that will be applied to the user or group. You
+     *        should specify the ARN for the session policy that you want to apply, not the ARN of your user role. For
+     *        more information, see <a
+     *        href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-studio-user-role.html">Create an EMR
+     *        Studio User Role with Session Policies</a>.
      */
 
     public void setSessionPolicyArn(String sessionPolicyArn) {
@@ -330,12 +339,18 @@ public class CreateStudioSessionMappingRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) for the session policy that will be applied to the user or group. Session policies
-     * refine Studio user permissions without the need to use multiple IAM user roles.
+     * The Amazon Resource Name (ARN) for the session policy that will be applied to the user or group. You should
+     * specify the ARN for the session policy that you want to apply, not the ARN of your user role. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-studio-user-role.html">Create an EMR Studio User
+     * Role with Session Policies</a>.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) for the session policy that will be applied to the user or group. Session
-     *         policies refine Studio user permissions without the need to use multiple IAM user roles.
+     * @return The Amazon Resource Name (ARN) for the session policy that will be applied to the user or group. You
+     *         should specify the ARN for the session policy that you want to apply, not the ARN of your user role. For
+     *         more information, see <a
+     *         href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-studio-user-role.html">Create an EMR
+     *         Studio User Role with Session Policies</a>.
      */
 
     public String getSessionPolicyArn() {
@@ -344,13 +359,19 @@ public class CreateStudioSessionMappingRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) for the session policy that will be applied to the user or group. Session policies
-     * refine Studio user permissions without the need to use multiple IAM user roles.
+     * The Amazon Resource Name (ARN) for the session policy that will be applied to the user or group. You should
+     * specify the ARN for the session policy that you want to apply, not the ARN of your user role. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-studio-user-role.html">Create an EMR Studio User
+     * Role with Session Policies</a>.
      * </p>
      * 
      * @param sessionPolicyArn
-     *        The Amazon Resource Name (ARN) for the session policy that will be applied to the user or group. Session
-     *        policies refine Studio user permissions without the need to use multiple IAM user roles.
+     *        The Amazon Resource Name (ARN) for the session policy that will be applied to the user or group. You
+     *        should specify the ARN for the session policy that you want to apply, not the ARN of your user role. For
+     *        more information, see <a
+     *        href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-studio-user-role.html">Create an EMR
+     *        Studio User Role with Session Policies</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

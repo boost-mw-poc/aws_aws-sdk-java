@@ -68,8 +68,8 @@ public class DatasetExportJob implements Serializable, Cloneable, StructuredPojo
     private String ingestionMode;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Identity and Access Management service role that has permissions to add
-     * data to your output Amazon S3 bucket.
+     * The Amazon Resource Name (ARN) of the IAM service role that has permissions to add data to your output Amazon S3
+     * bucket.
      * </p>
      */
     private String roleArn;
@@ -322,13 +322,13 @@ public class DatasetExportJob implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Identity and Access Management service role that has permissions to add
-     * data to your output Amazon S3 bucket.
+     * The Amazon Resource Name (ARN) of the IAM service role that has permissions to add data to your output Amazon S3
+     * bucket.
      * </p>
      * 
      * @param roleArn
-     *        The Amazon Resource Name (ARN) of the AWS Identity and Access Management service role that has permissions
-     *        to add data to your output Amazon S3 bucket.
+     *        The Amazon Resource Name (ARN) of the IAM service role that has permissions to add data to your output
+     *        Amazon S3 bucket.
      */
 
     public void setRoleArn(String roleArn) {
@@ -337,12 +337,12 @@ public class DatasetExportJob implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Identity and Access Management service role that has permissions to add
-     * data to your output Amazon S3 bucket.
+     * The Amazon Resource Name (ARN) of the IAM service role that has permissions to add data to your output Amazon S3
+     * bucket.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the AWS Identity and Access Management service role that has
-     *         permissions to add data to your output Amazon S3 bucket.
+     * @return The Amazon Resource Name (ARN) of the IAM service role that has permissions to add data to your output
+     *         Amazon S3 bucket.
      */
 
     public String getRoleArn() {
@@ -351,13 +351,13 @@ public class DatasetExportJob implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Identity and Access Management service role that has permissions to add
-     * data to your output Amazon S3 bucket.
+     * The Amazon Resource Name (ARN) of the IAM service role that has permissions to add data to your output Amazon S3
+     * bucket.
      * </p>
      * 
      * @param roleArn
-     *        The Amazon Resource Name (ARN) of the AWS Identity and Access Management service role that has permissions
-     *        to add data to your output Amazon S3 bucket.
+     *        The Amazon Resource Name (ARN) of the IAM service role that has permissions to add data to your output
+     *        Amazon S3 bucket.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

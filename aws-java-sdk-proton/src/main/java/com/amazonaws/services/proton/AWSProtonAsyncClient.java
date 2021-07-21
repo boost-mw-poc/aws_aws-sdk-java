@@ -56,7 +56,7 @@ import java.util.concurrent.ExecutorService;
  * </p>
  * <p>
  * To learn more about AWS Proton administration, see the <a
- * href="https://docs.aws.amazon.com/proton/latest/adminguide/Welcome.html">AWS Proton Administration Guide</a>.
+ * href="https://docs.aws.amazon.com/proton/latest/adminguide/Welcome.html">AWS Proton Administrator Guide</a>.
  * </p>
  * <p>
  * To learn more about deploying serverless and containerized applications on AWS Proton, see the <a
@@ -129,10 +129,81 @@ import java.util.concurrent.ExecutorService;
  * </p>
  * </li>
  * </ul>
- * 
- * <pre>
- * <code> &lt;p&gt; &lt;b&gt;Idempotent delete APIs&lt;/b&gt; &lt;/p&gt; &lt;p&gt;Given a request action that has succeeded:&lt;/p&gt; &lt;p&gt;When you retry the request with an API from this group and the resource was deleted, its metadata is returned in the response.&lt;/p&gt; &lt;p&gt;If you retry and the resource doesn't exist, the response is empty.&lt;/p&gt; &lt;p&gt;In both cases, the retry succeeds.&lt;/p&gt; &lt;p&gt;Idempotent delete APIs:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;DeleteEnvironmentTemplate&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;DeleteEnvironmentTemplateVersion&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;DeleteServiceTemplate&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;DeleteServiceTemplateVersion&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;DeleteEnvironmentAccountConnection&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt; &lt;b&gt;Asynchronous idempotent delete APIs&lt;/b&gt; &lt;/p&gt; &lt;p&gt;Given a request action that has succeeded:&lt;/p&gt; &lt;p&gt;If you retry the request with an API from this group, if the original request delete operation status is &lt;code&gt;DELETE_IN_PROGRESS&lt;/code&gt;, the retry returns the resource detail data in the response without performing any further actions.&lt;/p&gt; &lt;p&gt;If the original request delete operation is complete, a retry returns an empty response.&lt;/p&gt; &lt;p&gt;Asynchronous idempotent delete APIs:&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;DeleteEnvironment&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;DeleteService&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; </code>
- * </pre>
+ * <p>
+ * <b>Idempotent delete APIs</b>
+ * </p>
+ * <p>
+ * Given a request action that has succeeded:
+ * </p>
+ * <p>
+ * When you retry the request with an API from this group and the resource was deleted, its metadata is returned in the
+ * response.
+ * </p>
+ * <p>
+ * If you retry and the resource doesn't exist, the response is empty.
+ * </p>
+ * <p>
+ * In both cases, the retry succeeds.
+ * </p>
+ * <p>
+ * Idempotent delete APIs:
+ * </p>
+ * <ul>
+ * <li>
+ * <p>
+ * DeleteEnvironmentTemplate
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * DeleteEnvironmentTemplateVersion
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * DeleteServiceTemplate
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * DeleteServiceTemplateVersion
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * DeleteEnvironmentAccountConnection
+ * </p>
+ * </li>
+ * </ul>
+ * <p>
+ * <b>Asynchronous idempotent delete APIs</b>
+ * </p>
+ * <p>
+ * Given a request action that has succeeded:
+ * </p>
+ * <p>
+ * If you retry the request with an API from this group, if the original request delete operation status is
+ * <code>DELETE_IN_PROGRESS</code>, the retry returns the resource detail data in the response without performing any
+ * further actions.
+ * </p>
+ * <p>
+ * If the original request delete operation is complete, a retry returns an empty response.
+ * </p>
+ * <p>
+ * Asynchronous idempotent delete APIs:
+ * </p>
+ * <ul>
+ * <li>
+ * <p>
+ * DeleteEnvironment
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * DeleteService
+ * </p>
+ * </li>
+ * </ul>
  */
 @ThreadSafe
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

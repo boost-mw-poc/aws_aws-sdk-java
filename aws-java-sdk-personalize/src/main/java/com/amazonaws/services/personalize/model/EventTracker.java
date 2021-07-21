@@ -42,7 +42,7 @@ public class EventTracker implements Serializable, Cloneable, StructuredPojo {
     private String eventTrackerArn;
     /**
      * <p>
-     * The Amazon AWS account that owns the event tracker.
+     * The Amazon Web Services account that owns the event tracker.
      * </p>
      */
     private String accountId;
@@ -175,11 +175,11 @@ public class EventTracker implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon AWS account that owns the event tracker.
+     * The Amazon Web Services account that owns the event tracker.
      * </p>
      * 
      * @param accountId
-     *        The Amazon AWS account that owns the event tracker.
+     *        The Amazon Web Services account that owns the event tracker.
      */
 
     public void setAccountId(String accountId) {
@@ -188,10 +188,10 @@ public class EventTracker implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon AWS account that owns the event tracker.
+     * The Amazon Web Services account that owns the event tracker.
      * </p>
      * 
-     * @return The Amazon AWS account that owns the event tracker.
+     * @return The Amazon Web Services account that owns the event tracker.
      */
 
     public String getAccountId() {
@@ -200,11 +200,11 @@ public class EventTracker implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon AWS account that owns the event tracker.
+     * The Amazon Web Services account that owns the event tracker.
      * </p>
      * 
      * @param accountId
-     *        The Amazon AWS account that owns the event tracker.
+     *        The Amazon Web Services account that owns the event tracker.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

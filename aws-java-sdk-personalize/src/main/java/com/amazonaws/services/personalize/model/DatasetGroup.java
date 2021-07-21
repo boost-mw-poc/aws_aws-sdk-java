@@ -25,7 +25,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * dataset group can contain only one of each type of dataset.
  * </p>
  * <p>
- * You can specify an AWS Key Management Service (KMS) key to encrypt the datasets in the group.
+ * You can specify an Key Management Service (KMS) key to encrypt the datasets in the group.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/personalize-2018-05-22/DatasetGroup" target="_top">AWS API
@@ -75,7 +75,7 @@ public class DatasetGroup implements Serializable, Cloneable, StructuredPojo {
     private String roleArn;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the KMS key used to encrypt the datasets.
+     * The Amazon Resource Name (ARN) of the Key Management Service (KMS) key used to encrypt the datasets.
      * </p>
      */
     private String kmsKeyArn;
@@ -347,11 +347,11 @@ public class DatasetGroup implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the KMS key used to encrypt the datasets.
+     * The Amazon Resource Name (ARN) of the Key Management Service (KMS) key used to encrypt the datasets.
      * </p>
      * 
      * @param kmsKeyArn
-     *        The Amazon Resource Name (ARN) of the KMS key used to encrypt the datasets.
+     *        The Amazon Resource Name (ARN) of the Key Management Service (KMS) key used to encrypt the datasets.
      */
 
     public void setKmsKeyArn(String kmsKeyArn) {
@@ -360,10 +360,10 @@ public class DatasetGroup implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the KMS key used to encrypt the datasets.
+     * The Amazon Resource Name (ARN) of the Key Management Service (KMS) key used to encrypt the datasets.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the KMS key used to encrypt the datasets.
+     * @return The Amazon Resource Name (ARN) of the Key Management Service (KMS) key used to encrypt the datasets.
      */
 
     public String getKmsKeyArn() {
@@ -372,11 +372,11 @@ public class DatasetGroup implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the KMS key used to encrypt the datasets.
+     * The Amazon Resource Name (ARN) of the Key Management Service (KMS) key used to encrypt the datasets.
      * </p>
      * 
      * @param kmsKeyArn
-     *        The Amazon Resource Name (ARN) of the KMS key used to encrypt the datasets.
+     *        The Amazon Resource Name (ARN) of the Key Management Service (KMS) key used to encrypt the datasets.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

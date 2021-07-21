@@ -36,9 +36,10 @@ public class SetVisibleToAllUsersRequest extends com.amazonaws.AmazonWebServiceR
     private com.amazonaws.internal.SdkInternalList<String> jobFlowIds;
     /**
      * <p>
-     * A value of <code>true</code> indicates that all IAM users in the AWS account can perform cluster actions if they
-     * have the proper IAM policy permissions. This is the default. A value of <code>false</code> indicates that only
-     * the IAM user who created the cluster can perform actions.
+     * A value of <code>true</code> indicates that an IAM principal in the account can perform EMR actions on the
+     * cluster that the IAM policies attached to the principal allow. A value of <code>false</code> indicates that only
+     * the IAM principal that created the cluster and the Amazon Web Services root user can perform EMR actions on the
+     * cluster.
      * </p>
      */
     private Boolean visibleToAllUsers;
@@ -118,15 +119,17 @@ public class SetVisibleToAllUsersRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * A value of <code>true</code> indicates that all IAM users in the AWS account can perform cluster actions if they
-     * have the proper IAM policy permissions. This is the default. A value of <code>false</code> indicates that only
-     * the IAM user who created the cluster can perform actions.
+     * A value of <code>true</code> indicates that an IAM principal in the account can perform EMR actions on the
+     * cluster that the IAM policies attached to the principal allow. A value of <code>false</code> indicates that only
+     * the IAM principal that created the cluster and the Amazon Web Services root user can perform EMR actions on the
+     * cluster.
      * </p>
      * 
      * @param visibleToAllUsers
-     *        A value of <code>true</code> indicates that all IAM users in the AWS account can perform cluster actions
-     *        if they have the proper IAM policy permissions. This is the default. A value of <code>false</code>
-     *        indicates that only the IAM user who created the cluster can perform actions.
+     *        A value of <code>true</code> indicates that an IAM principal in the account can perform EMR actions on the
+     *        cluster that the IAM policies attached to the principal allow. A value of <code>false</code> indicates
+     *        that only the IAM principal that created the cluster and the Amazon Web Services root user can perform EMR
+     *        actions on the cluster.
      */
 
     public void setVisibleToAllUsers(Boolean visibleToAllUsers) {
@@ -135,14 +138,16 @@ public class SetVisibleToAllUsersRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * A value of <code>true</code> indicates that all IAM users in the AWS account can perform cluster actions if they
-     * have the proper IAM policy permissions. This is the default. A value of <code>false</code> indicates that only
-     * the IAM user who created the cluster can perform actions.
+     * A value of <code>true</code> indicates that an IAM principal in the account can perform EMR actions on the
+     * cluster that the IAM policies attached to the principal allow. A value of <code>false</code> indicates that only
+     * the IAM principal that created the cluster and the Amazon Web Services root user can perform EMR actions on the
+     * cluster.
      * </p>
      * 
-     * @return A value of <code>true</code> indicates that all IAM users in the AWS account can perform cluster actions
-     *         if they have the proper IAM policy permissions. This is the default. A value of <code>false</code>
-     *         indicates that only the IAM user who created the cluster can perform actions.
+     * @return A value of <code>true</code> indicates that an IAM principal in the account can perform EMR actions on
+     *         the cluster that the IAM policies attached to the principal allow. A value of <code>false</code>
+     *         indicates that only the IAM principal that created the cluster and the Amazon Web Services root user can
+     *         perform EMR actions on the cluster.
      */
 
     public Boolean getVisibleToAllUsers() {
@@ -151,15 +156,17 @@ public class SetVisibleToAllUsersRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * A value of <code>true</code> indicates that all IAM users in the AWS account can perform cluster actions if they
-     * have the proper IAM policy permissions. This is the default. A value of <code>false</code> indicates that only
-     * the IAM user who created the cluster can perform actions.
+     * A value of <code>true</code> indicates that an IAM principal in the account can perform EMR actions on the
+     * cluster that the IAM policies attached to the principal allow. A value of <code>false</code> indicates that only
+     * the IAM principal that created the cluster and the Amazon Web Services root user can perform EMR actions on the
+     * cluster.
      * </p>
      * 
      * @param visibleToAllUsers
-     *        A value of <code>true</code> indicates that all IAM users in the AWS account can perform cluster actions
-     *        if they have the proper IAM policy permissions. This is the default. A value of <code>false</code>
-     *        indicates that only the IAM user who created the cluster can perform actions.
+     *        A value of <code>true</code> indicates that an IAM principal in the account can perform EMR actions on the
+     *        cluster that the IAM policies attached to the principal allow. A value of <code>false</code> indicates
+     *        that only the IAM principal that created the cluster and the Amazon Web Services root user can perform EMR
+     *        actions on the cluster.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -170,14 +177,16 @@ public class SetVisibleToAllUsersRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * A value of <code>true</code> indicates that all IAM users in the AWS account can perform cluster actions if they
-     * have the proper IAM policy permissions. This is the default. A value of <code>false</code> indicates that only
-     * the IAM user who created the cluster can perform actions.
+     * A value of <code>true</code> indicates that an IAM principal in the account can perform EMR actions on the
+     * cluster that the IAM policies attached to the principal allow. A value of <code>false</code> indicates that only
+     * the IAM principal that created the cluster and the Amazon Web Services root user can perform EMR actions on the
+     * cluster.
      * </p>
      * 
-     * @return A value of <code>true</code> indicates that all IAM users in the AWS account can perform cluster actions
-     *         if they have the proper IAM policy permissions. This is the default. A value of <code>false</code>
-     *         indicates that only the IAM user who created the cluster can perform actions.
+     * @return A value of <code>true</code> indicates that an IAM principal in the account can perform EMR actions on
+     *         the cluster that the IAM policies attached to the principal allow. A value of <code>false</code>
+     *         indicates that only the IAM principal that created the cluster and the Amazon Web Services root user can
+     *         perform EMR actions on the cluster.
      */
 
     public Boolean isVisibleToAllUsers() {

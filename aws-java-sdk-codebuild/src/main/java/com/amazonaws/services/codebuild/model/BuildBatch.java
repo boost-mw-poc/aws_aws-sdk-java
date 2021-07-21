@@ -77,12 +77,12 @@ public class BuildBatch implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * For CodeCommit, GitHub, GitHub Enterprise, and BitBucket, the commit ID.
+     * For AWS CodeCommit, GitHub, GitHub Enterprise, and BitBucket, the commit ID.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For CodePipeline, the source revision provided by CodePipeline.
+     * For AWS CodePipeline, the source revision provided by AWS CodePipeline.
      * </p>
      * </li>
      * <li>
@@ -120,7 +120,7 @@ public class BuildBatch implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * For CodeCommit: the commit ID, branch, or Git tag to use.
+     * For AWS CodeCommit: the commit ID, branch, or Git tag to use.
      * </p>
      * </li>
      * <li>
@@ -195,17 +195,18 @@ public class BuildBatch implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * If CodePipeline started the build, the pipeline's name (for example, <code>codepipeline/my-demo-pipeline</code>).
+     * If AWS CodePipeline started the build, the pipeline's name (for example,
+     * <code>codepipeline/my-demo-pipeline</code>).
      * </p>
      * </li>
      * <li>
      * <p>
-     * If an Identity and Access Management user started the build, the user's name.
+     * If an AWS Identity and Access Management (IAM) user started the build, the user's name.
      * </p>
      * </li>
      * <li>
      * <p>
-     * If the Jenkins plugin for CodeBuild started the build, the string <code>CodeBuild-Jenkins-Plugin</code>.
+     * If the Jenkins plugin for AWS CodeBuild started the build, the string <code>CodeBuild-Jenkins-Plugin</code>.
      * </p>
      * </li>
      * </ul>
@@ -215,7 +216,8 @@ public class BuildBatch implements Serializable, Cloneable, StructuredPojo {
     private VpcConfig vpcConfig;
     /**
      * <p>
-     * The Key Management Service customer master key (CMK) to be used for encrypting the batch build output artifacts.
+     * The AWS Key Management Service (AWS KMS) customer master key (CMK) to be used for encrypting the batch build
+     * output artifacts.
      * </p>
      * <note>
      * <p>
@@ -569,12 +571,12 @@ public class BuildBatch implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * For CodeCommit, GitHub, GitHub Enterprise, and BitBucket, the commit ID.
+     * For AWS CodeCommit, GitHub, GitHub Enterprise, and BitBucket, the commit ID.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For CodePipeline, the source revision provided by CodePipeline.
+     * For AWS CodePipeline, the source revision provided by AWS CodePipeline.
      * </p>
      * </li>
      * <li>
@@ -589,12 +591,12 @@ public class BuildBatch implements Serializable, Cloneable, StructuredPojo {
      *        <ul>
      *        <li>
      *        <p>
-     *        For CodeCommit, GitHub, GitHub Enterprise, and BitBucket, the commit ID.
+     *        For AWS CodeCommit, GitHub, GitHub Enterprise, and BitBucket, the commit ID.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        For CodePipeline, the source revision provided by CodePipeline.
+     *        For AWS CodePipeline, the source revision provided by AWS CodePipeline.
      *        </p>
      *        </li>
      *        <li>
@@ -615,12 +617,12 @@ public class BuildBatch implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * For CodeCommit, GitHub, GitHub Enterprise, and BitBucket, the commit ID.
+     * For AWS CodeCommit, GitHub, GitHub Enterprise, and BitBucket, the commit ID.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For CodePipeline, the source revision provided by CodePipeline.
+     * For AWS CodePipeline, the source revision provided by AWS CodePipeline.
      * </p>
      * </li>
      * <li>
@@ -634,12 +636,12 @@ public class BuildBatch implements Serializable, Cloneable, StructuredPojo {
      *         <ul>
      *         <li>
      *         <p>
-     *         For CodeCommit, GitHub, GitHub Enterprise, and BitBucket, the commit ID.
+     *         For AWS CodeCommit, GitHub, GitHub Enterprise, and BitBucket, the commit ID.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         For CodePipeline, the source revision provided by CodePipeline.
+     *         For AWS CodePipeline, the source revision provided by AWS CodePipeline.
      *         </p>
      *         </li>
      *         <li>
@@ -660,12 +662,12 @@ public class BuildBatch implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * For CodeCommit, GitHub, GitHub Enterprise, and BitBucket, the commit ID.
+     * For AWS CodeCommit, GitHub, GitHub Enterprise, and BitBucket, the commit ID.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For CodePipeline, the source revision provided by CodePipeline.
+     * For AWS CodePipeline, the source revision provided by AWS CodePipeline.
      * </p>
      * </li>
      * <li>
@@ -680,12 +682,12 @@ public class BuildBatch implements Serializable, Cloneable, StructuredPojo {
      *        <ul>
      *        <li>
      *        <p>
-     *        For CodeCommit, GitHub, GitHub Enterprise, and BitBucket, the commit ID.
+     *        For AWS CodeCommit, GitHub, GitHub Enterprise, and BitBucket, the commit ID.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        For CodePipeline, the source revision provided by CodePipeline.
+     *        For AWS CodePipeline, the source revision provided by AWS CodePipeline.
      *        </p>
      *        </li>
      *        <li>
@@ -914,7 +916,7 @@ public class BuildBatch implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * For CodeCommit: the commit ID, branch, or Git tag to use.
+     * For AWS CodeCommit: the commit ID, branch, or Git tag to use.
      * </p>
      * </li>
      * <li>
@@ -944,7 +946,7 @@ public class BuildBatch implements Serializable, Cloneable, StructuredPojo {
      *         <ul>
      *         <li>
      *         <p>
-     *         For CodeCommit: the commit ID, branch, or Git tag to use.
+     *         For AWS CodeCommit: the commit ID, branch, or Git tag to use.
      *         </p>
      *         </li>
      *         <li>
@@ -980,7 +982,7 @@ public class BuildBatch implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * For CodeCommit: the commit ID, branch, or Git tag to use.
+     * For AWS CodeCommit: the commit ID, branch, or Git tag to use.
      * </p>
      * </li>
      * <li>
@@ -1011,7 +1013,7 @@ public class BuildBatch implements Serializable, Cloneable, StructuredPojo {
      *        <ul>
      *        <li>
      *        <p>
-     *        For CodeCommit: the commit ID, branch, or Git tag to use.
+     *        For AWS CodeCommit: the commit ID, branch, or Git tag to use.
      *        </p>
      *        </li>
      *        <li>
@@ -1052,7 +1054,7 @@ public class BuildBatch implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * For CodeCommit: the commit ID, branch, or Git tag to use.
+     * For AWS CodeCommit: the commit ID, branch, or Git tag to use.
      * </p>
      * </li>
      * <li>
@@ -1088,7 +1090,7 @@ public class BuildBatch implements Serializable, Cloneable, StructuredPojo {
      *        <ul>
      *        <li>
      *        <p>
-     *        For CodeCommit: the commit ID, branch, or Git tag to use.
+     *        For AWS CodeCommit: the commit ID, branch, or Git tag to use.
      *        </p>
      *        </li>
      *        <li>
@@ -1131,7 +1133,7 @@ public class BuildBatch implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * For CodeCommit: the commit ID, branch, or Git tag to use.
+     * For AWS CodeCommit: the commit ID, branch, or Git tag to use.
      * </p>
      * </li>
      * <li>
@@ -1162,7 +1164,7 @@ public class BuildBatch implements Serializable, Cloneable, StructuredPojo {
      *        <ul>
      *        <li>
      *        <p>
-     *        For CodeCommit: the commit ID, branch, or Git tag to use.
+     *        For AWS CodeCommit: the commit ID, branch, or Git tag to use.
      *        </p>
      *        </li>
      *        <li>
@@ -1563,17 +1565,18 @@ public class BuildBatch implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * If CodePipeline started the build, the pipeline's name (for example, <code>codepipeline/my-demo-pipeline</code>).
+     * If AWS CodePipeline started the build, the pipeline's name (for example,
+     * <code>codepipeline/my-demo-pipeline</code>).
      * </p>
      * </li>
      * <li>
      * <p>
-     * If an Identity and Access Management user started the build, the user's name.
+     * If an AWS Identity and Access Management (IAM) user started the build, the user's name.
      * </p>
      * </li>
      * <li>
      * <p>
-     * If the Jenkins plugin for CodeBuild started the build, the string <code>CodeBuild-Jenkins-Plugin</code>.
+     * If the Jenkins plugin for AWS CodeBuild started the build, the string <code>CodeBuild-Jenkins-Plugin</code>.
      * </p>
      * </li>
      * </ul>
@@ -1583,18 +1586,19 @@ public class BuildBatch implements Serializable, Cloneable, StructuredPojo {
      *        <ul>
      *        <li>
      *        <p>
-     *        If CodePipeline started the build, the pipeline's name (for example,
+     *        If AWS CodePipeline started the build, the pipeline's name (for example,
      *        <code>codepipeline/my-demo-pipeline</code>).
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        If an Identity and Access Management user started the build, the user's name.
+     *        If an AWS Identity and Access Management (IAM) user started the build, the user's name.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        If the Jenkins plugin for CodeBuild started the build, the string <code>CodeBuild-Jenkins-Plugin</code>.
+     *        If the Jenkins plugin for AWS CodeBuild started the build, the string
+     *        <code>CodeBuild-Jenkins-Plugin</code>.
      *        </p>
      *        </li>
      */
@@ -1610,17 +1614,18 @@ public class BuildBatch implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * If CodePipeline started the build, the pipeline's name (for example, <code>codepipeline/my-demo-pipeline</code>).
+     * If AWS CodePipeline started the build, the pipeline's name (for example,
+     * <code>codepipeline/my-demo-pipeline</code>).
      * </p>
      * </li>
      * <li>
      * <p>
-     * If an Identity and Access Management user started the build, the user's name.
+     * If an AWS Identity and Access Management (IAM) user started the build, the user's name.
      * </p>
      * </li>
      * <li>
      * <p>
-     * If the Jenkins plugin for CodeBuild started the build, the string <code>CodeBuild-Jenkins-Plugin</code>.
+     * If the Jenkins plugin for AWS CodeBuild started the build, the string <code>CodeBuild-Jenkins-Plugin</code>.
      * </p>
      * </li>
      * </ul>
@@ -1629,18 +1634,19 @@ public class BuildBatch implements Serializable, Cloneable, StructuredPojo {
      *         <ul>
      *         <li>
      *         <p>
-     *         If CodePipeline started the build, the pipeline's name (for example,
+     *         If AWS CodePipeline started the build, the pipeline's name (for example,
      *         <code>codepipeline/my-demo-pipeline</code>).
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         If an Identity and Access Management user started the build, the user's name.
+     *         If an AWS Identity and Access Management (IAM) user started the build, the user's name.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         If the Jenkins plugin for CodeBuild started the build, the string <code>CodeBuild-Jenkins-Plugin</code>.
+     *         If the Jenkins plugin for AWS CodeBuild started the build, the string
+     *         <code>CodeBuild-Jenkins-Plugin</code>.
      *         </p>
      *         </li>
      */
@@ -1656,17 +1662,18 @@ public class BuildBatch implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * If CodePipeline started the build, the pipeline's name (for example, <code>codepipeline/my-demo-pipeline</code>).
+     * If AWS CodePipeline started the build, the pipeline's name (for example,
+     * <code>codepipeline/my-demo-pipeline</code>).
      * </p>
      * </li>
      * <li>
      * <p>
-     * If an Identity and Access Management user started the build, the user's name.
+     * If an AWS Identity and Access Management (IAM) user started the build, the user's name.
      * </p>
      * </li>
      * <li>
      * <p>
-     * If the Jenkins plugin for CodeBuild started the build, the string <code>CodeBuild-Jenkins-Plugin</code>.
+     * If the Jenkins plugin for AWS CodeBuild started the build, the string <code>CodeBuild-Jenkins-Plugin</code>.
      * </p>
      * </li>
      * </ul>
@@ -1676,18 +1683,19 @@ public class BuildBatch implements Serializable, Cloneable, StructuredPojo {
      *        <ul>
      *        <li>
      *        <p>
-     *        If CodePipeline started the build, the pipeline's name (for example,
+     *        If AWS CodePipeline started the build, the pipeline's name (for example,
      *        <code>codepipeline/my-demo-pipeline</code>).
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        If an Identity and Access Management user started the build, the user's name.
+     *        If an AWS Identity and Access Management (IAM) user started the build, the user's name.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        If the Jenkins plugin for CodeBuild started the build, the string <code>CodeBuild-Jenkins-Plugin</code>.
+     *        If the Jenkins plugin for AWS CodeBuild started the build, the string
+     *        <code>CodeBuild-Jenkins-Plugin</code>.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -1726,7 +1734,8 @@ public class BuildBatch implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Key Management Service customer master key (CMK) to be used for encrypting the batch build output artifacts.
+     * The AWS Key Management Service (AWS KMS) customer master key (CMK) to be used for encrypting the batch build
+     * output artifacts.
      * </p>
      * <note>
      * <p>
@@ -1740,8 +1749,8 @@ public class BuildBatch implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param encryptionKey
-     *        The Key Management Service customer master key (CMK) to be used for encrypting the batch build output
-     *        artifacts.</p> <note>
+     *        The AWS Key Management Service (AWS KMS) customer master key (CMK) to be used for encrypting the batch
+     *        build output artifacts.</p> <note>
      *        <p>
      *        You can use a cross-account KMS key to encrypt the build output artifacts if your service role has
      *        permission to that key.
@@ -1758,7 +1767,8 @@ public class BuildBatch implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Key Management Service customer master key (CMK) to be used for encrypting the batch build output artifacts.
+     * The AWS Key Management Service (AWS KMS) customer master key (CMK) to be used for encrypting the batch build
+     * output artifacts.
      * </p>
      * <note>
      * <p>
@@ -1771,8 +1781,8 @@ public class BuildBatch implements Serializable, Cloneable, StructuredPojo {
      * format <code>alias/&lt;alias-name&gt;</code>).
      * </p>
      * 
-     * @return The Key Management Service customer master key (CMK) to be used for encrypting the batch build output
-     *         artifacts.</p> <note>
+     * @return The AWS Key Management Service (AWS KMS) customer master key (CMK) to be used for encrypting the batch
+     *         build output artifacts.</p> <note>
      *         <p>
      *         You can use a cross-account KMS key to encrypt the build output artifacts if your service role has
      *         permission to that key.
@@ -1789,7 +1799,8 @@ public class BuildBatch implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Key Management Service customer master key (CMK) to be used for encrypting the batch build output artifacts.
+     * The AWS Key Management Service (AWS KMS) customer master key (CMK) to be used for encrypting the batch build
+     * output artifacts.
      * </p>
      * <note>
      * <p>
@@ -1803,8 +1814,8 @@ public class BuildBatch implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param encryptionKey
-     *        The Key Management Service customer master key (CMK) to be used for encrypting the batch build output
-     *        artifacts.</p> <note>
+     *        The AWS Key Management Service (AWS KMS) customer master key (CMK) to be used for encrypting the batch
+     *        build output artifacts.</p> <note>
      *        <p>
      *        You can use a cross-account KMS key to encrypt the build output artifacts if your service role has
      *        permission to that key.

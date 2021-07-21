@@ -32,8 +32,8 @@ import com.amazonaws.auth.DefaultAWSCredentialsProviderChain;
  * <p>
  * <p>
  * Amazon EMR is a web service that makes it easier to process large amounts of data efficiently. Amazon EMR uses Hadoop
- * processing combined with several AWS services to do tasks such as web indexing, data mining, log file analysis,
- * machine learning, scientific simulation, and data warehouse management.
+ * processing combined with several Amazon Web Services services to do tasks such as web indexing, data mining, log file
+ * analysis, machine learning, scientific simulation, and data warehouse management.
  * </p>
  */
 @ThreadSafe
@@ -748,6 +748,39 @@ public class AmazonElasticMapReduceAsyncClient extends AmazonElasticMapReduceCli
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeReleaseLabelResult> describeReleaseLabelAsync(DescribeReleaseLabelRequest request) {
+
+        return describeReleaseLabelAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeReleaseLabelResult> describeReleaseLabelAsync(final DescribeReleaseLabelRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeReleaseLabelRequest, DescribeReleaseLabelResult> asyncHandler) {
+        final DescribeReleaseLabelRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeReleaseLabelResult>() {
+            @Override
+            public DescribeReleaseLabelResult call() throws Exception {
+                DescribeReleaseLabelResult result = null;
+
+                try {
+                    result = executeDescribeReleaseLabel(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeSecurityConfigurationResult> describeSecurityConfigurationAsync(DescribeSecurityConfigurationRequest request) {
 
         return describeSecurityConfigurationAsync(request, null);
@@ -1154,6 +1187,39 @@ public class AmazonElasticMapReduceAsyncClient extends AmazonElasticMapReduceCli
 
                 try {
                     result = executeListNotebookExecutions(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListReleaseLabelsResult> listReleaseLabelsAsync(ListReleaseLabelsRequest request) {
+
+        return listReleaseLabelsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListReleaseLabelsResult> listReleaseLabelsAsync(final ListReleaseLabelsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListReleaseLabelsRequest, ListReleaseLabelsResult> asyncHandler) {
+        final ListReleaseLabelsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListReleaseLabelsResult>() {
+            @Override
+            public ListReleaseLabelsResult call() throws Exception {
+                ListReleaseLabelsResult result = null;
+
+                try {
+                    result = executeListReleaseLabels(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

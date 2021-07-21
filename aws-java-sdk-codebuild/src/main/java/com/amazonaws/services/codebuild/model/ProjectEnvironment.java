@@ -56,19 +56,6 @@ public class ProjectEnvironment implements Serializable, Cloneable, StructuredPo
      * </p>
      * </li>
      * </ul>
-     * <ul>
-     * <li>
-     * <p>
-     * The environment types <code>WINDOWS_CONTAINER</code> and <code>WINDOWS_SERVER_2019_CONTAINER</code> are available
-     * only in regions US East (N. Virginia), US East (Ohio), US West (Oregon), and EU (Ireland).
-     * </p>
-     * </li>
-     * </ul>
-     * <p>
-     * For more information, see <a
-     * href="https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html">Build environment
-     * compute types</a> in the <i>CodeBuild user guide</i>.
-     * </p>
      */
     private String type;
     /**
@@ -93,11 +80,6 @@ public class ProjectEnvironment implements Serializable, Cloneable, StructuredPo
      * </p>
      * </li>
      * </ul>
-     * <p>
-     * For more information, see <a
-     * href="https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-available.html">Docker images provided
-     * by CodeBuild</a> in the <i>CodeBuild user guide</i>.
-     * </p>
      */
     private String image;
     /**
@@ -153,7 +135,7 @@ public class ProjectEnvironment implements Serializable, Cloneable, StructuredPo
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html">Build Environment
-     * Compute Types</a> in the <i>CodeBuild User Guide.</i>
+     * Compute Types</a> in the <i>AWS CodeBuild User Guide.</i>
      * </p>
      */
     private String computeType;
@@ -199,7 +181,7 @@ public class ProjectEnvironment implements Serializable, Cloneable, StructuredPo
      * The ARN of the Amazon S3 bucket, path prefix, and object key that contains the PEM-encoded certificate for the
      * build project. For more information, see <a href=
      * "https://docs.aws.amazon.com/codebuild/latest/userguide/create-project-cli.html#cli.environment.certificate"
-     * >certificate</a> in the <i>CodeBuild User Guide</i>.
+     * >certificate</a> in the <i>AWS CodeBuild User Guide</i>.
      * </p>
      */
     private String certificate;
@@ -211,24 +193,24 @@ public class ProjectEnvironment implements Serializable, Cloneable, StructuredPo
     private RegistryCredential registryCredential;
     /**
      * <p>
-     * The type of credentials CodeBuild uses to pull images in your build. There are two valid values:
+     * The type of credentials AWS CodeBuild uses to pull images in your build. There are two valid values:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>CODEBUILD</code> specifies that CodeBuild uses its own credentials. This requires that you modify your ECR
-     * repository policy to trust CodeBuild service principal.
+     * <code>CODEBUILD</code> specifies that AWS CodeBuild uses its own credentials. This requires that you modify your
+     * ECR repository policy to trust AWS CodeBuild's service principal.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>SERVICE_ROLE</code> specifies that CodeBuild uses your build project's service role.
+     * <code>SERVICE_ROLE</code> specifies that AWS CodeBuild uses your build project's service role.
      * </p>
      * </li>
      * </ul>
      * <p>
      * When you use a cross-account or private registry image, you must use SERVICE_ROLE credentials. When you use an
-     * CodeBuild curated image, you must use CODEBUILD credentials.
+     * AWS CodeBuild curated image, you must use CODEBUILD credentials.
      * </p>
      */
     private String imagePullCredentialsType;
@@ -261,19 +243,6 @@ public class ProjectEnvironment implements Serializable, Cloneable, StructuredPo
      * </p>
      * </li>
      * </ul>
-     * <ul>
-     * <li>
-     * <p>
-     * The environment types <code>WINDOWS_CONTAINER</code> and <code>WINDOWS_SERVER_2019_CONTAINER</code> are available
-     * only in regions US East (N. Virginia), US East (Ohio), US West (Oregon), and EU (Ireland).
-     * </p>
-     * </li>
-     * </ul>
-     * <p>
-     * For more information, see <a
-     * href="https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html">Build environment
-     * compute types</a> in the <i>CodeBuild user guide</i>.
-     * </p>
      * 
      * @param type
      *        The type of build environment to use for related builds.</p>
@@ -301,19 +270,6 @@ public class ProjectEnvironment implements Serializable, Cloneable, StructuredPo
      *        and China (Ningxia).
      *        </p>
      *        </li>
-     *        </ul>
-     *        <ul>
-     *        <li>
-     *        <p>
-     *        The environment types <code>WINDOWS_CONTAINER</code> and <code>WINDOWS_SERVER_2019_CONTAINER</code> are
-     *        available only in regions US East (N. Virginia), US East (Ohio), US West (Oregon), and EU (Ireland).
-     *        </p>
-     *        </li>
-     *        </ul>
-     *        <p>
-     *        For more information, see <a
-     *        href="https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html">Build
-     *        environment compute types</a> in the <i>CodeBuild user guide</i>.
      * @see EnvironmentType
      */
 
@@ -349,19 +305,6 @@ public class ProjectEnvironment implements Serializable, Cloneable, StructuredPo
      * </p>
      * </li>
      * </ul>
-     * <ul>
-     * <li>
-     * <p>
-     * The environment types <code>WINDOWS_CONTAINER</code> and <code>WINDOWS_SERVER_2019_CONTAINER</code> are available
-     * only in regions US East (N. Virginia), US East (Ohio), US West (Oregon), and EU (Ireland).
-     * </p>
-     * </li>
-     * </ul>
-     * <p>
-     * For more information, see <a
-     * href="https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html">Build environment
-     * compute types</a> in the <i>CodeBuild user guide</i>.
-     * </p>
      * 
      * @return The type of build environment to use for related builds.</p>
      *         <ul>
@@ -388,19 +331,6 @@ public class ProjectEnvironment implements Serializable, Cloneable, StructuredPo
      *         and China (Ningxia).
      *         </p>
      *         </li>
-     *         </ul>
-     *         <ul>
-     *         <li>
-     *         <p>
-     *         The environment types <code>WINDOWS_CONTAINER</code> and <code>WINDOWS_SERVER_2019_CONTAINER</code> are
-     *         available only in regions US East (N. Virginia), US East (Ohio), US West (Oregon), and EU (Ireland).
-     *         </p>
-     *         </li>
-     *         </ul>
-     *         <p>
-     *         For more information, see <a
-     *         href="https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html">Build
-     *         environment compute types</a> in the <i>CodeBuild user guide</i>.
      * @see EnvironmentType
      */
 
@@ -436,19 +366,6 @@ public class ProjectEnvironment implements Serializable, Cloneable, StructuredPo
      * </p>
      * </li>
      * </ul>
-     * <ul>
-     * <li>
-     * <p>
-     * The environment types <code>WINDOWS_CONTAINER</code> and <code>WINDOWS_SERVER_2019_CONTAINER</code> are available
-     * only in regions US East (N. Virginia), US East (Ohio), US West (Oregon), and EU (Ireland).
-     * </p>
-     * </li>
-     * </ul>
-     * <p>
-     * For more information, see <a
-     * href="https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html">Build environment
-     * compute types</a> in the <i>CodeBuild user guide</i>.
-     * </p>
      * 
      * @param type
      *        The type of build environment to use for related builds.</p>
@@ -476,19 +393,6 @@ public class ProjectEnvironment implements Serializable, Cloneable, StructuredPo
      *        and China (Ningxia).
      *        </p>
      *        </li>
-     *        </ul>
-     *        <ul>
-     *        <li>
-     *        <p>
-     *        The environment types <code>WINDOWS_CONTAINER</code> and <code>WINDOWS_SERVER_2019_CONTAINER</code> are
-     *        available only in regions US East (N. Virginia), US East (Ohio), US West (Oregon), and EU (Ireland).
-     *        </p>
-     *        </li>
-     *        </ul>
-     *        <p>
-     *        For more information, see <a
-     *        href="https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html">Build
-     *        environment compute types</a> in the <i>CodeBuild user guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see EnvironmentType
      */
@@ -526,19 +430,6 @@ public class ProjectEnvironment implements Serializable, Cloneable, StructuredPo
      * </p>
      * </li>
      * </ul>
-     * <ul>
-     * <li>
-     * <p>
-     * The environment types <code>WINDOWS_CONTAINER</code> and <code>WINDOWS_SERVER_2019_CONTAINER</code> are available
-     * only in regions US East (N. Virginia), US East (Ohio), US West (Oregon), and EU (Ireland).
-     * </p>
-     * </li>
-     * </ul>
-     * <p>
-     * For more information, see <a
-     * href="https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html">Build environment
-     * compute types</a> in the <i>CodeBuild user guide</i>.
-     * </p>
      * 
      * @param type
      *        The type of build environment to use for related builds.</p>
@@ -566,19 +457,6 @@ public class ProjectEnvironment implements Serializable, Cloneable, StructuredPo
      *        and China (Ningxia).
      *        </p>
      *        </li>
-     *        </ul>
-     *        <ul>
-     *        <li>
-     *        <p>
-     *        The environment types <code>WINDOWS_CONTAINER</code> and <code>WINDOWS_SERVER_2019_CONTAINER</code> are
-     *        available only in regions US East (N. Virginia), US East (Ohio), US West (Oregon), and EU (Ireland).
-     *        </p>
-     *        </li>
-     *        </ul>
-     *        <p>
-     *        For more information, see <a
-     *        href="https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html">Build
-     *        environment compute types</a> in the <i>CodeBuild user guide</i>.
      * @see EnvironmentType
      */
 
@@ -614,19 +492,6 @@ public class ProjectEnvironment implements Serializable, Cloneable, StructuredPo
      * </p>
      * </li>
      * </ul>
-     * <ul>
-     * <li>
-     * <p>
-     * The environment types <code>WINDOWS_CONTAINER</code> and <code>WINDOWS_SERVER_2019_CONTAINER</code> are available
-     * only in regions US East (N. Virginia), US East (Ohio), US West (Oregon), and EU (Ireland).
-     * </p>
-     * </li>
-     * </ul>
-     * <p>
-     * For more information, see <a
-     * href="https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html">Build environment
-     * compute types</a> in the <i>CodeBuild user guide</i>.
-     * </p>
      * 
      * @param type
      *        The type of build environment to use for related builds.</p>
@@ -654,19 +519,6 @@ public class ProjectEnvironment implements Serializable, Cloneable, StructuredPo
      *        and China (Ningxia).
      *        </p>
      *        </li>
-     *        </ul>
-     *        <ul>
-     *        <li>
-     *        <p>
-     *        The environment types <code>WINDOWS_CONTAINER</code> and <code>WINDOWS_SERVER_2019_CONTAINER</code> are
-     *        available only in regions US East (N. Virginia), US East (Ohio), US West (Oregon), and EU (Ireland).
-     *        </p>
-     *        </li>
-     *        </ul>
-     *        <p>
-     *        For more information, see <a
-     *        href="https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html">Build
-     *        environment compute types</a> in the <i>CodeBuild user guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see EnvironmentType
      */
@@ -698,11 +550,6 @@ public class ProjectEnvironment implements Serializable, Cloneable, StructuredPo
      * </p>
      * </li>
      * </ul>
-     * <p>
-     * For more information, see <a
-     * href="https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-available.html">Docker images provided
-     * by CodeBuild</a> in the <i>CodeBuild user guide</i>.
-     * </p>
      * 
      * @param image
      *        The image tag or image digest that identifies the Docker image to use for this build project. Use the
@@ -724,11 +571,6 @@ public class ProjectEnvironment implements Serializable, Cloneable, StructuredPo
      *        .
      *        </p>
      *        </li>
-     *        </ul>
-     *        <p>
-     *        For more information, see <a
-     *        href="https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-available.html">Docker images
-     *        provided by CodeBuild</a> in the <i>CodeBuild user guide</i>.
      */
 
     public void setImage(String image) {
@@ -757,11 +599,6 @@ public class ProjectEnvironment implements Serializable, Cloneable, StructuredPo
      * </p>
      * </li>
      * </ul>
-     * <p>
-     * For more information, see <a
-     * href="https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-available.html">Docker images provided
-     * by CodeBuild</a> in the <i>CodeBuild user guide</i>.
-     * </p>
      * 
      * @return The image tag or image digest that identifies the Docker image to use for this build project. Use the
      *         following formats:</p>
@@ -782,11 +619,6 @@ public class ProjectEnvironment implements Serializable, Cloneable, StructuredPo
      *         .
      *         </p>
      *         </li>
-     *         </ul>
-     *         <p>
-     *         For more information, see <a
-     *         href="https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-available.html">Docker images
-     *         provided by CodeBuild</a> in the <i>CodeBuild user guide</i>.
      */
 
     public String getImage() {
@@ -815,11 +647,6 @@ public class ProjectEnvironment implements Serializable, Cloneable, StructuredPo
      * </p>
      * </li>
      * </ul>
-     * <p>
-     * For more information, see <a
-     * href="https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-available.html">Docker images provided
-     * by CodeBuild</a> in the <i>CodeBuild user guide</i>.
-     * </p>
      * 
      * @param image
      *        The image tag or image digest that identifies the Docker image to use for this build project. Use the
@@ -841,11 +668,6 @@ public class ProjectEnvironment implements Serializable, Cloneable, StructuredPo
      *        .
      *        </p>
      *        </li>
-     *        </ul>
-     *        <p>
-     *        For more information, see <a
-     *        href="https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-available.html">Docker images
-     *        provided by CodeBuild</a> in the <i>CodeBuild user guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -907,7 +729,7 @@ public class ProjectEnvironment implements Serializable, Cloneable, StructuredPo
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html">Build Environment
-     * Compute Types</a> in the <i>CodeBuild User Guide.</i>
+     * Compute Types</a> in the <i>AWS CodeBuild User Guide.</i>
      * </p>
      * 
      * @param computeType
@@ -961,7 +783,7 @@ public class ProjectEnvironment implements Serializable, Cloneable, StructuredPo
      *        <p>
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html">Build
-     *        Environment Compute Types</a> in the <i>CodeBuild User Guide.</i>
+     *        Environment Compute Types</a> in the <i>AWS CodeBuild User Guide.</i>
      * @see ComputeType
      */
 
@@ -1022,7 +844,7 @@ public class ProjectEnvironment implements Serializable, Cloneable, StructuredPo
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html">Build Environment
-     * Compute Types</a> in the <i>CodeBuild User Guide.</i>
+     * Compute Types</a> in the <i>AWS CodeBuild User Guide.</i>
      * </p>
      * 
      * @return Information about the compute resources the build project uses. Available values include:</p>
@@ -1075,7 +897,7 @@ public class ProjectEnvironment implements Serializable, Cloneable, StructuredPo
      *         <p>
      *         For more information, see <a
      *         href="https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html">Build
-     *         Environment Compute Types</a> in the <i>CodeBuild User Guide.</i>
+     *         Environment Compute Types</a> in the <i>AWS CodeBuild User Guide.</i>
      * @see ComputeType
      */
 
@@ -1136,7 +958,7 @@ public class ProjectEnvironment implements Serializable, Cloneable, StructuredPo
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html">Build Environment
-     * Compute Types</a> in the <i>CodeBuild User Guide.</i>
+     * Compute Types</a> in the <i>AWS CodeBuild User Guide.</i>
      * </p>
      * 
      * @param computeType
@@ -1190,7 +1012,7 @@ public class ProjectEnvironment implements Serializable, Cloneable, StructuredPo
      *        <p>
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html">Build
-     *        Environment Compute Types</a> in the <i>CodeBuild User Guide.</i>
+     *        Environment Compute Types</a> in the <i>AWS CodeBuild User Guide.</i>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ComputeType
      */
@@ -1253,7 +1075,7 @@ public class ProjectEnvironment implements Serializable, Cloneable, StructuredPo
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html">Build Environment
-     * Compute Types</a> in the <i>CodeBuild User Guide.</i>
+     * Compute Types</a> in the <i>AWS CodeBuild User Guide.</i>
      * </p>
      * 
      * @param computeType
@@ -1307,7 +1129,7 @@ public class ProjectEnvironment implements Serializable, Cloneable, StructuredPo
      *        <p>
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html">Build
-     *        Environment Compute Types</a> in the <i>CodeBuild User Guide.</i>
+     *        Environment Compute Types</a> in the <i>AWS CodeBuild User Guide.</i>
      * @see ComputeType
      */
 
@@ -1368,7 +1190,7 @@ public class ProjectEnvironment implements Serializable, Cloneable, StructuredPo
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html">Build Environment
-     * Compute Types</a> in the <i>CodeBuild User Guide.</i>
+     * Compute Types</a> in the <i>AWS CodeBuild User Guide.</i>
      * </p>
      * 
      * @param computeType
@@ -1422,7 +1244,7 @@ public class ProjectEnvironment implements Serializable, Cloneable, StructuredPo
      *        <p>
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-compute-types.html">Build
-     *        Environment Compute Types</a> in the <i>CodeBuild User Guide.</i>
+     *        Environment Compute Types</a> in the <i>AWS CodeBuild User Guide.</i>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ComputeType
      */
@@ -1755,14 +1577,14 @@ public class ProjectEnvironment implements Serializable, Cloneable, StructuredPo
      * The ARN of the Amazon S3 bucket, path prefix, and object key that contains the PEM-encoded certificate for the
      * build project. For more information, see <a href=
      * "https://docs.aws.amazon.com/codebuild/latest/userguide/create-project-cli.html#cli.environment.certificate"
-     * >certificate</a> in the <i>CodeBuild User Guide</i>.
+     * >certificate</a> in the <i>AWS CodeBuild User Guide</i>.
      * </p>
      * 
      * @param certificate
      *        The ARN of the Amazon S3 bucket, path prefix, and object key that contains the PEM-encoded certificate for
      *        the build project. For more information, see <a href=
      *        "https://docs.aws.amazon.com/codebuild/latest/userguide/create-project-cli.html#cli.environment.certificate"
-     *        >certificate</a> in the <i>CodeBuild User Guide</i>.
+     *        >certificate</a> in the <i>AWS CodeBuild User Guide</i>.
      */
 
     public void setCertificate(String certificate) {
@@ -1774,13 +1596,13 @@ public class ProjectEnvironment implements Serializable, Cloneable, StructuredPo
      * The ARN of the Amazon S3 bucket, path prefix, and object key that contains the PEM-encoded certificate for the
      * build project. For more information, see <a href=
      * "https://docs.aws.amazon.com/codebuild/latest/userguide/create-project-cli.html#cli.environment.certificate"
-     * >certificate</a> in the <i>CodeBuild User Guide</i>.
+     * >certificate</a> in the <i>AWS CodeBuild User Guide</i>.
      * </p>
      * 
      * @return The ARN of the Amazon S3 bucket, path prefix, and object key that contains the PEM-encoded certificate
      *         for the build project. For more information, see <a href=
      *         "https://docs.aws.amazon.com/codebuild/latest/userguide/create-project-cli.html#cli.environment.certificate"
-     *         >certificate</a> in the <i>CodeBuild User Guide</i>.
+     *         >certificate</a> in the <i>AWS CodeBuild User Guide</i>.
      */
 
     public String getCertificate() {
@@ -1792,14 +1614,14 @@ public class ProjectEnvironment implements Serializable, Cloneable, StructuredPo
      * The ARN of the Amazon S3 bucket, path prefix, and object key that contains the PEM-encoded certificate for the
      * build project. For more information, see <a href=
      * "https://docs.aws.amazon.com/codebuild/latest/userguide/create-project-cli.html#cli.environment.certificate"
-     * >certificate</a> in the <i>CodeBuild User Guide</i>.
+     * >certificate</a> in the <i>AWS CodeBuild User Guide</i>.
      * </p>
      * 
      * @param certificate
      *        The ARN of the Amazon S3 bucket, path prefix, and object key that contains the PEM-encoded certificate for
      *        the build project. For more information, see <a href=
      *        "https://docs.aws.amazon.com/codebuild/latest/userguide/create-project-cli.html#cli.environment.certificate"
-     *        >certificate</a> in the <i>CodeBuild User Guide</i>.
+     *        >certificate</a> in the <i>AWS CodeBuild User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1850,44 +1672,44 @@ public class ProjectEnvironment implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The type of credentials CodeBuild uses to pull images in your build. There are two valid values:
+     * The type of credentials AWS CodeBuild uses to pull images in your build. There are two valid values:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>CODEBUILD</code> specifies that CodeBuild uses its own credentials. This requires that you modify your ECR
-     * repository policy to trust CodeBuild service principal.
+     * <code>CODEBUILD</code> specifies that AWS CodeBuild uses its own credentials. This requires that you modify your
+     * ECR repository policy to trust AWS CodeBuild's service principal.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>SERVICE_ROLE</code> specifies that CodeBuild uses your build project's service role.
+     * <code>SERVICE_ROLE</code> specifies that AWS CodeBuild uses your build project's service role.
      * </p>
      * </li>
      * </ul>
      * <p>
      * When you use a cross-account or private registry image, you must use SERVICE_ROLE credentials. When you use an
-     * CodeBuild curated image, you must use CODEBUILD credentials.
+     * AWS CodeBuild curated image, you must use CODEBUILD credentials.
      * </p>
      * 
      * @param imagePullCredentialsType
-     *        The type of credentials CodeBuild uses to pull images in your build. There are two valid values: </p>
+     *        The type of credentials AWS CodeBuild uses to pull images in your build. There are two valid values: </p>
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>CODEBUILD</code> specifies that CodeBuild uses its own credentials. This requires that you modify
-     *        your ECR repository policy to trust CodeBuild service principal.
+     *        <code>CODEBUILD</code> specifies that AWS CodeBuild uses its own credentials. This requires that you
+     *        modify your ECR repository policy to trust AWS CodeBuild's service principal.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>SERVICE_ROLE</code> specifies that CodeBuild uses your build project's service role.
+     *        <code>SERVICE_ROLE</code> specifies that AWS CodeBuild uses your build project's service role.
      *        </p>
      *        </li>
      *        </ul>
      *        <p>
      *        When you use a cross-account or private registry image, you must use SERVICE_ROLE credentials. When you
-     *        use an CodeBuild curated image, you must use CODEBUILD credentials.
+     *        use an AWS CodeBuild curated image, you must use CODEBUILD credentials.
      * @see ImagePullCredentialsType
      */
 
@@ -1897,43 +1719,43 @@ public class ProjectEnvironment implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The type of credentials CodeBuild uses to pull images in your build. There are two valid values:
+     * The type of credentials AWS CodeBuild uses to pull images in your build. There are two valid values:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>CODEBUILD</code> specifies that CodeBuild uses its own credentials. This requires that you modify your ECR
-     * repository policy to trust CodeBuild service principal.
+     * <code>CODEBUILD</code> specifies that AWS CodeBuild uses its own credentials. This requires that you modify your
+     * ECR repository policy to trust AWS CodeBuild's service principal.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>SERVICE_ROLE</code> specifies that CodeBuild uses your build project's service role.
+     * <code>SERVICE_ROLE</code> specifies that AWS CodeBuild uses your build project's service role.
      * </p>
      * </li>
      * </ul>
      * <p>
      * When you use a cross-account or private registry image, you must use SERVICE_ROLE credentials. When you use an
-     * CodeBuild curated image, you must use CODEBUILD credentials.
+     * AWS CodeBuild curated image, you must use CODEBUILD credentials.
      * </p>
      * 
-     * @return The type of credentials CodeBuild uses to pull images in your build. There are two valid values: </p>
+     * @return The type of credentials AWS CodeBuild uses to pull images in your build. There are two valid values: </p>
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>CODEBUILD</code> specifies that CodeBuild uses its own credentials. This requires that you modify
-     *         your ECR repository policy to trust CodeBuild service principal.
+     *         <code>CODEBUILD</code> specifies that AWS CodeBuild uses its own credentials. This requires that you
+     *         modify your ECR repository policy to trust AWS CodeBuild's service principal.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>SERVICE_ROLE</code> specifies that CodeBuild uses your build project's service role.
+     *         <code>SERVICE_ROLE</code> specifies that AWS CodeBuild uses your build project's service role.
      *         </p>
      *         </li>
      *         </ul>
      *         <p>
      *         When you use a cross-account or private registry image, you must use SERVICE_ROLE credentials. When you
-     *         use an CodeBuild curated image, you must use CODEBUILD credentials.
+     *         use an AWS CodeBuild curated image, you must use CODEBUILD credentials.
      * @see ImagePullCredentialsType
      */
 
@@ -1943,44 +1765,44 @@ public class ProjectEnvironment implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The type of credentials CodeBuild uses to pull images in your build. There are two valid values:
+     * The type of credentials AWS CodeBuild uses to pull images in your build. There are two valid values:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>CODEBUILD</code> specifies that CodeBuild uses its own credentials. This requires that you modify your ECR
-     * repository policy to trust CodeBuild service principal.
+     * <code>CODEBUILD</code> specifies that AWS CodeBuild uses its own credentials. This requires that you modify your
+     * ECR repository policy to trust AWS CodeBuild's service principal.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>SERVICE_ROLE</code> specifies that CodeBuild uses your build project's service role.
+     * <code>SERVICE_ROLE</code> specifies that AWS CodeBuild uses your build project's service role.
      * </p>
      * </li>
      * </ul>
      * <p>
      * When you use a cross-account or private registry image, you must use SERVICE_ROLE credentials. When you use an
-     * CodeBuild curated image, you must use CODEBUILD credentials.
+     * AWS CodeBuild curated image, you must use CODEBUILD credentials.
      * </p>
      * 
      * @param imagePullCredentialsType
-     *        The type of credentials CodeBuild uses to pull images in your build. There are two valid values: </p>
+     *        The type of credentials AWS CodeBuild uses to pull images in your build. There are two valid values: </p>
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>CODEBUILD</code> specifies that CodeBuild uses its own credentials. This requires that you modify
-     *        your ECR repository policy to trust CodeBuild service principal.
+     *        <code>CODEBUILD</code> specifies that AWS CodeBuild uses its own credentials. This requires that you
+     *        modify your ECR repository policy to trust AWS CodeBuild's service principal.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>SERVICE_ROLE</code> specifies that CodeBuild uses your build project's service role.
+     *        <code>SERVICE_ROLE</code> specifies that AWS CodeBuild uses your build project's service role.
      *        </p>
      *        </li>
      *        </ul>
      *        <p>
      *        When you use a cross-account or private registry image, you must use SERVICE_ROLE credentials. When you
-     *        use an CodeBuild curated image, you must use CODEBUILD credentials.
+     *        use an AWS CodeBuild curated image, you must use CODEBUILD credentials.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ImagePullCredentialsType
      */
@@ -1992,44 +1814,44 @@ public class ProjectEnvironment implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The type of credentials CodeBuild uses to pull images in your build. There are two valid values:
+     * The type of credentials AWS CodeBuild uses to pull images in your build. There are two valid values:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>CODEBUILD</code> specifies that CodeBuild uses its own credentials. This requires that you modify your ECR
-     * repository policy to trust CodeBuild service principal.
+     * <code>CODEBUILD</code> specifies that AWS CodeBuild uses its own credentials. This requires that you modify your
+     * ECR repository policy to trust AWS CodeBuild's service principal.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>SERVICE_ROLE</code> specifies that CodeBuild uses your build project's service role.
+     * <code>SERVICE_ROLE</code> specifies that AWS CodeBuild uses your build project's service role.
      * </p>
      * </li>
      * </ul>
      * <p>
      * When you use a cross-account or private registry image, you must use SERVICE_ROLE credentials. When you use an
-     * CodeBuild curated image, you must use CODEBUILD credentials.
+     * AWS CodeBuild curated image, you must use CODEBUILD credentials.
      * </p>
      * 
      * @param imagePullCredentialsType
-     *        The type of credentials CodeBuild uses to pull images in your build. There are two valid values: </p>
+     *        The type of credentials AWS CodeBuild uses to pull images in your build. There are two valid values: </p>
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>CODEBUILD</code> specifies that CodeBuild uses its own credentials. This requires that you modify
-     *        your ECR repository policy to trust CodeBuild service principal.
+     *        <code>CODEBUILD</code> specifies that AWS CodeBuild uses its own credentials. This requires that you
+     *        modify your ECR repository policy to trust AWS CodeBuild's service principal.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>SERVICE_ROLE</code> specifies that CodeBuild uses your build project's service role.
+     *        <code>SERVICE_ROLE</code> specifies that AWS CodeBuild uses your build project's service role.
      *        </p>
      *        </li>
      *        </ul>
      *        <p>
      *        When you use a cross-account or private registry image, you must use SERVICE_ROLE credentials. When you
-     *        use an CodeBuild curated image, you must use CODEBUILD credentials.
+     *        use an AWS CodeBuild curated image, you must use CODEBUILD credentials.
      * @see ImagePullCredentialsType
      */
 
@@ -2039,44 +1861,44 @@ public class ProjectEnvironment implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The type of credentials CodeBuild uses to pull images in your build. There are two valid values:
+     * The type of credentials AWS CodeBuild uses to pull images in your build. There are two valid values:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>CODEBUILD</code> specifies that CodeBuild uses its own credentials. This requires that you modify your ECR
-     * repository policy to trust CodeBuild service principal.
+     * <code>CODEBUILD</code> specifies that AWS CodeBuild uses its own credentials. This requires that you modify your
+     * ECR repository policy to trust AWS CodeBuild's service principal.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>SERVICE_ROLE</code> specifies that CodeBuild uses your build project's service role.
+     * <code>SERVICE_ROLE</code> specifies that AWS CodeBuild uses your build project's service role.
      * </p>
      * </li>
      * </ul>
      * <p>
      * When you use a cross-account or private registry image, you must use SERVICE_ROLE credentials. When you use an
-     * CodeBuild curated image, you must use CODEBUILD credentials.
+     * AWS CodeBuild curated image, you must use CODEBUILD credentials.
      * </p>
      * 
      * @param imagePullCredentialsType
-     *        The type of credentials CodeBuild uses to pull images in your build. There are two valid values: </p>
+     *        The type of credentials AWS CodeBuild uses to pull images in your build. There are two valid values: </p>
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>CODEBUILD</code> specifies that CodeBuild uses its own credentials. This requires that you modify
-     *        your ECR repository policy to trust CodeBuild service principal.
+     *        <code>CODEBUILD</code> specifies that AWS CodeBuild uses its own credentials. This requires that you
+     *        modify your ECR repository policy to trust AWS CodeBuild's service principal.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>SERVICE_ROLE</code> specifies that CodeBuild uses your build project's service role.
+     *        <code>SERVICE_ROLE</code> specifies that AWS CodeBuild uses your build project's service role.
      *        </p>
      *        </li>
      *        </ul>
      *        <p>
      *        When you use a cross-account or private registry image, you must use SERVICE_ROLE credentials. When you
-     *        use an CodeBuild curated image, you must use CODEBUILD credentials.
+     *        use an AWS CodeBuild curated image, you must use CODEBUILD credentials.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ImagePullCredentialsType
      */

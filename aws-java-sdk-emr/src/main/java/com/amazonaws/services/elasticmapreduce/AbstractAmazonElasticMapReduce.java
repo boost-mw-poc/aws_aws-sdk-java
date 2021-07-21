@@ -116,6 +116,11 @@ public class AbstractAmazonElasticMapReduce implements AmazonElasticMapReduce {
     }
 
     @Override
+    public DescribeReleaseLabelResult describeReleaseLabel(DescribeReleaseLabelRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DescribeSecurityConfigurationResult describeSecurityConfiguration(DescribeSecurityConfigurationRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -177,6 +182,11 @@ public class AbstractAmazonElasticMapReduce implements AmazonElasticMapReduce {
 
     @Override
     public ListNotebookExecutionsResult listNotebookExecutions(ListNotebookExecutionsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListReleaseLabelsResult listReleaseLabels(ListReleaseLabelsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

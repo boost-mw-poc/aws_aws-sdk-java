@@ -61,7 +61,7 @@ public class CreateStudioRequest extends com.amazonaws.AmazonWebServiceRequest i
     /**
      * <p>
      * The IAM role that will be assumed by the Amazon EMR Studio. The service role provides a way for Amazon EMR Studio
-     * to interoperate with other AWS services.
+     * to interoperate with other Amazon Web Services services.
      * </p>
      */
     private String serviceRole;
@@ -381,12 +381,12 @@ public class CreateStudioRequest extends com.amazonaws.AmazonWebServiceRequest i
     /**
      * <p>
      * The IAM role that will be assumed by the Amazon EMR Studio. The service role provides a way for Amazon EMR Studio
-     * to interoperate with other AWS services.
+     * to interoperate with other Amazon Web Services services.
      * </p>
      * 
      * @param serviceRole
      *        The IAM role that will be assumed by the Amazon EMR Studio. The service role provides a way for Amazon EMR
-     *        Studio to interoperate with other AWS services.
+     *        Studio to interoperate with other Amazon Web Services services.
      */
 
     public void setServiceRole(String serviceRole) {
@@ -396,11 +396,11 @@ public class CreateStudioRequest extends com.amazonaws.AmazonWebServiceRequest i
     /**
      * <p>
      * The IAM role that will be assumed by the Amazon EMR Studio. The service role provides a way for Amazon EMR Studio
-     * to interoperate with other AWS services.
+     * to interoperate with other Amazon Web Services services.
      * </p>
      * 
      * @return The IAM role that will be assumed by the Amazon EMR Studio. The service role provides a way for Amazon
-     *         EMR Studio to interoperate with other AWS services.
+     *         EMR Studio to interoperate with other Amazon Web Services services.
      */
 
     public String getServiceRole() {
@@ -410,12 +410,12 @@ public class CreateStudioRequest extends com.amazonaws.AmazonWebServiceRequest i
     /**
      * <p>
      * The IAM role that will be assumed by the Amazon EMR Studio. The service role provides a way for Amazon EMR Studio
-     * to interoperate with other AWS services.
+     * to interoperate with other Amazon Web Services services.
      * </p>
      * 
      * @param serviceRole
      *        The IAM role that will be assumed by the Amazon EMR Studio. The service role provides a way for Amazon EMR
-     *        Studio to interoperate with other AWS services.
+     *        Studio to interoperate with other Amazon Web Services services.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

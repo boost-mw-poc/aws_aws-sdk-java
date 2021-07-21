@@ -84,6 +84,10 @@ public class DataSourceConfigurationJsonUnmarshaller implements Unmarshaller<Dat
                     context.nextToken();
                     dataSourceConfiguration.setWebCrawlerConfiguration(WebCrawlerConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("WorkDocsConfiguration", targetDepth)) {
+                    context.nextToken();
+                    dataSourceConfiguration.setWorkDocsConfiguration(WorkDocsConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

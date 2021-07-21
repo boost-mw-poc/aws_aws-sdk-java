@@ -90,7 +90,8 @@ public class EnvironmentSummary implements Serializable, Cloneable, StructuredPo
     private String name;
     /**
      * <p>
-     * The ARN of the AWS Proton service role that allows AWS Proton to make calls to other services on your behalf.
+     * The Amazon Resource Name (ARN) of the AWS Proton service role that allows AWS Proton to make calls to other
+     * services on your behalf.
      * </p>
      */
     private String protonServiceRoleArn;
@@ -540,12 +541,13 @@ public class EnvironmentSummary implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The ARN of the AWS Proton service role that allows AWS Proton to make calls to other services on your behalf.
+     * The Amazon Resource Name (ARN) of the AWS Proton service role that allows AWS Proton to make calls to other
+     * services on your behalf.
      * </p>
      * 
      * @param protonServiceRoleArn
-     *        The ARN of the AWS Proton service role that allows AWS Proton to make calls to other services on your
-     *        behalf.
+     *        The Amazon Resource Name (ARN) of the AWS Proton service role that allows AWS Proton to make calls to
+     *        other services on your behalf.
      */
 
     public void setProtonServiceRoleArn(String protonServiceRoleArn) {
@@ -554,11 +556,12 @@ public class EnvironmentSummary implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The ARN of the AWS Proton service role that allows AWS Proton to make calls to other services on your behalf.
+     * The Amazon Resource Name (ARN) of the AWS Proton service role that allows AWS Proton to make calls to other
+     * services on your behalf.
      * </p>
      * 
-     * @return The ARN of the AWS Proton service role that allows AWS Proton to make calls to other services on your
-     *         behalf.
+     * @return The Amazon Resource Name (ARN) of the AWS Proton service role that allows AWS Proton to make calls to
+     *         other services on your behalf.
      */
 
     public String getProtonServiceRoleArn() {
@@ -567,12 +570,13 @@ public class EnvironmentSummary implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The ARN of the AWS Proton service role that allows AWS Proton to make calls to other services on your behalf.
+     * The Amazon Resource Name (ARN) of the AWS Proton service role that allows AWS Proton to make calls to other
+     * services on your behalf.
      * </p>
      * 
      * @param protonServiceRoleArn
-     *        The ARN of the AWS Proton service role that allows AWS Proton to make calls to other services on your
-     *        behalf.
+     *        The Amazon Resource Name (ARN) of the AWS Proton service role that allows AWS Proton to make calls to
+     *        other services on your behalf.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

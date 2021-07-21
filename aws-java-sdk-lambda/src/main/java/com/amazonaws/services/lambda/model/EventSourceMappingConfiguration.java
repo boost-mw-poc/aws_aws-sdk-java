@@ -19,8 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A mapping between an Amazon Web Services resource and an Lambda function. See <a>CreateEventSourceMapping</a> for
- * details.
+ * A mapping between an Amazon Web Services resource and a Lambda function. For details, see
+ * <a>CreateEventSourceMapping</a>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/EventSourceMappingConfiguration"
@@ -38,7 +38,7 @@ public class EventSourceMappingConfiguration implements Serializable, Cloneable,
     /**
      * <p>
      * The position in a stream from which to start reading. Required for Amazon Kinesis, Amazon DynamoDB, and Amazon
-     * MSK Streams sources. <code>AT_TIMESTAMP</code> is only supported for Amazon Kinesis streams.
+     * MSK stream sources. <code>AT_TIMESTAMP</code> is supported only for Amazon Kinesis streams.
      * </p>
      */
     private String startingPosition;
@@ -56,14 +56,14 @@ public class EventSourceMappingConfiguration implements Serializable, Cloneable,
     private Integer batchSize;
     /**
      * <p>
-     * (Streams and SQS standard queues) The maximum amount of time to gather records before invoking the function, in
-     * seconds. The default value is zero.
+     * (Streams and Amazon SQS standard queues) The maximum amount of time to gather records before invoking the
+     * function, in seconds. The default value is zero.
      * </p>
      */
     private Integer maximumBatchingWindowInSeconds;
     /**
      * <p>
-     * (Streams only) The number of batches to process from each shard concurrently. The default value is 1.
+     * (Streams only) The number of batches to process concurrently from each shard. The default value is 1.
      * </p>
      */
     private Integer parallelizationFactor;
@@ -81,13 +81,13 @@ public class EventSourceMappingConfiguration implements Serializable, Cloneable,
     private String functionArn;
     /**
      * <p>
-     * The date that the event source mapping was last updated, or its state changed.
+     * The date that the event source mapping was last updated or that its state changed.
      * </p>
      */
     private java.util.Date lastModified;
     /**
      * <p>
-     * The result of the last Lambda invocation of your Lambda function.
+     * The result of the last Lambda invocation of your function.
      * </p>
      */
     private String lastProcessingResult;
@@ -101,7 +101,7 @@ public class EventSourceMappingConfiguration implements Serializable, Cloneable,
     private String state;
     /**
      * <p>
-     * Indicates whether the last change to the event source mapping was made by a user, or by the Lambda service.
+     * Indicates whether a user or Lambda made the last change to the event source mapping.
      * </p>
      */
     private String stateTransitionReason;
@@ -119,19 +119,19 @@ public class EventSourceMappingConfiguration implements Serializable, Cloneable,
     private com.amazonaws.internal.SdkInternalList<String> topics;
     /**
      * <p>
-     * (MQ) The name of the Amazon MQ broker destination queue to consume.
+     * (Amazon MQ) The name of the Amazon MQ broker destination queue to consume.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> queues;
     /**
      * <p>
-     * An array of the authentication protocol, or the VPC components to secure your event source.
+     * An array of the authentication protocol, VPC components, or virtual host to secure and define your event source.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<SourceAccessConfiguration> sourceAccessConfigurations;
     /**
      * <p>
-     * The Self-Managed Apache Kafka cluster for your event source.
+     * The self-managed Apache Kafka cluster for your event source.
      * </p>
      */
     private SelfManagedEventSource selfManagedEventSource;
@@ -158,7 +158,7 @@ public class EventSourceMappingConfiguration implements Serializable, Cloneable,
     private Integer maximumRetryAttempts;
     /**
      * <p>
-     * (Streams only) The duration in seconds of a processing window. The range is between 1 second up to 900 seconds.
+     * (Streams only) The duration in seconds of a processing window. The range is 1–900 seconds.
      * </p>
      */
     private Integer tumblingWindowInSeconds;
@@ -212,12 +212,12 @@ public class EventSourceMappingConfiguration implements Serializable, Cloneable,
     /**
      * <p>
      * The position in a stream from which to start reading. Required for Amazon Kinesis, Amazon DynamoDB, and Amazon
-     * MSK Streams sources. <code>AT_TIMESTAMP</code> is only supported for Amazon Kinesis streams.
+     * MSK stream sources. <code>AT_TIMESTAMP</code> is supported only for Amazon Kinesis streams.
      * </p>
      * 
      * @param startingPosition
      *        The position in a stream from which to start reading. Required for Amazon Kinesis, Amazon DynamoDB, and
-     *        Amazon MSK Streams sources. <code>AT_TIMESTAMP</code> is only supported for Amazon Kinesis streams.
+     *        Amazon MSK stream sources. <code>AT_TIMESTAMP</code> is supported only for Amazon Kinesis streams.
      * @see EventSourcePosition
      */
 
@@ -228,11 +228,11 @@ public class EventSourceMappingConfiguration implements Serializable, Cloneable,
     /**
      * <p>
      * The position in a stream from which to start reading. Required for Amazon Kinesis, Amazon DynamoDB, and Amazon
-     * MSK Streams sources. <code>AT_TIMESTAMP</code> is only supported for Amazon Kinesis streams.
+     * MSK stream sources. <code>AT_TIMESTAMP</code> is supported only for Amazon Kinesis streams.
      * </p>
      * 
      * @return The position in a stream from which to start reading. Required for Amazon Kinesis, Amazon DynamoDB, and
-     *         Amazon MSK Streams sources. <code>AT_TIMESTAMP</code> is only supported for Amazon Kinesis streams.
+     *         Amazon MSK stream sources. <code>AT_TIMESTAMP</code> is supported only for Amazon Kinesis streams.
      * @see EventSourcePosition
      */
 
@@ -243,12 +243,12 @@ public class EventSourceMappingConfiguration implements Serializable, Cloneable,
     /**
      * <p>
      * The position in a stream from which to start reading. Required for Amazon Kinesis, Amazon DynamoDB, and Amazon
-     * MSK Streams sources. <code>AT_TIMESTAMP</code> is only supported for Amazon Kinesis streams.
+     * MSK stream sources. <code>AT_TIMESTAMP</code> is supported only for Amazon Kinesis streams.
      * </p>
      * 
      * @param startingPosition
      *        The position in a stream from which to start reading. Required for Amazon Kinesis, Amazon DynamoDB, and
-     *        Amazon MSK Streams sources. <code>AT_TIMESTAMP</code> is only supported for Amazon Kinesis streams.
+     *        Amazon MSK stream sources. <code>AT_TIMESTAMP</code> is supported only for Amazon Kinesis streams.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see EventSourcePosition
      */
@@ -261,12 +261,12 @@ public class EventSourceMappingConfiguration implements Serializable, Cloneable,
     /**
      * <p>
      * The position in a stream from which to start reading. Required for Amazon Kinesis, Amazon DynamoDB, and Amazon
-     * MSK Streams sources. <code>AT_TIMESTAMP</code> is only supported for Amazon Kinesis streams.
+     * MSK stream sources. <code>AT_TIMESTAMP</code> is supported only for Amazon Kinesis streams.
      * </p>
      * 
      * @param startingPosition
      *        The position in a stream from which to start reading. Required for Amazon Kinesis, Amazon DynamoDB, and
-     *        Amazon MSK Streams sources. <code>AT_TIMESTAMP</code> is only supported for Amazon Kinesis streams.
+     *        Amazon MSK stream sources. <code>AT_TIMESTAMP</code> is supported only for Amazon Kinesis streams.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see EventSourcePosition
      */
@@ -359,12 +359,12 @@ public class EventSourceMappingConfiguration implements Serializable, Cloneable,
 
     /**
      * <p>
-     * (Streams and SQS standard queues) The maximum amount of time to gather records before invoking the function, in
-     * seconds. The default value is zero.
+     * (Streams and Amazon SQS standard queues) The maximum amount of time to gather records before invoking the
+     * function, in seconds. The default value is zero.
      * </p>
      * 
      * @param maximumBatchingWindowInSeconds
-     *        (Streams and SQS standard queues) The maximum amount of time to gather records before invoking the
+     *        (Streams and Amazon SQS standard queues) The maximum amount of time to gather records before invoking the
      *        function, in seconds. The default value is zero.
      */
 
@@ -374,11 +374,11 @@ public class EventSourceMappingConfiguration implements Serializable, Cloneable,
 
     /**
      * <p>
-     * (Streams and SQS standard queues) The maximum amount of time to gather records before invoking the function, in
-     * seconds. The default value is zero.
+     * (Streams and Amazon SQS standard queues) The maximum amount of time to gather records before invoking the
+     * function, in seconds. The default value is zero.
      * </p>
      * 
-     * @return (Streams and SQS standard queues) The maximum amount of time to gather records before invoking the
+     * @return (Streams and Amazon SQS standard queues) The maximum amount of time to gather records before invoking the
      *         function, in seconds. The default value is zero.
      */
 
@@ -388,12 +388,12 @@ public class EventSourceMappingConfiguration implements Serializable, Cloneable,
 
     /**
      * <p>
-     * (Streams and SQS standard queues) The maximum amount of time to gather records before invoking the function, in
-     * seconds. The default value is zero.
+     * (Streams and Amazon SQS standard queues) The maximum amount of time to gather records before invoking the
+     * function, in seconds. The default value is zero.
      * </p>
      * 
      * @param maximumBatchingWindowInSeconds
-     *        (Streams and SQS standard queues) The maximum amount of time to gather records before invoking the
+     *        (Streams and Amazon SQS standard queues) The maximum amount of time to gather records before invoking the
      *        function, in seconds. The default value is zero.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -405,11 +405,11 @@ public class EventSourceMappingConfiguration implements Serializable, Cloneable,
 
     /**
      * <p>
-     * (Streams only) The number of batches to process from each shard concurrently. The default value is 1.
+     * (Streams only) The number of batches to process concurrently from each shard. The default value is 1.
      * </p>
      * 
      * @param parallelizationFactor
-     *        (Streams only) The number of batches to process from each shard concurrently. The default value is 1.
+     *        (Streams only) The number of batches to process concurrently from each shard. The default value is 1.
      */
 
     public void setParallelizationFactor(Integer parallelizationFactor) {
@@ -418,10 +418,10 @@ public class EventSourceMappingConfiguration implements Serializable, Cloneable,
 
     /**
      * <p>
-     * (Streams only) The number of batches to process from each shard concurrently. The default value is 1.
+     * (Streams only) The number of batches to process concurrently from each shard. The default value is 1.
      * </p>
      * 
-     * @return (Streams only) The number of batches to process from each shard concurrently. The default value is 1.
+     * @return (Streams only) The number of batches to process concurrently from each shard. The default value is 1.
      */
 
     public Integer getParallelizationFactor() {
@@ -430,11 +430,11 @@ public class EventSourceMappingConfiguration implements Serializable, Cloneable,
 
     /**
      * <p>
-     * (Streams only) The number of batches to process from each shard concurrently. The default value is 1.
+     * (Streams only) The number of batches to process concurrently from each shard. The default value is 1.
      * </p>
      * 
      * @param parallelizationFactor
-     *        (Streams only) The number of batches to process from each shard concurrently. The default value is 1.
+     *        (Streams only) The number of batches to process concurrently from each shard. The default value is 1.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -525,11 +525,11 @@ public class EventSourceMappingConfiguration implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The date that the event source mapping was last updated, or its state changed.
+     * The date that the event source mapping was last updated or that its state changed.
      * </p>
      * 
      * @param lastModified
-     *        The date that the event source mapping was last updated, or its state changed.
+     *        The date that the event source mapping was last updated or that its state changed.
      */
 
     public void setLastModified(java.util.Date lastModified) {
@@ -538,10 +538,10 @@ public class EventSourceMappingConfiguration implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The date that the event source mapping was last updated, or its state changed.
+     * The date that the event source mapping was last updated or that its state changed.
      * </p>
      * 
-     * @return The date that the event source mapping was last updated, or its state changed.
+     * @return The date that the event source mapping was last updated or that its state changed.
      */
 
     public java.util.Date getLastModified() {
@@ -550,11 +550,11 @@ public class EventSourceMappingConfiguration implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The date that the event source mapping was last updated, or its state changed.
+     * The date that the event source mapping was last updated or that its state changed.
      * </p>
      * 
      * @param lastModified
-     *        The date that the event source mapping was last updated, or its state changed.
+     *        The date that the event source mapping was last updated or that its state changed.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -565,11 +565,11 @@ public class EventSourceMappingConfiguration implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The result of the last Lambda invocation of your Lambda function.
+     * The result of the last Lambda invocation of your function.
      * </p>
      * 
      * @param lastProcessingResult
-     *        The result of the last Lambda invocation of your Lambda function.
+     *        The result of the last Lambda invocation of your function.
      */
 
     public void setLastProcessingResult(String lastProcessingResult) {
@@ -578,10 +578,10 @@ public class EventSourceMappingConfiguration implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The result of the last Lambda invocation of your Lambda function.
+     * The result of the last Lambda invocation of your function.
      * </p>
      * 
-     * @return The result of the last Lambda invocation of your Lambda function.
+     * @return The result of the last Lambda invocation of your function.
      */
 
     public String getLastProcessingResult() {
@@ -590,11 +590,11 @@ public class EventSourceMappingConfiguration implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The result of the last Lambda invocation of your Lambda function.
+     * The result of the last Lambda invocation of your function.
      * </p>
      * 
      * @param lastProcessingResult
-     *        The result of the last Lambda invocation of your Lambda function.
+     *        The result of the last Lambda invocation of your function.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -657,12 +657,11 @@ public class EventSourceMappingConfiguration implements Serializable, Cloneable,
 
     /**
      * <p>
-     * Indicates whether the last change to the event source mapping was made by a user, or by the Lambda service.
+     * Indicates whether a user or Lambda made the last change to the event source mapping.
      * </p>
      * 
      * @param stateTransitionReason
-     *        Indicates whether the last change to the event source mapping was made by a user, or by the Lambda
-     *        service.
+     *        Indicates whether a user or Lambda made the last change to the event source mapping.
      */
 
     public void setStateTransitionReason(String stateTransitionReason) {
@@ -671,11 +670,10 @@ public class EventSourceMappingConfiguration implements Serializable, Cloneable,
 
     /**
      * <p>
-     * Indicates whether the last change to the event source mapping was made by a user, or by the Lambda service.
+     * Indicates whether a user or Lambda made the last change to the event source mapping.
      * </p>
      * 
-     * @return Indicates whether the last change to the event source mapping was made by a user, or by the Lambda
-     *         service.
+     * @return Indicates whether a user or Lambda made the last change to the event source mapping.
      */
 
     public String getStateTransitionReason() {
@@ -684,12 +682,11 @@ public class EventSourceMappingConfiguration implements Serializable, Cloneable,
 
     /**
      * <p>
-     * Indicates whether the last change to the event source mapping was made by a user, or by the Lambda service.
+     * Indicates whether a user or Lambda made the last change to the event source mapping.
      * </p>
      * 
      * @param stateTransitionReason
-     *        Indicates whether the last change to the event source mapping was made by a user, or by the Lambda
-     *        service.
+     *        Indicates whether a user or Lambda made the last change to the event source mapping.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -813,10 +810,10 @@ public class EventSourceMappingConfiguration implements Serializable, Cloneable,
 
     /**
      * <p>
-     * (MQ) The name of the Amazon MQ broker destination queue to consume.
+     * (Amazon MQ) The name of the Amazon MQ broker destination queue to consume.
      * </p>
      * 
-     * @return (MQ) The name of the Amazon MQ broker destination queue to consume.
+     * @return (Amazon MQ) The name of the Amazon MQ broker destination queue to consume.
      */
 
     public java.util.List<String> getQueues() {
@@ -828,11 +825,11 @@ public class EventSourceMappingConfiguration implements Serializable, Cloneable,
 
     /**
      * <p>
-     * (MQ) The name of the Amazon MQ broker destination queue to consume.
+     * (Amazon MQ) The name of the Amazon MQ broker destination queue to consume.
      * </p>
      * 
      * @param queues
-     *        (MQ) The name of the Amazon MQ broker destination queue to consume.
+     *        (Amazon MQ) The name of the Amazon MQ broker destination queue to consume.
      */
 
     public void setQueues(java.util.Collection<String> queues) {
@@ -846,7 +843,7 @@ public class EventSourceMappingConfiguration implements Serializable, Cloneable,
 
     /**
      * <p>
-     * (MQ) The name of the Amazon MQ broker destination queue to consume.
+     * (Amazon MQ) The name of the Amazon MQ broker destination queue to consume.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -855,7 +852,7 @@ public class EventSourceMappingConfiguration implements Serializable, Cloneable,
      * </p>
      * 
      * @param queues
-     *        (MQ) The name of the Amazon MQ broker destination queue to consume.
+     *        (Amazon MQ) The name of the Amazon MQ broker destination queue to consume.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -871,11 +868,11 @@ public class EventSourceMappingConfiguration implements Serializable, Cloneable,
 
     /**
      * <p>
-     * (MQ) The name of the Amazon MQ broker destination queue to consume.
+     * (Amazon MQ) The name of the Amazon MQ broker destination queue to consume.
      * </p>
      * 
      * @param queues
-     *        (MQ) The name of the Amazon MQ broker destination queue to consume.
+     *        (Amazon MQ) The name of the Amazon MQ broker destination queue to consume.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -886,10 +883,11 @@ public class EventSourceMappingConfiguration implements Serializable, Cloneable,
 
     /**
      * <p>
-     * An array of the authentication protocol, or the VPC components to secure your event source.
+     * An array of the authentication protocol, VPC components, or virtual host to secure and define your event source.
      * </p>
      * 
-     * @return An array of the authentication protocol, or the VPC components to secure your event source.
+     * @return An array of the authentication protocol, VPC components, or virtual host to secure and define your event
+     *         source.
      */
 
     public java.util.List<SourceAccessConfiguration> getSourceAccessConfigurations() {
@@ -901,11 +899,12 @@ public class EventSourceMappingConfiguration implements Serializable, Cloneable,
 
     /**
      * <p>
-     * An array of the authentication protocol, or the VPC components to secure your event source.
+     * An array of the authentication protocol, VPC components, or virtual host to secure and define your event source.
      * </p>
      * 
      * @param sourceAccessConfigurations
-     *        An array of the authentication protocol, or the VPC components to secure your event source.
+     *        An array of the authentication protocol, VPC components, or virtual host to secure and define your event
+     *        source.
      */
 
     public void setSourceAccessConfigurations(java.util.Collection<SourceAccessConfiguration> sourceAccessConfigurations) {
@@ -919,7 +918,7 @@ public class EventSourceMappingConfiguration implements Serializable, Cloneable,
 
     /**
      * <p>
-     * An array of the authentication protocol, or the VPC components to secure your event source.
+     * An array of the authentication protocol, VPC components, or virtual host to secure and define your event source.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -928,7 +927,8 @@ public class EventSourceMappingConfiguration implements Serializable, Cloneable,
      * </p>
      * 
      * @param sourceAccessConfigurations
-     *        An array of the authentication protocol, or the VPC components to secure your event source.
+     *        An array of the authentication protocol, VPC components, or virtual host to secure and define your event
+     *        source.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -944,11 +944,12 @@ public class EventSourceMappingConfiguration implements Serializable, Cloneable,
 
     /**
      * <p>
-     * An array of the authentication protocol, or the VPC components to secure your event source.
+     * An array of the authentication protocol, VPC components, or virtual host to secure and define your event source.
      * </p>
      * 
      * @param sourceAccessConfigurations
-     *        An array of the authentication protocol, or the VPC components to secure your event source.
+     *        An array of the authentication protocol, VPC components, or virtual host to secure and define your event
+     *        source.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -959,11 +960,11 @@ public class EventSourceMappingConfiguration implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The Self-Managed Apache Kafka cluster for your event source.
+     * The self-managed Apache Kafka cluster for your event source.
      * </p>
      * 
      * @param selfManagedEventSource
-     *        The Self-Managed Apache Kafka cluster for your event source.
+     *        The self-managed Apache Kafka cluster for your event source.
      */
 
     public void setSelfManagedEventSource(SelfManagedEventSource selfManagedEventSource) {
@@ -972,10 +973,10 @@ public class EventSourceMappingConfiguration implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The Self-Managed Apache Kafka cluster for your event source.
+     * The self-managed Apache Kafka cluster for your event source.
      * </p>
      * 
-     * @return The Self-Managed Apache Kafka cluster for your event source.
+     * @return The self-managed Apache Kafka cluster for your event source.
      */
 
     public SelfManagedEventSource getSelfManagedEventSource() {
@@ -984,11 +985,11 @@ public class EventSourceMappingConfiguration implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The Self-Managed Apache Kafka cluster for your event source.
+     * The self-managed Apache Kafka cluster for your event source.
      * </p>
      * 
      * @param selfManagedEventSource
-     *        The Self-Managed Apache Kafka cluster for your event source.
+     *        The self-managed Apache Kafka cluster for your event source.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1153,12 +1154,11 @@ public class EventSourceMappingConfiguration implements Serializable, Cloneable,
 
     /**
      * <p>
-     * (Streams only) The duration in seconds of a processing window. The range is between 1 second up to 900 seconds.
+     * (Streams only) The duration in seconds of a processing window. The range is 1–900 seconds.
      * </p>
      * 
      * @param tumblingWindowInSeconds
-     *        (Streams only) The duration in seconds of a processing window. The range is between 1 second up to 900
-     *        seconds.
+     *        (Streams only) The duration in seconds of a processing window. The range is 1–900 seconds.
      */
 
     public void setTumblingWindowInSeconds(Integer tumblingWindowInSeconds) {
@@ -1167,11 +1167,10 @@ public class EventSourceMappingConfiguration implements Serializable, Cloneable,
 
     /**
      * <p>
-     * (Streams only) The duration in seconds of a processing window. The range is between 1 second up to 900 seconds.
+     * (Streams only) The duration in seconds of a processing window. The range is 1–900 seconds.
      * </p>
      * 
-     * @return (Streams only) The duration in seconds of a processing window. The range is between 1 second up to 900
-     *         seconds.
+     * @return (Streams only) The duration in seconds of a processing window. The range is 1–900 seconds.
      */
 
     public Integer getTumblingWindowInSeconds() {
@@ -1180,12 +1179,11 @@ public class EventSourceMappingConfiguration implements Serializable, Cloneable,
 
     /**
      * <p>
-     * (Streams only) The duration in seconds of a processing window. The range is between 1 second up to 900 seconds.
+     * (Streams only) The duration in seconds of a processing window. The range is 1–900 seconds.
      * </p>
      * 
      * @param tumblingWindowInSeconds
-     *        (Streams only) The duration in seconds of a processing window. The range is between 1 second up to 900
-     *        seconds.
+     *        (Streams only) The duration in seconds of a processing window. The range is 1–900 seconds.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

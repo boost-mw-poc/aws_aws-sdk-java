@@ -35,7 +35,7 @@ public class ListReportGroupsResult extends com.amazonaws.AmazonWebServiceResult
     private String nextToken;
     /**
      * <p>
-     * The list of ARNs for the report groups in the current Amazon Web Services account.
+     * The list of ARNs for the report groups in the current AWS account.
      * </p>
      */
     private java.util.List<String> reportGroups;
@@ -106,10 +106,10 @@ public class ListReportGroupsResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The list of ARNs for the report groups in the current Amazon Web Services account.
+     * The list of ARNs for the report groups in the current AWS account.
      * </p>
      * 
-     * @return The list of ARNs for the report groups in the current Amazon Web Services account.
+     * @return The list of ARNs for the report groups in the current AWS account.
      */
 
     public java.util.List<String> getReportGroups() {
@@ -118,11 +118,11 @@ public class ListReportGroupsResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The list of ARNs for the report groups in the current Amazon Web Services account.
+     * The list of ARNs for the report groups in the current AWS account.
      * </p>
      * 
      * @param reportGroups
-     *        The list of ARNs for the report groups in the current Amazon Web Services account.
+     *        The list of ARNs for the report groups in the current AWS account.
      */
 
     public void setReportGroups(java.util.Collection<String> reportGroups) {
@@ -136,7 +136,7 @@ public class ListReportGroupsResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The list of ARNs for the report groups in the current Amazon Web Services account.
+     * The list of ARNs for the report groups in the current AWS account.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -145,7 +145,7 @@ public class ListReportGroupsResult extends com.amazonaws.AmazonWebServiceResult
      * </p>
      * 
      * @param reportGroups
-     *        The list of ARNs for the report groups in the current Amazon Web Services account.
+     *        The list of ARNs for the report groups in the current AWS account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -161,11 +161,11 @@ public class ListReportGroupsResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The list of ARNs for the report groups in the current Amazon Web Services account.
+     * The list of ARNs for the report groups in the current AWS account.
      * </p>
      * 
      * @param reportGroups
-     *        The list of ARNs for the report groups in the current Amazon Web Services account.
+     *        The list of ARNs for the report groups in the current AWS account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

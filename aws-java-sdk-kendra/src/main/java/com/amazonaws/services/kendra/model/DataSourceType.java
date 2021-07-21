@@ -29,7 +29,8 @@ public enum DataSourceType {
     CUSTOM("CUSTOM"),
     CONFLUENCE("CONFLUENCE"),
     GOOGLEDRIVE("GOOGLEDRIVE"),
-    WEBCRAWLER("WEBCRAWLER");
+    WEBCRAWLER("WEBCRAWLER"),
+    WORKDOCS("WORKDOCS");
 
     private String value;
 

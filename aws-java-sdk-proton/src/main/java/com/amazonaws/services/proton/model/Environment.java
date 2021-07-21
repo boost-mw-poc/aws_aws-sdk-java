@@ -91,7 +91,8 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
     private String name;
     /**
      * <p>
-     * The ARN of the AWS Proton service role that allows AWS Proton to make calls to other services on your behalf.
+     * The Amazon Resource Name (ARN) of the AWS Proton service role that allows AWS Proton to make calls to other
+     * services on your behalf.
      * </p>
      */
     private String protonServiceRoleArn;
@@ -121,7 +122,7 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
     private String templateMinorVersion;
     /**
      * <p>
-     * The ARN of the environment template.
+     * The Amazon Resource Name (ARN) of the environment template.
      * </p>
      */
     private String templateName;
@@ -553,12 +554,13 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ARN of the AWS Proton service role that allows AWS Proton to make calls to other services on your behalf.
+     * The Amazon Resource Name (ARN) of the AWS Proton service role that allows AWS Proton to make calls to other
+     * services on your behalf.
      * </p>
      * 
      * @param protonServiceRoleArn
-     *        The ARN of the AWS Proton service role that allows AWS Proton to make calls to other services on your
-     *        behalf.
+     *        The Amazon Resource Name (ARN) of the AWS Proton service role that allows AWS Proton to make calls to
+     *        other services on your behalf.
      */
 
     public void setProtonServiceRoleArn(String protonServiceRoleArn) {
@@ -567,11 +569,12 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ARN of the AWS Proton service role that allows AWS Proton to make calls to other services on your behalf.
+     * The Amazon Resource Name (ARN) of the AWS Proton service role that allows AWS Proton to make calls to other
+     * services on your behalf.
      * </p>
      * 
-     * @return The ARN of the AWS Proton service role that allows AWS Proton to make calls to other services on your
-     *         behalf.
+     * @return The Amazon Resource Name (ARN) of the AWS Proton service role that allows AWS Proton to make calls to
+     *         other services on your behalf.
      */
 
     public String getProtonServiceRoleArn() {
@@ -580,12 +583,13 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ARN of the AWS Proton service role that allows AWS Proton to make calls to other services on your behalf.
+     * The Amazon Resource Name (ARN) of the AWS Proton service role that allows AWS Proton to make calls to other
+     * services on your behalf.
      * </p>
      * 
      * @param protonServiceRoleArn
-     *        The ARN of the AWS Proton service role that allows AWS Proton to make calls to other services on your
-     *        behalf.
+     *        The Amazon Resource Name (ARN) of the AWS Proton service role that allows AWS Proton to make calls to
+     *        other services on your behalf.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -779,11 +783,11 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ARN of the environment template.
+     * The Amazon Resource Name (ARN) of the environment template.
      * </p>
      * 
      * @param templateName
-     *        The ARN of the environment template.
+     *        The Amazon Resource Name (ARN) of the environment template.
      */
 
     public void setTemplateName(String templateName) {
@@ -792,10 +796,10 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ARN of the environment template.
+     * The Amazon Resource Name (ARN) of the environment template.
      * </p>
      * 
-     * @return The ARN of the environment template.
+     * @return The Amazon Resource Name (ARN) of the environment template.
      */
 
     public String getTemplateName() {
@@ -804,11 +808,11 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ARN of the environment template.
+     * The Amazon Resource Name (ARN) of the environment template.
      * </p>
      * 
      * @param templateName
-     *        The ARN of the environment template.
+     *        The Amazon Resource Name (ARN) of the environment template.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
