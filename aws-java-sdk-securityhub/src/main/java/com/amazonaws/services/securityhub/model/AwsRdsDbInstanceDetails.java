@@ -30,7 +30,7 @@ public class AwsRdsDbInstanceDetails implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The AWS Identity and Access Management (IAM) roles associated with the DB instance.
+     * The IAM roles associated with the DB instance.
      * </p>
      */
     private java.util.List<AwsRdsDbInstanceAssociatedRole> associatedRoles;
@@ -68,8 +68,8 @@ public class AwsRdsDbInstanceDetails implements Serializable, Cloneable, Structu
     private Integer dbInstancePort;
     /**
      * <p>
-     * The AWS Region-unique, immutable identifier for the DB instance. This identifier is found in AWS CloudTrail log
-     * entries whenever the AWS KMS key for the DB instance is accessed.
+     * The Amazon Web Services Region-unique, immutable identifier for the DB instance. This identifier is found in
+     * CloudTrail log entries whenever the KMS key for the DB instance is accessed.
      * </p>
      */
     private String dbiResourceId;
@@ -122,8 +122,7 @@ public class AwsRdsDbInstanceDetails implements Serializable, Cloneable, Structu
     private String engineVersion;
     /**
      * <p>
-     * True if mapping of AWS Identity and Access Management (IAM) accounts to database accounts is enabled, and
-     * otherwise false.
+     * True if mapping of IAM accounts to database accounts is enabled, and otherwise false.
      * </p>
      * <p>
      * IAM database authentication can be enabled for the following database engines.
@@ -160,7 +159,7 @@ public class AwsRdsDbInstanceDetails implements Serializable, Cloneable, Structu
     private String instanceCreateTime;
     /**
      * <p>
-     * If <code>StorageEncrypted</code> is true, the AWS KMS key identifier for the encrypted DB instance.
+     * If <code>StorageEncrypted</code> is true, the KMS key identifier for the encrypted DB instance.
      * </p>
      */
     private String kmsKeyId;
@@ -408,7 +407,7 @@ public class AwsRdsDbInstanceDetails implements Serializable, Cloneable, Structu
     private Boolean performanceInsightsEnabled;
     /**
      * <p>
-     * The identifier of the AWS KMS key used to encrypt the Performance Insights data.
+     * The identifier of the KMS key used to encrypt the Performance Insights data.
      * </p>
      */
     private String performanceInsightsKmsKeyId;
@@ -441,10 +440,10 @@ public class AwsRdsDbInstanceDetails implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The AWS Identity and Access Management (IAM) roles associated with the DB instance.
+     * The IAM roles associated with the DB instance.
      * </p>
      * 
-     * @return The AWS Identity and Access Management (IAM) roles associated with the DB instance.
+     * @return The IAM roles associated with the DB instance.
      */
 
     public java.util.List<AwsRdsDbInstanceAssociatedRole> getAssociatedRoles() {
@@ -453,11 +452,11 @@ public class AwsRdsDbInstanceDetails implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The AWS Identity and Access Management (IAM) roles associated with the DB instance.
+     * The IAM roles associated with the DB instance.
      * </p>
      * 
      * @param associatedRoles
-     *        The AWS Identity and Access Management (IAM) roles associated with the DB instance.
+     *        The IAM roles associated with the DB instance.
      */
 
     public void setAssociatedRoles(java.util.Collection<AwsRdsDbInstanceAssociatedRole> associatedRoles) {
@@ -471,7 +470,7 @@ public class AwsRdsDbInstanceDetails implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The AWS Identity and Access Management (IAM) roles associated with the DB instance.
+     * The IAM roles associated with the DB instance.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -480,7 +479,7 @@ public class AwsRdsDbInstanceDetails implements Serializable, Cloneable, Structu
      * </p>
      * 
      * @param associatedRoles
-     *        The AWS Identity and Access Management (IAM) roles associated with the DB instance.
+     *        The IAM roles associated with the DB instance.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -496,11 +495,11 @@ public class AwsRdsDbInstanceDetails implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The AWS Identity and Access Management (IAM) roles associated with the DB instance.
+     * The IAM roles associated with the DB instance.
      * </p>
      * 
      * @param associatedRoles
-     *        The AWS Identity and Access Management (IAM) roles associated with the DB instance.
+     *        The IAM roles associated with the DB instance.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -726,13 +725,13 @@ public class AwsRdsDbInstanceDetails implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The AWS Region-unique, immutable identifier for the DB instance. This identifier is found in AWS CloudTrail log
-     * entries whenever the AWS KMS key for the DB instance is accessed.
+     * The Amazon Web Services Region-unique, immutable identifier for the DB instance. This identifier is found in
+     * CloudTrail log entries whenever the KMS key for the DB instance is accessed.
      * </p>
      * 
      * @param dbiResourceId
-     *        The AWS Region-unique, immutable identifier for the DB instance. This identifier is found in AWS
-     *        CloudTrail log entries whenever the AWS KMS key for the DB instance is accessed.
+     *        The Amazon Web Services Region-unique, immutable identifier for the DB instance. This identifier is found
+     *        in CloudTrail log entries whenever the KMS key for the DB instance is accessed.
      */
 
     public void setDbiResourceId(String dbiResourceId) {
@@ -741,12 +740,12 @@ public class AwsRdsDbInstanceDetails implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The AWS Region-unique, immutable identifier for the DB instance. This identifier is found in AWS CloudTrail log
-     * entries whenever the AWS KMS key for the DB instance is accessed.
+     * The Amazon Web Services Region-unique, immutable identifier for the DB instance. This identifier is found in
+     * CloudTrail log entries whenever the KMS key for the DB instance is accessed.
      * </p>
      * 
-     * @return The AWS Region-unique, immutable identifier for the DB instance. This identifier is found in AWS
-     *         CloudTrail log entries whenever the AWS KMS key for the DB instance is accessed.
+     * @return The Amazon Web Services Region-unique, immutable identifier for the DB instance. This identifier is found
+     *         in CloudTrail log entries whenever the KMS key for the DB instance is accessed.
      */
 
     public String getDbiResourceId() {
@@ -755,13 +754,13 @@ public class AwsRdsDbInstanceDetails implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The AWS Region-unique, immutable identifier for the DB instance. This identifier is found in AWS CloudTrail log
-     * entries whenever the AWS KMS key for the DB instance is accessed.
+     * The Amazon Web Services Region-unique, immutable identifier for the DB instance. This identifier is found in
+     * CloudTrail log entries whenever the KMS key for the DB instance is accessed.
      * </p>
      * 
      * @param dbiResourceId
-     *        The AWS Region-unique, immutable identifier for the DB instance. This identifier is found in AWS
-     *        CloudTrail log entries whenever the AWS KMS key for the DB instance is accessed.
+     *        The Amazon Web Services Region-unique, immutable identifier for the DB instance. This identifier is found
+     *        in CloudTrail log entries whenever the KMS key for the DB instance is accessed.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1085,8 +1084,7 @@ public class AwsRdsDbInstanceDetails implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * True if mapping of AWS Identity and Access Management (IAM) accounts to database accounts is enabled, and
-     * otherwise false.
+     * True if mapping of IAM accounts to database accounts is enabled, and otherwise false.
      * </p>
      * <p>
      * IAM database authentication can be enabled for the following database engines.
@@ -1110,8 +1108,7 @@ public class AwsRdsDbInstanceDetails implements Serializable, Cloneable, Structu
      * </ul>
      * 
      * @param iAMDatabaseAuthenticationEnabled
-     *        True if mapping of AWS Identity and Access Management (IAM) accounts to database accounts is enabled, and
-     *        otherwise false.</p>
+     *        True if mapping of IAM accounts to database accounts is enabled, and otherwise false.</p>
      *        <p>
      *        IAM database authentication can be enabled for the following database engines.
      *        </p>
@@ -1139,8 +1136,7 @@ public class AwsRdsDbInstanceDetails implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * True if mapping of AWS Identity and Access Management (IAM) accounts to database accounts is enabled, and
-     * otherwise false.
+     * True if mapping of IAM accounts to database accounts is enabled, and otherwise false.
      * </p>
      * <p>
      * IAM database authentication can be enabled for the following database engines.
@@ -1163,8 +1159,7 @@ public class AwsRdsDbInstanceDetails implements Serializable, Cloneable, Structu
      * </li>
      * </ul>
      * 
-     * @return True if mapping of AWS Identity and Access Management (IAM) accounts to database accounts is enabled, and
-     *         otherwise false.</p>
+     * @return True if mapping of IAM accounts to database accounts is enabled, and otherwise false.</p>
      *         <p>
      *         IAM database authentication can be enabled for the following database engines.
      *         </p>
@@ -1192,8 +1187,7 @@ public class AwsRdsDbInstanceDetails implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * True if mapping of AWS Identity and Access Management (IAM) accounts to database accounts is enabled, and
-     * otherwise false.
+     * True if mapping of IAM accounts to database accounts is enabled, and otherwise false.
      * </p>
      * <p>
      * IAM database authentication can be enabled for the following database engines.
@@ -1217,8 +1211,7 @@ public class AwsRdsDbInstanceDetails implements Serializable, Cloneable, Structu
      * </ul>
      * 
      * @param iAMDatabaseAuthenticationEnabled
-     *        True if mapping of AWS Identity and Access Management (IAM) accounts to database accounts is enabled, and
-     *        otherwise false.</p>
+     *        True if mapping of IAM accounts to database accounts is enabled, and otherwise false.</p>
      *        <p>
      *        IAM database authentication can be enabled for the following database engines.
      *        </p>
@@ -1248,8 +1241,7 @@ public class AwsRdsDbInstanceDetails implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * True if mapping of AWS Identity and Access Management (IAM) accounts to database accounts is enabled, and
-     * otherwise false.
+     * True if mapping of IAM accounts to database accounts is enabled, and otherwise false.
      * </p>
      * <p>
      * IAM database authentication can be enabled for the following database engines.
@@ -1272,8 +1264,7 @@ public class AwsRdsDbInstanceDetails implements Serializable, Cloneable, Structu
      * </li>
      * </ul>
      * 
-     * @return True if mapping of AWS Identity and Access Management (IAM) accounts to database accounts is enabled, and
-     *         otherwise false.</p>
+     * @return True if mapping of IAM accounts to database accounts is enabled, and otherwise false.</p>
      *         <p>
      *         IAM database authentication can be enabled for the following database engines.
      *         </p>
@@ -1368,11 +1359,11 @@ public class AwsRdsDbInstanceDetails implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * If <code>StorageEncrypted</code> is true, the AWS KMS key identifier for the encrypted DB instance.
+     * If <code>StorageEncrypted</code> is true, the KMS key identifier for the encrypted DB instance.
      * </p>
      * 
      * @param kmsKeyId
-     *        If <code>StorageEncrypted</code> is true, the AWS KMS key identifier for the encrypted DB instance.
+     *        If <code>StorageEncrypted</code> is true, the KMS key identifier for the encrypted DB instance.
      */
 
     public void setKmsKeyId(String kmsKeyId) {
@@ -1381,10 +1372,10 @@ public class AwsRdsDbInstanceDetails implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * If <code>StorageEncrypted</code> is true, the AWS KMS key identifier for the encrypted DB instance.
+     * If <code>StorageEncrypted</code> is true, the KMS key identifier for the encrypted DB instance.
      * </p>
      * 
-     * @return If <code>StorageEncrypted</code> is true, the AWS KMS key identifier for the encrypted DB instance.
+     * @return If <code>StorageEncrypted</code> is true, the KMS key identifier for the encrypted DB instance.
      */
 
     public String getKmsKeyId() {
@@ -1393,11 +1384,11 @@ public class AwsRdsDbInstanceDetails implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * If <code>StorageEncrypted</code> is true, the AWS KMS key identifier for the encrypted DB instance.
+     * If <code>StorageEncrypted</code> is true, the KMS key identifier for the encrypted DB instance.
      * </p>
      * 
      * @param kmsKeyId
-     *        If <code>StorageEncrypted</code> is true, the AWS KMS key identifier for the encrypted DB instance.
+     *        If <code>StorageEncrypted</code> is true, the KMS key identifier for the encrypted DB instance.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -3323,11 +3314,11 @@ public class AwsRdsDbInstanceDetails implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The identifier of the AWS KMS key used to encrypt the Performance Insights data.
+     * The identifier of the KMS key used to encrypt the Performance Insights data.
      * </p>
      * 
      * @param performanceInsightsKmsKeyId
-     *        The identifier of the AWS KMS key used to encrypt the Performance Insights data.
+     *        The identifier of the KMS key used to encrypt the Performance Insights data.
      */
 
     public void setPerformanceInsightsKmsKeyId(String performanceInsightsKmsKeyId) {
@@ -3336,10 +3327,10 @@ public class AwsRdsDbInstanceDetails implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The identifier of the AWS KMS key used to encrypt the Performance Insights data.
+     * The identifier of the KMS key used to encrypt the Performance Insights data.
      * </p>
      * 
-     * @return The identifier of the AWS KMS key used to encrypt the Performance Insights data.
+     * @return The identifier of the KMS key used to encrypt the Performance Insights data.
      */
 
     public String getPerformanceInsightsKmsKeyId() {
@@ -3348,11 +3339,11 @@ public class AwsRdsDbInstanceDetails implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The identifier of the AWS KMS key used to encrypt the Performance Insights data.
+     * The identifier of the KMS key used to encrypt the Performance Insights data.
      * </p>
      * 
      * @param performanceInsightsKmsKeyId
-     *        The identifier of the AWS KMS key used to encrypt the Performance Insights data.
+     *        The identifier of the KMS key used to encrypt the Performance Insights data.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

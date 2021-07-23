@@ -133,7 +133,7 @@ public class AwsRdsDbSnapshotDetails implements Serializable, Cloneable, Structu
     private Integer percentProgress;
     /**
      * <p>
-     * The AWS Region that the DB snapshot was created in or copied from.
+     * The Amazon Web Services Region that the DB snapshot was created in or copied from.
      * </p>
      */
     private String sourceRegion;
@@ -163,7 +163,7 @@ public class AwsRdsDbSnapshotDetails implements Serializable, Cloneable, Structu
     private Boolean encrypted;
     /**
      * <p>
-     * If <code>Encrypted</code> is <code>true</code>, the AWS KMS key identifier for the encrypted DB snapshot.
+     * If <code>Encrypted</code> is <code>true</code>, the KMS key identifier for the encrypted DB snapshot.
      * </p>
      */
     private String kmsKeyId;
@@ -883,11 +883,11 @@ public class AwsRdsDbSnapshotDetails implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The AWS Region that the DB snapshot was created in or copied from.
+     * The Amazon Web Services Region that the DB snapshot was created in or copied from.
      * </p>
      * 
      * @param sourceRegion
-     *        The AWS Region that the DB snapshot was created in or copied from.
+     *        The Amazon Web Services Region that the DB snapshot was created in or copied from.
      */
 
     public void setSourceRegion(String sourceRegion) {
@@ -896,10 +896,10 @@ public class AwsRdsDbSnapshotDetails implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The AWS Region that the DB snapshot was created in or copied from.
+     * The Amazon Web Services Region that the DB snapshot was created in or copied from.
      * </p>
      * 
-     * @return The AWS Region that the DB snapshot was created in or copied from.
+     * @return The Amazon Web Services Region that the DB snapshot was created in or copied from.
      */
 
     public String getSourceRegion() {
@@ -908,11 +908,11 @@ public class AwsRdsDbSnapshotDetails implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The AWS Region that the DB snapshot was created in or copied from.
+     * The Amazon Web Services Region that the DB snapshot was created in or copied from.
      * </p>
      * 
      * @param sourceRegion
-     *        The AWS Region that the DB snapshot was created in or copied from.
+     *        The Amazon Web Services Region that the DB snapshot was created in or copied from.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1095,11 +1095,11 @@ public class AwsRdsDbSnapshotDetails implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * If <code>Encrypted</code> is <code>true</code>, the AWS KMS key identifier for the encrypted DB snapshot.
+     * If <code>Encrypted</code> is <code>true</code>, the KMS key identifier for the encrypted DB snapshot.
      * </p>
      * 
      * @param kmsKeyId
-     *        If <code>Encrypted</code> is <code>true</code>, the AWS KMS key identifier for the encrypted DB snapshot.
+     *        If <code>Encrypted</code> is <code>true</code>, the KMS key identifier for the encrypted DB snapshot.
      */
 
     public void setKmsKeyId(String kmsKeyId) {
@@ -1108,10 +1108,10 @@ public class AwsRdsDbSnapshotDetails implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * If <code>Encrypted</code> is <code>true</code>, the AWS KMS key identifier for the encrypted DB snapshot.
+     * If <code>Encrypted</code> is <code>true</code>, the KMS key identifier for the encrypted DB snapshot.
      * </p>
      * 
-     * @return If <code>Encrypted</code> is <code>true</code>, the AWS KMS key identifier for the encrypted DB snapshot.
+     * @return If <code>Encrypted</code> is <code>true</code>, the KMS key identifier for the encrypted DB snapshot.
      */
 
     public String getKmsKeyId() {
@@ -1120,11 +1120,11 @@ public class AwsRdsDbSnapshotDetails implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * If <code>Encrypted</code> is <code>true</code>, the AWS KMS key identifier for the encrypted DB snapshot.
+     * If <code>Encrypted</code> is <code>true</code>, the KMS key identifier for the encrypted DB snapshot.
      * </p>
      * 
      * @param kmsKeyId
-     *        If <code>Encrypted</code> is <code>true</code>, the AWS KMS key identifier for the encrypted DB snapshot.
+     *        If <code>Encrypted</code> is <code>true</code>, the KMS key identifier for the encrypted DB snapshot.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

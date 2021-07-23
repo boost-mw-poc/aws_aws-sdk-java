@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Contains information about a subnet in EC2.
+ * Contains information about a subnet in Amazon EC2.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/AwsEc2SubnetDetails" target="_top">AWS
@@ -72,7 +72,7 @@ public class AwsEc2SubnetDetails implements Serializable, Cloneable, StructuredP
     private Boolean mapPublicIpOnLaunch;
     /**
      * <p>
-     * The identifier of the AWS account that owns the subnet.
+     * The identifier of the Amazon Web Services account that owns the subnet.
      * </p>
      */
     private String ownerId;
@@ -425,11 +425,11 @@ public class AwsEc2SubnetDetails implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The identifier of the AWS account that owns the subnet.
+     * The identifier of the Amazon Web Services account that owns the subnet.
      * </p>
      * 
      * @param ownerId
-     *        The identifier of the AWS account that owns the subnet.
+     *        The identifier of the Amazon Web Services account that owns the subnet.
      */
 
     public void setOwnerId(String ownerId) {
@@ -438,10 +438,10 @@ public class AwsEc2SubnetDetails implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The identifier of the AWS account that owns the subnet.
+     * The identifier of the Amazon Web Services account that owns the subnet.
      * </p>
      * 
-     * @return The identifier of the AWS account that owns the subnet.
+     * @return The identifier of the Amazon Web Services account that owns the subnet.
      */
 
     public String getOwnerId() {
@@ -450,11 +450,11 @@ public class AwsEc2SubnetDetails implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The identifier of the AWS account that owns the subnet.
+     * The identifier of the Amazon Web Services account that owns the subnet.
      * </p>
      * 
      * @param ownerId
-     *        The identifier of the AWS account that owns the subnet.
+     *        The identifier of the Amazon Web Services account that owns the subnet.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

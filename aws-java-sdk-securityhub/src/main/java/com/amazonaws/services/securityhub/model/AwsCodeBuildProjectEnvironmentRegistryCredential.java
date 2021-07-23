@@ -31,11 +31,11 @@ public class AwsCodeBuildProjectEnvironmentRegistryCredential implements Seriali
 
     /**
      * <p>
-     * The ARN or name of credentials created using AWS Secrets Manager.
+     * The ARN or name of credentials created using Secrets Manager.
      * </p>
      * <note>
      * <p>
-     * The credential can use the name of the credentials only if they exist in your current AWS Region.
+     * The credential can use the name of the credentials only if they exist in your current Amazon Web Services Region.
      * </p>
      * </note>
      */
@@ -45,25 +45,26 @@ public class AwsCodeBuildProjectEnvironmentRegistryCredential implements Seriali
      * The service that created the credentials to access a private Docker registry.
      * </p>
      * <p>
-     * The valid value,<code> SECRETS_MANAGER</code>, is for AWS Secrets Manager.
+     * The valid value,<code> SECRETS_MANAGER</code>, is for Secrets Manager.
      * </p>
      */
     private String credentialProvider;
 
     /**
      * <p>
-     * The ARN or name of credentials created using AWS Secrets Manager.
+     * The ARN or name of credentials created using Secrets Manager.
      * </p>
      * <note>
      * <p>
-     * The credential can use the name of the credentials only if they exist in your current AWS Region.
+     * The credential can use the name of the credentials only if they exist in your current Amazon Web Services Region.
      * </p>
      * </note>
      * 
      * @param credential
-     *        The ARN or name of credentials created using AWS Secrets Manager.</p> <note>
+     *        The ARN or name of credentials created using Secrets Manager.</p> <note>
      *        <p>
-     *        The credential can use the name of the credentials only if they exist in your current AWS Region.
+     *        The credential can use the name of the credentials only if they exist in your current Amazon Web Services
+     *        Region.
      *        </p>
      */
 
@@ -73,17 +74,18 @@ public class AwsCodeBuildProjectEnvironmentRegistryCredential implements Seriali
 
     /**
      * <p>
-     * The ARN or name of credentials created using AWS Secrets Manager.
+     * The ARN or name of credentials created using Secrets Manager.
      * </p>
      * <note>
      * <p>
-     * The credential can use the name of the credentials only if they exist in your current AWS Region.
+     * The credential can use the name of the credentials only if they exist in your current Amazon Web Services Region.
      * </p>
      * </note>
      * 
-     * @return The ARN or name of credentials created using AWS Secrets Manager.</p> <note>
+     * @return The ARN or name of credentials created using Secrets Manager.</p> <note>
      *         <p>
-     *         The credential can use the name of the credentials only if they exist in your current AWS Region.
+     *         The credential can use the name of the credentials only if they exist in your current Amazon Web Services
+     *         Region.
      *         </p>
      */
 
@@ -93,18 +95,19 @@ public class AwsCodeBuildProjectEnvironmentRegistryCredential implements Seriali
 
     /**
      * <p>
-     * The ARN or name of credentials created using AWS Secrets Manager.
+     * The ARN or name of credentials created using Secrets Manager.
      * </p>
      * <note>
      * <p>
-     * The credential can use the name of the credentials only if they exist in your current AWS Region.
+     * The credential can use the name of the credentials only if they exist in your current Amazon Web Services Region.
      * </p>
      * </note>
      * 
      * @param credential
-     *        The ARN or name of credentials created using AWS Secrets Manager.</p> <note>
+     *        The ARN or name of credentials created using Secrets Manager.</p> <note>
      *        <p>
-     *        The credential can use the name of the credentials only if they exist in your current AWS Region.
+     *        The credential can use the name of the credentials only if they exist in your current Amazon Web Services
+     *        Region.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -119,13 +122,13 @@ public class AwsCodeBuildProjectEnvironmentRegistryCredential implements Seriali
      * The service that created the credentials to access a private Docker registry.
      * </p>
      * <p>
-     * The valid value,<code> SECRETS_MANAGER</code>, is for AWS Secrets Manager.
+     * The valid value,<code> SECRETS_MANAGER</code>, is for Secrets Manager.
      * </p>
      * 
      * @param credentialProvider
      *        The service that created the credentials to access a private Docker registry.</p>
      *        <p>
-     *        The valid value,<code> SECRETS_MANAGER</code>, is for AWS Secrets Manager.
+     *        The valid value,<code> SECRETS_MANAGER</code>, is for Secrets Manager.
      */
 
     public void setCredentialProvider(String credentialProvider) {
@@ -137,12 +140,12 @@ public class AwsCodeBuildProjectEnvironmentRegistryCredential implements Seriali
      * The service that created the credentials to access a private Docker registry.
      * </p>
      * <p>
-     * The valid value,<code> SECRETS_MANAGER</code>, is for AWS Secrets Manager.
+     * The valid value,<code> SECRETS_MANAGER</code>, is for Secrets Manager.
      * </p>
      * 
      * @return The service that created the credentials to access a private Docker registry.</p>
      *         <p>
-     *         The valid value,<code> SECRETS_MANAGER</code>, is for AWS Secrets Manager.
+     *         The valid value,<code> SECRETS_MANAGER</code>, is for Secrets Manager.
      */
 
     public String getCredentialProvider() {
@@ -154,13 +157,13 @@ public class AwsCodeBuildProjectEnvironmentRegistryCredential implements Seriali
      * The service that created the credentials to access a private Docker registry.
      * </p>
      * <p>
-     * The valid value,<code> SECRETS_MANAGER</code>, is for AWS Secrets Manager.
+     * The valid value,<code> SECRETS_MANAGER</code>, is for Secrets Manager.
      * </p>
      * 
      * @param credentialProvider
      *        The service that created the credentials to access a private Docker registry.</p>
      *        <p>
-     *        The valid value,<code> SECRETS_MANAGER</code>, is for AWS Secrets Manager.
+     *        The valid value,<code> SECRETS_MANAGER</code>, is for Secrets Manager.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

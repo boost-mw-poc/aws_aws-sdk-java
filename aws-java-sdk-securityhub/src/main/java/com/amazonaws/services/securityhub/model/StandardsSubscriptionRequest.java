@@ -31,7 +31,7 @@ public class StandardsSubscriptionRequest implements Serializable, Cloneable, St
     /**
      * <p>
      * The ARN of the standard that you want to enable. To view the list of available standards and their ARNs, use the
-     * <code> <a>DescribeStandards</a> </code> operation.
+     * <code>DescribeStandards</code> operation.
      * </p>
      */
     private String standardsArn;
@@ -45,12 +45,12 @@ public class StandardsSubscriptionRequest implements Serializable, Cloneable, St
     /**
      * <p>
      * The ARN of the standard that you want to enable. To view the list of available standards and their ARNs, use the
-     * <code> <a>DescribeStandards</a> </code> operation.
+     * <code>DescribeStandards</code> operation.
      * </p>
      * 
      * @param standardsArn
      *        The ARN of the standard that you want to enable. To view the list of available standards and their ARNs,
-     *        use the <code> <a>DescribeStandards</a> </code> operation.
+     *        use the <code>DescribeStandards</code> operation.
      */
 
     public void setStandardsArn(String standardsArn) {
@@ -60,11 +60,11 @@ public class StandardsSubscriptionRequest implements Serializable, Cloneable, St
     /**
      * <p>
      * The ARN of the standard that you want to enable. To view the list of available standards and their ARNs, use the
-     * <code> <a>DescribeStandards</a> </code> operation.
+     * <code>DescribeStandards</code> operation.
      * </p>
      * 
      * @return The ARN of the standard that you want to enable. To view the list of available standards and their ARNs,
-     *         use the <code> <a>DescribeStandards</a> </code> operation.
+     *         use the <code>DescribeStandards</code> operation.
      */
 
     public String getStandardsArn() {
@@ -74,12 +74,12 @@ public class StandardsSubscriptionRequest implements Serializable, Cloneable, St
     /**
      * <p>
      * The ARN of the standard that you want to enable. To view the list of available standards and their ARNs, use the
-     * <code> <a>DescribeStandards</a> </code> operation.
+     * <code>DescribeStandards</code> operation.
      * </p>
      * 
      * @param standardsArn
      *        The ARN of the standard that you want to enable. To view the list of available standards and their ARNs,
-     *        use the <code> <a>DescribeStandards</a> </code> operation.
+     *        use the <code>DescribeStandards</code> operation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -238,6 +238,14 @@ public class ResourceDetailsJsonUnmarshaller implements Unmarshaller<ResourceDet
                     resourceDetails.setOther(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context.getUnmarshaller(String.class))
                             .unmarshall(context));
                 }
+                if (context.testExpression("AwsRdsEventSubscription", targetDepth)) {
+                    context.nextToken();
+                    resourceDetails.setAwsRdsEventSubscription(AwsRdsEventSubscriptionDetailsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("AwsEcsService", targetDepth)) {
+                    context.nextToken();
+                    resourceDetails.setAwsEcsService(AwsEcsServiceDetailsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

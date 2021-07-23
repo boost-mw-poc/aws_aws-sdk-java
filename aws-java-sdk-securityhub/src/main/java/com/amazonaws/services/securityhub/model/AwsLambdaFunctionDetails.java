@@ -66,7 +66,7 @@ public class AwsLambdaFunctionDetails implements Serializable, Cloneable, Struct
     private String handler;
     /**
      * <p>
-     * The KMS key that's used to encrypt the function's environment variables. This key is only returned if you've
+     * The KMS key that is used to encrypt the function's environment variables. This key is only returned if you've
      * configured a customer managed CMK.
      * </p>
      */
@@ -126,7 +126,7 @@ public class AwsLambdaFunctionDetails implements Serializable, Cloneable, Struct
     private Integer timeout;
     /**
      * <p>
-     * The function's AWS X-Ray tracing configuration.
+     * The function's X-Ray tracing configuration.
      * </p>
      */
     private AwsLambdaFunctionTracingConfig tracingConfig;
@@ -385,12 +385,12 @@ public class AwsLambdaFunctionDetails implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The KMS key that's used to encrypt the function's environment variables. This key is only returned if you've
+     * The KMS key that is used to encrypt the function's environment variables. This key is only returned if you've
      * configured a customer managed CMK.
      * </p>
      * 
      * @param kmsKeyArn
-     *        The KMS key that's used to encrypt the function's environment variables. This key is only returned if
+     *        The KMS key that is used to encrypt the function's environment variables. This key is only returned if
      *        you've configured a customer managed CMK.
      */
 
@@ -400,11 +400,11 @@ public class AwsLambdaFunctionDetails implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The KMS key that's used to encrypt the function's environment variables. This key is only returned if you've
+     * The KMS key that is used to encrypt the function's environment variables. This key is only returned if you've
      * configured a customer managed CMK.
      * </p>
      * 
-     * @return The KMS key that's used to encrypt the function's environment variables. This key is only returned if
+     * @return The KMS key that is used to encrypt the function's environment variables. This key is only returned if
      *         you've configured a customer managed CMK.
      */
 
@@ -414,12 +414,12 @@ public class AwsLambdaFunctionDetails implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The KMS key that's used to encrypt the function's environment variables. This key is only returned if you've
+     * The KMS key that is used to encrypt the function's environment variables. This key is only returned if you've
      * configured a customer managed CMK.
      * </p>
      * 
      * @param kmsKeyArn
-     *        The KMS key that's used to encrypt the function's environment variables. This key is only returned if
+     *        The KMS key that is used to encrypt the function's environment variables. This key is only returned if
      *        you've configured a customer managed CMK.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -808,11 +808,11 @@ public class AwsLambdaFunctionDetails implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The function's AWS X-Ray tracing configuration.
+     * The function's X-Ray tracing configuration.
      * </p>
      * 
      * @param tracingConfig
-     *        The function's AWS X-Ray tracing configuration.
+     *        The function's X-Ray tracing configuration.
      */
 
     public void setTracingConfig(AwsLambdaFunctionTracingConfig tracingConfig) {
@@ -821,10 +821,10 @@ public class AwsLambdaFunctionDetails implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The function's AWS X-Ray tracing configuration.
+     * The function's X-Ray tracing configuration.
      * </p>
      * 
-     * @return The function's AWS X-Ray tracing configuration.
+     * @return The function's X-Ray tracing configuration.
      */
 
     public AwsLambdaFunctionTracingConfig getTracingConfig() {
@@ -833,11 +833,11 @@ public class AwsLambdaFunctionDetails implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The function's AWS X-Ray tracing configuration.
+     * The function's X-Ray tracing configuration.
      * </p>
      * 
      * @param tracingConfig
-     *        The function's AWS X-Ray tracing configuration.
+     *        The function's X-Ray tracing configuration.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -30,7 +30,7 @@ public class Result implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * An AWS account ID of the account that was not processed.
+     * An Amazon Web Services account ID of the account that was not processed.
      * </p>
      */
     private String accountId;
@@ -43,11 +43,11 @@ public class Result implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * An AWS account ID of the account that was not processed.
+     * An Amazon Web Services account ID of the account that was not processed.
      * </p>
      * 
      * @param accountId
-     *        An AWS account ID of the account that was not processed.
+     *        An Amazon Web Services account ID of the account that was not processed.
      */
 
     public void setAccountId(String accountId) {
@@ -56,10 +56,10 @@ public class Result implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * An AWS account ID of the account that was not processed.
+     * An Amazon Web Services account ID of the account that was not processed.
      * </p>
      * 
-     * @return An AWS account ID of the account that was not processed.
+     * @return An Amazon Web Services account ID of the account that was not processed.
      */
 
     public String getAccountId() {
@@ -68,11 +68,11 @@ public class Result implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * An AWS account ID of the account that was not processed.
+     * An Amazon Web Services account ID of the account that was not processed.
      * </p>
      * 
      * @param accountId
-     *        An AWS account ID of the account that was not processed.
+     *        An Amazon Web Services account ID of the account that was not processed.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

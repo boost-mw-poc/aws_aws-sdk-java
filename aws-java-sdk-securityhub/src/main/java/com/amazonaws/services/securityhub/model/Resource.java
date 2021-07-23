@@ -47,13 +47,13 @@ public class Resource implements Serializable, Cloneable, StructuredPojo {
     private String id;
     /**
      * <p>
-     * The canonical AWS partition name that the Region is assigned to.
+     * The canonical Amazon Web Services partition name that the Region is assigned to.
      * </p>
      */
     private String partition;
     /**
      * <p>
-     * The canonical AWS external Region name where this resource is located.
+     * The canonical Amazon Web Services external Region name where this resource is located.
      * </p>
      */
     private String region;
@@ -66,7 +66,7 @@ public class Resource implements Serializable, Cloneable, StructuredPojo {
     private String resourceRole;
     /**
      * <p>
-     * A list of AWS tags associated with a resource at the time the finding was processed.
+     * A list of Amazon Web Services tags associated with a resource at the time the finding was processed.
      * </p>
      */
     private java.util.Map<String, String> tags;
@@ -193,11 +193,11 @@ public class Resource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The canonical AWS partition name that the Region is assigned to.
+     * The canonical Amazon Web Services partition name that the Region is assigned to.
      * </p>
      * 
      * @param partition
-     *        The canonical AWS partition name that the Region is assigned to.
+     *        The canonical Amazon Web Services partition name that the Region is assigned to.
      * @see Partition
      */
 
@@ -207,10 +207,10 @@ public class Resource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The canonical AWS partition name that the Region is assigned to.
+     * The canonical Amazon Web Services partition name that the Region is assigned to.
      * </p>
      * 
-     * @return The canonical AWS partition name that the Region is assigned to.
+     * @return The canonical Amazon Web Services partition name that the Region is assigned to.
      * @see Partition
      */
 
@@ -220,11 +220,11 @@ public class Resource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The canonical AWS partition name that the Region is assigned to.
+     * The canonical Amazon Web Services partition name that the Region is assigned to.
      * </p>
      * 
      * @param partition
-     *        The canonical AWS partition name that the Region is assigned to.
+     *        The canonical Amazon Web Services partition name that the Region is assigned to.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Partition
      */
@@ -236,11 +236,11 @@ public class Resource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The canonical AWS partition name that the Region is assigned to.
+     * The canonical Amazon Web Services partition name that the Region is assigned to.
      * </p>
      * 
      * @param partition
-     *        The canonical AWS partition name that the Region is assigned to.
+     *        The canonical Amazon Web Services partition name that the Region is assigned to.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Partition
      */
@@ -252,11 +252,11 @@ public class Resource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The canonical AWS external Region name where this resource is located.
+     * The canonical Amazon Web Services external Region name where this resource is located.
      * </p>
      * 
      * @param region
-     *        The canonical AWS external Region name where this resource is located.
+     *        The canonical Amazon Web Services external Region name where this resource is located.
      */
 
     public void setRegion(String region) {
@@ -265,10 +265,10 @@ public class Resource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The canonical AWS external Region name where this resource is located.
+     * The canonical Amazon Web Services external Region name where this resource is located.
      * </p>
      * 
-     * @return The canonical AWS external Region name where this resource is located.
+     * @return The canonical Amazon Web Services external Region name where this resource is located.
      */
 
     public String getRegion() {
@@ -277,11 +277,11 @@ public class Resource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The canonical AWS external Region name where this resource is located.
+     * The canonical Amazon Web Services external Region name where this resource is located.
      * </p>
      * 
      * @param region
-     *        The canonical AWS external Region name where this resource is located.
+     *        The canonical Amazon Web Services external Region name where this resource is located.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -338,10 +338,10 @@ public class Resource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A list of AWS tags associated with a resource at the time the finding was processed.
+     * A list of Amazon Web Services tags associated with a resource at the time the finding was processed.
      * </p>
      * 
-     * @return A list of AWS tags associated with a resource at the time the finding was processed.
+     * @return A list of Amazon Web Services tags associated with a resource at the time the finding was processed.
      */
 
     public java.util.Map<String, String> getTags() {
@@ -350,11 +350,11 @@ public class Resource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A list of AWS tags associated with a resource at the time the finding was processed.
+     * A list of Amazon Web Services tags associated with a resource at the time the finding was processed.
      * </p>
      * 
      * @param tags
-     *        A list of AWS tags associated with a resource at the time the finding was processed.
+     *        A list of Amazon Web Services tags associated with a resource at the time the finding was processed.
      */
 
     public void setTags(java.util.Map<String, String> tags) {
@@ -363,11 +363,11 @@ public class Resource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A list of AWS tags associated with a resource at the time the finding was processed.
+     * A list of Amazon Web Services tags associated with a resource at the time the finding was processed.
      * </p>
      * 
      * @param tags
-     *        A list of AWS tags associated with a resource at the time the finding was processed.
+     *        A list of Amazon Web Services tags associated with a resource at the time the finding was processed.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

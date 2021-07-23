@@ -20,8 +20,9 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public enum EndpointStatus {
 
-    PENDING("PENDING"),
-    AVAILABLE("AVAILABLE");
+    Pending("Pending"),
+    Available("Available"),
+    Deleting("Deleting");
 
     private String value;
 

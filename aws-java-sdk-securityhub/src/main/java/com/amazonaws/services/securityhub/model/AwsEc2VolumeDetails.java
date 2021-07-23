@@ -65,8 +65,7 @@ public class AwsEc2VolumeDetails implements Serializable, Cloneable, StructuredP
     private String status;
     /**
      * <p>
-     * The ARN of the AWS Key Management Service (AWS KMS) customer master key (CMK) that was used to protect the volume
-     * encryption key for the volume.
+     * The ARN of the KMS customer master key (CMK) that was used to protect the volume encryption key for the volume.
      * </p>
      */
     private String kmsKeyId;
@@ -318,13 +317,12 @@ public class AwsEc2VolumeDetails implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The ARN of the AWS Key Management Service (AWS KMS) customer master key (CMK) that was used to protect the volume
-     * encryption key for the volume.
+     * The ARN of the KMS customer master key (CMK) that was used to protect the volume encryption key for the volume.
      * </p>
      * 
      * @param kmsKeyId
-     *        The ARN of the AWS Key Management Service (AWS KMS) customer master key (CMK) that was used to protect the
-     *        volume encryption key for the volume.
+     *        The ARN of the KMS customer master key (CMK) that was used to protect the volume encryption key for the
+     *        volume.
      */
 
     public void setKmsKeyId(String kmsKeyId) {
@@ -333,12 +331,11 @@ public class AwsEc2VolumeDetails implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The ARN of the AWS Key Management Service (AWS KMS) customer master key (CMK) that was used to protect the volume
-     * encryption key for the volume.
+     * The ARN of the KMS customer master key (CMK) that was used to protect the volume encryption key for the volume.
      * </p>
      * 
-     * @return The ARN of the AWS Key Management Service (AWS KMS) customer master key (CMK) that was used to protect
-     *         the volume encryption key for the volume.
+     * @return The ARN of the KMS customer master key (CMK) that was used to protect the volume encryption key for the
+     *         volume.
      */
 
     public String getKmsKeyId() {
@@ -347,13 +344,12 @@ public class AwsEc2VolumeDetails implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The ARN of the AWS Key Management Service (AWS KMS) customer master key (CMK) that was used to protect the volume
-     * encryption key for the volume.
+     * The ARN of the KMS customer master key (CMK) that was used to protect the volume encryption key for the volume.
      * </p>
      * 
      * @param kmsKeyId
-     *        The ARN of the AWS Key Management Service (AWS KMS) customer master key (CMK) that was used to protect the
-     *        volume encryption key for the volume.
+     *        The ARN of the KMS customer master key (CMK) that was used to protect the volume encryption key for the
+     *        volume.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

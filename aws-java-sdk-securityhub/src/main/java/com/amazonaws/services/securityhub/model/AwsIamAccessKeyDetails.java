@@ -76,7 +76,7 @@ public class AwsIamAccessKeyDetails implements Serializable, Cloneable, Structur
     private String principalName;
     /**
      * <p>
-     * The AWS account ID of the account for the key.
+     * The Amazon Web Services account ID of the account for the key.
      * </p>
      */
     private String accountId;
@@ -402,11 +402,11 @@ public class AwsIamAccessKeyDetails implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The AWS account ID of the account for the key.
+     * The Amazon Web Services account ID of the account for the key.
      * </p>
      * 
      * @param accountId
-     *        The AWS account ID of the account for the key.
+     *        The Amazon Web Services account ID of the account for the key.
      */
 
     public void setAccountId(String accountId) {
@@ -415,10 +415,10 @@ public class AwsIamAccessKeyDetails implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The AWS account ID of the account for the key.
+     * The Amazon Web Services account ID of the account for the key.
      * </p>
      * 
-     * @return The AWS account ID of the account for the key.
+     * @return The Amazon Web Services account ID of the account for the key.
      */
 
     public String getAccountId() {
@@ -427,11 +427,11 @@ public class AwsIamAccessKeyDetails implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The AWS account ID of the account for the key.
+     * The Amazon Web Services account ID of the account for the key.
      * </p>
      * 
      * @param accountId
-     *        The AWS account ID of the account for the key.
+     *        The Amazon Web Services account ID of the account for the key.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

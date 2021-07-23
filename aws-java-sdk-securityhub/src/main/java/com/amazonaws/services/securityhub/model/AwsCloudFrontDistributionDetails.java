@@ -97,7 +97,7 @@ public class AwsCloudFrontDistributionDetails implements Serializable, Cloneable
     private String status;
     /**
      * <p>
-     * A unique identifier that specifies the AWS WAF web ACL, if any, to associate with this distribution.
+     * A unique identifier that specifies the WAF web ACL, if any, to associate with this distribution.
      * </p>
      */
     private String webAclId;
@@ -543,11 +543,11 @@ public class AwsCloudFrontDistributionDetails implements Serializable, Cloneable
 
     /**
      * <p>
-     * A unique identifier that specifies the AWS WAF web ACL, if any, to associate with this distribution.
+     * A unique identifier that specifies the WAF web ACL, if any, to associate with this distribution.
      * </p>
      * 
      * @param webAclId
-     *        A unique identifier that specifies the AWS WAF web ACL, if any, to associate with this distribution.
+     *        A unique identifier that specifies the WAF web ACL, if any, to associate with this distribution.
      */
 
     public void setWebAclId(String webAclId) {
@@ -556,10 +556,10 @@ public class AwsCloudFrontDistributionDetails implements Serializable, Cloneable
 
     /**
      * <p>
-     * A unique identifier that specifies the AWS WAF web ACL, if any, to associate with this distribution.
+     * A unique identifier that specifies the WAF web ACL, if any, to associate with this distribution.
      * </p>
      * 
-     * @return A unique identifier that specifies the AWS WAF web ACL, if any, to associate with this distribution.
+     * @return A unique identifier that specifies the WAF web ACL, if any, to associate with this distribution.
      */
 
     public String getWebAclId() {
@@ -568,11 +568,11 @@ public class AwsCloudFrontDistributionDetails implements Serializable, Cloneable
 
     /**
      * <p>
-     * A unique identifier that specifies the AWS WAF web ACL, if any, to associate with this distribution.
+     * A unique identifier that specifies the WAF web ACL, if any, to associate with this distribution.
      * </p>
      * 
      * @param webAclId
-     *        A unique identifier that specifies the AWS WAF web ACL, if any, to associate with this distribution.
+     *        A unique identifier that specifies the WAF web ACL, if any, to associate with this distribution.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -78,6 +78,11 @@ public class AwsElasticsearchDomainDetailsJsonUnmarshaller implements Unmarshall
                     context.nextToken();
                     awsElasticsearchDomainDetails.setElasticsearchVersion(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("ElasticsearchClusterConfig", targetDepth)) {
+                    context.nextToken();
+                    awsElasticsearchDomainDetails.setElasticsearchClusterConfig(AwsElasticsearchDomainElasticsearchClusterConfigDetailsJsonUnmarshaller
+                            .getInstance().unmarshall(context));
+                }
                 if (context.testExpression("EncryptionAtRestOptions", targetDepth)) {
                     context.nextToken();
                     awsElasticsearchDomainDetails.setEncryptionAtRestOptions(AwsElasticsearchDomainEncryptionAtRestOptionsJsonUnmarshaller.getInstance()

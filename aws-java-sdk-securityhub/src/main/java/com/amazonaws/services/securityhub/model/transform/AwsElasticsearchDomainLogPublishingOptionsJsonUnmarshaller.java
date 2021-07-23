@@ -59,6 +59,11 @@ public class AwsElasticsearchDomainLogPublishingOptionsJsonUnmarshaller implemen
                     awsElasticsearchDomainLogPublishingOptions.setSearchSlowLogs(AwsElasticsearchDomainLogPublishingOptionsLogConfigJsonUnmarshaller
                             .getInstance().unmarshall(context));
                 }
+                if (context.testExpression("AuditLogs", targetDepth)) {
+                    context.nextToken();
+                    awsElasticsearchDomainLogPublishingOptions.setAuditLogs(AwsElasticsearchDomainLogPublishingOptionsLogConfigJsonUnmarshaller.getInstance()
+                            .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -25,7 +25,7 @@ public class ListEndpointsResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * Returns an array of endpoints associated with AWS Outpost.
+     * Returns an array of endpoints associated with AWS Outposts.
      * </p>
      */
     private java.util.List<Endpoint> endpoints;
@@ -38,10 +38,10 @@ public class ListEndpointsResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * Returns an array of endpoints associated with AWS Outpost.
+     * Returns an array of endpoints associated with AWS Outposts.
      * </p>
      * 
-     * @return Returns an array of endpoints associated with AWS Outpost.
+     * @return Returns an array of endpoints associated with AWS Outposts.
      */
 
     public java.util.List<Endpoint> getEndpoints() {
@@ -50,11 +50,11 @@ public class ListEndpointsResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * Returns an array of endpoints associated with AWS Outpost.
+     * Returns an array of endpoints associated with AWS Outposts.
      * </p>
      * 
      * @param endpoints
-     *        Returns an array of endpoints associated with AWS Outpost.
+     *        Returns an array of endpoints associated with AWS Outposts.
      */
 
     public void setEndpoints(java.util.Collection<Endpoint> endpoints) {
@@ -68,7 +68,7 @@ public class ListEndpointsResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * Returns an array of endpoints associated with AWS Outpost.
+     * Returns an array of endpoints associated with AWS Outposts.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -77,7 +77,7 @@ public class ListEndpointsResult extends com.amazonaws.AmazonWebServiceResult<co
      * </p>
      * 
      * @param endpoints
-     *        Returns an array of endpoints associated with AWS Outpost.
+     *        Returns an array of endpoints associated with AWS Outposts.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -93,11 +93,11 @@ public class ListEndpointsResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * Returns an array of endpoints associated with AWS Outpost.
+     * Returns an array of endpoints associated with AWS Outposts.
      * </p>
      * 
      * @param endpoints
-     *        Returns an array of endpoints associated with AWS Outpost.
+     *        Returns an array of endpoints associated with AWS Outposts.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

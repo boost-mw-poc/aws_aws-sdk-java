@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Information about an Elasticsearch domain.
+ * Information about an Amazon Elasticsearch Service domain.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/AwsElasticsearchDomainDetails"
@@ -30,7 +30,7 @@ public class AwsElasticsearchDomainDetails implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * IAM policy document specifying the access policies for the new Amazon ES domain.
+     * IAM policy document specifying the access policies for the new Elasticsearch domain.
      * </p>
      */
     private String accessPolicies;
@@ -42,16 +42,16 @@ public class AwsElasticsearchDomainDetails implements Serializable, Cloneable, S
     private AwsElasticsearchDomainDomainEndpointOptions domainEndpointOptions;
     /**
      * <p>
-     * Unique identifier for an Amazon ES domain.
+     * Unique identifier for an Elasticsearch domain.
      * </p>
      */
     private String domainId;
     /**
      * <p>
-     * Name of an Amazon ES domain.
+     * Name of an Elasticsearch domain.
      * </p>
      * <p>
-     * Domain names are unique across all domains owned by the same account within an AWS Region.
+     * Domain names are unique across all domains owned by the same account within an Amazon Web Services Region.
      * </p>
      * <p>
      * Domain names must start with a lowercase letter and must be between 3 and 28 characters.
@@ -63,7 +63,7 @@ public class AwsElasticsearchDomainDetails implements Serializable, Cloneable, S
     private String domainName;
     /**
      * <p>
-     * Domain-specific endpoint used to submit index, search, and data upload requests to an Amazon ES domain.
+     * Domain-specific endpoint used to submit index, search, and data upload requests to an Elasticsearch domain.
      * </p>
      * <p>
      * The endpoint is a service URL.
@@ -72,7 +72,7 @@ public class AwsElasticsearchDomainDetails implements Serializable, Cloneable, S
     private String endpoint;
     /**
      * <p>
-     * The key-value pair that exists if the Amazon ES domain uses VPC endpoints.
+     * The key-value pair that exists if the Elasticsearch domain uses VPC endpoints.
      * </p>
      */
     private java.util.Map<String, String> endpoints;
@@ -82,6 +82,12 @@ public class AwsElasticsearchDomainDetails implements Serializable, Cloneable, S
      * </p>
      */
     private String elasticsearchVersion;
+    /**
+     * <p>
+     * Information about an Elasticsearch cluster configuration.
+     * </p>
+     */
+    private AwsElasticsearchDomainElasticsearchClusterConfigDetails elasticsearchClusterConfig;
     /**
      * <p>
      * Details about the configuration for encryption at rest.
@@ -108,18 +114,18 @@ public class AwsElasticsearchDomainDetails implements Serializable, Cloneable, S
     private AwsElasticsearchDomainServiceSoftwareOptions serviceSoftwareOptions;
     /**
      * <p>
-     * Information that Amazon ES derives based on <code>VPCOptions</code> for the domain.
+     * Information that Elasticsearch derives based on <code>VPCOptions</code> for the domain.
      * </p>
      */
     private AwsElasticsearchDomainVPCOptions vPCOptions;
 
     /**
      * <p>
-     * IAM policy document specifying the access policies for the new Amazon ES domain.
+     * IAM policy document specifying the access policies for the new Elasticsearch domain.
      * </p>
      * 
      * @param accessPolicies
-     *        IAM policy document specifying the access policies for the new Amazon ES domain.
+     *        IAM policy document specifying the access policies for the new Elasticsearch domain.
      */
 
     public void setAccessPolicies(String accessPolicies) {
@@ -128,10 +134,10 @@ public class AwsElasticsearchDomainDetails implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * IAM policy document specifying the access policies for the new Amazon ES domain.
+     * IAM policy document specifying the access policies for the new Elasticsearch domain.
      * </p>
      * 
-     * @return IAM policy document specifying the access policies for the new Amazon ES domain.
+     * @return IAM policy document specifying the access policies for the new Elasticsearch domain.
      */
 
     public String getAccessPolicies() {
@@ -140,11 +146,11 @@ public class AwsElasticsearchDomainDetails implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * IAM policy document specifying the access policies for the new Amazon ES domain.
+     * IAM policy document specifying the access policies for the new Elasticsearch domain.
      * </p>
      * 
      * @param accessPolicies
-     *        IAM policy document specifying the access policies for the new Amazon ES domain.
+     *        IAM policy document specifying the access policies for the new Elasticsearch domain.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -195,11 +201,11 @@ public class AwsElasticsearchDomainDetails implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * Unique identifier for an Amazon ES domain.
+     * Unique identifier for an Elasticsearch domain.
      * </p>
      * 
      * @param domainId
-     *        Unique identifier for an Amazon ES domain.
+     *        Unique identifier for an Elasticsearch domain.
      */
 
     public void setDomainId(String domainId) {
@@ -208,10 +214,10 @@ public class AwsElasticsearchDomainDetails implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * Unique identifier for an Amazon ES domain.
+     * Unique identifier for an Elasticsearch domain.
      * </p>
      * 
-     * @return Unique identifier for an Amazon ES domain.
+     * @return Unique identifier for an Elasticsearch domain.
      */
 
     public String getDomainId() {
@@ -220,11 +226,11 @@ public class AwsElasticsearchDomainDetails implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * Unique identifier for an Amazon ES domain.
+     * Unique identifier for an Elasticsearch domain.
      * </p>
      * 
      * @param domainId
-     *        Unique identifier for an Amazon ES domain.
+     *        Unique identifier for an Elasticsearch domain.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -235,10 +241,10 @@ public class AwsElasticsearchDomainDetails implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * Name of an Amazon ES domain.
+     * Name of an Elasticsearch domain.
      * </p>
      * <p>
-     * Domain names are unique across all domains owned by the same account within an AWS Region.
+     * Domain names are unique across all domains owned by the same account within an Amazon Web Services Region.
      * </p>
      * <p>
      * Domain names must start with a lowercase letter and must be between 3 and 28 characters.
@@ -248,9 +254,9 @@ public class AwsElasticsearchDomainDetails implements Serializable, Cloneable, S
      * </p>
      * 
      * @param domainName
-     *        Name of an Amazon ES domain.</p>
+     *        Name of an Elasticsearch domain.</p>
      *        <p>
-     *        Domain names are unique across all domains owned by the same account within an AWS Region.
+     *        Domain names are unique across all domains owned by the same account within an Amazon Web Services Region.
      *        </p>
      *        <p>
      *        Domain names must start with a lowercase letter and must be between 3 and 28 characters.
@@ -265,10 +271,10 @@ public class AwsElasticsearchDomainDetails implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * Name of an Amazon ES domain.
+     * Name of an Elasticsearch domain.
      * </p>
      * <p>
-     * Domain names are unique across all domains owned by the same account within an AWS Region.
+     * Domain names are unique across all domains owned by the same account within an Amazon Web Services Region.
      * </p>
      * <p>
      * Domain names must start with a lowercase letter and must be between 3 and 28 characters.
@@ -277,9 +283,10 @@ public class AwsElasticsearchDomainDetails implements Serializable, Cloneable, S
      * Valid characters are a-z (lowercase only), 0-9, and – (hyphen).
      * </p>
      * 
-     * @return Name of an Amazon ES domain.</p>
+     * @return Name of an Elasticsearch domain.</p>
      *         <p>
-     *         Domain names are unique across all domains owned by the same account within an AWS Region.
+     *         Domain names are unique across all domains owned by the same account within an Amazon Web Services
+     *         Region.
      *         </p>
      *         <p>
      *         Domain names must start with a lowercase letter and must be between 3 and 28 characters.
@@ -294,10 +301,10 @@ public class AwsElasticsearchDomainDetails implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * Name of an Amazon ES domain.
+     * Name of an Elasticsearch domain.
      * </p>
      * <p>
-     * Domain names are unique across all domains owned by the same account within an AWS Region.
+     * Domain names are unique across all domains owned by the same account within an Amazon Web Services Region.
      * </p>
      * <p>
      * Domain names must start with a lowercase letter and must be between 3 and 28 characters.
@@ -307,9 +314,9 @@ public class AwsElasticsearchDomainDetails implements Serializable, Cloneable, S
      * </p>
      * 
      * @param domainName
-     *        Name of an Amazon ES domain.</p>
+     *        Name of an Elasticsearch domain.</p>
      *        <p>
-     *        Domain names are unique across all domains owned by the same account within an AWS Region.
+     *        Domain names are unique across all domains owned by the same account within an Amazon Web Services Region.
      *        </p>
      *        <p>
      *        Domain names must start with a lowercase letter and must be between 3 and 28 characters.
@@ -326,14 +333,14 @@ public class AwsElasticsearchDomainDetails implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * Domain-specific endpoint used to submit index, search, and data upload requests to an Amazon ES domain.
+     * Domain-specific endpoint used to submit index, search, and data upload requests to an Elasticsearch domain.
      * </p>
      * <p>
      * The endpoint is a service URL.
      * </p>
      * 
      * @param endpoint
-     *        Domain-specific endpoint used to submit index, search, and data upload requests to an Amazon ES
+     *        Domain-specific endpoint used to submit index, search, and data upload requests to an Elasticsearch
      *        domain.</p>
      *        <p>
      *        The endpoint is a service URL.
@@ -345,13 +352,13 @@ public class AwsElasticsearchDomainDetails implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * Domain-specific endpoint used to submit index, search, and data upload requests to an Amazon ES domain.
+     * Domain-specific endpoint used to submit index, search, and data upload requests to an Elasticsearch domain.
      * </p>
      * <p>
      * The endpoint is a service URL.
      * </p>
      * 
-     * @return Domain-specific endpoint used to submit index, search, and data upload requests to an Amazon ES
+     * @return Domain-specific endpoint used to submit index, search, and data upload requests to an Elasticsearch
      *         domain.</p>
      *         <p>
      *         The endpoint is a service URL.
@@ -363,14 +370,14 @@ public class AwsElasticsearchDomainDetails implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * Domain-specific endpoint used to submit index, search, and data upload requests to an Amazon ES domain.
+     * Domain-specific endpoint used to submit index, search, and data upload requests to an Elasticsearch domain.
      * </p>
      * <p>
      * The endpoint is a service URL.
      * </p>
      * 
      * @param endpoint
-     *        Domain-specific endpoint used to submit index, search, and data upload requests to an Amazon ES
+     *        Domain-specific endpoint used to submit index, search, and data upload requests to an Elasticsearch
      *        domain.</p>
      *        <p>
      *        The endpoint is a service URL.
@@ -384,10 +391,10 @@ public class AwsElasticsearchDomainDetails implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The key-value pair that exists if the Amazon ES domain uses VPC endpoints.
+     * The key-value pair that exists if the Elasticsearch domain uses VPC endpoints.
      * </p>
      * 
-     * @return The key-value pair that exists if the Amazon ES domain uses VPC endpoints.
+     * @return The key-value pair that exists if the Elasticsearch domain uses VPC endpoints.
      */
 
     public java.util.Map<String, String> getEndpoints() {
@@ -396,11 +403,11 @@ public class AwsElasticsearchDomainDetails implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The key-value pair that exists if the Amazon ES domain uses VPC endpoints.
+     * The key-value pair that exists if the Elasticsearch domain uses VPC endpoints.
      * </p>
      * 
      * @param endpoints
-     *        The key-value pair that exists if the Amazon ES domain uses VPC endpoints.
+     *        The key-value pair that exists if the Elasticsearch domain uses VPC endpoints.
      */
 
     public void setEndpoints(java.util.Map<String, String> endpoints) {
@@ -409,11 +416,11 @@ public class AwsElasticsearchDomainDetails implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The key-value pair that exists if the Amazon ES domain uses VPC endpoints.
+     * The key-value pair that exists if the Elasticsearch domain uses VPC endpoints.
      * </p>
      * 
      * @param endpoints
-     *        The key-value pair that exists if the Amazon ES domain uses VPC endpoints.
+     *        The key-value pair that exists if the Elasticsearch domain uses VPC endpoints.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -487,6 +494,46 @@ public class AwsElasticsearchDomainDetails implements Serializable, Cloneable, S
 
     public AwsElasticsearchDomainDetails withElasticsearchVersion(String elasticsearchVersion) {
         setElasticsearchVersion(elasticsearchVersion);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Information about an Elasticsearch cluster configuration.
+     * </p>
+     * 
+     * @param elasticsearchClusterConfig
+     *        Information about an Elasticsearch cluster configuration.
+     */
+
+    public void setElasticsearchClusterConfig(AwsElasticsearchDomainElasticsearchClusterConfigDetails elasticsearchClusterConfig) {
+        this.elasticsearchClusterConfig = elasticsearchClusterConfig;
+    }
+
+    /**
+     * <p>
+     * Information about an Elasticsearch cluster configuration.
+     * </p>
+     * 
+     * @return Information about an Elasticsearch cluster configuration.
+     */
+
+    public AwsElasticsearchDomainElasticsearchClusterConfigDetails getElasticsearchClusterConfig() {
+        return this.elasticsearchClusterConfig;
+    }
+
+    /**
+     * <p>
+     * Information about an Elasticsearch cluster configuration.
+     * </p>
+     * 
+     * @param elasticsearchClusterConfig
+     *        Information about an Elasticsearch cluster configuration.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AwsElasticsearchDomainDetails withElasticsearchClusterConfig(AwsElasticsearchDomainElasticsearchClusterConfigDetails elasticsearchClusterConfig) {
+        setElasticsearchClusterConfig(elasticsearchClusterConfig);
         return this;
     }
 
@@ -652,11 +699,11 @@ public class AwsElasticsearchDomainDetails implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * Information that Amazon ES derives based on <code>VPCOptions</code> for the domain.
+     * Information that Elasticsearch derives based on <code>VPCOptions</code> for the domain.
      * </p>
      * 
      * @param vPCOptions
-     *        Information that Amazon ES derives based on <code>VPCOptions</code> for the domain.
+     *        Information that Elasticsearch derives based on <code>VPCOptions</code> for the domain.
      */
 
     public void setVPCOptions(AwsElasticsearchDomainVPCOptions vPCOptions) {
@@ -665,10 +712,10 @@ public class AwsElasticsearchDomainDetails implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * Information that Amazon ES derives based on <code>VPCOptions</code> for the domain.
+     * Information that Elasticsearch derives based on <code>VPCOptions</code> for the domain.
      * </p>
      * 
-     * @return Information that Amazon ES derives based on <code>VPCOptions</code> for the domain.
+     * @return Information that Elasticsearch derives based on <code>VPCOptions</code> for the domain.
      */
 
     public AwsElasticsearchDomainVPCOptions getVPCOptions() {
@@ -677,11 +724,11 @@ public class AwsElasticsearchDomainDetails implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * Information that Amazon ES derives based on <code>VPCOptions</code> for the domain.
+     * Information that Elasticsearch derives based on <code>VPCOptions</code> for the domain.
      * </p>
      * 
      * @param vPCOptions
-     *        Information that Amazon ES derives based on <code>VPCOptions</code> for the domain.
+     *        Information that Elasticsearch derives based on <code>VPCOptions</code> for the domain.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -716,6 +763,8 @@ public class AwsElasticsearchDomainDetails implements Serializable, Cloneable, S
             sb.append("Endpoints: ").append(getEndpoints()).append(",");
         if (getElasticsearchVersion() != null)
             sb.append("ElasticsearchVersion: ").append(getElasticsearchVersion()).append(",");
+        if (getElasticsearchClusterConfig() != null)
+            sb.append("ElasticsearchClusterConfig: ").append(getElasticsearchClusterConfig()).append(",");
         if (getEncryptionAtRestOptions() != null)
             sb.append("EncryptionAtRestOptions: ").append(getEncryptionAtRestOptions()).append(",");
         if (getLogPublishingOptions() != null)
@@ -768,6 +817,10 @@ public class AwsElasticsearchDomainDetails implements Serializable, Cloneable, S
             return false;
         if (other.getElasticsearchVersion() != null && other.getElasticsearchVersion().equals(this.getElasticsearchVersion()) == false)
             return false;
+        if (other.getElasticsearchClusterConfig() == null ^ this.getElasticsearchClusterConfig() == null)
+            return false;
+        if (other.getElasticsearchClusterConfig() != null && other.getElasticsearchClusterConfig().equals(this.getElasticsearchClusterConfig()) == false)
+            return false;
         if (other.getEncryptionAtRestOptions() == null ^ this.getEncryptionAtRestOptions() == null)
             return false;
         if (other.getEncryptionAtRestOptions() != null && other.getEncryptionAtRestOptions().equals(this.getEncryptionAtRestOptions()) == false)
@@ -803,6 +856,7 @@ public class AwsElasticsearchDomainDetails implements Serializable, Cloneable, S
         hashCode = prime * hashCode + ((getEndpoint() == null) ? 0 : getEndpoint().hashCode());
         hashCode = prime * hashCode + ((getEndpoints() == null) ? 0 : getEndpoints().hashCode());
         hashCode = prime * hashCode + ((getElasticsearchVersion() == null) ? 0 : getElasticsearchVersion().hashCode());
+        hashCode = prime * hashCode + ((getElasticsearchClusterConfig() == null) ? 0 : getElasticsearchClusterConfig().hashCode());
         hashCode = prime * hashCode + ((getEncryptionAtRestOptions() == null) ? 0 : getEncryptionAtRestOptions().hashCode());
         hashCode = prime * hashCode + ((getLogPublishingOptions() == null) ? 0 : getLogPublishingOptions().hashCode());
         hashCode = prime * hashCode + ((getNodeToNodeEncryptionOptions() == null) ? 0 : getNodeToNodeEncryptionOptions().hashCode());

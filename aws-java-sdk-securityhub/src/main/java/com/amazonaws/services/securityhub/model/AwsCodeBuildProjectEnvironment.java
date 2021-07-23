@@ -36,7 +36,7 @@ public class AwsCodeBuildProjectEnvironment implements Serializable, Cloneable, 
     private String certificate;
     /**
      * <p>
-     * The type of credentials AWS CodeBuild uses to pull images in your build.
+     * The type of credentials CodeBuild uses to pull images in your build.
      * </p>
      * <p>
      * Valid values:
@@ -44,19 +44,19 @@ public class AwsCodeBuildProjectEnvironment implements Serializable, Cloneable, 
      * <ul>
      * <li>
      * <p>
-     * <code>CODEBUILD</code> specifies that AWS CodeBuild uses its own credentials. This requires that you modify your
-     * ECR repository policy to trust the AWS CodeBuild service principal.
+     * <code>CODEBUILD</code> specifies that CodeBuild uses its own credentials. This requires that you modify your ECR
+     * repository policy to trust the CodeBuild service principal.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>SERVICE_ROLE</code> specifies that AWS CodeBuild uses your build project's service role.
+     * <code>SERVICE_ROLE</code> specifies that CodeBuild uses your build project's service role.
      * </p>
      * </li>
      * </ul>
      * <p>
      * When you use a cross-account or private registry image, you must use <code>SERVICE_ROLE</code> credentials. When
-     * you use an AWS CodeBuild curated image, you must use <code>CODEBUILD</code> credentials.
+     * you use an CodeBuild curated image, you must use <code>CODEBUILD</code> credentials.
      * </p>
      */
     private String imagePullCredentialsType;
@@ -136,7 +136,7 @@ public class AwsCodeBuildProjectEnvironment implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The type of credentials AWS CodeBuild uses to pull images in your build.
+     * The type of credentials CodeBuild uses to pull images in your build.
      * </p>
      * <p>
      * Valid values:
@@ -144,42 +144,42 @@ public class AwsCodeBuildProjectEnvironment implements Serializable, Cloneable, 
      * <ul>
      * <li>
      * <p>
-     * <code>CODEBUILD</code> specifies that AWS CodeBuild uses its own credentials. This requires that you modify your
-     * ECR repository policy to trust the AWS CodeBuild service principal.
+     * <code>CODEBUILD</code> specifies that CodeBuild uses its own credentials. This requires that you modify your ECR
+     * repository policy to trust the CodeBuild service principal.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>SERVICE_ROLE</code> specifies that AWS CodeBuild uses your build project's service role.
+     * <code>SERVICE_ROLE</code> specifies that CodeBuild uses your build project's service role.
      * </p>
      * </li>
      * </ul>
      * <p>
      * When you use a cross-account or private registry image, you must use <code>SERVICE_ROLE</code> credentials. When
-     * you use an AWS CodeBuild curated image, you must use <code>CODEBUILD</code> credentials.
+     * you use an CodeBuild curated image, you must use <code>CODEBUILD</code> credentials.
      * </p>
      * 
      * @param imagePullCredentialsType
-     *        The type of credentials AWS CodeBuild uses to pull images in your build.</p>
+     *        The type of credentials CodeBuild uses to pull images in your build.</p>
      *        <p>
      *        Valid values:
      *        </p>
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>CODEBUILD</code> specifies that AWS CodeBuild uses its own credentials. This requires that you
-     *        modify your ECR repository policy to trust the AWS CodeBuild service principal.
+     *        <code>CODEBUILD</code> specifies that CodeBuild uses its own credentials. This requires that you modify
+     *        your ECR repository policy to trust the CodeBuild service principal.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>SERVICE_ROLE</code> specifies that AWS CodeBuild uses your build project's service role.
+     *        <code>SERVICE_ROLE</code> specifies that CodeBuild uses your build project's service role.
      *        </p>
      *        </li>
      *        </ul>
      *        <p>
      *        When you use a cross-account or private registry image, you must use <code>SERVICE_ROLE</code>
-     *        credentials. When you use an AWS CodeBuild curated image, you must use <code>CODEBUILD</code> credentials.
+     *        credentials. When you use an CodeBuild curated image, you must use <code>CODEBUILD</code> credentials.
      */
 
     public void setImagePullCredentialsType(String imagePullCredentialsType) {
@@ -188,7 +188,7 @@ public class AwsCodeBuildProjectEnvironment implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The type of credentials AWS CodeBuild uses to pull images in your build.
+     * The type of credentials CodeBuild uses to pull images in your build.
      * </p>
      * <p>
      * Valid values:
@@ -196,42 +196,41 @@ public class AwsCodeBuildProjectEnvironment implements Serializable, Cloneable, 
      * <ul>
      * <li>
      * <p>
-     * <code>CODEBUILD</code> specifies that AWS CodeBuild uses its own credentials. This requires that you modify your
-     * ECR repository policy to trust the AWS CodeBuild service principal.
+     * <code>CODEBUILD</code> specifies that CodeBuild uses its own credentials. This requires that you modify your ECR
+     * repository policy to trust the CodeBuild service principal.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>SERVICE_ROLE</code> specifies that AWS CodeBuild uses your build project's service role.
+     * <code>SERVICE_ROLE</code> specifies that CodeBuild uses your build project's service role.
      * </p>
      * </li>
      * </ul>
      * <p>
      * When you use a cross-account or private registry image, you must use <code>SERVICE_ROLE</code> credentials. When
-     * you use an AWS CodeBuild curated image, you must use <code>CODEBUILD</code> credentials.
+     * you use an CodeBuild curated image, you must use <code>CODEBUILD</code> credentials.
      * </p>
      * 
-     * @return The type of credentials AWS CodeBuild uses to pull images in your build.</p>
+     * @return The type of credentials CodeBuild uses to pull images in your build.</p>
      *         <p>
      *         Valid values:
      *         </p>
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>CODEBUILD</code> specifies that AWS CodeBuild uses its own credentials. This requires that you
-     *         modify your ECR repository policy to trust the AWS CodeBuild service principal.
+     *         <code>CODEBUILD</code> specifies that CodeBuild uses its own credentials. This requires that you modify
+     *         your ECR repository policy to trust the CodeBuild service principal.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>SERVICE_ROLE</code> specifies that AWS CodeBuild uses your build project's service role.
+     *         <code>SERVICE_ROLE</code> specifies that CodeBuild uses your build project's service role.
      *         </p>
      *         </li>
      *         </ul>
      *         <p>
      *         When you use a cross-account or private registry image, you must use <code>SERVICE_ROLE</code>
-     *         credentials. When you use an AWS CodeBuild curated image, you must use <code>CODEBUILD</code>
-     *         credentials.
+     *         credentials. When you use an CodeBuild curated image, you must use <code>CODEBUILD</code> credentials.
      */
 
     public String getImagePullCredentialsType() {
@@ -240,7 +239,7 @@ public class AwsCodeBuildProjectEnvironment implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The type of credentials AWS CodeBuild uses to pull images in your build.
+     * The type of credentials CodeBuild uses to pull images in your build.
      * </p>
      * <p>
      * Valid values:
@@ -248,42 +247,42 @@ public class AwsCodeBuildProjectEnvironment implements Serializable, Cloneable, 
      * <ul>
      * <li>
      * <p>
-     * <code>CODEBUILD</code> specifies that AWS CodeBuild uses its own credentials. This requires that you modify your
-     * ECR repository policy to trust the AWS CodeBuild service principal.
+     * <code>CODEBUILD</code> specifies that CodeBuild uses its own credentials. This requires that you modify your ECR
+     * repository policy to trust the CodeBuild service principal.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>SERVICE_ROLE</code> specifies that AWS CodeBuild uses your build project's service role.
+     * <code>SERVICE_ROLE</code> specifies that CodeBuild uses your build project's service role.
      * </p>
      * </li>
      * </ul>
      * <p>
      * When you use a cross-account or private registry image, you must use <code>SERVICE_ROLE</code> credentials. When
-     * you use an AWS CodeBuild curated image, you must use <code>CODEBUILD</code> credentials.
+     * you use an CodeBuild curated image, you must use <code>CODEBUILD</code> credentials.
      * </p>
      * 
      * @param imagePullCredentialsType
-     *        The type of credentials AWS CodeBuild uses to pull images in your build.</p>
+     *        The type of credentials CodeBuild uses to pull images in your build.</p>
      *        <p>
      *        Valid values:
      *        </p>
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>CODEBUILD</code> specifies that AWS CodeBuild uses its own credentials. This requires that you
-     *        modify your ECR repository policy to trust the AWS CodeBuild service principal.
+     *        <code>CODEBUILD</code> specifies that CodeBuild uses its own credentials. This requires that you modify
+     *        your ECR repository policy to trust the CodeBuild service principal.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>SERVICE_ROLE</code> specifies that AWS CodeBuild uses your build project's service role.
+     *        <code>SERVICE_ROLE</code> specifies that CodeBuild uses your build project's service role.
      *        </p>
      *        </li>
      *        </ul>
      *        <p>
      *        When you use a cross-account or private registry image, you must use <code>SERVICE_ROLE</code>
-     *        credentials. When you use an AWS CodeBuild curated image, you must use <code>CODEBUILD</code> credentials.
+     *        credentials. When you use an CodeBuild curated image, you must use <code>CODEBUILD</code> credentials.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

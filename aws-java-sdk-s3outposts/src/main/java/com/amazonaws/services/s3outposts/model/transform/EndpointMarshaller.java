@@ -40,6 +40,16 @@ public class EndpointMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CreationTime").timestampFormat("unixTimestamp").build();
     private static final MarshallingInfo<List> NETWORKINTERFACES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("NetworkInterfaces").build();
+    private static final MarshallingInfo<String> VPCID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("VpcId").build();
+    private static final MarshallingInfo<String> SUBNETID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("SubnetId").build();
+    private static final MarshallingInfo<String> SECURITYGROUPID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SecurityGroupId").build();
+    private static final MarshallingInfo<String> ACCESSTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AccessType").build();
+    private static final MarshallingInfo<String> CUSTOMEROWNEDIPV4POOL_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CustomerOwnedIpv4Pool").build();
 
     private static final EndpointMarshaller instance = new EndpointMarshaller();
 
@@ -63,6 +73,11 @@ public class EndpointMarshaller {
             protocolMarshaller.marshall(endpoint.getStatus(), STATUS_BINDING);
             protocolMarshaller.marshall(endpoint.getCreationTime(), CREATIONTIME_BINDING);
             protocolMarshaller.marshall(endpoint.getNetworkInterfaces(), NETWORKINTERFACES_BINDING);
+            protocolMarshaller.marshall(endpoint.getVpcId(), VPCID_BINDING);
+            protocolMarshaller.marshall(endpoint.getSubnetId(), SUBNETID_BINDING);
+            protocolMarshaller.marshall(endpoint.getSecurityGroupId(), SECURITYGROUPID_BINDING);
+            protocolMarshaller.marshall(endpoint.getAccessType(), ACCESSTYPE_BINDING);
+            protocolMarshaller.marshall(endpoint.getCustomerOwnedIpv4Pool(), CUSTOMEROWNEDIPV4POOL_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

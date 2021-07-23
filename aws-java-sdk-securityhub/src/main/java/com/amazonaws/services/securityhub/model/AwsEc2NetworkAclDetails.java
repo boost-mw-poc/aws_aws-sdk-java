@@ -42,7 +42,7 @@ public class AwsEc2NetworkAclDetails implements Serializable, Cloneable, Structu
     private String networkAclId;
     /**
      * <p>
-     * The identifier of the AWS account that owns the network ACL.
+     * The identifier of the Amazon Web Services account that owns the network ACL.
      * </p>
      */
     private String ownerId;
@@ -159,11 +159,11 @@ public class AwsEc2NetworkAclDetails implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The identifier of the AWS account that owns the network ACL.
+     * The identifier of the Amazon Web Services account that owns the network ACL.
      * </p>
      * 
      * @param ownerId
-     *        The identifier of the AWS account that owns the network ACL.
+     *        The identifier of the Amazon Web Services account that owns the network ACL.
      */
 
     public void setOwnerId(String ownerId) {
@@ -172,10 +172,10 @@ public class AwsEc2NetworkAclDetails implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The identifier of the AWS account that owns the network ACL.
+     * The identifier of the Amazon Web Services account that owns the network ACL.
      * </p>
      * 
-     * @return The identifier of the AWS account that owns the network ACL.
+     * @return The identifier of the Amazon Web Services account that owns the network ACL.
      */
 
     public String getOwnerId() {
@@ -184,11 +184,11 @@ public class AwsEc2NetworkAclDetails implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The identifier of the AWS account that owns the network ACL.
+     * The identifier of the Amazon Web Services account that owns the network ACL.
      * </p>
      * 
      * @param ownerId
-     *        The identifier of the AWS account that owns the network ACL.
+     *        The identifier of the Amazon Web Services account that owns the network ACL.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -67,7 +67,8 @@ public class SeverityUpdate implements Serializable, Cloneable, StructuredPojo {
     private Integer normalized;
     /**
      * <p>
-     * The native severity as defined by the AWS service or integrated partner product that generated the finding.
+     * The native severity as defined by the Amazon Web Services service or integrated partner product that generated
+     * the finding.
      * </p>
      */
     private Double product;
@@ -333,12 +334,13 @@ public class SeverityUpdate implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The native severity as defined by the AWS service or integrated partner product that generated the finding.
+     * The native severity as defined by the Amazon Web Services service or integrated partner product that generated
+     * the finding.
      * </p>
      * 
      * @param product
-     *        The native severity as defined by the AWS service or integrated partner product that generated the
-     *        finding.
+     *        The native severity as defined by the Amazon Web Services service or integrated partner product that
+     *        generated the finding.
      */
 
     public void setProduct(Double product) {
@@ -347,11 +349,12 @@ public class SeverityUpdate implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The native severity as defined by the AWS service or integrated partner product that generated the finding.
+     * The native severity as defined by the Amazon Web Services service or integrated partner product that generated
+     * the finding.
      * </p>
      * 
-     * @return The native severity as defined by the AWS service or integrated partner product that generated the
-     *         finding.
+     * @return The native severity as defined by the Amazon Web Services service or integrated partner product that
+     *         generated the finding.
      */
 
     public Double getProduct() {
@@ -360,12 +363,13 @@ public class SeverityUpdate implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The native severity as defined by the AWS service or integrated partner product that generated the finding.
+     * The native severity as defined by the Amazon Web Services service or integrated partner product that generated
+     * the finding.
      * </p>
      * 
      * @param product
-     *        The native severity as defined by the AWS service or integrated partner product that generated the
-     *        finding.
+     *        The native severity as defined by the Amazon Web Services service or integrated partner product that
+     *        generated the finding.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

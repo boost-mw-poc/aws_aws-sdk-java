@@ -36,6 +36,8 @@ public class AwsSecurityFindingFiltersMarshaller {
             .marshallLocationName("Id").build();
     private static final MarshallingInfo<List> GENERATORID_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("GeneratorId").build();
+    private static final MarshallingInfo<List> REGION_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Region").build();
     private static final MarshallingInfo<List> TYPE_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Type").build();
     private static final MarshallingInfo<List> FIRSTOBSERVEDAT_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
@@ -160,10 +162,14 @@ public class AwsSecurityFindingFiltersMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ResourceAwsS3BucketOwnerName").build();
     private static final MarshallingInfo<List> RESOURCEAWSIAMACCESSKEYUSERNAME_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ResourceAwsIamAccessKeyUserName").build();
+    private static final MarshallingInfo<List> RESOURCEAWSIAMACCESSKEYPRINCIPALNAME_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ResourceAwsIamAccessKeyPrincipalName").build();
     private static final MarshallingInfo<List> RESOURCEAWSIAMACCESSKEYSTATUS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ResourceAwsIamAccessKeyStatus").build();
     private static final MarshallingInfo<List> RESOURCEAWSIAMACCESSKEYCREATEDAT_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ResourceAwsIamAccessKeyCreatedAt").build();
+    private static final MarshallingInfo<List> RESOURCEAWSIAMUSERUSERNAME_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ResourceAwsIamUserUserName").build();
     private static final MarshallingInfo<List> RESOURCECONTAINERNAME_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ResourceContainerName").build();
     private static final MarshallingInfo<List> RESOURCECONTAINERIMAGEID_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
@@ -231,6 +237,7 @@ public class AwsSecurityFindingFiltersMarshaller {
             protocolMarshaller.marshall(awsSecurityFindingFilters.getAwsAccountId(), AWSACCOUNTID_BINDING);
             protocolMarshaller.marshall(awsSecurityFindingFilters.getId(), ID_BINDING);
             protocolMarshaller.marshall(awsSecurityFindingFilters.getGeneratorId(), GENERATORID_BINDING);
+            protocolMarshaller.marshall(awsSecurityFindingFilters.getRegion(), REGION_BINDING);
             protocolMarshaller.marshall(awsSecurityFindingFilters.getType(), TYPE_BINDING);
             protocolMarshaller.marshall(awsSecurityFindingFilters.getFirstObservedAt(), FIRSTOBSERVEDAT_BINDING);
             protocolMarshaller.marshall(awsSecurityFindingFilters.getLastObservedAt(), LASTOBSERVEDAT_BINDING);
@@ -294,8 +301,10 @@ public class AwsSecurityFindingFiltersMarshaller {
             protocolMarshaller.marshall(awsSecurityFindingFilters.getResourceAwsS3BucketOwnerId(), RESOURCEAWSS3BUCKETOWNERID_BINDING);
             protocolMarshaller.marshall(awsSecurityFindingFilters.getResourceAwsS3BucketOwnerName(), RESOURCEAWSS3BUCKETOWNERNAME_BINDING);
             protocolMarshaller.marshall(awsSecurityFindingFilters.getResourceAwsIamAccessKeyUserName(), RESOURCEAWSIAMACCESSKEYUSERNAME_BINDING);
+            protocolMarshaller.marshall(awsSecurityFindingFilters.getResourceAwsIamAccessKeyPrincipalName(), RESOURCEAWSIAMACCESSKEYPRINCIPALNAME_BINDING);
             protocolMarshaller.marshall(awsSecurityFindingFilters.getResourceAwsIamAccessKeyStatus(), RESOURCEAWSIAMACCESSKEYSTATUS_BINDING);
             protocolMarshaller.marshall(awsSecurityFindingFilters.getResourceAwsIamAccessKeyCreatedAt(), RESOURCEAWSIAMACCESSKEYCREATEDAT_BINDING);
+            protocolMarshaller.marshall(awsSecurityFindingFilters.getResourceAwsIamUserUserName(), RESOURCEAWSIAMUSERUSERNAME_BINDING);
             protocolMarshaller.marshall(awsSecurityFindingFilters.getResourceContainerName(), RESOURCECONTAINERNAME_BINDING);
             protocolMarshaller.marshall(awsSecurityFindingFilters.getResourceContainerImageId(), RESOURCECONTAINERIMAGEID_BINDING);
             protocolMarshaller.marshall(awsSecurityFindingFilters.getResourceContainerImageName(), RESOURCECONTAINERIMAGENAME_BINDING);

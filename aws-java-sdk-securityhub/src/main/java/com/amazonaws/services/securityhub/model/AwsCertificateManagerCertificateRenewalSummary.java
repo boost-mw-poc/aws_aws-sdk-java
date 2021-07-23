@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Contains information about the AWS Certificate Manager managed renewal for an <code>AMAZON_ISSUED</code> certificate.
+ * Contains information about the Certificate Manager managed renewal for an <code>AMAZON_ISSUED</code> certificate.
  * </p>
  * 
  * @see <a
@@ -31,14 +31,14 @@ public class AwsCertificateManagerCertificateRenewalSummary implements Serializa
 
     /**
      * <p>
-     * Information about the validation of each domain name in the certificate, as it pertains to AWS Certificate
-     * Manager managed renewal. Provided only when the certificate type is <code>AMAZON_ISSUED</code>.
+     * Information about the validation of each domain name in the certificate, as it pertains to Certificate Manager
+     * managed renewal. Provided only when the certificate type is <code>AMAZON_ISSUED</code>.
      * </p>
      */
     private java.util.List<AwsCertificateManagerCertificateDomainValidationOption> domainValidationOptions;
     /**
      * <p>
-     * The status of the AWS Certificate Manager managed renewal of the certificate.
+     * The status of the Certificate Manager managed renewal of the certificate.
      * </p>
      * <p>
      * Valid values: <code>PENDING_AUTO_RENEWAL</code> | <code>PENDING_VALIDATION</code> | <code>SUCCESS</code> |
@@ -74,13 +74,12 @@ public class AwsCertificateManagerCertificateRenewalSummary implements Serializa
 
     /**
      * <p>
-     * Information about the validation of each domain name in the certificate, as it pertains to AWS Certificate
-     * Manager managed renewal. Provided only when the certificate type is <code>AMAZON_ISSUED</code>.
+     * Information about the validation of each domain name in the certificate, as it pertains to Certificate Manager
+     * managed renewal. Provided only when the certificate type is <code>AMAZON_ISSUED</code>.
      * </p>
      * 
-     * @return Information about the validation of each domain name in the certificate, as it pertains to AWS
-     *         Certificate Manager managed renewal. Provided only when the certificate type is
-     *         <code>AMAZON_ISSUED</code>.
+     * @return Information about the validation of each domain name in the certificate, as it pertains to Certificate
+     *         Manager managed renewal. Provided only when the certificate type is <code>AMAZON_ISSUED</code>.
      */
 
     public java.util.List<AwsCertificateManagerCertificateDomainValidationOption> getDomainValidationOptions() {
@@ -89,12 +88,12 @@ public class AwsCertificateManagerCertificateRenewalSummary implements Serializa
 
     /**
      * <p>
-     * Information about the validation of each domain name in the certificate, as it pertains to AWS Certificate
-     * Manager managed renewal. Provided only when the certificate type is <code>AMAZON_ISSUED</code>.
+     * Information about the validation of each domain name in the certificate, as it pertains to Certificate Manager
+     * managed renewal. Provided only when the certificate type is <code>AMAZON_ISSUED</code>.
      * </p>
      * 
      * @param domainValidationOptions
-     *        Information about the validation of each domain name in the certificate, as it pertains to AWS Certificate
+     *        Information about the validation of each domain name in the certificate, as it pertains to Certificate
      *        Manager managed renewal. Provided only when the certificate type is <code>AMAZON_ISSUED</code>.
      */
 
@@ -109,8 +108,8 @@ public class AwsCertificateManagerCertificateRenewalSummary implements Serializa
 
     /**
      * <p>
-     * Information about the validation of each domain name in the certificate, as it pertains to AWS Certificate
-     * Manager managed renewal. Provided only when the certificate type is <code>AMAZON_ISSUED</code>.
+     * Information about the validation of each domain name in the certificate, as it pertains to Certificate Manager
+     * managed renewal. Provided only when the certificate type is <code>AMAZON_ISSUED</code>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -119,7 +118,7 @@ public class AwsCertificateManagerCertificateRenewalSummary implements Serializa
      * </p>
      * 
      * @param domainValidationOptions
-     *        Information about the validation of each domain name in the certificate, as it pertains to AWS Certificate
+     *        Information about the validation of each domain name in the certificate, as it pertains to Certificate
      *        Manager managed renewal. Provided only when the certificate type is <code>AMAZON_ISSUED</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -137,12 +136,12 @@ public class AwsCertificateManagerCertificateRenewalSummary implements Serializa
 
     /**
      * <p>
-     * Information about the validation of each domain name in the certificate, as it pertains to AWS Certificate
-     * Manager managed renewal. Provided only when the certificate type is <code>AMAZON_ISSUED</code>.
+     * Information about the validation of each domain name in the certificate, as it pertains to Certificate Manager
+     * managed renewal. Provided only when the certificate type is <code>AMAZON_ISSUED</code>.
      * </p>
      * 
      * @param domainValidationOptions
-     *        Information about the validation of each domain name in the certificate, as it pertains to AWS Certificate
+     *        Information about the validation of each domain name in the certificate, as it pertains to Certificate
      *        Manager managed renewal. Provided only when the certificate type is <code>AMAZON_ISSUED</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -155,7 +154,7 @@ public class AwsCertificateManagerCertificateRenewalSummary implements Serializa
 
     /**
      * <p>
-     * The status of the AWS Certificate Manager managed renewal of the certificate.
+     * The status of the Certificate Manager managed renewal of the certificate.
      * </p>
      * <p>
      * Valid values: <code>PENDING_AUTO_RENEWAL</code> | <code>PENDING_VALIDATION</code> | <code>SUCCESS</code> |
@@ -163,7 +162,7 @@ public class AwsCertificateManagerCertificateRenewalSummary implements Serializa
      * </p>
      * 
      * @param renewalStatus
-     *        The status of the AWS Certificate Manager managed renewal of the certificate.</p>
+     *        The status of the Certificate Manager managed renewal of the certificate.</p>
      *        <p>
      *        Valid values: <code>PENDING_AUTO_RENEWAL</code> | <code>PENDING_VALIDATION</code> | <code>SUCCESS</code> |
      *        <code>FAILED</code>
@@ -175,14 +174,14 @@ public class AwsCertificateManagerCertificateRenewalSummary implements Serializa
 
     /**
      * <p>
-     * The status of the AWS Certificate Manager managed renewal of the certificate.
+     * The status of the Certificate Manager managed renewal of the certificate.
      * </p>
      * <p>
      * Valid values: <code>PENDING_AUTO_RENEWAL</code> | <code>PENDING_VALIDATION</code> | <code>SUCCESS</code> |
      * <code>FAILED</code>
      * </p>
      * 
-     * @return The status of the AWS Certificate Manager managed renewal of the certificate.</p>
+     * @return The status of the Certificate Manager managed renewal of the certificate.</p>
      *         <p>
      *         Valid values: <code>PENDING_AUTO_RENEWAL</code> | <code>PENDING_VALIDATION</code> | <code>SUCCESS</code>
      *         | <code>FAILED</code>
@@ -194,7 +193,7 @@ public class AwsCertificateManagerCertificateRenewalSummary implements Serializa
 
     /**
      * <p>
-     * The status of the AWS Certificate Manager managed renewal of the certificate.
+     * The status of the Certificate Manager managed renewal of the certificate.
      * </p>
      * <p>
      * Valid values: <code>PENDING_AUTO_RENEWAL</code> | <code>PENDING_VALIDATION</code> | <code>SUCCESS</code> |
@@ -202,7 +201,7 @@ public class AwsCertificateManagerCertificateRenewalSummary implements Serializa
      * </p>
      * 
      * @param renewalStatus
-     *        The status of the AWS Certificate Manager managed renewal of the certificate.</p>
+     *        The status of the Certificate Manager managed renewal of the certificate.</p>
      *        <p>
      *        Valid values: <code>PENDING_AUTO_RENEWAL</code> | <code>PENDING_VALIDATION</code> | <code>SUCCESS</code> |
      *        <code>FAILED</code>

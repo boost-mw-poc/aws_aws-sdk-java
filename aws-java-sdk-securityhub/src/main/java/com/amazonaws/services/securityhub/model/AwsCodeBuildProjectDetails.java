@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Information about an AWS CodeBuild project.
+ * Information about an CodeBuild project.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/AwsCodeBuildProjectDetails"
@@ -30,7 +30,7 @@ public class AwsCodeBuildProjectDetails implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The AWS Key Management Service (AWS KMS) customer master key (CMK) used to encrypt the build output artifacts.
+     * The KMS customer master key (CMK) used to encrypt the build output artifacts.
      * </p>
      * <p>
      * You can specify either the ARN of the CMK or, if available, the CMK alias (using the format alias/alias-name).
@@ -57,29 +57,28 @@ public class AwsCodeBuildProjectDetails implements Serializable, Cloneable, Stru
     private AwsCodeBuildProjectSource source;
     /**
      * <p>
-     * The ARN of the IAM role that enables AWS CodeBuild to interact with dependent AWS services on behalf of the AWS
-     * account.
+     * The ARN of the IAM role that enables CodeBuild to interact with dependent Amazon Web Services services on behalf
+     * of the Amazon Web Services account.
      * </p>
      */
     private String serviceRole;
     /**
      * <p>
-     * Information about the VPC configuration that AWS CodeBuild accesses.
+     * Information about the VPC configuration that CodeBuild accesses.
      * </p>
      */
     private AwsCodeBuildProjectVpcConfig vpcConfig;
 
     /**
      * <p>
-     * The AWS Key Management Service (AWS KMS) customer master key (CMK) used to encrypt the build output artifacts.
+     * The KMS customer master key (CMK) used to encrypt the build output artifacts.
      * </p>
      * <p>
      * You can specify either the ARN of the CMK or, if available, the CMK alias (using the format alias/alias-name).
      * </p>
      * 
      * @param encryptionKey
-     *        The AWS Key Management Service (AWS KMS) customer master key (CMK) used to encrypt the build output
-     *        artifacts.</p>
+     *        The KMS customer master key (CMK) used to encrypt the build output artifacts.</p>
      *        <p>
      *        You can specify either the ARN of the CMK or, if available, the CMK alias (using the format
      *        alias/alias-name).
@@ -91,14 +90,13 @@ public class AwsCodeBuildProjectDetails implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The AWS Key Management Service (AWS KMS) customer master key (CMK) used to encrypt the build output artifacts.
+     * The KMS customer master key (CMK) used to encrypt the build output artifacts.
      * </p>
      * <p>
      * You can specify either the ARN of the CMK or, if available, the CMK alias (using the format alias/alias-name).
      * </p>
      * 
-     * @return The AWS Key Management Service (AWS KMS) customer master key (CMK) used to encrypt the build output
-     *         artifacts.</p>
+     * @return The KMS customer master key (CMK) used to encrypt the build output artifacts.</p>
      *         <p>
      *         You can specify either the ARN of the CMK or, if available, the CMK alias (using the format
      *         alias/alias-name).
@@ -110,15 +108,14 @@ public class AwsCodeBuildProjectDetails implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The AWS Key Management Service (AWS KMS) customer master key (CMK) used to encrypt the build output artifacts.
+     * The KMS customer master key (CMK) used to encrypt the build output artifacts.
      * </p>
      * <p>
      * You can specify either the ARN of the CMK or, if available, the CMK alias (using the format alias/alias-name).
      * </p>
      * 
      * @param encryptionKey
-     *        The AWS Key Management Service (AWS KMS) customer master key (CMK) used to encrypt the build output
-     *        artifacts.</p>
+     *        The KMS customer master key (CMK) used to encrypt the build output artifacts.</p>
      *        <p>
      *        You can specify either the ARN of the CMK or, if available, the CMK alias (using the format
      *        alias/alias-name).
@@ -252,13 +249,13 @@ public class AwsCodeBuildProjectDetails implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The ARN of the IAM role that enables AWS CodeBuild to interact with dependent AWS services on behalf of the AWS
-     * account.
+     * The ARN of the IAM role that enables CodeBuild to interact with dependent Amazon Web Services services on behalf
+     * of the Amazon Web Services account.
      * </p>
      * 
      * @param serviceRole
-     *        The ARN of the IAM role that enables AWS CodeBuild to interact with dependent AWS services on behalf of
-     *        the AWS account.
+     *        The ARN of the IAM role that enables CodeBuild to interact with dependent Amazon Web Services services on
+     *        behalf of the Amazon Web Services account.
      */
 
     public void setServiceRole(String serviceRole) {
@@ -267,12 +264,12 @@ public class AwsCodeBuildProjectDetails implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The ARN of the IAM role that enables AWS CodeBuild to interact with dependent AWS services on behalf of the AWS
-     * account.
+     * The ARN of the IAM role that enables CodeBuild to interact with dependent Amazon Web Services services on behalf
+     * of the Amazon Web Services account.
      * </p>
      * 
-     * @return The ARN of the IAM role that enables AWS CodeBuild to interact with dependent AWS services on behalf of
-     *         the AWS account.
+     * @return The ARN of the IAM role that enables CodeBuild to interact with dependent Amazon Web Services services on
+     *         behalf of the Amazon Web Services account.
      */
 
     public String getServiceRole() {
@@ -281,13 +278,13 @@ public class AwsCodeBuildProjectDetails implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The ARN of the IAM role that enables AWS CodeBuild to interact with dependent AWS services on behalf of the AWS
-     * account.
+     * The ARN of the IAM role that enables CodeBuild to interact with dependent Amazon Web Services services on behalf
+     * of the Amazon Web Services account.
      * </p>
      * 
      * @param serviceRole
-     *        The ARN of the IAM role that enables AWS CodeBuild to interact with dependent AWS services on behalf of
-     *        the AWS account.
+     *        The ARN of the IAM role that enables CodeBuild to interact with dependent Amazon Web Services services on
+     *        behalf of the Amazon Web Services account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -298,11 +295,11 @@ public class AwsCodeBuildProjectDetails implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * Information about the VPC configuration that AWS CodeBuild accesses.
+     * Information about the VPC configuration that CodeBuild accesses.
      * </p>
      * 
      * @param vpcConfig
-     *        Information about the VPC configuration that AWS CodeBuild accesses.
+     *        Information about the VPC configuration that CodeBuild accesses.
      */
 
     public void setVpcConfig(AwsCodeBuildProjectVpcConfig vpcConfig) {
@@ -311,10 +308,10 @@ public class AwsCodeBuildProjectDetails implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * Information about the VPC configuration that AWS CodeBuild accesses.
+     * Information about the VPC configuration that CodeBuild accesses.
      * </p>
      * 
-     * @return Information about the VPC configuration that AWS CodeBuild accesses.
+     * @return Information about the VPC configuration that CodeBuild accesses.
      */
 
     public AwsCodeBuildProjectVpcConfig getVpcConfig() {
@@ -323,11 +320,11 @@ public class AwsCodeBuildProjectDetails implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * Information about the VPC configuration that AWS CodeBuild accesses.
+     * Information about the VPC configuration that CodeBuild accesses.
      * </p>
      * 
      * @param vpcConfig
-     *        Information about the VPC configuration that AWS CodeBuild accesses.
+     *        Information about the VPC configuration that CodeBuild accesses.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

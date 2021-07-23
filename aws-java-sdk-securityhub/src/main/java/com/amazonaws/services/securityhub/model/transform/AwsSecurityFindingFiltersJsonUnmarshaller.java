@@ -72,6 +72,12 @@ public class AwsSecurityFindingFiltersJsonUnmarshaller implements Unmarshaller<A
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("Region", targetDepth)) {
+                    context.nextToken();
+                    awsSecurityFindingFilters.setRegion(new ListUnmarshaller<StringFilter>(StringFilterJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
                 if (context.testExpression("Type", targetDepth)) {
                     context.nextToken();
                     awsSecurityFindingFilters.setType(new ListUnmarshaller<StringFilter>(StringFilterJsonUnmarshaller.getInstance())
@@ -445,6 +451,13 @@ public class AwsSecurityFindingFiltersJsonUnmarshaller implements Unmarshaller<A
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("ResourceAwsIamAccessKeyPrincipalName", targetDepth)) {
+                    context.nextToken();
+                    awsSecurityFindingFilters.setResourceAwsIamAccessKeyPrincipalName(new ListUnmarshaller<StringFilter>(StringFilterJsonUnmarshaller
+                            .getInstance())
+
+                    .unmarshall(context));
+                }
                 if (context.testExpression("ResourceAwsIamAccessKeyStatus", targetDepth)) {
                     context.nextToken();
                     awsSecurityFindingFilters.setResourceAwsIamAccessKeyStatus(new ListUnmarshaller<StringFilter>(StringFilterJsonUnmarshaller.getInstance())
@@ -454,6 +467,12 @@ public class AwsSecurityFindingFiltersJsonUnmarshaller implements Unmarshaller<A
                 if (context.testExpression("ResourceAwsIamAccessKeyCreatedAt", targetDepth)) {
                     context.nextToken();
                     awsSecurityFindingFilters.setResourceAwsIamAccessKeyCreatedAt(new ListUnmarshaller<DateFilter>(DateFilterJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
+                if (context.testExpression("ResourceAwsIamUserUserName", targetDepth)) {
+                    context.nextToken();
+                    awsSecurityFindingFilters.setResourceAwsIamUserUserName(new ListUnmarshaller<StringFilter>(StringFilterJsonUnmarshaller.getInstance())
 
                     .unmarshall(context));
                 }

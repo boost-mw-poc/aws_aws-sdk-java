@@ -40,12 +40,12 @@ public class AwsCodeBuildProjectSource implements Serializable, Cloneable, Struc
      * </li>
      * <li>
      * <p>
-     * <code>CODECOMMIT</code> - The source code is in an AWS CodeCommit repository.
+     * <code>CODECOMMIT</code> - The source code is in an CodeCommit repository.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>CODEPIPELINE</code> - The source code settings are specified in the source action of a pipeline in AWS
+     * <code>CODEPIPELINE</code> - The source code settings are specified in the source action of a pipeline in
      * CodePipeline.
      * </p>
      * </li>
@@ -82,15 +82,15 @@ public class AwsCodeBuildProjectSource implements Serializable, Cloneable, Struc
      * <ul>
      * <li>
      * <p>
-     * For source code settings that are specified in the source action of a pipeline in AWS CodePipeline, location
-     * should not be specified. If it is specified, AWS CodePipeline ignores it. This is because AWS CodePipeline uses
-     * the settings in a pipeline's source action instead of this value.
+     * For source code settings that are specified in the source action of a pipeline in CodePipeline, location should
+     * not be specified. If it is specified, CodePipeline ignores it. This is because CodePipeline uses the settings in
+     * a pipeline's source action instead of this value.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For source code in an AWS CodeCommit repository, the HTTPS clone URL to the repository that contains the source
-     * code and the build spec file (for example,
+     * For source code in an CodeCommit repository, the HTTPS clone URL to the repository that contains the source code
+     * and the build spec file (for example,
      * <code>https://git-codecommit.region-ID.amazonaws.com/v1/repos/repo-name</code> ).
      * </p>
      * </li>
@@ -153,12 +153,12 @@ public class AwsCodeBuildProjectSource implements Serializable, Cloneable, Struc
      * </li>
      * <li>
      * <p>
-     * <code>CODECOMMIT</code> - The source code is in an AWS CodeCommit repository.
+     * <code>CODECOMMIT</code> - The source code is in an CodeCommit repository.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>CODEPIPELINE</code> - The source code settings are specified in the source action of a pipeline in AWS
+     * <code>CODEPIPELINE</code> - The source code settings are specified in the source action of a pipeline in
      * CodePipeline.
      * </p>
      * </li>
@@ -194,13 +194,13 @@ public class AwsCodeBuildProjectSource implements Serializable, Cloneable, Struc
      *        </li>
      *        <li>
      *        <p>
-     *        <code>CODECOMMIT</code> - The source code is in an AWS CodeCommit repository.
+     *        <code>CODECOMMIT</code> - The source code is in an CodeCommit repository.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <code>CODEPIPELINE</code> - The source code settings are specified in the source action of a pipeline in
-     *        AWS CodePipeline.
+     *        CodePipeline.
      *        </p>
      *        </li>
      *        <li>
@@ -241,12 +241,12 @@ public class AwsCodeBuildProjectSource implements Serializable, Cloneable, Struc
      * </li>
      * <li>
      * <p>
-     * <code>CODECOMMIT</code> - The source code is in an AWS CodeCommit repository.
+     * <code>CODECOMMIT</code> - The source code is in an CodeCommit repository.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>CODEPIPELINE</code> - The source code settings are specified in the source action of a pipeline in AWS
+     * <code>CODEPIPELINE</code> - The source code settings are specified in the source action of a pipeline in
      * CodePipeline.
      * </p>
      * </li>
@@ -281,13 +281,13 @@ public class AwsCodeBuildProjectSource implements Serializable, Cloneable, Struc
      *         </li>
      *         <li>
      *         <p>
-     *         <code>CODECOMMIT</code> - The source code is in an AWS CodeCommit repository.
+     *         <code>CODECOMMIT</code> - The source code is in an CodeCommit repository.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
      *         <code>CODEPIPELINE</code> - The source code settings are specified in the source action of a pipeline in
-     *         AWS CodePipeline.
+     *         CodePipeline.
      *         </p>
      *         </li>
      *         <li>
@@ -328,12 +328,12 @@ public class AwsCodeBuildProjectSource implements Serializable, Cloneable, Struc
      * </li>
      * <li>
      * <p>
-     * <code>CODECOMMIT</code> - The source code is in an AWS CodeCommit repository.
+     * <code>CODECOMMIT</code> - The source code is in an CodeCommit repository.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>CODEPIPELINE</code> - The source code settings are specified in the source action of a pipeline in AWS
+     * <code>CODEPIPELINE</code> - The source code settings are specified in the source action of a pipeline in
      * CodePipeline.
      * </p>
      * </li>
@@ -369,13 +369,13 @@ public class AwsCodeBuildProjectSource implements Serializable, Cloneable, Struc
      *        </li>
      *        <li>
      *        <p>
-     *        <code>CODECOMMIT</code> - The source code is in an AWS CodeCommit repository.
+     *        <code>CODECOMMIT</code> - The source code is in an CodeCommit repository.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <code>CODEPIPELINE</code> - The source code settings are specified in the source action of a pipeline in
-     *        AWS CodePipeline.
+     *        CodePipeline.
      *        </p>
      *        </li>
      *        <li>
@@ -416,15 +416,15 @@ public class AwsCodeBuildProjectSource implements Serializable, Cloneable, Struc
      * <ul>
      * <li>
      * <p>
-     * For source code settings that are specified in the source action of a pipeline in AWS CodePipeline, location
-     * should not be specified. If it is specified, AWS CodePipeline ignores it. This is because AWS CodePipeline uses
-     * the settings in a pipeline's source action instead of this value.
+     * For source code settings that are specified in the source action of a pipeline in CodePipeline, location should
+     * not be specified. If it is specified, CodePipeline ignores it. This is because CodePipeline uses the settings in
+     * a pipeline's source action instead of this value.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For source code in an AWS CodeCommit repository, the HTTPS clone URL to the repository that contains the source
-     * code and the build spec file (for example,
+     * For source code in an CodeCommit repository, the HTTPS clone URL to the repository that contains the source code
+     * and the build spec file (for example,
      * <code>https://git-codecommit.region-ID.amazonaws.com/v1/repos/repo-name</code> ).
      * </p>
      * </li>
@@ -469,14 +469,14 @@ public class AwsCodeBuildProjectSource implements Serializable, Cloneable, Struc
      *        <ul>
      *        <li>
      *        <p>
-     *        For source code settings that are specified in the source action of a pipeline in AWS CodePipeline,
-     *        location should not be specified. If it is specified, AWS CodePipeline ignores it. This is because AWS
-     *        CodePipeline uses the settings in a pipeline's source action instead of this value.
+     *        For source code settings that are specified in the source action of a pipeline in CodePipeline, location
+     *        should not be specified. If it is specified, CodePipeline ignores it. This is because CodePipeline uses
+     *        the settings in a pipeline's source action instead of this value.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        For source code in an AWS CodeCommit repository, the HTTPS clone URL to the repository that contains the
+     *        For source code in an CodeCommit repository, the HTTPS clone URL to the repository that contains the
      *        source code and the build spec file (for example,
      *        <code>https://git-codecommit.region-ID.amazonaws.com/v1/repos/repo-name</code> ).
      *        </p>
@@ -528,15 +528,15 @@ public class AwsCodeBuildProjectSource implements Serializable, Cloneable, Struc
      * <ul>
      * <li>
      * <p>
-     * For source code settings that are specified in the source action of a pipeline in AWS CodePipeline, location
-     * should not be specified. If it is specified, AWS CodePipeline ignores it. This is because AWS CodePipeline uses
-     * the settings in a pipeline's source action instead of this value.
+     * For source code settings that are specified in the source action of a pipeline in CodePipeline, location should
+     * not be specified. If it is specified, CodePipeline ignores it. This is because CodePipeline uses the settings in
+     * a pipeline's source action instead of this value.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For source code in an AWS CodeCommit repository, the HTTPS clone URL to the repository that contains the source
-     * code and the build spec file (for example,
+     * For source code in an CodeCommit repository, the HTTPS clone URL to the repository that contains the source code
+     * and the build spec file (for example,
      * <code>https://git-codecommit.region-ID.amazonaws.com/v1/repos/repo-name</code> ).
      * </p>
      * </li>
@@ -580,14 +580,14 @@ public class AwsCodeBuildProjectSource implements Serializable, Cloneable, Struc
      *         <ul>
      *         <li>
      *         <p>
-     *         For source code settings that are specified in the source action of a pipeline in AWS CodePipeline,
-     *         location should not be specified. If it is specified, AWS CodePipeline ignores it. This is because AWS
-     *         CodePipeline uses the settings in a pipeline's source action instead of this value.
+     *         For source code settings that are specified in the source action of a pipeline in CodePipeline, location
+     *         should not be specified. If it is specified, CodePipeline ignores it. This is because CodePipeline uses
+     *         the settings in a pipeline's source action instead of this value.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         For source code in an AWS CodeCommit repository, the HTTPS clone URL to the repository that contains the
+     *         For source code in an CodeCommit repository, the HTTPS clone URL to the repository that contains the
      *         source code and the build spec file (for example,
      *         <code>https://git-codecommit.region-ID.amazonaws.com/v1/repos/repo-name</code> ).
      *         </p>
@@ -639,15 +639,15 @@ public class AwsCodeBuildProjectSource implements Serializable, Cloneable, Struc
      * <ul>
      * <li>
      * <p>
-     * For source code settings that are specified in the source action of a pipeline in AWS CodePipeline, location
-     * should not be specified. If it is specified, AWS CodePipeline ignores it. This is because AWS CodePipeline uses
-     * the settings in a pipeline's source action instead of this value.
+     * For source code settings that are specified in the source action of a pipeline in CodePipeline, location should
+     * not be specified. If it is specified, CodePipeline ignores it. This is because CodePipeline uses the settings in
+     * a pipeline's source action instead of this value.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For source code in an AWS CodeCommit repository, the HTTPS clone URL to the repository that contains the source
-     * code and the build spec file (for example,
+     * For source code in an CodeCommit repository, the HTTPS clone URL to the repository that contains the source code
+     * and the build spec file (for example,
      * <code>https://git-codecommit.region-ID.amazonaws.com/v1/repos/repo-name</code> ).
      * </p>
      * </li>
@@ -692,14 +692,14 @@ public class AwsCodeBuildProjectSource implements Serializable, Cloneable, Struc
      *        <ul>
      *        <li>
      *        <p>
-     *        For source code settings that are specified in the source action of a pipeline in AWS CodePipeline,
-     *        location should not be specified. If it is specified, AWS CodePipeline ignores it. This is because AWS
-     *        CodePipeline uses the settings in a pipeline's source action instead of this value.
+     *        For source code settings that are specified in the source action of a pipeline in CodePipeline, location
+     *        should not be specified. If it is specified, CodePipeline ignores it. This is because CodePipeline uses
+     *        the settings in a pipeline's source action instead of this value.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        For source code in an AWS CodeCommit repository, the HTTPS clone URL to the repository that contains the
+     *        For source code in an CodeCommit repository, the HTTPS clone URL to the repository that contains the
      *        source code and the build spec file (for example,
      *        <code>https://git-codecommit.region-ID.amazonaws.com/v1/repos/repo-name</code> ).
      *        </p>

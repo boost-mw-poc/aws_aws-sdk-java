@@ -42,7 +42,8 @@ public class AwsEc2EipDetails implements Serializable, Cloneable, StructuredPojo
     private String publicIp;
     /**
      * <p>
-     * The identifier that AWS assigns to represent the allocation of the Elastic IP address for use with Amazon VPC.
+     * The identifier that Amazon Web Services assigns to represent the allocation of the Elastic IP address for use
+     * with Amazon VPC.
      * </p>
      */
     private String allocationId;
@@ -83,7 +84,7 @@ public class AwsEc2EipDetails implements Serializable, Cloneable, StructuredPojo
     private String networkInterfaceId;
     /**
      * <p>
-     * The AWS account ID of the owner of the network interface.
+     * The Amazon Web Services account ID of the owner of the network interface.
      * </p>
      */
     private String networkInterfaceOwnerId;
@@ -176,12 +177,13 @@ public class AwsEc2EipDetails implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The identifier that AWS assigns to represent the allocation of the Elastic IP address for use with Amazon VPC.
+     * The identifier that Amazon Web Services assigns to represent the allocation of the Elastic IP address for use
+     * with Amazon VPC.
      * </p>
      * 
      * @param allocationId
-     *        The identifier that AWS assigns to represent the allocation of the Elastic IP address for use with Amazon
-     *        VPC.
+     *        The identifier that Amazon Web Services assigns to represent the allocation of the Elastic IP address for
+     *        use with Amazon VPC.
      */
 
     public void setAllocationId(String allocationId) {
@@ -190,11 +192,12 @@ public class AwsEc2EipDetails implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The identifier that AWS assigns to represent the allocation of the Elastic IP address for use with Amazon VPC.
+     * The identifier that Amazon Web Services assigns to represent the allocation of the Elastic IP address for use
+     * with Amazon VPC.
      * </p>
      * 
-     * @return The identifier that AWS assigns to represent the allocation of the Elastic IP address for use with Amazon
-     *         VPC.
+     * @return The identifier that Amazon Web Services assigns to represent the allocation of the Elastic IP address for
+     *         use with Amazon VPC.
      */
 
     public String getAllocationId() {
@@ -203,12 +206,13 @@ public class AwsEc2EipDetails implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The identifier that AWS assigns to represent the allocation of the Elastic IP address for use with Amazon VPC.
+     * The identifier that Amazon Web Services assigns to represent the allocation of the Elastic IP address for use
+     * with Amazon VPC.
      * </p>
      * 
      * @param allocationId
-     *        The identifier that AWS assigns to represent the allocation of the Elastic IP address for use with Amazon
-     *        VPC.
+     *        The identifier that Amazon Web Services assigns to represent the allocation of the Elastic IP address for
+     *        use with Amazon VPC.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -446,11 +450,11 @@ public class AwsEc2EipDetails implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The AWS account ID of the owner of the network interface.
+     * The Amazon Web Services account ID of the owner of the network interface.
      * </p>
      * 
      * @param networkInterfaceOwnerId
-     *        The AWS account ID of the owner of the network interface.
+     *        The Amazon Web Services account ID of the owner of the network interface.
      */
 
     public void setNetworkInterfaceOwnerId(String networkInterfaceOwnerId) {
@@ -459,10 +463,10 @@ public class AwsEc2EipDetails implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The AWS account ID of the owner of the network interface.
+     * The Amazon Web Services account ID of the owner of the network interface.
      * </p>
      * 
-     * @return The AWS account ID of the owner of the network interface.
+     * @return The Amazon Web Services account ID of the owner of the network interface.
      */
 
     public String getNetworkInterfaceOwnerId() {
@@ -471,11 +475,11 @@ public class AwsEc2EipDetails implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The AWS account ID of the owner of the network interface.
+     * The Amazon Web Services account ID of the owner of the network interface.
      * </p>
      * 
      * @param networkInterfaceOwnerId
-     *        The AWS account ID of the owner of the network interface.
+     *        The Amazon Web Services account ID of the owner of the network interface.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

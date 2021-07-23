@@ -57,7 +57,7 @@ public class Compliance implements Serializable, Cloneable, StructuredPojo {
      * <li>
      * <p>
      * <code>NOT_AVAILABLE</code> - Check could not be performed due to a service outage, API error, or because the
-     * result of the AWS Config evaluation was <code>NOT_APPLICABLE</code>. If the AWS Config evaluation result was
+     * result of the Config evaluation was <code>NOT_APPLICABLE</code>. If the Config evaluation result was
      * <code>NOT_APPLICABLE</code>, then after 3 days, Security Hub automatically archives the finding.
      * </p>
      * </li>
@@ -78,7 +78,7 @@ public class Compliance implements Serializable, Cloneable, StructuredPojo {
      * For findings generated from controls, a list of reasons behind the value of <code>Status</code>. For the list of
      * status reason codes and their meanings, see <a href=
      * "https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-standards-results.html#securityhub-standards-results-asff"
-     * >Standards-related information in the ASFF</a> in the <i>AWS Security Hub User Guide</i>.
+     * >Standards-related information in the ASFF</a> in the <i>Security Hub User Guide</i>.
      * </p>
      */
     private java.util.List<StatusReason> statusReasons;
@@ -111,7 +111,7 @@ public class Compliance implements Serializable, Cloneable, StructuredPojo {
      * <li>
      * <p>
      * <code>NOT_AVAILABLE</code> - Check could not be performed due to a service outage, API error, or because the
-     * result of the AWS Config evaluation was <code>NOT_APPLICABLE</code>. If the AWS Config evaluation result was
+     * result of the Config evaluation was <code>NOT_APPLICABLE</code>. If the Config evaluation result was
      * <code>NOT_APPLICABLE</code>, then after 3 days, Security Hub automatically archives the finding.
      * </p>
      * </li>
@@ -145,9 +145,8 @@ public class Compliance implements Serializable, Cloneable, StructuredPojo {
      *        <li>
      *        <p>
      *        <code>NOT_AVAILABLE</code> - Check could not be performed due to a service outage, API error, or because
-     *        the result of the AWS Config evaluation was <code>NOT_APPLICABLE</code>. If the AWS Config evaluation
-     *        result was <code>NOT_APPLICABLE</code>, then after 3 days, Security Hub automatically archives the
-     *        finding.
+     *        the result of the Config evaluation was <code>NOT_APPLICABLE</code>. If the Config evaluation result was
+     *        <code>NOT_APPLICABLE</code>, then after 3 days, Security Hub automatically archives the finding.
      *        </p>
      *        </li>
      *        </ul>
@@ -187,7 +186,7 @@ public class Compliance implements Serializable, Cloneable, StructuredPojo {
      * <li>
      * <p>
      * <code>NOT_AVAILABLE</code> - Check could not be performed due to a service outage, API error, or because the
-     * result of the AWS Config evaluation was <code>NOT_APPLICABLE</code>. If the AWS Config evaluation result was
+     * result of the Config evaluation was <code>NOT_APPLICABLE</code>. If the Config evaluation result was
      * <code>NOT_APPLICABLE</code>, then after 3 days, Security Hub automatically archives the finding.
      * </p>
      * </li>
@@ -220,9 +219,8 @@ public class Compliance implements Serializable, Cloneable, StructuredPojo {
      *         <li>
      *         <p>
      *         <code>NOT_AVAILABLE</code> - Check could not be performed due to a service outage, API error, or because
-     *         the result of the AWS Config evaluation was <code>NOT_APPLICABLE</code>. If the AWS Config evaluation
-     *         result was <code>NOT_APPLICABLE</code>, then after 3 days, Security Hub automatically archives the
-     *         finding.
+     *         the result of the Config evaluation was <code>NOT_APPLICABLE</code>. If the Config evaluation result was
+     *         <code>NOT_APPLICABLE</code>, then after 3 days, Security Hub automatically archives the finding.
      *         </p>
      *         </li>
      *         </ul>
@@ -262,7 +260,7 @@ public class Compliance implements Serializable, Cloneable, StructuredPojo {
      * <li>
      * <p>
      * <code>NOT_AVAILABLE</code> - Check could not be performed due to a service outage, API error, or because the
-     * result of the AWS Config evaluation was <code>NOT_APPLICABLE</code>. If the AWS Config evaluation result was
+     * result of the Config evaluation was <code>NOT_APPLICABLE</code>. If the Config evaluation result was
      * <code>NOT_APPLICABLE</code>, then after 3 days, Security Hub automatically archives the finding.
      * </p>
      * </li>
@@ -296,9 +294,8 @@ public class Compliance implements Serializable, Cloneable, StructuredPojo {
      *        <li>
      *        <p>
      *        <code>NOT_AVAILABLE</code> - Check could not be performed due to a service outage, API error, or because
-     *        the result of the AWS Config evaluation was <code>NOT_APPLICABLE</code>. If the AWS Config evaluation
-     *        result was <code>NOT_APPLICABLE</code>, then after 3 days, Security Hub automatically archives the
-     *        finding.
+     *        the result of the Config evaluation was <code>NOT_APPLICABLE</code>. If the Config evaluation result was
+     *        <code>NOT_APPLICABLE</code>, then after 3 days, Security Hub automatically archives the finding.
      *        </p>
      *        </li>
      *        </ul>
@@ -340,7 +337,7 @@ public class Compliance implements Serializable, Cloneable, StructuredPojo {
      * <li>
      * <p>
      * <code>NOT_AVAILABLE</code> - Check could not be performed due to a service outage, API error, or because the
-     * result of the AWS Config evaluation was <code>NOT_APPLICABLE</code>. If the AWS Config evaluation result was
+     * result of the Config evaluation was <code>NOT_APPLICABLE</code>. If the Config evaluation result was
      * <code>NOT_APPLICABLE</code>, then after 3 days, Security Hub automatically archives the finding.
      * </p>
      * </li>
@@ -374,9 +371,8 @@ public class Compliance implements Serializable, Cloneable, StructuredPojo {
      *        <li>
      *        <p>
      *        <code>NOT_AVAILABLE</code> - Check could not be performed due to a service outage, API error, or because
-     *        the result of the AWS Config evaluation was <code>NOT_APPLICABLE</code>. If the AWS Config evaluation
-     *        result was <code>NOT_APPLICABLE</code>, then after 3 days, Security Hub automatically archives the
-     *        finding.
+     *        the result of the Config evaluation was <code>NOT_APPLICABLE</code>. If the Config evaluation result was
+     *        <code>NOT_APPLICABLE</code>, then after 3 days, Security Hub automatically archives the finding.
      *        </p>
      *        </li>
      *        </ul>
@@ -473,13 +469,13 @@ public class Compliance implements Serializable, Cloneable, StructuredPojo {
      * For findings generated from controls, a list of reasons behind the value of <code>Status</code>. For the list of
      * status reason codes and their meanings, see <a href=
      * "https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-standards-results.html#securityhub-standards-results-asff"
-     * >Standards-related information in the ASFF</a> in the <i>AWS Security Hub User Guide</i>.
+     * >Standards-related information in the ASFF</a> in the <i>Security Hub User Guide</i>.
      * </p>
      * 
      * @return For findings generated from controls, a list of reasons behind the value of <code>Status</code>. For the
      *         list of status reason codes and their meanings, see <a href=
      *         "https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-standards-results.html#securityhub-standards-results-asff"
-     *         >Standards-related information in the ASFF</a> in the <i>AWS Security Hub User Guide</i>.
+     *         >Standards-related information in the ASFF</a> in the <i>Security Hub User Guide</i>.
      */
 
     public java.util.List<StatusReason> getStatusReasons() {
@@ -491,14 +487,14 @@ public class Compliance implements Serializable, Cloneable, StructuredPojo {
      * For findings generated from controls, a list of reasons behind the value of <code>Status</code>. For the list of
      * status reason codes and their meanings, see <a href=
      * "https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-standards-results.html#securityhub-standards-results-asff"
-     * >Standards-related information in the ASFF</a> in the <i>AWS Security Hub User Guide</i>.
+     * >Standards-related information in the ASFF</a> in the <i>Security Hub User Guide</i>.
      * </p>
      * 
      * @param statusReasons
      *        For findings generated from controls, a list of reasons behind the value of <code>Status</code>. For the
      *        list of status reason codes and their meanings, see <a href=
      *        "https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-standards-results.html#securityhub-standards-results-asff"
-     *        >Standards-related information in the ASFF</a> in the <i>AWS Security Hub User Guide</i>.
+     *        >Standards-related information in the ASFF</a> in the <i>Security Hub User Guide</i>.
      */
 
     public void setStatusReasons(java.util.Collection<StatusReason> statusReasons) {
@@ -515,7 +511,7 @@ public class Compliance implements Serializable, Cloneable, StructuredPojo {
      * For findings generated from controls, a list of reasons behind the value of <code>Status</code>. For the list of
      * status reason codes and their meanings, see <a href=
      * "https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-standards-results.html#securityhub-standards-results-asff"
-     * >Standards-related information in the ASFF</a> in the <i>AWS Security Hub User Guide</i>.
+     * >Standards-related information in the ASFF</a> in the <i>Security Hub User Guide</i>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -527,7 +523,7 @@ public class Compliance implements Serializable, Cloneable, StructuredPojo {
      *        For findings generated from controls, a list of reasons behind the value of <code>Status</code>. For the
      *        list of status reason codes and their meanings, see <a href=
      *        "https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-standards-results.html#securityhub-standards-results-asff"
-     *        >Standards-related information in the ASFF</a> in the <i>AWS Security Hub User Guide</i>.
+     *        >Standards-related information in the ASFF</a> in the <i>Security Hub User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -546,14 +542,14 @@ public class Compliance implements Serializable, Cloneable, StructuredPojo {
      * For findings generated from controls, a list of reasons behind the value of <code>Status</code>. For the list of
      * status reason codes and their meanings, see <a href=
      * "https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-standards-results.html#securityhub-standards-results-asff"
-     * >Standards-related information in the ASFF</a> in the <i>AWS Security Hub User Guide</i>.
+     * >Standards-related information in the ASFF</a> in the <i>Security Hub User Guide</i>.
      * </p>
      * 
      * @param statusReasons
      *        For findings generated from controls, a list of reasons behind the value of <code>Status</code>. For the
      *        list of status reason codes and their meanings, see <a href=
      *        "https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-standards-results.html#securityhub-standards-results-asff"
-     *        >Standards-related information in the ASFF</a> in the <i>AWS Security Hub User Guide</i>.
+     *        >Standards-related information in the ASFF</a> in the <i>Security Hub User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -20,13 +20,13 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 /**
  * <p>
  * Provides consistent format for the contents of the Security Hub-aggregated findings. <code>AwsSecurityFinding</code>
- * format enables you to share findings between AWS security services and third-party solutions, and security standards
- * checks.
+ * format enables you to share findings between Amazon Web Services security services and third-party solutions, and
+ * security standards checks.
  * </p>
  * <note>
  * <p>
- * A finding is a potential security issue generated either by AWS services (Amazon GuardDuty, Amazon Inspector, and
- * Amazon Macie) or by the integrated third-party solutions and standards checks.
+ * A finding is a potential security issue generated either by Amazon Web Services services or by the integrated
+ * third-party solutions and standards checks.
  * </p>
  * </note>
  * 
@@ -57,6 +57,58 @@ public class AwsSecurityFinding implements Serializable, Cloneable, StructuredPo
     private String productArn;
     /**
      * <p>
+     * The name of the product that generated the finding.
+     * </p>
+     * <p>
+     * Security Hub populates this attribute automatically for each finding. You cannot update it using
+     * <code>BatchImportFindings</code> or <code>BatchUpdateFindings</code>. The exception to this is when you use a
+     * custom integration.
+     * </p>
+     * <p>
+     * When you use the Security Hub console to filter findings by product name, you use this attribute.
+     * </p>
+     * <p>
+     * When you use the Security Hub API to filter findings by product name, you use the
+     * <code>aws/securityhub/ProductyName</code> attribute under <code>ProductFields</code>.
+     * </p>
+     * <p>
+     * Security Hub does not synchronize those two attributes.
+     * </p>
+     */
+    private String productName;
+    /**
+     * <p>
+     * The name of the company for the product that generated the finding.
+     * </p>
+     * <p>
+     * Security Hub populates this attribute automatically for each finding. You cannot be updated using
+     * <code>BatchImportFindings</code> or <code>BatchUpdateFindings</code>. The exception to this is when you use a
+     * custom integration.
+     * </p>
+     * <p>
+     * When you use the Security Hub console to filter findings by company name, you use this attribute.
+     * </p>
+     * <p>
+     * When you use the Security Hub API to filter findings by company name, you use the
+     * <code>aws/securityhub/CompanyName</code> attribute under <code>ProductFields</code>.
+     * </p>
+     * <p>
+     * Security Hub does not synchronize those two attributes.
+     * </p>
+     */
+    private String companyName;
+    /**
+     * <p>
+     * The Region from which the finding was generated.
+     * </p>
+     * <p>
+     * Security Hub populates this attribute automatically for each finding. You cannot update it using
+     * <code>BatchImportFindings</code> or <code>BatchUpdateFindings</code>.
+     * </p>
+     */
+    private String region;
+    /**
+     * <p>
      * The identifier for the solution-specific component (a discrete unit of logic) that generated a finding. In
      * various security-findings providers' solutions, this generator can be called a rule, a check, a detector, a
      * plugin, etc.
@@ -65,7 +117,7 @@ public class AwsSecurityFinding implements Serializable, Cloneable, StructuredPo
     private String generatorId;
     /**
      * <p>
-     * The AWS account ID that a finding is generated in.
+     * The Amazon Web Services account ID that a finding is generated in.
      * </p>
      */
     private String awsAccountId;
@@ -191,6 +243,10 @@ public class AwsSecurityFinding implements Serializable, Cloneable, StructuredPo
      * A data type where security-findings providers can include additional solution-specific details that aren't part
      * of the defined <code>AwsSecurityFinding</code> format.
      * </p>
+     * <p>
+     * Can contain up to 50 key-value pairs. For each key-value pair, the key can contain up to 128 characters, and the
+     * value can contain up to 2048 characters.
+     * </p>
      */
     private java.util.Map<String, String> productFields;
     /**
@@ -240,8 +296,8 @@ public class AwsSecurityFinding implements Serializable, Cloneable, StructuredPo
     /**
      * <p>
      * This data type is exclusive to findings that are generated as the result of a check run against a specific rule
-     * in a supported security standard, such as CIS AWS Foundations. Contains security standard-related finding
-     * details.
+     * in a supported security standard, such as CIS Amazon Web Services Foundations. Contains security standard-related
+     * finding details.
      * </p>
      */
     private Compliance compliance;
@@ -438,6 +494,321 @@ public class AwsSecurityFinding implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
+     * The name of the product that generated the finding.
+     * </p>
+     * <p>
+     * Security Hub populates this attribute automatically for each finding. You cannot update it using
+     * <code>BatchImportFindings</code> or <code>BatchUpdateFindings</code>. The exception to this is when you use a
+     * custom integration.
+     * </p>
+     * <p>
+     * When you use the Security Hub console to filter findings by product name, you use this attribute.
+     * </p>
+     * <p>
+     * When you use the Security Hub API to filter findings by product name, you use the
+     * <code>aws/securityhub/ProductyName</code> attribute under <code>ProductFields</code>.
+     * </p>
+     * <p>
+     * Security Hub does not synchronize those two attributes.
+     * </p>
+     * 
+     * @param productName
+     *        The name of the product that generated the finding.</p>
+     *        <p>
+     *        Security Hub populates this attribute automatically for each finding. You cannot update it using
+     *        <code>BatchImportFindings</code> or <code>BatchUpdateFindings</code>. The exception to this is when you
+     *        use a custom integration.
+     *        </p>
+     *        <p>
+     *        When you use the Security Hub console to filter findings by product name, you use this attribute.
+     *        </p>
+     *        <p>
+     *        When you use the Security Hub API to filter findings by product name, you use the
+     *        <code>aws/securityhub/ProductyName</code> attribute under <code>ProductFields</code>.
+     *        </p>
+     *        <p>
+     *        Security Hub does not synchronize those two attributes.
+     */
+
+    public void setProductName(String productName) {
+        this.productName = productName;
+    }
+
+    /**
+     * <p>
+     * The name of the product that generated the finding.
+     * </p>
+     * <p>
+     * Security Hub populates this attribute automatically for each finding. You cannot update it using
+     * <code>BatchImportFindings</code> or <code>BatchUpdateFindings</code>. The exception to this is when you use a
+     * custom integration.
+     * </p>
+     * <p>
+     * When you use the Security Hub console to filter findings by product name, you use this attribute.
+     * </p>
+     * <p>
+     * When you use the Security Hub API to filter findings by product name, you use the
+     * <code>aws/securityhub/ProductyName</code> attribute under <code>ProductFields</code>.
+     * </p>
+     * <p>
+     * Security Hub does not synchronize those two attributes.
+     * </p>
+     * 
+     * @return The name of the product that generated the finding.</p>
+     *         <p>
+     *         Security Hub populates this attribute automatically for each finding. You cannot update it using
+     *         <code>BatchImportFindings</code> or <code>BatchUpdateFindings</code>. The exception to this is when you
+     *         use a custom integration.
+     *         </p>
+     *         <p>
+     *         When you use the Security Hub console to filter findings by product name, you use this attribute.
+     *         </p>
+     *         <p>
+     *         When you use the Security Hub API to filter findings by product name, you use the
+     *         <code>aws/securityhub/ProductyName</code> attribute under <code>ProductFields</code>.
+     *         </p>
+     *         <p>
+     *         Security Hub does not synchronize those two attributes.
+     */
+
+    public String getProductName() {
+        return this.productName;
+    }
+
+    /**
+     * <p>
+     * The name of the product that generated the finding.
+     * </p>
+     * <p>
+     * Security Hub populates this attribute automatically for each finding. You cannot update it using
+     * <code>BatchImportFindings</code> or <code>BatchUpdateFindings</code>. The exception to this is when you use a
+     * custom integration.
+     * </p>
+     * <p>
+     * When you use the Security Hub console to filter findings by product name, you use this attribute.
+     * </p>
+     * <p>
+     * When you use the Security Hub API to filter findings by product name, you use the
+     * <code>aws/securityhub/ProductyName</code> attribute under <code>ProductFields</code>.
+     * </p>
+     * <p>
+     * Security Hub does not synchronize those two attributes.
+     * </p>
+     * 
+     * @param productName
+     *        The name of the product that generated the finding.</p>
+     *        <p>
+     *        Security Hub populates this attribute automatically for each finding. You cannot update it using
+     *        <code>BatchImportFindings</code> or <code>BatchUpdateFindings</code>. The exception to this is when you
+     *        use a custom integration.
+     *        </p>
+     *        <p>
+     *        When you use the Security Hub console to filter findings by product name, you use this attribute.
+     *        </p>
+     *        <p>
+     *        When you use the Security Hub API to filter findings by product name, you use the
+     *        <code>aws/securityhub/ProductyName</code> attribute under <code>ProductFields</code>.
+     *        </p>
+     *        <p>
+     *        Security Hub does not synchronize those two attributes.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AwsSecurityFinding withProductName(String productName) {
+        setProductName(productName);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The name of the company for the product that generated the finding.
+     * </p>
+     * <p>
+     * Security Hub populates this attribute automatically for each finding. You cannot be updated using
+     * <code>BatchImportFindings</code> or <code>BatchUpdateFindings</code>. The exception to this is when you use a
+     * custom integration.
+     * </p>
+     * <p>
+     * When you use the Security Hub console to filter findings by company name, you use this attribute.
+     * </p>
+     * <p>
+     * When you use the Security Hub API to filter findings by company name, you use the
+     * <code>aws/securityhub/CompanyName</code> attribute under <code>ProductFields</code>.
+     * </p>
+     * <p>
+     * Security Hub does not synchronize those two attributes.
+     * </p>
+     * 
+     * @param companyName
+     *        The name of the company for the product that generated the finding.</p>
+     *        <p>
+     *        Security Hub populates this attribute automatically for each finding. You cannot be updated using
+     *        <code>BatchImportFindings</code> or <code>BatchUpdateFindings</code>. The exception to this is when you
+     *        use a custom integration.
+     *        </p>
+     *        <p>
+     *        When you use the Security Hub console to filter findings by company name, you use this attribute.
+     *        </p>
+     *        <p>
+     *        When you use the Security Hub API to filter findings by company name, you use the
+     *        <code>aws/securityhub/CompanyName</code> attribute under <code>ProductFields</code>.
+     *        </p>
+     *        <p>
+     *        Security Hub does not synchronize those two attributes.
+     */
+
+    public void setCompanyName(String companyName) {
+        this.companyName = companyName;
+    }
+
+    /**
+     * <p>
+     * The name of the company for the product that generated the finding.
+     * </p>
+     * <p>
+     * Security Hub populates this attribute automatically for each finding. You cannot be updated using
+     * <code>BatchImportFindings</code> or <code>BatchUpdateFindings</code>. The exception to this is when you use a
+     * custom integration.
+     * </p>
+     * <p>
+     * When you use the Security Hub console to filter findings by company name, you use this attribute.
+     * </p>
+     * <p>
+     * When you use the Security Hub API to filter findings by company name, you use the
+     * <code>aws/securityhub/CompanyName</code> attribute under <code>ProductFields</code>.
+     * </p>
+     * <p>
+     * Security Hub does not synchronize those two attributes.
+     * </p>
+     * 
+     * @return The name of the company for the product that generated the finding.</p>
+     *         <p>
+     *         Security Hub populates this attribute automatically for each finding. You cannot be updated using
+     *         <code>BatchImportFindings</code> or <code>BatchUpdateFindings</code>. The exception to this is when you
+     *         use a custom integration.
+     *         </p>
+     *         <p>
+     *         When you use the Security Hub console to filter findings by company name, you use this attribute.
+     *         </p>
+     *         <p>
+     *         When you use the Security Hub API to filter findings by company name, you use the
+     *         <code>aws/securityhub/CompanyName</code> attribute under <code>ProductFields</code>.
+     *         </p>
+     *         <p>
+     *         Security Hub does not synchronize those two attributes.
+     */
+
+    public String getCompanyName() {
+        return this.companyName;
+    }
+
+    /**
+     * <p>
+     * The name of the company for the product that generated the finding.
+     * </p>
+     * <p>
+     * Security Hub populates this attribute automatically for each finding. You cannot be updated using
+     * <code>BatchImportFindings</code> or <code>BatchUpdateFindings</code>. The exception to this is when you use a
+     * custom integration.
+     * </p>
+     * <p>
+     * When you use the Security Hub console to filter findings by company name, you use this attribute.
+     * </p>
+     * <p>
+     * When you use the Security Hub API to filter findings by company name, you use the
+     * <code>aws/securityhub/CompanyName</code> attribute under <code>ProductFields</code>.
+     * </p>
+     * <p>
+     * Security Hub does not synchronize those two attributes.
+     * </p>
+     * 
+     * @param companyName
+     *        The name of the company for the product that generated the finding.</p>
+     *        <p>
+     *        Security Hub populates this attribute automatically for each finding. You cannot be updated using
+     *        <code>BatchImportFindings</code> or <code>BatchUpdateFindings</code>. The exception to this is when you
+     *        use a custom integration.
+     *        </p>
+     *        <p>
+     *        When you use the Security Hub console to filter findings by company name, you use this attribute.
+     *        </p>
+     *        <p>
+     *        When you use the Security Hub API to filter findings by company name, you use the
+     *        <code>aws/securityhub/CompanyName</code> attribute under <code>ProductFields</code>.
+     *        </p>
+     *        <p>
+     *        Security Hub does not synchronize those two attributes.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AwsSecurityFinding withCompanyName(String companyName) {
+        setCompanyName(companyName);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The Region from which the finding was generated.
+     * </p>
+     * <p>
+     * Security Hub populates this attribute automatically for each finding. You cannot update it using
+     * <code>BatchImportFindings</code> or <code>BatchUpdateFindings</code>.
+     * </p>
+     * 
+     * @param region
+     *        The Region from which the finding was generated.</p>
+     *        <p>
+     *        Security Hub populates this attribute automatically for each finding. You cannot update it using
+     *        <code>BatchImportFindings</code> or <code>BatchUpdateFindings</code>.
+     */
+
+    public void setRegion(String region) {
+        this.region = region;
+    }
+
+    /**
+     * <p>
+     * The Region from which the finding was generated.
+     * </p>
+     * <p>
+     * Security Hub populates this attribute automatically for each finding. You cannot update it using
+     * <code>BatchImportFindings</code> or <code>BatchUpdateFindings</code>.
+     * </p>
+     * 
+     * @return The Region from which the finding was generated.</p>
+     *         <p>
+     *         Security Hub populates this attribute automatically for each finding. You cannot update it using
+     *         <code>BatchImportFindings</code> or <code>BatchUpdateFindings</code>.
+     */
+
+    public String getRegion() {
+        return this.region;
+    }
+
+    /**
+     * <p>
+     * The Region from which the finding was generated.
+     * </p>
+     * <p>
+     * Security Hub populates this attribute automatically for each finding. You cannot update it using
+     * <code>BatchImportFindings</code> or <code>BatchUpdateFindings</code>.
+     * </p>
+     * 
+     * @param region
+     *        The Region from which the finding was generated.</p>
+     *        <p>
+     *        Security Hub populates this attribute automatically for each finding. You cannot update it using
+     *        <code>BatchImportFindings</code> or <code>BatchUpdateFindings</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AwsSecurityFinding withRegion(String region) {
+        setRegion(region);
+        return this;
+    }
+
+    /**
+     * <p>
      * The identifier for the solution-specific component (a discrete unit of logic) that generated a finding. In
      * various security-findings providers' solutions, this generator can be called a rule, a check, a detector, a
      * plugin, etc.
@@ -490,11 +861,11 @@ public class AwsSecurityFinding implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The AWS account ID that a finding is generated in.
+     * The Amazon Web Services account ID that a finding is generated in.
      * </p>
      * 
      * @param awsAccountId
-     *        The AWS account ID that a finding is generated in.
+     *        The Amazon Web Services account ID that a finding is generated in.
      */
 
     public void setAwsAccountId(String awsAccountId) {
@@ -503,10 +874,10 @@ public class AwsSecurityFinding implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The AWS account ID that a finding is generated in.
+     * The Amazon Web Services account ID that a finding is generated in.
      * </p>
      * 
-     * @return The AWS account ID that a finding is generated in.
+     * @return The Amazon Web Services account ID that a finding is generated in.
      */
 
     public String getAwsAccountId() {
@@ -515,11 +886,11 @@ public class AwsSecurityFinding implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The AWS account ID that a finding is generated in.
+     * The Amazon Web Services account ID that a finding is generated in.
      * </p>
      * 
      * @param awsAccountId
-     *        The AWS account ID that a finding is generated in.
+     *        The Amazon Web Services account ID that a finding is generated in.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1294,9 +1665,16 @@ public class AwsSecurityFinding implements Serializable, Cloneable, StructuredPo
      * A data type where security-findings providers can include additional solution-specific details that aren't part
      * of the defined <code>AwsSecurityFinding</code> format.
      * </p>
+     * <p>
+     * Can contain up to 50 key-value pairs. For each key-value pair, the key can contain up to 128 characters, and the
+     * value can contain up to 2048 characters.
+     * </p>
      * 
      * @return A data type where security-findings providers can include additional solution-specific details that
-     *         aren't part of the defined <code>AwsSecurityFinding</code> format.
+     *         aren't part of the defined <code>AwsSecurityFinding</code> format.</p>
+     *         <p>
+     *         Can contain up to 50 key-value pairs. For each key-value pair, the key can contain up to 128 characters,
+     *         and the value can contain up to 2048 characters.
      */
 
     public java.util.Map<String, String> getProductFields() {
@@ -1308,10 +1686,17 @@ public class AwsSecurityFinding implements Serializable, Cloneable, StructuredPo
      * A data type where security-findings providers can include additional solution-specific details that aren't part
      * of the defined <code>AwsSecurityFinding</code> format.
      * </p>
+     * <p>
+     * Can contain up to 50 key-value pairs. For each key-value pair, the key can contain up to 128 characters, and the
+     * value can contain up to 2048 characters.
+     * </p>
      * 
      * @param productFields
      *        A data type where security-findings providers can include additional solution-specific details that aren't
-     *        part of the defined <code>AwsSecurityFinding</code> format.
+     *        part of the defined <code>AwsSecurityFinding</code> format.</p>
+     *        <p>
+     *        Can contain up to 50 key-value pairs. For each key-value pair, the key can contain up to 128 characters,
+     *        and the value can contain up to 2048 characters.
      */
 
     public void setProductFields(java.util.Map<String, String> productFields) {
@@ -1323,10 +1708,17 @@ public class AwsSecurityFinding implements Serializable, Cloneable, StructuredPo
      * A data type where security-findings providers can include additional solution-specific details that aren't part
      * of the defined <code>AwsSecurityFinding</code> format.
      * </p>
+     * <p>
+     * Can contain up to 50 key-value pairs. For each key-value pair, the key can contain up to 128 characters, and the
+     * value can contain up to 2048 characters.
+     * </p>
      * 
      * @param productFields
      *        A data type where security-findings providers can include additional solution-specific details that aren't
-     *        part of the defined <code>AwsSecurityFinding</code> format.
+     *        part of the defined <code>AwsSecurityFinding</code> format.</p>
+     *        <p>
+     *        Can contain up to 50 key-value pairs. For each key-value pair, the key can contain up to 128 characters,
+     *        and the value can contain up to 2048 characters.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1808,14 +2200,14 @@ public class AwsSecurityFinding implements Serializable, Cloneable, StructuredPo
     /**
      * <p>
      * This data type is exclusive to findings that are generated as the result of a check run against a specific rule
-     * in a supported security standard, such as CIS AWS Foundations. Contains security standard-related finding
-     * details.
+     * in a supported security standard, such as CIS Amazon Web Services Foundations. Contains security standard-related
+     * finding details.
      * </p>
      * 
      * @param compliance
      *        This data type is exclusive to findings that are generated as the result of a check run against a specific
-     *        rule in a supported security standard, such as CIS AWS Foundations. Contains security standard-related
-     *        finding details.
+     *        rule in a supported security standard, such as CIS Amazon Web Services Foundations. Contains security
+     *        standard-related finding details.
      */
 
     public void setCompliance(Compliance compliance) {
@@ -1825,13 +2217,13 @@ public class AwsSecurityFinding implements Serializable, Cloneable, StructuredPo
     /**
      * <p>
      * This data type is exclusive to findings that are generated as the result of a check run against a specific rule
-     * in a supported security standard, such as CIS AWS Foundations. Contains security standard-related finding
-     * details.
+     * in a supported security standard, such as CIS Amazon Web Services Foundations. Contains security standard-related
+     * finding details.
      * </p>
      * 
      * @return This data type is exclusive to findings that are generated as the result of a check run against a
-     *         specific rule in a supported security standard, such as CIS AWS Foundations. Contains security
-     *         standard-related finding details.
+     *         specific rule in a supported security standard, such as CIS Amazon Web Services Foundations. Contains
+     *         security standard-related finding details.
      */
 
     public Compliance getCompliance() {
@@ -1841,14 +2233,14 @@ public class AwsSecurityFinding implements Serializable, Cloneable, StructuredPo
     /**
      * <p>
      * This data type is exclusive to findings that are generated as the result of a check run against a specific rule
-     * in a supported security standard, such as CIS AWS Foundations. Contains security standard-related finding
-     * details.
+     * in a supported security standard, such as CIS Amazon Web Services Foundations. Contains security standard-related
+     * finding details.
      * </p>
      * 
      * @param compliance
      *        This data type is exclusive to findings that are generated as the result of a check run against a specific
-     *        rule in a supported security standard, such as CIS AWS Foundations. Contains security standard-related
-     *        finding details.
+     *        rule in a supported security standard, such as CIS Amazon Web Services Foundations. Contains security
+     *        standard-related finding details.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2402,6 +2794,12 @@ public class AwsSecurityFinding implements Serializable, Cloneable, StructuredPo
             sb.append("Id: ").append(getId()).append(",");
         if (getProductArn() != null)
             sb.append("ProductArn: ").append(getProductArn()).append(",");
+        if (getProductName() != null)
+            sb.append("ProductName: ").append(getProductName()).append(",");
+        if (getCompanyName() != null)
+            sb.append("CompanyName: ").append(getCompanyName()).append(",");
+        if (getRegion() != null)
+            sb.append("Region: ").append(getRegion()).append(",");
         if (getGeneratorId() != null)
             sb.append("GeneratorId: ").append(getGeneratorId()).append(",");
         if (getAwsAccountId() != null)
@@ -2493,6 +2891,18 @@ public class AwsSecurityFinding implements Serializable, Cloneable, StructuredPo
         if (other.getProductArn() == null ^ this.getProductArn() == null)
             return false;
         if (other.getProductArn() != null && other.getProductArn().equals(this.getProductArn()) == false)
+            return false;
+        if (other.getProductName() == null ^ this.getProductName() == null)
+            return false;
+        if (other.getProductName() != null && other.getProductName().equals(this.getProductName()) == false)
+            return false;
+        if (other.getCompanyName() == null ^ this.getCompanyName() == null)
+            return false;
+        if (other.getCompanyName() != null && other.getCompanyName().equals(this.getCompanyName()) == false)
+            return false;
+        if (other.getRegion() == null ^ this.getRegion() == null)
+            return false;
+        if (other.getRegion() != null && other.getRegion().equals(this.getRegion()) == false)
             return false;
         if (other.getGeneratorId() == null ^ this.getGeneratorId() == null)
             return false;
@@ -2637,6 +3047,9 @@ public class AwsSecurityFinding implements Serializable, Cloneable, StructuredPo
         hashCode = prime * hashCode + ((getSchemaVersion() == null) ? 0 : getSchemaVersion().hashCode());
         hashCode = prime * hashCode + ((getId() == null) ? 0 : getId().hashCode());
         hashCode = prime * hashCode + ((getProductArn() == null) ? 0 : getProductArn().hashCode());
+        hashCode = prime * hashCode + ((getProductName() == null) ? 0 : getProductName().hashCode());
+        hashCode = prime * hashCode + ((getCompanyName() == null) ? 0 : getCompanyName().hashCode());
+        hashCode = prime * hashCode + ((getRegion() == null) ? 0 : getRegion().hashCode());
         hashCode = prime * hashCode + ((getGeneratorId() == null) ? 0 : getGeneratorId().hashCode());
         hashCode = prime * hashCode + ((getAwsAccountId() == null) ? 0 : getAwsAccountId().hashCode());
         hashCode = prime * hashCode + ((getTypes() == null) ? 0 : getTypes().hashCode());

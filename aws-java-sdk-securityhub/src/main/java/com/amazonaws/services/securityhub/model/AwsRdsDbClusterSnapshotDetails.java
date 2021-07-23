@@ -124,7 +124,7 @@ public class AwsRdsDbClusterSnapshotDetails implements Serializable, Cloneable, 
     private Boolean storageEncrypted;
     /**
      * <p>
-     * The ARN of the AWS KMS master key that is used to encrypt the database instances in the DB cluster.
+     * The ARN of the KMS master key that is used to encrypt the database instances in the DB cluster.
      * </p>
      */
     private String kmsKeyId;
@@ -805,11 +805,11 @@ public class AwsRdsDbClusterSnapshotDetails implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The ARN of the AWS KMS master key that is used to encrypt the database instances in the DB cluster.
+     * The ARN of the KMS master key that is used to encrypt the database instances in the DB cluster.
      * </p>
      * 
      * @param kmsKeyId
-     *        The ARN of the AWS KMS master key that is used to encrypt the database instances in the DB cluster.
+     *        The ARN of the KMS master key that is used to encrypt the database instances in the DB cluster.
      */
 
     public void setKmsKeyId(String kmsKeyId) {
@@ -818,10 +818,10 @@ public class AwsRdsDbClusterSnapshotDetails implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The ARN of the AWS KMS master key that is used to encrypt the database instances in the DB cluster.
+     * The ARN of the KMS master key that is used to encrypt the database instances in the DB cluster.
      * </p>
      * 
-     * @return The ARN of the AWS KMS master key that is used to encrypt the database instances in the DB cluster.
+     * @return The ARN of the KMS master key that is used to encrypt the database instances in the DB cluster.
      */
 
     public String getKmsKeyId() {
@@ -830,11 +830,11 @@ public class AwsRdsDbClusterSnapshotDetails implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The ARN of the AWS KMS master key that is used to encrypt the database instances in the DB cluster.
+     * The ARN of the KMS master key that is used to encrypt the database instances in the DB cluster.
      * </p>
      * 
      * @param kmsKeyId
-     *        The ARN of the AWS KMS master key that is used to encrypt the database instances in the DB cluster.
+     *        The ARN of the KMS master key that is used to encrypt the database instances in the DB cluster.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Provides details about an AWS Certificate Manager certificate.
+ * Provides details about an Certificate Manager certificate.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/AwsCertificateManagerCertificateDetails"
@@ -95,7 +95,7 @@ public class AwsCertificateManagerCertificateDetails implements Serializable, Cl
     private String importedAt;
     /**
      * <p>
-     * The list of ARNs for the AWS resources that use the certificate.
+     * The list of ARNs for the Amazon Web Services resources that use the certificate.
      * </p>
      */
     private java.util.List<String> inUseBy;
@@ -171,8 +171,8 @@ public class AwsCertificateManagerCertificateDetails implements Serializable, Cl
     private String renewalEligibility;
     /**
      * <p>
-     * Information about the status of the AWS Certificate Manager managed renewal for the certificate. Provided only
-     * when the certificate type is <code>AMAZON_ISSUED</code>.
+     * Information about the status of the Certificate Manager managed renewal for the certificate. Provided only when
+     * the certificate type is <code>AMAZON_ISSUED</code>.
      * </p>
      */
     private AwsCertificateManagerCertificateRenewalSummary renewalSummary;
@@ -217,7 +217,7 @@ public class AwsCertificateManagerCertificateDetails implements Serializable, Cl
     private java.util.List<String> subjectAlternativeNames;
     /**
      * <p>
-     * The source of the certificate. For certificates that AWS Certificate Manager provides, <code>Type</code> is
+     * The source of the certificate. For certificates that Certificate Manager provides, <code>Type</code> is
      * <code>AMAZON_ISSUED</code>. For certificates that are imported with <code>ImportCertificate</code>,
      * <code>Type</code> is <code>IMPORTED</code>.
      * </p>
@@ -713,10 +713,10 @@ public class AwsCertificateManagerCertificateDetails implements Serializable, Cl
 
     /**
      * <p>
-     * The list of ARNs for the AWS resources that use the certificate.
+     * The list of ARNs for the Amazon Web Services resources that use the certificate.
      * </p>
      * 
-     * @return The list of ARNs for the AWS resources that use the certificate.
+     * @return The list of ARNs for the Amazon Web Services resources that use the certificate.
      */
 
     public java.util.List<String> getInUseBy() {
@@ -725,11 +725,11 @@ public class AwsCertificateManagerCertificateDetails implements Serializable, Cl
 
     /**
      * <p>
-     * The list of ARNs for the AWS resources that use the certificate.
+     * The list of ARNs for the Amazon Web Services resources that use the certificate.
      * </p>
      * 
      * @param inUseBy
-     *        The list of ARNs for the AWS resources that use the certificate.
+     *        The list of ARNs for the Amazon Web Services resources that use the certificate.
      */
 
     public void setInUseBy(java.util.Collection<String> inUseBy) {
@@ -743,7 +743,7 @@ public class AwsCertificateManagerCertificateDetails implements Serializable, Cl
 
     /**
      * <p>
-     * The list of ARNs for the AWS resources that use the certificate.
+     * The list of ARNs for the Amazon Web Services resources that use the certificate.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -752,7 +752,7 @@ public class AwsCertificateManagerCertificateDetails implements Serializable, Cl
      * </p>
      * 
      * @param inUseBy
-     *        The list of ARNs for the AWS resources that use the certificate.
+     *        The list of ARNs for the Amazon Web Services resources that use the certificate.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -768,11 +768,11 @@ public class AwsCertificateManagerCertificateDetails implements Serializable, Cl
 
     /**
      * <p>
-     * The list of ARNs for the AWS resources that use the certificate.
+     * The list of ARNs for the Amazon Web Services resources that use the certificate.
      * </p>
      * 
      * @param inUseBy
-     *        The list of ARNs for the AWS resources that use the certificate.
+     *        The list of ARNs for the Amazon Web Services resources that use the certificate.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1253,13 +1253,13 @@ public class AwsCertificateManagerCertificateDetails implements Serializable, Cl
 
     /**
      * <p>
-     * Information about the status of the AWS Certificate Manager managed renewal for the certificate. Provided only
-     * when the certificate type is <code>AMAZON_ISSUED</code>.
+     * Information about the status of the Certificate Manager managed renewal for the certificate. Provided only when
+     * the certificate type is <code>AMAZON_ISSUED</code>.
      * </p>
      * 
      * @param renewalSummary
-     *        Information about the status of the AWS Certificate Manager managed renewal for the certificate. Provided
-     *        only when the certificate type is <code>AMAZON_ISSUED</code>.
+     *        Information about the status of the Certificate Manager managed renewal for the certificate. Provided only
+     *        when the certificate type is <code>AMAZON_ISSUED</code>.
      */
 
     public void setRenewalSummary(AwsCertificateManagerCertificateRenewalSummary renewalSummary) {
@@ -1268,11 +1268,11 @@ public class AwsCertificateManagerCertificateDetails implements Serializable, Cl
 
     /**
      * <p>
-     * Information about the status of the AWS Certificate Manager managed renewal for the certificate. Provided only
-     * when the certificate type is <code>AMAZON_ISSUED</code>.
+     * Information about the status of the Certificate Manager managed renewal for the certificate. Provided only when
+     * the certificate type is <code>AMAZON_ISSUED</code>.
      * </p>
      * 
-     * @return Information about the status of the AWS Certificate Manager managed renewal for the certificate. Provided
+     * @return Information about the status of the Certificate Manager managed renewal for the certificate. Provided
      *         only when the certificate type is <code>AMAZON_ISSUED</code>.
      */
 
@@ -1282,13 +1282,13 @@ public class AwsCertificateManagerCertificateDetails implements Serializable, Cl
 
     /**
      * <p>
-     * Information about the status of the AWS Certificate Manager managed renewal for the certificate. Provided only
-     * when the certificate type is <code>AMAZON_ISSUED</code>.
+     * Information about the status of the Certificate Manager managed renewal for the certificate. Provided only when
+     * the certificate type is <code>AMAZON_ISSUED</code>.
      * </p>
      * 
      * @param renewalSummary
-     *        Information about the status of the AWS Certificate Manager managed renewal for the certificate. Provided
-     *        only when the certificate type is <code>AMAZON_ISSUED</code>.
+     *        Information about the status of the Certificate Manager managed renewal for the certificate. Provided only
+     *        when the certificate type is <code>AMAZON_ISSUED</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1586,7 +1586,7 @@ public class AwsCertificateManagerCertificateDetails implements Serializable, Cl
 
     /**
      * <p>
-     * The source of the certificate. For certificates that AWS Certificate Manager provides, <code>Type</code> is
+     * The source of the certificate. For certificates that Certificate Manager provides, <code>Type</code> is
      * <code>AMAZON_ISSUED</code>. For certificates that are imported with <code>ImportCertificate</code>,
      * <code>Type</code> is <code>IMPORTED</code>.
      * </p>
@@ -1595,8 +1595,8 @@ public class AwsCertificateManagerCertificateDetails implements Serializable, Cl
      * </p>
      * 
      * @param type
-     *        The source of the certificate. For certificates that AWS Certificate Manager provides, <code>Type</code>
-     *        is <code>AMAZON_ISSUED</code>. For certificates that are imported with <code>ImportCertificate</code>,
+     *        The source of the certificate. For certificates that Certificate Manager provides, <code>Type</code> is
+     *        <code>AMAZON_ISSUED</code>. For certificates that are imported with <code>ImportCertificate</code>,
      *        <code>Type</code> is <code>IMPORTED</code>.</p>
      *        <p>
      *        Valid values: <code>IMPORTED</code> | <code>AMAZON_ISSUED</code> | <code>PRIVATE</code>
@@ -1608,7 +1608,7 @@ public class AwsCertificateManagerCertificateDetails implements Serializable, Cl
 
     /**
      * <p>
-     * The source of the certificate. For certificates that AWS Certificate Manager provides, <code>Type</code> is
+     * The source of the certificate. For certificates that Certificate Manager provides, <code>Type</code> is
      * <code>AMAZON_ISSUED</code>. For certificates that are imported with <code>ImportCertificate</code>,
      * <code>Type</code> is <code>IMPORTED</code>.
      * </p>
@@ -1616,8 +1616,8 @@ public class AwsCertificateManagerCertificateDetails implements Serializable, Cl
      * Valid values: <code>IMPORTED</code> | <code>AMAZON_ISSUED</code> | <code>PRIVATE</code>
      * </p>
      * 
-     * @return The source of the certificate. For certificates that AWS Certificate Manager provides, <code>Type</code>
-     *         is <code>AMAZON_ISSUED</code>. For certificates that are imported with <code>ImportCertificate</code>,
+     * @return The source of the certificate. For certificates that Certificate Manager provides, <code>Type</code> is
+     *         <code>AMAZON_ISSUED</code>. For certificates that are imported with <code>ImportCertificate</code>,
      *         <code>Type</code> is <code>IMPORTED</code>.</p>
      *         <p>
      *         Valid values: <code>IMPORTED</code> | <code>AMAZON_ISSUED</code> | <code>PRIVATE</code>
@@ -1629,7 +1629,7 @@ public class AwsCertificateManagerCertificateDetails implements Serializable, Cl
 
     /**
      * <p>
-     * The source of the certificate. For certificates that AWS Certificate Manager provides, <code>Type</code> is
+     * The source of the certificate. For certificates that Certificate Manager provides, <code>Type</code> is
      * <code>AMAZON_ISSUED</code>. For certificates that are imported with <code>ImportCertificate</code>,
      * <code>Type</code> is <code>IMPORTED</code>.
      * </p>
@@ -1638,8 +1638,8 @@ public class AwsCertificateManagerCertificateDetails implements Serializable, Cl
      * </p>
      * 
      * @param type
-     *        The source of the certificate. For certificates that AWS Certificate Manager provides, <code>Type</code>
-     *        is <code>AMAZON_ISSUED</code>. For certificates that are imported with <code>ImportCertificate</code>,
+     *        The source of the certificate. For certificates that Certificate Manager provides, <code>Type</code> is
+     *        <code>AMAZON_ISSUED</code>. For certificates that are imported with <code>ImportCertificate</code>,
      *        <code>Type</code> is <code>IMPORTED</code>.</p>
      *        <p>
      *        Valid values: <code>IMPORTED</code> | <code>AMAZON_ISSUED</code> | <code>PRIVATE</code>

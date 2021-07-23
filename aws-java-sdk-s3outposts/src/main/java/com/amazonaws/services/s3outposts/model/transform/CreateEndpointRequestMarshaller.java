@@ -33,6 +33,10 @@ public class CreateEndpointRequestMarshaller {
             .marshallLocationName("SubnetId").build();
     private static final MarshallingInfo<String> SECURITYGROUPID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SecurityGroupId").build();
+    private static final MarshallingInfo<String> ACCESSTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AccessType").build();
+    private static final MarshallingInfo<String> CUSTOMEROWNEDIPV4POOL_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CustomerOwnedIpv4Pool").build();
 
     private static final CreateEndpointRequestMarshaller instance = new CreateEndpointRequestMarshaller();
 
@@ -53,6 +57,8 @@ public class CreateEndpointRequestMarshaller {
             protocolMarshaller.marshall(createEndpointRequest.getOutpostId(), OUTPOSTID_BINDING);
             protocolMarshaller.marshall(createEndpointRequest.getSubnetId(), SUBNETID_BINDING);
             protocolMarshaller.marshall(createEndpointRequest.getSecurityGroupId(), SECURITYGROUPID_BINDING);
+            protocolMarshaller.marshall(createEndpointRequest.getAccessType(), ACCESSTYPE_BINDING);
+            protocolMarshaller.marshall(createEndpointRequest.getCustomerOwnedIpv4Pool(), CUSTOMEROWNEDIPV4POOL_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

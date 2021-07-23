@@ -31,6 +31,8 @@ public class AwsElasticsearchDomainLogPublishingOptionsMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("IndexSlowLogs").build();
     private static final MarshallingInfo<StructuredPojo> SEARCHSLOWLOGS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SearchSlowLogs").build();
+    private static final MarshallingInfo<StructuredPojo> AUDITLOGS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AuditLogs").build();
 
     private static final AwsElasticsearchDomainLogPublishingOptionsMarshaller instance = new AwsElasticsearchDomainLogPublishingOptionsMarshaller();
 
@@ -50,6 +52,7 @@ public class AwsElasticsearchDomainLogPublishingOptionsMarshaller {
         try {
             protocolMarshaller.marshall(awsElasticsearchDomainLogPublishingOptions.getIndexSlowLogs(), INDEXSLOWLOGS_BINDING);
             protocolMarshaller.marshall(awsElasticsearchDomainLogPublishingOptions.getSearchSlowLogs(), SEARCHSLOWLOGS_BINDING);
+            protocolMarshaller.marshall(awsElasticsearchDomainLogPublishingOptions.getAuditLogs(), AUDITLOGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

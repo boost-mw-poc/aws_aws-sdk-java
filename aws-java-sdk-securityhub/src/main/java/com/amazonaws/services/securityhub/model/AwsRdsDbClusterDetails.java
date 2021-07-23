@@ -157,13 +157,14 @@ public class AwsRdsDbClusterDetails implements Serializable, Cloneable, Structur
     private Boolean storageEncrypted;
     /**
      * <p>
-     * The ARN of the AWS KMS master key that is used to encrypt the database instances in the DB cluster.
+     * The ARN of the KMS master key that is used to encrypt the database instances in the DB cluster.
      * </p>
      */
     private String kmsKeyId;
     /**
      * <p>
-     * The identifier of the DB cluster. The identifier must be unique within each AWS Region and is immutable.
+     * The identifier of the DB cluster. The identifier must be unique within each Amazon Web Services Region and is
+     * immutable.
      * </p>
      */
     private String dbClusterResourceId;
@@ -222,7 +223,7 @@ public class AwsRdsDbClusterDetails implements Serializable, Cloneable, Structur
     private Boolean copyTagsToSnapshot;
     /**
      * <p>
-     * Whether the DB cluster is a clone of a DB cluster owned by a different AWS account.
+     * Whether the DB cluster is a clone of a DB cluster owned by a different Amazon Web Services account.
      * </p>
      */
     private Boolean crossAccountClone;
@@ -1249,11 +1250,11 @@ public class AwsRdsDbClusterDetails implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The ARN of the AWS KMS master key that is used to encrypt the database instances in the DB cluster.
+     * The ARN of the KMS master key that is used to encrypt the database instances in the DB cluster.
      * </p>
      * 
      * @param kmsKeyId
-     *        The ARN of the AWS KMS master key that is used to encrypt the database instances in the DB cluster.
+     *        The ARN of the KMS master key that is used to encrypt the database instances in the DB cluster.
      */
 
     public void setKmsKeyId(String kmsKeyId) {
@@ -1262,10 +1263,10 @@ public class AwsRdsDbClusterDetails implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The ARN of the AWS KMS master key that is used to encrypt the database instances in the DB cluster.
+     * The ARN of the KMS master key that is used to encrypt the database instances in the DB cluster.
      * </p>
      * 
-     * @return The ARN of the AWS KMS master key that is used to encrypt the database instances in the DB cluster.
+     * @return The ARN of the KMS master key that is used to encrypt the database instances in the DB cluster.
      */
 
     public String getKmsKeyId() {
@@ -1274,11 +1275,11 @@ public class AwsRdsDbClusterDetails implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The ARN of the AWS KMS master key that is used to encrypt the database instances in the DB cluster.
+     * The ARN of the KMS master key that is used to encrypt the database instances in the DB cluster.
      * </p>
      * 
      * @param kmsKeyId
-     *        The ARN of the AWS KMS master key that is used to encrypt the database instances in the DB cluster.
+     *        The ARN of the KMS master key that is used to encrypt the database instances in the DB cluster.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1289,11 +1290,13 @@ public class AwsRdsDbClusterDetails implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The identifier of the DB cluster. The identifier must be unique within each AWS Region and is immutable.
+     * The identifier of the DB cluster. The identifier must be unique within each Amazon Web Services Region and is
+     * immutable.
      * </p>
      * 
      * @param dbClusterResourceId
-     *        The identifier of the DB cluster. The identifier must be unique within each AWS Region and is immutable.
+     *        The identifier of the DB cluster. The identifier must be unique within each Amazon Web Services Region and
+     *        is immutable.
      */
 
     public void setDbClusterResourceId(String dbClusterResourceId) {
@@ -1302,10 +1305,12 @@ public class AwsRdsDbClusterDetails implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The identifier of the DB cluster. The identifier must be unique within each AWS Region and is immutable.
+     * The identifier of the DB cluster. The identifier must be unique within each Amazon Web Services Region and is
+     * immutable.
      * </p>
      * 
-     * @return The identifier of the DB cluster. The identifier must be unique within each AWS Region and is immutable.
+     * @return The identifier of the DB cluster. The identifier must be unique within each Amazon Web Services Region
+     *         and is immutable.
      */
 
     public String getDbClusterResourceId() {
@@ -1314,11 +1319,13 @@ public class AwsRdsDbClusterDetails implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The identifier of the DB cluster. The identifier must be unique within each AWS Region and is immutable.
+     * The identifier of the DB cluster. The identifier must be unique within each Amazon Web Services Region and is
+     * immutable.
      * </p>
      * 
      * @param dbClusterResourceId
-     *        The identifier of the DB cluster. The identifier must be unique within each AWS Region and is immutable.
+     *        The identifier of the DB cluster. The identifier must be unique within each Amazon Web Services Region and
+     *        is immutable.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1772,11 +1779,11 @@ public class AwsRdsDbClusterDetails implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Whether the DB cluster is a clone of a DB cluster owned by a different AWS account.
+     * Whether the DB cluster is a clone of a DB cluster owned by a different Amazon Web Services account.
      * </p>
      * 
      * @param crossAccountClone
-     *        Whether the DB cluster is a clone of a DB cluster owned by a different AWS account.
+     *        Whether the DB cluster is a clone of a DB cluster owned by a different Amazon Web Services account.
      */
 
     public void setCrossAccountClone(Boolean crossAccountClone) {
@@ -1785,10 +1792,10 @@ public class AwsRdsDbClusterDetails implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Whether the DB cluster is a clone of a DB cluster owned by a different AWS account.
+     * Whether the DB cluster is a clone of a DB cluster owned by a different Amazon Web Services account.
      * </p>
      * 
-     * @return Whether the DB cluster is a clone of a DB cluster owned by a different AWS account.
+     * @return Whether the DB cluster is a clone of a DB cluster owned by a different Amazon Web Services account.
      */
 
     public Boolean getCrossAccountClone() {
@@ -1797,11 +1804,11 @@ public class AwsRdsDbClusterDetails implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Whether the DB cluster is a clone of a DB cluster owned by a different AWS account.
+     * Whether the DB cluster is a clone of a DB cluster owned by a different Amazon Web Services account.
      * </p>
      * 
      * @param crossAccountClone
-     *        Whether the DB cluster is a clone of a DB cluster owned by a different AWS account.
+     *        Whether the DB cluster is a clone of a DB cluster owned by a different Amazon Web Services account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1812,10 +1819,10 @@ public class AwsRdsDbClusterDetails implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * Whether the DB cluster is a clone of a DB cluster owned by a different AWS account.
+     * Whether the DB cluster is a clone of a DB cluster owned by a different Amazon Web Services account.
      * </p>
      * 
-     * @return Whether the DB cluster is a clone of a DB cluster owned by a different AWS account.
+     * @return Whether the DB cluster is a clone of a DB cluster owned by a different Amazon Web Services account.
      */
 
     public Boolean isCrossAccountClone() {

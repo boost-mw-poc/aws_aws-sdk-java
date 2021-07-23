@@ -66,8 +66,7 @@ public class AwsS3ObjectDetails implements Serializable, Cloneable, StructuredPo
     private String serverSideEncryption;
     /**
      * <p>
-     * The identifier of the AWS Key Management Service (AWS KMS) symmetric customer managed customer master key (CMK)
-     * that was used for the object.
+     * The identifier of the KMS symmetric customer managed customer master key (CMK) that was used for the object.
      * </p>
      */
     private String sSEKMSKeyId;
@@ -307,13 +306,12 @@ public class AwsS3ObjectDetails implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The identifier of the AWS Key Management Service (AWS KMS) symmetric customer managed customer master key (CMK)
-     * that was used for the object.
+     * The identifier of the KMS symmetric customer managed customer master key (CMK) that was used for the object.
      * </p>
      * 
      * @param sSEKMSKeyId
-     *        The identifier of the AWS Key Management Service (AWS KMS) symmetric customer managed customer master key
-     *        (CMK) that was used for the object.
+     *        The identifier of the KMS symmetric customer managed customer master key (CMK) that was used for the
+     *        object.
      */
 
     public void setSSEKMSKeyId(String sSEKMSKeyId) {
@@ -322,12 +320,11 @@ public class AwsS3ObjectDetails implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The identifier of the AWS Key Management Service (AWS KMS) symmetric customer managed customer master key (CMK)
-     * that was used for the object.
+     * The identifier of the KMS symmetric customer managed customer master key (CMK) that was used for the object.
      * </p>
      * 
-     * @return The identifier of the AWS Key Management Service (AWS KMS) symmetric customer managed customer master key
-     *         (CMK) that was used for the object.
+     * @return The identifier of the KMS symmetric customer managed customer master key (CMK) that was used for the
+     *         object.
      */
 
     public String getSSEKMSKeyId() {
@@ -336,13 +333,12 @@ public class AwsS3ObjectDetails implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The identifier of the AWS Key Management Service (AWS KMS) symmetric customer managed customer master key (CMK)
-     * that was used for the object.
+     * The identifier of the KMS symmetric customer managed customer master key (CMK) that was used for the object.
      * </p>
      * 
      * @param sSEKMSKeyId
-     *        The identifier of the AWS Key Management Service (AWS KMS) symmetric customer managed customer master key
-     *        (CMK) that was used for the object.
+     *        The identifier of the KMS symmetric customer managed customer master key (CMK) that was used for the
+     *        object.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

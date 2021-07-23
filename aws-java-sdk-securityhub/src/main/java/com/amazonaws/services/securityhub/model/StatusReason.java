@@ -33,7 +33,7 @@ public class StatusReason implements Serializable, Cloneable, StructuredPojo {
      * A code that represents a reason for the control status. For the list of status reason codes and their meanings,
      * see <a href=
      * "https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-standards-results.html#securityhub-standards-results-asff"
-     * >Standards-related information in the ASFF</a> in the <i>AWS Security Hub User Guide</i>.
+     * >Standards-related information in the ASFF</a> in the <i>Security Hub User Guide</i>.
      * </p>
      */
     private String reasonCode;
@@ -49,14 +49,14 @@ public class StatusReason implements Serializable, Cloneable, StructuredPojo {
      * A code that represents a reason for the control status. For the list of status reason codes and their meanings,
      * see <a href=
      * "https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-standards-results.html#securityhub-standards-results-asff"
-     * >Standards-related information in the ASFF</a> in the <i>AWS Security Hub User Guide</i>.
+     * >Standards-related information in the ASFF</a> in the <i>Security Hub User Guide</i>.
      * </p>
      * 
      * @param reasonCode
      *        A code that represents a reason for the control status. For the list of status reason codes and their
      *        meanings, see <a href=
      *        "https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-standards-results.html#securityhub-standards-results-asff"
-     *        >Standards-related information in the ASFF</a> in the <i>AWS Security Hub User Guide</i>.
+     *        >Standards-related information in the ASFF</a> in the <i>Security Hub User Guide</i>.
      */
 
     public void setReasonCode(String reasonCode) {
@@ -68,13 +68,13 @@ public class StatusReason implements Serializable, Cloneable, StructuredPojo {
      * A code that represents a reason for the control status. For the list of status reason codes and their meanings,
      * see <a href=
      * "https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-standards-results.html#securityhub-standards-results-asff"
-     * >Standards-related information in the ASFF</a> in the <i>AWS Security Hub User Guide</i>.
+     * >Standards-related information in the ASFF</a> in the <i>Security Hub User Guide</i>.
      * </p>
      * 
      * @return A code that represents a reason for the control status. For the list of status reason codes and their
      *         meanings, see <a href=
      *         "https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-standards-results.html#securityhub-standards-results-asff"
-     *         >Standards-related information in the ASFF</a> in the <i>AWS Security Hub User Guide</i>.
+     *         >Standards-related information in the ASFF</a> in the <i>Security Hub User Guide</i>.
      */
 
     public String getReasonCode() {
@@ -86,14 +86,14 @@ public class StatusReason implements Serializable, Cloneable, StructuredPojo {
      * A code that represents a reason for the control status. For the list of status reason codes and their meanings,
      * see <a href=
      * "https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-standards-results.html#securityhub-standards-results-asff"
-     * >Standards-related information in the ASFF</a> in the <i>AWS Security Hub User Guide</i>.
+     * >Standards-related information in the ASFF</a> in the <i>Security Hub User Guide</i>.
      * </p>
      * 
      * @param reasonCode
      *        A code that represents a reason for the control status. For the list of status reason codes and their
      *        meanings, see <a href=
      *        "https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-standards-results.html#securityhub-standards-results-asff"
-     *        >Standards-related information in the ASFF</a> in the <i>AWS Security Hub User Guide</i>.
+     *        >Standards-related information in the ASFF</a> in the <i>Security Hub User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

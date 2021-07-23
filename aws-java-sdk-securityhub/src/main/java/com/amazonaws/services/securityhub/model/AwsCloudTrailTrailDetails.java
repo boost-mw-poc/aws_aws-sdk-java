@@ -36,7 +36,7 @@ public class AwsCloudTrailTrailDetails implements Serializable, Cloneable, Struc
     private String cloudWatchLogsLogGroupArn;
     /**
      * <p>
-     * The ARN of the role that the CloudWatch Logs endpoint assumes when it writes to the log group.
+     * The ARN of the role that the CloudWatch Events endpoint assumes when it writes to the log group.
      * </p>
      */
     private String cloudWatchLogsRoleArn;
@@ -66,14 +66,14 @@ public class AwsCloudTrailTrailDetails implements Serializable, Cloneable, Struc
     private Boolean isMultiRegionTrail;
     /**
      * <p>
-     * Whether the trail is created for all accounts in an organization in AWS Organizations, or only for the current
-     * AWS account.
+     * Whether the trail is created for all accounts in an organization in Organizations, or only for the current Amazon
+     * Web Services account.
      * </p>
      */
     private Boolean isOrganizationTrail;
     /**
      * <p>
-     * The AWS KMS key ID to use to encrypt the logs.
+     * The KMS key ID to use to encrypt the logs.
      * </p>
      */
     private String kmsKeyId;
@@ -162,11 +162,11 @@ public class AwsCloudTrailTrailDetails implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The ARN of the role that the CloudWatch Logs endpoint assumes when it writes to the log group.
+     * The ARN of the role that the CloudWatch Events endpoint assumes when it writes to the log group.
      * </p>
      * 
      * @param cloudWatchLogsRoleArn
-     *        The ARN of the role that the CloudWatch Logs endpoint assumes when it writes to the log group.
+     *        The ARN of the role that the CloudWatch Events endpoint assumes when it writes to the log group.
      */
 
     public void setCloudWatchLogsRoleArn(String cloudWatchLogsRoleArn) {
@@ -175,10 +175,10 @@ public class AwsCloudTrailTrailDetails implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The ARN of the role that the CloudWatch Logs endpoint assumes when it writes to the log group.
+     * The ARN of the role that the CloudWatch Events endpoint assumes when it writes to the log group.
      * </p>
      * 
-     * @return The ARN of the role that the CloudWatch Logs endpoint assumes when it writes to the log group.
+     * @return The ARN of the role that the CloudWatch Events endpoint assumes when it writes to the log group.
      */
 
     public String getCloudWatchLogsRoleArn() {
@@ -187,11 +187,11 @@ public class AwsCloudTrailTrailDetails implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The ARN of the role that the CloudWatch Logs endpoint assumes when it writes to the log group.
+     * The ARN of the role that the CloudWatch Events endpoint assumes when it writes to the log group.
      * </p>
      * 
      * @param cloudWatchLogsRoleArn
-     *        The ARN of the role that the CloudWatch Logs endpoint assumes when it writes to the log group.
+     *        The ARN of the role that the CloudWatch Events endpoint assumes when it writes to the log group.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -398,13 +398,13 @@ public class AwsCloudTrailTrailDetails implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * Whether the trail is created for all accounts in an organization in AWS Organizations, or only for the current
-     * AWS account.
+     * Whether the trail is created for all accounts in an organization in Organizations, or only for the current Amazon
+     * Web Services account.
      * </p>
      * 
      * @param isOrganizationTrail
-     *        Whether the trail is created for all accounts in an organization in AWS Organizations, or only for the
-     *        current AWS account.
+     *        Whether the trail is created for all accounts in an organization in Organizations, or only for the current
+     *        Amazon Web Services account.
      */
 
     public void setIsOrganizationTrail(Boolean isOrganizationTrail) {
@@ -413,12 +413,12 @@ public class AwsCloudTrailTrailDetails implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * Whether the trail is created for all accounts in an organization in AWS Organizations, or only for the current
-     * AWS account.
+     * Whether the trail is created for all accounts in an organization in Organizations, or only for the current Amazon
+     * Web Services account.
      * </p>
      * 
-     * @return Whether the trail is created for all accounts in an organization in AWS Organizations, or only for the
-     *         current AWS account.
+     * @return Whether the trail is created for all accounts in an organization in Organizations, or only for the
+     *         current Amazon Web Services account.
      */
 
     public Boolean getIsOrganizationTrail() {
@@ -427,13 +427,13 @@ public class AwsCloudTrailTrailDetails implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * Whether the trail is created for all accounts in an organization in AWS Organizations, or only for the current
-     * AWS account.
+     * Whether the trail is created for all accounts in an organization in Organizations, or only for the current Amazon
+     * Web Services account.
      * </p>
      * 
      * @param isOrganizationTrail
-     *        Whether the trail is created for all accounts in an organization in AWS Organizations, or only for the
-     *        current AWS account.
+     *        Whether the trail is created for all accounts in an organization in Organizations, or only for the current
+     *        Amazon Web Services account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -444,12 +444,12 @@ public class AwsCloudTrailTrailDetails implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * Whether the trail is created for all accounts in an organization in AWS Organizations, or only for the current
-     * AWS account.
+     * Whether the trail is created for all accounts in an organization in Organizations, or only for the current Amazon
+     * Web Services account.
      * </p>
      * 
-     * @return Whether the trail is created for all accounts in an organization in AWS Organizations, or only for the
-     *         current AWS account.
+     * @return Whether the trail is created for all accounts in an organization in Organizations, or only for the
+     *         current Amazon Web Services account.
      */
 
     public Boolean isOrganizationTrail() {
@@ -458,11 +458,11 @@ public class AwsCloudTrailTrailDetails implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The AWS KMS key ID to use to encrypt the logs.
+     * The KMS key ID to use to encrypt the logs.
      * </p>
      * 
      * @param kmsKeyId
-     *        The AWS KMS key ID to use to encrypt the logs.
+     *        The KMS key ID to use to encrypt the logs.
      */
 
     public void setKmsKeyId(String kmsKeyId) {
@@ -471,10 +471,10 @@ public class AwsCloudTrailTrailDetails implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The AWS KMS key ID to use to encrypt the logs.
+     * The KMS key ID to use to encrypt the logs.
      * </p>
      * 
-     * @return The AWS KMS key ID to use to encrypt the logs.
+     * @return The KMS key ID to use to encrypt the logs.
      */
 
     public String getKmsKeyId() {
@@ -483,11 +483,11 @@ public class AwsCloudTrailTrailDetails implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The AWS KMS key ID to use to encrypt the logs.
+     * The KMS key ID to use to encrypt the logs.
      * </p>
      * 
      * @param kmsKeyId
-     *        The AWS KMS key ID to use to encrypt the logs.
+     *        The KMS key ID to use to encrypt the logs.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -42,6 +42,8 @@ public class AwsElasticsearchDomainLogPublishingOptions implements Serializable,
      */
     private AwsElasticsearchDomainLogPublishingOptionsLogConfig searchSlowLogs;
 
+    private AwsElasticsearchDomainLogPublishingOptionsLogConfig auditLogs;
+
     /**
      * <p>
      * Configures the Elasticsearch index logs publishing.
@@ -123,6 +125,32 @@ public class AwsElasticsearchDomainLogPublishingOptions implements Serializable,
     }
 
     /**
+     * @param auditLogs
+     */
+
+    public void setAuditLogs(AwsElasticsearchDomainLogPublishingOptionsLogConfig auditLogs) {
+        this.auditLogs = auditLogs;
+    }
+
+    /**
+     * @return
+     */
+
+    public AwsElasticsearchDomainLogPublishingOptionsLogConfig getAuditLogs() {
+        return this.auditLogs;
+    }
+
+    /**
+     * @param auditLogs
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AwsElasticsearchDomainLogPublishingOptions withAuditLogs(AwsElasticsearchDomainLogPublishingOptionsLogConfig auditLogs) {
+        setAuditLogs(auditLogs);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -137,7 +165,9 @@ public class AwsElasticsearchDomainLogPublishingOptions implements Serializable,
         if (getIndexSlowLogs() != null)
             sb.append("IndexSlowLogs: ").append(getIndexSlowLogs()).append(",");
         if (getSearchSlowLogs() != null)
-            sb.append("SearchSlowLogs: ").append(getSearchSlowLogs());
+            sb.append("SearchSlowLogs: ").append(getSearchSlowLogs()).append(",");
+        if (getAuditLogs() != null)
+            sb.append("AuditLogs: ").append(getAuditLogs());
         sb.append("}");
         return sb.toString();
     }
@@ -160,6 +190,10 @@ public class AwsElasticsearchDomainLogPublishingOptions implements Serializable,
             return false;
         if (other.getSearchSlowLogs() != null && other.getSearchSlowLogs().equals(this.getSearchSlowLogs()) == false)
             return false;
+        if (other.getAuditLogs() == null ^ this.getAuditLogs() == null)
+            return false;
+        if (other.getAuditLogs() != null && other.getAuditLogs().equals(this.getAuditLogs()) == false)
+            return false;
         return true;
     }
 
@@ -170,6 +204,7 @@ public class AwsElasticsearchDomainLogPublishingOptions implements Serializable,
 
         hashCode = prime * hashCode + ((getIndexSlowLogs() == null) ? 0 : getIndexSlowLogs().hashCode());
         hashCode = prime * hashCode + ((getSearchSlowLogs() == null) ? 0 : getSearchSlowLogs().hashCode());
+        hashCode = prime * hashCode + ((getAuditLogs() == null) ? 0 : getAuditLogs().hashCode());
         return hashCode;
     }
 

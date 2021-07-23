@@ -30,7 +30,7 @@ public class AwsCloudFrontDistributionLogging implements Serializable, Cloneable
 
     /**
      * <p>
-     * The Amazon S3 bucket to store the access logs in.
+     * The S3 bucket to store the access logs in.
      * </p>
      */
     private String bucket;
@@ -55,11 +55,11 @@ public class AwsCloudFrontDistributionLogging implements Serializable, Cloneable
 
     /**
      * <p>
-     * The Amazon S3 bucket to store the access logs in.
+     * The S3 bucket to store the access logs in.
      * </p>
      * 
      * @param bucket
-     *        The Amazon S3 bucket to store the access logs in.
+     *        The S3 bucket to store the access logs in.
      */
 
     public void setBucket(String bucket) {
@@ -68,10 +68,10 @@ public class AwsCloudFrontDistributionLogging implements Serializable, Cloneable
 
     /**
      * <p>
-     * The Amazon S3 bucket to store the access logs in.
+     * The S3 bucket to store the access logs in.
      * </p>
      * 
-     * @return The Amazon S3 bucket to store the access logs in.
+     * @return The S3 bucket to store the access logs in.
      */
 
     public String getBucket() {
@@ -80,11 +80,11 @@ public class AwsCloudFrontDistributionLogging implements Serializable, Cloneable
 
     /**
      * <p>
-     * The Amazon S3 bucket to store the access logs in.
+     * The S3 bucket to store the access logs in.
      * </p>
      * 
      * @param bucket
-     *        The Amazon S3 bucket to store the access logs in.
+     *        The S3 bucket to store the access logs in.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -27,24 +27,24 @@ public class DeleteEndpointRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The ID of the end point.
+     * The ID of the endpoint.
      * </p>
      */
     private String endpointId;
     /**
      * <p>
-     * The ID of the AWS Outpost.
+     * The ID of the AWS Outposts.
      * </p>
      */
     private String outpostId;
 
     /**
      * <p>
-     * The ID of the end point.
+     * The ID of the endpoint.
      * </p>
      * 
      * @param endpointId
-     *        The ID of the end point.
+     *        The ID of the endpoint.
      */
 
     public void setEndpointId(String endpointId) {
@@ -53,10 +53,10 @@ public class DeleteEndpointRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The ID of the end point.
+     * The ID of the endpoint.
      * </p>
      * 
-     * @return The ID of the end point.
+     * @return The ID of the endpoint.
      */
 
     public String getEndpointId() {
@@ -65,11 +65,11 @@ public class DeleteEndpointRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The ID of the end point.
+     * The ID of the endpoint.
      * </p>
      * 
      * @param endpointId
-     *        The ID of the end point.
+     *        The ID of the endpoint.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -80,11 +80,11 @@ public class DeleteEndpointRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The ID of the AWS Outpost.
+     * The ID of the AWS Outposts.
      * </p>
      * 
      * @param outpostId
-     *        The ID of the AWS Outpost.
+     *        The ID of the AWS Outposts.
      */
 
     public void setOutpostId(String outpostId) {
@@ -93,10 +93,10 @@ public class DeleteEndpointRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The ID of the AWS Outpost.
+     * The ID of the AWS Outposts.
      * </p>
      * 
-     * @return The ID of the AWS Outpost.
+     * @return The ID of the AWS Outposts.
      */
 
     public String getOutpostId() {
@@ -105,11 +105,11 @@ public class DeleteEndpointRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The ID of the AWS Outpost.
+     * The ID of the AWS Outposts.
      * </p>
      * 
      * @param outpostId
-     *        The ID of the AWS Outpost.
+     *        The ID of the AWS Outposts.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

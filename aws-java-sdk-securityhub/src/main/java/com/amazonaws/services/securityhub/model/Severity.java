@@ -43,7 +43,8 @@ public class Severity implements Serializable, Cloneable, StructuredPojo {
      * <code>Original</code>.
      * </p>
      * <p>
-     * The native severity as defined by the AWS service or integrated partner product that generated the finding.
+     * The native severity as defined by the Amazon Web Services service or integrated partner product that generated
+     * the finding.
      * </p>
      */
     private Double product;
@@ -162,15 +163,16 @@ public class Severity implements Serializable, Cloneable, StructuredPojo {
      * <code>Original</code>.
      * </p>
      * <p>
-     * The native severity as defined by the AWS service or integrated partner product that generated the finding.
+     * The native severity as defined by the Amazon Web Services service or integrated partner product that generated
+     * the finding.
      * </p>
      * 
      * @param product
      *        Deprecated. This attribute is being deprecated. Instead of providing <code>Product</code>, provide
      *        <code>Original</code>.</p>
      *        <p>
-     *        The native severity as defined by the AWS service or integrated partner product that generated the
-     *        finding.
+     *        The native severity as defined by the Amazon Web Services service or integrated partner product that
+     *        generated the finding.
      */
 
     public void setProduct(Double product) {
@@ -183,14 +185,15 @@ public class Severity implements Serializable, Cloneable, StructuredPojo {
      * <code>Original</code>.
      * </p>
      * <p>
-     * The native severity as defined by the AWS service or integrated partner product that generated the finding.
+     * The native severity as defined by the Amazon Web Services service or integrated partner product that generated
+     * the finding.
      * </p>
      * 
      * @return Deprecated. This attribute is being deprecated. Instead of providing <code>Product</code>, provide
      *         <code>Original</code>.</p>
      *         <p>
-     *         The native severity as defined by the AWS service or integrated partner product that generated the
-     *         finding.
+     *         The native severity as defined by the Amazon Web Services service or integrated partner product that
+     *         generated the finding.
      */
 
     public Double getProduct() {
@@ -203,15 +206,16 @@ public class Severity implements Serializable, Cloneable, StructuredPojo {
      * <code>Original</code>.
      * </p>
      * <p>
-     * The native severity as defined by the AWS service or integrated partner product that generated the finding.
+     * The native severity as defined by the Amazon Web Services service or integrated partner product that generated
+     * the finding.
      * </p>
      * 
      * @param product
      *        Deprecated. This attribute is being deprecated. Instead of providing <code>Product</code>, provide
      *        <code>Original</code>.</p>
      *        <p>
-     *        The native severity as defined by the AWS service or integrated partner product that generated the
-     *        finding.
+     *        The native severity as defined by the Amazon Web Services service or integrated partner product that
+     *        generated the finding.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

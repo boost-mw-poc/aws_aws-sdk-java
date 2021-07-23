@@ -48,7 +48,7 @@ public class AwsEc2SecurityGroupUserIdGroupPair implements Serializable, Cloneab
     private String peeringStatus;
     /**
      * <p>
-     * The ID of an AWS account.
+     * The ID of an Amazon Web Services account.
      * </p>
      * <p>
      * For a referenced security group in another VPC, the account ID of the referenced security group is returned in
@@ -194,7 +194,7 @@ public class AwsEc2SecurityGroupUserIdGroupPair implements Serializable, Cloneab
 
     /**
      * <p>
-     * The ID of an AWS account.
+     * The ID of an Amazon Web Services account.
      * </p>
      * <p>
      * For a referenced security group in another VPC, the account ID of the referenced security group is returned in
@@ -205,7 +205,7 @@ public class AwsEc2SecurityGroupUserIdGroupPair implements Serializable, Cloneab
      * </p>
      * 
      * @param userId
-     *        The ID of an AWS account.</p>
+     *        The ID of an Amazon Web Services account.</p>
      *        <p>
      *        For a referenced security group in another VPC, the account ID of the referenced security group is
      *        returned in the response. If the referenced security group is deleted, this value is not returned.
@@ -220,7 +220,7 @@ public class AwsEc2SecurityGroupUserIdGroupPair implements Serializable, Cloneab
 
     /**
      * <p>
-     * The ID of an AWS account.
+     * The ID of an Amazon Web Services account.
      * </p>
      * <p>
      * For a referenced security group in another VPC, the account ID of the referenced security group is returned in
@@ -230,7 +230,7 @@ public class AwsEc2SecurityGroupUserIdGroupPair implements Serializable, Cloneab
      * [EC2-Classic] Required when adding or removing rules that reference a security group in another VPC.
      * </p>
      * 
-     * @return The ID of an AWS account.</p>
+     * @return The ID of an Amazon Web Services account.</p>
      *         <p>
      *         For a referenced security group in another VPC, the account ID of the referenced security group is
      *         returned in the response. If the referenced security group is deleted, this value is not returned.
@@ -245,7 +245,7 @@ public class AwsEc2SecurityGroupUserIdGroupPair implements Serializable, Cloneab
 
     /**
      * <p>
-     * The ID of an AWS account.
+     * The ID of an Amazon Web Services account.
      * </p>
      * <p>
      * For a referenced security group in another VPC, the account ID of the referenced security group is returned in
@@ -256,7 +256,7 @@ public class AwsEc2SecurityGroupUserIdGroupPair implements Serializable, Cloneab
      * </p>
      * 
      * @param userId
-     *        The ID of an AWS account.</p>
+     *        The ID of an Amazon Web Services account.</p>
      *        <p>
      *        For a referenced security group in another VPC, the account ID of the referenced security group is
      *        returned in the response. If the referenced security group is deleted, this value is not returned.

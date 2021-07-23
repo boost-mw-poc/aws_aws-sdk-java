@@ -43,6 +43,8 @@ public class AwsElasticsearchDomainDetailsMarshaller {
             .marshallLocationName("Endpoints").build();
     private static final MarshallingInfo<String> ELASTICSEARCHVERSION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ElasticsearchVersion").build();
+    private static final MarshallingInfo<StructuredPojo> ELASTICSEARCHCLUSTERCONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ElasticsearchClusterConfig").build();
     private static final MarshallingInfo<StructuredPojo> ENCRYPTIONATRESTOPTIONS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EncryptionAtRestOptions").build();
     private static final MarshallingInfo<StructuredPojo> LOGPUBLISHINGOPTIONS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
@@ -77,6 +79,7 @@ public class AwsElasticsearchDomainDetailsMarshaller {
             protocolMarshaller.marshall(awsElasticsearchDomainDetails.getEndpoint(), ENDPOINT_BINDING);
             protocolMarshaller.marshall(awsElasticsearchDomainDetails.getEndpoints(), ENDPOINTS_BINDING);
             protocolMarshaller.marshall(awsElasticsearchDomainDetails.getElasticsearchVersion(), ELASTICSEARCHVERSION_BINDING);
+            protocolMarshaller.marshall(awsElasticsearchDomainDetails.getElasticsearchClusterConfig(), ELASTICSEARCHCLUSTERCONFIG_BINDING);
             protocolMarshaller.marshall(awsElasticsearchDomainDetails.getEncryptionAtRestOptions(), ENCRYPTIONATRESTOPTIONS_BINDING);
             protocolMarshaller.marshall(awsElasticsearchDomainDetails.getLogPublishingOptions(), LOGPUBLISHINGOPTIONS_BINDING);
             protocolMarshaller.marshall(awsElasticsearchDomainDetails.getNodeToNodeEncryptionOptions(), NODETONODEENCRYPTIONOPTIONS_BINDING);

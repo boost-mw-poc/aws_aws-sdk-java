@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * An AWS Identity and Access Management (IAM) role associated with the DB instance.
+ * An IAM role associated with the DB instance.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/AwsRdsDbInstanceAssociatedRole"
@@ -36,7 +36,7 @@ public class AwsRdsDbInstanceAssociatedRole implements Serializable, Cloneable, 
     private String roleArn;
     /**
      * <p>
-     * The name of the feature associated with the IAM)role.
+     * The name of the feature associated with the IAM role.
      * </p>
      */
     private String featureName;
@@ -48,8 +48,8 @@ public class AwsRdsDbInstanceAssociatedRole implements Serializable, Cloneable, 
      * <ul>
      * <li>
      * <p>
-     * <code>ACTIVE</code> - The IAM role ARN is associated with the DB instance and can be used to access other AWS
-     * services on your behalf.
+     * <code>ACTIVE</code> - The IAM role ARN is associated with the DB instance and can be used to access other Amazon
+     * Web Services services on your behalf.
      * </p>
      * </li>
      * <li>
@@ -60,7 +60,7 @@ public class AwsRdsDbInstanceAssociatedRole implements Serializable, Cloneable, 
      * <li>
      * <p>
      * <code>INVALID</code> - The IAM role ARN is associated with the DB instance. But the DB instance is unable to
-     * assume the IAM role in order to access other AWS services on your behalf.
+     * assume the IAM role in order to access other Amazon Web Services services on your behalf.
      * </p>
      * </li>
      * </ul>
@@ -109,11 +109,11 @@ public class AwsRdsDbInstanceAssociatedRole implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The name of the feature associated with the IAM)role.
+     * The name of the feature associated with the IAM role.
      * </p>
      * 
      * @param featureName
-     *        The name of the feature associated with the IAM)role.
+     *        The name of the feature associated with the IAM role.
      */
 
     public void setFeatureName(String featureName) {
@@ -122,10 +122,10 @@ public class AwsRdsDbInstanceAssociatedRole implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The name of the feature associated with the IAM)role.
+     * The name of the feature associated with the IAM role.
      * </p>
      * 
-     * @return The name of the feature associated with the IAM)role.
+     * @return The name of the feature associated with the IAM role.
      */
 
     public String getFeatureName() {
@@ -134,11 +134,11 @@ public class AwsRdsDbInstanceAssociatedRole implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The name of the feature associated with the IAM)role.
+     * The name of the feature associated with the IAM role.
      * </p>
      * 
      * @param featureName
-     *        The name of the feature associated with the IAM)role.
+     *        The name of the feature associated with the IAM role.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -155,8 +155,8 @@ public class AwsRdsDbInstanceAssociatedRole implements Serializable, Cloneable, 
      * <ul>
      * <li>
      * <p>
-     * <code>ACTIVE</code> - The IAM role ARN is associated with the DB instance and can be used to access other AWS
-     * services on your behalf.
+     * <code>ACTIVE</code> - The IAM role ARN is associated with the DB instance and can be used to access other Amazon
+     * Web Services services on your behalf.
      * </p>
      * </li>
      * <li>
@@ -167,7 +167,7 @@ public class AwsRdsDbInstanceAssociatedRole implements Serializable, Cloneable, 
      * <li>
      * <p>
      * <code>INVALID</code> - The IAM role ARN is associated with the DB instance. But the DB instance is unable to
-     * assume the IAM role in order to access other AWS services on your behalf.
+     * assume the IAM role in order to access other Amazon Web Services services on your behalf.
      * </p>
      * </li>
      * </ul>
@@ -179,7 +179,7 @@ public class AwsRdsDbInstanceAssociatedRole implements Serializable, Cloneable, 
      *        <li>
      *        <p>
      *        <code>ACTIVE</code> - The IAM role ARN is associated with the DB instance and can be used to access other
-     *        AWS services on your behalf.
+     *        Amazon Web Services services on your behalf.
      *        </p>
      *        </li>
      *        <li>
@@ -190,7 +190,7 @@ public class AwsRdsDbInstanceAssociatedRole implements Serializable, Cloneable, 
      *        <li>
      *        <p>
      *        <code>INVALID</code> - The IAM role ARN is associated with the DB instance. But the DB instance is unable
-     *        to assume the IAM role in order to access other AWS services on your behalf.
+     *        to assume the IAM role in order to access other Amazon Web Services services on your behalf.
      *        </p>
      *        </li>
      */
@@ -207,8 +207,8 @@ public class AwsRdsDbInstanceAssociatedRole implements Serializable, Cloneable, 
      * <ul>
      * <li>
      * <p>
-     * <code>ACTIVE</code> - The IAM role ARN is associated with the DB instance and can be used to access other AWS
-     * services on your behalf.
+     * <code>ACTIVE</code> - The IAM role ARN is associated with the DB instance and can be used to access other Amazon
+     * Web Services services on your behalf.
      * </p>
      * </li>
      * <li>
@@ -219,7 +219,7 @@ public class AwsRdsDbInstanceAssociatedRole implements Serializable, Cloneable, 
      * <li>
      * <p>
      * <code>INVALID</code> - The IAM role ARN is associated with the DB instance. But the DB instance is unable to
-     * assume the IAM role in order to access other AWS services on your behalf.
+     * assume the IAM role in order to access other Amazon Web Services services on your behalf.
      * </p>
      * </li>
      * </ul>
@@ -230,7 +230,7 @@ public class AwsRdsDbInstanceAssociatedRole implements Serializable, Cloneable, 
      *         <li>
      *         <p>
      *         <code>ACTIVE</code> - The IAM role ARN is associated with the DB instance and can be used to access other
-     *         AWS services on your behalf.
+     *         Amazon Web Services services on your behalf.
      *         </p>
      *         </li>
      *         <li>
@@ -241,7 +241,7 @@ public class AwsRdsDbInstanceAssociatedRole implements Serializable, Cloneable, 
      *         <li>
      *         <p>
      *         <code>INVALID</code> - The IAM role ARN is associated with the DB instance. But the DB instance is unable
-     *         to assume the IAM role in order to access other AWS services on your behalf.
+     *         to assume the IAM role in order to access other Amazon Web Services services on your behalf.
      *         </p>
      *         </li>
      */
@@ -258,8 +258,8 @@ public class AwsRdsDbInstanceAssociatedRole implements Serializable, Cloneable, 
      * <ul>
      * <li>
      * <p>
-     * <code>ACTIVE</code> - The IAM role ARN is associated with the DB instance and can be used to access other AWS
-     * services on your behalf.
+     * <code>ACTIVE</code> - The IAM role ARN is associated with the DB instance and can be used to access other Amazon
+     * Web Services services on your behalf.
      * </p>
      * </li>
      * <li>
@@ -270,7 +270,7 @@ public class AwsRdsDbInstanceAssociatedRole implements Serializable, Cloneable, 
      * <li>
      * <p>
      * <code>INVALID</code> - The IAM role ARN is associated with the DB instance. But the DB instance is unable to
-     * assume the IAM role in order to access other AWS services on your behalf.
+     * assume the IAM role in order to access other Amazon Web Services services on your behalf.
      * </p>
      * </li>
      * </ul>
@@ -282,7 +282,7 @@ public class AwsRdsDbInstanceAssociatedRole implements Serializable, Cloneable, 
      *        <li>
      *        <p>
      *        <code>ACTIVE</code> - The IAM role ARN is associated with the DB instance and can be used to access other
-     *        AWS services on your behalf.
+     *        Amazon Web Services services on your behalf.
      *        </p>
      *        </li>
      *        <li>
@@ -293,7 +293,7 @@ public class AwsRdsDbInstanceAssociatedRole implements Serializable, Cloneable, 
      *        <li>
      *        <p>
      *        <code>INVALID</code> - The IAM role ARN is associated with the DB instance. But the DB instance is unable
-     *        to assume the IAM role in order to access other AWS services on your behalf.
+     *        to assume the IAM role in order to access other Amazon Web Services services on your behalf.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

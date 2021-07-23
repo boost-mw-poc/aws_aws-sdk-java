@@ -19,8 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A complex type that describes the Amazon S3 bucket, HTTP server (for example, a web server), Amazon Elemental
- * MediaStore, or other server from which CloudFront gets your files.
+ * A complex type that describes the S3 bucket, HTTP server (for example, a web server), AWS Elemental MediaStore, or
+ * other server from which CloudFront gets your files.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/AwsCloudFrontDistributionOriginItem"
@@ -31,8 +31,7 @@ public class AwsCloudFrontDistributionOriginItem implements Serializable, Clonea
 
     /**
      * <p>
-     * Amazon S3 origins: The DNS name of the Amazon S3 bucket from which you want CloudFront to get objects for this
-     * origin.
+     * Amazon S3 origins: The DNS name of the S3 bucket from which you want CloudFront to get objects for this origin.
      * </p>
      */
     private String domainName;
@@ -58,13 +57,12 @@ public class AwsCloudFrontDistributionOriginItem implements Serializable, Clonea
 
     /**
      * <p>
-     * Amazon S3 origins: The DNS name of the Amazon S3 bucket from which you want CloudFront to get objects for this
-     * origin.
+     * Amazon S3 origins: The DNS name of the S3 bucket from which you want CloudFront to get objects for this origin.
      * </p>
      * 
      * @param domainName
-     *        Amazon S3 origins: The DNS name of the Amazon S3 bucket from which you want CloudFront to get objects for
-     *        this origin.
+     *        Amazon S3 origins: The DNS name of the S3 bucket from which you want CloudFront to get objects for this
+     *        origin.
      */
 
     public void setDomainName(String domainName) {
@@ -73,12 +71,11 @@ public class AwsCloudFrontDistributionOriginItem implements Serializable, Clonea
 
     /**
      * <p>
-     * Amazon S3 origins: The DNS name of the Amazon S3 bucket from which you want CloudFront to get objects for this
-     * origin.
+     * Amazon S3 origins: The DNS name of the S3 bucket from which you want CloudFront to get objects for this origin.
      * </p>
      * 
-     * @return Amazon S3 origins: The DNS name of the Amazon S3 bucket from which you want CloudFront to get objects for
-     *         this origin.
+     * @return Amazon S3 origins: The DNS name of the S3 bucket from which you want CloudFront to get objects for this
+     *         origin.
      */
 
     public String getDomainName() {
@@ -87,13 +84,12 @@ public class AwsCloudFrontDistributionOriginItem implements Serializable, Clonea
 
     /**
      * <p>
-     * Amazon S3 origins: The DNS name of the Amazon S3 bucket from which you want CloudFront to get objects for this
-     * origin.
+     * Amazon S3 origins: The DNS name of the S3 bucket from which you want CloudFront to get objects for this origin.
      * </p>
      * 
      * @param domainName
-     *        Amazon S3 origins: The DNS name of the Amazon S3 bucket from which you want CloudFront to get objects for
-     *        this origin.
+     *        Amazon S3 origins: The DNS name of the S3 bucket from which you want CloudFront to get objects for this
+     *        origin.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

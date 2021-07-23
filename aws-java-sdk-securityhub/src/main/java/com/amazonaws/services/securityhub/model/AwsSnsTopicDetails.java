@@ -30,13 +30,13 @@ public class AwsSnsTopicDetails implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The ID of an AWS managed customer master key (CMK) for Amazon SNS or a custom CMK.
+     * The ID of an Amazon Web Services managed customer master key (CMK) for Amazon SNS or a custom CMK.
      * </p>
      */
     private String kmsMasterKeyId;
     /**
      * <p>
-     * Subscription is an embedded property that describes the subscription endpoints of an Amazon SNS topic.
+     * Subscription is an embedded property that describes the subscription endpoints of an SNS topic.
      * </p>
      */
     private java.util.List<AwsSnsTopicSubscription> subscription;
@@ -55,11 +55,11 @@ public class AwsSnsTopicDetails implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The ID of an AWS managed customer master key (CMK) for Amazon SNS or a custom CMK.
+     * The ID of an Amazon Web Services managed customer master key (CMK) for Amazon SNS or a custom CMK.
      * </p>
      * 
      * @param kmsMasterKeyId
-     *        The ID of an AWS managed customer master key (CMK) for Amazon SNS or a custom CMK.
+     *        The ID of an Amazon Web Services managed customer master key (CMK) for Amazon SNS or a custom CMK.
      */
 
     public void setKmsMasterKeyId(String kmsMasterKeyId) {
@@ -68,10 +68,10 @@ public class AwsSnsTopicDetails implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The ID of an AWS managed customer master key (CMK) for Amazon SNS or a custom CMK.
+     * The ID of an Amazon Web Services managed customer master key (CMK) for Amazon SNS or a custom CMK.
      * </p>
      * 
-     * @return The ID of an AWS managed customer master key (CMK) for Amazon SNS or a custom CMK.
+     * @return The ID of an Amazon Web Services managed customer master key (CMK) for Amazon SNS or a custom CMK.
      */
 
     public String getKmsMasterKeyId() {
@@ -80,11 +80,11 @@ public class AwsSnsTopicDetails implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The ID of an AWS managed customer master key (CMK) for Amazon SNS or a custom CMK.
+     * The ID of an Amazon Web Services managed customer master key (CMK) for Amazon SNS or a custom CMK.
      * </p>
      * 
      * @param kmsMasterKeyId
-     *        The ID of an AWS managed customer master key (CMK) for Amazon SNS or a custom CMK.
+     *        The ID of an Amazon Web Services managed customer master key (CMK) for Amazon SNS or a custom CMK.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -95,10 +95,10 @@ public class AwsSnsTopicDetails implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * Subscription is an embedded property that describes the subscription endpoints of an Amazon SNS topic.
+     * Subscription is an embedded property that describes the subscription endpoints of an SNS topic.
      * </p>
      * 
-     * @return Subscription is an embedded property that describes the subscription endpoints of an Amazon SNS topic.
+     * @return Subscription is an embedded property that describes the subscription endpoints of an SNS topic.
      */
 
     public java.util.List<AwsSnsTopicSubscription> getSubscription() {
@@ -107,11 +107,11 @@ public class AwsSnsTopicDetails implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * Subscription is an embedded property that describes the subscription endpoints of an Amazon SNS topic.
+     * Subscription is an embedded property that describes the subscription endpoints of an SNS topic.
      * </p>
      * 
      * @param subscription
-     *        Subscription is an embedded property that describes the subscription endpoints of an Amazon SNS topic.
+     *        Subscription is an embedded property that describes the subscription endpoints of an SNS topic.
      */
 
     public void setSubscription(java.util.Collection<AwsSnsTopicSubscription> subscription) {
@@ -125,7 +125,7 @@ public class AwsSnsTopicDetails implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * Subscription is an embedded property that describes the subscription endpoints of an Amazon SNS topic.
+     * Subscription is an embedded property that describes the subscription endpoints of an SNS topic.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -134,7 +134,7 @@ public class AwsSnsTopicDetails implements Serializable, Cloneable, StructuredPo
      * </p>
      * 
      * @param subscription
-     *        Subscription is an embedded property that describes the subscription endpoints of an Amazon SNS topic.
+     *        Subscription is an embedded property that describes the subscription endpoints of an SNS topic.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -150,11 +150,11 @@ public class AwsSnsTopicDetails implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * Subscription is an embedded property that describes the subscription endpoints of an Amazon SNS topic.
+     * Subscription is an embedded property that describes the subscription endpoints of an SNS topic.
      * </p>
      * 
      * @param subscription
-     *        Subscription is an embedded property that describes the subscription endpoints of an Amazon SNS topic.
+     *        Subscription is an embedded property that describes the subscription endpoints of an SNS topic.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

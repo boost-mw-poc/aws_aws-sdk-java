@@ -31,7 +31,8 @@ public class AwsLambdaFunctionCode implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * An Amazon S3 bucket in the same AWS Region as your function. The bucket can be in a different AWS account.
+     * An Amazon S3 bucket in the same Amazon Web Services Region as your function. The bucket can be in a different
+     * Amazon Web Services account.
      * </p>
      */
     private String s3Bucket;
@@ -49,18 +50,21 @@ public class AwsLambdaFunctionCode implements Serializable, Cloneable, Structure
     private String s3ObjectVersion;
     /**
      * <p>
-     * The base64-encoded contents of the deployment package. AWS SDK and AWS CLI clients handle the encoding for you.
+     * The base64-encoded contents of the deployment package. Amazon Web Services SDK and Amazon Web Services CLI
+     * clients handle the encoding for you.
      * </p>
      */
     private String zipFile;
 
     /**
      * <p>
-     * An Amazon S3 bucket in the same AWS Region as your function. The bucket can be in a different AWS account.
+     * An Amazon S3 bucket in the same Amazon Web Services Region as your function. The bucket can be in a different
+     * Amazon Web Services account.
      * </p>
      * 
      * @param s3Bucket
-     *        An Amazon S3 bucket in the same AWS Region as your function. The bucket can be in a different AWS account.
+     *        An Amazon S3 bucket in the same Amazon Web Services Region as your function. The bucket can be in a
+     *        different Amazon Web Services account.
      */
 
     public void setS3Bucket(String s3Bucket) {
@@ -69,11 +73,12 @@ public class AwsLambdaFunctionCode implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * An Amazon S3 bucket in the same AWS Region as your function. The bucket can be in a different AWS account.
+     * An Amazon S3 bucket in the same Amazon Web Services Region as your function. The bucket can be in a different
+     * Amazon Web Services account.
      * </p>
      * 
-     * @return An Amazon S3 bucket in the same AWS Region as your function. The bucket can be in a different AWS
-     *         account.
+     * @return An Amazon S3 bucket in the same Amazon Web Services Region as your function. The bucket can be in a
+     *         different Amazon Web Services account.
      */
 
     public String getS3Bucket() {
@@ -82,11 +87,13 @@ public class AwsLambdaFunctionCode implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * An Amazon S3 bucket in the same AWS Region as your function. The bucket can be in a different AWS account.
+     * An Amazon S3 bucket in the same Amazon Web Services Region as your function. The bucket can be in a different
+     * Amazon Web Services account.
      * </p>
      * 
      * @param s3Bucket
-     *        An Amazon S3 bucket in the same AWS Region as your function. The bucket can be in a different AWS account.
+     *        An Amazon S3 bucket in the same Amazon Web Services Region as your function. The bucket can be in a
+     *        different Amazon Web Services account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -177,12 +184,13 @@ public class AwsLambdaFunctionCode implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The base64-encoded contents of the deployment package. AWS SDK and AWS CLI clients handle the encoding for you.
+     * The base64-encoded contents of the deployment package. Amazon Web Services SDK and Amazon Web Services CLI
+     * clients handle the encoding for you.
      * </p>
      * 
      * @param zipFile
-     *        The base64-encoded contents of the deployment package. AWS SDK and AWS CLI clients handle the encoding for
-     *        you.
+     *        The base64-encoded contents of the deployment package. Amazon Web Services SDK and Amazon Web Services CLI
+     *        clients handle the encoding for you.
      */
 
     public void setZipFile(String zipFile) {
@@ -191,11 +199,12 @@ public class AwsLambdaFunctionCode implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The base64-encoded contents of the deployment package. AWS SDK and AWS CLI clients handle the encoding for you.
+     * The base64-encoded contents of the deployment package. Amazon Web Services SDK and Amazon Web Services CLI
+     * clients handle the encoding for you.
      * </p>
      * 
-     * @return The base64-encoded contents of the deployment package. AWS SDK and AWS CLI clients handle the encoding
-     *         for you.
+     * @return The base64-encoded contents of the deployment package. Amazon Web Services SDK and Amazon Web Services
+     *         CLI clients handle the encoding for you.
      */
 
     public String getZipFile() {
@@ -204,12 +213,13 @@ public class AwsLambdaFunctionCode implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The base64-encoded contents of the deployment package. AWS SDK and AWS CLI clients handle the encoding for you.
+     * The base64-encoded contents of the deployment package. Amazon Web Services SDK and Amazon Web Services CLI
+     * clients handle the encoding for you.
      * </p>
      * 
      * @param zipFile
-     *        The base64-encoded contents of the deployment package. AWS SDK and AWS CLI clients handle the encoding for
-     *        you.
+     *        The base64-encoded contents of the deployment package. Amazon Web Services SDK and Amazon Web Services CLI
+     *        clients handle the encoding for you.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

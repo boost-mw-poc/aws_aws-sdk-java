@@ -60,6 +60,18 @@ public class AwsSecurityFindingJsonUnmarshaller implements Unmarshaller<AwsSecur
                     context.nextToken();
                     awsSecurityFinding.setProductArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("ProductName", targetDepth)) {
+                    context.nextToken();
+                    awsSecurityFinding.setProductName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("CompanyName", targetDepth)) {
+                    context.nextToken();
+                    awsSecurityFinding.setCompanyName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("Region", targetDepth)) {
+                    context.nextToken();
+                    awsSecurityFinding.setRegion(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("GeneratorId", targetDepth)) {
                     context.nextToken();
                     awsSecurityFinding.setGeneratorId(context.getUnmarshaller(String.class).unmarshall(context));

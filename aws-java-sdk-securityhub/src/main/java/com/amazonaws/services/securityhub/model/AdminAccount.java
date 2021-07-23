@@ -30,7 +30,7 @@ public class AdminAccount implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS account identifier of the Security Hub administrator account.
+     * The Amazon Web Services account identifier of the Security Hub administrator account.
      * </p>
      */
     private String accountId;
@@ -44,11 +44,11 @@ public class AdminAccount implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS account identifier of the Security Hub administrator account.
+     * The Amazon Web Services account identifier of the Security Hub administrator account.
      * </p>
      * 
      * @param accountId
-     *        The AWS account identifier of the Security Hub administrator account.
+     *        The Amazon Web Services account identifier of the Security Hub administrator account.
      */
 
     public void setAccountId(String accountId) {
@@ -57,10 +57,10 @@ public class AdminAccount implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS account identifier of the Security Hub administrator account.
+     * The Amazon Web Services account identifier of the Security Hub administrator account.
      * </p>
      * 
-     * @return The AWS account identifier of the Security Hub administrator account.
+     * @return The Amazon Web Services account identifier of the Security Hub administrator account.
      */
 
     public String getAccountId() {
@@ -69,11 +69,11 @@ public class AdminAccount implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS account identifier of the Security Hub administrator account.
+     * The Amazon Web Services account identifier of the Security Hub administrator account.
      * </p>
      * 
      * @param accountId
-     *        The AWS account identifier of the Security Hub administrator account.
+     *        The Amazon Web Services account identifier of the Security Hub administrator account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

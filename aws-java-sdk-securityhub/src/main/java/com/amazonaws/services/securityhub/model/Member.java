@@ -30,7 +30,7 @@ public class Member implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS account ID of the member account.
+     * The Amazon Web Services account ID of the member account.
      * </p>
      */
     private String accountId;
@@ -45,14 +45,14 @@ public class Member implements Serializable, Cloneable, StructuredPojo {
      * This is replaced by <code>AdministratorID</code>.
      * </p>
      * <p>
-     * The AWS account ID of the Security Hub administrator account associated with this member account.
+     * The Amazon Web Services account ID of the Security Hub administrator account associated with this member account.
      * </p>
      */
     @Deprecated
     private String masterId;
     /**
      * <p>
-     * The AWS account ID of the Security Hub administrator account associated with this member account.
+     * The Amazon Web Services account ID of the Security Hub administrator account associated with this member account.
      * </p>
      */
     private String administratorId;
@@ -98,6 +98,12 @@ public class Member implements Serializable, Cloneable, StructuredPojo {
      * <code>DELETED</code> - Indicates that the administrator account deleted the member account.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>ACCOUNT_SUSPENDED</code> - Indicates that an organization account was suspended from Amazon Web Services at
+     * the same time that the administrator account tried to enable the organization account as a member account.
+     * </p>
+     * </li>
      * </ul>
      */
     private String memberStatus;
@@ -116,11 +122,11 @@ public class Member implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS account ID of the member account.
+     * The Amazon Web Services account ID of the member account.
      * </p>
      * 
      * @param accountId
-     *        The AWS account ID of the member account.
+     *        The Amazon Web Services account ID of the member account.
      */
 
     public void setAccountId(String accountId) {
@@ -129,10 +135,10 @@ public class Member implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS account ID of the member account.
+     * The Amazon Web Services account ID of the member account.
      * </p>
      * 
-     * @return The AWS account ID of the member account.
+     * @return The Amazon Web Services account ID of the member account.
      */
 
     public String getAccountId() {
@@ -141,11 +147,11 @@ public class Member implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS account ID of the member account.
+     * The Amazon Web Services account ID of the member account.
      * </p>
      * 
      * @param accountId
-     *        The AWS account ID of the member account.
+     *        The Amazon Web Services account ID of the member account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -199,13 +205,14 @@ public class Member implements Serializable, Cloneable, StructuredPojo {
      * This is replaced by <code>AdministratorID</code>.
      * </p>
      * <p>
-     * The AWS account ID of the Security Hub administrator account associated with this member account.
+     * The Amazon Web Services account ID of the Security Hub administrator account associated with this member account.
      * </p>
      * 
      * @param masterId
      *        This is replaced by <code>AdministratorID</code>.</p>
      *        <p>
-     *        The AWS account ID of the Security Hub administrator account associated with this member account.
+     *        The Amazon Web Services account ID of the Security Hub administrator account associated with this member
+     *        account.
      */
     @Deprecated
     public void setMasterId(String masterId) {
@@ -217,12 +224,13 @@ public class Member implements Serializable, Cloneable, StructuredPojo {
      * This is replaced by <code>AdministratorID</code>.
      * </p>
      * <p>
-     * The AWS account ID of the Security Hub administrator account associated with this member account.
+     * The Amazon Web Services account ID of the Security Hub administrator account associated with this member account.
      * </p>
      * 
      * @return This is replaced by <code>AdministratorID</code>.</p>
      *         <p>
-     *         The AWS account ID of the Security Hub administrator account associated with this member account.
+     *         The Amazon Web Services account ID of the Security Hub administrator account associated with this member
+     *         account.
      */
     @Deprecated
     public String getMasterId() {
@@ -234,13 +242,14 @@ public class Member implements Serializable, Cloneable, StructuredPojo {
      * This is replaced by <code>AdministratorID</code>.
      * </p>
      * <p>
-     * The AWS account ID of the Security Hub administrator account associated with this member account.
+     * The Amazon Web Services account ID of the Security Hub administrator account associated with this member account.
      * </p>
      * 
      * @param masterId
      *        This is replaced by <code>AdministratorID</code>.</p>
      *        <p>
-     *        The AWS account ID of the Security Hub administrator account associated with this member account.
+     *        The Amazon Web Services account ID of the Security Hub administrator account associated with this member
+     *        account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
     @Deprecated
@@ -251,11 +260,12 @@ public class Member implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS account ID of the Security Hub administrator account associated with this member account.
+     * The Amazon Web Services account ID of the Security Hub administrator account associated with this member account.
      * </p>
      * 
      * @param administratorId
-     *        The AWS account ID of the Security Hub administrator account associated with this member account.
+     *        The Amazon Web Services account ID of the Security Hub administrator account associated with this member
+     *        account.
      */
 
     public void setAdministratorId(String administratorId) {
@@ -264,10 +274,11 @@ public class Member implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS account ID of the Security Hub administrator account associated with this member account.
+     * The Amazon Web Services account ID of the Security Hub administrator account associated with this member account.
      * </p>
      * 
-     * @return The AWS account ID of the Security Hub administrator account associated with this member account.
+     * @return The Amazon Web Services account ID of the Security Hub administrator account associated with this member
+     *         account.
      */
 
     public String getAdministratorId() {
@@ -276,11 +287,12 @@ public class Member implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS account ID of the Security Hub administrator account associated with this member account.
+     * The Amazon Web Services account ID of the Security Hub administrator account associated with this member account.
      * </p>
      * 
      * @param administratorId
-     *        The AWS account ID of the Security Hub administrator account associated with this member account.
+     *        The Amazon Web Services account ID of the Security Hub administrator account associated with this member
+     *        account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -331,6 +343,12 @@ public class Member implements Serializable, Cloneable, StructuredPojo {
      * <code>DELETED</code> - Indicates that the administrator account deleted the member account.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>ACCOUNT_SUSPENDED</code> - Indicates that an organization account was suspended from Amazon Web Services at
+     * the same time that the administrator account tried to enable the organization account as a member account.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param memberStatus
@@ -371,6 +389,13 @@ public class Member implements Serializable, Cloneable, StructuredPojo {
      *        <li>
      *        <p>
      *        <code>DELETED</code> - Indicates that the administrator account deleted the member account.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>ACCOUNT_SUSPENDED</code> - Indicates that an organization account was suspended from Amazon Web
+     *        Services at the same time that the administrator account tried to enable the organization account as a
+     *        member account.
      *        </p>
      *        </li>
      */
@@ -421,6 +446,12 @@ public class Member implements Serializable, Cloneable, StructuredPojo {
      * <code>DELETED</code> - Indicates that the administrator account deleted the member account.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>ACCOUNT_SUSPENDED</code> - Indicates that an organization account was suspended from Amazon Web Services at
+     * the same time that the administrator account tried to enable the organization account as a member account.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @return The status of the relationship between the member account and its administrator account. </p>
@@ -460,6 +491,13 @@ public class Member implements Serializable, Cloneable, StructuredPojo {
      *         <li>
      *         <p>
      *         <code>DELETED</code> - Indicates that the administrator account deleted the member account.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>ACCOUNT_SUSPENDED</code> - Indicates that an organization account was suspended from Amazon Web
+     *         Services at the same time that the administrator account tried to enable the organization account as a
+     *         member account.
      *         </p>
      *         </li>
      */
@@ -510,6 +548,12 @@ public class Member implements Serializable, Cloneable, StructuredPojo {
      * <code>DELETED</code> - Indicates that the administrator account deleted the member account.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>ACCOUNT_SUSPENDED</code> - Indicates that an organization account was suspended from Amazon Web Services at
+     * the same time that the administrator account tried to enable the organization account as a member account.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param memberStatus
@@ -550,6 +594,13 @@ public class Member implements Serializable, Cloneable, StructuredPojo {
      *        <li>
      *        <p>
      *        <code>DELETED</code> - Indicates that the administrator account deleted the member account.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>ACCOUNT_SUSPENDED</code> - Indicates that an organization account was suspended from Amazon Web
+     *        Services at the same time that the administrator account tried to enable the organization account as a
+     *        member account.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

@@ -29,7 +29,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * </li>
  * <li>
  * <p>
- * The validation of each domain name in the certificate, as it pertains to AWS Certificate Manager managed renewal
+ * The validation of each domain name in the certificate, as it pertains to Certificate Manager managed renewal
  * </p>
  * </li>
  * </ul>
@@ -55,13 +55,13 @@ public class AwsCertificateManagerCertificateDomainValidationOption implements S
     private AwsCertificateManagerCertificateResourceRecord resourceRecord;
     /**
      * <p>
-     * The domain name that AWS Certificate Manager uses to send domain validation emails.
+     * The domain name that Certificate Manager uses to send domain validation emails.
      * </p>
      */
     private String validationDomain;
     /**
      * <p>
-     * A list of email addresses that AWS Certificate Manager uses to send domain validation emails.
+     * A list of email addresses that Certificate Manager uses to send domain validation emails.
      * </p>
      */
     private java.util.List<String> validationEmails;
@@ -160,11 +160,11 @@ public class AwsCertificateManagerCertificateDomainValidationOption implements S
 
     /**
      * <p>
-     * The domain name that AWS Certificate Manager uses to send domain validation emails.
+     * The domain name that Certificate Manager uses to send domain validation emails.
      * </p>
      * 
      * @param validationDomain
-     *        The domain name that AWS Certificate Manager uses to send domain validation emails.
+     *        The domain name that Certificate Manager uses to send domain validation emails.
      */
 
     public void setValidationDomain(String validationDomain) {
@@ -173,10 +173,10 @@ public class AwsCertificateManagerCertificateDomainValidationOption implements S
 
     /**
      * <p>
-     * The domain name that AWS Certificate Manager uses to send domain validation emails.
+     * The domain name that Certificate Manager uses to send domain validation emails.
      * </p>
      * 
-     * @return The domain name that AWS Certificate Manager uses to send domain validation emails.
+     * @return The domain name that Certificate Manager uses to send domain validation emails.
      */
 
     public String getValidationDomain() {
@@ -185,11 +185,11 @@ public class AwsCertificateManagerCertificateDomainValidationOption implements S
 
     /**
      * <p>
-     * The domain name that AWS Certificate Manager uses to send domain validation emails.
+     * The domain name that Certificate Manager uses to send domain validation emails.
      * </p>
      * 
      * @param validationDomain
-     *        The domain name that AWS Certificate Manager uses to send domain validation emails.
+     *        The domain name that Certificate Manager uses to send domain validation emails.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -200,10 +200,10 @@ public class AwsCertificateManagerCertificateDomainValidationOption implements S
 
     /**
      * <p>
-     * A list of email addresses that AWS Certificate Manager uses to send domain validation emails.
+     * A list of email addresses that Certificate Manager uses to send domain validation emails.
      * </p>
      * 
-     * @return A list of email addresses that AWS Certificate Manager uses to send domain validation emails.
+     * @return A list of email addresses that Certificate Manager uses to send domain validation emails.
      */
 
     public java.util.List<String> getValidationEmails() {
@@ -212,11 +212,11 @@ public class AwsCertificateManagerCertificateDomainValidationOption implements S
 
     /**
      * <p>
-     * A list of email addresses that AWS Certificate Manager uses to send domain validation emails.
+     * A list of email addresses that Certificate Manager uses to send domain validation emails.
      * </p>
      * 
      * @param validationEmails
-     *        A list of email addresses that AWS Certificate Manager uses to send domain validation emails.
+     *        A list of email addresses that Certificate Manager uses to send domain validation emails.
      */
 
     public void setValidationEmails(java.util.Collection<String> validationEmails) {
@@ -230,7 +230,7 @@ public class AwsCertificateManagerCertificateDomainValidationOption implements S
 
     /**
      * <p>
-     * A list of email addresses that AWS Certificate Manager uses to send domain validation emails.
+     * A list of email addresses that Certificate Manager uses to send domain validation emails.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -239,7 +239,7 @@ public class AwsCertificateManagerCertificateDomainValidationOption implements S
      * </p>
      * 
      * @param validationEmails
-     *        A list of email addresses that AWS Certificate Manager uses to send domain validation emails.
+     *        A list of email addresses that Certificate Manager uses to send domain validation emails.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -255,11 +255,11 @@ public class AwsCertificateManagerCertificateDomainValidationOption implements S
 
     /**
      * <p>
-     * A list of email addresses that AWS Certificate Manager uses to send domain validation emails.
+     * A list of email addresses that Certificate Manager uses to send domain validation emails.
      * </p>
      * 
      * @param validationEmails
-     *        A list of email addresses that AWS Certificate Manager uses to send domain validation emails.
+     *        A list of email addresses that Certificate Manager uses to send domain validation emails.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

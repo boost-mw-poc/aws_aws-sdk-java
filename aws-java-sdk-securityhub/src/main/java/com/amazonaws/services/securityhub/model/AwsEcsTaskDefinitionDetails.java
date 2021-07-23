@@ -104,8 +104,8 @@ public class AwsEcsTaskDefinitionDetails implements Serializable, Cloneable, Str
     private java.util.List<String> requiresCompatibilities;
     /**
      * <p>
-     * The short name or ARN of the IAM role that grants containers in the task permission to call AWS API operations on
-     * your behalf.
+     * The short name or ARN of the IAM role that grants containers in the task permission to call Amazon Web Services
+     * API operations on your behalf.
      * </p>
      */
     private String taskRoleArn;
@@ -724,13 +724,13 @@ public class AwsEcsTaskDefinitionDetails implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The short name or ARN of the IAM role that grants containers in the task permission to call AWS API operations on
-     * your behalf.
+     * The short name or ARN of the IAM role that grants containers in the task permission to call Amazon Web Services
+     * API operations on your behalf.
      * </p>
      * 
      * @param taskRoleArn
-     *        The short name or ARN of the IAM role that grants containers in the task permission to call AWS API
-     *        operations on your behalf.
+     *        The short name or ARN of the IAM role that grants containers in the task permission to call Amazon Web
+     *        Services API operations on your behalf.
      */
 
     public void setTaskRoleArn(String taskRoleArn) {
@@ -739,12 +739,12 @@ public class AwsEcsTaskDefinitionDetails implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The short name or ARN of the IAM role that grants containers in the task permission to call AWS API operations on
-     * your behalf.
+     * The short name or ARN of the IAM role that grants containers in the task permission to call Amazon Web Services
+     * API operations on your behalf.
      * </p>
      * 
-     * @return The short name or ARN of the IAM role that grants containers in the task permission to call AWS API
-     *         operations on your behalf.
+     * @return The short name or ARN of the IAM role that grants containers in the task permission to call Amazon Web
+     *         Services API operations on your behalf.
      */
 
     public String getTaskRoleArn() {
@@ -753,13 +753,13 @@ public class AwsEcsTaskDefinitionDetails implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The short name or ARN of the IAM role that grants containers in the task permission to call AWS API operations on
-     * your behalf.
+     * The short name or ARN of the IAM role that grants containers in the task permission to call Amazon Web Services
+     * API operations on your behalf.
      * </p>
      * 
      * @param taskRoleArn
-     *        The short name or ARN of the IAM role that grants containers in the task permission to call AWS API
-     *        operations on your behalf.
+     *        The short name or ARN of the IAM role that grants containers in the task permission to call Amazon Web
+     *        Services API operations on your behalf.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -69,7 +69,7 @@ public class AwsEc2SecurityGroupIpPermission implements Serializable, Cloneable,
     private Integer toPort;
     /**
      * <p>
-     * The security group and AWS account ID pairs.
+     * The security group and Amazon Web Services account ID pairs.
      * </p>
      */
     private java.util.List<AwsEc2SecurityGroupUserIdGroupPair> userIdGroupPairs;
@@ -87,8 +87,8 @@ public class AwsEc2SecurityGroupIpPermission implements Serializable, Cloneable,
     private java.util.List<AwsEc2SecurityGroupIpv6Range> ipv6Ranges;
     /**
      * <p>
-     * [VPC only] The prefix list IDs for an AWS service. With outbound rules, this is the AWS service to access through
-     * a VPC endpoint from instances associated with the security group.
+     * [VPC only] The prefix list IDs for an Amazon Web Services service. With outbound rules, this is the Amazon Web
+     * Services service to access through a VPC endpoint from instances associated with the security group.
      * </p>
      */
     private java.util.List<AwsEc2SecurityGroupPrefixListId> prefixListIds;
@@ -341,10 +341,10 @@ public class AwsEc2SecurityGroupIpPermission implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The security group and AWS account ID pairs.
+     * The security group and Amazon Web Services account ID pairs.
      * </p>
      * 
-     * @return The security group and AWS account ID pairs.
+     * @return The security group and Amazon Web Services account ID pairs.
      */
 
     public java.util.List<AwsEc2SecurityGroupUserIdGroupPair> getUserIdGroupPairs() {
@@ -353,11 +353,11 @@ public class AwsEc2SecurityGroupIpPermission implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The security group and AWS account ID pairs.
+     * The security group and Amazon Web Services account ID pairs.
      * </p>
      * 
      * @param userIdGroupPairs
-     *        The security group and AWS account ID pairs.
+     *        The security group and Amazon Web Services account ID pairs.
      */
 
     public void setUserIdGroupPairs(java.util.Collection<AwsEc2SecurityGroupUserIdGroupPair> userIdGroupPairs) {
@@ -371,7 +371,7 @@ public class AwsEc2SecurityGroupIpPermission implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The security group and AWS account ID pairs.
+     * The security group and Amazon Web Services account ID pairs.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -380,7 +380,7 @@ public class AwsEc2SecurityGroupIpPermission implements Serializable, Cloneable,
      * </p>
      * 
      * @param userIdGroupPairs
-     *        The security group and AWS account ID pairs.
+     *        The security group and Amazon Web Services account ID pairs.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -396,11 +396,11 @@ public class AwsEc2SecurityGroupIpPermission implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The security group and AWS account ID pairs.
+     * The security group and Amazon Web Services account ID pairs.
      * </p>
      * 
      * @param userIdGroupPairs
-     *        The security group and AWS account ID pairs.
+     *        The security group and Amazon Web Services account ID pairs.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -551,12 +551,13 @@ public class AwsEc2SecurityGroupIpPermission implements Serializable, Cloneable,
 
     /**
      * <p>
-     * [VPC only] The prefix list IDs for an AWS service. With outbound rules, this is the AWS service to access through
-     * a VPC endpoint from instances associated with the security group.
+     * [VPC only] The prefix list IDs for an Amazon Web Services service. With outbound rules, this is the Amazon Web
+     * Services service to access through a VPC endpoint from instances associated with the security group.
      * </p>
      * 
-     * @return [VPC only] The prefix list IDs for an AWS service. With outbound rules, this is the AWS service to access
-     *         through a VPC endpoint from instances associated with the security group.
+     * @return [VPC only] The prefix list IDs for an Amazon Web Services service. With outbound rules, this is the
+     *         Amazon Web Services service to access through a VPC endpoint from instances associated with the security
+     *         group.
      */
 
     public java.util.List<AwsEc2SecurityGroupPrefixListId> getPrefixListIds() {
@@ -565,13 +566,13 @@ public class AwsEc2SecurityGroupIpPermission implements Serializable, Cloneable,
 
     /**
      * <p>
-     * [VPC only] The prefix list IDs for an AWS service. With outbound rules, this is the AWS service to access through
-     * a VPC endpoint from instances associated with the security group.
+     * [VPC only] The prefix list IDs for an Amazon Web Services service. With outbound rules, this is the Amazon Web
+     * Services service to access through a VPC endpoint from instances associated with the security group.
      * </p>
      * 
      * @param prefixListIds
-     *        [VPC only] The prefix list IDs for an AWS service. With outbound rules, this is the AWS service to access
-     *        through a VPC endpoint from instances associated with the security group.
+     *        [VPC only] The prefix list IDs for an Amazon Web Services service. With outbound rules, this is the Amazon
+     *        Web Services service to access through a VPC endpoint from instances associated with the security group.
      */
 
     public void setPrefixListIds(java.util.Collection<AwsEc2SecurityGroupPrefixListId> prefixListIds) {
@@ -585,8 +586,8 @@ public class AwsEc2SecurityGroupIpPermission implements Serializable, Cloneable,
 
     /**
      * <p>
-     * [VPC only] The prefix list IDs for an AWS service. With outbound rules, this is the AWS service to access through
-     * a VPC endpoint from instances associated with the security group.
+     * [VPC only] The prefix list IDs for an Amazon Web Services service. With outbound rules, this is the Amazon Web
+     * Services service to access through a VPC endpoint from instances associated with the security group.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -595,8 +596,8 @@ public class AwsEc2SecurityGroupIpPermission implements Serializable, Cloneable,
      * </p>
      * 
      * @param prefixListIds
-     *        [VPC only] The prefix list IDs for an AWS service. With outbound rules, this is the AWS service to access
-     *        through a VPC endpoint from instances associated with the security group.
+     *        [VPC only] The prefix list IDs for an Amazon Web Services service. With outbound rules, this is the Amazon
+     *        Web Services service to access through a VPC endpoint from instances associated with the security group.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -612,13 +613,13 @@ public class AwsEc2SecurityGroupIpPermission implements Serializable, Cloneable,
 
     /**
      * <p>
-     * [VPC only] The prefix list IDs for an AWS service. With outbound rules, this is the AWS service to access through
-     * a VPC endpoint from instances associated with the security group.
+     * [VPC only] The prefix list IDs for an Amazon Web Services service. With outbound rules, this is the Amazon Web
+     * Services service to access through a VPC endpoint from instances associated with the security group.
      * </p>
      * 
      * @param prefixListIds
-     *        [VPC only] The prefix list IDs for an AWS service. With outbound rules, this is the AWS service to access
-     *        through a VPC endpoint from instances associated with the security group.
+     *        [VPC only] The prefix list IDs for an Amazon Web Services service. With outbound rules, this is the Amazon
+     *        Web Services service to access through a VPC endpoint from instances associated with the security group.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

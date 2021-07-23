@@ -27,18 +27,19 @@ public class EnableOrganizationAdminAccountRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The AWS account identifier of the account to designate as the Security Hub administrator account.
+     * The Amazon Web Services account identifier of the account to designate as the Security Hub administrator account.
      * </p>
      */
     private String adminAccountId;
 
     /**
      * <p>
-     * The AWS account identifier of the account to designate as the Security Hub administrator account.
+     * The Amazon Web Services account identifier of the account to designate as the Security Hub administrator account.
      * </p>
      * 
      * @param adminAccountId
-     *        The AWS account identifier of the account to designate as the Security Hub administrator account.
+     *        The Amazon Web Services account identifier of the account to designate as the Security Hub administrator
+     *        account.
      */
 
     public void setAdminAccountId(String adminAccountId) {
@@ -47,10 +48,11 @@ public class EnableOrganizationAdminAccountRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The AWS account identifier of the account to designate as the Security Hub administrator account.
+     * The Amazon Web Services account identifier of the account to designate as the Security Hub administrator account.
      * </p>
      * 
-     * @return The AWS account identifier of the account to designate as the Security Hub administrator account.
+     * @return The Amazon Web Services account identifier of the account to designate as the Security Hub administrator
+     *         account.
      */
 
     public String getAdminAccountId() {
@@ -59,11 +61,12 @@ public class EnableOrganizationAdminAccountRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The AWS account identifier of the account to designate as the Security Hub administrator account.
+     * The Amazon Web Services account identifier of the account to designate as the Security Hub administrator account.
      * </p>
      * 
      * @param adminAccountId
-     *        The AWS account identifier of the account to designate as the Security Hub administrator account.
+     *        The Amazon Web Services account identifier of the account to designate as the Security Hub administrator
+     *        account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

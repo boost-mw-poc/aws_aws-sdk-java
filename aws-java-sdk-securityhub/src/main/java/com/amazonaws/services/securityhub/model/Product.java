@@ -84,10 +84,11 @@ public class Product implements Serializable, Cloneable, StructuredPojo {
     private java.util.List<String> integrationTypes;
     /**
      * <p>
-     * For integrations with AWS services, the AWS Console URL from which to activate the service.
+     * For integrations with Amazon Web Services services, the Amazon Web Services Console URL from which to activate
+     * the service.
      * </p>
      * <p>
-     * For integrations with third-party products, the AWS Marketplace URL from which to subscribe to or purchase the
+     * For integrations with third-party products, the Marketplace URL from which to subscribe to or purchase the
      * product.
      * </p>
      */
@@ -611,18 +612,20 @@ public class Product implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * For integrations with AWS services, the AWS Console URL from which to activate the service.
+     * For integrations with Amazon Web Services services, the Amazon Web Services Console URL from which to activate
+     * the service.
      * </p>
      * <p>
-     * For integrations with third-party products, the AWS Marketplace URL from which to subscribe to or purchase the
+     * For integrations with third-party products, the Marketplace URL from which to subscribe to or purchase the
      * product.
      * </p>
      * 
      * @param marketplaceUrl
-     *        For integrations with AWS services, the AWS Console URL from which to activate the service.</p>
+     *        For integrations with Amazon Web Services services, the Amazon Web Services Console URL from which to
+     *        activate the service.</p>
      *        <p>
-     *        For integrations with third-party products, the AWS Marketplace URL from which to subscribe to or purchase
-     *        the product.
+     *        For integrations with third-party products, the Marketplace URL from which to subscribe to or purchase the
+     *        product.
      */
 
     public void setMarketplaceUrl(String marketplaceUrl) {
@@ -631,17 +634,19 @@ public class Product implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * For integrations with AWS services, the AWS Console URL from which to activate the service.
+     * For integrations with Amazon Web Services services, the Amazon Web Services Console URL from which to activate
+     * the service.
      * </p>
      * <p>
-     * For integrations with third-party products, the AWS Marketplace URL from which to subscribe to or purchase the
+     * For integrations with third-party products, the Marketplace URL from which to subscribe to or purchase the
      * product.
      * </p>
      * 
-     * @return For integrations with AWS services, the AWS Console URL from which to activate the service.</p>
+     * @return For integrations with Amazon Web Services services, the Amazon Web Services Console URL from which to
+     *         activate the service.</p>
      *         <p>
-     *         For integrations with third-party products, the AWS Marketplace URL from which to subscribe to or
-     *         purchase the product.
+     *         For integrations with third-party products, the Marketplace URL from which to subscribe to or purchase
+     *         the product.
      */
 
     public String getMarketplaceUrl() {
@@ -650,18 +655,20 @@ public class Product implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * For integrations with AWS services, the AWS Console URL from which to activate the service.
+     * For integrations with Amazon Web Services services, the Amazon Web Services Console URL from which to activate
+     * the service.
      * </p>
      * <p>
-     * For integrations with third-party products, the AWS Marketplace URL from which to subscribe to or purchase the
+     * For integrations with third-party products, the Marketplace URL from which to subscribe to or purchase the
      * product.
      * </p>
      * 
      * @param marketplaceUrl
-     *        For integrations with AWS services, the AWS Console URL from which to activate the service.</p>
+     *        For integrations with Amazon Web Services services, the Amazon Web Services Console URL from which to
+     *        activate the service.</p>
      *        <p>
-     *        For integrations with third-party products, the AWS Marketplace URL from which to subscribe to or purchase
-     *        the product.
+     *        For integrations with third-party products, the Marketplace URL from which to subscribe to or purchase the
+     *        product.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

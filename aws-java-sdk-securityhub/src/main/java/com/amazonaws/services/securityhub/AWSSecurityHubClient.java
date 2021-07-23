@@ -51,25 +51,24 @@ import com.amazonaws.services.securityhub.model.transform.*;
  * until the service call completes.
  * <p>
  * <p>
- * Security Hub provides you with a comprehensive view of the security state of your AWS environment and resources. It
- * also provides you with the readiness status of your environment based on controls from supported security standards.
- * Security Hub collects security data from AWS accounts, services, and integrated third-party products and helps you
- * analyze security trends in your environment to identify the highest priority security issues. For more information
- * about Security Hub, see the <i> <a
- * href="https://docs.aws.amazon.com/securityhub/latest/userguide/what-is-securityhub.html">AWS Security Hub User
- * Guide</a> </i>.
+ * Security Hub provides you with a comprehensive view of the security state of your Amazon Web Services environment and
+ * resources. It also provides you with the readiness status of your environment based on controls from supported
+ * security standards. Security Hub collects security data from Amazon Web Services accounts, services, and integrated
+ * third-party products and helps you analyze security trends in your environment to identify the highest priority
+ * security issues. For more information about Security Hub, see the <i>Security Hub<a
+ * href="https://docs.aws.amazon.com/securityhub/latest/userguide/what-is-securityhub.html">User Guide</a> </i>.
  * </p>
  * <p>
- * When you use operations in the Security Hub API, the requests are executed only in the AWS Region that is currently
- * active or in the specific AWS Region that you specify in your request. Any configuration or settings change that
- * results from the operation is applied only to that Region. To make the same change in other Regions, execute the same
- * command for each Region to apply the change to.
+ * When you use operations in the Security Hub API, the requests are executed only in the Amazon Web Services Region
+ * that is currently active or in the specific Amazon Web Services Region that you specify in your request. Any
+ * configuration or settings change that results from the operation is applied only to that Region. To make the same
+ * change in other Regions, execute the same command for each Region to apply the change to.
  * </p>
  * <p>
- * For example, if your Region is set to <code>us-west-2</code>, when you use <code> <a>CreateMembers</a> </code> to add
- * a member account to Security Hub, the association of the member account with the administrator account is created
- * only in the <code>us-west-2</code> Region. Security Hub must be enabled for the member account in the same Region
- * that the invitation was sent from.
+ * For example, if your Region is set to <code>us-west-2</code>, when you use <code>CreateMembers</code> to add a member
+ * account to Security Hub, the association of the member account with the administrator account is created only in the
+ * <code>us-west-2</code> Region. Security Hub must be enabled for the member account in the same Region that the
+ * invitation was sent from.
  * </p>
  * <p>
  * The following throttling limits apply to using Security Hub API operations.
@@ -77,26 +76,26 @@ import com.amazonaws.services.securityhub.model.transform.*;
  * <ul>
  * <li>
  * <p>
- * <code> <a>BatchEnableStandards</a> </code> - <code>RateLimit</code> of 1 request per second, <code>BurstLimit</code>
- * of 1 request per second.
+ * <code>BatchEnableStandards</code> - <code>RateLimit</code> of 1 request per second, <code>BurstLimit</code> of 1
+ * request per second.
  * </p>
  * </li>
  * <li>
  * <p>
- * <code> <a>GetFindings</a> </code> - <code>RateLimit</code> of 3 requests per second. <code>BurstLimit</code> of 6
+ * <code>GetFindings</code> - <code>RateLimit</code> of 3 requests per second. <code>BurstLimit</code> of 6 requests per
+ * second.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <code>UpdateFindings</code> - <code>RateLimit</code> of 1 request per second. <code>BurstLimit</code> of 5 requests
+ * per second.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <code>UpdateStandardsControl</code> - <code>RateLimit</code> of 1 request per second, <code>BurstLimit</code> of 5
  * requests per second.
- * </p>
- * </li>
- * <li>
- * <p>
- * <code> <a>UpdateFindings</a> </code> - <code>RateLimit</code> of 1 request per second. <code>BurstLimit</code> of 5
- * requests per second.
- * </p>
- * </li>
- * <li>
- * <p>
- * <code> <a>UpdateStandardsControl</a> </code> - <code>RateLimit</code> of 1 request per second,
- * <code>BurstLimit</code> of 5 requests per second.
  * </p>
  * </li>
  * <li>
@@ -219,8 +218,8 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
      * @throws InvalidInputException
      *         The request was rejected because you supplied an invalid or out-of-range value for an input parameter.
      * @throws LimitExceededException
-     *         The request was rejected because it attempted to create resources beyond the current AWS account or
-     *         throttling limits. The error code describes the limit exceeded.
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
      * @throws ResourceNotFoundException
      *         The request was rejected because we can't find the specified resource.
      * @throws InvalidAccessException
@@ -306,8 +305,8 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
      * @throws InvalidInputException
      *         The request was rejected because you supplied an invalid or out-of-range value for an input parameter.
      * @throws LimitExceededException
-     *         The request was rejected because it attempted to create resources beyond the current AWS account or
-     *         throttling limits. The error code describes the limit exceeded.
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
      * @throws ResourceNotFoundException
      *         The request was rejected because we can't find the specified resource.
      * @throws InvalidAccessException
@@ -369,7 +368,7 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-standards.html">Security Standards</a>
-     * section of the <i>AWS Security Hub User Guide</i>.
+     * section of the <i>Security Hub User Guide</i>.
      * </p>
      * 
      * @param batchDisableStandardsRequest
@@ -382,8 +381,8 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
      *         There is an issue with the account used to make the request. Either Security Hub is not enabled for the
      *         account, or the account does not have permission to perform this action.
      * @throws LimitExceededException
-     *         The request was rejected because it attempted to create resources beyond the current AWS account or
-     *         throttling limits. The error code describes the limit exceeded.
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
      * @sample AWSSecurityHub.BatchDisableStandards
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/BatchDisableStandards"
      *      target="_top">AWS API Documentation</a>
@@ -436,12 +435,12 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
     /**
      * <p>
      * Enables the standards specified by the provided <code>StandardsArn</code>. To obtain the ARN for a standard, use
-     * the <code> <a>DescribeStandards</a> </code> operation.
+     * the <code>DescribeStandards</code> operation.
      * </p>
      * <p>
      * For more information, see the <a
      * href="https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-standards.html">Security Standards</a>
-     * section of the <i>AWS Security Hub User Guide</i>.
+     * section of the <i>Security Hub User Guide</i>.
      * </p>
      * 
      * @param batchEnableStandardsRequest
@@ -454,8 +453,8 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
      *         There is an issue with the account used to make the request. Either Security Hub is not enabled for the
      *         account, or the account does not have permission to perform this action.
      * @throws LimitExceededException
-     *         The request was rejected because it attempted to create resources beyond the current AWS account or
-     *         throttling limits. The error code describes the limit exceeded.
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
      * @sample AWSSecurityHub.BatchEnableStandards
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/BatchEnableStandards"
      *      target="_top">AWS API Documentation</a>
@@ -579,8 +578,8 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
      * @throws InvalidInputException
      *         The request was rejected because you supplied an invalid or out-of-range value for an input parameter.
      * @throws LimitExceededException
-     *         The request was rejected because it attempted to create resources beyond the current AWS account or
-     *         throttling limits. The error code describes the limit exceeded.
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
      * @throws InvalidAccessException
      *         There is an issue with the account used to make the request. Either Security Hub is not enabled for the
      *         account, or the account does not have permission to perform this action.
@@ -696,7 +695,7 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
      * You can configure IAM policies to restrict access to fields and field values. For example, you might not want
      * member accounts to be able to suppress findings or change the finding severity. See <a href=
      * "https://docs.aws.amazon.com/securityhub/latest/userguide/finding-update-batchupdatefindings.html#batchupdatefindings-configure-access"
-     * >Configuring access to BatchUpdateFindings</a> in the <i>AWS Security Hub User Guide</i>.
+     * >Configuring access to BatchUpdateFindings</a> in the <i>Security Hub User Guide</i>.
      * </p>
      * 
      * @param batchUpdateFindingsRequest
@@ -706,8 +705,8 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
      * @throws InvalidInputException
      *         The request was rejected because you supplied an invalid or out-of-range value for an input parameter.
      * @throws LimitExceededException
-     *         The request was rejected because it attempted to create resources beyond the current AWS account or
-     *         throttling limits. The error code describes the limit exceeded.
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
      * @throws InvalidAccessException
      *         There is an issue with the account used to make the request. Either Security Hub is not enabled for the
      *         account, or the account does not have permission to perform this action.
@@ -778,8 +777,8 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
      *         There is an issue with the account used to make the request. Either Security Hub is not enabled for the
      *         account, or the account does not have permission to perform this action.
      * @throws LimitExceededException
-     *         The request was rejected because it attempted to create resources beyond the current AWS account or
-     *         throttling limits. The error code describes the limit exceeded.
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
      * @throws ResourceConflictException
      *         The resource specified in the request conflicts with an existing resource.
      * @sample AWSSecurityHub.CreateActionTarget
@@ -846,8 +845,8 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
      * @throws InvalidInputException
      *         The request was rejected because you supplied an invalid or out-of-range value for an input parameter.
      * @throws LimitExceededException
-     *         The request was rejected because it attempted to create resources beyond the current AWS account or
-     *         throttling limits. The error code describes the limit exceeded.
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
      * @throws InvalidAccessException
      *         There is an issue with the account used to make the request. Either Security Hub is not enabled for the
      *         account, or the account does not have permission to perform this action.
@@ -911,12 +910,13 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
      * <code>CreateMembers</code> is always used to add accounts that are not organization members.
      * </p>
      * <p>
-     * For accounts that are part of an organization, <code>CreateMembers</code> is only used in the following cases:
+     * For accounts that are managed using Organizations, <code>CreateMembers</code> is only used in the following
+     * cases:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * Security Hub is not configured to automatically add new accounts in an organization.
+     * Security Hub is not configured to automatically add new organization accounts.
      * </p>
      * </li>
      * <li>
@@ -927,16 +927,18 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
      * </ul>
      * <p>
      * This action can only be used by an account that has Security Hub enabled. To enable Security Hub, you can use the
-     * <code> <a>EnableSecurityHub</a> </code> operation.
+     * <code>EnableSecurityHub</code> operation.
      * </p>
      * <p>
      * For accounts that are not organization members, you create the account association and then send an invitation to
-     * the member account. To send the invitation, you use the <code> <a>InviteMembers</a> </code> operation. If the
-     * account owner accepts the invitation, the account becomes a member account in Security Hub.
+     * the member account. To send the invitation, you use the <code>InviteMembers</code> operation. If the account
+     * owner accepts the invitation, the account becomes a member account in Security Hub.
      * </p>
      * <p>
-     * Accounts that are part of an organization do not receive an invitation. They automatically become a member
-     * account in Security Hub.
+     * Accounts that are managed using Organizations do not receive an invitation. They automatically become a member
+     * account in Security Hub, and Security Hub is automatically enabled for those accounts. Note that Security Hub
+     * cannot be enabled automatically for the organization management account. The organization management account must
+     * enable Security Hub before the administrator account enables it as a member account.
      * </p>
      * <p>
      * A permissions policy is added that permits the administrator account to view the findings generated in the member
@@ -945,7 +947,7 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
      * </p>
      * <p>
      * To remove the association between the administrator and member accounts, use the
-     * <code> <a>DisassociateFromMasterAccount</a> </code> or <code> <a>DisassociateMembers</a> </code> operation.
+     * <code>DisassociateFromMasterAccount</code> or <code>DisassociateMembers</code> operation.
      * </p>
      * 
      * @param createMembersRequest
@@ -955,8 +957,8 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
      * @throws InvalidInputException
      *         The request was rejected because you supplied an invalid or out-of-range value for an input parameter.
      * @throws LimitExceededException
-     *         The request was rejected because it attempted to create resources beyond the current AWS account or
-     *         throttling limits. The error code describes the limit exceeded.
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
      * @throws InvalidAccessException
      *         There is an issue with the account used to make the request. Either Security Hub is not enabled for the
      *         account, or the account does not have permission to perform this action.
@@ -1161,8 +1163,8 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
      *         There is an issue with the account used to make the request. Either Security Hub is not enabled for the
      *         account, or the account does not have permission to perform this action.
      * @throws LimitExceededException
-     *         The request was rejected because it attempted to create resources beyond the current AWS account or
-     *         throttling limits. The error code describes the limit exceeded.
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
      * @throws ResourceNotFoundException
      *         The request was rejected because we can't find the specified resource.
      * @sample AWSSecurityHub.DeleteInsight
@@ -1215,7 +1217,7 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
 
     /**
      * <p>
-     * Deletes invitations received by the AWS account to become a member account.
+     * Deletes invitations received by the Amazon Web Services account to become a member account.
      * </p>
      * <p>
      * This operation is only used by accounts that are not part of an organization. Organization accounts do not
@@ -1229,8 +1231,8 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
      * @throws InvalidInputException
      *         The request was rejected because you supplied an invalid or out-of-range value for an input parameter.
      * @throws LimitExceededException
-     *         The request was rejected because it attempted to create resources beyond the current AWS account or
-     *         throttling limits. The error code describes the limit exceeded.
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
      * @throws ResourceNotFoundException
      *         The request was rejected because we can't find the specified resource.
      * @throws InvalidAccessException
@@ -1303,8 +1305,8 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
      *         There is an issue with the account used to make the request. Either Security Hub is not enabled for the
      *         account, or the account does not have permission to perform this action.
      * @throws LimitExceededException
-     *         The request was rejected because it attempted to create resources beyond the current AWS account or
-     *         throttling limits. The error code describes the limit exceeded.
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
      * @throws ResourceNotFoundException
      *         The request was rejected because we can't find the specified resource.
      * @sample AWSSecurityHub.DeleteMembers
@@ -1431,8 +1433,8 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
      * @throws InternalException
      *         Internal server error.
      * @throws LimitExceededException
-     *         The request was rejected because it attempted to create resources beyond the current AWS account or
-     *         throttling limits. The error code describes the limit exceeded.
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
      * @throws InvalidAccessException
      *         There is an issue with the account used to make the request. Either Security Hub is not enabled for the
      *         account, or the account does not have permission to perform this action.
@@ -1504,8 +1506,8 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
      *         There is an issue with the account used to make the request. Either Security Hub is not enabled for the
      *         account, or the account does not have permission to perform this action.
      * @throws LimitExceededException
-     *         The request was rejected because it attempted to create resources beyond the current AWS account or
-     *         throttling limits. The error code describes the limit exceeded.
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
      * @sample AWSSecurityHub.DescribeOrganizationConfiguration
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/DescribeOrganizationConfiguration"
      *      target="_top">AWS API Documentation</a>
@@ -1574,8 +1576,8 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
      * @throws InternalException
      *         Internal server error.
      * @throws LimitExceededException
-     *         The request was rejected because it attempted to create resources beyond the current AWS account or
-     *         throttling limits. The error code describes the limit exceeded.
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
      * @throws InvalidAccessException
      *         There is an issue with the account used to make the request. Either Security Hub is not enabled for the
      *         account, or the account does not have permission to perform this action.
@@ -1782,8 +1784,8 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
      *         There is an issue with the account used to make the request. Either Security Hub is not enabled for the
      *         account, or the account does not have permission to perform this action.
      * @throws LimitExceededException
-     *         The request was rejected because it attempted to create resources beyond the current AWS account or
-     *         throttling limits. The error code describes the limit exceeded.
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
      * @sample AWSSecurityHub.DisableImportFindingsForProduct
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/DisableImportFindingsForProduct"
      *      target="_top">AWS API Documentation</a>
@@ -1850,8 +1852,8 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
      *         There is an issue with the account used to make the request. Either Security Hub is not enabled for the
      *         account, or the account does not have permission to perform this action.
      * @throws LimitExceededException
-     *         The request was rejected because it attempted to create resources beyond the current AWS account or
-     *         throttling limits. The error code describes the limit exceeded.
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
      * @sample AWSSecurityHub.DisableOrganizationAdminAccount
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/DisableOrganizationAdminAccount"
      *      target="_top">AWS API Documentation</a>
@@ -1926,8 +1928,8 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
      * @throws InternalException
      *         Internal server error.
      * @throws LimitExceededException
-     *         The request was rejected because it attempted to create resources beyond the current AWS account or
-     *         throttling limits. The error code describes the limit exceeded.
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
      * @throws InvalidAccessException
      *         There is an issue with the account used to make the request. Either Security Hub is not enabled for the
      *         account, or the account does not have permission to perform this action.
@@ -2000,8 +2002,8 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
      *         There is an issue with the account used to make the request. Either Security Hub is not enabled for the
      *         account, or the account does not have permission to perform this action.
      * @throws LimitExceededException
-     *         The request was rejected because it attempted to create resources beyond the current AWS account or
-     *         throttling limits. The error code describes the limit exceeded.
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
      * @throws ResourceNotFoundException
      *         The request was rejected because we can't find the specified resource.
      * @sample AWSSecurityHub.DisassociateFromAdministratorAccount
@@ -2084,8 +2086,8 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
      *         There is an issue with the account used to make the request. Either Security Hub is not enabled for the
      *         account, or the account does not have permission to perform this action.
      * @throws LimitExceededException
-     *         The request was rejected because it attempted to create resources beyond the current AWS account or
-     *         throttling limits. The error code describes the limit exceeded.
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
      * @throws ResourceNotFoundException
      *         The request was rejected because we can't find the specified resource.
      * @sample AWSSecurityHub.DisassociateFromMasterAccount
@@ -2158,8 +2160,8 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
      *         There is an issue with the account used to make the request. Either Security Hub is not enabled for the
      *         account, or the account does not have permission to perform this action.
      * @throws LimitExceededException
-     *         The request was rejected because it attempted to create resources beyond the current AWS account or
-     *         throttling limits. The error code describes the limit exceeded.
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
      * @throws ResourceNotFoundException
      *         The request was rejected because we can't find the specified resource.
      * @sample AWSSecurityHub.DisassociateMembers
@@ -2232,8 +2234,8 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
      * @throws ResourceConflictException
      *         The resource specified in the request conflicts with an existing resource.
      * @throws LimitExceededException
-     *         The request was rejected because it attempted to create resources beyond the current AWS account or
-     *         throttling limits. The error code describes the limit exceeded.
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
      * @sample AWSSecurityHub.EnableImportFindingsForProduct
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/EnableImportFindingsForProduct"
      *      target="_top">AWS API Documentation</a>
@@ -2300,8 +2302,8 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
      *         There is an issue with the account used to make the request. Either Security Hub is not enabled for the
      *         account, or the account does not have permission to perform this action.
      * @throws LimitExceededException
-     *         The request was rejected because it attempted to create resources beyond the current AWS account or
-     *         throttling limits. The error code describes the limit exceeded.
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
      * @sample AWSSecurityHub.EnableOrganizationAdminAccount
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/EnableOrganizationAdminAccount"
      *      target="_top">AWS API Documentation</a>
@@ -2367,12 +2369,12 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
      * <ul>
      * <li>
      * <p>
-     * CIS AWS Foundations
+     * CIS Amazon Web Services Foundations
      * </p>
      * </li>
      * <li>
      * <p>
-     * AWS Foundational Security Best Practices
+     * Amazon Web Services Foundational Security Best Practices
      * </p>
      * </li>
      * </ul>
@@ -2383,13 +2385,13 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
      * To not enable the automatically enabled standards, set <code>EnableDefaultStandards</code> to <code>false</code>.
      * </p>
      * <p>
-     * After you enable Security Hub, to enable a standard, use the <code> <a>BatchEnableStandards</a> </code>
-     * operation. To disable a standard, use the <code> <a>BatchDisableStandards</a> </code> operation.
+     * After you enable Security Hub, to enable a standard, use the <code>BatchEnableStandards</code> operation. To
+     * disable a standard, use the <code>BatchDisableStandards</code> operation.
      * </p>
      * <p>
-     * To learn more, see <a
-     * href="https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-settingup.html">Setting Up AWS
-     * Security Hub</a> in the <i>AWS Security Hub User Guide</i>.
+     * To learn more, see the <a
+     * href="https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-settingup.html">setup information</a>
+     * in the <i>Security Hub User Guide</i>.
      * </p>
      * 
      * @param enableSecurityHubRequest
@@ -2397,8 +2399,8 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
      * @throws InternalException
      *         Internal server error.
      * @throws LimitExceededException
-     *         The request was rejected because it attempted to create resources beyond the current AWS account or
-     *         throttling limits. The error code describes the limit exceeded.
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
      * @throws InvalidAccessException
      *         There is an issue with the account used to make the request. Either Security Hub is not enabled for the
      *         account, or the account does not have permission to perform this action.
@@ -2472,8 +2474,8 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
      *         There is an issue with the account used to make the request. Either Security Hub is not enabled for the
      *         account, or the account does not have permission to perform this action.
      * @throws LimitExceededException
-     *         The request was rejected because it attempted to create resources beyond the current AWS account or
-     *         throttling limits. The error code describes the limit exceeded.
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
      * @throws ResourceNotFoundException
      *         The request was rejected because we can't find the specified resource.
      * @sample AWSSecurityHub.GetAdministratorAccount
@@ -2541,8 +2543,8 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
      *         There is an issue with the account used to make the request. Either Security Hub is not enabled for the
      *         account, or the account does not have permission to perform this action.
      * @throws LimitExceededException
-     *         The request was rejected because it attempted to create resources beyond the current AWS account or
-     *         throttling limits. The error code describes the limit exceeded.
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
      * @sample AWSSecurityHub.GetEnabledStandards
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/GetEnabledStandards"
      *      target="_top">AWS API Documentation</a>
@@ -2606,8 +2608,8 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
      *         There is an issue with the account used to make the request. Either Security Hub is not enabled for the
      *         account, or the account does not have permission to perform this action.
      * @throws LimitExceededException
-     *         The request was rejected because it attempted to create resources beyond the current AWS account or
-     *         throttling limits. The error code describes the limit exceeded.
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
      * @sample AWSSecurityHub.GetFindings
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/GetFindings" target="_top">AWS API
      *      Documentation</a>
@@ -2671,8 +2673,8 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
      *         There is an issue with the account used to make the request. Either Security Hub is not enabled for the
      *         account, or the account does not have permission to perform this action.
      * @throws LimitExceededException
-     *         The request was rejected because it attempted to create resources beyond the current AWS account or
-     *         throttling limits. The error code describes the limit exceeded.
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
      * @throws ResourceNotFoundException
      *         The request was rejected because we can't find the specified resource.
      * @sample AWSSecurityHub.GetInsightResults
@@ -2738,8 +2740,8 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
      *         There is an issue with the account used to make the request. Either Security Hub is not enabled for the
      *         account, or the account does not have permission to perform this action.
      * @throws LimitExceededException
-     *         The request was rejected because it attempted to create resources beyond the current AWS account or
-     *         throttling limits. The error code describes the limit exceeded.
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
      * @throws ResourceNotFoundException
      *         The request was rejected because we can't find the specified resource.
      * @sample AWSSecurityHub.GetInsights
@@ -2806,8 +2808,8 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
      *         There is an issue with the account used to make the request. Either Security Hub is not enabled for the
      *         account, or the account does not have permission to perform this action.
      * @throws LimitExceededException
-     *         The request was rejected because it attempted to create resources beyond the current AWS account or
-     *         throttling limits. The error code describes the limit exceeded.
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
      * @sample AWSSecurityHub.GetInvitationsCount
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/GetInvitationsCount"
      *      target="_top">AWS API Documentation</a>
@@ -2884,8 +2886,8 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
      *         There is an issue with the account used to make the request. Either Security Hub is not enabled for the
      *         account, or the account does not have permission to perform this action.
      * @throws LimitExceededException
-     *         The request was rejected because it attempted to create resources beyond the current AWS account or
-     *         throttling limits. The error code describes the limit exceeded.
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
      * @throws ResourceNotFoundException
      *         The request was rejected because we can't find the specified resource.
      * @sample AWSSecurityHub.GetMasterAccount
@@ -2960,8 +2962,8 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
      *         There is an issue with the account used to make the request. Either Security Hub is not enabled for the
      *         account, or the account does not have permission to perform this action.
      * @throws LimitExceededException
-     *         The request was rejected because it attempted to create resources beyond the current AWS account or
-     *         throttling limits. The error code describes the limit exceeded.
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
      * @throws ResourceNotFoundException
      *         The request was rejected because we can't find the specified resource.
      * @sample AWSSecurityHub.GetMembers
@@ -3014,16 +3016,16 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
 
     /**
      * <p>
-     * Invites other AWS accounts to become member accounts for the Security Hub administrator account that the
-     * invitation is sent from.
+     * Invites other Amazon Web Services accounts to become member accounts for the Security Hub administrator account
+     * that the invitation is sent from.
      * </p>
      * <p>
      * This operation is only used to invite accounts that do not belong to an organization. Organization accounts do
      * not receive invitations.
      * </p>
      * <p>
-     * Before you can use this action to invite a member, you must first use the <code> <a>CreateMembers</a> </code>
-     * action to create the member account in Security Hub.
+     * Before you can use this action to invite a member, you must first use the <code>CreateMembers</code> action to
+     * create the member account in Security Hub.
      * </p>
      * <p>
      * When the account owner enables Security Hub and accepts the invitation to become a member account, the
@@ -3040,8 +3042,8 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
      *         There is an issue with the account used to make the request. Either Security Hub is not enabled for the
      *         account, or the account does not have permission to perform this action.
      * @throws LimitExceededException
-     *         The request was rejected because it attempted to create resources beyond the current AWS account or
-     *         throttling limits. The error code describes the limit exceeded.
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
      * @throws ResourceNotFoundException
      *         The request was rejected because we can't find the specified resource.
      * @sample AWSSecurityHub.InviteMembers
@@ -3103,8 +3105,8 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
      * @throws InternalException
      *         Internal server error.
      * @throws LimitExceededException
-     *         The request was rejected because it attempted to create resources beyond the current AWS account or
-     *         throttling limits. The error code describes the limit exceeded.
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
      * @throws InvalidAccessException
      *         There is an issue with the account used to make the request. Either Security Hub is not enabled for the
      *         account, or the account does not have permission to perform this action.
@@ -3160,11 +3162,11 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
 
     /**
      * <p>
-     * Lists all Security Hub membership invitations that were sent to the current AWS account.
+     * Lists all Security Hub membership invitations that were sent to the current Amazon Web Services account.
      * </p>
      * <p>
      * This operation is only used by accounts that are managed by invitation. Accounts that are managed using the
-     * integration with AWS Organizations do not receive invitations.
+     * integration with Organizations do not receive invitations.
      * </p>
      * 
      * @param listInvitationsRequest
@@ -3177,8 +3179,8 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
      *         There is an issue with the account used to make the request. Either Security Hub is not enabled for the
      *         account, or the account does not have permission to perform this action.
      * @throws LimitExceededException
-     *         The request was rejected because it attempted to create resources beyond the current AWS account or
-     *         throttling limits. The error code describes the limit exceeded.
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
      * @sample AWSSecurityHub.ListInvitations
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/ListInvitations" target="_top">AWS
      *      API Documentation</a>
@@ -3246,8 +3248,8 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
      *         There is an issue with the account used to make the request. Either Security Hub is not enabled for the
      *         account, or the account does not have permission to perform this action.
      * @throws LimitExceededException
-     *         The request was rejected because it attempted to create resources beyond the current AWS account or
-     *         throttling limits. The error code describes the limit exceeded.
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
      * @sample AWSSecurityHub.ListMembers
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/ListMembers" target="_top">AWS API
      *      Documentation</a>
@@ -3311,8 +3313,8 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
      *         There is an issue with the account used to make the request. Either Security Hub is not enabled for the
      *         account, or the account does not have permission to perform this action.
      * @throws LimitExceededException
-     *         The request was rejected because it attempted to create resources beyond the current AWS account or
-     *         throttling limits. The error code describes the limit exceeded.
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
      * @sample AWSSecurityHub.ListOrganizationAdminAccounts
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/ListOrganizationAdminAccounts"
      *      target="_top">AWS API Documentation</a>
@@ -3629,8 +3631,8 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
      * @throws InvalidInputException
      *         The request was rejected because you supplied an invalid or out-of-range value for an input parameter.
      * @throws LimitExceededException
-     *         The request was rejected because it attempted to create resources beyond the current AWS account or
-     *         throttling limits. The error code describes the limit exceeded.
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
      * @throws InvalidAccessException
      *         There is an issue with the account used to make the request. Either Security Hub is not enabled for the
      *         account, or the account does not have permission to perform this action.
@@ -3699,8 +3701,8 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
      *         There is an issue with the account used to make the request. Either Security Hub is not enabled for the
      *         account, or the account does not have permission to perform this action.
      * @throws LimitExceededException
-     *         The request was rejected because it attempted to create resources beyond the current AWS account or
-     *         throttling limits. The error code describes the limit exceeded.
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
      * @throws ResourceNotFoundException
      *         The request was rejected because we can't find the specified resource.
      * @sample AWSSecurityHub.UpdateInsight
@@ -3767,8 +3769,8 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
      *         There is an issue with the account used to make the request. Either Security Hub is not enabled for the
      *         account, or the account does not have permission to perform this action.
      * @throws LimitExceededException
-     *         The request was rejected because it attempted to create resources beyond the current AWS account or
-     *         throttling limits. The error code describes the limit exceeded.
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
      * @sample AWSSecurityHub.UpdateOrganizationConfiguration
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/UpdateOrganizationConfiguration"
      *      target="_top">AWS API Documentation</a>
@@ -3835,8 +3837,8 @@ public class AWSSecurityHubClient extends AmazonWebServiceClient implements AWSS
      *         There is an issue with the account used to make the request. Either Security Hub is not enabled for the
      *         account, or the account does not have permission to perform this action.
      * @throws LimitExceededException
-     *         The request was rejected because it attempted to create resources beyond the current AWS account or
-     *         throttling limits. The error code describes the limit exceeded.
+     *         The request was rejected because it attempted to create resources beyond the current Amazon Web Services
+     *         account or throttling limits. The error code describes the limit exceeded.
      * @throws ResourceNotFoundException
      *         The request was rejected because we can't find the specified resource.
      * @sample AWSSecurityHub.UpdateSecurityHubConfiguration

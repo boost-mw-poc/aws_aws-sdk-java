@@ -37,7 +37,7 @@ public class AwsApiCallAction implements Serializable, Cloneable, StructuredPojo
     private String api;
     /**
      * <p>
-     * The name of the AWS service that the API method belongs to.
+     * The name of the Amazon Web Services service that the API method belongs to.
      * </p>
      */
     private String serviceName;
@@ -123,11 +123,11 @@ public class AwsApiCallAction implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The name of the AWS service that the API method belongs to.
+     * The name of the Amazon Web Services service that the API method belongs to.
      * </p>
      * 
      * @param serviceName
-     *        The name of the AWS service that the API method belongs to.
+     *        The name of the Amazon Web Services service that the API method belongs to.
      */
 
     public void setServiceName(String serviceName) {
@@ -136,10 +136,10 @@ public class AwsApiCallAction implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The name of the AWS service that the API method belongs to.
+     * The name of the Amazon Web Services service that the API method belongs to.
      * </p>
      * 
-     * @return The name of the AWS service that the API method belongs to.
+     * @return The name of the Amazon Web Services service that the API method belongs to.
      */
 
     public String getServiceName() {
@@ -148,11 +148,11 @@ public class AwsApiCallAction implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The name of the AWS service that the API method belongs to.
+     * The name of the Amazon Web Services service that the API method belongs to.
      * </p>
      * 
      * @param serviceName
-     *        The name of the AWS service that the API method belongs to.
+     *        The name of the Amazon Web Services service that the API method belongs to.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

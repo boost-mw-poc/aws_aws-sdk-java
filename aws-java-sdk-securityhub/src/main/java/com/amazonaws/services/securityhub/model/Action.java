@@ -24,7 +24,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * <ul>
  * <li>
  * <p>
- * A remote IP address issued an AWS API call
+ * A remote IP address issued an Amazon Web Services API call
  * </p>
  * </li>
  * <li>

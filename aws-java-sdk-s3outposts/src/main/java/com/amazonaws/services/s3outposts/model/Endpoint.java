@@ -19,9 +19,11 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * S3 on Outposts access points simplify managing data access at scale for shared datasets in Amazon S3 on Outposts. S3
+ * Amazon S3 on Outposts Access Points simplify managing data access at scale for shared datasets in S3 on Outposts. S3
  * on Outposts uses endpoints to connect to Outposts buckets so that you can perform actions within your virtual private
- * cloud (VPC).
+ * cloud (VPC). For more information, see <a
+ * href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/AccessingS3Outposts.html"> Accessing S3 on Outposts using
+ * VPC only access points</a>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/s3outposts-2017-07-25/Endpoint" target="_top">AWS API
@@ -38,7 +40,7 @@ public class Endpoint implements Serializable, Cloneable, StructuredPojo {
     private String endpointArn;
     /**
      * <p>
-     * The ID of the AWS Outpost.
+     * The ID of the AWS Outposts.
      * </p>
      */
     private String outpostsId;
@@ -66,6 +68,32 @@ public class Endpoint implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private java.util.List<NetworkInterface> networkInterfaces;
+    /**
+     * <p>
+     * The ID of the VPC used for the endpoint.
+     * </p>
+     */
+    private String vpcId;
+    /**
+     * <p>
+     * The ID of the subnet used for the endpoint.
+     * </p>
+     */
+    private String subnetId;
+    /**
+     * <p>
+     * The ID of the security group used for the endpoint.
+     * </p>
+     */
+    private String securityGroupId;
+    /** <p/> */
+    private String accessType;
+    /**
+     * <p>
+     * The ID of the customer-owned IPv4 pool used for the endpoint.
+     * </p>
+     */
+    private String customerOwnedIpv4Pool;
 
     /**
      * <p>
@@ -109,11 +137,11 @@ public class Endpoint implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID of the AWS Outpost.
+     * The ID of the AWS Outposts.
      * </p>
      * 
      * @param outpostsId
-     *        The ID of the AWS Outpost.
+     *        The ID of the AWS Outposts.
      */
 
     public void setOutpostsId(String outpostsId) {
@@ -122,10 +150,10 @@ public class Endpoint implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID of the AWS Outpost.
+     * The ID of the AWS Outposts.
      * </p>
      * 
-     * @return The ID of the AWS Outpost.
+     * @return The ID of the AWS Outposts.
      */
 
     public String getOutpostsId() {
@@ -134,11 +162,11 @@ public class Endpoint implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID of the AWS Outpost.
+     * The ID of the AWS Outposts.
      * </p>
      * 
      * @param outpostsId
-     *        The ID of the AWS Outpost.
+     *        The ID of the AWS Outposts.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -357,6 +385,214 @@ public class Endpoint implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The ID of the VPC used for the endpoint.
+     * </p>
+     * 
+     * @param vpcId
+     *        The ID of the VPC used for the endpoint.
+     */
+
+    public void setVpcId(String vpcId) {
+        this.vpcId = vpcId;
+    }
+
+    /**
+     * <p>
+     * The ID of the VPC used for the endpoint.
+     * </p>
+     * 
+     * @return The ID of the VPC used for the endpoint.
+     */
+
+    public String getVpcId() {
+        return this.vpcId;
+    }
+
+    /**
+     * <p>
+     * The ID of the VPC used for the endpoint.
+     * </p>
+     * 
+     * @param vpcId
+     *        The ID of the VPC used for the endpoint.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Endpoint withVpcId(String vpcId) {
+        setVpcId(vpcId);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The ID of the subnet used for the endpoint.
+     * </p>
+     * 
+     * @param subnetId
+     *        The ID of the subnet used for the endpoint.
+     */
+
+    public void setSubnetId(String subnetId) {
+        this.subnetId = subnetId;
+    }
+
+    /**
+     * <p>
+     * The ID of the subnet used for the endpoint.
+     * </p>
+     * 
+     * @return The ID of the subnet used for the endpoint.
+     */
+
+    public String getSubnetId() {
+        return this.subnetId;
+    }
+
+    /**
+     * <p>
+     * The ID of the subnet used for the endpoint.
+     * </p>
+     * 
+     * @param subnetId
+     *        The ID of the subnet used for the endpoint.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Endpoint withSubnetId(String subnetId) {
+        setSubnetId(subnetId);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The ID of the security group used for the endpoint.
+     * </p>
+     * 
+     * @param securityGroupId
+     *        The ID of the security group used for the endpoint.
+     */
+
+    public void setSecurityGroupId(String securityGroupId) {
+        this.securityGroupId = securityGroupId;
+    }
+
+    /**
+     * <p>
+     * The ID of the security group used for the endpoint.
+     * </p>
+     * 
+     * @return The ID of the security group used for the endpoint.
+     */
+
+    public String getSecurityGroupId() {
+        return this.securityGroupId;
+    }
+
+    /**
+     * <p>
+     * The ID of the security group used for the endpoint.
+     * </p>
+     * 
+     * @param securityGroupId
+     *        The ID of the security group used for the endpoint.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Endpoint withSecurityGroupId(String securityGroupId) {
+        setSecurityGroupId(securityGroupId);
+        return this;
+    }
+
+    /**
+     * <p/>
+     * 
+     * @param accessType
+     * @see EndpointAccessType
+     */
+
+    public void setAccessType(String accessType) {
+        this.accessType = accessType;
+    }
+
+    /**
+     * <p/>
+     * 
+     * @return
+     * @see EndpointAccessType
+     */
+
+    public String getAccessType() {
+        return this.accessType;
+    }
+
+    /**
+     * <p/>
+     * 
+     * @param accessType
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see EndpointAccessType
+     */
+
+    public Endpoint withAccessType(String accessType) {
+        setAccessType(accessType);
+        return this;
+    }
+
+    /**
+     * <p/>
+     * 
+     * @param accessType
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see EndpointAccessType
+     */
+
+    public Endpoint withAccessType(EndpointAccessType accessType) {
+        this.accessType = accessType.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * The ID of the customer-owned IPv4 pool used for the endpoint.
+     * </p>
+     * 
+     * @param customerOwnedIpv4Pool
+     *        The ID of the customer-owned IPv4 pool used for the endpoint.
+     */
+
+    public void setCustomerOwnedIpv4Pool(String customerOwnedIpv4Pool) {
+        this.customerOwnedIpv4Pool = customerOwnedIpv4Pool;
+    }
+
+    /**
+     * <p>
+     * The ID of the customer-owned IPv4 pool used for the endpoint.
+     * </p>
+     * 
+     * @return The ID of the customer-owned IPv4 pool used for the endpoint.
+     */
+
+    public String getCustomerOwnedIpv4Pool() {
+        return this.customerOwnedIpv4Pool;
+    }
+
+    /**
+     * <p>
+     * The ID of the customer-owned IPv4 pool used for the endpoint.
+     * </p>
+     * 
+     * @param customerOwnedIpv4Pool
+     *        The ID of the customer-owned IPv4 pool used for the endpoint.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Endpoint withCustomerOwnedIpv4Pool(String customerOwnedIpv4Pool) {
+        setCustomerOwnedIpv4Pool(customerOwnedIpv4Pool);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -379,7 +615,17 @@ public class Endpoint implements Serializable, Cloneable, StructuredPojo {
         if (getCreationTime() != null)
             sb.append("CreationTime: ").append(getCreationTime()).append(",");
         if (getNetworkInterfaces() != null)
-            sb.append("NetworkInterfaces: ").append(getNetworkInterfaces());
+            sb.append("NetworkInterfaces: ").append(getNetworkInterfaces()).append(",");
+        if (getVpcId() != null)
+            sb.append("VpcId: ").append(getVpcId()).append(",");
+        if (getSubnetId() != null)
+            sb.append("SubnetId: ").append(getSubnetId()).append(",");
+        if (getSecurityGroupId() != null)
+            sb.append("SecurityGroupId: ").append(getSecurityGroupId()).append(",");
+        if (getAccessType() != null)
+            sb.append("AccessType: ").append(getAccessType()).append(",");
+        if (getCustomerOwnedIpv4Pool() != null)
+            sb.append("CustomerOwnedIpv4Pool: ").append(getCustomerOwnedIpv4Pool());
         sb.append("}");
         return sb.toString();
     }
@@ -418,6 +664,26 @@ public class Endpoint implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getNetworkInterfaces() != null && other.getNetworkInterfaces().equals(this.getNetworkInterfaces()) == false)
             return false;
+        if (other.getVpcId() == null ^ this.getVpcId() == null)
+            return false;
+        if (other.getVpcId() != null && other.getVpcId().equals(this.getVpcId()) == false)
+            return false;
+        if (other.getSubnetId() == null ^ this.getSubnetId() == null)
+            return false;
+        if (other.getSubnetId() != null && other.getSubnetId().equals(this.getSubnetId()) == false)
+            return false;
+        if (other.getSecurityGroupId() == null ^ this.getSecurityGroupId() == null)
+            return false;
+        if (other.getSecurityGroupId() != null && other.getSecurityGroupId().equals(this.getSecurityGroupId()) == false)
+            return false;
+        if (other.getAccessType() == null ^ this.getAccessType() == null)
+            return false;
+        if (other.getAccessType() != null && other.getAccessType().equals(this.getAccessType()) == false)
+            return false;
+        if (other.getCustomerOwnedIpv4Pool() == null ^ this.getCustomerOwnedIpv4Pool() == null)
+            return false;
+        if (other.getCustomerOwnedIpv4Pool() != null && other.getCustomerOwnedIpv4Pool().equals(this.getCustomerOwnedIpv4Pool()) == false)
+            return false;
         return true;
     }
 
@@ -432,6 +698,11 @@ public class Endpoint implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
         hashCode = prime * hashCode + ((getCreationTime() == null) ? 0 : getCreationTime().hashCode());
         hashCode = prime * hashCode + ((getNetworkInterfaces() == null) ? 0 : getNetworkInterfaces().hashCode());
+        hashCode = prime * hashCode + ((getVpcId() == null) ? 0 : getVpcId().hashCode());
+        hashCode = prime * hashCode + ((getSubnetId() == null) ? 0 : getSubnetId().hashCode());
+        hashCode = prime * hashCode + ((getSecurityGroupId() == null) ? 0 : getSecurityGroupId().hashCode());
+        hashCode = prime * hashCode + ((getAccessType() == null) ? 0 : getAccessType().hashCode());
+        hashCode = prime * hashCode + ((getCustomerOwnedIpv4Pool() == null) ? 0 : getCustomerOwnedIpv4Pool().hashCode());
         return hashCode;
     }
 

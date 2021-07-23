@@ -42,7 +42,7 @@ public class AwsEc2SecurityGroupDetails implements Serializable, Cloneable, Stru
     private String groupId;
     /**
      * <p>
-     * The AWS account ID of the owner of the security group.
+     * The Amazon Web Services account ID of the owner of the security group.
      * </p>
      */
     private String ownerId;
@@ -147,11 +147,11 @@ public class AwsEc2SecurityGroupDetails implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The AWS account ID of the owner of the security group.
+     * The Amazon Web Services account ID of the owner of the security group.
      * </p>
      * 
      * @param ownerId
-     *        The AWS account ID of the owner of the security group.
+     *        The Amazon Web Services account ID of the owner of the security group.
      */
 
     public void setOwnerId(String ownerId) {
@@ -160,10 +160,10 @@ public class AwsEc2SecurityGroupDetails implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The AWS account ID of the owner of the security group.
+     * The Amazon Web Services account ID of the owner of the security group.
      * </p>
      * 
-     * @return The AWS account ID of the owner of the security group.
+     * @return The Amazon Web Services account ID of the owner of the security group.
      */
 
     public String getOwnerId() {
@@ -172,11 +172,11 @@ public class AwsEc2SecurityGroupDetails implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The AWS account ID of the owner of the security group.
+     * The Amazon Web Services account ID of the owner of the security group.
      * </p>
      * 
      * @param ownerId
-     *        The AWS account ID of the owner of the security group.
+     *        The Amazon Web Services account ID of the owner of the security group.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

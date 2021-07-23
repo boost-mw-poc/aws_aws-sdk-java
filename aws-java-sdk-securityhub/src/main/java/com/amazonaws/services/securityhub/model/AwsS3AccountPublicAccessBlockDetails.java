@@ -49,8 +49,8 @@ public class AwsS3AccountPublicAccessBlockDetails implements Serializable, Clone
     private Boolean ignorePublicAcls;
     /**
      * <p>
-     * Indicates whether to restrict access to an access point or S3 bucket that has a public policy to only AWS service
-     * principals and authorized users within the S3 bucket owner's account.
+     * Indicates whether to restrict access to an access point or S3 bucket that has a public policy to only Amazon Web
+     * Services service principals and authorized users within the S3 bucket owner's account.
      * </p>
      */
     private Boolean restrictPublicBuckets;
@@ -225,13 +225,13 @@ public class AwsS3AccountPublicAccessBlockDetails implements Serializable, Clone
 
     /**
      * <p>
-     * Indicates whether to restrict access to an access point or S3 bucket that has a public policy to only AWS service
-     * principals and authorized users within the S3 bucket owner's account.
+     * Indicates whether to restrict access to an access point or S3 bucket that has a public policy to only Amazon Web
+     * Services service principals and authorized users within the S3 bucket owner's account.
      * </p>
      * 
      * @param restrictPublicBuckets
-     *        Indicates whether to restrict access to an access point or S3 bucket that has a public policy to only AWS
-     *        service principals and authorized users within the S3 bucket owner's account.
+     *        Indicates whether to restrict access to an access point or S3 bucket that has a public policy to only
+     *        Amazon Web Services service principals and authorized users within the S3 bucket owner's account.
      */
 
     public void setRestrictPublicBuckets(Boolean restrictPublicBuckets) {
@@ -240,12 +240,12 @@ public class AwsS3AccountPublicAccessBlockDetails implements Serializable, Clone
 
     /**
      * <p>
-     * Indicates whether to restrict access to an access point or S3 bucket that has a public policy to only AWS service
-     * principals and authorized users within the S3 bucket owner's account.
+     * Indicates whether to restrict access to an access point or S3 bucket that has a public policy to only Amazon Web
+     * Services service principals and authorized users within the S3 bucket owner's account.
      * </p>
      * 
-     * @return Indicates whether to restrict access to an access point or S3 bucket that has a public policy to only AWS
-     *         service principals and authorized users within the S3 bucket owner's account.
+     * @return Indicates whether to restrict access to an access point or S3 bucket that has a public policy to only
+     *         Amazon Web Services service principals and authorized users within the S3 bucket owner's account.
      */
 
     public Boolean getRestrictPublicBuckets() {
@@ -254,13 +254,13 @@ public class AwsS3AccountPublicAccessBlockDetails implements Serializable, Clone
 
     /**
      * <p>
-     * Indicates whether to restrict access to an access point or S3 bucket that has a public policy to only AWS service
-     * principals and authorized users within the S3 bucket owner's account.
+     * Indicates whether to restrict access to an access point or S3 bucket that has a public policy to only Amazon Web
+     * Services service principals and authorized users within the S3 bucket owner's account.
      * </p>
      * 
      * @param restrictPublicBuckets
-     *        Indicates whether to restrict access to an access point or S3 bucket that has a public policy to only AWS
-     *        service principals and authorized users within the S3 bucket owner's account.
+     *        Indicates whether to restrict access to an access point or S3 bucket that has a public policy to only
+     *        Amazon Web Services service principals and authorized users within the S3 bucket owner's account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -271,12 +271,12 @@ public class AwsS3AccountPublicAccessBlockDetails implements Serializable, Clone
 
     /**
      * <p>
-     * Indicates whether to restrict access to an access point or S3 bucket that has a public policy to only AWS service
-     * principals and authorized users within the S3 bucket owner's account.
+     * Indicates whether to restrict access to an access point or S3 bucket that has a public policy to only Amazon Web
+     * Services service principals and authorized users within the S3 bucket owner's account.
      * </p>
      * 
-     * @return Indicates whether to restrict access to an access point or S3 bucket that has a public policy to only AWS
-     *         service principals and authorized users within the S3 bucket owner's account.
+     * @return Indicates whether to restrict access to an access point or S3 bucket that has a public policy to only
+     *         Amazon Web Services service principals and authorized users within the S3 bucket owner's account.
      */
 
     public Boolean isRestrictPublicBuckets() {

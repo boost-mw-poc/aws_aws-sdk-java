@@ -48,7 +48,7 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
     private AwsAutoScalingAutoScalingGroupDetails awsAutoScalingAutoScalingGroup;
     /**
      * <p>
-     * Details for an AWS CodeBuild project.
+     * Details for an CodeBuild project.
      * </p>
      */
     private AwsCodeBuildProjectDetails awsCodeBuildProject;
@@ -66,7 +66,7 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
     private AwsEc2InstanceDetails awsEc2Instance;
     /**
      * <p>
-     * Details for an Amazon EC2 network interface.
+     * Details for an EC2 network interface.
      * </p>
      */
     private AwsEc2NetworkInterfaceDetails awsEc2NetworkInterface;
@@ -96,7 +96,7 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
     private AwsEc2EipDetails awsEc2Eip;
     /**
      * <p>
-     * Details about a subnet in EC2.
+     * Details about a subnet in Amazon EC2.
      * </p>
      */
     private AwsEc2SubnetDetails awsEc2Subnet;
@@ -126,7 +126,7 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
     private AwsElasticsearchDomainDetails awsElasticsearchDomain;
     /**
      * <p>
-     * Details about an Amazon S3 bucket related to a finding.
+     * Details about an S3 bucket related to a finding.
      * </p>
      */
     private AwsS3BucketDetails awsS3Bucket;
@@ -138,7 +138,7 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
     private AwsS3AccountPublicAccessBlockDetails awsS3AccountPublicAccessBlock;
     /**
      * <p>
-     * Details about an Amazon S3 object related to a finding.
+     * Details about an S3 object related to a finding.
      * </p>
      */
     private AwsS3ObjectDetails awsS3Object;
@@ -211,7 +211,7 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
     private AwsSsmPatchComplianceDetails awsSsmPatchCompliance;
     /**
      * <p>
-     * Provides details about an AWS Certificate Manager (ACM) certificate.
+     * Provides details about an Certificate Manager certificate.
      * </p>
      */
     private AwsCertificateManagerCertificateDetails awsCertificateManagerCertificate;
@@ -241,7 +241,7 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
     private AwsIamRoleDetails awsIamRole;
     /**
      * <p>
-     * Details about a KMS key.
+     * Details about an KMS key.
      * </p>
      */
     private AwsKmsKeyDetails awsKmsKey;
@@ -277,7 +277,7 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
     private AwsSqsQueueDetails awsSqsQueue;
     /**
      * <p>
-     * Details for a WAF WebACL.
+     * Details for an WAF WebACL.
      * </p>
      */
     private AwsWafWebAclDetails awsWafWebAcl;
@@ -340,6 +340,18 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
      * </ul>
      */
     private java.util.Map<String, String> other;
+    /**
+     * <p>
+     * Details about an RDS event notification subscription.
+     * </p>
+     */
+    private AwsRdsEventSubscriptionDetails awsRdsEventSubscription;
+    /**
+     * <p>
+     * Details about a service within an ECS cluster.
+     * </p>
+     */
+    private AwsEcsServiceDetails awsEcsService;
 
     /**
      * <p>
@@ -383,11 +395,11 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Details for an AWS CodeBuild project.
+     * Details for an CodeBuild project.
      * </p>
      * 
      * @param awsCodeBuildProject
-     *        Details for an AWS CodeBuild project.
+     *        Details for an CodeBuild project.
      */
 
     public void setAwsCodeBuildProject(AwsCodeBuildProjectDetails awsCodeBuildProject) {
@@ -396,10 +408,10 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Details for an AWS CodeBuild project.
+     * Details for an CodeBuild project.
      * </p>
      * 
-     * @return Details for an AWS CodeBuild project.
+     * @return Details for an CodeBuild project.
      */
 
     public AwsCodeBuildProjectDetails getAwsCodeBuildProject() {
@@ -408,11 +420,11 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Details for an AWS CodeBuild project.
+     * Details for an CodeBuild project.
      * </p>
      * 
      * @param awsCodeBuildProject
-     *        Details for an AWS CodeBuild project.
+     *        Details for an CodeBuild project.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -503,11 +515,11 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Details for an Amazon EC2 network interface.
+     * Details for an EC2 network interface.
      * </p>
      * 
      * @param awsEc2NetworkInterface
-     *        Details for an Amazon EC2 network interface.
+     *        Details for an EC2 network interface.
      */
 
     public void setAwsEc2NetworkInterface(AwsEc2NetworkInterfaceDetails awsEc2NetworkInterface) {
@@ -516,10 +528,10 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Details for an Amazon EC2 network interface.
+     * Details for an EC2 network interface.
      * </p>
      * 
-     * @return Details for an Amazon EC2 network interface.
+     * @return Details for an EC2 network interface.
      */
 
     public AwsEc2NetworkInterfaceDetails getAwsEc2NetworkInterface() {
@@ -528,11 +540,11 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Details for an Amazon EC2 network interface.
+     * Details for an EC2 network interface.
      * </p>
      * 
      * @param awsEc2NetworkInterface
-     *        Details for an Amazon EC2 network interface.
+     *        Details for an EC2 network interface.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -703,11 +715,11 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Details about a subnet in EC2.
+     * Details about a subnet in Amazon EC2.
      * </p>
      * 
      * @param awsEc2Subnet
-     *        Details about a subnet in EC2.
+     *        Details about a subnet in Amazon EC2.
      */
 
     public void setAwsEc2Subnet(AwsEc2SubnetDetails awsEc2Subnet) {
@@ -716,10 +728,10 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Details about a subnet in EC2.
+     * Details about a subnet in Amazon EC2.
      * </p>
      * 
-     * @return Details about a subnet in EC2.
+     * @return Details about a subnet in Amazon EC2.
      */
 
     public AwsEc2SubnetDetails getAwsEc2Subnet() {
@@ -728,11 +740,11 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Details about a subnet in EC2.
+     * Details about a subnet in Amazon EC2.
      * </p>
      * 
      * @param awsEc2Subnet
-     *        Details about a subnet in EC2.
+     *        Details about a subnet in Amazon EC2.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -903,11 +915,11 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Details about an Amazon S3 bucket related to a finding.
+     * Details about an S3 bucket related to a finding.
      * </p>
      * 
      * @param awsS3Bucket
-     *        Details about an Amazon S3 bucket related to a finding.
+     *        Details about an S3 bucket related to a finding.
      */
 
     public void setAwsS3Bucket(AwsS3BucketDetails awsS3Bucket) {
@@ -916,10 +928,10 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Details about an Amazon S3 bucket related to a finding.
+     * Details about an S3 bucket related to a finding.
      * </p>
      * 
-     * @return Details about an Amazon S3 bucket related to a finding.
+     * @return Details about an S3 bucket related to a finding.
      */
 
     public AwsS3BucketDetails getAwsS3Bucket() {
@@ -928,11 +940,11 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Details about an Amazon S3 bucket related to a finding.
+     * Details about an S3 bucket related to a finding.
      * </p>
      * 
      * @param awsS3Bucket
-     *        Details about an Amazon S3 bucket related to a finding.
+     *        Details about an S3 bucket related to a finding.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -983,11 +995,11 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Details about an Amazon S3 object related to a finding.
+     * Details about an S3 object related to a finding.
      * </p>
      * 
      * @param awsS3Object
-     *        Details about an Amazon S3 object related to a finding.
+     *        Details about an S3 object related to a finding.
      */
 
     public void setAwsS3Object(AwsS3ObjectDetails awsS3Object) {
@@ -996,10 +1008,10 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Details about an Amazon S3 object related to a finding.
+     * Details about an S3 object related to a finding.
      * </p>
      * 
-     * @return Details about an Amazon S3 object related to a finding.
+     * @return Details about an S3 object related to a finding.
      */
 
     public AwsS3ObjectDetails getAwsS3Object() {
@@ -1008,11 +1020,11 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Details about an Amazon S3 object related to a finding.
+     * Details about an S3 object related to a finding.
      * </p>
      * 
      * @param awsS3Object
-     *        Details about an Amazon S3 object related to a finding.
+     *        Details about an S3 object related to a finding.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1469,11 +1481,11 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Provides details about an AWS Certificate Manager (ACM) certificate.
+     * Provides details about an Certificate Manager certificate.
      * </p>
      * 
      * @param awsCertificateManagerCertificate
-     *        Provides details about an AWS Certificate Manager (ACM) certificate.
+     *        Provides details about an Certificate Manager certificate.
      */
 
     public void setAwsCertificateManagerCertificate(AwsCertificateManagerCertificateDetails awsCertificateManagerCertificate) {
@@ -1482,10 +1494,10 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Provides details about an AWS Certificate Manager (ACM) certificate.
+     * Provides details about an Certificate Manager certificate.
      * </p>
      * 
-     * @return Provides details about an AWS Certificate Manager (ACM) certificate.
+     * @return Provides details about an Certificate Manager certificate.
      */
 
     public AwsCertificateManagerCertificateDetails getAwsCertificateManagerCertificate() {
@@ -1494,11 +1506,11 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Provides details about an AWS Certificate Manager (ACM) certificate.
+     * Provides details about an Certificate Manager certificate.
      * </p>
      * 
      * @param awsCertificateManagerCertificate
-     *        Provides details about an AWS Certificate Manager (ACM) certificate.
+     *        Provides details about an Certificate Manager certificate.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1669,11 +1681,11 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Details about a KMS key.
+     * Details about an KMS key.
      * </p>
      * 
      * @param awsKmsKey
-     *        Details about a KMS key.
+     *        Details about an KMS key.
      */
 
     public void setAwsKmsKey(AwsKmsKeyDetails awsKmsKey) {
@@ -1682,10 +1694,10 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Details about a KMS key.
+     * Details about an KMS key.
      * </p>
      * 
-     * @return Details about a KMS key.
+     * @return Details about an KMS key.
      */
 
     public AwsKmsKeyDetails getAwsKmsKey() {
@@ -1694,11 +1706,11 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Details about a KMS key.
+     * Details about an KMS key.
      * </p>
      * 
      * @param awsKmsKey
-     *        Details about a KMS key.
+     *        Details about an KMS key.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1909,11 +1921,11 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Details for a WAF WebACL.
+     * Details for an WAF WebACL.
      * </p>
      * 
      * @param awsWafWebAcl
-     *        Details for a WAF WebACL.
+     *        Details for an WAF WebACL.
      */
 
     public void setAwsWafWebAcl(AwsWafWebAclDetails awsWafWebAcl) {
@@ -1922,10 +1934,10 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Details for a WAF WebACL.
+     * Details for an WAF WebACL.
      * </p>
      * 
-     * @return Details for a WAF WebACL.
+     * @return Details for an WAF WebACL.
      */
 
     public AwsWafWebAclDetails getAwsWafWebAcl() {
@@ -1934,11 +1946,11 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Details for a WAF WebACL.
+     * Details for an WAF WebACL.
      * </p>
      * 
      * @param awsWafWebAcl
-     *        Details for a WAF WebACL.
+     *        Details for an WAF WebACL.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2355,6 +2367,86 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
     }
 
     /**
+     * <p>
+     * Details about an RDS event notification subscription.
+     * </p>
+     * 
+     * @param awsRdsEventSubscription
+     *        Details about an RDS event notification subscription.
+     */
+
+    public void setAwsRdsEventSubscription(AwsRdsEventSubscriptionDetails awsRdsEventSubscription) {
+        this.awsRdsEventSubscription = awsRdsEventSubscription;
+    }
+
+    /**
+     * <p>
+     * Details about an RDS event notification subscription.
+     * </p>
+     * 
+     * @return Details about an RDS event notification subscription.
+     */
+
+    public AwsRdsEventSubscriptionDetails getAwsRdsEventSubscription() {
+        return this.awsRdsEventSubscription;
+    }
+
+    /**
+     * <p>
+     * Details about an RDS event notification subscription.
+     * </p>
+     * 
+     * @param awsRdsEventSubscription
+     *        Details about an RDS event notification subscription.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ResourceDetails withAwsRdsEventSubscription(AwsRdsEventSubscriptionDetails awsRdsEventSubscription) {
+        setAwsRdsEventSubscription(awsRdsEventSubscription);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Details about a service within an ECS cluster.
+     * </p>
+     * 
+     * @param awsEcsService
+     *        Details about a service within an ECS cluster.
+     */
+
+    public void setAwsEcsService(AwsEcsServiceDetails awsEcsService) {
+        this.awsEcsService = awsEcsService;
+    }
+
+    /**
+     * <p>
+     * Details about a service within an ECS cluster.
+     * </p>
+     * 
+     * @return Details about a service within an ECS cluster.
+     */
+
+    public AwsEcsServiceDetails getAwsEcsService() {
+        return this.awsEcsService;
+    }
+
+    /**
+     * <p>
+     * Details about a service within an ECS cluster.
+     * </p>
+     * 
+     * @param awsEcsService
+     *        Details about a service within an ECS cluster.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ResourceDetails withAwsEcsService(AwsEcsServiceDetails awsEcsService) {
+        setAwsEcsService(awsEcsService);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -2459,7 +2551,11 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
         if (getContainer() != null)
             sb.append("Container: ").append(getContainer()).append(",");
         if (getOther() != null)
-            sb.append("Other: ").append(getOther());
+            sb.append("Other: ").append(getOther()).append(",");
+        if (getAwsRdsEventSubscription() != null)
+            sb.append("AwsRdsEventSubscription: ").append(getAwsRdsEventSubscription()).append(",");
+        if (getAwsEcsService() != null)
+            sb.append("AwsEcsService: ").append(getAwsEcsService());
         sb.append("}");
         return sb.toString();
     }
@@ -2666,6 +2762,14 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
             return false;
         if (other.getOther() != null && other.getOther().equals(this.getOther()) == false)
             return false;
+        if (other.getAwsRdsEventSubscription() == null ^ this.getAwsRdsEventSubscription() == null)
+            return false;
+        if (other.getAwsRdsEventSubscription() != null && other.getAwsRdsEventSubscription().equals(this.getAwsRdsEventSubscription()) == false)
+            return false;
+        if (other.getAwsEcsService() == null ^ this.getAwsEcsService() == null)
+            return false;
+        if (other.getAwsEcsService() != null && other.getAwsEcsService().equals(this.getAwsEcsService()) == false)
+            return false;
         return true;
     }
 
@@ -2721,6 +2825,8 @@ public class ResourceDetails implements Serializable, Cloneable, StructuredPojo 
         hashCode = prime * hashCode + ((getAwsEcsTaskDefinition() == null) ? 0 : getAwsEcsTaskDefinition().hashCode());
         hashCode = prime * hashCode + ((getContainer() == null) ? 0 : getContainer().hashCode());
         hashCode = prime * hashCode + ((getOther() == null) ? 0 : getOther().hashCode());
+        hashCode = prime * hashCode + ((getAwsRdsEventSubscription() == null) ? 0 : getAwsRdsEventSubscription().hashCode());
+        hashCode = prime * hashCode + ((getAwsEcsService() == null) ? 0 : getAwsEcsService().hashCode());
         return hashCode;
     }
 

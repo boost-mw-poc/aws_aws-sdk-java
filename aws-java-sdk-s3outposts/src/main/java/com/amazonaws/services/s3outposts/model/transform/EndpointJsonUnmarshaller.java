@@ -74,6 +74,26 @@ public class EndpointJsonUnmarshaller implements Unmarshaller<Endpoint, JsonUnma
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("VpcId", targetDepth)) {
+                    context.nextToken();
+                    endpoint.setVpcId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("SubnetId", targetDepth)) {
+                    context.nextToken();
+                    endpoint.setSubnetId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("SecurityGroupId", targetDepth)) {
+                    context.nextToken();
+                    endpoint.setSecurityGroupId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("AccessType", targetDepth)) {
+                    context.nextToken();
+                    endpoint.setAccessType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("CustomerOwnedIpv4Pool", targetDepth)) {
+                    context.nextToken();
+                    endpoint.setCustomerOwnedIpv4Pool(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

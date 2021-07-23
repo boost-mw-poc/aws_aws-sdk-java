@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Details about an AWS Secrets Manager secret.
+ * Details about an Secrets Manager secret.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/AwsSecretsManagerSecretDetails"
@@ -42,8 +42,8 @@ public class AwsSecretsManagerSecretDetails implements Serializable, Cloneable, 
     private Boolean rotationOccurredWithinFrequency;
     /**
      * <p>
-     * The ARN, Key ID, or alias of the AWS KMS customer master key (CMK) used to encrypt the <code>SecretString</code>
-     * or <code>SecretBinary</code> values for versions of this secret.
+     * The ARN, Key ID, or alias of the KMS customer master key (CMK) used to encrypt the <code>SecretString</code> or
+     * <code>SecretBinary</code> values for versions of this secret.
      * </p>
      */
     private String kmsKeyId;
@@ -172,12 +172,12 @@ public class AwsSecretsManagerSecretDetails implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The ARN, Key ID, or alias of the AWS KMS customer master key (CMK) used to encrypt the <code>SecretString</code>
-     * or <code>SecretBinary</code> values for versions of this secret.
+     * The ARN, Key ID, or alias of the KMS customer master key (CMK) used to encrypt the <code>SecretString</code> or
+     * <code>SecretBinary</code> values for versions of this secret.
      * </p>
      * 
      * @param kmsKeyId
-     *        The ARN, Key ID, or alias of the AWS KMS customer master key (CMK) used to encrypt the
+     *        The ARN, Key ID, or alias of the KMS customer master key (CMK) used to encrypt the
      *        <code>SecretString</code> or <code>SecretBinary</code> values for versions of this secret.
      */
 
@@ -187,11 +187,11 @@ public class AwsSecretsManagerSecretDetails implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The ARN, Key ID, or alias of the AWS KMS customer master key (CMK) used to encrypt the <code>SecretString</code>
-     * or <code>SecretBinary</code> values for versions of this secret.
+     * The ARN, Key ID, or alias of the KMS customer master key (CMK) used to encrypt the <code>SecretString</code> or
+     * <code>SecretBinary</code> values for versions of this secret.
      * </p>
      * 
-     * @return The ARN, Key ID, or alias of the AWS KMS customer master key (CMK) used to encrypt the
+     * @return The ARN, Key ID, or alias of the KMS customer master key (CMK) used to encrypt the
      *         <code>SecretString</code> or <code>SecretBinary</code> values for versions of this secret.
      */
 
@@ -201,12 +201,12 @@ public class AwsSecretsManagerSecretDetails implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The ARN, Key ID, or alias of the AWS KMS customer master key (CMK) used to encrypt the <code>SecretString</code>
-     * or <code>SecretBinary</code> values for versions of this secret.
+     * The ARN, Key ID, or alias of the KMS customer master key (CMK) used to encrypt the <code>SecretString</code> or
+     * <code>SecretBinary</code> values for versions of this secret.
      * </p>
      * 
      * @param kmsKeyId
-     *        The ARN, Key ID, or alias of the AWS KMS customer master key (CMK) used to encrypt the
+     *        The ARN, Key ID, or alias of the KMS customer master key (CMK) used to encrypt the
      *        <code>SecretString</code> or <code>SecretBinary</code> values for versions of this secret.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

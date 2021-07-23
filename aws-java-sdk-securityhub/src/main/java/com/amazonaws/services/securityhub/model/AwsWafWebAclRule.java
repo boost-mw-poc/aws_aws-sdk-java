@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Details for a rule in a WAF WebACL.
+ * Details for a rule in an WAF WebACL.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/AwsWafWebAclRule" target="_top">AWS API
@@ -30,7 +30,7 @@ public class AwsWafWebAclRule implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * Specifies the action that CloudFront or AWS WAF takes when a web request matches the conditions in the rule.
+     * Specifies the action that CloudFront or WAF takes when a web request matches the conditions in the rule.
      * </p>
      */
     private WafAction action;
@@ -91,12 +91,11 @@ public class AwsWafWebAclRule implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * Specifies the action that CloudFront or AWS WAF takes when a web request matches the conditions in the rule.
+     * Specifies the action that CloudFront or WAF takes when a web request matches the conditions in the rule.
      * </p>
      * 
      * @param action
-     *        Specifies the action that CloudFront or AWS WAF takes when a web request matches the conditions in the
-     *        rule.
+     *        Specifies the action that CloudFront or WAF takes when a web request matches the conditions in the rule.
      */
 
     public void setAction(WafAction action) {
@@ -105,11 +104,10 @@ public class AwsWafWebAclRule implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * Specifies the action that CloudFront or AWS WAF takes when a web request matches the conditions in the rule.
+     * Specifies the action that CloudFront or WAF takes when a web request matches the conditions in the rule.
      * </p>
      * 
-     * @return Specifies the action that CloudFront or AWS WAF takes when a web request matches the conditions in the
-     *         rule.
+     * @return Specifies the action that CloudFront or WAF takes when a web request matches the conditions in the rule.
      */
 
     public WafAction getAction() {
@@ -118,12 +116,11 @@ public class AwsWafWebAclRule implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * Specifies the action that CloudFront or AWS WAF takes when a web request matches the conditions in the rule.
+     * Specifies the action that CloudFront or WAF takes when a web request matches the conditions in the rule.
      * </p>
      * 
      * @param action
-     *        Specifies the action that CloudFront or AWS WAF takes when a web request matches the conditions in the
-     *        rule.
+     *        Specifies the action that CloudFront or WAF takes when a web request matches the conditions in the rule.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

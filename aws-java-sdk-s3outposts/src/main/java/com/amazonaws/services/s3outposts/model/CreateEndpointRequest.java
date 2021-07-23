@@ -27,13 +27,14 @@ public class CreateEndpointRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The ID of the AWS Outpost.
+     * The ID of the AWS Outposts.
      * </p>
      */
     private String outpostId;
     /**
      * <p>
-     * The ID of the subnet in the selected VPC.
+     * The ID of the subnet in the selected VPC. The endpoint subnet must belong to the Outpost that has the Amazon S3
+     * on Outposts provisioned.
      * </p>
      */
     private String subnetId;
@@ -43,14 +44,28 @@ public class CreateEndpointRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      */
     private String securityGroupId;
+    /**
+     * <p>
+     * The type of access for the on-premise network connectivity for the Outpost endpoint. To access the endpoint from
+     * an on-premises network, you must specify the access type and provide the customer owned IPv4 pool.
+     * </p>
+     */
+    private String accessType;
+    /**
+     * <p>
+     * The ID of the customer-owned IPv4 pool for the endpoint. IP addresses will be allocated from this pool for the
+     * endpoint.
+     * </p>
+     */
+    private String customerOwnedIpv4Pool;
 
     /**
      * <p>
-     * The ID of the AWS Outpost.
+     * The ID of the AWS Outposts.
      * </p>
      * 
      * @param outpostId
-     *        The ID of the AWS Outpost.
+     *        The ID of the AWS Outposts.
      */
 
     public void setOutpostId(String outpostId) {
@@ -59,10 +74,10 @@ public class CreateEndpointRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The ID of the AWS Outpost.
+     * The ID of the AWS Outposts.
      * </p>
      * 
-     * @return The ID of the AWS Outpost.
+     * @return The ID of the AWS Outposts.
      */
 
     public String getOutpostId() {
@@ -71,11 +86,11 @@ public class CreateEndpointRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The ID of the AWS Outpost.
+     * The ID of the AWS Outposts.
      * </p>
      * 
      * @param outpostId
-     *        The ID of the AWS Outpost.
+     *        The ID of the AWS Outposts.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -86,11 +101,13 @@ public class CreateEndpointRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The ID of the subnet in the selected VPC.
+     * The ID of the subnet in the selected VPC. The endpoint subnet must belong to the Outpost that has the Amazon S3
+     * on Outposts provisioned.
      * </p>
      * 
      * @param subnetId
-     *        The ID of the subnet in the selected VPC.
+     *        The ID of the subnet in the selected VPC. The endpoint subnet must belong to the Outpost that has the
+     *        Amazon S3 on Outposts provisioned.
      */
 
     public void setSubnetId(String subnetId) {
@@ -99,10 +116,12 @@ public class CreateEndpointRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The ID of the subnet in the selected VPC.
+     * The ID of the subnet in the selected VPC. The endpoint subnet must belong to the Outpost that has the Amazon S3
+     * on Outposts provisioned.
      * </p>
      * 
-     * @return The ID of the subnet in the selected VPC.
+     * @return The ID of the subnet in the selected VPC. The endpoint subnet must belong to the Outpost that has the
+     *         Amazon S3 on Outposts provisioned.
      */
 
     public String getSubnetId() {
@@ -111,11 +130,13 @@ public class CreateEndpointRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The ID of the subnet in the selected VPC.
+     * The ID of the subnet in the selected VPC. The endpoint subnet must belong to the Outpost that has the Amazon S3
+     * on Outposts provisioned.
      * </p>
      * 
      * @param subnetId
-     *        The ID of the subnet in the selected VPC.
+     *        The ID of the subnet in the selected VPC. The endpoint subnet must belong to the Outpost that has the
+     *        Amazon S3 on Outposts provisioned.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -165,6 +186,123 @@ public class CreateEndpointRequest extends com.amazonaws.AmazonWebServiceRequest
     }
 
     /**
+     * <p>
+     * The type of access for the on-premise network connectivity for the Outpost endpoint. To access the endpoint from
+     * an on-premises network, you must specify the access type and provide the customer owned IPv4 pool.
+     * </p>
+     * 
+     * @param accessType
+     *        The type of access for the on-premise network connectivity for the Outpost endpoint. To access the
+     *        endpoint from an on-premises network, you must specify the access type and provide the customer owned IPv4
+     *        pool.
+     * @see EndpointAccessType
+     */
+
+    public void setAccessType(String accessType) {
+        this.accessType = accessType;
+    }
+
+    /**
+     * <p>
+     * The type of access for the on-premise network connectivity for the Outpost endpoint. To access the endpoint from
+     * an on-premises network, you must specify the access type and provide the customer owned IPv4 pool.
+     * </p>
+     * 
+     * @return The type of access for the on-premise network connectivity for the Outpost endpoint. To access the
+     *         endpoint from an on-premises network, you must specify the access type and provide the customer owned
+     *         IPv4 pool.
+     * @see EndpointAccessType
+     */
+
+    public String getAccessType() {
+        return this.accessType;
+    }
+
+    /**
+     * <p>
+     * The type of access for the on-premise network connectivity for the Outpost endpoint. To access the endpoint from
+     * an on-premises network, you must specify the access type and provide the customer owned IPv4 pool.
+     * </p>
+     * 
+     * @param accessType
+     *        The type of access for the on-premise network connectivity for the Outpost endpoint. To access the
+     *        endpoint from an on-premises network, you must specify the access type and provide the customer owned IPv4
+     *        pool.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see EndpointAccessType
+     */
+
+    public CreateEndpointRequest withAccessType(String accessType) {
+        setAccessType(accessType);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The type of access for the on-premise network connectivity for the Outpost endpoint. To access the endpoint from
+     * an on-premises network, you must specify the access type and provide the customer owned IPv4 pool.
+     * </p>
+     * 
+     * @param accessType
+     *        The type of access for the on-premise network connectivity for the Outpost endpoint. To access the
+     *        endpoint from an on-premises network, you must specify the access type and provide the customer owned IPv4
+     *        pool.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see EndpointAccessType
+     */
+
+    public CreateEndpointRequest withAccessType(EndpointAccessType accessType) {
+        this.accessType = accessType.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * The ID of the customer-owned IPv4 pool for the endpoint. IP addresses will be allocated from this pool for the
+     * endpoint.
+     * </p>
+     * 
+     * @param customerOwnedIpv4Pool
+     *        The ID of the customer-owned IPv4 pool for the endpoint. IP addresses will be allocated from this pool for
+     *        the endpoint.
+     */
+
+    public void setCustomerOwnedIpv4Pool(String customerOwnedIpv4Pool) {
+        this.customerOwnedIpv4Pool = customerOwnedIpv4Pool;
+    }
+
+    /**
+     * <p>
+     * The ID of the customer-owned IPv4 pool for the endpoint. IP addresses will be allocated from this pool for the
+     * endpoint.
+     * </p>
+     * 
+     * @return The ID of the customer-owned IPv4 pool for the endpoint. IP addresses will be allocated from this pool
+     *         for the endpoint.
+     */
+
+    public String getCustomerOwnedIpv4Pool() {
+        return this.customerOwnedIpv4Pool;
+    }
+
+    /**
+     * <p>
+     * The ID of the customer-owned IPv4 pool for the endpoint. IP addresses will be allocated from this pool for the
+     * endpoint.
+     * </p>
+     * 
+     * @param customerOwnedIpv4Pool
+     *        The ID of the customer-owned IPv4 pool for the endpoint. IP addresses will be allocated from this pool for
+     *        the endpoint.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateEndpointRequest withCustomerOwnedIpv4Pool(String customerOwnedIpv4Pool) {
+        setCustomerOwnedIpv4Pool(customerOwnedIpv4Pool);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -181,7 +319,11 @@ public class CreateEndpointRequest extends com.amazonaws.AmazonWebServiceRequest
         if (getSubnetId() != null)
             sb.append("SubnetId: ").append(getSubnetId()).append(",");
         if (getSecurityGroupId() != null)
-            sb.append("SecurityGroupId: ").append(getSecurityGroupId());
+            sb.append("SecurityGroupId: ").append(getSecurityGroupId()).append(",");
+        if (getAccessType() != null)
+            sb.append("AccessType: ").append(getAccessType()).append(",");
+        if (getCustomerOwnedIpv4Pool() != null)
+            sb.append("CustomerOwnedIpv4Pool: ").append(getCustomerOwnedIpv4Pool());
         sb.append("}");
         return sb.toString();
     }
@@ -208,6 +350,14 @@ public class CreateEndpointRequest extends com.amazonaws.AmazonWebServiceRequest
             return false;
         if (other.getSecurityGroupId() != null && other.getSecurityGroupId().equals(this.getSecurityGroupId()) == false)
             return false;
+        if (other.getAccessType() == null ^ this.getAccessType() == null)
+            return false;
+        if (other.getAccessType() != null && other.getAccessType().equals(this.getAccessType()) == false)
+            return false;
+        if (other.getCustomerOwnedIpv4Pool() == null ^ this.getCustomerOwnedIpv4Pool() == null)
+            return false;
+        if (other.getCustomerOwnedIpv4Pool() != null && other.getCustomerOwnedIpv4Pool().equals(this.getCustomerOwnedIpv4Pool()) == false)
+            return false;
         return true;
     }
 
@@ -219,6 +369,8 @@ public class CreateEndpointRequest extends com.amazonaws.AmazonWebServiceRequest
         hashCode = prime * hashCode + ((getOutpostId() == null) ? 0 : getOutpostId().hashCode());
         hashCode = prime * hashCode + ((getSubnetId() == null) ? 0 : getSubnetId().hashCode());
         hashCode = prime * hashCode + ((getSecurityGroupId() == null) ? 0 : getSecurityGroupId().hashCode());
+        hashCode = prime * hashCode + ((getAccessType() == null) ? 0 : getAccessType().hashCode());
+        hashCode = prime * hashCode + ((getCustomerOwnedIpv4Pool() == null) ? 0 : getCustomerOwnedIpv4Pool().hashCode());
         return hashCode;
     }
 

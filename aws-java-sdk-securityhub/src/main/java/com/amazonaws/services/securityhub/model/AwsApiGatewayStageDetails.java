@@ -125,7 +125,7 @@ public class AwsApiGatewayStageDetails implements Serializable, Cloneable, Struc
     private AwsApiGatewayCanarySettings canarySettings;
     /**
      * <p>
-     * Indicates whether active tracing with AWS X-Ray is enabled for the stage.
+     * Indicates whether active tracing with X-Ray is enabled for the stage.
      * </p>
      */
     private Boolean tracingEnabled;
@@ -845,11 +845,11 @@ public class AwsApiGatewayStageDetails implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * Indicates whether active tracing with AWS X-Ray is enabled for the stage.
+     * Indicates whether active tracing with X-Ray is enabled for the stage.
      * </p>
      * 
      * @param tracingEnabled
-     *        Indicates whether active tracing with AWS X-Ray is enabled for the stage.
+     *        Indicates whether active tracing with X-Ray is enabled for the stage.
      */
 
     public void setTracingEnabled(Boolean tracingEnabled) {
@@ -858,10 +858,10 @@ public class AwsApiGatewayStageDetails implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * Indicates whether active tracing with AWS X-Ray is enabled for the stage.
+     * Indicates whether active tracing with X-Ray is enabled for the stage.
      * </p>
      * 
-     * @return Indicates whether active tracing with AWS X-Ray is enabled for the stage.
+     * @return Indicates whether active tracing with X-Ray is enabled for the stage.
      */
 
     public Boolean getTracingEnabled() {
@@ -870,11 +870,11 @@ public class AwsApiGatewayStageDetails implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * Indicates whether active tracing with AWS X-Ray is enabled for the stage.
+     * Indicates whether active tracing with X-Ray is enabled for the stage.
      * </p>
      * 
      * @param tracingEnabled
-     *        Indicates whether active tracing with AWS X-Ray is enabled for the stage.
+     *        Indicates whether active tracing with X-Ray is enabled for the stage.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -885,10 +885,10 @@ public class AwsApiGatewayStageDetails implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * Indicates whether active tracing with AWS X-Ray is enabled for the stage.
+     * Indicates whether active tracing with X-Ray is enabled for the stage.
      * </p>
      * 
-     * @return Indicates whether active tracing with AWS X-Ray is enabled for the stage.
+     * @return Indicates whether active tracing with X-Ray is enabled for the stage.
      */
 
     public Boolean isTracingEnabled() {

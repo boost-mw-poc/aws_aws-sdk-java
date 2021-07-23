@@ -35,6 +35,12 @@ public class AwsSecurityFindingMarshaller {
             .marshallLocationName("Id").build();
     private static final MarshallingInfo<String> PRODUCTARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ProductArn").build();
+    private static final MarshallingInfo<String> PRODUCTNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ProductName").build();
+    private static final MarshallingInfo<String> COMPANYNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CompanyName").build();
+    private static final MarshallingInfo<String> REGION_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Region").build();
     private static final MarshallingInfo<String> GENERATORID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("GeneratorId").build();
     private static final MarshallingInfo<String> AWSACCOUNTID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
@@ -121,6 +127,9 @@ public class AwsSecurityFindingMarshaller {
             protocolMarshaller.marshall(awsSecurityFinding.getSchemaVersion(), SCHEMAVERSION_BINDING);
             protocolMarshaller.marshall(awsSecurityFinding.getId(), ID_BINDING);
             protocolMarshaller.marshall(awsSecurityFinding.getProductArn(), PRODUCTARN_BINDING);
+            protocolMarshaller.marshall(awsSecurityFinding.getProductName(), PRODUCTNAME_BINDING);
+            protocolMarshaller.marshall(awsSecurityFinding.getCompanyName(), COMPANYNAME_BINDING);
+            protocolMarshaller.marshall(awsSecurityFinding.getRegion(), REGION_BINDING);
             protocolMarshaller.marshall(awsSecurityFinding.getGeneratorId(), GENERATORID_BINDING);
             protocolMarshaller.marshall(awsSecurityFinding.getAwsAccountId(), AWSACCOUNTID_BINDING);
             protocolMarshaller.marshall(awsSecurityFinding.getTypes(), TYPES_BINDING);

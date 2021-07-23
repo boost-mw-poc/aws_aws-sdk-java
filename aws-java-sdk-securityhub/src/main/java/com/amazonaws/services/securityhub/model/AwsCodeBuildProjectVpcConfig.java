@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Information about the VPC configuration that AWS CodeBuild accesses.
+ * Information about the VPC configuration that CodeBuild accesses.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/AwsCodeBuildProjectVpcConfig"
@@ -36,13 +36,13 @@ public class AwsCodeBuildProjectVpcConfig implements Serializable, Cloneable, St
     private String vpcId;
     /**
      * <p>
-     * A list of one or more subnet IDs in your Amazon VPC.
+     * A list of one or more subnet IDs in your VPC.
      * </p>
      */
     private java.util.List<String> subnets;
     /**
      * <p>
-     * A list of one or more security group IDs in your Amazon VPC.
+     * A list of one or more security group IDs in your VPC.
      * </p>
      */
     private java.util.List<String> securityGroupIds;
@@ -89,10 +89,10 @@ public class AwsCodeBuildProjectVpcConfig implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * A list of one or more subnet IDs in your Amazon VPC.
+     * A list of one or more subnet IDs in your VPC.
      * </p>
      * 
-     * @return A list of one or more subnet IDs in your Amazon VPC.
+     * @return A list of one or more subnet IDs in your VPC.
      */
 
     public java.util.List<String> getSubnets() {
@@ -101,11 +101,11 @@ public class AwsCodeBuildProjectVpcConfig implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * A list of one or more subnet IDs in your Amazon VPC.
+     * A list of one or more subnet IDs in your VPC.
      * </p>
      * 
      * @param subnets
-     *        A list of one or more subnet IDs in your Amazon VPC.
+     *        A list of one or more subnet IDs in your VPC.
      */
 
     public void setSubnets(java.util.Collection<String> subnets) {
@@ -119,7 +119,7 @@ public class AwsCodeBuildProjectVpcConfig implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * A list of one or more subnet IDs in your Amazon VPC.
+     * A list of one or more subnet IDs in your VPC.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -128,7 +128,7 @@ public class AwsCodeBuildProjectVpcConfig implements Serializable, Cloneable, St
      * </p>
      * 
      * @param subnets
-     *        A list of one or more subnet IDs in your Amazon VPC.
+     *        A list of one or more subnet IDs in your VPC.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -144,11 +144,11 @@ public class AwsCodeBuildProjectVpcConfig implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * A list of one or more subnet IDs in your Amazon VPC.
+     * A list of one or more subnet IDs in your VPC.
      * </p>
      * 
      * @param subnets
-     *        A list of one or more subnet IDs in your Amazon VPC.
+     *        A list of one or more subnet IDs in your VPC.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -159,10 +159,10 @@ public class AwsCodeBuildProjectVpcConfig implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * A list of one or more security group IDs in your Amazon VPC.
+     * A list of one or more security group IDs in your VPC.
      * </p>
      * 
-     * @return A list of one or more security group IDs in your Amazon VPC.
+     * @return A list of one or more security group IDs in your VPC.
      */
 
     public java.util.List<String> getSecurityGroupIds() {
@@ -171,11 +171,11 @@ public class AwsCodeBuildProjectVpcConfig implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * A list of one or more security group IDs in your Amazon VPC.
+     * A list of one or more security group IDs in your VPC.
      * </p>
      * 
      * @param securityGroupIds
-     *        A list of one or more security group IDs in your Amazon VPC.
+     *        A list of one or more security group IDs in your VPC.
      */
 
     public void setSecurityGroupIds(java.util.Collection<String> securityGroupIds) {
@@ -189,7 +189,7 @@ public class AwsCodeBuildProjectVpcConfig implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * A list of one or more security group IDs in your Amazon VPC.
+     * A list of one or more security group IDs in your VPC.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -198,7 +198,7 @@ public class AwsCodeBuildProjectVpcConfig implements Serializable, Cloneable, St
      * </p>
      * 
      * @param securityGroupIds
-     *        A list of one or more security group IDs in your Amazon VPC.
+     *        A list of one or more security group IDs in your VPC.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -214,11 +214,11 @@ public class AwsCodeBuildProjectVpcConfig implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * A list of one or more security group IDs in your Amazon VPC.
+     * A list of one or more security group IDs in your VPC.
      * </p>
      * 
      * @param securityGroupIds
-     *        A list of one or more security group IDs in your Amazon VPC.
+     *        A list of one or more security group IDs in your VPC.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

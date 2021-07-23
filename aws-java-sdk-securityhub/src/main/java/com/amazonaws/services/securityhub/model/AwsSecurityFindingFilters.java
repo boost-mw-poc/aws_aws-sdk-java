@@ -41,7 +41,7 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
     private java.util.List<StringFilter> productArn;
     /**
      * <p>
-     * The AWS account ID that a finding is generated in.
+     * The Amazon Web Services account ID that a finding is generated in.
      * </p>
      */
     private java.util.List<StringFilter> awsAccountId;
@@ -59,6 +59,12 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
      * </p>
      */
     private java.util.List<StringFilter> generatorId;
+    /**
+     * <p>
+     * The Region from which the finding was generated.
+     * </p>
+     */
+    private java.util.List<StringFilter> region;
     /**
      * <p>
      * A finding type in the format of <code>namespace/category/classifier</code> that classifies a finding.
@@ -169,11 +175,19 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
      * <p>
      * The name of the solution (product) that generates findings.
      * </p>
+     * <p>
+     * Note that this is a filter against the <code>aws/securityhub/ProductName</code> field in
+     * <code>ProductFields</code>. It is not a filter for the top-level <code>ProductName</code> field.
+     * </p>
      */
     private java.util.List<StringFilter> productName;
     /**
      * <p>
      * The name of the findings provider (company) that owns the solution (product) that generates findings.
+     * </p>
+     * <p>
+     * Note that this is a filter against the <code>aws/securityhub/CompanyName</code> field in
+     * <code>ProductFields</code>. It is not a filter for the top-level <code>CompanyName</code> field.
      * </p>
      */
     private java.util.List<StringFilter> companyName;
@@ -360,19 +374,19 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
     private java.util.List<StringFilter> resourceId;
     /**
      * <p>
-     * The canonical AWS partition name that the Region is assigned to.
+     * The canonical Amazon Web Services partition name that the Region is assigned to.
      * </p>
      */
     private java.util.List<StringFilter> resourcePartition;
     /**
      * <p>
-     * The canonical AWS external Region name where this resource is located.
+     * The canonical Amazon Web Services external Region name where this resource is located.
      * </p>
      */
     private java.util.List<StringFilter> resourceRegion;
     /**
      * <p>
-     * A list of AWS tags associated with a resource at the time the finding was processed.
+     * A list of Amazon Web Services tags associated with a resource at the time the finding was processed.
      * </p>
      */
     private java.util.List<MapFilter> resourceTags;
@@ -447,7 +461,14 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
      * The user associated with the IAM access key related to a finding.
      * </p>
      */
+    @Deprecated
     private java.util.List<StringFilter> resourceAwsIamAccessKeyUserName;
+    /**
+     * <p>
+     * The name of the principal that is associated with an IAM access key.
+     * </p>
+     */
+    private java.util.List<StringFilter> resourceAwsIamAccessKeyPrincipalName;
     /**
      * <p>
      * The status of the IAM access key related to a finding.
@@ -460,6 +481,12 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
      * </p>
      */
     private java.util.List<DateFilter> resourceAwsIamAccessKeyCreatedAt;
+    /**
+     * <p>
+     * The name of an IAM user.
+     * </p>
+     */
+    private java.util.List<StringFilter> resourceAwsIamUserUserName;
     /**
      * <p>
      * The name of the container related to a finding.
@@ -493,7 +520,7 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
     /**
      * <p>
      * Exclusive to findings that are generated as the result of a check run against a specific rule in a supported
-     * standard, such as CIS AWS Foundations. Contains security standard-related finding details.
+     * standard, such as CIS Amazon Web Services Foundations. Contains security standard-related finding details.
      * </p>
      */
     private java.util.List<StringFilter> complianceStatus;
@@ -743,10 +770,10 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The AWS account ID that a finding is generated in.
+     * The Amazon Web Services account ID that a finding is generated in.
      * </p>
      * 
-     * @return The AWS account ID that a finding is generated in.
+     * @return The Amazon Web Services account ID that a finding is generated in.
      */
 
     public java.util.List<StringFilter> getAwsAccountId() {
@@ -755,11 +782,11 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The AWS account ID that a finding is generated in.
+     * The Amazon Web Services account ID that a finding is generated in.
      * </p>
      * 
      * @param awsAccountId
-     *        The AWS account ID that a finding is generated in.
+     *        The Amazon Web Services account ID that a finding is generated in.
      */
 
     public void setAwsAccountId(java.util.Collection<StringFilter> awsAccountId) {
@@ -773,7 +800,7 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The AWS account ID that a finding is generated in.
+     * The Amazon Web Services account ID that a finding is generated in.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -782,7 +809,7 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
      * </p>
      * 
      * @param awsAccountId
-     *        The AWS account ID that a finding is generated in.
+     *        The Amazon Web Services account ID that a finding is generated in.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -798,11 +825,11 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The AWS account ID that a finding is generated in.
+     * The Amazon Web Services account ID that a finding is generated in.
      * </p>
      * 
      * @param awsAccountId
-     *        The AWS account ID that a finding is generated in.
+     *        The Amazon Web Services account ID that a finding is generated in.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -964,6 +991,76 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
 
     public AwsSecurityFindingFilters withGeneratorId(java.util.Collection<StringFilter> generatorId) {
         setGeneratorId(generatorId);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The Region from which the finding was generated.
+     * </p>
+     * 
+     * @return The Region from which the finding was generated.
+     */
+
+    public java.util.List<StringFilter> getRegion() {
+        return region;
+    }
+
+    /**
+     * <p>
+     * The Region from which the finding was generated.
+     * </p>
+     * 
+     * @param region
+     *        The Region from which the finding was generated.
+     */
+
+    public void setRegion(java.util.Collection<StringFilter> region) {
+        if (region == null) {
+            this.region = null;
+            return;
+        }
+
+        this.region = new java.util.ArrayList<StringFilter>(region);
+    }
+
+    /**
+     * <p>
+     * The Region from which the finding was generated.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setRegion(java.util.Collection)} or {@link #withRegion(java.util.Collection)} if you want to override the
+     * existing values.
+     * </p>
+     * 
+     * @param region
+     *        The Region from which the finding was generated.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AwsSecurityFindingFilters withRegion(StringFilter... region) {
+        if (this.region == null) {
+            setRegion(new java.util.ArrayList<StringFilter>(region.length));
+        }
+        for (StringFilter ele : region) {
+            this.region.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The Region from which the finding was generated.
+     * </p>
+     * 
+     * @param region
+     *        The Region from which the finding was generated.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AwsSecurityFindingFilters withRegion(java.util.Collection<StringFilter> region) {
+        setRegion(region);
         return this;
     }
 
@@ -2125,8 +2222,15 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
      * <p>
      * The name of the solution (product) that generates findings.
      * </p>
+     * <p>
+     * Note that this is a filter against the <code>aws/securityhub/ProductName</code> field in
+     * <code>ProductFields</code>. It is not a filter for the top-level <code>ProductName</code> field.
+     * </p>
      * 
-     * @return The name of the solution (product) that generates findings.
+     * @return The name of the solution (product) that generates findings.</p>
+     *         <p>
+     *         Note that this is a filter against the <code>aws/securityhub/ProductName</code> field in
+     *         <code>ProductFields</code>. It is not a filter for the top-level <code>ProductName</code> field.
      */
 
     public java.util.List<StringFilter> getProductName() {
@@ -2137,9 +2241,16 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
      * <p>
      * The name of the solution (product) that generates findings.
      * </p>
+     * <p>
+     * Note that this is a filter against the <code>aws/securityhub/ProductName</code> field in
+     * <code>ProductFields</code>. It is not a filter for the top-level <code>ProductName</code> field.
+     * </p>
      * 
      * @param productName
-     *        The name of the solution (product) that generates findings.
+     *        The name of the solution (product) that generates findings.</p>
+     *        <p>
+     *        Note that this is a filter against the <code>aws/securityhub/ProductName</code> field in
+     *        <code>ProductFields</code>. It is not a filter for the top-level <code>ProductName</code> field.
      */
 
     public void setProductName(java.util.Collection<StringFilter> productName) {
@@ -2156,13 +2267,20 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
      * The name of the solution (product) that generates findings.
      * </p>
      * <p>
+     * Note that this is a filter against the <code>aws/securityhub/ProductName</code> field in
+     * <code>ProductFields</code>. It is not a filter for the top-level <code>ProductName</code> field.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setProductName(java.util.Collection)} or {@link #withProductName(java.util.Collection)} if you want to
      * override the existing values.
      * </p>
      * 
      * @param productName
-     *        The name of the solution (product) that generates findings.
+     *        The name of the solution (product) that generates findings.</p>
+     *        <p>
+     *        Note that this is a filter against the <code>aws/securityhub/ProductName</code> field in
+     *        <code>ProductFields</code>. It is not a filter for the top-level <code>ProductName</code> field.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2180,9 +2298,16 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
      * <p>
      * The name of the solution (product) that generates findings.
      * </p>
+     * <p>
+     * Note that this is a filter against the <code>aws/securityhub/ProductName</code> field in
+     * <code>ProductFields</code>. It is not a filter for the top-level <code>ProductName</code> field.
+     * </p>
      * 
      * @param productName
-     *        The name of the solution (product) that generates findings.
+     *        The name of the solution (product) that generates findings.</p>
+     *        <p>
+     *        Note that this is a filter against the <code>aws/securityhub/ProductName</code> field in
+     *        <code>ProductFields</code>. It is not a filter for the top-level <code>ProductName</code> field.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2195,8 +2320,15 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
      * <p>
      * The name of the findings provider (company) that owns the solution (product) that generates findings.
      * </p>
+     * <p>
+     * Note that this is a filter against the <code>aws/securityhub/CompanyName</code> field in
+     * <code>ProductFields</code>. It is not a filter for the top-level <code>CompanyName</code> field.
+     * </p>
      * 
-     * @return The name of the findings provider (company) that owns the solution (product) that generates findings.
+     * @return The name of the findings provider (company) that owns the solution (product) that generates findings.</p>
+     *         <p>
+     *         Note that this is a filter against the <code>aws/securityhub/CompanyName</code> field in
+     *         <code>ProductFields</code>. It is not a filter for the top-level <code>CompanyName</code> field.
      */
 
     public java.util.List<StringFilter> getCompanyName() {
@@ -2207,9 +2339,16 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
      * <p>
      * The name of the findings provider (company) that owns the solution (product) that generates findings.
      * </p>
+     * <p>
+     * Note that this is a filter against the <code>aws/securityhub/CompanyName</code> field in
+     * <code>ProductFields</code>. It is not a filter for the top-level <code>CompanyName</code> field.
+     * </p>
      * 
      * @param companyName
-     *        The name of the findings provider (company) that owns the solution (product) that generates findings.
+     *        The name of the findings provider (company) that owns the solution (product) that generates findings.</p>
+     *        <p>
+     *        Note that this is a filter against the <code>aws/securityhub/CompanyName</code> field in
+     *        <code>ProductFields</code>. It is not a filter for the top-level <code>CompanyName</code> field.
      */
 
     public void setCompanyName(java.util.Collection<StringFilter> companyName) {
@@ -2226,13 +2365,20 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
      * The name of the findings provider (company) that owns the solution (product) that generates findings.
      * </p>
      * <p>
+     * Note that this is a filter against the <code>aws/securityhub/CompanyName</code> field in
+     * <code>ProductFields</code>. It is not a filter for the top-level <code>CompanyName</code> field.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setCompanyName(java.util.Collection)} or {@link #withCompanyName(java.util.Collection)} if you want to
      * override the existing values.
      * </p>
      * 
      * @param companyName
-     *        The name of the findings provider (company) that owns the solution (product) that generates findings.
+     *        The name of the findings provider (company) that owns the solution (product) that generates findings.</p>
+     *        <p>
+     *        Note that this is a filter against the <code>aws/securityhub/CompanyName</code> field in
+     *        <code>ProductFields</code>. It is not a filter for the top-level <code>CompanyName</code> field.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2250,9 +2396,16 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
      * <p>
      * The name of the findings provider (company) that owns the solution (product) that generates findings.
      * </p>
+     * <p>
+     * Note that this is a filter against the <code>aws/securityhub/CompanyName</code> field in
+     * <code>ProductFields</code>. It is not a filter for the top-level <code>CompanyName</code> field.
+     * </p>
      * 
      * @param companyName
-     *        The name of the findings provider (company) that owns the solution (product) that generates findings.
+     *        The name of the findings provider (company) that owns the solution (product) that generates findings.</p>
+     *        <p>
+     *        Note that this is a filter against the <code>aws/securityhub/CompanyName</code> field in
+     *        <code>ProductFields</code>. It is not a filter for the top-level <code>CompanyName</code> field.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -4372,10 +4525,10 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The canonical AWS partition name that the Region is assigned to.
+     * The canonical Amazon Web Services partition name that the Region is assigned to.
      * </p>
      * 
-     * @return The canonical AWS partition name that the Region is assigned to.
+     * @return The canonical Amazon Web Services partition name that the Region is assigned to.
      */
 
     public java.util.List<StringFilter> getResourcePartition() {
@@ -4384,11 +4537,11 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The canonical AWS partition name that the Region is assigned to.
+     * The canonical Amazon Web Services partition name that the Region is assigned to.
      * </p>
      * 
      * @param resourcePartition
-     *        The canonical AWS partition name that the Region is assigned to.
+     *        The canonical Amazon Web Services partition name that the Region is assigned to.
      */
 
     public void setResourcePartition(java.util.Collection<StringFilter> resourcePartition) {
@@ -4402,7 +4555,7 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The canonical AWS partition name that the Region is assigned to.
+     * The canonical Amazon Web Services partition name that the Region is assigned to.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -4411,7 +4564,7 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
      * </p>
      * 
      * @param resourcePartition
-     *        The canonical AWS partition name that the Region is assigned to.
+     *        The canonical Amazon Web Services partition name that the Region is assigned to.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -4427,11 +4580,11 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The canonical AWS partition name that the Region is assigned to.
+     * The canonical Amazon Web Services partition name that the Region is assigned to.
      * </p>
      * 
      * @param resourcePartition
-     *        The canonical AWS partition name that the Region is assigned to.
+     *        The canonical Amazon Web Services partition name that the Region is assigned to.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -4442,10 +4595,10 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The canonical AWS external Region name where this resource is located.
+     * The canonical Amazon Web Services external Region name where this resource is located.
      * </p>
      * 
-     * @return The canonical AWS external Region name where this resource is located.
+     * @return The canonical Amazon Web Services external Region name where this resource is located.
      */
 
     public java.util.List<StringFilter> getResourceRegion() {
@@ -4454,11 +4607,11 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The canonical AWS external Region name where this resource is located.
+     * The canonical Amazon Web Services external Region name where this resource is located.
      * </p>
      * 
      * @param resourceRegion
-     *        The canonical AWS external Region name where this resource is located.
+     *        The canonical Amazon Web Services external Region name where this resource is located.
      */
 
     public void setResourceRegion(java.util.Collection<StringFilter> resourceRegion) {
@@ -4472,7 +4625,7 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The canonical AWS external Region name where this resource is located.
+     * The canonical Amazon Web Services external Region name where this resource is located.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -4481,7 +4634,7 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
      * </p>
      * 
      * @param resourceRegion
-     *        The canonical AWS external Region name where this resource is located.
+     *        The canonical Amazon Web Services external Region name where this resource is located.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -4497,11 +4650,11 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The canonical AWS external Region name where this resource is located.
+     * The canonical Amazon Web Services external Region name where this resource is located.
      * </p>
      * 
      * @param resourceRegion
-     *        The canonical AWS external Region name where this resource is located.
+     *        The canonical Amazon Web Services external Region name where this resource is located.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -4512,10 +4665,10 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * A list of AWS tags associated with a resource at the time the finding was processed.
+     * A list of Amazon Web Services tags associated with a resource at the time the finding was processed.
      * </p>
      * 
-     * @return A list of AWS tags associated with a resource at the time the finding was processed.
+     * @return A list of Amazon Web Services tags associated with a resource at the time the finding was processed.
      */
 
     public java.util.List<MapFilter> getResourceTags() {
@@ -4524,11 +4677,11 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * A list of AWS tags associated with a resource at the time the finding was processed.
+     * A list of Amazon Web Services tags associated with a resource at the time the finding was processed.
      * </p>
      * 
      * @param resourceTags
-     *        A list of AWS tags associated with a resource at the time the finding was processed.
+     *        A list of Amazon Web Services tags associated with a resource at the time the finding was processed.
      */
 
     public void setResourceTags(java.util.Collection<MapFilter> resourceTags) {
@@ -4542,7 +4695,7 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * A list of AWS tags associated with a resource at the time the finding was processed.
+     * A list of Amazon Web Services tags associated with a resource at the time the finding was processed.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -4551,7 +4704,7 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
      * </p>
      * 
      * @param resourceTags
-     *        A list of AWS tags associated with a resource at the time the finding was processed.
+     *        A list of Amazon Web Services tags associated with a resource at the time the finding was processed.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -4567,11 +4720,11 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * A list of AWS tags associated with a resource at the time the finding was processed.
+     * A list of Amazon Web Services tags associated with a resource at the time the finding was processed.
      * </p>
      * 
      * @param resourceTags
-     *        A list of AWS tags associated with a resource at the time the finding was processed.
+     *        A list of Amazon Web Services tags associated with a resource at the time the finding was processed.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -5361,7 +5514,7 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
      * 
      * @return The user associated with the IAM access key related to a finding.
      */
-
+    @Deprecated
     public java.util.List<StringFilter> getResourceAwsIamAccessKeyUserName() {
         return resourceAwsIamAccessKeyUserName;
     }
@@ -5374,7 +5527,7 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
      * @param resourceAwsIamAccessKeyUserName
      *        The user associated with the IAM access key related to a finding.
      */
-
+    @Deprecated
     public void setResourceAwsIamAccessKeyUserName(java.util.Collection<StringFilter> resourceAwsIamAccessKeyUserName) {
         if (resourceAwsIamAccessKeyUserName == null) {
             this.resourceAwsIamAccessKeyUserName = null;
@@ -5398,7 +5551,7 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
      *        The user associated with the IAM access key related to a finding.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
-
+    @Deprecated
     public AwsSecurityFindingFilters withResourceAwsIamAccessKeyUserName(StringFilter... resourceAwsIamAccessKeyUserName) {
         if (this.resourceAwsIamAccessKeyUserName == null) {
             setResourceAwsIamAccessKeyUserName(new java.util.ArrayList<StringFilter>(resourceAwsIamAccessKeyUserName.length));
@@ -5418,9 +5571,80 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
      *        The user associated with the IAM access key related to a finding.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
-
+    @Deprecated
     public AwsSecurityFindingFilters withResourceAwsIamAccessKeyUserName(java.util.Collection<StringFilter> resourceAwsIamAccessKeyUserName) {
         setResourceAwsIamAccessKeyUserName(resourceAwsIamAccessKeyUserName);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The name of the principal that is associated with an IAM access key.
+     * </p>
+     * 
+     * @return The name of the principal that is associated with an IAM access key.
+     */
+
+    public java.util.List<StringFilter> getResourceAwsIamAccessKeyPrincipalName() {
+        return resourceAwsIamAccessKeyPrincipalName;
+    }
+
+    /**
+     * <p>
+     * The name of the principal that is associated with an IAM access key.
+     * </p>
+     * 
+     * @param resourceAwsIamAccessKeyPrincipalName
+     *        The name of the principal that is associated with an IAM access key.
+     */
+
+    public void setResourceAwsIamAccessKeyPrincipalName(java.util.Collection<StringFilter> resourceAwsIamAccessKeyPrincipalName) {
+        if (resourceAwsIamAccessKeyPrincipalName == null) {
+            this.resourceAwsIamAccessKeyPrincipalName = null;
+            return;
+        }
+
+        this.resourceAwsIamAccessKeyPrincipalName = new java.util.ArrayList<StringFilter>(resourceAwsIamAccessKeyPrincipalName);
+    }
+
+    /**
+     * <p>
+     * The name of the principal that is associated with an IAM access key.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setResourceAwsIamAccessKeyPrincipalName(java.util.Collection)} or
+     * {@link #withResourceAwsIamAccessKeyPrincipalName(java.util.Collection)} if you want to override the existing
+     * values.
+     * </p>
+     * 
+     * @param resourceAwsIamAccessKeyPrincipalName
+     *        The name of the principal that is associated with an IAM access key.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AwsSecurityFindingFilters withResourceAwsIamAccessKeyPrincipalName(StringFilter... resourceAwsIamAccessKeyPrincipalName) {
+        if (this.resourceAwsIamAccessKeyPrincipalName == null) {
+            setResourceAwsIamAccessKeyPrincipalName(new java.util.ArrayList<StringFilter>(resourceAwsIamAccessKeyPrincipalName.length));
+        }
+        for (StringFilter ele : resourceAwsIamAccessKeyPrincipalName) {
+            this.resourceAwsIamAccessKeyPrincipalName.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The name of the principal that is associated with an IAM access key.
+     * </p>
+     * 
+     * @param resourceAwsIamAccessKeyPrincipalName
+     *        The name of the principal that is associated with an IAM access key.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AwsSecurityFindingFilters withResourceAwsIamAccessKeyPrincipalName(java.util.Collection<StringFilter> resourceAwsIamAccessKeyPrincipalName) {
+        setResourceAwsIamAccessKeyPrincipalName(resourceAwsIamAccessKeyPrincipalName);
         return this;
     }
 
@@ -5561,6 +5785,76 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
 
     public AwsSecurityFindingFilters withResourceAwsIamAccessKeyCreatedAt(java.util.Collection<DateFilter> resourceAwsIamAccessKeyCreatedAt) {
         setResourceAwsIamAccessKeyCreatedAt(resourceAwsIamAccessKeyCreatedAt);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The name of an IAM user.
+     * </p>
+     * 
+     * @return The name of an IAM user.
+     */
+
+    public java.util.List<StringFilter> getResourceAwsIamUserUserName() {
+        return resourceAwsIamUserUserName;
+    }
+
+    /**
+     * <p>
+     * The name of an IAM user.
+     * </p>
+     * 
+     * @param resourceAwsIamUserUserName
+     *        The name of an IAM user.
+     */
+
+    public void setResourceAwsIamUserUserName(java.util.Collection<StringFilter> resourceAwsIamUserUserName) {
+        if (resourceAwsIamUserUserName == null) {
+            this.resourceAwsIamUserUserName = null;
+            return;
+        }
+
+        this.resourceAwsIamUserUserName = new java.util.ArrayList<StringFilter>(resourceAwsIamUserUserName);
+    }
+
+    /**
+     * <p>
+     * The name of an IAM user.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setResourceAwsIamUserUserName(java.util.Collection)} or
+     * {@link #withResourceAwsIamUserUserName(java.util.Collection)} if you want to override the existing values.
+     * </p>
+     * 
+     * @param resourceAwsIamUserUserName
+     *        The name of an IAM user.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AwsSecurityFindingFilters withResourceAwsIamUserUserName(StringFilter... resourceAwsIamUserUserName) {
+        if (this.resourceAwsIamUserUserName == null) {
+            setResourceAwsIamUserUserName(new java.util.ArrayList<StringFilter>(resourceAwsIamUserUserName.length));
+        }
+        for (StringFilter ele : resourceAwsIamUserUserName) {
+            this.resourceAwsIamUserUserName.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The name of an IAM user.
+     * </p>
+     * 
+     * @param resourceAwsIamUserUserName
+     *        The name of an IAM user.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AwsSecurityFindingFilters withResourceAwsIamUserUserName(java.util.Collection<StringFilter> resourceAwsIamUserUserName) {
+        setResourceAwsIamUserUserName(resourceAwsIamUserUserName);
         return this;
     }
 
@@ -5917,11 +6211,12 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
     /**
      * <p>
      * Exclusive to findings that are generated as the result of a check run against a specific rule in a supported
-     * standard, such as CIS AWS Foundations. Contains security standard-related finding details.
+     * standard, such as CIS Amazon Web Services Foundations. Contains security standard-related finding details.
      * </p>
      * 
      * @return Exclusive to findings that are generated as the result of a check run against a specific rule in a
-     *         supported standard, such as CIS AWS Foundations. Contains security standard-related finding details.
+     *         supported standard, such as CIS Amazon Web Services Foundations. Contains security standard-related
+     *         finding details.
      */
 
     public java.util.List<StringFilter> getComplianceStatus() {
@@ -5931,12 +6226,13 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
     /**
      * <p>
      * Exclusive to findings that are generated as the result of a check run against a specific rule in a supported
-     * standard, such as CIS AWS Foundations. Contains security standard-related finding details.
+     * standard, such as CIS Amazon Web Services Foundations. Contains security standard-related finding details.
      * </p>
      * 
      * @param complianceStatus
      *        Exclusive to findings that are generated as the result of a check run against a specific rule in a
-     *        supported standard, such as CIS AWS Foundations. Contains security standard-related finding details.
+     *        supported standard, such as CIS Amazon Web Services Foundations. Contains security standard-related
+     *        finding details.
      */
 
     public void setComplianceStatus(java.util.Collection<StringFilter> complianceStatus) {
@@ -5951,7 +6247,7 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
     /**
      * <p>
      * Exclusive to findings that are generated as the result of a check run against a specific rule in a supported
-     * standard, such as CIS AWS Foundations. Contains security standard-related finding details.
+     * standard, such as CIS Amazon Web Services Foundations. Contains security standard-related finding details.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -5961,7 +6257,8 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
      * 
      * @param complianceStatus
      *        Exclusive to findings that are generated as the result of a check run against a specific rule in a
-     *        supported standard, such as CIS AWS Foundations. Contains security standard-related finding details.
+     *        supported standard, such as CIS Amazon Web Services Foundations. Contains security standard-related
+     *        finding details.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -5978,12 +6275,13 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
     /**
      * <p>
      * Exclusive to findings that are generated as the result of a check run against a specific rule in a supported
-     * standard, such as CIS AWS Foundations. Contains security standard-related finding details.
+     * standard, such as CIS Amazon Web Services Foundations. Contains security standard-related finding details.
      * </p>
      * 
      * @param complianceStatus
      *        Exclusive to findings that are generated as the result of a check run against a specific rule in a
-     *        supported standard, such as CIS AWS Foundations. Contains security standard-related finding details.
+     *        supported standard, such as CIS Amazon Web Services Foundations. Contains security standard-related
+     *        finding details.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -7655,6 +7953,8 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
             sb.append("Id: ").append(getId()).append(",");
         if (getGeneratorId() != null)
             sb.append("GeneratorId: ").append(getGeneratorId()).append(",");
+        if (getRegion() != null)
+            sb.append("Region: ").append(getRegion()).append(",");
         if (getType() != null)
             sb.append("Type: ").append(getType()).append(",");
         if (getFirstObservedAt() != null)
@@ -7779,10 +8079,14 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
             sb.append("ResourceAwsS3BucketOwnerName: ").append(getResourceAwsS3BucketOwnerName()).append(",");
         if (getResourceAwsIamAccessKeyUserName() != null)
             sb.append("ResourceAwsIamAccessKeyUserName: ").append(getResourceAwsIamAccessKeyUserName()).append(",");
+        if (getResourceAwsIamAccessKeyPrincipalName() != null)
+            sb.append("ResourceAwsIamAccessKeyPrincipalName: ").append(getResourceAwsIamAccessKeyPrincipalName()).append(",");
         if (getResourceAwsIamAccessKeyStatus() != null)
             sb.append("ResourceAwsIamAccessKeyStatus: ").append(getResourceAwsIamAccessKeyStatus()).append(",");
         if (getResourceAwsIamAccessKeyCreatedAt() != null)
             sb.append("ResourceAwsIamAccessKeyCreatedAt: ").append(getResourceAwsIamAccessKeyCreatedAt()).append(",");
+        if (getResourceAwsIamUserUserName() != null)
+            sb.append("ResourceAwsIamUserUserName: ").append(getResourceAwsIamUserUserName()).append(",");
         if (getResourceContainerName() != null)
             sb.append("ResourceContainerName: ").append(getResourceContainerName()).append(",");
         if (getResourceContainerImageId() != null)
@@ -7858,6 +8162,10 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
         if (other.getGeneratorId() == null ^ this.getGeneratorId() == null)
             return false;
         if (other.getGeneratorId() != null && other.getGeneratorId().equals(this.getGeneratorId()) == false)
+            return false;
+        if (other.getRegion() == null ^ this.getRegion() == null)
+            return false;
+        if (other.getRegion() != null && other.getRegion().equals(this.getRegion()) == false)
             return false;
         if (other.getType() == null ^ this.getType() == null)
             return false;
@@ -8117,6 +8425,11 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
         if (other.getResourceAwsIamAccessKeyUserName() != null
                 && other.getResourceAwsIamAccessKeyUserName().equals(this.getResourceAwsIamAccessKeyUserName()) == false)
             return false;
+        if (other.getResourceAwsIamAccessKeyPrincipalName() == null ^ this.getResourceAwsIamAccessKeyPrincipalName() == null)
+            return false;
+        if (other.getResourceAwsIamAccessKeyPrincipalName() != null
+                && other.getResourceAwsIamAccessKeyPrincipalName().equals(this.getResourceAwsIamAccessKeyPrincipalName()) == false)
+            return false;
         if (other.getResourceAwsIamAccessKeyStatus() == null ^ this.getResourceAwsIamAccessKeyStatus() == null)
             return false;
         if (other.getResourceAwsIamAccessKeyStatus() != null
@@ -8126,6 +8439,10 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
             return false;
         if (other.getResourceAwsIamAccessKeyCreatedAt() != null
                 && other.getResourceAwsIamAccessKeyCreatedAt().equals(this.getResourceAwsIamAccessKeyCreatedAt()) == false)
+            return false;
+        if (other.getResourceAwsIamUserUserName() == null ^ this.getResourceAwsIamUserUserName() == null)
+            return false;
+        if (other.getResourceAwsIamUserUserName() != null && other.getResourceAwsIamUserUserName().equals(this.getResourceAwsIamUserUserName()) == false)
             return false;
         if (other.getResourceContainerName() == null ^ this.getResourceContainerName() == null)
             return false;
@@ -8237,6 +8554,7 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
         hashCode = prime * hashCode + ((getAwsAccountId() == null) ? 0 : getAwsAccountId().hashCode());
         hashCode = prime * hashCode + ((getId() == null) ? 0 : getId().hashCode());
         hashCode = prime * hashCode + ((getGeneratorId() == null) ? 0 : getGeneratorId().hashCode());
+        hashCode = prime * hashCode + ((getRegion() == null) ? 0 : getRegion().hashCode());
         hashCode = prime * hashCode + ((getType() == null) ? 0 : getType().hashCode());
         hashCode = prime * hashCode + ((getFirstObservedAt() == null) ? 0 : getFirstObservedAt().hashCode());
         hashCode = prime * hashCode + ((getLastObservedAt() == null) ? 0 : getLastObservedAt().hashCode());
@@ -8300,8 +8618,10 @@ public class AwsSecurityFindingFilters implements Serializable, Cloneable, Struc
         hashCode = prime * hashCode + ((getResourceAwsS3BucketOwnerId() == null) ? 0 : getResourceAwsS3BucketOwnerId().hashCode());
         hashCode = prime * hashCode + ((getResourceAwsS3BucketOwnerName() == null) ? 0 : getResourceAwsS3BucketOwnerName().hashCode());
         hashCode = prime * hashCode + ((getResourceAwsIamAccessKeyUserName() == null) ? 0 : getResourceAwsIamAccessKeyUserName().hashCode());
+        hashCode = prime * hashCode + ((getResourceAwsIamAccessKeyPrincipalName() == null) ? 0 : getResourceAwsIamAccessKeyPrincipalName().hashCode());
         hashCode = prime * hashCode + ((getResourceAwsIamAccessKeyStatus() == null) ? 0 : getResourceAwsIamAccessKeyStatus().hashCode());
         hashCode = prime * hashCode + ((getResourceAwsIamAccessKeyCreatedAt() == null) ? 0 : getResourceAwsIamAccessKeyCreatedAt().hashCode());
+        hashCode = prime * hashCode + ((getResourceAwsIamUserUserName() == null) ? 0 : getResourceAwsIamUserUserName().hashCode());
         hashCode = prime * hashCode + ((getResourceContainerName() == null) ? 0 : getResourceContainerName().hashCode());
         hashCode = prime * hashCode + ((getResourceContainerImageId() == null) ? 0 : getResourceContainerImageId().hashCode());
         hashCode = prime * hashCode + ((getResourceContainerImageName() == null) ? 0 : getResourceContainerImageName().hashCode());

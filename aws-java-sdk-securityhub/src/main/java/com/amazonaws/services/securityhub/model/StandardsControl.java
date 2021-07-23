@@ -83,8 +83,8 @@ public class StandardsControl implements Serializable, Cloneable, StructuredPojo
      * The severity of findings generated from this security standard control.
      * </p>
      * <p>
-     * The finding severity is based on an assessment of how easy it would be to compromise AWS resources if the issue
-     * is detected.
+     * The finding severity is based on an assessment of how easy it would be to compromise Amazon Web Services
+     * resources if the issue is detected.
      * </p>
      */
     private String severityRating;
@@ -453,15 +453,15 @@ public class StandardsControl implements Serializable, Cloneable, StructuredPojo
      * The severity of findings generated from this security standard control.
      * </p>
      * <p>
-     * The finding severity is based on an assessment of how easy it would be to compromise AWS resources if the issue
-     * is detected.
+     * The finding severity is based on an assessment of how easy it would be to compromise Amazon Web Services
+     * resources if the issue is detected.
      * </p>
      * 
      * @param severityRating
      *        The severity of findings generated from this security standard control.</p>
      *        <p>
-     *        The finding severity is based on an assessment of how easy it would be to compromise AWS resources if the
-     *        issue is detected.
+     *        The finding severity is based on an assessment of how easy it would be to compromise Amazon Web Services
+     *        resources if the issue is detected.
      * @see SeverityRating
      */
 
@@ -474,14 +474,14 @@ public class StandardsControl implements Serializable, Cloneable, StructuredPojo
      * The severity of findings generated from this security standard control.
      * </p>
      * <p>
-     * The finding severity is based on an assessment of how easy it would be to compromise AWS resources if the issue
-     * is detected.
+     * The finding severity is based on an assessment of how easy it would be to compromise Amazon Web Services
+     * resources if the issue is detected.
      * </p>
      * 
      * @return The severity of findings generated from this security standard control.</p>
      *         <p>
-     *         The finding severity is based on an assessment of how easy it would be to compromise AWS resources if the
-     *         issue is detected.
+     *         The finding severity is based on an assessment of how easy it would be to compromise Amazon Web Services
+     *         resources if the issue is detected.
      * @see SeverityRating
      */
 
@@ -494,15 +494,15 @@ public class StandardsControl implements Serializable, Cloneable, StructuredPojo
      * The severity of findings generated from this security standard control.
      * </p>
      * <p>
-     * The finding severity is based on an assessment of how easy it would be to compromise AWS resources if the issue
-     * is detected.
+     * The finding severity is based on an assessment of how easy it would be to compromise Amazon Web Services
+     * resources if the issue is detected.
      * </p>
      * 
      * @param severityRating
      *        The severity of findings generated from this security standard control.</p>
      *        <p>
-     *        The finding severity is based on an assessment of how easy it would be to compromise AWS resources if the
-     *        issue is detected.
+     *        The finding severity is based on an assessment of how easy it would be to compromise Amazon Web Services
+     *        resources if the issue is detected.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SeverityRating
      */
@@ -517,15 +517,15 @@ public class StandardsControl implements Serializable, Cloneable, StructuredPojo
      * The severity of findings generated from this security standard control.
      * </p>
      * <p>
-     * The finding severity is based on an assessment of how easy it would be to compromise AWS resources if the issue
-     * is detected.
+     * The finding severity is based on an assessment of how easy it would be to compromise Amazon Web Services
+     * resources if the issue is detected.
      * </p>
      * 
      * @param severityRating
      *        The severity of findings generated from this security standard control.</p>
      *        <p>
-     *        The finding severity is based on an assessment of how easy it would be to compromise AWS resources if the
-     *        issue is detected.
+     *        The finding severity is based on an assessment of how easy it would be to compromise Amazon Web Services
+     *        resources if the issue is detected.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SeverityRating
      */

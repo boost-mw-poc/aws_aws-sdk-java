@@ -36,7 +36,7 @@ public class AwsDynamoDbTableReplica implements Serializable, Cloneable, Structu
     private java.util.List<AwsDynamoDbTableReplicaGlobalSecondaryIndex> globalSecondaryIndexes;
     /**
      * <p>
-     * The identifier of the AWS KMS customer master key (CMK) that will be used for AWS KMS encryption for the replica.
+     * The identifier of the KMS customer master key (CMK) that will be used for KMS encryption for the replica.
      * </p>
      */
     private String kmsMasterKeyId;
@@ -137,12 +137,11 @@ public class AwsDynamoDbTableReplica implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The identifier of the AWS KMS customer master key (CMK) that will be used for AWS KMS encryption for the replica.
+     * The identifier of the KMS customer master key (CMK) that will be used for KMS encryption for the replica.
      * </p>
      * 
      * @param kmsMasterKeyId
-     *        The identifier of the AWS KMS customer master key (CMK) that will be used for AWS KMS encryption for the
-     *        replica.
+     *        The identifier of the KMS customer master key (CMK) that will be used for KMS encryption for the replica.
      */
 
     public void setKmsMasterKeyId(String kmsMasterKeyId) {
@@ -151,11 +150,10 @@ public class AwsDynamoDbTableReplica implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The identifier of the AWS KMS customer master key (CMK) that will be used for AWS KMS encryption for the replica.
+     * The identifier of the KMS customer master key (CMK) that will be used for KMS encryption for the replica.
      * </p>
      * 
-     * @return The identifier of the AWS KMS customer master key (CMK) that will be used for AWS KMS encryption for the
-     *         replica.
+     * @return The identifier of the KMS customer master key (CMK) that will be used for KMS encryption for the replica.
      */
 
     public String getKmsMasterKeyId() {
@@ -164,12 +162,11 @@ public class AwsDynamoDbTableReplica implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The identifier of the AWS KMS customer master key (CMK) that will be used for AWS KMS encryption for the replica.
+     * The identifier of the KMS customer master key (CMK) that will be used for KMS encryption for the replica.
      * </p>
      * 
      * @param kmsMasterKeyId
-     *        The identifier of the AWS KMS customer master key (CMK) that will be used for AWS KMS encryption for the
-     *        replica.
+     *        The identifier of the KMS customer master key (CMK) that will be used for KMS encryption for the replica.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -49,7 +49,7 @@ public class AwsIamAccessKeySessionContextSessionIssuer implements Serializable,
     private String arn;
     /**
      * <p>
-     * The identifier of the AWS account that created the session.
+     * The identifier of the Amazon Web Services account that created the session.
      * </p>
      */
     private String accountId;
@@ -182,11 +182,11 @@ public class AwsIamAccessKeySessionContextSessionIssuer implements Serializable,
 
     /**
      * <p>
-     * The identifier of the AWS account that created the session.
+     * The identifier of the Amazon Web Services account that created the session.
      * </p>
      * 
      * @param accountId
-     *        The identifier of the AWS account that created the session.
+     *        The identifier of the Amazon Web Services account that created the session.
      */
 
     public void setAccountId(String accountId) {
@@ -195,10 +195,10 @@ public class AwsIamAccessKeySessionContextSessionIssuer implements Serializable,
 
     /**
      * <p>
-     * The identifier of the AWS account that created the session.
+     * The identifier of the Amazon Web Services account that created the session.
      * </p>
      * 
-     * @return The identifier of the AWS account that created the session.
+     * @return The identifier of the Amazon Web Services account that created the session.
      */
 
     public String getAccountId() {
@@ -207,11 +207,11 @@ public class AwsIamAccessKeySessionContextSessionIssuer implements Serializable,
 
     /**
      * <p>
-     * The identifier of the AWS account that created the session.
+     * The identifier of the Amazon Web Services account that created the session.
      * </p>
      * 
      * @param accountId
-     *        The identifier of the AWS account that created the session.
+     *        The identifier of the Amazon Web Services account that created the session.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

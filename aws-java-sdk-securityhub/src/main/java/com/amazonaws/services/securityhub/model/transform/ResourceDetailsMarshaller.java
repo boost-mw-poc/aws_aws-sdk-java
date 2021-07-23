@@ -123,6 +123,10 @@ public class ResourceDetailsMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Container").build();
     private static final MarshallingInfo<Map> OTHER_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Other").build();
+    private static final MarshallingInfo<StructuredPojo> AWSRDSEVENTSUBSCRIPTION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AwsRdsEventSubscription").build();
+    private static final MarshallingInfo<StructuredPojo> AWSECSSERVICE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AwsEcsService").build();
 
     private static final ResourceDetailsMarshaller instance = new ResourceDetailsMarshaller();
 
@@ -187,6 +191,8 @@ public class ResourceDetailsMarshaller {
             protocolMarshaller.marshall(resourceDetails.getAwsEcsTaskDefinition(), AWSECSTASKDEFINITION_BINDING);
             protocolMarshaller.marshall(resourceDetails.getContainer(), CONTAINER_BINDING);
             protocolMarshaller.marshall(resourceDetails.getOther(), OTHER_BINDING);
+            protocolMarshaller.marshall(resourceDetails.getAwsRdsEventSubscription(), AWSRDSEVENTSUBSCRIPTION_BINDING);
+            protocolMarshaller.marshall(resourceDetails.getAwsEcsService(), AWSECSSERVICE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

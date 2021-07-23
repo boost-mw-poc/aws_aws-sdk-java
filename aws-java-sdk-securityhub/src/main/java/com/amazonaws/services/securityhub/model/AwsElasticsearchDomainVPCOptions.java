@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Information that Amazon ES derives based on <code>VPCOptions</code> for the domain.
+ * Information that Elasticsearch derives based on <code>VPCOptions</code> for the domain.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/securityhub-2018-10-26/AwsElasticsearchDomainVPCOptions"

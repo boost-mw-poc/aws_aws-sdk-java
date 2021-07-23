@@ -239,13 +239,13 @@ public class AwsRedshiftClusterDetails implements Serializable, Cloneable, Struc
     private AwsRedshiftClusterHsmStatus hsmStatus;
     /**
      * <p>
-     * A list of IAM roles that the cluster can use to access other AWS services.
+     * A list of IAM roles that the cluster can use to access other Amazon Web Services services.
      * </p>
      */
     private java.util.List<AwsRedshiftClusterIamRole> iamRoles;
     /**
      * <p>
-     * The identifier of the AWS KMS encryption key that is used to encrypt data in the cluster.
+     * The identifier of the KMS encryption key that is used to encrypt data in the cluster.
      * </p>
      */
     private String kmsKeyId;
@@ -1876,10 +1876,10 @@ public class AwsRedshiftClusterDetails implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * A list of IAM roles that the cluster can use to access other AWS services.
+     * A list of IAM roles that the cluster can use to access other Amazon Web Services services.
      * </p>
      * 
-     * @return A list of IAM roles that the cluster can use to access other AWS services.
+     * @return A list of IAM roles that the cluster can use to access other Amazon Web Services services.
      */
 
     public java.util.List<AwsRedshiftClusterIamRole> getIamRoles() {
@@ -1888,11 +1888,11 @@ public class AwsRedshiftClusterDetails implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * A list of IAM roles that the cluster can use to access other AWS services.
+     * A list of IAM roles that the cluster can use to access other Amazon Web Services services.
      * </p>
      * 
      * @param iamRoles
-     *        A list of IAM roles that the cluster can use to access other AWS services.
+     *        A list of IAM roles that the cluster can use to access other Amazon Web Services services.
      */
 
     public void setIamRoles(java.util.Collection<AwsRedshiftClusterIamRole> iamRoles) {
@@ -1906,7 +1906,7 @@ public class AwsRedshiftClusterDetails implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * A list of IAM roles that the cluster can use to access other AWS services.
+     * A list of IAM roles that the cluster can use to access other Amazon Web Services services.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -1915,7 +1915,7 @@ public class AwsRedshiftClusterDetails implements Serializable, Cloneable, Struc
      * </p>
      * 
      * @param iamRoles
-     *        A list of IAM roles that the cluster can use to access other AWS services.
+     *        A list of IAM roles that the cluster can use to access other Amazon Web Services services.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1931,11 +1931,11 @@ public class AwsRedshiftClusterDetails implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * A list of IAM roles that the cluster can use to access other AWS services.
+     * A list of IAM roles that the cluster can use to access other Amazon Web Services services.
      * </p>
      * 
      * @param iamRoles
-     *        A list of IAM roles that the cluster can use to access other AWS services.
+     *        A list of IAM roles that the cluster can use to access other Amazon Web Services services.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1946,11 +1946,11 @@ public class AwsRedshiftClusterDetails implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The identifier of the AWS KMS encryption key that is used to encrypt data in the cluster.
+     * The identifier of the KMS encryption key that is used to encrypt data in the cluster.
      * </p>
      * 
      * @param kmsKeyId
-     *        The identifier of the AWS KMS encryption key that is used to encrypt data in the cluster.
+     *        The identifier of the KMS encryption key that is used to encrypt data in the cluster.
      */
 
     public void setKmsKeyId(String kmsKeyId) {
@@ -1959,10 +1959,10 @@ public class AwsRedshiftClusterDetails implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The identifier of the AWS KMS encryption key that is used to encrypt data in the cluster.
+     * The identifier of the KMS encryption key that is used to encrypt data in the cluster.
      * </p>
      * 
-     * @return The identifier of the AWS KMS encryption key that is used to encrypt data in the cluster.
+     * @return The identifier of the KMS encryption key that is used to encrypt data in the cluster.
      */
 
     public String getKmsKeyId() {
@@ -1971,11 +1971,11 @@ public class AwsRedshiftClusterDetails implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * The identifier of the AWS KMS encryption key that is used to encrypt data in the cluster.
+     * The identifier of the KMS encryption key that is used to encrypt data in the cluster.
      * </p>
      * 
      * @param kmsKeyId
-     *        The identifier of the AWS KMS encryption key that is used to encrypt data in the cluster.
+     *        The identifier of the KMS encryption key that is used to encrypt data in the cluster.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
