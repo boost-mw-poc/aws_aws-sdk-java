@@ -28,7 +28,7 @@ public class Parameter implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The key associated with the parameter. If you don't specify a key and value for a particular parameter, AWS
+     * The key associated with the parameter. If you don't specify a key and value for a particular parameter,
      * CloudFormation uses the default value that is specified in your template.
      * </p>
      */
@@ -58,13 +58,13 @@ public class Parameter implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The key associated with the parameter. If you don't specify a key and value for a particular parameter, AWS
+     * The key associated with the parameter. If you don't specify a key and value for a particular parameter,
      * CloudFormation uses the default value that is specified in your template.
      * </p>
      * 
      * @param parameterKey
      *        The key associated with the parameter. If you don't specify a key and value for a particular parameter,
-     *        AWS CloudFormation uses the default value that is specified in your template.
+     *        CloudFormation uses the default value that is specified in your template.
      */
 
     public void setParameterKey(String parameterKey) {
@@ -73,12 +73,12 @@ public class Parameter implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The key associated with the parameter. If you don't specify a key and value for a particular parameter, AWS
+     * The key associated with the parameter. If you don't specify a key and value for a particular parameter,
      * CloudFormation uses the default value that is specified in your template.
      * </p>
      * 
      * @return The key associated with the parameter. If you don't specify a key and value for a particular parameter,
-     *         AWS CloudFormation uses the default value that is specified in your template.
+     *         CloudFormation uses the default value that is specified in your template.
      */
 
     public String getParameterKey() {
@@ -87,13 +87,13 @@ public class Parameter implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The key associated with the parameter. If you don't specify a key and value for a particular parameter, AWS
+     * The key associated with the parameter. If you don't specify a key and value for a particular parameter,
      * CloudFormation uses the default value that is specified in your template.
      * </p>
      * 
      * @param parameterKey
      *        The key associated with the parameter. If you don't specify a key and value for a particular parameter,
-     *        AWS CloudFormation uses the default value that is specified in your template.
+     *        CloudFormation uses the default value that is specified in your template.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

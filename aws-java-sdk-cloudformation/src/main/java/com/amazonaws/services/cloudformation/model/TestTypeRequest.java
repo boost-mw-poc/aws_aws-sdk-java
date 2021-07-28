@@ -92,7 +92,7 @@ public class TestTypeRequest extends com.amazonaws.AmazonWebServiceRequest imple
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazons3.html">Actions, Resources,
-     * and Condition Keys for Amazon S3</a> in the <i>AWS Identity and Access Management User Guide</i>.
+     * and Condition Keys for Amazon S3</a> in the <i>Amazon Web Services Identity and Access Management User Guide</i>.
      * </p>
      */
     private String logDeliveryBucket;
@@ -395,7 +395,7 @@ public class TestTypeRequest extends com.amazonaws.AmazonWebServiceRequest imple
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazons3.html">Actions, Resources,
-     * and Condition Keys for Amazon S3</a> in the <i>AWS Identity and Access Management User Guide</i>.
+     * and Condition Keys for Amazon S3</a> in the <i>Amazon Web Services Identity and Access Management User Guide</i>.
      * </p>
      * 
      * @param logDeliveryBucket
@@ -423,8 +423,8 @@ public class TestTypeRequest extends com.amazonaws.AmazonWebServiceRequest imple
      *        <p>
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazons3.html">Actions,
-     *        Resources, and Condition Keys for Amazon S3</a> in the <i>AWS Identity and Access Management User
-     *        Guide</i>.
+     *        Resources, and Condition Keys for Amazon S3</a> in the <i>Amazon Web Services Identity and Access
+     *        Management User Guide</i>.
      */
 
     public void setLogDeliveryBucket(String logDeliveryBucket) {
@@ -458,7 +458,7 @@ public class TestTypeRequest extends com.amazonaws.AmazonWebServiceRequest imple
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazons3.html">Actions, Resources,
-     * and Condition Keys for Amazon S3</a> in the <i>AWS Identity and Access Management User Guide</i>.
+     * and Condition Keys for Amazon S3</a> in the <i>Amazon Web Services Identity and Access Management User Guide</i>.
      * </p>
      * 
      * @return The S3 bucket to which CloudFormation delivers the contract test execution logs.</p>
@@ -485,8 +485,8 @@ public class TestTypeRequest extends com.amazonaws.AmazonWebServiceRequest imple
      *         <p>
      *         For more information, see <a
      *         href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazons3.html">Actions,
-     *         Resources, and Condition Keys for Amazon S3</a> in the <i>AWS Identity and Access Management User
-     *         Guide</i>.
+     *         Resources, and Condition Keys for Amazon S3</a> in the <i>Amazon Web Services Identity and Access
+     *         Management User Guide</i>.
      */
 
     public String getLogDeliveryBucket() {
@@ -520,7 +520,7 @@ public class TestTypeRequest extends com.amazonaws.AmazonWebServiceRequest imple
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazons3.html">Actions, Resources,
-     * and Condition Keys for Amazon S3</a> in the <i>AWS Identity and Access Management User Guide</i>.
+     * and Condition Keys for Amazon S3</a> in the <i>Amazon Web Services Identity and Access Management User Guide</i>.
      * </p>
      * 
      * @param logDeliveryBucket
@@ -548,8 +548,8 @@ public class TestTypeRequest extends com.amazonaws.AmazonWebServiceRequest imple
      *        <p>
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazons3.html">Actions,
-     *        Resources, and Condition Keys for Amazon S3</a> in the <i>AWS Identity and Access Management User
-     *        Guide</i>.
+     *        Resources, and Condition Keys for Amazon S3</a> in the <i>Amazon Web Services Identity and Access
+     *        Management User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

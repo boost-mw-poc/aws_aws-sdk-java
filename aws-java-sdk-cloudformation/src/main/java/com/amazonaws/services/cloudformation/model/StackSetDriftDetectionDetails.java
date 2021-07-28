@@ -29,7 +29,7 @@ import javax.annotation.Generated;
  * <p>
  * For more information, see <a
  * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-drift.html">Detecting Unmanaged
- * Changes in Stack Sets</a> in the <i>AWS CloudFormation User Guide</i>.
+ * Changes in Stack Sets</a> in the <i>CloudFormation User Guide</i>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/StackSetDriftDetectionDetails"
@@ -54,7 +54,7 @@ public class StackSetDriftDetectionDetails implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>NOT_CHECKED</code>: AWS CloudFormation has not checked the stack set for drift.
+     * <code>NOT_CHECKED</code>: CloudFormation has not checked the stack set for drift.
      * </p>
      * </li>
      * <li>
@@ -181,7 +181,7 @@ public class StackSetDriftDetectionDetails implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>NOT_CHECKED</code>: AWS CloudFormation has not checked the stack set for drift.
+     * <code>NOT_CHECKED</code>: CloudFormation has not checked the stack set for drift.
      * </p>
      * </li>
      * <li>
@@ -206,7 +206,7 @@ public class StackSetDriftDetectionDetails implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>NOT_CHECKED</code>: AWS CloudFormation has not checked the stack set for drift.
+     *        <code>NOT_CHECKED</code>: CloudFormation has not checked the stack set for drift.
      *        </p>
      *        </li>
      *        <li>
@@ -238,7 +238,7 @@ public class StackSetDriftDetectionDetails implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>NOT_CHECKED</code>: AWS CloudFormation has not checked the stack set for drift.
+     * <code>NOT_CHECKED</code>: CloudFormation has not checked the stack set for drift.
      * </p>
      * </li>
      * <li>
@@ -262,7 +262,7 @@ public class StackSetDriftDetectionDetails implements Serializable, Cloneable {
      *         </li>
      *         <li>
      *         <p>
-     *         <code>NOT_CHECKED</code>: AWS CloudFormation has not checked the stack set for drift.
+     *         <code>NOT_CHECKED</code>: CloudFormation has not checked the stack set for drift.
      *         </p>
      *         </li>
      *         <li>
@@ -294,7 +294,7 @@ public class StackSetDriftDetectionDetails implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>NOT_CHECKED</code>: AWS CloudFormation has not checked the stack set for drift.
+     * <code>NOT_CHECKED</code>: CloudFormation has not checked the stack set for drift.
      * </p>
      * </li>
      * <li>
@@ -319,7 +319,7 @@ public class StackSetDriftDetectionDetails implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>NOT_CHECKED</code>: AWS CloudFormation has not checked the stack set for drift.
+     *        <code>NOT_CHECKED</code>: CloudFormation has not checked the stack set for drift.
      *        </p>
      *        </li>
      *        <li>
@@ -353,7 +353,7 @@ public class StackSetDriftDetectionDetails implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>NOT_CHECKED</code>: AWS CloudFormation has not checked the stack set for drift.
+     * <code>NOT_CHECKED</code>: CloudFormation has not checked the stack set for drift.
      * </p>
      * </li>
      * <li>
@@ -378,7 +378,7 @@ public class StackSetDriftDetectionDetails implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>NOT_CHECKED</code>: AWS CloudFormation has not checked the stack set for drift.
+     *        <code>NOT_CHECKED</code>: CloudFormation has not checked the stack set for drift.
      *        </p>
      *        </li>
      *        <li>

@@ -97,6 +97,8 @@ public enum CloudFormationActions implements Action {
     GetTemplate("cloudformation:GetTemplate"),
     /** Action for the GetTemplateSummary operation. */
     GetTemplateSummary("cloudformation:GetTemplateSummary"),
+    /** Action for the ImportStacksToStackSet operation. */
+    ImportStacksToStackSet("cloudformation:ImportStacksToStackSet"),
     /** Action for the ListChangeSets operation. */
     ListChangeSets("cloudformation:ListChangeSets"),
     /** Action for the ListExports operation. */

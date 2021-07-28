@@ -17,9 +17,9 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * A structure that contains information about a stack set. A stack set enables you to provision stacks into AWS
- * accounts and across Regions by using a single CloudFormation template. In the stack set, you specify the template to
- * use, as well as any parameters and capabilities that the template requires.
+ * A structure that contains information about a stack set. A stack set enables you to provision stacks into accounts
+ * and across Regions by using a single CloudFormation template. In the stack set, you specify the template to use, as
+ * well as any parameters and capabilities that the template requires.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/StackSet" target="_top">AWS API
@@ -67,10 +67,10 @@ public class StackSet implements Serializable, Cloneable {
     /**
      * <p>
      * The capabilities that are allowed in the stack set. Some stack set templates might include resources that can
-     * affect permissions in your AWS account—for example, by creating new AWS Identity and Access Management (IAM)
-     * users. For more information, see <a
+     * affect permissions in your account—for example, by creating new Identity and Access Management (IAM) users. For
+     * more information, see <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#capabilities"
-     * >Acknowledging IAM Resources in AWS CloudFormation Templates.</a>
+     * >Acknowledging IAM Resources in CloudFormation Templates.</a>
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> capabilities;
@@ -94,7 +94,7 @@ public class StackSet implements Serializable, Cloneable {
      * Use customized administrator roles to control which users or groups can manage specific stack sets within the
      * same administrator account. For more information, see <a
      * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs.html">Prerequisites:
-     * Granting Permissions for Stack Set Operations</a> in the <i>AWS CloudFormation User Guide</i>.
+     * Granting Permissions for Stack Set Operations</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      */
     private String administrationRoleARN;
@@ -119,8 +119,8 @@ public class StackSet implements Serializable, Cloneable {
     private StackSetDriftDetectionDetails stackSetDriftDetectionDetails;
     /**
      * <p>
-     * [Service-managed permissions] Describes whether StackSets automatically deploys to AWS Organizations accounts
-     * that are added to a target organization or organizational unit (OU).
+     * [Service-managed permissions] Describes whether StackSets automatically deploys to Organizations accounts that
+     * are added to a target organization or organizational unit (OU).
      * </p>
      */
     private AutoDeployment autoDeployment;
@@ -140,7 +140,7 @@ public class StackSet implements Serializable, Cloneable {
      * <li>
      * <p>
      * With <code>service-managed</code> permissions, StackSets automatically creates the IAM roles required to deploy
-     * to accounts managed by AWS Organizations. For more information, see <a
+     * to accounts managed by Organizations. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs-service-managed.html"
      * >Grant Service-Managed Stack Set Permissions</a>.
      * </p>
@@ -466,17 +466,17 @@ public class StackSet implements Serializable, Cloneable {
     /**
      * <p>
      * The capabilities that are allowed in the stack set. Some stack set templates might include resources that can
-     * affect permissions in your AWS account—for example, by creating new AWS Identity and Access Management (IAM)
-     * users. For more information, see <a
+     * affect permissions in your account—for example, by creating new Identity and Access Management (IAM) users. For
+     * more information, see <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#capabilities"
-     * >Acknowledging IAM Resources in AWS CloudFormation Templates.</a>
+     * >Acknowledging IAM Resources in CloudFormation Templates.</a>
      * </p>
      * 
      * @return The capabilities that are allowed in the stack set. Some stack set templates might include resources that
-     *         can affect permissions in your AWS account—for example, by creating new AWS Identity and Access
-     *         Management (IAM) users. For more information, see <a href=
+     *         can affect permissions in your account—for example, by creating new Identity and Access Management (IAM)
+     *         users. For more information, see <a href=
      *         "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#capabilities"
-     *         >Acknowledging IAM Resources in AWS CloudFormation Templates.</a>
+     *         >Acknowledging IAM Resources in CloudFormation Templates.</a>
      * @see Capability
      */
 
@@ -490,18 +490,18 @@ public class StackSet implements Serializable, Cloneable {
     /**
      * <p>
      * The capabilities that are allowed in the stack set. Some stack set templates might include resources that can
-     * affect permissions in your AWS account—for example, by creating new AWS Identity and Access Management (IAM)
-     * users. For more information, see <a
+     * affect permissions in your account—for example, by creating new Identity and Access Management (IAM) users. For
+     * more information, see <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#capabilities"
-     * >Acknowledging IAM Resources in AWS CloudFormation Templates.</a>
+     * >Acknowledging IAM Resources in CloudFormation Templates.</a>
      * </p>
      * 
      * @param capabilities
      *        The capabilities that are allowed in the stack set. Some stack set templates might include resources that
-     *        can affect permissions in your AWS account—for example, by creating new AWS Identity and Access Management
-     *        (IAM) users. For more information, see <a href=
+     *        can affect permissions in your account—for example, by creating new Identity and Access Management (IAM)
+     *        users. For more information, see <a href=
      *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#capabilities"
-     *        >Acknowledging IAM Resources in AWS CloudFormation Templates.</a>
+     *        >Acknowledging IAM Resources in CloudFormation Templates.</a>
      * @see Capability
      */
 
@@ -517,10 +517,10 @@ public class StackSet implements Serializable, Cloneable {
     /**
      * <p>
      * The capabilities that are allowed in the stack set. Some stack set templates might include resources that can
-     * affect permissions in your AWS account—for example, by creating new AWS Identity and Access Management (IAM)
-     * users. For more information, see <a
+     * affect permissions in your account—for example, by creating new Identity and Access Management (IAM) users. For
+     * more information, see <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#capabilities"
-     * >Acknowledging IAM Resources in AWS CloudFormation Templates.</a>
+     * >Acknowledging IAM Resources in CloudFormation Templates.</a>
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -530,10 +530,10 @@ public class StackSet implements Serializable, Cloneable {
      * 
      * @param capabilities
      *        The capabilities that are allowed in the stack set. Some stack set templates might include resources that
-     *        can affect permissions in your AWS account—for example, by creating new AWS Identity and Access Management
-     *        (IAM) users. For more information, see <a href=
+     *        can affect permissions in your account—for example, by creating new Identity and Access Management (IAM)
+     *        users. For more information, see <a href=
      *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#capabilities"
-     *        >Acknowledging IAM Resources in AWS CloudFormation Templates.</a>
+     *        >Acknowledging IAM Resources in CloudFormation Templates.</a>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Capability
      */
@@ -551,18 +551,18 @@ public class StackSet implements Serializable, Cloneable {
     /**
      * <p>
      * The capabilities that are allowed in the stack set. Some stack set templates might include resources that can
-     * affect permissions in your AWS account—for example, by creating new AWS Identity and Access Management (IAM)
-     * users. For more information, see <a
+     * affect permissions in your account—for example, by creating new Identity and Access Management (IAM) users. For
+     * more information, see <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#capabilities"
-     * >Acknowledging IAM Resources in AWS CloudFormation Templates.</a>
+     * >Acknowledging IAM Resources in CloudFormation Templates.</a>
      * </p>
      * 
      * @param capabilities
      *        The capabilities that are allowed in the stack set. Some stack set templates might include resources that
-     *        can affect permissions in your AWS account—for example, by creating new AWS Identity and Access Management
-     *        (IAM) users. For more information, see <a href=
+     *        can affect permissions in your account—for example, by creating new Identity and Access Management (IAM)
+     *        users. For more information, see <a href=
      *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#capabilities"
-     *        >Acknowledging IAM Resources in AWS CloudFormation Templates.</a>
+     *        >Acknowledging IAM Resources in CloudFormation Templates.</a>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Capability
      */
@@ -575,18 +575,18 @@ public class StackSet implements Serializable, Cloneable {
     /**
      * <p>
      * The capabilities that are allowed in the stack set. Some stack set templates might include resources that can
-     * affect permissions in your AWS account—for example, by creating new AWS Identity and Access Management (IAM)
-     * users. For more information, see <a
+     * affect permissions in your account—for example, by creating new Identity and Access Management (IAM) users. For
+     * more information, see <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#capabilities"
-     * >Acknowledging IAM Resources in AWS CloudFormation Templates.</a>
+     * >Acknowledging IAM Resources in CloudFormation Templates.</a>
      * </p>
      * 
      * @param capabilities
      *        The capabilities that are allowed in the stack set. Some stack set templates might include resources that
-     *        can affect permissions in your AWS account—for example, by creating new AWS Identity and Access Management
-     *        (IAM) users. For more information, see <a href=
+     *        can affect permissions in your account—for example, by creating new Identity and Access Management (IAM)
+     *        users. For more information, see <a href=
      *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#capabilities"
-     *        >Acknowledging IAM Resources in AWS CloudFormation Templates.</a>
+     *        >Acknowledging IAM Resources in CloudFormation Templates.</a>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Capability
      */
@@ -726,7 +726,7 @@ public class StackSet implements Serializable, Cloneable {
      * Use customized administrator roles to control which users or groups can manage specific stack sets within the
      * same administrator account. For more information, see <a
      * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs.html">Prerequisites:
-     * Granting Permissions for Stack Set Operations</a> in the <i>AWS CloudFormation User Guide</i>.
+     * Granting Permissions for Stack Set Operations</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * 
      * @param administrationRoleARN
@@ -735,7 +735,7 @@ public class StackSet implements Serializable, Cloneable {
      *        Use customized administrator roles to control which users or groups can manage specific stack sets within
      *        the same administrator account. For more information, see <a
      *        href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs.html">Prerequisites:
-     *        Granting Permissions for Stack Set Operations</a> in the <i>AWS CloudFormation User Guide</i>.
+     *        Granting Permissions for Stack Set Operations</a> in the <i>CloudFormation User Guide</i>.
      */
 
     public void setAdministrationRoleARN(String administrationRoleARN) {
@@ -750,7 +750,7 @@ public class StackSet implements Serializable, Cloneable {
      * Use customized administrator roles to control which users or groups can manage specific stack sets within the
      * same administrator account. For more information, see <a
      * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs.html">Prerequisites:
-     * Granting Permissions for Stack Set Operations</a> in the <i>AWS CloudFormation User Guide</i>.
+     * Granting Permissions for Stack Set Operations</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * 
      * @return The Amazon Resource Number (ARN) of the IAM role used to create or update the stack set.</p>
@@ -758,7 +758,7 @@ public class StackSet implements Serializable, Cloneable {
      *         Use customized administrator roles to control which users or groups can manage specific stack sets within
      *         the same administrator account. For more information, see <a
      *         href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs.html"
-     *         >Prerequisites: Granting Permissions for Stack Set Operations</a> in the <i>AWS CloudFormation User
+     *         >Prerequisites: Granting Permissions for Stack Set Operations</a> in the <i>CloudFormation User
      *         Guide</i>.
      */
 
@@ -774,7 +774,7 @@ public class StackSet implements Serializable, Cloneable {
      * Use customized administrator roles to control which users or groups can manage specific stack sets within the
      * same administrator account. For more information, see <a
      * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs.html">Prerequisites:
-     * Granting Permissions for Stack Set Operations</a> in the <i>AWS CloudFormation User Guide</i>.
+     * Granting Permissions for Stack Set Operations</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * 
      * @param administrationRoleARN
@@ -783,7 +783,7 @@ public class StackSet implements Serializable, Cloneable {
      *        Use customized administrator roles to control which users or groups can manage specific stack sets within
      *        the same administrator account. For more information, see <a
      *        href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs.html">Prerequisites:
-     *        Granting Permissions for Stack Set Operations</a> in the <i>AWS CloudFormation User Guide</i>.
+     *        Granting Permissions for Stack Set Operations</a> in the <i>CloudFormation User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -913,13 +913,13 @@ public class StackSet implements Serializable, Cloneable {
 
     /**
      * <p>
-     * [Service-managed permissions] Describes whether StackSets automatically deploys to AWS Organizations accounts
-     * that are added to a target organization or organizational unit (OU).
+     * [Service-managed permissions] Describes whether StackSets automatically deploys to Organizations accounts that
+     * are added to a target organization or organizational unit (OU).
      * </p>
      * 
      * @param autoDeployment
-     *        [Service-managed permissions] Describes whether StackSets automatically deploys to AWS Organizations
-     *        accounts that are added to a target organization or organizational unit (OU).
+     *        [Service-managed permissions] Describes whether StackSets automatically deploys to Organizations accounts
+     *        that are added to a target organization or organizational unit (OU).
      */
 
     public void setAutoDeployment(AutoDeployment autoDeployment) {
@@ -928,12 +928,12 @@ public class StackSet implements Serializable, Cloneable {
 
     /**
      * <p>
-     * [Service-managed permissions] Describes whether StackSets automatically deploys to AWS Organizations accounts
-     * that are added to a target organization or organizational unit (OU).
+     * [Service-managed permissions] Describes whether StackSets automatically deploys to Organizations accounts that
+     * are added to a target organization or organizational unit (OU).
      * </p>
      * 
-     * @return [Service-managed permissions] Describes whether StackSets automatically deploys to AWS Organizations
-     *         accounts that are added to a target organization or organizational unit (OU).
+     * @return [Service-managed permissions] Describes whether StackSets automatically deploys to Organizations accounts
+     *         that are added to a target organization or organizational unit (OU).
      */
 
     public AutoDeployment getAutoDeployment() {
@@ -942,13 +942,13 @@ public class StackSet implements Serializable, Cloneable {
 
     /**
      * <p>
-     * [Service-managed permissions] Describes whether StackSets automatically deploys to AWS Organizations accounts
-     * that are added to a target organization or organizational unit (OU).
+     * [Service-managed permissions] Describes whether StackSets automatically deploys to Organizations accounts that
+     * are added to a target organization or organizational unit (OU).
      * </p>
      * 
      * @param autoDeployment
-     *        [Service-managed permissions] Describes whether StackSets automatically deploys to AWS Organizations
-     *        accounts that are added to a target organization or organizational unit (OU).
+     *        [Service-managed permissions] Describes whether StackSets automatically deploys to Organizations accounts
+     *        that are added to a target organization or organizational unit (OU).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -973,7 +973,7 @@ public class StackSet implements Serializable, Cloneable {
      * <li>
      * <p>
      * With <code>service-managed</code> permissions, StackSets automatically creates the IAM roles required to deploy
-     * to accounts managed by AWS Organizations. For more information, see <a
+     * to accounts managed by Organizations. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs-service-managed.html"
      * >Grant Service-Managed Stack Set Permissions</a>.
      * </p>
@@ -994,7 +994,7 @@ public class StackSet implements Serializable, Cloneable {
      *        <li>
      *        <p>
      *        With <code>service-managed</code> permissions, StackSets automatically creates the IAM roles required to
-     *        deploy to accounts managed by AWS Organizations. For more information, see <a href=
+     *        deploy to accounts managed by Organizations. For more information, see <a href=
      *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs-service-managed.html"
      *        >Grant Service-Managed Stack Set Permissions</a>.
      *        </p>
@@ -1022,7 +1022,7 @@ public class StackSet implements Serializable, Cloneable {
      * <li>
      * <p>
      * With <code>service-managed</code> permissions, StackSets automatically creates the IAM roles required to deploy
-     * to accounts managed by AWS Organizations. For more information, see <a
+     * to accounts managed by Organizations. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs-service-managed.html"
      * >Grant Service-Managed Stack Set Permissions</a>.
      * </p>
@@ -1042,7 +1042,7 @@ public class StackSet implements Serializable, Cloneable {
      *         <li>
      *         <p>
      *         With <code>service-managed</code> permissions, StackSets automatically creates the IAM roles required to
-     *         deploy to accounts managed by AWS Organizations. For more information, see <a href=
+     *         deploy to accounts managed by Organizations. For more information, see <a href=
      *         "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs-service-managed.html"
      *         >Grant Service-Managed Stack Set Permissions</a>.
      *         </p>
@@ -1070,7 +1070,7 @@ public class StackSet implements Serializable, Cloneable {
      * <li>
      * <p>
      * With <code>service-managed</code> permissions, StackSets automatically creates the IAM roles required to deploy
-     * to accounts managed by AWS Organizations. For more information, see <a
+     * to accounts managed by Organizations. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs-service-managed.html"
      * >Grant Service-Managed Stack Set Permissions</a>.
      * </p>
@@ -1091,7 +1091,7 @@ public class StackSet implements Serializable, Cloneable {
      *        <li>
      *        <p>
      *        With <code>service-managed</code> permissions, StackSets automatically creates the IAM roles required to
-     *        deploy to accounts managed by AWS Organizations. For more information, see <a href=
+     *        deploy to accounts managed by Organizations. For more information, see <a href=
      *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs-service-managed.html"
      *        >Grant Service-Managed Stack Set Permissions</a>.
      *        </p>
@@ -1121,7 +1121,7 @@ public class StackSet implements Serializable, Cloneable {
      * <li>
      * <p>
      * With <code>service-managed</code> permissions, StackSets automatically creates the IAM roles required to deploy
-     * to accounts managed by AWS Organizations. For more information, see <a
+     * to accounts managed by Organizations. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs-service-managed.html"
      * >Grant Service-Managed Stack Set Permissions</a>.
      * </p>
@@ -1142,7 +1142,7 @@ public class StackSet implements Serializable, Cloneable {
      *        <li>
      *        <p>
      *        With <code>service-managed</code> permissions, StackSets automatically creates the IAM roles required to
-     *        deploy to accounts managed by AWS Organizations. For more information, see <a href=
+     *        deploy to accounts managed by Organizations. For more information, see <a href=
      *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs-service-managed.html"
      *        >Grant Service-Managed Stack Set Permissions</a>.
      *        </p>
@@ -1170,7 +1170,7 @@ public class StackSet implements Serializable, Cloneable {
      * <li>
      * <p>
      * With <code>service-managed</code> permissions, StackSets automatically creates the IAM roles required to deploy
-     * to accounts managed by AWS Organizations. For more information, see <a
+     * to accounts managed by Organizations. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs-service-managed.html"
      * >Grant Service-Managed Stack Set Permissions</a>.
      * </p>
@@ -1191,7 +1191,7 @@ public class StackSet implements Serializable, Cloneable {
      *        <li>
      *        <p>
      *        With <code>service-managed</code> permissions, StackSets automatically creates the IAM roles required to
-     *        deploy to accounts managed by AWS Organizations. For more information, see <a href=
+     *        deploy to accounts managed by Organizations. For more information, see <a href=
      *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs-service-managed.html"
      *        >Grant Service-Managed Stack Set Permissions</a>.
      *        </p>

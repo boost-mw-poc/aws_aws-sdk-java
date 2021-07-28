@@ -234,6 +234,11 @@ public class AbstractAmazonCloudFormation implements AmazonCloudFormation {
     }
 
     @Override
+    public ImportStacksToStackSetResult importStacksToStackSet(ImportStacksToStackSetRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListChangeSetsResult listChangeSets(ListChangeSetsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

@@ -57,6 +57,10 @@ public class CreateStackSetRequestMarshaller implements Marshaller<Request<Creat
             request.addParameter("TemplateURL", StringUtils.fromString(createStackSetRequest.getTemplateURL()));
         }
 
+        if (createStackSetRequest.getStackId() != null) {
+            request.addParameter("StackId", StringUtils.fromString(createStackSetRequest.getStackId()));
+        }
+
         if (createStackSetRequest.getParameters().isEmpty()
                 && !((com.amazonaws.internal.SdkInternalList<Parameter>) createStackSetRequest.getParameters()).isAutoConstruct()) {
             request.addParameter("Parameters", "");

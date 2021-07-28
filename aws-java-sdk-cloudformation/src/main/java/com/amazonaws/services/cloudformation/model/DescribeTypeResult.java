@@ -142,7 +142,7 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
     private String schema;
     /**
      * <p>
-     * For resource type extensions, the provisioning behavior of the resource type. AWS CloudFormation determines the
+     * For resource type extensions, the provisioning behavior of the resource type. CloudFormation determines the
      * provisioning type during registration, based on the types of handlers in the schema handler package submitted.
      * </p>
      * <p>
@@ -237,10 +237,11 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      * </p>
      * <p/>
      * <p>
-     * If the registered extension calls any AWS APIs, you must create an <i> <a
+     * If the registered extension calls any Amazon Web Services APIs, you must create an <i> <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html">IAM execution role</a> </i> that includes
-     * the necessary permissions to call those AWS APIs, and provision that execution role in your account.
-     * CloudFormation then assumes that execution role to provide your extension with the appropriate credentials.
+     * the necessary permissions to call those Amazon Web Services APIs, and provision that execution role in your
+     * account. CloudFormation then assumes that execution role to provide your extension with the appropriate
+     * credentials.
      * </p>
      */
     private String executionRoleArn;
@@ -254,7 +255,7 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      * <ul>
      * <li>
      * <p>
-     * <code>PRIVATE</code>: The extension is only visible and usable within the account in which it is registered. AWS
+     * <code>PRIVATE</code>: The extension is only visible and usable within the account in which it is registered.
      * CloudFormation marks any extensions you register as <code>PRIVATE</code>.
      * </p>
      * </li>
@@ -384,7 +385,7 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      * version is published by the extension publisher. Major versions released by the publisher must be manually
      * updated. For more information, see <a
      * href="AWSCloudFormation/latest/UserGuide/registry-public.html#registry-public-enable">Activating public
-     * extensions for use in your account</a> in the <i>AWS CloudFormation User Guide</i>.
+     * extensions for use in your account</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      */
     private Boolean autoUpdate;
@@ -1245,7 +1246,7 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * For resource type extensions, the provisioning behavior of the resource type. AWS CloudFormation determines the
+     * For resource type extensions, the provisioning behavior of the resource type. CloudFormation determines the
      * provisioning type during registration, based on the types of handlers in the schema handler package submitted.
      * </p>
      * <p>
@@ -1290,9 +1291,9 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      * </ul>
      * 
      * @param provisioningType
-     *        For resource type extensions, the provisioning behavior of the resource type. AWS CloudFormation
-     *        determines the provisioning type during registration, based on the types of handlers in the schema handler
-     *        package submitted.</p>
+     *        For resource type extensions, the provisioning behavior of the resource type. CloudFormation determines
+     *        the provisioning type during registration, based on the types of handlers in the schema handler package
+     *        submitted.</p>
      *        <p>
      *        Valid values include:
      *        </p>
@@ -1341,7 +1342,7 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * For resource type extensions, the provisioning behavior of the resource type. AWS CloudFormation determines the
+     * For resource type extensions, the provisioning behavior of the resource type. CloudFormation determines the
      * provisioning type during registration, based on the types of handlers in the schema handler package submitted.
      * </p>
      * <p>
@@ -1385,9 +1386,9 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      * </li>
      * </ul>
      * 
-     * @return For resource type extensions, the provisioning behavior of the resource type. AWS CloudFormation
-     *         determines the provisioning type during registration, based on the types of handlers in the schema
-     *         handler package submitted.</p>
+     * @return For resource type extensions, the provisioning behavior of the resource type. CloudFormation determines
+     *         the provisioning type during registration, based on the types of handlers in the schema handler package
+     *         submitted.</p>
      *         <p>
      *         Valid values include:
      *         </p>
@@ -1436,7 +1437,7 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * For resource type extensions, the provisioning behavior of the resource type. AWS CloudFormation determines the
+     * For resource type extensions, the provisioning behavior of the resource type. CloudFormation determines the
      * provisioning type during registration, based on the types of handlers in the schema handler package submitted.
      * </p>
      * <p>
@@ -1481,9 +1482,9 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      * </ul>
      * 
      * @param provisioningType
-     *        For resource type extensions, the provisioning behavior of the resource type. AWS CloudFormation
-     *        determines the provisioning type during registration, based on the types of handlers in the schema handler
-     *        package submitted.</p>
+     *        For resource type extensions, the provisioning behavior of the resource type. CloudFormation determines
+     *        the provisioning type during registration, based on the types of handlers in the schema handler package
+     *        submitted.</p>
      *        <p>
      *        Valid values include:
      *        </p>
@@ -1534,7 +1535,7 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * For resource type extensions, the provisioning behavior of the resource type. AWS CloudFormation determines the
+     * For resource type extensions, the provisioning behavior of the resource type. CloudFormation determines the
      * provisioning type during registration, based on the types of handlers in the schema handler package submitted.
      * </p>
      * <p>
@@ -1579,9 +1580,9 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      * </ul>
      * 
      * @param provisioningType
-     *        For resource type extensions, the provisioning behavior of the resource type. AWS CloudFormation
-     *        determines the provisioning type during registration, based on the types of handlers in the schema handler
-     *        package submitted.</p>
+     *        For resource type extensions, the provisioning behavior of the resource type. CloudFormation determines
+     *        the provisioning type during registration, based on the types of handlers in the schema handler package
+     *        submitted.</p>
      *        <p>
      *        Valid values include:
      *        </p>
@@ -1995,10 +1996,11 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      * </p>
      * <p/>
      * <p>
-     * If the registered extension calls any AWS APIs, you must create an <i> <a
+     * If the registered extension calls any Amazon Web Services APIs, you must create an <i> <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html">IAM execution role</a> </i> that includes
-     * the necessary permissions to call those AWS APIs, and provision that execution role in your account.
-     * CloudFormation then assumes that execution role to provide your extension with the appropriate credentials.
+     * the necessary permissions to call those Amazon Web Services APIs, and provision that execution role in your
+     * account. CloudFormation then assumes that execution role to provide your extension with the appropriate
+     * credentials.
      * </p>
      * 
      * @param executionRoleArn
@@ -2008,11 +2010,11 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      *        >RegisterType</a>.</p>
      *        <p/>
      *        <p>
-     *        If the registered extension calls any AWS APIs, you must create an <i> <a
+     *        If the registered extension calls any Amazon Web Services APIs, you must create an <i> <a
      *        href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html">IAM execution role</a> </i> that
-     *        includes the necessary permissions to call those AWS APIs, and provision that execution role in your
-     *        account. CloudFormation then assumes that execution role to provide your extension with the appropriate
-     *        credentials.
+     *        includes the necessary permissions to call those Amazon Web Services APIs, and provision that execution
+     *        role in your account. CloudFormation then assumes that execution role to provide your extension with the
+     *        appropriate credentials.
      */
 
     public void setExecutionRoleArn(String executionRoleArn) {
@@ -2027,10 +2029,11 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      * </p>
      * <p/>
      * <p>
-     * If the registered extension calls any AWS APIs, you must create an <i> <a
+     * If the registered extension calls any Amazon Web Services APIs, you must create an <i> <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html">IAM execution role</a> </i> that includes
-     * the necessary permissions to call those AWS APIs, and provision that execution role in your account.
-     * CloudFormation then assumes that execution role to provide your extension with the appropriate credentials.
+     * the necessary permissions to call those Amazon Web Services APIs, and provision that execution role in your
+     * account. CloudFormation then assumes that execution role to provide your extension with the appropriate
+     * credentials.
      * </p>
      * 
      * @return The Amazon Resource Name (ARN) of the IAM execution role used to register the extension. This applies
@@ -2039,11 +2042,11 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      *         >RegisterType</a>.</p>
      *         <p/>
      *         <p>
-     *         If the registered extension calls any AWS APIs, you must create an <i> <a
+     *         If the registered extension calls any Amazon Web Services APIs, you must create an <i> <a
      *         href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html">IAM execution role</a> </i> that
-     *         includes the necessary permissions to call those AWS APIs, and provision that execution role in your
-     *         account. CloudFormation then assumes that execution role to provide your extension with the appropriate
-     *         credentials.
+     *         includes the necessary permissions to call those Amazon Web Services APIs, and provision that execution
+     *         role in your account. CloudFormation then assumes that execution role to provide your extension with the
+     *         appropriate credentials.
      */
 
     public String getExecutionRoleArn() {
@@ -2058,10 +2061,11 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      * </p>
      * <p/>
      * <p>
-     * If the registered extension calls any AWS APIs, you must create an <i> <a
+     * If the registered extension calls any Amazon Web Services APIs, you must create an <i> <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html">IAM execution role</a> </i> that includes
-     * the necessary permissions to call those AWS APIs, and provision that execution role in your account.
-     * CloudFormation then assumes that execution role to provide your extension with the appropriate credentials.
+     * the necessary permissions to call those Amazon Web Services APIs, and provision that execution role in your
+     * account. CloudFormation then assumes that execution role to provide your extension with the appropriate
+     * credentials.
      * </p>
      * 
      * @param executionRoleArn
@@ -2071,11 +2075,11 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      *        >RegisterType</a>.</p>
      *        <p/>
      *        <p>
-     *        If the registered extension calls any AWS APIs, you must create an <i> <a
+     *        If the registered extension calls any Amazon Web Services APIs, you must create an <i> <a
      *        href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html">IAM execution role</a> </i> that
-     *        includes the necessary permissions to call those AWS APIs, and provision that execution role in your
-     *        account. CloudFormation then assumes that execution role to provide your extension with the appropriate
-     *        credentials.
+     *        includes the necessary permissions to call those Amazon Web Services APIs, and provision that execution
+     *        role in your account. CloudFormation then assumes that execution role to provide your extension with the
+     *        appropriate credentials.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2094,7 +2098,7 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      * <ul>
      * <li>
      * <p>
-     * <code>PRIVATE</code>: The extension is only visible and usable within the account in which it is registered. AWS
+     * <code>PRIVATE</code>: The extension is only visible and usable within the account in which it is registered.
      * CloudFormation marks any extensions you register as <code>PRIVATE</code>.
      * </p>
      * </li>
@@ -2114,7 +2118,7 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      *        <li>
      *        <p>
      *        <code>PRIVATE</code>: The extension is only visible and usable within the account in which it is
-     *        registered. AWS CloudFormation marks any extensions you register as <code>PRIVATE</code>.
+     *        registered. CloudFormation marks any extensions you register as <code>PRIVATE</code>.
      *        </p>
      *        </li>
      *        <li>
@@ -2139,7 +2143,7 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      * <ul>
      * <li>
      * <p>
-     * <code>PRIVATE</code>: The extension is only visible and usable within the account in which it is registered. AWS
+     * <code>PRIVATE</code>: The extension is only visible and usable within the account in which it is registered.
      * CloudFormation marks any extensions you register as <code>PRIVATE</code>.
      * </p>
      * </li>
@@ -2158,7 +2162,7 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      *         <li>
      *         <p>
      *         <code>PRIVATE</code>: The extension is only visible and usable within the account in which it is
-     *         registered. AWS CloudFormation marks any extensions you register as <code>PRIVATE</code>.
+     *         registered. CloudFormation marks any extensions you register as <code>PRIVATE</code>.
      *         </p>
      *         </li>
      *         <li>
@@ -2183,7 +2187,7 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      * <ul>
      * <li>
      * <p>
-     * <code>PRIVATE</code>: The extension is only visible and usable within the account in which it is registered. AWS
+     * <code>PRIVATE</code>: The extension is only visible and usable within the account in which it is registered.
      * CloudFormation marks any extensions you register as <code>PRIVATE</code>.
      * </p>
      * </li>
@@ -2203,7 +2207,7 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      *        <li>
      *        <p>
      *        <code>PRIVATE</code>: The extension is only visible and usable within the account in which it is
-     *        registered. AWS CloudFormation marks any extensions you register as <code>PRIVATE</code>.
+     *        registered. CloudFormation marks any extensions you register as <code>PRIVATE</code>.
      *        </p>
      *        </li>
      *        <li>
@@ -2230,7 +2234,7 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      * <ul>
      * <li>
      * <p>
-     * <code>PRIVATE</code>: The extension is only visible and usable within the account in which it is registered. AWS
+     * <code>PRIVATE</code>: The extension is only visible and usable within the account in which it is registered.
      * CloudFormation marks any extensions you register as <code>PRIVATE</code>.
      * </p>
      * </li>
@@ -2250,7 +2254,7 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      *        <li>
      *        <p>
      *        <code>PRIVATE</code>: The extension is only visible and usable within the account in which it is
-     *        registered. AWS CloudFormation marks any extensions you register as <code>PRIVATE</code>.
+     *        registered. CloudFormation marks any extensions you register as <code>PRIVATE</code>.
      *        </p>
      *        </li>
      *        <li>
@@ -2999,7 +3003,7 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      * version is published by the extension publisher. Major versions released by the publisher must be manually
      * updated. For more information, see <a
      * href="AWSCloudFormation/latest/UserGuide/registry-public.html#registry-public-enable">Activating public
-     * extensions for use in your account</a> in the <i>AWS CloudFormation User Guide</i>.
+     * extensions for use in your account</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * 
      * @param autoUpdate
@@ -3007,7 +3011,7 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      *        <i>minor</i> version is published by the extension publisher. Major versions released by the publisher
      *        must be manually updated. For more information, see <a
      *        href="AWSCloudFormation/latest/UserGuide/registry-public.html#registry-public-enable">Activating public
-     *        extensions for use in your account</a> in the <i>AWS CloudFormation User Guide</i>.
+     *        extensions for use in your account</a> in the <i>CloudFormation User Guide</i>.
      */
 
     public void setAutoUpdate(Boolean autoUpdate) {
@@ -3020,14 +3024,14 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      * version is published by the extension publisher. Major versions released by the publisher must be manually
      * updated. For more information, see <a
      * href="AWSCloudFormation/latest/UserGuide/registry-public.html#registry-public-enable">Activating public
-     * extensions for use in your account</a> in the <i>AWS CloudFormation User Guide</i>.
+     * extensions for use in your account</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * 
      * @return Whether CloudFormation automatically updates the extension in this account and region when a new
      *         <i>minor</i> version is published by the extension publisher. Major versions released by the publisher
      *         must be manually updated. For more information, see <a
      *         href="AWSCloudFormation/latest/UserGuide/registry-public.html#registry-public-enable">Activating public
-     *         extensions for use in your account</a> in the <i>AWS CloudFormation User Guide</i>.
+     *         extensions for use in your account</a> in the <i>CloudFormation User Guide</i>.
      */
 
     public Boolean getAutoUpdate() {
@@ -3040,7 +3044,7 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      * version is published by the extension publisher. Major versions released by the publisher must be manually
      * updated. For more information, see <a
      * href="AWSCloudFormation/latest/UserGuide/registry-public.html#registry-public-enable">Activating public
-     * extensions for use in your account</a> in the <i>AWS CloudFormation User Guide</i>.
+     * extensions for use in your account</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * 
      * @param autoUpdate
@@ -3048,7 +3052,7 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      *        <i>minor</i> version is published by the extension publisher. Major versions released by the publisher
      *        must be manually updated. For more information, see <a
      *        href="AWSCloudFormation/latest/UserGuide/registry-public.html#registry-public-enable">Activating public
-     *        extensions for use in your account</a> in the <i>AWS CloudFormation User Guide</i>.
+     *        extensions for use in your account</a> in the <i>CloudFormation User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -3063,14 +3067,14 @@ public class DescribeTypeResult extends com.amazonaws.AmazonWebServiceResult<com
      * version is published by the extension publisher. Major versions released by the publisher must be manually
      * updated. For more information, see <a
      * href="AWSCloudFormation/latest/UserGuide/registry-public.html#registry-public-enable">Activating public
-     * extensions for use in your account</a> in the <i>AWS CloudFormation User Guide</i>.
+     * extensions for use in your account</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * 
      * @return Whether CloudFormation automatically updates the extension in this account and region when a new
      *         <i>minor</i> version is published by the extension publisher. Major versions released by the publisher
      *         must be manually updated. For more information, see <a
      *         href="AWSCloudFormation/latest/UserGuide/registry-public.html#registry-public-enable">Activating public
-     *         extensions for use in your account</a> in the <i>AWS CloudFormation User Guide</i>.
+     *         extensions for use in your account</a> in the <i>CloudFormation User Guide</i>.
      */
 
     public Boolean isAutoUpdate() {

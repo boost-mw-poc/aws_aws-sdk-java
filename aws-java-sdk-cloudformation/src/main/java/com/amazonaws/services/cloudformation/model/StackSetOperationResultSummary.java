@@ -28,13 +28,13 @@ public class StackSetOperationResultSummary implements Serializable, Cloneable {
 
     /**
      * <p>
-     * [Self-managed permissions] The name of the AWS account for this operation result.
+     * [Self-managed permissions] The name of the account for this operation result.
      * </p>
      */
     private String account;
     /**
      * <p>
-     * The name of the AWS Region for this operation result.
+     * The name of the Region for this operation result.
      * </p>
      */
     private String region;
@@ -85,7 +85,7 @@ public class StackSetOperationResultSummary implements Serializable, Cloneable {
     private String statusReason;
     /**
      * <p>
-     * The results of the account gate function AWS CloudFormation invokes, if present, before proceeding with stack set
+     * The results of the account gate function CloudFormation invokes, if present, before proceeding with stack set
      * operations in an account
      * </p>
      */
@@ -101,11 +101,11 @@ public class StackSetOperationResultSummary implements Serializable, Cloneable {
 
     /**
      * <p>
-     * [Self-managed permissions] The name of the AWS account for this operation result.
+     * [Self-managed permissions] The name of the account for this operation result.
      * </p>
      * 
      * @param account
-     *        [Self-managed permissions] The name of the AWS account for this operation result.
+     *        [Self-managed permissions] The name of the account for this operation result.
      */
 
     public void setAccount(String account) {
@@ -114,10 +114,10 @@ public class StackSetOperationResultSummary implements Serializable, Cloneable {
 
     /**
      * <p>
-     * [Self-managed permissions] The name of the AWS account for this operation result.
+     * [Self-managed permissions] The name of the account for this operation result.
      * </p>
      * 
-     * @return [Self-managed permissions] The name of the AWS account for this operation result.
+     * @return [Self-managed permissions] The name of the account for this operation result.
      */
 
     public String getAccount() {
@@ -126,11 +126,11 @@ public class StackSetOperationResultSummary implements Serializable, Cloneable {
 
     /**
      * <p>
-     * [Self-managed permissions] The name of the AWS account for this operation result.
+     * [Self-managed permissions] The name of the account for this operation result.
      * </p>
      * 
      * @param account
-     *        [Self-managed permissions] The name of the AWS account for this operation result.
+     *        [Self-managed permissions] The name of the account for this operation result.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -141,11 +141,11 @@ public class StackSetOperationResultSummary implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The name of the AWS Region for this operation result.
+     * The name of the Region for this operation result.
      * </p>
      * 
      * @param region
-     *        The name of the AWS Region for this operation result.
+     *        The name of the Region for this operation result.
      */
 
     public void setRegion(String region) {
@@ -154,10 +154,10 @@ public class StackSetOperationResultSummary implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The name of the AWS Region for this operation result.
+     * The name of the Region for this operation result.
      * </p>
      * 
-     * @return The name of the AWS Region for this operation result.
+     * @return The name of the Region for this operation result.
      */
 
     public String getRegion() {
@@ -166,11 +166,11 @@ public class StackSetOperationResultSummary implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The name of the AWS Region for this operation result.
+     * The name of the Region for this operation result.
      * </p>
      * 
      * @param region
-     *        The name of the AWS Region for this operation result.
+     *        The name of the Region for this operation result.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -619,13 +619,13 @@ public class StackSetOperationResultSummary implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The results of the account gate function AWS CloudFormation invokes, if present, before proceeding with stack set
+     * The results of the account gate function CloudFormation invokes, if present, before proceeding with stack set
      * operations in an account
      * </p>
      * 
      * @param accountGateResult
-     *        The results of the account gate function AWS CloudFormation invokes, if present, before proceeding with
-     *        stack set operations in an account
+     *        The results of the account gate function CloudFormation invokes, if present, before proceeding with stack
+     *        set operations in an account
      */
 
     public void setAccountGateResult(AccountGateResult accountGateResult) {
@@ -634,12 +634,12 @@ public class StackSetOperationResultSummary implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The results of the account gate function AWS CloudFormation invokes, if present, before proceeding with stack set
+     * The results of the account gate function CloudFormation invokes, if present, before proceeding with stack set
      * operations in an account
      * </p>
      * 
-     * @return The results of the account gate function AWS CloudFormation invokes, if present, before proceeding with
-     *         stack set operations in an account
+     * @return The results of the account gate function CloudFormation invokes, if present, before proceeding with stack
+     *         set operations in an account
      */
 
     public AccountGateResult getAccountGateResult() {
@@ -648,13 +648,13 @@ public class StackSetOperationResultSummary implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The results of the account gate function AWS CloudFormation invokes, if present, before proceeding with stack set
+     * The results of the account gate function CloudFormation invokes, if present, before proceeding with stack set
      * operations in an account
      * </p>
      * 
      * @param accountGateResult
-     *        The results of the account gate function AWS CloudFormation invokes, if present, before proceeding with
-     *        stack set operations in an account
+     *        The results of the account gate function CloudFormation invokes, if present, before proceeding with stack
+     *        set operations in an account
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

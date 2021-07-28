@@ -17,12 +17,12 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * Structure containing the rollback triggers for AWS CloudFormation to monitor during stack creation and updating
+ * Structure containing the rollback triggers for CloudFormation to monitor during stack creation and updating
  * operations, and for the specified monitoring period afterwards.
  * </p>
  * <p>
- * Rollback triggers enable you to have AWS CloudFormation monitor the state of your application during stack creation
- * and updating, and to roll back that operation if the application breaches the threshold of any of the alarms you've
+ * Rollback triggers enable you to have CloudFormation monitor the state of your application during stack creation and
+ * updating, and to roll back that operation if the application breaches the threshold of any of the alarms you've
  * specified. For more information, see <a
  * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-rollback-triggers.html">Monitor and
  * Roll Back Stack Operations</a>.
@@ -39,9 +39,9 @@ public class RollbackConfiguration implements Serializable, Cloneable {
      * The triggers to monitor during stack creation or update actions.
      * </p>
      * <p>
-     * By default, AWS CloudFormation saves the rollback triggers specified for a stack and applies them to any
-     * subsequent update operations for the stack, unless you specify otherwise. If you do specify rollback triggers for
-     * this parameter, those triggers replace any list of triggers previously specified for the stack. This means:
+     * By default, CloudFormation saves the rollback triggers specified for a stack and applies them to any subsequent
+     * update operations for the stack, unless you specify otherwise. If you do specify rollback triggers for this
+     * parameter, those triggers replace any list of triggers previously specified for the stack. This means:
      * </p>
      * <ul>
      * <li>
@@ -95,9 +95,9 @@ public class RollbackConfiguration implements Serializable, Cloneable {
      * The triggers to monitor during stack creation or update actions.
      * </p>
      * <p>
-     * By default, AWS CloudFormation saves the rollback triggers specified for a stack and applies them to any
-     * subsequent update operations for the stack, unless you specify otherwise. If you do specify rollback triggers for
-     * this parameter, those triggers replace any list of triggers previously specified for the stack. This means:
+     * By default, CloudFormation saves the rollback triggers specified for a stack and applies them to any subsequent
+     * update operations for the stack, unless you specify otherwise. If you do specify rollback triggers for this
+     * parameter, those triggers replace any list of triggers previously specified for the stack. This means:
      * </p>
      * <ul>
      * <li>
@@ -124,7 +124,7 @@ public class RollbackConfiguration implements Serializable, Cloneable {
      * 
      * @return The triggers to monitor during stack creation or update actions. </p>
      *         <p>
-     *         By default, AWS CloudFormation saves the rollback triggers specified for a stack and applies them to any
+     *         By default, CloudFormation saves the rollback triggers specified for a stack and applies them to any
      *         subsequent update operations for the stack, unless you specify otherwise. If you do specify rollback
      *         triggers for this parameter, those triggers replace any list of triggers previously specified for the
      *         stack. This means:
@@ -165,9 +165,9 @@ public class RollbackConfiguration implements Serializable, Cloneable {
      * The triggers to monitor during stack creation or update actions.
      * </p>
      * <p>
-     * By default, AWS CloudFormation saves the rollback triggers specified for a stack and applies them to any
-     * subsequent update operations for the stack, unless you specify otherwise. If you do specify rollback triggers for
-     * this parameter, those triggers replace any list of triggers previously specified for the stack. This means:
+     * By default, CloudFormation saves the rollback triggers specified for a stack and applies them to any subsequent
+     * update operations for the stack, unless you specify otherwise. If you do specify rollback triggers for this
+     * parameter, those triggers replace any list of triggers previously specified for the stack. This means:
      * </p>
      * <ul>
      * <li>
@@ -195,7 +195,7 @@ public class RollbackConfiguration implements Serializable, Cloneable {
      * @param rollbackTriggers
      *        The triggers to monitor during stack creation or update actions. </p>
      *        <p>
-     *        By default, AWS CloudFormation saves the rollback triggers specified for a stack and applies them to any
+     *        By default, CloudFormation saves the rollback triggers specified for a stack and applies them to any
      *        subsequent update operations for the stack, unless you specify otherwise. If you do specify rollback
      *        triggers for this parameter, those triggers replace any list of triggers previously specified for the
      *        stack. This means:
@@ -238,9 +238,9 @@ public class RollbackConfiguration implements Serializable, Cloneable {
      * The triggers to monitor during stack creation or update actions.
      * </p>
      * <p>
-     * By default, AWS CloudFormation saves the rollback triggers specified for a stack and applies them to any
-     * subsequent update operations for the stack, unless you specify otherwise. If you do specify rollback triggers for
-     * this parameter, those triggers replace any list of triggers previously specified for the stack. This means:
+     * By default, CloudFormation saves the rollback triggers specified for a stack and applies them to any subsequent
+     * update operations for the stack, unless you specify otherwise. If you do specify rollback triggers for this
+     * parameter, those triggers replace any list of triggers previously specified for the stack. This means:
      * </p>
      * <ul>
      * <li>
@@ -273,7 +273,7 @@ public class RollbackConfiguration implements Serializable, Cloneable {
      * @param rollbackTriggers
      *        The triggers to monitor during stack creation or update actions. </p>
      *        <p>
-     *        By default, AWS CloudFormation saves the rollback triggers specified for a stack and applies them to any
+     *        By default, CloudFormation saves the rollback triggers specified for a stack and applies them to any
      *        subsequent update operations for the stack, unless you specify otherwise. If you do specify rollback
      *        triggers for this parameter, those triggers replace any list of triggers previously specified for the
      *        stack. This means:
@@ -318,9 +318,9 @@ public class RollbackConfiguration implements Serializable, Cloneable {
      * The triggers to monitor during stack creation or update actions.
      * </p>
      * <p>
-     * By default, AWS CloudFormation saves the rollback triggers specified for a stack and applies them to any
-     * subsequent update operations for the stack, unless you specify otherwise. If you do specify rollback triggers for
-     * this parameter, those triggers replace any list of triggers previously specified for the stack. This means:
+     * By default, CloudFormation saves the rollback triggers specified for a stack and applies them to any subsequent
+     * update operations for the stack, unless you specify otherwise. If you do specify rollback triggers for this
+     * parameter, those triggers replace any list of triggers previously specified for the stack. This means:
      * </p>
      * <ul>
      * <li>
@@ -348,7 +348,7 @@ public class RollbackConfiguration implements Serializable, Cloneable {
      * @param rollbackTriggers
      *        The triggers to monitor during stack creation or update actions. </p>
      *        <p>
-     *        By default, AWS CloudFormation saves the rollback triggers specified for a stack and applies them to any
+     *        By default, CloudFormation saves the rollback triggers specified for a stack and applies them to any
      *        subsequent update operations for the stack, unless you specify otherwise. If you do specify rollback
      *        triggers for this parameter, those triggers replace any list of triggers previously specified for the
      *        stack. This means:

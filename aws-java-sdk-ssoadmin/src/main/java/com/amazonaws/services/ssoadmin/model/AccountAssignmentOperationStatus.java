@@ -49,7 +49,8 @@ public class AccountAssignmentOperationStatus implements Serializable, Cloneable
     private String failureReason;
     /**
      * <p>
-     * TargetID is an AWS account identifier, typically a 10-12 digit string (For example, 123456789012).
+     * TargetID is an Amazon Web Services account identifier, typically a 10-12 digit string (For example,
+     * 123456789012).
      * </p>
      */
     private String targetId;
@@ -62,8 +63,8 @@ public class AccountAssignmentOperationStatus implements Serializable, Cloneable
     /**
      * <p>
      * The ARN of the permission set. For more information about ARNs, see <a
-     * href="/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and AWS Service
-     * Namespaces</a> in the <i>AWS General Reference</i>.
+     * href="/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and Amazon Web Services
+     * Service Namespaces</a> in the <i>Amazon Web Services General Reference</i>.
      * </p>
      */
     private String permissionSetArn;
@@ -75,9 +76,10 @@ public class AccountAssignmentOperationStatus implements Serializable, Cloneable
     private String principalType;
     /**
      * <p>
-     * An identifier for an object in AWS SSO, such as a user or group. PrincipalIds are GUIDs (For example,
-     * f81d4fae-7dec-11d0-a765-00a0c91e6bf6). For more information about PrincipalIds in AWS SSO, see the <a
-     * href="/singlesignon/latest/IdentityStoreAPIReference/welcome.html">AWS SSO Identity Store API Reference</a>.
+     * An identifier for an object in Amazon Web Services SSO, such as a user or group. PrincipalIds are GUIDs (For
+     * example, f81d4fae-7dec-11d0-a765-00a0c91e6bf6). For more information about PrincipalIds in Amazon Web Services
+     * SSO, see the <a href="/singlesignon/latest/IdentityStoreAPIReference/welcome.html">Amazon Web Services SSO
+     * Identity Store API Reference</a>.
      * </p>
      */
     private String principalId;
@@ -235,11 +237,13 @@ public class AccountAssignmentOperationStatus implements Serializable, Cloneable
 
     /**
      * <p>
-     * TargetID is an AWS account identifier, typically a 10-12 digit string (For example, 123456789012).
+     * TargetID is an Amazon Web Services account identifier, typically a 10-12 digit string (For example,
+     * 123456789012).
      * </p>
      * 
      * @param targetId
-     *        TargetID is an AWS account identifier, typically a 10-12 digit string (For example, 123456789012).
+     *        TargetID is an Amazon Web Services account identifier, typically a 10-12 digit string (For example,
+     *        123456789012).
      */
 
     public void setTargetId(String targetId) {
@@ -248,10 +252,12 @@ public class AccountAssignmentOperationStatus implements Serializable, Cloneable
 
     /**
      * <p>
-     * TargetID is an AWS account identifier, typically a 10-12 digit string (For example, 123456789012).
+     * TargetID is an Amazon Web Services account identifier, typically a 10-12 digit string (For example,
+     * 123456789012).
      * </p>
      * 
-     * @return TargetID is an AWS account identifier, typically a 10-12 digit string (For example, 123456789012).
+     * @return TargetID is an Amazon Web Services account identifier, typically a 10-12 digit string (For example,
+     *         123456789012).
      */
 
     public String getTargetId() {
@@ -260,11 +266,13 @@ public class AccountAssignmentOperationStatus implements Serializable, Cloneable
 
     /**
      * <p>
-     * TargetID is an AWS account identifier, typically a 10-12 digit string (For example, 123456789012).
+     * TargetID is an Amazon Web Services account identifier, typically a 10-12 digit string (For example,
+     * 123456789012).
      * </p>
      * 
      * @param targetId
-     *        TargetID is an AWS account identifier, typically a 10-12 digit string (For example, 123456789012).
+     *        TargetID is an Amazon Web Services account identifier, typically a 10-12 digit string (For example,
+     *        123456789012).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -335,14 +343,14 @@ public class AccountAssignmentOperationStatus implements Serializable, Cloneable
     /**
      * <p>
      * The ARN of the permission set. For more information about ARNs, see <a
-     * href="/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and AWS Service
-     * Namespaces</a> in the <i>AWS General Reference</i>.
+     * href="/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and Amazon Web Services
+     * Service Namespaces</a> in the <i>Amazon Web Services General Reference</i>.
      * </p>
      * 
      * @param permissionSetArn
      *        The ARN of the permission set. For more information about ARNs, see <a
-     *        href="/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and AWS Service
-     *        Namespaces</a> in the <i>AWS General Reference</i>.
+     *        href="/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and Amazon Web
+     *        Services Service Namespaces</a> in the <i>Amazon Web Services General Reference</i>.
      */
 
     public void setPermissionSetArn(String permissionSetArn) {
@@ -352,13 +360,13 @@ public class AccountAssignmentOperationStatus implements Serializable, Cloneable
     /**
      * <p>
      * The ARN of the permission set. For more information about ARNs, see <a
-     * href="/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and AWS Service
-     * Namespaces</a> in the <i>AWS General Reference</i>.
+     * href="/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and Amazon Web Services
+     * Service Namespaces</a> in the <i>Amazon Web Services General Reference</i>.
      * </p>
      * 
      * @return The ARN of the permission set. For more information about ARNs, see <a
-     *         href="/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and AWS Service
-     *         Namespaces</a> in the <i>AWS General Reference</i>.
+     *         href="/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and Amazon Web
+     *         Services Service Namespaces</a> in the <i>Amazon Web Services General Reference</i>.
      */
 
     public String getPermissionSetArn() {
@@ -368,14 +376,14 @@ public class AccountAssignmentOperationStatus implements Serializable, Cloneable
     /**
      * <p>
      * The ARN of the permission set. For more information about ARNs, see <a
-     * href="/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and AWS Service
-     * Namespaces</a> in the <i>AWS General Reference</i>.
+     * href="/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and Amazon Web Services
+     * Service Namespaces</a> in the <i>Amazon Web Services General Reference</i>.
      * </p>
      * 
      * @param permissionSetArn
      *        The ARN of the permission set. For more information about ARNs, see <a
-     *        href="/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and AWS Service
-     *        Namespaces</a> in the <i>AWS General Reference</i>.
+     *        href="/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and Amazon Web
+     *        Services Service Namespaces</a> in the <i>Amazon Web Services General Reference</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -445,16 +453,17 @@ public class AccountAssignmentOperationStatus implements Serializable, Cloneable
 
     /**
      * <p>
-     * An identifier for an object in AWS SSO, such as a user or group. PrincipalIds are GUIDs (For example,
-     * f81d4fae-7dec-11d0-a765-00a0c91e6bf6). For more information about PrincipalIds in AWS SSO, see the <a
-     * href="/singlesignon/latest/IdentityStoreAPIReference/welcome.html">AWS SSO Identity Store API Reference</a>.
+     * An identifier for an object in Amazon Web Services SSO, such as a user or group. PrincipalIds are GUIDs (For
+     * example, f81d4fae-7dec-11d0-a765-00a0c91e6bf6). For more information about PrincipalIds in Amazon Web Services
+     * SSO, see the <a href="/singlesignon/latest/IdentityStoreAPIReference/welcome.html">Amazon Web Services SSO
+     * Identity Store API Reference</a>.
      * </p>
      * 
      * @param principalId
-     *        An identifier for an object in AWS SSO, such as a user or group. PrincipalIds are GUIDs (For example,
-     *        f81d4fae-7dec-11d0-a765-00a0c91e6bf6). For more information about PrincipalIds in AWS SSO, see the <a
-     *        href="/singlesignon/latest/IdentityStoreAPIReference/welcome.html">AWS SSO Identity Store API
-     *        Reference</a>.
+     *        An identifier for an object in Amazon Web Services SSO, such as a user or group. PrincipalIds are GUIDs
+     *        (For example, f81d4fae-7dec-11d0-a765-00a0c91e6bf6). For more information about PrincipalIds in Amazon Web
+     *        Services SSO, see the <a href="/singlesignon/latest/IdentityStoreAPIReference/welcome.html">Amazon Web
+     *        Services SSO Identity Store API Reference</a>.
      */
 
     public void setPrincipalId(String principalId) {
@@ -463,15 +472,16 @@ public class AccountAssignmentOperationStatus implements Serializable, Cloneable
 
     /**
      * <p>
-     * An identifier for an object in AWS SSO, such as a user or group. PrincipalIds are GUIDs (For example,
-     * f81d4fae-7dec-11d0-a765-00a0c91e6bf6). For more information about PrincipalIds in AWS SSO, see the <a
-     * href="/singlesignon/latest/IdentityStoreAPIReference/welcome.html">AWS SSO Identity Store API Reference</a>.
+     * An identifier for an object in Amazon Web Services SSO, such as a user or group. PrincipalIds are GUIDs (For
+     * example, f81d4fae-7dec-11d0-a765-00a0c91e6bf6). For more information about PrincipalIds in Amazon Web Services
+     * SSO, see the <a href="/singlesignon/latest/IdentityStoreAPIReference/welcome.html">Amazon Web Services SSO
+     * Identity Store API Reference</a>.
      * </p>
      * 
-     * @return An identifier for an object in AWS SSO, such as a user or group. PrincipalIds are GUIDs (For example,
-     *         f81d4fae-7dec-11d0-a765-00a0c91e6bf6). For more information about PrincipalIds in AWS SSO, see the <a
-     *         href="/singlesignon/latest/IdentityStoreAPIReference/welcome.html">AWS SSO Identity Store API
-     *         Reference</a>.
+     * @return An identifier for an object in Amazon Web Services SSO, such as a user or group. PrincipalIds are GUIDs
+     *         (For example, f81d4fae-7dec-11d0-a765-00a0c91e6bf6). For more information about PrincipalIds in Amazon
+     *         Web Services SSO, see the <a href="/singlesignon/latest/IdentityStoreAPIReference/welcome.html">Amazon
+     *         Web Services SSO Identity Store API Reference</a>.
      */
 
     public String getPrincipalId() {
@@ -480,16 +490,17 @@ public class AccountAssignmentOperationStatus implements Serializable, Cloneable
 
     /**
      * <p>
-     * An identifier for an object in AWS SSO, such as a user or group. PrincipalIds are GUIDs (For example,
-     * f81d4fae-7dec-11d0-a765-00a0c91e6bf6). For more information about PrincipalIds in AWS SSO, see the <a
-     * href="/singlesignon/latest/IdentityStoreAPIReference/welcome.html">AWS SSO Identity Store API Reference</a>.
+     * An identifier for an object in Amazon Web Services SSO, such as a user or group. PrincipalIds are GUIDs (For
+     * example, f81d4fae-7dec-11d0-a765-00a0c91e6bf6). For more information about PrincipalIds in Amazon Web Services
+     * SSO, see the <a href="/singlesignon/latest/IdentityStoreAPIReference/welcome.html">Amazon Web Services SSO
+     * Identity Store API Reference</a>.
      * </p>
      * 
      * @param principalId
-     *        An identifier for an object in AWS SSO, such as a user or group. PrincipalIds are GUIDs (For example,
-     *        f81d4fae-7dec-11d0-a765-00a0c91e6bf6). For more information about PrincipalIds in AWS SSO, see the <a
-     *        href="/singlesignon/latest/IdentityStoreAPIReference/welcome.html">AWS SSO Identity Store API
-     *        Reference</a>.
+     *        An identifier for an object in Amazon Web Services SSO, such as a user or group. PrincipalIds are GUIDs
+     *        (For example, f81d4fae-7dec-11d0-a765-00a0c91e6bf6). For more information about PrincipalIds in Amazon Web
+     *        Services SSO, see the <a href="/singlesignon/latest/IdentityStoreAPIReference/welcome.html">Amazon Web
+     *        Services SSO Identity Store API Reference</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

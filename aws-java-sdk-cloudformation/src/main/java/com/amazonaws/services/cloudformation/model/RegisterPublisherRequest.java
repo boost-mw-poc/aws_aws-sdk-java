@@ -27,8 +27,10 @@ public class RegisterPublisherRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * Whether you accept the terms and conditions for publishing extensions in the CloudFormation registry. You must
-     * accept the terms and conditions in order to register to publish public extensions to the CloudFormation registry.
+     * Whether you accept the <a href=
+     * "https://cloudformation-registry-documents.s3.amazonaws.com/Terms_and_Conditions_for_AWS_CloudFormation_Registry_Publishers.pdf"
+     * >Terms and Conditions</a> for publishing extensions in the CloudFormation registry. You must accept the terms and
+     * conditions in order to register to publish public extensions to the CloudFormation registry.
      * </p>
      * <p>
      * The default is <code>false</code>.
@@ -50,17 +52,20 @@ public class RegisterPublisherRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * Whether you accept the terms and conditions for publishing extensions in the CloudFormation registry. You must
-     * accept the terms and conditions in order to register to publish public extensions to the CloudFormation registry.
+     * Whether you accept the <a href=
+     * "https://cloudformation-registry-documents.s3.amazonaws.com/Terms_and_Conditions_for_AWS_CloudFormation_Registry_Publishers.pdf"
+     * >Terms and Conditions</a> for publishing extensions in the CloudFormation registry. You must accept the terms and
+     * conditions in order to register to publish public extensions to the CloudFormation registry.
      * </p>
      * <p>
      * The default is <code>false</code>.
      * </p>
      * 
      * @param acceptTermsAndConditions
-     *        Whether you accept the terms and conditions for publishing extensions in the CloudFormation registry. You
-     *        must accept the terms and conditions in order to register to publish public extensions to the
-     *        CloudFormation registry.</p>
+     *        Whether you accept the <a href=
+     *        "https://cloudformation-registry-documents.s3.amazonaws.com/Terms_and_Conditions_for_AWS_CloudFormation_Registry_Publishers.pdf"
+     *        >Terms and Conditions</a> for publishing extensions in the CloudFormation registry. You must accept the
+     *        terms and conditions in order to register to publish public extensions to the CloudFormation registry.</p>
      *        <p>
      *        The default is <code>false</code>.
      */
@@ -71,16 +76,20 @@ public class RegisterPublisherRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * Whether you accept the terms and conditions for publishing extensions in the CloudFormation registry. You must
-     * accept the terms and conditions in order to register to publish public extensions to the CloudFormation registry.
+     * Whether you accept the <a href=
+     * "https://cloudformation-registry-documents.s3.amazonaws.com/Terms_and_Conditions_for_AWS_CloudFormation_Registry_Publishers.pdf"
+     * >Terms and Conditions</a> for publishing extensions in the CloudFormation registry. You must accept the terms and
+     * conditions in order to register to publish public extensions to the CloudFormation registry.
      * </p>
      * <p>
      * The default is <code>false</code>.
      * </p>
      * 
-     * @return Whether you accept the terms and conditions for publishing extensions in the CloudFormation registry. You
-     *         must accept the terms and conditions in order to register to publish public extensions to the
-     *         CloudFormation registry.</p>
+     * @return Whether you accept the <a href=
+     *         "https://cloudformation-registry-documents.s3.amazonaws.com/Terms_and_Conditions_for_AWS_CloudFormation_Registry_Publishers.pdf"
+     *         >Terms and Conditions</a> for publishing extensions in the CloudFormation registry. You must accept the
+     *         terms and conditions in order to register to publish public extensions to the CloudFormation
+     *         registry.</p>
      *         <p>
      *         The default is <code>false</code>.
      */
@@ -91,17 +100,20 @@ public class RegisterPublisherRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * Whether you accept the terms and conditions for publishing extensions in the CloudFormation registry. You must
-     * accept the terms and conditions in order to register to publish public extensions to the CloudFormation registry.
+     * Whether you accept the <a href=
+     * "https://cloudformation-registry-documents.s3.amazonaws.com/Terms_and_Conditions_for_AWS_CloudFormation_Registry_Publishers.pdf"
+     * >Terms and Conditions</a> for publishing extensions in the CloudFormation registry. You must accept the terms and
+     * conditions in order to register to publish public extensions to the CloudFormation registry.
      * </p>
      * <p>
      * The default is <code>false</code>.
      * </p>
      * 
      * @param acceptTermsAndConditions
-     *        Whether you accept the terms and conditions for publishing extensions in the CloudFormation registry. You
-     *        must accept the terms and conditions in order to register to publish public extensions to the
-     *        CloudFormation registry.</p>
+     *        Whether you accept the <a href=
+     *        "https://cloudformation-registry-documents.s3.amazonaws.com/Terms_and_Conditions_for_AWS_CloudFormation_Registry_Publishers.pdf"
+     *        >Terms and Conditions</a> for publishing extensions in the CloudFormation registry. You must accept the
+     *        terms and conditions in order to register to publish public extensions to the CloudFormation registry.</p>
      *        <p>
      *        The default is <code>false</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -114,16 +126,20 @@ public class RegisterPublisherRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * Whether you accept the terms and conditions for publishing extensions in the CloudFormation registry. You must
-     * accept the terms and conditions in order to register to publish public extensions to the CloudFormation registry.
+     * Whether you accept the <a href=
+     * "https://cloudformation-registry-documents.s3.amazonaws.com/Terms_and_Conditions_for_AWS_CloudFormation_Registry_Publishers.pdf"
+     * >Terms and Conditions</a> for publishing extensions in the CloudFormation registry. You must accept the terms and
+     * conditions in order to register to publish public extensions to the CloudFormation registry.
      * </p>
      * <p>
      * The default is <code>false</code>.
      * </p>
      * 
-     * @return Whether you accept the terms and conditions for publishing extensions in the CloudFormation registry. You
-     *         must accept the terms and conditions in order to register to publish public extensions to the
-     *         CloudFormation registry.</p>
+     * @return Whether you accept the <a href=
+     *         "https://cloudformation-registry-documents.s3.amazonaws.com/Terms_and_Conditions_for_AWS_CloudFormation_Registry_Publishers.pdf"
+     *         >Terms and Conditions</a> for publishing extensions in the CloudFormation registry. You must accept the
+     *         terms and conditions in order to register to publish public extensions to the CloudFormation
+     *         registry.</p>
      *         <p>
      *         The default is <code>false</code>.
      */

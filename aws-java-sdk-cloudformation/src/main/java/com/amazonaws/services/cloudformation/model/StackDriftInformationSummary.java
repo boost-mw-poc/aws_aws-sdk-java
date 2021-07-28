@@ -41,7 +41,7 @@ public class StackDriftInformationSummary implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>NOT_CHECKED</code>: AWS CloudFormation has not checked if the stack differs from its expected template
+     * <code>NOT_CHECKED</code>: CloudFormation has not checked if the stack differs from its expected template
      * configuration.
      * </p>
      * </li>
@@ -79,7 +79,7 @@ public class StackDriftInformationSummary implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>NOT_CHECKED</code>: AWS CloudFormation has not checked if the stack differs from its expected template
+     * <code>NOT_CHECKED</code>: CloudFormation has not checked if the stack differs from its expected template
      * configuration.
      * </p>
      * </li>
@@ -106,8 +106,8 @@ public class StackDriftInformationSummary implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>NOT_CHECKED</code>: AWS CloudFormation has not checked if the stack differs from its expected
-     *        template configuration.
+     *        <code>NOT_CHECKED</code>: CloudFormation has not checked if the stack differs from its expected template
+     *        configuration.
      *        </p>
      *        </li>
      *        <li>
@@ -140,7 +140,7 @@ public class StackDriftInformationSummary implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>NOT_CHECKED</code>: AWS CloudFormation has not checked if the stack differs from its expected template
+     * <code>NOT_CHECKED</code>: CloudFormation has not checked if the stack differs from its expected template
      * configuration.
      * </p>
      * </li>
@@ -166,8 +166,8 @@ public class StackDriftInformationSummary implements Serializable, Cloneable {
      *         </li>
      *         <li>
      *         <p>
-     *         <code>NOT_CHECKED</code>: AWS CloudFormation has not checked if the stack differs from its expected
-     *         template configuration.
+     *         <code>NOT_CHECKED</code>: CloudFormation has not checked if the stack differs from its expected template
+     *         configuration.
      *         </p>
      *         </li>
      *         <li>
@@ -200,7 +200,7 @@ public class StackDriftInformationSummary implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>NOT_CHECKED</code>: AWS CloudFormation has not checked if the stack differs from its expected template
+     * <code>NOT_CHECKED</code>: CloudFormation has not checked if the stack differs from its expected template
      * configuration.
      * </p>
      * </li>
@@ -227,8 +227,8 @@ public class StackDriftInformationSummary implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>NOT_CHECKED</code>: AWS CloudFormation has not checked if the stack differs from its expected
-     *        template configuration.
+     *        <code>NOT_CHECKED</code>: CloudFormation has not checked if the stack differs from its expected template
+     *        configuration.
      *        </p>
      *        </li>
      *        <li>
@@ -263,7 +263,7 @@ public class StackDriftInformationSummary implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>NOT_CHECKED</code>: AWS CloudFormation has not checked if the stack differs from its expected template
+     * <code>NOT_CHECKED</code>: CloudFormation has not checked if the stack differs from its expected template
      * configuration.
      * </p>
      * </li>
@@ -290,8 +290,8 @@ public class StackDriftInformationSummary implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>NOT_CHECKED</code>: AWS CloudFormation has not checked if the stack differs from its expected
-     *        template configuration.
+     *        <code>NOT_CHECKED</code>: CloudFormation has not checked if the stack differs from its expected template
+     *        configuration.
      *        </p>
      *        </li>
      *        <li>

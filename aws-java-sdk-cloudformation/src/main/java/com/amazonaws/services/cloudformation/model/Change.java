@@ -17,8 +17,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The <code>Change</code> structure describes the changes AWS CloudFormation will perform if you execute the change
- * set.
+ * The <code>Change</code> structure describes the changes CloudFormation will perform if you execute the change set.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/Change" target="_top">AWS API
@@ -29,26 +28,24 @@ public class Change implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The type of entity that AWS CloudFormation changes. Currently, the only entity type is <code>Resource</code>.
+     * The type of entity that CloudFormation changes. Currently, the only entity type is <code>Resource</code>.
      * </p>
      */
     private String type;
     /**
      * <p>
-     * A <code>ResourceChange</code> structure that describes the resource and action that AWS CloudFormation will
-     * perform.
+     * A <code>ResourceChange</code> structure that describes the resource and action that CloudFormation will perform.
      * </p>
      */
     private ResourceChange resourceChange;
 
     /**
      * <p>
-     * The type of entity that AWS CloudFormation changes. Currently, the only entity type is <code>Resource</code>.
+     * The type of entity that CloudFormation changes. Currently, the only entity type is <code>Resource</code>.
      * </p>
      * 
      * @param type
-     *        The type of entity that AWS CloudFormation changes. Currently, the only entity type is
-     *        <code>Resource</code>.
+     *        The type of entity that CloudFormation changes. Currently, the only entity type is <code>Resource</code>.
      * @see ChangeType
      */
 
@@ -58,11 +55,10 @@ public class Change implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The type of entity that AWS CloudFormation changes. Currently, the only entity type is <code>Resource</code>.
+     * The type of entity that CloudFormation changes. Currently, the only entity type is <code>Resource</code>.
      * </p>
      * 
-     * @return The type of entity that AWS CloudFormation changes. Currently, the only entity type is
-     *         <code>Resource</code>.
+     * @return The type of entity that CloudFormation changes. Currently, the only entity type is <code>Resource</code>.
      * @see ChangeType
      */
 
@@ -72,12 +68,11 @@ public class Change implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The type of entity that AWS CloudFormation changes. Currently, the only entity type is <code>Resource</code>.
+     * The type of entity that CloudFormation changes. Currently, the only entity type is <code>Resource</code>.
      * </p>
      * 
      * @param type
-     *        The type of entity that AWS CloudFormation changes. Currently, the only entity type is
-     *        <code>Resource</code>.
+     *        The type of entity that CloudFormation changes. Currently, the only entity type is <code>Resource</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ChangeType
      */
@@ -89,12 +84,11 @@ public class Change implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The type of entity that AWS CloudFormation changes. Currently, the only entity type is <code>Resource</code>.
+     * The type of entity that CloudFormation changes. Currently, the only entity type is <code>Resource</code>.
      * </p>
      * 
      * @param type
-     *        The type of entity that AWS CloudFormation changes. Currently, the only entity type is
-     *        <code>Resource</code>.
+     *        The type of entity that CloudFormation changes. Currently, the only entity type is <code>Resource</code>.
      * @see ChangeType
      */
 
@@ -104,12 +98,11 @@ public class Change implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The type of entity that AWS CloudFormation changes. Currently, the only entity type is <code>Resource</code>.
+     * The type of entity that CloudFormation changes. Currently, the only entity type is <code>Resource</code>.
      * </p>
      * 
      * @param type
-     *        The type of entity that AWS CloudFormation changes. Currently, the only entity type is
-     *        <code>Resource</code>.
+     *        The type of entity that CloudFormation changes. Currently, the only entity type is <code>Resource</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ChangeType
      */
@@ -121,13 +114,12 @@ public class Change implements Serializable, Cloneable {
 
     /**
      * <p>
-     * A <code>ResourceChange</code> structure that describes the resource and action that AWS CloudFormation will
-     * perform.
+     * A <code>ResourceChange</code> structure that describes the resource and action that CloudFormation will perform.
      * </p>
      * 
      * @param resourceChange
-     *        A <code>ResourceChange</code> structure that describes the resource and action that AWS CloudFormation
-     *        will perform.
+     *        A <code>ResourceChange</code> structure that describes the resource and action that CloudFormation will
+     *        perform.
      */
 
     public void setResourceChange(ResourceChange resourceChange) {
@@ -136,12 +128,11 @@ public class Change implements Serializable, Cloneable {
 
     /**
      * <p>
-     * A <code>ResourceChange</code> structure that describes the resource and action that AWS CloudFormation will
-     * perform.
+     * A <code>ResourceChange</code> structure that describes the resource and action that CloudFormation will perform.
      * </p>
      * 
-     * @return A <code>ResourceChange</code> structure that describes the resource and action that AWS CloudFormation
-     *         will perform.
+     * @return A <code>ResourceChange</code> structure that describes the resource and action that CloudFormation will
+     *         perform.
      */
 
     public ResourceChange getResourceChange() {
@@ -150,13 +141,12 @@ public class Change implements Serializable, Cloneable {
 
     /**
      * <p>
-     * A <code>ResourceChange</code> structure that describes the resource and action that AWS CloudFormation will
-     * perform.
+     * A <code>ResourceChange</code> structure that describes the resource and action that CloudFormation will perform.
      * </p>
      * 
      * @param resourceChange
-     *        A <code>ResourceChange</code> structure that describes the resource and action that AWS CloudFormation
-     *        will perform.
+     *        A <code>ResourceChange</code> structure that describes the resource and action that CloudFormation will
+     *        perform.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

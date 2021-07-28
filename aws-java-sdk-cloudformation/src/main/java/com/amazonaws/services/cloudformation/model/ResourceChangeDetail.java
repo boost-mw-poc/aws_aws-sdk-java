@@ -18,7 +18,7 @@ import javax.annotation.Generated;
 /**
  * <p>
  * For a resource with <code>Modify</code> as the action, the <code>ResourceChange</code> structure describes the
- * changes AWS CloudFormation will make to that resource.
+ * changes CloudFormation will make to that resource.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/ResourceChangeDetail"
@@ -29,19 +29,19 @@ public class ResourceChangeDetail implements Serializable, Cloneable {
 
     /**
      * <p>
-     * A <code>ResourceTargetDefinition</code> structure that describes the field that AWS CloudFormation will change
-     * and whether the resource will be recreated.
+     * A <code>ResourceTargetDefinition</code> structure that describes the field that CloudFormation will change and
+     * whether the resource will be recreated.
      * </p>
      */
     private ResourceTargetDefinition target;
     /**
      * <p>
-     * Indicates whether AWS CloudFormation can determine the target value, and whether the target value will change
-     * before you execute a change set.
+     * Indicates whether CloudFormation can determine the target value, and whether the target value will change before
+     * you execute a change set.
      * </p>
      * <p>
-     * For <code>Static</code> evaluations, AWS CloudFormation can determine that the target value will change, and its
-     * value. For example, if you directly modify the <code>InstanceType</code> property of an EC2 instance, AWS
+     * For <code>Static</code> evaluations, CloudFormation can determine that the target value will change, and its
+     * value. For example, if you directly modify the <code>InstanceType</code> property of an EC2 instance,
      * CloudFormation knows that this property value will change, and its value, so this is a <code>Static</code>
      * evaluation.
      * </p>
@@ -86,10 +86,10 @@ public class ResourceChangeDetail implements Serializable, Cloneable {
      * <li>
      * <p>
      * <code>Automatic</code> entities are <code>AWS::CloudFormation::Stack</code> resource types, which are also known
-     * as nested stacks. If you made no changes to the <code>AWS::CloudFormation::Stack</code> resource, AWS
-     * CloudFormation sets the <code>ChangeSource</code> to <code>Automatic</code> because the nested stack's template
-     * might have changed. Changes to a nested stack's template aren't visible to AWS CloudFormation until you run an
-     * update on the parent stack.
+     * as nested stacks. If you made no changes to the <code>AWS::CloudFormation::Stack</code> resource, CloudFormation
+     * sets the <code>ChangeSource</code> to <code>Automatic</code> because the nested stack's template might have
+     * changed. Changes to a nested stack's template aren't visible to CloudFormation until you run an update on the
+     * parent stack.
      * </p>
      * </li>
      * </ul>
@@ -110,13 +110,13 @@ public class ResourceChangeDetail implements Serializable, Cloneable {
 
     /**
      * <p>
-     * A <code>ResourceTargetDefinition</code> structure that describes the field that AWS CloudFormation will change
-     * and whether the resource will be recreated.
+     * A <code>ResourceTargetDefinition</code> structure that describes the field that CloudFormation will change and
+     * whether the resource will be recreated.
      * </p>
      * 
      * @param target
-     *        A <code>ResourceTargetDefinition</code> structure that describes the field that AWS CloudFormation will
-     *        change and whether the resource will be recreated.
+     *        A <code>ResourceTargetDefinition</code> structure that describes the field that CloudFormation will change
+     *        and whether the resource will be recreated.
      */
 
     public void setTarget(ResourceTargetDefinition target) {
@@ -125,11 +125,11 @@ public class ResourceChangeDetail implements Serializable, Cloneable {
 
     /**
      * <p>
-     * A <code>ResourceTargetDefinition</code> structure that describes the field that AWS CloudFormation will change
-     * and whether the resource will be recreated.
+     * A <code>ResourceTargetDefinition</code> structure that describes the field that CloudFormation will change and
+     * whether the resource will be recreated.
      * </p>
      * 
-     * @return A <code>ResourceTargetDefinition</code> structure that describes the field that AWS CloudFormation will
+     * @return A <code>ResourceTargetDefinition</code> structure that describes the field that CloudFormation will
      *         change and whether the resource will be recreated.
      */
 
@@ -139,13 +139,13 @@ public class ResourceChangeDetail implements Serializable, Cloneable {
 
     /**
      * <p>
-     * A <code>ResourceTargetDefinition</code> structure that describes the field that AWS CloudFormation will change
-     * and whether the resource will be recreated.
+     * A <code>ResourceTargetDefinition</code> structure that describes the field that CloudFormation will change and
+     * whether the resource will be recreated.
      * </p>
      * 
      * @param target
-     *        A <code>ResourceTargetDefinition</code> structure that describes the field that AWS CloudFormation will
-     *        change and whether the resource will be recreated.
+     *        A <code>ResourceTargetDefinition</code> structure that describes the field that CloudFormation will change
+     *        and whether the resource will be recreated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -156,12 +156,12 @@ public class ResourceChangeDetail implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Indicates whether AWS CloudFormation can determine the target value, and whether the target value will change
-     * before you execute a change set.
+     * Indicates whether CloudFormation can determine the target value, and whether the target value will change before
+     * you execute a change set.
      * </p>
      * <p>
-     * For <code>Static</code> evaluations, AWS CloudFormation can determine that the target value will change, and its
-     * value. For example, if you directly modify the <code>InstanceType</code> property of an EC2 instance, AWS
+     * For <code>Static</code> evaluations, CloudFormation can determine that the target value will change, and its
+     * value. For example, if you directly modify the <code>InstanceType</code> property of an EC2 instance,
      * CloudFormation knows that this property value will change, and its value, so this is a <code>Static</code>
      * evaluation.
      * </p>
@@ -175,13 +175,13 @@ public class ResourceChangeDetail implements Serializable, Cloneable {
      * </p>
      * 
      * @param evaluation
-     *        Indicates whether AWS CloudFormation can determine the target value, and whether the target value will
-     *        change before you execute a change set.</p>
+     *        Indicates whether CloudFormation can determine the target value, and whether the target value will change
+     *        before you execute a change set.</p>
      *        <p>
-     *        For <code>Static</code> evaluations, AWS CloudFormation can determine that the target value will change,
-     *        and its value. For example, if you directly modify the <code>InstanceType</code> property of an EC2
-     *        instance, AWS CloudFormation knows that this property value will change, and its value, so this is a
-     *        <code>Static</code> evaluation.
+     *        For <code>Static</code> evaluations, CloudFormation can determine that the target value will change, and
+     *        its value. For example, if you directly modify the <code>InstanceType</code> property of an EC2 instance,
+     *        CloudFormation knows that this property value will change, and its value, so this is a <code>Static</code>
+     *        evaluation.
      *        </p>
      *        <p>
      *        For <code>Dynamic</code> evaluations, cannot determine the target value because it depends on the result
@@ -199,12 +199,12 @@ public class ResourceChangeDetail implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Indicates whether AWS CloudFormation can determine the target value, and whether the target value will change
-     * before you execute a change set.
+     * Indicates whether CloudFormation can determine the target value, and whether the target value will change before
+     * you execute a change set.
      * </p>
      * <p>
-     * For <code>Static</code> evaluations, AWS CloudFormation can determine that the target value will change, and its
-     * value. For example, if you directly modify the <code>InstanceType</code> property of an EC2 instance, AWS
+     * For <code>Static</code> evaluations, CloudFormation can determine that the target value will change, and its
+     * value. For example, if you directly modify the <code>InstanceType</code> property of an EC2 instance,
      * CloudFormation knows that this property value will change, and its value, so this is a <code>Static</code>
      * evaluation.
      * </p>
@@ -217,12 +217,12 @@ public class ResourceChangeDetail implements Serializable, Cloneable {
      * updated.
      * </p>
      * 
-     * @return Indicates whether AWS CloudFormation can determine the target value, and whether the target value will
-     *         change before you execute a change set.</p>
+     * @return Indicates whether CloudFormation can determine the target value, and whether the target value will change
+     *         before you execute a change set.</p>
      *         <p>
-     *         For <code>Static</code> evaluations, AWS CloudFormation can determine that the target value will change,
-     *         and its value. For example, if you directly modify the <code>InstanceType</code> property of an EC2
-     *         instance, AWS CloudFormation knows that this property value will change, and its value, so this is a
+     *         For <code>Static</code> evaluations, CloudFormation can determine that the target value will change, and
+     *         its value. For example, if you directly modify the <code>InstanceType</code> property of an EC2 instance,
+     *         CloudFormation knows that this property value will change, and its value, so this is a
      *         <code>Static</code> evaluation.
      *         </p>
      *         <p>
@@ -241,12 +241,12 @@ public class ResourceChangeDetail implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Indicates whether AWS CloudFormation can determine the target value, and whether the target value will change
-     * before you execute a change set.
+     * Indicates whether CloudFormation can determine the target value, and whether the target value will change before
+     * you execute a change set.
      * </p>
      * <p>
-     * For <code>Static</code> evaluations, AWS CloudFormation can determine that the target value will change, and its
-     * value. For example, if you directly modify the <code>InstanceType</code> property of an EC2 instance, AWS
+     * For <code>Static</code> evaluations, CloudFormation can determine that the target value will change, and its
+     * value. For example, if you directly modify the <code>InstanceType</code> property of an EC2 instance,
      * CloudFormation knows that this property value will change, and its value, so this is a <code>Static</code>
      * evaluation.
      * </p>
@@ -260,13 +260,13 @@ public class ResourceChangeDetail implements Serializable, Cloneable {
      * </p>
      * 
      * @param evaluation
-     *        Indicates whether AWS CloudFormation can determine the target value, and whether the target value will
-     *        change before you execute a change set.</p>
+     *        Indicates whether CloudFormation can determine the target value, and whether the target value will change
+     *        before you execute a change set.</p>
      *        <p>
-     *        For <code>Static</code> evaluations, AWS CloudFormation can determine that the target value will change,
-     *        and its value. For example, if you directly modify the <code>InstanceType</code> property of an EC2
-     *        instance, AWS CloudFormation knows that this property value will change, and its value, so this is a
-     *        <code>Static</code> evaluation.
+     *        For <code>Static</code> evaluations, CloudFormation can determine that the target value will change, and
+     *        its value. For example, if you directly modify the <code>InstanceType</code> property of an EC2 instance,
+     *        CloudFormation knows that this property value will change, and its value, so this is a <code>Static</code>
+     *        evaluation.
      *        </p>
      *        <p>
      *        For <code>Dynamic</code> evaluations, cannot determine the target value because it depends on the result
@@ -286,12 +286,12 @@ public class ResourceChangeDetail implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Indicates whether AWS CloudFormation can determine the target value, and whether the target value will change
-     * before you execute a change set.
+     * Indicates whether CloudFormation can determine the target value, and whether the target value will change before
+     * you execute a change set.
      * </p>
      * <p>
-     * For <code>Static</code> evaluations, AWS CloudFormation can determine that the target value will change, and its
-     * value. For example, if you directly modify the <code>InstanceType</code> property of an EC2 instance, AWS
+     * For <code>Static</code> evaluations, CloudFormation can determine that the target value will change, and its
+     * value. For example, if you directly modify the <code>InstanceType</code> property of an EC2 instance,
      * CloudFormation knows that this property value will change, and its value, so this is a <code>Static</code>
      * evaluation.
      * </p>
@@ -305,13 +305,13 @@ public class ResourceChangeDetail implements Serializable, Cloneable {
      * </p>
      * 
      * @param evaluation
-     *        Indicates whether AWS CloudFormation can determine the target value, and whether the target value will
-     *        change before you execute a change set.</p>
+     *        Indicates whether CloudFormation can determine the target value, and whether the target value will change
+     *        before you execute a change set.</p>
      *        <p>
-     *        For <code>Static</code> evaluations, AWS CloudFormation can determine that the target value will change,
-     *        and its value. For example, if you directly modify the <code>InstanceType</code> property of an EC2
-     *        instance, AWS CloudFormation knows that this property value will change, and its value, so this is a
-     *        <code>Static</code> evaluation.
+     *        For <code>Static</code> evaluations, CloudFormation can determine that the target value will change, and
+     *        its value. For example, if you directly modify the <code>InstanceType</code> property of an EC2 instance,
+     *        CloudFormation knows that this property value will change, and its value, so this is a <code>Static</code>
+     *        evaluation.
      *        </p>
      *        <p>
      *        For <code>Dynamic</code> evaluations, cannot determine the target value because it depends on the result
@@ -329,12 +329,12 @@ public class ResourceChangeDetail implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Indicates whether AWS CloudFormation can determine the target value, and whether the target value will change
-     * before you execute a change set.
+     * Indicates whether CloudFormation can determine the target value, and whether the target value will change before
+     * you execute a change set.
      * </p>
      * <p>
-     * For <code>Static</code> evaluations, AWS CloudFormation can determine that the target value will change, and its
-     * value. For example, if you directly modify the <code>InstanceType</code> property of an EC2 instance, AWS
+     * For <code>Static</code> evaluations, CloudFormation can determine that the target value will change, and its
+     * value. For example, if you directly modify the <code>InstanceType</code> property of an EC2 instance,
      * CloudFormation knows that this property value will change, and its value, so this is a <code>Static</code>
      * evaluation.
      * </p>
@@ -348,13 +348,13 @@ public class ResourceChangeDetail implements Serializable, Cloneable {
      * </p>
      * 
      * @param evaluation
-     *        Indicates whether AWS CloudFormation can determine the target value, and whether the target value will
-     *        change before you execute a change set.</p>
+     *        Indicates whether CloudFormation can determine the target value, and whether the target value will change
+     *        before you execute a change set.</p>
      *        <p>
-     *        For <code>Static</code> evaluations, AWS CloudFormation can determine that the target value will change,
-     *        and its value. For example, if you directly modify the <code>InstanceType</code> property of an EC2
-     *        instance, AWS CloudFormation knows that this property value will change, and its value, so this is a
-     *        <code>Static</code> evaluation.
+     *        For <code>Static</code> evaluations, CloudFormation can determine that the target value will change, and
+     *        its value. For example, if you directly modify the <code>InstanceType</code> property of an EC2 instance,
+     *        CloudFormation knows that this property value will change, and its value, so this is a <code>Static</code>
+     *        evaluation.
      *        </p>
      *        <p>
      *        For <code>Dynamic</code> evaluations, cannot determine the target value because it depends on the result
@@ -403,10 +403,10 @@ public class ResourceChangeDetail implements Serializable, Cloneable {
      * <li>
      * <p>
      * <code>Automatic</code> entities are <code>AWS::CloudFormation::Stack</code> resource types, which are also known
-     * as nested stacks. If you made no changes to the <code>AWS::CloudFormation::Stack</code> resource, AWS
-     * CloudFormation sets the <code>ChangeSource</code> to <code>Automatic</code> because the nested stack's template
-     * might have changed. Changes to a nested stack's template aren't visible to AWS CloudFormation until you run an
-     * update on the parent stack.
+     * as nested stacks. If you made no changes to the <code>AWS::CloudFormation::Stack</code> resource, CloudFormation
+     * sets the <code>ChangeSource</code> to <code>Automatic</code> because the nested stack's template might have
+     * changed. Changes to a nested stack's template aren't visible to CloudFormation until you run an update on the
+     * parent stack.
      * </p>
      * </li>
      * </ul>
@@ -441,9 +441,9 @@ public class ResourceChangeDetail implements Serializable, Cloneable {
      *        <p>
      *        <code>Automatic</code> entities are <code>AWS::CloudFormation::Stack</code> resource types, which are also
      *        known as nested stacks. If you made no changes to the <code>AWS::CloudFormation::Stack</code> resource,
-     *        AWS CloudFormation sets the <code>ChangeSource</code> to <code>Automatic</code> because the nested stack's
-     *        template might have changed. Changes to a nested stack's template aren't visible to AWS CloudFormation
-     *        until you run an update on the parent stack.
+     *        CloudFormation sets the <code>ChangeSource</code> to <code>Automatic</code> because the nested stack's
+     *        template might have changed. Changes to a nested stack's template aren't visible to CloudFormation until
+     *        you run an update on the parent stack.
      *        </p>
      *        </li>
      * @see ChangeSource
@@ -484,10 +484,10 @@ public class ResourceChangeDetail implements Serializable, Cloneable {
      * <li>
      * <p>
      * <code>Automatic</code> entities are <code>AWS::CloudFormation::Stack</code> resource types, which are also known
-     * as nested stacks. If you made no changes to the <code>AWS::CloudFormation::Stack</code> resource, AWS
-     * CloudFormation sets the <code>ChangeSource</code> to <code>Automatic</code> because the nested stack's template
-     * might have changed. Changes to a nested stack's template aren't visible to AWS CloudFormation until you run an
-     * update on the parent stack.
+     * as nested stacks. If you made no changes to the <code>AWS::CloudFormation::Stack</code> resource, CloudFormation
+     * sets the <code>ChangeSource</code> to <code>Automatic</code> because the nested stack's template might have
+     * changed. Changes to a nested stack's template aren't visible to CloudFormation until you run an update on the
+     * parent stack.
      * </p>
      * </li>
      * </ul>
@@ -521,8 +521,8 @@ public class ResourceChangeDetail implements Serializable, Cloneable {
      *         <p>
      *         <code>Automatic</code> entities are <code>AWS::CloudFormation::Stack</code> resource types, which are
      *         also known as nested stacks. If you made no changes to the <code>AWS::CloudFormation::Stack</code>
-     *         resource, AWS CloudFormation sets the <code>ChangeSource</code> to <code>Automatic</code> because the
-     *         nested stack's template might have changed. Changes to a nested stack's template aren't visible to AWS
+     *         resource, CloudFormation sets the <code>ChangeSource</code> to <code>Automatic</code> because the nested
+     *         stack's template might have changed. Changes to a nested stack's template aren't visible to
      *         CloudFormation until you run an update on the parent stack.
      *         </p>
      *         </li>
@@ -564,10 +564,10 @@ public class ResourceChangeDetail implements Serializable, Cloneable {
      * <li>
      * <p>
      * <code>Automatic</code> entities are <code>AWS::CloudFormation::Stack</code> resource types, which are also known
-     * as nested stacks. If you made no changes to the <code>AWS::CloudFormation::Stack</code> resource, AWS
-     * CloudFormation sets the <code>ChangeSource</code> to <code>Automatic</code> because the nested stack's template
-     * might have changed. Changes to a nested stack's template aren't visible to AWS CloudFormation until you run an
-     * update on the parent stack.
+     * as nested stacks. If you made no changes to the <code>AWS::CloudFormation::Stack</code> resource, CloudFormation
+     * sets the <code>ChangeSource</code> to <code>Automatic</code> because the nested stack's template might have
+     * changed. Changes to a nested stack's template aren't visible to CloudFormation until you run an update on the
+     * parent stack.
      * </p>
      * </li>
      * </ul>
@@ -602,9 +602,9 @@ public class ResourceChangeDetail implements Serializable, Cloneable {
      *        <p>
      *        <code>Automatic</code> entities are <code>AWS::CloudFormation::Stack</code> resource types, which are also
      *        known as nested stacks. If you made no changes to the <code>AWS::CloudFormation::Stack</code> resource,
-     *        AWS CloudFormation sets the <code>ChangeSource</code> to <code>Automatic</code> because the nested stack's
-     *        template might have changed. Changes to a nested stack's template aren't visible to AWS CloudFormation
-     *        until you run an update on the parent stack.
+     *        CloudFormation sets the <code>ChangeSource</code> to <code>Automatic</code> because the nested stack's
+     *        template might have changed. Changes to a nested stack's template aren't visible to CloudFormation until
+     *        you run an update on the parent stack.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -647,10 +647,10 @@ public class ResourceChangeDetail implements Serializable, Cloneable {
      * <li>
      * <p>
      * <code>Automatic</code> entities are <code>AWS::CloudFormation::Stack</code> resource types, which are also known
-     * as nested stacks. If you made no changes to the <code>AWS::CloudFormation::Stack</code> resource, AWS
-     * CloudFormation sets the <code>ChangeSource</code> to <code>Automatic</code> because the nested stack's template
-     * might have changed. Changes to a nested stack's template aren't visible to AWS CloudFormation until you run an
-     * update on the parent stack.
+     * as nested stacks. If you made no changes to the <code>AWS::CloudFormation::Stack</code> resource, CloudFormation
+     * sets the <code>ChangeSource</code> to <code>Automatic</code> because the nested stack's template might have
+     * changed. Changes to a nested stack's template aren't visible to CloudFormation until you run an update on the
+     * parent stack.
      * </p>
      * </li>
      * </ul>
@@ -685,9 +685,9 @@ public class ResourceChangeDetail implements Serializable, Cloneable {
      *        <p>
      *        <code>Automatic</code> entities are <code>AWS::CloudFormation::Stack</code> resource types, which are also
      *        known as nested stacks. If you made no changes to the <code>AWS::CloudFormation::Stack</code> resource,
-     *        AWS CloudFormation sets the <code>ChangeSource</code> to <code>Automatic</code> because the nested stack's
-     *        template might have changed. Changes to a nested stack's template aren't visible to AWS CloudFormation
-     *        until you run an update on the parent stack.
+     *        CloudFormation sets the <code>ChangeSource</code> to <code>Automatic</code> because the nested stack's
+     *        template might have changed. Changes to a nested stack's template aren't visible to CloudFormation until
+     *        you run an update on the parent stack.
      *        </p>
      *        </li>
      * @see ChangeSource
@@ -728,10 +728,10 @@ public class ResourceChangeDetail implements Serializable, Cloneable {
      * <li>
      * <p>
      * <code>Automatic</code> entities are <code>AWS::CloudFormation::Stack</code> resource types, which are also known
-     * as nested stacks. If you made no changes to the <code>AWS::CloudFormation::Stack</code> resource, AWS
-     * CloudFormation sets the <code>ChangeSource</code> to <code>Automatic</code> because the nested stack's template
-     * might have changed. Changes to a nested stack's template aren't visible to AWS CloudFormation until you run an
-     * update on the parent stack.
+     * as nested stacks. If you made no changes to the <code>AWS::CloudFormation::Stack</code> resource, CloudFormation
+     * sets the <code>ChangeSource</code> to <code>Automatic</code> because the nested stack's template might have
+     * changed. Changes to a nested stack's template aren't visible to CloudFormation until you run an update on the
+     * parent stack.
      * </p>
      * </li>
      * </ul>
@@ -766,9 +766,9 @@ public class ResourceChangeDetail implements Serializable, Cloneable {
      *        <p>
      *        <code>Automatic</code> entities are <code>AWS::CloudFormation::Stack</code> resource types, which are also
      *        known as nested stacks. If you made no changes to the <code>AWS::CloudFormation::Stack</code> resource,
-     *        AWS CloudFormation sets the <code>ChangeSource</code> to <code>Automatic</code> because the nested stack's
-     *        template might have changed. Changes to a nested stack's template aren't visible to AWS CloudFormation
-     *        until you run an update on the parent stack.
+     *        CloudFormation sets the <code>ChangeSource</code> to <code>Automatic</code> because the nested stack's
+     *        template might have changed. Changes to a nested stack's template aren't visible to CloudFormation until
+     *        you run an update on the parent stack.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

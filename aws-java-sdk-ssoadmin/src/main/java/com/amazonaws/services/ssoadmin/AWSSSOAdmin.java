@@ -25,6 +25,20 @@ import com.amazonaws.services.ssoadmin.model.*;
  * <b>Note:</b> Do not directly implement this interface, new methods are added to it regularly. Extend from
  * {@link com.amazonaws.services.ssoadmin.AbstractAWSSSOAdmin} instead.
  * </p>
+ * <p>
+ * <p>
+ * Amazon Web Services Single Sign On (SSO) is a cloud SSO service that makes it easy to centrally manage SSO access to
+ * multiple Amazon Web Services accounts and business applications. This guide provides information on SSO operations
+ * which could be used for access management of Amazon Web Services accounts. For information about Amazon Web Services
+ * SSO features, see the <a href="https://docs.aws.amazon.com/singlesignon/latest/userguide/what-is.html">Amazon Web
+ * Services Single Sign-On User Guide</a>.
+ * </p>
+ * <p>
+ * Many operations in the SSO APIs rely on identifiers for users and groups, known as principals. For more information
+ * about how to work with principals and principal IDs in Amazon Web Services SSO, see the <a
+ * href="https://docs.aws.amazon.com/singlesignon/latest/IdentityStoreAPIReference/welcome.html">Amazon Web Services SSO
+ * Identity Store API Reference</a>.
+ * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public interface AWSSSOAdmin {
@@ -44,8 +58,8 @@ public interface AWSSSOAdmin {
      * <note>
      * <p>
      * If the permission set is already referenced by one or more account assignments, you will need to call
-     * <code> <a>ProvisionPermissionSet</a> </code> after this action to apply the corresponding IAM policy updates to
-     * all assigned accounts.
+     * <code> <a>ProvisionPermissionSet</a> </code> after this operation. Calling <code>ProvisionPermissionSet</code>
+     * applies the corresponding IAM policy updates to all assigned accounts.
      * </p>
      * </note>
      * 
@@ -77,18 +91,18 @@ public interface AWSSSOAdmin {
 
     /**
      * <p>
-     * Assigns access to a principal for a specified AWS account using a specified permission set.
+     * Assigns access to a principal for a specified Amazon Web Services account using a specified permission set.
      * </p>
      * <note>
      * <p>
-     * The term <i>principal</i> here refers to a user or group that is defined in AWS SSO.
+     * The term <i>principal</i> here refers to a user or group that is defined in Amazon Web Services SSO.
      * </p>
      * </note> <note>
      * <p>
      * As part of a successful <code>CreateAccountAssignment</code> call, the specified permission set will
-     * automatically be provisioned to the account in the form of an IAM policy attached to the SSO-created IAM role. If
-     * the permission set is subsequently updated, the corresponding IAM policies attached to roles in your accounts
-     * will not be updated automatically. In this case, you will need to call
+     * automatically be provisioned to the account in the form of an IAM policy. That policy is attached to the
+     * SSO-created IAM role. If the permission set is subsequently updated, the corresponding IAM policies attached to
+     * roles in your accounts will not be updated automatically. In this case, you must call
      * <code> <a>ProvisionPermissionSet</a> </code> to make these updates.
      * </p>
      * </note>
@@ -120,10 +134,10 @@ public interface AWSSSOAdmin {
 
     /**
      * <p>
-     * Enables the attributes-based access control (ABAC) feature for the specified AWS SSO instance. You can also
-     * specify new attributes to add to your ABAC configuration during the enabling process. For more information about
-     * ABAC, see <a href="/singlesignon/latest/userguide/abac.html">Attribute-Based Access Control</a> in the <i>AWS SSO
-     * User Guide</i>.
+     * Enables the attributes-based access control (ABAC) feature for the specified Amazon Web Services SSO instance.
+     * You can also specify new attributes to add to your ABAC configuration during the enabling process. For more
+     * information about ABAC, see <a href="/singlesignon/latest/userguide/abac.html">Attribute-Based Access Control</a>
+     * in the <i>Amazon Web Services SSO User Guide</i>.
      * </p>
      * 
      * @param createInstanceAccessControlAttributeConfigurationRequest
@@ -157,7 +171,8 @@ public interface AWSSSOAdmin {
      * </p>
      * <note>
      * <p>
-     * To grant users and groups access to AWS account resources, use <code> <a>CreateAccountAssignment</a> </code>.
+     * To grant users and groups access to Amazon Web Services account resources, use
+     * <code> <a>CreateAccountAssignment</a> </code>.
      * </p>
      * </note>
      * 
@@ -188,7 +203,7 @@ public interface AWSSSOAdmin {
 
     /**
      * <p>
-     * Deletes a principal's access from a specified AWS account using a specified permission set.
+     * Deletes a principal's access from a specified Amazon Web Services account using a specified permission set.
      * </p>
      * 
      * @param deleteAccountAssignmentRequest
@@ -245,11 +260,11 @@ public interface AWSSSOAdmin {
 
     /**
      * <p>
-     * Disables the attributes-based access control (ABAC) feature for the specified AWS SSO instance and deletes all of
-     * the attribute mappings that have been configured. Once deleted, any attributes that are received from an identity
-     * source and any custom attributes you have previously configured will not be passed. For more information about
-     * ABAC, see <a href="/singlesignon/latest/userguide/abac.html">Attribute-Based Access Control</a> in the <i>AWS SSO
-     * User Guide</i>.
+     * Disables the attributes-based access control (ABAC) feature for the specified Amazon Web Services SSO instance
+     * and deletes all of the attribute mappings that have been configured. Once deleted, any attributes that are
+     * received from an identity source and any custom attributes you have previously configured will not be passed. For
+     * more information about ABAC, see <a href="/singlesignon/latest/userguide/abac.html">Attribute-Based Access
+     * Control</a> in the <i>Amazon Web Services SSO User Guide</i>.
      * </p>
      * 
      * @param deleteInstanceAccessControlAttributeConfigurationRequest
@@ -359,11 +374,11 @@ public interface AWSSSOAdmin {
 
     /**
      * <p>
-     * Returns the list of AWS SSO identity store attributes that have been configured to work with attributes-based
-     * access control (ABAC) for the specified AWS SSO instance. This will not return attributes configured and sent by
-     * an external identity provider. For more information about ABAC, see <a
-     * href="/singlesignon/latest/userguide/abac.html">Attribute-Based Access Control</a> in the <i>AWS SSO User
-     * Guide</i>.
+     * Returns the list of Amazon Web Services SSO identity store attributes that have been configured to work with
+     * attributes-based access control (ABAC) for the specified Amazon Web Services SSO instance. This will not return
+     * attributes configured and sent by an external identity provider. For more information about ABAC, see <a
+     * href="/singlesignon/latest/userguide/abac.html">Attribute-Based Access Control</a> in the <i>Amazon Web Services
+     * SSO User Guide</i>.
      * </p>
      * 
      * @param describeInstanceAccessControlAttributeConfigurationRequest
@@ -492,7 +507,7 @@ public interface AWSSSOAdmin {
 
     /**
      * <p>
-     * Lists the status of the AWS account assignment creation requests for a specified SSO instance.
+     * Lists the status of the Amazon Web Services account assignment creation requests for a specified SSO instance.
      * </p>
      * 
      * @param listAccountAssignmentCreationStatusRequest
@@ -517,7 +532,7 @@ public interface AWSSSOAdmin {
 
     /**
      * <p>
-     * Lists the status of the AWS account assignment deletion requests for a specified SSO instance.
+     * Lists the status of the Amazon Web Services account assignment deletion requests for a specified SSO instance.
      * </p>
      * 
      * @param listAccountAssignmentDeletionStatusRequest
@@ -542,7 +557,7 @@ public interface AWSSSOAdmin {
 
     /**
      * <p>
-     * Lists the assignee of the specified AWS account with the specified permission set.
+     * Lists the assignee of the specified Amazon Web Services account with the specified permission set.
      * </p>
      * 
      * @param listAccountAssignmentsRequest
@@ -566,7 +581,7 @@ public interface AWSSSOAdmin {
 
     /**
      * <p>
-     * Lists all the AWS accounts where the specified permission set is provisioned.
+     * Lists all the Amazon Web Services accounts where the specified permission set is provisioned.
      * </p>
      * 
      * @param listAccountsForProvisionedPermissionSetRequest
@@ -688,7 +703,7 @@ public interface AWSSSOAdmin {
 
     /**
      * <p>
-     * Lists all the permission sets that are provisioned to a specified AWS account.
+     * Lists all the permission sets that are provisioned to a specified Amazon Web Services account.
      * </p>
      * 
      * @param listPermissionSetsProvisionedToAccountRequest
@@ -860,13 +875,13 @@ public interface AWSSSOAdmin {
 
     /**
      * <p>
-     * Updates the AWS SSO identity store attributes to use with the AWS SSO instance for attributes-based access
-     * control (ABAC). When using an external identity provider as an identity source, you can pass attributes through
-     * the SAML assertion as an alternative to configuring attributes from the AWS SSO identity store. If a SAML
-     * assertion passes any of these attributes, AWS SSO will replace the attribute value with the value from the AWS
-     * SSO identity store. For more information about ABAC, see <a
-     * href="/singlesignon/latest/userguide/abac.html">Attribute-Based Access Control</a> in the <i>AWS SSO User
-     * Guide</i>.
+     * Updates the Amazon Web Services SSO identity store attributes that you can use with the Amazon Web Services SSO
+     * instance for attributes-based access control (ABAC). When using an external identity provider as an identity
+     * source, you can pass attributes through the SAML assertion as an alternative to configuring attributes from the
+     * Amazon Web Services SSO identity store. If a SAML assertion passes any of these attributes, Amazon Web Services
+     * SSO replaces the attribute value with the value from the Amazon Web Services SSO identity store. For more
+     * information about ABAC, see <a href="/singlesignon/latest/userguide/abac.html">Attribute-Based Access Control</a>
+     * in the <i>Amazon Web Services SSO User Guide</i>.
      * </p>
      * 
      * @param updateInstanceAccessControlAttributeConfigurationRequest

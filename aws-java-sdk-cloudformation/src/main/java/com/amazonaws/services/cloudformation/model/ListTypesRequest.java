@@ -64,8 +64,8 @@ public class ListTypesRequest extends com.amazonaws.AmazonWebServiceRequest impl
     private String visibility;
     /**
      * <p>
-     * For resource types, the provisioning behavior of the resource type. AWS CloudFormation determines the
-     * provisioning type during registration, based on the types of handlers in the schema handler package submitted.
+     * For resource types, the provisioning behavior of the resource type. CloudFormation determines the provisioning
+     * type during registration, based on the types of handlers in the schema handler package submitted.
      * </p>
      * <p>
      * Valid values include:
@@ -460,8 +460,8 @@ public class ListTypesRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * For resource types, the provisioning behavior of the resource type. AWS CloudFormation determines the
-     * provisioning type during registration, based on the types of handlers in the schema handler package submitted.
+     * For resource types, the provisioning behavior of the resource type. CloudFormation determines the provisioning
+     * type during registration, based on the types of handlers in the schema handler package submitted.
      * </p>
      * <p>
      * Valid values include:
@@ -491,7 +491,7 @@ public class ListTypesRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </p>
      * 
      * @param provisioningType
-     *        For resource types, the provisioning behavior of the resource type. AWS CloudFormation determines the
+     *        For resource types, the provisioning behavior of the resource type. CloudFormation determines the
      *        provisioning type during registration, based on the types of handlers in the schema handler package
      *        submitted.</p>
      *        <p>
@@ -528,8 +528,8 @@ public class ListTypesRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * For resource types, the provisioning behavior of the resource type. AWS CloudFormation determines the
-     * provisioning type during registration, based on the types of handlers in the schema handler package submitted.
+     * For resource types, the provisioning behavior of the resource type. CloudFormation determines the provisioning
+     * type during registration, based on the types of handlers in the schema handler package submitted.
      * </p>
      * <p>
      * Valid values include:
@@ -558,7 +558,7 @@ public class ListTypesRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * The default is <code>FULLY_MUTABLE</code>.
      * </p>
      * 
-     * @return For resource types, the provisioning behavior of the resource type. AWS CloudFormation determines the
+     * @return For resource types, the provisioning behavior of the resource type. CloudFormation determines the
      *         provisioning type during registration, based on the types of handlers in the schema handler package
      *         submitted.</p>
      *         <p>
@@ -595,8 +595,8 @@ public class ListTypesRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * For resource types, the provisioning behavior of the resource type. AWS CloudFormation determines the
-     * provisioning type during registration, based on the types of handlers in the schema handler package submitted.
+     * For resource types, the provisioning behavior of the resource type. CloudFormation determines the provisioning
+     * type during registration, based on the types of handlers in the schema handler package submitted.
      * </p>
      * <p>
      * Valid values include:
@@ -626,7 +626,7 @@ public class ListTypesRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </p>
      * 
      * @param provisioningType
-     *        For resource types, the provisioning behavior of the resource type. AWS CloudFormation determines the
+     *        For resource types, the provisioning behavior of the resource type. CloudFormation determines the
      *        provisioning type during registration, based on the types of handlers in the schema handler package
      *        submitted.</p>
      *        <p>
@@ -665,8 +665,8 @@ public class ListTypesRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * For resource types, the provisioning behavior of the resource type. AWS CloudFormation determines the
-     * provisioning type during registration, based on the types of handlers in the schema handler package submitted.
+     * For resource types, the provisioning behavior of the resource type. CloudFormation determines the provisioning
+     * type during registration, based on the types of handlers in the schema handler package submitted.
      * </p>
      * <p>
      * Valid values include:
@@ -696,7 +696,7 @@ public class ListTypesRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </p>
      * 
      * @param provisioningType
-     *        For resource types, the provisioning behavior of the resource type. AWS CloudFormation determines the
+     *        For resource types, the provisioning behavior of the resource type. CloudFormation determines the
      *        provisioning type during registration, based on the types of handlers in the schema handler package
      *        submitted.</p>
      *        <p>

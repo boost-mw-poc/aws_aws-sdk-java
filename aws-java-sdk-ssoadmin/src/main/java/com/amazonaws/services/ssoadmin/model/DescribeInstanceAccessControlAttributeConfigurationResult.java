@@ -39,7 +39,8 @@ public class DescribeInstanceAccessControlAttributeConfigurationResult extends c
     private String statusReason;
     /**
      * <p>
-     * Gets the list of AWS SSO identity store attributes added to your ABAC configuration.
+     * Gets the list of Amazon Web Services SSO identity store attributes that have been added to your ABAC
+     * configuration.
      * </p>
      */
     private InstanceAccessControlAttributeConfiguration instanceAccessControlAttributeConfiguration;
@@ -145,11 +146,13 @@ public class DescribeInstanceAccessControlAttributeConfigurationResult extends c
 
     /**
      * <p>
-     * Gets the list of AWS SSO identity store attributes added to your ABAC configuration.
+     * Gets the list of Amazon Web Services SSO identity store attributes that have been added to your ABAC
+     * configuration.
      * </p>
      * 
      * @param instanceAccessControlAttributeConfiguration
-     *        Gets the list of AWS SSO identity store attributes added to your ABAC configuration.
+     *        Gets the list of Amazon Web Services SSO identity store attributes that have been added to your ABAC
+     *        configuration.
      */
 
     public void setInstanceAccessControlAttributeConfiguration(InstanceAccessControlAttributeConfiguration instanceAccessControlAttributeConfiguration) {
@@ -158,10 +161,12 @@ public class DescribeInstanceAccessControlAttributeConfigurationResult extends c
 
     /**
      * <p>
-     * Gets the list of AWS SSO identity store attributes added to your ABAC configuration.
+     * Gets the list of Amazon Web Services SSO identity store attributes that have been added to your ABAC
+     * configuration.
      * </p>
      * 
-     * @return Gets the list of AWS SSO identity store attributes added to your ABAC configuration.
+     * @return Gets the list of Amazon Web Services SSO identity store attributes that have been added to your ABAC
+     *         configuration.
      */
 
     public InstanceAccessControlAttributeConfiguration getInstanceAccessControlAttributeConfiguration() {
@@ -170,11 +175,13 @@ public class DescribeInstanceAccessControlAttributeConfigurationResult extends c
 
     /**
      * <p>
-     * Gets the list of AWS SSO identity store attributes added to your ABAC configuration.
+     * Gets the list of Amazon Web Services SSO identity store attributes that have been added to your ABAC
+     * configuration.
      * </p>
      * 
      * @param instanceAccessControlAttributeConfiguration
-     *        Gets the list of AWS SSO identity store attributes added to your ABAC configuration.
+     *        Gets the list of Amazon Web Services SSO identity store attributes that have been added to your ABAC
+     *        configuration.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -39,7 +39,7 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * Structure containing the template body with a minimum length of 1 byte and a maximum length of 51,200 bytes. (For
      * more information, go to <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template Anatomy</a>
-     * in the AWS CloudFormation User Guide.)
+     * in the CloudFormation User Guide.)
      * </p>
      * <p>
      * Conditional: You must specify only one of the following parameters: <code>TemplateBody</code>,
@@ -52,7 +52,7 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * Location of file containing the template body. The URL must point to a template that is located in an Amazon S3
      * bucket or a Systems Manager document. For more information, go to <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template Anatomy</a>
-     * in the AWS CloudFormation User Guide.
+     * in the CloudFormation User Guide.
      * </p>
      * <p>
      * Conditional: You must specify only one of the following parameters: <code>TemplateBody</code>,
@@ -105,7 +105,7 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
     /**
      * <p>
      * In some cases, you must explicitly acknowledge that your stack template contains certain capabilities in order
-     * for AWS CloudFormation to update the stack.
+     * for CloudFormation to update the stack.
      * </p>
      * <ul>
      * <li>
@@ -113,9 +113,9 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <code>CAPABILITY_IAM</code> and <code>CAPABILITY_NAMED_IAM</code>
      * </p>
      * <p>
-     * Some stack templates might include resources that can affect permissions in your AWS account; for example, by
-     * creating new AWS Identity and Access Management (IAM) users. For those stacks, you must explicitly acknowledge
-     * this by specifying one of these capabilities.
+     * Some stack templates might include resources that can affect permissions in your account; for example, by
+     * creating new Identity and Access Management (IAM) users. For those stacks, you must explicitly acknowledge this
+     * by specifying one of these capabilities.
      * </p>
      * <p>
      * The following IAM resources require you to specify either the <code>CAPABILITY_IAM</code> or
@@ -134,7 +134,7 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </li>
      * <li>
      * <p>
-     * If you don't specify either of these capabilities, AWS CloudFormation returns an
+     * If you don't specify either of these capabilities, CloudFormation returns an
      * <code>InsufficientCapabilities</code> error.
      * </p>
      * </li>
@@ -190,7 +190,7 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * For more information, see <a
      * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#capabilities"
-     * >Acknowledging IAM Resources in AWS CloudFormation Templates</a>.
+     * >Acknowledging IAM Resources in CloudFormation Templates</a>.
      * </p>
      * </li>
      * <li>
@@ -207,7 +207,7 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.html"
      * >AWS::Include</a> and <a
      * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html"
-     * >AWS::Serverless</a> transforms, which are macros hosted by AWS CloudFormation.
+     * >AWS::Serverless</a> transforms, which are macros hosted by CloudFormation.
      * </p>
      * <p>
      * If you want to update a stack from a stack template that contains macros <i>and</i> nested stacks, you must
@@ -220,13 +220,13 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * <p>
      * Each macro relies on an underlying Lambda service function for processing stack templates. Be aware that the
-     * Lambda function owner can update the function operation without AWS CloudFormation being notified.
+     * Lambda function owner can update the function operation without CloudFormation being notified.
      * </p>
      * </important>
      * <p>
      * For more information, see <a
-     * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html">Using AWS
-     * CloudFormation Macros to Perform Custom Processing on Templates</a>.
+     * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html">Using CloudFormation
+     * Macros to Perform Custom Processing on Templates</a>.
      * </p>
      * </li>
      * </ul>
@@ -239,31 +239,31 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * <p>
      * If the list of resource types doesn't include a resource that you're updating, the stack update fails. By
-     * default, AWS CloudFormation grants permissions to all resource types. AWS Identity and Access Management (IAM)
-     * uses this parameter for AWS CloudFormation-specific condition keys in IAM policies. For more information, see <a
+     * default, CloudFormation grants permissions to all resource types. Identity and Access Management (IAM) uses this
+     * parameter for CloudFormation-specific condition keys in IAM policies. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html">Controlling Access
-     * with AWS Identity and Access Management</a>.
+     * with Identity and Access Management</a>.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> resourceTypes;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an AWS Identity and Access Management (IAM) role that AWS CloudFormation
-     * assumes to update the stack. AWS CloudFormation uses the role's credentials to make calls on your behalf. AWS
-     * CloudFormation always uses this role for all future operations on the stack. As long as users have permission to
-     * operate on the stack, AWS CloudFormation uses this role even if the users don't have permission to pass it.
-     * Ensure that the role grants least privilege.
+     * The Amazon Resource Name (ARN) of an Identity and Access Management (IAM) role that CloudFormation assumes to
+     * update the stack. CloudFormation uses the role's credentials to make calls on your behalf. CloudFormation always
+     * uses this role for all future operations on the stack. As long as users have permission to operate on the stack,
+     * CloudFormation uses this role even if the users don't have permission to pass it. Ensure that the role grants
+     * least privilege.
      * </p>
      * <p>
-     * If you don't specify a value, AWS CloudFormation uses the role that was previously associated with the stack. If
-     * no role is available, AWS CloudFormation uses a temporary session that is generated from your user credentials.
+     * If you don't specify a value, CloudFormation uses the role that was previously associated with the stack. If no
+     * role is available, CloudFormation uses a temporary session that is generated from your user credentials.
      * </p>
      */
     private String roleARN;
     /**
      * <p>
-     * The rollback triggers for AWS CloudFormation to monitor during stack creation and updating operations, and for
-     * the specified monitoring period afterwards.
+     * The rollback triggers for CloudFormation to monitor during stack creation and updating operations, and for the
+     * specified monitoring period afterwards.
      * </p>
      */
     private RollbackConfiguration rollbackConfiguration;
@@ -294,27 +294,27 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
     private String stackPolicyURL;
     /**
      * <p>
-     * Amazon Simple Notification Service topic Amazon Resource Names (ARNs) that AWS CloudFormation associates with the
+     * Amazon Simple Notification Service topic Amazon Resource Names (ARNs) that CloudFormation associates with the
      * stack. Specify an empty list to remove all notification topics.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> notificationARNs;
     /**
      * <p>
-     * Key-value pairs to associate with this stack. AWS CloudFormation also propagates these tags to supported
-     * resources in the stack. You can specify a maximum number of 50 tags.
+     * Key-value pairs to associate with this stack. CloudFormation also propagates these tags to supported resources in
+     * the stack. You can specify a maximum number of 50 tags.
      * </p>
      * <p>
-     * If you don't specify this parameter, AWS CloudFormation doesn't modify the stack's tags. If you specify an empty
-     * value, AWS CloudFormation removes all associated tags.
+     * If you don't specify this parameter, CloudFormation doesn't modify the stack's tags. If you specify an empty
+     * value, CloudFormation removes all associated tags.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<Tag> tags;
     /**
      * <p>
      * A unique identifier for this <code>UpdateStack</code> request. Specify this token if you plan to retry requests
-     * so that AWS CloudFormation knows that you're not attempting to update a stack with the same name. You might retry
-     * <code>UpdateStack</code> requests to ensure that AWS CloudFormation successfully received them.
+     * so that CloudFormation knows that you're not attempting to update a stack with the same name. You might retry
+     * <code>UpdateStack</code> requests to ensure that CloudFormation successfully received them.
      * </p>
      * <p>
      * All events triggered by a given stack operation are assigned the same client request token, which you can use to
@@ -376,7 +376,7 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * Structure containing the template body with a minimum length of 1 byte and a maximum length of 51,200 bytes. (For
      * more information, go to <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template Anatomy</a>
-     * in the AWS CloudFormation User Guide.)
+     * in the CloudFormation User Guide.)
      * </p>
      * <p>
      * Conditional: You must specify only one of the following parameters: <code>TemplateBody</code>,
@@ -387,7 +387,7 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        Structure containing the template body with a minimum length of 1 byte and a maximum length of 51,200
      *        bytes. (For more information, go to <a
      *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template
-     *        Anatomy</a> in the AWS CloudFormation User Guide.)</p>
+     *        Anatomy</a> in the CloudFormation User Guide.)</p>
      *        <p>
      *        Conditional: You must specify only one of the following parameters: <code>TemplateBody</code>,
      *        <code>TemplateURL</code>, or set the <code>UsePreviousTemplate</code> to <code>true</code>.
@@ -402,7 +402,7 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * Structure containing the template body with a minimum length of 1 byte and a maximum length of 51,200 bytes. (For
      * more information, go to <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template Anatomy</a>
-     * in the AWS CloudFormation User Guide.)
+     * in the CloudFormation User Guide.)
      * </p>
      * <p>
      * Conditional: You must specify only one of the following parameters: <code>TemplateBody</code>,
@@ -412,7 +412,7 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * @return Structure containing the template body with a minimum length of 1 byte and a maximum length of 51,200
      *         bytes. (For more information, go to <a
      *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template
-     *         Anatomy</a> in the AWS CloudFormation User Guide.)</p>
+     *         Anatomy</a> in the CloudFormation User Guide.)</p>
      *         <p>
      *         Conditional: You must specify only one of the following parameters: <code>TemplateBody</code>,
      *         <code>TemplateURL</code>, or set the <code>UsePreviousTemplate</code> to <code>true</code>.
@@ -427,7 +427,7 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * Structure containing the template body with a minimum length of 1 byte and a maximum length of 51,200 bytes. (For
      * more information, go to <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template Anatomy</a>
-     * in the AWS CloudFormation User Guide.)
+     * in the CloudFormation User Guide.)
      * </p>
      * <p>
      * Conditional: You must specify only one of the following parameters: <code>TemplateBody</code>,
@@ -438,7 +438,7 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        Structure containing the template body with a minimum length of 1 byte and a maximum length of 51,200
      *        bytes. (For more information, go to <a
      *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template
-     *        Anatomy</a> in the AWS CloudFormation User Guide.)</p>
+     *        Anatomy</a> in the CloudFormation User Guide.)</p>
      *        <p>
      *        Conditional: You must specify only one of the following parameters: <code>TemplateBody</code>,
      *        <code>TemplateURL</code>, or set the <code>UsePreviousTemplate</code> to <code>true</code>.
@@ -455,7 +455,7 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * Location of file containing the template body. The URL must point to a template that is located in an Amazon S3
      * bucket or a Systems Manager document. For more information, go to <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template Anatomy</a>
-     * in the AWS CloudFormation User Guide.
+     * in the CloudFormation User Guide.
      * </p>
      * <p>
      * Conditional: You must specify only one of the following parameters: <code>TemplateBody</code>,
@@ -466,7 +466,7 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        Location of file containing the template body. The URL must point to a template that is located in an
      *        Amazon S3 bucket or a Systems Manager document. For more information, go to <a
      *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template
-     *        Anatomy</a> in the AWS CloudFormation User Guide.</p>
+     *        Anatomy</a> in the CloudFormation User Guide.</p>
      *        <p>
      *        Conditional: You must specify only one of the following parameters: <code>TemplateBody</code>,
      *        <code>TemplateURL</code>, or set the <code>UsePreviousTemplate</code> to <code>true</code>.
@@ -481,7 +481,7 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * Location of file containing the template body. The URL must point to a template that is located in an Amazon S3
      * bucket or a Systems Manager document. For more information, go to <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template Anatomy</a>
-     * in the AWS CloudFormation User Guide.
+     * in the CloudFormation User Guide.
      * </p>
      * <p>
      * Conditional: You must specify only one of the following parameters: <code>TemplateBody</code>,
@@ -491,7 +491,7 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * @return Location of file containing the template body. The URL must point to a template that is located in an
      *         Amazon S3 bucket or a Systems Manager document. For more information, go to <a
      *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template
-     *         Anatomy</a> in the AWS CloudFormation User Guide.</p>
+     *         Anatomy</a> in the CloudFormation User Guide.</p>
      *         <p>
      *         Conditional: You must specify only one of the following parameters: <code>TemplateBody</code>,
      *         <code>TemplateURL</code>, or set the <code>UsePreviousTemplate</code> to <code>true</code>.
@@ -506,7 +506,7 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * Location of file containing the template body. The URL must point to a template that is located in an Amazon S3
      * bucket or a Systems Manager document. For more information, go to <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template Anatomy</a>
-     * in the AWS CloudFormation User Guide.
+     * in the CloudFormation User Guide.
      * </p>
      * <p>
      * Conditional: You must specify only one of the following parameters: <code>TemplateBody</code>,
@@ -517,7 +517,7 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        Location of file containing the template body. The URL must point to a template that is located in an
      *        Amazon S3 bucket or a Systems Manager document. For more information, go to <a
      *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-anatomy.html">Template
-     *        Anatomy</a> in the AWS CloudFormation User Guide.</p>
+     *        Anatomy</a> in the CloudFormation User Guide.</p>
      *        <p>
      *        Conditional: You must specify only one of the following parameters: <code>TemplateBody</code>,
      *        <code>TemplateURL</code>, or set the <code>UsePreviousTemplate</code> to <code>true</code>.
@@ -857,7 +857,7 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
     /**
      * <p>
      * In some cases, you must explicitly acknowledge that your stack template contains certain capabilities in order
-     * for AWS CloudFormation to update the stack.
+     * for CloudFormation to update the stack.
      * </p>
      * <ul>
      * <li>
@@ -865,9 +865,9 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <code>CAPABILITY_IAM</code> and <code>CAPABILITY_NAMED_IAM</code>
      * </p>
      * <p>
-     * Some stack templates might include resources that can affect permissions in your AWS account; for example, by
-     * creating new AWS Identity and Access Management (IAM) users. For those stacks, you must explicitly acknowledge
-     * this by specifying one of these capabilities.
+     * Some stack templates might include resources that can affect permissions in your account; for example, by
+     * creating new Identity and Access Management (IAM) users. For those stacks, you must explicitly acknowledge this
+     * by specifying one of these capabilities.
      * </p>
      * <p>
      * The following IAM resources require you to specify either the <code>CAPABILITY_IAM</code> or
@@ -886,7 +886,7 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </li>
      * <li>
      * <p>
-     * If you don't specify either of these capabilities, AWS CloudFormation returns an
+     * If you don't specify either of these capabilities, CloudFormation returns an
      * <code>InsufficientCapabilities</code> error.
      * </p>
      * </li>
@@ -942,7 +942,7 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * For more information, see <a
      * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#capabilities"
-     * >Acknowledging IAM Resources in AWS CloudFormation Templates</a>.
+     * >Acknowledging IAM Resources in CloudFormation Templates</a>.
      * </p>
      * </li>
      * <li>
@@ -959,7 +959,7 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.html"
      * >AWS::Include</a> and <a
      * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html"
-     * >AWS::Serverless</a> transforms, which are macros hosted by AWS CloudFormation.
+     * >AWS::Serverless</a> transforms, which are macros hosted by CloudFormation.
      * </p>
      * <p>
      * If you want to update a stack from a stack template that contains macros <i>and</i> nested stacks, you must
@@ -972,28 +972,28 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * <p>
      * Each macro relies on an underlying Lambda service function for processing stack templates. Be aware that the
-     * Lambda function owner can update the function operation without AWS CloudFormation being notified.
+     * Lambda function owner can update the function operation without CloudFormation being notified.
      * </p>
      * </important>
      * <p>
      * For more information, see <a
-     * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html">Using AWS
-     * CloudFormation Macros to Perform Custom Processing on Templates</a>.
+     * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html">Using CloudFormation
+     * Macros to Perform Custom Processing on Templates</a>.
      * </p>
      * </li>
      * </ul>
      * 
      * @return In some cases, you must explicitly acknowledge that your stack template contains certain capabilities in
-     *         order for AWS CloudFormation to update the stack.</p>
+     *         order for CloudFormation to update the stack.</p>
      *         <ul>
      *         <li>
      *         <p>
      *         <code>CAPABILITY_IAM</code> and <code>CAPABILITY_NAMED_IAM</code>
      *         </p>
      *         <p>
-     *         Some stack templates might include resources that can affect permissions in your AWS account; for
-     *         example, by creating new AWS Identity and Access Management (IAM) users. For those stacks, you must
-     *         explicitly acknowledge this by specifying one of these capabilities.
+     *         Some stack templates might include resources that can affect permissions in your account; for example, by
+     *         creating new Identity and Access Management (IAM) users. For those stacks, you must explicitly
+     *         acknowledge this by specifying one of these capabilities.
      *         </p>
      *         <p>
      *         The following IAM resources require you to specify either the <code>CAPABILITY_IAM</code> or
@@ -1012,7 +1012,7 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *         </li>
      *         <li>
      *         <p>
-     *         If you don't specify either of these capabilities, AWS CloudFormation returns an
+     *         If you don't specify either of these capabilities, CloudFormation returns an
      *         <code>InsufficientCapabilities</code> error.
      *         </p>
      *         </li>
@@ -1071,7 +1071,7 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *         <p>
      *         For more information, see <a href=
      *         "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#capabilities"
-     *         >Acknowledging IAM Resources in AWS CloudFormation Templates</a>.
+     *         >Acknowledging IAM Resources in CloudFormation Templates</a>.
      *         </p>
      *         </li>
      *         <li>
@@ -1089,7 +1089,7 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *         "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.html"
      *         >AWS::Include</a> and <a
      *         href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html"
-     *         >AWS::Serverless</a> transforms, which are macros hosted by AWS CloudFormation.
+     *         >AWS::Serverless</a> transforms, which are macros hosted by CloudFormation.
      *         </p>
      *         <p>
      *         If you want to update a stack from a stack template that contains macros <i>and</i> nested stacks, you
@@ -1102,12 +1102,12 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *         </p>
      *         <p>
      *         Each macro relies on an underlying Lambda service function for processing stack templates. Be aware that
-     *         the Lambda function owner can update the function operation without AWS CloudFormation being notified.
+     *         the Lambda function owner can update the function operation without CloudFormation being notified.
      *         </p>
      *         </important>
      *         <p>
      *         For more information, see <a
-     *         href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html">Using AWS
+     *         href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html">Using
      *         CloudFormation Macros to Perform Custom Processing on Templates</a>.
      *         </p>
      *         </li>
@@ -1124,7 +1124,7 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
     /**
      * <p>
      * In some cases, you must explicitly acknowledge that your stack template contains certain capabilities in order
-     * for AWS CloudFormation to update the stack.
+     * for CloudFormation to update the stack.
      * </p>
      * <ul>
      * <li>
@@ -1132,9 +1132,9 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <code>CAPABILITY_IAM</code> and <code>CAPABILITY_NAMED_IAM</code>
      * </p>
      * <p>
-     * Some stack templates might include resources that can affect permissions in your AWS account; for example, by
-     * creating new AWS Identity and Access Management (IAM) users. For those stacks, you must explicitly acknowledge
-     * this by specifying one of these capabilities.
+     * Some stack templates might include resources that can affect permissions in your account; for example, by
+     * creating new Identity and Access Management (IAM) users. For those stacks, you must explicitly acknowledge this
+     * by specifying one of these capabilities.
      * </p>
      * <p>
      * The following IAM resources require you to specify either the <code>CAPABILITY_IAM</code> or
@@ -1153,7 +1153,7 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </li>
      * <li>
      * <p>
-     * If you don't specify either of these capabilities, AWS CloudFormation returns an
+     * If you don't specify either of these capabilities, CloudFormation returns an
      * <code>InsufficientCapabilities</code> error.
      * </p>
      * </li>
@@ -1209,7 +1209,7 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * For more information, see <a
      * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#capabilities"
-     * >Acknowledging IAM Resources in AWS CloudFormation Templates</a>.
+     * >Acknowledging IAM Resources in CloudFormation Templates</a>.
      * </p>
      * </li>
      * <li>
@@ -1226,7 +1226,7 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.html"
      * >AWS::Include</a> and <a
      * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html"
-     * >AWS::Serverless</a> transforms, which are macros hosted by AWS CloudFormation.
+     * >AWS::Serverless</a> transforms, which are macros hosted by CloudFormation.
      * </p>
      * <p>
      * If you want to update a stack from a stack template that contains macros <i>and</i> nested stacks, you must
@@ -1239,29 +1239,29 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * <p>
      * Each macro relies on an underlying Lambda service function for processing stack templates. Be aware that the
-     * Lambda function owner can update the function operation without AWS CloudFormation being notified.
+     * Lambda function owner can update the function operation without CloudFormation being notified.
      * </p>
      * </important>
      * <p>
      * For more information, see <a
-     * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html">Using AWS
-     * CloudFormation Macros to Perform Custom Processing on Templates</a>.
+     * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html">Using CloudFormation
+     * Macros to Perform Custom Processing on Templates</a>.
      * </p>
      * </li>
      * </ul>
      * 
      * @param capabilities
      *        In some cases, you must explicitly acknowledge that your stack template contains certain capabilities in
-     *        order for AWS CloudFormation to update the stack.</p>
+     *        order for CloudFormation to update the stack.</p>
      *        <ul>
      *        <li>
      *        <p>
      *        <code>CAPABILITY_IAM</code> and <code>CAPABILITY_NAMED_IAM</code>
      *        </p>
      *        <p>
-     *        Some stack templates might include resources that can affect permissions in your AWS account; for example,
-     *        by creating new AWS Identity and Access Management (IAM) users. For those stacks, you must explicitly
-     *        acknowledge this by specifying one of these capabilities.
+     *        Some stack templates might include resources that can affect permissions in your account; for example, by
+     *        creating new Identity and Access Management (IAM) users. For those stacks, you must explicitly acknowledge
+     *        this by specifying one of these capabilities.
      *        </p>
      *        <p>
      *        The following IAM resources require you to specify either the <code>CAPABILITY_IAM</code> or
@@ -1280,7 +1280,7 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        </li>
      *        <li>
      *        <p>
-     *        If you don't specify either of these capabilities, AWS CloudFormation returns an
+     *        If you don't specify either of these capabilities, CloudFormation returns an
      *        <code>InsufficientCapabilities</code> error.
      *        </p>
      *        </li>
@@ -1339,7 +1339,7 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        <p>
      *        For more information, see <a href=
      *        "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#capabilities"
-     *        >Acknowledging IAM Resources in AWS CloudFormation Templates</a>.
+     *        >Acknowledging IAM Resources in CloudFormation Templates</a>.
      *        </p>
      *        </li>
      *        <li>
@@ -1357,7 +1357,7 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.html"
      *        >AWS::Include</a> and <a
      *        href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html"
-     *        >AWS::Serverless</a> transforms, which are macros hosted by AWS CloudFormation.
+     *        >AWS::Serverless</a> transforms, which are macros hosted by CloudFormation.
      *        </p>
      *        <p>
      *        If you want to update a stack from a stack template that contains macros <i>and</i> nested stacks, you
@@ -1370,12 +1370,12 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        </p>
      *        <p>
      *        Each macro relies on an underlying Lambda service function for processing stack templates. Be aware that
-     *        the Lambda function owner can update the function operation without AWS CloudFormation being notified.
+     *        the Lambda function owner can update the function operation without CloudFormation being notified.
      *        </p>
      *        </important>
      *        <p>
      *        For more information, see <a
-     *        href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html">Using AWS
+     *        href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html">Using
      *        CloudFormation Macros to Perform Custom Processing on Templates</a>.
      *        </p>
      *        </li>
@@ -1394,7 +1394,7 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
     /**
      * <p>
      * In some cases, you must explicitly acknowledge that your stack template contains certain capabilities in order
-     * for AWS CloudFormation to update the stack.
+     * for CloudFormation to update the stack.
      * </p>
      * <ul>
      * <li>
@@ -1402,9 +1402,9 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <code>CAPABILITY_IAM</code> and <code>CAPABILITY_NAMED_IAM</code>
      * </p>
      * <p>
-     * Some stack templates might include resources that can affect permissions in your AWS account; for example, by
-     * creating new AWS Identity and Access Management (IAM) users. For those stacks, you must explicitly acknowledge
-     * this by specifying one of these capabilities.
+     * Some stack templates might include resources that can affect permissions in your account; for example, by
+     * creating new Identity and Access Management (IAM) users. For those stacks, you must explicitly acknowledge this
+     * by specifying one of these capabilities.
      * </p>
      * <p>
      * The following IAM resources require you to specify either the <code>CAPABILITY_IAM</code> or
@@ -1423,7 +1423,7 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </li>
      * <li>
      * <p>
-     * If you don't specify either of these capabilities, AWS CloudFormation returns an
+     * If you don't specify either of these capabilities, CloudFormation returns an
      * <code>InsufficientCapabilities</code> error.
      * </p>
      * </li>
@@ -1479,7 +1479,7 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * For more information, see <a
      * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#capabilities"
-     * >Acknowledging IAM Resources in AWS CloudFormation Templates</a>.
+     * >Acknowledging IAM Resources in CloudFormation Templates</a>.
      * </p>
      * </li>
      * <li>
@@ -1496,7 +1496,7 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.html"
      * >AWS::Include</a> and <a
      * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html"
-     * >AWS::Serverless</a> transforms, which are macros hosted by AWS CloudFormation.
+     * >AWS::Serverless</a> transforms, which are macros hosted by CloudFormation.
      * </p>
      * <p>
      * If you want to update a stack from a stack template that contains macros <i>and</i> nested stacks, you must
@@ -1509,13 +1509,13 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * <p>
      * Each macro relies on an underlying Lambda service function for processing stack templates. Be aware that the
-     * Lambda function owner can update the function operation without AWS CloudFormation being notified.
+     * Lambda function owner can update the function operation without CloudFormation being notified.
      * </p>
      * </important>
      * <p>
      * For more information, see <a
-     * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html">Using AWS
-     * CloudFormation Macros to Perform Custom Processing on Templates</a>.
+     * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html">Using CloudFormation
+     * Macros to Perform Custom Processing on Templates</a>.
      * </p>
      * </li>
      * </ul>
@@ -1527,16 +1527,16 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * 
      * @param capabilities
      *        In some cases, you must explicitly acknowledge that your stack template contains certain capabilities in
-     *        order for AWS CloudFormation to update the stack.</p>
+     *        order for CloudFormation to update the stack.</p>
      *        <ul>
      *        <li>
      *        <p>
      *        <code>CAPABILITY_IAM</code> and <code>CAPABILITY_NAMED_IAM</code>
      *        </p>
      *        <p>
-     *        Some stack templates might include resources that can affect permissions in your AWS account; for example,
-     *        by creating new AWS Identity and Access Management (IAM) users. For those stacks, you must explicitly
-     *        acknowledge this by specifying one of these capabilities.
+     *        Some stack templates might include resources that can affect permissions in your account; for example, by
+     *        creating new Identity and Access Management (IAM) users. For those stacks, you must explicitly acknowledge
+     *        this by specifying one of these capabilities.
      *        </p>
      *        <p>
      *        The following IAM resources require you to specify either the <code>CAPABILITY_IAM</code> or
@@ -1555,7 +1555,7 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        </li>
      *        <li>
      *        <p>
-     *        If you don't specify either of these capabilities, AWS CloudFormation returns an
+     *        If you don't specify either of these capabilities, CloudFormation returns an
      *        <code>InsufficientCapabilities</code> error.
      *        </p>
      *        </li>
@@ -1614,7 +1614,7 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        <p>
      *        For more information, see <a href=
      *        "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#capabilities"
-     *        >Acknowledging IAM Resources in AWS CloudFormation Templates</a>.
+     *        >Acknowledging IAM Resources in CloudFormation Templates</a>.
      *        </p>
      *        </li>
      *        <li>
@@ -1632,7 +1632,7 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.html"
      *        >AWS::Include</a> and <a
      *        href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html"
-     *        >AWS::Serverless</a> transforms, which are macros hosted by AWS CloudFormation.
+     *        >AWS::Serverless</a> transforms, which are macros hosted by CloudFormation.
      *        </p>
      *        <p>
      *        If you want to update a stack from a stack template that contains macros <i>and</i> nested stacks, you
@@ -1645,12 +1645,12 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        </p>
      *        <p>
      *        Each macro relies on an underlying Lambda service function for processing stack templates. Be aware that
-     *        the Lambda function owner can update the function operation without AWS CloudFormation being notified.
+     *        the Lambda function owner can update the function operation without CloudFormation being notified.
      *        </p>
      *        </important>
      *        <p>
      *        For more information, see <a
-     *        href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html">Using AWS
+     *        href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html">Using
      *        CloudFormation Macros to Perform Custom Processing on Templates</a>.
      *        </p>
      *        </li>
@@ -1671,7 +1671,7 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
     /**
      * <p>
      * In some cases, you must explicitly acknowledge that your stack template contains certain capabilities in order
-     * for AWS CloudFormation to update the stack.
+     * for CloudFormation to update the stack.
      * </p>
      * <ul>
      * <li>
@@ -1679,9 +1679,9 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <code>CAPABILITY_IAM</code> and <code>CAPABILITY_NAMED_IAM</code>
      * </p>
      * <p>
-     * Some stack templates might include resources that can affect permissions in your AWS account; for example, by
-     * creating new AWS Identity and Access Management (IAM) users. For those stacks, you must explicitly acknowledge
-     * this by specifying one of these capabilities.
+     * Some stack templates might include resources that can affect permissions in your account; for example, by
+     * creating new Identity and Access Management (IAM) users. For those stacks, you must explicitly acknowledge this
+     * by specifying one of these capabilities.
      * </p>
      * <p>
      * The following IAM resources require you to specify either the <code>CAPABILITY_IAM</code> or
@@ -1700,7 +1700,7 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </li>
      * <li>
      * <p>
-     * If you don't specify either of these capabilities, AWS CloudFormation returns an
+     * If you don't specify either of these capabilities, CloudFormation returns an
      * <code>InsufficientCapabilities</code> error.
      * </p>
      * </li>
@@ -1756,7 +1756,7 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * For more information, see <a
      * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#capabilities"
-     * >Acknowledging IAM Resources in AWS CloudFormation Templates</a>.
+     * >Acknowledging IAM Resources in CloudFormation Templates</a>.
      * </p>
      * </li>
      * <li>
@@ -1773,7 +1773,7 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.html"
      * >AWS::Include</a> and <a
      * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html"
-     * >AWS::Serverless</a> transforms, which are macros hosted by AWS CloudFormation.
+     * >AWS::Serverless</a> transforms, which are macros hosted by CloudFormation.
      * </p>
      * <p>
      * If you want to update a stack from a stack template that contains macros <i>and</i> nested stacks, you must
@@ -1786,29 +1786,29 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * <p>
      * Each macro relies on an underlying Lambda service function for processing stack templates. Be aware that the
-     * Lambda function owner can update the function operation without AWS CloudFormation being notified.
+     * Lambda function owner can update the function operation without CloudFormation being notified.
      * </p>
      * </important>
      * <p>
      * For more information, see <a
-     * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html">Using AWS
-     * CloudFormation Macros to Perform Custom Processing on Templates</a>.
+     * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html">Using CloudFormation
+     * Macros to Perform Custom Processing on Templates</a>.
      * </p>
      * </li>
      * </ul>
      * 
      * @param capabilities
      *        In some cases, you must explicitly acknowledge that your stack template contains certain capabilities in
-     *        order for AWS CloudFormation to update the stack.</p>
+     *        order for CloudFormation to update the stack.</p>
      *        <ul>
      *        <li>
      *        <p>
      *        <code>CAPABILITY_IAM</code> and <code>CAPABILITY_NAMED_IAM</code>
      *        </p>
      *        <p>
-     *        Some stack templates might include resources that can affect permissions in your AWS account; for example,
-     *        by creating new AWS Identity and Access Management (IAM) users. For those stacks, you must explicitly
-     *        acknowledge this by specifying one of these capabilities.
+     *        Some stack templates might include resources that can affect permissions in your account; for example, by
+     *        creating new Identity and Access Management (IAM) users. For those stacks, you must explicitly acknowledge
+     *        this by specifying one of these capabilities.
      *        </p>
      *        <p>
      *        The following IAM resources require you to specify either the <code>CAPABILITY_IAM</code> or
@@ -1827,7 +1827,7 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        </li>
      *        <li>
      *        <p>
-     *        If you don't specify either of these capabilities, AWS CloudFormation returns an
+     *        If you don't specify either of these capabilities, CloudFormation returns an
      *        <code>InsufficientCapabilities</code> error.
      *        </p>
      *        </li>
@@ -1886,7 +1886,7 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        <p>
      *        For more information, see <a href=
      *        "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#capabilities"
-     *        >Acknowledging IAM Resources in AWS CloudFormation Templates</a>.
+     *        >Acknowledging IAM Resources in CloudFormation Templates</a>.
      *        </p>
      *        </li>
      *        <li>
@@ -1904,7 +1904,7 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.html"
      *        >AWS::Include</a> and <a
      *        href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html"
-     *        >AWS::Serverless</a> transforms, which are macros hosted by AWS CloudFormation.
+     *        >AWS::Serverless</a> transforms, which are macros hosted by CloudFormation.
      *        </p>
      *        <p>
      *        If you want to update a stack from a stack template that contains macros <i>and</i> nested stacks, you
@@ -1917,12 +1917,12 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        </p>
      *        <p>
      *        Each macro relies on an underlying Lambda service function for processing stack templates. Be aware that
-     *        the Lambda function owner can update the function operation without AWS CloudFormation being notified.
+     *        the Lambda function owner can update the function operation without CloudFormation being notified.
      *        </p>
      *        </important>
      *        <p>
      *        For more information, see <a
-     *        href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html">Using AWS
+     *        href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html">Using
      *        CloudFormation Macros to Perform Custom Processing on Templates</a>.
      *        </p>
      *        </li>
@@ -1938,7 +1938,7 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
     /**
      * <p>
      * In some cases, you must explicitly acknowledge that your stack template contains certain capabilities in order
-     * for AWS CloudFormation to update the stack.
+     * for CloudFormation to update the stack.
      * </p>
      * <ul>
      * <li>
@@ -1946,9 +1946,9 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <code>CAPABILITY_IAM</code> and <code>CAPABILITY_NAMED_IAM</code>
      * </p>
      * <p>
-     * Some stack templates might include resources that can affect permissions in your AWS account; for example, by
-     * creating new AWS Identity and Access Management (IAM) users. For those stacks, you must explicitly acknowledge
-     * this by specifying one of these capabilities.
+     * Some stack templates might include resources that can affect permissions in your account; for example, by
+     * creating new Identity and Access Management (IAM) users. For those stacks, you must explicitly acknowledge this
+     * by specifying one of these capabilities.
      * </p>
      * <p>
      * The following IAM resources require you to specify either the <code>CAPABILITY_IAM</code> or
@@ -1967,7 +1967,7 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </li>
      * <li>
      * <p>
-     * If you don't specify either of these capabilities, AWS CloudFormation returns an
+     * If you don't specify either of these capabilities, CloudFormation returns an
      * <code>InsufficientCapabilities</code> error.
      * </p>
      * </li>
@@ -2023,7 +2023,7 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * For more information, see <a
      * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#capabilities"
-     * >Acknowledging IAM Resources in AWS CloudFormation Templates</a>.
+     * >Acknowledging IAM Resources in CloudFormation Templates</a>.
      * </p>
      * </li>
      * <li>
@@ -2040,7 +2040,7 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.html"
      * >AWS::Include</a> and <a
      * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html"
-     * >AWS::Serverless</a> transforms, which are macros hosted by AWS CloudFormation.
+     * >AWS::Serverless</a> transforms, which are macros hosted by CloudFormation.
      * </p>
      * <p>
      * If you want to update a stack from a stack template that contains macros <i>and</i> nested stacks, you must
@@ -2053,29 +2053,29 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * <p>
      * Each macro relies on an underlying Lambda service function for processing stack templates. Be aware that the
-     * Lambda function owner can update the function operation without AWS CloudFormation being notified.
+     * Lambda function owner can update the function operation without CloudFormation being notified.
      * </p>
      * </important>
      * <p>
      * For more information, see <a
-     * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html">Using AWS
-     * CloudFormation Macros to Perform Custom Processing on Templates</a>.
+     * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html">Using CloudFormation
+     * Macros to Perform Custom Processing on Templates</a>.
      * </p>
      * </li>
      * </ul>
      * 
      * @param capabilities
      *        In some cases, you must explicitly acknowledge that your stack template contains certain capabilities in
-     *        order for AWS CloudFormation to update the stack.</p>
+     *        order for CloudFormation to update the stack.</p>
      *        <ul>
      *        <li>
      *        <p>
      *        <code>CAPABILITY_IAM</code> and <code>CAPABILITY_NAMED_IAM</code>
      *        </p>
      *        <p>
-     *        Some stack templates might include resources that can affect permissions in your AWS account; for example,
-     *        by creating new AWS Identity and Access Management (IAM) users. For those stacks, you must explicitly
-     *        acknowledge this by specifying one of these capabilities.
+     *        Some stack templates might include resources that can affect permissions in your account; for example, by
+     *        creating new Identity and Access Management (IAM) users. For those stacks, you must explicitly acknowledge
+     *        this by specifying one of these capabilities.
      *        </p>
      *        <p>
      *        The following IAM resources require you to specify either the <code>CAPABILITY_IAM</code> or
@@ -2094,7 +2094,7 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        </li>
      *        <li>
      *        <p>
-     *        If you don't specify either of these capabilities, AWS CloudFormation returns an
+     *        If you don't specify either of these capabilities, CloudFormation returns an
      *        <code>InsufficientCapabilities</code> error.
      *        </p>
      *        </li>
@@ -2153,7 +2153,7 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        <p>
      *        For more information, see <a href=
      *        "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#capabilities"
-     *        >Acknowledging IAM Resources in AWS CloudFormation Templates</a>.
+     *        >Acknowledging IAM Resources in CloudFormation Templates</a>.
      *        </p>
      *        </li>
      *        <li>
@@ -2171,7 +2171,7 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.html"
      *        >AWS::Include</a> and <a
      *        href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html"
-     *        >AWS::Serverless</a> transforms, which are macros hosted by AWS CloudFormation.
+     *        >AWS::Serverless</a> transforms, which are macros hosted by CloudFormation.
      *        </p>
      *        <p>
      *        If you want to update a stack from a stack template that contains macros <i>and</i> nested stacks, you
@@ -2184,12 +2184,12 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        </p>
      *        <p>
      *        Each macro relies on an underlying Lambda service function for processing stack templates. Be aware that
-     *        the Lambda function owner can update the function operation without AWS CloudFormation being notified.
+     *        the Lambda function owner can update the function operation without CloudFormation being notified.
      *        </p>
      *        </important>
      *        <p>
      *        For more information, see <a
-     *        href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html">Using AWS
+     *        href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html">Using
      *        CloudFormation Macros to Perform Custom Processing on Templates</a>.
      *        </p>
      *        </li>
@@ -2217,21 +2217,20 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * <p>
      * If the list of resource types doesn't include a resource that you're updating, the stack update fails. By
-     * default, AWS CloudFormation grants permissions to all resource types. AWS Identity and Access Management (IAM)
-     * uses this parameter for AWS CloudFormation-specific condition keys in IAM policies. For more information, see <a
+     * default, CloudFormation grants permissions to all resource types. Identity and Access Management (IAM) uses this
+     * parameter for CloudFormation-specific condition keys in IAM policies. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html">Controlling Access
-     * with AWS Identity and Access Management</a>.
+     * with Identity and Access Management</a>.
      * </p>
      * 
      * @return The template resource types that you have permissions to work with for this update stack action, such as
      *         <code>AWS::EC2::Instance</code>, <code>AWS::EC2::*</code>, or <code>Custom::MyCustomInstance</code>.</p>
      *         <p>
      *         If the list of resource types doesn't include a resource that you're updating, the stack update fails. By
-     *         default, AWS CloudFormation grants permissions to all resource types. AWS Identity and Access Management
-     *         (IAM) uses this parameter for AWS CloudFormation-specific condition keys in IAM policies. For more
-     *         information, see <a
-     *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html">Controlling
-     *         Access with AWS Identity and Access Management</a>.
+     *         default, CloudFormation grants permissions to all resource types. Identity and Access Management (IAM)
+     *         uses this parameter for CloudFormation-specific condition keys in IAM policies. For more information, see
+     *         <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html">
+     *         Controlling Access with Identity and Access Management</a>.
      */
 
     public java.util.List<String> getResourceTypes() {
@@ -2248,10 +2247,10 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * <p>
      * If the list of resource types doesn't include a resource that you're updating, the stack update fails. By
-     * default, AWS CloudFormation grants permissions to all resource types. AWS Identity and Access Management (IAM)
-     * uses this parameter for AWS CloudFormation-specific condition keys in IAM policies. For more information, see <a
+     * default, CloudFormation grants permissions to all resource types. Identity and Access Management (IAM) uses this
+     * parameter for CloudFormation-specific condition keys in IAM policies. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html">Controlling Access
-     * with AWS Identity and Access Management</a>.
+     * with Identity and Access Management</a>.
      * </p>
      * 
      * @param resourceTypes
@@ -2259,11 +2258,10 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        <code>AWS::EC2::Instance</code>, <code>AWS::EC2::*</code>, or <code>Custom::MyCustomInstance</code>.</p>
      *        <p>
      *        If the list of resource types doesn't include a resource that you're updating, the stack update fails. By
-     *        default, AWS CloudFormation grants permissions to all resource types. AWS Identity and Access Management
-     *        (IAM) uses this parameter for AWS CloudFormation-specific condition keys in IAM policies. For more
-     *        information, see <a
-     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html">Controlling
-     *        Access with AWS Identity and Access Management</a>.
+     *        default, CloudFormation grants permissions to all resource types. Identity and Access Management (IAM)
+     *        uses this parameter for CloudFormation-specific condition keys in IAM policies. For more information, see
+     *        <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html">
+     *        Controlling Access with Identity and Access Management</a>.
      */
 
     public void setResourceTypes(java.util.Collection<String> resourceTypes) {
@@ -2282,10 +2280,10 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * <p>
      * If the list of resource types doesn't include a resource that you're updating, the stack update fails. By
-     * default, AWS CloudFormation grants permissions to all resource types. AWS Identity and Access Management (IAM)
-     * uses this parameter for AWS CloudFormation-specific condition keys in IAM policies. For more information, see <a
+     * default, CloudFormation grants permissions to all resource types. Identity and Access Management (IAM) uses this
+     * parameter for CloudFormation-specific condition keys in IAM policies. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html">Controlling Access
-     * with AWS Identity and Access Management</a>.
+     * with Identity and Access Management</a>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -2298,11 +2296,10 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        <code>AWS::EC2::Instance</code>, <code>AWS::EC2::*</code>, or <code>Custom::MyCustomInstance</code>.</p>
      *        <p>
      *        If the list of resource types doesn't include a resource that you're updating, the stack update fails. By
-     *        default, AWS CloudFormation grants permissions to all resource types. AWS Identity and Access Management
-     *        (IAM) uses this parameter for AWS CloudFormation-specific condition keys in IAM policies. For more
-     *        information, see <a
-     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html">Controlling
-     *        Access with AWS Identity and Access Management</a>.
+     *        default, CloudFormation grants permissions to all resource types. Identity and Access Management (IAM)
+     *        uses this parameter for CloudFormation-specific condition keys in IAM policies. For more information, see
+     *        <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html">
+     *        Controlling Access with Identity and Access Management</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2323,10 +2320,10 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * <p>
      * If the list of resource types doesn't include a resource that you're updating, the stack update fails. By
-     * default, AWS CloudFormation grants permissions to all resource types. AWS Identity and Access Management (IAM)
-     * uses this parameter for AWS CloudFormation-specific condition keys in IAM policies. For more information, see <a
+     * default, CloudFormation grants permissions to all resource types. Identity and Access Management (IAM) uses this
+     * parameter for CloudFormation-specific condition keys in IAM policies. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html">Controlling Access
-     * with AWS Identity and Access Management</a>.
+     * with Identity and Access Management</a>.
      * </p>
      * 
      * @param resourceTypes
@@ -2334,11 +2331,10 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        <code>AWS::EC2::Instance</code>, <code>AWS::EC2::*</code>, or <code>Custom::MyCustomInstance</code>.</p>
      *        <p>
      *        If the list of resource types doesn't include a resource that you're updating, the stack update fails. By
-     *        default, AWS CloudFormation grants permissions to all resource types. AWS Identity and Access Management
-     *        (IAM) uses this parameter for AWS CloudFormation-specific condition keys in IAM policies. For more
-     *        information, see <a
-     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html">Controlling
-     *        Access with AWS Identity and Access Management</a>.
+     *        default, CloudFormation grants permissions to all resource types. Identity and Access Management (IAM)
+     *        uses this parameter for CloudFormation-specific condition keys in IAM policies. For more information, see
+     *        <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html">
+     *        Controlling Access with Identity and Access Management</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2349,27 +2345,27 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an AWS Identity and Access Management (IAM) role that AWS CloudFormation
-     * assumes to update the stack. AWS CloudFormation uses the role's credentials to make calls on your behalf. AWS
-     * CloudFormation always uses this role for all future operations on the stack. As long as users have permission to
-     * operate on the stack, AWS CloudFormation uses this role even if the users don't have permission to pass it.
-     * Ensure that the role grants least privilege.
+     * The Amazon Resource Name (ARN) of an Identity and Access Management (IAM) role that CloudFormation assumes to
+     * update the stack. CloudFormation uses the role's credentials to make calls on your behalf. CloudFormation always
+     * uses this role for all future operations on the stack. As long as users have permission to operate on the stack,
+     * CloudFormation uses this role even if the users don't have permission to pass it. Ensure that the role grants
+     * least privilege.
      * </p>
      * <p>
-     * If you don't specify a value, AWS CloudFormation uses the role that was previously associated with the stack. If
-     * no role is available, AWS CloudFormation uses a temporary session that is generated from your user credentials.
+     * If you don't specify a value, CloudFormation uses the role that was previously associated with the stack. If no
+     * role is available, CloudFormation uses a temporary session that is generated from your user credentials.
      * </p>
      * 
      * @param roleARN
-     *        The Amazon Resource Name (ARN) of an AWS Identity and Access Management (IAM) role that AWS CloudFormation
-     *        assumes to update the stack. AWS CloudFormation uses the role's credentials to make calls on your behalf.
-     *        AWS CloudFormation always uses this role for all future operations on the stack. As long as users have
-     *        permission to operate on the stack, AWS CloudFormation uses this role even if the users don't have
-     *        permission to pass it. Ensure that the role grants least privilege.</p>
+     *        The Amazon Resource Name (ARN) of an Identity and Access Management (IAM) role that CloudFormation assumes
+     *        to update the stack. CloudFormation uses the role's credentials to make calls on your behalf.
+     *        CloudFormation always uses this role for all future operations on the stack. As long as users have
+     *        permission to operate on the stack, CloudFormation uses this role even if the users don't have permission
+     *        to pass it. Ensure that the role grants least privilege.</p>
      *        <p>
-     *        If you don't specify a value, AWS CloudFormation uses the role that was previously associated with the
-     *        stack. If no role is available, AWS CloudFormation uses a temporary session that is generated from your
-     *        user credentials.
+     *        If you don't specify a value, CloudFormation uses the role that was previously associated with the stack.
+     *        If no role is available, CloudFormation uses a temporary session that is generated from your user
+     *        credentials.
      */
 
     public void setRoleARN(String roleARN) {
@@ -2378,26 +2374,26 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an AWS Identity and Access Management (IAM) role that AWS CloudFormation
-     * assumes to update the stack. AWS CloudFormation uses the role's credentials to make calls on your behalf. AWS
-     * CloudFormation always uses this role for all future operations on the stack. As long as users have permission to
-     * operate on the stack, AWS CloudFormation uses this role even if the users don't have permission to pass it.
-     * Ensure that the role grants least privilege.
+     * The Amazon Resource Name (ARN) of an Identity and Access Management (IAM) role that CloudFormation assumes to
+     * update the stack. CloudFormation uses the role's credentials to make calls on your behalf. CloudFormation always
+     * uses this role for all future operations on the stack. As long as users have permission to operate on the stack,
+     * CloudFormation uses this role even if the users don't have permission to pass it. Ensure that the role grants
+     * least privilege.
      * </p>
      * <p>
-     * If you don't specify a value, AWS CloudFormation uses the role that was previously associated with the stack. If
-     * no role is available, AWS CloudFormation uses a temporary session that is generated from your user credentials.
+     * If you don't specify a value, CloudFormation uses the role that was previously associated with the stack. If no
+     * role is available, CloudFormation uses a temporary session that is generated from your user credentials.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of an AWS Identity and Access Management (IAM) role that AWS
-     *         CloudFormation assumes to update the stack. AWS CloudFormation uses the role's credentials to make calls
-     *         on your behalf. AWS CloudFormation always uses this role for all future operations on the stack. As long
-     *         as users have permission to operate on the stack, AWS CloudFormation uses this role even if the users
-     *         don't have permission to pass it. Ensure that the role grants least privilege.</p>
+     * @return The Amazon Resource Name (ARN) of an Identity and Access Management (IAM) role that CloudFormation
+     *         assumes to update the stack. CloudFormation uses the role's credentials to make calls on your behalf.
+     *         CloudFormation always uses this role for all future operations on the stack. As long as users have
+     *         permission to operate on the stack, CloudFormation uses this role even if the users don't have permission
+     *         to pass it. Ensure that the role grants least privilege.</p>
      *         <p>
-     *         If you don't specify a value, AWS CloudFormation uses the role that was previously associated with the
-     *         stack. If no role is available, AWS CloudFormation uses a temporary session that is generated from your
-     *         user credentials.
+     *         If you don't specify a value, CloudFormation uses the role that was previously associated with the stack.
+     *         If no role is available, CloudFormation uses a temporary session that is generated from your user
+     *         credentials.
      */
 
     public String getRoleARN() {
@@ -2406,27 +2402,27 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an AWS Identity and Access Management (IAM) role that AWS CloudFormation
-     * assumes to update the stack. AWS CloudFormation uses the role's credentials to make calls on your behalf. AWS
-     * CloudFormation always uses this role for all future operations on the stack. As long as users have permission to
-     * operate on the stack, AWS CloudFormation uses this role even if the users don't have permission to pass it.
-     * Ensure that the role grants least privilege.
+     * The Amazon Resource Name (ARN) of an Identity and Access Management (IAM) role that CloudFormation assumes to
+     * update the stack. CloudFormation uses the role's credentials to make calls on your behalf. CloudFormation always
+     * uses this role for all future operations on the stack. As long as users have permission to operate on the stack,
+     * CloudFormation uses this role even if the users don't have permission to pass it. Ensure that the role grants
+     * least privilege.
      * </p>
      * <p>
-     * If you don't specify a value, AWS CloudFormation uses the role that was previously associated with the stack. If
-     * no role is available, AWS CloudFormation uses a temporary session that is generated from your user credentials.
+     * If you don't specify a value, CloudFormation uses the role that was previously associated with the stack. If no
+     * role is available, CloudFormation uses a temporary session that is generated from your user credentials.
      * </p>
      * 
      * @param roleARN
-     *        The Amazon Resource Name (ARN) of an AWS Identity and Access Management (IAM) role that AWS CloudFormation
-     *        assumes to update the stack. AWS CloudFormation uses the role's credentials to make calls on your behalf.
-     *        AWS CloudFormation always uses this role for all future operations on the stack. As long as users have
-     *        permission to operate on the stack, AWS CloudFormation uses this role even if the users don't have
-     *        permission to pass it. Ensure that the role grants least privilege.</p>
+     *        The Amazon Resource Name (ARN) of an Identity and Access Management (IAM) role that CloudFormation assumes
+     *        to update the stack. CloudFormation uses the role's credentials to make calls on your behalf.
+     *        CloudFormation always uses this role for all future operations on the stack. As long as users have
+     *        permission to operate on the stack, CloudFormation uses this role even if the users don't have permission
+     *        to pass it. Ensure that the role grants least privilege.</p>
      *        <p>
-     *        If you don't specify a value, AWS CloudFormation uses the role that was previously associated with the
-     *        stack. If no role is available, AWS CloudFormation uses a temporary session that is generated from your
-     *        user credentials.
+     *        If you don't specify a value, CloudFormation uses the role that was previously associated with the stack.
+     *        If no role is available, CloudFormation uses a temporary session that is generated from your user
+     *        credentials.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2437,13 +2433,13 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The rollback triggers for AWS CloudFormation to monitor during stack creation and updating operations, and for
-     * the specified monitoring period afterwards.
+     * The rollback triggers for CloudFormation to monitor during stack creation and updating operations, and for the
+     * specified monitoring period afterwards.
      * </p>
      * 
      * @param rollbackConfiguration
-     *        The rollback triggers for AWS CloudFormation to monitor during stack creation and updating operations, and
-     *        for the specified monitoring period afterwards.
+     *        The rollback triggers for CloudFormation to monitor during stack creation and updating operations, and for
+     *        the specified monitoring period afterwards.
      */
 
     public void setRollbackConfiguration(RollbackConfiguration rollbackConfiguration) {
@@ -2452,12 +2448,12 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The rollback triggers for AWS CloudFormation to monitor during stack creation and updating operations, and for
-     * the specified monitoring period afterwards.
+     * The rollback triggers for CloudFormation to monitor during stack creation and updating operations, and for the
+     * specified monitoring period afterwards.
      * </p>
      * 
-     * @return The rollback triggers for AWS CloudFormation to monitor during stack creation and updating operations,
-     *         and for the specified monitoring period afterwards.
+     * @return The rollback triggers for CloudFormation to monitor during stack creation and updating operations, and
+     *         for the specified monitoring period afterwards.
      */
 
     public RollbackConfiguration getRollbackConfiguration() {
@@ -2466,13 +2462,13 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The rollback triggers for AWS CloudFormation to monitor during stack creation and updating operations, and for
-     * the specified monitoring period afterwards.
+     * The rollback triggers for CloudFormation to monitor during stack creation and updating operations, and for the
+     * specified monitoring period afterwards.
      * </p>
      * 
      * @param rollbackConfiguration
-     *        The rollback triggers for AWS CloudFormation to monitor during stack creation and updating operations, and
-     *        for the specified monitoring period afterwards.
+     *        The rollback triggers for CloudFormation to monitor during stack creation and updating operations, and for
+     *        the specified monitoring period afterwards.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2635,12 +2631,12 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * Amazon Simple Notification Service topic Amazon Resource Names (ARNs) that AWS CloudFormation associates with the
+     * Amazon Simple Notification Service topic Amazon Resource Names (ARNs) that CloudFormation associates with the
      * stack. Specify an empty list to remove all notification topics.
      * </p>
      * 
-     * @return Amazon Simple Notification Service topic Amazon Resource Names (ARNs) that AWS CloudFormation associates
-     *         with the stack. Specify an empty list to remove all notification topics.
+     * @return Amazon Simple Notification Service topic Amazon Resource Names (ARNs) that CloudFormation associates with
+     *         the stack. Specify an empty list to remove all notification topics.
      */
 
     public java.util.List<String> getNotificationARNs() {
@@ -2652,13 +2648,13 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * Amazon Simple Notification Service topic Amazon Resource Names (ARNs) that AWS CloudFormation associates with the
+     * Amazon Simple Notification Service topic Amazon Resource Names (ARNs) that CloudFormation associates with the
      * stack. Specify an empty list to remove all notification topics.
      * </p>
      * 
      * @param notificationARNs
-     *        Amazon Simple Notification Service topic Amazon Resource Names (ARNs) that AWS CloudFormation associates
-     *        with the stack. Specify an empty list to remove all notification topics.
+     *        Amazon Simple Notification Service topic Amazon Resource Names (ARNs) that CloudFormation associates with
+     *        the stack. Specify an empty list to remove all notification topics.
      */
 
     public void setNotificationARNs(java.util.Collection<String> notificationARNs) {
@@ -2672,7 +2668,7 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * Amazon Simple Notification Service topic Amazon Resource Names (ARNs) that AWS CloudFormation associates with the
+     * Amazon Simple Notification Service topic Amazon Resource Names (ARNs) that CloudFormation associates with the
      * stack. Specify an empty list to remove all notification topics.
      * </p>
      * <p>
@@ -2682,8 +2678,8 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * 
      * @param notificationARNs
-     *        Amazon Simple Notification Service topic Amazon Resource Names (ARNs) that AWS CloudFormation associates
-     *        with the stack. Specify an empty list to remove all notification topics.
+     *        Amazon Simple Notification Service topic Amazon Resource Names (ARNs) that CloudFormation associates with
+     *        the stack. Specify an empty list to remove all notification topics.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2699,13 +2695,13 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * Amazon Simple Notification Service topic Amazon Resource Names (ARNs) that AWS CloudFormation associates with the
+     * Amazon Simple Notification Service topic Amazon Resource Names (ARNs) that CloudFormation associates with the
      * stack. Specify an empty list to remove all notification topics.
      * </p>
      * 
      * @param notificationARNs
-     *        Amazon Simple Notification Service topic Amazon Resource Names (ARNs) that AWS CloudFormation associates
-     *        with the stack. Specify an empty list to remove all notification topics.
+     *        Amazon Simple Notification Service topic Amazon Resource Names (ARNs) that CloudFormation associates with
+     *        the stack. Specify an empty list to remove all notification topics.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2716,19 +2712,19 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * Key-value pairs to associate with this stack. AWS CloudFormation also propagates these tags to supported
-     * resources in the stack. You can specify a maximum number of 50 tags.
+     * Key-value pairs to associate with this stack. CloudFormation also propagates these tags to supported resources in
+     * the stack. You can specify a maximum number of 50 tags.
      * </p>
      * <p>
-     * If you don't specify this parameter, AWS CloudFormation doesn't modify the stack's tags. If you specify an empty
-     * value, AWS CloudFormation removes all associated tags.
+     * If you don't specify this parameter, CloudFormation doesn't modify the stack's tags. If you specify an empty
+     * value, CloudFormation removes all associated tags.
      * </p>
      * 
-     * @return Key-value pairs to associate with this stack. AWS CloudFormation also propagates these tags to supported
+     * @return Key-value pairs to associate with this stack. CloudFormation also propagates these tags to supported
      *         resources in the stack. You can specify a maximum number of 50 tags.</p>
      *         <p>
-     *         If you don't specify this parameter, AWS CloudFormation doesn't modify the stack's tags. If you specify
-     *         an empty value, AWS CloudFormation removes all associated tags.
+     *         If you don't specify this parameter, CloudFormation doesn't modify the stack's tags. If you specify an
+     *         empty value, CloudFormation removes all associated tags.
      */
 
     public java.util.List<Tag> getTags() {
@@ -2740,20 +2736,20 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * Key-value pairs to associate with this stack. AWS CloudFormation also propagates these tags to supported
-     * resources in the stack. You can specify a maximum number of 50 tags.
+     * Key-value pairs to associate with this stack. CloudFormation also propagates these tags to supported resources in
+     * the stack. You can specify a maximum number of 50 tags.
      * </p>
      * <p>
-     * If you don't specify this parameter, AWS CloudFormation doesn't modify the stack's tags. If you specify an empty
-     * value, AWS CloudFormation removes all associated tags.
+     * If you don't specify this parameter, CloudFormation doesn't modify the stack's tags. If you specify an empty
+     * value, CloudFormation removes all associated tags.
      * </p>
      * 
      * @param tags
-     *        Key-value pairs to associate with this stack. AWS CloudFormation also propagates these tags to supported
+     *        Key-value pairs to associate with this stack. CloudFormation also propagates these tags to supported
      *        resources in the stack. You can specify a maximum number of 50 tags.</p>
      *        <p>
-     *        If you don't specify this parameter, AWS CloudFormation doesn't modify the stack's tags. If you specify an
-     *        empty value, AWS CloudFormation removes all associated tags.
+     *        If you don't specify this parameter, CloudFormation doesn't modify the stack's tags. If you specify an
+     *        empty value, CloudFormation removes all associated tags.
      */
 
     public void setTags(java.util.Collection<Tag> tags) {
@@ -2767,12 +2763,12 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * Key-value pairs to associate with this stack. AWS CloudFormation also propagates these tags to supported
-     * resources in the stack. You can specify a maximum number of 50 tags.
+     * Key-value pairs to associate with this stack. CloudFormation also propagates these tags to supported resources in
+     * the stack. You can specify a maximum number of 50 tags.
      * </p>
      * <p>
-     * If you don't specify this parameter, AWS CloudFormation doesn't modify the stack's tags. If you specify an empty
-     * value, AWS CloudFormation removes all associated tags.
+     * If you don't specify this parameter, CloudFormation doesn't modify the stack's tags. If you specify an empty
+     * value, CloudFormation removes all associated tags.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -2781,11 +2777,11 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * 
      * @param tags
-     *        Key-value pairs to associate with this stack. AWS CloudFormation also propagates these tags to supported
+     *        Key-value pairs to associate with this stack. CloudFormation also propagates these tags to supported
      *        resources in the stack. You can specify a maximum number of 50 tags.</p>
      *        <p>
-     *        If you don't specify this parameter, AWS CloudFormation doesn't modify the stack's tags. If you specify an
-     *        empty value, AWS CloudFormation removes all associated tags.
+     *        If you don't specify this parameter, CloudFormation doesn't modify the stack's tags. If you specify an
+     *        empty value, CloudFormation removes all associated tags.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2801,20 +2797,20 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * Key-value pairs to associate with this stack. AWS CloudFormation also propagates these tags to supported
-     * resources in the stack. You can specify a maximum number of 50 tags.
+     * Key-value pairs to associate with this stack. CloudFormation also propagates these tags to supported resources in
+     * the stack. You can specify a maximum number of 50 tags.
      * </p>
      * <p>
-     * If you don't specify this parameter, AWS CloudFormation doesn't modify the stack's tags. If you specify an empty
-     * value, AWS CloudFormation removes all associated tags.
+     * If you don't specify this parameter, CloudFormation doesn't modify the stack's tags. If you specify an empty
+     * value, CloudFormation removes all associated tags.
      * </p>
      * 
      * @param tags
-     *        Key-value pairs to associate with this stack. AWS CloudFormation also propagates these tags to supported
+     *        Key-value pairs to associate with this stack. CloudFormation also propagates these tags to supported
      *        resources in the stack. You can specify a maximum number of 50 tags.</p>
      *        <p>
-     *        If you don't specify this parameter, AWS CloudFormation doesn't modify the stack's tags. If you specify an
-     *        empty value, AWS CloudFormation removes all associated tags.
+     *        If you don't specify this parameter, CloudFormation doesn't modify the stack's tags. If you specify an
+     *        empty value, CloudFormation removes all associated tags.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2826,8 +2822,8 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
     /**
      * <p>
      * A unique identifier for this <code>UpdateStack</code> request. Specify this token if you plan to retry requests
-     * so that AWS CloudFormation knows that you're not attempting to update a stack with the same name. You might retry
-     * <code>UpdateStack</code> requests to ensure that AWS CloudFormation successfully received them.
+     * so that CloudFormation knows that you're not attempting to update a stack with the same name. You might retry
+     * <code>UpdateStack</code> requests to ensure that CloudFormation successfully received them.
      * </p>
      * <p>
      * All events triggered by a given stack operation are assigned the same client request token, which you can use to
@@ -2844,8 +2840,8 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * 
      * @param clientRequestToken
      *        A unique identifier for this <code>UpdateStack</code> request. Specify this token if you plan to retry
-     *        requests so that AWS CloudFormation knows that you're not attempting to update a stack with the same name.
-     *        You might retry <code>UpdateStack</code> requests to ensure that AWS CloudFormation successfully received
+     *        requests so that CloudFormation knows that you're not attempting to update a stack with the same name. You
+     *        might retry <code>UpdateStack</code> requests to ensure that CloudFormation successfully received
      *        them.</p>
      *        <p>
      *        All events triggered by a given stack operation are assigned the same client request token, which you can
@@ -2868,8 +2864,8 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
     /**
      * <p>
      * A unique identifier for this <code>UpdateStack</code> request. Specify this token if you plan to retry requests
-     * so that AWS CloudFormation knows that you're not attempting to update a stack with the same name. You might retry
-     * <code>UpdateStack</code> requests to ensure that AWS CloudFormation successfully received them.
+     * so that CloudFormation knows that you're not attempting to update a stack with the same name. You might retry
+     * <code>UpdateStack</code> requests to ensure that CloudFormation successfully received them.
      * </p>
      * <p>
      * All events triggered by a given stack operation are assigned the same client request token, which you can use to
@@ -2885,9 +2881,9 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * 
      * @return A unique identifier for this <code>UpdateStack</code> request. Specify this token if you plan to retry
-     *         requests so that AWS CloudFormation knows that you're not attempting to update a stack with the same
-     *         name. You might retry <code>UpdateStack</code> requests to ensure that AWS CloudFormation successfully
-     *         received them.</p>
+     *         requests so that CloudFormation knows that you're not attempting to update a stack with the same name.
+     *         You might retry <code>UpdateStack</code> requests to ensure that CloudFormation successfully received
+     *         them.</p>
      *         <p>
      *         All events triggered by a given stack operation are assigned the same client request token, which you can
      *         use to track operations. For example, if you execute a <code>CreateStack</code> operation with the token
@@ -2909,8 +2905,8 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
     /**
      * <p>
      * A unique identifier for this <code>UpdateStack</code> request. Specify this token if you plan to retry requests
-     * so that AWS CloudFormation knows that you're not attempting to update a stack with the same name. You might retry
-     * <code>UpdateStack</code> requests to ensure that AWS CloudFormation successfully received them.
+     * so that CloudFormation knows that you're not attempting to update a stack with the same name. You might retry
+     * <code>UpdateStack</code> requests to ensure that CloudFormation successfully received them.
      * </p>
      * <p>
      * All events triggered by a given stack operation are assigned the same client request token, which you can use to
@@ -2927,8 +2923,8 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * 
      * @param clientRequestToken
      *        A unique identifier for this <code>UpdateStack</code> request. Specify this token if you plan to retry
-     *        requests so that AWS CloudFormation knows that you're not attempting to update a stack with the same name.
-     *        You might retry <code>UpdateStack</code> requests to ensure that AWS CloudFormation successfully received
+     *        requests so that CloudFormation knows that you're not attempting to update a stack with the same name. You
+     *        might retry <code>UpdateStack</code> requests to ensure that CloudFormation successfully received
      *        them.</p>
      *        <p>
      *        All events triggered by a given stack operation are assigned the same client request token, which you can

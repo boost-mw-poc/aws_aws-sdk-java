@@ -37,8 +37,8 @@ public class AttachedManagedPolicy implements Serializable, Cloneable, Structure
     /**
      * <p>
      * The ARN of the IAM managed policy. For more information about ARNs, see <a
-     * href="/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and AWS Service
-     * Namespaces</a> in the <i>AWS General Reference</i>.
+     * href="/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and Amazon Web Services
+     * Service Namespaces</a> in the <i>Amazon Web Services General Reference</i>.
      * </p>
      */
     private String arn;
@@ -86,14 +86,14 @@ public class AttachedManagedPolicy implements Serializable, Cloneable, Structure
     /**
      * <p>
      * The ARN of the IAM managed policy. For more information about ARNs, see <a
-     * href="/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and AWS Service
-     * Namespaces</a> in the <i>AWS General Reference</i>.
+     * href="/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and Amazon Web Services
+     * Service Namespaces</a> in the <i>Amazon Web Services General Reference</i>.
      * </p>
      * 
      * @param arn
      *        The ARN of the IAM managed policy. For more information about ARNs, see <a
-     *        href="/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and AWS Service
-     *        Namespaces</a> in the <i>AWS General Reference</i>.
+     *        href="/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and Amazon Web
+     *        Services Service Namespaces</a> in the <i>Amazon Web Services General Reference</i>.
      */
 
     public void setArn(String arn) {
@@ -103,13 +103,13 @@ public class AttachedManagedPolicy implements Serializable, Cloneable, Structure
     /**
      * <p>
      * The ARN of the IAM managed policy. For more information about ARNs, see <a
-     * href="/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and AWS Service
-     * Namespaces</a> in the <i>AWS General Reference</i>.
+     * href="/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and Amazon Web Services
+     * Service Namespaces</a> in the <i>Amazon Web Services General Reference</i>.
      * </p>
      * 
      * @return The ARN of the IAM managed policy. For more information about ARNs, see <a
-     *         href="/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and AWS Service
-     *         Namespaces</a> in the <i>AWS General Reference</i>.
+     *         href="/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and Amazon Web
+     *         Services Service Namespaces</a> in the <i>Amazon Web Services General Reference</i>.
      */
 
     public String getArn() {
@@ -119,14 +119,14 @@ public class AttachedManagedPolicy implements Serializable, Cloneable, Structure
     /**
      * <p>
      * The ARN of the IAM managed policy. For more information about ARNs, see <a
-     * href="/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and AWS Service
-     * Namespaces</a> in the <i>AWS General Reference</i>.
+     * href="/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and Amazon Web Services
+     * Service Namespaces</a> in the <i>Amazon Web Services General Reference</i>.
      * </p>
      * 
      * @param arn
      *        The ARN of the IAM managed policy. For more information about ARNs, see <a
-     *        href="/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and AWS Service
-     *        Namespaces</a> in the <i>AWS General Reference</i>.
+     *        href="/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and Amazon Web
+     *        Services Service Namespaces</a> in the <i>Amazon Web Services General Reference</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -17,8 +17,8 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * [Service-managed permissions] Describes whether StackSets automatically deploys to AWS Organizations accounts that
- * are added to a target organization or organizational unit (OU).
+ * [Service-managed permissions] Describes whether StackSets automatically deploys to Organizations accounts that are
+ * added to a target organization or organizational unit (OU).
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/AutoDeployment" target="_top">AWS API
@@ -29,10 +29,10 @@ public class AutoDeployment implements Serializable, Cloneable {
 
     /**
      * <p>
-     * If set to <code>true</code>, StackSets automatically deploys additional stack instances to AWS Organizations
-     * accounts that are added to a target organization or organizational unit (OU) in the specified Regions. If an
-     * account is removed from a target organization or OU, StackSets deletes stack instances from the account in the
-     * specified Regions.
+     * If set to <code>true</code>, StackSets automatically deploys additional stack instances to Organizations accounts
+     * that are added to a target organization or organizational unit (OU) in the specified Regions. If an account is
+     * removed from a target organization or OU, StackSets deletes stack instances from the account in the specified
+     * Regions.
      * </p>
      */
     private Boolean enabled;
@@ -47,17 +47,17 @@ public class AutoDeployment implements Serializable, Cloneable {
 
     /**
      * <p>
-     * If set to <code>true</code>, StackSets automatically deploys additional stack instances to AWS Organizations
-     * accounts that are added to a target organization or organizational unit (OU) in the specified Regions. If an
-     * account is removed from a target organization or OU, StackSets deletes stack instances from the account in the
-     * specified Regions.
+     * If set to <code>true</code>, StackSets automatically deploys additional stack instances to Organizations accounts
+     * that are added to a target organization or organizational unit (OU) in the specified Regions. If an account is
+     * removed from a target organization or OU, StackSets deletes stack instances from the account in the specified
+     * Regions.
      * </p>
      * 
      * @param enabled
-     *        If set to <code>true</code>, StackSets automatically deploys additional stack instances to AWS
-     *        Organizations accounts that are added to a target organization or organizational unit (OU) in the
-     *        specified Regions. If an account is removed from a target organization or OU, StackSets deletes stack
-     *        instances from the account in the specified Regions.
+     *        If set to <code>true</code>, StackSets automatically deploys additional stack instances to Organizations
+     *        accounts that are added to a target organization or organizational unit (OU) in the specified Regions. If
+     *        an account is removed from a target organization or OU, StackSets deletes stack instances from the account
+     *        in the specified Regions.
      */
 
     public void setEnabled(Boolean enabled) {
@@ -66,16 +66,16 @@ public class AutoDeployment implements Serializable, Cloneable {
 
     /**
      * <p>
-     * If set to <code>true</code>, StackSets automatically deploys additional stack instances to AWS Organizations
-     * accounts that are added to a target organization or organizational unit (OU) in the specified Regions. If an
-     * account is removed from a target organization or OU, StackSets deletes stack instances from the account in the
-     * specified Regions.
+     * If set to <code>true</code>, StackSets automatically deploys additional stack instances to Organizations accounts
+     * that are added to a target organization or organizational unit (OU) in the specified Regions. If an account is
+     * removed from a target organization or OU, StackSets deletes stack instances from the account in the specified
+     * Regions.
      * </p>
      * 
-     * @return If set to <code>true</code>, StackSets automatically deploys additional stack instances to AWS
-     *         Organizations accounts that are added to a target organization or organizational unit (OU) in the
-     *         specified Regions. If an account is removed from a target organization or OU, StackSets deletes stack
-     *         instances from the account in the specified Regions.
+     * @return If set to <code>true</code>, StackSets automatically deploys additional stack instances to Organizations
+     *         accounts that are added to a target organization or organizational unit (OU) in the specified Regions. If
+     *         an account is removed from a target organization or OU, StackSets deletes stack instances from the
+     *         account in the specified Regions.
      */
 
     public Boolean getEnabled() {
@@ -84,17 +84,17 @@ public class AutoDeployment implements Serializable, Cloneable {
 
     /**
      * <p>
-     * If set to <code>true</code>, StackSets automatically deploys additional stack instances to AWS Organizations
-     * accounts that are added to a target organization or organizational unit (OU) in the specified Regions. If an
-     * account is removed from a target organization or OU, StackSets deletes stack instances from the account in the
-     * specified Regions.
+     * If set to <code>true</code>, StackSets automatically deploys additional stack instances to Organizations accounts
+     * that are added to a target organization or organizational unit (OU) in the specified Regions. If an account is
+     * removed from a target organization or OU, StackSets deletes stack instances from the account in the specified
+     * Regions.
      * </p>
      * 
      * @param enabled
-     *        If set to <code>true</code>, StackSets automatically deploys additional stack instances to AWS
-     *        Organizations accounts that are added to a target organization or organizational unit (OU) in the
-     *        specified Regions. If an account is removed from a target organization or OU, StackSets deletes stack
-     *        instances from the account in the specified Regions.
+     *        If set to <code>true</code>, StackSets automatically deploys additional stack instances to Organizations
+     *        accounts that are added to a target organization or organizational unit (OU) in the specified Regions. If
+     *        an account is removed from a target organization or OU, StackSets deletes stack instances from the account
+     *        in the specified Regions.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -105,16 +105,16 @@ public class AutoDeployment implements Serializable, Cloneable {
 
     /**
      * <p>
-     * If set to <code>true</code>, StackSets automatically deploys additional stack instances to AWS Organizations
-     * accounts that are added to a target organization or organizational unit (OU) in the specified Regions. If an
-     * account is removed from a target organization or OU, StackSets deletes stack instances from the account in the
-     * specified Regions.
+     * If set to <code>true</code>, StackSets automatically deploys additional stack instances to Organizations accounts
+     * that are added to a target organization or organizational unit (OU) in the specified Regions. If an account is
+     * removed from a target organization or OU, StackSets deletes stack instances from the account in the specified
+     * Regions.
      * </p>
      * 
-     * @return If set to <code>true</code>, StackSets automatically deploys additional stack instances to AWS
-     *         Organizations accounts that are added to a target organization or organizational unit (OU) in the
-     *         specified Regions. If an account is removed from a target organization or OU, StackSets deletes stack
-     *         instances from the account in the specified Regions.
+     * @return If set to <code>true</code>, StackSets automatically deploys additional stack instances to Organizations
+     *         accounts that are added to a target organization or organizational unit (OU) in the specified Regions. If
+     *         an account is removed from a target organization or OU, StackSets deletes stack instances from the
+     *         account in the specified Regions.
      */
 
     public Boolean isEnabled() {

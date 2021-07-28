@@ -83,7 +83,7 @@ public class StackSummary implements Serializable, Cloneable {
      * <p>
      * For more information, see <a
      * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">Working with
-     * Nested Stacks</a> in the <i>AWS CloudFormation User Guide</i>.
+     * Nested Stacks</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      */
     private String parentId;
@@ -95,7 +95,7 @@ public class StackSummary implements Serializable, Cloneable {
      * <p>
      * For more information, see <a
      * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">Working with
-     * Nested Stacks</a> in the <i>AWS CloudFormation User Guide</i>.
+     * Nested Stacks</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      */
     private String rootId;
@@ -477,7 +477,7 @@ public class StackSummary implements Serializable, Cloneable {
      * <p>
      * For more information, see <a
      * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">Working with
-     * Nested Stacks</a> in the <i>AWS CloudFormation User Guide</i>.
+     * Nested Stacks</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * 
      * @param parentId
@@ -486,7 +486,7 @@ public class StackSummary implements Serializable, Cloneable {
      *        <p>
      *        For more information, see <a
      *        href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">Working
-     *        with Nested Stacks</a> in the <i>AWS CloudFormation User Guide</i>.
+     *        with Nested Stacks</a> in the <i>CloudFormation User Guide</i>.
      */
 
     public void setParentId(String parentId) {
@@ -501,7 +501,7 @@ public class StackSummary implements Serializable, Cloneable {
      * <p>
      * For more information, see <a
      * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">Working with
-     * Nested Stacks</a> in the <i>AWS CloudFormation User Guide</i>.
+     * Nested Stacks</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * 
      * @return For nested stacks--stacks created as resources for another stack--the stack ID of the direct parent of
@@ -509,7 +509,7 @@ public class StackSummary implements Serializable, Cloneable {
      *         <p>
      *         For more information, see <a
      *         href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">Working
-     *         with Nested Stacks</a> in the <i>AWS CloudFormation User Guide</i>.
+     *         with Nested Stacks</a> in the <i>CloudFormation User Guide</i>.
      */
 
     public String getParentId() {
@@ -524,7 +524,7 @@ public class StackSummary implements Serializable, Cloneable {
      * <p>
      * For more information, see <a
      * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">Working with
-     * Nested Stacks</a> in the <i>AWS CloudFormation User Guide</i>.
+     * Nested Stacks</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * 
      * @param parentId
@@ -533,7 +533,7 @@ public class StackSummary implements Serializable, Cloneable {
      *        <p>
      *        For more information, see <a
      *        href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">Working
-     *        with Nested Stacks</a> in the <i>AWS CloudFormation User Guide</i>.
+     *        with Nested Stacks</a> in the <i>CloudFormation User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -550,7 +550,7 @@ public class StackSummary implements Serializable, Cloneable {
      * <p>
      * For more information, see <a
      * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">Working with
-     * Nested Stacks</a> in the <i>AWS CloudFormation User Guide</i>.
+     * Nested Stacks</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * 
      * @param rootId
@@ -559,7 +559,7 @@ public class StackSummary implements Serializable, Cloneable {
      *        <p>
      *        For more information, see <a
      *        href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">Working
-     *        with Nested Stacks</a> in the <i>AWS CloudFormation User Guide</i>.
+     *        with Nested Stacks</a> in the <i>CloudFormation User Guide</i>.
      */
 
     public void setRootId(String rootId) {
@@ -574,7 +574,7 @@ public class StackSummary implements Serializable, Cloneable {
      * <p>
      * For more information, see <a
      * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">Working with
-     * Nested Stacks</a> in the <i>AWS CloudFormation User Guide</i>.
+     * Nested Stacks</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * 
      * @return For nested stacks--stacks created as resources for another stack--the stack ID of the top-level stack to
@@ -582,7 +582,7 @@ public class StackSummary implements Serializable, Cloneable {
      *         <p>
      *         For more information, see <a
      *         href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">Working
-     *         with Nested Stacks</a> in the <i>AWS CloudFormation User Guide</i>.
+     *         with Nested Stacks</a> in the <i>CloudFormation User Guide</i>.
      */
 
     public String getRootId() {
@@ -597,7 +597,7 @@ public class StackSummary implements Serializable, Cloneable {
      * <p>
      * For more information, see <a
      * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">Working with
-     * Nested Stacks</a> in the <i>AWS CloudFormation User Guide</i>.
+     * Nested Stacks</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * 
      * @param rootId
@@ -606,7 +606,7 @@ public class StackSummary implements Serializable, Cloneable {
      *        <p>
      *        For more information, see <a
      *        href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">Working
-     *        with Nested Stacks</a> in the <i>AWS CloudFormation User Guide</i>.
+     *        with Nested Stacks</a> in the <i>CloudFormation User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

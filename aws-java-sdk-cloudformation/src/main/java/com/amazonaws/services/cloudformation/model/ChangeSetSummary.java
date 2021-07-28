@@ -55,8 +55,8 @@ public class ChangeSetSummary implements Serializable, Cloneable {
      * <p>
      * If the change set execution status is <code>AVAILABLE</code>, you can execute the change set. If you can’t
      * execute the change set, the status indicates why. For example, a change set might be in an
-     * <code>UNAVAILABLE</code> state because AWS CloudFormation is still creating it or in an <code>OBSOLETE</code>
-     * state because the stack was already updated.
+     * <code>UNAVAILABLE</code> state because CloudFormation is still creating it or in an <code>OBSOLETE</code> state
+     * because the stack was already updated.
      * </p>
      */
     private String executionStatus;
@@ -70,7 +70,7 @@ public class ChangeSetSummary implements Serializable, Cloneable {
     /**
      * <p>
      * A description of the change set's status. For example, if your change set is in the <code>FAILED</code> state,
-     * AWS CloudFormation shows the error message.
+     * CloudFormation shows the error message.
      * </p>
      */
     private String statusReason;
@@ -269,15 +269,15 @@ public class ChangeSetSummary implements Serializable, Cloneable {
      * <p>
      * If the change set execution status is <code>AVAILABLE</code>, you can execute the change set. If you can’t
      * execute the change set, the status indicates why. For example, a change set might be in an
-     * <code>UNAVAILABLE</code> state because AWS CloudFormation is still creating it or in an <code>OBSOLETE</code>
-     * state because the stack was already updated.
+     * <code>UNAVAILABLE</code> state because CloudFormation is still creating it or in an <code>OBSOLETE</code> state
+     * because the stack was already updated.
      * </p>
      * 
      * @param executionStatus
      *        If the change set execution status is <code>AVAILABLE</code>, you can execute the change set. If you can’t
      *        execute the change set, the status indicates why. For example, a change set might be in an
-     *        <code>UNAVAILABLE</code> state because AWS CloudFormation is still creating it or in an
-     *        <code>OBSOLETE</code> state because the stack was already updated.
+     *        <code>UNAVAILABLE</code> state because CloudFormation is still creating it or in an <code>OBSOLETE</code>
+     *        state because the stack was already updated.
      * @see ExecutionStatus
      */
 
@@ -289,14 +289,14 @@ public class ChangeSetSummary implements Serializable, Cloneable {
      * <p>
      * If the change set execution status is <code>AVAILABLE</code>, you can execute the change set. If you can’t
      * execute the change set, the status indicates why. For example, a change set might be in an
-     * <code>UNAVAILABLE</code> state because AWS CloudFormation is still creating it or in an <code>OBSOLETE</code>
-     * state because the stack was already updated.
+     * <code>UNAVAILABLE</code> state because CloudFormation is still creating it or in an <code>OBSOLETE</code> state
+     * because the stack was already updated.
      * </p>
      * 
      * @return If the change set execution status is <code>AVAILABLE</code>, you can execute the change set. If you
      *         can’t execute the change set, the status indicates why. For example, a change set might be in an
-     *         <code>UNAVAILABLE</code> state because AWS CloudFormation is still creating it or in an
-     *         <code>OBSOLETE</code> state because the stack was already updated.
+     *         <code>UNAVAILABLE</code> state because CloudFormation is still creating it or in an <code>OBSOLETE</code>
+     *         state because the stack was already updated.
      * @see ExecutionStatus
      */
 
@@ -308,15 +308,15 @@ public class ChangeSetSummary implements Serializable, Cloneable {
      * <p>
      * If the change set execution status is <code>AVAILABLE</code>, you can execute the change set. If you can’t
      * execute the change set, the status indicates why. For example, a change set might be in an
-     * <code>UNAVAILABLE</code> state because AWS CloudFormation is still creating it or in an <code>OBSOLETE</code>
-     * state because the stack was already updated.
+     * <code>UNAVAILABLE</code> state because CloudFormation is still creating it or in an <code>OBSOLETE</code> state
+     * because the stack was already updated.
      * </p>
      * 
      * @param executionStatus
      *        If the change set execution status is <code>AVAILABLE</code>, you can execute the change set. If you can’t
      *        execute the change set, the status indicates why. For example, a change set might be in an
-     *        <code>UNAVAILABLE</code> state because AWS CloudFormation is still creating it or in an
-     *        <code>OBSOLETE</code> state because the stack was already updated.
+     *        <code>UNAVAILABLE</code> state because CloudFormation is still creating it or in an <code>OBSOLETE</code>
+     *        state because the stack was already updated.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ExecutionStatus
      */
@@ -330,15 +330,15 @@ public class ChangeSetSummary implements Serializable, Cloneable {
      * <p>
      * If the change set execution status is <code>AVAILABLE</code>, you can execute the change set. If you can’t
      * execute the change set, the status indicates why. For example, a change set might be in an
-     * <code>UNAVAILABLE</code> state because AWS CloudFormation is still creating it or in an <code>OBSOLETE</code>
-     * state because the stack was already updated.
+     * <code>UNAVAILABLE</code> state because CloudFormation is still creating it or in an <code>OBSOLETE</code> state
+     * because the stack was already updated.
      * </p>
      * 
      * @param executionStatus
      *        If the change set execution status is <code>AVAILABLE</code>, you can execute the change set. If you can’t
      *        execute the change set, the status indicates why. For example, a change set might be in an
-     *        <code>UNAVAILABLE</code> state because AWS CloudFormation is still creating it or in an
-     *        <code>OBSOLETE</code> state because the stack was already updated.
+     *        <code>UNAVAILABLE</code> state because CloudFormation is still creating it or in an <code>OBSOLETE</code>
+     *        state because the stack was already updated.
      * @see ExecutionStatus
      */
 
@@ -350,15 +350,15 @@ public class ChangeSetSummary implements Serializable, Cloneable {
      * <p>
      * If the change set execution status is <code>AVAILABLE</code>, you can execute the change set. If you can’t
      * execute the change set, the status indicates why. For example, a change set might be in an
-     * <code>UNAVAILABLE</code> state because AWS CloudFormation is still creating it or in an <code>OBSOLETE</code>
-     * state because the stack was already updated.
+     * <code>UNAVAILABLE</code> state because CloudFormation is still creating it or in an <code>OBSOLETE</code> state
+     * because the stack was already updated.
      * </p>
      * 
      * @param executionStatus
      *        If the change set execution status is <code>AVAILABLE</code>, you can execute the change set. If you can’t
      *        execute the change set, the status indicates why. For example, a change set might be in an
-     *        <code>UNAVAILABLE</code> state because AWS CloudFormation is still creating it or in an
-     *        <code>OBSOLETE</code> state because the stack was already updated.
+     *        <code>UNAVAILABLE</code> state because CloudFormation is still creating it or in an <code>OBSOLETE</code>
+     *        state because the stack was already updated.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ExecutionStatus
      */
@@ -454,12 +454,12 @@ public class ChangeSetSummary implements Serializable, Cloneable {
     /**
      * <p>
      * A description of the change set's status. For example, if your change set is in the <code>FAILED</code> state,
-     * AWS CloudFormation shows the error message.
+     * CloudFormation shows the error message.
      * </p>
      * 
      * @param statusReason
      *        A description of the change set's status. For example, if your change set is in the <code>FAILED</code>
-     *        state, AWS CloudFormation shows the error message.
+     *        state, CloudFormation shows the error message.
      */
 
     public void setStatusReason(String statusReason) {
@@ -469,11 +469,11 @@ public class ChangeSetSummary implements Serializable, Cloneable {
     /**
      * <p>
      * A description of the change set's status. For example, if your change set is in the <code>FAILED</code> state,
-     * AWS CloudFormation shows the error message.
+     * CloudFormation shows the error message.
      * </p>
      * 
      * @return A description of the change set's status. For example, if your change set is in the <code>FAILED</code>
-     *         state, AWS CloudFormation shows the error message.
+     *         state, CloudFormation shows the error message.
      */
 
     public String getStatusReason() {
@@ -483,12 +483,12 @@ public class ChangeSetSummary implements Serializable, Cloneable {
     /**
      * <p>
      * A description of the change set's status. For example, if your change set is in the <code>FAILED</code> state,
-     * AWS CloudFormation shows the error message.
+     * CloudFormation shows the error message.
      * </p>
      * 
      * @param statusReason
      *        A description of the change set's status. For example, if your change set is in the <code>FAILED</code>
-     *        state, AWS CloudFormation shows the error message.
+     *        state, CloudFormation shows the error message.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -28,8 +28,8 @@ public class ListPermissionSetsRequest extends com.amazonaws.AmazonWebServiceReq
     /**
      * <p>
      * The ARN of the SSO instance under which the operation will be executed. For more information about ARNs, see <a
-     * href="/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and AWS Service
-     * Namespaces</a> in the <i>AWS General Reference</i>.
+     * href="/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and Amazon Web Services
+     * Service Namespaces</a> in the <i>Amazon Web Services General Reference</i>.
      * </p>
      */
     private String instanceArn;
@@ -50,14 +50,14 @@ public class ListPermissionSetsRequest extends com.amazonaws.AmazonWebServiceReq
     /**
      * <p>
      * The ARN of the SSO instance under which the operation will be executed. For more information about ARNs, see <a
-     * href="/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and AWS Service
-     * Namespaces</a> in the <i>AWS General Reference</i>.
+     * href="/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and Amazon Web Services
+     * Service Namespaces</a> in the <i>Amazon Web Services General Reference</i>.
      * </p>
      * 
      * @param instanceArn
      *        The ARN of the SSO instance under which the operation will be executed. For more information about ARNs,
-     *        see <a href="/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and AWS Service
-     *        Namespaces</a> in the <i>AWS General Reference</i>.
+     *        see <a href="/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and Amazon Web
+     *        Services Service Namespaces</a> in the <i>Amazon Web Services General Reference</i>.
      */
 
     public void setInstanceArn(String instanceArn) {
@@ -67,13 +67,13 @@ public class ListPermissionSetsRequest extends com.amazonaws.AmazonWebServiceReq
     /**
      * <p>
      * The ARN of the SSO instance under which the operation will be executed. For more information about ARNs, see <a
-     * href="/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and AWS Service
-     * Namespaces</a> in the <i>AWS General Reference</i>.
+     * href="/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and Amazon Web Services
+     * Service Namespaces</a> in the <i>Amazon Web Services General Reference</i>.
      * </p>
      * 
      * @return The ARN of the SSO instance under which the operation will be executed. For more information about ARNs,
-     *         see <a href="/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and AWS
-     *         Service Namespaces</a> in the <i>AWS General Reference</i>.
+     *         see <a href="/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and Amazon Web
+     *         Services Service Namespaces</a> in the <i>Amazon Web Services General Reference</i>.
      */
 
     public String getInstanceArn() {
@@ -83,14 +83,14 @@ public class ListPermissionSetsRequest extends com.amazonaws.AmazonWebServiceReq
     /**
      * <p>
      * The ARN of the SSO instance under which the operation will be executed. For more information about ARNs, see <a
-     * href="/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and AWS Service
-     * Namespaces</a> in the <i>AWS General Reference</i>.
+     * href="/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and Amazon Web Services
+     * Service Namespaces</a> in the <i>Amazon Web Services General Reference</i>.
      * </p>
      * 
      * @param instanceArn
      *        The ARN of the SSO instance under which the operation will be executed. For more information about ARNs,
-     *        see <a href="/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and AWS Service
-     *        Namespaces</a> in the <i>AWS General Reference</i>.
+     *        see <a href="/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs) and Amazon Web
+     *        Services Service Namespaces</a> in the <i>Amazon Web Services General Reference</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

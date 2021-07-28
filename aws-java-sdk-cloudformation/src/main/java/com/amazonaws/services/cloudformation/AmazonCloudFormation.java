@@ -29,24 +29,25 @@ import com.amazonaws.services.cloudformation.waiters.AmazonCloudFormationWaiters
  * <p>
  * <fullname>AWS CloudFormation</fullname>
  * <p>
- * AWS CloudFormation allows you to create and manage AWS infrastructure deployments predictably and repeatedly. You can
- * use AWS CloudFormation to leverage AWS products, such as Amazon Elastic Compute Cloud, Amazon Elastic Block Store,
- * Amazon Simple Notification Service, Elastic Load Balancing, and Auto Scaling to build highly-reliable, highly
- * scalable, cost-effective applications without creating or configuring the underlying AWS infrastructure.
+ * CloudFormation allows you to create and manage Amazon Web Services infrastructure deployments predictably and
+ * repeatedly. You can use CloudFormation to leverage Amazon Web Services products, such as Amazon Elastic Compute
+ * Cloud, Amazon Elastic Block Store, Amazon Simple Notification Service, Elastic Load Balancing, and Auto Scaling to
+ * build highly-reliable, highly scalable, cost-effective applications without creating or configuring the underlying
+ * Amazon Web Services infrastructure.
  * </p>
  * <p>
- * With AWS CloudFormation, you declare all of your resources and dependencies in a template file. The template defines
- * a collection of resources as a single unit called a stack. AWS CloudFormation creates and deletes all member
- * resources of the stack together and manages all dependencies between the resources for you.
+ * With CloudFormation, you declare all of your resources and dependencies in a template file. The template defines a
+ * collection of resources as a single unit called a stack. CloudFormation creates and deletes all member resources of
+ * the stack together and manages all dependencies between the resources for you.
  * </p>
  * <p>
- * For more information about AWS CloudFormation, see the <a href="http://aws.amazon.com/cloudformation/">AWS
- * CloudFormation Product Page</a>.
+ * For more information about CloudFormation, see the <a href="http://aws.amazon.com/cloudformation/">CloudFormation
+ * Product Page</a>.
  * </p>
  * <p>
- * Amazon CloudFormation makes use of other AWS products. If you need additional technical information about a specific
- * AWS product, you can find the product's technical documentation at <a
- * href="https://docs.aws.amazon.com/">docs.aws.amazon.com</a>.
+ * CloudFormation makes use of other Amazon Web Services products. If you need additional technical information about a
+ * specific Amazon Web Services product, you can find the product's technical documentation at <a
+ * href="https://docs.aws.amazon.com/"> <code>docs.aws.amazon.com</code> </a>.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
@@ -192,11 +193,11 @@ public interface AmazonCloudFormation {
      * state (the <code>UPDATE_ROLLBACK_COMPLETE</code> state), and then try to update the stack again.
      * </p>
      * <p>
-     * A stack goes into the <code>UPDATE_ROLLBACK_FAILED</code> state when AWS CloudFormation cannot roll back all
-     * changes after a failed stack update. For example, you might have a stack that is rolling back to an old database
-     * instance that was deleted outside of AWS CloudFormation. Because AWS CloudFormation doesn't know the database was
-     * deleted, it assumes that the database instance still exists and attempts to roll back to it, causing the update
-     * rollback to fail.
+     * A stack goes into the <code>UPDATE_ROLLBACK_FAILED</code> state when CloudFormation cannot roll back all changes
+     * after a failed stack update. For example, you might have a stack that is rolling back to an old database instance
+     * that was deleted outside of CloudFormation. Because CloudFormation doesn't know the database was deleted, it
+     * assumes that the database instance still exists and attempts to roll back to it, causing the update rollback to
+     * fail.
      * </p>
      * 
      * @param continueUpdateRollbackRequest
@@ -214,23 +215,23 @@ public interface AmazonCloudFormation {
      * <p>
      * Creates a list of changes that will be applied to a stack so that you can review the changes before executing
      * them. You can create a change set for a stack that doesn't exist or an existing stack. If you create a change set
-     * for a stack that doesn't exist, the change set shows all of the resources that AWS CloudFormation will create. If
-     * you create a change set for an existing stack, AWS CloudFormation compares the stack's information with the
-     * information that you submit in the change set and lists the differences. Use change sets to understand which
-     * resources AWS CloudFormation will create or change, and how it will change resources in an existing stack, before
-     * you create or update a stack.
+     * for a stack that doesn't exist, the change set shows all of the resources that CloudFormation will create. If you
+     * create a change set for an existing stack, CloudFormation compares the stack's information with the information
+     * that you submit in the change set and lists the differences. Use change sets to understand which resources
+     * CloudFormation will create or change, and how it will change resources in an existing stack, before you create or
+     * update a stack.
      * </p>
      * <p>
      * To create a change set for a stack that doesn't exist, for the <code>ChangeSetType</code> parameter, specify
      * <code>CREATE</code>. To create a change set for an existing stack, specify <code>UPDATE</code> for the
      * <code>ChangeSetType</code> parameter. To create a change set for an import operation, specify <code>IMPORT</code>
      * for the <code>ChangeSetType</code> parameter. After the <code>CreateChangeSet</code> call successfully completes,
-     * AWS CloudFormation starts creating the change set. To check the status of the change set or to review it, use the
+     * CloudFormation starts creating the change set. To check the status of the change set or to review it, use the
      * <a>DescribeChangeSet</a> action.
      * </p>
      * <p>
      * When you are satisfied with the changes the change set will make, execute the change set by using the
-     * <a>ExecuteChangeSet</a> action. AWS CloudFormation doesn't make changes until you execute the change set.
+     * <a>ExecuteChangeSet</a> action. CloudFormation doesn't make changes until you execute the change set.
      * </p>
      * <p>
      * To create a change set for the entire stack hierachy, set <code>IncludeNestedStacks</code> to <code>True</code>.
@@ -248,7 +249,7 @@ public interface AmazonCloudFormation {
      *         <p>
      *         For information on resource and stack limitations, see <a
      *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cloudformation-limits.html"
-     *         >Limits</a> in the <i>AWS CloudFormation User Guide</i>.
+     *         >Limits</a> in the <i>CloudFormation User Guide</i>.
      * @sample AmazonCloudFormation.CreateChangeSet
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/CreateChangeSet" target="_top">AWS
      *      API Documentation</a>
@@ -269,7 +270,7 @@ public interface AmazonCloudFormation {
      *         <p>
      *         For information on resource and stack limitations, see <a
      *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cloudformation-limits.html"
-     *         >Limits</a> in the <i>AWS CloudFormation User Guide</i>.
+     *         >Limits</a> in the <i>CloudFormation User Guide</i>.
      * @throws AlreadyExistsException
      *         The resource with the name requested already exists.
      * @throws TokenAlreadyExistsException
@@ -307,7 +308,7 @@ public interface AmazonCloudFormation {
      *         <p>
      *         For information on resource and stack limitations, see <a
      *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cloudformation-limits.html"
-     *         >Limits</a> in the <i>AWS CloudFormation User Guide</i>.
+     *         >Limits</a> in the <i>CloudFormation User Guide</i>.
      * @sample AmazonCloudFormation.CreateStackInstances
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/CreateStackInstances"
      *      target="_top">AWS API Documentation</a>
@@ -330,7 +331,7 @@ public interface AmazonCloudFormation {
      *         <p>
      *         For information on resource and stack limitations, see <a
      *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cloudformation-limits.html"
-     *         >Limits</a> in the <i>AWS CloudFormation User Guide</i>.
+     *         >Limits</a> in the <i>CloudFormation User Guide</i>.
      * @sample AmazonCloudFormation.CreateStackSet
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/CreateStackSet" target="_top">AWS
      *      API Documentation</a>
@@ -364,7 +365,7 @@ public interface AmazonCloudFormation {
      * Deletes the specified change set. Deleting change sets ensures that no one executes the wrong change set.
      * </p>
      * <p>
-     * If the call successfully completes, AWS CloudFormation successfully deleted the change set.
+     * If the call successfully completes, CloudFormation successfully deleted the change set.
      * </p>
      * <p>
      * If <code>IncludeNestedStacks</code> specifies <code>True</code> during the creation of the nested change set,
@@ -479,10 +480,10 @@ public interface AmazonCloudFormation {
 
     /**
      * <p>
-     * Retrieves your account's AWS CloudFormation limits, such as the maximum number of stacks that you can create in
-     * your account. For more information about account limits, see <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cloudformation-limits.html">AWS
-     * CloudFormation Limits</a> in the <i>AWS CloudFormation User Guide</i>.
+     * Retrieves your account's CloudFormation limits, such as the maximum number of stacks that you can create in your
+     * account. For more information about account limits, see <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cloudformation-limits.html">CloudFormation
+     * Limits</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * 
      * @param describeAccountLimitsRequest
@@ -496,10 +497,10 @@ public interface AmazonCloudFormation {
 
     /**
      * <p>
-     * Returns the inputs for the change set and a list of changes that AWS CloudFormation will make if you execute the
+     * Returns the inputs for the change set and a list of changes that CloudFormation will make if you execute the
      * change set. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-updating-stacks-changesets.html"
-     * >Updating Stacks Using Change Sets</a> in the AWS CloudFormation User Guide.
+     * >Updating Stacks Using Change Sets</a> in the CloudFormation User Guide.
      * </p>
      * 
      * @param describeChangeSetRequest
@@ -578,7 +579,7 @@ public interface AmazonCloudFormation {
      * <p>
      * Returns all stack related events for a specified stack in reverse chronological order. For more information about
      * a stack's event history, go to <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/concept-stack.html">Stacks</a> in the AWS
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/concept-stack.html">Stacks</a> in the
      * CloudFormation User Guide.
      * </p>
      * <note>
@@ -599,7 +600,7 @@ public interface AmazonCloudFormation {
 
     /**
      * <p>
-     * Returns the stack instance that's associated with the specified stack set, AWS account, and Region.
+     * Returns the stack instance that's associated with the specified stack set, account, and Region.
      * </p>
      * <p>
      * For a list of stack instances that are associated with a specific stack set, use <a>ListStackInstances</a>.
@@ -638,8 +639,7 @@ public interface AmazonCloudFormation {
     /**
      * <p>
      * Returns drift information for the resources that have been checked for drift in the specified stack. This
-     * includes actual and expected configuration values for resources where AWS CloudFormation detects configuration
-     * drift.
+     * includes actual and expected configuration values for resources where CloudFormation detects configuration drift.
      * </p>
      * <p>
      * For a given stack, there will be one <code>StackResourceDrift</code> for each stack resource that has been
@@ -664,9 +664,10 @@ public interface AmazonCloudFormation {
 
     /**
      * <p>
-     * Returns AWS resource descriptions for running and deleted stacks. If <code>StackName</code> is specified, all the
-     * associated resources that are part of the stack are returned. If <code>PhysicalResourceId</code> is specified,
-     * the associated resources of the stack that the resource belongs to are returned.
+     * Returns Amazon Web Services resource descriptions for running and deleted stacks. If <code>StackName</code> is
+     * specified, all the associated resources that are part of the stack are returned. If
+     * <code>PhysicalResourceId</code> is specified, the associated resources of the stack that the resource belongs to
+     * are returned.
      * </p>
      * <note>
      * <p>
@@ -682,7 +683,7 @@ public interface AmazonCloudFormation {
      * You must specify either <code>StackName</code> or <code>PhysicalResourceId</code>, but not both. In addition, you
      * can specify <code>LogicalResourceId</code> to filter the returned result. For more information about resources,
      * the <code>LogicalResourceId</code> and <code>PhysicalResourceId</code>, go to the <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/">AWS CloudFormation User Guide</a>.
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/">CloudFormation User Guide</a>.
      * </p>
      * <note>
      * <p>
@@ -808,10 +809,10 @@ public interface AmazonCloudFormation {
      * <p>
      * Detects whether a stack's actual configuration differs, or has <i>drifted</i>, from it's expected configuration,
      * as defined in the stack template and any values specified as template parameters. For each resource in the stack
-     * that supports drift detection, AWS CloudFormation compares the actual configuration of the resource with its
-     * expected template configuration. Only resource properties explicitly defined in the stack template are checked
-     * for drift. A stack is considered to have drifted if one or more of its resources differ from their expected
-     * template configurations. For more information, see <a
+     * that supports drift detection, CloudFormation compares the actual configuration of the resource with its expected
+     * template configuration. Only resource properties explicitly defined in the stack template are checked for drift.
+     * A stack is considered to have drifted if one or more of its resources differ from their expected template
+     * configurations. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html">Detecting
      * Unregulated Configuration Changes to Stacks and Resources</a>.
      * </p>
@@ -831,7 +832,7 @@ public interface AmazonCloudFormation {
      * drift information about the stack and its resources.
      * </p>
      * <p>
-     * When detecting drift on a stack, AWS CloudFormation does not detect drift on any nested stacks belonging to that
+     * When detecting drift on a stack, CloudFormation does not detect drift on any nested stacks belonging to that
      * stack. Perform <code>DetectStackDrift</code> directly on the nested stack itself.
      * </p>
      * 
@@ -847,7 +848,7 @@ public interface AmazonCloudFormation {
      * <p>
      * Returns information about whether a resource's actual configuration differs, or has <i>drifted</i>, from it's
      * expected configuration, as defined in the stack template and any values specified as template parameters. This
-     * information includes actual and expected property values for resources in which AWS CloudFormation detects drift.
+     * information includes actual and expected property values for resources in which CloudFormation detects drift.
      * Only resource properties explicitly defined in the stack template are checked for drift. For more information
      * about stack and resource drift, see <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html">Detecting
@@ -938,8 +939,8 @@ public interface AmazonCloudFormation {
 
     /**
      * <p>
-     * Returns the estimated monthly cost of a template. The return value is an AWS Simple Monthly Calculator URL with a
-     * query string that describes the resources required to run the template.
+     * Returns the estimated monthly cost of a template. The return value is an Amazon Web Services Simple Monthly
+     * Calculator URL with a query string that describes the resources required to run the template.
      * </p>
      * 
      * @param estimateTemplateCostRequest
@@ -961,16 +962,16 @@ public interface AmazonCloudFormation {
     /**
      * <p>
      * Updates a stack using the input information that was provided when the specified change set was created. After
-     * the call successfully completes, AWS CloudFormation starts updating the stack. Use the <a>DescribeStacks</a>
-     * action to view the status of the update.
+     * the call successfully completes, CloudFormation starts updating the stack. Use the <a>DescribeStacks</a> action
+     * to view the status of the update.
      * </p>
      * <p>
-     * When you execute a change set, AWS CloudFormation deletes all other change sets associated with the stack because
+     * When you execute a change set, CloudFormation deletes all other change sets associated with the stack because
      * they aren't valid for the updated stack.
      * </p>
      * <p>
-     * If a stack policy is associated with the stack, AWS CloudFormation enforces the policy during the update. You
-     * can't specify a temporary stack policy that overrides the current policy.
+     * If a stack policy is associated with the stack, CloudFormation enforces the policy during the update. You can't
+     * specify a temporary stack policy that overrides the current policy.
      * </p>
      * <p>
      * To create a change set for the entire stack hierachy, <code>IncludeNestedStacks</code> must have been set to
@@ -1070,8 +1071,47 @@ public interface AmazonCloudFormation {
 
     /**
      * <p>
-     * Returns the ID and status of each active change set for a stack. For example, AWS CloudFormation lists change
-     * sets that are in the <code>CREATE_IN_PROGRESS</code> or <code>CREATE_PENDING</code> state.
+     * Import existing stacks into a new stack sets. Use the stack import operation to import up to 10 stacks into a new
+     * stack set in the same account as the source stack or in a different administrator account and Region, by
+     * specifying the stack ID of the stack you intend to import.
+     * </p>
+     * <note>
+     * <p>
+     * <code>ImportStacksToStackSet</code> is only supported by self-managed permissions.
+     * </p>
+     * </note>
+     * 
+     * @param importStacksToStackSetRequest
+     * @return Result of the ImportStacksToStackSet operation returned by the service.
+     * @throws LimitExceededException
+     *         The quota for the resource has already been reached.</p>
+     *         <p>
+     *         For information on resource and stack limitations, see <a
+     *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cloudformation-limits.html"
+     *         >Limits</a> in the <i>CloudFormation User Guide</i>.
+     * @throws StackSetNotFoundException
+     *         The specified stack set doesn't exist.
+     * @throws InvalidOperationException
+     *         The specified operation isn't valid.
+     * @throws OperationInProgressException
+     *         Another operation is currently in progress for this stack set. Only one operation can be performed for a
+     *         stack set at a given time.
+     * @throws OperationIdAlreadyExistsException
+     *         The specified operation ID already exists.
+     * @throws StackNotFoundException
+     *         The specified stack ARN doesn’t exist or stack doesn’t exist corresponding to the ARN in input.
+     * @throws StaleRequestException
+     *         Another operation has been performed on this stack set since the specified operation was performed.
+     * @sample AmazonCloudFormation.ImportStacksToStackSet
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/ImportStacksToStackSet"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ImportStacksToStackSetResult importStacksToStackSet(ImportStacksToStackSetRequest importStacksToStackSetRequest);
+
+    /**
+     * <p>
+     * Returns the ID and status of each active change set for a stack. For example, CloudFormation lists change sets
+     * that are in the <code>CREATE_IN_PROGRESS</code> or <code>CREATE_PENDING</code> state.
      * </p>
      * 
      * @param listChangeSetsRequest
@@ -1092,7 +1132,7 @@ public interface AmazonCloudFormation {
      * </p>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-exports.html"> AWS
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-exports.html">
      * CloudFormation Export Stack Output Values</a>.
      * </p>
      * 
@@ -1127,8 +1167,8 @@ public interface AmazonCloudFormation {
     /**
      * <p>
      * Returns summary information about stack instances that are associated with the specified stack set. You can
-     * filter for stack instances that are associated with a specific AWS account name or Region, or that have a
-     * specific status.
+     * filter for stack instances that are associated with a specific account name or Region, or that have a specific
+     * status.
      * </p>
      * 
      * @param listStackInstancesRequest
@@ -1199,7 +1239,7 @@ public interface AmazonCloudFormation {
      * <li>
      * <p>
      * [Self-managed permissions] If you set the <code>CallAs</code> parameter to <code>SELF</code> while signed in to
-     * your AWS account, <code>ListStackSets</code> returns all self-managed stack sets in your AWS account.
+     * your account, <code>ListStackSets</code> returns all self-managed stack sets in your account.
      * </p>
      * </li>
      * <li>
@@ -1349,7 +1389,7 @@ public interface AmazonCloudFormation {
     /**
      * <p>
      * Registers your account as a publisher of public extensions in the CloudFormation registry. Public extensions are
-     * available for use by all CloudFormation users. This publisher ID applies to your account in all AWS regions.
+     * available for use by all CloudFormation users. This publisher ID applies to your account in all Regions.
      * </p>
      * <p>
      * For information on requirements for registering as a public extension publisher, see <a href=
@@ -1371,7 +1411,7 @@ public interface AmazonCloudFormation {
     /**
      * <p>
      * Registers an extension with the CloudFormation service. Registering an extension makes it available for use in
-     * CloudFormation templates in your AWS account, and includes:
+     * CloudFormation templates in your account, and includes:
      * </p>
      * <ul>
      * <li>
@@ -1451,8 +1491,8 @@ public interface AmazonCloudFormation {
      * <p>
      * It is strongly recommended that you use dynamic references to restrict sensitive configuration definitions, such
      * as third-party credentials. For more details on dynamic references, see <a
-     * href="https://docs.aws.amazon.com/">Using dynamic references to specify template values</a> in the <i>AWS
-     * CloudFormation User Guide</i>.
+     * href="https://docs.aws.amazon.com/">Using dynamic references to specify template values</a> in the
+     * <i>CloudFormation User Guide</i>.
      * </p>
      * </important>
      * 
@@ -1489,7 +1529,7 @@ public interface AmazonCloudFormation {
     /**
      * <p>
      * Sends a signal to the specified resource with a success or failure status. You can use the SignalResource API in
-     * conjunction with a creation policy or update policy. AWS CloudFormation doesn't proceed with a stack creation or
+     * conjunction with a creation policy or update policy. CloudFormation doesn't proceed with a stack creation or
      * update until resources receive the required number of signals or the timeout period is exceeded. The
      * SignalResource API is useful in cases where you want to send signals from anywhere other than an Amazon EC2
      * instance.
@@ -1550,7 +1590,7 @@ public interface AmazonCloudFormation {
      * region for testing.
      * </p>
      * <p>
-     * To perform testing, CloudFormation assumes the execution role specified when the test was registered. For more
+     * To perform testing, CloudFormation assumes the execution role specified when the type was registered. For more
      * information, see <a href="AWSCloudFormation/latest/APIReference/API_RegisterType.html">RegisterType</a>.
      * </p>
      * <p>
@@ -1688,7 +1728,7 @@ public interface AmazonCloudFormation {
      * Updates termination protection for the specified stack. If a user attempts to delete a stack with termination
      * protection enabled, the operation fails and the stack remains unchanged. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-protect-stacks.html">Protecting a
-     * Stack From Being Deleted</a> in the <i>AWS CloudFormation User Guide</i>.
+     * Stack From Being Deleted</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * <p>
      * For <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">nested
@@ -1705,9 +1745,9 @@ public interface AmazonCloudFormation {
 
     /**
      * <p>
-     * Validates a specified template. AWS CloudFormation first checks if the template is valid JSON. If it isn't, AWS
-     * CloudFormation checks if the template is valid YAML. If both these checks fail, AWS CloudFormation returns a
-     * template validation error.
+     * Validates a specified template. CloudFormation first checks if the template is valid JSON. If it isn't,
+     * CloudFormation checks if the template is valid YAML. If both these checks fail, CloudFormation returns a template
+     * validation error.
      * </p>
      * 
      * @param validateTemplateRequest

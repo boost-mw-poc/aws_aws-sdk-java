@@ -37,8 +37,8 @@ public class DeleteStackRequest extends com.amazonaws.AmazonWebServiceRequest im
     /**
      * <p>
      * For stacks in the <code>DELETE_FAILED</code> state, a list of resource logical IDs that are associated with the
-     * resources you want to retain. During deletion, AWS CloudFormation deletes the stack but does not delete the
-     * retained resources.
+     * resources you want to retain. During deletion, CloudFormation deletes the stack but does not delete the retained
+     * resources.
      * </p>
      * <p>
      * Retaining resources is useful when you cannot delete a resource, such as a non-empty S3 bucket, but you want to
@@ -48,20 +48,20 @@ public class DeleteStackRequest extends com.amazonaws.AmazonWebServiceRequest im
     private com.amazonaws.internal.SdkInternalList<String> retainResources;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an AWS Identity and Access Management (IAM) role that AWS CloudFormation
-     * assumes to delete the stack. AWS CloudFormation uses the role's credentials to make calls on your behalf.
+     * The Amazon Resource Name (ARN) of an Identity and Access Management (IAM) role that CloudFormation assumes to
+     * delete the stack. CloudFormation uses the role's credentials to make calls on your behalf.
      * </p>
      * <p>
-     * If you don't specify a value, AWS CloudFormation uses the role that was previously associated with the stack. If
-     * no role is available, AWS CloudFormation uses a temporary session that is generated from your user credentials.
+     * If you don't specify a value, CloudFormation uses the role that was previously associated with the stack. If no
+     * role is available, CloudFormation uses a temporary session that is generated from your user credentials.
      * </p>
      */
     private String roleARN;
     /**
      * <p>
      * A unique identifier for this <code>DeleteStack</code> request. Specify this token if you plan to retry requests
-     * so that AWS CloudFormation knows that you're not attempting to delete a stack with the same name. You might retry
-     * <code>DeleteStack</code> requests to ensure that AWS CloudFormation successfully received them.
+     * so that CloudFormation knows that you're not attempting to delete a stack with the same name. You might retry
+     * <code>DeleteStack</code> requests to ensure that CloudFormation successfully received them.
      * </p>
      * <p>
      * All events triggered by a given stack operation are assigned the same client request token, which you can use to
@@ -121,8 +121,8 @@ public class DeleteStackRequest extends com.amazonaws.AmazonWebServiceRequest im
     /**
      * <p>
      * For stacks in the <code>DELETE_FAILED</code> state, a list of resource logical IDs that are associated with the
-     * resources you want to retain. During deletion, AWS CloudFormation deletes the stack but does not delete the
-     * retained resources.
+     * resources you want to retain. During deletion, CloudFormation deletes the stack but does not delete the retained
+     * resources.
      * </p>
      * <p>
      * Retaining resources is useful when you cannot delete a resource, such as a non-empty S3 bucket, but you want to
@@ -130,7 +130,7 @@ public class DeleteStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * 
      * @return For stacks in the <code>DELETE_FAILED</code> state, a list of resource logical IDs that are associated
-     *         with the resources you want to retain. During deletion, AWS CloudFormation deletes the stack but does not
+     *         with the resources you want to retain. During deletion, CloudFormation deletes the stack but does not
      *         delete the retained resources.</p>
      *         <p>
      *         Retaining resources is useful when you cannot delete a resource, such as a non-empty S3 bucket, but you
@@ -147,8 +147,8 @@ public class DeleteStackRequest extends com.amazonaws.AmazonWebServiceRequest im
     /**
      * <p>
      * For stacks in the <code>DELETE_FAILED</code> state, a list of resource logical IDs that are associated with the
-     * resources you want to retain. During deletion, AWS CloudFormation deletes the stack but does not delete the
-     * retained resources.
+     * resources you want to retain. During deletion, CloudFormation deletes the stack but does not delete the retained
+     * resources.
      * </p>
      * <p>
      * Retaining resources is useful when you cannot delete a resource, such as a non-empty S3 bucket, but you want to
@@ -157,7 +157,7 @@ public class DeleteStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * 
      * @param retainResources
      *        For stacks in the <code>DELETE_FAILED</code> state, a list of resource logical IDs that are associated
-     *        with the resources you want to retain. During deletion, AWS CloudFormation deletes the stack but does not
+     *        with the resources you want to retain. During deletion, CloudFormation deletes the stack but does not
      *        delete the retained resources.</p>
      *        <p>
      *        Retaining resources is useful when you cannot delete a resource, such as a non-empty S3 bucket, but you
@@ -176,8 +176,8 @@ public class DeleteStackRequest extends com.amazonaws.AmazonWebServiceRequest im
     /**
      * <p>
      * For stacks in the <code>DELETE_FAILED</code> state, a list of resource logical IDs that are associated with the
-     * resources you want to retain. During deletion, AWS CloudFormation deletes the stack but does not delete the
-     * retained resources.
+     * resources you want to retain. During deletion, CloudFormation deletes the stack but does not delete the retained
+     * resources.
      * </p>
      * <p>
      * Retaining resources is useful when you cannot delete a resource, such as a non-empty S3 bucket, but you want to
@@ -191,7 +191,7 @@ public class DeleteStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * 
      * @param retainResources
      *        For stacks in the <code>DELETE_FAILED</code> state, a list of resource logical IDs that are associated
-     *        with the resources you want to retain. During deletion, AWS CloudFormation deletes the stack but does not
+     *        with the resources you want to retain. During deletion, CloudFormation deletes the stack but does not
      *        delete the retained resources.</p>
      *        <p>
      *        Retaining resources is useful when you cannot delete a resource, such as a non-empty S3 bucket, but you
@@ -212,8 +212,8 @@ public class DeleteStackRequest extends com.amazonaws.AmazonWebServiceRequest im
     /**
      * <p>
      * For stacks in the <code>DELETE_FAILED</code> state, a list of resource logical IDs that are associated with the
-     * resources you want to retain. During deletion, AWS CloudFormation deletes the stack but does not delete the
-     * retained resources.
+     * resources you want to retain. During deletion, CloudFormation deletes the stack but does not delete the retained
+     * resources.
      * </p>
      * <p>
      * Retaining resources is useful when you cannot delete a resource, such as a non-empty S3 bucket, but you want to
@@ -222,7 +222,7 @@ public class DeleteStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * 
      * @param retainResources
      *        For stacks in the <code>DELETE_FAILED</code> state, a list of resource logical IDs that are associated
-     *        with the resources you want to retain. During deletion, AWS CloudFormation deletes the stack but does not
+     *        with the resources you want to retain. During deletion, CloudFormation deletes the stack but does not
      *        delete the retained resources.</p>
      *        <p>
      *        Retaining resources is useful when you cannot delete a resource, such as a non-empty S3 bucket, but you
@@ -237,22 +237,21 @@ public class DeleteStackRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an AWS Identity and Access Management (IAM) role that AWS CloudFormation
-     * assumes to delete the stack. AWS CloudFormation uses the role's credentials to make calls on your behalf.
+     * The Amazon Resource Name (ARN) of an Identity and Access Management (IAM) role that CloudFormation assumes to
+     * delete the stack. CloudFormation uses the role's credentials to make calls on your behalf.
      * </p>
      * <p>
-     * If you don't specify a value, AWS CloudFormation uses the role that was previously associated with the stack. If
-     * no role is available, AWS CloudFormation uses a temporary session that is generated from your user credentials.
+     * If you don't specify a value, CloudFormation uses the role that was previously associated with the stack. If no
+     * role is available, CloudFormation uses a temporary session that is generated from your user credentials.
      * </p>
      * 
      * @param roleARN
-     *        The Amazon Resource Name (ARN) of an AWS Identity and Access Management (IAM) role that AWS CloudFormation
-     *        assumes to delete the stack. AWS CloudFormation uses the role's credentials to make calls on your
-     *        behalf.</p>
+     *        The Amazon Resource Name (ARN) of an Identity and Access Management (IAM) role that CloudFormation assumes
+     *        to delete the stack. CloudFormation uses the role's credentials to make calls on your behalf.</p>
      *        <p>
-     *        If you don't specify a value, AWS CloudFormation uses the role that was previously associated with the
-     *        stack. If no role is available, AWS CloudFormation uses a temporary session that is generated from your
-     *        user credentials.
+     *        If you don't specify a value, CloudFormation uses the role that was previously associated with the stack.
+     *        If no role is available, CloudFormation uses a temporary session that is generated from your user
+     *        credentials.
      */
 
     public void setRoleARN(String roleARN) {
@@ -261,21 +260,20 @@ public class DeleteStackRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an AWS Identity and Access Management (IAM) role that AWS CloudFormation
-     * assumes to delete the stack. AWS CloudFormation uses the role's credentials to make calls on your behalf.
+     * The Amazon Resource Name (ARN) of an Identity and Access Management (IAM) role that CloudFormation assumes to
+     * delete the stack. CloudFormation uses the role's credentials to make calls on your behalf.
      * </p>
      * <p>
-     * If you don't specify a value, AWS CloudFormation uses the role that was previously associated with the stack. If
-     * no role is available, AWS CloudFormation uses a temporary session that is generated from your user credentials.
+     * If you don't specify a value, CloudFormation uses the role that was previously associated with the stack. If no
+     * role is available, CloudFormation uses a temporary session that is generated from your user credentials.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of an AWS Identity and Access Management (IAM) role that AWS
-     *         CloudFormation assumes to delete the stack. AWS CloudFormation uses the role's credentials to make calls
-     *         on your behalf.</p>
+     * @return The Amazon Resource Name (ARN) of an Identity and Access Management (IAM) role that CloudFormation
+     *         assumes to delete the stack. CloudFormation uses the role's credentials to make calls on your behalf.</p>
      *         <p>
-     *         If you don't specify a value, AWS CloudFormation uses the role that was previously associated with the
-     *         stack. If no role is available, AWS CloudFormation uses a temporary session that is generated from your
-     *         user credentials.
+     *         If you don't specify a value, CloudFormation uses the role that was previously associated with the stack.
+     *         If no role is available, CloudFormation uses a temporary session that is generated from your user
+     *         credentials.
      */
 
     public String getRoleARN() {
@@ -284,22 +282,21 @@ public class DeleteStackRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an AWS Identity and Access Management (IAM) role that AWS CloudFormation
-     * assumes to delete the stack. AWS CloudFormation uses the role's credentials to make calls on your behalf.
+     * The Amazon Resource Name (ARN) of an Identity and Access Management (IAM) role that CloudFormation assumes to
+     * delete the stack. CloudFormation uses the role's credentials to make calls on your behalf.
      * </p>
      * <p>
-     * If you don't specify a value, AWS CloudFormation uses the role that was previously associated with the stack. If
-     * no role is available, AWS CloudFormation uses a temporary session that is generated from your user credentials.
+     * If you don't specify a value, CloudFormation uses the role that was previously associated with the stack. If no
+     * role is available, CloudFormation uses a temporary session that is generated from your user credentials.
      * </p>
      * 
      * @param roleARN
-     *        The Amazon Resource Name (ARN) of an AWS Identity and Access Management (IAM) role that AWS CloudFormation
-     *        assumes to delete the stack. AWS CloudFormation uses the role's credentials to make calls on your
-     *        behalf.</p>
+     *        The Amazon Resource Name (ARN) of an Identity and Access Management (IAM) role that CloudFormation assumes
+     *        to delete the stack. CloudFormation uses the role's credentials to make calls on your behalf.</p>
      *        <p>
-     *        If you don't specify a value, AWS CloudFormation uses the role that was previously associated with the
-     *        stack. If no role is available, AWS CloudFormation uses a temporary session that is generated from your
-     *        user credentials.
+     *        If you don't specify a value, CloudFormation uses the role that was previously associated with the stack.
+     *        If no role is available, CloudFormation uses a temporary session that is generated from your user
+     *        credentials.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -311,8 +308,8 @@ public class DeleteStackRequest extends com.amazonaws.AmazonWebServiceRequest im
     /**
      * <p>
      * A unique identifier for this <code>DeleteStack</code> request. Specify this token if you plan to retry requests
-     * so that AWS CloudFormation knows that you're not attempting to delete a stack with the same name. You might retry
-     * <code>DeleteStack</code> requests to ensure that AWS CloudFormation successfully received them.
+     * so that CloudFormation knows that you're not attempting to delete a stack with the same name. You might retry
+     * <code>DeleteStack</code> requests to ensure that CloudFormation successfully received them.
      * </p>
      * <p>
      * All events triggered by a given stack operation are assigned the same client request token, which you can use to
@@ -329,8 +326,8 @@ public class DeleteStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * 
      * @param clientRequestToken
      *        A unique identifier for this <code>DeleteStack</code> request. Specify this token if you plan to retry
-     *        requests so that AWS CloudFormation knows that you're not attempting to delete a stack with the same name.
-     *        You might retry <code>DeleteStack</code> requests to ensure that AWS CloudFormation successfully received
+     *        requests so that CloudFormation knows that you're not attempting to delete a stack with the same name. You
+     *        might retry <code>DeleteStack</code> requests to ensure that CloudFormation successfully received
      *        them.</p>
      *        <p>
      *        All events triggered by a given stack operation are assigned the same client request token, which you can
@@ -353,8 +350,8 @@ public class DeleteStackRequest extends com.amazonaws.AmazonWebServiceRequest im
     /**
      * <p>
      * A unique identifier for this <code>DeleteStack</code> request. Specify this token if you plan to retry requests
-     * so that AWS CloudFormation knows that you're not attempting to delete a stack with the same name. You might retry
-     * <code>DeleteStack</code> requests to ensure that AWS CloudFormation successfully received them.
+     * so that CloudFormation knows that you're not attempting to delete a stack with the same name. You might retry
+     * <code>DeleteStack</code> requests to ensure that CloudFormation successfully received them.
      * </p>
      * <p>
      * All events triggered by a given stack operation are assigned the same client request token, which you can use to
@@ -370,9 +367,9 @@ public class DeleteStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * 
      * @return A unique identifier for this <code>DeleteStack</code> request. Specify this token if you plan to retry
-     *         requests so that AWS CloudFormation knows that you're not attempting to delete a stack with the same
-     *         name. You might retry <code>DeleteStack</code> requests to ensure that AWS CloudFormation successfully
-     *         received them.</p>
+     *         requests so that CloudFormation knows that you're not attempting to delete a stack with the same name.
+     *         You might retry <code>DeleteStack</code> requests to ensure that CloudFormation successfully received
+     *         them.</p>
      *         <p>
      *         All events triggered by a given stack operation are assigned the same client request token, which you can
      *         use to track operations. For example, if you execute a <code>CreateStack</code> operation with the token
@@ -394,8 +391,8 @@ public class DeleteStackRequest extends com.amazonaws.AmazonWebServiceRequest im
     /**
      * <p>
      * A unique identifier for this <code>DeleteStack</code> request. Specify this token if you plan to retry requests
-     * so that AWS CloudFormation knows that you're not attempting to delete a stack with the same name. You might retry
-     * <code>DeleteStack</code> requests to ensure that AWS CloudFormation successfully received them.
+     * so that CloudFormation knows that you're not attempting to delete a stack with the same name. You might retry
+     * <code>DeleteStack</code> requests to ensure that CloudFormation successfully received them.
      * </p>
      * <p>
      * All events triggered by a given stack operation are assigned the same client request token, which you can use to
@@ -412,8 +409,8 @@ public class DeleteStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * 
      * @param clientRequestToken
      *        A unique identifier for this <code>DeleteStack</code> request. Specify this token if you plan to retry
-     *        requests so that AWS CloudFormation knows that you're not attempting to delete a stack with the same name.
-     *        You might retry <code>DeleteStack</code> requests to ensure that AWS CloudFormation successfully received
+     *        requests so that CloudFormation knows that you're not attempting to delete a stack with the same name. You
+     *        might retry <code>DeleteStack</code> requests to ensure that CloudFormation successfully received
      *        them.</p>
      *        <p>
      *        All events triggered by a given stack operation are assigned the same client request token, which you can

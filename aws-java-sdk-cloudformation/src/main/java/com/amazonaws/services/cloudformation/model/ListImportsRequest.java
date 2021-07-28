@@ -27,7 +27,7 @@ public class ListImportsRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The name of the exported output value. AWS CloudFormation returns the stack names that are importing this value.
+     * The name of the exported output value. CloudFormation returns the stack names that are importing this value.
      * </p>
      */
     private String exportName;
@@ -41,11 +41,11 @@ public class ListImportsRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The name of the exported output value. AWS CloudFormation returns the stack names that are importing this value.
+     * The name of the exported output value. CloudFormation returns the stack names that are importing this value.
      * </p>
      * 
      * @param exportName
-     *        The name of the exported output value. AWS CloudFormation returns the stack names that are importing this
+     *        The name of the exported output value. CloudFormation returns the stack names that are importing this
      *        value.
      */
 
@@ -55,10 +55,10 @@ public class ListImportsRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The name of the exported output value. AWS CloudFormation returns the stack names that are importing this value.
+     * The name of the exported output value. CloudFormation returns the stack names that are importing this value.
      * </p>
      * 
-     * @return The name of the exported output value. AWS CloudFormation returns the stack names that are importing this
+     * @return The name of the exported output value. CloudFormation returns the stack names that are importing this
      *         value.
      */
 
@@ -68,11 +68,11 @@ public class ListImportsRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The name of the exported output value. AWS CloudFormation returns the stack names that are importing this value.
+     * The name of the exported output value. CloudFormation returns the stack names that are importing this value.
      * </p>
      * 
      * @param exportName
-     *        The name of the exported output value. AWS CloudFormation returns the stack names that are importing this
+     *        The name of the exported output value. CloudFormation returns the stack names that are importing this
      *        value.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

@@ -52,8 +52,8 @@ public class StackSetSummary implements Serializable, Cloneable {
     private String status;
     /**
      * <p>
-     * [Service-managed permissions] Describes whether StackSets automatically deploys to AWS Organizations accounts
-     * that are added to a target organizational unit (OU).
+     * [Service-managed permissions] Describes whether StackSets automatically deploys to Organizations accounts that
+     * are added to a target organizational unit (OU).
      * </p>
      */
     private AutoDeployment autoDeployment;
@@ -73,7 +73,7 @@ public class StackSetSummary implements Serializable, Cloneable {
      * <li>
      * <p>
      * With <code>service-managed</code> permissions, StackSets automatically creates the IAM roles required to deploy
-     * to accounts managed by AWS Organizations. For more information, see <a
+     * to accounts managed by Organizations. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs-service-managed.html"
      * >Grant Service-Managed Stack Set Permissions</a>.
      * </p>
@@ -97,7 +97,7 @@ public class StackSetSummary implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>NOT_CHECKED</code>: AWS CloudFormation has not checked the stack set for drift.
+     * <code>NOT_CHECKED</code>: CloudFormation has not checked the stack set for drift.
      * </p>
      * </li>
      * <li>
@@ -317,13 +317,13 @@ public class StackSetSummary implements Serializable, Cloneable {
 
     /**
      * <p>
-     * [Service-managed permissions] Describes whether StackSets automatically deploys to AWS Organizations accounts
-     * that are added to a target organizational unit (OU).
+     * [Service-managed permissions] Describes whether StackSets automatically deploys to Organizations accounts that
+     * are added to a target organizational unit (OU).
      * </p>
      * 
      * @param autoDeployment
-     *        [Service-managed permissions] Describes whether StackSets automatically deploys to AWS Organizations
-     *        accounts that are added to a target organizational unit (OU).
+     *        [Service-managed permissions] Describes whether StackSets automatically deploys to Organizations accounts
+     *        that are added to a target organizational unit (OU).
      */
 
     public void setAutoDeployment(AutoDeployment autoDeployment) {
@@ -332,12 +332,12 @@ public class StackSetSummary implements Serializable, Cloneable {
 
     /**
      * <p>
-     * [Service-managed permissions] Describes whether StackSets automatically deploys to AWS Organizations accounts
-     * that are added to a target organizational unit (OU).
+     * [Service-managed permissions] Describes whether StackSets automatically deploys to Organizations accounts that
+     * are added to a target organizational unit (OU).
      * </p>
      * 
-     * @return [Service-managed permissions] Describes whether StackSets automatically deploys to AWS Organizations
-     *         accounts that are added to a target organizational unit (OU).
+     * @return [Service-managed permissions] Describes whether StackSets automatically deploys to Organizations accounts
+     *         that are added to a target organizational unit (OU).
      */
 
     public AutoDeployment getAutoDeployment() {
@@ -346,13 +346,13 @@ public class StackSetSummary implements Serializable, Cloneable {
 
     /**
      * <p>
-     * [Service-managed permissions] Describes whether StackSets automatically deploys to AWS Organizations accounts
-     * that are added to a target organizational unit (OU).
+     * [Service-managed permissions] Describes whether StackSets automatically deploys to Organizations accounts that
+     * are added to a target organizational unit (OU).
      * </p>
      * 
      * @param autoDeployment
-     *        [Service-managed permissions] Describes whether StackSets automatically deploys to AWS Organizations
-     *        accounts that are added to a target organizational unit (OU).
+     *        [Service-managed permissions] Describes whether StackSets automatically deploys to Organizations accounts
+     *        that are added to a target organizational unit (OU).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -377,7 +377,7 @@ public class StackSetSummary implements Serializable, Cloneable {
      * <li>
      * <p>
      * With <code>service-managed</code> permissions, StackSets automatically creates the IAM roles required to deploy
-     * to accounts managed by AWS Organizations. For more information, see <a
+     * to accounts managed by Organizations. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs-service-managed.html"
      * >Grant Service-Managed Stack Set Permissions</a>.
      * </p>
@@ -398,7 +398,7 @@ public class StackSetSummary implements Serializable, Cloneable {
      *        <li>
      *        <p>
      *        With <code>service-managed</code> permissions, StackSets automatically creates the IAM roles required to
-     *        deploy to accounts managed by AWS Organizations. For more information, see <a href=
+     *        deploy to accounts managed by Organizations. For more information, see <a href=
      *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs-service-managed.html"
      *        >Grant Service-Managed Stack Set Permissions</a>.
      *        </p>
@@ -426,7 +426,7 @@ public class StackSetSummary implements Serializable, Cloneable {
      * <li>
      * <p>
      * With <code>service-managed</code> permissions, StackSets automatically creates the IAM roles required to deploy
-     * to accounts managed by AWS Organizations. For more information, see <a
+     * to accounts managed by Organizations. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs-service-managed.html"
      * >Grant Service-Managed Stack Set Permissions</a>.
      * </p>
@@ -446,7 +446,7 @@ public class StackSetSummary implements Serializable, Cloneable {
      *         <li>
      *         <p>
      *         With <code>service-managed</code> permissions, StackSets automatically creates the IAM roles required to
-     *         deploy to accounts managed by AWS Organizations. For more information, see <a href=
+     *         deploy to accounts managed by Organizations. For more information, see <a href=
      *         "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs-service-managed.html"
      *         >Grant Service-Managed Stack Set Permissions</a>.
      *         </p>
@@ -474,7 +474,7 @@ public class StackSetSummary implements Serializable, Cloneable {
      * <li>
      * <p>
      * With <code>service-managed</code> permissions, StackSets automatically creates the IAM roles required to deploy
-     * to accounts managed by AWS Organizations. For more information, see <a
+     * to accounts managed by Organizations. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs-service-managed.html"
      * >Grant Service-Managed Stack Set Permissions</a>.
      * </p>
@@ -495,7 +495,7 @@ public class StackSetSummary implements Serializable, Cloneable {
      *        <li>
      *        <p>
      *        With <code>service-managed</code> permissions, StackSets automatically creates the IAM roles required to
-     *        deploy to accounts managed by AWS Organizations. For more information, see <a href=
+     *        deploy to accounts managed by Organizations. For more information, see <a href=
      *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs-service-managed.html"
      *        >Grant Service-Managed Stack Set Permissions</a>.
      *        </p>
@@ -525,7 +525,7 @@ public class StackSetSummary implements Serializable, Cloneable {
      * <li>
      * <p>
      * With <code>service-managed</code> permissions, StackSets automatically creates the IAM roles required to deploy
-     * to accounts managed by AWS Organizations. For more information, see <a
+     * to accounts managed by Organizations. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs-service-managed.html"
      * >Grant Service-Managed Stack Set Permissions</a>.
      * </p>
@@ -546,7 +546,7 @@ public class StackSetSummary implements Serializable, Cloneable {
      *        <li>
      *        <p>
      *        With <code>service-managed</code> permissions, StackSets automatically creates the IAM roles required to
-     *        deploy to accounts managed by AWS Organizations. For more information, see <a href=
+     *        deploy to accounts managed by Organizations. For more information, see <a href=
      *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs-service-managed.html"
      *        >Grant Service-Managed Stack Set Permissions</a>.
      *        </p>
@@ -574,7 +574,7 @@ public class StackSetSummary implements Serializable, Cloneable {
      * <li>
      * <p>
      * With <code>service-managed</code> permissions, StackSets automatically creates the IAM roles required to deploy
-     * to accounts managed by AWS Organizations. For more information, see <a
+     * to accounts managed by Organizations. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs-service-managed.html"
      * >Grant Service-Managed Stack Set Permissions</a>.
      * </p>
@@ -595,7 +595,7 @@ public class StackSetSummary implements Serializable, Cloneable {
      *        <li>
      *        <p>
      *        With <code>service-managed</code> permissions, StackSets automatically creates the IAM roles required to
-     *        deploy to accounts managed by AWS Organizations. For more information, see <a href=
+     *        deploy to accounts managed by Organizations. For more information, see <a href=
      *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs-service-managed.html"
      *        >Grant Service-Managed Stack Set Permissions</a>.
      *        </p>
@@ -625,7 +625,7 @@ public class StackSetSummary implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>NOT_CHECKED</code>: AWS CloudFormation has not checked the stack set for drift.
+     * <code>NOT_CHECKED</code>: CloudFormation has not checked the stack set for drift.
      * </p>
      * </li>
      * <li>
@@ -655,7 +655,7 @@ public class StackSetSummary implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>NOT_CHECKED</code>: AWS CloudFormation has not checked the stack set for drift.
+     *        <code>NOT_CHECKED</code>: CloudFormation has not checked the stack set for drift.
      *        </p>
      *        </li>
      *        <li>
@@ -692,7 +692,7 @@ public class StackSetSummary implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>NOT_CHECKED</code>: AWS CloudFormation has not checked the stack set for drift.
+     * <code>NOT_CHECKED</code>: CloudFormation has not checked the stack set for drift.
      * </p>
      * </li>
      * <li>
@@ -721,7 +721,7 @@ public class StackSetSummary implements Serializable, Cloneable {
      *         </li>
      *         <li>
      *         <p>
-     *         <code>NOT_CHECKED</code>: AWS CloudFormation has not checked the stack set for drift.
+     *         <code>NOT_CHECKED</code>: CloudFormation has not checked the stack set for drift.
      *         </p>
      *         </li>
      *         <li>
@@ -758,7 +758,7 @@ public class StackSetSummary implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>NOT_CHECKED</code>: AWS CloudFormation has not checked the stack set for drift.
+     * <code>NOT_CHECKED</code>: CloudFormation has not checked the stack set for drift.
      * </p>
      * </li>
      * <li>
@@ -788,7 +788,7 @@ public class StackSetSummary implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>NOT_CHECKED</code>: AWS CloudFormation has not checked the stack set for drift.
+     *        <code>NOT_CHECKED</code>: CloudFormation has not checked the stack set for drift.
      *        </p>
      *        </li>
      *        <li>
@@ -827,7 +827,7 @@ public class StackSetSummary implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>NOT_CHECKED</code>: AWS CloudFormation has not checked the stack set for drift.
+     * <code>NOT_CHECKED</code>: CloudFormation has not checked the stack set for drift.
      * </p>
      * </li>
      * <li>
@@ -857,7 +857,7 @@ public class StackSetSummary implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>NOT_CHECKED</code>: AWS CloudFormation has not checked the stack set for drift.
+     *        <code>NOT_CHECKED</code>: CloudFormation has not checked the stack set for drift.
      *        </p>
      *        </li>
      *        <li>
@@ -894,7 +894,7 @@ public class StackSetSummary implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>NOT_CHECKED</code>: AWS CloudFormation has not checked the stack set for drift.
+     * <code>NOT_CHECKED</code>: CloudFormation has not checked the stack set for drift.
      * </p>
      * </li>
      * <li>
@@ -924,7 +924,7 @@ public class StackSetSummary implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>NOT_CHECKED</code>: AWS CloudFormation has not checked the stack set for drift.
+     *        <code>NOT_CHECKED</code>: CloudFormation has not checked the stack set for drift.
      *        </p>
      *        </li>
      *        <li>

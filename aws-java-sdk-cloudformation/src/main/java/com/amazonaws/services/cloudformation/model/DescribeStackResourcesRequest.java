@@ -64,7 +64,7 @@ public class DescribeStackResourcesRequest extends com.amazonaws.AmazonWebServic
     private String logicalResourceId;
     /**
      * <p>
-     * The name or unique identifier that corresponds to a physical instance ID of a resource supported by AWS
+     * The name or unique identifier that corresponds to a physical instance ID of a resource supported by
      * CloudFormation.
      * </p>
      * <p>
@@ -293,7 +293,7 @@ public class DescribeStackResourcesRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The name or unique identifier that corresponds to a physical instance ID of a resource supported by AWS
+     * The name or unique identifier that corresponds to a physical instance ID of a resource supported by
      * CloudFormation.
      * </p>
      * <p>
@@ -310,7 +310,7 @@ public class DescribeStackResourcesRequest extends com.amazonaws.AmazonWebServic
      * </p>
      * 
      * @param physicalResourceId
-     *        The name or unique identifier that corresponds to a physical instance ID of a resource supported by AWS
+     *        The name or unique identifier that corresponds to a physical instance ID of a resource supported by
      *        CloudFormation.</p>
      *        <p>
      *        For example, for an Amazon Elastic Compute Cloud (EC2) instance, <code>PhysicalResourceId</code>
@@ -332,7 +332,7 @@ public class DescribeStackResourcesRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The name or unique identifier that corresponds to a physical instance ID of a resource supported by AWS
+     * The name or unique identifier that corresponds to a physical instance ID of a resource supported by
      * CloudFormation.
      * </p>
      * <p>
@@ -348,7 +348,7 @@ public class DescribeStackResourcesRequest extends com.amazonaws.AmazonWebServic
      * Default: There is no default value.
      * </p>
      * 
-     * @return The name or unique identifier that corresponds to a physical instance ID of a resource supported by AWS
+     * @return The name or unique identifier that corresponds to a physical instance ID of a resource supported by
      *         CloudFormation.</p>
      *         <p>
      *         For example, for an Amazon Elastic Compute Cloud (EC2) instance, <code>PhysicalResourceId</code>
@@ -370,7 +370,7 @@ public class DescribeStackResourcesRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The name or unique identifier that corresponds to a physical instance ID of a resource supported by AWS
+     * The name or unique identifier that corresponds to a physical instance ID of a resource supported by
      * CloudFormation.
      * </p>
      * <p>
@@ -387,7 +387,7 @@ public class DescribeStackResourcesRequest extends com.amazonaws.AmazonWebServic
      * </p>
      * 
      * @param physicalResourceId
-     *        The name or unique identifier that corresponds to a physical instance ID of a resource supported by AWS
+     *        The name or unique identifier that corresponds to a physical instance ID of a resource supported by
      *        CloudFormation.</p>
      *        <p>
      *        For example, for an Amazon Elastic Compute Cloud (EC2) instance, <code>PhysicalResourceId</code>

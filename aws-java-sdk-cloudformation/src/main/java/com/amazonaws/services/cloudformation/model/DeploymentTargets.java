@@ -17,9 +17,9 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * [Service-managed permissions] The AWS Organizations accounts to which StackSets deploys. StackSets does not deploy
- * stack instances to the organization management account, even if the organization management account is in your
- * organization or in an OU in your organization.
+ * [Service-managed permissions] The Organizations accounts to which StackSets deploys. StackSets does not deploy stack
+ * instances to the organization management account, even if the organization management account is in your organization
+ * or in an OU in your organization.
  * </p>
  * <p>
  * For update operations, you can specify either <code>Accounts</code> or <code>OrganizationalUnitIds</code>. For create
@@ -34,13 +34,13 @@ public class DeploymentTargets implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The names of one or more AWS accounts for which you want to deploy stack set updates.
+     * The names of one or more accounts for which you want to deploy stack set updates.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> accounts;
     /**
      * <p>
-     * Returns the value of the AccountsUrl property.
+     * Returns the value of the <code>AccountsUrl</code> property.
      * </p>
      */
     private String accountsUrl;
@@ -53,10 +53,10 @@ public class DeploymentTargets implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The names of one or more AWS accounts for which you want to deploy stack set updates.
+     * The names of one or more accounts for which you want to deploy stack set updates.
      * </p>
      * 
-     * @return The names of one or more AWS accounts for which you want to deploy stack set updates.
+     * @return The names of one or more accounts for which you want to deploy stack set updates.
      */
 
     public java.util.List<String> getAccounts() {
@@ -68,11 +68,11 @@ public class DeploymentTargets implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The names of one or more AWS accounts for which you want to deploy stack set updates.
+     * The names of one or more accounts for which you want to deploy stack set updates.
      * </p>
      * 
      * @param accounts
-     *        The names of one or more AWS accounts for which you want to deploy stack set updates.
+     *        The names of one or more accounts for which you want to deploy stack set updates.
      */
 
     public void setAccounts(java.util.Collection<String> accounts) {
@@ -86,7 +86,7 @@ public class DeploymentTargets implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The names of one or more AWS accounts for which you want to deploy stack set updates.
+     * The names of one or more accounts for which you want to deploy stack set updates.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -95,7 +95,7 @@ public class DeploymentTargets implements Serializable, Cloneable {
      * </p>
      * 
      * @param accounts
-     *        The names of one or more AWS accounts for which you want to deploy stack set updates.
+     *        The names of one or more accounts for which you want to deploy stack set updates.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -111,11 +111,11 @@ public class DeploymentTargets implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The names of one or more AWS accounts for which you want to deploy stack set updates.
+     * The names of one or more accounts for which you want to deploy stack set updates.
      * </p>
      * 
      * @param accounts
-     *        The names of one or more AWS accounts for which you want to deploy stack set updates.
+     *        The names of one or more accounts for which you want to deploy stack set updates.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -126,11 +126,11 @@ public class DeploymentTargets implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Returns the value of the AccountsUrl property.
+     * Returns the value of the <code>AccountsUrl</code> property.
      * </p>
      * 
      * @param accountsUrl
-     *        Returns the value of the AccountsUrl property.
+     *        Returns the value of the <code>AccountsUrl</code> property.
      */
 
     public void setAccountsUrl(String accountsUrl) {
@@ -139,10 +139,10 @@ public class DeploymentTargets implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Returns the value of the AccountsUrl property.
+     * Returns the value of the <code>AccountsUrl</code> property.
      * </p>
      * 
-     * @return Returns the value of the AccountsUrl property.
+     * @return Returns the value of the <code>AccountsUrl</code> property.
      */
 
     public String getAccountsUrl() {
@@ -151,11 +151,11 @@ public class DeploymentTargets implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Returns the value of the AccountsUrl property.
+     * Returns the value of the <code>AccountsUrl</code> property.
      * </p>
      * 
      * @param accountsUrl
-     *        Returns the value of the AccountsUrl property.
+     *        Returns the value of the <code>AccountsUrl</code> property.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

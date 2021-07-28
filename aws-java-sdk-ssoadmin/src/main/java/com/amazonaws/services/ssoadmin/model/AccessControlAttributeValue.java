@@ -30,17 +30,17 @@ public class AccessControlAttributeValue implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The identity source to use when mapping a specified attribute to AWS SSO.
+     * The identity source to use when mapping a specified attribute to Amazon Web Services SSO.
      * </p>
      */
     private java.util.List<String> source;
 
     /**
      * <p>
-     * The identity source to use when mapping a specified attribute to AWS SSO.
+     * The identity source to use when mapping a specified attribute to Amazon Web Services SSO.
      * </p>
      * 
-     * @return The identity source to use when mapping a specified attribute to AWS SSO.
+     * @return The identity source to use when mapping a specified attribute to Amazon Web Services SSO.
      */
 
     public java.util.List<String> getSource() {
@@ -49,11 +49,11 @@ public class AccessControlAttributeValue implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The identity source to use when mapping a specified attribute to AWS SSO.
+     * The identity source to use when mapping a specified attribute to Amazon Web Services SSO.
      * </p>
      * 
      * @param source
-     *        The identity source to use when mapping a specified attribute to AWS SSO.
+     *        The identity source to use when mapping a specified attribute to Amazon Web Services SSO.
      */
 
     public void setSource(java.util.Collection<String> source) {
@@ -67,7 +67,7 @@ public class AccessControlAttributeValue implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The identity source to use when mapping a specified attribute to AWS SSO.
+     * The identity source to use when mapping a specified attribute to Amazon Web Services SSO.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -76,7 +76,7 @@ public class AccessControlAttributeValue implements Serializable, Cloneable, Str
      * </p>
      * 
      * @param source
-     *        The identity source to use when mapping a specified attribute to AWS SSO.
+     *        The identity source to use when mapping a specified attribute to Amazon Web Services SSO.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -92,11 +92,11 @@ public class AccessControlAttributeValue implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The identity source to use when mapping a specified attribute to AWS SSO.
+     * The identity source to use when mapping a specified attribute to Amazon Web Services SSO.
      * </p>
      * 
      * @param source
-     *        The identity source to use when mapping a specified attribute to AWS SSO.
+     *        The identity source to use when mapping a specified attribute to Amazon Web Services SSO.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

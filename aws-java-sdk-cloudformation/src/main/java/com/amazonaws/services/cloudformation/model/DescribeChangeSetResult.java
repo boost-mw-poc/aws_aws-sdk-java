@@ -75,8 +75,8 @@ public class DescribeChangeSetResult extends com.amazonaws.AmazonWebServiceResul
      * <p>
      * If the change set execution status is <code>AVAILABLE</code>, you can execute the change set. If you can’t
      * execute the change set, the status indicates why. For example, a change set might be in an
-     * <code>UNAVAILABLE</code> state because AWS CloudFormation is still creating it or in an <code>OBSOLETE</code>
-     * state because the stack was already updated.
+     * <code>UNAVAILABLE</code> state because CloudFormation is still creating it or in an <code>OBSOLETE</code> state
+     * because the stack was already updated.
      * </p>
      */
     private String executionStatus;
@@ -89,7 +89,7 @@ public class DescribeChangeSetResult extends com.amazonaws.AmazonWebServiceResul
     private String status;
     /**
      * <p>
-     * A description of the change set's status. For example, if your attempt to create a change set failed, AWS
+     * A description of the change set's status. For example, if your attempt to create a change set failed,
      * CloudFormation shows the error message.
      * </p>
      */
@@ -103,8 +103,8 @@ public class DescribeChangeSetResult extends com.amazonaws.AmazonWebServiceResul
     private com.amazonaws.internal.SdkInternalList<String> notificationARNs;
     /**
      * <p>
-     * The rollback triggers for AWS CloudFormation to monitor during stack creation and updating operations, and for
-     * the specified monitoring period afterwards.
+     * The rollback triggers for CloudFormation to monitor during stack creation and updating operations, and for the
+     * specified monitoring period afterwards.
      * </p>
      */
     private RollbackConfiguration rollbackConfiguration;
@@ -123,8 +123,8 @@ public class DescribeChangeSetResult extends com.amazonaws.AmazonWebServiceResul
     private com.amazonaws.internal.SdkInternalList<Tag> tags;
     /**
      * <p>
-     * A list of <code>Change</code> structures that describes the resources AWS CloudFormation changes if you execute
-     * the change set.
+     * A list of <code>Change</code> structures that describes the resources CloudFormation changes if you execute the
+     * change set.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<Change> changes;
@@ -495,15 +495,15 @@ public class DescribeChangeSetResult extends com.amazonaws.AmazonWebServiceResul
      * <p>
      * If the change set execution status is <code>AVAILABLE</code>, you can execute the change set. If you can’t
      * execute the change set, the status indicates why. For example, a change set might be in an
-     * <code>UNAVAILABLE</code> state because AWS CloudFormation is still creating it or in an <code>OBSOLETE</code>
-     * state because the stack was already updated.
+     * <code>UNAVAILABLE</code> state because CloudFormation is still creating it or in an <code>OBSOLETE</code> state
+     * because the stack was already updated.
      * </p>
      * 
      * @param executionStatus
      *        If the change set execution status is <code>AVAILABLE</code>, you can execute the change set. If you can’t
      *        execute the change set, the status indicates why. For example, a change set might be in an
-     *        <code>UNAVAILABLE</code> state because AWS CloudFormation is still creating it or in an
-     *        <code>OBSOLETE</code> state because the stack was already updated.
+     *        <code>UNAVAILABLE</code> state because CloudFormation is still creating it or in an <code>OBSOLETE</code>
+     *        state because the stack was already updated.
      * @see ExecutionStatus
      */
 
@@ -515,14 +515,14 @@ public class DescribeChangeSetResult extends com.amazonaws.AmazonWebServiceResul
      * <p>
      * If the change set execution status is <code>AVAILABLE</code>, you can execute the change set. If you can’t
      * execute the change set, the status indicates why. For example, a change set might be in an
-     * <code>UNAVAILABLE</code> state because AWS CloudFormation is still creating it or in an <code>OBSOLETE</code>
-     * state because the stack was already updated.
+     * <code>UNAVAILABLE</code> state because CloudFormation is still creating it or in an <code>OBSOLETE</code> state
+     * because the stack was already updated.
      * </p>
      * 
      * @return If the change set execution status is <code>AVAILABLE</code>, you can execute the change set. If you
      *         can’t execute the change set, the status indicates why. For example, a change set might be in an
-     *         <code>UNAVAILABLE</code> state because AWS CloudFormation is still creating it or in an
-     *         <code>OBSOLETE</code> state because the stack was already updated.
+     *         <code>UNAVAILABLE</code> state because CloudFormation is still creating it or in an <code>OBSOLETE</code>
+     *         state because the stack was already updated.
      * @see ExecutionStatus
      */
 
@@ -534,15 +534,15 @@ public class DescribeChangeSetResult extends com.amazonaws.AmazonWebServiceResul
      * <p>
      * If the change set execution status is <code>AVAILABLE</code>, you can execute the change set. If you can’t
      * execute the change set, the status indicates why. For example, a change set might be in an
-     * <code>UNAVAILABLE</code> state because AWS CloudFormation is still creating it or in an <code>OBSOLETE</code>
-     * state because the stack was already updated.
+     * <code>UNAVAILABLE</code> state because CloudFormation is still creating it or in an <code>OBSOLETE</code> state
+     * because the stack was already updated.
      * </p>
      * 
      * @param executionStatus
      *        If the change set execution status is <code>AVAILABLE</code>, you can execute the change set. If you can’t
      *        execute the change set, the status indicates why. For example, a change set might be in an
-     *        <code>UNAVAILABLE</code> state because AWS CloudFormation is still creating it or in an
-     *        <code>OBSOLETE</code> state because the stack was already updated.
+     *        <code>UNAVAILABLE</code> state because CloudFormation is still creating it or in an <code>OBSOLETE</code>
+     *        state because the stack was already updated.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ExecutionStatus
      */
@@ -556,15 +556,15 @@ public class DescribeChangeSetResult extends com.amazonaws.AmazonWebServiceResul
      * <p>
      * If the change set execution status is <code>AVAILABLE</code>, you can execute the change set. If you can’t
      * execute the change set, the status indicates why. For example, a change set might be in an
-     * <code>UNAVAILABLE</code> state because AWS CloudFormation is still creating it or in an <code>OBSOLETE</code>
-     * state because the stack was already updated.
+     * <code>UNAVAILABLE</code> state because CloudFormation is still creating it or in an <code>OBSOLETE</code> state
+     * because the stack was already updated.
      * </p>
      * 
      * @param executionStatus
      *        If the change set execution status is <code>AVAILABLE</code>, you can execute the change set. If you can’t
      *        execute the change set, the status indicates why. For example, a change set might be in an
-     *        <code>UNAVAILABLE</code> state because AWS CloudFormation is still creating it or in an
-     *        <code>OBSOLETE</code> state because the stack was already updated.
+     *        <code>UNAVAILABLE</code> state because CloudFormation is still creating it or in an <code>OBSOLETE</code>
+     *        state because the stack was already updated.
      * @see ExecutionStatus
      */
 
@@ -576,15 +576,15 @@ public class DescribeChangeSetResult extends com.amazonaws.AmazonWebServiceResul
      * <p>
      * If the change set execution status is <code>AVAILABLE</code>, you can execute the change set. If you can’t
      * execute the change set, the status indicates why. For example, a change set might be in an
-     * <code>UNAVAILABLE</code> state because AWS CloudFormation is still creating it or in an <code>OBSOLETE</code>
-     * state because the stack was already updated.
+     * <code>UNAVAILABLE</code> state because CloudFormation is still creating it or in an <code>OBSOLETE</code> state
+     * because the stack was already updated.
      * </p>
      * 
      * @param executionStatus
      *        If the change set execution status is <code>AVAILABLE</code>, you can execute the change set. If you can’t
      *        execute the change set, the status indicates why. For example, a change set might be in an
-     *        <code>UNAVAILABLE</code> state because AWS CloudFormation is still creating it or in an
-     *        <code>OBSOLETE</code> state because the stack was already updated.
+     *        <code>UNAVAILABLE</code> state because CloudFormation is still creating it or in an <code>OBSOLETE</code>
+     *        state because the stack was already updated.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ExecutionStatus
      */
@@ -679,12 +679,12 @@ public class DescribeChangeSetResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * A description of the change set's status. For example, if your attempt to create a change set failed, AWS
+     * A description of the change set's status. For example, if your attempt to create a change set failed,
      * CloudFormation shows the error message.
      * </p>
      * 
      * @param statusReason
-     *        A description of the change set's status. For example, if your attempt to create a change set failed, AWS
+     *        A description of the change set's status. For example, if your attempt to create a change set failed,
      *        CloudFormation shows the error message.
      */
 
@@ -694,11 +694,11 @@ public class DescribeChangeSetResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * A description of the change set's status. For example, if your attempt to create a change set failed, AWS
+     * A description of the change set's status. For example, if your attempt to create a change set failed,
      * CloudFormation shows the error message.
      * </p>
      * 
-     * @return A description of the change set's status. For example, if your attempt to create a change set failed, AWS
+     * @return A description of the change set's status. For example, if your attempt to create a change set failed,
      *         CloudFormation shows the error message.
      */
 
@@ -708,12 +708,12 @@ public class DescribeChangeSetResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * A description of the change set's status. For example, if your attempt to create a change set failed, AWS
+     * A description of the change set's status. For example, if your attempt to create a change set failed,
      * CloudFormation shows the error message.
      * </p>
      * 
      * @param statusReason
-     *        A description of the change set's status. For example, if your attempt to create a change set failed, AWS
+     *        A description of the change set's status. For example, if your attempt to create a change set failed,
      *        CloudFormation shows the error message.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -806,13 +806,13 @@ public class DescribeChangeSetResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * The rollback triggers for AWS CloudFormation to monitor during stack creation and updating operations, and for
-     * the specified monitoring period afterwards.
+     * The rollback triggers for CloudFormation to monitor during stack creation and updating operations, and for the
+     * specified monitoring period afterwards.
      * </p>
      * 
      * @param rollbackConfiguration
-     *        The rollback triggers for AWS CloudFormation to monitor during stack creation and updating operations, and
-     *        for the specified monitoring period afterwards.
+     *        The rollback triggers for CloudFormation to monitor during stack creation and updating operations, and for
+     *        the specified monitoring period afterwards.
      */
 
     public void setRollbackConfiguration(RollbackConfiguration rollbackConfiguration) {
@@ -821,12 +821,12 @@ public class DescribeChangeSetResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * The rollback triggers for AWS CloudFormation to monitor during stack creation and updating operations, and for
-     * the specified monitoring period afterwards.
+     * The rollback triggers for CloudFormation to monitor during stack creation and updating operations, and for the
+     * specified monitoring period afterwards.
      * </p>
      * 
-     * @return The rollback triggers for AWS CloudFormation to monitor during stack creation and updating operations,
-     *         and for the specified monitoring period afterwards.
+     * @return The rollback triggers for CloudFormation to monitor during stack creation and updating operations, and
+     *         for the specified monitoring period afterwards.
      */
 
     public RollbackConfiguration getRollbackConfiguration() {
@@ -835,13 +835,13 @@ public class DescribeChangeSetResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * The rollback triggers for AWS CloudFormation to monitor during stack creation and updating operations, and for
-     * the specified monitoring period afterwards.
+     * The rollback triggers for CloudFormation to monitor during stack creation and updating operations, and for the
+     * specified monitoring period afterwards.
      * </p>
      * 
      * @param rollbackConfiguration
-     *        The rollback triggers for AWS CloudFormation to monitor during stack creation and updating operations, and
-     *        for the specified monitoring period afterwards.
+     *        The rollback triggers for CloudFormation to monitor during stack creation and updating operations, and for
+     *        the specified monitoring period afterwards.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1036,11 +1036,11 @@ public class DescribeChangeSetResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * A list of <code>Change</code> structures that describes the resources AWS CloudFormation changes if you execute
-     * the change set.
+     * A list of <code>Change</code> structures that describes the resources CloudFormation changes if you execute the
+     * change set.
      * </p>
      * 
-     * @return A list of <code>Change</code> structures that describes the resources AWS CloudFormation changes if you
+     * @return A list of <code>Change</code> structures that describes the resources CloudFormation changes if you
      *         execute the change set.
      */
 
@@ -1053,12 +1053,12 @@ public class DescribeChangeSetResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * A list of <code>Change</code> structures that describes the resources AWS CloudFormation changes if you execute
-     * the change set.
+     * A list of <code>Change</code> structures that describes the resources CloudFormation changes if you execute the
+     * change set.
      * </p>
      * 
      * @param changes
-     *        A list of <code>Change</code> structures that describes the resources AWS CloudFormation changes if you
+     *        A list of <code>Change</code> structures that describes the resources CloudFormation changes if you
      *        execute the change set.
      */
 
@@ -1073,8 +1073,8 @@ public class DescribeChangeSetResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * A list of <code>Change</code> structures that describes the resources AWS CloudFormation changes if you execute
-     * the change set.
+     * A list of <code>Change</code> structures that describes the resources CloudFormation changes if you execute the
+     * change set.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -1083,7 +1083,7 @@ public class DescribeChangeSetResult extends com.amazonaws.AmazonWebServiceResul
      * </p>
      * 
      * @param changes
-     *        A list of <code>Change</code> structures that describes the resources AWS CloudFormation changes if you
+     *        A list of <code>Change</code> structures that describes the resources CloudFormation changes if you
      *        execute the change set.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -1100,12 +1100,12 @@ public class DescribeChangeSetResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * A list of <code>Change</code> structures that describes the resources AWS CloudFormation changes if you execute
-     * the change set.
+     * A list of <code>Change</code> structures that describes the resources CloudFormation changes if you execute the
+     * change set.
      * </p>
      * 
      * @param changes
-     *        A list of <code>Change</code> structures that describes the resources AWS CloudFormation changes if you
+     *        A list of <code>Change</code> structures that describes the resources CloudFormation changes if you
      *        execute the change set.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

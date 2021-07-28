@@ -44,8 +44,7 @@ public class StackResourceDriftInformation implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>NOT_CHECKED</code>: AWS CloudFormation has not checked if the resource differs from its expected
-     * configuration.
+     * <code>NOT_CHECKED</code>: CloudFormation has not checked if the resource differs from its expected configuration.
      * </p>
      * <p>
      * Any resources that do not currently support drift detection have a status of <code>NOT_CHECKED</code>. For more
@@ -64,7 +63,7 @@ public class StackResourceDriftInformation implements Serializable, Cloneable {
     private String stackResourceDriftStatus;
     /**
      * <p>
-     * When AWS CloudFormation last checked if the resource had drifted from its expected configuration.
+     * When CloudFormation last checked if the resource had drifted from its expected configuration.
      * </p>
      */
     private java.util.Date lastCheckTimestamp;
@@ -86,8 +85,7 @@ public class StackResourceDriftInformation implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>NOT_CHECKED</code>: AWS CloudFormation has not checked if the resource differs from its expected
-     * configuration.
+     * <code>NOT_CHECKED</code>: CloudFormation has not checked if the resource differs from its expected configuration.
      * </p>
      * <p>
      * Any resources that do not currently support drift detection have a status of <code>NOT_CHECKED</code>. For more
@@ -118,7 +116,7 @@ public class StackResourceDriftInformation implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>NOT_CHECKED</code>: AWS CloudFormation has not checked if the resource differs from its expected
+     *        <code>NOT_CHECKED</code>: CloudFormation has not checked if the resource differs from its expected
      *        configuration.
      *        </p>
      *        <p>
@@ -157,8 +155,7 @@ public class StackResourceDriftInformation implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>NOT_CHECKED</code>: AWS CloudFormation has not checked if the resource differs from its expected
-     * configuration.
+     * <code>NOT_CHECKED</code>: CloudFormation has not checked if the resource differs from its expected configuration.
      * </p>
      * <p>
      * Any resources that do not currently support drift detection have a status of <code>NOT_CHECKED</code>. For more
@@ -188,7 +185,7 @@ public class StackResourceDriftInformation implements Serializable, Cloneable {
      *         </li>
      *         <li>
      *         <p>
-     *         <code>NOT_CHECKED</code>: AWS CloudFormation has not checked if the resource differs from its expected
+     *         <code>NOT_CHECKED</code>: CloudFormation has not checked if the resource differs from its expected
      *         configuration.
      *         </p>
      *         <p>
@@ -227,8 +224,7 @@ public class StackResourceDriftInformation implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>NOT_CHECKED</code>: AWS CloudFormation has not checked if the resource differs from its expected
-     * configuration.
+     * <code>NOT_CHECKED</code>: CloudFormation has not checked if the resource differs from its expected configuration.
      * </p>
      * <p>
      * Any resources that do not currently support drift detection have a status of <code>NOT_CHECKED</code>. For more
@@ -259,7 +255,7 @@ public class StackResourceDriftInformation implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>NOT_CHECKED</code>: AWS CloudFormation has not checked if the resource differs from its expected
+     *        <code>NOT_CHECKED</code>: CloudFormation has not checked if the resource differs from its expected
      *        configuration.
      *        </p>
      *        <p>
@@ -300,8 +296,7 @@ public class StackResourceDriftInformation implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>NOT_CHECKED</code>: AWS CloudFormation has not checked if the resource differs from its expected
-     * configuration.
+     * <code>NOT_CHECKED</code>: CloudFormation has not checked if the resource differs from its expected configuration.
      * </p>
      * <p>
      * Any resources that do not currently support drift detection have a status of <code>NOT_CHECKED</code>. For more
@@ -332,7 +327,7 @@ public class StackResourceDriftInformation implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>NOT_CHECKED</code>: AWS CloudFormation has not checked if the resource differs from its expected
+     *        <code>NOT_CHECKED</code>: CloudFormation has not checked if the resource differs from its expected
      *        configuration.
      *        </p>
      *        <p>
@@ -358,11 +353,11 @@ public class StackResourceDriftInformation implements Serializable, Cloneable {
 
     /**
      * <p>
-     * When AWS CloudFormation last checked if the resource had drifted from its expected configuration.
+     * When CloudFormation last checked if the resource had drifted from its expected configuration.
      * </p>
      * 
      * @param lastCheckTimestamp
-     *        When AWS CloudFormation last checked if the resource had drifted from its expected configuration.
+     *        When CloudFormation last checked if the resource had drifted from its expected configuration.
      */
 
     public void setLastCheckTimestamp(java.util.Date lastCheckTimestamp) {
@@ -371,10 +366,10 @@ public class StackResourceDriftInformation implements Serializable, Cloneable {
 
     /**
      * <p>
-     * When AWS CloudFormation last checked if the resource had drifted from its expected configuration.
+     * When CloudFormation last checked if the resource had drifted from its expected configuration.
      * </p>
      * 
-     * @return When AWS CloudFormation last checked if the resource had drifted from its expected configuration.
+     * @return When CloudFormation last checked if the resource had drifted from its expected configuration.
      */
 
     public java.util.Date getLastCheckTimestamp() {
@@ -383,11 +378,11 @@ public class StackResourceDriftInformation implements Serializable, Cloneable {
 
     /**
      * <p>
-     * When AWS CloudFormation last checked if the resource had drifted from its expected configuration.
+     * When CloudFormation last checked if the resource had drifted from its expected configuration.
      * </p>
      * 
      * @param lastCheckTimestamp
-     *        When AWS CloudFormation last checked if the resource had drifted from its expected configuration.
+     *        When CloudFormation last checked if the resource had drifted from its expected configuration.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

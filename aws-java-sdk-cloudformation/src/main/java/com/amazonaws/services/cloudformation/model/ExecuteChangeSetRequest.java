@@ -44,9 +44,9 @@ public class ExecuteChangeSetRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * A unique identifier for this <code>ExecuteChangeSet</code> request. Specify this token if you plan to retry
-     * requests so that AWS CloudFormation knows that you're not attempting to execute a change set to update a stack
-     * with the same name. You might retry <code>ExecuteChangeSet</code> requests to ensure that AWS CloudFormation
-     * successfully received them.
+     * requests so that CloudFormation knows that you're not attempting to execute a change set to update a stack with
+     * the same name. You might retry <code>ExecuteChangeSet</code> requests to ensure that CloudFormation successfully
+     * received them.
      * </p>
      */
     private String clientRequestToken;
@@ -140,16 +140,16 @@ public class ExecuteChangeSetRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * A unique identifier for this <code>ExecuteChangeSet</code> request. Specify this token if you plan to retry
-     * requests so that AWS CloudFormation knows that you're not attempting to execute a change set to update a stack
-     * with the same name. You might retry <code>ExecuteChangeSet</code> requests to ensure that AWS CloudFormation
-     * successfully received them.
+     * requests so that CloudFormation knows that you're not attempting to execute a change set to update a stack with
+     * the same name. You might retry <code>ExecuteChangeSet</code> requests to ensure that CloudFormation successfully
+     * received them.
      * </p>
      * 
      * @param clientRequestToken
      *        A unique identifier for this <code>ExecuteChangeSet</code> request. Specify this token if you plan to
-     *        retry requests so that AWS CloudFormation knows that you're not attempting to execute a change set to
-     *        update a stack with the same name. You might retry <code>ExecuteChangeSet</code> requests to ensure that
-     *        AWS CloudFormation successfully received them.
+     *        retry requests so that CloudFormation knows that you're not attempting to execute a change set to update a
+     *        stack with the same name. You might retry <code>ExecuteChangeSet</code> requests to ensure that
+     *        CloudFormation successfully received them.
      */
 
     public void setClientRequestToken(String clientRequestToken) {
@@ -159,15 +159,15 @@ public class ExecuteChangeSetRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * A unique identifier for this <code>ExecuteChangeSet</code> request. Specify this token if you plan to retry
-     * requests so that AWS CloudFormation knows that you're not attempting to execute a change set to update a stack
-     * with the same name. You might retry <code>ExecuteChangeSet</code> requests to ensure that AWS CloudFormation
-     * successfully received them.
+     * requests so that CloudFormation knows that you're not attempting to execute a change set to update a stack with
+     * the same name. You might retry <code>ExecuteChangeSet</code> requests to ensure that CloudFormation successfully
+     * received them.
      * </p>
      * 
      * @return A unique identifier for this <code>ExecuteChangeSet</code> request. Specify this token if you plan to
-     *         retry requests so that AWS CloudFormation knows that you're not attempting to execute a change set to
-     *         update a stack with the same name. You might retry <code>ExecuteChangeSet</code> requests to ensure that
-     *         AWS CloudFormation successfully received them.
+     *         retry requests so that CloudFormation knows that you're not attempting to execute a change set to update
+     *         a stack with the same name. You might retry <code>ExecuteChangeSet</code> requests to ensure that
+     *         CloudFormation successfully received them.
      */
 
     public String getClientRequestToken() {
@@ -177,16 +177,16 @@ public class ExecuteChangeSetRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * A unique identifier for this <code>ExecuteChangeSet</code> request. Specify this token if you plan to retry
-     * requests so that AWS CloudFormation knows that you're not attempting to execute a change set to update a stack
-     * with the same name. You might retry <code>ExecuteChangeSet</code> requests to ensure that AWS CloudFormation
-     * successfully received them.
+     * requests so that CloudFormation knows that you're not attempting to execute a change set to update a stack with
+     * the same name. You might retry <code>ExecuteChangeSet</code> requests to ensure that CloudFormation successfully
+     * received them.
      * </p>
      * 
      * @param clientRequestToken
      *        A unique identifier for this <code>ExecuteChangeSet</code> request. Specify this token if you plan to
-     *        retry requests so that AWS CloudFormation knows that you're not attempting to execute a change set to
-     *        update a stack with the same name. You might retry <code>ExecuteChangeSet</code> requests to ensure that
-     *        AWS CloudFormation successfully received them.
+     *        retry requests so that CloudFormation knows that you're not attempting to execute a change set to update a
+     *        stack with the same name. You might retry <code>ExecuteChangeSet</code> requests to ensure that
+     *        CloudFormation successfully received them.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

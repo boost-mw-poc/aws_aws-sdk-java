@@ -17,8 +17,8 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * A set of criteria that AWS CloudFormation uses to validate parameter values. Although other constraints might be
- * defined in the stack template, AWS CloudFormation returns only the <code>AllowedValues</code> property.
+ * A set of criteria that CloudFormation uses to validate parameter values. Although other constraints might be defined
+ * in the stack template, CloudFormation returns only the <code>AllowedValues</code> property.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/ParameterConstraints"

@@ -46,7 +46,7 @@ public class StackResourceDetail implements Serializable, Cloneable {
     private String logicalResourceId;
     /**
      * <p>
-     * The name or unique identifier that corresponds to a physical instance ID of a resource supported by AWS
+     * The name or unique identifier that corresponds to a physical instance ID of a resource supported by
      * CloudFormation.
      * </p>
      */
@@ -54,8 +54,8 @@ public class StackResourceDetail implements Serializable, Cloneable {
     /**
      * <p>
      * Type of resource. ((For more information, go to <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html"> AWS
-     * Resource Types Reference</a> in the AWS CloudFormation User Guide.)
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html">Amazon
+     * Web Services Resource Types Reference</a> in the CloudFormation User Guide.)
      * </p>
      */
     private String resourceType;
@@ -87,7 +87,7 @@ public class StackResourceDetail implements Serializable, Cloneable {
      * <p>
      * The content of the <code>Metadata</code> attribute declared for the resource. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-metadata.html">Metadata
-     * Attribute</a> in the AWS CloudFormation User Guide.
+     * Attribute</a> in the CloudFormation User Guide.
      * </p>
      */
     private String metadata;
@@ -231,12 +231,12 @@ public class StackResourceDetail implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The name or unique identifier that corresponds to a physical instance ID of a resource supported by AWS
+     * The name or unique identifier that corresponds to a physical instance ID of a resource supported by
      * CloudFormation.
      * </p>
      * 
      * @param physicalResourceId
-     *        The name or unique identifier that corresponds to a physical instance ID of a resource supported by AWS
+     *        The name or unique identifier that corresponds to a physical instance ID of a resource supported by
      *        CloudFormation.
      */
 
@@ -246,11 +246,11 @@ public class StackResourceDetail implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The name or unique identifier that corresponds to a physical instance ID of a resource supported by AWS
+     * The name or unique identifier that corresponds to a physical instance ID of a resource supported by
      * CloudFormation.
      * </p>
      * 
-     * @return The name or unique identifier that corresponds to a physical instance ID of a resource supported by AWS
+     * @return The name or unique identifier that corresponds to a physical instance ID of a resource supported by
      *         CloudFormation.
      */
 
@@ -260,12 +260,12 @@ public class StackResourceDetail implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The name or unique identifier that corresponds to a physical instance ID of a resource supported by AWS
+     * The name or unique identifier that corresponds to a physical instance ID of a resource supported by
      * CloudFormation.
      * </p>
      * 
      * @param physicalResourceId
-     *        The name or unique identifier that corresponds to a physical instance ID of a resource supported by AWS
+     *        The name or unique identifier that corresponds to a physical instance ID of a resource supported by
      *        CloudFormation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -278,14 +278,14 @@ public class StackResourceDetail implements Serializable, Cloneable {
     /**
      * <p>
      * Type of resource. ((For more information, go to <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html"> AWS
-     * Resource Types Reference</a> in the AWS CloudFormation User Guide.)
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html">Amazon
+     * Web Services Resource Types Reference</a> in the CloudFormation User Guide.)
      * </p>
      * 
      * @param resourceType
      *        Type of resource. ((For more information, go to <a href=
-     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html"> AWS
-     *        Resource Types Reference</a> in the AWS CloudFormation User Guide.)
+     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html"
+     *        >Amazon Web Services Resource Types Reference</a> in the CloudFormation User Guide.)
      */
 
     public void setResourceType(String resourceType) {
@@ -295,13 +295,13 @@ public class StackResourceDetail implements Serializable, Cloneable {
     /**
      * <p>
      * Type of resource. ((For more information, go to <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html"> AWS
-     * Resource Types Reference</a> in the AWS CloudFormation User Guide.)
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html">Amazon
+     * Web Services Resource Types Reference</a> in the CloudFormation User Guide.)
      * </p>
      * 
      * @return Type of resource. ((For more information, go to <a
      *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html"
-     *         > AWS Resource Types Reference</a> in the AWS CloudFormation User Guide.)
+     *         >Amazon Web Services Resource Types Reference</a> in the CloudFormation User Guide.)
      */
 
     public String getResourceType() {
@@ -311,14 +311,14 @@ public class StackResourceDetail implements Serializable, Cloneable {
     /**
      * <p>
      * Type of resource. ((For more information, go to <a
-     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html"> AWS
-     * Resource Types Reference</a> in the AWS CloudFormation User Guide.)
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html">Amazon
+     * Web Services Resource Types Reference</a> in the CloudFormation User Guide.)
      * </p>
      * 
      * @param resourceType
      *        Type of resource. ((For more information, go to <a href=
-     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html"> AWS
-     *        Resource Types Reference</a> in the AWS CloudFormation User Guide.)
+     *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html"
+     *        >Amazon Web Services Resource Types Reference</a> in the CloudFormation User Guide.)
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -524,13 +524,13 @@ public class StackResourceDetail implements Serializable, Cloneable {
      * <p>
      * The content of the <code>Metadata</code> attribute declared for the resource. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-metadata.html">Metadata
-     * Attribute</a> in the AWS CloudFormation User Guide.
+     * Attribute</a> in the CloudFormation User Guide.
      * </p>
      * 
      * @param metadata
      *        The content of the <code>Metadata</code> attribute declared for the resource. For more information, see <a
      *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-metadata.html">Metadata
-     *        Attribute</a> in the AWS CloudFormation User Guide.
+     *        Attribute</a> in the CloudFormation User Guide.
      */
 
     public void setMetadata(String metadata) {
@@ -541,12 +541,12 @@ public class StackResourceDetail implements Serializable, Cloneable {
      * <p>
      * The content of the <code>Metadata</code> attribute declared for the resource. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-metadata.html">Metadata
-     * Attribute</a> in the AWS CloudFormation User Guide.
+     * Attribute</a> in the CloudFormation User Guide.
      * </p>
      * 
      * @return The content of the <code>Metadata</code> attribute declared for the resource. For more information, see
      *         <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-metadata.html">
-     *         Metadata Attribute</a> in the AWS CloudFormation User Guide.
+     *         Metadata Attribute</a> in the CloudFormation User Guide.
      */
 
     public String getMetadata() {
@@ -557,13 +557,13 @@ public class StackResourceDetail implements Serializable, Cloneable {
      * <p>
      * The content of the <code>Metadata</code> attribute declared for the resource. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-metadata.html">Metadata
-     * Attribute</a> in the AWS CloudFormation User Guide.
+     * Attribute</a> in the CloudFormation User Guide.
      * </p>
      * 
      * @param metadata
      *        The content of the <code>Metadata</code> attribute declared for the resource. For more information, see <a
      *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-attribute-metadata.html">Metadata
-     *        Attribute</a> in the AWS CloudFormation User Guide.
+     *        Attribute</a> in the CloudFormation User Guide.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -37,9 +37,9 @@ public class CancelUpdateStackRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * A unique identifier for this <code>CancelUpdateStack</code> request. Specify this token if you plan to retry
-     * requests so that AWS CloudFormation knows that you're not attempting to cancel an update on a stack with the same
-     * name. You might retry <code>CancelUpdateStack</code> requests to ensure that AWS CloudFormation successfully
-     * received them.
+     * requests so that CloudFormation knows that you're not attempting to cancel an update on a stack with the same
+     * name. You might retry <code>CancelUpdateStack</code> requests to ensure that CloudFormation successfully received
+     * them.
      * </p>
      */
     private String clientRequestToken;
@@ -87,16 +87,16 @@ public class CancelUpdateStackRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * A unique identifier for this <code>CancelUpdateStack</code> request. Specify this token if you plan to retry
-     * requests so that AWS CloudFormation knows that you're not attempting to cancel an update on a stack with the same
-     * name. You might retry <code>CancelUpdateStack</code> requests to ensure that AWS CloudFormation successfully
-     * received them.
+     * requests so that CloudFormation knows that you're not attempting to cancel an update on a stack with the same
+     * name. You might retry <code>CancelUpdateStack</code> requests to ensure that CloudFormation successfully received
+     * them.
      * </p>
      * 
      * @param clientRequestToken
      *        A unique identifier for this <code>CancelUpdateStack</code> request. Specify this token if you plan to
-     *        retry requests so that AWS CloudFormation knows that you're not attempting to cancel an update on a stack
-     *        with the same name. You might retry <code>CancelUpdateStack</code> requests to ensure that AWS
-     *        CloudFormation successfully received them.
+     *        retry requests so that CloudFormation knows that you're not attempting to cancel an update on a stack with
+     *        the same name. You might retry <code>CancelUpdateStack</code> requests to ensure that CloudFormation
+     *        successfully received them.
      */
 
     public void setClientRequestToken(String clientRequestToken) {
@@ -106,15 +106,15 @@ public class CancelUpdateStackRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * A unique identifier for this <code>CancelUpdateStack</code> request. Specify this token if you plan to retry
-     * requests so that AWS CloudFormation knows that you're not attempting to cancel an update on a stack with the same
-     * name. You might retry <code>CancelUpdateStack</code> requests to ensure that AWS CloudFormation successfully
-     * received them.
+     * requests so that CloudFormation knows that you're not attempting to cancel an update on a stack with the same
+     * name. You might retry <code>CancelUpdateStack</code> requests to ensure that CloudFormation successfully received
+     * them.
      * </p>
      * 
      * @return A unique identifier for this <code>CancelUpdateStack</code> request. Specify this token if you plan to
-     *         retry requests so that AWS CloudFormation knows that you're not attempting to cancel an update on a stack
-     *         with the same name. You might retry <code>CancelUpdateStack</code> requests to ensure that AWS
-     *         CloudFormation successfully received them.
+     *         retry requests so that CloudFormation knows that you're not attempting to cancel an update on a stack
+     *         with the same name. You might retry <code>CancelUpdateStack</code> requests to ensure that CloudFormation
+     *         successfully received them.
      */
 
     public String getClientRequestToken() {
@@ -124,16 +124,16 @@ public class CancelUpdateStackRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * A unique identifier for this <code>CancelUpdateStack</code> request. Specify this token if you plan to retry
-     * requests so that AWS CloudFormation knows that you're not attempting to cancel an update on a stack with the same
-     * name. You might retry <code>CancelUpdateStack</code> requests to ensure that AWS CloudFormation successfully
-     * received them.
+     * requests so that CloudFormation knows that you're not attempting to cancel an update on a stack with the same
+     * name. You might retry <code>CancelUpdateStack</code> requests to ensure that CloudFormation successfully received
+     * them.
      * </p>
      * 
      * @param clientRequestToken
      *        A unique identifier for this <code>CancelUpdateStack</code> request. Specify this token if you plan to
-     *        retry requests so that AWS CloudFormation knows that you're not attempting to cancel an update on a stack
-     *        with the same name. You might retry <code>CancelUpdateStack</code> requests to ensure that AWS
-     *        CloudFormation successfully received them.
+     *        retry requests so that CloudFormation knows that you're not attempting to cancel an update on a stack with
+     *        the same name. You might retry <code>CancelUpdateStack</code> requests to ensure that CloudFormation
+     *        successfully received them.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

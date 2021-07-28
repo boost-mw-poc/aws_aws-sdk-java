@@ -17,9 +17,9 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * A rollback trigger AWS CloudFormation monitors during creation and updating of stacks. If any of the alarms you
- * specify goes to ALARM state during the stack operation or within the specified monitoring period afterwards,
- * CloudFormation rolls back the entire stack operation.
+ * A rollback trigger CloudFormation monitors during creation and updating of stacks. If any of the alarms you specify
+ * goes to ALARM state during the stack operation or within the specified monitoring period afterwards, CloudFormation
+ * rolls back the entire stack operation.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/RollbackTrigger" target="_top">AWS API

@@ -17,7 +17,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The user-specified preferences for how AWS CloudFormation performs a stack set operation.
+ * The user-specified preferences for how CloudFormation performs a stack set operation.
  * </p>
  * <p>
  * For more information on maximum concurrent accounts and failure tolerance, see <a
@@ -33,7 +33,7 @@ public class StackSetOperationPreferences implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The concurrency type of deploying StackSets operations in regions, could be in parallel or one region at a time.
+     * The concurrency type of deploying StackSets operations in Regions, could be in parallel or one Region at a time.
      * </p>
      */
     private String regionConcurrencyType;
@@ -45,9 +45,9 @@ public class StackSetOperationPreferences implements Serializable, Cloneable {
     private com.amazonaws.internal.SdkInternalList<String> regionOrder;
     /**
      * <p>
-     * The number of accounts, per Region, for which this operation can fail before AWS CloudFormation stops the
-     * operation in that Region. If the operation is stopped in a Region, AWS CloudFormation doesn't attempt the
-     * operation in any subsequent Regions.
+     * The number of accounts, per Region, for which this operation can fail before CloudFormation stops the operation
+     * in that Region. If the operation is stopped in a Region, CloudFormation doesn't attempt the operation in any
+     * subsequent Regions.
      * </p>
      * <p>
      * Conditional: You must specify either <code>FailureToleranceCount</code> or
@@ -60,13 +60,13 @@ public class StackSetOperationPreferences implements Serializable, Cloneable {
     private Integer failureToleranceCount;
     /**
      * <p>
-     * The percentage of accounts, per Region, for which this stack operation can fail before AWS CloudFormation stops
-     * the operation in that Region. If the operation is stopped in a Region, AWS CloudFormation doesn't attempt the
-     * operation in any subsequent Regions.
+     * The percentage of accounts, per Region, for which this stack operation can fail before CloudFormation stops the
+     * operation in that Region. If the operation is stopped in a Region, CloudFormation doesn't attempt the operation
+     * in any subsequent Regions.
      * </p>
      * <p>
-     * When calculating the number of accounts based on the specified percentage, AWS CloudFormation rounds <i>down</i>
-     * to the next whole number.
+     * When calculating the number of accounts based on the specified percentage, CloudFormation rounds <i>down</i> to
+     * the next whole number.
      * </p>
      * <p>
      * Conditional: You must specify either <code>FailureToleranceCount</code> or
@@ -101,9 +101,9 @@ public class StackSetOperationPreferences implements Serializable, Cloneable {
      * The maximum percentage of accounts in which to perform this operation at one time.
      * </p>
      * <p>
-     * When calculating the number of accounts based on the specified percentage, AWS CloudFormation rounds down to the
-     * next whole number. This is true except in cases where rounding down would result is zero. In this case,
-     * CloudFormation sets the number as one instead.
+     * When calculating the number of accounts based on the specified percentage, CloudFormation rounds down to the next
+     * whole number. This is true except in cases where rounding down would result is zero. In this case, CloudFormation
+     * sets the number as one instead.
      * </p>
      * <p>
      * Note that this setting lets you specify the <i>maximum</i> for operations. For large deployments, under certain
@@ -121,11 +121,11 @@ public class StackSetOperationPreferences implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The concurrency type of deploying StackSets operations in regions, could be in parallel or one region at a time.
+     * The concurrency type of deploying StackSets operations in Regions, could be in parallel or one Region at a time.
      * </p>
      * 
      * @param regionConcurrencyType
-     *        The concurrency type of deploying StackSets operations in regions, could be in parallel or one region at a
+     *        The concurrency type of deploying StackSets operations in Regions, could be in parallel or one Region at a
      *        time.
      * @see RegionConcurrencyType
      */
@@ -136,10 +136,10 @@ public class StackSetOperationPreferences implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The concurrency type of deploying StackSets operations in regions, could be in parallel or one region at a time.
+     * The concurrency type of deploying StackSets operations in Regions, could be in parallel or one Region at a time.
      * </p>
      * 
-     * @return The concurrency type of deploying StackSets operations in regions, could be in parallel or one region at
+     * @return The concurrency type of deploying StackSets operations in Regions, could be in parallel or one Region at
      *         a time.
      * @see RegionConcurrencyType
      */
@@ -150,11 +150,11 @@ public class StackSetOperationPreferences implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The concurrency type of deploying StackSets operations in regions, could be in parallel or one region at a time.
+     * The concurrency type of deploying StackSets operations in Regions, could be in parallel or one Region at a time.
      * </p>
      * 
      * @param regionConcurrencyType
-     *        The concurrency type of deploying StackSets operations in regions, could be in parallel or one region at a
+     *        The concurrency type of deploying StackSets operations in Regions, could be in parallel or one Region at a
      *        time.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see RegionConcurrencyType
@@ -167,11 +167,11 @@ public class StackSetOperationPreferences implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The concurrency type of deploying StackSets operations in regions, could be in parallel or one region at a time.
+     * The concurrency type of deploying StackSets operations in Regions, could be in parallel or one Region at a time.
      * </p>
      * 
      * @param regionConcurrencyType
-     *        The concurrency type of deploying StackSets operations in regions, could be in parallel or one region at a
+     *        The concurrency type of deploying StackSets operations in Regions, could be in parallel or one Region at a
      *        time.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see RegionConcurrencyType
@@ -257,9 +257,9 @@ public class StackSetOperationPreferences implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The number of accounts, per Region, for which this operation can fail before AWS CloudFormation stops the
-     * operation in that Region. If the operation is stopped in a Region, AWS CloudFormation doesn't attempt the
-     * operation in any subsequent Regions.
+     * The number of accounts, per Region, for which this operation can fail before CloudFormation stops the operation
+     * in that Region. If the operation is stopped in a Region, CloudFormation doesn't attempt the operation in any
+     * subsequent Regions.
      * </p>
      * <p>
      * Conditional: You must specify either <code>FailureToleranceCount</code> or
@@ -270,8 +270,8 @@ public class StackSetOperationPreferences implements Serializable, Cloneable {
      * </p>
      * 
      * @param failureToleranceCount
-     *        The number of accounts, per Region, for which this operation can fail before AWS CloudFormation stops the
-     *        operation in that Region. If the operation is stopped in a Region, AWS CloudFormation doesn't attempt the
+     *        The number of accounts, per Region, for which this operation can fail before CloudFormation stops the
+     *        operation in that Region. If the operation is stopped in a Region, CloudFormation doesn't attempt the
      *        operation in any subsequent Regions.</p>
      *        <p>
      *        Conditional: You must specify either <code>FailureToleranceCount</code> or
@@ -287,9 +287,9 @@ public class StackSetOperationPreferences implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The number of accounts, per Region, for which this operation can fail before AWS CloudFormation stops the
-     * operation in that Region. If the operation is stopped in a Region, AWS CloudFormation doesn't attempt the
-     * operation in any subsequent Regions.
+     * The number of accounts, per Region, for which this operation can fail before CloudFormation stops the operation
+     * in that Region. If the operation is stopped in a Region, CloudFormation doesn't attempt the operation in any
+     * subsequent Regions.
      * </p>
      * <p>
      * Conditional: You must specify either <code>FailureToleranceCount</code> or
@@ -299,8 +299,8 @@ public class StackSetOperationPreferences implements Serializable, Cloneable {
      * By default, <code>0</code> is specified.
      * </p>
      * 
-     * @return The number of accounts, per Region, for which this operation can fail before AWS CloudFormation stops the
-     *         operation in that Region. If the operation is stopped in a Region, AWS CloudFormation doesn't attempt the
+     * @return The number of accounts, per Region, for which this operation can fail before CloudFormation stops the
+     *         operation in that Region. If the operation is stopped in a Region, CloudFormation doesn't attempt the
      *         operation in any subsequent Regions.</p>
      *         <p>
      *         Conditional: You must specify either <code>FailureToleranceCount</code> or
@@ -316,9 +316,9 @@ public class StackSetOperationPreferences implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The number of accounts, per Region, for which this operation can fail before AWS CloudFormation stops the
-     * operation in that Region. If the operation is stopped in a Region, AWS CloudFormation doesn't attempt the
-     * operation in any subsequent Regions.
+     * The number of accounts, per Region, for which this operation can fail before CloudFormation stops the operation
+     * in that Region. If the operation is stopped in a Region, CloudFormation doesn't attempt the operation in any
+     * subsequent Regions.
      * </p>
      * <p>
      * Conditional: You must specify either <code>FailureToleranceCount</code> or
@@ -329,8 +329,8 @@ public class StackSetOperationPreferences implements Serializable, Cloneable {
      * </p>
      * 
      * @param failureToleranceCount
-     *        The number of accounts, per Region, for which this operation can fail before AWS CloudFormation stops the
-     *        operation in that Region. If the operation is stopped in a Region, AWS CloudFormation doesn't attempt the
+     *        The number of accounts, per Region, for which this operation can fail before CloudFormation stops the
+     *        operation in that Region. If the operation is stopped in a Region, CloudFormation doesn't attempt the
      *        operation in any subsequent Regions.</p>
      *        <p>
      *        Conditional: You must specify either <code>FailureToleranceCount</code> or
@@ -348,13 +348,13 @@ public class StackSetOperationPreferences implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The percentage of accounts, per Region, for which this stack operation can fail before AWS CloudFormation stops
-     * the operation in that Region. If the operation is stopped in a Region, AWS CloudFormation doesn't attempt the
-     * operation in any subsequent Regions.
+     * The percentage of accounts, per Region, for which this stack operation can fail before CloudFormation stops the
+     * operation in that Region. If the operation is stopped in a Region, CloudFormation doesn't attempt the operation
+     * in any subsequent Regions.
      * </p>
      * <p>
-     * When calculating the number of accounts based on the specified percentage, AWS CloudFormation rounds <i>down</i>
-     * to the next whole number.
+     * When calculating the number of accounts based on the specified percentage, CloudFormation rounds <i>down</i> to
+     * the next whole number.
      * </p>
      * <p>
      * Conditional: You must specify either <code>FailureToleranceCount</code> or
@@ -365,11 +365,11 @@ public class StackSetOperationPreferences implements Serializable, Cloneable {
      * </p>
      * 
      * @param failureTolerancePercentage
-     *        The percentage of accounts, per Region, for which this stack operation can fail before AWS CloudFormation
-     *        stops the operation in that Region. If the operation is stopped in a Region, AWS CloudFormation doesn't
+     *        The percentage of accounts, per Region, for which this stack operation can fail before CloudFormation
+     *        stops the operation in that Region. If the operation is stopped in a Region, CloudFormation doesn't
      *        attempt the operation in any subsequent Regions.</p>
      *        <p>
-     *        When calculating the number of accounts based on the specified percentage, AWS CloudFormation rounds
+     *        When calculating the number of accounts based on the specified percentage, CloudFormation rounds
      *        <i>down</i> to the next whole number.
      *        </p>
      *        <p>
@@ -386,13 +386,13 @@ public class StackSetOperationPreferences implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The percentage of accounts, per Region, for which this stack operation can fail before AWS CloudFormation stops
-     * the operation in that Region. If the operation is stopped in a Region, AWS CloudFormation doesn't attempt the
-     * operation in any subsequent Regions.
+     * The percentage of accounts, per Region, for which this stack operation can fail before CloudFormation stops the
+     * operation in that Region. If the operation is stopped in a Region, CloudFormation doesn't attempt the operation
+     * in any subsequent Regions.
      * </p>
      * <p>
-     * When calculating the number of accounts based on the specified percentage, AWS CloudFormation rounds <i>down</i>
-     * to the next whole number.
+     * When calculating the number of accounts based on the specified percentage, CloudFormation rounds <i>down</i> to
+     * the next whole number.
      * </p>
      * <p>
      * Conditional: You must specify either <code>FailureToleranceCount</code> or
@@ -402,11 +402,11 @@ public class StackSetOperationPreferences implements Serializable, Cloneable {
      * By default, <code>0</code> is specified.
      * </p>
      * 
-     * @return The percentage of accounts, per Region, for which this stack operation can fail before AWS CloudFormation
-     *         stops the operation in that Region. If the operation is stopped in a Region, AWS CloudFormation doesn't
+     * @return The percentage of accounts, per Region, for which this stack operation can fail before CloudFormation
+     *         stops the operation in that Region. If the operation is stopped in a Region, CloudFormation doesn't
      *         attempt the operation in any subsequent Regions.</p>
      *         <p>
-     *         When calculating the number of accounts based on the specified percentage, AWS CloudFormation rounds
+     *         When calculating the number of accounts based on the specified percentage, CloudFormation rounds
      *         <i>down</i> to the next whole number.
      *         </p>
      *         <p>
@@ -423,13 +423,13 @@ public class StackSetOperationPreferences implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The percentage of accounts, per Region, for which this stack operation can fail before AWS CloudFormation stops
-     * the operation in that Region. If the operation is stopped in a Region, AWS CloudFormation doesn't attempt the
-     * operation in any subsequent Regions.
+     * The percentage of accounts, per Region, for which this stack operation can fail before CloudFormation stops the
+     * operation in that Region. If the operation is stopped in a Region, CloudFormation doesn't attempt the operation
+     * in any subsequent Regions.
      * </p>
      * <p>
-     * When calculating the number of accounts based on the specified percentage, AWS CloudFormation rounds <i>down</i>
-     * to the next whole number.
+     * When calculating the number of accounts based on the specified percentage, CloudFormation rounds <i>down</i> to
+     * the next whole number.
      * </p>
      * <p>
      * Conditional: You must specify either <code>FailureToleranceCount</code> or
@@ -440,11 +440,11 @@ public class StackSetOperationPreferences implements Serializable, Cloneable {
      * </p>
      * 
      * @param failureTolerancePercentage
-     *        The percentage of accounts, per Region, for which this stack operation can fail before AWS CloudFormation
-     *        stops the operation in that Region. If the operation is stopped in a Region, AWS CloudFormation doesn't
+     *        The percentage of accounts, per Region, for which this stack operation can fail before CloudFormation
+     *        stops the operation in that Region. If the operation is stopped in a Region, CloudFormation doesn't
      *        attempt the operation in any subsequent Regions.</p>
      *        <p>
-     *        When calculating the number of accounts based on the specified percentage, AWS CloudFormation rounds
+     *        When calculating the number of accounts based on the specified percentage, CloudFormation rounds
      *        <i>down</i> to the next whole number.
      *        </p>
      *        <p>
@@ -584,9 +584,9 @@ public class StackSetOperationPreferences implements Serializable, Cloneable {
      * The maximum percentage of accounts in which to perform this operation at one time.
      * </p>
      * <p>
-     * When calculating the number of accounts based on the specified percentage, AWS CloudFormation rounds down to the
-     * next whole number. This is true except in cases where rounding down would result is zero. In this case,
-     * CloudFormation sets the number as one instead.
+     * When calculating the number of accounts based on the specified percentage, CloudFormation rounds down to the next
+     * whole number. This is true except in cases where rounding down would result is zero. In this case, CloudFormation
+     * sets the number as one instead.
      * </p>
      * <p>
      * Note that this setting lets you specify the <i>maximum</i> for operations. For large deployments, under certain
@@ -603,8 +603,8 @@ public class StackSetOperationPreferences implements Serializable, Cloneable {
      * @param maxConcurrentPercentage
      *        The maximum percentage of accounts in which to perform this operation at one time.</p>
      *        <p>
-     *        When calculating the number of accounts based on the specified percentage, AWS CloudFormation rounds down
-     *        to the next whole number. This is true except in cases where rounding down would result is zero. In this
+     *        When calculating the number of accounts based on the specified percentage, CloudFormation rounds down to
+     *        the next whole number. This is true except in cases where rounding down would result is zero. In this
      *        case, CloudFormation sets the number as one instead.
      *        </p>
      *        <p>
@@ -629,9 +629,9 @@ public class StackSetOperationPreferences implements Serializable, Cloneable {
      * The maximum percentage of accounts in which to perform this operation at one time.
      * </p>
      * <p>
-     * When calculating the number of accounts based on the specified percentage, AWS CloudFormation rounds down to the
-     * next whole number. This is true except in cases where rounding down would result is zero. In this case,
-     * CloudFormation sets the number as one instead.
+     * When calculating the number of accounts based on the specified percentage, CloudFormation rounds down to the next
+     * whole number. This is true except in cases where rounding down would result is zero. In this case, CloudFormation
+     * sets the number as one instead.
      * </p>
      * <p>
      * Note that this setting lets you specify the <i>maximum</i> for operations. For large deployments, under certain
@@ -647,8 +647,8 @@ public class StackSetOperationPreferences implements Serializable, Cloneable {
      * 
      * @return The maximum percentage of accounts in which to perform this operation at one time.</p>
      *         <p>
-     *         When calculating the number of accounts based on the specified percentage, AWS CloudFormation rounds down
-     *         to the next whole number. This is true except in cases where rounding down would result is zero. In this
+     *         When calculating the number of accounts based on the specified percentage, CloudFormation rounds down to
+     *         the next whole number. This is true except in cases where rounding down would result is zero. In this
      *         case, CloudFormation sets the number as one instead.
      *         </p>
      *         <p>
@@ -673,9 +673,9 @@ public class StackSetOperationPreferences implements Serializable, Cloneable {
      * The maximum percentage of accounts in which to perform this operation at one time.
      * </p>
      * <p>
-     * When calculating the number of accounts based on the specified percentage, AWS CloudFormation rounds down to the
-     * next whole number. This is true except in cases where rounding down would result is zero. In this case,
-     * CloudFormation sets the number as one instead.
+     * When calculating the number of accounts based on the specified percentage, CloudFormation rounds down to the next
+     * whole number. This is true except in cases where rounding down would result is zero. In this case, CloudFormation
+     * sets the number as one instead.
      * </p>
      * <p>
      * Note that this setting lets you specify the <i>maximum</i> for operations. For large deployments, under certain
@@ -692,8 +692,8 @@ public class StackSetOperationPreferences implements Serializable, Cloneable {
      * @param maxConcurrentPercentage
      *        The maximum percentage of accounts in which to perform this operation at one time.</p>
      *        <p>
-     *        When calculating the number of accounts based on the specified percentage, AWS CloudFormation rounds down
-     *        to the next whole number. This is true except in cases where rounding down would result is zero. In this
+     *        When calculating the number of accounts based on the specified percentage, CloudFormation rounds down to
+     *        the next whole number. This is true except in cases where rounding down would result is zero. In this
      *        case, CloudFormation sets the number as one instead.
      *        </p>
      *        <p>

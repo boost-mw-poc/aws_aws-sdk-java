@@ -1,3 +1,12 @@
+# __1.12.35__ __2021-07-28__
+## __AWS CloudFormation__
+  - ### Features
+    - SDK update to support Importing existing Stacks to new/existing Self Managed StackSet - Stack Import feature.
+
+## __AWS Single Sign-On Admin__
+  - ### Features
+    - Documentation updates for arn:aws:trebuchet:::service:v1:03a2216d-1cda-4696-9ece-1387cb6f6952
+
 # __1.12.34__ __2021-07-28__
 ## __AWS Batch__
   - ### Features

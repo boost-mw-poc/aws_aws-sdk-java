@@ -30,7 +30,7 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The name or the unique ID of the stack for which you are creating a change set. AWS CloudFormation generates the
+     * The name or the unique ID of the stack for which you are creating a change set. CloudFormation generates the
      * change set by comparing this stack's information with the information that you submit, such as a modified
      * template or different parameter input values.
      * </p>
@@ -39,7 +39,7 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * A structure that contains the body of the revised template, with a minimum length of 1 byte and a maximum length
-     * of 51,200 bytes. AWS CloudFormation generates the change set by comparing this template with the template of the
+     * of 51,200 bytes. CloudFormation generates the change set by comparing this template with the template of the
      * stack that you specified.
      * </p>
      * <p>
@@ -50,8 +50,8 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * The location of the file that contains the revised template. The URL must point to a template (max size: 460,800
-     * bytes) that is located in an S3 bucket or a Systems Manager document. AWS CloudFormation generates the change set
-     * by comparing this template with the stack that you specified.
+     * bytes) that is located in an S3 bucket or a Systems Manager document. CloudFormation generates the change set by
+     * comparing this template with the stack that you specified.
      * </p>
      * <p>
      * Conditional: You must specify only <code>TemplateBody</code> or <code>TemplateURL</code>.
@@ -74,7 +74,7 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * In some cases, you must explicitly acknowledge that your stack template contains certain capabilities in order
-     * for AWS CloudFormation to create the stack.
+     * for CloudFormation to create the stack.
      * </p>
      * <ul>
      * <li>
@@ -82,9 +82,9 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * <code>CAPABILITY_IAM</code> and <code>CAPABILITY_NAMED_IAM</code>
      * </p>
      * <p>
-     * Some stack templates might include resources that can affect permissions in your AWS account; for example, by
-     * creating new AWS Identity and Access Management (IAM) users. For those stacks, you must explicitly acknowledge
-     * this by specifying one of these capabilities.
+     * Some stack templates might include resources that can affect permissions in your account; for example, by
+     * creating new Identity and Access Management (IAM) users. For those stacks, you must explicitly acknowledge this
+     * by specifying one of these capabilities.
      * </p>
      * <p>
      * The following IAM resources require you to specify either the <code>CAPABILITY_IAM</code> or
@@ -103,7 +103,7 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * </li>
      * <li>
      * <p>
-     * If you don't specify either of these capabilities, AWS CloudFormation returns an
+     * If you don't specify either of these capabilities, CloudFormation returns an
      * <code>InsufficientCapabilities</code> error.
      * </p>
      * </li>
@@ -159,7 +159,7 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * For more information, see <a
      * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#capabilities"
-     * >Acknowledging IAM Resources in AWS CloudFormation Templates</a>.
+     * >Acknowledging IAM Resources in CloudFormation Templates</a>.
      * </p>
      * </li>
      * <li>
@@ -176,7 +176,7 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.html"
      * >AWS::Include</a> and <a
      * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html"
-     * >AWS::Serverless</a> transforms, which are macros hosted by AWS CloudFormation.
+     * >AWS::Serverless</a> transforms, which are macros hosted by CloudFormation.
      * </p>
      * <note>
      * <p>
@@ -190,8 +190,8 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * </note>
      * <p>
      * For more information on macros, see <a
-     * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html">Using AWS
-     * CloudFormation Macros to Perform Custom Processing on Templates</a>.
+     * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html">Using CloudFormation
+     * Macros to Perform Custom Processing on Templates</a>.
      * </p>
      * </li>
      * </ul>
@@ -204,44 +204,44 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * If the list of resource types doesn't include a resource type that you're updating, the stack update fails. By
-     * default, AWS CloudFormation grants permissions to all resource types. AWS Identity and Access Management (IAM)
-     * uses this parameter for condition keys in IAM policies for AWS CloudFormation. For more information, see <a
+     * default, CloudFormation grants permissions to all resource types. Identity and Access Management (IAM) uses this
+     * parameter for condition keys in IAM policies for CloudFormation. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html">Controlling Access
-     * with AWS Identity and Access Management</a> in the AWS CloudFormation User Guide.
+     * with Identity and Access Management</a> in the CloudFormation User Guide.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> resourceTypes;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an AWS Identity and Access Management (IAM) role that AWS CloudFormation
-     * assumes when executing the change set. AWS CloudFormation uses the role's credentials to make calls on your
-     * behalf. AWS CloudFormation uses this role for all future operations on the stack. As long as users have
-     * permission to operate on the stack, AWS CloudFormation uses this role even if the users don't have permission to
-     * pass it. Ensure that the role grants least privilege.
+     * The Amazon Resource Name (ARN) of an Identity and Access Management (IAM) role that CloudFormation assumes when
+     * executing the change set. CloudFormation uses the role's credentials to make calls on your behalf. CloudFormation
+     * uses this role for all future operations on the stack. As long as users have permission to operate on the stack,
+     * CloudFormation uses this role even if the users don't have permission to pass it. Ensure that the role grants
+     * least privilege.
      * </p>
      * <p>
-     * If you don't specify a value, AWS CloudFormation uses the role that was previously associated with the stack. If
-     * no role is available, AWS CloudFormation uses a temporary session that is generated from your user credentials.
+     * If you don't specify a value, CloudFormation uses the role that was previously associated with the stack. If no
+     * role is available, CloudFormation uses a temporary session that is generated from your user credentials.
      * </p>
      */
     private String roleARN;
     /**
      * <p>
-     * The rollback triggers for AWS CloudFormation to monitor during stack creation and updating operations, and for
-     * the specified monitoring period afterwards.
+     * The rollback triggers for CloudFormation to monitor during stack creation and updating operations, and for the
+     * specified monitoring period afterwards.
      * </p>
      */
     private RollbackConfiguration rollbackConfiguration;
     /**
      * <p>
-     * The Amazon Resource Names (ARNs) of Amazon Simple Notification Service (Amazon SNS) topics that AWS
-     * CloudFormation associates with the stack. To remove all associated notification topics, specify an empty list.
+     * The Amazon Resource Names (ARNs) of Amazon Simple Notification Service (Amazon SNS) topics that CloudFormation
+     * associates with the stack. To remove all associated notification topics, specify an empty list.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> notificationARNs;
     /**
      * <p>
-     * Key-value pairs to associate with this stack. AWS CloudFormation also propagates these tags to resources in the
+     * Key-value pairs to associate with this stack. CloudFormation also propagates these tags to resources in the
      * stack. You can specify a maximum of 50 tags.
      * </p>
      */
@@ -260,9 +260,8 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * A unique identifier for this <code>CreateChangeSet</code> request. Specify this token if you plan to retry
-     * requests so that AWS CloudFormation knows that you're not attempting to create another change set with the same
-     * name. You might retry <code>CreateChangeSet</code> requests to ensure that AWS CloudFormation successfully
-     * received them.
+     * requests so that CloudFormation knows that you're not attempting to create another change set with the same name.
+     * You might retry <code>CreateChangeSet</code> requests to ensure that CloudFormation successfully received them.
      * </p>
      */
     private String clientToken;
@@ -279,14 +278,14 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * specify <code>IMPORT</code>.
      * </p>
      * <p>
-     * If you create a change set for a new stack, AWS Cloudformation creates a stack with a unique stack ID, but no
+     * If you create a change set for a new stack, CloudFormation creates a stack with a unique stack ID, but no
      * template or resources. The stack will be in the <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-describing-stacks.html#d0e11995">
      * <code>REVIEW_IN_PROGRESS</code> </a> state until you execute the change set.
      * </p>
      * <p>
-     * By default, AWS CloudFormation specifies <code>UPDATE</code>. You can't use the <code>UPDATE</code> type to
-     * create a change set for a new stack or the <code>CREATE</code> type to create a change set for an existing stack.
+     * By default, CloudFormation specifies <code>UPDATE</code>. You can't use the <code>UPDATE</code> type to create a
+     * change set for a new stack or the <code>CREATE</code> type to create a change set for an existing stack.
      * </p>
      */
     private String changeSetType;
@@ -306,15 +305,15 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The name or the unique ID of the stack for which you are creating a change set. AWS CloudFormation generates the
+     * The name or the unique ID of the stack for which you are creating a change set. CloudFormation generates the
      * change set by comparing this stack's information with the information that you submit, such as a modified
      * template or different parameter input values.
      * </p>
      * 
      * @param stackName
-     *        The name or the unique ID of the stack for which you are creating a change set. AWS CloudFormation
-     *        generates the change set by comparing this stack's information with the information that you submit, such
-     *        as a modified template or different parameter input values.
+     *        The name or the unique ID of the stack for which you are creating a change set. CloudFormation generates
+     *        the change set by comparing this stack's information with the information that you submit, such as a
+     *        modified template or different parameter input values.
      */
 
     public void setStackName(String stackName) {
@@ -323,14 +322,14 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The name or the unique ID of the stack for which you are creating a change set. AWS CloudFormation generates the
+     * The name or the unique ID of the stack for which you are creating a change set. CloudFormation generates the
      * change set by comparing this stack's information with the information that you submit, such as a modified
      * template or different parameter input values.
      * </p>
      * 
-     * @return The name or the unique ID of the stack for which you are creating a change set. AWS CloudFormation
-     *         generates the change set by comparing this stack's information with the information that you submit, such
-     *         as a modified template or different parameter input values.
+     * @return The name or the unique ID of the stack for which you are creating a change set. CloudFormation generates
+     *         the change set by comparing this stack's information with the information that you submit, such as a
+     *         modified template or different parameter input values.
      */
 
     public String getStackName() {
@@ -339,15 +338,15 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The name or the unique ID of the stack for which you are creating a change set. AWS CloudFormation generates the
+     * The name or the unique ID of the stack for which you are creating a change set. CloudFormation generates the
      * change set by comparing this stack's information with the information that you submit, such as a modified
      * template or different parameter input values.
      * </p>
      * 
      * @param stackName
-     *        The name or the unique ID of the stack for which you are creating a change set. AWS CloudFormation
-     *        generates the change set by comparing this stack's information with the information that you submit, such
-     *        as a modified template or different parameter input values.
+     *        The name or the unique ID of the stack for which you are creating a change set. CloudFormation generates
+     *        the change set by comparing this stack's information with the information that you submit, such as a
+     *        modified template or different parameter input values.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -359,7 +358,7 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * A structure that contains the body of the revised template, with a minimum length of 1 byte and a maximum length
-     * of 51,200 bytes. AWS CloudFormation generates the change set by comparing this template with the template of the
+     * of 51,200 bytes. CloudFormation generates the change set by comparing this template with the template of the
      * stack that you specified.
      * </p>
      * <p>
@@ -368,7 +367,7 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * 
      * @param templateBody
      *        A structure that contains the body of the revised template, with a minimum length of 1 byte and a maximum
-     *        length of 51,200 bytes. AWS CloudFormation generates the change set by comparing this template with the
+     *        length of 51,200 bytes. CloudFormation generates the change set by comparing this template with the
      *        template of the stack that you specified.</p>
      *        <p>
      *        Conditional: You must specify only <code>TemplateBody</code> or <code>TemplateURL</code>.
@@ -381,7 +380,7 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * A structure that contains the body of the revised template, with a minimum length of 1 byte and a maximum length
-     * of 51,200 bytes. AWS CloudFormation generates the change set by comparing this template with the template of the
+     * of 51,200 bytes. CloudFormation generates the change set by comparing this template with the template of the
      * stack that you specified.
      * </p>
      * <p>
@@ -389,7 +388,7 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * 
      * @return A structure that contains the body of the revised template, with a minimum length of 1 byte and a maximum
-     *         length of 51,200 bytes. AWS CloudFormation generates the change set by comparing this template with the
+     *         length of 51,200 bytes. CloudFormation generates the change set by comparing this template with the
      *         template of the stack that you specified.</p>
      *         <p>
      *         Conditional: You must specify only <code>TemplateBody</code> or <code>TemplateURL</code>.
@@ -402,7 +401,7 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * A structure that contains the body of the revised template, with a minimum length of 1 byte and a maximum length
-     * of 51,200 bytes. AWS CloudFormation generates the change set by comparing this template with the template of the
+     * of 51,200 bytes. CloudFormation generates the change set by comparing this template with the template of the
      * stack that you specified.
      * </p>
      * <p>
@@ -411,7 +410,7 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * 
      * @param templateBody
      *        A structure that contains the body of the revised template, with a minimum length of 1 byte and a maximum
-     *        length of 51,200 bytes. AWS CloudFormation generates the change set by comparing this template with the
+     *        length of 51,200 bytes. CloudFormation generates the change set by comparing this template with the
      *        template of the stack that you specified.</p>
      *        <p>
      *        Conditional: You must specify only <code>TemplateBody</code> or <code>TemplateURL</code>.
@@ -426,8 +425,8 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * The location of the file that contains the revised template. The URL must point to a template (max size: 460,800
-     * bytes) that is located in an S3 bucket or a Systems Manager document. AWS CloudFormation generates the change set
-     * by comparing this template with the stack that you specified.
+     * bytes) that is located in an S3 bucket or a Systems Manager document. CloudFormation generates the change set by
+     * comparing this template with the stack that you specified.
      * </p>
      * <p>
      * Conditional: You must specify only <code>TemplateBody</code> or <code>TemplateURL</code>.
@@ -435,8 +434,8 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * 
      * @param templateURL
      *        The location of the file that contains the revised template. The URL must point to a template (max size:
-     *        460,800 bytes) that is located in an S3 bucket or a Systems Manager document. AWS CloudFormation generates
-     *        the change set by comparing this template with the stack that you specified.</p>
+     *        460,800 bytes) that is located in an S3 bucket or a Systems Manager document. CloudFormation generates the
+     *        change set by comparing this template with the stack that you specified.</p>
      *        <p>
      *        Conditional: You must specify only <code>TemplateBody</code> or <code>TemplateURL</code>.
      */
@@ -448,16 +447,16 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * The location of the file that contains the revised template. The URL must point to a template (max size: 460,800
-     * bytes) that is located in an S3 bucket or a Systems Manager document. AWS CloudFormation generates the change set
-     * by comparing this template with the stack that you specified.
+     * bytes) that is located in an S3 bucket or a Systems Manager document. CloudFormation generates the change set by
+     * comparing this template with the stack that you specified.
      * </p>
      * <p>
      * Conditional: You must specify only <code>TemplateBody</code> or <code>TemplateURL</code>.
      * </p>
      * 
      * @return The location of the file that contains the revised template. The URL must point to a template (max size:
-     *         460,800 bytes) that is located in an S3 bucket or a Systems Manager document. AWS CloudFormation
-     *         generates the change set by comparing this template with the stack that you specified.</p>
+     *         460,800 bytes) that is located in an S3 bucket or a Systems Manager document. CloudFormation generates
+     *         the change set by comparing this template with the stack that you specified.</p>
      *         <p>
      *         Conditional: You must specify only <code>TemplateBody</code> or <code>TemplateURL</code>.
      */
@@ -469,8 +468,8 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * The location of the file that contains the revised template. The URL must point to a template (max size: 460,800
-     * bytes) that is located in an S3 bucket or a Systems Manager document. AWS CloudFormation generates the change set
-     * by comparing this template with the stack that you specified.
+     * bytes) that is located in an S3 bucket or a Systems Manager document. CloudFormation generates the change set by
+     * comparing this template with the stack that you specified.
      * </p>
      * <p>
      * Conditional: You must specify only <code>TemplateBody</code> or <code>TemplateURL</code>.
@@ -478,8 +477,8 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * 
      * @param templateURL
      *        The location of the file that contains the revised template. The URL must point to a template (max size:
-     *        460,800 bytes) that is located in an S3 bucket or a Systems Manager document. AWS CloudFormation generates
-     *        the change set by comparing this template with the stack that you specified.</p>
+     *        460,800 bytes) that is located in an S3 bucket or a Systems Manager document. CloudFormation generates the
+     *        change set by comparing this template with the stack that you specified.</p>
      *        <p>
      *        Conditional: You must specify only <code>TemplateBody</code> or <code>TemplateURL</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -626,7 +625,7 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * In some cases, you must explicitly acknowledge that your stack template contains certain capabilities in order
-     * for AWS CloudFormation to create the stack.
+     * for CloudFormation to create the stack.
      * </p>
      * <ul>
      * <li>
@@ -634,9 +633,9 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * <code>CAPABILITY_IAM</code> and <code>CAPABILITY_NAMED_IAM</code>
      * </p>
      * <p>
-     * Some stack templates might include resources that can affect permissions in your AWS account; for example, by
-     * creating new AWS Identity and Access Management (IAM) users. For those stacks, you must explicitly acknowledge
-     * this by specifying one of these capabilities.
+     * Some stack templates might include resources that can affect permissions in your account; for example, by
+     * creating new Identity and Access Management (IAM) users. For those stacks, you must explicitly acknowledge this
+     * by specifying one of these capabilities.
      * </p>
      * <p>
      * The following IAM resources require you to specify either the <code>CAPABILITY_IAM</code> or
@@ -655,7 +654,7 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * </li>
      * <li>
      * <p>
-     * If you don't specify either of these capabilities, AWS CloudFormation returns an
+     * If you don't specify either of these capabilities, CloudFormation returns an
      * <code>InsufficientCapabilities</code> error.
      * </p>
      * </li>
@@ -711,7 +710,7 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * For more information, see <a
      * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#capabilities"
-     * >Acknowledging IAM Resources in AWS CloudFormation Templates</a>.
+     * >Acknowledging IAM Resources in CloudFormation Templates</a>.
      * </p>
      * </li>
      * <li>
@@ -728,7 +727,7 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.html"
      * >AWS::Include</a> and <a
      * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html"
-     * >AWS::Serverless</a> transforms, which are macros hosted by AWS CloudFormation.
+     * >AWS::Serverless</a> transforms, which are macros hosted by CloudFormation.
      * </p>
      * <note>
      * <p>
@@ -742,23 +741,23 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * </note>
      * <p>
      * For more information on macros, see <a
-     * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html">Using AWS
-     * CloudFormation Macros to Perform Custom Processing on Templates</a>.
+     * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html">Using CloudFormation
+     * Macros to Perform Custom Processing on Templates</a>.
      * </p>
      * </li>
      * </ul>
      * 
      * @return In some cases, you must explicitly acknowledge that your stack template contains certain capabilities in
-     *         order for AWS CloudFormation to create the stack.</p>
+     *         order for CloudFormation to create the stack.</p>
      *         <ul>
      *         <li>
      *         <p>
      *         <code>CAPABILITY_IAM</code> and <code>CAPABILITY_NAMED_IAM</code>
      *         </p>
      *         <p>
-     *         Some stack templates might include resources that can affect permissions in your AWS account; for
-     *         example, by creating new AWS Identity and Access Management (IAM) users. For those stacks, you must
-     *         explicitly acknowledge this by specifying one of these capabilities.
+     *         Some stack templates might include resources that can affect permissions in your account; for example, by
+     *         creating new Identity and Access Management (IAM) users. For those stacks, you must explicitly
+     *         acknowledge this by specifying one of these capabilities.
      *         </p>
      *         <p>
      *         The following IAM resources require you to specify either the <code>CAPABILITY_IAM</code> or
@@ -777,7 +776,7 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      *         </li>
      *         <li>
      *         <p>
-     *         If you don't specify either of these capabilities, AWS CloudFormation returns an
+     *         If you don't specify either of these capabilities, CloudFormation returns an
      *         <code>InsufficientCapabilities</code> error.
      *         </p>
      *         </li>
@@ -836,7 +835,7 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      *         <p>
      *         For more information, see <a href=
      *         "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#capabilities"
-     *         >Acknowledging IAM Resources in AWS CloudFormation Templates</a>.
+     *         >Acknowledging IAM Resources in CloudFormation Templates</a>.
      *         </p>
      *         </li>
      *         <li>
@@ -854,7 +853,7 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      *         "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.html"
      *         >AWS::Include</a> and <a
      *         href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html"
-     *         >AWS::Serverless</a> transforms, which are macros hosted by AWS CloudFormation.
+     *         >AWS::Serverless</a> transforms, which are macros hosted by CloudFormation.
      *         </p>
      *         <note>
      *         <p>
@@ -869,7 +868,7 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      *         </note>
      *         <p>
      *         For more information on macros, see <a
-     *         href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html">Using AWS
+     *         href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html">Using
      *         CloudFormation Macros to Perform Custom Processing on Templates</a>.
      *         </p>
      *         </li>
@@ -886,7 +885,7 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * In some cases, you must explicitly acknowledge that your stack template contains certain capabilities in order
-     * for AWS CloudFormation to create the stack.
+     * for CloudFormation to create the stack.
      * </p>
      * <ul>
      * <li>
@@ -894,9 +893,9 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * <code>CAPABILITY_IAM</code> and <code>CAPABILITY_NAMED_IAM</code>
      * </p>
      * <p>
-     * Some stack templates might include resources that can affect permissions in your AWS account; for example, by
-     * creating new AWS Identity and Access Management (IAM) users. For those stacks, you must explicitly acknowledge
-     * this by specifying one of these capabilities.
+     * Some stack templates might include resources that can affect permissions in your account; for example, by
+     * creating new Identity and Access Management (IAM) users. For those stacks, you must explicitly acknowledge this
+     * by specifying one of these capabilities.
      * </p>
      * <p>
      * The following IAM resources require you to specify either the <code>CAPABILITY_IAM</code> or
@@ -915,7 +914,7 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * </li>
      * <li>
      * <p>
-     * If you don't specify either of these capabilities, AWS CloudFormation returns an
+     * If you don't specify either of these capabilities, CloudFormation returns an
      * <code>InsufficientCapabilities</code> error.
      * </p>
      * </li>
@@ -971,7 +970,7 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * For more information, see <a
      * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#capabilities"
-     * >Acknowledging IAM Resources in AWS CloudFormation Templates</a>.
+     * >Acknowledging IAM Resources in CloudFormation Templates</a>.
      * </p>
      * </li>
      * <li>
@@ -988,7 +987,7 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.html"
      * >AWS::Include</a> and <a
      * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html"
-     * >AWS::Serverless</a> transforms, which are macros hosted by AWS CloudFormation.
+     * >AWS::Serverless</a> transforms, which are macros hosted by CloudFormation.
      * </p>
      * <note>
      * <p>
@@ -1002,24 +1001,24 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * </note>
      * <p>
      * For more information on macros, see <a
-     * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html">Using AWS
-     * CloudFormation Macros to Perform Custom Processing on Templates</a>.
+     * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html">Using CloudFormation
+     * Macros to Perform Custom Processing on Templates</a>.
      * </p>
      * </li>
      * </ul>
      * 
      * @param capabilities
      *        In some cases, you must explicitly acknowledge that your stack template contains certain capabilities in
-     *        order for AWS CloudFormation to create the stack.</p>
+     *        order for CloudFormation to create the stack.</p>
      *        <ul>
      *        <li>
      *        <p>
      *        <code>CAPABILITY_IAM</code> and <code>CAPABILITY_NAMED_IAM</code>
      *        </p>
      *        <p>
-     *        Some stack templates might include resources that can affect permissions in your AWS account; for example,
-     *        by creating new AWS Identity and Access Management (IAM) users. For those stacks, you must explicitly
-     *        acknowledge this by specifying one of these capabilities.
+     *        Some stack templates might include resources that can affect permissions in your account; for example, by
+     *        creating new Identity and Access Management (IAM) users. For those stacks, you must explicitly acknowledge
+     *        this by specifying one of these capabilities.
      *        </p>
      *        <p>
      *        The following IAM resources require you to specify either the <code>CAPABILITY_IAM</code> or
@@ -1038,7 +1037,7 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      *        </li>
      *        <li>
      *        <p>
-     *        If you don't specify either of these capabilities, AWS CloudFormation returns an
+     *        If you don't specify either of these capabilities, CloudFormation returns an
      *        <code>InsufficientCapabilities</code> error.
      *        </p>
      *        </li>
@@ -1097,7 +1096,7 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        For more information, see <a href=
      *        "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#capabilities"
-     *        >Acknowledging IAM Resources in AWS CloudFormation Templates</a>.
+     *        >Acknowledging IAM Resources in CloudFormation Templates</a>.
      *        </p>
      *        </li>
      *        <li>
@@ -1115,7 +1114,7 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      *        "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.html"
      *        >AWS::Include</a> and <a
      *        href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html"
-     *        >AWS::Serverless</a> transforms, which are macros hosted by AWS CloudFormation.
+     *        >AWS::Serverless</a> transforms, which are macros hosted by CloudFormation.
      *        </p>
      *        <note>
      *        <p>
@@ -1130,7 +1129,7 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      *        </note>
      *        <p>
      *        For more information on macros, see <a
-     *        href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html">Using AWS
+     *        href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html">Using
      *        CloudFormation Macros to Perform Custom Processing on Templates</a>.
      *        </p>
      *        </li>
@@ -1149,7 +1148,7 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * In some cases, you must explicitly acknowledge that your stack template contains certain capabilities in order
-     * for AWS CloudFormation to create the stack.
+     * for CloudFormation to create the stack.
      * </p>
      * <ul>
      * <li>
@@ -1157,9 +1156,9 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * <code>CAPABILITY_IAM</code> and <code>CAPABILITY_NAMED_IAM</code>
      * </p>
      * <p>
-     * Some stack templates might include resources that can affect permissions in your AWS account; for example, by
-     * creating new AWS Identity and Access Management (IAM) users. For those stacks, you must explicitly acknowledge
-     * this by specifying one of these capabilities.
+     * Some stack templates might include resources that can affect permissions in your account; for example, by
+     * creating new Identity and Access Management (IAM) users. For those stacks, you must explicitly acknowledge this
+     * by specifying one of these capabilities.
      * </p>
      * <p>
      * The following IAM resources require you to specify either the <code>CAPABILITY_IAM</code> or
@@ -1178,7 +1177,7 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * </li>
      * <li>
      * <p>
-     * If you don't specify either of these capabilities, AWS CloudFormation returns an
+     * If you don't specify either of these capabilities, CloudFormation returns an
      * <code>InsufficientCapabilities</code> error.
      * </p>
      * </li>
@@ -1234,7 +1233,7 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * For more information, see <a
      * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#capabilities"
-     * >Acknowledging IAM Resources in AWS CloudFormation Templates</a>.
+     * >Acknowledging IAM Resources in CloudFormation Templates</a>.
      * </p>
      * </li>
      * <li>
@@ -1251,7 +1250,7 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.html"
      * >AWS::Include</a> and <a
      * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html"
-     * >AWS::Serverless</a> transforms, which are macros hosted by AWS CloudFormation.
+     * >AWS::Serverless</a> transforms, which are macros hosted by CloudFormation.
      * </p>
      * <note>
      * <p>
@@ -1265,8 +1264,8 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * </note>
      * <p>
      * For more information on macros, see <a
-     * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html">Using AWS
-     * CloudFormation Macros to Perform Custom Processing on Templates</a>.
+     * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html">Using CloudFormation
+     * Macros to Perform Custom Processing on Templates</a>.
      * </p>
      * </li>
      * </ul>
@@ -1278,16 +1277,16 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * 
      * @param capabilities
      *        In some cases, you must explicitly acknowledge that your stack template contains certain capabilities in
-     *        order for AWS CloudFormation to create the stack.</p>
+     *        order for CloudFormation to create the stack.</p>
      *        <ul>
      *        <li>
      *        <p>
      *        <code>CAPABILITY_IAM</code> and <code>CAPABILITY_NAMED_IAM</code>
      *        </p>
      *        <p>
-     *        Some stack templates might include resources that can affect permissions in your AWS account; for example,
-     *        by creating new AWS Identity and Access Management (IAM) users. For those stacks, you must explicitly
-     *        acknowledge this by specifying one of these capabilities.
+     *        Some stack templates might include resources that can affect permissions in your account; for example, by
+     *        creating new Identity and Access Management (IAM) users. For those stacks, you must explicitly acknowledge
+     *        this by specifying one of these capabilities.
      *        </p>
      *        <p>
      *        The following IAM resources require you to specify either the <code>CAPABILITY_IAM</code> or
@@ -1306,7 +1305,7 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      *        </li>
      *        <li>
      *        <p>
-     *        If you don't specify either of these capabilities, AWS CloudFormation returns an
+     *        If you don't specify either of these capabilities, CloudFormation returns an
      *        <code>InsufficientCapabilities</code> error.
      *        </p>
      *        </li>
@@ -1365,7 +1364,7 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        For more information, see <a href=
      *        "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#capabilities"
-     *        >Acknowledging IAM Resources in AWS CloudFormation Templates</a>.
+     *        >Acknowledging IAM Resources in CloudFormation Templates</a>.
      *        </p>
      *        </li>
      *        <li>
@@ -1383,7 +1382,7 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      *        "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.html"
      *        >AWS::Include</a> and <a
      *        href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html"
-     *        >AWS::Serverless</a> transforms, which are macros hosted by AWS CloudFormation.
+     *        >AWS::Serverless</a> transforms, which are macros hosted by CloudFormation.
      *        </p>
      *        <note>
      *        <p>
@@ -1398,7 +1397,7 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      *        </note>
      *        <p>
      *        For more information on macros, see <a
-     *        href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html">Using AWS
+     *        href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html">Using
      *        CloudFormation Macros to Perform Custom Processing on Templates</a>.
      *        </p>
      *        </li>
@@ -1419,7 +1418,7 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * In some cases, you must explicitly acknowledge that your stack template contains certain capabilities in order
-     * for AWS CloudFormation to create the stack.
+     * for CloudFormation to create the stack.
      * </p>
      * <ul>
      * <li>
@@ -1427,9 +1426,9 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * <code>CAPABILITY_IAM</code> and <code>CAPABILITY_NAMED_IAM</code>
      * </p>
      * <p>
-     * Some stack templates might include resources that can affect permissions in your AWS account; for example, by
-     * creating new AWS Identity and Access Management (IAM) users. For those stacks, you must explicitly acknowledge
-     * this by specifying one of these capabilities.
+     * Some stack templates might include resources that can affect permissions in your account; for example, by
+     * creating new Identity and Access Management (IAM) users. For those stacks, you must explicitly acknowledge this
+     * by specifying one of these capabilities.
      * </p>
      * <p>
      * The following IAM resources require you to specify either the <code>CAPABILITY_IAM</code> or
@@ -1448,7 +1447,7 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * </li>
      * <li>
      * <p>
-     * If you don't specify either of these capabilities, AWS CloudFormation returns an
+     * If you don't specify either of these capabilities, CloudFormation returns an
      * <code>InsufficientCapabilities</code> error.
      * </p>
      * </li>
@@ -1504,7 +1503,7 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * For more information, see <a
      * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#capabilities"
-     * >Acknowledging IAM Resources in AWS CloudFormation Templates</a>.
+     * >Acknowledging IAM Resources in CloudFormation Templates</a>.
      * </p>
      * </li>
      * <li>
@@ -1521,7 +1520,7 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.html"
      * >AWS::Include</a> and <a
      * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html"
-     * >AWS::Serverless</a> transforms, which are macros hosted by AWS CloudFormation.
+     * >AWS::Serverless</a> transforms, which are macros hosted by CloudFormation.
      * </p>
      * <note>
      * <p>
@@ -1535,24 +1534,24 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * </note>
      * <p>
      * For more information on macros, see <a
-     * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html">Using AWS
-     * CloudFormation Macros to Perform Custom Processing on Templates</a>.
+     * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html">Using CloudFormation
+     * Macros to Perform Custom Processing on Templates</a>.
      * </p>
      * </li>
      * </ul>
      * 
      * @param capabilities
      *        In some cases, you must explicitly acknowledge that your stack template contains certain capabilities in
-     *        order for AWS CloudFormation to create the stack.</p>
+     *        order for CloudFormation to create the stack.</p>
      *        <ul>
      *        <li>
      *        <p>
      *        <code>CAPABILITY_IAM</code> and <code>CAPABILITY_NAMED_IAM</code>
      *        </p>
      *        <p>
-     *        Some stack templates might include resources that can affect permissions in your AWS account; for example,
-     *        by creating new AWS Identity and Access Management (IAM) users. For those stacks, you must explicitly
-     *        acknowledge this by specifying one of these capabilities.
+     *        Some stack templates might include resources that can affect permissions in your account; for example, by
+     *        creating new Identity and Access Management (IAM) users. For those stacks, you must explicitly acknowledge
+     *        this by specifying one of these capabilities.
      *        </p>
      *        <p>
      *        The following IAM resources require you to specify either the <code>CAPABILITY_IAM</code> or
@@ -1571,7 +1570,7 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      *        </li>
      *        <li>
      *        <p>
-     *        If you don't specify either of these capabilities, AWS CloudFormation returns an
+     *        If you don't specify either of these capabilities, CloudFormation returns an
      *        <code>InsufficientCapabilities</code> error.
      *        </p>
      *        </li>
@@ -1630,7 +1629,7 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        For more information, see <a href=
      *        "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#capabilities"
-     *        >Acknowledging IAM Resources in AWS CloudFormation Templates</a>.
+     *        >Acknowledging IAM Resources in CloudFormation Templates</a>.
      *        </p>
      *        </li>
      *        <li>
@@ -1648,7 +1647,7 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      *        "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.html"
      *        >AWS::Include</a> and <a
      *        href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html"
-     *        >AWS::Serverless</a> transforms, which are macros hosted by AWS CloudFormation.
+     *        >AWS::Serverless</a> transforms, which are macros hosted by CloudFormation.
      *        </p>
      *        <note>
      *        <p>
@@ -1663,7 +1662,7 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      *        </note>
      *        <p>
      *        For more information on macros, see <a
-     *        href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html">Using AWS
+     *        href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html">Using
      *        CloudFormation Macros to Perform Custom Processing on Templates</a>.
      *        </p>
      *        </li>
@@ -1679,7 +1678,7 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * In some cases, you must explicitly acknowledge that your stack template contains certain capabilities in order
-     * for AWS CloudFormation to create the stack.
+     * for CloudFormation to create the stack.
      * </p>
      * <ul>
      * <li>
@@ -1687,9 +1686,9 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * <code>CAPABILITY_IAM</code> and <code>CAPABILITY_NAMED_IAM</code>
      * </p>
      * <p>
-     * Some stack templates might include resources that can affect permissions in your AWS account; for example, by
-     * creating new AWS Identity and Access Management (IAM) users. For those stacks, you must explicitly acknowledge
-     * this by specifying one of these capabilities.
+     * Some stack templates might include resources that can affect permissions in your account; for example, by
+     * creating new Identity and Access Management (IAM) users. For those stacks, you must explicitly acknowledge this
+     * by specifying one of these capabilities.
      * </p>
      * <p>
      * The following IAM resources require you to specify either the <code>CAPABILITY_IAM</code> or
@@ -1708,7 +1707,7 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * </li>
      * <li>
      * <p>
-     * If you don't specify either of these capabilities, AWS CloudFormation returns an
+     * If you don't specify either of these capabilities, CloudFormation returns an
      * <code>InsufficientCapabilities</code> error.
      * </p>
      * </li>
@@ -1764,7 +1763,7 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * <p>
      * For more information, see <a
      * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#capabilities"
-     * >Acknowledging IAM Resources in AWS CloudFormation Templates</a>.
+     * >Acknowledging IAM Resources in CloudFormation Templates</a>.
      * </p>
      * </li>
      * <li>
@@ -1781,7 +1780,7 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.html"
      * >AWS::Include</a> and <a
      * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html"
-     * >AWS::Serverless</a> transforms, which are macros hosted by AWS CloudFormation.
+     * >AWS::Serverless</a> transforms, which are macros hosted by CloudFormation.
      * </p>
      * <note>
      * <p>
@@ -1795,24 +1794,24 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * </note>
      * <p>
      * For more information on macros, see <a
-     * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html">Using AWS
-     * CloudFormation Macros to Perform Custom Processing on Templates</a>.
+     * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html">Using CloudFormation
+     * Macros to Perform Custom Processing on Templates</a>.
      * </p>
      * </li>
      * </ul>
      * 
      * @param capabilities
      *        In some cases, you must explicitly acknowledge that your stack template contains certain capabilities in
-     *        order for AWS CloudFormation to create the stack.</p>
+     *        order for CloudFormation to create the stack.</p>
      *        <ul>
      *        <li>
      *        <p>
      *        <code>CAPABILITY_IAM</code> and <code>CAPABILITY_NAMED_IAM</code>
      *        </p>
      *        <p>
-     *        Some stack templates might include resources that can affect permissions in your AWS account; for example,
-     *        by creating new AWS Identity and Access Management (IAM) users. For those stacks, you must explicitly
-     *        acknowledge this by specifying one of these capabilities.
+     *        Some stack templates might include resources that can affect permissions in your account; for example, by
+     *        creating new Identity and Access Management (IAM) users. For those stacks, you must explicitly acknowledge
+     *        this by specifying one of these capabilities.
      *        </p>
      *        <p>
      *        The following IAM resources require you to specify either the <code>CAPABILITY_IAM</code> or
@@ -1831,7 +1830,7 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      *        </li>
      *        <li>
      *        <p>
-     *        If you don't specify either of these capabilities, AWS CloudFormation returns an
+     *        If you don't specify either of these capabilities, CloudFormation returns an
      *        <code>InsufficientCapabilities</code> error.
      *        </p>
      *        </li>
@@ -1890,7 +1889,7 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      *        <p>
      *        For more information, see <a href=
      *        "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html#capabilities"
-     *        >Acknowledging IAM Resources in AWS CloudFormation Templates</a>.
+     *        >Acknowledging IAM Resources in CloudFormation Templates</a>.
      *        </p>
      *        </li>
      *        <li>
@@ -1908,7 +1907,7 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      *        "http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/create-reusable-transform-function-snippets-and-add-to-your-template-with-aws-include-transform.html"
      *        >AWS::Include</a> and <a
      *        href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/transform-aws-serverless.html"
-     *        >AWS::Serverless</a> transforms, which are macros hosted by AWS CloudFormation.
+     *        >AWS::Serverless</a> transforms, which are macros hosted by CloudFormation.
      *        </p>
      *        <note>
      *        <p>
@@ -1923,7 +1922,7 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      *        </note>
      *        <p>
      *        For more information on macros, see <a
-     *        href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html">Using AWS
+     *        href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-macros.html">Using
      *        CloudFormation Macros to Perform Custom Processing on Templates</a>.
      *        </p>
      *        </li>
@@ -1951,10 +1950,10 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * If the list of resource types doesn't include a resource type that you're updating, the stack update fails. By
-     * default, AWS CloudFormation grants permissions to all resource types. AWS Identity and Access Management (IAM)
-     * uses this parameter for condition keys in IAM policies for AWS CloudFormation. For more information, see <a
+     * default, CloudFormation grants permissions to all resource types. Identity and Access Management (IAM) uses this
+     * parameter for condition keys in IAM policies for CloudFormation. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html">Controlling Access
-     * with AWS Identity and Access Management</a> in the AWS CloudFormation User Guide.
+     * with Identity and Access Management</a> in the CloudFormation User Guide.
      * </p>
      * 
      * @return The template resource types that you have permissions to work with if you execute this change set, such
@@ -1962,11 +1961,11 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      *         .</p>
      *         <p>
      *         If the list of resource types doesn't include a resource type that you're updating, the stack update
-     *         fails. By default, AWS CloudFormation grants permissions to all resource types. AWS Identity and Access
-     *         Management (IAM) uses this parameter for condition keys in IAM policies for AWS CloudFormation. For more
+     *         fails. By default, CloudFormation grants permissions to all resource types. Identity and Access
+     *         Management (IAM) uses this parameter for condition keys in IAM policies for CloudFormation. For more
      *         information, see <a
      *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html">Controlling
-     *         Access with AWS Identity and Access Management</a> in the AWS CloudFormation User Guide.
+     *         Access with Identity and Access Management</a> in the CloudFormation User Guide.
      */
 
     public java.util.List<String> getResourceTypes() {
@@ -1983,10 +1982,10 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * If the list of resource types doesn't include a resource type that you're updating, the stack update fails. By
-     * default, AWS CloudFormation grants permissions to all resource types. AWS Identity and Access Management (IAM)
-     * uses this parameter for condition keys in IAM policies for AWS CloudFormation. For more information, see <a
+     * default, CloudFormation grants permissions to all resource types. Identity and Access Management (IAM) uses this
+     * parameter for condition keys in IAM policies for CloudFormation. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html">Controlling Access
-     * with AWS Identity and Access Management</a> in the AWS CloudFormation User Guide.
+     * with Identity and Access Management</a> in the CloudFormation User Guide.
      * </p>
      * 
      * @param resourceTypes
@@ -1994,11 +1993,10 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      *        <code>AWS::EC2::Instance</code>, <code>AWS::EC2::*</code>, or <code>Custom::MyCustomInstance</code>.</p>
      *        <p>
      *        If the list of resource types doesn't include a resource type that you're updating, the stack update
-     *        fails. By default, AWS CloudFormation grants permissions to all resource types. AWS Identity and Access
-     *        Management (IAM) uses this parameter for condition keys in IAM policies for AWS CloudFormation. For more
-     *        information, see <a
-     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html">Controlling
-     *        Access with AWS Identity and Access Management</a> in the AWS CloudFormation User Guide.
+     *        fails. By default, CloudFormation grants permissions to all resource types. Identity and Access Management
+     *        (IAM) uses this parameter for condition keys in IAM policies for CloudFormation. For more information, see
+     *        <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html">
+     *        Controlling Access with Identity and Access Management</a> in the CloudFormation User Guide.
      */
 
     public void setResourceTypes(java.util.Collection<String> resourceTypes) {
@@ -2017,10 +2015,10 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * If the list of resource types doesn't include a resource type that you're updating, the stack update fails. By
-     * default, AWS CloudFormation grants permissions to all resource types. AWS Identity and Access Management (IAM)
-     * uses this parameter for condition keys in IAM policies for AWS CloudFormation. For more information, see <a
+     * default, CloudFormation grants permissions to all resource types. Identity and Access Management (IAM) uses this
+     * parameter for condition keys in IAM policies for CloudFormation. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html">Controlling Access
-     * with AWS Identity and Access Management</a> in the AWS CloudFormation User Guide.
+     * with Identity and Access Management</a> in the CloudFormation User Guide.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -2033,11 +2031,10 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      *        <code>AWS::EC2::Instance</code>, <code>AWS::EC2::*</code>, or <code>Custom::MyCustomInstance</code>.</p>
      *        <p>
      *        If the list of resource types doesn't include a resource type that you're updating, the stack update
-     *        fails. By default, AWS CloudFormation grants permissions to all resource types. AWS Identity and Access
-     *        Management (IAM) uses this parameter for condition keys in IAM policies for AWS CloudFormation. For more
-     *        information, see <a
-     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html">Controlling
-     *        Access with AWS Identity and Access Management</a> in the AWS CloudFormation User Guide.
+     *        fails. By default, CloudFormation grants permissions to all resource types. Identity and Access Management
+     *        (IAM) uses this parameter for condition keys in IAM policies for CloudFormation. For more information, see
+     *        <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html">
+     *        Controlling Access with Identity and Access Management</a> in the CloudFormation User Guide.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2058,10 +2055,10 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * <p>
      * If the list of resource types doesn't include a resource type that you're updating, the stack update fails. By
-     * default, AWS CloudFormation grants permissions to all resource types. AWS Identity and Access Management (IAM)
-     * uses this parameter for condition keys in IAM policies for AWS CloudFormation. For more information, see <a
+     * default, CloudFormation grants permissions to all resource types. Identity and Access Management (IAM) uses this
+     * parameter for condition keys in IAM policies for CloudFormation. For more information, see <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html">Controlling Access
-     * with AWS Identity and Access Management</a> in the AWS CloudFormation User Guide.
+     * with Identity and Access Management</a> in the CloudFormation User Guide.
      * </p>
      * 
      * @param resourceTypes
@@ -2069,11 +2066,10 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      *        <code>AWS::EC2::Instance</code>, <code>AWS::EC2::*</code>, or <code>Custom::MyCustomInstance</code>.</p>
      *        <p>
      *        If the list of resource types doesn't include a resource type that you're updating, the stack update
-     *        fails. By default, AWS CloudFormation grants permissions to all resource types. AWS Identity and Access
-     *        Management (IAM) uses this parameter for condition keys in IAM policies for AWS CloudFormation. For more
-     *        information, see <a
-     *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html">Controlling
-     *        Access with AWS Identity and Access Management</a> in the AWS CloudFormation User Guide.
+     *        fails. By default, CloudFormation grants permissions to all resource types. Identity and Access Management
+     *        (IAM) uses this parameter for condition keys in IAM policies for CloudFormation. For more information, see
+     *        <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-iam-template.html">
+     *        Controlling Access with Identity and Access Management</a> in the CloudFormation User Guide.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2084,27 +2080,27 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an AWS Identity and Access Management (IAM) role that AWS CloudFormation
-     * assumes when executing the change set. AWS CloudFormation uses the role's credentials to make calls on your
-     * behalf. AWS CloudFormation uses this role for all future operations on the stack. As long as users have
-     * permission to operate on the stack, AWS CloudFormation uses this role even if the users don't have permission to
-     * pass it. Ensure that the role grants least privilege.
+     * The Amazon Resource Name (ARN) of an Identity and Access Management (IAM) role that CloudFormation assumes when
+     * executing the change set. CloudFormation uses the role's credentials to make calls on your behalf. CloudFormation
+     * uses this role for all future operations on the stack. As long as users have permission to operate on the stack,
+     * CloudFormation uses this role even if the users don't have permission to pass it. Ensure that the role grants
+     * least privilege.
      * </p>
      * <p>
-     * If you don't specify a value, AWS CloudFormation uses the role that was previously associated with the stack. If
-     * no role is available, AWS CloudFormation uses a temporary session that is generated from your user credentials.
+     * If you don't specify a value, CloudFormation uses the role that was previously associated with the stack. If no
+     * role is available, CloudFormation uses a temporary session that is generated from your user credentials.
      * </p>
      * 
      * @param roleARN
-     *        The Amazon Resource Name (ARN) of an AWS Identity and Access Management (IAM) role that AWS CloudFormation
-     *        assumes when executing the change set. AWS CloudFormation uses the role's credentials to make calls on
-     *        your behalf. AWS CloudFormation uses this role for all future operations on the stack. As long as users
-     *        have permission to operate on the stack, AWS CloudFormation uses this role even if the users don't have
-     *        permission to pass it. Ensure that the role grants least privilege.</p>
+     *        The Amazon Resource Name (ARN) of an Identity and Access Management (IAM) role that CloudFormation assumes
+     *        when executing the change set. CloudFormation uses the role's credentials to make calls on your behalf.
+     *        CloudFormation uses this role for all future operations on the stack. As long as users have permission to
+     *        operate on the stack, CloudFormation uses this role even if the users don't have permission to pass it.
+     *        Ensure that the role grants least privilege.</p>
      *        <p>
-     *        If you don't specify a value, AWS CloudFormation uses the role that was previously associated with the
-     *        stack. If no role is available, AWS CloudFormation uses a temporary session that is generated from your
-     *        user credentials.
+     *        If you don't specify a value, CloudFormation uses the role that was previously associated with the stack.
+     *        If no role is available, CloudFormation uses a temporary session that is generated from your user
+     *        credentials.
      */
 
     public void setRoleARN(String roleARN) {
@@ -2113,26 +2109,26 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an AWS Identity and Access Management (IAM) role that AWS CloudFormation
-     * assumes when executing the change set. AWS CloudFormation uses the role's credentials to make calls on your
-     * behalf. AWS CloudFormation uses this role for all future operations on the stack. As long as users have
-     * permission to operate on the stack, AWS CloudFormation uses this role even if the users don't have permission to
-     * pass it. Ensure that the role grants least privilege.
+     * The Amazon Resource Name (ARN) of an Identity and Access Management (IAM) role that CloudFormation assumes when
+     * executing the change set. CloudFormation uses the role's credentials to make calls on your behalf. CloudFormation
+     * uses this role for all future operations on the stack. As long as users have permission to operate on the stack,
+     * CloudFormation uses this role even if the users don't have permission to pass it. Ensure that the role grants
+     * least privilege.
      * </p>
      * <p>
-     * If you don't specify a value, AWS CloudFormation uses the role that was previously associated with the stack. If
-     * no role is available, AWS CloudFormation uses a temporary session that is generated from your user credentials.
+     * If you don't specify a value, CloudFormation uses the role that was previously associated with the stack. If no
+     * role is available, CloudFormation uses a temporary session that is generated from your user credentials.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of an AWS Identity and Access Management (IAM) role that AWS
-     *         CloudFormation assumes when executing the change set. AWS CloudFormation uses the role's credentials to
-     *         make calls on your behalf. AWS CloudFormation uses this role for all future operations on the stack. As
-     *         long as users have permission to operate on the stack, AWS CloudFormation uses this role even if the
-     *         users don't have permission to pass it. Ensure that the role grants least privilege.</p>
+     * @return The Amazon Resource Name (ARN) of an Identity and Access Management (IAM) role that CloudFormation
+     *         assumes when executing the change set. CloudFormation uses the role's credentials to make calls on your
+     *         behalf. CloudFormation uses this role for all future operations on the stack. As long as users have
+     *         permission to operate on the stack, CloudFormation uses this role even if the users don't have permission
+     *         to pass it. Ensure that the role grants least privilege.</p>
      *         <p>
-     *         If you don't specify a value, AWS CloudFormation uses the role that was previously associated with the
-     *         stack. If no role is available, AWS CloudFormation uses a temporary session that is generated from your
-     *         user credentials.
+     *         If you don't specify a value, CloudFormation uses the role that was previously associated with the stack.
+     *         If no role is available, CloudFormation uses a temporary session that is generated from your user
+     *         credentials.
      */
 
     public String getRoleARN() {
@@ -2141,27 +2137,27 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an AWS Identity and Access Management (IAM) role that AWS CloudFormation
-     * assumes when executing the change set. AWS CloudFormation uses the role's credentials to make calls on your
-     * behalf. AWS CloudFormation uses this role for all future operations on the stack. As long as users have
-     * permission to operate on the stack, AWS CloudFormation uses this role even if the users don't have permission to
-     * pass it. Ensure that the role grants least privilege.
+     * The Amazon Resource Name (ARN) of an Identity and Access Management (IAM) role that CloudFormation assumes when
+     * executing the change set. CloudFormation uses the role's credentials to make calls on your behalf. CloudFormation
+     * uses this role for all future operations on the stack. As long as users have permission to operate on the stack,
+     * CloudFormation uses this role even if the users don't have permission to pass it. Ensure that the role grants
+     * least privilege.
      * </p>
      * <p>
-     * If you don't specify a value, AWS CloudFormation uses the role that was previously associated with the stack. If
-     * no role is available, AWS CloudFormation uses a temporary session that is generated from your user credentials.
+     * If you don't specify a value, CloudFormation uses the role that was previously associated with the stack. If no
+     * role is available, CloudFormation uses a temporary session that is generated from your user credentials.
      * </p>
      * 
      * @param roleARN
-     *        The Amazon Resource Name (ARN) of an AWS Identity and Access Management (IAM) role that AWS CloudFormation
-     *        assumes when executing the change set. AWS CloudFormation uses the role's credentials to make calls on
-     *        your behalf. AWS CloudFormation uses this role for all future operations on the stack. As long as users
-     *        have permission to operate on the stack, AWS CloudFormation uses this role even if the users don't have
-     *        permission to pass it. Ensure that the role grants least privilege.</p>
+     *        The Amazon Resource Name (ARN) of an Identity and Access Management (IAM) role that CloudFormation assumes
+     *        when executing the change set. CloudFormation uses the role's credentials to make calls on your behalf.
+     *        CloudFormation uses this role for all future operations on the stack. As long as users have permission to
+     *        operate on the stack, CloudFormation uses this role even if the users don't have permission to pass it.
+     *        Ensure that the role grants least privilege.</p>
      *        <p>
-     *        If you don't specify a value, AWS CloudFormation uses the role that was previously associated with the
-     *        stack. If no role is available, AWS CloudFormation uses a temporary session that is generated from your
-     *        user credentials.
+     *        If you don't specify a value, CloudFormation uses the role that was previously associated with the stack.
+     *        If no role is available, CloudFormation uses a temporary session that is generated from your user
+     *        credentials.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2172,13 +2168,13 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The rollback triggers for AWS CloudFormation to monitor during stack creation and updating operations, and for
-     * the specified monitoring period afterwards.
+     * The rollback triggers for CloudFormation to monitor during stack creation and updating operations, and for the
+     * specified monitoring period afterwards.
      * </p>
      * 
      * @param rollbackConfiguration
-     *        The rollback triggers for AWS CloudFormation to monitor during stack creation and updating operations, and
-     *        for the specified monitoring period afterwards.
+     *        The rollback triggers for CloudFormation to monitor during stack creation and updating operations, and for
+     *        the specified monitoring period afterwards.
      */
 
     public void setRollbackConfiguration(RollbackConfiguration rollbackConfiguration) {
@@ -2187,12 +2183,12 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The rollback triggers for AWS CloudFormation to monitor during stack creation and updating operations, and for
-     * the specified monitoring period afterwards.
+     * The rollback triggers for CloudFormation to monitor during stack creation and updating operations, and for the
+     * specified monitoring period afterwards.
      * </p>
      * 
-     * @return The rollback triggers for AWS CloudFormation to monitor during stack creation and updating operations,
-     *         and for the specified monitoring period afterwards.
+     * @return The rollback triggers for CloudFormation to monitor during stack creation and updating operations, and
+     *         for the specified monitoring period afterwards.
      */
 
     public RollbackConfiguration getRollbackConfiguration() {
@@ -2201,13 +2197,13 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The rollback triggers for AWS CloudFormation to monitor during stack creation and updating operations, and for
-     * the specified monitoring period afterwards.
+     * The rollback triggers for CloudFormation to monitor during stack creation and updating operations, and for the
+     * specified monitoring period afterwards.
      * </p>
      * 
      * @param rollbackConfiguration
-     *        The rollback triggers for AWS CloudFormation to monitor during stack creation and updating operations, and
-     *        for the specified monitoring period afterwards.
+     *        The rollback triggers for CloudFormation to monitor during stack creation and updating operations, and for
+     *        the specified monitoring period afterwards.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2218,11 +2214,11 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The Amazon Resource Names (ARNs) of Amazon Simple Notification Service (Amazon SNS) topics that AWS
-     * CloudFormation associates with the stack. To remove all associated notification topics, specify an empty list.
+     * The Amazon Resource Names (ARNs) of Amazon Simple Notification Service (Amazon SNS) topics that CloudFormation
+     * associates with the stack. To remove all associated notification topics, specify an empty list.
      * </p>
      * 
-     * @return The Amazon Resource Names (ARNs) of Amazon Simple Notification Service (Amazon SNS) topics that AWS
+     * @return The Amazon Resource Names (ARNs) of Amazon Simple Notification Service (Amazon SNS) topics that
      *         CloudFormation associates with the stack. To remove all associated notification topics, specify an empty
      *         list.
      */
@@ -2236,12 +2232,12 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The Amazon Resource Names (ARNs) of Amazon Simple Notification Service (Amazon SNS) topics that AWS
-     * CloudFormation associates with the stack. To remove all associated notification topics, specify an empty list.
+     * The Amazon Resource Names (ARNs) of Amazon Simple Notification Service (Amazon SNS) topics that CloudFormation
+     * associates with the stack. To remove all associated notification topics, specify an empty list.
      * </p>
      * 
      * @param notificationARNs
-     *        The Amazon Resource Names (ARNs) of Amazon Simple Notification Service (Amazon SNS) topics that AWS
+     *        The Amazon Resource Names (ARNs) of Amazon Simple Notification Service (Amazon SNS) topics that
      *        CloudFormation associates with the stack. To remove all associated notification topics, specify an empty
      *        list.
      */
@@ -2257,8 +2253,8 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The Amazon Resource Names (ARNs) of Amazon Simple Notification Service (Amazon SNS) topics that AWS
-     * CloudFormation associates with the stack. To remove all associated notification topics, specify an empty list.
+     * The Amazon Resource Names (ARNs) of Amazon Simple Notification Service (Amazon SNS) topics that CloudFormation
+     * associates with the stack. To remove all associated notification topics, specify an empty list.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -2267,7 +2263,7 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * 
      * @param notificationARNs
-     *        The Amazon Resource Names (ARNs) of Amazon Simple Notification Service (Amazon SNS) topics that AWS
+     *        The Amazon Resource Names (ARNs) of Amazon Simple Notification Service (Amazon SNS) topics that
      *        CloudFormation associates with the stack. To remove all associated notification topics, specify an empty
      *        list.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -2285,12 +2281,12 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * The Amazon Resource Names (ARNs) of Amazon Simple Notification Service (Amazon SNS) topics that AWS
-     * CloudFormation associates with the stack. To remove all associated notification topics, specify an empty list.
+     * The Amazon Resource Names (ARNs) of Amazon Simple Notification Service (Amazon SNS) topics that CloudFormation
+     * associates with the stack. To remove all associated notification topics, specify an empty list.
      * </p>
      * 
      * @param notificationARNs
-     *        The Amazon Resource Names (ARNs) of Amazon Simple Notification Service (Amazon SNS) topics that AWS
+     *        The Amazon Resource Names (ARNs) of Amazon Simple Notification Service (Amazon SNS) topics that
      *        CloudFormation associates with the stack. To remove all associated notification topics, specify an empty
      *        list.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -2303,12 +2299,12 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * Key-value pairs to associate with this stack. AWS CloudFormation also propagates these tags to resources in the
+     * Key-value pairs to associate with this stack. CloudFormation also propagates these tags to resources in the
      * stack. You can specify a maximum of 50 tags.
      * </p>
      * 
-     * @return Key-value pairs to associate with this stack. AWS CloudFormation also propagates these tags to resources
-     *         in the stack. You can specify a maximum of 50 tags.
+     * @return Key-value pairs to associate with this stack. CloudFormation also propagates these tags to resources in
+     *         the stack. You can specify a maximum of 50 tags.
      */
 
     public java.util.List<Tag> getTags() {
@@ -2320,13 +2316,13 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * Key-value pairs to associate with this stack. AWS CloudFormation also propagates these tags to resources in the
+     * Key-value pairs to associate with this stack. CloudFormation also propagates these tags to resources in the
      * stack. You can specify a maximum of 50 tags.
      * </p>
      * 
      * @param tags
-     *        Key-value pairs to associate with this stack. AWS CloudFormation also propagates these tags to resources
-     *        in the stack. You can specify a maximum of 50 tags.
+     *        Key-value pairs to associate with this stack. CloudFormation also propagates these tags to resources in
+     *        the stack. You can specify a maximum of 50 tags.
      */
 
     public void setTags(java.util.Collection<Tag> tags) {
@@ -2340,7 +2336,7 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * Key-value pairs to associate with this stack. AWS CloudFormation also propagates these tags to resources in the
+     * Key-value pairs to associate with this stack. CloudFormation also propagates these tags to resources in the
      * stack. You can specify a maximum of 50 tags.
      * </p>
      * <p>
@@ -2350,8 +2346,8 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * 
      * @param tags
-     *        Key-value pairs to associate with this stack. AWS CloudFormation also propagates these tags to resources
-     *        in the stack. You can specify a maximum of 50 tags.
+     *        Key-value pairs to associate with this stack. CloudFormation also propagates these tags to resources in
+     *        the stack. You can specify a maximum of 50 tags.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2367,13 +2363,13 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * Key-value pairs to associate with this stack. AWS CloudFormation also propagates these tags to resources in the
+     * Key-value pairs to associate with this stack. CloudFormation also propagates these tags to resources in the
      * stack. You can specify a maximum of 50 tags.
      * </p>
      * 
      * @param tags
-     *        Key-value pairs to associate with this stack. AWS CloudFormation also propagates these tags to resources
-     *        in the stack. You can specify a maximum of 50 tags.
+     *        Key-value pairs to associate with this stack. CloudFormation also propagates these tags to resources in
+     *        the stack. You can specify a maximum of 50 tags.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2452,15 +2448,14 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * A unique identifier for this <code>CreateChangeSet</code> request. Specify this token if you plan to retry
-     * requests so that AWS CloudFormation knows that you're not attempting to create another change set with the same
-     * name. You might retry <code>CreateChangeSet</code> requests to ensure that AWS CloudFormation successfully
-     * received them.
+     * requests so that CloudFormation knows that you're not attempting to create another change set with the same name.
+     * You might retry <code>CreateChangeSet</code> requests to ensure that CloudFormation successfully received them.
      * </p>
      * 
      * @param clientToken
      *        A unique identifier for this <code>CreateChangeSet</code> request. Specify this token if you plan to retry
-     *        requests so that AWS CloudFormation knows that you're not attempting to create another change set with the
-     *        same name. You might retry <code>CreateChangeSet</code> requests to ensure that AWS CloudFormation
+     *        requests so that CloudFormation knows that you're not attempting to create another change set with the
+     *        same name. You might retry <code>CreateChangeSet</code> requests to ensure that CloudFormation
      *        successfully received them.
      */
 
@@ -2471,15 +2466,14 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * A unique identifier for this <code>CreateChangeSet</code> request. Specify this token if you plan to retry
-     * requests so that AWS CloudFormation knows that you're not attempting to create another change set with the same
-     * name. You might retry <code>CreateChangeSet</code> requests to ensure that AWS CloudFormation successfully
-     * received them.
+     * requests so that CloudFormation knows that you're not attempting to create another change set with the same name.
+     * You might retry <code>CreateChangeSet</code> requests to ensure that CloudFormation successfully received them.
      * </p>
      * 
      * @return A unique identifier for this <code>CreateChangeSet</code> request. Specify this token if you plan to
-     *         retry requests so that AWS CloudFormation knows that you're not attempting to create another change set
-     *         with the same name. You might retry <code>CreateChangeSet</code> requests to ensure that AWS
-     *         CloudFormation successfully received them.
+     *         retry requests so that CloudFormation knows that you're not attempting to create another change set with
+     *         the same name. You might retry <code>CreateChangeSet</code> requests to ensure that CloudFormation
+     *         successfully received them.
      */
 
     public String getClientToken() {
@@ -2489,15 +2483,14 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * A unique identifier for this <code>CreateChangeSet</code> request. Specify this token if you plan to retry
-     * requests so that AWS CloudFormation knows that you're not attempting to create another change set with the same
-     * name. You might retry <code>CreateChangeSet</code> requests to ensure that AWS CloudFormation successfully
-     * received them.
+     * requests so that CloudFormation knows that you're not attempting to create another change set with the same name.
+     * You might retry <code>CreateChangeSet</code> requests to ensure that CloudFormation successfully received them.
      * </p>
      * 
      * @param clientToken
      *        A unique identifier for this <code>CreateChangeSet</code> request. Specify this token if you plan to retry
-     *        requests so that AWS CloudFormation knows that you're not attempting to create another change set with the
-     *        same name. You might retry <code>CreateChangeSet</code> requests to ensure that AWS CloudFormation
+     *        requests so that CloudFormation knows that you're not attempting to create another change set with the
+     *        same name. You might retry <code>CreateChangeSet</code> requests to ensure that CloudFormation
      *        successfully received them.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -2554,14 +2547,14 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * specify <code>IMPORT</code>.
      * </p>
      * <p>
-     * If you create a change set for a new stack, AWS Cloudformation creates a stack with a unique stack ID, but no
+     * If you create a change set for a new stack, CloudFormation creates a stack with a unique stack ID, but no
      * template or resources. The stack will be in the <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-describing-stacks.html#d0e11995">
      * <code>REVIEW_IN_PROGRESS</code> </a> state until you execute the change set.
      * </p>
      * <p>
-     * By default, AWS CloudFormation specifies <code>UPDATE</code>. You can't use the <code>UPDATE</code> type to
-     * create a change set for a new stack or the <code>CREATE</code> type to create a change set for an existing stack.
+     * By default, CloudFormation specifies <code>UPDATE</code>. You can't use the <code>UPDATE</code> type to create a
+     * change set for a new stack or the <code>CREATE</code> type to create a change set for an existing stack.
      * </p>
      * 
      * @param changeSetType
@@ -2569,15 +2562,15 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      *        create a change set for an existing stack, specify <code>UPDATE</code>. To create a change set for an
      *        import operation, specify <code>IMPORT</code>.</p>
      *        <p>
-     *        If you create a change set for a new stack, AWS Cloudformation creates a stack with a unique stack ID, but
-     *        no template or resources. The stack will be in the <a href=
+     *        If you create a change set for a new stack, CloudFormation creates a stack with a unique stack ID, but no
+     *        template or resources. The stack will be in the <a href=
      *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-describing-stacks.html#d0e11995"
      *        > <code>REVIEW_IN_PROGRESS</code> </a> state until you execute the change set.
      *        </p>
      *        <p>
-     *        By default, AWS CloudFormation specifies <code>UPDATE</code>. You can't use the <code>UPDATE</code> type
-     *        to create a change set for a new stack or the <code>CREATE</code> type to create a change set for an
-     *        existing stack.
+     *        By default, CloudFormation specifies <code>UPDATE</code>. You can't use the <code>UPDATE</code> type to
+     *        create a change set for a new stack or the <code>CREATE</code> type to create a change set for an existing
+     *        stack.
      * @see ChangeSetType
      */
 
@@ -2592,28 +2585,28 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * specify <code>IMPORT</code>.
      * </p>
      * <p>
-     * If you create a change set for a new stack, AWS Cloudformation creates a stack with a unique stack ID, but no
+     * If you create a change set for a new stack, CloudFormation creates a stack with a unique stack ID, but no
      * template or resources. The stack will be in the <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-describing-stacks.html#d0e11995">
      * <code>REVIEW_IN_PROGRESS</code> </a> state until you execute the change set.
      * </p>
      * <p>
-     * By default, AWS CloudFormation specifies <code>UPDATE</code>. You can't use the <code>UPDATE</code> type to
-     * create a change set for a new stack or the <code>CREATE</code> type to create a change set for an existing stack.
+     * By default, CloudFormation specifies <code>UPDATE</code>. You can't use the <code>UPDATE</code> type to create a
+     * change set for a new stack or the <code>CREATE</code> type to create a change set for an existing stack.
      * </p>
      * 
      * @return The type of change set operation. To create a change set for a new stack, specify <code>CREATE</code>. To
      *         create a change set for an existing stack, specify <code>UPDATE</code>. To create a change set for an
      *         import operation, specify <code>IMPORT</code>.</p>
      *         <p>
-     *         If you create a change set for a new stack, AWS Cloudformation creates a stack with a unique stack ID,
-     *         but no template or resources. The stack will be in the <a href=
+     *         If you create a change set for a new stack, CloudFormation creates a stack with a unique stack ID, but no
+     *         template or resources. The stack will be in the <a href=
      *         "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-describing-stacks.html#d0e11995"
      *         > <code>REVIEW_IN_PROGRESS</code> </a> state until you execute the change set.
      *         </p>
      *         <p>
-     *         By default, AWS CloudFormation specifies <code>UPDATE</code>. You can't use the <code>UPDATE</code> type
-     *         to create a change set for a new stack or the <code>CREATE</code> type to create a change set for an
+     *         By default, CloudFormation specifies <code>UPDATE</code>. You can't use the <code>UPDATE</code> type to
+     *         create a change set for a new stack or the <code>CREATE</code> type to create a change set for an
      *         existing stack.
      * @see ChangeSetType
      */
@@ -2629,14 +2622,14 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * specify <code>IMPORT</code>.
      * </p>
      * <p>
-     * If you create a change set for a new stack, AWS Cloudformation creates a stack with a unique stack ID, but no
+     * If you create a change set for a new stack, CloudFormation creates a stack with a unique stack ID, but no
      * template or resources. The stack will be in the <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-describing-stacks.html#d0e11995">
      * <code>REVIEW_IN_PROGRESS</code> </a> state until you execute the change set.
      * </p>
      * <p>
-     * By default, AWS CloudFormation specifies <code>UPDATE</code>. You can't use the <code>UPDATE</code> type to
-     * create a change set for a new stack or the <code>CREATE</code> type to create a change set for an existing stack.
+     * By default, CloudFormation specifies <code>UPDATE</code>. You can't use the <code>UPDATE</code> type to create a
+     * change set for a new stack or the <code>CREATE</code> type to create a change set for an existing stack.
      * </p>
      * 
      * @param changeSetType
@@ -2644,15 +2637,15 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      *        create a change set for an existing stack, specify <code>UPDATE</code>. To create a change set for an
      *        import operation, specify <code>IMPORT</code>.</p>
      *        <p>
-     *        If you create a change set for a new stack, AWS Cloudformation creates a stack with a unique stack ID, but
-     *        no template or resources. The stack will be in the <a href=
+     *        If you create a change set for a new stack, CloudFormation creates a stack with a unique stack ID, but no
+     *        template or resources. The stack will be in the <a href=
      *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-describing-stacks.html#d0e11995"
      *        > <code>REVIEW_IN_PROGRESS</code> </a> state until you execute the change set.
      *        </p>
      *        <p>
-     *        By default, AWS CloudFormation specifies <code>UPDATE</code>. You can't use the <code>UPDATE</code> type
-     *        to create a change set for a new stack or the <code>CREATE</code> type to create a change set for an
-     *        existing stack.
+     *        By default, CloudFormation specifies <code>UPDATE</code>. You can't use the <code>UPDATE</code> type to
+     *        create a change set for a new stack or the <code>CREATE</code> type to create a change set for an existing
+     *        stack.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ChangeSetType
      */
@@ -2669,14 +2662,14 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * specify <code>IMPORT</code>.
      * </p>
      * <p>
-     * If you create a change set for a new stack, AWS Cloudformation creates a stack with a unique stack ID, but no
+     * If you create a change set for a new stack, CloudFormation creates a stack with a unique stack ID, but no
      * template or resources. The stack will be in the <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-describing-stacks.html#d0e11995">
      * <code>REVIEW_IN_PROGRESS</code> </a> state until you execute the change set.
      * </p>
      * <p>
-     * By default, AWS CloudFormation specifies <code>UPDATE</code>. You can't use the <code>UPDATE</code> type to
-     * create a change set for a new stack or the <code>CREATE</code> type to create a change set for an existing stack.
+     * By default, CloudFormation specifies <code>UPDATE</code>. You can't use the <code>UPDATE</code> type to create a
+     * change set for a new stack or the <code>CREATE</code> type to create a change set for an existing stack.
      * </p>
      * 
      * @param changeSetType
@@ -2684,15 +2677,15 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      *        create a change set for an existing stack, specify <code>UPDATE</code>. To create a change set for an
      *        import operation, specify <code>IMPORT</code>.</p>
      *        <p>
-     *        If you create a change set for a new stack, AWS Cloudformation creates a stack with a unique stack ID, but
-     *        no template or resources. The stack will be in the <a href=
+     *        If you create a change set for a new stack, CloudFormation creates a stack with a unique stack ID, but no
+     *        template or resources. The stack will be in the <a href=
      *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-describing-stacks.html#d0e11995"
      *        > <code>REVIEW_IN_PROGRESS</code> </a> state until you execute the change set.
      *        </p>
      *        <p>
-     *        By default, AWS CloudFormation specifies <code>UPDATE</code>. You can't use the <code>UPDATE</code> type
-     *        to create a change set for a new stack or the <code>CREATE</code> type to create a change set for an
-     *        existing stack.
+     *        By default, CloudFormation specifies <code>UPDATE</code>. You can't use the <code>UPDATE</code> type to
+     *        create a change set for a new stack or the <code>CREATE</code> type to create a change set for an existing
+     *        stack.
      * @see ChangeSetType
      */
 
@@ -2707,14 +2700,14 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      * specify <code>IMPORT</code>.
      * </p>
      * <p>
-     * If you create a change set for a new stack, AWS Cloudformation creates a stack with a unique stack ID, but no
+     * If you create a change set for a new stack, CloudFormation creates a stack with a unique stack ID, but no
      * template or resources. The stack will be in the <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-describing-stacks.html#d0e11995">
      * <code>REVIEW_IN_PROGRESS</code> </a> state until you execute the change set.
      * </p>
      * <p>
-     * By default, AWS CloudFormation specifies <code>UPDATE</code>. You can't use the <code>UPDATE</code> type to
-     * create a change set for a new stack or the <code>CREATE</code> type to create a change set for an existing stack.
+     * By default, CloudFormation specifies <code>UPDATE</code>. You can't use the <code>UPDATE</code> type to create a
+     * change set for a new stack or the <code>CREATE</code> type to create a change set for an existing stack.
      * </p>
      * 
      * @param changeSetType
@@ -2722,15 +2715,15 @@ public class CreateChangeSetRequest extends com.amazonaws.AmazonWebServiceReques
      *        create a change set for an existing stack, specify <code>UPDATE</code>. To create a change set for an
      *        import operation, specify <code>IMPORT</code>.</p>
      *        <p>
-     *        If you create a change set for a new stack, AWS Cloudformation creates a stack with a unique stack ID, but
-     *        no template or resources. The stack will be in the <a href=
+     *        If you create a change set for a new stack, CloudFormation creates a stack with a unique stack ID, but no
+     *        template or resources. The stack will be in the <a href=
      *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-describing-stacks.html#d0e11995"
      *        > <code>REVIEW_IN_PROGRESS</code> </a> state until you execute the change set.
      *        </p>
      *        <p>
-     *        By default, AWS CloudFormation specifies <code>UPDATE</code>. You can't use the <code>UPDATE</code> type
-     *        to create a change set for a new stack or the <code>CREATE</code> type to create a change set for an
-     *        existing stack.
+     *        By default, CloudFormation specifies <code>UPDATE</code>. You can't use the <code>UPDATE</code> type to
+     *        create a change set for a new stack or the <code>CREATE</code> type to create a change set for an existing
+     *        stack.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ChangeSetType
      */

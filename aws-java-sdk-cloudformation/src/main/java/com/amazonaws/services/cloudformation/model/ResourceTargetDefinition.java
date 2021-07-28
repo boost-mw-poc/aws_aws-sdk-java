@@ -17,8 +17,8 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The field that AWS CloudFormation will change, such as the name of a resource's property, and whether the resource
- * will be recreated.
+ * The field that CloudFormation will change, such as the name of a resource's property, and whether the resource will
+ * be recreated.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/ResourceTargetDefinition"
@@ -48,7 +48,7 @@ public class ResourceTargetDefinition implements Serializable, Cloneable {
      * <code>Conditionally</code>. To determine the conditions for a <code>Conditionally</code> recreation, see the
      * update behavior for that <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html"
-     * >property</a> in the AWS CloudFormation User Guide.
+     * >property</a> in the CloudFormation User Guide.
      * </p>
      */
     private String requiresRecreation;
@@ -189,7 +189,7 @@ public class ResourceTargetDefinition implements Serializable, Cloneable {
      * <code>Conditionally</code>. To determine the conditions for a <code>Conditionally</code> recreation, see the
      * update behavior for that <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html"
-     * >property</a> in the AWS CloudFormation User Guide.
+     * >property</a> in the CloudFormation User Guide.
      * </p>
      * 
      * @param requiresRecreation
@@ -198,7 +198,7 @@ public class ResourceTargetDefinition implements Serializable, Cloneable {
      *        <code>Conditionally</code>. To determine the conditions for a <code>Conditionally</code> recreation, see
      *        the update behavior for that <a href=
      *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html"
-     *        >property</a> in the AWS CloudFormation User Guide.
+     *        >property</a> in the CloudFormation User Guide.
      * @see RequiresRecreation
      */
 
@@ -213,7 +213,7 @@ public class ResourceTargetDefinition implements Serializable, Cloneable {
      * <code>Conditionally</code>. To determine the conditions for a <code>Conditionally</code> recreation, see the
      * update behavior for that <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html"
-     * >property</a> in the AWS CloudFormation User Guide.
+     * >property</a> in the CloudFormation User Guide.
      * </p>
      * 
      * @return If the <code>Attribute</code> value is <code>Properties</code>, indicates whether a change to this
@@ -221,7 +221,7 @@ public class ResourceTargetDefinition implements Serializable, Cloneable {
      *         or <code>Conditionally</code>. To determine the conditions for a <code>Conditionally</code> recreation,
      *         see the update behavior for that <a href=
      *         "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html"
-     *         >property</a> in the AWS CloudFormation User Guide.
+     *         >property</a> in the CloudFormation User Guide.
      * @see RequiresRecreation
      */
 
@@ -236,7 +236,7 @@ public class ResourceTargetDefinition implements Serializable, Cloneable {
      * <code>Conditionally</code>. To determine the conditions for a <code>Conditionally</code> recreation, see the
      * update behavior for that <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html"
-     * >property</a> in the AWS CloudFormation User Guide.
+     * >property</a> in the CloudFormation User Guide.
      * </p>
      * 
      * @param requiresRecreation
@@ -245,7 +245,7 @@ public class ResourceTargetDefinition implements Serializable, Cloneable {
      *        <code>Conditionally</code>. To determine the conditions for a <code>Conditionally</code> recreation, see
      *        the update behavior for that <a href=
      *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html"
-     *        >property</a> in the AWS CloudFormation User Guide.
+     *        >property</a> in the CloudFormation User Guide.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see RequiresRecreation
      */
@@ -262,7 +262,7 @@ public class ResourceTargetDefinition implements Serializable, Cloneable {
      * <code>Conditionally</code>. To determine the conditions for a <code>Conditionally</code> recreation, see the
      * update behavior for that <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html"
-     * >property</a> in the AWS CloudFormation User Guide.
+     * >property</a> in the CloudFormation User Guide.
      * </p>
      * 
      * @param requiresRecreation
@@ -271,7 +271,7 @@ public class ResourceTargetDefinition implements Serializable, Cloneable {
      *        <code>Conditionally</code>. To determine the conditions for a <code>Conditionally</code> recreation, see
      *        the update behavior for that <a href=
      *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html"
-     *        >property</a> in the AWS CloudFormation User Guide.
+     *        >property</a> in the CloudFormation User Guide.
      * @see RequiresRecreation
      */
 
@@ -286,7 +286,7 @@ public class ResourceTargetDefinition implements Serializable, Cloneable {
      * <code>Conditionally</code>. To determine the conditions for a <code>Conditionally</code> recreation, see the
      * update behavior for that <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html"
-     * >property</a> in the AWS CloudFormation User Guide.
+     * >property</a> in the CloudFormation User Guide.
      * </p>
      * 
      * @param requiresRecreation
@@ -295,7 +295,7 @@ public class ResourceTargetDefinition implements Serializable, Cloneable {
      *        <code>Conditionally</code>. To determine the conditions for a <code>Conditionally</code> recreation, see
      *        the update behavior for that <a href=
      *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-template-resource-type-ref.html"
-     *        >property</a> in the AWS CloudFormation User Guide.
+     *        >property</a> in the CloudFormation User Guide.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see RequiresRecreation
      */

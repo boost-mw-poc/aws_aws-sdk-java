@@ -105,7 +105,7 @@ public class RegisterTypeRequest extends com.amazonaws.AmazonWebServiceRequest i
      * to have <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetObject.html">GetObject</a> permissions
      * for the schema handler package. For more information, see <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazons3.html">Actions, Resources, and Condition Keys
-     * for Amazon S3</a> in the <i>AWS Identity and Access Management User Guide</i>.
+     * for Amazon S3</a> in the <i>Identity and Access Management User Guide</i>.
      * </p>
      * </note>
      */
@@ -125,15 +125,15 @@ public class RegisterTypeRequest extends com.amazonaws.AmazonWebServiceRequest i
      * CloudFormation service principle (<code>resources.cloudformation.amazonaws.com</code>). For more information on
      * adding trust relationships, see <a
      * href="IAM/latest/UserGuide/roles-managingrole-editing-console.html#roles-managingrole_edit-trust-policy"
-     * >Modifying a role trust policy</a> in the <i>AWS Identity and Access Management User Guide</i>.
+     * >Modifying a role trust policy</a> in the <i>Identity and Access Management User Guide</i>.
      * </p>
      * <p>
-     * If your extension calls AWS APIs in any of its handlers, you must create an <i> <a
+     * If your extension calls Amazon Web Services APIs in any of its handlers, you must create an <i> <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html">IAM execution role</a> </i> that includes
-     * the necessary permissions to call those AWS APIs, and provision that execution role in your account. When
-     * CloudFormation needs to invoke the resource type handler, CloudFormation assumes this execution role to create a
-     * temporary session token, which it then passes to the resource type handler, thereby supplying your resource type
-     * with the appropriate credentials.
+     * the necessary permissions to call those Amazon Web Services APIs, and provision that execution role in your
+     * account. When CloudFormation needs to invoke the resource type handler, CloudFormation assumes this execution
+     * role to create a temporary session token, which it then passes to the resource type handler, thereby supplying
+     * your resource type with the appropriate credentials.
      * </p>
      */
     private String executionRoleArn;
@@ -570,7 +570,7 @@ public class RegisterTypeRequest extends com.amazonaws.AmazonWebServiceRequest i
      * to have <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetObject.html">GetObject</a> permissions
      * for the schema handler package. For more information, see <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazons3.html">Actions, Resources, and Condition Keys
-     * for Amazon S3</a> in the <i>AWS Identity and Access Management User Guide</i>.
+     * for Amazon S3</a> in the <i>Identity and Access Management User Guide</i>.
      * </p>
      * </note>
      * 
@@ -589,7 +589,7 @@ public class RegisterTypeRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        needs to have <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetObject.html">GetObject</a>
      *        permissions for the schema handler package. For more information, see <a
      *        href="https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazons3.html">Actions, Resources, and
-     *        Condition Keys for Amazon S3</a> in the <i>AWS Identity and Access Management User Guide</i>.
+     *        Condition Keys for Amazon S3</a> in the <i>Identity and Access Management User Guide</i>.
      *        </p>
      */
 
@@ -613,7 +613,7 @@ public class RegisterTypeRequest extends com.amazonaws.AmazonWebServiceRequest i
      * to have <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetObject.html">GetObject</a> permissions
      * for the schema handler package. For more information, see <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazons3.html">Actions, Resources, and Condition Keys
-     * for Amazon S3</a> in the <i>AWS Identity and Access Management User Guide</i>.
+     * for Amazon S3</a> in the <i>Identity and Access Management User Guide</i>.
      * </p>
      * </note>
      * 
@@ -631,7 +631,7 @@ public class RegisterTypeRequest extends com.amazonaws.AmazonWebServiceRequest i
      *         needs to have <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetObject.html">GetObject</a>
      *         permissions for the schema handler package. For more information, see <a
      *         href="https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazons3.html">Actions, Resources, and
-     *         Condition Keys for Amazon S3</a> in the <i>AWS Identity and Access Management User Guide</i>.
+     *         Condition Keys for Amazon S3</a> in the <i>Identity and Access Management User Guide</i>.
      *         </p>
      */
 
@@ -655,7 +655,7 @@ public class RegisterTypeRequest extends com.amazonaws.AmazonWebServiceRequest i
      * to have <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetObject.html">GetObject</a> permissions
      * for the schema handler package. For more information, see <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazons3.html">Actions, Resources, and Condition Keys
-     * for Amazon S3</a> in the <i>AWS Identity and Access Management User Guide</i>.
+     * for Amazon S3</a> in the <i>Identity and Access Management User Guide</i>.
      * </p>
      * </note>
      * 
@@ -674,7 +674,7 @@ public class RegisterTypeRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        needs to have <a href="https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetObject.html">GetObject</a>
      *        permissions for the schema handler package. For more information, see <a
      *        href="https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazons3.html">Actions, Resources, and
-     *        Condition Keys for Amazon S3</a> in the <i>AWS Identity and Access Management User Guide</i>.
+     *        Condition Keys for Amazon S3</a> in the <i>Identity and Access Management User Guide</i>.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -733,15 +733,15 @@ public class RegisterTypeRequest extends com.amazonaws.AmazonWebServiceRequest i
      * CloudFormation service principle (<code>resources.cloudformation.amazonaws.com</code>). For more information on
      * adding trust relationships, see <a
      * href="IAM/latest/UserGuide/roles-managingrole-editing-console.html#roles-managingrole_edit-trust-policy"
-     * >Modifying a role trust policy</a> in the <i>AWS Identity and Access Management User Guide</i>.
+     * >Modifying a role trust policy</a> in the <i>Identity and Access Management User Guide</i>.
      * </p>
      * <p>
-     * If your extension calls AWS APIs in any of its handlers, you must create an <i> <a
+     * If your extension calls Amazon Web Services APIs in any of its handlers, you must create an <i> <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html">IAM execution role</a> </i> that includes
-     * the necessary permissions to call those AWS APIs, and provision that execution role in your account. When
-     * CloudFormation needs to invoke the resource type handler, CloudFormation assumes this execution role to create a
-     * temporary session token, which it then passes to the resource type handler, thereby supplying your resource type
-     * with the appropriate credentials.
+     * the necessary permissions to call those Amazon Web Services APIs, and provision that execution role in your
+     * account. When CloudFormation needs to invoke the resource type handler, CloudFormation assumes this execution
+     * role to create a temporary session token, which it then passes to the resource type handler, thereby supplying
+     * your resource type with the appropriate credentials.
      * </p>
      * 
      * @param executionRoleArn
@@ -752,15 +752,15 @@ public class RegisterTypeRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        the CloudFormation service principle (<code>resources.cloudformation.amazonaws.com</code>). For more
      *        information on adding trust relationships, see <a
      *        href="IAM/latest/UserGuide/roles-managingrole-editing-console.html#roles-managingrole_edit-trust-policy"
-     *        >Modifying a role trust policy</a> in the <i>AWS Identity and Access Management User Guide</i>.
+     *        >Modifying a role trust policy</a> in the <i>Identity and Access Management User Guide</i>.
      *        </p>
      *        <p>
-     *        If your extension calls AWS APIs in any of its handlers, you must create an <i> <a
+     *        If your extension calls Amazon Web Services APIs in any of its handlers, you must create an <i> <a
      *        href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html">IAM execution role</a> </i> that
-     *        includes the necessary permissions to call those AWS APIs, and provision that execution role in your
-     *        account. When CloudFormation needs to invoke the resource type handler, CloudFormation assumes this
-     *        execution role to create a temporary session token, which it then passes to the resource type handler,
-     *        thereby supplying your resource type with the appropriate credentials.
+     *        includes the necessary permissions to call those Amazon Web Services APIs, and provision that execution
+     *        role in your account. When CloudFormation needs to invoke the resource type handler, CloudFormation
+     *        assumes this execution role to create a temporary session token, which it then passes to the resource type
+     *        handler, thereby supplying your resource type with the appropriate credentials.
      */
 
     public void setExecutionRoleArn(String executionRoleArn) {
@@ -776,15 +776,15 @@ public class RegisterTypeRequest extends com.amazonaws.AmazonWebServiceRequest i
      * CloudFormation service principle (<code>resources.cloudformation.amazonaws.com</code>). For more information on
      * adding trust relationships, see <a
      * href="IAM/latest/UserGuide/roles-managingrole-editing-console.html#roles-managingrole_edit-trust-policy"
-     * >Modifying a role trust policy</a> in the <i>AWS Identity and Access Management User Guide</i>.
+     * >Modifying a role trust policy</a> in the <i>Identity and Access Management User Guide</i>.
      * </p>
      * <p>
-     * If your extension calls AWS APIs in any of its handlers, you must create an <i> <a
+     * If your extension calls Amazon Web Services APIs in any of its handlers, you must create an <i> <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html">IAM execution role</a> </i> that includes
-     * the necessary permissions to call those AWS APIs, and provision that execution role in your account. When
-     * CloudFormation needs to invoke the resource type handler, CloudFormation assumes this execution role to create a
-     * temporary session token, which it then passes to the resource type handler, thereby supplying your resource type
-     * with the appropriate credentials.
+     * the necessary permissions to call those Amazon Web Services APIs, and provision that execution role in your
+     * account. When CloudFormation needs to invoke the resource type handler, CloudFormation assumes this execution
+     * role to create a temporary session token, which it then passes to the resource type handler, thereby supplying
+     * your resource type with the appropriate credentials.
      * </p>
      * 
      * @return The Amazon Resource Name (ARN) of the IAM role for CloudFormation to assume when invoking the
@@ -794,15 +794,15 @@ public class RegisterTypeRequest extends com.amazonaws.AmazonWebServiceRequest i
      *         with the CloudFormation service principle (<code>resources.cloudformation.amazonaws.com</code>). For more
      *         information on adding trust relationships, see <a href=
      *         "IAM/latest/UserGuide/roles-managingrole-editing-console.html#roles-managingrole_edit-trust-policy"
-     *         >Modifying a role trust policy</a> in the <i>AWS Identity and Access Management User Guide</i>.
+     *         >Modifying a role trust policy</a> in the <i>Identity and Access Management User Guide</i>.
      *         </p>
      *         <p>
-     *         If your extension calls AWS APIs in any of its handlers, you must create an <i> <a
+     *         If your extension calls Amazon Web Services APIs in any of its handlers, you must create an <i> <a
      *         href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html">IAM execution role</a> </i> that
-     *         includes the necessary permissions to call those AWS APIs, and provision that execution role in your
-     *         account. When CloudFormation needs to invoke the resource type handler, CloudFormation assumes this
-     *         execution role to create a temporary session token, which it then passes to the resource type handler,
-     *         thereby supplying your resource type with the appropriate credentials.
+     *         includes the necessary permissions to call those Amazon Web Services APIs, and provision that execution
+     *         role in your account. When CloudFormation needs to invoke the resource type handler, CloudFormation
+     *         assumes this execution role to create a temporary session token, which it then passes to the resource
+     *         type handler, thereby supplying your resource type with the appropriate credentials.
      */
 
     public String getExecutionRoleArn() {
@@ -818,15 +818,15 @@ public class RegisterTypeRequest extends com.amazonaws.AmazonWebServiceRequest i
      * CloudFormation service principle (<code>resources.cloudformation.amazonaws.com</code>). For more information on
      * adding trust relationships, see <a
      * href="IAM/latest/UserGuide/roles-managingrole-editing-console.html#roles-managingrole_edit-trust-policy"
-     * >Modifying a role trust policy</a> in the <i>AWS Identity and Access Management User Guide</i>.
+     * >Modifying a role trust policy</a> in the <i>Identity and Access Management User Guide</i>.
      * </p>
      * <p>
-     * If your extension calls AWS APIs in any of its handlers, you must create an <i> <a
+     * If your extension calls Amazon Web Services APIs in any of its handlers, you must create an <i> <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html">IAM execution role</a> </i> that includes
-     * the necessary permissions to call those AWS APIs, and provision that execution role in your account. When
-     * CloudFormation needs to invoke the resource type handler, CloudFormation assumes this execution role to create a
-     * temporary session token, which it then passes to the resource type handler, thereby supplying your resource type
-     * with the appropriate credentials.
+     * the necessary permissions to call those Amazon Web Services APIs, and provision that execution role in your
+     * account. When CloudFormation needs to invoke the resource type handler, CloudFormation assumes this execution
+     * role to create a temporary session token, which it then passes to the resource type handler, thereby supplying
+     * your resource type with the appropriate credentials.
      * </p>
      * 
      * @param executionRoleArn
@@ -837,15 +837,15 @@ public class RegisterTypeRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        the CloudFormation service principle (<code>resources.cloudformation.amazonaws.com</code>). For more
      *        information on adding trust relationships, see <a
      *        href="IAM/latest/UserGuide/roles-managingrole-editing-console.html#roles-managingrole_edit-trust-policy"
-     *        >Modifying a role trust policy</a> in the <i>AWS Identity and Access Management User Guide</i>.
+     *        >Modifying a role trust policy</a> in the <i>Identity and Access Management User Guide</i>.
      *        </p>
      *        <p>
-     *        If your extension calls AWS APIs in any of its handlers, you must create an <i> <a
+     *        If your extension calls Amazon Web Services APIs in any of its handlers, you must create an <i> <a
      *        href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html">IAM execution role</a> </i> that
-     *        includes the necessary permissions to call those AWS APIs, and provision that execution role in your
-     *        account. When CloudFormation needs to invoke the resource type handler, CloudFormation assumes this
-     *        execution role to create a temporary session token, which it then passes to the resource type handler,
-     *        thereby supplying your resource type with the appropriate credentials.
+     *        includes the necessary permissions to call those Amazon Web Services APIs, and provision that execution
+     *        role in your account. When CloudFormation needs to invoke the resource type handler, CloudFormation
+     *        assumes this execution role to create a temporary session token, which it then passes to the resource type
+     *        handler, thereby supplying your resource type with the appropriate credentials.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -46,7 +46,7 @@ public class ParameterDeclaration implements Serializable, Cloneable {
     private String parameterType;
     /**
      * <p>
-     * Flag that indicates whether the parameter value is shown as plain text in logs and in the AWS Management Console.
+     * Flag that indicates whether the parameter value is shown as plain text in logs and in the Management Console.
      * </p>
      */
     private Boolean noEcho;
@@ -58,7 +58,7 @@ public class ParameterDeclaration implements Serializable, Cloneable {
     private String description;
     /**
      * <p>
-     * The criteria that AWS CloudFormation uses to validate parameter values.
+     * The criteria that CloudFormation uses to validate parameter values.
      * </p>
      */
     private ParameterConstraints parameterConstraints;
@@ -185,11 +185,11 @@ public class ParameterDeclaration implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Flag that indicates whether the parameter value is shown as plain text in logs and in the AWS Management Console.
+     * Flag that indicates whether the parameter value is shown as plain text in logs and in the Management Console.
      * </p>
      * 
      * @param noEcho
-     *        Flag that indicates whether the parameter value is shown as plain text in logs and in the AWS Management
+     *        Flag that indicates whether the parameter value is shown as plain text in logs and in the Management
      *        Console.
      */
 
@@ -199,10 +199,10 @@ public class ParameterDeclaration implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Flag that indicates whether the parameter value is shown as plain text in logs and in the AWS Management Console.
+     * Flag that indicates whether the parameter value is shown as plain text in logs and in the Management Console.
      * </p>
      * 
-     * @return Flag that indicates whether the parameter value is shown as plain text in logs and in the AWS Management
+     * @return Flag that indicates whether the parameter value is shown as plain text in logs and in the Management
      *         Console.
      */
 
@@ -212,11 +212,11 @@ public class ParameterDeclaration implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Flag that indicates whether the parameter value is shown as plain text in logs and in the AWS Management Console.
+     * Flag that indicates whether the parameter value is shown as plain text in logs and in the Management Console.
      * </p>
      * 
      * @param noEcho
-     *        Flag that indicates whether the parameter value is shown as plain text in logs and in the AWS Management
+     *        Flag that indicates whether the parameter value is shown as plain text in logs and in the Management
      *        Console.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -228,10 +228,10 @@ public class ParameterDeclaration implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Flag that indicates whether the parameter value is shown as plain text in logs and in the AWS Management Console.
+     * Flag that indicates whether the parameter value is shown as plain text in logs and in the Management Console.
      * </p>
      * 
-     * @return Flag that indicates whether the parameter value is shown as plain text in logs and in the AWS Management
+     * @return Flag that indicates whether the parameter value is shown as plain text in logs and in the Management
      *         Console.
      */
 
@@ -281,11 +281,11 @@ public class ParameterDeclaration implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The criteria that AWS CloudFormation uses to validate parameter values.
+     * The criteria that CloudFormation uses to validate parameter values.
      * </p>
      * 
      * @param parameterConstraints
-     *        The criteria that AWS CloudFormation uses to validate parameter values.
+     *        The criteria that CloudFormation uses to validate parameter values.
      */
 
     public void setParameterConstraints(ParameterConstraints parameterConstraints) {
@@ -294,10 +294,10 @@ public class ParameterDeclaration implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The criteria that AWS CloudFormation uses to validate parameter values.
+     * The criteria that CloudFormation uses to validate parameter values.
      * </p>
      * 
-     * @return The criteria that AWS CloudFormation uses to validate parameter values.
+     * @return The criteria that CloudFormation uses to validate parameter values.
      */
 
     public ParameterConstraints getParameterConstraints() {
@@ -306,11 +306,11 @@ public class ParameterDeclaration implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The criteria that AWS CloudFormation uses to validate parameter values.
+     * The criteria that CloudFormation uses to validate parameter values.
      * </p>
      * 
      * @param parameterConstraints
-     *        The criteria that AWS CloudFormation uses to validate parameter values.
+     *        The criteria that CloudFormation uses to validate parameter values.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

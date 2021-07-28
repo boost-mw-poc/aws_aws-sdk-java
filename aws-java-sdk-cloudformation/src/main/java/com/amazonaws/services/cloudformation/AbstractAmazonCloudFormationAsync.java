@@ -569,6 +569,19 @@ public class AbstractAmazonCloudFormationAsync extends AbstractAmazonCloudFormat
     }
 
     @Override
+    public java.util.concurrent.Future<ImportStacksToStackSetResult> importStacksToStackSetAsync(ImportStacksToStackSetRequest request) {
+
+        return importStacksToStackSetAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ImportStacksToStackSetResult> importStacksToStackSetAsync(ImportStacksToStackSetRequest request,
+            com.amazonaws.handlers.AsyncHandler<ImportStacksToStackSetRequest, ImportStacksToStackSetResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ListChangeSetsResult> listChangeSetsAsync(ListChangeSetsRequest request) {
 
         return listChangeSetsAsync(request, null);

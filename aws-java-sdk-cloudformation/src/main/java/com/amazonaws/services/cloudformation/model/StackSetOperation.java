@@ -56,7 +56,7 @@ public class StackSetOperation implements Serializable, Cloneable {
      * <code>FAILED</code>: The operation exceeded the specified failure tolerance. The failure tolerance value that
      * you've set for an operation is applied for each Region during stack create and update operations. If the number
      * of failed stacks within a Region exceeds the failure tolerance, the status of the operation in the Region is set
-     * to <code>FAILED</code>. This in turn sets the status of the operation as a whole to <code>FAILED</code>, and AWS
+     * to <code>FAILED</code>. This in turn sets the status of the operation as a whole to <code>FAILED</code>, and
      * CloudFormation cancels the operation in any remaining Regions.
      * </p>
      * </li>
@@ -65,7 +65,7 @@ public class StackSetOperation implements Serializable, Cloneable {
      * <code>QUEUED</code>: [Service-managed permissions] For automatic deployments that require a sequence of
      * operations, the operation is queued to be performed. For more information, see the <a href=
      * "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-concepts.html#stackset-status-codes"
-     * >stack set operation status codes</a> in the AWS CloudFormation User Guide.
+     * >stack set operation status codes</a> in the CloudFormation User Guide.
      * </p>
      * </li>
      * <li>
@@ -94,7 +94,7 @@ public class StackSetOperation implements Serializable, Cloneable {
     private String status;
     /**
      * <p>
-     * The preferences for how AWS CloudFormation performs this stack set operation.
+     * The preferences for how CloudFormation performs this stack set operation.
      * </p>
      */
     private StackSetOperationPreferences operationPreferences;
@@ -114,7 +114,7 @@ public class StackSetOperation implements Serializable, Cloneable {
      * Use customized administrator roles to control which users or groups can manage specific stack sets within the
      * same administrator account. For more information, see <a
      * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs.html">Define Permissions
-     * for Multiple Administrators</a> in the <i>AWS CloudFormation User Guide</i>.
+     * for Multiple Administrators</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      */
     private String administrationRoleARN;
@@ -130,7 +130,7 @@ public class StackSetOperation implements Serializable, Cloneable {
     /**
      * <p>
      * The time at which the operation was initiated. Note that the creation times for the stack set operation might
-     * differ from the creation time of the individual stacks themselves. This is because AWS CloudFormation needs to
+     * differ from the creation time of the individual stacks themselves. This is because CloudFormation needs to
      * perform preparatory work for the operation, such as dispatching the work to the requested Regions, before
      * actually creating the first stacks.
      * </p>
@@ -146,7 +146,7 @@ public class StackSetOperation implements Serializable, Cloneable {
     private java.util.Date endTimestamp;
     /**
      * <p>
-     * [Service-managed permissions] The AWS Organizations accounts affected by the stack operation.
+     * [Service-managed permissions] The Organizations accounts affected by the stack operation.
      * </p>
      */
     private DeploymentTargets deploymentTargets;
@@ -162,7 +162,7 @@ public class StackSetOperation implements Serializable, Cloneable {
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-drift.html">Detecting Unmanaged
-     * Changes in Stack Sets</a> in the AWS CloudFormation User Guide.
+     * Changes in Stack Sets</a> in the CloudFormation User Guide.
      * </p>
      */
     private StackSetDriftDetectionDetails stackSetDriftDetectionDetails;
@@ -355,7 +355,7 @@ public class StackSetOperation implements Serializable, Cloneable {
      * <code>FAILED</code>: The operation exceeded the specified failure tolerance. The failure tolerance value that
      * you've set for an operation is applied for each Region during stack create and update operations. If the number
      * of failed stacks within a Region exceeds the failure tolerance, the status of the operation in the Region is set
-     * to <code>FAILED</code>. This in turn sets the status of the operation as a whole to <code>FAILED</code>, and AWS
+     * to <code>FAILED</code>. This in turn sets the status of the operation as a whole to <code>FAILED</code>, and
      * CloudFormation cancels the operation in any remaining Regions.
      * </p>
      * </li>
@@ -364,7 +364,7 @@ public class StackSetOperation implements Serializable, Cloneable {
      * <code>QUEUED</code>: [Service-managed permissions] For automatic deployments that require a sequence of
      * operations, the operation is queued to be performed. For more information, see the <a href=
      * "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-concepts.html#stackset-status-codes"
-     * >stack set operation status codes</a> in the AWS CloudFormation User Guide.
+     * >stack set operation status codes</a> in the CloudFormation User Guide.
      * </p>
      * </li>
      * <li>
@@ -399,7 +399,7 @@ public class StackSetOperation implements Serializable, Cloneable {
      *        that you've set for an operation is applied for each Region during stack create and update operations. If
      *        the number of failed stacks within a Region exceeds the failure tolerance, the status of the operation in
      *        the Region is set to <code>FAILED</code>. This in turn sets the status of the operation as a whole to
-     *        <code>FAILED</code>, and AWS CloudFormation cancels the operation in any remaining Regions.
+     *        <code>FAILED</code>, and CloudFormation cancels the operation in any remaining Regions.
      *        </p>
      *        </li>
      *        <li>
@@ -407,7 +407,7 @@ public class StackSetOperation implements Serializable, Cloneable {
      *        <code>QUEUED</code>: [Service-managed permissions] For automatic deployments that require a sequence of
      *        operations, the operation is queued to be performed. For more information, see the <a href=
      *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-concepts.html#stackset-status-codes"
-     *        >stack set operation status codes</a> in the AWS CloudFormation User Guide.
+     *        >stack set operation status codes</a> in the CloudFormation User Guide.
      *        </p>
      *        </li>
      *        <li>
@@ -448,7 +448,7 @@ public class StackSetOperation implements Serializable, Cloneable {
      * <code>FAILED</code>: The operation exceeded the specified failure tolerance. The failure tolerance value that
      * you've set for an operation is applied for each Region during stack create and update operations. If the number
      * of failed stacks within a Region exceeds the failure tolerance, the status of the operation in the Region is set
-     * to <code>FAILED</code>. This in turn sets the status of the operation as a whole to <code>FAILED</code>, and AWS
+     * to <code>FAILED</code>. This in turn sets the status of the operation as a whole to <code>FAILED</code>, and
      * CloudFormation cancels the operation in any remaining Regions.
      * </p>
      * </li>
@@ -457,7 +457,7 @@ public class StackSetOperation implements Serializable, Cloneable {
      * <code>QUEUED</code>: [Service-managed permissions] For automatic deployments that require a sequence of
      * operations, the operation is queued to be performed. For more information, see the <a href=
      * "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-concepts.html#stackset-status-codes"
-     * >stack set operation status codes</a> in the AWS CloudFormation User Guide.
+     * >stack set operation status codes</a> in the CloudFormation User Guide.
      * </p>
      * </li>
      * <li>
@@ -491,7 +491,7 @@ public class StackSetOperation implements Serializable, Cloneable {
      *         that you've set for an operation is applied for each Region during stack create and update operations. If
      *         the number of failed stacks within a Region exceeds the failure tolerance, the status of the operation in
      *         the Region is set to <code>FAILED</code>. This in turn sets the status of the operation as a whole to
-     *         <code>FAILED</code>, and AWS CloudFormation cancels the operation in any remaining Regions.
+     *         <code>FAILED</code>, and CloudFormation cancels the operation in any remaining Regions.
      *         </p>
      *         </li>
      *         <li>
@@ -499,7 +499,7 @@ public class StackSetOperation implements Serializable, Cloneable {
      *         <code>QUEUED</code>: [Service-managed permissions] For automatic deployments that require a sequence of
      *         operations, the operation is queued to be performed. For more information, see the <a href=
      *         "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-concepts.html#stackset-status-codes"
-     *         >stack set operation status codes</a> in the AWS CloudFormation User Guide.
+     *         >stack set operation status codes</a> in the CloudFormation User Guide.
      *         </p>
      *         </li>
      *         <li>
@@ -540,7 +540,7 @@ public class StackSetOperation implements Serializable, Cloneable {
      * <code>FAILED</code>: The operation exceeded the specified failure tolerance. The failure tolerance value that
      * you've set for an operation is applied for each Region during stack create and update operations. If the number
      * of failed stacks within a Region exceeds the failure tolerance, the status of the operation in the Region is set
-     * to <code>FAILED</code>. This in turn sets the status of the operation as a whole to <code>FAILED</code>, and AWS
+     * to <code>FAILED</code>. This in turn sets the status of the operation as a whole to <code>FAILED</code>, and
      * CloudFormation cancels the operation in any remaining Regions.
      * </p>
      * </li>
@@ -549,7 +549,7 @@ public class StackSetOperation implements Serializable, Cloneable {
      * <code>QUEUED</code>: [Service-managed permissions] For automatic deployments that require a sequence of
      * operations, the operation is queued to be performed. For more information, see the <a href=
      * "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-concepts.html#stackset-status-codes"
-     * >stack set operation status codes</a> in the AWS CloudFormation User Guide.
+     * >stack set operation status codes</a> in the CloudFormation User Guide.
      * </p>
      * </li>
      * <li>
@@ -584,7 +584,7 @@ public class StackSetOperation implements Serializable, Cloneable {
      *        that you've set for an operation is applied for each Region during stack create and update operations. If
      *        the number of failed stacks within a Region exceeds the failure tolerance, the status of the operation in
      *        the Region is set to <code>FAILED</code>. This in turn sets the status of the operation as a whole to
-     *        <code>FAILED</code>, and AWS CloudFormation cancels the operation in any remaining Regions.
+     *        <code>FAILED</code>, and CloudFormation cancels the operation in any remaining Regions.
      *        </p>
      *        </li>
      *        <li>
@@ -592,7 +592,7 @@ public class StackSetOperation implements Serializable, Cloneable {
      *        <code>QUEUED</code>: [Service-managed permissions] For automatic deployments that require a sequence of
      *        operations, the operation is queued to be performed. For more information, see the <a href=
      *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-concepts.html#stackset-status-codes"
-     *        >stack set operation status codes</a> in the AWS CloudFormation User Guide.
+     *        >stack set operation status codes</a> in the CloudFormation User Guide.
      *        </p>
      *        </li>
      *        <li>
@@ -635,7 +635,7 @@ public class StackSetOperation implements Serializable, Cloneable {
      * <code>FAILED</code>: The operation exceeded the specified failure tolerance. The failure tolerance value that
      * you've set for an operation is applied for each Region during stack create and update operations. If the number
      * of failed stacks within a Region exceeds the failure tolerance, the status of the operation in the Region is set
-     * to <code>FAILED</code>. This in turn sets the status of the operation as a whole to <code>FAILED</code>, and AWS
+     * to <code>FAILED</code>. This in turn sets the status of the operation as a whole to <code>FAILED</code>, and
      * CloudFormation cancels the operation in any remaining Regions.
      * </p>
      * </li>
@@ -644,7 +644,7 @@ public class StackSetOperation implements Serializable, Cloneable {
      * <code>QUEUED</code>: [Service-managed permissions] For automatic deployments that require a sequence of
      * operations, the operation is queued to be performed. For more information, see the <a href=
      * "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-concepts.html#stackset-status-codes"
-     * >stack set operation status codes</a> in the AWS CloudFormation User Guide.
+     * >stack set operation status codes</a> in the CloudFormation User Guide.
      * </p>
      * </li>
      * <li>
@@ -679,7 +679,7 @@ public class StackSetOperation implements Serializable, Cloneable {
      *        that you've set for an operation is applied for each Region during stack create and update operations. If
      *        the number of failed stacks within a Region exceeds the failure tolerance, the status of the operation in
      *        the Region is set to <code>FAILED</code>. This in turn sets the status of the operation as a whole to
-     *        <code>FAILED</code>, and AWS CloudFormation cancels the operation in any remaining Regions.
+     *        <code>FAILED</code>, and CloudFormation cancels the operation in any remaining Regions.
      *        </p>
      *        </li>
      *        <li>
@@ -687,7 +687,7 @@ public class StackSetOperation implements Serializable, Cloneable {
      *        <code>QUEUED</code>: [Service-managed permissions] For automatic deployments that require a sequence of
      *        operations, the operation is queued to be performed. For more information, see the <a href=
      *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-concepts.html#stackset-status-codes"
-     *        >stack set operation status codes</a> in the AWS CloudFormation User Guide.
+     *        >stack set operation status codes</a> in the CloudFormation User Guide.
      *        </p>
      *        </li>
      *        <li>
@@ -728,7 +728,7 @@ public class StackSetOperation implements Serializable, Cloneable {
      * <code>FAILED</code>: The operation exceeded the specified failure tolerance. The failure tolerance value that
      * you've set for an operation is applied for each Region during stack create and update operations. If the number
      * of failed stacks within a Region exceeds the failure tolerance, the status of the operation in the Region is set
-     * to <code>FAILED</code>. This in turn sets the status of the operation as a whole to <code>FAILED</code>, and AWS
+     * to <code>FAILED</code>. This in turn sets the status of the operation as a whole to <code>FAILED</code>, and
      * CloudFormation cancels the operation in any remaining Regions.
      * </p>
      * </li>
@@ -737,7 +737,7 @@ public class StackSetOperation implements Serializable, Cloneable {
      * <code>QUEUED</code>: [Service-managed permissions] For automatic deployments that require a sequence of
      * operations, the operation is queued to be performed. For more information, see the <a href=
      * "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-concepts.html#stackset-status-codes"
-     * >stack set operation status codes</a> in the AWS CloudFormation User Guide.
+     * >stack set operation status codes</a> in the CloudFormation User Guide.
      * </p>
      * </li>
      * <li>
@@ -772,7 +772,7 @@ public class StackSetOperation implements Serializable, Cloneable {
      *        that you've set for an operation is applied for each Region during stack create and update operations. If
      *        the number of failed stacks within a Region exceeds the failure tolerance, the status of the operation in
      *        the Region is set to <code>FAILED</code>. This in turn sets the status of the operation as a whole to
-     *        <code>FAILED</code>, and AWS CloudFormation cancels the operation in any remaining Regions.
+     *        <code>FAILED</code>, and CloudFormation cancels the operation in any remaining Regions.
      *        </p>
      *        </li>
      *        <li>
@@ -780,7 +780,7 @@ public class StackSetOperation implements Serializable, Cloneable {
      *        <code>QUEUED</code>: [Service-managed permissions] For automatic deployments that require a sequence of
      *        operations, the operation is queued to be performed. For more information, see the <a href=
      *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-concepts.html#stackset-status-codes"
-     *        >stack set operation status codes</a> in the AWS CloudFormation User Guide.
+     *        >stack set operation status codes</a> in the CloudFormation User Guide.
      *        </p>
      *        </li>
      *        <li>
@@ -815,11 +815,11 @@ public class StackSetOperation implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The preferences for how AWS CloudFormation performs this stack set operation.
+     * The preferences for how CloudFormation performs this stack set operation.
      * </p>
      * 
      * @param operationPreferences
-     *        The preferences for how AWS CloudFormation performs this stack set operation.
+     *        The preferences for how CloudFormation performs this stack set operation.
      */
 
     public void setOperationPreferences(StackSetOperationPreferences operationPreferences) {
@@ -828,10 +828,10 @@ public class StackSetOperation implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The preferences for how AWS CloudFormation performs this stack set operation.
+     * The preferences for how CloudFormation performs this stack set operation.
      * </p>
      * 
-     * @return The preferences for how AWS CloudFormation performs this stack set operation.
+     * @return The preferences for how CloudFormation performs this stack set operation.
      */
 
     public StackSetOperationPreferences getOperationPreferences() {
@@ -840,11 +840,11 @@ public class StackSetOperation implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The preferences for how AWS CloudFormation performs this stack set operation.
+     * The preferences for how CloudFormation performs this stack set operation.
      * </p>
      * 
      * @param operationPreferences
-     *        The preferences for how AWS CloudFormation performs this stack set operation.
+     *        The preferences for how CloudFormation performs this stack set operation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -929,7 +929,7 @@ public class StackSetOperation implements Serializable, Cloneable {
      * Use customized administrator roles to control which users or groups can manage specific stack sets within the
      * same administrator account. For more information, see <a
      * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs.html">Define Permissions
-     * for Multiple Administrators</a> in the <i>AWS CloudFormation User Guide</i>.
+     * for Multiple Administrators</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * 
      * @param administrationRoleARN
@@ -938,7 +938,7 @@ public class StackSetOperation implements Serializable, Cloneable {
      *        Use customized administrator roles to control which users or groups can manage specific stack sets within
      *        the same administrator account. For more information, see <a
      *        href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs.html">Define
-     *        Permissions for Multiple Administrators</a> in the <i>AWS CloudFormation User Guide</i>.
+     *        Permissions for Multiple Administrators</a> in the <i>CloudFormation User Guide</i>.
      */
 
     public void setAdministrationRoleARN(String administrationRoleARN) {
@@ -953,7 +953,7 @@ public class StackSetOperation implements Serializable, Cloneable {
      * Use customized administrator roles to control which users or groups can manage specific stack sets within the
      * same administrator account. For more information, see <a
      * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs.html">Define Permissions
-     * for Multiple Administrators</a> in the <i>AWS CloudFormation User Guide</i>.
+     * for Multiple Administrators</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * 
      * @return The Amazon Resource Number (ARN) of the IAM role used to perform this stack set operation. </p>
@@ -961,7 +961,7 @@ public class StackSetOperation implements Serializable, Cloneable {
      *         Use customized administrator roles to control which users or groups can manage specific stack sets within
      *         the same administrator account. For more information, see <a
      *         href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs.html">Define
-     *         Permissions for Multiple Administrators</a> in the <i>AWS CloudFormation User Guide</i>.
+     *         Permissions for Multiple Administrators</a> in the <i>CloudFormation User Guide</i>.
      */
 
     public String getAdministrationRoleARN() {
@@ -976,7 +976,7 @@ public class StackSetOperation implements Serializable, Cloneable {
      * Use customized administrator roles to control which users or groups can manage specific stack sets within the
      * same administrator account. For more information, see <a
      * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs.html">Define Permissions
-     * for Multiple Administrators</a> in the <i>AWS CloudFormation User Guide</i>.
+     * for Multiple Administrators</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * 
      * @param administrationRoleARN
@@ -985,7 +985,7 @@ public class StackSetOperation implements Serializable, Cloneable {
      *        Use customized administrator roles to control which users or groups can manage specific stack sets within
      *        the same administrator account. For more information, see <a
      *        href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-prereqs.html">Define
-     *        Permissions for Multiple Administrators</a> in the <i>AWS CloudFormation User Guide</i>.
+     *        Permissions for Multiple Administrators</a> in the <i>CloudFormation User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1055,16 +1055,16 @@ public class StackSetOperation implements Serializable, Cloneable {
     /**
      * <p>
      * The time at which the operation was initiated. Note that the creation times for the stack set operation might
-     * differ from the creation time of the individual stacks themselves. This is because AWS CloudFormation needs to
+     * differ from the creation time of the individual stacks themselves. This is because CloudFormation needs to
      * perform preparatory work for the operation, such as dispatching the work to the requested Regions, before
      * actually creating the first stacks.
      * </p>
      * 
      * @param creationTimestamp
      *        The time at which the operation was initiated. Note that the creation times for the stack set operation
-     *        might differ from the creation time of the individual stacks themselves. This is because AWS
-     *        CloudFormation needs to perform preparatory work for the operation, such as dispatching the work to the
-     *        requested Regions, before actually creating the first stacks.
+     *        might differ from the creation time of the individual stacks themselves. This is because CloudFormation
+     *        needs to perform preparatory work for the operation, such as dispatching the work to the requested
+     *        Regions, before actually creating the first stacks.
      */
 
     public void setCreationTimestamp(java.util.Date creationTimestamp) {
@@ -1074,15 +1074,15 @@ public class StackSetOperation implements Serializable, Cloneable {
     /**
      * <p>
      * The time at which the operation was initiated. Note that the creation times for the stack set operation might
-     * differ from the creation time of the individual stacks themselves. This is because AWS CloudFormation needs to
+     * differ from the creation time of the individual stacks themselves. This is because CloudFormation needs to
      * perform preparatory work for the operation, such as dispatching the work to the requested Regions, before
      * actually creating the first stacks.
      * </p>
      * 
      * @return The time at which the operation was initiated. Note that the creation times for the stack set operation
-     *         might differ from the creation time of the individual stacks themselves. This is because AWS
-     *         CloudFormation needs to perform preparatory work for the operation, such as dispatching the work to the
-     *         requested Regions, before actually creating the first stacks.
+     *         might differ from the creation time of the individual stacks themselves. This is because CloudFormation
+     *         needs to perform preparatory work for the operation, such as dispatching the work to the requested
+     *         Regions, before actually creating the first stacks.
      */
 
     public java.util.Date getCreationTimestamp() {
@@ -1092,16 +1092,16 @@ public class StackSetOperation implements Serializable, Cloneable {
     /**
      * <p>
      * The time at which the operation was initiated. Note that the creation times for the stack set operation might
-     * differ from the creation time of the individual stacks themselves. This is because AWS CloudFormation needs to
+     * differ from the creation time of the individual stacks themselves. This is because CloudFormation needs to
      * perform preparatory work for the operation, such as dispatching the work to the requested Regions, before
      * actually creating the first stacks.
      * </p>
      * 
      * @param creationTimestamp
      *        The time at which the operation was initiated. Note that the creation times for the stack set operation
-     *        might differ from the creation time of the individual stacks themselves. This is because AWS
-     *        CloudFormation needs to perform preparatory work for the operation, such as dispatching the work to the
-     *        requested Regions, before actually creating the first stacks.
+     *        might differ from the creation time of the individual stacks themselves. This is because CloudFormation
+     *        needs to perform preparatory work for the operation, such as dispatching the work to the requested
+     *        Regions, before actually creating the first stacks.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1164,11 +1164,11 @@ public class StackSetOperation implements Serializable, Cloneable {
 
     /**
      * <p>
-     * [Service-managed permissions] The AWS Organizations accounts affected by the stack operation.
+     * [Service-managed permissions] The Organizations accounts affected by the stack operation.
      * </p>
      * 
      * @param deploymentTargets
-     *        [Service-managed permissions] The AWS Organizations accounts affected by the stack operation.
+     *        [Service-managed permissions] The Organizations accounts affected by the stack operation.
      */
 
     public void setDeploymentTargets(DeploymentTargets deploymentTargets) {
@@ -1177,10 +1177,10 @@ public class StackSetOperation implements Serializable, Cloneable {
 
     /**
      * <p>
-     * [Service-managed permissions] The AWS Organizations accounts affected by the stack operation.
+     * [Service-managed permissions] The Organizations accounts affected by the stack operation.
      * </p>
      * 
-     * @return [Service-managed permissions] The AWS Organizations accounts affected by the stack operation.
+     * @return [Service-managed permissions] The Organizations accounts affected by the stack operation.
      */
 
     public DeploymentTargets getDeploymentTargets() {
@@ -1189,11 +1189,11 @@ public class StackSetOperation implements Serializable, Cloneable {
 
     /**
      * <p>
-     * [Service-managed permissions] The AWS Organizations accounts affected by the stack operation.
+     * [Service-managed permissions] The Organizations accounts affected by the stack operation.
      * </p>
      * 
      * @param deploymentTargets
-     *        [Service-managed permissions] The AWS Organizations accounts affected by the stack operation.
+     *        [Service-managed permissions] The Organizations accounts affected by the stack operation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1214,7 +1214,7 @@ public class StackSetOperation implements Serializable, Cloneable {
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-drift.html">Detecting Unmanaged
-     * Changes in Stack Sets</a> in the AWS CloudFormation User Guide.
+     * Changes in Stack Sets</a> in the CloudFormation User Guide.
      * </p>
      * 
      * @param stackSetDriftDetectionDetails
@@ -1227,7 +1227,7 @@ public class StackSetOperation implements Serializable, Cloneable {
      *        <p>
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-drift.html">Detecting
-     *        Unmanaged Changes in Stack Sets</a> in the AWS CloudFormation User Guide.
+     *        Unmanaged Changes in Stack Sets</a> in the CloudFormation User Guide.
      */
 
     public void setStackSetDriftDetectionDetails(StackSetDriftDetectionDetails stackSetDriftDetectionDetails) {
@@ -1246,7 +1246,7 @@ public class StackSetOperation implements Serializable, Cloneable {
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-drift.html">Detecting Unmanaged
-     * Changes in Stack Sets</a> in the AWS CloudFormation User Guide.
+     * Changes in Stack Sets</a> in the CloudFormation User Guide.
      * </p>
      * 
      * @return Detailed information about the drift status of the stack set. This includes information about drift
@@ -1258,7 +1258,7 @@ public class StackSetOperation implements Serializable, Cloneable {
      *         <p>
      *         For more information, see <a
      *         href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-drift.html">Detecting
-     *         Unmanaged Changes in Stack Sets</a> in the AWS CloudFormation User Guide.
+     *         Unmanaged Changes in Stack Sets</a> in the CloudFormation User Guide.
      */
 
     public StackSetDriftDetectionDetails getStackSetDriftDetectionDetails() {
@@ -1277,7 +1277,7 @@ public class StackSetOperation implements Serializable, Cloneable {
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-drift.html">Detecting Unmanaged
-     * Changes in Stack Sets</a> in the AWS CloudFormation User Guide.
+     * Changes in Stack Sets</a> in the CloudFormation User Guide.
      * </p>
      * 
      * @param stackSetDriftDetectionDetails
@@ -1290,7 +1290,7 @@ public class StackSetOperation implements Serializable, Cloneable {
      *        <p>
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-drift.html">Detecting
-     *        Unmanaged Changes in Stack Sets</a> in the AWS CloudFormation User Guide.
+     *        Unmanaged Changes in Stack Sets</a> in the CloudFormation User Guide.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

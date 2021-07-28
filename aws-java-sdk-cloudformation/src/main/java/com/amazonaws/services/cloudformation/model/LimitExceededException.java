@@ -21,7 +21,7 @@ import javax.annotation.Generated;
  * <p>
  * For information on resource and stack limitations, see <a
  * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/cloudformation-limits.html">Limits</a> in the
- * <i>AWS CloudFormation User Guide</i>.
+ * <i>CloudFormation User Guide</i>.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

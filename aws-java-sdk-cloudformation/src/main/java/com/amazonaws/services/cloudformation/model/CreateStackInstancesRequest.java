@@ -33,7 +33,7 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
     private String stackSetName;
     /**
      * <p>
-     * [Self-managed permissions] The names of one or more AWS accounts that you want to create stack instances in the
+     * [Self-managed permissions] The names of one or more accounts that you want to create stack instances in the
      * specified Region(s) for.
      * </p>
      * <p>
@@ -43,7 +43,7 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
     private com.amazonaws.internal.SdkInternalList<String> accounts;
     /**
      * <p>
-     * [Service-managed permissions] The AWS Organizations accounts for which to create stack instances in the specified
+     * [Service-managed permissions] The Organizations accounts for which to create stack instances in the specified
      * Regions.
      * </p>
      * <p>
@@ -53,7 +53,7 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
     private DeploymentTargets deploymentTargets;
     /**
      * <p>
-     * The names of one or more Regions where you want to create stack instances using the specified AWS account(s).
+     * The names of one or more Regions where you want to create stack instances using the specified accounts.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> regions;
@@ -63,8 +63,8 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * <p>
      * Any overridden parameter values will be applied to all stack instances in the specified accounts and Regions.
-     * When specifying parameters and their values, be aware of how AWS CloudFormation sets parameter values during
-     * stack instance operations:
+     * When specifying parameters and their values, be aware of how CloudFormation sets parameter values during stack
+     * instance operations:
      * </p>
      * <ul>
      * <li>
@@ -74,26 +74,15 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * </li>
      * <li>
      * <p>
-     * To leave a parameter set to its present value, you can do one of the following:
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * Do not include the parameter in the list.
+     * To leave an overridden parameter set to its present value, include the parameter and specify
+     * <code>UsePreviousValue</code> as <code>true</code>. (You cannot specify both a value and set
+     * <code>UsePreviousValue</code> to <code>true</code>.)
      * </p>
      * </li>
      * <li>
      * <p>
-     * Include the parameter and specify <code>UsePreviousValue</code> as <code>true</code>. (You cannot specify both a
-     * value and set <code>UsePreviousValue</code> to <code>true</code>.)
-     * </p>
-     * </li>
-     * </ul>
-     * </li>
-     * <li>
-     * <p>
-     * To set all overridden parameter back to the values specified in the stack set, specify a parameter list but do
-     * not include any parameters.
+     * To set an overridden parameter back to the value specified in the stack set, specify a parameter list but do not
+     * include the parameter in the list.
      * </p>
      * </li>
      * <li>
@@ -116,7 +105,7 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
     private com.amazonaws.internal.SdkInternalList<Parameter> parameterOverrides;
     /**
      * <p>
-     * Preferences for how AWS CloudFormation performs this stack set operation.
+     * Preferences for how CloudFormation performs this stack set operation.
      * </p>
      */
     private StackSetOperationPreferences operationPreferences;
@@ -125,9 +114,9 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * The unique identifier for this stack set operation.
      * </p>
      * <p>
-     * The operation ID also functions as an idempotency token, to ensure that AWS CloudFormation performs the stack set
+     * The operation ID also functions as an idempotency token, to ensure that CloudFormation performs the stack set
      * operation only once, even if you retry the request multiple times. You might retry stack set operation requests
-     * to ensure that AWS CloudFormation successfully received them.
+     * to ensure that CloudFormation successfully received them.
      * </p>
      * <p>
      * If you don't specify an operation ID, the SDK generates one automatically.
@@ -157,9 +146,9 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * If you are signed in to a delegated administrator account, specify <code>DELEGATED_ADMIN</code>.
      * </p>
      * <p>
-     * Your AWS account must be registered as a delegated administrator in the management account. For more information,
-     * see <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html">
-     * Register a delegated administrator</a> in the <i>AWS CloudFormation User Guide</i>.
+     * Your account must be registered as a delegated administrator in the management account. For more information, see
+     * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html">
+     * Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * </li>
      * </ul>
@@ -208,15 +197,15 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * [Self-managed permissions] The names of one or more AWS accounts that you want to create stack instances in the
+     * [Self-managed permissions] The names of one or more accounts that you want to create stack instances in the
      * specified Region(s) for.
      * </p>
      * <p>
      * You can specify <code>Accounts</code> or <code>DeploymentTargets</code>, but not both.
      * </p>
      * 
-     * @return [Self-managed permissions] The names of one or more AWS accounts that you want to create stack instances
-     *         in the specified Region(s) for.</p>
+     * @return [Self-managed permissions] The names of one or more accounts that you want to create stack instances in
+     *         the specified Region(s) for.</p>
      *         <p>
      *         You can specify <code>Accounts</code> or <code>DeploymentTargets</code>, but not both.
      */
@@ -230,7 +219,7 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * [Self-managed permissions] The names of one or more AWS accounts that you want to create stack instances in the
+     * [Self-managed permissions] The names of one or more accounts that you want to create stack instances in the
      * specified Region(s) for.
      * </p>
      * <p>
@@ -238,8 +227,8 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * 
      * @param accounts
-     *        [Self-managed permissions] The names of one or more AWS accounts that you want to create stack instances
-     *        in the specified Region(s) for.</p>
+     *        [Self-managed permissions] The names of one or more accounts that you want to create stack instances in
+     *        the specified Region(s) for.</p>
      *        <p>
      *        You can specify <code>Accounts</code> or <code>DeploymentTargets</code>, but not both.
      */
@@ -255,7 +244,7 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * [Self-managed permissions] The names of one or more AWS accounts that you want to create stack instances in the
+     * [Self-managed permissions] The names of one or more accounts that you want to create stack instances in the
      * specified Region(s) for.
      * </p>
      * <p>
@@ -268,8 +257,8 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * 
      * @param accounts
-     *        [Self-managed permissions] The names of one or more AWS accounts that you want to create stack instances
-     *        in the specified Region(s) for.</p>
+     *        [Self-managed permissions] The names of one or more accounts that you want to create stack instances in
+     *        the specified Region(s) for.</p>
      *        <p>
      *        You can specify <code>Accounts</code> or <code>DeploymentTargets</code>, but not both.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -287,7 +276,7 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * [Self-managed permissions] The names of one or more AWS accounts that you want to create stack instances in the
+     * [Self-managed permissions] The names of one or more accounts that you want to create stack instances in the
      * specified Region(s) for.
      * </p>
      * <p>
@@ -295,8 +284,8 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * 
      * @param accounts
-     *        [Self-managed permissions] The names of one or more AWS accounts that you want to create stack instances
-     *        in the specified Region(s) for.</p>
+     *        [Self-managed permissions] The names of one or more accounts that you want to create stack instances in
+     *        the specified Region(s) for.</p>
      *        <p>
      *        You can specify <code>Accounts</code> or <code>DeploymentTargets</code>, but not both.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -309,7 +298,7 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * [Service-managed permissions] The AWS Organizations accounts for which to create stack instances in the specified
+     * [Service-managed permissions] The Organizations accounts for which to create stack instances in the specified
      * Regions.
      * </p>
      * <p>
@@ -317,7 +306,7 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * 
      * @param deploymentTargets
-     *        [Service-managed permissions] The AWS Organizations accounts for which to create stack instances in the
+     *        [Service-managed permissions] The Organizations accounts for which to create stack instances in the
      *        specified Regions.</p>
      *        <p>
      *        You can specify <code>Accounts</code> or <code>DeploymentTargets</code>, but not both.
@@ -329,14 +318,14 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * [Service-managed permissions] The AWS Organizations accounts for which to create stack instances in the specified
+     * [Service-managed permissions] The Organizations accounts for which to create stack instances in the specified
      * Regions.
      * </p>
      * <p>
      * You can specify <code>Accounts</code> or <code>DeploymentTargets</code>, but not both.
      * </p>
      * 
-     * @return [Service-managed permissions] The AWS Organizations accounts for which to create stack instances in the
+     * @return [Service-managed permissions] The Organizations accounts for which to create stack instances in the
      *         specified Regions.</p>
      *         <p>
      *         You can specify <code>Accounts</code> or <code>DeploymentTargets</code>, but not both.
@@ -348,7 +337,7 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * [Service-managed permissions] The AWS Organizations accounts for which to create stack instances in the specified
+     * [Service-managed permissions] The Organizations accounts for which to create stack instances in the specified
      * Regions.
      * </p>
      * <p>
@@ -356,7 +345,7 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * 
      * @param deploymentTargets
-     *        [Service-managed permissions] The AWS Organizations accounts for which to create stack instances in the
+     *        [Service-managed permissions] The Organizations accounts for which to create stack instances in the
      *        specified Regions.</p>
      *        <p>
      *        You can specify <code>Accounts</code> or <code>DeploymentTargets</code>, but not both.
@@ -370,11 +359,10 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The names of one or more Regions where you want to create stack instances using the specified AWS account(s).
+     * The names of one or more Regions where you want to create stack instances using the specified accounts.
      * </p>
      * 
-     * @return The names of one or more Regions where you want to create stack instances using the specified AWS
-     *         account(s).
+     * @return The names of one or more Regions where you want to create stack instances using the specified accounts.
      */
 
     public java.util.List<String> getRegions() {
@@ -386,12 +374,11 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The names of one or more Regions where you want to create stack instances using the specified AWS account(s).
+     * The names of one or more Regions where you want to create stack instances using the specified accounts.
      * </p>
      * 
      * @param regions
-     *        The names of one or more Regions where you want to create stack instances using the specified AWS
-     *        account(s).
+     *        The names of one or more Regions where you want to create stack instances using the specified accounts.
      */
 
     public void setRegions(java.util.Collection<String> regions) {
@@ -405,7 +392,7 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The names of one or more Regions where you want to create stack instances using the specified AWS account(s).
+     * The names of one or more Regions where you want to create stack instances using the specified accounts.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -414,8 +401,7 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * 
      * @param regions
-     *        The names of one or more Regions where you want to create stack instances using the specified AWS
-     *        account(s).
+     *        The names of one or more Regions where you want to create stack instances using the specified accounts.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -431,12 +417,11 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The names of one or more Regions where you want to create stack instances using the specified AWS account(s).
+     * The names of one or more Regions where you want to create stack instances using the specified accounts.
      * </p>
      * 
      * @param regions
-     *        The names of one or more Regions where you want to create stack instances using the specified AWS
-     *        account(s).
+     *        The names of one or more Regions where you want to create stack instances using the specified accounts.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -451,8 +436,8 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * <p>
      * Any overridden parameter values will be applied to all stack instances in the specified accounts and Regions.
-     * When specifying parameters and their values, be aware of how AWS CloudFormation sets parameter values during
-     * stack instance operations:
+     * When specifying parameters and their values, be aware of how CloudFormation sets parameter values during stack
+     * instance operations:
      * </p>
      * <ul>
      * <li>
@@ -462,26 +447,15 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * </li>
      * <li>
      * <p>
-     * To leave a parameter set to its present value, you can do one of the following:
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * Do not include the parameter in the list.
+     * To leave an overridden parameter set to its present value, include the parameter and specify
+     * <code>UsePreviousValue</code> as <code>true</code>. (You cannot specify both a value and set
+     * <code>UsePreviousValue</code> to <code>true</code>.)
      * </p>
      * </li>
      * <li>
      * <p>
-     * Include the parameter and specify <code>UsePreviousValue</code> as <code>true</code>. (You cannot specify both a
-     * value and set <code>UsePreviousValue</code> to <code>true</code>.)
-     * </p>
-     * </li>
-     * </ul>
-     * </li>
-     * <li>
-     * <p>
-     * To set all overridden parameter back to the values specified in the stack set, specify a parameter list but do
-     * not include any parameters.
+     * To set an overridden parameter back to the value specified in the stack set, specify a parameter list but do not
+     * include the parameter in the list.
      * </p>
      * </li>
      * <li>
@@ -504,7 +478,7 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * @return A list of stack set parameters whose values you want to override in the selected stack instances.</p>
      *         <p>
      *         Any overridden parameter values will be applied to all stack instances in the specified accounts and
-     *         Regions. When specifying parameters and their values, be aware of how AWS CloudFormation sets parameter
+     *         Regions. When specifying parameters and their values, be aware of how CloudFormation sets parameter
      *         values during stack instance operations:
      *         </p>
      *         <ul>
@@ -515,26 +489,15 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      *         </li>
      *         <li>
      *         <p>
-     *         To leave a parameter set to its present value, you can do one of the following:
-     *         </p>
-     *         <ul>
-     *         <li>
-     *         <p>
-     *         Do not include the parameter in the list.
+     *         To leave an overridden parameter set to its present value, include the parameter and specify
+     *         <code>UsePreviousValue</code> as <code>true</code>. (You cannot specify both a value and set
+     *         <code>UsePreviousValue</code> to <code>true</code>.)
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         Include the parameter and specify <code>UsePreviousValue</code> as <code>true</code>. (You cannot specify
-     *         both a value and set <code>UsePreviousValue</code> to <code>true</code>.)
-     *         </p>
-     *         </li>
-     *         </ul>
-     *         </li>
-     *         <li>
-     *         <p>
-     *         To set all overridden parameter back to the values specified in the stack set, specify a parameter list
-     *         but do not include any parameters.
+     *         To set an overridden parameter back to the value specified in the stack set, specify a parameter list but
+     *         do not include the parameter in the list.
      *         </p>
      *         </li>
      *         <li>
@@ -567,8 +530,8 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * <p>
      * Any overridden parameter values will be applied to all stack instances in the specified accounts and Regions.
-     * When specifying parameters and their values, be aware of how AWS CloudFormation sets parameter values during
-     * stack instance operations:
+     * When specifying parameters and their values, be aware of how CloudFormation sets parameter values during stack
+     * instance operations:
      * </p>
      * <ul>
      * <li>
@@ -578,26 +541,15 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * </li>
      * <li>
      * <p>
-     * To leave a parameter set to its present value, you can do one of the following:
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * Do not include the parameter in the list.
+     * To leave an overridden parameter set to its present value, include the parameter and specify
+     * <code>UsePreviousValue</code> as <code>true</code>. (You cannot specify both a value and set
+     * <code>UsePreviousValue</code> to <code>true</code>.)
      * </p>
      * </li>
      * <li>
      * <p>
-     * Include the parameter and specify <code>UsePreviousValue</code> as <code>true</code>. (You cannot specify both a
-     * value and set <code>UsePreviousValue</code> to <code>true</code>.)
-     * </p>
-     * </li>
-     * </ul>
-     * </li>
-     * <li>
-     * <p>
-     * To set all overridden parameter back to the values specified in the stack set, specify a parameter list but do
-     * not include any parameters.
+     * To set an overridden parameter back to the value specified in the stack set, specify a parameter list but do not
+     * include the parameter in the list.
      * </p>
      * </li>
      * <li>
@@ -621,8 +573,8 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      *        A list of stack set parameters whose values you want to override in the selected stack instances.</p>
      *        <p>
      *        Any overridden parameter values will be applied to all stack instances in the specified accounts and
-     *        Regions. When specifying parameters and their values, be aware of how AWS CloudFormation sets parameter
-     *        values during stack instance operations:
+     *        Regions. When specifying parameters and their values, be aware of how CloudFormation sets parameter values
+     *        during stack instance operations:
      *        </p>
      *        <ul>
      *        <li>
@@ -632,26 +584,15 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      *        </li>
      *        <li>
      *        <p>
-     *        To leave a parameter set to its present value, you can do one of the following:
-     *        </p>
-     *        <ul>
-     *        <li>
-     *        <p>
-     *        Do not include the parameter in the list.
+     *        To leave an overridden parameter set to its present value, include the parameter and specify
+     *        <code>UsePreviousValue</code> as <code>true</code>. (You cannot specify both a value and set
+     *        <code>UsePreviousValue</code> to <code>true</code>.)
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        Include the parameter and specify <code>UsePreviousValue</code> as <code>true</code>. (You cannot specify
-     *        both a value and set <code>UsePreviousValue</code> to <code>true</code>.)
-     *        </p>
-     *        </li>
-     *        </ul>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        To set all overridden parameter back to the values specified in the stack set, specify a parameter list
-     *        but do not include any parameters.
+     *        To set an overridden parameter back to the value specified in the stack set, specify a parameter list but
+     *        do not include the parameter in the list.
      *        </p>
      *        </li>
      *        <li>
@@ -686,8 +627,8 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * <p>
      * Any overridden parameter values will be applied to all stack instances in the specified accounts and Regions.
-     * When specifying parameters and their values, be aware of how AWS CloudFormation sets parameter values during
-     * stack instance operations:
+     * When specifying parameters and their values, be aware of how CloudFormation sets parameter values during stack
+     * instance operations:
      * </p>
      * <ul>
      * <li>
@@ -697,26 +638,15 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * </li>
      * <li>
      * <p>
-     * To leave a parameter set to its present value, you can do one of the following:
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * Do not include the parameter in the list.
+     * To leave an overridden parameter set to its present value, include the parameter and specify
+     * <code>UsePreviousValue</code> as <code>true</code>. (You cannot specify both a value and set
+     * <code>UsePreviousValue</code> to <code>true</code>.)
      * </p>
      * </li>
      * <li>
      * <p>
-     * Include the parameter and specify <code>UsePreviousValue</code> as <code>true</code>. (You cannot specify both a
-     * value and set <code>UsePreviousValue</code> to <code>true</code>.)
-     * </p>
-     * </li>
-     * </ul>
-     * </li>
-     * <li>
-     * <p>
-     * To set all overridden parameter back to the values specified in the stack set, specify a parameter list but do
-     * not include any parameters.
+     * To set an overridden parameter back to the value specified in the stack set, specify a parameter list but do not
+     * include the parameter in the list.
      * </p>
      * </li>
      * <li>
@@ -745,8 +675,8 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      *        A list of stack set parameters whose values you want to override in the selected stack instances.</p>
      *        <p>
      *        Any overridden parameter values will be applied to all stack instances in the specified accounts and
-     *        Regions. When specifying parameters and their values, be aware of how AWS CloudFormation sets parameter
-     *        values during stack instance operations:
+     *        Regions. When specifying parameters and their values, be aware of how CloudFormation sets parameter values
+     *        during stack instance operations:
      *        </p>
      *        <ul>
      *        <li>
@@ -756,26 +686,15 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      *        </li>
      *        <li>
      *        <p>
-     *        To leave a parameter set to its present value, you can do one of the following:
-     *        </p>
-     *        <ul>
-     *        <li>
-     *        <p>
-     *        Do not include the parameter in the list.
+     *        To leave an overridden parameter set to its present value, include the parameter and specify
+     *        <code>UsePreviousValue</code> as <code>true</code>. (You cannot specify both a value and set
+     *        <code>UsePreviousValue</code> to <code>true</code>.)
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        Include the parameter and specify <code>UsePreviousValue</code> as <code>true</code>. (You cannot specify
-     *        both a value and set <code>UsePreviousValue</code> to <code>true</code>.)
-     *        </p>
-     *        </li>
-     *        </ul>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        To set all overridden parameter back to the values specified in the stack set, specify a parameter list
-     *        but do not include any parameters.
+     *        To set an overridden parameter back to the value specified in the stack set, specify a parameter list but
+     *        do not include the parameter in the list.
      *        </p>
      *        </li>
      *        <li>
@@ -812,8 +731,8 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * <p>
      * Any overridden parameter values will be applied to all stack instances in the specified accounts and Regions.
-     * When specifying parameters and their values, be aware of how AWS CloudFormation sets parameter values during
-     * stack instance operations:
+     * When specifying parameters and their values, be aware of how CloudFormation sets parameter values during stack
+     * instance operations:
      * </p>
      * <ul>
      * <li>
@@ -823,26 +742,15 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * </li>
      * <li>
      * <p>
-     * To leave a parameter set to its present value, you can do one of the following:
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * Do not include the parameter in the list.
+     * To leave an overridden parameter set to its present value, include the parameter and specify
+     * <code>UsePreviousValue</code> as <code>true</code>. (You cannot specify both a value and set
+     * <code>UsePreviousValue</code> to <code>true</code>.)
      * </p>
      * </li>
      * <li>
      * <p>
-     * Include the parameter and specify <code>UsePreviousValue</code> as <code>true</code>. (You cannot specify both a
-     * value and set <code>UsePreviousValue</code> to <code>true</code>.)
-     * </p>
-     * </li>
-     * </ul>
-     * </li>
-     * <li>
-     * <p>
-     * To set all overridden parameter back to the values specified in the stack set, specify a parameter list but do
-     * not include any parameters.
+     * To set an overridden parameter back to the value specified in the stack set, specify a parameter list but do not
+     * include the parameter in the list.
      * </p>
      * </li>
      * <li>
@@ -866,8 +774,8 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      *        A list of stack set parameters whose values you want to override in the selected stack instances.</p>
      *        <p>
      *        Any overridden parameter values will be applied to all stack instances in the specified accounts and
-     *        Regions. When specifying parameters and their values, be aware of how AWS CloudFormation sets parameter
-     *        values during stack instance operations:
+     *        Regions. When specifying parameters and their values, be aware of how CloudFormation sets parameter values
+     *        during stack instance operations:
      *        </p>
      *        <ul>
      *        <li>
@@ -877,26 +785,15 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      *        </li>
      *        <li>
      *        <p>
-     *        To leave a parameter set to its present value, you can do one of the following:
-     *        </p>
-     *        <ul>
-     *        <li>
-     *        <p>
-     *        Do not include the parameter in the list.
+     *        To leave an overridden parameter set to its present value, include the parameter and specify
+     *        <code>UsePreviousValue</code> as <code>true</code>. (You cannot specify both a value and set
+     *        <code>UsePreviousValue</code> to <code>true</code>.)
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        Include the parameter and specify <code>UsePreviousValue</code> as <code>true</code>. (You cannot specify
-     *        both a value and set <code>UsePreviousValue</code> to <code>true</code>.)
-     *        </p>
-     *        </li>
-     *        </ul>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        To set all overridden parameter back to the values specified in the stack set, specify a parameter list
-     *        but do not include any parameters.
+     *        To set an overridden parameter back to the value specified in the stack set, specify a parameter list but
+     *        do not include the parameter in the list.
      *        </p>
      *        </li>
      *        <li>
@@ -924,11 +821,11 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Preferences for how AWS CloudFormation performs this stack set operation.
+     * Preferences for how CloudFormation performs this stack set operation.
      * </p>
      * 
      * @param operationPreferences
-     *        Preferences for how AWS CloudFormation performs this stack set operation.
+     *        Preferences for how CloudFormation performs this stack set operation.
      */
 
     public void setOperationPreferences(StackSetOperationPreferences operationPreferences) {
@@ -937,10 +834,10 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Preferences for how AWS CloudFormation performs this stack set operation.
+     * Preferences for how CloudFormation performs this stack set operation.
      * </p>
      * 
-     * @return Preferences for how AWS CloudFormation performs this stack set operation.
+     * @return Preferences for how CloudFormation performs this stack set operation.
      */
 
     public StackSetOperationPreferences getOperationPreferences() {
@@ -949,11 +846,11 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Preferences for how AWS CloudFormation performs this stack set operation.
+     * Preferences for how CloudFormation performs this stack set operation.
      * </p>
      * 
      * @param operationPreferences
-     *        Preferences for how AWS CloudFormation performs this stack set operation.
+     *        Preferences for how CloudFormation performs this stack set operation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -967,9 +864,9 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * The unique identifier for this stack set operation.
      * </p>
      * <p>
-     * The operation ID also functions as an idempotency token, to ensure that AWS CloudFormation performs the stack set
+     * The operation ID also functions as an idempotency token, to ensure that CloudFormation performs the stack set
      * operation only once, even if you retry the request multiple times. You might retry stack set operation requests
-     * to ensure that AWS CloudFormation successfully received them.
+     * to ensure that CloudFormation successfully received them.
      * </p>
      * <p>
      * If you don't specify an operation ID, the SDK generates one automatically.
@@ -982,9 +879,9 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * @param operationId
      *        The unique identifier for this stack set operation. </p>
      *        <p>
-     *        The operation ID also functions as an idempotency token, to ensure that AWS CloudFormation performs the
-     *        stack set operation only once, even if you retry the request multiple times. You might retry stack set
-     *        operation requests to ensure that AWS CloudFormation successfully received them.
+     *        The operation ID also functions as an idempotency token, to ensure that CloudFormation performs the stack
+     *        set operation only once, even if you retry the request multiple times. You might retry stack set operation
+     *        requests to ensure that CloudFormation successfully received them.
      *        </p>
      *        <p>
      *        If you don't specify an operation ID, the SDK generates one automatically.
@@ -1003,9 +900,9 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * The unique identifier for this stack set operation.
      * </p>
      * <p>
-     * The operation ID also functions as an idempotency token, to ensure that AWS CloudFormation performs the stack set
+     * The operation ID also functions as an idempotency token, to ensure that CloudFormation performs the stack set
      * operation only once, even if you retry the request multiple times. You might retry stack set operation requests
-     * to ensure that AWS CloudFormation successfully received them.
+     * to ensure that CloudFormation successfully received them.
      * </p>
      * <p>
      * If you don't specify an operation ID, the SDK generates one automatically.
@@ -1017,9 +914,9 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * 
      * @return The unique identifier for this stack set operation. </p>
      *         <p>
-     *         The operation ID also functions as an idempotency token, to ensure that AWS CloudFormation performs the
-     *         stack set operation only once, even if you retry the request multiple times. You might retry stack set
-     *         operation requests to ensure that AWS CloudFormation successfully received them.
+     *         The operation ID also functions as an idempotency token, to ensure that CloudFormation performs the stack
+     *         set operation only once, even if you retry the request multiple times. You might retry stack set
+     *         operation requests to ensure that CloudFormation successfully received them.
      *         </p>
      *         <p>
      *         If you don't specify an operation ID, the SDK generates one automatically.
@@ -1038,9 +935,9 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * The unique identifier for this stack set operation.
      * </p>
      * <p>
-     * The operation ID also functions as an idempotency token, to ensure that AWS CloudFormation performs the stack set
+     * The operation ID also functions as an idempotency token, to ensure that CloudFormation performs the stack set
      * operation only once, even if you retry the request multiple times. You might retry stack set operation requests
-     * to ensure that AWS CloudFormation successfully received them.
+     * to ensure that CloudFormation successfully received them.
      * </p>
      * <p>
      * If you don't specify an operation ID, the SDK generates one automatically.
@@ -1053,9 +950,9 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * @param operationId
      *        The unique identifier for this stack set operation. </p>
      *        <p>
-     *        The operation ID also functions as an idempotency token, to ensure that AWS CloudFormation performs the
-     *        stack set operation only once, even if you retry the request multiple times. You might retry stack set
-     *        operation requests to ensure that AWS CloudFormation successfully received them.
+     *        The operation ID also functions as an idempotency token, to ensure that CloudFormation performs the stack
+     *        set operation only once, even if you retry the request multiple times. You might retry stack set operation
+     *        requests to ensure that CloudFormation successfully received them.
      *        </p>
      *        <p>
      *        If you don't specify an operation ID, the SDK generates one automatically.
@@ -1090,9 +987,9 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * If you are signed in to a delegated administrator account, specify <code>DELEGATED_ADMIN</code>.
      * </p>
      * <p>
-     * Your AWS account must be registered as a delegated administrator in the management account. For more information,
-     * see <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html">
-     * Register a delegated administrator</a> in the <i>AWS CloudFormation User Guide</i>.
+     * Your account must be registered as a delegated administrator in the management account. For more information, see
+     * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html">
+     * Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * </li>
      * </ul>
@@ -1115,10 +1012,10 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      *        If you are signed in to a delegated administrator account, specify <code>DELEGATED_ADMIN</code>.
      *        </p>
      *        <p>
-     *        Your AWS account must be registered as a delegated administrator in the management account. For more
+     *        Your account must be registered as a delegated administrator in the management account. For more
      *        information, see <a href=
      *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html"
-     *        >Register a delegated administrator</a> in the <i>AWS CloudFormation User Guide</i>.
+     *        >Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
      *        </p>
      *        </li>
      * @see CallAs
@@ -1147,9 +1044,9 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * If you are signed in to a delegated administrator account, specify <code>DELEGATED_ADMIN</code>.
      * </p>
      * <p>
-     * Your AWS account must be registered as a delegated administrator in the management account. For more information,
-     * see <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html">
-     * Register a delegated administrator</a> in the <i>AWS CloudFormation User Guide</i>.
+     * Your account must be registered as a delegated administrator in the management account. For more information, see
+     * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html">
+     * Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * </li>
      * </ul>
@@ -1171,10 +1068,10 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      *         If you are signed in to a delegated administrator account, specify <code>DELEGATED_ADMIN</code>.
      *         </p>
      *         <p>
-     *         Your AWS account must be registered as a delegated administrator in the management account. For more
+     *         Your account must be registered as a delegated administrator in the management account. For more
      *         information, see <a href=
      *         "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html"
-     *         >Register a delegated administrator</a> in the <i>AWS CloudFormation User Guide</i>.
+     *         >Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
      *         </p>
      *         </li>
      * @see CallAs
@@ -1203,9 +1100,9 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * If you are signed in to a delegated administrator account, specify <code>DELEGATED_ADMIN</code>.
      * </p>
      * <p>
-     * Your AWS account must be registered as a delegated administrator in the management account. For more information,
-     * see <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html">
-     * Register a delegated administrator</a> in the <i>AWS CloudFormation User Guide</i>.
+     * Your account must be registered as a delegated administrator in the management account. For more information, see
+     * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html">
+     * Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * </li>
      * </ul>
@@ -1228,10 +1125,10 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      *        If you are signed in to a delegated administrator account, specify <code>DELEGATED_ADMIN</code>.
      *        </p>
      *        <p>
-     *        Your AWS account must be registered as a delegated administrator in the management account. For more
+     *        Your account must be registered as a delegated administrator in the management account. For more
      *        information, see <a href=
      *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html"
-     *        >Register a delegated administrator</a> in the <i>AWS CloudFormation User Guide</i>.
+     *        >Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -1262,9 +1159,9 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * If you are signed in to a delegated administrator account, specify <code>DELEGATED_ADMIN</code>.
      * </p>
      * <p>
-     * Your AWS account must be registered as a delegated administrator in the management account. For more information,
-     * see <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html">
-     * Register a delegated administrator</a> in the <i>AWS CloudFormation User Guide</i>.
+     * Your account must be registered as a delegated administrator in the management account. For more information, see
+     * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html">
+     * Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * </li>
      * </ul>
@@ -1287,10 +1184,10 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      *        If you are signed in to a delegated administrator account, specify <code>DELEGATED_ADMIN</code>.
      *        </p>
      *        <p>
-     *        Your AWS account must be registered as a delegated administrator in the management account. For more
+     *        Your account must be registered as a delegated administrator in the management account. For more
      *        information, see <a href=
      *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html"
-     *        >Register a delegated administrator</a> in the <i>AWS CloudFormation User Guide</i>.
+     *        >Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

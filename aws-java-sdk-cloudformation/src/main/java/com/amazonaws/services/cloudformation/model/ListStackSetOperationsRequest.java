@@ -68,9 +68,9 @@ public class ListStackSetOperationsRequest extends com.amazonaws.AmazonWebServic
      * If you are signed in to a delegated administrator account, specify <code>DELEGATED_ADMIN</code>.
      * </p>
      * <p>
-     * Your AWS account must be registered as a delegated administrator in the management account. For more information,
-     * see <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html">
-     * Register a delegated administrator</a> in the <i>AWS CloudFormation User Guide</i>.
+     * Your account must be registered as a delegated administrator in the management account. For more information, see
+     * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html">
+     * Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * </li>
      * </ul>
@@ -252,9 +252,9 @@ public class ListStackSetOperationsRequest extends com.amazonaws.AmazonWebServic
      * If you are signed in to a delegated administrator account, specify <code>DELEGATED_ADMIN</code>.
      * </p>
      * <p>
-     * Your AWS account must be registered as a delegated administrator in the management account. For more information,
-     * see <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html">
-     * Register a delegated administrator</a> in the <i>AWS CloudFormation User Guide</i>.
+     * Your account must be registered as a delegated administrator in the management account. For more information, see
+     * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html">
+     * Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * </li>
      * </ul>
@@ -277,10 +277,10 @@ public class ListStackSetOperationsRequest extends com.amazonaws.AmazonWebServic
      *        If you are signed in to a delegated administrator account, specify <code>DELEGATED_ADMIN</code>.
      *        </p>
      *        <p>
-     *        Your AWS account must be registered as a delegated administrator in the management account. For more
+     *        Your account must be registered as a delegated administrator in the management account. For more
      *        information, see <a href=
      *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html"
-     *        >Register a delegated administrator</a> in the <i>AWS CloudFormation User Guide</i>.
+     *        >Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
      *        </p>
      *        </li>
      * @see CallAs
@@ -309,9 +309,9 @@ public class ListStackSetOperationsRequest extends com.amazonaws.AmazonWebServic
      * If you are signed in to a delegated administrator account, specify <code>DELEGATED_ADMIN</code>.
      * </p>
      * <p>
-     * Your AWS account must be registered as a delegated administrator in the management account. For more information,
-     * see <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html">
-     * Register a delegated administrator</a> in the <i>AWS CloudFormation User Guide</i>.
+     * Your account must be registered as a delegated administrator in the management account. For more information, see
+     * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html">
+     * Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * </li>
      * </ul>
@@ -333,10 +333,10 @@ public class ListStackSetOperationsRequest extends com.amazonaws.AmazonWebServic
      *         If you are signed in to a delegated administrator account, specify <code>DELEGATED_ADMIN</code>.
      *         </p>
      *         <p>
-     *         Your AWS account must be registered as a delegated administrator in the management account. For more
+     *         Your account must be registered as a delegated administrator in the management account. For more
      *         information, see <a href=
      *         "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html"
-     *         >Register a delegated administrator</a> in the <i>AWS CloudFormation User Guide</i>.
+     *         >Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
      *         </p>
      *         </li>
      * @see CallAs
@@ -365,9 +365,9 @@ public class ListStackSetOperationsRequest extends com.amazonaws.AmazonWebServic
      * If you are signed in to a delegated administrator account, specify <code>DELEGATED_ADMIN</code>.
      * </p>
      * <p>
-     * Your AWS account must be registered as a delegated administrator in the management account. For more information,
-     * see <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html">
-     * Register a delegated administrator</a> in the <i>AWS CloudFormation User Guide</i>.
+     * Your account must be registered as a delegated administrator in the management account. For more information, see
+     * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html">
+     * Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * </li>
      * </ul>
@@ -390,10 +390,10 @@ public class ListStackSetOperationsRequest extends com.amazonaws.AmazonWebServic
      *        If you are signed in to a delegated administrator account, specify <code>DELEGATED_ADMIN</code>.
      *        </p>
      *        <p>
-     *        Your AWS account must be registered as a delegated administrator in the management account. For more
+     *        Your account must be registered as a delegated administrator in the management account. For more
      *        information, see <a href=
      *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html"
-     *        >Register a delegated administrator</a> in the <i>AWS CloudFormation User Guide</i>.
+     *        >Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -424,9 +424,9 @@ public class ListStackSetOperationsRequest extends com.amazonaws.AmazonWebServic
      * If you are signed in to a delegated administrator account, specify <code>DELEGATED_ADMIN</code>.
      * </p>
      * <p>
-     * Your AWS account must be registered as a delegated administrator in the management account. For more information,
-     * see <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html">
-     * Register a delegated administrator</a> in the <i>AWS CloudFormation User Guide</i>.
+     * Your account must be registered as a delegated administrator in the management account. For more information, see
+     * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html">
+     * Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * </li>
      * </ul>
@@ -449,10 +449,10 @@ public class ListStackSetOperationsRequest extends com.amazonaws.AmazonWebServic
      *        If you are signed in to a delegated administrator account, specify <code>DELEGATED_ADMIN</code>.
      *        </p>
      *        <p>
-     *        Your AWS account must be registered as a delegated administrator in the management account. For more
+     *        Your account must be registered as a delegated administrator in the management account. For more
      *        information, see <a href=
      *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html"
-     *        >Register a delegated administrator</a> in the <i>AWS CloudFormation User Guide</i>.
+     *        >Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

@@ -51,7 +51,7 @@ public class SignalResourceRequest extends com.amazonaws.AmazonWebServiceRequest
     private String uniqueId;
     /**
      * <p>
-     * The status of the signal, which is either success or failure. A failure signal causes AWS CloudFormation to
+     * The status of the signal, which is either success or failure. A failure signal causes CloudFormation to
      * immediately fail the stack creation or update.
      * </p>
      */
@@ -197,13 +197,13 @@ public class SignalResourceRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The status of the signal, which is either success or failure. A failure signal causes AWS CloudFormation to
+     * The status of the signal, which is either success or failure. A failure signal causes CloudFormation to
      * immediately fail the stack creation or update.
      * </p>
      * 
      * @param status
-     *        The status of the signal, which is either success or failure. A failure signal causes AWS CloudFormation
-     *        to immediately fail the stack creation or update.
+     *        The status of the signal, which is either success or failure. A failure signal causes CloudFormation to
+     *        immediately fail the stack creation or update.
      * @see ResourceSignalStatus
      */
 
@@ -213,12 +213,12 @@ public class SignalResourceRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The status of the signal, which is either success or failure. A failure signal causes AWS CloudFormation to
+     * The status of the signal, which is either success or failure. A failure signal causes CloudFormation to
      * immediately fail the stack creation or update.
      * </p>
      * 
-     * @return The status of the signal, which is either success or failure. A failure signal causes AWS CloudFormation
-     *         to immediately fail the stack creation or update.
+     * @return The status of the signal, which is either success or failure. A failure signal causes CloudFormation to
+     *         immediately fail the stack creation or update.
      * @see ResourceSignalStatus
      */
 
@@ -228,13 +228,13 @@ public class SignalResourceRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The status of the signal, which is either success or failure. A failure signal causes AWS CloudFormation to
+     * The status of the signal, which is either success or failure. A failure signal causes CloudFormation to
      * immediately fail the stack creation or update.
      * </p>
      * 
      * @param status
-     *        The status of the signal, which is either success or failure. A failure signal causes AWS CloudFormation
-     *        to immediately fail the stack creation or update.
+     *        The status of the signal, which is either success or failure. A failure signal causes CloudFormation to
+     *        immediately fail the stack creation or update.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ResourceSignalStatus
      */
@@ -246,13 +246,13 @@ public class SignalResourceRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The status of the signal, which is either success or failure. A failure signal causes AWS CloudFormation to
+     * The status of the signal, which is either success or failure. A failure signal causes CloudFormation to
      * immediately fail the stack creation or update.
      * </p>
      * 
      * @param status
-     *        The status of the signal, which is either success or failure. A failure signal causes AWS CloudFormation
-     *        to immediately fail the stack creation or update.
+     *        The status of the signal, which is either success or failure. A failure signal causes CloudFormation to
+     *        immediately fail the stack creation or update.
      * @see ResourceSignalStatus
      */
 
@@ -262,13 +262,13 @@ public class SignalResourceRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The status of the signal, which is either success or failure. A failure signal causes AWS CloudFormation to
+     * The status of the signal, which is either success or failure. A failure signal causes CloudFormation to
      * immediately fail the stack creation or update.
      * </p>
      * 
      * @param status
-     *        The status of the signal, which is either success or failure. A failure signal causes AWS CloudFormation
-     *        to immediately fail the stack creation or update.
+     *        The status of the signal, which is either success or failure. A failure signal causes CloudFormation to
+     *        immediately fail the stack creation or update.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ResourceSignalStatus
      */

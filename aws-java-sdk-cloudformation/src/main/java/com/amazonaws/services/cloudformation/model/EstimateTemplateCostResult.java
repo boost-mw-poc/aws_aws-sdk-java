@@ -28,21 +28,21 @@ public class EstimateTemplateCostResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * An AWS Simple Monthly Calculator URL with a query string that describes the resources required to run the
-     * template.
+     * An Amazon Web Services Simple Monthly Calculator URL with a query string that describes the resources required to
+     * run the template.
      * </p>
      */
     private String url;
 
     /**
      * <p>
-     * An AWS Simple Monthly Calculator URL with a query string that describes the resources required to run the
-     * template.
+     * An Amazon Web Services Simple Monthly Calculator URL with a query string that describes the resources required to
+     * run the template.
      * </p>
      * 
      * @param url
-     *        An AWS Simple Monthly Calculator URL with a query string that describes the resources required to run the
-     *        template.
+     *        An Amazon Web Services Simple Monthly Calculator URL with a query string that describes the resources
+     *        required to run the template.
      */
 
     public void setUrl(String url) {
@@ -51,12 +51,12 @@ public class EstimateTemplateCostResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * An AWS Simple Monthly Calculator URL with a query string that describes the resources required to run the
-     * template.
+     * An Amazon Web Services Simple Monthly Calculator URL with a query string that describes the resources required to
+     * run the template.
      * </p>
      * 
-     * @return An AWS Simple Monthly Calculator URL with a query string that describes the resources required to run the
-     *         template.
+     * @return An Amazon Web Services Simple Monthly Calculator URL with a query string that describes the resources
+     *         required to run the template.
      */
 
     public String getUrl() {
@@ -65,13 +65,13 @@ public class EstimateTemplateCostResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * An AWS Simple Monthly Calculator URL with a query string that describes the resources required to run the
-     * template.
+     * An Amazon Web Services Simple Monthly Calculator URL with a query string that describes the resources required to
+     * run the template.
      * </p>
      * 
      * @param url
-     *        An AWS Simple Monthly Calculator URL with a query string that describes the resources required to run the
-     *        template.
+     *        An Amazon Web Services Simple Monthly Calculator URL with a query string that describes the resources
+     *        required to run the template.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

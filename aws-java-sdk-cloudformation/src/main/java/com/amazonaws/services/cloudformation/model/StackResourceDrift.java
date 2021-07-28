@@ -18,8 +18,8 @@ import javax.annotation.Generated;
 /**
  * <p>
  * Contains the drift information for a resource that has been checked for drift. This includes actual and expected
- * property values for resources in which AWS CloudFormation has detected drift. Only resource properties explicitly
- * defined in the stack template are checked for drift. For more information, see <a
+ * property values for resources in which CloudFormation has detected drift. Only resource properties explicitly defined
+ * in the stack template are checked for drift. For more information, see <a
  * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-stack-drift.html">Detecting
  * Unregulated Configuration Changes to Stacks and Resources</a>.
  * </p>
@@ -54,16 +54,16 @@ public class StackResourceDrift implements Serializable, Cloneable {
     private String logicalResourceId;
     /**
      * <p>
-     * The name or unique identifier that corresponds to a physical instance ID of a resource supported by AWS
+     * The name or unique identifier that corresponds to a physical instance ID of a resource supported by
      * CloudFormation.
      * </p>
      */
     private String physicalResourceId;
     /**
      * <p>
-     * Context information that enables AWS CloudFormation to uniquely identify a resource. AWS CloudFormation uses
-     * context key-value pairs in cases where a resource's logical and physical IDs are not enough to uniquely identify
-     * that resource. Each context key-value pair specifies a unique resource that contains the targeted resource.
+     * Context information that enables CloudFormation to uniquely identify a resource. CloudFormation uses context
+     * key-value pairs in cases where a resource's logical and physical IDs are not enough to uniquely identify that
+     * resource. Each context key-value pair specifies a unique resource that contains the targeted resource.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<PhysicalResourceIdContextKeyValuePair> physicalResourceIdContext;
@@ -125,7 +125,7 @@ public class StackResourceDrift implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>NOT_CHECKED</code>: AWS CloudFormation does not currently return this value.
+     * <code>NOT_CHECKED</code>: CloudFormation does not currently return this value.
      * </p>
      * </li>
      * </ul>
@@ -133,7 +133,7 @@ public class StackResourceDrift implements Serializable, Cloneable {
     private String stackResourceDriftStatus;
     /**
      * <p>
-     * Time at which AWS CloudFormation performed drift detection on the stack resource.
+     * Time at which CloudFormation performed drift detection on the stack resource.
      * </p>
      */
     private java.util.Date timestamp;
@@ -227,12 +227,12 @@ public class StackResourceDrift implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The name or unique identifier that corresponds to a physical instance ID of a resource supported by AWS
+     * The name or unique identifier that corresponds to a physical instance ID of a resource supported by
      * CloudFormation.
      * </p>
      * 
      * @param physicalResourceId
-     *        The name or unique identifier that corresponds to a physical instance ID of a resource supported by AWS
+     *        The name or unique identifier that corresponds to a physical instance ID of a resource supported by
      *        CloudFormation.
      */
 
@@ -242,11 +242,11 @@ public class StackResourceDrift implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The name or unique identifier that corresponds to a physical instance ID of a resource supported by AWS
+     * The name or unique identifier that corresponds to a physical instance ID of a resource supported by
      * CloudFormation.
      * </p>
      * 
-     * @return The name or unique identifier that corresponds to a physical instance ID of a resource supported by AWS
+     * @return The name or unique identifier that corresponds to a physical instance ID of a resource supported by
      *         CloudFormation.
      */
 
@@ -256,12 +256,12 @@ public class StackResourceDrift implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The name or unique identifier that corresponds to a physical instance ID of a resource supported by AWS
+     * The name or unique identifier that corresponds to a physical instance ID of a resource supported by
      * CloudFormation.
      * </p>
      * 
      * @param physicalResourceId
-     *        The name or unique identifier that corresponds to a physical instance ID of a resource supported by AWS
+     *        The name or unique identifier that corresponds to a physical instance ID of a resource supported by
      *        CloudFormation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -273,15 +273,15 @@ public class StackResourceDrift implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Context information that enables AWS CloudFormation to uniquely identify a resource. AWS CloudFormation uses
-     * context key-value pairs in cases where a resource's logical and physical IDs are not enough to uniquely identify
-     * that resource. Each context key-value pair specifies a unique resource that contains the targeted resource.
+     * Context information that enables CloudFormation to uniquely identify a resource. CloudFormation uses context
+     * key-value pairs in cases where a resource's logical and physical IDs are not enough to uniquely identify that
+     * resource. Each context key-value pair specifies a unique resource that contains the targeted resource.
      * </p>
      * 
-     * @return Context information that enables AWS CloudFormation to uniquely identify a resource. AWS CloudFormation
-     *         uses context key-value pairs in cases where a resource's logical and physical IDs are not enough to
-     *         uniquely identify that resource. Each context key-value pair specifies a unique resource that contains
-     *         the targeted resource.
+     * @return Context information that enables CloudFormation to uniquely identify a resource. CloudFormation uses
+     *         context key-value pairs in cases where a resource's logical and physical IDs are not enough to uniquely
+     *         identify that resource. Each context key-value pair specifies a unique resource that contains the
+     *         targeted resource.
      */
 
     public java.util.List<PhysicalResourceIdContextKeyValuePair> getPhysicalResourceIdContext() {
@@ -293,16 +293,16 @@ public class StackResourceDrift implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Context information that enables AWS CloudFormation to uniquely identify a resource. AWS CloudFormation uses
-     * context key-value pairs in cases where a resource's logical and physical IDs are not enough to uniquely identify
-     * that resource. Each context key-value pair specifies a unique resource that contains the targeted resource.
+     * Context information that enables CloudFormation to uniquely identify a resource. CloudFormation uses context
+     * key-value pairs in cases where a resource's logical and physical IDs are not enough to uniquely identify that
+     * resource. Each context key-value pair specifies a unique resource that contains the targeted resource.
      * </p>
      * 
      * @param physicalResourceIdContext
-     *        Context information that enables AWS CloudFormation to uniquely identify a resource. AWS CloudFormation
-     *        uses context key-value pairs in cases where a resource's logical and physical IDs are not enough to
-     *        uniquely identify that resource. Each context key-value pair specifies a unique resource that contains the
-     *        targeted resource.
+     *        Context information that enables CloudFormation to uniquely identify a resource. CloudFormation uses
+     *        context key-value pairs in cases where a resource's logical and physical IDs are not enough to uniquely
+     *        identify that resource. Each context key-value pair specifies a unique resource that contains the targeted
+     *        resource.
      */
 
     public void setPhysicalResourceIdContext(java.util.Collection<PhysicalResourceIdContextKeyValuePair> physicalResourceIdContext) {
@@ -316,9 +316,9 @@ public class StackResourceDrift implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Context information that enables AWS CloudFormation to uniquely identify a resource. AWS CloudFormation uses
-     * context key-value pairs in cases where a resource's logical and physical IDs are not enough to uniquely identify
-     * that resource. Each context key-value pair specifies a unique resource that contains the targeted resource.
+     * Context information that enables CloudFormation to uniquely identify a resource. CloudFormation uses context
+     * key-value pairs in cases where a resource's logical and physical IDs are not enough to uniquely identify that
+     * resource. Each context key-value pair specifies a unique resource that contains the targeted resource.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -327,10 +327,10 @@ public class StackResourceDrift implements Serializable, Cloneable {
      * </p>
      * 
      * @param physicalResourceIdContext
-     *        Context information that enables AWS CloudFormation to uniquely identify a resource. AWS CloudFormation
-     *        uses context key-value pairs in cases where a resource's logical and physical IDs are not enough to
-     *        uniquely identify that resource. Each context key-value pair specifies a unique resource that contains the
-     *        targeted resource.
+     *        Context information that enables CloudFormation to uniquely identify a resource. CloudFormation uses
+     *        context key-value pairs in cases where a resource's logical and physical IDs are not enough to uniquely
+     *        identify that resource. Each context key-value pair specifies a unique resource that contains the targeted
+     *        resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -346,16 +346,16 @@ public class StackResourceDrift implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Context information that enables AWS CloudFormation to uniquely identify a resource. AWS CloudFormation uses
-     * context key-value pairs in cases where a resource's logical and physical IDs are not enough to uniquely identify
-     * that resource. Each context key-value pair specifies a unique resource that contains the targeted resource.
+     * Context information that enables CloudFormation to uniquely identify a resource. CloudFormation uses context
+     * key-value pairs in cases where a resource's logical and physical IDs are not enough to uniquely identify that
+     * resource. Each context key-value pair specifies a unique resource that contains the targeted resource.
      * </p>
      * 
      * @param physicalResourceIdContext
-     *        Context information that enables AWS CloudFormation to uniquely identify a resource. AWS CloudFormation
-     *        uses context key-value pairs in cases where a resource's logical and physical IDs are not enough to
-     *        uniquely identify that resource. Each context key-value pair specifies a unique resource that contains the
-     *        targeted resource.
+     *        Context information that enables CloudFormation to uniquely identify a resource. CloudFormation uses
+     *        context key-value pairs in cases where a resource's logical and physical IDs are not enough to uniquely
+     *        identify that resource. Each context key-value pair specifies a unique resource that contains the targeted
+     *        resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -637,7 +637,7 @@ public class StackResourceDrift implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>NOT_CHECKED</code>: AWS CloudFormation does not currently return this value.
+     * <code>NOT_CHECKED</code>: CloudFormation does not currently return this value.
      * </p>
      * </li>
      * </ul>
@@ -664,7 +664,7 @@ public class StackResourceDrift implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>NOT_CHECKED</code>: AWS CloudFormation does not currently return this value.
+     *        <code>NOT_CHECKED</code>: CloudFormation does not currently return this value.
      *        </p>
      *        </li>
      * @see StackResourceDriftStatus
@@ -698,7 +698,7 @@ public class StackResourceDrift implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>NOT_CHECKED</code>: AWS CloudFormation does not currently return this value.
+     * <code>NOT_CHECKED</code>: CloudFormation does not currently return this value.
      * </p>
      * </li>
      * </ul>
@@ -724,7 +724,7 @@ public class StackResourceDrift implements Serializable, Cloneable {
      *         </li>
      *         <li>
      *         <p>
-     *         <code>NOT_CHECKED</code>: AWS CloudFormation does not currently return this value.
+     *         <code>NOT_CHECKED</code>: CloudFormation does not currently return this value.
      *         </p>
      *         </li>
      * @see StackResourceDriftStatus
@@ -758,7 +758,7 @@ public class StackResourceDrift implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>NOT_CHECKED</code>: AWS CloudFormation does not currently return this value.
+     * <code>NOT_CHECKED</code>: CloudFormation does not currently return this value.
      * </p>
      * </li>
      * </ul>
@@ -785,7 +785,7 @@ public class StackResourceDrift implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>NOT_CHECKED</code>: AWS CloudFormation does not currently return this value.
+     *        <code>NOT_CHECKED</code>: CloudFormation does not currently return this value.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -821,7 +821,7 @@ public class StackResourceDrift implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * <code>NOT_CHECKED</code>: AWS CloudFormation does not currently return this value.
+     * <code>NOT_CHECKED</code>: CloudFormation does not currently return this value.
      * </p>
      * </li>
      * </ul>
@@ -848,7 +848,7 @@ public class StackResourceDrift implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>NOT_CHECKED</code>: AWS CloudFormation does not currently return this value.
+     *        <code>NOT_CHECKED</code>: CloudFormation does not currently return this value.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -862,11 +862,11 @@ public class StackResourceDrift implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Time at which AWS CloudFormation performed drift detection on the stack resource.
+     * Time at which CloudFormation performed drift detection on the stack resource.
      * </p>
      * 
      * @param timestamp
-     *        Time at which AWS CloudFormation performed drift detection on the stack resource.
+     *        Time at which CloudFormation performed drift detection on the stack resource.
      */
 
     public void setTimestamp(java.util.Date timestamp) {
@@ -875,10 +875,10 @@ public class StackResourceDrift implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Time at which AWS CloudFormation performed drift detection on the stack resource.
+     * Time at which CloudFormation performed drift detection on the stack resource.
      * </p>
      * 
-     * @return Time at which AWS CloudFormation performed drift detection on the stack resource.
+     * @return Time at which CloudFormation performed drift detection on the stack resource.
      */
 
     public java.util.Date getTimestamp() {
@@ -887,11 +887,11 @@ public class StackResourceDrift implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Time at which AWS CloudFormation performed drift detection on the stack resource.
+     * Time at which CloudFormation performed drift detection on the stack resource.
      * </p>
      * 
      * @param timestamp
-     *        Time at which AWS CloudFormation performed drift detection on the stack resource.
+     *        Time at which CloudFormation performed drift detection on the stack resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

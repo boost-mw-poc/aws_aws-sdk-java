@@ -33,9 +33,9 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
     private String stackSetName;
     /**
      * <p>
-     * [Self-managed permissions] The names of one or more AWS accounts for which you want to update parameter values
-     * for stack instances. The overridden parameter values will be applied to all stack instances in the specified
-     * accounts and Regions.
+     * [Self-managed permissions] The names of one or more accounts for which you want to update parameter values for
+     * stack instances. The overridden parameter values will be applied to all stack instances in the specified accounts
+     * and Regions.
      * </p>
      * <p>
      * You can specify <code>Accounts</code> or <code>DeploymentTargets</code>, but not both.
@@ -44,8 +44,8 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
     private com.amazonaws.internal.SdkInternalList<String> accounts;
     /**
      * <p>
-     * [Service-managed permissions] The AWS Organizations accounts for which you want to update parameter values for
-     * stack instances. If your update targets OUs, the overridden parameter values only apply to the accounts that are
+     * [Service-managed permissions] The Organizations accounts for which you want to update parameter values for stack
+     * instances. If your update targets OUs, the overridden parameter values only apply to the accounts that are
      * currently in the target OUs and their child OUs. Accounts added to the target OUs and their child OUs in the
      * future won't use the overridden values.
      * </p>
@@ -67,8 +67,8 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * <p>
      * Any overridden parameter values will be applied to all stack instances in the specified accounts and Regions.
-     * When specifying parameters and their values, be aware of how AWS CloudFormation sets parameter values during
-     * stack instance update operations:
+     * When specifying parameters and their values, be aware of how CloudFormation sets parameter values during stack
+     * instance update operations:
      * </p>
      * <ul>
      * <li>
@@ -78,26 +78,15 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * </li>
      * <li>
      * <p>
-     * To leave a parameter set to its present value, you can do one of the following:
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * Do not include the parameter in the list.
+     * To leave an overridden parameter set to its present value, include the parameter and specify
+     * <code>UsePreviousValue</code> as <code>true</code>. (You cannot specify both a value and set
+     * <code>UsePreviousValue</code> to <code>true</code>.)
      * </p>
      * </li>
      * <li>
      * <p>
-     * Include the parameter and specify <code>UsePreviousValue</code> as <code>true</code>. (You cannot specify both a
-     * value and set <code>UsePreviousValue</code> to <code>true</code>.)
-     * </p>
-     * </li>
-     * </ul>
-     * </li>
-     * <li>
-     * <p>
-     * To set all overridden parameter back to the values specified in the stack set, specify a parameter list but do
-     * not include any parameters.
+     * To set an overridden parameter back to the value specified in the stack set, specify a parameter list but do not
+     * include the parameter in the list.
      * </p>
      * </li>
      * <li>
@@ -123,7 +112,7 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
     private com.amazonaws.internal.SdkInternalList<Parameter> parameterOverrides;
     /**
      * <p>
-     * Preferences for how AWS CloudFormation performs this stack set operation.
+     * Preferences for how CloudFormation performs this stack set operation.
      * </p>
      */
     private StackSetOperationPreferences operationPreferences;
@@ -132,9 +121,9 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * The unique identifier for this stack set operation.
      * </p>
      * <p>
-     * The operation ID also functions as an idempotency token, to ensure that AWS CloudFormation performs the stack set
+     * The operation ID also functions as an idempotency token, to ensure that CloudFormation performs the stack set
      * operation only once, even if you retry the request multiple times. You might retry stack set operation requests
-     * to ensure that AWS CloudFormation successfully received them.
+     * to ensure that CloudFormation successfully received them.
      * </p>
      * <p>
      * If you don't specify an operation ID, the SDK generates one automatically.
@@ -160,9 +149,9 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * If you are signed in to a delegated administrator account, specify <code>DELEGATED_ADMIN</code>.
      * </p>
      * <p>
-     * Your AWS account must be registered as a delegated administrator in the management account. For more information,
-     * see <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html">
-     * Register a delegated administrator</a> in the <i>AWS CloudFormation User Guide</i>.
+     * Your account must be registered as a delegated administrator in the management account. For more information, see
+     * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html">
+     * Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * </li>
      * </ul>
@@ -211,15 +200,15 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * [Self-managed permissions] The names of one or more AWS accounts for which you want to update parameter values
-     * for stack instances. The overridden parameter values will be applied to all stack instances in the specified
-     * accounts and Regions.
+     * [Self-managed permissions] The names of one or more accounts for which you want to update parameter values for
+     * stack instances. The overridden parameter values will be applied to all stack instances in the specified accounts
+     * and Regions.
      * </p>
      * <p>
      * You can specify <code>Accounts</code> or <code>DeploymentTargets</code>, but not both.
      * </p>
      * 
-     * @return [Self-managed permissions] The names of one or more AWS accounts for which you want to update parameter
+     * @return [Self-managed permissions] The names of one or more accounts for which you want to update parameter
      *         values for stack instances. The overridden parameter values will be applied to all stack instances in the
      *         specified accounts and Regions.</p>
      *         <p>
@@ -235,17 +224,17 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * [Self-managed permissions] The names of one or more AWS accounts for which you want to update parameter values
-     * for stack instances. The overridden parameter values will be applied to all stack instances in the specified
-     * accounts and Regions.
+     * [Self-managed permissions] The names of one or more accounts for which you want to update parameter values for
+     * stack instances. The overridden parameter values will be applied to all stack instances in the specified accounts
+     * and Regions.
      * </p>
      * <p>
      * You can specify <code>Accounts</code> or <code>DeploymentTargets</code>, but not both.
      * </p>
      * 
      * @param accounts
-     *        [Self-managed permissions] The names of one or more AWS accounts for which you want to update parameter
-     *        values for stack instances. The overridden parameter values will be applied to all stack instances in the
+     *        [Self-managed permissions] The names of one or more accounts for which you want to update parameter values
+     *        for stack instances. The overridden parameter values will be applied to all stack instances in the
      *        specified accounts and Regions.</p>
      *        <p>
      *        You can specify <code>Accounts</code> or <code>DeploymentTargets</code>, but not both.
@@ -262,9 +251,9 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * [Self-managed permissions] The names of one or more AWS accounts for which you want to update parameter values
-     * for stack instances. The overridden parameter values will be applied to all stack instances in the specified
-     * accounts and Regions.
+     * [Self-managed permissions] The names of one or more accounts for which you want to update parameter values for
+     * stack instances. The overridden parameter values will be applied to all stack instances in the specified accounts
+     * and Regions.
      * </p>
      * <p>
      * You can specify <code>Accounts</code> or <code>DeploymentTargets</code>, but not both.
@@ -276,8 +265,8 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * 
      * @param accounts
-     *        [Self-managed permissions] The names of one or more AWS accounts for which you want to update parameter
-     *        values for stack instances. The overridden parameter values will be applied to all stack instances in the
+     *        [Self-managed permissions] The names of one or more accounts for which you want to update parameter values
+     *        for stack instances. The overridden parameter values will be applied to all stack instances in the
      *        specified accounts and Regions.</p>
      *        <p>
      *        You can specify <code>Accounts</code> or <code>DeploymentTargets</code>, but not both.
@@ -296,17 +285,17 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * [Self-managed permissions] The names of one or more AWS accounts for which you want to update parameter values
-     * for stack instances. The overridden parameter values will be applied to all stack instances in the specified
-     * accounts and Regions.
+     * [Self-managed permissions] The names of one or more accounts for which you want to update parameter values for
+     * stack instances. The overridden parameter values will be applied to all stack instances in the specified accounts
+     * and Regions.
      * </p>
      * <p>
      * You can specify <code>Accounts</code> or <code>DeploymentTargets</code>, but not both.
      * </p>
      * 
      * @param accounts
-     *        [Self-managed permissions] The names of one or more AWS accounts for which you want to update parameter
-     *        values for stack instances. The overridden parameter values will be applied to all stack instances in the
+     *        [Self-managed permissions] The names of one or more accounts for which you want to update parameter values
+     *        for stack instances. The overridden parameter values will be applied to all stack instances in the
      *        specified accounts and Regions.</p>
      *        <p>
      *        You can specify <code>Accounts</code> or <code>DeploymentTargets</code>, but not both.
@@ -320,8 +309,8 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * [Service-managed permissions] The AWS Organizations accounts for which you want to update parameter values for
-     * stack instances. If your update targets OUs, the overridden parameter values only apply to the accounts that are
+     * [Service-managed permissions] The Organizations accounts for which you want to update parameter values for stack
+     * instances. If your update targets OUs, the overridden parameter values only apply to the accounts that are
      * currently in the target OUs and their child OUs. Accounts added to the target OUs and their child OUs in the
      * future won't use the overridden values.
      * </p>
@@ -330,10 +319,10 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * 
      * @param deploymentTargets
-     *        [Service-managed permissions] The AWS Organizations accounts for which you want to update parameter values
-     *        for stack instances. If your update targets OUs, the overridden parameter values only apply to the
-     *        accounts that are currently in the target OUs and their child OUs. Accounts added to the target OUs and
-     *        their child OUs in the future won't use the overridden values.</p>
+     *        [Service-managed permissions] The Organizations accounts for which you want to update parameter values for
+     *        stack instances. If your update targets OUs, the overridden parameter values only apply to the accounts
+     *        that are currently in the target OUs and their child OUs. Accounts added to the target OUs and their child
+     *        OUs in the future won't use the overridden values.</p>
      *        <p>
      *        You can specify <code>Accounts</code> or <code>DeploymentTargets</code>, but not both.
      */
@@ -344,8 +333,8 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * [Service-managed permissions] The AWS Organizations accounts for which you want to update parameter values for
-     * stack instances. If your update targets OUs, the overridden parameter values only apply to the accounts that are
+     * [Service-managed permissions] The Organizations accounts for which you want to update parameter values for stack
+     * instances. If your update targets OUs, the overridden parameter values only apply to the accounts that are
      * currently in the target OUs and their child OUs. Accounts added to the target OUs and their child OUs in the
      * future won't use the overridden values.
      * </p>
@@ -353,8 +342,8 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * You can specify <code>Accounts</code> or <code>DeploymentTargets</code>, but not both.
      * </p>
      * 
-     * @return [Service-managed permissions] The AWS Organizations accounts for which you want to update parameter
-     *         values for stack instances. If your update targets OUs, the overridden parameter values only apply to the
+     * @return [Service-managed permissions] The Organizations accounts for which you want to update parameter values
+     *         for stack instances. If your update targets OUs, the overridden parameter values only apply to the
      *         accounts that are currently in the target OUs and their child OUs. Accounts added to the target OUs and
      *         their child OUs in the future won't use the overridden values.</p>
      *         <p>
@@ -367,8 +356,8 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * [Service-managed permissions] The AWS Organizations accounts for which you want to update parameter values for
-     * stack instances. If your update targets OUs, the overridden parameter values only apply to the accounts that are
+     * [Service-managed permissions] The Organizations accounts for which you want to update parameter values for stack
+     * instances. If your update targets OUs, the overridden parameter values only apply to the accounts that are
      * currently in the target OUs and their child OUs. Accounts added to the target OUs and their child OUs in the
      * future won't use the overridden values.
      * </p>
@@ -377,10 +366,10 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * 
      * @param deploymentTargets
-     *        [Service-managed permissions] The AWS Organizations accounts for which you want to update parameter values
-     *        for stack instances. If your update targets OUs, the overridden parameter values only apply to the
-     *        accounts that are currently in the target OUs and their child OUs. Accounts added to the target OUs and
-     *        their child OUs in the future won't use the overridden values.</p>
+     *        [Service-managed permissions] The Organizations accounts for which you want to update parameter values for
+     *        stack instances. If your update targets OUs, the overridden parameter values only apply to the accounts
+     *        that are currently in the target OUs and their child OUs. Accounts added to the target OUs and their child
+     *        OUs in the future won't use the overridden values.</p>
      *        <p>
      *        You can specify <code>Accounts</code> or <code>DeploymentTargets</code>, but not both.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -478,8 +467,8 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * <p>
      * Any overridden parameter values will be applied to all stack instances in the specified accounts and Regions.
-     * When specifying parameters and their values, be aware of how AWS CloudFormation sets parameter values during
-     * stack instance update operations:
+     * When specifying parameters and their values, be aware of how CloudFormation sets parameter values during stack
+     * instance update operations:
      * </p>
      * <ul>
      * <li>
@@ -489,26 +478,15 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * </li>
      * <li>
      * <p>
-     * To leave a parameter set to its present value, you can do one of the following:
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * Do not include the parameter in the list.
+     * To leave an overridden parameter set to its present value, include the parameter and specify
+     * <code>UsePreviousValue</code> as <code>true</code>. (You cannot specify both a value and set
+     * <code>UsePreviousValue</code> to <code>true</code>.)
      * </p>
      * </li>
      * <li>
      * <p>
-     * Include the parameter and specify <code>UsePreviousValue</code> as <code>true</code>. (You cannot specify both a
-     * value and set <code>UsePreviousValue</code> to <code>true</code>.)
-     * </p>
-     * </li>
-     * </ul>
-     * </li>
-     * <li>
-     * <p>
-     * To set all overridden parameter back to the values specified in the stack set, specify a parameter list but do
-     * not include any parameters.
+     * To set an overridden parameter back to the value specified in the stack set, specify a parameter list but do not
+     * include the parameter in the list.
      * </p>
      * </li>
      * <li>
@@ -534,7 +512,7 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * @return A list of input parameters whose values you want to update for the specified stack instances. </p>
      *         <p>
      *         Any overridden parameter values will be applied to all stack instances in the specified accounts and
-     *         Regions. When specifying parameters and their values, be aware of how AWS CloudFormation sets parameter
+     *         Regions. When specifying parameters and their values, be aware of how CloudFormation sets parameter
      *         values during stack instance update operations:
      *         </p>
      *         <ul>
@@ -545,26 +523,15 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      *         </li>
      *         <li>
      *         <p>
-     *         To leave a parameter set to its present value, you can do one of the following:
-     *         </p>
-     *         <ul>
-     *         <li>
-     *         <p>
-     *         Do not include the parameter in the list.
+     *         To leave an overridden parameter set to its present value, include the parameter and specify
+     *         <code>UsePreviousValue</code> as <code>true</code>. (You cannot specify both a value and set
+     *         <code>UsePreviousValue</code> to <code>true</code>.)
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         Include the parameter and specify <code>UsePreviousValue</code> as <code>true</code>. (You cannot specify
-     *         both a value and set <code>UsePreviousValue</code> to <code>true</code>.)
-     *         </p>
-     *         </li>
-     *         </ul>
-     *         </li>
-     *         <li>
-     *         <p>
-     *         To set all overridden parameter back to the values specified in the stack set, specify a parameter list
-     *         but do not include any parameters.
+     *         To set an overridden parameter back to the value specified in the stack set, specify a parameter list but
+     *         do not include the parameter in the list.
      *         </p>
      *         </li>
      *         <li>
@@ -601,8 +568,8 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * <p>
      * Any overridden parameter values will be applied to all stack instances in the specified accounts and Regions.
-     * When specifying parameters and their values, be aware of how AWS CloudFormation sets parameter values during
-     * stack instance update operations:
+     * When specifying parameters and their values, be aware of how CloudFormation sets parameter values during stack
+     * instance update operations:
      * </p>
      * <ul>
      * <li>
@@ -612,26 +579,15 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * </li>
      * <li>
      * <p>
-     * To leave a parameter set to its present value, you can do one of the following:
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * Do not include the parameter in the list.
+     * To leave an overridden parameter set to its present value, include the parameter and specify
+     * <code>UsePreviousValue</code> as <code>true</code>. (You cannot specify both a value and set
+     * <code>UsePreviousValue</code> to <code>true</code>.)
      * </p>
      * </li>
      * <li>
      * <p>
-     * Include the parameter and specify <code>UsePreviousValue</code> as <code>true</code>. (You cannot specify both a
-     * value and set <code>UsePreviousValue</code> to <code>true</code>.)
-     * </p>
-     * </li>
-     * </ul>
-     * </li>
-     * <li>
-     * <p>
-     * To set all overridden parameter back to the values specified in the stack set, specify a parameter list but do
-     * not include any parameters.
+     * To set an overridden parameter back to the value specified in the stack set, specify a parameter list but do not
+     * include the parameter in the list.
      * </p>
      * </li>
      * <li>
@@ -658,8 +614,8 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      *        A list of input parameters whose values you want to update for the specified stack instances. </p>
      *        <p>
      *        Any overridden parameter values will be applied to all stack instances in the specified accounts and
-     *        Regions. When specifying parameters and their values, be aware of how AWS CloudFormation sets parameter
-     *        values during stack instance update operations:
+     *        Regions. When specifying parameters and their values, be aware of how CloudFormation sets parameter values
+     *        during stack instance update operations:
      *        </p>
      *        <ul>
      *        <li>
@@ -669,26 +625,15 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      *        </li>
      *        <li>
      *        <p>
-     *        To leave a parameter set to its present value, you can do one of the following:
-     *        </p>
-     *        <ul>
-     *        <li>
-     *        <p>
-     *        Do not include the parameter in the list.
+     *        To leave an overridden parameter set to its present value, include the parameter and specify
+     *        <code>UsePreviousValue</code> as <code>true</code>. (You cannot specify both a value and set
+     *        <code>UsePreviousValue</code> to <code>true</code>.)
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        Include the parameter and specify <code>UsePreviousValue</code> as <code>true</code>. (You cannot specify
-     *        both a value and set <code>UsePreviousValue</code> to <code>true</code>.)
-     *        </p>
-     *        </li>
-     *        </ul>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        To set all overridden parameter back to the values specified in the stack set, specify a parameter list
-     *        but do not include any parameters.
+     *        To set an overridden parameter back to the value specified in the stack set, specify a parameter list but
+     *        do not include the parameter in the list.
      *        </p>
      *        </li>
      *        <li>
@@ -726,8 +671,8 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * <p>
      * Any overridden parameter values will be applied to all stack instances in the specified accounts and Regions.
-     * When specifying parameters and their values, be aware of how AWS CloudFormation sets parameter values during
-     * stack instance update operations:
+     * When specifying parameters and their values, be aware of how CloudFormation sets parameter values during stack
+     * instance update operations:
      * </p>
      * <ul>
      * <li>
@@ -737,26 +682,15 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * </li>
      * <li>
      * <p>
-     * To leave a parameter set to its present value, you can do one of the following:
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * Do not include the parameter in the list.
+     * To leave an overridden parameter set to its present value, include the parameter and specify
+     * <code>UsePreviousValue</code> as <code>true</code>. (You cannot specify both a value and set
+     * <code>UsePreviousValue</code> to <code>true</code>.)
      * </p>
      * </li>
      * <li>
      * <p>
-     * Include the parameter and specify <code>UsePreviousValue</code> as <code>true</code>. (You cannot specify both a
-     * value and set <code>UsePreviousValue</code> to <code>true</code>.)
-     * </p>
-     * </li>
-     * </ul>
-     * </li>
-     * <li>
-     * <p>
-     * To set all overridden parameter back to the values specified in the stack set, specify a parameter list but do
-     * not include any parameters.
+     * To set an overridden parameter back to the value specified in the stack set, specify a parameter list but do not
+     * include the parameter in the list.
      * </p>
      * </li>
      * <li>
@@ -788,8 +722,8 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      *        A list of input parameters whose values you want to update for the specified stack instances. </p>
      *        <p>
      *        Any overridden parameter values will be applied to all stack instances in the specified accounts and
-     *        Regions. When specifying parameters and their values, be aware of how AWS CloudFormation sets parameter
-     *        values during stack instance update operations:
+     *        Regions. When specifying parameters and their values, be aware of how CloudFormation sets parameter values
+     *        during stack instance update operations:
      *        </p>
      *        <ul>
      *        <li>
@@ -799,26 +733,15 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      *        </li>
      *        <li>
      *        <p>
-     *        To leave a parameter set to its present value, you can do one of the following:
-     *        </p>
-     *        <ul>
-     *        <li>
-     *        <p>
-     *        Do not include the parameter in the list.
+     *        To leave an overridden parameter set to its present value, include the parameter and specify
+     *        <code>UsePreviousValue</code> as <code>true</code>. (You cannot specify both a value and set
+     *        <code>UsePreviousValue</code> to <code>true</code>.)
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        Include the parameter and specify <code>UsePreviousValue</code> as <code>true</code>. (You cannot specify
-     *        both a value and set <code>UsePreviousValue</code> to <code>true</code>.)
-     *        </p>
-     *        </li>
-     *        </ul>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        To set all overridden parameter back to the values specified in the stack set, specify a parameter list
-     *        but do not include any parameters.
+     *        To set an overridden parameter back to the value specified in the stack set, specify a parameter list but
+     *        do not include the parameter in the list.
      *        </p>
      *        </li>
      *        <li>
@@ -858,8 +781,8 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * <p>
      * Any overridden parameter values will be applied to all stack instances in the specified accounts and Regions.
-     * When specifying parameters and their values, be aware of how AWS CloudFormation sets parameter values during
-     * stack instance update operations:
+     * When specifying parameters and their values, be aware of how CloudFormation sets parameter values during stack
+     * instance update operations:
      * </p>
      * <ul>
      * <li>
@@ -869,26 +792,15 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * </li>
      * <li>
      * <p>
-     * To leave a parameter set to its present value, you can do one of the following:
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * Do not include the parameter in the list.
+     * To leave an overridden parameter set to its present value, include the parameter and specify
+     * <code>UsePreviousValue</code> as <code>true</code>. (You cannot specify both a value and set
+     * <code>UsePreviousValue</code> to <code>true</code>.)
      * </p>
      * </li>
      * <li>
      * <p>
-     * Include the parameter and specify <code>UsePreviousValue</code> as <code>true</code>. (You cannot specify both a
-     * value and set <code>UsePreviousValue</code> to <code>true</code>.)
-     * </p>
-     * </li>
-     * </ul>
-     * </li>
-     * <li>
-     * <p>
-     * To set all overridden parameter back to the values specified in the stack set, specify a parameter list but do
-     * not include any parameters.
+     * To set an overridden parameter back to the value specified in the stack set, specify a parameter list but do not
+     * include the parameter in the list.
      * </p>
      * </li>
      * <li>
@@ -915,8 +827,8 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      *        A list of input parameters whose values you want to update for the specified stack instances. </p>
      *        <p>
      *        Any overridden parameter values will be applied to all stack instances in the specified accounts and
-     *        Regions. When specifying parameters and their values, be aware of how AWS CloudFormation sets parameter
-     *        values during stack instance update operations:
+     *        Regions. When specifying parameters and their values, be aware of how CloudFormation sets parameter values
+     *        during stack instance update operations:
      *        </p>
      *        <ul>
      *        <li>
@@ -926,26 +838,15 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      *        </li>
      *        <li>
      *        <p>
-     *        To leave a parameter set to its present value, you can do one of the following:
-     *        </p>
-     *        <ul>
-     *        <li>
-     *        <p>
-     *        Do not include the parameter in the list.
+     *        To leave an overridden parameter set to its present value, include the parameter and specify
+     *        <code>UsePreviousValue</code> as <code>true</code>. (You cannot specify both a value and set
+     *        <code>UsePreviousValue</code> to <code>true</code>.)
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        Include the parameter and specify <code>UsePreviousValue</code> as <code>true</code>. (You cannot specify
-     *        both a value and set <code>UsePreviousValue</code> to <code>true</code>.)
-     *        </p>
-     *        </li>
-     *        </ul>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        To set all overridden parameter back to the values specified in the stack set, specify a parameter list
-     *        but do not include any parameters.
+     *        To set an overridden parameter back to the value specified in the stack set, specify a parameter list but
+     *        do not include the parameter in the list.
      *        </p>
      *        </li>
      *        <li>
@@ -976,11 +877,11 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Preferences for how AWS CloudFormation performs this stack set operation.
+     * Preferences for how CloudFormation performs this stack set operation.
      * </p>
      * 
      * @param operationPreferences
-     *        Preferences for how AWS CloudFormation performs this stack set operation.
+     *        Preferences for how CloudFormation performs this stack set operation.
      */
 
     public void setOperationPreferences(StackSetOperationPreferences operationPreferences) {
@@ -989,10 +890,10 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Preferences for how AWS CloudFormation performs this stack set operation.
+     * Preferences for how CloudFormation performs this stack set operation.
      * </p>
      * 
-     * @return Preferences for how AWS CloudFormation performs this stack set operation.
+     * @return Preferences for how CloudFormation performs this stack set operation.
      */
 
     public StackSetOperationPreferences getOperationPreferences() {
@@ -1001,11 +902,11 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Preferences for how AWS CloudFormation performs this stack set operation.
+     * Preferences for how CloudFormation performs this stack set operation.
      * </p>
      * 
      * @param operationPreferences
-     *        Preferences for how AWS CloudFormation performs this stack set operation.
+     *        Preferences for how CloudFormation performs this stack set operation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1019,9 +920,9 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * The unique identifier for this stack set operation.
      * </p>
      * <p>
-     * The operation ID also functions as an idempotency token, to ensure that AWS CloudFormation performs the stack set
+     * The operation ID also functions as an idempotency token, to ensure that CloudFormation performs the stack set
      * operation only once, even if you retry the request multiple times. You might retry stack set operation requests
-     * to ensure that AWS CloudFormation successfully received them.
+     * to ensure that CloudFormation successfully received them.
      * </p>
      * <p>
      * If you don't specify an operation ID, the SDK generates one automatically.
@@ -1030,9 +931,9 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * @param operationId
      *        The unique identifier for this stack set operation. </p>
      *        <p>
-     *        The operation ID also functions as an idempotency token, to ensure that AWS CloudFormation performs the
-     *        stack set operation only once, even if you retry the request multiple times. You might retry stack set
-     *        operation requests to ensure that AWS CloudFormation successfully received them.
+     *        The operation ID also functions as an idempotency token, to ensure that CloudFormation performs the stack
+     *        set operation only once, even if you retry the request multiple times. You might retry stack set operation
+     *        requests to ensure that CloudFormation successfully received them.
      *        </p>
      *        <p>
      *        If you don't specify an operation ID, the SDK generates one automatically.
@@ -1047,9 +948,9 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * The unique identifier for this stack set operation.
      * </p>
      * <p>
-     * The operation ID also functions as an idempotency token, to ensure that AWS CloudFormation performs the stack set
+     * The operation ID also functions as an idempotency token, to ensure that CloudFormation performs the stack set
      * operation only once, even if you retry the request multiple times. You might retry stack set operation requests
-     * to ensure that AWS CloudFormation successfully received them.
+     * to ensure that CloudFormation successfully received them.
      * </p>
      * <p>
      * If you don't specify an operation ID, the SDK generates one automatically.
@@ -1057,9 +958,9 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * 
      * @return The unique identifier for this stack set operation. </p>
      *         <p>
-     *         The operation ID also functions as an idempotency token, to ensure that AWS CloudFormation performs the
-     *         stack set operation only once, even if you retry the request multiple times. You might retry stack set
-     *         operation requests to ensure that AWS CloudFormation successfully received them.
+     *         The operation ID also functions as an idempotency token, to ensure that CloudFormation performs the stack
+     *         set operation only once, even if you retry the request multiple times. You might retry stack set
+     *         operation requests to ensure that CloudFormation successfully received them.
      *         </p>
      *         <p>
      *         If you don't specify an operation ID, the SDK generates one automatically.
@@ -1074,9 +975,9 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * The unique identifier for this stack set operation.
      * </p>
      * <p>
-     * The operation ID also functions as an idempotency token, to ensure that AWS CloudFormation performs the stack set
+     * The operation ID also functions as an idempotency token, to ensure that CloudFormation performs the stack set
      * operation only once, even if you retry the request multiple times. You might retry stack set operation requests
-     * to ensure that AWS CloudFormation successfully received them.
+     * to ensure that CloudFormation successfully received them.
      * </p>
      * <p>
      * If you don't specify an operation ID, the SDK generates one automatically.
@@ -1085,9 +986,9 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * @param operationId
      *        The unique identifier for this stack set operation. </p>
      *        <p>
-     *        The operation ID also functions as an idempotency token, to ensure that AWS CloudFormation performs the
-     *        stack set operation only once, even if you retry the request multiple times. You might retry stack set
-     *        operation requests to ensure that AWS CloudFormation successfully received them.
+     *        The operation ID also functions as an idempotency token, to ensure that CloudFormation performs the stack
+     *        set operation only once, even if you retry the request multiple times. You might retry stack set operation
+     *        requests to ensure that CloudFormation successfully received them.
      *        </p>
      *        <p>
      *        If you don't specify an operation ID, the SDK generates one automatically.
@@ -1118,9 +1019,9 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * If you are signed in to a delegated administrator account, specify <code>DELEGATED_ADMIN</code>.
      * </p>
      * <p>
-     * Your AWS account must be registered as a delegated administrator in the management account. For more information,
-     * see <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html">
-     * Register a delegated administrator</a> in the <i>AWS CloudFormation User Guide</i>.
+     * Your account must be registered as a delegated administrator in the management account. For more information, see
+     * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html">
+     * Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * </li>
      * </ul>
@@ -1143,10 +1044,10 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      *        If you are signed in to a delegated administrator account, specify <code>DELEGATED_ADMIN</code>.
      *        </p>
      *        <p>
-     *        Your AWS account must be registered as a delegated administrator in the management account. For more
+     *        Your account must be registered as a delegated administrator in the management account. For more
      *        information, see <a href=
      *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html"
-     *        >Register a delegated administrator</a> in the <i>AWS CloudFormation User Guide</i>.
+     *        >Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
      *        </p>
      *        </li>
      * @see CallAs
@@ -1175,9 +1076,9 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * If you are signed in to a delegated administrator account, specify <code>DELEGATED_ADMIN</code>.
      * </p>
      * <p>
-     * Your AWS account must be registered as a delegated administrator in the management account. For more information,
-     * see <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html">
-     * Register a delegated administrator</a> in the <i>AWS CloudFormation User Guide</i>.
+     * Your account must be registered as a delegated administrator in the management account. For more information, see
+     * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html">
+     * Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * </li>
      * </ul>
@@ -1199,10 +1100,10 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      *         If you are signed in to a delegated administrator account, specify <code>DELEGATED_ADMIN</code>.
      *         </p>
      *         <p>
-     *         Your AWS account must be registered as a delegated administrator in the management account. For more
+     *         Your account must be registered as a delegated administrator in the management account. For more
      *         information, see <a href=
      *         "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html"
-     *         >Register a delegated administrator</a> in the <i>AWS CloudFormation User Guide</i>.
+     *         >Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
      *         </p>
      *         </li>
      * @see CallAs
@@ -1231,9 +1132,9 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * If you are signed in to a delegated administrator account, specify <code>DELEGATED_ADMIN</code>.
      * </p>
      * <p>
-     * Your AWS account must be registered as a delegated administrator in the management account. For more information,
-     * see <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html">
-     * Register a delegated administrator</a> in the <i>AWS CloudFormation User Guide</i>.
+     * Your account must be registered as a delegated administrator in the management account. For more information, see
+     * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html">
+     * Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * </li>
      * </ul>
@@ -1256,10 +1157,10 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      *        If you are signed in to a delegated administrator account, specify <code>DELEGATED_ADMIN</code>.
      *        </p>
      *        <p>
-     *        Your AWS account must be registered as a delegated administrator in the management account. For more
+     *        Your account must be registered as a delegated administrator in the management account. For more
      *        information, see <a href=
      *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html"
-     *        >Register a delegated administrator</a> in the <i>AWS CloudFormation User Guide</i>.
+     *        >Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -1290,9 +1191,9 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * If you are signed in to a delegated administrator account, specify <code>DELEGATED_ADMIN</code>.
      * </p>
      * <p>
-     * Your AWS account must be registered as a delegated administrator in the management account. For more information,
-     * see <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html">
-     * Register a delegated administrator</a> in the <i>AWS CloudFormation User Guide</i>.
+     * Your account must be registered as a delegated administrator in the management account. For more information, see
+     * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html">
+     * Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * </li>
      * </ul>
@@ -1315,10 +1216,10 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      *        If you are signed in to a delegated administrator account, specify <code>DELEGATED_ADMIN</code>.
      *        </p>
      *        <p>
-     *        Your AWS account must be registered as a delegated administrator in the management account. For more
+     *        Your account must be registered as a delegated administrator in the management account. For more
      *        information, see <a href=
      *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html"
-     *        >Register a delegated administrator</a> in the <i>AWS CloudFormation User Guide</i>.
+     *        >Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

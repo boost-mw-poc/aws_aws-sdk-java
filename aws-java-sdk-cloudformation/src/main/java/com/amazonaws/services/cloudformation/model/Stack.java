@@ -77,8 +77,8 @@ public class Stack implements Serializable, Cloneable {
     private java.util.Date lastUpdatedTime;
     /**
      * <p>
-     * The rollback triggers for AWS CloudFormation to monitor during stack creation and updating operations, and for
-     * the specified monitoring period afterwards.
+     * The rollback triggers for CloudFormation to monitor during stack creation and updating operations, and for the
+     * specified monitoring period afterwards.
      * </p>
      */
     private RollbackConfiguration rollbackConfiguration;
@@ -138,8 +138,8 @@ public class Stack implements Serializable, Cloneable {
     private com.amazonaws.internal.SdkInternalList<Output> outputs;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an AWS Identity and Access Management (IAM) role that is associated with the
-     * stack. During a stack operation, AWS CloudFormation uses this role's credentials to make calls on your behalf.
+     * The Amazon Resource Name (ARN) of an Identity and Access Management (IAM) role that is associated with the stack.
+     * During a stack operation, CloudFormation uses this role's credentials to make calls on your behalf.
      * </p>
      */
     private String roleARN;
@@ -158,7 +158,7 @@ public class Stack implements Serializable, Cloneable {
      * stacks</a>, termination protection is set on the root stack and cannot be changed directly on the nested stack.
      * For more information, see <a
      * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-protect-stacks.html">Protecting a
-     * Stack From Being Deleted</a> in the <i>AWS CloudFormation User Guide</i>.
+     * Stack From Being Deleted</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      */
     private Boolean enableTerminationProtection;
@@ -170,7 +170,7 @@ public class Stack implements Serializable, Cloneable {
      * <p>
      * For more information, see <a
      * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">Working with
-     * Nested Stacks</a> in the <i>AWS CloudFormation User Guide</i>.
+     * Nested Stacks</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      */
     private String parentId;
@@ -182,7 +182,7 @@ public class Stack implements Serializable, Cloneable {
      * <p>
      * For more information, see <a
      * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">Working with
-     * Nested Stacks</a> in the <i>AWS CloudFormation User Guide</i>.
+     * Nested Stacks</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      */
     private String rootId;
@@ -558,13 +558,13 @@ public class Stack implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The rollback triggers for AWS CloudFormation to monitor during stack creation and updating operations, and for
-     * the specified monitoring period afterwards.
+     * The rollback triggers for CloudFormation to monitor during stack creation and updating operations, and for the
+     * specified monitoring period afterwards.
      * </p>
      * 
      * @param rollbackConfiguration
-     *        The rollback triggers for AWS CloudFormation to monitor during stack creation and updating operations, and
-     *        for the specified monitoring period afterwards.
+     *        The rollback triggers for CloudFormation to monitor during stack creation and updating operations, and for
+     *        the specified monitoring period afterwards.
      */
 
     public void setRollbackConfiguration(RollbackConfiguration rollbackConfiguration) {
@@ -573,12 +573,12 @@ public class Stack implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The rollback triggers for AWS CloudFormation to monitor during stack creation and updating operations, and for
-     * the specified monitoring period afterwards.
+     * The rollback triggers for CloudFormation to monitor during stack creation and updating operations, and for the
+     * specified monitoring period afterwards.
      * </p>
      * 
-     * @return The rollback triggers for AWS CloudFormation to monitor during stack creation and updating operations,
-     *         and for the specified monitoring period afterwards.
+     * @return The rollback triggers for CloudFormation to monitor during stack creation and updating operations, and
+     *         for the specified monitoring period afterwards.
      */
 
     public RollbackConfiguration getRollbackConfiguration() {
@@ -587,13 +587,13 @@ public class Stack implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The rollback triggers for AWS CloudFormation to monitor during stack creation and updating operations, and for
-     * the specified monitoring period afterwards.
+     * The rollback triggers for CloudFormation to monitor during stack creation and updating operations, and for the
+     * specified monitoring period afterwards.
      * </p>
      * 
      * @param rollbackConfiguration
-     *        The rollback triggers for AWS CloudFormation to monitor during stack creation and updating operations, and
-     *        for the specified monitoring period afterwards.
+     *        The rollback triggers for CloudFormation to monitor during stack creation and updating operations, and for
+     *        the specified monitoring period afterwards.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1148,14 +1148,13 @@ public class Stack implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an AWS Identity and Access Management (IAM) role that is associated with the
-     * stack. During a stack operation, AWS CloudFormation uses this role's credentials to make calls on your behalf.
+     * The Amazon Resource Name (ARN) of an Identity and Access Management (IAM) role that is associated with the stack.
+     * During a stack operation, CloudFormation uses this role's credentials to make calls on your behalf.
      * </p>
      * 
      * @param roleARN
-     *        The Amazon Resource Name (ARN) of an AWS Identity and Access Management (IAM) role that is associated with
-     *        the stack. During a stack operation, AWS CloudFormation uses this role's credentials to make calls on your
-     *        behalf.
+     *        The Amazon Resource Name (ARN) of an Identity and Access Management (IAM) role that is associated with the
+     *        stack. During a stack operation, CloudFormation uses this role's credentials to make calls on your behalf.
      */
 
     public void setRoleARN(String roleARN) {
@@ -1164,13 +1163,13 @@ public class Stack implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an AWS Identity and Access Management (IAM) role that is associated with the
-     * stack. During a stack operation, AWS CloudFormation uses this role's credentials to make calls on your behalf.
+     * The Amazon Resource Name (ARN) of an Identity and Access Management (IAM) role that is associated with the stack.
+     * During a stack operation, CloudFormation uses this role's credentials to make calls on your behalf.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of an AWS Identity and Access Management (IAM) role that is associated
-     *         with the stack. During a stack operation, AWS CloudFormation uses this role's credentials to make calls
-     *         on your behalf.
+     * @return The Amazon Resource Name (ARN) of an Identity and Access Management (IAM) role that is associated with
+     *         the stack. During a stack operation, CloudFormation uses this role's credentials to make calls on your
+     *         behalf.
      */
 
     public String getRoleARN() {
@@ -1179,14 +1178,13 @@ public class Stack implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of an AWS Identity and Access Management (IAM) role that is associated with the
-     * stack. During a stack operation, AWS CloudFormation uses this role's credentials to make calls on your behalf.
+     * The Amazon Resource Name (ARN) of an Identity and Access Management (IAM) role that is associated with the stack.
+     * During a stack operation, CloudFormation uses this role's credentials to make calls on your behalf.
      * </p>
      * 
      * @param roleARN
-     *        The Amazon Resource Name (ARN) of an AWS Identity and Access Management (IAM) role that is associated with
-     *        the stack. During a stack operation, AWS CloudFormation uses this role's credentials to make calls on your
-     *        behalf.
+     *        The Amazon Resource Name (ARN) of an Identity and Access Management (IAM) role that is associated with the
+     *        stack. During a stack operation, CloudFormation uses this role's credentials to make calls on your behalf.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1277,7 +1275,7 @@ public class Stack implements Serializable, Cloneable {
      * stacks</a>, termination protection is set on the root stack and cannot be changed directly on the nested stack.
      * For more information, see <a
      * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-protect-stacks.html">Protecting a
-     * Stack From Being Deleted</a> in the <i>AWS CloudFormation User Guide</i>.
+     * Stack From Being Deleted</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * 
      * @param enableTerminationProtection
@@ -1288,7 +1286,7 @@ public class Stack implements Serializable, Cloneable {
      *        stacks</a>, termination protection is set on the root stack and cannot be changed directly on the nested
      *        stack. For more information, see <a
      *        href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-protect-stacks.html"
-     *        >Protecting a Stack From Being Deleted</a> in the <i>AWS CloudFormation User Guide</i>.
+     *        >Protecting a Stack From Being Deleted</a> in the <i>CloudFormation User Guide</i>.
      */
 
     public void setEnableTerminationProtection(Boolean enableTerminationProtection) {
@@ -1304,7 +1302,7 @@ public class Stack implements Serializable, Cloneable {
      * stacks</a>, termination protection is set on the root stack and cannot be changed directly on the nested stack.
      * For more information, see <a
      * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-protect-stacks.html">Protecting a
-     * Stack From Being Deleted</a> in the <i>AWS CloudFormation User Guide</i>.
+     * Stack From Being Deleted</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * 
      * @return Whether termination protection is enabled for the stack.</p>
@@ -1313,7 +1311,7 @@ public class Stack implements Serializable, Cloneable {
      *         nested stacks</a>, termination protection is set on the root stack and cannot be changed directly on the
      *         nested stack. For more information, see <a
      *         href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-protect-stacks.html"
-     *         >Protecting a Stack From Being Deleted</a> in the <i>AWS CloudFormation User Guide</i>.
+     *         >Protecting a Stack From Being Deleted</a> in the <i>CloudFormation User Guide</i>.
      */
 
     public Boolean getEnableTerminationProtection() {
@@ -1329,7 +1327,7 @@ public class Stack implements Serializable, Cloneable {
      * stacks</a>, termination protection is set on the root stack and cannot be changed directly on the nested stack.
      * For more information, see <a
      * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-protect-stacks.html">Protecting a
-     * Stack From Being Deleted</a> in the <i>AWS CloudFormation User Guide</i>.
+     * Stack From Being Deleted</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * 
      * @param enableTerminationProtection
@@ -1340,7 +1338,7 @@ public class Stack implements Serializable, Cloneable {
      *        stacks</a>, termination protection is set on the root stack and cannot be changed directly on the nested
      *        stack. For more information, see <a
      *        href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-protect-stacks.html"
-     *        >Protecting a Stack From Being Deleted</a> in the <i>AWS CloudFormation User Guide</i>.
+     *        >Protecting a Stack From Being Deleted</a> in the <i>CloudFormation User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1358,7 +1356,7 @@ public class Stack implements Serializable, Cloneable {
      * stacks</a>, termination protection is set on the root stack and cannot be changed directly on the nested stack.
      * For more information, see <a
      * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-protect-stacks.html">Protecting a
-     * Stack From Being Deleted</a> in the <i>AWS CloudFormation User Guide</i>.
+     * Stack From Being Deleted</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * 
      * @return Whether termination protection is enabled for the stack.</p>
@@ -1367,7 +1365,7 @@ public class Stack implements Serializable, Cloneable {
      *         nested stacks</a>, termination protection is set on the root stack and cannot be changed directly on the
      *         nested stack. For more information, see <a
      *         href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-protect-stacks.html"
-     *         >Protecting a Stack From Being Deleted</a> in the <i>AWS CloudFormation User Guide</i>.
+     *         >Protecting a Stack From Being Deleted</a> in the <i>CloudFormation User Guide</i>.
      */
 
     public Boolean isEnableTerminationProtection() {
@@ -1382,7 +1380,7 @@ public class Stack implements Serializable, Cloneable {
      * <p>
      * For more information, see <a
      * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">Working with
-     * Nested Stacks</a> in the <i>AWS CloudFormation User Guide</i>.
+     * Nested Stacks</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * 
      * @param parentId
@@ -1391,7 +1389,7 @@ public class Stack implements Serializable, Cloneable {
      *        <p>
      *        For more information, see <a
      *        href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">Working
-     *        with Nested Stacks</a> in the <i>AWS CloudFormation User Guide</i>.
+     *        with Nested Stacks</a> in the <i>CloudFormation User Guide</i>.
      */
 
     public void setParentId(String parentId) {
@@ -1406,7 +1404,7 @@ public class Stack implements Serializable, Cloneable {
      * <p>
      * For more information, see <a
      * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">Working with
-     * Nested Stacks</a> in the <i>AWS CloudFormation User Guide</i>.
+     * Nested Stacks</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * 
      * @return For nested stacks--stacks created as resources for another stack--the stack ID of the direct parent of
@@ -1414,7 +1412,7 @@ public class Stack implements Serializable, Cloneable {
      *         <p>
      *         For more information, see <a
      *         href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">Working
-     *         with Nested Stacks</a> in the <i>AWS CloudFormation User Guide</i>.
+     *         with Nested Stacks</a> in the <i>CloudFormation User Guide</i>.
      */
 
     public String getParentId() {
@@ -1429,7 +1427,7 @@ public class Stack implements Serializable, Cloneable {
      * <p>
      * For more information, see <a
      * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">Working with
-     * Nested Stacks</a> in the <i>AWS CloudFormation User Guide</i>.
+     * Nested Stacks</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * 
      * @param parentId
@@ -1438,7 +1436,7 @@ public class Stack implements Serializable, Cloneable {
      *        <p>
      *        For more information, see <a
      *        href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">Working
-     *        with Nested Stacks</a> in the <i>AWS CloudFormation User Guide</i>.
+     *        with Nested Stacks</a> in the <i>CloudFormation User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1455,7 +1453,7 @@ public class Stack implements Serializable, Cloneable {
      * <p>
      * For more information, see <a
      * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">Working with
-     * Nested Stacks</a> in the <i>AWS CloudFormation User Guide</i>.
+     * Nested Stacks</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * 
      * @param rootId
@@ -1464,7 +1462,7 @@ public class Stack implements Serializable, Cloneable {
      *        <p>
      *        For more information, see <a
      *        href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">Working
-     *        with Nested Stacks</a> in the <i>AWS CloudFormation User Guide</i>.
+     *        with Nested Stacks</a> in the <i>CloudFormation User Guide</i>.
      */
 
     public void setRootId(String rootId) {
@@ -1479,7 +1477,7 @@ public class Stack implements Serializable, Cloneable {
      * <p>
      * For more information, see <a
      * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">Working with
-     * Nested Stacks</a> in the <i>AWS CloudFormation User Guide</i>.
+     * Nested Stacks</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * 
      * @return For nested stacks--stacks created as resources for another stack--the stack ID of the top-level stack to
@@ -1487,7 +1485,7 @@ public class Stack implements Serializable, Cloneable {
      *         <p>
      *         For more information, see <a
      *         href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">Working
-     *         with Nested Stacks</a> in the <i>AWS CloudFormation User Guide</i>.
+     *         with Nested Stacks</a> in the <i>CloudFormation User Guide</i>.
      */
 
     public String getRootId() {
@@ -1502,7 +1500,7 @@ public class Stack implements Serializable, Cloneable {
      * <p>
      * For more information, see <a
      * href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">Working with
-     * Nested Stacks</a> in the <i>AWS CloudFormation User Guide</i>.
+     * Nested Stacks</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * 
      * @param rootId
@@ -1511,7 +1509,7 @@ public class Stack implements Serializable, Cloneable {
      *        <p>
      *        For more information, see <a
      *        href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">Working
-     *        with Nested Stacks</a> in the <i>AWS CloudFormation User Guide</i>.
+     *        with Nested Stacks</a> in the <i>CloudFormation User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
