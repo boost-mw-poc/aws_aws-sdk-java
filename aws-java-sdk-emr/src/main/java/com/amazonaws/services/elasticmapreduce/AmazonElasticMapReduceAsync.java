@@ -1805,7 +1805,7 @@ public interface AmazonElasticMapReduceAsync extends AmazonElasticMapReduce {
      * <p>
      * For more information, see <a href=
      * "https://docs.aws.amazon.com/emr/latest/ManagementGuide/security_iam_emr-with-iam.html#security_set_visible_to_all_users"
-     * >Understanding the EMR Cluster VisibleToAllUsers Setting</a> in the <i>Amazon EMR Management Guide</i>.
+     * >Understanding the EMR Cluster VisibleToAllUsers Setting</a> in the <i>Amazon EMRManagement Guide</i>.
      * </p>
      * 
      * @param setVisibleToAllUsersRequest
@@ -1831,7 +1831,7 @@ public interface AmazonElasticMapReduceAsync extends AmazonElasticMapReduce {
      * <p>
      * For more information, see <a href=
      * "https://docs.aws.amazon.com/emr/latest/ManagementGuide/security_iam_emr-with-iam.html#security_set_visible_to_all_users"
-     * >Understanding the EMR Cluster VisibleToAllUsers Setting</a> in the <i>Amazon EMR Management Guide</i>.
+     * >Understanding the EMR Cluster VisibleToAllUsers Setting</a> in the <i>Amazon EMRManagement Guide</i>.
      * </p>
      * 
      * @param setVisibleToAllUsersRequest

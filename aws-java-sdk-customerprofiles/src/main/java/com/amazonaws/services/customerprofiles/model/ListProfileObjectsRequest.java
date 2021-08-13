@@ -55,6 +55,13 @@ public class ListProfileObjectsRequest extends com.amazonaws.AmazonWebServiceReq
      * </p>
      */
     private String profileId;
+    /**
+     * <p>
+     * Applies a filter to the response to include profile objects with the specified index values. This filter is only
+     * supported for ObjectTypeName _asset and _case.
+     * </p>
+     */
+    private ObjectFilter objectFilter;
 
     /**
      * <p>
@@ -257,6 +264,52 @@ public class ListProfileObjectsRequest extends com.amazonaws.AmazonWebServiceReq
     }
 
     /**
+     * <p>
+     * Applies a filter to the response to include profile objects with the specified index values. This filter is only
+     * supported for ObjectTypeName _asset and _case.
+     * </p>
+     * 
+     * @param objectFilter
+     *        Applies a filter to the response to include profile objects with the specified index values. This filter
+     *        is only supported for ObjectTypeName _asset and _case.
+     */
+
+    public void setObjectFilter(ObjectFilter objectFilter) {
+        this.objectFilter = objectFilter;
+    }
+
+    /**
+     * <p>
+     * Applies a filter to the response to include profile objects with the specified index values. This filter is only
+     * supported for ObjectTypeName _asset and _case.
+     * </p>
+     * 
+     * @return Applies a filter to the response to include profile objects with the specified index values. This filter
+     *         is only supported for ObjectTypeName _asset and _case.
+     */
+
+    public ObjectFilter getObjectFilter() {
+        return this.objectFilter;
+    }
+
+    /**
+     * <p>
+     * Applies a filter to the response to include profile objects with the specified index values. This filter is only
+     * supported for ObjectTypeName _asset and _case.
+     * </p>
+     * 
+     * @param objectFilter
+     *        Applies a filter to the response to include profile objects with the specified index values. This filter
+     *        is only supported for ObjectTypeName _asset and _case.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListProfileObjectsRequest withObjectFilter(ObjectFilter objectFilter) {
+        setObjectFilter(objectFilter);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -277,7 +330,9 @@ public class ListProfileObjectsRequest extends com.amazonaws.AmazonWebServiceReq
         if (getObjectTypeName() != null)
             sb.append("ObjectTypeName: ").append(getObjectTypeName()).append(",");
         if (getProfileId() != null)
-            sb.append("ProfileId: ").append(getProfileId());
+            sb.append("ProfileId: ").append(getProfileId()).append(",");
+        if (getObjectFilter() != null)
+            sb.append("ObjectFilter: ").append(getObjectFilter());
         sb.append("}");
         return sb.toString();
     }
@@ -312,6 +367,10 @@ public class ListProfileObjectsRequest extends com.amazonaws.AmazonWebServiceReq
             return false;
         if (other.getProfileId() != null && other.getProfileId().equals(this.getProfileId()) == false)
             return false;
+        if (other.getObjectFilter() == null ^ this.getObjectFilter() == null)
+            return false;
+        if (other.getObjectFilter() != null && other.getObjectFilter().equals(this.getObjectFilter()) == false)
+            return false;
         return true;
     }
 
@@ -325,6 +384,7 @@ public class ListProfileObjectsRequest extends com.amazonaws.AmazonWebServiceReq
         hashCode = prime * hashCode + ((getDomainName() == null) ? 0 : getDomainName().hashCode());
         hashCode = prime * hashCode + ((getObjectTypeName() == null) ? 0 : getObjectTypeName().hashCode());
         hashCode = prime * hashCode + ((getProfileId() == null) ? 0 : getProfileId().hashCode());
+        hashCode = prime * hashCode + ((getObjectFilter() == null) ? 0 : getObjectFilter().hashCode());
         return hashCode;
     }
 

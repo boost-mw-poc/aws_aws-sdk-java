@@ -17,8 +17,8 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * Consists of a primary cluster that accepts writes and an associated secondary cluster that resides in a different AWS
- * region. The secondary cluster accepts only reads. The primary cluster automatically replicates updates to the
+ * Consists of a primary cluster that accepts writes and an associated secondary cluster that resides in a different
+ * Amazon region. The secondary cluster accepts only reads. The primary cluster automatically replicates updates to the
  * secondary cluster.
  * </p>
  * <ul>

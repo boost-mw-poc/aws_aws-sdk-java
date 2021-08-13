@@ -20,7 +20,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 /**
  * <p>
  * The Amazon QuickSight customizations associated with your Amazon Web Services account; or a QuickSight namespace in a
- * specific Region;.
+ * specific Amazon Web Services Region;.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/quicksight-2018-04-01/AccountCustomization" target="_top">AWS

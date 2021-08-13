@@ -34,7 +34,7 @@ public class RegionalConfiguration implements Serializable, Cloneable {
     private String replicationGroupId;
     /**
      * <p>
-     * The AWS region where the cluster is stored
+     * The Amazon region where the cluster is stored
      * </p>
      */
     private String replicationGroupRegion;
@@ -88,11 +88,11 @@ public class RegionalConfiguration implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The AWS region where the cluster is stored
+     * The Amazon region where the cluster is stored
      * </p>
      * 
      * @param replicationGroupRegion
-     *        The AWS region where the cluster is stored
+     *        The Amazon region where the cluster is stored
      */
 
     public void setReplicationGroupRegion(String replicationGroupRegion) {
@@ -101,10 +101,10 @@ public class RegionalConfiguration implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The AWS region where the cluster is stored
+     * The Amazon region where the cluster is stored
      * </p>
      * 
-     * @return The AWS region where the cluster is stored
+     * @return The Amazon region where the cluster is stored
      */
 
     public String getReplicationGroupRegion() {
@@ -113,11 +113,11 @@ public class RegionalConfiguration implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The AWS region where the cluster is stored
+     * The Amazon region where the cluster is stored
      * </p>
      * 
      * @param replicationGroupRegion
-     *        The AWS region where the cluster is stored
+     *        The Amazon region where the cluster is stored
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

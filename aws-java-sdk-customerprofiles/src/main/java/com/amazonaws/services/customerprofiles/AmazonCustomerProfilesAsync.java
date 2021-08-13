@@ -94,6 +94,12 @@ public interface AmazonCustomerProfilesAsync extends AmazonCustomerProfiles {
      * Each Amazon Connect instance can be associated with only one domain. Multiple Amazon Connect instances can be
      * associated with one domain.
      * </p>
+     * <p>
+     * Use this API or <a
+     * href="https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_UpdateDomain.html">UpdateDomain</a> to
+     * enable <a href="https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_GetMatches.html">identity
+     * resolution</a>: set <code>Matching</code> to true.
+     * </p>
      * 
      * @param createDomainRequest
      * @return A Java Future containing the result of the CreateDomain operation returned by the service.
@@ -112,6 +118,12 @@ public interface AmazonCustomerProfilesAsync extends AmazonCustomerProfiles {
      * <p>
      * Each Amazon Connect instance can be associated with only one domain. Multiple Amazon Connect instances can be
      * associated with one domain.
+     * </p>
+     * <p>
+     * Use this API or <a
+     * href="https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_UpdateDomain.html">UpdateDomain</a> to
+     * enable <a href="https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_GetMatches.html">identity
+     * resolution</a>: set <code>Matching</code> to true.
      * </p>
      * 
      * @param createDomainRequest
@@ -434,7 +446,7 @@ public interface AmazonCustomerProfilesAsync extends AmazonCustomerProfiles {
      * </p>
      * <important>
      * <p>
-     * Amazon Connect runs a batch process every Saturday at 12AM UTC to identify matching profiles. The results are
+     * Amazon Connect starts a batch process every Saturday at 12AM UTC to identify matching profiles. The results are
      * returned up to seven days after the Saturday run.
      * </p>
      * </important>
@@ -488,6 +500,12 @@ public interface AmazonCustomerProfilesAsync extends AmazonCustomerProfiles {
      * </p>
      * </li>
      * </ul>
+     * <p>
+     * For example, two or more profiles—with spelling mistakes such as <b>John Doe</b> and <b>Jhn Doe</b>, or different
+     * casing email addresses such as <b>JOHN_DOE@ANYCOMPANY.COM</b> and <b>johndoe@anycompany.com</b>, or different
+     * phone number formats such as <b>555-010-0000</b> and <b>+1-555-010-0000</b>—can be detected as belonging to the
+     * same customer <b>John Doe</b> and merged into a unified profile.
+     * </p>
      * 
      * @param getMatchesRequest
      * @return A Java Future containing the result of the GetMatches operation returned by the service.
@@ -513,7 +531,7 @@ public interface AmazonCustomerProfilesAsync extends AmazonCustomerProfiles {
      * </p>
      * <important>
      * <p>
-     * Amazon Connect runs a batch process every Saturday at 12AM UTC to identify matching profiles. The results are
+     * Amazon Connect starts a batch process every Saturday at 12AM UTC to identify matching profiles. The results are
      * returned up to seven days after the Saturday run.
      * </p>
      * </important>
@@ -567,6 +585,12 @@ public interface AmazonCustomerProfilesAsync extends AmazonCustomerProfiles {
      * </p>
      * </li>
      * </ul>
+     * <p>
+     * For example, two or more profiles—with spelling mistakes such as <b>John Doe</b> and <b>Jhn Doe</b>, or different
+     * casing email addresses such as <b>JOHN_DOE@ANYCOMPANY.COM</b> and <b>johndoe@anycompany.com</b>, or different
+     * phone number formats such as <b>555-010-0000</b> and <b>+1-555-010-0000</b>—can be detected as belonging to the
+     * same customer <b>John Doe</b> and merged into a unified profile.
+     * </p>
      * 
      * @param getMatchesRequest
      * @param asyncHandler
@@ -1292,6 +1316,12 @@ public interface AmazonCustomerProfilesAsync extends AmazonCustomerProfiles {
      * <p>
      * After a domain is created, the name can’t be changed.
      * </p>
+     * <p>
+     * Use this API or <a
+     * href="https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_CreateDomain.html">CreateDomain</a> to
+     * enable <a href="https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_GetMatches.html">identity
+     * resolution</a>: set <code>Matching</code> to true.
+     * </p>
      * 
      * @param updateDomainRequest
      * @return A Java Future containing the result of the UpdateDomain operation returned by the service.
@@ -1307,6 +1337,12 @@ public interface AmazonCustomerProfilesAsync extends AmazonCustomerProfiles {
      * </p>
      * <p>
      * After a domain is created, the name can’t be changed.
+     * </p>
+     * <p>
+     * Use this API or <a
+     * href="https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_CreateDomain.html">CreateDomain</a> to
+     * enable <a href="https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_GetMatches.html">identity
+     * resolution</a>: set <code>Matching</code> to true.
      * </p>
      * 
      * @param updateDomainRequest

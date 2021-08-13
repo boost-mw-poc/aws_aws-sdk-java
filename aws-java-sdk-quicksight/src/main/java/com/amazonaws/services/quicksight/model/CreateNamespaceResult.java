@@ -37,8 +37,8 @@ public class CreateNamespaceResult extends com.amazonaws.AmazonWebServiceResult<
     private String name;
     /**
      * <p>
-     * The Region; that you want to use for the free SPICE capacity for the new namespace. This is set to the region
-     * that you run CreateNamespace in.
+     * The Amazon Web Services Region; that you want to use for the free SPICE capacity for the new namespace. This is
+     * set to the region that you run CreateNamespace in.
      * </p>
      */
     private String capacityRegion;
@@ -153,13 +153,13 @@ public class CreateNamespaceResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The Region; that you want to use for the free SPICE capacity for the new namespace. This is set to the region
-     * that you run CreateNamespace in.
+     * The Amazon Web Services Region; that you want to use for the free SPICE capacity for the new namespace. This is
+     * set to the region that you run CreateNamespace in.
      * </p>
      * 
      * @param capacityRegion
-     *        The Region; that you want to use for the free SPICE capacity for the new namespace. This is set to the
-     *        region that you run CreateNamespace in.
+     *        The Amazon Web Services Region; that you want to use for the free SPICE capacity for the new namespace.
+     *        This is set to the region that you run CreateNamespace in.
      */
 
     public void setCapacityRegion(String capacityRegion) {
@@ -168,12 +168,12 @@ public class CreateNamespaceResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The Region; that you want to use for the free SPICE capacity for the new namespace. This is set to the region
-     * that you run CreateNamespace in.
+     * The Amazon Web Services Region; that you want to use for the free SPICE capacity for the new namespace. This is
+     * set to the region that you run CreateNamespace in.
      * </p>
      * 
-     * @return The Region; that you want to use for the free SPICE capacity for the new namespace. This is set to the
-     *         region that you run CreateNamespace in.
+     * @return The Amazon Web Services Region; that you want to use for the free SPICE capacity for the new namespace.
+     *         This is set to the region that you run CreateNamespace in.
      */
 
     public String getCapacityRegion() {
@@ -182,13 +182,13 @@ public class CreateNamespaceResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The Region; that you want to use for the free SPICE capacity for the new namespace. This is set to the region
-     * that you run CreateNamespace in.
+     * The Amazon Web Services Region; that you want to use for the free SPICE capacity for the new namespace. This is
+     * set to the region that you run CreateNamespace in.
      * </p>
      * 
      * @param capacityRegion
-     *        The Region; that you want to use for the free SPICE capacity for the new namespace. This is set to the
-     *        region that you run CreateNamespace in.
+     *        The Amazon Web Services Region; that you want to use for the free SPICE capacity for the new namespace.
+     *        This is set to the region that you run CreateNamespace in.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

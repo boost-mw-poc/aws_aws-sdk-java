@@ -33,7 +33,7 @@ public class FailoverGlobalReplicationGroupRequest extends com.amazonaws.AmazonW
     private String globalReplicationGroupId;
     /**
      * <p>
-     * The AWS region of the primary cluster of the Global datastore
+     * The Amazon region of the primary cluster of the Global datastore
      * </p>
      */
     private String primaryRegion;
@@ -86,11 +86,11 @@ public class FailoverGlobalReplicationGroupRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The AWS region of the primary cluster of the Global datastore
+     * The Amazon region of the primary cluster of the Global datastore
      * </p>
      * 
      * @param primaryRegion
-     *        The AWS region of the primary cluster of the Global datastore
+     *        The Amazon region of the primary cluster of the Global datastore
      */
 
     public void setPrimaryRegion(String primaryRegion) {
@@ -99,10 +99,10 @@ public class FailoverGlobalReplicationGroupRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The AWS region of the primary cluster of the Global datastore
+     * The Amazon region of the primary cluster of the Global datastore
      * </p>
      * 
-     * @return The AWS region of the primary cluster of the Global datastore
+     * @return The Amazon region of the primary cluster of the Global datastore
      */
 
     public String getPrimaryRegion() {
@@ -111,11 +111,11 @@ public class FailoverGlobalReplicationGroupRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The AWS region of the primary cluster of the Global datastore
+     * The Amazon region of the primary cluster of the Global datastore
      * </p>
      * 
      * @param primaryRegion
-     *        The AWS region of the primary cluster of the Global datastore
+     *        The Amazon region of the primary cluster of the Global datastore
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

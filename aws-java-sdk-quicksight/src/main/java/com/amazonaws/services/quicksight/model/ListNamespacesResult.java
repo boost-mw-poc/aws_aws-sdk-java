@@ -26,7 +26,7 @@ public class ListNamespacesResult extends com.amazonaws.AmazonWebServiceResult<c
     /**
      * <p>
      * The information about the namespaces in this Amazon Web Services account;. The response includes the namespace
-     * ARN, name, Region;, notification email address, creation status, and identity store.
+     * ARN, name, Amazon Web Services Region;, notification email address, creation status, and identity store.
      * </p>
      */
     private java.util.List<NamespaceInfoV2> namespaces;
@@ -52,11 +52,12 @@ public class ListNamespacesResult extends com.amazonaws.AmazonWebServiceResult<c
     /**
      * <p>
      * The information about the namespaces in this Amazon Web Services account;. The response includes the namespace
-     * ARN, name, Region;, notification email address, creation status, and identity store.
+     * ARN, name, Amazon Web Services Region;, notification email address, creation status, and identity store.
      * </p>
      * 
      * @return The information about the namespaces in this Amazon Web Services account;. The response includes the
-     *         namespace ARN, name, Region;, notification email address, creation status, and identity store.
+     *         namespace ARN, name, Amazon Web Services Region;, notification email address, creation status, and
+     *         identity store.
      */
 
     public java.util.List<NamespaceInfoV2> getNamespaces() {
@@ -66,12 +67,13 @@ public class ListNamespacesResult extends com.amazonaws.AmazonWebServiceResult<c
     /**
      * <p>
      * The information about the namespaces in this Amazon Web Services account;. The response includes the namespace
-     * ARN, name, Region;, notification email address, creation status, and identity store.
+     * ARN, name, Amazon Web Services Region;, notification email address, creation status, and identity store.
      * </p>
      * 
      * @param namespaces
      *        The information about the namespaces in this Amazon Web Services account;. The response includes the
-     *        namespace ARN, name, Region;, notification email address, creation status, and identity store.
+     *        namespace ARN, name, Amazon Web Services Region;, notification email address, creation status, and
+     *        identity store.
      */
 
     public void setNamespaces(java.util.Collection<NamespaceInfoV2> namespaces) {
@@ -86,7 +88,7 @@ public class ListNamespacesResult extends com.amazonaws.AmazonWebServiceResult<c
     /**
      * <p>
      * The information about the namespaces in this Amazon Web Services account;. The response includes the namespace
-     * ARN, name, Region;, notification email address, creation status, and identity store.
+     * ARN, name, Amazon Web Services Region;, notification email address, creation status, and identity store.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -96,7 +98,8 @@ public class ListNamespacesResult extends com.amazonaws.AmazonWebServiceResult<c
      * 
      * @param namespaces
      *        The information about the namespaces in this Amazon Web Services account;. The response includes the
-     *        namespace ARN, name, Region;, notification email address, creation status, and identity store.
+     *        namespace ARN, name, Amazon Web Services Region;, notification email address, creation status, and
+     *        identity store.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -113,12 +116,13 @@ public class ListNamespacesResult extends com.amazonaws.AmazonWebServiceResult<c
     /**
      * <p>
      * The information about the namespaces in this Amazon Web Services account;. The response includes the namespace
-     * ARN, name, Region;, notification email address, creation status, and identity store.
+     * ARN, name, Amazon Web Services Region;, notification email address, creation status, and identity store.
      * </p>
      * 
      * @param namespaces
      *        The information about the namespaces in this Amazon Web Services account;. The response includes the
-     *        namespace ARN, name, Region;, notification email address, creation status, and identity store.
+     *        namespace ARN, name, Amazon Web Services Region;, notification email address, creation status, and
+     *        identity store.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

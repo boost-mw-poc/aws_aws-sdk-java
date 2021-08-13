@@ -104,6 +104,10 @@ public class InstanceGroupDetailJsonUnmarshaller implements Unmarshaller<Instanc
                     context.nextToken();
                     instanceGroupDetail.setEndDateTime(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
                 }
+                if (context.testExpression("CustomAmiId", targetDepth)) {
+                    context.nextToken();
+                    instanceGroupDetail.setCustomAmiId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

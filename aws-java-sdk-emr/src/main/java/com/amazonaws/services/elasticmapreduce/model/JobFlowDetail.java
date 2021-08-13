@@ -99,14 +99,13 @@ public class JobFlowDetail implements Serializable, Cloneable, StructuredPojo {
      * EMR actions, regardless of IAM permissions policies attached to other IAM principals.
      * </p>
      * <p>
-     * The default value is <code>false</code> if a value is not provided when creating a cluster using the EMR API
-     * <a>RunJobFlow</a> command or the CLI <a
-     * href="https://docs.aws.amazon.com/cli/latest/reference/emr/create-cluster.html">create-cluster</a> command. The
-     * default value is <code>true</code> when a cluster is created using the Management Console. IAM principals that
-     * are authorized to perform actions on the cluster can use the <a>SetVisibleToAllUsers</a> action to change the
-     * value on a running cluster. For more information, see <a href=
+     * The default value is <code>true</code> if a value is not provided when creating a cluster using the EMR API
+     * <a>RunJobFlow</a> command, the CLI <a
+     * href="https://docs.aws.amazon.com/cli/latest/reference/emr/create-cluster.html">create-cluster</a> command, or
+     * the Management Console. IAM principals that are authorized to perform actions on the cluster can use the
+     * <a>SetVisibleToAllUsers</a> action to change the value on a running cluster. For more information, see <a href=
      * "https://docs.aws.amazon.com/emr/latest/ManagementGuide/security_iam_emr-with-iam.html#security_set_visible_to_all_users"
-     * >Understanding the EMR Cluster VisibleToAllUsers Setting</a> in the <i>Amazon EMR Management Guide</i>.
+     * >Understanding the EMR Cluster VisibleToAllUsers Setting</a> in the <i>Amazon EMRManagement Guide</i>.
      * </p>
      */
     private Boolean visibleToAllUsers;
@@ -700,14 +699,13 @@ public class JobFlowDetail implements Serializable, Cloneable, StructuredPojo {
      * EMR actions, regardless of IAM permissions policies attached to other IAM principals.
      * </p>
      * <p>
-     * The default value is <code>false</code> if a value is not provided when creating a cluster using the EMR API
-     * <a>RunJobFlow</a> command or the CLI <a
-     * href="https://docs.aws.amazon.com/cli/latest/reference/emr/create-cluster.html">create-cluster</a> command. The
-     * default value is <code>true</code> when a cluster is created using the Management Console. IAM principals that
-     * are authorized to perform actions on the cluster can use the <a>SetVisibleToAllUsers</a> action to change the
-     * value on a running cluster. For more information, see <a href=
+     * The default value is <code>true</code> if a value is not provided when creating a cluster using the EMR API
+     * <a>RunJobFlow</a> command, the CLI <a
+     * href="https://docs.aws.amazon.com/cli/latest/reference/emr/create-cluster.html">create-cluster</a> command, or
+     * the Management Console. IAM principals that are authorized to perform actions on the cluster can use the
+     * <a>SetVisibleToAllUsers</a> action to change the value on a running cluster. For more information, see <a href=
      * "https://docs.aws.amazon.com/emr/latest/ManagementGuide/security_iam_emr-with-iam.html#security_set_visible_to_all_users"
-     * >Understanding the EMR Cluster VisibleToAllUsers Setting</a> in the <i>Amazon EMR Management Guide</i>.
+     * >Understanding the EMR Cluster VisibleToAllUsers Setting</a> in the <i>Amazon EMRManagement Guide</i>.
      * </p>
      * 
      * @param visibleToAllUsers
@@ -717,15 +715,14 @@ public class JobFlowDetail implements Serializable, Cloneable, StructuredPojo {
      *        root user can perform EMR actions, regardless of IAM permissions policies attached to other IAM
      *        principals.</p>
      *        <p>
-     *        The default value is <code>false</code> if a value is not provided when creating a cluster using the EMR
-     *        API <a>RunJobFlow</a> command or the CLI <a
+     *        The default value is <code>true</code> if a value is not provided when creating a cluster using the EMR
+     *        API <a>RunJobFlow</a> command, the CLI <a
      *        href="https://docs.aws.amazon.com/cli/latest/reference/emr/create-cluster.html">create-cluster</a>
-     *        command. The default value is <code>true</code> when a cluster is created using the Management Console.
-     *        IAM principals that are authorized to perform actions on the cluster can use the
-     *        <a>SetVisibleToAllUsers</a> action to change the value on a running cluster. For more information, see <a
-     *        href=
+     *        command, or the Management Console. IAM principals that are authorized to perform actions on the cluster
+     *        can use the <a>SetVisibleToAllUsers</a> action to change the value on a running cluster. For more
+     *        information, see <a href=
      *        "https://docs.aws.amazon.com/emr/latest/ManagementGuide/security_iam_emr-with-iam.html#security_set_visible_to_all_users"
-     *        >Understanding the EMR Cluster VisibleToAllUsers Setting</a> in the <i>Amazon EMR Management Guide</i>.
+     *        >Understanding the EMR Cluster VisibleToAllUsers Setting</a> in the <i>Amazon EMRManagement Guide</i>.
      */
 
     public void setVisibleToAllUsers(Boolean visibleToAllUsers) {
@@ -740,14 +737,13 @@ public class JobFlowDetail implements Serializable, Cloneable, StructuredPojo {
      * EMR actions, regardless of IAM permissions policies attached to other IAM principals.
      * </p>
      * <p>
-     * The default value is <code>false</code> if a value is not provided when creating a cluster using the EMR API
-     * <a>RunJobFlow</a> command or the CLI <a
-     * href="https://docs.aws.amazon.com/cli/latest/reference/emr/create-cluster.html">create-cluster</a> command. The
-     * default value is <code>true</code> when a cluster is created using the Management Console. IAM principals that
-     * are authorized to perform actions on the cluster can use the <a>SetVisibleToAllUsers</a> action to change the
-     * value on a running cluster. For more information, see <a href=
+     * The default value is <code>true</code> if a value is not provided when creating a cluster using the EMR API
+     * <a>RunJobFlow</a> command, the CLI <a
+     * href="https://docs.aws.amazon.com/cli/latest/reference/emr/create-cluster.html">create-cluster</a> command, or
+     * the Management Console. IAM principals that are authorized to perform actions on the cluster can use the
+     * <a>SetVisibleToAllUsers</a> action to change the value on a running cluster. For more information, see <a href=
      * "https://docs.aws.amazon.com/emr/latest/ManagementGuide/security_iam_emr-with-iam.html#security_set_visible_to_all_users"
-     * >Understanding the EMR Cluster VisibleToAllUsers Setting</a> in the <i>Amazon EMR Management Guide</i>.
+     * >Understanding the EMR Cluster VisibleToAllUsers Setting</a> in the <i>Amazon EMRManagement Guide</i>.
      * </p>
      * 
      * @return Indicates whether the cluster is visible to IAM principals in the account associated with the cluster.
@@ -756,15 +752,14 @@ public class JobFlowDetail implements Serializable, Cloneable, StructuredPojo {
      *         root user can perform EMR actions, regardless of IAM permissions policies attached to other IAM
      *         principals.</p>
      *         <p>
-     *         The default value is <code>false</code> if a value is not provided when creating a cluster using the EMR
-     *         API <a>RunJobFlow</a> command or the CLI <a
+     *         The default value is <code>true</code> if a value is not provided when creating a cluster using the EMR
+     *         API <a>RunJobFlow</a> command, the CLI <a
      *         href="https://docs.aws.amazon.com/cli/latest/reference/emr/create-cluster.html">create-cluster</a>
-     *         command. The default value is <code>true</code> when a cluster is created using the Management Console.
-     *         IAM principals that are authorized to perform actions on the cluster can use the
-     *         <a>SetVisibleToAllUsers</a> action to change the value on a running cluster. For more information, see <a
-     *         href=
+     *         command, or the Management Console. IAM principals that are authorized to perform actions on the cluster
+     *         can use the <a>SetVisibleToAllUsers</a> action to change the value on a running cluster. For more
+     *         information, see <a href=
      *         "https://docs.aws.amazon.com/emr/latest/ManagementGuide/security_iam_emr-with-iam.html#security_set_visible_to_all_users"
-     *         >Understanding the EMR Cluster VisibleToAllUsers Setting</a> in the <i>Amazon EMR Management Guide</i>.
+     *         >Understanding the EMR Cluster VisibleToAllUsers Setting</a> in the <i>Amazon EMRManagement Guide</i>.
      */
 
     public Boolean getVisibleToAllUsers() {
@@ -779,14 +774,13 @@ public class JobFlowDetail implements Serializable, Cloneable, StructuredPojo {
      * EMR actions, regardless of IAM permissions policies attached to other IAM principals.
      * </p>
      * <p>
-     * The default value is <code>false</code> if a value is not provided when creating a cluster using the EMR API
-     * <a>RunJobFlow</a> command or the CLI <a
-     * href="https://docs.aws.amazon.com/cli/latest/reference/emr/create-cluster.html">create-cluster</a> command. The
-     * default value is <code>true</code> when a cluster is created using the Management Console. IAM principals that
-     * are authorized to perform actions on the cluster can use the <a>SetVisibleToAllUsers</a> action to change the
-     * value on a running cluster. For more information, see <a href=
+     * The default value is <code>true</code> if a value is not provided when creating a cluster using the EMR API
+     * <a>RunJobFlow</a> command, the CLI <a
+     * href="https://docs.aws.amazon.com/cli/latest/reference/emr/create-cluster.html">create-cluster</a> command, or
+     * the Management Console. IAM principals that are authorized to perform actions on the cluster can use the
+     * <a>SetVisibleToAllUsers</a> action to change the value on a running cluster. For more information, see <a href=
      * "https://docs.aws.amazon.com/emr/latest/ManagementGuide/security_iam_emr-with-iam.html#security_set_visible_to_all_users"
-     * >Understanding the EMR Cluster VisibleToAllUsers Setting</a> in the <i>Amazon EMR Management Guide</i>.
+     * >Understanding the EMR Cluster VisibleToAllUsers Setting</a> in the <i>Amazon EMRManagement Guide</i>.
      * </p>
      * 
      * @param visibleToAllUsers
@@ -796,15 +790,14 @@ public class JobFlowDetail implements Serializable, Cloneable, StructuredPojo {
      *        root user can perform EMR actions, regardless of IAM permissions policies attached to other IAM
      *        principals.</p>
      *        <p>
-     *        The default value is <code>false</code> if a value is not provided when creating a cluster using the EMR
-     *        API <a>RunJobFlow</a> command or the CLI <a
+     *        The default value is <code>true</code> if a value is not provided when creating a cluster using the EMR
+     *        API <a>RunJobFlow</a> command, the CLI <a
      *        href="https://docs.aws.amazon.com/cli/latest/reference/emr/create-cluster.html">create-cluster</a>
-     *        command. The default value is <code>true</code> when a cluster is created using the Management Console.
-     *        IAM principals that are authorized to perform actions on the cluster can use the
-     *        <a>SetVisibleToAllUsers</a> action to change the value on a running cluster. For more information, see <a
-     *        href=
+     *        command, or the Management Console. IAM principals that are authorized to perform actions on the cluster
+     *        can use the <a>SetVisibleToAllUsers</a> action to change the value on a running cluster. For more
+     *        information, see <a href=
      *        "https://docs.aws.amazon.com/emr/latest/ManagementGuide/security_iam_emr-with-iam.html#security_set_visible_to_all_users"
-     *        >Understanding the EMR Cluster VisibleToAllUsers Setting</a> in the <i>Amazon EMR Management Guide</i>.
+     *        >Understanding the EMR Cluster VisibleToAllUsers Setting</a> in the <i>Amazon EMRManagement Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -821,14 +814,13 @@ public class JobFlowDetail implements Serializable, Cloneable, StructuredPojo {
      * EMR actions, regardless of IAM permissions policies attached to other IAM principals.
      * </p>
      * <p>
-     * The default value is <code>false</code> if a value is not provided when creating a cluster using the EMR API
-     * <a>RunJobFlow</a> command or the CLI <a
-     * href="https://docs.aws.amazon.com/cli/latest/reference/emr/create-cluster.html">create-cluster</a> command. The
-     * default value is <code>true</code> when a cluster is created using the Management Console. IAM principals that
-     * are authorized to perform actions on the cluster can use the <a>SetVisibleToAllUsers</a> action to change the
-     * value on a running cluster. For more information, see <a href=
+     * The default value is <code>true</code> if a value is not provided when creating a cluster using the EMR API
+     * <a>RunJobFlow</a> command, the CLI <a
+     * href="https://docs.aws.amazon.com/cli/latest/reference/emr/create-cluster.html">create-cluster</a> command, or
+     * the Management Console. IAM principals that are authorized to perform actions on the cluster can use the
+     * <a>SetVisibleToAllUsers</a> action to change the value on a running cluster. For more information, see <a href=
      * "https://docs.aws.amazon.com/emr/latest/ManagementGuide/security_iam_emr-with-iam.html#security_set_visible_to_all_users"
-     * >Understanding the EMR Cluster VisibleToAllUsers Setting</a> in the <i>Amazon EMR Management Guide</i>.
+     * >Understanding the EMR Cluster VisibleToAllUsers Setting</a> in the <i>Amazon EMRManagement Guide</i>.
      * </p>
      * 
      * @return Indicates whether the cluster is visible to IAM principals in the account associated with the cluster.
@@ -837,15 +829,14 @@ public class JobFlowDetail implements Serializable, Cloneable, StructuredPojo {
      *         root user can perform EMR actions, regardless of IAM permissions policies attached to other IAM
      *         principals.</p>
      *         <p>
-     *         The default value is <code>false</code> if a value is not provided when creating a cluster using the EMR
-     *         API <a>RunJobFlow</a> command or the CLI <a
+     *         The default value is <code>true</code> if a value is not provided when creating a cluster using the EMR
+     *         API <a>RunJobFlow</a> command, the CLI <a
      *         href="https://docs.aws.amazon.com/cli/latest/reference/emr/create-cluster.html">create-cluster</a>
-     *         command. The default value is <code>true</code> when a cluster is created using the Management Console.
-     *         IAM principals that are authorized to perform actions on the cluster can use the
-     *         <a>SetVisibleToAllUsers</a> action to change the value on a running cluster. For more information, see <a
-     *         href=
+     *         command, or the Management Console. IAM principals that are authorized to perform actions on the cluster
+     *         can use the <a>SetVisibleToAllUsers</a> action to change the value on a running cluster. For more
+     *         information, see <a href=
      *         "https://docs.aws.amazon.com/emr/latest/ManagementGuide/security_iam_emr-with-iam.html#security_set_visible_to_all_users"
-     *         >Understanding the EMR Cluster VisibleToAllUsers Setting</a> in the <i>Amazon EMR Management Guide</i>.
+     *         >Understanding the EMR Cluster VisibleToAllUsers Setting</a> in the <i>Amazon EMRManagement Guide</i>.
      */
 
     public Boolean isVisibleToAllUsers() {

@@ -21,6 +21,8 @@ import javax.annotation.Generated;
 public enum StandardIdentifier {
 
     PROFILE("PROFILE"),
+    ASSET("ASSET"),
+    CASE("CASE"),
     UNIQUE("UNIQUE"),
     SECONDARY("SECONDARY"),
     LOOKUP_ONLY("LOOKUP_ONLY"),

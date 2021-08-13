@@ -122,6 +122,10 @@ public class InstanceGroupJsonUnmarshaller implements Unmarshaller<InstanceGroup
                     context.nextToken();
                     instanceGroup.setAutoScalingPolicy(AutoScalingPolicyDescriptionJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("CustomAmiId", targetDepth)) {
+                    context.nextToken();
+                    instanceGroup.setCustomAmiId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

@@ -46,6 +46,8 @@ public class InstanceGroupConfigMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EbsConfiguration").build();
     private static final MarshallingInfo<StructuredPojo> AUTOSCALINGPOLICY_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AutoScalingPolicy").build();
+    private static final MarshallingInfo<String> CUSTOMAMIID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CustomAmiId").build();
 
     private static final InstanceGroupConfigMarshaller instance = new InstanceGroupConfigMarshaller();
 
@@ -72,6 +74,7 @@ public class InstanceGroupConfigMarshaller {
             protocolMarshaller.marshall(instanceGroupConfig.getConfigurations(), CONFIGURATIONS_BINDING);
             protocolMarshaller.marshall(instanceGroupConfig.getEbsConfiguration(), EBSCONFIGURATION_BINDING);
             protocolMarshaller.marshall(instanceGroupConfig.getAutoScalingPolicy(), AUTOSCALINGPOLICY_BINDING);
+            protocolMarshaller.marshall(instanceGroupConfig.getCustomAmiId(), CUSTOMAMIID_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

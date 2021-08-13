@@ -226,6 +226,12 @@ public class ReplicationGroup implements Serializable, Cloneable {
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<LogDeliveryConfiguration> logDeliveryConfigurations;
+    /**
+     * <p>
+     * The date and time when the cluster was created.
+     * </p>
+     */
+    private java.util.Date replicationGroupCreateTime;
 
     /**
      * <p>
@@ -1855,6 +1861,46 @@ public class ReplicationGroup implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * The date and time when the cluster was created.
+     * </p>
+     * 
+     * @param replicationGroupCreateTime
+     *        The date and time when the cluster was created.
+     */
+
+    public void setReplicationGroupCreateTime(java.util.Date replicationGroupCreateTime) {
+        this.replicationGroupCreateTime = replicationGroupCreateTime;
+    }
+
+    /**
+     * <p>
+     * The date and time when the cluster was created.
+     * </p>
+     * 
+     * @return The date and time when the cluster was created.
+     */
+
+    public java.util.Date getReplicationGroupCreateTime() {
+        return this.replicationGroupCreateTime;
+    }
+
+    /**
+     * <p>
+     * The date and time when the cluster was created.
+     * </p>
+     * 
+     * @param replicationGroupCreateTime
+     *        The date and time when the cluster was created.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ReplicationGroup withReplicationGroupCreateTime(java.util.Date replicationGroupCreateTime) {
+        setReplicationGroupCreateTime(replicationGroupCreateTime);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1913,7 +1959,9 @@ public class ReplicationGroup implements Serializable, Cloneable {
         if (getUserGroupIds() != null)
             sb.append("UserGroupIds: ").append(getUserGroupIds()).append(",");
         if (getLogDeliveryConfigurations() != null)
-            sb.append("LogDeliveryConfigurations: ").append(getLogDeliveryConfigurations());
+            sb.append("LogDeliveryConfigurations: ").append(getLogDeliveryConfigurations()).append(",");
+        if (getReplicationGroupCreateTime() != null)
+            sb.append("ReplicationGroupCreateTime: ").append(getReplicationGroupCreateTime());
         sb.append("}");
         return sb.toString();
     }
@@ -2024,6 +2072,10 @@ public class ReplicationGroup implements Serializable, Cloneable {
             return false;
         if (other.getLogDeliveryConfigurations() != null && other.getLogDeliveryConfigurations().equals(this.getLogDeliveryConfigurations()) == false)
             return false;
+        if (other.getReplicationGroupCreateTime() == null ^ this.getReplicationGroupCreateTime() == null)
+            return false;
+        if (other.getReplicationGroupCreateTime() != null && other.getReplicationGroupCreateTime().equals(this.getReplicationGroupCreateTime()) == false)
+            return false;
         return true;
     }
 
@@ -2056,6 +2108,7 @@ public class ReplicationGroup implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getARN() == null) ? 0 : getARN().hashCode());
         hashCode = prime * hashCode + ((getUserGroupIds() == null) ? 0 : getUserGroupIds().hashCode());
         hashCode = prime * hashCode + ((getLogDeliveryConfigurations() == null) ? 0 : getLogDeliveryConfigurations().hashCode());
+        hashCode = prime * hashCode + ((getReplicationGroupCreateTime() == null) ? 0 : getReplicationGroupCreateTime().hashCode());
         return hashCode;
     }
 

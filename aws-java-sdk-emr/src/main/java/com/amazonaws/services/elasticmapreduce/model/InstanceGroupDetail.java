@@ -114,6 +114,12 @@ public class InstanceGroupDetail implements Serializable, Cloneable, StructuredP
      * </p>
      */
     private java.util.Date endDateTime;
+    /**
+     * <p>
+     * The custom AMI ID to use for the provisioned instance group.
+     * </p>
+     */
+    private String customAmiId;
 
     /**
      * Default constructor for InstanceGroupDetail object. Callers should use the setter or fluent setter (with...)
@@ -848,6 +854,46 @@ public class InstanceGroupDetail implements Serializable, Cloneable, StructuredP
     }
 
     /**
+     * <p>
+     * The custom AMI ID to use for the provisioned instance group.
+     * </p>
+     * 
+     * @param customAmiId
+     *        The custom AMI ID to use for the provisioned instance group.
+     */
+
+    public void setCustomAmiId(String customAmiId) {
+        this.customAmiId = customAmiId;
+    }
+
+    /**
+     * <p>
+     * The custom AMI ID to use for the provisioned instance group.
+     * </p>
+     * 
+     * @return The custom AMI ID to use for the provisioned instance group.
+     */
+
+    public String getCustomAmiId() {
+        return this.customAmiId;
+    }
+
+    /**
+     * <p>
+     * The custom AMI ID to use for the provisioned instance group.
+     * </p>
+     * 
+     * @param customAmiId
+     *        The custom AMI ID to use for the provisioned instance group.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public InstanceGroupDetail withCustomAmiId(String customAmiId) {
+        setCustomAmiId(customAmiId);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -886,7 +932,9 @@ public class InstanceGroupDetail implements Serializable, Cloneable, StructuredP
         if (getReadyDateTime() != null)
             sb.append("ReadyDateTime: ").append(getReadyDateTime()).append(",");
         if (getEndDateTime() != null)
-            sb.append("EndDateTime: ").append(getEndDateTime());
+            sb.append("EndDateTime: ").append(getEndDateTime()).append(",");
+        if (getCustomAmiId() != null)
+            sb.append("CustomAmiId: ").append(getCustomAmiId());
         sb.append("}");
         return sb.toString();
     }
@@ -957,6 +1005,10 @@ public class InstanceGroupDetail implements Serializable, Cloneable, StructuredP
             return false;
         if (other.getEndDateTime() != null && other.getEndDateTime().equals(this.getEndDateTime()) == false)
             return false;
+        if (other.getCustomAmiId() == null ^ this.getCustomAmiId() == null)
+            return false;
+        if (other.getCustomAmiId() != null && other.getCustomAmiId().equals(this.getCustomAmiId()) == false)
+            return false;
         return true;
     }
 
@@ -979,6 +1031,7 @@ public class InstanceGroupDetail implements Serializable, Cloneable, StructuredP
         hashCode = prime * hashCode + ((getStartDateTime() == null) ? 0 : getStartDateTime().hashCode());
         hashCode = prime * hashCode + ((getReadyDateTime() == null) ? 0 : getReadyDateTime().hashCode());
         hashCode = prime * hashCode + ((getEndDateTime() == null) ? 0 : getEndDateTime().hashCode());
+        hashCode = prime * hashCode + ((getCustomAmiId() == null) ? 0 : getCustomAmiId().hashCode());
         return hashCode;
     }
 

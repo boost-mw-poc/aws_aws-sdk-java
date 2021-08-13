@@ -45,7 +45,7 @@ public class CacheSecurityGroup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The AWS account ID of the cache security group owner.
+     * The Amazon account ID of the cache security group owner.
      * </p>
      */
     private String ownerId;
@@ -76,11 +76,11 @@ public class CacheSecurityGroup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The AWS account ID of the cache security group owner.
+     * The Amazon account ID of the cache security group owner.
      * </p>
      * 
      * @param ownerId
-     *        The AWS account ID of the cache security group owner.
+     *        The Amazon account ID of the cache security group owner.
      */
 
     public void setOwnerId(String ownerId) {
@@ -89,10 +89,10 @@ public class CacheSecurityGroup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The AWS account ID of the cache security group owner.
+     * The Amazon account ID of the cache security group owner.
      * </p>
      * 
-     * @return The AWS account ID of the cache security group owner.
+     * @return The Amazon account ID of the cache security group owner.
      */
 
     public String getOwnerId() {
@@ -101,11 +101,11 @@ public class CacheSecurityGroup implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The AWS account ID of the cache security group owner.
+     * The Amazon account ID of the cache security group owner.
      * </p>
      * 
      * @param ownerId
-     *        The AWS account ID of the cache security group owner.
+     *        The Amazon account ID of the cache security group owner.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

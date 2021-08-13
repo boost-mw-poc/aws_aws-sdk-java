@@ -36,7 +36,7 @@ public class ListReleaseLabelsRequest extends com.amazonaws.AmazonWebServiceRequ
      * <p>
      * Specifies the next page of results. If <code>NextToken</code> is not specified, which is usually the case for the
      * first request of ListReleaseLabels, the first page of results are determined by other filtering parameters or by
-     * the latest version. The <code>ListReleaseLabels</code> request fails if the identity (AWS AccountID) and all
+     * the latest version. The <code>ListReleaseLabels</code> request fails if the identity (account ID) and all
      * filtering parameters are different from the original request, or if the <code>NextToken</code> is expired or
      * tampered with.
      * </p>
@@ -99,7 +99,7 @@ public class ListReleaseLabelsRequest extends com.amazonaws.AmazonWebServiceRequ
      * <p>
      * Specifies the next page of results. If <code>NextToken</code> is not specified, which is usually the case for the
      * first request of ListReleaseLabels, the first page of results are determined by other filtering parameters or by
-     * the latest version. The <code>ListReleaseLabels</code> request fails if the identity (AWS AccountID) and all
+     * the latest version. The <code>ListReleaseLabels</code> request fails if the identity (account ID) and all
      * filtering parameters are different from the original request, or if the <code>NextToken</code> is expired or
      * tampered with.
      * </p>
@@ -107,8 +107,8 @@ public class ListReleaseLabelsRequest extends com.amazonaws.AmazonWebServiceRequ
      * @param nextToken
      *        Specifies the next page of results. If <code>NextToken</code> is not specified, which is usually the case
      *        for the first request of ListReleaseLabels, the first page of results are determined by other filtering
-     *        parameters or by the latest version. The <code>ListReleaseLabels</code> request fails if the identity (AWS
-     *        AccountID) and all filtering parameters are different from the original request, or if the
+     *        parameters or by the latest version. The <code>ListReleaseLabels</code> request fails if the identity
+     *        (account ID) and all filtering parameters are different from the original request, or if the
      *        <code>NextToken</code> is expired or tampered with.
      */
 
@@ -120,7 +120,7 @@ public class ListReleaseLabelsRequest extends com.amazonaws.AmazonWebServiceRequ
      * <p>
      * Specifies the next page of results. If <code>NextToken</code> is not specified, which is usually the case for the
      * first request of ListReleaseLabels, the first page of results are determined by other filtering parameters or by
-     * the latest version. The <code>ListReleaseLabels</code> request fails if the identity (AWS AccountID) and all
+     * the latest version. The <code>ListReleaseLabels</code> request fails if the identity (account ID) and all
      * filtering parameters are different from the original request, or if the <code>NextToken</code> is expired or
      * tampered with.
      * </p>
@@ -128,7 +128,7 @@ public class ListReleaseLabelsRequest extends com.amazonaws.AmazonWebServiceRequ
      * @return Specifies the next page of results. If <code>NextToken</code> is not specified, which is usually the case
      *         for the first request of ListReleaseLabels, the first page of results are determined by other filtering
      *         parameters or by the latest version. The <code>ListReleaseLabels</code> request fails if the identity
-     *         (AWS AccountID) and all filtering parameters are different from the original request, or if the
+     *         (account ID) and all filtering parameters are different from the original request, or if the
      *         <code>NextToken</code> is expired or tampered with.
      */
 
@@ -140,7 +140,7 @@ public class ListReleaseLabelsRequest extends com.amazonaws.AmazonWebServiceRequ
      * <p>
      * Specifies the next page of results. If <code>NextToken</code> is not specified, which is usually the case for the
      * first request of ListReleaseLabels, the first page of results are determined by other filtering parameters or by
-     * the latest version. The <code>ListReleaseLabels</code> request fails if the identity (AWS AccountID) and all
+     * the latest version. The <code>ListReleaseLabels</code> request fails if the identity (account ID) and all
      * filtering parameters are different from the original request, or if the <code>NextToken</code> is expired or
      * tampered with.
      * </p>
@@ -148,8 +148,8 @@ public class ListReleaseLabelsRequest extends com.amazonaws.AmazonWebServiceRequ
      * @param nextToken
      *        Specifies the next page of results. If <code>NextToken</code> is not specified, which is usually the case
      *        for the first request of ListReleaseLabels, the first page of results are determined by other filtering
-     *        parameters or by the latest version. The <code>ListReleaseLabels</code> request fails if the identity (AWS
-     *        AccountID) and all filtering parameters are different from the original request, or if the
+     *        parameters or by the latest version. The <code>ListReleaseLabels</code> request fails if the identity
+     *        (account ID) and all filtering parameters are different from the original request, or if the
      *        <code>NextToken</code> is expired or tampered with.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

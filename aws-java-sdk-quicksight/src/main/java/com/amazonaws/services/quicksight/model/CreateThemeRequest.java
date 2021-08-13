@@ -33,8 +33,8 @@ public class CreateThemeRequest extends com.amazonaws.AmazonWebServiceRequest im
     private String awsAccountId;
     /**
      * <p>
-     * An ID for the theme that you want to create. The theme ID is unique per Region; in each Amazon Web Services
-     * account;.
+     * An ID for the theme that you want to create. The theme ID is unique per Amazon Web Services Region; in each
+     * Amazon Web Services account;.
      * </p>
      */
     private String themeId;
@@ -121,13 +121,13 @@ public class CreateThemeRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * An ID for the theme that you want to create. The theme ID is unique per Region; in each Amazon Web Services
-     * account;.
+     * An ID for the theme that you want to create. The theme ID is unique per Amazon Web Services Region; in each
+     * Amazon Web Services account;.
      * </p>
      * 
      * @param themeId
-     *        An ID for the theme that you want to create. The theme ID is unique per Region; in each Amazon Web
-     *        Services account;.
+     *        An ID for the theme that you want to create. The theme ID is unique per Amazon Web Services Region; in
+     *        each Amazon Web Services account;.
      */
 
     public void setThemeId(String themeId) {
@@ -136,12 +136,12 @@ public class CreateThemeRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * An ID for the theme that you want to create. The theme ID is unique per Region; in each Amazon Web Services
-     * account;.
+     * An ID for the theme that you want to create. The theme ID is unique per Amazon Web Services Region; in each
+     * Amazon Web Services account;.
      * </p>
      * 
-     * @return An ID for the theme that you want to create. The theme ID is unique per Region; in each Amazon Web
-     *         Services account;.
+     * @return An ID for the theme that you want to create. The theme ID is unique per Amazon Web Services Region; in
+     *         each Amazon Web Services account;.
      */
 
     public String getThemeId() {
@@ -150,13 +150,13 @@ public class CreateThemeRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * An ID for the theme that you want to create. The theme ID is unique per Region; in each Amazon Web Services
-     * account;.
+     * An ID for the theme that you want to create. The theme ID is unique per Amazon Web Services Region; in each
+     * Amazon Web Services account;.
      * </p>
      * 
      * @param themeId
-     *        An ID for the theme that you want to create. The theme ID is unique per Region; in each Amazon Web
-     *        Services account;.
+     *        An ID for the theme that you want to create. The theme ID is unique per Amazon Web Services Region; in
+     *        each Amazon Web Services account;.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

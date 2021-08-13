@@ -37,6 +37,8 @@ public class ListProfileObjectsRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ObjectTypeName").build();
     private static final MarshallingInfo<String> PROFILEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("ProfileId").build();
+    private static final MarshallingInfo<StructuredPojo> OBJECTFILTER_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ObjectFilter").build();
 
     private static final ListProfileObjectsRequestMarshaller instance = new ListProfileObjectsRequestMarshaller();
 
@@ -59,6 +61,7 @@ public class ListProfileObjectsRequestMarshaller {
             protocolMarshaller.marshall(listProfileObjectsRequest.getDomainName(), DOMAINNAME_BINDING);
             protocolMarshaller.marshall(listProfileObjectsRequest.getObjectTypeName(), OBJECTTYPENAME_BINDING);
             protocolMarshaller.marshall(listProfileObjectsRequest.getProfileId(), PROFILEID_BINDING);
+            protocolMarshaller.marshall(listProfileObjectsRequest.getObjectFilter(), OBJECTFILTER_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

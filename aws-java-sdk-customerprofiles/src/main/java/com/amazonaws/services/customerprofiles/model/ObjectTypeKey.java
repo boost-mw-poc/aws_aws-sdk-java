@@ -32,11 +32,12 @@ public class ObjectTypeKey implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The types of keys that a ProfileObject can have. Each ProfileObject can have only 1 UNIQUE key but multiple
-     * PROFILE keys. PROFILE means that this key can be used to tie an object to a PROFILE. UNIQUE means that it can be
-     * used to uniquely identify an object. If a key a is marked as SECONDARY, it will be used to search for profiles
-     * after all other PROFILE keys have been searched. A LOOKUP_ONLY key is only used to match a profile but is not
-     * persisted to be used for searching of the profile. A NEW_ONLY key is only used if the profile does not already
-     * exist before the object is ingested, otherwise it is only used for matching objects to profiles.
+     * PROFILE keys. PROFILE, ASSET or CASE means that this key can be used to tie an object to a PROFILE, ASSET or CASE
+     * respectively. UNIQUE means that it can be used to uniquely identify an object. If a key a is marked as SECONDARY,
+     * it will be used to search for profiles after all other PROFILE keys have been searched. A LOOKUP_ONLY key is only
+     * used to match a profile but is not persisted to be used for searching of the profile. A NEW_ONLY key is only used
+     * if the profile does not already exist before the object is ingested, otherwise it is only used for matching
+     * objects to profiles.
      * </p>
      */
     private java.util.List<String> standardIdentifiers;
@@ -50,20 +51,21 @@ public class ObjectTypeKey implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The types of keys that a ProfileObject can have. Each ProfileObject can have only 1 UNIQUE key but multiple
-     * PROFILE keys. PROFILE means that this key can be used to tie an object to a PROFILE. UNIQUE means that it can be
-     * used to uniquely identify an object. If a key a is marked as SECONDARY, it will be used to search for profiles
-     * after all other PROFILE keys have been searched. A LOOKUP_ONLY key is only used to match a profile but is not
-     * persisted to be used for searching of the profile. A NEW_ONLY key is only used if the profile does not already
-     * exist before the object is ingested, otherwise it is only used for matching objects to profiles.
+     * PROFILE keys. PROFILE, ASSET or CASE means that this key can be used to tie an object to a PROFILE, ASSET or CASE
+     * respectively. UNIQUE means that it can be used to uniquely identify an object. If a key a is marked as SECONDARY,
+     * it will be used to search for profiles after all other PROFILE keys have been searched. A LOOKUP_ONLY key is only
+     * used to match a profile but is not persisted to be used for searching of the profile. A NEW_ONLY key is only used
+     * if the profile does not already exist before the object is ingested, otherwise it is only used for matching
+     * objects to profiles.
      * </p>
      * 
      * @return The types of keys that a ProfileObject can have. Each ProfileObject can have only 1 UNIQUE key but
-     *         multiple PROFILE keys. PROFILE means that this key can be used to tie an object to a PROFILE. UNIQUE
-     *         means that it can be used to uniquely identify an object. If a key a is marked as SECONDARY, it will be
-     *         used to search for profiles after all other PROFILE keys have been searched. A LOOKUP_ONLY key is only
-     *         used to match a profile but is not persisted to be used for searching of the profile. A NEW_ONLY key is
-     *         only used if the profile does not already exist before the object is ingested, otherwise it is only used
-     *         for matching objects to profiles.
+     *         multiple PROFILE keys. PROFILE, ASSET or CASE means that this key can be used to tie an object to a
+     *         PROFILE, ASSET or CASE respectively. UNIQUE means that it can be used to uniquely identify an object. If
+     *         a key a is marked as SECONDARY, it will be used to search for profiles after all other PROFILE keys have
+     *         been searched. A LOOKUP_ONLY key is only used to match a profile but is not persisted to be used for
+     *         searching of the profile. A NEW_ONLY key is only used if the profile does not already exist before the
+     *         object is ingested, otherwise it is only used for matching objects to profiles.
      * @see StandardIdentifier
      */
 
@@ -74,21 +76,22 @@ public class ObjectTypeKey implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The types of keys that a ProfileObject can have. Each ProfileObject can have only 1 UNIQUE key but multiple
-     * PROFILE keys. PROFILE means that this key can be used to tie an object to a PROFILE. UNIQUE means that it can be
-     * used to uniquely identify an object. If a key a is marked as SECONDARY, it will be used to search for profiles
-     * after all other PROFILE keys have been searched. A LOOKUP_ONLY key is only used to match a profile but is not
-     * persisted to be used for searching of the profile. A NEW_ONLY key is only used if the profile does not already
-     * exist before the object is ingested, otherwise it is only used for matching objects to profiles.
+     * PROFILE keys. PROFILE, ASSET or CASE means that this key can be used to tie an object to a PROFILE, ASSET or CASE
+     * respectively. UNIQUE means that it can be used to uniquely identify an object. If a key a is marked as SECONDARY,
+     * it will be used to search for profiles after all other PROFILE keys have been searched. A LOOKUP_ONLY key is only
+     * used to match a profile but is not persisted to be used for searching of the profile. A NEW_ONLY key is only used
+     * if the profile does not already exist before the object is ingested, otherwise it is only used for matching
+     * objects to profiles.
      * </p>
      * 
      * @param standardIdentifiers
      *        The types of keys that a ProfileObject can have. Each ProfileObject can have only 1 UNIQUE key but
-     *        multiple PROFILE keys. PROFILE means that this key can be used to tie an object to a PROFILE. UNIQUE means
-     *        that it can be used to uniquely identify an object. If a key a is marked as SECONDARY, it will be used to
-     *        search for profiles after all other PROFILE keys have been searched. A LOOKUP_ONLY key is only used to
-     *        match a profile but is not persisted to be used for searching of the profile. A NEW_ONLY key is only used
-     *        if the profile does not already exist before the object is ingested, otherwise it is only used for
-     *        matching objects to profiles.
+     *        multiple PROFILE keys. PROFILE, ASSET or CASE means that this key can be used to tie an object to a
+     *        PROFILE, ASSET or CASE respectively. UNIQUE means that it can be used to uniquely identify an object. If a
+     *        key a is marked as SECONDARY, it will be used to search for profiles after all other PROFILE keys have
+     *        been searched. A LOOKUP_ONLY key is only used to match a profile but is not persisted to be used for
+     *        searching of the profile. A NEW_ONLY key is only used if the profile does not already exist before the
+     *        object is ingested, otherwise it is only used for matching objects to profiles.
      * @see StandardIdentifier
      */
 
@@ -104,11 +107,12 @@ public class ObjectTypeKey implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The types of keys that a ProfileObject can have. Each ProfileObject can have only 1 UNIQUE key but multiple
-     * PROFILE keys. PROFILE means that this key can be used to tie an object to a PROFILE. UNIQUE means that it can be
-     * used to uniquely identify an object. If a key a is marked as SECONDARY, it will be used to search for profiles
-     * after all other PROFILE keys have been searched. A LOOKUP_ONLY key is only used to match a profile but is not
-     * persisted to be used for searching of the profile. A NEW_ONLY key is only used if the profile does not already
-     * exist before the object is ingested, otherwise it is only used for matching objects to profiles.
+     * PROFILE keys. PROFILE, ASSET or CASE means that this key can be used to tie an object to a PROFILE, ASSET or CASE
+     * respectively. UNIQUE means that it can be used to uniquely identify an object. If a key a is marked as SECONDARY,
+     * it will be used to search for profiles after all other PROFILE keys have been searched. A LOOKUP_ONLY key is only
+     * used to match a profile but is not persisted to be used for searching of the profile. A NEW_ONLY key is only used
+     * if the profile does not already exist before the object is ingested, otherwise it is only used for matching
+     * objects to profiles.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -118,12 +122,12 @@ public class ObjectTypeKey implements Serializable, Cloneable, StructuredPojo {
      * 
      * @param standardIdentifiers
      *        The types of keys that a ProfileObject can have. Each ProfileObject can have only 1 UNIQUE key but
-     *        multiple PROFILE keys. PROFILE means that this key can be used to tie an object to a PROFILE. UNIQUE means
-     *        that it can be used to uniquely identify an object. If a key a is marked as SECONDARY, it will be used to
-     *        search for profiles after all other PROFILE keys have been searched. A LOOKUP_ONLY key is only used to
-     *        match a profile but is not persisted to be used for searching of the profile. A NEW_ONLY key is only used
-     *        if the profile does not already exist before the object is ingested, otherwise it is only used for
-     *        matching objects to profiles.
+     *        multiple PROFILE keys. PROFILE, ASSET or CASE means that this key can be used to tie an object to a
+     *        PROFILE, ASSET or CASE respectively. UNIQUE means that it can be used to uniquely identify an object. If a
+     *        key a is marked as SECONDARY, it will be used to search for profiles after all other PROFILE keys have
+     *        been searched. A LOOKUP_ONLY key is only used to match a profile but is not persisted to be used for
+     *        searching of the profile. A NEW_ONLY key is only used if the profile does not already exist before the
+     *        object is ingested, otherwise it is only used for matching objects to profiles.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see StandardIdentifier
      */
@@ -141,21 +145,22 @@ public class ObjectTypeKey implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The types of keys that a ProfileObject can have. Each ProfileObject can have only 1 UNIQUE key but multiple
-     * PROFILE keys. PROFILE means that this key can be used to tie an object to a PROFILE. UNIQUE means that it can be
-     * used to uniquely identify an object. If a key a is marked as SECONDARY, it will be used to search for profiles
-     * after all other PROFILE keys have been searched. A LOOKUP_ONLY key is only used to match a profile but is not
-     * persisted to be used for searching of the profile. A NEW_ONLY key is only used if the profile does not already
-     * exist before the object is ingested, otherwise it is only used for matching objects to profiles.
+     * PROFILE keys. PROFILE, ASSET or CASE means that this key can be used to tie an object to a PROFILE, ASSET or CASE
+     * respectively. UNIQUE means that it can be used to uniquely identify an object. If a key a is marked as SECONDARY,
+     * it will be used to search for profiles after all other PROFILE keys have been searched. A LOOKUP_ONLY key is only
+     * used to match a profile but is not persisted to be used for searching of the profile. A NEW_ONLY key is only used
+     * if the profile does not already exist before the object is ingested, otherwise it is only used for matching
+     * objects to profiles.
      * </p>
      * 
      * @param standardIdentifiers
      *        The types of keys that a ProfileObject can have. Each ProfileObject can have only 1 UNIQUE key but
-     *        multiple PROFILE keys. PROFILE means that this key can be used to tie an object to a PROFILE. UNIQUE means
-     *        that it can be used to uniquely identify an object. If a key a is marked as SECONDARY, it will be used to
-     *        search for profiles after all other PROFILE keys have been searched. A LOOKUP_ONLY key is only used to
-     *        match a profile but is not persisted to be used for searching of the profile. A NEW_ONLY key is only used
-     *        if the profile does not already exist before the object is ingested, otherwise it is only used for
-     *        matching objects to profiles.
+     *        multiple PROFILE keys. PROFILE, ASSET or CASE means that this key can be used to tie an object to a
+     *        PROFILE, ASSET or CASE respectively. UNIQUE means that it can be used to uniquely identify an object. If a
+     *        key a is marked as SECONDARY, it will be used to search for profiles after all other PROFILE keys have
+     *        been searched. A LOOKUP_ONLY key is only used to match a profile but is not persisted to be used for
+     *        searching of the profile. A NEW_ONLY key is only used if the profile does not already exist before the
+     *        object is ingested, otherwise it is only used for matching objects to profiles.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see StandardIdentifier
      */
@@ -168,21 +173,22 @@ public class ObjectTypeKey implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The types of keys that a ProfileObject can have. Each ProfileObject can have only 1 UNIQUE key but multiple
-     * PROFILE keys. PROFILE means that this key can be used to tie an object to a PROFILE. UNIQUE means that it can be
-     * used to uniquely identify an object. If a key a is marked as SECONDARY, it will be used to search for profiles
-     * after all other PROFILE keys have been searched. A LOOKUP_ONLY key is only used to match a profile but is not
-     * persisted to be used for searching of the profile. A NEW_ONLY key is only used if the profile does not already
-     * exist before the object is ingested, otherwise it is only used for matching objects to profiles.
+     * PROFILE keys. PROFILE, ASSET or CASE means that this key can be used to tie an object to a PROFILE, ASSET or CASE
+     * respectively. UNIQUE means that it can be used to uniquely identify an object. If a key a is marked as SECONDARY,
+     * it will be used to search for profiles after all other PROFILE keys have been searched. A LOOKUP_ONLY key is only
+     * used to match a profile but is not persisted to be used for searching of the profile. A NEW_ONLY key is only used
+     * if the profile does not already exist before the object is ingested, otherwise it is only used for matching
+     * objects to profiles.
      * </p>
      * 
      * @param standardIdentifiers
      *        The types of keys that a ProfileObject can have. Each ProfileObject can have only 1 UNIQUE key but
-     *        multiple PROFILE keys. PROFILE means that this key can be used to tie an object to a PROFILE. UNIQUE means
-     *        that it can be used to uniquely identify an object. If a key a is marked as SECONDARY, it will be used to
-     *        search for profiles after all other PROFILE keys have been searched. A LOOKUP_ONLY key is only used to
-     *        match a profile but is not persisted to be used for searching of the profile. A NEW_ONLY key is only used
-     *        if the profile does not already exist before the object is ingested, otherwise it is only used for
-     *        matching objects to profiles.
+     *        multiple PROFILE keys. PROFILE, ASSET or CASE means that this key can be used to tie an object to a
+     *        PROFILE, ASSET or CASE respectively. UNIQUE means that it can be used to uniquely identify an object. If a
+     *        key a is marked as SECONDARY, it will be used to search for profiles after all other PROFILE keys have
+     *        been searched. A LOOKUP_ONLY key is only used to match a profile but is not persisted to be used for
+     *        searching of the profile. A NEW_ONLY key is only used if the profile does not already exist before the
+     *        object is ingested, otherwise it is only used for matching objects to profiles.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see StandardIdentifier
      */

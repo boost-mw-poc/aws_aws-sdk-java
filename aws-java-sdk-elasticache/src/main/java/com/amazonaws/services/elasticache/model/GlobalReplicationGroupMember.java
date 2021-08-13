@@ -17,8 +17,8 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * A member of a Global datastore. It contains the Replication Group Id, the AWS region and the role of the replication
- * group.
+ * A member of a Global datastore. It contains the Replication Group Id, the Amazon region and the role of the
+ * replication group.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/elasticache-2015-02-02/GlobalReplicationGroupMember"
@@ -35,7 +35,7 @@ public class GlobalReplicationGroupMember implements Serializable, Cloneable {
     private String replicationGroupId;
     /**
      * <p>
-     * The AWS region of the Global datastore member.
+     * The Amazon region of the Global datastore member.
      * </p>
      */
     private String replicationGroupRegion;
@@ -100,11 +100,11 @@ public class GlobalReplicationGroupMember implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The AWS region of the Global datastore member.
+     * The Amazon region of the Global datastore member.
      * </p>
      * 
      * @param replicationGroupRegion
-     *        The AWS region of the Global datastore member.
+     *        The Amazon region of the Global datastore member.
      */
 
     public void setReplicationGroupRegion(String replicationGroupRegion) {
@@ -113,10 +113,10 @@ public class GlobalReplicationGroupMember implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The AWS region of the Global datastore member.
+     * The Amazon region of the Global datastore member.
      * </p>
      * 
-     * @return The AWS region of the Global datastore member.
+     * @return The Amazon region of the Global datastore member.
      */
 
     public String getReplicationGroupRegion() {
@@ -125,11 +125,11 @@ public class GlobalReplicationGroupMember implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The AWS region of the Global datastore member.
+     * The Amazon region of the Global datastore member.
      * </p>
      * 
      * @param replicationGroupRegion
-     *        The AWS region of the Global datastore member.
+     *        The Amazon region of the Global datastore member.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

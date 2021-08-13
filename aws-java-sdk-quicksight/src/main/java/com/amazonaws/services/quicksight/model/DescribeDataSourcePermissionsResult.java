@@ -32,7 +32,8 @@ public class DescribeDataSourcePermissionsResult extends com.amazonaws.AmazonWeb
     private String dataSourceArn;
     /**
      * <p>
-     * The ID of the data source. This ID is unique per Region; for each Amazon Web Services account;.
+     * The ID of the data source. This ID is unique per Amazon Web Services Region; for each Amazon Web Services
+     * account;.
      * </p>
      */
     private String dataSourceId;
@@ -97,11 +98,13 @@ public class DescribeDataSourcePermissionsResult extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The ID of the data source. This ID is unique per Region; for each Amazon Web Services account;.
+     * The ID of the data source. This ID is unique per Amazon Web Services Region; for each Amazon Web Services
+     * account;.
      * </p>
      * 
      * @param dataSourceId
-     *        The ID of the data source. This ID is unique per Region; for each Amazon Web Services account;.
+     *        The ID of the data source. This ID is unique per Amazon Web Services Region; for each Amazon Web Services
+     *        account;.
      */
 
     public void setDataSourceId(String dataSourceId) {
@@ -110,10 +113,12 @@ public class DescribeDataSourcePermissionsResult extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The ID of the data source. This ID is unique per Region; for each Amazon Web Services account;.
+     * The ID of the data source. This ID is unique per Amazon Web Services Region; for each Amazon Web Services
+     * account;.
      * </p>
      * 
-     * @return The ID of the data source. This ID is unique per Region; for each Amazon Web Services account;.
+     * @return The ID of the data source. This ID is unique per Amazon Web Services Region; for each Amazon Web Services
+     *         account;.
      */
 
     public String getDataSourceId() {
@@ -122,11 +127,13 @@ public class DescribeDataSourcePermissionsResult extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * The ID of the data source. This ID is unique per Region; for each Amazon Web Services account;.
+     * The ID of the data source. This ID is unique per Amazon Web Services Region; for each Amazon Web Services
+     * account;.
      * </p>
      * 
      * @param dataSourceId
-     *        The ID of the data source. This ID is unique per Region; for each Amazon Web Services account;.
+     *        The ID of the data source. This ID is unique per Amazon Web Services Region; for each Amazon Web Services
+     *        account;.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

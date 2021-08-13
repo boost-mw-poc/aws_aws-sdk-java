@@ -39,7 +39,7 @@ public class DisassociateGlobalReplicationGroupRequest extends com.amazonaws.Ama
     private String replicationGroupId;
     /**
      * <p>
-     * The AWS region of secondary cluster you wish to remove from the Global datastore
+     * The Amazon region of secondary cluster you wish to remove from the Global datastore
      * </p>
      */
     private String replicationGroupRegion;
@@ -126,11 +126,11 @@ public class DisassociateGlobalReplicationGroupRequest extends com.amazonaws.Ama
 
     /**
      * <p>
-     * The AWS region of secondary cluster you wish to remove from the Global datastore
+     * The Amazon region of secondary cluster you wish to remove from the Global datastore
      * </p>
      * 
      * @param replicationGroupRegion
-     *        The AWS region of secondary cluster you wish to remove from the Global datastore
+     *        The Amazon region of secondary cluster you wish to remove from the Global datastore
      */
 
     public void setReplicationGroupRegion(String replicationGroupRegion) {
@@ -139,10 +139,10 @@ public class DisassociateGlobalReplicationGroupRequest extends com.amazonaws.Ama
 
     /**
      * <p>
-     * The AWS region of secondary cluster you wish to remove from the Global datastore
+     * The Amazon region of secondary cluster you wish to remove from the Global datastore
      * </p>
      * 
-     * @return The AWS region of secondary cluster you wish to remove from the Global datastore
+     * @return The Amazon region of secondary cluster you wish to remove from the Global datastore
      */
 
     public String getReplicationGroupRegion() {
@@ -151,11 +151,11 @@ public class DisassociateGlobalReplicationGroupRequest extends com.amazonaws.Ama
 
     /**
      * <p>
-     * The AWS region of secondary cluster you wish to remove from the Global datastore
+     * The Amazon region of secondary cluster you wish to remove from the Global datastore
      * </p>
      * 
      * @param replicationGroupRegion
-     *        The AWS region of secondary cluster you wish to remove from the Global datastore
+     *        The Amazon region of secondary cluster you wish to remove from the Global datastore
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

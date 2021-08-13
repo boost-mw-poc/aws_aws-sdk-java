@@ -33,8 +33,8 @@ public class CreateDataSetRequest extends com.amazonaws.AmazonWebServiceRequest 
     private String awsAccountId;
     /**
      * <p>
-     * An ID for the dataset that you want to create. This ID is unique per Region; for each Amazon Web Services
-     * account;.
+     * An ID for the dataset that you want to create. This ID is unique per Amazon Web Services Region; for each Amazon
+     * Web Services account;.
      * </p>
      */
     private String dataSetId;
@@ -149,13 +149,13 @@ public class CreateDataSetRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * An ID for the dataset that you want to create. This ID is unique per Region; for each Amazon Web Services
-     * account;.
+     * An ID for the dataset that you want to create. This ID is unique per Amazon Web Services Region; for each Amazon
+     * Web Services account;.
      * </p>
      * 
      * @param dataSetId
-     *        An ID for the dataset that you want to create. This ID is unique per Region; for each Amazon Web Services
-     *        account;.
+     *        An ID for the dataset that you want to create. This ID is unique per Amazon Web Services Region; for each
+     *        Amazon Web Services account;.
      */
 
     public void setDataSetId(String dataSetId) {
@@ -164,12 +164,12 @@ public class CreateDataSetRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * An ID for the dataset that you want to create. This ID is unique per Region; for each Amazon Web Services
-     * account;.
+     * An ID for the dataset that you want to create. This ID is unique per Amazon Web Services Region; for each Amazon
+     * Web Services account;.
      * </p>
      * 
-     * @return An ID for the dataset that you want to create. This ID is unique per Region; for each Amazon Web Services
-     *         account;.
+     * @return An ID for the dataset that you want to create. This ID is unique per Amazon Web Services Region; for each
+     *         Amazon Web Services account;.
      */
 
     public String getDataSetId() {
@@ -178,13 +178,13 @@ public class CreateDataSetRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * An ID for the dataset that you want to create. This ID is unique per Region; for each Amazon Web Services
-     * account;.
+     * An ID for the dataset that you want to create. This ID is unique per Amazon Web Services Region; for each Amazon
+     * Web Services account;.
      * </p>
      * 
      * @param dataSetId
-     *        An ID for the dataset that you want to create. This ID is unique per Region; for each Amazon Web Services
-     *        account;.
+     *        An ID for the dataset that you want to create. This ID is unique per Amazon Web Services Region; for each
+     *        Amazon Web Services account;.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

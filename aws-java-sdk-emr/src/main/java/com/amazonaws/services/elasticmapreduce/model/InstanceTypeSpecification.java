@@ -80,6 +80,12 @@ public class InstanceTypeSpecification implements Serializable, Cloneable, Struc
      * </p>
      */
     private Boolean ebsOptimized;
+    /**
+     * <p>
+     * The custom AMI ID to use for the instance type.
+     * </p>
+     */
+    private String customAmiId;
 
     /**
      * <p>
@@ -474,6 +480,46 @@ public class InstanceTypeSpecification implements Serializable, Cloneable, Struc
     }
 
     /**
+     * <p>
+     * The custom AMI ID to use for the instance type.
+     * </p>
+     * 
+     * @param customAmiId
+     *        The custom AMI ID to use for the instance type.
+     */
+
+    public void setCustomAmiId(String customAmiId) {
+        this.customAmiId = customAmiId;
+    }
+
+    /**
+     * <p>
+     * The custom AMI ID to use for the instance type.
+     * </p>
+     * 
+     * @return The custom AMI ID to use for the instance type.
+     */
+
+    public String getCustomAmiId() {
+        return this.customAmiId;
+    }
+
+    /**
+     * <p>
+     * The custom AMI ID to use for the instance type.
+     * </p>
+     * 
+     * @param customAmiId
+     *        The custom AMI ID to use for the instance type.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public InstanceTypeSpecification withCustomAmiId(String customAmiId) {
+        setCustomAmiId(customAmiId);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -498,7 +544,9 @@ public class InstanceTypeSpecification implements Serializable, Cloneable, Struc
         if (getEbsBlockDevices() != null)
             sb.append("EbsBlockDevices: ").append(getEbsBlockDevices()).append(",");
         if (getEbsOptimized() != null)
-            sb.append("EbsOptimized: ").append(getEbsOptimized());
+            sb.append("EbsOptimized: ").append(getEbsOptimized()).append(",");
+        if (getCustomAmiId() != null)
+            sb.append("CustomAmiId: ").append(getCustomAmiId());
         sb.append("}");
         return sb.toString();
     }
@@ -542,6 +590,10 @@ public class InstanceTypeSpecification implements Serializable, Cloneable, Struc
             return false;
         if (other.getEbsOptimized() != null && other.getEbsOptimized().equals(this.getEbsOptimized()) == false)
             return false;
+        if (other.getCustomAmiId() == null ^ this.getCustomAmiId() == null)
+            return false;
+        if (other.getCustomAmiId() != null && other.getCustomAmiId().equals(this.getCustomAmiId()) == false)
+            return false;
         return true;
     }
 
@@ -557,6 +609,7 @@ public class InstanceTypeSpecification implements Serializable, Cloneable, Struc
         hashCode = prime * hashCode + ((getConfigurations() == null) ? 0 : getConfigurations().hashCode());
         hashCode = prime * hashCode + ((getEbsBlockDevices() == null) ? 0 : getEbsBlockDevices().hashCode());
         hashCode = prime * hashCode + ((getEbsOptimized() == null) ? 0 : getEbsOptimized().hashCode());
+        hashCode = prime * hashCode + ((getCustomAmiId() == null) ? 0 : getCustomAmiId().hashCode());
         return hashCode;
     }
 

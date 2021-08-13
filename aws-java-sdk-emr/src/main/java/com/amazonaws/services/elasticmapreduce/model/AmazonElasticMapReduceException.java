@@ -15,7 +15,7 @@ package com.amazonaws.services.elasticmapreduce.model;
 import javax.annotation.Generated;
 
 /**
- * Base exception for all service exceptions thrown by Amazon Elastic MapReduce
+ * Base exception for all service exceptions thrown by Amazon EMR
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class AmazonElasticMapReduceException extends com.amazonaws.AmazonServiceException {

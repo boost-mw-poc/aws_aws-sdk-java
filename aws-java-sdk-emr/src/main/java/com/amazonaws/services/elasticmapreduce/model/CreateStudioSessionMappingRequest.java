@@ -39,7 +39,7 @@ public class CreateStudioSessionMappingRequest extends com.amazonaws.AmazonWebSe
      * >UserId</a> and <a href=
      * "https://docs.aws.amazon.com/singlesignon/latest/IdentityStoreAPIReference/API_Group.html#singlesignon-Type-Group-GroupId"
      * >GroupId</a> in the <i>Amazon Web Services SSO Identity Store API Reference</i>. Either <code>IdentityName</code>
-     * or <code>IdentityId</code> must be specified.
+     * or <code>IdentityId</code> must be specified, but not both.
      * </p>
      */
     private String identityId;
@@ -50,7 +50,7 @@ public class CreateStudioSessionMappingRequest extends com.amazonaws.AmazonWebSe
      * >UserName</a> and <a href=
      * "https://docs.aws.amazon.com/singlesignon/latest/IdentityStoreAPIReference/API_Group.html#singlesignon-Type-Group-DisplayName"
      * >DisplayName</a> in the <i>Amazon Web Services SSO Identity Store API Reference</i>. Either
-     * <code>IdentityName</code> or <code>IdentityId</code> must be specified.
+     * <code>IdentityName</code> or <code>IdentityId</code> must be specified, but not both.
      * </p>
      */
     private String identityName;
@@ -119,7 +119,7 @@ public class CreateStudioSessionMappingRequest extends com.amazonaws.AmazonWebSe
      * >UserId</a> and <a href=
      * "https://docs.aws.amazon.com/singlesignon/latest/IdentityStoreAPIReference/API_Group.html#singlesignon-Type-Group-GroupId"
      * >GroupId</a> in the <i>Amazon Web Services SSO Identity Store API Reference</i>. Either <code>IdentityName</code>
-     * or <code>IdentityId</code> must be specified.
+     * or <code>IdentityId</code> must be specified, but not both.
      * </p>
      * 
      * @param identityId
@@ -129,7 +129,7 @@ public class CreateStudioSessionMappingRequest extends com.amazonaws.AmazonWebSe
      *        >UserId</a> and <a href=
      *        "https://docs.aws.amazon.com/singlesignon/latest/IdentityStoreAPIReference/API_Group.html#singlesignon-Type-Group-GroupId"
      *        >GroupId</a> in the <i>Amazon Web Services SSO Identity Store API Reference</i>. Either
-     *        <code>IdentityName</code> or <code>IdentityId</code> must be specified.
+     *        <code>IdentityName</code> or <code>IdentityId</code> must be specified, but not both.
      */
 
     public void setIdentityId(String identityId) {
@@ -144,7 +144,7 @@ public class CreateStudioSessionMappingRequest extends com.amazonaws.AmazonWebSe
      * >UserId</a> and <a href=
      * "https://docs.aws.amazon.com/singlesignon/latest/IdentityStoreAPIReference/API_Group.html#singlesignon-Type-Group-GroupId"
      * >GroupId</a> in the <i>Amazon Web Services SSO Identity Store API Reference</i>. Either <code>IdentityName</code>
-     * or <code>IdentityId</code> must be specified.
+     * or <code>IdentityId</code> must be specified, but not both.
      * </p>
      * 
      * @return The globally unique identifier (GUID) of the user or group from the Amazon Web Services SSO Identity
@@ -153,7 +153,7 @@ public class CreateStudioSessionMappingRequest extends com.amazonaws.AmazonWebSe
      *         >UserId</a> and <a href=
      *         "https://docs.aws.amazon.com/singlesignon/latest/IdentityStoreAPIReference/API_Group.html#singlesignon-Type-Group-GroupId"
      *         >GroupId</a> in the <i>Amazon Web Services SSO Identity Store API Reference</i>. Either
-     *         <code>IdentityName</code> or <code>IdentityId</code> must be specified.
+     *         <code>IdentityName</code> or <code>IdentityId</code> must be specified, but not both.
      */
 
     public String getIdentityId() {
@@ -168,7 +168,7 @@ public class CreateStudioSessionMappingRequest extends com.amazonaws.AmazonWebSe
      * >UserId</a> and <a href=
      * "https://docs.aws.amazon.com/singlesignon/latest/IdentityStoreAPIReference/API_Group.html#singlesignon-Type-Group-GroupId"
      * >GroupId</a> in the <i>Amazon Web Services SSO Identity Store API Reference</i>. Either <code>IdentityName</code>
-     * or <code>IdentityId</code> must be specified.
+     * or <code>IdentityId</code> must be specified, but not both.
      * </p>
      * 
      * @param identityId
@@ -178,7 +178,7 @@ public class CreateStudioSessionMappingRequest extends com.amazonaws.AmazonWebSe
      *        >UserId</a> and <a href=
      *        "https://docs.aws.amazon.com/singlesignon/latest/IdentityStoreAPIReference/API_Group.html#singlesignon-Type-Group-GroupId"
      *        >GroupId</a> in the <i>Amazon Web Services SSO Identity Store API Reference</i>. Either
-     *        <code>IdentityName</code> or <code>IdentityId</code> must be specified.
+     *        <code>IdentityName</code> or <code>IdentityId</code> must be specified, but not both.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -194,7 +194,7 @@ public class CreateStudioSessionMappingRequest extends com.amazonaws.AmazonWebSe
      * >UserName</a> and <a href=
      * "https://docs.aws.amazon.com/singlesignon/latest/IdentityStoreAPIReference/API_Group.html#singlesignon-Type-Group-DisplayName"
      * >DisplayName</a> in the <i>Amazon Web Services SSO Identity Store API Reference</i>. Either
-     * <code>IdentityName</code> or <code>IdentityId</code> must be specified.
+     * <code>IdentityName</code> or <code>IdentityId</code> must be specified, but not both.
      * </p>
      * 
      * @param identityName
@@ -203,7 +203,7 @@ public class CreateStudioSessionMappingRequest extends com.amazonaws.AmazonWebSe
      *        >UserName</a> and <a href=
      *        "https://docs.aws.amazon.com/singlesignon/latest/IdentityStoreAPIReference/API_Group.html#singlesignon-Type-Group-DisplayName"
      *        >DisplayName</a> in the <i>Amazon Web Services SSO Identity Store API Reference</i>. Either
-     *        <code>IdentityName</code> or <code>IdentityId</code> must be specified.
+     *        <code>IdentityName</code> or <code>IdentityId</code> must be specified, but not both.
      */
 
     public void setIdentityName(String identityName) {
@@ -217,7 +217,7 @@ public class CreateStudioSessionMappingRequest extends com.amazonaws.AmazonWebSe
      * >UserName</a> and <a href=
      * "https://docs.aws.amazon.com/singlesignon/latest/IdentityStoreAPIReference/API_Group.html#singlesignon-Type-Group-DisplayName"
      * >DisplayName</a> in the <i>Amazon Web Services SSO Identity Store API Reference</i>. Either
-     * <code>IdentityName</code> or <code>IdentityId</code> must be specified.
+     * <code>IdentityName</code> or <code>IdentityId</code> must be specified, but not both.
      * </p>
      * 
      * @return The name of the user or group. For more information, see <a href=
@@ -225,7 +225,7 @@ public class CreateStudioSessionMappingRequest extends com.amazonaws.AmazonWebSe
      *         >UserName</a> and <a href=
      *         "https://docs.aws.amazon.com/singlesignon/latest/IdentityStoreAPIReference/API_Group.html#singlesignon-Type-Group-DisplayName"
      *         >DisplayName</a> in the <i>Amazon Web Services SSO Identity Store API Reference</i>. Either
-     *         <code>IdentityName</code> or <code>IdentityId</code> must be specified.
+     *         <code>IdentityName</code> or <code>IdentityId</code> must be specified, but not both.
      */
 
     public String getIdentityName() {
@@ -239,7 +239,7 @@ public class CreateStudioSessionMappingRequest extends com.amazonaws.AmazonWebSe
      * >UserName</a> and <a href=
      * "https://docs.aws.amazon.com/singlesignon/latest/IdentityStoreAPIReference/API_Group.html#singlesignon-Type-Group-DisplayName"
      * >DisplayName</a> in the <i>Amazon Web Services SSO Identity Store API Reference</i>. Either
-     * <code>IdentityName</code> or <code>IdentityId</code> must be specified.
+     * <code>IdentityName</code> or <code>IdentityId</code> must be specified, but not both.
      * </p>
      * 
      * @param identityName
@@ -248,7 +248,7 @@ public class CreateStudioSessionMappingRequest extends com.amazonaws.AmazonWebSe
      *        >UserName</a> and <a href=
      *        "https://docs.aws.amazon.com/singlesignon/latest/IdentityStoreAPIReference/API_Group.html#singlesignon-Type-Group-DisplayName"
      *        >DisplayName</a> in the <i>Amazon Web Services SSO Identity Store API Reference</i>. Either
-     *        <code>IdentityName</code> or <code>IdentityId</code> must be specified.
+     *        <code>IdentityName</code> or <code>IdentityId</code> must be specified, but not both.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

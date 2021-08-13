@@ -37,7 +37,7 @@ public class ListTagsForResourceRequest extends com.amazonaws.AmazonWebServiceRe
      * <p>
      * For more information about ARNs, see <a
      * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs)
-     * and AWS Service Namespaces</a>.
+     * and Amazon Web Services Service Namespaces</a>.
      * </p>
      */
     private String resourceName;
@@ -51,7 +51,7 @@ public class ListTagsForResourceRequest extends com.amazonaws.AmazonWebServiceRe
      * <p>
      * For more information about ARNs, see <a
      * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs)
-     * and AWS Service Namespaces</a>.
+     * and Amazon Web Services Service Namespaces</a>.
      * </p>
      * 
      * @param resourceName
@@ -61,7 +61,7 @@ public class ListTagsForResourceRequest extends com.amazonaws.AmazonWebServiceRe
      *        <p>
      *        For more information about ARNs, see <a
      *        href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names
-     *        (ARNs) and AWS Service Namespaces</a>.
+     *        (ARNs) and Amazon Web Services Service Namespaces</a>.
      */
 
     public void setResourceName(String resourceName) {
@@ -77,7 +77,7 @@ public class ListTagsForResourceRequest extends com.amazonaws.AmazonWebServiceRe
      * <p>
      * For more information about ARNs, see <a
      * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs)
-     * and AWS Service Namespaces</a>.
+     * and Amazon Web Services Service Namespaces</a>.
      * </p>
      * 
      * @return The Amazon Resource Name (ARN) of the resource for which you want the list of tags, for example
@@ -86,7 +86,7 @@ public class ListTagsForResourceRequest extends com.amazonaws.AmazonWebServiceRe
      *         <p>
      *         For more information about ARNs, see <a
      *         href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names
-     *         (ARNs) and AWS Service Namespaces</a>.
+     *         (ARNs) and Amazon Web Services Service Namespaces</a>.
      */
 
     public String getResourceName() {
@@ -102,7 +102,7 @@ public class ListTagsForResourceRequest extends com.amazonaws.AmazonWebServiceRe
      * <p>
      * For more information about ARNs, see <a
      * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names (ARNs)
-     * and AWS Service Namespaces</a>.
+     * and Amazon Web Services Service Namespaces</a>.
      * </p>
      * 
      * @param resourceName
@@ -112,7 +112,7 @@ public class ListTagsForResourceRequest extends com.amazonaws.AmazonWebServiceRe
      *        <p>
      *        For more information about ARNs, see <a
      *        href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html">Amazon Resource Names
-     *        (ARNs) and AWS Service Namespaces</a>.
+     *        (ARNs) and Amazon Web Services Service Namespaces</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

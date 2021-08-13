@@ -183,7 +183,7 @@ public class CacheNode implements Serializable, Cloneable {
     /**
      * <p>
      * The cache node identifier. A node ID is a numeric identifier (0001, 0002, etc.). The combination of cluster ID
-     * and node ID uniquely identifies every cache node used in a customer's AWS account.
+     * and node ID uniquely identifies every cache node used in a customer's Amazon account.
      * </p>
      */
     private String cacheNodeId;
@@ -235,12 +235,12 @@ public class CacheNode implements Serializable, Cloneable {
     /**
      * <p>
      * The cache node identifier. A node ID is a numeric identifier (0001, 0002, etc.). The combination of cluster ID
-     * and node ID uniquely identifies every cache node used in a customer's AWS account.
+     * and node ID uniquely identifies every cache node used in a customer's Amazon account.
      * </p>
      * 
      * @param cacheNodeId
      *        The cache node identifier. A node ID is a numeric identifier (0001, 0002, etc.). The combination of
-     *        cluster ID and node ID uniquely identifies every cache node used in a customer's AWS account.
+     *        cluster ID and node ID uniquely identifies every cache node used in a customer's Amazon account.
      */
 
     public void setCacheNodeId(String cacheNodeId) {
@@ -250,11 +250,11 @@ public class CacheNode implements Serializable, Cloneable {
     /**
      * <p>
      * The cache node identifier. A node ID is a numeric identifier (0001, 0002, etc.). The combination of cluster ID
-     * and node ID uniquely identifies every cache node used in a customer's AWS account.
+     * and node ID uniquely identifies every cache node used in a customer's Amazon account.
      * </p>
      * 
      * @return The cache node identifier. A node ID is a numeric identifier (0001, 0002, etc.). The combination of
-     *         cluster ID and node ID uniquely identifies every cache node used in a customer's AWS account.
+     *         cluster ID and node ID uniquely identifies every cache node used in a customer's Amazon account.
      */
 
     public String getCacheNodeId() {
@@ -264,12 +264,12 @@ public class CacheNode implements Serializable, Cloneable {
     /**
      * <p>
      * The cache node identifier. A node ID is a numeric identifier (0001, 0002, etc.). The combination of cluster ID
-     * and node ID uniquely identifies every cache node used in a customer's AWS account.
+     * and node ID uniquely identifies every cache node used in a customer's Amazon account.
      * </p>
      * 
      * @param cacheNodeId
      *        The cache node identifier. A node ID is a numeric identifier (0001, 0002, etc.). The combination of
-     *        cluster ID and node ID uniquely identifies every cache node used in a customer's AWS account.
+     *        cluster ID and node ID uniquely identifies every cache node used in a customer's Amazon account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

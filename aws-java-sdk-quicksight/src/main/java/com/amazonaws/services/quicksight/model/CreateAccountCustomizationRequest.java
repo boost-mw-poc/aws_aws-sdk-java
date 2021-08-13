@@ -39,8 +39,8 @@ public class CreateAccountCustomizationRequest extends com.amazonaws.AmazonWebSe
     private String namespace;
     /**
      * <p>
-     * The QuickSight customizations you're adding in the current Region;. You can add these to an Amazon Web Services
-     * account; and a QuickSight namespace.
+     * The QuickSight customizations you're adding in the current Amazon Web Services Region;. You can add these to an
+     * Amazon Web Services account; and a QuickSight namespace.
      * </p>
      * <p>
      * For example, you can add a default theme by setting <code>AccountCustomization</code> to the midnight theme:
@@ -140,8 +140,8 @@ public class CreateAccountCustomizationRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The QuickSight customizations you're adding in the current Region;. You can add these to an Amazon Web Services
-     * account; and a QuickSight namespace.
+     * The QuickSight customizations you're adding in the current Amazon Web Services Region;. You can add these to an
+     * Amazon Web Services account; and a QuickSight namespace.
      * </p>
      * <p>
      * For example, you can add a default theme by setting <code>AccountCustomization</code> to the midnight theme:
@@ -152,8 +152,8 @@ public class CreateAccountCustomizationRequest extends com.amazonaws.AmazonWebSe
      * </p>
      * 
      * @param accountCustomization
-     *        The QuickSight customizations you're adding in the current Region;. You can add these to an Amazon Web
-     *        Services account; and a QuickSight namespace. </p>
+     *        The QuickSight customizations you're adding in the current Amazon Web Services Region;. You can add these
+     *        to an Amazon Web Services account; and a QuickSight namespace. </p>
      *        <p>
      *        For example, you can add a default theme by setting <code>AccountCustomization</code> to the midnight
      *        theme: <code>"AccountCustomization": { "DefaultTheme": "arn:aws:quicksight::aws:theme/MIDNIGHT" }</code>.
@@ -167,8 +167,8 @@ public class CreateAccountCustomizationRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The QuickSight customizations you're adding in the current Region;. You can add these to an Amazon Web Services
-     * account; and a QuickSight namespace.
+     * The QuickSight customizations you're adding in the current Amazon Web Services Region;. You can add these to an
+     * Amazon Web Services account; and a QuickSight namespace.
      * </p>
      * <p>
      * For example, you can add a default theme by setting <code>AccountCustomization</code> to the midnight theme:
@@ -178,8 +178,8 @@ public class CreateAccountCustomizationRequest extends com.amazonaws.AmazonWebSe
      * .
      * </p>
      * 
-     * @return The QuickSight customizations you're adding in the current Region;. You can add these to an Amazon Web
-     *         Services account; and a QuickSight namespace. </p>
+     * @return The QuickSight customizations you're adding in the current Amazon Web Services Region;. You can add these
+     *         to an Amazon Web Services account; and a QuickSight namespace. </p>
      *         <p>
      *         For example, you can add a default theme by setting <code>AccountCustomization</code> to the midnight
      *         theme: <code>"AccountCustomization": { "DefaultTheme": "arn:aws:quicksight::aws:theme/MIDNIGHT" }</code>.
@@ -193,8 +193,8 @@ public class CreateAccountCustomizationRequest extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The QuickSight customizations you're adding in the current Region;. You can add these to an Amazon Web Services
-     * account; and a QuickSight namespace.
+     * The QuickSight customizations you're adding in the current Amazon Web Services Region;. You can add these to an
+     * Amazon Web Services account; and a QuickSight namespace.
      * </p>
      * <p>
      * For example, you can add a default theme by setting <code>AccountCustomization</code> to the midnight theme:
@@ -205,8 +205,8 @@ public class CreateAccountCustomizationRequest extends com.amazonaws.AmazonWebSe
      * </p>
      * 
      * @param accountCustomization
-     *        The QuickSight customizations you're adding in the current Region;. You can add these to an Amazon Web
-     *        Services account; and a QuickSight namespace. </p>
+     *        The QuickSight customizations you're adding in the current Amazon Web Services Region;. You can add these
+     *        to an Amazon Web Services account; and a QuickSight namespace. </p>
      *        <p>
      *        For example, you can add a default theme by setting <code>AccountCustomization</code> to the midnight
      *        theme: <code>"AccountCustomization": { "DefaultTheme": "arn:aws:quicksight::aws:theme/MIDNIGHT" }</code>.

@@ -74,6 +74,10 @@ public class InstanceTypeConfigJsonUnmarshaller implements Unmarshaller<Instance
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("CustomAmiId", targetDepth)) {
+                    context.nextToken();
+                    instanceTypeConfig.setCustomAmiId(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

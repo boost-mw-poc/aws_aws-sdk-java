@@ -56,7 +56,11 @@ public class UpdateDomainRequest extends com.amazonaws.AmazonWebServiceRequest i
     private String deadLetterQueueUrl;
     /**
      * <p>
-     * The process of matching duplicate profiles. This process runs every Saturday at 12AM.
+     * The process of matching duplicate profiles. If Matching = true, Amazon Connect Customer Profiles starts a weekly
+     * batch process every Saturday at 12AM UTC to detect duplicate profiles in your domains. After that batch process
+     * completes, use the <a
+     * href="https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_GetMatches.html">GetMatches</a> API to
+     * return and review the results.
      * </p>
      */
     private MatchingRequest matching;
@@ -259,11 +263,19 @@ public class UpdateDomainRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The process of matching duplicate profiles. This process runs every Saturday at 12AM.
+     * The process of matching duplicate profiles. If Matching = true, Amazon Connect Customer Profiles starts a weekly
+     * batch process every Saturday at 12AM UTC to detect duplicate profiles in your domains. After that batch process
+     * completes, use the <a
+     * href="https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_GetMatches.html">GetMatches</a> API to
+     * return and review the results.
      * </p>
      * 
      * @param matching
-     *        The process of matching duplicate profiles. This process runs every Saturday at 12AM.
+     *        The process of matching duplicate profiles. If Matching = true, Amazon Connect Customer Profiles starts a
+     *        weekly batch process every Saturday at 12AM UTC to detect duplicate profiles in your domains. After that
+     *        batch process completes, use the <a
+     *        href="https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_GetMatches.html">GetMatches</a>
+     *        API to return and review the results.
      */
 
     public void setMatching(MatchingRequest matching) {
@@ -272,10 +284,18 @@ public class UpdateDomainRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The process of matching duplicate profiles. This process runs every Saturday at 12AM.
+     * The process of matching duplicate profiles. If Matching = true, Amazon Connect Customer Profiles starts a weekly
+     * batch process every Saturday at 12AM UTC to detect duplicate profiles in your domains. After that batch process
+     * completes, use the <a
+     * href="https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_GetMatches.html">GetMatches</a> API to
+     * return and review the results.
      * </p>
      * 
-     * @return The process of matching duplicate profiles. This process runs every Saturday at 12AM.
+     * @return The process of matching duplicate profiles. If Matching = true, Amazon Connect Customer Profiles starts a
+     *         weekly batch process every Saturday at 12AM UTC to detect duplicate profiles in your domains. After that
+     *         batch process completes, use the <a
+     *         href="https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_GetMatches.html"
+     *         >GetMatches</a> API to return and review the results.
      */
 
     public MatchingRequest getMatching() {
@@ -284,11 +304,19 @@ public class UpdateDomainRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The process of matching duplicate profiles. This process runs every Saturday at 12AM.
+     * The process of matching duplicate profiles. If Matching = true, Amazon Connect Customer Profiles starts a weekly
+     * batch process every Saturday at 12AM UTC to detect duplicate profiles in your domains. After that batch process
+     * completes, use the <a
+     * href="https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_GetMatches.html">GetMatches</a> API to
+     * return and review the results.
      * </p>
      * 
      * @param matching
-     *        The process of matching duplicate profiles. This process runs every Saturday at 12AM.
+     *        The process of matching duplicate profiles. If Matching = true, Amazon Connect Customer Profiles starts a
+     *        weekly batch process every Saturday at 12AM UTC to detect duplicate profiles in your domains. After that
+     *        batch process completes, use the <a
+     *        href="https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_GetMatches.html">GetMatches</a>
+     *        API to return and review the results.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

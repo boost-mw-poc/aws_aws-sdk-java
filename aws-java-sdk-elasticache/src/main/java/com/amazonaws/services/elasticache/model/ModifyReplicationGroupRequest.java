@@ -67,8 +67,7 @@ public class ModifyReplicationGroupRequest extends com.amazonaws.AmazonWebServic
     private Boolean automaticFailoverEnabled;
     /**
      * <p>
-     * A list of tags to be added to this resource. A tag is a key-value pair. A tag key must be accompanied by a tag
-     * value, although null is accepted.
+     * A flag to indicate MultiAZ is enabled.
      * </p>
      */
     private Boolean multiAZEnabled;
@@ -585,13 +584,11 @@ public class ModifyReplicationGroupRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * A list of tags to be added to this resource. A tag is a key-value pair. A tag key must be accompanied by a tag
-     * value, although null is accepted.
+     * A flag to indicate MultiAZ is enabled.
      * </p>
      * 
      * @param multiAZEnabled
-     *        A list of tags to be added to this resource. A tag is a key-value pair. A tag key must be accompanied by a
-     *        tag value, although null is accepted.
+     *        A flag to indicate MultiAZ is enabled.
      */
 
     public void setMultiAZEnabled(Boolean multiAZEnabled) {
@@ -600,12 +597,10 @@ public class ModifyReplicationGroupRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * A list of tags to be added to this resource. A tag is a key-value pair. A tag key must be accompanied by a tag
-     * value, although null is accepted.
+     * A flag to indicate MultiAZ is enabled.
      * </p>
      * 
-     * @return A list of tags to be added to this resource. A tag is a key-value pair. A tag key must be accompanied by
-     *         a tag value, although null is accepted.
+     * @return A flag to indicate MultiAZ is enabled.
      */
 
     public Boolean getMultiAZEnabled() {
@@ -614,13 +609,11 @@ public class ModifyReplicationGroupRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * A list of tags to be added to this resource. A tag is a key-value pair. A tag key must be accompanied by a tag
-     * value, although null is accepted.
+     * A flag to indicate MultiAZ is enabled.
      * </p>
      * 
      * @param multiAZEnabled
-     *        A list of tags to be added to this resource. A tag is a key-value pair. A tag key must be accompanied by a
-     *        tag value, although null is accepted.
+     *        A flag to indicate MultiAZ is enabled.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -631,12 +624,10 @@ public class ModifyReplicationGroupRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * A list of tags to be added to this resource. A tag is a key-value pair. A tag key must be accompanied by a tag
-     * value, although null is accepted.
+     * A flag to indicate MultiAZ is enabled.
      * </p>
      * 
-     * @return A list of tags to be added to this resource. A tag is a key-value pair. A tag key must be accompanied by
-     *         a tag value, although null is accepted.
+     * @return A flag to indicate MultiAZ is enabled.
      */
 
     public Boolean isMultiAZEnabled() {
