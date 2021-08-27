@@ -82,6 +82,8 @@ public class RunJobFlowRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ManagedScalingPolicy").build();
     private static final MarshallingInfo<List> PLACEMENTGROUPCONFIGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PlacementGroupConfigs").build();
+    private static final MarshallingInfo<StructuredPojo> AUTOTERMINATIONPOLICY_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AutoTerminationPolicy").build();
 
     private static final RunJobFlowRequestMarshaller instance = new RunJobFlowRequestMarshaller();
 
@@ -126,6 +128,7 @@ public class RunJobFlowRequestMarshaller {
             protocolMarshaller.marshall(runJobFlowRequest.getStepConcurrencyLevel(), STEPCONCURRENCYLEVEL_BINDING);
             protocolMarshaller.marshall(runJobFlowRequest.getManagedScalingPolicy(), MANAGEDSCALINGPOLICY_BINDING);
             protocolMarshaller.marshall(runJobFlowRequest.getPlacementGroupConfigs(), PLACEMENTGROUPCONFIGS_BINDING);
+            protocolMarshaller.marshall(runJobFlowRequest.getAutoTerminationPolicy(), AUTOTERMINATIONPOLICY_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

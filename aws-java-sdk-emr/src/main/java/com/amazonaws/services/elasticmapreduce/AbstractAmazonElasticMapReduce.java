@@ -136,6 +136,11 @@ public class AbstractAmazonElasticMapReduce implements AmazonElasticMapReduce {
     }
 
     @Override
+    public GetAutoTerminationPolicyResult getAutoTerminationPolicy(GetAutoTerminationPolicyRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetBlockPublicAccessConfigurationResult getBlockPublicAccessConfiguration(GetBlockPublicAccessConfigurationRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -236,6 +241,11 @@ public class AbstractAmazonElasticMapReduce implements AmazonElasticMapReduce {
     }
 
     @Override
+    public PutAutoTerminationPolicyResult putAutoTerminationPolicy(PutAutoTerminationPolicyRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public PutBlockPublicAccessConfigurationResult putBlockPublicAccessConfiguration(PutBlockPublicAccessConfigurationRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -247,6 +257,11 @@ public class AbstractAmazonElasticMapReduce implements AmazonElasticMapReduce {
 
     @Override
     public RemoveAutoScalingPolicyResult removeAutoScalingPolicy(RemoveAutoScalingPolicyRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public RemoveAutoTerminationPolicyResult removeAutoTerminationPolicy(RemoveAutoTerminationPolicyRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

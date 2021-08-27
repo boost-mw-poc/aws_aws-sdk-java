@@ -881,6 +881,39 @@ public class AmazonElasticMapReduceAsyncClient extends AmazonElasticMapReduceCli
     }
 
     @Override
+    public java.util.concurrent.Future<GetAutoTerminationPolicyResult> getAutoTerminationPolicyAsync(GetAutoTerminationPolicyRequest request) {
+
+        return getAutoTerminationPolicyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetAutoTerminationPolicyResult> getAutoTerminationPolicyAsync(final GetAutoTerminationPolicyRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetAutoTerminationPolicyRequest, GetAutoTerminationPolicyResult> asyncHandler) {
+        final GetAutoTerminationPolicyRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetAutoTerminationPolicyResult>() {
+            @Override
+            public GetAutoTerminationPolicyResult call() throws Exception {
+                GetAutoTerminationPolicyResult result = null;
+
+                try {
+                    result = executeGetAutoTerminationPolicy(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetBlockPublicAccessConfigurationResult> getBlockPublicAccessConfigurationAsync(
             GetBlockPublicAccessConfigurationRequest request) {
 
@@ -1523,6 +1556,39 @@ public class AmazonElasticMapReduceAsyncClient extends AmazonElasticMapReduceCli
     }
 
     @Override
+    public java.util.concurrent.Future<PutAutoTerminationPolicyResult> putAutoTerminationPolicyAsync(PutAutoTerminationPolicyRequest request) {
+
+        return putAutoTerminationPolicyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutAutoTerminationPolicyResult> putAutoTerminationPolicyAsync(final PutAutoTerminationPolicyRequest request,
+            final com.amazonaws.handlers.AsyncHandler<PutAutoTerminationPolicyRequest, PutAutoTerminationPolicyResult> asyncHandler) {
+        final PutAutoTerminationPolicyRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<PutAutoTerminationPolicyResult>() {
+            @Override
+            public PutAutoTerminationPolicyResult call() throws Exception {
+                PutAutoTerminationPolicyResult result = null;
+
+                try {
+                    result = executePutAutoTerminationPolicy(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<PutBlockPublicAccessConfigurationResult> putBlockPublicAccessConfigurationAsync(
             PutBlockPublicAccessConfigurationRequest request) {
 
@@ -1608,6 +1674,39 @@ public class AmazonElasticMapReduceAsyncClient extends AmazonElasticMapReduceCli
 
                 try {
                     result = executeRemoveAutoScalingPolicy(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<RemoveAutoTerminationPolicyResult> removeAutoTerminationPolicyAsync(RemoveAutoTerminationPolicyRequest request) {
+
+        return removeAutoTerminationPolicyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<RemoveAutoTerminationPolicyResult> removeAutoTerminationPolicyAsync(final RemoveAutoTerminationPolicyRequest request,
+            final com.amazonaws.handlers.AsyncHandler<RemoveAutoTerminationPolicyRequest, RemoveAutoTerminationPolicyResult> asyncHandler) {
+        final RemoveAutoTerminationPolicyRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<RemoveAutoTerminationPolicyResult>() {
+            @Override
+            public RemoveAutoTerminationPolicyResult call() throws Exception {
+                RemoveAutoTerminationPolicyResult result = null;
+
+                try {
+                    result = executeRemoveAutoTerminationPolicy(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

@@ -61,6 +61,8 @@ public enum ElasticMapReduceActions implements Action {
     DescribeStep("elasticmapreduce:DescribeStep"),
     /** Action for the DescribeStudio operation. */
     DescribeStudio("elasticmapreduce:DescribeStudio"),
+    /** Action for the GetAutoTerminationPolicy operation. */
+    GetAutoTerminationPolicy("elasticmapreduce:GetAutoTerminationPolicy"),
     /** Action for the GetBlockPublicAccessConfiguration operation. */
     GetBlockPublicAccessConfiguration("elasticmapreduce:GetBlockPublicAccessConfiguration"),
     /** Action for the GetManagedScalingPolicy operation. */
@@ -97,12 +99,16 @@ public enum ElasticMapReduceActions implements Action {
     ModifyInstanceGroups("elasticmapreduce:ModifyInstanceGroups"),
     /** Action for the PutAutoScalingPolicy operation. */
     PutAutoScalingPolicy("elasticmapreduce:PutAutoScalingPolicy"),
+    /** Action for the PutAutoTerminationPolicy operation. */
+    PutAutoTerminationPolicy("elasticmapreduce:PutAutoTerminationPolicy"),
     /** Action for the PutBlockPublicAccessConfiguration operation. */
     PutBlockPublicAccessConfiguration("elasticmapreduce:PutBlockPublicAccessConfiguration"),
     /** Action for the PutManagedScalingPolicy operation. */
     PutManagedScalingPolicy("elasticmapreduce:PutManagedScalingPolicy"),
     /** Action for the RemoveAutoScalingPolicy operation. */
     RemoveAutoScalingPolicy("elasticmapreduce:RemoveAutoScalingPolicy"),
+    /** Action for the RemoveAutoTerminationPolicy operation. */
+    RemoveAutoTerminationPolicy("elasticmapreduce:RemoveAutoTerminationPolicy"),
     /** Action for the RemoveManagedScalingPolicy operation. */
     RemoveManagedScalingPolicy("elasticmapreduce:RemoveManagedScalingPolicy"),
     /** Action for the RemoveTags operation. */

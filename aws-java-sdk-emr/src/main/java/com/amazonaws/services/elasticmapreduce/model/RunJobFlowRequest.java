@@ -190,15 +190,15 @@ public class RunJobFlowRequest extends com.amazonaws.AmazonWebServiceRequest imp
     private com.amazonaws.internal.SdkInternalList<Configuration> configurations;
     /**
      * <p>
-     * Set this value to <code>true</code> so that IAM principals in the account associated with the cluster can perform
-     * EMR actions on the cluster that their IAM policies allow. This value defaults to <code>true</code> for clusters
-     * created using the EMR API or the CLI <a
+     * Set this value to <code>true</code> so that IAM principals in the Amazon Web Services account associated with the
+     * cluster can perform EMR actions on the cluster that their IAM policies allow. This value defaults to
+     * <code>true</code> for clusters created using the EMR API or the CLI <a
      * href="https://docs.aws.amazon.com/cli/latest/reference/emr/create-cluster.html">create-cluster</a> command.
      * </p>
      * <p>
-     * When set to <code>false</code>, only the IAM principal that created the cluster and the account root user can
-     * perform EMR actions for the cluster, regardless of the IAM permissions policies attached to other IAM principals.
-     * For more information, see <a href=
+     * When set to <code>false</code>, only the IAM principal that created the cluster and the Amazon Web Services
+     * account root user can perform EMR actions for the cluster, regardless of the IAM permissions policies attached to
+     * other IAM principals. For more information, see <a href=
      * "https://docs.aws.amazon.com/emr/latest/ManagementGuide/security_iam_emr-with-iam.html#security_set_visible_to_all_users"
      * >Understanding the EMR Cluster VisibleToAllUsers Setting</a> in the <i>Amazon EMRManagement Guide</i>.
      * </p>
@@ -314,6 +314,8 @@ public class RunJobFlowRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<PlacementGroupConfig> placementGroupConfigs;
+
+    private AutoTerminationPolicy autoTerminationPolicy;
 
     /**
      * Default constructor for RunJobFlowRequest object. Callers should use the setter or fluent setter (with...)
@@ -1709,29 +1711,29 @@ public class RunJobFlowRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * Set this value to <code>true</code> so that IAM principals in the account associated with the cluster can perform
-     * EMR actions on the cluster that their IAM policies allow. This value defaults to <code>true</code> for clusters
-     * created using the EMR API or the CLI <a
+     * Set this value to <code>true</code> so that IAM principals in the Amazon Web Services account associated with the
+     * cluster can perform EMR actions on the cluster that their IAM policies allow. This value defaults to
+     * <code>true</code> for clusters created using the EMR API or the CLI <a
      * href="https://docs.aws.amazon.com/cli/latest/reference/emr/create-cluster.html">create-cluster</a> command.
      * </p>
      * <p>
-     * When set to <code>false</code>, only the IAM principal that created the cluster and the account root user can
-     * perform EMR actions for the cluster, regardless of the IAM permissions policies attached to other IAM principals.
-     * For more information, see <a href=
+     * When set to <code>false</code>, only the IAM principal that created the cluster and the Amazon Web Services
+     * account root user can perform EMR actions for the cluster, regardless of the IAM permissions policies attached to
+     * other IAM principals. For more information, see <a href=
      * "https://docs.aws.amazon.com/emr/latest/ManagementGuide/security_iam_emr-with-iam.html#security_set_visible_to_all_users"
      * >Understanding the EMR Cluster VisibleToAllUsers Setting</a> in the <i>Amazon EMRManagement Guide</i>.
      * </p>
      * 
      * @param visibleToAllUsers
-     *        Set this value to <code>true</code> so that IAM principals in the account associated with the cluster can
-     *        perform EMR actions on the cluster that their IAM policies allow. This value defaults to <code>true</code>
-     *        for clusters created using the EMR API or the CLI <a
+     *        Set this value to <code>true</code> so that IAM principals in the Amazon Web Services account associated
+     *        with the cluster can perform EMR actions on the cluster that their IAM policies allow. This value defaults
+     *        to <code>true</code> for clusters created using the EMR API or the CLI <a
      *        href="https://docs.aws.amazon.com/cli/latest/reference/emr/create-cluster.html">create-cluster</a>
      *        command.</p>
      *        <p>
-     *        When set to <code>false</code>, only the IAM principal that created the cluster and the account root user
-     *        can perform EMR actions for the cluster, regardless of the IAM permissions policies attached to other IAM
-     *        principals. For more information, see <a href=
+     *        When set to <code>false</code>, only the IAM principal that created the cluster and the Amazon Web
+     *        Services account root user can perform EMR actions for the cluster, regardless of the IAM permissions
+     *        policies attached to other IAM principals. For more information, see <a href=
      *        "https://docs.aws.amazon.com/emr/latest/ManagementGuide/security_iam_emr-with-iam.html#security_set_visible_to_all_users"
      *        >Understanding the EMR Cluster VisibleToAllUsers Setting</a> in the <i>Amazon EMRManagement Guide</i>.
      */
@@ -1742,28 +1744,28 @@ public class RunJobFlowRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * Set this value to <code>true</code> so that IAM principals in the account associated with the cluster can perform
-     * EMR actions on the cluster that their IAM policies allow. This value defaults to <code>true</code> for clusters
-     * created using the EMR API or the CLI <a
+     * Set this value to <code>true</code> so that IAM principals in the Amazon Web Services account associated with the
+     * cluster can perform EMR actions on the cluster that their IAM policies allow. This value defaults to
+     * <code>true</code> for clusters created using the EMR API or the CLI <a
      * href="https://docs.aws.amazon.com/cli/latest/reference/emr/create-cluster.html">create-cluster</a> command.
      * </p>
      * <p>
-     * When set to <code>false</code>, only the IAM principal that created the cluster and the account root user can
-     * perform EMR actions for the cluster, regardless of the IAM permissions policies attached to other IAM principals.
-     * For more information, see <a href=
+     * When set to <code>false</code>, only the IAM principal that created the cluster and the Amazon Web Services
+     * account root user can perform EMR actions for the cluster, regardless of the IAM permissions policies attached to
+     * other IAM principals. For more information, see <a href=
      * "https://docs.aws.amazon.com/emr/latest/ManagementGuide/security_iam_emr-with-iam.html#security_set_visible_to_all_users"
      * >Understanding the EMR Cluster VisibleToAllUsers Setting</a> in the <i>Amazon EMRManagement Guide</i>.
      * </p>
      * 
-     * @return Set this value to <code>true</code> so that IAM principals in the account associated with the cluster can
-     *         perform EMR actions on the cluster that their IAM policies allow. This value defaults to
-     *         <code>true</code> for clusters created using the EMR API or the CLI <a
+     * @return Set this value to <code>true</code> so that IAM principals in the Amazon Web Services account associated
+     *         with the cluster can perform EMR actions on the cluster that their IAM policies allow. This value
+     *         defaults to <code>true</code> for clusters created using the EMR API or the CLI <a
      *         href="https://docs.aws.amazon.com/cli/latest/reference/emr/create-cluster.html">create-cluster</a>
      *         command.</p>
      *         <p>
-     *         When set to <code>false</code>, only the IAM principal that created the cluster and the account root user
-     *         can perform EMR actions for the cluster, regardless of the IAM permissions policies attached to other IAM
-     *         principals. For more information, see <a href=
+     *         When set to <code>false</code>, only the IAM principal that created the cluster and the Amazon Web
+     *         Services account root user can perform EMR actions for the cluster, regardless of the IAM permissions
+     *         policies attached to other IAM principals. For more information, see <a href=
      *         "https://docs.aws.amazon.com/emr/latest/ManagementGuide/security_iam_emr-with-iam.html#security_set_visible_to_all_users"
      *         >Understanding the EMR Cluster VisibleToAllUsers Setting</a> in the <i>Amazon EMRManagement Guide</i>.
      */
@@ -1774,29 +1776,29 @@ public class RunJobFlowRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * Set this value to <code>true</code> so that IAM principals in the account associated with the cluster can perform
-     * EMR actions on the cluster that their IAM policies allow. This value defaults to <code>true</code> for clusters
-     * created using the EMR API or the CLI <a
+     * Set this value to <code>true</code> so that IAM principals in the Amazon Web Services account associated with the
+     * cluster can perform EMR actions on the cluster that their IAM policies allow. This value defaults to
+     * <code>true</code> for clusters created using the EMR API or the CLI <a
      * href="https://docs.aws.amazon.com/cli/latest/reference/emr/create-cluster.html">create-cluster</a> command.
      * </p>
      * <p>
-     * When set to <code>false</code>, only the IAM principal that created the cluster and the account root user can
-     * perform EMR actions for the cluster, regardless of the IAM permissions policies attached to other IAM principals.
-     * For more information, see <a href=
+     * When set to <code>false</code>, only the IAM principal that created the cluster and the Amazon Web Services
+     * account root user can perform EMR actions for the cluster, regardless of the IAM permissions policies attached to
+     * other IAM principals. For more information, see <a href=
      * "https://docs.aws.amazon.com/emr/latest/ManagementGuide/security_iam_emr-with-iam.html#security_set_visible_to_all_users"
      * >Understanding the EMR Cluster VisibleToAllUsers Setting</a> in the <i>Amazon EMRManagement Guide</i>.
      * </p>
      * 
      * @param visibleToAllUsers
-     *        Set this value to <code>true</code> so that IAM principals in the account associated with the cluster can
-     *        perform EMR actions on the cluster that their IAM policies allow. This value defaults to <code>true</code>
-     *        for clusters created using the EMR API or the CLI <a
+     *        Set this value to <code>true</code> so that IAM principals in the Amazon Web Services account associated
+     *        with the cluster can perform EMR actions on the cluster that their IAM policies allow. This value defaults
+     *        to <code>true</code> for clusters created using the EMR API or the CLI <a
      *        href="https://docs.aws.amazon.com/cli/latest/reference/emr/create-cluster.html">create-cluster</a>
      *        command.</p>
      *        <p>
-     *        When set to <code>false</code>, only the IAM principal that created the cluster and the account root user
-     *        can perform EMR actions for the cluster, regardless of the IAM permissions policies attached to other IAM
-     *        principals. For more information, see <a href=
+     *        When set to <code>false</code>, only the IAM principal that created the cluster and the Amazon Web
+     *        Services account root user can perform EMR actions for the cluster, regardless of the IAM permissions
+     *        policies attached to other IAM principals. For more information, see <a href=
      *        "https://docs.aws.amazon.com/emr/latest/ManagementGuide/security_iam_emr-with-iam.html#security_set_visible_to_all_users"
      *        >Understanding the EMR Cluster VisibleToAllUsers Setting</a> in the <i>Amazon EMRManagement Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -1809,28 +1811,28 @@ public class RunJobFlowRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * Set this value to <code>true</code> so that IAM principals in the account associated with the cluster can perform
-     * EMR actions on the cluster that their IAM policies allow. This value defaults to <code>true</code> for clusters
-     * created using the EMR API or the CLI <a
+     * Set this value to <code>true</code> so that IAM principals in the Amazon Web Services account associated with the
+     * cluster can perform EMR actions on the cluster that their IAM policies allow. This value defaults to
+     * <code>true</code> for clusters created using the EMR API or the CLI <a
      * href="https://docs.aws.amazon.com/cli/latest/reference/emr/create-cluster.html">create-cluster</a> command.
      * </p>
      * <p>
-     * When set to <code>false</code>, only the IAM principal that created the cluster and the account root user can
-     * perform EMR actions for the cluster, regardless of the IAM permissions policies attached to other IAM principals.
-     * For more information, see <a href=
+     * When set to <code>false</code>, only the IAM principal that created the cluster and the Amazon Web Services
+     * account root user can perform EMR actions for the cluster, regardless of the IAM permissions policies attached to
+     * other IAM principals. For more information, see <a href=
      * "https://docs.aws.amazon.com/emr/latest/ManagementGuide/security_iam_emr-with-iam.html#security_set_visible_to_all_users"
      * >Understanding the EMR Cluster VisibleToAllUsers Setting</a> in the <i>Amazon EMRManagement Guide</i>.
      * </p>
      * 
-     * @return Set this value to <code>true</code> so that IAM principals in the account associated with the cluster can
-     *         perform EMR actions on the cluster that their IAM policies allow. This value defaults to
-     *         <code>true</code> for clusters created using the EMR API or the CLI <a
+     * @return Set this value to <code>true</code> so that IAM principals in the Amazon Web Services account associated
+     *         with the cluster can perform EMR actions on the cluster that their IAM policies allow. This value
+     *         defaults to <code>true</code> for clusters created using the EMR API or the CLI <a
      *         href="https://docs.aws.amazon.com/cli/latest/reference/emr/create-cluster.html">create-cluster</a>
      *         command.</p>
      *         <p>
-     *         When set to <code>false</code>, only the IAM principal that created the cluster and the account root user
-     *         can perform EMR actions for the cluster, regardless of the IAM permissions policies attached to other IAM
-     *         principals. For more information, see <a href=
+     *         When set to <code>false</code>, only the IAM principal that created the cluster and the Amazon Web
+     *         Services account root user can perform EMR actions for the cluster, regardless of the IAM permissions
+     *         policies attached to other IAM principals. For more information, see <a href=
      *         "https://docs.aws.amazon.com/emr/latest/ManagementGuide/security_iam_emr-with-iam.html#security_set_visible_to_all_users"
      *         >Understanding the EMR Cluster VisibleToAllUsers Setting</a> in the <i>Amazon EMRManagement Guide</i>.
      */
@@ -2736,6 +2738,32 @@ public class RunJobFlowRequest extends com.amazonaws.AmazonWebServiceRequest imp
     }
 
     /**
+     * @param autoTerminationPolicy
+     */
+
+    public void setAutoTerminationPolicy(AutoTerminationPolicy autoTerminationPolicy) {
+        this.autoTerminationPolicy = autoTerminationPolicy;
+    }
+
+    /**
+     * @return
+     */
+
+    public AutoTerminationPolicy getAutoTerminationPolicy() {
+        return this.autoTerminationPolicy;
+    }
+
+    /**
+     * @param autoTerminationPolicy
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RunJobFlowRequest withAutoTerminationPolicy(AutoTerminationPolicy autoTerminationPolicy) {
+        setAutoTerminationPolicy(autoTerminationPolicy);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -2800,7 +2828,9 @@ public class RunJobFlowRequest extends com.amazonaws.AmazonWebServiceRequest imp
         if (getManagedScalingPolicy() != null)
             sb.append("ManagedScalingPolicy: ").append(getManagedScalingPolicy()).append(",");
         if (getPlacementGroupConfigs() != null)
-            sb.append("PlacementGroupConfigs: ").append(getPlacementGroupConfigs());
+            sb.append("PlacementGroupConfigs: ").append(getPlacementGroupConfigs()).append(",");
+        if (getAutoTerminationPolicy() != null)
+            sb.append("AutoTerminationPolicy: ").append(getAutoTerminationPolicy());
         sb.append("}");
         return sb.toString();
     }
@@ -2923,6 +2953,10 @@ public class RunJobFlowRequest extends com.amazonaws.AmazonWebServiceRequest imp
             return false;
         if (other.getPlacementGroupConfigs() != null && other.getPlacementGroupConfigs().equals(this.getPlacementGroupConfigs()) == false)
             return false;
+        if (other.getAutoTerminationPolicy() == null ^ this.getAutoTerminationPolicy() == null)
+            return false;
+        if (other.getAutoTerminationPolicy() != null && other.getAutoTerminationPolicy().equals(this.getAutoTerminationPolicy()) == false)
+            return false;
         return true;
     }
 
@@ -2958,6 +2992,7 @@ public class RunJobFlowRequest extends com.amazonaws.AmazonWebServiceRequest imp
         hashCode = prime * hashCode + ((getStepConcurrencyLevel() == null) ? 0 : getStepConcurrencyLevel().hashCode());
         hashCode = prime * hashCode + ((getManagedScalingPolicy() == null) ? 0 : getManagedScalingPolicy().hashCode());
         hashCode = prime * hashCode + ((getPlacementGroupConfigs() == null) ? 0 : getPlacementGroupConfigs().hashCode());
+        hashCode = prime * hashCode + ((getAutoTerminationPolicy() == null) ? 0 : getAutoTerminationPolicy().hashCode());
         return hashCode;
     }
 

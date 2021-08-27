@@ -128,6 +128,12 @@ public class ImportImageTask implements Serializable, Cloneable {
      * </p>
      */
     private String usageOperation;
+    /**
+     * <p>
+     * The boot mode of the virtual machine.
+     * </p>
+     */
+    private String bootMode;
 
     /**
      * <p>
@@ -911,6 +917,65 @@ public class ImportImageTask implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * The boot mode of the virtual machine.
+     * </p>
+     * 
+     * @param bootMode
+     *        The boot mode of the virtual machine.
+     * @see BootModeValues
+     */
+
+    public void setBootMode(String bootMode) {
+        this.bootMode = bootMode;
+    }
+
+    /**
+     * <p>
+     * The boot mode of the virtual machine.
+     * </p>
+     * 
+     * @return The boot mode of the virtual machine.
+     * @see BootModeValues
+     */
+
+    public String getBootMode() {
+        return this.bootMode;
+    }
+
+    /**
+     * <p>
+     * The boot mode of the virtual machine.
+     * </p>
+     * 
+     * @param bootMode
+     *        The boot mode of the virtual machine.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see BootModeValues
+     */
+
+    public ImportImageTask withBootMode(String bootMode) {
+        setBootMode(bootMode);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The boot mode of the virtual machine.
+     * </p>
+     * 
+     * @param bootMode
+     *        The boot mode of the virtual machine.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see BootModeValues
+     */
+
+    public ImportImageTask withBootMode(BootModeValues bootMode) {
+        this.bootMode = bootMode.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -953,7 +1018,9 @@ public class ImportImageTask implements Serializable, Cloneable {
         if (getLicenseSpecifications() != null)
             sb.append("LicenseSpecifications: ").append(getLicenseSpecifications()).append(",");
         if (getUsageOperation() != null)
-            sb.append("UsageOperation: ").append(getUsageOperation());
+            sb.append("UsageOperation: ").append(getUsageOperation()).append(",");
+        if (getBootMode() != null)
+            sb.append("BootMode: ").append(getBootMode());
         sb.append("}");
         return sb.toString();
     }
@@ -1032,6 +1099,10 @@ public class ImportImageTask implements Serializable, Cloneable {
             return false;
         if (other.getUsageOperation() != null && other.getUsageOperation().equals(this.getUsageOperation()) == false)
             return false;
+        if (other.getBootMode() == null ^ this.getBootMode() == null)
+            return false;
+        if (other.getBootMode() != null && other.getBootMode().equals(this.getBootMode()) == false)
+            return false;
         return true;
     }
 
@@ -1056,6 +1127,7 @@ public class ImportImageTask implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getLicenseSpecifications() == null) ? 0 : getLicenseSpecifications().hashCode());
         hashCode = prime * hashCode + ((getUsageOperation() == null) ? 0 : getUsageOperation().hashCode());
+        hashCode = prime * hashCode + ((getBootMode() == null) ? 0 : getBootMode().hashCode());
         return hashCode;
     }
 

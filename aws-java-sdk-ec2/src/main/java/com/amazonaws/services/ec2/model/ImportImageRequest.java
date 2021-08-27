@@ -177,6 +177,12 @@ public class ImportImageRequest extends AmazonWebServiceRequest implements Seria
      * </p>
      */
     private String usageOperation;
+    /**
+     * <p>
+     * The boot mode of the virtual machine.
+     * </p>
+     */
+    private String bootMode;
 
     /**
      * <p>
@@ -1261,6 +1267,65 @@ public class ImportImageRequest extends AmazonWebServiceRequest implements Seria
     }
 
     /**
+     * <p>
+     * The boot mode of the virtual machine.
+     * </p>
+     * 
+     * @param bootMode
+     *        The boot mode of the virtual machine.
+     * @see BootModeValues
+     */
+
+    public void setBootMode(String bootMode) {
+        this.bootMode = bootMode;
+    }
+
+    /**
+     * <p>
+     * The boot mode of the virtual machine.
+     * </p>
+     * 
+     * @return The boot mode of the virtual machine.
+     * @see BootModeValues
+     */
+
+    public String getBootMode() {
+        return this.bootMode;
+    }
+
+    /**
+     * <p>
+     * The boot mode of the virtual machine.
+     * </p>
+     * 
+     * @param bootMode
+     *        The boot mode of the virtual machine.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see BootModeValues
+     */
+
+    public ImportImageRequest withBootMode(String bootMode) {
+        setBootMode(bootMode);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The boot mode of the virtual machine.
+     * </p>
+     * 
+     * @param bootMode
+     *        The boot mode of the virtual machine.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see BootModeValues
+     */
+
+    public ImportImageRequest withBootMode(BootModeValues bootMode) {
+        this.bootMode = bootMode.toString();
+        return this;
+    }
+
+    /**
      * This method is intended for internal use only. Returns the marshaled request configured with additional
      * parameters to enable operation dry-run.
      */
@@ -1310,7 +1375,9 @@ public class ImportImageRequest extends AmazonWebServiceRequest implements Seria
         if (getTagSpecifications() != null)
             sb.append("TagSpecifications: ").append(getTagSpecifications()).append(",");
         if (getUsageOperation() != null)
-            sb.append("UsageOperation: ").append(getUsageOperation());
+            sb.append("UsageOperation: ").append(getUsageOperation()).append(",");
+        if (getBootMode() != null)
+            sb.append("BootMode: ").append(getBootMode());
         sb.append("}");
         return sb.toString();
     }
@@ -1381,6 +1448,10 @@ public class ImportImageRequest extends AmazonWebServiceRequest implements Seria
             return false;
         if (other.getUsageOperation() != null && other.getUsageOperation().equals(this.getUsageOperation()) == false)
             return false;
+        if (other.getBootMode() == null ^ this.getBootMode() == null)
+            return false;
+        if (other.getBootMode() != null && other.getBootMode().equals(this.getBootMode()) == false)
+            return false;
         return true;
     }
 
@@ -1403,6 +1474,7 @@ public class ImportImageRequest extends AmazonWebServiceRequest implements Seria
         hashCode = prime * hashCode + ((getLicenseSpecifications() == null) ? 0 : getLicenseSpecifications().hashCode());
         hashCode = prime * hashCode + ((getTagSpecifications() == null) ? 0 : getTagSpecifications().hashCode());
         hashCode = prime * hashCode + ((getUsageOperation() == null) ? 0 : getUsageOperation().hashCode());
+        hashCode = prime * hashCode + ((getBootMode() == null) ? 0 : getBootMode().hashCode());
         return hashCode;
     }
 

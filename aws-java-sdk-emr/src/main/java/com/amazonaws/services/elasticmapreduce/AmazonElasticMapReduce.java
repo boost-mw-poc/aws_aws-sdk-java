@@ -478,8 +478,21 @@ public interface AmazonElasticMapReduce {
 
     /**
      * <p>
-     * Returns the Amazon EMR block public access configuration for your account in the current Region. For more
-     * information see <a
+     * Returns the auto-termination policy for an Amazon EMR cluster.
+     * </p>
+     * 
+     * @param getAutoTerminationPolicyRequest
+     * @return Result of the GetAutoTerminationPolicy operation returned by the service.
+     * @sample AmazonElasticMapReduce.GetAutoTerminationPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/GetAutoTerminationPolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetAutoTerminationPolicyResult getAutoTerminationPolicy(GetAutoTerminationPolicyRequest getAutoTerminationPolicyRequest);
+
+    /**
+     * <p>
+     * Returns the Amazon EMR block public access configuration for your Amazon Web Services account in the current
+     * Region. For more information see <a
      * href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/configure-block-public-access.html">Configure Block
      * Public Access for Amazon EMR</a> in the <i>Amazon EMR Management Guide</i>.
      * </p>
@@ -547,10 +560,10 @@ public interface AmazonElasticMapReduce {
 
     /**
      * <p>
-     * Provides the status of all clusters visible to this account. Allows you to filter the list of clusters based on
-     * certain criteria; for example, filtering by cluster creation date and time or by status. This call returns a
-     * maximum of 50 clusters in unsorted order per call, but returns a marker to track the paging of the cluster list
-     * across multiple ListClusters calls.
+     * Provides the status of all clusters visible to this Amazon Web Services account. Allows you to filter the list of
+     * clusters based on certain criteria; for example, filtering by cluster creation date and time or by status. This
+     * call returns a maximum of 50 clusters in unsorted order per call, but returns a marker to track the paging of the
+     * cluster list across multiple ListClusters calls.
      * </p>
      * 
      * @param listClustersRequest
@@ -730,8 +743,8 @@ public interface AmazonElasticMapReduce {
 
     /**
      * <p>
-     * Returns a list of all Amazon EMR Studios associated with the account. The list includes details such as ID,
-     * Studio Access URL, and creation time for each Studio.
+     * Returns a list of all Amazon EMR Studios associated with the Amazon Web Services account. The list includes
+     * details such as ID, Studio Access URL, and creation time for each Studio.
      * </p>
      * 
      * @param listStudiosRequest
@@ -829,8 +842,25 @@ public interface AmazonElasticMapReduce {
 
     /**
      * <p>
-     * Creates or updates an Amazon EMR block public access configuration for your account in the current Region. For
-     * more information see <a
+     * Creates or updates an auto-termination policy for an Amazon EMR cluster. An auto-termination policy defines the
+     * amount of idle time in seconds after which a cluster automatically terminates. For alternative cluster
+     * termination options, see <a
+     * href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-termination.html">Control cluster
+     * termination</a>.
+     * </p>
+     * 
+     * @param putAutoTerminationPolicyRequest
+     * @return Result of the PutAutoTerminationPolicy operation returned by the service.
+     * @sample AmazonElasticMapReduce.PutAutoTerminationPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/PutAutoTerminationPolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    PutAutoTerminationPolicyResult putAutoTerminationPolicy(PutAutoTerminationPolicyRequest putAutoTerminationPolicyRequest);
+
+    /**
+     * <p>
+     * Creates or updates an Amazon EMR block public access configuration for your Amazon Web Services account in the
+     * current Region. For more information see <a
      * href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/configure-block-public-access.html">Configure Block
      * Public Access for Amazon EMR</a> in the <i>Amazon EMR Management Guide</i>.
      * </p>
@@ -875,6 +905,19 @@ public interface AmazonElasticMapReduce {
      *      target="_top">AWS API Documentation</a>
      */
     RemoveAutoScalingPolicyResult removeAutoScalingPolicy(RemoveAutoScalingPolicyRequest removeAutoScalingPolicyRequest);
+
+    /**
+     * <p>
+     * Removes an auto-termination policy from an Amazon EMR cluster.
+     * </p>
+     * 
+     * @param removeAutoTerminationPolicyRequest
+     * @return Result of the RemoveAutoTerminationPolicy operation returned by the service.
+     * @sample AmazonElasticMapReduce.RemoveAutoTerminationPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/RemoveAutoTerminationPolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    RemoveAutoTerminationPolicyResult removeAutoTerminationPolicy(RemoveAutoTerminationPolicyRequest removeAutoTerminationPolicyRequest);
 
     /**
      * <p>
@@ -995,9 +1038,9 @@ public interface AmazonElasticMapReduce {
     /**
      * <p>
      * Sets the <a>Cluster$VisibleToAllUsers</a> value for an EMR cluster. When <code>true</code>, IAM principals in the
-     * account can perform EMR cluster actions that their IAM policies allow. When <code>false</code>, only the IAM
-     * principal that created the cluster and the account root user can perform EMR actions on the cluster, regardless
-     * of IAM permissions policies attached to other IAM principals.
+     * Amazon Web Services account can perform EMR cluster actions that their IAM policies allow. When
+     * <code>false</code>, only the IAM principal that created the cluster and the Amazon Web Services account root user
+     * can perform EMR actions on the cluster, regardless of IAM permissions policies attached to other IAM principals.
      * </p>
      * <p>
      * This action works on running clusters. When you create a cluster, use the

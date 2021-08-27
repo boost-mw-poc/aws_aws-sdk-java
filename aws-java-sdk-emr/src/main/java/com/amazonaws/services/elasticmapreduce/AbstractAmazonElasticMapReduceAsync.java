@@ -289,6 +289,19 @@ public class AbstractAmazonElasticMapReduceAsync extends AbstractAmazonElasticMa
     }
 
     @Override
+    public java.util.concurrent.Future<GetAutoTerminationPolicyResult> getAutoTerminationPolicyAsync(GetAutoTerminationPolicyRequest request) {
+
+        return getAutoTerminationPolicyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetAutoTerminationPolicyResult> getAutoTerminationPolicyAsync(GetAutoTerminationPolicyRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetAutoTerminationPolicyRequest, GetAutoTerminationPolicyResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetBlockPublicAccessConfigurationResult> getBlockPublicAccessConfigurationAsync(
             GetBlockPublicAccessConfigurationRequest request) {
 
@@ -571,6 +584,19 @@ public class AbstractAmazonElasticMapReduceAsync extends AbstractAmazonElasticMa
     }
 
     @Override
+    public java.util.concurrent.Future<PutAutoTerminationPolicyResult> putAutoTerminationPolicyAsync(PutAutoTerminationPolicyRequest request) {
+
+        return putAutoTerminationPolicyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<PutAutoTerminationPolicyResult> putAutoTerminationPolicyAsync(PutAutoTerminationPolicyRequest request,
+            com.amazonaws.handlers.AsyncHandler<PutAutoTerminationPolicyRequest, PutAutoTerminationPolicyResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<PutBlockPublicAccessConfigurationResult> putBlockPublicAccessConfigurationAsync(
             PutBlockPublicAccessConfigurationRequest request) {
 
@@ -607,6 +633,19 @@ public class AbstractAmazonElasticMapReduceAsync extends AbstractAmazonElasticMa
     @Override
     public java.util.concurrent.Future<RemoveAutoScalingPolicyResult> removeAutoScalingPolicyAsync(RemoveAutoScalingPolicyRequest request,
             com.amazonaws.handlers.AsyncHandler<RemoveAutoScalingPolicyRequest, RemoveAutoScalingPolicyResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<RemoveAutoTerminationPolicyResult> removeAutoTerminationPolicyAsync(RemoveAutoTerminationPolicyRequest request) {
+
+        return removeAutoTerminationPolicyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<RemoveAutoTerminationPolicyResult> removeAutoTerminationPolicyAsync(RemoveAutoTerminationPolicyRequest request,
+            com.amazonaws.handlers.AsyncHandler<RemoveAutoTerminationPolicyRequest, RemoveAutoTerminationPolicyResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

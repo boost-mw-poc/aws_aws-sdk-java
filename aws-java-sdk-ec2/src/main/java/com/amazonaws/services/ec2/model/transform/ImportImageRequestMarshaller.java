@@ -198,6 +198,10 @@ public class ImportImageRequestMarshaller implements Marshaller<Request<ImportIm
             request.addParameter("UsageOperation", StringUtils.fromString(importImageRequest.getUsageOperation()));
         }
 
+        if (importImageRequest.getBootMode() != null) {
+            request.addParameter("BootMode", StringUtils.fromString(importImageRequest.getBootMode()));
+        }
+
         return request;
     }
 

@@ -769,8 +769,39 @@ public interface AmazonElasticMapReduceAsync extends AmazonElasticMapReduce {
 
     /**
      * <p>
-     * Returns the Amazon EMR block public access configuration for your account in the current Region. For more
-     * information see <a
+     * Returns the auto-termination policy for an Amazon EMR cluster.
+     * </p>
+     * 
+     * @param getAutoTerminationPolicyRequest
+     * @return A Java Future containing the result of the GetAutoTerminationPolicy operation returned by the service.
+     * @sample AmazonElasticMapReduceAsync.GetAutoTerminationPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/GetAutoTerminationPolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetAutoTerminationPolicyResult> getAutoTerminationPolicyAsync(GetAutoTerminationPolicyRequest getAutoTerminationPolicyRequest);
+
+    /**
+     * <p>
+     * Returns the auto-termination policy for an Amazon EMR cluster.
+     * </p>
+     * 
+     * @param getAutoTerminationPolicyRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetAutoTerminationPolicy operation returned by the service.
+     * @sample AmazonElasticMapReduceAsyncHandler.GetAutoTerminationPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/GetAutoTerminationPolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetAutoTerminationPolicyResult> getAutoTerminationPolicyAsync(GetAutoTerminationPolicyRequest getAutoTerminationPolicyRequest,
+            com.amazonaws.handlers.AsyncHandler<GetAutoTerminationPolicyRequest, GetAutoTerminationPolicyResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns the Amazon EMR block public access configuration for your Amazon Web Services account in the current
+     * Region. For more information see <a
      * href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/configure-block-public-access.html">Configure Block
      * Public Access for Amazon EMR</a> in the <i>Amazon EMR Management Guide</i>.
      * </p>
@@ -788,8 +819,8 @@ public interface AmazonElasticMapReduceAsync extends AmazonElasticMapReduce {
 
     /**
      * <p>
-     * Returns the Amazon EMR block public access configuration for your account in the current Region. For more
-     * information see <a
+     * Returns the Amazon EMR block public access configuration for your Amazon Web Services account in the current
+     * Region. For more information see <a
      * href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/configure-block-public-access.html">Configure Block
      * Public Access for Amazon EMR</a> in the <i>Amazon EMR Management Guide</i>.
      * </p>
@@ -907,10 +938,10 @@ public interface AmazonElasticMapReduceAsync extends AmazonElasticMapReduce {
 
     /**
      * <p>
-     * Provides the status of all clusters visible to this account. Allows you to filter the list of clusters based on
-     * certain criteria; for example, filtering by cluster creation date and time or by status. This call returns a
-     * maximum of 50 clusters in unsorted order per call, but returns a marker to track the paging of the cluster list
-     * across multiple ListClusters calls.
+     * Provides the status of all clusters visible to this Amazon Web Services account. Allows you to filter the list of
+     * clusters based on certain criteria; for example, filtering by cluster creation date and time or by status. This
+     * call returns a maximum of 50 clusters in unsorted order per call, but returns a marker to track the paging of the
+     * cluster list across multiple ListClusters calls.
      * </p>
      * 
      * @param listClustersRequest
@@ -924,10 +955,10 @@ public interface AmazonElasticMapReduceAsync extends AmazonElasticMapReduce {
 
     /**
      * <p>
-     * Provides the status of all clusters visible to this account. Allows you to filter the list of clusters based on
-     * certain criteria; for example, filtering by cluster creation date and time or by status. This call returns a
-     * maximum of 50 clusters in unsorted order per call, but returns a marker to track the paging of the cluster list
-     * across multiple ListClusters calls.
+     * Provides the status of all clusters visible to this Amazon Web Services account. Allows you to filter the list of
+     * clusters based on certain criteria; for example, filtering by cluster creation date and time or by status. This
+     * call returns a maximum of 50 clusters in unsorted order per call, but returns a marker to track the paging of the
+     * cluster list across multiple ListClusters calls.
      * </p>
      * 
      * @param listClustersRequest
@@ -1250,8 +1281,8 @@ public interface AmazonElasticMapReduceAsync extends AmazonElasticMapReduce {
 
     /**
      * <p>
-     * Returns a list of all Amazon EMR Studios associated with the account. The list includes details such as ID,
-     * Studio Access URL, and creation time for each Studio.
+     * Returns a list of all Amazon EMR Studios associated with the Amazon Web Services account. The list includes
+     * details such as ID, Studio Access URL, and creation time for each Studio.
      * </p>
      * 
      * @param listStudiosRequest
@@ -1264,8 +1295,8 @@ public interface AmazonElasticMapReduceAsync extends AmazonElasticMapReduce {
 
     /**
      * <p>
-     * Returns a list of all Amazon EMR Studios associated with the account. The list includes details such as ID,
-     * Studio Access URL, and creation time for each Studio.
+     * Returns a list of all Amazon EMR Studios associated with the Amazon Web Services account. The list includes
+     * details such as ID, Studio Access URL, and creation time for each Studio.
      * </p>
      * 
      * @param listStudiosRequest
@@ -1446,8 +1477,47 @@ public interface AmazonElasticMapReduceAsync extends AmazonElasticMapReduce {
 
     /**
      * <p>
-     * Creates or updates an Amazon EMR block public access configuration for your account in the current Region. For
-     * more information see <a
+     * Creates or updates an auto-termination policy for an Amazon EMR cluster. An auto-termination policy defines the
+     * amount of idle time in seconds after which a cluster automatically terminates. For alternative cluster
+     * termination options, see <a
+     * href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-termination.html">Control cluster
+     * termination</a>.
+     * </p>
+     * 
+     * @param putAutoTerminationPolicyRequest
+     * @return A Java Future containing the result of the PutAutoTerminationPolicy operation returned by the service.
+     * @sample AmazonElasticMapReduceAsync.PutAutoTerminationPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/PutAutoTerminationPolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<PutAutoTerminationPolicyResult> putAutoTerminationPolicyAsync(PutAutoTerminationPolicyRequest putAutoTerminationPolicyRequest);
+
+    /**
+     * <p>
+     * Creates or updates an auto-termination policy for an Amazon EMR cluster. An auto-termination policy defines the
+     * amount of idle time in seconds after which a cluster automatically terminates. For alternative cluster
+     * termination options, see <a
+     * href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-termination.html">Control cluster
+     * termination</a>.
+     * </p>
+     * 
+     * @param putAutoTerminationPolicyRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the PutAutoTerminationPolicy operation returned by the service.
+     * @sample AmazonElasticMapReduceAsyncHandler.PutAutoTerminationPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/PutAutoTerminationPolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<PutAutoTerminationPolicyResult> putAutoTerminationPolicyAsync(PutAutoTerminationPolicyRequest putAutoTerminationPolicyRequest,
+            com.amazonaws.handlers.AsyncHandler<PutAutoTerminationPolicyRequest, PutAutoTerminationPolicyResult> asyncHandler);
+
+    /**
+     * <p>
+     * Creates or updates an Amazon EMR block public access configuration for your Amazon Web Services account in the
+     * current Region. For more information see <a
      * href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/configure-block-public-access.html">Configure Block
      * Public Access for Amazon EMR</a> in the <i>Amazon EMR Management Guide</i>.
      * </p>
@@ -1465,8 +1535,8 @@ public interface AmazonElasticMapReduceAsync extends AmazonElasticMapReduce {
 
     /**
      * <p>
-     * Creates or updates an Amazon EMR block public access configuration for your account in the current Region. For
-     * more information see <a
+     * Creates or updates an Amazon EMR block public access configuration for your Amazon Web Services account in the
+     * current Region. For more information see <a
      * href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/configure-block-public-access.html">Configure Block
      * Public Access for Amazon EMR</a> in the <i>Amazon EMR Management Guide</i>.
      * </p>
@@ -1552,6 +1622,39 @@ public interface AmazonElasticMapReduceAsync extends AmazonElasticMapReduce {
      */
     java.util.concurrent.Future<RemoveAutoScalingPolicyResult> removeAutoScalingPolicyAsync(RemoveAutoScalingPolicyRequest removeAutoScalingPolicyRequest,
             com.amazonaws.handlers.AsyncHandler<RemoveAutoScalingPolicyRequest, RemoveAutoScalingPolicyResult> asyncHandler);
+
+    /**
+     * <p>
+     * Removes an auto-termination policy from an Amazon EMR cluster.
+     * </p>
+     * 
+     * @param removeAutoTerminationPolicyRequest
+     * @return A Java Future containing the result of the RemoveAutoTerminationPolicy operation returned by the service.
+     * @sample AmazonElasticMapReduceAsync.RemoveAutoTerminationPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/RemoveAutoTerminationPolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<RemoveAutoTerminationPolicyResult> removeAutoTerminationPolicyAsync(
+            RemoveAutoTerminationPolicyRequest removeAutoTerminationPolicyRequest);
+
+    /**
+     * <p>
+     * Removes an auto-termination policy from an Amazon EMR cluster.
+     * </p>
+     * 
+     * @param removeAutoTerminationPolicyRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the RemoveAutoTerminationPolicy operation returned by the service.
+     * @sample AmazonElasticMapReduceAsyncHandler.RemoveAutoTerminationPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/RemoveAutoTerminationPolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<RemoveAutoTerminationPolicyResult> removeAutoTerminationPolicyAsync(
+            RemoveAutoTerminationPolicyRequest removeAutoTerminationPolicyRequest,
+            com.amazonaws.handlers.AsyncHandler<RemoveAutoTerminationPolicyRequest, RemoveAutoTerminationPolicyResult> asyncHandler);
 
     /**
      * <p>
@@ -1794,9 +1897,9 @@ public interface AmazonElasticMapReduceAsync extends AmazonElasticMapReduce {
     /**
      * <p>
      * Sets the <a>Cluster$VisibleToAllUsers</a> value for an EMR cluster. When <code>true</code>, IAM principals in the
-     * account can perform EMR cluster actions that their IAM policies allow. When <code>false</code>, only the IAM
-     * principal that created the cluster and the account root user can perform EMR actions on the cluster, regardless
-     * of IAM permissions policies attached to other IAM principals.
+     * Amazon Web Services account can perform EMR cluster actions that their IAM policies allow. When
+     * <code>false</code>, only the IAM principal that created the cluster and the Amazon Web Services account root user
+     * can perform EMR actions on the cluster, regardless of IAM permissions policies attached to other IAM principals.
      * </p>
      * <p>
      * This action works on running clusters. When you create a cluster, use the
@@ -1820,9 +1923,9 @@ public interface AmazonElasticMapReduceAsync extends AmazonElasticMapReduce {
     /**
      * <p>
      * Sets the <a>Cluster$VisibleToAllUsers</a> value for an EMR cluster. When <code>true</code>, IAM principals in the
-     * account can perform EMR cluster actions that their IAM policies allow. When <code>false</code>, only the IAM
-     * principal that created the cluster and the account root user can perform EMR actions on the cluster, regardless
-     * of IAM permissions policies attached to other IAM principals.
+     * Amazon Web Services account can perform EMR cluster actions that their IAM policies allow. When
+     * <code>false</code>, only the IAM principal that created the cluster and the Amazon Web Services account root user
+     * can perform EMR actions on the cluster, regardless of IAM permissions policies attached to other IAM principals.
      * </p>
      * <p>
      * This action works on running clusters. When you create a cluster, use the

@@ -1439,8 +1439,65 @@ public class AmazonElasticMapReduceClient extends AmazonWebServiceClient impleme
 
     /**
      * <p>
-     * Returns the Amazon EMR block public access configuration for your account in the current Region. For more
-     * information see <a
+     * Returns the auto-termination policy for an Amazon EMR cluster.
+     * </p>
+     * 
+     * @param getAutoTerminationPolicyRequest
+     * @return Result of the GetAutoTerminationPolicy operation returned by the service.
+     * @sample AmazonElasticMapReduce.GetAutoTerminationPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/GetAutoTerminationPolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetAutoTerminationPolicyResult getAutoTerminationPolicy(GetAutoTerminationPolicyRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetAutoTerminationPolicy(request);
+    }
+
+    @SdkInternalApi
+    final GetAutoTerminationPolicyResult executeGetAutoTerminationPolicy(GetAutoTerminationPolicyRequest getAutoTerminationPolicyRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getAutoTerminationPolicyRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetAutoTerminationPolicyRequest> request = null;
+        Response<GetAutoTerminationPolicyResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetAutoTerminationPolicyRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(getAutoTerminationPolicyRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EMR");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetAutoTerminationPolicy");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetAutoTerminationPolicyResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new GetAutoTerminationPolicyResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Returns the Amazon EMR block public access configuration for your Amazon Web Services account in the current
+     * Region. For more information see <a
      * href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/configure-block-public-access.html">Configure Block
      * Public Access for Amazon EMR</a> in the <i>Amazon EMR Management Guide</i>.
      * </p>
@@ -1683,10 +1740,10 @@ public class AmazonElasticMapReduceClient extends AmazonWebServiceClient impleme
 
     /**
      * <p>
-     * Provides the status of all clusters visible to this account. Allows you to filter the list of clusters based on
-     * certain criteria; for example, filtering by cluster creation date and time or by status. This call returns a
-     * maximum of 50 clusters in unsorted order per call, but returns a marker to track the paging of the cluster list
-     * across multiple ListClusters calls.
+     * Provides the status of all clusters visible to this Amazon Web Services account. Allows you to filter the list of
+     * clusters based on certain criteria; for example, filtering by cluster creation date and time or by status. This
+     * call returns a maximum of 50 clusters in unsorted order per call, but returns a marker to track the paging of the
+     * cluster list across multiple ListClusters calls.
      * </p>
      * 
      * @param listClustersRequest
@@ -2247,8 +2304,8 @@ public class AmazonElasticMapReduceClient extends AmazonWebServiceClient impleme
 
     /**
      * <p>
-     * Returns a list of all Amazon EMR Studios associated with the account. The list includes details such as ID,
-     * Studio Access URL, and creation time for each Studio.
+     * Returns a list of all Amazon EMR Studios associated with the Amazon Web Services account. The list includes
+     * details such as ID, Studio Access URL, and creation time for each Studio.
      * </p>
      * 
      * @param listStudiosRequest
@@ -2554,8 +2611,69 @@ public class AmazonElasticMapReduceClient extends AmazonWebServiceClient impleme
 
     /**
      * <p>
-     * Creates or updates an Amazon EMR block public access configuration for your account in the current Region. For
-     * more information see <a
+     * Creates or updates an auto-termination policy for an Amazon EMR cluster. An auto-termination policy defines the
+     * amount of idle time in seconds after which a cluster automatically terminates. For alternative cluster
+     * termination options, see <a
+     * href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-termination.html">Control cluster
+     * termination</a>.
+     * </p>
+     * 
+     * @param putAutoTerminationPolicyRequest
+     * @return Result of the PutAutoTerminationPolicy operation returned by the service.
+     * @sample AmazonElasticMapReduce.PutAutoTerminationPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/PutAutoTerminationPolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public PutAutoTerminationPolicyResult putAutoTerminationPolicy(PutAutoTerminationPolicyRequest request) {
+        request = beforeClientExecution(request);
+        return executePutAutoTerminationPolicy(request);
+    }
+
+    @SdkInternalApi
+    final PutAutoTerminationPolicyResult executePutAutoTerminationPolicy(PutAutoTerminationPolicyRequest putAutoTerminationPolicyRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(putAutoTerminationPolicyRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<PutAutoTerminationPolicyRequest> request = null;
+        Response<PutAutoTerminationPolicyResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new PutAutoTerminationPolicyRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(putAutoTerminationPolicyRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EMR");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "PutAutoTerminationPolicy");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<PutAutoTerminationPolicyResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new PutAutoTerminationPolicyResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Creates or updates an Amazon EMR block public access configuration for your Amazon Web Services account in the
+     * current Region. For more information see <a
      * href="https://docs.aws.amazon.com/emr/latest/ManagementGuide/configure-block-public-access.html">Configure Block
      * Public Access for Amazon EMR</a> in the <i>Amazon EMR Management Guide</i>.
      * </p>
@@ -2724,6 +2842,63 @@ public class AmazonElasticMapReduceClient extends AmazonWebServiceClient impleme
             HttpResponseHandler<AmazonWebServiceResponse<RemoveAutoScalingPolicyResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new RemoveAutoScalingPolicyResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Removes an auto-termination policy from an Amazon EMR cluster.
+     * </p>
+     * 
+     * @param removeAutoTerminationPolicyRequest
+     * @return Result of the RemoveAutoTerminationPolicy operation returned by the service.
+     * @sample AmazonElasticMapReduce.RemoveAutoTerminationPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/elasticmapreduce-2009-03-31/RemoveAutoTerminationPolicy"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public RemoveAutoTerminationPolicyResult removeAutoTerminationPolicy(RemoveAutoTerminationPolicyRequest request) {
+        request = beforeClientExecution(request);
+        return executeRemoveAutoTerminationPolicy(request);
+    }
+
+    @SdkInternalApi
+    final RemoveAutoTerminationPolicyResult executeRemoveAutoTerminationPolicy(RemoveAutoTerminationPolicyRequest removeAutoTerminationPolicyRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(removeAutoTerminationPolicyRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<RemoveAutoTerminationPolicyRequest> request = null;
+        Response<RemoveAutoTerminationPolicyResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new RemoveAutoTerminationPolicyRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(removeAutoTerminationPolicyRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EMR");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "RemoveAutoTerminationPolicy");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<RemoveAutoTerminationPolicyResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new RemoveAutoTerminationPolicyResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -3025,9 +3200,9 @@ public class AmazonElasticMapReduceClient extends AmazonWebServiceClient impleme
     /**
      * <p>
      * Sets the <a>Cluster$VisibleToAllUsers</a> value for an EMR cluster. When <code>true</code>, IAM principals in the
-     * account can perform EMR cluster actions that their IAM policies allow. When <code>false</code>, only the IAM
-     * principal that created the cluster and the account root user can perform EMR actions on the cluster, regardless
-     * of IAM permissions policies attached to other IAM principals.
+     * Amazon Web Services account can perform EMR cluster actions that their IAM policies allow. When
+     * <code>false</code>, only the IAM principal that created the cluster and the Amazon Web Services account root user
+     * can perform EMR actions on the cluster, regardless of IAM permissions policies attached to other IAM principals.
      * </p>
      * <p>
      * This action works on running clusters. When you create a cluster, use the
