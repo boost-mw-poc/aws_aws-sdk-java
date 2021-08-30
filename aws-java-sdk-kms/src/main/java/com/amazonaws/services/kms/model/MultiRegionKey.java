@@ -36,7 +36,7 @@ public class MultiRegionKey implements Serializable, Cloneable, StructuredPojo {
     private String arn;
     /**
      * <p>
-     * Displays the AWS Region of a primary or replica key in a multi-Region key.
+     * Displays the Amazon Web Services Region of a primary or replica key in a multi-Region key.
      * </p>
      */
     private String region;
@@ -83,11 +83,11 @@ public class MultiRegionKey implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Displays the AWS Region of a primary or replica key in a multi-Region key.
+     * Displays the Amazon Web Services Region of a primary or replica key in a multi-Region key.
      * </p>
      * 
      * @param region
-     *        Displays the AWS Region of a primary or replica key in a multi-Region key.
+     *        Displays the Amazon Web Services Region of a primary or replica key in a multi-Region key.
      */
 
     public void setRegion(String region) {
@@ -96,10 +96,10 @@ public class MultiRegionKey implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Displays the AWS Region of a primary or replica key in a multi-Region key.
+     * Displays the Amazon Web Services Region of a primary or replica key in a multi-Region key.
      * </p>
      * 
-     * @return Displays the AWS Region of a primary or replica key in a multi-Region key.
+     * @return Displays the Amazon Web Services Region of a primary or replica key in a multi-Region key.
      */
 
     public String getRegion() {
@@ -108,11 +108,11 @@ public class MultiRegionKey implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Displays the AWS Region of a primary or replica key in a multi-Region key.
+     * Displays the Amazon Web Services Region of a primary or replica key in a multi-Region key.
      * </p>
      * 
      * @param region
-     *        Displays the AWS Region of a primary or replica key in a multi-Region key.
+     *        Displays the Amazon Web Services Region of a primary or replica key in a multi-Region key.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

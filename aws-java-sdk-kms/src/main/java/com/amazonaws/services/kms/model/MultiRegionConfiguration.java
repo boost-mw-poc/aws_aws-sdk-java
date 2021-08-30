@@ -19,11 +19,11 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Describes the configuration of this multi-Region CMK. This field appears only when the CMK is a primary or replica of
- * a multi-Region CMK.
+ * Describes the configuration of this multi-Region key. This field appears only when the KMS key is a primary or
+ * replica of a multi-Region key.
  * </p>
  * <p>
- * For more information about any listed CMK, use the <a>DescribeKey</a> operation.
+ * For more information about any listed KMS key, use the <a>DescribeKey</a> operation.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kms-2014-11-01/MultiRegionConfiguration" target="_top">AWS API
@@ -34,19 +34,20 @@ public class MultiRegionConfiguration implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * Indicates whether the CMK is a <code>PRIMARY</code> or <code>REPLICA</code> key.
+     * Indicates whether the KMS key is a <code>PRIMARY</code> or <code>REPLICA</code> key.
      * </p>
      */
     private String multiRegionKeyType;
     /**
      * <p>
-     * Displays the key ARN and Region of the primary key. This field includes the current CMK if it is the primary key.
+     * Displays the key ARN and Region of the primary key. This field includes the current KMS key if it is the primary
+     * key.
      * </p>
      */
     private MultiRegionKey primaryKey;
     /**
      * <p>
-     * displays the key ARNs and Regions of all replica keys. This field includes the current CMK if it is a replica
+     * displays the key ARNs and Regions of all replica keys. This field includes the current KMS key if it is a replica
      * key.
      * </p>
      */
@@ -54,11 +55,11 @@ public class MultiRegionConfiguration implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * Indicates whether the CMK is a <code>PRIMARY</code> or <code>REPLICA</code> key.
+     * Indicates whether the KMS key is a <code>PRIMARY</code> or <code>REPLICA</code> key.
      * </p>
      * 
      * @param multiRegionKeyType
-     *        Indicates whether the CMK is a <code>PRIMARY</code> or <code>REPLICA</code> key.
+     *        Indicates whether the KMS key is a <code>PRIMARY</code> or <code>REPLICA</code> key.
      * @see MultiRegionKeyType
      */
 
@@ -68,10 +69,10 @@ public class MultiRegionConfiguration implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * Indicates whether the CMK is a <code>PRIMARY</code> or <code>REPLICA</code> key.
+     * Indicates whether the KMS key is a <code>PRIMARY</code> or <code>REPLICA</code> key.
      * </p>
      * 
-     * @return Indicates whether the CMK is a <code>PRIMARY</code> or <code>REPLICA</code> key.
+     * @return Indicates whether the KMS key is a <code>PRIMARY</code> or <code>REPLICA</code> key.
      * @see MultiRegionKeyType
      */
 
@@ -81,11 +82,11 @@ public class MultiRegionConfiguration implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * Indicates whether the CMK is a <code>PRIMARY</code> or <code>REPLICA</code> key.
+     * Indicates whether the KMS key is a <code>PRIMARY</code> or <code>REPLICA</code> key.
      * </p>
      * 
      * @param multiRegionKeyType
-     *        Indicates whether the CMK is a <code>PRIMARY</code> or <code>REPLICA</code> key.
+     *        Indicates whether the KMS key is a <code>PRIMARY</code> or <code>REPLICA</code> key.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see MultiRegionKeyType
      */
@@ -97,11 +98,11 @@ public class MultiRegionConfiguration implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * Indicates whether the CMK is a <code>PRIMARY</code> or <code>REPLICA</code> key.
+     * Indicates whether the KMS key is a <code>PRIMARY</code> or <code>REPLICA</code> key.
      * </p>
      * 
      * @param multiRegionKeyType
-     *        Indicates whether the CMK is a <code>PRIMARY</code> or <code>REPLICA</code> key.
+     *        Indicates whether the KMS key is a <code>PRIMARY</code> or <code>REPLICA</code> key.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see MultiRegionKeyType
      */
@@ -113,11 +114,12 @@ public class MultiRegionConfiguration implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * Displays the key ARN and Region of the primary key. This field includes the current CMK if it is the primary key.
+     * Displays the key ARN and Region of the primary key. This field includes the current KMS key if it is the primary
+     * key.
      * </p>
      * 
      * @param primaryKey
-     *        Displays the key ARN and Region of the primary key. This field includes the current CMK if it is the
+     *        Displays the key ARN and Region of the primary key. This field includes the current KMS key if it is the
      *        primary key.
      */
 
@@ -127,10 +129,11 @@ public class MultiRegionConfiguration implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * Displays the key ARN and Region of the primary key. This field includes the current CMK if it is the primary key.
+     * Displays the key ARN and Region of the primary key. This field includes the current KMS key if it is the primary
+     * key.
      * </p>
      * 
-     * @return Displays the key ARN and Region of the primary key. This field includes the current CMK if it is the
+     * @return Displays the key ARN and Region of the primary key. This field includes the current KMS key if it is the
      *         primary key.
      */
 
@@ -140,11 +143,12 @@ public class MultiRegionConfiguration implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * Displays the key ARN and Region of the primary key. This field includes the current CMK if it is the primary key.
+     * Displays the key ARN and Region of the primary key. This field includes the current KMS key if it is the primary
+     * key.
      * </p>
      * 
      * @param primaryKey
-     *        Displays the key ARN and Region of the primary key. This field includes the current CMK if it is the
+     *        Displays the key ARN and Region of the primary key. This field includes the current KMS key if it is the
      *        primary key.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -156,11 +160,11 @@ public class MultiRegionConfiguration implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * displays the key ARNs and Regions of all replica keys. This field includes the current CMK if it is a replica
+     * displays the key ARNs and Regions of all replica keys. This field includes the current KMS key if it is a replica
      * key.
      * </p>
      * 
-     * @return displays the key ARNs and Regions of all replica keys. This field includes the current CMK if it is a
+     * @return displays the key ARNs and Regions of all replica keys. This field includes the current KMS key if it is a
      *         replica key.
      */
 
@@ -173,12 +177,12 @@ public class MultiRegionConfiguration implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * displays the key ARNs and Regions of all replica keys. This field includes the current CMK if it is a replica
+     * displays the key ARNs and Regions of all replica keys. This field includes the current KMS key if it is a replica
      * key.
      * </p>
      * 
      * @param replicaKeys
-     *        displays the key ARNs and Regions of all replica keys. This field includes the current CMK if it is a
+     *        displays the key ARNs and Regions of all replica keys. This field includes the current KMS key if it is a
      *        replica key.
      */
 
@@ -193,7 +197,7 @@ public class MultiRegionConfiguration implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * displays the key ARNs and Regions of all replica keys. This field includes the current CMK if it is a replica
+     * displays the key ARNs and Regions of all replica keys. This field includes the current KMS key if it is a replica
      * key.
      * </p>
      * <p>
@@ -203,7 +207,7 @@ public class MultiRegionConfiguration implements Serializable, Cloneable, Struct
      * </p>
      * 
      * @param replicaKeys
-     *        displays the key ARNs and Regions of all replica keys. This field includes the current CMK if it is a
+     *        displays the key ARNs and Regions of all replica keys. This field includes the current KMS key if it is a
      *        replica key.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -220,12 +224,12 @@ public class MultiRegionConfiguration implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * displays the key ARNs and Regions of all replica keys. This field includes the current CMK if it is a replica
+     * displays the key ARNs and Regions of all replica keys. This field includes the current KMS key if it is a replica
      * key.
      * </p>
      * 
      * @param replicaKeys
-     *        displays the key ARNs and Regions of all replica keys. This field includes the current CMK if it is a
+     *        displays the key ARNs and Regions of all replica keys. This field includes the current KMS key if it is a
      *        replica key.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

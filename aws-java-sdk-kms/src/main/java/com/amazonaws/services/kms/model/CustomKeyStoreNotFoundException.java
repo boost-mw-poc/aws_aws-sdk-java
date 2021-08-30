@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The request was rejected because AWS KMS cannot find a custom key store with the specified key store name or ID.
+ * The request was rejected because KMS cannot find a custom key store with the specified key store name or ID.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

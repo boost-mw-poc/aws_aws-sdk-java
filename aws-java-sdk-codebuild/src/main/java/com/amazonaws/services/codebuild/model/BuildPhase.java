@@ -32,63 +32,74 @@ public class BuildPhase implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The name of the build phase. Valid values include:
      * </p>
-     * <ul>
-     * <li>
+     * <dl>
+     * <dt>BUILD</dt>
+     * <dd>
      * <p>
-     * <code>BUILD</code>: Core build activities typically occur in this build phase.
+     * Core build activities typically occur in this build phase.
      * </p>
-     * </li>
-     * <li>
+     * </dd>
+     * <dt>COMPLETED</dt>
+     * <dd>
      * <p>
-     * <code>COMPLETED</code>: The build has been completed.
+     * The build has been completed.
      * </p>
-     * </li>
-     * <li>
+     * </dd>
+     * <dt>DOWNLOAD_SOURCE</dt>
+     * <dd>
      * <p>
-     * <code>DOWNLOAD_SOURCE</code>: Source code is being downloaded in this build phase.
+     * Source code is being downloaded in this build phase.
      * </p>
-     * </li>
-     * <li>
+     * </dd>
+     * <dt>FINALIZING</dt>
+     * <dd>
      * <p>
-     * <code>FINALIZING</code>: The build process is completing in this build phase.
+     * The build process is completing in this build phase.
      * </p>
-     * </li>
-     * <li>
+     * </dd>
+     * <dt>INSTALL</dt>
+     * <dd>
      * <p>
-     * <code>INSTALL</code>: Installation activities typically occur in this build phase.
+     * Installation activities typically occur in this build phase.
      * </p>
-     * </li>
-     * <li>
+     * </dd>
+     * <dt>POST_BUILD</dt>
+     * <dd>
      * <p>
-     * <code>POST_BUILD</code>: Post-build activities typically occur in this build phase.
+     * Post-build activities typically occur in this build phase.
      * </p>
-     * </li>
-     * <li>
+     * </dd>
+     * <dt>PRE_BUILD</dt>
+     * <dd>
      * <p>
-     * <code>PRE_BUILD</code>: Pre-build activities typically occur in this build phase.
+     * Pre-build activities typically occur in this build phase.
      * </p>
-     * </li>
-     * <li>
+     * </dd>
+     * <dt>PROVISIONING</dt>
+     * <dd>
      * <p>
-     * <code>PROVISIONING</code>: The build environment is being set up.
+     * The build environment is being set up.
      * </p>
-     * </li>
-     * <li>
+     * </dd>
+     * <dt>QUEUED</dt>
+     * <dd>
      * <p>
-     * <code>QUEUED</code>: The build has been submitted and is queued behind other submitted builds.
+     * The build has been submitted and is queued behind other submitted builds.
      * </p>
-     * </li>
-     * <li>
+     * </dd>
+     * <dt>SUBMITTED</dt>
+     * <dd>
      * <p>
-     * <code>SUBMITTED</code>: The build has been submitted.
+     * The build has been submitted.
      * </p>
-     * </li>
-     * <li>
+     * </dd>
+     * <dt>UPLOAD_ARTIFACTS</dt>
+     * <dd>
      * <p>
-     * <code>UPLOAD_ARTIFACTS</code>: Build output artifacts are being uploaded to the output location.
+     * Build output artifacts are being uploaded to the output location.
      * </p>
-     * </li>
-     * </ul>
+     * </dd>
+     * </dl>
      */
     private String phaseType;
     /**
@@ -112,12 +123,6 @@ public class BuildPhase implements Serializable, Cloneable, StructuredPojo {
      * <dd>
      * <p>
      * The build phase is still in progress.
-     * </p>
-     * </dd>
-     * <dt>QUEUED</dt>
-     * <dd>
-     * <p>
-     * The build has been submitted and is queued behind other submitted builds.
      * </p>
      * </dd>
      * <dt>STOPPED</dt>
@@ -170,122 +175,144 @@ public class BuildPhase implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The name of the build phase. Valid values include:
      * </p>
-     * <ul>
-     * <li>
+     * <dl>
+     * <dt>BUILD</dt>
+     * <dd>
      * <p>
-     * <code>BUILD</code>: Core build activities typically occur in this build phase.
+     * Core build activities typically occur in this build phase.
      * </p>
-     * </li>
-     * <li>
+     * </dd>
+     * <dt>COMPLETED</dt>
+     * <dd>
      * <p>
-     * <code>COMPLETED</code>: The build has been completed.
+     * The build has been completed.
      * </p>
-     * </li>
-     * <li>
+     * </dd>
+     * <dt>DOWNLOAD_SOURCE</dt>
+     * <dd>
      * <p>
-     * <code>DOWNLOAD_SOURCE</code>: Source code is being downloaded in this build phase.
+     * Source code is being downloaded in this build phase.
      * </p>
-     * </li>
-     * <li>
+     * </dd>
+     * <dt>FINALIZING</dt>
+     * <dd>
      * <p>
-     * <code>FINALIZING</code>: The build process is completing in this build phase.
+     * The build process is completing in this build phase.
      * </p>
-     * </li>
-     * <li>
+     * </dd>
+     * <dt>INSTALL</dt>
+     * <dd>
      * <p>
-     * <code>INSTALL</code>: Installation activities typically occur in this build phase.
+     * Installation activities typically occur in this build phase.
      * </p>
-     * </li>
-     * <li>
+     * </dd>
+     * <dt>POST_BUILD</dt>
+     * <dd>
      * <p>
-     * <code>POST_BUILD</code>: Post-build activities typically occur in this build phase.
+     * Post-build activities typically occur in this build phase.
      * </p>
-     * </li>
-     * <li>
+     * </dd>
+     * <dt>PRE_BUILD</dt>
+     * <dd>
      * <p>
-     * <code>PRE_BUILD</code>: Pre-build activities typically occur in this build phase.
+     * Pre-build activities typically occur in this build phase.
      * </p>
-     * </li>
-     * <li>
+     * </dd>
+     * <dt>PROVISIONING</dt>
+     * <dd>
      * <p>
-     * <code>PROVISIONING</code>: The build environment is being set up.
+     * The build environment is being set up.
      * </p>
-     * </li>
-     * <li>
+     * </dd>
+     * <dt>QUEUED</dt>
+     * <dd>
      * <p>
-     * <code>QUEUED</code>: The build has been submitted and is queued behind other submitted builds.
+     * The build has been submitted and is queued behind other submitted builds.
      * </p>
-     * </li>
-     * <li>
+     * </dd>
+     * <dt>SUBMITTED</dt>
+     * <dd>
      * <p>
-     * <code>SUBMITTED</code>: The build has been submitted.
+     * The build has been submitted.
      * </p>
-     * </li>
-     * <li>
+     * </dd>
+     * <dt>UPLOAD_ARTIFACTS</dt>
+     * <dd>
      * <p>
-     * <code>UPLOAD_ARTIFACTS</code>: Build output artifacts are being uploaded to the output location.
+     * Build output artifacts are being uploaded to the output location.
      * </p>
-     * </li>
-     * </ul>
+     * </dd>
+     * </dl>
      * 
      * @param phaseType
      *        The name of the build phase. Valid values include:</p>
-     *        <ul>
-     *        <li>
+     *        <dl>
+     *        <dt>BUILD</dt>
+     *        <dd>
      *        <p>
-     *        <code>BUILD</code>: Core build activities typically occur in this build phase.
+     *        Core build activities typically occur in this build phase.
      *        </p>
-     *        </li>
-     *        <li>
+     *        </dd>
+     *        <dt>COMPLETED</dt>
+     *        <dd>
      *        <p>
-     *        <code>COMPLETED</code>: The build has been completed.
+     *        The build has been completed.
      *        </p>
-     *        </li>
-     *        <li>
+     *        </dd>
+     *        <dt>DOWNLOAD_SOURCE</dt>
+     *        <dd>
      *        <p>
-     *        <code>DOWNLOAD_SOURCE</code>: Source code is being downloaded in this build phase.
+     *        Source code is being downloaded in this build phase.
      *        </p>
-     *        </li>
-     *        <li>
+     *        </dd>
+     *        <dt>FINALIZING</dt>
+     *        <dd>
      *        <p>
-     *        <code>FINALIZING</code>: The build process is completing in this build phase.
+     *        The build process is completing in this build phase.
      *        </p>
-     *        </li>
-     *        <li>
+     *        </dd>
+     *        <dt>INSTALL</dt>
+     *        <dd>
      *        <p>
-     *        <code>INSTALL</code>: Installation activities typically occur in this build phase.
+     *        Installation activities typically occur in this build phase.
      *        </p>
-     *        </li>
-     *        <li>
+     *        </dd>
+     *        <dt>POST_BUILD</dt>
+     *        <dd>
      *        <p>
-     *        <code>POST_BUILD</code>: Post-build activities typically occur in this build phase.
+     *        Post-build activities typically occur in this build phase.
      *        </p>
-     *        </li>
-     *        <li>
+     *        </dd>
+     *        <dt>PRE_BUILD</dt>
+     *        <dd>
      *        <p>
-     *        <code>PRE_BUILD</code>: Pre-build activities typically occur in this build phase.
+     *        Pre-build activities typically occur in this build phase.
      *        </p>
-     *        </li>
-     *        <li>
+     *        </dd>
+     *        <dt>PROVISIONING</dt>
+     *        <dd>
      *        <p>
-     *        <code>PROVISIONING</code>: The build environment is being set up.
+     *        The build environment is being set up.
      *        </p>
-     *        </li>
-     *        <li>
+     *        </dd>
+     *        <dt>QUEUED</dt>
+     *        <dd>
      *        <p>
-     *        <code>QUEUED</code>: The build has been submitted and is queued behind other submitted builds.
+     *        The build has been submitted and is queued behind other submitted builds.
      *        </p>
-     *        </li>
-     *        <li>
+     *        </dd>
+     *        <dt>SUBMITTED</dt>
+     *        <dd>
      *        <p>
-     *        <code>SUBMITTED</code>: The build has been submitted.
+     *        The build has been submitted.
      *        </p>
-     *        </li>
-     *        <li>
+     *        </dd>
+     *        <dt>UPLOAD_ARTIFACTS</dt>
+     *        <dd>
      *        <p>
-     *        <code>UPLOAD_ARTIFACTS</code>: Build output artifacts are being uploaded to the output location.
+     *        Build output artifacts are being uploaded to the output location.
      *        </p>
-     *        </li>
+     *        </dd>
      * @see BuildPhaseType
      */
 
@@ -297,121 +324,143 @@ public class BuildPhase implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The name of the build phase. Valid values include:
      * </p>
-     * <ul>
-     * <li>
+     * <dl>
+     * <dt>BUILD</dt>
+     * <dd>
      * <p>
-     * <code>BUILD</code>: Core build activities typically occur in this build phase.
+     * Core build activities typically occur in this build phase.
      * </p>
-     * </li>
-     * <li>
+     * </dd>
+     * <dt>COMPLETED</dt>
+     * <dd>
      * <p>
-     * <code>COMPLETED</code>: The build has been completed.
+     * The build has been completed.
      * </p>
-     * </li>
-     * <li>
+     * </dd>
+     * <dt>DOWNLOAD_SOURCE</dt>
+     * <dd>
      * <p>
-     * <code>DOWNLOAD_SOURCE</code>: Source code is being downloaded in this build phase.
+     * Source code is being downloaded in this build phase.
      * </p>
-     * </li>
-     * <li>
+     * </dd>
+     * <dt>FINALIZING</dt>
+     * <dd>
      * <p>
-     * <code>FINALIZING</code>: The build process is completing in this build phase.
+     * The build process is completing in this build phase.
      * </p>
-     * </li>
-     * <li>
+     * </dd>
+     * <dt>INSTALL</dt>
+     * <dd>
      * <p>
-     * <code>INSTALL</code>: Installation activities typically occur in this build phase.
+     * Installation activities typically occur in this build phase.
      * </p>
-     * </li>
-     * <li>
+     * </dd>
+     * <dt>POST_BUILD</dt>
+     * <dd>
      * <p>
-     * <code>POST_BUILD</code>: Post-build activities typically occur in this build phase.
+     * Post-build activities typically occur in this build phase.
      * </p>
-     * </li>
-     * <li>
+     * </dd>
+     * <dt>PRE_BUILD</dt>
+     * <dd>
      * <p>
-     * <code>PRE_BUILD</code>: Pre-build activities typically occur in this build phase.
+     * Pre-build activities typically occur in this build phase.
      * </p>
-     * </li>
-     * <li>
+     * </dd>
+     * <dt>PROVISIONING</dt>
+     * <dd>
      * <p>
-     * <code>PROVISIONING</code>: The build environment is being set up.
+     * The build environment is being set up.
      * </p>
-     * </li>
-     * <li>
+     * </dd>
+     * <dt>QUEUED</dt>
+     * <dd>
      * <p>
-     * <code>QUEUED</code>: The build has been submitted and is queued behind other submitted builds.
+     * The build has been submitted and is queued behind other submitted builds.
      * </p>
-     * </li>
-     * <li>
+     * </dd>
+     * <dt>SUBMITTED</dt>
+     * <dd>
      * <p>
-     * <code>SUBMITTED</code>: The build has been submitted.
+     * The build has been submitted.
      * </p>
-     * </li>
-     * <li>
+     * </dd>
+     * <dt>UPLOAD_ARTIFACTS</dt>
+     * <dd>
      * <p>
-     * <code>UPLOAD_ARTIFACTS</code>: Build output artifacts are being uploaded to the output location.
+     * Build output artifacts are being uploaded to the output location.
      * </p>
-     * </li>
-     * </ul>
+     * </dd>
+     * </dl>
      * 
      * @return The name of the build phase. Valid values include:</p>
-     *         <ul>
-     *         <li>
+     *         <dl>
+     *         <dt>BUILD</dt>
+     *         <dd>
      *         <p>
-     *         <code>BUILD</code>: Core build activities typically occur in this build phase.
+     *         Core build activities typically occur in this build phase.
      *         </p>
-     *         </li>
-     *         <li>
+     *         </dd>
+     *         <dt>COMPLETED</dt>
+     *         <dd>
      *         <p>
-     *         <code>COMPLETED</code>: The build has been completed.
+     *         The build has been completed.
      *         </p>
-     *         </li>
-     *         <li>
+     *         </dd>
+     *         <dt>DOWNLOAD_SOURCE</dt>
+     *         <dd>
      *         <p>
-     *         <code>DOWNLOAD_SOURCE</code>: Source code is being downloaded in this build phase.
+     *         Source code is being downloaded in this build phase.
      *         </p>
-     *         </li>
-     *         <li>
+     *         </dd>
+     *         <dt>FINALIZING</dt>
+     *         <dd>
      *         <p>
-     *         <code>FINALIZING</code>: The build process is completing in this build phase.
+     *         The build process is completing in this build phase.
      *         </p>
-     *         </li>
-     *         <li>
+     *         </dd>
+     *         <dt>INSTALL</dt>
+     *         <dd>
      *         <p>
-     *         <code>INSTALL</code>: Installation activities typically occur in this build phase.
+     *         Installation activities typically occur in this build phase.
      *         </p>
-     *         </li>
-     *         <li>
+     *         </dd>
+     *         <dt>POST_BUILD</dt>
+     *         <dd>
      *         <p>
-     *         <code>POST_BUILD</code>: Post-build activities typically occur in this build phase.
+     *         Post-build activities typically occur in this build phase.
      *         </p>
-     *         </li>
-     *         <li>
+     *         </dd>
+     *         <dt>PRE_BUILD</dt>
+     *         <dd>
      *         <p>
-     *         <code>PRE_BUILD</code>: Pre-build activities typically occur in this build phase.
+     *         Pre-build activities typically occur in this build phase.
      *         </p>
-     *         </li>
-     *         <li>
+     *         </dd>
+     *         <dt>PROVISIONING</dt>
+     *         <dd>
      *         <p>
-     *         <code>PROVISIONING</code>: The build environment is being set up.
+     *         The build environment is being set up.
      *         </p>
-     *         </li>
-     *         <li>
+     *         </dd>
+     *         <dt>QUEUED</dt>
+     *         <dd>
      *         <p>
-     *         <code>QUEUED</code>: The build has been submitted and is queued behind other submitted builds.
+     *         The build has been submitted and is queued behind other submitted builds.
      *         </p>
-     *         </li>
-     *         <li>
+     *         </dd>
+     *         <dt>SUBMITTED</dt>
+     *         <dd>
      *         <p>
-     *         <code>SUBMITTED</code>: The build has been submitted.
+     *         The build has been submitted.
      *         </p>
-     *         </li>
-     *         <li>
+     *         </dd>
+     *         <dt>UPLOAD_ARTIFACTS</dt>
+     *         <dd>
      *         <p>
-     *         <code>UPLOAD_ARTIFACTS</code>: Build output artifacts are being uploaded to the output location.
+     *         Build output artifacts are being uploaded to the output location.
      *         </p>
-     *         </li>
+     *         </dd>
      * @see BuildPhaseType
      */
 
@@ -423,122 +472,144 @@ public class BuildPhase implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The name of the build phase. Valid values include:
      * </p>
-     * <ul>
-     * <li>
+     * <dl>
+     * <dt>BUILD</dt>
+     * <dd>
      * <p>
-     * <code>BUILD</code>: Core build activities typically occur in this build phase.
+     * Core build activities typically occur in this build phase.
      * </p>
-     * </li>
-     * <li>
+     * </dd>
+     * <dt>COMPLETED</dt>
+     * <dd>
      * <p>
-     * <code>COMPLETED</code>: The build has been completed.
+     * The build has been completed.
      * </p>
-     * </li>
-     * <li>
+     * </dd>
+     * <dt>DOWNLOAD_SOURCE</dt>
+     * <dd>
      * <p>
-     * <code>DOWNLOAD_SOURCE</code>: Source code is being downloaded in this build phase.
+     * Source code is being downloaded in this build phase.
      * </p>
-     * </li>
-     * <li>
+     * </dd>
+     * <dt>FINALIZING</dt>
+     * <dd>
      * <p>
-     * <code>FINALIZING</code>: The build process is completing in this build phase.
+     * The build process is completing in this build phase.
      * </p>
-     * </li>
-     * <li>
+     * </dd>
+     * <dt>INSTALL</dt>
+     * <dd>
      * <p>
-     * <code>INSTALL</code>: Installation activities typically occur in this build phase.
+     * Installation activities typically occur in this build phase.
      * </p>
-     * </li>
-     * <li>
+     * </dd>
+     * <dt>POST_BUILD</dt>
+     * <dd>
      * <p>
-     * <code>POST_BUILD</code>: Post-build activities typically occur in this build phase.
+     * Post-build activities typically occur in this build phase.
      * </p>
-     * </li>
-     * <li>
+     * </dd>
+     * <dt>PRE_BUILD</dt>
+     * <dd>
      * <p>
-     * <code>PRE_BUILD</code>: Pre-build activities typically occur in this build phase.
+     * Pre-build activities typically occur in this build phase.
      * </p>
-     * </li>
-     * <li>
+     * </dd>
+     * <dt>PROVISIONING</dt>
+     * <dd>
      * <p>
-     * <code>PROVISIONING</code>: The build environment is being set up.
+     * The build environment is being set up.
      * </p>
-     * </li>
-     * <li>
+     * </dd>
+     * <dt>QUEUED</dt>
+     * <dd>
      * <p>
-     * <code>QUEUED</code>: The build has been submitted and is queued behind other submitted builds.
+     * The build has been submitted and is queued behind other submitted builds.
      * </p>
-     * </li>
-     * <li>
+     * </dd>
+     * <dt>SUBMITTED</dt>
+     * <dd>
      * <p>
-     * <code>SUBMITTED</code>: The build has been submitted.
+     * The build has been submitted.
      * </p>
-     * </li>
-     * <li>
+     * </dd>
+     * <dt>UPLOAD_ARTIFACTS</dt>
+     * <dd>
      * <p>
-     * <code>UPLOAD_ARTIFACTS</code>: Build output artifacts are being uploaded to the output location.
+     * Build output artifacts are being uploaded to the output location.
      * </p>
-     * </li>
-     * </ul>
+     * </dd>
+     * </dl>
      * 
      * @param phaseType
      *        The name of the build phase. Valid values include:</p>
-     *        <ul>
-     *        <li>
+     *        <dl>
+     *        <dt>BUILD</dt>
+     *        <dd>
      *        <p>
-     *        <code>BUILD</code>: Core build activities typically occur in this build phase.
+     *        Core build activities typically occur in this build phase.
      *        </p>
-     *        </li>
-     *        <li>
+     *        </dd>
+     *        <dt>COMPLETED</dt>
+     *        <dd>
      *        <p>
-     *        <code>COMPLETED</code>: The build has been completed.
+     *        The build has been completed.
      *        </p>
-     *        </li>
-     *        <li>
+     *        </dd>
+     *        <dt>DOWNLOAD_SOURCE</dt>
+     *        <dd>
      *        <p>
-     *        <code>DOWNLOAD_SOURCE</code>: Source code is being downloaded in this build phase.
+     *        Source code is being downloaded in this build phase.
      *        </p>
-     *        </li>
-     *        <li>
+     *        </dd>
+     *        <dt>FINALIZING</dt>
+     *        <dd>
      *        <p>
-     *        <code>FINALIZING</code>: The build process is completing in this build phase.
+     *        The build process is completing in this build phase.
      *        </p>
-     *        </li>
-     *        <li>
+     *        </dd>
+     *        <dt>INSTALL</dt>
+     *        <dd>
      *        <p>
-     *        <code>INSTALL</code>: Installation activities typically occur in this build phase.
+     *        Installation activities typically occur in this build phase.
      *        </p>
-     *        </li>
-     *        <li>
+     *        </dd>
+     *        <dt>POST_BUILD</dt>
+     *        <dd>
      *        <p>
-     *        <code>POST_BUILD</code>: Post-build activities typically occur in this build phase.
+     *        Post-build activities typically occur in this build phase.
      *        </p>
-     *        </li>
-     *        <li>
+     *        </dd>
+     *        <dt>PRE_BUILD</dt>
+     *        <dd>
      *        <p>
-     *        <code>PRE_BUILD</code>: Pre-build activities typically occur in this build phase.
+     *        Pre-build activities typically occur in this build phase.
      *        </p>
-     *        </li>
-     *        <li>
+     *        </dd>
+     *        <dt>PROVISIONING</dt>
+     *        <dd>
      *        <p>
-     *        <code>PROVISIONING</code>: The build environment is being set up.
+     *        The build environment is being set up.
      *        </p>
-     *        </li>
-     *        <li>
+     *        </dd>
+     *        <dt>QUEUED</dt>
+     *        <dd>
      *        <p>
-     *        <code>QUEUED</code>: The build has been submitted and is queued behind other submitted builds.
+     *        The build has been submitted and is queued behind other submitted builds.
      *        </p>
-     *        </li>
-     *        <li>
+     *        </dd>
+     *        <dt>SUBMITTED</dt>
+     *        <dd>
      *        <p>
-     *        <code>SUBMITTED</code>: The build has been submitted.
+     *        The build has been submitted.
      *        </p>
-     *        </li>
-     *        <li>
+     *        </dd>
+     *        <dt>UPLOAD_ARTIFACTS</dt>
+     *        <dd>
      *        <p>
-     *        <code>UPLOAD_ARTIFACTS</code>: Build output artifacts are being uploaded to the output location.
+     *        Build output artifacts are being uploaded to the output location.
      *        </p>
-     *        </li>
+     *        </dd>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see BuildPhaseType
      */
@@ -552,122 +623,144 @@ public class BuildPhase implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The name of the build phase. Valid values include:
      * </p>
-     * <ul>
-     * <li>
+     * <dl>
+     * <dt>BUILD</dt>
+     * <dd>
      * <p>
-     * <code>BUILD</code>: Core build activities typically occur in this build phase.
+     * Core build activities typically occur in this build phase.
      * </p>
-     * </li>
-     * <li>
+     * </dd>
+     * <dt>COMPLETED</dt>
+     * <dd>
      * <p>
-     * <code>COMPLETED</code>: The build has been completed.
+     * The build has been completed.
      * </p>
-     * </li>
-     * <li>
+     * </dd>
+     * <dt>DOWNLOAD_SOURCE</dt>
+     * <dd>
      * <p>
-     * <code>DOWNLOAD_SOURCE</code>: Source code is being downloaded in this build phase.
+     * Source code is being downloaded in this build phase.
      * </p>
-     * </li>
-     * <li>
+     * </dd>
+     * <dt>FINALIZING</dt>
+     * <dd>
      * <p>
-     * <code>FINALIZING</code>: The build process is completing in this build phase.
+     * The build process is completing in this build phase.
      * </p>
-     * </li>
-     * <li>
+     * </dd>
+     * <dt>INSTALL</dt>
+     * <dd>
      * <p>
-     * <code>INSTALL</code>: Installation activities typically occur in this build phase.
+     * Installation activities typically occur in this build phase.
      * </p>
-     * </li>
-     * <li>
+     * </dd>
+     * <dt>POST_BUILD</dt>
+     * <dd>
      * <p>
-     * <code>POST_BUILD</code>: Post-build activities typically occur in this build phase.
+     * Post-build activities typically occur in this build phase.
      * </p>
-     * </li>
-     * <li>
+     * </dd>
+     * <dt>PRE_BUILD</dt>
+     * <dd>
      * <p>
-     * <code>PRE_BUILD</code>: Pre-build activities typically occur in this build phase.
+     * Pre-build activities typically occur in this build phase.
      * </p>
-     * </li>
-     * <li>
+     * </dd>
+     * <dt>PROVISIONING</dt>
+     * <dd>
      * <p>
-     * <code>PROVISIONING</code>: The build environment is being set up.
+     * The build environment is being set up.
      * </p>
-     * </li>
-     * <li>
+     * </dd>
+     * <dt>QUEUED</dt>
+     * <dd>
      * <p>
-     * <code>QUEUED</code>: The build has been submitted and is queued behind other submitted builds.
+     * The build has been submitted and is queued behind other submitted builds.
      * </p>
-     * </li>
-     * <li>
+     * </dd>
+     * <dt>SUBMITTED</dt>
+     * <dd>
      * <p>
-     * <code>SUBMITTED</code>: The build has been submitted.
+     * The build has been submitted.
      * </p>
-     * </li>
-     * <li>
+     * </dd>
+     * <dt>UPLOAD_ARTIFACTS</dt>
+     * <dd>
      * <p>
-     * <code>UPLOAD_ARTIFACTS</code>: Build output artifacts are being uploaded to the output location.
+     * Build output artifacts are being uploaded to the output location.
      * </p>
-     * </li>
-     * </ul>
+     * </dd>
+     * </dl>
      * 
      * @param phaseType
      *        The name of the build phase. Valid values include:</p>
-     *        <ul>
-     *        <li>
+     *        <dl>
+     *        <dt>BUILD</dt>
+     *        <dd>
      *        <p>
-     *        <code>BUILD</code>: Core build activities typically occur in this build phase.
+     *        Core build activities typically occur in this build phase.
      *        </p>
-     *        </li>
-     *        <li>
+     *        </dd>
+     *        <dt>COMPLETED</dt>
+     *        <dd>
      *        <p>
-     *        <code>COMPLETED</code>: The build has been completed.
+     *        The build has been completed.
      *        </p>
-     *        </li>
-     *        <li>
+     *        </dd>
+     *        <dt>DOWNLOAD_SOURCE</dt>
+     *        <dd>
      *        <p>
-     *        <code>DOWNLOAD_SOURCE</code>: Source code is being downloaded in this build phase.
+     *        Source code is being downloaded in this build phase.
      *        </p>
-     *        </li>
-     *        <li>
+     *        </dd>
+     *        <dt>FINALIZING</dt>
+     *        <dd>
      *        <p>
-     *        <code>FINALIZING</code>: The build process is completing in this build phase.
+     *        The build process is completing in this build phase.
      *        </p>
-     *        </li>
-     *        <li>
+     *        </dd>
+     *        <dt>INSTALL</dt>
+     *        <dd>
      *        <p>
-     *        <code>INSTALL</code>: Installation activities typically occur in this build phase.
+     *        Installation activities typically occur in this build phase.
      *        </p>
-     *        </li>
-     *        <li>
+     *        </dd>
+     *        <dt>POST_BUILD</dt>
+     *        <dd>
      *        <p>
-     *        <code>POST_BUILD</code>: Post-build activities typically occur in this build phase.
+     *        Post-build activities typically occur in this build phase.
      *        </p>
-     *        </li>
-     *        <li>
+     *        </dd>
+     *        <dt>PRE_BUILD</dt>
+     *        <dd>
      *        <p>
-     *        <code>PRE_BUILD</code>: Pre-build activities typically occur in this build phase.
+     *        Pre-build activities typically occur in this build phase.
      *        </p>
-     *        </li>
-     *        <li>
+     *        </dd>
+     *        <dt>PROVISIONING</dt>
+     *        <dd>
      *        <p>
-     *        <code>PROVISIONING</code>: The build environment is being set up.
+     *        The build environment is being set up.
      *        </p>
-     *        </li>
-     *        <li>
+     *        </dd>
+     *        <dt>QUEUED</dt>
+     *        <dd>
      *        <p>
-     *        <code>QUEUED</code>: The build has been submitted and is queued behind other submitted builds.
+     *        The build has been submitted and is queued behind other submitted builds.
      *        </p>
-     *        </li>
-     *        <li>
+     *        </dd>
+     *        <dt>SUBMITTED</dt>
+     *        <dd>
      *        <p>
-     *        <code>SUBMITTED</code>: The build has been submitted.
+     *        The build has been submitted.
      *        </p>
-     *        </li>
-     *        <li>
+     *        </dd>
+     *        <dt>UPLOAD_ARTIFACTS</dt>
+     *        <dd>
      *        <p>
-     *        <code>UPLOAD_ARTIFACTS</code>: Build output artifacts are being uploaded to the output location.
+     *        Build output artifacts are being uploaded to the output location.
      *        </p>
-     *        </li>
+     *        </dd>
      * @see BuildPhaseType
      */
 
@@ -679,122 +772,144 @@ public class BuildPhase implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The name of the build phase. Valid values include:
      * </p>
-     * <ul>
-     * <li>
+     * <dl>
+     * <dt>BUILD</dt>
+     * <dd>
      * <p>
-     * <code>BUILD</code>: Core build activities typically occur in this build phase.
+     * Core build activities typically occur in this build phase.
      * </p>
-     * </li>
-     * <li>
+     * </dd>
+     * <dt>COMPLETED</dt>
+     * <dd>
      * <p>
-     * <code>COMPLETED</code>: The build has been completed.
+     * The build has been completed.
      * </p>
-     * </li>
-     * <li>
+     * </dd>
+     * <dt>DOWNLOAD_SOURCE</dt>
+     * <dd>
      * <p>
-     * <code>DOWNLOAD_SOURCE</code>: Source code is being downloaded in this build phase.
+     * Source code is being downloaded in this build phase.
      * </p>
-     * </li>
-     * <li>
+     * </dd>
+     * <dt>FINALIZING</dt>
+     * <dd>
      * <p>
-     * <code>FINALIZING</code>: The build process is completing in this build phase.
+     * The build process is completing in this build phase.
      * </p>
-     * </li>
-     * <li>
+     * </dd>
+     * <dt>INSTALL</dt>
+     * <dd>
      * <p>
-     * <code>INSTALL</code>: Installation activities typically occur in this build phase.
+     * Installation activities typically occur in this build phase.
      * </p>
-     * </li>
-     * <li>
+     * </dd>
+     * <dt>POST_BUILD</dt>
+     * <dd>
      * <p>
-     * <code>POST_BUILD</code>: Post-build activities typically occur in this build phase.
+     * Post-build activities typically occur in this build phase.
      * </p>
-     * </li>
-     * <li>
+     * </dd>
+     * <dt>PRE_BUILD</dt>
+     * <dd>
      * <p>
-     * <code>PRE_BUILD</code>: Pre-build activities typically occur in this build phase.
+     * Pre-build activities typically occur in this build phase.
      * </p>
-     * </li>
-     * <li>
+     * </dd>
+     * <dt>PROVISIONING</dt>
+     * <dd>
      * <p>
-     * <code>PROVISIONING</code>: The build environment is being set up.
+     * The build environment is being set up.
      * </p>
-     * </li>
-     * <li>
+     * </dd>
+     * <dt>QUEUED</dt>
+     * <dd>
      * <p>
-     * <code>QUEUED</code>: The build has been submitted and is queued behind other submitted builds.
+     * The build has been submitted and is queued behind other submitted builds.
      * </p>
-     * </li>
-     * <li>
+     * </dd>
+     * <dt>SUBMITTED</dt>
+     * <dd>
      * <p>
-     * <code>SUBMITTED</code>: The build has been submitted.
+     * The build has been submitted.
      * </p>
-     * </li>
-     * <li>
+     * </dd>
+     * <dt>UPLOAD_ARTIFACTS</dt>
+     * <dd>
      * <p>
-     * <code>UPLOAD_ARTIFACTS</code>: Build output artifacts are being uploaded to the output location.
+     * Build output artifacts are being uploaded to the output location.
      * </p>
-     * </li>
-     * </ul>
+     * </dd>
+     * </dl>
      * 
      * @param phaseType
      *        The name of the build phase. Valid values include:</p>
-     *        <ul>
-     *        <li>
+     *        <dl>
+     *        <dt>BUILD</dt>
+     *        <dd>
      *        <p>
-     *        <code>BUILD</code>: Core build activities typically occur in this build phase.
+     *        Core build activities typically occur in this build phase.
      *        </p>
-     *        </li>
-     *        <li>
+     *        </dd>
+     *        <dt>COMPLETED</dt>
+     *        <dd>
      *        <p>
-     *        <code>COMPLETED</code>: The build has been completed.
+     *        The build has been completed.
      *        </p>
-     *        </li>
-     *        <li>
+     *        </dd>
+     *        <dt>DOWNLOAD_SOURCE</dt>
+     *        <dd>
      *        <p>
-     *        <code>DOWNLOAD_SOURCE</code>: Source code is being downloaded in this build phase.
+     *        Source code is being downloaded in this build phase.
      *        </p>
-     *        </li>
-     *        <li>
+     *        </dd>
+     *        <dt>FINALIZING</dt>
+     *        <dd>
      *        <p>
-     *        <code>FINALIZING</code>: The build process is completing in this build phase.
+     *        The build process is completing in this build phase.
      *        </p>
-     *        </li>
-     *        <li>
+     *        </dd>
+     *        <dt>INSTALL</dt>
+     *        <dd>
      *        <p>
-     *        <code>INSTALL</code>: Installation activities typically occur in this build phase.
+     *        Installation activities typically occur in this build phase.
      *        </p>
-     *        </li>
-     *        <li>
+     *        </dd>
+     *        <dt>POST_BUILD</dt>
+     *        <dd>
      *        <p>
-     *        <code>POST_BUILD</code>: Post-build activities typically occur in this build phase.
+     *        Post-build activities typically occur in this build phase.
      *        </p>
-     *        </li>
-     *        <li>
+     *        </dd>
+     *        <dt>PRE_BUILD</dt>
+     *        <dd>
      *        <p>
-     *        <code>PRE_BUILD</code>: Pre-build activities typically occur in this build phase.
+     *        Pre-build activities typically occur in this build phase.
      *        </p>
-     *        </li>
-     *        <li>
+     *        </dd>
+     *        <dt>PROVISIONING</dt>
+     *        <dd>
      *        <p>
-     *        <code>PROVISIONING</code>: The build environment is being set up.
+     *        The build environment is being set up.
      *        </p>
-     *        </li>
-     *        <li>
+     *        </dd>
+     *        <dt>QUEUED</dt>
+     *        <dd>
      *        <p>
-     *        <code>QUEUED</code>: The build has been submitted and is queued behind other submitted builds.
+     *        The build has been submitted and is queued behind other submitted builds.
      *        </p>
-     *        </li>
-     *        <li>
+     *        </dd>
+     *        <dt>SUBMITTED</dt>
+     *        <dd>
      *        <p>
-     *        <code>SUBMITTED</code>: The build has been submitted.
+     *        The build has been submitted.
      *        </p>
-     *        </li>
-     *        <li>
+     *        </dd>
+     *        <dt>UPLOAD_ARTIFACTS</dt>
+     *        <dd>
      *        <p>
-     *        <code>UPLOAD_ARTIFACTS</code>: Build output artifacts are being uploaded to the output location.
+     *        Build output artifacts are being uploaded to the output location.
      *        </p>
-     *        </li>
+     *        </dd>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see BuildPhaseType
      */
@@ -825,12 +940,6 @@ public class BuildPhase implements Serializable, Cloneable, StructuredPojo {
      * <dd>
      * <p>
      * The build phase is still in progress.
-     * </p>
-     * </dd>
-     * <dt>QUEUED</dt>
-     * <dd>
-     * <p>
-     * The build has been submitted and is queued behind other submitted builds.
      * </p>
      * </dd>
      * <dt>STOPPED</dt>
@@ -872,12 +981,6 @@ public class BuildPhase implements Serializable, Cloneable, StructuredPojo {
      *        <dd>
      *        <p>
      *        The build phase is still in progress.
-     *        </p>
-     *        </dd>
-     *        <dt>QUEUED</dt>
-     *        <dd>
-     *        <p>
-     *        The build has been submitted and is queued behind other submitted builds.
      *        </p>
      *        </dd>
      *        <dt>STOPPED</dt>
@@ -928,12 +1031,6 @@ public class BuildPhase implements Serializable, Cloneable, StructuredPojo {
      * The build phase is still in progress.
      * </p>
      * </dd>
-     * <dt>QUEUED</dt>
-     * <dd>
-     * <p>
-     * The build has been submitted and is queued behind other submitted builds.
-     * </p>
-     * </dd>
      * <dt>STOPPED</dt>
      * <dd>
      * <p>
@@ -972,12 +1069,6 @@ public class BuildPhase implements Serializable, Cloneable, StructuredPojo {
      *         <dd>
      *         <p>
      *         The build phase is still in progress.
-     *         </p>
-     *         </dd>
-     *         <dt>QUEUED</dt>
-     *         <dd>
-     *         <p>
-     *         The build has been submitted and is queued behind other submitted builds.
      *         </p>
      *         </dd>
      *         <dt>STOPPED</dt>
@@ -1028,12 +1119,6 @@ public class BuildPhase implements Serializable, Cloneable, StructuredPojo {
      * The build phase is still in progress.
      * </p>
      * </dd>
-     * <dt>QUEUED</dt>
-     * <dd>
-     * <p>
-     * The build has been submitted and is queued behind other submitted builds.
-     * </p>
-     * </dd>
      * <dt>STOPPED</dt>
      * <dd>
      * <p>
@@ -1073,12 +1158,6 @@ public class BuildPhase implements Serializable, Cloneable, StructuredPojo {
      *        <dd>
      *        <p>
      *        The build phase is still in progress.
-     *        </p>
-     *        </dd>
-     *        <dt>QUEUED</dt>
-     *        <dd>
-     *        <p>
-     *        The build has been submitted and is queued behind other submitted builds.
      *        </p>
      *        </dd>
      *        <dt>STOPPED</dt>
@@ -1131,12 +1210,6 @@ public class BuildPhase implements Serializable, Cloneable, StructuredPojo {
      * The build phase is still in progress.
      * </p>
      * </dd>
-     * <dt>QUEUED</dt>
-     * <dd>
-     * <p>
-     * The build has been submitted and is queued behind other submitted builds.
-     * </p>
-     * </dd>
      * <dt>STOPPED</dt>
      * <dd>
      * <p>
@@ -1176,12 +1249,6 @@ public class BuildPhase implements Serializable, Cloneable, StructuredPojo {
      *        <dd>
      *        <p>
      *        The build phase is still in progress.
-     *        </p>
-     *        </dd>
-     *        <dt>QUEUED</dt>
-     *        <dd>
-     *        <p>
-     *        The build has been submitted and is queued behind other submitted builds.
      *        </p>
      *        </dd>
      *        <dt>STOPPED</dt>
@@ -1232,12 +1299,6 @@ public class BuildPhase implements Serializable, Cloneable, StructuredPojo {
      * The build phase is still in progress.
      * </p>
      * </dd>
-     * <dt>QUEUED</dt>
-     * <dd>
-     * <p>
-     * The build has been submitted and is queued behind other submitted builds.
-     * </p>
-     * </dd>
      * <dt>STOPPED</dt>
      * <dd>
      * <p>
@@ -1277,12 +1338,6 @@ public class BuildPhase implements Serializable, Cloneable, StructuredPojo {
      *        <dd>
      *        <p>
      *        The build phase is still in progress.
-     *        </p>
-     *        </dd>
-     *        <dt>QUEUED</dt>
-     *        <dd>
-     *        <p>
-     *        The build has been submitted and is queued behind other submitted builds.
      *        </p>
      *        </dd>
      *        <dt>STOPPED</dt>

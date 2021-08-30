@@ -91,9 +91,9 @@ public class CreateStackSetRequest extends com.amazonaws.AmazonWebServiceRequest
      * <code>CAPABILITY_IAM</code> and <code>CAPABILITY_NAMED_IAM</code>
      * </p>
      * <p>
-     * Some stack templates might include resources that can affect permissions in your account; for example, by
-     * creating new Identity and Access Management (IAM) users. For those stack sets, you must explicitly acknowledge
-     * this by specifying one of these capabilities.
+     * Some stack templates might include resources that can affect permissions in your Amazon Web Services account; for
+     * example, by creating new Identity and Access Management (IAM) users. For those stack sets, you must explicitly
+     * acknowledge this by specifying one of these capabilities.
      * </p>
      * <p>
      * The following IAM resources require you to specify either the <code>CAPABILITY_IAM</code> or
@@ -287,10 +287,10 @@ public class CreateStackSetRequest extends com.amazonaws.AmazonWebServiceRequest
      * specify <code>DELEGATED_ADMIN</code>.
      * </p>
      * <p>
-     * Your account must be registered as a delegated admin in the management account. For more information, see <a
-     * href=
-     * "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html">Register a
-     * delegated administrator</a> in the <i>CloudFormation User Guide</i>.
+     * Your Amazon Web Services account must be registered as a delegated admin in the management account. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html"
+     * >Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * </li>
      * </ul>
@@ -707,9 +707,9 @@ public class CreateStackSetRequest extends com.amazonaws.AmazonWebServiceRequest
      * <code>CAPABILITY_IAM</code> and <code>CAPABILITY_NAMED_IAM</code>
      * </p>
      * <p>
-     * Some stack templates might include resources that can affect permissions in your account; for example, by
-     * creating new Identity and Access Management (IAM) users. For those stack sets, you must explicitly acknowledge
-     * this by specifying one of these capabilities.
+     * Some stack templates might include resources that can affect permissions in your Amazon Web Services account; for
+     * example, by creating new Identity and Access Management (IAM) users. For those stack sets, you must explicitly
+     * acknowledge this by specifying one of these capabilities.
      * </p>
      * <p>
      * The following IAM resources require you to specify either the <code>CAPABILITY_IAM</code> or
@@ -820,9 +820,9 @@ public class CreateStackSetRequest extends com.amazonaws.AmazonWebServiceRequest
      *         <code>CAPABILITY_IAM</code> and <code>CAPABILITY_NAMED_IAM</code>
      *         </p>
      *         <p>
-     *         Some stack templates might include resources that can affect permissions in your account; for example, by
-     *         creating new Identity and Access Management (IAM) users. For those stack sets, you must explicitly
-     *         acknowledge this by specifying one of these capabilities.
+     *         Some stack templates might include resources that can affect permissions in your Amazon Web Services
+     *         account; for example, by creating new Identity and Access Management (IAM) users. For those stack sets,
+     *         you must explicitly acknowledge this by specifying one of these capabilities.
      *         </p>
      *         <p>
      *         The following IAM resources require you to specify either the <code>CAPABILITY_IAM</code> or
@@ -948,9 +948,9 @@ public class CreateStackSetRequest extends com.amazonaws.AmazonWebServiceRequest
      * <code>CAPABILITY_IAM</code> and <code>CAPABILITY_NAMED_IAM</code>
      * </p>
      * <p>
-     * Some stack templates might include resources that can affect permissions in your account; for example, by
-     * creating new Identity and Access Management (IAM) users. For those stack sets, you must explicitly acknowledge
-     * this by specifying one of these capabilities.
+     * Some stack templates might include resources that can affect permissions in your Amazon Web Services account; for
+     * example, by creating new Identity and Access Management (IAM) users. For those stack sets, you must explicitly
+     * acknowledge this by specifying one of these capabilities.
      * </p>
      * <p>
      * The following IAM resources require you to specify either the <code>CAPABILITY_IAM</code> or
@@ -1062,9 +1062,9 @@ public class CreateStackSetRequest extends com.amazonaws.AmazonWebServiceRequest
      *        <code>CAPABILITY_IAM</code> and <code>CAPABILITY_NAMED_IAM</code>
      *        </p>
      *        <p>
-     *        Some stack templates might include resources that can affect permissions in your account; for example, by
-     *        creating new Identity and Access Management (IAM) users. For those stack sets, you must explicitly
-     *        acknowledge this by specifying one of these capabilities.
+     *        Some stack templates might include resources that can affect permissions in your Amazon Web Services
+     *        account; for example, by creating new Identity and Access Management (IAM) users. For those stack sets,
+     *        you must explicitly acknowledge this by specifying one of these capabilities.
      *        </p>
      *        <p>
      *        The following IAM resources require you to specify either the <code>CAPABILITY_IAM</code> or
@@ -1191,9 +1191,9 @@ public class CreateStackSetRequest extends com.amazonaws.AmazonWebServiceRequest
      * <code>CAPABILITY_IAM</code> and <code>CAPABILITY_NAMED_IAM</code>
      * </p>
      * <p>
-     * Some stack templates might include resources that can affect permissions in your account; for example, by
-     * creating new Identity and Access Management (IAM) users. For those stack sets, you must explicitly acknowledge
-     * this by specifying one of these capabilities.
+     * Some stack templates might include resources that can affect permissions in your Amazon Web Services account; for
+     * example, by creating new Identity and Access Management (IAM) users. For those stack sets, you must explicitly
+     * acknowledge this by specifying one of these capabilities.
      * </p>
      * <p>
      * The following IAM resources require you to specify either the <code>CAPABILITY_IAM</code> or
@@ -1310,9 +1310,9 @@ public class CreateStackSetRequest extends com.amazonaws.AmazonWebServiceRequest
      *        <code>CAPABILITY_IAM</code> and <code>CAPABILITY_NAMED_IAM</code>
      *        </p>
      *        <p>
-     *        Some stack templates might include resources that can affect permissions in your account; for example, by
-     *        creating new Identity and Access Management (IAM) users. For those stack sets, you must explicitly
-     *        acknowledge this by specifying one of these capabilities.
+     *        Some stack templates might include resources that can affect permissions in your Amazon Web Services
+     *        account; for example, by creating new Identity and Access Management (IAM) users. For those stack sets,
+     *        you must explicitly acknowledge this by specifying one of these capabilities.
      *        </p>
      *        <p>
      *        The following IAM resources require you to specify either the <code>CAPABILITY_IAM</code> or
@@ -1441,9 +1441,9 @@ public class CreateStackSetRequest extends com.amazonaws.AmazonWebServiceRequest
      * <code>CAPABILITY_IAM</code> and <code>CAPABILITY_NAMED_IAM</code>
      * </p>
      * <p>
-     * Some stack templates might include resources that can affect permissions in your account; for example, by
-     * creating new Identity and Access Management (IAM) users. For those stack sets, you must explicitly acknowledge
-     * this by specifying one of these capabilities.
+     * Some stack templates might include resources that can affect permissions in your Amazon Web Services account; for
+     * example, by creating new Identity and Access Management (IAM) users. For those stack sets, you must explicitly
+     * acknowledge this by specifying one of these capabilities.
      * </p>
      * <p>
      * The following IAM resources require you to specify either the <code>CAPABILITY_IAM</code> or
@@ -1555,9 +1555,9 @@ public class CreateStackSetRequest extends com.amazonaws.AmazonWebServiceRequest
      *        <code>CAPABILITY_IAM</code> and <code>CAPABILITY_NAMED_IAM</code>
      *        </p>
      *        <p>
-     *        Some stack templates might include resources that can affect permissions in your account; for example, by
-     *        creating new Identity and Access Management (IAM) users. For those stack sets, you must explicitly
-     *        acknowledge this by specifying one of these capabilities.
+     *        Some stack templates might include resources that can affect permissions in your Amazon Web Services
+     *        account; for example, by creating new Identity and Access Management (IAM) users. For those stack sets,
+     *        you must explicitly acknowledge this by specifying one of these capabilities.
      *        </p>
      *        <p>
      *        The following IAM resources require you to specify either the <code>CAPABILITY_IAM</code> or
@@ -1681,9 +1681,9 @@ public class CreateStackSetRequest extends com.amazonaws.AmazonWebServiceRequest
      * <code>CAPABILITY_IAM</code> and <code>CAPABILITY_NAMED_IAM</code>
      * </p>
      * <p>
-     * Some stack templates might include resources that can affect permissions in your account; for example, by
-     * creating new Identity and Access Management (IAM) users. For those stack sets, you must explicitly acknowledge
-     * this by specifying one of these capabilities.
+     * Some stack templates might include resources that can affect permissions in your Amazon Web Services account; for
+     * example, by creating new Identity and Access Management (IAM) users. For those stack sets, you must explicitly
+     * acknowledge this by specifying one of these capabilities.
      * </p>
      * <p>
      * The following IAM resources require you to specify either the <code>CAPABILITY_IAM</code> or
@@ -1795,9 +1795,9 @@ public class CreateStackSetRequest extends com.amazonaws.AmazonWebServiceRequest
      *        <code>CAPABILITY_IAM</code> and <code>CAPABILITY_NAMED_IAM</code>
      *        </p>
      *        <p>
-     *        Some stack templates might include resources that can affect permissions in your account; for example, by
-     *        creating new Identity and Access Management (IAM) users. For those stack sets, you must explicitly
-     *        acknowledge this by specifying one of these capabilities.
+     *        Some stack templates might include resources that can affect permissions in your Amazon Web Services
+     *        account; for example, by creating new Identity and Access Management (IAM) users. For those stack sets,
+     *        you must explicitly acknowledge this by specifying one of these capabilities.
      *        </p>
      *        <p>
      *        The following IAM resources require you to specify either the <code>CAPABILITY_IAM</code> or
@@ -2467,10 +2467,10 @@ public class CreateStackSetRequest extends com.amazonaws.AmazonWebServiceRequest
      * specify <code>DELEGATED_ADMIN</code>.
      * </p>
      * <p>
-     * Your account must be registered as a delegated admin in the management account. For more information, see <a
-     * href=
-     * "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html">Register a
-     * delegated administrator</a> in the <i>CloudFormation User Guide</i>.
+     * Your Amazon Web Services account must be registered as a delegated admin in the management account. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html"
+     * >Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * </li>
      * </ul>
@@ -2499,8 +2499,8 @@ public class CreateStackSetRequest extends com.amazonaws.AmazonWebServiceRequest
      *        account, specify <code>DELEGATED_ADMIN</code>.
      *        </p>
      *        <p>
-     *        Your account must be registered as a delegated admin in the management account. For more information, see
-     *        <a href=
+     *        Your Amazon Web Services account must be registered as a delegated admin in the management account. For
+     *        more information, see <a href=
      *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html"
      *        >Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
      *        </p>
@@ -2537,10 +2537,10 @@ public class CreateStackSetRequest extends com.amazonaws.AmazonWebServiceRequest
      * specify <code>DELEGATED_ADMIN</code>.
      * </p>
      * <p>
-     * Your account must be registered as a delegated admin in the management account. For more information, see <a
-     * href=
-     * "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html">Register a
-     * delegated administrator</a> in the <i>CloudFormation User Guide</i>.
+     * Your Amazon Web Services account must be registered as a delegated admin in the management account. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html"
+     * >Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * </li>
      * </ul>
@@ -2568,8 +2568,8 @@ public class CreateStackSetRequest extends com.amazonaws.AmazonWebServiceRequest
      *         account, specify <code>DELEGATED_ADMIN</code>.
      *         </p>
      *         <p>
-     *         Your account must be registered as a delegated admin in the management account. For more information, see
-     *         <a href=
+     *         Your Amazon Web Services account must be registered as a delegated admin in the management account. For
+     *         more information, see <a href=
      *         "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html"
      *         >Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
      *         </p>
@@ -2606,10 +2606,10 @@ public class CreateStackSetRequest extends com.amazonaws.AmazonWebServiceRequest
      * specify <code>DELEGATED_ADMIN</code>.
      * </p>
      * <p>
-     * Your account must be registered as a delegated admin in the management account. For more information, see <a
-     * href=
-     * "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html">Register a
-     * delegated administrator</a> in the <i>CloudFormation User Guide</i>.
+     * Your Amazon Web Services account must be registered as a delegated admin in the management account. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html"
+     * >Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * </li>
      * </ul>
@@ -2638,8 +2638,8 @@ public class CreateStackSetRequest extends com.amazonaws.AmazonWebServiceRequest
      *        account, specify <code>DELEGATED_ADMIN</code>.
      *        </p>
      *        <p>
-     *        Your account must be registered as a delegated admin in the management account. For more information, see
-     *        <a href=
+     *        Your Amazon Web Services account must be registered as a delegated admin in the management account. For
+     *        more information, see <a href=
      *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html"
      *        >Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
      *        </p>
@@ -2678,10 +2678,10 @@ public class CreateStackSetRequest extends com.amazonaws.AmazonWebServiceRequest
      * specify <code>DELEGATED_ADMIN</code>.
      * </p>
      * <p>
-     * Your account must be registered as a delegated admin in the management account. For more information, see <a
-     * href=
-     * "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html">Register a
-     * delegated administrator</a> in the <i>CloudFormation User Guide</i>.
+     * Your Amazon Web Services account must be registered as a delegated admin in the management account. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html"
+     * >Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * </li>
      * </ul>
@@ -2710,8 +2710,8 @@ public class CreateStackSetRequest extends com.amazonaws.AmazonWebServiceRequest
      *        account, specify <code>DELEGATED_ADMIN</code>.
      *        </p>
      *        <p>
-     *        Your account must be registered as a delegated admin in the management account. For more information, see
-     *        <a href=
+     *        Your Amazon Web Services account must be registered as a delegated admin in the management account. For
+     *        more information, see <a href=
      *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html"
      *        >Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
      *        </p>

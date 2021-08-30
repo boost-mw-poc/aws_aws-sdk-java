@@ -38,13 +38,14 @@ public class StackInstance implements Serializable, Cloneable {
     private String stackSetId;
     /**
      * <p>
-     * The name of the Region that the stack instance is associated with.
+     * The name of the Amazon Web Services Region that the stack instance is associated with.
      * </p>
      */
     private String region;
     /**
      * <p>
-     * [Self-managed permissions] The name of the account that the stack instance is associated with.
+     * [Self-managed permissions] The name of the Amazon Web Services account that the stack instance is associated
+     * with.
      * </p>
      */
     private String account;
@@ -201,11 +202,11 @@ public class StackInstance implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The name of the Region that the stack instance is associated with.
+     * The name of the Amazon Web Services Region that the stack instance is associated with.
      * </p>
      * 
      * @param region
-     *        The name of the Region that the stack instance is associated with.
+     *        The name of the Amazon Web Services Region that the stack instance is associated with.
      */
 
     public void setRegion(String region) {
@@ -214,10 +215,10 @@ public class StackInstance implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The name of the Region that the stack instance is associated with.
+     * The name of the Amazon Web Services Region that the stack instance is associated with.
      * </p>
      * 
-     * @return The name of the Region that the stack instance is associated with.
+     * @return The name of the Amazon Web Services Region that the stack instance is associated with.
      */
 
     public String getRegion() {
@@ -226,11 +227,11 @@ public class StackInstance implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The name of the Region that the stack instance is associated with.
+     * The name of the Amazon Web Services Region that the stack instance is associated with.
      * </p>
      * 
      * @param region
-     *        The name of the Region that the stack instance is associated with.
+     *        The name of the Amazon Web Services Region that the stack instance is associated with.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -241,11 +242,13 @@ public class StackInstance implements Serializable, Cloneable {
 
     /**
      * <p>
-     * [Self-managed permissions] The name of the account that the stack instance is associated with.
+     * [Self-managed permissions] The name of the Amazon Web Services account that the stack instance is associated
+     * with.
      * </p>
      * 
      * @param account
-     *        [Self-managed permissions] The name of the account that the stack instance is associated with.
+     *        [Self-managed permissions] The name of the Amazon Web Services account that the stack instance is
+     *        associated with.
      */
 
     public void setAccount(String account) {
@@ -254,10 +257,12 @@ public class StackInstance implements Serializable, Cloneable {
 
     /**
      * <p>
-     * [Self-managed permissions] The name of the account that the stack instance is associated with.
+     * [Self-managed permissions] The name of the Amazon Web Services account that the stack instance is associated
+     * with.
      * </p>
      * 
-     * @return [Self-managed permissions] The name of the account that the stack instance is associated with.
+     * @return [Self-managed permissions] The name of the Amazon Web Services account that the stack instance is
+     *         associated with.
      */
 
     public String getAccount() {
@@ -266,11 +271,13 @@ public class StackInstance implements Serializable, Cloneable {
 
     /**
      * <p>
-     * [Self-managed permissions] The name of the account that the stack instance is associated with.
+     * [Self-managed permissions] The name of the Amazon Web Services account that the stack instance is associated
+     * with.
      * </p>
      * 
      * @param account
-     *        [Self-managed permissions] The name of the account that the stack instance is associated with.
+     *        [Self-managed permissions] The name of the Amazon Web Services account that the stack instance is
+     *        associated with.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

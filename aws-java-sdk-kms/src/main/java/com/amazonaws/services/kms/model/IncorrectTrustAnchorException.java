@@ -17,7 +17,7 @@ import javax.annotation.Generated;
 /**
  * <p>
  * The request was rejected because the trust anchor certificate in the request is not the trust anchor certificate for
- * the specified AWS CloudHSM cluster.
+ * the specified CloudHSM cluster.
  * </p>
  * <p>
  * When you <a href="https://docs.aws.amazon.com/cloudhsm/latest/userguide/initialize-cluster.html#sign-csr">initialize

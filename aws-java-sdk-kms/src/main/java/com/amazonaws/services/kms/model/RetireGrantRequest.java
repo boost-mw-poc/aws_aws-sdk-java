@@ -34,13 +34,13 @@ public class RetireGrantRequest extends com.amazonaws.AmazonWebServiceRequest im
      * Only the <a>CreateGrant</a> operation returns a grant token. For details, see <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/grants.html#grant_token">Grant token</a> and <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/grants.html#terms-eventual-consistency">Eventual
-     * consistency</a> in the <i>AWS Key Management Service Developer Guide</i>.
+     * consistency</a> in the <i>Key Management Service Developer Guide</i>.
      * </p>
      */
     private String grantToken;
     /**
      * <p>
-     * The key ARN CMK associated with the grant. To find the key ARN, use the <a>ListKeys</a> operation.
+     * The key ARN KMS key associated with the grant. To find the key ARN, use the <a>ListKeys</a> operation.
      * </p>
      * <p>
      * For example: <code>arn:aws:kms:us-east-2:444455556666:key/1234abcd-12ab-34cd-56ef-1234567890ab</code>
@@ -71,7 +71,7 @@ public class RetireGrantRequest extends com.amazonaws.AmazonWebServiceRequest im
      * Only the <a>CreateGrant</a> operation returns a grant token. For details, see <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/grants.html#grant_token">Grant token</a> and <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/grants.html#terms-eventual-consistency">Eventual
-     * consistency</a> in the <i>AWS Key Management Service Developer Guide</i>.
+     * consistency</a> in the <i>Key Management Service Developer Guide</i>.
      * </p>
      * 
      * @param grantToken
@@ -81,7 +81,7 @@ public class RetireGrantRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        Only the <a>CreateGrant</a> operation returns a grant token. For details, see <a
      *        href="https://docs.aws.amazon.com/kms/latest/developerguide/grants.html#grant_token">Grant token</a> and
      *        <a href="https://docs.aws.amazon.com/kms/latest/developerguide/grants.html#terms-eventual-consistency">
-     *        Eventual consistency</a> in the <i>AWS Key Management Service Developer Guide</i>.
+     *        Eventual consistency</a> in the <i>Key Management Service Developer Guide</i>.
      */
 
     public void setGrantToken(String grantToken) {
@@ -97,7 +97,7 @@ public class RetireGrantRequest extends com.amazonaws.AmazonWebServiceRequest im
      * Only the <a>CreateGrant</a> operation returns a grant token. For details, see <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/grants.html#grant_token">Grant token</a> and <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/grants.html#terms-eventual-consistency">Eventual
-     * consistency</a> in the <i>AWS Key Management Service Developer Guide</i>.
+     * consistency</a> in the <i>Key Management Service Developer Guide</i>.
      * </p>
      * 
      * @return Identifies the grant to be retired. You can use a grant token to identify a new grant even before it has
@@ -106,7 +106,7 @@ public class RetireGrantRequest extends com.amazonaws.AmazonWebServiceRequest im
      *         Only the <a>CreateGrant</a> operation returns a grant token. For details, see <a
      *         href="https://docs.aws.amazon.com/kms/latest/developerguide/grants.html#grant_token">Grant token</a> and
      *         <a href="https://docs.aws.amazon.com/kms/latest/developerguide/grants.html#terms-eventual-consistency">
-     *         Eventual consistency</a> in the <i>AWS Key Management Service Developer Guide</i>.
+     *         Eventual consistency</a> in the <i>Key Management Service Developer Guide</i>.
      */
 
     public String getGrantToken() {
@@ -122,7 +122,7 @@ public class RetireGrantRequest extends com.amazonaws.AmazonWebServiceRequest im
      * Only the <a>CreateGrant</a> operation returns a grant token. For details, see <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/grants.html#grant_token">Grant token</a> and <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/grants.html#terms-eventual-consistency">Eventual
-     * consistency</a> in the <i>AWS Key Management Service Developer Guide</i>.
+     * consistency</a> in the <i>Key Management Service Developer Guide</i>.
      * </p>
      * 
      * @param grantToken
@@ -132,7 +132,7 @@ public class RetireGrantRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        Only the <a>CreateGrant</a> operation returns a grant token. For details, see <a
      *        href="https://docs.aws.amazon.com/kms/latest/developerguide/grants.html#grant_token">Grant token</a> and
      *        <a href="https://docs.aws.amazon.com/kms/latest/developerguide/grants.html#terms-eventual-consistency">
-     *        Eventual consistency</a> in the <i>AWS Key Management Service Developer Guide</i>.
+     *        Eventual consistency</a> in the <i>Key Management Service Developer Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -143,14 +143,14 @@ public class RetireGrantRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The key ARN CMK associated with the grant. To find the key ARN, use the <a>ListKeys</a> operation.
+     * The key ARN KMS key associated with the grant. To find the key ARN, use the <a>ListKeys</a> operation.
      * </p>
      * <p>
      * For example: <code>arn:aws:kms:us-east-2:444455556666:key/1234abcd-12ab-34cd-56ef-1234567890ab</code>
      * </p>
      * 
      * @param keyId
-     *        The key ARN CMK associated with the grant. To find the key ARN, use the <a>ListKeys</a> operation.</p>
+     *        The key ARN KMS key associated with the grant. To find the key ARN, use the <a>ListKeys</a> operation.</p>
      *        <p>
      *        For example: <code>arn:aws:kms:us-east-2:444455556666:key/1234abcd-12ab-34cd-56ef-1234567890ab</code>
      */
@@ -161,13 +161,14 @@ public class RetireGrantRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The key ARN CMK associated with the grant. To find the key ARN, use the <a>ListKeys</a> operation.
+     * The key ARN KMS key associated with the grant. To find the key ARN, use the <a>ListKeys</a> operation.
      * </p>
      * <p>
      * For example: <code>arn:aws:kms:us-east-2:444455556666:key/1234abcd-12ab-34cd-56ef-1234567890ab</code>
      * </p>
      * 
-     * @return The key ARN CMK associated with the grant. To find the key ARN, use the <a>ListKeys</a> operation.</p>
+     * @return The key ARN KMS key associated with the grant. To find the key ARN, use the <a>ListKeys</a>
+     *         operation.</p>
      *         <p>
      *         For example: <code>arn:aws:kms:us-east-2:444455556666:key/1234abcd-12ab-34cd-56ef-1234567890ab</code>
      */
@@ -178,14 +179,14 @@ public class RetireGrantRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The key ARN CMK associated with the grant. To find the key ARN, use the <a>ListKeys</a> operation.
+     * The key ARN KMS key associated with the grant. To find the key ARN, use the <a>ListKeys</a> operation.
      * </p>
      * <p>
      * For example: <code>arn:aws:kms:us-east-2:444455556666:key/1234abcd-12ab-34cd-56ef-1234567890ab</code>
      * </p>
      * 
      * @param keyId
-     *        The key ARN CMK associated with the grant. To find the key ARN, use the <a>ListKeys</a> operation.</p>
+     *        The key ARN KMS key associated with the grant. To find the key ARN, use the <a>ListKeys</a> operation.</p>
      *        <p>
      *        For example: <code>arn:aws:kms:us-east-2:444455556666:key/1234abcd-12ab-34cd-56ef-1234567890ab</code>
      * @return Returns a reference to this object so that method calls can be chained together.

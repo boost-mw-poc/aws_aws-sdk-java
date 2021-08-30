@@ -112,6 +112,16 @@ public class ExtendedS3DestinationConfiguration implements Serializable, Cloneab
      * </p>
      */
     private DataFormatConversionConfiguration dataFormatConversionConfiguration;
+    /**
+     * <p>
+     * The configuration of the dynamic partitioning mechanism that creates smaller data sets from the streaming data by
+     * partitioning it based on partition keys. Currently, dynamic partitioning is only supported for Amazon S3
+     * destinations. For more information, see <a
+     * href="https://docs.aws.amazon.com/firehose/latest/dev/dynamic-partitioning.html"
+     * >https://docs.aws.amazon.com/firehose/latest/dev/dynamic-partitioning.html</a>
+     * </p>
+     */
+    private DynamicPartitioningConfiguration dynamicPartitioningConfiguration;
 
     /**
      * <p>
@@ -736,6 +746,70 @@ public class ExtendedS3DestinationConfiguration implements Serializable, Cloneab
     }
 
     /**
+     * <p>
+     * The configuration of the dynamic partitioning mechanism that creates smaller data sets from the streaming data by
+     * partitioning it based on partition keys. Currently, dynamic partitioning is only supported for Amazon S3
+     * destinations. For more information, see <a
+     * href="https://docs.aws.amazon.com/firehose/latest/dev/dynamic-partitioning.html"
+     * >https://docs.aws.amazon.com/firehose/latest/dev/dynamic-partitioning.html</a>
+     * </p>
+     * 
+     * @param dynamicPartitioningConfiguration
+     *        The configuration of the dynamic partitioning mechanism that creates smaller data sets from the streaming
+     *        data by partitioning it based on partition keys. Currently, dynamic partitioning is only supported for
+     *        Amazon S3 destinations. For more information, see <a
+     *        href="https://docs.aws.amazon.com/firehose/latest/dev/dynamic-partitioning.html"
+     *        >https://docs.aws.amazon.com/firehose/latest/dev/dynamic-partitioning.html</a>
+     */
+
+    public void setDynamicPartitioningConfiguration(DynamicPartitioningConfiguration dynamicPartitioningConfiguration) {
+        this.dynamicPartitioningConfiguration = dynamicPartitioningConfiguration;
+    }
+
+    /**
+     * <p>
+     * The configuration of the dynamic partitioning mechanism that creates smaller data sets from the streaming data by
+     * partitioning it based on partition keys. Currently, dynamic partitioning is only supported for Amazon S3
+     * destinations. For more information, see <a
+     * href="https://docs.aws.amazon.com/firehose/latest/dev/dynamic-partitioning.html"
+     * >https://docs.aws.amazon.com/firehose/latest/dev/dynamic-partitioning.html</a>
+     * </p>
+     * 
+     * @return The configuration of the dynamic partitioning mechanism that creates smaller data sets from the streaming
+     *         data by partitioning it based on partition keys. Currently, dynamic partitioning is only supported for
+     *         Amazon S3 destinations. For more information, see <a
+     *         href="https://docs.aws.amazon.com/firehose/latest/dev/dynamic-partitioning.html"
+     *         >https://docs.aws.amazon.com/firehose/latest/dev/dynamic-partitioning.html</a>
+     */
+
+    public DynamicPartitioningConfiguration getDynamicPartitioningConfiguration() {
+        return this.dynamicPartitioningConfiguration;
+    }
+
+    /**
+     * <p>
+     * The configuration of the dynamic partitioning mechanism that creates smaller data sets from the streaming data by
+     * partitioning it based on partition keys. Currently, dynamic partitioning is only supported for Amazon S3
+     * destinations. For more information, see <a
+     * href="https://docs.aws.amazon.com/firehose/latest/dev/dynamic-partitioning.html"
+     * >https://docs.aws.amazon.com/firehose/latest/dev/dynamic-partitioning.html</a>
+     * </p>
+     * 
+     * @param dynamicPartitioningConfiguration
+     *        The configuration of the dynamic partitioning mechanism that creates smaller data sets from the streaming
+     *        data by partitioning it based on partition keys. Currently, dynamic partitioning is only supported for
+     *        Amazon S3 destinations. For more information, see <a
+     *        href="https://docs.aws.amazon.com/firehose/latest/dev/dynamic-partitioning.html"
+     *        >https://docs.aws.amazon.com/firehose/latest/dev/dynamic-partitioning.html</a>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ExtendedS3DestinationConfiguration withDynamicPartitioningConfiguration(DynamicPartitioningConfiguration dynamicPartitioningConfiguration) {
+        setDynamicPartitioningConfiguration(dynamicPartitioningConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -770,7 +844,9 @@ public class ExtendedS3DestinationConfiguration implements Serializable, Cloneab
         if (getS3BackupConfiguration() != null)
             sb.append("S3BackupConfiguration: ").append(getS3BackupConfiguration()).append(",");
         if (getDataFormatConversionConfiguration() != null)
-            sb.append("DataFormatConversionConfiguration: ").append(getDataFormatConversionConfiguration());
+            sb.append("DataFormatConversionConfiguration: ").append(getDataFormatConversionConfiguration()).append(",");
+        if (getDynamicPartitioningConfiguration() != null)
+            sb.append("DynamicPartitioningConfiguration: ").append(getDynamicPartitioningConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -834,6 +910,11 @@ public class ExtendedS3DestinationConfiguration implements Serializable, Cloneab
         if (other.getDataFormatConversionConfiguration() != null
                 && other.getDataFormatConversionConfiguration().equals(this.getDataFormatConversionConfiguration()) == false)
             return false;
+        if (other.getDynamicPartitioningConfiguration() == null ^ this.getDynamicPartitioningConfiguration() == null)
+            return false;
+        if (other.getDynamicPartitioningConfiguration() != null
+                && other.getDynamicPartitioningConfiguration().equals(this.getDynamicPartitioningConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -854,6 +935,7 @@ public class ExtendedS3DestinationConfiguration implements Serializable, Cloneab
         hashCode = prime * hashCode + ((getS3BackupMode() == null) ? 0 : getS3BackupMode().hashCode());
         hashCode = prime * hashCode + ((getS3BackupConfiguration() == null) ? 0 : getS3BackupConfiguration().hashCode());
         hashCode = prime * hashCode + ((getDataFormatConversionConfiguration() == null) ? 0 : getDataFormatConversionConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getDynamicPartitioningConfiguration() == null) ? 0 : getDynamicPartitioningConfiguration().hashCode());
         return hashCode;
     }
 

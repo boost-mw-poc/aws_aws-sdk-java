@@ -17,7 +17,8 @@ import javax.annotation.Generated;
 /**
  * <p>
  * The request was rejected because the signature verification failed. Signature verification fails when it cannot
- * confirm that signature was produced by signing the specified message with the specified CMK and signing algorithm.
+ * confirm that signature was produced by signing the specified message with the specified KMS key and signing
+ * algorithm.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

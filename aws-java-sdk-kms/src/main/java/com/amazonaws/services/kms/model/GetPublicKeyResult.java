@@ -27,7 +27,7 @@ public class GetPublicKeyResult extends com.amazonaws.AmazonWebServiceResult<com
      * <p>
      * The Amazon Resource Name (<a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) of the
-     * asymmetric CMK from which the public key was downloaded.
+     * asymmetric KMS key from which the public key was downloaded.
      * </p>
      */
     private String keyId;
@@ -37,34 +37,46 @@ public class GetPublicKeyResult extends com.amazonaws.AmazonWebServiceResult<com
      * </p>
      * <p>
      * The value is a DER-encoded X.509 public key, also known as <code>SubjectPublicKeyInfo</code> (SPKI), as defined
-     * in <a href="https://tools.ietf.org/html/rfc5280">RFC 5280</a>. When you use the HTTP API or the AWS CLI, the
-     * value is Base64-encoded. Otherwise, it is not Base64-encoded.
+     * in <a href="https://tools.ietf.org/html/rfc5280">RFC 5280</a>. When you use the HTTP API or the Amazon Web
+     * Services CLI, the value is Base64-encoded. Otherwise, it is not Base64-encoded.
      * </p>
      * <p/>
      */
     private java.nio.ByteBuffer publicKey;
     /**
      * <p>
+     * Instead, use the <code>KeySpec</code> field in the <code>GetPublicKey</code> response.
+     * </p>
+     * <p>
+     * The <code>KeySpec</code> and <code>CustomerMasterKeySpec</code> fields have the same value. We recommend that you
+     * use the <code>KeySpec</code> field in your code. However, to avoid breaking changes, KMS will support both
+     * fields.
+     * </p>
+     */
+    @Deprecated
+    private String customerMasterKeySpec;
+    /**
+     * <p>
      * The type of the of the public key that was downloaded.
      * </p>
      */
-    private String customerMasterKeySpec;
+    private String keySpec;
     /**
      * <p>
      * The permitted use of the public key. Valid values are <code>ENCRYPT_DECRYPT</code> or <code>SIGN_VERIFY</code>.
      * </p>
      * <p>
      * This information is critical. If a public key with <code>SIGN_VERIFY</code> key usage encrypts data outside of
-     * AWS KMS, the ciphertext cannot be decrypted.
+     * KMS, the ciphertext cannot be decrypted.
      * </p>
      */
     private String keyUsage;
     /**
      * <p>
-     * The encryption algorithms that AWS KMS supports for this key.
+     * The encryption algorithms that KMS supports for this key.
      * </p>
      * <p>
-     * This information is critical. If a public key encrypts data outside of AWS KMS by using an unsupported encryption
+     * This information is critical. If a public key encrypts data outside of KMS by using an unsupported encryption
      * algorithm, the ciphertext cannot be decrypted.
      * </p>
      * <p>
@@ -75,7 +87,7 @@ public class GetPublicKeyResult extends com.amazonaws.AmazonWebServiceResult<com
     private com.amazonaws.internal.SdkInternalList<String> encryptionAlgorithms;
     /**
      * <p>
-     * The signing algorithms that AWS KMS supports for this key.
+     * The signing algorithms that KMS supports for this key.
      * </p>
      * <p>
      * This field appears in the response only when the <code>KeyUsage</code> of the public key is
@@ -88,13 +100,13 @@ public class GetPublicKeyResult extends com.amazonaws.AmazonWebServiceResult<com
      * <p>
      * The Amazon Resource Name (<a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) of the
-     * asymmetric CMK from which the public key was downloaded.
+     * asymmetric KMS key from which the public key was downloaded.
      * </p>
      * 
      * @param keyId
      *        The Amazon Resource Name (<a
      *        href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) of
-     *        the asymmetric CMK from which the public key was downloaded.
+     *        the asymmetric KMS key from which the public key was downloaded.
      */
 
     public void setKeyId(String keyId) {
@@ -105,12 +117,12 @@ public class GetPublicKeyResult extends com.amazonaws.AmazonWebServiceResult<com
      * <p>
      * The Amazon Resource Name (<a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) of the
-     * asymmetric CMK from which the public key was downloaded.
+     * asymmetric KMS key from which the public key was downloaded.
      * </p>
      * 
      * @return The Amazon Resource Name (<a
      *         href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) of
-     *         the asymmetric CMK from which the public key was downloaded.
+     *         the asymmetric KMS key from which the public key was downloaded.
      */
 
     public String getKeyId() {
@@ -121,13 +133,13 @@ public class GetPublicKeyResult extends com.amazonaws.AmazonWebServiceResult<com
      * <p>
      * The Amazon Resource Name (<a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) of the
-     * asymmetric CMK from which the public key was downloaded.
+     * asymmetric KMS key from which the public key was downloaded.
      * </p>
      * 
      * @param keyId
      *        The Amazon Resource Name (<a
      *        href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) of
-     *        the asymmetric CMK from which the public key was downloaded.
+     *        the asymmetric KMS key from which the public key was downloaded.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -142,8 +154,8 @@ public class GetPublicKeyResult extends com.amazonaws.AmazonWebServiceResult<com
      * </p>
      * <p>
      * The value is a DER-encoded X.509 public key, also known as <code>SubjectPublicKeyInfo</code> (SPKI), as defined
-     * in <a href="https://tools.ietf.org/html/rfc5280">RFC 5280</a>. When you use the HTTP API or the AWS CLI, the
-     * value is Base64-encoded. Otherwise, it is not Base64-encoded.
+     * in <a href="https://tools.ietf.org/html/rfc5280">RFC 5280</a>. When you use the HTTP API or the Amazon Web
+     * Services CLI, the value is Base64-encoded. Otherwise, it is not Base64-encoded.
      * </p>
      * <p/>
      * <p>
@@ -162,7 +174,7 @@ public class GetPublicKeyResult extends com.amazonaws.AmazonWebServiceResult<com
      *        <p>
      *        The value is a DER-encoded X.509 public key, also known as <code>SubjectPublicKeyInfo</code> (SPKI), as
      *        defined in <a href="https://tools.ietf.org/html/rfc5280">RFC 5280</a>. When you use the HTTP API or the
-     *        AWS CLI, the value is Base64-encoded. Otherwise, it is not Base64-encoded.
+     *        Amazon Web Services CLI, the value is Base64-encoded. Otherwise, it is not Base64-encoded.
      *        </p>
      */
 
@@ -176,8 +188,8 @@ public class GetPublicKeyResult extends com.amazonaws.AmazonWebServiceResult<com
      * </p>
      * <p>
      * The value is a DER-encoded X.509 public key, also known as <code>SubjectPublicKeyInfo</code> (SPKI), as defined
-     * in <a href="https://tools.ietf.org/html/rfc5280">RFC 5280</a>. When you use the HTTP API or the AWS CLI, the
-     * value is Base64-encoded. Otherwise, it is not Base64-encoded.
+     * in <a href="https://tools.ietf.org/html/rfc5280">RFC 5280</a>. When you use the HTTP API or the Amazon Web
+     * Services CLI, the value is Base64-encoded. Otherwise, it is not Base64-encoded.
      * </p>
      * <p/>
      * <p>
@@ -192,7 +204,7 @@ public class GetPublicKeyResult extends com.amazonaws.AmazonWebServiceResult<com
      *         <p>
      *         The value is a DER-encoded X.509 public key, also known as <code>SubjectPublicKeyInfo</code> (SPKI), as
      *         defined in <a href="https://tools.ietf.org/html/rfc5280">RFC 5280</a>. When you use the HTTP API or the
-     *         AWS CLI, the value is Base64-encoded. Otherwise, it is not Base64-encoded.
+     *         Amazon Web Services CLI, the value is Base64-encoded. Otherwise, it is not Base64-encoded.
      *         </p>
      */
 
@@ -206,8 +218,8 @@ public class GetPublicKeyResult extends com.amazonaws.AmazonWebServiceResult<com
      * </p>
      * <p>
      * The value is a DER-encoded X.509 public key, also known as <code>SubjectPublicKeyInfo</code> (SPKI), as defined
-     * in <a href="https://tools.ietf.org/html/rfc5280">RFC 5280</a>. When you use the HTTP API or the AWS CLI, the
-     * value is Base64-encoded. Otherwise, it is not Base64-encoded.
+     * in <a href="https://tools.ietf.org/html/rfc5280">RFC 5280</a>. When you use the HTTP API or the Amazon Web
+     * Services CLI, the value is Base64-encoded. Otherwise, it is not Base64-encoded.
      * </p>
      * <p/>
      * <p>
@@ -226,7 +238,7 @@ public class GetPublicKeyResult extends com.amazonaws.AmazonWebServiceResult<com
      *        <p>
      *        The value is a DER-encoded X.509 public key, also known as <code>SubjectPublicKeyInfo</code> (SPKI), as
      *        defined in <a href="https://tools.ietf.org/html/rfc5280">RFC 5280</a>. When you use the HTTP API or the
-     *        AWS CLI, the value is Base64-encoded. Otherwise, it is not Base64-encoded.
+     *        Amazon Web Services CLI, the value is Base64-encoded. Otherwise, it is not Base64-encoded.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -238,44 +250,96 @@ public class GetPublicKeyResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The type of the of the public key that was downloaded.
+     * Instead, use the <code>KeySpec</code> field in the <code>GetPublicKey</code> response.
+     * </p>
+     * <p>
+     * The <code>KeySpec</code> and <code>CustomerMasterKeySpec</code> fields have the same value. We recommend that you
+     * use the <code>KeySpec</code> field in your code. However, to avoid breaking changes, KMS will support both
+     * fields.
      * </p>
      * 
      * @param customerMasterKeySpec
-     *        The type of the of the public key that was downloaded.
+     *        Instead, use the <code>KeySpec</code> field in the <code>GetPublicKey</code> response.</p>
+     *        <p>
+     *        The <code>KeySpec</code> and <code>CustomerMasterKeySpec</code> fields have the same value. We recommend
+     *        that you use the <code>KeySpec</code> field in your code. However, to avoid breaking changes, KMS will
+     *        support both fields.
      * @see CustomerMasterKeySpec
      */
-
+    @Deprecated
     public void setCustomerMasterKeySpec(String customerMasterKeySpec) {
         this.customerMasterKeySpec = customerMasterKeySpec;
     }
 
     /**
      * <p>
-     * The type of the of the public key that was downloaded.
+     * Instead, use the <code>KeySpec</code> field in the <code>GetPublicKey</code> response.
+     * </p>
+     * <p>
+     * The <code>KeySpec</code> and <code>CustomerMasterKeySpec</code> fields have the same value. We recommend that you
+     * use the <code>KeySpec</code> field in your code. However, to avoid breaking changes, KMS will support both
+     * fields.
      * </p>
      * 
-     * @return The type of the of the public key that was downloaded.
+     * @return Instead, use the <code>KeySpec</code> field in the <code>GetPublicKey</code> response.</p>
+     *         <p>
+     *         The <code>KeySpec</code> and <code>CustomerMasterKeySpec</code> fields have the same value. We recommend
+     *         that you use the <code>KeySpec</code> field in your code. However, to avoid breaking changes, KMS will
+     *         support both fields.
      * @see CustomerMasterKeySpec
      */
-
+    @Deprecated
     public String getCustomerMasterKeySpec() {
         return this.customerMasterKeySpec;
     }
 
     /**
      * <p>
-     * The type of the of the public key that was downloaded.
+     * Instead, use the <code>KeySpec</code> field in the <code>GetPublicKey</code> response.
+     * </p>
+     * <p>
+     * The <code>KeySpec</code> and <code>CustomerMasterKeySpec</code> fields have the same value. We recommend that you
+     * use the <code>KeySpec</code> field in your code. However, to avoid breaking changes, KMS will support both
+     * fields.
      * </p>
      * 
      * @param customerMasterKeySpec
-     *        The type of the of the public key that was downloaded.
+     *        Instead, use the <code>KeySpec</code> field in the <code>GetPublicKey</code> response.</p>
+     *        <p>
+     *        The <code>KeySpec</code> and <code>CustomerMasterKeySpec</code> fields have the same value. We recommend
+     *        that you use the <code>KeySpec</code> field in your code. However, to avoid breaking changes, KMS will
+     *        support both fields.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see CustomerMasterKeySpec
      */
-
+    @Deprecated
     public GetPublicKeyResult withCustomerMasterKeySpec(String customerMasterKeySpec) {
         setCustomerMasterKeySpec(customerMasterKeySpec);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Instead, use the <code>KeySpec</code> field in the <code>GetPublicKey</code> response.
+     * </p>
+     * <p>
+     * The <code>KeySpec</code> and <code>CustomerMasterKeySpec</code> fields have the same value. We recommend that you
+     * use the <code>KeySpec</code> field in your code. However, to avoid breaking changes, KMS will support both
+     * fields.
+     * </p>
+     * 
+     * @param customerMasterKeySpec
+     *        Instead, use the <code>KeySpec</code> field in the <code>GetPublicKey</code> response.</p>
+     *        <p>
+     *        The <code>KeySpec</code> and <code>CustomerMasterKeySpec</code> fields have the same value. We recommend
+     *        that you use the <code>KeySpec</code> field in your code. However, to avoid breaking changes, KMS will
+     *        support both fields.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see CustomerMasterKeySpec
+     */
+    @Deprecated
+    public GetPublicKeyResult withCustomerMasterKeySpec(CustomerMasterKeySpec customerMasterKeySpec) {
+        this.customerMasterKeySpec = customerMasterKeySpec.toString();
         return this;
     }
 
@@ -284,14 +348,57 @@ public class GetPublicKeyResult extends com.amazonaws.AmazonWebServiceResult<com
      * The type of the of the public key that was downloaded.
      * </p>
      * 
-     * @param customerMasterKeySpec
+     * @param keySpec
      *        The type of the of the public key that was downloaded.
-     * @return Returns a reference to this object so that method calls can be chained together.
-     * @see CustomerMasterKeySpec
+     * @see KeySpec
      */
 
-    public GetPublicKeyResult withCustomerMasterKeySpec(CustomerMasterKeySpec customerMasterKeySpec) {
-        this.customerMasterKeySpec = customerMasterKeySpec.toString();
+    public void setKeySpec(String keySpec) {
+        this.keySpec = keySpec;
+    }
+
+    /**
+     * <p>
+     * The type of the of the public key that was downloaded.
+     * </p>
+     * 
+     * @return The type of the of the public key that was downloaded.
+     * @see KeySpec
+     */
+
+    public String getKeySpec() {
+        return this.keySpec;
+    }
+
+    /**
+     * <p>
+     * The type of the of the public key that was downloaded.
+     * </p>
+     * 
+     * @param keySpec
+     *        The type of the of the public key that was downloaded.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see KeySpec
+     */
+
+    public GetPublicKeyResult withKeySpec(String keySpec) {
+        setKeySpec(keySpec);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The type of the of the public key that was downloaded.
+     * </p>
+     * 
+     * @param keySpec
+     *        The type of the of the public key that was downloaded.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see KeySpec
+     */
+
+    public GetPublicKeyResult withKeySpec(KeySpec keySpec) {
+        this.keySpec = keySpec.toString();
         return this;
     }
 
@@ -301,7 +408,7 @@ public class GetPublicKeyResult extends com.amazonaws.AmazonWebServiceResult<com
      * </p>
      * <p>
      * This information is critical. If a public key with <code>SIGN_VERIFY</code> key usage encrypts data outside of
-     * AWS KMS, the ciphertext cannot be decrypted.
+     * KMS, the ciphertext cannot be decrypted.
      * </p>
      * 
      * @param keyUsage
@@ -309,7 +416,7 @@ public class GetPublicKeyResult extends com.amazonaws.AmazonWebServiceResult<com
      *        <code>SIGN_VERIFY</code>. </p>
      *        <p>
      *        This information is critical. If a public key with <code>SIGN_VERIFY</code> key usage encrypts data
-     *        outside of AWS KMS, the ciphertext cannot be decrypted.
+     *        outside of KMS, the ciphertext cannot be decrypted.
      * @see KeyUsageType
      */
 
@@ -323,14 +430,14 @@ public class GetPublicKeyResult extends com.amazonaws.AmazonWebServiceResult<com
      * </p>
      * <p>
      * This information is critical. If a public key with <code>SIGN_VERIFY</code> key usage encrypts data outside of
-     * AWS KMS, the ciphertext cannot be decrypted.
+     * KMS, the ciphertext cannot be decrypted.
      * </p>
      * 
      * @return The permitted use of the public key. Valid values are <code>ENCRYPT_DECRYPT</code> or
      *         <code>SIGN_VERIFY</code>. </p>
      *         <p>
      *         This information is critical. If a public key with <code>SIGN_VERIFY</code> key usage encrypts data
-     *         outside of AWS KMS, the ciphertext cannot be decrypted.
+     *         outside of KMS, the ciphertext cannot be decrypted.
      * @see KeyUsageType
      */
 
@@ -344,7 +451,7 @@ public class GetPublicKeyResult extends com.amazonaws.AmazonWebServiceResult<com
      * </p>
      * <p>
      * This information is critical. If a public key with <code>SIGN_VERIFY</code> key usage encrypts data outside of
-     * AWS KMS, the ciphertext cannot be decrypted.
+     * KMS, the ciphertext cannot be decrypted.
      * </p>
      * 
      * @param keyUsage
@@ -352,7 +459,7 @@ public class GetPublicKeyResult extends com.amazonaws.AmazonWebServiceResult<com
      *        <code>SIGN_VERIFY</code>. </p>
      *        <p>
      *        This information is critical. If a public key with <code>SIGN_VERIFY</code> key usage encrypts data
-     *        outside of AWS KMS, the ciphertext cannot be decrypted.
+     *        outside of KMS, the ciphertext cannot be decrypted.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see KeyUsageType
      */
@@ -368,7 +475,7 @@ public class GetPublicKeyResult extends com.amazonaws.AmazonWebServiceResult<com
      * </p>
      * <p>
      * This information is critical. If a public key with <code>SIGN_VERIFY</code> key usage encrypts data outside of
-     * AWS KMS, the ciphertext cannot be decrypted.
+     * KMS, the ciphertext cannot be decrypted.
      * </p>
      * 
      * @param keyUsage
@@ -376,7 +483,7 @@ public class GetPublicKeyResult extends com.amazonaws.AmazonWebServiceResult<com
      *        <code>SIGN_VERIFY</code>. </p>
      *        <p>
      *        This information is critical. If a public key with <code>SIGN_VERIFY</code> key usage encrypts data
-     *        outside of AWS KMS, the ciphertext cannot be decrypted.
+     *        outside of KMS, the ciphertext cannot be decrypted.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see KeyUsageType
      */
@@ -388,10 +495,10 @@ public class GetPublicKeyResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The encryption algorithms that AWS KMS supports for this key.
+     * The encryption algorithms that KMS supports for this key.
      * </p>
      * <p>
-     * This information is critical. If a public key encrypts data outside of AWS KMS by using an unsupported encryption
+     * This information is critical. If a public key encrypts data outside of KMS by using an unsupported encryption
      * algorithm, the ciphertext cannot be decrypted.
      * </p>
      * <p>
@@ -399,9 +506,9 @@ public class GetPublicKeyResult extends com.amazonaws.AmazonWebServiceResult<com
      * <code>ENCRYPT_DECRYPT</code>.
      * </p>
      * 
-     * @return The encryption algorithms that AWS KMS supports for this key. </p>
+     * @return The encryption algorithms that KMS supports for this key. </p>
      *         <p>
-     *         This information is critical. If a public key encrypts data outside of AWS KMS by using an unsupported
+     *         This information is critical. If a public key encrypts data outside of KMS by using an unsupported
      *         encryption algorithm, the ciphertext cannot be decrypted.
      *         </p>
      *         <p>
@@ -419,10 +526,10 @@ public class GetPublicKeyResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The encryption algorithms that AWS KMS supports for this key.
+     * The encryption algorithms that KMS supports for this key.
      * </p>
      * <p>
-     * This information is critical. If a public key encrypts data outside of AWS KMS by using an unsupported encryption
+     * This information is critical. If a public key encrypts data outside of KMS by using an unsupported encryption
      * algorithm, the ciphertext cannot be decrypted.
      * </p>
      * <p>
@@ -431,9 +538,9 @@ public class GetPublicKeyResult extends com.amazonaws.AmazonWebServiceResult<com
      * </p>
      * 
      * @param encryptionAlgorithms
-     *        The encryption algorithms that AWS KMS supports for this key. </p>
+     *        The encryption algorithms that KMS supports for this key. </p>
      *        <p>
-     *        This information is critical. If a public key encrypts data outside of AWS KMS by using an unsupported
+     *        This information is critical. If a public key encrypts data outside of KMS by using an unsupported
      *        encryption algorithm, the ciphertext cannot be decrypted.
      *        </p>
      *        <p>
@@ -453,10 +560,10 @@ public class GetPublicKeyResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The encryption algorithms that AWS KMS supports for this key.
+     * The encryption algorithms that KMS supports for this key.
      * </p>
      * <p>
-     * This information is critical. If a public key encrypts data outside of AWS KMS by using an unsupported encryption
+     * This information is critical. If a public key encrypts data outside of KMS by using an unsupported encryption
      * algorithm, the ciphertext cannot be decrypted.
      * </p>
      * <p>
@@ -470,9 +577,9 @@ public class GetPublicKeyResult extends com.amazonaws.AmazonWebServiceResult<com
      * </p>
      * 
      * @param encryptionAlgorithms
-     *        The encryption algorithms that AWS KMS supports for this key. </p>
+     *        The encryption algorithms that KMS supports for this key. </p>
      *        <p>
-     *        This information is critical. If a public key encrypts data outside of AWS KMS by using an unsupported
+     *        This information is critical. If a public key encrypts data outside of KMS by using an unsupported
      *        encryption algorithm, the ciphertext cannot be decrypted.
      *        </p>
      *        <p>
@@ -494,10 +601,10 @@ public class GetPublicKeyResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The encryption algorithms that AWS KMS supports for this key.
+     * The encryption algorithms that KMS supports for this key.
      * </p>
      * <p>
-     * This information is critical. If a public key encrypts data outside of AWS KMS by using an unsupported encryption
+     * This information is critical. If a public key encrypts data outside of KMS by using an unsupported encryption
      * algorithm, the ciphertext cannot be decrypted.
      * </p>
      * <p>
@@ -506,9 +613,9 @@ public class GetPublicKeyResult extends com.amazonaws.AmazonWebServiceResult<com
      * </p>
      * 
      * @param encryptionAlgorithms
-     *        The encryption algorithms that AWS KMS supports for this key. </p>
+     *        The encryption algorithms that KMS supports for this key. </p>
      *        <p>
-     *        This information is critical. If a public key encrypts data outside of AWS KMS by using an unsupported
+     *        This information is critical. If a public key encrypts data outside of KMS by using an unsupported
      *        encryption algorithm, the ciphertext cannot be decrypted.
      *        </p>
      *        <p>
@@ -525,10 +632,10 @@ public class GetPublicKeyResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The encryption algorithms that AWS KMS supports for this key.
+     * The encryption algorithms that KMS supports for this key.
      * </p>
      * <p>
-     * This information is critical. If a public key encrypts data outside of AWS KMS by using an unsupported encryption
+     * This information is critical. If a public key encrypts data outside of KMS by using an unsupported encryption
      * algorithm, the ciphertext cannot be decrypted.
      * </p>
      * <p>
@@ -537,9 +644,9 @@ public class GetPublicKeyResult extends com.amazonaws.AmazonWebServiceResult<com
      * </p>
      * 
      * @param encryptionAlgorithms
-     *        The encryption algorithms that AWS KMS supports for this key. </p>
+     *        The encryption algorithms that KMS supports for this key. </p>
      *        <p>
-     *        This information is critical. If a public key encrypts data outside of AWS KMS by using an unsupported
+     *        This information is critical. If a public key encrypts data outside of KMS by using an unsupported
      *        encryption algorithm, the ciphertext cannot be decrypted.
      *        </p>
      *        <p>
@@ -565,14 +672,14 @@ public class GetPublicKeyResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The signing algorithms that AWS KMS supports for this key.
+     * The signing algorithms that KMS supports for this key.
      * </p>
      * <p>
      * This field appears in the response only when the <code>KeyUsage</code> of the public key is
      * <code>SIGN_VERIFY</code>.
      * </p>
      * 
-     * @return The signing algorithms that AWS KMS supports for this key.</p>
+     * @return The signing algorithms that KMS supports for this key.</p>
      *         <p>
      *         This field appears in the response only when the <code>KeyUsage</code> of the public key is
      *         <code>SIGN_VERIFY</code>.
@@ -588,7 +695,7 @@ public class GetPublicKeyResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The signing algorithms that AWS KMS supports for this key.
+     * The signing algorithms that KMS supports for this key.
      * </p>
      * <p>
      * This field appears in the response only when the <code>KeyUsage</code> of the public key is
@@ -596,7 +703,7 @@ public class GetPublicKeyResult extends com.amazonaws.AmazonWebServiceResult<com
      * </p>
      * 
      * @param signingAlgorithms
-     *        The signing algorithms that AWS KMS supports for this key.</p>
+     *        The signing algorithms that KMS supports for this key.</p>
      *        <p>
      *        This field appears in the response only when the <code>KeyUsage</code> of the public key is
      *        <code>SIGN_VERIFY</code>.
@@ -614,7 +721,7 @@ public class GetPublicKeyResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The signing algorithms that AWS KMS supports for this key.
+     * The signing algorithms that KMS supports for this key.
      * </p>
      * <p>
      * This field appears in the response only when the <code>KeyUsage</code> of the public key is
@@ -627,7 +734,7 @@ public class GetPublicKeyResult extends com.amazonaws.AmazonWebServiceResult<com
      * </p>
      * 
      * @param signingAlgorithms
-     *        The signing algorithms that AWS KMS supports for this key.</p>
+     *        The signing algorithms that KMS supports for this key.</p>
      *        <p>
      *        This field appears in the response only when the <code>KeyUsage</code> of the public key is
      *        <code>SIGN_VERIFY</code>.
@@ -647,7 +754,7 @@ public class GetPublicKeyResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The signing algorithms that AWS KMS supports for this key.
+     * The signing algorithms that KMS supports for this key.
      * </p>
      * <p>
      * This field appears in the response only when the <code>KeyUsage</code> of the public key is
@@ -655,7 +762,7 @@ public class GetPublicKeyResult extends com.amazonaws.AmazonWebServiceResult<com
      * </p>
      * 
      * @param signingAlgorithms
-     *        The signing algorithms that AWS KMS supports for this key.</p>
+     *        The signing algorithms that KMS supports for this key.</p>
      *        <p>
      *        This field appears in the response only when the <code>KeyUsage</code> of the public key is
      *        <code>SIGN_VERIFY</code>.
@@ -670,7 +777,7 @@ public class GetPublicKeyResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The signing algorithms that AWS KMS supports for this key.
+     * The signing algorithms that KMS supports for this key.
      * </p>
      * <p>
      * This field appears in the response only when the <code>KeyUsage</code> of the public key is
@@ -678,7 +785,7 @@ public class GetPublicKeyResult extends com.amazonaws.AmazonWebServiceResult<com
      * </p>
      * 
      * @param signingAlgorithms
-     *        The signing algorithms that AWS KMS supports for this key.</p>
+     *        The signing algorithms that KMS supports for this key.</p>
      *        <p>
      *        This field appears in the response only when the <code>KeyUsage</code> of the public key is
      *        <code>SIGN_VERIFY</code>.
@@ -717,6 +824,8 @@ public class GetPublicKeyResult extends com.amazonaws.AmazonWebServiceResult<com
             sb.append("PublicKey: ").append(getPublicKey()).append(",");
         if (getCustomerMasterKeySpec() != null)
             sb.append("CustomerMasterKeySpec: ").append(getCustomerMasterKeySpec()).append(",");
+        if (getKeySpec() != null)
+            sb.append("KeySpec: ").append(getKeySpec()).append(",");
         if (getKeyUsage() != null)
             sb.append("KeyUsage: ").append(getKeyUsage()).append(",");
         if (getEncryptionAlgorithms() != null)
@@ -749,6 +858,10 @@ public class GetPublicKeyResult extends com.amazonaws.AmazonWebServiceResult<com
             return false;
         if (other.getCustomerMasterKeySpec() != null && other.getCustomerMasterKeySpec().equals(this.getCustomerMasterKeySpec()) == false)
             return false;
+        if (other.getKeySpec() == null ^ this.getKeySpec() == null)
+            return false;
+        if (other.getKeySpec() != null && other.getKeySpec().equals(this.getKeySpec()) == false)
+            return false;
         if (other.getKeyUsage() == null ^ this.getKeyUsage() == null)
             return false;
         if (other.getKeyUsage() != null && other.getKeyUsage().equals(this.getKeyUsage()) == false)
@@ -772,6 +885,7 @@ public class GetPublicKeyResult extends com.amazonaws.AmazonWebServiceResult<com
         hashCode = prime * hashCode + ((getKeyId() == null) ? 0 : getKeyId().hashCode());
         hashCode = prime * hashCode + ((getPublicKey() == null) ? 0 : getPublicKey().hashCode());
         hashCode = prime * hashCode + ((getCustomerMasterKeySpec() == null) ? 0 : getCustomerMasterKeySpec().hashCode());
+        hashCode = prime * hashCode + ((getKeySpec() == null) ? 0 : getKeySpec().hashCode());
         hashCode = prime * hashCode + ((getKeyUsage() == null) ? 0 : getKeyUsage().hashCode());
         hashCode = prime * hashCode + ((getEncryptionAlgorithms() == null) ? 0 : getEncryptionAlgorithms().hashCode());
         hashCode = prime * hashCode + ((getSigningAlgorithms() == null) ? 0 : getSigningAlgorithms().hashCode());

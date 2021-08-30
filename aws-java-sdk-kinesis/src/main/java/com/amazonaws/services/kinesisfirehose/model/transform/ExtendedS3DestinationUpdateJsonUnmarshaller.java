@@ -97,6 +97,11 @@ public class ExtendedS3DestinationUpdateJsonUnmarshaller implements Unmarshaller
                     extendedS3DestinationUpdate.setDataFormatConversionConfiguration(DataFormatConversionConfigurationJsonUnmarshaller.getInstance()
                             .unmarshall(context));
                 }
+                if (context.testExpression("DynamicPartitioningConfiguration", targetDepth)) {
+                    context.nextToken();
+                    extendedS3DestinationUpdate.setDynamicPartitioningConfiguration(DynamicPartitioningConfigurationJsonUnmarshaller.getInstance().unmarshall(
+                            context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

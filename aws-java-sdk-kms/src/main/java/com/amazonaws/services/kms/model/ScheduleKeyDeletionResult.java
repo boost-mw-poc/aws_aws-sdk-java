@@ -26,39 +26,39 @@ public class ScheduleKeyDeletionResult extends com.amazonaws.AmazonWebServiceRes
     /**
      * <p>
      * The Amazon Resource Name (<a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) of the CMK
-     * whose deletion is scheduled.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) of the KMS
+     * key whose deletion is scheduled.
      * </p>
      */
     private String keyId;
     /**
      * <p>
-     * The date and time after which AWS KMS deletes the customer master key (CMK).
+     * The date and time after which KMS deletes the KMS key.
      * </p>
      * <p>
-     * If the CMK is a multi-Region primary key with replica keys, this field does not appear. The deletion date for the
-     * primary key isn't known until its last replica key is deleted.
+     * If the KMS key is a multi-Region primary key with replica keys, this field does not appear. The deletion date for
+     * the primary key isn't known until its last replica key is deleted.
      * </p>
      */
     private java.util.Date deletionDate;
     /**
      * <p>
-     * The current status of the CMK.
+     * The current status of the KMS key.
      * </p>
      * <p>
-     * For more information about how key state affects the use of a CMK, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your CMK</a> in
-     * the <i>AWS Key Management Service Developer Guide</i>.
+     * For more information about how key state affects the use of a KMS key, see <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a>
+     * in the <i>Key Management Service Developer Guide</i>.
      * </p>
      */
     private String keyState;
     /**
      * <p>
-     * The waiting period before the CMK is deleted.
+     * The waiting period before the KMS key is deleted.
      * </p>
      * <p>
-     * If the CMK is a multi-Region primary key with replicas, the waiting period begins when the last of its replica
-     * keys is deleted. Otherwise, the waiting period begins immediately.
+     * If the KMS key is a multi-Region primary key with replicas, the waiting period begins when the last of its
+     * replica keys is deleted. Otherwise, the waiting period begins immediately.
      * </p>
      */
     private Integer pendingWindowInDays;
@@ -66,14 +66,14 @@ public class ScheduleKeyDeletionResult extends com.amazonaws.AmazonWebServiceRes
     /**
      * <p>
      * The Amazon Resource Name (<a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) of the CMK
-     * whose deletion is scheduled.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) of the KMS
+     * key whose deletion is scheduled.
      * </p>
      * 
      * @param keyId
      *        The Amazon Resource Name (<a
      *        href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) of
-     *        the CMK whose deletion is scheduled.
+     *        the KMS key whose deletion is scheduled.
      */
 
     public void setKeyId(String keyId) {
@@ -83,13 +83,13 @@ public class ScheduleKeyDeletionResult extends com.amazonaws.AmazonWebServiceRes
     /**
      * <p>
      * The Amazon Resource Name (<a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) of the CMK
-     * whose deletion is scheduled.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) of the KMS
+     * key whose deletion is scheduled.
      * </p>
      * 
      * @return The Amazon Resource Name (<a
      *         href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) of
-     *         the CMK whose deletion is scheduled.
+     *         the KMS key whose deletion is scheduled.
      */
 
     public String getKeyId() {
@@ -99,14 +99,14 @@ public class ScheduleKeyDeletionResult extends com.amazonaws.AmazonWebServiceRes
     /**
      * <p>
      * The Amazon Resource Name (<a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) of the CMK
-     * whose deletion is scheduled.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) of the KMS
+     * key whose deletion is scheduled.
      * </p>
      * 
      * @param keyId
      *        The Amazon Resource Name (<a
      *        href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) of
-     *        the CMK whose deletion is scheduled.
+     *        the KMS key whose deletion is scheduled.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -117,18 +117,18 @@ public class ScheduleKeyDeletionResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The date and time after which AWS KMS deletes the customer master key (CMK).
+     * The date and time after which KMS deletes the KMS key.
      * </p>
      * <p>
-     * If the CMK is a multi-Region primary key with replica keys, this field does not appear. The deletion date for the
-     * primary key isn't known until its last replica key is deleted.
+     * If the KMS key is a multi-Region primary key with replica keys, this field does not appear. The deletion date for
+     * the primary key isn't known until its last replica key is deleted.
      * </p>
      * 
      * @param deletionDate
-     *        The date and time after which AWS KMS deletes the customer master key (CMK).</p>
+     *        The date and time after which KMS deletes the KMS key.</p>
      *        <p>
-     *        If the CMK is a multi-Region primary key with replica keys, this field does not appear. The deletion date
-     *        for the primary key isn't known until its last replica key is deleted.
+     *        If the KMS key is a multi-Region primary key with replica keys, this field does not appear. The deletion
+     *        date for the primary key isn't known until its last replica key is deleted.
      */
 
     public void setDeletionDate(java.util.Date deletionDate) {
@@ -137,17 +137,17 @@ public class ScheduleKeyDeletionResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The date and time after which AWS KMS deletes the customer master key (CMK).
+     * The date and time after which KMS deletes the KMS key.
      * </p>
      * <p>
-     * If the CMK is a multi-Region primary key with replica keys, this field does not appear. The deletion date for the
-     * primary key isn't known until its last replica key is deleted.
+     * If the KMS key is a multi-Region primary key with replica keys, this field does not appear. The deletion date for
+     * the primary key isn't known until its last replica key is deleted.
      * </p>
      * 
-     * @return The date and time after which AWS KMS deletes the customer master key (CMK).</p>
+     * @return The date and time after which KMS deletes the KMS key.</p>
      *         <p>
-     *         If the CMK is a multi-Region primary key with replica keys, this field does not appear. The deletion date
-     *         for the primary key isn't known until its last replica key is deleted.
+     *         If the KMS key is a multi-Region primary key with replica keys, this field does not appear. The deletion
+     *         date for the primary key isn't known until its last replica key is deleted.
      */
 
     public java.util.Date getDeletionDate() {
@@ -156,18 +156,18 @@ public class ScheduleKeyDeletionResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The date and time after which AWS KMS deletes the customer master key (CMK).
+     * The date and time after which KMS deletes the KMS key.
      * </p>
      * <p>
-     * If the CMK is a multi-Region primary key with replica keys, this field does not appear. The deletion date for the
-     * primary key isn't known until its last replica key is deleted.
+     * If the KMS key is a multi-Region primary key with replica keys, this field does not appear. The deletion date for
+     * the primary key isn't known until its last replica key is deleted.
      * </p>
      * 
      * @param deletionDate
-     *        The date and time after which AWS KMS deletes the customer master key (CMK).</p>
+     *        The date and time after which KMS deletes the KMS key.</p>
      *        <p>
-     *        If the CMK is a multi-Region primary key with replica keys, this field does not appear. The deletion date
-     *        for the primary key isn't known until its last replica key is deleted.
+     *        If the KMS key is a multi-Region primary key with replica keys, this field does not appear. The deletion
+     *        date for the primary key isn't known until its last replica key is deleted.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -178,20 +178,20 @@ public class ScheduleKeyDeletionResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The current status of the CMK.
+     * The current status of the KMS key.
      * </p>
      * <p>
-     * For more information about how key state affects the use of a CMK, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your CMK</a> in
-     * the <i>AWS Key Management Service Developer Guide</i>.
+     * For more information about how key state affects the use of a KMS key, see <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a>
+     * in the <i>Key Management Service Developer Guide</i>.
      * </p>
      * 
      * @param keyState
-     *        The current status of the CMK.</p>
+     *        The current status of the KMS key.</p>
      *        <p>
-     *        For more information about how key state affects the use of a CMK, see <a
-     *        href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your
-     *        CMK</a> in the <i>AWS Key Management Service Developer Guide</i>.
+     *        For more information about how key state affects the use of a KMS key, see <a
+     *        href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS
+     *        key</a> in the <i>Key Management Service Developer Guide</i>.
      * @see KeyState
      */
 
@@ -201,19 +201,19 @@ public class ScheduleKeyDeletionResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The current status of the CMK.
+     * The current status of the KMS key.
      * </p>
      * <p>
-     * For more information about how key state affects the use of a CMK, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your CMK</a> in
-     * the <i>AWS Key Management Service Developer Guide</i>.
+     * For more information about how key state affects the use of a KMS key, see <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a>
+     * in the <i>Key Management Service Developer Guide</i>.
      * </p>
      * 
-     * @return The current status of the CMK.</p>
+     * @return The current status of the KMS key.</p>
      *         <p>
-     *         For more information about how key state affects the use of a CMK, see <a
-     *         href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your
-     *         CMK</a> in the <i>AWS Key Management Service Developer Guide</i>.
+     *         For more information about how key state affects the use of a KMS key, see <a
+     *         href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS
+     *         key</a> in the <i>Key Management Service Developer Guide</i>.
      * @see KeyState
      */
 
@@ -223,20 +223,20 @@ public class ScheduleKeyDeletionResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The current status of the CMK.
+     * The current status of the KMS key.
      * </p>
      * <p>
-     * For more information about how key state affects the use of a CMK, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your CMK</a> in
-     * the <i>AWS Key Management Service Developer Guide</i>.
+     * For more information about how key state affects the use of a KMS key, see <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a>
+     * in the <i>Key Management Service Developer Guide</i>.
      * </p>
      * 
      * @param keyState
-     *        The current status of the CMK.</p>
+     *        The current status of the KMS key.</p>
      *        <p>
-     *        For more information about how key state affects the use of a CMK, see <a
-     *        href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your
-     *        CMK</a> in the <i>AWS Key Management Service Developer Guide</i>.
+     *        For more information about how key state affects the use of a KMS key, see <a
+     *        href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS
+     *        key</a> in the <i>Key Management Service Developer Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see KeyState
      */
@@ -248,20 +248,20 @@ public class ScheduleKeyDeletionResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The current status of the CMK.
+     * The current status of the KMS key.
      * </p>
      * <p>
-     * For more information about how key state affects the use of a CMK, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your CMK</a> in
-     * the <i>AWS Key Management Service Developer Guide</i>.
+     * For more information about how key state affects the use of a KMS key, see <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a>
+     * in the <i>Key Management Service Developer Guide</i>.
      * </p>
      * 
      * @param keyState
-     *        The current status of the CMK.</p>
+     *        The current status of the KMS key.</p>
      *        <p>
-     *        For more information about how key state affects the use of a CMK, see <a
-     *        href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your
-     *        CMK</a> in the <i>AWS Key Management Service Developer Guide</i>.
+     *        For more information about how key state affects the use of a KMS key, see <a
+     *        href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS
+     *        key</a> in the <i>Key Management Service Developer Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see KeyState
      */
@@ -273,17 +273,17 @@ public class ScheduleKeyDeletionResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The waiting period before the CMK is deleted.
+     * The waiting period before the KMS key is deleted.
      * </p>
      * <p>
-     * If the CMK is a multi-Region primary key with replicas, the waiting period begins when the last of its replica
-     * keys is deleted. Otherwise, the waiting period begins immediately.
+     * If the KMS key is a multi-Region primary key with replicas, the waiting period begins when the last of its
+     * replica keys is deleted. Otherwise, the waiting period begins immediately.
      * </p>
      * 
      * @param pendingWindowInDays
-     *        The waiting period before the CMK is deleted. </p>
+     *        The waiting period before the KMS key is deleted. </p>
      *        <p>
-     *        If the CMK is a multi-Region primary key with replicas, the waiting period begins when the last of its
+     *        If the KMS key is a multi-Region primary key with replicas, the waiting period begins when the last of its
      *        replica keys is deleted. Otherwise, the waiting period begins immediately.
      */
 
@@ -293,17 +293,17 @@ public class ScheduleKeyDeletionResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The waiting period before the CMK is deleted.
+     * The waiting period before the KMS key is deleted.
      * </p>
      * <p>
-     * If the CMK is a multi-Region primary key with replicas, the waiting period begins when the last of its replica
-     * keys is deleted. Otherwise, the waiting period begins immediately.
+     * If the KMS key is a multi-Region primary key with replicas, the waiting period begins when the last of its
+     * replica keys is deleted. Otherwise, the waiting period begins immediately.
      * </p>
      * 
-     * @return The waiting period before the CMK is deleted. </p>
+     * @return The waiting period before the KMS key is deleted. </p>
      *         <p>
-     *         If the CMK is a multi-Region primary key with replicas, the waiting period begins when the last of its
-     *         replica keys is deleted. Otherwise, the waiting period begins immediately.
+     *         If the KMS key is a multi-Region primary key with replicas, the waiting period begins when the last of
+     *         its replica keys is deleted. Otherwise, the waiting period begins immediately.
      */
 
     public Integer getPendingWindowInDays() {
@@ -312,17 +312,17 @@ public class ScheduleKeyDeletionResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The waiting period before the CMK is deleted.
+     * The waiting period before the KMS key is deleted.
      * </p>
      * <p>
-     * If the CMK is a multi-Region primary key with replicas, the waiting period begins when the last of its replica
-     * keys is deleted. Otherwise, the waiting period begins immediately.
+     * If the KMS key is a multi-Region primary key with replicas, the waiting period begins when the last of its
+     * replica keys is deleted. Otherwise, the waiting period begins immediately.
      * </p>
      * 
      * @param pendingWindowInDays
-     *        The waiting period before the CMK is deleted. </p>
+     *        The waiting period before the KMS key is deleted. </p>
      *        <p>
-     *        If the CMK is a multi-Region primary key with replicas, the waiting period begins when the last of its
+     *        If the KMS key is a multi-Region primary key with replicas, the waiting period begins when the last of its
      *        replica keys is deleted. Otherwise, the waiting period begins immediately.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

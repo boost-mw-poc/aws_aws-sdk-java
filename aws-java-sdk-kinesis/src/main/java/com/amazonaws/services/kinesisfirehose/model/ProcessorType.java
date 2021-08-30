@@ -20,7 +20,10 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public enum ProcessorType {
 
-    Lambda("Lambda");
+    RecordDeAggregation("RecordDeAggregation"),
+    Lambda("Lambda"),
+    MetadataExtraction("MetadataExtraction"),
+    AppendDelimiterToRecord("AppendDelimiterToRecord");
 
     private String value;
 

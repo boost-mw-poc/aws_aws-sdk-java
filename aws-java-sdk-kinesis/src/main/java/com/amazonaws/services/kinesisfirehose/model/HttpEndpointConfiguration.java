@@ -32,6 +32,13 @@ public class HttpEndpointConfiguration implements Serializable, Cloneable, Struc
      * <p>
      * The URL of the HTTP endpoint selected as the destination.
      * </p>
+     * <important>
+     * <p>
+     * If you choose an HTTP endpoint as your destination, review and follow the instructions in the <a
+     * href="https://docs.aws.amazon.com/firehose/latest/dev/httpdeliveryrequestresponse.html">Appendix - HTTP Endpoint
+     * Delivery Request and Response Specifications</a>.
+     * </p>
+     * </important>
      */
     private String url;
     /**
@@ -51,9 +58,21 @@ public class HttpEndpointConfiguration implements Serializable, Cloneable, Struc
      * <p>
      * The URL of the HTTP endpoint selected as the destination.
      * </p>
+     * <important>
+     * <p>
+     * If you choose an HTTP endpoint as your destination, review and follow the instructions in the <a
+     * href="https://docs.aws.amazon.com/firehose/latest/dev/httpdeliveryrequestresponse.html">Appendix - HTTP Endpoint
+     * Delivery Request and Response Specifications</a>.
+     * </p>
+     * </important>
      * 
      * @param url
-     *        The URL of the HTTP endpoint selected as the destination.
+     *        The URL of the HTTP endpoint selected as the destination.</p> <important>
+     *        <p>
+     *        If you choose an HTTP endpoint as your destination, review and follow the instructions in the <a
+     *        href="https://docs.aws.amazon.com/firehose/latest/dev/httpdeliveryrequestresponse.html">Appendix - HTTP
+     *        Endpoint Delivery Request and Response Specifications</a>.
+     *        </p>
      */
 
     public void setUrl(String url) {
@@ -64,8 +83,20 @@ public class HttpEndpointConfiguration implements Serializable, Cloneable, Struc
      * <p>
      * The URL of the HTTP endpoint selected as the destination.
      * </p>
+     * <important>
+     * <p>
+     * If you choose an HTTP endpoint as your destination, review and follow the instructions in the <a
+     * href="https://docs.aws.amazon.com/firehose/latest/dev/httpdeliveryrequestresponse.html">Appendix - HTTP Endpoint
+     * Delivery Request and Response Specifications</a>.
+     * </p>
+     * </important>
      * 
-     * @return The URL of the HTTP endpoint selected as the destination.
+     * @return The URL of the HTTP endpoint selected as the destination.</p> <important>
+     *         <p>
+     *         If you choose an HTTP endpoint as your destination, review and follow the instructions in the <a
+     *         href="https://docs.aws.amazon.com/firehose/latest/dev/httpdeliveryrequestresponse.html">Appendix - HTTP
+     *         Endpoint Delivery Request and Response Specifications</a>.
+     *         </p>
      */
 
     public String getUrl() {
@@ -76,9 +107,21 @@ public class HttpEndpointConfiguration implements Serializable, Cloneable, Struc
      * <p>
      * The URL of the HTTP endpoint selected as the destination.
      * </p>
+     * <important>
+     * <p>
+     * If you choose an HTTP endpoint as your destination, review and follow the instructions in the <a
+     * href="https://docs.aws.amazon.com/firehose/latest/dev/httpdeliveryrequestresponse.html">Appendix - HTTP Endpoint
+     * Delivery Request and Response Specifications</a>.
+     * </p>
+     * </important>
      * 
      * @param url
-     *        The URL of the HTTP endpoint selected as the destination.
+     *        The URL of the HTTP endpoint selected as the destination.</p> <important>
+     *        <p>
+     *        If you choose an HTTP endpoint as your destination, review and follow the instructions in the <a
+     *        href="https://docs.aws.amazon.com/firehose/latest/dev/httpdeliveryrequestresponse.html">Appendix - HTTP
+     *        Endpoint Delivery Request and Response Specifications</a>.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

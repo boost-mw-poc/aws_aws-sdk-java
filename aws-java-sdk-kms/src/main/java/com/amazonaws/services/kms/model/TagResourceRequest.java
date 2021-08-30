@@ -27,10 +27,10 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * Identifies a customer managed CMK in the account and Region.
+     * Identifies a customer managed key in the account and Region.
      * </p>
      * <p>
-     * Specify the key ID or key ARN of the CMK.
+     * Specify the key ID or key ARN of the KMS key.
      * </p>
      * <p>
      * For example:
@@ -48,7 +48,7 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </li>
      * </ul>
      * <p>
-     * To get the key ID and key ARN for a CMK, use <a>ListKeys</a> or <a>DescribeKey</a>.
+     * To get the key ID and key ARN for a KMS key, use <a>ListKeys</a> or <a>DescribeKey</a>.
      * </p>
      */
     private String keyId;
@@ -60,18 +60,18 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
      * Each tag consists of a tag key and a tag value. The tag value can be an empty (null) string.
      * </p>
      * <p>
-     * You cannot have more than one tag on a CMK with the same tag key. If you specify an existing tag key with a
-     * different tag value, AWS KMS replaces the current tag value with the specified one.
+     * You cannot have more than one tag on a KMS key with the same tag key. If you specify an existing tag key with a
+     * different tag value, KMS replaces the current tag value with the specified one.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<Tag> tags;
 
     /**
      * <p>
-     * Identifies a customer managed CMK in the account and Region.
+     * Identifies a customer managed key in the account and Region.
      * </p>
      * <p>
-     * Specify the key ID or key ARN of the CMK.
+     * Specify the key ID or key ARN of the KMS key.
      * </p>
      * <p>
      * For example:
@@ -89,13 +89,13 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </li>
      * </ul>
      * <p>
-     * To get the key ID and key ARN for a CMK, use <a>ListKeys</a> or <a>DescribeKey</a>.
+     * To get the key ID and key ARN for a KMS key, use <a>ListKeys</a> or <a>DescribeKey</a>.
      * </p>
      * 
      * @param keyId
-     *        Identifies a customer managed CMK in the account and Region.</p>
+     *        Identifies a customer managed key in the account and Region.</p>
      *        <p>
-     *        Specify the key ID or key ARN of the CMK.
+     *        Specify the key ID or key ARN of the KMS key.
      *        </p>
      *        <p>
      *        For example:
@@ -113,7 +113,7 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        </li>
      *        </ul>
      *        <p>
-     *        To get the key ID and key ARN for a CMK, use <a>ListKeys</a> or <a>DescribeKey</a>.
+     *        To get the key ID and key ARN for a KMS key, use <a>ListKeys</a> or <a>DescribeKey</a>.
      */
 
     public void setKeyId(String keyId) {
@@ -122,10 +122,10 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * Identifies a customer managed CMK in the account and Region.
+     * Identifies a customer managed key in the account and Region.
      * </p>
      * <p>
-     * Specify the key ID or key ARN of the CMK.
+     * Specify the key ID or key ARN of the KMS key.
      * </p>
      * <p>
      * For example:
@@ -143,12 +143,12 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </li>
      * </ul>
      * <p>
-     * To get the key ID and key ARN for a CMK, use <a>ListKeys</a> or <a>DescribeKey</a>.
+     * To get the key ID and key ARN for a KMS key, use <a>ListKeys</a> or <a>DescribeKey</a>.
      * </p>
      * 
-     * @return Identifies a customer managed CMK in the account and Region.</p>
+     * @return Identifies a customer managed key in the account and Region.</p>
      *         <p>
-     *         Specify the key ID or key ARN of the CMK.
+     *         Specify the key ID or key ARN of the KMS key.
      *         </p>
      *         <p>
      *         For example:
@@ -166,7 +166,7 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
      *         </li>
      *         </ul>
      *         <p>
-     *         To get the key ID and key ARN for a CMK, use <a>ListKeys</a> or <a>DescribeKey</a>.
+     *         To get the key ID and key ARN for a KMS key, use <a>ListKeys</a> or <a>DescribeKey</a>.
      */
 
     public String getKeyId() {
@@ -175,10 +175,10 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * Identifies a customer managed CMK in the account and Region.
+     * Identifies a customer managed key in the account and Region.
      * </p>
      * <p>
-     * Specify the key ID or key ARN of the CMK.
+     * Specify the key ID or key ARN of the KMS key.
      * </p>
      * <p>
      * For example:
@@ -196,13 +196,13 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </li>
      * </ul>
      * <p>
-     * To get the key ID and key ARN for a CMK, use <a>ListKeys</a> or <a>DescribeKey</a>.
+     * To get the key ID and key ARN for a KMS key, use <a>ListKeys</a> or <a>DescribeKey</a>.
      * </p>
      * 
      * @param keyId
-     *        Identifies a customer managed CMK in the account and Region.</p>
+     *        Identifies a customer managed key in the account and Region.</p>
      *        <p>
-     *        Specify the key ID or key ARN of the CMK.
+     *        Specify the key ID or key ARN of the KMS key.
      *        </p>
      *        <p>
      *        For example:
@@ -220,7 +220,7 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        </li>
      *        </ul>
      *        <p>
-     *        To get the key ID and key ARN for a CMK, use <a>ListKeys</a> or <a>DescribeKey</a>.
+     *        To get the key ID and key ARN for a KMS key, use <a>ListKeys</a> or <a>DescribeKey</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -237,8 +237,8 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
      * Each tag consists of a tag key and a tag value. The tag value can be an empty (null) string.
      * </p>
      * <p>
-     * You cannot have more than one tag on a CMK with the same tag key. If you specify an existing tag key with a
-     * different tag value, AWS KMS replaces the current tag value with the specified one.
+     * You cannot have more than one tag on a KMS key with the same tag key. If you specify an existing tag key with a
+     * different tag value, KMS replaces the current tag value with the specified one.
      * </p>
      * 
      * @return One or more tags. </p>
@@ -246,8 +246,8 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
      *         Each tag consists of a tag key and a tag value. The tag value can be an empty (null) string.
      *         </p>
      *         <p>
-     *         You cannot have more than one tag on a CMK with the same tag key. If you specify an existing tag key with
-     *         a different tag value, AWS KMS replaces the current tag value with the specified one.
+     *         You cannot have more than one tag on a KMS key with the same tag key. If you specify an existing tag key
+     *         with a different tag value, KMS replaces the current tag value with the specified one.
      */
 
     public java.util.List<Tag> getTags() {
@@ -265,8 +265,8 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
      * Each tag consists of a tag key and a tag value. The tag value can be an empty (null) string.
      * </p>
      * <p>
-     * You cannot have more than one tag on a CMK with the same tag key. If you specify an existing tag key with a
-     * different tag value, AWS KMS replaces the current tag value with the specified one.
+     * You cannot have more than one tag on a KMS key with the same tag key. If you specify an existing tag key with a
+     * different tag value, KMS replaces the current tag value with the specified one.
      * </p>
      * 
      * @param tags
@@ -275,8 +275,8 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        Each tag consists of a tag key and a tag value. The tag value can be an empty (null) string.
      *        </p>
      *        <p>
-     *        You cannot have more than one tag on a CMK with the same tag key. If you specify an existing tag key with
-     *        a different tag value, AWS KMS replaces the current tag value with the specified one.
+     *        You cannot have more than one tag on a KMS key with the same tag key. If you specify an existing tag key
+     *        with a different tag value, KMS replaces the current tag value with the specified one.
      */
 
     public void setTags(java.util.Collection<Tag> tags) {
@@ -296,8 +296,8 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
      * Each tag consists of a tag key and a tag value. The tag value can be an empty (null) string.
      * </p>
      * <p>
-     * You cannot have more than one tag on a CMK with the same tag key. If you specify an existing tag key with a
-     * different tag value, AWS KMS replaces the current tag value with the specified one.
+     * You cannot have more than one tag on a KMS key with the same tag key. If you specify an existing tag key with a
+     * different tag value, KMS replaces the current tag value with the specified one.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -311,8 +311,8 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        Each tag consists of a tag key and a tag value. The tag value can be an empty (null) string.
      *        </p>
      *        <p>
-     *        You cannot have more than one tag on a CMK with the same tag key. If you specify an existing tag key with
-     *        a different tag value, AWS KMS replaces the current tag value with the specified one.
+     *        You cannot have more than one tag on a KMS key with the same tag key. If you specify an existing tag key
+     *        with a different tag value, KMS replaces the current tag value with the specified one.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -334,8 +334,8 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
      * Each tag consists of a tag key and a tag value. The tag value can be an empty (null) string.
      * </p>
      * <p>
-     * You cannot have more than one tag on a CMK with the same tag key. If you specify an existing tag key with a
-     * different tag value, AWS KMS replaces the current tag value with the specified one.
+     * You cannot have more than one tag on a KMS key with the same tag key. If you specify an existing tag key with a
+     * different tag value, KMS replaces the current tag value with the specified one.
      * </p>
      * 
      * @param tags
@@ -344,8 +344,8 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        Each tag consists of a tag key and a tag value. The tag value can be an empty (null) string.
      *        </p>
      *        <p>
-     *        You cannot have more than one tag on a CMK with the same tag key. If you specify an existing tag key with
-     *        a different tag value, AWS KMS replaces the current tag value with the specified one.
+     *        You cannot have more than one tag on a KMS key with the same tag key. If you specify an existing tag key
+     *        with a different tag value, KMS replaces the current tag value with the specified one.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

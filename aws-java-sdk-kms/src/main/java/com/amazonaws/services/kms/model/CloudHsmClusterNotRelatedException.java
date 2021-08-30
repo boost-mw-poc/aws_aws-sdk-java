@@ -16,8 +16,8 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The request was rejected because the specified AWS CloudHSM cluster has a different cluster certificate than the
- * original cluster. You cannot use the operation to specify an unrelated cluster.
+ * The request was rejected because the specified CloudHSM cluster has a different cluster certificate than the original
+ * cluster. You cannot use the operation to specify an unrelated cluster.
  * </p>
  * <p>
  * Specify a cluster that shares a backup history with the original cluster. This includes clusters that were created

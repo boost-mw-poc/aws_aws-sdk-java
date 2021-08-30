@@ -812,6 +812,19 @@ public class AbstractAmazonCloudFormationAsync extends AbstractAmazonCloudFormat
     }
 
     @Override
+    public java.util.concurrent.Future<RollbackStackResult> rollbackStackAsync(RollbackStackRequest request) {
+
+        return rollbackStackAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<RollbackStackResult> rollbackStackAsync(RollbackStackRequest request,
+            com.amazonaws.handlers.AsyncHandler<RollbackStackRequest, RollbackStackResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<SetStackPolicyResult> setStackPolicyAsync(SetStackPolicyRequest request) {
 
         return setStackPolicyAsync(request, null);

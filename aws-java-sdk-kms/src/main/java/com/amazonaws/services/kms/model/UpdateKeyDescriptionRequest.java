@@ -27,10 +27,10 @@ public class UpdateKeyDescriptionRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Updates the description of the specified customer master key (CMK).
+     * Updates the description of the specified KMS key.
      * </p>
      * <p>
-     * Specify the key ID or key ARN of the CMK.
+     * Specify the key ID or key ARN of the KMS key.
      * </p>
      * <p>
      * For example:
@@ -48,23 +48,23 @@ public class UpdateKeyDescriptionRequest extends com.amazonaws.AmazonWebServiceR
      * </li>
      * </ul>
      * <p>
-     * To get the key ID and key ARN for a CMK, use <a>ListKeys</a> or <a>DescribeKey</a>.
+     * To get the key ID and key ARN for a KMS key, use <a>ListKeys</a> or <a>DescribeKey</a>.
      * </p>
      */
     private String keyId;
     /**
      * <p>
-     * New description for the CMK.
+     * New description for the KMS key.
      * </p>
      */
     private String description;
 
     /**
      * <p>
-     * Updates the description of the specified customer master key (CMK).
+     * Updates the description of the specified KMS key.
      * </p>
      * <p>
-     * Specify the key ID or key ARN of the CMK.
+     * Specify the key ID or key ARN of the KMS key.
      * </p>
      * <p>
      * For example:
@@ -82,13 +82,13 @@ public class UpdateKeyDescriptionRequest extends com.amazonaws.AmazonWebServiceR
      * </li>
      * </ul>
      * <p>
-     * To get the key ID and key ARN for a CMK, use <a>ListKeys</a> or <a>DescribeKey</a>.
+     * To get the key ID and key ARN for a KMS key, use <a>ListKeys</a> or <a>DescribeKey</a>.
      * </p>
      * 
      * @param keyId
-     *        Updates the description of the specified customer master key (CMK).</p>
+     *        Updates the description of the specified KMS key.</p>
      *        <p>
-     *        Specify the key ID or key ARN of the CMK.
+     *        Specify the key ID or key ARN of the KMS key.
      *        </p>
      *        <p>
      *        For example:
@@ -106,7 +106,7 @@ public class UpdateKeyDescriptionRequest extends com.amazonaws.AmazonWebServiceR
      *        </li>
      *        </ul>
      *        <p>
-     *        To get the key ID and key ARN for a CMK, use <a>ListKeys</a> or <a>DescribeKey</a>.
+     *        To get the key ID and key ARN for a KMS key, use <a>ListKeys</a> or <a>DescribeKey</a>.
      */
 
     public void setKeyId(String keyId) {
@@ -115,10 +115,10 @@ public class UpdateKeyDescriptionRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Updates the description of the specified customer master key (CMK).
+     * Updates the description of the specified KMS key.
      * </p>
      * <p>
-     * Specify the key ID or key ARN of the CMK.
+     * Specify the key ID or key ARN of the KMS key.
      * </p>
      * <p>
      * For example:
@@ -136,12 +136,12 @@ public class UpdateKeyDescriptionRequest extends com.amazonaws.AmazonWebServiceR
      * </li>
      * </ul>
      * <p>
-     * To get the key ID and key ARN for a CMK, use <a>ListKeys</a> or <a>DescribeKey</a>.
+     * To get the key ID and key ARN for a KMS key, use <a>ListKeys</a> or <a>DescribeKey</a>.
      * </p>
      * 
-     * @return Updates the description of the specified customer master key (CMK).</p>
+     * @return Updates the description of the specified KMS key.</p>
      *         <p>
-     *         Specify the key ID or key ARN of the CMK.
+     *         Specify the key ID or key ARN of the KMS key.
      *         </p>
      *         <p>
      *         For example:
@@ -159,7 +159,7 @@ public class UpdateKeyDescriptionRequest extends com.amazonaws.AmazonWebServiceR
      *         </li>
      *         </ul>
      *         <p>
-     *         To get the key ID and key ARN for a CMK, use <a>ListKeys</a> or <a>DescribeKey</a>.
+     *         To get the key ID and key ARN for a KMS key, use <a>ListKeys</a> or <a>DescribeKey</a>.
      */
 
     public String getKeyId() {
@@ -168,10 +168,10 @@ public class UpdateKeyDescriptionRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Updates the description of the specified customer master key (CMK).
+     * Updates the description of the specified KMS key.
      * </p>
      * <p>
-     * Specify the key ID or key ARN of the CMK.
+     * Specify the key ID or key ARN of the KMS key.
      * </p>
      * <p>
      * For example:
@@ -189,13 +189,13 @@ public class UpdateKeyDescriptionRequest extends com.amazonaws.AmazonWebServiceR
      * </li>
      * </ul>
      * <p>
-     * To get the key ID and key ARN for a CMK, use <a>ListKeys</a> or <a>DescribeKey</a>.
+     * To get the key ID and key ARN for a KMS key, use <a>ListKeys</a> or <a>DescribeKey</a>.
      * </p>
      * 
      * @param keyId
-     *        Updates the description of the specified customer master key (CMK).</p>
+     *        Updates the description of the specified KMS key.</p>
      *        <p>
-     *        Specify the key ID or key ARN of the CMK.
+     *        Specify the key ID or key ARN of the KMS key.
      *        </p>
      *        <p>
      *        For example:
@@ -213,7 +213,7 @@ public class UpdateKeyDescriptionRequest extends com.amazonaws.AmazonWebServiceR
      *        </li>
      *        </ul>
      *        <p>
-     *        To get the key ID and key ARN for a CMK, use <a>ListKeys</a> or <a>DescribeKey</a>.
+     *        To get the key ID and key ARN for a KMS key, use <a>ListKeys</a> or <a>DescribeKey</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -224,11 +224,11 @@ public class UpdateKeyDescriptionRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * New description for the CMK.
+     * New description for the KMS key.
      * </p>
      * 
      * @param description
-     *        New description for the CMK.
+     *        New description for the KMS key.
      */
 
     public void setDescription(String description) {
@@ -237,10 +237,10 @@ public class UpdateKeyDescriptionRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * New description for the CMK.
+     * New description for the KMS key.
      * </p>
      * 
-     * @return New description for the CMK.
+     * @return New description for the KMS key.
      */
 
     public String getDescription() {
@@ -249,11 +249,11 @@ public class UpdateKeyDescriptionRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * New description for the CMK.
+     * New description for the KMS key.
      * </p>
      * 
      * @param description
-     *        New description for the CMK.
+     *        New description for the KMS key.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

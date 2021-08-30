@@ -33,7 +33,7 @@ public class DescribeStackInstanceRequest extends com.amazonaws.AmazonWebService
     private String stackSetName;
     /**
      * <p>
-     * The ID of an account that's associated with this stack instance.
+     * The ID of an Amazon Web Services account that's associated with this stack instance.
      * </p>
      */
     private String stackInstanceAccount;
@@ -62,9 +62,10 @@ public class DescribeStackInstanceRequest extends com.amazonaws.AmazonWebService
      * If you are signed in to a delegated administrator account, specify <code>DELEGATED_ADMIN</code>.
      * </p>
      * <p>
-     * Your account must be registered as a delegated administrator in the management account. For more information, see
-     * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html">
-     * Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
+     * Your Amazon Web Services account must be registered as a delegated administrator in the management account. For
+     * more information, see <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html"
+     * >Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * </li>
      * </ul>
@@ -113,11 +114,11 @@ public class DescribeStackInstanceRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The ID of an account that's associated with this stack instance.
+     * The ID of an Amazon Web Services account that's associated with this stack instance.
      * </p>
      * 
      * @param stackInstanceAccount
-     *        The ID of an account that's associated with this stack instance.
+     *        The ID of an Amazon Web Services account that's associated with this stack instance.
      */
 
     public void setStackInstanceAccount(String stackInstanceAccount) {
@@ -126,10 +127,10 @@ public class DescribeStackInstanceRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The ID of an account that's associated with this stack instance.
+     * The ID of an Amazon Web Services account that's associated with this stack instance.
      * </p>
      * 
-     * @return The ID of an account that's associated with this stack instance.
+     * @return The ID of an Amazon Web Services account that's associated with this stack instance.
      */
 
     public String getStackInstanceAccount() {
@@ -138,11 +139,11 @@ public class DescribeStackInstanceRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The ID of an account that's associated with this stack instance.
+     * The ID of an Amazon Web Services account that's associated with this stack instance.
      * </p>
      * 
      * @param stackInstanceAccount
-     *        The ID of an account that's associated with this stack instance.
+     *        The ID of an Amazon Web Services account that's associated with this stack instance.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -210,9 +211,10 @@ public class DescribeStackInstanceRequest extends com.amazonaws.AmazonWebService
      * If you are signed in to a delegated administrator account, specify <code>DELEGATED_ADMIN</code>.
      * </p>
      * <p>
-     * Your account must be registered as a delegated administrator in the management account. For more information, see
-     * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html">
-     * Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
+     * Your Amazon Web Services account must be registered as a delegated administrator in the management account. For
+     * more information, see <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html"
+     * >Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * </li>
      * </ul>
@@ -235,8 +237,8 @@ public class DescribeStackInstanceRequest extends com.amazonaws.AmazonWebService
      *        If you are signed in to a delegated administrator account, specify <code>DELEGATED_ADMIN</code>.
      *        </p>
      *        <p>
-     *        Your account must be registered as a delegated administrator in the management account. For more
-     *        information, see <a href=
+     *        Your Amazon Web Services account must be registered as a delegated administrator in the management
+     *        account. For more information, see <a href=
      *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html"
      *        >Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
      *        </p>
@@ -267,9 +269,10 @@ public class DescribeStackInstanceRequest extends com.amazonaws.AmazonWebService
      * If you are signed in to a delegated administrator account, specify <code>DELEGATED_ADMIN</code>.
      * </p>
      * <p>
-     * Your account must be registered as a delegated administrator in the management account. For more information, see
-     * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html">
-     * Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
+     * Your Amazon Web Services account must be registered as a delegated administrator in the management account. For
+     * more information, see <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html"
+     * >Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * </li>
      * </ul>
@@ -291,8 +294,8 @@ public class DescribeStackInstanceRequest extends com.amazonaws.AmazonWebService
      *         If you are signed in to a delegated administrator account, specify <code>DELEGATED_ADMIN</code>.
      *         </p>
      *         <p>
-     *         Your account must be registered as a delegated administrator in the management account. For more
-     *         information, see <a href=
+     *         Your Amazon Web Services account must be registered as a delegated administrator in the management
+     *         account. For more information, see <a href=
      *         "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html"
      *         >Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
      *         </p>
@@ -323,9 +326,10 @@ public class DescribeStackInstanceRequest extends com.amazonaws.AmazonWebService
      * If you are signed in to a delegated administrator account, specify <code>DELEGATED_ADMIN</code>.
      * </p>
      * <p>
-     * Your account must be registered as a delegated administrator in the management account. For more information, see
-     * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html">
-     * Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
+     * Your Amazon Web Services account must be registered as a delegated administrator in the management account. For
+     * more information, see <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html"
+     * >Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * </li>
      * </ul>
@@ -348,8 +352,8 @@ public class DescribeStackInstanceRequest extends com.amazonaws.AmazonWebService
      *        If you are signed in to a delegated administrator account, specify <code>DELEGATED_ADMIN</code>.
      *        </p>
      *        <p>
-     *        Your account must be registered as a delegated administrator in the management account. For more
-     *        information, see <a href=
+     *        Your Amazon Web Services account must be registered as a delegated administrator in the management
+     *        account. For more information, see <a href=
      *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html"
      *        >Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
      *        </p>
@@ -382,9 +386,10 @@ public class DescribeStackInstanceRequest extends com.amazonaws.AmazonWebService
      * If you are signed in to a delegated administrator account, specify <code>DELEGATED_ADMIN</code>.
      * </p>
      * <p>
-     * Your account must be registered as a delegated administrator in the management account. For more information, see
-     * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html">
-     * Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
+     * Your Amazon Web Services account must be registered as a delegated administrator in the management account. For
+     * more information, see <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html"
+     * >Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * </li>
      * </ul>
@@ -407,8 +412,8 @@ public class DescribeStackInstanceRequest extends com.amazonaws.AmazonWebService
      *        If you are signed in to a delegated administrator account, specify <code>DELEGATED_ADMIN</code>.
      *        </p>
      *        <p>
-     *        Your account must be registered as a delegated administrator in the management account. For more
-     *        information, see <a href=
+     *        Your Amazon Web Services account must be registered as a delegated administrator in the management
+     *        account. For more information, see <a href=
      *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html"
      *        >Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
      *        </p>

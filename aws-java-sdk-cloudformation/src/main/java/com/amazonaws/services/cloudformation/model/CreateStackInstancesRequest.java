@@ -33,8 +33,8 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
     private String stackSetName;
     /**
      * <p>
-     * [Self-managed permissions] The names of one or more accounts that you want to create stack instances in the
-     * specified Region(s) for.
+     * [Self-managed permissions] The names of one or more Amazon Web Services accounts that you want to create stack
+     * instances in the specified Region(s) for.
      * </p>
      * <p>
      * You can specify <code>Accounts</code> or <code>DeploymentTargets</code>, but not both.
@@ -53,7 +53,8 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
     private DeploymentTargets deploymentTargets;
     /**
      * <p>
-     * The names of one or more Regions where you want to create stack instances using the specified accounts.
+     * The names of one or more Regions where you want to create stack instances using the specified Amazon Web Services
+     * accounts.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> regions;
@@ -146,9 +147,10 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * If you are signed in to a delegated administrator account, specify <code>DELEGATED_ADMIN</code>.
      * </p>
      * <p>
-     * Your account must be registered as a delegated administrator in the management account. For more information, see
-     * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html">
-     * Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
+     * Your Amazon Web Services account must be registered as a delegated administrator in the management account. For
+     * more information, see <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html"
+     * >Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * </li>
      * </ul>
@@ -197,15 +199,15 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * [Self-managed permissions] The names of one or more accounts that you want to create stack instances in the
-     * specified Region(s) for.
+     * [Self-managed permissions] The names of one or more Amazon Web Services accounts that you want to create stack
+     * instances in the specified Region(s) for.
      * </p>
      * <p>
      * You can specify <code>Accounts</code> or <code>DeploymentTargets</code>, but not both.
      * </p>
      * 
-     * @return [Self-managed permissions] The names of one or more accounts that you want to create stack instances in
-     *         the specified Region(s) for.</p>
+     * @return [Self-managed permissions] The names of one or more Amazon Web Services accounts that you want to create
+     *         stack instances in the specified Region(s) for.</p>
      *         <p>
      *         You can specify <code>Accounts</code> or <code>DeploymentTargets</code>, but not both.
      */
@@ -219,16 +221,16 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * [Self-managed permissions] The names of one or more accounts that you want to create stack instances in the
-     * specified Region(s) for.
+     * [Self-managed permissions] The names of one or more Amazon Web Services accounts that you want to create stack
+     * instances in the specified Region(s) for.
      * </p>
      * <p>
      * You can specify <code>Accounts</code> or <code>DeploymentTargets</code>, but not both.
      * </p>
      * 
      * @param accounts
-     *        [Self-managed permissions] The names of one or more accounts that you want to create stack instances in
-     *        the specified Region(s) for.</p>
+     *        [Self-managed permissions] The names of one or more Amazon Web Services accounts that you want to create
+     *        stack instances in the specified Region(s) for.</p>
      *        <p>
      *        You can specify <code>Accounts</code> or <code>DeploymentTargets</code>, but not both.
      */
@@ -244,8 +246,8 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * [Self-managed permissions] The names of one or more accounts that you want to create stack instances in the
-     * specified Region(s) for.
+     * [Self-managed permissions] The names of one or more Amazon Web Services accounts that you want to create stack
+     * instances in the specified Region(s) for.
      * </p>
      * <p>
      * You can specify <code>Accounts</code> or <code>DeploymentTargets</code>, but not both.
@@ -257,8 +259,8 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * 
      * @param accounts
-     *        [Self-managed permissions] The names of one or more accounts that you want to create stack instances in
-     *        the specified Region(s) for.</p>
+     *        [Self-managed permissions] The names of one or more Amazon Web Services accounts that you want to create
+     *        stack instances in the specified Region(s) for.</p>
      *        <p>
      *        You can specify <code>Accounts</code> or <code>DeploymentTargets</code>, but not both.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -276,16 +278,16 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * [Self-managed permissions] The names of one or more accounts that you want to create stack instances in the
-     * specified Region(s) for.
+     * [Self-managed permissions] The names of one or more Amazon Web Services accounts that you want to create stack
+     * instances in the specified Region(s) for.
      * </p>
      * <p>
      * You can specify <code>Accounts</code> or <code>DeploymentTargets</code>, but not both.
      * </p>
      * 
      * @param accounts
-     *        [Self-managed permissions] The names of one or more accounts that you want to create stack instances in
-     *        the specified Region(s) for.</p>
+     *        [Self-managed permissions] The names of one or more Amazon Web Services accounts that you want to create
+     *        stack instances in the specified Region(s) for.</p>
      *        <p>
      *        You can specify <code>Accounts</code> or <code>DeploymentTargets</code>, but not both.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -359,10 +361,12 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The names of one or more Regions where you want to create stack instances using the specified accounts.
+     * The names of one or more Regions where you want to create stack instances using the specified Amazon Web Services
+     * accounts.
      * </p>
      * 
-     * @return The names of one or more Regions where you want to create stack instances using the specified accounts.
+     * @return The names of one or more Regions where you want to create stack instances using the specified Amazon Web
+     *         Services accounts.
      */
 
     public java.util.List<String> getRegions() {
@@ -374,11 +378,13 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The names of one or more Regions where you want to create stack instances using the specified accounts.
+     * The names of one or more Regions where you want to create stack instances using the specified Amazon Web Services
+     * accounts.
      * </p>
      * 
      * @param regions
-     *        The names of one or more Regions where you want to create stack instances using the specified accounts.
+     *        The names of one or more Regions where you want to create stack instances using the specified Amazon Web
+     *        Services accounts.
      */
 
     public void setRegions(java.util.Collection<String> regions) {
@@ -392,7 +398,8 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The names of one or more Regions where you want to create stack instances using the specified accounts.
+     * The names of one or more Regions where you want to create stack instances using the specified Amazon Web Services
+     * accounts.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -401,7 +408,8 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * 
      * @param regions
-     *        The names of one or more Regions where you want to create stack instances using the specified accounts.
+     *        The names of one or more Regions where you want to create stack instances using the specified Amazon Web
+     *        Services accounts.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -417,11 +425,13 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The names of one or more Regions where you want to create stack instances using the specified accounts.
+     * The names of one or more Regions where you want to create stack instances using the specified Amazon Web Services
+     * accounts.
      * </p>
      * 
      * @param regions
-     *        The names of one or more Regions where you want to create stack instances using the specified accounts.
+     *        The names of one or more Regions where you want to create stack instances using the specified Amazon Web
+     *        Services accounts.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -877,7 +887,7 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * 
      * @param operationId
-     *        The unique identifier for this stack set operation. </p>
+     *        The unique identifier for this stack set operation.</p>
      *        <p>
      *        The operation ID also functions as an idempotency token, to ensure that CloudFormation performs the stack
      *        set operation only once, even if you retry the request multiple times. You might retry stack set operation
@@ -912,7 +922,7 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * <code>OUTDATED</code>.
      * </p>
      * 
-     * @return The unique identifier for this stack set operation. </p>
+     * @return The unique identifier for this stack set operation.</p>
      *         <p>
      *         The operation ID also functions as an idempotency token, to ensure that CloudFormation performs the stack
      *         set operation only once, even if you retry the request multiple times. You might retry stack set
@@ -948,7 +958,7 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * 
      * @param operationId
-     *        The unique identifier for this stack set operation. </p>
+     *        The unique identifier for this stack set operation.</p>
      *        <p>
      *        The operation ID also functions as an idempotency token, to ensure that CloudFormation performs the stack
      *        set operation only once, even if you retry the request multiple times. You might retry stack set operation
@@ -987,9 +997,10 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * If you are signed in to a delegated administrator account, specify <code>DELEGATED_ADMIN</code>.
      * </p>
      * <p>
-     * Your account must be registered as a delegated administrator in the management account. For more information, see
-     * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html">
-     * Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
+     * Your Amazon Web Services account must be registered as a delegated administrator in the management account. For
+     * more information, see <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html"
+     * >Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * </li>
      * </ul>
@@ -1012,8 +1023,8 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      *        If you are signed in to a delegated administrator account, specify <code>DELEGATED_ADMIN</code>.
      *        </p>
      *        <p>
-     *        Your account must be registered as a delegated administrator in the management account. For more
-     *        information, see <a href=
+     *        Your Amazon Web Services account must be registered as a delegated administrator in the management
+     *        account. For more information, see <a href=
      *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html"
      *        >Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
      *        </p>
@@ -1044,9 +1055,10 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * If you are signed in to a delegated administrator account, specify <code>DELEGATED_ADMIN</code>.
      * </p>
      * <p>
-     * Your account must be registered as a delegated administrator in the management account. For more information, see
-     * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html">
-     * Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
+     * Your Amazon Web Services account must be registered as a delegated administrator in the management account. For
+     * more information, see <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html"
+     * >Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * </li>
      * </ul>
@@ -1068,8 +1080,8 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      *         If you are signed in to a delegated administrator account, specify <code>DELEGATED_ADMIN</code>.
      *         </p>
      *         <p>
-     *         Your account must be registered as a delegated administrator in the management account. For more
-     *         information, see <a href=
+     *         Your Amazon Web Services account must be registered as a delegated administrator in the management
+     *         account. For more information, see <a href=
      *         "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html"
      *         >Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
      *         </p>
@@ -1100,9 +1112,10 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * If you are signed in to a delegated administrator account, specify <code>DELEGATED_ADMIN</code>.
      * </p>
      * <p>
-     * Your account must be registered as a delegated administrator in the management account. For more information, see
-     * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html">
-     * Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
+     * Your Amazon Web Services account must be registered as a delegated administrator in the management account. For
+     * more information, see <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html"
+     * >Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * </li>
      * </ul>
@@ -1125,8 +1138,8 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      *        If you are signed in to a delegated administrator account, specify <code>DELEGATED_ADMIN</code>.
      *        </p>
      *        <p>
-     *        Your account must be registered as a delegated administrator in the management account. For more
-     *        information, see <a href=
+     *        Your Amazon Web Services account must be registered as a delegated administrator in the management
+     *        account. For more information, see <a href=
      *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html"
      *        >Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
      *        </p>
@@ -1159,9 +1172,10 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * If you are signed in to a delegated administrator account, specify <code>DELEGATED_ADMIN</code>.
      * </p>
      * <p>
-     * Your account must be registered as a delegated administrator in the management account. For more information, see
-     * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html">
-     * Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
+     * Your Amazon Web Services account must be registered as a delegated administrator in the management account. For
+     * more information, see <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html"
+     * >Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * </li>
      * </ul>
@@ -1184,8 +1198,8 @@ public class CreateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      *        If you are signed in to a delegated administrator account, specify <code>DELEGATED_ADMIN</code>.
      *        </p>
      *        <p>
-     *        Your account must be registered as a delegated administrator in the management account. For more
-     *        information, see <a href=
+     *        Your Amazon Web Services account must be registered as a delegated administrator in the management
+     *        account. For more information, see <a href=
      *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html"
      *        >Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
      *        </p>

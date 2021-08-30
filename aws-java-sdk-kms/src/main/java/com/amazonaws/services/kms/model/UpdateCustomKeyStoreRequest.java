@@ -35,24 +35,24 @@ public class UpdateCustomKeyStoreRequest extends com.amazonaws.AmazonWebServiceR
     /**
      * <p>
      * Changes the friendly name of the custom key store to the value that you specify. The custom key store name must
-     * be unique in the AWS account.
+     * be unique in the Amazon Web Services account.
      * </p>
      */
     private String newCustomKeyStoreName;
     /**
      * <p>
-     * Enter the current password of the <code>kmsuser</code> crypto user (CU) in the AWS CloudHSM cluster that is
+     * Enter the current password of the <code>kmsuser</code> crypto user (CU) in the CloudHSM cluster that is
      * associated with the custom key store.
      * </p>
      * <p>
-     * This parameter tells AWS KMS the current password of the <code>kmsuser</code> crypto user (CU). It does not set
-     * or change the password of any users in the AWS CloudHSM cluster.
+     * This parameter tells KMS the current password of the <code>kmsuser</code> crypto user (CU). It does not set or
+     * change the password of any users in the CloudHSM cluster.
      * </p>
      */
     private String keyStorePassword;
     /**
      * <p>
-     * Associates the custom key store with a related AWS CloudHSM cluster.
+     * Associates the custom key store with a related CloudHSM cluster.
      * </p>
      * <p>
      * Enter the cluster ID of the cluster that you used to create the custom key store or a cluster that shares a
@@ -116,12 +116,12 @@ public class UpdateCustomKeyStoreRequest extends com.amazonaws.AmazonWebServiceR
     /**
      * <p>
      * Changes the friendly name of the custom key store to the value that you specify. The custom key store name must
-     * be unique in the AWS account.
+     * be unique in the Amazon Web Services account.
      * </p>
      * 
      * @param newCustomKeyStoreName
      *        Changes the friendly name of the custom key store to the value that you specify. The custom key store name
-     *        must be unique in the AWS account.
+     *        must be unique in the Amazon Web Services account.
      */
 
     public void setNewCustomKeyStoreName(String newCustomKeyStoreName) {
@@ -131,11 +131,11 @@ public class UpdateCustomKeyStoreRequest extends com.amazonaws.AmazonWebServiceR
     /**
      * <p>
      * Changes the friendly name of the custom key store to the value that you specify. The custom key store name must
-     * be unique in the AWS account.
+     * be unique in the Amazon Web Services account.
      * </p>
      * 
      * @return Changes the friendly name of the custom key store to the value that you specify. The custom key store
-     *         name must be unique in the AWS account.
+     *         name must be unique in the Amazon Web Services account.
      */
 
     public String getNewCustomKeyStoreName() {
@@ -145,12 +145,12 @@ public class UpdateCustomKeyStoreRequest extends com.amazonaws.AmazonWebServiceR
     /**
      * <p>
      * Changes the friendly name of the custom key store to the value that you specify. The custom key store name must
-     * be unique in the AWS account.
+     * be unique in the Amazon Web Services account.
      * </p>
      * 
      * @param newCustomKeyStoreName
      *        Changes the friendly name of the custom key store to the value that you specify. The custom key store name
-     *        must be unique in the AWS account.
+     *        must be unique in the Amazon Web Services account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -161,20 +161,20 @@ public class UpdateCustomKeyStoreRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Enter the current password of the <code>kmsuser</code> crypto user (CU) in the AWS CloudHSM cluster that is
+     * Enter the current password of the <code>kmsuser</code> crypto user (CU) in the CloudHSM cluster that is
      * associated with the custom key store.
      * </p>
      * <p>
-     * This parameter tells AWS KMS the current password of the <code>kmsuser</code> crypto user (CU). It does not set
-     * or change the password of any users in the AWS CloudHSM cluster.
+     * This parameter tells KMS the current password of the <code>kmsuser</code> crypto user (CU). It does not set or
+     * change the password of any users in the CloudHSM cluster.
      * </p>
      * 
      * @param keyStorePassword
-     *        Enter the current password of the <code>kmsuser</code> crypto user (CU) in the AWS CloudHSM cluster that
-     *        is associated with the custom key store.</p>
+     *        Enter the current password of the <code>kmsuser</code> crypto user (CU) in the CloudHSM cluster that is
+     *        associated with the custom key store.</p>
      *        <p>
-     *        This parameter tells AWS KMS the current password of the <code>kmsuser</code> crypto user (CU). It does
-     *        not set or change the password of any users in the AWS CloudHSM cluster.
+     *        This parameter tells KMS the current password of the <code>kmsuser</code> crypto user (CU). It does not
+     *        set or change the password of any users in the CloudHSM cluster.
      */
 
     public void setKeyStorePassword(String keyStorePassword) {
@@ -183,19 +183,19 @@ public class UpdateCustomKeyStoreRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Enter the current password of the <code>kmsuser</code> crypto user (CU) in the AWS CloudHSM cluster that is
+     * Enter the current password of the <code>kmsuser</code> crypto user (CU) in the CloudHSM cluster that is
      * associated with the custom key store.
      * </p>
      * <p>
-     * This parameter tells AWS KMS the current password of the <code>kmsuser</code> crypto user (CU). It does not set
-     * or change the password of any users in the AWS CloudHSM cluster.
+     * This parameter tells KMS the current password of the <code>kmsuser</code> crypto user (CU). It does not set or
+     * change the password of any users in the CloudHSM cluster.
      * </p>
      * 
-     * @return Enter the current password of the <code>kmsuser</code> crypto user (CU) in the AWS CloudHSM cluster that
-     *         is associated with the custom key store.</p>
+     * @return Enter the current password of the <code>kmsuser</code> crypto user (CU) in the CloudHSM cluster that is
+     *         associated with the custom key store.</p>
      *         <p>
-     *         This parameter tells AWS KMS the current password of the <code>kmsuser</code> crypto user (CU). It does
-     *         not set or change the password of any users in the AWS CloudHSM cluster.
+     *         This parameter tells KMS the current password of the <code>kmsuser</code> crypto user (CU). It does not
+     *         set or change the password of any users in the CloudHSM cluster.
      */
 
     public String getKeyStorePassword() {
@@ -204,20 +204,20 @@ public class UpdateCustomKeyStoreRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Enter the current password of the <code>kmsuser</code> crypto user (CU) in the AWS CloudHSM cluster that is
+     * Enter the current password of the <code>kmsuser</code> crypto user (CU) in the CloudHSM cluster that is
      * associated with the custom key store.
      * </p>
      * <p>
-     * This parameter tells AWS KMS the current password of the <code>kmsuser</code> crypto user (CU). It does not set
-     * or change the password of any users in the AWS CloudHSM cluster.
+     * This parameter tells KMS the current password of the <code>kmsuser</code> crypto user (CU). It does not set or
+     * change the password of any users in the CloudHSM cluster.
      * </p>
      * 
      * @param keyStorePassword
-     *        Enter the current password of the <code>kmsuser</code> crypto user (CU) in the AWS CloudHSM cluster that
-     *        is associated with the custom key store.</p>
+     *        Enter the current password of the <code>kmsuser</code> crypto user (CU) in the CloudHSM cluster that is
+     *        associated with the custom key store.</p>
      *        <p>
-     *        This parameter tells AWS KMS the current password of the <code>kmsuser</code> crypto user (CU). It does
-     *        not set or change the password of any users in the AWS CloudHSM cluster.
+     *        This parameter tells KMS the current password of the <code>kmsuser</code> crypto user (CU). It does not
+     *        set or change the password of any users in the CloudHSM cluster.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -228,7 +228,7 @@ public class UpdateCustomKeyStoreRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Associates the custom key store with a related AWS CloudHSM cluster.
+     * Associates the custom key store with a related CloudHSM cluster.
      * </p>
      * <p>
      * Enter the cluster ID of the cluster that you used to create the custom key store or a cluster that shares a
@@ -242,7 +242,7 @@ public class UpdateCustomKeyStoreRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * 
      * @param cloudHsmClusterId
-     *        Associates the custom key store with a related AWS CloudHSM cluster. </p>
+     *        Associates the custom key store with a related CloudHSM cluster. </p>
      *        <p>
      *        Enter the cluster ID of the cluster that you used to create the custom key store or a cluster that shares
      *        a backup history and has the same cluster certificate as the original cluster. You cannot use this
@@ -260,7 +260,7 @@ public class UpdateCustomKeyStoreRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Associates the custom key store with a related AWS CloudHSM cluster.
+     * Associates the custom key store with a related CloudHSM cluster.
      * </p>
      * <p>
      * Enter the cluster ID of the cluster that you used to create the custom key store or a cluster that shares a
@@ -273,7 +273,7 @@ public class UpdateCustomKeyStoreRequest extends com.amazonaws.AmazonWebServiceR
      * operation.
      * </p>
      * 
-     * @return Associates the custom key store with a related AWS CloudHSM cluster. </p>
+     * @return Associates the custom key store with a related CloudHSM cluster. </p>
      *         <p>
      *         Enter the cluster ID of the cluster that you used to create the custom key store or a cluster that shares
      *         a backup history and has the same cluster certificate as the original cluster. You cannot use this
@@ -292,7 +292,7 @@ public class UpdateCustomKeyStoreRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Associates the custom key store with a related AWS CloudHSM cluster.
+     * Associates the custom key store with a related CloudHSM cluster.
      * </p>
      * <p>
      * Enter the cluster ID of the cluster that you used to create the custom key store or a cluster that shares a
@@ -306,7 +306,7 @@ public class UpdateCustomKeyStoreRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * 
      * @param cloudHsmClusterId
-     *        Associates the custom key store with a related AWS CloudHSM cluster. </p>
+     *        Associates the custom key store with a related CloudHSM cluster. </p>
      *        <p>
      *        Enter the cluster ID of the cluster that you used to create the custom key store or a cluster that shares
      *        a backup history and has the same cluster certificate as the original cluster. You cannot use this

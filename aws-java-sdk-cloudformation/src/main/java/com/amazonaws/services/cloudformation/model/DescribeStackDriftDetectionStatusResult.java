@@ -171,7 +171,7 @@ public class DescribeStackDriftDetectionStatusResult extends com.amazonaws.Amazo
      * </p>
      * 
      * @param stackDriftDetectionId
-     *        The ID of the drift detection results of this operation. </p>
+     *        The ID of the drift detection results of this operation.</p>
      *        <p>
      *        CloudFormation generates new results, with a new drift detection ID, each time this operation is run.
      *        However, the number of reports CloudFormation retains for any given stack, and for how long, may vary.
@@ -190,7 +190,7 @@ public class DescribeStackDriftDetectionStatusResult extends com.amazonaws.Amazo
      * the number of reports CloudFormation retains for any given stack, and for how long, may vary.
      * </p>
      * 
-     * @return The ID of the drift detection results of this operation. </p>
+     * @return The ID of the drift detection results of this operation.</p>
      *         <p>
      *         CloudFormation generates new results, with a new drift detection ID, each time this operation is run.
      *         However, the number of reports CloudFormation retains for any given stack, and for how long, may vary.
@@ -210,7 +210,7 @@ public class DescribeStackDriftDetectionStatusResult extends com.amazonaws.Amazo
      * </p>
      * 
      * @param stackDriftDetectionId
-     *        The ID of the drift detection results of this operation. </p>
+     *        The ID of the drift detection results of this operation.</p>
      *        <p>
      *        CloudFormation generates new results, with a new drift detection ID, each time this operation is run.
      *        However, the number of reports CloudFormation retains for any given stack, and for how long, may vary.
@@ -252,7 +252,7 @@ public class DescribeStackDriftDetectionStatusResult extends com.amazonaws.Amazo
      * </ul>
      * 
      * @param stackDriftStatus
-     *        Status of the stack's actual configuration compared to its expected configuration. </p>
+     *        Status of the stack's actual configuration compared to its expected configuration.</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -312,7 +312,7 @@ public class DescribeStackDriftDetectionStatusResult extends com.amazonaws.Amazo
      * </li>
      * </ul>
      * 
-     * @return Status of the stack's actual configuration compared to its expected configuration. </p>
+     * @return Status of the stack's actual configuration compared to its expected configuration.</p>
      *         <ul>
      *         <li>
      *         <p>
@@ -373,7 +373,7 @@ public class DescribeStackDriftDetectionStatusResult extends com.amazonaws.Amazo
      * </ul>
      * 
      * @param stackDriftStatus
-     *        Status of the stack's actual configuration compared to its expected configuration. </p>
+     *        Status of the stack's actual configuration compared to its expected configuration.</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -436,7 +436,7 @@ public class DescribeStackDriftDetectionStatusResult extends com.amazonaws.Amazo
      * </ul>
      * 
      * @param stackDriftStatus
-     *        Status of the stack's actual configuration compared to its expected configuration. </p>
+     *        Status of the stack's actual configuration compared to its expected configuration.</p>
      *        <ul>
      *        <li>
      *        <p>

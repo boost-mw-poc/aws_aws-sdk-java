@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Contains metadata about a customer master key (CMK).
+ * Contains metadata about a KMS key.
  * </p>
  * <p>
  * This data type is used as a response element for the <a>CreateKey</a> and <a>DescribeKey</a> operations.
@@ -33,65 +33,65 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The twelve-digit account ID of the AWS account that owns the CMK.
+     * The twelve-digit account ID of the Amazon Web Services account that owns the KMS key.
      * </p>
      */
     private String aWSAccountId;
     /**
      * <p>
-     * The globally unique identifier for the CMK.
+     * The globally unique identifier for the KMS key.
      * </p>
      */
     private String keyId;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the CMK. For examples, see <a
-     * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-kms">AWS Key
-     * Management Service (AWS KMS)</a> in the Example ARNs section of the <i>AWS General Reference</i>.
+     * The Amazon Resource Name (ARN) of the KMS key. For examples, see <a
+     * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-kms">Key Management
+     * Service (KMS)</a> in the Example ARNs section of the <i>Amazon Web Services General Reference</i>.
      * </p>
      */
     private String arn;
     /**
      * <p>
-     * The date and time when the CMK was created.
+     * The date and time when the KMS key was created.
      * </p>
      */
     private java.util.Date creationDate;
     /**
      * <p>
-     * Specifies whether the CMK is enabled. When <code>KeyState</code> is <code>Enabled</code> this value is true,
+     * Specifies whether the KMS key is enabled. When <code>KeyState</code> is <code>Enabled</code> this value is true,
      * otherwise it is false.
      * </p>
      */
     private Boolean enabled;
     /**
      * <p>
-     * The description of the CMK.
+     * The description of the KMS key.
      * </p>
      */
     private String description;
     /**
      * <p>
      * The <a href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#cryptographic-operations">
-     * cryptographic operations</a> for which you can use the CMK.
+     * cryptographic operations</a> for which you can use the KMS key.
      * </p>
      */
     private String keyUsage;
     /**
      * <p>
-     * The current status of the CMK.
+     * The current status of the KMS key.
      * </p>
      * <p>
-     * For more information about how key state affects the use of a CMK, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your CMK</a> in
-     * the <i>AWS Key Management Service Developer Guide</i>.
+     * For more information about how key state affects the use of a KMS key, see <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a>
+     * in the <i>Key Management Service Developer Guide</i>.
      * </p>
      */
     private String keyState;
     /**
      * <p>
-     * The date and time after which AWS KMS deletes this CMK. This value is present only when the CMK is scheduled for
-     * deletion, that is, when its <code>KeyState</code> is <code>PendingDeletion</code>.
+     * The date and time after which KMS deletes this KMS key. This value is present only when the KMS key is scheduled
+     * for deletion, that is, when its <code>KeyState</code> is <code>PendingDeletion</code>.
      * </p>
      * <p>
      * When the primary key in a multi-Region key is scheduled for deletion but still has replica keys, its key state is
@@ -102,8 +102,8 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
     private java.util.Date deletionDate;
     /**
      * <p>
-     * The time at which the imported key material expires. When the key material expires, AWS KMS deletes the key
-     * material and the CMK becomes unusable. This value is present only for CMKs whose <code>Origin</code> is
+     * The time at which the imported key material expires. When the key material expires, KMS deletes the key material
+     * and the KMS key becomes unusable. This value is present only for KMS keys whose <code>Origin</code> is
      * <code>EXTERNAL</code> and whose <code>ExpirationModel</code> is <code>KEY_MATERIAL_EXPIRES</code>, otherwise this
      * value is omitted.
      * </p>
@@ -111,10 +111,10 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
     private java.util.Date validTo;
     /**
      * <p>
-     * The source of the CMK's key material. When this value is <code>AWS_KMS</code>, AWS KMS created the key material.
-     * When this value is <code>EXTERNAL</code>, the key material was imported from your existing key management
-     * infrastructure or the CMK lacks key material. When this value is <code>AWS_CLOUDHSM</code>, the key material was
-     * created in the AWS CloudHSM cluster associated with a custom key store.
+     * The source of the key material for the KMS key. When this value is <code>AWS_KMS</code>, KMS created the key
+     * material. When this value is <code>EXTERNAL</code>, the key material was imported or the KMS key doesn't have any
+     * key material. When this value is <code>AWS_CLOUDHSM</code>, the key material was created in the CloudHSM cluster
+     * associated with a custom key store.
      * </p>
      */
     private String origin;
@@ -122,97 +122,111 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * A unique identifier for the <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/custom-key-store-overview.html">custom key store</a>
-     * that contains the CMK. This value is present only when the CMK is created in a custom key store.
+     * that contains the KMS key. This value is present only when the KMS key is created in a custom key store.
      * </p>
      */
     private String customKeyStoreId;
     /**
      * <p>
-     * The cluster ID of the AWS CloudHSM cluster that contains the key material for the CMK. When you create a CMK in a
-     * <a href="https://docs.aws.amazon.com/kms/latest/developerguide/custom-key-store-overview.html">custom key
-     * store</a>, AWS KMS creates the key material for the CMK in the associated AWS CloudHSM cluster. This value is
-     * present only when the CMK is created in a custom key store.
+     * The cluster ID of the CloudHSM cluster that contains the key material for the KMS key. When you create a KMS key
+     * in a <a href="https://docs.aws.amazon.com/kms/latest/developerguide/custom-key-store-overview.html">custom key
+     * store</a>, KMS creates the key material for the KMS key in the associated CloudHSM cluster. This value is present
+     * only when the KMS key is created in a custom key store.
      * </p>
      */
     private String cloudHsmClusterId;
     /**
      * <p>
-     * Specifies whether the CMK's key material expires. This value is present only when <code>Origin</code> is
+     * Specifies whether the KMS key's key material expires. This value is present only when <code>Origin</code> is
      * <code>EXTERNAL</code>, otherwise this value is omitted.
      * </p>
      */
     private String expirationModel;
     /**
      * <p>
-     * The manager of the CMK. CMKs in your AWS account are either customer managed or AWS managed. For more information
-     * about the difference, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#master_keys">Customer Master Keys</a>
-     * in the <i>AWS Key Management Service Developer Guide</i>.
+     * The manager of the KMS key. KMS keys in your Amazon Web Services account are either customer managed or Amazon
+     * Web Services managed. For more information about the difference, see <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#kms_keys">KMS keys</a> in the <i>Key
+     * Management Service Developer Guide</i>.
      * </p>
      */
     private String keyManager;
     /**
      * <p>
-     * Describes the type of key material in the CMK.
+     * Instead, use the <code>KeySpec</code> field.
+     * </p>
+     * <p>
+     * The <code>KeySpec</code> and <code>CustomerMasterKeySpec</code> fields have the same value. We recommend that you
+     * use the <code>KeySpec</code> field in your code. However, to avoid breaking changes, KMS will support both
+     * fields.
      * </p>
      */
+    @Deprecated
     private String customerMasterKeySpec;
     /**
      * <p>
-     * The encryption algorithms that the CMK supports. You cannot use the CMK with other encryption algorithms within
-     * AWS KMS.
+     * Describes the type of key material in the KMS key.
+     * </p>
+     */
+    private String keySpec;
+    /**
+     * <p>
+     * The encryption algorithms that the KMS key supports. You cannot use the KMS key with other encryption algorithms
+     * within KMS.
      * </p>
      * <p>
-     * This value is present only when the <code>KeyUsage</code> of the CMK is <code>ENCRYPT_DECRYPT</code>.
+     * This value is present only when the <code>KeyUsage</code> of the KMS key is <code>ENCRYPT_DECRYPT</code>.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> encryptionAlgorithms;
     /**
      * <p>
-     * The signing algorithms that the CMK supports. You cannot use the CMK with other signing algorithms within AWS
+     * The signing algorithms that the KMS key supports. You cannot use the KMS key with other signing algorithms within
      * KMS.
      * </p>
      * <p>
-     * This field appears only when the <code>KeyUsage</code> of the CMK is <code>SIGN_VERIFY</code>.
+     * This field appears only when the <code>KeyUsage</code> of the KMS key is <code>SIGN_VERIFY</code>.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> signingAlgorithms;
     /**
      * <p>
-     * Indicates whether the CMK is a multi-Region (<code>True</code>) or regional (<code>False</code>) key. This value
-     * is <code>True</code> for multi-Region primary and replica CMKs and <code>False</code> for regional CMKs.
+     * Indicates whether the KMS key is a multi-Region (<code>True</code>) or regional (<code>False</code>) key. This
+     * value is <code>True</code> for multi-Region primary and replica keys and <code>False</code> for regional KMS
+     * keys.
      * </p>
      * <p>
      * For more information about multi-Region keys, see <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/multi-region-keys-overview.html">Using multi-Region
-     * keys</a> in the <i>AWS Key Management Service Developer Guide</i>.
+     * keys</a> in the <i>Key Management Service Developer Guide</i>.
      * </p>
      */
     private Boolean multiRegion;
     /**
      * <p>
-     * Lists the primary and replica CMKs in same multi-Region CMK. This field is present only when the value of the
+     * Lists the primary and replica keys in same multi-Region key. This field is present only when the value of the
      * <code>MultiRegion</code> field is <code>True</code>.
      * </p>
      * <p>
-     * For more information about any listed CMK, use the <a>DescribeKey</a> operation.
+     * For more information about any listed KMS key, use the <a>DescribeKey</a> operation.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>MultiRegionKeyType</code> indicates whether the CMK is a <code>PRIMARY</code> or <code>REPLICA</code> key.
+     * <code>MultiRegionKeyType</code> indicates whether the KMS key is a <code>PRIMARY</code> or <code>REPLICA</code>
+     * key.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>PrimaryKey</code> displays the key ARN and Region of the primary key. This field displays the current CMK
-     * if it is the primary key.
+     * <code>PrimaryKey</code> displays the key ARN and Region of the primary key. This field displays the current KMS
+     * key if it is the primary key.
      * </p>
      * </li>
      * <li>
      * <p>
      * <code>ReplicaKeys</code> displays the key ARNs and Regions of all replica keys. This field includes the current
-     * CMK if it is a replica key.
+     * KMS key if it is a replica key.
      * </p>
      * </li>
      * </ul>
@@ -221,12 +235,12 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The waiting period before the primary key in a multi-Region key is deleted. This waiting period begins when the
-     * last of its replica keys is deleted. This value is present only when the <code>KeyState</code> of the CMK is
-     * <code>PendingReplicaDeletion</code>. That indicates that the CMK is the primary key in a multi-Region key, it is
-     * scheduled for deletion, and it still has existing replica keys.
+     * last of its replica keys is deleted. This value is present only when the <code>KeyState</code> of the KMS key is
+     * <code>PendingReplicaDeletion</code>. That indicates that the KMS key is the primary key in a multi-Region key, it
+     * is scheduled for deletion, and it still has existing replica keys.
      * </p>
      * <p>
-     * When a regional CMK or a replica key in a multi-Region key is scheduled for deletion, its deletion date is
+     * When a single-Region KMS key or a multi-Region replica key is scheduled for deletion, its deletion date is
      * displayed in the <code>DeletionDate</code> field. However, when the primary key in a multi-Region key is
      * scheduled for deletion, its waiting period doesn't begin until all of its replica keys are deleted. This value
      * displays that waiting period. When the last replica key in the multi-Region key is deleted, the
@@ -238,11 +252,11 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The twelve-digit account ID of the AWS account that owns the CMK.
+     * The twelve-digit account ID of the Amazon Web Services account that owns the KMS key.
      * </p>
      * 
      * @param aWSAccountId
-     *        The twelve-digit account ID of the AWS account that owns the CMK.
+     *        The twelve-digit account ID of the Amazon Web Services account that owns the KMS key.
      */
 
     public void setAWSAccountId(String aWSAccountId) {
@@ -251,10 +265,10 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The twelve-digit account ID of the AWS account that owns the CMK.
+     * The twelve-digit account ID of the Amazon Web Services account that owns the KMS key.
      * </p>
      * 
-     * @return The twelve-digit account ID of the AWS account that owns the CMK.
+     * @return The twelve-digit account ID of the Amazon Web Services account that owns the KMS key.
      */
 
     public String getAWSAccountId() {
@@ -263,11 +277,11 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The twelve-digit account ID of the AWS account that owns the CMK.
+     * The twelve-digit account ID of the Amazon Web Services account that owns the KMS key.
      * </p>
      * 
      * @param aWSAccountId
-     *        The twelve-digit account ID of the AWS account that owns the CMK.
+     *        The twelve-digit account ID of the Amazon Web Services account that owns the KMS key.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -278,11 +292,11 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The globally unique identifier for the CMK.
+     * The globally unique identifier for the KMS key.
      * </p>
      * 
      * @param keyId
-     *        The globally unique identifier for the CMK.
+     *        The globally unique identifier for the KMS key.
      */
 
     public void setKeyId(String keyId) {
@@ -291,10 +305,10 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The globally unique identifier for the CMK.
+     * The globally unique identifier for the KMS key.
      * </p>
      * 
-     * @return The globally unique identifier for the CMK.
+     * @return The globally unique identifier for the KMS key.
      */
 
     public String getKeyId() {
@@ -303,11 +317,11 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The globally unique identifier for the CMK.
+     * The globally unique identifier for the KMS key.
      * </p>
      * 
      * @param keyId
-     *        The globally unique identifier for the CMK.
+     *        The globally unique identifier for the KMS key.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -318,15 +332,16 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the CMK. For examples, see <a
-     * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-kms">AWS Key
-     * Management Service (AWS KMS)</a> in the Example ARNs section of the <i>AWS General Reference</i>.
+     * The Amazon Resource Name (ARN) of the KMS key. For examples, see <a
+     * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-kms">Key Management
+     * Service (KMS)</a> in the Example ARNs section of the <i>Amazon Web Services General Reference</i>.
      * </p>
      * 
      * @param arn
-     *        The Amazon Resource Name (ARN) of the CMK. For examples, see <a
-     *        href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-kms">AWS Key
-     *        Management Service (AWS KMS)</a> in the Example ARNs section of the <i>AWS General Reference</i>.
+     *        The Amazon Resource Name (ARN) of the KMS key. For examples, see <a
+     *        href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-kms">Key
+     *        Management Service (KMS)</a> in the Example ARNs section of the <i>Amazon Web Services General
+     *        Reference</i>.
      */
 
     public void setArn(String arn) {
@@ -335,14 +350,15 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the CMK. For examples, see <a
-     * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-kms">AWS Key
-     * Management Service (AWS KMS)</a> in the Example ARNs section of the <i>AWS General Reference</i>.
+     * The Amazon Resource Name (ARN) of the KMS key. For examples, see <a
+     * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-kms">Key Management
+     * Service (KMS)</a> in the Example ARNs section of the <i>Amazon Web Services General Reference</i>.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the CMK. For examples, see <a
-     *         href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-kms">AWS Key
-     *         Management Service (AWS KMS)</a> in the Example ARNs section of the <i>AWS General Reference</i>.
+     * @return The Amazon Resource Name (ARN) of the KMS key. For examples, see <a
+     *         href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-kms">Key
+     *         Management Service (KMS)</a> in the Example ARNs section of the <i>Amazon Web Services General
+     *         Reference</i>.
      */
 
     public String getArn() {
@@ -351,15 +367,16 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the CMK. For examples, see <a
-     * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-kms">AWS Key
-     * Management Service (AWS KMS)</a> in the Example ARNs section of the <i>AWS General Reference</i>.
+     * The Amazon Resource Name (ARN) of the KMS key. For examples, see <a
+     * href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-kms">Key Management
+     * Service (KMS)</a> in the Example ARNs section of the <i>Amazon Web Services General Reference</i>.
      * </p>
      * 
      * @param arn
-     *        The Amazon Resource Name (ARN) of the CMK. For examples, see <a
-     *        href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-kms">AWS Key
-     *        Management Service (AWS KMS)</a> in the Example ARNs section of the <i>AWS General Reference</i>.
+     *        The Amazon Resource Name (ARN) of the KMS key. For examples, see <a
+     *        href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html#arn-syntax-kms">Key
+     *        Management Service (KMS)</a> in the Example ARNs section of the <i>Amazon Web Services General
+     *        Reference</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -370,11 +387,11 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The date and time when the CMK was created.
+     * The date and time when the KMS key was created.
      * </p>
      * 
      * @param creationDate
-     *        The date and time when the CMK was created.
+     *        The date and time when the KMS key was created.
      */
 
     public void setCreationDate(java.util.Date creationDate) {
@@ -383,10 +400,10 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The date and time when the CMK was created.
+     * The date and time when the KMS key was created.
      * </p>
      * 
-     * @return The date and time when the CMK was created.
+     * @return The date and time when the KMS key was created.
      */
 
     public java.util.Date getCreationDate() {
@@ -395,11 +412,11 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The date and time when the CMK was created.
+     * The date and time when the KMS key was created.
      * </p>
      * 
      * @param creationDate
-     *        The date and time when the CMK was created.
+     *        The date and time when the KMS key was created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -410,12 +427,12 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Specifies whether the CMK is enabled. When <code>KeyState</code> is <code>Enabled</code> this value is true,
+     * Specifies whether the KMS key is enabled. When <code>KeyState</code> is <code>Enabled</code> this value is true,
      * otherwise it is false.
      * </p>
      * 
      * @param enabled
-     *        Specifies whether the CMK is enabled. When <code>KeyState</code> is <code>Enabled</code> this value is
+     *        Specifies whether the KMS key is enabled. When <code>KeyState</code> is <code>Enabled</code> this value is
      *        true, otherwise it is false.
      */
 
@@ -425,12 +442,12 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Specifies whether the CMK is enabled. When <code>KeyState</code> is <code>Enabled</code> this value is true,
+     * Specifies whether the KMS key is enabled. When <code>KeyState</code> is <code>Enabled</code> this value is true,
      * otherwise it is false.
      * </p>
      * 
-     * @return Specifies whether the CMK is enabled. When <code>KeyState</code> is <code>Enabled</code> this value is
-     *         true, otherwise it is false.
+     * @return Specifies whether the KMS key is enabled. When <code>KeyState</code> is <code>Enabled</code> this value
+     *         is true, otherwise it is false.
      */
 
     public Boolean getEnabled() {
@@ -439,12 +456,12 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Specifies whether the CMK is enabled. When <code>KeyState</code> is <code>Enabled</code> this value is true,
+     * Specifies whether the KMS key is enabled. When <code>KeyState</code> is <code>Enabled</code> this value is true,
      * otherwise it is false.
      * </p>
      * 
      * @param enabled
-     *        Specifies whether the CMK is enabled. When <code>KeyState</code> is <code>Enabled</code> this value is
+     *        Specifies whether the KMS key is enabled. When <code>KeyState</code> is <code>Enabled</code> this value is
      *        true, otherwise it is false.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -456,12 +473,12 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Specifies whether the CMK is enabled. When <code>KeyState</code> is <code>Enabled</code> this value is true,
+     * Specifies whether the KMS key is enabled. When <code>KeyState</code> is <code>Enabled</code> this value is true,
      * otherwise it is false.
      * </p>
      * 
-     * @return Specifies whether the CMK is enabled. When <code>KeyState</code> is <code>Enabled</code> this value is
-     *         true, otherwise it is false.
+     * @return Specifies whether the KMS key is enabled. When <code>KeyState</code> is <code>Enabled</code> this value
+     *         is true, otherwise it is false.
      */
 
     public Boolean isEnabled() {
@@ -470,11 +487,11 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The description of the CMK.
+     * The description of the KMS key.
      * </p>
      * 
      * @param description
-     *        The description of the CMK.
+     *        The description of the KMS key.
      */
 
     public void setDescription(String description) {
@@ -483,10 +500,10 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The description of the CMK.
+     * The description of the KMS key.
      * </p>
      * 
-     * @return The description of the CMK.
+     * @return The description of the KMS key.
      */
 
     public String getDescription() {
@@ -495,11 +512,11 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The description of the CMK.
+     * The description of the KMS key.
      * </p>
      * 
      * @param description
-     *        The description of the CMK.
+     *        The description of the KMS key.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -511,13 +528,13 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The <a href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#cryptographic-operations">
-     * cryptographic operations</a> for which you can use the CMK.
+     * cryptographic operations</a> for which you can use the KMS key.
      * </p>
      * 
      * @param keyUsage
      *        The <a
      *        href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#cryptographic-operations">
-     *        cryptographic operations</a> for which you can use the CMK.
+     *        cryptographic operations</a> for which you can use the KMS key.
      * @see KeyUsageType
      */
 
@@ -528,12 +545,12 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The <a href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#cryptographic-operations">
-     * cryptographic operations</a> for which you can use the CMK.
+     * cryptographic operations</a> for which you can use the KMS key.
      * </p>
      * 
      * @return The <a
      *         href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#cryptographic-operations"
-     *         >cryptographic operations</a> for which you can use the CMK.
+     *         >cryptographic operations</a> for which you can use the KMS key.
      * @see KeyUsageType
      */
 
@@ -544,13 +561,13 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The <a href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#cryptographic-operations">
-     * cryptographic operations</a> for which you can use the CMK.
+     * cryptographic operations</a> for which you can use the KMS key.
      * </p>
      * 
      * @param keyUsage
      *        The <a
      *        href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#cryptographic-operations">
-     *        cryptographic operations</a> for which you can use the CMK.
+     *        cryptographic operations</a> for which you can use the KMS key.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see KeyUsageType
      */
@@ -563,13 +580,13 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The <a href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#cryptographic-operations">
-     * cryptographic operations</a> for which you can use the CMK.
+     * cryptographic operations</a> for which you can use the KMS key.
      * </p>
      * 
      * @param keyUsage
      *        The <a
      *        href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#cryptographic-operations">
-     *        cryptographic operations</a> for which you can use the CMK.
+     *        cryptographic operations</a> for which you can use the KMS key.
      * @see KeyUsageType
      */
 
@@ -580,13 +597,13 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The <a href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#cryptographic-operations">
-     * cryptographic operations</a> for which you can use the CMK.
+     * cryptographic operations</a> for which you can use the KMS key.
      * </p>
      * 
      * @param keyUsage
      *        The <a
      *        href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#cryptographic-operations">
-     *        cryptographic operations</a> for which you can use the CMK.
+     *        cryptographic operations</a> for which you can use the KMS key.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see KeyUsageType
      */
@@ -598,20 +615,20 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The current status of the CMK.
+     * The current status of the KMS key.
      * </p>
      * <p>
-     * For more information about how key state affects the use of a CMK, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your CMK</a> in
-     * the <i>AWS Key Management Service Developer Guide</i>.
+     * For more information about how key state affects the use of a KMS key, see <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a>
+     * in the <i>Key Management Service Developer Guide</i>.
      * </p>
      * 
      * @param keyState
-     *        The current status of the CMK.</p>
+     *        The current status of the KMS key.</p>
      *        <p>
-     *        For more information about how key state affects the use of a CMK, see <a
-     *        href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your
-     *        CMK</a> in the <i>AWS Key Management Service Developer Guide</i>.
+     *        For more information about how key state affects the use of a KMS key, see <a
+     *        href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS
+     *        key</a> in the <i>Key Management Service Developer Guide</i>.
      * @see KeyState
      */
 
@@ -621,19 +638,19 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The current status of the CMK.
+     * The current status of the KMS key.
      * </p>
      * <p>
-     * For more information about how key state affects the use of a CMK, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your CMK</a> in
-     * the <i>AWS Key Management Service Developer Guide</i>.
+     * For more information about how key state affects the use of a KMS key, see <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a>
+     * in the <i>Key Management Service Developer Guide</i>.
      * </p>
      * 
-     * @return The current status of the CMK.</p>
+     * @return The current status of the KMS key.</p>
      *         <p>
-     *         For more information about how key state affects the use of a CMK, see <a
-     *         href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your
-     *         CMK</a> in the <i>AWS Key Management Service Developer Guide</i>.
+     *         For more information about how key state affects the use of a KMS key, see <a
+     *         href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS
+     *         key</a> in the <i>Key Management Service Developer Guide</i>.
      * @see KeyState
      */
 
@@ -643,20 +660,20 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The current status of the CMK.
+     * The current status of the KMS key.
      * </p>
      * <p>
-     * For more information about how key state affects the use of a CMK, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your CMK</a> in
-     * the <i>AWS Key Management Service Developer Guide</i>.
+     * For more information about how key state affects the use of a KMS key, see <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a>
+     * in the <i>Key Management Service Developer Guide</i>.
      * </p>
      * 
      * @param keyState
-     *        The current status of the CMK.</p>
+     *        The current status of the KMS key.</p>
      *        <p>
-     *        For more information about how key state affects the use of a CMK, see <a
-     *        href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your
-     *        CMK</a> in the <i>AWS Key Management Service Developer Guide</i>.
+     *        For more information about how key state affects the use of a KMS key, see <a
+     *        href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS
+     *        key</a> in the <i>Key Management Service Developer Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see KeyState
      */
@@ -668,20 +685,20 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The current status of the CMK.
+     * The current status of the KMS key.
      * </p>
      * <p>
-     * For more information about how key state affects the use of a CMK, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your CMK</a> in
-     * the <i>AWS Key Management Service Developer Guide</i>.
+     * For more information about how key state affects the use of a KMS key, see <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a>
+     * in the <i>Key Management Service Developer Guide</i>.
      * </p>
      * 
      * @param keyState
-     *        The current status of the CMK.</p>
+     *        The current status of the KMS key.</p>
      *        <p>
-     *        For more information about how key state affects the use of a CMK, see <a
-     *        href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your
-     *        CMK</a> in the <i>AWS Key Management Service Developer Guide</i>.
+     *        For more information about how key state affects the use of a KMS key, see <a
+     *        href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS
+     *        key</a> in the <i>Key Management Service Developer Guide</i>.
      * @see KeyState
      */
 
@@ -691,20 +708,20 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The current status of the CMK.
+     * The current status of the KMS key.
      * </p>
      * <p>
-     * For more information about how key state affects the use of a CMK, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your CMK</a> in
-     * the <i>AWS Key Management Service Developer Guide</i>.
+     * For more information about how key state affects the use of a KMS key, see <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS key</a>
+     * in the <i>Key Management Service Developer Guide</i>.
      * </p>
      * 
      * @param keyState
-     *        The current status of the CMK.</p>
+     *        The current status of the KMS key.</p>
      *        <p>
-     *        For more information about how key state affects the use of a CMK, see <a
-     *        href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your
-     *        CMK</a> in the <i>AWS Key Management Service Developer Guide</i>.
+     *        For more information about how key state affects the use of a KMS key, see <a
+     *        href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">Key state: Effect on your KMS
+     *        key</a> in the <i>Key Management Service Developer Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see KeyState
      */
@@ -716,8 +733,8 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The date and time after which AWS KMS deletes this CMK. This value is present only when the CMK is scheduled for
-     * deletion, that is, when its <code>KeyState</code> is <code>PendingDeletion</code>.
+     * The date and time after which KMS deletes this KMS key. This value is present only when the KMS key is scheduled
+     * for deletion, that is, when its <code>KeyState</code> is <code>PendingDeletion</code>.
      * </p>
      * <p>
      * When the primary key in a multi-Region key is scheduled for deletion but still has replica keys, its key state is
@@ -726,7 +743,7 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param deletionDate
-     *        The date and time after which AWS KMS deletes this CMK. This value is present only when the CMK is
+     *        The date and time after which KMS deletes this KMS key. This value is present only when the KMS key is
      *        scheduled for deletion, that is, when its <code>KeyState</code> is <code>PendingDeletion</code>.</p>
      *        <p>
      *        When the primary key in a multi-Region key is scheduled for deletion but still has replica keys, its key
@@ -740,8 +757,8 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The date and time after which AWS KMS deletes this CMK. This value is present only when the CMK is scheduled for
-     * deletion, that is, when its <code>KeyState</code> is <code>PendingDeletion</code>.
+     * The date and time after which KMS deletes this KMS key. This value is present only when the KMS key is scheduled
+     * for deletion, that is, when its <code>KeyState</code> is <code>PendingDeletion</code>.
      * </p>
      * <p>
      * When the primary key in a multi-Region key is scheduled for deletion but still has replica keys, its key state is
@@ -749,7 +766,7 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
      * <code>PendingDeletionWindowInDays</code> field.
      * </p>
      * 
-     * @return The date and time after which AWS KMS deletes this CMK. This value is present only when the CMK is
+     * @return The date and time after which KMS deletes this KMS key. This value is present only when the KMS key is
      *         scheduled for deletion, that is, when its <code>KeyState</code> is <code>PendingDeletion</code>.</p>
      *         <p>
      *         When the primary key in a multi-Region key is scheduled for deletion but still has replica keys, its key
@@ -763,8 +780,8 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The date and time after which AWS KMS deletes this CMK. This value is present only when the CMK is scheduled for
-     * deletion, that is, when its <code>KeyState</code> is <code>PendingDeletion</code>.
+     * The date and time after which KMS deletes this KMS key. This value is present only when the KMS key is scheduled
+     * for deletion, that is, when its <code>KeyState</code> is <code>PendingDeletion</code>.
      * </p>
      * <p>
      * When the primary key in a multi-Region key is scheduled for deletion but still has replica keys, its key state is
@@ -773,7 +790,7 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param deletionDate
-     *        The date and time after which AWS KMS deletes this CMK. This value is present only when the CMK is
+     *        The date and time after which KMS deletes this KMS key. This value is present only when the KMS key is
      *        scheduled for deletion, that is, when its <code>KeyState</code> is <code>PendingDeletion</code>.</p>
      *        <p>
      *        When the primary key in a multi-Region key is scheduled for deletion but still has replica keys, its key
@@ -789,17 +806,17 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The time at which the imported key material expires. When the key material expires, AWS KMS deletes the key
-     * material and the CMK becomes unusable. This value is present only for CMKs whose <code>Origin</code> is
+     * The time at which the imported key material expires. When the key material expires, KMS deletes the key material
+     * and the KMS key becomes unusable. This value is present only for KMS keys whose <code>Origin</code> is
      * <code>EXTERNAL</code> and whose <code>ExpirationModel</code> is <code>KEY_MATERIAL_EXPIRES</code>, otherwise this
      * value is omitted.
      * </p>
      * 
      * @param validTo
-     *        The time at which the imported key material expires. When the key material expires, AWS KMS deletes the
-     *        key material and the CMK becomes unusable. This value is present only for CMKs whose <code>Origin</code>
-     *        is <code>EXTERNAL</code> and whose <code>ExpirationModel</code> is <code>KEY_MATERIAL_EXPIRES</code>,
-     *        otherwise this value is omitted.
+     *        The time at which the imported key material expires. When the key material expires, KMS deletes the key
+     *        material and the KMS key becomes unusable. This value is present only for KMS keys whose
+     *        <code>Origin</code> is <code>EXTERNAL</code> and whose <code>ExpirationModel</code> is
+     *        <code>KEY_MATERIAL_EXPIRES</code>, otherwise this value is omitted.
      */
 
     public void setValidTo(java.util.Date validTo) {
@@ -808,16 +825,16 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The time at which the imported key material expires. When the key material expires, AWS KMS deletes the key
-     * material and the CMK becomes unusable. This value is present only for CMKs whose <code>Origin</code> is
+     * The time at which the imported key material expires. When the key material expires, KMS deletes the key material
+     * and the KMS key becomes unusable. This value is present only for KMS keys whose <code>Origin</code> is
      * <code>EXTERNAL</code> and whose <code>ExpirationModel</code> is <code>KEY_MATERIAL_EXPIRES</code>, otherwise this
      * value is omitted.
      * </p>
      * 
-     * @return The time at which the imported key material expires. When the key material expires, AWS KMS deletes the
-     *         key material and the CMK becomes unusable. This value is present only for CMKs whose <code>Origin</code>
-     *         is <code>EXTERNAL</code> and whose <code>ExpirationModel</code> is <code>KEY_MATERIAL_EXPIRES</code>,
-     *         otherwise this value is omitted.
+     * @return The time at which the imported key material expires. When the key material expires, KMS deletes the key
+     *         material and the KMS key becomes unusable. This value is present only for KMS keys whose
+     *         <code>Origin</code> is <code>EXTERNAL</code> and whose <code>ExpirationModel</code> is
+     *         <code>KEY_MATERIAL_EXPIRES</code>, otherwise this value is omitted.
      */
 
     public java.util.Date getValidTo() {
@@ -826,17 +843,17 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The time at which the imported key material expires. When the key material expires, AWS KMS deletes the key
-     * material and the CMK becomes unusable. This value is present only for CMKs whose <code>Origin</code> is
+     * The time at which the imported key material expires. When the key material expires, KMS deletes the key material
+     * and the KMS key becomes unusable. This value is present only for KMS keys whose <code>Origin</code> is
      * <code>EXTERNAL</code> and whose <code>ExpirationModel</code> is <code>KEY_MATERIAL_EXPIRES</code>, otherwise this
      * value is omitted.
      * </p>
      * 
      * @param validTo
-     *        The time at which the imported key material expires. When the key material expires, AWS KMS deletes the
-     *        key material and the CMK becomes unusable. This value is present only for CMKs whose <code>Origin</code>
-     *        is <code>EXTERNAL</code> and whose <code>ExpirationModel</code> is <code>KEY_MATERIAL_EXPIRES</code>,
-     *        otherwise this value is omitted.
+     *        The time at which the imported key material expires. When the key material expires, KMS deletes the key
+     *        material and the KMS key becomes unusable. This value is present only for KMS keys whose
+     *        <code>Origin</code> is <code>EXTERNAL</code> and whose <code>ExpirationModel</code> is
+     *        <code>KEY_MATERIAL_EXPIRES</code>, otherwise this value is omitted.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -847,17 +864,17 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The source of the CMK's key material. When this value is <code>AWS_KMS</code>, AWS KMS created the key material.
-     * When this value is <code>EXTERNAL</code>, the key material was imported from your existing key management
-     * infrastructure or the CMK lacks key material. When this value is <code>AWS_CLOUDHSM</code>, the key material was
-     * created in the AWS CloudHSM cluster associated with a custom key store.
+     * The source of the key material for the KMS key. When this value is <code>AWS_KMS</code>, KMS created the key
+     * material. When this value is <code>EXTERNAL</code>, the key material was imported or the KMS key doesn't have any
+     * key material. When this value is <code>AWS_CLOUDHSM</code>, the key material was created in the CloudHSM cluster
+     * associated with a custom key store.
      * </p>
      * 
      * @param origin
-     *        The source of the CMK's key material. When this value is <code>AWS_KMS</code>, AWS KMS created the key
-     *        material. When this value is <code>EXTERNAL</code>, the key material was imported from your existing key
-     *        management infrastructure or the CMK lacks key material. When this value is <code>AWS_CLOUDHSM</code>, the
-     *        key material was created in the AWS CloudHSM cluster associated with a custom key store.
+     *        The source of the key material for the KMS key. When this value is <code>AWS_KMS</code>, KMS created the
+     *        key material. When this value is <code>EXTERNAL</code>, the key material was imported or the KMS key
+     *        doesn't have any key material. When this value is <code>AWS_CLOUDHSM</code>, the key material was created
+     *        in the CloudHSM cluster associated with a custom key store.
      * @see OriginType
      */
 
@@ -867,16 +884,16 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The source of the CMK's key material. When this value is <code>AWS_KMS</code>, AWS KMS created the key material.
-     * When this value is <code>EXTERNAL</code>, the key material was imported from your existing key management
-     * infrastructure or the CMK lacks key material. When this value is <code>AWS_CLOUDHSM</code>, the key material was
-     * created in the AWS CloudHSM cluster associated with a custom key store.
+     * The source of the key material for the KMS key. When this value is <code>AWS_KMS</code>, KMS created the key
+     * material. When this value is <code>EXTERNAL</code>, the key material was imported or the KMS key doesn't have any
+     * key material. When this value is <code>AWS_CLOUDHSM</code>, the key material was created in the CloudHSM cluster
+     * associated with a custom key store.
      * </p>
      * 
-     * @return The source of the CMK's key material. When this value is <code>AWS_KMS</code>, AWS KMS created the key
-     *         material. When this value is <code>EXTERNAL</code>, the key material was imported from your existing key
-     *         management infrastructure or the CMK lacks key material. When this value is <code>AWS_CLOUDHSM</code>,
-     *         the key material was created in the AWS CloudHSM cluster associated with a custom key store.
+     * @return The source of the key material for the KMS key. When this value is <code>AWS_KMS</code>, KMS created the
+     *         key material. When this value is <code>EXTERNAL</code>, the key material was imported or the KMS key
+     *         doesn't have any key material. When this value is <code>AWS_CLOUDHSM</code>, the key material was created
+     *         in the CloudHSM cluster associated with a custom key store.
      * @see OriginType
      */
 
@@ -886,17 +903,17 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The source of the CMK's key material. When this value is <code>AWS_KMS</code>, AWS KMS created the key material.
-     * When this value is <code>EXTERNAL</code>, the key material was imported from your existing key management
-     * infrastructure or the CMK lacks key material. When this value is <code>AWS_CLOUDHSM</code>, the key material was
-     * created in the AWS CloudHSM cluster associated with a custom key store.
+     * The source of the key material for the KMS key. When this value is <code>AWS_KMS</code>, KMS created the key
+     * material. When this value is <code>EXTERNAL</code>, the key material was imported or the KMS key doesn't have any
+     * key material. When this value is <code>AWS_CLOUDHSM</code>, the key material was created in the CloudHSM cluster
+     * associated with a custom key store.
      * </p>
      * 
      * @param origin
-     *        The source of the CMK's key material. When this value is <code>AWS_KMS</code>, AWS KMS created the key
-     *        material. When this value is <code>EXTERNAL</code>, the key material was imported from your existing key
-     *        management infrastructure or the CMK lacks key material. When this value is <code>AWS_CLOUDHSM</code>, the
-     *        key material was created in the AWS CloudHSM cluster associated with a custom key store.
+     *        The source of the key material for the KMS key. When this value is <code>AWS_KMS</code>, KMS created the
+     *        key material. When this value is <code>EXTERNAL</code>, the key material was imported or the KMS key
+     *        doesn't have any key material. When this value is <code>AWS_CLOUDHSM</code>, the key material was created
+     *        in the CloudHSM cluster associated with a custom key store.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see OriginType
      */
@@ -908,17 +925,17 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The source of the CMK's key material. When this value is <code>AWS_KMS</code>, AWS KMS created the key material.
-     * When this value is <code>EXTERNAL</code>, the key material was imported from your existing key management
-     * infrastructure or the CMK lacks key material. When this value is <code>AWS_CLOUDHSM</code>, the key material was
-     * created in the AWS CloudHSM cluster associated with a custom key store.
+     * The source of the key material for the KMS key. When this value is <code>AWS_KMS</code>, KMS created the key
+     * material. When this value is <code>EXTERNAL</code>, the key material was imported or the KMS key doesn't have any
+     * key material. When this value is <code>AWS_CLOUDHSM</code>, the key material was created in the CloudHSM cluster
+     * associated with a custom key store.
      * </p>
      * 
      * @param origin
-     *        The source of the CMK's key material. When this value is <code>AWS_KMS</code>, AWS KMS created the key
-     *        material. When this value is <code>EXTERNAL</code>, the key material was imported from your existing key
-     *        management infrastructure or the CMK lacks key material. When this value is <code>AWS_CLOUDHSM</code>, the
-     *        key material was created in the AWS CloudHSM cluster associated with a custom key store.
+     *        The source of the key material for the KMS key. When this value is <code>AWS_KMS</code>, KMS created the
+     *        key material. When this value is <code>EXTERNAL</code>, the key material was imported or the KMS key
+     *        doesn't have any key material. When this value is <code>AWS_CLOUDHSM</code>, the key material was created
+     *        in the CloudHSM cluster associated with a custom key store.
      * @see OriginType
      */
 
@@ -928,17 +945,17 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The source of the CMK's key material. When this value is <code>AWS_KMS</code>, AWS KMS created the key material.
-     * When this value is <code>EXTERNAL</code>, the key material was imported from your existing key management
-     * infrastructure or the CMK lacks key material. When this value is <code>AWS_CLOUDHSM</code>, the key material was
-     * created in the AWS CloudHSM cluster associated with a custom key store.
+     * The source of the key material for the KMS key. When this value is <code>AWS_KMS</code>, KMS created the key
+     * material. When this value is <code>EXTERNAL</code>, the key material was imported or the KMS key doesn't have any
+     * key material. When this value is <code>AWS_CLOUDHSM</code>, the key material was created in the CloudHSM cluster
+     * associated with a custom key store.
      * </p>
      * 
      * @param origin
-     *        The source of the CMK's key material. When this value is <code>AWS_KMS</code>, AWS KMS created the key
-     *        material. When this value is <code>EXTERNAL</code>, the key material was imported from your existing key
-     *        management infrastructure or the CMK lacks key material. When this value is <code>AWS_CLOUDHSM</code>, the
-     *        key material was created in the AWS CloudHSM cluster associated with a custom key store.
+     *        The source of the key material for the KMS key. When this value is <code>AWS_KMS</code>, KMS created the
+     *        key material. When this value is <code>EXTERNAL</code>, the key material was imported or the KMS key
+     *        doesn't have any key material. When this value is <code>AWS_CLOUDHSM</code>, the key material was created
+     *        in the CloudHSM cluster associated with a custom key store.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see OriginType
      */
@@ -952,13 +969,14 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * A unique identifier for the <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/custom-key-store-overview.html">custom key store</a>
-     * that contains the CMK. This value is present only when the CMK is created in a custom key store.
+     * that contains the KMS key. This value is present only when the KMS key is created in a custom key store.
      * </p>
      * 
      * @param customKeyStoreId
      *        A unique identifier for the <a
      *        href="https://docs.aws.amazon.com/kms/latest/developerguide/custom-key-store-overview.html">custom key
-     *        store</a> that contains the CMK. This value is present only when the CMK is created in a custom key store.
+     *        store</a> that contains the KMS key. This value is present only when the KMS key is created in a custom
+     *        key store.
      */
 
     public void setCustomKeyStoreId(String customKeyStoreId) {
@@ -969,13 +987,13 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * A unique identifier for the <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/custom-key-store-overview.html">custom key store</a>
-     * that contains the CMK. This value is present only when the CMK is created in a custom key store.
+     * that contains the KMS key. This value is present only when the KMS key is created in a custom key store.
      * </p>
      * 
      * @return A unique identifier for the <a
      *         href="https://docs.aws.amazon.com/kms/latest/developerguide/custom-key-store-overview.html">custom key
-     *         store</a> that contains the CMK. This value is present only when the CMK is created in a custom key
-     *         store.
+     *         store</a> that contains the KMS key. This value is present only when the KMS key is created in a custom
+     *         key store.
      */
 
     public String getCustomKeyStoreId() {
@@ -986,13 +1004,14 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * A unique identifier for the <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/custom-key-store-overview.html">custom key store</a>
-     * that contains the CMK. This value is present only when the CMK is created in a custom key store.
+     * that contains the KMS key. This value is present only when the KMS key is created in a custom key store.
      * </p>
      * 
      * @param customKeyStoreId
      *        A unique identifier for the <a
      *        href="https://docs.aws.amazon.com/kms/latest/developerguide/custom-key-store-overview.html">custom key
-     *        store</a> that contains the CMK. This value is present only when the CMK is created in a custom key store.
+     *        store</a> that contains the KMS key. This value is present only when the KMS key is created in a custom
+     *        key store.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1003,18 +1022,18 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The cluster ID of the AWS CloudHSM cluster that contains the key material for the CMK. When you create a CMK in a
-     * <a href="https://docs.aws.amazon.com/kms/latest/developerguide/custom-key-store-overview.html">custom key
-     * store</a>, AWS KMS creates the key material for the CMK in the associated AWS CloudHSM cluster. This value is
-     * present only when the CMK is created in a custom key store.
+     * The cluster ID of the CloudHSM cluster that contains the key material for the KMS key. When you create a KMS key
+     * in a <a href="https://docs.aws.amazon.com/kms/latest/developerguide/custom-key-store-overview.html">custom key
+     * store</a>, KMS creates the key material for the KMS key in the associated CloudHSM cluster. This value is present
+     * only when the KMS key is created in a custom key store.
      * </p>
      * 
      * @param cloudHsmClusterId
-     *        The cluster ID of the AWS CloudHSM cluster that contains the key material for the CMK. When you create a
-     *        CMK in a <a
+     *        The cluster ID of the CloudHSM cluster that contains the key material for the KMS key. When you create a
+     *        KMS key in a <a
      *        href="https://docs.aws.amazon.com/kms/latest/developerguide/custom-key-store-overview.html">custom key
-     *        store</a>, AWS KMS creates the key material for the CMK in the associated AWS CloudHSM cluster. This value
-     *        is present only when the CMK is created in a custom key store.
+     *        store</a>, KMS creates the key material for the KMS key in the associated CloudHSM cluster. This value is
+     *        present only when the KMS key is created in a custom key store.
      */
 
     public void setCloudHsmClusterId(String cloudHsmClusterId) {
@@ -1023,17 +1042,17 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The cluster ID of the AWS CloudHSM cluster that contains the key material for the CMK. When you create a CMK in a
-     * <a href="https://docs.aws.amazon.com/kms/latest/developerguide/custom-key-store-overview.html">custom key
-     * store</a>, AWS KMS creates the key material for the CMK in the associated AWS CloudHSM cluster. This value is
-     * present only when the CMK is created in a custom key store.
+     * The cluster ID of the CloudHSM cluster that contains the key material for the KMS key. When you create a KMS key
+     * in a <a href="https://docs.aws.amazon.com/kms/latest/developerguide/custom-key-store-overview.html">custom key
+     * store</a>, KMS creates the key material for the KMS key in the associated CloudHSM cluster. This value is present
+     * only when the KMS key is created in a custom key store.
      * </p>
      * 
-     * @return The cluster ID of the AWS CloudHSM cluster that contains the key material for the CMK. When you create a
-     *         CMK in a <a
+     * @return The cluster ID of the CloudHSM cluster that contains the key material for the KMS key. When you create a
+     *         KMS key in a <a
      *         href="https://docs.aws.amazon.com/kms/latest/developerguide/custom-key-store-overview.html">custom key
-     *         store</a>, AWS KMS creates the key material for the CMK in the associated AWS CloudHSM cluster. This
-     *         value is present only when the CMK is created in a custom key store.
+     *         store</a>, KMS creates the key material for the KMS key in the associated CloudHSM cluster. This value is
+     *         present only when the KMS key is created in a custom key store.
      */
 
     public String getCloudHsmClusterId() {
@@ -1042,18 +1061,18 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The cluster ID of the AWS CloudHSM cluster that contains the key material for the CMK. When you create a CMK in a
-     * <a href="https://docs.aws.amazon.com/kms/latest/developerguide/custom-key-store-overview.html">custom key
-     * store</a>, AWS KMS creates the key material for the CMK in the associated AWS CloudHSM cluster. This value is
-     * present only when the CMK is created in a custom key store.
+     * The cluster ID of the CloudHSM cluster that contains the key material for the KMS key. When you create a KMS key
+     * in a <a href="https://docs.aws.amazon.com/kms/latest/developerguide/custom-key-store-overview.html">custom key
+     * store</a>, KMS creates the key material for the KMS key in the associated CloudHSM cluster. This value is present
+     * only when the KMS key is created in a custom key store.
      * </p>
      * 
      * @param cloudHsmClusterId
-     *        The cluster ID of the AWS CloudHSM cluster that contains the key material for the CMK. When you create a
-     *        CMK in a <a
+     *        The cluster ID of the CloudHSM cluster that contains the key material for the KMS key. When you create a
+     *        KMS key in a <a
      *        href="https://docs.aws.amazon.com/kms/latest/developerguide/custom-key-store-overview.html">custom key
-     *        store</a>, AWS KMS creates the key material for the CMK in the associated AWS CloudHSM cluster. This value
-     *        is present only when the CMK is created in a custom key store.
+     *        store</a>, KMS creates the key material for the KMS key in the associated CloudHSM cluster. This value is
+     *        present only when the KMS key is created in a custom key store.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1064,13 +1083,13 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Specifies whether the CMK's key material expires. This value is present only when <code>Origin</code> is
+     * Specifies whether the KMS key's key material expires. This value is present only when <code>Origin</code> is
      * <code>EXTERNAL</code>, otherwise this value is omitted.
      * </p>
      * 
      * @param expirationModel
-     *        Specifies whether the CMK's key material expires. This value is present only when <code>Origin</code> is
-     *        <code>EXTERNAL</code>, otherwise this value is omitted.
+     *        Specifies whether the KMS key's key material expires. This value is present only when <code>Origin</code>
+     *        is <code>EXTERNAL</code>, otherwise this value is omitted.
      * @see ExpirationModelType
      */
 
@@ -1080,12 +1099,12 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Specifies whether the CMK's key material expires. This value is present only when <code>Origin</code> is
+     * Specifies whether the KMS key's key material expires. This value is present only when <code>Origin</code> is
      * <code>EXTERNAL</code>, otherwise this value is omitted.
      * </p>
      * 
-     * @return Specifies whether the CMK's key material expires. This value is present only when <code>Origin</code> is
-     *         <code>EXTERNAL</code>, otherwise this value is omitted.
+     * @return Specifies whether the KMS key's key material expires. This value is present only when <code>Origin</code>
+     *         is <code>EXTERNAL</code>, otherwise this value is omitted.
      * @see ExpirationModelType
      */
 
@@ -1095,13 +1114,13 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Specifies whether the CMK's key material expires. This value is present only when <code>Origin</code> is
+     * Specifies whether the KMS key's key material expires. This value is present only when <code>Origin</code> is
      * <code>EXTERNAL</code>, otherwise this value is omitted.
      * </p>
      * 
      * @param expirationModel
-     *        Specifies whether the CMK's key material expires. This value is present only when <code>Origin</code> is
-     *        <code>EXTERNAL</code>, otherwise this value is omitted.
+     *        Specifies whether the KMS key's key material expires. This value is present only when <code>Origin</code>
+     *        is <code>EXTERNAL</code>, otherwise this value is omitted.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ExpirationModelType
      */
@@ -1113,13 +1132,13 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Specifies whether the CMK's key material expires. This value is present only when <code>Origin</code> is
+     * Specifies whether the KMS key's key material expires. This value is present only when <code>Origin</code> is
      * <code>EXTERNAL</code>, otherwise this value is omitted.
      * </p>
      * 
      * @param expirationModel
-     *        Specifies whether the CMK's key material expires. This value is present only when <code>Origin</code> is
-     *        <code>EXTERNAL</code>, otherwise this value is omitted.
+     *        Specifies whether the KMS key's key material expires. This value is present only when <code>Origin</code>
+     *        is <code>EXTERNAL</code>, otherwise this value is omitted.
      * @see ExpirationModelType
      */
 
@@ -1129,13 +1148,13 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Specifies whether the CMK's key material expires. This value is present only when <code>Origin</code> is
+     * Specifies whether the KMS key's key material expires. This value is present only when <code>Origin</code> is
      * <code>EXTERNAL</code>, otherwise this value is omitted.
      * </p>
      * 
      * @param expirationModel
-     *        Specifies whether the CMK's key material expires. This value is present only when <code>Origin</code> is
-     *        <code>EXTERNAL</code>, otherwise this value is omitted.
+     *        Specifies whether the KMS key's key material expires. This value is present only when <code>Origin</code>
+     *        is <code>EXTERNAL</code>, otherwise this value is omitted.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ExpirationModelType
      */
@@ -1147,17 +1166,17 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The manager of the CMK. CMKs in your AWS account are either customer managed or AWS managed. For more information
-     * about the difference, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#master_keys">Customer Master Keys</a>
-     * in the <i>AWS Key Management Service Developer Guide</i>.
+     * The manager of the KMS key. KMS keys in your Amazon Web Services account are either customer managed or Amazon
+     * Web Services managed. For more information about the difference, see <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#kms_keys">KMS keys</a> in the <i>Key
+     * Management Service Developer Guide</i>.
      * </p>
      * 
      * @param keyManager
-     *        The manager of the CMK. CMKs in your AWS account are either customer managed or AWS managed. For more
-     *        information about the difference, see <a
-     *        href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#master_keys">Customer Master
-     *        Keys</a> in the <i>AWS Key Management Service Developer Guide</i>.
+     *        The manager of the KMS key. KMS keys in your Amazon Web Services account are either customer managed or
+     *        Amazon Web Services managed. For more information about the difference, see <a
+     *        href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#kms_keys">KMS keys</a> in the
+     *        <i>Key Management Service Developer Guide</i>.
      * @see KeyManagerType
      */
 
@@ -1167,16 +1186,16 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The manager of the CMK. CMKs in your AWS account are either customer managed or AWS managed. For more information
-     * about the difference, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#master_keys">Customer Master Keys</a>
-     * in the <i>AWS Key Management Service Developer Guide</i>.
+     * The manager of the KMS key. KMS keys in your Amazon Web Services account are either customer managed or Amazon
+     * Web Services managed. For more information about the difference, see <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#kms_keys">KMS keys</a> in the <i>Key
+     * Management Service Developer Guide</i>.
      * </p>
      * 
-     * @return The manager of the CMK. CMKs in your AWS account are either customer managed or AWS managed. For more
-     *         information about the difference, see <a
-     *         href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#master_keys">Customer Master
-     *         Keys</a> in the <i>AWS Key Management Service Developer Guide</i>.
+     * @return The manager of the KMS key. KMS keys in your Amazon Web Services account are either customer managed or
+     *         Amazon Web Services managed. For more information about the difference, see <a
+     *         href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#kms_keys">KMS keys</a> in the
+     *         <i>Key Management Service Developer Guide</i>.
      * @see KeyManagerType
      */
 
@@ -1186,17 +1205,17 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The manager of the CMK. CMKs in your AWS account are either customer managed or AWS managed. For more information
-     * about the difference, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#master_keys">Customer Master Keys</a>
-     * in the <i>AWS Key Management Service Developer Guide</i>.
+     * The manager of the KMS key. KMS keys in your Amazon Web Services account are either customer managed or Amazon
+     * Web Services managed. For more information about the difference, see <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#kms_keys">KMS keys</a> in the <i>Key
+     * Management Service Developer Guide</i>.
      * </p>
      * 
      * @param keyManager
-     *        The manager of the CMK. CMKs in your AWS account are either customer managed or AWS managed. For more
-     *        information about the difference, see <a
-     *        href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#master_keys">Customer Master
-     *        Keys</a> in the <i>AWS Key Management Service Developer Guide</i>.
+     *        The manager of the KMS key. KMS keys in your Amazon Web Services account are either customer managed or
+     *        Amazon Web Services managed. For more information about the difference, see <a
+     *        href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#kms_keys">KMS keys</a> in the
+     *        <i>Key Management Service Developer Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see KeyManagerType
      */
@@ -1208,17 +1227,17 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The manager of the CMK. CMKs in your AWS account are either customer managed or AWS managed. For more information
-     * about the difference, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#master_keys">Customer Master Keys</a>
-     * in the <i>AWS Key Management Service Developer Guide</i>.
+     * The manager of the KMS key. KMS keys in your Amazon Web Services account are either customer managed or Amazon
+     * Web Services managed. For more information about the difference, see <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#kms_keys">KMS keys</a> in the <i>Key
+     * Management Service Developer Guide</i>.
      * </p>
      * 
      * @param keyManager
-     *        The manager of the CMK. CMKs in your AWS account are either customer managed or AWS managed. For more
-     *        information about the difference, see <a
-     *        href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#master_keys">Customer Master
-     *        Keys</a> in the <i>AWS Key Management Service Developer Guide</i>.
+     *        The manager of the KMS key. KMS keys in your Amazon Web Services account are either customer managed or
+     *        Amazon Web Services managed. For more information about the difference, see <a
+     *        href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#kms_keys">KMS keys</a> in the
+     *        <i>Key Management Service Developer Guide</i>.
      * @see KeyManagerType
      */
 
@@ -1228,17 +1247,17 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The manager of the CMK. CMKs in your AWS account are either customer managed or AWS managed. For more information
-     * about the difference, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#master_keys">Customer Master Keys</a>
-     * in the <i>AWS Key Management Service Developer Guide</i>.
+     * The manager of the KMS key. KMS keys in your Amazon Web Services account are either customer managed or Amazon
+     * Web Services managed. For more information about the difference, see <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#kms_keys">KMS keys</a> in the <i>Key
+     * Management Service Developer Guide</i>.
      * </p>
      * 
      * @param keyManager
-     *        The manager of the CMK. CMKs in your AWS account are either customer managed or AWS managed. For more
-     *        information about the difference, see <a
-     *        href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#master_keys">Customer Master
-     *        Keys</a> in the <i>AWS Key Management Service Developer Guide</i>.
+     *        The manager of the KMS key. KMS keys in your Amazon Web Services account are either customer managed or
+     *        Amazon Web Services managed. For more information about the difference, see <a
+     *        href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#kms_keys">KMS keys</a> in the
+     *        <i>Key Management Service Developer Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see KeyManagerType
      */
@@ -1250,42 +1269,69 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Describes the type of key material in the CMK.
+     * Instead, use the <code>KeySpec</code> field.
+     * </p>
+     * <p>
+     * The <code>KeySpec</code> and <code>CustomerMasterKeySpec</code> fields have the same value. We recommend that you
+     * use the <code>KeySpec</code> field in your code. However, to avoid breaking changes, KMS will support both
+     * fields.
      * </p>
      * 
      * @param customerMasterKeySpec
-     *        Describes the type of key material in the CMK.
+     *        Instead, use the <code>KeySpec</code> field.</p>
+     *        <p>
+     *        The <code>KeySpec</code> and <code>CustomerMasterKeySpec</code> fields have the same value. We recommend
+     *        that you use the <code>KeySpec</code> field in your code. However, to avoid breaking changes, KMS will
+     *        support both fields.
      * @see CustomerMasterKeySpec
      */
-
+    @Deprecated
     public void setCustomerMasterKeySpec(String customerMasterKeySpec) {
         this.customerMasterKeySpec = customerMasterKeySpec;
     }
 
     /**
      * <p>
-     * Describes the type of key material in the CMK.
+     * Instead, use the <code>KeySpec</code> field.
+     * </p>
+     * <p>
+     * The <code>KeySpec</code> and <code>CustomerMasterKeySpec</code> fields have the same value. We recommend that you
+     * use the <code>KeySpec</code> field in your code. However, to avoid breaking changes, KMS will support both
+     * fields.
      * </p>
      * 
-     * @return Describes the type of key material in the CMK.
+     * @return Instead, use the <code>KeySpec</code> field.</p>
+     *         <p>
+     *         The <code>KeySpec</code> and <code>CustomerMasterKeySpec</code> fields have the same value. We recommend
+     *         that you use the <code>KeySpec</code> field in your code. However, to avoid breaking changes, KMS will
+     *         support both fields.
      * @see CustomerMasterKeySpec
      */
-
+    @Deprecated
     public String getCustomerMasterKeySpec() {
         return this.customerMasterKeySpec;
     }
 
     /**
      * <p>
-     * Describes the type of key material in the CMK.
+     * Instead, use the <code>KeySpec</code> field.
+     * </p>
+     * <p>
+     * The <code>KeySpec</code> and <code>CustomerMasterKeySpec</code> fields have the same value. We recommend that you
+     * use the <code>KeySpec</code> field in your code. However, to avoid breaking changes, KMS will support both
+     * fields.
      * </p>
      * 
      * @param customerMasterKeySpec
-     *        Describes the type of key material in the CMK.
+     *        Instead, use the <code>KeySpec</code> field.</p>
+     *        <p>
+     *        The <code>KeySpec</code> and <code>CustomerMasterKeySpec</code> fields have the same value. We recommend
+     *        that you use the <code>KeySpec</code> field in your code. However, to avoid breaking changes, KMS will
+     *        support both fields.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see CustomerMasterKeySpec
      */
-
+    @Deprecated
     public KeyMetadata withCustomerMasterKeySpec(String customerMasterKeySpec) {
         setCustomerMasterKeySpec(customerMasterKeySpec);
         return this;
@@ -1293,29 +1339,47 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Describes the type of key material in the CMK.
+     * Instead, use the <code>KeySpec</code> field.
+     * </p>
+     * <p>
+     * The <code>KeySpec</code> and <code>CustomerMasterKeySpec</code> fields have the same value. We recommend that you
+     * use the <code>KeySpec</code> field in your code. However, to avoid breaking changes, KMS will support both
+     * fields.
      * </p>
      * 
      * @param customerMasterKeySpec
-     *        Describes the type of key material in the CMK.
+     *        Instead, use the <code>KeySpec</code> field.</p>
+     *        <p>
+     *        The <code>KeySpec</code> and <code>CustomerMasterKeySpec</code> fields have the same value. We recommend
+     *        that you use the <code>KeySpec</code> field in your code. However, to avoid breaking changes, KMS will
+     *        support both fields.
      * @see CustomerMasterKeySpec
      */
-
+    @Deprecated
     public void setCustomerMasterKeySpec(CustomerMasterKeySpec customerMasterKeySpec) {
         withCustomerMasterKeySpec(customerMasterKeySpec);
     }
 
     /**
      * <p>
-     * Describes the type of key material in the CMK.
+     * Instead, use the <code>KeySpec</code> field.
+     * </p>
+     * <p>
+     * The <code>KeySpec</code> and <code>CustomerMasterKeySpec</code> fields have the same value. We recommend that you
+     * use the <code>KeySpec</code> field in your code. However, to avoid breaking changes, KMS will support both
+     * fields.
      * </p>
      * 
      * @param customerMasterKeySpec
-     *        Describes the type of key material in the CMK.
+     *        Instead, use the <code>KeySpec</code> field.</p>
+     *        <p>
+     *        The <code>KeySpec</code> and <code>CustomerMasterKeySpec</code> fields have the same value. We recommend
+     *        that you use the <code>KeySpec</code> field in your code. However, to avoid breaking changes, KMS will
+     *        support both fields.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see CustomerMasterKeySpec
      */
-
+    @Deprecated
     public KeyMetadata withCustomerMasterKeySpec(CustomerMasterKeySpec customerMasterKeySpec) {
         this.customerMasterKeySpec = customerMasterKeySpec.toString();
         return this;
@@ -1323,17 +1387,90 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The encryption algorithms that the CMK supports. You cannot use the CMK with other encryption algorithms within
-     * AWS KMS.
-     * </p>
-     * <p>
-     * This value is present only when the <code>KeyUsage</code> of the CMK is <code>ENCRYPT_DECRYPT</code>.
+     * Describes the type of key material in the KMS key.
      * </p>
      * 
-     * @return The encryption algorithms that the CMK supports. You cannot use the CMK with other encryption algorithms
-     *         within AWS KMS.</p>
+     * @param keySpec
+     *        Describes the type of key material in the KMS key.
+     * @see KeySpec
+     */
+
+    public void setKeySpec(String keySpec) {
+        this.keySpec = keySpec;
+    }
+
+    /**
+     * <p>
+     * Describes the type of key material in the KMS key.
+     * </p>
+     * 
+     * @return Describes the type of key material in the KMS key.
+     * @see KeySpec
+     */
+
+    public String getKeySpec() {
+        return this.keySpec;
+    }
+
+    /**
+     * <p>
+     * Describes the type of key material in the KMS key.
+     * </p>
+     * 
+     * @param keySpec
+     *        Describes the type of key material in the KMS key.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see KeySpec
+     */
+
+    public KeyMetadata withKeySpec(String keySpec) {
+        setKeySpec(keySpec);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Describes the type of key material in the KMS key.
+     * </p>
+     * 
+     * @param keySpec
+     *        Describes the type of key material in the KMS key.
+     * @see KeySpec
+     */
+
+    public void setKeySpec(KeySpec keySpec) {
+        withKeySpec(keySpec);
+    }
+
+    /**
+     * <p>
+     * Describes the type of key material in the KMS key.
+     * </p>
+     * 
+     * @param keySpec
+     *        Describes the type of key material in the KMS key.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see KeySpec
+     */
+
+    public KeyMetadata withKeySpec(KeySpec keySpec) {
+        this.keySpec = keySpec.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * The encryption algorithms that the KMS key supports. You cannot use the KMS key with other encryption algorithms
+     * within KMS.
+     * </p>
+     * <p>
+     * This value is present only when the <code>KeyUsage</code> of the KMS key is <code>ENCRYPT_DECRYPT</code>.
+     * </p>
+     * 
+     * @return The encryption algorithms that the KMS key supports. You cannot use the KMS key with other encryption
+     *         algorithms within KMS.</p>
      *         <p>
-     *         This value is present only when the <code>KeyUsage</code> of the CMK is <code>ENCRYPT_DECRYPT</code>.
+     *         This value is present only when the <code>KeyUsage</code> of the KMS key is <code>ENCRYPT_DECRYPT</code>.
      * @see EncryptionAlgorithmSpec
      */
 
@@ -1346,18 +1483,18 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The encryption algorithms that the CMK supports. You cannot use the CMK with other encryption algorithms within
-     * AWS KMS.
+     * The encryption algorithms that the KMS key supports. You cannot use the KMS key with other encryption algorithms
+     * within KMS.
      * </p>
      * <p>
-     * This value is present only when the <code>KeyUsage</code> of the CMK is <code>ENCRYPT_DECRYPT</code>.
+     * This value is present only when the <code>KeyUsage</code> of the KMS key is <code>ENCRYPT_DECRYPT</code>.
      * </p>
      * 
      * @param encryptionAlgorithms
-     *        The encryption algorithms that the CMK supports. You cannot use the CMK with other encryption algorithms
-     *        within AWS KMS.</p>
+     *        The encryption algorithms that the KMS key supports. You cannot use the KMS key with other encryption
+     *        algorithms within KMS.</p>
      *        <p>
-     *        This value is present only when the <code>KeyUsage</code> of the CMK is <code>ENCRYPT_DECRYPT</code>.
+     *        This value is present only when the <code>KeyUsage</code> of the KMS key is <code>ENCRYPT_DECRYPT</code>.
      * @see EncryptionAlgorithmSpec
      */
 
@@ -1372,11 +1509,11 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The encryption algorithms that the CMK supports. You cannot use the CMK with other encryption algorithms within
-     * AWS KMS.
+     * The encryption algorithms that the KMS key supports. You cannot use the KMS key with other encryption algorithms
+     * within KMS.
      * </p>
      * <p>
-     * This value is present only when the <code>KeyUsage</code> of the CMK is <code>ENCRYPT_DECRYPT</code>.
+     * This value is present only when the <code>KeyUsage</code> of the KMS key is <code>ENCRYPT_DECRYPT</code>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -1385,10 +1522,10 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param encryptionAlgorithms
-     *        The encryption algorithms that the CMK supports. You cannot use the CMK with other encryption algorithms
-     *        within AWS KMS.</p>
+     *        The encryption algorithms that the KMS key supports. You cannot use the KMS key with other encryption
+     *        algorithms within KMS.</p>
      *        <p>
-     *        This value is present only when the <code>KeyUsage</code> of the CMK is <code>ENCRYPT_DECRYPT</code>.
+     *        This value is present only when the <code>KeyUsage</code> of the KMS key is <code>ENCRYPT_DECRYPT</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see EncryptionAlgorithmSpec
      */
@@ -1405,18 +1542,18 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The encryption algorithms that the CMK supports. You cannot use the CMK with other encryption algorithms within
-     * AWS KMS.
+     * The encryption algorithms that the KMS key supports. You cannot use the KMS key with other encryption algorithms
+     * within KMS.
      * </p>
      * <p>
-     * This value is present only when the <code>KeyUsage</code> of the CMK is <code>ENCRYPT_DECRYPT</code>.
+     * This value is present only when the <code>KeyUsage</code> of the KMS key is <code>ENCRYPT_DECRYPT</code>.
      * </p>
      * 
      * @param encryptionAlgorithms
-     *        The encryption algorithms that the CMK supports. You cannot use the CMK with other encryption algorithms
-     *        within AWS KMS.</p>
+     *        The encryption algorithms that the KMS key supports. You cannot use the KMS key with other encryption
+     *        algorithms within KMS.</p>
      *        <p>
-     *        This value is present only when the <code>KeyUsage</code> of the CMK is <code>ENCRYPT_DECRYPT</code>.
+     *        This value is present only when the <code>KeyUsage</code> of the KMS key is <code>ENCRYPT_DECRYPT</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see EncryptionAlgorithmSpec
      */
@@ -1428,18 +1565,18 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The encryption algorithms that the CMK supports. You cannot use the CMK with other encryption algorithms within
-     * AWS KMS.
+     * The encryption algorithms that the KMS key supports. You cannot use the KMS key with other encryption algorithms
+     * within KMS.
      * </p>
      * <p>
-     * This value is present only when the <code>KeyUsage</code> of the CMK is <code>ENCRYPT_DECRYPT</code>.
+     * This value is present only when the <code>KeyUsage</code> of the KMS key is <code>ENCRYPT_DECRYPT</code>.
      * </p>
      * 
      * @param encryptionAlgorithms
-     *        The encryption algorithms that the CMK supports. You cannot use the CMK with other encryption algorithms
-     *        within AWS KMS.</p>
+     *        The encryption algorithms that the KMS key supports. You cannot use the KMS key with other encryption
+     *        algorithms within KMS.</p>
      *        <p>
-     *        This value is present only when the <code>KeyUsage</code> of the CMK is <code>ENCRYPT_DECRYPT</code>.
+     *        This value is present only when the <code>KeyUsage</code> of the KMS key is <code>ENCRYPT_DECRYPT</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see EncryptionAlgorithmSpec
      */
@@ -1460,17 +1597,17 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The signing algorithms that the CMK supports. You cannot use the CMK with other signing algorithms within AWS
+     * The signing algorithms that the KMS key supports. You cannot use the KMS key with other signing algorithms within
      * KMS.
      * </p>
      * <p>
-     * This field appears only when the <code>KeyUsage</code> of the CMK is <code>SIGN_VERIFY</code>.
+     * This field appears only when the <code>KeyUsage</code> of the KMS key is <code>SIGN_VERIFY</code>.
      * </p>
      * 
-     * @return The signing algorithms that the CMK supports. You cannot use the CMK with other signing algorithms within
-     *         AWS KMS.</p>
+     * @return The signing algorithms that the KMS key supports. You cannot use the KMS key with other signing
+     *         algorithms within KMS.</p>
      *         <p>
-     *         This field appears only when the <code>KeyUsage</code> of the CMK is <code>SIGN_VERIFY</code>.
+     *         This field appears only when the <code>KeyUsage</code> of the KMS key is <code>SIGN_VERIFY</code>.
      * @see SigningAlgorithmSpec
      */
 
@@ -1483,18 +1620,18 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The signing algorithms that the CMK supports. You cannot use the CMK with other signing algorithms within AWS
+     * The signing algorithms that the KMS key supports. You cannot use the KMS key with other signing algorithms within
      * KMS.
      * </p>
      * <p>
-     * This field appears only when the <code>KeyUsage</code> of the CMK is <code>SIGN_VERIFY</code>.
+     * This field appears only when the <code>KeyUsage</code> of the KMS key is <code>SIGN_VERIFY</code>.
      * </p>
      * 
      * @param signingAlgorithms
-     *        The signing algorithms that the CMK supports. You cannot use the CMK with other signing algorithms within
-     *        AWS KMS.</p>
+     *        The signing algorithms that the KMS key supports. You cannot use the KMS key with other signing algorithms
+     *        within KMS.</p>
      *        <p>
-     *        This field appears only when the <code>KeyUsage</code> of the CMK is <code>SIGN_VERIFY</code>.
+     *        This field appears only when the <code>KeyUsage</code> of the KMS key is <code>SIGN_VERIFY</code>.
      * @see SigningAlgorithmSpec
      */
 
@@ -1509,11 +1646,11 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The signing algorithms that the CMK supports. You cannot use the CMK with other signing algorithms within AWS
+     * The signing algorithms that the KMS key supports. You cannot use the KMS key with other signing algorithms within
      * KMS.
      * </p>
      * <p>
-     * This field appears only when the <code>KeyUsage</code> of the CMK is <code>SIGN_VERIFY</code>.
+     * This field appears only when the <code>KeyUsage</code> of the KMS key is <code>SIGN_VERIFY</code>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -1522,10 +1659,10 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param signingAlgorithms
-     *        The signing algorithms that the CMK supports. You cannot use the CMK with other signing algorithms within
-     *        AWS KMS.</p>
+     *        The signing algorithms that the KMS key supports. You cannot use the KMS key with other signing algorithms
+     *        within KMS.</p>
      *        <p>
-     *        This field appears only when the <code>KeyUsage</code> of the CMK is <code>SIGN_VERIFY</code>.
+     *        This field appears only when the <code>KeyUsage</code> of the KMS key is <code>SIGN_VERIFY</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SigningAlgorithmSpec
      */
@@ -1542,18 +1679,18 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The signing algorithms that the CMK supports. You cannot use the CMK with other signing algorithms within AWS
+     * The signing algorithms that the KMS key supports. You cannot use the KMS key with other signing algorithms within
      * KMS.
      * </p>
      * <p>
-     * This field appears only when the <code>KeyUsage</code> of the CMK is <code>SIGN_VERIFY</code>.
+     * This field appears only when the <code>KeyUsage</code> of the KMS key is <code>SIGN_VERIFY</code>.
      * </p>
      * 
      * @param signingAlgorithms
-     *        The signing algorithms that the CMK supports. You cannot use the CMK with other signing algorithms within
-     *        AWS KMS.</p>
+     *        The signing algorithms that the KMS key supports. You cannot use the KMS key with other signing algorithms
+     *        within KMS.</p>
      *        <p>
-     *        This field appears only when the <code>KeyUsage</code> of the CMK is <code>SIGN_VERIFY</code>.
+     *        This field appears only when the <code>KeyUsage</code> of the KMS key is <code>SIGN_VERIFY</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SigningAlgorithmSpec
      */
@@ -1565,18 +1702,18 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The signing algorithms that the CMK supports. You cannot use the CMK with other signing algorithms within AWS
+     * The signing algorithms that the KMS key supports. You cannot use the KMS key with other signing algorithms within
      * KMS.
      * </p>
      * <p>
-     * This field appears only when the <code>KeyUsage</code> of the CMK is <code>SIGN_VERIFY</code>.
+     * This field appears only when the <code>KeyUsage</code> of the KMS key is <code>SIGN_VERIFY</code>.
      * </p>
      * 
      * @param signingAlgorithms
-     *        The signing algorithms that the CMK supports. You cannot use the CMK with other signing algorithms within
-     *        AWS KMS.</p>
+     *        The signing algorithms that the KMS key supports. You cannot use the KMS key with other signing algorithms
+     *        within KMS.</p>
      *        <p>
-     *        This field appears only when the <code>KeyUsage</code> of the CMK is <code>SIGN_VERIFY</code>.
+     *        This field appears only when the <code>KeyUsage</code> of the KMS key is <code>SIGN_VERIFY</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SigningAlgorithmSpec
      */
@@ -1596,23 +1733,24 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Indicates whether the CMK is a multi-Region (<code>True</code>) or regional (<code>False</code>) key. This value
-     * is <code>True</code> for multi-Region primary and replica CMKs and <code>False</code> for regional CMKs.
+     * Indicates whether the KMS key is a multi-Region (<code>True</code>) or regional (<code>False</code>) key. This
+     * value is <code>True</code> for multi-Region primary and replica keys and <code>False</code> for regional KMS
+     * keys.
      * </p>
      * <p>
      * For more information about multi-Region keys, see <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/multi-region-keys-overview.html">Using multi-Region
-     * keys</a> in the <i>AWS Key Management Service Developer Guide</i>.
+     * keys</a> in the <i>Key Management Service Developer Guide</i>.
      * </p>
      * 
      * @param multiRegion
-     *        Indicates whether the CMK is a multi-Region (<code>True</code>) or regional (<code>False</code>) key. This
-     *        value is <code>True</code> for multi-Region primary and replica CMKs and <code>False</code> for regional
-     *        CMKs.</p>
+     *        Indicates whether the KMS key is a multi-Region (<code>True</code>) or regional (<code>False</code>) key.
+     *        This value is <code>True</code> for multi-Region primary and replica keys and <code>False</code> for
+     *        regional KMS keys.</p>
      *        <p>
      *        For more information about multi-Region keys, see <a
      *        href="https://docs.aws.amazon.com/kms/latest/developerguide/multi-region-keys-overview.html">Using
-     *        multi-Region keys</a> in the <i>AWS Key Management Service Developer Guide</i>.
+     *        multi-Region keys</a> in the <i>Key Management Service Developer Guide</i>.
      */
 
     public void setMultiRegion(Boolean multiRegion) {
@@ -1621,22 +1759,23 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Indicates whether the CMK is a multi-Region (<code>True</code>) or regional (<code>False</code>) key. This value
-     * is <code>True</code> for multi-Region primary and replica CMKs and <code>False</code> for regional CMKs.
+     * Indicates whether the KMS key is a multi-Region (<code>True</code>) or regional (<code>False</code>) key. This
+     * value is <code>True</code> for multi-Region primary and replica keys and <code>False</code> for regional KMS
+     * keys.
      * </p>
      * <p>
      * For more information about multi-Region keys, see <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/multi-region-keys-overview.html">Using multi-Region
-     * keys</a> in the <i>AWS Key Management Service Developer Guide</i>.
+     * keys</a> in the <i>Key Management Service Developer Guide</i>.
      * </p>
      * 
-     * @return Indicates whether the CMK is a multi-Region (<code>True</code>) or regional (<code>False</code>) key.
-     *         This value is <code>True</code> for multi-Region primary and replica CMKs and <code>False</code> for
-     *         regional CMKs.</p>
+     * @return Indicates whether the KMS key is a multi-Region (<code>True</code>) or regional (<code>False</code>) key.
+     *         This value is <code>True</code> for multi-Region primary and replica keys and <code>False</code> for
+     *         regional KMS keys.</p>
      *         <p>
      *         For more information about multi-Region keys, see <a
      *         href="https://docs.aws.amazon.com/kms/latest/developerguide/multi-region-keys-overview.html">Using
-     *         multi-Region keys</a> in the <i>AWS Key Management Service Developer Guide</i>.
+     *         multi-Region keys</a> in the <i>Key Management Service Developer Guide</i>.
      */
 
     public Boolean getMultiRegion() {
@@ -1645,23 +1784,24 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Indicates whether the CMK is a multi-Region (<code>True</code>) or regional (<code>False</code>) key. This value
-     * is <code>True</code> for multi-Region primary and replica CMKs and <code>False</code> for regional CMKs.
+     * Indicates whether the KMS key is a multi-Region (<code>True</code>) or regional (<code>False</code>) key. This
+     * value is <code>True</code> for multi-Region primary and replica keys and <code>False</code> for regional KMS
+     * keys.
      * </p>
      * <p>
      * For more information about multi-Region keys, see <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/multi-region-keys-overview.html">Using multi-Region
-     * keys</a> in the <i>AWS Key Management Service Developer Guide</i>.
+     * keys</a> in the <i>Key Management Service Developer Guide</i>.
      * </p>
      * 
      * @param multiRegion
-     *        Indicates whether the CMK is a multi-Region (<code>True</code>) or regional (<code>False</code>) key. This
-     *        value is <code>True</code> for multi-Region primary and replica CMKs and <code>False</code> for regional
-     *        CMKs.</p>
+     *        Indicates whether the KMS key is a multi-Region (<code>True</code>) or regional (<code>False</code>) key.
+     *        This value is <code>True</code> for multi-Region primary and replica keys and <code>False</code> for
+     *        regional KMS keys.</p>
      *        <p>
      *        For more information about multi-Region keys, see <a
      *        href="https://docs.aws.amazon.com/kms/latest/developerguide/multi-region-keys-overview.html">Using
-     *        multi-Region keys</a> in the <i>AWS Key Management Service Developer Guide</i>.
+     *        multi-Region keys</a> in the <i>Key Management Service Developer Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1672,22 +1812,23 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Indicates whether the CMK is a multi-Region (<code>True</code>) or regional (<code>False</code>) key. This value
-     * is <code>True</code> for multi-Region primary and replica CMKs and <code>False</code> for regional CMKs.
+     * Indicates whether the KMS key is a multi-Region (<code>True</code>) or regional (<code>False</code>) key. This
+     * value is <code>True</code> for multi-Region primary and replica keys and <code>False</code> for regional KMS
+     * keys.
      * </p>
      * <p>
      * For more information about multi-Region keys, see <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/multi-region-keys-overview.html">Using multi-Region
-     * keys</a> in the <i>AWS Key Management Service Developer Guide</i>.
+     * keys</a> in the <i>Key Management Service Developer Guide</i>.
      * </p>
      * 
-     * @return Indicates whether the CMK is a multi-Region (<code>True</code>) or regional (<code>False</code>) key.
-     *         This value is <code>True</code> for multi-Region primary and replica CMKs and <code>False</code> for
-     *         regional CMKs.</p>
+     * @return Indicates whether the KMS key is a multi-Region (<code>True</code>) or regional (<code>False</code>) key.
+     *         This value is <code>True</code> for multi-Region primary and replica keys and <code>False</code> for
+     *         regional KMS keys.</p>
      *         <p>
      *         For more information about multi-Region keys, see <a
      *         href="https://docs.aws.amazon.com/kms/latest/developerguide/multi-region-keys-overview.html">Using
-     *         multi-Region keys</a> in the <i>AWS Key Management Service Developer Guide</i>.
+     *         multi-Region keys</a> in the <i>Key Management Service Developer Guide</i>.
      */
 
     public Boolean isMultiRegion() {
@@ -1696,55 +1837,56 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Lists the primary and replica CMKs in same multi-Region CMK. This field is present only when the value of the
+     * Lists the primary and replica keys in same multi-Region key. This field is present only when the value of the
      * <code>MultiRegion</code> field is <code>True</code>.
      * </p>
      * <p>
-     * For more information about any listed CMK, use the <a>DescribeKey</a> operation.
+     * For more information about any listed KMS key, use the <a>DescribeKey</a> operation.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>MultiRegionKeyType</code> indicates whether the CMK is a <code>PRIMARY</code> or <code>REPLICA</code> key.
+     * <code>MultiRegionKeyType</code> indicates whether the KMS key is a <code>PRIMARY</code> or <code>REPLICA</code>
+     * key.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>PrimaryKey</code> displays the key ARN and Region of the primary key. This field displays the current CMK
-     * if it is the primary key.
+     * <code>PrimaryKey</code> displays the key ARN and Region of the primary key. This field displays the current KMS
+     * key if it is the primary key.
      * </p>
      * </li>
      * <li>
      * <p>
      * <code>ReplicaKeys</code> displays the key ARNs and Regions of all replica keys. This field includes the current
-     * CMK if it is a replica key.
+     * KMS key if it is a replica key.
      * </p>
      * </li>
      * </ul>
      * 
      * @param multiRegionConfiguration
-     *        Lists the primary and replica CMKs in same multi-Region CMK. This field is present only when the value of
+     *        Lists the primary and replica keys in same multi-Region key. This field is present only when the value of
      *        the <code>MultiRegion</code> field is <code>True</code>.</p>
      *        <p>
-     *        For more information about any listed CMK, use the <a>DescribeKey</a> operation.
+     *        For more information about any listed KMS key, use the <a>DescribeKey</a> operation.
      *        </p>
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>MultiRegionKeyType</code> indicates whether the CMK is a <code>PRIMARY</code> or
+     *        <code>MultiRegionKeyType</code> indicates whether the KMS key is a <code>PRIMARY</code> or
      *        <code>REPLICA</code> key.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <code>PrimaryKey</code> displays the key ARN and Region of the primary key. This field displays the
-     *        current CMK if it is the primary key.
+     *        current KMS key if it is the primary key.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <code>ReplicaKeys</code> displays the key ARNs and Regions of all replica keys. This field includes the
-     *        current CMK if it is a replica key.
+     *        current KMS key if it is a replica key.
      *        </p>
      *        </li>
      */
@@ -1755,54 +1897,55 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Lists the primary and replica CMKs in same multi-Region CMK. This field is present only when the value of the
+     * Lists the primary and replica keys in same multi-Region key. This field is present only when the value of the
      * <code>MultiRegion</code> field is <code>True</code>.
      * </p>
      * <p>
-     * For more information about any listed CMK, use the <a>DescribeKey</a> operation.
+     * For more information about any listed KMS key, use the <a>DescribeKey</a> operation.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>MultiRegionKeyType</code> indicates whether the CMK is a <code>PRIMARY</code> or <code>REPLICA</code> key.
+     * <code>MultiRegionKeyType</code> indicates whether the KMS key is a <code>PRIMARY</code> or <code>REPLICA</code>
+     * key.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>PrimaryKey</code> displays the key ARN and Region of the primary key. This field displays the current CMK
-     * if it is the primary key.
+     * <code>PrimaryKey</code> displays the key ARN and Region of the primary key. This field displays the current KMS
+     * key if it is the primary key.
      * </p>
      * </li>
      * <li>
      * <p>
      * <code>ReplicaKeys</code> displays the key ARNs and Regions of all replica keys. This field includes the current
-     * CMK if it is a replica key.
+     * KMS key if it is a replica key.
      * </p>
      * </li>
      * </ul>
      * 
-     * @return Lists the primary and replica CMKs in same multi-Region CMK. This field is present only when the value of
+     * @return Lists the primary and replica keys in same multi-Region key. This field is present only when the value of
      *         the <code>MultiRegion</code> field is <code>True</code>.</p>
      *         <p>
-     *         For more information about any listed CMK, use the <a>DescribeKey</a> operation.
+     *         For more information about any listed KMS key, use the <a>DescribeKey</a> operation.
      *         </p>
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>MultiRegionKeyType</code> indicates whether the CMK is a <code>PRIMARY</code> or
+     *         <code>MultiRegionKeyType</code> indicates whether the KMS key is a <code>PRIMARY</code> or
      *         <code>REPLICA</code> key.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
      *         <code>PrimaryKey</code> displays the key ARN and Region of the primary key. This field displays the
-     *         current CMK if it is the primary key.
+     *         current KMS key if it is the primary key.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
      *         <code>ReplicaKeys</code> displays the key ARNs and Regions of all replica keys. This field includes the
-     *         current CMK if it is a replica key.
+     *         current KMS key if it is a replica key.
      *         </p>
      *         </li>
      */
@@ -1813,55 +1956,56 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Lists the primary and replica CMKs in same multi-Region CMK. This field is present only when the value of the
+     * Lists the primary and replica keys in same multi-Region key. This field is present only when the value of the
      * <code>MultiRegion</code> field is <code>True</code>.
      * </p>
      * <p>
-     * For more information about any listed CMK, use the <a>DescribeKey</a> operation.
+     * For more information about any listed KMS key, use the <a>DescribeKey</a> operation.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>MultiRegionKeyType</code> indicates whether the CMK is a <code>PRIMARY</code> or <code>REPLICA</code> key.
+     * <code>MultiRegionKeyType</code> indicates whether the KMS key is a <code>PRIMARY</code> or <code>REPLICA</code>
+     * key.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>PrimaryKey</code> displays the key ARN and Region of the primary key. This field displays the current CMK
-     * if it is the primary key.
+     * <code>PrimaryKey</code> displays the key ARN and Region of the primary key. This field displays the current KMS
+     * key if it is the primary key.
      * </p>
      * </li>
      * <li>
      * <p>
      * <code>ReplicaKeys</code> displays the key ARNs and Regions of all replica keys. This field includes the current
-     * CMK if it is a replica key.
+     * KMS key if it is a replica key.
      * </p>
      * </li>
      * </ul>
      * 
      * @param multiRegionConfiguration
-     *        Lists the primary and replica CMKs in same multi-Region CMK. This field is present only when the value of
+     *        Lists the primary and replica keys in same multi-Region key. This field is present only when the value of
      *        the <code>MultiRegion</code> field is <code>True</code>.</p>
      *        <p>
-     *        For more information about any listed CMK, use the <a>DescribeKey</a> operation.
+     *        For more information about any listed KMS key, use the <a>DescribeKey</a> operation.
      *        </p>
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>MultiRegionKeyType</code> indicates whether the CMK is a <code>PRIMARY</code> or
+     *        <code>MultiRegionKeyType</code> indicates whether the KMS key is a <code>PRIMARY</code> or
      *        <code>REPLICA</code> key.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <code>PrimaryKey</code> displays the key ARN and Region of the primary key. This field displays the
-     *        current CMK if it is the primary key.
+     *        current KMS key if it is the primary key.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <code>ReplicaKeys</code> displays the key ARNs and Regions of all replica keys. This field includes the
-     *        current CMK if it is a replica key.
+     *        current KMS key if it is a replica key.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -1875,12 +2019,12 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The waiting period before the primary key in a multi-Region key is deleted. This waiting period begins when the
-     * last of its replica keys is deleted. This value is present only when the <code>KeyState</code> of the CMK is
-     * <code>PendingReplicaDeletion</code>. That indicates that the CMK is the primary key in a multi-Region key, it is
-     * scheduled for deletion, and it still has existing replica keys.
+     * last of its replica keys is deleted. This value is present only when the <code>KeyState</code> of the KMS key is
+     * <code>PendingReplicaDeletion</code>. That indicates that the KMS key is the primary key in a multi-Region key, it
+     * is scheduled for deletion, and it still has existing replica keys.
      * </p>
      * <p>
-     * When a regional CMK or a replica key in a multi-Region key is scheduled for deletion, its deletion date is
+     * When a single-Region KMS key or a multi-Region replica key is scheduled for deletion, its deletion date is
      * displayed in the <code>DeletionDate</code> field. However, when the primary key in a multi-Region key is
      * scheduled for deletion, its waiting period doesn't begin until all of its replica keys are deleted. This value
      * displays that waiting period. When the last replica key in the multi-Region key is deleted, the
@@ -1891,10 +2035,10 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
      * @param pendingDeletionWindowInDays
      *        The waiting period before the primary key in a multi-Region key is deleted. This waiting period begins
      *        when the last of its replica keys is deleted. This value is present only when the <code>KeyState</code> of
-     *        the CMK is <code>PendingReplicaDeletion</code>. That indicates that the CMK is the primary key in a
-     *        multi-Region key, it is scheduled for deletion, and it still has existing replica keys.</p>
+     *        the KMS key is <code>PendingReplicaDeletion</code>. That indicates that the KMS key is the primary key in
+     *        a multi-Region key, it is scheduled for deletion, and it still has existing replica keys.</p>
      *        <p>
-     *        When a regional CMK or a replica key in a multi-Region key is scheduled for deletion, its deletion date is
+     *        When a single-Region KMS key or a multi-Region replica key is scheduled for deletion, its deletion date is
      *        displayed in the <code>DeletionDate</code> field. However, when the primary key in a multi-Region key is
      *        scheduled for deletion, its waiting period doesn't begin until all of its replica keys are deleted. This
      *        value displays that waiting period. When the last replica key in the multi-Region key is deleted, the
@@ -1909,12 +2053,12 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The waiting period before the primary key in a multi-Region key is deleted. This waiting period begins when the
-     * last of its replica keys is deleted. This value is present only when the <code>KeyState</code> of the CMK is
-     * <code>PendingReplicaDeletion</code>. That indicates that the CMK is the primary key in a multi-Region key, it is
-     * scheduled for deletion, and it still has existing replica keys.
+     * last of its replica keys is deleted. This value is present only when the <code>KeyState</code> of the KMS key is
+     * <code>PendingReplicaDeletion</code>. That indicates that the KMS key is the primary key in a multi-Region key, it
+     * is scheduled for deletion, and it still has existing replica keys.
      * </p>
      * <p>
-     * When a regional CMK or a replica key in a multi-Region key is scheduled for deletion, its deletion date is
+     * When a single-Region KMS key or a multi-Region replica key is scheduled for deletion, its deletion date is
      * displayed in the <code>DeletionDate</code> field. However, when the primary key in a multi-Region key is
      * scheduled for deletion, its waiting period doesn't begin until all of its replica keys are deleted. This value
      * displays that waiting period. When the last replica key in the multi-Region key is deleted, the
@@ -1924,10 +2068,10 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
      * 
      * @return The waiting period before the primary key in a multi-Region key is deleted. This waiting period begins
      *         when the last of its replica keys is deleted. This value is present only when the <code>KeyState</code>
-     *         of the CMK is <code>PendingReplicaDeletion</code>. That indicates that the CMK is the primary key in a
-     *         multi-Region key, it is scheduled for deletion, and it still has existing replica keys.</p>
+     *         of the KMS key is <code>PendingReplicaDeletion</code>. That indicates that the KMS key is the primary key
+     *         in a multi-Region key, it is scheduled for deletion, and it still has existing replica keys.</p>
      *         <p>
-     *         When a regional CMK or a replica key in a multi-Region key is scheduled for deletion, its deletion date
+     *         When a single-Region KMS key or a multi-Region replica key is scheduled for deletion, its deletion date
      *         is displayed in the <code>DeletionDate</code> field. However, when the primary key in a multi-Region key
      *         is scheduled for deletion, its waiting period doesn't begin until all of its replica keys are deleted.
      *         This value displays that waiting period. When the last replica key in the multi-Region key is deleted,
@@ -1942,12 +2086,12 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The waiting period before the primary key in a multi-Region key is deleted. This waiting period begins when the
-     * last of its replica keys is deleted. This value is present only when the <code>KeyState</code> of the CMK is
-     * <code>PendingReplicaDeletion</code>. That indicates that the CMK is the primary key in a multi-Region key, it is
-     * scheduled for deletion, and it still has existing replica keys.
+     * last of its replica keys is deleted. This value is present only when the <code>KeyState</code> of the KMS key is
+     * <code>PendingReplicaDeletion</code>. That indicates that the KMS key is the primary key in a multi-Region key, it
+     * is scheduled for deletion, and it still has existing replica keys.
      * </p>
      * <p>
-     * When a regional CMK or a replica key in a multi-Region key is scheduled for deletion, its deletion date is
+     * When a single-Region KMS key or a multi-Region replica key is scheduled for deletion, its deletion date is
      * displayed in the <code>DeletionDate</code> field. However, when the primary key in a multi-Region key is
      * scheduled for deletion, its waiting period doesn't begin until all of its replica keys are deleted. This value
      * displays that waiting period. When the last replica key in the multi-Region key is deleted, the
@@ -1958,10 +2102,10 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
      * @param pendingDeletionWindowInDays
      *        The waiting period before the primary key in a multi-Region key is deleted. This waiting period begins
      *        when the last of its replica keys is deleted. This value is present only when the <code>KeyState</code> of
-     *        the CMK is <code>PendingReplicaDeletion</code>. That indicates that the CMK is the primary key in a
-     *        multi-Region key, it is scheduled for deletion, and it still has existing replica keys.</p>
+     *        the KMS key is <code>PendingReplicaDeletion</code>. That indicates that the KMS key is the primary key in
+     *        a multi-Region key, it is scheduled for deletion, and it still has existing replica keys.</p>
      *        <p>
-     *        When a regional CMK or a replica key in a multi-Region key is scheduled for deletion, its deletion date is
+     *        When a single-Region KMS key or a multi-Region replica key is scheduled for deletion, its deletion date is
      *        displayed in the <code>DeletionDate</code> field. However, when the primary key in a multi-Region key is
      *        scheduled for deletion, its waiting period doesn't begin until all of its replica keys are deleted. This
      *        value displays that waiting period. When the last replica key in the multi-Region key is deleted, the
@@ -2019,6 +2163,8 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
             sb.append("KeyManager: ").append(getKeyManager()).append(",");
         if (getCustomerMasterKeySpec() != null)
             sb.append("CustomerMasterKeySpec: ").append(getCustomerMasterKeySpec()).append(",");
+        if (getKeySpec() != null)
+            sb.append("KeySpec: ").append(getKeySpec()).append(",");
         if (getEncryptionAlgorithms() != null)
             sb.append("EncryptionAlgorithms: ").append(getEncryptionAlgorithms()).append(",");
         if (getSigningAlgorithms() != null)
@@ -2107,6 +2253,10 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getCustomerMasterKeySpec() != null && other.getCustomerMasterKeySpec().equals(this.getCustomerMasterKeySpec()) == false)
             return false;
+        if (other.getKeySpec() == null ^ this.getKeySpec() == null)
+            return false;
+        if (other.getKeySpec() != null && other.getKeySpec().equals(this.getKeySpec()) == false)
+            return false;
         if (other.getEncryptionAlgorithms() == null ^ this.getEncryptionAlgorithms() == null)
             return false;
         if (other.getEncryptionAlgorithms() != null && other.getEncryptionAlgorithms().equals(this.getEncryptionAlgorithms()) == false)
@@ -2151,6 +2301,7 @@ public class KeyMetadata implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getExpirationModel() == null) ? 0 : getExpirationModel().hashCode());
         hashCode = prime * hashCode + ((getKeyManager() == null) ? 0 : getKeyManager().hashCode());
         hashCode = prime * hashCode + ((getCustomerMasterKeySpec() == null) ? 0 : getCustomerMasterKeySpec().hashCode());
+        hashCode = prime * hashCode + ((getKeySpec() == null) ? 0 : getKeySpec().hashCode());
         hashCode = prime * hashCode + ((getEncryptionAlgorithms() == null) ? 0 : getEncryptionAlgorithms().hashCode());
         hashCode = prime * hashCode + ((getSigningAlgorithms() == null) ? 0 : getSigningAlgorithms().hashCode());
         hashCode = prime * hashCode + ((getMultiRegion() == null) ? 0 : getMultiRegion().hashCode());

@@ -27,10 +27,10 @@ public class ScheduleKeyDeletionRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The unique identifier of the customer master key (CMK) to delete.
+     * The unique identifier of the KMS key to delete.
      * </p>
      * <p>
-     * Specify the key ID or key ARN of the CMK.
+     * Specify the key ID or key ARN of the KMS key.
      * </p>
      * <p>
      * For example:
@@ -48,18 +48,17 @@ public class ScheduleKeyDeletionRequest extends com.amazonaws.AmazonWebServiceRe
      * </li>
      * </ul>
      * <p>
-     * To get the key ID and key ARN for a CMK, use <a>ListKeys</a> or <a>DescribeKey</a>.
+     * To get the key ID and key ARN for a KMS key, use <a>ListKeys</a> or <a>DescribeKey</a>.
      * </p>
      */
     private String keyId;
     /**
      * <p>
-     * The waiting period, specified in number of days. After the waiting period ends, AWS KMS deletes the customer
-     * master key (CMK).
+     * The waiting period, specified in number of days. After the waiting period ends, KMS deletes the KMS key.
      * </p>
      * <p>
-     * If the CMK is a multi-Region primary key with replicas, the waiting period begins when the last of its replica
-     * keys is deleted. Otherwise, the waiting period begins immediately.
+     * If the KMS key is a multi-Region primary key with replicas, the waiting period begins when the last of its
+     * replica keys is deleted. Otherwise, the waiting period begins immediately.
      * </p>
      * <p>
      * This value is optional. If you include a value, it must be between 7 and 30, inclusive. If you do not include a
@@ -70,10 +69,10 @@ public class ScheduleKeyDeletionRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The unique identifier of the customer master key (CMK) to delete.
+     * The unique identifier of the KMS key to delete.
      * </p>
      * <p>
-     * Specify the key ID or key ARN of the CMK.
+     * Specify the key ID or key ARN of the KMS key.
      * </p>
      * <p>
      * For example:
@@ -91,13 +90,13 @@ public class ScheduleKeyDeletionRequest extends com.amazonaws.AmazonWebServiceRe
      * </li>
      * </ul>
      * <p>
-     * To get the key ID and key ARN for a CMK, use <a>ListKeys</a> or <a>DescribeKey</a>.
+     * To get the key ID and key ARN for a KMS key, use <a>ListKeys</a> or <a>DescribeKey</a>.
      * </p>
      * 
      * @param keyId
-     *        The unique identifier of the customer master key (CMK) to delete.</p>
+     *        The unique identifier of the KMS key to delete.</p>
      *        <p>
-     *        Specify the key ID or key ARN of the CMK.
+     *        Specify the key ID or key ARN of the KMS key.
      *        </p>
      *        <p>
      *        For example:
@@ -115,7 +114,7 @@ public class ScheduleKeyDeletionRequest extends com.amazonaws.AmazonWebServiceRe
      *        </li>
      *        </ul>
      *        <p>
-     *        To get the key ID and key ARN for a CMK, use <a>ListKeys</a> or <a>DescribeKey</a>.
+     *        To get the key ID and key ARN for a KMS key, use <a>ListKeys</a> or <a>DescribeKey</a>.
      */
 
     public void setKeyId(String keyId) {
@@ -124,10 +123,10 @@ public class ScheduleKeyDeletionRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The unique identifier of the customer master key (CMK) to delete.
+     * The unique identifier of the KMS key to delete.
      * </p>
      * <p>
-     * Specify the key ID or key ARN of the CMK.
+     * Specify the key ID or key ARN of the KMS key.
      * </p>
      * <p>
      * For example:
@@ -145,12 +144,12 @@ public class ScheduleKeyDeletionRequest extends com.amazonaws.AmazonWebServiceRe
      * </li>
      * </ul>
      * <p>
-     * To get the key ID and key ARN for a CMK, use <a>ListKeys</a> or <a>DescribeKey</a>.
+     * To get the key ID and key ARN for a KMS key, use <a>ListKeys</a> or <a>DescribeKey</a>.
      * </p>
      * 
-     * @return The unique identifier of the customer master key (CMK) to delete.</p>
+     * @return The unique identifier of the KMS key to delete.</p>
      *         <p>
-     *         Specify the key ID or key ARN of the CMK.
+     *         Specify the key ID or key ARN of the KMS key.
      *         </p>
      *         <p>
      *         For example:
@@ -168,7 +167,7 @@ public class ScheduleKeyDeletionRequest extends com.amazonaws.AmazonWebServiceRe
      *         </li>
      *         </ul>
      *         <p>
-     *         To get the key ID and key ARN for a CMK, use <a>ListKeys</a> or <a>DescribeKey</a>.
+     *         To get the key ID and key ARN for a KMS key, use <a>ListKeys</a> or <a>DescribeKey</a>.
      */
 
     public String getKeyId() {
@@ -177,10 +176,10 @@ public class ScheduleKeyDeletionRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The unique identifier of the customer master key (CMK) to delete.
+     * The unique identifier of the KMS key to delete.
      * </p>
      * <p>
-     * Specify the key ID or key ARN of the CMK.
+     * Specify the key ID or key ARN of the KMS key.
      * </p>
      * <p>
      * For example:
@@ -198,13 +197,13 @@ public class ScheduleKeyDeletionRequest extends com.amazonaws.AmazonWebServiceRe
      * </li>
      * </ul>
      * <p>
-     * To get the key ID and key ARN for a CMK, use <a>ListKeys</a> or <a>DescribeKey</a>.
+     * To get the key ID and key ARN for a KMS key, use <a>ListKeys</a> or <a>DescribeKey</a>.
      * </p>
      * 
      * @param keyId
-     *        The unique identifier of the customer master key (CMK) to delete.</p>
+     *        The unique identifier of the KMS key to delete.</p>
      *        <p>
-     *        Specify the key ID or key ARN of the CMK.
+     *        Specify the key ID or key ARN of the KMS key.
      *        </p>
      *        <p>
      *        For example:
@@ -222,7 +221,7 @@ public class ScheduleKeyDeletionRequest extends com.amazonaws.AmazonWebServiceRe
      *        </li>
      *        </ul>
      *        <p>
-     *        To get the key ID and key ARN for a CMK, use <a>ListKeys</a> or <a>DescribeKey</a>.
+     *        To get the key ID and key ARN for a KMS key, use <a>ListKeys</a> or <a>DescribeKey</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -233,12 +232,11 @@ public class ScheduleKeyDeletionRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The waiting period, specified in number of days. After the waiting period ends, AWS KMS deletes the customer
-     * master key (CMK).
+     * The waiting period, specified in number of days. After the waiting period ends, KMS deletes the KMS key.
      * </p>
      * <p>
-     * If the CMK is a multi-Region primary key with replicas, the waiting period begins when the last of its replica
-     * keys is deleted. Otherwise, the waiting period begins immediately.
+     * If the KMS key is a multi-Region primary key with replicas, the waiting period begins when the last of its
+     * replica keys is deleted. Otherwise, the waiting period begins immediately.
      * </p>
      * <p>
      * This value is optional. If you include a value, it must be between 7 and 30, inclusive. If you do not include a
@@ -246,10 +244,10 @@ public class ScheduleKeyDeletionRequest extends com.amazonaws.AmazonWebServiceRe
      * </p>
      * 
      * @param pendingWindowInDays
-     *        The waiting period, specified in number of days. After the waiting period ends, AWS KMS deletes the
-     *        customer master key (CMK).</p>
+     *        The waiting period, specified in number of days. After the waiting period ends, KMS deletes the KMS
+     *        key.</p>
      *        <p>
-     *        If the CMK is a multi-Region primary key with replicas, the waiting period begins when the last of its
+     *        If the KMS key is a multi-Region primary key with replicas, the waiting period begins when the last of its
      *        replica keys is deleted. Otherwise, the waiting period begins immediately.
      *        </p>
      *        <p>
@@ -263,23 +261,22 @@ public class ScheduleKeyDeletionRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The waiting period, specified in number of days. After the waiting period ends, AWS KMS deletes the customer
-     * master key (CMK).
+     * The waiting period, specified in number of days. After the waiting period ends, KMS deletes the KMS key.
      * </p>
      * <p>
-     * If the CMK is a multi-Region primary key with replicas, the waiting period begins when the last of its replica
-     * keys is deleted. Otherwise, the waiting period begins immediately.
+     * If the KMS key is a multi-Region primary key with replicas, the waiting period begins when the last of its
+     * replica keys is deleted. Otherwise, the waiting period begins immediately.
      * </p>
      * <p>
      * This value is optional. If you include a value, it must be between 7 and 30, inclusive. If you do not include a
      * value, it defaults to 30.
      * </p>
      * 
-     * @return The waiting period, specified in number of days. After the waiting period ends, AWS KMS deletes the
-     *         customer master key (CMK).</p>
+     * @return The waiting period, specified in number of days. After the waiting period ends, KMS deletes the KMS
+     *         key.</p>
      *         <p>
-     *         If the CMK is a multi-Region primary key with replicas, the waiting period begins when the last of its
-     *         replica keys is deleted. Otherwise, the waiting period begins immediately.
+     *         If the KMS key is a multi-Region primary key with replicas, the waiting period begins when the last of
+     *         its replica keys is deleted. Otherwise, the waiting period begins immediately.
      *         </p>
      *         <p>
      *         This value is optional. If you include a value, it must be between 7 and 30, inclusive. If you do not
@@ -292,12 +289,11 @@ public class ScheduleKeyDeletionRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The waiting period, specified in number of days. After the waiting period ends, AWS KMS deletes the customer
-     * master key (CMK).
+     * The waiting period, specified in number of days. After the waiting period ends, KMS deletes the KMS key.
      * </p>
      * <p>
-     * If the CMK is a multi-Region primary key with replicas, the waiting period begins when the last of its replica
-     * keys is deleted. Otherwise, the waiting period begins immediately.
+     * If the KMS key is a multi-Region primary key with replicas, the waiting period begins when the last of its
+     * replica keys is deleted. Otherwise, the waiting period begins immediately.
      * </p>
      * <p>
      * This value is optional. If you include a value, it must be between 7 and 30, inclusive. If you do not include a
@@ -305,10 +301,10 @@ public class ScheduleKeyDeletionRequest extends com.amazonaws.AmazonWebServiceRe
      * </p>
      * 
      * @param pendingWindowInDays
-     *        The waiting period, specified in number of days. After the waiting period ends, AWS KMS deletes the
-     *        customer master key (CMK).</p>
+     *        The waiting period, specified in number of days. After the waiting period ends, KMS deletes the KMS
+     *        key.</p>
      *        <p>
-     *        If the CMK is a multi-Region primary key with replicas, the waiting period begins when the last of its
+     *        If the KMS key is a multi-Region primary key with replicas, the waiting period begins when the last of its
      *        replica keys is deleted. Otherwise, the waiting period begins immediately.
      *        </p>
      *        <p>

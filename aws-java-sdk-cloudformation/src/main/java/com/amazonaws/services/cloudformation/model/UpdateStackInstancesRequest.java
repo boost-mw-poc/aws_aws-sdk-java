@@ -33,9 +33,9 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
     private String stackSetName;
     /**
      * <p>
-     * [Self-managed permissions] The names of one or more accounts for which you want to update parameter values for
-     * stack instances. The overridden parameter values will be applied to all stack instances in the specified accounts
-     * and Regions.
+     * [Self-managed permissions] The names of one or more Amazon Web Services accounts for which you want to update
+     * parameter values for stack instances. The overridden parameter values will be applied to all stack instances in
+     * the specified accounts and Regions.
      * </p>
      * <p>
      * You can specify <code>Accounts</code> or <code>DeploymentTargets</code>, but not both.
@@ -149,9 +149,10 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * If you are signed in to a delegated administrator account, specify <code>DELEGATED_ADMIN</code>.
      * </p>
      * <p>
-     * Your account must be registered as a delegated administrator in the management account. For more information, see
-     * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html">
-     * Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
+     * Your Amazon Web Services account must be registered as a delegated administrator in the management account. For
+     * more information, see <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html"
+     * >Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * </li>
      * </ul>
@@ -200,17 +201,17 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * [Self-managed permissions] The names of one or more accounts for which you want to update parameter values for
-     * stack instances. The overridden parameter values will be applied to all stack instances in the specified accounts
-     * and Regions.
+     * [Self-managed permissions] The names of one or more Amazon Web Services accounts for which you want to update
+     * parameter values for stack instances. The overridden parameter values will be applied to all stack instances in
+     * the specified accounts and Regions.
      * </p>
      * <p>
      * You can specify <code>Accounts</code> or <code>DeploymentTargets</code>, but not both.
      * </p>
      * 
-     * @return [Self-managed permissions] The names of one or more accounts for which you want to update parameter
-     *         values for stack instances. The overridden parameter values will be applied to all stack instances in the
-     *         specified accounts and Regions.</p>
+     * @return [Self-managed permissions] The names of one or more Amazon Web Services accounts for which you want to
+     *         update parameter values for stack instances. The overridden parameter values will be applied to all stack
+     *         instances in the specified accounts and Regions.</p>
      *         <p>
      *         You can specify <code>Accounts</code> or <code>DeploymentTargets</code>, but not both.
      */
@@ -224,18 +225,18 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * [Self-managed permissions] The names of one or more accounts for which you want to update parameter values for
-     * stack instances. The overridden parameter values will be applied to all stack instances in the specified accounts
-     * and Regions.
+     * [Self-managed permissions] The names of one or more Amazon Web Services accounts for which you want to update
+     * parameter values for stack instances. The overridden parameter values will be applied to all stack instances in
+     * the specified accounts and Regions.
      * </p>
      * <p>
      * You can specify <code>Accounts</code> or <code>DeploymentTargets</code>, but not both.
      * </p>
      * 
      * @param accounts
-     *        [Self-managed permissions] The names of one or more accounts for which you want to update parameter values
-     *        for stack instances. The overridden parameter values will be applied to all stack instances in the
-     *        specified accounts and Regions.</p>
+     *        [Self-managed permissions] The names of one or more Amazon Web Services accounts for which you want to
+     *        update parameter values for stack instances. The overridden parameter values will be applied to all stack
+     *        instances in the specified accounts and Regions.</p>
      *        <p>
      *        You can specify <code>Accounts</code> or <code>DeploymentTargets</code>, but not both.
      */
@@ -251,9 +252,9 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * [Self-managed permissions] The names of one or more accounts for which you want to update parameter values for
-     * stack instances. The overridden parameter values will be applied to all stack instances in the specified accounts
-     * and Regions.
+     * [Self-managed permissions] The names of one or more Amazon Web Services accounts for which you want to update
+     * parameter values for stack instances. The overridden parameter values will be applied to all stack instances in
+     * the specified accounts and Regions.
      * </p>
      * <p>
      * You can specify <code>Accounts</code> or <code>DeploymentTargets</code>, but not both.
@@ -265,9 +266,9 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * 
      * @param accounts
-     *        [Self-managed permissions] The names of one or more accounts for which you want to update parameter values
-     *        for stack instances. The overridden parameter values will be applied to all stack instances in the
-     *        specified accounts and Regions.</p>
+     *        [Self-managed permissions] The names of one or more Amazon Web Services accounts for which you want to
+     *        update parameter values for stack instances. The overridden parameter values will be applied to all stack
+     *        instances in the specified accounts and Regions.</p>
      *        <p>
      *        You can specify <code>Accounts</code> or <code>DeploymentTargets</code>, but not both.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -285,18 +286,18 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * [Self-managed permissions] The names of one or more accounts for which you want to update parameter values for
-     * stack instances. The overridden parameter values will be applied to all stack instances in the specified accounts
-     * and Regions.
+     * [Self-managed permissions] The names of one or more Amazon Web Services accounts for which you want to update
+     * parameter values for stack instances. The overridden parameter values will be applied to all stack instances in
+     * the specified accounts and Regions.
      * </p>
      * <p>
      * You can specify <code>Accounts</code> or <code>DeploymentTargets</code>, but not both.
      * </p>
      * 
      * @param accounts
-     *        [Self-managed permissions] The names of one or more accounts for which you want to update parameter values
-     *        for stack instances. The overridden parameter values will be applied to all stack instances in the
-     *        specified accounts and Regions.</p>
+     *        [Self-managed permissions] The names of one or more Amazon Web Services accounts for which you want to
+     *        update parameter values for stack instances. The overridden parameter values will be applied to all stack
+     *        instances in the specified accounts and Regions.</p>
      *        <p>
      *        You can specify <code>Accounts</code> or <code>DeploymentTargets</code>, but not both.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -1019,9 +1020,10 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * If you are signed in to a delegated administrator account, specify <code>DELEGATED_ADMIN</code>.
      * </p>
      * <p>
-     * Your account must be registered as a delegated administrator in the management account. For more information, see
-     * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html">
-     * Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
+     * Your Amazon Web Services account must be registered as a delegated administrator in the management account. For
+     * more information, see <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html"
+     * >Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * </li>
      * </ul>
@@ -1044,8 +1046,8 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      *        If you are signed in to a delegated administrator account, specify <code>DELEGATED_ADMIN</code>.
      *        </p>
      *        <p>
-     *        Your account must be registered as a delegated administrator in the management account. For more
-     *        information, see <a href=
+     *        Your Amazon Web Services account must be registered as a delegated administrator in the management
+     *        account. For more information, see <a href=
      *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html"
      *        >Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
      *        </p>
@@ -1076,9 +1078,10 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * If you are signed in to a delegated administrator account, specify <code>DELEGATED_ADMIN</code>.
      * </p>
      * <p>
-     * Your account must be registered as a delegated administrator in the management account. For more information, see
-     * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html">
-     * Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
+     * Your Amazon Web Services account must be registered as a delegated administrator in the management account. For
+     * more information, see <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html"
+     * >Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * </li>
      * </ul>
@@ -1100,8 +1103,8 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      *         If you are signed in to a delegated administrator account, specify <code>DELEGATED_ADMIN</code>.
      *         </p>
      *         <p>
-     *         Your account must be registered as a delegated administrator in the management account. For more
-     *         information, see <a href=
+     *         Your Amazon Web Services account must be registered as a delegated administrator in the management
+     *         account. For more information, see <a href=
      *         "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html"
      *         >Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
      *         </p>
@@ -1132,9 +1135,10 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * If you are signed in to a delegated administrator account, specify <code>DELEGATED_ADMIN</code>.
      * </p>
      * <p>
-     * Your account must be registered as a delegated administrator in the management account. For more information, see
-     * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html">
-     * Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
+     * Your Amazon Web Services account must be registered as a delegated administrator in the management account. For
+     * more information, see <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html"
+     * >Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * </li>
      * </ul>
@@ -1157,8 +1161,8 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      *        If you are signed in to a delegated administrator account, specify <code>DELEGATED_ADMIN</code>.
      *        </p>
      *        <p>
-     *        Your account must be registered as a delegated administrator in the management account. For more
-     *        information, see <a href=
+     *        Your Amazon Web Services account must be registered as a delegated administrator in the management
+     *        account. For more information, see <a href=
      *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html"
      *        >Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
      *        </p>
@@ -1191,9 +1195,10 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * If you are signed in to a delegated administrator account, specify <code>DELEGATED_ADMIN</code>.
      * </p>
      * <p>
-     * Your account must be registered as a delegated administrator in the management account. For more information, see
-     * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html">
-     * Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
+     * Your Amazon Web Services account must be registered as a delegated administrator in the management account. For
+     * more information, see <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html"
+     * >Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * </li>
      * </ul>
@@ -1216,8 +1221,8 @@ public class UpdateStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      *        If you are signed in to a delegated administrator account, specify <code>DELEGATED_ADMIN</code>.
      *        </p>
      *        <p>
-     *        Your account must be registered as a delegated administrator in the management account. For more
-     *        information, see <a href=
+     *        Your Amazon Web Services account must be registered as a delegated administrator in the management
+     *        account. For more information, see <a href=
      *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html"
      *        >Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
      *        </p>

@@ -60,6 +60,8 @@ public class KeyMetadataMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("KeyManager").build();
     private static final MarshallingInfo<String> CUSTOMERMASTERKEYSPEC_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CustomerMasterKeySpec").build();
+    private static final MarshallingInfo<String> KEYSPEC_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("KeySpec").build();
     private static final MarshallingInfo<List> ENCRYPTIONALGORITHMS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EncryptionAlgorithms").build();
     private static final MarshallingInfo<List> SIGNINGALGORITHMS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
@@ -103,6 +105,7 @@ public class KeyMetadataMarshaller {
             protocolMarshaller.marshall(keyMetadata.getExpirationModel(), EXPIRATIONMODEL_BINDING);
             protocolMarshaller.marshall(keyMetadata.getKeyManager(), KEYMANAGER_BINDING);
             protocolMarshaller.marshall(keyMetadata.getCustomerMasterKeySpec(), CUSTOMERMASTERKEYSPEC_BINDING);
+            protocolMarshaller.marshall(keyMetadata.getKeySpec(), KEYSPEC_BINDING);
             protocolMarshaller.marshall(keyMetadata.getEncryptionAlgorithms(), ENCRYPTIONALGORITHMS_BINDING);
             protocolMarshaller.marshall(keyMetadata.getSigningAlgorithms(), SIGNINGALGORITHMS_BINDING);
             protocolMarshaller.marshall(keyMetadata.getMultiRegion(), MULTIREGION_BINDING);

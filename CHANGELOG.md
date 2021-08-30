@@ -1,3 +1,20 @@
+# __1.12.58__ __2021-08-30__
+## __AWS CloudFormation__
+  - ### Features
+    - AWS CloudFormation allows you to iteratively develop your applications when failures are encountered without rolling back successfully provisioned resources. By specifying stack failure options, you can troubleshoot resources in a CREATE_FAILED or UPDATE_FAILED status.
+
+## __AWS CodeBuild__
+  - ### Features
+    - Documentation updates for CodeBuild
+
+## __AWS Key Management Service__
+  - ### Features
+    - This release has changes to KMS nomenclature to remove the word master from both the "Customer master key" and "CMK" abbreviation and replace those naming conventions with "KMS key".
+
+## __Amazon Kinesis Firehose__
+  - ### Features
+    - This release adds the Dynamic Partitioning feature to Kinesis Data Firehose service for S3 destinations.
+
 # __1.12.57__ __2021-08-27__
 ## __Amazon EMR__
   - ### Features

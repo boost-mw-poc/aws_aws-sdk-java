@@ -30,8 +30,9 @@ public class CreateGrantResult extends com.amazonaws.AmazonWebServiceResult<com.
      * <p>
      * Use a grant token when your permission to call this operation comes from a new grant that has not yet achieved
      * <i>eventual consistency</i>. For more information, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#grant_token">Grant token</a> in the
-     * <i>AWS Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/grants.html#grant_token">Grant token</a> and <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/grant-manage.html#using-grant-token">Using a grant
+     * token</a> in the <i>Key Management Service Developer Guide</i>.
      * </p>
      */
     private String grantToken;
@@ -52,8 +53,9 @@ public class CreateGrantResult extends com.amazonaws.AmazonWebServiceResult<com.
      * <p>
      * Use a grant token when your permission to call this operation comes from a new grant that has not yet achieved
      * <i>eventual consistency</i>. For more information, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#grant_token">Grant token</a> in the
-     * <i>AWS Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/grants.html#grant_token">Grant token</a> and <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/grant-manage.html#using-grant-token">Using a grant
+     * token</a> in the <i>Key Management Service Developer Guide</i>.
      * </p>
      * 
      * @param grantToken
@@ -61,8 +63,9 @@ public class CreateGrantResult extends com.amazonaws.AmazonWebServiceResult<com.
      *        <p>
      *        Use a grant token when your permission to call this operation comes from a new grant that has not yet
      *        achieved <i>eventual consistency</i>. For more information, see <a
-     *        href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#grant_token">Grant token</a> in
-     *        the <i>AWS Key Management Service Developer Guide</i>.
+     *        href="https://docs.aws.amazon.com/kms/latest/developerguide/grants.html#grant_token">Grant token</a> and
+     *        <a href="https://docs.aws.amazon.com/kms/latest/developerguide/grant-manage.html#using-grant-token">Using
+     *        a grant token</a> in the <i>Key Management Service Developer Guide</i>.
      */
 
     public void setGrantToken(String grantToken) {
@@ -76,16 +79,18 @@ public class CreateGrantResult extends com.amazonaws.AmazonWebServiceResult<com.
      * <p>
      * Use a grant token when your permission to call this operation comes from a new grant that has not yet achieved
      * <i>eventual consistency</i>. For more information, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#grant_token">Grant token</a> in the
-     * <i>AWS Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/grants.html#grant_token">Grant token</a> and <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/grant-manage.html#using-grant-token">Using a grant
+     * token</a> in the <i>Key Management Service Developer Guide</i>.
      * </p>
      * 
      * @return The grant token.</p>
      *         <p>
      *         Use a grant token when your permission to call this operation comes from a new grant that has not yet
      *         achieved <i>eventual consistency</i>. For more information, see <a
-     *         href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#grant_token">Grant token</a> in
-     *         the <i>AWS Key Management Service Developer Guide</i>.
+     *         href="https://docs.aws.amazon.com/kms/latest/developerguide/grants.html#grant_token">Grant token</a> and
+     *         <a href="https://docs.aws.amazon.com/kms/latest/developerguide/grant-manage.html#using-grant-token">Using
+     *         a grant token</a> in the <i>Key Management Service Developer Guide</i>.
      */
 
     public String getGrantToken() {
@@ -99,8 +104,9 @@ public class CreateGrantResult extends com.amazonaws.AmazonWebServiceResult<com.
      * <p>
      * Use a grant token when your permission to call this operation comes from a new grant that has not yet achieved
      * <i>eventual consistency</i>. For more information, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#grant_token">Grant token</a> in the
-     * <i>AWS Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/grants.html#grant_token">Grant token</a> and <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/grant-manage.html#using-grant-token">Using a grant
+     * token</a> in the <i>Key Management Service Developer Guide</i>.
      * </p>
      * 
      * @param grantToken
@@ -108,8 +114,9 @@ public class CreateGrantResult extends com.amazonaws.AmazonWebServiceResult<com.
      *        <p>
      *        Use a grant token when your permission to call this operation comes from a new grant that has not yet
      *        achieved <i>eventual consistency</i>. For more information, see <a
-     *        href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#grant_token">Grant token</a> in
-     *        the <i>AWS Key Management Service Developer Guide</i>.
+     *        href="https://docs.aws.amazon.com/kms/latest/developerguide/grants.html#grant_token">Grant token</a> and
+     *        <a href="https://docs.aws.amazon.com/kms/latest/developerguide/grant-manage.html#using-grant-token">Using
+     *        a grant token</a> in the <i>Key Management Service Developer Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

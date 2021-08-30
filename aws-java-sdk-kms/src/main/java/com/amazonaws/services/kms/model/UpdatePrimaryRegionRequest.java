@@ -27,7 +27,7 @@ public class UpdatePrimaryRegionRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Identifies the current primary key. When the operation completes, this CMK will be a replica key.
+     * Identifies the current primary key. When the operation completes, this KMS key will be a replica key.
      * </p>
      * <p>
      * Specify the key ID or key ARN of a multi-Region primary key.
@@ -48,13 +48,13 @@ public class UpdatePrimaryRegionRequest extends com.amazonaws.AmazonWebServiceRe
      * </li>
      * </ul>
      * <p>
-     * To get the key ID and key ARN for a CMK, use <a>ListKeys</a> or <a>DescribeKey</a>.
+     * To get the key ID and key ARN for a KMS key, use <a>ListKeys</a> or <a>DescribeKey</a>.
      * </p>
      */
     private String keyId;
     /**
      * <p>
-     * The AWS Region of the new primary key. Enter the Region ID, such as <code>us-east-1</code> or
+     * The Amazon Web Services Region of the new primary key. Enter the Region ID, such as <code>us-east-1</code> or
      * <code>ap-southeast-2</code>. There must be an existing replica key in this Region.
      * </p>
      * <p>
@@ -65,7 +65,7 @@ public class UpdatePrimaryRegionRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Identifies the current primary key. When the operation completes, this CMK will be a replica key.
+     * Identifies the current primary key. When the operation completes, this KMS key will be a replica key.
      * </p>
      * <p>
      * Specify the key ID or key ARN of a multi-Region primary key.
@@ -86,11 +86,11 @@ public class UpdatePrimaryRegionRequest extends com.amazonaws.AmazonWebServiceRe
      * </li>
      * </ul>
      * <p>
-     * To get the key ID and key ARN for a CMK, use <a>ListKeys</a> or <a>DescribeKey</a>.
+     * To get the key ID and key ARN for a KMS key, use <a>ListKeys</a> or <a>DescribeKey</a>.
      * </p>
      * 
      * @param keyId
-     *        Identifies the current primary key. When the operation completes, this CMK will be a replica key.</p>
+     *        Identifies the current primary key. When the operation completes, this KMS key will be a replica key.</p>
      *        <p>
      *        Specify the key ID or key ARN of a multi-Region primary key.
      *        </p>
@@ -110,7 +110,7 @@ public class UpdatePrimaryRegionRequest extends com.amazonaws.AmazonWebServiceRe
      *        </li>
      *        </ul>
      *        <p>
-     *        To get the key ID and key ARN for a CMK, use <a>ListKeys</a> or <a>DescribeKey</a>.
+     *        To get the key ID and key ARN for a KMS key, use <a>ListKeys</a> or <a>DescribeKey</a>.
      */
 
     public void setKeyId(String keyId) {
@@ -119,7 +119,7 @@ public class UpdatePrimaryRegionRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Identifies the current primary key. When the operation completes, this CMK will be a replica key.
+     * Identifies the current primary key. When the operation completes, this KMS key will be a replica key.
      * </p>
      * <p>
      * Specify the key ID or key ARN of a multi-Region primary key.
@@ -140,10 +140,10 @@ public class UpdatePrimaryRegionRequest extends com.amazonaws.AmazonWebServiceRe
      * </li>
      * </ul>
      * <p>
-     * To get the key ID and key ARN for a CMK, use <a>ListKeys</a> or <a>DescribeKey</a>.
+     * To get the key ID and key ARN for a KMS key, use <a>ListKeys</a> or <a>DescribeKey</a>.
      * </p>
      * 
-     * @return Identifies the current primary key. When the operation completes, this CMK will be a replica key.</p>
+     * @return Identifies the current primary key. When the operation completes, this KMS key will be a replica key.</p>
      *         <p>
      *         Specify the key ID or key ARN of a multi-Region primary key.
      *         </p>
@@ -163,7 +163,7 @@ public class UpdatePrimaryRegionRequest extends com.amazonaws.AmazonWebServiceRe
      *         </li>
      *         </ul>
      *         <p>
-     *         To get the key ID and key ARN for a CMK, use <a>ListKeys</a> or <a>DescribeKey</a>.
+     *         To get the key ID and key ARN for a KMS key, use <a>ListKeys</a> or <a>DescribeKey</a>.
      */
 
     public String getKeyId() {
@@ -172,7 +172,7 @@ public class UpdatePrimaryRegionRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Identifies the current primary key. When the operation completes, this CMK will be a replica key.
+     * Identifies the current primary key. When the operation completes, this KMS key will be a replica key.
      * </p>
      * <p>
      * Specify the key ID or key ARN of a multi-Region primary key.
@@ -193,11 +193,11 @@ public class UpdatePrimaryRegionRequest extends com.amazonaws.AmazonWebServiceRe
      * </li>
      * </ul>
      * <p>
-     * To get the key ID and key ARN for a CMK, use <a>ListKeys</a> or <a>DescribeKey</a>.
+     * To get the key ID and key ARN for a KMS key, use <a>ListKeys</a> or <a>DescribeKey</a>.
      * </p>
      * 
      * @param keyId
-     *        Identifies the current primary key. When the operation completes, this CMK will be a replica key.</p>
+     *        Identifies the current primary key. When the operation completes, this KMS key will be a replica key.</p>
      *        <p>
      *        Specify the key ID or key ARN of a multi-Region primary key.
      *        </p>
@@ -217,7 +217,7 @@ public class UpdatePrimaryRegionRequest extends com.amazonaws.AmazonWebServiceRe
      *        </li>
      *        </ul>
      *        <p>
-     *        To get the key ID and key ARN for a CMK, use <a>ListKeys</a> or <a>DescribeKey</a>.
+     *        To get the key ID and key ARN for a KMS key, use <a>ListKeys</a> or <a>DescribeKey</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -228,7 +228,7 @@ public class UpdatePrimaryRegionRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The AWS Region of the new primary key. Enter the Region ID, such as <code>us-east-1</code> or
+     * The Amazon Web Services Region of the new primary key. Enter the Region ID, such as <code>us-east-1</code> or
      * <code>ap-southeast-2</code>. There must be an existing replica key in this Region.
      * </p>
      * <p>
@@ -236,8 +236,8 @@ public class UpdatePrimaryRegionRequest extends com.amazonaws.AmazonWebServiceRe
      * </p>
      * 
      * @param primaryRegion
-     *        The AWS Region of the new primary key. Enter the Region ID, such as <code>us-east-1</code> or
-     *        <code>ap-southeast-2</code>. There must be an existing replica key in this Region. </p>
+     *        The Amazon Web Services Region of the new primary key. Enter the Region ID, such as <code>us-east-1</code>
+     *        or <code>ap-southeast-2</code>. There must be an existing replica key in this Region. </p>
      *        <p>
      *        When the operation completes, the multi-Region key in this Region will be the primary key.
      */
@@ -248,15 +248,16 @@ public class UpdatePrimaryRegionRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The AWS Region of the new primary key. Enter the Region ID, such as <code>us-east-1</code> or
+     * The Amazon Web Services Region of the new primary key. Enter the Region ID, such as <code>us-east-1</code> or
      * <code>ap-southeast-2</code>. There must be an existing replica key in this Region.
      * </p>
      * <p>
      * When the operation completes, the multi-Region key in this Region will be the primary key.
      * </p>
      * 
-     * @return The AWS Region of the new primary key. Enter the Region ID, such as <code>us-east-1</code> or
-     *         <code>ap-southeast-2</code>. There must be an existing replica key in this Region. </p>
+     * @return The Amazon Web Services Region of the new primary key. Enter the Region ID, such as
+     *         <code>us-east-1</code> or <code>ap-southeast-2</code>. There must be an existing replica key in this
+     *         Region. </p>
      *         <p>
      *         When the operation completes, the multi-Region key in this Region will be the primary key.
      */
@@ -267,7 +268,7 @@ public class UpdatePrimaryRegionRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The AWS Region of the new primary key. Enter the Region ID, such as <code>us-east-1</code> or
+     * The Amazon Web Services Region of the new primary key. Enter the Region ID, such as <code>us-east-1</code> or
      * <code>ap-southeast-2</code>. There must be an existing replica key in this Region.
      * </p>
      * <p>
@@ -275,8 +276,8 @@ public class UpdatePrimaryRegionRequest extends com.amazonaws.AmazonWebServiceRe
      * </p>
      * 
      * @param primaryRegion
-     *        The AWS Region of the new primary key. Enter the Region ID, such as <code>us-east-1</code> or
-     *        <code>ap-southeast-2</code>. There must be an existing replica key in this Region. </p>
+     *        The Amazon Web Services Region of the new primary key. Enter the Region ID, such as <code>us-east-1</code>
+     *        or <code>ap-southeast-2</code>. There must be an existing replica key in this Region. </p>
      *        <p>
      *        When the operation completes, the multi-Region key in this Region will be the primary key.
      * @return Returns a reference to this object so that method calls can be chained together.

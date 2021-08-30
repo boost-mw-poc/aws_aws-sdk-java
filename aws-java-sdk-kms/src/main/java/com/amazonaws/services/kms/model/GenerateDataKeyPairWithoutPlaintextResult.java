@@ -26,8 +26,8 @@ public class GenerateDataKeyPairWithoutPlaintextResult extends com.amazonaws.Ama
 
     /**
      * <p>
-     * The encrypted copy of the private key. When you use the HTTP API or the AWS CLI, the value is Base64-encoded.
-     * Otherwise, it is not Base64-encoded.
+     * The encrypted copy of the private key. When you use the HTTP API or the Amazon Web Services CLI, the value is
+     * Base64-encoded. Otherwise, it is not Base64-encoded.
      * </p>
      */
     private java.nio.ByteBuffer privateKeyCiphertextBlob;
@@ -40,8 +40,8 @@ public class GenerateDataKeyPairWithoutPlaintextResult extends com.amazonaws.Ama
     /**
      * <p>
      * The Amazon Resource Name (<a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) of the CMK
-     * that encrypted the private key.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) of the KMS
+     * key that encrypted the private key.
      * </p>
      */
     private String keyId;
@@ -54,8 +54,8 @@ public class GenerateDataKeyPairWithoutPlaintextResult extends com.amazonaws.Ama
 
     /**
      * <p>
-     * The encrypted copy of the private key. When you use the HTTP API or the AWS CLI, the value is Base64-encoded.
-     * Otherwise, it is not Base64-encoded.
+     * The encrypted copy of the private key. When you use the HTTP API or the Amazon Web Services CLI, the value is
+     * Base64-encoded. Otherwise, it is not Base64-encoded.
      * </p>
      * <p>
      * The AWS SDK for Java performs a Base64 encoding on this field before sending this request to the AWS service.
@@ -69,8 +69,8 @@ public class GenerateDataKeyPairWithoutPlaintextResult extends com.amazonaws.Ama
      * </p>
      * 
      * @param privateKeyCiphertextBlob
-     *        The encrypted copy of the private key. When you use the HTTP API or the AWS CLI, the value is
-     *        Base64-encoded. Otherwise, it is not Base64-encoded.
+     *        The encrypted copy of the private key. When you use the HTTP API or the Amazon Web Services CLI, the value
+     *        is Base64-encoded. Otherwise, it is not Base64-encoded.
      */
 
     public void setPrivateKeyCiphertextBlob(java.nio.ByteBuffer privateKeyCiphertextBlob) {
@@ -79,8 +79,8 @@ public class GenerateDataKeyPairWithoutPlaintextResult extends com.amazonaws.Ama
 
     /**
      * <p>
-     * The encrypted copy of the private key. When you use the HTTP API or the AWS CLI, the value is Base64-encoded.
-     * Otherwise, it is not Base64-encoded.
+     * The encrypted copy of the private key. When you use the HTTP API or the Amazon Web Services CLI, the value is
+     * Base64-encoded. Otherwise, it is not Base64-encoded.
      * </p>
      * <p>
      * {@code ByteBuffer}s are stateful. Calling their {@code get} methods changes their {@code position}. We recommend
@@ -90,8 +90,8 @@ public class GenerateDataKeyPairWithoutPlaintextResult extends com.amazonaws.Ama
      * {@code position}.
      * </p>
      * 
-     * @return The encrypted copy of the private key. When you use the HTTP API or the AWS CLI, the value is
-     *         Base64-encoded. Otherwise, it is not Base64-encoded.
+     * @return The encrypted copy of the private key. When you use the HTTP API or the Amazon Web Services CLI, the
+     *         value is Base64-encoded. Otherwise, it is not Base64-encoded.
      */
 
     public java.nio.ByteBuffer getPrivateKeyCiphertextBlob() {
@@ -100,8 +100,8 @@ public class GenerateDataKeyPairWithoutPlaintextResult extends com.amazonaws.Ama
 
     /**
      * <p>
-     * The encrypted copy of the private key. When you use the HTTP API or the AWS CLI, the value is Base64-encoded.
-     * Otherwise, it is not Base64-encoded.
+     * The encrypted copy of the private key. When you use the HTTP API or the Amazon Web Services CLI, the value is
+     * Base64-encoded. Otherwise, it is not Base64-encoded.
      * </p>
      * <p>
      * The AWS SDK for Java performs a Base64 encoding on this field before sending this request to the AWS service.
@@ -115,8 +115,8 @@ public class GenerateDataKeyPairWithoutPlaintextResult extends com.amazonaws.Ama
      * </p>
      * 
      * @param privateKeyCiphertextBlob
-     *        The encrypted copy of the private key. When you use the HTTP API or the AWS CLI, the value is
-     *        Base64-encoded. Otherwise, it is not Base64-encoded.
+     *        The encrypted copy of the private key. When you use the HTTP API or the Amazon Web Services CLI, the value
+     *        is Base64-encoded. Otherwise, it is not Base64-encoded.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -195,14 +195,14 @@ public class GenerateDataKeyPairWithoutPlaintextResult extends com.amazonaws.Ama
     /**
      * <p>
      * The Amazon Resource Name (<a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) of the CMK
-     * that encrypted the private key.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) of the KMS
+     * key that encrypted the private key.
      * </p>
      * 
      * @param keyId
      *        The Amazon Resource Name (<a
      *        href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) of
-     *        the CMK that encrypted the private key.
+     *        the KMS key that encrypted the private key.
      */
 
     public void setKeyId(String keyId) {
@@ -212,13 +212,13 @@ public class GenerateDataKeyPairWithoutPlaintextResult extends com.amazonaws.Ama
     /**
      * <p>
      * The Amazon Resource Name (<a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) of the CMK
-     * that encrypted the private key.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) of the KMS
+     * key that encrypted the private key.
      * </p>
      * 
      * @return The Amazon Resource Name (<a
      *         href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) of
-     *         the CMK that encrypted the private key.
+     *         the KMS key that encrypted the private key.
      */
 
     public String getKeyId() {
@@ -228,14 +228,14 @@ public class GenerateDataKeyPairWithoutPlaintextResult extends com.amazonaws.Ama
     /**
      * <p>
      * The Amazon Resource Name (<a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) of the CMK
-     * that encrypted the private key.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) of the KMS
+     * key that encrypted the private key.
      * </p>
      * 
      * @param keyId
      *        The Amazon Resource Name (<a
      *        href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) of
-     *        the CMK that encrypted the private key.
+     *        the KMS key that encrypted the private key.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

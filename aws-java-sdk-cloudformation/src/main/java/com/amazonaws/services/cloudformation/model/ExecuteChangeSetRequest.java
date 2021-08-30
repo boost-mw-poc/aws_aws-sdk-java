@@ -50,6 +50,15 @@ public class ExecuteChangeSetRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      */
     private String clientRequestToken;
+    /**
+     * <p>
+     * Preserves the state of previously provisioned resources when an operation fails.
+     * </p>
+     * <p>
+     * Default: <code>True</code>
+     * </p>
+     */
+    private Boolean disableRollback;
 
     /**
      * <p>
@@ -196,6 +205,78 @@ public class ExecuteChangeSetRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
+     * <p>
+     * Preserves the state of previously provisioned resources when an operation fails.
+     * </p>
+     * <p>
+     * Default: <code>True</code>
+     * </p>
+     * 
+     * @param disableRollback
+     *        Preserves the state of previously provisioned resources when an operation fails.</p>
+     *        <p>
+     *        Default: <code>True</code>
+     */
+
+    public void setDisableRollback(Boolean disableRollback) {
+        this.disableRollback = disableRollback;
+    }
+
+    /**
+     * <p>
+     * Preserves the state of previously provisioned resources when an operation fails.
+     * </p>
+     * <p>
+     * Default: <code>True</code>
+     * </p>
+     * 
+     * @return Preserves the state of previously provisioned resources when an operation fails.</p>
+     *         <p>
+     *         Default: <code>True</code>
+     */
+
+    public Boolean getDisableRollback() {
+        return this.disableRollback;
+    }
+
+    /**
+     * <p>
+     * Preserves the state of previously provisioned resources when an operation fails.
+     * </p>
+     * <p>
+     * Default: <code>True</code>
+     * </p>
+     * 
+     * @param disableRollback
+     *        Preserves the state of previously provisioned resources when an operation fails.</p>
+     *        <p>
+     *        Default: <code>True</code>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ExecuteChangeSetRequest withDisableRollback(Boolean disableRollback) {
+        setDisableRollback(disableRollback);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Preserves the state of previously provisioned resources when an operation fails.
+     * </p>
+     * <p>
+     * Default: <code>True</code>
+     * </p>
+     * 
+     * @return Preserves the state of previously provisioned resources when an operation fails.</p>
+     *         <p>
+     *         Default: <code>True</code>
+     */
+
+    public Boolean isDisableRollback() {
+        return this.disableRollback;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -212,7 +293,9 @@ public class ExecuteChangeSetRequest extends com.amazonaws.AmazonWebServiceReque
         if (getStackName() != null)
             sb.append("StackName: ").append(getStackName()).append(",");
         if (getClientRequestToken() != null)
-            sb.append("ClientRequestToken: ").append(getClientRequestToken());
+            sb.append("ClientRequestToken: ").append(getClientRequestToken()).append(",");
+        if (getDisableRollback() != null)
+            sb.append("DisableRollback: ").append(getDisableRollback());
         sb.append("}");
         return sb.toString();
     }
@@ -239,6 +322,10 @@ public class ExecuteChangeSetRequest extends com.amazonaws.AmazonWebServiceReque
             return false;
         if (other.getClientRequestToken() != null && other.getClientRequestToken().equals(this.getClientRequestToken()) == false)
             return false;
+        if (other.getDisableRollback() == null ^ this.getDisableRollback() == null)
+            return false;
+        if (other.getDisableRollback() != null && other.getDisableRollback().equals(this.getDisableRollback()) == false)
+            return false;
         return true;
     }
 
@@ -250,6 +337,7 @@ public class ExecuteChangeSetRequest extends com.amazonaws.AmazonWebServiceReque
         hashCode = prime * hashCode + ((getChangeSetName() == null) ? 0 : getChangeSetName().hashCode());
         hashCode = prime * hashCode + ((getStackName() == null) ? 0 : getStackName().hashCode());
         hashCode = prime * hashCode + ((getClientRequestToken() == null) ? 0 : getClientRequestToken().hashCode());
+        hashCode = prime * hashCode + ((getDisableRollback() == null) ? 0 : getDisableRollback().hashCode());
         return hashCode;
     }
 

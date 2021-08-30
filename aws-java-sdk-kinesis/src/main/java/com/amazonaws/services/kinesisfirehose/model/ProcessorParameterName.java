@@ -22,9 +22,13 @@ public enum ProcessorParameterName {
 
     LambdaArn("LambdaArn"),
     NumberOfRetries("NumberOfRetries"),
+    MetadataExtractionQuery("MetadataExtractionQuery"),
+    JsonParsingEngine("JsonParsingEngine"),
     RoleArn("RoleArn"),
     BufferSizeInMBs("BufferSizeInMBs"),
-    BufferIntervalInSeconds("BufferIntervalInSeconds");
+    BufferIntervalInSeconds("BufferIntervalInSeconds"),
+    SubRecordType("SubRecordType"),
+    Delimiter("Delimiter");
 
     private String value;
 

@@ -2122,6 +2122,39 @@ public class AmazonCloudFormationAsyncClient extends AmazonCloudFormationClient 
     }
 
     @Override
+    public java.util.concurrent.Future<RollbackStackResult> rollbackStackAsync(RollbackStackRequest request) {
+
+        return rollbackStackAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<RollbackStackResult> rollbackStackAsync(final RollbackStackRequest request,
+            final com.amazonaws.handlers.AsyncHandler<RollbackStackRequest, RollbackStackResult> asyncHandler) {
+        final RollbackStackRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<RollbackStackResult>() {
+            @Override
+            public RollbackStackResult call() throws Exception {
+                RollbackStackResult result = null;
+
+                try {
+                    result = executeRollbackStack(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<SetStackPolicyResult> setStackPolicyAsync(SetStackPolicyRequest request) {
 
         return setStackPolicyAsync(request, null);

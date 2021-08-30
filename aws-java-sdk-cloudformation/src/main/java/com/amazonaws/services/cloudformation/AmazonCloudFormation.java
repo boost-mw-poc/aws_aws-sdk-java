@@ -600,7 +600,8 @@ public interface AmazonCloudFormation {
 
     /**
      * <p>
-     * Returns the stack instance that's associated with the specified stack set, account, and Region.
+     * Returns the stack instance that's associated with the specified stack set, Amazon Web Services account, and
+     * Region.
      * </p>
      * <p>
      * For a list of stack instances that are associated with a specific stack set, use <a>ListStackInstances</a>.
@@ -1167,8 +1168,8 @@ public interface AmazonCloudFormation {
     /**
      * <p>
      * Returns summary information about stack instances that are associated with the specified stack set. You can
-     * filter for stack instances that are associated with a specific account name or Region, or that have a specific
-     * status.
+     * filter for stack instances that are associated with a specific Amazon Web Services account name or Region, or
+     * that have a specific status.
      * </p>
      * 
      * @param listStackInstancesRequest
@@ -1239,7 +1240,8 @@ public interface AmazonCloudFormation {
      * <li>
      * <p>
      * [Self-managed permissions] If you set the <code>CallAs</code> parameter to <code>SELF</code> while signed in to
-     * your account, <code>ListStackSets</code> returns all self-managed stack sets in your account.
+     * your Amazon Web Services account, <code>ListStackSets</code> returns all self-managed stack sets in your Amazon
+     * Web Services account.
      * </p>
      * </li>
      * <li>
@@ -1389,7 +1391,8 @@ public interface AmazonCloudFormation {
     /**
      * <p>
      * Registers your account as a publisher of public extensions in the CloudFormation registry. Public extensions are
-     * available for use by all CloudFormation users. This publisher ID applies to your account in all Regions.
+     * available for use by all CloudFormation users. This publisher ID applies to your account in all Amazon Web
+     * Services Regions.
      * </p>
      * <p>
      * For information on requirements for registering as a public extension publisher, see <a href=
@@ -1411,7 +1414,7 @@ public interface AmazonCloudFormation {
     /**
      * <p>
      * Registers an extension with the CloudFormation service. Registering an extension makes it available for use in
-     * CloudFormation templates in your account, and includes:
+     * CloudFormation templates in your Amazon Web Services account, and includes:
      * </p>
      * <ul>
      * <li>
@@ -1461,6 +1464,57 @@ public interface AmazonCloudFormation {
      *      API Documentation</a>
      */
     RegisterTypeResult registerType(RegisterTypeRequest registerTypeRequest);
+
+    /**
+     * <p>
+     * When specifying <code>RollbackStack</code>, you preserve the state of previously provisioned resources when an
+     * operation fails. You can check the status of the stack through the <a>DescribeStacks</a> API.
+     * </p>
+     * <p>
+     * Rolls back the specified stack to the last known stable state from <code>CREATE_FAILED</code> or
+     * <code>UPDATE_FAILED</code> stack statuses.
+     * </p>
+     * <p>
+     * This operation will delete a stack if it doesn't contain a last known stable state. A last known stable state
+     * includes any status in a <code>*_COMPLETE</code>. This includes the following stack statuses.
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>CREATE_COMPLETE</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>UPDATE_COMPLETE</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>UPDATE_ROLLBACK_COMPLETE</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>IMPORT_COMPLETE</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>IMPORT_ROLLBACK_COMPLETE</code>
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param rollbackStackRequest
+     * @return Result of the RollbackStack operation returned by the service.
+     * @throws TokenAlreadyExistsException
+     *         A client request token already exists.
+     * @sample AmazonCloudFormation.RollbackStack
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/cloudformation-2010-05-15/RollbackStack" target="_top">AWS
+     *      API Documentation</a>
+     */
+    RollbackStackResult rollbackStack(RollbackStackRequest rollbackStackRequest);
 
     /**
      * <p>

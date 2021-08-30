@@ -30,7 +30,7 @@ public class GrantListEntry implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The unique identifier for the customer master key (CMK) to which the grant applies.
+     * The unique identifier for the KMS key to which the grant applies.
      * </p>
      */
     private String keyId;
@@ -59,8 +59,8 @@ public class GrantListEntry implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * The <code>GranteePrincipal</code> field in the <code>ListGrants</code> response usually contains the user or role
-     * designated as the grantee principal in the grant. However, when the grantee principal in the grant is an AWS
-     * service, the <code>GranteePrincipal</code> field contains the <a href=
+     * designated as the grantee principal in the grant. However, when the grantee principal in the grant is an Amazon
+     * Web Services service, the <code>GranteePrincipal</code> field contains the <a href=
      * "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_principal.html#principal-services"
      * >service principal</a>, which might represent several different grantee principals.
      * </p>
@@ -74,7 +74,7 @@ public class GrantListEntry implements Serializable, Cloneable, StructuredPojo {
     private String retiringPrincipal;
     /**
      * <p>
-     * The AWS account under which the grant was issued.
+     * The Amazon Web Services account under which the grant was issued.
      * </p>
      */
     private String issuingAccount;
@@ -94,11 +94,11 @@ public class GrantListEntry implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The unique identifier for the customer master key (CMK) to which the grant applies.
+     * The unique identifier for the KMS key to which the grant applies.
      * </p>
      * 
      * @param keyId
-     *        The unique identifier for the customer master key (CMK) to which the grant applies.
+     *        The unique identifier for the KMS key to which the grant applies.
      */
 
     public void setKeyId(String keyId) {
@@ -107,10 +107,10 @@ public class GrantListEntry implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The unique identifier for the customer master key (CMK) to which the grant applies.
+     * The unique identifier for the KMS key to which the grant applies.
      * </p>
      * 
-     * @return The unique identifier for the customer master key (CMK) to which the grant applies.
+     * @return The unique identifier for the KMS key to which the grant applies.
      */
 
     public String getKeyId() {
@@ -119,11 +119,11 @@ public class GrantListEntry implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The unique identifier for the customer master key (CMK) to which the grant applies.
+     * The unique identifier for the KMS key to which the grant applies.
      * </p>
      * 
      * @param keyId
-     *        The unique identifier for the customer master key (CMK) to which the grant applies.
+     *        The unique identifier for the KMS key to which the grant applies.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -264,8 +264,8 @@ public class GrantListEntry implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * The <code>GranteePrincipal</code> field in the <code>ListGrants</code> response usually contains the user or role
-     * designated as the grantee principal in the grant. However, when the grantee principal in the grant is an AWS
-     * service, the <code>GranteePrincipal</code> field contains the <a href=
+     * designated as the grantee principal in the grant. However, when the grantee principal in the grant is an Amazon
+     * Web Services service, the <code>GranteePrincipal</code> field contains the <a href=
      * "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_principal.html#principal-services"
      * >service principal</a>, which might represent several different grantee principals.
      * </p>
@@ -275,7 +275,7 @@ public class GrantListEntry implements Serializable, Cloneable, StructuredPojo {
      *        <p>
      *        The <code>GranteePrincipal</code> field in the <code>ListGrants</code> response usually contains the user
      *        or role designated as the grantee principal in the grant. However, when the grantee principal in the grant
-     *        is an AWS service, the <code>GranteePrincipal</code> field contains the <a href=
+     *        is an Amazon Web Services service, the <code>GranteePrincipal</code> field contains the <a href=
      *        "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_principal.html#principal-services"
      *        >service principal</a>, which might represent several different grantee principals.
      */
@@ -290,8 +290,8 @@ public class GrantListEntry implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * The <code>GranteePrincipal</code> field in the <code>ListGrants</code> response usually contains the user or role
-     * designated as the grantee principal in the grant. However, when the grantee principal in the grant is an AWS
-     * service, the <code>GranteePrincipal</code> field contains the <a href=
+     * designated as the grantee principal in the grant. However, when the grantee principal in the grant is an Amazon
+     * Web Services service, the <code>GranteePrincipal</code> field contains the <a href=
      * "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_principal.html#principal-services"
      * >service principal</a>, which might represent several different grantee principals.
      * </p>
@@ -300,7 +300,7 @@ public class GrantListEntry implements Serializable, Cloneable, StructuredPojo {
      *         <p>
      *         The <code>GranteePrincipal</code> field in the <code>ListGrants</code> response usually contains the user
      *         or role designated as the grantee principal in the grant. However, when the grantee principal in the
-     *         grant is an AWS service, the <code>GranteePrincipal</code> field contains the <a href=
+     *         grant is an Amazon Web Services service, the <code>GranteePrincipal</code> field contains the <a href=
      *         "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_principal.html#principal-services"
      *         >service principal</a>, which might represent several different grantee principals.
      */
@@ -315,8 +315,8 @@ public class GrantListEntry implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * The <code>GranteePrincipal</code> field in the <code>ListGrants</code> response usually contains the user or role
-     * designated as the grantee principal in the grant. However, when the grantee principal in the grant is an AWS
-     * service, the <code>GranteePrincipal</code> field contains the <a href=
+     * designated as the grantee principal in the grant. However, when the grantee principal in the grant is an Amazon
+     * Web Services service, the <code>GranteePrincipal</code> field contains the <a href=
      * "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_principal.html#principal-services"
      * >service principal</a>, which might represent several different grantee principals.
      * </p>
@@ -326,7 +326,7 @@ public class GrantListEntry implements Serializable, Cloneable, StructuredPojo {
      *        <p>
      *        The <code>GranteePrincipal</code> field in the <code>ListGrants</code> response usually contains the user
      *        or role designated as the grantee principal in the grant. However, when the grantee principal in the grant
-     *        is an AWS service, the <code>GranteePrincipal</code> field contains the <a href=
+     *        is an Amazon Web Services service, the <code>GranteePrincipal</code> field contains the <a href=
      *        "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_elements_principal.html#principal-services"
      *        >service principal</a>, which might represent several different grantee principals.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -379,11 +379,11 @@ public class GrantListEntry implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS account under which the grant was issued.
+     * The Amazon Web Services account under which the grant was issued.
      * </p>
      * 
      * @param issuingAccount
-     *        The AWS account under which the grant was issued.
+     *        The Amazon Web Services account under which the grant was issued.
      */
 
     public void setIssuingAccount(String issuingAccount) {
@@ -392,10 +392,10 @@ public class GrantListEntry implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS account under which the grant was issued.
+     * The Amazon Web Services account under which the grant was issued.
      * </p>
      * 
-     * @return The AWS account under which the grant was issued.
+     * @return The Amazon Web Services account under which the grant was issued.
      */
 
     public String getIssuingAccount() {
@@ -404,11 +404,11 @@ public class GrantListEntry implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS account under which the grant was issued.
+     * The Amazon Web Services account under which the grant was issued.
      * </p>
      * 
      * @param issuingAccount
-     *        The AWS account under which the grant was issued.
+     *        The Amazon Web Services account under which the grant was issued.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

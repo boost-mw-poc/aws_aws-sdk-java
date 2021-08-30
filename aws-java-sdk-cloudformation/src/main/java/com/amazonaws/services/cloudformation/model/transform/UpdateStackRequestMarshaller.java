@@ -227,6 +227,10 @@ public class UpdateStackRequestMarshaller implements Marshaller<Request<UpdateSt
             }
         }
 
+        if (updateStackRequest.getDisableRollback() != null) {
+            request.addParameter("DisableRollback", StringUtils.fromBoolean(updateStackRequest.getDisableRollback()));
+        }
+
         if (updateStackRequest.getClientRequestToken() != null) {
             request.addParameter("ClientRequestToken", StringUtils.fromString(updateStackRequest.getClientRequestToken()));
         }

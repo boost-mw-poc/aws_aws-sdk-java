@@ -21,7 +21,7 @@ import javax.annotation.Generated;
  * missing, or otherwise invalid.
  * </p>
  * <p>
- * From the <a>ImportKeyMaterial</a> operation, the request was rejected because AWS KMS could not decrypt the encrypted
+ * From the <a>ImportKeyMaterial</a> operation, the request was rejected because KMS could not decrypt the encrypted
  * (wrapped) key material.
  * </p>
  */

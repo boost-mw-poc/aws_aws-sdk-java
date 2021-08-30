@@ -25,15 +25,15 @@ public class DecryptResult extends com.amazonaws.AmazonWebServiceResult<com.amaz
     /**
      * <p>
      * The Amazon Resource Name (<a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) of the CMK
-     * that was used to decrypt the ciphertext.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) of the KMS
+     * key that was used to decrypt the ciphertext.
      * </p>
      */
     private String keyId;
     /**
      * <p>
-     * Decrypted plaintext data. When you use the HTTP API or the AWS CLI, the value is Base64-encoded. Otherwise, it is
-     * not Base64-encoded.
+     * Decrypted plaintext data. When you use the HTTP API or the Amazon Web Services CLI, the value is Base64-encoded.
+     * Otherwise, it is not Base64-encoded.
      * </p>
      */
     private java.nio.ByteBuffer plaintext;
@@ -47,14 +47,14 @@ public class DecryptResult extends com.amazonaws.AmazonWebServiceResult<com.amaz
     /**
      * <p>
      * The Amazon Resource Name (<a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) of the CMK
-     * that was used to decrypt the ciphertext.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) of the KMS
+     * key that was used to decrypt the ciphertext.
      * </p>
      * 
      * @param keyId
      *        The Amazon Resource Name (<a
      *        href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) of
-     *        the CMK that was used to decrypt the ciphertext.
+     *        the KMS key that was used to decrypt the ciphertext.
      */
 
     public void setKeyId(String keyId) {
@@ -64,13 +64,13 @@ public class DecryptResult extends com.amazonaws.AmazonWebServiceResult<com.amaz
     /**
      * <p>
      * The Amazon Resource Name (<a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) of the CMK
-     * that was used to decrypt the ciphertext.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) of the KMS
+     * key that was used to decrypt the ciphertext.
      * </p>
      * 
      * @return The Amazon Resource Name (<a
      *         href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) of
-     *         the CMK that was used to decrypt the ciphertext.
+     *         the KMS key that was used to decrypt the ciphertext.
      */
 
     public String getKeyId() {
@@ -80,14 +80,14 @@ public class DecryptResult extends com.amazonaws.AmazonWebServiceResult<com.amaz
     /**
      * <p>
      * The Amazon Resource Name (<a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) of the CMK
-     * that was used to decrypt the ciphertext.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) of the KMS
+     * key that was used to decrypt the ciphertext.
      * </p>
      * 
      * @param keyId
      *        The Amazon Resource Name (<a
      *        href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) of
-     *        the CMK that was used to decrypt the ciphertext.
+     *        the KMS key that was used to decrypt the ciphertext.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -98,8 +98,8 @@ public class DecryptResult extends com.amazonaws.AmazonWebServiceResult<com.amaz
 
     /**
      * <p>
-     * Decrypted plaintext data. When you use the HTTP API or the AWS CLI, the value is Base64-encoded. Otherwise, it is
-     * not Base64-encoded.
+     * Decrypted plaintext data. When you use the HTTP API or the Amazon Web Services CLI, the value is Base64-encoded.
+     * Otherwise, it is not Base64-encoded.
      * </p>
      * <p>
      * The AWS SDK for Java performs a Base64 encoding on this field before sending this request to the AWS service.
@@ -113,8 +113,8 @@ public class DecryptResult extends com.amazonaws.AmazonWebServiceResult<com.amaz
      * </p>
      * 
      * @param plaintext
-     *        Decrypted plaintext data. When you use the HTTP API or the AWS CLI, the value is Base64-encoded.
-     *        Otherwise, it is not Base64-encoded.
+     *        Decrypted plaintext data. When you use the HTTP API or the Amazon Web Services CLI, the value is
+     *        Base64-encoded. Otherwise, it is not Base64-encoded.
      */
 
     public void setPlaintext(java.nio.ByteBuffer plaintext) {
@@ -123,8 +123,8 @@ public class DecryptResult extends com.amazonaws.AmazonWebServiceResult<com.amaz
 
     /**
      * <p>
-     * Decrypted plaintext data. When you use the HTTP API or the AWS CLI, the value is Base64-encoded. Otherwise, it is
-     * not Base64-encoded.
+     * Decrypted plaintext data. When you use the HTTP API or the Amazon Web Services CLI, the value is Base64-encoded.
+     * Otherwise, it is not Base64-encoded.
      * </p>
      * <p>
      * {@code ByteBuffer}s are stateful. Calling their {@code get} methods changes their {@code position}. We recommend
@@ -134,8 +134,8 @@ public class DecryptResult extends com.amazonaws.AmazonWebServiceResult<com.amaz
      * {@code position}.
      * </p>
      * 
-     * @return Decrypted plaintext data. When you use the HTTP API or the AWS CLI, the value is Base64-encoded.
-     *         Otherwise, it is not Base64-encoded.
+     * @return Decrypted plaintext data. When you use the HTTP API or the Amazon Web Services CLI, the value is
+     *         Base64-encoded. Otherwise, it is not Base64-encoded.
      */
 
     public java.nio.ByteBuffer getPlaintext() {
@@ -144,8 +144,8 @@ public class DecryptResult extends com.amazonaws.AmazonWebServiceResult<com.amaz
 
     /**
      * <p>
-     * Decrypted plaintext data. When you use the HTTP API or the AWS CLI, the value is Base64-encoded. Otherwise, it is
-     * not Base64-encoded.
+     * Decrypted plaintext data. When you use the HTTP API or the Amazon Web Services CLI, the value is Base64-encoded.
+     * Otherwise, it is not Base64-encoded.
      * </p>
      * <p>
      * The AWS SDK for Java performs a Base64 encoding on this field before sending this request to the AWS service.
@@ -159,8 +159,8 @@ public class DecryptResult extends com.amazonaws.AmazonWebServiceResult<com.amaz
      * </p>
      * 
      * @param plaintext
-     *        Decrypted plaintext data. When you use the HTTP API or the AWS CLI, the value is Base64-encoded.
-     *        Otherwise, it is not Base64-encoded.
+     *        Decrypted plaintext data. When you use the HTTP API or the Amazon Web Services CLI, the value is
+     *        Base64-encoded. Otherwise, it is not Base64-encoded.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -101,12 +101,6 @@ public class BuildBatchPhase implements Serializable, Cloneable, StructuredPojo 
      * The build phase is still in progress.
      * </p>
      * </dd>
-     * <dt>QUEUED</dt>
-     * <dd>
-     * <p>
-     * The build has been submitted and is queued behind other submitted builds.
-     * </p>
-     * </dd>
      * <dt>STOPPED</dt>
      * <dd>
      * <p>
@@ -583,12 +577,6 @@ public class BuildBatchPhase implements Serializable, Cloneable, StructuredPojo 
      * The build phase is still in progress.
      * </p>
      * </dd>
-     * <dt>QUEUED</dt>
-     * <dd>
-     * <p>
-     * The build has been submitted and is queued behind other submitted builds.
-     * </p>
-     * </dd>
      * <dt>STOPPED</dt>
      * <dd>
      * <p>
@@ -628,12 +616,6 @@ public class BuildBatchPhase implements Serializable, Cloneable, StructuredPojo 
      *        <dd>
      *        <p>
      *        The build phase is still in progress.
-     *        </p>
-     *        </dd>
-     *        <dt>QUEUED</dt>
-     *        <dd>
-     *        <p>
-     *        The build has been submitted and is queued behind other submitted builds.
      *        </p>
      *        </dd>
      *        <dt>STOPPED</dt>
@@ -684,12 +666,6 @@ public class BuildBatchPhase implements Serializable, Cloneable, StructuredPojo 
      * The build phase is still in progress.
      * </p>
      * </dd>
-     * <dt>QUEUED</dt>
-     * <dd>
-     * <p>
-     * The build has been submitted and is queued behind other submitted builds.
-     * </p>
-     * </dd>
      * <dt>STOPPED</dt>
      * <dd>
      * <p>
@@ -728,12 +704,6 @@ public class BuildBatchPhase implements Serializable, Cloneable, StructuredPojo 
      *         <dd>
      *         <p>
      *         The build phase is still in progress.
-     *         </p>
-     *         </dd>
-     *         <dt>QUEUED</dt>
-     *         <dd>
-     *         <p>
-     *         The build has been submitted and is queued behind other submitted builds.
      *         </p>
      *         </dd>
      *         <dt>STOPPED</dt>
@@ -784,12 +754,6 @@ public class BuildBatchPhase implements Serializable, Cloneable, StructuredPojo 
      * The build phase is still in progress.
      * </p>
      * </dd>
-     * <dt>QUEUED</dt>
-     * <dd>
-     * <p>
-     * The build has been submitted and is queued behind other submitted builds.
-     * </p>
-     * </dd>
      * <dt>STOPPED</dt>
      * <dd>
      * <p>
@@ -829,12 +793,6 @@ public class BuildBatchPhase implements Serializable, Cloneable, StructuredPojo 
      *        <dd>
      *        <p>
      *        The build phase is still in progress.
-     *        </p>
-     *        </dd>
-     *        <dt>QUEUED</dt>
-     *        <dd>
-     *        <p>
-     *        The build has been submitted and is queued behind other submitted builds.
      *        </p>
      *        </dd>
      *        <dt>STOPPED</dt>
@@ -887,12 +845,6 @@ public class BuildBatchPhase implements Serializable, Cloneable, StructuredPojo 
      * The build phase is still in progress.
      * </p>
      * </dd>
-     * <dt>QUEUED</dt>
-     * <dd>
-     * <p>
-     * The build has been submitted and is queued behind other submitted builds.
-     * </p>
-     * </dd>
      * <dt>STOPPED</dt>
      * <dd>
      * <p>
@@ -932,12 +884,6 @@ public class BuildBatchPhase implements Serializable, Cloneable, StructuredPojo 
      *        <dd>
      *        <p>
      *        The build phase is still in progress.
-     *        </p>
-     *        </dd>
-     *        <dt>QUEUED</dt>
-     *        <dd>
-     *        <p>
-     *        The build has been submitted and is queued behind other submitted builds.
      *        </p>
      *        </dd>
      *        <dt>STOPPED</dt>

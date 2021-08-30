@@ -25,22 +25,22 @@ public class ReEncryptResult extends com.amazonaws.AmazonWebServiceResult<com.am
 
     /**
      * <p>
-     * The reencrypted data. When you use the HTTP API or the AWS CLI, the value is Base64-encoded. Otherwise, it is not
-     * Base64-encoded.
+     * The reencrypted data. When you use the HTTP API or the Amazon Web Services CLI, the value is Base64-encoded.
+     * Otherwise, it is not Base64-encoded.
      * </p>
      */
     private java.nio.ByteBuffer ciphertextBlob;
     /**
      * <p>
-     * Unique identifier of the CMK used to originally encrypt the data.
+     * Unique identifier of the KMS key used to originally encrypt the data.
      * </p>
      */
     private String sourceKeyId;
     /**
      * <p>
      * The Amazon Resource Name (<a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) of the CMK
-     * that was used to reencrypt the data.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) of the KMS
+     * key that was used to reencrypt the data.
      * </p>
      */
     private String keyId;
@@ -59,8 +59,8 @@ public class ReEncryptResult extends com.amazonaws.AmazonWebServiceResult<com.am
 
     /**
      * <p>
-     * The reencrypted data. When you use the HTTP API or the AWS CLI, the value is Base64-encoded. Otherwise, it is not
-     * Base64-encoded.
+     * The reencrypted data. When you use the HTTP API or the Amazon Web Services CLI, the value is Base64-encoded.
+     * Otherwise, it is not Base64-encoded.
      * </p>
      * <p>
      * The AWS SDK for Java performs a Base64 encoding on this field before sending this request to the AWS service.
@@ -74,8 +74,8 @@ public class ReEncryptResult extends com.amazonaws.AmazonWebServiceResult<com.am
      * </p>
      * 
      * @param ciphertextBlob
-     *        The reencrypted data. When you use the HTTP API or the AWS CLI, the value is Base64-encoded. Otherwise, it
-     *        is not Base64-encoded.
+     *        The reencrypted data. When you use the HTTP API or the Amazon Web Services CLI, the value is
+     *        Base64-encoded. Otherwise, it is not Base64-encoded.
      */
 
     public void setCiphertextBlob(java.nio.ByteBuffer ciphertextBlob) {
@@ -84,8 +84,8 @@ public class ReEncryptResult extends com.amazonaws.AmazonWebServiceResult<com.am
 
     /**
      * <p>
-     * The reencrypted data. When you use the HTTP API or the AWS CLI, the value is Base64-encoded. Otherwise, it is not
-     * Base64-encoded.
+     * The reencrypted data. When you use the HTTP API or the Amazon Web Services CLI, the value is Base64-encoded.
+     * Otherwise, it is not Base64-encoded.
      * </p>
      * <p>
      * {@code ByteBuffer}s are stateful. Calling their {@code get} methods changes their {@code position}. We recommend
@@ -95,8 +95,8 @@ public class ReEncryptResult extends com.amazonaws.AmazonWebServiceResult<com.am
      * {@code position}.
      * </p>
      * 
-     * @return The reencrypted data. When you use the HTTP API or the AWS CLI, the value is Base64-encoded. Otherwise,
-     *         it is not Base64-encoded.
+     * @return The reencrypted data. When you use the HTTP API or the Amazon Web Services CLI, the value is
+     *         Base64-encoded. Otherwise, it is not Base64-encoded.
      */
 
     public java.nio.ByteBuffer getCiphertextBlob() {
@@ -105,8 +105,8 @@ public class ReEncryptResult extends com.amazonaws.AmazonWebServiceResult<com.am
 
     /**
      * <p>
-     * The reencrypted data. When you use the HTTP API or the AWS CLI, the value is Base64-encoded. Otherwise, it is not
-     * Base64-encoded.
+     * The reencrypted data. When you use the HTTP API or the Amazon Web Services CLI, the value is Base64-encoded.
+     * Otherwise, it is not Base64-encoded.
      * </p>
      * <p>
      * The AWS SDK for Java performs a Base64 encoding on this field before sending this request to the AWS service.
@@ -120,8 +120,8 @@ public class ReEncryptResult extends com.amazonaws.AmazonWebServiceResult<com.am
      * </p>
      * 
      * @param ciphertextBlob
-     *        The reencrypted data. When you use the HTTP API or the AWS CLI, the value is Base64-encoded. Otherwise, it
-     *        is not Base64-encoded.
+     *        The reencrypted data. When you use the HTTP API or the Amazon Web Services CLI, the value is
+     *        Base64-encoded. Otherwise, it is not Base64-encoded.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -132,11 +132,11 @@ public class ReEncryptResult extends com.amazonaws.AmazonWebServiceResult<com.am
 
     /**
      * <p>
-     * Unique identifier of the CMK used to originally encrypt the data.
+     * Unique identifier of the KMS key used to originally encrypt the data.
      * </p>
      * 
      * @param sourceKeyId
-     *        Unique identifier of the CMK used to originally encrypt the data.
+     *        Unique identifier of the KMS key used to originally encrypt the data.
      */
 
     public void setSourceKeyId(String sourceKeyId) {
@@ -145,10 +145,10 @@ public class ReEncryptResult extends com.amazonaws.AmazonWebServiceResult<com.am
 
     /**
      * <p>
-     * Unique identifier of the CMK used to originally encrypt the data.
+     * Unique identifier of the KMS key used to originally encrypt the data.
      * </p>
      * 
-     * @return Unique identifier of the CMK used to originally encrypt the data.
+     * @return Unique identifier of the KMS key used to originally encrypt the data.
      */
 
     public String getSourceKeyId() {
@@ -157,11 +157,11 @@ public class ReEncryptResult extends com.amazonaws.AmazonWebServiceResult<com.am
 
     /**
      * <p>
-     * Unique identifier of the CMK used to originally encrypt the data.
+     * Unique identifier of the KMS key used to originally encrypt the data.
      * </p>
      * 
      * @param sourceKeyId
-     *        Unique identifier of the CMK used to originally encrypt the data.
+     *        Unique identifier of the KMS key used to originally encrypt the data.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -173,14 +173,14 @@ public class ReEncryptResult extends com.amazonaws.AmazonWebServiceResult<com.am
     /**
      * <p>
      * The Amazon Resource Name (<a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) of the CMK
-     * that was used to reencrypt the data.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) of the KMS
+     * key that was used to reencrypt the data.
      * </p>
      * 
      * @param keyId
      *        The Amazon Resource Name (<a
      *        href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) of
-     *        the CMK that was used to reencrypt the data.
+     *        the KMS key that was used to reencrypt the data.
      */
 
     public void setKeyId(String keyId) {
@@ -190,13 +190,13 @@ public class ReEncryptResult extends com.amazonaws.AmazonWebServiceResult<com.am
     /**
      * <p>
      * The Amazon Resource Name (<a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) of the CMK
-     * that was used to reencrypt the data.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) of the KMS
+     * key that was used to reencrypt the data.
      * </p>
      * 
      * @return The Amazon Resource Name (<a
      *         href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) of
-     *         the CMK that was used to reencrypt the data.
+     *         the KMS key that was used to reencrypt the data.
      */
 
     public String getKeyId() {
@@ -206,14 +206,14 @@ public class ReEncryptResult extends com.amazonaws.AmazonWebServiceResult<com.am
     /**
      * <p>
      * The Amazon Resource Name (<a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) of the CMK
-     * that was used to reencrypt the data.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) of the KMS
+     * key that was used to reencrypt the data.
      * </p>
      * 
      * @param keyId
      *        The Amazon Resource Name (<a
      *        href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) of
-     *        the CMK that was used to reencrypt the data.
+     *        the KMS key that was used to reencrypt the data.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

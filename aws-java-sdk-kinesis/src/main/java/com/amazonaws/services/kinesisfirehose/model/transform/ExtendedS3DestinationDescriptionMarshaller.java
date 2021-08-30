@@ -51,6 +51,8 @@ public class ExtendedS3DestinationDescriptionMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("S3BackupDescription").build();
     private static final MarshallingInfo<StructuredPojo> DATAFORMATCONVERSIONCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DataFormatConversionConfiguration").build();
+    private static final MarshallingInfo<StructuredPojo> DYNAMICPARTITIONINGCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DynamicPartitioningConfiguration").build();
 
     private static final ExtendedS3DestinationDescriptionMarshaller instance = new ExtendedS3DestinationDescriptionMarshaller();
 
@@ -80,6 +82,7 @@ public class ExtendedS3DestinationDescriptionMarshaller {
             protocolMarshaller.marshall(extendedS3DestinationDescription.getS3BackupMode(), S3BACKUPMODE_BINDING);
             protocolMarshaller.marshall(extendedS3DestinationDescription.getS3BackupDescription(), S3BACKUPDESCRIPTION_BINDING);
             protocolMarshaller.marshall(extendedS3DestinationDescription.getDataFormatConversionConfiguration(), DATAFORMATCONVERSIONCONFIGURATION_BINDING);
+            protocolMarshaller.marshall(extendedS3DestinationDescription.getDynamicPartitioningConfiguration(), DYNAMICPARTITIONINGCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

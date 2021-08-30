@@ -52,6 +52,10 @@ public class ExecuteChangeSetRequestMarshaller implements Marshaller<Request<Exe
             request.addParameter("ClientRequestToken", StringUtils.fromString(executeChangeSetRequest.getClientRequestToken()));
         }
 
+        if (executeChangeSetRequest.getDisableRollback() != null) {
+            request.addParameter("DisableRollback", StringUtils.fromBoolean(executeChangeSetRequest.getDisableRollback()));
+        }
+
         return request;
     }
 

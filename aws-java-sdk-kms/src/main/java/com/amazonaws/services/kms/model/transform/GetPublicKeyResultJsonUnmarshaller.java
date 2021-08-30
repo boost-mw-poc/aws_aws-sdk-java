@@ -60,6 +60,10 @@ public class GetPublicKeyResultJsonUnmarshaller implements Unmarshaller<GetPubli
                     context.nextToken();
                     getPublicKeyResult.setCustomerMasterKeySpec(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("KeySpec", targetDepth)) {
+                    context.nextToken();
+                    getPublicKeyResult.setKeySpec(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("KeyUsage", targetDepth)) {
                     context.nextToken();
                     getPublicKeyResult.setKeyUsage(context.getUnmarshaller(String.class).unmarshall(context));

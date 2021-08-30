@@ -24,7 +24,7 @@ public class ListKeysResult extends com.amazonaws.AmazonWebServiceResult<com.ama
 
     /**
      * <p>
-     * A list of customer master keys (CMKs).
+     * A list of KMS keys.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<KeyListEntry> keys;
@@ -46,10 +46,10 @@ public class ListKeysResult extends com.amazonaws.AmazonWebServiceResult<com.ama
 
     /**
      * <p>
-     * A list of customer master keys (CMKs).
+     * A list of KMS keys.
      * </p>
      * 
-     * @return A list of customer master keys (CMKs).
+     * @return A list of KMS keys.
      */
 
     public java.util.List<KeyListEntry> getKeys() {
@@ -61,11 +61,11 @@ public class ListKeysResult extends com.amazonaws.AmazonWebServiceResult<com.ama
 
     /**
      * <p>
-     * A list of customer master keys (CMKs).
+     * A list of KMS keys.
      * </p>
      * 
      * @param keys
-     *        A list of customer master keys (CMKs).
+     *        A list of KMS keys.
      */
 
     public void setKeys(java.util.Collection<KeyListEntry> keys) {
@@ -79,7 +79,7 @@ public class ListKeysResult extends com.amazonaws.AmazonWebServiceResult<com.ama
 
     /**
      * <p>
-     * A list of customer master keys (CMKs).
+     * A list of KMS keys.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -88,7 +88,7 @@ public class ListKeysResult extends com.amazonaws.AmazonWebServiceResult<com.ama
      * </p>
      * 
      * @param keys
-     *        A list of customer master keys (CMKs).
+     *        A list of KMS keys.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -104,11 +104,11 @@ public class ListKeysResult extends com.amazonaws.AmazonWebServiceResult<com.ama
 
     /**
      * <p>
-     * A list of customer master keys (CMKs).
+     * A list of KMS keys.
      * </p>
      * 
      * @param keys
-     *        A list of customer master keys (CMKs).
+     *        A list of KMS keys.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

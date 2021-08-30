@@ -27,7 +27,7 @@ public class ListGrantsRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * Use this parameter to specify the maximum number of items to return. When this value is present, AWS KMS does not
+     * Use this parameter to specify the maximum number of items to return. When this value is present, KMS does not
      * return more than the specified number of items, but it might return fewer.
      * </p>
      * <p>
@@ -45,10 +45,11 @@ public class ListGrantsRequest extends com.amazonaws.AmazonWebServiceRequest imp
     private String marker;
     /**
      * <p>
-     * Returns only grants for the specified customer master key (CMK). This parameter is required.
+     * Returns only grants for the specified KMS key. This parameter is required.
      * </p>
      * <p>
-     * Specify the key ID or key ARN of the CMK. To specify a CMK in a different AWS account, you must use the key ARN.
+     * Specify the key ID or key ARN of the KMS key. To specify a KMS key in a different Amazon Web Services account,
+     * you must use the key ARN.
      * </p>
      * <p>
      * For example:
@@ -66,7 +67,7 @@ public class ListGrantsRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * </li>
      * </ul>
      * <p>
-     * To get the key ID and key ARN for a CMK, use <a>ListKeys</a> or <a>DescribeKey</a>.
+     * To get the key ID and key ARN for a KMS key, use <a>ListKeys</a> or <a>DescribeKey</a>.
      * </p>
      */
     private String keyId;
@@ -85,7 +86,7 @@ public class ListGrantsRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * Use this parameter to specify the maximum number of items to return. When this value is present, AWS KMS does not
+     * Use this parameter to specify the maximum number of items to return. When this value is present, KMS does not
      * return more than the specified number of items, but it might return fewer.
      * </p>
      * <p>
@@ -94,8 +95,8 @@ public class ListGrantsRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * </p>
      * 
      * @param limit
-     *        Use this parameter to specify the maximum number of items to return. When this value is present, AWS KMS
-     *        does not return more than the specified number of items, but it might return fewer.</p>
+     *        Use this parameter to specify the maximum number of items to return. When this value is present, KMS does
+     *        not return more than the specified number of items, but it might return fewer.</p>
      *        <p>
      *        This value is optional. If you include a value, it must be between 1 and 100, inclusive. If you do not
      *        include a value, it defaults to 50.
@@ -107,7 +108,7 @@ public class ListGrantsRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * Use this parameter to specify the maximum number of items to return. When this value is present, AWS KMS does not
+     * Use this parameter to specify the maximum number of items to return. When this value is present, KMS does not
      * return more than the specified number of items, but it might return fewer.
      * </p>
      * <p>
@@ -115,8 +116,8 @@ public class ListGrantsRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * value, it defaults to 50.
      * </p>
      * 
-     * @return Use this parameter to specify the maximum number of items to return. When this value is present, AWS KMS
-     *         does not return more than the specified number of items, but it might return fewer.</p>
+     * @return Use this parameter to specify the maximum number of items to return. When this value is present, KMS does
+     *         not return more than the specified number of items, but it might return fewer.</p>
      *         <p>
      *         This value is optional. If you include a value, it must be between 1 and 100, inclusive. If you do not
      *         include a value, it defaults to 50.
@@ -128,7 +129,7 @@ public class ListGrantsRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * Use this parameter to specify the maximum number of items to return. When this value is present, AWS KMS does not
+     * Use this parameter to specify the maximum number of items to return. When this value is present, KMS does not
      * return more than the specified number of items, but it might return fewer.
      * </p>
      * <p>
@@ -137,8 +138,8 @@ public class ListGrantsRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * </p>
      * 
      * @param limit
-     *        Use this parameter to specify the maximum number of items to return. When this value is present, AWS KMS
-     *        does not return more than the specified number of items, but it might return fewer.</p>
+     *        Use this parameter to specify the maximum number of items to return. When this value is present, KMS does
+     *        not return more than the specified number of items, but it might return fewer.</p>
      *        <p>
      *        This value is optional. If you include a value, it must be between 1 and 100, inclusive. If you do not
      *        include a value, it defaults to 50.
@@ -198,10 +199,11 @@ public class ListGrantsRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * Returns only grants for the specified customer master key (CMK). This parameter is required.
+     * Returns only grants for the specified KMS key. This parameter is required.
      * </p>
      * <p>
-     * Specify the key ID or key ARN of the CMK. To specify a CMK in a different AWS account, you must use the key ARN.
+     * Specify the key ID or key ARN of the KMS key. To specify a KMS key in a different Amazon Web Services account,
+     * you must use the key ARN.
      * </p>
      * <p>
      * For example:
@@ -219,14 +221,14 @@ public class ListGrantsRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * </li>
      * </ul>
      * <p>
-     * To get the key ID and key ARN for a CMK, use <a>ListKeys</a> or <a>DescribeKey</a>.
+     * To get the key ID and key ARN for a KMS key, use <a>ListKeys</a> or <a>DescribeKey</a>.
      * </p>
      * 
      * @param keyId
-     *        Returns only grants for the specified customer master key (CMK). This parameter is required.</p>
+     *        Returns only grants for the specified KMS key. This parameter is required.</p>
      *        <p>
-     *        Specify the key ID or key ARN of the CMK. To specify a CMK in a different AWS account, you must use the
-     *        key ARN.
+     *        Specify the key ID or key ARN of the KMS key. To specify a KMS key in a different Amazon Web Services
+     *        account, you must use the key ARN.
      *        </p>
      *        <p>
      *        For example:
@@ -244,7 +246,7 @@ public class ListGrantsRequest extends com.amazonaws.AmazonWebServiceRequest imp
      *        </li>
      *        </ul>
      *        <p>
-     *        To get the key ID and key ARN for a CMK, use <a>ListKeys</a> or <a>DescribeKey</a>.
+     *        To get the key ID and key ARN for a KMS key, use <a>ListKeys</a> or <a>DescribeKey</a>.
      */
 
     public void setKeyId(String keyId) {
@@ -253,10 +255,11 @@ public class ListGrantsRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * Returns only grants for the specified customer master key (CMK). This parameter is required.
+     * Returns only grants for the specified KMS key. This parameter is required.
      * </p>
      * <p>
-     * Specify the key ID or key ARN of the CMK. To specify a CMK in a different AWS account, you must use the key ARN.
+     * Specify the key ID or key ARN of the KMS key. To specify a KMS key in a different Amazon Web Services account,
+     * you must use the key ARN.
      * </p>
      * <p>
      * For example:
@@ -274,13 +277,13 @@ public class ListGrantsRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * </li>
      * </ul>
      * <p>
-     * To get the key ID and key ARN for a CMK, use <a>ListKeys</a> or <a>DescribeKey</a>.
+     * To get the key ID and key ARN for a KMS key, use <a>ListKeys</a> or <a>DescribeKey</a>.
      * </p>
      * 
-     * @return Returns only grants for the specified customer master key (CMK). This parameter is required.</p>
+     * @return Returns only grants for the specified KMS key. This parameter is required.</p>
      *         <p>
-     *         Specify the key ID or key ARN of the CMK. To specify a CMK in a different AWS account, you must use the
-     *         key ARN.
+     *         Specify the key ID or key ARN of the KMS key. To specify a KMS key in a different Amazon Web Services
+     *         account, you must use the key ARN.
      *         </p>
      *         <p>
      *         For example:
@@ -298,7 +301,7 @@ public class ListGrantsRequest extends com.amazonaws.AmazonWebServiceRequest imp
      *         </li>
      *         </ul>
      *         <p>
-     *         To get the key ID and key ARN for a CMK, use <a>ListKeys</a> or <a>DescribeKey</a>.
+     *         To get the key ID and key ARN for a KMS key, use <a>ListKeys</a> or <a>DescribeKey</a>.
      */
 
     public String getKeyId() {
@@ -307,10 +310,11 @@ public class ListGrantsRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * Returns only grants for the specified customer master key (CMK). This parameter is required.
+     * Returns only grants for the specified KMS key. This parameter is required.
      * </p>
      * <p>
-     * Specify the key ID or key ARN of the CMK. To specify a CMK in a different AWS account, you must use the key ARN.
+     * Specify the key ID or key ARN of the KMS key. To specify a KMS key in a different Amazon Web Services account,
+     * you must use the key ARN.
      * </p>
      * <p>
      * For example:
@@ -328,14 +332,14 @@ public class ListGrantsRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * </li>
      * </ul>
      * <p>
-     * To get the key ID and key ARN for a CMK, use <a>ListKeys</a> or <a>DescribeKey</a>.
+     * To get the key ID and key ARN for a KMS key, use <a>ListKeys</a> or <a>DescribeKey</a>.
      * </p>
      * 
      * @param keyId
-     *        Returns only grants for the specified customer master key (CMK). This parameter is required.</p>
+     *        Returns only grants for the specified KMS key. This parameter is required.</p>
      *        <p>
-     *        Specify the key ID or key ARN of the CMK. To specify a CMK in a different AWS account, you must use the
-     *        key ARN.
+     *        Specify the key ID or key ARN of the KMS key. To specify a KMS key in a different Amazon Web Services
+     *        account, you must use the key ARN.
      *        </p>
      *        <p>
      *        For example:
@@ -353,7 +357,7 @@ public class ListGrantsRequest extends com.amazonaws.AmazonWebServiceRequest imp
      *        </li>
      *        </ul>
      *        <p>
-     *        To get the key ID and key ARN for a CMK, use <a>ListKeys</a> or <a>DescribeKey</a>.
+     *        To get the key ID and key ARN for a KMS key, use <a>ListKeys</a> or <a>DescribeKey</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

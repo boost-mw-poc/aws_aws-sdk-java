@@ -27,10 +27,10 @@ public class PutKeyPolicyRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * Sets the key policy on the specified customer master key (CMK).
+     * Sets the key policy on the specified KMS key.
      * </p>
      * <p>
-     * Specify the key ID or key ARN of the CMK.
+     * Specify the key ID or key ARN of the KMS key.
      * </p>
      * <p>
      * For example:
@@ -48,7 +48,7 @@ public class PutKeyPolicyRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </li>
      * </ul>
      * <p>
-     * To get the key ID and key ARN for a CMK, use <a>ListKeys</a> or <a>DescribeKey</a>.
+     * To get the key ID and key ARN for a KMS key, use <a>ListKeys</a> or <a>DescribeKey</a>.
      * </p>
      */
     private String keyId;
@@ -60,7 +60,7 @@ public class PutKeyPolicyRequest extends com.amazonaws.AmazonWebServiceRequest i
     private String policyName;
     /**
      * <p>
-     * The key policy to attach to the CMK.
+     * The key policy to attach to the KMS key.
      * </p>
      * <p>
      * The key policy must meet the following criteria:
@@ -70,28 +70,28 @@ public class PutKeyPolicyRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <p>
      * If you don't set <code>BypassPolicyLockoutSafetyCheck</code> to true, the key policy must allow the principal
      * that is making the <code>PutKeyPolicy</code> request to make a subsequent <code>PutKeyPolicy</code> request on
-     * the CMK. This reduces the risk that the CMK becomes unmanageable. For more information, refer to the scenario in
-     * the <a href=
+     * the KMS key. This reduces the risk that the KMS key becomes unmanageable. For more information, refer to the
+     * scenario in the <a href=
      * "https://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html#key-policy-default-allow-root-enable-iam"
-     * >Default Key Policy</a> section of the <i>AWS Key Management Service Developer Guide</i>.
+     * >Default Key Policy</a> section of the <i>Key Management Service Developer Guide</i>.
      * </p>
      * </li>
      * <li>
      * <p>
      * Each statement in the key policy must contain one or more principals. The principals in the key policy must exist
-     * and be visible to AWS KMS. When you create a new AWS principal (for example, an IAM user or role), you might need
-     * to enforce a delay before including the new principal in a key policy because the new principal might not be
-     * immediately visible to AWS KMS. For more information, see <a href=
+     * and be visible to KMS. When you create a new Amazon Web Services principal (for example, an IAM user or role),
+     * you might need to enforce a delay before including the new principal in a key policy because the new principal
+     * might not be immediately visible to KMS. For more information, see <a href=
      * "https://docs.aws.amazon.com/IAM/latest/UserGuide/troubleshoot_general.html#troubleshoot_general_eventual-consistency"
-     * >Changes that I make are not always immediately visible</a> in the <i>AWS Identity and Access Management User
-     * Guide</i>.
+     * >Changes that I make are not always immediately visible</a> in the <i>Amazon Web Services Identity and Access
+     * Management User Guide</i>.
      * </p>
      * </li>
      * </ul>
      * <p>
      * The key policy cannot exceed 32 kilobytes (32768 bytes). For more information, see <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/resource-limits.html">Resource Quotas</a> in the
-     * <i>AWS Key Management Service Developer Guide</i>.
+     * <i>Key Management Service Developer Guide</i>.
      * </p>
      */
     private String policy;
@@ -101,18 +101,18 @@ public class PutKeyPolicyRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </p>
      * <important>
      * <p>
-     * Setting this value to true increases the risk that the CMK becomes unmanageable. Do not set this value to true
-     * indiscriminately.
+     * Setting this value to true increases the risk that the KMS key becomes unmanageable. Do not set this value to
+     * true indiscriminately.
      * </p>
      * <p>
      * For more information, refer to the scenario in the <a href=
      * "https://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html#key-policy-default-allow-root-enable-iam"
-     * >Default Key Policy</a> section in the <i>AWS Key Management Service Developer Guide</i>.
+     * >Default Key Policy</a> section in the <i>Key Management Service Developer Guide</i>.
      * </p>
      * </important>
      * <p>
      * Use this parameter only when you intend to prevent the principal that is making the request from making a
-     * subsequent <code>PutKeyPolicy</code> request on the CMK.
+     * subsequent <code>PutKeyPolicy</code> request on the KMS key.
      * </p>
      * <p>
      * The default value is false.
@@ -122,10 +122,10 @@ public class PutKeyPolicyRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * Sets the key policy on the specified customer master key (CMK).
+     * Sets the key policy on the specified KMS key.
      * </p>
      * <p>
-     * Specify the key ID or key ARN of the CMK.
+     * Specify the key ID or key ARN of the KMS key.
      * </p>
      * <p>
      * For example:
@@ -143,13 +143,13 @@ public class PutKeyPolicyRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </li>
      * </ul>
      * <p>
-     * To get the key ID and key ARN for a CMK, use <a>ListKeys</a> or <a>DescribeKey</a>.
+     * To get the key ID and key ARN for a KMS key, use <a>ListKeys</a> or <a>DescribeKey</a>.
      * </p>
      * 
      * @param keyId
-     *        Sets the key policy on the specified customer master key (CMK).</p>
+     *        Sets the key policy on the specified KMS key.</p>
      *        <p>
-     *        Specify the key ID or key ARN of the CMK.
+     *        Specify the key ID or key ARN of the KMS key.
      *        </p>
      *        <p>
      *        For example:
@@ -167,7 +167,7 @@ public class PutKeyPolicyRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        </li>
      *        </ul>
      *        <p>
-     *        To get the key ID and key ARN for a CMK, use <a>ListKeys</a> or <a>DescribeKey</a>.
+     *        To get the key ID and key ARN for a KMS key, use <a>ListKeys</a> or <a>DescribeKey</a>.
      */
 
     public void setKeyId(String keyId) {
@@ -176,10 +176,10 @@ public class PutKeyPolicyRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * Sets the key policy on the specified customer master key (CMK).
+     * Sets the key policy on the specified KMS key.
      * </p>
      * <p>
-     * Specify the key ID or key ARN of the CMK.
+     * Specify the key ID or key ARN of the KMS key.
      * </p>
      * <p>
      * For example:
@@ -197,12 +197,12 @@ public class PutKeyPolicyRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </li>
      * </ul>
      * <p>
-     * To get the key ID and key ARN for a CMK, use <a>ListKeys</a> or <a>DescribeKey</a>.
+     * To get the key ID and key ARN for a KMS key, use <a>ListKeys</a> or <a>DescribeKey</a>.
      * </p>
      * 
-     * @return Sets the key policy on the specified customer master key (CMK).</p>
+     * @return Sets the key policy on the specified KMS key.</p>
      *         <p>
-     *         Specify the key ID or key ARN of the CMK.
+     *         Specify the key ID or key ARN of the KMS key.
      *         </p>
      *         <p>
      *         For example:
@@ -220,7 +220,7 @@ public class PutKeyPolicyRequest extends com.amazonaws.AmazonWebServiceRequest i
      *         </li>
      *         </ul>
      *         <p>
-     *         To get the key ID and key ARN for a CMK, use <a>ListKeys</a> or <a>DescribeKey</a>.
+     *         To get the key ID and key ARN for a KMS key, use <a>ListKeys</a> or <a>DescribeKey</a>.
      */
 
     public String getKeyId() {
@@ -229,10 +229,10 @@ public class PutKeyPolicyRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * Sets the key policy on the specified customer master key (CMK).
+     * Sets the key policy on the specified KMS key.
      * </p>
      * <p>
-     * Specify the key ID or key ARN of the CMK.
+     * Specify the key ID or key ARN of the KMS key.
      * </p>
      * <p>
      * For example:
@@ -250,13 +250,13 @@ public class PutKeyPolicyRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </li>
      * </ul>
      * <p>
-     * To get the key ID and key ARN for a CMK, use <a>ListKeys</a> or <a>DescribeKey</a>.
+     * To get the key ID and key ARN for a KMS key, use <a>ListKeys</a> or <a>DescribeKey</a>.
      * </p>
      * 
      * @param keyId
-     *        Sets the key policy on the specified customer master key (CMK).</p>
+     *        Sets the key policy on the specified KMS key.</p>
      *        <p>
-     *        Specify the key ID or key ARN of the CMK.
+     *        Specify the key ID or key ARN of the KMS key.
      *        </p>
      *        <p>
      *        For example:
@@ -274,7 +274,7 @@ public class PutKeyPolicyRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        </li>
      *        </ul>
      *        <p>
-     *        To get the key ID and key ARN for a CMK, use <a>ListKeys</a> or <a>DescribeKey</a>.
+     *        To get the key ID and key ARN for a KMS key, use <a>ListKeys</a> or <a>DescribeKey</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -325,7 +325,7 @@ public class PutKeyPolicyRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The key policy to attach to the CMK.
+     * The key policy to attach to the KMS key.
      * </p>
      * <p>
      * The key policy must meet the following criteria:
@@ -335,32 +335,32 @@ public class PutKeyPolicyRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <p>
      * If you don't set <code>BypassPolicyLockoutSafetyCheck</code> to true, the key policy must allow the principal
      * that is making the <code>PutKeyPolicy</code> request to make a subsequent <code>PutKeyPolicy</code> request on
-     * the CMK. This reduces the risk that the CMK becomes unmanageable. For more information, refer to the scenario in
-     * the <a href=
+     * the KMS key. This reduces the risk that the KMS key becomes unmanageable. For more information, refer to the
+     * scenario in the <a href=
      * "https://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html#key-policy-default-allow-root-enable-iam"
-     * >Default Key Policy</a> section of the <i>AWS Key Management Service Developer Guide</i>.
+     * >Default Key Policy</a> section of the <i>Key Management Service Developer Guide</i>.
      * </p>
      * </li>
      * <li>
      * <p>
      * Each statement in the key policy must contain one or more principals. The principals in the key policy must exist
-     * and be visible to AWS KMS. When you create a new AWS principal (for example, an IAM user or role), you might need
-     * to enforce a delay before including the new principal in a key policy because the new principal might not be
-     * immediately visible to AWS KMS. For more information, see <a href=
+     * and be visible to KMS. When you create a new Amazon Web Services principal (for example, an IAM user or role),
+     * you might need to enforce a delay before including the new principal in a key policy because the new principal
+     * might not be immediately visible to KMS. For more information, see <a href=
      * "https://docs.aws.amazon.com/IAM/latest/UserGuide/troubleshoot_general.html#troubleshoot_general_eventual-consistency"
-     * >Changes that I make are not always immediately visible</a> in the <i>AWS Identity and Access Management User
-     * Guide</i>.
+     * >Changes that I make are not always immediately visible</a> in the <i>Amazon Web Services Identity and Access
+     * Management User Guide</i>.
      * </p>
      * </li>
      * </ul>
      * <p>
      * The key policy cannot exceed 32 kilobytes (32768 bytes). For more information, see <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/resource-limits.html">Resource Quotas</a> in the
-     * <i>AWS Key Management Service Developer Guide</i>.
+     * <i>Key Management Service Developer Guide</i>.
      * </p>
      * 
      * @param policy
-     *        The key policy to attach to the CMK.</p>
+     *        The key policy to attach to the KMS key.</p>
      *        <p>
      *        The key policy must meet the following criteria:
      *        </p>
@@ -369,28 +369,28 @@ public class PutKeyPolicyRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        <p>
      *        If you don't set <code>BypassPolicyLockoutSafetyCheck</code> to true, the key policy must allow the
      *        principal that is making the <code>PutKeyPolicy</code> request to make a subsequent
-     *        <code>PutKeyPolicy</code> request on the CMK. This reduces the risk that the CMK becomes unmanageable. For
-     *        more information, refer to the scenario in the <a href=
+     *        <code>PutKeyPolicy</code> request on the KMS key. This reduces the risk that the KMS key becomes
+     *        unmanageable. For more information, refer to the scenario in the <a href=
      *        "https://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html#key-policy-default-allow-root-enable-iam"
-     *        >Default Key Policy</a> section of the <i>AWS Key Management Service Developer Guide</i>.
+     *        >Default Key Policy</a> section of the <i>Key Management Service Developer Guide</i>.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        Each statement in the key policy must contain one or more principals. The principals in the key policy
-     *        must exist and be visible to AWS KMS. When you create a new AWS principal (for example, an IAM user or
-     *        role), you might need to enforce a delay before including the new principal in a key policy because the
-     *        new principal might not be immediately visible to AWS KMS. For more information, see <a href=
+     *        must exist and be visible to KMS. When you create a new Amazon Web Services principal (for example, an IAM
+     *        user or role), you might need to enforce a delay before including the new principal in a key policy
+     *        because the new principal might not be immediately visible to KMS. For more information, see <a href=
      *        "https://docs.aws.amazon.com/IAM/latest/UserGuide/troubleshoot_general.html#troubleshoot_general_eventual-consistency"
-     *        >Changes that I make are not always immediately visible</a> in the <i>AWS Identity and Access Management
-     *        User Guide</i>.
+     *        >Changes that I make are not always immediately visible</a> in the <i>Amazon Web Services Identity and
+     *        Access Management User Guide</i>.
      *        </p>
      *        </li>
      *        </ul>
      *        <p>
      *        The key policy cannot exceed 32 kilobytes (32768 bytes). For more information, see <a
      *        href="https://docs.aws.amazon.com/kms/latest/developerguide/resource-limits.html">Resource Quotas</a> in
-     *        the <i>AWS Key Management Service Developer Guide</i>.
+     *        the <i>Key Management Service Developer Guide</i>.
      */
 
     public void setPolicy(String policy) {
@@ -399,7 +399,7 @@ public class PutKeyPolicyRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The key policy to attach to the CMK.
+     * The key policy to attach to the KMS key.
      * </p>
      * <p>
      * The key policy must meet the following criteria:
@@ -409,31 +409,31 @@ public class PutKeyPolicyRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <p>
      * If you don't set <code>BypassPolicyLockoutSafetyCheck</code> to true, the key policy must allow the principal
      * that is making the <code>PutKeyPolicy</code> request to make a subsequent <code>PutKeyPolicy</code> request on
-     * the CMK. This reduces the risk that the CMK becomes unmanageable. For more information, refer to the scenario in
-     * the <a href=
+     * the KMS key. This reduces the risk that the KMS key becomes unmanageable. For more information, refer to the
+     * scenario in the <a href=
      * "https://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html#key-policy-default-allow-root-enable-iam"
-     * >Default Key Policy</a> section of the <i>AWS Key Management Service Developer Guide</i>.
+     * >Default Key Policy</a> section of the <i>Key Management Service Developer Guide</i>.
      * </p>
      * </li>
      * <li>
      * <p>
      * Each statement in the key policy must contain one or more principals. The principals in the key policy must exist
-     * and be visible to AWS KMS. When you create a new AWS principal (for example, an IAM user or role), you might need
-     * to enforce a delay before including the new principal in a key policy because the new principal might not be
-     * immediately visible to AWS KMS. For more information, see <a href=
+     * and be visible to KMS. When you create a new Amazon Web Services principal (for example, an IAM user or role),
+     * you might need to enforce a delay before including the new principal in a key policy because the new principal
+     * might not be immediately visible to KMS. For more information, see <a href=
      * "https://docs.aws.amazon.com/IAM/latest/UserGuide/troubleshoot_general.html#troubleshoot_general_eventual-consistency"
-     * >Changes that I make are not always immediately visible</a> in the <i>AWS Identity and Access Management User
-     * Guide</i>.
+     * >Changes that I make are not always immediately visible</a> in the <i>Amazon Web Services Identity and Access
+     * Management User Guide</i>.
      * </p>
      * </li>
      * </ul>
      * <p>
      * The key policy cannot exceed 32 kilobytes (32768 bytes). For more information, see <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/resource-limits.html">Resource Quotas</a> in the
-     * <i>AWS Key Management Service Developer Guide</i>.
+     * <i>Key Management Service Developer Guide</i>.
      * </p>
      * 
-     * @return The key policy to attach to the CMK.</p>
+     * @return The key policy to attach to the KMS key.</p>
      *         <p>
      *         The key policy must meet the following criteria:
      *         </p>
@@ -442,28 +442,28 @@ public class PutKeyPolicyRequest extends com.amazonaws.AmazonWebServiceRequest i
      *         <p>
      *         If you don't set <code>BypassPolicyLockoutSafetyCheck</code> to true, the key policy must allow the
      *         principal that is making the <code>PutKeyPolicy</code> request to make a subsequent
-     *         <code>PutKeyPolicy</code> request on the CMK. This reduces the risk that the CMK becomes unmanageable.
-     *         For more information, refer to the scenario in the <a href=
+     *         <code>PutKeyPolicy</code> request on the KMS key. This reduces the risk that the KMS key becomes
+     *         unmanageable. For more information, refer to the scenario in the <a href=
      *         "https://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html#key-policy-default-allow-root-enable-iam"
-     *         >Default Key Policy</a> section of the <i>AWS Key Management Service Developer Guide</i>.
+     *         >Default Key Policy</a> section of the <i>Key Management Service Developer Guide</i>.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
      *         Each statement in the key policy must contain one or more principals. The principals in the key policy
-     *         must exist and be visible to AWS KMS. When you create a new AWS principal (for example, an IAM user or
-     *         role), you might need to enforce a delay before including the new principal in a key policy because the
-     *         new principal might not be immediately visible to AWS KMS. For more information, see <a href=
+     *         must exist and be visible to KMS. When you create a new Amazon Web Services principal (for example, an
+     *         IAM user or role), you might need to enforce a delay before including the new principal in a key policy
+     *         because the new principal might not be immediately visible to KMS. For more information, see <a href=
      *         "https://docs.aws.amazon.com/IAM/latest/UserGuide/troubleshoot_general.html#troubleshoot_general_eventual-consistency"
-     *         >Changes that I make are not always immediately visible</a> in the <i>AWS Identity and Access Management
-     *         User Guide</i>.
+     *         >Changes that I make are not always immediately visible</a> in the <i>Amazon Web Services Identity and
+     *         Access Management User Guide</i>.
      *         </p>
      *         </li>
      *         </ul>
      *         <p>
      *         The key policy cannot exceed 32 kilobytes (32768 bytes). For more information, see <a
      *         href="https://docs.aws.amazon.com/kms/latest/developerguide/resource-limits.html">Resource Quotas</a> in
-     *         the <i>AWS Key Management Service Developer Guide</i>.
+     *         the <i>Key Management Service Developer Guide</i>.
      */
 
     public String getPolicy() {
@@ -472,7 +472,7 @@ public class PutKeyPolicyRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The key policy to attach to the CMK.
+     * The key policy to attach to the KMS key.
      * </p>
      * <p>
      * The key policy must meet the following criteria:
@@ -482,32 +482,32 @@ public class PutKeyPolicyRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <p>
      * If you don't set <code>BypassPolicyLockoutSafetyCheck</code> to true, the key policy must allow the principal
      * that is making the <code>PutKeyPolicy</code> request to make a subsequent <code>PutKeyPolicy</code> request on
-     * the CMK. This reduces the risk that the CMK becomes unmanageable. For more information, refer to the scenario in
-     * the <a href=
+     * the KMS key. This reduces the risk that the KMS key becomes unmanageable. For more information, refer to the
+     * scenario in the <a href=
      * "https://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html#key-policy-default-allow-root-enable-iam"
-     * >Default Key Policy</a> section of the <i>AWS Key Management Service Developer Guide</i>.
+     * >Default Key Policy</a> section of the <i>Key Management Service Developer Guide</i>.
      * </p>
      * </li>
      * <li>
      * <p>
      * Each statement in the key policy must contain one or more principals. The principals in the key policy must exist
-     * and be visible to AWS KMS. When you create a new AWS principal (for example, an IAM user or role), you might need
-     * to enforce a delay before including the new principal in a key policy because the new principal might not be
-     * immediately visible to AWS KMS. For more information, see <a href=
+     * and be visible to KMS. When you create a new Amazon Web Services principal (for example, an IAM user or role),
+     * you might need to enforce a delay before including the new principal in a key policy because the new principal
+     * might not be immediately visible to KMS. For more information, see <a href=
      * "https://docs.aws.amazon.com/IAM/latest/UserGuide/troubleshoot_general.html#troubleshoot_general_eventual-consistency"
-     * >Changes that I make are not always immediately visible</a> in the <i>AWS Identity and Access Management User
-     * Guide</i>.
+     * >Changes that I make are not always immediately visible</a> in the <i>Amazon Web Services Identity and Access
+     * Management User Guide</i>.
      * </p>
      * </li>
      * </ul>
      * <p>
      * The key policy cannot exceed 32 kilobytes (32768 bytes). For more information, see <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/resource-limits.html">Resource Quotas</a> in the
-     * <i>AWS Key Management Service Developer Guide</i>.
+     * <i>Key Management Service Developer Guide</i>.
      * </p>
      * 
      * @param policy
-     *        The key policy to attach to the CMK.</p>
+     *        The key policy to attach to the KMS key.</p>
      *        <p>
      *        The key policy must meet the following criteria:
      *        </p>
@@ -516,28 +516,28 @@ public class PutKeyPolicyRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        <p>
      *        If you don't set <code>BypassPolicyLockoutSafetyCheck</code> to true, the key policy must allow the
      *        principal that is making the <code>PutKeyPolicy</code> request to make a subsequent
-     *        <code>PutKeyPolicy</code> request on the CMK. This reduces the risk that the CMK becomes unmanageable. For
-     *        more information, refer to the scenario in the <a href=
+     *        <code>PutKeyPolicy</code> request on the KMS key. This reduces the risk that the KMS key becomes
+     *        unmanageable. For more information, refer to the scenario in the <a href=
      *        "https://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html#key-policy-default-allow-root-enable-iam"
-     *        >Default Key Policy</a> section of the <i>AWS Key Management Service Developer Guide</i>.
+     *        >Default Key Policy</a> section of the <i>Key Management Service Developer Guide</i>.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        Each statement in the key policy must contain one or more principals. The principals in the key policy
-     *        must exist and be visible to AWS KMS. When you create a new AWS principal (for example, an IAM user or
-     *        role), you might need to enforce a delay before including the new principal in a key policy because the
-     *        new principal might not be immediately visible to AWS KMS. For more information, see <a href=
+     *        must exist and be visible to KMS. When you create a new Amazon Web Services principal (for example, an IAM
+     *        user or role), you might need to enforce a delay before including the new principal in a key policy
+     *        because the new principal might not be immediately visible to KMS. For more information, see <a href=
      *        "https://docs.aws.amazon.com/IAM/latest/UserGuide/troubleshoot_general.html#troubleshoot_general_eventual-consistency"
-     *        >Changes that I make are not always immediately visible</a> in the <i>AWS Identity and Access Management
-     *        User Guide</i>.
+     *        >Changes that I make are not always immediately visible</a> in the <i>Amazon Web Services Identity and
+     *        Access Management User Guide</i>.
      *        </p>
      *        </li>
      *        </ul>
      *        <p>
      *        The key policy cannot exceed 32 kilobytes (32768 bytes). For more information, see <a
      *        href="https://docs.aws.amazon.com/kms/latest/developerguide/resource-limits.html">Resource Quotas</a> in
-     *        the <i>AWS Key Management Service Developer Guide</i>.
+     *        the <i>Key Management Service Developer Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -552,18 +552,18 @@ public class PutKeyPolicyRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </p>
      * <important>
      * <p>
-     * Setting this value to true increases the risk that the CMK becomes unmanageable. Do not set this value to true
-     * indiscriminately.
+     * Setting this value to true increases the risk that the KMS key becomes unmanageable. Do not set this value to
+     * true indiscriminately.
      * </p>
      * <p>
      * For more information, refer to the scenario in the <a href=
      * "https://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html#key-policy-default-allow-root-enable-iam"
-     * >Default Key Policy</a> section in the <i>AWS Key Management Service Developer Guide</i>.
+     * >Default Key Policy</a> section in the <i>Key Management Service Developer Guide</i>.
      * </p>
      * </important>
      * <p>
      * Use this parameter only when you intend to prevent the principal that is making the request from making a
-     * subsequent <code>PutKeyPolicy</code> request on the CMK.
+     * subsequent <code>PutKeyPolicy</code> request on the KMS key.
      * </p>
      * <p>
      * The default value is false.
@@ -572,18 +572,18 @@ public class PutKeyPolicyRequest extends com.amazonaws.AmazonWebServiceRequest i
      * @param bypassPolicyLockoutSafetyCheck
      *        A flag to indicate whether to bypass the key policy lockout safety check.</p> <important>
      *        <p>
-     *        Setting this value to true increases the risk that the CMK becomes unmanageable. Do not set this value to
-     *        true indiscriminately.
+     *        Setting this value to true increases the risk that the KMS key becomes unmanageable. Do not set this value
+     *        to true indiscriminately.
      *        </p>
      *        <p>
      *        For more information, refer to the scenario in the <a href=
      *        "https://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html#key-policy-default-allow-root-enable-iam"
-     *        >Default Key Policy</a> section in the <i>AWS Key Management Service Developer Guide</i>.
+     *        >Default Key Policy</a> section in the <i>Key Management Service Developer Guide</i>.
      *        </p>
      *        </important>
      *        <p>
      *        Use this parameter only when you intend to prevent the principal that is making the request from making a
-     *        subsequent <code>PutKeyPolicy</code> request on the CMK.
+     *        subsequent <code>PutKeyPolicy</code> request on the KMS key.
      *        </p>
      *        <p>
      *        The default value is false.
@@ -599,18 +599,18 @@ public class PutKeyPolicyRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </p>
      * <important>
      * <p>
-     * Setting this value to true increases the risk that the CMK becomes unmanageable. Do not set this value to true
-     * indiscriminately.
+     * Setting this value to true increases the risk that the KMS key becomes unmanageable. Do not set this value to
+     * true indiscriminately.
      * </p>
      * <p>
      * For more information, refer to the scenario in the <a href=
      * "https://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html#key-policy-default-allow-root-enable-iam"
-     * >Default Key Policy</a> section in the <i>AWS Key Management Service Developer Guide</i>.
+     * >Default Key Policy</a> section in the <i>Key Management Service Developer Guide</i>.
      * </p>
      * </important>
      * <p>
      * Use this parameter only when you intend to prevent the principal that is making the request from making a
-     * subsequent <code>PutKeyPolicy</code> request on the CMK.
+     * subsequent <code>PutKeyPolicy</code> request on the KMS key.
      * </p>
      * <p>
      * The default value is false.
@@ -618,18 +618,18 @@ public class PutKeyPolicyRequest extends com.amazonaws.AmazonWebServiceRequest i
      * 
      * @return A flag to indicate whether to bypass the key policy lockout safety check.</p> <important>
      *         <p>
-     *         Setting this value to true increases the risk that the CMK becomes unmanageable. Do not set this value to
-     *         true indiscriminately.
+     *         Setting this value to true increases the risk that the KMS key becomes unmanageable. Do not set this
+     *         value to true indiscriminately.
      *         </p>
      *         <p>
      *         For more information, refer to the scenario in the <a href=
      *         "https://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html#key-policy-default-allow-root-enable-iam"
-     *         >Default Key Policy</a> section in the <i>AWS Key Management Service Developer Guide</i>.
+     *         >Default Key Policy</a> section in the <i>Key Management Service Developer Guide</i>.
      *         </p>
      *         </important>
      *         <p>
      *         Use this parameter only when you intend to prevent the principal that is making the request from making a
-     *         subsequent <code>PutKeyPolicy</code> request on the CMK.
+     *         subsequent <code>PutKeyPolicy</code> request on the KMS key.
      *         </p>
      *         <p>
      *         The default value is false.
@@ -645,18 +645,18 @@ public class PutKeyPolicyRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </p>
      * <important>
      * <p>
-     * Setting this value to true increases the risk that the CMK becomes unmanageable. Do not set this value to true
-     * indiscriminately.
+     * Setting this value to true increases the risk that the KMS key becomes unmanageable. Do not set this value to
+     * true indiscriminately.
      * </p>
      * <p>
      * For more information, refer to the scenario in the <a href=
      * "https://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html#key-policy-default-allow-root-enable-iam"
-     * >Default Key Policy</a> section in the <i>AWS Key Management Service Developer Guide</i>.
+     * >Default Key Policy</a> section in the <i>Key Management Service Developer Guide</i>.
      * </p>
      * </important>
      * <p>
      * Use this parameter only when you intend to prevent the principal that is making the request from making a
-     * subsequent <code>PutKeyPolicy</code> request on the CMK.
+     * subsequent <code>PutKeyPolicy</code> request on the KMS key.
      * </p>
      * <p>
      * The default value is false.
@@ -665,18 +665,18 @@ public class PutKeyPolicyRequest extends com.amazonaws.AmazonWebServiceRequest i
      * @param bypassPolicyLockoutSafetyCheck
      *        A flag to indicate whether to bypass the key policy lockout safety check.</p> <important>
      *        <p>
-     *        Setting this value to true increases the risk that the CMK becomes unmanageable. Do not set this value to
-     *        true indiscriminately.
+     *        Setting this value to true increases the risk that the KMS key becomes unmanageable. Do not set this value
+     *        to true indiscriminately.
      *        </p>
      *        <p>
      *        For more information, refer to the scenario in the <a href=
      *        "https://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html#key-policy-default-allow-root-enable-iam"
-     *        >Default Key Policy</a> section in the <i>AWS Key Management Service Developer Guide</i>.
+     *        >Default Key Policy</a> section in the <i>Key Management Service Developer Guide</i>.
      *        </p>
      *        </important>
      *        <p>
      *        Use this parameter only when you intend to prevent the principal that is making the request from making a
-     *        subsequent <code>PutKeyPolicy</code> request on the CMK.
+     *        subsequent <code>PutKeyPolicy</code> request on the KMS key.
      *        </p>
      *        <p>
      *        The default value is false.
@@ -694,18 +694,18 @@ public class PutKeyPolicyRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </p>
      * <important>
      * <p>
-     * Setting this value to true increases the risk that the CMK becomes unmanageable. Do not set this value to true
-     * indiscriminately.
+     * Setting this value to true increases the risk that the KMS key becomes unmanageable. Do not set this value to
+     * true indiscriminately.
      * </p>
      * <p>
      * For more information, refer to the scenario in the <a href=
      * "https://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html#key-policy-default-allow-root-enable-iam"
-     * >Default Key Policy</a> section in the <i>AWS Key Management Service Developer Guide</i>.
+     * >Default Key Policy</a> section in the <i>Key Management Service Developer Guide</i>.
      * </p>
      * </important>
      * <p>
      * Use this parameter only when you intend to prevent the principal that is making the request from making a
-     * subsequent <code>PutKeyPolicy</code> request on the CMK.
+     * subsequent <code>PutKeyPolicy</code> request on the KMS key.
      * </p>
      * <p>
      * The default value is false.
@@ -713,18 +713,18 @@ public class PutKeyPolicyRequest extends com.amazonaws.AmazonWebServiceRequest i
      * 
      * @return A flag to indicate whether to bypass the key policy lockout safety check.</p> <important>
      *         <p>
-     *         Setting this value to true increases the risk that the CMK becomes unmanageable. Do not set this value to
-     *         true indiscriminately.
+     *         Setting this value to true increases the risk that the KMS key becomes unmanageable. Do not set this
+     *         value to true indiscriminately.
      *         </p>
      *         <p>
      *         For more information, refer to the scenario in the <a href=
      *         "https://docs.aws.amazon.com/kms/latest/developerguide/key-policies.html#key-policy-default-allow-root-enable-iam"
-     *         >Default Key Policy</a> section in the <i>AWS Key Management Service Developer Guide</i>.
+     *         >Default Key Policy</a> section in the <i>Key Management Service Developer Guide</i>.
      *         </p>
      *         </important>
      *         <p>
      *         Use this parameter only when you intend to prevent the principal that is making the request from making a
-     *         subsequent <code>PutKeyPolicy</code> request on the CMK.
+     *         subsequent <code>PutKeyPolicy</code> request on the KMS key.
      *         </p>
      *         <p>
      *         The default value is false.

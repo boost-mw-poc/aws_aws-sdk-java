@@ -26,8 +26,8 @@ public class CancelKeyDeletionResult extends com.amazonaws.AmazonWebServiceResul
     /**
      * <p>
      * The Amazon Resource Name (<a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) of the CMK
-     * whose deletion is canceled.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) of the KMS
+     * key whose deletion is canceled.
      * </p>
      */
     private String keyId;
@@ -35,14 +35,14 @@ public class CancelKeyDeletionResult extends com.amazonaws.AmazonWebServiceResul
     /**
      * <p>
      * The Amazon Resource Name (<a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) of the CMK
-     * whose deletion is canceled.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) of the KMS
+     * key whose deletion is canceled.
      * </p>
      * 
      * @param keyId
      *        The Amazon Resource Name (<a
      *        href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) of
-     *        the CMK whose deletion is canceled.
+     *        the KMS key whose deletion is canceled.
      */
 
     public void setKeyId(String keyId) {
@@ -52,13 +52,13 @@ public class CancelKeyDeletionResult extends com.amazonaws.AmazonWebServiceResul
     /**
      * <p>
      * The Amazon Resource Name (<a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) of the CMK
-     * whose deletion is canceled.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) of the KMS
+     * key whose deletion is canceled.
      * </p>
      * 
      * @return The Amazon Resource Name (<a
      *         href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) of
-     *         the CMK whose deletion is canceled.
+     *         the KMS key whose deletion is canceled.
      */
 
     public String getKeyId() {
@@ -68,14 +68,14 @@ public class CancelKeyDeletionResult extends com.amazonaws.AmazonWebServiceResul
     /**
      * <p>
      * The Amazon Resource Name (<a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) of the CMK
-     * whose deletion is canceled.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) of the KMS
+     * key whose deletion is canceled.
      * </p>
      * 
      * @param keyId
      *        The Amazon Resource Name (<a
      *        href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) of
-     *        the CMK whose deletion is canceled.
+     *        the KMS key whose deletion is canceled.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

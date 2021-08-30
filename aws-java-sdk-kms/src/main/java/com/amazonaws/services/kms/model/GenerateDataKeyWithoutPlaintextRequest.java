@@ -27,11 +27,12 @@ public class GenerateDataKeyWithoutPlaintextRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The identifier of the symmetric customer master key (CMK) that encrypts the data key.
+     * The identifier of the symmetric KMS key that encrypts the data key.
      * </p>
      * <p>
-     * To specify a CMK, use its key ID, key ARN, alias name, or alias ARN. When using an alias name, prefix it with
-     * <code>"alias/"</code>. To specify a CMK in a different AWS account, you must use the key ARN or alias ARN.
+     * To specify a KMS key, use its key ID, key ARN, alias name, or alias ARN. When using an alias name, prefix it with
+     * <code>"alias/"</code>. To specify a KMS key in a different Amazon Web Services account, you must use the key ARN
+     * or alias ARN.
      * </p>
      * <p>
      * For example:
@@ -59,7 +60,7 @@ public class GenerateDataKeyWithoutPlaintextRequest extends com.amazonaws.Amazon
      * </li>
      * </ul>
      * <p>
-     * To get the key ID and key ARN for a CMK, use <a>ListKeys</a> or <a>DescribeKey</a>. To get the alias name and
+     * To get the key ID and key ARN for a KMS key, use <a>ListKeys</a> or <a>DescribeKey</a>. To get the alias name and
      * alias ARN, use <a>ListAliases</a>.
      * </p>
      */
@@ -72,12 +73,12 @@ public class GenerateDataKeyWithoutPlaintextRequest extends com.amazonaws.Amazon
      * An <i>encryption context</i> is a collection of non-secret key-value pairs that represents additional
      * authenticated data. When you use an encryption context to encrypt data, you must specify the same (an exact
      * case-sensitive match) encryption context to decrypt the data. An encryption context is optional when encrypting
-     * with a symmetric CMK, but it is highly recommended.
+     * with a symmetric KMS key, but it is highly recommended.
      * </p>
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#encrypt_context">Encryption Context</a>
-     * in the <i>AWS Key Management Service Developer Guide</i>.
+     * in the <i>Key Management Service Developer Guide</i>.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalMap<String, String> encryptionContext;
@@ -103,19 +104,21 @@ public class GenerateDataKeyWithoutPlaintextRequest extends com.amazonaws.Amazon
      * <p>
      * Use a grant token when your permission to call this operation comes from a new grant that has not yet achieved
      * <i>eventual consistency</i>. For more information, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#grant_token">Grant token</a> in the
-     * <i>AWS Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/grants.html#grant_token">Grant token</a> and <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/grant-manage.html#using-grant-token">Using a grant
+     * token</a> in the <i>Key Management Service Developer Guide</i>.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> grantTokens;
 
     /**
      * <p>
-     * The identifier of the symmetric customer master key (CMK) that encrypts the data key.
+     * The identifier of the symmetric KMS key that encrypts the data key.
      * </p>
      * <p>
-     * To specify a CMK, use its key ID, key ARN, alias name, or alias ARN. When using an alias name, prefix it with
-     * <code>"alias/"</code>. To specify a CMK in a different AWS account, you must use the key ARN or alias ARN.
+     * To specify a KMS key, use its key ID, key ARN, alias name, or alias ARN. When using an alias name, prefix it with
+     * <code>"alias/"</code>. To specify a KMS key in a different Amazon Web Services account, you must use the key ARN
+     * or alias ARN.
      * </p>
      * <p>
      * For example:
@@ -143,16 +146,16 @@ public class GenerateDataKeyWithoutPlaintextRequest extends com.amazonaws.Amazon
      * </li>
      * </ul>
      * <p>
-     * To get the key ID and key ARN for a CMK, use <a>ListKeys</a> or <a>DescribeKey</a>. To get the alias name and
+     * To get the key ID and key ARN for a KMS key, use <a>ListKeys</a> or <a>DescribeKey</a>. To get the alias name and
      * alias ARN, use <a>ListAliases</a>.
      * </p>
      * 
      * @param keyId
-     *        The identifier of the symmetric customer master key (CMK) that encrypts the data key.</p>
+     *        The identifier of the symmetric KMS key that encrypts the data key.</p>
      *        <p>
-     *        To specify a CMK, use its key ID, key ARN, alias name, or alias ARN. When using an alias name, prefix it
-     *        with <code>"alias/"</code>. To specify a CMK in a different AWS account, you must use the key ARN or alias
-     *        ARN.
+     *        To specify a KMS key, use its key ID, key ARN, alias name, or alias ARN. When using an alias name, prefix
+     *        it with <code>"alias/"</code>. To specify a KMS key in a different Amazon Web Services account, you must
+     *        use the key ARN or alias ARN.
      *        </p>
      *        <p>
      *        For example:
@@ -180,8 +183,8 @@ public class GenerateDataKeyWithoutPlaintextRequest extends com.amazonaws.Amazon
      *        </li>
      *        </ul>
      *        <p>
-     *        To get the key ID and key ARN for a CMK, use <a>ListKeys</a> or <a>DescribeKey</a>. To get the alias name
-     *        and alias ARN, use <a>ListAliases</a>.
+     *        To get the key ID and key ARN for a KMS key, use <a>ListKeys</a> or <a>DescribeKey</a>. To get the alias
+     *        name and alias ARN, use <a>ListAliases</a>.
      */
 
     public void setKeyId(String keyId) {
@@ -190,11 +193,12 @@ public class GenerateDataKeyWithoutPlaintextRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The identifier of the symmetric customer master key (CMK) that encrypts the data key.
+     * The identifier of the symmetric KMS key that encrypts the data key.
      * </p>
      * <p>
-     * To specify a CMK, use its key ID, key ARN, alias name, or alias ARN. When using an alias name, prefix it with
-     * <code>"alias/"</code>. To specify a CMK in a different AWS account, you must use the key ARN or alias ARN.
+     * To specify a KMS key, use its key ID, key ARN, alias name, or alias ARN. When using an alias name, prefix it with
+     * <code>"alias/"</code>. To specify a KMS key in a different Amazon Web Services account, you must use the key ARN
+     * or alias ARN.
      * </p>
      * <p>
      * For example:
@@ -222,15 +226,15 @@ public class GenerateDataKeyWithoutPlaintextRequest extends com.amazonaws.Amazon
      * </li>
      * </ul>
      * <p>
-     * To get the key ID and key ARN for a CMK, use <a>ListKeys</a> or <a>DescribeKey</a>. To get the alias name and
+     * To get the key ID and key ARN for a KMS key, use <a>ListKeys</a> or <a>DescribeKey</a>. To get the alias name and
      * alias ARN, use <a>ListAliases</a>.
      * </p>
      * 
-     * @return The identifier of the symmetric customer master key (CMK) that encrypts the data key.</p>
+     * @return The identifier of the symmetric KMS key that encrypts the data key.</p>
      *         <p>
-     *         To specify a CMK, use its key ID, key ARN, alias name, or alias ARN. When using an alias name, prefix it
-     *         with <code>"alias/"</code>. To specify a CMK in a different AWS account, you must use the key ARN or
-     *         alias ARN.
+     *         To specify a KMS key, use its key ID, key ARN, alias name, or alias ARN. When using an alias name, prefix
+     *         it with <code>"alias/"</code>. To specify a KMS key in a different Amazon Web Services account, you must
+     *         use the key ARN or alias ARN.
      *         </p>
      *         <p>
      *         For example:
@@ -258,8 +262,8 @@ public class GenerateDataKeyWithoutPlaintextRequest extends com.amazonaws.Amazon
      *         </li>
      *         </ul>
      *         <p>
-     *         To get the key ID and key ARN for a CMK, use <a>ListKeys</a> or <a>DescribeKey</a>. To get the alias name
-     *         and alias ARN, use <a>ListAliases</a>.
+     *         To get the key ID and key ARN for a KMS key, use <a>ListKeys</a> or <a>DescribeKey</a>. To get the alias
+     *         name and alias ARN, use <a>ListAliases</a>.
      */
 
     public String getKeyId() {
@@ -268,11 +272,12 @@ public class GenerateDataKeyWithoutPlaintextRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The identifier of the symmetric customer master key (CMK) that encrypts the data key.
+     * The identifier of the symmetric KMS key that encrypts the data key.
      * </p>
      * <p>
-     * To specify a CMK, use its key ID, key ARN, alias name, or alias ARN. When using an alias name, prefix it with
-     * <code>"alias/"</code>. To specify a CMK in a different AWS account, you must use the key ARN or alias ARN.
+     * To specify a KMS key, use its key ID, key ARN, alias name, or alias ARN. When using an alias name, prefix it with
+     * <code>"alias/"</code>. To specify a KMS key in a different Amazon Web Services account, you must use the key ARN
+     * or alias ARN.
      * </p>
      * <p>
      * For example:
@@ -300,16 +305,16 @@ public class GenerateDataKeyWithoutPlaintextRequest extends com.amazonaws.Amazon
      * </li>
      * </ul>
      * <p>
-     * To get the key ID and key ARN for a CMK, use <a>ListKeys</a> or <a>DescribeKey</a>. To get the alias name and
+     * To get the key ID and key ARN for a KMS key, use <a>ListKeys</a> or <a>DescribeKey</a>. To get the alias name and
      * alias ARN, use <a>ListAliases</a>.
      * </p>
      * 
      * @param keyId
-     *        The identifier of the symmetric customer master key (CMK) that encrypts the data key.</p>
+     *        The identifier of the symmetric KMS key that encrypts the data key.</p>
      *        <p>
-     *        To specify a CMK, use its key ID, key ARN, alias name, or alias ARN. When using an alias name, prefix it
-     *        with <code>"alias/"</code>. To specify a CMK in a different AWS account, you must use the key ARN or alias
-     *        ARN.
+     *        To specify a KMS key, use its key ID, key ARN, alias name, or alias ARN. When using an alias name, prefix
+     *        it with <code>"alias/"</code>. To specify a KMS key in a different Amazon Web Services account, you must
+     *        use the key ARN or alias ARN.
      *        </p>
      *        <p>
      *        For example:
@@ -337,8 +342,8 @@ public class GenerateDataKeyWithoutPlaintextRequest extends com.amazonaws.Amazon
      *        </li>
      *        </ul>
      *        <p>
-     *        To get the key ID and key ARN for a CMK, use <a>ListKeys</a> or <a>DescribeKey</a>. To get the alias name
-     *        and alias ARN, use <a>ListAliases</a>.
+     *        To get the key ID and key ARN for a KMS key, use <a>ListKeys</a> or <a>DescribeKey</a>. To get the alias
+     *        name and alias ARN, use <a>ListAliases</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -355,12 +360,12 @@ public class GenerateDataKeyWithoutPlaintextRequest extends com.amazonaws.Amazon
      * An <i>encryption context</i> is a collection of non-secret key-value pairs that represents additional
      * authenticated data. When you use an encryption context to encrypt data, you must specify the same (an exact
      * case-sensitive match) encryption context to decrypt the data. An encryption context is optional when encrypting
-     * with a symmetric CMK, but it is highly recommended.
+     * with a symmetric KMS key, but it is highly recommended.
      * </p>
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#encrypt_context">Encryption Context</a>
-     * in the <i>AWS Key Management Service Developer Guide</i>.
+     * in the <i>Key Management Service Developer Guide</i>.
      * </p>
      * 
      * @return Specifies the encryption context that will be used when encrypting the data key.</p>
@@ -368,12 +373,12 @@ public class GenerateDataKeyWithoutPlaintextRequest extends com.amazonaws.Amazon
      *         An <i>encryption context</i> is a collection of non-secret key-value pairs that represents additional
      *         authenticated data. When you use an encryption context to encrypt data, you must specify the same (an
      *         exact case-sensitive match) encryption context to decrypt the data. An encryption context is optional
-     *         when encrypting with a symmetric CMK, but it is highly recommended.
+     *         when encrypting with a symmetric KMS key, but it is highly recommended.
      *         </p>
      *         <p>
      *         For more information, see <a
      *         href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#encrypt_context">Encryption
-     *         Context</a> in the <i>AWS Key Management Service Developer Guide</i>.
+     *         Context</a> in the <i>Key Management Service Developer Guide</i>.
      */
 
     public java.util.Map<String, String> getEncryptionContext() {
@@ -391,12 +396,12 @@ public class GenerateDataKeyWithoutPlaintextRequest extends com.amazonaws.Amazon
      * An <i>encryption context</i> is a collection of non-secret key-value pairs that represents additional
      * authenticated data. When you use an encryption context to encrypt data, you must specify the same (an exact
      * case-sensitive match) encryption context to decrypt the data. An encryption context is optional when encrypting
-     * with a symmetric CMK, but it is highly recommended.
+     * with a symmetric KMS key, but it is highly recommended.
      * </p>
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#encrypt_context">Encryption Context</a>
-     * in the <i>AWS Key Management Service Developer Guide</i>.
+     * in the <i>Key Management Service Developer Guide</i>.
      * </p>
      * 
      * @param encryptionContext
@@ -405,12 +410,12 @@ public class GenerateDataKeyWithoutPlaintextRequest extends com.amazonaws.Amazon
      *        An <i>encryption context</i> is a collection of non-secret key-value pairs that represents additional
      *        authenticated data. When you use an encryption context to encrypt data, you must specify the same (an
      *        exact case-sensitive match) encryption context to decrypt the data. An encryption context is optional when
-     *        encrypting with a symmetric CMK, but it is highly recommended.
+     *        encrypting with a symmetric KMS key, but it is highly recommended.
      *        </p>
      *        <p>
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#encrypt_context">Encryption
-     *        Context</a> in the <i>AWS Key Management Service Developer Guide</i>.
+     *        Context</a> in the <i>Key Management Service Developer Guide</i>.
      */
 
     public void setEncryptionContext(java.util.Map<String, String> encryptionContext) {
@@ -425,12 +430,12 @@ public class GenerateDataKeyWithoutPlaintextRequest extends com.amazonaws.Amazon
      * An <i>encryption context</i> is a collection of non-secret key-value pairs that represents additional
      * authenticated data. When you use an encryption context to encrypt data, you must specify the same (an exact
      * case-sensitive match) encryption context to decrypt the data. An encryption context is optional when encrypting
-     * with a symmetric CMK, but it is highly recommended.
+     * with a symmetric KMS key, but it is highly recommended.
      * </p>
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#encrypt_context">Encryption Context</a>
-     * in the <i>AWS Key Management Service Developer Guide</i>.
+     * in the <i>Key Management Service Developer Guide</i>.
      * </p>
      * 
      * @param encryptionContext
@@ -439,12 +444,12 @@ public class GenerateDataKeyWithoutPlaintextRequest extends com.amazonaws.Amazon
      *        An <i>encryption context</i> is a collection of non-secret key-value pairs that represents additional
      *        authenticated data. When you use an encryption context to encrypt data, you must specify the same (an
      *        exact case-sensitive match) encryption context to decrypt the data. An encryption context is optional when
-     *        encrypting with a symmetric CMK, but it is highly recommended.
+     *        encrypting with a symmetric KMS key, but it is highly recommended.
      *        </p>
      *        <p>
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#encrypt_context">Encryption
-     *        Context</a> in the <i>AWS Key Management Service Developer Guide</i>.
+     *        Context</a> in the <i>Key Management Service Developer Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -623,16 +628,18 @@ public class GenerateDataKeyWithoutPlaintextRequest extends com.amazonaws.Amazon
      * <p>
      * Use a grant token when your permission to call this operation comes from a new grant that has not yet achieved
      * <i>eventual consistency</i>. For more information, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#grant_token">Grant token</a> in the
-     * <i>AWS Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/grants.html#grant_token">Grant token</a> and <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/grant-manage.html#using-grant-token">Using a grant
+     * token</a> in the <i>Key Management Service Developer Guide</i>.
      * </p>
      * 
      * @return A list of grant tokens.</p>
      *         <p>
      *         Use a grant token when your permission to call this operation comes from a new grant that has not yet
      *         achieved <i>eventual consistency</i>. For more information, see <a
-     *         href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#grant_token">Grant token</a> in
-     *         the <i>AWS Key Management Service Developer Guide</i>.
+     *         href="https://docs.aws.amazon.com/kms/latest/developerguide/grants.html#grant_token">Grant token</a> and
+     *         <a href="https://docs.aws.amazon.com/kms/latest/developerguide/grant-manage.html#using-grant-token">Using
+     *         a grant token</a> in the <i>Key Management Service Developer Guide</i>.
      */
 
     public java.util.List<String> getGrantTokens() {
@@ -649,8 +656,9 @@ public class GenerateDataKeyWithoutPlaintextRequest extends com.amazonaws.Amazon
      * <p>
      * Use a grant token when your permission to call this operation comes from a new grant that has not yet achieved
      * <i>eventual consistency</i>. For more information, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#grant_token">Grant token</a> in the
-     * <i>AWS Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/grants.html#grant_token">Grant token</a> and <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/grant-manage.html#using-grant-token">Using a grant
+     * token</a> in the <i>Key Management Service Developer Guide</i>.
      * </p>
      * 
      * @param grantTokens
@@ -658,8 +666,9 @@ public class GenerateDataKeyWithoutPlaintextRequest extends com.amazonaws.Amazon
      *        <p>
      *        Use a grant token when your permission to call this operation comes from a new grant that has not yet
      *        achieved <i>eventual consistency</i>. For more information, see <a
-     *        href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#grant_token">Grant token</a> in
-     *        the <i>AWS Key Management Service Developer Guide</i>.
+     *        href="https://docs.aws.amazon.com/kms/latest/developerguide/grants.html#grant_token">Grant token</a> and
+     *        <a href="https://docs.aws.amazon.com/kms/latest/developerguide/grant-manage.html#using-grant-token">Using
+     *        a grant token</a> in the <i>Key Management Service Developer Guide</i>.
      */
 
     public void setGrantTokens(java.util.Collection<String> grantTokens) {
@@ -678,8 +687,9 @@ public class GenerateDataKeyWithoutPlaintextRequest extends com.amazonaws.Amazon
      * <p>
      * Use a grant token when your permission to call this operation comes from a new grant that has not yet achieved
      * <i>eventual consistency</i>. For more information, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#grant_token">Grant token</a> in the
-     * <i>AWS Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/grants.html#grant_token">Grant token</a> and <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/grant-manage.html#using-grant-token">Using a grant
+     * token</a> in the <i>Key Management Service Developer Guide</i>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -692,8 +702,9 @@ public class GenerateDataKeyWithoutPlaintextRequest extends com.amazonaws.Amazon
      *        <p>
      *        Use a grant token when your permission to call this operation comes from a new grant that has not yet
      *        achieved <i>eventual consistency</i>. For more information, see <a
-     *        href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#grant_token">Grant token</a> in
-     *        the <i>AWS Key Management Service Developer Guide</i>.
+     *        href="https://docs.aws.amazon.com/kms/latest/developerguide/grants.html#grant_token">Grant token</a> and
+     *        <a href="https://docs.aws.amazon.com/kms/latest/developerguide/grant-manage.html#using-grant-token">Using
+     *        a grant token</a> in the <i>Key Management Service Developer Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -714,8 +725,9 @@ public class GenerateDataKeyWithoutPlaintextRequest extends com.amazonaws.Amazon
      * <p>
      * Use a grant token when your permission to call this operation comes from a new grant that has not yet achieved
      * <i>eventual consistency</i>. For more information, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#grant_token">Grant token</a> in the
-     * <i>AWS Key Management Service Developer Guide</i>.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/grants.html#grant_token">Grant token</a> and <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/grant-manage.html#using-grant-token">Using a grant
+     * token</a> in the <i>Key Management Service Developer Guide</i>.
      * </p>
      * 
      * @param grantTokens
@@ -723,8 +735,9 @@ public class GenerateDataKeyWithoutPlaintextRequest extends com.amazonaws.Amazon
      *        <p>
      *        Use a grant token when your permission to call this operation comes from a new grant that has not yet
      *        achieved <i>eventual consistency</i>. For more information, see <a
-     *        href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#grant_token">Grant token</a> in
-     *        the <i>AWS Key Management Service Developer Guide</i>.
+     *        href="https://docs.aws.amazon.com/kms/latest/developerguide/grants.html#grant_token">Grant token</a> and
+     *        <a href="https://docs.aws.amazon.com/kms/latest/developerguide/grant-manage.html#using-grant-token">Using
+     *        a grant token</a> in the <i>Key Management Service Developer Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

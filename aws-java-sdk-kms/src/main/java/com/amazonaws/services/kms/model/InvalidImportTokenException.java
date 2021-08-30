@@ -16,8 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The request was rejected because the provided import token is invalid or is associated with a different customer
- * master key (CMK).
+ * The request was rejected because the provided import token is invalid or is associated with a different KMS key.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

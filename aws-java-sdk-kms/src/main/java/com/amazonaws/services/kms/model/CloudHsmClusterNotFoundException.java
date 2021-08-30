@@ -16,8 +16,8 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The request was rejected because AWS KMS cannot find the AWS CloudHSM cluster with the specified cluster ID. Retry
- * the request with a different cluster ID.
+ * The request was rejected because KMS cannot find the CloudHSM cluster with the specified cluster ID. Retry the
+ * request with a different cluster ID.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

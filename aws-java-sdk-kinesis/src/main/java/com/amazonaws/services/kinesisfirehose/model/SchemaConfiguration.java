@@ -34,6 +34,13 @@ public class SchemaConfiguration implements Serializable, Cloneable, StructuredP
      * The role that Kinesis Data Firehose can use to access AWS Glue. This role must be in the same account you use for
      * Kinesis Data Firehose. Cross-account roles aren't allowed.
      * </p>
+     * <important>
+     * <p>
+     * If the <code>SchemaConfiguration</code> request parameter is used as part of invoking the
+     * <code>CreateDeliveryStream</code> API, then the <code>RoleARN</code> property is required and its value must be
+     * specified.
+     * </p>
+     * </important>
      */
     private String roleARN;
     /**
@@ -46,12 +53,26 @@ public class SchemaConfiguration implements Serializable, Cloneable, StructuredP
      * <p>
      * Specifies the name of the AWS Glue database that contains the schema for the output data.
      * </p>
+     * <important>
+     * <p>
+     * If the <code>SchemaConfiguration</code> request parameter is used as part of invoking the
+     * <code>CreateDeliveryStream</code> API, then the <code>DatabaseName</code> property is required and its value must
+     * be specified.
+     * </p>
+     * </important>
      */
     private String databaseName;
     /**
      * <p>
      * Specifies the AWS Glue table that contains the column information that constitutes your data schema.
      * </p>
+     * <important>
+     * <p>
+     * If the <code>SchemaConfiguration</code> request parameter is used as part of invoking the
+     * <code>CreateDeliveryStream</code> API, then the <code>TableName</code> property is required and its value must be
+     * specified.
+     * </p>
+     * </important>
      */
     private String tableName;
     /**
@@ -74,10 +95,22 @@ public class SchemaConfiguration implements Serializable, Cloneable, StructuredP
      * The role that Kinesis Data Firehose can use to access AWS Glue. This role must be in the same account you use for
      * Kinesis Data Firehose. Cross-account roles aren't allowed.
      * </p>
+     * <important>
+     * <p>
+     * If the <code>SchemaConfiguration</code> request parameter is used as part of invoking the
+     * <code>CreateDeliveryStream</code> API, then the <code>RoleARN</code> property is required and its value must be
+     * specified.
+     * </p>
+     * </important>
      * 
      * @param roleARN
      *        The role that Kinesis Data Firehose can use to access AWS Glue. This role must be in the same account you
-     *        use for Kinesis Data Firehose. Cross-account roles aren't allowed.
+     *        use for Kinesis Data Firehose. Cross-account roles aren't allowed.</p> <important>
+     *        <p>
+     *        If the <code>SchemaConfiguration</code> request parameter is used as part of invoking the
+     *        <code>CreateDeliveryStream</code> API, then the <code>RoleARN</code> property is required and its value
+     *        must be specified.
+     *        </p>
      */
 
     public void setRoleARN(String roleARN) {
@@ -89,9 +122,21 @@ public class SchemaConfiguration implements Serializable, Cloneable, StructuredP
      * The role that Kinesis Data Firehose can use to access AWS Glue. This role must be in the same account you use for
      * Kinesis Data Firehose. Cross-account roles aren't allowed.
      * </p>
+     * <important>
+     * <p>
+     * If the <code>SchemaConfiguration</code> request parameter is used as part of invoking the
+     * <code>CreateDeliveryStream</code> API, then the <code>RoleARN</code> property is required and its value must be
+     * specified.
+     * </p>
+     * </important>
      * 
      * @return The role that Kinesis Data Firehose can use to access AWS Glue. This role must be in the same account you
-     *         use for Kinesis Data Firehose. Cross-account roles aren't allowed.
+     *         use for Kinesis Data Firehose. Cross-account roles aren't allowed.</p> <important>
+     *         <p>
+     *         If the <code>SchemaConfiguration</code> request parameter is used as part of invoking the
+     *         <code>CreateDeliveryStream</code> API, then the <code>RoleARN</code> property is required and its value
+     *         must be specified.
+     *         </p>
      */
 
     public String getRoleARN() {
@@ -103,10 +148,22 @@ public class SchemaConfiguration implements Serializable, Cloneable, StructuredP
      * The role that Kinesis Data Firehose can use to access AWS Glue. This role must be in the same account you use for
      * Kinesis Data Firehose. Cross-account roles aren't allowed.
      * </p>
+     * <important>
+     * <p>
+     * If the <code>SchemaConfiguration</code> request parameter is used as part of invoking the
+     * <code>CreateDeliveryStream</code> API, then the <code>RoleARN</code> property is required and its value must be
+     * specified.
+     * </p>
+     * </important>
      * 
      * @param roleARN
      *        The role that Kinesis Data Firehose can use to access AWS Glue. This role must be in the same account you
-     *        use for Kinesis Data Firehose. Cross-account roles aren't allowed.
+     *        use for Kinesis Data Firehose. Cross-account roles aren't allowed.</p> <important>
+     *        <p>
+     *        If the <code>SchemaConfiguration</code> request parameter is used as part of invoking the
+     *        <code>CreateDeliveryStream</code> API, then the <code>RoleARN</code> property is required and its value
+     *        must be specified.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -159,9 +216,21 @@ public class SchemaConfiguration implements Serializable, Cloneable, StructuredP
      * <p>
      * Specifies the name of the AWS Glue database that contains the schema for the output data.
      * </p>
+     * <important>
+     * <p>
+     * If the <code>SchemaConfiguration</code> request parameter is used as part of invoking the
+     * <code>CreateDeliveryStream</code> API, then the <code>DatabaseName</code> property is required and its value must
+     * be specified.
+     * </p>
+     * </important>
      * 
      * @param databaseName
-     *        Specifies the name of the AWS Glue database that contains the schema for the output data.
+     *        Specifies the name of the AWS Glue database that contains the schema for the output data.</p> <important>
+     *        <p>
+     *        If the <code>SchemaConfiguration</code> request parameter is used as part of invoking the
+     *        <code>CreateDeliveryStream</code> API, then the <code>DatabaseName</code> property is required and its
+     *        value must be specified.
+     *        </p>
      */
 
     public void setDatabaseName(String databaseName) {
@@ -172,8 +241,20 @@ public class SchemaConfiguration implements Serializable, Cloneable, StructuredP
      * <p>
      * Specifies the name of the AWS Glue database that contains the schema for the output data.
      * </p>
+     * <important>
+     * <p>
+     * If the <code>SchemaConfiguration</code> request parameter is used as part of invoking the
+     * <code>CreateDeliveryStream</code> API, then the <code>DatabaseName</code> property is required and its value must
+     * be specified.
+     * </p>
+     * </important>
      * 
-     * @return Specifies the name of the AWS Glue database that contains the schema for the output data.
+     * @return Specifies the name of the AWS Glue database that contains the schema for the output data.</p> <important>
+     *         <p>
+     *         If the <code>SchemaConfiguration</code> request parameter is used as part of invoking the
+     *         <code>CreateDeliveryStream</code> API, then the <code>DatabaseName</code> property is required and its
+     *         value must be specified.
+     *         </p>
      */
 
     public String getDatabaseName() {
@@ -184,9 +265,21 @@ public class SchemaConfiguration implements Serializable, Cloneable, StructuredP
      * <p>
      * Specifies the name of the AWS Glue database that contains the schema for the output data.
      * </p>
+     * <important>
+     * <p>
+     * If the <code>SchemaConfiguration</code> request parameter is used as part of invoking the
+     * <code>CreateDeliveryStream</code> API, then the <code>DatabaseName</code> property is required and its value must
+     * be specified.
+     * </p>
+     * </important>
      * 
      * @param databaseName
-     *        Specifies the name of the AWS Glue database that contains the schema for the output data.
+     *        Specifies the name of the AWS Glue database that contains the schema for the output data.</p> <important>
+     *        <p>
+     *        If the <code>SchemaConfiguration</code> request parameter is used as part of invoking the
+     *        <code>CreateDeliveryStream</code> API, then the <code>DatabaseName</code> property is required and its
+     *        value must be specified.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -199,9 +292,22 @@ public class SchemaConfiguration implements Serializable, Cloneable, StructuredP
      * <p>
      * Specifies the AWS Glue table that contains the column information that constitutes your data schema.
      * </p>
+     * <important>
+     * <p>
+     * If the <code>SchemaConfiguration</code> request parameter is used as part of invoking the
+     * <code>CreateDeliveryStream</code> API, then the <code>TableName</code> property is required and its value must be
+     * specified.
+     * </p>
+     * </important>
      * 
      * @param tableName
-     *        Specifies the AWS Glue table that contains the column information that constitutes your data schema.
+     *        Specifies the AWS Glue table that contains the column information that constitutes your data schema.</p>
+     *        <important>
+     *        <p>
+     *        If the <code>SchemaConfiguration</code> request parameter is used as part of invoking the
+     *        <code>CreateDeliveryStream</code> API, then the <code>TableName</code> property is required and its value
+     *        must be specified.
+     *        </p>
      */
 
     public void setTableName(String tableName) {
@@ -212,8 +318,21 @@ public class SchemaConfiguration implements Serializable, Cloneable, StructuredP
      * <p>
      * Specifies the AWS Glue table that contains the column information that constitutes your data schema.
      * </p>
+     * <important>
+     * <p>
+     * If the <code>SchemaConfiguration</code> request parameter is used as part of invoking the
+     * <code>CreateDeliveryStream</code> API, then the <code>TableName</code> property is required and its value must be
+     * specified.
+     * </p>
+     * </important>
      * 
-     * @return Specifies the AWS Glue table that contains the column information that constitutes your data schema.
+     * @return Specifies the AWS Glue table that contains the column information that constitutes your data schema.</p>
+     *         <important>
+     *         <p>
+     *         If the <code>SchemaConfiguration</code> request parameter is used as part of invoking the
+     *         <code>CreateDeliveryStream</code> API, then the <code>TableName</code> property is required and its value
+     *         must be specified.
+     *         </p>
      */
 
     public String getTableName() {
@@ -224,9 +343,22 @@ public class SchemaConfiguration implements Serializable, Cloneable, StructuredP
      * <p>
      * Specifies the AWS Glue table that contains the column information that constitutes your data schema.
      * </p>
+     * <important>
+     * <p>
+     * If the <code>SchemaConfiguration</code> request parameter is used as part of invoking the
+     * <code>CreateDeliveryStream</code> API, then the <code>TableName</code> property is required and its value must be
+     * specified.
+     * </p>
+     * </important>
      * 
      * @param tableName
-     *        Specifies the AWS Glue table that contains the column information that constitutes your data schema.
+     *        Specifies the AWS Glue table that contains the column information that constitutes your data schema.</p>
+     *        <important>
+     *        <p>
+     *        If the <code>SchemaConfiguration</code> request parameter is used as part of invoking the
+     *        <code>CreateDeliveryStream</code> API, then the <code>TableName</code> property is required and its value
+     *        must be specified.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

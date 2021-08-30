@@ -29,9 +29,9 @@ public class ListResourceTagsResult extends com.amazonaws.AmazonWebServiceResult
      * </p>
      * <note>
      * <p>
-     * Tagging or untagging a CMK can allow or deny permission to the CMK. For details, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/abac.html">Using ABAC in AWS KMS</a> in the <i>AWS
-     * Key Management Service Developer Guide</i>.
+     * Tagging or untagging a KMS key can allow or deny permission to the KMS key. For details, see <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/abac.html">Using ABAC in KMS</a> in the <i>Key
+     * Management Service Developer Guide</i>.
      * </p>
      * </note>
      */
@@ -61,17 +61,17 @@ public class ListResourceTagsResult extends com.amazonaws.AmazonWebServiceResult
      * </p>
      * <note>
      * <p>
-     * Tagging or untagging a CMK can allow or deny permission to the CMK. For details, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/abac.html">Using ABAC in AWS KMS</a> in the <i>AWS
-     * Key Management Service Developer Guide</i>.
+     * Tagging or untagging a KMS key can allow or deny permission to the KMS key. For details, see <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/abac.html">Using ABAC in KMS</a> in the <i>Key
+     * Management Service Developer Guide</i>.
      * </p>
      * </note>
      * 
      * @return A list of tags. Each tag consists of a tag key and a tag value.</p> <note>
      *         <p>
-     *         Tagging or untagging a CMK can allow or deny permission to the CMK. For details, see <a
-     *         href="https://docs.aws.amazon.com/kms/latest/developerguide/abac.html">Using ABAC in AWS KMS</a> in the
-     *         <i>AWS Key Management Service Developer Guide</i>.
+     *         Tagging or untagging a KMS key can allow or deny permission to the KMS key. For details, see <a
+     *         href="https://docs.aws.amazon.com/kms/latest/developerguide/abac.html">Using ABAC in KMS</a> in the
+     *         <i>Key Management Service Developer Guide</i>.
      *         </p>
      */
 
@@ -88,18 +88,18 @@ public class ListResourceTagsResult extends com.amazonaws.AmazonWebServiceResult
      * </p>
      * <note>
      * <p>
-     * Tagging or untagging a CMK can allow or deny permission to the CMK. For details, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/abac.html">Using ABAC in AWS KMS</a> in the <i>AWS
-     * Key Management Service Developer Guide</i>.
+     * Tagging or untagging a KMS key can allow or deny permission to the KMS key. For details, see <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/abac.html">Using ABAC in KMS</a> in the <i>Key
+     * Management Service Developer Guide</i>.
      * </p>
      * </note>
      * 
      * @param tags
      *        A list of tags. Each tag consists of a tag key and a tag value.</p> <note>
      *        <p>
-     *        Tagging or untagging a CMK can allow or deny permission to the CMK. For details, see <a
-     *        href="https://docs.aws.amazon.com/kms/latest/developerguide/abac.html">Using ABAC in AWS KMS</a> in the
-     *        <i>AWS Key Management Service Developer Guide</i>.
+     *        Tagging or untagging a KMS key can allow or deny permission to the KMS key. For details, see <a
+     *        href="https://docs.aws.amazon.com/kms/latest/developerguide/abac.html">Using ABAC in KMS</a> in the <i>Key
+     *        Management Service Developer Guide</i>.
      *        </p>
      */
 
@@ -118,9 +118,9 @@ public class ListResourceTagsResult extends com.amazonaws.AmazonWebServiceResult
      * </p>
      * <note>
      * <p>
-     * Tagging or untagging a CMK can allow or deny permission to the CMK. For details, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/abac.html">Using ABAC in AWS KMS</a> in the <i>AWS
-     * Key Management Service Developer Guide</i>.
+     * Tagging or untagging a KMS key can allow or deny permission to the KMS key. For details, see <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/abac.html">Using ABAC in KMS</a> in the <i>Key
+     * Management Service Developer Guide</i>.
      * </p>
      * </note>
      * <p>
@@ -132,9 +132,9 @@ public class ListResourceTagsResult extends com.amazonaws.AmazonWebServiceResult
      * @param tags
      *        A list of tags. Each tag consists of a tag key and a tag value.</p> <note>
      *        <p>
-     *        Tagging or untagging a CMK can allow or deny permission to the CMK. For details, see <a
-     *        href="https://docs.aws.amazon.com/kms/latest/developerguide/abac.html">Using ABAC in AWS KMS</a> in the
-     *        <i>AWS Key Management Service Developer Guide</i>.
+     *        Tagging or untagging a KMS key can allow or deny permission to the KMS key. For details, see <a
+     *        href="https://docs.aws.amazon.com/kms/latest/developerguide/abac.html">Using ABAC in KMS</a> in the <i>Key
+     *        Management Service Developer Guide</i>.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -155,18 +155,18 @@ public class ListResourceTagsResult extends com.amazonaws.AmazonWebServiceResult
      * </p>
      * <note>
      * <p>
-     * Tagging or untagging a CMK can allow or deny permission to the CMK. For details, see <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/abac.html">Using ABAC in AWS KMS</a> in the <i>AWS
-     * Key Management Service Developer Guide</i>.
+     * Tagging or untagging a KMS key can allow or deny permission to the KMS key. For details, see <a
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/abac.html">Using ABAC in KMS</a> in the <i>Key
+     * Management Service Developer Guide</i>.
      * </p>
      * </note>
      * 
      * @param tags
      *        A list of tags. Each tag consists of a tag key and a tag value.</p> <note>
      *        <p>
-     *        Tagging or untagging a CMK can allow or deny permission to the CMK. For details, see <a
-     *        href="https://docs.aws.amazon.com/kms/latest/developerguide/abac.html">Using ABAC in AWS KMS</a> in the
-     *        <i>AWS Key Management Service Developer Guide</i>.
+     *        Tagging or untagging a KMS key can allow or deny permission to the KMS key. For details, see <a
+     *        href="https://docs.aws.amazon.com/kms/latest/developerguide/abac.html">Using ABAC in KMS</a> in the <i>Key
+     *        Management Service Developer Guide</i>.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */

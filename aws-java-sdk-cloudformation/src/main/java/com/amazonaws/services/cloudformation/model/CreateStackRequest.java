@@ -36,7 +36,7 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <note>
      * <p>
      * A stack name can contain only alphanumeric characters (case sensitive) and hyphens. It must start with an
-     * alphabetic character and cannot be longer than 128 characters.
+     * alphabetical character and cannot be longer than 128 characters.
      * </p>
      * </note>
      */
@@ -118,9 +118,9 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <code>CAPABILITY_IAM</code> and <code>CAPABILITY_NAMED_IAM</code>
      * </p>
      * <p>
-     * Some stack templates might include resources that can affect permissions in your account; for example, by
-     * creating new Identity and Access Management (IAM) users. For those stacks, you must explicitly acknowledge this
-     * by specifying one of these capabilities.
+     * Some stack templates might include resources that can affect permissions in your Amazon Web Services account; for
+     * example, by creating new Identity and Access Management (IAM) users. For those stacks, you must explicitly
+     * acknowledge this by specifying one of these capabilities.
      * </p>
      * <p>
      * The following IAM resources require you to specify either the <code>CAPABILITY_IAM</code> or
@@ -347,7 +347,7 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <note>
      * <p>
      * A stack name can contain only alphanumeric characters (case sensitive) and hyphens. It must start with an
-     * alphabetic character and cannot be longer than 128 characters.
+     * alphabetical character and cannot be longer than 128 characters.
      * </p>
      * </note>
      * 
@@ -356,7 +356,7 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        creating the stack.</p> <note>
      *        <p>
      *        A stack name can contain only alphanumeric characters (case sensitive) and hyphens. It must start with an
-     *        alphabetic character and cannot be longer than 128 characters.
+     *        alphabetical character and cannot be longer than 128 characters.
      *        </p>
      */
 
@@ -372,7 +372,7 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <note>
      * <p>
      * A stack name can contain only alphanumeric characters (case sensitive) and hyphens. It must start with an
-     * alphabetic character and cannot be longer than 128 characters.
+     * alphabetical character and cannot be longer than 128 characters.
      * </p>
      * </note>
      * 
@@ -380,7 +380,7 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *         creating the stack.</p> <note>
      *         <p>
      *         A stack name can contain only alphanumeric characters (case sensitive) and hyphens. It must start with an
-     *         alphabetic character and cannot be longer than 128 characters.
+     *         alphabetical character and cannot be longer than 128 characters.
      *         </p>
      */
 
@@ -396,7 +396,7 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <note>
      * <p>
      * A stack name can contain only alphanumeric characters (case sensitive) and hyphens. It must start with an
-     * alphabetic character and cannot be longer than 128 characters.
+     * alphabetical character and cannot be longer than 128 characters.
      * </p>
      * </note>
      * 
@@ -405,7 +405,7 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        creating the stack.</p> <note>
      *        <p>
      *        A stack name can contain only alphanumeric characters (case sensitive) and hyphens. It must start with an
-     *        alphabetic character and cannot be longer than 128 characters.
+     *        alphabetical character and cannot be longer than 128 characters.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -934,9 +934,9 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <code>CAPABILITY_IAM</code> and <code>CAPABILITY_NAMED_IAM</code>
      * </p>
      * <p>
-     * Some stack templates might include resources that can affect permissions in your account; for example, by
-     * creating new Identity and Access Management (IAM) users. For those stacks, you must explicitly acknowledge this
-     * by specifying one of these capabilities.
+     * Some stack templates might include resources that can affect permissions in your Amazon Web Services account; for
+     * example, by creating new Identity and Access Management (IAM) users. For those stacks, you must explicitly
+     * acknowledge this by specifying one of these capabilities.
      * </p>
      * <p>
      * The following IAM resources require you to specify either the <code>CAPABILITY_IAM</code> or
@@ -1060,9 +1060,9 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *         <code>CAPABILITY_IAM</code> and <code>CAPABILITY_NAMED_IAM</code>
      *         </p>
      *         <p>
-     *         Some stack templates might include resources that can affect permissions in your account; for example, by
-     *         creating new Identity and Access Management (IAM) users. For those stacks, you must explicitly
-     *         acknowledge this by specifying one of these capabilities.
+     *         Some stack templates might include resources that can affect permissions in your Amazon Web Services
+     *         account; for example, by creating new Identity and Access Management (IAM) users. For those stacks, you
+     *         must explicitly acknowledge this by specifying one of these capabilities.
      *         </p>
      *         <p>
      *         The following IAM resources require you to specify either the <code>CAPABILITY_IAM</code> or
@@ -1201,9 +1201,9 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <code>CAPABILITY_IAM</code> and <code>CAPABILITY_NAMED_IAM</code>
      * </p>
      * <p>
-     * Some stack templates might include resources that can affect permissions in your account; for example, by
-     * creating new Identity and Access Management (IAM) users. For those stacks, you must explicitly acknowledge this
-     * by specifying one of these capabilities.
+     * Some stack templates might include resources that can affect permissions in your Amazon Web Services account; for
+     * example, by creating new Identity and Access Management (IAM) users. For those stacks, you must explicitly
+     * acknowledge this by specifying one of these capabilities.
      * </p>
      * <p>
      * The following IAM resources require you to specify either the <code>CAPABILITY_IAM</code> or
@@ -1328,9 +1328,9 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        <code>CAPABILITY_IAM</code> and <code>CAPABILITY_NAMED_IAM</code>
      *        </p>
      *        <p>
-     *        Some stack templates might include resources that can affect permissions in your account; for example, by
-     *        creating new Identity and Access Management (IAM) users. For those stacks, you must explicitly acknowledge
-     *        this by specifying one of these capabilities.
+     *        Some stack templates might include resources that can affect permissions in your Amazon Web Services
+     *        account; for example, by creating new Identity and Access Management (IAM) users. For those stacks, you
+     *        must explicitly acknowledge this by specifying one of these capabilities.
      *        </p>
      *        <p>
      *        The following IAM resources require you to specify either the <code>CAPABILITY_IAM</code> or
@@ -1471,9 +1471,9 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <code>CAPABILITY_IAM</code> and <code>CAPABILITY_NAMED_IAM</code>
      * </p>
      * <p>
-     * Some stack templates might include resources that can affect permissions in your account; for example, by
-     * creating new Identity and Access Management (IAM) users. For those stacks, you must explicitly acknowledge this
-     * by specifying one of these capabilities.
+     * Some stack templates might include resources that can affect permissions in your Amazon Web Services account; for
+     * example, by creating new Identity and Access Management (IAM) users. For those stacks, you must explicitly
+     * acknowledge this by specifying one of these capabilities.
      * </p>
      * <p>
      * The following IAM resources require you to specify either the <code>CAPABILITY_IAM</code> or
@@ -1603,9 +1603,9 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        <code>CAPABILITY_IAM</code> and <code>CAPABILITY_NAMED_IAM</code>
      *        </p>
      *        <p>
-     *        Some stack templates might include resources that can affect permissions in your account; for example, by
-     *        creating new Identity and Access Management (IAM) users. For those stacks, you must explicitly acknowledge
-     *        this by specifying one of these capabilities.
+     *        Some stack templates might include resources that can affect permissions in your Amazon Web Services
+     *        account; for example, by creating new Identity and Access Management (IAM) users. For those stacks, you
+     *        must explicitly acknowledge this by specifying one of these capabilities.
      *        </p>
      *        <p>
      *        The following IAM resources require you to specify either the <code>CAPABILITY_IAM</code> or
@@ -1748,9 +1748,9 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <code>CAPABILITY_IAM</code> and <code>CAPABILITY_NAMED_IAM</code>
      * </p>
      * <p>
-     * Some stack templates might include resources that can affect permissions in your account; for example, by
-     * creating new Identity and Access Management (IAM) users. For those stacks, you must explicitly acknowledge this
-     * by specifying one of these capabilities.
+     * Some stack templates might include resources that can affect permissions in your Amazon Web Services account; for
+     * example, by creating new Identity and Access Management (IAM) users. For those stacks, you must explicitly
+     * acknowledge this by specifying one of these capabilities.
      * </p>
      * <p>
      * The following IAM resources require you to specify either the <code>CAPABILITY_IAM</code> or
@@ -1875,9 +1875,9 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        <code>CAPABILITY_IAM</code> and <code>CAPABILITY_NAMED_IAM</code>
      *        </p>
      *        <p>
-     *        Some stack templates might include resources that can affect permissions in your account; for example, by
-     *        creating new Identity and Access Management (IAM) users. For those stacks, you must explicitly acknowledge
-     *        this by specifying one of these capabilities.
+     *        Some stack templates might include resources that can affect permissions in your Amazon Web Services
+     *        account; for example, by creating new Identity and Access Management (IAM) users. For those stacks, you
+     *        must explicitly acknowledge this by specifying one of these capabilities.
      *        </p>
      *        <p>
      *        The following IAM resources require you to specify either the <code>CAPABILITY_IAM</code> or
@@ -2015,9 +2015,9 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <code>CAPABILITY_IAM</code> and <code>CAPABILITY_NAMED_IAM</code>
      * </p>
      * <p>
-     * Some stack templates might include resources that can affect permissions in your account; for example, by
-     * creating new Identity and Access Management (IAM) users. For those stacks, you must explicitly acknowledge this
-     * by specifying one of these capabilities.
+     * Some stack templates might include resources that can affect permissions in your Amazon Web Services account; for
+     * example, by creating new Identity and Access Management (IAM) users. For those stacks, you must explicitly
+     * acknowledge this by specifying one of these capabilities.
      * </p>
      * <p>
      * The following IAM resources require you to specify either the <code>CAPABILITY_IAM</code> or
@@ -2142,9 +2142,9 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        <code>CAPABILITY_IAM</code> and <code>CAPABILITY_NAMED_IAM</code>
      *        </p>
      *        <p>
-     *        Some stack templates might include resources that can affect permissions in your account; for example, by
-     *        creating new Identity and Access Management (IAM) users. For those stacks, you must explicitly acknowledge
-     *        this by specifying one of these capabilities.
+     *        Some stack templates might include resources that can affect permissions in your Amazon Web Services
+     *        account; for example, by creating new Identity and Access Management (IAM) users. For those stacks, you
+     *        must explicitly acknowledge this by specifying one of these capabilities.
      *        </p>
      *        <p>
      *        The following IAM resources require you to specify either the <code>CAPABILITY_IAM</code> or
@@ -2993,7 +2993,7 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        termination protection enabled, the operation fails and the stack remains unchanged. For more information,
      *        see <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-protect-stacks.html">
      *        Protecting a Stack From Being Deleted</a> in the <i>CloudFormation User Guide</i>. Termination protection
-     *        is disabled on stacks by default. </p>
+     *        is disabled on stacks by default.</p>
      *        <p>
      *        For <a
      *        href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">nested
@@ -3023,7 +3023,7 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *         information, see <a
      *         href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-protect-stacks.html"
      *         >Protecting a Stack From Being Deleted</a> in the <i>CloudFormation User Guide</i>. Termination
-     *         protection is disabled on stacks by default. </p>
+     *         protection is disabled on stacks by default.</p>
      *         <p>
      *         For <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">
      *         nested stacks</a>, termination protection is set on the root stack and cannot be changed directly on the
@@ -3052,7 +3052,7 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        termination protection enabled, the operation fails and the stack remains unchanged. For more information,
      *        see <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-protect-stacks.html">
      *        Protecting a Stack From Being Deleted</a> in the <i>CloudFormation User Guide</i>. Termination protection
-     *        is disabled on stacks by default. </p>
+     *        is disabled on stacks by default.</p>
      *        <p>
      *        For <a
      *        href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">nested
@@ -3084,7 +3084,7 @@ public class CreateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *         information, see <a
      *         href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-protect-stacks.html"
      *         >Protecting a Stack From Being Deleted</a> in the <i>CloudFormation User Guide</i>. Termination
-     *         protection is disabled on stacks by default. </p>
+     *         protection is disabled on stacks by default.</p>
      *         <p>
      *         For <a href="http://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/using-cfn-nested-stacks.html">
      *         nested stacks</a>, termination protection is set on the root stack and cannot be changed directly on the

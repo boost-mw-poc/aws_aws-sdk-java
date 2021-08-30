@@ -46,7 +46,8 @@ public class ParameterDeclaration implements Serializable, Cloneable {
     private String parameterType;
     /**
      * <p>
-     * Flag that indicates whether the parameter value is shown as plain text in logs and in the Management Console.
+     * Flag that indicates whether the parameter value is shown as plain text in logs and in the Amazon Web Services
+     * Management Console.
      * </p>
      */
     private Boolean noEcho;
@@ -185,12 +186,13 @@ public class ParameterDeclaration implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Flag that indicates whether the parameter value is shown as plain text in logs and in the Management Console.
+     * Flag that indicates whether the parameter value is shown as plain text in logs and in the Amazon Web Services
+     * Management Console.
      * </p>
      * 
      * @param noEcho
-     *        Flag that indicates whether the parameter value is shown as plain text in logs and in the Management
-     *        Console.
+     *        Flag that indicates whether the parameter value is shown as plain text in logs and in the Amazon Web
+     *        Services Management Console.
      */
 
     public void setNoEcho(Boolean noEcho) {
@@ -199,11 +201,12 @@ public class ParameterDeclaration implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Flag that indicates whether the parameter value is shown as plain text in logs and in the Management Console.
+     * Flag that indicates whether the parameter value is shown as plain text in logs and in the Amazon Web Services
+     * Management Console.
      * </p>
      * 
-     * @return Flag that indicates whether the parameter value is shown as plain text in logs and in the Management
-     *         Console.
+     * @return Flag that indicates whether the parameter value is shown as plain text in logs and in the Amazon Web
+     *         Services Management Console.
      */
 
     public Boolean getNoEcho() {
@@ -212,12 +215,13 @@ public class ParameterDeclaration implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Flag that indicates whether the parameter value is shown as plain text in logs and in the Management Console.
+     * Flag that indicates whether the parameter value is shown as plain text in logs and in the Amazon Web Services
+     * Management Console.
      * </p>
      * 
      * @param noEcho
-     *        Flag that indicates whether the parameter value is shown as plain text in logs and in the Management
-     *        Console.
+     *        Flag that indicates whether the parameter value is shown as plain text in logs and in the Amazon Web
+     *        Services Management Console.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -228,11 +232,12 @@ public class ParameterDeclaration implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Flag that indicates whether the parameter value is shown as plain text in logs and in the Management Console.
+     * Flag that indicates whether the parameter value is shown as plain text in logs and in the Amazon Web Services
+     * Management Console.
      * </p>
      * 
-     * @return Flag that indicates whether the parameter value is shown as plain text in logs and in the Management
-     *         Console.
+     * @return Flag that indicates whether the parameter value is shown as plain text in logs and in the Amazon Web
+     *         Services Management Console.
      */
 
     public Boolean isNoEcho() {

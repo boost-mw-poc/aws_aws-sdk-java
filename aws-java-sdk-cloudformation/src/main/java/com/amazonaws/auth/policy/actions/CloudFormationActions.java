@@ -131,6 +131,8 @@ public enum CloudFormationActions implements Action {
     RegisterPublisher("cloudformation:RegisterPublisher"),
     /** Action for the RegisterType operation. */
     RegisterType("cloudformation:RegisterType"),
+    /** Action for the RollbackStack operation. */
+    RollbackStack("cloudformation:RollbackStack"),
     /** Action for the SetStackPolicy operation. */
     SetStackPolicy("cloudformation:SetStackPolicy"),
     /** Action for the SetTypeConfiguration operation. */

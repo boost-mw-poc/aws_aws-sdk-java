@@ -34,7 +34,7 @@ public class DeploymentTargets implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The names of one or more accounts for which you want to deploy stack set updates.
+     * The names of one or more Amazon Web Services accounts for which you want to deploy stack set updates.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> accounts;
@@ -53,10 +53,10 @@ public class DeploymentTargets implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The names of one or more accounts for which you want to deploy stack set updates.
+     * The names of one or more Amazon Web Services accounts for which you want to deploy stack set updates.
      * </p>
      * 
-     * @return The names of one or more accounts for which you want to deploy stack set updates.
+     * @return The names of one or more Amazon Web Services accounts for which you want to deploy stack set updates.
      */
 
     public java.util.List<String> getAccounts() {
@@ -68,11 +68,11 @@ public class DeploymentTargets implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The names of one or more accounts for which you want to deploy stack set updates.
+     * The names of one or more Amazon Web Services accounts for which you want to deploy stack set updates.
      * </p>
      * 
      * @param accounts
-     *        The names of one or more accounts for which you want to deploy stack set updates.
+     *        The names of one or more Amazon Web Services accounts for which you want to deploy stack set updates.
      */
 
     public void setAccounts(java.util.Collection<String> accounts) {
@@ -86,7 +86,7 @@ public class DeploymentTargets implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The names of one or more accounts for which you want to deploy stack set updates.
+     * The names of one or more Amazon Web Services accounts for which you want to deploy stack set updates.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -95,7 +95,7 @@ public class DeploymentTargets implements Serializable, Cloneable {
      * </p>
      * 
      * @param accounts
-     *        The names of one or more accounts for which you want to deploy stack set updates.
+     *        The names of one or more Amazon Web Services accounts for which you want to deploy stack set updates.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -111,11 +111,11 @@ public class DeploymentTargets implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The names of one or more accounts for which you want to deploy stack set updates.
+     * The names of one or more Amazon Web Services accounts for which you want to deploy stack set updates.
      * </p>
      * 
      * @param accounts
-     *        The names of one or more accounts for which you want to deploy stack set updates.
+     *        The names of one or more Amazon Web Services accounts for which you want to deploy stack set updates.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

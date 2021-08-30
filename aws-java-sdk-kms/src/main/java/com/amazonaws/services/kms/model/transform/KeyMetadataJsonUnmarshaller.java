@@ -112,6 +112,10 @@ public class KeyMetadataJsonUnmarshaller implements Unmarshaller<KeyMetadata, Js
                     context.nextToken();
                     keyMetadata.setCustomerMasterKeySpec(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("KeySpec", targetDepth)) {
+                    context.nextToken();
+                    keyMetadata.setKeySpec(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("EncryptionAlgorithms", targetDepth)) {
                     context.nextToken();
                     keyMetadata.setEncryptionAlgorithms(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))

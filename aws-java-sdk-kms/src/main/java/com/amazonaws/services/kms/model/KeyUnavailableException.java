@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The request was rejected because the specified CMK was not available. You can retry the request.
+ * The request was rejected because the specified KMS key was not available. You can retry the request.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

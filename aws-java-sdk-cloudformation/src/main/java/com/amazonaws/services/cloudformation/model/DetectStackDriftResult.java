@@ -44,7 +44,7 @@ public class DetectStackDriftResult extends com.amazonaws.AmazonWebServiceResult
      * </p>
      * 
      * @param stackDriftDetectionId
-     *        The ID of the drift detection results of this operation. </p>
+     *        The ID of the drift detection results of this operation.</p>
      *        <p>
      *        CloudFormation generates new results, with a new drift detection ID, each time this operation is run.
      *        However, the number of drift results CloudFormation retains for any given stack, and for how long, may
@@ -64,7 +64,7 @@ public class DetectStackDriftResult extends com.amazonaws.AmazonWebServiceResult
      * the number of drift results CloudFormation retains for any given stack, and for how long, may vary.
      * </p>
      * 
-     * @return The ID of the drift detection results of this operation. </p>
+     * @return The ID of the drift detection results of this operation.</p>
      *         <p>
      *         CloudFormation generates new results, with a new drift detection ID, each time this operation is run.
      *         However, the number of drift results CloudFormation retains for any given stack, and for how long, may
@@ -85,7 +85,7 @@ public class DetectStackDriftResult extends com.amazonaws.AmazonWebServiceResult
      * </p>
      * 
      * @param stackDriftDetectionId
-     *        The ID of the drift detection results of this operation. </p>
+     *        The ID of the drift detection results of this operation.</p>
      *        <p>
      *        CloudFormation generates new results, with a new drift detection ID, each time this operation is run.
      *        However, the number of drift results CloudFormation retains for any given stack, and for how long, may

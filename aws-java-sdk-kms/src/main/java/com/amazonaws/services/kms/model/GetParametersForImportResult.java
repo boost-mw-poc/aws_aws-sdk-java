@@ -26,8 +26,8 @@ public class GetParametersForImportResult extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * The Amazon Resource Name (<a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) of the CMK
-     * to use in a subsequent <a>ImportKeyMaterial</a> request. This is the same CMK specified in the
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) of the KMS
+     * key to use in a subsequent <a>ImportKeyMaterial</a> request. This is the same KMS key specified in the
      * <code>GetParametersForImport</code> request.
      * </p>
      */
@@ -56,16 +56,16 @@ public class GetParametersForImportResult extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * The Amazon Resource Name (<a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) of the CMK
-     * to use in a subsequent <a>ImportKeyMaterial</a> request. This is the same CMK specified in the
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) of the KMS
+     * key to use in a subsequent <a>ImportKeyMaterial</a> request. This is the same KMS key specified in the
      * <code>GetParametersForImport</code> request.
      * </p>
      * 
      * @param keyId
      *        The Amazon Resource Name (<a
      *        href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) of
-     *        the CMK to use in a subsequent <a>ImportKeyMaterial</a> request. This is the same CMK specified in the
-     *        <code>GetParametersForImport</code> request.
+     *        the KMS key to use in a subsequent <a>ImportKeyMaterial</a> request. This is the same KMS key specified in
+     *        the <code>GetParametersForImport</code> request.
      */
 
     public void setKeyId(String keyId) {
@@ -75,15 +75,15 @@ public class GetParametersForImportResult extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * The Amazon Resource Name (<a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) of the CMK
-     * to use in a subsequent <a>ImportKeyMaterial</a> request. This is the same CMK specified in the
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) of the KMS
+     * key to use in a subsequent <a>ImportKeyMaterial</a> request. This is the same KMS key specified in the
      * <code>GetParametersForImport</code> request.
      * </p>
      * 
      * @return The Amazon Resource Name (<a
      *         href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) of
-     *         the CMK to use in a subsequent <a>ImportKeyMaterial</a> request. This is the same CMK specified in the
-     *         <code>GetParametersForImport</code> request.
+     *         the KMS key to use in a subsequent <a>ImportKeyMaterial</a> request. This is the same KMS key specified
+     *         in the <code>GetParametersForImport</code> request.
      */
 
     public String getKeyId() {
@@ -93,16 +93,16 @@ public class GetParametersForImportResult extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * The Amazon Resource Name (<a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) of the CMK
-     * to use in a subsequent <a>ImportKeyMaterial</a> request. This is the same CMK specified in the
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) of the KMS
+     * key to use in a subsequent <a>ImportKeyMaterial</a> request. This is the same KMS key specified in the
      * <code>GetParametersForImport</code> request.
      * </p>
      * 
      * @param keyId
      *        The Amazon Resource Name (<a
      *        href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#key-id-key-ARN">key ARN</a>) of
-     *        the CMK to use in a subsequent <a>ImportKeyMaterial</a> request. This is the same CMK specified in the
-     *        <code>GetParametersForImport</code> request.
+     *        the KMS key to use in a subsequent <a>ImportKeyMaterial</a> request. This is the same KMS key specified in
+     *        the <code>GetParametersForImport</code> request.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

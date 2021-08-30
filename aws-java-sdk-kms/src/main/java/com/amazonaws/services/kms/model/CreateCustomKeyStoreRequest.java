@@ -27,14 +27,14 @@ public class CreateCustomKeyStoreRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Specifies a friendly name for the custom key store. The name must be unique in your AWS account.
+     * Specifies a friendly name for the custom key store. The name must be unique in your Amazon Web Services account.
      * </p>
      */
     private String customKeyStoreName;
     /**
      * <p>
-     * Identifies the AWS CloudHSM cluster for the custom key store. Enter the cluster ID of any active AWS CloudHSM
-     * cluster that is not already associated with a custom key store. To find the cluster ID, use the <a
+     * Identifies the CloudHSM cluster for the custom key store. Enter the cluster ID of any active CloudHSM cluster
+     * that is not already associated with a custom key store. To find the cluster ID, use the <a
      * href="https://docs.aws.amazon.com/cloudhsm/latest/APIReference/API_DescribeClusters.html">DescribeClusters</a>
      * operation.
      * </p>
@@ -52,26 +52,27 @@ public class CreateCustomKeyStoreRequest extends com.amazonaws.AmazonWebServiceR
      * <p>
      * Enter the password of the <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-store-concepts.html#concept-kmsuser">
-     * <code>kmsuser</code> crypto user (CU) account</a> in the specified AWS CloudHSM cluster. AWS KMS logs into the
-     * cluster as this user to manage key material on your behalf.
+     * <code>kmsuser</code> crypto user (CU) account</a> in the specified CloudHSM cluster. KMS logs into the cluster as
+     * this user to manage key material on your behalf.
      * </p>
      * <p>
      * The password must be a string of 7 to 32 characters. Its value is case sensitive.
      * </p>
      * <p>
-     * This parameter tells AWS KMS the <code>kmsuser</code> account password; it does not change the password in the
-     * AWS CloudHSM cluster.
+     * This parameter tells KMS the <code>kmsuser</code> account password; it does not change the password in the
+     * CloudHSM cluster.
      * </p>
      */
     private String keyStorePassword;
 
     /**
      * <p>
-     * Specifies a friendly name for the custom key store. The name must be unique in your AWS account.
+     * Specifies a friendly name for the custom key store. The name must be unique in your Amazon Web Services account.
      * </p>
      * 
      * @param customKeyStoreName
-     *        Specifies a friendly name for the custom key store. The name must be unique in your AWS account.
+     *        Specifies a friendly name for the custom key store. The name must be unique in your Amazon Web Services
+     *        account.
      */
 
     public void setCustomKeyStoreName(String customKeyStoreName) {
@@ -80,10 +81,11 @@ public class CreateCustomKeyStoreRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Specifies a friendly name for the custom key store. The name must be unique in your AWS account.
+     * Specifies a friendly name for the custom key store. The name must be unique in your Amazon Web Services account.
      * </p>
      * 
-     * @return Specifies a friendly name for the custom key store. The name must be unique in your AWS account.
+     * @return Specifies a friendly name for the custom key store. The name must be unique in your Amazon Web Services
+     *         account.
      */
 
     public String getCustomKeyStoreName() {
@@ -92,11 +94,12 @@ public class CreateCustomKeyStoreRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Specifies a friendly name for the custom key store. The name must be unique in your AWS account.
+     * Specifies a friendly name for the custom key store. The name must be unique in your Amazon Web Services account.
      * </p>
      * 
      * @param customKeyStoreName
-     *        Specifies a friendly name for the custom key store. The name must be unique in your AWS account.
+     *        Specifies a friendly name for the custom key store. The name must be unique in your Amazon Web Services
+     *        account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -107,17 +110,17 @@ public class CreateCustomKeyStoreRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Identifies the AWS CloudHSM cluster for the custom key store. Enter the cluster ID of any active AWS CloudHSM
-     * cluster that is not already associated with a custom key store. To find the cluster ID, use the <a
+     * Identifies the CloudHSM cluster for the custom key store. Enter the cluster ID of any active CloudHSM cluster
+     * that is not already associated with a custom key store. To find the cluster ID, use the <a
      * href="https://docs.aws.amazon.com/cloudhsm/latest/APIReference/API_DescribeClusters.html">DescribeClusters</a>
      * operation.
      * </p>
      * 
      * @param cloudHsmClusterId
-     *        Identifies the AWS CloudHSM cluster for the custom key store. Enter the cluster ID of any active AWS
-     *        CloudHSM cluster that is not already associated with a custom key store. To find the cluster ID, use the
-     *        <a href="https://docs.aws.amazon.com/cloudhsm/latest/APIReference/API_DescribeClusters.html">
-     *        DescribeClusters</a> operation.
+     *        Identifies the CloudHSM cluster for the custom key store. Enter the cluster ID of any active CloudHSM
+     *        cluster that is not already associated with a custom key store. To find the cluster ID, use the <a
+     *        href="https://docs.aws.amazon.com/cloudhsm/latest/APIReference/API_DescribeClusters.html"
+     *        >DescribeClusters</a> operation.
      */
 
     public void setCloudHsmClusterId(String cloudHsmClusterId) {
@@ -126,16 +129,16 @@ public class CreateCustomKeyStoreRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Identifies the AWS CloudHSM cluster for the custom key store. Enter the cluster ID of any active AWS CloudHSM
-     * cluster that is not already associated with a custom key store. To find the cluster ID, use the <a
+     * Identifies the CloudHSM cluster for the custom key store. Enter the cluster ID of any active CloudHSM cluster
+     * that is not already associated with a custom key store. To find the cluster ID, use the <a
      * href="https://docs.aws.amazon.com/cloudhsm/latest/APIReference/API_DescribeClusters.html">DescribeClusters</a>
      * operation.
      * </p>
      * 
-     * @return Identifies the AWS CloudHSM cluster for the custom key store. Enter the cluster ID of any active AWS
-     *         CloudHSM cluster that is not already associated with a custom key store. To find the cluster ID, use the
-     *         <a href="https://docs.aws.amazon.com/cloudhsm/latest/APIReference/API_DescribeClusters.html">
-     *         DescribeClusters</a> operation.
+     * @return Identifies the CloudHSM cluster for the custom key store. Enter the cluster ID of any active CloudHSM
+     *         cluster that is not already associated with a custom key store. To find the cluster ID, use the <a
+     *         href="https://docs.aws.amazon.com/cloudhsm/latest/APIReference/API_DescribeClusters.html"
+     *         >DescribeClusters</a> operation.
      */
 
     public String getCloudHsmClusterId() {
@@ -144,17 +147,17 @@ public class CreateCustomKeyStoreRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * Identifies the AWS CloudHSM cluster for the custom key store. Enter the cluster ID of any active AWS CloudHSM
-     * cluster that is not already associated with a custom key store. To find the cluster ID, use the <a
+     * Identifies the CloudHSM cluster for the custom key store. Enter the cluster ID of any active CloudHSM cluster
+     * that is not already associated with a custom key store. To find the cluster ID, use the <a
      * href="https://docs.aws.amazon.com/cloudhsm/latest/APIReference/API_DescribeClusters.html">DescribeClusters</a>
      * operation.
      * </p>
      * 
      * @param cloudHsmClusterId
-     *        Identifies the AWS CloudHSM cluster for the custom key store. Enter the cluster ID of any active AWS
-     *        CloudHSM cluster that is not already associated with a custom key store. To find the cluster ID, use the
-     *        <a href="https://docs.aws.amazon.com/cloudhsm/latest/APIReference/API_DescribeClusters.html">
-     *        DescribeClusters</a> operation.
+     *        Identifies the CloudHSM cluster for the custom key store. Enter the cluster ID of any active CloudHSM
+     *        cluster that is not already associated with a custom key store. To find the cluster ID, use the <a
+     *        href="https://docs.aws.amazon.com/cloudhsm/latest/APIReference/API_DescribeClusters.html"
+     *        >DescribeClusters</a> operation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -222,28 +225,28 @@ public class CreateCustomKeyStoreRequest extends com.amazonaws.AmazonWebServiceR
      * <p>
      * Enter the password of the <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-store-concepts.html#concept-kmsuser">
-     * <code>kmsuser</code> crypto user (CU) account</a> in the specified AWS CloudHSM cluster. AWS KMS logs into the
-     * cluster as this user to manage key material on your behalf.
+     * <code>kmsuser</code> crypto user (CU) account</a> in the specified CloudHSM cluster. KMS logs into the cluster as
+     * this user to manage key material on your behalf.
      * </p>
      * <p>
      * The password must be a string of 7 to 32 characters. Its value is case sensitive.
      * </p>
      * <p>
-     * This parameter tells AWS KMS the <code>kmsuser</code> account password; it does not change the password in the
-     * AWS CloudHSM cluster.
+     * This parameter tells KMS the <code>kmsuser</code> account password; it does not change the password in the
+     * CloudHSM cluster.
      * </p>
      * 
      * @param keyStorePassword
      *        Enter the password of the <a
      *        href="https://docs.aws.amazon.com/kms/latest/developerguide/key-store-concepts.html#concept-kmsuser">
-     *        <code>kmsuser</code> crypto user (CU) account</a> in the specified AWS CloudHSM cluster. AWS KMS logs into
-     *        the cluster as this user to manage key material on your behalf.</p>
+     *        <code>kmsuser</code> crypto user (CU) account</a> in the specified CloudHSM cluster. KMS logs into the
+     *        cluster as this user to manage key material on your behalf.</p>
      *        <p>
      *        The password must be a string of 7 to 32 characters. Its value is case sensitive.
      *        </p>
      *        <p>
-     *        This parameter tells AWS KMS the <code>kmsuser</code> account password; it does not change the password in
-     *        the AWS CloudHSM cluster.
+     *        This parameter tells KMS the <code>kmsuser</code> account password; it does not change the password in the
+     *        CloudHSM cluster.
      */
 
     public void setKeyStorePassword(String keyStorePassword) {
@@ -254,27 +257,27 @@ public class CreateCustomKeyStoreRequest extends com.amazonaws.AmazonWebServiceR
      * <p>
      * Enter the password of the <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-store-concepts.html#concept-kmsuser">
-     * <code>kmsuser</code> crypto user (CU) account</a> in the specified AWS CloudHSM cluster. AWS KMS logs into the
-     * cluster as this user to manage key material on your behalf.
+     * <code>kmsuser</code> crypto user (CU) account</a> in the specified CloudHSM cluster. KMS logs into the cluster as
+     * this user to manage key material on your behalf.
      * </p>
      * <p>
      * The password must be a string of 7 to 32 characters. Its value is case sensitive.
      * </p>
      * <p>
-     * This parameter tells AWS KMS the <code>kmsuser</code> account password; it does not change the password in the
-     * AWS CloudHSM cluster.
+     * This parameter tells KMS the <code>kmsuser</code> account password; it does not change the password in the
+     * CloudHSM cluster.
      * </p>
      * 
      * @return Enter the password of the <a
      *         href="https://docs.aws.amazon.com/kms/latest/developerguide/key-store-concepts.html#concept-kmsuser">
-     *         <code>kmsuser</code> crypto user (CU) account</a> in the specified AWS CloudHSM cluster. AWS KMS logs
-     *         into the cluster as this user to manage key material on your behalf.</p>
+     *         <code>kmsuser</code> crypto user (CU) account</a> in the specified CloudHSM cluster. KMS logs into the
+     *         cluster as this user to manage key material on your behalf.</p>
      *         <p>
      *         The password must be a string of 7 to 32 characters. Its value is case sensitive.
      *         </p>
      *         <p>
-     *         This parameter tells AWS KMS the <code>kmsuser</code> account password; it does not change the password
-     *         in the AWS CloudHSM cluster.
+     *         This parameter tells KMS the <code>kmsuser</code> account password; it does not change the password in
+     *         the CloudHSM cluster.
      */
 
     public String getKeyStorePassword() {
@@ -285,28 +288,28 @@ public class CreateCustomKeyStoreRequest extends com.amazonaws.AmazonWebServiceR
      * <p>
      * Enter the password of the <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/key-store-concepts.html#concept-kmsuser">
-     * <code>kmsuser</code> crypto user (CU) account</a> in the specified AWS CloudHSM cluster. AWS KMS logs into the
-     * cluster as this user to manage key material on your behalf.
+     * <code>kmsuser</code> crypto user (CU) account</a> in the specified CloudHSM cluster. KMS logs into the cluster as
+     * this user to manage key material on your behalf.
      * </p>
      * <p>
      * The password must be a string of 7 to 32 characters. Its value is case sensitive.
      * </p>
      * <p>
-     * This parameter tells AWS KMS the <code>kmsuser</code> account password; it does not change the password in the
-     * AWS CloudHSM cluster.
+     * This parameter tells KMS the <code>kmsuser</code> account password; it does not change the password in the
+     * CloudHSM cluster.
      * </p>
      * 
      * @param keyStorePassword
      *        Enter the password of the <a
      *        href="https://docs.aws.amazon.com/kms/latest/developerguide/key-store-concepts.html#concept-kmsuser">
-     *        <code>kmsuser</code> crypto user (CU) account</a> in the specified AWS CloudHSM cluster. AWS KMS logs into
-     *        the cluster as this user to manage key material on your behalf.</p>
+     *        <code>kmsuser</code> crypto user (CU) account</a> in the specified CloudHSM cluster. KMS logs into the
+     *        cluster as this user to manage key material on your behalf.</p>
      *        <p>
      *        The password must be a string of 7 to 32 characters. Its value is case sensitive.
      *        </p>
      *        <p>
-     *        This parameter tells AWS KMS the <code>kmsuser</code> account password; it does not change the password in
-     *        the AWS CloudHSM cluster.
+     *        This parameter tells KMS the <code>kmsuser</code> account password; it does not change the password in the
+     *        CloudHSM cluster.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

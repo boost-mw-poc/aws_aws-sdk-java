@@ -113,9 +113,9 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <code>CAPABILITY_IAM</code> and <code>CAPABILITY_NAMED_IAM</code>
      * </p>
      * <p>
-     * Some stack templates might include resources that can affect permissions in your account; for example, by
-     * creating new Identity and Access Management (IAM) users. For those stacks, you must explicitly acknowledge this
-     * by specifying one of these capabilities.
+     * Some stack templates might include resources that can affect permissions in your Amazon Web Services account; for
+     * example, by creating new Identity and Access Management (IAM) users. For those stacks, you must explicitly
+     * acknowledge this by specifying one of these capabilities.
      * </p>
      * <p>
      * The following IAM resources require you to specify either the <code>CAPABILITY_IAM</code> or
@@ -310,6 +310,15 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<Tag> tags;
+    /**
+     * <p>
+     * Preserve the state of previously provisioned resources when an operation fails.
+     * </p>
+     * <p>
+     * Default: <code>False</code>
+     * </p>
+     */
+    private Boolean disableRollback;
     /**
      * <p>
      * A unique identifier for this <code>UpdateStack</code> request. Specify this token if you plan to retry requests
@@ -865,9 +874,9 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <code>CAPABILITY_IAM</code> and <code>CAPABILITY_NAMED_IAM</code>
      * </p>
      * <p>
-     * Some stack templates might include resources that can affect permissions in your account; for example, by
-     * creating new Identity and Access Management (IAM) users. For those stacks, you must explicitly acknowledge this
-     * by specifying one of these capabilities.
+     * Some stack templates might include resources that can affect permissions in your Amazon Web Services account; for
+     * example, by creating new Identity and Access Management (IAM) users. For those stacks, you must explicitly
+     * acknowledge this by specifying one of these capabilities.
      * </p>
      * <p>
      * The following IAM resources require you to specify either the <code>CAPABILITY_IAM</code> or
@@ -991,9 +1000,9 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *         <code>CAPABILITY_IAM</code> and <code>CAPABILITY_NAMED_IAM</code>
      *         </p>
      *         <p>
-     *         Some stack templates might include resources that can affect permissions in your account; for example, by
-     *         creating new Identity and Access Management (IAM) users. For those stacks, you must explicitly
-     *         acknowledge this by specifying one of these capabilities.
+     *         Some stack templates might include resources that can affect permissions in your Amazon Web Services
+     *         account; for example, by creating new Identity and Access Management (IAM) users. For those stacks, you
+     *         must explicitly acknowledge this by specifying one of these capabilities.
      *         </p>
      *         <p>
      *         The following IAM resources require you to specify either the <code>CAPABILITY_IAM</code> or
@@ -1132,9 +1141,9 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <code>CAPABILITY_IAM</code> and <code>CAPABILITY_NAMED_IAM</code>
      * </p>
      * <p>
-     * Some stack templates might include resources that can affect permissions in your account; for example, by
-     * creating new Identity and Access Management (IAM) users. For those stacks, you must explicitly acknowledge this
-     * by specifying one of these capabilities.
+     * Some stack templates might include resources that can affect permissions in your Amazon Web Services account; for
+     * example, by creating new Identity and Access Management (IAM) users. For those stacks, you must explicitly
+     * acknowledge this by specifying one of these capabilities.
      * </p>
      * <p>
      * The following IAM resources require you to specify either the <code>CAPABILITY_IAM</code> or
@@ -1259,9 +1268,9 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        <code>CAPABILITY_IAM</code> and <code>CAPABILITY_NAMED_IAM</code>
      *        </p>
      *        <p>
-     *        Some stack templates might include resources that can affect permissions in your account; for example, by
-     *        creating new Identity and Access Management (IAM) users. For those stacks, you must explicitly acknowledge
-     *        this by specifying one of these capabilities.
+     *        Some stack templates might include resources that can affect permissions in your Amazon Web Services
+     *        account; for example, by creating new Identity and Access Management (IAM) users. For those stacks, you
+     *        must explicitly acknowledge this by specifying one of these capabilities.
      *        </p>
      *        <p>
      *        The following IAM resources require you to specify either the <code>CAPABILITY_IAM</code> or
@@ -1402,9 +1411,9 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <code>CAPABILITY_IAM</code> and <code>CAPABILITY_NAMED_IAM</code>
      * </p>
      * <p>
-     * Some stack templates might include resources that can affect permissions in your account; for example, by
-     * creating new Identity and Access Management (IAM) users. For those stacks, you must explicitly acknowledge this
-     * by specifying one of these capabilities.
+     * Some stack templates might include resources that can affect permissions in your Amazon Web Services account; for
+     * example, by creating new Identity and Access Management (IAM) users. For those stacks, you must explicitly
+     * acknowledge this by specifying one of these capabilities.
      * </p>
      * <p>
      * The following IAM resources require you to specify either the <code>CAPABILITY_IAM</code> or
@@ -1534,9 +1543,9 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        <code>CAPABILITY_IAM</code> and <code>CAPABILITY_NAMED_IAM</code>
      *        </p>
      *        <p>
-     *        Some stack templates might include resources that can affect permissions in your account; for example, by
-     *        creating new Identity and Access Management (IAM) users. For those stacks, you must explicitly acknowledge
-     *        this by specifying one of these capabilities.
+     *        Some stack templates might include resources that can affect permissions in your Amazon Web Services
+     *        account; for example, by creating new Identity and Access Management (IAM) users. For those stacks, you
+     *        must explicitly acknowledge this by specifying one of these capabilities.
      *        </p>
      *        <p>
      *        The following IAM resources require you to specify either the <code>CAPABILITY_IAM</code> or
@@ -1679,9 +1688,9 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <code>CAPABILITY_IAM</code> and <code>CAPABILITY_NAMED_IAM</code>
      * </p>
      * <p>
-     * Some stack templates might include resources that can affect permissions in your account; for example, by
-     * creating new Identity and Access Management (IAM) users. For those stacks, you must explicitly acknowledge this
-     * by specifying one of these capabilities.
+     * Some stack templates might include resources that can affect permissions in your Amazon Web Services account; for
+     * example, by creating new Identity and Access Management (IAM) users. For those stacks, you must explicitly
+     * acknowledge this by specifying one of these capabilities.
      * </p>
      * <p>
      * The following IAM resources require you to specify either the <code>CAPABILITY_IAM</code> or
@@ -1806,9 +1815,9 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        <code>CAPABILITY_IAM</code> and <code>CAPABILITY_NAMED_IAM</code>
      *        </p>
      *        <p>
-     *        Some stack templates might include resources that can affect permissions in your account; for example, by
-     *        creating new Identity and Access Management (IAM) users. For those stacks, you must explicitly acknowledge
-     *        this by specifying one of these capabilities.
+     *        Some stack templates might include resources that can affect permissions in your Amazon Web Services
+     *        account; for example, by creating new Identity and Access Management (IAM) users. For those stacks, you
+     *        must explicitly acknowledge this by specifying one of these capabilities.
      *        </p>
      *        <p>
      *        The following IAM resources require you to specify either the <code>CAPABILITY_IAM</code> or
@@ -1946,9 +1955,9 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <code>CAPABILITY_IAM</code> and <code>CAPABILITY_NAMED_IAM</code>
      * </p>
      * <p>
-     * Some stack templates might include resources that can affect permissions in your account; for example, by
-     * creating new Identity and Access Management (IAM) users. For those stacks, you must explicitly acknowledge this
-     * by specifying one of these capabilities.
+     * Some stack templates might include resources that can affect permissions in your Amazon Web Services account; for
+     * example, by creating new Identity and Access Management (IAM) users. For those stacks, you must explicitly
+     * acknowledge this by specifying one of these capabilities.
      * </p>
      * <p>
      * The following IAM resources require you to specify either the <code>CAPABILITY_IAM</code> or
@@ -2073,9 +2082,9 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
      *        <code>CAPABILITY_IAM</code> and <code>CAPABILITY_NAMED_IAM</code>
      *        </p>
      *        <p>
-     *        Some stack templates might include resources that can affect permissions in your account; for example, by
-     *        creating new Identity and Access Management (IAM) users. For those stacks, you must explicitly acknowledge
-     *        this by specifying one of these capabilities.
+     *        Some stack templates might include resources that can affect permissions in your Amazon Web Services
+     *        account; for example, by creating new Identity and Access Management (IAM) users. For those stacks, you
+     *        must explicitly acknowledge this by specifying one of these capabilities.
      *        </p>
      *        <p>
      *        The following IAM resources require you to specify either the <code>CAPABILITY_IAM</code> or
@@ -2821,6 +2830,78 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
+     * Preserve the state of previously provisioned resources when an operation fails.
+     * </p>
+     * <p>
+     * Default: <code>False</code>
+     * </p>
+     * 
+     * @param disableRollback
+     *        Preserve the state of previously provisioned resources when an operation fails.</p>
+     *        <p>
+     *        Default: <code>False</code>
+     */
+
+    public void setDisableRollback(Boolean disableRollback) {
+        this.disableRollback = disableRollback;
+    }
+
+    /**
+     * <p>
+     * Preserve the state of previously provisioned resources when an operation fails.
+     * </p>
+     * <p>
+     * Default: <code>False</code>
+     * </p>
+     * 
+     * @return Preserve the state of previously provisioned resources when an operation fails.</p>
+     *         <p>
+     *         Default: <code>False</code>
+     */
+
+    public Boolean getDisableRollback() {
+        return this.disableRollback;
+    }
+
+    /**
+     * <p>
+     * Preserve the state of previously provisioned resources when an operation fails.
+     * </p>
+     * <p>
+     * Default: <code>False</code>
+     * </p>
+     * 
+     * @param disableRollback
+     *        Preserve the state of previously provisioned resources when an operation fails.</p>
+     *        <p>
+     *        Default: <code>False</code>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateStackRequest withDisableRollback(Boolean disableRollback) {
+        setDisableRollback(disableRollback);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Preserve the state of previously provisioned resources when an operation fails.
+     * </p>
+     * <p>
+     * Default: <code>False</code>
+     * </p>
+     * 
+     * @return Preserve the state of previously provisioned resources when an operation fails.</p>
+     *         <p>
+     *         Default: <code>False</code>
+     */
+
+    public Boolean isDisableRollback() {
+        return this.disableRollback;
+    }
+
+    /**
+     * <p>
      * A unique identifier for this <code>UpdateStack</code> request. Specify this token if you plan to retry requests
      * so that CloudFormation knows that you're not attempting to update a stack with the same name. You might retry
      * <code>UpdateStack</code> requests to ensure that CloudFormation successfully received them.
@@ -2988,6 +3069,8 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
             sb.append("NotificationARNs: ").append(getNotificationARNs()).append(",");
         if (getTags() != null)
             sb.append("Tags: ").append(getTags()).append(",");
+        if (getDisableRollback() != null)
+            sb.append("DisableRollback: ").append(getDisableRollback()).append(",");
         if (getClientRequestToken() != null)
             sb.append("ClientRequestToken: ").append(getClientRequestToken());
         sb.append("}");
@@ -3064,6 +3147,10 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
             return false;
+        if (other.getDisableRollback() == null ^ this.getDisableRollback() == null)
+            return false;
+        if (other.getDisableRollback() != null && other.getDisableRollback().equals(this.getDisableRollback()) == false)
+            return false;
         if (other.getClientRequestToken() == null ^ this.getClientRequestToken() == null)
             return false;
         if (other.getClientRequestToken() != null && other.getClientRequestToken().equals(this.getClientRequestToken()) == false)
@@ -3091,6 +3178,7 @@ public class UpdateStackRequest extends com.amazonaws.AmazonWebServiceRequest im
         hashCode = prime * hashCode + ((getStackPolicyURL() == null) ? 0 : getStackPolicyURL().hashCode());
         hashCode = prime * hashCode + ((getNotificationARNs() == null) ? 0 : getNotificationARNs().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getDisableRollback() == null) ? 0 : getDisableRollback().hashCode());
         hashCode = prime * hashCode + ((getClientRequestToken() == null) ? 0 : getClientRequestToken().hashCode());
         return hashCode;
     }

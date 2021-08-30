@@ -33,7 +33,8 @@ public class DeleteStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
     private String stackSetName;
     /**
      * <p>
-     * [Self-managed permissions] The names of the accounts that you want to delete stack instances for.
+     * [Self-managed permissions] The names of the Amazon Web Services accounts that you want to delete stack instances
+     * for.
      * </p>
      * <p>
      * You can specify <code>Accounts</code> or <code>DeploymentTargets</code>, but not both.
@@ -110,9 +111,10 @@ public class DeleteStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * If you are signed in to a delegated administrator account, specify <code>DELEGATED_ADMIN</code>.
      * </p>
      * <p>
-     * Your account must be registered as a delegated administrator in the management account. For more information, see
-     * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html">
-     * Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
+     * Your Amazon Web Services account must be registered as a delegated administrator in the management account. For
+     * more information, see <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html"
+     * >Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * </li>
      * </ul>
@@ -161,13 +163,15 @@ public class DeleteStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * [Self-managed permissions] The names of the accounts that you want to delete stack instances for.
+     * [Self-managed permissions] The names of the Amazon Web Services accounts that you want to delete stack instances
+     * for.
      * </p>
      * <p>
      * You can specify <code>Accounts</code> or <code>DeploymentTargets</code>, but not both.
      * </p>
      * 
-     * @return [Self-managed permissions] The names of the accounts that you want to delete stack instances for.</p>
+     * @return [Self-managed permissions] The names of the Amazon Web Services accounts that you want to delete stack
+     *         instances for.</p>
      *         <p>
      *         You can specify <code>Accounts</code> or <code>DeploymentTargets</code>, but not both.
      */
@@ -181,14 +185,16 @@ public class DeleteStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * [Self-managed permissions] The names of the accounts that you want to delete stack instances for.
+     * [Self-managed permissions] The names of the Amazon Web Services accounts that you want to delete stack instances
+     * for.
      * </p>
      * <p>
      * You can specify <code>Accounts</code> or <code>DeploymentTargets</code>, but not both.
      * </p>
      * 
      * @param accounts
-     *        [Self-managed permissions] The names of the accounts that you want to delete stack instances for.</p>
+     *        [Self-managed permissions] The names of the Amazon Web Services accounts that you want to delete stack
+     *        instances for.</p>
      *        <p>
      *        You can specify <code>Accounts</code> or <code>DeploymentTargets</code>, but not both.
      */
@@ -204,7 +210,8 @@ public class DeleteStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * [Self-managed permissions] The names of the accounts that you want to delete stack instances for.
+     * [Self-managed permissions] The names of the Amazon Web Services accounts that you want to delete stack instances
+     * for.
      * </p>
      * <p>
      * You can specify <code>Accounts</code> or <code>DeploymentTargets</code>, but not both.
@@ -216,7 +223,8 @@ public class DeleteStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * 
      * @param accounts
-     *        [Self-managed permissions] The names of the accounts that you want to delete stack instances for.</p>
+     *        [Self-managed permissions] The names of the Amazon Web Services accounts that you want to delete stack
+     *        instances for.</p>
      *        <p>
      *        You can specify <code>Accounts</code> or <code>DeploymentTargets</code>, but not both.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -234,14 +242,16 @@ public class DeleteStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * [Self-managed permissions] The names of the accounts that you want to delete stack instances for.
+     * [Self-managed permissions] The names of the Amazon Web Services accounts that you want to delete stack instances
+     * for.
      * </p>
      * <p>
      * You can specify <code>Accounts</code> or <code>DeploymentTargets</code>, but not both.
      * </p>
      * 
      * @param accounts
-     *        [Self-managed permissions] The names of the accounts that you want to delete stack instances for.</p>
+     *        [Self-managed permissions] The names of the Amazon Web Services accounts that you want to delete stack
+     *        instances for.</p>
      *        <p>
      *        You can specify <code>Accounts</code> or <code>DeploymentTargets</code>, but not both.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -534,7 +544,7 @@ public class DeleteStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * 
      * @param operationId
-     *        The unique identifier for this stack set operation. </p>
+     *        The unique identifier for this stack set operation.</p>
      *        <p>
      *        If you don't specify an operation ID, the SDK generates one automatically.
      *        </p>
@@ -569,7 +579,7 @@ public class DeleteStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * <code>OUTDATED</code>.
      * </p>
      * 
-     * @return The unique identifier for this stack set operation. </p>
+     * @return The unique identifier for this stack set operation.</p>
      *         <p>
      *         If you don't specify an operation ID, the SDK generates one automatically.
      *         </p>
@@ -605,7 +615,7 @@ public class DeleteStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * 
      * @param operationId
-     *        The unique identifier for this stack set operation. </p>
+     *        The unique identifier for this stack set operation.</p>
      *        <p>
      *        If you don't specify an operation ID, the SDK generates one automatically.
      *        </p>
@@ -644,9 +654,10 @@ public class DeleteStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * If you are signed in to a delegated administrator account, specify <code>DELEGATED_ADMIN</code>.
      * </p>
      * <p>
-     * Your account must be registered as a delegated administrator in the management account. For more information, see
-     * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html">
-     * Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
+     * Your Amazon Web Services account must be registered as a delegated administrator in the management account. For
+     * more information, see <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html"
+     * >Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * </li>
      * </ul>
@@ -669,8 +680,8 @@ public class DeleteStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      *        If you are signed in to a delegated administrator account, specify <code>DELEGATED_ADMIN</code>.
      *        </p>
      *        <p>
-     *        Your account must be registered as a delegated administrator in the management account. For more
-     *        information, see <a href=
+     *        Your Amazon Web Services account must be registered as a delegated administrator in the management
+     *        account. For more information, see <a href=
      *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html"
      *        >Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
      *        </p>
@@ -701,9 +712,10 @@ public class DeleteStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * If you are signed in to a delegated administrator account, specify <code>DELEGATED_ADMIN</code>.
      * </p>
      * <p>
-     * Your account must be registered as a delegated administrator in the management account. For more information, see
-     * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html">
-     * Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
+     * Your Amazon Web Services account must be registered as a delegated administrator in the management account. For
+     * more information, see <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html"
+     * >Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * </li>
      * </ul>
@@ -725,8 +737,8 @@ public class DeleteStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      *         If you are signed in to a delegated administrator account, specify <code>DELEGATED_ADMIN</code>.
      *         </p>
      *         <p>
-     *         Your account must be registered as a delegated administrator in the management account. For more
-     *         information, see <a href=
+     *         Your Amazon Web Services account must be registered as a delegated administrator in the management
+     *         account. For more information, see <a href=
      *         "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html"
      *         >Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
      *         </p>
@@ -757,9 +769,10 @@ public class DeleteStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * If you are signed in to a delegated administrator account, specify <code>DELEGATED_ADMIN</code>.
      * </p>
      * <p>
-     * Your account must be registered as a delegated administrator in the management account. For more information, see
-     * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html">
-     * Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
+     * Your Amazon Web Services account must be registered as a delegated administrator in the management account. For
+     * more information, see <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html"
+     * >Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * </li>
      * </ul>
@@ -782,8 +795,8 @@ public class DeleteStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      *        If you are signed in to a delegated administrator account, specify <code>DELEGATED_ADMIN</code>.
      *        </p>
      *        <p>
-     *        Your account must be registered as a delegated administrator in the management account. For more
-     *        information, see <a href=
+     *        Your Amazon Web Services account must be registered as a delegated administrator in the management
+     *        account. For more information, see <a href=
      *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html"
      *        >Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
      *        </p>
@@ -816,9 +829,10 @@ public class DeleteStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      * If you are signed in to a delegated administrator account, specify <code>DELEGATED_ADMIN</code>.
      * </p>
      * <p>
-     * Your account must be registered as a delegated administrator in the management account. For more information, see
-     * <a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html">
-     * Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
+     * Your Amazon Web Services account must be registered as a delegated administrator in the management account. For
+     * more information, see <a
+     * href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html"
+     * >Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
      * </p>
      * </li>
      * </ul>
@@ -841,8 +855,8 @@ public class DeleteStackInstancesRequest extends com.amazonaws.AmazonWebServiceR
      *        If you are signed in to a delegated administrator account, specify <code>DELEGATED_ADMIN</code>.
      *        </p>
      *        <p>
-     *        Your account must be registered as a delegated administrator in the management account. For more
-     *        information, see <a href=
+     *        Your Amazon Web Services account must be registered as a delegated administrator in the management
+     *        account. For more information, see <a href=
      *        "https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/stacksets-orgs-delegated-admin.html"
      *        >Register a delegated administrator</a> in the <i>CloudFormation User Guide</i>.
      *        </p>
