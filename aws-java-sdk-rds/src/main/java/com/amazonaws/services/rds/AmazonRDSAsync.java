@@ -4721,7 +4721,7 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * </p>
      * </important> <note>
      * <p>
-     * This action only applies to Aurora DB clusters.
+     * This action only applies to Aurora Serverless DB clusters.
      * </p>
      * </note>
      * 
@@ -4763,7 +4763,7 @@ public interface AmazonRDSAsync extends AmazonRDS {
      * </p>
      * </important> <note>
      * <p>
-     * This action only applies to Aurora DB clusters.
+     * This action only applies to Aurora Serverless DB clusters.
      * </p>
      * </note>
      * 

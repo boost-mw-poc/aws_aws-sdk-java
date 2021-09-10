@@ -29,7 +29,7 @@ public class Image implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS account ID associated with the registry containing the image.
+     * The Amazon Web Services account ID associated with the registry containing the image.
      * </p>
      */
     private String registryId;
@@ -60,11 +60,11 @@ public class Image implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS account ID associated with the registry containing the image.
+     * The Amazon Web Services account ID associated with the registry containing the image.
      * </p>
      * 
      * @param registryId
-     *        The AWS account ID associated with the registry containing the image.
+     *        The Amazon Web Services account ID associated with the registry containing the image.
      */
 
     public void setRegistryId(String registryId) {
@@ -73,10 +73,10 @@ public class Image implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS account ID associated with the registry containing the image.
+     * The Amazon Web Services account ID associated with the registry containing the image.
      * </p>
      * 
-     * @return The AWS account ID associated with the registry containing the image.
+     * @return The Amazon Web Services account ID associated with the registry containing the image.
      */
 
     public String getRegistryId() {
@@ -85,11 +85,11 @@ public class Image implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS account ID associated with the registry containing the image.
+     * The Amazon Web Services account ID associated with the registry containing the image.
      * </p>
      * 
      * @param registryId
-     *        The AWS account ID associated with the registry containing the image.
+     *        The Amazon Web Services account ID associated with the registry containing the image.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

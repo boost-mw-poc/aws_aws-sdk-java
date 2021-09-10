@@ -49,7 +49,8 @@ public enum TargetDevice {
     X86_win32("x86_win32"),
     X86_win64("x86_win64"),
     Coreml("coreml"),
-    Jacinto_tda4vm("jacinto_tda4vm");
+    Jacinto_tda4vm("jacinto_tda4vm"),
+    Imx8mplus("imx8mplus");
 
     private String value;
 

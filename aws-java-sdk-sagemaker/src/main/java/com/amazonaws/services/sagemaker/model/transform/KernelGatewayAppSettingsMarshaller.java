@@ -32,6 +32,8 @@ public class KernelGatewayAppSettingsMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DefaultResourceSpec").build();
     private static final MarshallingInfo<List> CUSTOMIMAGES_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("CustomImages").build();
+    private static final MarshallingInfo<List> LIFECYCLECONFIGARNS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LifecycleConfigArns").build();
 
     private static final KernelGatewayAppSettingsMarshaller instance = new KernelGatewayAppSettingsMarshaller();
 
@@ -51,6 +53,7 @@ public class KernelGatewayAppSettingsMarshaller {
         try {
             protocolMarshaller.marshall(kernelGatewayAppSettings.getDefaultResourceSpec(), DEFAULTRESOURCESPEC_BINDING);
             protocolMarshaller.marshall(kernelGatewayAppSettings.getCustomImages(), CUSTOMIMAGES_BINDING);
+            protocolMarshaller.marshall(kernelGatewayAppSettings.getLifecycleConfigArns(), LIFECYCLECONFIGARNS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

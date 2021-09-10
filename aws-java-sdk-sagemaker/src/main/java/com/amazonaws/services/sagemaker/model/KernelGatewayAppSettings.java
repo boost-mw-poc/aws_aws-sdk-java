@@ -41,6 +41,12 @@ public class KernelGatewayAppSettings implements Serializable, Cloneable, Struct
      * </p>
      */
     private java.util.List<CustomImage> customImages;
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the Lifecycle Configurations attached to the KernelGatewayApp.
+     * </p>
+     */
+    private java.util.List<String> lifecycleConfigArns;
 
     /**
      * <p>
@@ -159,6 +165,76 @@ public class KernelGatewayAppSettings implements Serializable, Cloneable, Struct
     }
 
     /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the Lifecycle Configurations attached to the KernelGatewayApp.
+     * </p>
+     * 
+     * @return The Amazon Resource Name (ARN) of the Lifecycle Configurations attached to the KernelGatewayApp.
+     */
+
+    public java.util.List<String> getLifecycleConfigArns() {
+        return lifecycleConfigArns;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the Lifecycle Configurations attached to the KernelGatewayApp.
+     * </p>
+     * 
+     * @param lifecycleConfigArns
+     *        The Amazon Resource Name (ARN) of the Lifecycle Configurations attached to the KernelGatewayApp.
+     */
+
+    public void setLifecycleConfigArns(java.util.Collection<String> lifecycleConfigArns) {
+        if (lifecycleConfigArns == null) {
+            this.lifecycleConfigArns = null;
+            return;
+        }
+
+        this.lifecycleConfigArns = new java.util.ArrayList<String>(lifecycleConfigArns);
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the Lifecycle Configurations attached to the KernelGatewayApp.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setLifecycleConfigArns(java.util.Collection)} or {@link #withLifecycleConfigArns(java.util.Collection)}
+     * if you want to override the existing values.
+     * </p>
+     * 
+     * @param lifecycleConfigArns
+     *        The Amazon Resource Name (ARN) of the Lifecycle Configurations attached to the KernelGatewayApp.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public KernelGatewayAppSettings withLifecycleConfigArns(String... lifecycleConfigArns) {
+        if (this.lifecycleConfigArns == null) {
+            setLifecycleConfigArns(new java.util.ArrayList<String>(lifecycleConfigArns.length));
+        }
+        for (String ele : lifecycleConfigArns) {
+            this.lifecycleConfigArns.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the Lifecycle Configurations attached to the KernelGatewayApp.
+     * </p>
+     * 
+     * @param lifecycleConfigArns
+     *        The Amazon Resource Name (ARN) of the Lifecycle Configurations attached to the KernelGatewayApp.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public KernelGatewayAppSettings withLifecycleConfigArns(java.util.Collection<String> lifecycleConfigArns) {
+        setLifecycleConfigArns(lifecycleConfigArns);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -173,7 +249,9 @@ public class KernelGatewayAppSettings implements Serializable, Cloneable, Struct
         if (getDefaultResourceSpec() != null)
             sb.append("DefaultResourceSpec: ").append(getDefaultResourceSpec()).append(",");
         if (getCustomImages() != null)
-            sb.append("CustomImages: ").append(getCustomImages());
+            sb.append("CustomImages: ").append(getCustomImages()).append(",");
+        if (getLifecycleConfigArns() != null)
+            sb.append("LifecycleConfigArns: ").append(getLifecycleConfigArns());
         sb.append("}");
         return sb.toString();
     }
@@ -196,6 +274,10 @@ public class KernelGatewayAppSettings implements Serializable, Cloneable, Struct
             return false;
         if (other.getCustomImages() != null && other.getCustomImages().equals(this.getCustomImages()) == false)
             return false;
+        if (other.getLifecycleConfigArns() == null ^ this.getLifecycleConfigArns() == null)
+            return false;
+        if (other.getLifecycleConfigArns() != null && other.getLifecycleConfigArns().equals(this.getLifecycleConfigArns()) == false)
+            return false;
         return true;
     }
 
@@ -206,6 +288,7 @@ public class KernelGatewayAppSettings implements Serializable, Cloneable, Struct
 
         hashCode = prime * hashCode + ((getDefaultResourceSpec() == null) ? 0 : getDefaultResourceSpec().hashCode());
         hashCode = prime * hashCode + ((getCustomImages() == null) ? 0 : getCustomImages().hashCode());
+        hashCode = prime * hashCode + ((getLifecycleConfigArns() == null) ? 0 : getLifecycleConfigArns().hashCode());
         return hashCode;
     }
 

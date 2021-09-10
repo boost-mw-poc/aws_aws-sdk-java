@@ -1421,6 +1421,39 @@ public class AmazonSageMakerAsyncClient extends AmazonSageMakerClient implements
     }
 
     @Override
+    public java.util.concurrent.Future<CreateStudioLifecycleConfigResult> createStudioLifecycleConfigAsync(CreateStudioLifecycleConfigRequest request) {
+
+        return createStudioLifecycleConfigAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateStudioLifecycleConfigResult> createStudioLifecycleConfigAsync(final CreateStudioLifecycleConfigRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateStudioLifecycleConfigRequest, CreateStudioLifecycleConfigResult> asyncHandler) {
+        final CreateStudioLifecycleConfigRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateStudioLifecycleConfigResult>() {
+            @Override
+            public CreateStudioLifecycleConfigResult call() throws Exception {
+                CreateStudioLifecycleConfigResult result = null;
+
+                try {
+                    result = executeCreateStudioLifecycleConfig(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateTrainingJobResult> createTrainingJobAsync(CreateTrainingJobRequest request) {
 
         return createTrainingJobAsync(request, null);
@@ -2667,6 +2700,39 @@ public class AmazonSageMakerAsyncClient extends AmazonSageMakerClient implements
 
                 try {
                     result = executeDeleteProject(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteStudioLifecycleConfigResult> deleteStudioLifecycleConfigAsync(DeleteStudioLifecycleConfigRequest request) {
+
+        return deleteStudioLifecycleConfigAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteStudioLifecycleConfigResult> deleteStudioLifecycleConfigAsync(final DeleteStudioLifecycleConfigRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteStudioLifecycleConfigRequest, DeleteStudioLifecycleConfigResult> asyncHandler) {
+        final DeleteStudioLifecycleConfigRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteStudioLifecycleConfigResult>() {
+            @Override
+            public DeleteStudioLifecycleConfigResult call() throws Exception {
+                DeleteStudioLifecycleConfigResult result = null;
+
+                try {
+                    result = executeDeleteStudioLifecycleConfig(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -4165,6 +4231,40 @@ public class AmazonSageMakerAsyncClient extends AmazonSageMakerClient implements
 
                 try {
                     result = executeDescribeProject(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeStudioLifecycleConfigResult> describeStudioLifecycleConfigAsync(DescribeStudioLifecycleConfigRequest request) {
+
+        return describeStudioLifecycleConfigAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeStudioLifecycleConfigResult> describeStudioLifecycleConfigAsync(
+            final DescribeStudioLifecycleConfigRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeStudioLifecycleConfigRequest, DescribeStudioLifecycleConfigResult> asyncHandler) {
+        final DescribeStudioLifecycleConfigRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeStudioLifecycleConfigResult>() {
+            @Override
+            public DescribeStudioLifecycleConfigResult call() throws Exception {
+                DescribeStudioLifecycleConfigResult result = null;
+
+                try {
+                    result = executeDescribeStudioLifecycleConfig(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -6093,6 +6193,39 @@ public class AmazonSageMakerAsyncClient extends AmazonSageMakerClient implements
 
                 try {
                     result = executeListProjects(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListStudioLifecycleConfigsResult> listStudioLifecycleConfigsAsync(ListStudioLifecycleConfigsRequest request) {
+
+        return listStudioLifecycleConfigsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListStudioLifecycleConfigsResult> listStudioLifecycleConfigsAsync(final ListStudioLifecycleConfigsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListStudioLifecycleConfigsRequest, ListStudioLifecycleConfigsResult> asyncHandler) {
+        final ListStudioLifecycleConfigsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListStudioLifecycleConfigsResult>() {
+            @Override
+            public ListStudioLifecycleConfigsResult call() throws Exception {
+                ListStudioLifecycleConfigsResult result = null;
+
+                try {
+                    result = executeListStudioLifecycleConfigs(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

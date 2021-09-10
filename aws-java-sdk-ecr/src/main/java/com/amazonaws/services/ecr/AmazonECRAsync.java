@@ -33,6 +33,11 @@ import com.amazonaws.services.ecr.model.*;
  * private repositories with resource-based permissions using IAM so that specific users or Amazon EC2 instances can
  * access repositories and images.
  * </p>
+ * <p>
+ * Amazon ECR has service endpoints in each supported Region. For more information, see <a
+ * href="https://docs.aws.amazon.com/general/latest/gr/ecr.html">Amazon ECR endpoints</a> in the <i>Amazon Web Services
+ * General Reference</i>.
+ * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public interface AmazonECRAsync extends AmazonECR {
@@ -238,7 +243,7 @@ public interface AmazonECRAsync extends AmazonECR {
     /**
      * <p>
      * Creates a repository. For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/Repositories.html">Amazon ECR Repositories</a> in
+     * href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/Repositories.html">Amazon ECR repositories</a> in
      * the <i>Amazon Elastic Container Registry User Guide</i>.
      * </p>
      * 
@@ -253,7 +258,7 @@ public interface AmazonECRAsync extends AmazonECR {
     /**
      * <p>
      * Creates a repository. For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/Repositories.html">Amazon ECR Repositories</a> in
+     * href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/Repositories.html">Amazon ECR repositories</a> in
      * the <i>Amazon Elastic Container Registry User Guide</i>.
      * </p>
      * 
@@ -546,10 +551,10 @@ public interface AmazonECRAsync extends AmazonECR {
      * </p>
      * <p>
      * The <code>authorizationToken</code> returned is a base64 encoded string that can be decoded and used in a
-     * <code>docker login</code> command to authenticate to a registry. The AWS CLI offers an
+     * <code>docker login</code> command to authenticate to a registry. The CLI offers an
      * <code>get-login-password</code> command that simplifies the login process. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/Registries.html#registry_auth">Registry
-     * Authentication</a> in the <i>Amazon Elastic Container Registry User Guide</i>.
+     * authentication</a> in the <i>Amazon Elastic Container Registry User Guide</i>.
      * </p>
      * 
      * @param getAuthorizationTokenRequest
@@ -568,10 +573,10 @@ public interface AmazonECRAsync extends AmazonECR {
      * </p>
      * <p>
      * The <code>authorizationToken</code> returned is a base64 encoded string that can be decoded and used in a
-     * <code>docker login</code> command to authenticate to a registry. The AWS CLI offers an
+     * <code>docker login</code> command to authenticate to a registry. The CLI offers an
      * <code>get-login-password</code> command that simplifies the login process. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/Registries.html#registry_auth">Registry
-     * Authentication</a> in the <i>Amazon Elastic Container Registry User Guide</i>.
+     * authentication</a> in the <i>Amazon Elastic Container Registry User Guide</i>.
      * </p>
      * 
      * @param getAuthorizationTokenRequest
@@ -984,7 +989,7 @@ public interface AmazonECRAsync extends AmazonECR {
     /**
      * <p>
      * Updates the image tag mutability settings for the specified repository. For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/image-tag-mutability.html">Image Tag Mutability</a>
+     * href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/image-tag-mutability.html">Image tag mutability</a>
      * in the <i>Amazon Elastic Container Registry User Guide</i>.
      * </p>
      * 
@@ -999,7 +1004,7 @@ public interface AmazonECRAsync extends AmazonECR {
     /**
      * <p>
      * Updates the image tag mutability settings for the specified repository. For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/image-tag-mutability.html">Image Tag Mutability</a>
+     * href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/image-tag-mutability.html">Image tag mutability</a>
      * in the <i>Amazon Elastic Container Registry User Guide</i>.
      * </p>
      * 
@@ -1019,8 +1024,8 @@ public interface AmazonECRAsync extends AmazonECR {
     /**
      * <p>
      * Creates or updates the lifecycle policy for the specified repository. For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/LifecyclePolicies.html">Lifecycle Policy
-     * Template</a>.
+     * href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/LifecyclePolicies.html">Lifecycle policy
+     * template</a>.
      * </p>
      * 
      * @param putLifecyclePolicyRequest
@@ -1034,8 +1039,8 @@ public interface AmazonECRAsync extends AmazonECR {
     /**
      * <p>
      * Creates or updates the lifecycle policy for the specified repository. For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/LifecyclePolicies.html">Lifecycle Policy
-     * Template</a>.
+     * href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/LifecyclePolicies.html">Lifecycle policy
+     * template</a>.
      * </p>
      * 
      * @param putLifecyclePolicyRequest
@@ -1056,8 +1061,8 @@ public interface AmazonECRAsync extends AmazonECR {
      * Creates or updates the permissions policy for your registry.
      * </p>
      * <p>
-     * A registry policy is used to specify permissions for another AWS account and is used when configuring
-     * cross-account replication. For more information, see <a
+     * A registry policy is used to specify permissions for another Amazon Web Services account and is used when
+     * configuring cross-account replication. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/registry-permissions.html">Registry permissions</a>
      * in the <i>Amazon Elastic Container Registry User Guide</i>.
      * </p>
@@ -1075,8 +1080,8 @@ public interface AmazonECRAsync extends AmazonECR {
      * Creates or updates the permissions policy for your registry.
      * </p>
      * <p>
-     * A registry policy is used to specify permissions for another AWS account and is used when configuring
-     * cross-account replication. For more information, see <a
+     * A registry policy is used to specify permissions for another Amazon Web Services account and is used when
+     * configuring cross-account replication. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/registry-permissions.html">Registry permissions</a>
      * in the <i>Amazon Elastic Container Registry User Guide</i>.
      * </p>
@@ -1101,7 +1106,7 @@ public interface AmazonECRAsync extends AmazonECR {
      * PutReplicationConfiguration API is called, a service-linked IAM role is created in your account for the
      * replication process. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/using-service-linked-roles.html">Using
-     * Service-Linked Roles for Amazon ECR</a> in the <i>Amazon Elastic Container Registry User Guide</i>.
+     * service-linked roles for Amazon ECR</a> in the <i>Amazon Elastic Container Registry User Guide</i>.
      * </p>
      * <note>
      * <p>
@@ -1127,7 +1132,7 @@ public interface AmazonECRAsync extends AmazonECR {
      * PutReplicationConfiguration API is called, a service-linked IAM role is created in your account for the
      * replication process. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/using-service-linked-roles.html">Using
-     * Service-Linked Roles for Amazon ECR</a> in the <i>Amazon Elastic Container Registry User Guide</i>.
+     * service-linked roles for Amazon ECR</a> in the <i>Amazon Elastic Container Registry User Guide</i>.
      * </p>
      * <note>
      * <p>
@@ -1155,7 +1160,7 @@ public interface AmazonECRAsync extends AmazonECR {
      * <p>
      * Applies a repository policy to the specified repository to control access permissions. For more information, see
      * <a href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/repository-policies.html">Amazon ECR Repository
-     * Policies</a> in the <i>Amazon Elastic Container Registry User Guide</i>.
+     * policies</a> in the <i>Amazon Elastic Container Registry User Guide</i>.
      * </p>
      * 
      * @param setRepositoryPolicyRequest
@@ -1170,7 +1175,7 @@ public interface AmazonECRAsync extends AmazonECR {
      * <p>
      * Applies a repository policy to the specified repository to control access permissions. For more information, see
      * <a href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/repository-policies.html">Amazon ECR Repository
-     * Policies</a> in the <i>Amazon Elastic Container Registry User Guide</i>.
+     * policies</a> in the <i>Amazon Elastic Container Registry User Guide</i>.
      * </p>
      * 
      * @param setRepositoryPolicyRequest
@@ -1188,9 +1193,9 @@ public interface AmazonECRAsync extends AmazonECR {
 
     /**
      * <p>
-     * Starts an image vulnerability scan. An image scan can only be started once per day on an individual image. This
-     * limit includes if an image was scanned on initial push. For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/image-scanning.html">Image Scanning</a> in the
+     * Starts an image vulnerability scan. An image scan can only be started once per 24 hours on an individual image.
+     * This limit includes if an image was scanned on initial push. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/image-scanning.html">Image scanning</a> in the
      * <i>Amazon Elastic Container Registry User Guide</i>.
      * </p>
      * 
@@ -1204,9 +1209,9 @@ public interface AmazonECRAsync extends AmazonECR {
 
     /**
      * <p>
-     * Starts an image vulnerability scan. An image scan can only be started once per day on an individual image. This
-     * limit includes if an image was scanned on initial push. For more information, see <a
-     * href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/image-scanning.html">Image Scanning</a> in the
+     * Starts an image vulnerability scan. An image scan can only be started once per 24 hours on an individual image.
+     * This limit includes if an image was scanned on initial push. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/image-scanning.html">Image scanning</a> in the
      * <i>Amazon Elastic Container Registry User Guide</i>.
      * </p>
      * 

@@ -556,6 +556,19 @@ public class AbstractAmazonSageMakerAsync extends AbstractAmazonSageMaker implem
     }
 
     @Override
+    public java.util.concurrent.Future<CreateStudioLifecycleConfigResult> createStudioLifecycleConfigAsync(CreateStudioLifecycleConfigRequest request) {
+
+        return createStudioLifecycleConfigAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateStudioLifecycleConfigResult> createStudioLifecycleConfigAsync(CreateStudioLifecycleConfigRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateStudioLifecycleConfigRequest, CreateStudioLifecycleConfigResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateTrainingJobResult> createTrainingJobAsync(CreateTrainingJobRequest request) {
 
         return createTrainingJobAsync(request, null);
@@ -1051,6 +1064,19 @@ public class AbstractAmazonSageMakerAsync extends AbstractAmazonSageMaker implem
     @Override
     public java.util.concurrent.Future<DeleteProjectResult> deleteProjectAsync(DeleteProjectRequest request,
             com.amazonaws.handlers.AsyncHandler<DeleteProjectRequest, DeleteProjectResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteStudioLifecycleConfigResult> deleteStudioLifecycleConfigAsync(DeleteStudioLifecycleConfigRequest request) {
+
+        return deleteStudioLifecycleConfigAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteStudioLifecycleConfigResult> deleteStudioLifecycleConfigAsync(DeleteStudioLifecycleConfigRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteStudioLifecycleConfigRequest, DeleteStudioLifecycleConfigResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -1648,6 +1674,19 @@ public class AbstractAmazonSageMakerAsync extends AbstractAmazonSageMaker implem
     @Override
     public java.util.concurrent.Future<DescribeProjectResult> describeProjectAsync(DescribeProjectRequest request,
             com.amazonaws.handlers.AsyncHandler<DescribeProjectRequest, DescribeProjectResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeStudioLifecycleConfigResult> describeStudioLifecycleConfigAsync(DescribeStudioLifecycleConfigRequest request) {
+
+        return describeStudioLifecycleConfigAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeStudioLifecycleConfigResult> describeStudioLifecycleConfigAsync(DescribeStudioLifecycleConfigRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeStudioLifecycleConfigRequest, DescribeStudioLifecycleConfigResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -2414,6 +2453,19 @@ public class AbstractAmazonSageMakerAsync extends AbstractAmazonSageMaker implem
     @Override
     public java.util.concurrent.Future<ListProjectsResult> listProjectsAsync(ListProjectsRequest request,
             com.amazonaws.handlers.AsyncHandler<ListProjectsRequest, ListProjectsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListStudioLifecycleConfigsResult> listStudioLifecycleConfigsAsync(ListStudioLifecycleConfigsRequest request) {
+
+        return listStudioLifecycleConfigsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListStudioLifecycleConfigsResult> listStudioLifecycleConfigsAsync(ListStudioLifecycleConfigsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListStudioLifecycleConfigsRequest, ListStudioLifecycleConfigsResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

@@ -25,7 +25,7 @@ public class KmsException extends com.amazonaws.services.ecr.model.AmazonECRExce
 
     /**
      * <p>
-     * The error code returned by AWS KMS.
+     * The error code returned by KMS.
      * </p>
      */
     private String kmsError;
@@ -42,11 +42,11 @@ public class KmsException extends com.amazonaws.services.ecr.model.AmazonECRExce
 
     /**
      * <p>
-     * The error code returned by AWS KMS.
+     * The error code returned by KMS.
      * </p>
      * 
      * @param kmsError
-     *        The error code returned by AWS KMS.
+     *        The error code returned by KMS.
      */
 
     @com.fasterxml.jackson.annotation.JsonProperty("kmsError")
@@ -56,10 +56,10 @@ public class KmsException extends com.amazonaws.services.ecr.model.AmazonECRExce
 
     /**
      * <p>
-     * The error code returned by AWS KMS.
+     * The error code returned by KMS.
      * </p>
      * 
-     * @return The error code returned by AWS KMS.
+     * @return The error code returned by KMS.
      */
 
     @com.fasterxml.jackson.annotation.JsonProperty("kmsError")
@@ -69,11 +69,11 @@ public class KmsException extends com.amazonaws.services.ecr.model.AmazonECRExce
 
     /**
      * <p>
-     * The error code returned by AWS KMS.
+     * The error code returned by KMS.
      * </p>
      * 
      * @param kmsError
-     *        The error code returned by AWS KMS.
+     *        The error code returned by KMS.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -42,7 +42,8 @@ public enum DataSourceType {
     SQLSERVER("SQLSERVER"),
     TERADATA("TERADATA"),
     TWITTER("TWITTER"),
-    TIMESTREAM("TIMESTREAM");
+    TIMESTREAM("TIMESTREAM"),
+    AMAZON_OPENSEARCH("AMAZON_OPENSEARCH");
 
     private String value;
 

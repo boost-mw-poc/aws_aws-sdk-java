@@ -46,6 +46,12 @@ public class ResourceSpec implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private String instanceType;
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the Lifecycle Configurations attached to the Resource.
+     * </p>
+     */
+    private String lifecycleConfigArn;
 
     /**
      * <p>
@@ -187,6 +193,46 @@ public class ResourceSpec implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the Lifecycle Configurations attached to the Resource.
+     * </p>
+     * 
+     * @param lifecycleConfigArn
+     *        The Amazon Resource Name (ARN) of the Lifecycle Configurations attached to the Resource.
+     */
+
+    public void setLifecycleConfigArn(String lifecycleConfigArn) {
+        this.lifecycleConfigArn = lifecycleConfigArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the Lifecycle Configurations attached to the Resource.
+     * </p>
+     * 
+     * @return The Amazon Resource Name (ARN) of the Lifecycle Configurations attached to the Resource.
+     */
+
+    public String getLifecycleConfigArn() {
+        return this.lifecycleConfigArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the Lifecycle Configurations attached to the Resource.
+     * </p>
+     * 
+     * @param lifecycleConfigArn
+     *        The Amazon Resource Name (ARN) of the Lifecycle Configurations attached to the Resource.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ResourceSpec withLifecycleConfigArn(String lifecycleConfigArn) {
+        setLifecycleConfigArn(lifecycleConfigArn);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -203,7 +249,9 @@ public class ResourceSpec implements Serializable, Cloneable, StructuredPojo {
         if (getSageMakerImageVersionArn() != null)
             sb.append("SageMakerImageVersionArn: ").append(getSageMakerImageVersionArn()).append(",");
         if (getInstanceType() != null)
-            sb.append("InstanceType: ").append(getInstanceType());
+            sb.append("InstanceType: ").append(getInstanceType()).append(",");
+        if (getLifecycleConfigArn() != null)
+            sb.append("LifecycleConfigArn: ").append(getLifecycleConfigArn());
         sb.append("}");
         return sb.toString();
     }
@@ -230,6 +278,10 @@ public class ResourceSpec implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getInstanceType() != null && other.getInstanceType().equals(this.getInstanceType()) == false)
             return false;
+        if (other.getLifecycleConfigArn() == null ^ this.getLifecycleConfigArn() == null)
+            return false;
+        if (other.getLifecycleConfigArn() != null && other.getLifecycleConfigArn().equals(this.getLifecycleConfigArn()) == false)
+            return false;
         return true;
     }
 
@@ -241,6 +293,7 @@ public class ResourceSpec implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getSageMakerImageArn() == null) ? 0 : getSageMakerImageArn().hashCode());
         hashCode = prime * hashCode + ((getSageMakerImageVersionArn() == null) ? 0 : getSageMakerImageVersionArn().hashCode());
         hashCode = prime * hashCode + ((getInstanceType() == null) ? 0 : getInstanceType().hashCode());
+        hashCode = prime * hashCode + ((getLifecycleConfigArn() == null) ? 0 : getLifecycleConfigArn().hashCode());
         return hashCode;
     }
 

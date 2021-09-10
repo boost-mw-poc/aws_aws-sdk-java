@@ -62,11 +62,25 @@ public class ScalingConfigurationInfo implements Serializable, Cloneable {
     private Integer secondsUntilAutoPause;
     /**
      * <p>
-     * The timeout action of a call to <code>ModifyCurrentDBClusterCapacity</code>, either
-     * <code>ForceApplyCapacityChange</code> or <code>RollbackCapacityChange</code>.
+     * The action that occurs when Aurora times out while attempting to change the capacity of an Aurora Serverless
+     * cluster. The value is either <code>ForceApplyCapacityChange</code> or <code>RollbackCapacityChange</code>.
+     * </p>
+     * <p>
+     * <code>ForceApplyCapacityChange</code>, the default, sets the capacity to the specified value as soon as possible.
+     * </p>
+     * <p>
+     * <code>RollbackCapacityChange</code> ignores the capacity change if a scaling point isn't found in the timeout
+     * period.
      * </p>
      */
     private String timeoutAction;
+    /**
+     * <p>
+     * The number of seconds before scaling times out. What happens when an attempted scaling action times out is
+     * determined by the <code>TimeoutAction</code> setting.
+     * </p>
+     */
+    private Integer secondsBeforeTimeout;
 
     /**
      * <p>
@@ -276,13 +290,28 @@ public class ScalingConfigurationInfo implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The timeout action of a call to <code>ModifyCurrentDBClusterCapacity</code>, either
-     * <code>ForceApplyCapacityChange</code> or <code>RollbackCapacityChange</code>.
+     * The action that occurs when Aurora times out while attempting to change the capacity of an Aurora Serverless
+     * cluster. The value is either <code>ForceApplyCapacityChange</code> or <code>RollbackCapacityChange</code>.
+     * </p>
+     * <p>
+     * <code>ForceApplyCapacityChange</code>, the default, sets the capacity to the specified value as soon as possible.
+     * </p>
+     * <p>
+     * <code>RollbackCapacityChange</code> ignores the capacity change if a scaling point isn't found in the timeout
+     * period.
      * </p>
      * 
      * @param timeoutAction
-     *        The timeout action of a call to <code>ModifyCurrentDBClusterCapacity</code>, either
-     *        <code>ForceApplyCapacityChange</code> or <code>RollbackCapacityChange</code>.
+     *        The action that occurs when Aurora times out while attempting to change the capacity of an Aurora
+     *        Serverless cluster. The value is either <code>ForceApplyCapacityChange</code> or
+     *        <code>RollbackCapacityChange</code>.</p>
+     *        <p>
+     *        <code>ForceApplyCapacityChange</code>, the default, sets the capacity to the specified value as soon as
+     *        possible.
+     *        </p>
+     *        <p>
+     *        <code>RollbackCapacityChange</code> ignores the capacity change if a scaling point isn't found in the
+     *        timeout period.
      */
 
     public void setTimeoutAction(String timeoutAction) {
@@ -291,12 +320,27 @@ public class ScalingConfigurationInfo implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The timeout action of a call to <code>ModifyCurrentDBClusterCapacity</code>, either
-     * <code>ForceApplyCapacityChange</code> or <code>RollbackCapacityChange</code>.
+     * The action that occurs when Aurora times out while attempting to change the capacity of an Aurora Serverless
+     * cluster. The value is either <code>ForceApplyCapacityChange</code> or <code>RollbackCapacityChange</code>.
+     * </p>
+     * <p>
+     * <code>ForceApplyCapacityChange</code>, the default, sets the capacity to the specified value as soon as possible.
+     * </p>
+     * <p>
+     * <code>RollbackCapacityChange</code> ignores the capacity change if a scaling point isn't found in the timeout
+     * period.
      * </p>
      * 
-     * @return The timeout action of a call to <code>ModifyCurrentDBClusterCapacity</code>, either
-     *         <code>ForceApplyCapacityChange</code> or <code>RollbackCapacityChange</code>.
+     * @return The action that occurs when Aurora times out while attempting to change the capacity of an Aurora
+     *         Serverless cluster. The value is either <code>ForceApplyCapacityChange</code> or
+     *         <code>RollbackCapacityChange</code>.</p>
+     *         <p>
+     *         <code>ForceApplyCapacityChange</code>, the default, sets the capacity to the specified value as soon as
+     *         possible.
+     *         </p>
+     *         <p>
+     *         <code>RollbackCapacityChange</code> ignores the capacity change if a scaling point isn't found in the
+     *         timeout period.
      */
 
     public String getTimeoutAction() {
@@ -305,18 +349,79 @@ public class ScalingConfigurationInfo implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The timeout action of a call to <code>ModifyCurrentDBClusterCapacity</code>, either
-     * <code>ForceApplyCapacityChange</code> or <code>RollbackCapacityChange</code>.
+     * The action that occurs when Aurora times out while attempting to change the capacity of an Aurora Serverless
+     * cluster. The value is either <code>ForceApplyCapacityChange</code> or <code>RollbackCapacityChange</code>.
+     * </p>
+     * <p>
+     * <code>ForceApplyCapacityChange</code>, the default, sets the capacity to the specified value as soon as possible.
+     * </p>
+     * <p>
+     * <code>RollbackCapacityChange</code> ignores the capacity change if a scaling point isn't found in the timeout
+     * period.
      * </p>
      * 
      * @param timeoutAction
-     *        The timeout action of a call to <code>ModifyCurrentDBClusterCapacity</code>, either
-     *        <code>ForceApplyCapacityChange</code> or <code>RollbackCapacityChange</code>.
+     *        The action that occurs when Aurora times out while attempting to change the capacity of an Aurora
+     *        Serverless cluster. The value is either <code>ForceApplyCapacityChange</code> or
+     *        <code>RollbackCapacityChange</code>.</p>
+     *        <p>
+     *        <code>ForceApplyCapacityChange</code>, the default, sets the capacity to the specified value as soon as
+     *        possible.
+     *        </p>
+     *        <p>
+     *        <code>RollbackCapacityChange</code> ignores the capacity change if a scaling point isn't found in the
+     *        timeout period.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public ScalingConfigurationInfo withTimeoutAction(String timeoutAction) {
         setTimeoutAction(timeoutAction);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The number of seconds before scaling times out. What happens when an attempted scaling action times out is
+     * determined by the <code>TimeoutAction</code> setting.
+     * </p>
+     * 
+     * @param secondsBeforeTimeout
+     *        The number of seconds before scaling times out. What happens when an attempted scaling action times out is
+     *        determined by the <code>TimeoutAction</code> setting.
+     */
+
+    public void setSecondsBeforeTimeout(Integer secondsBeforeTimeout) {
+        this.secondsBeforeTimeout = secondsBeforeTimeout;
+    }
+
+    /**
+     * <p>
+     * The number of seconds before scaling times out. What happens when an attempted scaling action times out is
+     * determined by the <code>TimeoutAction</code> setting.
+     * </p>
+     * 
+     * @return The number of seconds before scaling times out. What happens when an attempted scaling action times out
+     *         is determined by the <code>TimeoutAction</code> setting.
+     */
+
+    public Integer getSecondsBeforeTimeout() {
+        return this.secondsBeforeTimeout;
+    }
+
+    /**
+     * <p>
+     * The number of seconds before scaling times out. What happens when an attempted scaling action times out is
+     * determined by the <code>TimeoutAction</code> setting.
+     * </p>
+     * 
+     * @param secondsBeforeTimeout
+     *        The number of seconds before scaling times out. What happens when an attempted scaling action times out is
+     *        determined by the <code>TimeoutAction</code> setting.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ScalingConfigurationInfo withSecondsBeforeTimeout(Integer secondsBeforeTimeout) {
+        setSecondsBeforeTimeout(secondsBeforeTimeout);
         return this;
     }
 
@@ -341,7 +446,9 @@ public class ScalingConfigurationInfo implements Serializable, Cloneable {
         if (getSecondsUntilAutoPause() != null)
             sb.append("SecondsUntilAutoPause: ").append(getSecondsUntilAutoPause()).append(",");
         if (getTimeoutAction() != null)
-            sb.append("TimeoutAction: ").append(getTimeoutAction());
+            sb.append("TimeoutAction: ").append(getTimeoutAction()).append(",");
+        if (getSecondsBeforeTimeout() != null)
+            sb.append("SecondsBeforeTimeout: ").append(getSecondsBeforeTimeout());
         sb.append("}");
         return sb.toString();
     }
@@ -376,6 +483,10 @@ public class ScalingConfigurationInfo implements Serializable, Cloneable {
             return false;
         if (other.getTimeoutAction() != null && other.getTimeoutAction().equals(this.getTimeoutAction()) == false)
             return false;
+        if (other.getSecondsBeforeTimeout() == null ^ this.getSecondsBeforeTimeout() == null)
+            return false;
+        if (other.getSecondsBeforeTimeout() != null && other.getSecondsBeforeTimeout().equals(this.getSecondsBeforeTimeout()) == false)
+            return false;
         return true;
     }
 
@@ -389,6 +500,7 @@ public class ScalingConfigurationInfo implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getAutoPause() == null) ? 0 : getAutoPause().hashCode());
         hashCode = prime * hashCode + ((getSecondsUntilAutoPause() == null) ? 0 : getSecondsUntilAutoPause().hashCode());
         hashCode = prime * hashCode + ((getTimeoutAction() == null) ? 0 : getTimeoutAction().hashCode());
+        hashCode = prime * hashCode + ((getSecondsBeforeTimeout() == null) ? 0 : getSecondsBeforeTimeout().hashCode());
         return hashCode;
     }
 

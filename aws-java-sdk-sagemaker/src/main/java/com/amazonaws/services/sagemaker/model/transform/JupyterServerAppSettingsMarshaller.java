@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.sagemaker.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -29,6 +30,8 @@ public class JupyterServerAppSettingsMarshaller {
 
     private static final MarshallingInfo<StructuredPojo> DEFAULTRESOURCESPEC_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DefaultResourceSpec").build();
+    private static final MarshallingInfo<List> LIFECYCLECONFIGARNS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LifecycleConfigArns").build();
 
     private static final JupyterServerAppSettingsMarshaller instance = new JupyterServerAppSettingsMarshaller();
 
@@ -47,6 +50,7 @@ public class JupyterServerAppSettingsMarshaller {
 
         try {
             protocolMarshaller.marshall(jupyterServerAppSettings.getDefaultResourceSpec(), DEFAULTRESOURCESPEC_BINDING);
+            protocolMarshaller.marshall(jupyterServerAppSettings.getLifecycleConfigArns(), LIFECYCLECONFIGARNS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

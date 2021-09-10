@@ -210,6 +210,10 @@ public class CreateDBClusterRequestMarshaller implements Marshaller<Request<Crea
                 if (scalingConfiguration.getTimeoutAction() != null) {
                     request.addParameter("ScalingConfiguration.TimeoutAction", StringUtils.fromString(scalingConfiguration.getTimeoutAction()));
                 }
+
+                if (scalingConfiguration.getSecondsBeforeTimeout() != null) {
+                    request.addParameter("ScalingConfiguration.SecondsBeforeTimeout", StringUtils.fromInteger(scalingConfiguration.getSecondsBeforeTimeout()));
+                }
             }
         }
 

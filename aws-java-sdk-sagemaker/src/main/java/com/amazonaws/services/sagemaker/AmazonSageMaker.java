@@ -146,13 +146,6 @@ public interface AmazonSageMaker {
      * For more information, see <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/lineage-tracking.html">Amazon
      * SageMaker ML Lineage Tracking</a>.
      * </p>
-     * <note>
-     * <p>
-     * <code>CreateAction</code> can only be invoked from within an SageMaker managed environment. This includes
-     * SageMaker training jobs, processing jobs, transform jobs, and SageMaker notebooks. A call to
-     * <code>CreateAction</code> from outside one of these environments results in an error.
-     * </p>
-     * </note>
      * 
      * @param createActionRequest
      * @return Result of the CreateAction operation returned by the service.
@@ -223,13 +216,6 @@ public interface AmazonSageMaker {
      * <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/lineage-tracking.html">Amazon SageMaker ML Lineage
      * Tracking</a>.
      * </p>
-     * <note>
-     * <p>
-     * <code>CreateArtifact</code> can only be invoked from within an SageMaker managed environment. This includes
-     * SageMaker training jobs, processing jobs, transform jobs, and SageMaker notebooks. A call to
-     * <code>CreateArtifact</code> from outside one of these environments results in an error.
-     * </p>
-     * </note>
      * 
      * @param createArtifactRequest
      * @return Result of the CreateArtifact operation returned by the service.
@@ -355,13 +341,6 @@ public interface AmazonSageMaker {
      * href="https://docs.aws.amazon.com/sagemaker/latest/dg/lineage-tracking.html">Amazon SageMaker ML Lineage
      * Tracking</a>.
      * </p>
-     * <note>
-     * <p>
-     * <code>CreateContext</code> can only be invoked from within an SageMaker managed environment. This includes
-     * SageMaker training jobs, processing jobs, transform jobs, and SageMaker notebooks. A call to
-     * <code>CreateContext</code> from outside one of these environments results in an error.
-     * </p>
-     * </note>
      * 
      * @param createContextRequest
      * @return Result of the CreateContext operation returned by the service.
@@ -634,11 +613,6 @@ public interface AmazonSageMaker {
      * want to allocate to each model. For example, suppose that you want to host two models, A and B, and you assign
      * traffic weight 2 for model A and 1 for model B. Amazon SageMaker distributes two-thirds of the traffic to Model
      * A, and one-third to model B.
-     * </p>
-     * <p>
-     * For an example that calls this method when deploying a model to Amazon SageMaker hosting services, see <a
-     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/ex1-deploy-model.html#ex1-deploy-model-boto">Deploy the
-     * Model to Amazon SageMaker Hosting Services (Amazon Web Services SDK for Python (Boto 3)).</a>
      * </p>
      * <note>
      * <p>
@@ -1319,6 +1293,21 @@ public interface AmazonSageMaker {
      *      Documentation</a>
      */
     CreateProjectResult createProject(CreateProjectRequest createProjectRequest);
+
+    /**
+     * <p>
+     * Creates a new Studio Lifecycle Configuration.
+     * </p>
+     * 
+     * @param createStudioLifecycleConfigRequest
+     * @return Result of the CreateStudioLifecycleConfig operation returned by the service.
+     * @throws ResourceInUseException
+     *         Resource being accessed is in use.
+     * @sample AmazonSageMaker.CreateStudioLifecycleConfig
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateStudioLifecycleConfig"
+     *      target="_top">AWS API Documentation</a>
+     */
+    CreateStudioLifecycleConfigResult createStudioLifecycleConfig(CreateStudioLifecycleConfigRequest createStudioLifecycleConfigRequest);
 
     /**
      * <p>
@@ -2127,6 +2116,25 @@ public interface AmazonSageMaker {
 
     /**
      * <p>
+     * Deletes the Studio Lifecycle Configuration. In order to delete the Lifecycle Configuration, there must be no
+     * running apps using the Lifecycle Configuration. You must also remove the Lifecycle Configuration from
+     * UserSettings in all Domains and UserProfiles.
+     * </p>
+     * 
+     * @param deleteStudioLifecycleConfigRequest
+     * @return Result of the DeleteStudioLifecycleConfig operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         Resource being access is not found.
+     * @throws ResourceInUseException
+     *         Resource being accessed is in use.
+     * @sample AmazonSageMaker.DeleteStudioLifecycleConfig
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DeleteStudioLifecycleConfig"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeleteStudioLifecycleConfigResult deleteStudioLifecycleConfig(DeleteStudioLifecycleConfigRequest deleteStudioLifecycleConfigRequest);
+
+    /**
+     * <p>
      * Deletes the specified tags from an Amazon SageMaker resource.
      * </p>
      * <p>
@@ -2825,6 +2833,21 @@ public interface AmazonSageMaker {
      *      Documentation</a>
      */
     DescribeProjectResult describeProject(DescribeProjectRequest describeProjectRequest);
+
+    /**
+     * <p>
+     * Describes the Studio Lifecycle Configuration.
+     * </p>
+     * 
+     * @param describeStudioLifecycleConfigRequest
+     * @return Result of the DescribeStudioLifecycleConfig operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         Resource being access is not found.
+     * @sample AmazonSageMaker.DescribeStudioLifecycleConfig
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeStudioLifecycleConfig"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DescribeStudioLifecycleConfigResult describeStudioLifecycleConfig(DescribeStudioLifecycleConfigRequest describeStudioLifecycleConfigRequest);
 
     /**
      * <p>
@@ -3658,6 +3681,21 @@ public interface AmazonSageMaker {
      *      Documentation</a>
      */
     ListProjectsResult listProjects(ListProjectsRequest listProjectsRequest);
+
+    /**
+     * <p>
+     * Lists the Studio Lifecycle Configurations in your Amazon Web Services Account.
+     * </p>
+     * 
+     * @param listStudioLifecycleConfigsRequest
+     * @return Result of the ListStudioLifecycleConfigs operation returned by the service.
+     * @throws ResourceInUseException
+     *         Resource being accessed is in use.
+     * @sample AmazonSageMaker.ListStudioLifecycleConfigs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListStudioLifecycleConfigs"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListStudioLifecycleConfigsResult listStudioLifecycleConfigs(ListStudioLifecycleConfigsRequest listStudioLifecycleConfigsRequest);
 
     /**
      * <p>

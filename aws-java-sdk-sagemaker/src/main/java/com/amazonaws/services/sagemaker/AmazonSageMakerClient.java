@@ -371,13 +371,6 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
      * For more information, see <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/lineage-tracking.html">Amazon
      * SageMaker ML Lineage Tracking</a>.
      * </p>
-     * <note>
-     * <p>
-     * <code>CreateAction</code> can only be invoked from within an SageMaker managed environment. This includes
-     * SageMaker training jobs, processing jobs, transform jobs, and SageMaker notebooks. A call to
-     * <code>CreateAction</code> from outside one of these environments results in an error.
-     * </p>
-     * </note>
      * 
      * @param createActionRequest
      * @return Result of the CreateAction operation returned by the service.
@@ -616,13 +609,6 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
      * <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/lineage-tracking.html">Amazon SageMaker ML Lineage
      * Tracking</a>.
      * </p>
-     * <note>
-     * <p>
-     * <code>CreateArtifact</code> can only be invoked from within an SageMaker managed environment. This includes
-     * SageMaker training jobs, processing jobs, transform jobs, and SageMaker notebooks. A call to
-     * <code>CreateArtifact</code> from outside one of these environments results in an error.
-     * </p>
-     * </note>
      * 
      * @param createArtifactRequest
      * @return Result of the CreateArtifact operation returned by the service.
@@ -916,13 +902,6 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
      * href="https://docs.aws.amazon.com/sagemaker/latest/dg/lineage-tracking.html">Amazon SageMaker ML Lineage
      * Tracking</a>.
      * </p>
-     * <note>
-     * <p>
-     * <code>CreateContext</code> can only be invoked from within an SageMaker managed environment. This includes
-     * SageMaker training jobs, processing jobs, transform jobs, and SageMaker notebooks. A call to
-     * <code>CreateContext</code> from outside one of these environments results in an error.
-     * </p>
-     * </note>
      * 
      * @param createContextRequest
      * @return Result of the CreateContext operation returned by the service.
@@ -1450,11 +1429,6 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
      * want to allocate to each model. For example, suppose that you want to host two models, A and B, and you assign
      * traffic weight 2 for model A and 1 for model B. Amazon SageMaker distributes two-thirds of the traffic to Model
      * A, and one-third to model B.
-     * </p>
-     * <p>
-     * For an example that calls this method when deploying a model to Amazon SageMaker hosting services, see <a
-     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/ex1-deploy-model.html#ex1-deploy-model-boto">Deploy the
-     * Model to Amazon SageMaker Hosting Services (Amazon Web Services SDK for Python (Boto 3)).</a>
      * </p>
      * <note>
      * <p>
@@ -3112,6 +3086,65 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
 
             HttpResponseHandler<AmazonWebServiceResponse<CreateProjectResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new CreateProjectResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Creates a new Studio Lifecycle Configuration.
+     * </p>
+     * 
+     * @param createStudioLifecycleConfigRequest
+     * @return Result of the CreateStudioLifecycleConfig operation returned by the service.
+     * @throws ResourceInUseException
+     *         Resource being accessed is in use.
+     * @sample AmazonSageMaker.CreateStudioLifecycleConfig
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateStudioLifecycleConfig"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public CreateStudioLifecycleConfigResult createStudioLifecycleConfig(CreateStudioLifecycleConfigRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateStudioLifecycleConfig(request);
+    }
+
+    @SdkInternalApi
+    final CreateStudioLifecycleConfigResult executeCreateStudioLifecycleConfig(CreateStudioLifecycleConfigRequest createStudioLifecycleConfigRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createStudioLifecycleConfigRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateStudioLifecycleConfigRequest> request = null;
+        Response<CreateStudioLifecycleConfigResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateStudioLifecycleConfigRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(createStudioLifecycleConfigRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "SageMaker");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateStudioLifecycleConfig");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CreateStudioLifecycleConfigResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new CreateStudioLifecycleConfigResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -5531,6 +5564,69 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
 
             HttpResponseHandler<AmazonWebServiceResponse<DeleteProjectResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DeleteProjectResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Deletes the Studio Lifecycle Configuration. In order to delete the Lifecycle Configuration, there must be no
+     * running apps using the Lifecycle Configuration. You must also remove the Lifecycle Configuration from
+     * UserSettings in all Domains and UserProfiles.
+     * </p>
+     * 
+     * @param deleteStudioLifecycleConfigRequest
+     * @return Result of the DeleteStudioLifecycleConfig operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         Resource being access is not found.
+     * @throws ResourceInUseException
+     *         Resource being accessed is in use.
+     * @sample AmazonSageMaker.DeleteStudioLifecycleConfig
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DeleteStudioLifecycleConfig"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DeleteStudioLifecycleConfigResult deleteStudioLifecycleConfig(DeleteStudioLifecycleConfigRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteStudioLifecycleConfig(request);
+    }
+
+    @SdkInternalApi
+    final DeleteStudioLifecycleConfigResult executeDeleteStudioLifecycleConfig(DeleteStudioLifecycleConfigRequest deleteStudioLifecycleConfigRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteStudioLifecycleConfigRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteStudioLifecycleConfigRequest> request = null;
+        Response<DeleteStudioLifecycleConfigResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteStudioLifecycleConfigRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(deleteStudioLifecycleConfigRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "SageMaker");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteStudioLifecycleConfig");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteStudioLifecycleConfigResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new DeleteStudioLifecycleConfigResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -8155,6 +8251,65 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
 
             HttpResponseHandler<AmazonWebServiceResponse<DescribeProjectResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DescribeProjectResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Describes the Studio Lifecycle Configuration.
+     * </p>
+     * 
+     * @param describeStudioLifecycleConfigRequest
+     * @return Result of the DescribeStudioLifecycleConfig operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         Resource being access is not found.
+     * @sample AmazonSageMaker.DescribeStudioLifecycleConfig
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeStudioLifecycleConfig"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DescribeStudioLifecycleConfigResult describeStudioLifecycleConfig(DescribeStudioLifecycleConfigRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeStudioLifecycleConfig(request);
+    }
+
+    @SdkInternalApi
+    final DescribeStudioLifecycleConfigResult executeDescribeStudioLifecycleConfig(DescribeStudioLifecycleConfigRequest describeStudioLifecycleConfigRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeStudioLifecycleConfigRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeStudioLifecycleConfigRequest> request = null;
+        Response<DescribeStudioLifecycleConfigResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeStudioLifecycleConfigRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(describeStudioLifecycleConfigRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "SageMaker");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeStudioLifecycleConfig");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DescribeStudioLifecycleConfigResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new DescribeStudioLifecycleConfigResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -11465,6 +11620,65 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
 
             HttpResponseHandler<AmazonWebServiceResponse<ListProjectsResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListProjectsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Lists the Studio Lifecycle Configurations in your Amazon Web Services Account.
+     * </p>
+     * 
+     * @param listStudioLifecycleConfigsRequest
+     * @return Result of the ListStudioLifecycleConfigs operation returned by the service.
+     * @throws ResourceInUseException
+     *         Resource being accessed is in use.
+     * @sample AmazonSageMaker.ListStudioLifecycleConfigs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListStudioLifecycleConfigs"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListStudioLifecycleConfigsResult listStudioLifecycleConfigs(ListStudioLifecycleConfigsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListStudioLifecycleConfigs(request);
+    }
+
+    @SdkInternalApi
+    final ListStudioLifecycleConfigsResult executeListStudioLifecycleConfigs(ListStudioLifecycleConfigsRequest listStudioLifecycleConfigsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listStudioLifecycleConfigsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListStudioLifecycleConfigsRequest> request = null;
+        Response<ListStudioLifecycleConfigsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListStudioLifecycleConfigsRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(listStudioLifecycleConfigsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "SageMaker");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListStudioLifecycleConfigs");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListStudioLifecycleConfigsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new ListStudioLifecycleConfigsResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

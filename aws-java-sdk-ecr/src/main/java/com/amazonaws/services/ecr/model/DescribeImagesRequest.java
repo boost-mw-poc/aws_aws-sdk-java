@@ -27,8 +27,8 @@ public class DescribeImagesRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The AWS account ID associated with the registry that contains the repository in which to describe images. If you
-     * do not specify a registry, the default registry is assumed.
+     * The Amazon Web Services account ID associated with the registry that contains the repository in which to describe
+     * images. If you do not specify a registry, the default registry is assumed.
      * </p>
      */
     private String registryId;
@@ -75,13 +75,13 @@ public class DescribeImagesRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The AWS account ID associated with the registry that contains the repository in which to describe images. If you
-     * do not specify a registry, the default registry is assumed.
+     * The Amazon Web Services account ID associated with the registry that contains the repository in which to describe
+     * images. If you do not specify a registry, the default registry is assumed.
      * </p>
      * 
      * @param registryId
-     *        The AWS account ID associated with the registry that contains the repository in which to describe images.
-     *        If you do not specify a registry, the default registry is assumed.
+     *        The Amazon Web Services account ID associated with the registry that contains the repository in which to
+     *        describe images. If you do not specify a registry, the default registry is assumed.
      */
 
     public void setRegistryId(String registryId) {
@@ -90,12 +90,12 @@ public class DescribeImagesRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The AWS account ID associated with the registry that contains the repository in which to describe images. If you
-     * do not specify a registry, the default registry is assumed.
+     * The Amazon Web Services account ID associated with the registry that contains the repository in which to describe
+     * images. If you do not specify a registry, the default registry is assumed.
      * </p>
      * 
-     * @return The AWS account ID associated with the registry that contains the repository in which to describe images.
-     *         If you do not specify a registry, the default registry is assumed.
+     * @return The Amazon Web Services account ID associated with the registry that contains the repository in which to
+     *         describe images. If you do not specify a registry, the default registry is assumed.
      */
 
     public String getRegistryId() {
@@ -104,13 +104,13 @@ public class DescribeImagesRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The AWS account ID associated with the registry that contains the repository in which to describe images. If you
-     * do not specify a registry, the default registry is assumed.
+     * The Amazon Web Services account ID associated with the registry that contains the repository in which to describe
+     * images. If you do not specify a registry, the default registry is assumed.
      * </p>
      * 
      * @param registryId
-     *        The AWS account ID associated with the registry that contains the repository in which to describe images.
-     *        If you do not specify a registry, the default registry is assumed.
+     *        The Amazon Web Services account ID associated with the registry that contains the repository in which to
+     *        describe images. If you do not specify a registry, the default registry is assumed.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

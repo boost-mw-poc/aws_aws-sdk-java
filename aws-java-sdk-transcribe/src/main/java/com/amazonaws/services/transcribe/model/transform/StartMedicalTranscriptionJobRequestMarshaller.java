@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.transcribe.model.transform;
 
+import java.util.Map;
 import java.util.List;
 import javax.annotation.Generated;
 
@@ -44,6 +45,8 @@ public class StartMedicalTranscriptionJobRequestMarshaller {
             .marshallLocationName("OutputKey").build();
     private static final MarshallingInfo<String> OUTPUTENCRYPTIONKMSKEYID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("OutputEncryptionKMSKeyId").build();
+    private static final MarshallingInfo<Map> KMSENCRYPTIONCONTEXT_BINDING = MarshallingInfo.builder(MarshallingType.MAP)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("KMSEncryptionContext").build();
     private static final MarshallingInfo<StructuredPojo> SETTINGS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Settings").build();
     private static final MarshallingInfo<String> CONTENTIDENTIFICATIONTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
@@ -79,6 +82,7 @@ public class StartMedicalTranscriptionJobRequestMarshaller {
             protocolMarshaller.marshall(startMedicalTranscriptionJobRequest.getOutputBucketName(), OUTPUTBUCKETNAME_BINDING);
             protocolMarshaller.marshall(startMedicalTranscriptionJobRequest.getOutputKey(), OUTPUTKEY_BINDING);
             protocolMarshaller.marshall(startMedicalTranscriptionJobRequest.getOutputEncryptionKMSKeyId(), OUTPUTENCRYPTIONKMSKEYID_BINDING);
+            protocolMarshaller.marshall(startMedicalTranscriptionJobRequest.getKMSEncryptionContext(), KMSENCRYPTIONCONTEXT_BINDING);
             protocolMarshaller.marshall(startMedicalTranscriptionJobRequest.getSettings(), SETTINGS_BINDING);
             protocolMarshaller.marshall(startMedicalTranscriptionJobRequest.getContentIdentificationType(), CONTENTIDENTIFICATIONTYPE_BINDING);
             protocolMarshaller.marshall(startMedicalTranscriptionJobRequest.getSpecialty(), SPECIALTY_BINDING);

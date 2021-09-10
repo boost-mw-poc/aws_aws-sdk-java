@@ -150,6 +150,13 @@ public class StartMedicalTranscriptionJobRequest extends com.amazonaws.AmazonWeb
     private String outputEncryptionKMSKeyId;
     /**
      * <p>
+     * A map of plain text, non-secret key:value pairs, known as encryption context pairs, that provide an added layer
+     * of security for your data.
+     * </p>
+     */
+    private java.util.Map<String, String> kMSEncryptionContext;
+    /**
+     * <p>
      * Optional settings for the medical transcription job.
      * </p>
      */
@@ -1010,6 +1017,80 @@ public class StartMedicalTranscriptionJobRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
+     * A map of plain text, non-secret key:value pairs, known as encryption context pairs, that provide an added layer
+     * of security for your data.
+     * </p>
+     * 
+     * @return A map of plain text, non-secret key:value pairs, known as encryption context pairs, that provide an added
+     *         layer of security for your data.
+     */
+
+    public java.util.Map<String, String> getKMSEncryptionContext() {
+        return kMSEncryptionContext;
+    }
+
+    /**
+     * <p>
+     * A map of plain text, non-secret key:value pairs, known as encryption context pairs, that provide an added layer
+     * of security for your data.
+     * </p>
+     * 
+     * @param kMSEncryptionContext
+     *        A map of plain text, non-secret key:value pairs, known as encryption context pairs, that provide an added
+     *        layer of security for your data.
+     */
+
+    public void setKMSEncryptionContext(java.util.Map<String, String> kMSEncryptionContext) {
+        this.kMSEncryptionContext = kMSEncryptionContext;
+    }
+
+    /**
+     * <p>
+     * A map of plain text, non-secret key:value pairs, known as encryption context pairs, that provide an added layer
+     * of security for your data.
+     * </p>
+     * 
+     * @param kMSEncryptionContext
+     *        A map of plain text, non-secret key:value pairs, known as encryption context pairs, that provide an added
+     *        layer of security for your data.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public StartMedicalTranscriptionJobRequest withKMSEncryptionContext(java.util.Map<String, String> kMSEncryptionContext) {
+        setKMSEncryptionContext(kMSEncryptionContext);
+        return this;
+    }
+
+    /**
+     * Add a single KMSEncryptionContext entry
+     *
+     * @see StartMedicalTranscriptionJobRequest#withKMSEncryptionContext
+     * @returns a reference to this object so that method calls can be chained together.
+     */
+
+    public StartMedicalTranscriptionJobRequest addKMSEncryptionContextEntry(String key, String value) {
+        if (null == this.kMSEncryptionContext) {
+            this.kMSEncryptionContext = new java.util.HashMap<String, String>();
+        }
+        if (this.kMSEncryptionContext.containsKey(key))
+            throw new IllegalArgumentException("Duplicated keys (" + key.toString() + ") are provided.");
+        this.kMSEncryptionContext.put(key, value);
+        return this;
+    }
+
+    /**
+     * Removes all the entries added into KMSEncryptionContext.
+     *
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public StartMedicalTranscriptionJobRequest clearKMSEncryptionContextEntries() {
+        this.kMSEncryptionContext = null;
+        return this;
+    }
+
+    /**
+     * <p>
      * Optional settings for the medical transcription job.
      * </p>
      * 
@@ -1355,6 +1436,8 @@ public class StartMedicalTranscriptionJobRequest extends com.amazonaws.AmazonWeb
             sb.append("OutputKey: ").append(getOutputKey()).append(",");
         if (getOutputEncryptionKMSKeyId() != null)
             sb.append("OutputEncryptionKMSKeyId: ").append(getOutputEncryptionKMSKeyId()).append(",");
+        if (getKMSEncryptionContext() != null)
+            sb.append("KMSEncryptionContext: ").append(getKMSEncryptionContext()).append(",");
         if (getSettings() != null)
             sb.append("Settings: ").append(getSettings()).append(",");
         if (getContentIdentificationType() != null)
@@ -1411,6 +1494,10 @@ public class StartMedicalTranscriptionJobRequest extends com.amazonaws.AmazonWeb
             return false;
         if (other.getOutputEncryptionKMSKeyId() != null && other.getOutputEncryptionKMSKeyId().equals(this.getOutputEncryptionKMSKeyId()) == false)
             return false;
+        if (other.getKMSEncryptionContext() == null ^ this.getKMSEncryptionContext() == null)
+            return false;
+        if (other.getKMSEncryptionContext() != null && other.getKMSEncryptionContext().equals(this.getKMSEncryptionContext()) == false)
+            return false;
         if (other.getSettings() == null ^ this.getSettings() == null)
             return false;
         if (other.getSettings() != null && other.getSettings().equals(this.getSettings()) == false)
@@ -1447,6 +1534,7 @@ public class StartMedicalTranscriptionJobRequest extends com.amazonaws.AmazonWeb
         hashCode = prime * hashCode + ((getOutputBucketName() == null) ? 0 : getOutputBucketName().hashCode());
         hashCode = prime * hashCode + ((getOutputKey() == null) ? 0 : getOutputKey().hashCode());
         hashCode = prime * hashCode + ((getOutputEncryptionKMSKeyId() == null) ? 0 : getOutputEncryptionKMSKeyId().hashCode());
+        hashCode = prime * hashCode + ((getKMSEncryptionContext() == null) ? 0 : getKMSEncryptionContext().hashCode());
         hashCode = prime * hashCode + ((getSettings() == null) ? 0 : getSettings().hashCode());
         hashCode = prime * hashCode + ((getContentIdentificationType() == null) ? 0 : getContentIdentificationType().hashCode());
         hashCode = prime * hashCode + ((getSpecialty() == null) ? 0 : getSpecialty().hashCode());

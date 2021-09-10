@@ -38,6 +38,11 @@ import com.amazonaws.auth.DefaultAWSCredentialsProviderChain;
  * private repositories with resource-based permissions using IAM so that specific users or Amazon EC2 instances can
  * access repositories and images.
  * </p>
+ * <p>
+ * Amazon ECR has service endpoints in each supported Region. For more information, see <a
+ * href="https://docs.aws.amazon.com/general/latest/gr/ecr.html">Amazon ECR endpoints</a> in the <i>Amazon Web Services
+ * General Reference</i>.
+ * </p>
  */
 @ThreadSafe
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

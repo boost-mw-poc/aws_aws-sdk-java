@@ -30,7 +30,7 @@ public class ImageDetail implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS account ID associated with the registry to which this image belongs.
+     * The Amazon Web Services account ID associated with the registry to which this image belongs.
      * </p>
      */
     private String registryId;
@@ -102,11 +102,11 @@ public class ImageDetail implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS account ID associated with the registry to which this image belongs.
+     * The Amazon Web Services account ID associated with the registry to which this image belongs.
      * </p>
      * 
      * @param registryId
-     *        The AWS account ID associated with the registry to which this image belongs.
+     *        The Amazon Web Services account ID associated with the registry to which this image belongs.
      */
 
     public void setRegistryId(String registryId) {
@@ -115,10 +115,10 @@ public class ImageDetail implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS account ID associated with the registry to which this image belongs.
+     * The Amazon Web Services account ID associated with the registry to which this image belongs.
      * </p>
      * 
-     * @return The AWS account ID associated with the registry to which this image belongs.
+     * @return The Amazon Web Services account ID associated with the registry to which this image belongs.
      */
 
     public String getRegistryId() {
@@ -127,11 +127,11 @@ public class ImageDetail implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The AWS account ID associated with the registry to which this image belongs.
+     * The Amazon Web Services account ID associated with the registry to which this image belongs.
      * </p>
      * 
      * @param registryId
-     *        The AWS account ID associated with the registry to which this image belongs.
+     *        The Amazon Web Services account ID associated with the registry to which this image belongs.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

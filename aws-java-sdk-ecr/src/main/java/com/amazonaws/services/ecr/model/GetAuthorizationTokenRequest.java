@@ -27,8 +27,8 @@ public class GetAuthorizationTokenRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * A list of AWS account IDs that are associated with the registries for which to get AuthorizationData objects. If
-     * you do not specify a registry, the default registry is assumed.
+     * A list of Amazon Web Services account IDs that are associated with the registries for which to get
+     * AuthorizationData objects. If you do not specify a registry, the default registry is assumed.
      * </p>
      */
     @Deprecated
@@ -36,12 +36,12 @@ public class GetAuthorizationTokenRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * A list of AWS account IDs that are associated with the registries for which to get AuthorizationData objects. If
-     * you do not specify a registry, the default registry is assumed.
+     * A list of Amazon Web Services account IDs that are associated with the registries for which to get
+     * AuthorizationData objects. If you do not specify a registry, the default registry is assumed.
      * </p>
      * 
-     * @return A list of AWS account IDs that are associated with the registries for which to get AuthorizationData
-     *         objects. If you do not specify a registry, the default registry is assumed.
+     * @return A list of Amazon Web Services account IDs that are associated with the registries for which to get
+     *         AuthorizationData objects. If you do not specify a registry, the default registry is assumed.
      */
     @Deprecated
     public java.util.List<String> getRegistryIds() {
@@ -50,13 +50,13 @@ public class GetAuthorizationTokenRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * A list of AWS account IDs that are associated with the registries for which to get AuthorizationData objects. If
-     * you do not specify a registry, the default registry is assumed.
+     * A list of Amazon Web Services account IDs that are associated with the registries for which to get
+     * AuthorizationData objects. If you do not specify a registry, the default registry is assumed.
      * </p>
      * 
      * @param registryIds
-     *        A list of AWS account IDs that are associated with the registries for which to get AuthorizationData
-     *        objects. If you do not specify a registry, the default registry is assumed.
+     *        A list of Amazon Web Services account IDs that are associated with the registries for which to get
+     *        AuthorizationData objects. If you do not specify a registry, the default registry is assumed.
      */
     @Deprecated
     public void setRegistryIds(java.util.Collection<String> registryIds) {
@@ -70,8 +70,8 @@ public class GetAuthorizationTokenRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * A list of AWS account IDs that are associated with the registries for which to get AuthorizationData objects. If
-     * you do not specify a registry, the default registry is assumed.
+     * A list of Amazon Web Services account IDs that are associated with the registries for which to get
+     * AuthorizationData objects. If you do not specify a registry, the default registry is assumed.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -80,8 +80,8 @@ public class GetAuthorizationTokenRequest extends com.amazonaws.AmazonWebService
      * </p>
      * 
      * @param registryIds
-     *        A list of AWS account IDs that are associated with the registries for which to get AuthorizationData
-     *        objects. If you do not specify a registry, the default registry is assumed.
+     *        A list of Amazon Web Services account IDs that are associated with the registries for which to get
+     *        AuthorizationData objects. If you do not specify a registry, the default registry is assumed.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
     @Deprecated
@@ -97,13 +97,13 @@ public class GetAuthorizationTokenRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * A list of AWS account IDs that are associated with the registries for which to get AuthorizationData objects. If
-     * you do not specify a registry, the default registry is assumed.
+     * A list of Amazon Web Services account IDs that are associated with the registries for which to get
+     * AuthorizationData objects. If you do not specify a registry, the default registry is assumed.
      * </p>
      * 
      * @param registryIds
-     *        A list of AWS account IDs that are associated with the registries for which to get AuthorizationData
-     *        objects. If you do not specify a registry, the default registry is assumed.
+     *        A list of Amazon Web Services account IDs that are associated with the registries for which to get
+     *        AuthorizationData objects. If you do not specify a registry, the default registry is assumed.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
     @Deprecated

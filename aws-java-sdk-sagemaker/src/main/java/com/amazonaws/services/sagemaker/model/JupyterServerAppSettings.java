@@ -35,6 +35,12 @@ public class JupyterServerAppSettings implements Serializable, Cloneable, Struct
      * </p>
      */
     private ResourceSpec defaultResourceSpec;
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the Lifecycle Configurations attached to the JupyterServerApp.
+     * </p>
+     */
+    private java.util.List<String> lifecycleConfigArns;
 
     /**
      * <p>
@@ -83,6 +89,76 @@ public class JupyterServerAppSettings implements Serializable, Cloneable, Struct
     }
 
     /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the Lifecycle Configurations attached to the JupyterServerApp.
+     * </p>
+     * 
+     * @return The Amazon Resource Name (ARN) of the Lifecycle Configurations attached to the JupyterServerApp.
+     */
+
+    public java.util.List<String> getLifecycleConfigArns() {
+        return lifecycleConfigArns;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the Lifecycle Configurations attached to the JupyterServerApp.
+     * </p>
+     * 
+     * @param lifecycleConfigArns
+     *        The Amazon Resource Name (ARN) of the Lifecycle Configurations attached to the JupyterServerApp.
+     */
+
+    public void setLifecycleConfigArns(java.util.Collection<String> lifecycleConfigArns) {
+        if (lifecycleConfigArns == null) {
+            this.lifecycleConfigArns = null;
+            return;
+        }
+
+        this.lifecycleConfigArns = new java.util.ArrayList<String>(lifecycleConfigArns);
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the Lifecycle Configurations attached to the JupyterServerApp.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setLifecycleConfigArns(java.util.Collection)} or {@link #withLifecycleConfigArns(java.util.Collection)}
+     * if you want to override the existing values.
+     * </p>
+     * 
+     * @param lifecycleConfigArns
+     *        The Amazon Resource Name (ARN) of the Lifecycle Configurations attached to the JupyterServerApp.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public JupyterServerAppSettings withLifecycleConfigArns(String... lifecycleConfigArns) {
+        if (this.lifecycleConfigArns == null) {
+            setLifecycleConfigArns(new java.util.ArrayList<String>(lifecycleConfigArns.length));
+        }
+        for (String ele : lifecycleConfigArns) {
+            this.lifecycleConfigArns.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the Lifecycle Configurations attached to the JupyterServerApp.
+     * </p>
+     * 
+     * @param lifecycleConfigArns
+     *        The Amazon Resource Name (ARN) of the Lifecycle Configurations attached to the JupyterServerApp.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public JupyterServerAppSettings withLifecycleConfigArns(java.util.Collection<String> lifecycleConfigArns) {
+        setLifecycleConfigArns(lifecycleConfigArns);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -95,7 +171,9 @@ public class JupyterServerAppSettings implements Serializable, Cloneable, Struct
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getDefaultResourceSpec() != null)
-            sb.append("DefaultResourceSpec: ").append(getDefaultResourceSpec());
+            sb.append("DefaultResourceSpec: ").append(getDefaultResourceSpec()).append(",");
+        if (getLifecycleConfigArns() != null)
+            sb.append("LifecycleConfigArns: ").append(getLifecycleConfigArns());
         sb.append("}");
         return sb.toString();
     }
@@ -114,6 +192,10 @@ public class JupyterServerAppSettings implements Serializable, Cloneable, Struct
             return false;
         if (other.getDefaultResourceSpec() != null && other.getDefaultResourceSpec().equals(this.getDefaultResourceSpec()) == false)
             return false;
+        if (other.getLifecycleConfigArns() == null ^ this.getLifecycleConfigArns() == null)
+            return false;
+        if (other.getLifecycleConfigArns() != null && other.getLifecycleConfigArns().equals(this.getLifecycleConfigArns()) == false)
+            return false;
         return true;
     }
 
@@ -123,6 +205,7 @@ public class JupyterServerAppSettings implements Serializable, Cloneable, Struct
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getDefaultResourceSpec() == null) ? 0 : getDefaultResourceSpec().hashCode());
+        hashCode = prime * hashCode + ((getLifecycleConfigArns() == null) ? 0 : getLifecycleConfigArns().hashCode());
         return hashCode;
     }
 

@@ -33,6 +33,8 @@ public class ResourceSpecMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SageMakerImageVersionArn").build();
     private static final MarshallingInfo<String> INSTANCETYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("InstanceType").build();
+    private static final MarshallingInfo<String> LIFECYCLECONFIGARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LifecycleConfigArn").build();
 
     private static final ResourceSpecMarshaller instance = new ResourceSpecMarshaller();
 
@@ -53,6 +55,7 @@ public class ResourceSpecMarshaller {
             protocolMarshaller.marshall(resourceSpec.getSageMakerImageArn(), SAGEMAKERIMAGEARN_BINDING);
             protocolMarshaller.marshall(resourceSpec.getSageMakerImageVersionArn(), SAGEMAKERIMAGEVERSIONARN_BINDING);
             protocolMarshaller.marshall(resourceSpec.getInstanceType(), INSTANCETYPE_BINDING);
+            protocolMarshaller.marshall(resourceSpec.getLifecycleConfigArn(), LIFECYCLECONFIGARN_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

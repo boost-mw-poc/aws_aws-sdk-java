@@ -112,6 +112,16 @@ public class ScalingConfiguration implements Serializable, Cloneable {
      * </p>
      */
     private String timeoutAction;
+    /**
+     * <p>
+     * The amount of time, in seconds, that Aurora Serverless tries to find a scaling point to perform seamless scaling
+     * before enforcing the timeout action. The default is 300.
+     * </p>
+     * <p>
+     * Specify a value between 60 and 600 seconds.
+     * </p>
+     */
+    private Integer secondsBeforeTimeout;
 
     /**
      * <p>
@@ -628,6 +638,67 @@ public class ScalingConfiguration implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * The amount of time, in seconds, that Aurora Serverless tries to find a scaling point to perform seamless scaling
+     * before enforcing the timeout action. The default is 300.
+     * </p>
+     * <p>
+     * Specify a value between 60 and 600 seconds.
+     * </p>
+     * 
+     * @param secondsBeforeTimeout
+     *        The amount of time, in seconds, that Aurora Serverless tries to find a scaling point to perform seamless
+     *        scaling before enforcing the timeout action. The default is 300.</p>
+     *        <p>
+     *        Specify a value between 60 and 600 seconds.
+     */
+
+    public void setSecondsBeforeTimeout(Integer secondsBeforeTimeout) {
+        this.secondsBeforeTimeout = secondsBeforeTimeout;
+    }
+
+    /**
+     * <p>
+     * The amount of time, in seconds, that Aurora Serverless tries to find a scaling point to perform seamless scaling
+     * before enforcing the timeout action. The default is 300.
+     * </p>
+     * <p>
+     * Specify a value between 60 and 600 seconds.
+     * </p>
+     * 
+     * @return The amount of time, in seconds, that Aurora Serverless tries to find a scaling point to perform seamless
+     *         scaling before enforcing the timeout action. The default is 300.</p>
+     *         <p>
+     *         Specify a value between 60 and 600 seconds.
+     */
+
+    public Integer getSecondsBeforeTimeout() {
+        return this.secondsBeforeTimeout;
+    }
+
+    /**
+     * <p>
+     * The amount of time, in seconds, that Aurora Serverless tries to find a scaling point to perform seamless scaling
+     * before enforcing the timeout action. The default is 300.
+     * </p>
+     * <p>
+     * Specify a value between 60 and 600 seconds.
+     * </p>
+     * 
+     * @param secondsBeforeTimeout
+     *        The amount of time, in seconds, that Aurora Serverless tries to find a scaling point to perform seamless
+     *        scaling before enforcing the timeout action. The default is 300.</p>
+     *        <p>
+     *        Specify a value between 60 and 600 seconds.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ScalingConfiguration withSecondsBeforeTimeout(Integer secondsBeforeTimeout) {
+        setSecondsBeforeTimeout(secondsBeforeTimeout);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -648,7 +719,9 @@ public class ScalingConfiguration implements Serializable, Cloneable {
         if (getSecondsUntilAutoPause() != null)
             sb.append("SecondsUntilAutoPause: ").append(getSecondsUntilAutoPause()).append(",");
         if (getTimeoutAction() != null)
-            sb.append("TimeoutAction: ").append(getTimeoutAction());
+            sb.append("TimeoutAction: ").append(getTimeoutAction()).append(",");
+        if (getSecondsBeforeTimeout() != null)
+            sb.append("SecondsBeforeTimeout: ").append(getSecondsBeforeTimeout());
         sb.append("}");
         return sb.toString();
     }
@@ -683,6 +756,10 @@ public class ScalingConfiguration implements Serializable, Cloneable {
             return false;
         if (other.getTimeoutAction() != null && other.getTimeoutAction().equals(this.getTimeoutAction()) == false)
             return false;
+        if (other.getSecondsBeforeTimeout() == null ^ this.getSecondsBeforeTimeout() == null)
+            return false;
+        if (other.getSecondsBeforeTimeout() != null && other.getSecondsBeforeTimeout().equals(this.getSecondsBeforeTimeout()) == false)
+            return false;
         return true;
     }
 
@@ -696,6 +773,7 @@ public class ScalingConfiguration implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getAutoPause() == null) ? 0 : getAutoPause().hashCode());
         hashCode = prime * hashCode + ((getSecondsUntilAutoPause() == null) ? 0 : getSecondsUntilAutoPause().hashCode());
         hashCode = prime * hashCode + ((getTimeoutAction() == null) ? 0 : getTimeoutAction().hashCode());
+        hashCode = prime * hashCode + ((getSecondsBeforeTimeout() == null) ? 0 : getSecondsBeforeTimeout().hashCode());
         return hashCode;
     }
 

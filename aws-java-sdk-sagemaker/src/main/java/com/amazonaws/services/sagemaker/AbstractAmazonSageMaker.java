@@ -229,6 +229,11 @@ public class AbstractAmazonSageMaker implements AmazonSageMaker {
     }
 
     @Override
+    public CreateStudioLifecycleConfigResult createStudioLifecycleConfig(CreateStudioLifecycleConfigRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateTrainingJobResult createTrainingJob(CreateTrainingJobRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -415,6 +420,11 @@ public class AbstractAmazonSageMaker implements AmazonSageMaker {
 
     @Override
     public DeleteProjectResult deleteProject(DeleteProjectRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteStudioLifecycleConfigResult deleteStudioLifecycleConfig(DeleteStudioLifecycleConfigRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -640,6 +650,11 @@ public class AbstractAmazonSageMaker implements AmazonSageMaker {
 
     @Override
     public DescribeProjectResult describeProject(DescribeProjectRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DescribeStudioLifecycleConfigResult describeStudioLifecycleConfig(DescribeStudioLifecycleConfigRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -930,6 +945,11 @@ public class AbstractAmazonSageMaker implements AmazonSageMaker {
 
     @Override
     public ListProjectsResult listProjects(ListProjectsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListStudioLifecycleConfigsResult listStudioLifecycleConfigs(ListStudioLifecycleConfigsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

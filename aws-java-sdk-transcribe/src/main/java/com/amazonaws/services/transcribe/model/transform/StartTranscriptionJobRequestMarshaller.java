@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.transcribe.model.transform;
 
+import java.util.Map;
 import java.util.List;
 import javax.annotation.Generated;
 
@@ -44,6 +45,8 @@ public class StartTranscriptionJobRequestMarshaller {
             .marshallLocationName("OutputKey").build();
     private static final MarshallingInfo<String> OUTPUTENCRYPTIONKMSKEYID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("OutputEncryptionKMSKeyId").build();
+    private static final MarshallingInfo<Map> KMSENCRYPTIONCONTEXT_BINDING = MarshallingInfo.builder(MarshallingType.MAP)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("KMSEncryptionContext").build();
     private static final MarshallingInfo<StructuredPojo> SETTINGS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Settings").build();
     private static final MarshallingInfo<StructuredPojo> MODELSETTINGS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
@@ -83,6 +86,7 @@ public class StartTranscriptionJobRequestMarshaller {
             protocolMarshaller.marshall(startTranscriptionJobRequest.getOutputBucketName(), OUTPUTBUCKETNAME_BINDING);
             protocolMarshaller.marshall(startTranscriptionJobRequest.getOutputKey(), OUTPUTKEY_BINDING);
             protocolMarshaller.marshall(startTranscriptionJobRequest.getOutputEncryptionKMSKeyId(), OUTPUTENCRYPTIONKMSKEYID_BINDING);
+            protocolMarshaller.marshall(startTranscriptionJobRequest.getKMSEncryptionContext(), KMSENCRYPTIONCONTEXT_BINDING);
             protocolMarshaller.marshall(startTranscriptionJobRequest.getSettings(), SETTINGS_BINDING);
             protocolMarshaller.marshall(startTranscriptionJobRequest.getModelSettings(), MODELSETTINGS_BINDING);
             protocolMarshaller.marshall(startTranscriptionJobRequest.getJobExecutionSettings(), JOBEXECUTIONSETTINGS_BINDING);

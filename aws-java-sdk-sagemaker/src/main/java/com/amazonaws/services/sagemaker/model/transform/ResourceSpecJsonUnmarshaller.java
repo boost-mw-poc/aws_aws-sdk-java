@@ -60,6 +60,10 @@ public class ResourceSpecJsonUnmarshaller implements Unmarshaller<ResourceSpec, 
                     context.nextToken();
                     resourceSpec.setInstanceType(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("LifecycleConfigArn", targetDepth)) {
+                    context.nextToken();
+                    resourceSpec.setLifecycleConfigArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

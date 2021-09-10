@@ -211,13 +211,6 @@ public interface AmazonSageMakerAsync extends AmazonSageMaker {
      * For more information, see <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/lineage-tracking.html">Amazon
      * SageMaker ML Lineage Tracking</a>.
      * </p>
-     * <note>
-     * <p>
-     * <code>CreateAction</code> can only be invoked from within an SageMaker managed environment. This includes
-     * SageMaker training jobs, processing jobs, transform jobs, and SageMaker notebooks. A call to
-     * <code>CreateAction</code> from outside one of these environments results in an error.
-     * </p>
-     * </note>
      * 
      * @param createActionRequest
      * @return A Java Future containing the result of the CreateAction operation returned by the service.
@@ -234,13 +227,6 @@ public interface AmazonSageMakerAsync extends AmazonSageMaker {
      * For more information, see <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/lineage-tracking.html">Amazon
      * SageMaker ML Lineage Tracking</a>.
      * </p>
-     * <note>
-     * <p>
-     * <code>CreateAction</code> can only be invoked from within an SageMaker managed environment. This includes
-     * SageMaker training jobs, processing jobs, transform jobs, and SageMaker notebooks. A call to
-     * <code>CreateAction</code> from outside one of these environments results in an error.
-     * </p>
-     * </note>
      * 
      * @param createActionRequest
      * @param asyncHandler
@@ -365,13 +351,6 @@ public interface AmazonSageMakerAsync extends AmazonSageMaker {
      * <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/lineage-tracking.html">Amazon SageMaker ML Lineage
      * Tracking</a>.
      * </p>
-     * <note>
-     * <p>
-     * <code>CreateArtifact</code> can only be invoked from within an SageMaker managed environment. This includes
-     * SageMaker training jobs, processing jobs, transform jobs, and SageMaker notebooks. A call to
-     * <code>CreateArtifact</code> from outside one of these environments results in an error.
-     * </p>
-     * </note>
      * 
      * @param createArtifactRequest
      * @return A Java Future containing the result of the CreateArtifact operation returned by the service.
@@ -388,13 +367,6 @@ public interface AmazonSageMakerAsync extends AmazonSageMaker {
      * <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/lineage-tracking.html">Amazon SageMaker ML Lineage
      * Tracking</a>.
      * </p>
-     * <note>
-     * <p>
-     * <code>CreateArtifact</code> can only be invoked from within an SageMaker managed environment. This includes
-     * SageMaker training jobs, processing jobs, transform jobs, and SageMaker notebooks. A call to
-     * <code>CreateArtifact</code> from outside one of these environments results in an error.
-     * </p>
-     * </note>
      * 
      * @param createArtifactRequest
      * @param asyncHandler
@@ -623,13 +595,6 @@ public interface AmazonSageMakerAsync extends AmazonSageMaker {
      * href="https://docs.aws.amazon.com/sagemaker/latest/dg/lineage-tracking.html">Amazon SageMaker ML Lineage
      * Tracking</a>.
      * </p>
-     * <note>
-     * <p>
-     * <code>CreateContext</code> can only be invoked from within an SageMaker managed environment. This includes
-     * SageMaker training jobs, processing jobs, transform jobs, and SageMaker notebooks. A call to
-     * <code>CreateContext</code> from outside one of these environments results in an error.
-     * </p>
-     * </note>
      * 
      * @param createContextRequest
      * @return A Java Future containing the result of the CreateContext operation returned by the service.
@@ -646,13 +611,6 @@ public interface AmazonSageMakerAsync extends AmazonSageMaker {
      * href="https://docs.aws.amazon.com/sagemaker/latest/dg/lineage-tracking.html">Amazon SageMaker ML Lineage
      * Tracking</a>.
      * </p>
-     * <note>
-     * <p>
-     * <code>CreateContext</code> can only be invoked from within an SageMaker managed environment. This includes
-     * SageMaker training jobs, processing jobs, transform jobs, and SageMaker notebooks. A call to
-     * <code>CreateContext</code> from outside one of these environments results in an error.
-     * </p>
-     * </note>
      * 
      * @param createContextRequest
      * @param asyncHandler
@@ -1154,11 +1112,6 @@ public interface AmazonSageMakerAsync extends AmazonSageMaker {
      * traffic weight 2 for model A and 1 for model B. Amazon SageMaker distributes two-thirds of the traffic to Model
      * A, and one-third to model B.
      * </p>
-     * <p>
-     * For an example that calls this method when deploying a model to Amazon SageMaker hosting services, see <a
-     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/ex1-deploy-model.html#ex1-deploy-model-boto">Deploy the
-     * Model to Amazon SageMaker Hosting Services (Amazon Web Services SDK for Python (Boto 3)).</a>
-     * </p>
      * <note>
      * <p>
      * When you call <a>CreateEndpoint</a>, a load call is made to DynamoDB to verify that your endpoint configuration
@@ -1202,11 +1155,6 @@ public interface AmazonSageMakerAsync extends AmazonSageMaker {
      * want to allocate to each model. For example, suppose that you want to host two models, A and B, and you assign
      * traffic weight 2 for model A and 1 for model B. Amazon SageMaker distributes two-thirds of the traffic to Model
      * A, and one-third to model B.
-     * </p>
-     * <p>
-     * For an example that calls this method when deploying a model to Amazon SageMaker hosting services, see <a
-     * href="https://docs.aws.amazon.com/sagemaker/latest/dg/ex1-deploy-model.html#ex1-deploy-model-boto">Deploy the
-     * Model to Amazon SageMaker Hosting Services (Amazon Web Services SDK for Python (Boto 3)).</a>
      * </p>
      * <note>
      * <p>
@@ -2482,6 +2430,39 @@ public interface AmazonSageMakerAsync extends AmazonSageMaker {
      */
     java.util.concurrent.Future<CreateProjectResult> createProjectAsync(CreateProjectRequest createProjectRequest,
             com.amazonaws.handlers.AsyncHandler<CreateProjectRequest, CreateProjectResult> asyncHandler);
+
+    /**
+     * <p>
+     * Creates a new Studio Lifecycle Configuration.
+     * </p>
+     * 
+     * @param createStudioLifecycleConfigRequest
+     * @return A Java Future containing the result of the CreateStudioLifecycleConfig operation returned by the service.
+     * @sample AmazonSageMakerAsync.CreateStudioLifecycleConfig
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateStudioLifecycleConfig"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateStudioLifecycleConfigResult> createStudioLifecycleConfigAsync(
+            CreateStudioLifecycleConfigRequest createStudioLifecycleConfigRequest);
+
+    /**
+     * <p>
+     * Creates a new Studio Lifecycle Configuration.
+     * </p>
+     * 
+     * @param createStudioLifecycleConfigRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateStudioLifecycleConfig operation returned by the service.
+     * @sample AmazonSageMakerAsyncHandler.CreateStudioLifecycleConfig
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/CreateStudioLifecycleConfig"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateStudioLifecycleConfigResult> createStudioLifecycleConfigAsync(
+            CreateStudioLifecycleConfigRequest createStudioLifecycleConfigRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateStudioLifecycleConfigRequest, CreateStudioLifecycleConfigResult> asyncHandler);
 
     /**
      * <p>
@@ -4123,6 +4104,43 @@ public interface AmazonSageMakerAsync extends AmazonSageMaker {
 
     /**
      * <p>
+     * Deletes the Studio Lifecycle Configuration. In order to delete the Lifecycle Configuration, there must be no
+     * running apps using the Lifecycle Configuration. You must also remove the Lifecycle Configuration from
+     * UserSettings in all Domains and UserProfiles.
+     * </p>
+     * 
+     * @param deleteStudioLifecycleConfigRequest
+     * @return A Java Future containing the result of the DeleteStudioLifecycleConfig operation returned by the service.
+     * @sample AmazonSageMakerAsync.DeleteStudioLifecycleConfig
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DeleteStudioLifecycleConfig"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteStudioLifecycleConfigResult> deleteStudioLifecycleConfigAsync(
+            DeleteStudioLifecycleConfigRequest deleteStudioLifecycleConfigRequest);
+
+    /**
+     * <p>
+     * Deletes the Studio Lifecycle Configuration. In order to delete the Lifecycle Configuration, there must be no
+     * running apps using the Lifecycle Configuration. You must also remove the Lifecycle Configuration from
+     * UserSettings in all Domains and UserProfiles.
+     * </p>
+     * 
+     * @param deleteStudioLifecycleConfigRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteStudioLifecycleConfig operation returned by the service.
+     * @sample AmazonSageMakerAsyncHandler.DeleteStudioLifecycleConfig
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DeleteStudioLifecycleConfig"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteStudioLifecycleConfigResult> deleteStudioLifecycleConfigAsync(
+            DeleteStudioLifecycleConfigRequest deleteStudioLifecycleConfigRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteStudioLifecycleConfigRequest, DeleteStudioLifecycleConfigResult> asyncHandler);
+
+    /**
+     * <p>
      * Deletes the specified tags from an Amazon SageMaker resource.
      * </p>
      * <p>
@@ -5641,6 +5659,41 @@ public interface AmazonSageMakerAsync extends AmazonSageMaker {
      */
     java.util.concurrent.Future<DescribeProjectResult> describeProjectAsync(DescribeProjectRequest describeProjectRequest,
             com.amazonaws.handlers.AsyncHandler<DescribeProjectRequest, DescribeProjectResult> asyncHandler);
+
+    /**
+     * <p>
+     * Describes the Studio Lifecycle Configuration.
+     * </p>
+     * 
+     * @param describeStudioLifecycleConfigRequest
+     * @return A Java Future containing the result of the DescribeStudioLifecycleConfig operation returned by the
+     *         service.
+     * @sample AmazonSageMakerAsync.DescribeStudioLifecycleConfig
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeStudioLifecycleConfig"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeStudioLifecycleConfigResult> describeStudioLifecycleConfigAsync(
+            DescribeStudioLifecycleConfigRequest describeStudioLifecycleConfigRequest);
+
+    /**
+     * <p>
+     * Describes the Studio Lifecycle Configuration.
+     * </p>
+     * 
+     * @param describeStudioLifecycleConfigRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeStudioLifecycleConfig operation returned by the
+     *         service.
+     * @sample AmazonSageMakerAsyncHandler.DescribeStudioLifecycleConfig
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/DescribeStudioLifecycleConfig"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeStudioLifecycleConfigResult> describeStudioLifecycleConfigAsync(
+            DescribeStudioLifecycleConfigRequest describeStudioLifecycleConfigRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeStudioLifecycleConfigRequest, DescribeStudioLifecycleConfigResult> asyncHandler);
 
     /**
      * <p>
@@ -7571,6 +7624,39 @@ public interface AmazonSageMakerAsync extends AmazonSageMaker {
      */
     java.util.concurrent.Future<ListProjectsResult> listProjectsAsync(ListProjectsRequest listProjectsRequest,
             com.amazonaws.handlers.AsyncHandler<ListProjectsRequest, ListProjectsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Lists the Studio Lifecycle Configurations in your Amazon Web Services Account.
+     * </p>
+     * 
+     * @param listStudioLifecycleConfigsRequest
+     * @return A Java Future containing the result of the ListStudioLifecycleConfigs operation returned by the service.
+     * @sample AmazonSageMakerAsync.ListStudioLifecycleConfigs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListStudioLifecycleConfigs"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListStudioLifecycleConfigsResult> listStudioLifecycleConfigsAsync(
+            ListStudioLifecycleConfigsRequest listStudioLifecycleConfigsRequest);
+
+    /**
+     * <p>
+     * Lists the Studio Lifecycle Configurations in your Amazon Web Services Account.
+     * </p>
+     * 
+     * @param listStudioLifecycleConfigsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListStudioLifecycleConfigs operation returned by the service.
+     * @sample AmazonSageMakerAsyncHandler.ListStudioLifecycleConfigs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/ListStudioLifecycleConfigs"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListStudioLifecycleConfigsResult> listStudioLifecycleConfigsAsync(
+            ListStudioLifecycleConfigsRequest listStudioLifecycleConfigsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListStudioLifecycleConfigsRequest, ListStudioLifecycleConfigsResult> asyncHandler);
 
     /**
      * <p>

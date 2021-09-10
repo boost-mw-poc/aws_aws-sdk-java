@@ -150,6 +150,8 @@ public class DataSourceParameters implements Serializable, Cloneable, Structured
      */
     private TwitterParameters twitterParameters;
 
+    private AmazonOpenSearchParameters amazonOpenSearchParameters;
+
     /**
      * <p>
      * The parameters for Elasticsearch.
@@ -951,6 +953,32 @@ public class DataSourceParameters implements Serializable, Cloneable, Structured
     }
 
     /**
+     * @param amazonOpenSearchParameters
+     */
+
+    public void setAmazonOpenSearchParameters(AmazonOpenSearchParameters amazonOpenSearchParameters) {
+        this.amazonOpenSearchParameters = amazonOpenSearchParameters;
+    }
+
+    /**
+     * @return
+     */
+
+    public AmazonOpenSearchParameters getAmazonOpenSearchParameters() {
+        return this.amazonOpenSearchParameters;
+    }
+
+    /**
+     * @param amazonOpenSearchParameters
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DataSourceParameters withAmazonOpenSearchParameters(AmazonOpenSearchParameters amazonOpenSearchParameters) {
+        setAmazonOpenSearchParameters(amazonOpenSearchParameters);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1001,7 +1029,9 @@ public class DataSourceParameters implements Serializable, Cloneable, Structured
         if (getTeradataParameters() != null)
             sb.append("TeradataParameters: ").append(getTeradataParameters()).append(",");
         if (getTwitterParameters() != null)
-            sb.append("TwitterParameters: ").append(getTwitterParameters());
+            sb.append("TwitterParameters: ").append(getTwitterParameters()).append(",");
+        if (getAmazonOpenSearchParameters() != null)
+            sb.append("AmazonOpenSearchParameters: ").append(getAmazonOpenSearchParameters());
         sb.append("}");
         return sb.toString();
     }
@@ -1097,6 +1127,10 @@ public class DataSourceParameters implements Serializable, Cloneable, Structured
             return false;
         if (other.getTwitterParameters() != null && other.getTwitterParameters().equals(this.getTwitterParameters()) == false)
             return false;
+        if (other.getAmazonOpenSearchParameters() == null ^ this.getAmazonOpenSearchParameters() == null)
+            return false;
+        if (other.getAmazonOpenSearchParameters() != null && other.getAmazonOpenSearchParameters().equals(this.getAmazonOpenSearchParameters()) == false)
+            return false;
         return true;
     }
 
@@ -1125,6 +1159,7 @@ public class DataSourceParameters implements Serializable, Cloneable, Structured
         hashCode = prime * hashCode + ((getSqlServerParameters() == null) ? 0 : getSqlServerParameters().hashCode());
         hashCode = prime * hashCode + ((getTeradataParameters() == null) ? 0 : getTeradataParameters().hashCode());
         hashCode = prime * hashCode + ((getTwitterParameters() == null) ? 0 : getTwitterParameters().hashCode());
+        hashCode = prime * hashCode + ((getAmazonOpenSearchParameters() == null) ? 0 : getAmazonOpenSearchParameters().hashCode());
         return hashCode;
     }
 

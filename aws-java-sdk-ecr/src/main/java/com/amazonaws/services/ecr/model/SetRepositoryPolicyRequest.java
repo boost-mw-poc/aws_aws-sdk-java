@@ -27,8 +27,8 @@ public class SetRepositoryPolicyRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The AWS account ID associated with the registry that contains the repository. If you do not specify a registry,
-     * the default registry is assumed.
+     * The Amazon Web Services account ID associated with the registry that contains the repository. If you do not
+     * specify a registry, the default registry is assumed.
      * </p>
      */
     private String registryId;
@@ -42,7 +42,7 @@ public class SetRepositoryPolicyRequest extends com.amazonaws.AmazonWebServiceRe
      * <p>
      * The JSON repository policy text to apply to the repository. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/repository-policy-examples.html">Amazon ECR
-     * Repository Policies</a> in the <i>Amazon Elastic Container Registry User Guide</i>.
+     * repository policies</a> in the <i>Amazon Elastic Container Registry User Guide</i>.
      * </p>
      */
     private String policyText;
@@ -57,13 +57,13 @@ public class SetRepositoryPolicyRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The AWS account ID associated with the registry that contains the repository. If you do not specify a registry,
-     * the default registry is assumed.
+     * The Amazon Web Services account ID associated with the registry that contains the repository. If you do not
+     * specify a registry, the default registry is assumed.
      * </p>
      * 
      * @param registryId
-     *        The AWS account ID associated with the registry that contains the repository. If you do not specify a
-     *        registry, the default registry is assumed.
+     *        The Amazon Web Services account ID associated with the registry that contains the repository. If you do
+     *        not specify a registry, the default registry is assumed.
      */
 
     public void setRegistryId(String registryId) {
@@ -72,12 +72,12 @@ public class SetRepositoryPolicyRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The AWS account ID associated with the registry that contains the repository. If you do not specify a registry,
-     * the default registry is assumed.
+     * The Amazon Web Services account ID associated with the registry that contains the repository. If you do not
+     * specify a registry, the default registry is assumed.
      * </p>
      * 
-     * @return The AWS account ID associated with the registry that contains the repository. If you do not specify a
-     *         registry, the default registry is assumed.
+     * @return The Amazon Web Services account ID associated with the registry that contains the repository. If you do
+     *         not specify a registry, the default registry is assumed.
      */
 
     public String getRegistryId() {
@@ -86,13 +86,13 @@ public class SetRepositoryPolicyRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The AWS account ID associated with the registry that contains the repository. If you do not specify a registry,
-     * the default registry is assumed.
+     * The Amazon Web Services account ID associated with the registry that contains the repository. If you do not
+     * specify a registry, the default registry is assumed.
      * </p>
      * 
      * @param registryId
-     *        The AWS account ID associated with the registry that contains the repository. If you do not specify a
-     *        registry, the default registry is assumed.
+     *        The Amazon Web Services account ID associated with the registry that contains the repository. If you do
+     *        not specify a registry, the default registry is assumed.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -145,13 +145,13 @@ public class SetRepositoryPolicyRequest extends com.amazonaws.AmazonWebServiceRe
      * <p>
      * The JSON repository policy text to apply to the repository. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/repository-policy-examples.html">Amazon ECR
-     * Repository Policies</a> in the <i>Amazon Elastic Container Registry User Guide</i>.
+     * repository policies</a> in the <i>Amazon Elastic Container Registry User Guide</i>.
      * </p>
      * 
      * @param policyText
      *        The JSON repository policy text to apply to the repository. For more information, see <a
      *        href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/repository-policy-examples.html">Amazon ECR
-     *        Repository Policies</a> in the <i>Amazon Elastic Container Registry User Guide</i>.
+     *        repository policies</a> in the <i>Amazon Elastic Container Registry User Guide</i>.
      */
 
     public void setPolicyText(String policyText) {
@@ -162,12 +162,12 @@ public class SetRepositoryPolicyRequest extends com.amazonaws.AmazonWebServiceRe
      * <p>
      * The JSON repository policy text to apply to the repository. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/repository-policy-examples.html">Amazon ECR
-     * Repository Policies</a> in the <i>Amazon Elastic Container Registry User Guide</i>.
+     * repository policies</a> in the <i>Amazon Elastic Container Registry User Guide</i>.
      * </p>
      * 
      * @return The JSON repository policy text to apply to the repository. For more information, see <a
      *         href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/repository-policy-examples.html">Amazon ECR
-     *         Repository Policies</a> in the <i>Amazon Elastic Container Registry User Guide</i>.
+     *         repository policies</a> in the <i>Amazon Elastic Container Registry User Guide</i>.
      */
 
     public String getPolicyText() {
@@ -178,13 +178,13 @@ public class SetRepositoryPolicyRequest extends com.amazonaws.AmazonWebServiceRe
      * <p>
      * The JSON repository policy text to apply to the repository. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/repository-policy-examples.html">Amazon ECR
-     * Repository Policies</a> in the <i>Amazon Elastic Container Registry User Guide</i>.
+     * repository policies</a> in the <i>Amazon Elastic Container Registry User Guide</i>.
      * </p>
      * 
      * @param policyText
      *        The JSON repository policy text to apply to the repository. For more information, see <a
      *        href="https://docs.aws.amazon.com/AmazonECR/latest/userguide/repository-policy-examples.html">Amazon ECR
-     *        Repository Policies</a> in the <i>Amazon Elastic Container Registry User Guide</i>.
+     *        repository policies</a> in the <i>Amazon Elastic Container Registry User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

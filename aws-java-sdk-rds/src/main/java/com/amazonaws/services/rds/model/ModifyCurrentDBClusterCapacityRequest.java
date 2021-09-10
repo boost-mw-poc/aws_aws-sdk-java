@@ -72,13 +72,9 @@ public class ModifyCurrentDBClusterCapacityRequest extends com.amazonaws.AmazonW
      * The amount of time, in seconds, that Aurora Serverless tries to find a scaling point to perform seamless scaling
      * before enforcing the timeout action. The default is 300.
      * </p>
-     * <ul>
-     * <li>
      * <p>
-     * Value must be from 10 through 600.
+     * Specify a value between 10 and 600 seconds.
      * </p>
-     * </li>
-     * </ul>
      */
     private Integer secondsBeforeTimeout;
     /**
@@ -354,23 +350,15 @@ public class ModifyCurrentDBClusterCapacityRequest extends com.amazonaws.AmazonW
      * The amount of time, in seconds, that Aurora Serverless tries to find a scaling point to perform seamless scaling
      * before enforcing the timeout action. The default is 300.
      * </p>
-     * <ul>
-     * <li>
      * <p>
-     * Value must be from 10 through 600.
+     * Specify a value between 10 and 600 seconds.
      * </p>
-     * </li>
-     * </ul>
      * 
      * @param secondsBeforeTimeout
      *        The amount of time, in seconds, that Aurora Serverless tries to find a scaling point to perform seamless
      *        scaling before enforcing the timeout action. The default is 300.</p>
-     *        <ul>
-     *        <li>
      *        <p>
-     *        Value must be from 10 through 600.
-     *        </p>
-     *        </li>
+     *        Specify a value between 10 and 600 seconds.
      */
 
     public void setSecondsBeforeTimeout(Integer secondsBeforeTimeout) {
@@ -382,22 +370,14 @@ public class ModifyCurrentDBClusterCapacityRequest extends com.amazonaws.AmazonW
      * The amount of time, in seconds, that Aurora Serverless tries to find a scaling point to perform seamless scaling
      * before enforcing the timeout action. The default is 300.
      * </p>
-     * <ul>
-     * <li>
      * <p>
-     * Value must be from 10 through 600.
+     * Specify a value between 10 and 600 seconds.
      * </p>
-     * </li>
-     * </ul>
      * 
      * @return The amount of time, in seconds, that Aurora Serverless tries to find a scaling point to perform seamless
      *         scaling before enforcing the timeout action. The default is 300.</p>
-     *         <ul>
-     *         <li>
      *         <p>
-     *         Value must be from 10 through 600.
-     *         </p>
-     *         </li>
+     *         Specify a value between 10 and 600 seconds.
      */
 
     public Integer getSecondsBeforeTimeout() {
@@ -409,23 +389,15 @@ public class ModifyCurrentDBClusterCapacityRequest extends com.amazonaws.AmazonW
      * The amount of time, in seconds, that Aurora Serverless tries to find a scaling point to perform seamless scaling
      * before enforcing the timeout action. The default is 300.
      * </p>
-     * <ul>
-     * <li>
      * <p>
-     * Value must be from 10 through 600.
+     * Specify a value between 10 and 600 seconds.
      * </p>
-     * </li>
-     * </ul>
      * 
      * @param secondsBeforeTimeout
      *        The amount of time, in seconds, that Aurora Serverless tries to find a scaling point to perform seamless
      *        scaling before enforcing the timeout action. The default is 300.</p>
-     *        <ul>
-     *        <li>
      *        <p>
-     *        Value must be from 10 through 600.
-     *        </p>
-     *        </li>
+     *        Specify a value between 10 and 600 seconds.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

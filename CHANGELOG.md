@@ -1,3 +1,28 @@
+# __1.12.66__ __2021-09-10__
+## __AWS CloudFormation__
+  - ### Features
+    - Doc only update for CloudFormation that fixes several customer-reported issues.
+
+## __Amazon EC2 Container Registry__
+  - ### Features
+    - This release updates terminology around KMS keys.
+
+## __Amazon QuickSight__
+  - ### Features
+    - Add new data source type for Amazon OpenSearch (successor to Amazon ElasticSearch).
+
+## __Amazon Relational Database Service__
+  - ### Features
+    - This release adds support for providing a custom timeout value for finding a scaling point during autoscaling in Aurora Serverless v1.
+
+## __Amazon SageMaker Service__
+  - ### Features
+    - This release adds support for "Lifecycle Configurations" to SageMaker Studio
+
+## __Amazon Transcribe Service__
+  - ### Features
+    - This release adds an API option for startTranscriptionJob and startMedicalTranscriptionJob that allows the user to specify encryption context key value pairs for batch jobs.
+
 # __1.12.65__ __2021-09-09__
 ## __Amazon CodeGuru Reviewer__
   - ### Features
