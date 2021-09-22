@@ -31,7 +31,11 @@ public class DeleteGrantRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      */
     private String grantArn;
-
+    /**
+     * <p>
+     * The Status reason for the delete request.
+     * </p>
+     */
     private String statusReason;
     /**
      * <p>
@@ -81,7 +85,12 @@ public class DeleteGrantRequest extends com.amazonaws.AmazonWebServiceRequest im
     }
 
     /**
+     * <p>
+     * The Status reason for the delete request.
+     * </p>
+     * 
      * @param statusReason
+     *        The Status reason for the delete request.
      */
 
     public void setStatusReason(String statusReason) {
@@ -89,7 +98,11 @@ public class DeleteGrantRequest extends com.amazonaws.AmazonWebServiceRequest im
     }
 
     /**
-     * @return
+     * <p>
+     * The Status reason for the delete request.
+     * </p>
+     * 
+     * @return The Status reason for the delete request.
      */
 
     public String getStatusReason() {
@@ -97,7 +110,12 @@ public class DeleteGrantRequest extends com.amazonaws.AmazonWebServiceRequest im
     }
 
     /**
+     * <p>
+     * The Status reason for the delete request.
+     * </p>
+     * 
      * @param statusReason
+     *        The Status reason for the delete request.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

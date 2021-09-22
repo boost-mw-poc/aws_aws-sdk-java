@@ -20,8 +20,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 /**
  * <p>
  * In addition to your infrastruction configuration, these settings provide an extra layer of control over your build
- * instances. For instances where Image Builder installs the SSM agent, you can choose whether to keep it for the AMI
- * that you create. You can also specify commands to run on launch for all of your build instances.
+ * instances. For instances where Image Builder installs the Systems Manager agent, you can choose whether to keep it
+ * for the AMI that you create. You can also specify commands to run on launch for all of your build instances.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/imagebuilder-2019-12-02/AdditionalInstanceConfiguration"
@@ -32,7 +32,7 @@ public class AdditionalInstanceConfiguration implements Serializable, Cloneable,
 
     /**
      * <p>
-     * Contains settings for the SSM agent on your build instance.
+     * Contains settings for the Systems Manager agent on your build instance.
      * </p>
      */
     private SystemsManagerAgent systemsManagerAgent;
@@ -42,9 +42,9 @@ public class AdditionalInstanceConfiguration implements Serializable, Cloneable,
      * </p>
      * <note>
      * <p>
-     * The userDataOverride property replaces any commands that Image Builder might have added to ensure that SSM is
-     * installed on your Linux build instance. If you override the user data, make sure that you add commands to install
-     * SSM, if it is not pre-installed on your source image.
+     * The userDataOverride property replaces any commands that Image Builder might have added to ensure that Systems
+     * Manager is installed on your Linux build instance. If you override the user data, make sure that you add commands
+     * to install Systems Manager, if it is not pre-installed on your source image.
      * </p>
      * </note>
      */
@@ -52,11 +52,11 @@ public class AdditionalInstanceConfiguration implements Serializable, Cloneable,
 
     /**
      * <p>
-     * Contains settings for the SSM agent on your build instance.
+     * Contains settings for the Systems Manager agent on your build instance.
      * </p>
      * 
      * @param systemsManagerAgent
-     *        Contains settings for the SSM agent on your build instance.
+     *        Contains settings for the Systems Manager agent on your build instance.
      */
 
     public void setSystemsManagerAgent(SystemsManagerAgent systemsManagerAgent) {
@@ -65,10 +65,10 @@ public class AdditionalInstanceConfiguration implements Serializable, Cloneable,
 
     /**
      * <p>
-     * Contains settings for the SSM agent on your build instance.
+     * Contains settings for the Systems Manager agent on your build instance.
      * </p>
      * 
-     * @return Contains settings for the SSM agent on your build instance.
+     * @return Contains settings for the Systems Manager agent on your build instance.
      */
 
     public SystemsManagerAgent getSystemsManagerAgent() {
@@ -77,11 +77,11 @@ public class AdditionalInstanceConfiguration implements Serializable, Cloneable,
 
     /**
      * <p>
-     * Contains settings for the SSM agent on your build instance.
+     * Contains settings for the Systems Manager agent on your build instance.
      * </p>
      * 
      * @param systemsManagerAgent
-     *        Contains settings for the SSM agent on your build instance.
+     *        Contains settings for the Systems Manager agent on your build instance.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -96,9 +96,9 @@ public class AdditionalInstanceConfiguration implements Serializable, Cloneable,
      * </p>
      * <note>
      * <p>
-     * The userDataOverride property replaces any commands that Image Builder might have added to ensure that SSM is
-     * installed on your Linux build instance. If you override the user data, make sure that you add commands to install
-     * SSM, if it is not pre-installed on your source image.
+     * The userDataOverride property replaces any commands that Image Builder might have added to ensure that Systems
+     * Manager is installed on your Linux build instance. If you override the user data, make sure that you add commands
+     * to install Systems Manager, if it is not pre-installed on your source image.
      * </p>
      * </note>
      * 
@@ -106,9 +106,9 @@ public class AdditionalInstanceConfiguration implements Serializable, Cloneable,
      *        Use this property to provide commands or a command script to run when you launch your build instance.</p>
      *        <note>
      *        <p>
-     *        The userDataOverride property replaces any commands that Image Builder might have added to ensure that SSM
-     *        is installed on your Linux build instance. If you override the user data, make sure that you add commands
-     *        to install SSM, if it is not pre-installed on your source image.
+     *        The userDataOverride property replaces any commands that Image Builder might have added to ensure that
+     *        Systems Manager is installed on your Linux build instance. If you override the user data, make sure that
+     *        you add commands to install Systems Manager, if it is not pre-installed on your source image.
      *        </p>
      */
 
@@ -122,9 +122,9 @@ public class AdditionalInstanceConfiguration implements Serializable, Cloneable,
      * </p>
      * <note>
      * <p>
-     * The userDataOverride property replaces any commands that Image Builder might have added to ensure that SSM is
-     * installed on your Linux build instance. If you override the user data, make sure that you add commands to install
-     * SSM, if it is not pre-installed on your source image.
+     * The userDataOverride property replaces any commands that Image Builder might have added to ensure that Systems
+     * Manager is installed on your Linux build instance. If you override the user data, make sure that you add commands
+     * to install Systems Manager, if it is not pre-installed on your source image.
      * </p>
      * </note>
      * 
@@ -132,8 +132,8 @@ public class AdditionalInstanceConfiguration implements Serializable, Cloneable,
      *         <note>
      *         <p>
      *         The userDataOverride property replaces any commands that Image Builder might have added to ensure that
-     *         SSM is installed on your Linux build instance. If you override the user data, make sure that you add
-     *         commands to install SSM, if it is not pre-installed on your source image.
+     *         Systems Manager is installed on your Linux build instance. If you override the user data, make sure that
+     *         you add commands to install Systems Manager, if it is not pre-installed on your source image.
      *         </p>
      */
 
@@ -147,9 +147,9 @@ public class AdditionalInstanceConfiguration implements Serializable, Cloneable,
      * </p>
      * <note>
      * <p>
-     * The userDataOverride property replaces any commands that Image Builder might have added to ensure that SSM is
-     * installed on your Linux build instance. If you override the user data, make sure that you add commands to install
-     * SSM, if it is not pre-installed on your source image.
+     * The userDataOverride property replaces any commands that Image Builder might have added to ensure that Systems
+     * Manager is installed on your Linux build instance. If you override the user data, make sure that you add commands
+     * to install Systems Manager, if it is not pre-installed on your source image.
      * </p>
      * </note>
      * 
@@ -157,9 +157,9 @@ public class AdditionalInstanceConfiguration implements Serializable, Cloneable,
      *        Use this property to provide commands or a command script to run when you launch your build instance.</p>
      *        <note>
      *        <p>
-     *        The userDataOverride property replaces any commands that Image Builder might have added to ensure that SSM
-     *        is installed on your Linux build instance. If you override the user data, make sure that you add commands
-     *        to install SSM, if it is not pre-installed on your source image.
+     *        The userDataOverride property replaces any commands that Image Builder might have added to ensure that
+     *        Systems Manager is installed on your Linux build instance. If you override the user data, make sure that
+     *        you add commands to install Systems Manager, if it is not pre-installed on your source image.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */

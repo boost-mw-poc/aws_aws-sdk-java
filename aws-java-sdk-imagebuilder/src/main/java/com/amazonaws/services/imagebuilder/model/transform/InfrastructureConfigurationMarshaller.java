@@ -57,6 +57,8 @@ public class InfrastructureConfigurationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("dateUpdated").build();
     private static final MarshallingInfo<Map> RESOURCETAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("resourceTags").build();
+    private static final MarshallingInfo<StructuredPojo> INSTANCEMETADATAOPTIONS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("instanceMetadataOptions").build();
     private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("tags").build();
 
@@ -90,6 +92,7 @@ public class InfrastructureConfigurationMarshaller {
             protocolMarshaller.marshall(infrastructureConfiguration.getDateCreated(), DATECREATED_BINDING);
             protocolMarshaller.marshall(infrastructureConfiguration.getDateUpdated(), DATEUPDATED_BINDING);
             protocolMarshaller.marshall(infrastructureConfiguration.getResourceTags(), RESOURCETAGS_BINDING);
+            protocolMarshaller.marshall(infrastructureConfiguration.getInstanceMetadataOptions(), INSTANCEMETADATAOPTIONS_BINDING);
             protocolMarshaller.marshall(infrastructureConfiguration.getTags(), TAGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

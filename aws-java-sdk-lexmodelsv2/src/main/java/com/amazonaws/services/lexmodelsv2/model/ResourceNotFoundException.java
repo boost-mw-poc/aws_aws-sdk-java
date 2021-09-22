@@ -15,7 +15,9 @@ package com.amazonaws.services.lexmodelsv2.model;
 import javax.annotation.Generated;
 
 /**
- * <p/>
+ * <p>
+ * You asked to describe a resource that doesn't exist. Check the resource that you are requesting and try again.
+ * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ResourceNotFoundException extends com.amazonaws.services.lexmodelsv2.model.AmazonLexModelsV2Exception {

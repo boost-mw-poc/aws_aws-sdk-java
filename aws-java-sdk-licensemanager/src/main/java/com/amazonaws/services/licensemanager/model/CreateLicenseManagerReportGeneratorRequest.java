@@ -38,13 +38,12 @@ public class CreateLicenseManagerReportGeneratorRequest extends com.amazonaws.Am
      * <ul>
      * <li>
      * <p>
-     * License configuration report - Reports on the number and details of consumed licenses for a license
-     * configuration.
+     * License configuration report - Reports the number and details of consumed licenses for a license configuration.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Resource report - Reports on the tracked licenses and resource consumption for a license configuration.
+     * Resource report - Reports the tracked licenses and resource consumption for a license configuration.
      * </p>
      * </li>
      * </ul>
@@ -128,13 +127,12 @@ public class CreateLicenseManagerReportGeneratorRequest extends com.amazonaws.Am
      * <ul>
      * <li>
      * <p>
-     * License configuration report - Reports on the number and details of consumed licenses for a license
-     * configuration.
+     * License configuration report - Reports the number and details of consumed licenses for a license configuration.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Resource report - Reports on the tracked licenses and resource consumption for a license configuration.
+     * Resource report - Reports the tracked licenses and resource consumption for a license configuration.
      * </p>
      * </li>
      * </ul>
@@ -143,13 +141,13 @@ public class CreateLicenseManagerReportGeneratorRequest extends com.amazonaws.Am
      *         <ul>
      *         <li>
      *         <p>
-     *         License configuration report - Reports on the number and details of consumed licenses for a license
+     *         License configuration report - Reports the number and details of consumed licenses for a license
      *         configuration.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         Resource report - Reports on the tracked licenses and resource consumption for a license configuration.
+     *         Resource report - Reports the tracked licenses and resource consumption for a license configuration.
      *         </p>
      *         </li>
      * @see ReportType
@@ -166,13 +164,12 @@ public class CreateLicenseManagerReportGeneratorRequest extends com.amazonaws.Am
      * <ul>
      * <li>
      * <p>
-     * License configuration report - Reports on the number and details of consumed licenses for a license
-     * configuration.
+     * License configuration report - Reports the number and details of consumed licenses for a license configuration.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Resource report - Reports on the tracked licenses and resource consumption for a license configuration.
+     * Resource report - Reports the tracked licenses and resource consumption for a license configuration.
      * </p>
      * </li>
      * </ul>
@@ -182,13 +179,13 @@ public class CreateLicenseManagerReportGeneratorRequest extends com.amazonaws.Am
      *        <ul>
      *        <li>
      *        <p>
-     *        License configuration report - Reports on the number and details of consumed licenses for a license
+     *        License configuration report - Reports the number and details of consumed licenses for a license
      *        configuration.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        Resource report - Reports on the tracked licenses and resource consumption for a license configuration.
+     *        Resource report - Reports the tracked licenses and resource consumption for a license configuration.
      *        </p>
      *        </li>
      * @see ReportType
@@ -210,13 +207,12 @@ public class CreateLicenseManagerReportGeneratorRequest extends com.amazonaws.Am
      * <ul>
      * <li>
      * <p>
-     * License configuration report - Reports on the number and details of consumed licenses for a license
-     * configuration.
+     * License configuration report - Reports the number and details of consumed licenses for a license configuration.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Resource report - Reports on the tracked licenses and resource consumption for a license configuration.
+     * Resource report - Reports the tracked licenses and resource consumption for a license configuration.
      * </p>
      * </li>
      * </ul>
@@ -231,13 +227,13 @@ public class CreateLicenseManagerReportGeneratorRequest extends com.amazonaws.Am
      *        <ul>
      *        <li>
      *        <p>
-     *        License configuration report - Reports on the number and details of consumed licenses for a license
+     *        License configuration report - Reports the number and details of consumed licenses for a license
      *        configuration.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        Resource report - Reports on the tracked licenses and resource consumption for a license configuration.
+     *        Resource report - Reports the tracked licenses and resource consumption for a license configuration.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -261,13 +257,12 @@ public class CreateLicenseManagerReportGeneratorRequest extends com.amazonaws.Am
      * <ul>
      * <li>
      * <p>
-     * License configuration report - Reports on the number and details of consumed licenses for a license
-     * configuration.
+     * License configuration report - Reports the number and details of consumed licenses for a license configuration.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Resource report - Reports on the tracked licenses and resource consumption for a license configuration.
+     * Resource report - Reports the tracked licenses and resource consumption for a license configuration.
      * </p>
      * </li>
      * </ul>
@@ -277,13 +272,13 @@ public class CreateLicenseManagerReportGeneratorRequest extends com.amazonaws.Am
      *        <ul>
      *        <li>
      *        <p>
-     *        License configuration report - Reports on the number and details of consumed licenses for a license
+     *        License configuration report - Reports the number and details of consumed licenses for a license
      *        configuration.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        Resource report - Reports on the tracked licenses and resource consumption for a license configuration.
+     *        Resource report - Reports the tracked licenses and resource consumption for a license configuration.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -302,13 +297,12 @@ public class CreateLicenseManagerReportGeneratorRequest extends com.amazonaws.Am
      * <ul>
      * <li>
      * <p>
-     * License configuration report - Reports on the number and details of consumed licenses for a license
-     * configuration.
+     * License configuration report - Reports the number and details of consumed licenses for a license configuration.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Resource report - Reports on the tracked licenses and resource consumption for a license configuration.
+     * Resource report - Reports the tracked licenses and resource consumption for a license configuration.
      * </p>
      * </li>
      * </ul>
@@ -318,13 +312,13 @@ public class CreateLicenseManagerReportGeneratorRequest extends com.amazonaws.Am
      *        <ul>
      *        <li>
      *        <p>
-     *        License configuration report - Reports on the number and details of consumed licenses for a license
+     *        License configuration report - Reports the number and details of consumed licenses for a license
      *        configuration.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        Resource report - Reports on the tracked licenses and resource consumption for a license configuration.
+     *        Resource report - Reports the tracked licenses and resource consumption for a license configuration.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

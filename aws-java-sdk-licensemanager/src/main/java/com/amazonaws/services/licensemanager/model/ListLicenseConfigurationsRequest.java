@@ -50,7 +50,7 @@ public class ListLicenseConfigurationsRequest extends com.amazonaws.AmazonWebSer
      * <ul>
      * <li>
      * <p>
-     * <code>licenseCountingType</code> - The dimension on which licenses are counted. Possible values are
+     * <code>licenseCountingType</code> - The dimension for which licenses are counted. Possible values are
      * <code>vCPU</code> | <code>Instance</code> | <code>Core</code> | <code>Socket</code>. Logical operators are
      * <code>EQUALS</code> | <code>NOT_EQUALS</code>.
      * </p>
@@ -228,7 +228,7 @@ public class ListLicenseConfigurationsRequest extends com.amazonaws.AmazonWebSer
      * <ul>
      * <li>
      * <p>
-     * <code>licenseCountingType</code> - The dimension on which licenses are counted. Possible values are
+     * <code>licenseCountingType</code> - The dimension for which licenses are counted. Possible values are
      * <code>vCPU</code> | <code>Instance</code> | <code>Core</code> | <code>Socket</code>. Logical operators are
      * <code>EQUALS</code> | <code>NOT_EQUALS</code>.
      * </p>
@@ -251,7 +251,7 @@ public class ListLicenseConfigurationsRequest extends com.amazonaws.AmazonWebSer
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>licenseCountingType</code> - The dimension on which licenses are counted. Possible values are
+     *         <code>licenseCountingType</code> - The dimension for which licenses are counted. Possible values are
      *         <code>vCPU</code> | <code>Instance</code> | <code>Core</code> | <code>Socket</code>. Logical operators
      *         are <code>EQUALS</code> | <code>NOT_EQUALS</code>.
      *         </p>
@@ -281,7 +281,7 @@ public class ListLicenseConfigurationsRequest extends com.amazonaws.AmazonWebSer
      * <ul>
      * <li>
      * <p>
-     * <code>licenseCountingType</code> - The dimension on which licenses are counted. Possible values are
+     * <code>licenseCountingType</code> - The dimension for which licenses are counted. Possible values are
      * <code>vCPU</code> | <code>Instance</code> | <code>Core</code> | <code>Socket</code>. Logical operators are
      * <code>EQUALS</code> | <code>NOT_EQUALS</code>.
      * </p>
@@ -305,7 +305,7 @@ public class ListLicenseConfigurationsRequest extends com.amazonaws.AmazonWebSer
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>licenseCountingType</code> - The dimension on which licenses are counted. Possible values are
+     *        <code>licenseCountingType</code> - The dimension for which licenses are counted. Possible values are
      *        <code>vCPU</code> | <code>Instance</code> | <code>Core</code> | <code>Socket</code>. Logical operators are
      *        <code>EQUALS</code> | <code>NOT_EQUALS</code>.
      *        </p>
@@ -340,7 +340,7 @@ public class ListLicenseConfigurationsRequest extends com.amazonaws.AmazonWebSer
      * <ul>
      * <li>
      * <p>
-     * <code>licenseCountingType</code> - The dimension on which licenses are counted. Possible values are
+     * <code>licenseCountingType</code> - The dimension for which licenses are counted. Possible values are
      * <code>vCPU</code> | <code>Instance</code> | <code>Core</code> | <code>Socket</code>. Logical operators are
      * <code>EQUALS</code> | <code>NOT_EQUALS</code>.
      * </p>
@@ -369,7 +369,7 @@ public class ListLicenseConfigurationsRequest extends com.amazonaws.AmazonWebSer
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>licenseCountingType</code> - The dimension on which licenses are counted. Possible values are
+     *        <code>licenseCountingType</code> - The dimension for which licenses are counted. Possible values are
      *        <code>vCPU</code> | <code>Instance</code> | <code>Core</code> | <code>Socket</code>. Logical operators are
      *        <code>EQUALS</code> | <code>NOT_EQUALS</code>.
      *        </p>
@@ -406,7 +406,7 @@ public class ListLicenseConfigurationsRequest extends com.amazonaws.AmazonWebSer
      * <ul>
      * <li>
      * <p>
-     * <code>licenseCountingType</code> - The dimension on which licenses are counted. Possible values are
+     * <code>licenseCountingType</code> - The dimension for which licenses are counted. Possible values are
      * <code>vCPU</code> | <code>Instance</code> | <code>Core</code> | <code>Socket</code>. Logical operators are
      * <code>EQUALS</code> | <code>NOT_EQUALS</code>.
      * </p>
@@ -430,7 +430,7 @@ public class ListLicenseConfigurationsRequest extends com.amazonaws.AmazonWebSer
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>licenseCountingType</code> - The dimension on which licenses are counted. Possible values are
+     *        <code>licenseCountingType</code> - The dimension for which licenses are counted. Possible values are
      *        <code>vCPU</code> | <code>Instance</code> | <code>Core</code> | <code>Socket</code>. Logical operators are
      *        <code>EQUALS</code> | <code>NOT_EQUALS</code>.
      *        </p>

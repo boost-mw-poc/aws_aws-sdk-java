@@ -34,7 +34,7 @@ public class CreateChannelRequest extends com.amazonaws.AmazonWebServiceRequest 
     /**
      * <p>
      * The slate used to fill gaps between programs in the schedule. You must configure filler slate if your channel
-     * uses an LINEAR PlaybackMode.
+     * uses a LINEAR PlaybackMode.
      * </p>
      */
     private SlateSource fillerSlate;
@@ -107,12 +107,12 @@ public class CreateChannelRequest extends com.amazonaws.AmazonWebServiceRequest 
     /**
      * <p>
      * The slate used to fill gaps between programs in the schedule. You must configure filler slate if your channel
-     * uses an LINEAR PlaybackMode.
+     * uses a LINEAR PlaybackMode.
      * </p>
      * 
      * @param fillerSlate
      *        The slate used to fill gaps between programs in the schedule. You must configure filler slate if your
-     *        channel uses an LINEAR PlaybackMode.
+     *        channel uses a LINEAR PlaybackMode.
      */
 
     public void setFillerSlate(SlateSource fillerSlate) {
@@ -122,11 +122,11 @@ public class CreateChannelRequest extends com.amazonaws.AmazonWebServiceRequest 
     /**
      * <p>
      * The slate used to fill gaps between programs in the schedule. You must configure filler slate if your channel
-     * uses an LINEAR PlaybackMode.
+     * uses a LINEAR PlaybackMode.
      * </p>
      * 
      * @return The slate used to fill gaps between programs in the schedule. You must configure filler slate if your
-     *         channel uses an LINEAR PlaybackMode.
+     *         channel uses a LINEAR PlaybackMode.
      */
 
     public SlateSource getFillerSlate() {
@@ -136,12 +136,12 @@ public class CreateChannelRequest extends com.amazonaws.AmazonWebServiceRequest 
     /**
      * <p>
      * The slate used to fill gaps between programs in the schedule. You must configure filler slate if your channel
-     * uses an LINEAR PlaybackMode.
+     * uses a LINEAR PlaybackMode.
      * </p>
      * 
      * @param fillerSlate
      *        The slate used to fill gaps between programs in the schedule. You must configure filler slate if your
-     *        channel uses an LINEAR PlaybackMode.
+     *        channel uses a LINEAR PlaybackMode.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

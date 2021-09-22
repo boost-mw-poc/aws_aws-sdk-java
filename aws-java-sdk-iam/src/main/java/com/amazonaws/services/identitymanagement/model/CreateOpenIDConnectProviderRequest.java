@@ -30,19 +30,21 @@ public class CreateOpenIDConnectProviderRequest extends com.amazonaws.AmazonWebS
      * The URL of the identity provider. The URL must begin with <code>https://</code> and should correspond to the
      * <code>iss</code> claim in the provider's OpenID Connect ID tokens. Per the OIDC standard, path components are
      * allowed but query parameters are not. Typically the URL consists of only a hostname, like
-     * <code>https://server.example.org</code> or <code>https://example.com</code>.
+     * <code>https://server.example.org</code> or <code>https://example.com</code>. The URL should not contain a port
+     * number.
      * </p>
      * <p>
-     * You cannot register the same provider multiple times in a single account. If you try to submit a URL that has
-     * already been used for an OpenID Connect provider in the account, you will get an error.
+     * You cannot register the same provider multiple times in a single Amazon Web Services account. If you try to
+     * submit a URL that has already been used for an OpenID Connect provider in the Amazon Web Services account, you
+     * will get an error.
      * </p>
      */
     private String url;
     /**
      * <p>
-     * A list of client IDs (also known as audiences). When a mobile or web app registers with an OpenID Connect
-     * provider, they establish a value that identifies the application. (This is the value that's sent as the
-     * <code>client_id</code> parameter on OAuth requests.)
+     * Provides a list of client IDs, also known as audiences. When a mobile or web app registers with an OpenID Connect
+     * provider, they establish a value that identifies the application. This is the value that's sent as the
+     * <code>client_id</code> parameter on OAuth requests.
      * </p>
      * <p>
      * You can register multiple client IDs with the same provider. For example, you might have multiple applications
@@ -68,10 +70,10 @@ public class CreateOpenIDConnectProviderRequest extends com.amazonaws.AmazonWebS
      * You must provide at least one thumbprint when creating an IAM OIDC provider. For example, assume that the OIDC
      * provider is <code>server.example.com</code> and the provider stores its keys at
      * https://keys.server.example.com/openid-connect. In that case, the thumbprint string would be the hex-encoded
-     * SHA-1 hash value of the certificate used by https://keys.server.example.com.
+     * SHA-1 hash value of the certificate used by <code>https://keys.server.example.com.</code>
      * </p>
      * <p>
-     * For more information about obtaining the OIDC provider's thumbprint, see <a
+     * For more information about obtaining the OIDC provider thumbprint, see <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/identity-providers-oidc-obtain-thumbprint.html">Obtaining
      * the thumbprint for an OpenID Connect provider</a> in the <i>IAM User Guide</i>.
      * </p>
@@ -98,21 +100,25 @@ public class CreateOpenIDConnectProviderRequest extends com.amazonaws.AmazonWebS
      * The URL of the identity provider. The URL must begin with <code>https://</code> and should correspond to the
      * <code>iss</code> claim in the provider's OpenID Connect ID tokens. Per the OIDC standard, path components are
      * allowed but query parameters are not. Typically the URL consists of only a hostname, like
-     * <code>https://server.example.org</code> or <code>https://example.com</code>.
+     * <code>https://server.example.org</code> or <code>https://example.com</code>. The URL should not contain a port
+     * number.
      * </p>
      * <p>
-     * You cannot register the same provider multiple times in a single account. If you try to submit a URL that has
-     * already been used for an OpenID Connect provider in the account, you will get an error.
+     * You cannot register the same provider multiple times in a single Amazon Web Services account. If you try to
+     * submit a URL that has already been used for an OpenID Connect provider in the Amazon Web Services account, you
+     * will get an error.
      * </p>
      * 
      * @param url
      *        The URL of the identity provider. The URL must begin with <code>https://</code> and should correspond to
      *        the <code>iss</code> claim in the provider's OpenID Connect ID tokens. Per the OIDC standard, path
      *        components are allowed but query parameters are not. Typically the URL consists of only a hostname, like
-     *        <code>https://server.example.org</code> or <code>https://example.com</code>.</p>
+     *        <code>https://server.example.org</code> or <code>https://example.com</code>. The URL should not contain a
+     *        port number. </p>
      *        <p>
-     *        You cannot register the same provider multiple times in a single account. If you try to submit a URL that
-     *        has already been used for an OpenID Connect provider in the account, you will get an error.
+     *        You cannot register the same provider multiple times in a single Amazon Web Services account. If you try
+     *        to submit a URL that has already been used for an OpenID Connect provider in the Amazon Web Services
+     *        account, you will get an error.
      */
 
     public void setUrl(String url) {
@@ -124,20 +130,24 @@ public class CreateOpenIDConnectProviderRequest extends com.amazonaws.AmazonWebS
      * The URL of the identity provider. The URL must begin with <code>https://</code> and should correspond to the
      * <code>iss</code> claim in the provider's OpenID Connect ID tokens. Per the OIDC standard, path components are
      * allowed but query parameters are not. Typically the URL consists of only a hostname, like
-     * <code>https://server.example.org</code> or <code>https://example.com</code>.
+     * <code>https://server.example.org</code> or <code>https://example.com</code>. The URL should not contain a port
+     * number.
      * </p>
      * <p>
-     * You cannot register the same provider multiple times in a single account. If you try to submit a URL that has
-     * already been used for an OpenID Connect provider in the account, you will get an error.
+     * You cannot register the same provider multiple times in a single Amazon Web Services account. If you try to
+     * submit a URL that has already been used for an OpenID Connect provider in the Amazon Web Services account, you
+     * will get an error.
      * </p>
      * 
      * @return The URL of the identity provider. The URL must begin with <code>https://</code> and should correspond to
      *         the <code>iss</code> claim in the provider's OpenID Connect ID tokens. Per the OIDC standard, path
      *         components are allowed but query parameters are not. Typically the URL consists of only a hostname, like
-     *         <code>https://server.example.org</code> or <code>https://example.com</code>.</p>
+     *         <code>https://server.example.org</code> or <code>https://example.com</code>. The URL should not contain a
+     *         port number. </p>
      *         <p>
-     *         You cannot register the same provider multiple times in a single account. If you try to submit a URL that
-     *         has already been used for an OpenID Connect provider in the account, you will get an error.
+     *         You cannot register the same provider multiple times in a single Amazon Web Services account. If you try
+     *         to submit a URL that has already been used for an OpenID Connect provider in the Amazon Web Services
+     *         account, you will get an error.
      */
 
     public String getUrl() {
@@ -149,21 +159,25 @@ public class CreateOpenIDConnectProviderRequest extends com.amazonaws.AmazonWebS
      * The URL of the identity provider. The URL must begin with <code>https://</code> and should correspond to the
      * <code>iss</code> claim in the provider's OpenID Connect ID tokens. Per the OIDC standard, path components are
      * allowed but query parameters are not. Typically the URL consists of only a hostname, like
-     * <code>https://server.example.org</code> or <code>https://example.com</code>.
+     * <code>https://server.example.org</code> or <code>https://example.com</code>. The URL should not contain a port
+     * number.
      * </p>
      * <p>
-     * You cannot register the same provider multiple times in a single account. If you try to submit a URL that has
-     * already been used for an OpenID Connect provider in the account, you will get an error.
+     * You cannot register the same provider multiple times in a single Amazon Web Services account. If you try to
+     * submit a URL that has already been used for an OpenID Connect provider in the Amazon Web Services account, you
+     * will get an error.
      * </p>
      * 
      * @param url
      *        The URL of the identity provider. The URL must begin with <code>https://</code> and should correspond to
      *        the <code>iss</code> claim in the provider's OpenID Connect ID tokens. Per the OIDC standard, path
      *        components are allowed but query parameters are not. Typically the URL consists of only a hostname, like
-     *        <code>https://server.example.org</code> or <code>https://example.com</code>.</p>
+     *        <code>https://server.example.org</code> or <code>https://example.com</code>. The URL should not contain a
+     *        port number. </p>
      *        <p>
-     *        You cannot register the same provider multiple times in a single account. If you try to submit a URL that
-     *        has already been used for an OpenID Connect provider in the account, you will get an error.
+     *        You cannot register the same provider multiple times in a single Amazon Web Services account. If you try
+     *        to submit a URL that has already been used for an OpenID Connect provider in the Amazon Web Services
+     *        account, you will get an error.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -174,9 +188,9 @@ public class CreateOpenIDConnectProviderRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * A list of client IDs (also known as audiences). When a mobile or web app registers with an OpenID Connect
-     * provider, they establish a value that identifies the application. (This is the value that's sent as the
-     * <code>client_id</code> parameter on OAuth requests.)
+     * Provides a list of client IDs, also known as audiences. When a mobile or web app registers with an OpenID Connect
+     * provider, they establish a value that identifies the application. This is the value that's sent as the
+     * <code>client_id</code> parameter on OAuth requests.
      * </p>
      * <p>
      * You can register multiple client IDs with the same provider. For example, you might have multiple applications
@@ -187,9 +201,9 @@ public class CreateOpenIDConnectProviderRequest extends com.amazonaws.AmazonWebS
      * client IDs up to 255 characters long.
      * </p>
      * 
-     * @return A list of client IDs (also known as audiences). When a mobile or web app registers with an OpenID Connect
-     *         provider, they establish a value that identifies the application. (This is the value that's sent as the
-     *         <code>client_id</code> parameter on OAuth requests.)</p>
+     * @return Provides a list of client IDs, also known as audiences. When a mobile or web app registers with an OpenID
+     *         Connect provider, they establish a value that identifies the application. This is the value that's sent
+     *         as the <code>client_id</code> parameter on OAuth requests.</p>
      *         <p>
      *         You can register multiple client IDs with the same provider. For example, you might have multiple
      *         applications that use the same OIDC provider. You cannot register more than 100 client IDs with a single
@@ -209,9 +223,9 @@ public class CreateOpenIDConnectProviderRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * A list of client IDs (also known as audiences). When a mobile or web app registers with an OpenID Connect
-     * provider, they establish a value that identifies the application. (This is the value that's sent as the
-     * <code>client_id</code> parameter on OAuth requests.)
+     * Provides a list of client IDs, also known as audiences. When a mobile or web app registers with an OpenID Connect
+     * provider, they establish a value that identifies the application. This is the value that's sent as the
+     * <code>client_id</code> parameter on OAuth requests.
      * </p>
      * <p>
      * You can register multiple client IDs with the same provider. For example, you might have multiple applications
@@ -223,9 +237,9 @@ public class CreateOpenIDConnectProviderRequest extends com.amazonaws.AmazonWebS
      * </p>
      * 
      * @param clientIDList
-     *        A list of client IDs (also known as audiences). When a mobile or web app registers with an OpenID Connect
-     *        provider, they establish a value that identifies the application. (This is the value that's sent as the
-     *        <code>client_id</code> parameter on OAuth requests.)</p>
+     *        Provides a list of client IDs, also known as audiences. When a mobile or web app registers with an OpenID
+     *        Connect provider, they establish a value that identifies the application. This is the value that's sent as
+     *        the <code>client_id</code> parameter on OAuth requests.</p>
      *        <p>
      *        You can register multiple client IDs with the same provider. For example, you might have multiple
      *        applications that use the same OIDC provider. You cannot register more than 100 client IDs with a single
@@ -247,9 +261,9 @@ public class CreateOpenIDConnectProviderRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * A list of client IDs (also known as audiences). When a mobile or web app registers with an OpenID Connect
-     * provider, they establish a value that identifies the application. (This is the value that's sent as the
-     * <code>client_id</code> parameter on OAuth requests.)
+     * Provides a list of client IDs, also known as audiences. When a mobile or web app registers with an OpenID Connect
+     * provider, they establish a value that identifies the application. This is the value that's sent as the
+     * <code>client_id</code> parameter on OAuth requests.
      * </p>
      * <p>
      * You can register multiple client IDs with the same provider. For example, you might have multiple applications
@@ -266,9 +280,9 @@ public class CreateOpenIDConnectProviderRequest extends com.amazonaws.AmazonWebS
      * </p>
      * 
      * @param clientIDList
-     *        A list of client IDs (also known as audiences). When a mobile or web app registers with an OpenID Connect
-     *        provider, they establish a value that identifies the application. (This is the value that's sent as the
-     *        <code>client_id</code> parameter on OAuth requests.)</p>
+     *        Provides a list of client IDs, also known as audiences. When a mobile or web app registers with an OpenID
+     *        Connect provider, they establish a value that identifies the application. This is the value that's sent as
+     *        the <code>client_id</code> parameter on OAuth requests.</p>
      *        <p>
      *        You can register multiple client IDs with the same provider. For example, you might have multiple
      *        applications that use the same OIDC provider. You cannot register more than 100 client IDs with a single
@@ -292,9 +306,9 @@ public class CreateOpenIDConnectProviderRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * A list of client IDs (also known as audiences). When a mobile or web app registers with an OpenID Connect
-     * provider, they establish a value that identifies the application. (This is the value that's sent as the
-     * <code>client_id</code> parameter on OAuth requests.)
+     * Provides a list of client IDs, also known as audiences. When a mobile or web app registers with an OpenID Connect
+     * provider, they establish a value that identifies the application. This is the value that's sent as the
+     * <code>client_id</code> parameter on OAuth requests.
      * </p>
      * <p>
      * You can register multiple client IDs with the same provider. For example, you might have multiple applications
@@ -306,9 +320,9 @@ public class CreateOpenIDConnectProviderRequest extends com.amazonaws.AmazonWebS
      * </p>
      * 
      * @param clientIDList
-     *        A list of client IDs (also known as audiences). When a mobile or web app registers with an OpenID Connect
-     *        provider, they establish a value that identifies the application. (This is the value that's sent as the
-     *        <code>client_id</code> parameter on OAuth requests.)</p>
+     *        Provides a list of client IDs, also known as audiences. When a mobile or web app registers with an OpenID
+     *        Connect provider, they establish a value that identifies the application. This is the value that's sent as
+     *        the <code>client_id</code> parameter on OAuth requests.</p>
      *        <p>
      *        You can register multiple client IDs with the same provider. For example, you might have multiple
      *        applications that use the same OIDC provider. You cannot register more than 100 client IDs with a single
@@ -339,10 +353,10 @@ public class CreateOpenIDConnectProviderRequest extends com.amazonaws.AmazonWebS
      * You must provide at least one thumbprint when creating an IAM OIDC provider. For example, assume that the OIDC
      * provider is <code>server.example.com</code> and the provider stores its keys at
      * https://keys.server.example.com/openid-connect. In that case, the thumbprint string would be the hex-encoded
-     * SHA-1 hash value of the certificate used by https://keys.server.example.com.
+     * SHA-1 hash value of the certificate used by <code>https://keys.server.example.com.</code>
      * </p>
      * <p>
-     * For more information about obtaining the OIDC provider's thumbprint, see <a
+     * For more information about obtaining the OIDC provider thumbprint, see <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/identity-providers-oidc-obtain-thumbprint.html">Obtaining
      * the thumbprint for an OpenID Connect provider</a> in the <i>IAM User Guide</i>.
      * </p>
@@ -360,10 +374,10 @@ public class CreateOpenIDConnectProviderRequest extends com.amazonaws.AmazonWebS
      *         You must provide at least one thumbprint when creating an IAM OIDC provider. For example, assume that the
      *         OIDC provider is <code>server.example.com</code> and the provider stores its keys at
      *         https://keys.server.example.com/openid-connect. In that case, the thumbprint string would be the
-     *         hex-encoded SHA-1 hash value of the certificate used by https://keys.server.example.com.
+     *         hex-encoded SHA-1 hash value of the certificate used by <code>https://keys.server.example.com.</code>
      *         </p>
      *         <p>
-     *         For more information about obtaining the OIDC provider's thumbprint, see <a
+     *         For more information about obtaining the OIDC provider thumbprint, see <a
      *         href="https://docs.aws.amazon.com/IAM/latest/UserGuide/identity-providers-oidc-obtain-thumbprint.html"
      *         >Obtaining the thumbprint for an OpenID Connect provider</a> in the <i>IAM User Guide</i>.
      */
@@ -389,10 +403,10 @@ public class CreateOpenIDConnectProviderRequest extends com.amazonaws.AmazonWebS
      * You must provide at least one thumbprint when creating an IAM OIDC provider. For example, assume that the OIDC
      * provider is <code>server.example.com</code> and the provider stores its keys at
      * https://keys.server.example.com/openid-connect. In that case, the thumbprint string would be the hex-encoded
-     * SHA-1 hash value of the certificate used by https://keys.server.example.com.
+     * SHA-1 hash value of the certificate used by <code>https://keys.server.example.com.</code>
      * </p>
      * <p>
-     * For more information about obtaining the OIDC provider's thumbprint, see <a
+     * For more information about obtaining the OIDC provider thumbprint, see <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/identity-providers-oidc-obtain-thumbprint.html">Obtaining
      * the thumbprint for an OpenID Connect provider</a> in the <i>IAM User Guide</i>.
      * </p>
@@ -410,10 +424,10 @@ public class CreateOpenIDConnectProviderRequest extends com.amazonaws.AmazonWebS
      *        You must provide at least one thumbprint when creating an IAM OIDC provider. For example, assume that the
      *        OIDC provider is <code>server.example.com</code> and the provider stores its keys at
      *        https://keys.server.example.com/openid-connect. In that case, the thumbprint string would be the
-     *        hex-encoded SHA-1 hash value of the certificate used by https://keys.server.example.com.
+     *        hex-encoded SHA-1 hash value of the certificate used by <code>https://keys.server.example.com.</code>
      *        </p>
      *        <p>
-     *        For more information about obtaining the OIDC provider's thumbprint, see <a
+     *        For more information about obtaining the OIDC provider thumbprint, see <a
      *        href="https://docs.aws.amazon.com/IAM/latest/UserGuide/identity-providers-oidc-obtain-thumbprint.html"
      *        >Obtaining the thumbprint for an OpenID Connect provider</a> in the <i>IAM User Guide</i>.
      */
@@ -441,10 +455,10 @@ public class CreateOpenIDConnectProviderRequest extends com.amazonaws.AmazonWebS
      * You must provide at least one thumbprint when creating an IAM OIDC provider. For example, assume that the OIDC
      * provider is <code>server.example.com</code> and the provider stores its keys at
      * https://keys.server.example.com/openid-connect. In that case, the thumbprint string would be the hex-encoded
-     * SHA-1 hash value of the certificate used by https://keys.server.example.com.
+     * SHA-1 hash value of the certificate used by <code>https://keys.server.example.com.</code>
      * </p>
      * <p>
-     * For more information about obtaining the OIDC provider's thumbprint, see <a
+     * For more information about obtaining the OIDC provider thumbprint, see <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/identity-providers-oidc-obtain-thumbprint.html">Obtaining
      * the thumbprint for an OpenID Connect provider</a> in the <i>IAM User Guide</i>.
      * </p>
@@ -467,10 +481,10 @@ public class CreateOpenIDConnectProviderRequest extends com.amazonaws.AmazonWebS
      *        You must provide at least one thumbprint when creating an IAM OIDC provider. For example, assume that the
      *        OIDC provider is <code>server.example.com</code> and the provider stores its keys at
      *        https://keys.server.example.com/openid-connect. In that case, the thumbprint string would be the
-     *        hex-encoded SHA-1 hash value of the certificate used by https://keys.server.example.com.
+     *        hex-encoded SHA-1 hash value of the certificate used by <code>https://keys.server.example.com.</code>
      *        </p>
      *        <p>
-     *        For more information about obtaining the OIDC provider's thumbprint, see <a
+     *        For more information about obtaining the OIDC provider thumbprint, see <a
      *        href="https://docs.aws.amazon.com/IAM/latest/UserGuide/identity-providers-oidc-obtain-thumbprint.html"
      *        >Obtaining the thumbprint for an OpenID Connect provider</a> in the <i>IAM User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -500,10 +514,10 @@ public class CreateOpenIDConnectProviderRequest extends com.amazonaws.AmazonWebS
      * You must provide at least one thumbprint when creating an IAM OIDC provider. For example, assume that the OIDC
      * provider is <code>server.example.com</code> and the provider stores its keys at
      * https://keys.server.example.com/openid-connect. In that case, the thumbprint string would be the hex-encoded
-     * SHA-1 hash value of the certificate used by https://keys.server.example.com.
+     * SHA-1 hash value of the certificate used by <code>https://keys.server.example.com.</code>
      * </p>
      * <p>
-     * For more information about obtaining the OIDC provider's thumbprint, see <a
+     * For more information about obtaining the OIDC provider thumbprint, see <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/identity-providers-oidc-obtain-thumbprint.html">Obtaining
      * the thumbprint for an OpenID Connect provider</a> in the <i>IAM User Guide</i>.
      * </p>
@@ -521,10 +535,10 @@ public class CreateOpenIDConnectProviderRequest extends com.amazonaws.AmazonWebS
      *        You must provide at least one thumbprint when creating an IAM OIDC provider. For example, assume that the
      *        OIDC provider is <code>server.example.com</code> and the provider stores its keys at
      *        https://keys.server.example.com/openid-connect. In that case, the thumbprint string would be the
-     *        hex-encoded SHA-1 hash value of the certificate used by https://keys.server.example.com.
+     *        hex-encoded SHA-1 hash value of the certificate used by <code>https://keys.server.example.com.</code>
      *        </p>
      *        <p>
-     *        For more information about obtaining the OIDC provider's thumbprint, see <a
+     *        For more information about obtaining the OIDC provider thumbprint, see <a
      *        href="https://docs.aws.amazon.com/IAM/latest/UserGuide/identity-providers-oidc-obtain-thumbprint.html"
      *        >Obtaining the thumbprint for an OpenID Connect provider</a> in the <i>IAM User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.

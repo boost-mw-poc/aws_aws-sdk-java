@@ -52,6 +52,10 @@ public class EgressEndpointJsonUnmarshaller implements Unmarshaller<EgressEndpoi
                     context.nextToken();
                     egressEndpoint.setPackagingConfigurationId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("status", targetDepth)) {
+                    context.nextToken();
+                    egressEndpoint.setStatus(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("url", targetDepth)) {
                     context.nextToken();
                     egressEndpoint.setUrl(context.getUnmarshaller(String.class).unmarshall(context));

@@ -36,8 +36,8 @@ public class Issuer implements Serializable, Cloneable, StructuredPojo {
     private String name;
     /**
      * <p>
-     * Asymmetric CMK from AWS Key Management Service. The CMK must have a key usage of sign and verify, and support the
-     * RSASSA-PSS SHA-256 signing algorithm.
+     * Asymmetric KMS key from Key Management Service. The KMS key must have a key usage of sign and verify, and support
+     * the RSASSA-PSS SHA-256 signing algorithm.
      * </p>
      */
     private String signKey;
@@ -84,12 +84,12 @@ public class Issuer implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Asymmetric CMK from AWS Key Management Service. The CMK must have a key usage of sign and verify, and support the
-     * RSASSA-PSS SHA-256 signing algorithm.
+     * Asymmetric KMS key from Key Management Service. The KMS key must have a key usage of sign and verify, and support
+     * the RSASSA-PSS SHA-256 signing algorithm.
      * </p>
      * 
      * @param signKey
-     *        Asymmetric CMK from AWS Key Management Service. The CMK must have a key usage of sign and verify, and
+     *        Asymmetric KMS key from Key Management Service. The KMS key must have a key usage of sign and verify, and
      *        support the RSASSA-PSS SHA-256 signing algorithm.
      */
 
@@ -99,11 +99,11 @@ public class Issuer implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Asymmetric CMK from AWS Key Management Service. The CMK must have a key usage of sign and verify, and support the
-     * RSASSA-PSS SHA-256 signing algorithm.
+     * Asymmetric KMS key from Key Management Service. The KMS key must have a key usage of sign and verify, and support
+     * the RSASSA-PSS SHA-256 signing algorithm.
      * </p>
      * 
-     * @return Asymmetric CMK from AWS Key Management Service. The CMK must have a key usage of sign and verify, and
+     * @return Asymmetric KMS key from Key Management Service. The KMS key must have a key usage of sign and verify, and
      *         support the RSASSA-PSS SHA-256 signing algorithm.
      */
 
@@ -113,12 +113,12 @@ public class Issuer implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Asymmetric CMK from AWS Key Management Service. The CMK must have a key usage of sign and verify, and support the
-     * RSASSA-PSS SHA-256 signing algorithm.
+     * Asymmetric KMS key from Key Management Service. The KMS key must have a key usage of sign and verify, and support
+     * the RSASSA-PSS SHA-256 signing algorithm.
      * </p>
      * 
      * @param signKey
-     *        Asymmetric CMK from AWS Key Management Service. The CMK must have a key usage of sign and verify, and
+     *        Asymmetric KMS key from Key Management Service. The KMS key must have a key usage of sign and verify, and
      *        support the RSASSA-PSS SHA-256 signing algorithm.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

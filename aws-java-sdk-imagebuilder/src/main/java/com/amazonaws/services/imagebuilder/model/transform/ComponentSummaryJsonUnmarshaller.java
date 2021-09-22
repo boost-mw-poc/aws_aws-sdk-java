@@ -70,6 +70,10 @@ public class ComponentSummaryJsonUnmarshaller implements Unmarshaller<ComponentS
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("state", targetDepth)) {
+                    context.nextToken();
+                    componentSummary.setState(ComponentStateJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("type", targetDepth)) {
                     context.nextToken();
                     componentSummary.setType(context.getUnmarshaller(String.class).unmarshall(context));

@@ -53,6 +53,11 @@ public class CreatePolicyRequest extends com.amazonaws.AmazonWebServiceRequest i
      * slashes. In addition, it can contain any ASCII character from the ! (<code>\u0021</code>) through the DEL
      * character (<code>\u007F</code>), including most punctuation characters, digits, and upper and lowercased letters.
      * </p>
+     * <note>
+     * <p>
+     * You cannot use an asterisk (*) in the path name.
+     * </p>
+     * </note>
      */
     private String path;
     /**
@@ -208,6 +213,11 @@ public class CreatePolicyRequest extends com.amazonaws.AmazonWebServiceRequest i
      * slashes. In addition, it can contain any ASCII character from the ! (<code>\u0021</code>) through the DEL
      * character (<code>\u007F</code>), including most punctuation characters, digits, and upper and lowercased letters.
      * </p>
+     * <note>
+     * <p>
+     * You cannot use an asterisk (*) in the path name.
+     * </p>
+     * </note>
      * 
      * @param path
      *        The path for the policy.</p>
@@ -225,6 +235,11 @@ public class CreatePolicyRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        forward slashes. In addition, it can contain any ASCII character from the ! (<code>\u0021</code>) through
      *        the DEL character (<code>\u007F</code>), including most punctuation characters, digits, and upper and
      *        lowercased letters.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        You cannot use an asterisk (*) in the path name.
+     *        </p>
      */
 
     public void setPath(String path) {
@@ -249,6 +264,11 @@ public class CreatePolicyRequest extends com.amazonaws.AmazonWebServiceRequest i
      * slashes. In addition, it can contain any ASCII character from the ! (<code>\u0021</code>) through the DEL
      * character (<code>\u007F</code>), including most punctuation characters, digits, and upper and lowercased letters.
      * </p>
+     * <note>
+     * <p>
+     * You cannot use an asterisk (*) in the path name.
+     * </p>
+     * </note>
      * 
      * @return The path for the policy.</p>
      *         <p>
@@ -265,6 +285,11 @@ public class CreatePolicyRequest extends com.amazonaws.AmazonWebServiceRequest i
      *         forward slashes. In addition, it can contain any ASCII character from the ! (<code>\u0021</code>) through
      *         the DEL character (<code>\u007F</code>), including most punctuation characters, digits, and upper and
      *         lowercased letters.
+     *         </p>
+     *         <note>
+     *         <p>
+     *         You cannot use an asterisk (*) in the path name.
+     *         </p>
      */
 
     public String getPath() {
@@ -289,6 +314,11 @@ public class CreatePolicyRequest extends com.amazonaws.AmazonWebServiceRequest i
      * slashes. In addition, it can contain any ASCII character from the ! (<code>\u0021</code>) through the DEL
      * character (<code>\u007F</code>), including most punctuation characters, digits, and upper and lowercased letters.
      * </p>
+     * <note>
+     * <p>
+     * You cannot use an asterisk (*) in the path name.
+     * </p>
+     * </note>
      * 
      * @param path
      *        The path for the policy.</p>
@@ -306,6 +336,11 @@ public class CreatePolicyRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        forward slashes. In addition, it can contain any ASCII character from the ! (<code>\u0021</code>) through
      *        the DEL character (<code>\u007F</code>), including most punctuation characters, digits, and upper and
      *        lowercased letters.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        You cannot use an asterisk (*) in the path name.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

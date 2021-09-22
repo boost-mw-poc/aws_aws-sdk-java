@@ -399,8 +399,33 @@ public interface AWSimagebuilderAsync extends AWSimagebuilder {
 
     /**
      * <p>
-     * Deletes an image.
+     * Deletes an Image Builder image resource. This does not delete any EC2 AMIs or ECR container images that are
+     * created during the image build process. You must clean those up separately, using the appropriate Amazon EC2 or
+     * Amazon ECR console actions, or API or CLI commands.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * To deregister an EC2 Linux AMI, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/deregister-ami.html">Deregister your Linux AMI</a> in
+     * the <i> <i>Amazon EC2 User Guide</i> </i>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * To deregister an EC2 Windows AMI, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/deregister-ami.html">Deregister your Windows AMI</a>
+     * in the <i> <i>Amazon EC2 Windows Guide</i> </i>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * To delete a container image from Amazon ECR, see <a
+     * href="https://docs.aws.amazon.com/https:/docs.aws.amazon.comAmazonECR/latest/userguide/delete_image.html"
+     * >Deleting an image</a> in the <i>Amazon ECR User Guide</i>.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param deleteImageRequest
      * @return A Java Future containing the result of the DeleteImage operation returned by the service.
@@ -412,8 +437,33 @@ public interface AWSimagebuilderAsync extends AWSimagebuilder {
 
     /**
      * <p>
-     * Deletes an image.
+     * Deletes an Image Builder image resource. This does not delete any EC2 AMIs or ECR container images that are
+     * created during the image build process. You must clean those up separately, using the appropriate Amazon EC2 or
+     * Amazon ECR console actions, or API or CLI commands.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * To deregister an EC2 Linux AMI, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/deregister-ami.html">Deregister your Linux AMI</a> in
+     * the <i> <i>Amazon EC2 User Guide</i> </i>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * To deregister an EC2 Windows AMI, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/deregister-ami.html">Deregister your Windows AMI</a>
+     * in the <i> <i>Amazon EC2 Windows Guide</i> </i>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * To delete a container image from Amazon ECR, see <a
+     * href="https://docs.aws.amazon.com/https:/docs.aws.amazon.comAmazonECR/latest/userguide/delete_image.html"
+     * >Deleting an image</a> in the <i>Amazon ECR User Guide</i>.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param deleteImageRequest
      * @param asyncHandler
@@ -917,11 +967,9 @@ public interface AWSimagebuilderAsync extends AWSimagebuilder {
      * values for the first three, and can filter on all of them.
      * </p>
      * <p>
-     * <b>Filtering:</b> When you retrieve or reference a resource with a semantic version, you can use wildcards (x) to
-     * filter your results. When you use a wildcard in any node, all nodes to the right of the first wildcard must also
-     * be wildcards. For example, specifying "1.2.x", or "1.x.x" works to filter list results, but neither "1.x.2", nor
-     * "x.2.x" will work. You do not have to specify the build - Image Builder automatically uses a wildcard for that,
-     * if applicable.
+     * <b>Filtering:</b> With semantic versioning, you have the flexibility to use wildcards (x) to specify the most
+     * recent versions or nodes when selecting the source image or components for your recipe. When you use a wildcard
+     * in any node, all nodes to the right of the first wildcard must also be wildcards.
      * </p>
      * </note>
      * 
@@ -944,11 +992,9 @@ public interface AWSimagebuilderAsync extends AWSimagebuilder {
      * values for the first three, and can filter on all of them.
      * </p>
      * <p>
-     * <b>Filtering:</b> When you retrieve or reference a resource with a semantic version, you can use wildcards (x) to
-     * filter your results. When you use a wildcard in any node, all nodes to the right of the first wildcard must also
-     * be wildcards. For example, specifying "1.2.x", or "1.x.x" works to filter list results, but neither "1.x.2", nor
-     * "x.2.x" will work. You do not have to specify the build - Image Builder automatically uses a wildcard for that,
-     * if applicable.
+     * <b>Filtering:</b> With semantic versioning, you have the flexibility to use wildcards (x) to specify the most
+     * recent versions or nodes when selecting the source image or components for your recipe. When you use a wildcard
+     * in any node, all nodes to the right of the first wildcard must also be wildcards.
      * </p>
      * </note>
      * 
@@ -976,11 +1022,9 @@ public interface AWSimagebuilderAsync extends AWSimagebuilder {
      * values for the first three, and can filter on all of them.
      * </p>
      * <p>
-     * <b>Filtering:</b> When you retrieve or reference a resource with a semantic version, you can use wildcards (x) to
-     * filter your results. When you use a wildcard in any node, all nodes to the right of the first wildcard must also
-     * be wildcards. For example, specifying "1.2.x", or "1.x.x" works to filter list results, but neither "1.x.2", nor
-     * "x.2.x" will work. You do not have to specify the build - Image Builder automatically uses a wildcard for that,
-     * if applicable.
+     * <b>Filtering:</b> With semantic versioning, you have the flexibility to use wildcards (x) to specify the most
+     * recent versions or nodes when selecting the source image or components for your recipe. When you use a wildcard
+     * in any node, all nodes to the right of the first wildcard must also be wildcards.
      * </p>
      * </note>
      * 
@@ -1002,11 +1046,9 @@ public interface AWSimagebuilderAsync extends AWSimagebuilder {
      * values for the first three, and can filter on all of them.
      * </p>
      * <p>
-     * <b>Filtering:</b> When you retrieve or reference a resource with a semantic version, you can use wildcards (x) to
-     * filter your results. When you use a wildcard in any node, all nodes to the right of the first wildcard must also
-     * be wildcards. For example, specifying "1.2.x", or "1.x.x" works to filter list results, but neither "1.x.2", nor
-     * "x.2.x" will work. You do not have to specify the build - Image Builder automatically uses a wildcard for that,
-     * if applicable.
+     * <b>Filtering:</b> With semantic versioning, you have the flexibility to use wildcards (x) to specify the most
+     * recent versions or nodes when selecting the source image or components for your recipe. When you use a wildcard
+     * in any node, all nodes to the right of the first wildcard must also be wildcards.
      * </p>
      * </note>
      * 
@@ -1122,8 +1164,8 @@ public interface AWSimagebuilderAsync extends AWSimagebuilder {
 
     /**
      * <p>
-     * List the Packages that are associated with an Image Build Version, as determined by Amazon EC2 Systems Manager
-     * Inventory at build time.
+     * List the Packages that are associated with an Image Build Version, as determined by Amazon Web Services Systems
+     * Manager Inventory at build time.
      * </p>
      * 
      * @param listImagePackagesRequest
@@ -1136,8 +1178,8 @@ public interface AWSimagebuilderAsync extends AWSimagebuilder {
 
     /**
      * <p>
-     * List the Packages that are associated with an Image Build Version, as determined by Amazon EC2 Systems Manager
-     * Inventory at build time.
+     * List the Packages that are associated with an Image Build Version, as determined by Amazon Web Services Systems
+     * Manager Inventory at build time.
      * </p>
      * 
      * @param listImagePackagesRequest

@@ -34,7 +34,11 @@ public class ReceivedMetadata implements Serializable, Cloneable, StructuredPojo
      * </p>
      */
     private String receivedStatus;
-
+    /**
+     * <p>
+     * Received status reason.
+     * </p>
+     */
     private String receivedStatusReason;
     /**
      * <p>
@@ -103,7 +107,12 @@ public class ReceivedMetadata implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * Received status reason.
+     * </p>
+     * 
      * @param receivedStatusReason
+     *        Received status reason.
      */
 
     public void setReceivedStatusReason(String receivedStatusReason) {
@@ -111,7 +120,11 @@ public class ReceivedMetadata implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
-     * @return
+     * <p>
+     * Received status reason.
+     * </p>
+     * 
+     * @return Received status reason.
      */
 
     public String getReceivedStatusReason() {
@@ -119,7 +132,12 @@ public class ReceivedMetadata implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * Received status reason.
+     * </p>
+     * 
      * @param receivedStatusReason
+     *        Received status reason.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -45,6 +45,8 @@ public class ComponentMarshaller {
             .marshallLocationName("platform").build();
     private static final MarshallingInfo<List> SUPPORTEDOSVERSIONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("supportedOsVersions").build();
+    private static final MarshallingInfo<StructuredPojo> STATE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("state").build();
     private static final MarshallingInfo<List> PARAMETERS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("parameters").build();
     private static final MarshallingInfo<String> OWNER_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
@@ -84,6 +86,7 @@ public class ComponentMarshaller {
             protocolMarshaller.marshall(component.getType(), TYPE_BINDING);
             protocolMarshaller.marshall(component.getPlatform(), PLATFORM_BINDING);
             protocolMarshaller.marshall(component.getSupportedOsVersions(), SUPPORTEDOSVERSIONS_BINDING);
+            protocolMarshaller.marshall(component.getState(), STATE_BINDING);
             protocolMarshaller.marshall(component.getParameters(), PARAMETERS_BINDING);
             protocolMarshaller.marshall(component.getOwner(), OWNER_BINDING);
             protocolMarshaller.marshall(component.getData(), DATA_BINDING);

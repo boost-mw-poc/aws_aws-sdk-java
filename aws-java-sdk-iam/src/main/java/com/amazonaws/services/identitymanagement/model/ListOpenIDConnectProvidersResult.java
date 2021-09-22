@@ -28,17 +28,17 @@ public class ListOpenIDConnectProvidersResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The list of IAM OIDC provider resource objects defined in the account.
+     * The list of IAM OIDC provider resource objects defined in the Amazon Web Services account.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<OpenIDConnectProviderListEntry> openIDConnectProviderList;
 
     /**
      * <p>
-     * The list of IAM OIDC provider resource objects defined in the account.
+     * The list of IAM OIDC provider resource objects defined in the Amazon Web Services account.
      * </p>
      * 
-     * @return The list of IAM OIDC provider resource objects defined in the account.
+     * @return The list of IAM OIDC provider resource objects defined in the Amazon Web Services account.
      */
 
     public java.util.List<OpenIDConnectProviderListEntry> getOpenIDConnectProviderList() {
@@ -50,11 +50,11 @@ public class ListOpenIDConnectProvidersResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The list of IAM OIDC provider resource objects defined in the account.
+     * The list of IAM OIDC provider resource objects defined in the Amazon Web Services account.
      * </p>
      * 
      * @param openIDConnectProviderList
-     *        The list of IAM OIDC provider resource objects defined in the account.
+     *        The list of IAM OIDC provider resource objects defined in the Amazon Web Services account.
      */
 
     public void setOpenIDConnectProviderList(java.util.Collection<OpenIDConnectProviderListEntry> openIDConnectProviderList) {
@@ -68,7 +68,7 @@ public class ListOpenIDConnectProvidersResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The list of IAM OIDC provider resource objects defined in the account.
+     * The list of IAM OIDC provider resource objects defined in the Amazon Web Services account.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -77,7 +77,7 @@ public class ListOpenIDConnectProvidersResult extends com.amazonaws.AmazonWebSer
      * </p>
      * 
      * @param openIDConnectProviderList
-     *        The list of IAM OIDC provider resource objects defined in the account.
+     *        The list of IAM OIDC provider resource objects defined in the Amazon Web Services account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -93,11 +93,11 @@ public class ListOpenIDConnectProvidersResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The list of IAM OIDC provider resource objects defined in the account.
+     * The list of IAM OIDC provider resource objects defined in the Amazon Web Services account.
      * </p>
      * 
      * @param openIDConnectProviderList
-     *        The list of IAM OIDC provider resource objects defined in the account.
+     *        The list of IAM OIDC provider resource objects defined in the Amazon Web Services account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

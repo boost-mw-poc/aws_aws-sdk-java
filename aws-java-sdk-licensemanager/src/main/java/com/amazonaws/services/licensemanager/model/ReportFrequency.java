@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Details on how frequently reports are generated.
+ * Details about how frequently reports are generated.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/license-manager-2018-08-01/ReportFrequency" target="_top">AWS
@@ -30,8 +30,8 @@ public class ReportFrequency implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Number of times within the frequency period that a report will be generated. Currently only <code>1</code> is
-     * supported.
+     * Number of times within the frequency period that a report is generated. The only supported value is
+     * <code>1</code>.
      * </p>
      */
     private Integer value;
@@ -44,13 +44,13 @@ public class ReportFrequency implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Number of times within the frequency period that a report will be generated. Currently only <code>1</code> is
-     * supported.
+     * Number of times within the frequency period that a report is generated. The only supported value is
+     * <code>1</code>.
      * </p>
      * 
      * @param value
-     *        Number of times within the frequency period that a report will be generated. Currently only <code>1</code>
-     *        is supported.
+     *        Number of times within the frequency period that a report is generated. The only supported value is
+     *        <code>1</code>.
      */
 
     public void setValue(Integer value) {
@@ -59,12 +59,12 @@ public class ReportFrequency implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Number of times within the frequency period that a report will be generated. Currently only <code>1</code> is
-     * supported.
+     * Number of times within the frequency period that a report is generated. The only supported value is
+     * <code>1</code>.
      * </p>
      * 
-     * @return Number of times within the frequency period that a report will be generated. Currently only
-     *         <code>1</code> is supported.
+     * @return Number of times within the frequency period that a report is generated. The only supported value is
+     *         <code>1</code>.
      */
 
     public Integer getValue() {
@@ -73,13 +73,13 @@ public class ReportFrequency implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Number of times within the frequency period that a report will be generated. Currently only <code>1</code> is
-     * supported.
+     * Number of times within the frequency period that a report is generated. The only supported value is
+     * <code>1</code>.
      * </p>
      * 
      * @param value
-     *        Number of times within the frequency period that a report will be generated. Currently only <code>1</code>
-     *        is supported.
+     *        Number of times within the frequency period that a report is generated. The only supported value is
+     *        <code>1</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -70,7 +70,7 @@ public class UpdateInfrastructureConfigurationRequest extends com.amazonaws.Amaz
     private Logging logging;
     /**
      * <p>
-     * The key pair of the infrastructure configuration. This can be used to log on to and debug the instance used to
+     * The key pair of the infrastructure configuration. You can use this to log on to and debug the instance used to
      * create your image.
      * </p>
      */
@@ -100,6 +100,29 @@ public class UpdateInfrastructureConfigurationRequest extends com.amazonaws.Amaz
      * </p>
      */
     private java.util.Map<String, String> resourceTags;
+    /**
+     * <p>
+     * The instance metadata options that you can set for the HTTP requests that pipeline builds use to launch EC2 build
+     * and test instances. For more information about instance metadata options, see one of the following links:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-options.html">Configure
+     * the instance metadata options</a> in the <i> <i>Amazon EC2 User Guide</i> </i> for Linux instances.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/configuring-instance-metadata-options.html">
+     * Configure the instance metadata options</a> in the <i> <i>Amazon EC2 Windows Guide</i> </i> for Windows
+     * instances.
+     * </p>
+     * </li>
+     * </ul>
+     */
+    private InstanceMetadataOptions instanceMetadataOptions;
 
     /**
      * <p>
@@ -451,12 +474,12 @@ public class UpdateInfrastructureConfigurationRequest extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * The key pair of the infrastructure configuration. This can be used to log on to and debug the instance used to
+     * The key pair of the infrastructure configuration. You can use this to log on to and debug the instance used to
      * create your image.
      * </p>
      * 
      * @param keyPair
-     *        The key pair of the infrastructure configuration. This can be used to log on to and debug the instance
+     *        The key pair of the infrastructure configuration. You can use this to log on to and debug the instance
      *        used to create your image.
      */
 
@@ -466,11 +489,11 @@ public class UpdateInfrastructureConfigurationRequest extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * The key pair of the infrastructure configuration. This can be used to log on to and debug the instance used to
+     * The key pair of the infrastructure configuration. You can use this to log on to and debug the instance used to
      * create your image.
      * </p>
      * 
-     * @return The key pair of the infrastructure configuration. This can be used to log on to and debug the instance
+     * @return The key pair of the infrastructure configuration. You can use this to log on to and debug the instance
      *         used to create your image.
      */
 
@@ -480,12 +503,12 @@ public class UpdateInfrastructureConfigurationRequest extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * The key pair of the infrastructure configuration. This can be used to log on to and debug the instance used to
+     * The key pair of the infrastructure configuration. You can use this to log on to and debug the instance used to
      * create your image.
      * </p>
      * 
      * @param keyPair
-     *        The key pair of the infrastructure configuration. This can be used to log on to and debug the instance
+     *        The key pair of the infrastructure configuration. You can use this to log on to and debug the instance
      *        used to create your image.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -708,6 +731,151 @@ public class UpdateInfrastructureConfigurationRequest extends com.amazonaws.Amaz
     }
 
     /**
+     * <p>
+     * The instance metadata options that you can set for the HTTP requests that pipeline builds use to launch EC2 build
+     * and test instances. For more information about instance metadata options, see one of the following links:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-options.html">Configure
+     * the instance metadata options</a> in the <i> <i>Amazon EC2 User Guide</i> </i> for Linux instances.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/configuring-instance-metadata-options.html">
+     * Configure the instance metadata options</a> in the <i> <i>Amazon EC2 Windows Guide</i> </i> for Windows
+     * instances.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param instanceMetadataOptions
+     *        The instance metadata options that you can set for the HTTP requests that pipeline builds use to launch
+     *        EC2 build and test instances. For more information about instance metadata options, see one of the
+     *        following links:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-options.html">
+     *        Configure the instance metadata options</a> in the <i> <i>Amazon EC2 User Guide</i> </i> for Linux
+     *        instances.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/configuring-instance-metadata-options.html"
+     *        >Configure the instance metadata options</a> in the <i> <i>Amazon EC2 Windows Guide</i> </i> for Windows
+     *        instances.
+     *        </p>
+     *        </li>
+     */
+
+    public void setInstanceMetadataOptions(InstanceMetadataOptions instanceMetadataOptions) {
+        this.instanceMetadataOptions = instanceMetadataOptions;
+    }
+
+    /**
+     * <p>
+     * The instance metadata options that you can set for the HTTP requests that pipeline builds use to launch EC2 build
+     * and test instances. For more information about instance metadata options, see one of the following links:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-options.html">Configure
+     * the instance metadata options</a> in the <i> <i>Amazon EC2 User Guide</i> </i> for Linux instances.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/configuring-instance-metadata-options.html">
+     * Configure the instance metadata options</a> in the <i> <i>Amazon EC2 Windows Guide</i> </i> for Windows
+     * instances.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @return The instance metadata options that you can set for the HTTP requests that pipeline builds use to launch
+     *         EC2 build and test instances. For more information about instance metadata options, see one of the
+     *         following links:</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-options.html">
+     *         Configure the instance metadata options</a> in the <i> <i>Amazon EC2 User Guide</i> </i> for Linux
+     *         instances.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <a href=
+     *         "https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/configuring-instance-metadata-options.html"
+     *         >Configure the instance metadata options</a> in the <i> <i>Amazon EC2 Windows Guide</i> </i> for Windows
+     *         instances.
+     *         </p>
+     *         </li>
+     */
+
+    public InstanceMetadataOptions getInstanceMetadataOptions() {
+        return this.instanceMetadataOptions;
+    }
+
+    /**
+     * <p>
+     * The instance metadata options that you can set for the HTTP requests that pipeline builds use to launch EC2 build
+     * and test instances. For more information about instance metadata options, see one of the following links:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-options.html">Configure
+     * the instance metadata options</a> in the <i> <i>Amazon EC2 User Guide</i> </i> for Linux instances.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/configuring-instance-metadata-options.html">
+     * Configure the instance metadata options</a> in the <i> <i>Amazon EC2 Windows Guide</i> </i> for Windows
+     * instances.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param instanceMetadataOptions
+     *        The instance metadata options that you can set for the HTTP requests that pipeline builds use to launch
+     *        EC2 build and test instances. For more information about instance metadata options, see one of the
+     *        following links:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-options.html">
+     *        Configure the instance metadata options</a> in the <i> <i>Amazon EC2 User Guide</i> </i> for Linux
+     *        instances.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/configuring-instance-metadata-options.html"
+     *        >Configure the instance metadata options</a> in the <i> <i>Amazon EC2 Windows Guide</i> </i> for Windows
+     *        instances.
+     *        </p>
+     *        </li>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateInfrastructureConfigurationRequest withInstanceMetadataOptions(InstanceMetadataOptions instanceMetadataOptions) {
+        setInstanceMetadataOptions(instanceMetadataOptions);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -742,7 +910,9 @@ public class UpdateInfrastructureConfigurationRequest extends com.amazonaws.Amaz
         if (getClientToken() != null)
             sb.append("ClientToken: ").append(getClientToken()).append(",");
         if (getResourceTags() != null)
-            sb.append("ResourceTags: ").append(getResourceTags());
+            sb.append("ResourceTags: ").append(getResourceTags()).append(",");
+        if (getInstanceMetadataOptions() != null)
+            sb.append("InstanceMetadataOptions: ").append(getInstanceMetadataOptions());
         sb.append("}");
         return sb.toString();
     }
@@ -806,6 +976,10 @@ public class UpdateInfrastructureConfigurationRequest extends com.amazonaws.Amaz
             return false;
         if (other.getResourceTags() != null && other.getResourceTags().equals(this.getResourceTags()) == false)
             return false;
+        if (other.getInstanceMetadataOptions() == null ^ this.getInstanceMetadataOptions() == null)
+            return false;
+        if (other.getInstanceMetadataOptions() != null && other.getInstanceMetadataOptions().equals(this.getInstanceMetadataOptions()) == false)
+            return false;
         return true;
     }
 
@@ -826,6 +1000,7 @@ public class UpdateInfrastructureConfigurationRequest extends com.amazonaws.Amaz
         hashCode = prime * hashCode + ((getSnsTopicArn() == null) ? 0 : getSnsTopicArn().hashCode());
         hashCode = prime * hashCode + ((getClientToken() == null) ? 0 : getClientToken().hashCode());
         hashCode = prime * hashCode + ((getResourceTags() == null) ? 0 : getResourceTags().hashCode());
+        hashCode = prime * hashCode + ((getInstanceMetadataOptions() == null) ? 0 : getInstanceMetadataOptions().hashCode());
         return hashCode;
     }
 

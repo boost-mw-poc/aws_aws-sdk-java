@@ -31,7 +31,7 @@ public class DeleteLicenseResult extends com.amazonaws.AmazonWebServiceResult<co
     private String status;
     /**
      * <p>
-     * Date on which the license is deleted.
+     * Date when the license is deleted.
      * </p>
      */
     private String deletionDate;
@@ -97,11 +97,11 @@ public class DeleteLicenseResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * Date on which the license is deleted.
+     * Date when the license is deleted.
      * </p>
      * 
      * @param deletionDate
-     *        Date on which the license is deleted.
+     *        Date when the license is deleted.
      */
 
     public void setDeletionDate(String deletionDate) {
@@ -110,10 +110,10 @@ public class DeleteLicenseResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * Date on which the license is deleted.
+     * Date when the license is deleted.
      * </p>
      * 
-     * @return Date on which the license is deleted.
+     * @return Date when the license is deleted.
      */
 
     public String getDeletionDate() {
@@ -122,11 +122,11 @@ public class DeleteLicenseResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * Date on which the license is deleted.
+     * Date when the license is deleted.
      * </p>
      * 
      * @param deletionDate
-     *        Date on which the license is deleted.
+     *        Date when the license is deleted.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

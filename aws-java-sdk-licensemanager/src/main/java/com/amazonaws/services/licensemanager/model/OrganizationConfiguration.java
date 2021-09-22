@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Configuration information for AWS Organizations.
+ * Configuration information for Organizations.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/license-manager-2018-08-01/OrganizationConfiguration"
@@ -30,18 +30,18 @@ public class OrganizationConfiguration implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * Enables AWS Organization integration.
+     * Enables Organizations integration.
      * </p>
      */
     private Boolean enableIntegration;
 
     /**
      * <p>
-     * Enables AWS Organization integration.
+     * Enables Organizations integration.
      * </p>
      * 
      * @param enableIntegration
-     *        Enables AWS Organization integration.
+     *        Enables Organizations integration.
      */
 
     public void setEnableIntegration(Boolean enableIntegration) {
@@ -50,10 +50,10 @@ public class OrganizationConfiguration implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * Enables AWS Organization integration.
+     * Enables Organizations integration.
      * </p>
      * 
-     * @return Enables AWS Organization integration.
+     * @return Enables Organizations integration.
      */
 
     public Boolean getEnableIntegration() {
@@ -62,11 +62,11 @@ public class OrganizationConfiguration implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * Enables AWS Organization integration.
+     * Enables Organizations integration.
      * </p>
      * 
      * @param enableIntegration
-     *        Enables AWS Organization integration.
+     *        Enables Organizations integration.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -77,10 +77,10 @@ public class OrganizationConfiguration implements Serializable, Cloneable, Struc
 
     /**
      * <p>
-     * Enables AWS Organization integration.
+     * Enables Organizations integration.
      * </p>
      * 
-     * @return Enables AWS Organization integration.
+     * @return Enables Organizations integration.
      */
 
     public Boolean isEnableIntegration() {

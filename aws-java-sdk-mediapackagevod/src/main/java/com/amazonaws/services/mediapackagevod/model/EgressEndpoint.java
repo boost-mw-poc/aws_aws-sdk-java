@@ -28,6 +28,12 @@ public class EgressEndpoint implements Serializable, Cloneable, StructuredPojo {
 
     /** The ID of the PackagingConfiguration being applied to the Asset. */
     private String packagingConfigurationId;
+    /**
+     * The current processing status of the asset used for the packaging configuration. The status can be either QUEUED,
+     * PROCESSING, PLAYABLE, or FAILED. Status information won't be available for most assets ingested before
+     * 2021-09-30.
+     */
+    private String status;
     /** The URL of the parent manifest for the repackaged Asset. */
     private String url;
 
@@ -62,6 +68,52 @@ public class EgressEndpoint implements Serializable, Cloneable, StructuredPojo {
 
     public EgressEndpoint withPackagingConfigurationId(String packagingConfigurationId) {
         setPackagingConfigurationId(packagingConfigurationId);
+        return this;
+    }
+
+    /**
+     * The current processing status of the asset used for the packaging configuration. The status can be either QUEUED,
+     * PROCESSING, PLAYABLE, or FAILED. Status information won't be available for most assets ingested before
+     * 2021-09-30.
+     * 
+     * @param status
+     *        The current processing status of the asset used for the packaging configuration. The status can be either
+     *        QUEUED, PROCESSING, PLAYABLE, or FAILED. Status information won't be available for most assets ingested
+     *        before 2021-09-30.
+     */
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    /**
+     * The current processing status of the asset used for the packaging configuration. The status can be either QUEUED,
+     * PROCESSING, PLAYABLE, or FAILED. Status information won't be available for most assets ingested before
+     * 2021-09-30.
+     * 
+     * @return The current processing status of the asset used for the packaging configuration. The status can be either
+     *         QUEUED, PROCESSING, PLAYABLE, or FAILED. Status information won't be available for most assets ingested
+     *         before 2021-09-30.
+     */
+
+    public String getStatus() {
+        return this.status;
+    }
+
+    /**
+     * The current processing status of the asset used for the packaging configuration. The status can be either QUEUED,
+     * PROCESSING, PLAYABLE, or FAILED. Status information won't be available for most assets ingested before
+     * 2021-09-30.
+     * 
+     * @param status
+     *        The current processing status of the asset used for the packaging configuration. The status can be either
+     *        QUEUED, PROCESSING, PLAYABLE, or FAILED. Status information won't be available for most assets ingested
+     *        before 2021-09-30.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public EgressEndpoint withStatus(String status) {
+        setStatus(status);
         return this;
     }
 
@@ -113,6 +165,8 @@ public class EgressEndpoint implements Serializable, Cloneable, StructuredPojo {
         sb.append("{");
         if (getPackagingConfigurationId() != null)
             sb.append("PackagingConfigurationId: ").append(getPackagingConfigurationId()).append(",");
+        if (getStatus() != null)
+            sb.append("Status: ").append(getStatus()).append(",");
         if (getUrl() != null)
             sb.append("Url: ").append(getUrl());
         sb.append("}");
@@ -133,6 +187,10 @@ public class EgressEndpoint implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getPackagingConfigurationId() != null && other.getPackagingConfigurationId().equals(this.getPackagingConfigurationId()) == false)
             return false;
+        if (other.getStatus() == null ^ this.getStatus() == null)
+            return false;
+        if (other.getStatus() != null && other.getStatus().equals(this.getStatus()) == false)
+            return false;
         if (other.getUrl() == null ^ this.getUrl() == null)
             return false;
         if (other.getUrl() != null && other.getUrl().equals(this.getUrl()) == false)
@@ -146,6 +204,7 @@ public class EgressEndpoint implements Serializable, Cloneable, StructuredPojo {
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getPackagingConfigurationId() == null) ? 0 : getPackagingConfigurationId().hashCode());
+        hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
         hashCode = prime * hashCode + ((getUrl() == null) ? 0 : getUrl().hashCode());
         return hashCode;
     }

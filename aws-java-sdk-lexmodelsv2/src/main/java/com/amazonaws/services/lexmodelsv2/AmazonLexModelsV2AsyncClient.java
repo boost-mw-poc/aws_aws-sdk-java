@@ -833,6 +833,39 @@ public class AmazonLexModelsV2AsyncClient extends AmazonLexModelsV2Client implem
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteUtterancesResult> deleteUtterancesAsync(DeleteUtterancesRequest request) {
+
+        return deleteUtterancesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteUtterancesResult> deleteUtterancesAsync(final DeleteUtterancesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteUtterancesRequest, DeleteUtterancesResult> asyncHandler) {
+        final DeleteUtterancesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteUtterancesResult>() {
+            @Override
+            public DeleteUtterancesResult call() throws Exception {
+                DeleteUtterancesResult result = null;
+
+                try {
+                    result = executeDeleteUtterances(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeBotResult> describeBotAsync(DescribeBotRequest request) {
 
         return describeBotAsync(request, null);
@@ -1147,6 +1180,39 @@ public class AmazonLexModelsV2AsyncClient extends AmazonLexModelsV2Client implem
 
                 try {
                     result = executeDescribeSlotType(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListAggregatedUtterancesResult> listAggregatedUtterancesAsync(ListAggregatedUtterancesRequest request) {
+
+        return listAggregatedUtterancesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListAggregatedUtterancesResult> listAggregatedUtterancesAsync(final ListAggregatedUtterancesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListAggregatedUtterancesRequest, ListAggregatedUtterancesResult> asyncHandler) {
+        final ListAggregatedUtterancesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListAggregatedUtterancesResult>() {
+            @Override
+            public ListAggregatedUtterancesResult call() throws Exception {
+                ListAggregatedUtterancesResult result = null;
+
+                try {
+                    result = executeListAggregatedUtterances(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

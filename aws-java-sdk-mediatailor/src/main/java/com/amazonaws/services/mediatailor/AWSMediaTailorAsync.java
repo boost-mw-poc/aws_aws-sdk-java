@@ -43,6 +43,45 @@ public interface AWSMediaTailorAsync extends AWSMediaTailor {
 
     /**
      * <p>
+     * Configures Amazon CloudWatch log settings for a playback configuration.
+     * </p>
+     * 
+     * @param configureLogsForPlaybackConfigurationRequest
+     *        Configures Amazon CloudWatch log settings for a playback configuration.
+     * @return A Java Future containing the result of the ConfigureLogsForPlaybackConfiguration operation returned by
+     *         the service.
+     * @sample AWSMediaTailorAsync.ConfigureLogsForPlaybackConfiguration
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/mediatailor-2018-04-23/ConfigureLogsForPlaybackConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ConfigureLogsForPlaybackConfigurationResult> configureLogsForPlaybackConfigurationAsync(
+            ConfigureLogsForPlaybackConfigurationRequest configureLogsForPlaybackConfigurationRequest);
+
+    /**
+     * <p>
+     * Configures Amazon CloudWatch log settings for a playback configuration.
+     * </p>
+     * 
+     * @param configureLogsForPlaybackConfigurationRequest
+     *        Configures Amazon CloudWatch log settings for a playback configuration.
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ConfigureLogsForPlaybackConfiguration operation returned by
+     *         the service.
+     * @sample AWSMediaTailorAsyncHandler.ConfigureLogsForPlaybackConfiguration
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/mediatailor-2018-04-23/ConfigureLogsForPlaybackConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ConfigureLogsForPlaybackConfigurationResult> configureLogsForPlaybackConfigurationAsync(
+            ConfigureLogsForPlaybackConfigurationRequest configureLogsForPlaybackConfigurationRequest,
+            com.amazonaws.handlers.AsyncHandler<ConfigureLogsForPlaybackConfigurationRequest, ConfigureLogsForPlaybackConfigurationResult> asyncHandler);
+
+    /**
+     * <p>
      * Creates a channel.
      * </p>
      * 

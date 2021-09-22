@@ -79,6 +79,12 @@ public class Component implements Serializable, Cloneable, StructuredPojo {
     private java.util.List<String> supportedOsVersions;
     /**
      * <p>
+     * Describes the current status of the component. This is used for components that are no longer active.
+     * </p>
+     */
+    private ComponentState state;
+    /**
+     * <p>
      * Contains parameter details for each of the parameters that are defined for the component.
      * </p>
      */
@@ -518,6 +524,46 @@ public class Component implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
+     * Describes the current status of the component. This is used for components that are no longer active.
+     * </p>
+     * 
+     * @param state
+     *        Describes the current status of the component. This is used for components that are no longer active.
+     */
+
+    public void setState(ComponentState state) {
+        this.state = state;
+    }
+
+    /**
+     * <p>
+     * Describes the current status of the component. This is used for components that are no longer active.
+     * </p>
+     * 
+     * @return Describes the current status of the component. This is used for components that are no longer active.
+     */
+
+    public ComponentState getState() {
+        return this.state;
+    }
+
+    /**
+     * <p>
+     * Describes the current status of the component. This is used for components that are no longer active.
+     * </p>
+     * 
+     * @param state
+     *        Describes the current status of the component. This is used for components that are no longer active.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Component withState(ComponentState state) {
+        setState(state);
+        return this;
+    }
+
+    /**
+     * <p>
      * Contains parameter details for each of the parameters that are defined for the component.
      * </p>
      * 
@@ -894,6 +940,8 @@ public class Component implements Serializable, Cloneable, StructuredPojo {
             sb.append("Platform: ").append(getPlatform()).append(",");
         if (getSupportedOsVersions() != null)
             sb.append("SupportedOsVersions: ").append(getSupportedOsVersions()).append(",");
+        if (getState() != null)
+            sb.append("State: ").append(getState()).append(",");
         if (getParameters() != null)
             sb.append("Parameters: ").append(getParameters()).append(",");
         if (getOwner() != null)
@@ -954,6 +1002,10 @@ public class Component implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getSupportedOsVersions() != null && other.getSupportedOsVersions().equals(this.getSupportedOsVersions()) == false)
             return false;
+        if (other.getState() == null ^ this.getState() == null)
+            return false;
+        if (other.getState() != null && other.getState().equals(this.getState()) == false)
+            return false;
         if (other.getParameters() == null ^ this.getParameters() == null)
             return false;
         if (other.getParameters() != null && other.getParameters().equals(this.getParameters()) == false)
@@ -998,6 +1050,7 @@ public class Component implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getType() == null) ? 0 : getType().hashCode());
         hashCode = prime * hashCode + ((getPlatform() == null) ? 0 : getPlatform().hashCode());
         hashCode = prime * hashCode + ((getSupportedOsVersions() == null) ? 0 : getSupportedOsVersions().hashCode());
+        hashCode = prime * hashCode + ((getState() == null) ? 0 : getState().hashCode());
         hashCode = prime * hashCode + ((getParameters() == null) ? 0 : getParameters().hashCode());
         hashCode = prime * hashCode + ((getOwner() == null) ? 0 : getOwner().hashCode());
         hashCode = prime * hashCode + ((getData() == null) ? 0 : getData().hashCode());

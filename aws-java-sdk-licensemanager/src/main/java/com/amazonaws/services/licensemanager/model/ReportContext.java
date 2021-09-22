@@ -30,17 +30,17 @@ public class ReportContext implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Amazon Resource Number (ARN) of the license configuration that this generator reports on.
+     * Amazon Resource Name (ARN) of the license configuration that this generator reports on.
      * </p>
      */
     private java.util.List<String> licenseConfigurationArns;
 
     /**
      * <p>
-     * Amazon Resource Number (ARN) of the license configuration that this generator reports on.
+     * Amazon Resource Name (ARN) of the license configuration that this generator reports on.
      * </p>
      * 
-     * @return Amazon Resource Number (ARN) of the license configuration that this generator reports on.
+     * @return Amazon Resource Name (ARN) of the license configuration that this generator reports on.
      */
 
     public java.util.List<String> getLicenseConfigurationArns() {
@@ -49,11 +49,11 @@ public class ReportContext implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Amazon Resource Number (ARN) of the license configuration that this generator reports on.
+     * Amazon Resource Name (ARN) of the license configuration that this generator reports on.
      * </p>
      * 
      * @param licenseConfigurationArns
-     *        Amazon Resource Number (ARN) of the license configuration that this generator reports on.
+     *        Amazon Resource Name (ARN) of the license configuration that this generator reports on.
      */
 
     public void setLicenseConfigurationArns(java.util.Collection<String> licenseConfigurationArns) {
@@ -67,7 +67,7 @@ public class ReportContext implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Amazon Resource Number (ARN) of the license configuration that this generator reports on.
+     * Amazon Resource Name (ARN) of the license configuration that this generator reports on.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -76,7 +76,7 @@ public class ReportContext implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param licenseConfigurationArns
-     *        Amazon Resource Number (ARN) of the license configuration that this generator reports on.
+     *        Amazon Resource Name (ARN) of the license configuration that this generator reports on.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -92,11 +92,11 @@ public class ReportContext implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Amazon Resource Number (ARN) of the license configuration that this generator reports on.
+     * Amazon Resource Name (ARN) of the license configuration that this generator reports on.
      * </p>
      * 
      * @param licenseConfigurationArns
-     *        Amazon Resource Number (ARN) of the license configuration that this generator reports on.
+     *        Amazon Resource Name (ARN) of the license configuration that this generator reports on.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

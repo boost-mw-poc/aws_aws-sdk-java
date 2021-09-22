@@ -28,7 +28,7 @@ public class UpdateLicenseSpecificationsForResourceRequest extends com.amazonaws
 
     /**
      * <p>
-     * Amazon Resource Name (ARN) of the AWS resource.
+     * Amazon Resource Name (ARN) of the Amazon Web Services resource.
      * </p>
      */
     private String resourceArn;
@@ -47,11 +47,11 @@ public class UpdateLicenseSpecificationsForResourceRequest extends com.amazonaws
 
     /**
      * <p>
-     * Amazon Resource Name (ARN) of the AWS resource.
+     * Amazon Resource Name (ARN) of the Amazon Web Services resource.
      * </p>
      * 
      * @param resourceArn
-     *        Amazon Resource Name (ARN) of the AWS resource.
+     *        Amazon Resource Name (ARN) of the Amazon Web Services resource.
      */
 
     public void setResourceArn(String resourceArn) {
@@ -60,10 +60,10 @@ public class UpdateLicenseSpecificationsForResourceRequest extends com.amazonaws
 
     /**
      * <p>
-     * Amazon Resource Name (ARN) of the AWS resource.
+     * Amazon Resource Name (ARN) of the Amazon Web Services resource.
      * </p>
      * 
-     * @return Amazon Resource Name (ARN) of the AWS resource.
+     * @return Amazon Resource Name (ARN) of the Amazon Web Services resource.
      */
 
     public String getResourceArn() {
@@ -72,11 +72,11 @@ public class UpdateLicenseSpecificationsForResourceRequest extends com.amazonaws
 
     /**
      * <p>
-     * Amazon Resource Name (ARN) of the AWS resource.
+     * Amazon Resource Name (ARN) of the Amazon Web Services resource.
      * </p>
      * 
      * @param resourceArn
-     *        Amazon Resource Name (ARN) of the AWS resource.
+     *        Amazon Resource Name (ARN) of the Amazon Web Services resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

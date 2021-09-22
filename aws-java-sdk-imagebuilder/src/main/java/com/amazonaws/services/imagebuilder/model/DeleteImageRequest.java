@@ -27,18 +27,18 @@ public class DeleteImageRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the image to delete.
+     * The Amazon Resource Name (ARN) of the Image Builder image resource to delete.
      * </p>
      */
     private String imageBuildVersionArn;
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the image to delete.
+     * The Amazon Resource Name (ARN) of the Image Builder image resource to delete.
      * </p>
      * 
      * @param imageBuildVersionArn
-     *        The Amazon Resource Name (ARN) of the image to delete.
+     *        The Amazon Resource Name (ARN) of the Image Builder image resource to delete.
      */
 
     public void setImageBuildVersionArn(String imageBuildVersionArn) {
@@ -47,10 +47,10 @@ public class DeleteImageRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the image to delete.
+     * The Amazon Resource Name (ARN) of the Image Builder image resource to delete.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the image to delete.
+     * @return The Amazon Resource Name (ARN) of the Image Builder image resource to delete.
      */
 
     public String getImageBuildVersionArn() {
@@ -59,11 +59,11 @@ public class DeleteImageRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the image to delete.
+     * The Amazon Resource Name (ARN) of the Image Builder image resource to delete.
      * </p>
      * 
      * @param imageBuildVersionArn
-     *        The Amazon Resource Name (ARN) of the image to delete.
+     *        The Amazon Resource Name (ARN) of the Image Builder image resource to delete.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

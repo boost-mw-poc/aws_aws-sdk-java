@@ -49,7 +49,7 @@ public class GetLicenseConfigurationResult extends com.amazonaws.AmazonWebServic
     private String description;
     /**
      * <p>
-     * Dimension on which the licenses are counted.
+     * Dimension for which the licenses are counted.
      * </p>
      */
     private String licenseCountingType;
@@ -288,11 +288,11 @@ public class GetLicenseConfigurationResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * Dimension on which the licenses are counted.
+     * Dimension for which the licenses are counted.
      * </p>
      * 
      * @param licenseCountingType
-     *        Dimension on which the licenses are counted.
+     *        Dimension for which the licenses are counted.
      * @see LicenseCountingType
      */
 
@@ -302,10 +302,10 @@ public class GetLicenseConfigurationResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * Dimension on which the licenses are counted.
+     * Dimension for which the licenses are counted.
      * </p>
      * 
-     * @return Dimension on which the licenses are counted.
+     * @return Dimension for which the licenses are counted.
      * @see LicenseCountingType
      */
 
@@ -315,11 +315,11 @@ public class GetLicenseConfigurationResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * Dimension on which the licenses are counted.
+     * Dimension for which the licenses are counted.
      * </p>
      * 
      * @param licenseCountingType
-     *        Dimension on which the licenses are counted.
+     *        Dimension for which the licenses are counted.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see LicenseCountingType
      */
@@ -331,11 +331,11 @@ public class GetLicenseConfigurationResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * Dimension on which the licenses are counted.
+     * Dimension for which the licenses are counted.
      * </p>
      * 
      * @param licenseCountingType
-     *        Dimension on which the licenses are counted.
+     *        Dimension for which the licenses are counted.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see LicenseCountingType
      */

@@ -68,6 +68,11 @@ public class AbstractAWSLicenseManager implements AWSLicenseManager {
     }
 
     @Override
+    public CreateLicenseConversionTaskForResourceResult createLicenseConversionTaskForResource(CreateLicenseConversionTaskForResourceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateLicenseManagerReportGeneratorResult createLicenseManagerReportGenerator(CreateLicenseManagerReportGeneratorRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -133,6 +138,11 @@ public class AbstractAWSLicenseManager implements AWSLicenseManager {
     }
 
     @Override
+    public GetLicenseConversionTaskResult getLicenseConversionTask(GetLicenseConversionTaskRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetLicenseManagerReportGeneratorResult getLicenseManagerReportGenerator(GetLicenseManagerReportGeneratorRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -165,6 +175,11 @@ public class AbstractAWSLicenseManager implements AWSLicenseManager {
 
     @Override
     public ListLicenseConfigurationsResult listLicenseConfigurations(ListLicenseConfigurationsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListLicenseConversionTasksResult listLicenseConversionTasks(ListLicenseConversionTasksRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

@@ -42,19 +42,19 @@ public class ReportGenerator implements Serializable, Cloneable, StructuredPojo 
     private java.util.List<String> reportType;
     /**
      * <p>
-     * License configuration type this generator reports on.
+     * License configuration type for this generator.
      * </p>
      */
     private ReportContext reportContext;
     /**
      * <p>
-     * Details on how frequently reports are generated.
+     * Details about how frequently reports are generated.
      * </p>
      */
     private ReportFrequency reportFrequency;
     /**
      * <p>
-     * Amazon Resource Number (ARN) of the report generator.
+     * Amazon Resource Name (ARN) of the report generator.
      * </p>
      */
     private String licenseManagerReportGeneratorArn;
@@ -78,7 +78,7 @@ public class ReportGenerator implements Serializable, Cloneable, StructuredPojo 
     private String lastReportGenerationTime;
     /**
      * <p>
-     * The AWS account ID used to create the report generator.
+     * The Amazon Web Services account ID used to create the report generator.
      * </p>
      */
     private String reportCreatorAccount;
@@ -247,11 +247,11 @@ public class ReportGenerator implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * License configuration type this generator reports on.
+     * License configuration type for this generator.
      * </p>
      * 
      * @param reportContext
-     *        License configuration type this generator reports on.
+     *        License configuration type for this generator.
      */
 
     public void setReportContext(ReportContext reportContext) {
@@ -260,10 +260,10 @@ public class ReportGenerator implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * License configuration type this generator reports on.
+     * License configuration type for this generator.
      * </p>
      * 
-     * @return License configuration type this generator reports on.
+     * @return License configuration type for this generator.
      */
 
     public ReportContext getReportContext() {
@@ -272,11 +272,11 @@ public class ReportGenerator implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * License configuration type this generator reports on.
+     * License configuration type for this generator.
      * </p>
      * 
      * @param reportContext
-     *        License configuration type this generator reports on.
+     *        License configuration type for this generator.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -287,11 +287,11 @@ public class ReportGenerator implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Details on how frequently reports are generated.
+     * Details about how frequently reports are generated.
      * </p>
      * 
      * @param reportFrequency
-     *        Details on how frequently reports are generated.
+     *        Details about how frequently reports are generated.
      */
 
     public void setReportFrequency(ReportFrequency reportFrequency) {
@@ -300,10 +300,10 @@ public class ReportGenerator implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Details on how frequently reports are generated.
+     * Details about how frequently reports are generated.
      * </p>
      * 
-     * @return Details on how frequently reports are generated.
+     * @return Details about how frequently reports are generated.
      */
 
     public ReportFrequency getReportFrequency() {
@@ -312,11 +312,11 @@ public class ReportGenerator implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Details on how frequently reports are generated.
+     * Details about how frequently reports are generated.
      * </p>
      * 
      * @param reportFrequency
-     *        Details on how frequently reports are generated.
+     *        Details about how frequently reports are generated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -327,11 +327,11 @@ public class ReportGenerator implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Amazon Resource Number (ARN) of the report generator.
+     * Amazon Resource Name (ARN) of the report generator.
      * </p>
      * 
      * @param licenseManagerReportGeneratorArn
-     *        Amazon Resource Number (ARN) of the report generator.
+     *        Amazon Resource Name (ARN) of the report generator.
      */
 
     public void setLicenseManagerReportGeneratorArn(String licenseManagerReportGeneratorArn) {
@@ -340,10 +340,10 @@ public class ReportGenerator implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Amazon Resource Number (ARN) of the report generator.
+     * Amazon Resource Name (ARN) of the report generator.
      * </p>
      * 
-     * @return Amazon Resource Number (ARN) of the report generator.
+     * @return Amazon Resource Name (ARN) of the report generator.
      */
 
     public String getLicenseManagerReportGeneratorArn() {
@@ -352,11 +352,11 @@ public class ReportGenerator implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Amazon Resource Number (ARN) of the report generator.
+     * Amazon Resource Name (ARN) of the report generator.
      * </p>
      * 
      * @param licenseManagerReportGeneratorArn
-     *        Amazon Resource Number (ARN) of the report generator.
+     *        Amazon Resource Name (ARN) of the report generator.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -487,11 +487,11 @@ public class ReportGenerator implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The AWS account ID used to create the report generator.
+     * The Amazon Web Services account ID used to create the report generator.
      * </p>
      * 
      * @param reportCreatorAccount
-     *        The AWS account ID used to create the report generator.
+     *        The Amazon Web Services account ID used to create the report generator.
      */
 
     public void setReportCreatorAccount(String reportCreatorAccount) {
@@ -500,10 +500,10 @@ public class ReportGenerator implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The AWS account ID used to create the report generator.
+     * The Amazon Web Services account ID used to create the report generator.
      * </p>
      * 
-     * @return The AWS account ID used to create the report generator.
+     * @return The Amazon Web Services account ID used to create the report generator.
      */
 
     public String getReportCreatorAccount() {
@@ -512,11 +512,11 @@ public class ReportGenerator implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The AWS account ID used to create the report generator.
+     * The Amazon Web Services account ID used to create the report generator.
      * </p>
      * 
      * @param reportCreatorAccount
-     *        The AWS account ID used to create the report generator.
+     *        The Amazon Web Services account ID used to create the report generator.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

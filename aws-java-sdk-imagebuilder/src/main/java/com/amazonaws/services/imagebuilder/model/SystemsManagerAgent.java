@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Contains settings for the SSM agent on your build instance.
+ * Contains settings for the Systems Manager agent on your build instance.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/imagebuilder-2019-12-02/SystemsManagerAgent" target="_top">AWS
@@ -30,24 +30,24 @@ public class SystemsManagerAgent implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * Controls whether the SSM agent is removed from your final build image, prior to creating the new AMI. If this is
-     * set to true, then the agent is removed from the final image. If it's set to false, then the agent is left in, so
-     * that it is included in the new AMI. The default value is false.
+     * Controls whether the Systems Manager agent is removed from your final build image, prior to creating the new AMI.
+     * If this is set to true, then the agent is removed from the final image. If it's set to false, then the agent is
+     * left in, so that it is included in the new AMI. The default value is false.
      * </p>
      */
     private Boolean uninstallAfterBuild;
 
     /**
      * <p>
-     * Controls whether the SSM agent is removed from your final build image, prior to creating the new AMI. If this is
-     * set to true, then the agent is removed from the final image. If it's set to false, then the agent is left in, so
-     * that it is included in the new AMI. The default value is false.
+     * Controls whether the Systems Manager agent is removed from your final build image, prior to creating the new AMI.
+     * If this is set to true, then the agent is removed from the final image. If it's set to false, then the agent is
+     * left in, so that it is included in the new AMI. The default value is false.
      * </p>
      * 
      * @param uninstallAfterBuild
-     *        Controls whether the SSM agent is removed from your final build image, prior to creating the new AMI. If
-     *        this is set to true, then the agent is removed from the final image. If it's set to false, then the agent
-     *        is left in, so that it is included in the new AMI. The default value is false.
+     *        Controls whether the Systems Manager agent is removed from your final build image, prior to creating the
+     *        new AMI. If this is set to true, then the agent is removed from the final image. If it's set to false,
+     *        then the agent is left in, so that it is included in the new AMI. The default value is false.
      */
 
     public void setUninstallAfterBuild(Boolean uninstallAfterBuild) {
@@ -56,14 +56,14 @@ public class SystemsManagerAgent implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * Controls whether the SSM agent is removed from your final build image, prior to creating the new AMI. If this is
-     * set to true, then the agent is removed from the final image. If it's set to false, then the agent is left in, so
-     * that it is included in the new AMI. The default value is false.
+     * Controls whether the Systems Manager agent is removed from your final build image, prior to creating the new AMI.
+     * If this is set to true, then the agent is removed from the final image. If it's set to false, then the agent is
+     * left in, so that it is included in the new AMI. The default value is false.
      * </p>
      * 
-     * @return Controls whether the SSM agent is removed from your final build image, prior to creating the new AMI. If
-     *         this is set to true, then the agent is removed from the final image. If it's set to false, then the agent
-     *         is left in, so that it is included in the new AMI. The default value is false.
+     * @return Controls whether the Systems Manager agent is removed from your final build image, prior to creating the
+     *         new AMI. If this is set to true, then the agent is removed from the final image. If it's set to false,
+     *         then the agent is left in, so that it is included in the new AMI. The default value is false.
      */
 
     public Boolean getUninstallAfterBuild() {
@@ -72,15 +72,15 @@ public class SystemsManagerAgent implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * Controls whether the SSM agent is removed from your final build image, prior to creating the new AMI. If this is
-     * set to true, then the agent is removed from the final image. If it's set to false, then the agent is left in, so
-     * that it is included in the new AMI. The default value is false.
+     * Controls whether the Systems Manager agent is removed from your final build image, prior to creating the new AMI.
+     * If this is set to true, then the agent is removed from the final image. If it's set to false, then the agent is
+     * left in, so that it is included in the new AMI. The default value is false.
      * </p>
      * 
      * @param uninstallAfterBuild
-     *        Controls whether the SSM agent is removed from your final build image, prior to creating the new AMI. If
-     *        this is set to true, then the agent is removed from the final image. If it's set to false, then the agent
-     *        is left in, so that it is included in the new AMI. The default value is false.
+     *        Controls whether the Systems Manager agent is removed from your final build image, prior to creating the
+     *        new AMI. If this is set to true, then the agent is removed from the final image. If it's set to false,
+     *        then the agent is left in, so that it is included in the new AMI. The default value is false.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -91,14 +91,14 @@ public class SystemsManagerAgent implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * Controls whether the SSM agent is removed from your final build image, prior to creating the new AMI. If this is
-     * set to true, then the agent is removed from the final image. If it's set to false, then the agent is left in, so
-     * that it is included in the new AMI. The default value is false.
+     * Controls whether the Systems Manager agent is removed from your final build image, prior to creating the new AMI.
+     * If this is set to true, then the agent is removed from the final image. If it's set to false, then the agent is
+     * left in, so that it is included in the new AMI. The default value is false.
      * </p>
      * 
-     * @return Controls whether the SSM agent is removed from your final build image, prior to creating the new AMI. If
-     *         this is set to true, then the agent is removed from the final image. If it's set to false, then the agent
-     *         is left in, so that it is included in the new AMI. The default value is false.
+     * @return Controls whether the Systems Manager agent is removed from your final build image, prior to creating the
+     *         new AMI. If this is set to true, then the agent is removed from the final image. If it's set to false,
+     *         then the agent is left in, so that it is included in the new AMI. The default value is false.
      */
 
     public Boolean isUninstallAfterBuild() {

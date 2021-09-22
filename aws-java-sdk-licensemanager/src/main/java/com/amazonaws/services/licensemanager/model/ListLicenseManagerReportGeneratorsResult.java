@@ -26,7 +26,7 @@ public class ListLicenseManagerReportGeneratorsResult extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * A report generator that creates periodic reports on your license configurations.
+     * A report generator that creates periodic reports about your license configurations.
      * </p>
      */
     private java.util.List<ReportGenerator> reportGenerators;
@@ -39,10 +39,10 @@ public class ListLicenseManagerReportGeneratorsResult extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * A report generator that creates periodic reports on your license configurations.
+     * A report generator that creates periodic reports about your license configurations.
      * </p>
      * 
-     * @return A report generator that creates periodic reports on your license configurations.
+     * @return A report generator that creates periodic reports about your license configurations.
      */
 
     public java.util.List<ReportGenerator> getReportGenerators() {
@@ -51,11 +51,11 @@ public class ListLicenseManagerReportGeneratorsResult extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * A report generator that creates periodic reports on your license configurations.
+     * A report generator that creates periodic reports about your license configurations.
      * </p>
      * 
      * @param reportGenerators
-     *        A report generator that creates periodic reports on your license configurations.
+     *        A report generator that creates periodic reports about your license configurations.
      */
 
     public void setReportGenerators(java.util.Collection<ReportGenerator> reportGenerators) {
@@ -69,7 +69,7 @@ public class ListLicenseManagerReportGeneratorsResult extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * A report generator that creates periodic reports on your license configurations.
+     * A report generator that creates periodic reports about your license configurations.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -78,7 +78,7 @@ public class ListLicenseManagerReportGeneratorsResult extends com.amazonaws.Amaz
      * </p>
      * 
      * @param reportGenerators
-     *        A report generator that creates periodic reports on your license configurations.
+     *        A report generator that creates periodic reports about your license configurations.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -94,11 +94,11 @@ public class ListLicenseManagerReportGeneratorsResult extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * A report generator that creates periodic reports on your license configurations.
+     * A report generator that creates periodic reports about your license configurations.
      * </p>
      * 
      * @param reportGenerators
-     *        A report generator that creates periodic reports on your license configurations.
+     *        A report generator that creates periodic reports about your license configurations.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

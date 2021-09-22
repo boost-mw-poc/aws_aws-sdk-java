@@ -15,7 +15,10 @@ package com.amazonaws.services.lexmodelsv2.model;
 import javax.annotation.Generated;
 
 /**
- * <p/>
+ * <p>
+ * Your request couldn't be completed because one or more request fields aren't valid. Check the fields in your request
+ * and try again.
+ * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class PreconditionFailedException extends com.amazonaws.services.lexmodelsv2.model.AmazonLexModelsV2Exception {

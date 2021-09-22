@@ -53,6 +53,8 @@ public class CreateInfrastructureConfigurationRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("snsTopicArn").build();
     private static final MarshallingInfo<Map> RESOURCETAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("resourceTags").build();
+    private static final MarshallingInfo<StructuredPojo> INSTANCEMETADATAOPTIONS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("instanceMetadataOptions").build();
     private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("tags").build();
     private static final MarshallingInfo<String> CLIENTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
@@ -86,6 +88,7 @@ public class CreateInfrastructureConfigurationRequestMarshaller {
             protocolMarshaller.marshall(createInfrastructureConfigurationRequest.getTerminateInstanceOnFailure(), TERMINATEINSTANCEONFAILURE_BINDING);
             protocolMarshaller.marshall(createInfrastructureConfigurationRequest.getSnsTopicArn(), SNSTOPICARN_BINDING);
             protocolMarshaller.marshall(createInfrastructureConfigurationRequest.getResourceTags(), RESOURCETAGS_BINDING);
+            protocolMarshaller.marshall(createInfrastructureConfigurationRequest.getInstanceMetadataOptions(), INSTANCEMETADATAOPTIONS_BINDING);
             protocolMarshaller.marshall(createInfrastructureConfigurationRequest.getTags(), TAGS_BINDING);
             protocolMarshaller.marshall(createInfrastructureConfigurationRequest.getClientToken(), CLIENTTOKEN_BINDING);
         } catch (Exception e) {

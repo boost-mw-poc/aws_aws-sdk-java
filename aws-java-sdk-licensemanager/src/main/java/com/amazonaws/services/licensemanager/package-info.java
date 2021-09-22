@@ -12,10 +12,9 @@
  */
 
 /**
- * <fullname> AWS License Manager </fullname>
  * <p>
- * AWS License Manager makes it easier to manage licenses from software vendors across multiple AWS accounts and
- * on-premises servers.
+ * License Manager makes it easier to manage licenses from software vendors across multiple Amazon Web Services accounts
+ * and on-premises servers.
  * </p>
  */
 package com.amazonaws.services.licensemanager;

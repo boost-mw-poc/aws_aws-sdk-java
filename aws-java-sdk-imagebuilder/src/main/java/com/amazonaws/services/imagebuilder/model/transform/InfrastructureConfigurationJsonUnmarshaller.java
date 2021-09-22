@@ -109,6 +109,10 @@ public class InfrastructureConfigurationJsonUnmarshaller implements Unmarshaller
                     infrastructureConfiguration.setResourceTags(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context
                             .getUnmarshaller(String.class)).unmarshall(context));
                 }
+                if (context.testExpression("instanceMetadataOptions", targetDepth)) {
+                    context.nextToken();
+                    infrastructureConfiguration.setInstanceMetadataOptions(InstanceMetadataOptionsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("tags", targetDepth)) {
                     context.nextToken();
                     infrastructureConfiguration.setTags(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context

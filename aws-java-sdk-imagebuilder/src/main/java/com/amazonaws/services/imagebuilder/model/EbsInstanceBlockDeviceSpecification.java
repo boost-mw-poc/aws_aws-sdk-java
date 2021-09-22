@@ -70,6 +70,12 @@ public class EbsInstanceBlockDeviceSpecification implements Serializable, Clonea
      * </p>
      */
     private String volumeType;
+    /**
+     * <p>
+     * <b>For GP3 volumes only</b> – The throughput in MiB/s that the volume supports.
+     * </p>
+     */
+    private Integer throughput;
 
     /**
      * <p>
@@ -395,6 +401,46 @@ public class EbsInstanceBlockDeviceSpecification implements Serializable, Clonea
     }
 
     /**
+     * <p>
+     * <b>For GP3 volumes only</b> – The throughput in MiB/s that the volume supports.
+     * </p>
+     * 
+     * @param throughput
+     *        <b>For GP3 volumes only</b> – The throughput in MiB/s that the volume supports.
+     */
+
+    public void setThroughput(Integer throughput) {
+        this.throughput = throughput;
+    }
+
+    /**
+     * <p>
+     * <b>For GP3 volumes only</b> – The throughput in MiB/s that the volume supports.
+     * </p>
+     * 
+     * @return <b>For GP3 volumes only</b> – The throughput in MiB/s that the volume supports.
+     */
+
+    public Integer getThroughput() {
+        return this.throughput;
+    }
+
+    /**
+     * <p>
+     * <b>For GP3 volumes only</b> – The throughput in MiB/s that the volume supports.
+     * </p>
+     * 
+     * @param throughput
+     *        <b>For GP3 volumes only</b> – The throughput in MiB/s that the volume supports.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public EbsInstanceBlockDeviceSpecification withThroughput(Integer throughput) {
+        setThroughput(throughput);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -419,7 +465,9 @@ public class EbsInstanceBlockDeviceSpecification implements Serializable, Clonea
         if (getVolumeSize() != null)
             sb.append("VolumeSize: ").append(getVolumeSize()).append(",");
         if (getVolumeType() != null)
-            sb.append("VolumeType: ").append(getVolumeType());
+            sb.append("VolumeType: ").append(getVolumeType()).append(",");
+        if (getThroughput() != null)
+            sb.append("Throughput: ").append(getThroughput());
         sb.append("}");
         return sb.toString();
     }
@@ -462,6 +510,10 @@ public class EbsInstanceBlockDeviceSpecification implements Serializable, Clonea
             return false;
         if (other.getVolumeType() != null && other.getVolumeType().equals(this.getVolumeType()) == false)
             return false;
+        if (other.getThroughput() == null ^ this.getThroughput() == null)
+            return false;
+        if (other.getThroughput() != null && other.getThroughput().equals(this.getThroughput()) == false)
+            return false;
         return true;
     }
 
@@ -477,6 +529,7 @@ public class EbsInstanceBlockDeviceSpecification implements Serializable, Clonea
         hashCode = prime * hashCode + ((getSnapshotId() == null) ? 0 : getSnapshotId().hashCode());
         hashCode = prime * hashCode + ((getVolumeSize() == null) ? 0 : getVolumeSize().hashCode());
         hashCode = prime * hashCode + ((getVolumeType() == null) ? 0 : getVolumeType().hashCode());
+        hashCode = prime * hashCode + ((getThroughput() == null) ? 0 : getThroughput().hashCode());
         return hashCode;
     }
 

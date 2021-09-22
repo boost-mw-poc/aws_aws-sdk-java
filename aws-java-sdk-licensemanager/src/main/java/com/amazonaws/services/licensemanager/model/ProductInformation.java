@@ -75,16 +75,16 @@ public class ProductInformation implements Serializable, Cloneable, StructuredPo
      * </li>
      * <li>
      * <p>
-     * <code>Tag:key</code> - The key of a tag attached to an AWS resource you wish to exclude from automated discovery.
-     * Logical operator is <code>NOT_EQUALS</code>. The key for your tag must be appended to <code>Tag:</code> following
-     * the example: <code>Tag:name-of-your-key</code>. <code>ProductInformationFilterValue</code> is optional if you are
-     * not using values for the key.
+     * <code>Tag:key</code> - The key of a tag attached to an Amazon Web Services resource you wish to exclude from
+     * automated discovery. Logical operator is <code>NOT_EQUALS</code>. The key for your tag must be appended to
+     * <code>Tag:</code> following the example: <code>Tag:name-of-your-key</code>.
+     * <code>ProductInformationFilterValue</code> is optional if you are not using values for the key.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>AccountId</code> - The 12-digit ID of an AWS account you wish to exclude from automated discovery. Logical
-     * operator is <code>NOT_EQUALS</code>.
+     * <code>AccountId</code> - The 12-digit ID of an Amazon Web Services account you wish to exclude from automated
+     * discovery. Logical operator is <code>NOT_EQUALS</code>.
      * </p>
      * </li>
      * <li>
@@ -198,16 +198,16 @@ public class ProductInformation implements Serializable, Cloneable, StructuredPo
      * </li>
      * <li>
      * <p>
-     * <code>Tag:key</code> - The key of a tag attached to an AWS resource you wish to exclude from automated discovery.
-     * Logical operator is <code>NOT_EQUALS</code>. The key for your tag must be appended to <code>Tag:</code> following
-     * the example: <code>Tag:name-of-your-key</code>. <code>ProductInformationFilterValue</code> is optional if you are
-     * not using values for the key.
+     * <code>Tag:key</code> - The key of a tag attached to an Amazon Web Services resource you wish to exclude from
+     * automated discovery. Logical operator is <code>NOT_EQUALS</code>. The key for your tag must be appended to
+     * <code>Tag:</code> following the example: <code>Tag:name-of-your-key</code>.
+     * <code>ProductInformationFilterValue</code> is optional if you are not using values for the key.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>AccountId</code> - The 12-digit ID of an AWS account you wish to exclude from automated discovery. Logical
-     * operator is <code>NOT_EQUALS</code>.
+     * <code>AccountId</code> - The 12-digit ID of an Amazon Web Services account you wish to exclude from automated
+     * discovery. Logical operator is <code>NOT_EQUALS</code>.
      * </p>
      * </li>
      * <li>
@@ -278,16 +278,16 @@ public class ProductInformation implements Serializable, Cloneable, StructuredPo
      *         </li>
      *         <li>
      *         <p>
-     *         <code>Tag:key</code> - The key of a tag attached to an AWS resource you wish to exclude from automated
-     *         discovery. Logical operator is <code>NOT_EQUALS</code>. The key for your tag must be appended to
-     *         <code>Tag:</code> following the example: <code>Tag:name-of-your-key</code>.
+     *         <code>Tag:key</code> - The key of a tag attached to an Amazon Web Services resource you wish to exclude
+     *         from automated discovery. Logical operator is <code>NOT_EQUALS</code>. The key for your tag must be
+     *         appended to <code>Tag:</code> following the example: <code>Tag:name-of-your-key</code>.
      *         <code>ProductInformationFilterValue</code> is optional if you are not using values for the key.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>AccountId</code> - The 12-digit ID of an AWS account you wish to exclude from automated discovery.
-     *         Logical operator is <code>NOT_EQUALS</code>.
+     *         <code>AccountId</code> - The 12-digit ID of an Amazon Web Services account you wish to exclude from
+     *         automated discovery. Logical operator is <code>NOT_EQUALS</code>.
      *         </p>
      *         </li>
      *         <li>
@@ -363,16 +363,16 @@ public class ProductInformation implements Serializable, Cloneable, StructuredPo
      * </li>
      * <li>
      * <p>
-     * <code>Tag:key</code> - The key of a tag attached to an AWS resource you wish to exclude from automated discovery.
-     * Logical operator is <code>NOT_EQUALS</code>. The key for your tag must be appended to <code>Tag:</code> following
-     * the example: <code>Tag:name-of-your-key</code>. <code>ProductInformationFilterValue</code> is optional if you are
-     * not using values for the key.
+     * <code>Tag:key</code> - The key of a tag attached to an Amazon Web Services resource you wish to exclude from
+     * automated discovery. Logical operator is <code>NOT_EQUALS</code>. The key for your tag must be appended to
+     * <code>Tag:</code> following the example: <code>Tag:name-of-your-key</code>.
+     * <code>ProductInformationFilterValue</code> is optional if you are not using values for the key.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>AccountId</code> - The 12-digit ID of an AWS account you wish to exclude from automated discovery. Logical
-     * operator is <code>NOT_EQUALS</code>.
+     * <code>AccountId</code> - The 12-digit ID of an Amazon Web Services account you wish to exclude from automated
+     * discovery. Logical operator is <code>NOT_EQUALS</code>.
      * </p>
      * </li>
      * <li>
@@ -444,16 +444,16 @@ public class ProductInformation implements Serializable, Cloneable, StructuredPo
      *        </li>
      *        <li>
      *        <p>
-     *        <code>Tag:key</code> - The key of a tag attached to an AWS resource you wish to exclude from automated
-     *        discovery. Logical operator is <code>NOT_EQUALS</code>. The key for your tag must be appended to
-     *        <code>Tag:</code> following the example: <code>Tag:name-of-your-key</code>.
+     *        <code>Tag:key</code> - The key of a tag attached to an Amazon Web Services resource you wish to exclude
+     *        from automated discovery. Logical operator is <code>NOT_EQUALS</code>. The key for your tag must be
+     *        appended to <code>Tag:</code> following the example: <code>Tag:name-of-your-key</code>.
      *        <code>ProductInformationFilterValue</code> is optional if you are not using values for the key.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>AccountId</code> - The 12-digit ID of an AWS account you wish to exclude from automated discovery.
-     *        Logical operator is <code>NOT_EQUALS</code>.
+     *        <code>AccountId</code> - The 12-digit ID of an Amazon Web Services account you wish to exclude from
+     *        automated discovery. Logical operator is <code>NOT_EQUALS</code>.
      *        </p>
      *        </li>
      *        <li>
@@ -534,16 +534,16 @@ public class ProductInformation implements Serializable, Cloneable, StructuredPo
      * </li>
      * <li>
      * <p>
-     * <code>Tag:key</code> - The key of a tag attached to an AWS resource you wish to exclude from automated discovery.
-     * Logical operator is <code>NOT_EQUALS</code>. The key for your tag must be appended to <code>Tag:</code> following
-     * the example: <code>Tag:name-of-your-key</code>. <code>ProductInformationFilterValue</code> is optional if you are
-     * not using values for the key.
+     * <code>Tag:key</code> - The key of a tag attached to an Amazon Web Services resource you wish to exclude from
+     * automated discovery. Logical operator is <code>NOT_EQUALS</code>. The key for your tag must be appended to
+     * <code>Tag:</code> following the example: <code>Tag:name-of-your-key</code>.
+     * <code>ProductInformationFilterValue</code> is optional if you are not using values for the key.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>AccountId</code> - The 12-digit ID of an AWS account you wish to exclude from automated discovery. Logical
-     * operator is <code>NOT_EQUALS</code>.
+     * <code>AccountId</code> - The 12-digit ID of an Amazon Web Services account you wish to exclude from automated
+     * discovery. Logical operator is <code>NOT_EQUALS</code>.
      * </p>
      * </li>
      * <li>
@@ -620,16 +620,16 @@ public class ProductInformation implements Serializable, Cloneable, StructuredPo
      *        </li>
      *        <li>
      *        <p>
-     *        <code>Tag:key</code> - The key of a tag attached to an AWS resource you wish to exclude from automated
-     *        discovery. Logical operator is <code>NOT_EQUALS</code>. The key for your tag must be appended to
-     *        <code>Tag:</code> following the example: <code>Tag:name-of-your-key</code>.
+     *        <code>Tag:key</code> - The key of a tag attached to an Amazon Web Services resource you wish to exclude
+     *        from automated discovery. Logical operator is <code>NOT_EQUALS</code>. The key for your tag must be
+     *        appended to <code>Tag:</code> following the example: <code>Tag:name-of-your-key</code>.
      *        <code>ProductInformationFilterValue</code> is optional if you are not using values for the key.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>AccountId</code> - The 12-digit ID of an AWS account you wish to exclude from automated discovery.
-     *        Logical operator is <code>NOT_EQUALS</code>.
+     *        <code>AccountId</code> - The 12-digit ID of an Amazon Web Services account you wish to exclude from
+     *        automated discovery. Logical operator is <code>NOT_EQUALS</code>.
      *        </p>
      *        </li>
      *        <li>
@@ -712,16 +712,16 @@ public class ProductInformation implements Serializable, Cloneable, StructuredPo
      * </li>
      * <li>
      * <p>
-     * <code>Tag:key</code> - The key of a tag attached to an AWS resource you wish to exclude from automated discovery.
-     * Logical operator is <code>NOT_EQUALS</code>. The key for your tag must be appended to <code>Tag:</code> following
-     * the example: <code>Tag:name-of-your-key</code>. <code>ProductInformationFilterValue</code> is optional if you are
-     * not using values for the key.
+     * <code>Tag:key</code> - The key of a tag attached to an Amazon Web Services resource you wish to exclude from
+     * automated discovery. Logical operator is <code>NOT_EQUALS</code>. The key for your tag must be appended to
+     * <code>Tag:</code> following the example: <code>Tag:name-of-your-key</code>.
+     * <code>ProductInformationFilterValue</code> is optional if you are not using values for the key.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>AccountId</code> - The 12-digit ID of an AWS account you wish to exclude from automated discovery. Logical
-     * operator is <code>NOT_EQUALS</code>.
+     * <code>AccountId</code> - The 12-digit ID of an Amazon Web Services account you wish to exclude from automated
+     * discovery. Logical operator is <code>NOT_EQUALS</code>.
      * </p>
      * </li>
      * <li>
@@ -793,16 +793,16 @@ public class ProductInformation implements Serializable, Cloneable, StructuredPo
      *        </li>
      *        <li>
      *        <p>
-     *        <code>Tag:key</code> - The key of a tag attached to an AWS resource you wish to exclude from automated
-     *        discovery. Logical operator is <code>NOT_EQUALS</code>. The key for your tag must be appended to
-     *        <code>Tag:</code> following the example: <code>Tag:name-of-your-key</code>.
+     *        <code>Tag:key</code> - The key of a tag attached to an Amazon Web Services resource you wish to exclude
+     *        from automated discovery. Logical operator is <code>NOT_EQUALS</code>. The key for your tag must be
+     *        appended to <code>Tag:</code> following the example: <code>Tag:name-of-your-key</code>.
      *        <code>ProductInformationFilterValue</code> is optional if you are not using values for the key.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>AccountId</code> - The 12-digit ID of an AWS account you wish to exclude from automated discovery.
-     *        Logical operator is <code>NOT_EQUALS</code>.
+     *        <code>AccountId</code> - The 12-digit ID of an Amazon Web Services account you wish to exclude from
+     *        automated discovery. Logical operator is <code>NOT_EQUALS</code>.
      *        </p>
      *        </li>
      *        <li>

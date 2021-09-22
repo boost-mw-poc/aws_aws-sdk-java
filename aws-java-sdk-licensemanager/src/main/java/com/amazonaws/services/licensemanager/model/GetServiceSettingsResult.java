@@ -37,7 +37,7 @@ public class GetServiceSettingsResult extends com.amazonaws.AmazonWebServiceResu
     private String snsTopicArn;
     /**
      * <p>
-     * Indicates whether AWS Organizations is integrated with License Manager for cross-account discovery.
+     * Indicates whether Organizations is integrated with License Manager for cross-account discovery.
      * </p>
      */
     private OrganizationConfiguration organizationConfiguration;
@@ -49,8 +49,8 @@ public class GetServiceSettingsResult extends com.amazonaws.AmazonWebServiceResu
     private Boolean enableCrossAccountsDiscovery;
     /**
      * <p>
-     * Amazon Resource Name (ARN) of the AWS resource share. The License Manager management account provides member
-     * accounts with access to this share.
+     * Amazon Resource Name (ARN) of the resource share. The License Manager management account provides member accounts
+     * with access to this share.
      * </p>
      */
     private String licenseManagerResourceShareArn;
@@ -137,11 +137,11 @@ public class GetServiceSettingsResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * Indicates whether AWS Organizations is integrated with License Manager for cross-account discovery.
+     * Indicates whether Organizations is integrated with License Manager for cross-account discovery.
      * </p>
      * 
      * @param organizationConfiguration
-     *        Indicates whether AWS Organizations is integrated with License Manager for cross-account discovery.
+     *        Indicates whether Organizations is integrated with License Manager for cross-account discovery.
      */
 
     public void setOrganizationConfiguration(OrganizationConfiguration organizationConfiguration) {
@@ -150,10 +150,10 @@ public class GetServiceSettingsResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * Indicates whether AWS Organizations is integrated with License Manager for cross-account discovery.
+     * Indicates whether Organizations is integrated with License Manager for cross-account discovery.
      * </p>
      * 
-     * @return Indicates whether AWS Organizations is integrated with License Manager for cross-account discovery.
+     * @return Indicates whether Organizations is integrated with License Manager for cross-account discovery.
      */
 
     public OrganizationConfiguration getOrganizationConfiguration() {
@@ -162,11 +162,11 @@ public class GetServiceSettingsResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * Indicates whether AWS Organizations is integrated with License Manager for cross-account discovery.
+     * Indicates whether Organizations is integrated with License Manager for cross-account discovery.
      * </p>
      * 
      * @param organizationConfiguration
-     *        Indicates whether AWS Organizations is integrated with License Manager for cross-account discovery.
+     *        Indicates whether Organizations is integrated with License Manager for cross-account discovery.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -229,13 +229,13 @@ public class GetServiceSettingsResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * Amazon Resource Name (ARN) of the AWS resource share. The License Manager management account provides member
-     * accounts with access to this share.
+     * Amazon Resource Name (ARN) of the resource share. The License Manager management account provides member accounts
+     * with access to this share.
      * </p>
      * 
      * @param licenseManagerResourceShareArn
-     *        Amazon Resource Name (ARN) of the AWS resource share. The License Manager management account provides
-     *        member accounts with access to this share.
+     *        Amazon Resource Name (ARN) of the resource share. The License Manager management account provides member
+     *        accounts with access to this share.
      */
 
     public void setLicenseManagerResourceShareArn(String licenseManagerResourceShareArn) {
@@ -244,12 +244,12 @@ public class GetServiceSettingsResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * Amazon Resource Name (ARN) of the AWS resource share. The License Manager management account provides member
-     * accounts with access to this share.
+     * Amazon Resource Name (ARN) of the resource share. The License Manager management account provides member accounts
+     * with access to this share.
      * </p>
      * 
-     * @return Amazon Resource Name (ARN) of the AWS resource share. The License Manager management account provides
-     *         member accounts with access to this share.
+     * @return Amazon Resource Name (ARN) of the resource share. The License Manager management account provides member
+     *         accounts with access to this share.
      */
 
     public String getLicenseManagerResourceShareArn() {
@@ -258,13 +258,13 @@ public class GetServiceSettingsResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * Amazon Resource Name (ARN) of the AWS resource share. The License Manager management account provides member
-     * accounts with access to this share.
+     * Amazon Resource Name (ARN) of the resource share. The License Manager management account provides member accounts
+     * with access to this share.
      * </p>
      * 
      * @param licenseManagerResourceShareArn
-     *        Amazon Resource Name (ARN) of the AWS resource share. The License Manager management account provides
-     *        member accounts with access to this share.
+     *        Amazon Resource Name (ARN) of the resource share. The License Manager management account provides member
+     *        accounts with access to this share.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

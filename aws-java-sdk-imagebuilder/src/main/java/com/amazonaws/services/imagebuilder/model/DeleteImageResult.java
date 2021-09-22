@@ -31,7 +31,7 @@ public class DeleteImageResult extends com.amazonaws.AmazonWebServiceResult<com.
     private String requestId;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the image that was deleted.
+     * The Amazon Resource Name (ARN) of the Image Builder image resource that was deleted.
      * </p>
      */
     private String imageBuildVersionArn;
@@ -78,11 +78,11 @@ public class DeleteImageResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the image that was deleted.
+     * The Amazon Resource Name (ARN) of the Image Builder image resource that was deleted.
      * </p>
      * 
      * @param imageBuildVersionArn
-     *        The Amazon Resource Name (ARN) of the image that was deleted.
+     *        The Amazon Resource Name (ARN) of the Image Builder image resource that was deleted.
      */
 
     public void setImageBuildVersionArn(String imageBuildVersionArn) {
@@ -91,10 +91,10 @@ public class DeleteImageResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the image that was deleted.
+     * The Amazon Resource Name (ARN) of the Image Builder image resource that was deleted.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the image that was deleted.
+     * @return The Amazon Resource Name (ARN) of the Image Builder image resource that was deleted.
      */
 
     public String getImageBuildVersionArn() {
@@ -103,11 +103,11 @@ public class DeleteImageResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the image that was deleted.
+     * The Amazon Resource Name (ARN) of the Image Builder image resource that was deleted.
      * </p>
      * 
      * @param imageBuildVersionArn
-     *        The Amazon Resource Name (ARN) of the image that was deleted.
+     *        The Amazon Resource Name (ARN) of the Image Builder image resource that was deleted.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

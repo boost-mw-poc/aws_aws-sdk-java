@@ -139,6 +139,66 @@ public class AWSMediaTailorClient extends AmazonWebServiceClient implements AWSM
 
     /**
      * <p>
+     * Configures Amazon CloudWatch log settings for a playback configuration.
+     * </p>
+     * 
+     * @param configureLogsForPlaybackConfigurationRequest
+     *        Configures Amazon CloudWatch log settings for a playback configuration.
+     * @return Result of the ConfigureLogsForPlaybackConfiguration operation returned by the service.
+     * @sample AWSMediaTailor.ConfigureLogsForPlaybackConfiguration
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/mediatailor-2018-04-23/ConfigureLogsForPlaybackConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ConfigureLogsForPlaybackConfigurationResult configureLogsForPlaybackConfiguration(ConfigureLogsForPlaybackConfigurationRequest request) {
+        request = beforeClientExecution(request);
+        return executeConfigureLogsForPlaybackConfiguration(request);
+    }
+
+    @SdkInternalApi
+    final ConfigureLogsForPlaybackConfigurationResult executeConfigureLogsForPlaybackConfiguration(
+            ConfigureLogsForPlaybackConfigurationRequest configureLogsForPlaybackConfigurationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(configureLogsForPlaybackConfigurationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ConfigureLogsForPlaybackConfigurationRequest> request = null;
+        Response<ConfigureLogsForPlaybackConfigurationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ConfigureLogsForPlaybackConfigurationRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(configureLogsForPlaybackConfigurationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "MediaTailor");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ConfigureLogsForPlaybackConfiguration");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ConfigureLogsForPlaybackConfigurationResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new ConfigureLogsForPlaybackConfigurationResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Creates a channel.
      * </p>
      * 
@@ -1310,7 +1370,7 @@ public class AWSMediaTailorClient extends AmazonWebServiceClient implements AWSM
      * @param listTagsForResourceRequest
      * @return Result of the ListTagsForResource operation returned by the service.
      * @throws BadRequestException
-     *         Invalid request parameters.
+     *         One or more parameters in this request aren't valid.
      * @sample AWSMediaTailor.ListTagsForResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mediatailor-2018-04-23/ListTagsForResource"
      *      target="_top">AWS API Documentation</a>
@@ -1644,7 +1704,7 @@ public class AWSMediaTailorClient extends AmazonWebServiceClient implements AWSM
      * @param tagResourceRequest
      * @return Result of the TagResource operation returned by the service.
      * @throws BadRequestException
-     *         Invalid request parameters.
+     *         One or more parameters in this request aren't valid.
      * @sample AWSMediaTailor.TagResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mediatailor-2018-04-23/TagResource" target="_top">AWS API
      *      Documentation</a>
@@ -1701,7 +1761,7 @@ public class AWSMediaTailorClient extends AmazonWebServiceClient implements AWSM
      * @param untagResourceRequest
      * @return Result of the UntagResource operation returned by the service.
      * @throws BadRequestException
-     *         Invalid request parameters.
+     *         One or more parameters in this request aren't valid.
      * @sample AWSMediaTailor.UntagResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mediatailor-2018-04-23/UntagResource" target="_top">AWS API
      *      Documentation</a>

@@ -15,7 +15,10 @@ package com.amazonaws.services.lexmodelsv2.model;
 import javax.annotation.Generated;
 
 /**
- * <p/>
+ * <p>
+ * The action that you tried to perform couldn't be completed because the resource is in a conflicting state. For
+ * example, deleting a bot that is in the CREATING state. Try your request again.
+ * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ConflictException extends com.amazonaws.services.lexmodelsv2.model.AmazonLexModelsV2Exception {

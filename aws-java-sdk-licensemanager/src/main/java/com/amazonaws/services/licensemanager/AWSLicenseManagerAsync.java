@@ -25,10 +25,9 @@ import com.amazonaws.services.licensemanager.model.*;
  * {@link com.amazonaws.services.licensemanager.AbstractAWSLicenseManagerAsync} instead.
  * </p>
  * <p>
- * <fullname> AWS License Manager </fullname>
  * <p>
- * AWS License Manager makes it easier to manage licenses from software vendors across multiple AWS accounts and
- * on-premises servers.
+ * License Manager makes it easier to manage licenses from software vendors across multiple Amazon Web Services accounts
+ * and on-premises servers.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
@@ -160,8 +159,8 @@ public interface AWSLicenseManagerAsync extends AWSLicenseManager {
 
     /**
      * <p>
-     * Creates a grant for the specified license. A grant shares the use of license entitlements with specific AWS
-     * accounts.
+     * Creates a grant for the specified license. A grant shares the use of license entitlements with specific Amazon
+     * Web Services accounts.
      * </p>
      * 
      * @param createGrantRequest
@@ -174,8 +173,8 @@ public interface AWSLicenseManagerAsync extends AWSLicenseManager {
 
     /**
      * <p>
-     * Creates a grant for the specified license. A grant shares the use of license entitlements with specific AWS
-     * accounts.
+     * Creates a grant for the specified license. A grant shares the use of license entitlements with specific Amazon
+     * Web Services accounts.
      * </p>
      * 
      * @param createGrantRequest
@@ -300,7 +299,44 @@ public interface AWSLicenseManagerAsync extends AWSLicenseManager {
 
     /**
      * <p>
-     * Creates a new report generator.
+     * Creates a new license conversion task.
+     * </p>
+     * 
+     * @param createLicenseConversionTaskForResourceRequest
+     * @return A Java Future containing the result of the CreateLicenseConversionTaskForResource operation returned by
+     *         the service.
+     * @sample AWSLicenseManagerAsync.CreateLicenseConversionTaskForResource
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/license-manager-2018-08-01/CreateLicenseConversionTaskForResource"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateLicenseConversionTaskForResourceResult> createLicenseConversionTaskForResourceAsync(
+            CreateLicenseConversionTaskForResourceRequest createLicenseConversionTaskForResourceRequest);
+
+    /**
+     * <p>
+     * Creates a new license conversion task.
+     * </p>
+     * 
+     * @param createLicenseConversionTaskForResourceRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateLicenseConversionTaskForResource operation returned by
+     *         the service.
+     * @sample AWSLicenseManagerAsyncHandler.CreateLicenseConversionTaskForResource
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/license-manager-2018-08-01/CreateLicenseConversionTaskForResource"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateLicenseConversionTaskForResourceResult> createLicenseConversionTaskForResourceAsync(
+            CreateLicenseConversionTaskForResourceRequest createLicenseConversionTaskForResourceRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateLicenseConversionTaskForResourceRequest, CreateLicenseConversionTaskForResourceResult> asyncHandler);
+
+    /**
+     * <p>
+     * Creates a report generator.
      * </p>
      * 
      * @param createLicenseManagerReportGeneratorRequest
@@ -316,7 +352,7 @@ public interface AWSLicenseManagerAsync extends AWSLicenseManager {
 
     /**
      * <p>
-     * Creates a new report generator.
+     * Creates a report generator.
      * </p>
      * 
      * @param createLicenseManagerReportGeneratorRequest
@@ -510,11 +546,11 @@ public interface AWSLicenseManagerAsync extends AWSLicenseManager {
 
     /**
      * <p>
-     * Delete an existing report generator.
+     * Deletes the specified report generator.
      * </p>
      * <p>
-     * This action deletes the report generator, which stops it from generating future reports and cannot be reversed.
-     * However, the previous reports from this generator will remain in your S3 bucket.
+     * This action deletes the report generator, which stops it from generating future reports. The action cannot be
+     * reversed. It has no effect on the previous reports from this generator.
      * </p>
      * 
      * @param deleteLicenseManagerReportGeneratorRequest
@@ -530,11 +566,11 @@ public interface AWSLicenseManagerAsync extends AWSLicenseManager {
 
     /**
      * <p>
-     * Delete an existing report generator.
+     * Deletes the specified report generator.
      * </p>
      * <p>
-     * This action deletes the report generator, which stops it from generating future reports and cannot be reversed.
-     * However, the previous reports from this generator will remain in your S3 bucket.
+     * This action deletes the report generator, which stops it from generating future reports. The action cannot be
+     * reversed. It has no effect on the previous reports from this generator.
      * </p>
      * 
      * @param deleteLicenseManagerReportGeneratorRequest
@@ -741,7 +777,38 @@ public interface AWSLicenseManagerAsync extends AWSLicenseManager {
 
     /**
      * <p>
-     * Gets information on the specified report generator.
+     * Gets information about the specified license type conversion task.
+     * </p>
+     * 
+     * @param getLicenseConversionTaskRequest
+     * @return A Java Future containing the result of the GetLicenseConversionTask operation returned by the service.
+     * @sample AWSLicenseManagerAsync.GetLicenseConversionTask
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/license-manager-2018-08-01/GetLicenseConversionTask"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetLicenseConversionTaskResult> getLicenseConversionTaskAsync(GetLicenseConversionTaskRequest getLicenseConversionTaskRequest);
+
+    /**
+     * <p>
+     * Gets information about the specified license type conversion task.
+     * </p>
+     * 
+     * @param getLicenseConversionTaskRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetLicenseConversionTask operation returned by the service.
+     * @sample AWSLicenseManagerAsyncHandler.GetLicenseConversionTask
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/license-manager-2018-08-01/GetLicenseConversionTask"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetLicenseConversionTaskResult> getLicenseConversionTaskAsync(GetLicenseConversionTaskRequest getLicenseConversionTaskRequest,
+            com.amazonaws.handlers.AsyncHandler<GetLicenseConversionTaskRequest, GetLicenseConversionTaskResult> asyncHandler);
+
+    /**
+     * <p>
+     * Gets information about the specified report generator.
      * </p>
      * 
      * @param getLicenseManagerReportGeneratorRequest
@@ -756,7 +823,7 @@ public interface AWSLicenseManagerAsync extends AWSLicenseManager {
 
     /**
      * <p>
-     * Gets information on the specified report generator.
+     * Gets information about the specified report generator.
      * </p>
      * 
      * @param getLicenseManagerReportGeneratorRequest
@@ -981,6 +1048,39 @@ public interface AWSLicenseManagerAsync extends AWSLicenseManager {
     java.util.concurrent.Future<ListLicenseConfigurationsResult> listLicenseConfigurationsAsync(
             ListLicenseConfigurationsRequest listLicenseConfigurationsRequest,
             com.amazonaws.handlers.AsyncHandler<ListLicenseConfigurationsRequest, ListLicenseConfigurationsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Lists the license type conversion tasks for your account.
+     * </p>
+     * 
+     * @param listLicenseConversionTasksRequest
+     * @return A Java Future containing the result of the ListLicenseConversionTasks operation returned by the service.
+     * @sample AWSLicenseManagerAsync.ListLicenseConversionTasks
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/license-manager-2018-08-01/ListLicenseConversionTasks"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListLicenseConversionTasksResult> listLicenseConversionTasksAsync(
+            ListLicenseConversionTasksRequest listLicenseConversionTasksRequest);
+
+    /**
+     * <p>
+     * Lists the license type conversion tasks for your account.
+     * </p>
+     * 
+     * @param listLicenseConversionTasksRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListLicenseConversionTasks operation returned by the service.
+     * @sample AWSLicenseManagerAsyncHandler.ListLicenseConversionTasks
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/license-manager-2018-08-01/ListLicenseConversionTasks"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListLicenseConversionTasksResult> listLicenseConversionTasksAsync(
+            ListLicenseConversionTasksRequest listLicenseConversionTasksRequest,
+            com.amazonaws.handlers.AsyncHandler<ListLicenseConversionTasksRequest, ListLicenseConversionTasksResult> asyncHandler);
 
     /**
      * <p>
@@ -1443,7 +1543,7 @@ public interface AWSLicenseManagerAsync extends AWSLicenseManager {
      * Updates a report generator.
      * </p>
      * <p>
-     * After you make changes to a report generator, it will start generating new reports within 60 minutes of being
+     * After you make changes to a report generator, it starts generating new reports within 60 minutes of being
      * updated.
      * </p>
      * 
@@ -1463,7 +1563,7 @@ public interface AWSLicenseManagerAsync extends AWSLicenseManager {
      * Updates a report generator.
      * </p>
      * <p>
-     * After you make changes to a report generator, it will start generating new reports within 60 minutes of being
+     * After you make changes to a report generator, it starts generating new reports within 60 minutes of being
      * updated.
      * </p>
      * 
@@ -1485,11 +1585,11 @@ public interface AWSLicenseManagerAsync extends AWSLicenseManager {
 
     /**
      * <p>
-     * Adds or removes the specified license configurations for the specified AWS resource.
+     * Adds or removes the specified license configurations for the specified Amazon Web Services resource.
      * </p>
      * <p>
      * You can update the license specifications of AMIs, instances, and hosts. You cannot update the license
-     * specifications for launch templates and AWS CloudFormation templates, as they send license configurations to the
+     * specifications for launch templates and CloudFormation templates, as they send license configurations to the
      * operation that creates the resource.
      * </p>
      * 
@@ -1506,11 +1606,11 @@ public interface AWSLicenseManagerAsync extends AWSLicenseManager {
 
     /**
      * <p>
-     * Adds or removes the specified license configurations for the specified AWS resource.
+     * Adds or removes the specified license configurations for the specified Amazon Web Services resource.
      * </p>
      * <p>
      * You can update the license specifications of AMIs, instances, and hosts. You cannot update the license
-     * specifications for launch templates and AWS CloudFormation templates, as they send license configurations to the
+     * specifications for launch templates and CloudFormation templates, as they send license configurations to the
      * operation that creates the resource.
      * </p>
      * 

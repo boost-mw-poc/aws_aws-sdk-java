@@ -81,6 +81,12 @@ public class PutPlaybackConfigurationResult extends com.amazonaws.AmazonWebServi
     private LivePreRollConfiguration livePreRollConfiguration;
     /**
      * <p>
+     * The Amazon CloudWatch log settings for a playback configuration.
+     * </p>
+     */
+    private LogConfiguration logConfiguration;
+    /**
+     * <p>
      * The configuration for manifest processing rules. Manifest processing rules enable customization of the
      * personalized manifests created by MediaTailor.
      * </p>
@@ -552,6 +558,46 @@ public class PutPlaybackConfigurationResult extends com.amazonaws.AmazonWebServi
 
     public PutPlaybackConfigurationResult withLivePreRollConfiguration(LivePreRollConfiguration livePreRollConfiguration) {
         setLivePreRollConfiguration(livePreRollConfiguration);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The Amazon CloudWatch log settings for a playback configuration.
+     * </p>
+     * 
+     * @param logConfiguration
+     *        The Amazon CloudWatch log settings for a playback configuration.
+     */
+
+    public void setLogConfiguration(LogConfiguration logConfiguration) {
+        this.logConfiguration = logConfiguration;
+    }
+
+    /**
+     * <p>
+     * The Amazon CloudWatch log settings for a playback configuration.
+     * </p>
+     * 
+     * @return The Amazon CloudWatch log settings for a playback configuration.
+     */
+
+    public LogConfiguration getLogConfiguration() {
+        return this.logConfiguration;
+    }
+
+    /**
+     * <p>
+     * The Amazon CloudWatch log settings for a playback configuration.
+     * </p>
+     * 
+     * @param logConfiguration
+     *        The Amazon CloudWatch log settings for a playback configuration.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PutPlaybackConfigurationResult withLogConfiguration(LogConfiguration logConfiguration) {
+        setLogConfiguration(logConfiguration);
         return this;
     }
 
@@ -1095,6 +1141,8 @@ public class PutPlaybackConfigurationResult extends com.amazonaws.AmazonWebServi
             sb.append("HlsConfiguration: ").append(getHlsConfiguration()).append(",");
         if (getLivePreRollConfiguration() != null)
             sb.append("LivePreRollConfiguration: ").append(getLivePreRollConfiguration()).append(",");
+        if (getLogConfiguration() != null)
+            sb.append("LogConfiguration: ").append(getLogConfiguration()).append(",");
         if (getManifestProcessingRules() != null)
             sb.append("ManifestProcessingRules: ").append(getManifestProcessingRules()).append(",");
         if (getName() != null)
@@ -1161,6 +1209,10 @@ public class PutPlaybackConfigurationResult extends com.amazonaws.AmazonWebServi
             return false;
         if (other.getLivePreRollConfiguration() != null && other.getLivePreRollConfiguration().equals(this.getLivePreRollConfiguration()) == false)
             return false;
+        if (other.getLogConfiguration() == null ^ this.getLogConfiguration() == null)
+            return false;
+        if (other.getLogConfiguration() != null && other.getLogConfiguration().equals(this.getLogConfiguration()) == false)
+            return false;
         if (other.getManifestProcessingRules() == null ^ this.getManifestProcessingRules() == null)
             return false;
         if (other.getManifestProcessingRules() != null && other.getManifestProcessingRules().equals(this.getManifestProcessingRules()) == false)
@@ -1219,6 +1271,7 @@ public class PutPlaybackConfigurationResult extends com.amazonaws.AmazonWebServi
         hashCode = prime * hashCode + ((getDashConfiguration() == null) ? 0 : getDashConfiguration().hashCode());
         hashCode = prime * hashCode + ((getHlsConfiguration() == null) ? 0 : getHlsConfiguration().hashCode());
         hashCode = prime * hashCode + ((getLivePreRollConfiguration() == null) ? 0 : getLivePreRollConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getLogConfiguration() == null) ? 0 : getLogConfiguration().hashCode());
         hashCode = prime * hashCode + ((getManifestProcessingRules() == null) ? 0 : getManifestProcessingRules().hashCode());
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
         hashCode = prime * hashCode + ((getPersonalizationThresholdSeconds() == null) ? 0 : getPersonalizationThresholdSeconds().hashCode());

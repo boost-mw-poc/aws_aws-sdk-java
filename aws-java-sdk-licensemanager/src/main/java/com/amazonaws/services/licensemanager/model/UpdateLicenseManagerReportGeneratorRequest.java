@@ -27,7 +27,7 @@ public class UpdateLicenseManagerReportGeneratorRequest extends com.amazonaws.Am
 
     /**
      * <p>
-     * Amazon Resource Number (ARN) of the report generator to update.
+     * Amazon Resource Name (ARN) of the report generator to update.
      * </p>
      */
     private String licenseManagerReportGeneratorArn;
@@ -39,18 +39,17 @@ public class UpdateLicenseManagerReportGeneratorRequest extends com.amazonaws.Am
     private String reportGeneratorName;
     /**
      * <p>
-     * Type of reports to generate. The following report types an be generated:
+     * Type of reports to generate. The following report types are supported:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * License configuration report - Reports on the number and details of consumed licenses for a license
-     * configuration.
+     * License configuration report - Reports the number and details of consumed licenses for a license configuration.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Resource report - Reports on the tracked licenses and resource consumption for a license configuration.
+     * Resource report - Reports the tracked licenses and resource consumption for a license configuration.
      * </p>
      * </li>
      * </ul>
@@ -58,16 +57,13 @@ public class UpdateLicenseManagerReportGeneratorRequest extends com.amazonaws.Am
     private java.util.List<String> type;
     /**
      * <p>
-     * ?
+     * The report context.
      * </p>
      */
     private ReportContext reportContext;
     /**
      * <p>
-     * Frequency by which reports are generated. The following options are avaiable:
-     * </p>
-     * <p>
-     * ??? What are the APi value options?
+     * Frequency by which reports are generated.
      * </p>
      */
     private ReportFrequency reportFrequency;
@@ -86,11 +82,11 @@ public class UpdateLicenseManagerReportGeneratorRequest extends com.amazonaws.Am
 
     /**
      * <p>
-     * Amazon Resource Number (ARN) of the report generator to update.
+     * Amazon Resource Name (ARN) of the report generator to update.
      * </p>
      * 
      * @param licenseManagerReportGeneratorArn
-     *        Amazon Resource Number (ARN) of the report generator to update.
+     *        Amazon Resource Name (ARN) of the report generator to update.
      */
 
     public void setLicenseManagerReportGeneratorArn(String licenseManagerReportGeneratorArn) {
@@ -99,10 +95,10 @@ public class UpdateLicenseManagerReportGeneratorRequest extends com.amazonaws.Am
 
     /**
      * <p>
-     * Amazon Resource Number (ARN) of the report generator to update.
+     * Amazon Resource Name (ARN) of the report generator to update.
      * </p>
      * 
-     * @return Amazon Resource Number (ARN) of the report generator to update.
+     * @return Amazon Resource Name (ARN) of the report generator to update.
      */
 
     public String getLicenseManagerReportGeneratorArn() {
@@ -111,11 +107,11 @@ public class UpdateLicenseManagerReportGeneratorRequest extends com.amazonaws.Am
 
     /**
      * <p>
-     * Amazon Resource Number (ARN) of the report generator to update.
+     * Amazon Resource Name (ARN) of the report generator to update.
      * </p>
      * 
      * @param licenseManagerReportGeneratorArn
-     *        Amazon Resource Number (ARN) of the report generator to update.
+     *        Amazon Resource Name (ARN) of the report generator to update.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -166,33 +162,32 @@ public class UpdateLicenseManagerReportGeneratorRequest extends com.amazonaws.Am
 
     /**
      * <p>
-     * Type of reports to generate. The following report types an be generated:
+     * Type of reports to generate. The following report types are supported:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * License configuration report - Reports on the number and details of consumed licenses for a license
-     * configuration.
+     * License configuration report - Reports the number and details of consumed licenses for a license configuration.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Resource report - Reports on the tracked licenses and resource consumption for a license configuration.
+     * Resource report - Reports the tracked licenses and resource consumption for a license configuration.
      * </p>
      * </li>
      * </ul>
      * 
-     * @return Type of reports to generate. The following report types an be generated:</p>
+     * @return Type of reports to generate. The following report types are supported:</p>
      *         <ul>
      *         <li>
      *         <p>
-     *         License configuration report - Reports on the number and details of consumed licenses for a license
+     *         License configuration report - Reports the number and details of consumed licenses for a license
      *         configuration.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         Resource report - Reports on the tracked licenses and resource consumption for a license configuration.
+     *         Resource report - Reports the tracked licenses and resource consumption for a license configuration.
      *         </p>
      *         </li>
      * @see ReportType
@@ -204,34 +199,33 @@ public class UpdateLicenseManagerReportGeneratorRequest extends com.amazonaws.Am
 
     /**
      * <p>
-     * Type of reports to generate. The following report types an be generated:
+     * Type of reports to generate. The following report types are supported:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * License configuration report - Reports on the number and details of consumed licenses for a license
-     * configuration.
+     * License configuration report - Reports the number and details of consumed licenses for a license configuration.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Resource report - Reports on the tracked licenses and resource consumption for a license configuration.
+     * Resource report - Reports the tracked licenses and resource consumption for a license configuration.
      * </p>
      * </li>
      * </ul>
      * 
      * @param type
-     *        Type of reports to generate. The following report types an be generated:</p>
+     *        Type of reports to generate. The following report types are supported:</p>
      *        <ul>
      *        <li>
      *        <p>
-     *        License configuration report - Reports on the number and details of consumed licenses for a license
+     *        License configuration report - Reports the number and details of consumed licenses for a license
      *        configuration.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        Resource report - Reports on the tracked licenses and resource consumption for a license configuration.
+     *        Resource report - Reports the tracked licenses and resource consumption for a license configuration.
      *        </p>
      *        </li>
      * @see ReportType
@@ -248,18 +242,17 @@ public class UpdateLicenseManagerReportGeneratorRequest extends com.amazonaws.Am
 
     /**
      * <p>
-     * Type of reports to generate. The following report types an be generated:
+     * Type of reports to generate. The following report types are supported:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * License configuration report - Reports on the number and details of consumed licenses for a license
-     * configuration.
+     * License configuration report - Reports the number and details of consumed licenses for a license configuration.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Resource report - Reports on the tracked licenses and resource consumption for a license configuration.
+     * Resource report - Reports the tracked licenses and resource consumption for a license configuration.
      * </p>
      * </li>
      * </ul>
@@ -270,17 +263,17 @@ public class UpdateLicenseManagerReportGeneratorRequest extends com.amazonaws.Am
      * </p>
      * 
      * @param type
-     *        Type of reports to generate. The following report types an be generated:</p>
+     *        Type of reports to generate. The following report types are supported:</p>
      *        <ul>
      *        <li>
      *        <p>
-     *        License configuration report - Reports on the number and details of consumed licenses for a license
+     *        License configuration report - Reports the number and details of consumed licenses for a license
      *        configuration.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        Resource report - Reports on the tracked licenses and resource consumption for a license configuration.
+     *        Resource report - Reports the tracked licenses and resource consumption for a license configuration.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -299,34 +292,33 @@ public class UpdateLicenseManagerReportGeneratorRequest extends com.amazonaws.Am
 
     /**
      * <p>
-     * Type of reports to generate. The following report types an be generated:
+     * Type of reports to generate. The following report types are supported:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * License configuration report - Reports on the number and details of consumed licenses for a license
-     * configuration.
+     * License configuration report - Reports the number and details of consumed licenses for a license configuration.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Resource report - Reports on the tracked licenses and resource consumption for a license configuration.
+     * Resource report - Reports the tracked licenses and resource consumption for a license configuration.
      * </p>
      * </li>
      * </ul>
      * 
      * @param type
-     *        Type of reports to generate. The following report types an be generated:</p>
+     *        Type of reports to generate. The following report types are supported:</p>
      *        <ul>
      *        <li>
      *        <p>
-     *        License configuration report - Reports on the number and details of consumed licenses for a license
+     *        License configuration report - Reports the number and details of consumed licenses for a license
      *        configuration.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        Resource report - Reports on the tracked licenses and resource consumption for a license configuration.
+     *        Resource report - Reports the tracked licenses and resource consumption for a license configuration.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -340,34 +332,33 @@ public class UpdateLicenseManagerReportGeneratorRequest extends com.amazonaws.Am
 
     /**
      * <p>
-     * Type of reports to generate. The following report types an be generated:
+     * Type of reports to generate. The following report types are supported:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * License configuration report - Reports on the number and details of consumed licenses for a license
-     * configuration.
+     * License configuration report - Reports the number and details of consumed licenses for a license configuration.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Resource report - Reports on the tracked licenses and resource consumption for a license configuration.
+     * Resource report - Reports the tracked licenses and resource consumption for a license configuration.
      * </p>
      * </li>
      * </ul>
      * 
      * @param type
-     *        Type of reports to generate. The following report types an be generated:</p>
+     *        Type of reports to generate. The following report types are supported:</p>
      *        <ul>
      *        <li>
      *        <p>
-     *        License configuration report - Reports on the number and details of consumed licenses for a license
+     *        License configuration report - Reports the number and details of consumed licenses for a license
      *        configuration.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        Resource report - Reports on the tracked licenses and resource consumption for a license configuration.
+     *        Resource report - Reports the tracked licenses and resource consumption for a license configuration.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -389,11 +380,11 @@ public class UpdateLicenseManagerReportGeneratorRequest extends com.amazonaws.Am
 
     /**
      * <p>
-     * ?
+     * The report context.
      * </p>
      * 
      * @param reportContext
-     *        ?
+     *        The report context.
      */
 
     public void setReportContext(ReportContext reportContext) {
@@ -402,10 +393,10 @@ public class UpdateLicenseManagerReportGeneratorRequest extends com.amazonaws.Am
 
     /**
      * <p>
-     * ?
+     * The report context.
      * </p>
      * 
-     * @return ?
+     * @return The report context.
      */
 
     public ReportContext getReportContext() {
@@ -414,11 +405,11 @@ public class UpdateLicenseManagerReportGeneratorRequest extends com.amazonaws.Am
 
     /**
      * <p>
-     * ?
+     * The report context.
      * </p>
      * 
      * @param reportContext
-     *        ?
+     *        The report context.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -429,16 +420,11 @@ public class UpdateLicenseManagerReportGeneratorRequest extends com.amazonaws.Am
 
     /**
      * <p>
-     * Frequency by which reports are generated. The following options are avaiable:
-     * </p>
-     * <p>
-     * ??? What are the APi value options?
+     * Frequency by which reports are generated.
      * </p>
      * 
      * @param reportFrequency
-     *        Frequency by which reports are generated. The following options are avaiable:</p>
-     *        <p>
-     *        ??? What are the APi value options?
+     *        Frequency by which reports are generated.
      */
 
     public void setReportFrequency(ReportFrequency reportFrequency) {
@@ -447,15 +433,10 @@ public class UpdateLicenseManagerReportGeneratorRequest extends com.amazonaws.Am
 
     /**
      * <p>
-     * Frequency by which reports are generated. The following options are avaiable:
-     * </p>
-     * <p>
-     * ??? What are the APi value options?
+     * Frequency by which reports are generated.
      * </p>
      * 
-     * @return Frequency by which reports are generated. The following options are avaiable:</p>
-     *         <p>
-     *         ??? What are the APi value options?
+     * @return Frequency by which reports are generated.
      */
 
     public ReportFrequency getReportFrequency() {
@@ -464,16 +445,11 @@ public class UpdateLicenseManagerReportGeneratorRequest extends com.amazonaws.Am
 
     /**
      * <p>
-     * Frequency by which reports are generated. The following options are avaiable:
-     * </p>
-     * <p>
-     * ??? What are the APi value options?
+     * Frequency by which reports are generated.
      * </p>
      * 
      * @param reportFrequency
-     *        Frequency by which reports are generated. The following options are avaiable:</p>
-     *        <p>
-     *        ??? What are the APi value options?
+     *        Frequency by which reports are generated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

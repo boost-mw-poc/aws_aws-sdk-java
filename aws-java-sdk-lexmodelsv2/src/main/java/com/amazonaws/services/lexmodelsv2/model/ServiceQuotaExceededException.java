@@ -15,7 +15,9 @@ package com.amazonaws.services.lexmodelsv2.model;
 import javax.annotation.Generated;
 
 /**
- * <p/>
+ * <p>
+ * You have reached a quota for your bot.
+ * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ServiceQuotaExceededException extends com.amazonaws.services.lexmodelsv2.model.AmazonLexModelsV2Exception {

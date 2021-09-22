@@ -25,10 +25,9 @@ import java.util.concurrent.ExecutorService;
  * representing the asynchronous operation; overloads which accept an {@code AsyncHandler} can be used to receive
  * notification when an asynchronous operation completes.
  * <p>
- * <fullname> AWS License Manager </fullname>
  * <p>
- * AWS License Manager makes it easier to manage licenses from software vendors across multiple AWS accounts and
- * on-premises servers.
+ * License Manager makes it easier to manage licenses from software vendors across multiple Amazon Web Services accounts
+ * and on-premises servers.
  * </p>
  */
 @ThreadSafe
@@ -326,6 +325,41 @@ public class AWSLicenseManagerAsyncClient extends AWSLicenseManagerClient implem
 
                 try {
                     result = executeCreateLicenseConfiguration(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateLicenseConversionTaskForResourceResult> createLicenseConversionTaskForResourceAsync(
+            CreateLicenseConversionTaskForResourceRequest request) {
+
+        return createLicenseConversionTaskForResourceAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateLicenseConversionTaskForResourceResult> createLicenseConversionTaskForResourceAsync(
+            final CreateLicenseConversionTaskForResourceRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateLicenseConversionTaskForResourceRequest, CreateLicenseConversionTaskForResourceResult> asyncHandler) {
+        final CreateLicenseConversionTaskForResourceRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateLicenseConversionTaskForResourceResult>() {
+            @Override
+            public CreateLicenseConversionTaskForResourceResult call() throws Exception {
+                CreateLicenseConversionTaskForResourceResult result = null;
+
+                try {
+                    result = executeCreateLicenseConversionTaskForResource(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -775,6 +809,39 @@ public class AWSLicenseManagerAsyncClient extends AWSLicenseManagerClient implem
     }
 
     @Override
+    public java.util.concurrent.Future<GetLicenseConversionTaskResult> getLicenseConversionTaskAsync(GetLicenseConversionTaskRequest request) {
+
+        return getLicenseConversionTaskAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetLicenseConversionTaskResult> getLicenseConversionTaskAsync(final GetLicenseConversionTaskRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetLicenseConversionTaskRequest, GetLicenseConversionTaskResult> asyncHandler) {
+        final GetLicenseConversionTaskRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetLicenseConversionTaskResult>() {
+            @Override
+            public GetLicenseConversionTaskResult call() throws Exception {
+                GetLicenseConversionTaskResult result = null;
+
+                try {
+                    result = executeGetLicenseConversionTask(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetLicenseManagerReportGeneratorResult> getLicenseManagerReportGeneratorAsync(
             GetLicenseManagerReportGeneratorRequest request) {
 
@@ -996,6 +1063,39 @@ public class AWSLicenseManagerAsyncClient extends AWSLicenseManagerClient implem
 
                 try {
                     result = executeListLicenseConfigurations(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListLicenseConversionTasksResult> listLicenseConversionTasksAsync(ListLicenseConversionTasksRequest request) {
+
+        return listLicenseConversionTasksAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListLicenseConversionTasksResult> listLicenseConversionTasksAsync(final ListLicenseConversionTasksRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListLicenseConversionTasksRequest, ListLicenseConversionTasksResult> asyncHandler) {
+        final ListLicenseConversionTasksRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListLicenseConversionTasksResult>() {
+            @Override
+            public ListLicenseConversionTasksResult call() throws Exception {
+                ListLicenseConversionTasksResult result = null;
+
+                try {
+                    result = executeListLicenseConversionTasks(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

@@ -80,8 +80,8 @@ public class AccessKeyLastUsed implements Serializable, Cloneable {
     private String serviceName;
     /**
      * <p>
-     * The Region where this access key was most recently used. The value for this field is "N/A" in the following
-     * situations:
+     * The Amazon Web Services Region where this access key was most recently used. The value for this field is "N/A" in
+     * the following situations:
      * </p>
      * <ul>
      * <li>
@@ -101,7 +101,7 @@ public class AccessKeyLastUsed implements Serializable, Cloneable {
      * </li>
      * </ul>
      * <p>
-     * For more information about Regions, see <a
+     * For more information about Amazon Web Services Regions, see <a
      * href="https://docs.aws.amazon.com/general/latest/gr/rande.html">Regions and endpoints</a> in the Amazon Web
      * Services General Reference.
      * </p>
@@ -400,8 +400,8 @@ public class AccessKeyLastUsed implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The Region where this access key was most recently used. The value for this field is "N/A" in the following
-     * situations:
+     * The Amazon Web Services Region where this access key was most recently used. The value for this field is "N/A" in
+     * the following situations:
      * </p>
      * <ul>
      * <li>
@@ -421,14 +421,14 @@ public class AccessKeyLastUsed implements Serializable, Cloneable {
      * </li>
      * </ul>
      * <p>
-     * For more information about Regions, see <a
+     * For more information about Amazon Web Services Regions, see <a
      * href="https://docs.aws.amazon.com/general/latest/gr/rande.html">Regions and endpoints</a> in the Amazon Web
      * Services General Reference.
      * </p>
      * 
      * @param region
-     *        The Region where this access key was most recently used. The value for this field is "N/A" in the
-     *        following situations:</p>
+     *        The Amazon Web Services Region where this access key was most recently used. The value for this field is
+     *        "N/A" in the following situations:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -447,7 +447,7 @@ public class AccessKeyLastUsed implements Serializable, Cloneable {
      *        </li>
      *        </ul>
      *        <p>
-     *        For more information about Regions, see <a
+     *        For more information about Amazon Web Services Regions, see <a
      *        href="https://docs.aws.amazon.com/general/latest/gr/rande.html">Regions and endpoints</a> in the Amazon
      *        Web Services General Reference.
      */
@@ -458,8 +458,8 @@ public class AccessKeyLastUsed implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The Region where this access key was most recently used. The value for this field is "N/A" in the following
-     * situations:
+     * The Amazon Web Services Region where this access key was most recently used. The value for this field is "N/A" in
+     * the following situations:
      * </p>
      * <ul>
      * <li>
@@ -479,13 +479,13 @@ public class AccessKeyLastUsed implements Serializable, Cloneable {
      * </li>
      * </ul>
      * <p>
-     * For more information about Regions, see <a
+     * For more information about Amazon Web Services Regions, see <a
      * href="https://docs.aws.amazon.com/general/latest/gr/rande.html">Regions and endpoints</a> in the Amazon Web
      * Services General Reference.
      * </p>
      * 
-     * @return The Region where this access key was most recently used. The value for this field is "N/A" in the
-     *         following situations:</p>
+     * @return The Amazon Web Services Region where this access key was most recently used. The value for this field is
+     *         "N/A" in the following situations:</p>
      *         <ul>
      *         <li>
      *         <p>
@@ -504,7 +504,7 @@ public class AccessKeyLastUsed implements Serializable, Cloneable {
      *         </li>
      *         </ul>
      *         <p>
-     *         For more information about Regions, see <a
+     *         For more information about Amazon Web Services Regions, see <a
      *         href="https://docs.aws.amazon.com/general/latest/gr/rande.html">Regions and endpoints</a> in the Amazon
      *         Web Services General Reference.
      */
@@ -515,8 +515,8 @@ public class AccessKeyLastUsed implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The Region where this access key was most recently used. The value for this field is "N/A" in the following
-     * situations:
+     * The Amazon Web Services Region where this access key was most recently used. The value for this field is "N/A" in
+     * the following situations:
      * </p>
      * <ul>
      * <li>
@@ -536,14 +536,14 @@ public class AccessKeyLastUsed implements Serializable, Cloneable {
      * </li>
      * </ul>
      * <p>
-     * For more information about Regions, see <a
+     * For more information about Amazon Web Services Regions, see <a
      * href="https://docs.aws.amazon.com/general/latest/gr/rande.html">Regions and endpoints</a> in the Amazon Web
      * Services General Reference.
      * </p>
      * 
      * @param region
-     *        The Region where this access key was most recently used. The value for this field is "N/A" in the
-     *        following situations:</p>
+     *        The Amazon Web Services Region where this access key was most recently used. The value for this field is
+     *        "N/A" in the following situations:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -562,7 +562,7 @@ public class AccessKeyLastUsed implements Serializable, Cloneable {
      *        </li>
      *        </ul>
      *        <p>
-     *        For more information about Regions, see <a
+     *        For more information about Amazon Web Services Regions, see <a
      *        href="https://docs.aws.amazon.com/general/latest/gr/rande.html">Regions and endpoints</a> in the Amazon
      *        Web Services General Reference.
      * @return Returns a reference to this object so that method calls can be chained together.

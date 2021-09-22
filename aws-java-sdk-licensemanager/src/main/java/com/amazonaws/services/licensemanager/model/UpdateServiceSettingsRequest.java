@@ -39,7 +39,7 @@ public class UpdateServiceSettingsRequest extends com.amazonaws.AmazonWebService
     private String snsTopicArn;
     /**
      * <p>
-     * Enables integration with AWS Organizations for cross-account discovery.
+     * Enables integration with Organizations for cross-account discovery.
      * </p>
      */
     private OrganizationConfiguration organizationConfiguration;
@@ -132,11 +132,11 @@ public class UpdateServiceSettingsRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * Enables integration with AWS Organizations for cross-account discovery.
+     * Enables integration with Organizations for cross-account discovery.
      * </p>
      * 
      * @param organizationConfiguration
-     *        Enables integration with AWS Organizations for cross-account discovery.
+     *        Enables integration with Organizations for cross-account discovery.
      */
 
     public void setOrganizationConfiguration(OrganizationConfiguration organizationConfiguration) {
@@ -145,10 +145,10 @@ public class UpdateServiceSettingsRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * Enables integration with AWS Organizations for cross-account discovery.
+     * Enables integration with Organizations for cross-account discovery.
      * </p>
      * 
-     * @return Enables integration with AWS Organizations for cross-account discovery.
+     * @return Enables integration with Organizations for cross-account discovery.
      */
 
     public OrganizationConfiguration getOrganizationConfiguration() {
@@ -157,11 +157,11 @@ public class UpdateServiceSettingsRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * Enables integration with AWS Organizations for cross-account discovery.
+     * Enables integration with Organizations for cross-account discovery.
      * </p>
      * 
      * @param organizationConfiguration
-     *        Enables integration with AWS Organizations for cross-account discovery.
+     *        Enables integration with Organizations for cross-account discovery.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

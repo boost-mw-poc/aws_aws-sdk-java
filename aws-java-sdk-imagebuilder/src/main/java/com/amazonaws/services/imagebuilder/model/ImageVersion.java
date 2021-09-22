@@ -81,8 +81,8 @@ public class ImageVersion implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * <b>Assignment:</b> For the first three nodes you can assign any positive integer value, including zero, with an
-     * upper limit of 2^30-1, or 1073741823 for each node. Image Builder automatically assigns the build number, and
-     * that is not open for updates.
+     * upper limit of 2^30-1, or 1073741823 for each node. Image Builder automatically assigns the build number to the
+     * fourth node.
      * </p>
      * <p>
      * <b>Patterns:</b> You can use any numeric pattern that adheres to the assignment requirements for the nodes that
@@ -90,11 +90,9 @@ public class ImageVersion implements Serializable, Cloneable, StructuredPojo {
      * 2021.01.01.
      * </p>
      * <p>
-     * <b>Filtering:</b> When you retrieve or reference a resource with a semantic version, you can use wildcards (x) to
-     * filter your results. When you use a wildcard in any node, all nodes to the right of the first wildcard must also
-     * be wildcards. For example, specifying "1.2.x", or "1.x.x" works to filter list results, but neither "1.x.2", nor
-     * "x.2.x" will work. You do not have to specify the build - Image Builder automatically uses a wildcard for that,
-     * if applicable.
+     * <b>Filtering:</b> With semantic versioning, you have the flexibility to use wildcards (x) to specify the most
+     * recent versions or nodes when selecting the source image or components for your recipe. When you use a wildcard
+     * in any node, all nodes to the right of the first wildcard must also be wildcards.
      * </p>
      * </note>
      */
@@ -414,8 +412,8 @@ public class ImageVersion implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * <b>Assignment:</b> For the first three nodes you can assign any positive integer value, including zero, with an
-     * upper limit of 2^30-1, or 1073741823 for each node. Image Builder automatically assigns the build number, and
-     * that is not open for updates.
+     * upper limit of 2^30-1, or 1073741823 for each node. Image Builder automatically assigns the build number to the
+     * fourth node.
      * </p>
      * <p>
      * <b>Patterns:</b> You can use any numeric pattern that adheres to the assignment requirements for the nodes that
@@ -423,11 +421,9 @@ public class ImageVersion implements Serializable, Cloneable, StructuredPojo {
      * 2021.01.01.
      * </p>
      * <p>
-     * <b>Filtering:</b> When you retrieve or reference a resource with a semantic version, you can use wildcards (x) to
-     * filter your results. When you use a wildcard in any node, all nodes to the right of the first wildcard must also
-     * be wildcards. For example, specifying "1.2.x", or "1.x.x" works to filter list results, but neither "1.x.2", nor
-     * "x.2.x" will work. You do not have to specify the build - Image Builder automatically uses a wildcard for that,
-     * if applicable.
+     * <b>Filtering:</b> With semantic versioning, you have the flexibility to use wildcards (x) to specify the most
+     * recent versions or nodes when selecting the source image or components for your recipe. When you use a wildcard
+     * in any node, all nodes to the right of the first wildcard must also be wildcards.
      * </p>
      * </note>
      * 
@@ -441,7 +437,7 @@ public class ImageVersion implements Serializable, Cloneable, StructuredPojo {
      *        <p>
      *        <b>Assignment:</b> For the first three nodes you can assign any positive integer value, including zero,
      *        with an upper limit of 2^30-1, or 1073741823 for each node. Image Builder automatically assigns the build
-     *        number, and that is not open for updates.
+     *        number to the fourth node.
      *        </p>
      *        <p>
      *        <b>Patterns:</b> You can use any numeric pattern that adheres to the assignment requirements for the nodes
@@ -449,11 +445,9 @@ public class ImageVersion implements Serializable, Cloneable, StructuredPojo {
      *        such as 2021.01.01.
      *        </p>
      *        <p>
-     *        <b>Filtering:</b> When you retrieve or reference a resource with a semantic version, you can use wildcards
-     *        (x) to filter your results. When you use a wildcard in any node, all nodes to the right of the first
-     *        wildcard must also be wildcards. For example, specifying "1.2.x", or "1.x.x" works to filter list results,
-     *        but neither "1.x.2", nor "x.2.x" will work. You do not have to specify the build - Image Builder
-     *        automatically uses a wildcard for that, if applicable.
+     *        <b>Filtering:</b> With semantic versioning, you have the flexibility to use wildcards (x) to specify the
+     *        most recent versions or nodes when selecting the source image or components for your recipe. When you use
+     *        a wildcard in any node, all nodes to the right of the first wildcard must also be wildcards.
      *        </p>
      */
 
@@ -472,8 +466,8 @@ public class ImageVersion implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * <b>Assignment:</b> For the first three nodes you can assign any positive integer value, including zero, with an
-     * upper limit of 2^30-1, or 1073741823 for each node. Image Builder automatically assigns the build number, and
-     * that is not open for updates.
+     * upper limit of 2^30-1, or 1073741823 for each node. Image Builder automatically assigns the build number to the
+     * fourth node.
      * </p>
      * <p>
      * <b>Patterns:</b> You can use any numeric pattern that adheres to the assignment requirements for the nodes that
@@ -481,11 +475,9 @@ public class ImageVersion implements Serializable, Cloneable, StructuredPojo {
      * 2021.01.01.
      * </p>
      * <p>
-     * <b>Filtering:</b> When you retrieve or reference a resource with a semantic version, you can use wildcards (x) to
-     * filter your results. When you use a wildcard in any node, all nodes to the right of the first wildcard must also
-     * be wildcards. For example, specifying "1.2.x", or "1.x.x" works to filter list results, but neither "1.x.2", nor
-     * "x.2.x" will work. You do not have to specify the build - Image Builder automatically uses a wildcard for that,
-     * if applicable.
+     * <b>Filtering:</b> With semantic versioning, you have the flexibility to use wildcards (x) to specify the most
+     * recent versions or nodes when selecting the source image or components for your recipe. When you use a wildcard
+     * in any node, all nodes to the right of the first wildcard must also be wildcards.
      * </p>
      * </note>
      * 
@@ -498,7 +490,7 @@ public class ImageVersion implements Serializable, Cloneable, StructuredPojo {
      *         <p>
      *         <b>Assignment:</b> For the first three nodes you can assign any positive integer value, including zero,
      *         with an upper limit of 2^30-1, or 1073741823 for each node. Image Builder automatically assigns the build
-     *         number, and that is not open for updates.
+     *         number to the fourth node.
      *         </p>
      *         <p>
      *         <b>Patterns:</b> You can use any numeric pattern that adheres to the assignment requirements for the
@@ -506,11 +498,9 @@ public class ImageVersion implements Serializable, Cloneable, StructuredPojo {
      *         date, such as 2021.01.01.
      *         </p>
      *         <p>
-     *         <b>Filtering:</b> When you retrieve or reference a resource with a semantic version, you can use
-     *         wildcards (x) to filter your results. When you use a wildcard in any node, all nodes to the right of the
-     *         first wildcard must also be wildcards. For example, specifying "1.2.x", or "1.x.x" works to filter list
-     *         results, but neither "1.x.2", nor "x.2.x" will work. You do not have to specify the build - Image Builder
-     *         automatically uses a wildcard for that, if applicable.
+     *         <b>Filtering:</b> With semantic versioning, you have the flexibility to use wildcards (x) to specify the
+     *         most recent versions or nodes when selecting the source image or components for your recipe. When you use
+     *         a wildcard in any node, all nodes to the right of the first wildcard must also be wildcards.
      *         </p>
      */
 
@@ -529,8 +519,8 @@ public class ImageVersion implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <p>
      * <b>Assignment:</b> For the first three nodes you can assign any positive integer value, including zero, with an
-     * upper limit of 2^30-1, or 1073741823 for each node. Image Builder automatically assigns the build number, and
-     * that is not open for updates.
+     * upper limit of 2^30-1, or 1073741823 for each node. Image Builder automatically assigns the build number to the
+     * fourth node.
      * </p>
      * <p>
      * <b>Patterns:</b> You can use any numeric pattern that adheres to the assignment requirements for the nodes that
@@ -538,11 +528,9 @@ public class ImageVersion implements Serializable, Cloneable, StructuredPojo {
      * 2021.01.01.
      * </p>
      * <p>
-     * <b>Filtering:</b> When you retrieve or reference a resource with a semantic version, you can use wildcards (x) to
-     * filter your results. When you use a wildcard in any node, all nodes to the right of the first wildcard must also
-     * be wildcards. For example, specifying "1.2.x", or "1.x.x" works to filter list results, but neither "1.x.2", nor
-     * "x.2.x" will work. You do not have to specify the build - Image Builder automatically uses a wildcard for that,
-     * if applicable.
+     * <b>Filtering:</b> With semantic versioning, you have the flexibility to use wildcards (x) to specify the most
+     * recent versions or nodes when selecting the source image or components for your recipe. When you use a wildcard
+     * in any node, all nodes to the right of the first wildcard must also be wildcards.
      * </p>
      * </note>
      * 
@@ -556,7 +544,7 @@ public class ImageVersion implements Serializable, Cloneable, StructuredPojo {
      *        <p>
      *        <b>Assignment:</b> For the first three nodes you can assign any positive integer value, including zero,
      *        with an upper limit of 2^30-1, or 1073741823 for each node. Image Builder automatically assigns the build
-     *        number, and that is not open for updates.
+     *        number to the fourth node.
      *        </p>
      *        <p>
      *        <b>Patterns:</b> You can use any numeric pattern that adheres to the assignment requirements for the nodes
@@ -564,11 +552,9 @@ public class ImageVersion implements Serializable, Cloneable, StructuredPojo {
      *        such as 2021.01.01.
      *        </p>
      *        <p>
-     *        <b>Filtering:</b> When you retrieve or reference a resource with a semantic version, you can use wildcards
-     *        (x) to filter your results. When you use a wildcard in any node, all nodes to the right of the first
-     *        wildcard must also be wildcards. For example, specifying "1.2.x", or "1.x.x" works to filter list results,
-     *        but neither "1.x.2", nor "x.2.x" will work. You do not have to specify the build - Image Builder
-     *        automatically uses a wildcard for that, if applicable.
+     *        <b>Filtering:</b> With semantic versioning, you have the flexibility to use wildcards (x) to specify the
+     *        most recent versions or nodes when selecting the source image or components for your recipe. When you use
+     *        a wildcard in any node, all nodes to the right of the first wildcard must also be wildcards.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */

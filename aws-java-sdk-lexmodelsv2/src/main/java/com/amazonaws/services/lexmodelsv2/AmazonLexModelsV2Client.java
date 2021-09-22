@@ -156,11 +156,19 @@ public class AmazonLexModelsV2Client extends AmazonWebServiceClient implements A
      * @param buildBotLocaleRequest
      * @return Result of the BuildBotLocale operation returned by the service.
      * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
      * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
      * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
      * @throws PreconditionFailedException
+     *         Your request couldn't be completed because one or more request fields aren't valid. Check the fields in
+     *         your request and try again.
      * @throws ConflictException
+     *         The action that you tried to perform couldn't be completed because the resource is in a conflicting
+     *         state. For example, deleting a bot that is in the CREATING state. Try your request again.
      * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
      * @sample AmazonLexModelsV2.BuildBotLocale
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/BuildBotLocale" target="_top">AWS
      *      API Documentation</a>
@@ -217,11 +225,19 @@ public class AmazonLexModelsV2Client extends AmazonWebServiceClient implements A
      * @param createBotRequest
      * @return Result of the CreateBot operation returned by the service.
      * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
      * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
      * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
      * @throws PreconditionFailedException
+     *         Your request couldn't be completed because one or more request fields aren't valid. Check the fields in
+     *         your request and try again.
      * @throws ConflictException
+     *         The action that you tried to perform couldn't be completed because the resource is in a conflicting
+     *         state. For example, deleting a bot that is in the CREATING state. Try your request again.
      * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
      * @sample AmazonLexModelsV2.CreateBot
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/CreateBot" target="_top">AWS API
      *      Documentation</a>
@@ -282,11 +298,19 @@ public class AmazonLexModelsV2Client extends AmazonWebServiceClient implements A
      * @param createBotAliasRequest
      * @return Result of the CreateBotAlias operation returned by the service.
      * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
      * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
      * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
      * @throws PreconditionFailedException
+     *         Your request couldn't be completed because one or more request fields aren't valid. Check the fields in
+     *         your request and try again.
      * @throws ConflictException
+     *         The action that you tried to perform couldn't be completed because the resource is in a conflicting
+     *         state. For example, deleting a bot that is in the CREATING state. Try your request again.
      * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
      * @sample AmazonLexModelsV2.CreateBotAlias
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/CreateBotAlias" target="_top">AWS
      *      API Documentation</a>
@@ -345,11 +369,19 @@ public class AmazonLexModelsV2Client extends AmazonWebServiceClient implements A
      * @param createBotLocaleRequest
      * @return Result of the CreateBotLocale operation returned by the service.
      * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
      * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
      * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
      * @throws PreconditionFailedException
+     *         Your request couldn't be completed because one or more request fields aren't valid. Check the fields in
+     *         your request and try again.
      * @throws ConflictException
+     *         The action that you tried to perform couldn't be completed because the resource is in a conflicting
+     *         state. For example, deleting a bot that is in the CREATING state. Try your request again.
      * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
      * @sample AmazonLexModelsV2.CreateBotLocale
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/CreateBotLocale" target="_top">AWS
      *      API Documentation</a>
@@ -411,11 +443,19 @@ public class AmazonLexModelsV2Client extends AmazonWebServiceClient implements A
      * @param createBotVersionRequest
      * @return Result of the CreateBotVersion operation returned by the service.
      * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
      * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
      * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
      * @throws PreconditionFailedException
+     *         Your request couldn't be completed because one or more request fields aren't valid. Check the fields in
+     *         your request and try again.
      * @throws ConflictException
+     *         The action that you tried to perform couldn't be completed because the resource is in a conflicting
+     *         state. For example, deleting a bot that is in the CREATING state. Try your request again.
      * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
      * @sample AmazonLexModelsV2.CreateBotVersion
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/CreateBotVersion" target="_top">AWS
      *      API Documentation</a>
@@ -481,11 +521,19 @@ public class AmazonLexModelsV2Client extends AmazonWebServiceClient implements A
      * @param createExportRequest
      * @return Result of the CreateExport operation returned by the service.
      * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
      * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
      * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
      * @throws ResourceNotFoundException
+     *         You asked to describe a resource that doesn't exist. Check the resource that you are requesting and try
+     *         again.
      * @throws ConflictException
+     *         The action that you tried to perform couldn't be completed because the resource is in a conflicting
+     *         state. For example, deleting a bot that is in the CREATING state. Try your request again.
      * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
      * @sample AmazonLexModelsV2.CreateExport
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/CreateExport" target="_top">AWS API
      *      Documentation</a>
@@ -586,11 +634,19 @@ public class AmazonLexModelsV2Client extends AmazonWebServiceClient implements A
      * @param createIntentRequest
      * @return Result of the CreateIntent operation returned by the service.
      * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
      * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
      * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
      * @throws PreconditionFailedException
+     *         Your request couldn't be completed because one or more request fields aren't valid. Check the fields in
+     *         your request and try again.
      * @throws ConflictException
+     *         The action that you tried to perform couldn't be completed because the resource is in a conflicting
+     *         state. For example, deleting a bot that is in the CREATING state. Try your request again.
      * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
      * @sample AmazonLexModelsV2.CreateIntent
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/CreateIntent" target="_top">AWS API
      *      Documentation</a>
@@ -647,11 +703,19 @@ public class AmazonLexModelsV2Client extends AmazonWebServiceClient implements A
      * @param createResourcePolicyRequest
      * @return Result of the CreateResourcePolicy operation returned by the service.
      * @throws ResourceNotFoundException
+     *         You asked to describe a resource that doesn't exist. Check the resource that you are requesting and try
+     *         again.
      * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
      * @throws PreconditionFailedException
+     *         Your request couldn't be completed because one or more request fields aren't valid. Check the fields in
+     *         your request and try again.
      * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
      * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
      * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
      * @sample AmazonLexModelsV2.CreateResourcePolicy
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/CreateResourcePolicy"
      *      target="_top">AWS API Documentation</a>
@@ -712,12 +776,22 @@ public class AmazonLexModelsV2Client extends AmazonWebServiceClient implements A
      * @param createResourcePolicyStatementRequest
      * @return Result of the CreateResourcePolicyStatement operation returned by the service.
      * @throws ResourceNotFoundException
+     *         You asked to describe a resource that doesn't exist. Check the resource that you are requesting and try
+     *         again.
      * @throws ConflictException
+     *         The action that you tried to perform couldn't be completed because the resource is in a conflicting
+     *         state. For example, deleting a bot that is in the CREATING state. Try your request again.
      * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
      * @throws PreconditionFailedException
+     *         Your request couldn't be completed because one or more request fields aren't valid. Check the fields in
+     *         your request and try again.
      * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
      * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
      * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
      * @sample AmazonLexModelsV2.CreateResourcePolicyStatement
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/CreateResourcePolicyStatement"
      *      target="_top">AWS API Documentation</a>
@@ -778,11 +852,19 @@ public class AmazonLexModelsV2Client extends AmazonWebServiceClient implements A
      * @param createSlotRequest
      * @return Result of the CreateSlot operation returned by the service.
      * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
      * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
      * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
      * @throws PreconditionFailedException
+     *         Your request couldn't be completed because one or more request fields aren't valid. Check the fields in
+     *         your request and try again.
      * @throws ConflictException
+     *         The action that you tried to perform couldn't be completed because the resource is in a conflicting
+     *         state. For example, deleting a bot that is in the CREATING state. Try your request again.
      * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
      * @sample AmazonLexModelsV2.CreateSlot
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/CreateSlot" target="_top">AWS API
      *      Documentation</a>
@@ -843,11 +925,19 @@ public class AmazonLexModelsV2Client extends AmazonWebServiceClient implements A
      * @param createSlotTypeRequest
      * @return Result of the CreateSlotType operation returned by the service.
      * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
      * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
      * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
      * @throws PreconditionFailedException
+     *         Your request couldn't be completed because one or more request fields aren't valid. Check the fields in
+     *         your request and try again.
      * @throws ConflictException
+     *         The action that you tried to perform couldn't be completed because the resource is in a conflicting
+     *         state. For example, deleting a bot that is in the CREATING state. Try your request again.
      * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
      * @sample AmazonLexModelsV2.CreateSlotType
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/CreateSlotType" target="_top">AWS
      *      API Documentation</a>
@@ -904,10 +994,17 @@ public class AmazonLexModelsV2Client extends AmazonWebServiceClient implements A
      * @param createUploadUrlRequest
      * @return Result of the CreateUploadUrl operation returned by the service.
      * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
      * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
      * @throws ResourceNotFoundException
+     *         You asked to describe a resource that doesn't exist. Check the resource that you are requesting and try
+     *         again.
      * @throws ConflictException
+     *         The action that you tried to perform couldn't be completed because the resource is in a conflicting
+     *         state. For example, deleting a bot that is in the CREATING state. Try your request again.
      * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
      * @sample AmazonLexModelsV2.CreateUploadUrl
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/CreateUploadUrl" target="_top">AWS
      *      API Documentation</a>
@@ -974,11 +1071,19 @@ public class AmazonLexModelsV2Client extends AmazonWebServiceClient implements A
      * @param deleteBotRequest
      * @return Result of the DeleteBot operation returned by the service.
      * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
      * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
      * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
      * @throws ConflictException
+     *         The action that you tried to perform couldn't be completed because the resource is in a conflicting
+     *         state. For example, deleting a bot that is in the CREATING state. Try your request again.
      * @throws PreconditionFailedException
+     *         Your request couldn't be completed because one or more request fields aren't valid. Check the fields in
+     *         your request and try again.
      * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
      * @sample AmazonLexModelsV2.DeleteBot
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/DeleteBot" target="_top">AWS API
      *      Documentation</a>
@@ -1035,11 +1140,19 @@ public class AmazonLexModelsV2Client extends AmazonWebServiceClient implements A
      * @param deleteBotAliasRequest
      * @return Result of the DeleteBotAlias operation returned by the service.
      * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
      * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
      * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
      * @throws ConflictException
+     *         The action that you tried to perform couldn't be completed because the resource is in a conflicting
+     *         state. For example, deleting a bot that is in the CREATING state. Try your request again.
      * @throws PreconditionFailedException
+     *         Your request couldn't be completed because one or more request fields aren't valid. Check the fields in
+     *         your request and try again.
      * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
      * @sample AmazonLexModelsV2.DeleteBotAlias
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/DeleteBotAlias" target="_top">AWS
      *      API Documentation</a>
@@ -1099,11 +1212,19 @@ public class AmazonLexModelsV2Client extends AmazonWebServiceClient implements A
      * @param deleteBotLocaleRequest
      * @return Result of the DeleteBotLocale operation returned by the service.
      * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
      * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
      * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
      * @throws PreconditionFailedException
+     *         Your request couldn't be completed because one or more request fields aren't valid. Check the fields in
+     *         your request and try again.
      * @throws ConflictException
+     *         The action that you tried to perform couldn't be completed because the resource is in a conflicting
+     *         state. For example, deleting a bot that is in the CREATING state. Try your request again.
      * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
      * @sample AmazonLexModelsV2.DeleteBotLocale
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/DeleteBotLocale" target="_top">AWS
      *      API Documentation</a>
@@ -1160,11 +1281,19 @@ public class AmazonLexModelsV2Client extends AmazonWebServiceClient implements A
      * @param deleteBotVersionRequest
      * @return Result of the DeleteBotVersion operation returned by the service.
      * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
      * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
      * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
      * @throws ConflictException
+     *         The action that you tried to perform couldn't be completed because the resource is in a conflicting
+     *         state. For example, deleting a bot that is in the CREATING state. Try your request again.
      * @throws PreconditionFailedException
+     *         Your request couldn't be completed because one or more request fields aren't valid. Check the fields in
+     *         your request and try again.
      * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
      * @sample AmazonLexModelsV2.DeleteBotVersion
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/DeleteBotVersion" target="_top">AWS
      *      API Documentation</a>
@@ -1221,10 +1350,16 @@ public class AmazonLexModelsV2Client extends AmazonWebServiceClient implements A
      * @param deleteExportRequest
      * @return Result of the DeleteExport operation returned by the service.
      * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
      * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
      * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
      * @throws PreconditionFailedException
+     *         Your request couldn't be completed because one or more request fields aren't valid. Check the fields in
+     *         your request and try again.
      * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
      * @sample AmazonLexModelsV2.DeleteExport
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/DeleteExport" target="_top">AWS API
      *      Documentation</a>
@@ -1281,10 +1416,16 @@ public class AmazonLexModelsV2Client extends AmazonWebServiceClient implements A
      * @param deleteImportRequest
      * @return Result of the DeleteImport operation returned by the service.
      * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
      * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
      * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
      * @throws PreconditionFailedException
+     *         Your request couldn't be completed because one or more request fields aren't valid. Check the fields in
+     *         your request and try again.
      * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
      * @sample AmazonLexModelsV2.DeleteImport
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/DeleteImport" target="_top">AWS API
      *      Documentation</a>
@@ -1344,11 +1485,19 @@ public class AmazonLexModelsV2Client extends AmazonWebServiceClient implements A
      * @param deleteIntentRequest
      * @return Result of the DeleteIntent operation returned by the service.
      * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
      * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
      * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
      * @throws ConflictException
+     *         The action that you tried to perform couldn't be completed because the resource is in a conflicting
+     *         state. For example, deleting a bot that is in the CREATING state. Try your request again.
      * @throws PreconditionFailedException
+     *         Your request couldn't be completed because one or more request fields aren't valid. Check the fields in
+     *         your request and try again.
      * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
      * @sample AmazonLexModelsV2.DeleteIntent
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/DeleteIntent" target="_top">AWS API
      *      Documentation</a>
@@ -1406,9 +1555,15 @@ public class AmazonLexModelsV2Client extends AmazonWebServiceClient implements A
      * @param deleteResourcePolicyRequest
      * @return Result of the DeleteResourcePolicy operation returned by the service.
      * @throws ResourceNotFoundException
+     *         You asked to describe a resource that doesn't exist. Check the resource that you are requesting and try
+     *         again.
      * @throws PreconditionFailedException
+     *         Your request couldn't be completed because one or more request fields aren't valid. Check the fields in
+     *         your request and try again.
      * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
      * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
      * @sample AmazonLexModelsV2.DeleteResourcePolicy
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/DeleteResourcePolicy"
      *      target="_top">AWS API Documentation</a>
@@ -1467,9 +1622,15 @@ public class AmazonLexModelsV2Client extends AmazonWebServiceClient implements A
      * @param deleteResourcePolicyStatementRequest
      * @return Result of the DeleteResourcePolicyStatement operation returned by the service.
      * @throws ResourceNotFoundException
+     *         You asked to describe a resource that doesn't exist. Check the resource that you are requesting and try
+     *         again.
      * @throws PreconditionFailedException
+     *         Your request couldn't be completed because one or more request fields aren't valid. Check the fields in
+     *         your request and try again.
      * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
      * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
      * @sample AmazonLexModelsV2.DeleteResourcePolicyStatement
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/DeleteResourcePolicyStatement"
      *      target="_top">AWS API Documentation</a>
@@ -1528,11 +1689,19 @@ public class AmazonLexModelsV2Client extends AmazonWebServiceClient implements A
      * @param deleteSlotRequest
      * @return Result of the DeleteSlot operation returned by the service.
      * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
      * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
      * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
      * @throws ConflictException
+     *         The action that you tried to perform couldn't be completed because the resource is in a conflicting
+     *         state. For example, deleting a bot that is in the CREATING state. Try your request again.
      * @throws PreconditionFailedException
+     *         Your request couldn't be completed because one or more request fields aren't valid. Check the fields in
+     *         your request and try again.
      * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
      * @sample AmazonLexModelsV2.DeleteSlot
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/DeleteSlot" target="_top">AWS API
      *      Documentation</a>
@@ -1593,11 +1762,19 @@ public class AmazonLexModelsV2Client extends AmazonWebServiceClient implements A
      * @param deleteSlotTypeRequest
      * @return Result of the DeleteSlotType operation returned by the service.
      * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
      * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
      * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
      * @throws ConflictException
+     *         The action that you tried to perform couldn't be completed because the resource is in a conflicting
+     *         state. For example, deleting a bot that is in the CREATING state. Try your request again.
      * @throws PreconditionFailedException
+     *         Your request couldn't be completed because one or more request fields aren't valid. Check the fields in
+     *         your request and try again.
      * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
      * @sample AmazonLexModelsV2.DeleteSlotType
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/DeleteSlotType" target="_top">AWS
      *      API Documentation</a>
@@ -1648,16 +1825,93 @@ public class AmazonLexModelsV2Client extends AmazonWebServiceClient implements A
 
     /**
      * <p>
+     * Deletes stored utterances.
+     * </p>
+     * <p>
+     * Amazon Lex stores the utterances that users send to your bot. Utterances are stored for 15 days for use with the
+     * operation, and then stored indefinitely for use in improving the ability of your bot to respond to user input..
+     * </p>
+     * <p>
+     * Use the <code>DeleteUtterances</code> operation to manually delete utterances for a specific session. When you
+     * use the <code>DeleteUtterances</code> operation, utterances stored for improving your bot's ability to respond to
+     * user input are deleted immediately. Utterances stored for use with the <code>ListAggregatedUtterances</code>
+     * operation are deleted after 15 days.
+     * </p>
+     * 
+     * @param deleteUtterancesRequest
+     * @return Result of the DeleteUtterances operation returned by the service.
+     * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
+     * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
+     * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
+     * @sample AmazonLexModelsV2.DeleteUtterances
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/DeleteUtterances" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public DeleteUtterancesResult deleteUtterances(DeleteUtterancesRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteUtterances(request);
+    }
+
+    @SdkInternalApi
+    final DeleteUtterancesResult executeDeleteUtterances(DeleteUtterancesRequest deleteUtterancesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteUtterancesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteUtterancesRequest> request = null;
+        Response<DeleteUtterancesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteUtterancesRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(deleteUtterancesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Lex Models V2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteUtterances");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteUtterancesResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DeleteUtterancesResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Provides metadata information about a bot.
      * </p>
      * 
      * @param describeBotRequest
      * @return Result of the DescribeBot operation returned by the service.
      * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
      * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
      * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
      * @throws ResourceNotFoundException
+     *         You asked to describe a resource that doesn't exist. Check the resource that you are requesting and try
+     *         again.
      * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
      * @sample AmazonLexModelsV2.DescribeBot
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/DescribeBot" target="_top">AWS API
      *      Documentation</a>
@@ -1714,10 +1968,16 @@ public class AmazonLexModelsV2Client extends AmazonWebServiceClient implements A
      * @param describeBotAliasRequest
      * @return Result of the DescribeBotAlias operation returned by the service.
      * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
      * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
      * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
      * @throws ResourceNotFoundException
+     *         You asked to describe a resource that doesn't exist. Check the resource that you are requesting and try
+     *         again.
      * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
      * @sample AmazonLexModelsV2.DescribeBotAlias
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/DescribeBotAlias" target="_top">AWS
      *      API Documentation</a>
@@ -1774,10 +2034,16 @@ public class AmazonLexModelsV2Client extends AmazonWebServiceClient implements A
      * @param describeBotLocaleRequest
      * @return Result of the DescribeBotLocale operation returned by the service.
      * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
      * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
      * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
      * @throws ResourceNotFoundException
+     *         You asked to describe a resource that doesn't exist. Check the resource that you are requesting and try
+     *         again.
      * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
      * @sample AmazonLexModelsV2.DescribeBotLocale
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/DescribeBotLocale"
      *      target="_top">AWS API Documentation</a>
@@ -1834,10 +2100,16 @@ public class AmazonLexModelsV2Client extends AmazonWebServiceClient implements A
      * @param describeBotVersionRequest
      * @return Result of the DescribeBotVersion operation returned by the service.
      * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
      * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
      * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
      * @throws ResourceNotFoundException
+     *         You asked to describe a resource that doesn't exist. Check the resource that you are requesting and try
+     *         again.
      * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
      * @sample AmazonLexModelsV2.DescribeBotVersion
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/DescribeBotVersion"
      *      target="_top">AWS API Documentation</a>
@@ -1894,9 +2166,14 @@ public class AmazonLexModelsV2Client extends AmazonWebServiceClient implements A
      * @param describeExportRequest
      * @return Result of the DescribeExport operation returned by the service.
      * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
      * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
      * @throws ResourceNotFoundException
+     *         You asked to describe a resource that doesn't exist. Check the resource that you are requesting and try
+     *         again.
      * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
      * @sample AmazonLexModelsV2.DescribeExport
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/DescribeExport" target="_top">AWS
      *      API Documentation</a>
@@ -1953,9 +2230,14 @@ public class AmazonLexModelsV2Client extends AmazonWebServiceClient implements A
      * @param describeImportRequest
      * @return Result of the DescribeImport operation returned by the service.
      * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
      * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
      * @throws ResourceNotFoundException
+     *         You asked to describe a resource that doesn't exist. Check the resource that you are requesting and try
+     *         again.
      * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
      * @sample AmazonLexModelsV2.DescribeImport
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/DescribeImport" target="_top">AWS
      *      API Documentation</a>
@@ -2012,10 +2294,16 @@ public class AmazonLexModelsV2Client extends AmazonWebServiceClient implements A
      * @param describeIntentRequest
      * @return Result of the DescribeIntent operation returned by the service.
      * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
      * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
      * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
      * @throws ResourceNotFoundException
+     *         You asked to describe a resource that doesn't exist. Check the resource that you are requesting and try
+     *         again.
      * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
      * @sample AmazonLexModelsV2.DescribeIntent
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/DescribeIntent" target="_top">AWS
      *      API Documentation</a>
@@ -2072,8 +2360,12 @@ public class AmazonLexModelsV2Client extends AmazonWebServiceClient implements A
      * @param describeResourcePolicyRequest
      * @return Result of the DescribeResourcePolicy operation returned by the service.
      * @throws ResourceNotFoundException
+     *         You asked to describe a resource that doesn't exist. Check the resource that you are requesting and try
+     *         again.
      * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
      * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
      * @sample AmazonLexModelsV2.DescribeResourcePolicy
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/DescribeResourcePolicy"
      *      target="_top">AWS API Documentation</a>
@@ -2131,10 +2423,16 @@ public class AmazonLexModelsV2Client extends AmazonWebServiceClient implements A
      * @param describeSlotRequest
      * @return Result of the DescribeSlot operation returned by the service.
      * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
      * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
      * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
      * @throws ResourceNotFoundException
+     *         You asked to describe a resource that doesn't exist. Check the resource that you are requesting and try
+     *         again.
      * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
      * @sample AmazonLexModelsV2.DescribeSlot
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/DescribeSlot" target="_top">AWS API
      *      Documentation</a>
@@ -2191,10 +2489,16 @@ public class AmazonLexModelsV2Client extends AmazonWebServiceClient implements A
      * @param describeSlotTypeRequest
      * @return Result of the DescribeSlotType operation returned by the service.
      * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
      * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
      * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
      * @throws ResourceNotFoundException
+     *         You asked to describe a resource that doesn't exist. Check the resource that you are requesting and try
+     *         again.
      * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
      * @sample AmazonLexModelsV2.DescribeSlotType
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/DescribeSlotType" target="_top">AWS
      *      API Documentation</a>
@@ -2245,15 +2549,117 @@ public class AmazonLexModelsV2Client extends AmazonWebServiceClient implements A
 
     /**
      * <p>
+     * Provides a list of utterances that users have sent to the bot.
+     * </p>
+     * <p>
+     * Utterances are aggregated by the text of the utterance. For example, all instances where customers used the
+     * phrase "I want to order pizza" are aggregated into the same line in the response.
+     * </p>
+     * <p>
+     * You can see both detected utterances and missed utterances. A detected utterance is where the bot properly
+     * recognized the utterance and activated the associated intent. A missed utterance was not recognized by the bot
+     * and didn't activate an intent.
+     * </p>
+     * <p>
+     * Utterances can be aggregated for a bot alias or for a bot version, but not both at the same time.
+     * </p>
+     * <p>
+     * Utterances statistics are not generated under the following conditions:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The <code>childDirected</code> field was set to true when the bot was created.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * You are using slot obfuscation with one or more slots.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * You opted out of participating in improving Amazon Lex.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param listAggregatedUtterancesRequest
+     * @return Result of the ListAggregatedUtterances operation returned by the service.
+     * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
+     * @throws PreconditionFailedException
+     *         Your request couldn't be completed because one or more request fields aren't valid. Check the fields in
+     *         your request and try again.
+     * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
+     * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
+     * @sample AmazonLexModelsV2.ListAggregatedUtterances
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/ListAggregatedUtterances"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListAggregatedUtterancesResult listAggregatedUtterances(ListAggregatedUtterancesRequest request) {
+        request = beforeClientExecution(request);
+        return executeListAggregatedUtterances(request);
+    }
+
+    @SdkInternalApi
+    final ListAggregatedUtterancesResult executeListAggregatedUtterances(ListAggregatedUtterancesRequest listAggregatedUtterancesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listAggregatedUtterancesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListAggregatedUtterancesRequest> request = null;
+        Response<ListAggregatedUtterancesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListAggregatedUtterancesRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(listAggregatedUtterancesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Lex Models V2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListAggregatedUtterances");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListAggregatedUtterancesResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new ListAggregatedUtterancesResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Gets a list of aliases for the specified bot.
      * </p>
      * 
      * @param listBotAliasesRequest
      * @return Result of the ListBotAliases operation returned by the service.
      * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
      * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
      * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
      * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
      * @sample AmazonLexModelsV2.ListBotAliases
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/ListBotAliases" target="_top">AWS
      *      API Documentation</a>
@@ -2310,9 +2716,13 @@ public class AmazonLexModelsV2Client extends AmazonWebServiceClient implements A
      * @param listBotLocalesRequest
      * @return Result of the ListBotLocales operation returned by the service.
      * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
      * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
      * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
      * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
      * @sample AmazonLexModelsV2.ListBotLocales
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/ListBotLocales" target="_top">AWS
      *      API Documentation</a>
@@ -2377,9 +2787,13 @@ public class AmazonLexModelsV2Client extends AmazonWebServiceClient implements A
      * @param listBotVersionsRequest
      * @return Result of the ListBotVersions operation returned by the service.
      * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
      * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
      * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
      * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
      * @sample AmazonLexModelsV2.ListBotVersions
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/ListBotVersions" target="_top">AWS
      *      API Documentation</a>
@@ -2436,9 +2850,13 @@ public class AmazonLexModelsV2Client extends AmazonWebServiceClient implements A
      * @param listBotsRequest
      * @return Result of the ListBots operation returned by the service.
      * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
      * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
      * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
      * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
      * @sample AmazonLexModelsV2.ListBots
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/ListBots" target="_top">AWS API
      *      Documentation</a>
@@ -2500,9 +2918,13 @@ public class AmazonLexModelsV2Client extends AmazonWebServiceClient implements A
      * @param listBuiltInIntentsRequest
      * @return Result of the ListBuiltInIntents operation returned by the service.
      * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
      * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
      * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
      * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
      * @sample AmazonLexModelsV2.ListBuiltInIntents
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/ListBuiltInIntents"
      *      target="_top">AWS API Documentation</a>
@@ -2559,9 +2981,13 @@ public class AmazonLexModelsV2Client extends AmazonWebServiceClient implements A
      * @param listBuiltInSlotTypesRequest
      * @return Result of the ListBuiltInSlotTypes operation returned by the service.
      * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
      * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
      * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
      * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
      * @sample AmazonLexModelsV2.ListBuiltInSlotTypes
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/ListBuiltInSlotTypes"
      *      target="_top">AWS API Documentation</a>
@@ -2618,8 +3044,11 @@ public class AmazonLexModelsV2Client extends AmazonWebServiceClient implements A
      * @param listExportsRequest
      * @return Result of the ListExports operation returned by the service.
      * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
      * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
      * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
      * @sample AmazonLexModelsV2.ListExports
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/ListExports" target="_top">AWS API
      *      Documentation</a>
@@ -2676,8 +3105,11 @@ public class AmazonLexModelsV2Client extends AmazonWebServiceClient implements A
      * @param listImportsRequest
      * @return Result of the ListImports operation returned by the service.
      * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
      * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
      * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
      * @sample AmazonLexModelsV2.ListImports
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/ListImports" target="_top">AWS API
      *      Documentation</a>
@@ -2734,9 +3166,13 @@ public class AmazonLexModelsV2Client extends AmazonWebServiceClient implements A
      * @param listIntentsRequest
      * @return Result of the ListIntents operation returned by the service.
      * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
      * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
      * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
      * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
      * @sample AmazonLexModelsV2.ListIntents
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/ListIntents" target="_top">AWS API
      *      Documentation</a>
@@ -2793,9 +3229,13 @@ public class AmazonLexModelsV2Client extends AmazonWebServiceClient implements A
      * @param listSlotTypesRequest
      * @return Result of the ListSlotTypes operation returned by the service.
      * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
      * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
      * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
      * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
      * @sample AmazonLexModelsV2.ListSlotTypes
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/ListSlotTypes" target="_top">AWS
      *      API Documentation</a>
@@ -2852,9 +3292,13 @@ public class AmazonLexModelsV2Client extends AmazonWebServiceClient implements A
      * @param listSlotsRequest
      * @return Result of the ListSlots operation returned by the service.
      * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
      * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
      * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
      * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
      * @sample AmazonLexModelsV2.ListSlots
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/ListSlots" target="_top">AWS API
      *      Documentation</a>
@@ -2912,9 +3356,14 @@ public class AmazonLexModelsV2Client extends AmazonWebServiceClient implements A
      * @param listTagsForResourceRequest
      * @return Result of the ListTagsForResource operation returned by the service.
      * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
      * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
      * @throws ResourceNotFoundException
+     *         You asked to describe a resource that doesn't exist. Check the resource that you are requesting and try
+     *         again.
      * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
      * @sample AmazonLexModelsV2.ListTagsForResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/ListTagsForResource"
      *      target="_top">AWS API Documentation</a>
@@ -2971,11 +3420,19 @@ public class AmazonLexModelsV2Client extends AmazonWebServiceClient implements A
      * @param startImportRequest
      * @return Result of the StartImport operation returned by the service.
      * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
      * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
      * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
      * @throws ResourceNotFoundException
+     *         You asked to describe a resource that doesn't exist. Check the resource that you are requesting and try
+     *         again.
      * @throws ConflictException
+     *         The action that you tried to perform couldn't be completed because the resource is in a conflicting
+     *         state. For example, deleting a bot that is in the CREATING state. Try your request again.
      * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
      * @sample AmazonLexModelsV2.StartImport
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/StartImport" target="_top">AWS API
      *      Documentation</a>
@@ -3033,9 +3490,14 @@ public class AmazonLexModelsV2Client extends AmazonWebServiceClient implements A
      * @param tagResourceRequest
      * @return Result of the TagResource operation returned by the service.
      * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
      * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
      * @throws ResourceNotFoundException
+     *         You asked to describe a resource that doesn't exist. Check the resource that you are requesting and try
+     *         again.
      * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
      * @sample AmazonLexModelsV2.TagResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/TagResource" target="_top">AWS API
      *      Documentation</a>
@@ -3092,9 +3554,14 @@ public class AmazonLexModelsV2Client extends AmazonWebServiceClient implements A
      * @param untagResourceRequest
      * @return Result of the UntagResource operation returned by the service.
      * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
      * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
      * @throws ResourceNotFoundException
+     *         You asked to describe a resource that doesn't exist. Check the resource that you are requesting and try
+     *         again.
      * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
      * @sample AmazonLexModelsV2.UntagResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/UntagResource" target="_top">AWS
      *      API Documentation</a>
@@ -3151,11 +3618,19 @@ public class AmazonLexModelsV2Client extends AmazonWebServiceClient implements A
      * @param updateBotRequest
      * @return Result of the UpdateBot operation returned by the service.
      * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
      * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
      * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
      * @throws PreconditionFailedException
+     *         Your request couldn't be completed because one or more request fields aren't valid. Check the fields in
+     *         your request and try again.
      * @throws ConflictException
+     *         The action that you tried to perform couldn't be completed because the resource is in a conflicting
+     *         state. For example, deleting a bot that is in the CREATING state. Try your request again.
      * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
      * @sample AmazonLexModelsV2.UpdateBot
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/UpdateBot" target="_top">AWS API
      *      Documentation</a>
@@ -3212,11 +3687,19 @@ public class AmazonLexModelsV2Client extends AmazonWebServiceClient implements A
      * @param updateBotAliasRequest
      * @return Result of the UpdateBotAlias operation returned by the service.
      * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
      * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
      * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
      * @throws PreconditionFailedException
+     *         Your request couldn't be completed because one or more request fields aren't valid. Check the fields in
+     *         your request and try again.
      * @throws ConflictException
+     *         The action that you tried to perform couldn't be completed because the resource is in a conflicting
+     *         state. For example, deleting a bot that is in the CREATING state. Try your request again.
      * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
      * @sample AmazonLexModelsV2.UpdateBotAlias
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/UpdateBotAlias" target="_top">AWS
      *      API Documentation</a>
@@ -3273,11 +3756,19 @@ public class AmazonLexModelsV2Client extends AmazonWebServiceClient implements A
      * @param updateBotLocaleRequest
      * @return Result of the UpdateBotLocale operation returned by the service.
      * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
      * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
      * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
      * @throws PreconditionFailedException
+     *         Your request couldn't be completed because one or more request fields aren't valid. Check the fields in
+     *         your request and try again.
      * @throws ConflictException
+     *         The action that you tried to perform couldn't be completed because the resource is in a conflicting
+     *         state. For example, deleting a bot that is in the CREATING state. Try your request again.
      * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
      * @sample AmazonLexModelsV2.UpdateBotLocale
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/UpdateBotLocale" target="_top">AWS
      *      API Documentation</a>
@@ -3339,11 +3830,19 @@ public class AmazonLexModelsV2Client extends AmazonWebServiceClient implements A
      * @param updateExportRequest
      * @return Result of the UpdateExport operation returned by the service.
      * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
      * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
      * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
      * @throws ResourceNotFoundException
+     *         You asked to describe a resource that doesn't exist. Check the resource that you are requesting and try
+     *         again.
      * @throws ConflictException
+     *         The action that you tried to perform couldn't be completed because the resource is in a conflicting
+     *         state. For example, deleting a bot that is in the CREATING state. Try your request again.
      * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
      * @sample AmazonLexModelsV2.UpdateExport
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/UpdateExport" target="_top">AWS API
      *      Documentation</a>
@@ -3400,11 +3899,19 @@ public class AmazonLexModelsV2Client extends AmazonWebServiceClient implements A
      * @param updateIntentRequest
      * @return Result of the UpdateIntent operation returned by the service.
      * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
      * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
      * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
      * @throws PreconditionFailedException
+     *         Your request couldn't be completed because one or more request fields aren't valid. Check the fields in
+     *         your request and try again.
      * @throws ConflictException
+     *         The action that you tried to perform couldn't be completed because the resource is in a conflicting
+     *         state. For example, deleting a bot that is in the CREATING state. Try your request again.
      * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
      * @sample AmazonLexModelsV2.UpdateIntent
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/UpdateIntent" target="_top">AWS API
      *      Documentation</a>
@@ -3462,11 +3969,19 @@ public class AmazonLexModelsV2Client extends AmazonWebServiceClient implements A
      * @param updateResourcePolicyRequest
      * @return Result of the UpdateResourcePolicy operation returned by the service.
      * @throws ResourceNotFoundException
+     *         You asked to describe a resource that doesn't exist. Check the resource that you are requesting and try
+     *         again.
      * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
      * @throws PreconditionFailedException
+     *         Your request couldn't be completed because one or more request fields aren't valid. Check the fields in
+     *         your request and try again.
      * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
      * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
      * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
      * @sample AmazonLexModelsV2.UpdateResourcePolicy
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/UpdateResourcePolicy"
      *      target="_top">AWS API Documentation</a>
@@ -3523,11 +4038,19 @@ public class AmazonLexModelsV2Client extends AmazonWebServiceClient implements A
      * @param updateSlotRequest
      * @return Result of the UpdateSlot operation returned by the service.
      * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
      * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
      * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
      * @throws PreconditionFailedException
+     *         Your request couldn't be completed because one or more request fields aren't valid. Check the fields in
+     *         your request and try again.
      * @throws ConflictException
+     *         The action that you tried to perform couldn't be completed because the resource is in a conflicting
+     *         state. For example, deleting a bot that is in the CREATING state. Try your request again.
      * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
      * @sample AmazonLexModelsV2.UpdateSlot
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/UpdateSlot" target="_top">AWS API
      *      Documentation</a>
@@ -3584,11 +4107,19 @@ public class AmazonLexModelsV2Client extends AmazonWebServiceClient implements A
      * @param updateSlotTypeRequest
      * @return Result of the UpdateSlotType operation returned by the service.
      * @throws ThrottlingException
+     *         Your request rate is too high. Reduce the frequency of requests.
      * @throws ServiceQuotaExceededException
+     *         You have reached a quota for your bot.
      * @throws ValidationException
+     *         One of the input parameters in your request isn't valid. Check the parameters and try your request again.
      * @throws PreconditionFailedException
+     *         Your request couldn't be completed because one or more request fields aren't valid. Check the fields in
+     *         your request and try again.
      * @throws ConflictException
+     *         The action that you tried to perform couldn't be completed because the resource is in a conflicting
+     *         state. For example, deleting a bot that is in the CREATING state. Try your request again.
      * @throws InternalServerException
+     *         The service encountered an unexpected condition. Try your request again.
      * @sample AmazonLexModelsV2.UpdateSlotType
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/models.lex.v2-2020-08-07/UpdateSlotType" target="_top">AWS
      *      API Documentation</a>

@@ -27,18 +27,18 @@ public class DeleteLicenseManagerReportGeneratorRequest extends com.amazonaws.Am
 
     /**
      * <p>
-     * Amazon Resource Number (ARN) of the report generator that will be deleted.
+     * Amazon Resource Name (ARN) of the report generator to be deleted.
      * </p>
      */
     private String licenseManagerReportGeneratorArn;
 
     /**
      * <p>
-     * Amazon Resource Number (ARN) of the report generator that will be deleted.
+     * Amazon Resource Name (ARN) of the report generator to be deleted.
      * </p>
      * 
      * @param licenseManagerReportGeneratorArn
-     *        Amazon Resource Number (ARN) of the report generator that will be deleted.
+     *        Amazon Resource Name (ARN) of the report generator to be deleted.
      */
 
     public void setLicenseManagerReportGeneratorArn(String licenseManagerReportGeneratorArn) {
@@ -47,10 +47,10 @@ public class DeleteLicenseManagerReportGeneratorRequest extends com.amazonaws.Am
 
     /**
      * <p>
-     * Amazon Resource Number (ARN) of the report generator that will be deleted.
+     * Amazon Resource Name (ARN) of the report generator to be deleted.
      * </p>
      * 
-     * @return Amazon Resource Number (ARN) of the report generator that will be deleted.
+     * @return Amazon Resource Name (ARN) of the report generator to be deleted.
      */
 
     public String getLicenseManagerReportGeneratorArn() {
@@ -59,11 +59,11 @@ public class DeleteLicenseManagerReportGeneratorRequest extends com.amazonaws.Am
 
     /**
      * <p>
-     * Amazon Resource Number (ARN) of the report generator that will be deleted.
+     * Amazon Resource Name (ARN) of the report generator to be deleted.
      * </p>
      * 
      * @param licenseManagerReportGeneratorArn
-     *        Amazon Resource Number (ARN) of the report generator that will be deleted.
+     *        Amazon Resource Name (ARN) of the report generator to be deleted.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

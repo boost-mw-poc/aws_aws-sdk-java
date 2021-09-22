@@ -61,6 +61,12 @@ public class ComponentSummary implements Serializable, Cloneable, StructuredPojo
     private java.util.List<String> supportedOsVersions;
     /**
      * <p>
+     * Describes the current status of the component.
+     * </p>
+     */
+    private ComponentState state;
+    /**
+     * <p>
      * The type of the component denotes whether the component is used to build the image or only to test it.
      * </p>
      */
@@ -350,6 +356,46 @@ public class ComponentSummary implements Serializable, Cloneable, StructuredPojo
 
     public ComponentSummary withSupportedOsVersions(java.util.Collection<String> supportedOsVersions) {
         setSupportedOsVersions(supportedOsVersions);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Describes the current status of the component.
+     * </p>
+     * 
+     * @param state
+     *        Describes the current status of the component.
+     */
+
+    public void setState(ComponentState state) {
+        this.state = state;
+    }
+
+    /**
+     * <p>
+     * Describes the current status of the component.
+     * </p>
+     * 
+     * @return Describes the current status of the component.
+     */
+
+    public ComponentState getState() {
+        return this.state;
+    }
+
+    /**
+     * <p>
+     * Describes the current status of the component.
+     * </p>
+     * 
+     * @param state
+     *        Describes the current status of the component.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ComponentSummary withState(ComponentState state) {
+        setState(state);
         return this;
     }
 
@@ -662,6 +708,8 @@ public class ComponentSummary implements Serializable, Cloneable, StructuredPojo
             sb.append("Platform: ").append(getPlatform()).append(",");
         if (getSupportedOsVersions() != null)
             sb.append("SupportedOsVersions: ").append(getSupportedOsVersions()).append(",");
+        if (getState() != null)
+            sb.append("State: ").append(getState()).append(",");
         if (getType() != null)
             sb.append("Type: ").append(getType()).append(",");
         if (getOwner() != null)
@@ -708,6 +756,10 @@ public class ComponentSummary implements Serializable, Cloneable, StructuredPojo
             return false;
         if (other.getSupportedOsVersions() != null && other.getSupportedOsVersions().equals(this.getSupportedOsVersions()) == false)
             return false;
+        if (other.getState() == null ^ this.getState() == null)
+            return false;
+        if (other.getState() != null && other.getState().equals(this.getState()) == false)
+            return false;
         if (other.getType() == null ^ this.getType() == null)
             return false;
         if (other.getType() != null && other.getType().equals(this.getType()) == false)
@@ -745,6 +797,7 @@ public class ComponentSummary implements Serializable, Cloneable, StructuredPojo
         hashCode = prime * hashCode + ((getVersion() == null) ? 0 : getVersion().hashCode());
         hashCode = prime * hashCode + ((getPlatform() == null) ? 0 : getPlatform().hashCode());
         hashCode = prime * hashCode + ((getSupportedOsVersions() == null) ? 0 : getSupportedOsVersions().hashCode());
+        hashCode = prime * hashCode + ((getState() == null) ? 0 : getState().hashCode());
         hashCode = prime * hashCode + ((getType() == null) ? 0 : getType().hashCode());
         hashCode = prime * hashCode + ((getOwner() == null) ? 0 : getOwner().hashCode());
         hashCode = prime * hashCode + ((getDescription() == null) ? 0 : getDescription().hashCode());

@@ -15,7 +15,9 @@ package com.amazonaws.services.lexmodelsv2.model;
 import javax.annotation.Generated;
 
 /**
- * <p/>
+ * <p>
+ * One of the input parameters in your request isn't valid. Check the parameters and try your request again.
+ * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ValidationException extends com.amazonaws.services.lexmodelsv2.model.AmazonLexModelsV2Exception {

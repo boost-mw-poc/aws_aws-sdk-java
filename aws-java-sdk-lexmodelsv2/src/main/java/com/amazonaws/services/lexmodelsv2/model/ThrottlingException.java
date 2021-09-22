@@ -15,7 +15,9 @@ package com.amazonaws.services.lexmodelsv2.model;
 import javax.annotation.Generated;
 
 /**
- * <p/>
+ * <p>
+ * Your request rate is too high. Reduce the frequency of requests.
+ * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ThrottlingException extends com.amazonaws.services.lexmodelsv2.model.AmazonLexModelsV2Exception {

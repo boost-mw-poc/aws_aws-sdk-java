@@ -27,18 +27,18 @@ public class GetLicenseManagerReportGeneratorRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * mazon Resource Number (ARN) of the report generator to retrieve information on.
+     * Amazon Resource Name (ARN) of the report generator.
      * </p>
      */
     private String licenseManagerReportGeneratorArn;
 
     /**
      * <p>
-     * mazon Resource Number (ARN) of the report generator to retrieve information on.
+     * Amazon Resource Name (ARN) of the report generator.
      * </p>
      * 
      * @param licenseManagerReportGeneratorArn
-     *        mazon Resource Number (ARN) of the report generator to retrieve information on.
+     *        Amazon Resource Name (ARN) of the report generator.
      */
 
     public void setLicenseManagerReportGeneratorArn(String licenseManagerReportGeneratorArn) {
@@ -47,10 +47,10 @@ public class GetLicenseManagerReportGeneratorRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * mazon Resource Number (ARN) of the report generator to retrieve information on.
+     * Amazon Resource Name (ARN) of the report generator.
      * </p>
      * 
-     * @return mazon Resource Number (ARN) of the report generator to retrieve information on.
+     * @return Amazon Resource Name (ARN) of the report generator.
      */
 
     public String getLicenseManagerReportGeneratorArn() {
@@ -59,11 +59,11 @@ public class GetLicenseManagerReportGeneratorRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * mazon Resource Number (ARN) of the report generator to retrieve information on.
+     * Amazon Resource Name (ARN) of the report generator.
      * </p>
      * 
      * @param licenseManagerReportGeneratorArn
-     *        mazon Resource Number (ARN) of the report generator to retrieve information on.
+     *        Amazon Resource Name (ARN) of the report generator.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -214,6 +214,12 @@ public class Statement implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private LabelMatchStatement labelMatchStatement;
+    /**
+     * <p>
+     * A rule statement used to search web request components for a match against a single regular expression.
+     * </p>
+     */
+    private RegexMatchStatement regexMatchStatement;
 
     /**
      * <p>
@@ -1380,6 +1386,46 @@ public class Statement implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * A rule statement used to search web request components for a match against a single regular expression.
+     * </p>
+     * 
+     * @param regexMatchStatement
+     *        A rule statement used to search web request components for a match against a single regular expression.
+     */
+
+    public void setRegexMatchStatement(RegexMatchStatement regexMatchStatement) {
+        this.regexMatchStatement = regexMatchStatement;
+    }
+
+    /**
+     * <p>
+     * A rule statement used to search web request components for a match against a single regular expression.
+     * </p>
+     * 
+     * @return A rule statement used to search web request components for a match against a single regular expression.
+     */
+
+    public RegexMatchStatement getRegexMatchStatement() {
+        return this.regexMatchStatement;
+    }
+
+    /**
+     * <p>
+     * A rule statement used to search web request components for a match against a single regular expression.
+     * </p>
+     * 
+     * @param regexMatchStatement
+     *        A rule statement used to search web request components for a match against a single regular expression.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Statement withRegexMatchStatement(RegexMatchStatement regexMatchStatement) {
+        setRegexMatchStatement(regexMatchStatement);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1418,7 +1464,9 @@ public class Statement implements Serializable, Cloneable, StructuredPojo {
         if (getManagedRuleGroupStatement() != null)
             sb.append("ManagedRuleGroupStatement: ").append(getManagedRuleGroupStatement()).append(",");
         if (getLabelMatchStatement() != null)
-            sb.append("LabelMatchStatement: ").append(getLabelMatchStatement());
+            sb.append("LabelMatchStatement: ").append(getLabelMatchStatement()).append(",");
+        if (getRegexMatchStatement() != null)
+            sb.append("RegexMatchStatement: ").append(getRegexMatchStatement());
         sb.append("}");
         return sb.toString();
     }
@@ -1490,6 +1538,10 @@ public class Statement implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getLabelMatchStatement() != null && other.getLabelMatchStatement().equals(this.getLabelMatchStatement()) == false)
             return false;
+        if (other.getRegexMatchStatement() == null ^ this.getRegexMatchStatement() == null)
+            return false;
+        if (other.getRegexMatchStatement() != null && other.getRegexMatchStatement().equals(this.getRegexMatchStatement()) == false)
+            return false;
         return true;
     }
 
@@ -1512,6 +1564,7 @@ public class Statement implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getNotStatement() == null) ? 0 : getNotStatement().hashCode());
         hashCode = prime * hashCode + ((getManagedRuleGroupStatement() == null) ? 0 : getManagedRuleGroupStatement().hashCode());
         hashCode = prime * hashCode + ((getLabelMatchStatement() == null) ? 0 : getLabelMatchStatement().hashCode());
+        hashCode = prime * hashCode + ((getRegexMatchStatement() == null) ? 0 : getRegexMatchStatement().hashCode());
         return hashCode;
     }
 

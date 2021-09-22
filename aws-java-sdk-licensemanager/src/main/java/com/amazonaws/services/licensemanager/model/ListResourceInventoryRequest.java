@@ -44,7 +44,7 @@ public class ListResourceInventoryRequest extends com.amazonaws.AmazonWebService
      * <ul>
      * <li>
      * <p>
-     * <code>account_id</code> - The ID of the AWS account that owns the resource. Logical operators are
+     * <code>account_id</code> - The ID of the Amazon Web Services account that owns the resource. Logical operators are
      * <code>EQUALS</code> | <code>NOT_EQUALS</code>.
      * </p>
      * </li>
@@ -170,7 +170,7 @@ public class ListResourceInventoryRequest extends com.amazonaws.AmazonWebService
      * <ul>
      * <li>
      * <p>
-     * <code>account_id</code> - The ID of the AWS account that owns the resource. Logical operators are
+     * <code>account_id</code> - The ID of the Amazon Web Services account that owns the resource. Logical operators are
      * <code>EQUALS</code> | <code>NOT_EQUALS</code>.
      * </p>
      * </li>
@@ -211,8 +211,8 @@ public class ListResourceInventoryRequest extends com.amazonaws.AmazonWebService
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>account_id</code> - The ID of the AWS account that owns the resource. Logical operators are
-     *         <code>EQUALS</code> | <code>NOT_EQUALS</code>.
+     *         <code>account_id</code> - The ID of the Amazon Web Services account that owns the resource. Logical
+     *         operators are <code>EQUALS</code> | <code>NOT_EQUALS</code>.
      *         </p>
      *         </li>
      *         <li>
@@ -260,7 +260,7 @@ public class ListResourceInventoryRequest extends com.amazonaws.AmazonWebService
      * <ul>
      * <li>
      * <p>
-     * <code>account_id</code> - The ID of the AWS account that owns the resource. Logical operators are
+     * <code>account_id</code> - The ID of the Amazon Web Services account that owns the resource. Logical operators are
      * <code>EQUALS</code> | <code>NOT_EQUALS</code>.
      * </p>
      * </li>
@@ -302,8 +302,8 @@ public class ListResourceInventoryRequest extends com.amazonaws.AmazonWebService
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>account_id</code> - The ID of the AWS account that owns the resource. Logical operators are
-     *        <code>EQUALS</code> | <code>NOT_EQUALS</code>.
+     *        <code>account_id</code> - The ID of the Amazon Web Services account that owns the resource. Logical
+     *        operators are <code>EQUALS</code> | <code>NOT_EQUALS</code>.
      *        </p>
      *        </li>
      *        <li>
@@ -356,7 +356,7 @@ public class ListResourceInventoryRequest extends com.amazonaws.AmazonWebService
      * <ul>
      * <li>
      * <p>
-     * <code>account_id</code> - The ID of the AWS account that owns the resource. Logical operators are
+     * <code>account_id</code> - The ID of the Amazon Web Services account that owns the resource. Logical operators are
      * <code>EQUALS</code> | <code>NOT_EQUALS</code>.
      * </p>
      * </li>
@@ -403,8 +403,8 @@ public class ListResourceInventoryRequest extends com.amazonaws.AmazonWebService
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>account_id</code> - The ID of the AWS account that owns the resource. Logical operators are
-     *        <code>EQUALS</code> | <code>NOT_EQUALS</code>.
+     *        <code>account_id</code> - The ID of the Amazon Web Services account that owns the resource. Logical
+     *        operators are <code>EQUALS</code> | <code>NOT_EQUALS</code>.
      *        </p>
      *        </li>
      *        <li>
@@ -459,7 +459,7 @@ public class ListResourceInventoryRequest extends com.amazonaws.AmazonWebService
      * <ul>
      * <li>
      * <p>
-     * <code>account_id</code> - The ID of the AWS account that owns the resource. Logical operators are
+     * <code>account_id</code> - The ID of the Amazon Web Services account that owns the resource. Logical operators are
      * <code>EQUALS</code> | <code>NOT_EQUALS</code>.
      * </p>
      * </li>
@@ -501,8 +501,8 @@ public class ListResourceInventoryRequest extends com.amazonaws.AmazonWebService
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>account_id</code> - The ID of the AWS account that owns the resource. Logical operators are
-     *        <code>EQUALS</code> | <code>NOT_EQUALS</code>.
+     *        <code>account_id</code> - The ID of the Amazon Web Services account that owns the resource. Logical
+     *        operators are <code>EQUALS</code> | <code>NOT_EQUALS</code>.
      *        </p>
      *        </li>
      *        <li>

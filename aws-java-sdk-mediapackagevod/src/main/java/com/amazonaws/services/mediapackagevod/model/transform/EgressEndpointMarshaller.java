@@ -29,6 +29,8 @@ public class EgressEndpointMarshaller {
 
     private static final MarshallingInfo<String> PACKAGINGCONFIGURATIONID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("packagingConfigurationId").build();
+    private static final MarshallingInfo<String> STATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("status").build();
     private static final MarshallingInfo<String> URL_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("url").build();
 
@@ -49,6 +51,7 @@ public class EgressEndpointMarshaller {
 
         try {
             protocolMarshaller.marshall(egressEndpoint.getPackagingConfigurationId(), PACKAGINGCONFIGURATIONID_BINDING);
+            protocolMarshaller.marshall(egressEndpoint.getStatus(), STATUS_BINDING);
             protocolMarshaller.marshall(egressEndpoint.getUrl(), URL_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

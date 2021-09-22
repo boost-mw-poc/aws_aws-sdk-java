@@ -55,7 +55,11 @@ public class CreateGrantVersionRequest extends com.amazonaws.AmazonWebServiceReq
      * </p>
      */
     private String status;
-
+    /**
+     * <p>
+     * Grant status reason.
+     * </p>
+     */
     private String statusReason;
     /**
      * <p>
@@ -342,7 +346,12 @@ public class CreateGrantVersionRequest extends com.amazonaws.AmazonWebServiceReq
     }
 
     /**
+     * <p>
+     * Grant status reason.
+     * </p>
+     * 
      * @param statusReason
+     *        Grant status reason.
      */
 
     public void setStatusReason(String statusReason) {
@@ -350,7 +359,11 @@ public class CreateGrantVersionRequest extends com.amazonaws.AmazonWebServiceReq
     }
 
     /**
-     * @return
+     * <p>
+     * Grant status reason.
+     * </p>
+     * 
+     * @return Grant status reason.
      */
 
     public String getStatusReason() {
@@ -358,7 +371,12 @@ public class CreateGrantVersionRequest extends com.amazonaws.AmazonWebServiceReq
     }
 
     /**
+     * <p>
+     * Grant status reason.
+     * </p>
+     * 
      * @param statusReason
+     *        Grant status reason.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

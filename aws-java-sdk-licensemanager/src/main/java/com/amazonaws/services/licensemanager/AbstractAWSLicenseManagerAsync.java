@@ -132,6 +132,21 @@ public class AbstractAWSLicenseManagerAsync extends AbstractAWSLicenseManager im
     }
 
     @Override
+    public java.util.concurrent.Future<CreateLicenseConversionTaskForResourceResult> createLicenseConversionTaskForResourceAsync(
+            CreateLicenseConversionTaskForResourceRequest request) {
+
+        return createLicenseConversionTaskForResourceAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateLicenseConversionTaskForResourceResult> createLicenseConversionTaskForResourceAsync(
+            CreateLicenseConversionTaskForResourceRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateLicenseConversionTaskForResourceRequest, CreateLicenseConversionTaskForResourceResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateLicenseManagerReportGeneratorResult> createLicenseManagerReportGeneratorAsync(
             CreateLicenseManagerReportGeneratorRequest request) {
 
@@ -305,6 +320,19 @@ public class AbstractAWSLicenseManagerAsync extends AbstractAWSLicenseManager im
     }
 
     @Override
+    public java.util.concurrent.Future<GetLicenseConversionTaskResult> getLicenseConversionTaskAsync(GetLicenseConversionTaskRequest request) {
+
+        return getLicenseConversionTaskAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetLicenseConversionTaskResult> getLicenseConversionTaskAsync(GetLicenseConversionTaskRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetLicenseConversionTaskRequest, GetLicenseConversionTaskResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetLicenseManagerReportGeneratorResult> getLicenseManagerReportGeneratorAsync(
             GetLicenseManagerReportGeneratorRequest request) {
 
@@ -397,6 +425,19 @@ public class AbstractAWSLicenseManagerAsync extends AbstractAWSLicenseManager im
     @Override
     public java.util.concurrent.Future<ListLicenseConfigurationsResult> listLicenseConfigurationsAsync(ListLicenseConfigurationsRequest request,
             com.amazonaws.handlers.AsyncHandler<ListLicenseConfigurationsRequest, ListLicenseConfigurationsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListLicenseConversionTasksResult> listLicenseConversionTasksAsync(ListLicenseConversionTasksRequest request) {
+
+        return listLicenseConversionTasksAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListLicenseConversionTasksResult> listLicenseConversionTasksAsync(ListLicenseConversionTasksRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListLicenseConversionTasksRequest, ListLicenseConversionTasksResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

@@ -114,6 +114,12 @@ public class InfrastructureConfiguration implements Serializable, Cloneable, Str
     private java.util.Map<String, String> resourceTags;
     /**
      * <p>
+     * The instance metadata option settings for the infrastructure configuration.
+     * </p>
+     */
+    private InstanceMetadataOptions instanceMetadataOptions;
+    /**
+     * <p>
      * The tags of the infrastructure configuration.
      * </p>
      */
@@ -781,6 +787,46 @@ public class InfrastructureConfiguration implements Serializable, Cloneable, Str
 
     /**
      * <p>
+     * The instance metadata option settings for the infrastructure configuration.
+     * </p>
+     * 
+     * @param instanceMetadataOptions
+     *        The instance metadata option settings for the infrastructure configuration.
+     */
+
+    public void setInstanceMetadataOptions(InstanceMetadataOptions instanceMetadataOptions) {
+        this.instanceMetadataOptions = instanceMetadataOptions;
+    }
+
+    /**
+     * <p>
+     * The instance metadata option settings for the infrastructure configuration.
+     * </p>
+     * 
+     * @return The instance metadata option settings for the infrastructure configuration.
+     */
+
+    public InstanceMetadataOptions getInstanceMetadataOptions() {
+        return this.instanceMetadataOptions;
+    }
+
+    /**
+     * <p>
+     * The instance metadata option settings for the infrastructure configuration.
+     * </p>
+     * 
+     * @param instanceMetadataOptions
+     *        The instance metadata option settings for the infrastructure configuration.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public InfrastructureConfiguration withInstanceMetadataOptions(InstanceMetadataOptions instanceMetadataOptions) {
+        setInstanceMetadataOptions(instanceMetadataOptions);
+        return this;
+    }
+
+    /**
+     * <p>
      * The tags of the infrastructure configuration.
      * </p>
      * 
@@ -887,6 +933,8 @@ public class InfrastructureConfiguration implements Serializable, Cloneable, Str
             sb.append("DateUpdated: ").append(getDateUpdated()).append(",");
         if (getResourceTags() != null)
             sb.append("ResourceTags: ").append(getResourceTags()).append(",");
+        if (getInstanceMetadataOptions() != null)
+            sb.append("InstanceMetadataOptions: ").append(getInstanceMetadataOptions()).append(",");
         if (getTags() != null)
             sb.append("Tags: ").append(getTags());
         sb.append("}");
@@ -959,6 +1007,10 @@ public class InfrastructureConfiguration implements Serializable, Cloneable, Str
             return false;
         if (other.getResourceTags() != null && other.getResourceTags().equals(this.getResourceTags()) == false)
             return false;
+        if (other.getInstanceMetadataOptions() == null ^ this.getInstanceMetadataOptions() == null)
+            return false;
+        if (other.getInstanceMetadataOptions() != null && other.getInstanceMetadataOptions().equals(this.getInstanceMetadataOptions()) == false)
+            return false;
         if (other.getTags() == null ^ this.getTags() == null)
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
@@ -985,6 +1037,7 @@ public class InfrastructureConfiguration implements Serializable, Cloneable, Str
         hashCode = prime * hashCode + ((getDateCreated() == null) ? 0 : getDateCreated().hashCode());
         hashCode = prime * hashCode + ((getDateUpdated() == null) ? 0 : getDateUpdated().hashCode());
         hashCode = prime * hashCode + ((getResourceTags() == null) ? 0 : getResourceTags().hashCode());
+        hashCode = prime * hashCode + ((getInstanceMetadataOptions() == null) ? 0 : getInstanceMetadataOptions().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         return hashCode;
     }

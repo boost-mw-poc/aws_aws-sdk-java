@@ -26,10 +26,9 @@ import com.amazonaws.services.licensemanager.model.*;
  * {@link com.amazonaws.services.licensemanager.AbstractAWSLicenseManager} instead.
  * </p>
  * <p>
- * <fullname> AWS License Manager </fullname>
  * <p>
- * AWS License Manager makes it easier to manage licenses from software vendors across multiple AWS accounts and
- * on-premises servers.
+ * License Manager makes it easier to manage licenses from software vendors across multiple Amazon Web Services accounts
+ * and on-premises servers.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
@@ -55,8 +54,8 @@ public interface AWSLicenseManager {
      * @throws InvalidParameterValueException
      *         One or more parameter values are not valid.
      * @throws AuthorizationException
-     *         The AWS user account does not have permission to perform the action. Check the IAM policy associated with
-     *         this account.
+     *         The Amazon Web Services user account does not have permission to perform the action. Check the IAM policy
+     *         associated with this account.
      * @throws AccessDeniedException
      *         Access to resource denied.
      * @throws RateLimitExceededException
@@ -87,8 +86,8 @@ public interface AWSLicenseManager {
      * @throws ConflictException
      *         There was a conflict processing the request. Try your request again.
      * @throws AuthorizationException
-     *         The AWS user account does not have permission to perform the action. Check the IAM policy associated with
-     *         this account.
+     *         The Amazon Web Services user account does not have permission to perform the action. Check the IAM policy
+     *         associated with this account.
      * @throws AccessDeniedException
      *         Access to resource denied.
      * @throws RateLimitExceededException
@@ -123,8 +122,8 @@ public interface AWSLicenseManager {
      * @throws RedirectException
      *         This is not the correct Region for the resource. Try again.
      * @throws AuthorizationException
-     *         The AWS user account does not have permission to perform the action. Check the IAM policy associated with
-     *         this account.
+     *         The Amazon Web Services user account does not have permission to perform the action. Check the IAM policy
+     *         associated with this account.
      * @throws AccessDeniedException
      *         Access to resource denied.
      * @throws RateLimitExceededException
@@ -157,8 +156,8 @@ public interface AWSLicenseManager {
      * @throws RedirectException
      *         This is not the correct Region for the resource. Try again.
      * @throws AuthorizationException
-     *         The AWS user account does not have permission to perform the action. Check the IAM policy associated with
-     *         this account.
+     *         The Amazon Web Services user account does not have permission to perform the action. Check the IAM policy
+     *         associated with this account.
      * @throws AccessDeniedException
      *         Access to resource denied.
      * @throws RateLimitExceededException
@@ -173,8 +172,8 @@ public interface AWSLicenseManager {
 
     /**
      * <p>
-     * Creates a grant for the specified license. A grant shares the use of license entitlements with specific AWS
-     * accounts.
+     * Creates a grant for the specified license. A grant shares the use of license entitlements with specific Amazon
+     * Web Services accounts.
      * </p>
      * 
      * @param createGrantRequest
@@ -188,8 +187,8 @@ public interface AWSLicenseManager {
      * @throws ServerInternalException
      *         The server experienced an internal error. Try again.
      * @throws AuthorizationException
-     *         The AWS user account does not have permission to perform the action. Check the IAM policy associated with
-     *         this account.
+     *         The Amazon Web Services user account does not have permission to perform the action. Check the IAM policy
+     *         associated with this account.
      * @throws RateLimitExceededException
      *         Too many requests have been submitted. Try again after a brief wait.
      * @throws AccessDeniedException
@@ -216,8 +215,8 @@ public interface AWSLicenseManager {
      * @throws ServerInternalException
      *         The server experienced an internal error. Try again.
      * @throws AuthorizationException
-     *         The AWS user account does not have permission to perform the action. Check the IAM policy associated with
-     *         this account.
+     *         The Amazon Web Services user account does not have permission to perform the action. Check the IAM policy
+     *         associated with this account.
      * @throws AccessDeniedException
      *         Access to resource denied.
      * @throws RateLimitExceededException
@@ -242,8 +241,8 @@ public interface AWSLicenseManager {
      * @throws RedirectException
      *         This is not the correct Region for the resource. Try again.
      * @throws AuthorizationException
-     *         The AWS user account does not have permission to perform the action. Check the IAM policy associated with
-     *         this account.
+     *         The Amazon Web Services user account does not have permission to perform the action. Check the IAM policy
+     *         associated with this account.
      * @throws AccessDeniedException
      *         Access to resource denied.
      * @throws RateLimitExceededException
@@ -276,8 +275,8 @@ public interface AWSLicenseManager {
      * @throws ResourceLimitExceededException
      *         Your resource limits have been exceeded.
      * @throws AuthorizationException
-     *         The AWS user account does not have permission to perform the action. Check the IAM policy associated with
-     *         this account.
+     *         The Amazon Web Services user account does not have permission to perform the action. Check the IAM policy
+     *         associated with this account.
      * @throws AccessDeniedException
      *         Access to resource denied.
      * @throws RateLimitExceededException
@@ -290,7 +289,35 @@ public interface AWSLicenseManager {
 
     /**
      * <p>
-     * Creates a new report generator.
+     * Creates a new license conversion task.
+     * </p>
+     * 
+     * @param createLicenseConversionTaskForResourceRequest
+     * @return Result of the CreateLicenseConversionTaskForResource operation returned by the service.
+     * @throws InvalidParameterValueException
+     *         One or more parameter values are not valid.
+     * @throws ValidationException
+     *         The provided input is not valid. Try your request again.
+     * @throws ServerInternalException
+     *         The server experienced an internal error. Try again.
+     * @throws AuthorizationException
+     *         The Amazon Web Services user account does not have permission to perform the action. Check the IAM policy
+     *         associated with this account.
+     * @throws AccessDeniedException
+     *         Access to resource denied.
+     * @throws RateLimitExceededException
+     *         Too many requests have been submitted. Try again after a brief wait.
+     * @sample AWSLicenseManager.CreateLicenseConversionTaskForResource
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/license-manager-2018-08-01/CreateLicenseConversionTaskForResource"
+     *      target="_top">AWS API Documentation</a>
+     */
+    CreateLicenseConversionTaskForResourceResult createLicenseConversionTaskForResource(
+            CreateLicenseConversionTaskForResourceRequest createLicenseConversionTaskForResourceRequest);
+
+    /**
+     * <p>
+     * Creates a report generator.
      * </p>
      * 
      * @param createLicenseManagerReportGeneratorRequest
@@ -304,8 +331,8 @@ public interface AWSLicenseManager {
      * @throws ServerInternalException
      *         The server experienced an internal error. Try again.
      * @throws AuthorizationException
-     *         The AWS user account does not have permission to perform the action. Check the IAM policy associated with
-     *         this account.
+     *         The Amazon Web Services user account does not have permission to perform the action. Check the IAM policy
+     *         associated with this account.
      * @throws RateLimitExceededException
      *         Too many requests have been submitted. Try again after a brief wait.
      * @throws AccessDeniedException
@@ -340,8 +367,8 @@ public interface AWSLicenseManager {
      * @throws ServerInternalException
      *         The server experienced an internal error. Try again.
      * @throws AuthorizationException
-     *         The AWS user account does not have permission to perform the action. Check the IAM policy associated with
-     *         this account.
+     *         The Amazon Web Services user account does not have permission to perform the action. Check the IAM policy
+     *         associated with this account.
      * @throws RateLimitExceededException
      *         Too many requests have been submitted. Try again after a brief wait.
      * @sample AWSLicenseManager.CreateLicenseVersion
@@ -365,8 +392,8 @@ public interface AWSLicenseManager {
      * @throws ValidationException
      *         The provided input is not valid. Try your request again.
      * @throws AuthorizationException
-     *         The AWS user account does not have permission to perform the action. Check the IAM policy associated with
-     *         this account.
+     *         The Amazon Web Services user account does not have permission to perform the action. Check the IAM policy
+     *         associated with this account.
      * @throws AccessDeniedException
      *         Access to resource denied.
      * @throws RateLimitExceededException
@@ -397,8 +424,8 @@ public interface AWSLicenseManager {
      * @throws InvalidParameterValueException
      *         One or more parameter values are not valid.
      * @throws AuthorizationException
-     *         The AWS user account does not have permission to perform the action. Check the IAM policy associated with
-     *         this account.
+     *         The Amazon Web Services user account does not have permission to perform the action. Check the IAM policy
+     *         associated with this account.
      * @throws AccessDeniedException
      *         Access to resource denied.
      * @throws RateLimitExceededException
@@ -431,8 +458,8 @@ public interface AWSLicenseManager {
      * @throws ServerInternalException
      *         The server experienced an internal error. Try again.
      * @throws AuthorizationException
-     *         The AWS user account does not have permission to perform the action. Check the IAM policy associated with
-     *         this account.
+     *         The Amazon Web Services user account does not have permission to perform the action. Check the IAM policy
+     *         associated with this account.
      * @throws AccessDeniedException
      *         Access to resource denied.
      * @throws RateLimitExceededException
@@ -458,8 +485,8 @@ public interface AWSLicenseManager {
      * @throws ServerInternalException
      *         The server experienced an internal error. Try again.
      * @throws AuthorizationException
-     *         The AWS user account does not have permission to perform the action. Check the IAM policy associated with
-     *         this account.
+     *         The Amazon Web Services user account does not have permission to perform the action. Check the IAM policy
+     *         associated with this account.
      * @throws AccessDeniedException
      *         Access to resource denied.
      * @throws RateLimitExceededException
@@ -472,11 +499,11 @@ public interface AWSLicenseManager {
 
     /**
      * <p>
-     * Delete an existing report generator.
+     * Deletes the specified report generator.
      * </p>
      * <p>
-     * This action deletes the report generator, which stops it from generating future reports and cannot be reversed.
-     * However, the previous reports from this generator will remain in your S3 bucket.
+     * This action deletes the report generator, which stops it from generating future reports. The action cannot be
+     * reversed. It has no effect on the previous reports from this generator.
      * </p>
      * 
      * @param deleteLicenseManagerReportGeneratorRequest
@@ -490,8 +517,8 @@ public interface AWSLicenseManager {
      * @throws ServerInternalException
      *         The server experienced an internal error. Try again.
      * @throws AuthorizationException
-     *         The AWS user account does not have permission to perform the action. Check the IAM policy associated with
-     *         this account.
+     *         The Amazon Web Services user account does not have permission to perform the action. Check the IAM policy
+     *         associated with this account.
      * @throws RateLimitExceededException
      *         Too many requests have been submitted. Try again after a brief wait.
      * @throws AccessDeniedException
@@ -516,8 +543,8 @@ public interface AWSLicenseManager {
      * @throws ValidationException
      *         The provided input is not valid. Try your request again.
      * @throws AuthorizationException
-     *         The AWS user account does not have permission to perform the action. Check the IAM policy associated with
-     *         this account.
+     *         The Amazon Web Services user account does not have permission to perform the action. Check the IAM policy
+     *         associated with this account.
      * @throws AccessDeniedException
      *         Access to resource denied.
      * @throws RateLimitExceededException
@@ -546,8 +573,8 @@ public interface AWSLicenseManager {
      * @throws InvalidParameterValueException
      *         One or more parameter values are not valid.
      * @throws AuthorizationException
-     *         The AWS user account does not have permission to perform the action. Check the IAM policy associated with
-     *         this account.
+     *         The Amazon Web Services user account does not have permission to perform the action. Check the IAM policy
+     *         associated with this account.
      * @throws AccessDeniedException
      *         Access to resource denied.
      * @throws RateLimitExceededException
@@ -572,8 +599,8 @@ public interface AWSLicenseManager {
      * @throws ValidationException
      *         The provided input is not valid. Try your request again.
      * @throws AuthorizationException
-     *         The AWS user account does not have permission to perform the action. Check the IAM policy associated with
-     *         this account.
+     *         The Amazon Web Services user account does not have permission to perform the action. Check the IAM policy
+     *         associated with this account.
      * @throws AccessDeniedException
      *         Access to resource denied.
      * @throws RateLimitExceededException
@@ -602,8 +629,8 @@ public interface AWSLicenseManager {
      * @throws ServerInternalException
      *         The server experienced an internal error. Try again.
      * @throws AuthorizationException
-     *         The AWS user account does not have permission to perform the action. Check the IAM policy associated with
-     *         this account.
+     *         The Amazon Web Services user account does not have permission to perform the action. Check the IAM policy
+     *         associated with this account.
      * @throws AccessDeniedException
      *         Access to resource denied.
      * @throws RateLimitExceededException
@@ -626,8 +653,8 @@ public interface AWSLicenseManager {
      * @throws InvalidParameterValueException
      *         One or more parameter values are not valid.
      * @throws AuthorizationException
-     *         The AWS user account does not have permission to perform the action. Check the IAM policy associated with
-     *         this account.
+     *         The Amazon Web Services user account does not have permission to perform the action. Check the IAM policy
+     *         associated with this account.
      * @throws AccessDeniedException
      *         Access to resource denied.
      * @throws RateLimitExceededException
@@ -652,8 +679,8 @@ public interface AWSLicenseManager {
      * @throws ServerInternalException
      *         The server experienced an internal error. Try again.
      * @throws AuthorizationException
-     *         The AWS user account does not have permission to perform the action. Check the IAM policy associated with
-     *         this account.
+     *         The Amazon Web Services user account does not have permission to perform the action. Check the IAM policy
+     *         associated with this account.
      * @throws AccessDeniedException
      *         Access to resource denied.
      * @throws RateLimitExceededException
@@ -666,7 +693,31 @@ public interface AWSLicenseManager {
 
     /**
      * <p>
-     * Gets information on the specified report generator.
+     * Gets information about the specified license type conversion task.
+     * </p>
+     * 
+     * @param getLicenseConversionTaskRequest
+     * @return Result of the GetLicenseConversionTask operation returned by the service.
+     * @throws InvalidParameterValueException
+     *         One or more parameter values are not valid.
+     * @throws ServerInternalException
+     *         The server experienced an internal error. Try again.
+     * @throws AuthorizationException
+     *         The Amazon Web Services user account does not have permission to perform the action. Check the IAM policy
+     *         associated with this account.
+     * @throws AccessDeniedException
+     *         Access to resource denied.
+     * @throws RateLimitExceededException
+     *         Too many requests have been submitted. Try again after a brief wait.
+     * @sample AWSLicenseManager.GetLicenseConversionTask
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/license-manager-2018-08-01/GetLicenseConversionTask"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetLicenseConversionTaskResult getLicenseConversionTask(GetLicenseConversionTaskRequest getLicenseConversionTaskRequest);
+
+    /**
+     * <p>
+     * Gets information about the specified report generator.
      * </p>
      * 
      * @param getLicenseManagerReportGeneratorRequest
@@ -680,8 +731,8 @@ public interface AWSLicenseManager {
      * @throws ServerInternalException
      *         The server experienced an internal error. Try again.
      * @throws AuthorizationException
-     *         The AWS user account does not have permission to perform the action. Check the IAM policy associated with
-     *         this account.
+     *         The Amazon Web Services user account does not have permission to perform the action. Check the IAM policy
+     *         associated with this account.
      * @throws RateLimitExceededException
      *         Too many requests have been submitted. Try again after a brief wait.
      * @throws AccessDeniedException
@@ -706,8 +757,8 @@ public interface AWSLicenseManager {
      * @throws InvalidParameterValueException
      *         One or more parameter values are not valid.
      * @throws AuthorizationException
-     *         The AWS user account does not have permission to perform the action. Check the IAM policy associated with
-     *         this account.
+     *         The Amazon Web Services user account does not have permission to perform the action. Check the IAM policy
+     *         associated with this account.
      * @throws AccessDeniedException
      *         Access to resource denied.
      * @throws RateLimitExceededException
@@ -730,8 +781,8 @@ public interface AWSLicenseManager {
      * @throws ServerInternalException
      *         The server experienced an internal error. Try again.
      * @throws AuthorizationException
-     *         The AWS user account does not have permission to perform the action. Check the IAM policy associated with
-     *         this account.
+     *         The Amazon Web Services user account does not have permission to perform the action. Check the IAM policy
+     *         associated with this account.
      * @throws AccessDeniedException
      *         Access to resource denied.
      * @throws RateLimitExceededException
@@ -760,8 +811,8 @@ public interface AWSLicenseManager {
      * @throws ServerInternalException
      *         The server experienced an internal error. Try again.
      * @throws AuthorizationException
-     *         The AWS user account does not have permission to perform the action. Check the IAM policy associated with
-     *         this account.
+     *         The Amazon Web Services user account does not have permission to perform the action. Check the IAM policy
+     *         associated with this account.
      * @throws AccessDeniedException
      *         Access to resource denied.
      * @throws RateLimitExceededException
@@ -790,8 +841,8 @@ public interface AWSLicenseManager {
      * @throws ServerInternalException
      *         The server experienced an internal error. Try again.
      * @throws AuthorizationException
-     *         The AWS user account does not have permission to perform the action. Check the IAM policy associated with
-     *         this account.
+     *         The Amazon Web Services user account does not have permission to perform the action. Check the IAM policy
+     *         associated with this account.
      * @throws AccessDeniedException
      *         Access to resource denied.
      * @throws RateLimitExceededException
@@ -814,8 +865,8 @@ public interface AWSLicenseManager {
      * @throws ServerInternalException
      *         The server experienced an internal error. Try again.
      * @throws AuthorizationException
-     *         The AWS user account does not have permission to perform the action. Check the IAM policy associated with
-     *         this account.
+     *         The Amazon Web Services user account does not have permission to perform the action. Check the IAM policy
+     *         associated with this account.
      * @throws AccessDeniedException
      *         Access to resource denied.
      * @throws RateLimitExceededException
@@ -842,8 +893,8 @@ public interface AWSLicenseManager {
      * @throws FilterLimitExceededException
      *         The request uses too many filters or too many filter values.
      * @throws AuthorizationException
-     *         The AWS user account does not have permission to perform the action. Check the IAM policy associated with
-     *         this account.
+     *         The Amazon Web Services user account does not have permission to perform the action. Check the IAM policy
+     *         associated with this account.
      * @throws AccessDeniedException
      *         Access to resource denied.
      * @throws RateLimitExceededException
@@ -853,6 +904,30 @@ public interface AWSLicenseManager {
      *      target="_top">AWS API Documentation</a>
      */
     ListLicenseConfigurationsResult listLicenseConfigurations(ListLicenseConfigurationsRequest listLicenseConfigurationsRequest);
+
+    /**
+     * <p>
+     * Lists the license type conversion tasks for your account.
+     * </p>
+     * 
+     * @param listLicenseConversionTasksRequest
+     * @return Result of the ListLicenseConversionTasks operation returned by the service.
+     * @throws InvalidParameterValueException
+     *         One or more parameter values are not valid.
+     * @throws ServerInternalException
+     *         The server experienced an internal error. Try again.
+     * @throws AuthorizationException
+     *         The Amazon Web Services user account does not have permission to perform the action. Check the IAM policy
+     *         associated with this account.
+     * @throws AccessDeniedException
+     *         Access to resource denied.
+     * @throws RateLimitExceededException
+     *         Too many requests have been submitted. Try again after a brief wait.
+     * @sample AWSLicenseManager.ListLicenseConversionTasks
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/license-manager-2018-08-01/ListLicenseConversionTasks"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListLicenseConversionTasksResult listLicenseConversionTasks(ListLicenseConversionTasksRequest listLicenseConversionTasksRequest);
 
     /**
      * <p>
@@ -870,8 +945,8 @@ public interface AWSLicenseManager {
      * @throws ServerInternalException
      *         The server experienced an internal error. Try again.
      * @throws AuthorizationException
-     *         The AWS user account does not have permission to perform the action. Check the IAM policy associated with
-     *         this account.
+     *         The Amazon Web Services user account does not have permission to perform the action. Check the IAM policy
+     *         associated with this account.
      * @throws RateLimitExceededException
      *         Too many requests have been submitted. Try again after a brief wait.
      * @throws AccessDeniedException
@@ -898,8 +973,8 @@ public interface AWSLicenseManager {
      * @throws ServerInternalException
      *         The server experienced an internal error. Try again.
      * @throws AuthorizationException
-     *         The AWS user account does not have permission to perform the action. Check the IAM policy associated with
-     *         this account.
+     *         The Amazon Web Services user account does not have permission to perform the action. Check the IAM policy
+     *         associated with this account.
      * @throws AccessDeniedException
      *         Access to resource denied.
      * @throws RateLimitExceededException
@@ -922,8 +997,8 @@ public interface AWSLicenseManager {
      * @throws InvalidParameterValueException
      *         One or more parameter values are not valid.
      * @throws AuthorizationException
-     *         The AWS user account does not have permission to perform the action. Check the IAM policy associated with
-     *         this account.
+     *         The Amazon Web Services user account does not have permission to perform the action. Check the IAM policy
+     *         associated with this account.
      * @throws AccessDeniedException
      *         Access to resource denied.
      * @throws RateLimitExceededException
@@ -948,8 +1023,8 @@ public interface AWSLicenseManager {
      * @throws InvalidParameterValueException
      *         One or more parameter values are not valid.
      * @throws AuthorizationException
-     *         The AWS user account does not have permission to perform the action. Check the IAM policy associated with
-     *         this account.
+     *         The Amazon Web Services user account does not have permission to perform the action. Check the IAM policy
+     *         associated with this account.
      * @throws AccessDeniedException
      *         Access to resource denied.
      * @throws RateLimitExceededException
@@ -978,8 +1053,8 @@ public interface AWSLicenseManager {
      * @throws ServerInternalException
      *         The server experienced an internal error. Try again.
      * @throws AuthorizationException
-     *         The AWS user account does not have permission to perform the action. Check the IAM policy associated with
-     *         this account.
+     *         The Amazon Web Services user account does not have permission to perform the action. Check the IAM policy
+     *         associated with this account.
      * @throws AccessDeniedException
      *         Access to resource denied.
      * @throws RateLimitExceededException
@@ -1006,8 +1081,8 @@ public interface AWSLicenseManager {
      * @throws ServerInternalException
      *         The server experienced an internal error. Try again.
      * @throws AuthorizationException
-     *         The AWS user account does not have permission to perform the action. Check the IAM policy associated with
-     *         this account.
+     *         The Amazon Web Services user account does not have permission to perform the action. Check the IAM policy
+     *         associated with this account.
      * @throws AccessDeniedException
      *         Access to resource denied.
      * @throws RateLimitExceededException
@@ -1034,8 +1109,8 @@ public interface AWSLicenseManager {
      * @throws FailedDependencyException
      *         A dependency required to run the API is missing.
      * @throws AuthorizationException
-     *         The AWS user account does not have permission to perform the action. Check the IAM policy associated with
-     *         this account.
+     *         The Amazon Web Services user account does not have permission to perform the action. Check the IAM policy
+     *         associated with this account.
      * @throws AccessDeniedException
      *         Access to resource denied.
      * @throws RateLimitExceededException
@@ -1058,8 +1133,8 @@ public interface AWSLicenseManager {
      * @throws ServerInternalException
      *         The server experienced an internal error. Try again.
      * @throws AuthorizationException
-     *         The AWS user account does not have permission to perform the action. Check the IAM policy associated with
-     *         this account.
+     *         The Amazon Web Services user account does not have permission to perform the action. Check the IAM policy
+     *         associated with this account.
      * @throws AccessDeniedException
      *         Access to resource denied.
      * @throws RateLimitExceededException
@@ -1080,8 +1155,8 @@ public interface AWSLicenseManager {
      * @throws ValidationException
      *         The provided input is not valid. Try your request again.
      * @throws AuthorizationException
-     *         The AWS user account does not have permission to perform the action. Check the IAM policy associated with
-     *         this account.
+     *         The Amazon Web Services user account does not have permission to perform the action. Check the IAM policy
+     *         associated with this account.
      * @throws AccessDeniedException
      *         Access to resource denied.
      * @throws RateLimitExceededException
@@ -1110,8 +1185,8 @@ public interface AWSLicenseManager {
      * @throws ServerInternalException
      *         The server experienced an internal error. Try again.
      * @throws AuthorizationException
-     *         The AWS user account does not have permission to perform the action. Check the IAM policy associated with
-     *         this account.
+     *         The Amazon Web Services user account does not have permission to perform the action. Check the IAM policy
+     *         associated with this account.
      * @throws AccessDeniedException
      *         Access to resource denied.
      * @throws RateLimitExceededException
@@ -1134,8 +1209,8 @@ public interface AWSLicenseManager {
      * @throws InvalidParameterValueException
      *         One or more parameter values are not valid.
      * @throws AuthorizationException
-     *         The AWS user account does not have permission to perform the action. Check the IAM policy associated with
-     *         this account.
+     *         The Amazon Web Services user account does not have permission to perform the action. Check the IAM policy
+     *         associated with this account.
      * @throws AccessDeniedException
      *         Access to resource denied.
      * @throws RateLimitExceededException
@@ -1162,8 +1237,8 @@ public interface AWSLicenseManager {
      * @throws ServerInternalException
      *         The server experienced an internal error. Try again.
      * @throws AuthorizationException
-     *         The AWS user account does not have permission to perform the action. Check the IAM policy associated with
-     *         this account.
+     *         The Amazon Web Services user account does not have permission to perform the action. Check the IAM policy
+     *         associated with this account.
      * @throws AccessDeniedException
      *         Access to resource denied.
      * @throws RateLimitExceededException
@@ -1186,8 +1261,8 @@ public interface AWSLicenseManager {
      * @throws ServerInternalException
      *         The server experienced an internal error. Try again.
      * @throws AuthorizationException
-     *         The AWS user account does not have permission to perform the action. Check the IAM policy associated with
-     *         this account.
+     *         The Amazon Web Services user account does not have permission to perform the action. Check the IAM policy
+     *         associated with this account.
      * @throws AccessDeniedException
      *         Access to resource denied.
      * @throws RateLimitExceededException
@@ -1210,8 +1285,8 @@ public interface AWSLicenseManager {
      * @throws ServerInternalException
      *         The server experienced an internal error. Try again.
      * @throws AuthorizationException
-     *         The AWS user account does not have permission to perform the action. Check the IAM policy associated with
-     *         this account.
+     *         The Amazon Web Services user account does not have permission to perform the action. Check the IAM policy
+     *         associated with this account.
      * @throws AccessDeniedException
      *         Access to resource denied.
      * @throws RateLimitExceededException
@@ -1229,7 +1304,7 @@ public interface AWSLicenseManager {
      * Updates a report generator.
      * </p>
      * <p>
-     * After you make changes to a report generator, it will start generating new reports within 60 minutes of being
+     * After you make changes to a report generator, it starts generating new reports within 60 minutes of being
      * updated.
      * </p>
      * 
@@ -1244,8 +1319,8 @@ public interface AWSLicenseManager {
      * @throws ServerInternalException
      *         The server experienced an internal error. Try again.
      * @throws AuthorizationException
-     *         The AWS user account does not have permission to perform the action. Check the IAM policy associated with
-     *         this account.
+     *         The Amazon Web Services user account does not have permission to perform the action. Check the IAM policy
+     *         associated with this account.
      * @throws AccessDeniedException
      *         Access to resource denied.
      * @throws ResourceNotFoundException
@@ -1262,11 +1337,11 @@ public interface AWSLicenseManager {
 
     /**
      * <p>
-     * Adds or removes the specified license configurations for the specified AWS resource.
+     * Adds or removes the specified license configurations for the specified Amazon Web Services resource.
      * </p>
      * <p>
      * You can update the license specifications of AMIs, instances, and hosts. You cannot update the license
-     * specifications for launch templates and AWS CloudFormation templates, as they send license configurations to the
+     * specifications for launch templates and CloudFormation templates, as they send license configurations to the
      * operation that creates the resource.
      * </p>
      * 
@@ -1283,8 +1358,8 @@ public interface AWSLicenseManager {
      * @throws ServerInternalException
      *         The server experienced an internal error. Try again.
      * @throws AuthorizationException
-     *         The AWS user account does not have permission to perform the action. Check the IAM policy associated with
-     *         this account.
+     *         The Amazon Web Services user account does not have permission to perform the action. Check the IAM policy
+     *         associated with this account.
      * @throws AccessDeniedException
      *         Access to resource denied.
      * @throws RateLimitExceededException
@@ -1309,8 +1384,8 @@ public interface AWSLicenseManager {
      * @throws ServerInternalException
      *         The server experienced an internal error. Try again.
      * @throws AuthorizationException
-     *         The AWS user account does not have permission to perform the action. Check the IAM policy associated with
-     *         this account.
+     *         The Amazon Web Services user account does not have permission to perform the action. Check the IAM policy
+     *         associated with this account.
      * @throws AccessDeniedException
      *         Access to resource denied.
      * @throws RateLimitExceededException

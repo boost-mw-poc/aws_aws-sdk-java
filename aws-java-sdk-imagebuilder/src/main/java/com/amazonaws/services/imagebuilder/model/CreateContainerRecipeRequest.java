@@ -54,8 +54,8 @@ public class CreateContainerRecipeRequest extends com.amazonaws.AmazonWebService
      * </p>
      * <p>
      * <b>Assignment:</b> For the first three nodes you can assign any positive integer value, including zero, with an
-     * upper limit of 2^30-1, or 1073741823 for each node. Image Builder automatically assigns the build number, and
-     * that is not open for updates.
+     * upper limit of 2^30-1, or 1073741823 for each node. Image Builder automatically assigns the build number to the
+     * fourth node.
      * </p>
      * <p>
      * <b>Patterns:</b> You can use any numeric pattern that adheres to the assignment requirements for the nodes that
@@ -288,8 +288,8 @@ public class CreateContainerRecipeRequest extends com.amazonaws.AmazonWebService
      * </p>
      * <p>
      * <b>Assignment:</b> For the first three nodes you can assign any positive integer value, including zero, with an
-     * upper limit of 2^30-1, or 1073741823 for each node. Image Builder automatically assigns the build number, and
-     * that is not open for updates.
+     * upper limit of 2^30-1, or 1073741823 for each node. Image Builder automatically assigns the build number to the
+     * fourth node.
      * </p>
      * <p>
      * <b>Patterns:</b> You can use any numeric pattern that adheres to the assignment requirements for the nodes that
@@ -307,7 +307,7 @@ public class CreateContainerRecipeRequest extends com.amazonaws.AmazonWebService
      *        <p>
      *        <b>Assignment:</b> For the first three nodes you can assign any positive integer value, including zero,
      *        with an upper limit of 2^30-1, or 1073741823 for each node. Image Builder automatically assigns the build
-     *        number, and that is not open for updates.
+     *        number to the fourth node.
      *        </p>
      *        <p>
      *        <b>Patterns:</b> You can use any numeric pattern that adheres to the assignment requirements for the nodes
@@ -331,8 +331,8 @@ public class CreateContainerRecipeRequest extends com.amazonaws.AmazonWebService
      * </p>
      * <p>
      * <b>Assignment:</b> For the first three nodes you can assign any positive integer value, including zero, with an
-     * upper limit of 2^30-1, or 1073741823 for each node. Image Builder automatically assigns the build number, and
-     * that is not open for updates.
+     * upper limit of 2^30-1, or 1073741823 for each node. Image Builder automatically assigns the build number to the
+     * fourth node.
      * </p>
      * <p>
      * <b>Patterns:</b> You can use any numeric pattern that adheres to the assignment requirements for the nodes that
@@ -350,7 +350,7 @@ public class CreateContainerRecipeRequest extends com.amazonaws.AmazonWebService
      *         <p>
      *         <b>Assignment:</b> For the first three nodes you can assign any positive integer value, including zero,
      *         with an upper limit of 2^30-1, or 1073741823 for each node. Image Builder automatically assigns the build
-     *         number, and that is not open for updates.
+     *         number to the fourth node.
      *         </p>
      *         <p>
      *         <b>Patterns:</b> You can use any numeric pattern that adheres to the assignment requirements for the
@@ -374,8 +374,8 @@ public class CreateContainerRecipeRequest extends com.amazonaws.AmazonWebService
      * </p>
      * <p>
      * <b>Assignment:</b> For the first three nodes you can assign any positive integer value, including zero, with an
-     * upper limit of 2^30-1, or 1073741823 for each node. Image Builder automatically assigns the build number, and
-     * that is not open for updates.
+     * upper limit of 2^30-1, or 1073741823 for each node. Image Builder automatically assigns the build number to the
+     * fourth node.
      * </p>
      * <p>
      * <b>Patterns:</b> You can use any numeric pattern that adheres to the assignment requirements for the nodes that
@@ -393,7 +393,7 @@ public class CreateContainerRecipeRequest extends com.amazonaws.AmazonWebService
      *        <p>
      *        <b>Assignment:</b> For the first three nodes you can assign any positive integer value, including zero,
      *        with an upper limit of 2^30-1, or 1073741823 for each node. Image Builder automatically assigns the build
-     *        number, and that is not open for updates.
+     *        number to the fourth node.
      *        </p>
      *        <p>
      *        <b>Patterns:</b> You can use any numeric pattern that adheres to the assignment requirements for the nodes

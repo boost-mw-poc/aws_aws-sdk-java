@@ -56,6 +56,8 @@ public class UpdateInfrastructureConfigurationRequestMarshaller {
             .defaultValueSupplier(com.amazonaws.util.IdempotentUtils.getGenerator()).build();
     private static final MarshallingInfo<Map> RESOURCETAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("resourceTags").build();
+    private static final MarshallingInfo<StructuredPojo> INSTANCEMETADATAOPTIONS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("instanceMetadataOptions").build();
 
     private static final UpdateInfrastructureConfigurationRequestMarshaller instance = new UpdateInfrastructureConfigurationRequestMarshaller();
 
@@ -85,6 +87,7 @@ public class UpdateInfrastructureConfigurationRequestMarshaller {
             protocolMarshaller.marshall(updateInfrastructureConfigurationRequest.getSnsTopicArn(), SNSTOPICARN_BINDING);
             protocolMarshaller.marshall(updateInfrastructureConfigurationRequest.getClientToken(), CLIENTTOKEN_BINDING);
             protocolMarshaller.marshall(updateInfrastructureConfigurationRequest.getResourceTags(), RESOURCETAGS_BINDING);
+            protocolMarshaller.marshall(updateInfrastructureConfigurationRequest.getInstanceMetadataOptions(), INSTANCEMETADATAOPTIONS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

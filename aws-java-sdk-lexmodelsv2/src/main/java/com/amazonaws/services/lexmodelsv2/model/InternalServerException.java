@@ -15,7 +15,9 @@ package com.amazonaws.services.lexmodelsv2.model;
 import javax.annotation.Generated;
 
 /**
- * <p/>
+ * <p>
+ * The service encountered an unexpected condition. Try your request again.
+ * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class InternalServerException extends com.amazonaws.services.lexmodelsv2.model.AmazonLexModelsV2Exception {

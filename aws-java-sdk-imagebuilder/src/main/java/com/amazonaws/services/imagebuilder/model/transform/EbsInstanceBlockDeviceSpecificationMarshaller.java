@@ -41,6 +41,8 @@ public class EbsInstanceBlockDeviceSpecificationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("volumeSize").build();
     private static final MarshallingInfo<String> VOLUMETYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("volumeType").build();
+    private static final MarshallingInfo<Integer> THROUGHPUT_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("throughput").build();
 
     private static final EbsInstanceBlockDeviceSpecificationMarshaller instance = new EbsInstanceBlockDeviceSpecificationMarshaller();
 
@@ -65,6 +67,7 @@ public class EbsInstanceBlockDeviceSpecificationMarshaller {
             protocolMarshaller.marshall(ebsInstanceBlockDeviceSpecification.getSnapshotId(), SNAPSHOTID_BINDING);
             protocolMarshaller.marshall(ebsInstanceBlockDeviceSpecification.getVolumeSize(), VOLUMESIZE_BINDING);
             protocolMarshaller.marshall(ebsInstanceBlockDeviceSpecification.getVolumeType(), VOLUMETYPE_BINDING);
+            protocolMarshaller.marshall(ebsInstanceBlockDeviceSpecification.getThroughput(), THROUGHPUT_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

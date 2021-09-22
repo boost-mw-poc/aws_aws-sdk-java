@@ -176,8 +176,8 @@ public class SimulateCustomPolicyRequest extends com.amazonaws.AmazonWebServiceR
     private String resourcePolicy;
     /**
      * <p>
-     * An ARN representing the account ID that specifies the owner of any simulated resource that does not identify its
-     * owner in the resource ARN. Examples of resource ARNs include an S3 bucket or object. If
+     * An ARN representing the Amazon Web Services account ID that specifies the owner of any simulated resource that
+     * does not identify its owner in the resource ARN. Examples of resource ARNs include an S3 bucket or object. If
      * <code>ResourceOwner</code> is specified, it is also used as the account owner of any <code>ResourcePolicy</code>
      * included in the simulation. If the <code>ResourceOwner</code> parameter is not specified, then the owner of the
      * resources and the resource policy defaults to the account of the identity provided in <code>CallerArn</code>.
@@ -1535,8 +1535,8 @@ public class SimulateCustomPolicyRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * An ARN representing the account ID that specifies the owner of any simulated resource that does not identify its
-     * owner in the resource ARN. Examples of resource ARNs include an S3 bucket or object. If
+     * An ARN representing the Amazon Web Services account ID that specifies the owner of any simulated resource that
+     * does not identify its owner in the resource ARN. Examples of resource ARNs include an S3 bucket or object. If
      * <code>ResourceOwner</code> is specified, it is also used as the account owner of any <code>ResourcePolicy</code>
      * included in the simulation. If the <code>ResourceOwner</code> parameter is not specified, then the owner of the
      * resources and the resource policy defaults to the account of the identity provided in <code>CallerArn</code>.
@@ -1550,9 +1550,9 @@ public class SimulateCustomPolicyRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * 
      * @param resourceOwner
-     *        An ARN representing the account ID that specifies the owner of any simulated resource that does not
-     *        identify its owner in the resource ARN. Examples of resource ARNs include an S3 bucket or object. If
-     *        <code>ResourceOwner</code> is specified, it is also used as the account owner of any
+     *        An ARN representing the Amazon Web Services account ID that specifies the owner of any simulated resource
+     *        that does not identify its owner in the resource ARN. Examples of resource ARNs include an S3 bucket or
+     *        object. If <code>ResourceOwner</code> is specified, it is also used as the account owner of any
      *        <code>ResourcePolicy</code> included in the simulation. If the <code>ResourceOwner</code> parameter is not
      *        specified, then the owner of the resources and the resource policy defaults to the account of the identity
      *        provided in <code>CallerArn</code>. This parameter is required only if you specify a resource-based policy
@@ -1570,8 +1570,8 @@ public class SimulateCustomPolicyRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * An ARN representing the account ID that specifies the owner of any simulated resource that does not identify its
-     * owner in the resource ARN. Examples of resource ARNs include an S3 bucket or object. If
+     * An ARN representing the Amazon Web Services account ID that specifies the owner of any simulated resource that
+     * does not identify its owner in the resource ARN. Examples of resource ARNs include an S3 bucket or object. If
      * <code>ResourceOwner</code> is specified, it is also used as the account owner of any <code>ResourcePolicy</code>
      * included in the simulation. If the <code>ResourceOwner</code> parameter is not specified, then the owner of the
      * resources and the resource policy defaults to the account of the identity provided in <code>CallerArn</code>.
@@ -1584,9 +1584,9 @@ public class SimulateCustomPolicyRequest extends com.amazonaws.AmazonWebServiceR
      * <code>arn:aws:iam::112233445566-ID:root</code>.
      * </p>
      * 
-     * @return An ARN representing the account ID that specifies the owner of any simulated resource that does not
-     *         identify its owner in the resource ARN. Examples of resource ARNs include an S3 bucket or object. If
-     *         <code>ResourceOwner</code> is specified, it is also used as the account owner of any
+     * @return An ARN representing the Amazon Web Services account ID that specifies the owner of any simulated resource
+     *         that does not identify its owner in the resource ARN. Examples of resource ARNs include an S3 bucket or
+     *         object. If <code>ResourceOwner</code> is specified, it is also used as the account owner of any
      *         <code>ResourcePolicy</code> included in the simulation. If the <code>ResourceOwner</code> parameter is
      *         not specified, then the owner of the resources and the resource policy defaults to the account of the
      *         identity provided in <code>CallerArn</code>. This parameter is required only if you specify a
@@ -1604,8 +1604,8 @@ public class SimulateCustomPolicyRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * An ARN representing the account ID that specifies the owner of any simulated resource that does not identify its
-     * owner in the resource ARN. Examples of resource ARNs include an S3 bucket or object. If
+     * An ARN representing the Amazon Web Services account ID that specifies the owner of any simulated resource that
+     * does not identify its owner in the resource ARN. Examples of resource ARNs include an S3 bucket or object. If
      * <code>ResourceOwner</code> is specified, it is also used as the account owner of any <code>ResourcePolicy</code>
      * included in the simulation. If the <code>ResourceOwner</code> parameter is not specified, then the owner of the
      * resources and the resource policy defaults to the account of the identity provided in <code>CallerArn</code>.
@@ -1619,9 +1619,9 @@ public class SimulateCustomPolicyRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * 
      * @param resourceOwner
-     *        An ARN representing the account ID that specifies the owner of any simulated resource that does not
-     *        identify its owner in the resource ARN. Examples of resource ARNs include an S3 bucket or object. If
-     *        <code>ResourceOwner</code> is specified, it is also used as the account owner of any
+     *        An ARN representing the Amazon Web Services account ID that specifies the owner of any simulated resource
+     *        that does not identify its owner in the resource ARN. Examples of resource ARNs include an S3 bucket or
+     *        object. If <code>ResourceOwner</code> is specified, it is also used as the account owner of any
      *        <code>ResourcePolicy</code> included in the simulation. If the <code>ResourceOwner</code> parameter is not
      *        specified, then the owner of the resources and the resource policy defaults to the account of the identity
      *        provided in <code>CallerArn</code>. This parameter is required only if you specify a resource-based policy

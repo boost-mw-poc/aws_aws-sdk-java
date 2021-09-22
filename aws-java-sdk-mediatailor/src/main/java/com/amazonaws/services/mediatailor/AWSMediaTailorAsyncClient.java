@@ -83,6 +83,41 @@ public class AWSMediaTailorAsyncClient extends AWSMediaTailorClient implements A
     }
 
     @Override
+    public java.util.concurrent.Future<ConfigureLogsForPlaybackConfigurationResult> configureLogsForPlaybackConfigurationAsync(
+            ConfigureLogsForPlaybackConfigurationRequest request) {
+
+        return configureLogsForPlaybackConfigurationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ConfigureLogsForPlaybackConfigurationResult> configureLogsForPlaybackConfigurationAsync(
+            final ConfigureLogsForPlaybackConfigurationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ConfigureLogsForPlaybackConfigurationRequest, ConfigureLogsForPlaybackConfigurationResult> asyncHandler) {
+        final ConfigureLogsForPlaybackConfigurationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ConfigureLogsForPlaybackConfigurationResult>() {
+            @Override
+            public ConfigureLogsForPlaybackConfigurationResult call() throws Exception {
+                ConfigureLogsForPlaybackConfigurationResult result = null;
+
+                try {
+                    result = executeConfigureLogsForPlaybackConfiguration(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateChannelResult> createChannelAsync(CreateChannelRequest request) {
 
         return createChannelAsync(request, null);

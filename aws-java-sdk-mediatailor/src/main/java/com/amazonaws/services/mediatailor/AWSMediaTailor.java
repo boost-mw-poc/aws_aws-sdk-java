@@ -52,6 +52,22 @@ public interface AWSMediaTailor {
 
     /**
      * <p>
+     * Configures Amazon CloudWatch log settings for a playback configuration.
+     * </p>
+     * 
+     * @param configureLogsForPlaybackConfigurationRequest
+     *        Configures Amazon CloudWatch log settings for a playback configuration.
+     * @return Result of the ConfigureLogsForPlaybackConfiguration operation returned by the service.
+     * @sample AWSMediaTailor.ConfigureLogsForPlaybackConfiguration
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/mediatailor-2018-04-23/ConfigureLogsForPlaybackConfiguration"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ConfigureLogsForPlaybackConfigurationResult configureLogsForPlaybackConfiguration(
+            ConfigureLogsForPlaybackConfigurationRequest configureLogsForPlaybackConfigurationRequest);
+
+    /**
+     * <p>
      * Creates a channel.
      * </p>
      * 
@@ -334,7 +350,7 @@ public interface AWSMediaTailor {
      * @param listTagsForResourceRequest
      * @return Result of the ListTagsForResource operation returned by the service.
      * @throws BadRequestException
-     *         Invalid request parameters.
+     *         One or more parameters in this request aren't valid.
      * @sample AWSMediaTailor.ListTagsForResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mediatailor-2018-04-23/ListTagsForResource"
      *      target="_top">AWS API Documentation</a>
@@ -414,7 +430,7 @@ public interface AWSMediaTailor {
      * @param tagResourceRequest
      * @return Result of the TagResource operation returned by the service.
      * @throws BadRequestException
-     *         Invalid request parameters.
+     *         One or more parameters in this request aren't valid.
      * @sample AWSMediaTailor.TagResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mediatailor-2018-04-23/TagResource" target="_top">AWS API
      *      Documentation</a>
@@ -429,7 +445,7 @@ public interface AWSMediaTailor {
      * @param untagResourceRequest
      * @return Result of the UntagResource operation returned by the service.
      * @throws BadRequestException
-     *         Invalid request parameters.
+     *         One or more parameters in this request aren't valid.
      * @sample AWSMediaTailor.UntagResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mediatailor-2018-04-23/UntagResource" target="_top">AWS API
      *      Documentation</a>

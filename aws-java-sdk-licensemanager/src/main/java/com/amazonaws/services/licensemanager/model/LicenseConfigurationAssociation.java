@@ -42,7 +42,7 @@ public class LicenseConfigurationAssociation implements Serializable, Cloneable,
     private String resourceType;
     /**
      * <p>
-     * ID of the AWS account that owns the resource consuming licenses.
+     * ID of the Amazon Web Services account that owns the resource consuming licenses.
      * </p>
      */
     private String resourceOwnerId;
@@ -160,11 +160,11 @@ public class LicenseConfigurationAssociation implements Serializable, Cloneable,
 
     /**
      * <p>
-     * ID of the AWS account that owns the resource consuming licenses.
+     * ID of the Amazon Web Services account that owns the resource consuming licenses.
      * </p>
      * 
      * @param resourceOwnerId
-     *        ID of the AWS account that owns the resource consuming licenses.
+     *        ID of the Amazon Web Services account that owns the resource consuming licenses.
      */
 
     public void setResourceOwnerId(String resourceOwnerId) {
@@ -173,10 +173,10 @@ public class LicenseConfigurationAssociation implements Serializable, Cloneable,
 
     /**
      * <p>
-     * ID of the AWS account that owns the resource consuming licenses.
+     * ID of the Amazon Web Services account that owns the resource consuming licenses.
      * </p>
      * 
-     * @return ID of the AWS account that owns the resource consuming licenses.
+     * @return ID of the Amazon Web Services account that owns the resource consuming licenses.
      */
 
     public String getResourceOwnerId() {
@@ -185,11 +185,11 @@ public class LicenseConfigurationAssociation implements Serializable, Cloneable,
 
     /**
      * <p>
-     * ID of the AWS account that owns the resource consuming licenses.
+     * ID of the Amazon Web Services account that owns the resource consuming licenses.
      * </p>
      * 
      * @param resourceOwnerId
-     *        ID of the AWS account that owns the resource consuming licenses.
+     *        ID of the Amazon Web Services account that owns the resource consuming licenses.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

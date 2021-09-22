@@ -144,6 +144,11 @@ public class AbstractAmazonLexModelsV2 implements AmazonLexModelsV2 {
     }
 
     @Override
+    public DeleteUtterancesResult deleteUtterances(DeleteUtterancesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DescribeBotResult describeBot(DescribeBotRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -190,6 +195,11 @@ public class AbstractAmazonLexModelsV2 implements AmazonLexModelsV2 {
 
     @Override
     public DescribeSlotTypeResult describeSlotType(DescribeSlotTypeRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListAggregatedUtterancesResult listAggregatedUtterances(ListAggregatedUtterancesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

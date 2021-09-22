@@ -39,9 +39,25 @@ public class CreateInfrastructureConfigurationRequest extends com.amazonaws.Amaz
     private String description;
     /**
      * <p>
-     * The instance types of the infrastructure configuration. You can specify one or more instance types to use for
-     * this build. The service will pick one of these instance types based on availability.
+     * The instance metadata options that you can set for the HTTP requests that pipeline builds use to launch EC2 build
+     * and test instances. For more information about instance metadata options, see one of the following links:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-options.html">Configure
+     * the instance metadata options</a> in the <i> <i>Amazon EC2 User Guide</i> </i> for Linux instances.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/configuring-instance-metadata-options.html">
+     * Configure the instance metadata options</a> in the <i> <i>Amazon EC2 Windows Guide</i> </i> for Windows
+     * instances.
+     * </p>
+     * </li>
+     * </ul>
      */
     private java.util.List<String> instanceTypes;
     /**
@@ -70,7 +86,7 @@ public class CreateInfrastructureConfigurationRequest extends com.amazonaws.Amaz
     private Logging logging;
     /**
      * <p>
-     * The key pair of the infrastructure configuration. This can be used to log on to and debug the instance used to
+     * The key pair of the infrastructure configuration. You can use this to log on to and debug the instance used to
      * create your image.
      * </p>
      */
@@ -94,6 +110,13 @@ public class CreateInfrastructureConfigurationRequest extends com.amazonaws.Amaz
      * </p>
      */
     private java.util.Map<String, String> resourceTags;
+    /**
+     * <p>
+     * The instance metadata options that you can set for the HTTP requests that pipeline builds use to launch EC2 build
+     * and test instances.
+     * </p>
+     */
+    private InstanceMetadataOptions instanceMetadataOptions;
     /**
      * <p>
      * The tags of the infrastructure configuration.
@@ -189,12 +212,45 @@ public class CreateInfrastructureConfigurationRequest extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * The instance types of the infrastructure configuration. You can specify one or more instance types to use for
-     * this build. The service will pick one of these instance types based on availability.
+     * The instance metadata options that you can set for the HTTP requests that pipeline builds use to launch EC2 build
+     * and test instances. For more information about instance metadata options, see one of the following links:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-options.html">Configure
+     * the instance metadata options</a> in the <i> <i>Amazon EC2 User Guide</i> </i> for Linux instances.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/configuring-instance-metadata-options.html">
+     * Configure the instance metadata options</a> in the <i> <i>Amazon EC2 Windows Guide</i> </i> for Windows
+     * instances.
+     * </p>
+     * </li>
+     * </ul>
      * 
-     * @return The instance types of the infrastructure configuration. You can specify one or more instance types to use
-     *         for this build. The service will pick one of these instance types based on availability.
+     * @return The instance metadata options that you can set for the HTTP requests that pipeline builds use to launch
+     *         EC2 build and test instances. For more information about instance metadata options, see one of the
+     *         following links:</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-options.html">
+     *         Configure the instance metadata options</a> in the <i> <i>Amazon EC2 User Guide</i> </i> for Linux
+     *         instances.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <a href=
+     *         "https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/configuring-instance-metadata-options.html"
+     *         >Configure the instance metadata options</a> in the <i> <i>Amazon EC2 Windows Guide</i> </i> for Windows
+     *         instances.
+     *         </p>
+     *         </li>
      */
 
     public java.util.List<String> getInstanceTypes() {
@@ -203,13 +259,46 @@ public class CreateInfrastructureConfigurationRequest extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * The instance types of the infrastructure configuration. You can specify one or more instance types to use for
-     * this build. The service will pick one of these instance types based on availability.
+     * The instance metadata options that you can set for the HTTP requests that pipeline builds use to launch EC2 build
+     * and test instances. For more information about instance metadata options, see one of the following links:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-options.html">Configure
+     * the instance metadata options</a> in the <i> <i>Amazon EC2 User Guide</i> </i> for Linux instances.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/configuring-instance-metadata-options.html">
+     * Configure the instance metadata options</a> in the <i> <i>Amazon EC2 Windows Guide</i> </i> for Windows
+     * instances.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param instanceTypes
-     *        The instance types of the infrastructure configuration. You can specify one or more instance types to use
-     *        for this build. The service will pick one of these instance types based on availability.
+     *        The instance metadata options that you can set for the HTTP requests that pipeline builds use to launch
+     *        EC2 build and test instances. For more information about instance metadata options, see one of the
+     *        following links:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-options.html">
+     *        Configure the instance metadata options</a> in the <i> <i>Amazon EC2 User Guide</i> </i> for Linux
+     *        instances.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/configuring-instance-metadata-options.html"
+     *        >Configure the instance metadata options</a> in the <i> <i>Amazon EC2 Windows Guide</i> </i> for Windows
+     *        instances.
+     *        </p>
+     *        </li>
      */
 
     public void setInstanceTypes(java.util.Collection<String> instanceTypes) {
@@ -223,9 +312,25 @@ public class CreateInfrastructureConfigurationRequest extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * The instance types of the infrastructure configuration. You can specify one or more instance types to use for
-     * this build. The service will pick one of these instance types based on availability.
+     * The instance metadata options that you can set for the HTTP requests that pipeline builds use to launch EC2 build
+     * and test instances. For more information about instance metadata options, see one of the following links:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-options.html">Configure
+     * the instance metadata options</a> in the <i> <i>Amazon EC2 User Guide</i> </i> for Linux instances.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/configuring-instance-metadata-options.html">
+     * Configure the instance metadata options</a> in the <i> <i>Amazon EC2 Windows Guide</i> </i> for Windows
+     * instances.
+     * </p>
+     * </li>
+     * </ul>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setInstanceTypes(java.util.Collection)} or {@link #withInstanceTypes(java.util.Collection)} if you want
@@ -233,8 +338,25 @@ public class CreateInfrastructureConfigurationRequest extends com.amazonaws.Amaz
      * </p>
      * 
      * @param instanceTypes
-     *        The instance types of the infrastructure configuration. You can specify one or more instance types to use
-     *        for this build. The service will pick one of these instance types based on availability.
+     *        The instance metadata options that you can set for the HTTP requests that pipeline builds use to launch
+     *        EC2 build and test instances. For more information about instance metadata options, see one of the
+     *        following links:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-options.html">
+     *        Configure the instance metadata options</a> in the <i> <i>Amazon EC2 User Guide</i> </i> for Linux
+     *        instances.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/configuring-instance-metadata-options.html"
+     *        >Configure the instance metadata options</a> in the <i> <i>Amazon EC2 Windows Guide</i> </i> for Windows
+     *        instances.
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -250,13 +372,46 @@ public class CreateInfrastructureConfigurationRequest extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * The instance types of the infrastructure configuration. You can specify one or more instance types to use for
-     * this build. The service will pick one of these instance types based on availability.
+     * The instance metadata options that you can set for the HTTP requests that pipeline builds use to launch EC2 build
+     * and test instances. For more information about instance metadata options, see one of the following links:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-options.html">Configure
+     * the instance metadata options</a> in the <i> <i>Amazon EC2 User Guide</i> </i> for Linux instances.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/configuring-instance-metadata-options.html">
+     * Configure the instance metadata options</a> in the <i> <i>Amazon EC2 Windows Guide</i> </i> for Windows
+     * instances.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param instanceTypes
-     *        The instance types of the infrastructure configuration. You can specify one or more instance types to use
-     *        for this build. The service will pick one of these instance types based on availability.
+     *        The instance metadata options that you can set for the HTTP requests that pipeline builds use to launch
+     *        EC2 build and test instances. For more information about instance metadata options, see one of the
+     *        following links:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-options.html">
+     *        Configure the instance metadata options</a> in the <i> <i>Amazon EC2 User Guide</i> </i> for Linux
+     *        instances.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/configuring-instance-metadata-options.html"
+     *        >Configure the instance metadata options</a> in the <i> <i>Amazon EC2 Windows Guide</i> </i> for Windows
+     *        instances.
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -457,12 +612,12 @@ public class CreateInfrastructureConfigurationRequest extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * The key pair of the infrastructure configuration. This can be used to log on to and debug the instance used to
+     * The key pair of the infrastructure configuration. You can use this to log on to and debug the instance used to
      * create your image.
      * </p>
      * 
      * @param keyPair
-     *        The key pair of the infrastructure configuration. This can be used to log on to and debug the instance
+     *        The key pair of the infrastructure configuration. You can use this to log on to and debug the instance
      *        used to create your image.
      */
 
@@ -472,11 +627,11 @@ public class CreateInfrastructureConfigurationRequest extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * The key pair of the infrastructure configuration. This can be used to log on to and debug the instance used to
+     * The key pair of the infrastructure configuration. You can use this to log on to and debug the instance used to
      * create your image.
      * </p>
      * 
-     * @return The key pair of the infrastructure configuration. This can be used to log on to and debug the instance
+     * @return The key pair of the infrastructure configuration. You can use this to log on to and debug the instance
      *         used to create your image.
      */
 
@@ -486,12 +641,12 @@ public class CreateInfrastructureConfigurationRequest extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * The key pair of the infrastructure configuration. This can be used to log on to and debug the instance used to
+     * The key pair of the infrastructure configuration. You can use this to log on to and debug the instance used to
      * create your image.
      * </p>
      * 
      * @param keyPair
-     *        The key pair of the infrastructure configuration. This can be used to log on to and debug the instance
+     *        The key pair of the infrastructure configuration. You can use this to log on to and debug the instance
      *        used to create your image.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -675,6 +830,52 @@ public class CreateInfrastructureConfigurationRequest extends com.amazonaws.Amaz
 
     /**
      * <p>
+     * The instance metadata options that you can set for the HTTP requests that pipeline builds use to launch EC2 build
+     * and test instances.
+     * </p>
+     * 
+     * @param instanceMetadataOptions
+     *        The instance metadata options that you can set for the HTTP requests that pipeline builds use to launch
+     *        EC2 build and test instances.
+     */
+
+    public void setInstanceMetadataOptions(InstanceMetadataOptions instanceMetadataOptions) {
+        this.instanceMetadataOptions = instanceMetadataOptions;
+    }
+
+    /**
+     * <p>
+     * The instance metadata options that you can set for the HTTP requests that pipeline builds use to launch EC2 build
+     * and test instances.
+     * </p>
+     * 
+     * @return The instance metadata options that you can set for the HTTP requests that pipeline builds use to launch
+     *         EC2 build and test instances.
+     */
+
+    public InstanceMetadataOptions getInstanceMetadataOptions() {
+        return this.instanceMetadataOptions;
+    }
+
+    /**
+     * <p>
+     * The instance metadata options that you can set for the HTTP requests that pipeline builds use to launch EC2 build
+     * and test instances.
+     * </p>
+     * 
+     * @param instanceMetadataOptions
+     *        The instance metadata options that you can set for the HTTP requests that pipeline builds use to launch
+     *        EC2 build and test instances.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateInfrastructureConfigurationRequest withInstanceMetadataOptions(InstanceMetadataOptions instanceMetadataOptions) {
+        setInstanceMetadataOptions(instanceMetadataOptions);
+        return this;
+    }
+
+    /**
+     * <p>
      * The tags of the infrastructure configuration.
      * </p>
      * 
@@ -815,6 +1016,8 @@ public class CreateInfrastructureConfigurationRequest extends com.amazonaws.Amaz
             sb.append("SnsTopicArn: ").append(getSnsTopicArn()).append(",");
         if (getResourceTags() != null)
             sb.append("ResourceTags: ").append(getResourceTags()).append(",");
+        if (getInstanceMetadataOptions() != null)
+            sb.append("InstanceMetadataOptions: ").append(getInstanceMetadataOptions()).append(",");
         if (getTags() != null)
             sb.append("Tags: ").append(getTags()).append(",");
         if (getClientToken() != null)
@@ -877,6 +1080,10 @@ public class CreateInfrastructureConfigurationRequest extends com.amazonaws.Amaz
             return false;
         if (other.getResourceTags() != null && other.getResourceTags().equals(this.getResourceTags()) == false)
             return false;
+        if (other.getInstanceMetadataOptions() == null ^ this.getInstanceMetadataOptions() == null)
+            return false;
+        if (other.getInstanceMetadataOptions() != null && other.getInstanceMetadataOptions().equals(this.getInstanceMetadataOptions()) == false)
+            return false;
         if (other.getTags() == null ^ this.getTags() == null)
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
@@ -904,6 +1111,7 @@ public class CreateInfrastructureConfigurationRequest extends com.amazonaws.Amaz
         hashCode = prime * hashCode + ((getTerminateInstanceOnFailure() == null) ? 0 : getTerminateInstanceOnFailure().hashCode());
         hashCode = prime * hashCode + ((getSnsTopicArn() == null) ? 0 : getSnsTopicArn().hashCode());
         hashCode = prime * hashCode + ((getResourceTags() == null) ? 0 : getResourceTags().hashCode());
+        hashCode = prime * hashCode + ((getInstanceMetadataOptions() == null) ? 0 : getInstanceMetadataOptions().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getClientToken() == null) ? 0 : getClientToken().hashCode());
         return hashCode;

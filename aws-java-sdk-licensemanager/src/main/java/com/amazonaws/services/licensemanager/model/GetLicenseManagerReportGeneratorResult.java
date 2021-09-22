@@ -26,18 +26,18 @@ public class GetLicenseManagerReportGeneratorResult extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * A report generator that creates periodic reports on your license configurations.
+     * A report generator that creates periodic reports about your license configurations.
      * </p>
      */
     private ReportGenerator reportGenerator;
 
     /**
      * <p>
-     * A report generator that creates periodic reports on your license configurations.
+     * A report generator that creates periodic reports about your license configurations.
      * </p>
      * 
      * @param reportGenerator
-     *        A report generator that creates periodic reports on your license configurations.
+     *        A report generator that creates periodic reports about your license configurations.
      */
 
     public void setReportGenerator(ReportGenerator reportGenerator) {
@@ -46,10 +46,10 @@ public class GetLicenseManagerReportGeneratorResult extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * A report generator that creates periodic reports on your license configurations.
+     * A report generator that creates periodic reports about your license configurations.
      * </p>
      * 
-     * @return A report generator that creates periodic reports on your license configurations.
+     * @return A report generator that creates periodic reports about your license configurations.
      */
 
     public ReportGenerator getReportGenerator() {
@@ -58,11 +58,11 @@ public class GetLicenseManagerReportGeneratorResult extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * A report generator that creates periodic reports on your license configurations.
+     * A report generator that creates periodic reports about your license configurations.
      * </p>
      * 
      * @param reportGenerator
-     *        A report generator that creates periodic reports on your license configurations.
+     *        A report generator that creates periodic reports about your license configurations.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
