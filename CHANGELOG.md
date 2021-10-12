@@ -1,3 +1,20 @@
+# __1.12.86__ __2021-10-12__
+## __AWS MediaTailor__
+  - ### Features
+    - MediaTailor now supports ad prefetching.
+
+## __Amazon CloudSearch__
+  - ### Features
+    - Adds an additional validation exception for Amazon CloudSearch configuration APIs for better error handling.
+
+## __Amazon EC2 Container Service__
+  - ### Features
+    - Documentation only update to address tickets.
+
+## __Amazon Elastic Compute Cloud__
+  - ### Features
+    - EncryptionSupport for InstanceStorageInfo added to DescribeInstanceTypes API
+
 # __1.12.85__ __2021-10-11__
 ## __AWS Elemental MediaLive__
   - ### Features

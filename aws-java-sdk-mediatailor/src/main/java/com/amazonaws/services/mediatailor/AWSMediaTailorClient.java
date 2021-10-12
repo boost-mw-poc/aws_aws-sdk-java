@@ -254,6 +254,62 @@ public class AWSMediaTailorClient extends AmazonWebServiceClient implements AWSM
 
     /**
      * <p>
+     * Creates a new prefetch schedule for the specified playback configuration.
+     * </p>
+     * 
+     * @param createPrefetchScheduleRequest
+     * @return Result of the CreatePrefetchSchedule operation returned by the service.
+     * @sample AWSMediaTailor.CreatePrefetchSchedule
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mediatailor-2018-04-23/CreatePrefetchSchedule"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public CreatePrefetchScheduleResult createPrefetchSchedule(CreatePrefetchScheduleRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreatePrefetchSchedule(request);
+    }
+
+    @SdkInternalApi
+    final CreatePrefetchScheduleResult executeCreatePrefetchSchedule(CreatePrefetchScheduleRequest createPrefetchScheduleRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createPrefetchScheduleRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreatePrefetchScheduleRequest> request = null;
+        Response<CreatePrefetchScheduleResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreatePrefetchScheduleRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(createPrefetchScheduleRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "MediaTailor");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreatePrefetchSchedule");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CreatePrefetchScheduleResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new CreatePrefetchScheduleResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Creates a program.
      * </p>
      * 
@@ -574,6 +630,63 @@ public class AWSMediaTailorClient extends AmazonWebServiceClient implements AWSM
             HttpResponseHandler<AmazonWebServiceResponse<DeletePlaybackConfigurationResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new DeletePlaybackConfigurationResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Deletes a prefetch schedule for a specific playback configuration. If you call DeletePrefetchSchedule on an
+     * expired prefetch schedule, MediaTailor returns an HTTP 404 status code.
+     * </p>
+     * 
+     * @param deletePrefetchScheduleRequest
+     * @return Result of the DeletePrefetchSchedule operation returned by the service.
+     * @sample AWSMediaTailor.DeletePrefetchSchedule
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mediatailor-2018-04-23/DeletePrefetchSchedule"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DeletePrefetchScheduleResult deletePrefetchSchedule(DeletePrefetchScheduleRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeletePrefetchSchedule(request);
+    }
+
+    @SdkInternalApi
+    final DeletePrefetchScheduleResult executeDeletePrefetchSchedule(DeletePrefetchScheduleRequest deletePrefetchScheduleRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deletePrefetchScheduleRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeletePrefetchScheduleRequest> request = null;
+        Response<DeletePrefetchScheduleResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeletePrefetchScheduleRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(deletePrefetchScheduleRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "MediaTailor");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeletePrefetchSchedule");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeletePrefetchScheduleResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new DeletePrefetchScheduleResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -1139,6 +1252,62 @@ public class AWSMediaTailorClient extends AmazonWebServiceClient implements AWSM
 
     /**
      * <p>
+     * Returns information about the prefetch schedule for a specific playback configuration. If you call
+     * GetPrefetchSchedule on an expired prefetch schedule, MediaTailor returns an HTTP 404 status code.
+     * </p>
+     * 
+     * @param getPrefetchScheduleRequest
+     * @return Result of the GetPrefetchSchedule operation returned by the service.
+     * @sample AWSMediaTailor.GetPrefetchSchedule
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mediatailor-2018-04-23/GetPrefetchSchedule"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetPrefetchScheduleResult getPrefetchSchedule(GetPrefetchScheduleRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetPrefetchSchedule(request);
+    }
+
+    @SdkInternalApi
+    final GetPrefetchScheduleResult executeGetPrefetchSchedule(GetPrefetchScheduleRequest getPrefetchScheduleRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getPrefetchScheduleRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetPrefetchScheduleRequest> request = null;
+        Response<GetPrefetchScheduleResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetPrefetchScheduleRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getPrefetchScheduleRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "MediaTailor");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetPrefetchSchedule");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetPrefetchScheduleResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetPrefetchScheduleResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Returns a list of alerts for the given resource.
      * </p>
      * 
@@ -1297,6 +1466,62 @@ public class AWSMediaTailorClient extends AmazonWebServiceClient implements AWSM
             HttpResponseHandler<AmazonWebServiceResponse<ListPlaybackConfigurationsResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new ListPlaybackConfigurationsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Creates a new prefetch schedule.
+     * </p>
+     * 
+     * @param listPrefetchSchedulesRequest
+     * @return Result of the ListPrefetchSchedules operation returned by the service.
+     * @sample AWSMediaTailor.ListPrefetchSchedules
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mediatailor-2018-04-23/ListPrefetchSchedules"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListPrefetchSchedulesResult listPrefetchSchedules(ListPrefetchSchedulesRequest request) {
+        request = beforeClientExecution(request);
+        return executeListPrefetchSchedules(request);
+    }
+
+    @SdkInternalApi
+    final ListPrefetchSchedulesResult executeListPrefetchSchedules(ListPrefetchSchedulesRequest listPrefetchSchedulesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listPrefetchSchedulesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListPrefetchSchedulesRequest> request = null;
+        Response<ListPrefetchSchedulesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListPrefetchSchedulesRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listPrefetchSchedulesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "MediaTailor");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListPrefetchSchedules");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListPrefetchSchedulesResult>> responseHandler = protocolFactory
+                    .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                            new ListPrefetchSchedulesResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

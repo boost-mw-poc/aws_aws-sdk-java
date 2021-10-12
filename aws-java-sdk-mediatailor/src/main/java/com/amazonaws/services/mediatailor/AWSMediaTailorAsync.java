@@ -113,6 +113,37 @@ public interface AWSMediaTailorAsync extends AWSMediaTailor {
 
     /**
      * <p>
+     * Creates a new prefetch schedule for the specified playback configuration.
+     * </p>
+     * 
+     * @param createPrefetchScheduleRequest
+     * @return A Java Future containing the result of the CreatePrefetchSchedule operation returned by the service.
+     * @sample AWSMediaTailorAsync.CreatePrefetchSchedule
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mediatailor-2018-04-23/CreatePrefetchSchedule"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreatePrefetchScheduleResult> createPrefetchScheduleAsync(CreatePrefetchScheduleRequest createPrefetchScheduleRequest);
+
+    /**
+     * <p>
+     * Creates a new prefetch schedule for the specified playback configuration.
+     * </p>
+     * 
+     * @param createPrefetchScheduleRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreatePrefetchSchedule operation returned by the service.
+     * @sample AWSMediaTailorAsyncHandler.CreatePrefetchSchedule
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mediatailor-2018-04-23/CreatePrefetchSchedule"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreatePrefetchScheduleResult> createPrefetchScheduleAsync(CreatePrefetchScheduleRequest createPrefetchScheduleRequest,
+            com.amazonaws.handlers.AsyncHandler<CreatePrefetchScheduleRequest, CreatePrefetchScheduleResult> asyncHandler);
+
+    /**
+     * <p>
      * Creates a program.
      * </p>
      * 
@@ -298,6 +329,39 @@ public interface AWSMediaTailorAsync extends AWSMediaTailor {
     java.util.concurrent.Future<DeletePlaybackConfigurationResult> deletePlaybackConfigurationAsync(
             DeletePlaybackConfigurationRequest deletePlaybackConfigurationRequest,
             com.amazonaws.handlers.AsyncHandler<DeletePlaybackConfigurationRequest, DeletePlaybackConfigurationResult> asyncHandler);
+
+    /**
+     * <p>
+     * Deletes a prefetch schedule for a specific playback configuration. If you call DeletePrefetchSchedule on an
+     * expired prefetch schedule, MediaTailor returns an HTTP 404 status code.
+     * </p>
+     * 
+     * @param deletePrefetchScheduleRequest
+     * @return A Java Future containing the result of the DeletePrefetchSchedule operation returned by the service.
+     * @sample AWSMediaTailorAsync.DeletePrefetchSchedule
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mediatailor-2018-04-23/DeletePrefetchSchedule"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeletePrefetchScheduleResult> deletePrefetchScheduleAsync(DeletePrefetchScheduleRequest deletePrefetchScheduleRequest);
+
+    /**
+     * <p>
+     * Deletes a prefetch schedule for a specific playback configuration. If you call DeletePrefetchSchedule on an
+     * expired prefetch schedule, MediaTailor returns an HTTP 404 status code.
+     * </p>
+     * 
+     * @param deletePrefetchScheduleRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeletePrefetchSchedule operation returned by the service.
+     * @sample AWSMediaTailorAsyncHandler.DeletePrefetchSchedule
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mediatailor-2018-04-23/DeletePrefetchSchedule"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeletePrefetchScheduleResult> deletePrefetchScheduleAsync(DeletePrefetchScheduleRequest deletePrefetchScheduleRequest,
+            com.amazonaws.handlers.AsyncHandler<DeletePrefetchScheduleRequest, DeletePrefetchScheduleResult> asyncHandler);
 
     /**
      * <p>
@@ -611,6 +675,39 @@ public interface AWSMediaTailorAsync extends AWSMediaTailor {
 
     /**
      * <p>
+     * Returns information about the prefetch schedule for a specific playback configuration. If you call
+     * GetPrefetchSchedule on an expired prefetch schedule, MediaTailor returns an HTTP 404 status code.
+     * </p>
+     * 
+     * @param getPrefetchScheduleRequest
+     * @return A Java Future containing the result of the GetPrefetchSchedule operation returned by the service.
+     * @sample AWSMediaTailorAsync.GetPrefetchSchedule
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mediatailor-2018-04-23/GetPrefetchSchedule"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetPrefetchScheduleResult> getPrefetchScheduleAsync(GetPrefetchScheduleRequest getPrefetchScheduleRequest);
+
+    /**
+     * <p>
+     * Returns information about the prefetch schedule for a specific playback configuration. If you call
+     * GetPrefetchSchedule on an expired prefetch schedule, MediaTailor returns an HTTP 404 status code.
+     * </p>
+     * 
+     * @param getPrefetchScheduleRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetPrefetchSchedule operation returned by the service.
+     * @sample AWSMediaTailorAsyncHandler.GetPrefetchSchedule
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mediatailor-2018-04-23/GetPrefetchSchedule"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetPrefetchScheduleResult> getPrefetchScheduleAsync(GetPrefetchScheduleRequest getPrefetchScheduleRequest,
+            com.amazonaws.handlers.AsyncHandler<GetPrefetchScheduleRequest, GetPrefetchScheduleResult> asyncHandler);
+
+    /**
+     * <p>
      * Returns a list of alerts for the given resource.
      * </p>
      * 
@@ -709,6 +806,37 @@ public interface AWSMediaTailorAsync extends AWSMediaTailor {
     java.util.concurrent.Future<ListPlaybackConfigurationsResult> listPlaybackConfigurationsAsync(
             ListPlaybackConfigurationsRequest listPlaybackConfigurationsRequest,
             com.amazonaws.handlers.AsyncHandler<ListPlaybackConfigurationsRequest, ListPlaybackConfigurationsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Creates a new prefetch schedule.
+     * </p>
+     * 
+     * @param listPrefetchSchedulesRequest
+     * @return A Java Future containing the result of the ListPrefetchSchedules operation returned by the service.
+     * @sample AWSMediaTailorAsync.ListPrefetchSchedules
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mediatailor-2018-04-23/ListPrefetchSchedules"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListPrefetchSchedulesResult> listPrefetchSchedulesAsync(ListPrefetchSchedulesRequest listPrefetchSchedulesRequest);
+
+    /**
+     * <p>
+     * Creates a new prefetch schedule.
+     * </p>
+     * 
+     * @param listPrefetchSchedulesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListPrefetchSchedules operation returned by the service.
+     * @sample AWSMediaTailorAsyncHandler.ListPrefetchSchedules
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mediatailor-2018-04-23/ListPrefetchSchedules"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListPrefetchSchedulesResult> listPrefetchSchedulesAsync(ListPrefetchSchedulesRequest listPrefetchSchedulesRequest,
+            com.amazonaws.handlers.AsyncHandler<ListPrefetchSchedulesRequest, ListPrefetchSchedulesResult> asyncHandler);
 
     /**
      * <p>

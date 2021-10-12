@@ -38,6 +38,11 @@ public class AbstractAWSMediaTailor implements AWSMediaTailor {
     }
 
     @Override
+    public CreatePrefetchScheduleResult createPrefetchSchedule(CreatePrefetchScheduleRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateProgramResult createProgram(CreateProgramRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -64,6 +69,11 @@ public class AbstractAWSMediaTailor implements AWSMediaTailor {
 
     @Override
     public DeletePlaybackConfigurationResult deletePlaybackConfiguration(DeletePlaybackConfigurationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeletePrefetchScheduleResult deletePrefetchSchedule(DeletePrefetchScheduleRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -118,6 +128,11 @@ public class AbstractAWSMediaTailor implements AWSMediaTailor {
     }
 
     @Override
+    public GetPrefetchScheduleResult getPrefetchSchedule(GetPrefetchScheduleRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListAlertsResult listAlerts(ListAlertsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -129,6 +144,11 @@ public class AbstractAWSMediaTailor implements AWSMediaTailor {
 
     @Override
     public ListPlaybackConfigurationsResult listPlaybackConfigurations(ListPlaybackConfigurationsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListPrefetchSchedulesResult listPrefetchSchedules(ListPrefetchSchedulesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

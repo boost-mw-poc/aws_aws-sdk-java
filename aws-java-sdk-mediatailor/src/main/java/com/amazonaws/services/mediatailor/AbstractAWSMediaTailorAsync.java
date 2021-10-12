@@ -56,6 +56,19 @@ public class AbstractAWSMediaTailorAsync extends AbstractAWSMediaTailor implemen
     }
 
     @Override
+    public java.util.concurrent.Future<CreatePrefetchScheduleResult> createPrefetchScheduleAsync(CreatePrefetchScheduleRequest request) {
+
+        return createPrefetchScheduleAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreatePrefetchScheduleResult> createPrefetchScheduleAsync(CreatePrefetchScheduleRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreatePrefetchScheduleRequest, CreatePrefetchScheduleResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateProgramResult> createProgramAsync(CreateProgramRequest request) {
 
         return createProgramAsync(request, null);
@@ -129,6 +142,19 @@ public class AbstractAWSMediaTailorAsync extends AbstractAWSMediaTailor implemen
     @Override
     public java.util.concurrent.Future<DeletePlaybackConfigurationResult> deletePlaybackConfigurationAsync(DeletePlaybackConfigurationRequest request,
             com.amazonaws.handlers.AsyncHandler<DeletePlaybackConfigurationRequest, DeletePlaybackConfigurationResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeletePrefetchScheduleResult> deletePrefetchScheduleAsync(DeletePrefetchScheduleRequest request) {
+
+        return deletePrefetchScheduleAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeletePrefetchScheduleResult> deletePrefetchScheduleAsync(DeletePrefetchScheduleRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeletePrefetchScheduleRequest, DeletePrefetchScheduleResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -264,6 +290,19 @@ public class AbstractAWSMediaTailorAsync extends AbstractAWSMediaTailor implemen
     }
 
     @Override
+    public java.util.concurrent.Future<GetPrefetchScheduleResult> getPrefetchScheduleAsync(GetPrefetchScheduleRequest request) {
+
+        return getPrefetchScheduleAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetPrefetchScheduleResult> getPrefetchScheduleAsync(GetPrefetchScheduleRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetPrefetchScheduleRequest, GetPrefetchScheduleResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ListAlertsResult> listAlertsAsync(ListAlertsRequest request) {
 
         return listAlertsAsync(request, null);
@@ -298,6 +337,19 @@ public class AbstractAWSMediaTailorAsync extends AbstractAWSMediaTailor implemen
     @Override
     public java.util.concurrent.Future<ListPlaybackConfigurationsResult> listPlaybackConfigurationsAsync(ListPlaybackConfigurationsRequest request,
             com.amazonaws.handlers.AsyncHandler<ListPlaybackConfigurationsRequest, ListPlaybackConfigurationsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListPrefetchSchedulesResult> listPrefetchSchedulesAsync(ListPrefetchSchedulesRequest request) {
+
+        return listPrefetchSchedulesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListPrefetchSchedulesResult> listPrefetchSchedulesAsync(ListPrefetchSchedulesRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListPrefetchSchedulesRequest, ListPrefetchSchedulesResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

@@ -152,8 +152,14 @@ public class DescribeInstanceTypesRequest extends AmazonWebServiceRequest implem
      * </li>
      * <li>
      * <p>
+     * <code>instance-storage-info.encryption-supported</code> - Indicates whether data is encrypted at rest (
+     * <code>required</code> | <code>unsupported</code>).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>instance-storage-info.nvme-support</code> - Indicates whether non-volatile memory express (NVMe) is
-     * supported for instance store (<code>required</code> | <code>supported</code>) | <code>unsupported</code>).
+     * supported for instance store (<code>required</code> | <code>supported</code> | <code>unsupported</code>).
      * </p>
      * </li>
      * <li>
@@ -544,8 +550,14 @@ public class DescribeInstanceTypesRequest extends AmazonWebServiceRequest implem
      * </li>
      * <li>
      * <p>
+     * <code>instance-storage-info.encryption-supported</code> - Indicates whether data is encrypted at rest (
+     * <code>required</code> | <code>unsupported</code>).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>instance-storage-info.nvme-support</code> - Indicates whether non-volatile memory express (NVMe) is
-     * supported for instance store (<code>required</code> | <code>supported</code>) | <code>unsupported</code>).
+     * supported for instance store (<code>required</code> | <code>supported</code> | <code>unsupported</code>).
      * </p>
      * </li>
      * <li>
@@ -798,9 +810,14 @@ public class DescribeInstanceTypesRequest extends AmazonWebServiceRequest implem
      *         </li>
      *         <li>
      *         <p>
+     *         <code>instance-storage-info.encryption-supported</code> - Indicates whether data is encrypted at rest (
+     *         <code>required</code> | <code>unsupported</code>).
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
      *         <code>instance-storage-info.nvme-support</code> - Indicates whether non-volatile memory express (NVMe) is
-     *         supported for instance store (<code>required</code> | <code>supported</code>) | <code>unsupported</code>
-     *         ).
+     *         supported for instance store (<code>required</code> | <code>supported</code> | <code>unsupported</code>).
      *         </p>
      *         </li>
      *         <li>
@@ -1065,8 +1082,14 @@ public class DescribeInstanceTypesRequest extends AmazonWebServiceRequest implem
      * </li>
      * <li>
      * <p>
+     * <code>instance-storage-info.encryption-supported</code> - Indicates whether data is encrypted at rest (
+     * <code>required</code> | <code>unsupported</code>).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>instance-storage-info.nvme-support</code> - Indicates whether non-volatile memory express (NVMe) is
-     * supported for instance store (<code>required</code> | <code>supported</code>) | <code>unsupported</code>).
+     * supported for instance store (<code>required</code> | <code>supported</code> | <code>unsupported</code>).
      * </p>
      * </li>
      * <li>
@@ -1320,8 +1343,14 @@ public class DescribeInstanceTypesRequest extends AmazonWebServiceRequest implem
      *        </li>
      *        <li>
      *        <p>
+     *        <code>instance-storage-info.encryption-supported</code> - Indicates whether data is encrypted at rest (
+     *        <code>required</code> | <code>unsupported</code>).
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
      *        <code>instance-storage-info.nvme-support</code> - Indicates whether non-volatile memory express (NVMe) is
-     *        supported for instance store (<code>required</code> | <code>supported</code>) | <code>unsupported</code>).
+     *        supported for instance store (<code>required</code> | <code>supported</code> | <code>unsupported</code>).
      *        </p>
      *        </li>
      *        <li>
@@ -1588,8 +1617,14 @@ public class DescribeInstanceTypesRequest extends AmazonWebServiceRequest implem
      * </li>
      * <li>
      * <p>
+     * <code>instance-storage-info.encryption-supported</code> - Indicates whether data is encrypted at rest (
+     * <code>required</code> | <code>unsupported</code>).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>instance-storage-info.nvme-support</code> - Indicates whether non-volatile memory express (NVMe) is
-     * supported for instance store (<code>required</code> | <code>supported</code>) | <code>unsupported</code>).
+     * supported for instance store (<code>required</code> | <code>supported</code> | <code>unsupported</code>).
      * </p>
      * </li>
      * <li>
@@ -1848,8 +1883,14 @@ public class DescribeInstanceTypesRequest extends AmazonWebServiceRequest implem
      *        </li>
      *        <li>
      *        <p>
+     *        <code>instance-storage-info.encryption-supported</code> - Indicates whether data is encrypted at rest (
+     *        <code>required</code> | <code>unsupported</code>).
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
      *        <code>instance-storage-info.nvme-support</code> - Indicates whether non-volatile memory express (NVMe) is
-     *        supported for instance store (<code>required</code> | <code>supported</code>) | <code>unsupported</code>).
+     *        supported for instance store (<code>required</code> | <code>supported</code> | <code>unsupported</code>).
      *        </p>
      *        </li>
      *        <li>
@@ -2118,8 +2159,14 @@ public class DescribeInstanceTypesRequest extends AmazonWebServiceRequest implem
      * </li>
      * <li>
      * <p>
+     * <code>instance-storage-info.encryption-supported</code> - Indicates whether data is encrypted at rest (
+     * <code>required</code> | <code>unsupported</code>).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>instance-storage-info.nvme-support</code> - Indicates whether non-volatile memory express (NVMe) is
-     * supported for instance store (<code>required</code> | <code>supported</code>) | <code>unsupported</code>).
+     * supported for instance store (<code>required</code> | <code>supported</code> | <code>unsupported</code>).
      * </p>
      * </li>
      * <li>
@@ -2373,8 +2420,14 @@ public class DescribeInstanceTypesRequest extends AmazonWebServiceRequest implem
      *        </li>
      *        <li>
      *        <p>
+     *        <code>instance-storage-info.encryption-supported</code> - Indicates whether data is encrypted at rest (
+     *        <code>required</code> | <code>unsupported</code>).
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
      *        <code>instance-storage-info.nvme-support</code> - Indicates whether non-volatile memory express (NVMe) is
-     *        supported for instance store (<code>required</code> | <code>supported</code>) | <code>unsupported</code>).
+     *        supported for instance store (<code>required</code> | <code>supported</code> | <code>unsupported</code>).
      *        </p>
      *        </li>
      *        <li>

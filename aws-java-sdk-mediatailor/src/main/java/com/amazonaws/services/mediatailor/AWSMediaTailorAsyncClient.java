@@ -151,6 +151,39 @@ public class AWSMediaTailorAsyncClient extends AWSMediaTailorClient implements A
     }
 
     @Override
+    public java.util.concurrent.Future<CreatePrefetchScheduleResult> createPrefetchScheduleAsync(CreatePrefetchScheduleRequest request) {
+
+        return createPrefetchScheduleAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreatePrefetchScheduleResult> createPrefetchScheduleAsync(final CreatePrefetchScheduleRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreatePrefetchScheduleRequest, CreatePrefetchScheduleResult> asyncHandler) {
+        final CreatePrefetchScheduleRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreatePrefetchScheduleResult>() {
+            @Override
+            public CreatePrefetchScheduleResult call() throws Exception {
+                CreatePrefetchScheduleResult result = null;
+
+                try {
+                    result = executeCreatePrefetchSchedule(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateProgramResult> createProgramAsync(CreateProgramRequest request) {
 
         return createProgramAsync(request, null);
@@ -333,6 +366,39 @@ public class AWSMediaTailorAsyncClient extends AWSMediaTailorClient implements A
 
                 try {
                     result = executeDeletePlaybackConfiguration(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeletePrefetchScheduleResult> deletePrefetchScheduleAsync(DeletePrefetchScheduleRequest request) {
+
+        return deletePrefetchScheduleAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeletePrefetchScheduleResult> deletePrefetchScheduleAsync(final DeletePrefetchScheduleRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeletePrefetchScheduleRequest, DeletePrefetchScheduleResult> asyncHandler) {
+        final DeletePrefetchScheduleRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeletePrefetchScheduleResult>() {
+            @Override
+            public DeletePrefetchScheduleResult call() throws Exception {
+                DeletePrefetchScheduleResult result = null;
+
+                try {
+                    result = executeDeletePrefetchSchedule(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -679,6 +745,39 @@ public class AWSMediaTailorAsyncClient extends AWSMediaTailorClient implements A
     }
 
     @Override
+    public java.util.concurrent.Future<GetPrefetchScheduleResult> getPrefetchScheduleAsync(GetPrefetchScheduleRequest request) {
+
+        return getPrefetchScheduleAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetPrefetchScheduleResult> getPrefetchScheduleAsync(final GetPrefetchScheduleRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetPrefetchScheduleRequest, GetPrefetchScheduleResult> asyncHandler) {
+        final GetPrefetchScheduleRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetPrefetchScheduleResult>() {
+            @Override
+            public GetPrefetchScheduleResult call() throws Exception {
+                GetPrefetchScheduleResult result = null;
+
+                try {
+                    result = executeGetPrefetchSchedule(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ListAlertsResult> listAlertsAsync(ListAlertsRequest request) {
 
         return listAlertsAsync(request, null);
@@ -762,6 +861,39 @@ public class AWSMediaTailorAsyncClient extends AWSMediaTailorClient implements A
 
                 try {
                     result = executeListPlaybackConfigurations(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListPrefetchSchedulesResult> listPrefetchSchedulesAsync(ListPrefetchSchedulesRequest request) {
+
+        return listPrefetchSchedulesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListPrefetchSchedulesResult> listPrefetchSchedulesAsync(final ListPrefetchSchedulesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListPrefetchSchedulesRequest, ListPrefetchSchedulesResult> asyncHandler) {
+        final ListPrefetchSchedulesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListPrefetchSchedulesResult>() {
+            @Override
+            public ListPrefetchSchedulesResult call() throws Exception {
+                ListPrefetchSchedulesResult result = null;
+
+                try {
+                    result = executeListPrefetchSchedules(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

@@ -64,6 +64,11 @@ public class InstanceStorageInfoStaxUnmarshaller implements Unmarshaller<Instanc
                     instanceStorageInfo.setNvmeSupport(StringStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("encryptionSupport", targetDepth)) {
+                    instanceStorageInfo.setEncryptionSupport(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return instanceStorageInfo;

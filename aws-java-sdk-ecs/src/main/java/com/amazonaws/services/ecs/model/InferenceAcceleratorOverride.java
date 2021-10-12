@@ -21,8 +21,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * <p>
  * Details on an Elastic Inference accelerator task override. This parameter is used to override the Elastic Inference
  * accelerator specified in the task definition. For more information, see <a
- * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-eia.html">Working with Amazon Elastic Inference
- * on Amazon ECS</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
+ * href="https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-inference.html">Working with Amazon Elastic
+ * Inference on Amazon ECS</a> in the <i>Amazon Elastic Container Service Developer Guide</i>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ecs-2014-11-13/InferenceAcceleratorOverride" target="_top">AWS

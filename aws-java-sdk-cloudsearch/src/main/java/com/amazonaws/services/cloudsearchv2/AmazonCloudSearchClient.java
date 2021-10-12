@@ -313,6 +313,8 @@ public class AmazonCloudSearchClient extends AmazonWebServiceClient implements A
      *         the <a href="http://status.aws.amazon.com/" target="_blank">Service Health Dashboard</a>.
      * @throws ResourceNotFoundException
      *         The request was rejected because it attempted to reference a resource that does not exist.
+     * @throws ValidationException
+     *         The request was rejected because it has invalid parameters.
      * @sample AmazonCloudSearch.BuildSuggesters
      */
     @Override
@@ -451,6 +453,8 @@ public class AmazonCloudSearchClient extends AmazonWebServiceClient implements A
      *         The request was rejected because it specified an invalid type definition.
      * @throws ResourceNotFoundException
      *         The request was rejected because it attempted to reference a resource that does not exist.
+     * @throws ValidationException
+     *         The request was rejected because it has invalid parameters.
      * @sample AmazonCloudSearch.DefineAnalysisScheme
      */
     @Override
@@ -521,6 +525,8 @@ public class AmazonCloudSearchClient extends AmazonWebServiceClient implements A
      *         The request was rejected because it specified an invalid type definition.
      * @throws ResourceNotFoundException
      *         The request was rejected because it attempted to reference a resource that does not exist.
+     * @throws ValidationException
+     *         The request was rejected because it has invalid parameters.
      * @sample AmazonCloudSearch.DefineExpression
      */
     @Override
@@ -594,6 +600,8 @@ public class AmazonCloudSearchClient extends AmazonWebServiceClient implements A
      *         The request was rejected because it specified an invalid type definition.
      * @throws ResourceNotFoundException
      *         The request was rejected because it attempted to reference a resource that does not exist.
+     * @throws ValidationException
+     *         The request was rejected because it has invalid parameters.
      * @sample AmazonCloudSearch.DefineIndexField
      */
     @Override
@@ -665,6 +673,8 @@ public class AmazonCloudSearchClient extends AmazonWebServiceClient implements A
      *         The request was rejected because it specified an invalid type definition.
      * @throws ResourceNotFoundException
      *         The request was rejected because it attempted to reference a resource that does not exist.
+     * @throws ValidationException
+     *         The request was rejected because it has invalid parameters.
      * @sample AmazonCloudSearch.DefineSuggester
      */
     @Override
@@ -732,6 +742,8 @@ public class AmazonCloudSearchClient extends AmazonWebServiceClient implements A
      *         The request was rejected because it specified an invalid type definition.
      * @throws ResourceNotFoundException
      *         The request was rejected because it attempted to reference a resource that does not exist.
+     * @throws ValidationException
+     *         The request was rejected because it has invalid parameters.
      * @sample AmazonCloudSearch.DeleteAnalysisScheme
      */
     @Override
@@ -862,6 +874,8 @@ public class AmazonCloudSearchClient extends AmazonWebServiceClient implements A
      *         The request was rejected because it specified an invalid type definition.
      * @throws ResourceNotFoundException
      *         The request was rejected because it attempted to reference a resource that does not exist.
+     * @throws ValidationException
+     *         The request was rejected because it has invalid parameters.
      * @sample AmazonCloudSearch.DeleteExpression
      */
     @Override
@@ -929,6 +943,8 @@ public class AmazonCloudSearchClient extends AmazonWebServiceClient implements A
      *         The request was rejected because it specified an invalid type definition.
      * @throws ResourceNotFoundException
      *         The request was rejected because it attempted to reference a resource that does not exist.
+     * @throws ValidationException
+     *         The request was rejected because it has invalid parameters.
      * @sample AmazonCloudSearch.DeleteIndexField
      */
     @Override
@@ -996,6 +1012,8 @@ public class AmazonCloudSearchClient extends AmazonWebServiceClient implements A
      *         The request was rejected because it specified an invalid type definition.
      * @throws ResourceNotFoundException
      *         The request was rejected because it attempted to reference a resource that does not exist.
+     * @throws ValidationException
+     *         The request was rejected because it has invalid parameters.
      * @sample AmazonCloudSearch.DeleteSuggester
      */
     @Override
@@ -1691,6 +1709,8 @@ public class AmazonCloudSearchClient extends AmazonWebServiceClient implements A
      *         the <a href="http://status.aws.amazon.com/" target="_blank">Service Health Dashboard</a>.
      * @throws ResourceNotFoundException
      *         The request was rejected because it attempted to reference a resource that does not exist.
+     * @throws ValidationException
+     *         The request was rejected because it has invalid parameters.
      * @sample AmazonCloudSearch.IndexDocuments
      */
     @Override
@@ -1974,6 +1994,8 @@ public class AmazonCloudSearchClient extends AmazonWebServiceClient implements A
      *         The request was rejected because it attempted to reference a resource that does not exist.
      * @throws InvalidTypeException
      *         The request was rejected because it specified an invalid type definition.
+     * @throws ValidationException
+     *         The request was rejected because it has invalid parameters.
      * @sample AmazonCloudSearch.UpdateScalingParameters
      */
     @Override
@@ -2043,6 +2065,8 @@ public class AmazonCloudSearchClient extends AmazonWebServiceClient implements A
      *         The request was rejected because it attempted to reference a resource that does not exist.
      * @throws InvalidTypeException
      *         The request was rejected because it specified an invalid type definition.
+     * @throws ValidationException
+     *         The request was rejected because it has invalid parameters.
      * @sample AmazonCloudSearch.UpdateServiceAccessPolicies
      */
     @Override

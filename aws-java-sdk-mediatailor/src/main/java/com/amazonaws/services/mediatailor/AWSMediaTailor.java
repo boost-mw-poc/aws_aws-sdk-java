@@ -81,6 +81,19 @@ public interface AWSMediaTailor {
 
     /**
      * <p>
+     * Creates a new prefetch schedule for the specified playback configuration.
+     * </p>
+     * 
+     * @param createPrefetchScheduleRequest
+     * @return Result of the CreatePrefetchSchedule operation returned by the service.
+     * @sample AWSMediaTailor.CreatePrefetchSchedule
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mediatailor-2018-04-23/CreatePrefetchSchedule"
+     *      target="_top">AWS API Documentation</a>
+     */
+    CreatePrefetchScheduleResult createPrefetchSchedule(CreatePrefetchScheduleRequest createPrefetchScheduleRequest);
+
+    /**
+     * <p>
      * Creates a program.
      * </p>
      * 
@@ -156,6 +169,20 @@ public interface AWSMediaTailor {
      *      target="_top">AWS API Documentation</a>
      */
     DeletePlaybackConfigurationResult deletePlaybackConfiguration(DeletePlaybackConfigurationRequest deletePlaybackConfigurationRequest);
+
+    /**
+     * <p>
+     * Deletes a prefetch schedule for a specific playback configuration. If you call DeletePrefetchSchedule on an
+     * expired prefetch schedule, MediaTailor returns an HTTP 404 status code.
+     * </p>
+     * 
+     * @param deletePrefetchScheduleRequest
+     * @return Result of the DeletePrefetchSchedule operation returned by the service.
+     * @sample AWSMediaTailor.DeletePrefetchSchedule
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mediatailor-2018-04-23/DeletePrefetchSchedule"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeletePrefetchScheduleResult deletePrefetchSchedule(DeletePrefetchScheduleRequest deletePrefetchScheduleRequest);
 
     /**
      * <p>
@@ -289,6 +316,20 @@ public interface AWSMediaTailor {
 
     /**
      * <p>
+     * Returns information about the prefetch schedule for a specific playback configuration. If you call
+     * GetPrefetchSchedule on an expired prefetch schedule, MediaTailor returns an HTTP 404 status code.
+     * </p>
+     * 
+     * @param getPrefetchScheduleRequest
+     * @return Result of the GetPrefetchSchedule operation returned by the service.
+     * @sample AWSMediaTailor.GetPrefetchSchedule
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mediatailor-2018-04-23/GetPrefetchSchedule"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetPrefetchScheduleResult getPrefetchSchedule(GetPrefetchScheduleRequest getPrefetchScheduleRequest);
+
+    /**
+     * <p>
      * Returns a list of alerts for the given resource.
      * </p>
      * 
@@ -328,6 +369,19 @@ public interface AWSMediaTailor {
      *      target="_top">AWS API Documentation</a>
      */
     ListPlaybackConfigurationsResult listPlaybackConfigurations(ListPlaybackConfigurationsRequest listPlaybackConfigurationsRequest);
+
+    /**
+     * <p>
+     * Creates a new prefetch schedule.
+     * </p>
+     * 
+     * @param listPrefetchSchedulesRequest
+     * @return Result of the ListPrefetchSchedules operation returned by the service.
+     * @sample AWSMediaTailor.ListPrefetchSchedules
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mediatailor-2018-04-23/ListPrefetchSchedules"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListPrefetchSchedulesResult listPrefetchSchedules(ListPrefetchSchedulesRequest listPrefetchSchedulesRequest);
 
     /**
      * <p>

@@ -247,6 +247,12 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * The <code>family</code> and <code>revision</code> (<code>family:revision</code>) or full ARN of the task
      * definition to run. If a <code>revision</code> is not specified, the latest <code>ACTIVE</code> revision is used.
      * </p>
+     * <p>
+     * The full ARN value must match the value that you specified ias the <code>Resource</code> of the IAM principal's
+     * permissions policy. For example, if the <code>Resource</code> is
+     * arn:aws:ecs:us-east-1:111122223333:task-definition/TaskFamilyName:*, the <code>taskDefinition</code> ARN value
+     * must be <code>arn:aws:ecs:us-east-1:111122223333:task-definition/TaskFamilyName</code>.
+     * </p>
      */
     private String taskDefinition;
 
@@ -1995,11 +2001,22 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * The <code>family</code> and <code>revision</code> (<code>family:revision</code>) or full ARN of the task
      * definition to run. If a <code>revision</code> is not specified, the latest <code>ACTIVE</code> revision is used.
      * </p>
+     * <p>
+     * The full ARN value must match the value that you specified ias the <code>Resource</code> of the IAM principal's
+     * permissions policy. For example, if the <code>Resource</code> is
+     * arn:aws:ecs:us-east-1:111122223333:task-definition/TaskFamilyName:*, the <code>taskDefinition</code> ARN value
+     * must be <code>arn:aws:ecs:us-east-1:111122223333:task-definition/TaskFamilyName</code>.
+     * </p>
      * 
      * @param taskDefinition
      *        The <code>family</code> and <code>revision</code> (<code>family:revision</code>) or full ARN of the task
      *        definition to run. If a <code>revision</code> is not specified, the latest <code>ACTIVE</code> revision is
-     *        used.
+     *        used.</p>
+     *        <p>
+     *        The full ARN value must match the value that you specified ias the <code>Resource</code> of the IAM
+     *        principal's permissions policy. For example, if the <code>Resource</code> is
+     *        arn:aws:ecs:us-east-1:111122223333:task-definition/TaskFamilyName:*, the <code>taskDefinition</code> ARN
+     *        value must be <code>arn:aws:ecs:us-east-1:111122223333:task-definition/TaskFamilyName</code>.
      */
 
     public void setTaskDefinition(String taskDefinition) {
@@ -2011,10 +2028,21 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * The <code>family</code> and <code>revision</code> (<code>family:revision</code>) or full ARN of the task
      * definition to run. If a <code>revision</code> is not specified, the latest <code>ACTIVE</code> revision is used.
      * </p>
+     * <p>
+     * The full ARN value must match the value that you specified ias the <code>Resource</code> of the IAM principal's
+     * permissions policy. For example, if the <code>Resource</code> is
+     * arn:aws:ecs:us-east-1:111122223333:task-definition/TaskFamilyName:*, the <code>taskDefinition</code> ARN value
+     * must be <code>arn:aws:ecs:us-east-1:111122223333:task-definition/TaskFamilyName</code>.
+     * </p>
      * 
      * @return The <code>family</code> and <code>revision</code> (<code>family:revision</code>) or full ARN of the task
      *         definition to run. If a <code>revision</code> is not specified, the latest <code>ACTIVE</code> revision
-     *         is used.
+     *         is used.</p>
+     *         <p>
+     *         The full ARN value must match the value that you specified ias the <code>Resource</code> of the IAM
+     *         principal's permissions policy. For example, if the <code>Resource</code> is
+     *         arn:aws:ecs:us-east-1:111122223333:task-definition/TaskFamilyName:*, the <code>taskDefinition</code> ARN
+     *         value must be <code>arn:aws:ecs:us-east-1:111122223333:task-definition/TaskFamilyName</code>.
      */
 
     public String getTaskDefinition() {
@@ -2026,11 +2054,22 @@ public class RunTaskRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * The <code>family</code> and <code>revision</code> (<code>family:revision</code>) or full ARN of the task
      * definition to run. If a <code>revision</code> is not specified, the latest <code>ACTIVE</code> revision is used.
      * </p>
+     * <p>
+     * The full ARN value must match the value that you specified ias the <code>Resource</code> of the IAM principal's
+     * permissions policy. For example, if the <code>Resource</code> is
+     * arn:aws:ecs:us-east-1:111122223333:task-definition/TaskFamilyName:*, the <code>taskDefinition</code> ARN value
+     * must be <code>arn:aws:ecs:us-east-1:111122223333:task-definition/TaskFamilyName</code>.
+     * </p>
      * 
      * @param taskDefinition
      *        The <code>family</code> and <code>revision</code> (<code>family:revision</code>) or full ARN of the task
      *        definition to run. If a <code>revision</code> is not specified, the latest <code>ACTIVE</code> revision is
-     *        used.
+     *        used.</p>
+     *        <p>
+     *        The full ARN value must match the value that you specified ias the <code>Resource</code> of the IAM
+     *        principal's permissions policy. For example, if the <code>Resource</code> is
+     *        arn:aws:ecs:us-east-1:111122223333:task-definition/TaskFamilyName:*, the <code>taskDefinition</code> ARN
+     *        value must be <code>arn:aws:ecs:us-east-1:111122223333:task-definition/TaskFamilyName</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

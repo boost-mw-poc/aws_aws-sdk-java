@@ -118,6 +118,10 @@
         "exceptionName" : "ResourceNotFoundException",
         "documentation" : "<p>The request was rejected because it attempted to reference a resource that does not exist.</p>",
         "httpStatusCode" : 409
+      }, {
+        "exceptionName" : "ValidationException",
+        "documentation" : "<p>The request was rejected because it has invalid parameters.</p>",
+        "httpStatusCode" : null
       } ],
       "hasBlobMemberAsPayload" : false,
       "hostPrefixProcessor" : null,
@@ -224,6 +228,10 @@
         "exceptionName" : "ResourceNotFoundException",
         "documentation" : "<p>The request was rejected because it attempted to reference a resource that does not exist.</p>",
         "httpStatusCode" : 409
+      }, {
+        "exceptionName" : "ValidationException",
+        "documentation" : "<p>The request was rejected because it has invalid parameters.</p>",
+        "httpStatusCode" : null
       } ],
       "hasBlobMemberAsPayload" : false,
       "hostPrefixProcessor" : null,
@@ -277,6 +285,10 @@
         "exceptionName" : "ResourceNotFoundException",
         "documentation" : "<p>The request was rejected because it attempted to reference a resource that does not exist.</p>",
         "httpStatusCode" : 409
+      }, {
+        "exceptionName" : "ValidationException",
+        "documentation" : "<p>The request was rejected because it has invalid parameters.</p>",
+        "httpStatusCode" : null
       } ],
       "hasBlobMemberAsPayload" : false,
       "hostPrefixProcessor" : null,
@@ -330,6 +342,10 @@
         "exceptionName" : "ResourceNotFoundException",
         "documentation" : "<p>The request was rejected because it attempted to reference a resource that does not exist.</p>",
         "httpStatusCode" : 409
+      }, {
+        "exceptionName" : "ValidationException",
+        "documentation" : "<p>The request was rejected because it has invalid parameters.</p>",
+        "httpStatusCode" : null
       } ],
       "hasBlobMemberAsPayload" : false,
       "hostPrefixProcessor" : null,
@@ -383,6 +399,10 @@
         "exceptionName" : "ResourceNotFoundException",
         "documentation" : "<p>The request was rejected because it attempted to reference a resource that does not exist.</p>",
         "httpStatusCode" : 409
+      }, {
+        "exceptionName" : "ValidationException",
+        "documentation" : "<p>The request was rejected because it has invalid parameters.</p>",
+        "httpStatusCode" : null
       } ],
       "hasBlobMemberAsPayload" : false,
       "hostPrefixProcessor" : null,
@@ -432,6 +452,10 @@
         "exceptionName" : "ResourceNotFoundException",
         "documentation" : "<p>The request was rejected because it attempted to reference a resource that does not exist.</p>",
         "httpStatusCode" : 409
+      }, {
+        "exceptionName" : "ValidationException",
+        "documentation" : "<p>The request was rejected because it has invalid parameters.</p>",
+        "httpStatusCode" : null
       } ],
       "hasBlobMemberAsPayload" : false,
       "hostPrefixProcessor" : null,
@@ -522,6 +546,10 @@
         "exceptionName" : "ResourceNotFoundException",
         "documentation" : "<p>The request was rejected because it attempted to reference a resource that does not exist.</p>",
         "httpStatusCode" : 409
+      }, {
+        "exceptionName" : "ValidationException",
+        "documentation" : "<p>The request was rejected because it has invalid parameters.</p>",
+        "httpStatusCode" : null
       } ],
       "hasBlobMemberAsPayload" : false,
       "hostPrefixProcessor" : null,
@@ -571,6 +599,10 @@
         "exceptionName" : "ResourceNotFoundException",
         "documentation" : "<p>The request was rejected because it attempted to reference a resource that does not exist.</p>",
         "httpStatusCode" : 409
+      }, {
+        "exceptionName" : "ValidationException",
+        "documentation" : "<p>The request was rejected because it has invalid parameters.</p>",
+        "httpStatusCode" : null
       } ],
       "hasBlobMemberAsPayload" : false,
       "hostPrefixProcessor" : null,
@@ -620,6 +652,10 @@
         "exceptionName" : "ResourceNotFoundException",
         "documentation" : "<p>The request was rejected because it attempted to reference a resource that does not exist.</p>",
         "httpStatusCode" : 409
+      }, {
+        "exceptionName" : "ValidationException",
+        "documentation" : "<p>The request was rejected because it has invalid parameters.</p>",
+        "httpStatusCode" : null
       } ],
       "hasBlobMemberAsPayload" : false,
       "hostPrefixProcessor" : null,
@@ -1086,6 +1122,10 @@
         "exceptionName" : "ResourceNotFoundException",
         "documentation" : "<p>The request was rejected because it attempted to reference a resource that does not exist.</p>",
         "httpStatusCode" : 409
+      }, {
+        "exceptionName" : "ValidationException",
+        "documentation" : "<p>The request was rejected because it has invalid parameters.</p>",
+        "httpStatusCode" : null
       } ],
       "hasBlobMemberAsPayload" : false,
       "hostPrefixProcessor" : null,
@@ -1298,6 +1338,10 @@
         "exceptionName" : "InvalidTypeException",
         "documentation" : "<p>The request was rejected because it specified an invalid type definition.</p>",
         "httpStatusCode" : 409
+      }, {
+        "exceptionName" : "ValidationException",
+        "documentation" : "<p>The request was rejected because it has invalid parameters.</p>",
+        "httpStatusCode" : null
       } ],
       "hasBlobMemberAsPayload" : false,
       "hostPrefixProcessor" : null,
@@ -1351,6 +1395,10 @@
         "exceptionName" : "InvalidTypeException",
         "documentation" : "<p>The request was rejected because it specified an invalid type definition.</p>",
         "httpStatusCode" : 409
+      }, {
+        "exceptionName" : "ValidationException",
+        "documentation" : "<p>The request was rejected because it has invalid parameters.</p>",
+        "httpStatusCode" : null
       } ],
       "hasBlobMemberAsPayload" : false,
       "hostPrefixProcessor" : null,

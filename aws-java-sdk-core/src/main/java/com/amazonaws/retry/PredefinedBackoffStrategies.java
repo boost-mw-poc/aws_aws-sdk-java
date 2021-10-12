@@ -56,7 +56,7 @@ public class PredefinedBackoffStrategies {
      **/
     private static final int MAX_RETRIES = 30;
 
-    static final int STANDARD_DEFAULT_BASE_DELAY_IN_MILLISECONDS = 1000;
+    static final int STANDARD_DEFAULT_BASE_DELAY_IN_MILLISECONDS = 100;
 
     /**
      * Default backoff strategy used for standard and adaptive retry mode

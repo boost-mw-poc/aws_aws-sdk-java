@@ -120,6 +120,8 @@ public interface AmazonCloudSearch {
      *         the <a href="http://status.aws.amazon.com/" target="_blank">Service Health Dashboard</a>.
      * @throws ResourceNotFoundException
      *         The request was rejected because it attempted to reference a resource that does not exist.
+     * @throws ValidationException
+     *         The request was rejected because it has invalid parameters.
      * @sample AmazonCloudSearch.BuildSuggesters
      */
     BuildSuggestersResult buildSuggesters(BuildSuggestersRequest buildSuggestersRequest);
@@ -173,6 +175,8 @@ public interface AmazonCloudSearch {
      *         The request was rejected because it specified an invalid type definition.
      * @throws ResourceNotFoundException
      *         The request was rejected because it attempted to reference a resource that does not exist.
+     * @throws ValidationException
+     *         The request was rejected because it has invalid parameters.
      * @sample AmazonCloudSearch.DefineAnalysisScheme
      */
     DefineAnalysisSchemeResult defineAnalysisScheme(DefineAnalysisSchemeRequest defineAnalysisSchemeRequest);
@@ -200,6 +204,8 @@ public interface AmazonCloudSearch {
      *         The request was rejected because it specified an invalid type definition.
      * @throws ResourceNotFoundException
      *         The request was rejected because it attempted to reference a resource that does not exist.
+     * @throws ValidationException
+     *         The request was rejected because it has invalid parameters.
      * @sample AmazonCloudSearch.DefineExpression
      */
     DefineExpressionResult defineExpression(DefineExpressionRequest defineExpressionRequest);
@@ -230,6 +236,8 @@ public interface AmazonCloudSearch {
      *         The request was rejected because it specified an invalid type definition.
      * @throws ResourceNotFoundException
      *         The request was rejected because it attempted to reference a resource that does not exist.
+     * @throws ValidationException
+     *         The request was rejected because it has invalid parameters.
      * @sample AmazonCloudSearch.DefineIndexField
      */
     DefineIndexFieldResult defineIndexField(DefineIndexFieldRequest defineIndexFieldRequest);
@@ -258,6 +266,8 @@ public interface AmazonCloudSearch {
      *         The request was rejected because it specified an invalid type definition.
      * @throws ResourceNotFoundException
      *         The request was rejected because it attempted to reference a resource that does not exist.
+     * @throws ValidationException
+     *         The request was rejected because it has invalid parameters.
      * @sample AmazonCloudSearch.DefineSuggester
      */
     DefineSuggesterResult defineSuggester(DefineSuggesterRequest defineSuggesterRequest);
@@ -282,6 +292,8 @@ public interface AmazonCloudSearch {
      *         The request was rejected because it specified an invalid type definition.
      * @throws ResourceNotFoundException
      *         The request was rejected because it attempted to reference a resource that does not exist.
+     * @throws ValidationException
+     *         The request was rejected because it has invalid parameters.
      * @sample AmazonCloudSearch.DeleteAnalysisScheme
      */
     DeleteAnalysisSchemeResult deleteAnalysisScheme(DeleteAnalysisSchemeRequest deleteAnalysisSchemeRequest);
@@ -327,6 +339,8 @@ public interface AmazonCloudSearch {
      *         The request was rejected because it specified an invalid type definition.
      * @throws ResourceNotFoundException
      *         The request was rejected because it attempted to reference a resource that does not exist.
+     * @throws ValidationException
+     *         The request was rejected because it has invalid parameters.
      * @sample AmazonCloudSearch.DeleteExpression
      */
     DeleteExpressionResult deleteExpression(DeleteExpressionRequest deleteExpressionRequest);
@@ -351,6 +365,8 @@ public interface AmazonCloudSearch {
      *         The request was rejected because it specified an invalid type definition.
      * @throws ResourceNotFoundException
      *         The request was rejected because it attempted to reference a resource that does not exist.
+     * @throws ValidationException
+     *         The request was rejected because it has invalid parameters.
      * @sample AmazonCloudSearch.DeleteIndexField
      */
     DeleteIndexFieldResult deleteIndexField(DeleteIndexFieldRequest deleteIndexFieldRequest);
@@ -375,6 +391,8 @@ public interface AmazonCloudSearch {
      *         The request was rejected because it specified an invalid type definition.
      * @throws ResourceNotFoundException
      *         The request was rejected because it attempted to reference a resource that does not exist.
+     * @throws ValidationException
+     *         The request was rejected because it has invalid parameters.
      * @sample AmazonCloudSearch.DeleteSuggester
      */
     DeleteSuggesterResult deleteSuggester(DeleteSuggesterRequest deleteSuggesterRequest);
@@ -642,6 +660,8 @@ public interface AmazonCloudSearch {
      *         the <a href="http://status.aws.amazon.com/" target="_blank">Service Health Dashboard</a>.
      * @throws ResourceNotFoundException
      *         The request was rejected because it attempted to reference a resource that does not exist.
+     * @throws ValidationException
+     *         The request was rejected because it has invalid parameters.
      * @sample AmazonCloudSearch.IndexDocuments
      */
     IndexDocumentsResult indexDocuments(IndexDocumentsRequest indexDocumentsRequest);
@@ -755,6 +775,8 @@ public interface AmazonCloudSearch {
      *         The request was rejected because it attempted to reference a resource that does not exist.
      * @throws InvalidTypeException
      *         The request was rejected because it specified an invalid type definition.
+     * @throws ValidationException
+     *         The request was rejected because it has invalid parameters.
      * @sample AmazonCloudSearch.UpdateScalingParameters
      */
     UpdateScalingParametersResult updateScalingParameters(UpdateScalingParametersRequest updateScalingParametersRequest);
@@ -781,6 +803,8 @@ public interface AmazonCloudSearch {
      *         The request was rejected because it attempted to reference a resource that does not exist.
      * @throws InvalidTypeException
      *         The request was rejected because it specified an invalid type definition.
+     * @throws ValidationException
+     *         The request was rejected because it has invalid parameters.
      * @sample AmazonCloudSearch.UpdateServiceAccessPolicies
      */
     UpdateServiceAccessPoliciesResult updateServiceAccessPolicies(UpdateServiceAccessPoliciesRequest updateServiceAccessPoliciesRequest);

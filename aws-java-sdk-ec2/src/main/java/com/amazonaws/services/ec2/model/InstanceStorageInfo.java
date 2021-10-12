@@ -17,7 +17,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * Describes the disks that are available for the instance type.
+ * Describes the instance store features that are supported by the instance type.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/InstanceStorageInfo" target="_top">AWS API
@@ -40,10 +40,16 @@ public class InstanceStorageInfo implements Serializable, Cloneable {
     private com.amazonaws.internal.SdkInternalList<DiskInfo> disks;
     /**
      * <p>
-     * Indicates whether non-volatile memory express (NVMe) is supported for instance store.
+     * Indicates whether non-volatile memory express (NVMe) is supported.
      * </p>
      */
     private String nvmeSupport;
+    /**
+     * <p>
+     * Indicates whether data is encrypted at rest.
+     * </p>
+     */
+    private String encryptionSupport;
 
     /**
      * <p>
@@ -160,11 +166,11 @@ public class InstanceStorageInfo implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Indicates whether non-volatile memory express (NVMe) is supported for instance store.
+     * Indicates whether non-volatile memory express (NVMe) is supported.
      * </p>
      * 
      * @param nvmeSupport
-     *        Indicates whether non-volatile memory express (NVMe) is supported for instance store.
+     *        Indicates whether non-volatile memory express (NVMe) is supported.
      * @see EphemeralNvmeSupport
      */
 
@@ -174,10 +180,10 @@ public class InstanceStorageInfo implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Indicates whether non-volatile memory express (NVMe) is supported for instance store.
+     * Indicates whether non-volatile memory express (NVMe) is supported.
      * </p>
      * 
-     * @return Indicates whether non-volatile memory express (NVMe) is supported for instance store.
+     * @return Indicates whether non-volatile memory express (NVMe) is supported.
      * @see EphemeralNvmeSupport
      */
 
@@ -187,11 +193,11 @@ public class InstanceStorageInfo implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Indicates whether non-volatile memory express (NVMe) is supported for instance store.
+     * Indicates whether non-volatile memory express (NVMe) is supported.
      * </p>
      * 
      * @param nvmeSupport
-     *        Indicates whether non-volatile memory express (NVMe) is supported for instance store.
+     *        Indicates whether non-volatile memory express (NVMe) is supported.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see EphemeralNvmeSupport
      */
@@ -203,17 +209,76 @@ public class InstanceStorageInfo implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Indicates whether non-volatile memory express (NVMe) is supported for instance store.
+     * Indicates whether non-volatile memory express (NVMe) is supported.
      * </p>
      * 
      * @param nvmeSupport
-     *        Indicates whether non-volatile memory express (NVMe) is supported for instance store.
+     *        Indicates whether non-volatile memory express (NVMe) is supported.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see EphemeralNvmeSupport
      */
 
     public InstanceStorageInfo withNvmeSupport(EphemeralNvmeSupport nvmeSupport) {
         this.nvmeSupport = nvmeSupport.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * Indicates whether data is encrypted at rest.
+     * </p>
+     * 
+     * @param encryptionSupport
+     *        Indicates whether data is encrypted at rest.
+     * @see InstanceStorageEncryptionSupport
+     */
+
+    public void setEncryptionSupport(String encryptionSupport) {
+        this.encryptionSupport = encryptionSupport;
+    }
+
+    /**
+     * <p>
+     * Indicates whether data is encrypted at rest.
+     * </p>
+     * 
+     * @return Indicates whether data is encrypted at rest.
+     * @see InstanceStorageEncryptionSupport
+     */
+
+    public String getEncryptionSupport() {
+        return this.encryptionSupport;
+    }
+
+    /**
+     * <p>
+     * Indicates whether data is encrypted at rest.
+     * </p>
+     * 
+     * @param encryptionSupport
+     *        Indicates whether data is encrypted at rest.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see InstanceStorageEncryptionSupport
+     */
+
+    public InstanceStorageInfo withEncryptionSupport(String encryptionSupport) {
+        setEncryptionSupport(encryptionSupport);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Indicates whether data is encrypted at rest.
+     * </p>
+     * 
+     * @param encryptionSupport
+     *        Indicates whether data is encrypted at rest.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see InstanceStorageEncryptionSupport
+     */
+
+    public InstanceStorageInfo withEncryptionSupport(InstanceStorageEncryptionSupport encryptionSupport) {
+        this.encryptionSupport = encryptionSupport.toString();
         return this;
     }
 
@@ -234,7 +299,9 @@ public class InstanceStorageInfo implements Serializable, Cloneable {
         if (getDisks() != null)
             sb.append("Disks: ").append(getDisks()).append(",");
         if (getNvmeSupport() != null)
-            sb.append("NvmeSupport: ").append(getNvmeSupport());
+            sb.append("NvmeSupport: ").append(getNvmeSupport()).append(",");
+        if (getEncryptionSupport() != null)
+            sb.append("EncryptionSupport: ").append(getEncryptionSupport());
         sb.append("}");
         return sb.toString();
     }
@@ -261,6 +328,10 @@ public class InstanceStorageInfo implements Serializable, Cloneable {
             return false;
         if (other.getNvmeSupport() != null && other.getNvmeSupport().equals(this.getNvmeSupport()) == false)
             return false;
+        if (other.getEncryptionSupport() == null ^ this.getEncryptionSupport() == null)
+            return false;
+        if (other.getEncryptionSupport() != null && other.getEncryptionSupport().equals(this.getEncryptionSupport()) == false)
+            return false;
         return true;
     }
 
@@ -272,6 +343,7 @@ public class InstanceStorageInfo implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getTotalSizeInGB() == null) ? 0 : getTotalSizeInGB().hashCode());
         hashCode = prime * hashCode + ((getDisks() == null) ? 0 : getDisks().hashCode());
         hashCode = prime * hashCode + ((getNvmeSupport() == null) ? 0 : getNvmeSupport().hashCode());
+        hashCode = prime * hashCode + ((getEncryptionSupport() == null) ? 0 : getEncryptionSupport().hashCode());
         return hashCode;
     }
 
