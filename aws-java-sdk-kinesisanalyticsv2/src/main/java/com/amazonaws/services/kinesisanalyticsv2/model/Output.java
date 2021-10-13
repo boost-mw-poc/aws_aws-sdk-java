@@ -51,7 +51,7 @@ public class Output implements Serializable, Cloneable, StructuredPojo {
     private KinesisFirehoseOutput kinesisFirehoseOutput;
     /**
      * <p>
-     * Identifies an AWS Lambda function as the destination.
+     * Identifies an Amazon Lambda function as the destination.
      * </p>
      */
     private LambdaOutput lambdaOutput;
@@ -184,11 +184,11 @@ public class Output implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Identifies an AWS Lambda function as the destination.
+     * Identifies an Amazon Lambda function as the destination.
      * </p>
      * 
      * @param lambdaOutput
-     *        Identifies an AWS Lambda function as the destination.
+     *        Identifies an Amazon Lambda function as the destination.
      */
 
     public void setLambdaOutput(LambdaOutput lambdaOutput) {
@@ -197,10 +197,10 @@ public class Output implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Identifies an AWS Lambda function as the destination.
+     * Identifies an Amazon Lambda function as the destination.
      * </p>
      * 
-     * @return Identifies an AWS Lambda function as the destination.
+     * @return Identifies an Amazon Lambda function as the destination.
      */
 
     public LambdaOutput getLambdaOutput() {
@@ -209,11 +209,11 @@ public class Output implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Identifies an AWS Lambda function as the destination.
+     * Identifies an Amazon Lambda function as the destination.
      * </p>
      * 
      * @param lambdaOutput
-     *        Identifies an AWS Lambda function as the destination.
+     *        Identifies an Amazon Lambda function as the destination.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -408,6 +408,12 @@ public interface AmazonWorkMailAsync extends AmazonWorkMail {
      * <p>
      * Deletes an access control rule for the specified WorkMail organization.
      * </p>
+     * <note>
+     * <p>
+     * Deleting already deleted and non-existing rules does not produce an error. In those cases, the service sends back
+     * an HTTP 200 response with an empty HTTP body.
+     * </p>
+     * </note>
      * 
      * @param deleteAccessControlRuleRequest
      * @return A Java Future containing the result of the DeleteAccessControlRule operation returned by the service.
@@ -421,6 +427,12 @@ public interface AmazonWorkMailAsync extends AmazonWorkMail {
      * <p>
      * Deletes an access control rule for the specified WorkMail organization.
      * </p>
+     * <note>
+     * <p>
+     * Deleting already deleted and non-existing rules does not produce an error. In those cases, the service sends back
+     * an HTTP 200 response with an empty HTTP body.
+     * </p>
+     * </note>
      * 
      * @param deleteAccessControlRuleRequest
      * @param asyncHandler
@@ -532,6 +544,12 @@ public interface AmazonWorkMailAsync extends AmazonWorkMail {
      * <p>
      * Deletes the mobile device access override for the given WorkMail organization, user, and device.
      * </p>
+     * <note>
+     * <p>
+     * Deleting already deleted and non-existing overrides does not produce an error. In those cases, the service sends
+     * back an HTTP 200 response with an empty HTTP body.
+     * </p>
+     * </note>
      * 
      * @param deleteMobileDeviceAccessOverrideRequest
      * @return A Java Future containing the result of the DeleteMobileDeviceAccessOverride operation returned by the
@@ -547,6 +565,12 @@ public interface AmazonWorkMailAsync extends AmazonWorkMail {
      * <p>
      * Deletes the mobile device access override for the given WorkMail organization, user, and device.
      * </p>
+     * <note>
+     * <p>
+     * Deleting already deleted and non-existing overrides does not produce an error. In those cases, the service sends
+     * back an HTTP 200 response with an empty HTTP body.
+     * </p>
+     * </note>
      * 
      * @param deleteMobileDeviceAccessOverrideRequest
      * @param asyncHandler
@@ -567,6 +591,12 @@ public interface AmazonWorkMailAsync extends AmazonWorkMail {
      * <p>
      * Deletes a mobile device access rule for the specified Amazon WorkMail organization.
      * </p>
+     * <note>
+     * <p>
+     * Deleting already deleted and non-existing rules does not produce an error. In those cases, the service sends back
+     * an HTTP 200 response with an empty HTTP body.
+     * </p>
+     * </note>
      * 
      * @param deleteMobileDeviceAccessRuleRequest
      * @return A Java Future containing the result of the DeleteMobileDeviceAccessRule operation returned by the
@@ -582,6 +612,12 @@ public interface AmazonWorkMailAsync extends AmazonWorkMail {
      * <p>
      * Deletes a mobile device access rule for the specified Amazon WorkMail organization.
      * </p>
+     * <note>
+     * <p>
+     * Deleting already deleted and non-existing rules does not produce an error. In those cases, the service sends back
+     * an HTTP 200 response with an empty HTTP body.
+     * </p>
+     * </note>
      * 
      * @param deleteMobileDeviceAccessRuleRequest
      * @param asyncHandler
@@ -772,6 +808,41 @@ public interface AmazonWorkMailAsync extends AmazonWorkMail {
      */
     java.util.concurrent.Future<DeregisterFromWorkMailResult> deregisterFromWorkMailAsync(DeregisterFromWorkMailRequest deregisterFromWorkMailRequest,
             com.amazonaws.handlers.AsyncHandler<DeregisterFromWorkMailRequest, DeregisterFromWorkMailResult> asyncHandler);
+
+    /**
+     * <p>
+     * Removes a domain from Amazon WorkMail, stops email routing to WorkMail, and removes the authorization allowing
+     * WorkMail use. SES keeps the domain because other applications may use it. You must first remove any email address
+     * used by WorkMail entities before you remove the domain.
+     * </p>
+     * 
+     * @param deregisterMailDomainRequest
+     * @return A Java Future containing the result of the DeregisterMailDomain operation returned by the service.
+     * @sample AmazonWorkMailAsync.DeregisterMailDomain
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/DeregisterMailDomain" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DeregisterMailDomainResult> deregisterMailDomainAsync(DeregisterMailDomainRequest deregisterMailDomainRequest);
+
+    /**
+     * <p>
+     * Removes a domain from Amazon WorkMail, stops email routing to WorkMail, and removes the authorization allowing
+     * WorkMail use. SES keeps the domain because other applications may use it. You must first remove any email address
+     * used by WorkMail entities before you remove the domain.
+     * </p>
+     * 
+     * @param deregisterMailDomainRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeregisterMailDomain operation returned by the service.
+     * @sample AmazonWorkMailAsyncHandler.DeregisterMailDomain
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/DeregisterMailDomain" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DeregisterMailDomainResult> deregisterMailDomainAsync(DeregisterMailDomainRequest deregisterMailDomainRequest,
+            com.amazonaws.handlers.AsyncHandler<DeregisterMailDomainRequest, DeregisterMailDomainResult> asyncHandler);
 
     /**
      * <p>
@@ -1099,6 +1170,39 @@ public interface AmazonWorkMailAsync extends AmazonWorkMail {
 
     /**
      * <p>
+     * Gets details for a mail domain, including domain records required to configure your domain with recommended
+     * security.
+     * </p>
+     * 
+     * @param getMailDomainRequest
+     * @return A Java Future containing the result of the GetMailDomain operation returned by the service.
+     * @sample AmazonWorkMailAsync.GetMailDomain
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/GetMailDomain" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetMailDomainResult> getMailDomainAsync(GetMailDomainRequest getMailDomainRequest);
+
+    /**
+     * <p>
+     * Gets details for a mail domain, including domain records required to configure your domain with recommended
+     * security.
+     * </p>
+     * 
+     * @param getMailDomainRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetMailDomain operation returned by the service.
+     * @sample AmazonWorkMailAsyncHandler.GetMailDomain
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/GetMailDomain" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetMailDomainResult> getMailDomainAsync(GetMailDomainRequest getMailDomainRequest,
+            com.amazonaws.handlers.AsyncHandler<GetMailDomainRequest, GetMailDomainResult> asyncHandler);
+
+    /**
+     * <p>
      * Requests a user's mailbox details for a specified organization and user.
      * </p>
      * 
@@ -1323,6 +1427,37 @@ public interface AmazonWorkMailAsync extends AmazonWorkMail {
      */
     java.util.concurrent.Future<ListGroupsResult> listGroupsAsync(ListGroupsRequest listGroupsRequest,
             com.amazonaws.handlers.AsyncHandler<ListGroupsRequest, ListGroupsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Lists the mail domains in a given Amazon WorkMail organization.
+     * </p>
+     * 
+     * @param listMailDomainsRequest
+     * @return A Java Future containing the result of the ListMailDomains operation returned by the service.
+     * @sample AmazonWorkMailAsync.ListMailDomains
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/ListMailDomains" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListMailDomainsResult> listMailDomainsAsync(ListMailDomainsRequest listMailDomainsRequest);
+
+    /**
+     * <p>
+     * Lists the mail domains in a given Amazon WorkMail organization.
+     * </p>
+     * 
+     * @param listMailDomainsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListMailDomains operation returned by the service.
+     * @sample AmazonWorkMailAsyncHandler.ListMailDomains
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/ListMailDomains" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListMailDomainsResult> listMailDomainsAsync(ListMailDomainsRequest listMailDomainsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListMailDomainsRequest, ListMailDomainsResult> asyncHandler);
 
     /**
      * <p>
@@ -1776,6 +1911,41 @@ public interface AmazonWorkMailAsync extends AmazonWorkMail {
 
     /**
      * <p>
+     * Registers a new domain in Amazon WorkMail and SES, and configures it for use by WorkMail. Emails received by SES
+     * for this domain are routed to the specified WorkMail organization, and WorkMail has permanent permission to use
+     * the specified domain for sending your users' emails.
+     * </p>
+     * 
+     * @param registerMailDomainRequest
+     * @return A Java Future containing the result of the RegisterMailDomain operation returned by the service.
+     * @sample AmazonWorkMailAsync.RegisterMailDomain
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/RegisterMailDomain" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<RegisterMailDomainResult> registerMailDomainAsync(RegisterMailDomainRequest registerMailDomainRequest);
+
+    /**
+     * <p>
+     * Registers a new domain in Amazon WorkMail and SES, and configures it for use by WorkMail. Emails received by SES
+     * for this domain are routed to the specified WorkMail organization, and WorkMail has permanent permission to use
+     * the specified domain for sending your users' emails.
+     * </p>
+     * 
+     * @param registerMailDomainRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the RegisterMailDomain operation returned by the service.
+     * @sample AmazonWorkMailAsyncHandler.RegisterMailDomain
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/RegisterMailDomain" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<RegisterMailDomainResult> registerMailDomainAsync(RegisterMailDomainRequest registerMailDomainRequest,
+            com.amazonaws.handlers.AsyncHandler<RegisterMailDomainRequest, RegisterMailDomainResult> asyncHandler);
+
+    /**
+     * <p>
      * Registers an existing and disabled user, group, or resource for Amazon WorkMail use by associating a mailbox and
      * calendaring capabilities. It performs no change if the user, group, or resource is enabled and fails if the user,
      * group, or resource is deleted. This operation results in the accumulation of costs. For more information, see <a
@@ -1950,6 +2120,39 @@ public interface AmazonWorkMailAsync extends AmazonWorkMail {
      */
     java.util.concurrent.Future<UntagResourceResult> untagResourceAsync(UntagResourceRequest untagResourceRequest,
             com.amazonaws.handlers.AsyncHandler<UntagResourceRequest, UntagResourceResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates the default mail domain for an organization. The default mail domain is used by the WorkMail AWS Console
+     * to suggest an email address when enabling a mail user. You can only have one default domain.
+     * </p>
+     * 
+     * @param updateDefaultMailDomainRequest
+     * @return A Java Future containing the result of the UpdateDefaultMailDomain operation returned by the service.
+     * @sample AmazonWorkMailAsync.UpdateDefaultMailDomain
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/UpdateDefaultMailDomain"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateDefaultMailDomainResult> updateDefaultMailDomainAsync(UpdateDefaultMailDomainRequest updateDefaultMailDomainRequest);
+
+    /**
+     * <p>
+     * Updates the default mail domain for an organization. The default mail domain is used by the WorkMail AWS Console
+     * to suggest an email address when enabling a mail user. You can only have one default domain.
+     * </p>
+     * 
+     * @param updateDefaultMailDomainRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateDefaultMailDomain operation returned by the service.
+     * @sample AmazonWorkMailAsyncHandler.UpdateDefaultMailDomain
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/UpdateDefaultMailDomain"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateDefaultMailDomainResult> updateDefaultMailDomainAsync(UpdateDefaultMailDomainRequest updateDefaultMailDomainRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateDefaultMailDomainRequest, UpdateDefaultMailDomainResult> asyncHandler);
 
     /**
      * <p>

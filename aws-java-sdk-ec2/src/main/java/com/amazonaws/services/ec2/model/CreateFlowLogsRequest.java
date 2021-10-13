@@ -78,9 +78,9 @@ public class CreateFlowLogsRequest extends AmazonWebServiceRequest implements Se
     private String trafficType;
     /**
      * <p>
-     * Specifies the type of destination to which the flow log data is to be published. Flow log data can be published
-     * to CloudWatch Logs or Amazon S3. To publish flow log data to CloudWatch Logs, specify
-     * <code>cloud-watch-logs</code>. To publish flow log data to Amazon S3, specify <code>s3</code>.
+     * The type of destination to which the flow log data is to be published. Flow log data can be published to
+     * CloudWatch Logs or Amazon S3. To publish flow log data to CloudWatch Logs, specify <code>cloud-watch-logs</code>.
+     * To publish flow log data to Amazon S3, specify <code>s3</code>.
      * </p>
      * <p>
      * If you specify <code>LogDestinationType</code> as <code>s3</code>, do not specify
@@ -93,9 +93,9 @@ public class CreateFlowLogsRequest extends AmazonWebServiceRequest implements Se
     private String logDestinationType;
     /**
      * <p>
-     * Specifies the destination to which the flow log data is to be published. Flow log data can be published to a
-     * CloudWatch Logs log group or an Amazon S3 bucket. The value specified for this parameter depends on the value
-     * specified for <code>LogDestinationType</code>.
+     * The destination to which the flow log data is to be published. Flow log data can be published to a CloudWatch
+     * Logs log group or an Amazon S3 bucket. The value specified for this parameter depends on the value specified for
+     * <code>LogDestinationType</code>.
      * </p>
      * <p>
      * If <code>LogDestinationType</code> is not specified or <code>cloud-watch-logs</code>, specify the Amazon Resource
@@ -146,6 +146,12 @@ public class CreateFlowLogsRequest extends AmazonWebServiceRequest implements Se
      * </p>
      */
     private Integer maxAggregationInterval;
+    /**
+     * <p>
+     * The destination options.
+     * </p>
+     */
+    private DestinationOptionsRequest destinationOptions;
 
     /**
      * <p>
@@ -581,9 +587,9 @@ public class CreateFlowLogsRequest extends AmazonWebServiceRequest implements Se
 
     /**
      * <p>
-     * Specifies the type of destination to which the flow log data is to be published. Flow log data can be published
-     * to CloudWatch Logs or Amazon S3. To publish flow log data to CloudWatch Logs, specify
-     * <code>cloud-watch-logs</code>. To publish flow log data to Amazon S3, specify <code>s3</code>.
+     * The type of destination to which the flow log data is to be published. Flow log data can be published to
+     * CloudWatch Logs or Amazon S3. To publish flow log data to CloudWatch Logs, specify <code>cloud-watch-logs</code>.
+     * To publish flow log data to Amazon S3, specify <code>s3</code>.
      * </p>
      * <p>
      * If you specify <code>LogDestinationType</code> as <code>s3</code>, do not specify
@@ -594,8 +600,8 @@ public class CreateFlowLogsRequest extends AmazonWebServiceRequest implements Se
      * </p>
      * 
      * @param logDestinationType
-     *        Specifies the type of destination to which the flow log data is to be published. Flow log data can be
-     *        published to CloudWatch Logs or Amazon S3. To publish flow log data to CloudWatch Logs, specify
+     *        The type of destination to which the flow log data is to be published. Flow log data can be published to
+     *        CloudWatch Logs or Amazon S3. To publish flow log data to CloudWatch Logs, specify
      *        <code>cloud-watch-logs</code>. To publish flow log data to Amazon S3, specify <code>s3</code>.</p>
      *        <p>
      *        If you specify <code>LogDestinationType</code> as <code>s3</code>, do not specify
@@ -612,9 +618,9 @@ public class CreateFlowLogsRequest extends AmazonWebServiceRequest implements Se
 
     /**
      * <p>
-     * Specifies the type of destination to which the flow log data is to be published. Flow log data can be published
-     * to CloudWatch Logs or Amazon S3. To publish flow log data to CloudWatch Logs, specify
-     * <code>cloud-watch-logs</code>. To publish flow log data to Amazon S3, specify <code>s3</code>.
+     * The type of destination to which the flow log data is to be published. Flow log data can be published to
+     * CloudWatch Logs or Amazon S3. To publish flow log data to CloudWatch Logs, specify <code>cloud-watch-logs</code>.
+     * To publish flow log data to Amazon S3, specify <code>s3</code>.
      * </p>
      * <p>
      * If you specify <code>LogDestinationType</code> as <code>s3</code>, do not specify
@@ -624,8 +630,8 @@ public class CreateFlowLogsRequest extends AmazonWebServiceRequest implements Se
      * Default: <code>cloud-watch-logs</code>
      * </p>
      * 
-     * @return Specifies the type of destination to which the flow log data is to be published. Flow log data can be
-     *         published to CloudWatch Logs or Amazon S3. To publish flow log data to CloudWatch Logs, specify
+     * @return The type of destination to which the flow log data is to be published. Flow log data can be published to
+     *         CloudWatch Logs or Amazon S3. To publish flow log data to CloudWatch Logs, specify
      *         <code>cloud-watch-logs</code>. To publish flow log data to Amazon S3, specify <code>s3</code>.</p>
      *         <p>
      *         If you specify <code>LogDestinationType</code> as <code>s3</code>, do not specify
@@ -642,9 +648,9 @@ public class CreateFlowLogsRequest extends AmazonWebServiceRequest implements Se
 
     /**
      * <p>
-     * Specifies the type of destination to which the flow log data is to be published. Flow log data can be published
-     * to CloudWatch Logs or Amazon S3. To publish flow log data to CloudWatch Logs, specify
-     * <code>cloud-watch-logs</code>. To publish flow log data to Amazon S3, specify <code>s3</code>.
+     * The type of destination to which the flow log data is to be published. Flow log data can be published to
+     * CloudWatch Logs or Amazon S3. To publish flow log data to CloudWatch Logs, specify <code>cloud-watch-logs</code>.
+     * To publish flow log data to Amazon S3, specify <code>s3</code>.
      * </p>
      * <p>
      * If you specify <code>LogDestinationType</code> as <code>s3</code>, do not specify
@@ -655,8 +661,8 @@ public class CreateFlowLogsRequest extends AmazonWebServiceRequest implements Se
      * </p>
      * 
      * @param logDestinationType
-     *        Specifies the type of destination to which the flow log data is to be published. Flow log data can be
-     *        published to CloudWatch Logs or Amazon S3. To publish flow log data to CloudWatch Logs, specify
+     *        The type of destination to which the flow log data is to be published. Flow log data can be published to
+     *        CloudWatch Logs or Amazon S3. To publish flow log data to CloudWatch Logs, specify
      *        <code>cloud-watch-logs</code>. To publish flow log data to Amazon S3, specify <code>s3</code>.</p>
      *        <p>
      *        If you specify <code>LogDestinationType</code> as <code>s3</code>, do not specify
@@ -675,9 +681,9 @@ public class CreateFlowLogsRequest extends AmazonWebServiceRequest implements Se
 
     /**
      * <p>
-     * Specifies the type of destination to which the flow log data is to be published. Flow log data can be published
-     * to CloudWatch Logs or Amazon S3. To publish flow log data to CloudWatch Logs, specify
-     * <code>cloud-watch-logs</code>. To publish flow log data to Amazon S3, specify <code>s3</code>.
+     * The type of destination to which the flow log data is to be published. Flow log data can be published to
+     * CloudWatch Logs or Amazon S3. To publish flow log data to CloudWatch Logs, specify <code>cloud-watch-logs</code>.
+     * To publish flow log data to Amazon S3, specify <code>s3</code>.
      * </p>
      * <p>
      * If you specify <code>LogDestinationType</code> as <code>s3</code>, do not specify
@@ -688,8 +694,8 @@ public class CreateFlowLogsRequest extends AmazonWebServiceRequest implements Se
      * </p>
      * 
      * @param logDestinationType
-     *        Specifies the type of destination to which the flow log data is to be published. Flow log data can be
-     *        published to CloudWatch Logs or Amazon S3. To publish flow log data to CloudWatch Logs, specify
+     *        The type of destination to which the flow log data is to be published. Flow log data can be published to
+     *        CloudWatch Logs or Amazon S3. To publish flow log data to CloudWatch Logs, specify
      *        <code>cloud-watch-logs</code>. To publish flow log data to Amazon S3, specify <code>s3</code>.</p>
      *        <p>
      *        If you specify <code>LogDestinationType</code> as <code>s3</code>, do not specify
@@ -706,9 +712,9 @@ public class CreateFlowLogsRequest extends AmazonWebServiceRequest implements Se
 
     /**
      * <p>
-     * Specifies the type of destination to which the flow log data is to be published. Flow log data can be published
-     * to CloudWatch Logs or Amazon S3. To publish flow log data to CloudWatch Logs, specify
-     * <code>cloud-watch-logs</code>. To publish flow log data to Amazon S3, specify <code>s3</code>.
+     * The type of destination to which the flow log data is to be published. Flow log data can be published to
+     * CloudWatch Logs or Amazon S3. To publish flow log data to CloudWatch Logs, specify <code>cloud-watch-logs</code>.
+     * To publish flow log data to Amazon S3, specify <code>s3</code>.
      * </p>
      * <p>
      * If you specify <code>LogDestinationType</code> as <code>s3</code>, do not specify
@@ -719,8 +725,8 @@ public class CreateFlowLogsRequest extends AmazonWebServiceRequest implements Se
      * </p>
      * 
      * @param logDestinationType
-     *        Specifies the type of destination to which the flow log data is to be published. Flow log data can be
-     *        published to CloudWatch Logs or Amazon S3. To publish flow log data to CloudWatch Logs, specify
+     *        The type of destination to which the flow log data is to be published. Flow log data can be published to
+     *        CloudWatch Logs or Amazon S3. To publish flow log data to CloudWatch Logs, specify
      *        <code>cloud-watch-logs</code>. To publish flow log data to Amazon S3, specify <code>s3</code>.</p>
      *        <p>
      *        If you specify <code>LogDestinationType</code> as <code>s3</code>, do not specify
@@ -739,9 +745,9 @@ public class CreateFlowLogsRequest extends AmazonWebServiceRequest implements Se
 
     /**
      * <p>
-     * Specifies the destination to which the flow log data is to be published. Flow log data can be published to a
-     * CloudWatch Logs log group or an Amazon S3 bucket. The value specified for this parameter depends on the value
-     * specified for <code>LogDestinationType</code>.
+     * The destination to which the flow log data is to be published. Flow log data can be published to a CloudWatch
+     * Logs log group or an Amazon S3 bucket. The value specified for this parameter depends on the value specified for
+     * <code>LogDestinationType</code>.
      * </p>
      * <p>
      * If <code>LogDestinationType</code> is not specified or <code>cloud-watch-logs</code>, specify the Amazon Resource
@@ -758,8 +764,8 @@ public class CreateFlowLogsRequest extends AmazonWebServiceRequest implements Se
      * </p>
      * 
      * @param logDestination
-     *        Specifies the destination to which the flow log data is to be published. Flow log data can be published to
-     *        a CloudWatch Logs log group or an Amazon S3 bucket. The value specified for this parameter depends on the
+     *        The destination to which the flow log data is to be published. Flow log data can be published to a
+     *        CloudWatch Logs log group or an Amazon S3 bucket. The value specified for this parameter depends on the
      *        value specified for <code>LogDestinationType</code>.</p>
      *        <p>
      *        If <code>LogDestinationType</code> is not specified or <code>cloud-watch-logs</code>, specify the Amazon
@@ -781,9 +787,9 @@ public class CreateFlowLogsRequest extends AmazonWebServiceRequest implements Se
 
     /**
      * <p>
-     * Specifies the destination to which the flow log data is to be published. Flow log data can be published to a
-     * CloudWatch Logs log group or an Amazon S3 bucket. The value specified for this parameter depends on the value
-     * specified for <code>LogDestinationType</code>.
+     * The destination to which the flow log data is to be published. Flow log data can be published to a CloudWatch
+     * Logs log group or an Amazon S3 bucket. The value specified for this parameter depends on the value specified for
+     * <code>LogDestinationType</code>.
      * </p>
      * <p>
      * If <code>LogDestinationType</code> is not specified or <code>cloud-watch-logs</code>, specify the Amazon Resource
@@ -799,9 +805,9 @@ public class CreateFlowLogsRequest extends AmazonWebServiceRequest implements Se
      * cannot use <code>AWSLogs</code> as a subfolder name. This is a reserved term.
      * </p>
      * 
-     * @return Specifies the destination to which the flow log data is to be published. Flow log data can be published
-     *         to a CloudWatch Logs log group or an Amazon S3 bucket. The value specified for this parameter depends on
-     *         the value specified for <code>LogDestinationType</code>.</p>
+     * @return The destination to which the flow log data is to be published. Flow log data can be published to a
+     *         CloudWatch Logs log group or an Amazon S3 bucket. The value specified for this parameter depends on the
+     *         value specified for <code>LogDestinationType</code>.</p>
      *         <p>
      *         If <code>LogDestinationType</code> is not specified or <code>cloud-watch-logs</code>, specify the Amazon
      *         Resource Name (ARN) of the CloudWatch Logs log group. For example, to publish to a log group called
@@ -823,9 +829,9 @@ public class CreateFlowLogsRequest extends AmazonWebServiceRequest implements Se
 
     /**
      * <p>
-     * Specifies the destination to which the flow log data is to be published. Flow log data can be published to a
-     * CloudWatch Logs log group or an Amazon S3 bucket. The value specified for this parameter depends on the value
-     * specified for <code>LogDestinationType</code>.
+     * The destination to which the flow log data is to be published. Flow log data can be published to a CloudWatch
+     * Logs log group or an Amazon S3 bucket. The value specified for this parameter depends on the value specified for
+     * <code>LogDestinationType</code>.
      * </p>
      * <p>
      * If <code>LogDestinationType</code> is not specified or <code>cloud-watch-logs</code>, specify the Amazon Resource
@@ -842,8 +848,8 @@ public class CreateFlowLogsRequest extends AmazonWebServiceRequest implements Se
      * </p>
      * 
      * @param logDestination
-     *        Specifies the destination to which the flow log data is to be published. Flow log data can be published to
-     *        a CloudWatch Logs log group or an Amazon S3 bucket. The value specified for this parameter depends on the
+     *        The destination to which the flow log data is to be published. Flow log data can be published to a
+     *        CloudWatch Logs log group or an Amazon S3 bucket. The value specified for this parameter depends on the
      *        value specified for <code>LogDestinationType</code>.</p>
      *        <p>
      *        If <code>LogDestinationType</code> is not specified or <code>cloud-watch-logs</code>, specify the Amazon
@@ -1115,6 +1121,46 @@ public class CreateFlowLogsRequest extends AmazonWebServiceRequest implements Se
     }
 
     /**
+     * <p>
+     * The destination options.
+     * </p>
+     * 
+     * @param destinationOptions
+     *        The destination options.
+     */
+
+    public void setDestinationOptions(DestinationOptionsRequest destinationOptions) {
+        this.destinationOptions = destinationOptions;
+    }
+
+    /**
+     * <p>
+     * The destination options.
+     * </p>
+     * 
+     * @return The destination options.
+     */
+
+    public DestinationOptionsRequest getDestinationOptions() {
+        return this.destinationOptions;
+    }
+
+    /**
+     * <p>
+     * The destination options.
+     * </p>
+     * 
+     * @param destinationOptions
+     *        The destination options.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateFlowLogsRequest withDestinationOptions(DestinationOptionsRequest destinationOptions) {
+        setDestinationOptions(destinationOptions);
+        return this;
+    }
+
+    /**
      * This method is intended for internal use only. Returns the marshaled request configured with additional
      * parameters to enable operation dry-run.
      */
@@ -1158,7 +1204,9 @@ public class CreateFlowLogsRequest extends AmazonWebServiceRequest implements Se
         if (getTagSpecifications() != null)
             sb.append("TagSpecifications: ").append(getTagSpecifications()).append(",");
         if (getMaxAggregationInterval() != null)
-            sb.append("MaxAggregationInterval: ").append(getMaxAggregationInterval());
+            sb.append("MaxAggregationInterval: ").append(getMaxAggregationInterval()).append(",");
+        if (getDestinationOptions() != null)
+            sb.append("DestinationOptions: ").append(getDestinationOptions());
         sb.append("}");
         return sb.toString();
     }
@@ -1217,6 +1265,10 @@ public class CreateFlowLogsRequest extends AmazonWebServiceRequest implements Se
             return false;
         if (other.getMaxAggregationInterval() != null && other.getMaxAggregationInterval().equals(this.getMaxAggregationInterval()) == false)
             return false;
+        if (other.getDestinationOptions() == null ^ this.getDestinationOptions() == null)
+            return false;
+        if (other.getDestinationOptions() != null && other.getDestinationOptions().equals(this.getDestinationOptions()) == false)
+            return false;
         return true;
     }
 
@@ -1236,6 +1288,7 @@ public class CreateFlowLogsRequest extends AmazonWebServiceRequest implements Se
         hashCode = prime * hashCode + ((getLogFormat() == null) ? 0 : getLogFormat().hashCode());
         hashCode = prime * hashCode + ((getTagSpecifications() == null) ? 0 : getTagSpecifications().hashCode());
         hashCode = prime * hashCode + ((getMaxAggregationInterval() == null) ? 0 : getMaxAggregationInterval().hashCode());
+        hashCode = prime * hashCode + ((getDestinationOptions() == null) ? 0 : getDestinationOptions().hashCode());
         return hashCode;
     }
 

@@ -39,7 +39,7 @@ public class ListApplicationVersionsResult extends com.amazonaws.AmazonWebServic
      * The pagination token for the next set of results, or <code>null</code> if there are no additional results. To
      * retrieve the next set of items, pass this token into a subsequent invocation of this operation. For more
      * information about pagination, see <a
-     * href="https://docs.aws.amazon.com/cli/latest/userguide/pagination.html">Using the AWS Command Line Interface's
+     * href="https://docs.aws.amazon.com/cli/latest/userguide/pagination.html">Using the Amazon Command Line Interface's
      * Pagination Options</a>.
      * </p>
      */
@@ -156,7 +156,7 @@ public class ListApplicationVersionsResult extends com.amazonaws.AmazonWebServic
      * The pagination token for the next set of results, or <code>null</code> if there are no additional results. To
      * retrieve the next set of items, pass this token into a subsequent invocation of this operation. For more
      * information about pagination, see <a
-     * href="https://docs.aws.amazon.com/cli/latest/userguide/pagination.html">Using the AWS Command Line Interface's
+     * href="https://docs.aws.amazon.com/cli/latest/userguide/pagination.html">Using the Amazon Command Line Interface's
      * Pagination Options</a>.
      * </p>
      * 
@@ -164,7 +164,7 @@ public class ListApplicationVersionsResult extends com.amazonaws.AmazonWebServic
      *        The pagination token for the next set of results, or <code>null</code> if there are no additional results.
      *        To retrieve the next set of items, pass this token into a subsequent invocation of this operation. For
      *        more information about pagination, see <a
-     *        href="https://docs.aws.amazon.com/cli/latest/userguide/pagination.html">Using the AWS Command Line
+     *        href="https://docs.aws.amazon.com/cli/latest/userguide/pagination.html">Using the Amazon Command Line
      *        Interface's Pagination Options</a>.
      */
 
@@ -177,14 +177,14 @@ public class ListApplicationVersionsResult extends com.amazonaws.AmazonWebServic
      * The pagination token for the next set of results, or <code>null</code> if there are no additional results. To
      * retrieve the next set of items, pass this token into a subsequent invocation of this operation. For more
      * information about pagination, see <a
-     * href="https://docs.aws.amazon.com/cli/latest/userguide/pagination.html">Using the AWS Command Line Interface's
+     * href="https://docs.aws.amazon.com/cli/latest/userguide/pagination.html">Using the Amazon Command Line Interface's
      * Pagination Options</a>.
      * </p>
      * 
      * @return The pagination token for the next set of results, or <code>null</code> if there are no additional
      *         results. To retrieve the next set of items, pass this token into a subsequent invocation of this
      *         operation. For more information about pagination, see <a
-     *         href="https://docs.aws.amazon.com/cli/latest/userguide/pagination.html">Using the AWS Command Line
+     *         href="https://docs.aws.amazon.com/cli/latest/userguide/pagination.html">Using the Amazon Command Line
      *         Interface's Pagination Options</a>.
      */
 
@@ -197,7 +197,7 @@ public class ListApplicationVersionsResult extends com.amazonaws.AmazonWebServic
      * The pagination token for the next set of results, or <code>null</code> if there are no additional results. To
      * retrieve the next set of items, pass this token into a subsequent invocation of this operation. For more
      * information about pagination, see <a
-     * href="https://docs.aws.amazon.com/cli/latest/userguide/pagination.html">Using the AWS Command Line Interface's
+     * href="https://docs.aws.amazon.com/cli/latest/userguide/pagination.html">Using the Amazon Command Line Interface's
      * Pagination Options</a>.
      * </p>
      * 
@@ -205,7 +205,7 @@ public class ListApplicationVersionsResult extends com.amazonaws.AmazonWebServic
      *        The pagination token for the next set of results, or <code>null</code> if there are no additional results.
      *        To retrieve the next set of items, pass this token into a subsequent invocation of this operation. For
      *        more information about pagination, see <a
-     *        href="https://docs.aws.amazon.com/cli/latest/userguide/pagination.html">Using the AWS Command Line
+     *        href="https://docs.aws.amazon.com/cli/latest/userguide/pagination.html">Using the Amazon Command Line
      *        Interface's Pagination Options</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

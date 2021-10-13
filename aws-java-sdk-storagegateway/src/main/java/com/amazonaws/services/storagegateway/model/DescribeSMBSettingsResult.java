@@ -122,6 +122,12 @@ public class DescribeSMBSettingsResult extends com.amazonaws.AmazonWebServiceRes
      * </p>
      */
     private Boolean fileSharesVisible;
+    /**
+     * <p>
+     * A list of Active Directory users and groups that have special permissions for SMB file shares on the gateway.
+     * </p>
+     */
+    private SMBLocalGroups sMBLocalGroups;
 
     /**
      * @param gatewayARN
@@ -944,6 +950,49 @@ public class DescribeSMBSettingsResult extends com.amazonaws.AmazonWebServiceRes
     }
 
     /**
+     * <p>
+     * A list of Active Directory users and groups that have special permissions for SMB file shares on the gateway.
+     * </p>
+     * 
+     * @param sMBLocalGroups
+     *        A list of Active Directory users and groups that have special permissions for SMB file shares on the
+     *        gateway.
+     */
+
+    public void setSMBLocalGroups(SMBLocalGroups sMBLocalGroups) {
+        this.sMBLocalGroups = sMBLocalGroups;
+    }
+
+    /**
+     * <p>
+     * A list of Active Directory users and groups that have special permissions for SMB file shares on the gateway.
+     * </p>
+     * 
+     * @return A list of Active Directory users and groups that have special permissions for SMB file shares on the
+     *         gateway.
+     */
+
+    public SMBLocalGroups getSMBLocalGroups() {
+        return this.sMBLocalGroups;
+    }
+
+    /**
+     * <p>
+     * A list of Active Directory users and groups that have special permissions for SMB file shares on the gateway.
+     * </p>
+     * 
+     * @param sMBLocalGroups
+     *        A list of Active Directory users and groups that have special permissions for SMB file shares on the
+     *        gateway.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeSMBSettingsResult withSMBLocalGroups(SMBLocalGroups sMBLocalGroups) {
+        setSMBLocalGroups(sMBLocalGroups);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -966,7 +1015,9 @@ public class DescribeSMBSettingsResult extends com.amazonaws.AmazonWebServiceRes
         if (getSMBSecurityStrategy() != null)
             sb.append("SMBSecurityStrategy: ").append(getSMBSecurityStrategy()).append(",");
         if (getFileSharesVisible() != null)
-            sb.append("FileSharesVisible: ").append(getFileSharesVisible());
+            sb.append("FileSharesVisible: ").append(getFileSharesVisible()).append(",");
+        if (getSMBLocalGroups() != null)
+            sb.append("SMBLocalGroups: ").append(getSMBLocalGroups());
         sb.append("}");
         return sb.toString();
     }
@@ -1005,6 +1056,10 @@ public class DescribeSMBSettingsResult extends com.amazonaws.AmazonWebServiceRes
             return false;
         if (other.getFileSharesVisible() != null && other.getFileSharesVisible().equals(this.getFileSharesVisible()) == false)
             return false;
+        if (other.getSMBLocalGroups() == null ^ this.getSMBLocalGroups() == null)
+            return false;
+        if (other.getSMBLocalGroups() != null && other.getSMBLocalGroups().equals(this.getSMBLocalGroups()) == false)
+            return false;
         return true;
     }
 
@@ -1019,6 +1074,7 @@ public class DescribeSMBSettingsResult extends com.amazonaws.AmazonWebServiceRes
         hashCode = prime * hashCode + ((getSMBGuestPasswordSet() == null) ? 0 : getSMBGuestPasswordSet().hashCode());
         hashCode = prime * hashCode + ((getSMBSecurityStrategy() == null) ? 0 : getSMBSecurityStrategy().hashCode());
         hashCode = prime * hashCode + ((getFileSharesVisible() == null) ? 0 : getFileSharesVisible().hashCode());
+        hashCode = prime * hashCode + ((getSMBLocalGroups() == null) ? 0 : getSMBLocalGroups().hashCode());
         return hashCode;
     }
 

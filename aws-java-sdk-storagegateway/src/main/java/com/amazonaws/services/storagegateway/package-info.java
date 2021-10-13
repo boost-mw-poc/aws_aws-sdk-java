@@ -16,8 +16,8 @@
  * <p>
  * Storage Gateway is the service that connects an on-premises software appliance with cloud-based storage to provide
  * seamless and secure integration between an organization's on-premises IT environment and the Amazon Web Services
- * storage infrastructure. The service enables you to securely upload data to the Cloud for cost effective backup and
- * rapid disaster recovery.
+ * storage infrastructure. The service enables you to securely upload data to the Amazon Web Services Cloud for cost
+ * effective backup and rapid disaster recovery.
  * </p>
  * <p>
  * Use the following links to get started using the <i>Storage Gateway Service API Reference</i>:
@@ -55,7 +55,7 @@
  * <li>
  * <p>
  * <a href="https://docs.aws.amazon.com/general/latest/gr/sg.html">Storage Gateway endpoints and quotas</a>: Provides a
- * list of each Region and the endpoints available for use with Storage Gateway.
+ * list of each Amazon Web Services Region and the endpoints available for use with Storage Gateway.
  * </p>
  * </li>
  * </ul>

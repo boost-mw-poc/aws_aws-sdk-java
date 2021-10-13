@@ -79,6 +79,13 @@ public class FileSystemAssociationInfo implements Serializable, Cloneable, Struc
      * </note>
      */
     private EndpointNetworkConfiguration endpointNetworkConfiguration;
+    /**
+     * <p>
+     * An array containing the FileSystemAssociationStatusDetail data type, which provides detailed information on file
+     * system association status.
+     * </p>
+     */
+    private com.amazonaws.internal.SdkInternalList<FileSystemAssociationStatusDetail> fileSystemAssociationStatusDetails;
 
     /**
      * <p>
@@ -465,6 +472,91 @@ public class FileSystemAssociationInfo implements Serializable, Cloneable, Struc
     }
 
     /**
+     * <p>
+     * An array containing the FileSystemAssociationStatusDetail data type, which provides detailed information on file
+     * system association status.
+     * </p>
+     * 
+     * @return An array containing the FileSystemAssociationStatusDetail data type, which provides detailed information
+     *         on file system association status.
+     */
+
+    public java.util.List<FileSystemAssociationStatusDetail> getFileSystemAssociationStatusDetails() {
+        if (fileSystemAssociationStatusDetails == null) {
+            fileSystemAssociationStatusDetails = new com.amazonaws.internal.SdkInternalList<FileSystemAssociationStatusDetail>();
+        }
+        return fileSystemAssociationStatusDetails;
+    }
+
+    /**
+     * <p>
+     * An array containing the FileSystemAssociationStatusDetail data type, which provides detailed information on file
+     * system association status.
+     * </p>
+     * 
+     * @param fileSystemAssociationStatusDetails
+     *        An array containing the FileSystemAssociationStatusDetail data type, which provides detailed information
+     *        on file system association status.
+     */
+
+    public void setFileSystemAssociationStatusDetails(java.util.Collection<FileSystemAssociationStatusDetail> fileSystemAssociationStatusDetails) {
+        if (fileSystemAssociationStatusDetails == null) {
+            this.fileSystemAssociationStatusDetails = null;
+            return;
+        }
+
+        this.fileSystemAssociationStatusDetails = new com.amazonaws.internal.SdkInternalList<FileSystemAssociationStatusDetail>(
+                fileSystemAssociationStatusDetails);
+    }
+
+    /**
+     * <p>
+     * An array containing the FileSystemAssociationStatusDetail data type, which provides detailed information on file
+     * system association status.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setFileSystemAssociationStatusDetails(java.util.Collection)} or
+     * {@link #withFileSystemAssociationStatusDetails(java.util.Collection)} if you want to override the existing
+     * values.
+     * </p>
+     * 
+     * @param fileSystemAssociationStatusDetails
+     *        An array containing the FileSystemAssociationStatusDetail data type, which provides detailed information
+     *        on file system association status.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public FileSystemAssociationInfo withFileSystemAssociationStatusDetails(FileSystemAssociationStatusDetail... fileSystemAssociationStatusDetails) {
+        if (this.fileSystemAssociationStatusDetails == null) {
+            setFileSystemAssociationStatusDetails(new com.amazonaws.internal.SdkInternalList<FileSystemAssociationStatusDetail>(
+                    fileSystemAssociationStatusDetails.length));
+        }
+        for (FileSystemAssociationStatusDetail ele : fileSystemAssociationStatusDetails) {
+            this.fileSystemAssociationStatusDetails.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * An array containing the FileSystemAssociationStatusDetail data type, which provides detailed information on file
+     * system association status.
+     * </p>
+     * 
+     * @param fileSystemAssociationStatusDetails
+     *        An array containing the FileSystemAssociationStatusDetail data type, which provides detailed information
+     *        on file system association status.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public FileSystemAssociationInfo withFileSystemAssociationStatusDetails(
+            java.util.Collection<FileSystemAssociationStatusDetail> fileSystemAssociationStatusDetails) {
+        setFileSystemAssociationStatusDetails(fileSystemAssociationStatusDetails);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -491,7 +583,9 @@ public class FileSystemAssociationInfo implements Serializable, Cloneable, Struc
         if (getCacheAttributes() != null)
             sb.append("CacheAttributes: ").append(getCacheAttributes()).append(",");
         if (getEndpointNetworkConfiguration() != null)
-            sb.append("EndpointNetworkConfiguration: ").append(getEndpointNetworkConfiguration());
+            sb.append("EndpointNetworkConfiguration: ").append(getEndpointNetworkConfiguration()).append(",");
+        if (getFileSystemAssociationStatusDetails() != null)
+            sb.append("FileSystemAssociationStatusDetails: ").append(getFileSystemAssociationStatusDetails());
         sb.append("}");
         return sb.toString();
     }
@@ -538,6 +632,11 @@ public class FileSystemAssociationInfo implements Serializable, Cloneable, Struc
             return false;
         if (other.getEndpointNetworkConfiguration() != null && other.getEndpointNetworkConfiguration().equals(this.getEndpointNetworkConfiguration()) == false)
             return false;
+        if (other.getFileSystemAssociationStatusDetails() == null ^ this.getFileSystemAssociationStatusDetails() == null)
+            return false;
+        if (other.getFileSystemAssociationStatusDetails() != null
+                && other.getFileSystemAssociationStatusDetails().equals(this.getFileSystemAssociationStatusDetails()) == false)
+            return false;
         return true;
     }
 
@@ -554,6 +653,7 @@ public class FileSystemAssociationInfo implements Serializable, Cloneable, Struc
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getCacheAttributes() == null) ? 0 : getCacheAttributes().hashCode());
         hashCode = prime * hashCode + ((getEndpointNetworkConfiguration() == null) ? 0 : getEndpointNetworkConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getFileSystemAssociationStatusDetails() == null) ? 0 : getFileSystemAssociationStatusDetails().hashCode());
         return hashCode;
     }
 

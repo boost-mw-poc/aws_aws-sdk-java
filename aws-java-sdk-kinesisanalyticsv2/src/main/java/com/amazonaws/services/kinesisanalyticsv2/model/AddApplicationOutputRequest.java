@@ -43,7 +43,7 @@ public class AddApplicationOutputRequest extends com.amazonaws.AmazonWebServiceR
      * <p>
      * An array of objects, each describing one output configuration. In the output configuration, you specify the name
      * of an in-application stream, a destination (that is, a Kinesis data stream, a Kinesis Data Firehose delivery
-     * stream, or an AWS Lambda function), and record the formation to use when writing to the destination.
+     * stream, or an Amazon Lambda function), and record the formation to use when writing to the destination.
      * </p>
      */
     private Output output;
@@ -144,14 +144,14 @@ public class AddApplicationOutputRequest extends com.amazonaws.AmazonWebServiceR
      * <p>
      * An array of objects, each describing one output configuration. In the output configuration, you specify the name
      * of an in-application stream, a destination (that is, a Kinesis data stream, a Kinesis Data Firehose delivery
-     * stream, or an AWS Lambda function), and record the formation to use when writing to the destination.
+     * stream, or an Amazon Lambda function), and record the formation to use when writing to the destination.
      * </p>
      * 
      * @param output
      *        An array of objects, each describing one output configuration. In the output configuration, you specify
      *        the name of an in-application stream, a destination (that is, a Kinesis data stream, a Kinesis Data
-     *        Firehose delivery stream, or an AWS Lambda function), and record the formation to use when writing to the
-     *        destination.
+     *        Firehose delivery stream, or an Amazon Lambda function), and record the formation to use when writing to
+     *        the destination.
      */
 
     public void setOutput(Output output) {
@@ -162,13 +162,13 @@ public class AddApplicationOutputRequest extends com.amazonaws.AmazonWebServiceR
      * <p>
      * An array of objects, each describing one output configuration. In the output configuration, you specify the name
      * of an in-application stream, a destination (that is, a Kinesis data stream, a Kinesis Data Firehose delivery
-     * stream, or an AWS Lambda function), and record the formation to use when writing to the destination.
+     * stream, or an Amazon Lambda function), and record the formation to use when writing to the destination.
      * </p>
      * 
      * @return An array of objects, each describing one output configuration. In the output configuration, you specify
      *         the name of an in-application stream, a destination (that is, a Kinesis data stream, a Kinesis Data
-     *         Firehose delivery stream, or an AWS Lambda function), and record the formation to use when writing to the
-     *         destination.
+     *         Firehose delivery stream, or an Amazon Lambda function), and record the formation to use when writing to
+     *         the destination.
      */
 
     public Output getOutput() {
@@ -179,14 +179,14 @@ public class AddApplicationOutputRequest extends com.amazonaws.AmazonWebServiceR
      * <p>
      * An array of objects, each describing one output configuration. In the output configuration, you specify the name
      * of an in-application stream, a destination (that is, a Kinesis data stream, a Kinesis Data Firehose delivery
-     * stream, or an AWS Lambda function), and record the formation to use when writing to the destination.
+     * stream, or an Amazon Lambda function), and record the formation to use when writing to the destination.
      * </p>
      * 
      * @param output
      *        An array of objects, each describing one output configuration. In the output configuration, you specify
      *        the name of an in-application stream, a destination (that is, a Kinesis data stream, a Kinesis Data
-     *        Firehose delivery stream, or an AWS Lambda function), and record the formation to use when writing to the
-     *        destination.
+     *        Firehose delivery stream, or an Amazon Lambda function), and record the formation to use when writing to
+     *        the destination.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

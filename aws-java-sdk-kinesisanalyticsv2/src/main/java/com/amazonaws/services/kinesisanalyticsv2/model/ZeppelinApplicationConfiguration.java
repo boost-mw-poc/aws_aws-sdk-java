@@ -36,14 +36,13 @@ public class ZeppelinApplicationConfiguration implements Serializable, Cloneable
     private ZeppelinMonitoringConfiguration monitoringConfiguration;
     /**
      * <p>
-     * The AWS Glue Data Catalog that you use in queries in a Kinesis Data Analytics Studio notebook.
+     * The Amazon Glue Data Catalog that you use in queries in a Kinesis Data Analytics Studio notebook.
      * </p>
      */
     private CatalogConfiguration catalogConfiguration;
     /**
      * <p>
-     * The information required to deploy a Kinesis Data Analytics Studio notebook as an application with durable
-     * state..
+     * The information required to deploy a Kinesis Data Analytics Studio notebook as an application with durable state.
      * </p>
      */
     private DeployAsApplicationConfiguration deployAsApplicationConfiguration;
@@ -96,11 +95,11 @@ public class ZeppelinApplicationConfiguration implements Serializable, Cloneable
 
     /**
      * <p>
-     * The AWS Glue Data Catalog that you use in queries in a Kinesis Data Analytics Studio notebook.
+     * The Amazon Glue Data Catalog that you use in queries in a Kinesis Data Analytics Studio notebook.
      * </p>
      * 
      * @param catalogConfiguration
-     *        The AWS Glue Data Catalog that you use in queries in a Kinesis Data Analytics Studio notebook.
+     *        The Amazon Glue Data Catalog that you use in queries in a Kinesis Data Analytics Studio notebook.
      */
 
     public void setCatalogConfiguration(CatalogConfiguration catalogConfiguration) {
@@ -109,10 +108,10 @@ public class ZeppelinApplicationConfiguration implements Serializable, Cloneable
 
     /**
      * <p>
-     * The AWS Glue Data Catalog that you use in queries in a Kinesis Data Analytics Studio notebook.
+     * The Amazon Glue Data Catalog that you use in queries in a Kinesis Data Analytics Studio notebook.
      * </p>
      * 
-     * @return The AWS Glue Data Catalog that you use in queries in a Kinesis Data Analytics Studio notebook.
+     * @return The Amazon Glue Data Catalog that you use in queries in a Kinesis Data Analytics Studio notebook.
      */
 
     public CatalogConfiguration getCatalogConfiguration() {
@@ -121,11 +120,11 @@ public class ZeppelinApplicationConfiguration implements Serializable, Cloneable
 
     /**
      * <p>
-     * The AWS Glue Data Catalog that you use in queries in a Kinesis Data Analytics Studio notebook.
+     * The Amazon Glue Data Catalog that you use in queries in a Kinesis Data Analytics Studio notebook.
      * </p>
      * 
      * @param catalogConfiguration
-     *        The AWS Glue Data Catalog that you use in queries in a Kinesis Data Analytics Studio notebook.
+     *        The Amazon Glue Data Catalog that you use in queries in a Kinesis Data Analytics Studio notebook.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -136,13 +135,12 @@ public class ZeppelinApplicationConfiguration implements Serializable, Cloneable
 
     /**
      * <p>
-     * The information required to deploy a Kinesis Data Analytics Studio notebook as an application with durable
-     * state..
+     * The information required to deploy a Kinesis Data Analytics Studio notebook as an application with durable state.
      * </p>
      * 
      * @param deployAsApplicationConfiguration
      *        The information required to deploy a Kinesis Data Analytics Studio notebook as an application with durable
-     *        state..
+     *        state.
      */
 
     public void setDeployAsApplicationConfiguration(DeployAsApplicationConfiguration deployAsApplicationConfiguration) {
@@ -151,12 +149,11 @@ public class ZeppelinApplicationConfiguration implements Serializable, Cloneable
 
     /**
      * <p>
-     * The information required to deploy a Kinesis Data Analytics Studio notebook as an application with durable
-     * state..
+     * The information required to deploy a Kinesis Data Analytics Studio notebook as an application with durable state.
      * </p>
      * 
      * @return The information required to deploy a Kinesis Data Analytics Studio notebook as an application with
-     *         durable state..
+     *         durable state.
      */
 
     public DeployAsApplicationConfiguration getDeployAsApplicationConfiguration() {
@@ -165,13 +162,12 @@ public class ZeppelinApplicationConfiguration implements Serializable, Cloneable
 
     /**
      * <p>
-     * The information required to deploy a Kinesis Data Analytics Studio notebook as an application with durable
-     * state..
+     * The information required to deploy a Kinesis Data Analytics Studio notebook as an application with durable state.
      * </p>
      * 
      * @param deployAsApplicationConfiguration
      *        The information required to deploy a Kinesis Data Analytics Studio notebook as an application with durable
-     *        state..
+     *        state.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

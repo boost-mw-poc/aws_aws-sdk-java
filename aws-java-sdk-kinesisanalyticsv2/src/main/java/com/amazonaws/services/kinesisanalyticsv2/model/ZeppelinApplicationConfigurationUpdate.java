@@ -37,7 +37,7 @@ public class ZeppelinApplicationConfigurationUpdate implements Serializable, Clo
     private ZeppelinMonitoringConfigurationUpdate monitoringConfigurationUpdate;
     /**
      * <p>
-     * Updates to the configuration of the AWS Glue Data Catalog that is associated with the Kinesis Data Analytics
+     * Updates to the configuration of the Amazon Glue Data Catalog that is associated with the Kinesis Data Analytics
      * Studio notebook.
      * </p>
      */
@@ -93,12 +93,12 @@ public class ZeppelinApplicationConfigurationUpdate implements Serializable, Clo
 
     /**
      * <p>
-     * Updates to the configuration of the AWS Glue Data Catalog that is associated with the Kinesis Data Analytics
+     * Updates to the configuration of the Amazon Glue Data Catalog that is associated with the Kinesis Data Analytics
      * Studio notebook.
      * </p>
      * 
      * @param catalogConfigurationUpdate
-     *        Updates to the configuration of the AWS Glue Data Catalog that is associated with the Kinesis Data
+     *        Updates to the configuration of the Amazon Glue Data Catalog that is associated with the Kinesis Data
      *        Analytics Studio notebook.
      */
 
@@ -108,11 +108,11 @@ public class ZeppelinApplicationConfigurationUpdate implements Serializable, Clo
 
     /**
      * <p>
-     * Updates to the configuration of the AWS Glue Data Catalog that is associated with the Kinesis Data Analytics
+     * Updates to the configuration of the Amazon Glue Data Catalog that is associated with the Kinesis Data Analytics
      * Studio notebook.
      * </p>
      * 
-     * @return Updates to the configuration of the AWS Glue Data Catalog that is associated with the Kinesis Data
+     * @return Updates to the configuration of the Amazon Glue Data Catalog that is associated with the Kinesis Data
      *         Analytics Studio notebook.
      */
 
@@ -122,12 +122,12 @@ public class ZeppelinApplicationConfigurationUpdate implements Serializable, Clo
 
     /**
      * <p>
-     * Updates to the configuration of the AWS Glue Data Catalog that is associated with the Kinesis Data Analytics
+     * Updates to the configuration of the Amazon Glue Data Catalog that is associated with the Kinesis Data Analytics
      * Studio notebook.
      * </p>
      * 
      * @param catalogConfigurationUpdate
-     *        Updates to the configuration of the AWS Glue Data Catalog that is associated with the Kinesis Data
+     *        Updates to the configuration of the Amazon Glue Data Catalog that is associated with the Kinesis Data
      *        Analytics Studio notebook.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

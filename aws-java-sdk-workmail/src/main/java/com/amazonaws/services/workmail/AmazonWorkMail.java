@@ -185,8 +185,7 @@ public interface AmazonWorkMail {
      * @throws InvalidParameterException
      *         One or more of the input parameters don't match the service's restrictions.
      * @throws MailDomainNotFoundException
-     *         For an email or alias to be created in Amazon WorkMail, the included domain must be defined in the
-     *         organization.
+     *         The domain specified is not found in your organization.
      * @throws MailDomainStateException
      *         After a domain has been added to the organization, it must be verified. The domain is not yet verified.
      * @throws OrganizationNotFoundException
@@ -359,6 +358,12 @@ public interface AmazonWorkMail {
      * <p>
      * Deletes an access control rule for the specified WorkMail organization.
      * </p>
+     * <note>
+     * <p>
+     * Deleting already deleted and non-existing rules does not produce an error. In those cases, the service sends back
+     * an HTTP 200 response with an empty HTTP body.
+     * </p>
+     * </note>
      * 
      * @param deleteAccessControlRuleRequest
      * @return Result of the DeleteAccessControlRule operation returned by the service.
@@ -456,6 +461,12 @@ public interface AmazonWorkMail {
      * <p>
      * Deletes the mobile device access override for the given WorkMail organization, user, and device.
      * </p>
+     * <note>
+     * <p>
+     * Deleting already deleted and non-existing overrides does not produce an error. In those cases, the service sends
+     * back an HTTP 200 response with an empty HTTP body.
+     * </p>
+     * </note>
      * 
      * @param deleteMobileDeviceAccessOverrideRequest
      * @return Result of the DeleteMobileDeviceAccessOverride operation returned by the service.
@@ -478,6 +489,12 @@ public interface AmazonWorkMail {
      * <p>
      * Deletes a mobile device access rule for the specified Amazon WorkMail organization.
      * </p>
+     * <note>
+     * <p>
+     * Deleting already deleted and non-existing rules does not produce an error. In those cases, the service sends back
+     * an HTTP 200 response with an empty HTTP body.
+     * </p>
+     * </note>
      * 
      * @param deleteMobileDeviceAccessRuleRequest
      * @return Result of the DeleteMobileDeviceAccessRule operation returned by the service.
@@ -620,6 +637,36 @@ public interface AmazonWorkMail {
      *      target="_top">AWS API Documentation</a>
      */
     DeregisterFromWorkMailResult deregisterFromWorkMail(DeregisterFromWorkMailRequest deregisterFromWorkMailRequest);
+
+    /**
+     * <p>
+     * Removes a domain from Amazon WorkMail, stops email routing to WorkMail, and removes the authorization allowing
+     * WorkMail use. SES keeps the domain because other applications may use it. You must first remove any email address
+     * used by WorkMail entities before you remove the domain.
+     * </p>
+     * 
+     * @param deregisterMailDomainRequest
+     * @return Result of the DeregisterMailDomain operation returned by the service.
+     * @throws MailDomainInUseException
+     *         The domain you're trying to change is in use by another user or organization in your account. See the
+     *         error message for details.
+     * @throws OrganizationNotFoundException
+     *         An operation received a valid organization identifier that either doesn't belong or exist in the system.
+     * @throws OrganizationStateException
+     *         The organization must have a valid state to perform certain operations on the organization or its
+     *         members.
+     * @throws InvalidParameterException
+     *         One or more of the input parameters don't match the service's restrictions.
+     * @throws InvalidCustomSesConfigurationException
+     *         You SES configuration has customizations that Amazon WorkMail cannot save. The error message lists the
+     *         invalid setting. For examples of invalid settings, refer to <a
+     *         href="https://docs.aws.amazon.com/ses/latest/APIReference/API_CreateReceiptRule.html"
+     *         >CreateReceiptRule</a>.
+     * @sample AmazonWorkMail.DeregisterMailDomain
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/DeregisterMailDomain" target="_top">AWS
+     *      API Documentation</a>
+     */
+    DeregisterMailDomainResult deregisterMailDomain(DeregisterMailDomainRequest deregisterMailDomainRequest);
 
     /**
      * <p>
@@ -847,6 +894,29 @@ public interface AmazonWorkMail {
 
     /**
      * <p>
+     * Gets details for a mail domain, including domain records required to configure your domain with recommended
+     * security.
+     * </p>
+     * 
+     * @param getMailDomainRequest
+     * @return Result of the GetMailDomain operation returned by the service.
+     * @throws MailDomainNotFoundException
+     *         The domain specified is not found in your organization.
+     * @throws OrganizationNotFoundException
+     *         An operation received a valid organization identifier that either doesn't belong or exist in the system.
+     * @throws OrganizationStateException
+     *         The organization must have a valid state to perform certain operations on the organization or its
+     *         members.
+     * @throws InvalidParameterException
+     *         One or more of the input parameters don't match the service's restrictions.
+     * @sample AmazonWorkMail.GetMailDomain
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/GetMailDomain" target="_top">AWS API
+     *      Documentation</a>
+     */
+    GetMailDomainResult getMailDomain(GetMailDomainRequest getMailDomainRequest);
+
+    /**
+     * <p>
      * Requests a user's mailbox details for a specified organization and user.
      * </p>
      * 
@@ -1000,6 +1070,26 @@ public interface AmazonWorkMail {
      *      Documentation</a>
      */
     ListGroupsResult listGroups(ListGroupsRequest listGroupsRequest);
+
+    /**
+     * <p>
+     * Lists the mail domains in a given Amazon WorkMail organization.
+     * </p>
+     * 
+     * @param listMailDomainsRequest
+     * @return Result of the ListMailDomains operation returned by the service.
+     * @throws InvalidParameterException
+     *         One or more of the input parameters don't match the service's restrictions.
+     * @throws OrganizationNotFoundException
+     *         An operation received a valid organization identifier that either doesn't belong or exist in the system.
+     * @throws OrganizationStateException
+     *         The organization must have a valid state to perform certain operations on the organization or its
+     *         members.
+     * @sample AmazonWorkMail.ListMailDomains
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/ListMailDomains" target="_top">AWS API
+     *      Documentation</a>
+     */
+    ListMailDomainsResult listMailDomains(ListMailDomainsRequest listMailDomainsRequest);
 
     /**
      * <p>
@@ -1299,6 +1389,33 @@ public interface AmazonWorkMail {
 
     /**
      * <p>
+     * Registers a new domain in Amazon WorkMail and SES, and configures it for use by WorkMail. Emails received by SES
+     * for this domain are routed to the specified WorkMail organization, and WorkMail has permanent permission to use
+     * the specified domain for sending your users' emails.
+     * </p>
+     * 
+     * @param registerMailDomainRequest
+     * @return Result of the RegisterMailDomain operation returned by the service.
+     * @throws MailDomainInUseException
+     *         The domain you're trying to change is in use by another user or organization in your account. See the
+     *         error message for details.
+     * @throws OrganizationNotFoundException
+     *         An operation received a valid organization identifier that either doesn't belong or exist in the system.
+     * @throws OrganizationStateException
+     *         The organization must have a valid state to perform certain operations on the organization or its
+     *         members.
+     * @throws LimitExceededException
+     *         The request exceeds the limit of the resource.
+     * @throws InvalidParameterException
+     *         One or more of the input parameters don't match the service's restrictions.
+     * @sample AmazonWorkMail.RegisterMailDomain
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/RegisterMailDomain" target="_top">AWS
+     *      API Documentation</a>
+     */
+    RegisterMailDomainResult registerMailDomain(RegisterMailDomainRequest registerMailDomainRequest);
+
+    /**
+     * <p>
      * Registers an existing and disabled user, group, or resource for Amazon WorkMail use by associating a mailbox and
      * calendaring capabilities. It performs no change if the user, group, or resource is enabled and fails if the user,
      * group, or resource is deleted. This operation results in the accumulation of costs. For more information, see <a
@@ -1329,8 +1446,7 @@ public interface AmazonWorkMail {
      * @throws InvalidParameterException
      *         One or more of the input parameters don't match the service's restrictions.
      * @throws MailDomainNotFoundException
-     *         For an email or alias to be created in Amazon WorkMail, the included domain must be defined in the
-     *         organization.
+     *         The domain specified is not found in your organization.
      * @throws MailDomainStateException
      *         After a domain has been added to the organization, it must be verified. The domain is not yet verified.
      * @throws OrganizationNotFoundException
@@ -1442,6 +1558,31 @@ public interface AmazonWorkMail {
 
     /**
      * <p>
+     * Updates the default mail domain for an organization. The default mail domain is used by the WorkMail AWS Console
+     * to suggest an email address when enabling a mail user. You can only have one default domain.
+     * </p>
+     * 
+     * @param updateDefaultMailDomainRequest
+     * @return Result of the UpdateDefaultMailDomain operation returned by the service.
+     * @throws MailDomainNotFoundException
+     *         The domain specified is not found in your organization.
+     * @throws MailDomainStateException
+     *         After a domain has been added to the organization, it must be verified. The domain is not yet verified.
+     * @throws OrganizationNotFoundException
+     *         An operation received a valid organization identifier that either doesn't belong or exist in the system.
+     * @throws OrganizationStateException
+     *         The organization must have a valid state to perform certain operations on the organization or its
+     *         members.
+     * @throws InvalidParameterException
+     *         One or more of the input parameters don't match the service's restrictions.
+     * @sample AmazonWorkMail.UpdateDefaultMailDomain
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/workmail-2017-10-01/UpdateDefaultMailDomain"
+     *      target="_top">AWS API Documentation</a>
+     */
+    UpdateDefaultMailDomainResult updateDefaultMailDomain(UpdateDefaultMailDomainRequest updateDefaultMailDomainRequest);
+
+    /**
+     * <p>
      * Updates a user's current mailbox quota for a specified organization and user.
      * </p>
      * 
@@ -1511,8 +1652,7 @@ public interface AmazonWorkMail {
      * @throws InvalidParameterException
      *         One or more of the input parameters don't match the service's restrictions.
      * @throws MailDomainNotFoundException
-     *         For an email or alias to be created in Amazon WorkMail, the included domain must be defined in the
-     *         organization.
+     *         The domain specified is not found in your organization.
      * @throws MailDomainStateException
      *         After a domain has been added to the organization, it must be verified. The domain is not yet verified.
      * @throws InvalidParameterException
@@ -1553,8 +1693,7 @@ public interface AmazonWorkMail {
      *         The email address that you're trying to assign is already created for a different user, group, or
      *         resource.
      * @throws MailDomainNotFoundException
-     *         For an email or alias to be created in Amazon WorkMail, the included domain must be defined in the
-     *         organization.
+     *         The domain specified is not found in your organization.
      * @throws MailDomainStateException
      *         After a domain has been added to the organization, it must be verified. The domain is not yet verified.
      * @throws NameAvailabilityException

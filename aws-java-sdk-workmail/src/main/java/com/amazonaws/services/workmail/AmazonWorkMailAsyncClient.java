@@ -779,6 +779,39 @@ public class AmazonWorkMailAsyncClient extends AmazonWorkMailClient implements A
     }
 
     @Override
+    public java.util.concurrent.Future<DeregisterMailDomainResult> deregisterMailDomainAsync(DeregisterMailDomainRequest request) {
+
+        return deregisterMailDomainAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeregisterMailDomainResult> deregisterMailDomainAsync(final DeregisterMailDomainRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeregisterMailDomainRequest, DeregisterMailDomainResult> asyncHandler) {
+        final DeregisterMailDomainRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeregisterMailDomainResult>() {
+            @Override
+            public DeregisterMailDomainResult call() throws Exception {
+                DeregisterMailDomainResult result = null;
+
+                try {
+                    result = executeDeregisterMailDomain(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeGroupResult> describeGroupAsync(DescribeGroupRequest request) {
 
         return describeGroupAsync(request, null);
@@ -1111,6 +1144,39 @@ public class AmazonWorkMailAsyncClient extends AmazonWorkMailClient implements A
     }
 
     @Override
+    public java.util.concurrent.Future<GetMailDomainResult> getMailDomainAsync(GetMailDomainRequest request) {
+
+        return getMailDomainAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetMailDomainResult> getMailDomainAsync(final GetMailDomainRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetMailDomainRequest, GetMailDomainResult> asyncHandler) {
+        final GetMailDomainRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetMailDomainResult>() {
+            @Override
+            public GetMailDomainResult call() throws Exception {
+                GetMailDomainResult result = null;
+
+                try {
+                    result = executeGetMailDomain(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetMailboxDetailsResult> getMailboxDetailsAsync(GetMailboxDetailsRequest request) {
 
         return getMailboxDetailsAsync(request, null);
@@ -1327,6 +1393,39 @@ public class AmazonWorkMailAsyncClient extends AmazonWorkMailClient implements A
 
                 try {
                     result = executeListGroups(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListMailDomainsResult> listMailDomainsAsync(ListMailDomainsRequest request) {
+
+        return listMailDomainsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListMailDomainsResult> listMailDomainsAsync(final ListMailDomainsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListMailDomainsRequest, ListMailDomainsResult> asyncHandler) {
+        final ListMailDomainsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListMailDomainsResult>() {
+            @Override
+            public ListMailDomainsResult call() throws Exception {
+                ListMailDomainsResult result = null;
+
+                try {
+                    result = executeListMailDomains(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -1808,6 +1907,39 @@ public class AmazonWorkMailAsyncClient extends AmazonWorkMailClient implements A
     }
 
     @Override
+    public java.util.concurrent.Future<RegisterMailDomainResult> registerMailDomainAsync(RegisterMailDomainRequest request) {
+
+        return registerMailDomainAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<RegisterMailDomainResult> registerMailDomainAsync(final RegisterMailDomainRequest request,
+            final com.amazonaws.handlers.AsyncHandler<RegisterMailDomainRequest, RegisterMailDomainResult> asyncHandler) {
+        final RegisterMailDomainRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<RegisterMailDomainResult>() {
+            @Override
+            public RegisterMailDomainResult call() throws Exception {
+                RegisterMailDomainResult result = null;
+
+                try {
+                    result = executeRegisterMailDomain(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<RegisterToWorkMailResult> registerToWorkMailAsync(RegisterToWorkMailRequest request) {
 
         return registerToWorkMailAsync(request, null);
@@ -1957,6 +2089,39 @@ public class AmazonWorkMailAsyncClient extends AmazonWorkMailClient implements A
 
                 try {
                     result = executeUntagResource(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateDefaultMailDomainResult> updateDefaultMailDomainAsync(UpdateDefaultMailDomainRequest request) {
+
+        return updateDefaultMailDomainAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateDefaultMailDomainResult> updateDefaultMailDomainAsync(final UpdateDefaultMailDomainRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateDefaultMailDomainRequest, UpdateDefaultMailDomainResult> asyncHandler) {
+        final UpdateDefaultMailDomainRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateDefaultMailDomainResult>() {
+            @Override
+            public UpdateDefaultMailDomainResult call() throws Exception {
+                UpdateDefaultMailDomainResult result = null;
+
+                try {
+                    result = executeUpdateDefaultMailDomain(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

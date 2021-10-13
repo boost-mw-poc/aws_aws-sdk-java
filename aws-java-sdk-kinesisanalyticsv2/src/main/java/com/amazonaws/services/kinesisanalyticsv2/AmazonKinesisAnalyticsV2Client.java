@@ -319,7 +319,7 @@ public class AmazonKinesisAnalyticsV2Client extends AmazonWebServiceClient imple
      * <p>
      * Adds an <a>InputProcessingConfiguration</a> to a SQL-based Kinesis Data Analytics application. An input processor
      * pre-processes records on the input stream before the application's SQL code executes. Currently, the only input
-     * processor available is <a href="https://docs.aws.amazon.com/lambda/">AWS Lambda</a>.
+     * processor available is <a href="https://docs.aws.amazon.com/lambda/">Amazon Lambda</a>.
      * </p>
      * 
      * @param addApplicationInputProcessingConfigurationRequest
@@ -393,9 +393,9 @@ public class AmazonKinesisAnalyticsV2Client extends AmazonWebServiceClient imple
      * </p>
      * <p>
      * If you want Kinesis Data Analytics to deliver data from an in-application stream within your application to an
-     * external destination (such as an Kinesis data stream, a Kinesis Data Firehose delivery stream, or an AWS Lambda
-     * function), you add the relevant configuration to your application using this operation. You can configure one or
-     * more outputs for your application. Each output configuration maps an in-application stream and an external
+     * external destination (such as an Kinesis data stream, a Kinesis Data Firehose delivery stream, or an Amazon
+     * Lambda function), you add the relevant configuration to your application using this operation. You can configure
+     * one or more outputs for your application. Each output configuration maps an in-application stream and an external
      * destination.
      * </p>
      * <p>
@@ -656,6 +656,9 @@ public class AmazonKinesisAnalyticsV2Client extends AmazonWebServiceClient imple
      * @throws ConcurrentModificationException
      *         Exception thrown as a result of concurrent modifications to an application. This error can be the result
      *         of attempting to modify an application without using the current application ID.
+     * @throws UnsupportedOperationException
+     *         The request was rejected because a specified parameter is not supported or a specified resource is not
+     *         valid for this operation.
      * @sample AmazonKinesisAnalyticsV2.CreateApplication
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kinesisanalyticsv2-2018-05-23/CreateApplication"
      *      target="_top">AWS API Documentation</a>
@@ -1578,6 +1581,9 @@ public class AmazonKinesisAnalyticsV2Client extends AmazonWebServiceClient imple
      *         The service cannot complete the request.
      * @throws InvalidRequestException
      *         The request JSON is not valid for the operation.
+     * @throws UnsupportedOperationException
+     *         The request was rejected because a specified parameter is not supported or a specified resource is not
+     *         valid for this operation.
      * @sample AmazonKinesisAnalyticsV2.DiscoverInputSchema
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kinesisanalyticsv2-2018-05-23/DiscoverInputSchema"
      *      target="_top">AWS API Documentation</a>

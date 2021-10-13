@@ -72,6 +72,10 @@ public class DescribeSMBSettingsResultJsonUnmarshaller implements Unmarshaller<D
                     context.nextToken();
                     describeSMBSettingsResult.setFileSharesVisible(context.getUnmarshaller(Boolean.class).unmarshall(context));
                 }
+                if (context.testExpression("SMBLocalGroups", targetDepth)) {
+                    context.nextToken();
+                    describeSMBSettingsResult.setSMBLocalGroups(SMBLocalGroupsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

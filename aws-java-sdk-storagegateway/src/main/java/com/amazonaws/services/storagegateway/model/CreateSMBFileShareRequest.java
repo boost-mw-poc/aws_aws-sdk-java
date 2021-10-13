@@ -67,22 +67,37 @@ public class CreateSMBFileShareRequest extends com.amazonaws.AmazonWebServiceReq
     private String role;
     /**
      * <p>
-     * The ARN of the backend storage used for storing file data. A prefix name can be added to the S3 bucket name. It
-     * must end with a "/".
+     * A custom ARN for the backend storage used for storing data for file shares. It includes a resource ARN with an
+     * optional prefix concatenation. The prefix must end with a forward slash (/).
      * </p>
      * <note>
      * <p>
-     * You can specify a bucket attached to an access point using a complete ARN that includes the bucket region as
-     * shown:
+     * You can specify LocationARN as a bucket ARN, access point ARN or access point alias, as shown in the following
+     * examples.
      * </p>
      * <p>
-     * <code>arn:aws:s3:<i>region</i>:<i>account-id</i>:accesspoint/<i>access-point-name</i> </code>
+     * Bucket ARN:
      * </p>
      * <p>
-     * If you specify a bucket attached to an access point, the bucket policy must be configured to delegate access
-     * control to the access point. For information, see <a href=
+     * <code>arn:aws:s3:::my-bucket/prefix/</code>
+     * </p>
+     * <p>
+     * Access point ARN:
+     * </p>
+     * <p>
+     * <code>arn:aws:s3:region:account-id:accesspoint/access-point-name/prefix/</code>
+     * </p>
+     * <p>
+     * If you specify an access point, the bucket policy must be configured to delegate access control to the access
+     * point. For information, see <a href=
      * "https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-points-policies.html#access-points-delegating-control"
      * >Delegating access control to access points</a> in the <i>Amazon S3 User Guide</i>.
+     * </p>
+     * <p>
+     * Access point alias:
+     * </p>
+     * <p>
+     * <code>test-ap-ab123cdef4gehijklmn5opqrstuvuse1a-s3alias</code>
      * </p>
      * </note>
      */
@@ -238,7 +253,8 @@ public class CreateSMBFileShareRequest extends com.amazonaws.AmazonWebServiceReq
      * </p>
      * <note>
      * <p>
-     * <code>FileShareName</code> must be set if an S3 prefix name is set in <code>LocationARN</code>.
+     * <code>FileShareName</code> must be set if an S3 prefix name is set in <code>LocationARN</code>, or if an access
+     * point or access point alias is used.
      * </p>
      * </note>
      */
@@ -579,40 +595,70 @@ public class CreateSMBFileShareRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The ARN of the backend storage used for storing file data. A prefix name can be added to the S3 bucket name. It
-     * must end with a "/".
+     * A custom ARN for the backend storage used for storing data for file shares. It includes a resource ARN with an
+     * optional prefix concatenation. The prefix must end with a forward slash (/).
      * </p>
      * <note>
      * <p>
-     * You can specify a bucket attached to an access point using a complete ARN that includes the bucket region as
-     * shown:
+     * You can specify LocationARN as a bucket ARN, access point ARN or access point alias, as shown in the following
+     * examples.
      * </p>
      * <p>
-     * <code>arn:aws:s3:<i>region</i>:<i>account-id</i>:accesspoint/<i>access-point-name</i> </code>
+     * Bucket ARN:
      * </p>
      * <p>
-     * If you specify a bucket attached to an access point, the bucket policy must be configured to delegate access
-     * control to the access point. For information, see <a href=
+     * <code>arn:aws:s3:::my-bucket/prefix/</code>
+     * </p>
+     * <p>
+     * Access point ARN:
+     * </p>
+     * <p>
+     * <code>arn:aws:s3:region:account-id:accesspoint/access-point-name/prefix/</code>
+     * </p>
+     * <p>
+     * If you specify an access point, the bucket policy must be configured to delegate access control to the access
+     * point. For information, see <a href=
      * "https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-points-policies.html#access-points-delegating-control"
      * >Delegating access control to access points</a> in the <i>Amazon S3 User Guide</i>.
+     * </p>
+     * <p>
+     * Access point alias:
+     * </p>
+     * <p>
+     * <code>test-ap-ab123cdef4gehijklmn5opqrstuvuse1a-s3alias</code>
      * </p>
      * </note>
      * 
      * @param locationARN
-     *        The ARN of the backend storage used for storing file data. A prefix name can be added to the S3 bucket
-     *        name. It must end with a "/".</p> <note>
+     *        A custom ARN for the backend storage used for storing data for file shares. It includes a resource ARN
+     *        with an optional prefix concatenation. The prefix must end with a forward slash (/).</p> <note>
      *        <p>
-     *        You can specify a bucket attached to an access point using a complete ARN that includes the bucket region
-     *        as shown:
+     *        You can specify LocationARN as a bucket ARN, access point ARN or access point alias, as shown in the
+     *        following examples.
      *        </p>
      *        <p>
-     *        <code>arn:aws:s3:<i>region</i>:<i>account-id</i>:accesspoint/<i>access-point-name</i> </code>
+     *        Bucket ARN:
      *        </p>
      *        <p>
-     *        If you specify a bucket attached to an access point, the bucket policy must be configured to delegate
-     *        access control to the access point. For information, see <a href=
+     *        <code>arn:aws:s3:::my-bucket/prefix/</code>
+     *        </p>
+     *        <p>
+     *        Access point ARN:
+     *        </p>
+     *        <p>
+     *        <code>arn:aws:s3:region:account-id:accesspoint/access-point-name/prefix/</code>
+     *        </p>
+     *        <p>
+     *        If you specify an access point, the bucket policy must be configured to delegate access control to the
+     *        access point. For information, see <a href=
      *        "https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-points-policies.html#access-points-delegating-control"
      *        >Delegating access control to access points</a> in the <i>Amazon S3 User Guide</i>.
+     *        </p>
+     *        <p>
+     *        Access point alias:
+     *        </p>
+     *        <p>
+     *        <code>test-ap-ab123cdef4gehijklmn5opqrstuvuse1a-s3alias</code>
      *        </p>
      */
 
@@ -622,39 +668,69 @@ public class CreateSMBFileShareRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The ARN of the backend storage used for storing file data. A prefix name can be added to the S3 bucket name. It
-     * must end with a "/".
+     * A custom ARN for the backend storage used for storing data for file shares. It includes a resource ARN with an
+     * optional prefix concatenation. The prefix must end with a forward slash (/).
      * </p>
      * <note>
      * <p>
-     * You can specify a bucket attached to an access point using a complete ARN that includes the bucket region as
-     * shown:
+     * You can specify LocationARN as a bucket ARN, access point ARN or access point alias, as shown in the following
+     * examples.
      * </p>
      * <p>
-     * <code>arn:aws:s3:<i>region</i>:<i>account-id</i>:accesspoint/<i>access-point-name</i> </code>
+     * Bucket ARN:
      * </p>
      * <p>
-     * If you specify a bucket attached to an access point, the bucket policy must be configured to delegate access
-     * control to the access point. For information, see <a href=
+     * <code>arn:aws:s3:::my-bucket/prefix/</code>
+     * </p>
+     * <p>
+     * Access point ARN:
+     * </p>
+     * <p>
+     * <code>arn:aws:s3:region:account-id:accesspoint/access-point-name/prefix/</code>
+     * </p>
+     * <p>
+     * If you specify an access point, the bucket policy must be configured to delegate access control to the access
+     * point. For information, see <a href=
      * "https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-points-policies.html#access-points-delegating-control"
      * >Delegating access control to access points</a> in the <i>Amazon S3 User Guide</i>.
      * </p>
+     * <p>
+     * Access point alias:
+     * </p>
+     * <p>
+     * <code>test-ap-ab123cdef4gehijklmn5opqrstuvuse1a-s3alias</code>
+     * </p>
      * </note>
      * 
-     * @return The ARN of the backend storage used for storing file data. A prefix name can be added to the S3 bucket
-     *         name. It must end with a "/".</p> <note>
+     * @return A custom ARN for the backend storage used for storing data for file shares. It includes a resource ARN
+     *         with an optional prefix concatenation. The prefix must end with a forward slash (/).</p> <note>
      *         <p>
-     *         You can specify a bucket attached to an access point using a complete ARN that includes the bucket region
-     *         as shown:
+     *         You can specify LocationARN as a bucket ARN, access point ARN or access point alias, as shown in the
+     *         following examples.
      *         </p>
      *         <p>
-     *         <code>arn:aws:s3:<i>region</i>:<i>account-id</i>:accesspoint/<i>access-point-name</i> </code>
+     *         Bucket ARN:
      *         </p>
      *         <p>
-     *         If you specify a bucket attached to an access point, the bucket policy must be configured to delegate
-     *         access control to the access point. For information, see <a href=
+     *         <code>arn:aws:s3:::my-bucket/prefix/</code>
+     *         </p>
+     *         <p>
+     *         Access point ARN:
+     *         </p>
+     *         <p>
+     *         <code>arn:aws:s3:region:account-id:accesspoint/access-point-name/prefix/</code>
+     *         </p>
+     *         <p>
+     *         If you specify an access point, the bucket policy must be configured to delegate access control to the
+     *         access point. For information, see <a href=
      *         "https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-points-policies.html#access-points-delegating-control"
      *         >Delegating access control to access points</a> in the <i>Amazon S3 User Guide</i>.
+     *         </p>
+     *         <p>
+     *         Access point alias:
+     *         </p>
+     *         <p>
+     *         <code>test-ap-ab123cdef4gehijklmn5opqrstuvuse1a-s3alias</code>
      *         </p>
      */
 
@@ -664,40 +740,70 @@ public class CreateSMBFileShareRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The ARN of the backend storage used for storing file data. A prefix name can be added to the S3 bucket name. It
-     * must end with a "/".
+     * A custom ARN for the backend storage used for storing data for file shares. It includes a resource ARN with an
+     * optional prefix concatenation. The prefix must end with a forward slash (/).
      * </p>
      * <note>
      * <p>
-     * You can specify a bucket attached to an access point using a complete ARN that includes the bucket region as
-     * shown:
+     * You can specify LocationARN as a bucket ARN, access point ARN or access point alias, as shown in the following
+     * examples.
      * </p>
      * <p>
-     * <code>arn:aws:s3:<i>region</i>:<i>account-id</i>:accesspoint/<i>access-point-name</i> </code>
+     * Bucket ARN:
      * </p>
      * <p>
-     * If you specify a bucket attached to an access point, the bucket policy must be configured to delegate access
-     * control to the access point. For information, see <a href=
+     * <code>arn:aws:s3:::my-bucket/prefix/</code>
+     * </p>
+     * <p>
+     * Access point ARN:
+     * </p>
+     * <p>
+     * <code>arn:aws:s3:region:account-id:accesspoint/access-point-name/prefix/</code>
+     * </p>
+     * <p>
+     * If you specify an access point, the bucket policy must be configured to delegate access control to the access
+     * point. For information, see <a href=
      * "https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-points-policies.html#access-points-delegating-control"
      * >Delegating access control to access points</a> in the <i>Amazon S3 User Guide</i>.
+     * </p>
+     * <p>
+     * Access point alias:
+     * </p>
+     * <p>
+     * <code>test-ap-ab123cdef4gehijklmn5opqrstuvuse1a-s3alias</code>
      * </p>
      * </note>
      * 
      * @param locationARN
-     *        The ARN of the backend storage used for storing file data. A prefix name can be added to the S3 bucket
-     *        name. It must end with a "/".</p> <note>
+     *        A custom ARN for the backend storage used for storing data for file shares. It includes a resource ARN
+     *        with an optional prefix concatenation. The prefix must end with a forward slash (/).</p> <note>
      *        <p>
-     *        You can specify a bucket attached to an access point using a complete ARN that includes the bucket region
-     *        as shown:
+     *        You can specify LocationARN as a bucket ARN, access point ARN or access point alias, as shown in the
+     *        following examples.
      *        </p>
      *        <p>
-     *        <code>arn:aws:s3:<i>region</i>:<i>account-id</i>:accesspoint/<i>access-point-name</i> </code>
+     *        Bucket ARN:
      *        </p>
      *        <p>
-     *        If you specify a bucket attached to an access point, the bucket policy must be configured to delegate
-     *        access control to the access point. For information, see <a href=
+     *        <code>arn:aws:s3:::my-bucket/prefix/</code>
+     *        </p>
+     *        <p>
+     *        Access point ARN:
+     *        </p>
+     *        <p>
+     *        <code>arn:aws:s3:region:account-id:accesspoint/access-point-name/prefix/</code>
+     *        </p>
+     *        <p>
+     *        If you specify an access point, the bucket policy must be configured to delegate access control to the
+     *        access point. For information, see <a href=
      *        "https://docs.aws.amazon.com/AmazonS3/latest/userguide/access-points-policies.html#access-points-delegating-control"
      *        >Delegating access control to access points</a> in the <i>Amazon S3 User Guide</i>.
+     *        </p>
+     *        <p>
+     *        Access point alias:
+     *        </p>
+     *        <p>
+     *        <code>test-ap-ab123cdef4gehijklmn5opqrstuvuse1a-s3alias</code>
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -1944,14 +2050,16 @@ public class CreateSMBFileShareRequest extends com.amazonaws.AmazonWebServiceReq
      * </p>
      * <note>
      * <p>
-     * <code>FileShareName</code> must be set if an S3 prefix name is set in <code>LocationARN</code>.
+     * <code>FileShareName</code> must be set if an S3 prefix name is set in <code>LocationARN</code>, or if an access
+     * point or access point alias is used.
      * </p>
      * </note>
      * 
      * @param fileShareName
      *        The name of the file share. Optional.</p> <note>
      *        <p>
-     *        <code>FileShareName</code> must be set if an S3 prefix name is set in <code>LocationARN</code>.
+     *        <code>FileShareName</code> must be set if an S3 prefix name is set in <code>LocationARN</code>, or if an
+     *        access point or access point alias is used.
      *        </p>
      */
 
@@ -1965,13 +2073,15 @@ public class CreateSMBFileShareRequest extends com.amazonaws.AmazonWebServiceReq
      * </p>
      * <note>
      * <p>
-     * <code>FileShareName</code> must be set if an S3 prefix name is set in <code>LocationARN</code>.
+     * <code>FileShareName</code> must be set if an S3 prefix name is set in <code>LocationARN</code>, or if an access
+     * point or access point alias is used.
      * </p>
      * </note>
      * 
      * @return The name of the file share. Optional.</p> <note>
      *         <p>
-     *         <code>FileShareName</code> must be set if an S3 prefix name is set in <code>LocationARN</code>.
+     *         <code>FileShareName</code> must be set if an S3 prefix name is set in <code>LocationARN</code>, or if an
+     *         access point or access point alias is used.
      *         </p>
      */
 
@@ -1985,14 +2095,16 @@ public class CreateSMBFileShareRequest extends com.amazonaws.AmazonWebServiceReq
      * </p>
      * <note>
      * <p>
-     * <code>FileShareName</code> must be set if an S3 prefix name is set in <code>LocationARN</code>.
+     * <code>FileShareName</code> must be set if an S3 prefix name is set in <code>LocationARN</code>, or if an access
+     * point or access point alias is used.
      * </p>
      * </note>
      * 
      * @param fileShareName
      *        The name of the file share. Optional.</p> <note>
      *        <p>
-     *        <code>FileShareName</code> must be set if an S3 prefix name is set in <code>LocationARN</code>.
+     *        <code>FileShareName</code> must be set if an S3 prefix name is set in <code>LocationARN</code>, or if an
+     *        access point or access point alias is used.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */

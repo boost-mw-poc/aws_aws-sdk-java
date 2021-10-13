@@ -56,7 +56,7 @@ public class OutputUpdate implements Serializable, Cloneable, StructuredPojo {
     private KinesisFirehoseOutputUpdate kinesisFirehoseOutputUpdate;
     /**
      * <p>
-     * Describes an AWS Lambda function as the destination for the output.
+     * Describes an Amazon Lambda function as the destination for the output.
      * </p>
      */
     private LambdaOutputUpdate lambdaOutputUpdate;
@@ -235,11 +235,11 @@ public class OutputUpdate implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Describes an AWS Lambda function as the destination for the output.
+     * Describes an Amazon Lambda function as the destination for the output.
      * </p>
      * 
      * @param lambdaOutputUpdate
-     *        Describes an AWS Lambda function as the destination for the output.
+     *        Describes an Amazon Lambda function as the destination for the output.
      */
 
     public void setLambdaOutputUpdate(LambdaOutputUpdate lambdaOutputUpdate) {
@@ -248,10 +248,10 @@ public class OutputUpdate implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Describes an AWS Lambda function as the destination for the output.
+     * Describes an Amazon Lambda function as the destination for the output.
      * </p>
      * 
-     * @return Describes an AWS Lambda function as the destination for the output.
+     * @return Describes an Amazon Lambda function as the destination for the output.
      */
 
     public LambdaOutputUpdate getLambdaOutputUpdate() {
@@ -260,11 +260,11 @@ public class OutputUpdate implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Describes an AWS Lambda function as the destination for the output.
+     * Describes an Amazon Lambda function as the destination for the output.
      * </p>
      * 
      * @param lambdaOutputUpdate
-     *        Describes an AWS Lambda function as the destination for the output.
+     *        Describes an Amazon Lambda function as the destination for the output.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

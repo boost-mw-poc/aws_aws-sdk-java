@@ -119,6 +119,11 @@ public class FlowLogStaxUnmarshaller implements Unmarshaller<FlowLog, StaxUnmars
                     flowLog.setMaxAggregationInterval(IntegerStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("destinationOptions", targetDepth)) {
+                    flowLog.setDestinationOptions(DestinationOptionsResponseStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return flowLog;

@@ -185,7 +185,8 @@ public class SMBFileShareInfo implements Serializable, Cloneable, StructuredPojo
      * </p>
      * <note>
      * <p>
-     * <code>FileShareName</code> must be set if an S3 prefix name is set in <code>LocationARN</code>.
+     * <code>FileShareName</code> must be set if an S3 prefix name is set in <code>LocationARN</code>, or if an access
+     * point or access point alias is used.
      * </p>
      * </note>
      */
@@ -1655,14 +1656,16 @@ public class SMBFileShareInfo implements Serializable, Cloneable, StructuredPojo
      * </p>
      * <note>
      * <p>
-     * <code>FileShareName</code> must be set if an S3 prefix name is set in <code>LocationARN</code>.
+     * <code>FileShareName</code> must be set if an S3 prefix name is set in <code>LocationARN</code>, or if an access
+     * point or access point alias is used.
      * </p>
      * </note>
      * 
      * @param fileShareName
      *        The name of the file share. Optional.</p> <note>
      *        <p>
-     *        <code>FileShareName</code> must be set if an S3 prefix name is set in <code>LocationARN</code>.
+     *        <code>FileShareName</code> must be set if an S3 prefix name is set in <code>LocationARN</code>, or if an
+     *        access point or access point alias is used.
      *        </p>
      */
 
@@ -1676,13 +1679,15 @@ public class SMBFileShareInfo implements Serializable, Cloneable, StructuredPojo
      * </p>
      * <note>
      * <p>
-     * <code>FileShareName</code> must be set if an S3 prefix name is set in <code>LocationARN</code>.
+     * <code>FileShareName</code> must be set if an S3 prefix name is set in <code>LocationARN</code>, or if an access
+     * point or access point alias is used.
      * </p>
      * </note>
      * 
      * @return The name of the file share. Optional.</p> <note>
      *         <p>
-     *         <code>FileShareName</code> must be set if an S3 prefix name is set in <code>LocationARN</code>.
+     *         <code>FileShareName</code> must be set if an S3 prefix name is set in <code>LocationARN</code>, or if an
+     *         access point or access point alias is used.
      *         </p>
      */
 
@@ -1696,14 +1701,16 @@ public class SMBFileShareInfo implements Serializable, Cloneable, StructuredPojo
      * </p>
      * <note>
      * <p>
-     * <code>FileShareName</code> must be set if an S3 prefix name is set in <code>LocationARN</code>.
+     * <code>FileShareName</code> must be set if an S3 prefix name is set in <code>LocationARN</code>, or if an access
+     * point or access point alias is used.
      * </p>
      * </note>
      * 
      * @param fileShareName
      *        The name of the file share. Optional.</p> <note>
      *        <p>
-     *        <code>FileShareName</code> must be set if an S3 prefix name is set in <code>LocationARN</code>.
+     *        <code>FileShareName</code> must be set if an S3 prefix name is set in <code>LocationARN</code>, or if an
+     *        access point or access point alias is used.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */

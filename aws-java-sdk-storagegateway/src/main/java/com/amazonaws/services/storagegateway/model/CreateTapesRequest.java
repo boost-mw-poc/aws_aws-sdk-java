@@ -31,7 +31,7 @@ public class CreateTapesRequest extends com.amazonaws.AmazonWebServiceRequest im
     /**
      * <p>
      * The unique Amazon Resource Name (ARN) that represents the gateway to associate the virtual tapes with. Use the
-     * <a>ListGateways</a> operation to return a list of gateways for your account and Region.
+     * <a>ListGateways</a> operation to return a list of gateways for your account and Amazon Web Services Region.
      * </p>
      */
     private String gatewayARN;
@@ -128,12 +128,13 @@ public class CreateTapesRequest extends com.amazonaws.AmazonWebServiceRequest im
     /**
      * <p>
      * The unique Amazon Resource Name (ARN) that represents the gateway to associate the virtual tapes with. Use the
-     * <a>ListGateways</a> operation to return a list of gateways for your account and Region.
+     * <a>ListGateways</a> operation to return a list of gateways for your account and Amazon Web Services Region.
      * </p>
      * 
      * @param gatewayARN
      *        The unique Amazon Resource Name (ARN) that represents the gateway to associate the virtual tapes with. Use
-     *        the <a>ListGateways</a> operation to return a list of gateways for your account and Region.
+     *        the <a>ListGateways</a> operation to return a list of gateways for your account and Amazon Web Services
+     *        Region.
      */
 
     public void setGatewayARN(String gatewayARN) {
@@ -143,11 +144,12 @@ public class CreateTapesRequest extends com.amazonaws.AmazonWebServiceRequest im
     /**
      * <p>
      * The unique Amazon Resource Name (ARN) that represents the gateway to associate the virtual tapes with. Use the
-     * <a>ListGateways</a> operation to return a list of gateways for your account and Region.
+     * <a>ListGateways</a> operation to return a list of gateways for your account and Amazon Web Services Region.
      * </p>
      * 
      * @return The unique Amazon Resource Name (ARN) that represents the gateway to associate the virtual tapes with.
-     *         Use the <a>ListGateways</a> operation to return a list of gateways for your account and Region.
+     *         Use the <a>ListGateways</a> operation to return a list of gateways for your account and Amazon Web
+     *         Services Region.
      */
 
     public String getGatewayARN() {
@@ -157,12 +159,13 @@ public class CreateTapesRequest extends com.amazonaws.AmazonWebServiceRequest im
     /**
      * <p>
      * The unique Amazon Resource Name (ARN) that represents the gateway to associate the virtual tapes with. Use the
-     * <a>ListGateways</a> operation to return a list of gateways for your account and Region.
+     * <a>ListGateways</a> operation to return a list of gateways for your account and Amazon Web Services Region.
      * </p>
      * 
      * @param gatewayARN
      *        The unique Amazon Resource Name (ARN) that represents the gateway to associate the virtual tapes with. Use
-     *        the <a>ListGateways</a> operation to return a list of gateways for your account and Region.
+     *        the <a>ListGateways</a> operation to return a list of gateways for your account and Amazon Web Services
+     *        Region.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

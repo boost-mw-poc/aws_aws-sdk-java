@@ -20,7 +20,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 /**
  * <p>
  * Updates to the configuration information required to deploy an Amazon Data Analytics Studio notebook as an
- * application with durable state..
+ * application with durable state.
  * </p>
  * 
  * @see <a

@@ -122,7 +122,7 @@ public interface AmazonKinesisAnalyticsV2Async extends AmazonKinesisAnalyticsV2 
      * <p>
      * Adds an <a>InputProcessingConfiguration</a> to a SQL-based Kinesis Data Analytics application. An input processor
      * pre-processes records on the input stream before the application's SQL code executes. Currently, the only input
-     * processor available is <a href="https://docs.aws.amazon.com/lambda/">AWS Lambda</a>.
+     * processor available is <a href="https://docs.aws.amazon.com/lambda/">Amazon Lambda</a>.
      * </p>
      * 
      * @param addApplicationInputProcessingConfigurationRequest
@@ -140,7 +140,7 @@ public interface AmazonKinesisAnalyticsV2Async extends AmazonKinesisAnalyticsV2 
      * <p>
      * Adds an <a>InputProcessingConfiguration</a> to a SQL-based Kinesis Data Analytics application. An input processor
      * pre-processes records on the input stream before the application's SQL code executes. Currently, the only input
-     * processor available is <a href="https://docs.aws.amazon.com/lambda/">AWS Lambda</a>.
+     * processor available is <a href="https://docs.aws.amazon.com/lambda/">Amazon Lambda</a>.
      * </p>
      * 
      * @param addApplicationInputProcessingConfigurationRequest
@@ -165,9 +165,9 @@ public interface AmazonKinesisAnalyticsV2Async extends AmazonKinesisAnalyticsV2 
      * </p>
      * <p>
      * If you want Kinesis Data Analytics to deliver data from an in-application stream within your application to an
-     * external destination (such as an Kinesis data stream, a Kinesis Data Firehose delivery stream, or an AWS Lambda
-     * function), you add the relevant configuration to your application using this operation. You can configure one or
-     * more outputs for your application. Each output configuration maps an in-application stream and an external
+     * external destination (such as an Kinesis data stream, a Kinesis Data Firehose delivery stream, or an Amazon
+     * Lambda function), you add the relevant configuration to your application using this operation. You can configure
+     * one or more outputs for your application. Each output configuration maps an in-application stream and an external
      * destination.
      * </p>
      * <p>
@@ -193,9 +193,9 @@ public interface AmazonKinesisAnalyticsV2Async extends AmazonKinesisAnalyticsV2 
      * </p>
      * <p>
      * If you want Kinesis Data Analytics to deliver data from an in-application stream within your application to an
-     * external destination (such as an Kinesis data stream, a Kinesis Data Firehose delivery stream, or an AWS Lambda
-     * function), you add the relevant configuration to your application using this operation. You can configure one or
-     * more outputs for your application. Each output configuration maps an in-application stream and an external
+     * external destination (such as an Kinesis data stream, a Kinesis Data Firehose delivery stream, or an Amazon
+     * Lambda function), you add the relevant configuration to your application using this operation. You can configure
+     * one or more outputs for your application. Each output configuration maps an in-application stream and an external
      * destination.
      * </p>
      * <p>

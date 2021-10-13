@@ -34,8 +34,8 @@ import com.amazonaws.auth.DefaultAWSCredentialsProviderChain;
  * <p>
  * Storage Gateway is the service that connects an on-premises software appliance with cloud-based storage to provide
  * seamless and secure integration between an organization's on-premises IT environment and the Amazon Web Services
- * storage infrastructure. The service enables you to securely upload data to the Cloud for cost effective backup and
- * rapid disaster recovery.
+ * storage infrastructure. The service enables you to securely upload data to the Amazon Web Services Cloud for cost
+ * effective backup and rapid disaster recovery.
  * </p>
  * <p>
  * Use the following links to get started using the <i>Storage Gateway Service API Reference</i>:
@@ -73,7 +73,7 @@ import com.amazonaws.auth.DefaultAWSCredentialsProviderChain;
  * <li>
  * <p>
  * <a href="https://docs.aws.amazon.com/general/latest/gr/sg.html">Storage Gateway endpoints and quotas</a>: Provides a
- * list of each Region and the endpoints available for use with Storage Gateway.
+ * list of each Amazon Web Services Region and the endpoints available for use with Storage Gateway.
  * </p>
  * </li>
  * </ul>
@@ -3259,6 +3259,39 @@ public class AWSStorageGatewayAsyncClient extends AWSStorageGatewayClient implem
 
                 try {
                     result = executeUpdateSMBFileShareVisibility(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateSMBLocalGroupsResult> updateSMBLocalGroupsAsync(UpdateSMBLocalGroupsRequest request) {
+
+        return updateSMBLocalGroupsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateSMBLocalGroupsResult> updateSMBLocalGroupsAsync(final UpdateSMBLocalGroupsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateSMBLocalGroupsRequest, UpdateSMBLocalGroupsResult> asyncHandler) {
+        final UpdateSMBLocalGroupsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateSMBLocalGroupsResult>() {
+            @Override
+            public UpdateSMBLocalGroupsResult call() throws Exception {
+                UpdateSMBLocalGroupsResult result = null;
+
+                try {
+                    result = executeUpdateSMBLocalGroups(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

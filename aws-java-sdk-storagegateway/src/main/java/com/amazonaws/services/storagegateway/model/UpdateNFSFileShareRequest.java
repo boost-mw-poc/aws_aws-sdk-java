@@ -153,14 +153,15 @@ public class UpdateNFSFileShareRequest extends com.amazonaws.AmazonWebServiceReq
      * </p>
      * <note>
      * <p>
-     * <code>FileShareName</code> must be set if an S3 prefix name is set in <code>LocationARN</code>.
+     * <code>FileShareName</code> must be set if an S3 prefix name is set in <code>LocationARN</code>, or if an access
+     * point or access point alias is used.
      * </p>
      * </note>
      */
     private String fileShareName;
     /**
      * <p>
-     * specifies refresh cache information for the file share.
+     * Specifies refresh cache information for the file share.
      * </p>
      */
     private CacheAttributes cacheAttributes;
@@ -191,6 +192,12 @@ public class UpdateNFSFileShareRequest extends com.amazonaws.AmazonWebServiceReq
      * </p>
      */
     private String notificationPolicy;
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the storage used for audit logs.
+     * </p>
+     */
+    private String auditDestinationARN;
 
     /**
      * <p>
@@ -1082,14 +1089,16 @@ public class UpdateNFSFileShareRequest extends com.amazonaws.AmazonWebServiceReq
      * </p>
      * <note>
      * <p>
-     * <code>FileShareName</code> must be set if an S3 prefix name is set in <code>LocationARN</code>.
+     * <code>FileShareName</code> must be set if an S3 prefix name is set in <code>LocationARN</code>, or if an access
+     * point or access point alias is used.
      * </p>
      * </note>
      * 
      * @param fileShareName
      *        The name of the file share. Optional.</p> <note>
      *        <p>
-     *        <code>FileShareName</code> must be set if an S3 prefix name is set in <code>LocationARN</code>.
+     *        <code>FileShareName</code> must be set if an S3 prefix name is set in <code>LocationARN</code>, or if an
+     *        access point or access point alias is used.
      *        </p>
      */
 
@@ -1103,13 +1112,15 @@ public class UpdateNFSFileShareRequest extends com.amazonaws.AmazonWebServiceReq
      * </p>
      * <note>
      * <p>
-     * <code>FileShareName</code> must be set if an S3 prefix name is set in <code>LocationARN</code>.
+     * <code>FileShareName</code> must be set if an S3 prefix name is set in <code>LocationARN</code>, or if an access
+     * point or access point alias is used.
      * </p>
      * </note>
      * 
      * @return The name of the file share. Optional.</p> <note>
      *         <p>
-     *         <code>FileShareName</code> must be set if an S3 prefix name is set in <code>LocationARN</code>.
+     *         <code>FileShareName</code> must be set if an S3 prefix name is set in <code>LocationARN</code>, or if an
+     *         access point or access point alias is used.
      *         </p>
      */
 
@@ -1123,14 +1134,16 @@ public class UpdateNFSFileShareRequest extends com.amazonaws.AmazonWebServiceReq
      * </p>
      * <note>
      * <p>
-     * <code>FileShareName</code> must be set if an S3 prefix name is set in <code>LocationARN</code>.
+     * <code>FileShareName</code> must be set if an S3 prefix name is set in <code>LocationARN</code>, or if an access
+     * point or access point alias is used.
      * </p>
      * </note>
      * 
      * @param fileShareName
      *        The name of the file share. Optional.</p> <note>
      *        <p>
-     *        <code>FileShareName</code> must be set if an S3 prefix name is set in <code>LocationARN</code>.
+     *        <code>FileShareName</code> must be set if an S3 prefix name is set in <code>LocationARN</code>, or if an
+     *        access point or access point alias is used.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -1142,11 +1155,11 @@ public class UpdateNFSFileShareRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * specifies refresh cache information for the file share.
+     * Specifies refresh cache information for the file share.
      * </p>
      * 
      * @param cacheAttributes
-     *        specifies refresh cache information for the file share.
+     *        Specifies refresh cache information for the file share.
      */
 
     public void setCacheAttributes(CacheAttributes cacheAttributes) {
@@ -1155,10 +1168,10 @@ public class UpdateNFSFileShareRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * specifies refresh cache information for the file share.
+     * Specifies refresh cache information for the file share.
      * </p>
      * 
-     * @return specifies refresh cache information for the file share.
+     * @return Specifies refresh cache information for the file share.
      */
 
     public CacheAttributes getCacheAttributes() {
@@ -1167,11 +1180,11 @@ public class UpdateNFSFileShareRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * specifies refresh cache information for the file share.
+     * Specifies refresh cache information for the file share.
      * </p>
      * 
      * @param cacheAttributes
-     *        specifies refresh cache information for the file share.
+     *        Specifies refresh cache information for the file share.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1347,6 +1360,46 @@ public class UpdateNFSFileShareRequest extends com.amazonaws.AmazonWebServiceReq
     }
 
     /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the storage used for audit logs.
+     * </p>
+     * 
+     * @param auditDestinationARN
+     *        The Amazon Resource Name (ARN) of the storage used for audit logs.
+     */
+
+    public void setAuditDestinationARN(String auditDestinationARN) {
+        this.auditDestinationARN = auditDestinationARN;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the storage used for audit logs.
+     * </p>
+     * 
+     * @return The Amazon Resource Name (ARN) of the storage used for audit logs.
+     */
+
+    public String getAuditDestinationARN() {
+        return this.auditDestinationARN;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the storage used for audit logs.
+     * </p>
+     * 
+     * @param auditDestinationARN
+     *        The Amazon Resource Name (ARN) of the storage used for audit logs.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateNFSFileShareRequest withAuditDestinationARN(String auditDestinationARN) {
+        setAuditDestinationARN(auditDestinationARN);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1385,7 +1438,9 @@ public class UpdateNFSFileShareRequest extends com.amazonaws.AmazonWebServiceReq
         if (getCacheAttributes() != null)
             sb.append("CacheAttributes: ").append(getCacheAttributes()).append(",");
         if (getNotificationPolicy() != null)
-            sb.append("NotificationPolicy: ").append(getNotificationPolicy());
+            sb.append("NotificationPolicy: ").append(getNotificationPolicy()).append(",");
+        if (getAuditDestinationARN() != null)
+            sb.append("AuditDestinationARN: ").append(getAuditDestinationARN());
         sb.append("}");
         return sb.toString();
     }
@@ -1456,6 +1511,10 @@ public class UpdateNFSFileShareRequest extends com.amazonaws.AmazonWebServiceReq
             return false;
         if (other.getNotificationPolicy() != null && other.getNotificationPolicy().equals(this.getNotificationPolicy()) == false)
             return false;
+        if (other.getAuditDestinationARN() == null ^ this.getAuditDestinationARN() == null)
+            return false;
+        if (other.getAuditDestinationARN() != null && other.getAuditDestinationARN().equals(this.getAuditDestinationARN()) == false)
+            return false;
         return true;
     }
 
@@ -1478,6 +1537,7 @@ public class UpdateNFSFileShareRequest extends com.amazonaws.AmazonWebServiceReq
         hashCode = prime * hashCode + ((getFileShareName() == null) ? 0 : getFileShareName().hashCode());
         hashCode = prime * hashCode + ((getCacheAttributes() == null) ? 0 : getCacheAttributes().hashCode());
         hashCode = prime * hashCode + ((getNotificationPolicy() == null) ? 0 : getNotificationPolicy().hashCode());
+        hashCode = prime * hashCode + ((getAuditDestinationARN() == null) ? 0 : getAuditDestinationARN().hashCode());
         return hashCode;
     }
 

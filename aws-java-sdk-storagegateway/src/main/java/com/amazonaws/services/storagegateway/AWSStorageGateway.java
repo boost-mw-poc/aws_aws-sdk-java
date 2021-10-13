@@ -30,8 +30,8 @@ import com.amazonaws.services.storagegateway.model.*;
  * <p>
  * Storage Gateway is the service that connects an on-premises software appliance with cloud-based storage to provide
  * seamless and secure integration between an organization's on-premises IT environment and the Amazon Web Services
- * storage infrastructure. The service enables you to securely upload data to the Cloud for cost effective backup and
- * rapid disaster recovery.
+ * storage infrastructure. The service enables you to securely upload data to the Amazon Web Services Cloud for cost
+ * effective backup and rapid disaster recovery.
  * </p>
  * <p>
  * Use the following links to get started using the <i>Storage Gateway Service API Reference</i>:
@@ -69,7 +69,7 @@ import com.amazonaws.services.storagegateway.model.*;
  * <li>
  * <p>
  * <a href="https://docs.aws.amazon.com/general/latest/gr/sg.html">Storage Gateway endpoints and quotas</a>: Provides a
- * list of each Region and the endpoints available for use with Storage Gateway.
+ * list of each Amazon Web Services Region and the endpoints available for use with Storage Gateway.
  * </p>
  * </li>
  * </ul>
@@ -168,9 +168,10 @@ public interface AWSStorageGateway {
     /**
      * <p>
      * Activates the gateway you previously deployed on your host. In the activation process, you specify information
-     * such as the Region that you want to use for storing snapshots or tapes, the time zone for scheduled snapshots the
-     * gateway snapshot schedule window, an activation key, and a name for your gateway. The activation process also
-     * associates your gateway with your account. For more information, see <a>UpdateGatewayInformation</a>.
+     * such as the Amazon Web Services Region that you want to use for storing snapshots or tapes, the time zone for
+     * scheduled snapshots the gateway snapshot schedule window, an activation key, and a name for your gateway. The
+     * activation process also associates your gateway with your account. For more information, see
+     * <a>UpdateGatewayInformation</a>.
      * </p>
      * <note>
      * <p>
@@ -526,11 +527,13 @@ public interface AWSStorageGateway {
      * </p>
      * <important>
      * <p>
-     * S3 File gateway requires Security Token Service (STS) to be activated to enable you to create a file share. Make
-     * sure STS is activated in the Region you are creating your S3 File Gateway in. If STS is not activated in the
-     * Region, activate it. For information about how to activate STS, see <a
+     * S3 File gateway requires Security Token Service (Amazon Web Services STS) to be activated to enable you to create
+     * a file share. Make sure Amazon Web Services STS is activated in the Amazon Web Services Region you are creating
+     * your S3 File Gateway in. If Amazon Web Services STS is not activated in the Amazon Web Services Region, activate
+     * it. For information about how to activate Amazon Web Services STS, see <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_enable-regions.html">Activating and
-     * deactivating STS in an Region</a> in the <i>Identity and Access Management User Guide</i>.
+     * deactivating Amazon Web Services STS in an Amazon Web Services Region</a> in the <i>Identity and Access
+     * Management User Guide</i>.
      * </p>
      * <p>
      * S3 File Gateways do not support creating hard or symbolic links on a file share.
@@ -560,11 +563,13 @@ public interface AWSStorageGateway {
      * </p>
      * <important>
      * <p>
-     * S3 File Gateways require Security Token Service (STS) to be activated to enable you to create a file share. Make
-     * sure that STS is activated in the Region you are creating your S3 File Gateway in. If STS is not activated in
-     * this Region, activate it. For information about how to activate STS, see <a
+     * S3 File Gateways require Security Token Service (Amazon Web Services STS) to be activated to enable you to create
+     * a file share. Make sure that Amazon Web Services STS is activated in the Amazon Web Services Region you are
+     * creating your S3 File Gateway in. If Amazon Web Services STS is not activated in this Amazon Web Services Region,
+     * activate it. For information about how to activate Amazon Web Services STS, see <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_enable-regions.html">Activating and
-     * deactivating STS in an Region</a> in the <i>Identity and Access Management User Guide</i>.
+     * deactivating Amazon Web Services STS in an Amazon Web Services Region</a> in the <i>Identity and Access
+     * Management User Guide</i>.
      * </p>
      * <p>
      * File gateways don't support creating hard or symbolic links on a file share.
@@ -1730,8 +1735,8 @@ public interface AWSStorageGateway {
 
     /**
      * <p>
-     * Lists gateways owned by an account in an Region specified in the request. The returned list is ordered by gateway
-     * Amazon Resource Name (ARN).
+     * Lists gateways owned by an Amazon Web Services account in an Amazon Web Services Region specified in the request.
+     * The returned list is ordered by gateway Amazon Resource Name (ARN).
      * </p>
      * <p>
      * By default, the operation returns a maximum of 100 gateways. This operation supports pagination that allows you
@@ -2669,11 +2674,13 @@ public interface AWSStorageGateway {
      * </p>
      * </note> <important>
      * <p>
-     * File gateways require Security Token Service (STS) to be activated to enable you to create a file share. Make
-     * sure that STS is activated in the Region you are creating your file gateway in. If STS is not activated in this
-     * Region, activate it. For information about how to activate STS, see <a
+     * File gateways require Security Token Service (Amazon Web Services STS) to be activated to enable you to create a
+     * file share. Make sure that Amazon Web Services STS is activated in the Amazon Web Services Region you are
+     * creating your file gateway in. If Amazon Web Services STS is not activated in this Amazon Web Services Region,
+     * activate it. For information about how to activate Amazon Web Services STS, see <a
      * href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_credentials_temp_enable-regions.html">Activating and
-     * deactivating STS in an Region</a> in the <i>Identity and Access Management User Guide</i>.
+     * deactivating Amazon Web Services STS in an Amazon Web Services Region</a> in the <i>Identity and Access
+     * Management User Guide</i>.
      * </p>
      * <p>
      * File gateways don't support creating hard or symbolic links on a file share.
@@ -2714,6 +2721,26 @@ public interface AWSStorageGateway {
      *      target="_top">AWS API Documentation</a>
      */
     UpdateSMBFileShareVisibilityResult updateSMBFileShareVisibility(UpdateSMBFileShareVisibilityRequest updateSMBFileShareVisibilityRequest);
+
+    /**
+     * <p>
+     * Updates the list of Active Directory users and groups that have special permissions for SMB file shares on the
+     * gateway.
+     * </p>
+     * 
+     * @param updateSMBLocalGroupsRequest
+     * @return Result of the UpdateSMBLocalGroups operation returned by the service.
+     * @throws InvalidGatewayRequestException
+     *         An exception occurred because an invalid gateway request was issued to the service. For more information,
+     *         see the error and message fields.
+     * @throws InternalServerErrorException
+     *         An internal server error has occurred during the request. For more information, see the error and message
+     *         fields.
+     * @sample AWSStorageGateway.UpdateSMBLocalGroups
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/storagegateway-2013-06-30/UpdateSMBLocalGroups"
+     *      target="_top">AWS API Documentation</a>
+     */
+    UpdateSMBLocalGroupsResult updateSMBLocalGroups(UpdateSMBLocalGroupsRequest updateSMBLocalGroupsRequest);
 
     /**
      * <p>

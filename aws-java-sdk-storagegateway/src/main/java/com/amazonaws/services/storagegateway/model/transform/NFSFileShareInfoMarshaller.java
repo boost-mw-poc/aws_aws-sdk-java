@@ -74,6 +74,8 @@ public class NFSFileShareInfoMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("VPCEndpointDNSName").build();
     private static final MarshallingInfo<String> BUCKETREGION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("BucketRegion").build();
+    private static final MarshallingInfo<String> AUDITDESTINATIONARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AuditDestinationARN").build();
 
     private static final NFSFileShareInfoMarshaller instance = new NFSFileShareInfoMarshaller();
 
@@ -114,6 +116,7 @@ public class NFSFileShareInfoMarshaller {
             protocolMarshaller.marshall(nFSFileShareInfo.getNotificationPolicy(), NOTIFICATIONPOLICY_BINDING);
             protocolMarshaller.marshall(nFSFileShareInfo.getVPCEndpointDNSName(), VPCENDPOINTDNSNAME_BINDING);
             protocolMarshaller.marshall(nFSFileShareInfo.getBucketRegion(), BUCKETREGION_BINDING);
+            protocolMarshaller.marshall(nFSFileShareInfo.getAuditDestinationARN(), AUDITDESTINATIONARN_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

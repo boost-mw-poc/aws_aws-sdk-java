@@ -128,6 +128,11 @@ public class AbstractAmazonWorkMail implements AmazonWorkMail {
     }
 
     @Override
+    public DeregisterMailDomainResult deregisterMailDomain(DeregisterMailDomainRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DescribeGroupResult describeGroup(DescribeGroupRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -178,6 +183,11 @@ public class AbstractAmazonWorkMail implements AmazonWorkMail {
     }
 
     @Override
+    public GetMailDomainResult getMailDomain(GetMailDomainRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetMailboxDetailsResult getMailboxDetails(GetMailboxDetailsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -209,6 +219,11 @@ public class AbstractAmazonWorkMail implements AmazonWorkMail {
 
     @Override
     public ListGroupsResult listGroups(ListGroupsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListMailDomainsResult listMailDomains(ListMailDomainsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -283,6 +298,11 @@ public class AbstractAmazonWorkMail implements AmazonWorkMail {
     }
 
     @Override
+    public RegisterMailDomainResult registerMailDomain(RegisterMailDomainRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public RegisterToWorkMailResult registerToWorkMail(RegisterToWorkMailRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -304,6 +324,11 @@ public class AbstractAmazonWorkMail implements AmazonWorkMail {
 
     @Override
     public UntagResourceResult untagResource(UntagResourceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateDefaultMailDomainResult updateDefaultMailDomain(UpdateDefaultMailDomainRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

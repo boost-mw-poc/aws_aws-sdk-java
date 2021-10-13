@@ -38,7 +38,7 @@ public class GatewayInfo implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The Amazon Resource Name (ARN) of the gateway. Use the <a>ListGateways</a> operation to return a list of gateways
-     * for your account and Region.
+     * for your account and Amazon Web Services Region.
      * </p>
      */
     private String gatewayARN;
@@ -71,7 +71,7 @@ public class GatewayInfo implements Serializable, Cloneable, StructuredPojo {
     private String ec2InstanceId;
     /**
      * <p>
-     * The Region where the Amazon EC2 instance is located.
+     * The Amazon Web Services Region where the Amazon EC2 instance is located.
      * </p>
      */
     private String ec2InstanceRegion;
@@ -125,12 +125,12 @@ public class GatewayInfo implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The Amazon Resource Name (ARN) of the gateway. Use the <a>ListGateways</a> operation to return a list of gateways
-     * for your account and Region.
+     * for your account and Amazon Web Services Region.
      * </p>
      * 
      * @param gatewayARN
      *        The Amazon Resource Name (ARN) of the gateway. Use the <a>ListGateways</a> operation to return a list of
-     *        gateways for your account and Region.
+     *        gateways for your account and Amazon Web Services Region.
      */
 
     public void setGatewayARN(String gatewayARN) {
@@ -140,11 +140,11 @@ public class GatewayInfo implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The Amazon Resource Name (ARN) of the gateway. Use the <a>ListGateways</a> operation to return a list of gateways
-     * for your account and Region.
+     * for your account and Amazon Web Services Region.
      * </p>
      * 
      * @return The Amazon Resource Name (ARN) of the gateway. Use the <a>ListGateways</a> operation to return a list of
-     *         gateways for your account and Region.
+     *         gateways for your account and Amazon Web Services Region.
      */
 
     public String getGatewayARN() {
@@ -154,12 +154,12 @@ public class GatewayInfo implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The Amazon Resource Name (ARN) of the gateway. Use the <a>ListGateways</a> operation to return a list of gateways
-     * for your account and Region.
+     * for your account and Amazon Web Services Region.
      * </p>
      * 
      * @param gatewayARN
      *        The Amazon Resource Name (ARN) of the gateway. Use the <a>ListGateways</a> operation to return a list of
-     *        gateways for your account and Region.
+     *        gateways for your account and Amazon Web Services Region.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -345,11 +345,11 @@ public class GatewayInfo implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Region where the Amazon EC2 instance is located.
+     * The Amazon Web Services Region where the Amazon EC2 instance is located.
      * </p>
      * 
      * @param ec2InstanceRegion
-     *        The Region where the Amazon EC2 instance is located.
+     *        The Amazon Web Services Region where the Amazon EC2 instance is located.
      */
 
     public void setEc2InstanceRegion(String ec2InstanceRegion) {
@@ -358,10 +358,10 @@ public class GatewayInfo implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Region where the Amazon EC2 instance is located.
+     * The Amazon Web Services Region where the Amazon EC2 instance is located.
      * </p>
      * 
-     * @return The Region where the Amazon EC2 instance is located.
+     * @return The Amazon Web Services Region where the Amazon EC2 instance is located.
      */
 
     public String getEc2InstanceRegion() {
@@ -370,11 +370,11 @@ public class GatewayInfo implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Region where the Amazon EC2 instance is located.
+     * The Amazon Web Services Region where the Amazon EC2 instance is located.
      * </p>
      * 
      * @param ec2InstanceRegion
-     *        The Region where the Amazon EC2 instance is located.
+     *        The Amazon Web Services Region where the Amazon EC2 instance is located.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

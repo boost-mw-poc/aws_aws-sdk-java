@@ -19,7 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Updates to
+ * Updates to the configuration parameters for the default Amazon Glue database. You use this database for SQL queries
+ * that you write in a Kinesis Data Analytics Studio notebook.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kinesisanalyticsv2-2018-05-23/CatalogConfigurationUpdate"
@@ -30,21 +31,21 @@ public class CatalogConfigurationUpdate implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * Updates to the configuration parameters for the default AWS Glue database. You use this database for SQL queries
-     * that you write in a Kinesis Data Analytics Studio notebook.
+     * Updates to the configuration parameters for the default Amazon Glue database. You use this database for SQL
+     * queries that you write in a Kinesis Data Analytics Studio notebook.
      * </p>
      */
     private GlueDataCatalogConfigurationUpdate glueDataCatalogConfigurationUpdate;
 
     /**
      * <p>
-     * Updates to the configuration parameters for the default AWS Glue database. You use this database for SQL queries
-     * that you write in a Kinesis Data Analytics Studio notebook.
+     * Updates to the configuration parameters for the default Amazon Glue database. You use this database for SQL
+     * queries that you write in a Kinesis Data Analytics Studio notebook.
      * </p>
      * 
      * @param glueDataCatalogConfigurationUpdate
-     *        Updates to the configuration parameters for the default AWS Glue database. You use this database for SQL
-     *        queries that you write in a Kinesis Data Analytics Studio notebook.
+     *        Updates to the configuration parameters for the default Amazon Glue database. You use this database for
+     *        SQL queries that you write in a Kinesis Data Analytics Studio notebook.
      */
 
     public void setGlueDataCatalogConfigurationUpdate(GlueDataCatalogConfigurationUpdate glueDataCatalogConfigurationUpdate) {
@@ -53,12 +54,12 @@ public class CatalogConfigurationUpdate implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * Updates to the configuration parameters for the default AWS Glue database. You use this database for SQL queries
-     * that you write in a Kinesis Data Analytics Studio notebook.
+     * Updates to the configuration parameters for the default Amazon Glue database. You use this database for SQL
+     * queries that you write in a Kinesis Data Analytics Studio notebook.
      * </p>
      * 
-     * @return Updates to the configuration parameters for the default AWS Glue database. You use this database for SQL
-     *         queries that you write in a Kinesis Data Analytics Studio notebook.
+     * @return Updates to the configuration parameters for the default Amazon Glue database. You use this database for
+     *         SQL queries that you write in a Kinesis Data Analytics Studio notebook.
      */
 
     public GlueDataCatalogConfigurationUpdate getGlueDataCatalogConfigurationUpdate() {
@@ -67,13 +68,13 @@ public class CatalogConfigurationUpdate implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * Updates to the configuration parameters for the default AWS Glue database. You use this database for SQL queries
-     * that you write in a Kinesis Data Analytics Studio notebook.
+     * Updates to the configuration parameters for the default Amazon Glue database. You use this database for SQL
+     * queries that you write in a Kinesis Data Analytics Studio notebook.
      * </p>
      * 
      * @param glueDataCatalogConfigurationUpdate
-     *        Updates to the configuration parameters for the default AWS Glue database. You use this database for SQL
-     *        queries that you write in a Kinesis Data Analytics Studio notebook.
+     *        Updates to the configuration parameters for the default Amazon Glue database. You use this database for
+     *        SQL queries that you write in a Kinesis Data Analytics Studio notebook.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

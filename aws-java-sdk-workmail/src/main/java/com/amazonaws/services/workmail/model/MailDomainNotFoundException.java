@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * For an email or alias to be created in Amazon WorkMail, the included domain must be defined in the organization.
+ * The domain specified is not found in your organization.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

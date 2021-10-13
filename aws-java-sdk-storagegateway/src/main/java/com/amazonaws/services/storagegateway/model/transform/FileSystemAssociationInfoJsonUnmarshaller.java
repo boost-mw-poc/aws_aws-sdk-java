@@ -82,6 +82,13 @@ public class FileSystemAssociationInfoJsonUnmarshaller implements Unmarshaller<F
                     context.nextToken();
                     fileSystemAssociationInfo.setEndpointNetworkConfiguration(EndpointNetworkConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("FileSystemAssociationStatusDetails", targetDepth)) {
+                    context.nextToken();
+                    fileSystemAssociationInfo.setFileSystemAssociationStatusDetails(new ListUnmarshaller<FileSystemAssociationStatusDetail>(
+                            FileSystemAssociationStatusDetailJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

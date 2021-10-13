@@ -124,6 +124,22 @@ public class CreateFlowLogsRequestMarshaller implements Marshaller<Request<Creat
             request.addParameter("MaxAggregationInterval", StringUtils.fromInteger(createFlowLogsRequest.getMaxAggregationInterval()));
         }
 
+        DestinationOptionsRequest destinationOptions = createFlowLogsRequest.getDestinationOptions();
+        if (destinationOptions != null) {
+
+            if (destinationOptions.getFileFormat() != null) {
+                request.addParameter("DestinationOptions.FileFormat", StringUtils.fromString(destinationOptions.getFileFormat()));
+            }
+
+            if (destinationOptions.getHiveCompatiblePartitions() != null) {
+                request.addParameter("DestinationOptions.HiveCompatiblePartitions", StringUtils.fromBoolean(destinationOptions.getHiveCompatiblePartitions()));
+            }
+
+            if (destinationOptions.getPerHourPartition() != null) {
+                request.addParameter("DestinationOptions.PerHourPartition", StringUtils.fromBoolean(destinationOptions.getPerHourPartition()));
+            }
+        }
+
         return request;
     }
 

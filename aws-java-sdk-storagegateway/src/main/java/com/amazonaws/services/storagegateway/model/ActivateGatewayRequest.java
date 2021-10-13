@@ -97,10 +97,11 @@ public class ActivateGatewayRequest extends com.amazonaws.AmazonWebServiceReques
     private String gatewayTimezone;
     /**
      * <p>
-     * A value that indicates the Region where you want to store your data. The gateway Region specified must be the
-     * same Region as the Region in your <code>Host</code> header in the request. For more information about available
-     * Regions and endpoints for Storage Gateway, see <a href="https://docs.aws.amazon.com/general/latest/gr/sg.html">
-     * Storage Gateway endpoints and quotas</a> in the <i>Amazon Web Services General Reference</i>.
+     * A value that indicates the Amazon Web Services Region where you want to store your data. The gateway Amazon Web
+     * Services Region specified must be the same Amazon Web Services Region as the Amazon Web Services Region in your
+     * <code>Host</code> header in the request. For more information about available Amazon Web Services Regions and
+     * endpoints for Storage Gateway, see <a href="https://docs.aws.amazon.com/general/latest/gr/sg.html"> Storage
+     * Gateway endpoints and quotas</a> in the <i>Amazon Web Services General Reference</i>.
      * </p>
      * <p>
      * Valid Values: See <a href="https://docs.aws.amazon.com/general/latest/gr/sg.html"> Storage Gateway endpoints and
@@ -342,10 +343,11 @@ public class ActivateGatewayRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * A value that indicates the Region where you want to store your data. The gateway Region specified must be the
-     * same Region as the Region in your <code>Host</code> header in the request. For more information about available
-     * Regions and endpoints for Storage Gateway, see <a href="https://docs.aws.amazon.com/general/latest/gr/sg.html">
-     * Storage Gateway endpoints and quotas</a> in the <i>Amazon Web Services General Reference</i>.
+     * A value that indicates the Amazon Web Services Region where you want to store your data. The gateway Amazon Web
+     * Services Region specified must be the same Amazon Web Services Region as the Amazon Web Services Region in your
+     * <code>Host</code> header in the request. For more information about available Amazon Web Services Regions and
+     * endpoints for Storage Gateway, see <a href="https://docs.aws.amazon.com/general/latest/gr/sg.html"> Storage
+     * Gateway endpoints and quotas</a> in the <i>Amazon Web Services General Reference</i>.
      * </p>
      * <p>
      * Valid Values: See <a href="https://docs.aws.amazon.com/general/latest/gr/sg.html"> Storage Gateway endpoints and
@@ -353,9 +355,10 @@ public class ActivateGatewayRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * 
      * @param gatewayRegion
-     *        A value that indicates the Region where you want to store your data. The gateway Region specified must be
-     *        the same Region as the Region in your <code>Host</code> header in the request. For more information about
-     *        available Regions and endpoints for Storage Gateway, see <a
+     *        A value that indicates the Amazon Web Services Region where you want to store your data. The gateway
+     *        Amazon Web Services Region specified must be the same Amazon Web Services Region as the Amazon Web
+     *        Services Region in your <code>Host</code> header in the request. For more information about available
+     *        Amazon Web Services Regions and endpoints for Storage Gateway, see <a
      *        href="https://docs.aws.amazon.com/general/latest/gr/sg.html"> Storage Gateway endpoints and quotas</a> in
      *        the <i>Amazon Web Services General Reference</i>.</p>
      *        <p>
@@ -369,19 +372,21 @@ public class ActivateGatewayRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * A value that indicates the Region where you want to store your data. The gateway Region specified must be the
-     * same Region as the Region in your <code>Host</code> header in the request. For more information about available
-     * Regions and endpoints for Storage Gateway, see <a href="https://docs.aws.amazon.com/general/latest/gr/sg.html">
-     * Storage Gateway endpoints and quotas</a> in the <i>Amazon Web Services General Reference</i>.
+     * A value that indicates the Amazon Web Services Region where you want to store your data. The gateway Amazon Web
+     * Services Region specified must be the same Amazon Web Services Region as the Amazon Web Services Region in your
+     * <code>Host</code> header in the request. For more information about available Amazon Web Services Regions and
+     * endpoints for Storage Gateway, see <a href="https://docs.aws.amazon.com/general/latest/gr/sg.html"> Storage
+     * Gateway endpoints and quotas</a> in the <i>Amazon Web Services General Reference</i>.
      * </p>
      * <p>
      * Valid Values: See <a href="https://docs.aws.amazon.com/general/latest/gr/sg.html"> Storage Gateway endpoints and
      * quotas</a> in the <i>Amazon Web Services General Reference</i>.
      * </p>
      * 
-     * @return A value that indicates the Region where you want to store your data. The gateway Region specified must be
-     *         the same Region as the Region in your <code>Host</code> header in the request. For more information about
-     *         available Regions and endpoints for Storage Gateway, see <a
+     * @return A value that indicates the Amazon Web Services Region where you want to store your data. The gateway
+     *         Amazon Web Services Region specified must be the same Amazon Web Services Region as the Amazon Web
+     *         Services Region in your <code>Host</code> header in the request. For more information about available
+     *         Amazon Web Services Regions and endpoints for Storage Gateway, see <a
      *         href="https://docs.aws.amazon.com/general/latest/gr/sg.html"> Storage Gateway endpoints and quotas</a> in
      *         the <i>Amazon Web Services General Reference</i>.</p>
      *         <p>
@@ -395,10 +400,11 @@ public class ActivateGatewayRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * A value that indicates the Region where you want to store your data. The gateway Region specified must be the
-     * same Region as the Region in your <code>Host</code> header in the request. For more information about available
-     * Regions and endpoints for Storage Gateway, see <a href="https://docs.aws.amazon.com/general/latest/gr/sg.html">
-     * Storage Gateway endpoints and quotas</a> in the <i>Amazon Web Services General Reference</i>.
+     * A value that indicates the Amazon Web Services Region where you want to store your data. The gateway Amazon Web
+     * Services Region specified must be the same Amazon Web Services Region as the Amazon Web Services Region in your
+     * <code>Host</code> header in the request. For more information about available Amazon Web Services Regions and
+     * endpoints for Storage Gateway, see <a href="https://docs.aws.amazon.com/general/latest/gr/sg.html"> Storage
+     * Gateway endpoints and quotas</a> in the <i>Amazon Web Services General Reference</i>.
      * </p>
      * <p>
      * Valid Values: See <a href="https://docs.aws.amazon.com/general/latest/gr/sg.html"> Storage Gateway endpoints and
@@ -406,9 +412,10 @@ public class ActivateGatewayRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * 
      * @param gatewayRegion
-     *        A value that indicates the Region where you want to store your data. The gateway Region specified must be
-     *        the same Region as the Region in your <code>Host</code> header in the request. For more information about
-     *        available Regions and endpoints for Storage Gateway, see <a
+     *        A value that indicates the Amazon Web Services Region where you want to store your data. The gateway
+     *        Amazon Web Services Region specified must be the same Amazon Web Services Region as the Amazon Web
+     *        Services Region in your <code>Host</code> header in the request. For more information about available
+     *        Amazon Web Services Regions and endpoints for Storage Gateway, see <a
      *        href="https://docs.aws.amazon.com/general/latest/gr/sg.html"> Storage Gateway endpoints and quotas</a> in
      *        the <i>Amazon Web Services General Reference</i>.</p>
      *        <p>

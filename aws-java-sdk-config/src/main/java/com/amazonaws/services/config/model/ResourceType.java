@@ -127,7 +127,8 @@ public enum ResourceType {
     AWSECSTaskDefinition("AWS::ECS::TaskDefinition"),
     AWSEFSAccessPoint("AWS::EFS::AccessPoint"),
     AWSEFSFileSystem("AWS::EFS::FileSystem"),
-    AWSEKSCluster("AWS::EKS::Cluster");
+    AWSEKSCluster("AWS::EKS::Cluster"),
+    AWSOpenSearchDomain("AWS::OpenSearch::Domain");
 
     private String value;
 

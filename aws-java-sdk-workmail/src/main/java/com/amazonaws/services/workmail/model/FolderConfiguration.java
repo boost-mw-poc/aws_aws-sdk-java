@@ -42,7 +42,7 @@ public class FolderConfiguration implements Serializable, Cloneable, StructuredP
     private String action;
     /**
      * <p>
-     * The period of time at which the folder configuration action is applied.
+     * The number of days for which the folder-configuration action applies.
      * </p>
      */
     private Integer period;
@@ -167,11 +167,11 @@ public class FolderConfiguration implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The period of time at which the folder configuration action is applied.
+     * The number of days for which the folder-configuration action applies.
      * </p>
      * 
      * @param period
-     *        The period of time at which the folder configuration action is applied.
+     *        The number of days for which the folder-configuration action applies.
      */
 
     public void setPeriod(Integer period) {
@@ -180,10 +180,10 @@ public class FolderConfiguration implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The period of time at which the folder configuration action is applied.
+     * The number of days for which the folder-configuration action applies.
      * </p>
      * 
-     * @return The period of time at which the folder configuration action is applied.
+     * @return The number of days for which the folder-configuration action applies.
      */
 
     public Integer getPeriod() {
@@ -192,11 +192,11 @@ public class FolderConfiguration implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The period of time at which the folder configuration action is applied.
+     * The number of days for which the folder-configuration action applies.
      * </p>
      * 
      * @param period
-     *        The period of time at which the folder configuration action is applied.
+     *        The number of days for which the folder-configuration action applies.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

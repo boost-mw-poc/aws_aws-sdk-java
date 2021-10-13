@@ -44,6 +44,8 @@ public class FileSystemAssociationInfoMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CacheAttributes").build();
     private static final MarshallingInfo<StructuredPojo> ENDPOINTNETWORKCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EndpointNetworkConfiguration").build();
+    private static final MarshallingInfo<List> FILESYSTEMASSOCIATIONSTATUSDETAILS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("FileSystemAssociationStatusDetails").build();
 
     private static final FileSystemAssociationInfoMarshaller instance = new FileSystemAssociationInfoMarshaller();
 
@@ -69,6 +71,7 @@ public class FileSystemAssociationInfoMarshaller {
             protocolMarshaller.marshall(fileSystemAssociationInfo.getTags(), TAGS_BINDING);
             protocolMarshaller.marshall(fileSystemAssociationInfo.getCacheAttributes(), CACHEATTRIBUTES_BINDING);
             protocolMarshaller.marshall(fileSystemAssociationInfo.getEndpointNetworkConfiguration(), ENDPOINTNETWORKCONFIGURATION_BINDING);
+            protocolMarshaller.marshall(fileSystemAssociationInfo.getFileSystemAssociationStatusDetails(), FILESYSTEMASSOCIATIONSTATUSDETAILS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -125,7 +125,8 @@ public class NFSFileShareInfo implements Serializable, Cloneable, StructuredPojo
      * </p>
      * <note>
      * <p>
-     * <code>FileShareName</code> must be set if an S3 prefix name is set in <code>LocationARN</code>.
+     * <code>FileShareName</code> must be set if an S3 prefix name is set in <code>LocationARN</code>, or if an access
+     * point or access point alias is used.
      * </p>
      * </note>
      */
@@ -187,6 +188,12 @@ public class NFSFileShareInfo implements Serializable, Cloneable, StructuredPojo
      * </note>
      */
     private String bucketRegion;
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the storage used for audit logs.
+     * </p>
+     */
+    private String auditDestinationARN;
 
     /**
      * @param nFSFileShareDefaults
@@ -1085,14 +1092,16 @@ public class NFSFileShareInfo implements Serializable, Cloneable, StructuredPojo
      * </p>
      * <note>
      * <p>
-     * <code>FileShareName</code> must be set if an S3 prefix name is set in <code>LocationARN</code>.
+     * <code>FileShareName</code> must be set if an S3 prefix name is set in <code>LocationARN</code>, or if an access
+     * point or access point alias is used.
      * </p>
      * </note>
      * 
      * @param fileShareName
      *        The name of the file share. Optional.</p> <note>
      *        <p>
-     *        <code>FileShareName</code> must be set if an S3 prefix name is set in <code>LocationARN</code>.
+     *        <code>FileShareName</code> must be set if an S3 prefix name is set in <code>LocationARN</code>, or if an
+     *        access point or access point alias is used.
      *        </p>
      */
 
@@ -1106,13 +1115,15 @@ public class NFSFileShareInfo implements Serializable, Cloneable, StructuredPojo
      * </p>
      * <note>
      * <p>
-     * <code>FileShareName</code> must be set if an S3 prefix name is set in <code>LocationARN</code>.
+     * <code>FileShareName</code> must be set if an S3 prefix name is set in <code>LocationARN</code>, or if an access
+     * point or access point alias is used.
      * </p>
      * </note>
      * 
      * @return The name of the file share. Optional.</p> <note>
      *         <p>
-     *         <code>FileShareName</code> must be set if an S3 prefix name is set in <code>LocationARN</code>.
+     *         <code>FileShareName</code> must be set if an S3 prefix name is set in <code>LocationARN</code>, or if an
+     *         access point or access point alias is used.
      *         </p>
      */
 
@@ -1126,14 +1137,16 @@ public class NFSFileShareInfo implements Serializable, Cloneable, StructuredPojo
      * </p>
      * <note>
      * <p>
-     * <code>FileShareName</code> must be set if an S3 prefix name is set in <code>LocationARN</code>.
+     * <code>FileShareName</code> must be set if an S3 prefix name is set in <code>LocationARN</code>, or if an access
+     * point or access point alias is used.
      * </p>
      * </note>
      * 
      * @param fileShareName
      *        The name of the file share. Optional.</p> <note>
      *        <p>
-     *        <code>FileShareName</code> must be set if an S3 prefix name is set in <code>LocationARN</code>.
+     *        <code>FileShareName</code> must be set if an S3 prefix name is set in <code>LocationARN</code>, or if an
+     *        access point or access point alias is used.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -1493,6 +1506,46 @@ public class NFSFileShareInfo implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the storage used for audit logs.
+     * </p>
+     * 
+     * @param auditDestinationARN
+     *        The Amazon Resource Name (ARN) of the storage used for audit logs.
+     */
+
+    public void setAuditDestinationARN(String auditDestinationARN) {
+        this.auditDestinationARN = auditDestinationARN;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the storage used for audit logs.
+     * </p>
+     * 
+     * @return The Amazon Resource Name (ARN) of the storage used for audit logs.
+     */
+
+    public String getAuditDestinationARN() {
+        return this.auditDestinationARN;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the storage used for audit logs.
+     * </p>
+     * 
+     * @param auditDestinationARN
+     *        The Amazon Resource Name (ARN) of the storage used for audit logs.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public NFSFileShareInfo withAuditDestinationARN(String auditDestinationARN) {
+        setAuditDestinationARN(auditDestinationARN);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1549,7 +1602,9 @@ public class NFSFileShareInfo implements Serializable, Cloneable, StructuredPojo
         if (getVPCEndpointDNSName() != null)
             sb.append("VPCEndpointDNSName: ").append(getVPCEndpointDNSName()).append(",");
         if (getBucketRegion() != null)
-            sb.append("BucketRegion: ").append(getBucketRegion());
+            sb.append("BucketRegion: ").append(getBucketRegion()).append(",");
+        if (getAuditDestinationARN() != null)
+            sb.append("AuditDestinationARN: ").append(getAuditDestinationARN());
         sb.append("}");
         return sb.toString();
     }
@@ -1656,6 +1711,10 @@ public class NFSFileShareInfo implements Serializable, Cloneable, StructuredPojo
             return false;
         if (other.getBucketRegion() != null && other.getBucketRegion().equals(this.getBucketRegion()) == false)
             return false;
+        if (other.getAuditDestinationARN() == null ^ this.getAuditDestinationARN() == null)
+            return false;
+        if (other.getAuditDestinationARN() != null && other.getAuditDestinationARN().equals(this.getAuditDestinationARN()) == false)
+            return false;
         return true;
     }
 
@@ -1687,6 +1746,7 @@ public class NFSFileShareInfo implements Serializable, Cloneable, StructuredPojo
         hashCode = prime * hashCode + ((getNotificationPolicy() == null) ? 0 : getNotificationPolicy().hashCode());
         hashCode = prime * hashCode + ((getVPCEndpointDNSName() == null) ? 0 : getVPCEndpointDNSName().hashCode());
         hashCode = prime * hashCode + ((getBucketRegion() == null) ? 0 : getBucketRegion().hashCode());
+        hashCode = prime * hashCode + ((getAuditDestinationARN() == null) ? 0 : getAuditDestinationARN().hashCode());
         return hashCode;
     }
 

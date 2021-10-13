@@ -488,6 +488,11 @@ public class AbstractAWSStorageGateway implements AWSStorageGateway {
     }
 
     @Override
+    public UpdateSMBLocalGroupsResult updateSMBLocalGroups(UpdateSMBLocalGroupsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public UpdateSMBSecurityStrategyResult updateSMBSecurityStrategy(UpdateSMBSecurityStrategyRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

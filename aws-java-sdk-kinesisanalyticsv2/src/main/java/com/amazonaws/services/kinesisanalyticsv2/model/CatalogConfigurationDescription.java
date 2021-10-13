@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The configuration parameters for the default AWS Glue database. You use this database for Apache Flink SQL queries
+ * The configuration parameters for the default Amazon Glue database. You use this database for Apache Flink SQL queries
  * and table API transforms that you write in a Kinesis Data Analytics Studio notebook.
  * </p>
  * 
@@ -31,7 +31,7 @@ public class CatalogConfigurationDescription implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The configuration parameters for the default AWS Glue database. You use this database for SQL queries that you
+     * The configuration parameters for the default Amazon Glue database. You use this database for SQL queries that you
      * write in a Kinesis Data Analytics Studio notebook.
      * </p>
      */
@@ -39,13 +39,13 @@ public class CatalogConfigurationDescription implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The configuration parameters for the default AWS Glue database. You use this database for SQL queries that you
+     * The configuration parameters for the default Amazon Glue database. You use this database for SQL queries that you
      * write in a Kinesis Data Analytics Studio notebook.
      * </p>
      * 
      * @param glueDataCatalogConfigurationDescription
-     *        The configuration parameters for the default AWS Glue database. You use this database for SQL queries that
-     *        you write in a Kinesis Data Analytics Studio notebook.
+     *        The configuration parameters for the default Amazon Glue database. You use this database for SQL queries
+     *        that you write in a Kinesis Data Analytics Studio notebook.
      */
 
     public void setGlueDataCatalogConfigurationDescription(GlueDataCatalogConfigurationDescription glueDataCatalogConfigurationDescription) {
@@ -54,11 +54,11 @@ public class CatalogConfigurationDescription implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The configuration parameters for the default AWS Glue database. You use this database for SQL queries that you
+     * The configuration parameters for the default Amazon Glue database. You use this database for SQL queries that you
      * write in a Kinesis Data Analytics Studio notebook.
      * </p>
      * 
-     * @return The configuration parameters for the default AWS Glue database. You use this database for SQL queries
+     * @return The configuration parameters for the default Amazon Glue database. You use this database for SQL queries
      *         that you write in a Kinesis Data Analytics Studio notebook.
      */
 
@@ -68,13 +68,13 @@ public class CatalogConfigurationDescription implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The configuration parameters for the default AWS Glue database. You use this database for SQL queries that you
+     * The configuration parameters for the default Amazon Glue database. You use this database for SQL queries that you
      * write in a Kinesis Data Analytics Studio notebook.
      * </p>
      * 
      * @param glueDataCatalogConfigurationDescription
-     *        The configuration parameters for the default AWS Glue database. You use this database for SQL queries that
-     *        you write in a Kinesis Data Analytics Studio notebook.
+     *        The configuration parameters for the default Amazon Glue database. You use this database for SQL queries
+     *        that you write in a Kinesis Data Analytics Studio notebook.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
