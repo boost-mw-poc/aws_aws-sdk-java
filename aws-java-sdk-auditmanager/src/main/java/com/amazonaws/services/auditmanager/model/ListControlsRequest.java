@@ -27,30 +27,30 @@ public class ListControlsRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The type of control, such as standard or custom.
+     * The type of control, such as a standard control or a custom control.
      * </p>
      */
     private String controlType;
     /**
      * <p>
-     * The pagination token used to fetch the next set of results.
+     * The pagination token that's used to fetch the next set of results.
      * </p>
      */
     private String nextToken;
     /**
      * <p>
-     * Represents the maximum number of results per page, or per API request call.
+     * Represents the maximum number of results on a page or for an API request call.
      * </p>
      */
     private Integer maxResults;
 
     /**
      * <p>
-     * The type of control, such as standard or custom.
+     * The type of control, such as a standard control or a custom control.
      * </p>
      * 
      * @param controlType
-     *        The type of control, such as standard or custom.
+     *        The type of control, such as a standard control or a custom control.
      * @see ControlType
      */
 
@@ -60,10 +60,10 @@ public class ListControlsRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The type of control, such as standard or custom.
+     * The type of control, such as a standard control or a custom control.
      * </p>
      * 
-     * @return The type of control, such as standard or custom.
+     * @return The type of control, such as a standard control or a custom control.
      * @see ControlType
      */
 
@@ -73,11 +73,11 @@ public class ListControlsRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The type of control, such as standard or custom.
+     * The type of control, such as a standard control or a custom control.
      * </p>
      * 
      * @param controlType
-     *        The type of control, such as standard or custom.
+     *        The type of control, such as a standard control or a custom control.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ControlType
      */
@@ -89,11 +89,11 @@ public class ListControlsRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The type of control, such as standard or custom.
+     * The type of control, such as a standard control or a custom control.
      * </p>
      * 
      * @param controlType
-     *        The type of control, such as standard or custom.
+     *        The type of control, such as a standard control or a custom control.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ControlType
      */
@@ -105,11 +105,11 @@ public class ListControlsRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The pagination token used to fetch the next set of results.
+     * The pagination token that's used to fetch the next set of results.
      * </p>
      * 
      * @param nextToken
-     *        The pagination token used to fetch the next set of results.
+     *        The pagination token that's used to fetch the next set of results.
      */
 
     public void setNextToken(String nextToken) {
@@ -118,10 +118,10 @@ public class ListControlsRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The pagination token used to fetch the next set of results.
+     * The pagination token that's used to fetch the next set of results.
      * </p>
      * 
-     * @return The pagination token used to fetch the next set of results.
+     * @return The pagination token that's used to fetch the next set of results.
      */
 
     public String getNextToken() {
@@ -130,11 +130,11 @@ public class ListControlsRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The pagination token used to fetch the next set of results.
+     * The pagination token that's used to fetch the next set of results.
      * </p>
      * 
      * @param nextToken
-     *        The pagination token used to fetch the next set of results.
+     *        The pagination token that's used to fetch the next set of results.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -145,11 +145,11 @@ public class ListControlsRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * Represents the maximum number of results per page, or per API request call.
+     * Represents the maximum number of results on a page or for an API request call.
      * </p>
      * 
      * @param maxResults
-     *        Represents the maximum number of results per page, or per API request call.
+     *        Represents the maximum number of results on a page or for an API request call.
      */
 
     public void setMaxResults(Integer maxResults) {
@@ -158,10 +158,10 @@ public class ListControlsRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * Represents the maximum number of results per page, or per API request call.
+     * Represents the maximum number of results on a page or for an API request call.
      * </p>
      * 
-     * @return Represents the maximum number of results per page, or per API request call.
+     * @return Represents the maximum number of results on a page or for an API request call.
      */
 
     public Integer getMaxResults() {
@@ -170,11 +170,11 @@ public class ListControlsRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * Represents the maximum number of results per page, or per API request call.
+     * Represents the maximum number of results on a page or for an API request call.
      * </p>
      * 
      * @param maxResults
-     *        Represents the maximum number of results per page, or per API request call.
+     *        Represents the maximum number of results on a page or for an API request call.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

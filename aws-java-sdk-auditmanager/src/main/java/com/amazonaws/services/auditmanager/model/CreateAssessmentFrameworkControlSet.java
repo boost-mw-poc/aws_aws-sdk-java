@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A <code>controlSet</code> entity that represents a collection of controls in Audit Manager. This does not contain the
+ * A <code>controlSet</code> entity that represents a collection of controls in Audit Manager. This doesn't contain the
  * control set ID.
  * </p>
  * 
@@ -31,24 +31,24 @@ public class CreateAssessmentFrameworkControlSet implements Serializable, Clonea
 
     /**
      * <p>
-     * The name of the specified control set.
+     * The name of the control set.
      * </p>
      */
     private String name;
     /**
      * <p>
-     * The list of controls within the control set. This does not contain the control set ID.
+     * The list of controls within the control set. This doesn't contain the control set ID.
      * </p>
      */
     private java.util.List<CreateAssessmentFrameworkControl> controls;
 
     /**
      * <p>
-     * The name of the specified control set.
+     * The name of the control set.
      * </p>
      * 
      * @param name
-     *        The name of the specified control set.
+     *        The name of the control set.
      */
 
     public void setName(String name) {
@@ -57,10 +57,10 @@ public class CreateAssessmentFrameworkControlSet implements Serializable, Clonea
 
     /**
      * <p>
-     * The name of the specified control set.
+     * The name of the control set.
      * </p>
      * 
-     * @return The name of the specified control set.
+     * @return The name of the control set.
      */
 
     public String getName() {
@@ -69,11 +69,11 @@ public class CreateAssessmentFrameworkControlSet implements Serializable, Clonea
 
     /**
      * <p>
-     * The name of the specified control set.
+     * The name of the control set.
      * </p>
      * 
      * @param name
-     *        The name of the specified control set.
+     *        The name of the control set.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -84,10 +84,10 @@ public class CreateAssessmentFrameworkControlSet implements Serializable, Clonea
 
     /**
      * <p>
-     * The list of controls within the control set. This does not contain the control set ID.
+     * The list of controls within the control set. This doesn't contain the control set ID.
      * </p>
      * 
-     * @return The list of controls within the control set. This does not contain the control set ID.
+     * @return The list of controls within the control set. This doesn't contain the control set ID.
      */
 
     public java.util.List<CreateAssessmentFrameworkControl> getControls() {
@@ -96,11 +96,11 @@ public class CreateAssessmentFrameworkControlSet implements Serializable, Clonea
 
     /**
      * <p>
-     * The list of controls within the control set. This does not contain the control set ID.
+     * The list of controls within the control set. This doesn't contain the control set ID.
      * </p>
      * 
      * @param controls
-     *        The list of controls within the control set. This does not contain the control set ID.
+     *        The list of controls within the control set. This doesn't contain the control set ID.
      */
 
     public void setControls(java.util.Collection<CreateAssessmentFrameworkControl> controls) {
@@ -114,7 +114,7 @@ public class CreateAssessmentFrameworkControlSet implements Serializable, Clonea
 
     /**
      * <p>
-     * The list of controls within the control set. This does not contain the control set ID.
+     * The list of controls within the control set. This doesn't contain the control set ID.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -123,7 +123,7 @@ public class CreateAssessmentFrameworkControlSet implements Serializable, Clonea
      * </p>
      * 
      * @param controls
-     *        The list of controls within the control set. This does not contain the control set ID.
+     *        The list of controls within the control set. This doesn't contain the control set ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -139,11 +139,11 @@ public class CreateAssessmentFrameworkControlSet implements Serializable, Clonea
 
     /**
      * <p>
-     * The list of controls within the control set. This does not contain the control set ID.
+     * The list of controls within the control set. This doesn't contain the control set ID.
      * </p>
      * 
      * @param controls
-     *        The list of controls within the control set. This does not contain the control set ID.
+     *        The list of controls within the control set. This doesn't contain the control set ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

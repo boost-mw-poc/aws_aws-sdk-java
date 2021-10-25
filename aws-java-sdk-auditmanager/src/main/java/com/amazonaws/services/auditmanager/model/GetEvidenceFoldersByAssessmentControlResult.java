@@ -26,23 +26,23 @@ public class GetEvidenceFoldersByAssessmentControlResult extends com.amazonaws.A
 
     /**
      * <p>
-     * The list of evidence folders returned by the <code>GetEvidenceFoldersByAssessmentControl</code> API.
+     * The list of evidence folders that the <code>GetEvidenceFoldersByAssessmentControl</code> API returned.
      * </p>
      */
     private java.util.List<AssessmentEvidenceFolder> evidenceFolders;
     /**
      * <p>
-     * The pagination token used to fetch the next set of results.
+     * The pagination token that's used to fetch the next set of results.
      * </p>
      */
     private String nextToken;
 
     /**
      * <p>
-     * The list of evidence folders returned by the <code>GetEvidenceFoldersByAssessmentControl</code> API.
+     * The list of evidence folders that the <code>GetEvidenceFoldersByAssessmentControl</code> API returned.
      * </p>
      * 
-     * @return The list of evidence folders returned by the <code>GetEvidenceFoldersByAssessmentControl</code> API.
+     * @return The list of evidence folders that the <code>GetEvidenceFoldersByAssessmentControl</code> API returned.
      */
 
     public java.util.List<AssessmentEvidenceFolder> getEvidenceFolders() {
@@ -51,11 +51,11 @@ public class GetEvidenceFoldersByAssessmentControlResult extends com.amazonaws.A
 
     /**
      * <p>
-     * The list of evidence folders returned by the <code>GetEvidenceFoldersByAssessmentControl</code> API.
+     * The list of evidence folders that the <code>GetEvidenceFoldersByAssessmentControl</code> API returned.
      * </p>
      * 
      * @param evidenceFolders
-     *        The list of evidence folders returned by the <code>GetEvidenceFoldersByAssessmentControl</code> API.
+     *        The list of evidence folders that the <code>GetEvidenceFoldersByAssessmentControl</code> API returned.
      */
 
     public void setEvidenceFolders(java.util.Collection<AssessmentEvidenceFolder> evidenceFolders) {
@@ -69,7 +69,7 @@ public class GetEvidenceFoldersByAssessmentControlResult extends com.amazonaws.A
 
     /**
      * <p>
-     * The list of evidence folders returned by the <code>GetEvidenceFoldersByAssessmentControl</code> API.
+     * The list of evidence folders that the <code>GetEvidenceFoldersByAssessmentControl</code> API returned.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -78,7 +78,7 @@ public class GetEvidenceFoldersByAssessmentControlResult extends com.amazonaws.A
      * </p>
      * 
      * @param evidenceFolders
-     *        The list of evidence folders returned by the <code>GetEvidenceFoldersByAssessmentControl</code> API.
+     *        The list of evidence folders that the <code>GetEvidenceFoldersByAssessmentControl</code> API returned.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -94,11 +94,11 @@ public class GetEvidenceFoldersByAssessmentControlResult extends com.amazonaws.A
 
     /**
      * <p>
-     * The list of evidence folders returned by the <code>GetEvidenceFoldersByAssessmentControl</code> API.
+     * The list of evidence folders that the <code>GetEvidenceFoldersByAssessmentControl</code> API returned.
      * </p>
      * 
      * @param evidenceFolders
-     *        The list of evidence folders returned by the <code>GetEvidenceFoldersByAssessmentControl</code> API.
+     *        The list of evidence folders that the <code>GetEvidenceFoldersByAssessmentControl</code> API returned.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -109,11 +109,11 @@ public class GetEvidenceFoldersByAssessmentControlResult extends com.amazonaws.A
 
     /**
      * <p>
-     * The pagination token used to fetch the next set of results.
+     * The pagination token that's used to fetch the next set of results.
      * </p>
      * 
      * @param nextToken
-     *        The pagination token used to fetch the next set of results.
+     *        The pagination token that's used to fetch the next set of results.
      */
 
     public void setNextToken(String nextToken) {
@@ -122,10 +122,10 @@ public class GetEvidenceFoldersByAssessmentControlResult extends com.amazonaws.A
 
     /**
      * <p>
-     * The pagination token used to fetch the next set of results.
+     * The pagination token that's used to fetch the next set of results.
      * </p>
      * 
-     * @return The pagination token used to fetch the next set of results.
+     * @return The pagination token that's used to fetch the next set of results.
      */
 
     public String getNextToken() {
@@ -134,11 +134,11 @@ public class GetEvidenceFoldersByAssessmentControlResult extends com.amazonaws.A
 
     /**
      * <p>
-     * The pagination token used to fetch the next set of results.
+     * The pagination token that's used to fetch the next set of results.
      * </p>
      * 
      * @param nextToken
-     *        The pagination token used to fetch the next set of results.
+     *        The pagination token that's used to fetch the next set of results.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

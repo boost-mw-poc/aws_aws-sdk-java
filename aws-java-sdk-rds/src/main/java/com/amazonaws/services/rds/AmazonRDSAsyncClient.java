@@ -788,6 +788,39 @@ public class AmazonRDSAsyncClient extends AmazonRDSClient implements AmazonRDSAs
     }
 
     @Override
+    public java.util.concurrent.Future<CreateCustomDBEngineVersionResult> createCustomDBEngineVersionAsync(CreateCustomDBEngineVersionRequest request) {
+
+        return createCustomDBEngineVersionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateCustomDBEngineVersionResult> createCustomDBEngineVersionAsync(final CreateCustomDBEngineVersionRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateCustomDBEngineVersionRequest, CreateCustomDBEngineVersionResult> asyncHandler) {
+        final CreateCustomDBEngineVersionRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateCustomDBEngineVersionResult>() {
+            @Override
+            public CreateCustomDBEngineVersionResult call() throws Exception {
+                CreateCustomDBEngineVersionResult result = null;
+
+                try {
+                    result = executeCreateCustomDBEngineVersion(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DBCluster> createDBClusterAsync(CreateDBClusterRequest request) {
 
         return createDBClusterAsync(request, null);
@@ -1300,6 +1333,39 @@ public class AmazonRDSAsyncClient extends AmazonRDSClient implements AmazonRDSAs
 
                 try {
                     result = executeDeleteCustomAvailabilityZone(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteCustomDBEngineVersionResult> deleteCustomDBEngineVersionAsync(DeleteCustomDBEngineVersionRequest request) {
+
+        return deleteCustomDBEngineVersionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteCustomDBEngineVersionResult> deleteCustomDBEngineVersionAsync(final DeleteCustomDBEngineVersionRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteCustomDBEngineVersionRequest, DeleteCustomDBEngineVersionResult> asyncHandler) {
+        final DeleteCustomDBEngineVersionRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteCustomDBEngineVersionResult>() {
+            @Override
+            public DeleteCustomDBEngineVersionResult call() throws Exception {
+                DeleteCustomDBEngineVersionResult result = null;
+
+                try {
+                    result = executeDeleteCustomDBEngineVersion(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -3892,6 +3958,39 @@ public class AmazonRDSAsyncClient extends AmazonRDSClient implements AmazonRDSAs
 
                 try {
                     result = executeModifyCurrentDBClusterCapacity(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ModifyCustomDBEngineVersionResult> modifyCustomDBEngineVersionAsync(ModifyCustomDBEngineVersionRequest request) {
+
+        return modifyCustomDBEngineVersionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ModifyCustomDBEngineVersionResult> modifyCustomDBEngineVersionAsync(final ModifyCustomDBEngineVersionRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ModifyCustomDBEngineVersionRequest, ModifyCustomDBEngineVersionResult> asyncHandler) {
+        final ModifyCustomDBEngineVersionRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ModifyCustomDBEngineVersionResult>() {
+            @Override
+            public ModifyCustomDBEngineVersionResult call() throws Exception {
+                ModifyCustomDBEngineVersionResult result = null;
+
+                try {
+                    result = executeModifyCustomDBEngineVersion(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

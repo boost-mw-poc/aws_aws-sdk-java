@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A metadata object associated with an assessment in Audit Manager.
+ * A metadata object that's associated with an assessment in Audit Manager.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/AssessmentMetadataItem"
@@ -42,7 +42,7 @@ public class AssessmentMetadataItem implements Serializable, Cloneable, Structur
     private String id;
     /**
      * <p>
-     * The name of the compliance standard related to the assessment, such as PCI-DSS.
+     * The name of the compliance standard that's related to the assessment, such as PCI-DSS.
      * </p>
      */
     private String complianceType;
@@ -54,13 +54,13 @@ public class AssessmentMetadataItem implements Serializable, Cloneable, Structur
     private String status;
     /**
      * <p>
-     * The roles associated with the assessment.
+     * The roles that are associated with the assessment.
      * </p>
      */
     private java.util.List<Role> roles;
     /**
      * <p>
-     * The delegations associated with the assessment.
+     * The delegations that are associated with the assessment.
      * </p>
      */
     private java.util.List<Delegation> delegations;
@@ -159,11 +159,11 @@ public class AssessmentMetadataItem implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The name of the compliance standard related to the assessment, such as PCI-DSS.
+     * The name of the compliance standard that's related to the assessment, such as PCI-DSS.
      * </p>
      * 
      * @param complianceType
-     *        The name of the compliance standard related to the assessment, such as PCI-DSS.
+     *        The name of the compliance standard that's related to the assessment, such as PCI-DSS.
      */
 
     public void setComplianceType(String complianceType) {
@@ -172,10 +172,10 @@ public class AssessmentMetadataItem implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The name of the compliance standard related to the assessment, such as PCI-DSS.
+     * The name of the compliance standard that's related to the assessment, such as PCI-DSS.
      * </p>
      * 
-     * @return The name of the compliance standard related to the assessment, such as PCI-DSS.
+     * @return The name of the compliance standard that's related to the assessment, such as PCI-DSS.
      */
 
     public String getComplianceType() {
@@ -184,11 +184,11 @@ public class AssessmentMetadataItem implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The name of the compliance standard related to the assessment, such as PCI-DSS.
+     * The name of the compliance standard that's related to the assessment, such as PCI-DSS.
      * </p>
      * 
      * @param complianceType
-     *        The name of the compliance standard related to the assessment, such as PCI-DSS.
+     *        The name of the compliance standard that's related to the assessment, such as PCI-DSS.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -258,10 +258,10 @@ public class AssessmentMetadataItem implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The roles associated with the assessment.
+     * The roles that are associated with the assessment.
      * </p>
      * 
-     * @return The roles associated with the assessment.
+     * @return The roles that are associated with the assessment.
      */
 
     public java.util.List<Role> getRoles() {
@@ -270,11 +270,11 @@ public class AssessmentMetadataItem implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The roles associated with the assessment.
+     * The roles that are associated with the assessment.
      * </p>
      * 
      * @param roles
-     *        The roles associated with the assessment.
+     *        The roles that are associated with the assessment.
      */
 
     public void setRoles(java.util.Collection<Role> roles) {
@@ -288,7 +288,7 @@ public class AssessmentMetadataItem implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The roles associated with the assessment.
+     * The roles that are associated with the assessment.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -297,7 +297,7 @@ public class AssessmentMetadataItem implements Serializable, Cloneable, Structur
      * </p>
      * 
      * @param roles
-     *        The roles associated with the assessment.
+     *        The roles that are associated with the assessment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -313,11 +313,11 @@ public class AssessmentMetadataItem implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The roles associated with the assessment.
+     * The roles that are associated with the assessment.
      * </p>
      * 
      * @param roles
-     *        The roles associated with the assessment.
+     *        The roles that are associated with the assessment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -328,10 +328,10 @@ public class AssessmentMetadataItem implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The delegations associated with the assessment.
+     * The delegations that are associated with the assessment.
      * </p>
      * 
-     * @return The delegations associated with the assessment.
+     * @return The delegations that are associated with the assessment.
      */
 
     public java.util.List<Delegation> getDelegations() {
@@ -340,11 +340,11 @@ public class AssessmentMetadataItem implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The delegations associated with the assessment.
+     * The delegations that are associated with the assessment.
      * </p>
      * 
      * @param delegations
-     *        The delegations associated with the assessment.
+     *        The delegations that are associated with the assessment.
      */
 
     public void setDelegations(java.util.Collection<Delegation> delegations) {
@@ -358,7 +358,7 @@ public class AssessmentMetadataItem implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The delegations associated with the assessment.
+     * The delegations that are associated with the assessment.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -367,7 +367,7 @@ public class AssessmentMetadataItem implements Serializable, Cloneable, Structur
      * </p>
      * 
      * @param delegations
-     *        The delegations associated with the assessment.
+     *        The delegations that are associated with the assessment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -383,11 +383,11 @@ public class AssessmentMetadataItem implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The delegations associated with the assessment.
+     * The delegations that are associated with the assessment.
      * </p>
      * 
      * @param delegations
-     *        The delegations associated with the assessment.
+     *        The delegations that are associated with the assessment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

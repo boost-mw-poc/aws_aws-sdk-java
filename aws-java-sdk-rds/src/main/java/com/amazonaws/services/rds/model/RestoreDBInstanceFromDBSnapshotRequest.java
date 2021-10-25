@@ -135,6 +135,9 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * A value that indicates whether the DB instance is a Multi-AZ deployment.
      * </p>
      * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
+     * <p>
      * Constraint: You can't specify the <code>AvailabilityZone</code> parameter if the DB instance is a Multi-AZ
      * deployment.
      * </p>
@@ -164,11 +167,17 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * A value that indicates whether minor version upgrades are applied automatically to the DB instance during the
      * maintenance window.
      * </p>
+     * <p>
+     * If you restore an RDS Custom DB instance, you must disable this parameter.
+     * </p>
      */
     private Boolean autoMinorVersionUpgrade;
     /**
      * <p>
      * License model information for the restored DB instance.
+     * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
      * </p>
      * <p>
      * Default: Same as source.
@@ -183,16 +192,18 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * <p>
      * The database name for the restored DB instance.
      * </p>
-     * <note>
      * <p>
-     * This parameter doesn't apply to the MySQL, PostgreSQL, or MariaDB engines.
+     * This parameter doesn't apply to the MySQL, PostgreSQL, or MariaDB engines. It also doesn't apply to RDS Custom DB
+     * instances.
      * </p>
-     * </note>
      */
     private String dBName;
     /**
      * <p>
      * The database engine to use for the new instance.
+     * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
      * </p>
      * <p>
      * Default: The same as source
@@ -286,7 +297,10 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * </p>
      * <p>
      * Permanent options, such as the TDE option for Oracle Advanced Security TDE, can't be removed from an option
-     * group, and that option group can't be removed from a DB instance once it is associated with a DB instance
+     * group, and that option group can't be removed from a DB instance after it is associated with a DB instance.
+     * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
      * </p>
      */
     private String optionGroupName;
@@ -311,11 +325,17 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * <p>
      * The ARN from the key store with which to associate the instance for TDE encryption.
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      */
     private String tdeCredentialArn;
     /**
      * <p>
      * The password for the given ARN from the key store in order to access the device.
+     * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
      * </p>
      */
     private String tdeCredentialPassword;
@@ -330,14 +350,17 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
     private com.amazonaws.internal.SdkInternalList<String> vpcSecurityGroupIds;
     /**
      * <p>
-     * Specify the Active Directory directory ID to restore the DB instance in. The domain must be created prior to this
-     * operation. Currently, only MySQL, Microsoft SQL Server, Oracle, and PostgreSQL DB instances can be created in an
-     * Active Directory Domain.
+     * Specify the Active Directory directory ID to restore the DB instance in. The domain/ must be created prior to
+     * this operation. Currently, you can create only MySQL, Microsoft SQL Server, Oracle, and PostgreSQL DB instances
+     * in an Active Directory Domain.
      * </p>
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/kerberos-authentication.html"> Kerberos
      * Authentication</a> in the <i>Amazon RDS User Guide</i>.
+     * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
      * </p>
      */
     private String domain;
@@ -352,6 +375,9 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * <p>
      * Specify the name of the IAM role to be used when making API calls to the Directory Service.
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      */
     private String domainIAMRoleName;
     /**
@@ -364,6 +390,9 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.html"> IAM Database
      * Authentication for MySQL and PostgreSQL</a> in the <i>Amazon RDS User Guide.</i>
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      */
     private Boolean enableIAMDatabaseAuthentication;
     /**
@@ -373,17 +402,26 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_LogAccess.html#USER_LogAccess.Procedural.UploadtoCloudWatch"
      * >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> enableCloudwatchLogsExports;
     /**
      * <p>
      * The number of CPU cores and the number of threads per core for the DB instance class of the DB instance.
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      */
     private com.amazonaws.internal.SdkInternalList<ProcessorFeature> processorFeatures;
     /**
      * <p>
      * A value that indicates whether the DB instance class of the DB instance uses its default processor features.
+     * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
      * </p>
      */
     private Boolean useDefaultProcessorFeatures;
@@ -392,8 +430,11 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * The name of the DB parameter group to associate with this DB instance.
      * </p>
      * <p>
-     * If you do not specify a value for <code>DBParameterGroupName</code>, then the default
-     * <code>DBParameterGroup</code> for the specified DB engine is used.
+     * If you don't specify a value for <code>DBParameterGroupName</code>, then RDS uses the default
+     * <code>DBParameterGroup</code> for the specified DB engine.
+     * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
      * </p>
      * <p>
      * Constraints:
@@ -441,6 +482,9 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * outside of its virtual private cloud (VPC) on your local network.
      * </p>
      * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
+     * <p>
      * For more information about RDS on Outposts, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-on-outposts.html">Working with Amazon RDS on
      * Amazon Web Services Outposts</a> in the <i>Amazon RDS User Guide</i>.
@@ -452,6 +496,38 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * </p>
      */
     private Boolean enableCustomerOwnedIp;
+    /**
+     * <p>
+     * The instance profile associated with the underlying Amazon EC2 instance of an RDS Custom DB instance. The
+     * instance profile must meet the following requirements:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The profile must exist in your account.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The profile must have an IAM role that Amazon EC2 has permissions to assume.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The instance profile name and the associated IAM role name must start with the prefix <code>AWSRDSCustom</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For the list of permissions required for the IAM role, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-setup-orcl.html#custom-setup-orcl.iam-vpc">
+     * Configure IAM and your VPC</a> in the <i>Amazon Relational Database Service User Guide</i>.
+     * </p>
+     * <p>
+     * This setting is required for RDS Custom.
+     * </p>
+     */
+    private String customIamInstanceProfile;
 
     /**
      * Default constructor for RestoreDBInstanceFromDBSnapshotRequest object. Callers should use the setter or fluent
@@ -1147,12 +1223,18 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * A value that indicates whether the DB instance is a Multi-AZ deployment.
      * </p>
      * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
+     * <p>
      * Constraint: You can't specify the <code>AvailabilityZone</code> parameter if the DB instance is a Multi-AZ
      * deployment.
      * </p>
      * 
      * @param multiAZ
      *        A value that indicates whether the DB instance is a Multi-AZ deployment.</p>
+     *        <p>
+     *        This setting doesn't apply to RDS Custom.
+     *        </p>
      *        <p>
      *        Constraint: You can't specify the <code>AvailabilityZone</code> parameter if the DB instance is a Multi-AZ
      *        deployment.
@@ -1167,11 +1249,17 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * A value that indicates whether the DB instance is a Multi-AZ deployment.
      * </p>
      * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
+     * <p>
      * Constraint: You can't specify the <code>AvailabilityZone</code> parameter if the DB instance is a Multi-AZ
      * deployment.
      * </p>
      * 
      * @return A value that indicates whether the DB instance is a Multi-AZ deployment.</p>
+     *         <p>
+     *         This setting doesn't apply to RDS Custom.
+     *         </p>
      *         <p>
      *         Constraint: You can't specify the <code>AvailabilityZone</code> parameter if the DB instance is a
      *         Multi-AZ deployment.
@@ -1186,12 +1274,18 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * A value that indicates whether the DB instance is a Multi-AZ deployment.
      * </p>
      * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
+     * <p>
      * Constraint: You can't specify the <code>AvailabilityZone</code> parameter if the DB instance is a Multi-AZ
      * deployment.
      * </p>
      * 
      * @param multiAZ
      *        A value that indicates whether the DB instance is a Multi-AZ deployment.</p>
+     *        <p>
+     *        This setting doesn't apply to RDS Custom.
+     *        </p>
      *        <p>
      *        Constraint: You can't specify the <code>AvailabilityZone</code> parameter if the DB instance is a Multi-AZ
      *        deployment.
@@ -1208,11 +1302,17 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * A value that indicates whether the DB instance is a Multi-AZ deployment.
      * </p>
      * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
+     * <p>
      * Constraint: You can't specify the <code>AvailabilityZone</code> parameter if the DB instance is a Multi-AZ
      * deployment.
      * </p>
      * 
      * @return A value that indicates whether the DB instance is a Multi-AZ deployment.</p>
+     *         <p>
+     *         This setting doesn't apply to RDS Custom.
+     *         </p>
      *         <p>
      *         Constraint: You can't specify the <code>AvailabilityZone</code> parameter if the DB instance is a
      *         Multi-AZ deployment.
@@ -1379,10 +1479,15 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * A value that indicates whether minor version upgrades are applied automatically to the DB instance during the
      * maintenance window.
      * </p>
+     * <p>
+     * If you restore an RDS Custom DB instance, you must disable this parameter.
+     * </p>
      * 
      * @param autoMinorVersionUpgrade
      *        A value that indicates whether minor version upgrades are applied automatically to the DB instance during
-     *        the maintenance window.
+     *        the maintenance window.</p>
+     *        <p>
+     *        If you restore an RDS Custom DB instance, you must disable this parameter.
      */
 
     public void setAutoMinorVersionUpgrade(Boolean autoMinorVersionUpgrade) {
@@ -1394,9 +1499,14 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * A value that indicates whether minor version upgrades are applied automatically to the DB instance during the
      * maintenance window.
      * </p>
+     * <p>
+     * If you restore an RDS Custom DB instance, you must disable this parameter.
+     * </p>
      * 
      * @return A value that indicates whether minor version upgrades are applied automatically to the DB instance during
-     *         the maintenance window.
+     *         the maintenance window.</p>
+     *         <p>
+     *         If you restore an RDS Custom DB instance, you must disable this parameter.
      */
 
     public Boolean getAutoMinorVersionUpgrade() {
@@ -1408,10 +1518,15 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * A value that indicates whether minor version upgrades are applied automatically to the DB instance during the
      * maintenance window.
      * </p>
+     * <p>
+     * If you restore an RDS Custom DB instance, you must disable this parameter.
+     * </p>
      * 
      * @param autoMinorVersionUpgrade
      *        A value that indicates whether minor version upgrades are applied automatically to the DB instance during
-     *        the maintenance window.
+     *        the maintenance window.</p>
+     *        <p>
+     *        If you restore an RDS Custom DB instance, you must disable this parameter.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1425,9 +1540,14 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * A value that indicates whether minor version upgrades are applied automatically to the DB instance during the
      * maintenance window.
      * </p>
+     * <p>
+     * If you restore an RDS Custom DB instance, you must disable this parameter.
+     * </p>
      * 
      * @return A value that indicates whether minor version upgrades are applied automatically to the DB instance during
-     *         the maintenance window.
+     *         the maintenance window.</p>
+     *         <p>
+     *         If you restore an RDS Custom DB instance, you must disable this parameter.
      */
 
     public Boolean isAutoMinorVersionUpgrade() {
@@ -1439,6 +1559,9 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * License model information for the restored DB instance.
      * </p>
      * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
+     * <p>
      * Default: Same as source.
      * </p>
      * <p>
@@ -1448,6 +1571,9 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * 
      * @param licenseModel
      *        License model information for the restored DB instance.</p>
+     *        <p>
+     *        This setting doesn't apply to RDS Custom.
+     *        </p>
      *        <p>
      *        Default: Same as source.
      *        </p>
@@ -1465,6 +1591,9 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * License model information for the restored DB instance.
      * </p>
      * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
+     * <p>
      * Default: Same as source.
      * </p>
      * <p>
@@ -1473,6 +1602,9 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * </p>
      * 
      * @return License model information for the restored DB instance.</p>
+     *         <p>
+     *         This setting doesn't apply to RDS Custom.
+     *         </p>
      *         <p>
      *         Default: Same as source.
      *         </p>
@@ -1490,6 +1622,9 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * License model information for the restored DB instance.
      * </p>
      * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
+     * <p>
      * Default: Same as source.
      * </p>
      * <p>
@@ -1499,6 +1634,9 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * 
      * @param licenseModel
      *        License model information for the restored DB instance.</p>
+     *        <p>
+     *        This setting doesn't apply to RDS Custom.
+     *        </p>
      *        <p>
      *        Default: Same as source.
      *        </p>
@@ -1517,17 +1655,16 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * <p>
      * The database name for the restored DB instance.
      * </p>
-     * <note>
      * <p>
-     * This parameter doesn't apply to the MySQL, PostgreSQL, or MariaDB engines.
+     * This parameter doesn't apply to the MySQL, PostgreSQL, or MariaDB engines. It also doesn't apply to RDS Custom DB
+     * instances.
      * </p>
-     * </note>
      * 
      * @param dBName
-     *        The database name for the restored DB instance.</p> <note>
+     *        The database name for the restored DB instance.</p>
      *        <p>
-     *        This parameter doesn't apply to the MySQL, PostgreSQL, or MariaDB engines.
-     *        </p>
+     *        This parameter doesn't apply to the MySQL, PostgreSQL, or MariaDB engines. It also doesn't apply to RDS
+     *        Custom DB instances.
      */
 
     public void setDBName(String dBName) {
@@ -1538,16 +1675,15 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * <p>
      * The database name for the restored DB instance.
      * </p>
-     * <note>
      * <p>
-     * This parameter doesn't apply to the MySQL, PostgreSQL, or MariaDB engines.
+     * This parameter doesn't apply to the MySQL, PostgreSQL, or MariaDB engines. It also doesn't apply to RDS Custom DB
+     * instances.
      * </p>
-     * </note>
      * 
-     * @return The database name for the restored DB instance.</p> <note>
+     * @return The database name for the restored DB instance.</p>
      *         <p>
-     *         This parameter doesn't apply to the MySQL, PostgreSQL, or MariaDB engines.
-     *         </p>
+     *         This parameter doesn't apply to the MySQL, PostgreSQL, or MariaDB engines. It also doesn't apply to RDS
+     *         Custom DB instances.
      */
 
     public String getDBName() {
@@ -1558,17 +1694,16 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * <p>
      * The database name for the restored DB instance.
      * </p>
-     * <note>
      * <p>
-     * This parameter doesn't apply to the MySQL, PostgreSQL, or MariaDB engines.
+     * This parameter doesn't apply to the MySQL, PostgreSQL, or MariaDB engines. It also doesn't apply to RDS Custom DB
+     * instances.
      * </p>
-     * </note>
      * 
      * @param dBName
-     *        The database name for the restored DB instance.</p> <note>
+     *        The database name for the restored DB instance.</p>
      *        <p>
-     *        This parameter doesn't apply to the MySQL, PostgreSQL, or MariaDB engines.
-     *        </p>
+     *        This parameter doesn't apply to the MySQL, PostgreSQL, or MariaDB engines. It also doesn't apply to RDS
+     *        Custom DB instances.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1580,6 +1715,9 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
     /**
      * <p>
      * The database engine to use for the new instance.
+     * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
      * </p>
      * <p>
      * Default: The same as source
@@ -1651,6 +1789,9 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * 
      * @param engine
      *        The database engine to use for the new instance.</p>
+     *        <p>
+     *        This setting doesn't apply to RDS Custom.
+     *        </p>
      *        <p>
      *        Default: The same as source
      *        </p>
@@ -1728,6 +1869,9 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * The database engine to use for the new instance.
      * </p>
      * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
+     * <p>
      * Default: The same as source
      * </p>
      * <p>
@@ -1796,6 +1940,9 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * </ul>
      * 
      * @return The database engine to use for the new instance.</p>
+     *         <p>
+     *         This setting doesn't apply to RDS Custom.
+     *         </p>
      *         <p>
      *         Default: The same as source
      *         </p>
@@ -1873,6 +2020,9 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * The database engine to use for the new instance.
      * </p>
      * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
+     * <p>
      * Default: The same as source
      * </p>
      * <p>
@@ -1942,6 +2092,9 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * 
      * @param engine
      *        The database engine to use for the new instance.</p>
+     *        <p>
+     *        This setting doesn't apply to RDS Custom.
+     *        </p>
      *        <p>
      *        Default: The same as source
      *        </p>
@@ -2125,15 +2278,21 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * </p>
      * <p>
      * Permanent options, such as the TDE option for Oracle Advanced Security TDE, can't be removed from an option
-     * group, and that option group can't be removed from a DB instance once it is associated with a DB instance
+     * group, and that option group can't be removed from a DB instance after it is associated with a DB instance.
+     * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
      * </p>
      * 
      * @param optionGroupName
      *        The name of the option group to be used for the restored DB instance.</p>
      *        <p>
      *        Permanent options, such as the TDE option for Oracle Advanced Security TDE, can't be removed from an
-     *        option group, and that option group can't be removed from a DB instance once it is associated with a DB
-     *        instance
+     *        option group, and that option group can't be removed from a DB instance after it is associated with a DB
+     *        instance.
+     *        </p>
+     *        <p>
+     *        This setting doesn't apply to RDS Custom.
      */
 
     public void setOptionGroupName(String optionGroupName) {
@@ -2146,14 +2305,20 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * </p>
      * <p>
      * Permanent options, such as the TDE option for Oracle Advanced Security TDE, can't be removed from an option
-     * group, and that option group can't be removed from a DB instance once it is associated with a DB instance
+     * group, and that option group can't be removed from a DB instance after it is associated with a DB instance.
+     * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
      * </p>
      * 
      * @return The name of the option group to be used for the restored DB instance.</p>
      *         <p>
      *         Permanent options, such as the TDE option for Oracle Advanced Security TDE, can't be removed from an
-     *         option group, and that option group can't be removed from a DB instance once it is associated with a DB
-     *         instance
+     *         option group, and that option group can't be removed from a DB instance after it is associated with a DB
+     *         instance.
+     *         </p>
+     *         <p>
+     *         This setting doesn't apply to RDS Custom.
      */
 
     public String getOptionGroupName() {
@@ -2166,15 +2331,21 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * </p>
      * <p>
      * Permanent options, such as the TDE option for Oracle Advanced Security TDE, can't be removed from an option
-     * group, and that option group can't be removed from a DB instance once it is associated with a DB instance
+     * group, and that option group can't be removed from a DB instance after it is associated with a DB instance.
+     * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
      * </p>
      * 
      * @param optionGroupName
      *        The name of the option group to be used for the restored DB instance.</p>
      *        <p>
      *        Permanent options, such as the TDE option for Oracle Advanced Security TDE, can't be removed from an
-     *        option group, and that option group can't be removed from a DB instance once it is associated with a DB
-     *        instance
+     *        option group, and that option group can't be removed from a DB instance after it is associated with a DB
+     *        instance.
+     *        </p>
+     *        <p>
+     *        This setting doesn't apply to RDS Custom.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2333,9 +2504,14 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * <p>
      * The ARN from the key store with which to associate the instance for TDE encryption.
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      * 
      * @param tdeCredentialArn
-     *        The ARN from the key store with which to associate the instance for TDE encryption.
+     *        The ARN from the key store with which to associate the instance for TDE encryption.</p>
+     *        <p>
+     *        This setting doesn't apply to RDS Custom.
      */
 
     public void setTdeCredentialArn(String tdeCredentialArn) {
@@ -2346,8 +2522,13 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * <p>
      * The ARN from the key store with which to associate the instance for TDE encryption.
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      * 
-     * @return The ARN from the key store with which to associate the instance for TDE encryption.
+     * @return The ARN from the key store with which to associate the instance for TDE encryption.</p>
+     *         <p>
+     *         This setting doesn't apply to RDS Custom.
      */
 
     public String getTdeCredentialArn() {
@@ -2358,9 +2539,14 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * <p>
      * The ARN from the key store with which to associate the instance for TDE encryption.
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      * 
      * @param tdeCredentialArn
-     *        The ARN from the key store with which to associate the instance for TDE encryption.
+     *        The ARN from the key store with which to associate the instance for TDE encryption.</p>
+     *        <p>
+     *        This setting doesn't apply to RDS Custom.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2373,9 +2559,14 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * <p>
      * The password for the given ARN from the key store in order to access the device.
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      * 
      * @param tdeCredentialPassword
-     *        The password for the given ARN from the key store in order to access the device.
+     *        The password for the given ARN from the key store in order to access the device.</p>
+     *        <p>
+     *        This setting doesn't apply to RDS Custom.
      */
 
     public void setTdeCredentialPassword(String tdeCredentialPassword) {
@@ -2386,8 +2577,13 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * <p>
      * The password for the given ARN from the key store in order to access the device.
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      * 
-     * @return The password for the given ARN from the key store in order to access the device.
+     * @return The password for the given ARN from the key store in order to access the device.</p>
+     *         <p>
+     *         This setting doesn't apply to RDS Custom.
      */
 
     public String getTdeCredentialPassword() {
@@ -2398,9 +2594,14 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * <p>
      * The password for the given ARN from the key store in order to access the device.
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      * 
      * @param tdeCredentialPassword
-     *        The password for the given ARN from the key store in order to access the device.
+     *        The password for the given ARN from the key store in order to access the device.</p>
+     *        <p>
+     *        This setting doesn't apply to RDS Custom.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2504,24 +2705,30 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * Specify the Active Directory directory ID to restore the DB instance in. The domain must be created prior to this
-     * operation. Currently, only MySQL, Microsoft SQL Server, Oracle, and PostgreSQL DB instances can be created in an
-     * Active Directory Domain.
+     * Specify the Active Directory directory ID to restore the DB instance in. The domain/ must be created prior to
+     * this operation. Currently, you can create only MySQL, Microsoft SQL Server, Oracle, and PostgreSQL DB instances
+     * in an Active Directory Domain.
      * </p>
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/kerberos-authentication.html"> Kerberos
      * Authentication</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      * 
      * @param domain
-     *        Specify the Active Directory directory ID to restore the DB instance in. The domain must be created prior
-     *        to this operation. Currently, only MySQL, Microsoft SQL Server, Oracle, and PostgreSQL DB instances can be
-     *        created in an Active Directory Domain.</p>
+     *        Specify the Active Directory directory ID to restore the DB instance in. The domain/ must be created prior
+     *        to this operation. Currently, you can create only MySQL, Microsoft SQL Server, Oracle, and PostgreSQL DB
+     *        instances in an Active Directory Domain.</p>
      *        <p>
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/kerberos-authentication.html"> Kerberos
      *        Authentication</a> in the <i>Amazon RDS User Guide</i>.
+     *        </p>
+     *        <p>
+     *        This setting doesn't apply to RDS Custom.
      */
 
     public void setDomain(String domain) {
@@ -2530,23 +2737,29 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * Specify the Active Directory directory ID to restore the DB instance in. The domain must be created prior to this
-     * operation. Currently, only MySQL, Microsoft SQL Server, Oracle, and PostgreSQL DB instances can be created in an
-     * Active Directory Domain.
+     * Specify the Active Directory directory ID to restore the DB instance in. The domain/ must be created prior to
+     * this operation. Currently, you can create only MySQL, Microsoft SQL Server, Oracle, and PostgreSQL DB instances
+     * in an Active Directory Domain.
      * </p>
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/kerberos-authentication.html"> Kerberos
      * Authentication</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      * 
-     * @return Specify the Active Directory directory ID to restore the DB instance in. The domain must be created prior
-     *         to this operation. Currently, only MySQL, Microsoft SQL Server, Oracle, and PostgreSQL DB instances can
-     *         be created in an Active Directory Domain.</p>
+     * @return Specify the Active Directory directory ID to restore the DB instance in. The domain/ must be created
+     *         prior to this operation. Currently, you can create only MySQL, Microsoft SQL Server, Oracle, and
+     *         PostgreSQL DB instances in an Active Directory Domain.</p>
      *         <p>
      *         For more information, see <a
      *         href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/kerberos-authentication.html"> Kerberos
      *         Authentication</a> in the <i>Amazon RDS User Guide</i>.
+     *         </p>
+     *         <p>
+     *         This setting doesn't apply to RDS Custom.
      */
 
     public String getDomain() {
@@ -2555,24 +2768,30 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * Specify the Active Directory directory ID to restore the DB instance in. The domain must be created prior to this
-     * operation. Currently, only MySQL, Microsoft SQL Server, Oracle, and PostgreSQL DB instances can be created in an
-     * Active Directory Domain.
+     * Specify the Active Directory directory ID to restore the DB instance in. The domain/ must be created prior to
+     * this operation. Currently, you can create only MySQL, Microsoft SQL Server, Oracle, and PostgreSQL DB instances
+     * in an Active Directory Domain.
      * </p>
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/kerberos-authentication.html"> Kerberos
      * Authentication</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      * 
      * @param domain
-     *        Specify the Active Directory directory ID to restore the DB instance in. The domain must be created prior
-     *        to this operation. Currently, only MySQL, Microsoft SQL Server, Oracle, and PostgreSQL DB instances can be
-     *        created in an Active Directory Domain.</p>
+     *        Specify the Active Directory directory ID to restore the DB instance in. The domain/ must be created prior
+     *        to this operation. Currently, you can create only MySQL, Microsoft SQL Server, Oracle, and PostgreSQL DB
+     *        instances in an Active Directory Domain.</p>
      *        <p>
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/kerberos-authentication.html"> Kerberos
      *        Authentication</a> in the <i>Amazon RDS User Guide</i>.
+     *        </p>
+     *        <p>
+     *        This setting doesn't apply to RDS Custom.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2645,9 +2864,14 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * <p>
      * Specify the name of the IAM role to be used when making API calls to the Directory Service.
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      * 
      * @param domainIAMRoleName
-     *        Specify the name of the IAM role to be used when making API calls to the Directory Service.
+     *        Specify the name of the IAM role to be used when making API calls to the Directory Service.</p>
+     *        <p>
+     *        This setting doesn't apply to RDS Custom.
      */
 
     public void setDomainIAMRoleName(String domainIAMRoleName) {
@@ -2658,8 +2882,13 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * <p>
      * Specify the name of the IAM role to be used when making API calls to the Directory Service.
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      * 
-     * @return Specify the name of the IAM role to be used when making API calls to the Directory Service.
+     * @return Specify the name of the IAM role to be used when making API calls to the Directory Service.</p>
+     *         <p>
+     *         This setting doesn't apply to RDS Custom.
      */
 
     public String getDomainIAMRoleName() {
@@ -2670,9 +2899,14 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * <p>
      * Specify the name of the IAM role to be used when making API calls to the Directory Service.
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      * 
      * @param domainIAMRoleName
-     *        Specify the name of the IAM role to be used when making API calls to the Directory Service.
+     *        Specify the name of the IAM role to be used when making API calls to the Directory Service.</p>
+     *        <p>
+     *        This setting doesn't apply to RDS Custom.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2691,6 +2925,9 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.html"> IAM Database
      * Authentication for MySQL and PostgreSQL</a> in the <i>Amazon RDS User Guide.</i>
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      * 
      * @param enableIAMDatabaseAuthentication
      *        A value that indicates whether to enable mapping of Amazon Web Services Identity and Access Management
@@ -2699,6 +2936,9 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      *        For more information about IAM database authentication, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.html"> IAM Database
      *        Authentication for MySQL and PostgreSQL</a> in the <i>Amazon RDS User Guide.</i>
+     *        </p>
+     *        <p>
+     *        This setting doesn't apply to RDS Custom.
      */
 
     public void setEnableIAMDatabaseAuthentication(Boolean enableIAMDatabaseAuthentication) {
@@ -2715,6 +2955,9 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.html"> IAM Database
      * Authentication for MySQL and PostgreSQL</a> in the <i>Amazon RDS User Guide.</i>
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      * 
      * @return A value that indicates whether to enable mapping of Amazon Web Services Identity and Access Management
      *         (IAM) accounts to database accounts. By default, mapping is disabled.</p>
@@ -2722,6 +2965,9 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      *         For more information about IAM database authentication, see <a
      *         href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.html"> IAM Database
      *         Authentication for MySQL and PostgreSQL</a> in the <i>Amazon RDS User Guide.</i>
+     *         </p>
+     *         <p>
+     *         This setting doesn't apply to RDS Custom.
      */
 
     public Boolean getEnableIAMDatabaseAuthentication() {
@@ -2738,6 +2984,9 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.html"> IAM Database
      * Authentication for MySQL and PostgreSQL</a> in the <i>Amazon RDS User Guide.</i>
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      * 
      * @param enableIAMDatabaseAuthentication
      *        A value that indicates whether to enable mapping of Amazon Web Services Identity and Access Management
@@ -2746,6 +2995,9 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      *        For more information about IAM database authentication, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.html"> IAM Database
      *        Authentication for MySQL and PostgreSQL</a> in the <i>Amazon RDS User Guide.</i>
+     *        </p>
+     *        <p>
+     *        This setting doesn't apply to RDS Custom.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2764,6 +3016,9 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.html"> IAM Database
      * Authentication for MySQL and PostgreSQL</a> in the <i>Amazon RDS User Guide.</i>
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      * 
      * @return A value that indicates whether to enable mapping of Amazon Web Services Identity and Access Management
      *         (IAM) accounts to database accounts. By default, mapping is disabled.</p>
@@ -2771,6 +3026,9 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      *         For more information about IAM database authentication, see <a
      *         href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/UsingWithRDS.IAMDBAuth.html"> IAM Database
      *         Authentication for MySQL and PostgreSQL</a> in the <i>Amazon RDS User Guide.</i>
+     *         </p>
+     *         <p>
+     *         This setting doesn't apply to RDS Custom.
      */
 
     public Boolean isEnableIAMDatabaseAuthentication() {
@@ -2784,11 +3042,16 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_LogAccess.html#USER_LogAccess.Procedural.UploadtoCloudWatch"
      * >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      * 
      * @return The list of logs that the restored DB instance is to export to CloudWatch Logs. The values in the list
      *         depend on the DB engine being used. For more information, see <a href=
      *         "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_LogAccess.html#USER_LogAccess.Procedural.UploadtoCloudWatch"
-     *         >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon RDS User Guide</i>.
+     *         >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon RDS User Guide</i>.</p>
+     *         <p>
+     *         This setting doesn't apply to RDS Custom.
      */
 
     public java.util.List<String> getEnableCloudwatchLogsExports() {
@@ -2805,12 +3068,17 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_LogAccess.html#USER_LogAccess.Procedural.UploadtoCloudWatch"
      * >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      * 
      * @param enableCloudwatchLogsExports
      *        The list of logs that the restored DB instance is to export to CloudWatch Logs. The values in the list
      *        depend on the DB engine being used. For more information, see <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_LogAccess.html#USER_LogAccess.Procedural.UploadtoCloudWatch"
-     *        >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon RDS User Guide</i>.
+     *        >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon RDS User Guide</i>.</p>
+     *        <p>
+     *        This setting doesn't apply to RDS Custom.
      */
 
     public void setEnableCloudwatchLogsExports(java.util.Collection<String> enableCloudwatchLogsExports) {
@@ -2830,6 +3098,9 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
      * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setEnableCloudwatchLogsExports(java.util.Collection)} or
      * {@link #withEnableCloudwatchLogsExports(java.util.Collection)} if you want to override the existing values.
@@ -2839,7 +3110,9 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      *        The list of logs that the restored DB instance is to export to CloudWatch Logs. The values in the list
      *        depend on the DB engine being used. For more information, see <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_LogAccess.html#USER_LogAccess.Procedural.UploadtoCloudWatch"
-     *        >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon RDS User Guide</i>.
+     *        >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon RDS User Guide</i>.</p>
+     *        <p>
+     *        This setting doesn't apply to RDS Custom.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2860,12 +3133,17 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_LogAccess.html#USER_LogAccess.Procedural.UploadtoCloudWatch"
      * >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      * 
      * @param enableCloudwatchLogsExports
      *        The list of logs that the restored DB instance is to export to CloudWatch Logs. The values in the list
      *        depend on the DB engine being used. For more information, see <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_LogAccess.html#USER_LogAccess.Procedural.UploadtoCloudWatch"
-     *        >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon RDS User Guide</i>.
+     *        >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon RDS User Guide</i>.</p>
+     *        <p>
+     *        This setting doesn't apply to RDS Custom.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2878,8 +3156,14 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * <p>
      * The number of CPU cores and the number of threads per core for the DB instance class of the DB instance.
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      * 
-     * @return The number of CPU cores and the number of threads per core for the DB instance class of the DB instance.
+     * @return The number of CPU cores and the number of threads per core for the DB instance class of the DB
+     *         instance.</p>
+     *         <p>
+     *         This setting doesn't apply to RDS Custom.
      */
 
     public java.util.List<ProcessorFeature> getProcessorFeatures() {
@@ -2893,9 +3177,15 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * <p>
      * The number of CPU cores and the number of threads per core for the DB instance class of the DB instance.
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      * 
      * @param processorFeatures
-     *        The number of CPU cores and the number of threads per core for the DB instance class of the DB instance.
+     *        The number of CPU cores and the number of threads per core for the DB instance class of the DB
+     *        instance.</p>
+     *        <p>
+     *        This setting doesn't apply to RDS Custom.
      */
 
     public void setProcessorFeatures(java.util.Collection<ProcessorFeature> processorFeatures) {
@@ -2912,13 +3202,19 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * The number of CPU cores and the number of threads per core for the DB instance class of the DB instance.
      * </p>
      * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setProcessorFeatures(java.util.Collection)} or {@link #withProcessorFeatures(java.util.Collection)} if
      * you want to override the existing values.
      * </p>
      * 
      * @param processorFeatures
-     *        The number of CPU cores and the number of threads per core for the DB instance class of the DB instance.
+     *        The number of CPU cores and the number of threads per core for the DB instance class of the DB
+     *        instance.</p>
+     *        <p>
+     *        This setting doesn't apply to RDS Custom.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2936,9 +3232,15 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * <p>
      * The number of CPU cores and the number of threads per core for the DB instance class of the DB instance.
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      * 
      * @param processorFeatures
-     *        The number of CPU cores and the number of threads per core for the DB instance class of the DB instance.
+     *        The number of CPU cores and the number of threads per core for the DB instance class of the DB
+     *        instance.</p>
+     *        <p>
+     *        This setting doesn't apply to RDS Custom.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2951,10 +3253,15 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * <p>
      * A value that indicates whether the DB instance class of the DB instance uses its default processor features.
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      * 
      * @param useDefaultProcessorFeatures
      *        A value that indicates whether the DB instance class of the DB instance uses its default processor
-     *        features.
+     *        features.</p>
+     *        <p>
+     *        This setting doesn't apply to RDS Custom.
      */
 
     public void setUseDefaultProcessorFeatures(Boolean useDefaultProcessorFeatures) {
@@ -2965,9 +3272,14 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * <p>
      * A value that indicates whether the DB instance class of the DB instance uses its default processor features.
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      * 
      * @return A value that indicates whether the DB instance class of the DB instance uses its default processor
-     *         features.
+     *         features.</p>
+     *         <p>
+     *         This setting doesn't apply to RDS Custom.
      */
 
     public Boolean getUseDefaultProcessorFeatures() {
@@ -2978,10 +3290,15 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * <p>
      * A value that indicates whether the DB instance class of the DB instance uses its default processor features.
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      * 
      * @param useDefaultProcessorFeatures
      *        A value that indicates whether the DB instance class of the DB instance uses its default processor
-     *        features.
+     *        features.</p>
+     *        <p>
+     *        This setting doesn't apply to RDS Custom.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2994,9 +3311,14 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * <p>
      * A value that indicates whether the DB instance class of the DB instance uses its default processor features.
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      * 
      * @return A value that indicates whether the DB instance class of the DB instance uses its default processor
-     *         features.
+     *         features.</p>
+     *         <p>
+     *         This setting doesn't apply to RDS Custom.
      */
 
     public Boolean isUseDefaultProcessorFeatures() {
@@ -3008,8 +3330,11 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * The name of the DB parameter group to associate with this DB instance.
      * </p>
      * <p>
-     * If you do not specify a value for <code>DBParameterGroupName</code>, then the default
-     * <code>DBParameterGroup</code> for the specified DB engine is used.
+     * If you don't specify a value for <code>DBParameterGroupName</code>, then RDS uses the default
+     * <code>DBParameterGroup</code> for the specified DB engine.
+     * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
      * </p>
      * <p>
      * Constraints:
@@ -3040,8 +3365,11 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * @param dBParameterGroupName
      *        The name of the DB parameter group to associate with this DB instance.</p>
      *        <p>
-     *        If you do not specify a value for <code>DBParameterGroupName</code>, then the default
-     *        <code>DBParameterGroup</code> for the specified DB engine is used.
+     *        If you don't specify a value for <code>DBParameterGroupName</code>, then RDS uses the default
+     *        <code>DBParameterGroup</code> for the specified DB engine.
+     *        </p>
+     *        <p>
+     *        This setting doesn't apply to RDS Custom.
      *        </p>
      *        <p>
      *        Constraints:
@@ -3078,8 +3406,11 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * The name of the DB parameter group to associate with this DB instance.
      * </p>
      * <p>
-     * If you do not specify a value for <code>DBParameterGroupName</code>, then the default
-     * <code>DBParameterGroup</code> for the specified DB engine is used.
+     * If you don't specify a value for <code>DBParameterGroupName</code>, then RDS uses the default
+     * <code>DBParameterGroup</code> for the specified DB engine.
+     * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
      * </p>
      * <p>
      * Constraints:
@@ -3109,8 +3440,11 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * 
      * @return The name of the DB parameter group to associate with this DB instance.</p>
      *         <p>
-     *         If you do not specify a value for <code>DBParameterGroupName</code>, then the default
-     *         <code>DBParameterGroup</code> for the specified DB engine is used.
+     *         If you don't specify a value for <code>DBParameterGroupName</code>, then RDS uses the default
+     *         <code>DBParameterGroup</code> for the specified DB engine.
+     *         </p>
+     *         <p>
+     *         This setting doesn't apply to RDS Custom.
      *         </p>
      *         <p>
      *         Constraints:
@@ -3147,8 +3481,11 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * The name of the DB parameter group to associate with this DB instance.
      * </p>
      * <p>
-     * If you do not specify a value for <code>DBParameterGroupName</code>, then the default
-     * <code>DBParameterGroup</code> for the specified DB engine is used.
+     * If you don't specify a value for <code>DBParameterGroupName</code>, then RDS uses the default
+     * <code>DBParameterGroup</code> for the specified DB engine.
+     * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
      * </p>
      * <p>
      * Constraints:
@@ -3179,8 +3516,11 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * @param dBParameterGroupName
      *        The name of the DB parameter group to associate with this DB instance.</p>
      *        <p>
-     *        If you do not specify a value for <code>DBParameterGroupName</code>, then the default
-     *        <code>DBParameterGroup</code> for the specified DB engine is used.
+     *        If you don't specify a value for <code>DBParameterGroupName</code>, then RDS uses the default
+     *        <code>DBParameterGroup</code> for the specified DB engine.
+     *        </p>
+     *        <p>
+     *        This setting doesn't apply to RDS Custom.
      *        </p>
      *        <p>
      *        Constraints:
@@ -3304,6 +3644,9 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * outside of its virtual private cloud (VPC) on your local network.
      * </p>
      * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
+     * <p>
      * For more information about RDS on Outposts, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-on-outposts.html">Working with Amazon RDS on
      * Amazon Web Services Outposts</a> in the <i>Amazon RDS User Guide</i>.
@@ -3321,6 +3664,9 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      *        A <i>CoIP</i> provides local or external connectivity to resources in your Outpost subnets through your
      *        on-premises network. For some use cases, a CoIP can provide lower latency for connections to the DB
      *        instance from outside of its virtual private cloud (VPC) on your local network.
+     *        </p>
+     *        <p>
+     *        This setting doesn't apply to RDS Custom.
      *        </p>
      *        <p>
      *        For more information about RDS on Outposts, see <a
@@ -3347,6 +3693,9 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * outside of its virtual private cloud (VPC) on your local network.
      * </p>
      * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
+     * <p>
      * For more information about RDS on Outposts, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-on-outposts.html">Working with Amazon RDS on
      * Amazon Web Services Outposts</a> in the <i>Amazon RDS User Guide</i>.
@@ -3363,6 +3712,9 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      *         A <i>CoIP</i> provides local or external connectivity to resources in your Outpost subnets through your
      *         on-premises network. For some use cases, a CoIP can provide lower latency for connections to the DB
      *         instance from outside of its virtual private cloud (VPC) on your local network.
+     *         </p>
+     *         <p>
+     *         This setting doesn't apply to RDS Custom.
      *         </p>
      *         <p>
      *         For more information about RDS on Outposts, see <a
@@ -3389,6 +3741,9 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * outside of its virtual private cloud (VPC) on your local network.
      * </p>
      * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
+     * <p>
      * For more information about RDS on Outposts, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-on-outposts.html">Working with Amazon RDS on
      * Amazon Web Services Outposts</a> in the <i>Amazon RDS User Guide</i>.
@@ -3406,6 +3761,9 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      *        A <i>CoIP</i> provides local or external connectivity to resources in your Outpost subnets through your
      *        on-premises network. For some use cases, a CoIP can provide lower latency for connections to the DB
      *        instance from outside of its virtual private cloud (VPC) on your local network.
+     *        </p>
+     *        <p>
+     *        This setting doesn't apply to RDS Custom.
      *        </p>
      *        <p>
      *        For more information about RDS on Outposts, see <a
@@ -3434,6 +3792,9 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      * outside of its virtual private cloud (VPC) on your local network.
      * </p>
      * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
+     * <p>
      * For more information about RDS on Outposts, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-on-outposts.html">Working with Amazon RDS on
      * Amazon Web Services Outposts</a> in the <i>Amazon RDS User Guide</i>.
@@ -3452,6 +3813,9 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
      *         instance from outside of its virtual private cloud (VPC) on your local network.
      *         </p>
      *         <p>
+     *         This setting doesn't apply to RDS Custom.
+     *         </p>
+     *         <p>
      *         For more information about RDS on Outposts, see <a
      *         href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/rds-on-outposts.html">Working with Amazon
      *         RDS on Amazon Web Services Outposts</a> in the <i>Amazon RDS User Guide</i>.
@@ -3464,6 +3828,202 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
 
     public Boolean isEnableCustomerOwnedIp() {
         return this.enableCustomerOwnedIp;
+    }
+
+    /**
+     * <p>
+     * The instance profile associated with the underlying Amazon EC2 instance of an RDS Custom DB instance. The
+     * instance profile must meet the following requirements:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The profile must exist in your account.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The profile must have an IAM role that Amazon EC2 has permissions to assume.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The instance profile name and the associated IAM role name must start with the prefix <code>AWSRDSCustom</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For the list of permissions required for the IAM role, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-setup-orcl.html#custom-setup-orcl.iam-vpc">
+     * Configure IAM and your VPC</a> in the <i>Amazon Relational Database Service User Guide</i>.
+     * </p>
+     * <p>
+     * This setting is required for RDS Custom.
+     * </p>
+     * 
+     * @param customIamInstanceProfile
+     *        The instance profile associated with the underlying Amazon EC2 instance of an RDS Custom DB instance. The
+     *        instance profile must meet the following requirements:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        The profile must exist in your account.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The profile must have an IAM role that Amazon EC2 has permissions to assume.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The instance profile name and the associated IAM role name must start with the prefix
+     *        <code>AWSRDSCustom</code>.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        For the list of permissions required for the IAM role, see <a href=
+     *        "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-setup-orcl.html#custom-setup-orcl.iam-vpc">
+     *        Configure IAM and your VPC</a> in the <i>Amazon Relational Database Service User Guide</i>.
+     *        </p>
+     *        <p>
+     *        This setting is required for RDS Custom.
+     */
+
+    public void setCustomIamInstanceProfile(String customIamInstanceProfile) {
+        this.customIamInstanceProfile = customIamInstanceProfile;
+    }
+
+    /**
+     * <p>
+     * The instance profile associated with the underlying Amazon EC2 instance of an RDS Custom DB instance. The
+     * instance profile must meet the following requirements:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The profile must exist in your account.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The profile must have an IAM role that Amazon EC2 has permissions to assume.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The instance profile name and the associated IAM role name must start with the prefix <code>AWSRDSCustom</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For the list of permissions required for the IAM role, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-setup-orcl.html#custom-setup-orcl.iam-vpc">
+     * Configure IAM and your VPC</a> in the <i>Amazon Relational Database Service User Guide</i>.
+     * </p>
+     * <p>
+     * This setting is required for RDS Custom.
+     * </p>
+     * 
+     * @return The instance profile associated with the underlying Amazon EC2 instance of an RDS Custom DB instance. The
+     *         instance profile must meet the following requirements:</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         The profile must exist in your account.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         The profile must have an IAM role that Amazon EC2 has permissions to assume.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         The instance profile name and the associated IAM role name must start with the prefix
+     *         <code>AWSRDSCustom</code>.
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         For the list of permissions required for the IAM role, see <a href=
+     *         "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-setup-orcl.html#custom-setup-orcl.iam-vpc"
+     *         > Configure IAM and your VPC</a> in the <i>Amazon Relational Database Service User Guide</i>.
+     *         </p>
+     *         <p>
+     *         This setting is required for RDS Custom.
+     */
+
+    public String getCustomIamInstanceProfile() {
+        return this.customIamInstanceProfile;
+    }
+
+    /**
+     * <p>
+     * The instance profile associated with the underlying Amazon EC2 instance of an RDS Custom DB instance. The
+     * instance profile must meet the following requirements:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The profile must exist in your account.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The profile must have an IAM role that Amazon EC2 has permissions to assume.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The instance profile name and the associated IAM role name must start with the prefix <code>AWSRDSCustom</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For the list of permissions required for the IAM role, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-setup-orcl.html#custom-setup-orcl.iam-vpc">
+     * Configure IAM and your VPC</a> in the <i>Amazon Relational Database Service User Guide</i>.
+     * </p>
+     * <p>
+     * This setting is required for RDS Custom.
+     * </p>
+     * 
+     * @param customIamInstanceProfile
+     *        The instance profile associated with the underlying Amazon EC2 instance of an RDS Custom DB instance. The
+     *        instance profile must meet the following requirements:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        The profile must exist in your account.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The profile must have an IAM role that Amazon EC2 has permissions to assume.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The instance profile name and the associated IAM role name must start with the prefix
+     *        <code>AWSRDSCustom</code>.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        For the list of permissions required for the IAM role, see <a href=
+     *        "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-setup-orcl.html#custom-setup-orcl.iam-vpc">
+     *        Configure IAM and your VPC</a> in the <i>Amazon Relational Database Service User Guide</i>.
+     *        </p>
+     *        <p>
+     *        This setting is required for RDS Custom.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RestoreDBInstanceFromDBSnapshotRequest withCustomIamInstanceProfile(String customIamInstanceProfile) {
+        setCustomIamInstanceProfile(customIamInstanceProfile);
+        return this;
     }
 
     /**
@@ -3535,7 +4095,9 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
         if (getDeletionProtection() != null)
             sb.append("DeletionProtection: ").append(getDeletionProtection()).append(",");
         if (getEnableCustomerOwnedIp() != null)
-            sb.append("EnableCustomerOwnedIp: ").append(getEnableCustomerOwnedIp());
+            sb.append("EnableCustomerOwnedIp: ").append(getEnableCustomerOwnedIp()).append(",");
+        if (getCustomIamInstanceProfile() != null)
+            sb.append("CustomIamInstanceProfile: ").append(getCustomIamInstanceProfile());
         sb.append("}");
         return sb.toString();
     }
@@ -3667,6 +4229,10 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
             return false;
         if (other.getEnableCustomerOwnedIp() != null && other.getEnableCustomerOwnedIp().equals(this.getEnableCustomerOwnedIp()) == false)
             return false;
+        if (other.getCustomIamInstanceProfile() == null ^ this.getCustomIamInstanceProfile() == null)
+            return false;
+        if (other.getCustomIamInstanceProfile() != null && other.getCustomIamInstanceProfile().equals(this.getCustomIamInstanceProfile()) == false)
+            return false;
         return true;
     }
 
@@ -3704,6 +4270,7 @@ public class RestoreDBInstanceFromDBSnapshotRequest extends com.amazonaws.Amazon
         hashCode = prime * hashCode + ((getDBParameterGroupName() == null) ? 0 : getDBParameterGroupName().hashCode());
         hashCode = prime * hashCode + ((getDeletionProtection() == null) ? 0 : getDeletionProtection().hashCode());
         hashCode = prime * hashCode + ((getEnableCustomerOwnedIp() == null) ? 0 : getEnableCustomerOwnedIp().hashCode());
+        hashCode = prime * hashCode + ((getCustomIamInstanceProfile() == null) ? 0 : getCustomIamInstanceProfile().hashCode());
         return hashCode;
     }
 

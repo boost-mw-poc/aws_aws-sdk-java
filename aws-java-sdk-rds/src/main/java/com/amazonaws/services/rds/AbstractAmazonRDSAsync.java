@@ -209,6 +209,19 @@ public class AbstractAmazonRDSAsync extends AbstractAmazonRDS implements AmazonR
     }
 
     @Override
+    public java.util.concurrent.Future<CreateCustomDBEngineVersionResult> createCustomDBEngineVersionAsync(CreateCustomDBEngineVersionRequest request) {
+
+        return createCustomDBEngineVersionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateCustomDBEngineVersionResult> createCustomDBEngineVersionAsync(CreateCustomDBEngineVersionRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateCustomDBEngineVersionRequest, CreateCustomDBEngineVersionResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DBCluster> createDBClusterAsync(CreateDBClusterRequest request) {
 
         return createDBClusterAsync(request, null);
@@ -412,6 +425,19 @@ public class AbstractAmazonRDSAsync extends AbstractAmazonRDS implements AmazonR
     @Override
     public java.util.concurrent.Future<CustomAvailabilityZone> deleteCustomAvailabilityZoneAsync(DeleteCustomAvailabilityZoneRequest request,
             com.amazonaws.handlers.AsyncHandler<DeleteCustomAvailabilityZoneRequest, CustomAvailabilityZone> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteCustomDBEngineVersionResult> deleteCustomDBEngineVersionAsync(DeleteCustomDBEngineVersionRequest request) {
+
+        return deleteCustomDBEngineVersionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteCustomDBEngineVersionResult> deleteCustomDBEngineVersionAsync(DeleteCustomDBEngineVersionRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteCustomDBEngineVersionRequest, DeleteCustomDBEngineVersionResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -1722,6 +1748,19 @@ public class AbstractAmazonRDSAsync extends AbstractAmazonRDS implements AmazonR
     @Override
     public java.util.concurrent.Future<ModifyCurrentDBClusterCapacityResult> modifyCurrentDBClusterCapacityAsync(ModifyCurrentDBClusterCapacityRequest request,
             com.amazonaws.handlers.AsyncHandler<ModifyCurrentDBClusterCapacityRequest, ModifyCurrentDBClusterCapacityResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ModifyCustomDBEngineVersionResult> modifyCustomDBEngineVersionAsync(ModifyCustomDBEngineVersionRequest request) {
+
+        return modifyCustomDBEngineVersionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ModifyCustomDBEngineVersionResult> modifyCustomDBEngineVersionAsync(ModifyCustomDBEngineVersionRequest request,
+            com.amazonaws.handlers.AsyncHandler<ModifyCustomDBEngineVersionRequest, ModifyCustomDBEngineVersionResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

@@ -42,8 +42,7 @@ public class StartActivityStreamRequest extends com.amazonaws.AmazonWebServiceRe
     /**
      * <p>
      * The Amazon Web Services KMS key identifier for encrypting messages in the database activity stream. The Amazon
-     * Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the Amazon Web Services KMS
-     * customer master key (CMK).
+     * Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key.
      * </p>
      */
     private String kmsKeyId;
@@ -182,14 +181,12 @@ public class StartActivityStreamRequest extends com.amazonaws.AmazonWebServiceRe
     /**
      * <p>
      * The Amazon Web Services KMS key identifier for encrypting messages in the database activity stream. The Amazon
-     * Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the Amazon Web Services KMS
-     * customer master key (CMK).
+     * Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key.
      * </p>
      * 
      * @param kmsKeyId
      *        The Amazon Web Services KMS key identifier for encrypting messages in the database activity stream. The
-     *        Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the Amazon Web
-     *        Services KMS customer master key (CMK).
+     *        Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key.
      */
 
     public void setKmsKeyId(String kmsKeyId) {
@@ -199,13 +196,11 @@ public class StartActivityStreamRequest extends com.amazonaws.AmazonWebServiceRe
     /**
      * <p>
      * The Amazon Web Services KMS key identifier for encrypting messages in the database activity stream. The Amazon
-     * Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the Amazon Web Services KMS
-     * customer master key (CMK).
+     * Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key.
      * </p>
      * 
      * @return The Amazon Web Services KMS key identifier for encrypting messages in the database activity stream. The
-     *         Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the Amazon
-     *         Web Services KMS customer master key (CMK).
+     *         Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key.
      */
 
     public String getKmsKeyId() {
@@ -215,14 +210,12 @@ public class StartActivityStreamRequest extends com.amazonaws.AmazonWebServiceRe
     /**
      * <p>
      * The Amazon Web Services KMS key identifier for encrypting messages in the database activity stream. The Amazon
-     * Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the Amazon Web Services KMS
-     * customer master key (CMK).
+     * Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key.
      * </p>
      * 
      * @param kmsKeyId
      *        The Amazon Web Services KMS key identifier for encrypting messages in the database activity stream. The
-     *        Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the Amazon Web
-     *        Services KMS customer master key (CMK).
+     *        Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

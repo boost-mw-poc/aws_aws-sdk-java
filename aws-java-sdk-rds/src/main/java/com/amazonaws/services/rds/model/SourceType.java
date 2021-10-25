@@ -25,7 +25,8 @@ public enum SourceType {
     DbSecurityGroup("db-security-group"),
     DbSnapshot("db-snapshot"),
     DbCluster("db-cluster"),
-    DbClusterSnapshot("db-cluster-snapshot");
+    DbClusterSnapshot("db-cluster-snapshot"),
+    CustomEngineVersion("custom-engine-version");
 
     private String value;
 

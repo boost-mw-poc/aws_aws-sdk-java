@@ -36,13 +36,13 @@ public class Delegation implements Serializable, Cloneable, StructuredPojo {
     private String id;
     /**
      * <p>
-     * The name of the associated assessment.
+     * The name of the assessment that's associated with the delegation.
      * </p>
      */
     private String assessmentName;
     /**
      * <p>
-     * The identifier for the associated assessment.
+     * The identifier for the assessment that's associated with the delegation.
      * </p>
      */
     private String assessmentId;
@@ -89,13 +89,13 @@ public class Delegation implements Serializable, Cloneable, StructuredPojo {
     private java.util.Date lastUpdated;
     /**
      * <p>
-     * The identifier for the associated control set.
+     * The identifier for the control set that's associated with the delegation.
      * </p>
      */
     private String controlSetId;
     /**
      * <p>
-     * The comment related to the delegation.
+     * The comment that's related to the delegation.
      * </p>
      */
     private String comment;
@@ -148,11 +148,11 @@ public class Delegation implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the associated assessment.
+     * The name of the assessment that's associated with the delegation.
      * </p>
      * 
      * @param assessmentName
-     *        The name of the associated assessment.
+     *        The name of the assessment that's associated with the delegation.
      */
 
     public void setAssessmentName(String assessmentName) {
@@ -161,10 +161,10 @@ public class Delegation implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the associated assessment.
+     * The name of the assessment that's associated with the delegation.
      * </p>
      * 
-     * @return The name of the associated assessment.
+     * @return The name of the assessment that's associated with the delegation.
      */
 
     public String getAssessmentName() {
@@ -173,11 +173,11 @@ public class Delegation implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the associated assessment.
+     * The name of the assessment that's associated with the delegation.
      * </p>
      * 
      * @param assessmentName
-     *        The name of the associated assessment.
+     *        The name of the assessment that's associated with the delegation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -188,11 +188,11 @@ public class Delegation implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier for the associated assessment.
+     * The identifier for the assessment that's associated with the delegation.
      * </p>
      * 
      * @param assessmentId
-     *        The identifier for the associated assessment.
+     *        The identifier for the assessment that's associated with the delegation.
      */
 
     public void setAssessmentId(String assessmentId) {
@@ -201,10 +201,10 @@ public class Delegation implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier for the associated assessment.
+     * The identifier for the assessment that's associated with the delegation.
      * </p>
      * 
-     * @return The identifier for the associated assessment.
+     * @return The identifier for the assessment that's associated with the delegation.
      */
 
     public String getAssessmentId() {
@@ -213,11 +213,11 @@ public class Delegation implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier for the associated assessment.
+     * The identifier for the assessment that's associated with the delegation.
      * </p>
      * 
      * @param assessmentId
-     *        The identifier for the associated assessment.
+     *        The identifier for the assessment that's associated with the delegation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -550,11 +550,11 @@ public class Delegation implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier for the associated control set.
+     * The identifier for the control set that's associated with the delegation.
      * </p>
      * 
      * @param controlSetId
-     *        The identifier for the associated control set.
+     *        The identifier for the control set that's associated with the delegation.
      */
 
     public void setControlSetId(String controlSetId) {
@@ -563,10 +563,10 @@ public class Delegation implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier for the associated control set.
+     * The identifier for the control set that's associated with the delegation.
      * </p>
      * 
-     * @return The identifier for the associated control set.
+     * @return The identifier for the control set that's associated with the delegation.
      */
 
     public String getControlSetId() {
@@ -575,11 +575,11 @@ public class Delegation implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier for the associated control set.
+     * The identifier for the control set that's associated with the delegation.
      * </p>
      * 
      * @param controlSetId
-     *        The identifier for the associated control set.
+     *        The identifier for the control set that's associated with the delegation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -590,11 +590,11 @@ public class Delegation implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The comment related to the delegation.
+     * The comment that's related to the delegation.
      * </p>
      * 
      * @param comment
-     *        The comment related to the delegation.
+     *        The comment that's related to the delegation.
      */
 
     public void setComment(String comment) {
@@ -603,10 +603,10 @@ public class Delegation implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The comment related to the delegation.
+     * The comment that's related to the delegation.
      * </p>
      * 
-     * @return The comment related to the delegation.
+     * @return The comment that's related to the delegation.
      */
 
     public String getComment() {
@@ -615,11 +615,11 @@ public class Delegation implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The comment related to the delegation.
+     * The comment that's related to the delegation.
      * </p>
      * 
      * @param comment
-     *        The comment related to the delegation.
+     *        The comment that's related to the delegation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

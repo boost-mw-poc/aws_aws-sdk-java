@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A system asset that is evaluated in an Audit Manager assessment.
+ * A system asset that's evaluated in an Audit Manager assessment.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/Resource" target="_top">AWS API
@@ -30,24 +30,24 @@ public class Resource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) for the specified resource.
+     * The Amazon Resource Name (ARN) for the resource.
      * </p>
      */
     private String arn;
     /**
      * <p>
-     * The value of the specified resource.
+     * The value of the resource.
      * </p>
      */
     private String value;
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) for the specified resource.
+     * The Amazon Resource Name (ARN) for the resource.
      * </p>
      * 
      * @param arn
-     *        The Amazon Resource Name (ARN) for the specified resource.
+     *        The Amazon Resource Name (ARN) for the resource.
      */
 
     public void setArn(String arn) {
@@ -56,10 +56,10 @@ public class Resource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) for the specified resource.
+     * The Amazon Resource Name (ARN) for the resource.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) for the specified resource.
+     * @return The Amazon Resource Name (ARN) for the resource.
      */
 
     public String getArn() {
@@ -68,11 +68,11 @@ public class Resource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) for the specified resource.
+     * The Amazon Resource Name (ARN) for the resource.
      * </p>
      * 
      * @param arn
-     *        The Amazon Resource Name (ARN) for the specified resource.
+     *        The Amazon Resource Name (ARN) for the resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -83,11 +83,11 @@ public class Resource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The value of the specified resource.
+     * The value of the resource.
      * </p>
      * 
      * @param value
-     *        The value of the specified resource.
+     *        The value of the resource.
      */
 
     public void setValue(String value) {
@@ -96,10 +96,10 @@ public class Resource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The value of the specified resource.
+     * The value of the resource.
      * </p>
      * 
-     * @return The value of the specified resource.
+     * @return The value of the resource.
      */
 
     public String getValue() {
@@ -108,11 +108,11 @@ public class Resource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The value of the specified resource.
+     * The value of the resource.
      * </p>
      * 
      * @param value
-     *        The value of the specified resource.
+     *        The value of the resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

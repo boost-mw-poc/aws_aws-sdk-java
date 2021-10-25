@@ -129,6 +129,16 @@ public class PendingModifiedValuesStaxUnmarshaller implements Unmarshaller<Pendi
                     pendingModifiedValues.setIAMDatabaseAuthenticationEnabled(BooleanStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("AutomationMode", targetDepth)) {
+                    pendingModifiedValues.setAutomationMode(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
+                if (context.testExpression("ResumeFullAutomationModeTime", targetDepth)) {
+                    pendingModifiedValues.setResumeFullAutomationModeTime(DateStaxUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return pendingModifiedValues;

@@ -26,18 +26,18 @@ public class UpdateAssessmentControlSetStatusResult extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The name of the updated control set returned by the <code>UpdateAssessmentControlSetStatus</code> API.
+     * The name of the updated control set that the <code>UpdateAssessmentControlSetStatus</code> API returned.
      * </p>
      */
     private AssessmentControlSet controlSet;
 
     /**
      * <p>
-     * The name of the updated control set returned by the <code>UpdateAssessmentControlSetStatus</code> API.
+     * The name of the updated control set that the <code>UpdateAssessmentControlSetStatus</code> API returned.
      * </p>
      * 
      * @param controlSet
-     *        The name of the updated control set returned by the <code>UpdateAssessmentControlSetStatus</code> API.
+     *        The name of the updated control set that the <code>UpdateAssessmentControlSetStatus</code> API returned.
      */
 
     public void setControlSet(AssessmentControlSet controlSet) {
@@ -46,10 +46,10 @@ public class UpdateAssessmentControlSetStatusResult extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The name of the updated control set returned by the <code>UpdateAssessmentControlSetStatus</code> API.
+     * The name of the updated control set that the <code>UpdateAssessmentControlSetStatus</code> API returned.
      * </p>
      * 
-     * @return The name of the updated control set returned by the <code>UpdateAssessmentControlSetStatus</code> API.
+     * @return The name of the updated control set that the <code>UpdateAssessmentControlSetStatus</code> API returned.
      */
 
     public AssessmentControlSet getControlSet() {
@@ -58,11 +58,11 @@ public class UpdateAssessmentControlSetStatusResult extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The name of the updated control set returned by the <code>UpdateAssessmentControlSetStatus</code> API.
+     * The name of the updated control set that the <code>UpdateAssessmentControlSetStatus</code> API returned.
      * </p>
      * 
      * @param controlSet
-     *        The name of the updated control set returned by the <code>UpdateAssessmentControlSetStatus</code> API.
+     *        The name of the updated control set that the <code>UpdateAssessmentControlSetStatus</code> API returned.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

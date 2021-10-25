@@ -25,23 +25,23 @@ public class ListKeywordsForDataSourceResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The list of keywords for the specified event mapping source.
+     * The list of keywords for the event mapping source.
      * </p>
      */
     private java.util.List<String> keywords;
     /**
      * <p>
-     * The pagination token used to fetch the next set of results.
+     * The pagination token that's used to fetch the next set of results.
      * </p>
      */
     private String nextToken;
 
     /**
      * <p>
-     * The list of keywords for the specified event mapping source.
+     * The list of keywords for the event mapping source.
      * </p>
      * 
-     * @return The list of keywords for the specified event mapping source.
+     * @return The list of keywords for the event mapping source.
      */
 
     public java.util.List<String> getKeywords() {
@@ -50,11 +50,11 @@ public class ListKeywordsForDataSourceResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The list of keywords for the specified event mapping source.
+     * The list of keywords for the event mapping source.
      * </p>
      * 
      * @param keywords
-     *        The list of keywords for the specified event mapping source.
+     *        The list of keywords for the event mapping source.
      */
 
     public void setKeywords(java.util.Collection<String> keywords) {
@@ -68,7 +68,7 @@ public class ListKeywordsForDataSourceResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The list of keywords for the specified event mapping source.
+     * The list of keywords for the event mapping source.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -77,7 +77,7 @@ public class ListKeywordsForDataSourceResult extends com.amazonaws.AmazonWebServ
      * </p>
      * 
      * @param keywords
-     *        The list of keywords for the specified event mapping source.
+     *        The list of keywords for the event mapping source.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -93,11 +93,11 @@ public class ListKeywordsForDataSourceResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The list of keywords for the specified event mapping source.
+     * The list of keywords for the event mapping source.
      * </p>
      * 
      * @param keywords
-     *        The list of keywords for the specified event mapping source.
+     *        The list of keywords for the event mapping source.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -108,11 +108,11 @@ public class ListKeywordsForDataSourceResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The pagination token used to fetch the next set of results.
+     * The pagination token that's used to fetch the next set of results.
      * </p>
      * 
      * @param nextToken
-     *        The pagination token used to fetch the next set of results.
+     *        The pagination token that's used to fetch the next set of results.
      */
 
     public void setNextToken(String nextToken) {
@@ -121,10 +121,10 @@ public class ListKeywordsForDataSourceResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The pagination token used to fetch the next set of results.
+     * The pagination token that's used to fetch the next set of results.
      * </p>
      * 
-     * @return The pagination token used to fetch the next set of results.
+     * @return The pagination token that's used to fetch the next set of results.
      */
 
     public String getNextToken() {
@@ -133,11 +133,11 @@ public class ListKeywordsForDataSourceResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The pagination token used to fetch the next set of results.
+     * The pagination token that's used to fetch the next set of results.
      * </p>
      * 
      * @param nextToken
-     *        The pagination token used to fetch the next set of results.
+     *        The pagination token that's used to fetch the next set of results.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

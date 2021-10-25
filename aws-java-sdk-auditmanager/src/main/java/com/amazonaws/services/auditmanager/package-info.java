@@ -17,14 +17,15 @@
  * Audit Manager API operations, data types, and errors.
  * </p>
  * <p>
- * Audit Manager is a service that provides automated evidence collection so that you can continuously audit your Amazon
- * Web Services usage, and assess the effectiveness of your controls to better manage risk and simplify compliance.
+ * Audit Manager is a service that provides automated evidence collection so that you can continually audit your Amazon
+ * Web Services usage. You can use it to assess the effectiveness of your controls, manage risk, and simplify
+ * compliance.
  * </p>
  * <p>
- * Audit Manager provides pre-built frameworks that structure and automate assessments for a given compliance standard.
- * Frameworks include a pre-built collection of controls with descriptions and testing procedures, which are grouped
- * according to the requirements of the specified compliance standard or regulation. You can also customize frameworks
- * and controls to support internal audits with unique requirements.
+ * Audit Manager provides prebuilt frameworks that structure and automate assessments for a given compliance standard.
+ * Frameworks include a prebuilt collection of controls with descriptions and testing procedures. These controls are
+ * grouped according to the requirements of the specified compliance standard or regulation. You can also customize
+ * frameworks and controls to support internal audits with specific requirements.
  * </p>
  * <p>
  * Use the following links to get started with the Audit Manager API:

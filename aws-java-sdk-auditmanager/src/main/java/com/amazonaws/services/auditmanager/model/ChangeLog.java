@@ -19,7 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The record of a change within Audit Manager, such as a modified assessment, a delegated control set, and so on.
+ * The record of a change within Audit Manager. For example, this could be the status change of an assessment or the
+ * delegation of a control set.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/ChangeLog" target="_top">AWS API
@@ -30,25 +31,25 @@ public class ChangeLog implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The changelog object type, such as an assessment, control, or control set.
+     * The object that was changed, such as an assessment, control, or control set.
      * </p>
      */
     private String objectType;
     /**
      * <p>
-     * The name of the changelog object.
+     * The name of the object that changed. This could be the name of an assessment, control, or control set.
      * </p>
      */
     private String objectName;
     /**
      * <p>
-     * The action performed.
+     * The action that was performed.
      * </p>
      */
     private String action;
     /**
      * <p>
-     * The time of creation for the changelog object.
+     * The time when the action was performed and the changelog record was created.
      * </p>
      */
     private java.util.Date createdAt;
@@ -61,11 +62,11 @@ public class ChangeLog implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The changelog object type, such as an assessment, control, or control set.
+     * The object that was changed, such as an assessment, control, or control set.
      * </p>
      * 
      * @param objectType
-     *        The changelog object type, such as an assessment, control, or control set.
+     *        The object that was changed, such as an assessment, control, or control set.
      * @see ObjectTypeEnum
      */
 
@@ -75,10 +76,10 @@ public class ChangeLog implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The changelog object type, such as an assessment, control, or control set.
+     * The object that was changed, such as an assessment, control, or control set.
      * </p>
      * 
-     * @return The changelog object type, such as an assessment, control, or control set.
+     * @return The object that was changed, such as an assessment, control, or control set.
      * @see ObjectTypeEnum
      */
 
@@ -88,11 +89,11 @@ public class ChangeLog implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The changelog object type, such as an assessment, control, or control set.
+     * The object that was changed, such as an assessment, control, or control set.
      * </p>
      * 
      * @param objectType
-     *        The changelog object type, such as an assessment, control, or control set.
+     *        The object that was changed, such as an assessment, control, or control set.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ObjectTypeEnum
      */
@@ -104,11 +105,11 @@ public class ChangeLog implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The changelog object type, such as an assessment, control, or control set.
+     * The object that was changed, such as an assessment, control, or control set.
      * </p>
      * 
      * @param objectType
-     *        The changelog object type, such as an assessment, control, or control set.
+     *        The object that was changed, such as an assessment, control, or control set.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ObjectTypeEnum
      */
@@ -120,11 +121,11 @@ public class ChangeLog implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the changelog object.
+     * The name of the object that changed. This could be the name of an assessment, control, or control set.
      * </p>
      * 
      * @param objectName
-     *        The name of the changelog object.
+     *        The name of the object that changed. This could be the name of an assessment, control, or control set.
      */
 
     public void setObjectName(String objectName) {
@@ -133,10 +134,10 @@ public class ChangeLog implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the changelog object.
+     * The name of the object that changed. This could be the name of an assessment, control, or control set.
      * </p>
      * 
-     * @return The name of the changelog object.
+     * @return The name of the object that changed. This could be the name of an assessment, control, or control set.
      */
 
     public String getObjectName() {
@@ -145,11 +146,11 @@ public class ChangeLog implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the changelog object.
+     * The name of the object that changed. This could be the name of an assessment, control, or control set.
      * </p>
      * 
      * @param objectName
-     *        The name of the changelog object.
+     *        The name of the object that changed. This could be the name of an assessment, control, or control set.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -160,11 +161,11 @@ public class ChangeLog implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The action performed.
+     * The action that was performed.
      * </p>
      * 
      * @param action
-     *        The action performed.
+     *        The action that was performed.
      * @see ActionEnum
      */
 
@@ -174,10 +175,10 @@ public class ChangeLog implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The action performed.
+     * The action that was performed.
      * </p>
      * 
-     * @return The action performed.
+     * @return The action that was performed.
      * @see ActionEnum
      */
 
@@ -187,11 +188,11 @@ public class ChangeLog implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The action performed.
+     * The action that was performed.
      * </p>
      * 
      * @param action
-     *        The action performed.
+     *        The action that was performed.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ActionEnum
      */
@@ -203,11 +204,11 @@ public class ChangeLog implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The action performed.
+     * The action that was performed.
      * </p>
      * 
      * @param action
-     *        The action performed.
+     *        The action that was performed.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ActionEnum
      */
@@ -219,11 +220,11 @@ public class ChangeLog implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The time of creation for the changelog object.
+     * The time when the action was performed and the changelog record was created.
      * </p>
      * 
      * @param createdAt
-     *        The time of creation for the changelog object.
+     *        The time when the action was performed and the changelog record was created.
      */
 
     public void setCreatedAt(java.util.Date createdAt) {
@@ -232,10 +233,10 @@ public class ChangeLog implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The time of creation for the changelog object.
+     * The time when the action was performed and the changelog record was created.
      * </p>
      * 
-     * @return The time of creation for the changelog object.
+     * @return The time when the action was performed and the changelog record was created.
      */
 
     public java.util.Date getCreatedAt() {
@@ -244,11 +245,11 @@ public class ChangeLog implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The time of creation for the changelog object.
+     * The time when the action was performed and the changelog record was created.
      * </p>
      * 
      * @param createdAt
-     *        The time of creation for the changelog object.
+     *        The time when the action was performed and the changelog record was created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

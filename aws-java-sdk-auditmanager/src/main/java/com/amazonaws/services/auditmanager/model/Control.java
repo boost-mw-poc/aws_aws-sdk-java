@@ -30,7 +30,7 @@ public class Control implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the specified control.
+     * The Amazon Resource Name (ARN) of the control.
      * </p>
      */
     private String arn;
@@ -42,25 +42,25 @@ public class Control implements Serializable, Cloneable, StructuredPojo {
     private String id;
     /**
      * <p>
-     * The type of control, such as custom or standard.
+     * The type of control, such as a custom control or a standard control.
      * </p>
      */
     private String type;
     /**
      * <p>
-     * The name of the specified control.
+     * The name of the control.
      * </p>
      */
     private String name;
     /**
      * <p>
-     * The description of the specified control.
+     * The description of the control.
      * </p>
      */
     private String description;
     /**
      * <p>
-     * The steps to follow to determine if the control has been satisfied.
+     * The steps that you should follow to determine if the control has been satisfied.
      * </p>
      */
     private String testingInformation;
@@ -72,19 +72,19 @@ public class Control implements Serializable, Cloneable, StructuredPojo {
     private String actionPlanTitle;
     /**
      * <p>
-     * The recommended actions to carry out if the control is not fulfilled.
+     * The recommended actions to carry out if the control isn't fulfilled.
      * </p>
      */
     private String actionPlanInstructions;
     /**
      * <p>
-     * The data source that determines from where Audit Manager collects evidence for the control.
+     * The data source that determines where Audit Manager collects evidence from for the control.
      * </p>
      */
     private String controlSources;
     /**
      * <p>
-     * The data mapping sources for the specified control.
+     * The data mapping sources for the control.
      * </p>
      */
     private java.util.List<ControlMappingSource> controlMappingSources;
@@ -121,11 +121,11 @@ public class Control implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the specified control.
+     * The Amazon Resource Name (ARN) of the control.
      * </p>
      * 
      * @param arn
-     *        The Amazon Resource Name (ARN) of the specified control.
+     *        The Amazon Resource Name (ARN) of the control.
      */
 
     public void setArn(String arn) {
@@ -134,10 +134,10 @@ public class Control implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the specified control.
+     * The Amazon Resource Name (ARN) of the control.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the specified control.
+     * @return The Amazon Resource Name (ARN) of the control.
      */
 
     public String getArn() {
@@ -146,11 +146,11 @@ public class Control implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the specified control.
+     * The Amazon Resource Name (ARN) of the control.
      * </p>
      * 
      * @param arn
-     *        The Amazon Resource Name (ARN) of the specified control.
+     *        The Amazon Resource Name (ARN) of the control.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -201,11 +201,11 @@ public class Control implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of control, such as custom or standard.
+     * The type of control, such as a custom control or a standard control.
      * </p>
      * 
      * @param type
-     *        The type of control, such as custom or standard.
+     *        The type of control, such as a custom control or a standard control.
      * @see ControlType
      */
 
@@ -215,10 +215,10 @@ public class Control implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of control, such as custom or standard.
+     * The type of control, such as a custom control or a standard control.
      * </p>
      * 
-     * @return The type of control, such as custom or standard.
+     * @return The type of control, such as a custom control or a standard control.
      * @see ControlType
      */
 
@@ -228,11 +228,11 @@ public class Control implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of control, such as custom or standard.
+     * The type of control, such as a custom control or a standard control.
      * </p>
      * 
      * @param type
-     *        The type of control, such as custom or standard.
+     *        The type of control, such as a custom control or a standard control.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ControlType
      */
@@ -244,11 +244,11 @@ public class Control implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of control, such as custom or standard.
+     * The type of control, such as a custom control or a standard control.
      * </p>
      * 
      * @param type
-     *        The type of control, such as custom or standard.
+     *        The type of control, such as a custom control or a standard control.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ControlType
      */
@@ -260,11 +260,11 @@ public class Control implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the specified control.
+     * The name of the control.
      * </p>
      * 
      * @param name
-     *        The name of the specified control.
+     *        The name of the control.
      */
 
     public void setName(String name) {
@@ -273,10 +273,10 @@ public class Control implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the specified control.
+     * The name of the control.
      * </p>
      * 
-     * @return The name of the specified control.
+     * @return The name of the control.
      */
 
     public String getName() {
@@ -285,11 +285,11 @@ public class Control implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the specified control.
+     * The name of the control.
      * </p>
      * 
      * @param name
-     *        The name of the specified control.
+     *        The name of the control.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -300,11 +300,11 @@ public class Control implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The description of the specified control.
+     * The description of the control.
      * </p>
      * 
      * @param description
-     *        The description of the specified control.
+     *        The description of the control.
      */
 
     public void setDescription(String description) {
@@ -313,10 +313,10 @@ public class Control implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The description of the specified control.
+     * The description of the control.
      * </p>
      * 
-     * @return The description of the specified control.
+     * @return The description of the control.
      */
 
     public String getDescription() {
@@ -325,11 +325,11 @@ public class Control implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The description of the specified control.
+     * The description of the control.
      * </p>
      * 
      * @param description
-     *        The description of the specified control.
+     *        The description of the control.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -340,11 +340,11 @@ public class Control implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The steps to follow to determine if the control has been satisfied.
+     * The steps that you should follow to determine if the control has been satisfied.
      * </p>
      * 
      * @param testingInformation
-     *        The steps to follow to determine if the control has been satisfied.
+     *        The steps that you should follow to determine if the control has been satisfied.
      */
 
     public void setTestingInformation(String testingInformation) {
@@ -353,10 +353,10 @@ public class Control implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The steps to follow to determine if the control has been satisfied.
+     * The steps that you should follow to determine if the control has been satisfied.
      * </p>
      * 
-     * @return The steps to follow to determine if the control has been satisfied.
+     * @return The steps that you should follow to determine if the control has been satisfied.
      */
 
     public String getTestingInformation() {
@@ -365,11 +365,11 @@ public class Control implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The steps to follow to determine if the control has been satisfied.
+     * The steps that you should follow to determine if the control has been satisfied.
      * </p>
      * 
      * @param testingInformation
-     *        The steps to follow to determine if the control has been satisfied.
+     *        The steps that you should follow to determine if the control has been satisfied.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -420,11 +420,11 @@ public class Control implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The recommended actions to carry out if the control is not fulfilled.
+     * The recommended actions to carry out if the control isn't fulfilled.
      * </p>
      * 
      * @param actionPlanInstructions
-     *        The recommended actions to carry out if the control is not fulfilled.
+     *        The recommended actions to carry out if the control isn't fulfilled.
      */
 
     public void setActionPlanInstructions(String actionPlanInstructions) {
@@ -433,10 +433,10 @@ public class Control implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The recommended actions to carry out if the control is not fulfilled.
+     * The recommended actions to carry out if the control isn't fulfilled.
      * </p>
      * 
-     * @return The recommended actions to carry out if the control is not fulfilled.
+     * @return The recommended actions to carry out if the control isn't fulfilled.
      */
 
     public String getActionPlanInstructions() {
@@ -445,11 +445,11 @@ public class Control implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The recommended actions to carry out if the control is not fulfilled.
+     * The recommended actions to carry out if the control isn't fulfilled.
      * </p>
      * 
      * @param actionPlanInstructions
-     *        The recommended actions to carry out if the control is not fulfilled.
+     *        The recommended actions to carry out if the control isn't fulfilled.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -460,11 +460,11 @@ public class Control implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The data source that determines from where Audit Manager collects evidence for the control.
+     * The data source that determines where Audit Manager collects evidence from for the control.
      * </p>
      * 
      * @param controlSources
-     *        The data source that determines from where Audit Manager collects evidence for the control.
+     *        The data source that determines where Audit Manager collects evidence from for the control.
      */
 
     public void setControlSources(String controlSources) {
@@ -473,10 +473,10 @@ public class Control implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The data source that determines from where Audit Manager collects evidence for the control.
+     * The data source that determines where Audit Manager collects evidence from for the control.
      * </p>
      * 
-     * @return The data source that determines from where Audit Manager collects evidence for the control.
+     * @return The data source that determines where Audit Manager collects evidence from for the control.
      */
 
     public String getControlSources() {
@@ -485,11 +485,11 @@ public class Control implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The data source that determines from where Audit Manager collects evidence for the control.
+     * The data source that determines where Audit Manager collects evidence from for the control.
      * </p>
      * 
      * @param controlSources
-     *        The data source that determines from where Audit Manager collects evidence for the control.
+     *        The data source that determines where Audit Manager collects evidence from for the control.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -500,10 +500,10 @@ public class Control implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The data mapping sources for the specified control.
+     * The data mapping sources for the control.
      * </p>
      * 
-     * @return The data mapping sources for the specified control.
+     * @return The data mapping sources for the control.
      */
 
     public java.util.List<ControlMappingSource> getControlMappingSources() {
@@ -512,11 +512,11 @@ public class Control implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The data mapping sources for the specified control.
+     * The data mapping sources for the control.
      * </p>
      * 
      * @param controlMappingSources
-     *        The data mapping sources for the specified control.
+     *        The data mapping sources for the control.
      */
 
     public void setControlMappingSources(java.util.Collection<ControlMappingSource> controlMappingSources) {
@@ -530,7 +530,7 @@ public class Control implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The data mapping sources for the specified control.
+     * The data mapping sources for the control.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -539,7 +539,7 @@ public class Control implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param controlMappingSources
-     *        The data mapping sources for the specified control.
+     *        The data mapping sources for the control.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -555,11 +555,11 @@ public class Control implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The data mapping sources for the specified control.
+     * The data mapping sources for the control.
      * </p>
      * 
      * @param controlMappingSources
-     *        The data mapping sources for the specified control.
+     *        The data mapping sources for the control.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

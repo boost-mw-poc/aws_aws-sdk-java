@@ -117,15 +117,28 @@ public class DBEngineVersion implements Serializable, Cloneable {
     private com.amazonaws.internal.SdkInternalList<String> supportedEngineModes;
     /**
      * <p>
-     * A list of features supported by the DB engine. Supported feature names include the following.
+     * A list of features supported by the DB engine.
      * </p>
-     * <ul>
-     * <li>
      * <p>
-     * s3Import
+     * The supported features vary by DB engine and DB engine version.
      * </p>
-     * </li>
-     * </ul>
+     * <p>
+     * To determine the supported features for a specific DB engine and DB engine version using the CLI, use the
+     * following command:
+     * </p>
+     * <p>
+     * <code>aws rds describe-db-engine-versions --engine &lt;engine_name&gt; --engine-version &lt;engine_version&gt;</code>
+     * </p>
+     * <p>
+     * For example, to determine the supported features for RDS for PostgreSQL version 13.3 using the CLI, use the
+     * following command:
+     * </p>
+     * <p>
+     * <code>aws rds describe-db-engine-versions --engine postgres --engine-version 13.3</code>
+     * </p>
+     * <p>
+     * The supported features are listed under <code>SupportedFeatureNames</code> in the output.
+     * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> supportedFeatureNames;
     /**
@@ -146,6 +159,46 @@ public class DBEngineVersion implements Serializable, Cloneable {
      * </p>
      */
     private Boolean supportsGlobalDatabases;
+    /**
+     * <p>
+     * The major engine version of the CEV.
+     * </p>
+     */
+    private String majorEngineVersion;
+    /**
+     * <p>
+     * The name of the Amazon S3 bucket that contains your database installation files.
+     * </p>
+     */
+    private String databaseInstallationFilesS3BucketName;
+    /**
+     * <p>
+     * The Amazon S3 directory that contains the database installation files. If not specified, then no prefix is
+     * assumed.
+     * </p>
+     */
+    private String databaseInstallationFilesS3Prefix;
+    /**
+     * <p>
+     * The ARN of the custom engine version.
+     * </p>
+     */
+    private String dBEngineVersionArn;
+    /**
+     * <p>
+     * The Amazon Web Services KMS key identifier for an encrypted CEV. This parameter is required for RDS Custom, but
+     * optional for Amazon RDS.
+     * </p>
+     */
+    private String kMSKeyId;
+    /**
+     * <p>
+     * The creation time of the DB engine version.
+     * </p>
+     */
+    private java.util.Date createTime;
+
+    private com.amazonaws.internal.SdkInternalList<Tag> tagList;
 
     /**
      * <p>
@@ -969,23 +1022,49 @@ public class DBEngineVersion implements Serializable, Cloneable {
 
     /**
      * <p>
-     * A list of features supported by the DB engine. Supported feature names include the following.
+     * A list of features supported by the DB engine.
      * </p>
-     * <ul>
-     * <li>
      * <p>
-     * s3Import
+     * The supported features vary by DB engine and DB engine version.
      * </p>
-     * </li>
-     * </ul>
+     * <p>
+     * To determine the supported features for a specific DB engine and DB engine version using the CLI, use the
+     * following command:
+     * </p>
+     * <p>
+     * <code>aws rds describe-db-engine-versions --engine &lt;engine_name&gt; --engine-version &lt;engine_version&gt;</code>
+     * </p>
+     * <p>
+     * For example, to determine the supported features for RDS for PostgreSQL version 13.3 using the CLI, use the
+     * following command:
+     * </p>
+     * <p>
+     * <code>aws rds describe-db-engine-versions --engine postgres --engine-version 13.3</code>
+     * </p>
+     * <p>
+     * The supported features are listed under <code>SupportedFeatureNames</code> in the output.
+     * </p>
      * 
-     * @return A list of features supported by the DB engine. Supported feature names include the following. </p>
-     *         <ul>
-     *         <li>
+     * @return A list of features supported by the DB engine. </p>
      *         <p>
-     *         s3Import
+     *         The supported features vary by DB engine and DB engine version.
      *         </p>
-     *         </li>
+     *         <p>
+     *         To determine the supported features for a specific DB engine and DB engine version using the CLI, use the
+     *         following command:
+     *         </p>
+     *         <p>
+     *         <code>aws rds describe-db-engine-versions --engine &lt;engine_name&gt; --engine-version &lt;engine_version&gt;</code>
+     *         </p>
+     *         <p>
+     *         For example, to determine the supported features for RDS for PostgreSQL version 13.3 using the CLI, use
+     *         the following command:
+     *         </p>
+     *         <p>
+     *         <code>aws rds describe-db-engine-versions --engine postgres --engine-version 13.3</code>
+     *         </p>
+     *         <p>
+     *         The supported features are listed under <code>SupportedFeatureNames</code> in the output.
      */
 
     public java.util.List<String> getSupportedFeatureNames() {
@@ -997,24 +1076,50 @@ public class DBEngineVersion implements Serializable, Cloneable {
 
     /**
      * <p>
-     * A list of features supported by the DB engine. Supported feature names include the following.
+     * A list of features supported by the DB engine.
      * </p>
-     * <ul>
-     * <li>
      * <p>
-     * s3Import
+     * The supported features vary by DB engine and DB engine version.
      * </p>
-     * </li>
-     * </ul>
+     * <p>
+     * To determine the supported features for a specific DB engine and DB engine version using the CLI, use the
+     * following command:
+     * </p>
+     * <p>
+     * <code>aws rds describe-db-engine-versions --engine &lt;engine_name&gt; --engine-version &lt;engine_version&gt;</code>
+     * </p>
+     * <p>
+     * For example, to determine the supported features for RDS for PostgreSQL version 13.3 using the CLI, use the
+     * following command:
+     * </p>
+     * <p>
+     * <code>aws rds describe-db-engine-versions --engine postgres --engine-version 13.3</code>
+     * </p>
+     * <p>
+     * The supported features are listed under <code>SupportedFeatureNames</code> in the output.
+     * </p>
      * 
      * @param supportedFeatureNames
-     *        A list of features supported by the DB engine. Supported feature names include the following. </p>
-     *        <ul>
-     *        <li>
+     *        A list of features supported by the DB engine. </p>
      *        <p>
-     *        s3Import
+     *        The supported features vary by DB engine and DB engine version.
      *        </p>
-     *        </li>
+     *        <p>
+     *        To determine the supported features for a specific DB engine and DB engine version using the CLI, use the
+     *        following command:
+     *        </p>
+     *        <p>
+     *        <code>aws rds describe-db-engine-versions --engine &lt;engine_name&gt; --engine-version &lt;engine_version&gt;</code>
+     *        </p>
+     *        <p>
+     *        For example, to determine the supported features for RDS for PostgreSQL version 13.3 using the CLI, use
+     *        the following command:
+     *        </p>
+     *        <p>
+     *        <code>aws rds describe-db-engine-versions --engine postgres --engine-version 13.3</code>
+     *        </p>
+     *        <p>
+     *        The supported features are listed under <code>SupportedFeatureNames</code> in the output.
      */
 
     public void setSupportedFeatureNames(java.util.Collection<String> supportedFeatureNames) {
@@ -1028,15 +1133,28 @@ public class DBEngineVersion implements Serializable, Cloneable {
 
     /**
      * <p>
-     * A list of features supported by the DB engine. Supported feature names include the following.
+     * A list of features supported by the DB engine.
      * </p>
-     * <ul>
-     * <li>
      * <p>
-     * s3Import
+     * The supported features vary by DB engine and DB engine version.
      * </p>
-     * </li>
-     * </ul>
+     * <p>
+     * To determine the supported features for a specific DB engine and DB engine version using the CLI, use the
+     * following command:
+     * </p>
+     * <p>
+     * <code>aws rds describe-db-engine-versions --engine &lt;engine_name&gt; --engine-version &lt;engine_version&gt;</code>
+     * </p>
+     * <p>
+     * For example, to determine the supported features for RDS for PostgreSQL version 13.3 using the CLI, use the
+     * following command:
+     * </p>
+     * <p>
+     * <code>aws rds describe-db-engine-versions --engine postgres --engine-version 13.3</code>
+     * </p>
+     * <p>
+     * The supported features are listed under <code>SupportedFeatureNames</code> in the output.
+     * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setSupportedFeatureNames(java.util.Collection)} or
@@ -1044,13 +1162,26 @@ public class DBEngineVersion implements Serializable, Cloneable {
      * </p>
      * 
      * @param supportedFeatureNames
-     *        A list of features supported by the DB engine. Supported feature names include the following. </p>
-     *        <ul>
-     *        <li>
+     *        A list of features supported by the DB engine. </p>
      *        <p>
-     *        s3Import
+     *        The supported features vary by DB engine and DB engine version.
      *        </p>
-     *        </li>
+     *        <p>
+     *        To determine the supported features for a specific DB engine and DB engine version using the CLI, use the
+     *        following command:
+     *        </p>
+     *        <p>
+     *        <code>aws rds describe-db-engine-versions --engine &lt;engine_name&gt; --engine-version &lt;engine_version&gt;</code>
+     *        </p>
+     *        <p>
+     *        For example, to determine the supported features for RDS for PostgreSQL version 13.3 using the CLI, use
+     *        the following command:
+     *        </p>
+     *        <p>
+     *        <code>aws rds describe-db-engine-versions --engine postgres --engine-version 13.3</code>
+     *        </p>
+     *        <p>
+     *        The supported features are listed under <code>SupportedFeatureNames</code> in the output.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1066,24 +1197,50 @@ public class DBEngineVersion implements Serializable, Cloneable {
 
     /**
      * <p>
-     * A list of features supported by the DB engine. Supported feature names include the following.
+     * A list of features supported by the DB engine.
      * </p>
-     * <ul>
-     * <li>
      * <p>
-     * s3Import
+     * The supported features vary by DB engine and DB engine version.
      * </p>
-     * </li>
-     * </ul>
+     * <p>
+     * To determine the supported features for a specific DB engine and DB engine version using the CLI, use the
+     * following command:
+     * </p>
+     * <p>
+     * <code>aws rds describe-db-engine-versions --engine &lt;engine_name&gt; --engine-version &lt;engine_version&gt;</code>
+     * </p>
+     * <p>
+     * For example, to determine the supported features for RDS for PostgreSQL version 13.3 using the CLI, use the
+     * following command:
+     * </p>
+     * <p>
+     * <code>aws rds describe-db-engine-versions --engine postgres --engine-version 13.3</code>
+     * </p>
+     * <p>
+     * The supported features are listed under <code>SupportedFeatureNames</code> in the output.
+     * </p>
      * 
      * @param supportedFeatureNames
-     *        A list of features supported by the DB engine. Supported feature names include the following. </p>
-     *        <ul>
-     *        <li>
+     *        A list of features supported by the DB engine. </p>
      *        <p>
-     *        s3Import
+     *        The supported features vary by DB engine and DB engine version.
      *        </p>
-     *        </li>
+     *        <p>
+     *        To determine the supported features for a specific DB engine and DB engine version using the CLI, use the
+     *        following command:
+     *        </p>
+     *        <p>
+     *        <code>aws rds describe-db-engine-versions --engine &lt;engine_name&gt; --engine-version &lt;engine_version&gt;</code>
+     *        </p>
+     *        <p>
+     *        For example, to determine the supported features for RDS for PostgreSQL version 13.3 using the CLI, use
+     *        the following command:
+     *        </p>
+     *        <p>
+     *        <code>aws rds describe-db-engine-versions --engine postgres --engine-version 13.3</code>
+     *        </p>
+     *        <p>
+     *        The supported features are listed under <code>SupportedFeatureNames</code> in the output.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1237,6 +1394,313 @@ public class DBEngineVersion implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * The major engine version of the CEV.
+     * </p>
+     * 
+     * @param majorEngineVersion
+     *        The major engine version of the CEV.
+     */
+
+    public void setMajorEngineVersion(String majorEngineVersion) {
+        this.majorEngineVersion = majorEngineVersion;
+    }
+
+    /**
+     * <p>
+     * The major engine version of the CEV.
+     * </p>
+     * 
+     * @return The major engine version of the CEV.
+     */
+
+    public String getMajorEngineVersion() {
+        return this.majorEngineVersion;
+    }
+
+    /**
+     * <p>
+     * The major engine version of the CEV.
+     * </p>
+     * 
+     * @param majorEngineVersion
+     *        The major engine version of the CEV.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DBEngineVersion withMajorEngineVersion(String majorEngineVersion) {
+        setMajorEngineVersion(majorEngineVersion);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The name of the Amazon S3 bucket that contains your database installation files.
+     * </p>
+     * 
+     * @param databaseInstallationFilesS3BucketName
+     *        The name of the Amazon S3 bucket that contains your database installation files.
+     */
+
+    public void setDatabaseInstallationFilesS3BucketName(String databaseInstallationFilesS3BucketName) {
+        this.databaseInstallationFilesS3BucketName = databaseInstallationFilesS3BucketName;
+    }
+
+    /**
+     * <p>
+     * The name of the Amazon S3 bucket that contains your database installation files.
+     * </p>
+     * 
+     * @return The name of the Amazon S3 bucket that contains your database installation files.
+     */
+
+    public String getDatabaseInstallationFilesS3BucketName() {
+        return this.databaseInstallationFilesS3BucketName;
+    }
+
+    /**
+     * <p>
+     * The name of the Amazon S3 bucket that contains your database installation files.
+     * </p>
+     * 
+     * @param databaseInstallationFilesS3BucketName
+     *        The name of the Amazon S3 bucket that contains your database installation files.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DBEngineVersion withDatabaseInstallationFilesS3BucketName(String databaseInstallationFilesS3BucketName) {
+        setDatabaseInstallationFilesS3BucketName(databaseInstallationFilesS3BucketName);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The Amazon S3 directory that contains the database installation files. If not specified, then no prefix is
+     * assumed.
+     * </p>
+     * 
+     * @param databaseInstallationFilesS3Prefix
+     *        The Amazon S3 directory that contains the database installation files. If not specified, then no prefix is
+     *        assumed.
+     */
+
+    public void setDatabaseInstallationFilesS3Prefix(String databaseInstallationFilesS3Prefix) {
+        this.databaseInstallationFilesS3Prefix = databaseInstallationFilesS3Prefix;
+    }
+
+    /**
+     * <p>
+     * The Amazon S3 directory that contains the database installation files. If not specified, then no prefix is
+     * assumed.
+     * </p>
+     * 
+     * @return The Amazon S3 directory that contains the database installation files. If not specified, then no prefix
+     *         is assumed.
+     */
+
+    public String getDatabaseInstallationFilesS3Prefix() {
+        return this.databaseInstallationFilesS3Prefix;
+    }
+
+    /**
+     * <p>
+     * The Amazon S3 directory that contains the database installation files. If not specified, then no prefix is
+     * assumed.
+     * </p>
+     * 
+     * @param databaseInstallationFilesS3Prefix
+     *        The Amazon S3 directory that contains the database installation files. If not specified, then no prefix is
+     *        assumed.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DBEngineVersion withDatabaseInstallationFilesS3Prefix(String databaseInstallationFilesS3Prefix) {
+        setDatabaseInstallationFilesS3Prefix(databaseInstallationFilesS3Prefix);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The ARN of the custom engine version.
+     * </p>
+     * 
+     * @param dBEngineVersionArn
+     *        The ARN of the custom engine version.
+     */
+
+    public void setDBEngineVersionArn(String dBEngineVersionArn) {
+        this.dBEngineVersionArn = dBEngineVersionArn;
+    }
+
+    /**
+     * <p>
+     * The ARN of the custom engine version.
+     * </p>
+     * 
+     * @return The ARN of the custom engine version.
+     */
+
+    public String getDBEngineVersionArn() {
+        return this.dBEngineVersionArn;
+    }
+
+    /**
+     * <p>
+     * The ARN of the custom engine version.
+     * </p>
+     * 
+     * @param dBEngineVersionArn
+     *        The ARN of the custom engine version.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DBEngineVersion withDBEngineVersionArn(String dBEngineVersionArn) {
+        setDBEngineVersionArn(dBEngineVersionArn);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The Amazon Web Services KMS key identifier for an encrypted CEV. This parameter is required for RDS Custom, but
+     * optional for Amazon RDS.
+     * </p>
+     * 
+     * @param kMSKeyId
+     *        The Amazon Web Services KMS key identifier for an encrypted CEV. This parameter is required for RDS
+     *        Custom, but optional for Amazon RDS.
+     */
+
+    public void setKMSKeyId(String kMSKeyId) {
+        this.kMSKeyId = kMSKeyId;
+    }
+
+    /**
+     * <p>
+     * The Amazon Web Services KMS key identifier for an encrypted CEV. This parameter is required for RDS Custom, but
+     * optional for Amazon RDS.
+     * </p>
+     * 
+     * @return The Amazon Web Services KMS key identifier for an encrypted CEV. This parameter is required for RDS
+     *         Custom, but optional for Amazon RDS.
+     */
+
+    public String getKMSKeyId() {
+        return this.kMSKeyId;
+    }
+
+    /**
+     * <p>
+     * The Amazon Web Services KMS key identifier for an encrypted CEV. This parameter is required for RDS Custom, but
+     * optional for Amazon RDS.
+     * </p>
+     * 
+     * @param kMSKeyId
+     *        The Amazon Web Services KMS key identifier for an encrypted CEV. This parameter is required for RDS
+     *        Custom, but optional for Amazon RDS.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DBEngineVersion withKMSKeyId(String kMSKeyId) {
+        setKMSKeyId(kMSKeyId);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The creation time of the DB engine version.
+     * </p>
+     * 
+     * @param createTime
+     *        The creation time of the DB engine version.
+     */
+
+    public void setCreateTime(java.util.Date createTime) {
+        this.createTime = createTime;
+    }
+
+    /**
+     * <p>
+     * The creation time of the DB engine version.
+     * </p>
+     * 
+     * @return The creation time of the DB engine version.
+     */
+
+    public java.util.Date getCreateTime() {
+        return this.createTime;
+    }
+
+    /**
+     * <p>
+     * The creation time of the DB engine version.
+     * </p>
+     * 
+     * @param createTime
+     *        The creation time of the DB engine version.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DBEngineVersion withCreateTime(java.util.Date createTime) {
+        setCreateTime(createTime);
+        return this;
+    }
+
+    /**
+     * @return
+     */
+
+    public java.util.List<Tag> getTagList() {
+        if (tagList == null) {
+            tagList = new com.amazonaws.internal.SdkInternalList<Tag>();
+        }
+        return tagList;
+    }
+
+    /**
+     * @param tagList
+     */
+
+    public void setTagList(java.util.Collection<Tag> tagList) {
+        if (tagList == null) {
+            this.tagList = null;
+            return;
+        }
+
+        this.tagList = new com.amazonaws.internal.SdkInternalList<Tag>(tagList);
+    }
+
+    /**
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setTagList(java.util.Collection)} or {@link #withTagList(java.util.Collection)} if you want to override
+     * the existing values.
+     * </p>
+     * 
+     * @param tagList
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DBEngineVersion withTagList(Tag... tagList) {
+        if (this.tagList == null) {
+            setTagList(new com.amazonaws.internal.SdkInternalList<Tag>(tagList.length));
+        }
+        for (Tag ele : tagList) {
+            this.tagList.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * @param tagList
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DBEngineVersion withTagList(java.util.Collection<Tag> tagList) {
+        setTagList(tagList);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1283,7 +1747,21 @@ public class DBEngineVersion implements Serializable, Cloneable {
         if (getSupportsParallelQuery() != null)
             sb.append("SupportsParallelQuery: ").append(getSupportsParallelQuery()).append(",");
         if (getSupportsGlobalDatabases() != null)
-            sb.append("SupportsGlobalDatabases: ").append(getSupportsGlobalDatabases());
+            sb.append("SupportsGlobalDatabases: ").append(getSupportsGlobalDatabases()).append(",");
+        if (getMajorEngineVersion() != null)
+            sb.append("MajorEngineVersion: ").append(getMajorEngineVersion()).append(",");
+        if (getDatabaseInstallationFilesS3BucketName() != null)
+            sb.append("DatabaseInstallationFilesS3BucketName: ").append(getDatabaseInstallationFilesS3BucketName()).append(",");
+        if (getDatabaseInstallationFilesS3Prefix() != null)
+            sb.append("DatabaseInstallationFilesS3Prefix: ").append(getDatabaseInstallationFilesS3Prefix()).append(",");
+        if (getDBEngineVersionArn() != null)
+            sb.append("DBEngineVersionArn: ").append(getDBEngineVersionArn()).append(",");
+        if (getKMSKeyId() != null)
+            sb.append("KMSKeyId: ").append(getKMSKeyId()).append(",");
+        if (getCreateTime() != null)
+            sb.append("CreateTime: ").append(getCreateTime()).append(",");
+        if (getTagList() != null)
+            sb.append("TagList: ").append(getTagList());
         sb.append("}");
         return sb.toString();
     }
@@ -1371,6 +1849,36 @@ public class DBEngineVersion implements Serializable, Cloneable {
             return false;
         if (other.getSupportsGlobalDatabases() != null && other.getSupportsGlobalDatabases().equals(this.getSupportsGlobalDatabases()) == false)
             return false;
+        if (other.getMajorEngineVersion() == null ^ this.getMajorEngineVersion() == null)
+            return false;
+        if (other.getMajorEngineVersion() != null && other.getMajorEngineVersion().equals(this.getMajorEngineVersion()) == false)
+            return false;
+        if (other.getDatabaseInstallationFilesS3BucketName() == null ^ this.getDatabaseInstallationFilesS3BucketName() == null)
+            return false;
+        if (other.getDatabaseInstallationFilesS3BucketName() != null
+                && other.getDatabaseInstallationFilesS3BucketName().equals(this.getDatabaseInstallationFilesS3BucketName()) == false)
+            return false;
+        if (other.getDatabaseInstallationFilesS3Prefix() == null ^ this.getDatabaseInstallationFilesS3Prefix() == null)
+            return false;
+        if (other.getDatabaseInstallationFilesS3Prefix() != null
+                && other.getDatabaseInstallationFilesS3Prefix().equals(this.getDatabaseInstallationFilesS3Prefix()) == false)
+            return false;
+        if (other.getDBEngineVersionArn() == null ^ this.getDBEngineVersionArn() == null)
+            return false;
+        if (other.getDBEngineVersionArn() != null && other.getDBEngineVersionArn().equals(this.getDBEngineVersionArn()) == false)
+            return false;
+        if (other.getKMSKeyId() == null ^ this.getKMSKeyId() == null)
+            return false;
+        if (other.getKMSKeyId() != null && other.getKMSKeyId().equals(this.getKMSKeyId()) == false)
+            return false;
+        if (other.getCreateTime() == null ^ this.getCreateTime() == null)
+            return false;
+        if (other.getCreateTime() != null && other.getCreateTime().equals(this.getCreateTime()) == false)
+            return false;
+        if (other.getTagList() == null ^ this.getTagList() == null)
+            return false;
+        if (other.getTagList() != null && other.getTagList().equals(this.getTagList()) == false)
+            return false;
         return true;
     }
 
@@ -1397,6 +1905,13 @@ public class DBEngineVersion implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
         hashCode = prime * hashCode + ((getSupportsParallelQuery() == null) ? 0 : getSupportsParallelQuery().hashCode());
         hashCode = prime * hashCode + ((getSupportsGlobalDatabases() == null) ? 0 : getSupportsGlobalDatabases().hashCode());
+        hashCode = prime * hashCode + ((getMajorEngineVersion() == null) ? 0 : getMajorEngineVersion().hashCode());
+        hashCode = prime * hashCode + ((getDatabaseInstallationFilesS3BucketName() == null) ? 0 : getDatabaseInstallationFilesS3BucketName().hashCode());
+        hashCode = prime * hashCode + ((getDatabaseInstallationFilesS3Prefix() == null) ? 0 : getDatabaseInstallationFilesS3Prefix().hashCode());
+        hashCode = prime * hashCode + ((getDBEngineVersionArn() == null) ? 0 : getDBEngineVersionArn().hashCode());
+        hashCode = prime * hashCode + ((getKMSKeyId() == null) ? 0 : getKMSKeyId().hashCode());
+        hashCode = prime * hashCode + ((getCreateTime() == null) ? 0 : getCreateTime().hashCode());
+        hashCode = prime * hashCode + ((getTagList() == null) ? 0 : getTagList().hashCode());
         return hashCode;
     }
 

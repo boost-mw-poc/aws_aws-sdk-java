@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The data source that determines from where Audit Manager collects evidence for the control.
+ * The data source that determines where Audit Manager collects evidence from for the control.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/ControlMappingSource" target="_top">AWS
@@ -30,25 +30,25 @@ public class ControlMappingSource implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The unique identifier for the specified source.
+     * The unique identifier for the source.
      * </p>
      */
     private String sourceId;
     /**
      * <p>
-     * The name of the specified source.
+     * The name of the source.
      * </p>
      */
     private String sourceName;
     /**
      * <p>
-     * The description of the specified source.
+     * The description of the source.
      * </p>
      */
     private String sourceDescription;
     /**
      * <p>
-     * The setup option for the data source, which reflects if the evidence collection is automated or manual.
+     * The setup option for the data source. This option reflects if the evidence collection is automated or manual.
      * </p>
      */
     private String sourceSetUpOption;
@@ -62,24 +62,24 @@ public class ControlMappingSource implements Serializable, Cloneable, Structured
     private SourceKeyword sourceKeyword;
     /**
      * <p>
-     * The frequency of evidence collection for the specified control mapping source.
+     * The frequency of evidence collection for the control mapping source.
      * </p>
      */
     private String sourceFrequency;
     /**
      * <p>
-     * The instructions for troubleshooting the specified control.
+     * The instructions for troubleshooting the control.
      * </p>
      */
     private String troubleshootingText;
 
     /**
      * <p>
-     * The unique identifier for the specified source.
+     * The unique identifier for the source.
      * </p>
      * 
      * @param sourceId
-     *        The unique identifier for the specified source.
+     *        The unique identifier for the source.
      */
 
     public void setSourceId(String sourceId) {
@@ -88,10 +88,10 @@ public class ControlMappingSource implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The unique identifier for the specified source.
+     * The unique identifier for the source.
      * </p>
      * 
-     * @return The unique identifier for the specified source.
+     * @return The unique identifier for the source.
      */
 
     public String getSourceId() {
@@ -100,11 +100,11 @@ public class ControlMappingSource implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The unique identifier for the specified source.
+     * The unique identifier for the source.
      * </p>
      * 
      * @param sourceId
-     *        The unique identifier for the specified source.
+     *        The unique identifier for the source.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -115,11 +115,11 @@ public class ControlMappingSource implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The name of the specified source.
+     * The name of the source.
      * </p>
      * 
      * @param sourceName
-     *        The name of the specified source.
+     *        The name of the source.
      */
 
     public void setSourceName(String sourceName) {
@@ -128,10 +128,10 @@ public class ControlMappingSource implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The name of the specified source.
+     * The name of the source.
      * </p>
      * 
-     * @return The name of the specified source.
+     * @return The name of the source.
      */
 
     public String getSourceName() {
@@ -140,11 +140,11 @@ public class ControlMappingSource implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The name of the specified source.
+     * The name of the source.
      * </p>
      * 
      * @param sourceName
-     *        The name of the specified source.
+     *        The name of the source.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -155,11 +155,11 @@ public class ControlMappingSource implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The description of the specified source.
+     * The description of the source.
      * </p>
      * 
      * @param sourceDescription
-     *        The description of the specified source.
+     *        The description of the source.
      */
 
     public void setSourceDescription(String sourceDescription) {
@@ -168,10 +168,10 @@ public class ControlMappingSource implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The description of the specified source.
+     * The description of the source.
      * </p>
      * 
-     * @return The description of the specified source.
+     * @return The description of the source.
      */
 
     public String getSourceDescription() {
@@ -180,11 +180,11 @@ public class ControlMappingSource implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The description of the specified source.
+     * The description of the source.
      * </p>
      * 
      * @param sourceDescription
-     *        The description of the specified source.
+     *        The description of the source.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -195,11 +195,12 @@ public class ControlMappingSource implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The setup option for the data source, which reflects if the evidence collection is automated or manual.
+     * The setup option for the data source. This option reflects if the evidence collection is automated or manual.
      * </p>
      * 
      * @param sourceSetUpOption
-     *        The setup option for the data source, which reflects if the evidence collection is automated or manual.
+     *        The setup option for the data source. This option reflects if the evidence collection is automated or
+     *        manual.
      * @see SourceSetUpOption
      */
 
@@ -209,10 +210,11 @@ public class ControlMappingSource implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The setup option for the data source, which reflects if the evidence collection is automated or manual.
+     * The setup option for the data source. This option reflects if the evidence collection is automated or manual.
      * </p>
      * 
-     * @return The setup option for the data source, which reflects if the evidence collection is automated or manual.
+     * @return The setup option for the data source. This option reflects if the evidence collection is automated or
+     *         manual.
      * @see SourceSetUpOption
      */
 
@@ -222,11 +224,12 @@ public class ControlMappingSource implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The setup option for the data source, which reflects if the evidence collection is automated or manual.
+     * The setup option for the data source. This option reflects if the evidence collection is automated or manual.
      * </p>
      * 
      * @param sourceSetUpOption
-     *        The setup option for the data source, which reflects if the evidence collection is automated or manual.
+     *        The setup option for the data source. This option reflects if the evidence collection is automated or
+     *        manual.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SourceSetUpOption
      */
@@ -238,11 +241,12 @@ public class ControlMappingSource implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The setup option for the data source, which reflects if the evidence collection is automated or manual.
+     * The setup option for the data source. This option reflects if the evidence collection is automated or manual.
      * </p>
      * 
      * @param sourceSetUpOption
-     *        The setup option for the data source, which reflects if the evidence collection is automated or manual.
+     *        The setup option for the data source. This option reflects if the evidence collection is automated or
+     *        manual.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SourceSetUpOption
      */
@@ -339,11 +343,11 @@ public class ControlMappingSource implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The frequency of evidence collection for the specified control mapping source.
+     * The frequency of evidence collection for the control mapping source.
      * </p>
      * 
      * @param sourceFrequency
-     *        The frequency of evidence collection for the specified control mapping source.
+     *        The frequency of evidence collection for the control mapping source.
      * @see SourceFrequency
      */
 
@@ -353,10 +357,10 @@ public class ControlMappingSource implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The frequency of evidence collection for the specified control mapping source.
+     * The frequency of evidence collection for the control mapping source.
      * </p>
      * 
-     * @return The frequency of evidence collection for the specified control mapping source.
+     * @return The frequency of evidence collection for the control mapping source.
      * @see SourceFrequency
      */
 
@@ -366,11 +370,11 @@ public class ControlMappingSource implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The frequency of evidence collection for the specified control mapping source.
+     * The frequency of evidence collection for the control mapping source.
      * </p>
      * 
      * @param sourceFrequency
-     *        The frequency of evidence collection for the specified control mapping source.
+     *        The frequency of evidence collection for the control mapping source.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SourceFrequency
      */
@@ -382,11 +386,11 @@ public class ControlMappingSource implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The frequency of evidence collection for the specified control mapping source.
+     * The frequency of evidence collection for the control mapping source.
      * </p>
      * 
      * @param sourceFrequency
-     *        The frequency of evidence collection for the specified control mapping source.
+     *        The frequency of evidence collection for the control mapping source.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SourceFrequency
      */
@@ -398,11 +402,11 @@ public class ControlMappingSource implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The instructions for troubleshooting the specified control.
+     * The instructions for troubleshooting the control.
      * </p>
      * 
      * @param troubleshootingText
-     *        The instructions for troubleshooting the specified control.
+     *        The instructions for troubleshooting the control.
      */
 
     public void setTroubleshootingText(String troubleshootingText) {
@@ -411,10 +415,10 @@ public class ControlMappingSource implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The instructions for troubleshooting the specified control.
+     * The instructions for troubleshooting the control.
      * </p>
      * 
-     * @return The instructions for troubleshooting the specified control.
+     * @return The instructions for troubleshooting the control.
      */
 
     public String getTroubleshootingText() {
@@ -423,11 +427,11 @@ public class ControlMappingSource implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The instructions for troubleshooting the specified control.
+     * The instructions for troubleshooting the control.
      * </p>
      * 
      * @param troubleshootingText
-     *        The instructions for troubleshooting the specified control.
+     *        The instructions for troubleshooting the control.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

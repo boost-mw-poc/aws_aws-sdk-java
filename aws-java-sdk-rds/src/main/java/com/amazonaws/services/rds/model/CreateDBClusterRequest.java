@@ -318,35 +318,34 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * The Amazon Web Services KMS key identifier for an encrypted DB cluster.
      * </p>
      * <p>
-     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the Amazon Web
-     * Services KMS customer master key (CMK). To use a CMK in a different Amazon Web Services account, specify the key
-     * ARN or alias ARN.
+     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key. To
+     * use a KMS key in a different Amazon Web Services account, specify the key ARN or alias ARN.
      * </p>
      * <p>
-     * When a CMK isn't specified in <code>KmsKeyId</code>:
+     * When a KMS key isn't specified in <code>KmsKeyId</code>:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * If <code>ReplicationSourceIdentifier</code> identifies an encrypted source, then Amazon RDS will use the CMK used
-     * to encrypt the source. Otherwise, Amazon RDS will use your default CMK.
+     * If <code>ReplicationSourceIdentifier</code> identifies an encrypted source, then Amazon RDS will use the KMS key
+     * used to encrypt the source. Otherwise, Amazon RDS will use your default KMS key.
      * </p>
      * </li>
      * <li>
      * <p>
      * If the <code>StorageEncrypted</code> parameter is enabled and <code>ReplicationSourceIdentifier</code> isn't
-     * specified, then Amazon RDS will use your default CMK.
+     * specified, then Amazon RDS will use your default KMS key.
      * </p>
      * </li>
      * </ul>
      * <p>
-     * There is a default CMK for your Amazon Web Services account. Your Amazon Web Services account has a different
-     * default CMK for each Amazon Web Services Region.
+     * There is a default KMS key for your Amazon Web Services account. Your Amazon Web Services account has a different
+     * default KMS key for each Amazon Web Services Region.
      * </p>
      * <p>
      * If you create a read replica of an encrypted DB cluster in another Amazon Web Services Region, you must set
-     * <code>KmsKeyId</code> to a Amazon Web Services KMS key identifier that is valid in the destination Amazon Web
-     * Services Region. This CMK is used to encrypt the read replica in that Amazon Web Services Region.
+     * <code>KmsKeyId</code> to a KMS key identifier that is valid in the destination Amazon Web Services Region. This
+     * KMS key is used to encrypt the read replica in that Amazon Web Services Region.
      * </p>
      */
     private String kmsKeyId;
@@ -366,10 +365,10 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * <ul>
      * <li>
      * <p>
-     * <code>KmsKeyId</code> - The Amazon Web Services KMS key identifier for the key to use to encrypt the copy of the
-     * DB cluster in the destination Amazon Web Services Region. This should refer to the same Amazon Web Services KMS
-     * CMK for both the <code>CreateDBCluster</code> action that is called in the destination Amazon Web Services
-     * Region, and the action contained in the pre-signed URL.
+     * <code>KmsKeyId</code> - The Amazon Web Services KMS key identifier for the KMS key to use to encrypt the copy of
+     * the DB cluster in the destination Amazon Web Services Region. This should refer to the same KMS key for both the
+     * <code>CreateDBCluster</code> action that is called in the destination Amazon Web Services Region, and the action
+     * contained in the pre-signed URL.
      * </p>
      * </li>
      * <li>
@@ -2483,70 +2482,67 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * The Amazon Web Services KMS key identifier for an encrypted DB cluster.
      * </p>
      * <p>
-     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the Amazon Web
-     * Services KMS customer master key (CMK). To use a CMK in a different Amazon Web Services account, specify the key
-     * ARN or alias ARN.
+     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key. To
+     * use a KMS key in a different Amazon Web Services account, specify the key ARN or alias ARN.
      * </p>
      * <p>
-     * When a CMK isn't specified in <code>KmsKeyId</code>:
+     * When a KMS key isn't specified in <code>KmsKeyId</code>:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * If <code>ReplicationSourceIdentifier</code> identifies an encrypted source, then Amazon RDS will use the CMK used
-     * to encrypt the source. Otherwise, Amazon RDS will use your default CMK.
+     * If <code>ReplicationSourceIdentifier</code> identifies an encrypted source, then Amazon RDS will use the KMS key
+     * used to encrypt the source. Otherwise, Amazon RDS will use your default KMS key.
      * </p>
      * </li>
      * <li>
      * <p>
      * If the <code>StorageEncrypted</code> parameter is enabled and <code>ReplicationSourceIdentifier</code> isn't
-     * specified, then Amazon RDS will use your default CMK.
+     * specified, then Amazon RDS will use your default KMS key.
      * </p>
      * </li>
      * </ul>
      * <p>
-     * There is a default CMK for your Amazon Web Services account. Your Amazon Web Services account has a different
-     * default CMK for each Amazon Web Services Region.
+     * There is a default KMS key for your Amazon Web Services account. Your Amazon Web Services account has a different
+     * default KMS key for each Amazon Web Services Region.
      * </p>
      * <p>
      * If you create a read replica of an encrypted DB cluster in another Amazon Web Services Region, you must set
-     * <code>KmsKeyId</code> to a Amazon Web Services KMS key identifier that is valid in the destination Amazon Web
-     * Services Region. This CMK is used to encrypt the read replica in that Amazon Web Services Region.
+     * <code>KmsKeyId</code> to a KMS key identifier that is valid in the destination Amazon Web Services Region. This
+     * KMS key is used to encrypt the read replica in that Amazon Web Services Region.
      * </p>
      * 
      * @param kmsKeyId
      *        The Amazon Web Services KMS key identifier for an encrypted DB cluster.</p>
      *        <p>
-     *        The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the Amazon
-     *        Web Services KMS customer master key (CMK). To use a CMK in a different Amazon Web Services account,
-     *        specify the key ARN or alias ARN.
+     *        The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS
+     *        key. To use a KMS key in a different Amazon Web Services account, specify the key ARN or alias ARN.
      *        </p>
      *        <p>
-     *        When a CMK isn't specified in <code>KmsKeyId</code>:
+     *        When a KMS key isn't specified in <code>KmsKeyId</code>:
      *        </p>
      *        <ul>
      *        <li>
      *        <p>
      *        If <code>ReplicationSourceIdentifier</code> identifies an encrypted source, then Amazon RDS will use the
-     *        CMK used to encrypt the source. Otherwise, Amazon RDS will use your default CMK.
+     *        KMS key used to encrypt the source. Otherwise, Amazon RDS will use your default KMS key.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        If the <code>StorageEncrypted</code> parameter is enabled and <code>ReplicationSourceIdentifier</code>
-     *        isn't specified, then Amazon RDS will use your default CMK.
+     *        isn't specified, then Amazon RDS will use your default KMS key.
      *        </p>
      *        </li>
      *        </ul>
      *        <p>
-     *        There is a default CMK for your Amazon Web Services account. Your Amazon Web Services account has a
-     *        different default CMK for each Amazon Web Services Region.
+     *        There is a default KMS key for your Amazon Web Services account. Your Amazon Web Services account has a
+     *        different default KMS key for each Amazon Web Services Region.
      *        </p>
      *        <p>
      *        If you create a read replica of an encrypted DB cluster in another Amazon Web Services Region, you must
-     *        set <code>KmsKeyId</code> to a Amazon Web Services KMS key identifier that is valid in the destination
-     *        Amazon Web Services Region. This CMK is used to encrypt the read replica in that Amazon Web Services
-     *        Region.
+     *        set <code>KmsKeyId</code> to a KMS key identifier that is valid in the destination Amazon Web Services
+     *        Region. This KMS key is used to encrypt the read replica in that Amazon Web Services Region.
      */
 
     public void setKmsKeyId(String kmsKeyId) {
@@ -2558,69 +2554,66 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * The Amazon Web Services KMS key identifier for an encrypted DB cluster.
      * </p>
      * <p>
-     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the Amazon Web
-     * Services KMS customer master key (CMK). To use a CMK in a different Amazon Web Services account, specify the key
-     * ARN or alias ARN.
+     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key. To
+     * use a KMS key in a different Amazon Web Services account, specify the key ARN or alias ARN.
      * </p>
      * <p>
-     * When a CMK isn't specified in <code>KmsKeyId</code>:
+     * When a KMS key isn't specified in <code>KmsKeyId</code>:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * If <code>ReplicationSourceIdentifier</code> identifies an encrypted source, then Amazon RDS will use the CMK used
-     * to encrypt the source. Otherwise, Amazon RDS will use your default CMK.
+     * If <code>ReplicationSourceIdentifier</code> identifies an encrypted source, then Amazon RDS will use the KMS key
+     * used to encrypt the source. Otherwise, Amazon RDS will use your default KMS key.
      * </p>
      * </li>
      * <li>
      * <p>
      * If the <code>StorageEncrypted</code> parameter is enabled and <code>ReplicationSourceIdentifier</code> isn't
-     * specified, then Amazon RDS will use your default CMK.
+     * specified, then Amazon RDS will use your default KMS key.
      * </p>
      * </li>
      * </ul>
      * <p>
-     * There is a default CMK for your Amazon Web Services account. Your Amazon Web Services account has a different
-     * default CMK for each Amazon Web Services Region.
+     * There is a default KMS key for your Amazon Web Services account. Your Amazon Web Services account has a different
+     * default KMS key for each Amazon Web Services Region.
      * </p>
      * <p>
      * If you create a read replica of an encrypted DB cluster in another Amazon Web Services Region, you must set
-     * <code>KmsKeyId</code> to a Amazon Web Services KMS key identifier that is valid in the destination Amazon Web
-     * Services Region. This CMK is used to encrypt the read replica in that Amazon Web Services Region.
+     * <code>KmsKeyId</code> to a KMS key identifier that is valid in the destination Amazon Web Services Region. This
+     * KMS key is used to encrypt the read replica in that Amazon Web Services Region.
      * </p>
      * 
      * @return The Amazon Web Services KMS key identifier for an encrypted DB cluster.</p>
      *         <p>
-     *         The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the
-     *         Amazon Web Services KMS customer master key (CMK). To use a CMK in a different Amazon Web Services
-     *         account, specify the key ARN or alias ARN.
+     *         The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS
+     *         key. To use a KMS key in a different Amazon Web Services account, specify the key ARN or alias ARN.
      *         </p>
      *         <p>
-     *         When a CMK isn't specified in <code>KmsKeyId</code>:
+     *         When a KMS key isn't specified in <code>KmsKeyId</code>:
      *         </p>
      *         <ul>
      *         <li>
      *         <p>
      *         If <code>ReplicationSourceIdentifier</code> identifies an encrypted source, then Amazon RDS will use the
-     *         CMK used to encrypt the source. Otherwise, Amazon RDS will use your default CMK.
+     *         KMS key used to encrypt the source. Otherwise, Amazon RDS will use your default KMS key.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
      *         If the <code>StorageEncrypted</code> parameter is enabled and <code>ReplicationSourceIdentifier</code>
-     *         isn't specified, then Amazon RDS will use your default CMK.
+     *         isn't specified, then Amazon RDS will use your default KMS key.
      *         </p>
      *         </li>
      *         </ul>
      *         <p>
-     *         There is a default CMK for your Amazon Web Services account. Your Amazon Web Services account has a
-     *         different default CMK for each Amazon Web Services Region.
+     *         There is a default KMS key for your Amazon Web Services account. Your Amazon Web Services account has a
+     *         different default KMS key for each Amazon Web Services Region.
      *         </p>
      *         <p>
      *         If you create a read replica of an encrypted DB cluster in another Amazon Web Services Region, you must
-     *         set <code>KmsKeyId</code> to a Amazon Web Services KMS key identifier that is valid in the destination
-     *         Amazon Web Services Region. This CMK is used to encrypt the read replica in that Amazon Web Services
-     *         Region.
+     *         set <code>KmsKeyId</code> to a KMS key identifier that is valid in the destination Amazon Web Services
+     *         Region. This KMS key is used to encrypt the read replica in that Amazon Web Services Region.
      */
 
     public String getKmsKeyId() {
@@ -2632,70 +2625,67 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * The Amazon Web Services KMS key identifier for an encrypted DB cluster.
      * </p>
      * <p>
-     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the Amazon Web
-     * Services KMS customer master key (CMK). To use a CMK in a different Amazon Web Services account, specify the key
-     * ARN or alias ARN.
+     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key. To
+     * use a KMS key in a different Amazon Web Services account, specify the key ARN or alias ARN.
      * </p>
      * <p>
-     * When a CMK isn't specified in <code>KmsKeyId</code>:
+     * When a KMS key isn't specified in <code>KmsKeyId</code>:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * If <code>ReplicationSourceIdentifier</code> identifies an encrypted source, then Amazon RDS will use the CMK used
-     * to encrypt the source. Otherwise, Amazon RDS will use your default CMK.
+     * If <code>ReplicationSourceIdentifier</code> identifies an encrypted source, then Amazon RDS will use the KMS key
+     * used to encrypt the source. Otherwise, Amazon RDS will use your default KMS key.
      * </p>
      * </li>
      * <li>
      * <p>
      * If the <code>StorageEncrypted</code> parameter is enabled and <code>ReplicationSourceIdentifier</code> isn't
-     * specified, then Amazon RDS will use your default CMK.
+     * specified, then Amazon RDS will use your default KMS key.
      * </p>
      * </li>
      * </ul>
      * <p>
-     * There is a default CMK for your Amazon Web Services account. Your Amazon Web Services account has a different
-     * default CMK for each Amazon Web Services Region.
+     * There is a default KMS key for your Amazon Web Services account. Your Amazon Web Services account has a different
+     * default KMS key for each Amazon Web Services Region.
      * </p>
      * <p>
      * If you create a read replica of an encrypted DB cluster in another Amazon Web Services Region, you must set
-     * <code>KmsKeyId</code> to a Amazon Web Services KMS key identifier that is valid in the destination Amazon Web
-     * Services Region. This CMK is used to encrypt the read replica in that Amazon Web Services Region.
+     * <code>KmsKeyId</code> to a KMS key identifier that is valid in the destination Amazon Web Services Region. This
+     * KMS key is used to encrypt the read replica in that Amazon Web Services Region.
      * </p>
      * 
      * @param kmsKeyId
      *        The Amazon Web Services KMS key identifier for an encrypted DB cluster.</p>
      *        <p>
-     *        The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the Amazon
-     *        Web Services KMS customer master key (CMK). To use a CMK in a different Amazon Web Services account,
-     *        specify the key ARN or alias ARN.
+     *        The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS
+     *        key. To use a KMS key in a different Amazon Web Services account, specify the key ARN or alias ARN.
      *        </p>
      *        <p>
-     *        When a CMK isn't specified in <code>KmsKeyId</code>:
+     *        When a KMS key isn't specified in <code>KmsKeyId</code>:
      *        </p>
      *        <ul>
      *        <li>
      *        <p>
      *        If <code>ReplicationSourceIdentifier</code> identifies an encrypted source, then Amazon RDS will use the
-     *        CMK used to encrypt the source. Otherwise, Amazon RDS will use your default CMK.
+     *        KMS key used to encrypt the source. Otherwise, Amazon RDS will use your default KMS key.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        If the <code>StorageEncrypted</code> parameter is enabled and <code>ReplicationSourceIdentifier</code>
-     *        isn't specified, then Amazon RDS will use your default CMK.
+     *        isn't specified, then Amazon RDS will use your default KMS key.
      *        </p>
      *        </li>
      *        </ul>
      *        <p>
-     *        There is a default CMK for your Amazon Web Services account. Your Amazon Web Services account has a
-     *        different default CMK for each Amazon Web Services Region.
+     *        There is a default KMS key for your Amazon Web Services account. Your Amazon Web Services account has a
+     *        different default KMS key for each Amazon Web Services Region.
      *        </p>
      *        <p>
      *        If you create a read replica of an encrypted DB cluster in another Amazon Web Services Region, you must
-     *        set <code>KmsKeyId</code> to a Amazon Web Services KMS key identifier that is valid in the destination
-     *        Amazon Web Services Region. This CMK is used to encrypt the read replica in that Amazon Web Services
-     *        Region.
+     *        set <code>KmsKeyId</code> to a KMS key identifier that is valid in the destination Amazon Web Services
+     *        Region. This KMS key is used to encrypt the read replica in that Amazon Web Services Region.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2720,10 +2710,10 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * <ul>
      * <li>
      * <p>
-     * <code>KmsKeyId</code> - The Amazon Web Services KMS key identifier for the key to use to encrypt the copy of the
-     * DB cluster in the destination Amazon Web Services Region. This should refer to the same Amazon Web Services KMS
-     * CMK for both the <code>CreateDBCluster</code> action that is called in the destination Amazon Web Services
-     * Region, and the action contained in the pre-signed URL.
+     * <code>KmsKeyId</code> - The Amazon Web Services KMS key identifier for the KMS key to use to encrypt the copy of
+     * the DB cluster in the destination Amazon Web Services Region. This should refer to the same KMS key for both the
+     * <code>CreateDBCluster</code> action that is called in the destination Amazon Web Services Region, and the action
+     * contained in the pre-signed URL.
      * </p>
      * </li>
      * <li>
@@ -2773,10 +2763,10 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>KmsKeyId</code> - The Amazon Web Services KMS key identifier for the key to use to encrypt the copy
-     *        of the DB cluster in the destination Amazon Web Services Region. This should refer to the same Amazon Web
-     *        Services KMS CMK for both the <code>CreateDBCluster</code> action that is called in the destination Amazon
-     *        Web Services Region, and the action contained in the pre-signed URL.
+     *        <code>KmsKeyId</code> - The Amazon Web Services KMS key identifier for the KMS key to use to encrypt the
+     *        copy of the DB cluster in the destination Amazon Web Services Region. This should refer to the same KMS
+     *        key for both the <code>CreateDBCluster</code> action that is called in the destination Amazon Web Services
+     *        Region, and the action contained in the pre-signed URL.
      *        </p>
      *        </li>
      *        <li>
@@ -2831,10 +2821,10 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * <ul>
      * <li>
      * <p>
-     * <code>KmsKeyId</code> - The Amazon Web Services KMS key identifier for the key to use to encrypt the copy of the
-     * DB cluster in the destination Amazon Web Services Region. This should refer to the same Amazon Web Services KMS
-     * CMK for both the <code>CreateDBCluster</code> action that is called in the destination Amazon Web Services
-     * Region, and the action contained in the pre-signed URL.
+     * <code>KmsKeyId</code> - The Amazon Web Services KMS key identifier for the KMS key to use to encrypt the copy of
+     * the DB cluster in the destination Amazon Web Services Region. This should refer to the same KMS key for both the
+     * <code>CreateDBCluster</code> action that is called in the destination Amazon Web Services Region, and the action
+     * contained in the pre-signed URL.
      * </p>
      * </li>
      * <li>
@@ -2883,10 +2873,10 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>KmsKeyId</code> - The Amazon Web Services KMS key identifier for the key to use to encrypt the copy
-     *         of the DB cluster in the destination Amazon Web Services Region. This should refer to the same Amazon Web
-     *         Services KMS CMK for both the <code>CreateDBCluster</code> action that is called in the destination
-     *         Amazon Web Services Region, and the action contained in the pre-signed URL.
+     *         <code>KmsKeyId</code> - The Amazon Web Services KMS key identifier for the KMS key to use to encrypt the
+     *         copy of the DB cluster in the destination Amazon Web Services Region. This should refer to the same KMS
+     *         key for both the <code>CreateDBCluster</code> action that is called in the destination Amazon Web
+     *         Services Region, and the action contained in the pre-signed URL.
      *         </p>
      *         </li>
      *         <li>
@@ -2941,10 +2931,10 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      * <ul>
      * <li>
      * <p>
-     * <code>KmsKeyId</code> - The Amazon Web Services KMS key identifier for the key to use to encrypt the copy of the
-     * DB cluster in the destination Amazon Web Services Region. This should refer to the same Amazon Web Services KMS
-     * CMK for both the <code>CreateDBCluster</code> action that is called in the destination Amazon Web Services
-     * Region, and the action contained in the pre-signed URL.
+     * <code>KmsKeyId</code> - The Amazon Web Services KMS key identifier for the KMS key to use to encrypt the copy of
+     * the DB cluster in the destination Amazon Web Services Region. This should refer to the same KMS key for both the
+     * <code>CreateDBCluster</code> action that is called in the destination Amazon Web Services Region, and the action
+     * contained in the pre-signed URL.
      * </p>
      * </li>
      * <li>
@@ -2994,10 +2984,10 @@ public class CreateDBClusterRequest extends com.amazonaws.AmazonWebServiceReques
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>KmsKeyId</code> - The Amazon Web Services KMS key identifier for the key to use to encrypt the copy
-     *        of the DB cluster in the destination Amazon Web Services Region. This should refer to the same Amazon Web
-     *        Services KMS CMK for both the <code>CreateDBCluster</code> action that is called in the destination Amazon
-     *        Web Services Region, and the action contained in the pre-signed URL.
+     *        <code>KmsKeyId</code> - The Amazon Web Services KMS key identifier for the KMS key to use to encrypt the
+     *        copy of the DB cluster in the destination Amazon Web Services Region. This should refer to the same KMS
+     *        key for both the <code>CreateDBCluster</code> action that is called in the destination Amazon Web Services
+     *        Region, and the action contained in the pre-signed URL.
      *        </p>
      *        </li>
      *        <li>

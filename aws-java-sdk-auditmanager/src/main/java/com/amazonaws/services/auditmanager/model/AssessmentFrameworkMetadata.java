@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The metadata associated with a standard or custom framework.
+ * The metadata that's associated with a standard framework or a custom framework.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/AssessmentFrameworkMetadata"
@@ -36,31 +36,31 @@ public class AssessmentFrameworkMetadata implements Serializable, Cloneable, Str
     private String arn;
     /**
      * <p>
-     * The unique identified for the specified framework.
+     * The unique identifier for the framework.
      * </p>
      */
     private String id;
     /**
      * <p>
-     * The framework type, such as standard or custom.
+     * The framework type, such as a standard framework or a custom framework.
      * </p>
      */
     private String type;
     /**
      * <p>
-     * The name of the specified framework.
+     * The name of the framework.
      * </p>
      */
     private String name;
     /**
      * <p>
-     * The description of the specified framework.
+     * The description of the framework.
      * </p>
      */
     private String description;
     /**
      * <p>
-     * The logo associated with the framework.
+     * The logo that's associated with the framework.
      * </p>
      */
     private String logo;
@@ -72,13 +72,13 @@ public class AssessmentFrameworkMetadata implements Serializable, Cloneable, Str
     private String complianceType;
     /**
      * <p>
-     * The number of controls associated with the specified framework.
+     * The number of controls that are associated with the framework.
      * </p>
      */
     private Integer controlsCount;
     /**
      * <p>
-     * The number of control sets associated with the specified framework.
+     * The number of control sets that are associated with the framework.
      * </p>
      */
     private Integer controlSetsCount;
@@ -137,11 +137,11 @@ public class AssessmentFrameworkMetadata implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The unique identified for the specified framework.
+     * The unique identifier for the framework.
      * </p>
      * 
      * @param id
-     *        The unique identified for the specified framework.
+     *        The unique identifier for the framework.
      */
 
     public void setId(String id) {
@@ -150,10 +150,10 @@ public class AssessmentFrameworkMetadata implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The unique identified for the specified framework.
+     * The unique identifier for the framework.
      * </p>
      * 
-     * @return The unique identified for the specified framework.
+     * @return The unique identifier for the framework.
      */
 
     public String getId() {
@@ -162,11 +162,11 @@ public class AssessmentFrameworkMetadata implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The unique identified for the specified framework.
+     * The unique identifier for the framework.
      * </p>
      * 
      * @param id
-     *        The unique identified for the specified framework.
+     *        The unique identifier for the framework.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -177,11 +177,11 @@ public class AssessmentFrameworkMetadata implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The framework type, such as standard or custom.
+     * The framework type, such as a standard framework or a custom framework.
      * </p>
      * 
      * @param type
-     *        The framework type, such as standard or custom.
+     *        The framework type, such as a standard framework or a custom framework.
      * @see FrameworkType
      */
 
@@ -191,10 +191,10 @@ public class AssessmentFrameworkMetadata implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The framework type, such as standard or custom.
+     * The framework type, such as a standard framework or a custom framework.
      * </p>
      * 
-     * @return The framework type, such as standard or custom.
+     * @return The framework type, such as a standard framework or a custom framework.
      * @see FrameworkType
      */
 
@@ -204,11 +204,11 @@ public class AssessmentFrameworkMetadata implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The framework type, such as standard or custom.
+     * The framework type, such as a standard framework or a custom framework.
      * </p>
      * 
      * @param type
-     *        The framework type, such as standard or custom.
+     *        The framework type, such as a standard framework or a custom framework.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see FrameworkType
      */
@@ -220,11 +220,11 @@ public class AssessmentFrameworkMetadata implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The framework type, such as standard or custom.
+     * The framework type, such as a standard framework or a custom framework.
      * </p>
      * 
      * @param type
-     *        The framework type, such as standard or custom.
+     *        The framework type, such as a standard framework or a custom framework.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see FrameworkType
      */
@@ -236,11 +236,11 @@ public class AssessmentFrameworkMetadata implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The name of the specified framework.
+     * The name of the framework.
      * </p>
      * 
      * @param name
-     *        The name of the specified framework.
+     *        The name of the framework.
      */
 
     public void setName(String name) {
@@ -249,10 +249,10 @@ public class AssessmentFrameworkMetadata implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The name of the specified framework.
+     * The name of the framework.
      * </p>
      * 
-     * @return The name of the specified framework.
+     * @return The name of the framework.
      */
 
     public String getName() {
@@ -261,11 +261,11 @@ public class AssessmentFrameworkMetadata implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The name of the specified framework.
+     * The name of the framework.
      * </p>
      * 
      * @param name
-     *        The name of the specified framework.
+     *        The name of the framework.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -276,11 +276,11 @@ public class AssessmentFrameworkMetadata implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The description of the specified framework.
+     * The description of the framework.
      * </p>
      * 
      * @param description
-     *        The description of the specified framework.
+     *        The description of the framework.
      */
 
     public void setDescription(String description) {
@@ -289,10 +289,10 @@ public class AssessmentFrameworkMetadata implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The description of the specified framework.
+     * The description of the framework.
      * </p>
      * 
-     * @return The description of the specified framework.
+     * @return The description of the framework.
      */
 
     public String getDescription() {
@@ -301,11 +301,11 @@ public class AssessmentFrameworkMetadata implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The description of the specified framework.
+     * The description of the framework.
      * </p>
      * 
      * @param description
-     *        The description of the specified framework.
+     *        The description of the framework.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -316,11 +316,11 @@ public class AssessmentFrameworkMetadata implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The logo associated with the framework.
+     * The logo that's associated with the framework.
      * </p>
      * 
      * @param logo
-     *        The logo associated with the framework.
+     *        The logo that's associated with the framework.
      */
 
     public void setLogo(String logo) {
@@ -329,10 +329,10 @@ public class AssessmentFrameworkMetadata implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The logo associated with the framework.
+     * The logo that's associated with the framework.
      * </p>
      * 
-     * @return The logo associated with the framework.
+     * @return The logo that's associated with the framework.
      */
 
     public String getLogo() {
@@ -341,11 +341,11 @@ public class AssessmentFrameworkMetadata implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The logo associated with the framework.
+     * The logo that's associated with the framework.
      * </p>
      * 
      * @param logo
-     *        The logo associated with the framework.
+     *        The logo that's associated with the framework.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -396,11 +396,11 @@ public class AssessmentFrameworkMetadata implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The number of controls associated with the specified framework.
+     * The number of controls that are associated with the framework.
      * </p>
      * 
      * @param controlsCount
-     *        The number of controls associated with the specified framework.
+     *        The number of controls that are associated with the framework.
      */
 
     public void setControlsCount(Integer controlsCount) {
@@ -409,10 +409,10 @@ public class AssessmentFrameworkMetadata implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The number of controls associated with the specified framework.
+     * The number of controls that are associated with the framework.
      * </p>
      * 
-     * @return The number of controls associated with the specified framework.
+     * @return The number of controls that are associated with the framework.
      */
 
     public Integer getControlsCount() {
@@ -421,11 +421,11 @@ public class AssessmentFrameworkMetadata implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The number of controls associated with the specified framework.
+     * The number of controls that are associated with the framework.
      * </p>
      * 
      * @param controlsCount
-     *        The number of controls associated with the specified framework.
+     *        The number of controls that are associated with the framework.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -436,11 +436,11 @@ public class AssessmentFrameworkMetadata implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The number of control sets associated with the specified framework.
+     * The number of control sets that are associated with the framework.
      * </p>
      * 
      * @param controlSetsCount
-     *        The number of control sets associated with the specified framework.
+     *        The number of control sets that are associated with the framework.
      */
 
     public void setControlSetsCount(Integer controlSetsCount) {
@@ -449,10 +449,10 @@ public class AssessmentFrameworkMetadata implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The number of control sets associated with the specified framework.
+     * The number of control sets that are associated with the framework.
      * </p>
      * 
-     * @return The number of control sets associated with the specified framework.
+     * @return The number of control sets that are associated with the framework.
      */
 
     public Integer getControlSetsCount() {
@@ -461,11 +461,11 @@ public class AssessmentFrameworkMetadata implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The number of control sets associated with the specified framework.
+     * The number of control sets that are associated with the framework.
      * </p>
      * 
      * @param controlSetsCount
-     *        The number of control sets associated with the specified framework.
+     *        The number of control sets that are associated with the framework.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

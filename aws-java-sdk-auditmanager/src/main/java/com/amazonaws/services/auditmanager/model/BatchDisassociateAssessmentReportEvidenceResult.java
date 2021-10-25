@@ -33,7 +33,7 @@ public class BatchDisassociateAssessmentReportEvidenceResult extends com.amazona
     private java.util.List<String> evidenceIds;
     /**
      * <p>
-     * A list of errors returned by the <code>BatchDisassociateAssessmentReportEvidence</code> API.
+     * A list of errors that the <code>BatchDisassociateAssessmentReportEvidence</code> API returned.
      * </p>
      */
     private java.util.List<AssessmentReportEvidenceError> errors;
@@ -110,10 +110,10 @@ public class BatchDisassociateAssessmentReportEvidenceResult extends com.amazona
 
     /**
      * <p>
-     * A list of errors returned by the <code>BatchDisassociateAssessmentReportEvidence</code> API.
+     * A list of errors that the <code>BatchDisassociateAssessmentReportEvidence</code> API returned.
      * </p>
      * 
-     * @return A list of errors returned by the <code>BatchDisassociateAssessmentReportEvidence</code> API.
+     * @return A list of errors that the <code>BatchDisassociateAssessmentReportEvidence</code> API returned.
      */
 
     public java.util.List<AssessmentReportEvidenceError> getErrors() {
@@ -122,11 +122,11 @@ public class BatchDisassociateAssessmentReportEvidenceResult extends com.amazona
 
     /**
      * <p>
-     * A list of errors returned by the <code>BatchDisassociateAssessmentReportEvidence</code> API.
+     * A list of errors that the <code>BatchDisassociateAssessmentReportEvidence</code> API returned.
      * </p>
      * 
      * @param errors
-     *        A list of errors returned by the <code>BatchDisassociateAssessmentReportEvidence</code> API.
+     *        A list of errors that the <code>BatchDisassociateAssessmentReportEvidence</code> API returned.
      */
 
     public void setErrors(java.util.Collection<AssessmentReportEvidenceError> errors) {
@@ -140,7 +140,7 @@ public class BatchDisassociateAssessmentReportEvidenceResult extends com.amazona
 
     /**
      * <p>
-     * A list of errors returned by the <code>BatchDisassociateAssessmentReportEvidence</code> API.
+     * A list of errors that the <code>BatchDisassociateAssessmentReportEvidence</code> API returned.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -149,7 +149,7 @@ public class BatchDisassociateAssessmentReportEvidenceResult extends com.amazona
      * </p>
      * 
      * @param errors
-     *        A list of errors returned by the <code>BatchDisassociateAssessmentReportEvidence</code> API.
+     *        A list of errors that the <code>BatchDisassociateAssessmentReportEvidence</code> API returned.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -165,11 +165,11 @@ public class BatchDisassociateAssessmentReportEvidenceResult extends com.amazona
 
     /**
      * <p>
-     * A list of errors returned by the <code>BatchDisassociateAssessmentReportEvidence</code> API.
+     * A list of errors that the <code>BatchDisassociateAssessmentReportEvidence</code> API returned.
      * </p>
      * 
      * @param errors
-     *        A list of errors returned by the <code>BatchDisassociateAssessmentReportEvidence</code> API.
+     *        A list of errors that the <code>BatchDisassociateAssessmentReportEvidence</code> API returned.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

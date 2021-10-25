@@ -31,14 +31,15 @@ import com.amazonaws.services.auditmanager.model.*;
  * Audit Manager API operations, data types, and errors.
  * </p>
  * <p>
- * Audit Manager is a service that provides automated evidence collection so that you can continuously audit your Amazon
- * Web Services usage, and assess the effectiveness of your controls to better manage risk and simplify compliance.
+ * Audit Manager is a service that provides automated evidence collection so that you can continually audit your Amazon
+ * Web Services usage. You can use it to assess the effectiveness of your controls, manage risk, and simplify
+ * compliance.
  * </p>
  * <p>
- * Audit Manager provides pre-built frameworks that structure and automate assessments for a given compliance standard.
- * Frameworks include a pre-built collection of controls with descriptions and testing procedures, which are grouped
- * according to the requirements of the specified compliance standard or regulation. You can also customize frameworks
- * and controls to support internal audits with unique requirements.
+ * Audit Manager provides prebuilt frameworks that structure and automate assessments for a given compliance standard.
+ * Frameworks include a prebuilt collection of controls with descriptions and testing procedures. These controls are
+ * grouped according to the requirements of the specified compliance standard or regulation. You can also customize
+ * frameworks and controls to support internal audits with specific requirements.
  * </p>
  * <p>
  * Use the following links to get started with the Audit Manager API:
@@ -87,7 +88,7 @@ public interface AWSAuditManager {
 
     /**
      * <p>
-     * Associates an evidence folder to the specified assessment report in Audit Manager.
+     * Associates an evidence folder to an assessment report in a Audit Manager assessment.
      * </p>
      * 
      * @param associateAssessmentReportEvidenceFolderRequest
@@ -95,12 +96,12 @@ public interface AWSAuditManager {
      * @throws ValidationException
      *         The request has invalid or missing parameters.
      * @throws AccessDeniedException
-     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Your account isn't registered with Audit Manager. Check the delegated administrator setup on the Audit
      *         Manager settings page, and try again.
      * @throws InternalServerException
      *         An internal service error occurred during the processing of your request. Try again later.
      * @throws ResourceNotFoundException
-     *         The resource specified in the request cannot be found.
+     *         The resource that's specified in the request can't be found.
      * @sample AWSAuditManager.AssociateAssessmentReportEvidenceFolder
      * @see <a
      *      href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/AssociateAssessmentReportEvidenceFolder"
@@ -119,12 +120,12 @@ public interface AWSAuditManager {
      * @throws ValidationException
      *         The request has invalid or missing parameters.
      * @throws AccessDeniedException
-     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Your account isn't registered with Audit Manager. Check the delegated administrator setup on the Audit
      *         Manager settings page, and try again.
      * @throws InternalServerException
      *         An internal service error occurred during the processing of your request. Try again later.
      * @throws ResourceNotFoundException
-     *         The resource specified in the request cannot be found.
+     *         The resource that's specified in the request can't be found.
      * @sample AWSAuditManager.BatchAssociateAssessmentReportEvidence
      * @see <a
      *      href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/BatchAssociateAssessmentReportEvidence"
@@ -135,15 +136,15 @@ public interface AWSAuditManager {
 
     /**
      * <p>
-     * Create a batch of delegations for a specified assessment in Audit Manager.
+     * Creates a batch of delegations for an assessment in Audit Manager.
      * </p>
      * 
      * @param batchCreateDelegationByAssessmentRequest
      * @return Result of the BatchCreateDelegationByAssessment operation returned by the service.
      * @throws ResourceNotFoundException
-     *         The resource specified in the request cannot be found.
+     *         The resource that's specified in the request can't be found.
      * @throws AccessDeniedException
-     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Your account isn't registered with Audit Manager. Check the delegated administrator setup on the Audit
      *         Manager settings page, and try again.
      * @throws ValidationException
      *         The request has invalid or missing parameters.
@@ -157,15 +158,15 @@ public interface AWSAuditManager {
 
     /**
      * <p>
-     * Deletes the delegations in the specified Audit Manager assessment.
+     * Deletes a batch of delegations for an assessment in Audit Manager.
      * </p>
      * 
      * @param batchDeleteDelegationByAssessmentRequest
      * @return Result of the BatchDeleteDelegationByAssessment operation returned by the service.
      * @throws ResourceNotFoundException
-     *         The resource specified in the request cannot be found.
+     *         The resource that's specified in the request can't be found.
      * @throws AccessDeniedException
-     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Your account isn't registered with Audit Manager. Check the delegated administrator setup on the Audit
      *         Manager settings page, and try again.
      * @throws ValidationException
      *         The request has invalid or missing parameters.
@@ -179,7 +180,7 @@ public interface AWSAuditManager {
 
     /**
      * <p>
-     * Disassociates a list of evidence from the specified assessment report in Audit Manager.
+     * Disassociates a list of evidence from an assessment report in Audit Manager.
      * </p>
      * 
      * @param batchDisassociateAssessmentReportEvidenceRequest
@@ -187,12 +188,12 @@ public interface AWSAuditManager {
      * @throws ValidationException
      *         The request has invalid or missing parameters.
      * @throws AccessDeniedException
-     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Your account isn't registered with Audit Manager. Check the delegated administrator setup on the Audit
      *         Manager settings page, and try again.
      * @throws InternalServerException
      *         An internal service error occurred during the processing of your request. Try again later.
      * @throws ResourceNotFoundException
-     *         The resource specified in the request cannot be found.
+     *         The resource that's specified in the request can't be found.
      * @sample AWSAuditManager.BatchDisassociateAssessmentReportEvidence
      * @see <a
      *      href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/BatchDisassociateAssessmentReportEvidence"
@@ -203,15 +204,15 @@ public interface AWSAuditManager {
 
     /**
      * <p>
-     * Uploads one or more pieces of evidence to the specified control in the assessment in Audit Manager.
+     * Uploads one or more pieces of evidence to a control in an Audit Manager assessment.
      * </p>
      * 
      * @param batchImportEvidenceToAssessmentControlRequest
      * @return Result of the BatchImportEvidenceToAssessmentControl operation returned by the service.
      * @throws ResourceNotFoundException
-     *         The resource specified in the request cannot be found.
+     *         The resource that's specified in the request can't be found.
      * @throws AccessDeniedException
-     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Your account isn't registered with Audit Manager. Check the delegated administrator setup on the Audit
      *         Manager settings page, and try again.
      * @throws ValidationException
      *         The request has invalid or missing parameters.
@@ -233,11 +234,11 @@ public interface AWSAuditManager {
      * @param createAssessmentRequest
      * @return Result of the CreateAssessment operation returned by the service.
      * @throws ResourceNotFoundException
-     *         The resource specified in the request cannot be found.
+     *         The resource that's specified in the request can't be found.
      * @throws ValidationException
      *         The request has invalid or missing parameters.
      * @throws AccessDeniedException
-     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Your account isn't registered with Audit Manager. Check the delegated administrator setup on the Audit
      *         Manager settings page, and try again.
      * @throws InternalServerException
      *         An internal service error occurred during the processing of your request. Try again later.
@@ -255,11 +256,11 @@ public interface AWSAuditManager {
      * @param createAssessmentFrameworkRequest
      * @return Result of the CreateAssessmentFramework operation returned by the service.
      * @throws ResourceNotFoundException
-     *         The resource specified in the request cannot be found.
+     *         The resource that's specified in the request can't be found.
      * @throws ValidationException
      *         The request has invalid or missing parameters.
      * @throws AccessDeniedException
-     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Your account isn't registered with Audit Manager. Check the delegated administrator setup on the Audit
      *         Manager settings page, and try again.
      * @throws InternalServerException
      *         An internal service error occurred during the processing of your request. Try again later.
@@ -279,12 +280,12 @@ public interface AWSAuditManager {
      * @throws ValidationException
      *         The request has invalid or missing parameters.
      * @throws AccessDeniedException
-     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Your account isn't registered with Audit Manager. Check the delegated administrator setup on the Audit
      *         Manager settings page, and try again.
      * @throws InternalServerException
      *         An internal service error occurred during the processing of your request. Try again later.
      * @throws ResourceNotFoundException
-     *         The resource specified in the request cannot be found.
+     *         The resource that's specified in the request can't be found.
      * @sample AWSAuditManager.CreateAssessmentReport
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/CreateAssessmentReport"
      *      target="_top">AWS API Documentation</a>
@@ -299,11 +300,11 @@ public interface AWSAuditManager {
      * @param createControlRequest
      * @return Result of the CreateControl operation returned by the service.
      * @throws ResourceNotFoundException
-     *         The resource specified in the request cannot be found.
+     *         The resource that's specified in the request can't be found.
      * @throws ValidationException
      *         The request has invalid or missing parameters.
      * @throws AccessDeniedException
-     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Your account isn't registered with Audit Manager. Check the delegated administrator setup on the Audit
      *         Manager settings page, and try again.
      * @throws InternalServerException
      *         An internal service error occurred during the processing of your request. Try again later.
@@ -321,11 +322,11 @@ public interface AWSAuditManager {
      * @param deleteAssessmentRequest
      * @return Result of the DeleteAssessment operation returned by the service.
      * @throws ResourceNotFoundException
-     *         The resource specified in the request cannot be found.
+     *         The resource that's specified in the request can't be found.
      * @throws ValidationException
      *         The request has invalid or missing parameters.
      * @throws AccessDeniedException
-     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Your account isn't registered with Audit Manager. Check the delegated administrator setup on the Audit
      *         Manager settings page, and try again.
      * @throws InternalServerException
      *         An internal service error occurred during the processing of your request. Try again later.
@@ -343,11 +344,11 @@ public interface AWSAuditManager {
      * @param deleteAssessmentFrameworkRequest
      * @return Result of the DeleteAssessmentFramework operation returned by the service.
      * @throws ResourceNotFoundException
-     *         The resource specified in the request cannot be found.
+     *         The resource that's specified in the request can't be found.
      * @throws ValidationException
      *         The request has invalid or missing parameters.
      * @throws AccessDeniedException
-     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Your account isn't registered with Audit Manager. Check the delegated administrator setup on the Audit
      *         Manager settings page, and try again.
      * @throws InternalServerException
      *         An internal service error occurred during the processing of your request. Try again later.
@@ -359,6 +360,28 @@ public interface AWSAuditManager {
 
     /**
      * <p>
+     * Deletes a share request for a custom framework in Audit Manager.
+     * </p>
+     * 
+     * @param deleteAssessmentFrameworkShareRequest
+     * @return Result of the DeleteAssessmentFrameworkShare operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The resource that's specified in the request can't be found.
+     * @throws ValidationException
+     *         The request has invalid or missing parameters.
+     * @throws AccessDeniedException
+     *         Your account isn't registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Manager settings page, and try again.
+     * @throws InternalServerException
+     *         An internal service error occurred during the processing of your request. Try again later.
+     * @sample AWSAuditManager.DeleteAssessmentFrameworkShare
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/DeleteAssessmentFrameworkShare"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeleteAssessmentFrameworkShareResult deleteAssessmentFrameworkShare(DeleteAssessmentFrameworkShareRequest deleteAssessmentFrameworkShareRequest);
+
+    /**
+     * <p>
      * Deletes an assessment report from an assessment in Audit Manager.
      * </p>
      * 
@@ -367,12 +390,12 @@ public interface AWSAuditManager {
      * @throws ValidationException
      *         The request has invalid or missing parameters.
      * @throws AccessDeniedException
-     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Your account isn't registered with Audit Manager. Check the delegated administrator setup on the Audit
      *         Manager settings page, and try again.
      * @throws InternalServerException
      *         An internal service error occurred during the processing of your request. Try again later.
      * @throws ResourceNotFoundException
-     *         The resource specified in the request cannot be found.
+     *         The resource that's specified in the request can't be found.
      * @sample AWSAuditManager.DeleteAssessmentReport
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/DeleteAssessmentReport"
      *      target="_top">AWS API Documentation</a>
@@ -387,11 +410,11 @@ public interface AWSAuditManager {
      * @param deleteControlRequest
      * @return Result of the DeleteControl operation returned by the service.
      * @throws ResourceNotFoundException
-     *         The resource specified in the request cannot be found.
+     *         The resource that's specified in the request can't be found.
      * @throws ValidationException
      *         The request has invalid or missing parameters.
      * @throws AccessDeniedException
-     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Your account isn't registered with Audit Manager. Check the delegated administrator setup on the Audit
      *         Manager settings page, and try again.
      * @throws InternalServerException
      *         An internal service error occurred during the processing of your request. Try again later.
@@ -411,12 +434,12 @@ public interface AWSAuditManager {
      * @throws ValidationException
      *         The request has invalid or missing parameters.
      * @throws AccessDeniedException
-     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Your account isn't registered with Audit Manager. Check the delegated administrator setup on the Audit
      *         Manager settings page, and try again.
      * @throws InternalServerException
      *         An internal service error occurred during the processing of your request. Try again later.
      * @throws ResourceNotFoundException
-     *         The resource specified in the request cannot be found.
+     *         The resource that's specified in the request can't be found.
      * @sample AWSAuditManager.DeregisterAccount
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/DeregisterAccount" target="_top">AWS
      *      API Documentation</a>
@@ -429,10 +452,10 @@ public interface AWSAuditManager {
      * </p>
      * <important>
      * <p>
-     * When you remove a delegated administrator from your Audit Manager settings, or when you deregister a delegated
-     * administrator from Organizations, you continue to have access to the evidence that you previously collected under
-     * that account. However, Audit Manager will stop collecting and attaching evidence to that delegated administrator
-     * account moving forward.
+     * When you remove a delegated administrator from your Audit Manager settings, you continue to have access to the
+     * evidence that you previously collected under that account. This is also the case when you deregister a delegated
+     * administrator from Audit Manager. However, Audit Manager will stop collecting and attaching evidence to that
+     * delegated administrator account moving forward.
      * </p>
      * </important>
      * 
@@ -441,12 +464,12 @@ public interface AWSAuditManager {
      * @throws ValidationException
      *         The request has invalid or missing parameters.
      * @throws AccessDeniedException
-     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Your account isn't registered with Audit Manager. Check the delegated administrator setup on the Audit
      *         Manager settings page, and try again.
      * @throws InternalServerException
      *         An internal service error occurred during the processing of your request. Try again later.
      * @throws ResourceNotFoundException
-     *         The resource specified in the request cannot be found.
+     *         The resource that's specified in the request can't be found.
      * @sample AWSAuditManager.DeregisterOrganizationAdminAccount
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/DeregisterOrganizationAdminAccount"
      *      target="_top">AWS API Documentation</a>
@@ -464,12 +487,12 @@ public interface AWSAuditManager {
      * @throws ValidationException
      *         The request has invalid or missing parameters.
      * @throws AccessDeniedException
-     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Your account isn't registered with Audit Manager. Check the delegated administrator setup on the Audit
      *         Manager settings page, and try again.
      * @throws InternalServerException
      *         An internal service error occurred during the processing of your request. Try again later.
      * @throws ResourceNotFoundException
-     *         The resource specified in the request cannot be found.
+     *         The resource that's specified in the request can't be found.
      * @sample AWSAuditManager.DisassociateAssessmentReportEvidenceFolder
      * @see <a
      *      href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/DisassociateAssessmentReportEvidenceFolder"
@@ -501,11 +524,11 @@ public interface AWSAuditManager {
      * @param getAssessmentRequest
      * @return Result of the GetAssessment operation returned by the service.
      * @throws ResourceNotFoundException
-     *         The resource specified in the request cannot be found.
+     *         The resource that's specified in the request can't be found.
      * @throws ValidationException
      *         The request has invalid or missing parameters.
      * @throws AccessDeniedException
-     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Your account isn't registered with Audit Manager. Check the delegated administrator setup on the Audit
      *         Manager settings page, and try again.
      * @throws InternalServerException
      *         An internal service error occurred during the processing of your request. Try again later.
@@ -523,11 +546,11 @@ public interface AWSAuditManager {
      * @param getAssessmentFrameworkRequest
      * @return Result of the GetAssessmentFramework operation returned by the service.
      * @throws ResourceNotFoundException
-     *         The resource specified in the request cannot be found.
+     *         The resource that's specified in the request can't be found.
      * @throws ValidationException
      *         The request has invalid or missing parameters.
      * @throws AccessDeniedException
-     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Your account isn't registered with Audit Manager. Check the delegated administrator setup on the Audit
      *         Manager settings page, and try again.
      * @throws InternalServerException
      *         An internal service error occurred during the processing of your request. Try again later.
@@ -539,7 +562,7 @@ public interface AWSAuditManager {
 
     /**
      * <p>
-     * Returns the URL of a specified assessment report in Audit Manager.
+     * Returns the URL of an assessment report in Audit Manager.
      * </p>
      * 
      * @param getAssessmentReportUrlRequest
@@ -547,12 +570,12 @@ public interface AWSAuditManager {
      * @throws ValidationException
      *         The request has invalid or missing parameters.
      * @throws AccessDeniedException
-     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Your account isn't registered with Audit Manager. Check the delegated administrator setup on the Audit
      *         Manager settings page, and try again.
      * @throws InternalServerException
      *         An internal service error occurred during the processing of your request. Try again later.
      * @throws ResourceNotFoundException
-     *         The resource specified in the request cannot be found.
+     *         The resource that's specified in the request can't be found.
      * @sample AWSAuditManager.GetAssessmentReportUrl
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/GetAssessmentReportUrl"
      *      target="_top">AWS API Documentation</a>
@@ -567,10 +590,10 @@ public interface AWSAuditManager {
      * @param getChangeLogsRequest
      * @return Result of the GetChangeLogs operation returned by the service.
      * @throws AccessDeniedException
-     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Your account isn't registered with Audit Manager. Check the delegated administrator setup on the Audit
      *         Manager settings page, and try again.
      * @throws ResourceNotFoundException
-     *         The resource specified in the request cannot be found.
+     *         The resource that's specified in the request can't be found.
      * @throws ValidationException
      *         The request has invalid or missing parameters.
      * @throws InternalServerException
@@ -589,11 +612,11 @@ public interface AWSAuditManager {
      * @param getControlRequest
      * @return Result of the GetControl operation returned by the service.
      * @throws ResourceNotFoundException
-     *         The resource specified in the request cannot be found.
+     *         The resource that's specified in the request can't be found.
      * @throws ValidationException
      *         The request has invalid or missing parameters.
      * @throws AccessDeniedException
-     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Your account isn't registered with Audit Manager. Check the delegated administrator setup on the Audit
      *         Manager settings page, and try again.
      * @throws InternalServerException
      *         An internal service error occurred during the processing of your request. Try again later.
@@ -613,7 +636,7 @@ public interface AWSAuditManager {
      * @throws ValidationException
      *         The request has invalid or missing parameters.
      * @throws AccessDeniedException
-     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Your account isn't registered with Audit Manager. Check the delegated administrator setup on the Audit
      *         Manager settings page, and try again.
      * @throws InternalServerException
      *         An internal service error occurred during the processing of your request. Try again later.
@@ -631,11 +654,11 @@ public interface AWSAuditManager {
      * @param getEvidenceRequest
      * @return Result of the GetEvidence operation returned by the service.
      * @throws ResourceNotFoundException
-     *         The resource specified in the request cannot be found.
+     *         The resource that's specified in the request can't be found.
      * @throws ValidationException
      *         The request has invalid or missing parameters.
      * @throws AccessDeniedException
-     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Your account isn't registered with Audit Manager. Check the delegated administrator setup on the Audit
      *         Manager settings page, and try again.
      * @throws InternalServerException
      *         An internal service error occurred during the processing of your request. Try again later.
@@ -653,11 +676,11 @@ public interface AWSAuditManager {
      * @param getEvidenceByEvidenceFolderRequest
      * @return Result of the GetEvidenceByEvidenceFolder operation returned by the service.
      * @throws ResourceNotFoundException
-     *         The resource specified in the request cannot be found.
+     *         The resource that's specified in the request can't be found.
      * @throws ValidationException
      *         The request has invalid or missing parameters.
      * @throws AccessDeniedException
-     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Your account isn't registered with Audit Manager. Check the delegated administrator setup on the Audit
      *         Manager settings page, and try again.
      * @throws InternalServerException
      *         An internal service error occurred during the processing of your request. Try again later.
@@ -675,11 +698,11 @@ public interface AWSAuditManager {
      * @param getEvidenceFolderRequest
      * @return Result of the GetEvidenceFolder operation returned by the service.
      * @throws ResourceNotFoundException
-     *         The resource specified in the request cannot be found.
+     *         The resource that's specified in the request can't be found.
      * @throws ValidationException
      *         The request has invalid or missing parameters.
      * @throws AccessDeniedException
-     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Your account isn't registered with Audit Manager. Check the delegated administrator setup on the Audit
      *         Manager settings page, and try again.
      * @throws InternalServerException
      *         An internal service error occurred during the processing of your request. Try again later.
@@ -697,9 +720,9 @@ public interface AWSAuditManager {
      * @param getEvidenceFoldersByAssessmentRequest
      * @return Result of the GetEvidenceFoldersByAssessment operation returned by the service.
      * @throws ResourceNotFoundException
-     *         The resource specified in the request cannot be found.
+     *         The resource that's specified in the request can't be found.
      * @throws AccessDeniedException
-     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Your account isn't registered with Audit Manager. Check the delegated administrator setup on the Audit
      *         Manager settings page, and try again.
      * @throws ValidationException
      *         The request has invalid or missing parameters.
@@ -713,17 +736,18 @@ public interface AWSAuditManager {
 
     /**
      * <p>
-     * Returns a list of evidence folders associated with a specified control of an assessment in Audit Manager.
+     * Returns a list of evidence folders that are associated with a specified control of an assessment in Audit
+     * Manager.
      * </p>
      * 
      * @param getEvidenceFoldersByAssessmentControlRequest
      * @return Result of the GetEvidenceFoldersByAssessmentControl operation returned by the service.
      * @throws ResourceNotFoundException
-     *         The resource specified in the request cannot be found.
+     *         The resource that's specified in the request can't be found.
      * @throws ValidationException
      *         The request has invalid or missing parameters.
      * @throws AccessDeniedException
-     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Your account isn't registered with Audit Manager. Check the delegated administrator setup on the Audit
      *         Manager settings page, and try again.
      * @throws InternalServerException
      *         An internal service error occurred during the processing of your request. Try again later.
@@ -745,12 +769,12 @@ public interface AWSAuditManager {
      * @throws ValidationException
      *         The request has invalid or missing parameters.
      * @throws AccessDeniedException
-     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Your account isn't registered with Audit Manager. Check the delegated administrator setup on the Audit
      *         Manager settings page, and try again.
      * @throws InternalServerException
      *         An internal service error occurred during the processing of your request. Try again later.
      * @throws ResourceNotFoundException
-     *         The resource specified in the request cannot be found.
+     *         The resource that's specified in the request can't be found.
      * @sample AWSAuditManager.GetOrganizationAdminAccount
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/GetOrganizationAdminAccount"
      *      target="_top">AWS API Documentation</a>
@@ -765,7 +789,7 @@ public interface AWSAuditManager {
      * @param getServicesInScopeRequest
      * @return Result of the GetServicesInScope operation returned by the service.
      * @throws AccessDeniedException
-     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Your account isn't registered with Audit Manager. Check the delegated administrator setup on the Audit
      *         Manager settings page, and try again.
      * @throws ValidationException
      *         The request has invalid or missing parameters.
@@ -785,7 +809,7 @@ public interface AWSAuditManager {
      * @param getSettingsRequest
      * @return Result of the GetSettings operation returned by the service.
      * @throws AccessDeniedException
-     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Your account isn't registered with Audit Manager. Check the delegated administrator setup on the Audit
      *         Manager settings page, and try again.
      * @throws InternalServerException
      *         An internal service error occurred during the processing of your request. Try again later.
@@ -797,7 +821,29 @@ public interface AWSAuditManager {
 
     /**
      * <p>
-     * Returns a list of the frameworks available in the Audit Manager framework library.
+     * Returns a list of sent or received share requests for custom frameworks in Audit Manager.
+     * </p>
+     * 
+     * @param listAssessmentFrameworkShareRequestsRequest
+     * @return Result of the ListAssessmentFrameworkShareRequests operation returned by the service.
+     * @throws AccessDeniedException
+     *         Your account isn't registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Manager settings page, and try again.
+     * @throws ValidationException
+     *         The request has invalid or missing parameters.
+     * @throws InternalServerException
+     *         An internal service error occurred during the processing of your request. Try again later.
+     * @sample AWSAuditManager.ListAssessmentFrameworkShareRequests
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/ListAssessmentFrameworkShareRequests"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListAssessmentFrameworkShareRequestsResult listAssessmentFrameworkShareRequests(
+            ListAssessmentFrameworkShareRequestsRequest listAssessmentFrameworkShareRequestsRequest);
+
+    /**
+     * <p>
+     * Returns a list of the frameworks that are available in the Audit Manager framework library.
      * </p>
      * 
      * @param listAssessmentFrameworksRequest
@@ -805,7 +851,7 @@ public interface AWSAuditManager {
      * @throws ValidationException
      *         The request has invalid or missing parameters.
      * @throws AccessDeniedException
-     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Your account isn't registered with Audit Manager. Check the delegated administrator setup on the Audit
      *         Manager settings page, and try again.
      * @throws InternalServerException
      *         An internal service error occurred during the processing of your request. Try again later.
@@ -825,7 +871,7 @@ public interface AWSAuditManager {
      * @throws ValidationException
      *         The request has invalid or missing parameters.
      * @throws AccessDeniedException
-     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Your account isn't registered with Audit Manager. Check the delegated administrator setup on the Audit
      *         Manager settings page, and try again.
      * @throws InternalServerException
      *         An internal service error occurred during the processing of your request. Try again later.
@@ -843,7 +889,7 @@ public interface AWSAuditManager {
      * @param listAssessmentsRequest
      * @return Result of the ListAssessments operation returned by the service.
      * @throws AccessDeniedException
-     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Your account isn't registered with Audit Manager. Check the delegated administrator setup on the Audit
      *         Manager settings page, and try again.
      * @throws ValidationException
      *         The request has invalid or missing parameters.
@@ -863,7 +909,7 @@ public interface AWSAuditManager {
      * @param listControlsRequest
      * @return Result of the ListControls operation returned by the service.
      * @throws AccessDeniedException
-     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Your account isn't registered with Audit Manager. Check the delegated administrator setup on the Audit
      *         Manager settings page, and try again.
      * @throws ValidationException
      *         The request has invalid or missing parameters.
@@ -877,13 +923,13 @@ public interface AWSAuditManager {
 
     /**
      * <p>
-     * Returns a list of keywords that pre-mapped to the specified control data source.
+     * Returns a list of keywords that are pre-mapped to the specified control data source.
      * </p>
      * 
      * @param listKeywordsForDataSourceRequest
      * @return Result of the ListKeywordsForDataSource operation returned by the service.
      * @throws AccessDeniedException
-     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Your account isn't registered with Audit Manager. Check the delegated administrator setup on the Audit
      *         Manager settings page, and try again.
      * @throws ValidationException
      *         The request has invalid or missing parameters.
@@ -903,7 +949,7 @@ public interface AWSAuditManager {
      * @param listNotificationsRequest
      * @return Result of the ListNotifications operation returned by the service.
      * @throws AccessDeniedException
-     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Your account isn't registered with Audit Manager. Check the delegated administrator setup on the Audit
      *         Manager settings page, and try again.
      * @throws ValidationException
      *         The request has invalid or missing parameters.
@@ -927,7 +973,7 @@ public interface AWSAuditManager {
      * @throws ValidationException
      *         The request has invalid or missing parameters.
      * @throws ResourceNotFoundException
-     *         The resource specified in the request cannot be found.
+     *         The resource that's specified in the request can't be found.
      * @sample AWSAuditManager.ListTagsForResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/ListTagsForResource"
      *      target="_top">AWS API Documentation</a>
@@ -944,12 +990,12 @@ public interface AWSAuditManager {
      * @throws ValidationException
      *         The request has invalid or missing parameters.
      * @throws AccessDeniedException
-     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Your account isn't registered with Audit Manager. Check the delegated administrator setup on the Audit
      *         Manager settings page, and try again.
      * @throws InternalServerException
      *         An internal service error occurred during the processing of your request. Try again later.
      * @throws ResourceNotFoundException
-     *         The resource specified in the request cannot be found.
+     *         The resource that's specified in the request can't be found.
      * @sample AWSAuditManager.RegisterAccount
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/RegisterAccount" target="_top">AWS
      *      API Documentation</a>
@@ -966,17 +1012,54 @@ public interface AWSAuditManager {
      * @throws ValidationException
      *         The request has invalid or missing parameters.
      * @throws AccessDeniedException
-     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Your account isn't registered with Audit Manager. Check the delegated administrator setup on the Audit
      *         Manager settings page, and try again.
      * @throws InternalServerException
      *         An internal service error occurred during the processing of your request. Try again later.
      * @throws ResourceNotFoundException
-     *         The resource specified in the request cannot be found.
+     *         The resource that's specified in the request can't be found.
      * @sample AWSAuditManager.RegisterOrganizationAdminAccount
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/RegisterOrganizationAdminAccount"
      *      target="_top">AWS API Documentation</a>
      */
     RegisterOrganizationAdminAccountResult registerOrganizationAdminAccount(RegisterOrganizationAdminAccountRequest registerOrganizationAdminAccountRequest);
+
+    /**
+     * <p>
+     * Creates a share request for a custom framework in Audit Manager.
+     * </p>
+     * <p>
+     * The share request specifies a recipient and notifies them that a custom framework is available. Recipients have
+     * 120 days to accept or decline the request. If no action is taken, the share request expires.
+     * </p>
+     * <important>
+     * <p>
+     * When you invoke the <code>StartAssessmentFrameworkShare</code> API, you are about to share a custom framework
+     * with another Amazon Web Services account. You may not share a custom framework that is derived from a standard
+     * framework if the standard framework is designated as not eligible for sharing by Amazon Web Services, unless you
+     * have obtained permission to do so from the owner of the standard framework. To learn more about which standard
+     * frameworks are eligible for sharing, see <a href=
+     * "https://docs.aws.amazon.com/audit-manager/latest/userguide/share-custom-framework-concepts-and-terminology.html#eligibility"
+     * >Framework sharing eligibility</a> in the <i>Audit Manager User Guide</i>.
+     * </p>
+     * </important>
+     * 
+     * @param startAssessmentFrameworkShareRequest
+     * @return Result of the StartAssessmentFrameworkShare operation returned by the service.
+     * @throws ValidationException
+     *         The request has invalid or missing parameters.
+     * @throws AccessDeniedException
+     *         Your account isn't registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Manager settings page, and try again.
+     * @throws InternalServerException
+     *         An internal service error occurred during the processing of your request. Try again later.
+     * @throws ResourceNotFoundException
+     *         The resource that's specified in the request can't be found.
+     * @sample AWSAuditManager.StartAssessmentFrameworkShare
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/StartAssessmentFrameworkShare"
+     *      target="_top">AWS API Documentation</a>
+     */
+    StartAssessmentFrameworkShareResult startAssessmentFrameworkShare(StartAssessmentFrameworkShareRequest startAssessmentFrameworkShareRequest);
 
     /**
      * <p>
@@ -990,7 +1073,7 @@ public interface AWSAuditManager {
      * @throws ValidationException
      *         The request has invalid or missing parameters.
      * @throws ResourceNotFoundException
-     *         The resource specified in the request cannot be found.
+     *         The resource that's specified in the request can't be found.
      * @sample AWSAuditManager.TagResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/TagResource" target="_top">AWS API
      *      Documentation</a>
@@ -1009,7 +1092,7 @@ public interface AWSAuditManager {
      * @throws ValidationException
      *         The request has invalid or missing parameters.
      * @throws ResourceNotFoundException
-     *         The resource specified in the request cannot be found.
+     *         The resource that's specified in the request can't be found.
      * @sample AWSAuditManager.UntagResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/UntagResource" target="_top">AWS API
      *      Documentation</a>
@@ -1024,11 +1107,11 @@ public interface AWSAuditManager {
      * @param updateAssessmentRequest
      * @return Result of the UpdateAssessment operation returned by the service.
      * @throws ResourceNotFoundException
-     *         The resource specified in the request cannot be found.
+     *         The resource that's specified in the request can't be found.
      * @throws ValidationException
      *         The request has invalid or missing parameters.
      * @throws AccessDeniedException
-     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Your account isn't registered with Audit Manager. Check the delegated administrator setup on the Audit
      *         Manager settings page, and try again.
      * @throws InternalServerException
      *         An internal service error occurred during the processing of your request. Try again later.
@@ -1046,11 +1129,11 @@ public interface AWSAuditManager {
      * @param updateAssessmentControlRequest
      * @return Result of the UpdateAssessmentControl operation returned by the service.
      * @throws ResourceNotFoundException
-     *         The resource specified in the request cannot be found.
+     *         The resource that's specified in the request can't be found.
      * @throws ValidationException
      *         The request has invalid or missing parameters.
      * @throws AccessDeniedException
-     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Your account isn't registered with Audit Manager. Check the delegated administrator setup on the Audit
      *         Manager settings page, and try again.
      * @throws InternalServerException
      *         An internal service error occurred during the processing of your request. Try again later.
@@ -1068,11 +1151,11 @@ public interface AWSAuditManager {
      * @param updateAssessmentControlSetStatusRequest
      * @return Result of the UpdateAssessmentControlSetStatus operation returned by the service.
      * @throws ResourceNotFoundException
-     *         The resource specified in the request cannot be found.
+     *         The resource that's specified in the request can't be found.
      * @throws ValidationException
      *         The request has invalid or missing parameters.
      * @throws AccessDeniedException
-     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Your account isn't registered with Audit Manager. Check the delegated administrator setup on the Audit
      *         Manager settings page, and try again.
      * @throws InternalServerException
      *         An internal service error occurred during the processing of your request. Try again later.
@@ -1090,11 +1173,11 @@ public interface AWSAuditManager {
      * @param updateAssessmentFrameworkRequest
      * @return Result of the UpdateAssessmentFramework operation returned by the service.
      * @throws ResourceNotFoundException
-     *         The resource specified in the request cannot be found.
+     *         The resource that's specified in the request can't be found.
      * @throws ValidationException
      *         The request has invalid or missing parameters.
      * @throws AccessDeniedException
-     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Your account isn't registered with Audit Manager. Check the delegated administrator setup on the Audit
      *         Manager settings page, and try again.
      * @throws InternalServerException
      *         An internal service error occurred during the processing of your request. Try again later.
@@ -1106,17 +1189,39 @@ public interface AWSAuditManager {
 
     /**
      * <p>
+     * Updates a share request for a custom framework in Audit Manager.
+     * </p>
+     * 
+     * @param updateAssessmentFrameworkShareRequest
+     * @return Result of the UpdateAssessmentFrameworkShare operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The resource that's specified in the request can't be found.
+     * @throws ValidationException
+     *         The request has invalid or missing parameters.
+     * @throws AccessDeniedException
+     *         Your account isn't registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Manager settings page, and try again.
+     * @throws InternalServerException
+     *         An internal service error occurred during the processing of your request. Try again later.
+     * @sample AWSAuditManager.UpdateAssessmentFrameworkShare
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/UpdateAssessmentFrameworkShare"
+     *      target="_top">AWS API Documentation</a>
+     */
+    UpdateAssessmentFrameworkShareResult updateAssessmentFrameworkShare(UpdateAssessmentFrameworkShareRequest updateAssessmentFrameworkShareRequest);
+
+    /**
+     * <p>
      * Updates the status of an assessment in Audit Manager.
      * </p>
      * 
      * @param updateAssessmentStatusRequest
      * @return Result of the UpdateAssessmentStatus operation returned by the service.
      * @throws ResourceNotFoundException
-     *         The resource specified in the request cannot be found.
+     *         The resource that's specified in the request can't be found.
      * @throws ValidationException
      *         The request has invalid or missing parameters.
      * @throws AccessDeniedException
-     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Your account isn't registered with Audit Manager. Check the delegated administrator setup on the Audit
      *         Manager settings page, and try again.
      * @throws InternalServerException
      *         An internal service error occurred during the processing of your request. Try again later.
@@ -1134,11 +1239,11 @@ public interface AWSAuditManager {
      * @param updateControlRequest
      * @return Result of the UpdateControl operation returned by the service.
      * @throws ResourceNotFoundException
-     *         The resource specified in the request cannot be found.
+     *         The resource that's specified in the request can't be found.
      * @throws ValidationException
      *         The request has invalid or missing parameters.
      * @throws AccessDeniedException
-     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Your account isn't registered with Audit Manager. Check the delegated administrator setup on the Audit
      *         Manager settings page, and try again.
      * @throws InternalServerException
      *         An internal service error occurred during the processing of your request. Try again later.
@@ -1158,7 +1263,7 @@ public interface AWSAuditManager {
      * @throws ValidationException
      *         The request has invalid or missing parameters.
      * @throws AccessDeniedException
-     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Your account isn't registered with Audit Manager. Check the delegated administrator setup on the Audit
      *         Manager settings page, and try again.
      * @throws InternalServerException
      *         An internal service error occurred during the processing of your request. Try again later.
@@ -1178,12 +1283,12 @@ public interface AWSAuditManager {
      * @throws ValidationException
      *         The request has invalid or missing parameters.
      * @throws AccessDeniedException
-     *         Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit
+     *         Your account isn't registered with Audit Manager. Check the delegated administrator setup on the Audit
      *         Manager settings page, and try again.
      * @throws InternalServerException
      *         An internal service error occurred during the processing of your request. Try again later.
      * @throws ResourceNotFoundException
-     *         The resource specified in the request cannot be found.
+     *         The resource that's specified in the request can't be found.
      * @sample AWSAuditManager.ValidateAssessmentReportIntegrity
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/ValidateAssessmentReportIntegrity"
      *      target="_top">AWS API Documentation</a>

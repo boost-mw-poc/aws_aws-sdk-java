@@ -109,6 +109,11 @@ public class AbstractAmazonRDS implements AmazonRDS {
     }
 
     @Override
+    public CreateCustomDBEngineVersionResult createCustomDBEngineVersion(CreateCustomDBEngineVersionRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DBCluster createDBCluster(CreateDBClusterRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -185,6 +190,11 @@ public class AbstractAmazonRDS implements AmazonRDS {
 
     @Override
     public CustomAvailabilityZone deleteCustomAvailabilityZone(DeleteCustomAvailabilityZoneRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteCustomDBEngineVersionResult deleteCustomDBEngineVersion(DeleteCustomDBEngineVersionRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -605,6 +615,11 @@ public class AbstractAmazonRDS implements AmazonRDS {
 
     @Override
     public ModifyCurrentDBClusterCapacityResult modifyCurrentDBClusterCapacity(ModifyCurrentDBClusterCapacityRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ModifyCustomDBEngineVersionResult modifyCustomDBEngineVersion(ModifyCustomDBEngineVersionRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

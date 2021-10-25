@@ -26,24 +26,24 @@ public class RegisterOrganizationAdminAccountResult extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The identifier for the specified delegated administrator account.
+     * The identifier for the delegated administrator account.
      * </p>
      */
     private String adminAccountId;
     /**
      * <p>
-     * The identifier for the specified organization.
+     * The identifier for the organization.
      * </p>
      */
     private String organizationId;
 
     /**
      * <p>
-     * The identifier for the specified delegated administrator account.
+     * The identifier for the delegated administrator account.
      * </p>
      * 
      * @param adminAccountId
-     *        The identifier for the specified delegated administrator account.
+     *        The identifier for the delegated administrator account.
      */
 
     public void setAdminAccountId(String adminAccountId) {
@@ -52,10 +52,10 @@ public class RegisterOrganizationAdminAccountResult extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The identifier for the specified delegated administrator account.
+     * The identifier for the delegated administrator account.
      * </p>
      * 
-     * @return The identifier for the specified delegated administrator account.
+     * @return The identifier for the delegated administrator account.
      */
 
     public String getAdminAccountId() {
@@ -64,11 +64,11 @@ public class RegisterOrganizationAdminAccountResult extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The identifier for the specified delegated administrator account.
+     * The identifier for the delegated administrator account.
      * </p>
      * 
      * @param adminAccountId
-     *        The identifier for the specified delegated administrator account.
+     *        The identifier for the delegated administrator account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -79,11 +79,11 @@ public class RegisterOrganizationAdminAccountResult extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The identifier for the specified organization.
+     * The identifier for the organization.
      * </p>
      * 
      * @param organizationId
-     *        The identifier for the specified organization.
+     *        The identifier for the organization.
      */
 
     public void setOrganizationId(String organizationId) {
@@ -92,10 +92,10 @@ public class RegisterOrganizationAdminAccountResult extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The identifier for the specified organization.
+     * The identifier for the organization.
      * </p>
      * 
-     * @return The identifier for the specified organization.
+     * @return The identifier for the organization.
      */
 
     public String getOrganizationId() {
@@ -104,11 +104,11 @@ public class RegisterOrganizationAdminAccountResult extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The identifier for the specified organization.
+     * The identifier for the organization.
      * </p>
      * 
      * @param organizationId
-     *        The identifier for the specified organization.
+     *        The identifier for the organization.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

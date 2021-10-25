@@ -25,18 +25,18 @@ public class GetAccountStatusResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The status of the specified Amazon Web Services account.
+     * The status of the Amazon Web Services account.
      * </p>
      */
     private String status;
 
     /**
      * <p>
-     * The status of the specified Amazon Web Services account.
+     * The status of the Amazon Web Services account.
      * </p>
      * 
      * @param status
-     *        The status of the specified Amazon Web Services account.
+     *        The status of the Amazon Web Services account.
      * @see AccountStatus
      */
 
@@ -46,10 +46,10 @@ public class GetAccountStatusResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The status of the specified Amazon Web Services account.
+     * The status of the Amazon Web Services account.
      * </p>
      * 
-     * @return The status of the specified Amazon Web Services account.
+     * @return The status of the Amazon Web Services account.
      * @see AccountStatus
      */
 
@@ -59,11 +59,11 @@ public class GetAccountStatusResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The status of the specified Amazon Web Services account.
+     * The status of the Amazon Web Services account.
      * </p>
      * 
      * @param status
-     *        The status of the specified Amazon Web Services account.
+     *        The status of the Amazon Web Services account.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AccountStatus
      */
@@ -75,11 +75,11 @@ public class GetAccountStatusResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The status of the specified Amazon Web Services account.
+     * The status of the Amazon Web Services account.
      * </p>
      * 
      * @param status
-     *        The status of the specified Amazon Web Services account.
+     *        The status of the Amazon Web Services account.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AccountStatus
      */

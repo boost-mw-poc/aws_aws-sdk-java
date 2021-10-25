@@ -299,6 +299,10 @@ public class CreateDBInstanceRequestMarshaller implements Marshaller<Request<Cre
             request.addParameter("EnableCustomerOwnedIp", StringUtils.fromBoolean(createDBInstanceRequest.getEnableCustomerOwnedIp()));
         }
 
+        if (createDBInstanceRequest.getCustomIamInstanceProfile() != null) {
+            request.addParameter("CustomIamInstanceProfile", StringUtils.fromString(createDBInstanceRequest.getCustomIamInstanceProfile()));
+        }
+
         return request;
     }
 

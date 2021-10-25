@@ -19,8 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The notification used to inform a user of an update in Audit Manager. For example, this includes the notification
- * that is sent when a control set is delegated for review.
+ * The notification that informs a user of an update in Audit Manager. For example, this includes the notification
+ * that's sent when a control set is delegated for review.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/Notification" target="_top">AWS API
@@ -37,7 +37,7 @@ public class Notification implements Serializable, Cloneable, StructuredPojo {
     private String id;
     /**
      * <p>
-     * The identifier for the specified assessment.
+     * The identifier for the assessment.
      * </p>
      */
     private String assessmentId;
@@ -49,7 +49,7 @@ public class Notification implements Serializable, Cloneable, StructuredPojo {
     private String assessmentName;
     /**
      * <p>
-     * The identifier for the specified control set.
+     * The identifier for the control set.
      * </p>
      */
     private String controlSetId;
@@ -120,11 +120,11 @@ public class Notification implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier for the specified assessment.
+     * The identifier for the assessment.
      * </p>
      * 
      * @param assessmentId
-     *        The identifier for the specified assessment.
+     *        The identifier for the assessment.
      */
 
     public void setAssessmentId(String assessmentId) {
@@ -133,10 +133,10 @@ public class Notification implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier for the specified assessment.
+     * The identifier for the assessment.
      * </p>
      * 
-     * @return The identifier for the specified assessment.
+     * @return The identifier for the assessment.
      */
 
     public String getAssessmentId() {
@@ -145,11 +145,11 @@ public class Notification implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier for the specified assessment.
+     * The identifier for the assessment.
      * </p>
      * 
      * @param assessmentId
-     *        The identifier for the specified assessment.
+     *        The identifier for the assessment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -200,11 +200,11 @@ public class Notification implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier for the specified control set.
+     * The identifier for the control set.
      * </p>
      * 
      * @param controlSetId
-     *        The identifier for the specified control set.
+     *        The identifier for the control set.
      */
 
     public void setControlSetId(String controlSetId) {
@@ -213,10 +213,10 @@ public class Notification implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier for the specified control set.
+     * The identifier for the control set.
      * </p>
      * 
-     * @return The identifier for the specified control set.
+     * @return The identifier for the control set.
      */
 
     public String getControlSetId() {
@@ -225,11 +225,11 @@ public class Notification implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier for the specified control set.
+     * The identifier for the control set.
      * </p>
      * 
      * @param controlSetId
-     *        The identifier for the specified control set.
+     *        The identifier for the control set.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

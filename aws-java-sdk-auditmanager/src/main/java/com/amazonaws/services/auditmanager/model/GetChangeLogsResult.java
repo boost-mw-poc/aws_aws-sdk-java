@@ -31,7 +31,7 @@ public class GetChangeLogsResult extends com.amazonaws.AmazonWebServiceResult<co
     private java.util.List<ChangeLog> changeLogs;
     /**
      * <p>
-     * The pagination token used to fetch the next set of results.
+     * The pagination token that's used to fetch the next set of results.
      * </p>
      */
     private String nextToken;
@@ -108,11 +108,11 @@ public class GetChangeLogsResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The pagination token used to fetch the next set of results.
+     * The pagination token that's used to fetch the next set of results.
      * </p>
      * 
      * @param nextToken
-     *        The pagination token used to fetch the next set of results.
+     *        The pagination token that's used to fetch the next set of results.
      */
 
     public void setNextToken(String nextToken) {
@@ -121,10 +121,10 @@ public class GetChangeLogsResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The pagination token used to fetch the next set of results.
+     * The pagination token that's used to fetch the next set of results.
      * </p>
      * 
-     * @return The pagination token used to fetch the next set of results.
+     * @return The pagination token that's used to fetch the next set of results.
      */
 
     public String getNextToken() {
@@ -133,11 +133,11 @@ public class GetChangeLogsResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The pagination token used to fetch the next set of results.
+     * The pagination token that's used to fetch the next set of results.
      * </p>
      * 
      * @param nextToken
-     *        The pagination token used to fetch the next set of results.
+     *        The pagination token that's used to fetch the next set of results.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

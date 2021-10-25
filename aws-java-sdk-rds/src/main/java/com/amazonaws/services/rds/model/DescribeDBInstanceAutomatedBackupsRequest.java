@@ -111,6 +111,9 @@ public class DescribeDBInstanceAutomatedBackupsRequest extends com.amazonaws.Ama
      * The Amazon Resource Name (ARN) of the replicated automated backups, for example,
      * <code>arn:aws:rds:us-east-1:123456789012:auto-backup:ab-L2IJCEXJP7XQ7HOJ4SIEXAMPLE</code>.
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      */
     private String dBInstanceAutomatedBackupsArn;
 
@@ -724,10 +727,15 @@ public class DescribeDBInstanceAutomatedBackupsRequest extends com.amazonaws.Ama
      * The Amazon Resource Name (ARN) of the replicated automated backups, for example,
      * <code>arn:aws:rds:us-east-1:123456789012:auto-backup:ab-L2IJCEXJP7XQ7HOJ4SIEXAMPLE</code>.
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      * 
      * @param dBInstanceAutomatedBackupsArn
      *        The Amazon Resource Name (ARN) of the replicated automated backups, for example,
-     *        <code>arn:aws:rds:us-east-1:123456789012:auto-backup:ab-L2IJCEXJP7XQ7HOJ4SIEXAMPLE</code>.
+     *        <code>arn:aws:rds:us-east-1:123456789012:auto-backup:ab-L2IJCEXJP7XQ7HOJ4SIEXAMPLE</code>.</p>
+     *        <p>
+     *        This setting doesn't apply to RDS Custom.
      */
 
     public void setDBInstanceAutomatedBackupsArn(String dBInstanceAutomatedBackupsArn) {
@@ -739,9 +747,14 @@ public class DescribeDBInstanceAutomatedBackupsRequest extends com.amazonaws.Ama
      * The Amazon Resource Name (ARN) of the replicated automated backups, for example,
      * <code>arn:aws:rds:us-east-1:123456789012:auto-backup:ab-L2IJCEXJP7XQ7HOJ4SIEXAMPLE</code>.
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      * 
      * @return The Amazon Resource Name (ARN) of the replicated automated backups, for example,
-     *         <code>arn:aws:rds:us-east-1:123456789012:auto-backup:ab-L2IJCEXJP7XQ7HOJ4SIEXAMPLE</code>.
+     *         <code>arn:aws:rds:us-east-1:123456789012:auto-backup:ab-L2IJCEXJP7XQ7HOJ4SIEXAMPLE</code>.</p>
+     *         <p>
+     *         This setting doesn't apply to RDS Custom.
      */
 
     public String getDBInstanceAutomatedBackupsArn() {
@@ -753,10 +766,15 @@ public class DescribeDBInstanceAutomatedBackupsRequest extends com.amazonaws.Ama
      * The Amazon Resource Name (ARN) of the replicated automated backups, for example,
      * <code>arn:aws:rds:us-east-1:123456789012:auto-backup:ab-L2IJCEXJP7XQ7HOJ4SIEXAMPLE</code>.
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      * 
      * @param dBInstanceAutomatedBackupsArn
      *        The Amazon Resource Name (ARN) of the replicated automated backups, for example,
-     *        <code>arn:aws:rds:us-east-1:123456789012:auto-backup:ab-L2IJCEXJP7XQ7HOJ4SIEXAMPLE</code>.
+     *        <code>arn:aws:rds:us-east-1:123456789012:auto-backup:ab-L2IJCEXJP7XQ7HOJ4SIEXAMPLE</code>.</p>
+     *        <p>
+     *        This setting doesn't apply to RDS Custom.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

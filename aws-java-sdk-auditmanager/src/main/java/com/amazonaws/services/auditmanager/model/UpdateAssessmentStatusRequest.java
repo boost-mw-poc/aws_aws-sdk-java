@@ -27,24 +27,24 @@ public class UpdateAssessmentStatusRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The identifier for the specified assessment.
+     * The identifier for the assessment.
      * </p>
      */
     private String assessmentId;
     /**
      * <p>
-     * The current status of the specified assessment.
+     * The current status of the assessment.
      * </p>
      */
     private String status;
 
     /**
      * <p>
-     * The identifier for the specified assessment.
+     * The identifier for the assessment.
      * </p>
      * 
      * @param assessmentId
-     *        The identifier for the specified assessment.
+     *        The identifier for the assessment.
      */
 
     public void setAssessmentId(String assessmentId) {
@@ -53,10 +53,10 @@ public class UpdateAssessmentStatusRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The identifier for the specified assessment.
+     * The identifier for the assessment.
      * </p>
      * 
-     * @return The identifier for the specified assessment.
+     * @return The identifier for the assessment.
      */
 
     public String getAssessmentId() {
@@ -65,11 +65,11 @@ public class UpdateAssessmentStatusRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The identifier for the specified assessment.
+     * The identifier for the assessment.
      * </p>
      * 
      * @param assessmentId
-     *        The identifier for the specified assessment.
+     *        The identifier for the assessment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -80,11 +80,11 @@ public class UpdateAssessmentStatusRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The current status of the specified assessment.
+     * The current status of the assessment.
      * </p>
      * 
      * @param status
-     *        The current status of the specified assessment.
+     *        The current status of the assessment.
      * @see AssessmentStatus
      */
 
@@ -94,10 +94,10 @@ public class UpdateAssessmentStatusRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The current status of the specified assessment.
+     * The current status of the assessment.
      * </p>
      * 
-     * @return The current status of the specified assessment.
+     * @return The current status of the assessment.
      * @see AssessmentStatus
      */
 
@@ -107,11 +107,11 @@ public class UpdateAssessmentStatusRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The current status of the specified assessment.
+     * The current status of the assessment.
      * </p>
      * 
      * @param status
-     *        The current status of the specified assessment.
+     *        The current status of the assessment.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AssessmentStatus
      */
@@ -123,11 +123,11 @@ public class UpdateAssessmentStatusRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The current status of the specified assessment.
+     * The current status of the assessment.
      * </p>
      * 
      * @param status
-     *        The current status of the specified assessment.
+     *        The current status of the assessment.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AssessmentStatus
      */

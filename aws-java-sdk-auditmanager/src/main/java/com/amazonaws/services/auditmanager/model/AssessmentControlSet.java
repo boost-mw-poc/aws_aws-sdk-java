@@ -48,31 +48,31 @@ public class AssessmentControlSet implements Serializable, Cloneable, Structured
     private String status;
     /**
      * <p>
-     * The roles associated with the control set.
+     * The roles that are associated with the control set.
      * </p>
      */
     private java.util.List<Role> roles;
     /**
      * <p>
-     * The list of controls contained with the control set.
+     * The list of controls that's contained with the control set.
      * </p>
      */
     private java.util.List<AssessmentControl> controls;
     /**
      * <p>
-     * The delegations associated with the control set.
+     * The delegations that are associated with the control set.
      * </p>
      */
     private java.util.List<Delegation> delegations;
     /**
      * <p>
-     * The total number of evidence objects retrieved automatically for the control set.
+     * The total number of evidence objects that are retrieved automatically for the control set.
      * </p>
      */
     private Integer systemEvidenceCount;
     /**
      * <p>
-     * The total number of evidence objects uploaded manually to the control set.
+     * The total number of evidence objects that are uploaded manually to the control set.
      * </p>
      */
     private Integer manualEvidenceCount;
@@ -221,10 +221,10 @@ public class AssessmentControlSet implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The roles associated with the control set.
+     * The roles that are associated with the control set.
      * </p>
      * 
-     * @return The roles associated with the control set.
+     * @return The roles that are associated with the control set.
      */
 
     public java.util.List<Role> getRoles() {
@@ -233,11 +233,11 @@ public class AssessmentControlSet implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The roles associated with the control set.
+     * The roles that are associated with the control set.
      * </p>
      * 
      * @param roles
-     *        The roles associated with the control set.
+     *        The roles that are associated with the control set.
      */
 
     public void setRoles(java.util.Collection<Role> roles) {
@@ -251,7 +251,7 @@ public class AssessmentControlSet implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The roles associated with the control set.
+     * The roles that are associated with the control set.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -260,7 +260,7 @@ public class AssessmentControlSet implements Serializable, Cloneable, Structured
      * </p>
      * 
      * @param roles
-     *        The roles associated with the control set.
+     *        The roles that are associated with the control set.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -276,11 +276,11 @@ public class AssessmentControlSet implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The roles associated with the control set.
+     * The roles that are associated with the control set.
      * </p>
      * 
      * @param roles
-     *        The roles associated with the control set.
+     *        The roles that are associated with the control set.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -291,10 +291,10 @@ public class AssessmentControlSet implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The list of controls contained with the control set.
+     * The list of controls that's contained with the control set.
      * </p>
      * 
-     * @return The list of controls contained with the control set.
+     * @return The list of controls that's contained with the control set.
      */
 
     public java.util.List<AssessmentControl> getControls() {
@@ -303,11 +303,11 @@ public class AssessmentControlSet implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The list of controls contained with the control set.
+     * The list of controls that's contained with the control set.
      * </p>
      * 
      * @param controls
-     *        The list of controls contained with the control set.
+     *        The list of controls that's contained with the control set.
      */
 
     public void setControls(java.util.Collection<AssessmentControl> controls) {
@@ -321,7 +321,7 @@ public class AssessmentControlSet implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The list of controls contained with the control set.
+     * The list of controls that's contained with the control set.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -330,7 +330,7 @@ public class AssessmentControlSet implements Serializable, Cloneable, Structured
      * </p>
      * 
      * @param controls
-     *        The list of controls contained with the control set.
+     *        The list of controls that's contained with the control set.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -346,11 +346,11 @@ public class AssessmentControlSet implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The list of controls contained with the control set.
+     * The list of controls that's contained with the control set.
      * </p>
      * 
      * @param controls
-     *        The list of controls contained with the control set.
+     *        The list of controls that's contained with the control set.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -361,10 +361,10 @@ public class AssessmentControlSet implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The delegations associated with the control set.
+     * The delegations that are associated with the control set.
      * </p>
      * 
-     * @return The delegations associated with the control set.
+     * @return The delegations that are associated with the control set.
      */
 
     public java.util.List<Delegation> getDelegations() {
@@ -373,11 +373,11 @@ public class AssessmentControlSet implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The delegations associated with the control set.
+     * The delegations that are associated with the control set.
      * </p>
      * 
      * @param delegations
-     *        The delegations associated with the control set.
+     *        The delegations that are associated with the control set.
      */
 
     public void setDelegations(java.util.Collection<Delegation> delegations) {
@@ -391,7 +391,7 @@ public class AssessmentControlSet implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The delegations associated with the control set.
+     * The delegations that are associated with the control set.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -400,7 +400,7 @@ public class AssessmentControlSet implements Serializable, Cloneable, Structured
      * </p>
      * 
      * @param delegations
-     *        The delegations associated with the control set.
+     *        The delegations that are associated with the control set.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -416,11 +416,11 @@ public class AssessmentControlSet implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The delegations associated with the control set.
+     * The delegations that are associated with the control set.
      * </p>
      * 
      * @param delegations
-     *        The delegations associated with the control set.
+     *        The delegations that are associated with the control set.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -431,11 +431,11 @@ public class AssessmentControlSet implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The total number of evidence objects retrieved automatically for the control set.
+     * The total number of evidence objects that are retrieved automatically for the control set.
      * </p>
      * 
      * @param systemEvidenceCount
-     *        The total number of evidence objects retrieved automatically for the control set.
+     *        The total number of evidence objects that are retrieved automatically for the control set.
      */
 
     public void setSystemEvidenceCount(Integer systemEvidenceCount) {
@@ -444,10 +444,10 @@ public class AssessmentControlSet implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The total number of evidence objects retrieved automatically for the control set.
+     * The total number of evidence objects that are retrieved automatically for the control set.
      * </p>
      * 
-     * @return The total number of evidence objects retrieved automatically for the control set.
+     * @return The total number of evidence objects that are retrieved automatically for the control set.
      */
 
     public Integer getSystemEvidenceCount() {
@@ -456,11 +456,11 @@ public class AssessmentControlSet implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The total number of evidence objects retrieved automatically for the control set.
+     * The total number of evidence objects that are retrieved automatically for the control set.
      * </p>
      * 
      * @param systemEvidenceCount
-     *        The total number of evidence objects retrieved automatically for the control set.
+     *        The total number of evidence objects that are retrieved automatically for the control set.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -471,11 +471,11 @@ public class AssessmentControlSet implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The total number of evidence objects uploaded manually to the control set.
+     * The total number of evidence objects that are uploaded manually to the control set.
      * </p>
      * 
      * @param manualEvidenceCount
-     *        The total number of evidence objects uploaded manually to the control set.
+     *        The total number of evidence objects that are uploaded manually to the control set.
      */
 
     public void setManualEvidenceCount(Integer manualEvidenceCount) {
@@ -484,10 +484,10 @@ public class AssessmentControlSet implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The total number of evidence objects uploaded manually to the control set.
+     * The total number of evidence objects that are uploaded manually to the control set.
      * </p>
      * 
-     * @return The total number of evidence objects uploaded manually to the control set.
+     * @return The total number of evidence objects that are uploaded manually to the control set.
      */
 
     public Integer getManualEvidenceCount() {
@@ -496,11 +496,11 @@ public class AssessmentControlSet implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The total number of evidence objects uploaded manually to the control set.
+     * The total number of evidence objects that are uploaded manually to the control set.
      * </p>
      * 
      * @param manualEvidenceCount
-     *        The total number of evidence objects uploaded manually to the control set.
+     *        The total number of evidence objects that are uploaded manually to the control set.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

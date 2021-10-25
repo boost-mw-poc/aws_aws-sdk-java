@@ -126,6 +126,9 @@ public class DescribeOrderableDBInstanceOptionsRequest extends com.amazonaws.Ama
      * The license model filter value. Specify this parameter to show only the available offerings matching the
      * specified license model.
      * </p>
+     * <p>
+     * RDS Custom supports only the BYOL licensing model.
+     * </p>
      */
     private String licenseModel;
     /**
@@ -136,11 +139,18 @@ public class DescribeOrderableDBInstanceOptionsRequest extends com.amazonaws.Ama
      * <p>
      * Omit this parameter to show the available offerings in the specified Amazon Web Services Region.
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      */
     private String availabilityZoneGroup;
     /**
      * <p>
-     * A value that indicates whether to show only VPC or non-VPC offerings.
+     * A value that indicates whether to show only VPC or non-VPC offerings. RDS Custom supports only VPC offerings.
+     * </p>
+     * <p>
+     * RDS Custom supports only VPC offerings. If you describe non-VPC offerings for RDS Custom, the output shows VPC
+     * offerings.
      * </p>
      */
     private Boolean vpc;
@@ -757,10 +767,15 @@ public class DescribeOrderableDBInstanceOptionsRequest extends com.amazonaws.Ama
      * The license model filter value. Specify this parameter to show only the available offerings matching the
      * specified license model.
      * </p>
+     * <p>
+     * RDS Custom supports only the BYOL licensing model.
+     * </p>
      * 
      * @param licenseModel
      *        The license model filter value. Specify this parameter to show only the available offerings matching the
-     *        specified license model.
+     *        specified license model.</p>
+     *        <p>
+     *        RDS Custom supports only the BYOL licensing model.
      */
 
     public void setLicenseModel(String licenseModel) {
@@ -772,9 +787,14 @@ public class DescribeOrderableDBInstanceOptionsRequest extends com.amazonaws.Ama
      * The license model filter value. Specify this parameter to show only the available offerings matching the
      * specified license model.
      * </p>
+     * <p>
+     * RDS Custom supports only the BYOL licensing model.
+     * </p>
      * 
      * @return The license model filter value. Specify this parameter to show only the available offerings matching the
-     *         specified license model.
+     *         specified license model.</p>
+     *         <p>
+     *         RDS Custom supports only the BYOL licensing model.
      */
 
     public String getLicenseModel() {
@@ -786,10 +806,15 @@ public class DescribeOrderableDBInstanceOptionsRequest extends com.amazonaws.Ama
      * The license model filter value. Specify this parameter to show only the available offerings matching the
      * specified license model.
      * </p>
+     * <p>
+     * RDS Custom supports only the BYOL licensing model.
+     * </p>
      * 
      * @param licenseModel
      *        The license model filter value. Specify this parameter to show only the available offerings matching the
-     *        specified license model.
+     *        specified license model.</p>
+     *        <p>
+     *        RDS Custom supports only the BYOL licensing model.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -806,12 +831,18 @@ public class DescribeOrderableDBInstanceOptionsRequest extends com.amazonaws.Ama
      * <p>
      * Omit this parameter to show the available offerings in the specified Amazon Web Services Region.
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      * 
      * @param availabilityZoneGroup
      *        The Availability Zone group associated with a Local Zone. Specify this parameter to retrieve available
      *        offerings for the Local Zones in the group.</p>
      *        <p>
      *        Omit this parameter to show the available offerings in the specified Amazon Web Services Region.
+     *        </p>
+     *        <p>
+     *        This setting doesn't apply to RDS Custom.
      */
 
     public void setAvailabilityZoneGroup(String availabilityZoneGroup) {
@@ -826,11 +857,17 @@ public class DescribeOrderableDBInstanceOptionsRequest extends com.amazonaws.Ama
      * <p>
      * Omit this parameter to show the available offerings in the specified Amazon Web Services Region.
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      * 
      * @return The Availability Zone group associated with a Local Zone. Specify this parameter to retrieve available
      *         offerings for the Local Zones in the group.</p>
      *         <p>
      *         Omit this parameter to show the available offerings in the specified Amazon Web Services Region.
+     *         </p>
+     *         <p>
+     *         This setting doesn't apply to RDS Custom.
      */
 
     public String getAvailabilityZoneGroup() {
@@ -845,12 +882,18 @@ public class DescribeOrderableDBInstanceOptionsRequest extends com.amazonaws.Ama
      * <p>
      * Omit this parameter to show the available offerings in the specified Amazon Web Services Region.
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      * 
      * @param availabilityZoneGroup
      *        The Availability Zone group associated with a Local Zone. Specify this parameter to retrieve available
      *        offerings for the Local Zones in the group.</p>
      *        <p>
      *        Omit this parameter to show the available offerings in the specified Amazon Web Services Region.
+     *        </p>
+     *        <p>
+     *        This setting doesn't apply to RDS Custom.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -861,11 +904,19 @@ public class DescribeOrderableDBInstanceOptionsRequest extends com.amazonaws.Ama
 
     /**
      * <p>
-     * A value that indicates whether to show only VPC or non-VPC offerings.
+     * A value that indicates whether to show only VPC or non-VPC offerings. RDS Custom supports only VPC offerings.
+     * </p>
+     * <p>
+     * RDS Custom supports only VPC offerings. If you describe non-VPC offerings for RDS Custom, the output shows VPC
+     * offerings.
      * </p>
      * 
      * @param vpc
-     *        A value that indicates whether to show only VPC or non-VPC offerings.
+     *        A value that indicates whether to show only VPC or non-VPC offerings. RDS Custom supports only VPC
+     *        offerings.</p>
+     *        <p>
+     *        RDS Custom supports only VPC offerings. If you describe non-VPC offerings for RDS Custom, the output shows
+     *        VPC offerings.
      */
 
     public void setVpc(Boolean vpc) {
@@ -874,10 +925,18 @@ public class DescribeOrderableDBInstanceOptionsRequest extends com.amazonaws.Ama
 
     /**
      * <p>
-     * A value that indicates whether to show only VPC or non-VPC offerings.
+     * A value that indicates whether to show only VPC or non-VPC offerings. RDS Custom supports only VPC offerings.
+     * </p>
+     * <p>
+     * RDS Custom supports only VPC offerings. If you describe non-VPC offerings for RDS Custom, the output shows VPC
+     * offerings.
      * </p>
      * 
-     * @return A value that indicates whether to show only VPC or non-VPC offerings.
+     * @return A value that indicates whether to show only VPC or non-VPC offerings. RDS Custom supports only VPC
+     *         offerings.</p>
+     *         <p>
+     *         RDS Custom supports only VPC offerings. If you describe non-VPC offerings for RDS Custom, the output
+     *         shows VPC offerings.
      */
 
     public Boolean getVpc() {
@@ -886,11 +945,19 @@ public class DescribeOrderableDBInstanceOptionsRequest extends com.amazonaws.Ama
 
     /**
      * <p>
-     * A value that indicates whether to show only VPC or non-VPC offerings.
+     * A value that indicates whether to show only VPC or non-VPC offerings. RDS Custom supports only VPC offerings.
+     * </p>
+     * <p>
+     * RDS Custom supports only VPC offerings. If you describe non-VPC offerings for RDS Custom, the output shows VPC
+     * offerings.
      * </p>
      * 
      * @param vpc
-     *        A value that indicates whether to show only VPC or non-VPC offerings.
+     *        A value that indicates whether to show only VPC or non-VPC offerings. RDS Custom supports only VPC
+     *        offerings.</p>
+     *        <p>
+     *        RDS Custom supports only VPC offerings. If you describe non-VPC offerings for RDS Custom, the output shows
+     *        VPC offerings.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -901,10 +968,18 @@ public class DescribeOrderableDBInstanceOptionsRequest extends com.amazonaws.Ama
 
     /**
      * <p>
-     * A value that indicates whether to show only VPC or non-VPC offerings.
+     * A value that indicates whether to show only VPC or non-VPC offerings. RDS Custom supports only VPC offerings.
+     * </p>
+     * <p>
+     * RDS Custom supports only VPC offerings. If you describe non-VPC offerings for RDS Custom, the output shows VPC
+     * offerings.
      * </p>
      * 
-     * @return A value that indicates whether to show only VPC or non-VPC offerings.
+     * @return A value that indicates whether to show only VPC or non-VPC offerings. RDS Custom supports only VPC
+     *         offerings.</p>
+     *         <p>
+     *         RDS Custom supports only VPC offerings. If you describe non-VPC offerings for RDS Custom, the output
+     *         shows VPC offerings.
      */
 
     public Boolean isVpc() {

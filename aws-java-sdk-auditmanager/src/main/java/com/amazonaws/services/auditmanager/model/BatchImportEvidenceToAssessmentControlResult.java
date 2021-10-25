@@ -26,17 +26,17 @@ public class BatchImportEvidenceToAssessmentControlResult extends com.amazonaws.
 
     /**
      * <p>
-     * A list of errors returned by the <code>BatchImportEvidenceToAssessmentControl</code> API.
+     * A list of errors that the <code>BatchImportEvidenceToAssessmentControl</code> API returned.
      * </p>
      */
     private java.util.List<BatchImportEvidenceToAssessmentControlError> errors;
 
     /**
      * <p>
-     * A list of errors returned by the <code>BatchImportEvidenceToAssessmentControl</code> API.
+     * A list of errors that the <code>BatchImportEvidenceToAssessmentControl</code> API returned.
      * </p>
      * 
-     * @return A list of errors returned by the <code>BatchImportEvidenceToAssessmentControl</code> API.
+     * @return A list of errors that the <code>BatchImportEvidenceToAssessmentControl</code> API returned.
      */
 
     public java.util.List<BatchImportEvidenceToAssessmentControlError> getErrors() {
@@ -45,11 +45,11 @@ public class BatchImportEvidenceToAssessmentControlResult extends com.amazonaws.
 
     /**
      * <p>
-     * A list of errors returned by the <code>BatchImportEvidenceToAssessmentControl</code> API.
+     * A list of errors that the <code>BatchImportEvidenceToAssessmentControl</code> API returned.
      * </p>
      * 
      * @param errors
-     *        A list of errors returned by the <code>BatchImportEvidenceToAssessmentControl</code> API.
+     *        A list of errors that the <code>BatchImportEvidenceToAssessmentControl</code> API returned.
      */
 
     public void setErrors(java.util.Collection<BatchImportEvidenceToAssessmentControlError> errors) {
@@ -63,7 +63,7 @@ public class BatchImportEvidenceToAssessmentControlResult extends com.amazonaws.
 
     /**
      * <p>
-     * A list of errors returned by the <code>BatchImportEvidenceToAssessmentControl</code> API.
+     * A list of errors that the <code>BatchImportEvidenceToAssessmentControl</code> API returned.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -72,7 +72,7 @@ public class BatchImportEvidenceToAssessmentControlResult extends com.amazonaws.
      * </p>
      * 
      * @param errors
-     *        A list of errors returned by the <code>BatchImportEvidenceToAssessmentControl</code> API.
+     *        A list of errors that the <code>BatchImportEvidenceToAssessmentControl</code> API returned.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -88,11 +88,11 @@ public class BatchImportEvidenceToAssessmentControlResult extends com.amazonaws.
 
     /**
      * <p>
-     * A list of errors returned by the <code>BatchImportEvidenceToAssessmentControl</code> API.
+     * A list of errors that the <code>BatchImportEvidenceToAssessmentControl</code> API returned.
      * </p>
      * 
      * @param errors
-     *        A list of errors returned by the <code>BatchImportEvidenceToAssessmentControl</code> API.
+     *        A list of errors that the <code>BatchImportEvidenceToAssessmentControl</code> API returned.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

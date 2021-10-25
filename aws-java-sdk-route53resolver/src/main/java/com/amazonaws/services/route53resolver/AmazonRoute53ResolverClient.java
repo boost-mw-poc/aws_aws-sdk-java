@@ -2036,6 +2036,73 @@ public class AmazonRoute53ResolverClient extends AmazonWebServiceClient implemen
 
     /**
      * <p>
+     * Retrieves the behavior configuration of Route 53 Resolver behavior for a single VPC from Amazon Virtual Private
+     * Cloud.
+     * </p>
+     * 
+     * @param getResolverConfigRequest
+     * @return Result of the GetResolverConfig operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The specified resource doesn't exist.
+     * @throws InvalidParameterException
+     *         One or more parameters in this request are not valid.
+     * @throws InternalServiceErrorException
+     *         We encountered an unknown error. Try again in a few minutes.
+     * @throws ThrottlingException
+     *         The request was throttled. Try again in a few minutes.
+     * @throws AccessDeniedException
+     *         The current account doesn't have the IAM permissions required to perform the specified Resolver
+     *         operation.
+     * @sample AmazonRoute53Resolver.GetResolverConfig
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/route53resolver-2018-04-01/GetResolverConfig"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetResolverConfigResult getResolverConfig(GetResolverConfigRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetResolverConfig(request);
+    }
+
+    @SdkInternalApi
+    final GetResolverConfigResult executeGetResolverConfig(GetResolverConfigRequest getResolverConfigRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getResolverConfigRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetResolverConfigRequest> request = null;
+        Response<GetResolverConfigResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetResolverConfigRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getResolverConfigRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Route53Resolver");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetResolverConfig");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetResolverConfigResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetResolverConfigResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Gets DNSSEC validation information for a specified resource.
      * </p>
      * 
@@ -3072,6 +3139,75 @@ public class AmazonRoute53ResolverClient extends AmazonWebServiceClient implemen
 
             HttpResponseHandler<AmazonWebServiceResponse<ListFirewallRulesResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListFirewallRulesResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Retrieves the Resolver configurations that you have defined. Route 53 Resolver uses the configurations to manage
+     * DNS resolution behavior for your VPCs.
+     * </p>
+     * 
+     * @param listResolverConfigsRequest
+     * @return Result of the ListResolverConfigs operation returned by the service.
+     * @throws InvalidNextTokenException
+     *         The value that you specified for <code>NextToken</code> in a <code>List</code> request isn't valid.
+     * @throws InvalidRequestException
+     *         The request is invalid.
+     * @throws InvalidParameterException
+     *         One or more parameters in this request are not valid.
+     * @throws InternalServiceErrorException
+     *         We encountered an unknown error. Try again in a few minutes.
+     * @throws ThrottlingException
+     *         The request was throttled. Try again in a few minutes.
+     * @throws AccessDeniedException
+     *         The current account doesn't have the IAM permissions required to perform the specified Resolver
+     *         operation.
+     * @sample AmazonRoute53Resolver.ListResolverConfigs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/route53resolver-2018-04-01/ListResolverConfigs"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListResolverConfigsResult listResolverConfigs(ListResolverConfigsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListResolverConfigs(request);
+    }
+
+    @SdkInternalApi
+    final ListResolverConfigsResult executeListResolverConfigs(ListResolverConfigsRequest listResolverConfigsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listResolverConfigsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListResolverConfigsRequest> request = null;
+        Response<ListResolverConfigsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListResolverConfigsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listResolverConfigsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Route53Resolver");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListResolverConfigs");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListResolverConfigsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListResolverConfigsResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -4231,6 +4367,79 @@ public class AmazonRoute53ResolverClient extends AmazonWebServiceClient implemen
             HttpResponseHandler<AmazonWebServiceResponse<UpdateFirewallRuleGroupAssociationResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new UpdateFirewallRuleGroupAssociationResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Updates the behavior configuration of Route 53 Resolver behavior for a single VPC from Amazon Virtual Private
+     * Cloud.
+     * </p>
+     * 
+     * @param updateResolverConfigRequest
+     * @return Result of the UpdateResolverConfig operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is invalid.
+     * @throws InvalidParameterException
+     *         One or more parameters in this request are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource doesn't exist.
+     * @throws ResourceUnavailableException
+     *         The specified resource isn't available.
+     * @throws LimitExceededException
+     *         The request caused one or more limits to be exceeded.
+     * @throws InternalServiceErrorException
+     *         We encountered an unknown error. Try again in a few minutes.
+     * @throws ThrottlingException
+     *         The request was throttled. Try again in a few minutes.
+     * @throws AccessDeniedException
+     *         The current account doesn't have the IAM permissions required to perform the specified Resolver
+     *         operation.
+     * @sample AmazonRoute53Resolver.UpdateResolverConfig
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/route53resolver-2018-04-01/UpdateResolverConfig"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public UpdateResolverConfigResult updateResolverConfig(UpdateResolverConfigRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateResolverConfig(request);
+    }
+
+    @SdkInternalApi
+    final UpdateResolverConfigResult executeUpdateResolverConfig(UpdateResolverConfigRequest updateResolverConfigRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateResolverConfigRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateResolverConfigRequest> request = null;
+        Response<UpdateResolverConfigResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateResolverConfigRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(updateResolverConfigRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Route53Resolver");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateResolverConfig");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateResolverConfigResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UpdateResolverConfigResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

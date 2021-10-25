@@ -27,18 +27,18 @@ public class DeregisterOrganizationAdminAccountRequest extends com.amazonaws.Ama
 
     /**
      * <p>
-     * The identifier for the specified administrator account.
+     * The identifier for the administrator account.
      * </p>
      */
     private String adminAccountId;
 
     /**
      * <p>
-     * The identifier for the specified administrator account.
+     * The identifier for the administrator account.
      * </p>
      * 
      * @param adminAccountId
-     *        The identifier for the specified administrator account.
+     *        The identifier for the administrator account.
      */
 
     public void setAdminAccountId(String adminAccountId) {
@@ -47,10 +47,10 @@ public class DeregisterOrganizationAdminAccountRequest extends com.amazonaws.Ama
 
     /**
      * <p>
-     * The identifier for the specified administrator account.
+     * The identifier for the administrator account.
      * </p>
      * 
-     * @return The identifier for the specified administrator account.
+     * @return The identifier for the administrator account.
      */
 
     public String getAdminAccountId() {
@@ -59,11 +59,11 @@ public class DeregisterOrganizationAdminAccountRequest extends com.amazonaws.Ama
 
     /**
      * <p>
-     * The identifier for the specified administrator account.
+     * The identifier for the administrator account.
      * </p>
      * 
      * @param adminAccountId
-     *        The identifier for the specified administrator account.
+     *        The identifier for the administrator account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

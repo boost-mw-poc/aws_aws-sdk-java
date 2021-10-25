@@ -25,17 +25,17 @@ public class ListTagsForResourceResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The list of tags returned by the <code>ListTagsForResource</code> API.
+     * The list of tags that the <code>ListTagsForResource</code> API returned.
      * </p>
      */
     private java.util.Map<String, String> tags;
 
     /**
      * <p>
-     * The list of tags returned by the <code>ListTagsForResource</code> API.
+     * The list of tags that the <code>ListTagsForResource</code> API returned.
      * </p>
      * 
-     * @return The list of tags returned by the <code>ListTagsForResource</code> API.
+     * @return The list of tags that the <code>ListTagsForResource</code> API returned.
      */
 
     public java.util.Map<String, String> getTags() {
@@ -44,11 +44,11 @@ public class ListTagsForResourceResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The list of tags returned by the <code>ListTagsForResource</code> API.
+     * The list of tags that the <code>ListTagsForResource</code> API returned.
      * </p>
      * 
      * @param tags
-     *        The list of tags returned by the <code>ListTagsForResource</code> API.
+     *        The list of tags that the <code>ListTagsForResource</code> API returned.
      */
 
     public void setTags(java.util.Map<String, String> tags) {
@@ -57,11 +57,11 @@ public class ListTagsForResourceResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * The list of tags returned by the <code>ListTagsForResource</code> API.
+     * The list of tags that the <code>ListTagsForResource</code> API returned.
      * </p>
      * 
      * @param tags
-     *        The list of tags returned by the <code>ListTagsForResource</code> API.
+     *        The list of tags that the <code>ListTagsForResource</code> API returned.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

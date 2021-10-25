@@ -32,7 +32,7 @@ public class ValidateAssessmentReportIntegrityResult extends com.amazonaws.Amazo
     private Boolean signatureValid;
     /**
      * <p>
-     * The signature algorithm used to code sign the assessment report file.
+     * The signature algorithm that's used to code sign the assessment report file.
      * </p>
      */
     private String signatureAlgorithm;
@@ -109,11 +109,11 @@ public class ValidateAssessmentReportIntegrityResult extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The signature algorithm used to code sign the assessment report file.
+     * The signature algorithm that's used to code sign the assessment report file.
      * </p>
      * 
      * @param signatureAlgorithm
-     *        The signature algorithm used to code sign the assessment report file.
+     *        The signature algorithm that's used to code sign the assessment report file.
      */
 
     public void setSignatureAlgorithm(String signatureAlgorithm) {
@@ -122,10 +122,10 @@ public class ValidateAssessmentReportIntegrityResult extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The signature algorithm used to code sign the assessment report file.
+     * The signature algorithm that's used to code sign the assessment report file.
      * </p>
      * 
-     * @return The signature algorithm used to code sign the assessment report file.
+     * @return The signature algorithm that's used to code sign the assessment report file.
      */
 
     public String getSignatureAlgorithm() {
@@ -134,11 +134,11 @@ public class ValidateAssessmentReportIntegrityResult extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The signature algorithm used to code sign the assessment report file.
+     * The signature algorithm that's used to code sign the assessment report file.
      * </p>
      * 
      * @param signatureAlgorithm
-     *        The signature algorithm used to code sign the assessment report file.
+     *        The signature algorithm that's used to code sign the assessment report file.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

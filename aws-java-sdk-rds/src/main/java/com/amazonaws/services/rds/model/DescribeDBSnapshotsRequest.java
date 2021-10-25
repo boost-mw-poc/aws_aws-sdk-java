@@ -187,6 +187,9 @@ public class DescribeDBSnapshotsRequest extends com.amazonaws.AmazonWebServiceRe
      * You can give an Amazon Web Services account permission to restore a manual DB snapshot from another Amazon Web
      * Services account by using the <code>ModifyDBSnapshotAttribute</code> API action.
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      */
     private Boolean includeShared;
     /**
@@ -196,6 +199,9 @@ public class DescribeDBSnapshotsRequest extends com.amazonaws.AmazonWebServiceRe
      * </p>
      * <p>
      * You can share a manual DB snapshot as public by using the <a>ModifyDBSnapshotAttribute</a> API.
+     * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
      * </p>
      */
     private Boolean includePublic;
@@ -1236,6 +1242,9 @@ public class DescribeDBSnapshotsRequest extends com.amazonaws.AmazonWebServiceRe
      * You can give an Amazon Web Services account permission to restore a manual DB snapshot from another Amazon Web
      * Services account by using the <code>ModifyDBSnapshotAttribute</code> API action.
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      * 
      * @param includeShared
      *        A value that indicates whether to include shared manual DB cluster snapshots from other Amazon Web
@@ -1244,6 +1253,9 @@ public class DescribeDBSnapshotsRequest extends com.amazonaws.AmazonWebServiceRe
      *        <p>
      *        You can give an Amazon Web Services account permission to restore a manual DB snapshot from another Amazon
      *        Web Services account by using the <code>ModifyDBSnapshotAttribute</code> API action.
+     *        </p>
+     *        <p>
+     *        This setting doesn't apply to RDS Custom.
      */
 
     public void setIncludeShared(Boolean includeShared) {
@@ -1260,6 +1272,9 @@ public class DescribeDBSnapshotsRequest extends com.amazonaws.AmazonWebServiceRe
      * You can give an Amazon Web Services account permission to restore a manual DB snapshot from another Amazon Web
      * Services account by using the <code>ModifyDBSnapshotAttribute</code> API action.
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      * 
      * @return A value that indicates whether to include shared manual DB cluster snapshots from other Amazon Web
      *         Services accounts that this Amazon Web Services account has been given permission to copy or restore. By
@@ -1267,6 +1282,9 @@ public class DescribeDBSnapshotsRequest extends com.amazonaws.AmazonWebServiceRe
      *         <p>
      *         You can give an Amazon Web Services account permission to restore a manual DB snapshot from another
      *         Amazon Web Services account by using the <code>ModifyDBSnapshotAttribute</code> API action.
+     *         </p>
+     *         <p>
+     *         This setting doesn't apply to RDS Custom.
      */
 
     public Boolean getIncludeShared() {
@@ -1283,6 +1301,9 @@ public class DescribeDBSnapshotsRequest extends com.amazonaws.AmazonWebServiceRe
      * You can give an Amazon Web Services account permission to restore a manual DB snapshot from another Amazon Web
      * Services account by using the <code>ModifyDBSnapshotAttribute</code> API action.
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      * 
      * @param includeShared
      *        A value that indicates whether to include shared manual DB cluster snapshots from other Amazon Web
@@ -1291,6 +1312,9 @@ public class DescribeDBSnapshotsRequest extends com.amazonaws.AmazonWebServiceRe
      *        <p>
      *        You can give an Amazon Web Services account permission to restore a manual DB snapshot from another Amazon
      *        Web Services account by using the <code>ModifyDBSnapshotAttribute</code> API action.
+     *        </p>
+     *        <p>
+     *        This setting doesn't apply to RDS Custom.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1309,6 +1333,9 @@ public class DescribeDBSnapshotsRequest extends com.amazonaws.AmazonWebServiceRe
      * You can give an Amazon Web Services account permission to restore a manual DB snapshot from another Amazon Web
      * Services account by using the <code>ModifyDBSnapshotAttribute</code> API action.
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      * 
      * @return A value that indicates whether to include shared manual DB cluster snapshots from other Amazon Web
      *         Services accounts that this Amazon Web Services account has been given permission to copy or restore. By
@@ -1316,6 +1343,9 @@ public class DescribeDBSnapshotsRequest extends com.amazonaws.AmazonWebServiceRe
      *         <p>
      *         You can give an Amazon Web Services account permission to restore a manual DB snapshot from another
      *         Amazon Web Services account by using the <code>ModifyDBSnapshotAttribute</code> API action.
+     *         </p>
+     *         <p>
+     *         This setting doesn't apply to RDS Custom.
      */
 
     public Boolean isIncludeShared() {
@@ -1330,12 +1360,18 @@ public class DescribeDBSnapshotsRequest extends com.amazonaws.AmazonWebServiceRe
      * <p>
      * You can share a manual DB snapshot as public by using the <a>ModifyDBSnapshotAttribute</a> API.
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      * 
      * @param includePublic
      *        A value that indicates whether to include manual DB cluster snapshots that are public and can be copied or
      *        restored by any Amazon Web Services account. By default, the public snapshots are not included.</p>
      *        <p>
      *        You can share a manual DB snapshot as public by using the <a>ModifyDBSnapshotAttribute</a> API.
+     *        </p>
+     *        <p>
+     *        This setting doesn't apply to RDS Custom.
      */
 
     public void setIncludePublic(Boolean includePublic) {
@@ -1350,11 +1386,17 @@ public class DescribeDBSnapshotsRequest extends com.amazonaws.AmazonWebServiceRe
      * <p>
      * You can share a manual DB snapshot as public by using the <a>ModifyDBSnapshotAttribute</a> API.
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      * 
      * @return A value that indicates whether to include manual DB cluster snapshots that are public and can be copied
      *         or restored by any Amazon Web Services account. By default, the public snapshots are not included.</p>
      *         <p>
      *         You can share a manual DB snapshot as public by using the <a>ModifyDBSnapshotAttribute</a> API.
+     *         </p>
+     *         <p>
+     *         This setting doesn't apply to RDS Custom.
      */
 
     public Boolean getIncludePublic() {
@@ -1369,12 +1411,18 @@ public class DescribeDBSnapshotsRequest extends com.amazonaws.AmazonWebServiceRe
      * <p>
      * You can share a manual DB snapshot as public by using the <a>ModifyDBSnapshotAttribute</a> API.
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      * 
      * @param includePublic
      *        A value that indicates whether to include manual DB cluster snapshots that are public and can be copied or
      *        restored by any Amazon Web Services account. By default, the public snapshots are not included.</p>
      *        <p>
      *        You can share a manual DB snapshot as public by using the <a>ModifyDBSnapshotAttribute</a> API.
+     *        </p>
+     *        <p>
+     *        This setting doesn't apply to RDS Custom.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1391,11 +1439,17 @@ public class DescribeDBSnapshotsRequest extends com.amazonaws.AmazonWebServiceRe
      * <p>
      * You can share a manual DB snapshot as public by using the <a>ModifyDBSnapshotAttribute</a> API.
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      * 
      * @return A value that indicates whether to include manual DB cluster snapshots that are public and can be copied
      *         or restored by any Amazon Web Services account. By default, the public snapshots are not included.</p>
      *         <p>
      *         You can share a manual DB snapshot as public by using the <a>ModifyDBSnapshotAttribute</a> API.
+     *         </p>
+     *         <p>
+     *         This setting doesn't apply to RDS Custom.
      */
 
     public Boolean isIncludePublic() {

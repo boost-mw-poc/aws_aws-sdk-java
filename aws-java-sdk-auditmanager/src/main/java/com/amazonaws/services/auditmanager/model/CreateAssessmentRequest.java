@@ -39,7 +39,7 @@ public class CreateAssessmentRequest extends com.amazonaws.AmazonWebServiceReque
     private String description;
     /**
      * <p>
-     * The assessment report storage destination for the specified assessment that is being created.
+     * The assessment report storage destination for the assessment that's being created.
      * </p>
      */
     private AssessmentReportsDestination assessmentReportsDestination;
@@ -47,19 +47,19 @@ public class CreateAssessmentRequest extends com.amazonaws.AmazonWebServiceReque
     private Scope scope;
     /**
      * <p>
-     * The list of roles for the specified assessment.
+     * The list of roles for the assessment.
      * </p>
      */
     private java.util.List<Role> roles;
     /**
      * <p>
-     * The identifier for the specified framework.
+     * The identifier for the framework that the assessment will be created from.
      * </p>
      */
     private String frameworkId;
     /**
      * <p>
-     * The tags associated with the assessment.
+     * The tags that are associated with the assessment.
      * </p>
      */
     private java.util.Map<String, String> tags;
@@ -146,11 +146,11 @@ public class CreateAssessmentRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The assessment report storage destination for the specified assessment that is being created.
+     * The assessment report storage destination for the assessment that's being created.
      * </p>
      * 
      * @param assessmentReportsDestination
-     *        The assessment report storage destination for the specified assessment that is being created.
+     *        The assessment report storage destination for the assessment that's being created.
      */
 
     public void setAssessmentReportsDestination(AssessmentReportsDestination assessmentReportsDestination) {
@@ -159,10 +159,10 @@ public class CreateAssessmentRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The assessment report storage destination for the specified assessment that is being created.
+     * The assessment report storage destination for the assessment that's being created.
      * </p>
      * 
-     * @return The assessment report storage destination for the specified assessment that is being created.
+     * @return The assessment report storage destination for the assessment that's being created.
      */
 
     public AssessmentReportsDestination getAssessmentReportsDestination() {
@@ -171,11 +171,11 @@ public class CreateAssessmentRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The assessment report storage destination for the specified assessment that is being created.
+     * The assessment report storage destination for the assessment that's being created.
      * </p>
      * 
      * @param assessmentReportsDestination
-     *        The assessment report storage destination for the specified assessment that is being created.
+     *        The assessment report storage destination for the assessment that's being created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -212,10 +212,10 @@ public class CreateAssessmentRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The list of roles for the specified assessment.
+     * The list of roles for the assessment.
      * </p>
      * 
-     * @return The list of roles for the specified assessment.
+     * @return The list of roles for the assessment.
      */
 
     public java.util.List<Role> getRoles() {
@@ -224,11 +224,11 @@ public class CreateAssessmentRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The list of roles for the specified assessment.
+     * The list of roles for the assessment.
      * </p>
      * 
      * @param roles
-     *        The list of roles for the specified assessment.
+     *        The list of roles for the assessment.
      */
 
     public void setRoles(java.util.Collection<Role> roles) {
@@ -242,7 +242,7 @@ public class CreateAssessmentRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The list of roles for the specified assessment.
+     * The list of roles for the assessment.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -251,7 +251,7 @@ public class CreateAssessmentRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * 
      * @param roles
-     *        The list of roles for the specified assessment.
+     *        The list of roles for the assessment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -267,11 +267,11 @@ public class CreateAssessmentRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The list of roles for the specified assessment.
+     * The list of roles for the assessment.
      * </p>
      * 
      * @param roles
-     *        The list of roles for the specified assessment.
+     *        The list of roles for the assessment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -282,11 +282,11 @@ public class CreateAssessmentRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The identifier for the specified framework.
+     * The identifier for the framework that the assessment will be created from.
      * </p>
      * 
      * @param frameworkId
-     *        The identifier for the specified framework.
+     *        The identifier for the framework that the assessment will be created from.
      */
 
     public void setFrameworkId(String frameworkId) {
@@ -295,10 +295,10 @@ public class CreateAssessmentRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The identifier for the specified framework.
+     * The identifier for the framework that the assessment will be created from.
      * </p>
      * 
-     * @return The identifier for the specified framework.
+     * @return The identifier for the framework that the assessment will be created from.
      */
 
     public String getFrameworkId() {
@@ -307,11 +307,11 @@ public class CreateAssessmentRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The identifier for the specified framework.
+     * The identifier for the framework that the assessment will be created from.
      * </p>
      * 
      * @param frameworkId
-     *        The identifier for the specified framework.
+     *        The identifier for the framework that the assessment will be created from.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -322,10 +322,10 @@ public class CreateAssessmentRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The tags associated with the assessment.
+     * The tags that are associated with the assessment.
      * </p>
      * 
-     * @return The tags associated with the assessment.
+     * @return The tags that are associated with the assessment.
      */
 
     public java.util.Map<String, String> getTags() {
@@ -334,11 +334,11 @@ public class CreateAssessmentRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The tags associated with the assessment.
+     * The tags that are associated with the assessment.
      * </p>
      * 
      * @param tags
-     *        The tags associated with the assessment.
+     *        The tags that are associated with the assessment.
      */
 
     public void setTags(java.util.Map<String, String> tags) {
@@ -347,11 +347,11 @@ public class CreateAssessmentRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The tags associated with the assessment.
+     * The tags that are associated with the assessment.
      * </p>
      * 
      * @param tags
-     *        The tags associated with the assessment.
+     *        The tags that are associated with the assessment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

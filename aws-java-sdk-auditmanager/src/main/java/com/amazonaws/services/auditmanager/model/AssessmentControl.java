@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The control entity that represents a standard or custom control used in an Audit Manager assessment.
+ * The control entity that represents a standard control or a custom control in an Audit Manager assessment.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/AssessmentControl" target="_top">AWS API
@@ -30,49 +30,49 @@ public class AssessmentControl implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The identifier for the specified control.
+     * The identifier for the control.
      * </p>
      */
     private String id;
     /**
      * <p>
-     * The name of the specified control.
+     * The name of the control.
      * </p>
      */
     private String name;
     /**
      * <p>
-     * The description of the specified control.
+     * The description of the control.
      * </p>
      */
     private String description;
     /**
      * <p>
-     * The status of the specified control.
+     * The status of the control.
      * </p>
      */
     private String status;
     /**
      * <p>
-     * The response of the specified control.
+     * The response of the control.
      * </p>
      */
     private String response;
     /**
      * <p>
-     * The list of comments attached to the specified control.
+     * The list of comments that's attached to the control.
      * </p>
      */
     private java.util.List<ControlComment> comments;
     /**
      * <p>
-     * The list of data sources for the specified evidence.
+     * The list of data sources for the evidence.
      * </p>
      */
     private java.util.List<String> evidenceSources;
     /**
      * <p>
-     * The amount of evidence generated for the control.
+     * The amount of evidence that's generated for the control.
      * </p>
      */
     private Integer evidenceCount;
@@ -85,11 +85,11 @@ public class AssessmentControl implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The identifier for the specified control.
+     * The identifier for the control.
      * </p>
      * 
      * @param id
-     *        The identifier for the specified control.
+     *        The identifier for the control.
      */
 
     public void setId(String id) {
@@ -98,10 +98,10 @@ public class AssessmentControl implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The identifier for the specified control.
+     * The identifier for the control.
      * </p>
      * 
-     * @return The identifier for the specified control.
+     * @return The identifier for the control.
      */
 
     public String getId() {
@@ -110,11 +110,11 @@ public class AssessmentControl implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The identifier for the specified control.
+     * The identifier for the control.
      * </p>
      * 
      * @param id
-     *        The identifier for the specified control.
+     *        The identifier for the control.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -125,11 +125,11 @@ public class AssessmentControl implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The name of the specified control.
+     * The name of the control.
      * </p>
      * 
      * @param name
-     *        The name of the specified control.
+     *        The name of the control.
      */
 
     public void setName(String name) {
@@ -138,10 +138,10 @@ public class AssessmentControl implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The name of the specified control.
+     * The name of the control.
      * </p>
      * 
-     * @return The name of the specified control.
+     * @return The name of the control.
      */
 
     public String getName() {
@@ -150,11 +150,11 @@ public class AssessmentControl implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The name of the specified control.
+     * The name of the control.
      * </p>
      * 
      * @param name
-     *        The name of the specified control.
+     *        The name of the control.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -165,11 +165,11 @@ public class AssessmentControl implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The description of the specified control.
+     * The description of the control.
      * </p>
      * 
      * @param description
-     *        The description of the specified control.
+     *        The description of the control.
      */
 
     public void setDescription(String description) {
@@ -178,10 +178,10 @@ public class AssessmentControl implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The description of the specified control.
+     * The description of the control.
      * </p>
      * 
-     * @return The description of the specified control.
+     * @return The description of the control.
      */
 
     public String getDescription() {
@@ -190,11 +190,11 @@ public class AssessmentControl implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The description of the specified control.
+     * The description of the control.
      * </p>
      * 
      * @param description
-     *        The description of the specified control.
+     *        The description of the control.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -205,11 +205,11 @@ public class AssessmentControl implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The status of the specified control.
+     * The status of the control.
      * </p>
      * 
      * @param status
-     *        The status of the specified control.
+     *        The status of the control.
      * @see ControlStatus
      */
 
@@ -219,10 +219,10 @@ public class AssessmentControl implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The status of the specified control.
+     * The status of the control.
      * </p>
      * 
-     * @return The status of the specified control.
+     * @return The status of the control.
      * @see ControlStatus
      */
 
@@ -232,11 +232,11 @@ public class AssessmentControl implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The status of the specified control.
+     * The status of the control.
      * </p>
      * 
      * @param status
-     *        The status of the specified control.
+     *        The status of the control.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ControlStatus
      */
@@ -248,11 +248,11 @@ public class AssessmentControl implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The status of the specified control.
+     * The status of the control.
      * </p>
      * 
      * @param status
-     *        The status of the specified control.
+     *        The status of the control.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ControlStatus
      */
@@ -264,11 +264,11 @@ public class AssessmentControl implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The response of the specified control.
+     * The response of the control.
      * </p>
      * 
      * @param response
-     *        The response of the specified control.
+     *        The response of the control.
      * @see ControlResponse
      */
 
@@ -278,10 +278,10 @@ public class AssessmentControl implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The response of the specified control.
+     * The response of the control.
      * </p>
      * 
-     * @return The response of the specified control.
+     * @return The response of the control.
      * @see ControlResponse
      */
 
@@ -291,11 +291,11 @@ public class AssessmentControl implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The response of the specified control.
+     * The response of the control.
      * </p>
      * 
      * @param response
-     *        The response of the specified control.
+     *        The response of the control.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ControlResponse
      */
@@ -307,11 +307,11 @@ public class AssessmentControl implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The response of the specified control.
+     * The response of the control.
      * </p>
      * 
      * @param response
-     *        The response of the specified control.
+     *        The response of the control.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ControlResponse
      */
@@ -323,10 +323,10 @@ public class AssessmentControl implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The list of comments attached to the specified control.
+     * The list of comments that's attached to the control.
      * </p>
      * 
-     * @return The list of comments attached to the specified control.
+     * @return The list of comments that's attached to the control.
      */
 
     public java.util.List<ControlComment> getComments() {
@@ -335,11 +335,11 @@ public class AssessmentControl implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The list of comments attached to the specified control.
+     * The list of comments that's attached to the control.
      * </p>
      * 
      * @param comments
-     *        The list of comments attached to the specified control.
+     *        The list of comments that's attached to the control.
      */
 
     public void setComments(java.util.Collection<ControlComment> comments) {
@@ -353,7 +353,7 @@ public class AssessmentControl implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The list of comments attached to the specified control.
+     * The list of comments that's attached to the control.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -362,7 +362,7 @@ public class AssessmentControl implements Serializable, Cloneable, StructuredPoj
      * </p>
      * 
      * @param comments
-     *        The list of comments attached to the specified control.
+     *        The list of comments that's attached to the control.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -378,11 +378,11 @@ public class AssessmentControl implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The list of comments attached to the specified control.
+     * The list of comments that's attached to the control.
      * </p>
      * 
      * @param comments
-     *        The list of comments attached to the specified control.
+     *        The list of comments that's attached to the control.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -393,10 +393,10 @@ public class AssessmentControl implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The list of data sources for the specified evidence.
+     * The list of data sources for the evidence.
      * </p>
      * 
-     * @return The list of data sources for the specified evidence.
+     * @return The list of data sources for the evidence.
      */
 
     public java.util.List<String> getEvidenceSources() {
@@ -405,11 +405,11 @@ public class AssessmentControl implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The list of data sources for the specified evidence.
+     * The list of data sources for the evidence.
      * </p>
      * 
      * @param evidenceSources
-     *        The list of data sources for the specified evidence.
+     *        The list of data sources for the evidence.
      */
 
     public void setEvidenceSources(java.util.Collection<String> evidenceSources) {
@@ -423,7 +423,7 @@ public class AssessmentControl implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The list of data sources for the specified evidence.
+     * The list of data sources for the evidence.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -432,7 +432,7 @@ public class AssessmentControl implements Serializable, Cloneable, StructuredPoj
      * </p>
      * 
      * @param evidenceSources
-     *        The list of data sources for the specified evidence.
+     *        The list of data sources for the evidence.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -448,11 +448,11 @@ public class AssessmentControl implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The list of data sources for the specified evidence.
+     * The list of data sources for the evidence.
      * </p>
      * 
      * @param evidenceSources
-     *        The list of data sources for the specified evidence.
+     *        The list of data sources for the evidence.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -463,11 +463,11 @@ public class AssessmentControl implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The amount of evidence generated for the control.
+     * The amount of evidence that's generated for the control.
      * </p>
      * 
      * @param evidenceCount
-     *        The amount of evidence generated for the control.
+     *        The amount of evidence that's generated for the control.
      */
 
     public void setEvidenceCount(Integer evidenceCount) {
@@ -476,10 +476,10 @@ public class AssessmentControl implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The amount of evidence generated for the control.
+     * The amount of evidence that's generated for the control.
      * </p>
      * 
-     * @return The amount of evidence generated for the control.
+     * @return The amount of evidence that's generated for the control.
      */
 
     public Integer getEvidenceCount() {
@@ -488,11 +488,11 @@ public class AssessmentControl implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The amount of evidence generated for the control.
+     * The amount of evidence that's generated for the control.
      * </p>
      * 
      * @param evidenceCount
-     *        The amount of evidence generated for the control.
+     *        The amount of evidence that's generated for the control.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

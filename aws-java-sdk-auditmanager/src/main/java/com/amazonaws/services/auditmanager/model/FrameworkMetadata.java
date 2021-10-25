@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The metadata of a framework, such as the name, ID, description, and so on.
+ * The metadata of a framework, such as the name, ID, or description.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/FrameworkMetadata" target="_top">AWS API
@@ -42,13 +42,13 @@ public class FrameworkMetadata implements Serializable, Cloneable, StructuredPoj
     private String description;
     /**
      * <p>
-     * The logo associated with the framework.
+     * The logo that's associated with the framework.
      * </p>
      */
     private String logo;
     /**
      * <p>
-     * The compliance standard associated with the framework, such as PCI-DSS or HIPAA.
+     * The compliance standard that's associated with the framework. For example, this could be PCI DSS or HIPAA.
      * </p>
      */
     private String complianceType;
@@ -135,11 +135,11 @@ public class FrameworkMetadata implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The logo associated with the framework.
+     * The logo that's associated with the framework.
      * </p>
      * 
      * @param logo
-     *        The logo associated with the framework.
+     *        The logo that's associated with the framework.
      */
 
     public void setLogo(String logo) {
@@ -148,10 +148,10 @@ public class FrameworkMetadata implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The logo associated with the framework.
+     * The logo that's associated with the framework.
      * </p>
      * 
-     * @return The logo associated with the framework.
+     * @return The logo that's associated with the framework.
      */
 
     public String getLogo() {
@@ -160,11 +160,11 @@ public class FrameworkMetadata implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The logo associated with the framework.
+     * The logo that's associated with the framework.
      * </p>
      * 
      * @param logo
-     *        The logo associated with the framework.
+     *        The logo that's associated with the framework.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -175,11 +175,11 @@ public class FrameworkMetadata implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The compliance standard associated with the framework, such as PCI-DSS or HIPAA.
+     * The compliance standard that's associated with the framework. For example, this could be PCI DSS or HIPAA.
      * </p>
      * 
      * @param complianceType
-     *        The compliance standard associated with the framework, such as PCI-DSS or HIPAA.
+     *        The compliance standard that's associated with the framework. For example, this could be PCI DSS or HIPAA.
      */
 
     public void setComplianceType(String complianceType) {
@@ -188,10 +188,11 @@ public class FrameworkMetadata implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The compliance standard associated with the framework, such as PCI-DSS or HIPAA.
+     * The compliance standard that's associated with the framework. For example, this could be PCI DSS or HIPAA.
      * </p>
      * 
-     * @return The compliance standard associated with the framework, such as PCI-DSS or HIPAA.
+     * @return The compliance standard that's associated with the framework. For example, this could be PCI DSS or
+     *         HIPAA.
      */
 
     public String getComplianceType() {
@@ -200,11 +201,11 @@ public class FrameworkMetadata implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The compliance standard associated with the framework, such as PCI-DSS or HIPAA.
+     * The compliance standard that's associated with the framework. For example, this could be PCI DSS or HIPAA.
      * </p>
      * 
      * @param complianceType
-     *        The compliance standard associated with the framework, such as PCI-DSS or HIPAA.
+     *        The compliance standard that's associated with the framework. For example, this could be PCI DSS or HIPAA.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

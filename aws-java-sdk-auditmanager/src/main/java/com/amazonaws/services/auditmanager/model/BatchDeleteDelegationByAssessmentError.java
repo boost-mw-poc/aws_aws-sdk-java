@@ -31,30 +31,30 @@ public class BatchDeleteDelegationByAssessmentError implements Serializable, Clo
 
     /**
      * <p>
-     * The identifier for the specified delegation.
+     * The identifier for the delegation.
      * </p>
      */
     private String delegationId;
     /**
      * <p>
-     * The error code returned by the <code>BatchDeleteDelegationByAssessment</code> API.
+     * The error code that the <code>BatchDeleteDelegationByAssessment</code> API returned.
      * </p>
      */
     private String errorCode;
     /**
      * <p>
-     * The error message returned by the <code>BatchDeleteDelegationByAssessment</code> API.
+     * The error message that the <code>BatchDeleteDelegationByAssessment</code> API returned.
      * </p>
      */
     private String errorMessage;
 
     /**
      * <p>
-     * The identifier for the specified delegation.
+     * The identifier for the delegation.
      * </p>
      * 
      * @param delegationId
-     *        The identifier for the specified delegation.
+     *        The identifier for the delegation.
      */
 
     public void setDelegationId(String delegationId) {
@@ -63,10 +63,10 @@ public class BatchDeleteDelegationByAssessmentError implements Serializable, Clo
 
     /**
      * <p>
-     * The identifier for the specified delegation.
+     * The identifier for the delegation.
      * </p>
      * 
-     * @return The identifier for the specified delegation.
+     * @return The identifier for the delegation.
      */
 
     public String getDelegationId() {
@@ -75,11 +75,11 @@ public class BatchDeleteDelegationByAssessmentError implements Serializable, Clo
 
     /**
      * <p>
-     * The identifier for the specified delegation.
+     * The identifier for the delegation.
      * </p>
      * 
      * @param delegationId
-     *        The identifier for the specified delegation.
+     *        The identifier for the delegation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -90,11 +90,11 @@ public class BatchDeleteDelegationByAssessmentError implements Serializable, Clo
 
     /**
      * <p>
-     * The error code returned by the <code>BatchDeleteDelegationByAssessment</code> API.
+     * The error code that the <code>BatchDeleteDelegationByAssessment</code> API returned.
      * </p>
      * 
      * @param errorCode
-     *        The error code returned by the <code>BatchDeleteDelegationByAssessment</code> API.
+     *        The error code that the <code>BatchDeleteDelegationByAssessment</code> API returned.
      */
 
     public void setErrorCode(String errorCode) {
@@ -103,10 +103,10 @@ public class BatchDeleteDelegationByAssessmentError implements Serializable, Clo
 
     /**
      * <p>
-     * The error code returned by the <code>BatchDeleteDelegationByAssessment</code> API.
+     * The error code that the <code>BatchDeleteDelegationByAssessment</code> API returned.
      * </p>
      * 
-     * @return The error code returned by the <code>BatchDeleteDelegationByAssessment</code> API.
+     * @return The error code that the <code>BatchDeleteDelegationByAssessment</code> API returned.
      */
 
     public String getErrorCode() {
@@ -115,11 +115,11 @@ public class BatchDeleteDelegationByAssessmentError implements Serializable, Clo
 
     /**
      * <p>
-     * The error code returned by the <code>BatchDeleteDelegationByAssessment</code> API.
+     * The error code that the <code>BatchDeleteDelegationByAssessment</code> API returned.
      * </p>
      * 
      * @param errorCode
-     *        The error code returned by the <code>BatchDeleteDelegationByAssessment</code> API.
+     *        The error code that the <code>BatchDeleteDelegationByAssessment</code> API returned.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -130,11 +130,11 @@ public class BatchDeleteDelegationByAssessmentError implements Serializable, Clo
 
     /**
      * <p>
-     * The error message returned by the <code>BatchDeleteDelegationByAssessment</code> API.
+     * The error message that the <code>BatchDeleteDelegationByAssessment</code> API returned.
      * </p>
      * 
      * @param errorMessage
-     *        The error message returned by the <code>BatchDeleteDelegationByAssessment</code> API.
+     *        The error message that the <code>BatchDeleteDelegationByAssessment</code> API returned.
      */
 
     public void setErrorMessage(String errorMessage) {
@@ -143,10 +143,10 @@ public class BatchDeleteDelegationByAssessmentError implements Serializable, Clo
 
     /**
      * <p>
-     * The error message returned by the <code>BatchDeleteDelegationByAssessment</code> API.
+     * The error message that the <code>BatchDeleteDelegationByAssessment</code> API returned.
      * </p>
      * 
-     * @return The error message returned by the <code>BatchDeleteDelegationByAssessment</code> API.
+     * @return The error message that the <code>BatchDeleteDelegationByAssessment</code> API returned.
      */
 
     public String getErrorMessage() {
@@ -155,11 +155,11 @@ public class BatchDeleteDelegationByAssessmentError implements Serializable, Clo
 
     /**
      * <p>
-     * The error message returned by the <code>BatchDeleteDelegationByAssessment</code> API.
+     * The error message that the <code>BatchDeleteDelegationByAssessment</code> API returned.
      * </p>
      * 
      * @param errorMessage
-     *        The error message returned by the <code>BatchDeleteDelegationByAssessment</code> API.
+     *        The error message that the <code>BatchDeleteDelegationByAssessment</code> API returned.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

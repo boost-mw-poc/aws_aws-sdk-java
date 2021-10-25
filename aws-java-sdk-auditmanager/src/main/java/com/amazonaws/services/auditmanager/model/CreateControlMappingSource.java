@@ -19,8 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Control mapping fields that represent the source for evidence collection, along with related parameters and metadata.
- * This does not contain <code>mappingID</code>.
+ * The control mapping fields that represent the source for evidence collection, along with related parameters and
+ * metadata. This doesn't contain <code>mappingID</code>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/CreateControlMappingSource"
@@ -37,7 +37,7 @@ public class CreateControlMappingSource implements Serializable, Cloneable, Stru
     private String sourceName;
     /**
      * <p>
-     * The description of the data source that determines from where Audit Manager collects evidence for the control.
+     * The description of the data source that determines where Audit Manager collects evidence from for the control.
      * </p>
      */
     private String sourceDescription;
@@ -57,13 +57,13 @@ public class CreateControlMappingSource implements Serializable, Cloneable, Stru
     private SourceKeyword sourceKeyword;
     /**
      * <p>
-     * The frequency of evidence collection for the specified control mapping source.
+     * The frequency of evidence collection for the control mapping source.
      * </p>
      */
     private String sourceFrequency;
     /**
      * <p>
-     * The instructions for troubleshooting the specified control.
+     * The instructions for troubleshooting the control.
      * </p>
      */
     private String troubleshootingText;
@@ -110,11 +110,11 @@ public class CreateControlMappingSource implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The description of the data source that determines from where Audit Manager collects evidence for the control.
+     * The description of the data source that determines where Audit Manager collects evidence from for the control.
      * </p>
      * 
      * @param sourceDescription
-     *        The description of the data source that determines from where Audit Manager collects evidence for the
+     *        The description of the data source that determines where Audit Manager collects evidence from for the
      *        control.
      */
 
@@ -124,10 +124,10 @@ public class CreateControlMappingSource implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The description of the data source that determines from where Audit Manager collects evidence for the control.
+     * The description of the data source that determines where Audit Manager collects evidence from for the control.
      * </p>
      * 
-     * @return The description of the data source that determines from where Audit Manager collects evidence for the
+     * @return The description of the data source that determines where Audit Manager collects evidence from for the
      *         control.
      */
 
@@ -137,11 +137,11 @@ public class CreateControlMappingSource implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The description of the data source that determines from where Audit Manager collects evidence for the control.
+     * The description of the data source that determines where Audit Manager collects evidence from for the control.
      * </p>
      * 
      * @param sourceDescription
-     *        The description of the data source that determines from where Audit Manager collects evidence for the
+     *        The description of the data source that determines where Audit Manager collects evidence from for the
      *        control.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -297,11 +297,11 @@ public class CreateControlMappingSource implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The frequency of evidence collection for the specified control mapping source.
+     * The frequency of evidence collection for the control mapping source.
      * </p>
      * 
      * @param sourceFrequency
-     *        The frequency of evidence collection for the specified control mapping source.
+     *        The frequency of evidence collection for the control mapping source.
      * @see SourceFrequency
      */
 
@@ -311,10 +311,10 @@ public class CreateControlMappingSource implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The frequency of evidence collection for the specified control mapping source.
+     * The frequency of evidence collection for the control mapping source.
      * </p>
      * 
-     * @return The frequency of evidence collection for the specified control mapping source.
+     * @return The frequency of evidence collection for the control mapping source.
      * @see SourceFrequency
      */
 
@@ -324,11 +324,11 @@ public class CreateControlMappingSource implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The frequency of evidence collection for the specified control mapping source.
+     * The frequency of evidence collection for the control mapping source.
      * </p>
      * 
      * @param sourceFrequency
-     *        The frequency of evidence collection for the specified control mapping source.
+     *        The frequency of evidence collection for the control mapping source.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SourceFrequency
      */
@@ -340,11 +340,11 @@ public class CreateControlMappingSource implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The frequency of evidence collection for the specified control mapping source.
+     * The frequency of evidence collection for the control mapping source.
      * </p>
      * 
      * @param sourceFrequency
-     *        The frequency of evidence collection for the specified control mapping source.
+     *        The frequency of evidence collection for the control mapping source.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SourceFrequency
      */
@@ -356,11 +356,11 @@ public class CreateControlMappingSource implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The instructions for troubleshooting the specified control.
+     * The instructions for troubleshooting the control.
      * </p>
      * 
      * @param troubleshootingText
-     *        The instructions for troubleshooting the specified control.
+     *        The instructions for troubleshooting the control.
      */
 
     public void setTroubleshootingText(String troubleshootingText) {
@@ -369,10 +369,10 @@ public class CreateControlMappingSource implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The instructions for troubleshooting the specified control.
+     * The instructions for troubleshooting the control.
      * </p>
      * 
-     * @return The instructions for troubleshooting the specified control.
+     * @return The instructions for troubleshooting the control.
      */
 
     public String getTroubleshootingText() {
@@ -381,11 +381,11 @@ public class CreateControlMappingSource implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The instructions for troubleshooting the specified control.
+     * The instructions for troubleshooting the control.
      * </p>
      * 
      * @param troubleshootingText
-     *        The instructions for troubleshooting the specified control.
+     *        The instructions for troubleshooting the control.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

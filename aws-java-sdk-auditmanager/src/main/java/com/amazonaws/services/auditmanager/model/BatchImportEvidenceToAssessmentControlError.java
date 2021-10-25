@@ -32,30 +32,30 @@ public class BatchImportEvidenceToAssessmentControlError implements Serializable
 
     /**
      * <p>
-     * Manual evidence that cannot be collected automatically by Audit Manager.
+     * Manual evidence that can't be collected automatically by Audit Manager.
      * </p>
      */
     private ManualEvidence manualEvidence;
     /**
      * <p>
-     * The error code returned by the <code>BatchImportEvidenceToAssessmentControl</code> API.
+     * The error code that the <code>BatchImportEvidenceToAssessmentControl</code> API returned.
      * </p>
      */
     private String errorCode;
     /**
      * <p>
-     * The error message returned by the <code>BatchImportEvidenceToAssessmentControl</code> API.
+     * The error message that the <code>BatchImportEvidenceToAssessmentControl</code> API returned.
      * </p>
      */
     private String errorMessage;
 
     /**
      * <p>
-     * Manual evidence that cannot be collected automatically by Audit Manager.
+     * Manual evidence that can't be collected automatically by Audit Manager.
      * </p>
      * 
      * @param manualEvidence
-     *        Manual evidence that cannot be collected automatically by Audit Manager.
+     *        Manual evidence that can't be collected automatically by Audit Manager.
      */
 
     public void setManualEvidence(ManualEvidence manualEvidence) {
@@ -64,10 +64,10 @@ public class BatchImportEvidenceToAssessmentControlError implements Serializable
 
     /**
      * <p>
-     * Manual evidence that cannot be collected automatically by Audit Manager.
+     * Manual evidence that can't be collected automatically by Audit Manager.
      * </p>
      * 
-     * @return Manual evidence that cannot be collected automatically by Audit Manager.
+     * @return Manual evidence that can't be collected automatically by Audit Manager.
      */
 
     public ManualEvidence getManualEvidence() {
@@ -76,11 +76,11 @@ public class BatchImportEvidenceToAssessmentControlError implements Serializable
 
     /**
      * <p>
-     * Manual evidence that cannot be collected automatically by Audit Manager.
+     * Manual evidence that can't be collected automatically by Audit Manager.
      * </p>
      * 
      * @param manualEvidence
-     *        Manual evidence that cannot be collected automatically by Audit Manager.
+     *        Manual evidence that can't be collected automatically by Audit Manager.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -91,11 +91,11 @@ public class BatchImportEvidenceToAssessmentControlError implements Serializable
 
     /**
      * <p>
-     * The error code returned by the <code>BatchImportEvidenceToAssessmentControl</code> API.
+     * The error code that the <code>BatchImportEvidenceToAssessmentControl</code> API returned.
      * </p>
      * 
      * @param errorCode
-     *        The error code returned by the <code>BatchImportEvidenceToAssessmentControl</code> API.
+     *        The error code that the <code>BatchImportEvidenceToAssessmentControl</code> API returned.
      */
 
     public void setErrorCode(String errorCode) {
@@ -104,10 +104,10 @@ public class BatchImportEvidenceToAssessmentControlError implements Serializable
 
     /**
      * <p>
-     * The error code returned by the <code>BatchImportEvidenceToAssessmentControl</code> API.
+     * The error code that the <code>BatchImportEvidenceToAssessmentControl</code> API returned.
      * </p>
      * 
-     * @return The error code returned by the <code>BatchImportEvidenceToAssessmentControl</code> API.
+     * @return The error code that the <code>BatchImportEvidenceToAssessmentControl</code> API returned.
      */
 
     public String getErrorCode() {
@@ -116,11 +116,11 @@ public class BatchImportEvidenceToAssessmentControlError implements Serializable
 
     /**
      * <p>
-     * The error code returned by the <code>BatchImportEvidenceToAssessmentControl</code> API.
+     * The error code that the <code>BatchImportEvidenceToAssessmentControl</code> API returned.
      * </p>
      * 
      * @param errorCode
-     *        The error code returned by the <code>BatchImportEvidenceToAssessmentControl</code> API.
+     *        The error code that the <code>BatchImportEvidenceToAssessmentControl</code> API returned.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -131,11 +131,11 @@ public class BatchImportEvidenceToAssessmentControlError implements Serializable
 
     /**
      * <p>
-     * The error message returned by the <code>BatchImportEvidenceToAssessmentControl</code> API.
+     * The error message that the <code>BatchImportEvidenceToAssessmentControl</code> API returned.
      * </p>
      * 
      * @param errorMessage
-     *        The error message returned by the <code>BatchImportEvidenceToAssessmentControl</code> API.
+     *        The error message that the <code>BatchImportEvidenceToAssessmentControl</code> API returned.
      */
 
     public void setErrorMessage(String errorMessage) {
@@ -144,10 +144,10 @@ public class BatchImportEvidenceToAssessmentControlError implements Serializable
 
     /**
      * <p>
-     * The error message returned by the <code>BatchImportEvidenceToAssessmentControl</code> API.
+     * The error message that the <code>BatchImportEvidenceToAssessmentControl</code> API returned.
      * </p>
      * 
-     * @return The error message returned by the <code>BatchImportEvidenceToAssessmentControl</code> API.
+     * @return The error message that the <code>BatchImportEvidenceToAssessmentControl</code> API returned.
      */
 
     public String getErrorMessage() {
@@ -156,11 +156,11 @@ public class BatchImportEvidenceToAssessmentControlError implements Serializable
 
     /**
      * <p>
-     * The error message returned by the <code>BatchImportEvidenceToAssessmentControl</code> API.
+     * The error message that the <code>BatchImportEvidenceToAssessmentControl</code> API returned.
      * </p>
      * 
      * @param errorMessage
-     *        The error message returned by the <code>BatchImportEvidenceToAssessmentControl</code> API.
+     *        The error message that the <code>BatchImportEvidenceToAssessmentControl</code> API returned.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

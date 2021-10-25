@@ -85,6 +85,21 @@ public class VpnConnectionStaxUnmarshaller implements Unmarshaller<VpnConnection
                     continue;
                 }
 
+                if (context.testExpression("coreNetworkArn", targetDepth)) {
+                    vpnConnection.setCoreNetworkArn(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
+                if (context.testExpression("coreNetworkAttachmentArn", targetDepth)) {
+                    vpnConnection.setCoreNetworkAttachmentArn(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
+                if (context.testExpression("gatewayAssociationState", targetDepth)) {
+                    vpnConnection.setGatewayAssociationState(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
                 if (context.testExpression("options", targetDepth)) {
                     vpnConnection.setOptions(VpnConnectionOptionsStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;

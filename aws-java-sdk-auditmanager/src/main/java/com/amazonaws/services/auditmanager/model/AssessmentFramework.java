@@ -36,7 +36,7 @@ public class AssessmentFramework implements Serializable, Cloneable, StructuredP
     private String id;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the specified framework.
+     * The Amazon Resource Name (ARN) of the framework.
      * </p>
      */
     private String arn;
@@ -44,7 +44,7 @@ public class AssessmentFramework implements Serializable, Cloneable, StructuredP
     private FrameworkMetadata metadata;
     /**
      * <p>
-     * The control sets associated with the framework.
+     * The control sets that are associated with the framework.
      * </p>
      */
     private java.util.List<AssessmentControlSet> controlSets;
@@ -91,11 +91,11 @@ public class AssessmentFramework implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the specified framework.
+     * The Amazon Resource Name (ARN) of the framework.
      * </p>
      * 
      * @param arn
-     *        The Amazon Resource Name (ARN) of the specified framework.
+     *        The Amazon Resource Name (ARN) of the framework.
      */
 
     public void setArn(String arn) {
@@ -104,10 +104,10 @@ public class AssessmentFramework implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the specified framework.
+     * The Amazon Resource Name (ARN) of the framework.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the specified framework.
+     * @return The Amazon Resource Name (ARN) of the framework.
      */
 
     public String getArn() {
@@ -116,11 +116,11 @@ public class AssessmentFramework implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the specified framework.
+     * The Amazon Resource Name (ARN) of the framework.
      * </p>
      * 
      * @param arn
-     *        The Amazon Resource Name (ARN) of the specified framework.
+     *        The Amazon Resource Name (ARN) of the framework.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -157,10 +157,10 @@ public class AssessmentFramework implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The control sets associated with the framework.
+     * The control sets that are associated with the framework.
      * </p>
      * 
-     * @return The control sets associated with the framework.
+     * @return The control sets that are associated with the framework.
      */
 
     public java.util.List<AssessmentControlSet> getControlSets() {
@@ -169,11 +169,11 @@ public class AssessmentFramework implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The control sets associated with the framework.
+     * The control sets that are associated with the framework.
      * </p>
      * 
      * @param controlSets
-     *        The control sets associated with the framework.
+     *        The control sets that are associated with the framework.
      */
 
     public void setControlSets(java.util.Collection<AssessmentControlSet> controlSets) {
@@ -187,7 +187,7 @@ public class AssessmentFramework implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The control sets associated with the framework.
+     * The control sets that are associated with the framework.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -196,7 +196,7 @@ public class AssessmentFramework implements Serializable, Cloneable, StructuredP
      * </p>
      * 
      * @param controlSets
-     *        The control sets associated with the framework.
+     *        The control sets that are associated with the framework.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -212,11 +212,11 @@ public class AssessmentFramework implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The control sets associated with the framework.
+     * The control sets that are associated with the framework.
      * </p>
      * 
      * @param controlSets
-     *        The control sets associated with the framework.
+     *        The control sets that are associated with the framework.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

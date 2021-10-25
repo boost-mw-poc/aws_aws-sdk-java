@@ -27,7 +27,7 @@ public class DeleteAssessmentReportRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The identifier for the specified assessment.
+     * The identifier for the assessment.
      * </p>
      */
     private String assessmentId;
@@ -40,11 +40,11 @@ public class DeleteAssessmentReportRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The identifier for the specified assessment.
+     * The identifier for the assessment.
      * </p>
      * 
      * @param assessmentId
-     *        The identifier for the specified assessment.
+     *        The identifier for the assessment.
      */
 
     public void setAssessmentId(String assessmentId) {
@@ -53,10 +53,10 @@ public class DeleteAssessmentReportRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The identifier for the specified assessment.
+     * The identifier for the assessment.
      * </p>
      * 
-     * @return The identifier for the specified assessment.
+     * @return The identifier for the assessment.
      */
 
     public String getAssessmentId() {
@@ -65,11 +65,11 @@ public class DeleteAssessmentReportRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The identifier for the specified assessment.
+     * The identifier for the assessment.
      * </p>
      * 
      * @param assessmentId
-     *        The identifier for the specified assessment.
+     *        The identifier for the assessment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

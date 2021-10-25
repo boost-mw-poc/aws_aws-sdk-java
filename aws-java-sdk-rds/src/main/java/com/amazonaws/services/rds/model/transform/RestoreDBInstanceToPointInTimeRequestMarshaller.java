@@ -238,6 +238,10 @@ public class RestoreDBInstanceToPointInTimeRequestMarshaller implements
             request.addParameter("EnableCustomerOwnedIp", StringUtils.fromBoolean(restoreDBInstanceToPointInTimeRequest.getEnableCustomerOwnedIp()));
         }
 
+        if (restoreDBInstanceToPointInTimeRequest.getCustomIamInstanceProfile() != null) {
+            request.addParameter("CustomIamInstanceProfile", StringUtils.fromString(restoreDBInstanceToPointInTimeRequest.getCustomIamInstanceProfile()));
+        }
+
         return request;
     }
 

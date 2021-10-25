@@ -182,7 +182,7 @@ public class DBInstance implements Serializable, Cloneable {
     private java.util.Date latestRestorableTime;
     /**
      * <p>
-     * Specifies if the DB instance is a Multi-AZ deployment.
+     * Specifies if the DB instance is a Multi-AZ deployment. This setting doesn't apply to RDS Custom.
      * </p>
      */
     private Boolean multiAZ;
@@ -239,7 +239,7 @@ public class DBInstance implements Serializable, Cloneable {
     private String replicaMode;
     /**
      * <p>
-     * License model information for this DB instance.
+     * License model information for this DB instance. This setting doesn't apply to RDS Custom.
      * </p>
      */
     private String licenseModel;
@@ -337,16 +337,15 @@ public class DBInstance implements Serializable, Cloneable {
      * instance.
      * </p>
      * <p>
-     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the Amazon Web
-     * Services KMS customer master key (CMK).
+     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key.
      * </p>
      */
     private String kmsKeyId;
     /**
      * <p>
      * The Amazon Web Services Region-unique, immutable identifier for the DB instance. This identifier is found in
-     * Amazon Web Services CloudTrail log entries whenever the Amazon Web Services KMS customer master key (CMK) for the
-     * DB instance is accessed.
+     * Amazon Web Services CloudTrail log entries whenever the Amazon Web Services KMS key for the DB instance is
+     * accessed.
      * </p>
      */
     private String dbiResourceId;
@@ -455,8 +454,7 @@ public class DBInstance implements Serializable, Cloneable {
      * The Amazon Web Services KMS key identifier for encryption of Performance Insights data.
      * </p>
      * <p>
-     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the Amazon Web
-     * Services KMS customer master key (CMK).
+     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key.
      * </p>
      */
     private String performanceInsightsKMSKeyId;
@@ -554,8 +552,7 @@ public class DBInstance implements Serializable, Cloneable {
     /**
      * <p>
      * The Amazon Web Services KMS key identifier used for encrypting messages in the database activity stream. The
-     * Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the Amazon Web
-     * Services KMS customer master key (CMK).
+     * Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key.
      * </p>
      */
     private String activityStreamKmsKeyId;
@@ -578,6 +575,50 @@ public class DBInstance implements Serializable, Cloneable {
      * </p>
      */
     private Boolean activityStreamEngineNativeAuditFieldsIncluded;
+    /**
+     * <p>
+     * The automation mode of the RDS Custom DB instance: <code>full</code> or <code>all paused</code>. If
+     * <code>full</code>, the DB instance automates monitoring and instance recovery. If <code>all paused</code>, the
+     * instance pauses automation for the duration set by <code>--resume-full-automation-mode-minutes</code>.
+     * </p>
+     */
+    private String automationMode;
+    /**
+     * <p>
+     * The number of minutes to pause the automation. When the time period ends, RDS Custom resumes full automation. The
+     * minimum value is 60 (default). The maximum value is 1,440.
+     * </p>
+     */
+    private java.util.Date resumeFullAutomationModeTime;
+    /**
+     * <p>
+     * The instance profile associated with the underlying Amazon EC2 instance of an RDS Custom DB instance. The
+     * instance profile must meet the following requirements:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The profile must exist in your account.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The profile must have an IAM role that Amazon EC2 has permissions to assume.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The instance profile name and the associated IAM role name must start with the prefix <code>AWSRDSCustom</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For the list of permissions required for the IAM role, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-setup-orcl.html#custom-setup-orcl.iam-vpc">
+     * Configure IAM and your VPC</a> in the <i>Amazon Relational Database Service User Guide</i>.
+     * </p>
+     */
+    private String customIamInstanceProfile;
 
     /**
      * <p>
@@ -1662,11 +1703,11 @@ public class DBInstance implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies if the DB instance is a Multi-AZ deployment.
+     * Specifies if the DB instance is a Multi-AZ deployment. This setting doesn't apply to RDS Custom.
      * </p>
      * 
      * @param multiAZ
-     *        Specifies if the DB instance is a Multi-AZ deployment.
+     *        Specifies if the DB instance is a Multi-AZ deployment. This setting doesn't apply to RDS Custom.
      */
 
     public void setMultiAZ(Boolean multiAZ) {
@@ -1675,10 +1716,10 @@ public class DBInstance implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies if the DB instance is a Multi-AZ deployment.
+     * Specifies if the DB instance is a Multi-AZ deployment. This setting doesn't apply to RDS Custom.
      * </p>
      * 
-     * @return Specifies if the DB instance is a Multi-AZ deployment.
+     * @return Specifies if the DB instance is a Multi-AZ deployment. This setting doesn't apply to RDS Custom.
      */
 
     public Boolean getMultiAZ() {
@@ -1687,11 +1728,11 @@ public class DBInstance implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies if the DB instance is a Multi-AZ deployment.
+     * Specifies if the DB instance is a Multi-AZ deployment. This setting doesn't apply to RDS Custom.
      * </p>
      * 
      * @param multiAZ
-     *        Specifies if the DB instance is a Multi-AZ deployment.
+     *        Specifies if the DB instance is a Multi-AZ deployment. This setting doesn't apply to RDS Custom.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1702,10 +1743,10 @@ public class DBInstance implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Specifies if the DB instance is a Multi-AZ deployment.
+     * Specifies if the DB instance is a Multi-AZ deployment. This setting doesn't apply to RDS Custom.
      * </p>
      * 
-     * @return Specifies if the DB instance is a Multi-AZ deployment.
+     * @return Specifies if the DB instance is a Multi-AZ deployment. This setting doesn't apply to RDS Custom.
      */
 
     public Boolean isMultiAZ() {
@@ -2156,11 +2197,11 @@ public class DBInstance implements Serializable, Cloneable {
 
     /**
      * <p>
-     * License model information for this DB instance.
+     * License model information for this DB instance. This setting doesn't apply to RDS Custom.
      * </p>
      * 
      * @param licenseModel
-     *        License model information for this DB instance.
+     *        License model information for this DB instance. This setting doesn't apply to RDS Custom.
      */
 
     public void setLicenseModel(String licenseModel) {
@@ -2169,10 +2210,10 @@ public class DBInstance implements Serializable, Cloneable {
 
     /**
      * <p>
-     * License model information for this DB instance.
+     * License model information for this DB instance. This setting doesn't apply to RDS Custom.
      * </p>
      * 
-     * @return License model information for this DB instance.
+     * @return License model information for this DB instance. This setting doesn't apply to RDS Custom.
      */
 
     public String getLicenseModel() {
@@ -2181,11 +2222,11 @@ public class DBInstance implements Serializable, Cloneable {
 
     /**
      * <p>
-     * License model information for this DB instance.
+     * License model information for this DB instance. This setting doesn't apply to RDS Custom.
      * </p>
      * 
      * @param licenseModel
-     *        License model information for this DB instance.
+     *        License model information for this DB instance. This setting doesn't apply to RDS Custom.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2889,16 +2930,15 @@ public class DBInstance implements Serializable, Cloneable {
      * instance.
      * </p>
      * <p>
-     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the Amazon Web
-     * Services KMS customer master key (CMK).
+     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key.
      * </p>
      * 
      * @param kmsKeyId
      *        If <code>StorageEncrypted</code> is true, the Amazon Web Services KMS key identifier for the encrypted DB
      *        instance. </p>
      *        <p>
-     *        The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the Amazon
-     *        Web Services KMS customer master key (CMK).
+     *        The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS
+     *        key.
      */
 
     public void setKmsKeyId(String kmsKeyId) {
@@ -2911,15 +2951,14 @@ public class DBInstance implements Serializable, Cloneable {
      * instance.
      * </p>
      * <p>
-     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the Amazon Web
-     * Services KMS customer master key (CMK).
+     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key.
      * </p>
      * 
      * @return If <code>StorageEncrypted</code> is true, the Amazon Web Services KMS key identifier for the encrypted DB
      *         instance. </p>
      *         <p>
-     *         The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the
-     *         Amazon Web Services KMS customer master key (CMK).
+     *         The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS
+     *         key.
      */
 
     public String getKmsKeyId() {
@@ -2932,16 +2971,15 @@ public class DBInstance implements Serializable, Cloneable {
      * instance.
      * </p>
      * <p>
-     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the Amazon Web
-     * Services KMS customer master key (CMK).
+     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key.
      * </p>
      * 
      * @param kmsKeyId
      *        If <code>StorageEncrypted</code> is true, the Amazon Web Services KMS key identifier for the encrypted DB
      *        instance. </p>
      *        <p>
-     *        The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the Amazon
-     *        Web Services KMS customer master key (CMK).
+     *        The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS
+     *        key.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2953,14 +2991,14 @@ public class DBInstance implements Serializable, Cloneable {
     /**
      * <p>
      * The Amazon Web Services Region-unique, immutable identifier for the DB instance. This identifier is found in
-     * Amazon Web Services CloudTrail log entries whenever the Amazon Web Services KMS customer master key (CMK) for the
-     * DB instance is accessed.
+     * Amazon Web Services CloudTrail log entries whenever the Amazon Web Services KMS key for the DB instance is
+     * accessed.
      * </p>
      * 
      * @param dbiResourceId
      *        The Amazon Web Services Region-unique, immutable identifier for the DB instance. This identifier is found
-     *        in Amazon Web Services CloudTrail log entries whenever the Amazon Web Services KMS customer master key
-     *        (CMK) for the DB instance is accessed.
+     *        in Amazon Web Services CloudTrail log entries whenever the Amazon Web Services KMS key for the DB instance
+     *        is accessed.
      */
 
     public void setDbiResourceId(String dbiResourceId) {
@@ -2970,13 +3008,13 @@ public class DBInstance implements Serializable, Cloneable {
     /**
      * <p>
      * The Amazon Web Services Region-unique, immutable identifier for the DB instance. This identifier is found in
-     * Amazon Web Services CloudTrail log entries whenever the Amazon Web Services KMS customer master key (CMK) for the
-     * DB instance is accessed.
+     * Amazon Web Services CloudTrail log entries whenever the Amazon Web Services KMS key for the DB instance is
+     * accessed.
      * </p>
      * 
      * @return The Amazon Web Services Region-unique, immutable identifier for the DB instance. This identifier is found
-     *         in Amazon Web Services CloudTrail log entries whenever the Amazon Web Services KMS customer master key
-     *         (CMK) for the DB instance is accessed.
+     *         in Amazon Web Services CloudTrail log entries whenever the Amazon Web Services KMS key for the DB
+     *         instance is accessed.
      */
 
     public String getDbiResourceId() {
@@ -2986,14 +3024,14 @@ public class DBInstance implements Serializable, Cloneable {
     /**
      * <p>
      * The Amazon Web Services Region-unique, immutable identifier for the DB instance. This identifier is found in
-     * Amazon Web Services CloudTrail log entries whenever the Amazon Web Services KMS customer master key (CMK) for the
-     * DB instance is accessed.
+     * Amazon Web Services CloudTrail log entries whenever the Amazon Web Services KMS key for the DB instance is
+     * accessed.
      * </p>
      * 
      * @param dbiResourceId
      *        The Amazon Web Services Region-unique, immutable identifier for the DB instance. This identifier is found
-     *        in Amazon Web Services CloudTrail log entries whenever the Amazon Web Services KMS customer master key
-     *        (CMK) for the DB instance is accessed.
+     *        in Amazon Web Services CloudTrail log entries whenever the Amazon Web Services KMS key for the DB instance
+     *        is accessed.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -3771,15 +3809,14 @@ public class DBInstance implements Serializable, Cloneable {
      * The Amazon Web Services KMS key identifier for encryption of Performance Insights data.
      * </p>
      * <p>
-     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the Amazon Web
-     * Services KMS customer master key (CMK).
+     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key.
      * </p>
      * 
      * @param performanceInsightsKMSKeyId
      *        The Amazon Web Services KMS key identifier for encryption of Performance Insights data.</p>
      *        <p>
-     *        The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the Amazon
-     *        Web Services KMS customer master key (CMK).
+     *        The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS
+     *        key.
      */
 
     public void setPerformanceInsightsKMSKeyId(String performanceInsightsKMSKeyId) {
@@ -3791,14 +3828,13 @@ public class DBInstance implements Serializable, Cloneable {
      * The Amazon Web Services KMS key identifier for encryption of Performance Insights data.
      * </p>
      * <p>
-     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the Amazon Web
-     * Services KMS customer master key (CMK).
+     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key.
      * </p>
      * 
      * @return The Amazon Web Services KMS key identifier for encryption of Performance Insights data.</p>
      *         <p>
-     *         The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the
-     *         Amazon Web Services KMS customer master key (CMK).
+     *         The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS
+     *         key.
      */
 
     public String getPerformanceInsightsKMSKeyId() {
@@ -3810,15 +3846,14 @@ public class DBInstance implements Serializable, Cloneable {
      * The Amazon Web Services KMS key identifier for encryption of Performance Insights data.
      * </p>
      * <p>
-     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the Amazon Web
-     * Services KMS customer master key (CMK).
+     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key.
      * </p>
      * 
      * @param performanceInsightsKMSKeyId
      *        The Amazon Web Services KMS key identifier for encryption of Performance Insights data.</p>
      *        <p>
-     *        The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the Amazon
-     *        Web Services KMS customer master key (CMK).
+     *        The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS
+     *        key.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -4683,14 +4718,13 @@ public class DBInstance implements Serializable, Cloneable {
     /**
      * <p>
      * The Amazon Web Services KMS key identifier used for encrypting messages in the database activity stream. The
-     * Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the Amazon Web
-     * Services KMS customer master key (CMK).
+     * Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key.
      * </p>
      * 
      * @param activityStreamKmsKeyId
      *        The Amazon Web Services KMS key identifier used for encrypting messages in the database activity stream.
-     *        The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the Amazon
-     *        Web Services KMS customer master key (CMK).
+     *        The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS
+     *        key.
      */
 
     public void setActivityStreamKmsKeyId(String activityStreamKmsKeyId) {
@@ -4700,13 +4734,12 @@ public class DBInstance implements Serializable, Cloneable {
     /**
      * <p>
      * The Amazon Web Services KMS key identifier used for encrypting messages in the database activity stream. The
-     * Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the Amazon Web
-     * Services KMS customer master key (CMK).
+     * Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key.
      * </p>
      * 
      * @return The Amazon Web Services KMS key identifier used for encrypting messages in the database activity stream.
-     *         The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the
-     *         Amazon Web Services KMS customer master key (CMK).
+     *         The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS
+     *         key.
      */
 
     public String getActivityStreamKmsKeyId() {
@@ -4716,14 +4749,13 @@ public class DBInstance implements Serializable, Cloneable {
     /**
      * <p>
      * The Amazon Web Services KMS key identifier used for encrypting messages in the database activity stream. The
-     * Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the Amazon Web
-     * Services KMS customer master key (CMK).
+     * Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key.
      * </p>
      * 
      * @param activityStreamKmsKeyId
      *        The Amazon Web Services KMS key identifier used for encrypting messages in the database activity stream.
-     *        The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the Amazon
-     *        Web Services KMS customer master key (CMK).
+     *        The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS
+     *        key.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -4892,6 +4924,306 @@ public class DBInstance implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * The automation mode of the RDS Custom DB instance: <code>full</code> or <code>all paused</code>. If
+     * <code>full</code>, the DB instance automates monitoring and instance recovery. If <code>all paused</code>, the
+     * instance pauses automation for the duration set by <code>--resume-full-automation-mode-minutes</code>.
+     * </p>
+     * 
+     * @param automationMode
+     *        The automation mode of the RDS Custom DB instance: <code>full</code> or <code>all paused</code>. If
+     *        <code>full</code>, the DB instance automates monitoring and instance recovery. If <code>all paused</code>,
+     *        the instance pauses automation for the duration set by <code>--resume-full-automation-mode-minutes</code>.
+     * @see AutomationMode
+     */
+
+    public void setAutomationMode(String automationMode) {
+        this.automationMode = automationMode;
+    }
+
+    /**
+     * <p>
+     * The automation mode of the RDS Custom DB instance: <code>full</code> or <code>all paused</code>. If
+     * <code>full</code>, the DB instance automates monitoring and instance recovery. If <code>all paused</code>, the
+     * instance pauses automation for the duration set by <code>--resume-full-automation-mode-minutes</code>.
+     * </p>
+     * 
+     * @return The automation mode of the RDS Custom DB instance: <code>full</code> or <code>all paused</code>. If
+     *         <code>full</code>, the DB instance automates monitoring and instance recovery. If <code>all paused</code>
+     *         , the instance pauses automation for the duration set by
+     *         <code>--resume-full-automation-mode-minutes</code>.
+     * @see AutomationMode
+     */
+
+    public String getAutomationMode() {
+        return this.automationMode;
+    }
+
+    /**
+     * <p>
+     * The automation mode of the RDS Custom DB instance: <code>full</code> or <code>all paused</code>. If
+     * <code>full</code>, the DB instance automates monitoring and instance recovery. If <code>all paused</code>, the
+     * instance pauses automation for the duration set by <code>--resume-full-automation-mode-minutes</code>.
+     * </p>
+     * 
+     * @param automationMode
+     *        The automation mode of the RDS Custom DB instance: <code>full</code> or <code>all paused</code>. If
+     *        <code>full</code>, the DB instance automates monitoring and instance recovery. If <code>all paused</code>,
+     *        the instance pauses automation for the duration set by <code>--resume-full-automation-mode-minutes</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see AutomationMode
+     */
+
+    public DBInstance withAutomationMode(String automationMode) {
+        setAutomationMode(automationMode);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The automation mode of the RDS Custom DB instance: <code>full</code> or <code>all paused</code>. If
+     * <code>full</code>, the DB instance automates monitoring and instance recovery. If <code>all paused</code>, the
+     * instance pauses automation for the duration set by <code>--resume-full-automation-mode-minutes</code>.
+     * </p>
+     * 
+     * @param automationMode
+     *        The automation mode of the RDS Custom DB instance: <code>full</code> or <code>all paused</code>. If
+     *        <code>full</code>, the DB instance automates monitoring and instance recovery. If <code>all paused</code>,
+     *        the instance pauses automation for the duration set by <code>--resume-full-automation-mode-minutes</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see AutomationMode
+     */
+
+    public DBInstance withAutomationMode(AutomationMode automationMode) {
+        this.automationMode = automationMode.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * The number of minutes to pause the automation. When the time period ends, RDS Custom resumes full automation. The
+     * minimum value is 60 (default). The maximum value is 1,440.
+     * </p>
+     * 
+     * @param resumeFullAutomationModeTime
+     *        The number of minutes to pause the automation. When the time period ends, RDS Custom resumes full
+     *        automation. The minimum value is 60 (default). The maximum value is 1,440.
+     */
+
+    public void setResumeFullAutomationModeTime(java.util.Date resumeFullAutomationModeTime) {
+        this.resumeFullAutomationModeTime = resumeFullAutomationModeTime;
+    }
+
+    /**
+     * <p>
+     * The number of minutes to pause the automation. When the time period ends, RDS Custom resumes full automation. The
+     * minimum value is 60 (default). The maximum value is 1,440.
+     * </p>
+     * 
+     * @return The number of minutes to pause the automation. When the time period ends, RDS Custom resumes full
+     *         automation. The minimum value is 60 (default). The maximum value is 1,440.
+     */
+
+    public java.util.Date getResumeFullAutomationModeTime() {
+        return this.resumeFullAutomationModeTime;
+    }
+
+    /**
+     * <p>
+     * The number of minutes to pause the automation. When the time period ends, RDS Custom resumes full automation. The
+     * minimum value is 60 (default). The maximum value is 1,440.
+     * </p>
+     * 
+     * @param resumeFullAutomationModeTime
+     *        The number of minutes to pause the automation. When the time period ends, RDS Custom resumes full
+     *        automation. The minimum value is 60 (default). The maximum value is 1,440.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DBInstance withResumeFullAutomationModeTime(java.util.Date resumeFullAutomationModeTime) {
+        setResumeFullAutomationModeTime(resumeFullAutomationModeTime);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The instance profile associated with the underlying Amazon EC2 instance of an RDS Custom DB instance. The
+     * instance profile must meet the following requirements:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The profile must exist in your account.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The profile must have an IAM role that Amazon EC2 has permissions to assume.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The instance profile name and the associated IAM role name must start with the prefix <code>AWSRDSCustom</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For the list of permissions required for the IAM role, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-setup-orcl.html#custom-setup-orcl.iam-vpc">
+     * Configure IAM and your VPC</a> in the <i>Amazon Relational Database Service User Guide</i>.
+     * </p>
+     * 
+     * @param customIamInstanceProfile
+     *        The instance profile associated with the underlying Amazon EC2 instance of an RDS Custom DB instance. The
+     *        instance profile must meet the following requirements:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        The profile must exist in your account.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The profile must have an IAM role that Amazon EC2 has permissions to assume.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The instance profile name and the associated IAM role name must start with the prefix
+     *        <code>AWSRDSCustom</code>.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        For the list of permissions required for the IAM role, see <a href=
+     *        "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-setup-orcl.html#custom-setup-orcl.iam-vpc">
+     *        Configure IAM and your VPC</a> in the <i>Amazon Relational Database Service User Guide</i>.
+     */
+
+    public void setCustomIamInstanceProfile(String customIamInstanceProfile) {
+        this.customIamInstanceProfile = customIamInstanceProfile;
+    }
+
+    /**
+     * <p>
+     * The instance profile associated with the underlying Amazon EC2 instance of an RDS Custom DB instance. The
+     * instance profile must meet the following requirements:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The profile must exist in your account.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The profile must have an IAM role that Amazon EC2 has permissions to assume.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The instance profile name and the associated IAM role name must start with the prefix <code>AWSRDSCustom</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For the list of permissions required for the IAM role, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-setup-orcl.html#custom-setup-orcl.iam-vpc">
+     * Configure IAM and your VPC</a> in the <i>Amazon Relational Database Service User Guide</i>.
+     * </p>
+     * 
+     * @return The instance profile associated with the underlying Amazon EC2 instance of an RDS Custom DB instance. The
+     *         instance profile must meet the following requirements:</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         The profile must exist in your account.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         The profile must have an IAM role that Amazon EC2 has permissions to assume.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         The instance profile name and the associated IAM role name must start with the prefix
+     *         <code>AWSRDSCustom</code>.
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         For the list of permissions required for the IAM role, see <a href=
+     *         "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-setup-orcl.html#custom-setup-orcl.iam-vpc"
+     *         > Configure IAM and your VPC</a> in the <i>Amazon Relational Database Service User Guide</i>.
+     */
+
+    public String getCustomIamInstanceProfile() {
+        return this.customIamInstanceProfile;
+    }
+
+    /**
+     * <p>
+     * The instance profile associated with the underlying Amazon EC2 instance of an RDS Custom DB instance. The
+     * instance profile must meet the following requirements:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The profile must exist in your account.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The profile must have an IAM role that Amazon EC2 has permissions to assume.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The instance profile name and the associated IAM role name must start with the prefix <code>AWSRDSCustom</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For the list of permissions required for the IAM role, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-setup-orcl.html#custom-setup-orcl.iam-vpc">
+     * Configure IAM and your VPC</a> in the <i>Amazon Relational Database Service User Guide</i>.
+     * </p>
+     * 
+     * @param customIamInstanceProfile
+     *        The instance profile associated with the underlying Amazon EC2 instance of an RDS Custom DB instance. The
+     *        instance profile must meet the following requirements:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        The profile must exist in your account.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The profile must have an IAM role that Amazon EC2 has permissions to assume.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The instance profile name and the associated IAM role name must start with the prefix
+     *        <code>AWSRDSCustom</code>.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        For the list of permissions required for the IAM role, see <a href=
+     *        "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-setup-orcl.html#custom-setup-orcl.iam-vpc">
+     *        Configure IAM and your VPC</a> in the <i>Amazon Relational Database Service User Guide</i>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DBInstance withCustomIamInstanceProfile(String customIamInstanceProfile) {
+        setCustomIamInstanceProfile(customIamInstanceProfile);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -5042,7 +5374,13 @@ public class DBInstance implements Serializable, Cloneable {
         if (getActivityStreamMode() != null)
             sb.append("ActivityStreamMode: ").append(getActivityStreamMode()).append(",");
         if (getActivityStreamEngineNativeAuditFieldsIncluded() != null)
-            sb.append("ActivityStreamEngineNativeAuditFieldsIncluded: ").append(getActivityStreamEngineNativeAuditFieldsIncluded());
+            sb.append("ActivityStreamEngineNativeAuditFieldsIncluded: ").append(getActivityStreamEngineNativeAuditFieldsIncluded()).append(",");
+        if (getAutomationMode() != null)
+            sb.append("AutomationMode: ").append(getAutomationMode()).append(",");
+        if (getResumeFullAutomationModeTime() != null)
+            sb.append("ResumeFullAutomationModeTime: ").append(getResumeFullAutomationModeTime()).append(",");
+        if (getCustomIamInstanceProfile() != null)
+            sb.append("CustomIamInstanceProfile: ").append(getCustomIamInstanceProfile());
         sb.append("}");
         return sb.toString();
     }
@@ -5346,6 +5684,18 @@ public class DBInstance implements Serializable, Cloneable {
         if (other.getActivityStreamEngineNativeAuditFieldsIncluded() != null
                 && other.getActivityStreamEngineNativeAuditFieldsIncluded().equals(this.getActivityStreamEngineNativeAuditFieldsIncluded()) == false)
             return false;
+        if (other.getAutomationMode() == null ^ this.getAutomationMode() == null)
+            return false;
+        if (other.getAutomationMode() != null && other.getAutomationMode().equals(this.getAutomationMode()) == false)
+            return false;
+        if (other.getResumeFullAutomationModeTime() == null ^ this.getResumeFullAutomationModeTime() == null)
+            return false;
+        if (other.getResumeFullAutomationModeTime() != null && other.getResumeFullAutomationModeTime().equals(this.getResumeFullAutomationModeTime()) == false)
+            return false;
+        if (other.getCustomIamInstanceProfile() == null ^ this.getCustomIamInstanceProfile() == null)
+            return false;
+        if (other.getCustomIamInstanceProfile() != null && other.getCustomIamInstanceProfile().equals(this.getCustomIamInstanceProfile()) == false)
+            return false;
         return true;
     }
 
@@ -5425,6 +5775,9 @@ public class DBInstance implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getActivityStreamMode() == null) ? 0 : getActivityStreamMode().hashCode());
         hashCode = prime * hashCode
                 + ((getActivityStreamEngineNativeAuditFieldsIncluded() == null) ? 0 : getActivityStreamEngineNativeAuditFieldsIncluded().hashCode());
+        hashCode = prime * hashCode + ((getAutomationMode() == null) ? 0 : getAutomationMode().hashCode());
+        hashCode = prime * hashCode + ((getResumeFullAutomationModeTime() == null) ? 0 : getResumeFullAutomationModeTime().hashCode());
+        hashCode = prime * hashCode + ((getCustomIamInstanceProfile() == null) ? 0 : getCustomIamInstanceProfile().hashCode());
         return hashCode;
     }
 

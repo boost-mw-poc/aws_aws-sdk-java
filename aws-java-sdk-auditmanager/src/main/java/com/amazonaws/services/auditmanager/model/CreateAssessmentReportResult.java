@@ -25,18 +25,18 @@ public class CreateAssessmentReportResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The new assessment report returned by the <code>CreateAssessmentReport</code> API.
+     * The new assessment report that the <code>CreateAssessmentReport</code> API returned.
      * </p>
      */
     private AssessmentReport assessmentReport;
 
     /**
      * <p>
-     * The new assessment report returned by the <code>CreateAssessmentReport</code> API.
+     * The new assessment report that the <code>CreateAssessmentReport</code> API returned.
      * </p>
      * 
      * @param assessmentReport
-     *        The new assessment report returned by the <code>CreateAssessmentReport</code> API.
+     *        The new assessment report that the <code>CreateAssessmentReport</code> API returned.
      */
 
     public void setAssessmentReport(AssessmentReport assessmentReport) {
@@ -45,10 +45,10 @@ public class CreateAssessmentReportResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The new assessment report returned by the <code>CreateAssessmentReport</code> API.
+     * The new assessment report that the <code>CreateAssessmentReport</code> API returned.
      * </p>
      * 
-     * @return The new assessment report returned by the <code>CreateAssessmentReport</code> API.
+     * @return The new assessment report that the <code>CreateAssessmentReport</code> API returned.
      */
 
     public AssessmentReport getAssessmentReport() {
@@ -57,11 +57,11 @@ public class CreateAssessmentReportResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The new assessment report returned by the <code>CreateAssessmentReport</code> API.
+     * The new assessment report that the <code>CreateAssessmentReport</code> API returned.
      * </p>
      * 
      * @param assessmentReport
-     *        The new assessment report returned by the <code>CreateAssessmentReport</code> API.
+     *        The new assessment report that the <code>CreateAssessmentReport</code> API returned.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

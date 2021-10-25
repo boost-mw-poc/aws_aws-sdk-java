@@ -133,6 +133,36 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * </ul>
      * <p>
+     * <b>Amazon RDS Custom</b>
+     * </p>
+     * <p>
+     * The Oracle System ID (SID) of the created RDS Custom DB instance. If you don't specify a value, the default value
+     * is <code>ORCL</code>.
+     * </p>
+     * <p>
+     * Default: <code>ORCL</code>
+     * </p>
+     * <p>
+     * Constraints:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * It must contain 1 to 8 alphanumeric characters.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * It must contain a letter.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * It can't be a word reserved by the database engine.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
      * <b>SQL Server</b>
      * </p>
      * <p>
@@ -234,6 +264,24 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * Not applicable. Aurora cluster volumes automatically grow as the amount of data in your database increases,
      * though you are only charged for the space that you use in an Aurora cluster volume.
      * </p>
+     * <p>
+     * <b>Amazon RDS Custom</b>
+     * </p>
+     * <p>
+     * Constraints to the amount of storage for each storage type are the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * General Purpose (SSD) storage (gp2): Must be an integer from 40 to 65536.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Provisioned IOPS storage (io1): Must be an integer from 40 to 65536.
+     * </p>
+     * </li>
+     * </ul>
      * <p>
      * <b>MySQL</b>
      * </p>
@@ -421,6 +469,11 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <li>
      * <p>
      * <code>aurora-postgresql</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>custom-oracle-ee (for RDS Custom instances)</code>
      * </p>
      * </li>
      * <li>
@@ -762,6 +815,9 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * default DB parameter group for the specified DB engine and version is used.
      * </p>
      * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
+     * <p>
      * Constraints:
      * </p>
      * <ul>
@@ -809,6 +865,11 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <li>
      * <p>
      * Can't be set to 0 if the DB instance is a source to read replicas
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Can't be set to 0 or 35 for an RDS Custom DB instance
      * </p>
      * </li>
      * </ul>
@@ -933,6 +994,9 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * A value that indicates whether the DB instance is a Multi-AZ deployment. You can't set the
      * <code>AvailabilityZone</code> parameter if the DB instance is a Multi-AZ deployment.
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      */
     private Boolean multiAZ;
     /**
@@ -952,6 +1016,16 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * Not applicable. The version number of the database engine to be used by the DB instance is managed by the DB
      * cluster.
+     * </p>
+     * <p>
+     * <b>Amazon RDS Custom</b>
+     * </p>
+     * <p>
+     * A custom engine version (CEV) that you have previously created. This setting is required for RDS Custom. The CEV
+     * name has the following format: <code>19.<i>customized_string</i> </code>. An example identifier is
+     * <code>19.my_cev1</code>. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-creating.html#custom-creating.create">
+     * Creating an RDS Custom DB instance</a> in the <i>Amazon RDS User Guide.</i>.
      * </p>
      * <p>
      * <b>MariaDB</b>
@@ -999,6 +1073,9 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * A value that indicates whether minor engine upgrades are applied automatically to the DB instance during the
      * maintenance window. By default, minor engine upgrades are applied automatically.
      * </p>
+     * <p>
+     * If you create an RDS Custom DB instance, you must set <code>AutoMinorVersionUpgrade</code> to <code>false</code>.
+     * </p>
      */
     private Boolean autoMinorVersionUpgrade;
     /**
@@ -1008,6 +1085,9 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * Valid values: <code>license-included</code> | <code>bring-your-own-license</code> |
      * <code>general-public-license</code>
+     * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
      * </p>
      */
     private String licenseModel;
@@ -1031,13 +1111,21 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * <p>
      * Permanent options, such as the TDE option for Oracle Advanced Security TDE, can't be removed from an option
-     * group. Also, that option group can't be removed from a DB instance once it is associated with a DB instance
+     * group. Also, that option group can't be removed from a DB instance after it is associated with a DB instance.
+     * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
      * </p>
      */
     private String optionGroupName;
     /**
      * <p>
-     * For supported engines, indicates that the DB instance should be associated with the specified CharacterSet.
+     * For supported engines, this value indicates that the DB instance should be associated with the specified
+     * <code>CharacterSet</code>.
+     * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom. However, if you need to change the character set, you can change it on
+     * the database itself.
      * </p>
      * <p>
      * <b>Amazon Aurora</b>
@@ -1051,6 +1139,9 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * The name of the NCHAR character set for the Oracle DB instance.
+     * </p>
+     * <p>
+     * This parameter doesn't apply to RDS Custom.
      * </p>
      */
     private String ncharCharacterSetName;
@@ -1117,6 +1208,9 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * The identifier of the DB cluster that the instance will belong to.
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      */
     private String dBClusterIdentifier;
     /**
@@ -1138,17 +1232,27 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * The ARN from the key store with which to associate the instance for TDE encryption.
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      */
     private String tdeCredentialArn;
     /**
      * <p>
      * The password for the given ARN from the key store in order to access the device.
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      */
     private String tdeCredentialPassword;
     /**
      * <p>
      * A value that indicates whether the DB instance is encrypted. By default, it isn't encrypted.
+     * </p>
+     * <p>
+     * For RDS Custom Oracle instances, either set this parameter to <code>true</code> or leave it unset. If you set
+     * this parameter to <code>false</code>, RDS reports an error.
      * </p>
      * <p>
      * <b>Amazon Aurora</b>
@@ -1163,9 +1267,8 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * The Amazon Web Services KMS key identifier for an encrypted DB instance.
      * </p>
      * <p>
-     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the Amazon Web
-     * Services KMS customer master key (CMK). To use a CMK in a different Amazon Web Services account, specify the key
-     * ARN or alias ARN.
+     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key. To
+     * use a KMS key in a different Amazon Web Services account, specify the key ARN or alias ARN.
      * </p>
      * <p>
      * <b>Amazon Aurora</b>
@@ -1176,8 +1279,16 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * <p>
      * If <code>StorageEncrypted</code> is enabled, and you do not specify a value for the <code>KmsKeyId</code>
-     * parameter, then Amazon RDS uses your default CMK. There is a default CMK for your Amazon Web Services account.
-     * Your Amazon Web Services account has a different default CMK for each Amazon Web Services Region.
+     * parameter, then Amazon RDS uses your default KMS key. There is a default KMS key for your Amazon Web Services
+     * account. Your Amazon Web Services account has a different default KMS key for each Amazon Web Services Region.
+     * </p>
+     * <p>
+     * <b>Amazon RDS Custom</b>
+     * </p>
+     * <p>
+     * A KMS key is required for RDS Custom Oracle instances. For most RDS engines, if you leave this parameter empty
+     * while enabling <code>StorageEncrypted</code>, the engine uses the default KMS key. However, RDS Custom for Oracle
+     * doesn't use the default key when this parameter is empty. You must explicitly specify a key.
      * </p>
      */
     private String kmsKeyId;
@@ -1190,6 +1301,9 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/kerberos-authentication.html"> Kerberos
      * Authentication</a> in the <i>Amazon RDS User Guide</i>.
+     * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
      * </p>
      */
     private String domain;
@@ -1210,11 +1324,14 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * The interval, in seconds, between points when Enhanced Monitoring metrics are collected for the DB instance. To
-     * disable collecting Enhanced Monitoring metrics, specify 0. The default is 0.
+     * disable collection of Enhanced Monitoring metrics, specify 0. The default is 0.
      * </p>
      * <p>
-     * If <code>MonitoringRoleArn</code> is specified, then you must also set <code>MonitoringInterval</code> to a value
+     * If <code>MonitoringRoleArn</code> is specified, then you must set <code>MonitoringInterval</code> to a value
      * other than 0.
+     * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
      * </p>
      * <p>
      * Valid Values: <code>0, 1, 5, 10, 15, 30, 60</code>
@@ -1224,8 +1341,8 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * The ARN for the IAM role that permits RDS to send enhanced monitoring metrics to Amazon CloudWatch Logs. For
-     * example, <code>arn:aws:iam:123456789012:role/emaccess</code>. For information on creating a monitoring role, go
-     * to <a href=
+     * example, <code>arn:aws:iam:123456789012:role/emaccess</code>. For information on creating a monitoring role, see
+     * <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monitoring.OS.html#USER_Monitoring.OS.Enabling"
      * >Setting Up and Enabling Enhanced Monitoring</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
@@ -1233,11 +1350,17 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * If <code>MonitoringInterval</code> is set to a value other than 0, then you must supply a
      * <code>MonitoringRoleArn</code> value.
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      */
     private String monitoringRoleArn;
     /**
      * <p>
      * Specify the name of the IAM role to be used when making API calls to the Directory Service.
+     * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
      * </p>
      */
     private String domainIAMRoleName;
@@ -1247,6 +1370,9 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * of the existing primary instance. For more information, see <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Managing.Backups.html#Aurora.Managing.FaultTolerance"
      * > Fault Tolerance for an Aurora DB Cluster</a> in the <i>Amazon Aurora User Guide</i>.
+     * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
      * </p>
      * <p>
      * Default: 1
@@ -1270,8 +1396,8 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * accounts to database accounts. By default, mapping is disabled.
      * </p>
      * <p>
-     * This setting doesn't apply to Amazon Aurora. Mapping Amazon Web Services IAM accounts to database accounts is
-     * managed by the DB cluster.
+     * This setting doesn't apply to RDS Custom or Amazon Aurora. In Aurora, mapping Amazon Web Services IAM accounts to
+     * database accounts is managed by the DB cluster.
      * </p>
      * <p>
      * For more information, see <a
@@ -1282,12 +1408,12 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
     private Boolean enableIAMDatabaseAuthentication;
     /**
      * <p>
-     * A value that indicates whether to enable Performance Insights for the DB instance.
-     * </p>
-     * <p>
-     * For more information, see <a
+     * A value that indicates whether to enable Performance Insights for the DB instance. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html">Using Amazon Performance
      * Insights</a> in the <i>Amazon Relational Database Service User Guide</i>.
+     * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
      * </p>
      */
     private Boolean enablePerformanceInsights;
@@ -1296,13 +1422,15 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * The Amazon Web Services KMS key identifier for encryption of Performance Insights data.
      * </p>
      * <p>
-     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the Amazon Web
-     * Services KMS customer master key (CMK).
+     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key.
      * </p>
      * <p>
-     * If you do not specify a value for <code>PerformanceInsightsKMSKeyId</code>, then Amazon RDS uses your default
-     * CMK. There is a default CMK for your Amazon Web Services account. Your Amazon Web Services account has a
-     * different default CMK for each Amazon Web Services Region.
+     * If you do not specify a value for <code>PerformanceInsightsKMSKeyId</code>, then Amazon RDS uses your default KMS
+     * key. There is a default KMS key for your Amazon Web Services account. Your Amazon Web Services account has a
+     * different default KMS key for each Amazon Web Services Region.
+     * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
      * </p>
      */
     private String performanceInsightsKMSKeyId;
@@ -1310,14 +1438,17 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * The amount of time, in days, to retain Performance Insights data. Valid values are 7 or 731 (2 years).
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      */
     private Integer performanceInsightsRetentionPeriod;
     /**
      * <p>
      * The list of log types that need to be enabled for exporting to CloudWatch Logs. The values in the list depend on
-     * the DB engine being used. For more information, see <a href=
+     * the DB engine. For more information, see <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_LogAccess.html#USER_LogAccess.Procedural.UploadtoCloudWatch"
-     * >Publishing Database Logs to Amazon CloudWatch Logs </a> in the <i>Amazon Relational Database Service User
+     * >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon Relational Database Service User
      * Guide</i>.
      * </p>
      * <p>
@@ -1325,6 +1456,12 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * <p>
      * Not applicable. CloudWatch Logs exports are managed by the DB cluster.
+     * </p>
+     * <p>
+     * <b>RDS Custom</b>
+     * </p>
+     * <p>
+     * Not applicable.
      * </p>
      * <p>
      * <b>MariaDB</b>
@@ -1363,6 +1500,9 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * The number of CPU cores and the number of threads per core for the DB instance class of the DB instance.
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      */
     private com.amazonaws.internal.SdkInternalList<ProcessorFeature> processorFeatures;
     /**
@@ -1391,6 +1531,9 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PIOPS.StorageTypes.html#USER_PIOPS.Autoscaling">
      * Managing capacity automatically with Amazon RDS storage autoscaling</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      */
     private Integer maxAllocatedStorage;
     /**
@@ -1414,6 +1557,38 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      */
     private Boolean enableCustomerOwnedIp;
+    /**
+     * <p>
+     * The instance profile associated with the underlying Amazon EC2 instance of an RDS Custom DB instance. The
+     * instance profile must meet the following requirements:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The profile must exist in your account.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The profile must have an IAM role that Amazon EC2 has permissions to assume.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The instance profile name and the associated IAM role name must start with the prefix <code>AWSRDSCustom</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For the list of permissions required for the IAM role, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-setup-orcl.html#custom-setup-orcl.iam-vpc">
+     * Configure IAM and your VPC</a> in the <i>Amazon Relational Database Service User Guide</i>.
+     * </p>
+     * <p>
+     * This setting is required for RDS Custom.
+     * </p>
+     */
+    private String customIamInstanceProfile;
 
     /**
      * Default constructor for CreateDBInstanceRequest object. Callers should use the setter or fluent setter (with...)
@@ -1463,6 +1638,24 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        Not applicable. Aurora cluster volumes automatically grow as the amount of data in your database
      *        increases, though you are only charged for the space that you use in an Aurora cluster volume.
      *        </p>
+     *        <p>
+     *        <b>Amazon RDS Custom</b>
+     *        </p>
+     *        <p>
+     *        Constraints to the amount of storage for each storage type are the following:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        General Purpose (SSD) storage (gp2): Must be an integer from 40 to 65536.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Provisioned IOPS storage (io1): Must be an integer from 40 to 65536.
+     *        </p>
+     *        </li>
+     *        </ul>
      *        <p>
      *        <b>MySQL</b>
      *        </p>
@@ -1641,6 +1834,11 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        <li>
      *        <p>
      *        <code>aurora-postgresql</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>custom-oracle-ee (for RDS Custom instances)</code>
      *        </p>
      *        </li>
      *        <li>
@@ -1996,6 +2194,36 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * </ul>
      * <p>
+     * <b>Amazon RDS Custom</b>
+     * </p>
+     * <p>
+     * The Oracle System ID (SID) of the created RDS Custom DB instance. If you don't specify a value, the default value
+     * is <code>ORCL</code>.
+     * </p>
+     * <p>
+     * Default: <code>ORCL</code>
+     * </p>
+     * <p>
+     * Constraints:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * It must contain 1 to 8 alphanumeric characters.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * It must contain a letter.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * It can't be a word reserved by the database engine.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
      * <b>SQL Server</b>
      * </p>
      * <p>
@@ -2154,6 +2382,36 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        <li>
      *        <p>
      *        Can't be longer than 8 characters
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        <b>Amazon RDS Custom</b>
+     *        </p>
+     *        <p>
+     *        The Oracle System ID (SID) of the created RDS Custom DB instance. If you don't specify a value, the
+     *        default value is <code>ORCL</code>.
+     *        </p>
+     *        <p>
+     *        Default: <code>ORCL</code>
+     *        </p>
+     *        <p>
+     *        Constraints:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        It must contain 1 to 8 alphanumeric characters.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        It must contain a letter.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        It can't be a word reserved by the database engine.
      *        </p>
      *        </li>
      *        </ul>
@@ -2327,6 +2585,36 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * </ul>
      * <p>
+     * <b>Amazon RDS Custom</b>
+     * </p>
+     * <p>
+     * The Oracle System ID (SID) of the created RDS Custom DB instance. If you don't specify a value, the default value
+     * is <code>ORCL</code>.
+     * </p>
+     * <p>
+     * Default: <code>ORCL</code>
+     * </p>
+     * <p>
+     * Constraints:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * It must contain 1 to 8 alphanumeric characters.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * It must contain a letter.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * It can't be a word reserved by the database engine.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
      * <b>SQL Server</b>
      * </p>
      * <p>
@@ -2484,6 +2772,36 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         <li>
      *         <p>
      *         Can't be longer than 8 characters
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         <b>Amazon RDS Custom</b>
+     *         </p>
+     *         <p>
+     *         The Oracle System ID (SID) of the created RDS Custom DB instance. If you don't specify a value, the
+     *         default value is <code>ORCL</code>.
+     *         </p>
+     *         <p>
+     *         Default: <code>ORCL</code>
+     *         </p>
+     *         <p>
+     *         Constraints:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         It must contain 1 to 8 alphanumeric characters.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         It must contain a letter.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         It can't be a word reserved by the database engine.
      *         </p>
      *         </li>
      *         </ul>
@@ -2657,6 +2975,36 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * </ul>
      * <p>
+     * <b>Amazon RDS Custom</b>
+     * </p>
+     * <p>
+     * The Oracle System ID (SID) of the created RDS Custom DB instance. If you don't specify a value, the default value
+     * is <code>ORCL</code>.
+     * </p>
+     * <p>
+     * Default: <code>ORCL</code>
+     * </p>
+     * <p>
+     * Constraints:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * It must contain 1 to 8 alphanumeric characters.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * It must contain a letter.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * It can't be a word reserved by the database engine.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
      * <b>SQL Server</b>
      * </p>
      * <p>
@@ -2815,6 +3163,36 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        <li>
      *        <p>
      *        Can't be longer than 8 characters
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        <b>Amazon RDS Custom</b>
+     *        </p>
+     *        <p>
+     *        The Oracle System ID (SID) of the created RDS Custom DB instance. If you don't specify a value, the
+     *        default value is <code>ORCL</code>.
+     *        </p>
+     *        <p>
+     *        Default: <code>ORCL</code>
+     *        </p>
+     *        <p>
+     *        Constraints:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        It must contain 1 to 8 alphanumeric characters.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        It must contain a letter.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        It can't be a word reserved by the database engine.
      *        </p>
      *        </li>
      *        </ul>
@@ -3073,6 +3451,24 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * though you are only charged for the space that you use in an Aurora cluster volume.
      * </p>
      * <p>
+     * <b>Amazon RDS Custom</b>
+     * </p>
+     * <p>
+     * Constraints to the amount of storage for each storage type are the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * General Purpose (SSD) storage (gp2): Must be an integer from 40 to 65536.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Provisioned IOPS storage (io1): Must be an integer from 40 to 65536.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
      * <b>MySQL</b>
      * </p>
      * <p>
@@ -3236,6 +3632,24 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        Not applicable. Aurora cluster volumes automatically grow as the amount of data in your database
      *        increases, though you are only charged for the space that you use in an Aurora cluster volume.
      *        </p>
+     *        <p>
+     *        <b>Amazon RDS Custom</b>
+     *        </p>
+     *        <p>
+     *        Constraints to the amount of storage for each storage type are the following:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        General Purpose (SSD) storage (gp2): Must be an integer from 40 to 65536.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Provisioned IOPS storage (io1): Must be an integer from 40 to 65536.
+     *        </p>
+     *        </li>
+     *        </ul>
      *        <p>
      *        <b>MySQL</b>
      *        </p>
@@ -3407,6 +3821,24 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * though you are only charged for the space that you use in an Aurora cluster volume.
      * </p>
      * <p>
+     * <b>Amazon RDS Custom</b>
+     * </p>
+     * <p>
+     * Constraints to the amount of storage for each storage type are the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * General Purpose (SSD) storage (gp2): Must be an integer from 40 to 65536.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Provisioned IOPS storage (io1): Must be an integer from 40 to 65536.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
      * <b>MySQL</b>
      * </p>
      * <p>
@@ -3569,6 +4001,24 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         Not applicable. Aurora cluster volumes automatically grow as the amount of data in your database
      *         increases, though you are only charged for the space that you use in an Aurora cluster volume.
      *         </p>
+     *         <p>
+     *         <b>Amazon RDS Custom</b>
+     *         </p>
+     *         <p>
+     *         Constraints to the amount of storage for each storage type are the following:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         General Purpose (SSD) storage (gp2): Must be an integer from 40 to 65536.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Provisioned IOPS storage (io1): Must be an integer from 40 to 65536.
+     *         </p>
+     *         </li>
+     *         </ul>
      *         <p>
      *         <b>MySQL</b>
      *         </p>
@@ -3740,6 +4190,24 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * though you are only charged for the space that you use in an Aurora cluster volume.
      * </p>
      * <p>
+     * <b>Amazon RDS Custom</b>
+     * </p>
+     * <p>
+     * Constraints to the amount of storage for each storage type are the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * General Purpose (SSD) storage (gp2): Must be an integer from 40 to 65536.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Provisioned IOPS storage (io1): Must be an integer from 40 to 65536.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
      * <b>MySQL</b>
      * </p>
      * <p>
@@ -3903,6 +4371,24 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        Not applicable. Aurora cluster volumes automatically grow as the amount of data in your database
      *        increases, though you are only charged for the space that you use in an Aurora cluster volume.
      *        </p>
+     *        <p>
+     *        <b>Amazon RDS Custom</b>
+     *        </p>
+     *        <p>
+     *        Constraints to the amount of storage for each storage type are the following:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        General Purpose (SSD) storage (gp2): Must be an integer from 40 to 65536.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Provisioned IOPS storage (io1): Must be an integer from 40 to 65536.
+     *        </p>
+     *        </li>
+     *        </ul>
      *        <p>
      *        <b>MySQL</b>
      *        </p>
@@ -4153,6 +4639,11 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * <li>
      * <p>
+     * <code>custom-oracle-ee (for RDS Custom instances)</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>mariadb</code>
      * </p>
      * </li>
@@ -4230,6 +4721,11 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        <li>
      *        <p>
      *        <code>aurora-postgresql</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>custom-oracle-ee (for RDS Custom instances)</code>
      *        </p>
      *        </li>
      *        <li>
@@ -4321,6 +4817,11 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * <li>
      * <p>
+     * <code>custom-oracle-ee (for RDS Custom instances)</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>mariadb</code>
      * </p>
      * </li>
@@ -4397,6 +4898,11 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         <li>
      *         <p>
      *         <code>aurora-postgresql</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>custom-oracle-ee (for RDS Custom instances)</code>
      *         </p>
      *         </li>
      *         <li>
@@ -4488,6 +4994,11 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * <li>
      * <p>
+     * <code>custom-oracle-ee (for RDS Custom instances)</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>mariadb</code>
      * </p>
      * </li>
@@ -4565,6 +5076,11 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        <li>
      *        <p>
      *        <code>aurora-postgresql</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>custom-oracle-ee (for RDS Custom instances)</code>
      *        </p>
      *        </li>
      *        <li>
@@ -6384,6 +6900,9 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * default DB parameter group for the specified DB engine and version is used.
      * </p>
      * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
+     * <p>
      * Constraints:
      * </p>
      * <ul>
@@ -6407,6 +6926,9 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * @param dBParameterGroupName
      *        The name of the DB parameter group to associate with this DB instance. If you do not specify a value, then
      *        the default DB parameter group for the specified DB engine and version is used.</p>
+     *        <p>
+     *        This setting doesn't apply to RDS Custom.
+     *        </p>
      *        <p>
      *        Constraints:
      *        </p>
@@ -6438,6 +6960,9 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * default DB parameter group for the specified DB engine and version is used.
      * </p>
      * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
+     * <p>
      * Constraints:
      * </p>
      * <ul>
@@ -6460,6 +6985,9 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * 
      * @return The name of the DB parameter group to associate with this DB instance. If you do not specify a value,
      *         then the default DB parameter group for the specified DB engine and version is used.</p>
+     *         <p>
+     *         This setting doesn't apply to RDS Custom.
+     *         </p>
      *         <p>
      *         Constraints:
      *         </p>
@@ -6491,6 +7019,9 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * default DB parameter group for the specified DB engine and version is used.
      * </p>
      * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
+     * <p>
      * Constraints:
      * </p>
      * <ul>
@@ -6514,6 +7045,9 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * @param dBParameterGroupName
      *        The name of the DB parameter group to associate with this DB instance. If you do not specify a value, then
      *        the default DB parameter group for the specified DB engine and version is used.</p>
+     *        <p>
+     *        This setting doesn't apply to RDS Custom.
+     *        </p>
      *        <p>
      *        Constraints:
      *        </p>
@@ -6569,6 +7103,11 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * Can't be set to 0 if the DB instance is a source to read replicas
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * Can't be set to 0 or 35 for an RDS Custom DB instance
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param backupRetentionPeriod
@@ -6595,6 +7134,11 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        <li>
      *        <p>
      *        Can't be set to 0 if the DB instance is a source to read replicas
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Can't be set to 0 or 35 for an RDS Custom DB instance
      *        </p>
      *        </li>
      */
@@ -6631,6 +7175,11 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * Can't be set to 0 if the DB instance is a source to read replicas
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * Can't be set to 0 or 35 for an RDS Custom DB instance
+     * </p>
+     * </li>
      * </ul>
      * 
      * @return The number of days for which automated backups are retained. Setting this parameter to a positive number
@@ -6656,6 +7205,11 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         <li>
      *         <p>
      *         Can't be set to 0 if the DB instance is a source to read replicas
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Can't be set to 0 or 35 for an RDS Custom DB instance
      *         </p>
      *         </li>
      */
@@ -6692,6 +7246,11 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * Can't be set to 0 if the DB instance is a source to read replicas
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * Can't be set to 0 or 35 for an RDS Custom DB instance
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param backupRetentionPeriod
@@ -6718,6 +7277,11 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        <li>
      *        <p>
      *        Can't be set to 0 if the DB instance is a source to read replicas
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Can't be set to 0 or 35 for an RDS Custom DB instance
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -7419,10 +7983,15 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * A value that indicates whether the DB instance is a Multi-AZ deployment. You can't set the
      * <code>AvailabilityZone</code> parameter if the DB instance is a Multi-AZ deployment.
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      * 
      * @param multiAZ
      *        A value that indicates whether the DB instance is a Multi-AZ deployment. You can't set the
-     *        <code>AvailabilityZone</code> parameter if the DB instance is a Multi-AZ deployment.
+     *        <code>AvailabilityZone</code> parameter if the DB instance is a Multi-AZ deployment.</p>
+     *        <p>
+     *        This setting doesn't apply to RDS Custom.
      */
 
     public void setMultiAZ(Boolean multiAZ) {
@@ -7434,9 +8003,14 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * A value that indicates whether the DB instance is a Multi-AZ deployment. You can't set the
      * <code>AvailabilityZone</code> parameter if the DB instance is a Multi-AZ deployment.
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      * 
      * @return A value that indicates whether the DB instance is a Multi-AZ deployment. You can't set the
-     *         <code>AvailabilityZone</code> parameter if the DB instance is a Multi-AZ deployment.
+     *         <code>AvailabilityZone</code> parameter if the DB instance is a Multi-AZ deployment.</p>
+     *         <p>
+     *         This setting doesn't apply to RDS Custom.
      */
 
     public Boolean getMultiAZ() {
@@ -7448,10 +8022,15 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * A value that indicates whether the DB instance is a Multi-AZ deployment. You can't set the
      * <code>AvailabilityZone</code> parameter if the DB instance is a Multi-AZ deployment.
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      * 
      * @param multiAZ
      *        A value that indicates whether the DB instance is a Multi-AZ deployment. You can't set the
-     *        <code>AvailabilityZone</code> parameter if the DB instance is a Multi-AZ deployment.
+     *        <code>AvailabilityZone</code> parameter if the DB instance is a Multi-AZ deployment.</p>
+     *        <p>
+     *        This setting doesn't apply to RDS Custom.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -7465,9 +8044,14 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * A value that indicates whether the DB instance is a Multi-AZ deployment. You can't set the
      * <code>AvailabilityZone</code> parameter if the DB instance is a Multi-AZ deployment.
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      * 
      * @return A value that indicates whether the DB instance is a Multi-AZ deployment. You can't set the
-     *         <code>AvailabilityZone</code> parameter if the DB instance is a Multi-AZ deployment.
+     *         <code>AvailabilityZone</code> parameter if the DB instance is a Multi-AZ deployment.</p>
+     *         <p>
+     *         This setting doesn't apply to RDS Custom.
      */
 
     public Boolean isMultiAZ() {
@@ -7491,6 +8075,16 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * Not applicable. The version number of the database engine to be used by the DB instance is managed by the DB
      * cluster.
+     * </p>
+     * <p>
+     * <b>Amazon RDS Custom</b>
+     * </p>
+     * <p>
+     * A custom engine version (CEV) that you have previously created. This setting is required for RDS Custom. The CEV
+     * name has the following format: <code>19.<i>customized_string</i> </code>. An example identifier is
+     * <code>19.my_cev1</code>. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-creating.html#custom-creating.create">
+     * Creating an RDS Custom DB instance</a> in the <i>Amazon RDS User Guide.</i>.
      * </p>
      * <p>
      * <b>MariaDB</b>
@@ -7548,6 +8142,16 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        <p>
      *        Not applicable. The version number of the database engine to be used by the DB instance is managed by the
      *        DB cluster.
+     *        </p>
+     *        <p>
+     *        <b>Amazon RDS Custom</b>
+     *        </p>
+     *        <p>
+     *        A custom engine version (CEV) that you have previously created. This setting is required for RDS Custom.
+     *        The CEV name has the following format: <code>19.<i>customized_string</i> </code>. An example identifier is
+     *        <code>19.my_cev1</code>. For more information, see <a
+     *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-creating.html#custom-creating.create">
+     *        Creating an RDS Custom DB instance</a> in the <i>Amazon RDS User Guide.</i>.
      *        </p>
      *        <p>
      *        <b>MariaDB</b>
@@ -7613,6 +8217,16 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * cluster.
      * </p>
      * <p>
+     * <b>Amazon RDS Custom</b>
+     * </p>
+     * <p>
+     * A custom engine version (CEV) that you have previously created. This setting is required for RDS Custom. The CEV
+     * name has the following format: <code>19.<i>customized_string</i> </code>. An example identifier is
+     * <code>19.my_cev1</code>. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-creating.html#custom-creating.create">
+     * Creating an RDS Custom DB instance</a> in the <i>Amazon RDS User Guide.</i>.
+     * </p>
+     * <p>
      * <b>MariaDB</b>
      * </p>
      * <p>
@@ -7667,6 +8281,16 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         <p>
      *         Not applicable. The version number of the database engine to be used by the DB instance is managed by the
      *         DB cluster.
+     *         </p>
+     *         <p>
+     *         <b>Amazon RDS Custom</b>
+     *         </p>
+     *         <p>
+     *         A custom engine version (CEV) that you have previously created. This setting is required for RDS Custom.
+     *         The CEV name has the following format: <code>19.<i>customized_string</i> </code>. An example identifier
+     *         is <code>19.my_cev1</code>. For more information, see <a
+     *         href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-creating.html#custom-creating.create"
+     *         > Creating an RDS Custom DB instance</a> in the <i>Amazon RDS User Guide.</i>.
      *         </p>
      *         <p>
      *         <b>MariaDB</b>
@@ -7732,6 +8356,16 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * cluster.
      * </p>
      * <p>
+     * <b>Amazon RDS Custom</b>
+     * </p>
+     * <p>
+     * A custom engine version (CEV) that you have previously created. This setting is required for RDS Custom. The CEV
+     * name has the following format: <code>19.<i>customized_string</i> </code>. An example identifier is
+     * <code>19.my_cev1</code>. For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-creating.html#custom-creating.create">
+     * Creating an RDS Custom DB instance</a> in the <i>Amazon RDS User Guide.</i>.
+     * </p>
+     * <p>
      * <b>MariaDB</b>
      * </p>
      * <p>
@@ -7789,6 +8423,16 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        DB cluster.
      *        </p>
      *        <p>
+     *        <b>Amazon RDS Custom</b>
+     *        </p>
+     *        <p>
+     *        A custom engine version (CEV) that you have previously created. This setting is required for RDS Custom.
+     *        The CEV name has the following format: <code>19.<i>customized_string</i> </code>. An example identifier is
+     *        <code>19.my_cev1</code>. For more information, see <a
+     *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-creating.html#custom-creating.create">
+     *        Creating an RDS Custom DB instance</a> in the <i>Amazon RDS User Guide.</i>.
+     *        </p>
+     *        <p>
      *        <b>MariaDB</b>
      *        </p>
      *        <p>
@@ -7840,10 +8484,16 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * A value that indicates whether minor engine upgrades are applied automatically to the DB instance during the
      * maintenance window. By default, minor engine upgrades are applied automatically.
      * </p>
+     * <p>
+     * If you create an RDS Custom DB instance, you must set <code>AutoMinorVersionUpgrade</code> to <code>false</code>.
+     * </p>
      * 
      * @param autoMinorVersionUpgrade
      *        A value that indicates whether minor engine upgrades are applied automatically to the DB instance during
-     *        the maintenance window. By default, minor engine upgrades are applied automatically.
+     *        the maintenance window. By default, minor engine upgrades are applied automatically.</p>
+     *        <p>
+     *        If you create an RDS Custom DB instance, you must set <code>AutoMinorVersionUpgrade</code> to
+     *        <code>false</code>.
      */
 
     public void setAutoMinorVersionUpgrade(Boolean autoMinorVersionUpgrade) {
@@ -7855,9 +8505,15 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * A value that indicates whether minor engine upgrades are applied automatically to the DB instance during the
      * maintenance window. By default, minor engine upgrades are applied automatically.
      * </p>
+     * <p>
+     * If you create an RDS Custom DB instance, you must set <code>AutoMinorVersionUpgrade</code> to <code>false</code>.
+     * </p>
      * 
      * @return A value that indicates whether minor engine upgrades are applied automatically to the DB instance during
-     *         the maintenance window. By default, minor engine upgrades are applied automatically.
+     *         the maintenance window. By default, minor engine upgrades are applied automatically.</p>
+     *         <p>
+     *         If you create an RDS Custom DB instance, you must set <code>AutoMinorVersionUpgrade</code> to
+     *         <code>false</code>.
      */
 
     public Boolean getAutoMinorVersionUpgrade() {
@@ -7869,10 +8525,16 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * A value that indicates whether minor engine upgrades are applied automatically to the DB instance during the
      * maintenance window. By default, minor engine upgrades are applied automatically.
      * </p>
+     * <p>
+     * If you create an RDS Custom DB instance, you must set <code>AutoMinorVersionUpgrade</code> to <code>false</code>.
+     * </p>
      * 
      * @param autoMinorVersionUpgrade
      *        A value that indicates whether minor engine upgrades are applied automatically to the DB instance during
-     *        the maintenance window. By default, minor engine upgrades are applied automatically.
+     *        the maintenance window. By default, minor engine upgrades are applied automatically.</p>
+     *        <p>
+     *        If you create an RDS Custom DB instance, you must set <code>AutoMinorVersionUpgrade</code> to
+     *        <code>false</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -7886,9 +8548,15 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * A value that indicates whether minor engine upgrades are applied automatically to the DB instance during the
      * maintenance window. By default, minor engine upgrades are applied automatically.
      * </p>
+     * <p>
+     * If you create an RDS Custom DB instance, you must set <code>AutoMinorVersionUpgrade</code> to <code>false</code>.
+     * </p>
      * 
      * @return A value that indicates whether minor engine upgrades are applied automatically to the DB instance during
-     *         the maintenance window. By default, minor engine upgrades are applied automatically.
+     *         the maintenance window. By default, minor engine upgrades are applied automatically.</p>
+     *         <p>
+     *         If you create an RDS Custom DB instance, you must set <code>AutoMinorVersionUpgrade</code> to
+     *         <code>false</code>.
      */
 
     public Boolean isAutoMinorVersionUpgrade() {
@@ -7903,12 +8571,18 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * Valid values: <code>license-included</code> | <code>bring-your-own-license</code> |
      * <code>general-public-license</code>
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      * 
      * @param licenseModel
      *        License model information for this DB instance.</p>
      *        <p>
      *        Valid values: <code>license-included</code> | <code>bring-your-own-license</code> |
      *        <code>general-public-license</code>
+     *        </p>
+     *        <p>
+     *        This setting doesn't apply to RDS Custom.
      */
 
     public void setLicenseModel(String licenseModel) {
@@ -7923,11 +8597,17 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * Valid values: <code>license-included</code> | <code>bring-your-own-license</code> |
      * <code>general-public-license</code>
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      * 
      * @return License model information for this DB instance.</p>
      *         <p>
      *         Valid values: <code>license-included</code> | <code>bring-your-own-license</code> |
      *         <code>general-public-license</code>
+     *         </p>
+     *         <p>
+     *         This setting doesn't apply to RDS Custom.
      */
 
     public String getLicenseModel() {
@@ -7942,12 +8622,18 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * Valid values: <code>license-included</code> | <code>bring-your-own-license</code> |
      * <code>general-public-license</code>
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      * 
      * @param licenseModel
      *        License model information for this DB instance.</p>
      *        <p>
      *        Valid values: <code>license-included</code> | <code>bring-your-own-license</code> |
      *        <code>general-public-license</code>
+     *        </p>
+     *        <p>
+     *        This setting doesn't apply to RDS Custom.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -8047,15 +8733,21 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * <p>
      * Permanent options, such as the TDE option for Oracle Advanced Security TDE, can't be removed from an option
-     * group. Also, that option group can't be removed from a DB instance once it is associated with a DB instance
+     * group. Also, that option group can't be removed from a DB instance after it is associated with a DB instance.
+     * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
      * </p>
      * 
      * @param optionGroupName
      *        A value that indicates that the DB instance should be associated with the specified option group.</p>
      *        <p>
      *        Permanent options, such as the TDE option for Oracle Advanced Security TDE, can't be removed from an
-     *        option group. Also, that option group can't be removed from a DB instance once it is associated with a DB
-     *        instance
+     *        option group. Also, that option group can't be removed from a DB instance after it is associated with a DB
+     *        instance.
+     *        </p>
+     *        <p>
+     *        This setting doesn't apply to RDS Custom.
      */
 
     public void setOptionGroupName(String optionGroupName) {
@@ -8068,14 +8760,20 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * <p>
      * Permanent options, such as the TDE option for Oracle Advanced Security TDE, can't be removed from an option
-     * group. Also, that option group can't be removed from a DB instance once it is associated with a DB instance
+     * group. Also, that option group can't be removed from a DB instance after it is associated with a DB instance.
+     * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
      * </p>
      * 
      * @return A value that indicates that the DB instance should be associated with the specified option group.</p>
      *         <p>
      *         Permanent options, such as the TDE option for Oracle Advanced Security TDE, can't be removed from an
-     *         option group. Also, that option group can't be removed from a DB instance once it is associated with a DB
-     *         instance
+     *         option group. Also, that option group can't be removed from a DB instance after it is associated with a
+     *         DB instance.
+     *         </p>
+     *         <p>
+     *         This setting doesn't apply to RDS Custom.
      */
 
     public String getOptionGroupName() {
@@ -8088,15 +8786,21 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * <p>
      * Permanent options, such as the TDE option for Oracle Advanced Security TDE, can't be removed from an option
-     * group. Also, that option group can't be removed from a DB instance once it is associated with a DB instance
+     * group. Also, that option group can't be removed from a DB instance after it is associated with a DB instance.
+     * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
      * </p>
      * 
      * @param optionGroupName
      *        A value that indicates that the DB instance should be associated with the specified option group.</p>
      *        <p>
      *        Permanent options, such as the TDE option for Oracle Advanced Security TDE, can't be removed from an
-     *        option group. Also, that option group can't be removed from a DB instance once it is associated with a DB
-     *        instance
+     *        option group. Also, that option group can't be removed from a DB instance after it is associated with a DB
+     *        instance.
+     *        </p>
+     *        <p>
+     *        This setting doesn't apply to RDS Custom.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -8107,7 +8811,12 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * For supported engines, indicates that the DB instance should be associated with the specified CharacterSet.
+     * For supported engines, this value indicates that the DB instance should be associated with the specified
+     * <code>CharacterSet</code>.
+     * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom. However, if you need to change the character set, you can change it on
+     * the database itself.
      * </p>
      * <p>
      * <b>Amazon Aurora</b>
@@ -8118,8 +8827,12 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * 
      * @param characterSetName
-     *        For supported engines, indicates that the DB instance should be associated with the specified
-     *        CharacterSet.</p>
+     *        For supported engines, this value indicates that the DB instance should be associated with the specified
+     *        <code>CharacterSet</code>.</p>
+     *        <p>
+     *        This setting doesn't apply to RDS Custom. However, if you need to change the character set, you can change
+     *        it on the database itself.
+     *        </p>
      *        <p>
      *        <b>Amazon Aurora</b>
      *        </p>
@@ -8134,7 +8847,12 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * For supported engines, indicates that the DB instance should be associated with the specified CharacterSet.
+     * For supported engines, this value indicates that the DB instance should be associated with the specified
+     * <code>CharacterSet</code>.
+     * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom. However, if you need to change the character set, you can change it on
+     * the database itself.
      * </p>
      * <p>
      * <b>Amazon Aurora</b>
@@ -8144,8 +8862,12 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <code>CreateDBCluster</code>.
      * </p>
      * 
-     * @return For supported engines, indicates that the DB instance should be associated with the specified
-     *         CharacterSet.</p>
+     * @return For supported engines, this value indicates that the DB instance should be associated with the specified
+     *         <code>CharacterSet</code>.</p>
+     *         <p>
+     *         This setting doesn't apply to RDS Custom. However, if you need to change the character set, you can
+     *         change it on the database itself.
+     *         </p>
      *         <p>
      *         <b>Amazon Aurora</b>
      *         </p>
@@ -8160,7 +8882,12 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * For supported engines, indicates that the DB instance should be associated with the specified CharacterSet.
+     * For supported engines, this value indicates that the DB instance should be associated with the specified
+     * <code>CharacterSet</code>.
+     * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom. However, if you need to change the character set, you can change it on
+     * the database itself.
      * </p>
      * <p>
      * <b>Amazon Aurora</b>
@@ -8171,8 +8898,12 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * 
      * @param characterSetName
-     *        For supported engines, indicates that the DB instance should be associated with the specified
-     *        CharacterSet.</p>
+     *        For supported engines, this value indicates that the DB instance should be associated with the specified
+     *        <code>CharacterSet</code>.</p>
+     *        <p>
+     *        This setting doesn't apply to RDS Custom. However, if you need to change the character set, you can change
+     *        it on the database itself.
+     *        </p>
      *        <p>
      *        <b>Amazon Aurora</b>
      *        </p>
@@ -8191,9 +8922,14 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * The name of the NCHAR character set for the Oracle DB instance.
      * </p>
+     * <p>
+     * This parameter doesn't apply to RDS Custom.
+     * </p>
      * 
      * @param ncharCharacterSetName
-     *        The name of the NCHAR character set for the Oracle DB instance.
+     *        The name of the NCHAR character set for the Oracle DB instance.</p>
+     *        <p>
+     *        This parameter doesn't apply to RDS Custom.
      */
 
     public void setNcharCharacterSetName(String ncharCharacterSetName) {
@@ -8204,8 +8940,13 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * The name of the NCHAR character set for the Oracle DB instance.
      * </p>
+     * <p>
+     * This parameter doesn't apply to RDS Custom.
+     * </p>
      * 
-     * @return The name of the NCHAR character set for the Oracle DB instance.
+     * @return The name of the NCHAR character set for the Oracle DB instance.</p>
+     *         <p>
+     *         This parameter doesn't apply to RDS Custom.
      */
 
     public String getNcharCharacterSetName() {
@@ -8216,9 +8957,14 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * The name of the NCHAR character set for the Oracle DB instance.
      * </p>
+     * <p>
+     * This parameter doesn't apply to RDS Custom.
+     * </p>
      * 
      * @param ncharCharacterSetName
-     *        The name of the NCHAR character set for the Oracle DB instance.
+     *        The name of the NCHAR character set for the Oracle DB instance.</p>
+     *        <p>
+     *        This parameter doesn't apply to RDS Custom.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -8730,9 +9476,14 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * The identifier of the DB cluster that the instance will belong to.
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      * 
      * @param dBClusterIdentifier
-     *        The identifier of the DB cluster that the instance will belong to.
+     *        The identifier of the DB cluster that the instance will belong to.</p>
+     *        <p>
+     *        This setting doesn't apply to RDS Custom.
      */
 
     public void setDBClusterIdentifier(String dBClusterIdentifier) {
@@ -8743,8 +9494,13 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * The identifier of the DB cluster that the instance will belong to.
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      * 
-     * @return The identifier of the DB cluster that the instance will belong to.
+     * @return The identifier of the DB cluster that the instance will belong to.</p>
+     *         <p>
+     *         This setting doesn't apply to RDS Custom.
      */
 
     public String getDBClusterIdentifier() {
@@ -8755,9 +9511,14 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * The identifier of the DB cluster that the instance will belong to.
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      * 
      * @param dBClusterIdentifier
-     *        The identifier of the DB cluster that the instance will belong to.
+     *        The identifier of the DB cluster that the instance will belong to.</p>
+     *        <p>
+     *        This setting doesn't apply to RDS Custom.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -8861,9 +9622,14 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * The ARN from the key store with which to associate the instance for TDE encryption.
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      * 
      * @param tdeCredentialArn
-     *        The ARN from the key store with which to associate the instance for TDE encryption.
+     *        The ARN from the key store with which to associate the instance for TDE encryption.</p>
+     *        <p>
+     *        This setting doesn't apply to RDS Custom.
      */
 
     public void setTdeCredentialArn(String tdeCredentialArn) {
@@ -8874,8 +9640,13 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * The ARN from the key store with which to associate the instance for TDE encryption.
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      * 
-     * @return The ARN from the key store with which to associate the instance for TDE encryption.
+     * @return The ARN from the key store with which to associate the instance for TDE encryption.</p>
+     *         <p>
+     *         This setting doesn't apply to RDS Custom.
      */
 
     public String getTdeCredentialArn() {
@@ -8886,9 +9657,14 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * The ARN from the key store with which to associate the instance for TDE encryption.
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      * 
      * @param tdeCredentialArn
-     *        The ARN from the key store with which to associate the instance for TDE encryption.
+     *        The ARN from the key store with which to associate the instance for TDE encryption.</p>
+     *        <p>
+     *        This setting doesn't apply to RDS Custom.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -8901,9 +9677,14 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * The password for the given ARN from the key store in order to access the device.
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      * 
      * @param tdeCredentialPassword
-     *        The password for the given ARN from the key store in order to access the device.
+     *        The password for the given ARN from the key store in order to access the device.</p>
+     *        <p>
+     *        This setting doesn't apply to RDS Custom.
      */
 
     public void setTdeCredentialPassword(String tdeCredentialPassword) {
@@ -8914,8 +9695,13 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * The password for the given ARN from the key store in order to access the device.
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      * 
-     * @return The password for the given ARN from the key store in order to access the device.
+     * @return The password for the given ARN from the key store in order to access the device.</p>
+     *         <p>
+     *         This setting doesn't apply to RDS Custom.
      */
 
     public String getTdeCredentialPassword() {
@@ -8926,9 +9712,14 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * The password for the given ARN from the key store in order to access the device.
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      * 
      * @param tdeCredentialPassword
-     *        The password for the given ARN from the key store in order to access the device.
+     *        The password for the given ARN from the key store in order to access the device.</p>
+     *        <p>
+     *        This setting doesn't apply to RDS Custom.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -8942,6 +9733,10 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * A value that indicates whether the DB instance is encrypted. By default, it isn't encrypted.
      * </p>
      * <p>
+     * For RDS Custom Oracle instances, either set this parameter to <code>true</code> or leave it unset. If you set
+     * this parameter to <code>false</code>, RDS reports an error.
+     * </p>
+     * <p>
      * <b>Amazon Aurora</b>
      * </p>
      * <p>
@@ -8950,6 +9745,10 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * 
      * @param storageEncrypted
      *        A value that indicates whether the DB instance is encrypted. By default, it isn't encrypted.</p>
+     *        <p>
+     *        For RDS Custom Oracle instances, either set this parameter to <code>true</code> or leave it unset. If you
+     *        set this parameter to <code>false</code>, RDS reports an error.
+     *        </p>
      *        <p>
      *        <b>Amazon Aurora</b>
      *        </p>
@@ -8966,6 +9765,10 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * A value that indicates whether the DB instance is encrypted. By default, it isn't encrypted.
      * </p>
      * <p>
+     * For RDS Custom Oracle instances, either set this parameter to <code>true</code> or leave it unset. If you set
+     * this parameter to <code>false</code>, RDS reports an error.
+     * </p>
+     * <p>
      * <b>Amazon Aurora</b>
      * </p>
      * <p>
@@ -8973,6 +9776,10 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * 
      * @return A value that indicates whether the DB instance is encrypted. By default, it isn't encrypted.</p>
+     *         <p>
+     *         For RDS Custom Oracle instances, either set this parameter to <code>true</code> or leave it unset. If you
+     *         set this parameter to <code>false</code>, RDS reports an error.
+     *         </p>
      *         <p>
      *         <b>Amazon Aurora</b>
      *         </p>
@@ -8989,6 +9796,10 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * A value that indicates whether the DB instance is encrypted. By default, it isn't encrypted.
      * </p>
      * <p>
+     * For RDS Custom Oracle instances, either set this parameter to <code>true</code> or leave it unset. If you set
+     * this parameter to <code>false</code>, RDS reports an error.
+     * </p>
+     * <p>
      * <b>Amazon Aurora</b>
      * </p>
      * <p>
@@ -8997,6 +9808,10 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * 
      * @param storageEncrypted
      *        A value that indicates whether the DB instance is encrypted. By default, it isn't encrypted.</p>
+     *        <p>
+     *        For RDS Custom Oracle instances, either set this parameter to <code>true</code> or leave it unset. If you
+     *        set this parameter to <code>false</code>, RDS reports an error.
+     *        </p>
      *        <p>
      *        <b>Amazon Aurora</b>
      *        </p>
@@ -9015,6 +9830,10 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * A value that indicates whether the DB instance is encrypted. By default, it isn't encrypted.
      * </p>
      * <p>
+     * For RDS Custom Oracle instances, either set this parameter to <code>true</code> or leave it unset. If you set
+     * this parameter to <code>false</code>, RDS reports an error.
+     * </p>
+     * <p>
      * <b>Amazon Aurora</b>
      * </p>
      * <p>
@@ -9022,6 +9841,10 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * 
      * @return A value that indicates whether the DB instance is encrypted. By default, it isn't encrypted.</p>
+     *         <p>
+     *         For RDS Custom Oracle instances, either set this parameter to <code>true</code> or leave it unset. If you
+     *         set this parameter to <code>false</code>, RDS reports an error.
+     *         </p>
      *         <p>
      *         <b>Amazon Aurora</b>
      *         </p>
@@ -9038,9 +9861,8 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * The Amazon Web Services KMS key identifier for an encrypted DB instance.
      * </p>
      * <p>
-     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the Amazon Web
-     * Services KMS customer master key (CMK). To use a CMK in a different Amazon Web Services account, specify the key
-     * ARN or alias ARN.
+     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key. To
+     * use a KMS key in a different Amazon Web Services account, specify the key ARN or alias ARN.
      * </p>
      * <p>
      * <b>Amazon Aurora</b>
@@ -9051,16 +9873,23 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * <p>
      * If <code>StorageEncrypted</code> is enabled, and you do not specify a value for the <code>KmsKeyId</code>
-     * parameter, then Amazon RDS uses your default CMK. There is a default CMK for your Amazon Web Services account.
-     * Your Amazon Web Services account has a different default CMK for each Amazon Web Services Region.
+     * parameter, then Amazon RDS uses your default KMS key. There is a default KMS key for your Amazon Web Services
+     * account. Your Amazon Web Services account has a different default KMS key for each Amazon Web Services Region.
+     * </p>
+     * <p>
+     * <b>Amazon RDS Custom</b>
+     * </p>
+     * <p>
+     * A KMS key is required for RDS Custom Oracle instances. For most RDS engines, if you leave this parameter empty
+     * while enabling <code>StorageEncrypted</code>, the engine uses the default KMS key. However, RDS Custom for Oracle
+     * doesn't use the default key when this parameter is empty. You must explicitly specify a key.
      * </p>
      * 
      * @param kmsKeyId
      *        The Amazon Web Services KMS key identifier for an encrypted DB instance.</p>
      *        <p>
-     *        The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the Amazon
-     *        Web Services KMS customer master key (CMK). To use a CMK in a different Amazon Web Services account,
-     *        specify the key ARN or alias ARN.
+     *        The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS
+     *        key. To use a KMS key in a different Amazon Web Services account, specify the key ARN or alias ARN.
      *        </p>
      *        <p>
      *        <b>Amazon Aurora</b>
@@ -9071,8 +9900,18 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        </p>
      *        <p>
      *        If <code>StorageEncrypted</code> is enabled, and you do not specify a value for the <code>KmsKeyId</code>
-     *        parameter, then Amazon RDS uses your default CMK. There is a default CMK for your Amazon Web Services
-     *        account. Your Amazon Web Services account has a different default CMK for each Amazon Web Services Region.
+     *        parameter, then Amazon RDS uses your default KMS key. There is a default KMS key for your Amazon Web
+     *        Services account. Your Amazon Web Services account has a different default KMS key for each Amazon Web
+     *        Services Region.
+     *        </p>
+     *        <p>
+     *        <b>Amazon RDS Custom</b>
+     *        </p>
+     *        <p>
+     *        A KMS key is required for RDS Custom Oracle instances. For most RDS engines, if you leave this parameter
+     *        empty while enabling <code>StorageEncrypted</code>, the engine uses the default KMS key. However, RDS
+     *        Custom for Oracle doesn't use the default key when this parameter is empty. You must explicitly specify a
+     *        key.
      */
 
     public void setKmsKeyId(String kmsKeyId) {
@@ -9084,9 +9923,8 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * The Amazon Web Services KMS key identifier for an encrypted DB instance.
      * </p>
      * <p>
-     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the Amazon Web
-     * Services KMS customer master key (CMK). To use a CMK in a different Amazon Web Services account, specify the key
-     * ARN or alias ARN.
+     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key. To
+     * use a KMS key in a different Amazon Web Services account, specify the key ARN or alias ARN.
      * </p>
      * <p>
      * <b>Amazon Aurora</b>
@@ -9097,15 +9935,22 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * <p>
      * If <code>StorageEncrypted</code> is enabled, and you do not specify a value for the <code>KmsKeyId</code>
-     * parameter, then Amazon RDS uses your default CMK. There is a default CMK for your Amazon Web Services account.
-     * Your Amazon Web Services account has a different default CMK for each Amazon Web Services Region.
+     * parameter, then Amazon RDS uses your default KMS key. There is a default KMS key for your Amazon Web Services
+     * account. Your Amazon Web Services account has a different default KMS key for each Amazon Web Services Region.
+     * </p>
+     * <p>
+     * <b>Amazon RDS Custom</b>
+     * </p>
+     * <p>
+     * A KMS key is required for RDS Custom Oracle instances. For most RDS engines, if you leave this parameter empty
+     * while enabling <code>StorageEncrypted</code>, the engine uses the default KMS key. However, RDS Custom for Oracle
+     * doesn't use the default key when this parameter is empty. You must explicitly specify a key.
      * </p>
      * 
      * @return The Amazon Web Services KMS key identifier for an encrypted DB instance.</p>
      *         <p>
-     *         The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the
-     *         Amazon Web Services KMS customer master key (CMK). To use a CMK in a different Amazon Web Services
-     *         account, specify the key ARN or alias ARN.
+     *         The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS
+     *         key. To use a KMS key in a different Amazon Web Services account, specify the key ARN or alias ARN.
      *         </p>
      *         <p>
      *         <b>Amazon Aurora</b>
@@ -9116,9 +9961,18 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         </p>
      *         <p>
      *         If <code>StorageEncrypted</code> is enabled, and you do not specify a value for the <code>KmsKeyId</code>
-     *         parameter, then Amazon RDS uses your default CMK. There is a default CMK for your Amazon Web Services
-     *         account. Your Amazon Web Services account has a different default CMK for each Amazon Web Services
-     *         Region.
+     *         parameter, then Amazon RDS uses your default KMS key. There is a default KMS key for your Amazon Web
+     *         Services account. Your Amazon Web Services account has a different default KMS key for each Amazon Web
+     *         Services Region.
+     *         </p>
+     *         <p>
+     *         <b>Amazon RDS Custom</b>
+     *         </p>
+     *         <p>
+     *         A KMS key is required for RDS Custom Oracle instances. For most RDS engines, if you leave this parameter
+     *         empty while enabling <code>StorageEncrypted</code>, the engine uses the default KMS key. However, RDS
+     *         Custom for Oracle doesn't use the default key when this parameter is empty. You must explicitly specify a
+     *         key.
      */
 
     public String getKmsKeyId() {
@@ -9130,9 +9984,8 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * The Amazon Web Services KMS key identifier for an encrypted DB instance.
      * </p>
      * <p>
-     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the Amazon Web
-     * Services KMS customer master key (CMK). To use a CMK in a different Amazon Web Services account, specify the key
-     * ARN or alias ARN.
+     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key. To
+     * use a KMS key in a different Amazon Web Services account, specify the key ARN or alias ARN.
      * </p>
      * <p>
      * <b>Amazon Aurora</b>
@@ -9143,16 +9996,23 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * <p>
      * If <code>StorageEncrypted</code> is enabled, and you do not specify a value for the <code>KmsKeyId</code>
-     * parameter, then Amazon RDS uses your default CMK. There is a default CMK for your Amazon Web Services account.
-     * Your Amazon Web Services account has a different default CMK for each Amazon Web Services Region.
+     * parameter, then Amazon RDS uses your default KMS key. There is a default KMS key for your Amazon Web Services
+     * account. Your Amazon Web Services account has a different default KMS key for each Amazon Web Services Region.
+     * </p>
+     * <p>
+     * <b>Amazon RDS Custom</b>
+     * </p>
+     * <p>
+     * A KMS key is required for RDS Custom Oracle instances. For most RDS engines, if you leave this parameter empty
+     * while enabling <code>StorageEncrypted</code>, the engine uses the default KMS key. However, RDS Custom for Oracle
+     * doesn't use the default key when this parameter is empty. You must explicitly specify a key.
      * </p>
      * 
      * @param kmsKeyId
      *        The Amazon Web Services KMS key identifier for an encrypted DB instance.</p>
      *        <p>
-     *        The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the Amazon
-     *        Web Services KMS customer master key (CMK). To use a CMK in a different Amazon Web Services account,
-     *        specify the key ARN or alias ARN.
+     *        The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS
+     *        key. To use a KMS key in a different Amazon Web Services account, specify the key ARN or alias ARN.
      *        </p>
      *        <p>
      *        <b>Amazon Aurora</b>
@@ -9163,8 +10023,18 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        </p>
      *        <p>
      *        If <code>StorageEncrypted</code> is enabled, and you do not specify a value for the <code>KmsKeyId</code>
-     *        parameter, then Amazon RDS uses your default CMK. There is a default CMK for your Amazon Web Services
-     *        account. Your Amazon Web Services account has a different default CMK for each Amazon Web Services Region.
+     *        parameter, then Amazon RDS uses your default KMS key. There is a default KMS key for your Amazon Web
+     *        Services account. Your Amazon Web Services account has a different default KMS key for each Amazon Web
+     *        Services Region.
+     *        </p>
+     *        <p>
+     *        <b>Amazon RDS Custom</b>
+     *        </p>
+     *        <p>
+     *        A KMS key is required for RDS Custom Oracle instances. For most RDS engines, if you leave this parameter
+     *        empty while enabling <code>StorageEncrypted</code>, the engine uses the default KMS key. However, RDS
+     *        Custom for Oracle doesn't use the default key when this parameter is empty. You must explicitly specify a
+     *        key.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -9183,6 +10053,9 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/kerberos-authentication.html"> Kerberos
      * Authentication</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      * 
      * @param domain
      *        The Active Directory directory ID to create the DB instance in. Currently, only MySQL, Microsoft SQL
@@ -9191,6 +10064,9 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/kerberos-authentication.html"> Kerberos
      *        Authentication</a> in the <i>Amazon RDS User Guide</i>.
+     *        </p>
+     *        <p>
+     *        This setting doesn't apply to RDS Custom.
      */
 
     public void setDomain(String domain) {
@@ -9207,6 +10083,9 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/kerberos-authentication.html"> Kerberos
      * Authentication</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      * 
      * @return The Active Directory directory ID to create the DB instance in. Currently, only MySQL, Microsoft SQL
      *         Server, Oracle, and PostgreSQL DB instances can be created in an Active Directory Domain.</p>
@@ -9214,6 +10093,9 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         For more information, see <a
      *         href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/kerberos-authentication.html"> Kerberos
      *         Authentication</a> in the <i>Amazon RDS User Guide</i>.
+     *         </p>
+     *         <p>
+     *         This setting doesn't apply to RDS Custom.
      */
 
     public String getDomain() {
@@ -9230,6 +10112,9 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/kerberos-authentication.html"> Kerberos
      * Authentication</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      * 
      * @param domain
      *        The Active Directory directory ID to create the DB instance in. Currently, only MySQL, Microsoft SQL
@@ -9238,6 +10123,9 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/kerberos-authentication.html"> Kerberos
      *        Authentication</a> in the <i>Amazon RDS User Guide</i>.
+     *        </p>
+     *        <p>
+     *        This setting doesn't apply to RDS Custom.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -9361,11 +10249,14 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * The interval, in seconds, between points when Enhanced Monitoring metrics are collected for the DB instance. To
-     * disable collecting Enhanced Monitoring metrics, specify 0. The default is 0.
+     * disable collection of Enhanced Monitoring metrics, specify 0. The default is 0.
      * </p>
      * <p>
-     * If <code>MonitoringRoleArn</code> is specified, then you must also set <code>MonitoringInterval</code> to a value
+     * If <code>MonitoringRoleArn</code> is specified, then you must set <code>MonitoringInterval</code> to a value
      * other than 0.
+     * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
      * </p>
      * <p>
      * Valid Values: <code>0, 1, 5, 10, 15, 30, 60</code>
@@ -9373,10 +10264,13 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * 
      * @param monitoringInterval
      *        The interval, in seconds, between points when Enhanced Monitoring metrics are collected for the DB
-     *        instance. To disable collecting Enhanced Monitoring metrics, specify 0. The default is 0.</p>
+     *        instance. To disable collection of Enhanced Monitoring metrics, specify 0. The default is 0.</p>
      *        <p>
-     *        If <code>MonitoringRoleArn</code> is specified, then you must also set <code>MonitoringInterval</code> to
-     *        a value other than 0.
+     *        If <code>MonitoringRoleArn</code> is specified, then you must set <code>MonitoringInterval</code> to a
+     *        value other than 0.
+     *        </p>
+     *        <p>
+     *        This setting doesn't apply to RDS Custom.
      *        </p>
      *        <p>
      *        Valid Values: <code>0, 1, 5, 10, 15, 30, 60</code>
@@ -9389,21 +10283,27 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * The interval, in seconds, between points when Enhanced Monitoring metrics are collected for the DB instance. To
-     * disable collecting Enhanced Monitoring metrics, specify 0. The default is 0.
+     * disable collection of Enhanced Monitoring metrics, specify 0. The default is 0.
      * </p>
      * <p>
-     * If <code>MonitoringRoleArn</code> is specified, then you must also set <code>MonitoringInterval</code> to a value
+     * If <code>MonitoringRoleArn</code> is specified, then you must set <code>MonitoringInterval</code> to a value
      * other than 0.
+     * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
      * </p>
      * <p>
      * Valid Values: <code>0, 1, 5, 10, 15, 30, 60</code>
      * </p>
      * 
      * @return The interval, in seconds, between points when Enhanced Monitoring metrics are collected for the DB
-     *         instance. To disable collecting Enhanced Monitoring metrics, specify 0. The default is 0.</p>
+     *         instance. To disable collection of Enhanced Monitoring metrics, specify 0. The default is 0.</p>
      *         <p>
-     *         If <code>MonitoringRoleArn</code> is specified, then you must also set <code>MonitoringInterval</code> to
-     *         a value other than 0.
+     *         If <code>MonitoringRoleArn</code> is specified, then you must set <code>MonitoringInterval</code> to a
+     *         value other than 0.
+     *         </p>
+     *         <p>
+     *         This setting doesn't apply to RDS Custom.
      *         </p>
      *         <p>
      *         Valid Values: <code>0, 1, 5, 10, 15, 30, 60</code>
@@ -9416,11 +10316,14 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * The interval, in seconds, between points when Enhanced Monitoring metrics are collected for the DB instance. To
-     * disable collecting Enhanced Monitoring metrics, specify 0. The default is 0.
+     * disable collection of Enhanced Monitoring metrics, specify 0. The default is 0.
      * </p>
      * <p>
-     * If <code>MonitoringRoleArn</code> is specified, then you must also set <code>MonitoringInterval</code> to a value
+     * If <code>MonitoringRoleArn</code> is specified, then you must set <code>MonitoringInterval</code> to a value
      * other than 0.
+     * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
      * </p>
      * <p>
      * Valid Values: <code>0, 1, 5, 10, 15, 30, 60</code>
@@ -9428,10 +10331,13 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * 
      * @param monitoringInterval
      *        The interval, in seconds, between points when Enhanced Monitoring metrics are collected for the DB
-     *        instance. To disable collecting Enhanced Monitoring metrics, specify 0. The default is 0.</p>
+     *        instance. To disable collection of Enhanced Monitoring metrics, specify 0. The default is 0.</p>
      *        <p>
-     *        If <code>MonitoringRoleArn</code> is specified, then you must also set <code>MonitoringInterval</code> to
-     *        a value other than 0.
+     *        If <code>MonitoringRoleArn</code> is specified, then you must set <code>MonitoringInterval</code> to a
+     *        value other than 0.
+     *        </p>
+     *        <p>
+     *        This setting doesn't apply to RDS Custom.
      *        </p>
      *        <p>
      *        Valid Values: <code>0, 1, 5, 10, 15, 30, 60</code>
@@ -9446,8 +10352,8 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * The ARN for the IAM role that permits RDS to send enhanced monitoring metrics to Amazon CloudWatch Logs. For
-     * example, <code>arn:aws:iam:123456789012:role/emaccess</code>. For information on creating a monitoring role, go
-     * to <a href=
+     * example, <code>arn:aws:iam:123456789012:role/emaccess</code>. For information on creating a monitoring role, see
+     * <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monitoring.OS.html#USER_Monitoring.OS.Enabling"
      * >Setting Up and Enabling Enhanced Monitoring</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
@@ -9455,16 +10361,22 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * If <code>MonitoringInterval</code> is set to a value other than 0, then you must supply a
      * <code>MonitoringRoleArn</code> value.
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      * 
      * @param monitoringRoleArn
      *        The ARN for the IAM role that permits RDS to send enhanced monitoring metrics to Amazon CloudWatch Logs.
      *        For example, <code>arn:aws:iam:123456789012:role/emaccess</code>. For information on creating a monitoring
-     *        role, go to <a href=
+     *        role, see <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monitoring.OS.html#USER_Monitoring.OS.Enabling"
      *        >Setting Up and Enabling Enhanced Monitoring</a> in the <i>Amazon RDS User Guide</i>.</p>
      *        <p>
      *        If <code>MonitoringInterval</code> is set to a value other than 0, then you must supply a
      *        <code>MonitoringRoleArn</code> value.
+     *        </p>
+     *        <p>
+     *        This setting doesn't apply to RDS Custom.
      */
 
     public void setMonitoringRoleArn(String monitoringRoleArn) {
@@ -9474,8 +10386,8 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * The ARN for the IAM role that permits RDS to send enhanced monitoring metrics to Amazon CloudWatch Logs. For
-     * example, <code>arn:aws:iam:123456789012:role/emaccess</code>. For information on creating a monitoring role, go
-     * to <a href=
+     * example, <code>arn:aws:iam:123456789012:role/emaccess</code>. For information on creating a monitoring role, see
+     * <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monitoring.OS.html#USER_Monitoring.OS.Enabling"
      * >Setting Up and Enabling Enhanced Monitoring</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
@@ -9483,15 +10395,21 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * If <code>MonitoringInterval</code> is set to a value other than 0, then you must supply a
      * <code>MonitoringRoleArn</code> value.
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      * 
      * @return The ARN for the IAM role that permits RDS to send enhanced monitoring metrics to Amazon CloudWatch Logs.
      *         For example, <code>arn:aws:iam:123456789012:role/emaccess</code>. For information on creating a
-     *         monitoring role, go to <a href=
+     *         monitoring role, see <a href=
      *         "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monitoring.OS.html#USER_Monitoring.OS.Enabling"
      *         >Setting Up and Enabling Enhanced Monitoring</a> in the <i>Amazon RDS User Guide</i>.</p>
      *         <p>
      *         If <code>MonitoringInterval</code> is set to a value other than 0, then you must supply a
      *         <code>MonitoringRoleArn</code> value.
+     *         </p>
+     *         <p>
+     *         This setting doesn't apply to RDS Custom.
      */
 
     public String getMonitoringRoleArn() {
@@ -9501,8 +10419,8 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * The ARN for the IAM role that permits RDS to send enhanced monitoring metrics to Amazon CloudWatch Logs. For
-     * example, <code>arn:aws:iam:123456789012:role/emaccess</code>. For information on creating a monitoring role, go
-     * to <a href=
+     * example, <code>arn:aws:iam:123456789012:role/emaccess</code>. For information on creating a monitoring role, see
+     * <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monitoring.OS.html#USER_Monitoring.OS.Enabling"
      * >Setting Up and Enabling Enhanced Monitoring</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
@@ -9510,16 +10428,22 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * If <code>MonitoringInterval</code> is set to a value other than 0, then you must supply a
      * <code>MonitoringRoleArn</code> value.
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      * 
      * @param monitoringRoleArn
      *        The ARN for the IAM role that permits RDS to send enhanced monitoring metrics to Amazon CloudWatch Logs.
      *        For example, <code>arn:aws:iam:123456789012:role/emaccess</code>. For information on creating a monitoring
-     *        role, go to <a href=
+     *        role, see <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Monitoring.OS.html#USER_Monitoring.OS.Enabling"
      *        >Setting Up and Enabling Enhanced Monitoring</a> in the <i>Amazon RDS User Guide</i>.</p>
      *        <p>
      *        If <code>MonitoringInterval</code> is set to a value other than 0, then you must supply a
      *        <code>MonitoringRoleArn</code> value.
+     *        </p>
+     *        <p>
+     *        This setting doesn't apply to RDS Custom.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -9532,9 +10456,14 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * Specify the name of the IAM role to be used when making API calls to the Directory Service.
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      * 
      * @param domainIAMRoleName
-     *        Specify the name of the IAM role to be used when making API calls to the Directory Service.
+     *        Specify the name of the IAM role to be used when making API calls to the Directory Service.</p>
+     *        <p>
+     *        This setting doesn't apply to RDS Custom.
      */
 
     public void setDomainIAMRoleName(String domainIAMRoleName) {
@@ -9545,8 +10474,13 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * Specify the name of the IAM role to be used when making API calls to the Directory Service.
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      * 
-     * @return Specify the name of the IAM role to be used when making API calls to the Directory Service.
+     * @return Specify the name of the IAM role to be used when making API calls to the Directory Service.</p>
+     *         <p>
+     *         This setting doesn't apply to RDS Custom.
      */
 
     public String getDomainIAMRoleName() {
@@ -9557,9 +10491,14 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * Specify the name of the IAM role to be used when making API calls to the Directory Service.
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      * 
      * @param domainIAMRoleName
-     *        Specify the name of the IAM role to be used when making API calls to the Directory Service.
+     *        Specify the name of the IAM role to be used when making API calls to the Directory Service.</p>
+     *        <p>
+     *        This setting doesn't apply to RDS Custom.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -9576,6 +10515,9 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * > Fault Tolerance for an Aurora DB Cluster</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
+     * <p>
      * Default: 1
      * </p>
      * <p>
@@ -9587,6 +10529,9 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        failure of the existing primary instance. For more information, see <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Managing.Backups.html#Aurora.Managing.FaultTolerance"
      *        > Fault Tolerance for an Aurora DB Cluster</a> in the <i>Amazon Aurora User Guide</i>. </p>
+     *        <p>
+     *        This setting doesn't apply to RDS Custom.
+     *        </p>
      *        <p>
      *        Default: 1
      *        </p>
@@ -9606,6 +10551,9 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * > Fault Tolerance for an Aurora DB Cluster</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
+     * <p>
      * Default: 1
      * </p>
      * <p>
@@ -9616,6 +10564,9 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         failure of the existing primary instance. For more information, see <a href=
      *         "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Managing.Backups.html#Aurora.Managing.FaultTolerance"
      *         > Fault Tolerance for an Aurora DB Cluster</a> in the <i>Amazon Aurora User Guide</i>. </p>
+     *         <p>
+     *         This setting doesn't apply to RDS Custom.
+     *         </p>
      *         <p>
      *         Default: 1
      *         </p>
@@ -9635,6 +10586,9 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * > Fault Tolerance for an Aurora DB Cluster</a> in the <i>Amazon Aurora User Guide</i>.
      * </p>
      * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
+     * <p>
      * Default: 1
      * </p>
      * <p>
@@ -9646,6 +10600,9 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        failure of the existing primary instance. For more information, see <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/Aurora.Managing.Backups.html#Aurora.Managing.FaultTolerance"
      *        > Fault Tolerance for an Aurora DB Cluster</a> in the <i>Amazon Aurora User Guide</i>. </p>
+     *        <p>
+     *        This setting doesn't apply to RDS Custom.
+     *        </p>
      *        <p>
      *        Default: 1
      *        </p>
@@ -9717,8 +10674,8 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * accounts to database accounts. By default, mapping is disabled.
      * </p>
      * <p>
-     * This setting doesn't apply to Amazon Aurora. Mapping Amazon Web Services IAM accounts to database accounts is
-     * managed by the DB cluster.
+     * This setting doesn't apply to RDS Custom or Amazon Aurora. In Aurora, mapping Amazon Web Services IAM accounts to
+     * database accounts is managed by the DB cluster.
      * </p>
      * <p>
      * For more information, see <a
@@ -9730,8 +10687,8 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        A value that indicates whether to enable mapping of Amazon Web Services Identity and Access Management
      *        (IAM) accounts to database accounts. By default, mapping is disabled.</p>
      *        <p>
-     *        This setting doesn't apply to Amazon Aurora. Mapping Amazon Web Services IAM accounts to database accounts
-     *        is managed by the DB cluster.
+     *        This setting doesn't apply to RDS Custom or Amazon Aurora. In Aurora, mapping Amazon Web Services IAM
+     *        accounts to database accounts is managed by the DB cluster.
      *        </p>
      *        <p>
      *        For more information, see <a
@@ -9749,8 +10706,8 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * accounts to database accounts. By default, mapping is disabled.
      * </p>
      * <p>
-     * This setting doesn't apply to Amazon Aurora. Mapping Amazon Web Services IAM accounts to database accounts is
-     * managed by the DB cluster.
+     * This setting doesn't apply to RDS Custom or Amazon Aurora. In Aurora, mapping Amazon Web Services IAM accounts to
+     * database accounts is managed by the DB cluster.
      * </p>
      * <p>
      * For more information, see <a
@@ -9761,8 +10718,8 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * @return A value that indicates whether to enable mapping of Amazon Web Services Identity and Access Management
      *         (IAM) accounts to database accounts. By default, mapping is disabled.</p>
      *         <p>
-     *         This setting doesn't apply to Amazon Aurora. Mapping Amazon Web Services IAM accounts to database
-     *         accounts is managed by the DB cluster.
+     *         This setting doesn't apply to RDS Custom or Amazon Aurora. In Aurora, mapping Amazon Web Services IAM
+     *         accounts to database accounts is managed by the DB cluster.
      *         </p>
      *         <p>
      *         For more information, see <a
@@ -9780,8 +10737,8 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * accounts to database accounts. By default, mapping is disabled.
      * </p>
      * <p>
-     * This setting doesn't apply to Amazon Aurora. Mapping Amazon Web Services IAM accounts to database accounts is
-     * managed by the DB cluster.
+     * This setting doesn't apply to RDS Custom or Amazon Aurora. In Aurora, mapping Amazon Web Services IAM accounts to
+     * database accounts is managed by the DB cluster.
      * </p>
      * <p>
      * For more information, see <a
@@ -9793,8 +10750,8 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        A value that indicates whether to enable mapping of Amazon Web Services Identity and Access Management
      *        (IAM) accounts to database accounts. By default, mapping is disabled.</p>
      *        <p>
-     *        This setting doesn't apply to Amazon Aurora. Mapping Amazon Web Services IAM accounts to database accounts
-     *        is managed by the DB cluster.
+     *        This setting doesn't apply to RDS Custom or Amazon Aurora. In Aurora, mapping Amazon Web Services IAM
+     *        accounts to database accounts is managed by the DB cluster.
      *        </p>
      *        <p>
      *        For more information, see <a
@@ -9814,8 +10771,8 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * accounts to database accounts. By default, mapping is disabled.
      * </p>
      * <p>
-     * This setting doesn't apply to Amazon Aurora. Mapping Amazon Web Services IAM accounts to database accounts is
-     * managed by the DB cluster.
+     * This setting doesn't apply to RDS Custom or Amazon Aurora. In Aurora, mapping Amazon Web Services IAM accounts to
+     * database accounts is managed by the DB cluster.
      * </p>
      * <p>
      * For more information, see <a
@@ -9826,8 +10783,8 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * @return A value that indicates whether to enable mapping of Amazon Web Services Identity and Access Management
      *         (IAM) accounts to database accounts. By default, mapping is disabled.</p>
      *         <p>
-     *         This setting doesn't apply to Amazon Aurora. Mapping Amazon Web Services IAM accounts to database
-     *         accounts is managed by the DB cluster.
+     *         This setting doesn't apply to RDS Custom or Amazon Aurora. In Aurora, mapping Amazon Web Services IAM
+     *         accounts to database accounts is managed by the DB cluster.
      *         </p>
      *         <p>
      *         For more information, see <a
@@ -9841,20 +10798,20 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * A value that indicates whether to enable Performance Insights for the DB instance.
-     * </p>
-     * <p>
-     * For more information, see <a
+     * A value that indicates whether to enable Performance Insights for the DB instance. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html">Using Amazon Performance
      * Insights</a> in the <i>Amazon Relational Database Service User Guide</i>.
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      * 
      * @param enablePerformanceInsights
-     *        A value that indicates whether to enable Performance Insights for the DB instance. </p>
+     *        A value that indicates whether to enable Performance Insights for the DB instance. For more information,
+     *        see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html">Using Amazon
+     *        Performance Insights</a> in the <i>Amazon Relational Database Service User Guide</i>. </p>
      *        <p>
-     *        For more information, see <a
-     *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html">Using Amazon
-     *        Performance Insights</a> in the <i>Amazon Relational Database Service User Guide</i>.
+     *        This setting doesn't apply to RDS Custom.
      */
 
     public void setEnablePerformanceInsights(Boolean enablePerformanceInsights) {
@@ -9863,19 +10820,19 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * A value that indicates whether to enable Performance Insights for the DB instance.
-     * </p>
-     * <p>
-     * For more information, see <a
+     * A value that indicates whether to enable Performance Insights for the DB instance. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html">Using Amazon Performance
      * Insights</a> in the <i>Amazon Relational Database Service User Guide</i>.
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      * 
-     * @return A value that indicates whether to enable Performance Insights for the DB instance. </p>
+     * @return A value that indicates whether to enable Performance Insights for the DB instance. For more information,
+     *         see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html">Using Amazon
+     *         Performance Insights</a> in the <i>Amazon Relational Database Service User Guide</i>. </p>
      *         <p>
-     *         For more information, see <a
-     *         href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html">Using Amazon
-     *         Performance Insights</a> in the <i>Amazon Relational Database Service User Guide</i>.
+     *         This setting doesn't apply to RDS Custom.
      */
 
     public Boolean getEnablePerformanceInsights() {
@@ -9884,20 +10841,20 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * A value that indicates whether to enable Performance Insights for the DB instance.
-     * </p>
-     * <p>
-     * For more information, see <a
+     * A value that indicates whether to enable Performance Insights for the DB instance. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html">Using Amazon Performance
      * Insights</a> in the <i>Amazon Relational Database Service User Guide</i>.
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      * 
      * @param enablePerformanceInsights
-     *        A value that indicates whether to enable Performance Insights for the DB instance. </p>
+     *        A value that indicates whether to enable Performance Insights for the DB instance. For more information,
+     *        see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html">Using Amazon
+     *        Performance Insights</a> in the <i>Amazon Relational Database Service User Guide</i>. </p>
      *        <p>
-     *        For more information, see <a
-     *        href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html">Using Amazon
-     *        Performance Insights</a> in the <i>Amazon Relational Database Service User Guide</i>.
+     *        This setting doesn't apply to RDS Custom.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -9908,19 +10865,19 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * A value that indicates whether to enable Performance Insights for the DB instance.
-     * </p>
-     * <p>
-     * For more information, see <a
+     * A value that indicates whether to enable Performance Insights for the DB instance. For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html">Using Amazon Performance
      * Insights</a> in the <i>Amazon Relational Database Service User Guide</i>.
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      * 
-     * @return A value that indicates whether to enable Performance Insights for the DB instance. </p>
+     * @return A value that indicates whether to enable Performance Insights for the DB instance. For more information,
+     *         see <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html">Using Amazon
+     *         Performance Insights</a> in the <i>Amazon Relational Database Service User Guide</i>. </p>
      *         <p>
-     *         For more information, see <a
-     *         href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PerfInsights.html">Using Amazon
-     *         Performance Insights</a> in the <i>Amazon Relational Database Service User Guide</i>.
+     *         This setting doesn't apply to RDS Custom.
      */
 
     public Boolean isEnablePerformanceInsights() {
@@ -9932,25 +10889,30 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * The Amazon Web Services KMS key identifier for encryption of Performance Insights data.
      * </p>
      * <p>
-     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the Amazon Web
-     * Services KMS customer master key (CMK).
+     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key.
      * </p>
      * <p>
-     * If you do not specify a value for <code>PerformanceInsightsKMSKeyId</code>, then Amazon RDS uses your default
-     * CMK. There is a default CMK for your Amazon Web Services account. Your Amazon Web Services account has a
-     * different default CMK for each Amazon Web Services Region.
+     * If you do not specify a value for <code>PerformanceInsightsKMSKeyId</code>, then Amazon RDS uses your default KMS
+     * key. There is a default KMS key for your Amazon Web Services account. Your Amazon Web Services account has a
+     * different default KMS key for each Amazon Web Services Region.
+     * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
      * </p>
      * 
      * @param performanceInsightsKMSKeyId
      *        The Amazon Web Services KMS key identifier for encryption of Performance Insights data.</p>
      *        <p>
-     *        The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the Amazon
-     *        Web Services KMS customer master key (CMK).
+     *        The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS
+     *        key.
      *        </p>
      *        <p>
      *        If you do not specify a value for <code>PerformanceInsightsKMSKeyId</code>, then Amazon RDS uses your
-     *        default CMK. There is a default CMK for your Amazon Web Services account. Your Amazon Web Services account
-     *        has a different default CMK for each Amazon Web Services Region.
+     *        default KMS key. There is a default KMS key for your Amazon Web Services account. Your Amazon Web Services
+     *        account has a different default KMS key for each Amazon Web Services Region.
+     *        </p>
+     *        <p>
+     *        This setting doesn't apply to RDS Custom.
      */
 
     public void setPerformanceInsightsKMSKeyId(String performanceInsightsKMSKeyId) {
@@ -9962,24 +10924,29 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * The Amazon Web Services KMS key identifier for encryption of Performance Insights data.
      * </p>
      * <p>
-     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the Amazon Web
-     * Services KMS customer master key (CMK).
+     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key.
      * </p>
      * <p>
-     * If you do not specify a value for <code>PerformanceInsightsKMSKeyId</code>, then Amazon RDS uses your default
-     * CMK. There is a default CMK for your Amazon Web Services account. Your Amazon Web Services account has a
-     * different default CMK for each Amazon Web Services Region.
+     * If you do not specify a value for <code>PerformanceInsightsKMSKeyId</code>, then Amazon RDS uses your default KMS
+     * key. There is a default KMS key for your Amazon Web Services account. Your Amazon Web Services account has a
+     * different default KMS key for each Amazon Web Services Region.
+     * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
      * </p>
      * 
      * @return The Amazon Web Services KMS key identifier for encryption of Performance Insights data.</p>
      *         <p>
-     *         The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the
-     *         Amazon Web Services KMS customer master key (CMK).
+     *         The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS
+     *         key.
      *         </p>
      *         <p>
      *         If you do not specify a value for <code>PerformanceInsightsKMSKeyId</code>, then Amazon RDS uses your
-     *         default CMK. There is a default CMK for your Amazon Web Services account. Your Amazon Web Services
-     *         account has a different default CMK for each Amazon Web Services Region.
+     *         default KMS key. There is a default KMS key for your Amazon Web Services account. Your Amazon Web
+     *         Services account has a different default KMS key for each Amazon Web Services Region.
+     *         </p>
+     *         <p>
+     *         This setting doesn't apply to RDS Custom.
      */
 
     public String getPerformanceInsightsKMSKeyId() {
@@ -9991,25 +10958,30 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * The Amazon Web Services KMS key identifier for encryption of Performance Insights data.
      * </p>
      * <p>
-     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the Amazon Web
-     * Services KMS customer master key (CMK).
+     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key.
      * </p>
      * <p>
-     * If you do not specify a value for <code>PerformanceInsightsKMSKeyId</code>, then Amazon RDS uses your default
-     * CMK. There is a default CMK for your Amazon Web Services account. Your Amazon Web Services account has a
-     * different default CMK for each Amazon Web Services Region.
+     * If you do not specify a value for <code>PerformanceInsightsKMSKeyId</code>, then Amazon RDS uses your default KMS
+     * key. There is a default KMS key for your Amazon Web Services account. Your Amazon Web Services account has a
+     * different default KMS key for each Amazon Web Services Region.
+     * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
      * </p>
      * 
      * @param performanceInsightsKMSKeyId
      *        The Amazon Web Services KMS key identifier for encryption of Performance Insights data.</p>
      *        <p>
-     *        The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the Amazon
-     *        Web Services KMS customer master key (CMK).
+     *        The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS
+     *        key.
      *        </p>
      *        <p>
      *        If you do not specify a value for <code>PerformanceInsightsKMSKeyId</code>, then Amazon RDS uses your
-     *        default CMK. There is a default CMK for your Amazon Web Services account. Your Amazon Web Services account
-     *        has a different default CMK for each Amazon Web Services Region.
+     *        default KMS key. There is a default KMS key for your Amazon Web Services account. Your Amazon Web Services
+     *        account has a different default KMS key for each Amazon Web Services Region.
+     *        </p>
+     *        <p>
+     *        This setting doesn't apply to RDS Custom.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -10022,9 +10994,14 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * The amount of time, in days, to retain Performance Insights data. Valid values are 7 or 731 (2 years).
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      * 
      * @param performanceInsightsRetentionPeriod
-     *        The amount of time, in days, to retain Performance Insights data. Valid values are 7 or 731 (2 years).
+     *        The amount of time, in days, to retain Performance Insights data. Valid values are 7 or 731 (2 years).</p>
+     *        <p>
+     *        This setting doesn't apply to RDS Custom.
      */
 
     public void setPerformanceInsightsRetentionPeriod(Integer performanceInsightsRetentionPeriod) {
@@ -10035,8 +11012,14 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * The amount of time, in days, to retain Performance Insights data. Valid values are 7 or 731 (2 years).
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      * 
-     * @return The amount of time, in days, to retain Performance Insights data. Valid values are 7 or 731 (2 years).
+     * @return The amount of time, in days, to retain Performance Insights data. Valid values are 7 or 731 (2
+     *         years).</p>
+     *         <p>
+     *         This setting doesn't apply to RDS Custom.
      */
 
     public Integer getPerformanceInsightsRetentionPeriod() {
@@ -10047,9 +11030,14 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * The amount of time, in days, to retain Performance Insights data. Valid values are 7 or 731 (2 years).
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      * 
      * @param performanceInsightsRetentionPeriod
-     *        The amount of time, in days, to retain Performance Insights data. Valid values are 7 or 731 (2 years).
+     *        The amount of time, in days, to retain Performance Insights data. Valid values are 7 or 731 (2 years).</p>
+     *        <p>
+     *        This setting doesn't apply to RDS Custom.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -10061,9 +11049,9 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * The list of log types that need to be enabled for exporting to CloudWatch Logs. The values in the list depend on
-     * the DB engine being used. For more information, see <a href=
+     * the DB engine. For more information, see <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_LogAccess.html#USER_LogAccess.Procedural.UploadtoCloudWatch"
-     * >Publishing Database Logs to Amazon CloudWatch Logs </a> in the <i>Amazon Relational Database Service User
+     * >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon Relational Database Service User
      * Guide</i>.
      * </p>
      * <p>
@@ -10071,6 +11059,12 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * <p>
      * Not applicable. CloudWatch Logs exports are managed by the DB cluster.
+     * </p>
+     * <p>
+     * <b>RDS Custom</b>
+     * </p>
+     * <p>
+     * Not applicable.
      * </p>
      * <p>
      * <b>MariaDB</b>
@@ -10105,15 +11099,21 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * 
      * @return The list of log types that need to be enabled for exporting to CloudWatch Logs. The values in the list
-     *         depend on the DB engine being used. For more information, see <a href=
+     *         depend on the DB engine. For more information, see <a href=
      *         "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_LogAccess.html#USER_LogAccess.Procedural.UploadtoCloudWatch"
-     *         >Publishing Database Logs to Amazon CloudWatch Logs </a> in the <i>Amazon Relational Database Service
-     *         User Guide</i>.</p>
+     *         >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon Relational Database Service User
+     *         Guide</i>.</p>
      *         <p>
      *         <b>Amazon Aurora</b>
      *         </p>
      *         <p>
      *         Not applicable. CloudWatch Logs exports are managed by the DB cluster.
+     *         </p>
+     *         <p>
+     *         <b>RDS Custom</b>
+     *         </p>
+     *         <p>
+     *         Not applicable.
      *         </p>
      *         <p>
      *         <b>MariaDB</b>
@@ -10159,9 +11159,9 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * The list of log types that need to be enabled for exporting to CloudWatch Logs. The values in the list depend on
-     * the DB engine being used. For more information, see <a href=
+     * the DB engine. For more information, see <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_LogAccess.html#USER_LogAccess.Procedural.UploadtoCloudWatch"
-     * >Publishing Database Logs to Amazon CloudWatch Logs </a> in the <i>Amazon Relational Database Service User
+     * >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon Relational Database Service User
      * Guide</i>.
      * </p>
      * <p>
@@ -10169,6 +11169,12 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * <p>
      * Not applicable. CloudWatch Logs exports are managed by the DB cluster.
+     * </p>
+     * <p>
+     * <b>RDS Custom</b>
+     * </p>
+     * <p>
+     * Not applicable.
      * </p>
      * <p>
      * <b>MariaDB</b>
@@ -10204,15 +11210,21 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * 
      * @param enableCloudwatchLogsExports
      *        The list of log types that need to be enabled for exporting to CloudWatch Logs. The values in the list
-     *        depend on the DB engine being used. For more information, see <a href=
+     *        depend on the DB engine. For more information, see <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_LogAccess.html#USER_LogAccess.Procedural.UploadtoCloudWatch"
-     *        >Publishing Database Logs to Amazon CloudWatch Logs </a> in the <i>Amazon Relational Database Service User
+     *        >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon Relational Database Service User
      *        Guide</i>.</p>
      *        <p>
      *        <b>Amazon Aurora</b>
      *        </p>
      *        <p>
      *        Not applicable. CloudWatch Logs exports are managed by the DB cluster.
+     *        </p>
+     *        <p>
+     *        <b>RDS Custom</b>
+     *        </p>
+     *        <p>
+     *        Not applicable.
      *        </p>
      *        <p>
      *        <b>MariaDB</b>
@@ -10260,9 +11272,9 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * The list of log types that need to be enabled for exporting to CloudWatch Logs. The values in the list depend on
-     * the DB engine being used. For more information, see <a href=
+     * the DB engine. For more information, see <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_LogAccess.html#USER_LogAccess.Procedural.UploadtoCloudWatch"
-     * >Publishing Database Logs to Amazon CloudWatch Logs </a> in the <i>Amazon Relational Database Service User
+     * >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon Relational Database Service User
      * Guide</i>.
      * </p>
      * <p>
@@ -10270,6 +11282,12 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * <p>
      * Not applicable. CloudWatch Logs exports are managed by the DB cluster.
+     * </p>
+     * <p>
+     * <b>RDS Custom</b>
+     * </p>
+     * <p>
+     * Not applicable.
      * </p>
      * <p>
      * <b>MariaDB</b>
@@ -10310,15 +11328,21 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * 
      * @param enableCloudwatchLogsExports
      *        The list of log types that need to be enabled for exporting to CloudWatch Logs. The values in the list
-     *        depend on the DB engine being used. For more information, see <a href=
+     *        depend on the DB engine. For more information, see <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_LogAccess.html#USER_LogAccess.Procedural.UploadtoCloudWatch"
-     *        >Publishing Database Logs to Amazon CloudWatch Logs </a> in the <i>Amazon Relational Database Service User
+     *        >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon Relational Database Service User
      *        Guide</i>.</p>
      *        <p>
      *        <b>Amazon Aurora</b>
      *        </p>
      *        <p>
      *        Not applicable. CloudWatch Logs exports are managed by the DB cluster.
+     *        </p>
+     *        <p>
+     *        <b>RDS Custom</b>
+     *        </p>
+     *        <p>
+     *        Not applicable.
      *        </p>
      *        <p>
      *        <b>MariaDB</b>
@@ -10368,9 +11392,9 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * The list of log types that need to be enabled for exporting to CloudWatch Logs. The values in the list depend on
-     * the DB engine being used. For more information, see <a href=
+     * the DB engine. For more information, see <a href=
      * "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_LogAccess.html#USER_LogAccess.Procedural.UploadtoCloudWatch"
-     * >Publishing Database Logs to Amazon CloudWatch Logs </a> in the <i>Amazon Relational Database Service User
+     * >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon Relational Database Service User
      * Guide</i>.
      * </p>
      * <p>
@@ -10378,6 +11402,12 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * <p>
      * Not applicable. CloudWatch Logs exports are managed by the DB cluster.
+     * </p>
+     * <p>
+     * <b>RDS Custom</b>
+     * </p>
+     * <p>
+     * Not applicable.
      * </p>
      * <p>
      * <b>MariaDB</b>
@@ -10413,15 +11443,21 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * 
      * @param enableCloudwatchLogsExports
      *        The list of log types that need to be enabled for exporting to CloudWatch Logs. The values in the list
-     *        depend on the DB engine being used. For more information, see <a href=
+     *        depend on the DB engine. For more information, see <a href=
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_LogAccess.html#USER_LogAccess.Procedural.UploadtoCloudWatch"
-     *        >Publishing Database Logs to Amazon CloudWatch Logs </a> in the <i>Amazon Relational Database Service User
+     *        >Publishing Database Logs to Amazon CloudWatch Logs</a> in the <i>Amazon Relational Database Service User
      *        Guide</i>.</p>
      *        <p>
      *        <b>Amazon Aurora</b>
      *        </p>
      *        <p>
      *        Not applicable. CloudWatch Logs exports are managed by the DB cluster.
+     *        </p>
+     *        <p>
+     *        <b>RDS Custom</b>
+     *        </p>
+     *        <p>
+     *        Not applicable.
      *        </p>
      *        <p>
      *        <b>MariaDB</b>
@@ -10467,8 +11503,14 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * The number of CPU cores and the number of threads per core for the DB instance class of the DB instance.
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      * 
-     * @return The number of CPU cores and the number of threads per core for the DB instance class of the DB instance.
+     * @return The number of CPU cores and the number of threads per core for the DB instance class of the DB
+     *         instance.</p>
+     *         <p>
+     *         This setting doesn't apply to RDS Custom.
      */
 
     public java.util.List<ProcessorFeature> getProcessorFeatures() {
@@ -10482,9 +11524,15 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * The number of CPU cores and the number of threads per core for the DB instance class of the DB instance.
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      * 
      * @param processorFeatures
-     *        The number of CPU cores and the number of threads per core for the DB instance class of the DB instance.
+     *        The number of CPU cores and the number of threads per core for the DB instance class of the DB
+     *        instance.</p>
+     *        <p>
+     *        This setting doesn't apply to RDS Custom.
      */
 
     public void setProcessorFeatures(java.util.Collection<ProcessorFeature> processorFeatures) {
@@ -10501,13 +11549,19 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * The number of CPU cores and the number of threads per core for the DB instance class of the DB instance.
      * </p>
      * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setProcessorFeatures(java.util.Collection)} or {@link #withProcessorFeatures(java.util.Collection)} if
      * you want to override the existing values.
      * </p>
      * 
      * @param processorFeatures
-     *        The number of CPU cores and the number of threads per core for the DB instance class of the DB instance.
+     *        The number of CPU cores and the number of threads per core for the DB instance class of the DB
+     *        instance.</p>
+     *        <p>
+     *        This setting doesn't apply to RDS Custom.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -10525,9 +11579,15 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * The number of CPU cores and the number of threads per core for the DB instance class of the DB instance.
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      * 
      * @param processorFeatures
-     *        The number of CPU cores and the number of threads per core for the DB instance class of the DB instance.
+     *        The number of CPU cores and the number of threads per core for the DB instance class of the DB
+     *        instance.</p>
+     *        <p>
+     *        This setting doesn't apply to RDS Custom.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -10685,6 +11745,9 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PIOPS.StorageTypes.html#USER_PIOPS.Autoscaling">
      * Managing capacity automatically with Amazon RDS storage autoscaling</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      * 
      * @param maxAllocatedStorage
      *        The upper limit in gibibytes (GiB) to which Amazon RDS can automatically scale the storage of the DB
@@ -10694,6 +11757,9 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PIOPS.StorageTypes.html#USER_PIOPS.Autoscaling"
      *        > Managing capacity automatically with Amazon RDS storage autoscaling</a> in the <i>Amazon RDS User
      *        Guide</i>.
+     *        </p>
+     *        <p>
+     *        This setting doesn't apply to RDS Custom.
      */
 
     public void setMaxAllocatedStorage(Integer maxAllocatedStorage) {
@@ -10709,6 +11775,9 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PIOPS.StorageTypes.html#USER_PIOPS.Autoscaling">
      * Managing capacity automatically with Amazon RDS storage autoscaling</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      * 
      * @return The upper limit in gibibytes (GiB) to which Amazon RDS can automatically scale the storage of the DB
      *         instance.</p>
@@ -10717,6 +11786,9 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *         "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PIOPS.StorageTypes.html#USER_PIOPS.Autoscaling"
      *         > Managing capacity automatically with Amazon RDS storage autoscaling</a> in the <i>Amazon RDS User
      *         Guide</i>.
+     *         </p>
+     *         <p>
+     *         This setting doesn't apply to RDS Custom.
      */
 
     public Integer getMaxAllocatedStorage() {
@@ -10732,6 +11804,9 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      * "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PIOPS.StorageTypes.html#USER_PIOPS.Autoscaling">
      * Managing capacity automatically with Amazon RDS storage autoscaling</a> in the <i>Amazon RDS User Guide</i>.
      * </p>
+     * <p>
+     * This setting doesn't apply to RDS Custom.
+     * </p>
      * 
      * @param maxAllocatedStorage
      *        The upper limit in gibibytes (GiB) to which Amazon RDS can automatically scale the storage of the DB
@@ -10741,6 +11816,9 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
      *        "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_PIOPS.StorageTypes.html#USER_PIOPS.Autoscaling"
      *        > Managing capacity automatically with Amazon RDS storage autoscaling</a> in the <i>Amazon RDS User
      *        Guide</i>.
+     *        </p>
+     *        <p>
+     *        This setting doesn't apply to RDS Custom.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -10922,6 +12000,202 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
+     * <p>
+     * The instance profile associated with the underlying Amazon EC2 instance of an RDS Custom DB instance. The
+     * instance profile must meet the following requirements:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The profile must exist in your account.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The profile must have an IAM role that Amazon EC2 has permissions to assume.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The instance profile name and the associated IAM role name must start with the prefix <code>AWSRDSCustom</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For the list of permissions required for the IAM role, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-setup-orcl.html#custom-setup-orcl.iam-vpc">
+     * Configure IAM and your VPC</a> in the <i>Amazon Relational Database Service User Guide</i>.
+     * </p>
+     * <p>
+     * This setting is required for RDS Custom.
+     * </p>
+     * 
+     * @param customIamInstanceProfile
+     *        The instance profile associated with the underlying Amazon EC2 instance of an RDS Custom DB instance. The
+     *        instance profile must meet the following requirements:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        The profile must exist in your account.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The profile must have an IAM role that Amazon EC2 has permissions to assume.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The instance profile name and the associated IAM role name must start with the prefix
+     *        <code>AWSRDSCustom</code>.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        For the list of permissions required for the IAM role, see <a href=
+     *        "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-setup-orcl.html#custom-setup-orcl.iam-vpc">
+     *        Configure IAM and your VPC</a> in the <i>Amazon Relational Database Service User Guide</i>.
+     *        </p>
+     *        <p>
+     *        This setting is required for RDS Custom.
+     */
+
+    public void setCustomIamInstanceProfile(String customIamInstanceProfile) {
+        this.customIamInstanceProfile = customIamInstanceProfile;
+    }
+
+    /**
+     * <p>
+     * The instance profile associated with the underlying Amazon EC2 instance of an RDS Custom DB instance. The
+     * instance profile must meet the following requirements:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The profile must exist in your account.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The profile must have an IAM role that Amazon EC2 has permissions to assume.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The instance profile name and the associated IAM role name must start with the prefix <code>AWSRDSCustom</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For the list of permissions required for the IAM role, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-setup-orcl.html#custom-setup-orcl.iam-vpc">
+     * Configure IAM and your VPC</a> in the <i>Amazon Relational Database Service User Guide</i>.
+     * </p>
+     * <p>
+     * This setting is required for RDS Custom.
+     * </p>
+     * 
+     * @return The instance profile associated with the underlying Amazon EC2 instance of an RDS Custom DB instance. The
+     *         instance profile must meet the following requirements:</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         The profile must exist in your account.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         The profile must have an IAM role that Amazon EC2 has permissions to assume.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         The instance profile name and the associated IAM role name must start with the prefix
+     *         <code>AWSRDSCustom</code>.
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         For the list of permissions required for the IAM role, see <a href=
+     *         "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-setup-orcl.html#custom-setup-orcl.iam-vpc"
+     *         > Configure IAM and your VPC</a> in the <i>Amazon Relational Database Service User Guide</i>.
+     *         </p>
+     *         <p>
+     *         This setting is required for RDS Custom.
+     */
+
+    public String getCustomIamInstanceProfile() {
+        return this.customIamInstanceProfile;
+    }
+
+    /**
+     * <p>
+     * The instance profile associated with the underlying Amazon EC2 instance of an RDS Custom DB instance. The
+     * instance profile must meet the following requirements:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The profile must exist in your account.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The profile must have an IAM role that Amazon EC2 has permissions to assume.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The instance profile name and the associated IAM role name must start with the prefix <code>AWSRDSCustom</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For the list of permissions required for the IAM role, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-setup-orcl.html#custom-setup-orcl.iam-vpc">
+     * Configure IAM and your VPC</a> in the <i>Amazon Relational Database Service User Guide</i>.
+     * </p>
+     * <p>
+     * This setting is required for RDS Custom.
+     * </p>
+     * 
+     * @param customIamInstanceProfile
+     *        The instance profile associated with the underlying Amazon EC2 instance of an RDS Custom DB instance. The
+     *        instance profile must meet the following requirements:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        The profile must exist in your account.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The profile must have an IAM role that Amazon EC2 has permissions to assume.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The instance profile name and the associated IAM role name must start with the prefix
+     *        <code>AWSRDSCustom</code>.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        For the list of permissions required for the IAM role, see <a href=
+     *        "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-setup-orcl.html#custom-setup-orcl.iam-vpc">
+     *        Configure IAM and your VPC</a> in the <i>Amazon Relational Database Service User Guide</i>.
+     *        </p>
+     *        <p>
+     *        This setting is required for RDS Custom.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateDBInstanceRequest withCustomIamInstanceProfile(String customIamInstanceProfile) {
+        setCustomIamInstanceProfile(customIamInstanceProfile);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -11028,7 +12302,9 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
         if (getMaxAllocatedStorage() != null)
             sb.append("MaxAllocatedStorage: ").append(getMaxAllocatedStorage()).append(",");
         if (getEnableCustomerOwnedIp() != null)
-            sb.append("EnableCustomerOwnedIp: ").append(getEnableCustomerOwnedIp());
+            sb.append("EnableCustomerOwnedIp: ").append(getEnableCustomerOwnedIp()).append(",");
+        if (getCustomIamInstanceProfile() != null)
+            sb.append("CustomIamInstanceProfile: ").append(getCustomIamInstanceProfile());
         sb.append("}");
         return sb.toString();
     }
@@ -11237,6 +12513,10 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
             return false;
         if (other.getEnableCustomerOwnedIp() != null && other.getEnableCustomerOwnedIp().equals(this.getEnableCustomerOwnedIp()) == false)
             return false;
+        if (other.getCustomIamInstanceProfile() == null ^ this.getCustomIamInstanceProfile() == null)
+            return false;
+        if (other.getCustomIamInstanceProfile() != null && other.getCustomIamInstanceProfile().equals(this.getCustomIamInstanceProfile()) == false)
+            return false;
         return true;
     }
 
@@ -11293,6 +12573,7 @@ public class CreateDBInstanceRequest extends com.amazonaws.AmazonWebServiceReque
         hashCode = prime * hashCode + ((getDeletionProtection() == null) ? 0 : getDeletionProtection().hashCode());
         hashCode = prime * hashCode + ((getMaxAllocatedStorage() == null) ? 0 : getMaxAllocatedStorage().hashCode());
         hashCode = prime * hashCode + ((getEnableCustomerOwnedIp() == null) ? 0 : getEnableCustomerOwnedIp().hashCode());
+        hashCode = prime * hashCode + ((getCustomIamInstanceProfile() == null) ? 0 : getCustomIamInstanceProfile().hashCode());
         return hashCode;
     }
 

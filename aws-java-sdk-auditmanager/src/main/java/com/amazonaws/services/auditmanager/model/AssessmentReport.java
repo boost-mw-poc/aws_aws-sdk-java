@@ -19,9 +19,9 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A finalized document generated from an Audit Manager assessment. These reports summarize the relevant evidence
- * collected for your audit, and link to the relevant evidence folders which are named and organized according to the
- * controls specified in your assessment.
+ * A finalized document that's generated from an Audit Manager assessment. These reports summarize the relevant evidence
+ * that was collected for your audit, and link to the relevant evidence folders. These evidence folders are named and
+ * organized according to the controls that are specified in your assessment.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/AssessmentReport" target="_top">AWS API
@@ -32,13 +32,13 @@ public class AssessmentReport implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The unique identifier for the specified assessment report.
+     * The unique identifier for the assessment report.
      * </p>
      */
     private String id;
     /**
      * <p>
-     * The name given to the assessment report.
+     * The name that's given to the assessment report.
      * </p>
      */
     private String name;
@@ -87,11 +87,11 @@ public class AssessmentReport implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The unique identifier for the specified assessment report.
+     * The unique identifier for the assessment report.
      * </p>
      * 
      * @param id
-     *        The unique identifier for the specified assessment report.
+     *        The unique identifier for the assessment report.
      */
 
     public void setId(String id) {
@@ -100,10 +100,10 @@ public class AssessmentReport implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The unique identifier for the specified assessment report.
+     * The unique identifier for the assessment report.
      * </p>
      * 
-     * @return The unique identifier for the specified assessment report.
+     * @return The unique identifier for the assessment report.
      */
 
     public String getId() {
@@ -112,11 +112,11 @@ public class AssessmentReport implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The unique identifier for the specified assessment report.
+     * The unique identifier for the assessment report.
      * </p>
      * 
      * @param id
-     *        The unique identifier for the specified assessment report.
+     *        The unique identifier for the assessment report.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -127,11 +127,11 @@ public class AssessmentReport implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The name given to the assessment report.
+     * The name that's given to the assessment report.
      * </p>
      * 
      * @param name
-     *        The name given to the assessment report.
+     *        The name that's given to the assessment report.
      */
 
     public void setName(String name) {
@@ -140,10 +140,10 @@ public class AssessmentReport implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The name given to the assessment report.
+     * The name that's given to the assessment report.
      * </p>
      * 
-     * @return The name given to the assessment report.
+     * @return The name that's given to the assessment report.
      */
 
     public String getName() {
@@ -152,11 +152,11 @@ public class AssessmentReport implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The name given to the assessment report.
+     * The name that's given to the assessment report.
      * </p>
      * 
      * @param name
-     *        The name given to the assessment report.
+     *        The name that's given to the assessment report.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -180,8 +180,7 @@ public class DBInstanceAutomatedBackup implements Serializable, Cloneable {
      * The Amazon Web Services KMS key ID for an automated backup.
      * </p>
      * <p>
-     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the Amazon Web
-     * Services KMS customer master key (CMK).
+     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key.
      * </p>
      */
     private String kmsKeyId;
@@ -1201,15 +1200,14 @@ public class DBInstanceAutomatedBackup implements Serializable, Cloneable {
      * The Amazon Web Services KMS key ID for an automated backup.
      * </p>
      * <p>
-     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the Amazon Web
-     * Services KMS customer master key (CMK).
+     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key.
      * </p>
      * 
      * @param kmsKeyId
      *        The Amazon Web Services KMS key ID for an automated backup.</p>
      *        <p>
-     *        The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the Amazon
-     *        Web Services KMS customer master key (CMK).
+     *        The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS
+     *        key.
      */
 
     public void setKmsKeyId(String kmsKeyId) {
@@ -1221,14 +1219,13 @@ public class DBInstanceAutomatedBackup implements Serializable, Cloneable {
      * The Amazon Web Services KMS key ID for an automated backup.
      * </p>
      * <p>
-     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the Amazon Web
-     * Services KMS customer master key (CMK).
+     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key.
      * </p>
      * 
      * @return The Amazon Web Services KMS key ID for an automated backup.</p>
      *         <p>
-     *         The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the
-     *         Amazon Web Services KMS customer master key (CMK).
+     *         The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS
+     *         key.
      */
 
     public String getKmsKeyId() {
@@ -1240,15 +1237,14 @@ public class DBInstanceAutomatedBackup implements Serializable, Cloneable {
      * The Amazon Web Services KMS key ID for an automated backup.
      * </p>
      * <p>
-     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the Amazon Web
-     * Services KMS customer master key (CMK).
+     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key.
      * </p>
      * 
      * @param kmsKeyId
      *        The Amazon Web Services KMS key ID for an automated backup.</p>
      *        <p>
-     *        The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the Amazon
-     *        Web Services KMS customer master key (CMK).
+     *        The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS
+     *        key.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -1121,6 +1121,39 @@ public interface AmazonRoute53ResolverAsync extends AmazonRoute53Resolver {
 
     /**
      * <p>
+     * Retrieves the behavior configuration of Route 53 Resolver behavior for a single VPC from Amazon Virtual Private
+     * Cloud.
+     * </p>
+     * 
+     * @param getResolverConfigRequest
+     * @return A Java Future containing the result of the GetResolverConfig operation returned by the service.
+     * @sample AmazonRoute53ResolverAsync.GetResolverConfig
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/route53resolver-2018-04-01/GetResolverConfig"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetResolverConfigResult> getResolverConfigAsync(GetResolverConfigRequest getResolverConfigRequest);
+
+    /**
+     * <p>
+     * Retrieves the behavior configuration of Route 53 Resolver behavior for a single VPC from Amazon Virtual Private
+     * Cloud.
+     * </p>
+     * 
+     * @param getResolverConfigRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetResolverConfig operation returned by the service.
+     * @sample AmazonRoute53ResolverAsyncHandler.GetResolverConfig
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/route53resolver-2018-04-01/GetResolverConfig"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetResolverConfigResult> getResolverConfigAsync(GetResolverConfigRequest getResolverConfigRequest,
+            com.amazonaws.handlers.AsyncHandler<GetResolverConfigRequest, GetResolverConfigResult> asyncHandler);
+
+    /**
+     * <p>
      * Gets DNSSEC validation information for a specified resource.
      * </p>
      * 
@@ -1718,6 +1751,39 @@ public interface AmazonRoute53ResolverAsync extends AmazonRoute53Resolver {
 
     /**
      * <p>
+     * Retrieves the Resolver configurations that you have defined. Route 53 Resolver uses the configurations to manage
+     * DNS resolution behavior for your VPCs.
+     * </p>
+     * 
+     * @param listResolverConfigsRequest
+     * @return A Java Future containing the result of the ListResolverConfigs operation returned by the service.
+     * @sample AmazonRoute53ResolverAsync.ListResolverConfigs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/route53resolver-2018-04-01/ListResolverConfigs"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListResolverConfigsResult> listResolverConfigsAsync(ListResolverConfigsRequest listResolverConfigsRequest);
+
+    /**
+     * <p>
+     * Retrieves the Resolver configurations that you have defined. Route 53 Resolver uses the configurations to manage
+     * DNS resolution behavior for your VPCs.
+     * </p>
+     * 
+     * @param listResolverConfigsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListResolverConfigs operation returned by the service.
+     * @sample AmazonRoute53ResolverAsyncHandler.ListResolverConfigs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/route53resolver-2018-04-01/ListResolverConfigs"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListResolverConfigsResult> listResolverConfigsAsync(ListResolverConfigsRequest listResolverConfigsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListResolverConfigsRequest, ListResolverConfigsResult> asyncHandler);
+
+    /**
+     * <p>
      * Lists the configurations for DNSSEC validation that are associated with the current Amazon Web Services account.
      * </p>
      * 
@@ -2288,6 +2354,39 @@ public interface AmazonRoute53ResolverAsync extends AmazonRoute53Resolver {
     java.util.concurrent.Future<UpdateFirewallRuleGroupAssociationResult> updateFirewallRuleGroupAssociationAsync(
             UpdateFirewallRuleGroupAssociationRequest updateFirewallRuleGroupAssociationRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateFirewallRuleGroupAssociationRequest, UpdateFirewallRuleGroupAssociationResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates the behavior configuration of Route 53 Resolver behavior for a single VPC from Amazon Virtual Private
+     * Cloud.
+     * </p>
+     * 
+     * @param updateResolverConfigRequest
+     * @return A Java Future containing the result of the UpdateResolverConfig operation returned by the service.
+     * @sample AmazonRoute53ResolverAsync.UpdateResolverConfig
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/route53resolver-2018-04-01/UpdateResolverConfig"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateResolverConfigResult> updateResolverConfigAsync(UpdateResolverConfigRequest updateResolverConfigRequest);
+
+    /**
+     * <p>
+     * Updates the behavior configuration of Route 53 Resolver behavior for a single VPC from Amazon Virtual Private
+     * Cloud.
+     * </p>
+     * 
+     * @param updateResolverConfigRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateResolverConfig operation returned by the service.
+     * @sample AmazonRoute53ResolverAsyncHandler.UpdateResolverConfig
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/route53resolver-2018-04-01/UpdateResolverConfig"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateResolverConfigResult> updateResolverConfigAsync(UpdateResolverConfigRequest updateResolverConfigRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateResolverConfigRequest, UpdateResolverConfigResult> asyncHandler);
 
     /**
      * <p>

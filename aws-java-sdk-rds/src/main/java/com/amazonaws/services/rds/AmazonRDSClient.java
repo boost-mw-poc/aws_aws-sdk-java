@@ -354,6 +354,7 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
         exceptionUnmarshallers.add(new DBSubnetQuotaExceededExceptionUnmarshaller());
         exceptionUnmarshallers.add(new BackupPolicyNotFoundExceptionUnmarshaller());
         exceptionUnmarshallers.add(new DBSecurityGroupNotFoundExceptionUnmarshaller());
+        exceptionUnmarshallers.add(new CustomDBEngineVersionNotFoundExceptionUnmarshaller());
         exceptionUnmarshallers.add(new InsufficientDBInstanceCapacityExceptionUnmarshaller());
         exceptionUnmarshallers.add(new DBUpgradeDependencyFailureExceptionUnmarshaller());
         exceptionUnmarshallers.add(new DBClusterEndpointNotFoundExceptionUnmarshaller());
@@ -365,6 +366,7 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
         exceptionUnmarshallers.add(new DBParameterGroupNotFoundExceptionUnmarshaller());
         exceptionUnmarshallers.add(new InvalidDBInstanceAutomatedBackupStateExceptionUnmarshaller());
         exceptionUnmarshallers.add(new CustomAvailabilityZoneNotFoundExceptionUnmarshaller());
+        exceptionUnmarshallers.add(new CustomDBEngineVersionAlreadyExistsExceptionUnmarshaller());
         exceptionUnmarshallers.add(new DBSubnetGroupDoesNotCoverEnoughAZsExceptionUnmarshaller());
         exceptionUnmarshallers.add(new DBSubnetGroupNotFoundExceptionUnmarshaller());
         exceptionUnmarshallers.add(new DBProxyNotFoundExceptionUnmarshaller());
@@ -393,6 +395,7 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
         exceptionUnmarshallers.add(new InvalidDBParameterGroupStateExceptionUnmarshaller());
         exceptionUnmarshallers.add(new DomainNotFoundExceptionUnmarshaller());
         exceptionUnmarshallers.add(new StorageQuotaExceededExceptionUnmarshaller());
+        exceptionUnmarshallers.add(new InvalidCustomDBEngineVersionStateExceptionUnmarshaller());
         exceptionUnmarshallers.add(new DBProxyEndpointAlreadyExistsExceptionUnmarshaller());
         exceptionUnmarshallers.add(new AuthorizationNotFoundExceptionUnmarshaller());
         exceptionUnmarshallers.add(new OptionGroupAlreadyExistsExceptionUnmarshaller());
@@ -432,6 +435,7 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
         exceptionUnmarshallers.add(new SNSNoAuthorizationExceptionUnmarshaller());
         exceptionUnmarshallers.add(new DBClusterSnapshotNotFoundExceptionUnmarshaller());
         exceptionUnmarshallers.add(new DBProxyEndpointQuotaExceededExceptionUnmarshaller());
+        exceptionUnmarshallers.add(new CustomDBEngineVersionQuotaExceededExceptionUnmarshaller());
         exceptionUnmarshallers.add(new DBClusterParameterGroupNotFoundExceptionUnmarshaller());
         exceptionUnmarshallers.add(new DBProxyQuotaExceededExceptionUnmarshaller());
         exceptionUnmarshallers.add(new ExportTaskAlreadyExistsExceptionUnmarshaller());
@@ -547,6 +551,9 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
      * To add a role to a DB instance, the status of the DB instance must be <code>available</code>.
      * </p>
      * </note>
+     * <p>
+     * This command doesn't apply to RDS Custom.
+     * </p>
      * 
      * @param addRoleToDBInstanceRequest
      * @return Result of the AddRoleToDBInstance operation returned by the service.
@@ -1117,10 +1124,10 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
      * <ul>
      * <li>
      * <p>
-     * <code>KmsKeyId</code> - The Amazon Web Services KMS key identifier for the customer master key (CMK) to use to
-     * encrypt the copy of the DB cluster snapshot in the destination Amazon Web Services Region. This is the same
-     * identifier for both the <code>CopyDBClusterSnapshot</code> action that is called in the destination Amazon Web
-     * Services Region, and the action contained in the pre-signed URL.
+     * <code>KmsKeyId</code> - The Amazon Web Services KMS key identifier for the KMS key to use to encrypt the copy of
+     * the DB cluster snapshot in the destination Amazon Web Services Region. This is the same identifier for both the
+     * <code>CopyDBClusterSnapshot</code> action that is called in the destination Amazon Web Services Region, and the
+     * action contained in the pre-signed URL.
      * </p>
      * </li>
      * <li>
@@ -1321,6 +1328,9 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
      * the DB snapshot copy.
      * </p>
      * <p>
+     * This command doesn't apply to RDS Custom.
+     * </p>
+     * <p>
      * For more information about copying snapshots, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_CopySnapshot.html#USER_CopyDBSnapshot">Copying
      * a DB Snapshot</a> in the <i>Amazon RDS User Guide.</i>
@@ -1508,6 +1518,108 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
 
             StaxResponseHandler<CustomAvailabilityZone> responseHandler = new StaxResponseHandler<CustomAvailabilityZone>(
                     new CustomAvailabilityZoneStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Creates a custom DB engine version (CEV). A CEV is a binary volume snapshot of a database engine and specific
+     * AMI. The only supported engine is Oracle Database 19c Enterprise Edition with the January 2021 or later RU/RUR.
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-cev.html#custom-cev.preparing.manifest">
+     * Amazon RDS Custom requirements and limitations</a> in the <i>Amazon RDS User Guide</i>.
+     * </p>
+     * <p>
+     * Amazon RDS, which is a fully managed service, supplies the Amazon Machine Image (AMI) and database software. The
+     * Amazon RDS database software is preinstalled, so you need only select a DB engine and version, and create your
+     * database. With Amazon RDS Custom, you upload your database installation files in Amazon S3. For more information,
+     * see <a href=
+     * "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-cev.html#custom-cev.html#custom-cev.preparing">
+     * Preparing to create a CEV</a> in the <i>Amazon RDS User Guide</i>.
+     * </p>
+     * <p>
+     * When you create a custom engine version, you specify the files in a JSON document called a CEV manifest. This
+     * document describes installation .zip files stored in Amazon S3. RDS Custom creates your CEV from the installation
+     * files that you provided. This service model is called Bring Your Own Media (BYOM).
+     * </p>
+     * <p>
+     * Creation takes approximately two hours. If creation fails, RDS Custom issues <code>RDS-EVENT-0196</code> with the
+     * message <code>Creation failed for custom engine version</code>, and includes details about the failure. For
+     * example, the event prints missing files.
+     * </p>
+     * <p>
+     * After you create the CEV, it is available for use. You can create multiple CEVs, and create multiple RDS Custom
+     * instances from any CEV. You can also change the status of a CEV to make it available or inactive.
+     * </p>
+     * <note>
+     * <p>
+     * The MediaImport service that imports files from Amazon S3 to create CEVs isn't integrated with Amazon Web
+     * Services CloudTrail. If you turn on data logging for Amazon RDS in CloudTrail, calls to the
+     * <code>CreateCustomDbEngineVersion</code> event aren't logged. However, you might see calls from the API gateway
+     * that accesses your Amazon S3 bucket. These calls originate from the MediaImport service for the
+     * <code>CreateCustomDbEngineVersion</code> event.
+     * </p>
+     * </note>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-cev.html#custom-cev.create"> Creating a
+     * CEV</a> in the <i>Amazon RDS User Guide</i>.
+     * </p>
+     * 
+     * @param createCustomDBEngineVersionRequest
+     * @return Result of the CreateCustomDBEngineVersion operation returned by the service.
+     * @throws CustomDBEngineVersionAlreadyExistsException
+     *         A CEV with the specified name already exists.
+     * @throws CustomDBEngineVersionQuotaExceededException
+     *         You have exceeded your CEV quota.
+     * @throws KMSKeyNotAccessibleException
+     *         An error occurred accessing an Amazon Web Services KMS key.
+     * @sample AmazonRDS.CreateCustomDBEngineVersion
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/CreateCustomDBEngineVersion"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public CreateCustomDBEngineVersionResult createCustomDBEngineVersion(CreateCustomDBEngineVersionRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateCustomDBEngineVersion(request);
+    }
+
+    @SdkInternalApi
+    final CreateCustomDBEngineVersionResult executeCreateCustomDBEngineVersion(CreateCustomDBEngineVersionRequest createCustomDBEngineVersionRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createCustomDBEngineVersionRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateCustomDBEngineVersionRequest> request = null;
+        Response<CreateCustomDBEngineVersionResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateCustomDBEngineVersionRequestMarshaller().marshall(super.beforeMarshalling(createCustomDBEngineVersionRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "RDS");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateCustomDBEngineVersion");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<CreateCustomDBEngineVersionResult> responseHandler = new StaxResponseHandler<CreateCustomDBEngineVersionResult>(
+                    new CreateCustomDBEngineVersionResultStaxUnmarshaller());
 
             response = invoke(request, responseHandler, executionContext);
 
@@ -2085,10 +2197,13 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
      * <p>
      * A DB parameter group is initially created with the default parameters for the database engine used by the DB
      * instance. To provide custom values for any of the parameters, you must modify the group after creating it using
-     * <i>ModifyDBParameterGroup</i>. Once you've created a DB parameter group, you need to associate it with your DB
-     * instance using <i>ModifyDBInstance</i>. When you associate a new DB parameter group with a running DB instance,
-     * you need to reboot the DB instance without failover for the new DB parameter group and associated settings to
-     * take effect.
+     * <code>ModifyDBParameterGroup</code>. Once you've created a DB parameter group, you need to associate it with your
+     * DB instance using <code>ModifyDBInstance</code>. When you associate a new DB parameter group with a running DB
+     * instance, you need to reboot the DB instance without failover for the new DB parameter group and associated
+     * settings to take effect.
+     * </p>
+     * <p>
+     * This command doesn't apply to RDS Custom.
      * </p>
      * <important>
      * <p>
@@ -2658,6 +2773,9 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
      * <p>
      * Creates a new option group. You can create up to 20 option groups.
      * </p>
+     * <p>
+     * This command doesn't apply to RDS Custom.
+     * </p>
      * 
      * @param createOptionGroupRequest
      * @return Result of the CreateOptionGroup operation returned by the service.
@@ -2770,6 +2888,96 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
 
             StaxResponseHandler<CustomAvailabilityZone> responseHandler = new StaxResponseHandler<CustomAvailabilityZone>(
                     new CustomAvailabilityZoneStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Deletes a custom engine version. To run this command, make sure you meet the following prerequisites:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The CEV must not be the default for RDS Custom. If it is, change the default before running this command.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The CEV must not be associated with an RDS Custom DB instance, RDS Custom instance snapshot, or automated backup
+     * of your RDS Custom instance.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Typically, deletion takes a few minutes.
+     * </p>
+     * <note>
+     * <p>
+     * The MediaImport service that imports files from Amazon S3 to create CEVs isn't integrated with Amazon Web
+     * Services CloudTrail. If you turn on data logging for Amazon RDS in CloudTrail, calls to the
+     * <code>DeleteCustomDbEngineVersion</code> event aren't logged. However, you might see calls from the API gateway
+     * that accesses your Amazon S3 bucket. These calls originate from the MediaImport service for the
+     * <code>DeleteCustomDbEngineVersion</code> event.
+     * </p>
+     * </note>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-cev.html#custom-cev.delete"> Deleting a
+     * CEV</a> in the <i>Amazon RDS User Guide</i>.
+     * </p>
+     * 
+     * @param deleteCustomDBEngineVersionRequest
+     * @return Result of the DeleteCustomDBEngineVersion operation returned by the service.
+     * @throws CustomDBEngineVersionNotFoundException
+     *         The specified CEV was not found.
+     * @throws InvalidCustomDBEngineVersionStateException
+     *         You can't delete the CEV.
+     * @sample AmazonRDS.DeleteCustomDBEngineVersion
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/DeleteCustomDBEngineVersion"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DeleteCustomDBEngineVersionResult deleteCustomDBEngineVersion(DeleteCustomDBEngineVersionRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteCustomDBEngineVersion(request);
+    }
+
+    @SdkInternalApi
+    final DeleteCustomDBEngineVersionResult executeDeleteCustomDBEngineVersion(DeleteCustomDBEngineVersionRequest deleteCustomDBEngineVersionRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteCustomDBEngineVersionRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteCustomDBEngineVersionRequest> request = null;
+        Response<DeleteCustomDBEngineVersionResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteCustomDBEngineVersionRequestMarshaller().marshall(super.beforeMarshalling(deleteCustomDBEngineVersionRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "RDS");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteCustomDBEngineVersion");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<DeleteCustomDBEngineVersionResult> responseHandler = new StaxResponseHandler<DeleteCustomDBEngineVersionResult>(
+                    new DeleteCustomDBEngineVersionResultStaxUnmarshaller());
 
             response = invoke(request, responseHandler, executionContext);
 
@@ -4823,6 +5031,9 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
      * <p>
      * Returns a list of DB log files for the DB instance.
      * </p>
+     * <p>
+     * This command doesn't apply to RDS Custom.
+     * </p>
      * 
      * @param describeDBLogFilesRequest
      * @return Result of the DescribeDBLogFiles operation returned by the service.
@@ -6454,6 +6665,9 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
      * You can call <code>DescribeValidDBInstanceModifications</code> to learn what modifications you can make to your
      * DB instance. You can use this information when you call <code>ModifyDBInstance</code>.
      * </p>
+     * <p>
+     * This command doesn't apply to RDS Custom.
+     * </p>
      * 
      * @param describeValidDBInstanceModificationsRequest
      * @return Result of the DescribeValidDBInstanceModifications operation returned by the service.
@@ -6515,6 +6729,9 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
     /**
      * <p>
      * Downloads all or a portion of the specified log file, up to 1 MB in size.
+     * </p>
+     * <p>
+     * This command doesn't apply to RDS Custom.
      * </p>
      * 
      * @param downloadDBLogFilePortionRequest
@@ -7044,6 +7261,81 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
 
             StaxResponseHandler<ModifyCurrentDBClusterCapacityResult> responseHandler = new StaxResponseHandler<ModifyCurrentDBClusterCapacityResult>(
                     new ModifyCurrentDBClusterCapacityResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Modifies the status of a custom engine version (CEV). You can find CEVs to modify by calling
+     * <code>DescribeDBEngineVersions</code>.
+     * </p>
+     * <note>
+     * <p>
+     * The MediaImport service that imports files from Amazon S3 to create CEVs isn't integrated with Amazon Web
+     * Services CloudTrail. If you turn on data logging for Amazon RDS in CloudTrail, calls to the
+     * <code>ModifyCustomDbEngineVersion</code> event aren't logged. However, you might see calls from the API gateway
+     * that accesses your Amazon S3 bucket. These calls originate from the MediaImport service for the
+     * <code>ModifyCustomDbEngineVersion</code> event.
+     * </p>
+     * </note>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/custom-cev.html#custom-cev.preparing.manifest"
+     * >Modifying CEV status</a> in the <i>Amazon RDS User Guide</i>.
+     * </p>
+     * 
+     * @param modifyCustomDBEngineVersionRequest
+     * @return Result of the ModifyCustomDBEngineVersion operation returned by the service.
+     * @throws CustomDBEngineVersionNotFoundException
+     *         The specified CEV was not found.
+     * @throws InvalidCustomDBEngineVersionStateException
+     *         You can't delete the CEV.
+     * @sample AmazonRDS.ModifyCustomDBEngineVersion
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/rds-2014-10-31/ModifyCustomDBEngineVersion"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ModifyCustomDBEngineVersionResult modifyCustomDBEngineVersion(ModifyCustomDBEngineVersionRequest request) {
+        request = beforeClientExecution(request);
+        return executeModifyCustomDBEngineVersion(request);
+    }
+
+    @SdkInternalApi
+    final ModifyCustomDBEngineVersionResult executeModifyCustomDBEngineVersion(ModifyCustomDBEngineVersionRequest modifyCustomDBEngineVersionRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(modifyCustomDBEngineVersionRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ModifyCustomDBEngineVersionRequest> request = null;
+        Response<ModifyCustomDBEngineVersionResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ModifyCustomDBEngineVersionRequestMarshaller().marshall(super.beforeMarshalling(modifyCustomDBEngineVersionRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "RDS");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ModifyCustomDBEngineVersion");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<ModifyCustomDBEngineVersionResult> responseHandler = new StaxResponseHandler<ModifyCustomDBEngineVersionResult>(
+                    new ModifyCustomDBEngineVersionResultStaxUnmarshaller());
 
             response = invoke(request, responseHandler, executionContext);
 
@@ -7764,7 +8056,8 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
      * shared or public.
      * </p>
      * <p>
-     * Amazon RDS supports upgrading DB snapshots for MySQL, Oracle, and PostgreSQL.
+     * Amazon RDS supports upgrading DB snapshots for MySQL, PostgreSQL, and Oracle. This command doesn't apply to RDS
+     * Custom.
      * </p>
      * 
      * @param modifyDBSnapshotRequest
@@ -8191,7 +8484,7 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
      * </li>
      * <li>
      * <p>
-     * This command doesn't apply to Aurora MySQL and Aurora PostgreSQL.
+     * This command doesn't apply to Aurora MySQL, Aurora PostgreSQL, or RDS Custom.
      * </p>
      * </li>
      * </ul>
@@ -8391,6 +8684,9 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
      * For more information about rebooting, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_RebootInstance.html">Rebooting a DB
      * Instance</a> in the <i>Amazon RDS User Guide.</i>
+     * </p>
+     * <p>
+     * This command doesn't apply to RDS Custom.
      * </p>
      * 
      * @param rebootDBInstanceRequest
@@ -9479,6 +9775,9 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/MySQL.Procedural.Importing.html">Importing Data into
      * an Amazon RDS MySQL DB Instance</a> in the <i>Amazon RDS User Guide.</i>
      * </p>
+     * <p>
+     * This command doesn't apply to RDS Custom.
+     * </p>
      * 
      * @param restoreDBInstanceFromS3Request
      * @return Result of the RestoreDBInstanceFromS3 operation returned by the service.
@@ -9909,7 +10208,7 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
      * </p>
      * <note>
      * <p>
-     * This command doesn't apply to Aurora MySQL and Aurora PostgreSQL. For Aurora DB clusters, use
+     * This command doesn't apply to RDS Custom, Aurora MySQL, and Aurora PostgreSQL. For Aurora DB clusters, use
      * <code>StartDBCluster</code> instead.
      * </p>
      * </note>
@@ -9995,6 +10294,9 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
      * Enables replication of automated backups to a different Amazon Web Services Region.
      * </p>
      * <p>
+     * This command doesn't apply to RDS Custom.
+     * </p>
+     * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_ReplicateBackups.html"> Replicating Automated
      * Backups to Another Amazon Web Services Region</a> in the <i>Amazon RDS User Guide.</i>
@@ -10067,6 +10369,9 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
     /**
      * <p>
      * Starts an export of a snapshot to Amazon S3. The provided IAM role must have access to the S3 bucket.
+     * </p>
+     * <p>
+     * This command doesn't apply to RDS Custom.
      * </p>
      * 
      * @param startExportTaskRequest
@@ -10298,7 +10603,7 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
      * </p>
      * <note>
      * <p>
-     * This command doesn't apply to Aurora MySQL and Aurora PostgreSQL. For Aurora clusters, use
+     * This command doesn't apply to RDS Custom, Aurora MySQL, and Aurora PostgreSQL. For Aurora clusters, use
      * <code>StopDBCluster</code> instead.
      * </p>
      * </note>
@@ -10366,6 +10671,9 @@ public class AmazonRDSClient extends AmazonWebServiceClient implements AmazonRDS
     /**
      * <p>
      * Stops automated backup replication for a DB instance.
+     * </p>
+     * <p>
+     * This command doesn't apply to RDS Custom.
      * </p>
      * <p>
      * For more information, see <a

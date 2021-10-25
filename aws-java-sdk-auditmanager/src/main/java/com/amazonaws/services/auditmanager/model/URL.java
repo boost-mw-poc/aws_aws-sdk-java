@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A uniform resource locator, used as a unique identifier to locate a resource on the internet.
+ * Short for uniform resource locator. A URL is used as a unique identifier to locate a resource on the internet.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/URL" target="_top">AWS API
@@ -30,7 +30,7 @@ public class URL implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name or word used as a hyperlink to the URL.
+     * The name or word that's used as a hyperlink to the URL.
      * </p>
      */
     private String hyperlinkName;
@@ -43,11 +43,11 @@ public class URL implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name or word used as a hyperlink to the URL.
+     * The name or word that's used as a hyperlink to the URL.
      * </p>
      * 
      * @param hyperlinkName
-     *        The name or word used as a hyperlink to the URL.
+     *        The name or word that's used as a hyperlink to the URL.
      */
 
     public void setHyperlinkName(String hyperlinkName) {
@@ -56,10 +56,10 @@ public class URL implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name or word used as a hyperlink to the URL.
+     * The name or word that's used as a hyperlink to the URL.
      * </p>
      * 
-     * @return The name or word used as a hyperlink to the URL.
+     * @return The name or word that's used as a hyperlink to the URL.
      */
 
     public String getHyperlinkName() {
@@ -68,11 +68,11 @@ public class URL implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name or word used as a hyperlink to the URL.
+     * The name or word that's used as a hyperlink to the URL.
      * </p>
      * 
      * @param hyperlinkName
-     *        The name or word used as a hyperlink to the URL.
+     *        The name or word that's used as a hyperlink to the URL.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

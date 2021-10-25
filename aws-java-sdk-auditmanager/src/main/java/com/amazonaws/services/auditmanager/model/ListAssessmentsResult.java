@@ -25,23 +25,23 @@ public class ListAssessmentsResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The metadata associated with the assessment.
+     * The metadata that's associated with the assessment.
      * </p>
      */
     private java.util.List<AssessmentMetadataItem> assessmentMetadata;
     /**
      * <p>
-     * The pagination token used to fetch the next set of results.
+     * The pagination token that's used to fetch the next set of results.
      * </p>
      */
     private String nextToken;
 
     /**
      * <p>
-     * The metadata associated with the assessment.
+     * The metadata that's associated with the assessment.
      * </p>
      * 
-     * @return The metadata associated with the assessment.
+     * @return The metadata that's associated with the assessment.
      */
 
     public java.util.List<AssessmentMetadataItem> getAssessmentMetadata() {
@@ -50,11 +50,11 @@ public class ListAssessmentsResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The metadata associated with the assessment.
+     * The metadata that's associated with the assessment.
      * </p>
      * 
      * @param assessmentMetadata
-     *        The metadata associated with the assessment.
+     *        The metadata that's associated with the assessment.
      */
 
     public void setAssessmentMetadata(java.util.Collection<AssessmentMetadataItem> assessmentMetadata) {
@@ -68,7 +68,7 @@ public class ListAssessmentsResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The metadata associated with the assessment.
+     * The metadata that's associated with the assessment.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -77,7 +77,7 @@ public class ListAssessmentsResult extends com.amazonaws.AmazonWebServiceResult<
      * </p>
      * 
      * @param assessmentMetadata
-     *        The metadata associated with the assessment.
+     *        The metadata that's associated with the assessment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -93,11 +93,11 @@ public class ListAssessmentsResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The metadata associated with the assessment.
+     * The metadata that's associated with the assessment.
      * </p>
      * 
      * @param assessmentMetadata
-     *        The metadata associated with the assessment.
+     *        The metadata that's associated with the assessment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -108,11 +108,11 @@ public class ListAssessmentsResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The pagination token used to fetch the next set of results.
+     * The pagination token that's used to fetch the next set of results.
      * </p>
      * 
      * @param nextToken
-     *        The pagination token used to fetch the next set of results.
+     *        The pagination token that's used to fetch the next set of results.
      */
 
     public void setNextToken(String nextToken) {
@@ -121,10 +121,10 @@ public class ListAssessmentsResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The pagination token used to fetch the next set of results.
+     * The pagination token that's used to fetch the next set of results.
      * </p>
      * 
-     * @return The pagination token used to fetch the next set of results.
+     * @return The pagination token that's used to fetch the next set of results.
      */
 
     public String getNextToken() {
@@ -133,11 +133,11 @@ public class ListAssessmentsResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The pagination token used to fetch the next set of results.
+     * The pagination token that's used to fetch the next set of results.
      * </p>
      * 
      * @param nextToken
-     *        The pagination token used to fetch the next set of results.
+     *        The pagination token that's used to fetch the next set of results.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

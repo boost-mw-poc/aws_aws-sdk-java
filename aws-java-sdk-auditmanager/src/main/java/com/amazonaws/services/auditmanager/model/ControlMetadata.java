@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The metadata associated with the specified standard or custom control.
+ * The metadata that's associated with the standard control or custom control.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/ControlMetadata" target="_top">AWS API
@@ -30,25 +30,25 @@ public class ControlMetadata implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the specified control.
+     * The Amazon Resource Name (ARN) of the control.
      * </p>
      */
     private String arn;
     /**
      * <p>
-     * The unique identifier for the specified control.
+     * The unique identifier for the control.
      * </p>
      */
     private String id;
     /**
      * <p>
-     * The name of the specified control.
+     * The name of the control.
      * </p>
      */
     private String name;
     /**
      * <p>
-     * The data source that determines from where Audit Manager collects evidence for the control.
+     * The data source that determines where Audit Manager collects evidence from for the control.
      * </p>
      */
     private String controlSources;
@@ -67,11 +67,11 @@ public class ControlMetadata implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the specified control.
+     * The Amazon Resource Name (ARN) of the control.
      * </p>
      * 
      * @param arn
-     *        The Amazon Resource Name (ARN) of the specified control.
+     *        The Amazon Resource Name (ARN) of the control.
      */
 
     public void setArn(String arn) {
@@ -80,10 +80,10 @@ public class ControlMetadata implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the specified control.
+     * The Amazon Resource Name (ARN) of the control.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the specified control.
+     * @return The Amazon Resource Name (ARN) of the control.
      */
 
     public String getArn() {
@@ -92,11 +92,11 @@ public class ControlMetadata implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the specified control.
+     * The Amazon Resource Name (ARN) of the control.
      * </p>
      * 
      * @param arn
-     *        The Amazon Resource Name (ARN) of the specified control.
+     *        The Amazon Resource Name (ARN) of the control.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -107,11 +107,11 @@ public class ControlMetadata implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The unique identifier for the specified control.
+     * The unique identifier for the control.
      * </p>
      * 
      * @param id
-     *        The unique identifier for the specified control.
+     *        The unique identifier for the control.
      */
 
     public void setId(String id) {
@@ -120,10 +120,10 @@ public class ControlMetadata implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The unique identifier for the specified control.
+     * The unique identifier for the control.
      * </p>
      * 
-     * @return The unique identifier for the specified control.
+     * @return The unique identifier for the control.
      */
 
     public String getId() {
@@ -132,11 +132,11 @@ public class ControlMetadata implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The unique identifier for the specified control.
+     * The unique identifier for the control.
      * </p>
      * 
      * @param id
-     *        The unique identifier for the specified control.
+     *        The unique identifier for the control.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -147,11 +147,11 @@ public class ControlMetadata implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The name of the specified control.
+     * The name of the control.
      * </p>
      * 
      * @param name
-     *        The name of the specified control.
+     *        The name of the control.
      */
 
     public void setName(String name) {
@@ -160,10 +160,10 @@ public class ControlMetadata implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The name of the specified control.
+     * The name of the control.
      * </p>
      * 
-     * @return The name of the specified control.
+     * @return The name of the control.
      */
 
     public String getName() {
@@ -172,11 +172,11 @@ public class ControlMetadata implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The name of the specified control.
+     * The name of the control.
      * </p>
      * 
      * @param name
-     *        The name of the specified control.
+     *        The name of the control.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -187,11 +187,11 @@ public class ControlMetadata implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The data source that determines from where Audit Manager collects evidence for the control.
+     * The data source that determines where Audit Manager collects evidence from for the control.
      * </p>
      * 
      * @param controlSources
-     *        The data source that determines from where Audit Manager collects evidence for the control.
+     *        The data source that determines where Audit Manager collects evidence from for the control.
      */
 
     public void setControlSources(String controlSources) {
@@ -200,10 +200,10 @@ public class ControlMetadata implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The data source that determines from where Audit Manager collects evidence for the control.
+     * The data source that determines where Audit Manager collects evidence from for the control.
      * </p>
      * 
-     * @return The data source that determines from where Audit Manager collects evidence for the control.
+     * @return The data source that determines where Audit Manager collects evidence from for the control.
      */
 
     public String getControlSources() {
@@ -212,11 +212,11 @@ public class ControlMetadata implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The data source that determines from where Audit Manager collects evidence for the control.
+     * The data source that determines where Audit Manager collects evidence from for the control.
      * </p>
      * 
      * @param controlSources
-     *        The data source that determines from where Audit Manager collects evidence for the control.
+     *        The data source that determines where Audit Manager collects evidence from for the control.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -27,42 +27,42 @@ public class UpdateAssessmentControlRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The identifier for the specified assessment.
+     * The identifier for the assessment.
      * </p>
      */
     private String assessmentId;
     /**
      * <p>
-     * The identifier for the specified control set.
+     * The identifier for the control set.
      * </p>
      */
     private String controlSetId;
     /**
      * <p>
-     * The identifier for the specified control.
+     * The identifier for the control.
      * </p>
      */
     private String controlId;
     /**
      * <p>
-     * The status of the specified control.
+     * The status of the control.
      * </p>
      */
     private String controlStatus;
     /**
      * <p>
-     * The comment body text for the specified control.
+     * The comment body text for the control.
      * </p>
      */
     private String commentBody;
 
     /**
      * <p>
-     * The identifier for the specified assessment.
+     * The identifier for the assessment.
      * </p>
      * 
      * @param assessmentId
-     *        The identifier for the specified assessment.
+     *        The identifier for the assessment.
      */
 
     public void setAssessmentId(String assessmentId) {
@@ -71,10 +71,10 @@ public class UpdateAssessmentControlRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The identifier for the specified assessment.
+     * The identifier for the assessment.
      * </p>
      * 
-     * @return The identifier for the specified assessment.
+     * @return The identifier for the assessment.
      */
 
     public String getAssessmentId() {
@@ -83,11 +83,11 @@ public class UpdateAssessmentControlRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The identifier for the specified assessment.
+     * The identifier for the assessment.
      * </p>
      * 
      * @param assessmentId
-     *        The identifier for the specified assessment.
+     *        The identifier for the assessment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -98,11 +98,11 @@ public class UpdateAssessmentControlRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The identifier for the specified control set.
+     * The identifier for the control set.
      * </p>
      * 
      * @param controlSetId
-     *        The identifier for the specified control set.
+     *        The identifier for the control set.
      */
 
     public void setControlSetId(String controlSetId) {
@@ -111,10 +111,10 @@ public class UpdateAssessmentControlRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The identifier for the specified control set.
+     * The identifier for the control set.
      * </p>
      * 
-     * @return The identifier for the specified control set.
+     * @return The identifier for the control set.
      */
 
     public String getControlSetId() {
@@ -123,11 +123,11 @@ public class UpdateAssessmentControlRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The identifier for the specified control set.
+     * The identifier for the control set.
      * </p>
      * 
      * @param controlSetId
-     *        The identifier for the specified control set.
+     *        The identifier for the control set.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -138,11 +138,11 @@ public class UpdateAssessmentControlRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The identifier for the specified control.
+     * The identifier for the control.
      * </p>
      * 
      * @param controlId
-     *        The identifier for the specified control.
+     *        The identifier for the control.
      */
 
     public void setControlId(String controlId) {
@@ -151,10 +151,10 @@ public class UpdateAssessmentControlRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The identifier for the specified control.
+     * The identifier for the control.
      * </p>
      * 
-     * @return The identifier for the specified control.
+     * @return The identifier for the control.
      */
 
     public String getControlId() {
@@ -163,11 +163,11 @@ public class UpdateAssessmentControlRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The identifier for the specified control.
+     * The identifier for the control.
      * </p>
      * 
      * @param controlId
-     *        The identifier for the specified control.
+     *        The identifier for the control.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -178,11 +178,11 @@ public class UpdateAssessmentControlRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The status of the specified control.
+     * The status of the control.
      * </p>
      * 
      * @param controlStatus
-     *        The status of the specified control.
+     *        The status of the control.
      * @see ControlStatus
      */
 
@@ -192,10 +192,10 @@ public class UpdateAssessmentControlRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The status of the specified control.
+     * The status of the control.
      * </p>
      * 
-     * @return The status of the specified control.
+     * @return The status of the control.
      * @see ControlStatus
      */
 
@@ -205,11 +205,11 @@ public class UpdateAssessmentControlRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The status of the specified control.
+     * The status of the control.
      * </p>
      * 
      * @param controlStatus
-     *        The status of the specified control.
+     *        The status of the control.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ControlStatus
      */
@@ -221,11 +221,11 @@ public class UpdateAssessmentControlRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The status of the specified control.
+     * The status of the control.
      * </p>
      * 
      * @param controlStatus
-     *        The status of the specified control.
+     *        The status of the control.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ControlStatus
      */
@@ -237,11 +237,11 @@ public class UpdateAssessmentControlRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The comment body text for the specified control.
+     * The comment body text for the control.
      * </p>
      * 
      * @param commentBody
-     *        The comment body text for the specified control.
+     *        The comment body text for the control.
      */
 
     public void setCommentBody(String commentBody) {
@@ -250,10 +250,10 @@ public class UpdateAssessmentControlRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The comment body text for the specified control.
+     * The comment body text for the control.
      * </p>
      * 
-     * @return The comment body text for the specified control.
+     * @return The comment body text for the control.
      */
 
     public String getCommentBody() {
@@ -262,11 +262,11 @@ public class UpdateAssessmentControlRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The comment body text for the specified control.
+     * The comment body text for the control.
      * </p>
      * 
      * @param commentBody
-     *        The comment body text for the specified control.
+     *        The comment body text for the control.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

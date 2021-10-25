@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * Your account is not registered with Audit Manager. Check the delegated administrator setup on the Audit Manager
+ * Your account isn't registered with Audit Manager. Check the delegated administrator setup on the Audit Manager
  * settings page, and try again.
  * </p>
  */

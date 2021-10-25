@@ -229,6 +229,10 @@ public class CreateDBInstanceReadReplicaRequestMarshaller implements
             request.addParameter("MaxAllocatedStorage", StringUtils.fromInteger(createDBInstanceReadReplicaRequest.getMaxAllocatedStorage()));
         }
 
+        if (createDBInstanceReadReplicaRequest.getCustomIamInstanceProfile() != null) {
+            request.addParameter("CustomIamInstanceProfile", StringUtils.fromString(createDBInstanceReadReplicaRequest.getCustomIamInstanceProfile()));
+        }
+
         if (createDBInstanceReadReplicaRequest.getSourceRegion() != null) {
             request.addParameter("SourceRegion", StringUtils.fromString(createDBInstanceReadReplicaRequest.getSourceRegion()));
         }

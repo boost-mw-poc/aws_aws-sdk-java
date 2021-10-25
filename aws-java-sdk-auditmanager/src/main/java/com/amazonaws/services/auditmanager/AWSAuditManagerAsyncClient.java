@@ -30,14 +30,15 @@ import java.util.concurrent.ExecutorService;
  * Audit Manager API operations, data types, and errors.
  * </p>
  * <p>
- * Audit Manager is a service that provides automated evidence collection so that you can continuously audit your Amazon
- * Web Services usage, and assess the effectiveness of your controls to better manage risk and simplify compliance.
+ * Audit Manager is a service that provides automated evidence collection so that you can continually audit your Amazon
+ * Web Services usage. You can use it to assess the effectiveness of your controls, manage risk, and simplify
+ * compliance.
  * </p>
  * <p>
- * Audit Manager provides pre-built frameworks that structure and automate assessments for a given compliance standard.
- * Frameworks include a pre-built collection of controls with descriptions and testing procedures, which are grouped
- * according to the requirements of the specified compliance standard or regulation. You can also customize frameworks
- * and controls to support internal audits with unique requirements.
+ * Audit Manager provides prebuilt frameworks that structure and automate assessments for a given compliance standard.
+ * Frameworks include a prebuilt collection of controls with descriptions and testing procedures. These controls are
+ * grouped according to the requirements of the specified compliance standard or regulation. You can also customize
+ * frameworks and controls to support internal audits with specific requirements.
  * </p>
  * <p>
  * Use the following links to get started with the Audit Manager API:
@@ -512,6 +513,40 @@ public class AWSAuditManagerAsyncClient extends AWSAuditManagerClient implements
 
                 try {
                     result = executeDeleteAssessmentFramework(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteAssessmentFrameworkShareResult> deleteAssessmentFrameworkShareAsync(DeleteAssessmentFrameworkShareRequest request) {
+
+        return deleteAssessmentFrameworkShareAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteAssessmentFrameworkShareResult> deleteAssessmentFrameworkShareAsync(
+            final DeleteAssessmentFrameworkShareRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteAssessmentFrameworkShareRequest, DeleteAssessmentFrameworkShareResult> asyncHandler) {
+        final DeleteAssessmentFrameworkShareRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteAssessmentFrameworkShareResult>() {
+            @Override
+            public DeleteAssessmentFrameworkShareResult call() throws Exception {
+                DeleteAssessmentFrameworkShareResult result = null;
+
+                try {
+                    result = executeDeleteAssessmentFrameworkShare(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -1195,6 +1230,41 @@ public class AWSAuditManagerAsyncClient extends AWSAuditManagerClient implements
     }
 
     @Override
+    public java.util.concurrent.Future<ListAssessmentFrameworkShareRequestsResult> listAssessmentFrameworkShareRequestsAsync(
+            ListAssessmentFrameworkShareRequestsRequest request) {
+
+        return listAssessmentFrameworkShareRequestsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListAssessmentFrameworkShareRequestsResult> listAssessmentFrameworkShareRequestsAsync(
+            final ListAssessmentFrameworkShareRequestsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListAssessmentFrameworkShareRequestsRequest, ListAssessmentFrameworkShareRequestsResult> asyncHandler) {
+        final ListAssessmentFrameworkShareRequestsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListAssessmentFrameworkShareRequestsResult>() {
+            @Override
+            public ListAssessmentFrameworkShareRequestsResult call() throws Exception {
+                ListAssessmentFrameworkShareRequestsResult result = null;
+
+                try {
+                    result = executeListAssessmentFrameworkShareRequests(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ListAssessmentFrameworksResult> listAssessmentFrameworksAsync(ListAssessmentFrameworksRequest request) {
 
         return listAssessmentFrameworksAsync(request, null);
@@ -1494,6 +1564,40 @@ public class AWSAuditManagerAsyncClient extends AWSAuditManagerClient implements
     }
 
     @Override
+    public java.util.concurrent.Future<StartAssessmentFrameworkShareResult> startAssessmentFrameworkShareAsync(StartAssessmentFrameworkShareRequest request) {
+
+        return startAssessmentFrameworkShareAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartAssessmentFrameworkShareResult> startAssessmentFrameworkShareAsync(
+            final StartAssessmentFrameworkShareRequest request,
+            final com.amazonaws.handlers.AsyncHandler<StartAssessmentFrameworkShareRequest, StartAssessmentFrameworkShareResult> asyncHandler) {
+        final StartAssessmentFrameworkShareRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<StartAssessmentFrameworkShareResult>() {
+            @Override
+            public StartAssessmentFrameworkShareResult call() throws Exception {
+                StartAssessmentFrameworkShareResult result = null;
+
+                try {
+                    result = executeStartAssessmentFrameworkShare(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<TagResourceResult> tagResourceAsync(TagResourceRequest request) {
 
         return tagResourceAsync(request, null);
@@ -1678,6 +1782,40 @@ public class AWSAuditManagerAsyncClient extends AWSAuditManagerClient implements
 
                 try {
                     result = executeUpdateAssessmentFramework(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateAssessmentFrameworkShareResult> updateAssessmentFrameworkShareAsync(UpdateAssessmentFrameworkShareRequest request) {
+
+        return updateAssessmentFrameworkShareAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateAssessmentFrameworkShareResult> updateAssessmentFrameworkShareAsync(
+            final UpdateAssessmentFrameworkShareRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateAssessmentFrameworkShareRequest, UpdateAssessmentFrameworkShareResult> asyncHandler) {
+        final UpdateAssessmentFrameworkShareRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateAssessmentFrameworkShareResult>() {
+            @Override
+            public UpdateAssessmentFrameworkShareResult call() throws Exception {
+                UpdateAssessmentFrameworkShareResult result = null;
+
+                try {
+                    result = executeUpdateAssessmentFrameworkShare(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

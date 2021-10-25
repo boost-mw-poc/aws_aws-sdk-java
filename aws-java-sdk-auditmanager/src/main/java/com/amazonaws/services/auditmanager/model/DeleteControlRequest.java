@@ -27,18 +27,18 @@ public class DeleteControlRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The identifier for the specified control.
+     * The identifier for the control.
      * </p>
      */
     private String controlId;
 
     /**
      * <p>
-     * The identifier for the specified control.
+     * The identifier for the control.
      * </p>
      * 
      * @param controlId
-     *        The identifier for the specified control.
+     *        The identifier for the control.
      */
 
     public void setControlId(String controlId) {
@@ -47,10 +47,10 @@ public class DeleteControlRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The identifier for the specified control.
+     * The identifier for the control.
      * </p>
      * 
-     * @return The identifier for the specified control.
+     * @return The identifier for the control.
      */
 
     public String getControlId() {
@@ -59,11 +59,11 @@ public class DeleteControlRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The identifier for the specified control.
+     * The identifier for the control.
      * </p>
      * 
      * @param controlId
-     *        The identifier for the specified control.
+     *        The identifier for the control.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

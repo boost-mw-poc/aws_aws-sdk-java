@@ -27,13 +27,13 @@ public class BatchAssociateAssessmentReportEvidenceRequest extends com.amazonaws
 
     /**
      * <p>
-     * The unique identifier for the specified assessment.
+     * The identifier for the assessment.
      * </p>
      */
     private String assessmentId;
     /**
      * <p>
-     * The identifier for the folder in which the evidence is stored.
+     * The identifier for the folder that the evidence is stored in.
      * </p>
      */
     private String evidenceFolderId;
@@ -46,11 +46,11 @@ public class BatchAssociateAssessmentReportEvidenceRequest extends com.amazonaws
 
     /**
      * <p>
-     * The unique identifier for the specified assessment.
+     * The identifier for the assessment.
      * </p>
      * 
      * @param assessmentId
-     *        The unique identifier for the specified assessment.
+     *        The identifier for the assessment.
      */
 
     public void setAssessmentId(String assessmentId) {
@@ -59,10 +59,10 @@ public class BatchAssociateAssessmentReportEvidenceRequest extends com.amazonaws
 
     /**
      * <p>
-     * The unique identifier for the specified assessment.
+     * The identifier for the assessment.
      * </p>
      * 
-     * @return The unique identifier for the specified assessment.
+     * @return The identifier for the assessment.
      */
 
     public String getAssessmentId() {
@@ -71,11 +71,11 @@ public class BatchAssociateAssessmentReportEvidenceRequest extends com.amazonaws
 
     /**
      * <p>
-     * The unique identifier for the specified assessment.
+     * The identifier for the assessment.
      * </p>
      * 
      * @param assessmentId
-     *        The unique identifier for the specified assessment.
+     *        The identifier for the assessment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -86,11 +86,11 @@ public class BatchAssociateAssessmentReportEvidenceRequest extends com.amazonaws
 
     /**
      * <p>
-     * The identifier for the folder in which the evidence is stored.
+     * The identifier for the folder that the evidence is stored in.
      * </p>
      * 
      * @param evidenceFolderId
-     *        The identifier for the folder in which the evidence is stored.
+     *        The identifier for the folder that the evidence is stored in.
      */
 
     public void setEvidenceFolderId(String evidenceFolderId) {
@@ -99,10 +99,10 @@ public class BatchAssociateAssessmentReportEvidenceRequest extends com.amazonaws
 
     /**
      * <p>
-     * The identifier for the folder in which the evidence is stored.
+     * The identifier for the folder that the evidence is stored in.
      * </p>
      * 
-     * @return The identifier for the folder in which the evidence is stored.
+     * @return The identifier for the folder that the evidence is stored in.
      */
 
     public String getEvidenceFolderId() {
@@ -111,11 +111,11 @@ public class BatchAssociateAssessmentReportEvidenceRequest extends com.amazonaws
 
     /**
      * <p>
-     * The identifier for the folder in which the evidence is stored.
+     * The identifier for the folder that the evidence is stored in.
      * </p>
      * 
      * @param evidenceFolderId
-     *        The identifier for the folder in which the evidence is stored.
+     *        The identifier for the folder that the evidence is stored in.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

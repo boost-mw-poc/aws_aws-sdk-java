@@ -137,8 +137,7 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
      * snapshot.
      * </p>
      * <p>
-     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the Amazon Web
-     * Services KMS customer master key (CMK).
+     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key.
      * </p>
      */
     private String kmsKeyId;
@@ -896,16 +895,15 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
      * snapshot.
      * </p>
      * <p>
-     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the Amazon Web
-     * Services KMS customer master key (CMK).
+     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key.
      * </p>
      * 
      * @param kmsKeyId
      *        If <code>StorageEncrypted</code> is true, the Amazon Web Services KMS key identifier for the encrypted DB
      *        cluster snapshot.</p>
      *        <p>
-     *        The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the Amazon
-     *        Web Services KMS customer master key (CMK).
+     *        The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS
+     *        key.
      */
 
     public void setKmsKeyId(String kmsKeyId) {
@@ -918,15 +916,14 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
      * snapshot.
      * </p>
      * <p>
-     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the Amazon Web
-     * Services KMS customer master key (CMK).
+     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key.
      * </p>
      * 
      * @return If <code>StorageEncrypted</code> is true, the Amazon Web Services KMS key identifier for the encrypted DB
      *         cluster snapshot.</p>
      *         <p>
-     *         The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the
-     *         Amazon Web Services KMS customer master key (CMK).
+     *         The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS
+     *         key.
      */
 
     public String getKmsKeyId() {
@@ -939,16 +936,15 @@ public class DBClusterSnapshot implements Serializable, Cloneable {
      * snapshot.
      * </p>
      * <p>
-     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the Amazon Web
-     * Services KMS customer master key (CMK).
+     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key.
      * </p>
      * 
      * @param kmsKeyId
      *        If <code>StorageEncrypted</code> is true, the Amazon Web Services KMS key identifier for the encrypted DB
      *        cluster snapshot.</p>
      *        <p>
-     *        The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the Amazon
-     *        Web Services KMS customer master key (CMK).
+     *        The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS
+     *        key.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -88,6 +88,11 @@ public class AbstractAWSAuditManager implements AWSAuditManager {
     }
 
     @Override
+    public DeleteAssessmentFrameworkShareResult deleteAssessmentFrameworkShare(DeleteAssessmentFrameworkShareRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DeleteAssessmentReportResult deleteAssessmentReport(DeleteAssessmentReportRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -188,6 +193,11 @@ public class AbstractAWSAuditManager implements AWSAuditManager {
     }
 
     @Override
+    public ListAssessmentFrameworkShareRequestsResult listAssessmentFrameworkShareRequests(ListAssessmentFrameworkShareRequestsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListAssessmentFrameworksResult listAssessmentFrameworks(ListAssessmentFrameworksRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -233,6 +243,11 @@ public class AbstractAWSAuditManager implements AWSAuditManager {
     }
 
     @Override
+    public StartAssessmentFrameworkShareResult startAssessmentFrameworkShare(StartAssessmentFrameworkShareRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public TagResourceResult tagResource(TagResourceRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -259,6 +274,11 @@ public class AbstractAWSAuditManager implements AWSAuditManager {
 
     @Override
     public UpdateAssessmentFrameworkResult updateAssessmentFramework(UpdateAssessmentFrameworkRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateAssessmentFrameworkShareResult updateAssessmentFrameworkShare(UpdateAssessmentFrameworkShareRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

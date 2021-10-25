@@ -196,6 +196,19 @@ public class AbstractAWSAuditManagerAsync extends AbstractAWSAuditManager implem
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteAssessmentFrameworkShareResult> deleteAssessmentFrameworkShareAsync(DeleteAssessmentFrameworkShareRequest request) {
+
+        return deleteAssessmentFrameworkShareAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteAssessmentFrameworkShareResult> deleteAssessmentFrameworkShareAsync(DeleteAssessmentFrameworkShareRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteAssessmentFrameworkShareRequest, DeleteAssessmentFrameworkShareResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteAssessmentReportResult> deleteAssessmentReportAsync(DeleteAssessmentReportRequest request) {
 
         return deleteAssessmentReportAsync(request, null);
@@ -462,6 +475,21 @@ public class AbstractAWSAuditManagerAsync extends AbstractAWSAuditManager implem
     }
 
     @Override
+    public java.util.concurrent.Future<ListAssessmentFrameworkShareRequestsResult> listAssessmentFrameworkShareRequestsAsync(
+            ListAssessmentFrameworkShareRequestsRequest request) {
+
+        return listAssessmentFrameworkShareRequestsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListAssessmentFrameworkShareRequestsResult> listAssessmentFrameworkShareRequestsAsync(
+            ListAssessmentFrameworkShareRequestsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListAssessmentFrameworkShareRequestsRequest, ListAssessmentFrameworkShareRequestsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ListAssessmentFrameworksResult> listAssessmentFrameworksAsync(ListAssessmentFrameworksRequest request) {
 
         return listAssessmentFrameworksAsync(request, null);
@@ -581,6 +609,19 @@ public class AbstractAWSAuditManagerAsync extends AbstractAWSAuditManager implem
     }
 
     @Override
+    public java.util.concurrent.Future<StartAssessmentFrameworkShareResult> startAssessmentFrameworkShareAsync(StartAssessmentFrameworkShareRequest request) {
+
+        return startAssessmentFrameworkShareAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartAssessmentFrameworkShareResult> startAssessmentFrameworkShareAsync(StartAssessmentFrameworkShareRequest request,
+            com.amazonaws.handlers.AsyncHandler<StartAssessmentFrameworkShareRequest, StartAssessmentFrameworkShareResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<TagResourceResult> tagResourceAsync(TagResourceRequest request) {
 
         return tagResourceAsync(request, null);
@@ -656,6 +697,19 @@ public class AbstractAWSAuditManagerAsync extends AbstractAWSAuditManager implem
     @Override
     public java.util.concurrent.Future<UpdateAssessmentFrameworkResult> updateAssessmentFrameworkAsync(UpdateAssessmentFrameworkRequest request,
             com.amazonaws.handlers.AsyncHandler<UpdateAssessmentFrameworkRequest, UpdateAssessmentFrameworkResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateAssessmentFrameworkShareResult> updateAssessmentFrameworkShareAsync(UpdateAssessmentFrameworkShareRequest request) {
+
+        return updateAssessmentFrameworkShareAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateAssessmentFrameworkShareResult> updateAssessmentFrameworkShareAsync(UpdateAssessmentFrameworkShareRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateAssessmentFrameworkShareRequest, UpdateAssessmentFrameworkShareResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

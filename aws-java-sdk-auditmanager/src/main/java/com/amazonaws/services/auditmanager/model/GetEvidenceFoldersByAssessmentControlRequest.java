@@ -27,42 +27,42 @@ public class GetEvidenceFoldersByAssessmentControlRequest extends com.amazonaws.
 
     /**
      * <p>
-     * The identifier for the specified assessment.
+     * The identifier for the assessment.
      * </p>
      */
     private String assessmentId;
     /**
      * <p>
-     * The identifier for the specified control set.
+     * The identifier for the control set.
      * </p>
      */
     private String controlSetId;
     /**
      * <p>
-     * The identifier for the specified control.
+     * The identifier for the control.
      * </p>
      */
     private String controlId;
     /**
      * <p>
-     * The pagination token used to fetch the next set of results.
+     * The pagination token that's used to fetch the next set of results.
      * </p>
      */
     private String nextToken;
     /**
      * <p>
-     * Represents the maximum number of results per page, or per API request call.
+     * Represents the maximum number of results on a page or for an API request call.
      * </p>
      */
     private Integer maxResults;
 
     /**
      * <p>
-     * The identifier for the specified assessment.
+     * The identifier for the assessment.
      * </p>
      * 
      * @param assessmentId
-     *        The identifier for the specified assessment.
+     *        The identifier for the assessment.
      */
 
     public void setAssessmentId(String assessmentId) {
@@ -71,10 +71,10 @@ public class GetEvidenceFoldersByAssessmentControlRequest extends com.amazonaws.
 
     /**
      * <p>
-     * The identifier for the specified assessment.
+     * The identifier for the assessment.
      * </p>
      * 
-     * @return The identifier for the specified assessment.
+     * @return The identifier for the assessment.
      */
 
     public String getAssessmentId() {
@@ -83,11 +83,11 @@ public class GetEvidenceFoldersByAssessmentControlRequest extends com.amazonaws.
 
     /**
      * <p>
-     * The identifier for the specified assessment.
+     * The identifier for the assessment.
      * </p>
      * 
      * @param assessmentId
-     *        The identifier for the specified assessment.
+     *        The identifier for the assessment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -98,11 +98,11 @@ public class GetEvidenceFoldersByAssessmentControlRequest extends com.amazonaws.
 
     /**
      * <p>
-     * The identifier for the specified control set.
+     * The identifier for the control set.
      * </p>
      * 
      * @param controlSetId
-     *        The identifier for the specified control set.
+     *        The identifier for the control set.
      */
 
     public void setControlSetId(String controlSetId) {
@@ -111,10 +111,10 @@ public class GetEvidenceFoldersByAssessmentControlRequest extends com.amazonaws.
 
     /**
      * <p>
-     * The identifier for the specified control set.
+     * The identifier for the control set.
      * </p>
      * 
-     * @return The identifier for the specified control set.
+     * @return The identifier for the control set.
      */
 
     public String getControlSetId() {
@@ -123,11 +123,11 @@ public class GetEvidenceFoldersByAssessmentControlRequest extends com.amazonaws.
 
     /**
      * <p>
-     * The identifier for the specified control set.
+     * The identifier for the control set.
      * </p>
      * 
      * @param controlSetId
-     *        The identifier for the specified control set.
+     *        The identifier for the control set.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -138,11 +138,11 @@ public class GetEvidenceFoldersByAssessmentControlRequest extends com.amazonaws.
 
     /**
      * <p>
-     * The identifier for the specified control.
+     * The identifier for the control.
      * </p>
      * 
      * @param controlId
-     *        The identifier for the specified control.
+     *        The identifier for the control.
      */
 
     public void setControlId(String controlId) {
@@ -151,10 +151,10 @@ public class GetEvidenceFoldersByAssessmentControlRequest extends com.amazonaws.
 
     /**
      * <p>
-     * The identifier for the specified control.
+     * The identifier for the control.
      * </p>
      * 
-     * @return The identifier for the specified control.
+     * @return The identifier for the control.
      */
 
     public String getControlId() {
@@ -163,11 +163,11 @@ public class GetEvidenceFoldersByAssessmentControlRequest extends com.amazonaws.
 
     /**
      * <p>
-     * The identifier for the specified control.
+     * The identifier for the control.
      * </p>
      * 
      * @param controlId
-     *        The identifier for the specified control.
+     *        The identifier for the control.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -178,11 +178,11 @@ public class GetEvidenceFoldersByAssessmentControlRequest extends com.amazonaws.
 
     /**
      * <p>
-     * The pagination token used to fetch the next set of results.
+     * The pagination token that's used to fetch the next set of results.
      * </p>
      * 
      * @param nextToken
-     *        The pagination token used to fetch the next set of results.
+     *        The pagination token that's used to fetch the next set of results.
      */
 
     public void setNextToken(String nextToken) {
@@ -191,10 +191,10 @@ public class GetEvidenceFoldersByAssessmentControlRequest extends com.amazonaws.
 
     /**
      * <p>
-     * The pagination token used to fetch the next set of results.
+     * The pagination token that's used to fetch the next set of results.
      * </p>
      * 
-     * @return The pagination token used to fetch the next set of results.
+     * @return The pagination token that's used to fetch the next set of results.
      */
 
     public String getNextToken() {
@@ -203,11 +203,11 @@ public class GetEvidenceFoldersByAssessmentControlRequest extends com.amazonaws.
 
     /**
      * <p>
-     * The pagination token used to fetch the next set of results.
+     * The pagination token that's used to fetch the next set of results.
      * </p>
      * 
      * @param nextToken
-     *        The pagination token used to fetch the next set of results.
+     *        The pagination token that's used to fetch the next set of results.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -218,11 +218,11 @@ public class GetEvidenceFoldersByAssessmentControlRequest extends com.amazonaws.
 
     /**
      * <p>
-     * Represents the maximum number of results per page, or per API request call.
+     * Represents the maximum number of results on a page or for an API request call.
      * </p>
      * 
      * @param maxResults
-     *        Represents the maximum number of results per page, or per API request call.
+     *        Represents the maximum number of results on a page or for an API request call.
      */
 
     public void setMaxResults(Integer maxResults) {
@@ -231,10 +231,10 @@ public class GetEvidenceFoldersByAssessmentControlRequest extends com.amazonaws.
 
     /**
      * <p>
-     * Represents the maximum number of results per page, or per API request call.
+     * Represents the maximum number of results on a page or for an API request call.
      * </p>
      * 
-     * @return Represents the maximum number of results per page, or per API request call.
+     * @return Represents the maximum number of results on a page or for an API request call.
      */
 
     public Integer getMaxResults() {
@@ -243,11 +243,11 @@ public class GetEvidenceFoldersByAssessmentControlRequest extends com.amazonaws.
 
     /**
      * <p>
-     * Represents the maximum number of results per page, or per API request call.
+     * Represents the maximum number of results on a page or for an API request call.
      * </p>
      * 
      * @param maxResults
-     *        Represents the maximum number of results per page, or per API request call.
+     *        Represents the maximum number of results on a page or for an API request call.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

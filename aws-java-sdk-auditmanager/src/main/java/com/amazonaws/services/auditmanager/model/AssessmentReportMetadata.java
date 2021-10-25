@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The metadata objects associated with the specified assessment report.
+ * The metadata objects that are associated with the specified assessment report.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/AssessmentReportMetadata"
@@ -42,7 +42,7 @@ public class AssessmentReportMetadata implements Serializable, Cloneable, Struct
     private String name;
     /**
      * <p>
-     * The description of the specified assessment report.
+     * The description of the assessment report.
      * </p>
      */
     private String description;
@@ -159,11 +159,11 @@ public class AssessmentReportMetadata implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The description of the specified assessment report.
+     * The description of the assessment report.
      * </p>
      * 
      * @param description
-     *        The description of the specified assessment report.
+     *        The description of the assessment report.
      */
 
     public void setDescription(String description) {
@@ -172,10 +172,10 @@ public class AssessmentReportMetadata implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The description of the specified assessment report.
+     * The description of the assessment report.
      * </p>
      * 
-     * @return The description of the specified assessment report.
+     * @return The description of the assessment report.
      */
 
     public String getDescription() {
@@ -184,11 +184,11 @@ public class AssessmentReportMetadata implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The description of the specified assessment report.
+     * The description of the assessment report.
      * </p>
      * 
      * @param description
-     *        The description of the specified assessment report.
+     *        The description of the assessment report.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -63,8 +63,35 @@ public class DescribeExportTasksRequest extends com.amazonaws.AmazonWebServiceRe
      * </li>
      * <li>
      * <p>
-     * <code>status</code> - The status of the export task. Must be lowercase, for example, <code>complete</code>.
+     * <code>status</code> - The status of the export task. Must be lowercase. Valid statuses are the following:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>canceled</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>canceling</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>complete</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>failed</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>starting</code>
+     * </p>
+     * </li>
+     * </ul>
      * </li>
      * </ul>
      */
@@ -198,8 +225,35 @@ public class DescribeExportTasksRequest extends com.amazonaws.AmazonWebServiceRe
      * </li>
      * <li>
      * <p>
-     * <code>status</code> - The status of the export task. Must be lowercase, for example, <code>complete</code>.
+     * <code>status</code> - The status of the export task. Must be lowercase. Valid statuses are the following:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>canceled</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>canceling</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>complete</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>failed</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>starting</code>
+     * </p>
+     * </li>
+     * </ul>
      * </li>
      * </ul>
      * 
@@ -226,9 +280,35 @@ public class DescribeExportTasksRequest extends com.amazonaws.AmazonWebServiceRe
      *         </li>
      *         <li>
      *         <p>
-     *         <code>status</code> - The status of the export task. Must be lowercase, for example,
-     *         <code>complete</code>.
+     *         <code>status</code> - The status of the export task. Must be lowercase. Valid statuses are the following:
      *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>canceled</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>canceling</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>complete</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>failed</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>starting</code>
+     *         </p>
+     *         </li>
+     *         </ul>
      *         </li>
      */
 
@@ -265,8 +345,35 @@ public class DescribeExportTasksRequest extends com.amazonaws.AmazonWebServiceRe
      * </li>
      * <li>
      * <p>
-     * <code>status</code> - The status of the export task. Must be lowercase, for example, <code>complete</code>.
+     * <code>status</code> - The status of the export task. Must be lowercase. Valid statuses are the following:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>canceled</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>canceling</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>complete</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>failed</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>starting</code>
+     * </p>
+     * </li>
+     * </ul>
      * </li>
      * </ul>
      * 
@@ -294,9 +401,35 @@ public class DescribeExportTasksRequest extends com.amazonaws.AmazonWebServiceRe
      *        </li>
      *        <li>
      *        <p>
-     *        <code>status</code> - The status of the export task. Must be lowercase, for example, <code>complete</code>
-     *        .
+     *        <code>status</code> - The status of the export task. Must be lowercase. Valid statuses are the following:
      *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>canceled</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>canceling</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>complete</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>failed</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>starting</code>
+     *        </p>
+     *        </li>
+     *        </ul>
      *        </li>
      */
 
@@ -335,8 +468,35 @@ public class DescribeExportTasksRequest extends com.amazonaws.AmazonWebServiceRe
      * </li>
      * <li>
      * <p>
-     * <code>status</code> - The status of the export task. Must be lowercase, for example, <code>complete</code>.
+     * <code>status</code> - The status of the export task. Must be lowercase. Valid statuses are the following:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>canceled</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>canceling</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>complete</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>failed</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>starting</code>
+     * </p>
+     * </li>
+     * </ul>
      * </li>
      * </ul>
      * <p>
@@ -369,9 +529,35 @@ public class DescribeExportTasksRequest extends com.amazonaws.AmazonWebServiceRe
      *        </li>
      *        <li>
      *        <p>
-     *        <code>status</code> - The status of the export task. Must be lowercase, for example, <code>complete</code>
-     *        .
+     *        <code>status</code> - The status of the export task. Must be lowercase. Valid statuses are the following:
      *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>canceled</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>canceling</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>complete</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>failed</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>starting</code>
+     *        </p>
+     *        </li>
+     *        </ul>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -412,8 +598,35 @@ public class DescribeExportTasksRequest extends com.amazonaws.AmazonWebServiceRe
      * </li>
      * <li>
      * <p>
-     * <code>status</code> - The status of the export task. Must be lowercase, for example, <code>complete</code>.
+     * <code>status</code> - The status of the export task. Must be lowercase. Valid statuses are the following:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>canceled</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>canceling</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>complete</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>failed</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>starting</code>
+     * </p>
+     * </li>
+     * </ul>
      * </li>
      * </ul>
      * 
@@ -441,9 +654,35 @@ public class DescribeExportTasksRequest extends com.amazonaws.AmazonWebServiceRe
      *        </li>
      *        <li>
      *        <p>
-     *        <code>status</code> - The status of the export task. Must be lowercase, for example, <code>complete</code>
-     *        .
+     *        <code>status</code> - The status of the export task. Must be lowercase. Valid statuses are the following:
      *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>canceled</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>canceling</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>complete</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>failed</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>starting</code>
+     *        </p>
+     *        </li>
+     *        </ul>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */

@@ -173,6 +173,10 @@ public class DescribeDBEngineVersionsRequest extends com.amazonaws.AmazonWebServ
      * If this parameter is enabled and the requested engine supports the <code>CharacterSetName</code> parameter for
      * <code>CreateDBInstance</code>, the response includes a list of supported character sets for each engine version.
      * </p>
+     * <p>
+     * For RDS Custom, the default is not to list supported character sets. If you set
+     * <code>ListSupportedCharacterSets</code> to <code>true</code>, RDS Custom returns no results.
+     * </p>
      */
     private Boolean listSupportedCharacterSets;
     /**
@@ -182,6 +186,10 @@ public class DescribeDBEngineVersionsRequest extends com.amazonaws.AmazonWebServ
      * <p>
      * If this parameter is enabled and the requested engine supports the <code>TimeZone</code> parameter for
      * <code>CreateDBInstance</code>, the response includes a list of supported time zones for each engine version.
+     * </p>
+     * <p>
+     * For RDS Custom, the default is not to list supported time zones. If you set <code>ListSupportedTimezones</code>
+     * to <code>true</code>, RDS Custom returns no results.
      * </p>
      */
     private Boolean listSupportedTimezones;
@@ -1104,6 +1112,10 @@ public class DescribeDBEngineVersionsRequest extends com.amazonaws.AmazonWebServ
      * If this parameter is enabled and the requested engine supports the <code>CharacterSetName</code> parameter for
      * <code>CreateDBInstance</code>, the response includes a list of supported character sets for each engine version.
      * </p>
+     * <p>
+     * For RDS Custom, the default is not to list supported character sets. If you set
+     * <code>ListSupportedCharacterSets</code> to <code>true</code>, RDS Custom returns no results.
+     * </p>
      * 
      * @param listSupportedCharacterSets
      *        A value that indicates whether to list the supported character sets for each engine version.</p>
@@ -1111,6 +1123,10 @@ public class DescribeDBEngineVersionsRequest extends com.amazonaws.AmazonWebServ
      *        If this parameter is enabled and the requested engine supports the <code>CharacterSetName</code> parameter
      *        for <code>CreateDBInstance</code>, the response includes a list of supported character sets for each
      *        engine version.
+     *        </p>
+     *        <p>
+     *        For RDS Custom, the default is not to list supported character sets. If you set
+     *        <code>ListSupportedCharacterSets</code> to <code>true</code>, RDS Custom returns no results.
      */
 
     public void setListSupportedCharacterSets(Boolean listSupportedCharacterSets) {
@@ -1125,12 +1141,20 @@ public class DescribeDBEngineVersionsRequest extends com.amazonaws.AmazonWebServ
      * If this parameter is enabled and the requested engine supports the <code>CharacterSetName</code> parameter for
      * <code>CreateDBInstance</code>, the response includes a list of supported character sets for each engine version.
      * </p>
+     * <p>
+     * For RDS Custom, the default is not to list supported character sets. If you set
+     * <code>ListSupportedCharacterSets</code> to <code>true</code>, RDS Custom returns no results.
+     * </p>
      * 
      * @return A value that indicates whether to list the supported character sets for each engine version.</p>
      *         <p>
      *         If this parameter is enabled and the requested engine supports the <code>CharacterSetName</code>
      *         parameter for <code>CreateDBInstance</code>, the response includes a list of supported character sets for
      *         each engine version.
+     *         </p>
+     *         <p>
+     *         For RDS Custom, the default is not to list supported character sets. If you set
+     *         <code>ListSupportedCharacterSets</code> to <code>true</code>, RDS Custom returns no results.
      */
 
     public Boolean getListSupportedCharacterSets() {
@@ -1145,6 +1169,10 @@ public class DescribeDBEngineVersionsRequest extends com.amazonaws.AmazonWebServ
      * If this parameter is enabled and the requested engine supports the <code>CharacterSetName</code> parameter for
      * <code>CreateDBInstance</code>, the response includes a list of supported character sets for each engine version.
      * </p>
+     * <p>
+     * For RDS Custom, the default is not to list supported character sets. If you set
+     * <code>ListSupportedCharacterSets</code> to <code>true</code>, RDS Custom returns no results.
+     * </p>
      * 
      * @param listSupportedCharacterSets
      *        A value that indicates whether to list the supported character sets for each engine version.</p>
@@ -1152,6 +1180,10 @@ public class DescribeDBEngineVersionsRequest extends com.amazonaws.AmazonWebServ
      *        If this parameter is enabled and the requested engine supports the <code>CharacterSetName</code> parameter
      *        for <code>CreateDBInstance</code>, the response includes a list of supported character sets for each
      *        engine version.
+     *        </p>
+     *        <p>
+     *        For RDS Custom, the default is not to list supported character sets. If you set
+     *        <code>ListSupportedCharacterSets</code> to <code>true</code>, RDS Custom returns no results.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1168,12 +1200,20 @@ public class DescribeDBEngineVersionsRequest extends com.amazonaws.AmazonWebServ
      * If this parameter is enabled and the requested engine supports the <code>CharacterSetName</code> parameter for
      * <code>CreateDBInstance</code>, the response includes a list of supported character sets for each engine version.
      * </p>
+     * <p>
+     * For RDS Custom, the default is not to list supported character sets. If you set
+     * <code>ListSupportedCharacterSets</code> to <code>true</code>, RDS Custom returns no results.
+     * </p>
      * 
      * @return A value that indicates whether to list the supported character sets for each engine version.</p>
      *         <p>
      *         If this parameter is enabled and the requested engine supports the <code>CharacterSetName</code>
      *         parameter for <code>CreateDBInstance</code>, the response includes a list of supported character sets for
      *         each engine version.
+     *         </p>
+     *         <p>
+     *         For RDS Custom, the default is not to list supported character sets. If you set
+     *         <code>ListSupportedCharacterSets</code> to <code>true</code>, RDS Custom returns no results.
      */
 
     public Boolean isListSupportedCharacterSets() {
@@ -1188,6 +1228,10 @@ public class DescribeDBEngineVersionsRequest extends com.amazonaws.AmazonWebServ
      * If this parameter is enabled and the requested engine supports the <code>TimeZone</code> parameter for
      * <code>CreateDBInstance</code>, the response includes a list of supported time zones for each engine version.
      * </p>
+     * <p>
+     * For RDS Custom, the default is not to list supported time zones. If you set <code>ListSupportedTimezones</code>
+     * to <code>true</code>, RDS Custom returns no results.
+     * </p>
      * 
      * @param listSupportedTimezones
      *        A value that indicates whether to list the supported time zones for each engine version.</p>
@@ -1195,6 +1239,10 @@ public class DescribeDBEngineVersionsRequest extends com.amazonaws.AmazonWebServ
      *        If this parameter is enabled and the requested engine supports the <code>TimeZone</code> parameter for
      *        <code>CreateDBInstance</code>, the response includes a list of supported time zones for each engine
      *        version.
+     *        </p>
+     *        <p>
+     *        For RDS Custom, the default is not to list supported time zones. If you set
+     *        <code>ListSupportedTimezones</code> to <code>true</code>, RDS Custom returns no results.
      */
 
     public void setListSupportedTimezones(Boolean listSupportedTimezones) {
@@ -1209,12 +1257,20 @@ public class DescribeDBEngineVersionsRequest extends com.amazonaws.AmazonWebServ
      * If this parameter is enabled and the requested engine supports the <code>TimeZone</code> parameter for
      * <code>CreateDBInstance</code>, the response includes a list of supported time zones for each engine version.
      * </p>
+     * <p>
+     * For RDS Custom, the default is not to list supported time zones. If you set <code>ListSupportedTimezones</code>
+     * to <code>true</code>, RDS Custom returns no results.
+     * </p>
      * 
      * @return A value that indicates whether to list the supported time zones for each engine version.</p>
      *         <p>
      *         If this parameter is enabled and the requested engine supports the <code>TimeZone</code> parameter for
      *         <code>CreateDBInstance</code>, the response includes a list of supported time zones for each engine
      *         version.
+     *         </p>
+     *         <p>
+     *         For RDS Custom, the default is not to list supported time zones. If you set
+     *         <code>ListSupportedTimezones</code> to <code>true</code>, RDS Custom returns no results.
      */
 
     public Boolean getListSupportedTimezones() {
@@ -1229,6 +1285,10 @@ public class DescribeDBEngineVersionsRequest extends com.amazonaws.AmazonWebServ
      * If this parameter is enabled and the requested engine supports the <code>TimeZone</code> parameter for
      * <code>CreateDBInstance</code>, the response includes a list of supported time zones for each engine version.
      * </p>
+     * <p>
+     * For RDS Custom, the default is not to list supported time zones. If you set <code>ListSupportedTimezones</code>
+     * to <code>true</code>, RDS Custom returns no results.
+     * </p>
      * 
      * @param listSupportedTimezones
      *        A value that indicates whether to list the supported time zones for each engine version.</p>
@@ -1236,6 +1296,10 @@ public class DescribeDBEngineVersionsRequest extends com.amazonaws.AmazonWebServ
      *        If this parameter is enabled and the requested engine supports the <code>TimeZone</code> parameter for
      *        <code>CreateDBInstance</code>, the response includes a list of supported time zones for each engine
      *        version.
+     *        </p>
+     *        <p>
+     *        For RDS Custom, the default is not to list supported time zones. If you set
+     *        <code>ListSupportedTimezones</code> to <code>true</code>, RDS Custom returns no results.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1252,12 +1316,20 @@ public class DescribeDBEngineVersionsRequest extends com.amazonaws.AmazonWebServ
      * If this parameter is enabled and the requested engine supports the <code>TimeZone</code> parameter for
      * <code>CreateDBInstance</code>, the response includes a list of supported time zones for each engine version.
      * </p>
+     * <p>
+     * For RDS Custom, the default is not to list supported time zones. If you set <code>ListSupportedTimezones</code>
+     * to <code>true</code>, RDS Custom returns no results.
+     * </p>
      * 
      * @return A value that indicates whether to list the supported time zones for each engine version.</p>
      *         <p>
      *         If this parameter is enabled and the requested engine supports the <code>TimeZone</code> parameter for
      *         <code>CreateDBInstance</code>, the response includes a list of supported time zones for each engine
      *         version.
+     *         </p>
+     *         <p>
+     *         For RDS Custom, the default is not to list supported time zones. If you set
+     *         <code>ListSupportedTimezones</code> to <code>true</code>, RDS Custom returns no results.
      */
 
     public Boolean isListSupportedTimezones() {

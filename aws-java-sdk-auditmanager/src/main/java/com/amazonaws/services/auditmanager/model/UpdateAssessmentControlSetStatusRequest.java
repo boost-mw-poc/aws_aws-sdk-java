@@ -27,36 +27,36 @@ public class UpdateAssessmentControlSetStatusRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The identifier for the specified assessment.
+     * The identifier for the assessment.
      * </p>
      */
     private String assessmentId;
     /**
      * <p>
-     * The identifier for the specified control set.
+     * The identifier for the control set.
      * </p>
      */
     private String controlSetId;
     /**
      * <p>
-     * The status of the control set that is being updated.
+     * The status of the control set that's being updated.
      * </p>
      */
     private String status;
     /**
      * <p>
-     * The comment related to the status update.
+     * The comment that's related to the status update.
      * </p>
      */
     private String comment;
 
     /**
      * <p>
-     * The identifier for the specified assessment.
+     * The identifier for the assessment.
      * </p>
      * 
      * @param assessmentId
-     *        The identifier for the specified assessment.
+     *        The identifier for the assessment.
      */
 
     public void setAssessmentId(String assessmentId) {
@@ -65,10 +65,10 @@ public class UpdateAssessmentControlSetStatusRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The identifier for the specified assessment.
+     * The identifier for the assessment.
      * </p>
      * 
-     * @return The identifier for the specified assessment.
+     * @return The identifier for the assessment.
      */
 
     public String getAssessmentId() {
@@ -77,11 +77,11 @@ public class UpdateAssessmentControlSetStatusRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The identifier for the specified assessment.
+     * The identifier for the assessment.
      * </p>
      * 
      * @param assessmentId
-     *        The identifier for the specified assessment.
+     *        The identifier for the assessment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -92,11 +92,11 @@ public class UpdateAssessmentControlSetStatusRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The identifier for the specified control set.
+     * The identifier for the control set.
      * </p>
      * 
      * @param controlSetId
-     *        The identifier for the specified control set.
+     *        The identifier for the control set.
      */
 
     public void setControlSetId(String controlSetId) {
@@ -105,10 +105,10 @@ public class UpdateAssessmentControlSetStatusRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The identifier for the specified control set.
+     * The identifier for the control set.
      * </p>
      * 
-     * @return The identifier for the specified control set.
+     * @return The identifier for the control set.
      */
 
     public String getControlSetId() {
@@ -117,11 +117,11 @@ public class UpdateAssessmentControlSetStatusRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The identifier for the specified control set.
+     * The identifier for the control set.
      * </p>
      * 
      * @param controlSetId
-     *        The identifier for the specified control set.
+     *        The identifier for the control set.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -132,11 +132,11 @@ public class UpdateAssessmentControlSetStatusRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The status of the control set that is being updated.
+     * The status of the control set that's being updated.
      * </p>
      * 
      * @param status
-     *        The status of the control set that is being updated.
+     *        The status of the control set that's being updated.
      * @see ControlSetStatus
      */
 
@@ -146,10 +146,10 @@ public class UpdateAssessmentControlSetStatusRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The status of the control set that is being updated.
+     * The status of the control set that's being updated.
      * </p>
      * 
-     * @return The status of the control set that is being updated.
+     * @return The status of the control set that's being updated.
      * @see ControlSetStatus
      */
 
@@ -159,11 +159,11 @@ public class UpdateAssessmentControlSetStatusRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The status of the control set that is being updated.
+     * The status of the control set that's being updated.
      * </p>
      * 
      * @param status
-     *        The status of the control set that is being updated.
+     *        The status of the control set that's being updated.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ControlSetStatus
      */
@@ -175,11 +175,11 @@ public class UpdateAssessmentControlSetStatusRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The status of the control set that is being updated.
+     * The status of the control set that's being updated.
      * </p>
      * 
      * @param status
-     *        The status of the control set that is being updated.
+     *        The status of the control set that's being updated.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ControlSetStatus
      */
@@ -191,11 +191,11 @@ public class UpdateAssessmentControlSetStatusRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The comment related to the status update.
+     * The comment that's related to the status update.
      * </p>
      * 
      * @param comment
-     *        The comment related to the status update.
+     *        The comment that's related to the status update.
      */
 
     public void setComment(String comment) {
@@ -204,10 +204,10 @@ public class UpdateAssessmentControlSetStatusRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The comment related to the status update.
+     * The comment that's related to the status update.
      * </p>
      * 
-     * @return The comment related to the status update.
+     * @return The comment that's related to the status update.
      */
 
     public String getComment() {
@@ -216,11 +216,11 @@ public class UpdateAssessmentControlSetStatusRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * The comment related to the status update.
+     * The comment that's related to the status update.
      * </p>
      * 
      * @param comment
-     *        The comment related to the status update.
+     *        The comment that's related to the status update.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

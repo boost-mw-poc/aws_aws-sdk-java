@@ -25,18 +25,18 @@ public class GetAssessmentFrameworkResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The framework returned by the <code>GetAssessmentFramework</code> API.
+     * The framework that the <code>GetAssessmentFramework</code> API returned.
      * </p>
      */
     private Framework framework;
 
     /**
      * <p>
-     * The framework returned by the <code>GetAssessmentFramework</code> API.
+     * The framework that the <code>GetAssessmentFramework</code> API returned.
      * </p>
      * 
      * @param framework
-     *        The framework returned by the <code>GetAssessmentFramework</code> API.
+     *        The framework that the <code>GetAssessmentFramework</code> API returned.
      */
 
     public void setFramework(Framework framework) {
@@ -45,10 +45,10 @@ public class GetAssessmentFrameworkResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The framework returned by the <code>GetAssessmentFramework</code> API.
+     * The framework that the <code>GetAssessmentFramework</code> API returned.
      * </p>
      * 
-     * @return The framework returned by the <code>GetAssessmentFramework</code> API.
+     * @return The framework that the <code>GetAssessmentFramework</code> API returned.
      */
 
     public Framework getFramework() {
@@ -57,11 +57,11 @@ public class GetAssessmentFrameworkResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The framework returned by the <code>GetAssessmentFramework</code> API.
+     * The framework that the <code>GetAssessmentFramework</code> API returned.
      * </p>
      * 
      * @param framework
-     *        The framework returned by the <code>GetAssessmentFramework</code> API.
+     *        The framework that the <code>GetAssessmentFramework</code> API returned.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

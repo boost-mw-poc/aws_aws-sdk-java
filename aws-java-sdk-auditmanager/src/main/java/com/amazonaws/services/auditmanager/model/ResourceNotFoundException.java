@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The resource specified in the request cannot be found.
+ * The resource that's specified in the request can't be found.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
@@ -25,13 +25,13 @@ public class ResourceNotFoundException extends com.amazonaws.services.auditmanag
 
     /**
      * <p>
-     * The unique identifier for the specified resource.
+     * The unique identifier for the resource.
      * </p>
      */
     private String resourceId;
     /**
      * <p>
-     * The type of resource affected by the error.
+     * The type of resource that's affected by the error.
      * </p>
      */
     private String resourceType;
@@ -48,11 +48,11 @@ public class ResourceNotFoundException extends com.amazonaws.services.auditmanag
 
     /**
      * <p>
-     * The unique identifier for the specified resource.
+     * The unique identifier for the resource.
      * </p>
      * 
      * @param resourceId
-     *        The unique identifier for the specified resource.
+     *        The unique identifier for the resource.
      */
 
     @com.fasterxml.jackson.annotation.JsonProperty("resourceId")
@@ -62,10 +62,10 @@ public class ResourceNotFoundException extends com.amazonaws.services.auditmanag
 
     /**
      * <p>
-     * The unique identifier for the specified resource.
+     * The unique identifier for the resource.
      * </p>
      * 
-     * @return The unique identifier for the specified resource.
+     * @return The unique identifier for the resource.
      */
 
     @com.fasterxml.jackson.annotation.JsonProperty("resourceId")
@@ -75,11 +75,11 @@ public class ResourceNotFoundException extends com.amazonaws.services.auditmanag
 
     /**
      * <p>
-     * The unique identifier for the specified resource.
+     * The unique identifier for the resource.
      * </p>
      * 
      * @param resourceId
-     *        The unique identifier for the specified resource.
+     *        The unique identifier for the resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -90,11 +90,11 @@ public class ResourceNotFoundException extends com.amazonaws.services.auditmanag
 
     /**
      * <p>
-     * The type of resource affected by the error.
+     * The type of resource that's affected by the error.
      * </p>
      * 
      * @param resourceType
-     *        The type of resource affected by the error.
+     *        The type of resource that's affected by the error.
      */
 
     @com.fasterxml.jackson.annotation.JsonProperty("resourceType")
@@ -104,10 +104,10 @@ public class ResourceNotFoundException extends com.amazonaws.services.auditmanag
 
     /**
      * <p>
-     * The type of resource affected by the error.
+     * The type of resource that's affected by the error.
      * </p>
      * 
-     * @return The type of resource affected by the error.
+     * @return The type of resource that's affected by the error.
      */
 
     @com.fasterxml.jackson.annotation.JsonProperty("resourceType")
@@ -117,11 +117,11 @@ public class ResourceNotFoundException extends com.amazonaws.services.auditmanag
 
     /**
      * <p>
-     * The type of resource affected by the error.
+     * The type of resource that's affected by the error.
      * </p>
      * 
      * @param resourceType
-     *        The type of resource affected by the error.
+     *        The type of resource that's affected by the error.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

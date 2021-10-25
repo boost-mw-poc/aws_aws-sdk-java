@@ -25,23 +25,23 @@ public class ListAssessmentFrameworksResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The list of metadata objects for the specified framework.
+     * The list of metadata objects for the framework.
      * </p>
      */
     private java.util.List<AssessmentFrameworkMetadata> frameworkMetadataList;
     /**
      * <p>
-     * The pagination token used to fetch the next set of results.
+     * The pagination token that's used to fetch the next set of results.
      * </p>
      */
     private String nextToken;
 
     /**
      * <p>
-     * The list of metadata objects for the specified framework.
+     * The list of metadata objects for the framework.
      * </p>
      * 
-     * @return The list of metadata objects for the specified framework.
+     * @return The list of metadata objects for the framework.
      */
 
     public java.util.List<AssessmentFrameworkMetadata> getFrameworkMetadataList() {
@@ -50,11 +50,11 @@ public class ListAssessmentFrameworksResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The list of metadata objects for the specified framework.
+     * The list of metadata objects for the framework.
      * </p>
      * 
      * @param frameworkMetadataList
-     *        The list of metadata objects for the specified framework.
+     *        The list of metadata objects for the framework.
      */
 
     public void setFrameworkMetadataList(java.util.Collection<AssessmentFrameworkMetadata> frameworkMetadataList) {
@@ -68,7 +68,7 @@ public class ListAssessmentFrameworksResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The list of metadata objects for the specified framework.
+     * The list of metadata objects for the framework.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -77,7 +77,7 @@ public class ListAssessmentFrameworksResult extends com.amazonaws.AmazonWebServi
      * </p>
      * 
      * @param frameworkMetadataList
-     *        The list of metadata objects for the specified framework.
+     *        The list of metadata objects for the framework.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -93,11 +93,11 @@ public class ListAssessmentFrameworksResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The list of metadata objects for the specified framework.
+     * The list of metadata objects for the framework.
      * </p>
      * 
      * @param frameworkMetadataList
-     *        The list of metadata objects for the specified framework.
+     *        The list of metadata objects for the framework.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -108,11 +108,11 @@ public class ListAssessmentFrameworksResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The pagination token used to fetch the next set of results.
+     * The pagination token that's used to fetch the next set of results.
      * </p>
      * 
      * @param nextToken
-     *        The pagination token used to fetch the next set of results.
+     *        The pagination token that's used to fetch the next set of results.
      */
 
     public void setNextToken(String nextToken) {
@@ -121,10 +121,10 @@ public class ListAssessmentFrameworksResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The pagination token used to fetch the next set of results.
+     * The pagination token that's used to fetch the next set of results.
      * </p>
      * 
-     * @return The pagination token used to fetch the next set of results.
+     * @return The pagination token that's used to fetch the next set of results.
      */
 
     public String getNextToken() {
@@ -133,11 +133,11 @@ public class ListAssessmentFrameworksResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The pagination token used to fetch the next set of results.
+     * The pagination token that's used to fetch the next set of results.
      * </p>
      * 
      * @param nextToken
-     *        The pagination token used to fetch the next set of results.
+     *        The pagination token that's used to fetch the next set of results.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

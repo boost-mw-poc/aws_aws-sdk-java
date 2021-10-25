@@ -153,6 +153,11 @@ public class AbstractAmazonRoute53Resolver implements AmazonRoute53Resolver {
     }
 
     @Override
+    public GetResolverConfigResult getResolverConfig(GetResolverConfigRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetResolverDnssecConfigResult getResolverDnssecConfig(GetResolverDnssecConfigRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -224,6 +229,11 @@ public class AbstractAmazonRoute53Resolver implements AmazonRoute53Resolver {
 
     @Override
     public ListFirewallRulesResult listFirewallRules(ListFirewallRulesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListResolverConfigsResult listResolverConfigs(ListResolverConfigsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -309,6 +319,11 @@ public class AbstractAmazonRoute53Resolver implements AmazonRoute53Resolver {
 
     @Override
     public UpdateFirewallRuleGroupAssociationResult updateFirewallRuleGroupAssociation(UpdateFirewallRuleGroupAssociationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateResolverConfigResult updateResolverConfig(UpdateResolverConfigRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

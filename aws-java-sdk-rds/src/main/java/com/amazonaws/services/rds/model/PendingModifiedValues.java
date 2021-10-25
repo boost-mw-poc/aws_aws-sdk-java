@@ -124,6 +124,21 @@ public class PendingModifiedValues implements Serializable, Cloneable {
      * </p>
      */
     private Boolean iAMDatabaseAuthenticationEnabled;
+    /**
+     * <p>
+     * The automation mode of the RDS Custom DB instance: <code>full</code> or <code>all-paused</code>. If
+     * <code>full</code>, the DB instance automates monitoring and instance recovery. If <code>all-paused</code>, the
+     * instance pauses automation for the duration set by <code>--resume-full-automation-mode-minutes</code>.
+     * </p>
+     */
+    private String automationMode;
+    /**
+     * <p>
+     * The number of minutes to pause the automation. When the time period ends, RDS Custom resumes full automation. The
+     * minimum value is 60 (default). The maximum value is 1,440.
+     * </p>
+     */
+    private java.util.Date resumeFullAutomationModeTime;
 
     /**
      * <p>
@@ -838,6 +853,128 @@ public class PendingModifiedValues implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * The automation mode of the RDS Custom DB instance: <code>full</code> or <code>all-paused</code>. If
+     * <code>full</code>, the DB instance automates monitoring and instance recovery. If <code>all-paused</code>, the
+     * instance pauses automation for the duration set by <code>--resume-full-automation-mode-minutes</code>.
+     * </p>
+     * 
+     * @param automationMode
+     *        The automation mode of the RDS Custom DB instance: <code>full</code> or <code>all-paused</code>. If
+     *        <code>full</code>, the DB instance automates monitoring and instance recovery. If <code>all-paused</code>,
+     *        the instance pauses automation for the duration set by <code>--resume-full-automation-mode-minutes</code>.
+     * @see AutomationMode
+     */
+
+    public void setAutomationMode(String automationMode) {
+        this.automationMode = automationMode;
+    }
+
+    /**
+     * <p>
+     * The automation mode of the RDS Custom DB instance: <code>full</code> or <code>all-paused</code>. If
+     * <code>full</code>, the DB instance automates monitoring and instance recovery. If <code>all-paused</code>, the
+     * instance pauses automation for the duration set by <code>--resume-full-automation-mode-minutes</code>.
+     * </p>
+     * 
+     * @return The automation mode of the RDS Custom DB instance: <code>full</code> or <code>all-paused</code>. If
+     *         <code>full</code>, the DB instance automates monitoring and instance recovery. If <code>all-paused</code>
+     *         , the instance pauses automation for the duration set by
+     *         <code>--resume-full-automation-mode-minutes</code>.
+     * @see AutomationMode
+     */
+
+    public String getAutomationMode() {
+        return this.automationMode;
+    }
+
+    /**
+     * <p>
+     * The automation mode of the RDS Custom DB instance: <code>full</code> or <code>all-paused</code>. If
+     * <code>full</code>, the DB instance automates monitoring and instance recovery. If <code>all-paused</code>, the
+     * instance pauses automation for the duration set by <code>--resume-full-automation-mode-minutes</code>.
+     * </p>
+     * 
+     * @param automationMode
+     *        The automation mode of the RDS Custom DB instance: <code>full</code> or <code>all-paused</code>. If
+     *        <code>full</code>, the DB instance automates monitoring and instance recovery. If <code>all-paused</code>,
+     *        the instance pauses automation for the duration set by <code>--resume-full-automation-mode-minutes</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see AutomationMode
+     */
+
+    public PendingModifiedValues withAutomationMode(String automationMode) {
+        setAutomationMode(automationMode);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The automation mode of the RDS Custom DB instance: <code>full</code> or <code>all-paused</code>. If
+     * <code>full</code>, the DB instance automates monitoring and instance recovery. If <code>all-paused</code>, the
+     * instance pauses automation for the duration set by <code>--resume-full-automation-mode-minutes</code>.
+     * </p>
+     * 
+     * @param automationMode
+     *        The automation mode of the RDS Custom DB instance: <code>full</code> or <code>all-paused</code>. If
+     *        <code>full</code>, the DB instance automates monitoring and instance recovery. If <code>all-paused</code>,
+     *        the instance pauses automation for the duration set by <code>--resume-full-automation-mode-minutes</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see AutomationMode
+     */
+
+    public PendingModifiedValues withAutomationMode(AutomationMode automationMode) {
+        this.automationMode = automationMode.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * The number of minutes to pause the automation. When the time period ends, RDS Custom resumes full automation. The
+     * minimum value is 60 (default). The maximum value is 1,440.
+     * </p>
+     * 
+     * @param resumeFullAutomationModeTime
+     *        The number of minutes to pause the automation. When the time period ends, RDS Custom resumes full
+     *        automation. The minimum value is 60 (default). The maximum value is 1,440.
+     */
+
+    public void setResumeFullAutomationModeTime(java.util.Date resumeFullAutomationModeTime) {
+        this.resumeFullAutomationModeTime = resumeFullAutomationModeTime;
+    }
+
+    /**
+     * <p>
+     * The number of minutes to pause the automation. When the time period ends, RDS Custom resumes full automation. The
+     * minimum value is 60 (default). The maximum value is 1,440.
+     * </p>
+     * 
+     * @return The number of minutes to pause the automation. When the time period ends, RDS Custom resumes full
+     *         automation. The minimum value is 60 (default). The maximum value is 1,440.
+     */
+
+    public java.util.Date getResumeFullAutomationModeTime() {
+        return this.resumeFullAutomationModeTime;
+    }
+
+    /**
+     * <p>
+     * The number of minutes to pause the automation. When the time period ends, RDS Custom resumes full automation. The
+     * minimum value is 60 (default). The maximum value is 1,440.
+     * </p>
+     * 
+     * @param resumeFullAutomationModeTime
+     *        The number of minutes to pause the automation. When the time period ends, RDS Custom resumes full
+     *        automation. The minimum value is 60 (default). The maximum value is 1,440.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PendingModifiedValues withResumeFullAutomationModeTime(java.util.Date resumeFullAutomationModeTime) {
+        setResumeFullAutomationModeTime(resumeFullAutomationModeTime);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -880,7 +1017,11 @@ public class PendingModifiedValues implements Serializable, Cloneable {
         if (getProcessorFeatures() != null)
             sb.append("ProcessorFeatures: ").append(getProcessorFeatures()).append(",");
         if (getIAMDatabaseAuthenticationEnabled() != null)
-            sb.append("IAMDatabaseAuthenticationEnabled: ").append(getIAMDatabaseAuthenticationEnabled());
+            sb.append("IAMDatabaseAuthenticationEnabled: ").append(getIAMDatabaseAuthenticationEnabled()).append(",");
+        if (getAutomationMode() != null)
+            sb.append("AutomationMode: ").append(getAutomationMode()).append(",");
+        if (getResumeFullAutomationModeTime() != null)
+            sb.append("ResumeFullAutomationModeTime: ").append(getResumeFullAutomationModeTime());
         sb.append("}");
         return sb.toString();
     }
@@ -960,6 +1101,14 @@ public class PendingModifiedValues implements Serializable, Cloneable {
         if (other.getIAMDatabaseAuthenticationEnabled() != null
                 && other.getIAMDatabaseAuthenticationEnabled().equals(this.getIAMDatabaseAuthenticationEnabled()) == false)
             return false;
+        if (other.getAutomationMode() == null ^ this.getAutomationMode() == null)
+            return false;
+        if (other.getAutomationMode() != null && other.getAutomationMode().equals(this.getAutomationMode()) == false)
+            return false;
+        if (other.getResumeFullAutomationModeTime() == null ^ this.getResumeFullAutomationModeTime() == null)
+            return false;
+        if (other.getResumeFullAutomationModeTime() != null && other.getResumeFullAutomationModeTime().equals(this.getResumeFullAutomationModeTime()) == false)
+            return false;
         return true;
     }
 
@@ -984,6 +1133,8 @@ public class PendingModifiedValues implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getPendingCloudwatchLogsExports() == null) ? 0 : getPendingCloudwatchLogsExports().hashCode());
         hashCode = prime * hashCode + ((getProcessorFeatures() == null) ? 0 : getProcessorFeatures().hashCode());
         hashCode = prime * hashCode + ((getIAMDatabaseAuthenticationEnabled() == null) ? 0 : getIAMDatabaseAuthenticationEnabled().hashCode());
+        hashCode = prime * hashCode + ((getAutomationMode() == null) ? 0 : getAutomationMode().hashCode());
+        hashCode = prime * hashCode + ((getResumeFullAutomationModeTime() == null) ? 0 : getResumeFullAutomationModeTime().hashCode());
         return hashCode;
     }
 

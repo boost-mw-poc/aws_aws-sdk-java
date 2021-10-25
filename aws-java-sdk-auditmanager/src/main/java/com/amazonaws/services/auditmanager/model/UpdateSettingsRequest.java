@@ -27,7 +27,7 @@ public class UpdateSettingsRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The Amazon Simple Notification Service (Amazon SNS) topic to which Audit Manager sends notifications.
+     * The Amazon Simple Notification Service (Amazon SNS) topic that Audit Manager sends notifications to.
      * </p>
      */
     private String snsTopic;
@@ -52,11 +52,11 @@ public class UpdateSettingsRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The Amazon Simple Notification Service (Amazon SNS) topic to which Audit Manager sends notifications.
+     * The Amazon Simple Notification Service (Amazon SNS) topic that Audit Manager sends notifications to.
      * </p>
      * 
      * @param snsTopic
-     *        The Amazon Simple Notification Service (Amazon SNS) topic to which Audit Manager sends notifications.
+     *        The Amazon Simple Notification Service (Amazon SNS) topic that Audit Manager sends notifications to.
      */
 
     public void setSnsTopic(String snsTopic) {
@@ -65,10 +65,10 @@ public class UpdateSettingsRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The Amazon Simple Notification Service (Amazon SNS) topic to which Audit Manager sends notifications.
+     * The Amazon Simple Notification Service (Amazon SNS) topic that Audit Manager sends notifications to.
      * </p>
      * 
-     * @return The Amazon Simple Notification Service (Amazon SNS) topic to which Audit Manager sends notifications.
+     * @return The Amazon Simple Notification Service (Amazon SNS) topic that Audit Manager sends notifications to.
      */
 
     public String getSnsTopic() {
@@ -77,11 +77,11 @@ public class UpdateSettingsRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The Amazon Simple Notification Service (Amazon SNS) topic to which Audit Manager sends notifications.
+     * The Amazon Simple Notification Service (Amazon SNS) topic that Audit Manager sends notifications to.
      * </p>
      * 
      * @param snsTopic
-     *        The Amazon Simple Notification Service (Amazon SNS) topic to which Audit Manager sends notifications.
+     *        The Amazon Simple Notification Service (Amazon SNS) topic that Audit Manager sends notifications to.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

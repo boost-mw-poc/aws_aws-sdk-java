@@ -27,7 +27,7 @@ public class UpdateAssessmentFrameworkRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The identifier for the specified framework.
+     * The identifier for the framework.
      * </p>
      */
     private String frameworkId;
@@ -39,7 +39,7 @@ public class UpdateAssessmentFrameworkRequest extends com.amazonaws.AmazonWebSer
     private String name;
     /**
      * <p>
-     * The description of the framework that is to be updated.
+     * The description of the updated framework.
      * </p>
      */
     private String description;
@@ -51,18 +51,18 @@ public class UpdateAssessmentFrameworkRequest extends com.amazonaws.AmazonWebSer
     private String complianceType;
     /**
      * <p>
-     * The control sets associated with the framework.
+     * The control sets that are associated with the framework.
      * </p>
      */
     private java.util.List<UpdateAssessmentFrameworkControlSet> controlSets;
 
     /**
      * <p>
-     * The identifier for the specified framework.
+     * The identifier for the framework.
      * </p>
      * 
      * @param frameworkId
-     *        The identifier for the specified framework.
+     *        The identifier for the framework.
      */
 
     public void setFrameworkId(String frameworkId) {
@@ -71,10 +71,10 @@ public class UpdateAssessmentFrameworkRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The identifier for the specified framework.
+     * The identifier for the framework.
      * </p>
      * 
-     * @return The identifier for the specified framework.
+     * @return The identifier for the framework.
      */
 
     public String getFrameworkId() {
@@ -83,11 +83,11 @@ public class UpdateAssessmentFrameworkRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The identifier for the specified framework.
+     * The identifier for the framework.
      * </p>
      * 
      * @param frameworkId
-     *        The identifier for the specified framework.
+     *        The identifier for the framework.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -138,11 +138,11 @@ public class UpdateAssessmentFrameworkRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The description of the framework that is to be updated.
+     * The description of the updated framework.
      * </p>
      * 
      * @param description
-     *        The description of the framework that is to be updated.
+     *        The description of the updated framework.
      */
 
     public void setDescription(String description) {
@@ -151,10 +151,10 @@ public class UpdateAssessmentFrameworkRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The description of the framework that is to be updated.
+     * The description of the updated framework.
      * </p>
      * 
-     * @return The description of the framework that is to be updated.
+     * @return The description of the updated framework.
      */
 
     public String getDescription() {
@@ -163,11 +163,11 @@ public class UpdateAssessmentFrameworkRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The description of the framework that is to be updated.
+     * The description of the updated framework.
      * </p>
      * 
      * @param description
-     *        The description of the framework that is to be updated.
+     *        The description of the updated framework.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -218,10 +218,10 @@ public class UpdateAssessmentFrameworkRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The control sets associated with the framework.
+     * The control sets that are associated with the framework.
      * </p>
      * 
-     * @return The control sets associated with the framework.
+     * @return The control sets that are associated with the framework.
      */
 
     public java.util.List<UpdateAssessmentFrameworkControlSet> getControlSets() {
@@ -230,11 +230,11 @@ public class UpdateAssessmentFrameworkRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The control sets associated with the framework.
+     * The control sets that are associated with the framework.
      * </p>
      * 
      * @param controlSets
-     *        The control sets associated with the framework.
+     *        The control sets that are associated with the framework.
      */
 
     public void setControlSets(java.util.Collection<UpdateAssessmentFrameworkControlSet> controlSets) {
@@ -248,7 +248,7 @@ public class UpdateAssessmentFrameworkRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The control sets associated with the framework.
+     * The control sets that are associated with the framework.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -257,7 +257,7 @@ public class UpdateAssessmentFrameworkRequest extends com.amazonaws.AmazonWebSer
      * </p>
      * 
      * @param controlSets
-     *        The control sets associated with the framework.
+     *        The control sets that are associated with the framework.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -273,11 +273,11 @@ public class UpdateAssessmentFrameworkRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The control sets associated with the framework.
+     * The control sets that are associated with the framework.
      * </p>
      * 
      * @param controlSets
-     *        The control sets associated with the framework.
+     *        The control sets that are associated with the framework.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

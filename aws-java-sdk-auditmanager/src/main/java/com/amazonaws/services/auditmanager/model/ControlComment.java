@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A comment posted by a user on a control. This includes the author's name, the comment text, and a timestamp.
+ * A comment that's posted by a user on a control. This includes the author's name, the comment text, and a timestamp.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/ControlComment" target="_top">AWS API

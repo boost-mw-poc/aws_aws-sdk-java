@@ -37,25 +37,25 @@ public class Assessment implements Serializable, Cloneable, StructuredPojo {
     private String arn;
     /**
      * <p>
-     * The Amazon Web Services account associated with the assessment.
+     * The Amazon Web Services account that's associated with the assessment.
      * </p>
      */
     private AWSAccount awsAccount;
     /**
      * <p>
-     * The metadata for the specified assessment.
+     * The metadata for the assessment.
      * </p>
      */
     private AssessmentMetadata metadata;
     /**
      * <p>
-     * The framework from which the assessment was created.
+     * The framework that the assessment was created from.
      * </p>
      */
     private AssessmentFramework framework;
     /**
      * <p>
-     * The tags associated with the assessment.
+     * The tags that are associated with the assessment.
      * </p>
      */
     private java.util.Map<String, String> tags;
@@ -102,11 +102,11 @@ public class Assessment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Web Services account associated with the assessment.
+     * The Amazon Web Services account that's associated with the assessment.
      * </p>
      * 
      * @param awsAccount
-     *        The Amazon Web Services account associated with the assessment.
+     *        The Amazon Web Services account that's associated with the assessment.
      */
 
     public void setAwsAccount(AWSAccount awsAccount) {
@@ -115,10 +115,10 @@ public class Assessment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Web Services account associated with the assessment.
+     * The Amazon Web Services account that's associated with the assessment.
      * </p>
      * 
-     * @return The Amazon Web Services account associated with the assessment.
+     * @return The Amazon Web Services account that's associated with the assessment.
      */
 
     public AWSAccount getAwsAccount() {
@@ -127,11 +127,11 @@ public class Assessment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Web Services account associated with the assessment.
+     * The Amazon Web Services account that's associated with the assessment.
      * </p>
      * 
      * @param awsAccount
-     *        The Amazon Web Services account associated with the assessment.
+     *        The Amazon Web Services account that's associated with the assessment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -142,11 +142,11 @@ public class Assessment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The metadata for the specified assessment.
+     * The metadata for the assessment.
      * </p>
      * 
      * @param metadata
-     *        The metadata for the specified assessment.
+     *        The metadata for the assessment.
      */
 
     public void setMetadata(AssessmentMetadata metadata) {
@@ -155,10 +155,10 @@ public class Assessment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The metadata for the specified assessment.
+     * The metadata for the assessment.
      * </p>
      * 
-     * @return The metadata for the specified assessment.
+     * @return The metadata for the assessment.
      */
 
     public AssessmentMetadata getMetadata() {
@@ -167,11 +167,11 @@ public class Assessment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The metadata for the specified assessment.
+     * The metadata for the assessment.
      * </p>
      * 
      * @param metadata
-     *        The metadata for the specified assessment.
+     *        The metadata for the assessment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -182,11 +182,11 @@ public class Assessment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The framework from which the assessment was created.
+     * The framework that the assessment was created from.
      * </p>
      * 
      * @param framework
-     *        The framework from which the assessment was created.
+     *        The framework that the assessment was created from.
      */
 
     public void setFramework(AssessmentFramework framework) {
@@ -195,10 +195,10 @@ public class Assessment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The framework from which the assessment was created.
+     * The framework that the assessment was created from.
      * </p>
      * 
-     * @return The framework from which the assessment was created.
+     * @return The framework that the assessment was created from.
      */
 
     public AssessmentFramework getFramework() {
@@ -207,11 +207,11 @@ public class Assessment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The framework from which the assessment was created.
+     * The framework that the assessment was created from.
      * </p>
      * 
      * @param framework
-     *        The framework from which the assessment was created.
+     *        The framework that the assessment was created from.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -222,10 +222,10 @@ public class Assessment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The tags associated with the assessment.
+     * The tags that are associated with the assessment.
      * </p>
      * 
-     * @return The tags associated with the assessment.
+     * @return The tags that are associated with the assessment.
      */
 
     public java.util.Map<String, String> getTags() {
@@ -234,11 +234,11 @@ public class Assessment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The tags associated with the assessment.
+     * The tags that are associated with the assessment.
      * </p>
      * 
      * @param tags
-     *        The tags associated with the assessment.
+     *        The tags that are associated with the assessment.
      */
 
     public void setTags(java.util.Map<String, String> tags) {
@@ -247,11 +247,11 @@ public class Assessment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The tags associated with the assessment.
+     * The tags that are associated with the assessment.
      * </p>
      * 
      * @param tags
-     *        The tags associated with the assessment.
+     *        The tags that are associated with the assessment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

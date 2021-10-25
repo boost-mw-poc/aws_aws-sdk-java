@@ -45,13 +45,13 @@ public class CreateAssessmentFrameworkRequest extends com.amazonaws.AmazonWebSer
     private String complianceType;
     /**
      * <p>
-     * The control sets to be associated with the framework.
+     * The control sets that are associated with the framework.
      * </p>
      */
     private java.util.List<CreateAssessmentFrameworkControlSet> controlSets;
     /**
      * <p>
-     * The tags associated with the framework.
+     * The tags that are associated with the framework.
      * </p>
      */
     private java.util.Map<String, String> tags;
@@ -178,10 +178,10 @@ public class CreateAssessmentFrameworkRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The control sets to be associated with the framework.
+     * The control sets that are associated with the framework.
      * </p>
      * 
-     * @return The control sets to be associated with the framework.
+     * @return The control sets that are associated with the framework.
      */
 
     public java.util.List<CreateAssessmentFrameworkControlSet> getControlSets() {
@@ -190,11 +190,11 @@ public class CreateAssessmentFrameworkRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The control sets to be associated with the framework.
+     * The control sets that are associated with the framework.
      * </p>
      * 
      * @param controlSets
-     *        The control sets to be associated with the framework.
+     *        The control sets that are associated with the framework.
      */
 
     public void setControlSets(java.util.Collection<CreateAssessmentFrameworkControlSet> controlSets) {
@@ -208,7 +208,7 @@ public class CreateAssessmentFrameworkRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The control sets to be associated with the framework.
+     * The control sets that are associated with the framework.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -217,7 +217,7 @@ public class CreateAssessmentFrameworkRequest extends com.amazonaws.AmazonWebSer
      * </p>
      * 
      * @param controlSets
-     *        The control sets to be associated with the framework.
+     *        The control sets that are associated with the framework.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -233,11 +233,11 @@ public class CreateAssessmentFrameworkRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The control sets to be associated with the framework.
+     * The control sets that are associated with the framework.
      * </p>
      * 
      * @param controlSets
-     *        The control sets to be associated with the framework.
+     *        The control sets that are associated with the framework.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -248,10 +248,10 @@ public class CreateAssessmentFrameworkRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The tags associated with the framework.
+     * The tags that are associated with the framework.
      * </p>
      * 
-     * @return The tags associated with the framework.
+     * @return The tags that are associated with the framework.
      */
 
     public java.util.Map<String, String> getTags() {
@@ -260,11 +260,11 @@ public class CreateAssessmentFrameworkRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The tags associated with the framework.
+     * The tags that are associated with the framework.
      * </p>
      * 
      * @param tags
-     *        The tags associated with the framework.
+     *        The tags that are associated with the framework.
      */
 
     public void setTags(java.util.Map<String, String> tags) {
@@ -273,11 +273,11 @@ public class CreateAssessmentFrameworkRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The tags associated with the framework.
+     * The tags that are associated with the framework.
      * </p>
      * 
      * @param tags
-     *        The tags associated with the framework.
+     *        The tags that are associated with the framework.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

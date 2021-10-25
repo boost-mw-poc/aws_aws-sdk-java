@@ -30,14 +30,15 @@ import com.amazonaws.services.auditmanager.model.*;
  * Audit Manager API operations, data types, and errors.
  * </p>
  * <p>
- * Audit Manager is a service that provides automated evidence collection so that you can continuously audit your Amazon
- * Web Services usage, and assess the effectiveness of your controls to better manage risk and simplify compliance.
+ * Audit Manager is a service that provides automated evidence collection so that you can continually audit your Amazon
+ * Web Services usage. You can use it to assess the effectiveness of your controls, manage risk, and simplify
+ * compliance.
  * </p>
  * <p>
- * Audit Manager provides pre-built frameworks that structure and automate assessments for a given compliance standard.
- * Frameworks include a pre-built collection of controls with descriptions and testing procedures, which are grouped
- * according to the requirements of the specified compliance standard or regulation. You can also customize frameworks
- * and controls to support internal audits with unique requirements.
+ * Audit Manager provides prebuilt frameworks that structure and automate assessments for a given compliance standard.
+ * Frameworks include a prebuilt collection of controls with descriptions and testing procedures. These controls are
+ * grouped according to the requirements of the specified compliance standard or regulation. You can also customize
+ * frameworks and controls to support internal audits with specific requirements.
  * </p>
  * <p>
  * Use the following links to get started with the Audit Manager API:
@@ -78,7 +79,7 @@ public interface AWSAuditManagerAsync extends AWSAuditManager {
 
     /**
      * <p>
-     * Associates an evidence folder to the specified assessment report in Audit Manager.
+     * Associates an evidence folder to an assessment report in a Audit Manager assessment.
      * </p>
      * 
      * @param associateAssessmentReportEvidenceFolderRequest
@@ -94,7 +95,7 @@ public interface AWSAuditManagerAsync extends AWSAuditManager {
 
     /**
      * <p>
-     * Associates an evidence folder to the specified assessment report in Audit Manager.
+     * Associates an evidence folder to an assessment report in a Audit Manager assessment.
      * </p>
      * 
      * @param associateAssessmentReportEvidenceFolderRequest
@@ -152,7 +153,7 @@ public interface AWSAuditManagerAsync extends AWSAuditManager {
 
     /**
      * <p>
-     * Create a batch of delegations for a specified assessment in Audit Manager.
+     * Creates a batch of delegations for an assessment in Audit Manager.
      * </p>
      * 
      * @param batchCreateDelegationByAssessmentRequest
@@ -167,7 +168,7 @@ public interface AWSAuditManagerAsync extends AWSAuditManager {
 
     /**
      * <p>
-     * Create a batch of delegations for a specified assessment in Audit Manager.
+     * Creates a batch of delegations for an assessment in Audit Manager.
      * </p>
      * 
      * @param batchCreateDelegationByAssessmentRequest
@@ -187,7 +188,7 @@ public interface AWSAuditManagerAsync extends AWSAuditManager {
 
     /**
      * <p>
-     * Deletes the delegations in the specified Audit Manager assessment.
+     * Deletes a batch of delegations for an assessment in Audit Manager.
      * </p>
      * 
      * @param batchDeleteDelegationByAssessmentRequest
@@ -202,7 +203,7 @@ public interface AWSAuditManagerAsync extends AWSAuditManager {
 
     /**
      * <p>
-     * Deletes the delegations in the specified Audit Manager assessment.
+     * Deletes a batch of delegations for an assessment in Audit Manager.
      * </p>
      * 
      * @param batchDeleteDelegationByAssessmentRequest
@@ -222,7 +223,7 @@ public interface AWSAuditManagerAsync extends AWSAuditManager {
 
     /**
      * <p>
-     * Disassociates a list of evidence from the specified assessment report in Audit Manager.
+     * Disassociates a list of evidence from an assessment report in Audit Manager.
      * </p>
      * 
      * @param batchDisassociateAssessmentReportEvidenceRequest
@@ -238,7 +239,7 @@ public interface AWSAuditManagerAsync extends AWSAuditManager {
 
     /**
      * <p>
-     * Disassociates a list of evidence from the specified assessment report in Audit Manager.
+     * Disassociates a list of evidence from an assessment report in Audit Manager.
      * </p>
      * 
      * @param batchDisassociateAssessmentReportEvidenceRequest
@@ -259,7 +260,7 @@ public interface AWSAuditManagerAsync extends AWSAuditManager {
 
     /**
      * <p>
-     * Uploads one or more pieces of evidence to the specified control in the assessment in Audit Manager.
+     * Uploads one or more pieces of evidence to a control in an Audit Manager assessment.
      * </p>
      * 
      * @param batchImportEvidenceToAssessmentControlRequest
@@ -275,7 +276,7 @@ public interface AWSAuditManagerAsync extends AWSAuditManager {
 
     /**
      * <p>
-     * Uploads one or more pieces of evidence to the specified control in the assessment in Audit Manager.
+     * Uploads one or more pieces of evidence to a control in an Audit Manager assessment.
      * </p>
      * 
      * @param batchImportEvidenceToAssessmentControlRequest
@@ -486,6 +487,41 @@ public interface AWSAuditManagerAsync extends AWSAuditManager {
 
     /**
      * <p>
+     * Deletes a share request for a custom framework in Audit Manager.
+     * </p>
+     * 
+     * @param deleteAssessmentFrameworkShareRequest
+     * @return A Java Future containing the result of the DeleteAssessmentFrameworkShare operation returned by the
+     *         service.
+     * @sample AWSAuditManagerAsync.DeleteAssessmentFrameworkShare
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/DeleteAssessmentFrameworkShare"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteAssessmentFrameworkShareResult> deleteAssessmentFrameworkShareAsync(
+            DeleteAssessmentFrameworkShareRequest deleteAssessmentFrameworkShareRequest);
+
+    /**
+     * <p>
+     * Deletes a share request for a custom framework in Audit Manager.
+     * </p>
+     * 
+     * @param deleteAssessmentFrameworkShareRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteAssessmentFrameworkShare operation returned by the
+     *         service.
+     * @sample AWSAuditManagerAsyncHandler.DeleteAssessmentFrameworkShare
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/DeleteAssessmentFrameworkShare"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteAssessmentFrameworkShareResult> deleteAssessmentFrameworkShareAsync(
+            DeleteAssessmentFrameworkShareRequest deleteAssessmentFrameworkShareRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteAssessmentFrameworkShareRequest, DeleteAssessmentFrameworkShareResult> asyncHandler);
+
+    /**
+     * <p>
      * Deletes an assessment report from an assessment in Audit Manager.
      * </p>
      * 
@@ -583,10 +619,10 @@ public interface AWSAuditManagerAsync extends AWSAuditManager {
      * </p>
      * <important>
      * <p>
-     * When you remove a delegated administrator from your Audit Manager settings, or when you deregister a delegated
-     * administrator from Organizations, you continue to have access to the evidence that you previously collected under
-     * that account. However, Audit Manager will stop collecting and attaching evidence to that delegated administrator
-     * account moving forward.
+     * When you remove a delegated administrator from your Audit Manager settings, you continue to have access to the
+     * evidence that you previously collected under that account. This is also the case when you deregister a delegated
+     * administrator from Audit Manager. However, Audit Manager will stop collecting and attaching evidence to that
+     * delegated administrator account moving forward.
      * </p>
      * </important>
      * 
@@ -606,10 +642,10 @@ public interface AWSAuditManagerAsync extends AWSAuditManager {
      * </p>
      * <important>
      * <p>
-     * When you remove a delegated administrator from your Audit Manager settings, or when you deregister a delegated
-     * administrator from Organizations, you continue to have access to the evidence that you previously collected under
-     * that account. However, Audit Manager will stop collecting and attaching evidence to that delegated administrator
-     * account moving forward.
+     * When you remove a delegated administrator from your Audit Manager settings, you continue to have access to the
+     * evidence that you previously collected under that account. This is also the case when you deregister a delegated
+     * administrator from Audit Manager. However, Audit Manager will stop collecting and attaching evidence to that
+     * delegated administrator account moving forward.
      * </p>
      * </important>
      * 
@@ -760,7 +796,7 @@ public interface AWSAuditManagerAsync extends AWSAuditManager {
 
     /**
      * <p>
-     * Returns the URL of a specified assessment report in Audit Manager.
+     * Returns the URL of an assessment report in Audit Manager.
      * </p>
      * 
      * @param getAssessmentReportUrlRequest
@@ -773,7 +809,7 @@ public interface AWSAuditManagerAsync extends AWSAuditManager {
 
     /**
      * <p>
-     * Returns the URL of a specified assessment report in Audit Manager.
+     * Returns the URL of an assessment report in Audit Manager.
      * </p>
      * 
      * @param getAssessmentReportUrlRequest
@@ -1014,7 +1050,8 @@ public interface AWSAuditManagerAsync extends AWSAuditManager {
 
     /**
      * <p>
-     * Returns a list of evidence folders associated with a specified control of an assessment in Audit Manager.
+     * Returns a list of evidence folders that are associated with a specified control of an assessment in Audit
+     * Manager.
      * </p>
      * 
      * @param getEvidenceFoldersByAssessmentControlRequest
@@ -1030,7 +1067,8 @@ public interface AWSAuditManagerAsync extends AWSAuditManager {
 
     /**
      * <p>
-     * Returns a list of evidence folders associated with a specified control of an assessment in Audit Manager.
+     * Returns a list of evidence folders that are associated with a specified control of an assessment in Audit
+     * Manager.
      * </p>
      * 
      * @param getEvidenceFoldersByAssessmentControlRequest
@@ -1146,7 +1184,44 @@ public interface AWSAuditManagerAsync extends AWSAuditManager {
 
     /**
      * <p>
-     * Returns a list of the frameworks available in the Audit Manager framework library.
+     * Returns a list of sent or received share requests for custom frameworks in Audit Manager.
+     * </p>
+     * 
+     * @param listAssessmentFrameworkShareRequestsRequest
+     * @return A Java Future containing the result of the ListAssessmentFrameworkShareRequests operation returned by the
+     *         service.
+     * @sample AWSAuditManagerAsync.ListAssessmentFrameworkShareRequests
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/ListAssessmentFrameworkShareRequests"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListAssessmentFrameworkShareRequestsResult> listAssessmentFrameworkShareRequestsAsync(
+            ListAssessmentFrameworkShareRequestsRequest listAssessmentFrameworkShareRequestsRequest);
+
+    /**
+     * <p>
+     * Returns a list of sent or received share requests for custom frameworks in Audit Manager.
+     * </p>
+     * 
+     * @param listAssessmentFrameworkShareRequestsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListAssessmentFrameworkShareRequests operation returned by the
+     *         service.
+     * @sample AWSAuditManagerAsyncHandler.ListAssessmentFrameworkShareRequests
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/ListAssessmentFrameworkShareRequests"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListAssessmentFrameworkShareRequestsResult> listAssessmentFrameworkShareRequestsAsync(
+            ListAssessmentFrameworkShareRequestsRequest listAssessmentFrameworkShareRequestsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListAssessmentFrameworkShareRequestsRequest, ListAssessmentFrameworkShareRequestsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns a list of the frameworks that are available in the Audit Manager framework library.
      * </p>
      * 
      * @param listAssessmentFrameworksRequest
@@ -1159,7 +1234,7 @@ public interface AWSAuditManagerAsync extends AWSAuditManager {
 
     /**
      * <p>
-     * Returns a list of the frameworks available in the Audit Manager framework library.
+     * Returns a list of the frameworks that are available in the Audit Manager framework library.
      * </p>
      * 
      * @param listAssessmentFrameworksRequest
@@ -1270,7 +1345,7 @@ public interface AWSAuditManagerAsync extends AWSAuditManager {
 
     /**
      * <p>
-     * Returns a list of keywords that pre-mapped to the specified control data source.
+     * Returns a list of keywords that are pre-mapped to the specified control data source.
      * </p>
      * 
      * @param listKeywordsForDataSourceRequest
@@ -1284,7 +1359,7 @@ public interface AWSAuditManagerAsync extends AWSAuditManager {
 
     /**
      * <p>
-     * Returns a list of keywords that pre-mapped to the specified control data source.
+     * Returns a list of keywords that are pre-mapped to the specified control data source.
      * </p>
      * 
      * @param listKeywordsForDataSourceRequest
@@ -1428,6 +1503,71 @@ public interface AWSAuditManagerAsync extends AWSAuditManager {
     java.util.concurrent.Future<RegisterOrganizationAdminAccountResult> registerOrganizationAdminAccountAsync(
             RegisterOrganizationAdminAccountRequest registerOrganizationAdminAccountRequest,
             com.amazonaws.handlers.AsyncHandler<RegisterOrganizationAdminAccountRequest, RegisterOrganizationAdminAccountResult> asyncHandler);
+
+    /**
+     * <p>
+     * Creates a share request for a custom framework in Audit Manager.
+     * </p>
+     * <p>
+     * The share request specifies a recipient and notifies them that a custom framework is available. Recipients have
+     * 120 days to accept or decline the request. If no action is taken, the share request expires.
+     * </p>
+     * <important>
+     * <p>
+     * When you invoke the <code>StartAssessmentFrameworkShare</code> API, you are about to share a custom framework
+     * with another Amazon Web Services account. You may not share a custom framework that is derived from a standard
+     * framework if the standard framework is designated as not eligible for sharing by Amazon Web Services, unless you
+     * have obtained permission to do so from the owner of the standard framework. To learn more about which standard
+     * frameworks are eligible for sharing, see <a href=
+     * "https://docs.aws.amazon.com/audit-manager/latest/userguide/share-custom-framework-concepts-and-terminology.html#eligibility"
+     * >Framework sharing eligibility</a> in the <i>Audit Manager User Guide</i>.
+     * </p>
+     * </important>
+     * 
+     * @param startAssessmentFrameworkShareRequest
+     * @return A Java Future containing the result of the StartAssessmentFrameworkShare operation returned by the
+     *         service.
+     * @sample AWSAuditManagerAsync.StartAssessmentFrameworkShare
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/StartAssessmentFrameworkShare"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<StartAssessmentFrameworkShareResult> startAssessmentFrameworkShareAsync(
+            StartAssessmentFrameworkShareRequest startAssessmentFrameworkShareRequest);
+
+    /**
+     * <p>
+     * Creates a share request for a custom framework in Audit Manager.
+     * </p>
+     * <p>
+     * The share request specifies a recipient and notifies them that a custom framework is available. Recipients have
+     * 120 days to accept or decline the request. If no action is taken, the share request expires.
+     * </p>
+     * <important>
+     * <p>
+     * When you invoke the <code>StartAssessmentFrameworkShare</code> API, you are about to share a custom framework
+     * with another Amazon Web Services account. You may not share a custom framework that is derived from a standard
+     * framework if the standard framework is designated as not eligible for sharing by Amazon Web Services, unless you
+     * have obtained permission to do so from the owner of the standard framework. To learn more about which standard
+     * frameworks are eligible for sharing, see <a href=
+     * "https://docs.aws.amazon.com/audit-manager/latest/userguide/share-custom-framework-concepts-and-terminology.html#eligibility"
+     * >Framework sharing eligibility</a> in the <i>Audit Manager User Guide</i>.
+     * </p>
+     * </important>
+     * 
+     * @param startAssessmentFrameworkShareRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the StartAssessmentFrameworkShare operation returned by the
+     *         service.
+     * @sample AWSAuditManagerAsyncHandler.StartAssessmentFrameworkShare
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/StartAssessmentFrameworkShare"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<StartAssessmentFrameworkShareResult> startAssessmentFrameworkShareAsync(
+            StartAssessmentFrameworkShareRequest startAssessmentFrameworkShareRequest,
+            com.amazonaws.handlers.AsyncHandler<StartAssessmentFrameworkShareRequest, StartAssessmentFrameworkShareResult> asyncHandler);
 
     /**
      * <p>
@@ -1620,6 +1760,41 @@ public interface AWSAuditManagerAsync extends AWSAuditManager {
     java.util.concurrent.Future<UpdateAssessmentFrameworkResult> updateAssessmentFrameworkAsync(
             UpdateAssessmentFrameworkRequest updateAssessmentFrameworkRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateAssessmentFrameworkRequest, UpdateAssessmentFrameworkResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates a share request for a custom framework in Audit Manager.
+     * </p>
+     * 
+     * @param updateAssessmentFrameworkShareRequest
+     * @return A Java Future containing the result of the UpdateAssessmentFrameworkShare operation returned by the
+     *         service.
+     * @sample AWSAuditManagerAsync.UpdateAssessmentFrameworkShare
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/UpdateAssessmentFrameworkShare"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateAssessmentFrameworkShareResult> updateAssessmentFrameworkShareAsync(
+            UpdateAssessmentFrameworkShareRequest updateAssessmentFrameworkShareRequest);
+
+    /**
+     * <p>
+     * Updates a share request for a custom framework in Audit Manager.
+     * </p>
+     * 
+     * @param updateAssessmentFrameworkShareRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateAssessmentFrameworkShare operation returned by the
+     *         service.
+     * @sample AWSAuditManagerAsyncHandler.UpdateAssessmentFrameworkShare
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/UpdateAssessmentFrameworkShare"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateAssessmentFrameworkShareResult> updateAssessmentFrameworkShareAsync(
+            UpdateAssessmentFrameworkShareRequest updateAssessmentFrameworkShareRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateAssessmentFrameworkShareRequest, UpdateAssessmentFrameworkShareResult> asyncHandler);
 
     /**
      * <p>

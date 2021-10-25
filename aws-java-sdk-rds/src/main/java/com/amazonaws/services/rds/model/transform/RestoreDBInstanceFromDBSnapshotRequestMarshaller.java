@@ -220,6 +220,10 @@ public class RestoreDBInstanceFromDBSnapshotRequestMarshaller implements
             request.addParameter("EnableCustomerOwnedIp", StringUtils.fromBoolean(restoreDBInstanceFromDBSnapshotRequest.getEnableCustomerOwnedIp()));
         }
 
+        if (restoreDBInstanceFromDBSnapshotRequest.getCustomIamInstanceProfile() != null) {
+            request.addParameter("CustomIamInstanceProfile", StringUtils.fromString(restoreDBInstanceFromDBSnapshotRequest.getCustomIamInstanceProfile()));
+        }
+
         return request;
     }
 

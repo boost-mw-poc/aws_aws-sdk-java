@@ -27,24 +27,24 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the specified resource.
+     * The Amazon Resource Name (ARN) of the resource.
      * </p>
      */
     private String resourceArn;
     /**
      * <p>
-     * The tags to be associated with the resource.
+     * The tags that are associated with the resource.
      * </p>
      */
     private java.util.Map<String, String> tags;
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the specified resource.
+     * The Amazon Resource Name (ARN) of the resource.
      * </p>
      * 
      * @param resourceArn
-     *        The Amazon Resource Name (ARN) of the specified resource.
+     *        The Amazon Resource Name (ARN) of the resource.
      */
 
     public void setResourceArn(String resourceArn) {
@@ -53,10 +53,10 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the specified resource.
+     * The Amazon Resource Name (ARN) of the resource.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the specified resource.
+     * @return The Amazon Resource Name (ARN) of the resource.
      */
 
     public String getResourceArn() {
@@ -65,11 +65,11 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the specified resource.
+     * The Amazon Resource Name (ARN) of the resource.
      * </p>
      * 
      * @param resourceArn
-     *        The Amazon Resource Name (ARN) of the specified resource.
+     *        The Amazon Resource Name (ARN) of the resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -80,10 +80,10 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The tags to be associated with the resource.
+     * The tags that are associated with the resource.
      * </p>
      * 
-     * @return The tags to be associated with the resource.
+     * @return The tags that are associated with the resource.
      */
 
     public java.util.Map<String, String> getTags() {
@@ -92,11 +92,11 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The tags to be associated with the resource.
+     * The tags that are associated with the resource.
      * </p>
      * 
      * @param tags
-     *        The tags to be associated with the resource.
+     *        The tags that are associated with the resource.
      */
 
     public void setTags(java.util.Map<String, String> tags) {
@@ -105,11 +105,11 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The tags to be associated with the resource.
+     * The tags that are associated with the resource.
      * </p>
      * 
      * @param tags
-     *        The tags to be associated with the resource.
+     *        The tags that are associated with the resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

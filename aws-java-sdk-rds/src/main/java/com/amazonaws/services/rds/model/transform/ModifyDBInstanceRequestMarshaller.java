@@ -292,6 +292,14 @@ public class ModifyDBInstanceRequestMarshaller implements Marshaller<Request<Mod
             request.addParameter("AwsBackupRecoveryPointArn", StringUtils.fromString(modifyDBInstanceRequest.getAwsBackupRecoveryPointArn()));
         }
 
+        if (modifyDBInstanceRequest.getAutomationMode() != null) {
+            request.addParameter("AutomationMode", StringUtils.fromString(modifyDBInstanceRequest.getAutomationMode()));
+        }
+
+        if (modifyDBInstanceRequest.getResumeFullAutomationModeMinutes() != null) {
+            request.addParameter("ResumeFullAutomationModeMinutes", StringUtils.fromInteger(modifyDBInstanceRequest.getResumeFullAutomationModeMinutes()));
+        }
+
         return request;
     }
 

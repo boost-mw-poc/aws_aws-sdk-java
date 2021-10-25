@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The metadata associated with the specified delegation.
+ * The metadata that's associated with the delegation.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/DelegationMetadata" target="_top">AWS
@@ -42,13 +42,13 @@ public class DelegationMetadata implements Serializable, Cloneable, StructuredPo
     private String assessmentName;
     /**
      * <p>
-     * The unique identifier for the specified assessment.
+     * The unique identifier for the assessment.
      * </p>
      */
     private String assessmentId;
     /**
      * <p>
-     * The current status of the delgation.
+     * The current status of the delegation.
      * </p>
      */
     private String status;
@@ -66,7 +66,7 @@ public class DelegationMetadata implements Serializable, Cloneable, StructuredPo
     private java.util.Date creationTime;
     /**
      * <p>
-     * Specifies the name of the control set delegated for review.
+     * Specifies the name of the control set that was delegated for review.
      * </p>
      */
     private String controlSetName;
@@ -153,11 +153,11 @@ public class DelegationMetadata implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The unique identifier for the specified assessment.
+     * The unique identifier for the assessment.
      * </p>
      * 
      * @param assessmentId
-     *        The unique identifier for the specified assessment.
+     *        The unique identifier for the assessment.
      */
 
     public void setAssessmentId(String assessmentId) {
@@ -166,10 +166,10 @@ public class DelegationMetadata implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The unique identifier for the specified assessment.
+     * The unique identifier for the assessment.
      * </p>
      * 
-     * @return The unique identifier for the specified assessment.
+     * @return The unique identifier for the assessment.
      */
 
     public String getAssessmentId() {
@@ -178,11 +178,11 @@ public class DelegationMetadata implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The unique identifier for the specified assessment.
+     * The unique identifier for the assessment.
      * </p>
      * 
      * @param assessmentId
-     *        The unique identifier for the specified assessment.
+     *        The unique identifier for the assessment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -193,11 +193,11 @@ public class DelegationMetadata implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The current status of the delgation.
+     * The current status of the delegation.
      * </p>
      * 
      * @param status
-     *        The current status of the delgation.
+     *        The current status of the delegation.
      * @see DelegationStatus
      */
 
@@ -207,10 +207,10 @@ public class DelegationMetadata implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The current status of the delgation.
+     * The current status of the delegation.
      * </p>
      * 
-     * @return The current status of the delgation.
+     * @return The current status of the delegation.
      * @see DelegationStatus
      */
 
@@ -220,11 +220,11 @@ public class DelegationMetadata implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The current status of the delgation.
+     * The current status of the delegation.
      * </p>
      * 
      * @param status
-     *        The current status of the delgation.
+     *        The current status of the delegation.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DelegationStatus
      */
@@ -236,11 +236,11 @@ public class DelegationMetadata implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The current status of the delgation.
+     * The current status of the delegation.
      * </p>
      * 
      * @param status
-     *        The current status of the delgation.
+     *        The current status of the delegation.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DelegationStatus
      */
@@ -332,11 +332,11 @@ public class DelegationMetadata implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * Specifies the name of the control set delegated for review.
+     * Specifies the name of the control set that was delegated for review.
      * </p>
      * 
      * @param controlSetName
-     *        Specifies the name of the control set delegated for review.
+     *        Specifies the name of the control set that was delegated for review.
      */
 
     public void setControlSetName(String controlSetName) {
@@ -345,10 +345,10 @@ public class DelegationMetadata implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * Specifies the name of the control set delegated for review.
+     * Specifies the name of the control set that was delegated for review.
      * </p>
      * 
-     * @return Specifies the name of the control set delegated for review.
+     * @return Specifies the name of the control set that was delegated for review.
      */
 
     public String getControlSetName() {
@@ -357,11 +357,11 @@ public class DelegationMetadata implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * Specifies the name of the control set delegated for review.
+     * Specifies the name of the control set that was delegated for review.
      * </p>
      * 
      * @param controlSetName
-     *        Specifies the name of the control set delegated for review.
+     *        Specifies the name of the control set that was delegated for review.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

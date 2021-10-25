@@ -25,18 +25,18 @@ public class UpdateAssessmentStatusResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The name of the updated assessment returned by the <code>UpdateAssessmentStatus</code> API.
+     * The name of the updated assessment that the <code>UpdateAssessmentStatus</code> API returned.
      * </p>
      */
     private Assessment assessment;
 
     /**
      * <p>
-     * The name of the updated assessment returned by the <code>UpdateAssessmentStatus</code> API.
+     * The name of the updated assessment that the <code>UpdateAssessmentStatus</code> API returned.
      * </p>
      * 
      * @param assessment
-     *        The name of the updated assessment returned by the <code>UpdateAssessmentStatus</code> API.
+     *        The name of the updated assessment that the <code>UpdateAssessmentStatus</code> API returned.
      */
 
     public void setAssessment(Assessment assessment) {
@@ -45,10 +45,10 @@ public class UpdateAssessmentStatusResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The name of the updated assessment returned by the <code>UpdateAssessmentStatus</code> API.
+     * The name of the updated assessment that the <code>UpdateAssessmentStatus</code> API returned.
      * </p>
      * 
-     * @return The name of the updated assessment returned by the <code>UpdateAssessmentStatus</code> API.
+     * @return The name of the updated assessment that the <code>UpdateAssessmentStatus</code> API returned.
      */
 
     public Assessment getAssessment() {
@@ -57,11 +57,11 @@ public class UpdateAssessmentStatusResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The name of the updated assessment returned by the <code>UpdateAssessmentStatus</code> API.
+     * The name of the updated assessment that the <code>UpdateAssessmentStatus</code> API returned.
      * </p>
      * 
      * @param assessment
-     *        The name of the updated assessment returned by the <code>UpdateAssessmentStatus</code> API.
+     *        The name of the updated assessment that the <code>UpdateAssessmentStatus</code> API returned.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -25,23 +25,23 @@ public class ListControlsResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The list of control metadata objects returned by the <code>ListControls</code> API.
+     * The list of control metadata objects that the <code>ListControls</code> API returned.
      * </p>
      */
     private java.util.List<ControlMetadata> controlMetadataList;
     /**
      * <p>
-     * The pagination token used to fetch the next set of results.
+     * The pagination token that's used to fetch the next set of results.
      * </p>
      */
     private String nextToken;
 
     /**
      * <p>
-     * The list of control metadata objects returned by the <code>ListControls</code> API.
+     * The list of control metadata objects that the <code>ListControls</code> API returned.
      * </p>
      * 
-     * @return The list of control metadata objects returned by the <code>ListControls</code> API.
+     * @return The list of control metadata objects that the <code>ListControls</code> API returned.
      */
 
     public java.util.List<ControlMetadata> getControlMetadataList() {
@@ -50,11 +50,11 @@ public class ListControlsResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The list of control metadata objects returned by the <code>ListControls</code> API.
+     * The list of control metadata objects that the <code>ListControls</code> API returned.
      * </p>
      * 
      * @param controlMetadataList
-     *        The list of control metadata objects returned by the <code>ListControls</code> API.
+     *        The list of control metadata objects that the <code>ListControls</code> API returned.
      */
 
     public void setControlMetadataList(java.util.Collection<ControlMetadata> controlMetadataList) {
@@ -68,7 +68,7 @@ public class ListControlsResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The list of control metadata objects returned by the <code>ListControls</code> API.
+     * The list of control metadata objects that the <code>ListControls</code> API returned.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -77,7 +77,7 @@ public class ListControlsResult extends com.amazonaws.AmazonWebServiceResult<com
      * </p>
      * 
      * @param controlMetadataList
-     *        The list of control metadata objects returned by the <code>ListControls</code> API.
+     *        The list of control metadata objects that the <code>ListControls</code> API returned.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -93,11 +93,11 @@ public class ListControlsResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The list of control metadata objects returned by the <code>ListControls</code> API.
+     * The list of control metadata objects that the <code>ListControls</code> API returned.
      * </p>
      * 
      * @param controlMetadataList
-     *        The list of control metadata objects returned by the <code>ListControls</code> API.
+     *        The list of control metadata objects that the <code>ListControls</code> API returned.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -108,11 +108,11 @@ public class ListControlsResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The pagination token used to fetch the next set of results.
+     * The pagination token that's used to fetch the next set of results.
      * </p>
      * 
      * @param nextToken
-     *        The pagination token used to fetch the next set of results.
+     *        The pagination token that's used to fetch the next set of results.
      */
 
     public void setNextToken(String nextToken) {
@@ -121,10 +121,10 @@ public class ListControlsResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The pagination token used to fetch the next set of results.
+     * The pagination token that's used to fetch the next set of results.
      * </p>
      * 
-     * @return The pagination token used to fetch the next set of results.
+     * @return The pagination token that's used to fetch the next set of results.
      */
 
     public String getNextToken() {
@@ -133,11 +133,11 @@ public class ListControlsResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The pagination token used to fetch the next set of results.
+     * The pagination token that's used to fetch the next set of results.
      * </p>
      * 
      * @param nextToken
-     *        The pagination token used to fetch the next set of results.
+     *        The pagination token that's used to fetch the next set of results.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

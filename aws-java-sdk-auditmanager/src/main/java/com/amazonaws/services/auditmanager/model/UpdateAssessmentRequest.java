@@ -27,48 +27,48 @@ public class UpdateAssessmentRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The identifier for the specified assessment.
+     * The identifier for the assessment.
      * </p>
      */
     private String assessmentId;
     /**
      * <p>
-     * The name of the specified assessment to be updated.
+     * The name of the assessment to be updated.
      * </p>
      */
     private String assessmentName;
     /**
      * <p>
-     * The description of the specified assessment.
+     * The description of the assessment.
      * </p>
      */
     private String assessmentDescription;
     /**
      * <p>
-     * The scope of the specified assessment.
+     * The scope of the assessment.
      * </p>
      */
     private Scope scope;
     /**
      * <p>
-     * The assessment report storage destination for the specified assessment that is being updated.
+     * The assessment report storage destination for the assessment that's being updated.
      * </p>
      */
     private AssessmentReportsDestination assessmentReportsDestination;
     /**
      * <p>
-     * The list of roles for the specified assessment.
+     * The list of roles for the assessment.
      * </p>
      */
     private java.util.List<Role> roles;
 
     /**
      * <p>
-     * The identifier for the specified assessment.
+     * The identifier for the assessment.
      * </p>
      * 
      * @param assessmentId
-     *        The identifier for the specified assessment.
+     *        The identifier for the assessment.
      */
 
     public void setAssessmentId(String assessmentId) {
@@ -77,10 +77,10 @@ public class UpdateAssessmentRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The identifier for the specified assessment.
+     * The identifier for the assessment.
      * </p>
      * 
-     * @return The identifier for the specified assessment.
+     * @return The identifier for the assessment.
      */
 
     public String getAssessmentId() {
@@ -89,11 +89,11 @@ public class UpdateAssessmentRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The identifier for the specified assessment.
+     * The identifier for the assessment.
      * </p>
      * 
      * @param assessmentId
-     *        The identifier for the specified assessment.
+     *        The identifier for the assessment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -104,11 +104,11 @@ public class UpdateAssessmentRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The name of the specified assessment to be updated.
+     * The name of the assessment to be updated.
      * </p>
      * 
      * @param assessmentName
-     *        The name of the specified assessment to be updated.
+     *        The name of the assessment to be updated.
      */
 
     public void setAssessmentName(String assessmentName) {
@@ -117,10 +117,10 @@ public class UpdateAssessmentRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The name of the specified assessment to be updated.
+     * The name of the assessment to be updated.
      * </p>
      * 
-     * @return The name of the specified assessment to be updated.
+     * @return The name of the assessment to be updated.
      */
 
     public String getAssessmentName() {
@@ -129,11 +129,11 @@ public class UpdateAssessmentRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The name of the specified assessment to be updated.
+     * The name of the assessment to be updated.
      * </p>
      * 
      * @param assessmentName
-     *        The name of the specified assessment to be updated.
+     *        The name of the assessment to be updated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -144,11 +144,11 @@ public class UpdateAssessmentRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The description of the specified assessment.
+     * The description of the assessment.
      * </p>
      * 
      * @param assessmentDescription
-     *        The description of the specified assessment.
+     *        The description of the assessment.
      */
 
     public void setAssessmentDescription(String assessmentDescription) {
@@ -157,10 +157,10 @@ public class UpdateAssessmentRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The description of the specified assessment.
+     * The description of the assessment.
      * </p>
      * 
-     * @return The description of the specified assessment.
+     * @return The description of the assessment.
      */
 
     public String getAssessmentDescription() {
@@ -169,11 +169,11 @@ public class UpdateAssessmentRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The description of the specified assessment.
+     * The description of the assessment.
      * </p>
      * 
      * @param assessmentDescription
-     *        The description of the specified assessment.
+     *        The description of the assessment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -184,11 +184,11 @@ public class UpdateAssessmentRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The scope of the specified assessment.
+     * The scope of the assessment.
      * </p>
      * 
      * @param scope
-     *        The scope of the specified assessment.
+     *        The scope of the assessment.
      */
 
     public void setScope(Scope scope) {
@@ -197,10 +197,10 @@ public class UpdateAssessmentRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The scope of the specified assessment.
+     * The scope of the assessment.
      * </p>
      * 
-     * @return The scope of the specified assessment.
+     * @return The scope of the assessment.
      */
 
     public Scope getScope() {
@@ -209,11 +209,11 @@ public class UpdateAssessmentRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The scope of the specified assessment.
+     * The scope of the assessment.
      * </p>
      * 
      * @param scope
-     *        The scope of the specified assessment.
+     *        The scope of the assessment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -224,11 +224,11 @@ public class UpdateAssessmentRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The assessment report storage destination for the specified assessment that is being updated.
+     * The assessment report storage destination for the assessment that's being updated.
      * </p>
      * 
      * @param assessmentReportsDestination
-     *        The assessment report storage destination for the specified assessment that is being updated.
+     *        The assessment report storage destination for the assessment that's being updated.
      */
 
     public void setAssessmentReportsDestination(AssessmentReportsDestination assessmentReportsDestination) {
@@ -237,10 +237,10 @@ public class UpdateAssessmentRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The assessment report storage destination for the specified assessment that is being updated.
+     * The assessment report storage destination for the assessment that's being updated.
      * </p>
      * 
-     * @return The assessment report storage destination for the specified assessment that is being updated.
+     * @return The assessment report storage destination for the assessment that's being updated.
      */
 
     public AssessmentReportsDestination getAssessmentReportsDestination() {
@@ -249,11 +249,11 @@ public class UpdateAssessmentRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The assessment report storage destination for the specified assessment that is being updated.
+     * The assessment report storage destination for the assessment that's being updated.
      * </p>
      * 
      * @param assessmentReportsDestination
-     *        The assessment report storage destination for the specified assessment that is being updated.
+     *        The assessment report storage destination for the assessment that's being updated.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -264,10 +264,10 @@ public class UpdateAssessmentRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The list of roles for the specified assessment.
+     * The list of roles for the assessment.
      * </p>
      * 
-     * @return The list of roles for the specified assessment.
+     * @return The list of roles for the assessment.
      */
 
     public java.util.List<Role> getRoles() {
@@ -276,11 +276,11 @@ public class UpdateAssessmentRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The list of roles for the specified assessment.
+     * The list of roles for the assessment.
      * </p>
      * 
      * @param roles
-     *        The list of roles for the specified assessment.
+     *        The list of roles for the assessment.
      */
 
     public void setRoles(java.util.Collection<Role> roles) {
@@ -294,7 +294,7 @@ public class UpdateAssessmentRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The list of roles for the specified assessment.
+     * The list of roles for the assessment.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -303,7 +303,7 @@ public class UpdateAssessmentRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * 
      * @param roles
-     *        The list of roles for the specified assessment.
+     *        The list of roles for the assessment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -319,11 +319,11 @@ public class UpdateAssessmentRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The list of roles for the specified assessment.
+     * The list of roles for the assessment.
      * </p>
      * 
      * @param roles
-     *        The list of roles for the specified assessment.
+     *        The list of roles for the assessment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

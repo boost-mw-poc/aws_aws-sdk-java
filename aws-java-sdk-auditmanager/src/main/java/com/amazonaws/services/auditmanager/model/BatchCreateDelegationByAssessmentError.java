@@ -37,13 +37,13 @@ public class BatchCreateDelegationByAssessmentError implements Serializable, Clo
     private CreateDelegationRequest createDelegationRequest;
     /**
      * <p>
-     * The error code returned by the <code>BatchCreateDelegationByAssessment</code> API.
+     * The error code that the <code>BatchCreateDelegationByAssessment</code> API returned.
      * </p>
      */
     private String errorCode;
     /**
      * <p>
-     * The error message returned by the <code>BatchCreateDelegationByAssessment</code> API.
+     * The error message that the <code>BatchCreateDelegationByAssessment</code> API returned.
      * </p>
      */
     private String errorMessage;
@@ -90,11 +90,11 @@ public class BatchCreateDelegationByAssessmentError implements Serializable, Clo
 
     /**
      * <p>
-     * The error code returned by the <code>BatchCreateDelegationByAssessment</code> API.
+     * The error code that the <code>BatchCreateDelegationByAssessment</code> API returned.
      * </p>
      * 
      * @param errorCode
-     *        The error code returned by the <code>BatchCreateDelegationByAssessment</code> API.
+     *        The error code that the <code>BatchCreateDelegationByAssessment</code> API returned.
      */
 
     public void setErrorCode(String errorCode) {
@@ -103,10 +103,10 @@ public class BatchCreateDelegationByAssessmentError implements Serializable, Clo
 
     /**
      * <p>
-     * The error code returned by the <code>BatchCreateDelegationByAssessment</code> API.
+     * The error code that the <code>BatchCreateDelegationByAssessment</code> API returned.
      * </p>
      * 
-     * @return The error code returned by the <code>BatchCreateDelegationByAssessment</code> API.
+     * @return The error code that the <code>BatchCreateDelegationByAssessment</code> API returned.
      */
 
     public String getErrorCode() {
@@ -115,11 +115,11 @@ public class BatchCreateDelegationByAssessmentError implements Serializable, Clo
 
     /**
      * <p>
-     * The error code returned by the <code>BatchCreateDelegationByAssessment</code> API.
+     * The error code that the <code>BatchCreateDelegationByAssessment</code> API returned.
      * </p>
      * 
      * @param errorCode
-     *        The error code returned by the <code>BatchCreateDelegationByAssessment</code> API.
+     *        The error code that the <code>BatchCreateDelegationByAssessment</code> API returned.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -130,11 +130,11 @@ public class BatchCreateDelegationByAssessmentError implements Serializable, Clo
 
     /**
      * <p>
-     * The error message returned by the <code>BatchCreateDelegationByAssessment</code> API.
+     * The error message that the <code>BatchCreateDelegationByAssessment</code> API returned.
      * </p>
      * 
      * @param errorMessage
-     *        The error message returned by the <code>BatchCreateDelegationByAssessment</code> API.
+     *        The error message that the <code>BatchCreateDelegationByAssessment</code> API returned.
      */
 
     public void setErrorMessage(String errorMessage) {
@@ -143,10 +143,10 @@ public class BatchCreateDelegationByAssessmentError implements Serializable, Clo
 
     /**
      * <p>
-     * The error message returned by the <code>BatchCreateDelegationByAssessment</code> API.
+     * The error message that the <code>BatchCreateDelegationByAssessment</code> API returned.
      * </p>
      * 
-     * @return The error message returned by the <code>BatchCreateDelegationByAssessment</code> API.
+     * @return The error message that the <code>BatchCreateDelegationByAssessment</code> API returned.
      */
 
     public String getErrorMessage() {
@@ -155,11 +155,11 @@ public class BatchCreateDelegationByAssessmentError implements Serializable, Clo
 
     /**
      * <p>
-     * The error message returned by the <code>BatchCreateDelegationByAssessment</code> API.
+     * The error message that the <code>BatchCreateDelegationByAssessment</code> API returned.
      * </p>
      * 
      * @param errorMessage
-     *        The error message returned by the <code>BatchCreateDelegationByAssessment</code> API.
+     *        The error message that the <code>BatchCreateDelegationByAssessment</code> API returned.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

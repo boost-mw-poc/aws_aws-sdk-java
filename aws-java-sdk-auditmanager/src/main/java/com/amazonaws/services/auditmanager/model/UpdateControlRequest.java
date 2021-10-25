@@ -27,13 +27,13 @@ public class UpdateControlRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The identifier for the specified control.
+     * The identifier for the control.
      * </p>
      */
     private String controlId;
     /**
      * <p>
-     * The name of the control to be updated.
+     * The name of the updated control.
      * </p>
      */
     private String name;
@@ -45,7 +45,7 @@ public class UpdateControlRequest extends com.amazonaws.AmazonWebServiceRequest 
     private String description;
     /**
      * <p>
-     * The steps that to follow to determine if the control has been satisfied.
+     * The steps that you should follow to determine if the control is met.
      * </p>
      */
     private String testingInformation;
@@ -57,24 +57,24 @@ public class UpdateControlRequest extends com.amazonaws.AmazonWebServiceRequest 
     private String actionPlanTitle;
     /**
      * <p>
-     * The recommended actions to carry out if the control is not fulfilled.
+     * The recommended actions to carry out if the control isn't fulfilled.
      * </p>
      */
     private String actionPlanInstructions;
     /**
      * <p>
-     * The data mapping sources for the specified control.
+     * The data mapping sources for the control.
      * </p>
      */
     private java.util.List<ControlMappingSource> controlMappingSources;
 
     /**
      * <p>
-     * The identifier for the specified control.
+     * The identifier for the control.
      * </p>
      * 
      * @param controlId
-     *        The identifier for the specified control.
+     *        The identifier for the control.
      */
 
     public void setControlId(String controlId) {
@@ -83,10 +83,10 @@ public class UpdateControlRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The identifier for the specified control.
+     * The identifier for the control.
      * </p>
      * 
-     * @return The identifier for the specified control.
+     * @return The identifier for the control.
      */
 
     public String getControlId() {
@@ -95,11 +95,11 @@ public class UpdateControlRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The identifier for the specified control.
+     * The identifier for the control.
      * </p>
      * 
      * @param controlId
-     *        The identifier for the specified control.
+     *        The identifier for the control.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -110,11 +110,11 @@ public class UpdateControlRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The name of the control to be updated.
+     * The name of the updated control.
      * </p>
      * 
      * @param name
-     *        The name of the control to be updated.
+     *        The name of the updated control.
      */
 
     public void setName(String name) {
@@ -123,10 +123,10 @@ public class UpdateControlRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The name of the control to be updated.
+     * The name of the updated control.
      * </p>
      * 
-     * @return The name of the control to be updated.
+     * @return The name of the updated control.
      */
 
     public String getName() {
@@ -135,11 +135,11 @@ public class UpdateControlRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The name of the control to be updated.
+     * The name of the updated control.
      * </p>
      * 
      * @param name
-     *        The name of the control to be updated.
+     *        The name of the updated control.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -190,11 +190,11 @@ public class UpdateControlRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The steps that to follow to determine if the control has been satisfied.
+     * The steps that you should follow to determine if the control is met.
      * </p>
      * 
      * @param testingInformation
-     *        The steps that to follow to determine if the control has been satisfied.
+     *        The steps that you should follow to determine if the control is met.
      */
 
     public void setTestingInformation(String testingInformation) {
@@ -203,10 +203,10 @@ public class UpdateControlRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The steps that to follow to determine if the control has been satisfied.
+     * The steps that you should follow to determine if the control is met.
      * </p>
      * 
-     * @return The steps that to follow to determine if the control has been satisfied.
+     * @return The steps that you should follow to determine if the control is met.
      */
 
     public String getTestingInformation() {
@@ -215,11 +215,11 @@ public class UpdateControlRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The steps that to follow to determine if the control has been satisfied.
+     * The steps that you should follow to determine if the control is met.
      * </p>
      * 
      * @param testingInformation
-     *        The steps that to follow to determine if the control has been satisfied.
+     *        The steps that you should follow to determine if the control is met.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -270,11 +270,11 @@ public class UpdateControlRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The recommended actions to carry out if the control is not fulfilled.
+     * The recommended actions to carry out if the control isn't fulfilled.
      * </p>
      * 
      * @param actionPlanInstructions
-     *        The recommended actions to carry out if the control is not fulfilled.
+     *        The recommended actions to carry out if the control isn't fulfilled.
      */
 
     public void setActionPlanInstructions(String actionPlanInstructions) {
@@ -283,10 +283,10 @@ public class UpdateControlRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The recommended actions to carry out if the control is not fulfilled.
+     * The recommended actions to carry out if the control isn't fulfilled.
      * </p>
      * 
-     * @return The recommended actions to carry out if the control is not fulfilled.
+     * @return The recommended actions to carry out if the control isn't fulfilled.
      */
 
     public String getActionPlanInstructions() {
@@ -295,11 +295,11 @@ public class UpdateControlRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The recommended actions to carry out if the control is not fulfilled.
+     * The recommended actions to carry out if the control isn't fulfilled.
      * </p>
      * 
      * @param actionPlanInstructions
-     *        The recommended actions to carry out if the control is not fulfilled.
+     *        The recommended actions to carry out if the control isn't fulfilled.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -310,10 +310,10 @@ public class UpdateControlRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The data mapping sources for the specified control.
+     * The data mapping sources for the control.
      * </p>
      * 
-     * @return The data mapping sources for the specified control.
+     * @return The data mapping sources for the control.
      */
 
     public java.util.List<ControlMappingSource> getControlMappingSources() {
@@ -322,11 +322,11 @@ public class UpdateControlRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The data mapping sources for the specified control.
+     * The data mapping sources for the control.
      * </p>
      * 
      * @param controlMappingSources
-     *        The data mapping sources for the specified control.
+     *        The data mapping sources for the control.
      */
 
     public void setControlMappingSources(java.util.Collection<ControlMappingSource> controlMappingSources) {
@@ -340,7 +340,7 @@ public class UpdateControlRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The data mapping sources for the specified control.
+     * The data mapping sources for the control.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -349,7 +349,7 @@ public class UpdateControlRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      * 
      * @param controlMappingSources
-     *        The data mapping sources for the specified control.
+     *        The data mapping sources for the control.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -365,11 +365,11 @@ public class UpdateControlRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The data mapping sources for the specified control.
+     * The data mapping sources for the control.
      * </p>
      * 
      * @param controlMappingSources
-     *        The data mapping sources for the specified control.
+     *        The data mapping sources for the control.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

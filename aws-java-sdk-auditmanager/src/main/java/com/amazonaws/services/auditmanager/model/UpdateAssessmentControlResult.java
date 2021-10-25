@@ -25,18 +25,18 @@ public class UpdateAssessmentControlResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The name of the updated control set returned by the <code>UpdateAssessmentControl</code> API.
+     * The name of the updated control set that the <code>UpdateAssessmentControl</code> API returned.
      * </p>
      */
     private AssessmentControl control;
 
     /**
      * <p>
-     * The name of the updated control set returned by the <code>UpdateAssessmentControl</code> API.
+     * The name of the updated control set that the <code>UpdateAssessmentControl</code> API returned.
      * </p>
      * 
      * @param control
-     *        The name of the updated control set returned by the <code>UpdateAssessmentControl</code> API.
+     *        The name of the updated control set that the <code>UpdateAssessmentControl</code> API returned.
      */
 
     public void setControl(AssessmentControl control) {
@@ -45,10 +45,10 @@ public class UpdateAssessmentControlResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The name of the updated control set returned by the <code>UpdateAssessmentControl</code> API.
+     * The name of the updated control set that the <code>UpdateAssessmentControl</code> API returned.
      * </p>
      * 
-     * @return The name of the updated control set returned by the <code>UpdateAssessmentControl</code> API.
+     * @return The name of the updated control set that the <code>UpdateAssessmentControl</code> API returned.
      */
 
     public AssessmentControl getControl() {
@@ -57,11 +57,11 @@ public class UpdateAssessmentControlResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The name of the updated control set returned by the <code>UpdateAssessmentControl</code> API.
+     * The name of the updated control set that the <code>UpdateAssessmentControl</code> API returned.
      * </p>
      * 
      * @param control
-     *        The name of the updated control set returned by the <code>UpdateAssessmentControl</code> API.
+     *        The name of the updated control set that the <code>UpdateAssessmentControl</code> API returned.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

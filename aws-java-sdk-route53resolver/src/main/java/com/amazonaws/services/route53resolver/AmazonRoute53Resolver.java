@@ -819,6 +819,31 @@ public interface AmazonRoute53Resolver {
 
     /**
      * <p>
+     * Retrieves the behavior configuration of Route 53 Resolver behavior for a single VPC from Amazon Virtual Private
+     * Cloud.
+     * </p>
+     * 
+     * @param getResolverConfigRequest
+     * @return Result of the GetResolverConfig operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The specified resource doesn't exist.
+     * @throws InvalidParameterException
+     *         One or more parameters in this request are not valid.
+     * @throws InternalServiceErrorException
+     *         We encountered an unknown error. Try again in a few minutes.
+     * @throws ThrottlingException
+     *         The request was throttled. Try again in a few minutes.
+     * @throws AccessDeniedException
+     *         The current account doesn't have the IAM permissions required to perform the specified Resolver
+     *         operation.
+     * @sample AmazonRoute53Resolver.GetResolverConfig
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/route53resolver-2018-04-01/GetResolverConfig"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetResolverConfigResult getResolverConfig(GetResolverConfigRequest getResolverConfigRequest);
+
+    /**
+     * <p>
      * Gets DNSSEC validation information for a specified resource.
      * </p>
      * 
@@ -1215,6 +1240,33 @@ public interface AmazonRoute53Resolver {
      *      target="_top">AWS API Documentation</a>
      */
     ListFirewallRulesResult listFirewallRules(ListFirewallRulesRequest listFirewallRulesRequest);
+
+    /**
+     * <p>
+     * Retrieves the Resolver configurations that you have defined. Route 53 Resolver uses the configurations to manage
+     * DNS resolution behavior for your VPCs.
+     * </p>
+     * 
+     * @param listResolverConfigsRequest
+     * @return Result of the ListResolverConfigs operation returned by the service.
+     * @throws InvalidNextTokenException
+     *         The value that you specified for <code>NextToken</code> in a <code>List</code> request isn't valid.
+     * @throws InvalidRequestException
+     *         The request is invalid.
+     * @throws InvalidParameterException
+     *         One or more parameters in this request are not valid.
+     * @throws InternalServiceErrorException
+     *         We encountered an unknown error. Try again in a few minutes.
+     * @throws ThrottlingException
+     *         The request was throttled. Try again in a few minutes.
+     * @throws AccessDeniedException
+     *         The current account doesn't have the IAM permissions required to perform the specified Resolver
+     *         operation.
+     * @sample AmazonRoute53Resolver.ListResolverConfigs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/route53resolver-2018-04-01/ListResolverConfigs"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ListResolverConfigsResult listResolverConfigs(ListResolverConfigsRequest listResolverConfigsRequest);
 
     /**
      * <p>
@@ -1639,6 +1691,37 @@ public interface AmazonRoute53Resolver {
      */
     UpdateFirewallRuleGroupAssociationResult updateFirewallRuleGroupAssociation(
             UpdateFirewallRuleGroupAssociationRequest updateFirewallRuleGroupAssociationRequest);
+
+    /**
+     * <p>
+     * Updates the behavior configuration of Route 53 Resolver behavior for a single VPC from Amazon Virtual Private
+     * Cloud.
+     * </p>
+     * 
+     * @param updateResolverConfigRequest
+     * @return Result of the UpdateResolverConfig operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request is invalid.
+     * @throws InvalidParameterException
+     *         One or more parameters in this request are not valid.
+     * @throws ResourceNotFoundException
+     *         The specified resource doesn't exist.
+     * @throws ResourceUnavailableException
+     *         The specified resource isn't available.
+     * @throws LimitExceededException
+     *         The request caused one or more limits to be exceeded.
+     * @throws InternalServiceErrorException
+     *         We encountered an unknown error. Try again in a few minutes.
+     * @throws ThrottlingException
+     *         The request was throttled. Try again in a few minutes.
+     * @throws AccessDeniedException
+     *         The current account doesn't have the IAM permissions required to perform the specified Resolver
+     *         operation.
+     * @sample AmazonRoute53Resolver.UpdateResolverConfig
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/route53resolver-2018-04-01/UpdateResolverConfig"
+     *      target="_top">AWS API Documentation</a>
+     */
+    UpdateResolverConfigResult updateResolverConfig(UpdateResolverConfigRequest updateResolverConfigRequest);
 
     /**
      * <p>

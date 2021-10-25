@@ -25,18 +25,18 @@ public class CreateControlResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The new control returned by the <code>CreateControl</code> API.
+     * The new control that the <code>CreateControl</code> API returned.
      * </p>
      */
     private Control control;
 
     /**
      * <p>
-     * The new control returned by the <code>CreateControl</code> API.
+     * The new control that the <code>CreateControl</code> API returned.
      * </p>
      * 
      * @param control
-     *        The new control returned by the <code>CreateControl</code> API.
+     *        The new control that the <code>CreateControl</code> API returned.
      */
 
     public void setControl(Control control) {
@@ -45,10 +45,10 @@ public class CreateControlResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The new control returned by the <code>CreateControl</code> API.
+     * The new control that the <code>CreateControl</code> API returned.
      * </p>
      * 
-     * @return The new control returned by the <code>CreateControl</code> API.
+     * @return The new control that the <code>CreateControl</code> API returned.
      */
 
     public Control getControl() {
@@ -57,11 +57,11 @@ public class CreateControlResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The new control returned by the <code>CreateControl</code> API.
+     * The new control that the <code>CreateControl</code> API returned.
      * </p>
      * 
      * @param control
-     *        The new control returned by the <code>CreateControl</code> API.
+     *        The new control that the <code>CreateControl</code> API returned.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

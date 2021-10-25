@@ -460,6 +460,21 @@ public class DBInstanceStaxUnmarshaller implements Unmarshaller<DBInstance, Stax
                     dBInstance.setActivityStreamEngineNativeAuditFieldsIncluded(BooleanStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("AutomationMode", targetDepth)) {
+                    dBInstance.setAutomationMode(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
+                if (context.testExpression("ResumeFullAutomationModeTime", targetDepth)) {
+                    dBInstance.setResumeFullAutomationModeTime(DateStaxUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                    continue;
+                }
+
+                if (context.testExpression("CustomIamInstanceProfile", targetDepth)) {
+                    dBInstance.setCustomIamInstanceProfile(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return dBInstance;

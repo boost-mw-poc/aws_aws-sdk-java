@@ -229,16 +229,14 @@ public class DBCluster implements Serializable, Cloneable {
      * cluster.
      * </p>
      * <p>
-     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the Amazon Web
-     * Services KMS customer master key (CMK).
+     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key.
      * </p>
      */
     private String kmsKeyId;
     /**
      * <p>
      * The Amazon Web Services Region-unique, immutable identifier for the DB cluster. This identifier is found in
-     * Amazon Web Services CloudTrail log entries whenever the Amazon Web Services KMS CMK for the DB cluster is
-     * accessed.
+     * Amazon Web Services CloudTrail log entries whenever the KMS key for the DB cluster is accessed.
      * </p>
      */
     private String dbClusterResourceId;
@@ -369,8 +367,7 @@ public class DBCluster implements Serializable, Cloneable {
      * The Amazon Web Services KMS key identifier used for encrypting messages in the database activity stream.
      * </p>
      * <p>
-     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the Amazon Web
-     * Services KMS customer master key (CMK).
+     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key.
      * </p>
      */
     private String activityStreamKmsKeyId;
@@ -1936,16 +1933,15 @@ public class DBCluster implements Serializable, Cloneable {
      * cluster.
      * </p>
      * <p>
-     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the Amazon Web
-     * Services KMS customer master key (CMK).
+     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key.
      * </p>
      * 
      * @param kmsKeyId
      *        If <code>StorageEncrypted</code> is enabled, the Amazon Web Services KMS key identifier for the encrypted
      *        DB cluster.</p>
      *        <p>
-     *        The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the Amazon
-     *        Web Services KMS customer master key (CMK).
+     *        The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS
+     *        key.
      */
 
     public void setKmsKeyId(String kmsKeyId) {
@@ -1958,15 +1954,14 @@ public class DBCluster implements Serializable, Cloneable {
      * cluster.
      * </p>
      * <p>
-     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the Amazon Web
-     * Services KMS customer master key (CMK).
+     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key.
      * </p>
      * 
      * @return If <code>StorageEncrypted</code> is enabled, the Amazon Web Services KMS key identifier for the encrypted
      *         DB cluster.</p>
      *         <p>
-     *         The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the
-     *         Amazon Web Services KMS customer master key (CMK).
+     *         The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS
+     *         key.
      */
 
     public String getKmsKeyId() {
@@ -1979,16 +1974,15 @@ public class DBCluster implements Serializable, Cloneable {
      * cluster.
      * </p>
      * <p>
-     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the Amazon Web
-     * Services KMS customer master key (CMK).
+     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key.
      * </p>
      * 
      * @param kmsKeyId
      *        If <code>StorageEncrypted</code> is enabled, the Amazon Web Services KMS key identifier for the encrypted
      *        DB cluster.</p>
      *        <p>
-     *        The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the Amazon
-     *        Web Services KMS customer master key (CMK).
+     *        The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS
+     *        key.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2000,14 +1994,12 @@ public class DBCluster implements Serializable, Cloneable {
     /**
      * <p>
      * The Amazon Web Services Region-unique, immutable identifier for the DB cluster. This identifier is found in
-     * Amazon Web Services CloudTrail log entries whenever the Amazon Web Services KMS CMK for the DB cluster is
-     * accessed.
+     * Amazon Web Services CloudTrail log entries whenever the KMS key for the DB cluster is accessed.
      * </p>
      * 
      * @param dbClusterResourceId
      *        The Amazon Web Services Region-unique, immutable identifier for the DB cluster. This identifier is found
-     *        in Amazon Web Services CloudTrail log entries whenever the Amazon Web Services KMS CMK for the DB cluster
-     *        is accessed.
+     *        in Amazon Web Services CloudTrail log entries whenever the KMS key for the DB cluster is accessed.
      */
 
     public void setDbClusterResourceId(String dbClusterResourceId) {
@@ -2017,13 +2009,11 @@ public class DBCluster implements Serializable, Cloneable {
     /**
      * <p>
      * The Amazon Web Services Region-unique, immutable identifier for the DB cluster. This identifier is found in
-     * Amazon Web Services CloudTrail log entries whenever the Amazon Web Services KMS CMK for the DB cluster is
-     * accessed.
+     * Amazon Web Services CloudTrail log entries whenever the KMS key for the DB cluster is accessed.
      * </p>
      * 
      * @return The Amazon Web Services Region-unique, immutable identifier for the DB cluster. This identifier is found
-     *         in Amazon Web Services CloudTrail log entries whenever the Amazon Web Services KMS CMK for the DB cluster
-     *         is accessed.
+     *         in Amazon Web Services CloudTrail log entries whenever the KMS key for the DB cluster is accessed.
      */
 
     public String getDbClusterResourceId() {
@@ -2033,14 +2023,12 @@ public class DBCluster implements Serializable, Cloneable {
     /**
      * <p>
      * The Amazon Web Services Region-unique, immutable identifier for the DB cluster. This identifier is found in
-     * Amazon Web Services CloudTrail log entries whenever the Amazon Web Services KMS CMK for the DB cluster is
-     * accessed.
+     * Amazon Web Services CloudTrail log entries whenever the KMS key for the DB cluster is accessed.
      * </p>
      * 
      * @param dbClusterResourceId
      *        The Amazon Web Services Region-unique, immutable identifier for the DB cluster. This identifier is found
-     *        in Amazon Web Services CloudTrail log entries whenever the Amazon Web Services KMS CMK for the DB cluster
-     *        is accessed.
+     *        in Amazon Web Services CloudTrail log entries whenever the KMS key for the DB cluster is accessed.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -3034,16 +3022,15 @@ public class DBCluster implements Serializable, Cloneable {
      * The Amazon Web Services KMS key identifier used for encrypting messages in the database activity stream.
      * </p>
      * <p>
-     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the Amazon Web
-     * Services KMS customer master key (CMK).
+     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key.
      * </p>
      * 
      * @param activityStreamKmsKeyId
      *        The Amazon Web Services KMS key identifier used for encrypting messages in the database activity
      *        stream.</p>
      *        <p>
-     *        The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the Amazon
-     *        Web Services KMS customer master key (CMK).
+     *        The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS
+     *        key.
      */
 
     public void setActivityStreamKmsKeyId(String activityStreamKmsKeyId) {
@@ -3055,15 +3042,14 @@ public class DBCluster implements Serializable, Cloneable {
      * The Amazon Web Services KMS key identifier used for encrypting messages in the database activity stream.
      * </p>
      * <p>
-     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the Amazon Web
-     * Services KMS customer master key (CMK).
+     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key.
      * </p>
      * 
      * @return The Amazon Web Services KMS key identifier used for encrypting messages in the database activity
      *         stream.</p>
      *         <p>
-     *         The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the
-     *         Amazon Web Services KMS customer master key (CMK).
+     *         The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS
+     *         key.
      */
 
     public String getActivityStreamKmsKeyId() {
@@ -3075,16 +3061,15 @@ public class DBCluster implements Serializable, Cloneable {
      * The Amazon Web Services KMS key identifier used for encrypting messages in the database activity stream.
      * </p>
      * <p>
-     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the Amazon Web
-     * Services KMS customer master key (CMK).
+     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key.
      * </p>
      * 
      * @param activityStreamKmsKeyId
      *        The Amazon Web Services KMS key identifier used for encrypting messages in the database activity
      *        stream.</p>
      *        <p>
-     *        The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the Amazon
-     *        Web Services KMS customer master key (CMK).
+     *        The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS
+     *        key.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

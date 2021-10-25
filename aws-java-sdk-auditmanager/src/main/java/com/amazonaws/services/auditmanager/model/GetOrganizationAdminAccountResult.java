@@ -25,24 +25,24 @@ public class GetOrganizationAdminAccountResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The identifier for the specified administrator account.
+     * The identifier for the administrator account.
      * </p>
      */
     private String adminAccountId;
     /**
      * <p>
-     * The identifier for the specified organization.
+     * The identifier for the organization.
      * </p>
      */
     private String organizationId;
 
     /**
      * <p>
-     * The identifier for the specified administrator account.
+     * The identifier for the administrator account.
      * </p>
      * 
      * @param adminAccountId
-     *        The identifier for the specified administrator account.
+     *        The identifier for the administrator account.
      */
 
     public void setAdminAccountId(String adminAccountId) {
@@ -51,10 +51,10 @@ public class GetOrganizationAdminAccountResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The identifier for the specified administrator account.
+     * The identifier for the administrator account.
      * </p>
      * 
-     * @return The identifier for the specified administrator account.
+     * @return The identifier for the administrator account.
      */
 
     public String getAdminAccountId() {
@@ -63,11 +63,11 @@ public class GetOrganizationAdminAccountResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The identifier for the specified administrator account.
+     * The identifier for the administrator account.
      * </p>
      * 
      * @param adminAccountId
-     *        The identifier for the specified administrator account.
+     *        The identifier for the administrator account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -78,11 +78,11 @@ public class GetOrganizationAdminAccountResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The identifier for the specified organization.
+     * The identifier for the organization.
      * </p>
      * 
      * @param organizationId
-     *        The identifier for the specified organization.
+     *        The identifier for the organization.
      */
 
     public void setOrganizationId(String organizationId) {
@@ -91,10 +91,10 @@ public class GetOrganizationAdminAccountResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The identifier for the specified organization.
+     * The identifier for the organization.
      * </p>
      * 
-     * @return The identifier for the specified organization.
+     * @return The identifier for the organization.
      */
 
     public String getOrganizationId() {
@@ -103,11 +103,11 @@ public class GetOrganizationAdminAccountResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The identifier for the specified organization.
+     * The identifier for the organization.
      * </p>
      * 
      * @param organizationId
-     *        The identifier for the specified organization.
+     *        The identifier for the organization.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

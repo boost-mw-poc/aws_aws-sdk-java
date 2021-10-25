@@ -374,15 +374,14 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * The Amazon Web Services KMS key identifier for an encrypted DB instance.
      * </p>
      * <p>
-     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the Amazon Web
-     * Services KMS customer master key (CMK). To use a CMK in a different Amazon Web Services account, specify the key
-     * ARN or alias ARN.
+     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key. To
+     * use a KMS key in a different Amazon Web Services account, specify the key ARN or alias ARN.
      * </p>
      * <p>
      * If the <code>StorageEncrypted</code> parameter is enabled, and you do not specify a value for the
-     * <code>KmsKeyId</code> parameter, then Amazon RDS will use your default CMK. There is a default CMK for your
-     * Amazon Web Services account. Your Amazon Web Services account has a different default CMK for each Amazon Web
-     * Services Region.
+     * <code>KmsKeyId</code> parameter, then Amazon RDS will use your default KMS key. There is a default KMS key for
+     * your Amazon Web Services account. Your Amazon Web Services account has a different default KMS key for each
+     * Amazon Web Services Region.
      * </p>
      */
     private String kmsKeyId;
@@ -492,13 +491,12 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * The Amazon Web Services KMS key identifier for encryption of Performance Insights data.
      * </p>
      * <p>
-     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the Amazon Web
-     * Services KMS customer master key (CMK).
+     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key.
      * </p>
      * <p>
-     * If you do not specify a value for <code>PerformanceInsightsKMSKeyId</code>, then Amazon RDS uses your default
-     * CMK. There is a default CMK for your Amazon Web Services account. Your Amazon Web Services account has a
-     * different default CMK for each Amazon Web Services Region.
+     * If you do not specify a value for <code>PerformanceInsightsKMSKeyId</code>, then Amazon RDS uses your default KMS
+     * key. There is a default KMS key for your Amazon Web Services account. Your Amazon Web Services account has a
+     * different default KMS key for each Amazon Web Services Region.
      * </p>
      */
     private String performanceInsightsKMSKeyId;
@@ -2866,29 +2864,27 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * The Amazon Web Services KMS key identifier for an encrypted DB instance.
      * </p>
      * <p>
-     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the Amazon Web
-     * Services KMS customer master key (CMK). To use a CMK in a different Amazon Web Services account, specify the key
-     * ARN or alias ARN.
+     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key. To
+     * use a KMS key in a different Amazon Web Services account, specify the key ARN or alias ARN.
      * </p>
      * <p>
      * If the <code>StorageEncrypted</code> parameter is enabled, and you do not specify a value for the
-     * <code>KmsKeyId</code> parameter, then Amazon RDS will use your default CMK. There is a default CMK for your
-     * Amazon Web Services account. Your Amazon Web Services account has a different default CMK for each Amazon Web
-     * Services Region.
+     * <code>KmsKeyId</code> parameter, then Amazon RDS will use your default KMS key. There is a default KMS key for
+     * your Amazon Web Services account. Your Amazon Web Services account has a different default KMS key for each
+     * Amazon Web Services Region.
      * </p>
      * 
      * @param kmsKeyId
      *        The Amazon Web Services KMS key identifier for an encrypted DB instance. </p>
      *        <p>
-     *        The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the Amazon
-     *        Web Services KMS customer master key (CMK). To use a CMK in a different Amazon Web Services account,
-     *        specify the key ARN or alias ARN.
+     *        The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS
+     *        key. To use a KMS key in a different Amazon Web Services account, specify the key ARN or alias ARN.
      *        </p>
      *        <p>
      *        If the <code>StorageEncrypted</code> parameter is enabled, and you do not specify a value for the
-     *        <code>KmsKeyId</code> parameter, then Amazon RDS will use your default CMK. There is a default CMK for
-     *        your Amazon Web Services account. Your Amazon Web Services account has a different default CMK for each
-     *        Amazon Web Services Region.
+     *        <code>KmsKeyId</code> parameter, then Amazon RDS will use your default KMS key. There is a default KMS key
+     *        for your Amazon Web Services account. Your Amazon Web Services account has a different default KMS key for
+     *        each Amazon Web Services Region.
      */
 
     public void setKmsKeyId(String kmsKeyId) {
@@ -2900,28 +2896,26 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * The Amazon Web Services KMS key identifier for an encrypted DB instance.
      * </p>
      * <p>
-     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the Amazon Web
-     * Services KMS customer master key (CMK). To use a CMK in a different Amazon Web Services account, specify the key
-     * ARN or alias ARN.
+     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key. To
+     * use a KMS key in a different Amazon Web Services account, specify the key ARN or alias ARN.
      * </p>
      * <p>
      * If the <code>StorageEncrypted</code> parameter is enabled, and you do not specify a value for the
-     * <code>KmsKeyId</code> parameter, then Amazon RDS will use your default CMK. There is a default CMK for your
-     * Amazon Web Services account. Your Amazon Web Services account has a different default CMK for each Amazon Web
-     * Services Region.
+     * <code>KmsKeyId</code> parameter, then Amazon RDS will use your default KMS key. There is a default KMS key for
+     * your Amazon Web Services account. Your Amazon Web Services account has a different default KMS key for each
+     * Amazon Web Services Region.
      * </p>
      * 
      * @return The Amazon Web Services KMS key identifier for an encrypted DB instance. </p>
      *         <p>
-     *         The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the
-     *         Amazon Web Services KMS customer master key (CMK). To use a CMK in a different Amazon Web Services
-     *         account, specify the key ARN or alias ARN.
+     *         The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS
+     *         key. To use a KMS key in a different Amazon Web Services account, specify the key ARN or alias ARN.
      *         </p>
      *         <p>
      *         If the <code>StorageEncrypted</code> parameter is enabled, and you do not specify a value for the
-     *         <code>KmsKeyId</code> parameter, then Amazon RDS will use your default CMK. There is a default CMK for
-     *         your Amazon Web Services account. Your Amazon Web Services account has a different default CMK for each
-     *         Amazon Web Services Region.
+     *         <code>KmsKeyId</code> parameter, then Amazon RDS will use your default KMS key. There is a default KMS
+     *         key for your Amazon Web Services account. Your Amazon Web Services account has a different default KMS
+     *         key for each Amazon Web Services Region.
      */
 
     public String getKmsKeyId() {
@@ -2933,29 +2927,27 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * The Amazon Web Services KMS key identifier for an encrypted DB instance.
      * </p>
      * <p>
-     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the Amazon Web
-     * Services KMS customer master key (CMK). To use a CMK in a different Amazon Web Services account, specify the key
-     * ARN or alias ARN.
+     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key. To
+     * use a KMS key in a different Amazon Web Services account, specify the key ARN or alias ARN.
      * </p>
      * <p>
      * If the <code>StorageEncrypted</code> parameter is enabled, and you do not specify a value for the
-     * <code>KmsKeyId</code> parameter, then Amazon RDS will use your default CMK. There is a default CMK for your
-     * Amazon Web Services account. Your Amazon Web Services account has a different default CMK for each Amazon Web
-     * Services Region.
+     * <code>KmsKeyId</code> parameter, then Amazon RDS will use your default KMS key. There is a default KMS key for
+     * your Amazon Web Services account. Your Amazon Web Services account has a different default KMS key for each
+     * Amazon Web Services Region.
      * </p>
      * 
      * @param kmsKeyId
      *        The Amazon Web Services KMS key identifier for an encrypted DB instance. </p>
      *        <p>
-     *        The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the Amazon
-     *        Web Services KMS customer master key (CMK). To use a CMK in a different Amazon Web Services account,
-     *        specify the key ARN or alias ARN.
+     *        The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS
+     *        key. To use a KMS key in a different Amazon Web Services account, specify the key ARN or alias ARN.
      *        </p>
      *        <p>
      *        If the <code>StorageEncrypted</code> parameter is enabled, and you do not specify a value for the
-     *        <code>KmsKeyId</code> parameter, then Amazon RDS will use your default CMK. There is a default CMK for
-     *        your Amazon Web Services account. Your Amazon Web Services account has a different default CMK for each
-     *        Amazon Web Services Region.
+     *        <code>KmsKeyId</code> parameter, then Amazon RDS will use your default KMS key. There is a default KMS key
+     *        for your Amazon Web Services account. Your Amazon Web Services account has a different default KMS key for
+     *        each Amazon Web Services Region.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -3655,25 +3647,24 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * The Amazon Web Services KMS key identifier for encryption of Performance Insights data.
      * </p>
      * <p>
-     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the Amazon Web
-     * Services KMS customer master key (CMK).
+     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key.
      * </p>
      * <p>
-     * If you do not specify a value for <code>PerformanceInsightsKMSKeyId</code>, then Amazon RDS uses your default
-     * CMK. There is a default CMK for your Amazon Web Services account. Your Amazon Web Services account has a
-     * different default CMK for each Amazon Web Services Region.
+     * If you do not specify a value for <code>PerformanceInsightsKMSKeyId</code>, then Amazon RDS uses your default KMS
+     * key. There is a default KMS key for your Amazon Web Services account. Your Amazon Web Services account has a
+     * different default KMS key for each Amazon Web Services Region.
      * </p>
      * 
      * @param performanceInsightsKMSKeyId
      *        The Amazon Web Services KMS key identifier for encryption of Performance Insights data.</p>
      *        <p>
-     *        The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the Amazon
-     *        Web Services KMS customer master key (CMK).
+     *        The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS
+     *        key.
      *        </p>
      *        <p>
      *        If you do not specify a value for <code>PerformanceInsightsKMSKeyId</code>, then Amazon RDS uses your
-     *        default CMK. There is a default CMK for your Amazon Web Services account. Your Amazon Web Services account
-     *        has a different default CMK for each Amazon Web Services Region.
+     *        default KMS key. There is a default KMS key for your Amazon Web Services account. Your Amazon Web Services
+     *        account has a different default KMS key for each Amazon Web Services Region.
      */
 
     public void setPerformanceInsightsKMSKeyId(String performanceInsightsKMSKeyId) {
@@ -3685,24 +3676,23 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * The Amazon Web Services KMS key identifier for encryption of Performance Insights data.
      * </p>
      * <p>
-     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the Amazon Web
-     * Services KMS customer master key (CMK).
+     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key.
      * </p>
      * <p>
-     * If you do not specify a value for <code>PerformanceInsightsKMSKeyId</code>, then Amazon RDS uses your default
-     * CMK. There is a default CMK for your Amazon Web Services account. Your Amazon Web Services account has a
-     * different default CMK for each Amazon Web Services Region.
+     * If you do not specify a value for <code>PerformanceInsightsKMSKeyId</code>, then Amazon RDS uses your default KMS
+     * key. There is a default KMS key for your Amazon Web Services account. Your Amazon Web Services account has a
+     * different default KMS key for each Amazon Web Services Region.
      * </p>
      * 
      * @return The Amazon Web Services KMS key identifier for encryption of Performance Insights data.</p>
      *         <p>
-     *         The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the
-     *         Amazon Web Services KMS customer master key (CMK).
+     *         The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS
+     *         key.
      *         </p>
      *         <p>
      *         If you do not specify a value for <code>PerformanceInsightsKMSKeyId</code>, then Amazon RDS uses your
-     *         default CMK. There is a default CMK for your Amazon Web Services account. Your Amazon Web Services
-     *         account has a different default CMK for each Amazon Web Services Region.
+     *         default KMS key. There is a default KMS key for your Amazon Web Services account. Your Amazon Web
+     *         Services account has a different default KMS key for each Amazon Web Services Region.
      */
 
     public String getPerformanceInsightsKMSKeyId() {
@@ -3714,25 +3704,24 @@ public class RestoreDBInstanceFromS3Request extends com.amazonaws.AmazonWebServi
      * The Amazon Web Services KMS key identifier for encryption of Performance Insights data.
      * </p>
      * <p>
-     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the Amazon Web
-     * Services KMS customer master key (CMK).
+     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key.
      * </p>
      * <p>
-     * If you do not specify a value for <code>PerformanceInsightsKMSKeyId</code>, then Amazon RDS uses your default
-     * CMK. There is a default CMK for your Amazon Web Services account. Your Amazon Web Services account has a
-     * different default CMK for each Amazon Web Services Region.
+     * If you do not specify a value for <code>PerformanceInsightsKMSKeyId</code>, then Amazon RDS uses your default KMS
+     * key. There is a default KMS key for your Amazon Web Services account. Your Amazon Web Services account has a
+     * different default KMS key for each Amazon Web Services Region.
      * </p>
      * 
      * @param performanceInsightsKMSKeyId
      *        The Amazon Web Services KMS key identifier for encryption of Performance Insights data.</p>
      *        <p>
-     *        The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the Amazon
-     *        Web Services KMS customer master key (CMK).
+     *        The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS
+     *        key.
      *        </p>
      *        <p>
      *        If you do not specify a value for <code>PerformanceInsightsKMSKeyId</code>, then Amazon RDS uses your
-     *        default CMK. There is a default CMK for your Amazon Web Services account. Your Amazon Web Services account
-     *        has a different default CMK for each Amazon Web Services Region.
+     *        default KMS key. There is a default KMS key for your Amazon Web Services account. Your Amazon Web Services
+     *        account has a different default KMS key for each Amazon Web Services Region.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

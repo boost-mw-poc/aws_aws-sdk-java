@@ -31,13 +31,13 @@ public class Evidence implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The data source from which the specified evidence was collected.
+     * The data source where the evidence was collected from.
      * </p>
      */
     private String dataSource;
     /**
      * <p>
-     * The identifier for the specified Amazon Web Services account.
+     * The identifier for the Amazon Web Services account.
      * </p>
      */
     private String evidenceAwsAccountId;
@@ -49,13 +49,13 @@ public class Evidence implements Serializable, Cloneable, StructuredPojo {
     private java.util.Date time;
     /**
      * <p>
-     * The Amazon Web Service from which the evidence is collected.
+     * The Amazon Web Service that the evidence is collected from.
      * </p>
      */
     private String eventSource;
     /**
      * <p>
-     * The name of the specified evidence event.
+     * The name of the evidence event.
      * </p>
      */
     private String eventName;
@@ -67,20 +67,20 @@ public class Evidence implements Serializable, Cloneable, StructuredPojo {
     private String evidenceByType;
     /**
      * <p>
-     * The list of resources assessed to generate the evidence.
+     * The list of resources that are assessed to generate the evidence.
      * </p>
      */
     private java.util.List<Resource> resourcesIncluded;
     /**
      * <p>
-     * The names and values used by the evidence event, including an attribute name (such as
+     * The names and values that are used by the evidence event. This includes an attribute name (such as
      * <code>allowUsersToChangePassword</code>) and value (such as <code>true</code> or <code>false</code>).
      * </p>
      */
     private java.util.Map<String, String> attributes;
     /**
      * <p>
-     * The unique identifier for the IAM user or role associated with the evidence.
+     * The unique identifier for the IAM user or role that's associated with the evidence.
      * </p>
      */
     private String iamId;
@@ -94,19 +94,19 @@ public class Evidence implements Serializable, Cloneable, StructuredPojo {
     private String complianceCheck;
     /**
      * <p>
-     * The Amazon Web Services account from which the evidence is collected, and its organization path.
+     * The Amazon Web Services account that the evidence is collected from, and its organization path.
      * </p>
      */
     private String awsOrganization;
     /**
      * <p>
-     * The identifier for the specified Amazon Web Services account.
+     * The identifier for the Amazon Web Services account.
      * </p>
      */
     private String awsAccountId;
     /**
      * <p>
-     * The identifier for the folder in which the evidence is stored.
+     * The identifier for the folder that the evidence is stored in.
      * </p>
      */
     private String evidenceFolderId;
@@ -125,11 +125,11 @@ public class Evidence implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The data source from which the specified evidence was collected.
+     * The data source where the evidence was collected from.
      * </p>
      * 
      * @param dataSource
-     *        The data source from which the specified evidence was collected.
+     *        The data source where the evidence was collected from.
      */
 
     public void setDataSource(String dataSource) {
@@ -138,10 +138,10 @@ public class Evidence implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The data source from which the specified evidence was collected.
+     * The data source where the evidence was collected from.
      * </p>
      * 
-     * @return The data source from which the specified evidence was collected.
+     * @return The data source where the evidence was collected from.
      */
 
     public String getDataSource() {
@@ -150,11 +150,11 @@ public class Evidence implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The data source from which the specified evidence was collected.
+     * The data source where the evidence was collected from.
      * </p>
      * 
      * @param dataSource
-     *        The data source from which the specified evidence was collected.
+     *        The data source where the evidence was collected from.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -165,11 +165,11 @@ public class Evidence implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier for the specified Amazon Web Services account.
+     * The identifier for the Amazon Web Services account.
      * </p>
      * 
      * @param evidenceAwsAccountId
-     *        The identifier for the specified Amazon Web Services account.
+     *        The identifier for the Amazon Web Services account.
      */
 
     public void setEvidenceAwsAccountId(String evidenceAwsAccountId) {
@@ -178,10 +178,10 @@ public class Evidence implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier for the specified Amazon Web Services account.
+     * The identifier for the Amazon Web Services account.
      * </p>
      * 
-     * @return The identifier for the specified Amazon Web Services account.
+     * @return The identifier for the Amazon Web Services account.
      */
 
     public String getEvidenceAwsAccountId() {
@@ -190,11 +190,11 @@ public class Evidence implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier for the specified Amazon Web Services account.
+     * The identifier for the Amazon Web Services account.
      * </p>
      * 
      * @param evidenceAwsAccountId
-     *        The identifier for the specified Amazon Web Services account.
+     *        The identifier for the Amazon Web Services account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -245,11 +245,11 @@ public class Evidence implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Web Service from which the evidence is collected.
+     * The Amazon Web Service that the evidence is collected from.
      * </p>
      * 
      * @param eventSource
-     *        The Amazon Web Service from which the evidence is collected.
+     *        The Amazon Web Service that the evidence is collected from.
      */
 
     public void setEventSource(String eventSource) {
@@ -258,10 +258,10 @@ public class Evidence implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Web Service from which the evidence is collected.
+     * The Amazon Web Service that the evidence is collected from.
      * </p>
      * 
-     * @return The Amazon Web Service from which the evidence is collected.
+     * @return The Amazon Web Service that the evidence is collected from.
      */
 
     public String getEventSource() {
@@ -270,11 +270,11 @@ public class Evidence implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Web Service from which the evidence is collected.
+     * The Amazon Web Service that the evidence is collected from.
      * </p>
      * 
      * @param eventSource
-     *        The Amazon Web Service from which the evidence is collected.
+     *        The Amazon Web Service that the evidence is collected from.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -285,11 +285,11 @@ public class Evidence implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the specified evidence event.
+     * The name of the evidence event.
      * </p>
      * 
      * @param eventName
-     *        The name of the specified evidence event.
+     *        The name of the evidence event.
      */
 
     public void setEventName(String eventName) {
@@ -298,10 +298,10 @@ public class Evidence implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the specified evidence event.
+     * The name of the evidence event.
      * </p>
      * 
-     * @return The name of the specified evidence event.
+     * @return The name of the evidence event.
      */
 
     public String getEventName() {
@@ -310,11 +310,11 @@ public class Evidence implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the specified evidence event.
+     * The name of the evidence event.
      * </p>
      * 
      * @param eventName
-     *        The name of the specified evidence event.
+     *        The name of the evidence event.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -365,10 +365,10 @@ public class Evidence implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The list of resources assessed to generate the evidence.
+     * The list of resources that are assessed to generate the evidence.
      * </p>
      * 
-     * @return The list of resources assessed to generate the evidence.
+     * @return The list of resources that are assessed to generate the evidence.
      */
 
     public java.util.List<Resource> getResourcesIncluded() {
@@ -377,11 +377,11 @@ public class Evidence implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The list of resources assessed to generate the evidence.
+     * The list of resources that are assessed to generate the evidence.
      * </p>
      * 
      * @param resourcesIncluded
-     *        The list of resources assessed to generate the evidence.
+     *        The list of resources that are assessed to generate the evidence.
      */
 
     public void setResourcesIncluded(java.util.Collection<Resource> resourcesIncluded) {
@@ -395,7 +395,7 @@ public class Evidence implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The list of resources assessed to generate the evidence.
+     * The list of resources that are assessed to generate the evidence.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -404,7 +404,7 @@ public class Evidence implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param resourcesIncluded
-     *        The list of resources assessed to generate the evidence.
+     *        The list of resources that are assessed to generate the evidence.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -420,11 +420,11 @@ public class Evidence implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The list of resources assessed to generate the evidence.
+     * The list of resources that are assessed to generate the evidence.
      * </p>
      * 
      * @param resourcesIncluded
-     *        The list of resources assessed to generate the evidence.
+     *        The list of resources that are assessed to generate the evidence.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -435,11 +435,11 @@ public class Evidence implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The names and values used by the evidence event, including an attribute name (such as
+     * The names and values that are used by the evidence event. This includes an attribute name (such as
      * <code>allowUsersToChangePassword</code>) and value (such as <code>true</code> or <code>false</code>).
      * </p>
      * 
-     * @return The names and values used by the evidence event, including an attribute name (such as
+     * @return The names and values that are used by the evidence event. This includes an attribute name (such as
      *         <code>allowUsersToChangePassword</code>) and value (such as <code>true</code> or <code>false</code>).
      */
 
@@ -449,12 +449,12 @@ public class Evidence implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The names and values used by the evidence event, including an attribute name (such as
+     * The names and values that are used by the evidence event. This includes an attribute name (such as
      * <code>allowUsersToChangePassword</code>) and value (such as <code>true</code> or <code>false</code>).
      * </p>
      * 
      * @param attributes
-     *        The names and values used by the evidence event, including an attribute name (such as
+     *        The names and values that are used by the evidence event. This includes an attribute name (such as
      *        <code>allowUsersToChangePassword</code>) and value (such as <code>true</code> or <code>false</code>).
      */
 
@@ -464,12 +464,12 @@ public class Evidence implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The names and values used by the evidence event, including an attribute name (such as
+     * The names and values that are used by the evidence event. This includes an attribute name (such as
      * <code>allowUsersToChangePassword</code>) and value (such as <code>true</code> or <code>false</code>).
      * </p>
      * 
      * @param attributes
-     *        The names and values used by the evidence event, including an attribute name (such as
+     *        The names and values that are used by the evidence event. This includes an attribute name (such as
      *        <code>allowUsersToChangePassword</code>) and value (such as <code>true</code> or <code>false</code>).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -509,11 +509,11 @@ public class Evidence implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The unique identifier for the IAM user or role associated with the evidence.
+     * The unique identifier for the IAM user or role that's associated with the evidence.
      * </p>
      * 
      * @param iamId
-     *        The unique identifier for the IAM user or role associated with the evidence.
+     *        The unique identifier for the IAM user or role that's associated with the evidence.
      */
 
     public void setIamId(String iamId) {
@@ -522,10 +522,10 @@ public class Evidence implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The unique identifier for the IAM user or role associated with the evidence.
+     * The unique identifier for the IAM user or role that's associated with the evidence.
      * </p>
      * 
-     * @return The unique identifier for the IAM user or role associated with the evidence.
+     * @return The unique identifier for the IAM user or role that's associated with the evidence.
      */
 
     public String getIamId() {
@@ -534,11 +534,11 @@ public class Evidence implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The unique identifier for the IAM user or role associated with the evidence.
+     * The unique identifier for the IAM user or role that's associated with the evidence.
      * </p>
      * 
      * @param iamId
-     *        The unique identifier for the IAM user or role associated with the evidence.
+     *        The unique identifier for the IAM user or role that's associated with the evidence.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -601,11 +601,11 @@ public class Evidence implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Web Services account from which the evidence is collected, and its organization path.
+     * The Amazon Web Services account that the evidence is collected from, and its organization path.
      * </p>
      * 
      * @param awsOrganization
-     *        The Amazon Web Services account from which the evidence is collected, and its organization path.
+     *        The Amazon Web Services account that the evidence is collected from, and its organization path.
      */
 
     public void setAwsOrganization(String awsOrganization) {
@@ -614,10 +614,10 @@ public class Evidence implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Web Services account from which the evidence is collected, and its organization path.
+     * The Amazon Web Services account that the evidence is collected from, and its organization path.
      * </p>
      * 
-     * @return The Amazon Web Services account from which the evidence is collected, and its organization path.
+     * @return The Amazon Web Services account that the evidence is collected from, and its organization path.
      */
 
     public String getAwsOrganization() {
@@ -626,11 +626,11 @@ public class Evidence implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Web Services account from which the evidence is collected, and its organization path.
+     * The Amazon Web Services account that the evidence is collected from, and its organization path.
      * </p>
      * 
      * @param awsOrganization
-     *        The Amazon Web Services account from which the evidence is collected, and its organization path.
+     *        The Amazon Web Services account that the evidence is collected from, and its organization path.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -641,11 +641,11 @@ public class Evidence implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier for the specified Amazon Web Services account.
+     * The identifier for the Amazon Web Services account.
      * </p>
      * 
      * @param awsAccountId
-     *        The identifier for the specified Amazon Web Services account.
+     *        The identifier for the Amazon Web Services account.
      */
 
     public void setAwsAccountId(String awsAccountId) {
@@ -654,10 +654,10 @@ public class Evidence implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier for the specified Amazon Web Services account.
+     * The identifier for the Amazon Web Services account.
      * </p>
      * 
-     * @return The identifier for the specified Amazon Web Services account.
+     * @return The identifier for the Amazon Web Services account.
      */
 
     public String getAwsAccountId() {
@@ -666,11 +666,11 @@ public class Evidence implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier for the specified Amazon Web Services account.
+     * The identifier for the Amazon Web Services account.
      * </p>
      * 
      * @param awsAccountId
-     *        The identifier for the specified Amazon Web Services account.
+     *        The identifier for the Amazon Web Services account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -681,11 +681,11 @@ public class Evidence implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier for the folder in which the evidence is stored.
+     * The identifier for the folder that the evidence is stored in.
      * </p>
      * 
      * @param evidenceFolderId
-     *        The identifier for the folder in which the evidence is stored.
+     *        The identifier for the folder that the evidence is stored in.
      */
 
     public void setEvidenceFolderId(String evidenceFolderId) {
@@ -694,10 +694,10 @@ public class Evidence implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier for the folder in which the evidence is stored.
+     * The identifier for the folder that the evidence is stored in.
      * </p>
      * 
-     * @return The identifier for the folder in which the evidence is stored.
+     * @return The identifier for the folder that the evidence is stored in.
      */
 
     public String getEvidenceFolderId() {
@@ -706,11 +706,11 @@ public class Evidence implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier for the folder in which the evidence is stored.
+     * The identifier for the folder that the evidence is stored in.
      * </p>
      * 
      * @param evidenceFolderId
-     *        The identifier for the folder in which the evidence is stored.
+     *        The identifier for the folder that the evidence is stored in.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

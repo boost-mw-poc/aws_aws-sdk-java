@@ -39,7 +39,7 @@ public class CreateControlRequest extends com.amazonaws.AmazonWebServiceRequest 
     private String description;
     /**
      * <p>
-     * The steps to follow to determine if the control has been satisfied.
+     * The steps to follow to determine if the control is satisfied.
      * </p>
      */
     private String testingInformation;
@@ -51,19 +51,19 @@ public class CreateControlRequest extends com.amazonaws.AmazonWebServiceRequest 
     private String actionPlanTitle;
     /**
      * <p>
-     * The recommended actions to carry out if the control is not fulfilled.
+     * The recommended actions to carry out if the control isn't fulfilled.
      * </p>
      */
     private String actionPlanInstructions;
     /**
      * <p>
-     * The data mapping sources for the specified control.
+     * The data mapping sources for the control.
      * </p>
      */
     private java.util.List<CreateControlMappingSource> controlMappingSources;
     /**
      * <p>
-     * The tags associated with the control.
+     * The tags that are associated with the control.
      * </p>
      */
     private java.util.Map<String, String> tags;
@@ -150,11 +150,11 @@ public class CreateControlRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The steps to follow to determine if the control has been satisfied.
+     * The steps to follow to determine if the control is satisfied.
      * </p>
      * 
      * @param testingInformation
-     *        The steps to follow to determine if the control has been satisfied.
+     *        The steps to follow to determine if the control is satisfied.
      */
 
     public void setTestingInformation(String testingInformation) {
@@ -163,10 +163,10 @@ public class CreateControlRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The steps to follow to determine if the control has been satisfied.
+     * The steps to follow to determine if the control is satisfied.
      * </p>
      * 
-     * @return The steps to follow to determine if the control has been satisfied.
+     * @return The steps to follow to determine if the control is satisfied.
      */
 
     public String getTestingInformation() {
@@ -175,11 +175,11 @@ public class CreateControlRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The steps to follow to determine if the control has been satisfied.
+     * The steps to follow to determine if the control is satisfied.
      * </p>
      * 
      * @param testingInformation
-     *        The steps to follow to determine if the control has been satisfied.
+     *        The steps to follow to determine if the control is satisfied.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -230,11 +230,11 @@ public class CreateControlRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The recommended actions to carry out if the control is not fulfilled.
+     * The recommended actions to carry out if the control isn't fulfilled.
      * </p>
      * 
      * @param actionPlanInstructions
-     *        The recommended actions to carry out if the control is not fulfilled.
+     *        The recommended actions to carry out if the control isn't fulfilled.
      */
 
     public void setActionPlanInstructions(String actionPlanInstructions) {
@@ -243,10 +243,10 @@ public class CreateControlRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The recommended actions to carry out if the control is not fulfilled.
+     * The recommended actions to carry out if the control isn't fulfilled.
      * </p>
      * 
-     * @return The recommended actions to carry out if the control is not fulfilled.
+     * @return The recommended actions to carry out if the control isn't fulfilled.
      */
 
     public String getActionPlanInstructions() {
@@ -255,11 +255,11 @@ public class CreateControlRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The recommended actions to carry out if the control is not fulfilled.
+     * The recommended actions to carry out if the control isn't fulfilled.
      * </p>
      * 
      * @param actionPlanInstructions
-     *        The recommended actions to carry out if the control is not fulfilled.
+     *        The recommended actions to carry out if the control isn't fulfilled.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -270,10 +270,10 @@ public class CreateControlRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The data mapping sources for the specified control.
+     * The data mapping sources for the control.
      * </p>
      * 
-     * @return The data mapping sources for the specified control.
+     * @return The data mapping sources for the control.
      */
 
     public java.util.List<CreateControlMappingSource> getControlMappingSources() {
@@ -282,11 +282,11 @@ public class CreateControlRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The data mapping sources for the specified control.
+     * The data mapping sources for the control.
      * </p>
      * 
      * @param controlMappingSources
-     *        The data mapping sources for the specified control.
+     *        The data mapping sources for the control.
      */
 
     public void setControlMappingSources(java.util.Collection<CreateControlMappingSource> controlMappingSources) {
@@ -300,7 +300,7 @@ public class CreateControlRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The data mapping sources for the specified control.
+     * The data mapping sources for the control.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -309,7 +309,7 @@ public class CreateControlRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      * 
      * @param controlMappingSources
-     *        The data mapping sources for the specified control.
+     *        The data mapping sources for the control.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -325,11 +325,11 @@ public class CreateControlRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The data mapping sources for the specified control.
+     * The data mapping sources for the control.
      * </p>
      * 
      * @param controlMappingSources
-     *        The data mapping sources for the specified control.
+     *        The data mapping sources for the control.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -340,10 +340,10 @@ public class CreateControlRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The tags associated with the control.
+     * The tags that are associated with the control.
      * </p>
      * 
-     * @return The tags associated with the control.
+     * @return The tags that are associated with the control.
      */
 
     public java.util.Map<String, String> getTags() {
@@ -352,11 +352,11 @@ public class CreateControlRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The tags associated with the control.
+     * The tags that are associated with the control.
      * </p>
      * 
      * @param tags
-     *        The tags associated with the control.
+     *        The tags that are associated with the control.
      */
 
     public void setTags(java.util.Map<String, String> tags) {
@@ -365,11 +365,11 @@ public class CreateControlRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The tags associated with the control.
+     * The tags that are associated with the control.
      * </p>
      * 
      * @param tags
-     *        The tags associated with the control.
+     *        The tags that are associated with the control.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

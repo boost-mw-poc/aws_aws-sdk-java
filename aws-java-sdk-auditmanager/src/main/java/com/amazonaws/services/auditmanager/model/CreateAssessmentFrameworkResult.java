@@ -25,18 +25,18 @@ public class CreateAssessmentFrameworkResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The name of the new framework returned by the <code>CreateAssessmentFramework</code> API.
+     * The name of the new framework that the <code>CreateAssessmentFramework</code> API returned.
      * </p>
      */
     private Framework framework;
 
     /**
      * <p>
-     * The name of the new framework returned by the <code>CreateAssessmentFramework</code> API.
+     * The name of the new framework that the <code>CreateAssessmentFramework</code> API returned.
      * </p>
      * 
      * @param framework
-     *        The name of the new framework returned by the <code>CreateAssessmentFramework</code> API.
+     *        The name of the new framework that the <code>CreateAssessmentFramework</code> API returned.
      */
 
     public void setFramework(Framework framework) {
@@ -45,10 +45,10 @@ public class CreateAssessmentFrameworkResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The name of the new framework returned by the <code>CreateAssessmentFramework</code> API.
+     * The name of the new framework that the <code>CreateAssessmentFramework</code> API returned.
      * </p>
      * 
-     * @return The name of the new framework returned by the <code>CreateAssessmentFramework</code> API.
+     * @return The name of the new framework that the <code>CreateAssessmentFramework</code> API returned.
      */
 
     public Framework getFramework() {
@@ -57,11 +57,11 @@ public class CreateAssessmentFrameworkResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The name of the new framework returned by the <code>CreateAssessmentFramework</code> API.
+     * The name of the new framework that the <code>CreateAssessmentFramework</code> API returned.
      * </p>
      * 
      * @param framework
-     *        The name of the new framework returned by the <code>CreateAssessmentFramework</code> API.
+     *        The name of the new framework that the <code>CreateAssessmentFramework</code> API returned.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

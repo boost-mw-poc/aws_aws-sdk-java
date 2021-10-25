@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The wrapper of Amazon Web Services account details, such as account ID, email address, and so on.
+ * The wrapper of Amazon Web Services account details, such as account ID or email address.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/AWSAccount" target="_top">AWS API
@@ -30,30 +30,30 @@ public class AWSAccount implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier for the specified Amazon Web Services account.
+     * The identifier for the Amazon Web Services account.
      * </p>
      */
     private String id;
     /**
      * <p>
-     * The email address associated with the specified Amazon Web Services account.
+     * The email address that's associated with the Amazon Web Services account.
      * </p>
      */
     private String emailAddress;
     /**
      * <p>
-     * The name of the specified Amazon Web Services account.
+     * The name of the Amazon Web Services account.
      * </p>
      */
     private String name;
 
     /**
      * <p>
-     * The identifier for the specified Amazon Web Services account.
+     * The identifier for the Amazon Web Services account.
      * </p>
      * 
      * @param id
-     *        The identifier for the specified Amazon Web Services account.
+     *        The identifier for the Amazon Web Services account.
      */
 
     public void setId(String id) {
@@ -62,10 +62,10 @@ public class AWSAccount implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier for the specified Amazon Web Services account.
+     * The identifier for the Amazon Web Services account.
      * </p>
      * 
-     * @return The identifier for the specified Amazon Web Services account.
+     * @return The identifier for the Amazon Web Services account.
      */
 
     public String getId() {
@@ -74,11 +74,11 @@ public class AWSAccount implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The identifier for the specified Amazon Web Services account.
+     * The identifier for the Amazon Web Services account.
      * </p>
      * 
      * @param id
-     *        The identifier for the specified Amazon Web Services account.
+     *        The identifier for the Amazon Web Services account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -89,11 +89,11 @@ public class AWSAccount implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The email address associated with the specified Amazon Web Services account.
+     * The email address that's associated with the Amazon Web Services account.
      * </p>
      * 
      * @param emailAddress
-     *        The email address associated with the specified Amazon Web Services account.
+     *        The email address that's associated with the Amazon Web Services account.
      */
 
     public void setEmailAddress(String emailAddress) {
@@ -102,10 +102,10 @@ public class AWSAccount implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The email address associated with the specified Amazon Web Services account.
+     * The email address that's associated with the Amazon Web Services account.
      * </p>
      * 
-     * @return The email address associated with the specified Amazon Web Services account.
+     * @return The email address that's associated with the Amazon Web Services account.
      */
 
     public String getEmailAddress() {
@@ -114,11 +114,11 @@ public class AWSAccount implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The email address associated with the specified Amazon Web Services account.
+     * The email address that's associated with the Amazon Web Services account.
      * </p>
      * 
      * @param emailAddress
-     *        The email address associated with the specified Amazon Web Services account.
+     *        The email address that's associated with the Amazon Web Services account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -129,11 +129,11 @@ public class AWSAccount implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the specified Amazon Web Services account.
+     * The name of the Amazon Web Services account.
      * </p>
      * 
      * @param name
-     *        The name of the specified Amazon Web Services account.
+     *        The name of the Amazon Web Services account.
      */
 
     public void setName(String name) {
@@ -142,10 +142,10 @@ public class AWSAccount implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the specified Amazon Web Services account.
+     * The name of the Amazon Web Services account.
      * </p>
      * 
-     * @return The name of the specified Amazon Web Services account.
+     * @return The name of the Amazon Web Services account.
      */
 
     public String getName() {
@@ -154,11 +154,11 @@ public class AWSAccount implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the specified Amazon Web Services account.
+     * The name of the Amazon Web Services account.
      * </p>
      * 
      * @param name
-     *        The name of the specified Amazon Web Services account.
+     *        The name of the Amazon Web Services account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

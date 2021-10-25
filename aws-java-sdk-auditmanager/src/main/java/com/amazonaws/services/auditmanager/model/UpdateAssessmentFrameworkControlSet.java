@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A <code>controlSet</code> entity that represents a collection of controls in Audit Manager. This does not contain the
+ * A <code>controlSet</code> entity that represents a collection of controls in Audit Manager. This doesn't contain the
  * control set ID.
  * </p>
  * 
@@ -43,7 +43,7 @@ public class UpdateAssessmentFrameworkControlSet implements Serializable, Clonea
     private String name;
     /**
      * <p>
-     * The list of controls contained within the control set.
+     * The list of controls that are contained within the control set.
      * </p>
      */
     private java.util.List<CreateAssessmentFrameworkControl> controls;
@@ -130,10 +130,10 @@ public class UpdateAssessmentFrameworkControlSet implements Serializable, Clonea
 
     /**
      * <p>
-     * The list of controls contained within the control set.
+     * The list of controls that are contained within the control set.
      * </p>
      * 
-     * @return The list of controls contained within the control set.
+     * @return The list of controls that are contained within the control set.
      */
 
     public java.util.List<CreateAssessmentFrameworkControl> getControls() {
@@ -142,11 +142,11 @@ public class UpdateAssessmentFrameworkControlSet implements Serializable, Clonea
 
     /**
      * <p>
-     * The list of controls contained within the control set.
+     * The list of controls that are contained within the control set.
      * </p>
      * 
      * @param controls
-     *        The list of controls contained within the control set.
+     *        The list of controls that are contained within the control set.
      */
 
     public void setControls(java.util.Collection<CreateAssessmentFrameworkControl> controls) {
@@ -160,7 +160,7 @@ public class UpdateAssessmentFrameworkControlSet implements Serializable, Clonea
 
     /**
      * <p>
-     * The list of controls contained within the control set.
+     * The list of controls that are contained within the control set.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -169,7 +169,7 @@ public class UpdateAssessmentFrameworkControlSet implements Serializable, Clonea
      * </p>
      * 
      * @param controls
-     *        The list of controls contained within the control set.
+     *        The list of controls that are contained within the control set.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -185,11 +185,11 @@ public class UpdateAssessmentFrameworkControlSet implements Serializable, Clonea
 
     /**
      * <p>
-     * The list of controls contained within the control set.
+     * The list of controls that are contained within the control set.
      * </p>
      * 
      * @param controls
-     *        The list of controls contained within the control set.
+     *        The list of controls that are contained within the control set.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

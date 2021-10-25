@@ -944,6 +944,39 @@ public class AmazonRoute53ResolverAsyncClient extends AmazonRoute53ResolverClien
     }
 
     @Override
+    public java.util.concurrent.Future<GetResolverConfigResult> getResolverConfigAsync(GetResolverConfigRequest request) {
+
+        return getResolverConfigAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetResolverConfigResult> getResolverConfigAsync(final GetResolverConfigRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetResolverConfigRequest, GetResolverConfigResult> asyncHandler) {
+        final GetResolverConfigRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetResolverConfigResult>() {
+            @Override
+            public GetResolverConfigResult call() throws Exception {
+                GetResolverConfigResult result = null;
+
+                try {
+                    result = executeGetResolverConfig(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetResolverDnssecConfigResult> getResolverDnssecConfigAsync(GetResolverDnssecConfigRequest request) {
 
         return getResolverDnssecConfigAsync(request, null);
@@ -1429,6 +1462,39 @@ public class AmazonRoute53ResolverAsyncClient extends AmazonRoute53ResolverClien
 
                 try {
                     result = executeListFirewallRules(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListResolverConfigsResult> listResolverConfigsAsync(ListResolverConfigsRequest request) {
+
+        return listResolverConfigsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListResolverConfigsResult> listResolverConfigsAsync(final ListResolverConfigsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListResolverConfigsRequest, ListResolverConfigsResult> asyncHandler) {
+        final ListResolverConfigsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListResolverConfigsResult>() {
+            @Override
+            public ListResolverConfigsResult call() throws Exception {
+                ListResolverConfigsResult result = null;
+
+                try {
+                    result = executeListResolverConfigs(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -1998,6 +2064,39 @@ public class AmazonRoute53ResolverAsyncClient extends AmazonRoute53ResolverClien
 
                 try {
                     result = executeUpdateFirewallRuleGroupAssociation(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateResolverConfigResult> updateResolverConfigAsync(UpdateResolverConfigRequest request) {
+
+        return updateResolverConfigAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateResolverConfigResult> updateResolverConfigAsync(final UpdateResolverConfigRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateResolverConfigRequest, UpdateResolverConfigResult> asyncHandler) {
+        final UpdateResolverConfigRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateResolverConfigResult>() {
+            @Override
+            public UpdateResolverConfigResult call() throws Exception {
+                UpdateResolverConfigResult result = null;
+
+                try {
+                    result = executeUpdateResolverConfig(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

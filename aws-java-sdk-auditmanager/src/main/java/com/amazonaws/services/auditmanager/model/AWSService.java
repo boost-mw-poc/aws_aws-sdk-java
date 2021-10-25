@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * An Amazon Web Service such as Amazon S3, CloudTrail, and so on.
+ * An Amazon Web Service such as Amazon S3 or CloudTrail.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/AWSService" target="_top">AWS API

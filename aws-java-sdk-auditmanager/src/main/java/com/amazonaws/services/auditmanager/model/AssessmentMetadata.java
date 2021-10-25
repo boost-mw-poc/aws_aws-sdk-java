@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The metadata associated with the specified assessment.
+ * The metadata that's associated with the specified assessment.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/AssessmentMetadata" target="_top">AWS
@@ -48,7 +48,7 @@ public class AssessmentMetadata implements Serializable, Cloneable, StructuredPo
     private String description;
     /**
      * <p>
-     * The name of a compliance standard related to the assessment, such as PCI-DSS.
+     * The name of the compliance standard that's related to the assessment, such as PCI-DSS.
      * </p>
      */
     private String complianceType;
@@ -60,25 +60,25 @@ public class AssessmentMetadata implements Serializable, Cloneable, StructuredPo
     private String status;
     /**
      * <p>
-     * The destination in which evidence reports are stored for the specified assessment.
+     * The destination that evidence reports are stored in for the assessment.
      * </p>
      */
     private AssessmentReportsDestination assessmentReportsDestination;
     /**
      * <p>
-     * The wrapper of Amazon Web Services accounts and services in scope for the assessment.
+     * The wrapper of Amazon Web Services accounts and services that are in scope for the assessment.
      * </p>
      */
     private Scope scope;
     /**
      * <p>
-     * The roles associated with the assessment.
+     * The roles that are associated with the assessment.
      * </p>
      */
     private java.util.List<Role> roles;
     /**
      * <p>
-     * The delegations associated with the assessment.
+     * The delegations that are associated with the assessment.
      * </p>
      */
     private java.util.List<Delegation> delegations;
@@ -217,11 +217,11 @@ public class AssessmentMetadata implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The name of a compliance standard related to the assessment, such as PCI-DSS.
+     * The name of the compliance standard that's related to the assessment, such as PCI-DSS.
      * </p>
      * 
      * @param complianceType
-     *        The name of a compliance standard related to the assessment, such as PCI-DSS.
+     *        The name of the compliance standard that's related to the assessment, such as PCI-DSS.
      */
 
     public void setComplianceType(String complianceType) {
@@ -230,10 +230,10 @@ public class AssessmentMetadata implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The name of a compliance standard related to the assessment, such as PCI-DSS.
+     * The name of the compliance standard that's related to the assessment, such as PCI-DSS.
      * </p>
      * 
-     * @return The name of a compliance standard related to the assessment, such as PCI-DSS.
+     * @return The name of the compliance standard that's related to the assessment, such as PCI-DSS.
      */
 
     public String getComplianceType() {
@@ -242,11 +242,11 @@ public class AssessmentMetadata implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The name of a compliance standard related to the assessment, such as PCI-DSS.
+     * The name of the compliance standard that's related to the assessment, such as PCI-DSS.
      * </p>
      * 
      * @param complianceType
-     *        The name of a compliance standard related to the assessment, such as PCI-DSS.
+     *        The name of the compliance standard that's related to the assessment, such as PCI-DSS.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -316,11 +316,11 @@ public class AssessmentMetadata implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The destination in which evidence reports are stored for the specified assessment.
+     * The destination that evidence reports are stored in for the assessment.
      * </p>
      * 
      * @param assessmentReportsDestination
-     *        The destination in which evidence reports are stored for the specified assessment.
+     *        The destination that evidence reports are stored in for the assessment.
      */
 
     public void setAssessmentReportsDestination(AssessmentReportsDestination assessmentReportsDestination) {
@@ -329,10 +329,10 @@ public class AssessmentMetadata implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The destination in which evidence reports are stored for the specified assessment.
+     * The destination that evidence reports are stored in for the assessment.
      * </p>
      * 
-     * @return The destination in which evidence reports are stored for the specified assessment.
+     * @return The destination that evidence reports are stored in for the assessment.
      */
 
     public AssessmentReportsDestination getAssessmentReportsDestination() {
@@ -341,11 +341,11 @@ public class AssessmentMetadata implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The destination in which evidence reports are stored for the specified assessment.
+     * The destination that evidence reports are stored in for the assessment.
      * </p>
      * 
      * @param assessmentReportsDestination
-     *        The destination in which evidence reports are stored for the specified assessment.
+     *        The destination that evidence reports are stored in for the assessment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -356,11 +356,11 @@ public class AssessmentMetadata implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The wrapper of Amazon Web Services accounts and services in scope for the assessment.
+     * The wrapper of Amazon Web Services accounts and services that are in scope for the assessment.
      * </p>
      * 
      * @param scope
-     *        The wrapper of Amazon Web Services accounts and services in scope for the assessment.
+     *        The wrapper of Amazon Web Services accounts and services that are in scope for the assessment.
      */
 
     public void setScope(Scope scope) {
@@ -369,10 +369,10 @@ public class AssessmentMetadata implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The wrapper of Amazon Web Services accounts and services in scope for the assessment.
+     * The wrapper of Amazon Web Services accounts and services that are in scope for the assessment.
      * </p>
      * 
-     * @return The wrapper of Amazon Web Services accounts and services in scope for the assessment.
+     * @return The wrapper of Amazon Web Services accounts and services that are in scope for the assessment.
      */
 
     public Scope getScope() {
@@ -381,11 +381,11 @@ public class AssessmentMetadata implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The wrapper of Amazon Web Services accounts and services in scope for the assessment.
+     * The wrapper of Amazon Web Services accounts and services that are in scope for the assessment.
      * </p>
      * 
      * @param scope
-     *        The wrapper of Amazon Web Services accounts and services in scope for the assessment.
+     *        The wrapper of Amazon Web Services accounts and services that are in scope for the assessment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -396,10 +396,10 @@ public class AssessmentMetadata implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The roles associated with the assessment.
+     * The roles that are associated with the assessment.
      * </p>
      * 
-     * @return The roles associated with the assessment.
+     * @return The roles that are associated with the assessment.
      */
 
     public java.util.List<Role> getRoles() {
@@ -408,11 +408,11 @@ public class AssessmentMetadata implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The roles associated with the assessment.
+     * The roles that are associated with the assessment.
      * </p>
      * 
      * @param roles
-     *        The roles associated with the assessment.
+     *        The roles that are associated with the assessment.
      */
 
     public void setRoles(java.util.Collection<Role> roles) {
@@ -426,7 +426,7 @@ public class AssessmentMetadata implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The roles associated with the assessment.
+     * The roles that are associated with the assessment.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -435,7 +435,7 @@ public class AssessmentMetadata implements Serializable, Cloneable, StructuredPo
      * </p>
      * 
      * @param roles
-     *        The roles associated with the assessment.
+     *        The roles that are associated with the assessment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -451,11 +451,11 @@ public class AssessmentMetadata implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The roles associated with the assessment.
+     * The roles that are associated with the assessment.
      * </p>
      * 
      * @param roles
-     *        The roles associated with the assessment.
+     *        The roles that are associated with the assessment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -466,10 +466,10 @@ public class AssessmentMetadata implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The delegations associated with the assessment.
+     * The delegations that are associated with the assessment.
      * </p>
      * 
-     * @return The delegations associated with the assessment.
+     * @return The delegations that are associated with the assessment.
      */
 
     public java.util.List<Delegation> getDelegations() {
@@ -478,11 +478,11 @@ public class AssessmentMetadata implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The delegations associated with the assessment.
+     * The delegations that are associated with the assessment.
      * </p>
      * 
      * @param delegations
-     *        The delegations associated with the assessment.
+     *        The delegations that are associated with the assessment.
      */
 
     public void setDelegations(java.util.Collection<Delegation> delegations) {
@@ -496,7 +496,7 @@ public class AssessmentMetadata implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The delegations associated with the assessment.
+     * The delegations that are associated with the assessment.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -505,7 +505,7 @@ public class AssessmentMetadata implements Serializable, Cloneable, StructuredPo
      * </p>
      * 
      * @param delegations
-     *        The delegations associated with the assessment.
+     *        The delegations that are associated with the assessment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -521,11 +521,11 @@ public class AssessmentMetadata implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The delegations associated with the assessment.
+     * The delegations that are associated with the assessment.
      * </p>
      * 
      * @param delegations
-     *        The delegations associated with the assessment.
+     *        The delegations that are associated with the assessment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

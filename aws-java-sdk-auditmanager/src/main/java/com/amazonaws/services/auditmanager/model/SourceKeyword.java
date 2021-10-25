@@ -30,13 +30,13 @@ public class SourceKeyword implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The method of input for the specified keyword.
+     * The method of input for the keyword.
      * </p>
      */
     private String keywordInputType;
     /**
      * <p>
-     * The value of the keyword used to search CloudTrail logs, Config rules, Security Hub checks, and Amazon Web
+     * The value of the keyword that's used to search CloudTrail logs, Config rules, Security Hub checks, and Amazon Web
      * Services API names when mapping a control data source.
      * </p>
      */
@@ -44,11 +44,11 @@ public class SourceKeyword implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The method of input for the specified keyword.
+     * The method of input for the keyword.
      * </p>
      * 
      * @param keywordInputType
-     *        The method of input for the specified keyword.
+     *        The method of input for the keyword.
      * @see KeywordInputType
      */
 
@@ -58,10 +58,10 @@ public class SourceKeyword implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The method of input for the specified keyword.
+     * The method of input for the keyword.
      * </p>
      * 
-     * @return The method of input for the specified keyword.
+     * @return The method of input for the keyword.
      * @see KeywordInputType
      */
 
@@ -71,11 +71,11 @@ public class SourceKeyword implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The method of input for the specified keyword.
+     * The method of input for the keyword.
      * </p>
      * 
      * @param keywordInputType
-     *        The method of input for the specified keyword.
+     *        The method of input for the keyword.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see KeywordInputType
      */
@@ -87,11 +87,11 @@ public class SourceKeyword implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The method of input for the specified keyword.
+     * The method of input for the keyword.
      * </p>
      * 
      * @param keywordInputType
-     *        The method of input for the specified keyword.
+     *        The method of input for the keyword.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see KeywordInputType
      */
@@ -103,13 +103,13 @@ public class SourceKeyword implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The value of the keyword used to search CloudTrail logs, Config rules, Security Hub checks, and Amazon Web
+     * The value of the keyword that's used to search CloudTrail logs, Config rules, Security Hub checks, and Amazon Web
      * Services API names when mapping a control data source.
      * </p>
      * 
      * @param keywordValue
-     *        The value of the keyword used to search CloudTrail logs, Config rules, Security Hub checks, and Amazon Web
-     *        Services API names when mapping a control data source.
+     *        The value of the keyword that's used to search CloudTrail logs, Config rules, Security Hub checks, and
+     *        Amazon Web Services API names when mapping a control data source.
      */
 
     public void setKeywordValue(String keywordValue) {
@@ -118,12 +118,12 @@ public class SourceKeyword implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The value of the keyword used to search CloudTrail logs, Config rules, Security Hub checks, and Amazon Web
+     * The value of the keyword that's used to search CloudTrail logs, Config rules, Security Hub checks, and Amazon Web
      * Services API names when mapping a control data source.
      * </p>
      * 
-     * @return The value of the keyword used to search CloudTrail logs, Config rules, Security Hub checks, and Amazon
-     *         Web Services API names when mapping a control data source.
+     * @return The value of the keyword that's used to search CloudTrail logs, Config rules, Security Hub checks, and
+     *         Amazon Web Services API names when mapping a control data source.
      */
 
     public String getKeywordValue() {
@@ -132,13 +132,13 @@ public class SourceKeyword implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The value of the keyword used to search CloudTrail logs, Config rules, Security Hub checks, and Amazon Web
+     * The value of the keyword that's used to search CloudTrail logs, Config rules, Security Hub checks, and Amazon Web
      * Services API names when mapping a control data source.
      * </p>
      * 
      * @param keywordValue
-     *        The value of the keyword used to search CloudTrail logs, Config rules, Security Hub checks, and Amazon Web
-     *        Services API names when mapping a control data source.
+     *        The value of the keyword that's used to search CloudTrail logs, Config rules, Security Hub checks, and
+     *        Amazon Web Services API names when mapping a control data source.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

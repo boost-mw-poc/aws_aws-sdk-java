@@ -27,18 +27,18 @@ public class ValidateAssessmentReportIntegrityRequest extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * The relative path of the specified Amazon S3 bucket in which the assessment report is stored.
+     * The relative path of the Amazon S3 bucket that the assessment report is stored in.
      * </p>
      */
     private String s3RelativePath;
 
     /**
      * <p>
-     * The relative path of the specified Amazon S3 bucket in which the assessment report is stored.
+     * The relative path of the Amazon S3 bucket that the assessment report is stored in.
      * </p>
      * 
      * @param s3RelativePath
-     *        The relative path of the specified Amazon S3 bucket in which the assessment report is stored.
+     *        The relative path of the Amazon S3 bucket that the assessment report is stored in.
      */
 
     public void setS3RelativePath(String s3RelativePath) {
@@ -47,10 +47,10 @@ public class ValidateAssessmentReportIntegrityRequest extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * The relative path of the specified Amazon S3 bucket in which the assessment report is stored.
+     * The relative path of the Amazon S3 bucket that the assessment report is stored in.
      * </p>
      * 
-     * @return The relative path of the specified Amazon S3 bucket in which the assessment report is stored.
+     * @return The relative path of the Amazon S3 bucket that the assessment report is stored in.
      */
 
     public String getS3RelativePath() {
@@ -59,11 +59,11 @@ public class ValidateAssessmentReportIntegrityRequest extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * The relative path of the specified Amazon S3 bucket in which the assessment report is stored.
+     * The relative path of the Amazon S3 bucket that the assessment report is stored in.
      * </p>
      * 
      * @param s3RelativePath
-     *        The relative path of the specified Amazon S3 bucket in which the assessment report is stored.
+     *        The relative path of the Amazon S3 bucket that the assessment report is stored in.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

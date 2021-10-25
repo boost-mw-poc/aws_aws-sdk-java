@@ -26,23 +26,23 @@ public class BatchAssociateAssessmentReportEvidenceResult extends com.amazonaws.
 
     /**
      * <p>
-     * The identifier for the evidence.
+     * The list of evidence identifiers.
      * </p>
      */
     private java.util.List<String> evidenceIds;
     /**
      * <p>
-     * A list of errors returned by the <code>BatchAssociateAssessmentReportEvidence</code> API.
+     * A list of errors that the <code>BatchAssociateAssessmentReportEvidence</code> API returned.
      * </p>
      */
     private java.util.List<AssessmentReportEvidenceError> errors;
 
     /**
      * <p>
-     * The identifier for the evidence.
+     * The list of evidence identifiers.
      * </p>
      * 
-     * @return The identifier for the evidence.
+     * @return The list of evidence identifiers.
      */
 
     public java.util.List<String> getEvidenceIds() {
@@ -51,11 +51,11 @@ public class BatchAssociateAssessmentReportEvidenceResult extends com.amazonaws.
 
     /**
      * <p>
-     * The identifier for the evidence.
+     * The list of evidence identifiers.
      * </p>
      * 
      * @param evidenceIds
-     *        The identifier for the evidence.
+     *        The list of evidence identifiers.
      */
 
     public void setEvidenceIds(java.util.Collection<String> evidenceIds) {
@@ -69,7 +69,7 @@ public class BatchAssociateAssessmentReportEvidenceResult extends com.amazonaws.
 
     /**
      * <p>
-     * The identifier for the evidence.
+     * The list of evidence identifiers.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -78,7 +78,7 @@ public class BatchAssociateAssessmentReportEvidenceResult extends com.amazonaws.
      * </p>
      * 
      * @param evidenceIds
-     *        The identifier for the evidence.
+     *        The list of evidence identifiers.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -94,11 +94,11 @@ public class BatchAssociateAssessmentReportEvidenceResult extends com.amazonaws.
 
     /**
      * <p>
-     * The identifier for the evidence.
+     * The list of evidence identifiers.
      * </p>
      * 
      * @param evidenceIds
-     *        The identifier for the evidence.
+     *        The list of evidence identifiers.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -109,10 +109,10 @@ public class BatchAssociateAssessmentReportEvidenceResult extends com.amazonaws.
 
     /**
      * <p>
-     * A list of errors returned by the <code>BatchAssociateAssessmentReportEvidence</code> API.
+     * A list of errors that the <code>BatchAssociateAssessmentReportEvidence</code> API returned.
      * </p>
      * 
-     * @return A list of errors returned by the <code>BatchAssociateAssessmentReportEvidence</code> API.
+     * @return A list of errors that the <code>BatchAssociateAssessmentReportEvidence</code> API returned.
      */
 
     public java.util.List<AssessmentReportEvidenceError> getErrors() {
@@ -121,11 +121,11 @@ public class BatchAssociateAssessmentReportEvidenceResult extends com.amazonaws.
 
     /**
      * <p>
-     * A list of errors returned by the <code>BatchAssociateAssessmentReportEvidence</code> API.
+     * A list of errors that the <code>BatchAssociateAssessmentReportEvidence</code> API returned.
      * </p>
      * 
      * @param errors
-     *        A list of errors returned by the <code>BatchAssociateAssessmentReportEvidence</code> API.
+     *        A list of errors that the <code>BatchAssociateAssessmentReportEvidence</code> API returned.
      */
 
     public void setErrors(java.util.Collection<AssessmentReportEvidenceError> errors) {
@@ -139,7 +139,7 @@ public class BatchAssociateAssessmentReportEvidenceResult extends com.amazonaws.
 
     /**
      * <p>
-     * A list of errors returned by the <code>BatchAssociateAssessmentReportEvidence</code> API.
+     * A list of errors that the <code>BatchAssociateAssessmentReportEvidence</code> API returned.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -148,7 +148,7 @@ public class BatchAssociateAssessmentReportEvidenceResult extends com.amazonaws.
      * </p>
      * 
      * @param errors
-     *        A list of errors returned by the <code>BatchAssociateAssessmentReportEvidence</code> API.
+     *        A list of errors that the <code>BatchAssociateAssessmentReportEvidence</code> API returned.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -164,11 +164,11 @@ public class BatchAssociateAssessmentReportEvidenceResult extends com.amazonaws.
 
     /**
      * <p>
-     * A list of errors returned by the <code>BatchAssociateAssessmentReportEvidence</code> API.
+     * A list of errors that the <code>BatchAssociateAssessmentReportEvidence</code> API returned.
      * </p>
      * 
      * @param errors
-     *        A list of errors returned by the <code>BatchAssociateAssessmentReportEvidence</code> API.
+     *        A list of errors that the <code>BatchAssociateAssessmentReportEvidence</code> API returned.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

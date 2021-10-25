@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The file used to structure and automate Audit Manager assessments for a given compliance standard.
+ * The file that's used to structure and automate Audit Manager assessments for a given compliance standard.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/Framework" target="_top">AWS API
@@ -30,25 +30,25 @@ public class Framework implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the specified framework.
+     * The Amazon Resource Name (ARN) of the framework.
      * </p>
      */
     private String arn;
     /**
      * <p>
-     * The unique identifier for the specified framework.
+     * The unique identifier for the framework.
      * </p>
      */
     private String id;
     /**
      * <p>
-     * The name of the specified framework.
+     * The name of the framework.
      * </p>
      */
     private String name;
     /**
      * <p>
-     * The framework type, such as custom or standard.
+     * The framework type, such as a custom framework or a standard framework.
      * </p>
      */
     private String type;
@@ -60,25 +60,25 @@ public class Framework implements Serializable, Cloneable, StructuredPojo {
     private String complianceType;
     /**
      * <p>
-     * The description of the specified framework.
+     * The description of the framework.
      * </p>
      */
     private String description;
     /**
      * <p>
-     * The logo associated with the framework.
+     * The logo that's associated with the framework.
      * </p>
      */
     private String logo;
     /**
      * <p>
-     * The sources from which Audit Manager collects evidence for the control.
+     * The sources that Audit Manager collects evidence from for the control.
      * </p>
      */
     private String controlSources;
     /**
      * <p>
-     * The control sets associated with the framework.
+     * The control sets that are associated with the framework.
      * </p>
      */
     private java.util.List<ControlSet> controlSets;
@@ -108,18 +108,18 @@ public class Framework implements Serializable, Cloneable, StructuredPojo {
     private String lastUpdatedBy;
     /**
      * <p>
-     * The tags associated with the framework.
+     * The tags that are associated with the framework.
      * </p>
      */
     private java.util.Map<String, String> tags;
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the specified framework.
+     * The Amazon Resource Name (ARN) of the framework.
      * </p>
      * 
      * @param arn
-     *        The Amazon Resource Name (ARN) of the specified framework.
+     *        The Amazon Resource Name (ARN) of the framework.
      */
 
     public void setArn(String arn) {
@@ -128,10 +128,10 @@ public class Framework implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the specified framework.
+     * The Amazon Resource Name (ARN) of the framework.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the specified framework.
+     * @return The Amazon Resource Name (ARN) of the framework.
      */
 
     public String getArn() {
@@ -140,11 +140,11 @@ public class Framework implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the specified framework.
+     * The Amazon Resource Name (ARN) of the framework.
      * </p>
      * 
      * @param arn
-     *        The Amazon Resource Name (ARN) of the specified framework.
+     *        The Amazon Resource Name (ARN) of the framework.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -155,11 +155,11 @@ public class Framework implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The unique identifier for the specified framework.
+     * The unique identifier for the framework.
      * </p>
      * 
      * @param id
-     *        The unique identifier for the specified framework.
+     *        The unique identifier for the framework.
      */
 
     public void setId(String id) {
@@ -168,10 +168,10 @@ public class Framework implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The unique identifier for the specified framework.
+     * The unique identifier for the framework.
      * </p>
      * 
-     * @return The unique identifier for the specified framework.
+     * @return The unique identifier for the framework.
      */
 
     public String getId() {
@@ -180,11 +180,11 @@ public class Framework implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The unique identifier for the specified framework.
+     * The unique identifier for the framework.
      * </p>
      * 
      * @param id
-     *        The unique identifier for the specified framework.
+     *        The unique identifier for the framework.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -195,11 +195,11 @@ public class Framework implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the specified framework.
+     * The name of the framework.
      * </p>
      * 
      * @param name
-     *        The name of the specified framework.
+     *        The name of the framework.
      */
 
     public void setName(String name) {
@@ -208,10 +208,10 @@ public class Framework implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the specified framework.
+     * The name of the framework.
      * </p>
      * 
-     * @return The name of the specified framework.
+     * @return The name of the framework.
      */
 
     public String getName() {
@@ -220,11 +220,11 @@ public class Framework implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the specified framework.
+     * The name of the framework.
      * </p>
      * 
      * @param name
-     *        The name of the specified framework.
+     *        The name of the framework.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -235,11 +235,11 @@ public class Framework implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The framework type, such as custom or standard.
+     * The framework type, such as a custom framework or a standard framework.
      * </p>
      * 
      * @param type
-     *        The framework type, such as custom or standard.
+     *        The framework type, such as a custom framework or a standard framework.
      * @see FrameworkType
      */
 
@@ -249,10 +249,10 @@ public class Framework implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The framework type, such as custom or standard.
+     * The framework type, such as a custom framework or a standard framework.
      * </p>
      * 
-     * @return The framework type, such as custom or standard.
+     * @return The framework type, such as a custom framework or a standard framework.
      * @see FrameworkType
      */
 
@@ -262,11 +262,11 @@ public class Framework implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The framework type, such as custom or standard.
+     * The framework type, such as a custom framework or a standard framework.
      * </p>
      * 
      * @param type
-     *        The framework type, such as custom or standard.
+     *        The framework type, such as a custom framework or a standard framework.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see FrameworkType
      */
@@ -278,11 +278,11 @@ public class Framework implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The framework type, such as custom or standard.
+     * The framework type, such as a custom framework or a standard framework.
      * </p>
      * 
      * @param type
-     *        The framework type, such as custom or standard.
+     *        The framework type, such as a custom framework or a standard framework.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see FrameworkType
      */
@@ -334,11 +334,11 @@ public class Framework implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The description of the specified framework.
+     * The description of the framework.
      * </p>
      * 
      * @param description
-     *        The description of the specified framework.
+     *        The description of the framework.
      */
 
     public void setDescription(String description) {
@@ -347,10 +347,10 @@ public class Framework implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The description of the specified framework.
+     * The description of the framework.
      * </p>
      * 
-     * @return The description of the specified framework.
+     * @return The description of the framework.
      */
 
     public String getDescription() {
@@ -359,11 +359,11 @@ public class Framework implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The description of the specified framework.
+     * The description of the framework.
      * </p>
      * 
      * @param description
-     *        The description of the specified framework.
+     *        The description of the framework.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -374,11 +374,11 @@ public class Framework implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The logo associated with the framework.
+     * The logo that's associated with the framework.
      * </p>
      * 
      * @param logo
-     *        The logo associated with the framework.
+     *        The logo that's associated with the framework.
      */
 
     public void setLogo(String logo) {
@@ -387,10 +387,10 @@ public class Framework implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The logo associated with the framework.
+     * The logo that's associated with the framework.
      * </p>
      * 
-     * @return The logo associated with the framework.
+     * @return The logo that's associated with the framework.
      */
 
     public String getLogo() {
@@ -399,11 +399,11 @@ public class Framework implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The logo associated with the framework.
+     * The logo that's associated with the framework.
      * </p>
      * 
      * @param logo
-     *        The logo associated with the framework.
+     *        The logo that's associated with the framework.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -414,11 +414,11 @@ public class Framework implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The sources from which Audit Manager collects evidence for the control.
+     * The sources that Audit Manager collects evidence from for the control.
      * </p>
      * 
      * @param controlSources
-     *        The sources from which Audit Manager collects evidence for the control.
+     *        The sources that Audit Manager collects evidence from for the control.
      */
 
     public void setControlSources(String controlSources) {
@@ -427,10 +427,10 @@ public class Framework implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The sources from which Audit Manager collects evidence for the control.
+     * The sources that Audit Manager collects evidence from for the control.
      * </p>
      * 
-     * @return The sources from which Audit Manager collects evidence for the control.
+     * @return The sources that Audit Manager collects evidence from for the control.
      */
 
     public String getControlSources() {
@@ -439,11 +439,11 @@ public class Framework implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The sources from which Audit Manager collects evidence for the control.
+     * The sources that Audit Manager collects evidence from for the control.
      * </p>
      * 
      * @param controlSources
-     *        The sources from which Audit Manager collects evidence for the control.
+     *        The sources that Audit Manager collects evidence from for the control.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -454,10 +454,10 @@ public class Framework implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The control sets associated with the framework.
+     * The control sets that are associated with the framework.
      * </p>
      * 
-     * @return The control sets associated with the framework.
+     * @return The control sets that are associated with the framework.
      */
 
     public java.util.List<ControlSet> getControlSets() {
@@ -466,11 +466,11 @@ public class Framework implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The control sets associated with the framework.
+     * The control sets that are associated with the framework.
      * </p>
      * 
      * @param controlSets
-     *        The control sets associated with the framework.
+     *        The control sets that are associated with the framework.
      */
 
     public void setControlSets(java.util.Collection<ControlSet> controlSets) {
@@ -484,7 +484,7 @@ public class Framework implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The control sets associated with the framework.
+     * The control sets that are associated with the framework.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -493,7 +493,7 @@ public class Framework implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param controlSets
-     *        The control sets associated with the framework.
+     *        The control sets that are associated with the framework.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -509,11 +509,11 @@ public class Framework implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The control sets associated with the framework.
+     * The control sets that are associated with the framework.
      * </p>
      * 
      * @param controlSets
-     *        The control sets associated with the framework.
+     *        The control sets that are associated with the framework.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -684,10 +684,10 @@ public class Framework implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The tags associated with the framework.
+     * The tags that are associated with the framework.
      * </p>
      * 
-     * @return The tags associated with the framework.
+     * @return The tags that are associated with the framework.
      */
 
     public java.util.Map<String, String> getTags() {
@@ -696,11 +696,11 @@ public class Framework implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The tags associated with the framework.
+     * The tags that are associated with the framework.
      * </p>
      * 
      * @param tags
-     *        The tags associated with the framework.
+     *        The tags that are associated with the framework.
      */
 
     public void setTags(java.util.Map<String, String> tags) {
@@ -709,11 +709,11 @@ public class Framework implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The tags associated with the framework.
+     * The tags that are associated with the framework.
      * </p>
      * 
      * @param tags
-     *        The tags associated with the framework.
+     *        The tags that are associated with the framework.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

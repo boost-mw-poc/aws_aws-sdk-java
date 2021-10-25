@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A collection of attributes used to create a delegation for an assessment in Audit Manager.
+ * A collection of attributes that's used to create a delegation for an assessment in Audit Manager.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/CreateDelegationRequest"
@@ -30,7 +30,7 @@ public class CreateDelegationRequest implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * A comment related to the delegation request.
+     * A comment that's related to the delegation request.
      * </p>
      */
     private String comment;
@@ -66,11 +66,11 @@ public class CreateDelegationRequest implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * A comment related to the delegation request.
+     * A comment that's related to the delegation request.
      * </p>
      * 
      * @param comment
-     *        A comment related to the delegation request.
+     *        A comment that's related to the delegation request.
      */
 
     public void setComment(String comment) {
@@ -79,10 +79,10 @@ public class CreateDelegationRequest implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * A comment related to the delegation request.
+     * A comment that's related to the delegation request.
      * </p>
      * 
-     * @return A comment related to the delegation request.
+     * @return A comment that's related to the delegation request.
      */
 
     public String getComment() {
@@ -91,11 +91,11 @@ public class CreateDelegationRequest implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * A comment related to the delegation request.
+     * A comment that's related to the delegation request.
      * </p>
      * 
      * @param comment
-     *        A comment related to the delegation request.
+     *        A comment that's related to the delegation request.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

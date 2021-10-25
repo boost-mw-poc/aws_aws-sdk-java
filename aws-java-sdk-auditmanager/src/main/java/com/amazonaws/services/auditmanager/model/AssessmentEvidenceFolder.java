@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The folder in which Audit Manager stores evidence for an assessment.
+ * The folder where Audit Manager stores evidence for an assessment.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/AssessmentEvidenceFolder"
@@ -30,7 +30,7 @@ public class AssessmentEvidenceFolder implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The name of the specified evidence folder.
+     * The name of the evidence folder.
      * </p>
      */
     private String name;
@@ -42,7 +42,7 @@ public class AssessmentEvidenceFolder implements Serializable, Cloneable, Struct
     private java.util.Date date;
     /**
      * <p>
-     * The identifier for the specified assessment.
+     * The identifier for the assessment.
      * </p>
      */
     private String assessmentId;
@@ -54,19 +54,19 @@ public class AssessmentEvidenceFolder implements Serializable, Cloneable, Struct
     private String controlSetId;
     /**
      * <p>
-     * The unique identifier for the specified control.
+     * The unique identifier for the control.
      * </p>
      */
     private String controlId;
     /**
      * <p>
-     * The identifier for the folder in which evidence is stored.
+     * The identifier for the folder that the evidence is stored in.
      * </p>
      */
     private String id;
     /**
      * <p>
-     * The Amazon Web Service from which the evidence was collected.
+     * The Amazon Web Service that the evidence was collected from.
      * </p>
      */
     private String dataSource;
@@ -84,7 +84,7 @@ public class AssessmentEvidenceFolder implements Serializable, Cloneable, Struct
     private Integer totalEvidence;
     /**
      * <p>
-     * The total count of evidence included in the assessment report.
+     * The total count of evidence that's included in the assessment report.
      * </p>
      */
     private Integer assessmentReportSelectionCount;
@@ -96,7 +96,7 @@ public class AssessmentEvidenceFolder implements Serializable, Cloneable, Struct
     private String controlName;
     /**
      * <p>
-     * The amount of evidence included in the evidence folder.
+     * The amount of evidence that's included in the evidence folder.
      * </p>
      */
     private Integer evidenceResourcesIncludedCount;
@@ -135,18 +135,18 @@ public class AssessmentEvidenceFolder implements Serializable, Cloneable, Struct
     private Integer evidenceByTypeUserActivityCount;
     /**
      * <p>
-     * The total number of Amazon Web Services resources assessed to generate the evidence.
+     * The total number of Amazon Web Services resources that were assessed to generate the evidence.
      * </p>
      */
     private Integer evidenceAwsServiceSourceCount;
 
     /**
      * <p>
-     * The name of the specified evidence folder.
+     * The name of the evidence folder.
      * </p>
      * 
      * @param name
-     *        The name of the specified evidence folder.
+     *        The name of the evidence folder.
      */
 
     public void setName(String name) {
@@ -155,10 +155,10 @@ public class AssessmentEvidenceFolder implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The name of the specified evidence folder.
+     * The name of the evidence folder.
      * </p>
      * 
-     * @return The name of the specified evidence folder.
+     * @return The name of the evidence folder.
      */
 
     public String getName() {
@@ -167,11 +167,11 @@ public class AssessmentEvidenceFolder implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The name of the specified evidence folder.
+     * The name of the evidence folder.
      * </p>
      * 
      * @param name
-     *        The name of the specified evidence folder.
+     *        The name of the evidence folder.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -222,11 +222,11 @@ public class AssessmentEvidenceFolder implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The identifier for the specified assessment.
+     * The identifier for the assessment.
      * </p>
      * 
      * @param assessmentId
-     *        The identifier for the specified assessment.
+     *        The identifier for the assessment.
      */
 
     public void setAssessmentId(String assessmentId) {
@@ -235,10 +235,10 @@ public class AssessmentEvidenceFolder implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The identifier for the specified assessment.
+     * The identifier for the assessment.
      * </p>
      * 
-     * @return The identifier for the specified assessment.
+     * @return The identifier for the assessment.
      */
 
     public String getAssessmentId() {
@@ -247,11 +247,11 @@ public class AssessmentEvidenceFolder implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The identifier for the specified assessment.
+     * The identifier for the assessment.
      * </p>
      * 
      * @param assessmentId
-     *        The identifier for the specified assessment.
+     *        The identifier for the assessment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -302,11 +302,11 @@ public class AssessmentEvidenceFolder implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The unique identifier for the specified control.
+     * The unique identifier for the control.
      * </p>
      * 
      * @param controlId
-     *        The unique identifier for the specified control.
+     *        The unique identifier for the control.
      */
 
     public void setControlId(String controlId) {
@@ -315,10 +315,10 @@ public class AssessmentEvidenceFolder implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The unique identifier for the specified control.
+     * The unique identifier for the control.
      * </p>
      * 
-     * @return The unique identifier for the specified control.
+     * @return The unique identifier for the control.
      */
 
     public String getControlId() {
@@ -327,11 +327,11 @@ public class AssessmentEvidenceFolder implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The unique identifier for the specified control.
+     * The unique identifier for the control.
      * </p>
      * 
      * @param controlId
-     *        The unique identifier for the specified control.
+     *        The unique identifier for the control.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -342,11 +342,11 @@ public class AssessmentEvidenceFolder implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The identifier for the folder in which evidence is stored.
+     * The identifier for the folder that the evidence is stored in.
      * </p>
      * 
      * @param id
-     *        The identifier for the folder in which evidence is stored.
+     *        The identifier for the folder that the evidence is stored in.
      */
 
     public void setId(String id) {
@@ -355,10 +355,10 @@ public class AssessmentEvidenceFolder implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The identifier for the folder in which evidence is stored.
+     * The identifier for the folder that the evidence is stored in.
      * </p>
      * 
-     * @return The identifier for the folder in which evidence is stored.
+     * @return The identifier for the folder that the evidence is stored in.
      */
 
     public String getId() {
@@ -367,11 +367,11 @@ public class AssessmentEvidenceFolder implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The identifier for the folder in which evidence is stored.
+     * The identifier for the folder that the evidence is stored in.
      * </p>
      * 
      * @param id
-     *        The identifier for the folder in which evidence is stored.
+     *        The identifier for the folder that the evidence is stored in.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -382,11 +382,11 @@ public class AssessmentEvidenceFolder implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The Amazon Web Service from which the evidence was collected.
+     * The Amazon Web Service that the evidence was collected from.
      * </p>
      * 
      * @param dataSource
-     *        The Amazon Web Service from which the evidence was collected.
+     *        The Amazon Web Service that the evidence was collected from.
      */
 
     public void setDataSource(String dataSource) {
@@ -395,10 +395,10 @@ public class AssessmentEvidenceFolder implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The Amazon Web Service from which the evidence was collected.
+     * The Amazon Web Service that the evidence was collected from.
      * </p>
      * 
-     * @return The Amazon Web Service from which the evidence was collected.
+     * @return The Amazon Web Service that the evidence was collected from.
      */
 
     public String getDataSource() {
@@ -407,11 +407,11 @@ public class AssessmentEvidenceFolder implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The Amazon Web Service from which the evidence was collected.
+     * The Amazon Web Service that the evidence was collected from.
      * </p>
      * 
      * @param dataSource
-     *        The Amazon Web Service from which the evidence was collected.
+     *        The Amazon Web Service that the evidence was collected from.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -502,11 +502,11 @@ public class AssessmentEvidenceFolder implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The total count of evidence included in the assessment report.
+     * The total count of evidence that's included in the assessment report.
      * </p>
      * 
      * @param assessmentReportSelectionCount
-     *        The total count of evidence included in the assessment report.
+     *        The total count of evidence that's included in the assessment report.
      */
 
     public void setAssessmentReportSelectionCount(Integer assessmentReportSelectionCount) {
@@ -515,10 +515,10 @@ public class AssessmentEvidenceFolder implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The total count of evidence included in the assessment report.
+     * The total count of evidence that's included in the assessment report.
      * </p>
      * 
-     * @return The total count of evidence included in the assessment report.
+     * @return The total count of evidence that's included in the assessment report.
      */
 
     public Integer getAssessmentReportSelectionCount() {
@@ -527,11 +527,11 @@ public class AssessmentEvidenceFolder implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The total count of evidence included in the assessment report.
+     * The total count of evidence that's included in the assessment report.
      * </p>
      * 
      * @param assessmentReportSelectionCount
-     *        The total count of evidence included in the assessment report.
+     *        The total count of evidence that's included in the assessment report.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -582,11 +582,11 @@ public class AssessmentEvidenceFolder implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The amount of evidence included in the evidence folder.
+     * The amount of evidence that's included in the evidence folder.
      * </p>
      * 
      * @param evidenceResourcesIncludedCount
-     *        The amount of evidence included in the evidence folder.
+     *        The amount of evidence that's included in the evidence folder.
      */
 
     public void setEvidenceResourcesIncludedCount(Integer evidenceResourcesIncludedCount) {
@@ -595,10 +595,10 @@ public class AssessmentEvidenceFolder implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The amount of evidence included in the evidence folder.
+     * The amount of evidence that's included in the evidence folder.
      * </p>
      * 
-     * @return The amount of evidence included in the evidence folder.
+     * @return The amount of evidence that's included in the evidence folder.
      */
 
     public Integer getEvidenceResourcesIncludedCount() {
@@ -607,11 +607,11 @@ public class AssessmentEvidenceFolder implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The amount of evidence included in the evidence folder.
+     * The amount of evidence that's included in the evidence folder.
      * </p>
      * 
      * @param evidenceResourcesIncludedCount
-     *        The amount of evidence included in the evidence folder.
+     *        The amount of evidence that's included in the evidence folder.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -840,11 +840,11 @@ public class AssessmentEvidenceFolder implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The total number of Amazon Web Services resources assessed to generate the evidence.
+     * The total number of Amazon Web Services resources that were assessed to generate the evidence.
      * </p>
      * 
      * @param evidenceAwsServiceSourceCount
-     *        The total number of Amazon Web Services resources assessed to generate the evidence.
+     *        The total number of Amazon Web Services resources that were assessed to generate the evidence.
      */
 
     public void setEvidenceAwsServiceSourceCount(Integer evidenceAwsServiceSourceCount) {
@@ -853,10 +853,10 @@ public class AssessmentEvidenceFolder implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The total number of Amazon Web Services resources assessed to generate the evidence.
+     * The total number of Amazon Web Services resources that were assessed to generate the evidence.
      * </p>
      * 
-     * @return The total number of Amazon Web Services resources assessed to generate the evidence.
+     * @return The total number of Amazon Web Services resources that were assessed to generate the evidence.
      */
 
     public Integer getEvidenceAwsServiceSourceCount() {
@@ -865,11 +865,11 @@ public class AssessmentEvidenceFolder implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The total number of Amazon Web Services resources assessed to generate the evidence.
+     * The total number of Amazon Web Services resources that were assessed to generate the evidence.
      * </p>
      * 
      * @param evidenceAwsServiceSourceCount
-     *        The total number of Amazon Web Services resources assessed to generate the evidence.
+     *        The total number of Amazon Web Services resources that were assessed to generate the evidence.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

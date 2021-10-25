@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The metadata associated with the specified Amazon Web Service.
+ * The metadata that's associated with the Amazon Web Service.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/auditmanager-2017-07-25/ServiceMetadata" target="_top">AWS API
@@ -42,13 +42,13 @@ public class ServiceMetadata implements Serializable, Cloneable, StructuredPojo 
     private String displayName;
     /**
      * <p>
-     * The description of the specified Amazon Web Service.
+     * The description of the Amazon Web Service.
      * </p>
      */
     private String description;
     /**
      * <p>
-     * The category in which the Amazon Web Service belongs, such as compute, storage, database, and so on.
+     * The category that the Amazon Web Service belongs to, such as compute, storage, or database.
      * </p>
      */
     private String category;
@@ -135,11 +135,11 @@ public class ServiceMetadata implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The description of the specified Amazon Web Service.
+     * The description of the Amazon Web Service.
      * </p>
      * 
      * @param description
-     *        The description of the specified Amazon Web Service.
+     *        The description of the Amazon Web Service.
      */
 
     public void setDescription(String description) {
@@ -148,10 +148,10 @@ public class ServiceMetadata implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The description of the specified Amazon Web Service.
+     * The description of the Amazon Web Service.
      * </p>
      * 
-     * @return The description of the specified Amazon Web Service.
+     * @return The description of the Amazon Web Service.
      */
 
     public String getDescription() {
@@ -160,11 +160,11 @@ public class ServiceMetadata implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The description of the specified Amazon Web Service.
+     * The description of the Amazon Web Service.
      * </p>
      * 
      * @param description
-     *        The description of the specified Amazon Web Service.
+     *        The description of the Amazon Web Service.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -175,11 +175,11 @@ public class ServiceMetadata implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The category in which the Amazon Web Service belongs, such as compute, storage, database, and so on.
+     * The category that the Amazon Web Service belongs to, such as compute, storage, or database.
      * </p>
      * 
      * @param category
-     *        The category in which the Amazon Web Service belongs, such as compute, storage, database, and so on.
+     *        The category that the Amazon Web Service belongs to, such as compute, storage, or database.
      */
 
     public void setCategory(String category) {
@@ -188,10 +188,10 @@ public class ServiceMetadata implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The category in which the Amazon Web Service belongs, such as compute, storage, database, and so on.
+     * The category that the Amazon Web Service belongs to, such as compute, storage, or database.
      * </p>
      * 
-     * @return The category in which the Amazon Web Service belongs, such as compute, storage, database, and so on.
+     * @return The category that the Amazon Web Service belongs to, such as compute, storage, or database.
      */
 
     public String getCategory() {
@@ -200,11 +200,11 @@ public class ServiceMetadata implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The category in which the Amazon Web Service belongs, such as compute, storage, database, and so on.
+     * The category that the Amazon Web Service belongs to, such as compute, storage, or database.
      * </p>
      * 
      * @param category
-     *        The category in which the Amazon Web Service belongs, such as compute, storage, database, and so on.
+     *        The category that the Amazon Web Service belongs to, such as compute, storage, or database.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

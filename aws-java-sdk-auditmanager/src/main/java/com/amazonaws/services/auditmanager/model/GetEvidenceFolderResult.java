@@ -25,18 +25,18 @@ public class GetEvidenceFolderResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * The folder in which evidence is stored.
+     * The folder that the evidence is stored in.
      * </p>
      */
     private AssessmentEvidenceFolder evidenceFolder;
 
     /**
      * <p>
-     * The folder in which evidence is stored.
+     * The folder that the evidence is stored in.
      * </p>
      * 
      * @param evidenceFolder
-     *        The folder in which evidence is stored.
+     *        The folder that the evidence is stored in.
      */
 
     public void setEvidenceFolder(AssessmentEvidenceFolder evidenceFolder) {
@@ -45,10 +45,10 @@ public class GetEvidenceFolderResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * The folder in which evidence is stored.
+     * The folder that the evidence is stored in.
      * </p>
      * 
-     * @return The folder in which evidence is stored.
+     * @return The folder that the evidence is stored in.
      */
 
     public AssessmentEvidenceFolder getEvidenceFolder() {
@@ -57,11 +57,11 @@ public class GetEvidenceFolderResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * The folder in which evidence is stored.
+     * The folder that the evidence is stored in.
      * </p>
      * 
      * @param evidenceFolder
-     *        The folder in which evidence is stored.
+     *        The folder that the evidence is stored in.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

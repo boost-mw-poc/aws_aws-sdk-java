@@ -40,7 +40,7 @@ public class RemoveRoleFromDBInstanceRequest extends com.amazonaws.AmazonWebServ
     private String roleArn;
     /**
      * <p>
-     * The name of the feature for the DB instance that the IAM role is to be disassociated from. For the list of
+     * The name of the feature for the DB instance that the IAM role is to be disassociated from. For information about
      * supported feature names, see <code>DBEngineVersion</code>.
      * </p>
      */
@@ -134,13 +134,13 @@ public class RemoveRoleFromDBInstanceRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The name of the feature for the DB instance that the IAM role is to be disassociated from. For the list of
+     * The name of the feature for the DB instance that the IAM role is to be disassociated from. For information about
      * supported feature names, see <code>DBEngineVersion</code>.
      * </p>
      * 
      * @param featureName
-     *        The name of the feature for the DB instance that the IAM role is to be disassociated from. For the list of
-     *        supported feature names, see <code>DBEngineVersion</code>.
+     *        The name of the feature for the DB instance that the IAM role is to be disassociated from. For information
+     *        about supported feature names, see <code>DBEngineVersion</code>.
      */
 
     public void setFeatureName(String featureName) {
@@ -149,12 +149,12 @@ public class RemoveRoleFromDBInstanceRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The name of the feature for the DB instance that the IAM role is to be disassociated from. For the list of
+     * The name of the feature for the DB instance that the IAM role is to be disassociated from. For information about
      * supported feature names, see <code>DBEngineVersion</code>.
      * </p>
      * 
-     * @return The name of the feature for the DB instance that the IAM role is to be disassociated from. For the list
-     *         of supported feature names, see <code>DBEngineVersion</code>.
+     * @return The name of the feature for the DB instance that the IAM role is to be disassociated from. For
+     *         information about supported feature names, see <code>DBEngineVersion</code>.
      */
 
     public String getFeatureName() {
@@ -163,13 +163,13 @@ public class RemoveRoleFromDBInstanceRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The name of the feature for the DB instance that the IAM role is to be disassociated from. For the list of
+     * The name of the feature for the DB instance that the IAM role is to be disassociated from. For information about
      * supported feature names, see <code>DBEngineVersion</code>.
      * </p>
      * 
      * @param featureName
-     *        The name of the feature for the DB instance that the IAM role is to be disassociated from. For the list of
-     *        supported feature names, see <code>DBEngineVersion</code>.
+     *        The name of the feature for the DB instance that the IAM role is to be disassociated from. For information
+     *        about supported feature names, see <code>DBEngineVersion</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

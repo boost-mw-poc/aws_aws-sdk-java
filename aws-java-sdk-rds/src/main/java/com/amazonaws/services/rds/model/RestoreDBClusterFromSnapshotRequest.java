@@ -192,9 +192,8 @@ public class RestoreDBClusterFromSnapshotRequest extends com.amazonaws.AmazonWeb
      * cluster snapshot.
      * </p>
      * <p>
-     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the Amazon Web
-     * Services KMS customer master key (CMK). To use a CMK in a different Amazon Web Services account, specify the key
-     * ARN or alias ARN.
+     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key. To
+     * use a KMS key in a different Amazon Web Services account, specify the key ARN or alias ARN.
      * </p>
      * <p>
      * When you don't specify a value for the <code>KmsKeyId</code> parameter, then the following occurs:
@@ -203,8 +202,7 @@ public class RestoreDBClusterFromSnapshotRequest extends com.amazonaws.AmazonWeb
      * <li>
      * <p>
      * If the DB snapshot or DB cluster snapshot in <code>SnapshotIdentifier</code> is encrypted, then the restored DB
-     * cluster is encrypted using the Amazon Web Services KMS CMK that was used to encrypt the DB snapshot or DB cluster
-     * snapshot.
+     * cluster is encrypted using the KMS key that was used to encrypt the DB snapshot or DB cluster snapshot.
      * </p>
      * </li>
      * <li>
@@ -1438,9 +1436,8 @@ public class RestoreDBClusterFromSnapshotRequest extends com.amazonaws.AmazonWeb
      * cluster snapshot.
      * </p>
      * <p>
-     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the Amazon Web
-     * Services KMS customer master key (CMK). To use a CMK in a different Amazon Web Services account, specify the key
-     * ARN or alias ARN.
+     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key. To
+     * use a KMS key in a different Amazon Web Services account, specify the key ARN or alias ARN.
      * </p>
      * <p>
      * When you don't specify a value for the <code>KmsKeyId</code> parameter, then the following occurs:
@@ -1449,8 +1446,7 @@ public class RestoreDBClusterFromSnapshotRequest extends com.amazonaws.AmazonWeb
      * <li>
      * <p>
      * If the DB snapshot or DB cluster snapshot in <code>SnapshotIdentifier</code> is encrypted, then the restored DB
-     * cluster is encrypted using the Amazon Web Services KMS CMK that was used to encrypt the DB snapshot or DB cluster
-     * snapshot.
+     * cluster is encrypted using the KMS key that was used to encrypt the DB snapshot or DB cluster snapshot.
      * </p>
      * </li>
      * <li>
@@ -1465,9 +1461,8 @@ public class RestoreDBClusterFromSnapshotRequest extends com.amazonaws.AmazonWeb
      *        The Amazon Web Services KMS key identifier to use when restoring an encrypted DB cluster from a DB
      *        snapshot or DB cluster snapshot.</p>
      *        <p>
-     *        The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the Amazon
-     *        Web Services KMS customer master key (CMK). To use a CMK in a different Amazon Web Services account,
-     *        specify the key ARN or alias ARN.
+     *        The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS
+     *        key. To use a KMS key in a different Amazon Web Services account, specify the key ARN or alias ARN.
      *        </p>
      *        <p>
      *        When you don't specify a value for the <code>KmsKeyId</code> parameter, then the following occurs:
@@ -1476,8 +1471,8 @@ public class RestoreDBClusterFromSnapshotRequest extends com.amazonaws.AmazonWeb
      *        <li>
      *        <p>
      *        If the DB snapshot or DB cluster snapshot in <code>SnapshotIdentifier</code> is encrypted, then the
-     *        restored DB cluster is encrypted using the Amazon Web Services KMS CMK that was used to encrypt the DB
-     *        snapshot or DB cluster snapshot.
+     *        restored DB cluster is encrypted using the KMS key that was used to encrypt the DB snapshot or DB cluster
+     *        snapshot.
      *        </p>
      *        </li>
      *        <li>
@@ -1498,9 +1493,8 @@ public class RestoreDBClusterFromSnapshotRequest extends com.amazonaws.AmazonWeb
      * cluster snapshot.
      * </p>
      * <p>
-     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the Amazon Web
-     * Services KMS customer master key (CMK). To use a CMK in a different Amazon Web Services account, specify the key
-     * ARN or alias ARN.
+     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key. To
+     * use a KMS key in a different Amazon Web Services account, specify the key ARN or alias ARN.
      * </p>
      * <p>
      * When you don't specify a value for the <code>KmsKeyId</code> parameter, then the following occurs:
@@ -1509,8 +1503,7 @@ public class RestoreDBClusterFromSnapshotRequest extends com.amazonaws.AmazonWeb
      * <li>
      * <p>
      * If the DB snapshot or DB cluster snapshot in <code>SnapshotIdentifier</code> is encrypted, then the restored DB
-     * cluster is encrypted using the Amazon Web Services KMS CMK that was used to encrypt the DB snapshot or DB cluster
-     * snapshot.
+     * cluster is encrypted using the KMS key that was used to encrypt the DB snapshot or DB cluster snapshot.
      * </p>
      * </li>
      * <li>
@@ -1524,9 +1517,8 @@ public class RestoreDBClusterFromSnapshotRequest extends com.amazonaws.AmazonWeb
      * @return The Amazon Web Services KMS key identifier to use when restoring an encrypted DB cluster from a DB
      *         snapshot or DB cluster snapshot.</p>
      *         <p>
-     *         The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the
-     *         Amazon Web Services KMS customer master key (CMK). To use a CMK in a different Amazon Web Services
-     *         account, specify the key ARN or alias ARN.
+     *         The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS
+     *         key. To use a KMS key in a different Amazon Web Services account, specify the key ARN or alias ARN.
      *         </p>
      *         <p>
      *         When you don't specify a value for the <code>KmsKeyId</code> parameter, then the following occurs:
@@ -1535,8 +1527,8 @@ public class RestoreDBClusterFromSnapshotRequest extends com.amazonaws.AmazonWeb
      *         <li>
      *         <p>
      *         If the DB snapshot or DB cluster snapshot in <code>SnapshotIdentifier</code> is encrypted, then the
-     *         restored DB cluster is encrypted using the Amazon Web Services KMS CMK that was used to encrypt the DB
-     *         snapshot or DB cluster snapshot.
+     *         restored DB cluster is encrypted using the KMS key that was used to encrypt the DB snapshot or DB cluster
+     *         snapshot.
      *         </p>
      *         </li>
      *         <li>
@@ -1557,9 +1549,8 @@ public class RestoreDBClusterFromSnapshotRequest extends com.amazonaws.AmazonWeb
      * cluster snapshot.
      * </p>
      * <p>
-     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the Amazon Web
-     * Services KMS customer master key (CMK). To use a CMK in a different Amazon Web Services account, specify the key
-     * ARN or alias ARN.
+     * The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS key. To
+     * use a KMS key in a different Amazon Web Services account, specify the key ARN or alias ARN.
      * </p>
      * <p>
      * When you don't specify a value for the <code>KmsKeyId</code> parameter, then the following occurs:
@@ -1568,8 +1559,7 @@ public class RestoreDBClusterFromSnapshotRequest extends com.amazonaws.AmazonWeb
      * <li>
      * <p>
      * If the DB snapshot or DB cluster snapshot in <code>SnapshotIdentifier</code> is encrypted, then the restored DB
-     * cluster is encrypted using the Amazon Web Services KMS CMK that was used to encrypt the DB snapshot or DB cluster
-     * snapshot.
+     * cluster is encrypted using the KMS key that was used to encrypt the DB snapshot or DB cluster snapshot.
      * </p>
      * </li>
      * <li>
@@ -1584,9 +1574,8 @@ public class RestoreDBClusterFromSnapshotRequest extends com.amazonaws.AmazonWeb
      *        The Amazon Web Services KMS key identifier to use when restoring an encrypted DB cluster from a DB
      *        snapshot or DB cluster snapshot.</p>
      *        <p>
-     *        The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the Amazon
-     *        Web Services KMS customer master key (CMK). To use a CMK in a different Amazon Web Services account,
-     *        specify the key ARN or alias ARN.
+     *        The Amazon Web Services KMS key identifier is the key ARN, key ID, alias ARN, or alias name for the KMS
+     *        key. To use a KMS key in a different Amazon Web Services account, specify the key ARN or alias ARN.
      *        </p>
      *        <p>
      *        When you don't specify a value for the <code>KmsKeyId</code> parameter, then the following occurs:
@@ -1595,8 +1584,8 @@ public class RestoreDBClusterFromSnapshotRequest extends com.amazonaws.AmazonWeb
      *        <li>
      *        <p>
      *        If the DB snapshot or DB cluster snapshot in <code>SnapshotIdentifier</code> is encrypted, then the
-     *        restored DB cluster is encrypted using the Amazon Web Services KMS CMK that was used to encrypt the DB
-     *        snapshot or DB cluster snapshot.
+     *        restored DB cluster is encrypted using the KMS key that was used to encrypt the DB snapshot or DB cluster
+     *        snapshot.
      *        </p>
      *        </li>
      *        <li>

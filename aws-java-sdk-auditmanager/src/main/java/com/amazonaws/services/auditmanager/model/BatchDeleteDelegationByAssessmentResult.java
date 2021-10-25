@@ -26,17 +26,17 @@ public class BatchDeleteDelegationByAssessmentResult extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * A list of errors returned by the <code>BatchDeleteDelegationByAssessment</code> API.
+     * A list of errors that the <code>BatchDeleteDelegationByAssessment</code> API returned.
      * </p>
      */
     private java.util.List<BatchDeleteDelegationByAssessmentError> errors;
 
     /**
      * <p>
-     * A list of errors returned by the <code>BatchDeleteDelegationByAssessment</code> API.
+     * A list of errors that the <code>BatchDeleteDelegationByAssessment</code> API returned.
      * </p>
      * 
-     * @return A list of errors returned by the <code>BatchDeleteDelegationByAssessment</code> API.
+     * @return A list of errors that the <code>BatchDeleteDelegationByAssessment</code> API returned.
      */
 
     public java.util.List<BatchDeleteDelegationByAssessmentError> getErrors() {
@@ -45,11 +45,11 @@ public class BatchDeleteDelegationByAssessmentResult extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * A list of errors returned by the <code>BatchDeleteDelegationByAssessment</code> API.
+     * A list of errors that the <code>BatchDeleteDelegationByAssessment</code> API returned.
      * </p>
      * 
      * @param errors
-     *        A list of errors returned by the <code>BatchDeleteDelegationByAssessment</code> API.
+     *        A list of errors that the <code>BatchDeleteDelegationByAssessment</code> API returned.
      */
 
     public void setErrors(java.util.Collection<BatchDeleteDelegationByAssessmentError> errors) {
@@ -63,7 +63,7 @@ public class BatchDeleteDelegationByAssessmentResult extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * A list of errors returned by the <code>BatchDeleteDelegationByAssessment</code> API.
+     * A list of errors that the <code>BatchDeleteDelegationByAssessment</code> API returned.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -72,7 +72,7 @@ public class BatchDeleteDelegationByAssessmentResult extends com.amazonaws.Amazo
      * </p>
      * 
      * @param errors
-     *        A list of errors returned by the <code>BatchDeleteDelegationByAssessment</code> API.
+     *        A list of errors that the <code>BatchDeleteDelegationByAssessment</code> API returned.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -88,11 +88,11 @@ public class BatchDeleteDelegationByAssessmentResult extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * A list of errors returned by the <code>BatchDeleteDelegationByAssessment</code> API.
+     * A list of errors that the <code>BatchDeleteDelegationByAssessment</code> API returned.
      * </p>
      * 
      * @param errors
-     *        A list of errors returned by the <code>BatchDeleteDelegationByAssessment</code> API.
+     *        A list of errors that the <code>BatchDeleteDelegationByAssessment</code> API returned.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

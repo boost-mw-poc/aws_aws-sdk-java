@@ -27,18 +27,18 @@ public class GetAssessmentFrameworkRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The identifier for the specified framework.
+     * The identifier for the framework.
      * </p>
      */
     private String frameworkId;
 
     /**
      * <p>
-     * The identifier for the specified framework.
+     * The identifier for the framework.
      * </p>
      * 
      * @param frameworkId
-     *        The identifier for the specified framework.
+     *        The identifier for the framework.
      */
 
     public void setFrameworkId(String frameworkId) {
@@ -47,10 +47,10 @@ public class GetAssessmentFrameworkRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The identifier for the specified framework.
+     * The identifier for the framework.
      * </p>
      * 
-     * @return The identifier for the specified framework.
+     * @return The identifier for the framework.
      */
 
     public String getFrameworkId() {
@@ -59,11 +59,11 @@ public class GetAssessmentFrameworkRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * The identifier for the specified framework.
+     * The identifier for the framework.
      * </p>
      * 
      * @param frameworkId
-     *        The identifier for the specified framework.
+     *        The identifier for the framework.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -53,6 +53,8 @@ public enum RDSActions implements Action {
     CopyOptionGroup("rds:CopyOptionGroup"),
     /** Action for the CreateCustomAvailabilityZone operation. */
     CreateCustomAvailabilityZone("rds:CreateCustomAvailabilityZone"),
+    /** Action for the CreateCustomDBEngineVersion operation. */
+    CreateCustomDBEngineVersion("rds:CreateCustomDBEngineVersion"),
     /** Action for the CreateDBCluster operation. */
     CreateDBCluster("rds:CreateDBCluster"),
     /** Action for the CreateDBClusterEndpoint operation. */
@@ -85,6 +87,8 @@ public enum RDSActions implements Action {
     CreateOptionGroup("rds:CreateOptionGroup"),
     /** Action for the DeleteCustomAvailabilityZone operation. */
     DeleteCustomAvailabilityZone("rds:DeleteCustomAvailabilityZone"),
+    /** Action for the DeleteCustomDBEngineVersion operation. */
+    DeleteCustomDBEngineVersion("rds:DeleteCustomDBEngineVersion"),
     /** Action for the DeleteDBCluster operation. */
     DeleteDBCluster("rds:DeleteDBCluster"),
     /** Action for the DeleteDBClusterEndpoint operation. */
@@ -213,6 +217,8 @@ public enum RDSActions implements Action {
     ModifyCertificates("rds:ModifyCertificates"),
     /** Action for the ModifyCurrentDBClusterCapacity operation. */
     ModifyCurrentDBClusterCapacity("rds:ModifyCurrentDBClusterCapacity"),
+    /** Action for the ModifyCustomDBEngineVersion operation. */
+    ModifyCustomDBEngineVersion("rds:ModifyCustomDBEngineVersion"),
     /** Action for the ModifyDBCluster operation. */
     ModifyDBCluster("rds:ModifyDBCluster"),
     /** Action for the ModifyDBClusterEndpoint operation. */

@@ -169,6 +169,47 @@ public class DBEngineVersionStaxUnmarshaller implements Unmarshaller<DBEngineVer
                     dBEngineVersion.setSupportsGlobalDatabases(BooleanStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("MajorEngineVersion", targetDepth)) {
+                    dBEngineVersion.setMajorEngineVersion(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
+                if (context.testExpression("DatabaseInstallationFilesS3BucketName", targetDepth)) {
+                    dBEngineVersion.setDatabaseInstallationFilesS3BucketName(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
+                if (context.testExpression("DatabaseInstallationFilesS3Prefix", targetDepth)) {
+                    dBEngineVersion.setDatabaseInstallationFilesS3Prefix(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
+                if (context.testExpression("DBEngineVersionArn", targetDepth)) {
+                    dBEngineVersion.setDBEngineVersionArn(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
+                if (context.testExpression("KMSKeyId", targetDepth)) {
+                    dBEngineVersion.setKMSKeyId(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
+                if (context.testExpression("CreateTime", targetDepth)) {
+                    dBEngineVersion.setCreateTime(DateStaxUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
+                    continue;
+                }
+
+                if (context.testExpression("TagList", targetDepth)) {
+                    dBEngineVersion.withTagList(new ArrayList<Tag>());
+                    continue;
+                }
+
+                if (context.testExpression("TagList/Tag", targetDepth)) {
+                    dBEngineVersion.withTagList(TagStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return dBEngineVersion;

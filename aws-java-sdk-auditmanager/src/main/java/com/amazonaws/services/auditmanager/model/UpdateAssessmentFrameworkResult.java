@@ -25,18 +25,18 @@ public class UpdateAssessmentFrameworkResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The name of the specified framework.
+     * The name of the framework.
      * </p>
      */
     private Framework framework;
 
     /**
      * <p>
-     * The name of the specified framework.
+     * The name of the framework.
      * </p>
      * 
      * @param framework
-     *        The name of the specified framework.
+     *        The name of the framework.
      */
 
     public void setFramework(Framework framework) {
@@ -45,10 +45,10 @@ public class UpdateAssessmentFrameworkResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The name of the specified framework.
+     * The name of the framework.
      * </p>
      * 
-     * @return The name of the specified framework.
+     * @return The name of the framework.
      */
 
     public Framework getFramework() {
@@ -57,11 +57,11 @@ public class UpdateAssessmentFrameworkResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The name of the specified framework.
+     * The name of the framework.
      * </p>
      * 
      * @param framework
-     *        The name of the specified framework.
+     *        The name of the framework.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

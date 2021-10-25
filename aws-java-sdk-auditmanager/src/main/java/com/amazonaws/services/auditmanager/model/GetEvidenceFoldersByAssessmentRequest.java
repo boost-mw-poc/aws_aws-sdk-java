@@ -27,30 +27,30 @@ public class GetEvidenceFoldersByAssessmentRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The identifier for the specified assessment.
+     * The identifier for the assessment.
      * </p>
      */
     private String assessmentId;
     /**
      * <p>
-     * The pagination token used to fetch the next set of results.
+     * The pagination token that's used to fetch the next set of results.
      * </p>
      */
     private String nextToken;
     /**
      * <p>
-     * Represents the maximum number of results per page, or per API request call.
+     * Represents the maximum number of results on a page or for an API request call.
      * </p>
      */
     private Integer maxResults;
 
     /**
      * <p>
-     * The identifier for the specified assessment.
+     * The identifier for the assessment.
      * </p>
      * 
      * @param assessmentId
-     *        The identifier for the specified assessment.
+     *        The identifier for the assessment.
      */
 
     public void setAssessmentId(String assessmentId) {
@@ -59,10 +59,10 @@ public class GetEvidenceFoldersByAssessmentRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The identifier for the specified assessment.
+     * The identifier for the assessment.
      * </p>
      * 
-     * @return The identifier for the specified assessment.
+     * @return The identifier for the assessment.
      */
 
     public String getAssessmentId() {
@@ -71,11 +71,11 @@ public class GetEvidenceFoldersByAssessmentRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The identifier for the specified assessment.
+     * The identifier for the assessment.
      * </p>
      * 
      * @param assessmentId
-     *        The identifier for the specified assessment.
+     *        The identifier for the assessment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -86,11 +86,11 @@ public class GetEvidenceFoldersByAssessmentRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The pagination token used to fetch the next set of results.
+     * The pagination token that's used to fetch the next set of results.
      * </p>
      * 
      * @param nextToken
-     *        The pagination token used to fetch the next set of results.
+     *        The pagination token that's used to fetch the next set of results.
      */
 
     public void setNextToken(String nextToken) {
@@ -99,10 +99,10 @@ public class GetEvidenceFoldersByAssessmentRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The pagination token used to fetch the next set of results.
+     * The pagination token that's used to fetch the next set of results.
      * </p>
      * 
-     * @return The pagination token used to fetch the next set of results.
+     * @return The pagination token that's used to fetch the next set of results.
      */
 
     public String getNextToken() {
@@ -111,11 +111,11 @@ public class GetEvidenceFoldersByAssessmentRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The pagination token used to fetch the next set of results.
+     * The pagination token that's used to fetch the next set of results.
      * </p>
      * 
      * @param nextToken
-     *        The pagination token used to fetch the next set of results.
+     *        The pagination token that's used to fetch the next set of results.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -126,11 +126,11 @@ public class GetEvidenceFoldersByAssessmentRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * Represents the maximum number of results per page, or per API request call.
+     * Represents the maximum number of results on a page or for an API request call.
      * </p>
      * 
      * @param maxResults
-     *        Represents the maximum number of results per page, or per API request call.
+     *        Represents the maximum number of results on a page or for an API request call.
      */
 
     public void setMaxResults(Integer maxResults) {
@@ -139,10 +139,10 @@ public class GetEvidenceFoldersByAssessmentRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * Represents the maximum number of results per page, or per API request call.
+     * Represents the maximum number of results on a page or for an API request call.
      * </p>
      * 
-     * @return Represents the maximum number of results per page, or per API request call.
+     * @return Represents the maximum number of results on a page or for an API request call.
      */
 
     public Integer getMaxResults() {
@@ -151,11 +151,11 @@ public class GetEvidenceFoldersByAssessmentRequest extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * Represents the maximum number of results per page, or per API request call.
+     * Represents the maximum number of results on a page or for an API request call.
      * </p>
      * 
      * @param maxResults
-     *        Represents the maximum number of results per page, or per API request call.
+     *        Represents the maximum number of results on a page or for an API request call.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
