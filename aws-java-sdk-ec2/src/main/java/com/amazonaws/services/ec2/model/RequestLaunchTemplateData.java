@@ -79,6 +79,9 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance Types</a> in the
      * <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
+     * <p>
+     * If you specify <code>InstanceTypes</code>, you can't specify <code>InstanceRequirements</code>.
+     * </p>
      */
     private String instanceType;
     /**
@@ -257,6 +260,16 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
      * </p>
      */
     private LaunchTemplateEnclaveOptionsRequest enclaveOptions;
+    /**
+     * <p>
+     * The attributes for the instance types. When you specify instance attributes, Amazon EC2 will identify instance
+     * types with these attributes.
+     * </p>
+     * <p>
+     * If you specify <code>InstanceRequirements</code>, you can't specify <code>InstanceTypes</code>.
+     * </p>
+     */
+    private InstanceRequirementsRequest instanceRequirements;
 
     /**
      * <p>
@@ -651,11 +664,16 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance Types</a> in the
      * <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
+     * <p>
+     * If you specify <code>InstanceTypes</code>, you can't specify <code>InstanceRequirements</code>.
+     * </p>
      * 
      * @param instanceType
      *        The instance type. For more information, see <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance Types</a> in the
-     *        <i>Amazon Elastic Compute Cloud User Guide</i>.
+     *        <i>Amazon Elastic Compute Cloud User Guide</i>.</p>
+     *        <p>
+     *        If you specify <code>InstanceTypes</code>, you can't specify <code>InstanceRequirements</code>.
      * @see InstanceType
      */
 
@@ -669,10 +687,15 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance Types</a> in the
      * <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
+     * <p>
+     * If you specify <code>InstanceTypes</code>, you can't specify <code>InstanceRequirements</code>.
+     * </p>
      * 
      * @return The instance type. For more information, see <a
      *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance Types</a> in the
-     *         <i>Amazon Elastic Compute Cloud User Guide</i>.
+     *         <i>Amazon Elastic Compute Cloud User Guide</i>.</p>
+     *         <p>
+     *         If you specify <code>InstanceTypes</code>, you can't specify <code>InstanceRequirements</code>.
      * @see InstanceType
      */
 
@@ -686,11 +709,16 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance Types</a> in the
      * <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
+     * <p>
+     * If you specify <code>InstanceTypes</code>, you can't specify <code>InstanceRequirements</code>.
+     * </p>
      * 
      * @param instanceType
      *        The instance type. For more information, see <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance Types</a> in the
-     *        <i>Amazon Elastic Compute Cloud User Guide</i>.
+     *        <i>Amazon Elastic Compute Cloud User Guide</i>.</p>
+     *        <p>
+     *        If you specify <code>InstanceTypes</code>, you can't specify <code>InstanceRequirements</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see InstanceType
      */
@@ -706,11 +734,16 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
      * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance Types</a> in the
      * <i>Amazon Elastic Compute Cloud User Guide</i>.
      * </p>
+     * <p>
+     * If you specify <code>InstanceTypes</code>, you can't specify <code>InstanceRequirements</code>.
+     * </p>
      * 
      * @param instanceType
      *        The instance type. For more information, see <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">Instance Types</a> in the
-     *        <i>Amazon Elastic Compute Cloud User Guide</i>.
+     *        <i>Amazon Elastic Compute Cloud User Guide</i>.</p>
+     *        <p>
+     *        If you specify <code>InstanceTypes</code>, you can't specify <code>InstanceRequirements</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see InstanceType
      */
@@ -2106,6 +2139,67 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * The attributes for the instance types. When you specify instance attributes, Amazon EC2 will identify instance
+     * types with these attributes.
+     * </p>
+     * <p>
+     * If you specify <code>InstanceRequirements</code>, you can't specify <code>InstanceTypes</code>.
+     * </p>
+     * 
+     * @param instanceRequirements
+     *        The attributes for the instance types. When you specify instance attributes, Amazon EC2 will identify
+     *        instance types with these attributes.</p>
+     *        <p>
+     *        If you specify <code>InstanceRequirements</code>, you can't specify <code>InstanceTypes</code>.
+     */
+
+    public void setInstanceRequirements(InstanceRequirementsRequest instanceRequirements) {
+        this.instanceRequirements = instanceRequirements;
+    }
+
+    /**
+     * <p>
+     * The attributes for the instance types. When you specify instance attributes, Amazon EC2 will identify instance
+     * types with these attributes.
+     * </p>
+     * <p>
+     * If you specify <code>InstanceRequirements</code>, you can't specify <code>InstanceTypes</code>.
+     * </p>
+     * 
+     * @return The attributes for the instance types. When you specify instance attributes, Amazon EC2 will identify
+     *         instance types with these attributes.</p>
+     *         <p>
+     *         If you specify <code>InstanceRequirements</code>, you can't specify <code>InstanceTypes</code>.
+     */
+
+    public InstanceRequirementsRequest getInstanceRequirements() {
+        return this.instanceRequirements;
+    }
+
+    /**
+     * <p>
+     * The attributes for the instance types. When you specify instance attributes, Amazon EC2 will identify instance
+     * types with these attributes.
+     * </p>
+     * <p>
+     * If you specify <code>InstanceRequirements</code>, you can't specify <code>InstanceTypes</code>.
+     * </p>
+     * 
+     * @param instanceRequirements
+     *        The attributes for the instance types. When you specify instance attributes, Amazon EC2 will identify
+     *        instance types with these attributes.</p>
+     *        <p>
+     *        If you specify <code>InstanceRequirements</code>, you can't specify <code>InstanceTypes</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RequestLaunchTemplateData withInstanceRequirements(InstanceRequirementsRequest instanceRequirements) {
+        setInstanceRequirements(instanceRequirements);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -2170,7 +2264,9 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
         if (getMetadataOptions() != null)
             sb.append("MetadataOptions: ").append(getMetadataOptions()).append(",");
         if (getEnclaveOptions() != null)
-            sb.append("EnclaveOptions: ").append(getEnclaveOptions());
+            sb.append("EnclaveOptions: ").append(getEnclaveOptions()).append(",");
+        if (getInstanceRequirements() != null)
+            sb.append("InstanceRequirements: ").append(getInstanceRequirements());
         sb.append("}");
         return sb.toString();
     }
@@ -2295,6 +2391,10 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
             return false;
         if (other.getEnclaveOptions() != null && other.getEnclaveOptions().equals(this.getEnclaveOptions()) == false)
             return false;
+        if (other.getInstanceRequirements() == null ^ this.getInstanceRequirements() == null)
+            return false;
+        if (other.getInstanceRequirements() != null && other.getInstanceRequirements().equals(this.getInstanceRequirements()) == false)
+            return false;
         return true;
     }
 
@@ -2330,6 +2430,7 @@ public class RequestLaunchTemplateData implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getHibernationOptions() == null) ? 0 : getHibernationOptions().hashCode());
         hashCode = prime * hashCode + ((getMetadataOptions() == null) ? 0 : getMetadataOptions().hashCode());
         hashCode = prime * hashCode + ((getEnclaveOptions() == null) ? 0 : getEnclaveOptions().hashCode());
+        hashCode = prime * hashCode + ((getInstanceRequirements() == null) ? 0 : getInstanceRequirements().hashCode());
         return hashCode;
     }
 

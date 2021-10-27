@@ -30,6 +30,11 @@ public class FleetLaunchTemplateOverrides implements Serializable, Cloneable {
      * <p>
      * The instance type.
      * </p>
+     * <note>
+     * <p>
+     * If you specify <code>InstanceTypes</code>, you can't specify <code>InstanceRequirements</code>.
+     * </p>
+     * </note>
      */
     private String instanceType;
     /**
@@ -82,14 +87,34 @@ public class FleetLaunchTemplateOverrides implements Serializable, Cloneable {
      * </p>
      */
     private PlacementResponse placement;
+    /**
+     * <p>
+     * The attributes for the instance types. When you specify instance attributes, Amazon EC2 will identify instance
+     * types with those attributes.
+     * </p>
+     * <note>
+     * <p>
+     * If you specify <code>InstanceRequirements</code>, you can't specify <code>InstanceTypes</code>.
+     * </p>
+     * </note>
+     */
+    private InstanceRequirements instanceRequirements;
 
     /**
      * <p>
      * The instance type.
      * </p>
+     * <note>
+     * <p>
+     * If you specify <code>InstanceTypes</code>, you can't specify <code>InstanceRequirements</code>.
+     * </p>
+     * </note>
      * 
      * @param instanceType
-     *        The instance type.
+     *        The instance type.</p> <note>
+     *        <p>
+     *        If you specify <code>InstanceTypes</code>, you can't specify <code>InstanceRequirements</code>.
+     *        </p>
      * @see InstanceType
      */
 
@@ -101,8 +126,16 @@ public class FleetLaunchTemplateOverrides implements Serializable, Cloneable {
      * <p>
      * The instance type.
      * </p>
+     * <note>
+     * <p>
+     * If you specify <code>InstanceTypes</code>, you can't specify <code>InstanceRequirements</code>.
+     * </p>
+     * </note>
      * 
-     * @return The instance type.
+     * @return The instance type.</p> <note>
+     *         <p>
+     *         If you specify <code>InstanceTypes</code>, you can't specify <code>InstanceRequirements</code>.
+     *         </p>
      * @see InstanceType
      */
 
@@ -114,9 +147,17 @@ public class FleetLaunchTemplateOverrides implements Serializable, Cloneable {
      * <p>
      * The instance type.
      * </p>
+     * <note>
+     * <p>
+     * If you specify <code>InstanceTypes</code>, you can't specify <code>InstanceRequirements</code>.
+     * </p>
+     * </note>
      * 
      * @param instanceType
-     *        The instance type.
+     *        The instance type.</p> <note>
+     *        <p>
+     *        If you specify <code>InstanceTypes</code>, you can't specify <code>InstanceRequirements</code>.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see InstanceType
      */
@@ -130,9 +171,17 @@ public class FleetLaunchTemplateOverrides implements Serializable, Cloneable {
      * <p>
      * The instance type.
      * </p>
+     * <note>
+     * <p>
+     * If you specify <code>InstanceTypes</code>, you can't specify <code>InstanceRequirements</code>.
+     * </p>
+     * </note>
      * 
      * @param instanceType
-     *        The instance type.
+     *        The instance type.</p> <note>
+     *        <p>
+     *        If you specify <code>InstanceTypes</code>, you can't specify <code>InstanceRequirements</code>.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see InstanceType
      */
@@ -464,6 +513,76 @@ public class FleetLaunchTemplateOverrides implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * The attributes for the instance types. When you specify instance attributes, Amazon EC2 will identify instance
+     * types with those attributes.
+     * </p>
+     * <note>
+     * <p>
+     * If you specify <code>InstanceRequirements</code>, you can't specify <code>InstanceTypes</code>.
+     * </p>
+     * </note>
+     * 
+     * @param instanceRequirements
+     *        The attributes for the instance types. When you specify instance attributes, Amazon EC2 will identify
+     *        instance types with those attributes.</p> <note>
+     *        <p>
+     *        If you specify <code>InstanceRequirements</code>, you can't specify <code>InstanceTypes</code>.
+     *        </p>
+     */
+
+    public void setInstanceRequirements(InstanceRequirements instanceRequirements) {
+        this.instanceRequirements = instanceRequirements;
+    }
+
+    /**
+     * <p>
+     * The attributes for the instance types. When you specify instance attributes, Amazon EC2 will identify instance
+     * types with those attributes.
+     * </p>
+     * <note>
+     * <p>
+     * If you specify <code>InstanceRequirements</code>, you can't specify <code>InstanceTypes</code>.
+     * </p>
+     * </note>
+     * 
+     * @return The attributes for the instance types. When you specify instance attributes, Amazon EC2 will identify
+     *         instance types with those attributes.</p> <note>
+     *         <p>
+     *         If you specify <code>InstanceRequirements</code>, you can't specify <code>InstanceTypes</code>.
+     *         </p>
+     */
+
+    public InstanceRequirements getInstanceRequirements() {
+        return this.instanceRequirements;
+    }
+
+    /**
+     * <p>
+     * The attributes for the instance types. When you specify instance attributes, Amazon EC2 will identify instance
+     * types with those attributes.
+     * </p>
+     * <note>
+     * <p>
+     * If you specify <code>InstanceRequirements</code>, you can't specify <code>InstanceTypes</code>.
+     * </p>
+     * </note>
+     * 
+     * @param instanceRequirements
+     *        The attributes for the instance types. When you specify instance attributes, Amazon EC2 will identify
+     *        instance types with those attributes.</p> <note>
+     *        <p>
+     *        If you specify <code>InstanceRequirements</code>, you can't specify <code>InstanceTypes</code>.
+     *        </p>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public FleetLaunchTemplateOverrides withInstanceRequirements(InstanceRequirements instanceRequirements) {
+        setInstanceRequirements(instanceRequirements);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -488,7 +607,9 @@ public class FleetLaunchTemplateOverrides implements Serializable, Cloneable {
         if (getPriority() != null)
             sb.append("Priority: ").append(getPriority()).append(",");
         if (getPlacement() != null)
-            sb.append("Placement: ").append(getPlacement());
+            sb.append("Placement: ").append(getPlacement()).append(",");
+        if (getInstanceRequirements() != null)
+            sb.append("InstanceRequirements: ").append(getInstanceRequirements());
         sb.append("}");
         return sb.toString();
     }
@@ -531,6 +652,10 @@ public class FleetLaunchTemplateOverrides implements Serializable, Cloneable {
             return false;
         if (other.getPlacement() != null && other.getPlacement().equals(this.getPlacement()) == false)
             return false;
+        if (other.getInstanceRequirements() == null ^ this.getInstanceRequirements() == null)
+            return false;
+        if (other.getInstanceRequirements() != null && other.getInstanceRequirements().equals(this.getInstanceRequirements()) == false)
+            return false;
         return true;
     }
 
@@ -546,6 +671,7 @@ public class FleetLaunchTemplateOverrides implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getWeightedCapacity() == null) ? 0 : getWeightedCapacity().hashCode());
         hashCode = prime * hashCode + ((getPriority() == null) ? 0 : getPriority().hashCode());
         hashCode = prime * hashCode + ((getPlacement() == null) ? 0 : getPlacement().hashCode());
+        hashCode = prime * hashCode + ((getInstanceRequirements() == null) ? 0 : getInstanceRequirements().hashCode());
         return hashCode;
     }
 

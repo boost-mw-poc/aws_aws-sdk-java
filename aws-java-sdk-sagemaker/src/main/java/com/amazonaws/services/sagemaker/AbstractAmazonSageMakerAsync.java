@@ -67,6 +67,19 @@ public class AbstractAmazonSageMakerAsync extends AbstractAmazonSageMaker implem
     }
 
     @Override
+    public java.util.concurrent.Future<BatchDescribeModelPackageResult> batchDescribeModelPackageAsync(BatchDescribeModelPackageRequest request) {
+
+        return batchDescribeModelPackageAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<BatchDescribeModelPackageResult> batchDescribeModelPackageAsync(BatchDescribeModelPackageRequest request,
+            com.amazonaws.handlers.AsyncHandler<BatchDescribeModelPackageRequest, BatchDescribeModelPackageResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateActionResult> createActionAsync(CreateActionRequest request) {
 
         return createActionAsync(request, null);
@@ -3113,6 +3126,19 @@ public class AbstractAmazonSageMakerAsync extends AbstractAmazonSageMaker implem
     @Override
     public java.util.concurrent.Future<UpdatePipelineExecutionResult> updatePipelineExecutionAsync(UpdatePipelineExecutionRequest request,
             com.amazonaws.handlers.AsyncHandler<UpdatePipelineExecutionRequest, UpdatePipelineExecutionResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateProjectResult> updateProjectAsync(UpdateProjectRequest request) {
+
+        return updateProjectAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateProjectResult> updateProjectAsync(UpdateProjectRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateProjectRequest, UpdateProjectResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

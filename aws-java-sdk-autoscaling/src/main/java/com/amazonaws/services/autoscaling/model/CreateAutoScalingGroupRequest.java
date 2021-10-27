@@ -63,15 +63,10 @@ public class CreateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
     private LaunchTemplateSpecification launchTemplate;
     /**
      * <p>
-     * An embedded object that specifies a mixed instances policy. The required properties must be specified. If
-     * optional properties are unspecified, their default values are used.
+     * An embedded object that specifies a mixed instances policy.
      * </p>
      * <p>
-     * The policy includes properties that not only define the distribution of On-Demand Instances and Spot Instances,
-     * the maximum price to pay for Spot Instances, and how the Auto Scaling group allocates instance types to fulfill
-     * On-Demand and Spot capacities, but also the properties that specify the instance configuration information—the
-     * launch template and instance types. The policy can also include a weight for each instance type and different
-     * launch templates for individual instance types. For more information, see <a
+     * For more information, see <a
      * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-purchase-options.html">Auto Scaling groups with
      * multiple instance types and purchase options</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
@@ -273,6 +268,22 @@ public class CreateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
      * </p>
      */
     private String context;
+    /**
+     * <p>
+     * The unit of measurement for the value specified for desired capacity. Amazon EC2 Auto Scaling supports
+     * <code>DesiredCapacityType</code> for attribute-based instance type selection only. For more information, see <a
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-asg-instance-type-requirements.html">Creating
+     * an Auto Scaling group using attribute-based instance type selection</a> in the <i>Amazon EC2 Auto Scaling User
+     * Guide</i>.
+     * </p>
+     * <p>
+     * By default, Amazon EC2 Auto Scaling specifies <code>units</code>, which translates into number of instances.
+     * </p>
+     * <p>
+     * Valid values: <code>units</code> | <code>vcpu</code> | <code>memory-mib</code>
+     * </p>
+     */
+    private String desiredCapacityType;
 
     /**
      * <p>
@@ -498,31 +509,20 @@ public class CreateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * An embedded object that specifies a mixed instances policy. The required properties must be specified. If
-     * optional properties are unspecified, their default values are used.
+     * An embedded object that specifies a mixed instances policy.
      * </p>
      * <p>
-     * The policy includes properties that not only define the distribution of On-Demand Instances and Spot Instances,
-     * the maximum price to pay for Spot Instances, and how the Auto Scaling group allocates instance types to fulfill
-     * On-Demand and Spot capacities, but also the properties that specify the instance configuration information—the
-     * launch template and instance types. The policy can also include a weight for each instance type and different
-     * launch templates for individual instance types. For more information, see <a
+     * For more information, see <a
      * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-purchase-options.html">Auto Scaling groups with
      * multiple instance types and purchase options</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
      * 
      * @param mixedInstancesPolicy
-     *        An embedded object that specifies a mixed instances policy. The required properties must be specified. If
-     *        optional properties are unspecified, their default values are used.</p>
+     *        An embedded object that specifies a mixed instances policy.</p>
      *        <p>
-     *        The policy includes properties that not only define the distribution of On-Demand Instances and Spot
-     *        Instances, the maximum price to pay for Spot Instances, and how the Auto Scaling group allocates instance
-     *        types to fulfill On-Demand and Spot capacities, but also the properties that specify the instance
-     *        configuration information—the launch template and instance types. The policy can also include a weight for
-     *        each instance type and different launch templates for individual instance types. For more information, see
-     *        <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-purchase-options.html">Auto Scaling
-     *        groups with multiple instance types and purchase options</a> in the <i>Amazon EC2 Auto Scaling User
-     *        Guide</i>.
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-purchase-options.html">Auto Scaling groups
+     *        with multiple instance types and purchase options</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      */
 
     public void setMixedInstancesPolicy(MixedInstancesPolicy mixedInstancesPolicy) {
@@ -531,28 +531,17 @@ public class CreateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * An embedded object that specifies a mixed instances policy. The required properties must be specified. If
-     * optional properties are unspecified, their default values are used.
+     * An embedded object that specifies a mixed instances policy.
      * </p>
      * <p>
-     * The policy includes properties that not only define the distribution of On-Demand Instances and Spot Instances,
-     * the maximum price to pay for Spot Instances, and how the Auto Scaling group allocates instance types to fulfill
-     * On-Demand and Spot capacities, but also the properties that specify the instance configuration information—the
-     * launch template and instance types. The policy can also include a weight for each instance type and different
-     * launch templates for individual instance types. For more information, see <a
+     * For more information, see <a
      * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-purchase-options.html">Auto Scaling groups with
      * multiple instance types and purchase options</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
      * 
-     * @return An embedded object that specifies a mixed instances policy. The required properties must be specified. If
-     *         optional properties are unspecified, their default values are used.</p>
+     * @return An embedded object that specifies a mixed instances policy.</p>
      *         <p>
-     *         The policy includes properties that not only define the distribution of On-Demand Instances and Spot
-     *         Instances, the maximum price to pay for Spot Instances, and how the Auto Scaling group allocates instance
-     *         types to fulfill On-Demand and Spot capacities, but also the properties that specify the instance
-     *         configuration information—the launch template and instance types. The policy can also include a weight
-     *         for each instance type and different launch templates for individual instance types. For more
-     *         information, see <a
+     *         For more information, see <a
      *         href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-purchase-options.html">Auto Scaling
      *         groups with multiple instance types and purchase options</a> in the <i>Amazon EC2 Auto Scaling User
      *         Guide</i>.
@@ -564,31 +553,20 @@ public class CreateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * An embedded object that specifies a mixed instances policy. The required properties must be specified. If
-     * optional properties are unspecified, their default values are used.
+     * An embedded object that specifies a mixed instances policy.
      * </p>
      * <p>
-     * The policy includes properties that not only define the distribution of On-Demand Instances and Spot Instances,
-     * the maximum price to pay for Spot Instances, and how the Auto Scaling group allocates instance types to fulfill
-     * On-Demand and Spot capacities, but also the properties that specify the instance configuration information—the
-     * launch template and instance types. The policy can also include a weight for each instance type and different
-     * launch templates for individual instance types. For more information, see <a
+     * For more information, see <a
      * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-purchase-options.html">Auto Scaling groups with
      * multiple instance types and purchase options</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * </p>
      * 
      * @param mixedInstancesPolicy
-     *        An embedded object that specifies a mixed instances policy. The required properties must be specified. If
-     *        optional properties are unspecified, their default values are used.</p>
+     *        An embedded object that specifies a mixed instances policy.</p>
      *        <p>
-     *        The policy includes properties that not only define the distribution of On-Demand Instances and Spot
-     *        Instances, the maximum price to pay for Spot Instances, and how the Auto Scaling group allocates instance
-     *        types to fulfill On-Demand and Spot capacities, but also the properties that specify the instance
-     *        configuration information—the launch template and instance types. The policy can also include a weight for
-     *        each instance type and different launch templates for individual instance types. For more information, see
-     *        <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-purchase-options.html">Auto Scaling
-     *        groups with multiple instance types and purchase options</a> in the <i>Amazon EC2 Auto Scaling User
-     *        Guide</i>.
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-purchase-options.html">Auto Scaling groups
+     *        with multiple instance types and purchase options</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2137,6 +2115,109 @@ public class CreateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
     }
 
     /**
+     * <p>
+     * The unit of measurement for the value specified for desired capacity. Amazon EC2 Auto Scaling supports
+     * <code>DesiredCapacityType</code> for attribute-based instance type selection only. For more information, see <a
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-asg-instance-type-requirements.html">Creating
+     * an Auto Scaling group using attribute-based instance type selection</a> in the <i>Amazon EC2 Auto Scaling User
+     * Guide</i>.
+     * </p>
+     * <p>
+     * By default, Amazon EC2 Auto Scaling specifies <code>units</code>, which translates into number of instances.
+     * </p>
+     * <p>
+     * Valid values: <code>units</code> | <code>vcpu</code> | <code>memory-mib</code>
+     * </p>
+     * 
+     * @param desiredCapacityType
+     *        The unit of measurement for the value specified for desired capacity. Amazon EC2 Auto Scaling supports
+     *        <code>DesiredCapacityType</code> for attribute-based instance type selection only. For more information,
+     *        see <a
+     *        href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-asg-instance-type-requirements.html"
+     *        >Creating an Auto Scaling group using attribute-based instance type selection</a> in the <i>Amazon EC2
+     *        Auto Scaling User Guide</i>.</p>
+     *        <p>
+     *        By default, Amazon EC2 Auto Scaling specifies <code>units</code>, which translates into number of
+     *        instances.
+     *        </p>
+     *        <p>
+     *        Valid values: <code>units</code> | <code>vcpu</code> | <code>memory-mib</code>
+     */
+
+    public void setDesiredCapacityType(String desiredCapacityType) {
+        this.desiredCapacityType = desiredCapacityType;
+    }
+
+    /**
+     * <p>
+     * The unit of measurement for the value specified for desired capacity. Amazon EC2 Auto Scaling supports
+     * <code>DesiredCapacityType</code> for attribute-based instance type selection only. For more information, see <a
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-asg-instance-type-requirements.html">Creating
+     * an Auto Scaling group using attribute-based instance type selection</a> in the <i>Amazon EC2 Auto Scaling User
+     * Guide</i>.
+     * </p>
+     * <p>
+     * By default, Amazon EC2 Auto Scaling specifies <code>units</code>, which translates into number of instances.
+     * </p>
+     * <p>
+     * Valid values: <code>units</code> | <code>vcpu</code> | <code>memory-mib</code>
+     * </p>
+     * 
+     * @return The unit of measurement for the value specified for desired capacity. Amazon EC2 Auto Scaling supports
+     *         <code>DesiredCapacityType</code> for attribute-based instance type selection only. For more information,
+     *         see <a
+     *         href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-asg-instance-type-requirements.html"
+     *         >Creating an Auto Scaling group using attribute-based instance type selection</a> in the <i>Amazon EC2
+     *         Auto Scaling User Guide</i>.</p>
+     *         <p>
+     *         By default, Amazon EC2 Auto Scaling specifies <code>units</code>, which translates into number of
+     *         instances.
+     *         </p>
+     *         <p>
+     *         Valid values: <code>units</code> | <code>vcpu</code> | <code>memory-mib</code>
+     */
+
+    public String getDesiredCapacityType() {
+        return this.desiredCapacityType;
+    }
+
+    /**
+     * <p>
+     * The unit of measurement for the value specified for desired capacity. Amazon EC2 Auto Scaling supports
+     * <code>DesiredCapacityType</code> for attribute-based instance type selection only. For more information, see <a
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-asg-instance-type-requirements.html">Creating
+     * an Auto Scaling group using attribute-based instance type selection</a> in the <i>Amazon EC2 Auto Scaling User
+     * Guide</i>.
+     * </p>
+     * <p>
+     * By default, Amazon EC2 Auto Scaling specifies <code>units</code>, which translates into number of instances.
+     * </p>
+     * <p>
+     * Valid values: <code>units</code> | <code>vcpu</code> | <code>memory-mib</code>
+     * </p>
+     * 
+     * @param desiredCapacityType
+     *        The unit of measurement for the value specified for desired capacity. Amazon EC2 Auto Scaling supports
+     *        <code>DesiredCapacityType</code> for attribute-based instance type selection only. For more information,
+     *        see <a
+     *        href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-asg-instance-type-requirements.html"
+     *        >Creating an Auto Scaling group using attribute-based instance type selection</a> in the <i>Amazon EC2
+     *        Auto Scaling User Guide</i>.</p>
+     *        <p>
+     *        By default, Amazon EC2 Auto Scaling specifies <code>units</code>, which translates into number of
+     *        instances.
+     *        </p>
+     *        <p>
+     *        Valid values: <code>units</code> | <code>vcpu</code> | <code>memory-mib</code>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateAutoScalingGroupRequest withDesiredCapacityType(String desiredCapacityType) {
+        setDesiredCapacityType(desiredCapacityType);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -2195,7 +2276,9 @@ public class CreateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
         if (getMaxInstanceLifetime() != null)
             sb.append("MaxInstanceLifetime: ").append(getMaxInstanceLifetime()).append(",");
         if (getContext() != null)
-            sb.append("Context: ").append(getContext());
+            sb.append("Context: ").append(getContext()).append(",");
+        if (getDesiredCapacityType() != null)
+            sb.append("DesiredCapacityType: ").append(getDesiredCapacityType());
         sb.append("}");
         return sb.toString();
     }
@@ -2308,6 +2391,10 @@ public class CreateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
             return false;
         if (other.getContext() != null && other.getContext().equals(this.getContext()) == false)
             return false;
+        if (other.getDesiredCapacityType() == null ^ this.getDesiredCapacityType() == null)
+            return false;
+        if (other.getDesiredCapacityType() != null && other.getDesiredCapacityType().equals(this.getDesiredCapacityType()) == false)
+            return false;
         return true;
     }
 
@@ -2340,6 +2427,7 @@ public class CreateAutoScalingGroupRequest extends com.amazonaws.AmazonWebServic
         hashCode = prime * hashCode + ((getServiceLinkedRoleARN() == null) ? 0 : getServiceLinkedRoleARN().hashCode());
         hashCode = prime * hashCode + ((getMaxInstanceLifetime() == null) ? 0 : getMaxInstanceLifetime().hashCode());
         hashCode = prime * hashCode + ((getContext() == null) ? 0 : getContext().hashCode());
+        hashCode = prime * hashCode + ((getDesiredCapacityType() == null) ? 0 : getDesiredCapacityType().hashCode());
         return hashCode;
     }
 

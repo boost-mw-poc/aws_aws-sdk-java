@@ -2048,6 +2048,11 @@ public class AbstractAmazonEC2 implements AmazonEC2 {
     }
 
     @Override
+    public GetInstanceTypesFromInstanceRequirementsResult getInstanceTypesFromInstanceRequirements(GetInstanceTypesFromInstanceRequirementsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetLaunchTemplateDataResult getLaunchTemplateData(GetLaunchTemplateDataRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -2074,6 +2079,11 @@ public class AbstractAmazonEC2 implements AmazonEC2 {
 
     @Override
     public GetSerialConsoleAccessStatusResult getSerialConsoleAccessStatus(GetSerialConsoleAccessStatusRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetSpotPlacementScoresResult getSpotPlacementScores(GetSpotPlacementScoresRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

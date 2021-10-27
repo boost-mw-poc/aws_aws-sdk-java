@@ -60,6 +60,10 @@ public class ModifyCapacityReservationRequestMarshaller implements Marshaller<Re
             request.addParameter("Accept", StringUtils.fromBoolean(modifyCapacityReservationRequest.getAccept()));
         }
 
+        if (modifyCapacityReservationRequest.getAdditionalInfo() != null) {
+            request.addParameter("AdditionalInfo", StringUtils.fromString(modifyCapacityReservationRequest.getAdditionalInfo()));
+        }
+
         return request;
     }
 

@@ -252,6 +252,15 @@ public class SpotFleetRequestConfigData implements Serializable, Cloneable {
     private String context;
     /**
      * <p>
+     * The unit for the target capacity.
+     * </p>
+     * <p>
+     * Default: <code>units</code> (translates to number of instances)
+     * </p>
+     */
+    private String targetCapacityUnitType;
+    /**
+     * <p>
      * The key-value pair for tagging the Spot Fleet request on creation. The value for <code>ResourceType</code> must
      * be <code>spot-fleet-request</code>, otherwise the Spot Fleet request fails. To tag instances at launch, specify
      * the tags in the <a
@@ -2094,6 +2103,104 @@ public class SpotFleetRequestConfigData implements Serializable, Cloneable {
 
     /**
      * <p>
+     * The unit for the target capacity.
+     * </p>
+     * <p>
+     * Default: <code>units</code> (translates to number of instances)
+     * </p>
+     * 
+     * @param targetCapacityUnitType
+     *        The unit for the target capacity.</p>
+     *        <p>
+     *        Default: <code>units</code> (translates to number of instances)
+     * @see TargetCapacityUnitType
+     */
+
+    public void setTargetCapacityUnitType(String targetCapacityUnitType) {
+        this.targetCapacityUnitType = targetCapacityUnitType;
+    }
+
+    /**
+     * <p>
+     * The unit for the target capacity.
+     * </p>
+     * <p>
+     * Default: <code>units</code> (translates to number of instances)
+     * </p>
+     * 
+     * @return The unit for the target capacity.</p>
+     *         <p>
+     *         Default: <code>units</code> (translates to number of instances)
+     * @see TargetCapacityUnitType
+     */
+
+    public String getTargetCapacityUnitType() {
+        return this.targetCapacityUnitType;
+    }
+
+    /**
+     * <p>
+     * The unit for the target capacity.
+     * </p>
+     * <p>
+     * Default: <code>units</code> (translates to number of instances)
+     * </p>
+     * 
+     * @param targetCapacityUnitType
+     *        The unit for the target capacity.</p>
+     *        <p>
+     *        Default: <code>units</code> (translates to number of instances)
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see TargetCapacityUnitType
+     */
+
+    public SpotFleetRequestConfigData withTargetCapacityUnitType(String targetCapacityUnitType) {
+        setTargetCapacityUnitType(targetCapacityUnitType);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The unit for the target capacity.
+     * </p>
+     * <p>
+     * Default: <code>units</code> (translates to number of instances)
+     * </p>
+     * 
+     * @param targetCapacityUnitType
+     *        The unit for the target capacity.</p>
+     *        <p>
+     *        Default: <code>units</code> (translates to number of instances)
+     * @see TargetCapacityUnitType
+     */
+
+    public void setTargetCapacityUnitType(TargetCapacityUnitType targetCapacityUnitType) {
+        withTargetCapacityUnitType(targetCapacityUnitType);
+    }
+
+    /**
+     * <p>
+     * The unit for the target capacity.
+     * </p>
+     * <p>
+     * Default: <code>units</code> (translates to number of instances)
+     * </p>
+     * 
+     * @param targetCapacityUnitType
+     *        The unit for the target capacity.</p>
+     *        <p>
+     *        Default: <code>units</code> (translates to number of instances)
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see TargetCapacityUnitType
+     */
+
+    public SpotFleetRequestConfigData withTargetCapacityUnitType(TargetCapacityUnitType targetCapacityUnitType) {
+        this.targetCapacityUnitType = targetCapacityUnitType.toString();
+        return this;
+    }
+
+    /**
+     * <p>
      * The key-value pair for tagging the Spot Fleet request on creation. The value for <code>ResourceType</code> must
      * be <code>spot-fleet-request</code>, otherwise the Spot Fleet request fails. To tag instances at launch, specify
      * the tags in the <a
@@ -2297,6 +2404,8 @@ public class SpotFleetRequestConfigData implements Serializable, Cloneable {
             sb.append("InstancePoolsToUseCount: ").append(getInstancePoolsToUseCount()).append(",");
         if (getContext() != null)
             sb.append("Context: ").append(getContext()).append(",");
+        if (getTargetCapacityUnitType() != null)
+            sb.append("TargetCapacityUnitType: ").append(getTargetCapacityUnitType()).append(",");
         if (getTagSpecifications() != null)
             sb.append("TagSpecifications: ").append(getTagSpecifications());
         sb.append("}");
@@ -2411,6 +2520,10 @@ public class SpotFleetRequestConfigData implements Serializable, Cloneable {
             return false;
         if (other.getContext() != null && other.getContext().equals(this.getContext()) == false)
             return false;
+        if (other.getTargetCapacityUnitType() == null ^ this.getTargetCapacityUnitType() == null)
+            return false;
+        if (other.getTargetCapacityUnitType() != null && other.getTargetCapacityUnitType().equals(this.getTargetCapacityUnitType()) == false)
+            return false;
         if (other.getTagSpecifications() == null ^ this.getTagSpecifications() == null)
             return false;
         if (other.getTagSpecifications() != null && other.getTagSpecifications().equals(this.getTagSpecifications()) == false)
@@ -2447,6 +2560,7 @@ public class SpotFleetRequestConfigData implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getLoadBalancersConfig() == null) ? 0 : getLoadBalancersConfig().hashCode());
         hashCode = prime * hashCode + ((getInstancePoolsToUseCount() == null) ? 0 : getInstancePoolsToUseCount().hashCode());
         hashCode = prime * hashCode + ((getContext() == null) ? 0 : getContext().hashCode());
+        hashCode = prime * hashCode + ((getTargetCapacityUnitType() == null) ? 0 : getTargetCapacityUnitType().hashCode());
         hashCode = prime * hashCode + ((getTagSpecifications() == null) ? 0 : getTagSpecifications().hashCode());
         return hashCode;
     }

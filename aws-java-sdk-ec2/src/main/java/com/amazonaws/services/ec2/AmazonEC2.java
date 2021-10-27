@@ -7383,6 +7383,39 @@ public interface AmazonEC2 {
 
     /**
      * <p>
+     * Returns a list of instance types with the specified instance attributes. You can use the response to preview the
+     * instance types without launching instances. Note that the response does not consider capacity.
+     * </p>
+     * <p>
+     * When you specify multiple parameters, you get instance types that satisfy all of the specified parameters. If you
+     * specify multiple values for a parameter, you get instance types that satisfy any of the specified values.
+     * </p>
+     * <p>
+     * For more information, see <a href=
+     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-fleet-attribute-based-instance-type-selection.html#spotfleet-get-instance-types-from-instance-requirements"
+     * >Preview instance types with specified attributes</a>, <a href=
+     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-attribute-based-instance-type-selection.html"
+     * >Attribute-based instance type selection for EC2 Fleet</a>, <a href=
+     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-fleet-attribute-based-instance-type-selection.html"
+     * >Attribute-based instance type selection for Spot Fleet</a>, and <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-placement-score.html">Spot placement score</a> in
+     * the <i>Amazon EC2 User Guide</i>, and <a
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-asg-instance-type-requirements.html">Creating
+     * an Auto Scaling group using attribute-based instance type selection</a> in the <i>Amazon EC2 Auto Scaling User
+     * Guide</i>.
+     * </p>
+     * 
+     * @param getInstanceTypesFromInstanceRequirementsRequest
+     * @return Result of the GetInstanceTypesFromInstanceRequirements operation returned by the service.
+     * @sample AmazonEC2.GetInstanceTypesFromInstanceRequirements
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetInstanceTypesFromInstanceRequirements"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetInstanceTypesFromInstanceRequirementsResult getInstanceTypesFromInstanceRequirements(
+            GetInstanceTypesFromInstanceRequirementsRequest getInstanceTypesFromInstanceRequirementsRequest);
+
+    /**
+     * <p>
      * Retrieves the configuration data of the specified instance. You can use this data to create a launch template.
      * </p>
      * <p>
@@ -7491,6 +7524,30 @@ public interface AmazonEC2 {
      *      target="_top">AWS API Documentation</a>
      */
     GetSerialConsoleAccessStatusResult getSerialConsoleAccessStatus(GetSerialConsoleAccessStatusRequest getSerialConsoleAccessStatusRequest);
+
+    /**
+     * <p>
+     * Calculates the Spot placement score for a Region or Availability Zone based on the specified target capacity and
+     * compute requirements.
+     * </p>
+     * <p>
+     * You can specify your compute requirements either by using <code>InstanceRequirementsWithMetadata</code> and
+     * letting Amazon EC2 choose the optimal instance types to fulfill your Spot request, or you can specify the
+     * instance types by using <code>InstanceTypes</code>.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-placement-score.html">Spot placement score</a> in
+     * the Amazon EC2 User Guide.
+     * </p>
+     * 
+     * @param getSpotPlacementScoresRequest
+     * @return Result of the GetSpotPlacementScores operation returned by the service.
+     * @sample AmazonEC2.GetSpotPlacementScores
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetSpotPlacementScores" target="_top">AWS API
+     *      Documentation</a>
+     */
+    GetSpotPlacementScoresResult getSpotPlacementScores(GetSpotPlacementScoresRequest getSpotPlacementScoresRequest);
 
     /**
      * <p>

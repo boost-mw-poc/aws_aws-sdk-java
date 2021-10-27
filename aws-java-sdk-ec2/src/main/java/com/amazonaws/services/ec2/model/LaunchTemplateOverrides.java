@@ -76,6 +76,19 @@ public class LaunchTemplateOverrides implements Serializable, Cloneable {
      * </p>
      */
     private Double priority;
+    /**
+     * <p>
+     * The instance requirements. When you specify instance requirements, Amazon EC2 will identify instance types with
+     * the provided requirements, and then use your On-Demand and Spot allocation strategies to launch instances from
+     * these instance types, in the same way as when you specify a list of instance types.
+     * </p>
+     * <note>
+     * <p>
+     * If you specify <code>InstanceRequirements</code>, you can't specify <code>InstanceTypes</code>.
+     * </p>
+     * </note>
+     */
+    private InstanceRequirements instanceRequirements;
 
     /**
      * <p>
@@ -418,6 +431,85 @@ public class LaunchTemplateOverrides implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * The instance requirements. When you specify instance requirements, Amazon EC2 will identify instance types with
+     * the provided requirements, and then use your On-Demand and Spot allocation strategies to launch instances from
+     * these instance types, in the same way as when you specify a list of instance types.
+     * </p>
+     * <note>
+     * <p>
+     * If you specify <code>InstanceRequirements</code>, you can't specify <code>InstanceTypes</code>.
+     * </p>
+     * </note>
+     * 
+     * @param instanceRequirements
+     *        The instance requirements. When you specify instance requirements, Amazon EC2 will identify instance types
+     *        with the provided requirements, and then use your On-Demand and Spot allocation strategies to launch
+     *        instances from these instance types, in the same way as when you specify a list of instance types.</p>
+     *        <note>
+     *        <p>
+     *        If you specify <code>InstanceRequirements</code>, you can't specify <code>InstanceTypes</code>.
+     *        </p>
+     */
+
+    public void setInstanceRequirements(InstanceRequirements instanceRequirements) {
+        this.instanceRequirements = instanceRequirements;
+    }
+
+    /**
+     * <p>
+     * The instance requirements. When you specify instance requirements, Amazon EC2 will identify instance types with
+     * the provided requirements, and then use your On-Demand and Spot allocation strategies to launch instances from
+     * these instance types, in the same way as when you specify a list of instance types.
+     * </p>
+     * <note>
+     * <p>
+     * If you specify <code>InstanceRequirements</code>, you can't specify <code>InstanceTypes</code>.
+     * </p>
+     * </note>
+     * 
+     * @return The instance requirements. When you specify instance requirements, Amazon EC2 will identify instance
+     *         types with the provided requirements, and then use your On-Demand and Spot allocation strategies to
+     *         launch instances from these instance types, in the same way as when you specify a list of instance
+     *         types.</p> <note>
+     *         <p>
+     *         If you specify <code>InstanceRequirements</code>, you can't specify <code>InstanceTypes</code>.
+     *         </p>
+     */
+
+    public InstanceRequirements getInstanceRequirements() {
+        return this.instanceRequirements;
+    }
+
+    /**
+     * <p>
+     * The instance requirements. When you specify instance requirements, Amazon EC2 will identify instance types with
+     * the provided requirements, and then use your On-Demand and Spot allocation strategies to launch instances from
+     * these instance types, in the same way as when you specify a list of instance types.
+     * </p>
+     * <note>
+     * <p>
+     * If you specify <code>InstanceRequirements</code>, you can't specify <code>InstanceTypes</code>.
+     * </p>
+     * </note>
+     * 
+     * @param instanceRequirements
+     *        The instance requirements. When you specify instance requirements, Amazon EC2 will identify instance types
+     *        with the provided requirements, and then use your On-Demand and Spot allocation strategies to launch
+     *        instances from these instance types, in the same way as when you specify a list of instance types.</p>
+     *        <note>
+     *        <p>
+     *        If you specify <code>InstanceRequirements</code>, you can't specify <code>InstanceTypes</code>.
+     *        </p>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public LaunchTemplateOverrides withInstanceRequirements(InstanceRequirements instanceRequirements) {
+        setInstanceRequirements(instanceRequirements);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -440,7 +532,9 @@ public class LaunchTemplateOverrides implements Serializable, Cloneable {
         if (getWeightedCapacity() != null)
             sb.append("WeightedCapacity: ").append(getWeightedCapacity()).append(",");
         if (getPriority() != null)
-            sb.append("Priority: ").append(getPriority());
+            sb.append("Priority: ").append(getPriority()).append(",");
+        if (getInstanceRequirements() != null)
+            sb.append("InstanceRequirements: ").append(getInstanceRequirements());
         sb.append("}");
         return sb.toString();
     }
@@ -479,6 +573,10 @@ public class LaunchTemplateOverrides implements Serializable, Cloneable {
             return false;
         if (other.getPriority() != null && other.getPriority().equals(this.getPriority()) == false)
             return false;
+        if (other.getInstanceRequirements() == null ^ this.getInstanceRequirements() == null)
+            return false;
+        if (other.getInstanceRequirements() != null && other.getInstanceRequirements().equals(this.getInstanceRequirements()) == false)
+            return false;
         return true;
     }
 
@@ -493,6 +591,7 @@ public class LaunchTemplateOverrides implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getAvailabilityZone() == null) ? 0 : getAvailabilityZone().hashCode());
         hashCode = prime * hashCode + ((getWeightedCapacity() == null) ? 0 : getWeightedCapacity().hashCode());
         hashCode = prime * hashCode + ((getPriority() == null) ? 0 : getPriority().hashCode());
+        hashCode = prime * hashCode + ((getInstanceRequirements() == null) ? 0 : getInstanceRequirements().hashCode());
         return hashCode;
     }
 

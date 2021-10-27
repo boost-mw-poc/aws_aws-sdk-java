@@ -1,3 +1,24 @@
+# __1.12.97__ __2021-10-27__
+## __Amazon Elastic Compute Cloud__
+  - ### Features
+    - This release adds: attribute-based instance type selection for EC2 Fleet, Spot Fleet, a feature that lets customers express instance requirements as attributes like vCPU, memory, and storage; and Spot placement score, a feature that helps customers identify an optimal location to run Spot workloads.
+
+## __Amazon Elastic Kubernetes Service__
+  - ### Features
+    - EKS managed node groups now support BOTTLEROCKET_x86_64 and BOTTLEROCKET_ARM_64 AMI types.
+
+## __Amazon SageMaker Service__
+  - ### Features
+    - This release allows customers to describe one or more versioned model packages through BatchDescribeModelPackage, update project via UpdateProject, modify and read customer metadata properties using Create, Update and Describe ModelPackage and enables cross account registration of model packages.
+
+## __Amazon Textract__
+  - ### Features
+    - This release adds support for asynchronously analyzing invoice and receipt documents through two new APIs: StartExpenseAnalysis and GetExpenseAnalysis
+
+## __Auto Scaling__
+  - ### Features
+    - This release adds support for attribute-based instance type selection, a new EC2 Auto Scaling feature that lets customers express their instance requirements as a set of attributes, such as vCPU, memory, and storage.
+
 # __1.12.96__ __2021-10-26__
 ## __Amazon Chime SDK Identity__
   - ### Features

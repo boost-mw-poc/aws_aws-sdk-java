@@ -190,6 +190,39 @@ public class AmazonSageMakerAsyncClient extends AmazonSageMakerClient implements
     }
 
     @Override
+    public java.util.concurrent.Future<BatchDescribeModelPackageResult> batchDescribeModelPackageAsync(BatchDescribeModelPackageRequest request) {
+
+        return batchDescribeModelPackageAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<BatchDescribeModelPackageResult> batchDescribeModelPackageAsync(final BatchDescribeModelPackageRequest request,
+            final com.amazonaws.handlers.AsyncHandler<BatchDescribeModelPackageRequest, BatchDescribeModelPackageResult> asyncHandler) {
+        final BatchDescribeModelPackageRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<BatchDescribeModelPackageResult>() {
+            @Override
+            public BatchDescribeModelPackageResult call() throws Exception {
+                BatchDescribeModelPackageResult result = null;
+
+                try {
+                    result = executeBatchDescribeModelPackage(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateActionResult> createActionAsync(CreateActionRequest request) {
 
         return createActionAsync(request, null);
@@ -7853,6 +7886,39 @@ public class AmazonSageMakerAsyncClient extends AmazonSageMakerClient implements
 
                 try {
                     result = executeUpdatePipelineExecution(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateProjectResult> updateProjectAsync(UpdateProjectRequest request) {
+
+        return updateProjectAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateProjectResult> updateProjectAsync(final UpdateProjectRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateProjectRequest, UpdateProjectResult> asyncHandler) {
+        final UpdateProjectRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateProjectResult>() {
+            @Override
+            public UpdateProjectResult call() throws Exception {
+                UpdateProjectResult result = null;
+
+                try {
+                    result = executeUpdateProject(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

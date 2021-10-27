@@ -23,7 +23,9 @@ public enum AMITypes {
     AL2_x86_64("AL2_x86_64"),
     AL2_x86_64_GPU("AL2_x86_64_GPU"),
     AL2_ARM_64("AL2_ARM_64"),
-    CUSTOM("CUSTOM");
+    CUSTOM("CUSTOM"),
+    BOTTLEROCKET_ARM_64("BOTTLEROCKET_ARM_64"),
+    BOTTLEROCKET_x86_64("BOTTLEROCKET_x86_64");
 
     private String value;
 

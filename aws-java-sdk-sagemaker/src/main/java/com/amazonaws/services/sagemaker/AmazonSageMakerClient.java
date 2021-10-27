@@ -366,6 +366,63 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
 
     /**
      * <p>
+     * This action batch describes a list of versioned model packages
+     * </p>
+     * 
+     * @param batchDescribeModelPackageRequest
+     * @return Result of the BatchDescribeModelPackage operation returned by the service.
+     * @sample AmazonSageMaker.BatchDescribeModelPackage
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/BatchDescribeModelPackage"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public BatchDescribeModelPackageResult batchDescribeModelPackage(BatchDescribeModelPackageRequest request) {
+        request = beforeClientExecution(request);
+        return executeBatchDescribeModelPackage(request);
+    }
+
+    @SdkInternalApi
+    final BatchDescribeModelPackageResult executeBatchDescribeModelPackage(BatchDescribeModelPackageRequest batchDescribeModelPackageRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(batchDescribeModelPackageRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<BatchDescribeModelPackageRequest> request = null;
+        Response<BatchDescribeModelPackageResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new BatchDescribeModelPackageRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(batchDescribeModelPackageRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "SageMaker");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "BatchDescribeModelPackage");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<BatchDescribeModelPackageResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new BatchDescribeModelPackageResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Creates an <i>action</i>. An action is a lineage tracking entity that represents an action or activity. For
      * example, a model deployment or an HPO job. Generally, an action involves at least one input or output artifact.
      * For more information, see <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/lineage-tracking.html">Amazon
@@ -7616,12 +7673,11 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
 
     /**
      * <p>
-     * Returns a description of the specified model package, which is used to create Amazon SageMaker models or list
-     * them on Amazon Web Services Marketplace.
+     * Returns a description of the specified model package, which is used to create SageMaker models or list them on
+     * Amazon Web Services Marketplace.
      * </p>
      * <p>
-     * To create models in Amazon SageMaker, buyers can subscribe to model packages listed on Amazon Web Services
-     * Marketplace.
+     * To create models in SageMaker, buyers can subscribe to model packages listed on Amazon Web Services Marketplace.
      * </p>
      * 
      * @param describeModelPackageRequest
@@ -14676,6 +14732,69 @@ public class AmazonSageMakerClient extends AmazonWebServiceClient implements Ama
             HttpResponseHandler<AmazonWebServiceResponse<UpdatePipelineExecutionResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new UpdatePipelineExecutionResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Updates a machine learning (ML) project that is created from a template that sets up an ML pipeline from training
+     * to deploying an approved model.
+     * </p>
+     * <note>
+     * <p>
+     * You must not update a project that is in use. If you update the
+     * <code>ServiceCatalogProvisioningUpdateDetails</code> of a project that is active or being created, or updated,
+     * you may lose resources already created by the project.
+     * </p>
+     * </note>
+     * 
+     * @param updateProjectRequest
+     * @return Result of the UpdateProject operation returned by the service.
+     * @sample AmazonSageMaker.UpdateProject
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/UpdateProject" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public UpdateProjectResult updateProject(UpdateProjectRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateProject(request);
+    }
+
+    @SdkInternalApi
+    final UpdateProjectResult executeUpdateProject(UpdateProjectRequest updateProjectRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateProjectRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateProjectRequest> request = null;
+        Response<UpdateProjectResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateProjectRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(updateProjectRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "SageMaker");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateProject");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateProjectResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UpdateProjectResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

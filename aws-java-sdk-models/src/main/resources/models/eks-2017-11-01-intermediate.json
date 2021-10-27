@@ -1900,6 +1900,12 @@
       }, {
         "name" : "CUSTOM",
         "value" : "CUSTOM"
+      }, {
+        "name" : "BOTTLEROCKET_ARM_64",
+        "value" : "BOTTLEROCKET_ARM_64"
+      }, {
+        "name" : "BOTTLEROCKET_x86_64",
+        "value" : "BOTTLEROCKET_x86_64"
       } ],
       "errorCode" : null,
       "fullyQualifiedName" : "com.amazonaws.services.eks.enum.AMITypes",

@@ -617,6 +617,241 @@ public class CreateLaunchTemplateRequestMarshaller implements Marshaller<Request
                     request.addParameter("LaunchTemplateData.EnclaveOptions.Enabled", StringUtils.fromBoolean(enclaveOptions.getEnabled()));
                 }
             }
+
+            InstanceRequirementsRequest instanceRequirements = launchTemplateData.getInstanceRequirements();
+            if (instanceRequirements != null) {
+
+                VCpuCountRangeRequest vCpuCount = instanceRequirements.getVCpuCount();
+                if (vCpuCount != null) {
+
+                    if (vCpuCount.getMin() != null) {
+                        request.addParameter("LaunchTemplateData.InstanceRequirements.VCpuCount.Min", StringUtils.fromInteger(vCpuCount.getMin()));
+                    }
+
+                    if (vCpuCount.getMax() != null) {
+                        request.addParameter("LaunchTemplateData.InstanceRequirements.VCpuCount.Max", StringUtils.fromInteger(vCpuCount.getMax()));
+                    }
+                }
+
+                MemoryMiBRequest memoryMiB = instanceRequirements.getMemoryMiB();
+                if (memoryMiB != null) {
+
+                    if (memoryMiB.getMin() != null) {
+                        request.addParameter("LaunchTemplateData.InstanceRequirements.MemoryMiB.Min", StringUtils.fromInteger(memoryMiB.getMin()));
+                    }
+
+                    if (memoryMiB.getMax() != null) {
+                        request.addParameter("LaunchTemplateData.InstanceRequirements.MemoryMiB.Max", StringUtils.fromInteger(memoryMiB.getMax()));
+                    }
+                }
+
+                com.amazonaws.internal.SdkInternalList<String> instanceRequirementsRequestCpuManufacturersList = (com.amazonaws.internal.SdkInternalList<String>) instanceRequirements
+                        .getCpuManufacturers();
+                if (!instanceRequirementsRequestCpuManufacturersList.isEmpty() || !instanceRequirementsRequestCpuManufacturersList.isAutoConstruct()) {
+                    int cpuManufacturersListIndex = 1;
+
+                    for (String instanceRequirementsRequestCpuManufacturersListValue : instanceRequirementsRequestCpuManufacturersList) {
+                        if (instanceRequirementsRequestCpuManufacturersListValue != null) {
+                            request.addParameter("LaunchTemplateData.InstanceRequirements.CpuManufacturer." + cpuManufacturersListIndex,
+                                    StringUtils.fromString(instanceRequirementsRequestCpuManufacturersListValue));
+                        }
+                        cpuManufacturersListIndex++;
+                    }
+                }
+
+                MemoryGiBPerVCpuRequest memoryGiBPerVCpu = instanceRequirements.getMemoryGiBPerVCpu();
+                if (memoryGiBPerVCpu != null) {
+
+                    if (memoryGiBPerVCpu.getMin() != null) {
+                        request.addParameter("LaunchTemplateData.InstanceRequirements.MemoryGiBPerVCpu.Min", StringUtils.fromDouble(memoryGiBPerVCpu.getMin()));
+                    }
+
+                    if (memoryGiBPerVCpu.getMax() != null) {
+                        request.addParameter("LaunchTemplateData.InstanceRequirements.MemoryGiBPerVCpu.Max", StringUtils.fromDouble(memoryGiBPerVCpu.getMax()));
+                    }
+                }
+
+                com.amazonaws.internal.SdkInternalList<String> instanceRequirementsRequestExcludedInstanceTypesList = (com.amazonaws.internal.SdkInternalList<String>) instanceRequirements
+                        .getExcludedInstanceTypes();
+                if (!instanceRequirementsRequestExcludedInstanceTypesList.isEmpty() || !instanceRequirementsRequestExcludedInstanceTypesList.isAutoConstruct()) {
+                    int excludedInstanceTypesListIndex = 1;
+
+                    for (String instanceRequirementsRequestExcludedInstanceTypesListValue : instanceRequirementsRequestExcludedInstanceTypesList) {
+                        if (instanceRequirementsRequestExcludedInstanceTypesListValue != null) {
+                            request.addParameter("LaunchTemplateData.InstanceRequirements.ExcludedInstanceType." + excludedInstanceTypesListIndex,
+                                    StringUtils.fromString(instanceRequirementsRequestExcludedInstanceTypesListValue));
+                        }
+                        excludedInstanceTypesListIndex++;
+                    }
+                }
+
+                com.amazonaws.internal.SdkInternalList<String> instanceRequirementsRequestInstanceGenerationsList = (com.amazonaws.internal.SdkInternalList<String>) instanceRequirements
+                        .getInstanceGenerations();
+                if (!instanceRequirementsRequestInstanceGenerationsList.isEmpty() || !instanceRequirementsRequestInstanceGenerationsList.isAutoConstruct()) {
+                    int instanceGenerationsListIndex = 1;
+
+                    for (String instanceRequirementsRequestInstanceGenerationsListValue : instanceRequirementsRequestInstanceGenerationsList) {
+                        if (instanceRequirementsRequestInstanceGenerationsListValue != null) {
+                            request.addParameter("LaunchTemplateData.InstanceRequirements.InstanceGeneration." + instanceGenerationsListIndex,
+                                    StringUtils.fromString(instanceRequirementsRequestInstanceGenerationsListValue));
+                        }
+                        instanceGenerationsListIndex++;
+                    }
+                }
+
+                if (instanceRequirements.getSpotMaxPricePercentageOverLowestPrice() != null) {
+                    request.addParameter("LaunchTemplateData.InstanceRequirements.SpotMaxPricePercentageOverLowestPrice",
+                            StringUtils.fromInteger(instanceRequirements.getSpotMaxPricePercentageOverLowestPrice()));
+                }
+
+                if (instanceRequirements.getOnDemandMaxPricePercentageOverLowestPrice() != null) {
+                    request.addParameter("LaunchTemplateData.InstanceRequirements.OnDemandMaxPricePercentageOverLowestPrice",
+                            StringUtils.fromInteger(instanceRequirements.getOnDemandMaxPricePercentageOverLowestPrice()));
+                }
+
+                if (instanceRequirements.getBareMetal() != null) {
+                    request.addParameter("LaunchTemplateData.InstanceRequirements.BareMetal", StringUtils.fromString(instanceRequirements.getBareMetal()));
+                }
+
+                if (instanceRequirements.getBurstablePerformance() != null) {
+                    request.addParameter("LaunchTemplateData.InstanceRequirements.BurstablePerformance",
+                            StringUtils.fromString(instanceRequirements.getBurstablePerformance()));
+                }
+
+                if (instanceRequirements.getRequireHibernateSupport() != null) {
+                    request.addParameter("LaunchTemplateData.InstanceRequirements.RequireHibernateSupport",
+                            StringUtils.fromBoolean(instanceRequirements.getRequireHibernateSupport()));
+                }
+
+                NetworkInterfaceCountRequest networkInterfaceCount = instanceRequirements.getNetworkInterfaceCount();
+                if (networkInterfaceCount != null) {
+
+                    if (networkInterfaceCount.getMin() != null) {
+                        request.addParameter("LaunchTemplateData.InstanceRequirements.NetworkInterfaceCount.Min",
+                                StringUtils.fromInteger(networkInterfaceCount.getMin()));
+                    }
+
+                    if (networkInterfaceCount.getMax() != null) {
+                        request.addParameter("LaunchTemplateData.InstanceRequirements.NetworkInterfaceCount.Max",
+                                StringUtils.fromInteger(networkInterfaceCount.getMax()));
+                    }
+                }
+
+                if (instanceRequirements.getLocalStorage() != null) {
+                    request.addParameter("LaunchTemplateData.InstanceRequirements.LocalStorage", StringUtils.fromString(instanceRequirements.getLocalStorage()));
+                }
+
+                com.amazonaws.internal.SdkInternalList<String> instanceRequirementsRequestLocalStorageTypesList = (com.amazonaws.internal.SdkInternalList<String>) instanceRequirements
+                        .getLocalStorageTypes();
+                if (!instanceRequirementsRequestLocalStorageTypesList.isEmpty() || !instanceRequirementsRequestLocalStorageTypesList.isAutoConstruct()) {
+                    int localStorageTypesListIndex = 1;
+
+                    for (String instanceRequirementsRequestLocalStorageTypesListValue : instanceRequirementsRequestLocalStorageTypesList) {
+                        if (instanceRequirementsRequestLocalStorageTypesListValue != null) {
+                            request.addParameter("LaunchTemplateData.InstanceRequirements.LocalStorageType." + localStorageTypesListIndex,
+                                    StringUtils.fromString(instanceRequirementsRequestLocalStorageTypesListValue));
+                        }
+                        localStorageTypesListIndex++;
+                    }
+                }
+
+                TotalLocalStorageGBRequest totalLocalStorageGB = instanceRequirements.getTotalLocalStorageGB();
+                if (totalLocalStorageGB != null) {
+
+                    if (totalLocalStorageGB.getMin() != null) {
+                        request.addParameter("LaunchTemplateData.InstanceRequirements.TotalLocalStorageGB.Min",
+                                StringUtils.fromDouble(totalLocalStorageGB.getMin()));
+                    }
+
+                    if (totalLocalStorageGB.getMax() != null) {
+                        request.addParameter("LaunchTemplateData.InstanceRequirements.TotalLocalStorageGB.Max",
+                                StringUtils.fromDouble(totalLocalStorageGB.getMax()));
+                    }
+                }
+
+                BaselineEbsBandwidthMbpsRequest baselineEbsBandwidthMbps = instanceRequirements.getBaselineEbsBandwidthMbps();
+                if (baselineEbsBandwidthMbps != null) {
+
+                    if (baselineEbsBandwidthMbps.getMin() != null) {
+                        request.addParameter("LaunchTemplateData.InstanceRequirements.BaselineEbsBandwidthMbps.Min",
+                                StringUtils.fromInteger(baselineEbsBandwidthMbps.getMin()));
+                    }
+
+                    if (baselineEbsBandwidthMbps.getMax() != null) {
+                        request.addParameter("LaunchTemplateData.InstanceRequirements.BaselineEbsBandwidthMbps.Max",
+                                StringUtils.fromInteger(baselineEbsBandwidthMbps.getMax()));
+                    }
+                }
+
+                com.amazonaws.internal.SdkInternalList<String> instanceRequirementsRequestAcceleratorTypesList = (com.amazonaws.internal.SdkInternalList<String>) instanceRequirements
+                        .getAcceleratorTypes();
+                if (!instanceRequirementsRequestAcceleratorTypesList.isEmpty() || !instanceRequirementsRequestAcceleratorTypesList.isAutoConstruct()) {
+                    int acceleratorTypesListIndex = 1;
+
+                    for (String instanceRequirementsRequestAcceleratorTypesListValue : instanceRequirementsRequestAcceleratorTypesList) {
+                        if (instanceRequirementsRequestAcceleratorTypesListValue != null) {
+                            request.addParameter("LaunchTemplateData.InstanceRequirements.AcceleratorType." + acceleratorTypesListIndex,
+                                    StringUtils.fromString(instanceRequirementsRequestAcceleratorTypesListValue));
+                        }
+                        acceleratorTypesListIndex++;
+                    }
+                }
+
+                AcceleratorCountRequest acceleratorCount = instanceRequirements.getAcceleratorCount();
+                if (acceleratorCount != null) {
+
+                    if (acceleratorCount.getMin() != null) {
+                        request.addParameter("LaunchTemplateData.InstanceRequirements.AcceleratorCount.Min", StringUtils.fromInteger(acceleratorCount.getMin()));
+                    }
+
+                    if (acceleratorCount.getMax() != null) {
+                        request.addParameter("LaunchTemplateData.InstanceRequirements.AcceleratorCount.Max", StringUtils.fromInteger(acceleratorCount.getMax()));
+                    }
+                }
+
+                com.amazonaws.internal.SdkInternalList<String> instanceRequirementsRequestAcceleratorManufacturersList = (com.amazonaws.internal.SdkInternalList<String>) instanceRequirements
+                        .getAcceleratorManufacturers();
+                if (!instanceRequirementsRequestAcceleratorManufacturersList.isEmpty()
+                        || !instanceRequirementsRequestAcceleratorManufacturersList.isAutoConstruct()) {
+                    int acceleratorManufacturersListIndex = 1;
+
+                    for (String instanceRequirementsRequestAcceleratorManufacturersListValue : instanceRequirementsRequestAcceleratorManufacturersList) {
+                        if (instanceRequirementsRequestAcceleratorManufacturersListValue != null) {
+                            request.addParameter("LaunchTemplateData.InstanceRequirements.AcceleratorManufacturer." + acceleratorManufacturersListIndex,
+                                    StringUtils.fromString(instanceRequirementsRequestAcceleratorManufacturersListValue));
+                        }
+                        acceleratorManufacturersListIndex++;
+                    }
+                }
+
+                com.amazonaws.internal.SdkInternalList<String> instanceRequirementsRequestAcceleratorNamesList = (com.amazonaws.internal.SdkInternalList<String>) instanceRequirements
+                        .getAcceleratorNames();
+                if (!instanceRequirementsRequestAcceleratorNamesList.isEmpty() || !instanceRequirementsRequestAcceleratorNamesList.isAutoConstruct()) {
+                    int acceleratorNamesListIndex = 1;
+
+                    for (String instanceRequirementsRequestAcceleratorNamesListValue : instanceRequirementsRequestAcceleratorNamesList) {
+                        if (instanceRequirementsRequestAcceleratorNamesListValue != null) {
+                            request.addParameter("LaunchTemplateData.InstanceRequirements.AcceleratorName." + acceleratorNamesListIndex,
+                                    StringUtils.fromString(instanceRequirementsRequestAcceleratorNamesListValue));
+                        }
+                        acceleratorNamesListIndex++;
+                    }
+                }
+
+                AcceleratorTotalMemoryMiBRequest acceleratorTotalMemoryMiB = instanceRequirements.getAcceleratorTotalMemoryMiB();
+                if (acceleratorTotalMemoryMiB != null) {
+
+                    if (acceleratorTotalMemoryMiB.getMin() != null) {
+                        request.addParameter("LaunchTemplateData.InstanceRequirements.AcceleratorTotalMemoryMiB.Min",
+                                StringUtils.fromInteger(acceleratorTotalMemoryMiB.getMin()));
+                    }
+
+                    if (acceleratorTotalMemoryMiB.getMax() != null) {
+                        request.addParameter("LaunchTemplateData.InstanceRequirements.AcceleratorTotalMemoryMiB.Max",
+                                StringUtils.fromInteger(acceleratorTotalMemoryMiB.getMax()));
+                    }
+                }
+            }
         }
 
         com.amazonaws.internal.SdkInternalList<TagSpecification> createLaunchTemplateRequestTagSpecificationsList = (com.amazonaws.internal.SdkInternalList<TagSpecification>) createLaunchTemplateRequest

@@ -53,12 +53,22 @@ public class AbstractAmazonTextract implements AmazonTextract {
     }
 
     @Override
+    public GetExpenseAnalysisResult getExpenseAnalysis(GetExpenseAnalysisRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public StartDocumentAnalysisResult startDocumentAnalysis(StartDocumentAnalysisRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
     @Override
     public StartDocumentTextDetectionResult startDocumentTextDetection(StartDocumentTextDetectionRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public StartExpenseAnalysisResult startExpenseAnalysis(StartExpenseAnalysisRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

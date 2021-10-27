@@ -37,7 +37,7 @@ public class CreateModelPackageRequest extends com.amazonaws.AmazonWebServiceReq
     private String modelPackageName;
     /**
      * <p>
-     * The name of the model group that this model version belongs to.
+     * The name or Amazon Resource Name (ARN) of the model package group that this model version belongs to.
      * </p>
      * <p>
      * This parameter is required for versioned models, and does not apply to unversioned models.
@@ -129,6 +129,12 @@ public class CreateModelPackageRequest extends com.amazonaws.AmazonWebServiceReq
      * </p>
      */
     private String clientToken;
+    /**
+     * <p>
+     * The metadata properties associated with the model package versions.
+     * </p>
+     */
+    private java.util.Map<String, String> customerMetadataProperties;
 
     /**
      * <p>
@@ -193,14 +199,14 @@ public class CreateModelPackageRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The name of the model group that this model version belongs to.
+     * The name or Amazon Resource Name (ARN) of the model package group that this model version belongs to.
      * </p>
      * <p>
      * This parameter is required for versioned models, and does not apply to unversioned models.
      * </p>
      * 
      * @param modelPackageGroupName
-     *        The name of the model group that this model version belongs to.</p>
+     *        The name or Amazon Resource Name (ARN) of the model package group that this model version belongs to.</p>
      *        <p>
      *        This parameter is required for versioned models, and does not apply to unversioned models.
      */
@@ -211,13 +217,13 @@ public class CreateModelPackageRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The name of the model group that this model version belongs to.
+     * The name or Amazon Resource Name (ARN) of the model package group that this model version belongs to.
      * </p>
      * <p>
      * This parameter is required for versioned models, and does not apply to unversioned models.
      * </p>
      * 
-     * @return The name of the model group that this model version belongs to.</p>
+     * @return The name or Amazon Resource Name (ARN) of the model package group that this model version belongs to.</p>
      *         <p>
      *         This parameter is required for versioned models, and does not apply to unversioned models.
      */
@@ -228,14 +234,14 @@ public class CreateModelPackageRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The name of the model group that this model version belongs to.
+     * The name or Amazon Resource Name (ARN) of the model package group that this model version belongs to.
      * </p>
      * <p>
      * This parameter is required for versioned models, and does not apply to unversioned models.
      * </p>
      * 
      * @param modelPackageGroupName
-     *        The name of the model group that this model version belongs to.</p>
+     *        The name or Amazon Resource Name (ARN) of the model package group that this model version belongs to.</p>
      *        <p>
      *        This parameter is required for versioned models, and does not apply to unversioned models.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -889,6 +895,74 @@ public class CreateModelPackageRequest extends com.amazonaws.AmazonWebServiceReq
     }
 
     /**
+     * <p>
+     * The metadata properties associated with the model package versions.
+     * </p>
+     * 
+     * @return The metadata properties associated with the model package versions.
+     */
+
+    public java.util.Map<String, String> getCustomerMetadataProperties() {
+        return customerMetadataProperties;
+    }
+
+    /**
+     * <p>
+     * The metadata properties associated with the model package versions.
+     * </p>
+     * 
+     * @param customerMetadataProperties
+     *        The metadata properties associated with the model package versions.
+     */
+
+    public void setCustomerMetadataProperties(java.util.Map<String, String> customerMetadataProperties) {
+        this.customerMetadataProperties = customerMetadataProperties;
+    }
+
+    /**
+     * <p>
+     * The metadata properties associated with the model package versions.
+     * </p>
+     * 
+     * @param customerMetadataProperties
+     *        The metadata properties associated with the model package versions.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateModelPackageRequest withCustomerMetadataProperties(java.util.Map<String, String> customerMetadataProperties) {
+        setCustomerMetadataProperties(customerMetadataProperties);
+        return this;
+    }
+
+    /**
+     * Add a single CustomerMetadataProperties entry
+     *
+     * @see CreateModelPackageRequest#withCustomerMetadataProperties
+     * @returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateModelPackageRequest addCustomerMetadataPropertiesEntry(String key, String value) {
+        if (null == this.customerMetadataProperties) {
+            this.customerMetadataProperties = new java.util.HashMap<String, String>();
+        }
+        if (this.customerMetadataProperties.containsKey(key))
+            throw new IllegalArgumentException("Duplicated keys (" + key.toString() + ") are provided.");
+        this.customerMetadataProperties.put(key, value);
+        return this;
+    }
+
+    /**
+     * Removes all the entries added into CustomerMetadataProperties.
+     *
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateModelPackageRequest clearCustomerMetadataPropertiesEntries() {
+        this.customerMetadataProperties = null;
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -923,7 +997,9 @@ public class CreateModelPackageRequest extends com.amazonaws.AmazonWebServiceReq
         if (getModelMetrics() != null)
             sb.append("ModelMetrics: ").append(getModelMetrics()).append(",");
         if (getClientToken() != null)
-            sb.append("ClientToken: ").append(getClientToken());
+            sb.append("ClientToken: ").append(getClientToken()).append(",");
+        if (getCustomerMetadataProperties() != null)
+            sb.append("CustomerMetadataProperties: ").append(getCustomerMetadataProperties());
         sb.append("}");
         return sb.toString();
     }
@@ -986,6 +1062,10 @@ public class CreateModelPackageRequest extends com.amazonaws.AmazonWebServiceReq
             return false;
         if (other.getClientToken() != null && other.getClientToken().equals(this.getClientToken()) == false)
             return false;
+        if (other.getCustomerMetadataProperties() == null ^ this.getCustomerMetadataProperties() == null)
+            return false;
+        if (other.getCustomerMetadataProperties() != null && other.getCustomerMetadataProperties().equals(this.getCustomerMetadataProperties()) == false)
+            return false;
         return true;
     }
 
@@ -1006,6 +1086,7 @@ public class CreateModelPackageRequest extends com.amazonaws.AmazonWebServiceReq
         hashCode = prime * hashCode + ((getMetadataProperties() == null) ? 0 : getMetadataProperties().hashCode());
         hashCode = prime * hashCode + ((getModelMetrics() == null) ? 0 : getModelMetrics().hashCode());
         hashCode = prime * hashCode + ((getClientToken() == null) ? 0 : getClientToken().hashCode());
+        hashCode = prime * hashCode + ((getCustomerMetadataProperties() == null) ? 0 : getCustomerMetadataProperties().hashCode());
         return hashCode;
     }
 

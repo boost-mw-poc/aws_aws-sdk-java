@@ -26,7 +26,10 @@ public enum ProjectStatus {
     CreateFailed("CreateFailed"),
     DeleteInProgress("DeleteInProgress"),
     DeleteFailed("DeleteFailed"),
-    DeleteCompleted("DeleteCompleted");
+    DeleteCompleted("DeleteCompleted"),
+    UpdateInProgress("UpdateInProgress"),
+    UpdateCompleted("UpdateCompleted"),
+    UpdateFailed("UpdateFailed");
 
     private String value;
 

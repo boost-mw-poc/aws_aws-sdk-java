@@ -93,6 +93,19 @@ public class AbstractAmazonTextractAsync extends AbstractAmazonTextract implemen
     }
 
     @Override
+    public java.util.concurrent.Future<GetExpenseAnalysisResult> getExpenseAnalysisAsync(GetExpenseAnalysisRequest request) {
+
+        return getExpenseAnalysisAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetExpenseAnalysisResult> getExpenseAnalysisAsync(GetExpenseAnalysisRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetExpenseAnalysisRequest, GetExpenseAnalysisResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<StartDocumentAnalysisResult> startDocumentAnalysisAsync(StartDocumentAnalysisRequest request) {
 
         return startDocumentAnalysisAsync(request, null);
@@ -114,6 +127,19 @@ public class AbstractAmazonTextractAsync extends AbstractAmazonTextract implemen
     @Override
     public java.util.concurrent.Future<StartDocumentTextDetectionResult> startDocumentTextDetectionAsync(StartDocumentTextDetectionRequest request,
             com.amazonaws.handlers.AsyncHandler<StartDocumentTextDetectionRequest, StartDocumentTextDetectionResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartExpenseAnalysisResult> startExpenseAnalysisAsync(StartExpenseAnalysisRequest request) {
+
+        return startExpenseAnalysisAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartExpenseAnalysisResult> startExpenseAnalysisAsync(StartExpenseAnalysisRequest request,
+            com.amazonaws.handlers.AsyncHandler<StartExpenseAnalysisRequest, StartExpenseAnalysisResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

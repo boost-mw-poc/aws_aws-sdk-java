@@ -240,6 +240,39 @@ public class AmazonTextractAsyncClient extends AmazonTextractClient implements A
     }
 
     @Override
+    public java.util.concurrent.Future<GetExpenseAnalysisResult> getExpenseAnalysisAsync(GetExpenseAnalysisRequest request) {
+
+        return getExpenseAnalysisAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetExpenseAnalysisResult> getExpenseAnalysisAsync(final GetExpenseAnalysisRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetExpenseAnalysisRequest, GetExpenseAnalysisResult> asyncHandler) {
+        final GetExpenseAnalysisRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetExpenseAnalysisResult>() {
+            @Override
+            public GetExpenseAnalysisResult call() throws Exception {
+                GetExpenseAnalysisResult result = null;
+
+                try {
+                    result = executeGetExpenseAnalysis(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<StartDocumentAnalysisResult> startDocumentAnalysisAsync(StartDocumentAnalysisRequest request) {
 
         return startDocumentAnalysisAsync(request, null);
@@ -290,6 +323,39 @@ public class AmazonTextractAsyncClient extends AmazonTextractClient implements A
 
                 try {
                     result = executeStartDocumentTextDetection(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartExpenseAnalysisResult> startExpenseAnalysisAsync(StartExpenseAnalysisRequest request) {
+
+        return startExpenseAnalysisAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartExpenseAnalysisResult> startExpenseAnalysisAsync(final StartExpenseAnalysisRequest request,
+            final com.amazonaws.handlers.AsyncHandler<StartExpenseAnalysisRequest, StartExpenseAnalysisResult> asyncHandler) {
+        final StartExpenseAnalysisRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<StartExpenseAnalysisResult>() {
+            @Override
+            public StartExpenseAnalysisResult call() throws Exception {
+                StartExpenseAnalysisResult result = null;
+
+                try {
+                    result = executeStartExpenseAnalysis(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

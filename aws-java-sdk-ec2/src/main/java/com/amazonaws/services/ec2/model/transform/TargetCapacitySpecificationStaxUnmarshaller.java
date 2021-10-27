@@ -62,6 +62,11 @@ public class TargetCapacitySpecificationStaxUnmarshaller implements Unmarshaller
                     targetCapacitySpecification.setDefaultTargetCapacityType(StringStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("targetCapacityUnitType", targetDepth)) {
+                    targetCapacitySpecification.setTargetCapacityUnitType(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return targetCapacitySpecification;

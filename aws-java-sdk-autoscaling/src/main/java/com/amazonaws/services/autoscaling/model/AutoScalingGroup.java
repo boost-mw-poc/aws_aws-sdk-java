@@ -220,6 +220,22 @@ public class AutoScalingGroup implements Serializable, Cloneable {
      * </p>
      */
     private String context;
+    /**
+     * <p>
+     * The unit of measurement for the value specified for desired capacity. Amazon EC2 Auto Scaling supports
+     * <code>DesiredCapacityType</code> for attribute-based instance type selection only. For more information, see <a
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-asg-instance-type-requirements.html">Creating
+     * an Auto Scaling group using attribute-based instance type selection</a> in the <i>Amazon EC2 Auto Scaling User
+     * Guide</i>.
+     * </p>
+     * <p>
+     * By default, Amazon EC2 Auto Scaling specifies <code>units</code>, which translates into number of instances.
+     * </p>
+     * <p>
+     * Valid values: <code>units</code> | <code>vcpu</code> | <code>memory-mib</code>
+     * </p>
+     */
+    private String desiredCapacityType;
 
     /**
      * <p>
@@ -1797,6 +1813,109 @@ public class AutoScalingGroup implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * The unit of measurement for the value specified for desired capacity. Amazon EC2 Auto Scaling supports
+     * <code>DesiredCapacityType</code> for attribute-based instance type selection only. For more information, see <a
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-asg-instance-type-requirements.html">Creating
+     * an Auto Scaling group using attribute-based instance type selection</a> in the <i>Amazon EC2 Auto Scaling User
+     * Guide</i>.
+     * </p>
+     * <p>
+     * By default, Amazon EC2 Auto Scaling specifies <code>units</code>, which translates into number of instances.
+     * </p>
+     * <p>
+     * Valid values: <code>units</code> | <code>vcpu</code> | <code>memory-mib</code>
+     * </p>
+     * 
+     * @param desiredCapacityType
+     *        The unit of measurement for the value specified for desired capacity. Amazon EC2 Auto Scaling supports
+     *        <code>DesiredCapacityType</code> for attribute-based instance type selection only. For more information,
+     *        see <a
+     *        href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-asg-instance-type-requirements.html"
+     *        >Creating an Auto Scaling group using attribute-based instance type selection</a> in the <i>Amazon EC2
+     *        Auto Scaling User Guide</i>.</p>
+     *        <p>
+     *        By default, Amazon EC2 Auto Scaling specifies <code>units</code>, which translates into number of
+     *        instances.
+     *        </p>
+     *        <p>
+     *        Valid values: <code>units</code> | <code>vcpu</code> | <code>memory-mib</code>
+     */
+
+    public void setDesiredCapacityType(String desiredCapacityType) {
+        this.desiredCapacityType = desiredCapacityType;
+    }
+
+    /**
+     * <p>
+     * The unit of measurement for the value specified for desired capacity. Amazon EC2 Auto Scaling supports
+     * <code>DesiredCapacityType</code> for attribute-based instance type selection only. For more information, see <a
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-asg-instance-type-requirements.html">Creating
+     * an Auto Scaling group using attribute-based instance type selection</a> in the <i>Amazon EC2 Auto Scaling User
+     * Guide</i>.
+     * </p>
+     * <p>
+     * By default, Amazon EC2 Auto Scaling specifies <code>units</code>, which translates into number of instances.
+     * </p>
+     * <p>
+     * Valid values: <code>units</code> | <code>vcpu</code> | <code>memory-mib</code>
+     * </p>
+     * 
+     * @return The unit of measurement for the value specified for desired capacity. Amazon EC2 Auto Scaling supports
+     *         <code>DesiredCapacityType</code> for attribute-based instance type selection only. For more information,
+     *         see <a
+     *         href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-asg-instance-type-requirements.html"
+     *         >Creating an Auto Scaling group using attribute-based instance type selection</a> in the <i>Amazon EC2
+     *         Auto Scaling User Guide</i>.</p>
+     *         <p>
+     *         By default, Amazon EC2 Auto Scaling specifies <code>units</code>, which translates into number of
+     *         instances.
+     *         </p>
+     *         <p>
+     *         Valid values: <code>units</code> | <code>vcpu</code> | <code>memory-mib</code>
+     */
+
+    public String getDesiredCapacityType() {
+        return this.desiredCapacityType;
+    }
+
+    /**
+     * <p>
+     * The unit of measurement for the value specified for desired capacity. Amazon EC2 Auto Scaling supports
+     * <code>DesiredCapacityType</code> for attribute-based instance type selection only. For more information, see <a
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-asg-instance-type-requirements.html">Creating
+     * an Auto Scaling group using attribute-based instance type selection</a> in the <i>Amazon EC2 Auto Scaling User
+     * Guide</i>.
+     * </p>
+     * <p>
+     * By default, Amazon EC2 Auto Scaling specifies <code>units</code>, which translates into number of instances.
+     * </p>
+     * <p>
+     * Valid values: <code>units</code> | <code>vcpu</code> | <code>memory-mib</code>
+     * </p>
+     * 
+     * @param desiredCapacityType
+     *        The unit of measurement for the value specified for desired capacity. Amazon EC2 Auto Scaling supports
+     *        <code>DesiredCapacityType</code> for attribute-based instance type selection only. For more information,
+     *        see <a
+     *        href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-asg-instance-type-requirements.html"
+     *        >Creating an Auto Scaling group using attribute-based instance type selection</a> in the <i>Amazon EC2
+     *        Auto Scaling User Guide</i>.</p>
+     *        <p>
+     *        By default, Amazon EC2 Auto Scaling specifies <code>units</code>, which translates into number of
+     *        instances.
+     *        </p>
+     *        <p>
+     *        Valid values: <code>units</code> | <code>vcpu</code> | <code>memory-mib</code>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AutoScalingGroup withDesiredCapacityType(String desiredCapacityType) {
+        setDesiredCapacityType(desiredCapacityType);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1869,7 +1988,9 @@ public class AutoScalingGroup implements Serializable, Cloneable {
         if (getWarmPoolSize() != null)
             sb.append("WarmPoolSize: ").append(getWarmPoolSize()).append(",");
         if (getContext() != null)
-            sb.append("Context: ").append(getContext());
+            sb.append("Context: ").append(getContext()).append(",");
+        if (getDesiredCapacityType() != null)
+            sb.append("DesiredCapacityType: ").append(getDesiredCapacityType());
         sb.append("}");
         return sb.toString();
     }
@@ -2009,6 +2130,10 @@ public class AutoScalingGroup implements Serializable, Cloneable {
             return false;
         if (other.getContext() != null && other.getContext().equals(this.getContext()) == false)
             return false;
+        if (other.getDesiredCapacityType() == null ^ this.getDesiredCapacityType() == null)
+            return false;
+        if (other.getDesiredCapacityType() != null && other.getDesiredCapacityType().equals(this.getDesiredCapacityType()) == false)
+            return false;
         return true;
     }
 
@@ -2048,6 +2173,7 @@ public class AutoScalingGroup implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getWarmPoolConfiguration() == null) ? 0 : getWarmPoolConfiguration().hashCode());
         hashCode = prime * hashCode + ((getWarmPoolSize() == null) ? 0 : getWarmPoolSize().hashCode());
         hashCode = prime * hashCode + ((getContext() == null) ? 0 : getContext().hashCode());
+        hashCode = prime * hashCode + ((getDesiredCapacityType() == null) ? 0 : getDesiredCapacityType().hashCode());
         return hashCode;
     }
 

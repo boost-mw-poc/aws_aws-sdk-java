@@ -169,6 +169,12 @@ public class ModelPackage implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private java.util.List<Tag> tags;
+    /**
+     * <p>
+     * The metadata properties for the model package.
+     * </p>
+     */
+    private java.util.Map<String, String> customerMetadataProperties;
 
     /**
      * <p>
@@ -1337,6 +1343,74 @@ public class ModelPackage implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The metadata properties for the model package.
+     * </p>
+     * 
+     * @return The metadata properties for the model package.
+     */
+
+    public java.util.Map<String, String> getCustomerMetadataProperties() {
+        return customerMetadataProperties;
+    }
+
+    /**
+     * <p>
+     * The metadata properties for the model package.
+     * </p>
+     * 
+     * @param customerMetadataProperties
+     *        The metadata properties for the model package.
+     */
+
+    public void setCustomerMetadataProperties(java.util.Map<String, String> customerMetadataProperties) {
+        this.customerMetadataProperties = customerMetadataProperties;
+    }
+
+    /**
+     * <p>
+     * The metadata properties for the model package.
+     * </p>
+     * 
+     * @param customerMetadataProperties
+     *        The metadata properties for the model package.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ModelPackage withCustomerMetadataProperties(java.util.Map<String, String> customerMetadataProperties) {
+        setCustomerMetadataProperties(customerMetadataProperties);
+        return this;
+    }
+
+    /**
+     * Add a single CustomerMetadataProperties entry
+     *
+     * @see ModelPackage#withCustomerMetadataProperties
+     * @returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ModelPackage addCustomerMetadataPropertiesEntry(String key, String value) {
+        if (null == this.customerMetadataProperties) {
+            this.customerMetadataProperties = new java.util.HashMap<String, String>();
+        }
+        if (this.customerMetadataProperties.containsKey(key))
+            throw new IllegalArgumentException("Duplicated keys (" + key.toString() + ") are provided.");
+        this.customerMetadataProperties.put(key, value);
+        return this;
+    }
+
+    /**
+     * Removes all the entries added into CustomerMetadataProperties.
+     *
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ModelPackage clearCustomerMetadataPropertiesEntries() {
+        this.customerMetadataProperties = null;
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1387,7 +1461,9 @@ public class ModelPackage implements Serializable, Cloneable, StructuredPojo {
         if (getApprovalDescription() != null)
             sb.append("ApprovalDescription: ").append(getApprovalDescription()).append(",");
         if (getTags() != null)
-            sb.append("Tags: ").append(getTags());
+            sb.append("Tags: ").append(getTags()).append(",");
+        if (getCustomerMetadataProperties() != null)
+            sb.append("CustomerMetadataProperties: ").append(getCustomerMetadataProperties());
         sb.append("}");
         return sb.toString();
     }
@@ -1482,6 +1558,10 @@ public class ModelPackage implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
             return false;
+        if (other.getCustomerMetadataProperties() == null ^ this.getCustomerMetadataProperties() == null)
+            return false;
+        if (other.getCustomerMetadataProperties() != null && other.getCustomerMetadataProperties().equals(this.getCustomerMetadataProperties()) == false)
+            return false;
         return true;
     }
 
@@ -1510,6 +1590,7 @@ public class ModelPackage implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getLastModifiedBy() == null) ? 0 : getLastModifiedBy().hashCode());
         hashCode = prime * hashCode + ((getApprovalDescription() == null) ? 0 : getApprovalDescription().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getCustomerMetadataProperties() == null) ? 0 : getCustomerMetadataProperties().hashCode());
         return hashCode;
     }
 

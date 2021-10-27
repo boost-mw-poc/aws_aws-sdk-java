@@ -745,11 +745,112 @@ public class AmazonTextractClient extends AmazonWebServiceClient implements Amaz
 
     /**
      * <p>
+     * Gets the results for an Amazon Textract asynchronous operation that analyzes invoices and receipts. Amazon
+     * Textract finds contact information, items purchased, and vendor name, from input invoices and receipts.
+     * </p>
+     * <p>
+     * You start asynchronous invoice/receipt analysis by calling <a>StartExpenseAnalysis</a>, which returns a job
+     * identifier (<code>JobId</code>). Upon completion of the invoice/receipt analysis, Amazon Textract publishes the
+     * completion status to the Amazon Simple Notification Service (Amazon SNS) topic. This topic must be registered in
+     * the initial call to <code>StartExpenseAnalysis</code>. To get the results of the invoice/receipt analysis
+     * operation, first ensure that the status value published to the Amazon SNS topic is <code>SUCCEEDED</code>. If so,
+     * call <code>GetExpenseAnalysis</code>, and pass the job identifier (<code>JobId</code>) from the initial call to
+     * <code>StartExpenseAnalysis</code>.
+     * </p>
+     * <p>
+     * Use the MaxResults parameter to limit the number of blocks that are returned. If there are more results than
+     * specified in <code>MaxResults</code>, the value of <code>NextToken</code> in the operation response contains a
+     * pagination token for getting the next set of results. To get the next page of results, call
+     * <code>GetExpenseAnalysis</code>, and populate the <code>NextToken</code> request parameter with the token value
+     * that's returned from the previous call to <code>GetExpenseAnalysis</code>.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/textract/latest/dg/invoices-receipts.html">Analyzing Invoices and Receipts</a>.
+     * </p>
+     * 
+     * @param getExpenseAnalysisRequest
+     * @return Result of the GetExpenseAnalysis operation returned by the service.
+     * @throws InvalidParameterException
+     *         An input parameter violated a constraint. For example, in synchronous operations, an
+     *         <code>InvalidParameterException</code> exception occurs when neither of the <code>S3Object</code> or
+     *         <code>Bytes</code> values are supplied in the <code>Document</code> request parameter. Validate your
+     *         parameter before calling the API operation again.
+     * @throws AccessDeniedException
+     *         You aren't authorized to perform the action. Use the Amazon Resource Name (ARN) of an authorized user or
+     *         IAM role to perform the operation.
+     * @throws ProvisionedThroughputExceededException
+     *         The number of requests exceeded your throughput limit. If you want to increase this limit, contact Amazon
+     *         Textract.
+     * @throws InvalidJobIdException
+     *         An invalid job identifier was passed to <a>GetDocumentAnalysis</a> or to <a>GetDocumentAnalysis</a>.
+     * @throws InternalServerErrorException
+     *         Amazon Textract experienced a service issue. Try your call again.
+     * @throws ThrottlingException
+     *         Amazon Textract is temporarily unable to process the request. Try your call again.
+     * @throws InvalidS3ObjectException
+     *         Amazon Textract is unable to access the S3 object that's specified in the request. for more information,
+     *         <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-access-control.html">Configure Access to
+     *         Amazon S3</a> For troubleshooting information, see <a
+     *         href="https://docs.aws.amazon.com/AmazonS3/latest/dev/troubleshooting.html">Troubleshooting Amazon S3</a>
+     * @throws InvalidKMSKeyException
+     *         Indicates you do not have decrypt permissions with the KMS key entered, or the KMS key was entered
+     *         incorrectly.
+     * @sample AmazonTextract.GetExpenseAnalysis
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/textract-2018-06-27/GetExpenseAnalysis" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public GetExpenseAnalysisResult getExpenseAnalysis(GetExpenseAnalysisRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetExpenseAnalysis(request);
+    }
+
+    @SdkInternalApi
+    final GetExpenseAnalysisResult executeGetExpenseAnalysis(GetExpenseAnalysisRequest getExpenseAnalysisRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getExpenseAnalysisRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetExpenseAnalysisRequest> request = null;
+        Response<GetExpenseAnalysisResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetExpenseAnalysisRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getExpenseAnalysisRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Textract");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetExpenseAnalysis");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetExpenseAnalysisResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetExpenseAnalysisResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Starts the asynchronous analysis of an input document for relationships between detected items such as key-value
      * pairs, tables, and selection elements.
      * </p>
      * <p>
-     * <code>StartDocumentAnalysis</code> can analyze text in documents that are in JPEG, PNG, and PDF format. The
+     * <code>StartDocumentAnalysis</code> can analyze text in documents that are in JPEG, PNG, TIFF, and PDF format. The
      * documents are stored in an Amazon S3 bucket. Use <a>DocumentLocation</a> to specify the bucket name and file name
      * of the document.
      * </p>
@@ -863,9 +964,9 @@ public class AmazonTextractClient extends AmazonWebServiceClient implements Amaz
      * that make up a line of text.
      * </p>
      * <p>
-     * <code>StartDocumentTextDetection</code> can analyze text in documents that are in JPEG, PNG, and PDF format. The
-     * documents are stored in an Amazon S3 bucket. Use <a>DocumentLocation</a> to specify the bucket name and file name
-     * of the document.
+     * <code>StartDocumentTextDetection</code> can analyze text in documents that are in JPEG, PNG, TIFF, and PDF
+     * format. The documents are stored in an Amazon S3 bucket. Use <a>DocumentLocation</a> to specify the bucket name
+     * and file name of the document.
      * </p>
      * <p>
      * <code>StartTextDetection</code> returns a job identifier (<code>JobId</code>) that you use to get the results of
@@ -962,6 +1063,120 @@ public class AmazonTextractClient extends AmazonWebServiceClient implements Amaz
             HttpResponseHandler<AmazonWebServiceResponse<StartDocumentTextDetectionResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new StartDocumentTextDetectionResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Starts the asynchronous analysis of invoices or receipts for data like contact information, items purchased, and
+     * vendor names.
+     * </p>
+     * <p>
+     * <code>StartExpenseAnalysis</code> can analyze text in documents that are in JPEG, PNG, and PDF format. The
+     * documents must be stored in an Amazon S3 bucket. Use the <a>DocumentLocation</a> parameter to specify the name of
+     * your S3 bucket and the name of the document in that bucket.
+     * </p>
+     * <p>
+     * <code>StartExpenseAnalysis</code> returns a job identifier (<code>JobId</code>) that you will provide to
+     * <code>GetExpenseAnalysis</code> to retrieve the results of the operation. When the analysis of the input
+     * invoices/receipts is finished, Amazon Textract publishes a completion status to the Amazon Simple Notification
+     * Service (Amazon SNS) topic that you provide to the <code>NotificationChannel</code>. To obtain the results of the
+     * invoice and receipt analysis operation, ensure that the status value published to the Amazon SNS topic is
+     * <code>SUCCEEDED</code>. If so, call <a>GetExpenseAnalysis</a>, and pass the job identifier (<code>JobId</code>)
+     * that was returned by your call to <code>StartExpenseAnalysis</code>.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/textract/latest/dg/invoice-receipts.html">Analyzing Invoices and Receipts</a>.
+     * </p>
+     * 
+     * @param startExpenseAnalysisRequest
+     * @return Result of the StartExpenseAnalysis operation returned by the service.
+     * @throws InvalidParameterException
+     *         An input parameter violated a constraint. For example, in synchronous operations, an
+     *         <code>InvalidParameterException</code> exception occurs when neither of the <code>S3Object</code> or
+     *         <code>Bytes</code> values are supplied in the <code>Document</code> request parameter. Validate your
+     *         parameter before calling the API operation again.
+     * @throws InvalidS3ObjectException
+     *         Amazon Textract is unable to access the S3 object that's specified in the request. for more information,
+     *         <a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-access-control.html">Configure Access to
+     *         Amazon S3</a> For troubleshooting information, see <a
+     *         href="https://docs.aws.amazon.com/AmazonS3/latest/dev/troubleshooting.html">Troubleshooting Amazon S3</a>
+     * @throws InvalidKMSKeyException
+     *         Indicates you do not have decrypt permissions with the KMS key entered, or the KMS key was entered
+     *         incorrectly.
+     * @throws UnsupportedDocumentException
+     *         The format of the input document isn't supported. Documents for synchronous operations can be in PNG or
+     *         JPEG format. Documents for asynchronous operations can also be in PDF format.
+     * @throws DocumentTooLargeException
+     *         The document can't be processed because it's too large. The maximum document size for synchronous
+     *         operations 10 MB. The maximum document size for asynchronous operations is 500 MB for PDF files.
+     * @throws BadDocumentException
+     *         Amazon Textract isn't able to read the document. For more information on the document limits in Amazon
+     *         Textract, see <a>limits</a>.
+     * @throws AccessDeniedException
+     *         You aren't authorized to perform the action. Use the Amazon Resource Name (ARN) of an authorized user or
+     *         IAM role to perform the operation.
+     * @throws ProvisionedThroughputExceededException
+     *         The number of requests exceeded your throughput limit. If you want to increase this limit, contact Amazon
+     *         Textract.
+     * @throws InternalServerErrorException
+     *         Amazon Textract experienced a service issue. Try your call again.
+     * @throws IdempotentParameterMismatchException
+     *         A <code>ClientRequestToken</code> input parameter was reused with an operation, but at least one of the
+     *         other input parameters is different from the previous call to the operation.
+     * @throws ThrottlingException
+     *         Amazon Textract is temporarily unable to process the request. Try your call again.
+     * @throws LimitExceededException
+     *         An Amazon Textract service limit was exceeded. For example, if you start too many asynchronous jobs
+     *         concurrently, calls to start operations (<code>StartDocumentTextDetection</code>, for example) raise a
+     *         LimitExceededException exception (HTTP status code: 400) until the number of concurrently running jobs is
+     *         below the Amazon Textract service limit.
+     * @sample AmazonTextract.StartExpenseAnalysis
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/textract-2018-06-27/StartExpenseAnalysis" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public StartExpenseAnalysisResult startExpenseAnalysis(StartExpenseAnalysisRequest request) {
+        request = beforeClientExecution(request);
+        return executeStartExpenseAnalysis(request);
+    }
+
+    @SdkInternalApi
+    final StartExpenseAnalysisResult executeStartExpenseAnalysis(StartExpenseAnalysisRequest startExpenseAnalysisRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(startExpenseAnalysisRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<StartExpenseAnalysisRequest> request = null;
+        Response<StartExpenseAnalysisResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new StartExpenseAnalysisRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(startExpenseAnalysisRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Textract");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "StartExpenseAnalysis");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<StartExpenseAnalysisResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new StartExpenseAnalysisResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

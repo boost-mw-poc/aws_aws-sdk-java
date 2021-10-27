@@ -141,6 +141,19 @@ public interface AmazonSageMaker {
 
     /**
      * <p>
+     * This action batch describes a list of versioned model packages
+     * </p>
+     * 
+     * @param batchDescribeModelPackageRequest
+     * @return Result of the BatchDescribeModelPackage operation returned by the service.
+     * @sample AmazonSageMaker.BatchDescribeModelPackage
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/BatchDescribeModelPackage"
+     *      target="_top">AWS API Documentation</a>
+     */
+    BatchDescribeModelPackageResult batchDescribeModelPackage(BatchDescribeModelPackageRequest batchDescribeModelPackageRequest);
+
+    /**
+     * <p>
      * Creates an <i>action</i>. An action is a lineage tracking entity that represents an action or activity. For
      * example, a model deployment or an HPO job. Generally, an action involves at least one input or output artifact.
      * For more information, see <a href="https://docs.aws.amazon.com/sagemaker/latest/dg/lineage-tracking.html">Amazon
@@ -2667,12 +2680,11 @@ public interface AmazonSageMaker {
 
     /**
      * <p>
-     * Returns a description of the specified model package, which is used to create Amazon SageMaker models or list
-     * them on Amazon Web Services Marketplace.
+     * Returns a description of the specified model package, which is used to create SageMaker models or list them on
+     * Amazon Web Services Marketplace.
      * </p>
      * <p>
-     * To create models in Amazon SageMaker, buyers can subscribe to model packages listed on Amazon Web Services
-     * Marketplace.
+     * To create models in SageMaker, buyers can subscribe to model packages listed on Amazon Web Services Marketplace.
      * </p>
      * 
      * @param describeModelPackageRequest
@@ -4605,6 +4617,27 @@ public interface AmazonSageMaker {
      *      target="_top">AWS API Documentation</a>
      */
     UpdatePipelineExecutionResult updatePipelineExecution(UpdatePipelineExecutionRequest updatePipelineExecutionRequest);
+
+    /**
+     * <p>
+     * Updates a machine learning (ML) project that is created from a template that sets up an ML pipeline from training
+     * to deploying an approved model.
+     * </p>
+     * <note>
+     * <p>
+     * You must not update a project that is in use. If you update the
+     * <code>ServiceCatalogProvisioningUpdateDetails</code> of a project that is active or being created, or updated,
+     * you may lose resources already created by the project.
+     * </p>
+     * </note>
+     * 
+     * @param updateProjectRequest
+     * @return Result of the UpdateProject operation returned by the service.
+     * @sample AmazonSageMaker.UpdateProject
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sagemaker-2017-07-24/UpdateProject" target="_top">AWS API
+     *      Documentation</a>
+     */
+    UpdateProjectResult updateProject(UpdateProjectRequest updateProjectRequest);
 
     /**
      * <p>

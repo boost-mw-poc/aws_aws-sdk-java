@@ -225,8 +225,8 @@ public class Block implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The page on which a block was detected. <code>Page</code> is returned by asynchronous operations. Page values
-     * greater than 1 are only returned for multipage documents that are in PDF format. A scanned image (JPEG/PNG), even
-     * if it contains multiple document pages, is considered to be a single-page document. The value of
+     * greater than 1 are only returned for multipage documents that are in PDF or TIFF format. A scanned image
+     * (JPEG/PNG), even if it contains multiple document pages, is considered to be a single-page document. The value of
      * <code>Page</code> is always 1. Synchronous operations don't return <code>Page</code> because every input document
      * is considered to be a single-page document.
      * </p>
@@ -1737,17 +1737,17 @@ public class Block implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The page on which a block was detected. <code>Page</code> is returned by asynchronous operations. Page values
-     * greater than 1 are only returned for multipage documents that are in PDF format. A scanned image (JPEG/PNG), even
-     * if it contains multiple document pages, is considered to be a single-page document. The value of
+     * greater than 1 are only returned for multipage documents that are in PDF or TIFF format. A scanned image
+     * (JPEG/PNG), even if it contains multiple document pages, is considered to be a single-page document. The value of
      * <code>Page</code> is always 1. Synchronous operations don't return <code>Page</code> because every input document
      * is considered to be a single-page document.
      * </p>
      * 
      * @param page
      *        The page on which a block was detected. <code>Page</code> is returned by asynchronous operations. Page
-     *        values greater than 1 are only returned for multipage documents that are in PDF format. A scanned image
-     *        (JPEG/PNG), even if it contains multiple document pages, is considered to be a single-page document. The
-     *        value of <code>Page</code> is always 1. Synchronous operations don't return <code>Page</code> because
+     *        values greater than 1 are only returned for multipage documents that are in PDF or TIFF format. A scanned
+     *        image (JPEG/PNG), even if it contains multiple document pages, is considered to be a single-page document.
+     *        The value of <code>Page</code> is always 1. Synchronous operations don't return <code>Page</code> because
      *        every input document is considered to be a single-page document.
      */
 
@@ -1758,17 +1758,17 @@ public class Block implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The page on which a block was detected. <code>Page</code> is returned by asynchronous operations. Page values
-     * greater than 1 are only returned for multipage documents that are in PDF format. A scanned image (JPEG/PNG), even
-     * if it contains multiple document pages, is considered to be a single-page document. The value of
+     * greater than 1 are only returned for multipage documents that are in PDF or TIFF format. A scanned image
+     * (JPEG/PNG), even if it contains multiple document pages, is considered to be a single-page document. The value of
      * <code>Page</code> is always 1. Synchronous operations don't return <code>Page</code> because every input document
      * is considered to be a single-page document.
      * </p>
      * 
      * @return The page on which a block was detected. <code>Page</code> is returned by asynchronous operations. Page
-     *         values greater than 1 are only returned for multipage documents that are in PDF format. A scanned image
-     *         (JPEG/PNG), even if it contains multiple document pages, is considered to be a single-page document. The
-     *         value of <code>Page</code> is always 1. Synchronous operations don't return <code>Page</code> because
-     *         every input document is considered to be a single-page document.
+     *         values greater than 1 are only returned for multipage documents that are in PDF or TIFF format. A scanned
+     *         image (JPEG/PNG), even if it contains multiple document pages, is considered to be a single-page
+     *         document. The value of <code>Page</code> is always 1. Synchronous operations don't return
+     *         <code>Page</code> because every input document is considered to be a single-page document.
      */
 
     public Integer getPage() {
@@ -1778,17 +1778,17 @@ public class Block implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The page on which a block was detected. <code>Page</code> is returned by asynchronous operations. Page values
-     * greater than 1 are only returned for multipage documents that are in PDF format. A scanned image (JPEG/PNG), even
-     * if it contains multiple document pages, is considered to be a single-page document. The value of
+     * greater than 1 are only returned for multipage documents that are in PDF or TIFF format. A scanned image
+     * (JPEG/PNG), even if it contains multiple document pages, is considered to be a single-page document. The value of
      * <code>Page</code> is always 1. Synchronous operations don't return <code>Page</code> because every input document
      * is considered to be a single-page document.
      * </p>
      * 
      * @param page
      *        The page on which a block was detected. <code>Page</code> is returned by asynchronous operations. Page
-     *        values greater than 1 are only returned for multipage documents that are in PDF format. A scanned image
-     *        (JPEG/PNG), even if it contains multiple document pages, is considered to be a single-page document. The
-     *        value of <code>Page</code> is always 1. Synchronous operations don't return <code>Page</code> because
+     *        values greater than 1 are only returned for multipage documents that are in PDF or TIFF format. A scanned
+     *        image (JPEG/PNG), even if it contains multiple document pages, is considered to be a single-page document.
+     *        The value of <code>Page</code> is always 1. Synchronous operations don't return <code>Page</code> because
      *        every input document is considered to be a single-page document.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

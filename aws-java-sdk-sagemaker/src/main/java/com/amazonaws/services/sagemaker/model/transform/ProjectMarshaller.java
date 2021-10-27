@@ -48,6 +48,10 @@ public class ProjectMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CreationTime").timestampFormat("unixTimestamp").build();
     private static final MarshallingInfo<List> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Tags").build();
+    private static final MarshallingInfo<java.util.Date> LASTMODIFIEDTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LastModifiedTime").timestampFormat("unixTimestamp").build();
+    private static final MarshallingInfo<StructuredPojo> LASTMODIFIEDBY_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LastModifiedBy").build();
 
     private static final ProjectMarshaller instance = new ProjectMarshaller();
 
@@ -75,6 +79,8 @@ public class ProjectMarshaller {
             protocolMarshaller.marshall(project.getCreatedBy(), CREATEDBY_BINDING);
             protocolMarshaller.marshall(project.getCreationTime(), CREATIONTIME_BINDING);
             protocolMarshaller.marshall(project.getTags(), TAGS_BINDING);
+            protocolMarshaller.marshall(project.getLastModifiedTime(), LASTMODIFIEDTIME_BINDING);
+            protocolMarshaller.marshall(project.getLastModifiedBy(), LASTMODIFIEDBY_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

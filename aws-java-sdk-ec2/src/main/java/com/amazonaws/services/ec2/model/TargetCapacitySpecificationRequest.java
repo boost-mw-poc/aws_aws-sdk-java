@@ -63,6 +63,15 @@ public class TargetCapacitySpecificationRequest implements Serializable, Cloneab
      * </p>
      */
     private String defaultTargetCapacityType;
+    /**
+     * <p>
+     * The unit for the target capacity.
+     * </p>
+     * <p>
+     * Default: <code>units</code> (translates to number of instances)
+     * </p>
+     */
+    private String targetCapacityUnitType;
 
     /**
      * <p>
@@ -245,6 +254,85 @@ public class TargetCapacitySpecificationRequest implements Serializable, Cloneab
     }
 
     /**
+     * <p>
+     * The unit for the target capacity.
+     * </p>
+     * <p>
+     * Default: <code>units</code> (translates to number of instances)
+     * </p>
+     * 
+     * @param targetCapacityUnitType
+     *        The unit for the target capacity.</p>
+     *        <p>
+     *        Default: <code>units</code> (translates to number of instances)
+     * @see TargetCapacityUnitType
+     */
+
+    public void setTargetCapacityUnitType(String targetCapacityUnitType) {
+        this.targetCapacityUnitType = targetCapacityUnitType;
+    }
+
+    /**
+     * <p>
+     * The unit for the target capacity.
+     * </p>
+     * <p>
+     * Default: <code>units</code> (translates to number of instances)
+     * </p>
+     * 
+     * @return The unit for the target capacity.</p>
+     *         <p>
+     *         Default: <code>units</code> (translates to number of instances)
+     * @see TargetCapacityUnitType
+     */
+
+    public String getTargetCapacityUnitType() {
+        return this.targetCapacityUnitType;
+    }
+
+    /**
+     * <p>
+     * The unit for the target capacity.
+     * </p>
+     * <p>
+     * Default: <code>units</code> (translates to number of instances)
+     * </p>
+     * 
+     * @param targetCapacityUnitType
+     *        The unit for the target capacity.</p>
+     *        <p>
+     *        Default: <code>units</code> (translates to number of instances)
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see TargetCapacityUnitType
+     */
+
+    public TargetCapacitySpecificationRequest withTargetCapacityUnitType(String targetCapacityUnitType) {
+        setTargetCapacityUnitType(targetCapacityUnitType);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The unit for the target capacity.
+     * </p>
+     * <p>
+     * Default: <code>units</code> (translates to number of instances)
+     * </p>
+     * 
+     * @param targetCapacityUnitType
+     *        The unit for the target capacity.</p>
+     *        <p>
+     *        Default: <code>units</code> (translates to number of instances)
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see TargetCapacityUnitType
+     */
+
+    public TargetCapacitySpecificationRequest withTargetCapacityUnitType(TargetCapacityUnitType targetCapacityUnitType) {
+        this.targetCapacityUnitType = targetCapacityUnitType.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -263,7 +351,9 @@ public class TargetCapacitySpecificationRequest implements Serializable, Cloneab
         if (getSpotTargetCapacity() != null)
             sb.append("SpotTargetCapacity: ").append(getSpotTargetCapacity()).append(",");
         if (getDefaultTargetCapacityType() != null)
-            sb.append("DefaultTargetCapacityType: ").append(getDefaultTargetCapacityType());
+            sb.append("DefaultTargetCapacityType: ").append(getDefaultTargetCapacityType()).append(",");
+        if (getTargetCapacityUnitType() != null)
+            sb.append("TargetCapacityUnitType: ").append(getTargetCapacityUnitType());
         sb.append("}");
         return sb.toString();
     }
@@ -294,6 +384,10 @@ public class TargetCapacitySpecificationRequest implements Serializable, Cloneab
             return false;
         if (other.getDefaultTargetCapacityType() != null && other.getDefaultTargetCapacityType().equals(this.getDefaultTargetCapacityType()) == false)
             return false;
+        if (other.getTargetCapacityUnitType() == null ^ this.getTargetCapacityUnitType() == null)
+            return false;
+        if (other.getTargetCapacityUnitType() != null && other.getTargetCapacityUnitType().equals(this.getTargetCapacityUnitType()) == false)
+            return false;
         return true;
     }
 
@@ -306,6 +400,7 @@ public class TargetCapacitySpecificationRequest implements Serializable, Cloneab
         hashCode = prime * hashCode + ((getOnDemandTargetCapacity() == null) ? 0 : getOnDemandTargetCapacity().hashCode());
         hashCode = prime * hashCode + ((getSpotTargetCapacity() == null) ? 0 : getSpotTargetCapacity().hashCode());
         hashCode = prime * hashCode + ((getDefaultTargetCapacityType() == null) ? 0 : getDefaultTargetCapacityType().hashCode());
+        hashCode = prime * hashCode + ((getTargetCapacityUnitType() == null) ? 0 : getTargetCapacityUnitType().hashCode());
         return hashCode;
     }
 

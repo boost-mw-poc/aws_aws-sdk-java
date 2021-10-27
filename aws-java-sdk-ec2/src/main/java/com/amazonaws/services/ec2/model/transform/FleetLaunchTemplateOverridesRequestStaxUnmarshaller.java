@@ -77,6 +77,11 @@ public class FleetLaunchTemplateOverridesRequestStaxUnmarshaller implements Unma
                     fleetLaunchTemplateOverridesRequest.setPlacement(PlacementStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("InstanceRequirements", targetDepth)) {
+                    fleetLaunchTemplateOverridesRequest.setInstanceRequirements(InstanceRequirementsRequestStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return fleetLaunchTemplateOverridesRequest;

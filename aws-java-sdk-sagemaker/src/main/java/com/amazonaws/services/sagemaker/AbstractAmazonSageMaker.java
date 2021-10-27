@@ -44,6 +44,11 @@ public class AbstractAmazonSageMaker implements AmazonSageMaker {
     }
 
     @Override
+    public BatchDescribeModelPackageResult batchDescribeModelPackage(BatchDescribeModelPackageRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateActionResult createAction(CreateActionRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -1195,6 +1200,11 @@ public class AbstractAmazonSageMaker implements AmazonSageMaker {
 
     @Override
     public UpdatePipelineExecutionResult updatePipelineExecution(UpdatePipelineExecutionRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateProjectResult updateProject(UpdateProjectRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

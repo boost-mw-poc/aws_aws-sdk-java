@@ -155,6 +155,10 @@ public class SpotFleetLaunchSpecificationStaxUnmarshaller implements Unmarshalle
                     continue;
                 }
 
+                if (context.testExpression("instanceRequirements", targetDepth)) {
+                    spotFleetLaunchSpecification.setInstanceRequirements(InstanceRequirementsStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return spotFleetLaunchSpecification;

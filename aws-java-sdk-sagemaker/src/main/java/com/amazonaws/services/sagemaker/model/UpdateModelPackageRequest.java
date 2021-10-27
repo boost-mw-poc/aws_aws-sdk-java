@@ -27,7 +27,7 @@ public class UpdateModelPackageRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the model.
+     * The Amazon Resource Name (ARN) of the model package.
      * </p>
      */
     private String modelPackageArn;
@@ -43,14 +43,26 @@ public class UpdateModelPackageRequest extends com.amazonaws.AmazonWebServiceReq
      * </p>
      */
     private String approvalDescription;
+    /**
+     * <p>
+     * The metadata properties associated with the model package versions.
+     * </p>
+     */
+    private java.util.Map<String, String> customerMetadataProperties;
+    /**
+     * <p>
+     * The metadata properties associated with the model package versions to remove.
+     * </p>
+     */
+    private java.util.List<String> customerMetadataPropertiesToRemove;
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the model.
+     * The Amazon Resource Name (ARN) of the model package.
      * </p>
      * 
      * @param modelPackageArn
-     *        The Amazon Resource Name (ARN) of the model.
+     *        The Amazon Resource Name (ARN) of the model package.
      */
 
     public void setModelPackageArn(String modelPackageArn) {
@@ -59,10 +71,10 @@ public class UpdateModelPackageRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the model.
+     * The Amazon Resource Name (ARN) of the model package.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the model.
+     * @return The Amazon Resource Name (ARN) of the model package.
      */
 
     public String getModelPackageArn() {
@@ -71,11 +83,11 @@ public class UpdateModelPackageRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the model.
+     * The Amazon Resource Name (ARN) of the model package.
      * </p>
      * 
      * @param modelPackageArn
-     *        The Amazon Resource Name (ARN) of the model.
+     *        The Amazon Resource Name (ARN) of the model package.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -184,6 +196,145 @@ public class UpdateModelPackageRequest extends com.amazonaws.AmazonWebServiceReq
     }
 
     /**
+     * <p>
+     * The metadata properties associated with the model package versions.
+     * </p>
+     * 
+     * @return The metadata properties associated with the model package versions.
+     */
+
+    public java.util.Map<String, String> getCustomerMetadataProperties() {
+        return customerMetadataProperties;
+    }
+
+    /**
+     * <p>
+     * The metadata properties associated with the model package versions.
+     * </p>
+     * 
+     * @param customerMetadataProperties
+     *        The metadata properties associated with the model package versions.
+     */
+
+    public void setCustomerMetadataProperties(java.util.Map<String, String> customerMetadataProperties) {
+        this.customerMetadataProperties = customerMetadataProperties;
+    }
+
+    /**
+     * <p>
+     * The metadata properties associated with the model package versions.
+     * </p>
+     * 
+     * @param customerMetadataProperties
+     *        The metadata properties associated with the model package versions.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateModelPackageRequest withCustomerMetadataProperties(java.util.Map<String, String> customerMetadataProperties) {
+        setCustomerMetadataProperties(customerMetadataProperties);
+        return this;
+    }
+
+    /**
+     * Add a single CustomerMetadataProperties entry
+     *
+     * @see UpdateModelPackageRequest#withCustomerMetadataProperties
+     * @returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateModelPackageRequest addCustomerMetadataPropertiesEntry(String key, String value) {
+        if (null == this.customerMetadataProperties) {
+            this.customerMetadataProperties = new java.util.HashMap<String, String>();
+        }
+        if (this.customerMetadataProperties.containsKey(key))
+            throw new IllegalArgumentException("Duplicated keys (" + key.toString() + ") are provided.");
+        this.customerMetadataProperties.put(key, value);
+        return this;
+    }
+
+    /**
+     * Removes all the entries added into CustomerMetadataProperties.
+     *
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateModelPackageRequest clearCustomerMetadataPropertiesEntries() {
+        this.customerMetadataProperties = null;
+        return this;
+    }
+
+    /**
+     * <p>
+     * The metadata properties associated with the model package versions to remove.
+     * </p>
+     * 
+     * @return The metadata properties associated with the model package versions to remove.
+     */
+
+    public java.util.List<String> getCustomerMetadataPropertiesToRemove() {
+        return customerMetadataPropertiesToRemove;
+    }
+
+    /**
+     * <p>
+     * The metadata properties associated with the model package versions to remove.
+     * </p>
+     * 
+     * @param customerMetadataPropertiesToRemove
+     *        The metadata properties associated with the model package versions to remove.
+     */
+
+    public void setCustomerMetadataPropertiesToRemove(java.util.Collection<String> customerMetadataPropertiesToRemove) {
+        if (customerMetadataPropertiesToRemove == null) {
+            this.customerMetadataPropertiesToRemove = null;
+            return;
+        }
+
+        this.customerMetadataPropertiesToRemove = new java.util.ArrayList<String>(customerMetadataPropertiesToRemove);
+    }
+
+    /**
+     * <p>
+     * The metadata properties associated with the model package versions to remove.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setCustomerMetadataPropertiesToRemove(java.util.Collection)} or
+     * {@link #withCustomerMetadataPropertiesToRemove(java.util.Collection)} if you want to override the existing
+     * values.
+     * </p>
+     * 
+     * @param customerMetadataPropertiesToRemove
+     *        The metadata properties associated with the model package versions to remove.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateModelPackageRequest withCustomerMetadataPropertiesToRemove(String... customerMetadataPropertiesToRemove) {
+        if (this.customerMetadataPropertiesToRemove == null) {
+            setCustomerMetadataPropertiesToRemove(new java.util.ArrayList<String>(customerMetadataPropertiesToRemove.length));
+        }
+        for (String ele : customerMetadataPropertiesToRemove) {
+            this.customerMetadataPropertiesToRemove.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The metadata properties associated with the model package versions to remove.
+     * </p>
+     * 
+     * @param customerMetadataPropertiesToRemove
+     *        The metadata properties associated with the model package versions to remove.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateModelPackageRequest withCustomerMetadataPropertiesToRemove(java.util.Collection<String> customerMetadataPropertiesToRemove) {
+        setCustomerMetadataPropertiesToRemove(customerMetadataPropertiesToRemove);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -200,7 +351,11 @@ public class UpdateModelPackageRequest extends com.amazonaws.AmazonWebServiceReq
         if (getModelApprovalStatus() != null)
             sb.append("ModelApprovalStatus: ").append(getModelApprovalStatus()).append(",");
         if (getApprovalDescription() != null)
-            sb.append("ApprovalDescription: ").append(getApprovalDescription());
+            sb.append("ApprovalDescription: ").append(getApprovalDescription()).append(",");
+        if (getCustomerMetadataProperties() != null)
+            sb.append("CustomerMetadataProperties: ").append(getCustomerMetadataProperties()).append(",");
+        if (getCustomerMetadataPropertiesToRemove() != null)
+            sb.append("CustomerMetadataPropertiesToRemove: ").append(getCustomerMetadataPropertiesToRemove());
         sb.append("}");
         return sb.toString();
     }
@@ -227,6 +382,15 @@ public class UpdateModelPackageRequest extends com.amazonaws.AmazonWebServiceReq
             return false;
         if (other.getApprovalDescription() != null && other.getApprovalDescription().equals(this.getApprovalDescription()) == false)
             return false;
+        if (other.getCustomerMetadataProperties() == null ^ this.getCustomerMetadataProperties() == null)
+            return false;
+        if (other.getCustomerMetadataProperties() != null && other.getCustomerMetadataProperties().equals(this.getCustomerMetadataProperties()) == false)
+            return false;
+        if (other.getCustomerMetadataPropertiesToRemove() == null ^ this.getCustomerMetadataPropertiesToRemove() == null)
+            return false;
+        if (other.getCustomerMetadataPropertiesToRemove() != null
+                && other.getCustomerMetadataPropertiesToRemove().equals(this.getCustomerMetadataPropertiesToRemove()) == false)
+            return false;
         return true;
     }
 
@@ -238,6 +402,8 @@ public class UpdateModelPackageRequest extends com.amazonaws.AmazonWebServiceReq
         hashCode = prime * hashCode + ((getModelPackageArn() == null) ? 0 : getModelPackageArn().hashCode());
         hashCode = prime * hashCode + ((getModelApprovalStatus() == null) ? 0 : getModelApprovalStatus().hashCode());
         hashCode = prime * hashCode + ((getApprovalDescription() == null) ? 0 : getApprovalDescription().hashCode());
+        hashCode = prime * hashCode + ((getCustomerMetadataProperties() == null) ? 0 : getCustomerMetadataProperties().hashCode());
+        hashCode = prime * hashCode + ((getCustomerMetadataPropertiesToRemove() == null) ? 0 : getCustomerMetadataPropertiesToRemove().hashCode());
         return hashCode;
     }
 

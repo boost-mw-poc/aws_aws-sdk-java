@@ -13151,6 +13151,41 @@ public class AmazonEC2AsyncClient extends AmazonEC2Client implements AmazonEC2As
     }
 
     @Override
+    public java.util.concurrent.Future<GetInstanceTypesFromInstanceRequirementsResult> getInstanceTypesFromInstanceRequirementsAsync(
+            GetInstanceTypesFromInstanceRequirementsRequest request) {
+
+        return getInstanceTypesFromInstanceRequirementsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetInstanceTypesFromInstanceRequirementsResult> getInstanceTypesFromInstanceRequirementsAsync(
+            final GetInstanceTypesFromInstanceRequirementsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetInstanceTypesFromInstanceRequirementsRequest, GetInstanceTypesFromInstanceRequirementsResult> asyncHandler) {
+        final GetInstanceTypesFromInstanceRequirementsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetInstanceTypesFromInstanceRequirementsResult>() {
+            @Override
+            public GetInstanceTypesFromInstanceRequirementsResult call() throws Exception {
+                GetInstanceTypesFromInstanceRequirementsResult result = null;
+
+                try {
+                    result = executeGetInstanceTypesFromInstanceRequirements(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetLaunchTemplateDataResult> getLaunchTemplateDataAsync(GetLaunchTemplateDataRequest request) {
 
         return getLaunchTemplateDataAsync(request, null);
@@ -13337,6 +13372,39 @@ public class AmazonEC2AsyncClient extends AmazonEC2Client implements AmazonEC2As
 
                 try {
                     result = executeGetSerialConsoleAccessStatus(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetSpotPlacementScoresResult> getSpotPlacementScoresAsync(GetSpotPlacementScoresRequest request) {
+
+        return getSpotPlacementScoresAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetSpotPlacementScoresResult> getSpotPlacementScoresAsync(final GetSpotPlacementScoresRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetSpotPlacementScoresRequest, GetSpotPlacementScoresResult> asyncHandler) {
+        final GetSpotPlacementScoresRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetSpotPlacementScoresResult>() {
+            @Override
+            public GetSpotPlacementScoresResult call() throws Exception {
+                GetSpotPlacementScoresResult result = null;
+
+                try {
+                    result = executeGetSpotPlacementScores(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

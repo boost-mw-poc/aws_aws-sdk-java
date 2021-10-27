@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.sagemaker.model.transform;
 
+import java.util.Map;
 import java.util.List;
 import javax.annotation.Generated;
 
@@ -55,6 +56,8 @@ public class CreateModelPackageRequestMarshaller {
     private static final MarshallingInfo<String> CLIENTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ClientToken")
             .defaultValueSupplier(com.amazonaws.util.IdempotentUtils.getGenerator()).build();
+    private static final MarshallingInfo<Map> CUSTOMERMETADATAPROPERTIES_BINDING = MarshallingInfo.builder(MarshallingType.MAP)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CustomerMetadataProperties").build();
 
     private static final CreateModelPackageRequestMarshaller instance = new CreateModelPackageRequestMarshaller();
 
@@ -84,6 +87,7 @@ public class CreateModelPackageRequestMarshaller {
             protocolMarshaller.marshall(createModelPackageRequest.getMetadataProperties(), METADATAPROPERTIES_BINDING);
             protocolMarshaller.marshall(createModelPackageRequest.getModelMetrics(), MODELMETRICS_BINDING);
             protocolMarshaller.marshall(createModelPackageRequest.getClientToken(), CLIENTTOKEN_BINDING);
+            protocolMarshaller.marshall(createModelPackageRequest.getCustomerMetadataProperties(), CUSTOMERMETADATAPROPERTIES_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

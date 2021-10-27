@@ -82,6 +82,12 @@ public class ModifyCapacityReservationRequest extends AmazonWebServiceRequest im
      * </p>
      */
     private Boolean accept;
+    /**
+     * <p>
+     * Reserved for future use.
+     * </p>
+     */
+    private String additionalInfo;
 
     /**
      * <p>
@@ -497,6 +503,46 @@ public class ModifyCapacityReservationRequest extends AmazonWebServiceRequest im
     }
 
     /**
+     * <p>
+     * Reserved for future use.
+     * </p>
+     * 
+     * @param additionalInfo
+     *        Reserved for future use.
+     */
+
+    public void setAdditionalInfo(String additionalInfo) {
+        this.additionalInfo = additionalInfo;
+    }
+
+    /**
+     * <p>
+     * Reserved for future use.
+     * </p>
+     * 
+     * @return Reserved for future use.
+     */
+
+    public String getAdditionalInfo() {
+        return this.additionalInfo;
+    }
+
+    /**
+     * <p>
+     * Reserved for future use.
+     * </p>
+     * 
+     * @param additionalInfo
+     *        Reserved for future use.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ModifyCapacityReservationRequest withAdditionalInfo(String additionalInfo) {
+        setAdditionalInfo(additionalInfo);
+        return this;
+    }
+
+    /**
      * This method is intended for internal use only. Returns the marshaled request configured with additional
      * parameters to enable operation dry-run.
      */
@@ -528,7 +574,9 @@ public class ModifyCapacityReservationRequest extends AmazonWebServiceRequest im
         if (getEndDateType() != null)
             sb.append("EndDateType: ").append(getEndDateType()).append(",");
         if (getAccept() != null)
-            sb.append("Accept: ").append(getAccept());
+            sb.append("Accept: ").append(getAccept()).append(",");
+        if (getAdditionalInfo() != null)
+            sb.append("AdditionalInfo: ").append(getAdditionalInfo());
         sb.append("}");
         return sb.toString();
     }
@@ -563,6 +611,10 @@ public class ModifyCapacityReservationRequest extends AmazonWebServiceRequest im
             return false;
         if (other.getAccept() != null && other.getAccept().equals(this.getAccept()) == false)
             return false;
+        if (other.getAdditionalInfo() == null ^ this.getAdditionalInfo() == null)
+            return false;
+        if (other.getAdditionalInfo() != null && other.getAdditionalInfo().equals(this.getAdditionalInfo()) == false)
+            return false;
         return true;
     }
 
@@ -576,6 +628,7 @@ public class ModifyCapacityReservationRequest extends AmazonWebServiceRequest im
         hashCode = prime * hashCode + ((getEndDate() == null) ? 0 : getEndDate().hashCode());
         hashCode = prime * hashCode + ((getEndDateType() == null) ? 0 : getEndDateType().hashCode());
         hashCode = prime * hashCode + ((getAccept() == null) ? 0 : getAccept().hashCode());
+        hashCode = prime * hashCode + ((getAdditionalInfo() == null) ? 0 : getAdditionalInfo().hashCode());
         return hashCode;
     }
 

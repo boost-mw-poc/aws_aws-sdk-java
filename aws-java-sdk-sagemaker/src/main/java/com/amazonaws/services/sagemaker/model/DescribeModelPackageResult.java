@@ -73,7 +73,7 @@ public class DescribeModelPackageResult extends com.amazonaws.AmazonWebServiceRe
     private SourceAlgorithmSpecification sourceAlgorithmSpecification;
     /**
      * <p>
-     * Configurations for one or more transform jobs that Amazon SageMaker runs to test the model package.
+     * Configurations for one or more transform jobs that SageMaker runs to test the model package.
      * </p>
      */
     private ModelPackageValidationSpecification validationSpecification;
@@ -125,6 +125,12 @@ public class DescribeModelPackageResult extends com.amazonaws.AmazonWebServiceRe
      * </p>
      */
     private String approvalDescription;
+    /**
+     * <p>
+     * The metadata properties associated with the model package versions.
+     * </p>
+     */
+    private java.util.Map<String, String> customerMetadataProperties;
 
     /**
      * <p>
@@ -448,11 +454,11 @@ public class DescribeModelPackageResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Configurations for one or more transform jobs that Amazon SageMaker runs to test the model package.
+     * Configurations for one or more transform jobs that SageMaker runs to test the model package.
      * </p>
      * 
      * @param validationSpecification
-     *        Configurations for one or more transform jobs that Amazon SageMaker runs to test the model package.
+     *        Configurations for one or more transform jobs that SageMaker runs to test the model package.
      */
 
     public void setValidationSpecification(ModelPackageValidationSpecification validationSpecification) {
@@ -461,10 +467,10 @@ public class DescribeModelPackageResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Configurations for one or more transform jobs that Amazon SageMaker runs to test the model package.
+     * Configurations for one or more transform jobs that SageMaker runs to test the model package.
      * </p>
      * 
-     * @return Configurations for one or more transform jobs that Amazon SageMaker runs to test the model package.
+     * @return Configurations for one or more transform jobs that SageMaker runs to test the model package.
      */
 
     public ModelPackageValidationSpecification getValidationSpecification() {
@@ -473,11 +479,11 @@ public class DescribeModelPackageResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Configurations for one or more transform jobs that Amazon SageMaker runs to test the model package.
+     * Configurations for one or more transform jobs that SageMaker runs to test the model package.
      * </p>
      * 
      * @param validationSpecification
-     *        Configurations for one or more transform jobs that Amazon SageMaker runs to test the model package.
+     *        Configurations for one or more transform jobs that SageMaker runs to test the model package.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -895,6 +901,74 @@ public class DescribeModelPackageResult extends com.amazonaws.AmazonWebServiceRe
     }
 
     /**
+     * <p>
+     * The metadata properties associated with the model package versions.
+     * </p>
+     * 
+     * @return The metadata properties associated with the model package versions.
+     */
+
+    public java.util.Map<String, String> getCustomerMetadataProperties() {
+        return customerMetadataProperties;
+    }
+
+    /**
+     * <p>
+     * The metadata properties associated with the model package versions.
+     * </p>
+     * 
+     * @param customerMetadataProperties
+     *        The metadata properties associated with the model package versions.
+     */
+
+    public void setCustomerMetadataProperties(java.util.Map<String, String> customerMetadataProperties) {
+        this.customerMetadataProperties = customerMetadataProperties;
+    }
+
+    /**
+     * <p>
+     * The metadata properties associated with the model package versions.
+     * </p>
+     * 
+     * @param customerMetadataProperties
+     *        The metadata properties associated with the model package versions.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeModelPackageResult withCustomerMetadataProperties(java.util.Map<String, String> customerMetadataProperties) {
+        setCustomerMetadataProperties(customerMetadataProperties);
+        return this;
+    }
+
+    /**
+     * Add a single CustomerMetadataProperties entry
+     *
+     * @see DescribeModelPackageResult#withCustomerMetadataProperties
+     * @returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeModelPackageResult addCustomerMetadataPropertiesEntry(String key, String value) {
+        if (null == this.customerMetadataProperties) {
+            this.customerMetadataProperties = new java.util.HashMap<String, String>();
+        }
+        if (this.customerMetadataProperties.containsKey(key))
+            throw new IllegalArgumentException("Duplicated keys (" + key.toString() + ") are provided.");
+        this.customerMetadataProperties.put(key, value);
+        return this;
+    }
+
+    /**
+     * Removes all the entries added into CustomerMetadataProperties.
+     *
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeModelPackageResult clearCustomerMetadataPropertiesEntries() {
+        this.customerMetadataProperties = null;
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -943,7 +1017,9 @@ public class DescribeModelPackageResult extends com.amazonaws.AmazonWebServiceRe
         if (getLastModifiedBy() != null)
             sb.append("LastModifiedBy: ").append(getLastModifiedBy()).append(",");
         if (getApprovalDescription() != null)
-            sb.append("ApprovalDescription: ").append(getApprovalDescription());
+            sb.append("ApprovalDescription: ").append(getApprovalDescription()).append(",");
+        if (getCustomerMetadataProperties() != null)
+            sb.append("CustomerMetadataProperties: ").append(getCustomerMetadataProperties());
         sb.append("}");
         return sb.toString();
     }
@@ -1034,6 +1110,10 @@ public class DescribeModelPackageResult extends com.amazonaws.AmazonWebServiceRe
             return false;
         if (other.getApprovalDescription() != null && other.getApprovalDescription().equals(this.getApprovalDescription()) == false)
             return false;
+        if (other.getCustomerMetadataProperties() == null ^ this.getCustomerMetadataProperties() == null)
+            return false;
+        if (other.getCustomerMetadataProperties() != null && other.getCustomerMetadataProperties().equals(this.getCustomerMetadataProperties()) == false)
+            return false;
         return true;
     }
 
@@ -1061,6 +1141,7 @@ public class DescribeModelPackageResult extends com.amazonaws.AmazonWebServiceRe
         hashCode = prime * hashCode + ((getLastModifiedTime() == null) ? 0 : getLastModifiedTime().hashCode());
         hashCode = prime * hashCode + ((getLastModifiedBy() == null) ? 0 : getLastModifiedBy().hashCode());
         hashCode = prime * hashCode + ((getApprovalDescription() == null) ? 0 : getApprovalDescription().hashCode());
+        hashCode = prime * hashCode + ((getCustomerMetadataProperties() == null) ? 0 : getCustomerMetadataProperties().hashCode());
         return hashCode;
     }
 

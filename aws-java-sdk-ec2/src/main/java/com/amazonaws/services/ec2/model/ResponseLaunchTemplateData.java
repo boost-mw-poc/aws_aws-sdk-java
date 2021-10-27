@@ -196,6 +196,16 @@ public class ResponseLaunchTemplateData implements Serializable, Cloneable {
      * </p>
      */
     private LaunchTemplateEnclaveOptions enclaveOptions;
+    /**
+     * <p>
+     * The attributes for the instance types. When you specify instance attributes, Amazon EC2 will identify instance
+     * types with these attributes.
+     * </p>
+     * <p>
+     * If you specify <code>InstanceRequirements</code>, you can't specify <code>InstanceTypes</code>.
+     * </p>
+     */
+    private InstanceRequirements instanceRequirements;
 
     /**
      * <p>
@@ -1660,6 +1670,67 @@ public class ResponseLaunchTemplateData implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * The attributes for the instance types. When you specify instance attributes, Amazon EC2 will identify instance
+     * types with these attributes.
+     * </p>
+     * <p>
+     * If you specify <code>InstanceRequirements</code>, you can't specify <code>InstanceTypes</code>.
+     * </p>
+     * 
+     * @param instanceRequirements
+     *        The attributes for the instance types. When you specify instance attributes, Amazon EC2 will identify
+     *        instance types with these attributes.</p>
+     *        <p>
+     *        If you specify <code>InstanceRequirements</code>, you can't specify <code>InstanceTypes</code>.
+     */
+
+    public void setInstanceRequirements(InstanceRequirements instanceRequirements) {
+        this.instanceRequirements = instanceRequirements;
+    }
+
+    /**
+     * <p>
+     * The attributes for the instance types. When you specify instance attributes, Amazon EC2 will identify instance
+     * types with these attributes.
+     * </p>
+     * <p>
+     * If you specify <code>InstanceRequirements</code>, you can't specify <code>InstanceTypes</code>.
+     * </p>
+     * 
+     * @return The attributes for the instance types. When you specify instance attributes, Amazon EC2 will identify
+     *         instance types with these attributes.</p>
+     *         <p>
+     *         If you specify <code>InstanceRequirements</code>, you can't specify <code>InstanceTypes</code>.
+     */
+
+    public InstanceRequirements getInstanceRequirements() {
+        return this.instanceRequirements;
+    }
+
+    /**
+     * <p>
+     * The attributes for the instance types. When you specify instance attributes, Amazon EC2 will identify instance
+     * types with these attributes.
+     * </p>
+     * <p>
+     * If you specify <code>InstanceRequirements</code>, you can't specify <code>InstanceTypes</code>.
+     * </p>
+     * 
+     * @param instanceRequirements
+     *        The attributes for the instance types. When you specify instance attributes, Amazon EC2 will identify
+     *        instance types with these attributes.</p>
+     *        <p>
+     *        If you specify <code>InstanceRequirements</code>, you can't specify <code>InstanceTypes</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ResponseLaunchTemplateData withInstanceRequirements(InstanceRequirements instanceRequirements) {
+        setInstanceRequirements(instanceRequirements);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1724,7 +1795,9 @@ public class ResponseLaunchTemplateData implements Serializable, Cloneable {
         if (getMetadataOptions() != null)
             sb.append("MetadataOptions: ").append(getMetadataOptions()).append(",");
         if (getEnclaveOptions() != null)
-            sb.append("EnclaveOptions: ").append(getEnclaveOptions());
+            sb.append("EnclaveOptions: ").append(getEnclaveOptions()).append(",");
+        if (getInstanceRequirements() != null)
+            sb.append("InstanceRequirements: ").append(getInstanceRequirements());
         sb.append("}");
         return sb.toString();
     }
@@ -1849,6 +1922,10 @@ public class ResponseLaunchTemplateData implements Serializable, Cloneable {
             return false;
         if (other.getEnclaveOptions() != null && other.getEnclaveOptions().equals(this.getEnclaveOptions()) == false)
             return false;
+        if (other.getInstanceRequirements() == null ^ this.getInstanceRequirements() == null)
+            return false;
+        if (other.getInstanceRequirements() != null && other.getInstanceRequirements().equals(this.getInstanceRequirements()) == false)
+            return false;
         return true;
     }
 
@@ -1884,6 +1961,7 @@ public class ResponseLaunchTemplateData implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getHibernationOptions() == null) ? 0 : getHibernationOptions().hashCode());
         hashCode = prime * hashCode + ((getMetadataOptions() == null) ? 0 : getMetadataOptions().hashCode());
         hashCode = prime * hashCode + ((getEnclaveOptions() == null) ? 0 : getEnclaveOptions().hashCode());
+        hashCode = prime * hashCode + ((getInstanceRequirements() == null) ? 0 : getInstanceRequirements().hashCode());
         return hashCode;
     }
 

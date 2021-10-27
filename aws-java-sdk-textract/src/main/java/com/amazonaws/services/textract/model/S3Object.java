@@ -45,7 +45,7 @@ public class S3Object implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The file name of the input document. Synchronous operations can use image files that are in JPEG or PNG format.
-     * Asynchronous operations also support PDF format files.
+     * Asynchronous operations also support PDF and TIFF format files.
      * </p>
      */
     private String name;
@@ -99,12 +99,12 @@ public class S3Object implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The file name of the input document. Synchronous operations can use image files that are in JPEG or PNG format.
-     * Asynchronous operations also support PDF format files.
+     * Asynchronous operations also support PDF and TIFF format files.
      * </p>
      * 
      * @param name
      *        The file name of the input document. Synchronous operations can use image files that are in JPEG or PNG
-     *        format. Asynchronous operations also support PDF format files.
+     *        format. Asynchronous operations also support PDF and TIFF format files.
      */
 
     public void setName(String name) {
@@ -114,11 +114,11 @@ public class S3Object implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The file name of the input document. Synchronous operations can use image files that are in JPEG or PNG format.
-     * Asynchronous operations also support PDF format files.
+     * Asynchronous operations also support PDF and TIFF format files.
      * </p>
      * 
      * @return The file name of the input document. Synchronous operations can use image files that are in JPEG or PNG
-     *         format. Asynchronous operations also support PDF format files.
+     *         format. Asynchronous operations also support PDF and TIFF format files.
      */
 
     public String getName() {
@@ -128,12 +128,12 @@ public class S3Object implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The file name of the input document. Synchronous operations can use image files that are in JPEG or PNG format.
-     * Asynchronous operations also support PDF format files.
+     * Asynchronous operations also support PDF and TIFF format files.
      * </p>
      * 
      * @param name
      *        The file name of the input document. Synchronous operations can use image files that are in JPEG or PNG
-     *        format. Asynchronous operations also support PDF format files.
+     *        format. Asynchronous operations also support PDF and TIFF format files.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

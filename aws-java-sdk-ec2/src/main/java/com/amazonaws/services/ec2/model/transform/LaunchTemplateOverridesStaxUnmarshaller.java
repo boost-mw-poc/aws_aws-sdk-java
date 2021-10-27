@@ -72,6 +72,11 @@ public class LaunchTemplateOverridesStaxUnmarshaller implements Unmarshaller<Lau
                     launchTemplateOverrides.setPriority(DoubleStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("instanceRequirements", targetDepth)) {
+                    launchTemplateOverrides.setInstanceRequirements(InstanceRequirementsStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return launchTemplateOverrides;

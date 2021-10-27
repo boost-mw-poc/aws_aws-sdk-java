@@ -17,16 +17,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * Describes a launch template and overrides.
- * </p>
- * <p>
- * You specify these properties as part of a mixed instances policy.
- * </p>
- * <p>
- * When you update the launch template or overrides in the <a>UpdateAutoScalingGroup</a> API call, existing Amazon EC2
- * instances continue to run. When scale out occurs, Amazon EC2 Auto Scaling launches instances to match the new
- * settings. When scale in occurs, Amazon EC2 Auto Scaling terminates instances according to the group's termination
- * policies.
+ * Describes a launch template and overrides. You specify these properties as part of a mixed instances policy.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/LaunchTemplate" target="_top">AWS API
@@ -44,7 +35,11 @@ public class LaunchTemplate implements Serializable, Cloneable {
     /**
      * <p>
      * Any properties that you specify override the same properties in the launch template. If not provided, Amazon EC2
-     * Auto Scaling uses the instance type specified in the launch template when it launches an instance.
+     * Auto Scaling uses the instance type or instance type requirements specified in the launch template when it
+     * launches an instance.
+     * </p>
+     * <p>
+     * The overrides can include either one or more instance types or a set of instance requirements, but not both.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<LaunchTemplateOverrides> overrides;
@@ -92,12 +87,19 @@ public class LaunchTemplate implements Serializable, Cloneable {
     /**
      * <p>
      * Any properties that you specify override the same properties in the launch template. If not provided, Amazon EC2
-     * Auto Scaling uses the instance type specified in the launch template when it launches an instance.
+     * Auto Scaling uses the instance type or instance type requirements specified in the launch template when it
+     * launches an instance.
+     * </p>
+     * <p>
+     * The overrides can include either one or more instance types or a set of instance requirements, but not both.
      * </p>
      * 
      * @return Any properties that you specify override the same properties in the launch template. If not provided,
-     *         Amazon EC2 Auto Scaling uses the instance type specified in the launch template when it launches an
-     *         instance.
+     *         Amazon EC2 Auto Scaling uses the instance type or instance type requirements specified in the launch
+     *         template when it launches an instance.</p>
+     *         <p>
+     *         The overrides can include either one or more instance types or a set of instance requirements, but not
+     *         both.
      */
 
     public java.util.List<LaunchTemplateOverrides> getOverrides() {
@@ -110,13 +112,20 @@ public class LaunchTemplate implements Serializable, Cloneable {
     /**
      * <p>
      * Any properties that you specify override the same properties in the launch template. If not provided, Amazon EC2
-     * Auto Scaling uses the instance type specified in the launch template when it launches an instance.
+     * Auto Scaling uses the instance type or instance type requirements specified in the launch template when it
+     * launches an instance.
+     * </p>
+     * <p>
+     * The overrides can include either one or more instance types or a set of instance requirements, but not both.
      * </p>
      * 
      * @param overrides
      *        Any properties that you specify override the same properties in the launch template. If not provided,
-     *        Amazon EC2 Auto Scaling uses the instance type specified in the launch template when it launches an
-     *        instance.
+     *        Amazon EC2 Auto Scaling uses the instance type or instance type requirements specified in the launch
+     *        template when it launches an instance.</p>
+     *        <p>
+     *        The overrides can include either one or more instance types or a set of instance requirements, but not
+     *        both.
      */
 
     public void setOverrides(java.util.Collection<LaunchTemplateOverrides> overrides) {
@@ -131,7 +140,11 @@ public class LaunchTemplate implements Serializable, Cloneable {
     /**
      * <p>
      * Any properties that you specify override the same properties in the launch template. If not provided, Amazon EC2
-     * Auto Scaling uses the instance type specified in the launch template when it launches an instance.
+     * Auto Scaling uses the instance type or instance type requirements specified in the launch template when it
+     * launches an instance.
+     * </p>
+     * <p>
+     * The overrides can include either one or more instance types or a set of instance requirements, but not both.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -141,8 +154,11 @@ public class LaunchTemplate implements Serializable, Cloneable {
      * 
      * @param overrides
      *        Any properties that you specify override the same properties in the launch template. If not provided,
-     *        Amazon EC2 Auto Scaling uses the instance type specified in the launch template when it launches an
-     *        instance.
+     *        Amazon EC2 Auto Scaling uses the instance type or instance type requirements specified in the launch
+     *        template when it launches an instance.</p>
+     *        <p>
+     *        The overrides can include either one or more instance types or a set of instance requirements, but not
+     *        both.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -159,13 +175,20 @@ public class LaunchTemplate implements Serializable, Cloneable {
     /**
      * <p>
      * Any properties that you specify override the same properties in the launch template. If not provided, Amazon EC2
-     * Auto Scaling uses the instance type specified in the launch template when it launches an instance.
+     * Auto Scaling uses the instance type or instance type requirements specified in the launch template when it
+     * launches an instance.
+     * </p>
+     * <p>
+     * The overrides can include either one or more instance types or a set of instance requirements, but not both.
      * </p>
      * 
      * @param overrides
      *        Any properties that you specify override the same properties in the launch template. If not provided,
-     *        Amazon EC2 Auto Scaling uses the instance type specified in the launch template when it launches an
-     *        instance.
+     *        Amazon EC2 Auto Scaling uses the instance type or instance type requirements specified in the launch
+     *        template when it launches an instance.</p>
+     *        <p>
+     *        The overrides can include either one or more instance types or a set of instance requirements, but not
+     *        both.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

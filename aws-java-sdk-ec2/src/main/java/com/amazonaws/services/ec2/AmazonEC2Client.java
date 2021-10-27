@@ -22446,6 +22446,83 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
     /**
      * <p>
+     * Returns a list of instance types with the specified instance attributes. You can use the response to preview the
+     * instance types without launching instances. Note that the response does not consider capacity.
+     * </p>
+     * <p>
+     * When you specify multiple parameters, you get instance types that satisfy all of the specified parameters. If you
+     * specify multiple values for a parameter, you get instance types that satisfy any of the specified values.
+     * </p>
+     * <p>
+     * For more information, see <a href=
+     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-fleet-attribute-based-instance-type-selection.html#spotfleet-get-instance-types-from-instance-requirements"
+     * >Preview instance types with specified attributes</a>, <a href=
+     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-fleet-attribute-based-instance-type-selection.html"
+     * >Attribute-based instance type selection for EC2 Fleet</a>, <a href=
+     * "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-fleet-attribute-based-instance-type-selection.html"
+     * >Attribute-based instance type selection for Spot Fleet</a>, and <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-placement-score.html">Spot placement score</a> in
+     * the <i>Amazon EC2 User Guide</i>, and <a
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-asg-instance-type-requirements.html">Creating
+     * an Auto Scaling group using attribute-based instance type selection</a> in the <i>Amazon EC2 Auto Scaling User
+     * Guide</i>.
+     * </p>
+     * 
+     * @param getInstanceTypesFromInstanceRequirementsRequest
+     * @return Result of the GetInstanceTypesFromInstanceRequirements operation returned by the service.
+     * @sample AmazonEC2.GetInstanceTypesFromInstanceRequirements
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetInstanceTypesFromInstanceRequirements"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetInstanceTypesFromInstanceRequirementsResult getInstanceTypesFromInstanceRequirements(GetInstanceTypesFromInstanceRequirementsRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetInstanceTypesFromInstanceRequirements(request);
+    }
+
+    @SdkInternalApi
+    final GetInstanceTypesFromInstanceRequirementsResult executeGetInstanceTypesFromInstanceRequirements(
+            GetInstanceTypesFromInstanceRequirementsRequest getInstanceTypesFromInstanceRequirementsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getInstanceTypesFromInstanceRequirementsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetInstanceTypesFromInstanceRequirementsRequest> request = null;
+        Response<GetInstanceTypesFromInstanceRequirementsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetInstanceTypesFromInstanceRequirementsRequestMarshaller().marshall(super
+                        .beforeMarshalling(getInstanceTypesFromInstanceRequirementsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetInstanceTypesFromInstanceRequirements");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<GetInstanceTypesFromInstanceRequirementsResult> responseHandler = new StaxResponseHandler<GetInstanceTypesFromInstanceRequirementsResult>(
+                    new GetInstanceTypesFromInstanceRequirementsResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Retrieves the configuration data of the specified instance. You can use this data to create a launch template.
      * </p>
      * <p>
@@ -22804,6 +22881,73 @@ public class AmazonEC2Client extends AmazonWebServiceClient implements AmazonEC2
 
             StaxResponseHandler<GetSerialConsoleAccessStatusResult> responseHandler = new StaxResponseHandler<GetSerialConsoleAccessStatusResult>(
                     new GetSerialConsoleAccessStatusResultStaxUnmarshaller());
+
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Calculates the Spot placement score for a Region or Availability Zone based on the specified target capacity and
+     * compute requirements.
+     * </p>
+     * <p>
+     * You can specify your compute requirements either by using <code>InstanceRequirementsWithMetadata</code> and
+     * letting Amazon EC2 choose the optimal instance types to fulfill your Spot request, or you can specify the
+     * instance types by using <code>InstanceTypes</code>.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/spot-placement-score.html">Spot placement score</a> in
+     * the Amazon EC2 User Guide.
+     * </p>
+     * 
+     * @param getSpotPlacementScoresRequest
+     * @return Result of the GetSpotPlacementScores operation returned by the service.
+     * @sample AmazonEC2.GetSpotPlacementScores
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/GetSpotPlacementScores" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public GetSpotPlacementScoresResult getSpotPlacementScores(GetSpotPlacementScoresRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetSpotPlacementScores(request);
+    }
+
+    @SdkInternalApi
+    final GetSpotPlacementScoresResult executeGetSpotPlacementScores(GetSpotPlacementScoresRequest getSpotPlacementScoresRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getSpotPlacementScoresRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetSpotPlacementScoresRequest> request = null;
+        Response<GetSpotPlacementScoresResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetSpotPlacementScoresRequestMarshaller().marshall(super.beforeMarshalling(getSpotPlacementScoresRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "EC2");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetSpotPlacementScores");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            StaxResponseHandler<GetSpotPlacementScoresResult> responseHandler = new StaxResponseHandler<GetSpotPlacementScoresResult>(
+                    new GetSpotPlacementScoresResultStaxUnmarshaller());
 
             response = invoke(request, responseHandler, executionContext);
 

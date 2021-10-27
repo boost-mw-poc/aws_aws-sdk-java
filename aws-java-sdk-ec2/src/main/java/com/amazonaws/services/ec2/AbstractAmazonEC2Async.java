@@ -5923,6 +5923,21 @@ public class AbstractAmazonEC2Async extends AbstractAmazonEC2 implements AmazonE
     }
 
     @Override
+    public java.util.concurrent.Future<GetInstanceTypesFromInstanceRequirementsResult> getInstanceTypesFromInstanceRequirementsAsync(
+            GetInstanceTypesFromInstanceRequirementsRequest request) {
+
+        return getInstanceTypesFromInstanceRequirementsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetInstanceTypesFromInstanceRequirementsResult> getInstanceTypesFromInstanceRequirementsAsync(
+            GetInstanceTypesFromInstanceRequirementsRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetInstanceTypesFromInstanceRequirementsRequest, GetInstanceTypesFromInstanceRequirementsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetLaunchTemplateDataResult> getLaunchTemplateDataAsync(GetLaunchTemplateDataRequest request) {
 
         return getLaunchTemplateDataAsync(request, null);
@@ -6000,6 +6015,19 @@ public class AbstractAmazonEC2Async extends AbstractAmazonEC2 implements AmazonE
     @Override
     public java.util.concurrent.Future<GetSerialConsoleAccessStatusResult> getSerialConsoleAccessStatusAsync(GetSerialConsoleAccessStatusRequest request,
             com.amazonaws.handlers.AsyncHandler<GetSerialConsoleAccessStatusRequest, GetSerialConsoleAccessStatusResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetSpotPlacementScoresResult> getSpotPlacementScoresAsync(GetSpotPlacementScoresRequest request) {
+
+        return getSpotPlacementScoresAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetSpotPlacementScoresResult> getSpotPlacementScoresAsync(GetSpotPlacementScoresRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetSpotPlacementScoresRequest, GetSpotPlacementScoresResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

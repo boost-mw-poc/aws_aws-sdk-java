@@ -82,6 +82,14 @@ public class Project implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private java.util.List<Tag> tags;
+    /**
+     * <p>
+     * A timestamp container for when the project was last modified.
+     * </p>
+     */
+    private java.util.Date lastModifiedTime;
+
+    private UserContext lastModifiedBy;
 
     /**
      * <p>
@@ -525,6 +533,72 @@ public class Project implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * A timestamp container for when the project was last modified.
+     * </p>
+     * 
+     * @param lastModifiedTime
+     *        A timestamp container for when the project was last modified.
+     */
+
+    public void setLastModifiedTime(java.util.Date lastModifiedTime) {
+        this.lastModifiedTime = lastModifiedTime;
+    }
+
+    /**
+     * <p>
+     * A timestamp container for when the project was last modified.
+     * </p>
+     * 
+     * @return A timestamp container for when the project was last modified.
+     */
+
+    public java.util.Date getLastModifiedTime() {
+        return this.lastModifiedTime;
+    }
+
+    /**
+     * <p>
+     * A timestamp container for when the project was last modified.
+     * </p>
+     * 
+     * @param lastModifiedTime
+     *        A timestamp container for when the project was last modified.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Project withLastModifiedTime(java.util.Date lastModifiedTime) {
+        setLastModifiedTime(lastModifiedTime);
+        return this;
+    }
+
+    /**
+     * @param lastModifiedBy
+     */
+
+    public void setLastModifiedBy(UserContext lastModifiedBy) {
+        this.lastModifiedBy = lastModifiedBy;
+    }
+
+    /**
+     * @return
+     */
+
+    public UserContext getLastModifiedBy() {
+        return this.lastModifiedBy;
+    }
+
+    /**
+     * @param lastModifiedBy
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Project withLastModifiedBy(UserContext lastModifiedBy) {
+        setLastModifiedBy(lastModifiedBy);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -555,7 +629,11 @@ public class Project implements Serializable, Cloneable, StructuredPojo {
         if (getCreationTime() != null)
             sb.append("CreationTime: ").append(getCreationTime()).append(",");
         if (getTags() != null)
-            sb.append("Tags: ").append(getTags());
+            sb.append("Tags: ").append(getTags()).append(",");
+        if (getLastModifiedTime() != null)
+            sb.append("LastModifiedTime: ").append(getLastModifiedTime()).append(",");
+        if (getLastModifiedBy() != null)
+            sb.append("LastModifiedBy: ").append(getLastModifiedBy());
         sb.append("}");
         return sb.toString();
     }
@@ -612,6 +690,14 @@ public class Project implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
             return false;
+        if (other.getLastModifiedTime() == null ^ this.getLastModifiedTime() == null)
+            return false;
+        if (other.getLastModifiedTime() != null && other.getLastModifiedTime().equals(this.getLastModifiedTime()) == false)
+            return false;
+        if (other.getLastModifiedBy() == null ^ this.getLastModifiedBy() == null)
+            return false;
+        if (other.getLastModifiedBy() != null && other.getLastModifiedBy().equals(this.getLastModifiedBy()) == false)
+            return false;
         return true;
     }
 
@@ -630,6 +716,8 @@ public class Project implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getCreatedBy() == null) ? 0 : getCreatedBy().hashCode());
         hashCode = prime * hashCode + ((getCreationTime() == null) ? 0 : getCreationTime().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getLastModifiedTime() == null) ? 0 : getLastModifiedTime().hashCode());
+        hashCode = prime * hashCode + ((getLastModifiedBy() == null) ? 0 : getLastModifiedBy().hashCode());
         return hashCode;
     }
 
