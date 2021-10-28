@@ -140,6 +140,27 @@ public class DescribeDomainResult extends com.amazonaws.AmazonWebServiceResult<c
      * </p>
      */
     private String kmsKeyId;
+    /**
+     * <p>
+     * A collection of <code>Domain</code> settings.
+     * </p>
+     */
+    private DomainSettings domainSettings;
+    /**
+     * <p>
+     * The entity that creates and manages the required security groups for inter-app communication in
+     * <code>VPCOnly</code> mode. Required when <code>CreateDomain.AppNetworkAccessType</code> is <code>VPCOnly</code>
+     * and <code>DomainSettings.RStudioServerProDomainSettings.DomainExecutionRoleArn</code> is provided.
+     * </p>
+     */
+    private String appSecurityGroupManagement;
+    /**
+     * <p>
+     * The ID of the security group that authorizes traffic between the <code>RSessionGateway</code> apps and the
+     * <code>RStudioServerPro</code> app.
+     * </p>
+     */
+    private String securityGroupIdForDomainBoundary;
 
     /**
      * <p>
@@ -1015,6 +1036,171 @@ public class DescribeDomainResult extends com.amazonaws.AmazonWebServiceResult<c
     }
 
     /**
+     * <p>
+     * A collection of <code>Domain</code> settings.
+     * </p>
+     * 
+     * @param domainSettings
+     *        A collection of <code>Domain</code> settings.
+     */
+
+    public void setDomainSettings(DomainSettings domainSettings) {
+        this.domainSettings = domainSettings;
+    }
+
+    /**
+     * <p>
+     * A collection of <code>Domain</code> settings.
+     * </p>
+     * 
+     * @return A collection of <code>Domain</code> settings.
+     */
+
+    public DomainSettings getDomainSettings() {
+        return this.domainSettings;
+    }
+
+    /**
+     * <p>
+     * A collection of <code>Domain</code> settings.
+     * </p>
+     * 
+     * @param domainSettings
+     *        A collection of <code>Domain</code> settings.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeDomainResult withDomainSettings(DomainSettings domainSettings) {
+        setDomainSettings(domainSettings);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The entity that creates and manages the required security groups for inter-app communication in
+     * <code>VPCOnly</code> mode. Required when <code>CreateDomain.AppNetworkAccessType</code> is <code>VPCOnly</code>
+     * and <code>DomainSettings.RStudioServerProDomainSettings.DomainExecutionRoleArn</code> is provided.
+     * </p>
+     * 
+     * @param appSecurityGroupManagement
+     *        The entity that creates and manages the required security groups for inter-app communication in
+     *        <code>VPCOnly</code> mode. Required when <code>CreateDomain.AppNetworkAccessType</code> is
+     *        <code>VPCOnly</code> and <code>DomainSettings.RStudioServerProDomainSettings.DomainExecutionRoleArn</code>
+     *        is provided.
+     * @see AppSecurityGroupManagement
+     */
+
+    public void setAppSecurityGroupManagement(String appSecurityGroupManagement) {
+        this.appSecurityGroupManagement = appSecurityGroupManagement;
+    }
+
+    /**
+     * <p>
+     * The entity that creates and manages the required security groups for inter-app communication in
+     * <code>VPCOnly</code> mode. Required when <code>CreateDomain.AppNetworkAccessType</code> is <code>VPCOnly</code>
+     * and <code>DomainSettings.RStudioServerProDomainSettings.DomainExecutionRoleArn</code> is provided.
+     * </p>
+     * 
+     * @return The entity that creates and manages the required security groups for inter-app communication in
+     *         <code>VPCOnly</code> mode. Required when <code>CreateDomain.AppNetworkAccessType</code> is
+     *         <code>VPCOnly</code> and
+     *         <code>DomainSettings.RStudioServerProDomainSettings.DomainExecutionRoleArn</code> is provided.
+     * @see AppSecurityGroupManagement
+     */
+
+    public String getAppSecurityGroupManagement() {
+        return this.appSecurityGroupManagement;
+    }
+
+    /**
+     * <p>
+     * The entity that creates and manages the required security groups for inter-app communication in
+     * <code>VPCOnly</code> mode. Required when <code>CreateDomain.AppNetworkAccessType</code> is <code>VPCOnly</code>
+     * and <code>DomainSettings.RStudioServerProDomainSettings.DomainExecutionRoleArn</code> is provided.
+     * </p>
+     * 
+     * @param appSecurityGroupManagement
+     *        The entity that creates and manages the required security groups for inter-app communication in
+     *        <code>VPCOnly</code> mode. Required when <code>CreateDomain.AppNetworkAccessType</code> is
+     *        <code>VPCOnly</code> and <code>DomainSettings.RStudioServerProDomainSettings.DomainExecutionRoleArn</code>
+     *        is provided.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see AppSecurityGroupManagement
+     */
+
+    public DescribeDomainResult withAppSecurityGroupManagement(String appSecurityGroupManagement) {
+        setAppSecurityGroupManagement(appSecurityGroupManagement);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The entity that creates and manages the required security groups for inter-app communication in
+     * <code>VPCOnly</code> mode. Required when <code>CreateDomain.AppNetworkAccessType</code> is <code>VPCOnly</code>
+     * and <code>DomainSettings.RStudioServerProDomainSettings.DomainExecutionRoleArn</code> is provided.
+     * </p>
+     * 
+     * @param appSecurityGroupManagement
+     *        The entity that creates and manages the required security groups for inter-app communication in
+     *        <code>VPCOnly</code> mode. Required when <code>CreateDomain.AppNetworkAccessType</code> is
+     *        <code>VPCOnly</code> and <code>DomainSettings.RStudioServerProDomainSettings.DomainExecutionRoleArn</code>
+     *        is provided.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see AppSecurityGroupManagement
+     */
+
+    public DescribeDomainResult withAppSecurityGroupManagement(AppSecurityGroupManagement appSecurityGroupManagement) {
+        this.appSecurityGroupManagement = appSecurityGroupManagement.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * The ID of the security group that authorizes traffic between the <code>RSessionGateway</code> apps and the
+     * <code>RStudioServerPro</code> app.
+     * </p>
+     * 
+     * @param securityGroupIdForDomainBoundary
+     *        The ID of the security group that authorizes traffic between the <code>RSessionGateway</code> apps and the
+     *        <code>RStudioServerPro</code> app.
+     */
+
+    public void setSecurityGroupIdForDomainBoundary(String securityGroupIdForDomainBoundary) {
+        this.securityGroupIdForDomainBoundary = securityGroupIdForDomainBoundary;
+    }
+
+    /**
+     * <p>
+     * The ID of the security group that authorizes traffic between the <code>RSessionGateway</code> apps and the
+     * <code>RStudioServerPro</code> app.
+     * </p>
+     * 
+     * @return The ID of the security group that authorizes traffic between the <code>RSessionGateway</code> apps and
+     *         the <code>RStudioServerPro</code> app.
+     */
+
+    public String getSecurityGroupIdForDomainBoundary() {
+        return this.securityGroupIdForDomainBoundary;
+    }
+
+    /**
+     * <p>
+     * The ID of the security group that authorizes traffic between the <code>RSessionGateway</code> apps and the
+     * <code>RStudioServerPro</code> app.
+     * </p>
+     * 
+     * @param securityGroupIdForDomainBoundary
+     *        The ID of the security group that authorizes traffic between the <code>RSessionGateway</code> apps and the
+     *        <code>RStudioServerPro</code> app.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeDomainResult withSecurityGroupIdForDomainBoundary(String securityGroupIdForDomainBoundary) {
+        setSecurityGroupIdForDomainBoundary(securityGroupIdForDomainBoundary);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1059,7 +1245,13 @@ public class DescribeDomainResult extends com.amazonaws.AmazonWebServiceResult<c
         if (getVpcId() != null)
             sb.append("VpcId: ").append(getVpcId()).append(",");
         if (getKmsKeyId() != null)
-            sb.append("KmsKeyId: ").append(getKmsKeyId());
+            sb.append("KmsKeyId: ").append(getKmsKeyId()).append(",");
+        if (getDomainSettings() != null)
+            sb.append("DomainSettings: ").append(getDomainSettings()).append(",");
+        if (getAppSecurityGroupManagement() != null)
+            sb.append("AppSecurityGroupManagement: ").append(getAppSecurityGroupManagement()).append(",");
+        if (getSecurityGroupIdForDomainBoundary() != null)
+            sb.append("SecurityGroupIdForDomainBoundary: ").append(getSecurityGroupIdForDomainBoundary());
         sb.append("}");
         return sb.toString();
     }
@@ -1143,6 +1335,19 @@ public class DescribeDomainResult extends com.amazonaws.AmazonWebServiceResult<c
             return false;
         if (other.getKmsKeyId() != null && other.getKmsKeyId().equals(this.getKmsKeyId()) == false)
             return false;
+        if (other.getDomainSettings() == null ^ this.getDomainSettings() == null)
+            return false;
+        if (other.getDomainSettings() != null && other.getDomainSettings().equals(this.getDomainSettings()) == false)
+            return false;
+        if (other.getAppSecurityGroupManagement() == null ^ this.getAppSecurityGroupManagement() == null)
+            return false;
+        if (other.getAppSecurityGroupManagement() != null && other.getAppSecurityGroupManagement().equals(this.getAppSecurityGroupManagement()) == false)
+            return false;
+        if (other.getSecurityGroupIdForDomainBoundary() == null ^ this.getSecurityGroupIdForDomainBoundary() == null)
+            return false;
+        if (other.getSecurityGroupIdForDomainBoundary() != null
+                && other.getSecurityGroupIdForDomainBoundary().equals(this.getSecurityGroupIdForDomainBoundary()) == false)
+            return false;
         return true;
     }
 
@@ -1168,6 +1373,9 @@ public class DescribeDomainResult extends com.amazonaws.AmazonWebServiceResult<c
         hashCode = prime * hashCode + ((getUrl() == null) ? 0 : getUrl().hashCode());
         hashCode = prime * hashCode + ((getVpcId() == null) ? 0 : getVpcId().hashCode());
         hashCode = prime * hashCode + ((getKmsKeyId() == null) ? 0 : getKmsKeyId().hashCode());
+        hashCode = prime * hashCode + ((getDomainSettings() == null) ? 0 : getDomainSettings().hashCode());
+        hashCode = prime * hashCode + ((getAppSecurityGroupManagement() == null) ? 0 : getAppSecurityGroupManagement().hashCode());
+        hashCode = prime * hashCode + ((getSecurityGroupIdForDomainBoundary() == null) ? 0 : getSecurityGroupIdForDomainBoundary().hashCode());
         return hashCode;
     }
 

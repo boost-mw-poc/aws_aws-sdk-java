@@ -27,7 +27,7 @@ public class UpdateTimelineEventRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * A token ensuring that the action is called only once with the specified details.
+     * A token ensuring that the operation is called only once with the specified details.
      * </p>
      */
     private String clientToken;
@@ -57,18 +57,18 @@ public class UpdateTimelineEventRequest extends com.amazonaws.AmazonWebServiceRe
     private String eventType;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the incident that the timeline event is part of.
+     * The Amazon Resource Name (ARN) of the incident that includes the timeline event.
      * </p>
      */
     private String incidentRecordArn;
 
     /**
      * <p>
-     * A token ensuring that the action is called only once with the specified details.
+     * A token ensuring that the operation is called only once with the specified details.
      * </p>
      * 
      * @param clientToken
-     *        A token ensuring that the action is called only once with the specified details.
+     *        A token ensuring that the operation is called only once with the specified details.
      */
 
     public void setClientToken(String clientToken) {
@@ -77,10 +77,10 @@ public class UpdateTimelineEventRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * A token ensuring that the action is called only once with the specified details.
+     * A token ensuring that the operation is called only once with the specified details.
      * </p>
      * 
-     * @return A token ensuring that the action is called only once with the specified details.
+     * @return A token ensuring that the operation is called only once with the specified details.
      */
 
     public String getClientToken() {
@@ -89,11 +89,11 @@ public class UpdateTimelineEventRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * A token ensuring that the action is called only once with the specified details.
+     * A token ensuring that the operation is called only once with the specified details.
      * </p>
      * 
      * @param clientToken
-     *        A token ensuring that the action is called only once with the specified details.
+     *        A token ensuring that the operation is called only once with the specified details.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -264,11 +264,11 @@ public class UpdateTimelineEventRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the incident that the timeline event is part of.
+     * The Amazon Resource Name (ARN) of the incident that includes the timeline event.
      * </p>
      * 
      * @param incidentRecordArn
-     *        The Amazon Resource Name (ARN) of the incident that the timeline event is part of.
+     *        The Amazon Resource Name (ARN) of the incident that includes the timeline event.
      */
 
     public void setIncidentRecordArn(String incidentRecordArn) {
@@ -277,10 +277,10 @@ public class UpdateTimelineEventRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the incident that the timeline event is part of.
+     * The Amazon Resource Name (ARN) of the incident that includes the timeline event.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the incident that the timeline event is part of.
+     * @return The Amazon Resource Name (ARN) of the incident that includes the timeline event.
      */
 
     public String getIncidentRecordArn() {
@@ -289,11 +289,11 @@ public class UpdateTimelineEventRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the incident that the timeline event is part of.
+     * The Amazon Resource Name (ARN) of the incident that includes the timeline event.
      * </p>
      * 
      * @param incidentRecordArn
-     *        The Amazon Resource Name (ARN) of the incident that the timeline event is part of.
+     *        The Amazon Resource Name (ARN) of the incident that includes the timeline event.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

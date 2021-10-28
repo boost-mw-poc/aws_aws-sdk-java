@@ -27,7 +27,7 @@ public class StartIncidentRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * A token ensuring that the action is called only once with the specified details.
+     * A token ensuring that the operation is called only once with the specified details.
      * </p>
      */
     private String clientToken;
@@ -71,13 +71,13 @@ public class StartIncidentRequest extends com.amazonaws.AmazonWebServiceRequest 
     /**
      * <p>
      * Add related items to the incident for other responders to use. Related items are AWS resources, external links,
-     * or files uploaded to an S3 bucket.
+     * or files uploaded to an Amazon S3 bucket.
      * </p>
      */
     private java.util.List<RelatedItem> relatedItems;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the response plan that pre-defines summary, chat channels, SNS topics,
+     * The Amazon Resource Name (ARN) of the response plan that pre-defines summary, chat channels, Amazon SNS topics,
      * runbooks, title, and impact of the incident.
      * </p>
      */
@@ -97,11 +97,11 @@ public class StartIncidentRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * A token ensuring that the action is called only once with the specified details.
+     * A token ensuring that the operation is called only once with the specified details.
      * </p>
      * 
      * @param clientToken
-     *        A token ensuring that the action is called only once with the specified details.
+     *        A token ensuring that the operation is called only once with the specified details.
      */
 
     public void setClientToken(String clientToken) {
@@ -110,10 +110,10 @@ public class StartIncidentRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * A token ensuring that the action is called only once with the specified details.
+     * A token ensuring that the operation is called only once with the specified details.
      * </p>
      * 
-     * @return A token ensuring that the action is called only once with the specified details.
+     * @return A token ensuring that the operation is called only once with the specified details.
      */
 
     public String getClientToken() {
@@ -122,11 +122,11 @@ public class StartIncidentRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * A token ensuring that the action is called only once with the specified details.
+     * A token ensuring that the operation is called only once with the specified details.
      * </p>
      * 
      * @param clientToken
-     *        A token ensuring that the action is called only once with the specified details.
+     *        A token ensuring that the operation is called only once with the specified details.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -367,11 +367,11 @@ public class StartIncidentRequest extends com.amazonaws.AmazonWebServiceRequest 
     /**
      * <p>
      * Add related items to the incident for other responders to use. Related items are AWS resources, external links,
-     * or files uploaded to an S3 bucket.
+     * or files uploaded to an Amazon S3 bucket.
      * </p>
      * 
      * @return Add related items to the incident for other responders to use. Related items are AWS resources, external
-     *         links, or files uploaded to an S3 bucket.
+     *         links, or files uploaded to an Amazon S3 bucket.
      */
 
     public java.util.List<RelatedItem> getRelatedItems() {
@@ -381,12 +381,12 @@ public class StartIncidentRequest extends com.amazonaws.AmazonWebServiceRequest 
     /**
      * <p>
      * Add related items to the incident for other responders to use. Related items are AWS resources, external links,
-     * or files uploaded to an S3 bucket.
+     * or files uploaded to an Amazon S3 bucket.
      * </p>
      * 
      * @param relatedItems
      *        Add related items to the incident for other responders to use. Related items are AWS resources, external
-     *        links, or files uploaded to an S3 bucket.
+     *        links, or files uploaded to an Amazon S3 bucket.
      */
 
     public void setRelatedItems(java.util.Collection<RelatedItem> relatedItems) {
@@ -401,7 +401,7 @@ public class StartIncidentRequest extends com.amazonaws.AmazonWebServiceRequest 
     /**
      * <p>
      * Add related items to the incident for other responders to use. Related items are AWS resources, external links,
-     * or files uploaded to an S3 bucket.
+     * or files uploaded to an Amazon S3 bucket.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -411,7 +411,7 @@ public class StartIncidentRequest extends com.amazonaws.AmazonWebServiceRequest 
      * 
      * @param relatedItems
      *        Add related items to the incident for other responders to use. Related items are AWS resources, external
-     *        links, or files uploaded to an S3 bucket.
+     *        links, or files uploaded to an Amazon S3 bucket.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -428,12 +428,12 @@ public class StartIncidentRequest extends com.amazonaws.AmazonWebServiceRequest 
     /**
      * <p>
      * Add related items to the incident for other responders to use. Related items are AWS resources, external links,
-     * or files uploaded to an S3 bucket.
+     * or files uploaded to an Amazon S3 bucket.
      * </p>
      * 
      * @param relatedItems
      *        Add related items to the incident for other responders to use. Related items are AWS resources, external
-     *        links, or files uploaded to an S3 bucket.
+     *        links, or files uploaded to an Amazon S3 bucket.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -444,13 +444,13 @@ public class StartIncidentRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the response plan that pre-defines summary, chat channels, SNS topics,
+     * The Amazon Resource Name (ARN) of the response plan that pre-defines summary, chat channels, Amazon SNS topics,
      * runbooks, title, and impact of the incident.
      * </p>
      * 
      * @param responsePlanArn
-     *        The Amazon Resource Name (ARN) of the response plan that pre-defines summary, chat channels, SNS topics,
-     *        runbooks, title, and impact of the incident.
+     *        The Amazon Resource Name (ARN) of the response plan that pre-defines summary, chat channels, Amazon SNS
+     *        topics, runbooks, title, and impact of the incident.
      */
 
     public void setResponsePlanArn(String responsePlanArn) {
@@ -459,12 +459,12 @@ public class StartIncidentRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the response plan that pre-defines summary, chat channels, SNS topics,
+     * The Amazon Resource Name (ARN) of the response plan that pre-defines summary, chat channels, Amazon SNS topics,
      * runbooks, title, and impact of the incident.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the response plan that pre-defines summary, chat channels, SNS topics,
-     *         runbooks, title, and impact of the incident.
+     * @return The Amazon Resource Name (ARN) of the response plan that pre-defines summary, chat channels, Amazon SNS
+     *         topics, runbooks, title, and impact of the incident.
      */
 
     public String getResponsePlanArn() {
@@ -473,13 +473,13 @@ public class StartIncidentRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the response plan that pre-defines summary, chat channels, SNS topics,
+     * The Amazon Resource Name (ARN) of the response plan that pre-defines summary, chat channels, Amazon SNS topics,
      * runbooks, title, and impact of the incident.
      * </p>
      * 
      * @param responsePlanArn
-     *        The Amazon Resource Name (ARN) of the response plan that pre-defines summary, chat channels, SNS topics,
-     *        runbooks, title, and impact of the incident.
+     *        The Amazon Resource Name (ARN) of the response plan that pre-defines summary, chat channels, Amazon SNS
+     *        topics, runbooks, title, and impact of the incident.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

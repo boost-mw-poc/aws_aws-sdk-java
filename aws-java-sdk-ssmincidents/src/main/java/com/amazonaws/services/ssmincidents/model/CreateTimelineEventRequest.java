@@ -33,7 +33,7 @@ public class CreateTimelineEventRequest extends com.amazonaws.AmazonWebServiceRe
     private String clientToken;
     /**
      * <p>
-     * A valid JSON string. There is no other schema imposed. A short description of the event.
+     * A short description of the event as a valid JSON string. There is no other schema imposed.
      * </p>
      */
     private String eventData;
@@ -51,7 +51,7 @@ public class CreateTimelineEventRequest extends com.amazonaws.AmazonWebServiceRe
     private String eventType;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the incident record you are adding the event to.
+     * The Amazon Resource Name (ARN) of the incident record to which the event will be added.
      * </p>
      */
     private String incidentRecordArn;
@@ -98,11 +98,11 @@ public class CreateTimelineEventRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * A valid JSON string. There is no other schema imposed. A short description of the event.
+     * A short description of the event as a valid JSON string. There is no other schema imposed.
      * </p>
      * 
      * @param eventData
-     *        A valid JSON string. There is no other schema imposed. A short description of the event.
+     *        A short description of the event as a valid JSON string. There is no other schema imposed.
      */
 
     public void setEventData(String eventData) {
@@ -111,10 +111,10 @@ public class CreateTimelineEventRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * A valid JSON string. There is no other schema imposed. A short description of the event.
+     * A short description of the event as a valid JSON string. There is no other schema imposed.
      * </p>
      * 
-     * @return A valid JSON string. There is no other schema imposed. A short description of the event.
+     * @return A short description of the event as a valid JSON string. There is no other schema imposed.
      */
 
     public String getEventData() {
@@ -123,11 +123,11 @@ public class CreateTimelineEventRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * A valid JSON string. There is no other schema imposed. A short description of the event.
+     * A short description of the event as a valid JSON string. There is no other schema imposed.
      * </p>
      * 
      * @param eventData
-     *        A valid JSON string. There is no other schema imposed. A short description of the event.
+     *        A short description of the event as a valid JSON string. There is no other schema imposed.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -218,11 +218,11 @@ public class CreateTimelineEventRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the incident record you are adding the event to.
+     * The Amazon Resource Name (ARN) of the incident record to which the event will be added.
      * </p>
      * 
      * @param incidentRecordArn
-     *        The Amazon Resource Name (ARN) of the incident record you are adding the event to.
+     *        The Amazon Resource Name (ARN) of the incident record to which the event will be added.
      */
 
     public void setIncidentRecordArn(String incidentRecordArn) {
@@ -231,10 +231,10 @@ public class CreateTimelineEventRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the incident record you are adding the event to.
+     * The Amazon Resource Name (ARN) of the incident record to which the event will be added.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the incident record you are adding the event to.
+     * @return The Amazon Resource Name (ARN) of the incident record to which the event will be added.
      */
 
     public String getIncidentRecordArn() {
@@ -243,11 +243,11 @@ public class CreateTimelineEventRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the incident record you are adding the event to.
+     * The Amazon Resource Name (ARN) of the incident record to which the event will be added.
      * </p>
      * 
      * @param incidentRecordArn
-     *        The Amazon Resource Name (ARN) of the incident record you are adding the event to.
+     *        The Amazon Resource Name (ARN) of the incident record to which the event will be added.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

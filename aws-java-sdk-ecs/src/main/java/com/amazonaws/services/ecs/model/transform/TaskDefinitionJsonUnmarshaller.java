@@ -107,6 +107,10 @@ public class TaskDefinitionJsonUnmarshaller implements Unmarshaller<TaskDefiniti
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("runtimePlatform", targetDepth)) {
+                    context.nextToken();
+                    taskDefinition.setRuntimePlatform(RuntimePlatformJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("requiresCompatibilities", targetDepth)) {
                     context.nextToken();
                     taskDefinition.setRequiresCompatibilities(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))

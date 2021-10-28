@@ -26,9 +26,9 @@ import com.amazonaws.services.ssmincidents.model.*;
  * </p>
  * <p>
  * <p>
- * AWS Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover
- * from incidents affecting their AWS-hosted applications. An incident is any unplanned interruption or reduction in
- * quality of services.
+ * Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
+ * incidents affecting their Amazon Web Services-hosted applications. An incident is any unplanned interruption or
+ * reduction in quality of services.
  * </p>
  * <p>
  * Incident Manager increases incident resolution by notifying responders of impact, highlighting relevant
@@ -203,7 +203,7 @@ public interface AWSSSMIncidentsAsync extends AWSSSMIncidents {
 
     /**
      * <p>
-     * Deletes the resource policy that AWS Resource Access Manager uses to share your Incident Manager resource.
+     * Deletes the resource policy that Resource Access Manager uses to share your Incident Manager resource.
      * </p>
      * 
      * @param deleteResourcePolicyRequest
@@ -216,7 +216,7 @@ public interface AWSSSMIncidentsAsync extends AWSSSMIncidents {
 
     /**
      * <p>
-     * Deletes the resource policy that AWS Resource Access Manager uses to share your Incident Manager resource.
+     * Deletes the resource policy that Resource Access Manager uses to share your Incident Manager resource.
      * </p>
      * 
      * @param deleteResourcePolicyRequest
@@ -298,7 +298,7 @@ public interface AWSSSMIncidentsAsync extends AWSSSMIncidents {
 
     /**
      * <p>
-     * Returns the details of the specified incident record.
+     * Returns the details for the specified incident record.
      * </p>
      * 
      * @param getIncidentRecordRequest
@@ -311,7 +311,7 @@ public interface AWSSSMIncidentsAsync extends AWSSSMIncidents {
 
     /**
      * <p>
-     * Returns the details of the specified incident record.
+     * Returns the details for the specified incident record.
      * </p>
      * 
      * @param getIncidentRecordRequest
@@ -610,7 +610,7 @@ public interface AWSSSMIncidentsAsync extends AWSSSMIncidents {
 
     /**
      * <p>
-     * Lists timeline events of the specified incident record.
+     * Lists timeline events for the specified incident record.
      * </p>
      * 
      * @param listTimelineEventsRequest
@@ -623,7 +623,7 @@ public interface AWSSSMIncidentsAsync extends AWSSSMIncidents {
 
     /**
      * <p>
-     * Lists timeline events of the specified incident record.
+     * Lists timeline events for the specified incident record.
      * </p>
      * 
      * @param listTimelineEventsRequest
@@ -796,8 +796,8 @@ public interface AWSSSMIncidentsAsync extends AWSSSMIncidents {
 
     /**
      * <p>
-     * Update the details of an incident record. You can use this action to update an incident record from the defined
-     * chat channel. For more information about using actions in chat channels, see <a
+     * Update the details of an incident record. You can use this operation to update an incident record from the
+     * defined chat channel. For more information about using actions in chat channels, see <a
      * href="https://docs.aws.amazon.com/incident-manager/latest/userguide/chat.html#chat-interact">Interacting through
      * chat</a>.
      * </p>
@@ -812,8 +812,8 @@ public interface AWSSSMIncidentsAsync extends AWSSSMIncidents {
 
     /**
      * <p>
-     * Update the details of an incident record. You can use this action to update an incident record from the defined
-     * chat channel. For more information about using actions in chat channels, see <a
+     * Update the details of an incident record. You can use this operation to update an incident record from the
+     * defined chat channel. For more information about using actions in chat channels, see <a
      * href="https://docs.aws.amazon.com/incident-manager/latest/userguide/chat.html#chat-interact">Interacting through
      * chat</a>.
      * </p>

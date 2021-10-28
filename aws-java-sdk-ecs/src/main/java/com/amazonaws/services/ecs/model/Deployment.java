@@ -138,6 +138,17 @@ public class Deployment implements Serializable, Cloneable, StructuredPojo {
     private String platformVersion;
     /**
      * <p>
+     * The operating system that your tasks in the service, or tasks are running on. A platform family is specified only
+     * for tasks using the Fargate launch type.
+     * </p>
+     * <p>
+     * All tasks that run as part of this service must use the same <code>platformFamily</code> value as the service,
+     * for example, <code> LINUX.</code>.
+     * </p>
+     */
+    private String platformFamily;
+    /**
+     * <p>
      * The VPC subnet and security group configuration for tasks that receive their own elastic network interface by
      * using the <code>awsvpc</code> networking mode.
      * </p>
@@ -905,6 +916,73 @@ public class Deployment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
+     * The operating system that your tasks in the service, or tasks are running on. A platform family is specified only
+     * for tasks using the Fargate launch type.
+     * </p>
+     * <p>
+     * All tasks that run as part of this service must use the same <code>platformFamily</code> value as the service,
+     * for example, <code> LINUX.</code>.
+     * </p>
+     * 
+     * @param platformFamily
+     *        The operating system that your tasks in the service, or tasks are running on. A platform family is
+     *        specified only for tasks using the Fargate launch type. </p>
+     *        <p>
+     *        All tasks that run as part of this service must use the same <code>platformFamily</code> value as the
+     *        service, for example, <code> LINUX.</code>.
+     */
+
+    public void setPlatformFamily(String platformFamily) {
+        this.platformFamily = platformFamily;
+    }
+
+    /**
+     * <p>
+     * The operating system that your tasks in the service, or tasks are running on. A platform family is specified only
+     * for tasks using the Fargate launch type.
+     * </p>
+     * <p>
+     * All tasks that run as part of this service must use the same <code>platformFamily</code> value as the service,
+     * for example, <code> LINUX.</code>.
+     * </p>
+     * 
+     * @return The operating system that your tasks in the service, or tasks are running on. A platform family is
+     *         specified only for tasks using the Fargate launch type. </p>
+     *         <p>
+     *         All tasks that run as part of this service must use the same <code>platformFamily</code> value as the
+     *         service, for example, <code> LINUX.</code>.
+     */
+
+    public String getPlatformFamily() {
+        return this.platformFamily;
+    }
+
+    /**
+     * <p>
+     * The operating system that your tasks in the service, or tasks are running on. A platform family is specified only
+     * for tasks using the Fargate launch type.
+     * </p>
+     * <p>
+     * All tasks that run as part of this service must use the same <code>platformFamily</code> value as the service,
+     * for example, <code> LINUX.</code>.
+     * </p>
+     * 
+     * @param platformFamily
+     *        The operating system that your tasks in the service, or tasks are running on. A platform family is
+     *        specified only for tasks using the Fargate launch type. </p>
+     *        <p>
+     *        All tasks that run as part of this service must use the same <code>platformFamily</code> value as the
+     *        service, for example, <code> LINUX.</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Deployment withPlatformFamily(String platformFamily) {
+        setPlatformFamily(platformFamily);
+        return this;
+    }
+
+    /**
+     * <p>
      * The VPC subnet and security group configuration for tasks that receive their own elastic network interface by
      * using the <code>awsvpc</code> networking mode.
      * </p>
@@ -1168,6 +1246,8 @@ public class Deployment implements Serializable, Cloneable, StructuredPojo {
             sb.append("LaunchType: ").append(getLaunchType()).append(",");
         if (getPlatformVersion() != null)
             sb.append("PlatformVersion: ").append(getPlatformVersion()).append(",");
+        if (getPlatformFamily() != null)
+            sb.append("PlatformFamily: ").append(getPlatformFamily()).append(",");
         if (getNetworkConfiguration() != null)
             sb.append("NetworkConfiguration: ").append(getNetworkConfiguration()).append(",");
         if (getRolloutState() != null)
@@ -1236,6 +1316,10 @@ public class Deployment implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getPlatformVersion() != null && other.getPlatformVersion().equals(this.getPlatformVersion()) == false)
             return false;
+        if (other.getPlatformFamily() == null ^ this.getPlatformFamily() == null)
+            return false;
+        if (other.getPlatformFamily() != null && other.getPlatformFamily().equals(this.getPlatformFamily()) == false)
+            return false;
         if (other.getNetworkConfiguration() == null ^ this.getNetworkConfiguration() == null)
             return false;
         if (other.getNetworkConfiguration() != null && other.getNetworkConfiguration().equals(this.getNetworkConfiguration()) == false)
@@ -1268,6 +1352,7 @@ public class Deployment implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getCapacityProviderStrategy() == null) ? 0 : getCapacityProviderStrategy().hashCode());
         hashCode = prime * hashCode + ((getLaunchType() == null) ? 0 : getLaunchType().hashCode());
         hashCode = prime * hashCode + ((getPlatformVersion() == null) ? 0 : getPlatformVersion().hashCode());
+        hashCode = prime * hashCode + ((getPlatformFamily() == null) ? 0 : getPlatformFamily().hashCode());
         hashCode = prime * hashCode + ((getNetworkConfiguration() == null) ? 0 : getNetworkConfiguration().hashCode());
         hashCode = prime * hashCode + ((getRolloutState() == null) ? 0 : getRolloutState().hashCode());
         hashCode = prime * hashCode + ((getRolloutStateReason() == null) ? 0 : getRolloutStateReason().hashCode());

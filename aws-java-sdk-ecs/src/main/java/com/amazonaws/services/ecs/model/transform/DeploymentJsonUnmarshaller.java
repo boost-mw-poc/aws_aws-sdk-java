@@ -99,6 +99,10 @@ public class DeploymentJsonUnmarshaller implements Unmarshaller<Deployment, Json
                     context.nextToken();
                     deployment.setPlatformVersion(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("platformFamily", targetDepth)) {
+                    context.nextToken();
+                    deployment.setPlatformFamily(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("networkConfiguration", targetDepth)) {
                     context.nextToken();
                     deployment.setNetworkConfiguration(NetworkConfigurationJsonUnmarshaller.getInstance().unmarshall(context));

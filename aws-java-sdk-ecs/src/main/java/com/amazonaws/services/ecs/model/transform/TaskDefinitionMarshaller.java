@@ -52,6 +52,8 @@ public class TaskDefinitionMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("placementConstraints").build();
     private static final MarshallingInfo<List> COMPATIBILITIES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("compatibilities").build();
+    private static final MarshallingInfo<StructuredPojo> RUNTIMEPLATFORM_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("runtimePlatform").build();
     private static final MarshallingInfo<List> REQUIRESCOMPATIBILITIES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("requiresCompatibilities").build();
     private static final MarshallingInfo<String> CPU_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
@@ -103,6 +105,7 @@ public class TaskDefinitionMarshaller {
             protocolMarshaller.marshall(taskDefinition.getRequiresAttributes(), REQUIRESATTRIBUTES_BINDING);
             protocolMarshaller.marshall(taskDefinition.getPlacementConstraints(), PLACEMENTCONSTRAINTS_BINDING);
             protocolMarshaller.marshall(taskDefinition.getCompatibilities(), COMPATIBILITIES_BINDING);
+            protocolMarshaller.marshall(taskDefinition.getRuntimePlatform(), RUNTIMEPLATFORM_BINDING);
             protocolMarshaller.marshall(taskDefinition.getRequiresCompatibilities(), REQUIRESCOMPATIBILITIES_BINDING);
             protocolMarshaller.marshall(taskDefinition.getCpu(), CPU_BINDING);
             protocolMarshaller.marshall(taskDefinition.getMemory(), MEMORY_BINDING);

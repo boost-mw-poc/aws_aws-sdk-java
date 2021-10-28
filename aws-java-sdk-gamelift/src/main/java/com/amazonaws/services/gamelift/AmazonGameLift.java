@@ -528,6 +528,8 @@ public interface AmazonGameLift {
      * @throws TaggingFailedException
      *         The requested tagging operation did not succeed. This may be due to invalid tag format or the maximum tag
      *         limit may have been exceeded. Resolve the issue before retrying.
+     * @throws UnsupportedRegionException
+     *         The requested operation is not supported in the Region specified.
      * @sample AmazonGameLift.CreateFleet
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/CreateFleet" target="_top">AWS API
      *      Documentation</a>
@@ -594,6 +596,8 @@ public interface AmazonGameLift {
      * @throws InvalidFleetStatusException
      *         The requested operation would cause a conflict with the current state of a resource associated with the
      *         request and/or the fleet. Resolve the conflict before retrying.
+     * @throws UnsupportedRegionException
+     *         The requested operation is not supported in the Region specified.
      * @sample AmazonGameLift.CreateFleetLocations
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/CreateFleetLocations" target="_top">AWS
      *      API Documentation</a>
@@ -782,6 +786,8 @@ public interface AmazonGameLift {
      * @throws IdempotentParameterMismatchException
      *         A game session with this custom ID string already exists in this fleet. Resolve this conflict before
      *         retrying this request.
+     * @throws UnsupportedRegionException
+     *         The requested operation is not supported in the Region specified.
      * @sample AmazonGameLift.CreateGameSession
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/CreateGameSession" target="_top">AWS API
      *      Documentation</a>
@@ -1506,6 +1512,8 @@ public interface AmazonGameLift {
      * @throws NotFoundException
      *         A service resource associated with the request could not be found. Clients should not retry such
      *         requests.
+     * @throws UnsupportedRegionException
+     *         The requested operation is not supported in the Region specified.
      * @sample AmazonGameLift.DeleteFleetLocations
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/DeleteFleetLocations" target="_top">AWS
      *      API Documentation</a>
@@ -2109,6 +2117,8 @@ public interface AmazonGameLift {
      *         such requests immediately or after a waiting period.
      * @throws UnauthorizedException
      *         The client failed authentication. Clients should not retry such requests.
+     * @throws UnsupportedRegionException
+     *         The requested operation is not supported in the Region specified.
      * @sample AmazonGameLift.DescribeEC2InstanceLimits
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/DescribeEC2InstanceLimits"
      *      target="_top">AWS API Documentation</a>
@@ -2383,6 +2393,8 @@ public interface AmazonGameLift {
      * @throws NotFoundException
      *         A service resource associated with the request could not be found. Clients should not retry such
      *         requests.
+     * @throws UnsupportedRegionException
+     *         The requested operation is not supported in the Region specified.
      * @sample AmazonGameLift.DescribeFleetLocationAttributes
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/DescribeFleetLocationAttributes"
      *      target="_top">AWS API Documentation</a>
@@ -2440,6 +2452,8 @@ public interface AmazonGameLift {
      * @throws NotFoundException
      *         A service resource associated with the request could not be found. Clients should not retry such
      *         requests.
+     * @throws UnsupportedRegionException
+     *         The requested operation is not supported in the Region specified.
      * @sample AmazonGameLift.DescribeFleetLocationCapacity
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/DescribeFleetLocationCapacity"
      *      target="_top">AWS API Documentation</a>
@@ -2497,6 +2511,8 @@ public interface AmazonGameLift {
      * @throws NotFoundException
      *         A service resource associated with the request could not be found. Clients should not retry such
      *         requests.
+     * @throws UnsupportedRegionException
+     *         The requested operation is not supported in the Region specified.
      * @sample AmazonGameLift.DescribeFleetLocationUtilization
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/DescribeFleetLocationUtilization"
      *      target="_top">AWS API Documentation</a>
@@ -2879,6 +2895,8 @@ public interface AmazonGameLift {
      *         <a>RoutingStrategy</a> associated with it. The message returned in this exception is the message defined
      *         in the routing strategy itself. Such requests should only be retried if the routing strategy for the
      *         specified alias is modified.
+     * @throws UnsupportedRegionException
+     *         The requested operation is not supported in the Region specified.
      * @sample AmazonGameLift.DescribeGameSessionDetails
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/DescribeGameSessionDetails"
      *      target="_top">AWS API Documentation</a>
@@ -3050,6 +3068,8 @@ public interface AmazonGameLift {
      *         <a>RoutingStrategy</a> associated with it. The message returned in this exception is the message defined
      *         in the routing strategy itself. Such requests should only be retried if the routing strategy for the
      *         specified alias is modified.
+     * @throws UnsupportedRegionException
+     *         The requested operation is not supported in the Region specified.
      * @sample AmazonGameLift.DescribeGameSessions
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/DescribeGameSessions" target="_top">AWS
      *      API Documentation</a>
@@ -3122,6 +3142,8 @@ public interface AmazonGameLift {
      * @throws InternalServiceException
      *         The service encountered an unrecoverable internal failure while processing the request. Clients can retry
      *         such requests immediately or after a waiting period.
+     * @throws UnsupportedRegionException
+     *         The requested operation is not supported in the Region specified.
      * @sample AmazonGameLift.DescribeInstances
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/DescribeInstances" target="_top">AWS API
      *      Documentation</a>
@@ -3439,6 +3461,8 @@ public interface AmazonGameLift {
      * @throws NotFoundException
      *         A service resource associated with the request could not be found. Clients should not retry such
      *         requests.
+     * @throws UnsupportedRegionException
+     *         The requested operation is not supported in the Region specified.
      * @sample AmazonGameLift.DescribeScalingPolicies
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/DescribeScalingPolicies"
      *      target="_top">AWS API Documentation</a>
@@ -4467,6 +4491,8 @@ public interface AmazonGameLift {
      *         <a>RoutingStrategy</a> associated with it. The message returned in this exception is the message defined
      *         in the routing strategy itself. Such requests should only be retried if the routing strategy for the
      *         specified alias is modified.
+     * @throws UnsupportedRegionException
+     *         The requested operation is not supported in the Region specified.
      * @sample AmazonGameLift.SearchGameSessions
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/SearchGameSessions" target="_top">AWS
      *      API Documentation</a>
@@ -4532,6 +4558,8 @@ public interface AmazonGameLift {
      * @throws NotFoundException
      *         A service resource associated with the request could not be found. Clients should not retry such
      *         requests.
+     * @throws UnsupportedRegionException
+     *         The requested operation is not supported in the Region specified.
      * @sample AmazonGameLift.StartFleetActions
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/StartFleetActions" target="_top">AWS API
      *      Documentation</a>
@@ -4825,6 +4853,8 @@ public interface AmazonGameLift {
      * @throws NotFoundException
      *         A service resource associated with the request could not be found. Clients should not retry such
      *         requests.
+     * @throws UnsupportedRegionException
+     *         The requested operation is not supported in the Region specified.
      * @sample AmazonGameLift.StopFleetActions
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/StopFleetActions" target="_top">AWS API
      *      Documentation</a>
@@ -5384,6 +5414,8 @@ public interface AmazonGameLift {
      *         retrying.
      * @throws UnauthorizedException
      *         The client failed authentication. Clients should not retry such requests.
+     * @throws UnsupportedRegionException
+     *         The requested operation is not supported in the Region specified.
      * @sample AmazonGameLift.UpdateFleetCapacity
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/UpdateFleetCapacity" target="_top">AWS
      *      API Documentation</a>

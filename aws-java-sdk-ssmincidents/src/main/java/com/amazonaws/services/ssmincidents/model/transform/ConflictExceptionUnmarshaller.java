@@ -60,6 +60,10 @@ public class ConflictExceptionUnmarshaller extends EnhancedJsonErrorUnmarshaller
                     context.nextToken();
                     conflictException.setResourceType(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("retryAfter", targetDepth)) {
+                    context.nextToken();
+                    conflictException.setRetryAfter(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

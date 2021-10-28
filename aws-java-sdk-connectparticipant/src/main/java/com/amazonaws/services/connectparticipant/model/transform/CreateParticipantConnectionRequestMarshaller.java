@@ -32,6 +32,8 @@ public class CreateParticipantConnectionRequestMarshaller {
             .marshallLocationName("Type").build();
     private static final MarshallingInfo<String> PARTICIPANTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.HEADER).marshallLocationName("X-Amz-Bearer").build();
+    private static final MarshallingInfo<Boolean> CONNECTPARTICIPANT_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ConnectParticipant").build();
 
     private static final CreateParticipantConnectionRequestMarshaller instance = new CreateParticipantConnectionRequestMarshaller();
 
@@ -51,6 +53,7 @@ public class CreateParticipantConnectionRequestMarshaller {
         try {
             protocolMarshaller.marshall(createParticipantConnectionRequest.getType(), TYPE_BINDING);
             protocolMarshaller.marshall(createParticipantConnectionRequest.getParticipantToken(), PARTICIPANTTOKEN_BINDING);
+            protocolMarshaller.marshall(createParticipantConnectionRequest.getConnectParticipant(), CONNECTPARTICIPANT_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

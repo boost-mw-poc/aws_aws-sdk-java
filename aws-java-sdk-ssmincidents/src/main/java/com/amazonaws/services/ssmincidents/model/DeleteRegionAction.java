@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Defines the information about the Region you're deleting from your replication set.
+ * Defines the information about the Amazon Web Services Region you're deleting from your replication set.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-incidents-2018-05-10/DeleteRegionAction" target="_top">AWS
@@ -30,18 +30,18 @@ public class DeleteRegionAction implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The name of the Region you're deleting from the replication set.
+     * The name of the Amazon Web Services Region you're deleting from the replication set.
      * </p>
      */
     private String regionName;
 
     /**
      * <p>
-     * The name of the Region you're deleting from the replication set.
+     * The name of the Amazon Web Services Region you're deleting from the replication set.
      * </p>
      * 
      * @param regionName
-     *        The name of the Region you're deleting from the replication set.
+     *        The name of the Amazon Web Services Region you're deleting from the replication set.
      */
 
     public void setRegionName(String regionName) {
@@ -50,10 +50,10 @@ public class DeleteRegionAction implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The name of the Region you're deleting from the replication set.
+     * The name of the Amazon Web Services Region you're deleting from the replication set.
      * </p>
      * 
-     * @return The name of the Region you're deleting from the replication set.
+     * @return The name of the Amazon Web Services Region you're deleting from the replication set.
      */
 
     public String getRegionName() {
@@ -62,11 +62,11 @@ public class DeleteRegionAction implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The name of the Region you're deleting from the replication set.
+     * The name of the Amazon Web Services Region you're deleting from the replication set.
      * </p>
      * 
      * @param regionName
-     *        The name of the Region you're deleting from the replication set.
+     *        The name of the Amazon Web Services Region you're deleting from the replication set.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

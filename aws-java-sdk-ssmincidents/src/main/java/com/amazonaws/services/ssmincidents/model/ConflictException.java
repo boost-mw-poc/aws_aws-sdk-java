@@ -35,6 +35,12 @@ public class ConflictException extends com.amazonaws.services.ssmincidents.model
      * </p>
      */
     private String resourceType;
+    /**
+     * <p>
+     * If present in the output, the operation can be retried after this time
+     * </p>
+     */
+    private java.util.Date retryAfter;
 
     /**
      * Constructs a new ConflictException with the specified error message.
@@ -146,6 +152,48 @@ public class ConflictException extends com.amazonaws.services.ssmincidents.model
 
     public ConflictException withResourceType(ResourceType resourceType) {
         this.resourceType = resourceType.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * If present in the output, the operation can be retried after this time
+     * </p>
+     * 
+     * @param retryAfter
+     *        If present in the output, the operation can be retried after this time
+     */
+
+    @com.fasterxml.jackson.annotation.JsonProperty("retryAfter")
+    public void setRetryAfter(java.util.Date retryAfter) {
+        this.retryAfter = retryAfter;
+    }
+
+    /**
+     * <p>
+     * If present in the output, the operation can be retried after this time
+     * </p>
+     * 
+     * @return If present in the output, the operation can be retried after this time
+     */
+
+    @com.fasterxml.jackson.annotation.JsonProperty("retryAfter")
+    public java.util.Date getRetryAfter() {
+        return this.retryAfter;
+    }
+
+    /**
+     * <p>
+     * If present in the output, the operation can be retried after this time
+     * </p>
+     * 
+     * @param retryAfter
+     *        If present in the output, the operation can be retried after this time
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ConflictException withRetryAfter(java.util.Date retryAfter) {
+        setRetryAfter(retryAfter);
         return this;
     }
 

@@ -290,6 +290,7 @@ public enum InstanceType {
     D3en6xlarge("d3en.6xlarge"),
     D3en8xlarge("d3en.8xlarge"),
     D3en12xlarge("d3en.12xlarge"),
+    Dl124xlarge("dl1.24xlarge"),
     F12xlarge("f1.2xlarge"),
     F14xlarge("f1.4xlarge"),
     F116xlarge("f1.16xlarge"),

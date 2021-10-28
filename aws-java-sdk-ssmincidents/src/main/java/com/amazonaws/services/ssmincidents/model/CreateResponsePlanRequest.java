@@ -33,13 +33,13 @@ public class CreateResponsePlanRequest extends com.amazonaws.AmazonWebServiceReq
     private java.util.List<Action> actions;
     /**
      * <p>
-     * The AWS Chatbot chat channel used for collaboration during an incident.
+     * The Chatbot chat channel used for collaboration during an incident.
      * </p>
      */
     private ChatChannel chatChannel;
     /**
      * <p>
-     * A token ensuring that the action is called only once with the specified details.
+     * A token ensuring that the operation is called only once with the specified details.
      * </p>
      */
     private String clientToken;
@@ -146,11 +146,11 @@ public class CreateResponsePlanRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The AWS Chatbot chat channel used for collaboration during an incident.
+     * The Chatbot chat channel used for collaboration during an incident.
      * </p>
      * 
      * @param chatChannel
-     *        The AWS Chatbot chat channel used for collaboration during an incident.
+     *        The Chatbot chat channel used for collaboration during an incident.
      */
 
     public void setChatChannel(ChatChannel chatChannel) {
@@ -159,10 +159,10 @@ public class CreateResponsePlanRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The AWS Chatbot chat channel used for collaboration during an incident.
+     * The Chatbot chat channel used for collaboration during an incident.
      * </p>
      * 
-     * @return The AWS Chatbot chat channel used for collaboration during an incident.
+     * @return The Chatbot chat channel used for collaboration during an incident.
      */
 
     public ChatChannel getChatChannel() {
@@ -171,11 +171,11 @@ public class CreateResponsePlanRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The AWS Chatbot chat channel used for collaboration during an incident.
+     * The Chatbot chat channel used for collaboration during an incident.
      * </p>
      * 
      * @param chatChannel
-     *        The AWS Chatbot chat channel used for collaboration during an incident.
+     *        The Chatbot chat channel used for collaboration during an incident.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -186,11 +186,11 @@ public class CreateResponsePlanRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * A token ensuring that the action is called only once with the specified details.
+     * A token ensuring that the operation is called only once with the specified details.
      * </p>
      * 
      * @param clientToken
-     *        A token ensuring that the action is called only once with the specified details.
+     *        A token ensuring that the operation is called only once with the specified details.
      */
 
     public void setClientToken(String clientToken) {
@@ -199,10 +199,10 @@ public class CreateResponsePlanRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * A token ensuring that the action is called only once with the specified details.
+     * A token ensuring that the operation is called only once with the specified details.
      * </p>
      * 
-     * @return A token ensuring that the action is called only once with the specified details.
+     * @return A token ensuring that the operation is called only once with the specified details.
      */
 
     public String getClientToken() {
@@ -211,11 +211,11 @@ public class CreateResponsePlanRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * A token ensuring that the action is called only once with the specified details.
+     * A token ensuring that the operation is called only once with the specified details.
      * </p>
      * 
      * @param clientToken
-     *        A token ensuring that the action is called only once with the specified details.
+     *        A token ensuring that the operation is called only once with the specified details.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

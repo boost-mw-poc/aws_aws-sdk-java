@@ -27,7 +27,7 @@ public class ListRelatedItemsRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the incident record that you are listing related items for.
+     * The Amazon Resource Name (ARN) of the incident record containing the listed related items.
      * </p>
      */
     private String incidentRecordArn;
@@ -46,11 +46,11 @@ public class ListRelatedItemsRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the incident record that you are listing related items for.
+     * The Amazon Resource Name (ARN) of the incident record containing the listed related items.
      * </p>
      * 
      * @param incidentRecordArn
-     *        The Amazon Resource Name (ARN) of the incident record that you are listing related items for.
+     *        The Amazon Resource Name (ARN) of the incident record containing the listed related items.
      */
 
     public void setIncidentRecordArn(String incidentRecordArn) {
@@ -59,10 +59,10 @@ public class ListRelatedItemsRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the incident record that you are listing related items for.
+     * The Amazon Resource Name (ARN) of the incident record containing the listed related items.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the incident record that you are listing related items for.
+     * @return The Amazon Resource Name (ARN) of the incident record containing the listed related items.
      */
 
     public String getIncidentRecordArn() {
@@ -71,11 +71,11 @@ public class ListRelatedItemsRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the incident record that you are listing related items for.
+     * The Amazon Resource Name (ARN) of the incident record containing the listed related items.
      * </p>
      * 
      * @param incidentRecordArn
-     *        The Amazon Resource Name (ARN) of the incident record that you are listing related items for.
+     *        The Amazon Resource Name (ARN) of the incident record containing the listed related items.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -33,7 +33,7 @@ public class UpdateDeletionProtectionRequest extends com.amazonaws.AmazonWebServ
     private String arn;
     /**
      * <p>
-     * A token ensuring that the action is called only once with the specified details.
+     * A token ensuring that the operation is called only once with the specified details.
      * </p>
      */
     private String clientToken;
@@ -86,11 +86,11 @@ public class UpdateDeletionProtectionRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * A token ensuring that the action is called only once with the specified details.
+     * A token ensuring that the operation is called only once with the specified details.
      * </p>
      * 
      * @param clientToken
-     *        A token ensuring that the action is called only once with the specified details.
+     *        A token ensuring that the operation is called only once with the specified details.
      */
 
     public void setClientToken(String clientToken) {
@@ -99,10 +99,10 @@ public class UpdateDeletionProtectionRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * A token ensuring that the action is called only once with the specified details.
+     * A token ensuring that the operation is called only once with the specified details.
      * </p>
      * 
-     * @return A token ensuring that the action is called only once with the specified details.
+     * @return A token ensuring that the operation is called only once with the specified details.
      */
 
     public String getClientToken() {
@@ -111,11 +111,11 @@ public class UpdateDeletionProtectionRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * A token ensuring that the action is called only once with the specified details.
+     * A token ensuring that the operation is called only once with the specified details.
      * </p>
      * 
      * @param clientToken
-     *        A token ensuring that the action is called only once with the specified details.
+     *        A token ensuring that the operation is called only once with the specified details.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

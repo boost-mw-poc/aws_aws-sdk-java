@@ -27,24 +27,24 @@ public class GetTimelineEventRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The ID of the event. You can get an event's ID when you create it or by using <code>ListTimelineEvents</code>.
+     * The ID of the event. You can get an event's ID when you create it, or by using <code>ListTimelineEvents</code>.
      * </p>
      */
     private String eventId;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the incident that the timeline event is part of.
+     * The Amazon Resource Name (ARN) of the incident that includes the timeline event.
      * </p>
      */
     private String incidentRecordArn;
 
     /**
      * <p>
-     * The ID of the event. You can get an event's ID when you create it or by using <code>ListTimelineEvents</code>.
+     * The ID of the event. You can get an event's ID when you create it, or by using <code>ListTimelineEvents</code>.
      * </p>
      * 
      * @param eventId
-     *        The ID of the event. You can get an event's ID when you create it or by using
+     *        The ID of the event. You can get an event's ID when you create it, or by using
      *        <code>ListTimelineEvents</code>.
      */
 
@@ -54,10 +54,10 @@ public class GetTimelineEventRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The ID of the event. You can get an event's ID when you create it or by using <code>ListTimelineEvents</code>.
+     * The ID of the event. You can get an event's ID when you create it, or by using <code>ListTimelineEvents</code>.
      * </p>
      * 
-     * @return The ID of the event. You can get an event's ID when you create it or by using
+     * @return The ID of the event. You can get an event's ID when you create it, or by using
      *         <code>ListTimelineEvents</code>.
      */
 
@@ -67,11 +67,11 @@ public class GetTimelineEventRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The ID of the event. You can get an event's ID when you create it or by using <code>ListTimelineEvents</code>.
+     * The ID of the event. You can get an event's ID when you create it, or by using <code>ListTimelineEvents</code>.
      * </p>
      * 
      * @param eventId
-     *        The ID of the event. You can get an event's ID when you create it or by using
+     *        The ID of the event. You can get an event's ID when you create it, or by using
      *        <code>ListTimelineEvents</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -83,11 +83,11 @@ public class GetTimelineEventRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the incident that the timeline event is part of.
+     * The Amazon Resource Name (ARN) of the incident that includes the timeline event.
      * </p>
      * 
      * @param incidentRecordArn
-     *        The Amazon Resource Name (ARN) of the incident that the timeline event is part of.
+     *        The Amazon Resource Name (ARN) of the incident that includes the timeline event.
      */
 
     public void setIncidentRecordArn(String incidentRecordArn) {
@@ -96,10 +96,10 @@ public class GetTimelineEventRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the incident that the timeline event is part of.
+     * The Amazon Resource Name (ARN) of the incident that includes the timeline event.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the incident that the timeline event is part of.
+     * @return The Amazon Resource Name (ARN) of the incident that includes the timeline event.
      */
 
     public String getIncidentRecordArn() {
@@ -108,11 +108,11 @@ public class GetTimelineEventRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the incident that the timeline event is part of.
+     * The Amazon Resource Name (ARN) of the incident that includes the timeline event.
      * </p>
      * 
      * @param incidentRecordArn
-     *        The Amazon Resource Name (ARN) of the incident that the timeline event is part of.
+     *        The Amazon Resource Name (ARN) of the incident that includes the timeline event.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Details about how the incident record was created and when.
+ * Details about what created the incident record and when it was created.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-incidents-2018-05-10/IncidentRecordSource" target="_top">AWS
@@ -49,7 +49,7 @@ public class IncidentRecordSource implements Serializable, Cloneable, Structured
     /**
      * <p>
      * The service that started the incident. This can be manually created from Incident Manager, automatically created
-     * using an AWS CloudWatch alarm, or Amazon EventBridge event.
+     * using an Amazon CloudWatch alarm, or Amazon EventBridge event.
      * </p>
      */
     private String source;
@@ -177,12 +177,12 @@ public class IncidentRecordSource implements Serializable, Cloneable, Structured
     /**
      * <p>
      * The service that started the incident. This can be manually created from Incident Manager, automatically created
-     * using an AWS CloudWatch alarm, or Amazon EventBridge event.
+     * using an Amazon CloudWatch alarm, or Amazon EventBridge event.
      * </p>
      * 
      * @param source
      *        The service that started the incident. This can be manually created from Incident Manager, automatically
-     *        created using an AWS CloudWatch alarm, or Amazon EventBridge event.
+     *        created using an Amazon CloudWatch alarm, or Amazon EventBridge event.
      */
 
     public void setSource(String source) {
@@ -192,11 +192,11 @@ public class IncidentRecordSource implements Serializable, Cloneable, Structured
     /**
      * <p>
      * The service that started the incident. This can be manually created from Incident Manager, automatically created
-     * using an AWS CloudWatch alarm, or Amazon EventBridge event.
+     * using an Amazon CloudWatch alarm, or Amazon EventBridge event.
      * </p>
      * 
      * @return The service that started the incident. This can be manually created from Incident Manager, automatically
-     *         created using an AWS CloudWatch alarm, or Amazon EventBridge event.
+     *         created using an Amazon CloudWatch alarm, or Amazon EventBridge event.
      */
 
     public String getSource() {
@@ -206,12 +206,12 @@ public class IncidentRecordSource implements Serializable, Cloneable, Structured
     /**
      * <p>
      * The service that started the incident. This can be manually created from Incident Manager, automatically created
-     * using an AWS CloudWatch alarm, or Amazon EventBridge event.
+     * using an Amazon CloudWatch alarm, or Amazon EventBridge event.
      * </p>
      * 
      * @param source
      *        The service that started the incident. This can be manually created from Incident Manager, automatically
-     *        created using an AWS CloudWatch alarm, or Amazon EventBridge event.
+     *        created using an Amazon CloudWatch alarm, or Amazon EventBridge event.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

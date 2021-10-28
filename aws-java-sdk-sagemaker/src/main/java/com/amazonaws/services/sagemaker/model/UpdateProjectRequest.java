@@ -42,16 +42,16 @@ public class UpdateProjectRequest extends com.amazonaws.AmazonWebServiceRequest 
      * The product ID and provisioning artifact ID to provision a service catalog. The provisioning artifact ID will
      * default to the latest provisioning artifact ID of the product, if you don't provide the provisioning artifact ID.
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/servicecatalog/latest/adminguide/introduction.html">What is AWS Service
-     * Catalog</a>.
+     * href="https://docs.aws.amazon.com/servicecatalog/latest/adminguide/introduction.html">What is Amazon Web Services
+     * Service Catalog</a>.
      * </p>
      */
     private ServiceCatalogProvisioningUpdateDetails serviceCatalogProvisioningUpdateDetails;
     /**
      * <p>
-     * An array of key-value pairs. You can use tags to categorize your AWS resources in different ways, for example, by
-     * purpose, owner, or environment. For more information, see <a
-     * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging AWS Resources</a>.
+     * An array of key-value pairs. You can use tags to categorize your Amazon Web Services resources in different ways,
+     * for example, by purpose, owner, or environment. For more information, see <a
+     * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web Services Resources</a>.
      * </p>
      */
     private java.util.List<Tag> tags;
@@ -141,16 +141,16 @@ public class UpdateProjectRequest extends com.amazonaws.AmazonWebServiceRequest 
      * The product ID and provisioning artifact ID to provision a service catalog. The provisioning artifact ID will
      * default to the latest provisioning artifact ID of the product, if you don't provide the provisioning artifact ID.
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/servicecatalog/latest/adminguide/introduction.html">What is AWS Service
-     * Catalog</a>.
+     * href="https://docs.aws.amazon.com/servicecatalog/latest/adminguide/introduction.html">What is Amazon Web Services
+     * Service Catalog</a>.
      * </p>
      * 
      * @param serviceCatalogProvisioningUpdateDetails
      *        The product ID and provisioning artifact ID to provision a service catalog. The provisioning artifact ID
      *        will default to the latest provisioning artifact ID of the product, if you don't provide the provisioning
      *        artifact ID. For more information, see <a
-     *        href="https://docs.aws.amazon.com/servicecatalog/latest/adminguide/introduction.html">What is AWS Service
-     *        Catalog</a>.
+     *        href="https://docs.aws.amazon.com/servicecatalog/latest/adminguide/introduction.html">What is Amazon Web
+     *        Services Service Catalog</a>.
      */
 
     public void setServiceCatalogProvisioningUpdateDetails(ServiceCatalogProvisioningUpdateDetails serviceCatalogProvisioningUpdateDetails) {
@@ -162,15 +162,15 @@ public class UpdateProjectRequest extends com.amazonaws.AmazonWebServiceRequest 
      * The product ID and provisioning artifact ID to provision a service catalog. The provisioning artifact ID will
      * default to the latest provisioning artifact ID of the product, if you don't provide the provisioning artifact ID.
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/servicecatalog/latest/adminguide/introduction.html">What is AWS Service
-     * Catalog</a>.
+     * href="https://docs.aws.amazon.com/servicecatalog/latest/adminguide/introduction.html">What is Amazon Web Services
+     * Service Catalog</a>.
      * </p>
      * 
      * @return The product ID and provisioning artifact ID to provision a service catalog. The provisioning artifact ID
      *         will default to the latest provisioning artifact ID of the product, if you don't provide the provisioning
      *         artifact ID. For more information, see <a
-     *         href="https://docs.aws.amazon.com/servicecatalog/latest/adminguide/introduction.html">What is AWS Service
-     *         Catalog</a>.
+     *         href="https://docs.aws.amazon.com/servicecatalog/latest/adminguide/introduction.html">What is Amazon Web
+     *         Services Service Catalog</a>.
      */
 
     public ServiceCatalogProvisioningUpdateDetails getServiceCatalogProvisioningUpdateDetails() {
@@ -182,16 +182,16 @@ public class UpdateProjectRequest extends com.amazonaws.AmazonWebServiceRequest 
      * The product ID and provisioning artifact ID to provision a service catalog. The provisioning artifact ID will
      * default to the latest provisioning artifact ID of the product, if you don't provide the provisioning artifact ID.
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/servicecatalog/latest/adminguide/introduction.html">What is AWS Service
-     * Catalog</a>.
+     * href="https://docs.aws.amazon.com/servicecatalog/latest/adminguide/introduction.html">What is Amazon Web Services
+     * Service Catalog</a>.
      * </p>
      * 
      * @param serviceCatalogProvisioningUpdateDetails
      *        The product ID and provisioning artifact ID to provision a service catalog. The provisioning artifact ID
      *        will default to the latest provisioning artifact ID of the product, if you don't provide the provisioning
      *        artifact ID. For more information, see <a
-     *        href="https://docs.aws.amazon.com/servicecatalog/latest/adminguide/introduction.html">What is AWS Service
-     *        Catalog</a>.
+     *        href="https://docs.aws.amazon.com/servicecatalog/latest/adminguide/introduction.html">What is Amazon Web
+     *        Services Service Catalog</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -202,14 +202,15 @@ public class UpdateProjectRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * An array of key-value pairs. You can use tags to categorize your AWS resources in different ways, for example, by
-     * purpose, owner, or environment. For more information, see <a
-     * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging AWS Resources</a>.
+     * An array of key-value pairs. You can use tags to categorize your Amazon Web Services resources in different ways,
+     * for example, by purpose, owner, or environment. For more information, see <a
+     * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web Services Resources</a>.
      * </p>
      * 
-     * @return An array of key-value pairs. You can use tags to categorize your AWS resources in different ways, for
-     *         example, by purpose, owner, or environment. For more information, see <a
-     *         href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging AWS Resources</a>.
+     * @return An array of key-value pairs. You can use tags to categorize your Amazon Web Services resources in
+     *         different ways, for example, by purpose, owner, or environment. For more information, see <a
+     *         href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web Services
+     *         Resources</a>.
      */
 
     public java.util.List<Tag> getTags() {
@@ -218,15 +219,16 @@ public class UpdateProjectRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * An array of key-value pairs. You can use tags to categorize your AWS resources in different ways, for example, by
-     * purpose, owner, or environment. For more information, see <a
-     * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging AWS Resources</a>.
+     * An array of key-value pairs. You can use tags to categorize your Amazon Web Services resources in different ways,
+     * for example, by purpose, owner, or environment. For more information, see <a
+     * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web Services Resources</a>.
      * </p>
      * 
      * @param tags
-     *        An array of key-value pairs. You can use tags to categorize your AWS resources in different ways, for
-     *        example, by purpose, owner, or environment. For more information, see <a
-     *        href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging AWS Resources</a>.
+     *        An array of key-value pairs. You can use tags to categorize your Amazon Web Services resources in
+     *        different ways, for example, by purpose, owner, or environment. For more information, see <a
+     *        href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web Services
+     *        Resources</a>.
      */
 
     public void setTags(java.util.Collection<Tag> tags) {
@@ -240,9 +242,9 @@ public class UpdateProjectRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * An array of key-value pairs. You can use tags to categorize your AWS resources in different ways, for example, by
-     * purpose, owner, or environment. For more information, see <a
-     * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging AWS Resources</a>.
+     * An array of key-value pairs. You can use tags to categorize your Amazon Web Services resources in different ways,
+     * for example, by purpose, owner, or environment. For more information, see <a
+     * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web Services Resources</a>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -251,9 +253,10 @@ public class UpdateProjectRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      * 
      * @param tags
-     *        An array of key-value pairs. You can use tags to categorize your AWS resources in different ways, for
-     *        example, by purpose, owner, or environment. For more information, see <a
-     *        href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging AWS Resources</a>.
+     *        An array of key-value pairs. You can use tags to categorize your Amazon Web Services resources in
+     *        different ways, for example, by purpose, owner, or environment. For more information, see <a
+     *        href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web Services
+     *        Resources</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -269,15 +272,16 @@ public class UpdateProjectRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * An array of key-value pairs. You can use tags to categorize your AWS resources in different ways, for example, by
-     * purpose, owner, or environment. For more information, see <a
-     * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging AWS Resources</a>.
+     * An array of key-value pairs. You can use tags to categorize your Amazon Web Services resources in different ways,
+     * for example, by purpose, owner, or environment. For more information, see <a
+     * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web Services Resources</a>.
      * </p>
      * 
      * @param tags
-     *        An array of key-value pairs. You can use tags to categorize your AWS resources in different ways, for
-     *        example, by purpose, owner, or environment. For more information, see <a
-     *        href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging AWS Resources</a>.
+     *        An array of key-value pairs. You can use tags to categorize your Amazon Web Services resources in
+     *        different ways, for example, by purpose, owner, or environment. For more information, see <a
+     *        href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web Services
+     *        Resources</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

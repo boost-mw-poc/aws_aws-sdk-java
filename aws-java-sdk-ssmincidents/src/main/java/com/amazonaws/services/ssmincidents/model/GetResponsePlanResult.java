@@ -37,7 +37,7 @@ public class GetResponsePlanResult extends com.amazonaws.AmazonWebServiceResult<
     private String arn;
     /**
      * <p>
-     * The AWS Chatbot chat channel used for collaboration during an incident.
+     * The Chatbot chat channel used for collaboration during an incident.
      * </p>
      */
     private ChatChannel chatChannel;
@@ -61,7 +61,7 @@ public class GetResponsePlanResult extends com.amazonaws.AmazonWebServiceResult<
     private IncidentTemplate incidentTemplate;
     /**
      * <p>
-     * The short format name of the response plan. Can't contain spaces.
+     * The short format name of the response plan. The name can't contain spaces.
      * </p>
      */
     private String name;
@@ -178,11 +178,11 @@ public class GetResponsePlanResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The AWS Chatbot chat channel used for collaboration during an incident.
+     * The Chatbot chat channel used for collaboration during an incident.
      * </p>
      * 
      * @param chatChannel
-     *        The AWS Chatbot chat channel used for collaboration during an incident.
+     *        The Chatbot chat channel used for collaboration during an incident.
      */
 
     public void setChatChannel(ChatChannel chatChannel) {
@@ -191,10 +191,10 @@ public class GetResponsePlanResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The AWS Chatbot chat channel used for collaboration during an incident.
+     * The Chatbot chat channel used for collaboration during an incident.
      * </p>
      * 
-     * @return The AWS Chatbot chat channel used for collaboration during an incident.
+     * @return The Chatbot chat channel used for collaboration during an incident.
      */
 
     public ChatChannel getChatChannel() {
@@ -203,11 +203,11 @@ public class GetResponsePlanResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The AWS Chatbot chat channel used for collaboration during an incident.
+     * The Chatbot chat channel used for collaboration during an incident.
      * </p>
      * 
      * @param chatChannel
-     *        The AWS Chatbot chat channel used for collaboration during an incident.
+     *        The Chatbot chat channel used for collaboration during an incident.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -368,11 +368,11 @@ public class GetResponsePlanResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The short format name of the response plan. Can't contain spaces.
+     * The short format name of the response plan. The name can't contain spaces.
      * </p>
      * 
      * @param name
-     *        The short format name of the response plan. Can't contain spaces.
+     *        The short format name of the response plan. The name can't contain spaces.
      */
 
     public void setName(String name) {
@@ -381,10 +381,10 @@ public class GetResponsePlanResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The short format name of the response plan. Can't contain spaces.
+     * The short format name of the response plan. The name can't contain spaces.
      * </p>
      * 
-     * @return The short format name of the response plan. Can't contain spaces.
+     * @return The short format name of the response plan. The name can't contain spaces.
      */
 
     public String getName() {
@@ -393,11 +393,11 @@ public class GetResponsePlanResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * The short format name of the response plan. Can't contain spaces.
+     * The short format name of the response plan. The name can't contain spaces.
      * </p>
      * 
      * @param name
-     *        The short format name of the response plan. Can't contain spaces.
+     *        The short format name of the response plan. The name can't contain spaces.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

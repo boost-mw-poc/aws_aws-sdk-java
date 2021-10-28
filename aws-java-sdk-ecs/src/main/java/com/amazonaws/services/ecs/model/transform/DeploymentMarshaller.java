@@ -52,6 +52,8 @@ public class DeploymentMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("launchType").build();
     private static final MarshallingInfo<String> PLATFORMVERSION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("platformVersion").build();
+    private static final MarshallingInfo<String> PLATFORMFAMILY_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("platformFamily").build();
     private static final MarshallingInfo<StructuredPojo> NETWORKCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("networkConfiguration").build();
     private static final MarshallingInfo<String> ROLLOUTSTATE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
@@ -87,6 +89,7 @@ public class DeploymentMarshaller {
             protocolMarshaller.marshall(deployment.getCapacityProviderStrategy(), CAPACITYPROVIDERSTRATEGY_BINDING);
             protocolMarshaller.marshall(deployment.getLaunchType(), LAUNCHTYPE_BINDING);
             protocolMarshaller.marshall(deployment.getPlatformVersion(), PLATFORMVERSION_BINDING);
+            protocolMarshaller.marshall(deployment.getPlatformFamily(), PLATFORMFAMILY_BINDING);
             protocolMarshaller.marshall(deployment.getNetworkConfiguration(), NETWORKCONFIGURATION_BINDING);
             protocolMarshaller.marshall(deployment.getRolloutState(), ROLLOUTSTATE_BINDING);
             protocolMarshaller.marshall(deployment.getRolloutStateReason(), ROLLOUTSTATEREASON_BINDING);

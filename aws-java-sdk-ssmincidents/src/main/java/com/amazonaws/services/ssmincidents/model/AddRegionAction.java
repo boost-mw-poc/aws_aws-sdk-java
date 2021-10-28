@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Defines the Region and KMS key to add to the replication set.
+ * Defines the Amazon Web Services Region and KMS key to add to the replication set.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-incidents-2018-05-10/AddRegionAction" target="_top">AWS API
@@ -30,7 +30,7 @@ public class AddRegionAction implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The Region name to add to the replication set.
+     * The Amazon Web Services Region name to add to the replication set.
      * </p>
      */
     private String regionName;
@@ -43,11 +43,11 @@ public class AddRegionAction implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The Region name to add to the replication set.
+     * The Amazon Web Services Region name to add to the replication set.
      * </p>
      * 
      * @param regionName
-     *        The Region name to add to the replication set.
+     *        The Amazon Web Services Region name to add to the replication set.
      */
 
     public void setRegionName(String regionName) {
@@ -56,10 +56,10 @@ public class AddRegionAction implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The Region name to add to the replication set.
+     * The Amazon Web Services Region name to add to the replication set.
      * </p>
      * 
-     * @return The Region name to add to the replication set.
+     * @return The Amazon Web Services Region name to add to the replication set.
      */
 
     public String getRegionName() {
@@ -68,11 +68,11 @@ public class AddRegionAction implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The Region name to add to the replication set.
+     * The Amazon Web Services Region name to add to the replication set.
      * </p>
      * 
      * @param regionName
-     *        The Region name to add to the replication set.
+     *        The Amazon Web Services Region name to add to the replication set.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

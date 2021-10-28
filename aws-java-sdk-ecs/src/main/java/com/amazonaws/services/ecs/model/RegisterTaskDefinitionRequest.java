@@ -373,11 +373,34 @@ public class RegisterTaskDefinitionRequest extends com.amazonaws.AmazonWebServic
      * </p>
      * <note>
      * <p>
-     * This parameter is only supported for tasks hosted on Fargate using platform version <code>1.4.0</code> or later.
+     * This parameter is only supported for tasks hosted on Fargate using the following platform versions:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Linux platform version <code>1.4.0</code> or later.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Windows platform version <code>1.0.0</code> or later.
+     * </p>
+     * </li>
+     * </ul>
      * </note>
      */
     private EphemeralStorage ephemeralStorage;
+    /**
+     * <p>
+     * The operating system that your tasks definitions run on. A platform family is specified only for tasks using the
+     * Fargate launch type.
+     * </p>
+     * <p>
+     * When you specify a task definition in a service, this value must match the <code>runtimePlatform</code> value of
+     * the service.
+     * </p>
+     */
+    private RuntimePlatform runtimePlatform;
 
     /**
      * <p>
@@ -3263,8 +3286,20 @@ public class RegisterTaskDefinitionRequest extends com.amazonaws.AmazonWebServic
      * </p>
      * <note>
      * <p>
-     * This parameter is only supported for tasks hosted on Fargate using platform version <code>1.4.0</code> or later.
+     * This parameter is only supported for tasks hosted on Fargate using the following platform versions:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Linux platform version <code>1.4.0</code> or later.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Windows platform version <code>1.0.0</code> or later.
+     * </p>
+     * </li>
+     * </ul>
      * </note>
      * 
      * @param ephemeralStorage
@@ -3274,9 +3309,20 @@ public class RegisterTaskDefinitionRequest extends com.amazonaws.AmazonWebServic
      *        href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/using_data_volumes.html">Fargate task
      *        storage</a> in the <i>Amazon ECS User Guide for Fargate</i>.</p> <note>
      *        <p>
-     *        This parameter is only supported for tasks hosted on Fargate using platform version <code>1.4.0</code> or
-     *        later.
+     *        This parameter is only supported for tasks hosted on Fargate using the following platform versions:
      *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        Linux platform version <code>1.4.0</code> or later.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Windows platform version <code>1.0.0</code> or later.
+     *        </p>
+     *        </li>
+     *        </ul>
      */
 
     public void setEphemeralStorage(EphemeralStorage ephemeralStorage) {
@@ -3292,8 +3338,20 @@ public class RegisterTaskDefinitionRequest extends com.amazonaws.AmazonWebServic
      * </p>
      * <note>
      * <p>
-     * This parameter is only supported for tasks hosted on Fargate using platform version <code>1.4.0</code> or later.
+     * This parameter is only supported for tasks hosted on Fargate using the following platform versions:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Linux platform version <code>1.4.0</code> or later.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Windows platform version <code>1.0.0</code> or later.
+     * </p>
+     * </li>
+     * </ul>
      * </note>
      * 
      * @return The amount of ephemeral storage to allocate for the task. This parameter is used to expand the total
@@ -3302,9 +3360,20 @@ public class RegisterTaskDefinitionRequest extends com.amazonaws.AmazonWebServic
      *         href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/using_data_volumes.html">Fargate task
      *         storage</a> in the <i>Amazon ECS User Guide for Fargate</i>.</p> <note>
      *         <p>
-     *         This parameter is only supported for tasks hosted on Fargate using platform version <code>1.4.0</code> or
-     *         later.
+     *         This parameter is only supported for tasks hosted on Fargate using the following platform versions:
      *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         Linux platform version <code>1.4.0</code> or later.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Windows platform version <code>1.0.0</code> or later.
+     *         </p>
+     *         </li>
+     *         </ul>
      */
 
     public EphemeralStorage getEphemeralStorage() {
@@ -3320,8 +3389,20 @@ public class RegisterTaskDefinitionRequest extends com.amazonaws.AmazonWebServic
      * </p>
      * <note>
      * <p>
-     * This parameter is only supported for tasks hosted on Fargate using platform version <code>1.4.0</code> or later.
+     * This parameter is only supported for tasks hosted on Fargate using the following platform versions:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Linux platform version <code>1.4.0</code> or later.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Windows platform version <code>1.0.0</code> or later.
+     * </p>
+     * </li>
+     * </ul>
      * </note>
      * 
      * @param ephemeralStorage
@@ -3331,14 +3412,92 @@ public class RegisterTaskDefinitionRequest extends com.amazonaws.AmazonWebServic
      *        href="https://docs.aws.amazon.com/AmazonECS/latest/userguide/using_data_volumes.html">Fargate task
      *        storage</a> in the <i>Amazon ECS User Guide for Fargate</i>.</p> <note>
      *        <p>
-     *        This parameter is only supported for tasks hosted on Fargate using platform version <code>1.4.0</code> or
-     *        later.
+     *        This parameter is only supported for tasks hosted on Fargate using the following platform versions:
      *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        Linux platform version <code>1.4.0</code> or later.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Windows platform version <code>1.0.0</code> or later.
+     *        </p>
+     *        </li>
+     *        </ul>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public RegisterTaskDefinitionRequest withEphemeralStorage(EphemeralStorage ephemeralStorage) {
         setEphemeralStorage(ephemeralStorage);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The operating system that your tasks definitions run on. A platform family is specified only for tasks using the
+     * Fargate launch type.
+     * </p>
+     * <p>
+     * When you specify a task definition in a service, this value must match the <code>runtimePlatform</code> value of
+     * the service.
+     * </p>
+     * 
+     * @param runtimePlatform
+     *        The operating system that your tasks definitions run on. A platform family is specified only for tasks
+     *        using the Fargate launch type. </p>
+     *        <p>
+     *        When you specify a task definition in a service, this value must match the <code>runtimePlatform</code>
+     *        value of the service.
+     */
+
+    public void setRuntimePlatform(RuntimePlatform runtimePlatform) {
+        this.runtimePlatform = runtimePlatform;
+    }
+
+    /**
+     * <p>
+     * The operating system that your tasks definitions run on. A platform family is specified only for tasks using the
+     * Fargate launch type.
+     * </p>
+     * <p>
+     * When you specify a task definition in a service, this value must match the <code>runtimePlatform</code> value of
+     * the service.
+     * </p>
+     * 
+     * @return The operating system that your tasks definitions run on. A platform family is specified only for tasks
+     *         using the Fargate launch type. </p>
+     *         <p>
+     *         When you specify a task definition in a service, this value must match the <code>runtimePlatform</code>
+     *         value of the service.
+     */
+
+    public RuntimePlatform getRuntimePlatform() {
+        return this.runtimePlatform;
+    }
+
+    /**
+     * <p>
+     * The operating system that your tasks definitions run on. A platform family is specified only for tasks using the
+     * Fargate launch type.
+     * </p>
+     * <p>
+     * When you specify a task definition in a service, this value must match the <code>runtimePlatform</code> value of
+     * the service.
+     * </p>
+     * 
+     * @param runtimePlatform
+     *        The operating system that your tasks definitions run on. A platform family is specified only for tasks
+     *        using the Fargate launch type. </p>
+     *        <p>
+     *        When you specify a task definition in a service, this value must match the <code>runtimePlatform</code>
+     *        value of the service.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RegisterTaskDefinitionRequest withRuntimePlatform(RuntimePlatform runtimePlatform) {
+        setRuntimePlatform(runtimePlatform);
         return this;
     }
 
@@ -3385,7 +3544,9 @@ public class RegisterTaskDefinitionRequest extends com.amazonaws.AmazonWebServic
         if (getInferenceAccelerators() != null)
             sb.append("InferenceAccelerators: ").append(getInferenceAccelerators()).append(",");
         if (getEphemeralStorage() != null)
-            sb.append("EphemeralStorage: ").append(getEphemeralStorage());
+            sb.append("EphemeralStorage: ").append(getEphemeralStorage()).append(",");
+        if (getRuntimePlatform() != null)
+            sb.append("RuntimePlatform: ").append(getRuntimePlatform());
         sb.append("}");
         return sb.toString();
     }
@@ -3464,6 +3625,10 @@ public class RegisterTaskDefinitionRequest extends com.amazonaws.AmazonWebServic
             return false;
         if (other.getEphemeralStorage() != null && other.getEphemeralStorage().equals(this.getEphemeralStorage()) == false)
             return false;
+        if (other.getRuntimePlatform() == null ^ this.getRuntimePlatform() == null)
+            return false;
+        if (other.getRuntimePlatform() != null && other.getRuntimePlatform().equals(this.getRuntimePlatform()) == false)
+            return false;
         return true;
     }
 
@@ -3488,6 +3653,7 @@ public class RegisterTaskDefinitionRequest extends com.amazonaws.AmazonWebServic
         hashCode = prime * hashCode + ((getProxyConfiguration() == null) ? 0 : getProxyConfiguration().hashCode());
         hashCode = prime * hashCode + ((getInferenceAccelerators() == null) ? 0 : getInferenceAccelerators().hashCode());
         hashCode = prime * hashCode + ((getEphemeralStorage() == null) ? 0 : getEphemeralStorage().hashCode());
+        hashCode = prime * hashCode + ((getRuntimePlatform() == null) ? 0 : getRuntimePlatform().hashCode());
         return hashCode;
     }
 

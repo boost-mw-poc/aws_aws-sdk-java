@@ -117,6 +117,17 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
     private String platformVersion;
     /**
      * <p>
+     * The operating system that your tasks in the service are running on. A platform family is specified only for tasks
+     * using the Fargate launch type.
+     * </p>
+     * <p>
+     * All tasks that run as part of this service must use the same <code>platformFamily</code> value as the service,
+     * for example, <code>LINUX</code>.
+     * </p>
+     */
+    private String platformFamily;
+    /**
+     * <p>
      * The task definition to use for tasks in the service. This value is specified when the service is created with
      * <a>CreateService</a>, and it can be modified with <a>UpdateService</a>.
      * </p>
@@ -1009,6 +1020,73 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
 
     public Service withPlatformVersion(String platformVersion) {
         setPlatformVersion(platformVersion);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The operating system that your tasks in the service are running on. A platform family is specified only for tasks
+     * using the Fargate launch type.
+     * </p>
+     * <p>
+     * All tasks that run as part of this service must use the same <code>platformFamily</code> value as the service,
+     * for example, <code>LINUX</code>.
+     * </p>
+     * 
+     * @param platformFamily
+     *        The operating system that your tasks in the service are running on. A platform family is specified only
+     *        for tasks using the Fargate launch type. </p>
+     *        <p>
+     *        All tasks that run as part of this service must use the same <code>platformFamily</code> value as the
+     *        service, for example, <code>LINUX</code>.
+     */
+
+    public void setPlatformFamily(String platformFamily) {
+        this.platformFamily = platformFamily;
+    }
+
+    /**
+     * <p>
+     * The operating system that your tasks in the service are running on. A platform family is specified only for tasks
+     * using the Fargate launch type.
+     * </p>
+     * <p>
+     * All tasks that run as part of this service must use the same <code>platformFamily</code> value as the service,
+     * for example, <code>LINUX</code>.
+     * </p>
+     * 
+     * @return The operating system that your tasks in the service are running on. A platform family is specified only
+     *         for tasks using the Fargate launch type. </p>
+     *         <p>
+     *         All tasks that run as part of this service must use the same <code>platformFamily</code> value as the
+     *         service, for example, <code>LINUX</code>.
+     */
+
+    public String getPlatformFamily() {
+        return this.platformFamily;
+    }
+
+    /**
+     * <p>
+     * The operating system that your tasks in the service are running on. A platform family is specified only for tasks
+     * using the Fargate launch type.
+     * </p>
+     * <p>
+     * All tasks that run as part of this service must use the same <code>platformFamily</code> value as the service,
+     * for example, <code>LINUX</code>.
+     * </p>
+     * 
+     * @param platformFamily
+     *        The operating system that your tasks in the service are running on. A platform family is specified only
+     *        for tasks using the Fargate launch type. </p>
+     *        <p>
+     *        All tasks that run as part of this service must use the same <code>platformFamily</code> value as the
+     *        service, for example, <code>LINUX</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Service withPlatformFamily(String platformFamily) {
+        setPlatformFamily(platformFamily);
         return this;
     }
 
@@ -2665,6 +2743,8 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
             sb.append("CapacityProviderStrategy: ").append(getCapacityProviderStrategy()).append(",");
         if (getPlatformVersion() != null)
             sb.append("PlatformVersion: ").append(getPlatformVersion()).append(",");
+        if (getPlatformFamily() != null)
+            sb.append("PlatformFamily: ").append(getPlatformFamily()).append(",");
         if (getTaskDefinition() != null)
             sb.append("TaskDefinition: ").append(getTaskDefinition()).append(",");
         if (getDeploymentConfiguration() != null)
@@ -2763,6 +2843,10 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getPlatformVersion() != null && other.getPlatformVersion().equals(this.getPlatformVersion()) == false)
             return false;
+        if (other.getPlatformFamily() == null ^ this.getPlatformFamily() == null)
+            return false;
+        if (other.getPlatformFamily() != null && other.getPlatformFamily().equals(this.getPlatformFamily()) == false)
+            return false;
         if (other.getTaskDefinition() == null ^ this.getTaskDefinition() == null)
             return false;
         if (other.getTaskDefinition() != null && other.getTaskDefinition().equals(this.getTaskDefinition()) == false)
@@ -2856,6 +2940,7 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getLaunchType() == null) ? 0 : getLaunchType().hashCode());
         hashCode = prime * hashCode + ((getCapacityProviderStrategy() == null) ? 0 : getCapacityProviderStrategy().hashCode());
         hashCode = prime * hashCode + ((getPlatformVersion() == null) ? 0 : getPlatformVersion().hashCode());
+        hashCode = prime * hashCode + ((getPlatformFamily() == null) ? 0 : getPlatformFamily().hashCode());
         hashCode = prime * hashCode + ((getTaskDefinition() == null) ? 0 : getTaskDefinition().hashCode());
         hashCode = prime * hashCode + ((getDeploymentConfiguration() == null) ? 0 : getDeploymentConfiguration().hashCode());
         hashCode = prime * hashCode + ((getTaskSets() == null) ? 0 : getTaskSets().hashCode());

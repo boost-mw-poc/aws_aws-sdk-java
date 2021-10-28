@@ -40,6 +40,10 @@ public class UserSettingsMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("KernelGatewayAppSettings").build();
     private static final MarshallingInfo<StructuredPojo> TENSORBOARDAPPSETTINGS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TensorBoardAppSettings").build();
+    private static final MarshallingInfo<StructuredPojo> RSTUDIOSERVERPROAPPSETTINGS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RStudioServerProAppSettings").build();
+    private static final MarshallingInfo<StructuredPojo> RSESSIONAPPSETTINGS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RSessionAppSettings").build();
 
     private static final UserSettingsMarshaller instance = new UserSettingsMarshaller();
 
@@ -63,6 +67,8 @@ public class UserSettingsMarshaller {
             protocolMarshaller.marshall(userSettings.getJupyterServerAppSettings(), JUPYTERSERVERAPPSETTINGS_BINDING);
             protocolMarshaller.marshall(userSettings.getKernelGatewayAppSettings(), KERNELGATEWAYAPPSETTINGS_BINDING);
             protocolMarshaller.marshall(userSettings.getTensorBoardAppSettings(), TENSORBOARDAPPSETTINGS_BINDING);
+            protocolMarshaller.marshall(userSettings.getRStudioServerProAppSettings(), RSTUDIOSERVERPROAPPSETTINGS_BINDING);
+            protocolMarshaller.marshall(userSettings.getRSessionAppSettings(), RSESSIONAPPSETTINGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

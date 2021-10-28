@@ -75,8 +75,20 @@ public class TaskOverride implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <note>
      * <p>
-     * This parameter is only supported for tasks hosted on Fargate using platform version <code>1.4.0</code> or later.
+     * This parameter is only supported for tasks hosted on Fargate using the following platform versions:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Linux platform version <code>1.4.0</code> or later.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Windows platform version <code>1.0.0</code> or later.
+     * </p>
+     * </li>
+     * </ul>
      * </note>
      */
     private EphemeralStorage ephemeralStorage;
@@ -426,16 +438,39 @@ public class TaskOverride implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <note>
      * <p>
-     * This parameter is only supported for tasks hosted on Fargate using platform version <code>1.4.0</code> or later.
+     * This parameter is only supported for tasks hosted on Fargate using the following platform versions:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Linux platform version <code>1.4.0</code> or later.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Windows platform version <code>1.0.0</code> or later.
+     * </p>
+     * </li>
+     * </ul>
      * </note>
      * 
      * @param ephemeralStorage
      *        The ephemeral storage setting override for the task.</p> <note>
      *        <p>
-     *        This parameter is only supported for tasks hosted on Fargate using platform version <code>1.4.0</code> or
-     *        later.
+     *        This parameter is only supported for tasks hosted on Fargate using the following platform versions:
      *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        Linux platform version <code>1.4.0</code> or later.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Windows platform version <code>1.0.0</code> or later.
+     *        </p>
+     *        </li>
+     *        </ul>
      */
 
     public void setEphemeralStorage(EphemeralStorage ephemeralStorage) {
@@ -448,15 +483,38 @@ public class TaskOverride implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <note>
      * <p>
-     * This parameter is only supported for tasks hosted on Fargate using platform version <code>1.4.0</code> or later.
+     * This parameter is only supported for tasks hosted on Fargate using the following platform versions:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Linux platform version <code>1.4.0</code> or later.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Windows platform version <code>1.0.0</code> or later.
+     * </p>
+     * </li>
+     * </ul>
      * </note>
      * 
      * @return The ephemeral storage setting override for the task.</p> <note>
      *         <p>
-     *         This parameter is only supported for tasks hosted on Fargate using platform version <code>1.4.0</code> or
-     *         later.
+     *         This parameter is only supported for tasks hosted on Fargate using the following platform versions:
      *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         Linux platform version <code>1.4.0</code> or later.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Windows platform version <code>1.0.0</code> or later.
+     *         </p>
+     *         </li>
+     *         </ul>
      */
 
     public EphemeralStorage getEphemeralStorage() {
@@ -469,16 +527,39 @@ public class TaskOverride implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * <note>
      * <p>
-     * This parameter is only supported for tasks hosted on Fargate using platform version <code>1.4.0</code> or later.
+     * This parameter is only supported for tasks hosted on Fargate using the following platform versions:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Linux platform version <code>1.4.0</code> or later.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Windows platform version <code>1.0.0</code> or later.
+     * </p>
+     * </li>
+     * </ul>
      * </note>
      * 
      * @param ephemeralStorage
      *        The ephemeral storage setting override for the task.</p> <note>
      *        <p>
-     *        This parameter is only supported for tasks hosted on Fargate using platform version <code>1.4.0</code> or
-     *        later.
+     *        This parameter is only supported for tasks hosted on Fargate using the following platform versions:
      *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        Linux platform version <code>1.4.0</code> or later.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Windows platform version <code>1.0.0</code> or later.
+     *        </p>
+     *        </li>
+     *        </ul>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

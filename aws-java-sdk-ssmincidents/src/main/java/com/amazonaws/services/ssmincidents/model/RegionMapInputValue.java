@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The mapping between a Region and the key that's used to encrypt the data.
+ * The mapping between a Amazon Web Services Region and the key that's used to encrypt the data.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-incidents-2018-05-10/RegionMapInputValue" target="_top">AWS

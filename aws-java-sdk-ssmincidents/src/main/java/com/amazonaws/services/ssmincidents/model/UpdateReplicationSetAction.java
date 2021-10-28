@@ -30,24 +30,24 @@ public class UpdateReplicationSetAction implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * Details about the Region that you're adding to the replication set.
+     * Details about the Amazon Web Services Region that you're adding to the replication set.
      * </p>
      */
     private AddRegionAction addRegionAction;
     /**
      * <p>
-     * Details about the Region that you're deleting to the replication set.
+     * Details about the Amazon Web Services Region that you're deleting to the replication set.
      * </p>
      */
     private DeleteRegionAction deleteRegionAction;
 
     /**
      * <p>
-     * Details about the Region that you're adding to the replication set.
+     * Details about the Amazon Web Services Region that you're adding to the replication set.
      * </p>
      * 
      * @param addRegionAction
-     *        Details about the Region that you're adding to the replication set.
+     *        Details about the Amazon Web Services Region that you're adding to the replication set.
      */
 
     public void setAddRegionAction(AddRegionAction addRegionAction) {
@@ -56,10 +56,10 @@ public class UpdateReplicationSetAction implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * Details about the Region that you're adding to the replication set.
+     * Details about the Amazon Web Services Region that you're adding to the replication set.
      * </p>
      * 
-     * @return Details about the Region that you're adding to the replication set.
+     * @return Details about the Amazon Web Services Region that you're adding to the replication set.
      */
 
     public AddRegionAction getAddRegionAction() {
@@ -68,11 +68,11 @@ public class UpdateReplicationSetAction implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * Details about the Region that you're adding to the replication set.
+     * Details about the Amazon Web Services Region that you're adding to the replication set.
      * </p>
      * 
      * @param addRegionAction
-     *        Details about the Region that you're adding to the replication set.
+     *        Details about the Amazon Web Services Region that you're adding to the replication set.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -83,11 +83,11 @@ public class UpdateReplicationSetAction implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * Details about the Region that you're deleting to the replication set.
+     * Details about the Amazon Web Services Region that you're deleting to the replication set.
      * </p>
      * 
      * @param deleteRegionAction
-     *        Details about the Region that you're deleting to the replication set.
+     *        Details about the Amazon Web Services Region that you're deleting to the replication set.
      */
 
     public void setDeleteRegionAction(DeleteRegionAction deleteRegionAction) {
@@ -96,10 +96,10 @@ public class UpdateReplicationSetAction implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * Details about the Region that you're deleting to the replication set.
+     * Details about the Amazon Web Services Region that you're deleting to the replication set.
      * </p>
      * 
-     * @return Details about the Region that you're deleting to the replication set.
+     * @return Details about the Amazon Web Services Region that you're deleting to the replication set.
      */
 
     public DeleteRegionAction getDeleteRegionAction() {
@@ -108,11 +108,11 @@ public class UpdateReplicationSetAction implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * Details about the Region that you're deleting to the replication set.
+     * Details about the Amazon Web Services Region that you're deleting to the replication set.
      * </p>
      * 
      * @param deleteRegionAction
-     *        Details about the Region that you're deleting to the replication set.
+     *        Details about the Amazon Web Services Region that you're deleting to the replication set.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

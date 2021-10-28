@@ -52,6 +52,8 @@ public class ServiceMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("capacityProviderStrategy").build();
     private static final MarshallingInfo<String> PLATFORMVERSION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("platformVersion").build();
+    private static final MarshallingInfo<String> PLATFORMFAMILY_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("platformFamily").build();
     private static final MarshallingInfo<String> TASKDEFINITION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("taskDefinition").build();
     private static final MarshallingInfo<StructuredPojo> DEPLOYMENTCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
@@ -117,6 +119,7 @@ public class ServiceMarshaller {
             protocolMarshaller.marshall(service.getLaunchType(), LAUNCHTYPE_BINDING);
             protocolMarshaller.marshall(service.getCapacityProviderStrategy(), CAPACITYPROVIDERSTRATEGY_BINDING);
             protocolMarshaller.marshall(service.getPlatformVersion(), PLATFORMVERSION_BINDING);
+            protocolMarshaller.marshall(service.getPlatformFamily(), PLATFORMFAMILY_BINDING);
             protocolMarshaller.marshall(service.getTaskDefinition(), TASKDEFINITION_BINDING);
             protocolMarshaller.marshall(service.getDeploymentConfiguration(), DEPLOYMENTCONFIGURATION_BINDING);
             protocolMarshaller.marshall(service.getTaskSets(), TASKSETS_BINDING);

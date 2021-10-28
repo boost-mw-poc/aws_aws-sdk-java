@@ -72,6 +72,8 @@ public class TaskMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("overrides").build();
     private static final MarshallingInfo<String> PLATFORMVERSION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("platformVersion").build();
+    private static final MarshallingInfo<String> PLATFORMFAMILY_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("platformFamily").build();
     private static final MarshallingInfo<java.util.Date> PULLSTARTEDAT_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("pullStartedAt").timestampFormat("unixTimestamp").build();
     private static final MarshallingInfo<java.util.Date> PULLSTOPPEDAT_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
@@ -137,6 +139,7 @@ public class TaskMarshaller {
             protocolMarshaller.marshall(task.getMemory(), MEMORY_BINDING);
             protocolMarshaller.marshall(task.getOverrides(), OVERRIDES_BINDING);
             protocolMarshaller.marshall(task.getPlatformVersion(), PLATFORMVERSION_BINDING);
+            protocolMarshaller.marshall(task.getPlatformFamily(), PLATFORMFAMILY_BINDING);
             protocolMarshaller.marshall(task.getPullStartedAt(), PULLSTARTEDAT_BINDING);
             protocolMarshaller.marshall(task.getPullStoppedAt(), PULLSTOPPEDAT_BINDING);
             protocolMarshaller.marshall(task.getStartedAt(), STARTEDAT_BINDING);

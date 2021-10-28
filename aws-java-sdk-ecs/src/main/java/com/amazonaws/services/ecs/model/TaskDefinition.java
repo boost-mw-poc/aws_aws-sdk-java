@@ -192,6 +192,17 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
     private com.amazonaws.internal.SdkInternalList<String> compatibilities;
     /**
      * <p>
+     * The operating system that your task definitions are running on. A platform family is specified only for tasks
+     * using the Fargate launch type.
+     * </p>
+     * <p>
+     * When you specify a task in a service, this value must match the <code>runtimePlatform</code> value of the
+     * service.
+     * </p>
+     */
+    private RuntimePlatform runtimePlatform;
+    /**
+     * <p>
      * The task launch types the task definition was validated against. To determine which task launch types the task
      * definition is validated for, see the <a>TaskDefinition$compatibilities</a> parameter.
      * </p>
@@ -1843,6 +1854,73 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
         } else {
             getCompatibilities().addAll(compatibilitiesCopy);
         }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The operating system that your task definitions are running on. A platform family is specified only for tasks
+     * using the Fargate launch type.
+     * </p>
+     * <p>
+     * When you specify a task in a service, this value must match the <code>runtimePlatform</code> value of the
+     * service.
+     * </p>
+     * 
+     * @param runtimePlatform
+     *        The operating system that your task definitions are running on. A platform family is specified only for
+     *        tasks using the Fargate launch type. </p>
+     *        <p>
+     *        When you specify a task in a service, this value must match the <code>runtimePlatform</code> value of the
+     *        service.
+     */
+
+    public void setRuntimePlatform(RuntimePlatform runtimePlatform) {
+        this.runtimePlatform = runtimePlatform;
+    }
+
+    /**
+     * <p>
+     * The operating system that your task definitions are running on. A platform family is specified only for tasks
+     * using the Fargate launch type.
+     * </p>
+     * <p>
+     * When you specify a task in a service, this value must match the <code>runtimePlatform</code> value of the
+     * service.
+     * </p>
+     * 
+     * @return The operating system that your task definitions are running on. A platform family is specified only for
+     *         tasks using the Fargate launch type. </p>
+     *         <p>
+     *         When you specify a task in a service, this value must match the <code>runtimePlatform</code> value of the
+     *         service.
+     */
+
+    public RuntimePlatform getRuntimePlatform() {
+        return this.runtimePlatform;
+    }
+
+    /**
+     * <p>
+     * The operating system that your task definitions are running on. A platform family is specified only for tasks
+     * using the Fargate launch type.
+     * </p>
+     * <p>
+     * When you specify a task in a service, this value must match the <code>runtimePlatform</code> value of the
+     * service.
+     * </p>
+     * 
+     * @param runtimePlatform
+     *        The operating system that your task definitions are running on. A platform family is specified only for
+     *        tasks using the Fargate launch type. </p>
+     *        <p>
+     *        When you specify a task in a service, this value must match the <code>runtimePlatform</code> value of the
+     *        service.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public TaskDefinition withRuntimePlatform(RuntimePlatform runtimePlatform) {
+        setRuntimePlatform(runtimePlatform);
         return this;
     }
 
@@ -3518,6 +3596,8 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
             sb.append("PlacementConstraints: ").append(getPlacementConstraints()).append(",");
         if (getCompatibilities() != null)
             sb.append("Compatibilities: ").append(getCompatibilities()).append(",");
+        if (getRuntimePlatform() != null)
+            sb.append("RuntimePlatform: ").append(getRuntimePlatform()).append(",");
         if (getRequiresCompatibilities() != null)
             sb.append("RequiresCompatibilities: ").append(getRequiresCompatibilities()).append(",");
         if (getCpu() != null)
@@ -3602,6 +3682,10 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getCompatibilities() != null && other.getCompatibilities().equals(this.getCompatibilities()) == false)
             return false;
+        if (other.getRuntimePlatform() == null ^ this.getRuntimePlatform() == null)
+            return false;
+        if (other.getRuntimePlatform() != null && other.getRuntimePlatform().equals(this.getRuntimePlatform()) == false)
+            return false;
         if (other.getRequiresCompatibilities() == null ^ this.getRequiresCompatibilities() == null)
             return false;
         if (other.getRequiresCompatibilities() != null && other.getRequiresCompatibilities().equals(this.getRequiresCompatibilities()) == false)
@@ -3666,6 +3750,7 @@ public class TaskDefinition implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getRequiresAttributes() == null) ? 0 : getRequiresAttributes().hashCode());
         hashCode = prime * hashCode + ((getPlacementConstraints() == null) ? 0 : getPlacementConstraints().hashCode());
         hashCode = prime * hashCode + ((getCompatibilities() == null) ? 0 : getCompatibilities().hashCode());
+        hashCode = prime * hashCode + ((getRuntimePlatform() == null) ? 0 : getRuntimePlatform().hashCode());
         hashCode = prime * hashCode + ((getRequiresCompatibilities() == null) ? 0 : getRequiresCompatibilities().hashCode());
         hashCode = prime * hashCode + ((getCpu() == null) ? 0 : getCpu().hashCode());
         hashCode = prime * hashCode + ((getMemory() == null) ? 0 : getMemory().hashCode());

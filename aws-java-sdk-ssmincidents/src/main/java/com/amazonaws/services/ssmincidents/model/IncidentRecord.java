@@ -54,7 +54,8 @@ public class IncidentRecord implements Serializable, Cloneable, StructuredPojo {
     private java.util.Date creationTime;
     /**
      * <p>
-     * The string Incident Manager uses to prevent duplicate incidents from being created by the same incident.
+     * The string Incident Manager uses to prevent duplicate incidents from being created by the same incident in the
+     * same account.
      * </p>
      */
     private String dedupeString;
@@ -84,7 +85,7 @@ public class IncidentRecord implements Serializable, Cloneable, StructuredPojo {
     private java.util.Date lastModifiedTime;
     /**
      * <p>
-     * The SNS targets that are notified when updates are made to an incident.
+     * The Amazon SNS targets that are notified when updates are made to an incident.
      * </p>
      */
     private java.util.List<NotificationTargetItem> notificationTargets;
@@ -102,8 +103,8 @@ public class IncidentRecord implements Serializable, Cloneable, StructuredPojo {
     private String status;
     /**
      * <p>
-     * The summary of the incident. The summary is a brief synopsis of what occurred, what is currently happening, and
-     * context.
+     * The summary of the incident. The summary is a brief synopsis of what occurred, what's currently happening, and
+     * context of the incident.
      * </p>
      */
     private String summary;
@@ -306,11 +307,13 @@ public class IncidentRecord implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The string Incident Manager uses to prevent duplicate incidents from being created by the same incident.
+     * The string Incident Manager uses to prevent duplicate incidents from being created by the same incident in the
+     * same account.
      * </p>
      * 
      * @param dedupeString
-     *        The string Incident Manager uses to prevent duplicate incidents from being created by the same incident.
+     *        The string Incident Manager uses to prevent duplicate incidents from being created by the same incident in
+     *        the same account.
      */
 
     public void setDedupeString(String dedupeString) {
@@ -319,10 +322,12 @@ public class IncidentRecord implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The string Incident Manager uses to prevent duplicate incidents from being created by the same incident.
+     * The string Incident Manager uses to prevent duplicate incidents from being created by the same incident in the
+     * same account.
      * </p>
      * 
-     * @return The string Incident Manager uses to prevent duplicate incidents from being created by the same incident.
+     * @return The string Incident Manager uses to prevent duplicate incidents from being created by the same incident
+     *         in the same account.
      */
 
     public String getDedupeString() {
@@ -331,11 +336,13 @@ public class IncidentRecord implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The string Incident Manager uses to prevent duplicate incidents from being created by the same incident.
+     * The string Incident Manager uses to prevent duplicate incidents from being created by the same incident in the
+     * same account.
      * </p>
      * 
      * @param dedupeString
-     *        The string Incident Manager uses to prevent duplicate incidents from being created by the same incident.
+     *        The string Incident Manager uses to prevent duplicate incidents from being created by the same incident in
+     *        the same account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -506,10 +513,10 @@ public class IncidentRecord implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The SNS targets that are notified when updates are made to an incident.
+     * The Amazon SNS targets that are notified when updates are made to an incident.
      * </p>
      * 
-     * @return The SNS targets that are notified when updates are made to an incident.
+     * @return The Amazon SNS targets that are notified when updates are made to an incident.
      */
 
     public java.util.List<NotificationTargetItem> getNotificationTargets() {
@@ -518,11 +525,11 @@ public class IncidentRecord implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The SNS targets that are notified when updates are made to an incident.
+     * The Amazon SNS targets that are notified when updates are made to an incident.
      * </p>
      * 
      * @param notificationTargets
-     *        The SNS targets that are notified when updates are made to an incident.
+     *        The Amazon SNS targets that are notified when updates are made to an incident.
      */
 
     public void setNotificationTargets(java.util.Collection<NotificationTargetItem> notificationTargets) {
@@ -536,7 +543,7 @@ public class IncidentRecord implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The SNS targets that are notified when updates are made to an incident.
+     * The Amazon SNS targets that are notified when updates are made to an incident.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -545,7 +552,7 @@ public class IncidentRecord implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param notificationTargets
-     *        The SNS targets that are notified when updates are made to an incident.
+     *        The Amazon SNS targets that are notified when updates are made to an incident.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -561,11 +568,11 @@ public class IncidentRecord implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The SNS targets that are notified when updates are made to an incident.
+     * The Amazon SNS targets that are notified when updates are made to an incident.
      * </p>
      * 
      * @param notificationTargets
-     *        The SNS targets that are notified when updates are made to an incident.
+     *        The Amazon SNS targets that are notified when updates are made to an incident.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -675,13 +682,13 @@ public class IncidentRecord implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The summary of the incident. The summary is a brief synopsis of what occurred, what is currently happening, and
-     * context.
+     * The summary of the incident. The summary is a brief synopsis of what occurred, what's currently happening, and
+     * context of the incident.
      * </p>
      * 
      * @param summary
-     *        The summary of the incident. The summary is a brief synopsis of what occurred, what is currently
-     *        happening, and context.
+     *        The summary of the incident. The summary is a brief synopsis of what occurred, what's currently happening,
+     *        and context of the incident.
      */
 
     public void setSummary(String summary) {
@@ -690,12 +697,12 @@ public class IncidentRecord implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The summary of the incident. The summary is a brief synopsis of what occurred, what is currently happening, and
-     * context.
+     * The summary of the incident. The summary is a brief synopsis of what occurred, what's currently happening, and
+     * context of the incident.
      * </p>
      * 
-     * @return The summary of the incident. The summary is a brief synopsis of what occurred, what is currently
-     *         happening, and context.
+     * @return The summary of the incident. The summary is a brief synopsis of what occurred, what's currently
+     *         happening, and context of the incident.
      */
 
     public String getSummary() {
@@ -704,13 +711,13 @@ public class IncidentRecord implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The summary of the incident. The summary is a brief synopsis of what occurred, what is currently happening, and
-     * context.
+     * The summary of the incident. The summary is a brief synopsis of what occurred, what's currently happening, and
+     * context of the incident.
      * </p>
      * 
      * @param summary
-     *        The summary of the incident. The summary is a brief synopsis of what occurred, what is currently
-     *        happening, and context.
+     *        The summary of the incident. The summary is a brief synopsis of what occurred, what's currently happening,
+     *        and context of the incident.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

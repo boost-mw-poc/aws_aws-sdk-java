@@ -30,15 +30,16 @@ public class TriggerDetails implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Raw data passed from either EventBridge, CloudWatch, or Incident Manager when an incident is created.
+     * Raw data passed from either Amazon EventBridge, Amazon CloudWatch, or Incident Manager when an incident is
+     * created.
      * </p>
      */
     private String rawData;
     /**
      * <p>
-     * Identifies the service that sourced the event. All events sourced from within AWS begin with "aws."
-     * Customer-generated events can have any value here, as long as it doesn't begin with "aws." We recommend the use
-     * of Java package-name style reverse domain-name strings.
+     * Identifies the service that sourced the event. All events sourced from within Amazon Web Services begin with "
+     * <code>aws.</code>" Customer-generated events can have any value here, as long as it doesn't begin with "
+     * <code>aws.</code>" We recommend the use of Java package-name style reverse domain-name strings.
      * </p>
      */
     private String source;
@@ -50,18 +51,20 @@ public class TriggerDetails implements Serializable, Cloneable, StructuredPojo {
     private java.util.Date timestamp;
     /**
      * <p>
-     * The ARN of the source that detected the incident.
+     * The Amazon Resource Name (ARN) of the source that detected the incident.
      * </p>
      */
     private String triggerArn;
 
     /**
      * <p>
-     * Raw data passed from either EventBridge, CloudWatch, or Incident Manager when an incident is created.
+     * Raw data passed from either Amazon EventBridge, Amazon CloudWatch, or Incident Manager when an incident is
+     * created.
      * </p>
      * 
      * @param rawData
-     *        Raw data passed from either EventBridge, CloudWatch, or Incident Manager when an incident is created.
+     *        Raw data passed from either Amazon EventBridge, Amazon CloudWatch, or Incident Manager when an incident is
+     *        created.
      */
 
     public void setRawData(String rawData) {
@@ -70,10 +73,12 @@ public class TriggerDetails implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Raw data passed from either EventBridge, CloudWatch, or Incident Manager when an incident is created.
+     * Raw data passed from either Amazon EventBridge, Amazon CloudWatch, or Incident Manager when an incident is
+     * created.
      * </p>
      * 
-     * @return Raw data passed from either EventBridge, CloudWatch, or Incident Manager when an incident is created.
+     * @return Raw data passed from either Amazon EventBridge, Amazon CloudWatch, or Incident Manager when an incident
+     *         is created.
      */
 
     public String getRawData() {
@@ -82,11 +87,13 @@ public class TriggerDetails implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Raw data passed from either EventBridge, CloudWatch, or Incident Manager when an incident is created.
+     * Raw data passed from either Amazon EventBridge, Amazon CloudWatch, or Incident Manager when an incident is
+     * created.
      * </p>
      * 
      * @param rawData
-     *        Raw data passed from either EventBridge, CloudWatch, or Incident Manager when an incident is created.
+     *        Raw data passed from either Amazon EventBridge, Amazon CloudWatch, or Incident Manager when an incident is
+     *        created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -97,15 +104,16 @@ public class TriggerDetails implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Identifies the service that sourced the event. All events sourced from within AWS begin with "aws."
-     * Customer-generated events can have any value here, as long as it doesn't begin with "aws." We recommend the use
-     * of Java package-name style reverse domain-name strings.
+     * Identifies the service that sourced the event. All events sourced from within Amazon Web Services begin with "
+     * <code>aws.</code>" Customer-generated events can have any value here, as long as it doesn't begin with "
+     * <code>aws.</code>" We recommend the use of Java package-name style reverse domain-name strings.
      * </p>
      * 
      * @param source
-     *        Identifies the service that sourced the event. All events sourced from within AWS begin with "aws."
-     *        Customer-generated events can have any value here, as long as it doesn't begin with "aws." We recommend
-     *        the use of Java package-name style reverse domain-name strings.
+     *        Identifies the service that sourced the event. All events sourced from within Amazon Web Services begin
+     *        with "<code>aws.</code>
+     *        " Customer-generated events can have any value here, as long as it doesn't begin with "<code>aws.</code>"
+     *        We recommend the use of Java package-name style reverse domain-name strings.
      */
 
     public void setSource(String source) {
@@ -114,14 +122,15 @@ public class TriggerDetails implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Identifies the service that sourced the event. All events sourced from within AWS begin with "aws."
-     * Customer-generated events can have any value here, as long as it doesn't begin with "aws." We recommend the use
-     * of Java package-name style reverse domain-name strings.
+     * Identifies the service that sourced the event. All events sourced from within Amazon Web Services begin with "
+     * <code>aws.</code>" Customer-generated events can have any value here, as long as it doesn't begin with "
+     * <code>aws.</code>" We recommend the use of Java package-name style reverse domain-name strings.
      * </p>
      * 
-     * @return Identifies the service that sourced the event. All events sourced from within AWS begin with "aws."
-     *         Customer-generated events can have any value here, as long as it doesn't begin with "aws." We recommend
-     *         the use of Java package-name style reverse domain-name strings.
+     * @return Identifies the service that sourced the event. All events sourced from within Amazon Web Services begin
+     *         with "<code>aws.</code>
+     *         " Customer-generated events can have any value here, as long as it doesn't begin with "<code>aws.</code>"
+     *         We recommend the use of Java package-name style reverse domain-name strings.
      */
 
     public String getSource() {
@@ -130,15 +139,16 @@ public class TriggerDetails implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Identifies the service that sourced the event. All events sourced from within AWS begin with "aws."
-     * Customer-generated events can have any value here, as long as it doesn't begin with "aws." We recommend the use
-     * of Java package-name style reverse domain-name strings.
+     * Identifies the service that sourced the event. All events sourced from within Amazon Web Services begin with "
+     * <code>aws.</code>" Customer-generated events can have any value here, as long as it doesn't begin with "
+     * <code>aws.</code>" We recommend the use of Java package-name style reverse domain-name strings.
      * </p>
      * 
      * @param source
-     *        Identifies the service that sourced the event. All events sourced from within AWS begin with "aws."
-     *        Customer-generated events can have any value here, as long as it doesn't begin with "aws." We recommend
-     *        the use of Java package-name style reverse domain-name strings.
+     *        Identifies the service that sourced the event. All events sourced from within Amazon Web Services begin
+     *        with "<code>aws.</code>
+     *        " Customer-generated events can have any value here, as long as it doesn't begin with "<code>aws.</code>"
+     *        We recommend the use of Java package-name style reverse domain-name strings.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -189,11 +199,11 @@ public class TriggerDetails implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ARN of the source that detected the incident.
+     * The Amazon Resource Name (ARN) of the source that detected the incident.
      * </p>
      * 
      * @param triggerArn
-     *        The ARN of the source that detected the incident.
+     *        The Amazon Resource Name (ARN) of the source that detected the incident.
      */
 
     public void setTriggerArn(String triggerArn) {
@@ -202,10 +212,10 @@ public class TriggerDetails implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ARN of the source that detected the incident.
+     * The Amazon Resource Name (ARN) of the source that detected the incident.
      * </p>
      * 
-     * @return The ARN of the source that detected the incident.
+     * @return The Amazon Resource Name (ARN) of the source that detected the incident.
      */
 
     public String getTriggerArn() {
@@ -214,11 +224,11 @@ public class TriggerDetails implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ARN of the source that detected the incident.
+     * The Amazon Resource Name (ARN) of the source that detected the incident.
      * </p>
      * 
      * @param triggerArn
-     *        The ARN of the source that detected the incident.
+     *        The Amazon Resource Name (ARN) of the source that detected the incident.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

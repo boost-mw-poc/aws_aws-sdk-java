@@ -19,7 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The set of Regions that your Incident Manager data will be replicated to and the KMS key used to encrypt the data.
+ * The set of Amazon Web Services Region that your Incident Manager data will be replicated to and the KMS key used to
+ * encrypt the data.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-incidents-2018-05-10/ReplicationSet" target="_top">AWS API
@@ -49,7 +50,7 @@ public class ReplicationSet implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * Determines if the replication set deletion protection is enabled or not. If deletion protection is enabled, you
-     * can't delete the last Region in the replication set.
+     * can't delete the last Amazon Web Services Region in the replication set.
      * </p>
      */
     private Boolean deletionProtected;
@@ -67,8 +68,8 @@ public class ReplicationSet implements Serializable, Cloneable, StructuredPojo {
     private java.util.Date lastModifiedTime;
     /**
      * <p>
-     * The map between each Region in your replication set and the KMS key that is used to encrypt the data in that
-     * Region.
+     * The map between each Amazon Web Services Region in your replication set and the KMS key that's used to encrypt
+     * the data in that Region.
      * </p>
      */
     private java.util.Map<String, RegionInfo> regionMap;
@@ -203,12 +204,12 @@ public class ReplicationSet implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * Determines if the replication set deletion protection is enabled or not. If deletion protection is enabled, you
-     * can't delete the last Region in the replication set.
+     * can't delete the last Amazon Web Services Region in the replication set.
      * </p>
      * 
      * @param deletionProtected
      *        Determines if the replication set deletion protection is enabled or not. If deletion protection is
-     *        enabled, you can't delete the last Region in the replication set.
+     *        enabled, you can't delete the last Amazon Web Services Region in the replication set.
      */
 
     public void setDeletionProtected(Boolean deletionProtected) {
@@ -218,11 +219,11 @@ public class ReplicationSet implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * Determines if the replication set deletion protection is enabled or not. If deletion protection is enabled, you
-     * can't delete the last Region in the replication set.
+     * can't delete the last Amazon Web Services Region in the replication set.
      * </p>
      * 
      * @return Determines if the replication set deletion protection is enabled or not. If deletion protection is
-     *         enabled, you can't delete the last Region in the replication set.
+     *         enabled, you can't delete the last Amazon Web Services Region in the replication set.
      */
 
     public Boolean getDeletionProtected() {
@@ -232,12 +233,12 @@ public class ReplicationSet implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * Determines if the replication set deletion protection is enabled or not. If deletion protection is enabled, you
-     * can't delete the last Region in the replication set.
+     * can't delete the last Amazon Web Services Region in the replication set.
      * </p>
      * 
      * @param deletionProtected
      *        Determines if the replication set deletion protection is enabled or not. If deletion protection is
-     *        enabled, you can't delete the last Region in the replication set.
+     *        enabled, you can't delete the last Amazon Web Services Region in the replication set.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -249,11 +250,11 @@ public class ReplicationSet implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * Determines if the replication set deletion protection is enabled or not. If deletion protection is enabled, you
-     * can't delete the last Region in the replication set.
+     * can't delete the last Amazon Web Services Region in the replication set.
      * </p>
      * 
      * @return Determines if the replication set deletion protection is enabled or not. If deletion protection is
-     *         enabled, you can't delete the last Region in the replication set.
+     *         enabled, you can't delete the last Amazon Web Services Region in the replication set.
      */
 
     public Boolean isDeletionProtected() {
@@ -342,12 +343,12 @@ public class ReplicationSet implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The map between each Region in your replication set and the KMS key that is used to encrypt the data in that
-     * Region.
+     * The map between each Amazon Web Services Region in your replication set and the KMS key that's used to encrypt
+     * the data in that Region.
      * </p>
      * 
-     * @return The map between each Region in your replication set and the KMS key that is used to encrypt the data in
-     *         that Region.
+     * @return The map between each Amazon Web Services Region in your replication set and the KMS key that's used to
+     *         encrypt the data in that Region.
      */
 
     public java.util.Map<String, RegionInfo> getRegionMap() {
@@ -356,13 +357,13 @@ public class ReplicationSet implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The map between each Region in your replication set and the KMS key that is used to encrypt the data in that
-     * Region.
+     * The map between each Amazon Web Services Region in your replication set and the KMS key that's used to encrypt
+     * the data in that Region.
      * </p>
      * 
      * @param regionMap
-     *        The map between each Region in your replication set and the KMS key that is used to encrypt the data in
-     *        that Region.
+     *        The map between each Amazon Web Services Region in your replication set and the KMS key that's used to
+     *        encrypt the data in that Region.
      */
 
     public void setRegionMap(java.util.Map<String, RegionInfo> regionMap) {
@@ -371,13 +372,13 @@ public class ReplicationSet implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The map between each Region in your replication set and the KMS key that is used to encrypt the data in that
-     * Region.
+     * The map between each Amazon Web Services Region in your replication set and the KMS key that's used to encrypt
+     * the data in that Region.
      * </p>
      * 
      * @param regionMap
-     *        The map between each Region in your replication set and the KMS key that is used to encrypt the data in
-     *        that Region.
+     *        The map between each Amazon Web Services Region in your replication set and the KMS key that's used to
+     *        encrypt the data in that Region.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

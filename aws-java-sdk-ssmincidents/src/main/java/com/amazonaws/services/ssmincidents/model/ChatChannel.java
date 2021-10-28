@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The AWS Chatbot chat channel used for collaboration during an incident.
+ * The Chatbot chat channel used for collaboration during an incident.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-incidents-2018-05-10/ChatChannel" target="_top">AWS API
@@ -30,8 +30,8 @@ public class ChatChannel implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The SNS targets that AWS Chatbot uses to notify the chat channel of updates to an incident. You can also make
-     * updates to the incident through the chat channel by using the SNS topics.
+     * The Amazon SNS targets that Chatbot uses to notify the chat channel of updates to an incident. You can also make
+     * updates to the incident through the chat channel by using the Amazon SNS topics.
      * </p>
      */
     private java.util.List<String> chatbotSns;
@@ -44,12 +44,12 @@ public class ChatChannel implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The SNS targets that AWS Chatbot uses to notify the chat channel of updates to an incident. You can also make
-     * updates to the incident through the chat channel by using the SNS topics.
+     * The Amazon SNS targets that Chatbot uses to notify the chat channel of updates to an incident. You can also make
+     * updates to the incident through the chat channel by using the Amazon SNS topics.
      * </p>
      * 
-     * @return The SNS targets that AWS Chatbot uses to notify the chat channel of updates to an incident. You can also
-     *         make updates to the incident through the chat channel by using the SNS topics.
+     * @return The Amazon SNS targets that Chatbot uses to notify the chat channel of updates to an incident. You can
+     *         also make updates to the incident through the chat channel by using the Amazon SNS topics.
      */
 
     public java.util.List<String> getChatbotSns() {
@@ -58,13 +58,13 @@ public class ChatChannel implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The SNS targets that AWS Chatbot uses to notify the chat channel of updates to an incident. You can also make
-     * updates to the incident through the chat channel by using the SNS topics.
+     * The Amazon SNS targets that Chatbot uses to notify the chat channel of updates to an incident. You can also make
+     * updates to the incident through the chat channel by using the Amazon SNS topics.
      * </p>
      * 
      * @param chatbotSns
-     *        The SNS targets that AWS Chatbot uses to notify the chat channel of updates to an incident. You can also
-     *        make updates to the incident through the chat channel by using the SNS topics.
+     *        The Amazon SNS targets that Chatbot uses to notify the chat channel of updates to an incident. You can
+     *        also make updates to the incident through the chat channel by using the Amazon SNS topics.
      */
 
     public void setChatbotSns(java.util.Collection<String> chatbotSns) {
@@ -78,8 +78,8 @@ public class ChatChannel implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The SNS targets that AWS Chatbot uses to notify the chat channel of updates to an incident. You can also make
-     * updates to the incident through the chat channel by using the SNS topics.
+     * The Amazon SNS targets that Chatbot uses to notify the chat channel of updates to an incident. You can also make
+     * updates to the incident through the chat channel by using the Amazon SNS topics.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -88,8 +88,8 @@ public class ChatChannel implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param chatbotSns
-     *        The SNS targets that AWS Chatbot uses to notify the chat channel of updates to an incident. You can also
-     *        make updates to the incident through the chat channel by using the SNS topics.
+     *        The Amazon SNS targets that Chatbot uses to notify the chat channel of updates to an incident. You can
+     *        also make updates to the incident through the chat channel by using the Amazon SNS topics.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -105,13 +105,13 @@ public class ChatChannel implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The SNS targets that AWS Chatbot uses to notify the chat channel of updates to an incident. You can also make
-     * updates to the incident through the chat channel by using the SNS topics.
+     * The Amazon SNS targets that Chatbot uses to notify the chat channel of updates to an incident. You can also make
+     * updates to the incident through the chat channel by using the Amazon SNS topics.
      * </p>
      * 
      * @param chatbotSns
-     *        The SNS targets that AWS Chatbot uses to notify the chat channel of updates to an incident. You can also
-     *        make updates to the incident through the chat channel by using the SNS topics.
+     *        The Amazon SNS targets that Chatbot uses to notify the chat channel of updates to an incident. You can
+     *        also make updates to the incident through the chat channel by using the Amazon SNS topics.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

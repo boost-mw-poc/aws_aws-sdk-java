@@ -115,6 +115,10 @@ public class TaskSetJsonUnmarshaller implements Unmarshaller<TaskSet, JsonUnmars
                     context.nextToken();
                     taskSet.setPlatformVersion(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("platformFamily", targetDepth)) {
+                    context.nextToken();
+                    taskSet.setPlatformFamily(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("networkConfiguration", targetDepth)) {
                     context.nextToken();
                     taskSet.setNetworkConfiguration(NetworkConfigurationJsonUnmarshaller.getInstance().unmarshall(context));

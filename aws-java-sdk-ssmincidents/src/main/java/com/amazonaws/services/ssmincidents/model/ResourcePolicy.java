@@ -42,7 +42,7 @@ public class ResourcePolicy implements Serializable, Cloneable, StructuredPojo {
     private String policyId;
     /**
      * <p>
-     * The Region that policy allows resources to be used in.
+     * The Amazon Web Services Region that policy allows resources to be used in.
      * </p>
      */
     private String ramResourceShareRegion;
@@ -129,11 +129,11 @@ public class ResourcePolicy implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Region that policy allows resources to be used in.
+     * The Amazon Web Services Region that policy allows resources to be used in.
      * </p>
      * 
      * @param ramResourceShareRegion
-     *        The Region that policy allows resources to be used in.
+     *        The Amazon Web Services Region that policy allows resources to be used in.
      */
 
     public void setRamResourceShareRegion(String ramResourceShareRegion) {
@@ -142,10 +142,10 @@ public class ResourcePolicy implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Region that policy allows resources to be used in.
+     * The Amazon Web Services Region that policy allows resources to be used in.
      * </p>
      * 
-     * @return The Region that policy allows resources to be used in.
+     * @return The Amazon Web Services Region that policy allows resources to be used in.
      */
 
     public String getRamResourceShareRegion() {
@@ -154,11 +154,11 @@ public class ResourcePolicy implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Region that policy allows resources to be used in.
+     * The Amazon Web Services Region that policy allows resources to be used in.
      * </p>
      * 
      * @param ramResourceShareRegion
-     *        The Region that policy allows resources to be used in.
+     *        The Amazon Web Services Region that policy allows resources to be used in.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -60,6 +60,8 @@ public class TaskSetMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("capacityProviderStrategy").build();
     private static final MarshallingInfo<String> PLATFORMVERSION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("platformVersion").build();
+    private static final MarshallingInfo<String> PLATFORMFAMILY_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("platformFamily").build();
     private static final MarshallingInfo<StructuredPojo> NETWORKCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("networkConfiguration").build();
     private static final MarshallingInfo<List> LOADBALANCERS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
@@ -107,6 +109,7 @@ public class TaskSetMarshaller {
             protocolMarshaller.marshall(taskSet.getLaunchType(), LAUNCHTYPE_BINDING);
             protocolMarshaller.marshall(taskSet.getCapacityProviderStrategy(), CAPACITYPROVIDERSTRATEGY_BINDING);
             protocolMarshaller.marshall(taskSet.getPlatformVersion(), PLATFORMVERSION_BINDING);
+            protocolMarshaller.marshall(taskSet.getPlatformFamily(), PLATFORMFAMILY_BINDING);
             protocolMarshaller.marshall(taskSet.getNetworkConfiguration(), NETWORKCONFIGURATION_BINDING);
             protocolMarshaller.marshall(taskSet.getLoadBalancers(), LOADBALANCERS_BINDING);
             protocolMarshaller.marshall(taskSet.getServiceRegistries(), SERVICEREGISTRIES_BINDING);

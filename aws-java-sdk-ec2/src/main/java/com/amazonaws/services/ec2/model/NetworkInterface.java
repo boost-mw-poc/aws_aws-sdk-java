@@ -164,6 +164,15 @@ public class NetworkInterface implements Serializable, Cloneable {
      * </p>
      */
     private String vpcId;
+    /**
+     * <p>
+     * Indicates whether a network interface with an IPv6 address is unreachable from the public internet. If the value
+     * is <code>true</code>, inbound traffic from the internet is dropped and you cannot assign an elastic IP address to
+     * the network interface. The network interface is reachable from peered VPCs and resources connected through a
+     * transit gateway, including on-premises networks.
+     * </p>
+     */
+    private Boolean denyAllIgwTraffic;
 
     /**
      * <p>
@@ -1377,6 +1386,82 @@ public class NetworkInterface implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * Indicates whether a network interface with an IPv6 address is unreachable from the public internet. If the value
+     * is <code>true</code>, inbound traffic from the internet is dropped and you cannot assign an elastic IP address to
+     * the network interface. The network interface is reachable from peered VPCs and resources connected through a
+     * transit gateway, including on-premises networks.
+     * </p>
+     * 
+     * @param denyAllIgwTraffic
+     *        Indicates whether a network interface with an IPv6 address is unreachable from the public internet. If the
+     *        value is <code>true</code>, inbound traffic from the internet is dropped and you cannot assign an elastic
+     *        IP address to the network interface. The network interface is reachable from peered VPCs and resources
+     *        connected through a transit gateway, including on-premises networks.
+     */
+
+    public void setDenyAllIgwTraffic(Boolean denyAllIgwTraffic) {
+        this.denyAllIgwTraffic = denyAllIgwTraffic;
+    }
+
+    /**
+     * <p>
+     * Indicates whether a network interface with an IPv6 address is unreachable from the public internet. If the value
+     * is <code>true</code>, inbound traffic from the internet is dropped and you cannot assign an elastic IP address to
+     * the network interface. The network interface is reachable from peered VPCs and resources connected through a
+     * transit gateway, including on-premises networks.
+     * </p>
+     * 
+     * @return Indicates whether a network interface with an IPv6 address is unreachable from the public internet. If
+     *         the value is <code>true</code>, inbound traffic from the internet is dropped and you cannot assign an
+     *         elastic IP address to the network interface. The network interface is reachable from peered VPCs and
+     *         resources connected through a transit gateway, including on-premises networks.
+     */
+
+    public Boolean getDenyAllIgwTraffic() {
+        return this.denyAllIgwTraffic;
+    }
+
+    /**
+     * <p>
+     * Indicates whether a network interface with an IPv6 address is unreachable from the public internet. If the value
+     * is <code>true</code>, inbound traffic from the internet is dropped and you cannot assign an elastic IP address to
+     * the network interface. The network interface is reachable from peered VPCs and resources connected through a
+     * transit gateway, including on-premises networks.
+     * </p>
+     * 
+     * @param denyAllIgwTraffic
+     *        Indicates whether a network interface with an IPv6 address is unreachable from the public internet. If the
+     *        value is <code>true</code>, inbound traffic from the internet is dropped and you cannot assign an elastic
+     *        IP address to the network interface. The network interface is reachable from peered VPCs and resources
+     *        connected through a transit gateway, including on-premises networks.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public NetworkInterface withDenyAllIgwTraffic(Boolean denyAllIgwTraffic) {
+        setDenyAllIgwTraffic(denyAllIgwTraffic);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Indicates whether a network interface with an IPv6 address is unreachable from the public internet. If the value
+     * is <code>true</code>, inbound traffic from the internet is dropped and you cannot assign an elastic IP address to
+     * the network interface. The network interface is reachable from peered VPCs and resources connected through a
+     * transit gateway, including on-premises networks.
+     * </p>
+     * 
+     * @return Indicates whether a network interface with an IPv6 address is unreachable from the public internet. If
+     *         the value is <code>true</code>, inbound traffic from the internet is dropped and you cannot assign an
+     *         elastic IP address to the network interface. The network interface is reachable from peered VPCs and
+     *         resources connected through a transit gateway, including on-premises networks.
+     */
+
+    public Boolean isDenyAllIgwTraffic() {
+        return this.denyAllIgwTraffic;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1433,7 +1518,9 @@ public class NetworkInterface implements Serializable, Cloneable {
         if (getTagSet() != null)
             sb.append("TagSet: ").append(getTagSet()).append(",");
         if (getVpcId() != null)
-            sb.append("VpcId: ").append(getVpcId());
+            sb.append("VpcId: ").append(getVpcId()).append(",");
+        if (getDenyAllIgwTraffic() != null)
+            sb.append("DenyAllIgwTraffic: ").append(getDenyAllIgwTraffic());
         sb.append("}");
         return sb.toString();
     }
@@ -1540,6 +1627,10 @@ public class NetworkInterface implements Serializable, Cloneable {
             return false;
         if (other.getVpcId() != null && other.getVpcId().equals(this.getVpcId()) == false)
             return false;
+        if (other.getDenyAllIgwTraffic() == null ^ this.getDenyAllIgwTraffic() == null)
+            return false;
+        if (other.getDenyAllIgwTraffic() != null && other.getDenyAllIgwTraffic().equals(this.getDenyAllIgwTraffic()) == false)
+            return false;
         return true;
     }
 
@@ -1571,6 +1662,7 @@ public class NetworkInterface implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getSubnetId() == null) ? 0 : getSubnetId().hashCode());
         hashCode = prime * hashCode + ((getTagSet() == null) ? 0 : getTagSet().hashCode());
         hashCode = prime * hashCode + ((getVpcId() == null) ? 0 : getVpcId().hashCode());
+        hashCode = prime * hashCode + ((getDenyAllIgwTraffic() == null) ? 0 : getDenyAllIgwTraffic().hashCode());
         return hashCode;
     }
 

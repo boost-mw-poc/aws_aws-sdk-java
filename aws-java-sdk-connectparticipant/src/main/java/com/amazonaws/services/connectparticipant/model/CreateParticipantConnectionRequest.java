@@ -36,12 +36,18 @@ public class CreateParticipantConnectionRequest extends com.amazonaws.AmazonWebS
      * This is a header parameter.
      * </p>
      * <p>
-     * The Participant Token as obtained from <a
+     * The ParticipantToken as obtained from <a
      * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_StartChatContact.html">StartChatContact</a> API
      * response.
      * </p>
      */
     private String participantToken;
+    /**
+     * <p>
+     * Amazon Connect Participant is used to mark the participant as connected for message streaming.
+     * </p>
+     */
+    private Boolean connectParticipant;
 
     /**
      * <p>
@@ -146,7 +152,7 @@ public class CreateParticipantConnectionRequest extends com.amazonaws.AmazonWebS
      * This is a header parameter.
      * </p>
      * <p>
-     * The Participant Token as obtained from <a
+     * The ParticipantToken as obtained from <a
      * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_StartChatContact.html">StartChatContact</a> API
      * response.
      * </p>
@@ -154,7 +160,7 @@ public class CreateParticipantConnectionRequest extends com.amazonaws.AmazonWebS
      * @param participantToken
      *        This is a header parameter.</p>
      *        <p>
-     *        The Participant Token as obtained from <a
+     *        The ParticipantToken as obtained from <a
      *        href="https://docs.aws.amazon.com/connect/latest/APIReference/API_StartChatContact.html"
      *        >StartChatContact</a> API response.
      */
@@ -168,14 +174,14 @@ public class CreateParticipantConnectionRequest extends com.amazonaws.AmazonWebS
      * This is a header parameter.
      * </p>
      * <p>
-     * The Participant Token as obtained from <a
+     * The ParticipantToken as obtained from <a
      * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_StartChatContact.html">StartChatContact</a> API
      * response.
      * </p>
      * 
      * @return This is a header parameter.</p>
      *         <p>
-     *         The Participant Token as obtained from <a
+     *         The ParticipantToken as obtained from <a
      *         href="https://docs.aws.amazon.com/connect/latest/APIReference/API_StartChatContact.html"
      *         >StartChatContact</a> API response.
      */
@@ -189,7 +195,7 @@ public class CreateParticipantConnectionRequest extends com.amazonaws.AmazonWebS
      * This is a header parameter.
      * </p>
      * <p>
-     * The Participant Token as obtained from <a
+     * The ParticipantToken as obtained from <a
      * href="https://docs.aws.amazon.com/connect/latest/APIReference/API_StartChatContact.html">StartChatContact</a> API
      * response.
      * </p>
@@ -197,7 +203,7 @@ public class CreateParticipantConnectionRequest extends com.amazonaws.AmazonWebS
      * @param participantToken
      *        This is a header parameter.</p>
      *        <p>
-     *        The Participant Token as obtained from <a
+     *        The ParticipantToken as obtained from <a
      *        href="https://docs.aws.amazon.com/connect/latest/APIReference/API_StartChatContact.html"
      *        >StartChatContact</a> API response.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -206,6 +212,58 @@ public class CreateParticipantConnectionRequest extends com.amazonaws.AmazonWebS
     public CreateParticipantConnectionRequest withParticipantToken(String participantToken) {
         setParticipantToken(participantToken);
         return this;
+    }
+
+    /**
+     * <p>
+     * Amazon Connect Participant is used to mark the participant as connected for message streaming.
+     * </p>
+     * 
+     * @param connectParticipant
+     *        Amazon Connect Participant is used to mark the participant as connected for message streaming.
+     */
+
+    public void setConnectParticipant(Boolean connectParticipant) {
+        this.connectParticipant = connectParticipant;
+    }
+
+    /**
+     * <p>
+     * Amazon Connect Participant is used to mark the participant as connected for message streaming.
+     * </p>
+     * 
+     * @return Amazon Connect Participant is used to mark the participant as connected for message streaming.
+     */
+
+    public Boolean getConnectParticipant() {
+        return this.connectParticipant;
+    }
+
+    /**
+     * <p>
+     * Amazon Connect Participant is used to mark the participant as connected for message streaming.
+     * </p>
+     * 
+     * @param connectParticipant
+     *        Amazon Connect Participant is used to mark the participant as connected for message streaming.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateParticipantConnectionRequest withConnectParticipant(Boolean connectParticipant) {
+        setConnectParticipant(connectParticipant);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Amazon Connect Participant is used to mark the participant as connected for message streaming.
+     * </p>
+     * 
+     * @return Amazon Connect Participant is used to mark the participant as connected for message streaming.
+     */
+
+    public Boolean isConnectParticipant() {
+        return this.connectParticipant;
     }
 
     /**
@@ -223,7 +281,9 @@ public class CreateParticipantConnectionRequest extends com.amazonaws.AmazonWebS
         if (getType() != null)
             sb.append("Type: ").append(getType()).append(",");
         if (getParticipantToken() != null)
-            sb.append("ParticipantToken: ").append(getParticipantToken());
+            sb.append("ParticipantToken: ").append(getParticipantToken()).append(",");
+        if (getConnectParticipant() != null)
+            sb.append("ConnectParticipant: ").append(getConnectParticipant());
         sb.append("}");
         return sb.toString();
     }
@@ -246,6 +306,10 @@ public class CreateParticipantConnectionRequest extends com.amazonaws.AmazonWebS
             return false;
         if (other.getParticipantToken() != null && other.getParticipantToken().equals(this.getParticipantToken()) == false)
             return false;
+        if (other.getConnectParticipant() == null ^ this.getConnectParticipant() == null)
+            return false;
+        if (other.getConnectParticipant() != null && other.getConnectParticipant().equals(this.getConnectParticipant()) == false)
+            return false;
         return true;
     }
 
@@ -256,6 +320,7 @@ public class CreateParticipantConnectionRequest extends com.amazonaws.AmazonWebS
 
         hashCode = prime * hashCode + ((getType() == null) ? 0 : getType().hashCode());
         hashCode = prime * hashCode + ((getParticipantToken() == null) ? 0 : getParticipantToken().hashCode());
+        hashCode = prime * hashCode + ((getConnectParticipant() == null) ? 0 : getConnectParticipant().hashCode());
         return hashCode;
     }
 

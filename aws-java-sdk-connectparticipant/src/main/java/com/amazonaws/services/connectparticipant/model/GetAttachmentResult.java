@@ -25,7 +25,9 @@ public class GetAttachmentResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The pre-signed URL using which file would be downloaded from Amazon S3 by the API caller.
+     * This is the pre-signed URL that can be used for uploading the file to Amazon S3 when used in response to <a
+     * href="https://docs.aws.amazon.com/connect-participant/latest/APIReference/API_StartAttachmentUpload.html"
+     * >StartAttachmentUpload</a>.
      * </p>
      */
     private String url;
@@ -39,11 +41,16 @@ public class GetAttachmentResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The pre-signed URL using which file would be downloaded from Amazon S3 by the API caller.
+     * This is the pre-signed URL that can be used for uploading the file to Amazon S3 when used in response to <a
+     * href="https://docs.aws.amazon.com/connect-participant/latest/APIReference/API_StartAttachmentUpload.html"
+     * >StartAttachmentUpload</a>.
      * </p>
      * 
      * @param url
-     *        The pre-signed URL using which file would be downloaded from Amazon S3 by the API caller.
+     *        This is the pre-signed URL that can be used for uploading the file to Amazon S3 when used in response to
+     *        <a href=
+     *        "https://docs.aws.amazon.com/connect-participant/latest/APIReference/API_StartAttachmentUpload.html"
+     *        >StartAttachmentUpload</a>.
      */
 
     public void setUrl(String url) {
@@ -52,10 +59,15 @@ public class GetAttachmentResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The pre-signed URL using which file would be downloaded from Amazon S3 by the API caller.
+     * This is the pre-signed URL that can be used for uploading the file to Amazon S3 when used in response to <a
+     * href="https://docs.aws.amazon.com/connect-participant/latest/APIReference/API_StartAttachmentUpload.html"
+     * >StartAttachmentUpload</a>.
      * </p>
      * 
-     * @return The pre-signed URL using which file would be downloaded from Amazon S3 by the API caller.
+     * @return This is the pre-signed URL that can be used for uploading the file to Amazon S3 when used in response to
+     *         <a href=
+     *         "https://docs.aws.amazon.com/connect-participant/latest/APIReference/API_StartAttachmentUpload.html"
+     *         >StartAttachmentUpload</a>.
      */
 
     public String getUrl() {
@@ -64,11 +76,16 @@ public class GetAttachmentResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The pre-signed URL using which file would be downloaded from Amazon S3 by the API caller.
+     * This is the pre-signed URL that can be used for uploading the file to Amazon S3 when used in response to <a
+     * href="https://docs.aws.amazon.com/connect-participant/latest/APIReference/API_StartAttachmentUpload.html"
+     * >StartAttachmentUpload</a>.
      * </p>
      * 
      * @param url
-     *        The pre-signed URL using which file would be downloaded from Amazon S3 by the API caller.
+     *        This is the pre-signed URL that can be used for uploading the file to Amazon S3 when used in response to
+     *        <a href=
+     *        "https://docs.aws.amazon.com/connect-participant/latest/APIReference/API_StartAttachmentUpload.html"
+     *        >StartAttachmentUpload</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

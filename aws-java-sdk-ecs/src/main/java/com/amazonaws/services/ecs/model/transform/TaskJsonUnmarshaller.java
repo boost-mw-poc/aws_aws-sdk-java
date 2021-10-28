@@ -144,6 +144,10 @@ public class TaskJsonUnmarshaller implements Unmarshaller<Task, JsonUnmarshaller
                     context.nextToken();
                     task.setPlatformVersion(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("platformFamily", targetDepth)) {
+                    context.nextToken();
+                    task.setPlatformFamily(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("pullStartedAt", targetDepth)) {
                     context.nextToken();
                     task.setPullStartedAt(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));

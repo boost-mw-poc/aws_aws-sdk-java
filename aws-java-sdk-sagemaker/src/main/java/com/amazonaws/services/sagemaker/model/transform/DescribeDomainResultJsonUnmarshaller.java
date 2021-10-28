@@ -118,6 +118,18 @@ public class DescribeDomainResultJsonUnmarshaller implements Unmarshaller<Descri
                     context.nextToken();
                     describeDomainResult.setKmsKeyId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("DomainSettings", targetDepth)) {
+                    context.nextToken();
+                    describeDomainResult.setDomainSettings(DomainSettingsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("AppSecurityGroupManagement", targetDepth)) {
+                    context.nextToken();
+                    describeDomainResult.setAppSecurityGroupManagement(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("SecurityGroupIdForDomainBoundary", targetDepth)) {
+                    context.nextToken();
+                    describeDomainResult.setSecurityGroupIdForDomainBoundary(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

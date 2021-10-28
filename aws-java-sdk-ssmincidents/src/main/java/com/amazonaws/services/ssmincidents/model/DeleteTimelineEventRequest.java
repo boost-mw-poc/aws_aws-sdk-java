@@ -33,7 +33,7 @@ public class DeleteTimelineEventRequest extends com.amazonaws.AmazonWebServiceRe
     private String eventId;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the incident that the event is part of.
+     * The Amazon Resource Name (ARN) of the incident that includes the timeline event.
      * </p>
      */
     private String incidentRecordArn;
@@ -80,11 +80,11 @@ public class DeleteTimelineEventRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the incident that the event is part of.
+     * The Amazon Resource Name (ARN) of the incident that includes the timeline event.
      * </p>
      * 
      * @param incidentRecordArn
-     *        The Amazon Resource Name (ARN) of the incident that the event is part of.
+     *        The Amazon Resource Name (ARN) of the incident that includes the timeline event.
      */
 
     public void setIncidentRecordArn(String incidentRecordArn) {
@@ -93,10 +93,10 @@ public class DeleteTimelineEventRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the incident that the event is part of.
+     * The Amazon Resource Name (ARN) of the incident that includes the timeline event.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the incident that the event is part of.
+     * @return The Amazon Resource Name (ARN) of the incident that includes the timeline event.
      */
 
     public String getIncidentRecordArn() {
@@ -105,11 +105,11 @@ public class DeleteTimelineEventRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the incident that the event is part of.
+     * The Amazon Resource Name (ARN) of the incident that includes the timeline event.
      * </p>
      * 
      * @param incidentRecordArn
-     *        The Amazon Resource Name (ARN) of the incident that the event is part of.
+     *        The Amazon Resource Name (ARN) of the incident that includes the timeline event.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

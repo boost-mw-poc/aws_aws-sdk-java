@@ -39,7 +39,7 @@ public class UpdateResponsePlanRequest extends com.amazonaws.AmazonWebServiceReq
     private String arn;
     /**
      * <p>
-     * The AWS Chatbot chat channel used for collaboration during an incident.
+     * The Chatbot chat channel used for collaboration during an incident.
      * </p>
      * <p>
      * Use the empty structure to remove the chat channel from the response plan.
@@ -48,13 +48,13 @@ public class UpdateResponsePlanRequest extends com.amazonaws.AmazonWebServiceReq
     private ChatChannel chatChannel;
     /**
      * <p>
-     * A token ensuring that the action is called only once with the specified details.
+     * A token ensuring that the operation is called only once with the specified details.
      * </p>
      */
     private String clientToken;
     /**
      * <p>
-     * The long format name of the response plan. Can't contain spaces.
+     * The long format name of the response plan. The display name can't contain spaces.
      * </p>
      */
     private String displayName;
@@ -66,7 +66,8 @@ public class UpdateResponsePlanRequest extends com.amazonaws.AmazonWebServiceReq
     private java.util.List<String> engagements;
     /**
      * <p>
-     * Used to create only one incident record for an incident.
+     * The string Incident Manager uses to prevent duplicate incidents from being created by the same incident in the
+     * same account.
      * </p>
      */
     private String incidentTemplateDedupeString;
@@ -108,7 +109,7 @@ public class UpdateResponsePlanRequest extends com.amazonaws.AmazonWebServiceReq
     private Integer incidentTemplateImpact;
     /**
      * <p>
-     * The SNS targets that are notified when updates are made to an incident.
+     * The Amazon SNS targets that are notified when updates are made to an incident.
      * </p>
      */
     private java.util.List<NotificationTargetItem> incidentTemplateNotificationTargets;
@@ -121,7 +122,7 @@ public class UpdateResponsePlanRequest extends com.amazonaws.AmazonWebServiceReq
     private String incidentTemplateSummary;
     /**
      * <p>
-     * The short format name of the incident. Can't contain spaces.
+     * The short format name of the incident. The title can't contain spaces.
      * </p>
      */
     private String incidentTemplateTitle;
@@ -238,14 +239,14 @@ public class UpdateResponsePlanRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The AWS Chatbot chat channel used for collaboration during an incident.
+     * The Chatbot chat channel used for collaboration during an incident.
      * </p>
      * <p>
      * Use the empty structure to remove the chat channel from the response plan.
      * </p>
      * 
      * @param chatChannel
-     *        The AWS Chatbot chat channel used for collaboration during an incident.</p>
+     *        The Chatbot chat channel used for collaboration during an incident.</p>
      *        <p>
      *        Use the empty structure to remove the chat channel from the response plan.
      */
@@ -256,13 +257,13 @@ public class UpdateResponsePlanRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The AWS Chatbot chat channel used for collaboration during an incident.
+     * The Chatbot chat channel used for collaboration during an incident.
      * </p>
      * <p>
      * Use the empty structure to remove the chat channel from the response plan.
      * </p>
      * 
-     * @return The AWS Chatbot chat channel used for collaboration during an incident.</p>
+     * @return The Chatbot chat channel used for collaboration during an incident.</p>
      *         <p>
      *         Use the empty structure to remove the chat channel from the response plan.
      */
@@ -273,14 +274,14 @@ public class UpdateResponsePlanRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The AWS Chatbot chat channel used for collaboration during an incident.
+     * The Chatbot chat channel used for collaboration during an incident.
      * </p>
      * <p>
      * Use the empty structure to remove the chat channel from the response plan.
      * </p>
      * 
      * @param chatChannel
-     *        The AWS Chatbot chat channel used for collaboration during an incident.</p>
+     *        The Chatbot chat channel used for collaboration during an incident.</p>
      *        <p>
      *        Use the empty structure to remove the chat channel from the response plan.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -293,11 +294,11 @@ public class UpdateResponsePlanRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * A token ensuring that the action is called only once with the specified details.
+     * A token ensuring that the operation is called only once with the specified details.
      * </p>
      * 
      * @param clientToken
-     *        A token ensuring that the action is called only once with the specified details.
+     *        A token ensuring that the operation is called only once with the specified details.
      */
 
     public void setClientToken(String clientToken) {
@@ -306,10 +307,10 @@ public class UpdateResponsePlanRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * A token ensuring that the action is called only once with the specified details.
+     * A token ensuring that the operation is called only once with the specified details.
      * </p>
      * 
-     * @return A token ensuring that the action is called only once with the specified details.
+     * @return A token ensuring that the operation is called only once with the specified details.
      */
 
     public String getClientToken() {
@@ -318,11 +319,11 @@ public class UpdateResponsePlanRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * A token ensuring that the action is called only once with the specified details.
+     * A token ensuring that the operation is called only once with the specified details.
      * </p>
      * 
      * @param clientToken
-     *        A token ensuring that the action is called only once with the specified details.
+     *        A token ensuring that the operation is called only once with the specified details.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -333,11 +334,11 @@ public class UpdateResponsePlanRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The long format name of the response plan. Can't contain spaces.
+     * The long format name of the response plan. The display name can't contain spaces.
      * </p>
      * 
      * @param displayName
-     *        The long format name of the response plan. Can't contain spaces.
+     *        The long format name of the response plan. The display name can't contain spaces.
      */
 
     public void setDisplayName(String displayName) {
@@ -346,10 +347,10 @@ public class UpdateResponsePlanRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The long format name of the response plan. Can't contain spaces.
+     * The long format name of the response plan. The display name can't contain spaces.
      * </p>
      * 
-     * @return The long format name of the response plan. Can't contain spaces.
+     * @return The long format name of the response plan. The display name can't contain spaces.
      */
 
     public String getDisplayName() {
@@ -358,11 +359,11 @@ public class UpdateResponsePlanRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The long format name of the response plan. Can't contain spaces.
+     * The long format name of the response plan. The display name can't contain spaces.
      * </p>
      * 
      * @param displayName
-     *        The long format name of the response plan. Can't contain spaces.
+     *        The long format name of the response plan. The display name can't contain spaces.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -443,11 +444,13 @@ public class UpdateResponsePlanRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * Used to create only one incident record for an incident.
+     * The string Incident Manager uses to prevent duplicate incidents from being created by the same incident in the
+     * same account.
      * </p>
      * 
      * @param incidentTemplateDedupeString
-     *        Used to create only one incident record for an incident.
+     *        The string Incident Manager uses to prevent duplicate incidents from being created by the same incident in
+     *        the same account.
      */
 
     public void setIncidentTemplateDedupeString(String incidentTemplateDedupeString) {
@@ -456,10 +459,12 @@ public class UpdateResponsePlanRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * Used to create only one incident record for an incident.
+     * The string Incident Manager uses to prevent duplicate incidents from being created by the same incident in the
+     * same account.
      * </p>
      * 
-     * @return Used to create only one incident record for an incident.
+     * @return The string Incident Manager uses to prevent duplicate incidents from being created by the same incident
+     *         in the same account.
      */
 
     public String getIncidentTemplateDedupeString() {
@@ -468,11 +473,13 @@ public class UpdateResponsePlanRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * Used to create only one incident record for an incident.
+     * The string Incident Manager uses to prevent duplicate incidents from being created by the same incident in the
+     * same account.
      * </p>
      * 
      * @param incidentTemplateDedupeString
-     *        Used to create only one incident record for an incident.
+     *        The string Incident Manager uses to prevent duplicate incidents from being created by the same incident in
+     *        the same account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -703,10 +710,10 @@ public class UpdateResponsePlanRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The SNS targets that are notified when updates are made to an incident.
+     * The Amazon SNS targets that are notified when updates are made to an incident.
      * </p>
      * 
-     * @return The SNS targets that are notified when updates are made to an incident.
+     * @return The Amazon SNS targets that are notified when updates are made to an incident.
      */
 
     public java.util.List<NotificationTargetItem> getIncidentTemplateNotificationTargets() {
@@ -715,11 +722,11 @@ public class UpdateResponsePlanRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The SNS targets that are notified when updates are made to an incident.
+     * The Amazon SNS targets that are notified when updates are made to an incident.
      * </p>
      * 
      * @param incidentTemplateNotificationTargets
-     *        The SNS targets that are notified when updates are made to an incident.
+     *        The Amazon SNS targets that are notified when updates are made to an incident.
      */
 
     public void setIncidentTemplateNotificationTargets(java.util.Collection<NotificationTargetItem> incidentTemplateNotificationTargets) {
@@ -733,7 +740,7 @@ public class UpdateResponsePlanRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The SNS targets that are notified when updates are made to an incident.
+     * The Amazon SNS targets that are notified when updates are made to an incident.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -743,7 +750,7 @@ public class UpdateResponsePlanRequest extends com.amazonaws.AmazonWebServiceReq
      * </p>
      * 
      * @param incidentTemplateNotificationTargets
-     *        The SNS targets that are notified when updates are made to an incident.
+     *        The Amazon SNS targets that are notified when updates are made to an incident.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -759,11 +766,11 @@ public class UpdateResponsePlanRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The SNS targets that are notified when updates are made to an incident.
+     * The Amazon SNS targets that are notified when updates are made to an incident.
      * </p>
      * 
      * @param incidentTemplateNotificationTargets
-     *        The SNS targets that are notified when updates are made to an incident.
+     *        The Amazon SNS targets that are notified when updates are made to an incident.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -820,11 +827,11 @@ public class UpdateResponsePlanRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The short format name of the incident. Can't contain spaces.
+     * The short format name of the incident. The title can't contain spaces.
      * </p>
      * 
      * @param incidentTemplateTitle
-     *        The short format name of the incident. Can't contain spaces.
+     *        The short format name of the incident. The title can't contain spaces.
      */
 
     public void setIncidentTemplateTitle(String incidentTemplateTitle) {
@@ -833,10 +840,10 @@ public class UpdateResponsePlanRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The short format name of the incident. Can't contain spaces.
+     * The short format name of the incident. The title can't contain spaces.
      * </p>
      * 
-     * @return The short format name of the incident. Can't contain spaces.
+     * @return The short format name of the incident. The title can't contain spaces.
      */
 
     public String getIncidentTemplateTitle() {
@@ -845,11 +852,11 @@ public class UpdateResponsePlanRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The short format name of the incident. Can't contain spaces.
+     * The short format name of the incident. The title can't contain spaces.
      * </p>
      * 
      * @param incidentTemplateTitle
-     *        The short format name of the incident. Can't contain spaces.
+     *        The short format name of the incident. The title can't contain spaces.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

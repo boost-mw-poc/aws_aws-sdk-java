@@ -104,6 +104,20 @@ public class CreateDomainRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </p>
      */
     private String kmsKeyId;
+    /**
+     * <p>
+     * The entity that creates and manages the required security groups for inter-app communication in
+     * <code>VPCOnly</code> mode. Required when <code>CreateDomain.AppNetworkAccessType</code> is <code>VPCOnly</code>
+     * and <code>DomainSettings.RStudioServerProDomainSettings.DomainExecutionRoleArn</code> is provided.
+     * </p>
+     */
+    private String appSecurityGroupManagement;
+    /**
+     * <p>
+     * A collection of <code>Domain</code> settings.
+     * </p>
+     */
+    private DomainSettings domainSettings;
 
     /**
      * <p>
@@ -731,6 +745,125 @@ public class CreateDomainRequest extends com.amazonaws.AmazonWebServiceRequest i
     }
 
     /**
+     * <p>
+     * The entity that creates and manages the required security groups for inter-app communication in
+     * <code>VPCOnly</code> mode. Required when <code>CreateDomain.AppNetworkAccessType</code> is <code>VPCOnly</code>
+     * and <code>DomainSettings.RStudioServerProDomainSettings.DomainExecutionRoleArn</code> is provided.
+     * </p>
+     * 
+     * @param appSecurityGroupManagement
+     *        The entity that creates and manages the required security groups for inter-app communication in
+     *        <code>VPCOnly</code> mode. Required when <code>CreateDomain.AppNetworkAccessType</code> is
+     *        <code>VPCOnly</code> and <code>DomainSettings.RStudioServerProDomainSettings.DomainExecutionRoleArn</code>
+     *        is provided.
+     * @see AppSecurityGroupManagement
+     */
+
+    public void setAppSecurityGroupManagement(String appSecurityGroupManagement) {
+        this.appSecurityGroupManagement = appSecurityGroupManagement;
+    }
+
+    /**
+     * <p>
+     * The entity that creates and manages the required security groups for inter-app communication in
+     * <code>VPCOnly</code> mode. Required when <code>CreateDomain.AppNetworkAccessType</code> is <code>VPCOnly</code>
+     * and <code>DomainSettings.RStudioServerProDomainSettings.DomainExecutionRoleArn</code> is provided.
+     * </p>
+     * 
+     * @return The entity that creates and manages the required security groups for inter-app communication in
+     *         <code>VPCOnly</code> mode. Required when <code>CreateDomain.AppNetworkAccessType</code> is
+     *         <code>VPCOnly</code> and
+     *         <code>DomainSettings.RStudioServerProDomainSettings.DomainExecutionRoleArn</code> is provided.
+     * @see AppSecurityGroupManagement
+     */
+
+    public String getAppSecurityGroupManagement() {
+        return this.appSecurityGroupManagement;
+    }
+
+    /**
+     * <p>
+     * The entity that creates and manages the required security groups for inter-app communication in
+     * <code>VPCOnly</code> mode. Required when <code>CreateDomain.AppNetworkAccessType</code> is <code>VPCOnly</code>
+     * and <code>DomainSettings.RStudioServerProDomainSettings.DomainExecutionRoleArn</code> is provided.
+     * </p>
+     * 
+     * @param appSecurityGroupManagement
+     *        The entity that creates and manages the required security groups for inter-app communication in
+     *        <code>VPCOnly</code> mode. Required when <code>CreateDomain.AppNetworkAccessType</code> is
+     *        <code>VPCOnly</code> and <code>DomainSettings.RStudioServerProDomainSettings.DomainExecutionRoleArn</code>
+     *        is provided.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see AppSecurityGroupManagement
+     */
+
+    public CreateDomainRequest withAppSecurityGroupManagement(String appSecurityGroupManagement) {
+        setAppSecurityGroupManagement(appSecurityGroupManagement);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The entity that creates and manages the required security groups for inter-app communication in
+     * <code>VPCOnly</code> mode. Required when <code>CreateDomain.AppNetworkAccessType</code> is <code>VPCOnly</code>
+     * and <code>DomainSettings.RStudioServerProDomainSettings.DomainExecutionRoleArn</code> is provided.
+     * </p>
+     * 
+     * @param appSecurityGroupManagement
+     *        The entity that creates and manages the required security groups for inter-app communication in
+     *        <code>VPCOnly</code> mode. Required when <code>CreateDomain.AppNetworkAccessType</code> is
+     *        <code>VPCOnly</code> and <code>DomainSettings.RStudioServerProDomainSettings.DomainExecutionRoleArn</code>
+     *        is provided.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see AppSecurityGroupManagement
+     */
+
+    public CreateDomainRequest withAppSecurityGroupManagement(AppSecurityGroupManagement appSecurityGroupManagement) {
+        this.appSecurityGroupManagement = appSecurityGroupManagement.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * A collection of <code>Domain</code> settings.
+     * </p>
+     * 
+     * @param domainSettings
+     *        A collection of <code>Domain</code> settings.
+     */
+
+    public void setDomainSettings(DomainSettings domainSettings) {
+        this.domainSettings = domainSettings;
+    }
+
+    /**
+     * <p>
+     * A collection of <code>Domain</code> settings.
+     * </p>
+     * 
+     * @return A collection of <code>Domain</code> settings.
+     */
+
+    public DomainSettings getDomainSettings() {
+        return this.domainSettings;
+    }
+
+    /**
+     * <p>
+     * A collection of <code>Domain</code> settings.
+     * </p>
+     * 
+     * @param domainSettings
+     *        A collection of <code>Domain</code> settings.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateDomainRequest withDomainSettings(DomainSettings domainSettings) {
+        setDomainSettings(domainSettings);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -759,7 +892,11 @@ public class CreateDomainRequest extends com.amazonaws.AmazonWebServiceRequest i
         if (getHomeEfsFileSystemKmsKeyId() != null)
             sb.append("HomeEfsFileSystemKmsKeyId: ").append(getHomeEfsFileSystemKmsKeyId()).append(",");
         if (getKmsKeyId() != null)
-            sb.append("KmsKeyId: ").append(getKmsKeyId());
+            sb.append("KmsKeyId: ").append(getKmsKeyId()).append(",");
+        if (getAppSecurityGroupManagement() != null)
+            sb.append("AppSecurityGroupManagement: ").append(getAppSecurityGroupManagement()).append(",");
+        if (getDomainSettings() != null)
+            sb.append("DomainSettings: ").append(getDomainSettings());
         sb.append("}");
         return sb.toString();
     }
@@ -810,6 +947,14 @@ public class CreateDomainRequest extends com.amazonaws.AmazonWebServiceRequest i
             return false;
         if (other.getKmsKeyId() != null && other.getKmsKeyId().equals(this.getKmsKeyId()) == false)
             return false;
+        if (other.getAppSecurityGroupManagement() == null ^ this.getAppSecurityGroupManagement() == null)
+            return false;
+        if (other.getAppSecurityGroupManagement() != null && other.getAppSecurityGroupManagement().equals(this.getAppSecurityGroupManagement()) == false)
+            return false;
+        if (other.getDomainSettings() == null ^ this.getDomainSettings() == null)
+            return false;
+        if (other.getDomainSettings() != null && other.getDomainSettings().equals(this.getDomainSettings()) == false)
+            return false;
         return true;
     }
 
@@ -827,6 +972,8 @@ public class CreateDomainRequest extends com.amazonaws.AmazonWebServiceRequest i
         hashCode = prime * hashCode + ((getAppNetworkAccessType() == null) ? 0 : getAppNetworkAccessType().hashCode());
         hashCode = prime * hashCode + ((getHomeEfsFileSystemKmsKeyId() == null) ? 0 : getHomeEfsFileSystemKmsKeyId().hashCode());
         hashCode = prime * hashCode + ((getKmsKeyId() == null) ? 0 : getKmsKeyId().hashCode());
+        hashCode = prime * hashCode + ((getAppSecurityGroupManagement() == null) ? 0 : getAppSecurityGroupManagement().hashCode());
+        hashCode = prime * hashCode + ((getDomainSettings() == null) ? 0 : getDomainSettings().hashCode());
         return hashCode;
     }
 

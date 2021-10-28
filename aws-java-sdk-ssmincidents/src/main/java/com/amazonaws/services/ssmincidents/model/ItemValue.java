@@ -36,13 +36,13 @@ public class ItemValue implements Serializable, Cloneable, StructuredPojo {
     private String arn;
     /**
      * <p>
-     * The metric definition, if the related item is a metric in CloudWatch.
+     * The metric definition, if the related item is a metric in Amazon CloudWatch.
      * </p>
      */
     private String metricDefinition;
     /**
      * <p>
-     * The URL, if the related item is a non-AWS resource.
+     * The URL, if the related item is a non-Amazon Web Services resource.
      * </p>
      */
     private String url;
@@ -89,11 +89,11 @@ public class ItemValue implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The metric definition, if the related item is a metric in CloudWatch.
+     * The metric definition, if the related item is a metric in Amazon CloudWatch.
      * </p>
      * 
      * @param metricDefinition
-     *        The metric definition, if the related item is a metric in CloudWatch.
+     *        The metric definition, if the related item is a metric in Amazon CloudWatch.
      */
 
     public void setMetricDefinition(String metricDefinition) {
@@ -102,10 +102,10 @@ public class ItemValue implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The metric definition, if the related item is a metric in CloudWatch.
+     * The metric definition, if the related item is a metric in Amazon CloudWatch.
      * </p>
      * 
-     * @return The metric definition, if the related item is a metric in CloudWatch.
+     * @return The metric definition, if the related item is a metric in Amazon CloudWatch.
      */
 
     public String getMetricDefinition() {
@@ -114,11 +114,11 @@ public class ItemValue implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The metric definition, if the related item is a metric in CloudWatch.
+     * The metric definition, if the related item is a metric in Amazon CloudWatch.
      * </p>
      * 
      * @param metricDefinition
-     *        The metric definition, if the related item is a metric in CloudWatch.
+     *        The metric definition, if the related item is a metric in Amazon CloudWatch.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -129,11 +129,11 @@ public class ItemValue implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The URL, if the related item is a non-AWS resource.
+     * The URL, if the related item is a non-Amazon Web Services resource.
      * </p>
      * 
      * @param url
-     *        The URL, if the related item is a non-AWS resource.
+     *        The URL, if the related item is a non-Amazon Web Services resource.
      */
 
     public void setUrl(String url) {
@@ -142,10 +142,10 @@ public class ItemValue implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The URL, if the related item is a non-AWS resource.
+     * The URL, if the related item is a non-Amazon Web Services resource.
      * </p>
      * 
-     * @return The URL, if the related item is a non-AWS resource.
+     * @return The URL, if the related item is a non-Amazon Web Services resource.
      */
 
     public String getUrl() {
@@ -154,11 +154,11 @@ public class ItemValue implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The URL, if the related item is a non-AWS resource.
+     * The URL, if the related item is a non-Amazon Web Services resource.
      * </p>
      * 
      * @param url
-     *        The URL, if the related item is a non-AWS resource.
+     *        The URL, if the related item is a non-Amazon Web Services resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

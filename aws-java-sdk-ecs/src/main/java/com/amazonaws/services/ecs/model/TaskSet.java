@@ -169,6 +169,16 @@ public class TaskSet implements Serializable, Cloneable, StructuredPojo {
     private String platformVersion;
     /**
      * <p>
+     * The operating system that your tasks in the set are running on. A platform family is specified only for tasks
+     * using the Fargate launch type.
+     * </p>
+     * <p>
+     * All tasks in the set must have the same value.
+     * </p>
+     */
+    private String platformFamily;
+    /**
+     * <p>
      * The network configuration for the task set.
      * </p>
      */
@@ -1229,6 +1239,67 @@ public class TaskSet implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
+     * The operating system that your tasks in the set are running on. A platform family is specified only for tasks
+     * using the Fargate launch type.
+     * </p>
+     * <p>
+     * All tasks in the set must have the same value.
+     * </p>
+     * 
+     * @param platformFamily
+     *        The operating system that your tasks in the set are running on. A platform family is specified only for
+     *        tasks using the Fargate launch type. </p>
+     *        <p>
+     *        All tasks in the set must have the same value.
+     */
+
+    public void setPlatformFamily(String platformFamily) {
+        this.platformFamily = platformFamily;
+    }
+
+    /**
+     * <p>
+     * The operating system that your tasks in the set are running on. A platform family is specified only for tasks
+     * using the Fargate launch type.
+     * </p>
+     * <p>
+     * All tasks in the set must have the same value.
+     * </p>
+     * 
+     * @return The operating system that your tasks in the set are running on. A platform family is specified only for
+     *         tasks using the Fargate launch type. </p>
+     *         <p>
+     *         All tasks in the set must have the same value.
+     */
+
+    public String getPlatformFamily() {
+        return this.platformFamily;
+    }
+
+    /**
+     * <p>
+     * The operating system that your tasks in the set are running on. A platform family is specified only for tasks
+     * using the Fargate launch type.
+     * </p>
+     * <p>
+     * All tasks in the set must have the same value.
+     * </p>
+     * 
+     * @param platformFamily
+     *        The operating system that your tasks in the set are running on. A platform family is specified only for
+     *        tasks using the Fargate launch type. </p>
+     *        <p>
+     *        All tasks in the set must have the same value.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public TaskSet withPlatformFamily(String platformFamily) {
+        setPlatformFamily(platformFamily);
+        return this;
+    }
+
+    /**
+     * <p>
      * The network configuration for the task set.
      * </p>
      * 
@@ -2246,6 +2317,8 @@ public class TaskSet implements Serializable, Cloneable, StructuredPojo {
             sb.append("CapacityProviderStrategy: ").append(getCapacityProviderStrategy()).append(",");
         if (getPlatformVersion() != null)
             sb.append("PlatformVersion: ").append(getPlatformVersion()).append(",");
+        if (getPlatformFamily() != null)
+            sb.append("PlatformFamily: ").append(getPlatformFamily()).append(",");
         if (getNetworkConfiguration() != null)
             sb.append("NetworkConfiguration: ").append(getNetworkConfiguration()).append(",");
         if (getLoadBalancers() != null)
@@ -2338,6 +2411,10 @@ public class TaskSet implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getPlatformVersion() != null && other.getPlatformVersion().equals(this.getPlatformVersion()) == false)
             return false;
+        if (other.getPlatformFamily() == null ^ this.getPlatformFamily() == null)
+            return false;
+        if (other.getPlatformFamily() != null && other.getPlatformFamily().equals(this.getPlatformFamily()) == false)
+            return false;
         if (other.getNetworkConfiguration() == null ^ this.getNetworkConfiguration() == null)
             return false;
         if (other.getNetworkConfiguration() != null && other.getNetworkConfiguration().equals(this.getNetworkConfiguration()) == false)
@@ -2390,6 +2467,7 @@ public class TaskSet implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getLaunchType() == null) ? 0 : getLaunchType().hashCode());
         hashCode = prime * hashCode + ((getCapacityProviderStrategy() == null) ? 0 : getCapacityProviderStrategy().hashCode());
         hashCode = prime * hashCode + ((getPlatformVersion() == null) ? 0 : getPlatformVersion().hashCode());
+        hashCode = prime * hashCode + ((getPlatformFamily() == null) ? 0 : getPlatformFamily().hashCode());
         hashCode = prime * hashCode + ((getNetworkConfiguration() == null) ? 0 : getNetworkConfiguration().hashCode());
         hashCode = prime * hashCode + ((getLoadBalancers() == null) ? 0 : getLoadBalancers().hashCode());
         hashCode = prime * hashCode + ((getServiceRegistries() == null) ? 0 : getServiceRegistries().hashCode());

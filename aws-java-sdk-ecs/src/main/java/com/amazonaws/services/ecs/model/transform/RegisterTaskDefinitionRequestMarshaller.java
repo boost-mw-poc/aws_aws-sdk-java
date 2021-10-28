@@ -60,6 +60,8 @@ public class RegisterTaskDefinitionRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("inferenceAccelerators").build();
     private static final MarshallingInfo<StructuredPojo> EPHEMERALSTORAGE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ephemeralStorage").build();
+    private static final MarshallingInfo<StructuredPojo> RUNTIMEPLATFORM_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("runtimePlatform").build();
 
     private static final RegisterTaskDefinitionRequestMarshaller instance = new RegisterTaskDefinitionRequestMarshaller();
 
@@ -93,6 +95,7 @@ public class RegisterTaskDefinitionRequestMarshaller {
             protocolMarshaller.marshall(registerTaskDefinitionRequest.getProxyConfiguration(), PROXYCONFIGURATION_BINDING);
             protocolMarshaller.marshall(registerTaskDefinitionRequest.getInferenceAccelerators(), INFERENCEACCELERATORS_BINDING);
             protocolMarshaller.marshall(registerTaskDefinitionRequest.getEphemeralStorage(), EPHEMERALSTORAGE_BINDING);
+            protocolMarshaller.marshall(registerTaskDefinitionRequest.getRuntimePlatform(), RUNTIMEPLATFORM_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

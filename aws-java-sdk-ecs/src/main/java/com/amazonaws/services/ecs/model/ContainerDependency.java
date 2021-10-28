@@ -36,9 +36,20 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * </p>
  * <note>
  * <p>
- * For tasks using the Fargate launch type, this parameter requires that the task or service uses platform version 1.3.0
- * or later.
+ * For tasks using the Fargate launch type, the task or service requires the followiwng platforms:
  * </p>
+ * <ul>
+ * <li>
+ * <p>
+ * Linux platform version <code>1.3.0</code> or later.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * Windows platform version <code>1.0.0</code> or later.
+ * </p>
+ * </li>
+ * </ul>
  * </note>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ecs-2014-11-13/ContainerDependency" target="_top">AWS API

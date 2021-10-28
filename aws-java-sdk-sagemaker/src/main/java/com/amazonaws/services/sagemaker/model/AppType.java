@@ -22,7 +22,9 @@ public enum AppType {
 
     JupyterServer("JupyterServer"),
     KernelGateway("KernelGateway"),
-    TensorBoard("TensorBoard");
+    TensorBoard("TensorBoard"),
+    RStudioServerPro("RStudioServerPro"),
+    RSessionGateway("RSessionGateway");
 
     private String value;
 

@@ -25,18 +25,18 @@ public class GetIncidentRecordResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * Details structure of the incident record.
+     * Details the structure of the incident record.
      * </p>
      */
     private IncidentRecord incidentRecord;
 
     /**
      * <p>
-     * Details structure of the incident record.
+     * Details the structure of the incident record.
      * </p>
      * 
      * @param incidentRecord
-     *        Details structure of the incident record.
+     *        Details the structure of the incident record.
      */
 
     public void setIncidentRecord(IncidentRecord incidentRecord) {
@@ -45,10 +45,10 @@ public class GetIncidentRecordResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * Details structure of the incident record.
+     * Details the structure of the incident record.
      * </p>
      * 
-     * @return Details structure of the incident record.
+     * @return Details the structure of the incident record.
      */
 
     public IncidentRecord getIncidentRecord() {
@@ -57,11 +57,11 @@ public class GetIncidentRecordResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * Details structure of the incident record.
+     * Details the structure of the incident record.
      * </p>
      * 
      * @param incidentRecord
-     *        Details structure of the incident record.
+     *        Details the structure of the incident record.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

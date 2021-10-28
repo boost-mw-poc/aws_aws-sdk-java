@@ -52,9 +52,9 @@ import com.amazonaws.services.ssmincidents.model.transform.*;
  * the service call completes.
  * <p>
  * <p>
- * AWS Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover
- * from incidents affecting their AWS-hosted applications. An incident is any unplanned interruption or reduction in
- * quality of services.
+ * Systems Manager Incident Manager is an incident management console designed to help users mitigate and recover from
+ * incidents affecting their Amazon Web Services-hosted applications. An incident is any unplanned interruption or
+ * reduction in quality of services.
  * </p>
  * <p>
  * Incident Manager increases incident resolution by notifying responders of impact, highlighting relevant
@@ -169,9 +169,9 @@ public class AWSSSMIncidentsClient extends AmazonWebServiceClient implements AWS
      * @throws ThrottlingException
      *         The request was denied due to request throttling.
      * @throws AccessDeniedException
-     *         You don't have sufficient access to perform this action.
+     *         You don't have sufficient access to perform this operation.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
      * @throws ConflictException
      *         Updating or deleting a resource causes an inconsistent state.
      * @throws InternalServerException
@@ -235,11 +235,11 @@ public class AWSSSMIncidentsClient extends AmazonWebServiceClient implements AWS
      * @throws ThrottlingException
      *         The request was denied due to request throttling.
      * @throws ResourceNotFoundException
-     *         Request references a resource which does not exist.
+     *         Request references a resource which doesn't exist.
      * @throws AccessDeniedException
-     *         You don't have sufficient access to perform this action.
+     *         You don't have sufficient access to perform this operation.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
      * @throws ConflictException
      *         Updating or deleting a resource causes an inconsistent state.
      * @throws InternalServerException
@@ -304,11 +304,11 @@ public class AWSSSMIncidentsClient extends AmazonWebServiceClient implements AWS
      * @throws ThrottlingException
      *         The request was denied due to request throttling.
      * @throws ResourceNotFoundException
-     *         Request references a resource which does not exist.
+     *         Request references a resource which doesn't exist.
      * @throws AccessDeniedException
-     *         You don't have sufficient access to perform this action.
+     *         You don't have sufficient access to perform this operation.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
      * @throws ConflictException
      *         Updating or deleting a resource causes an inconsistent state.
      * @throws InternalServerException
@@ -371,9 +371,9 @@ public class AWSSSMIncidentsClient extends AmazonWebServiceClient implements AWS
      * @throws ThrottlingException
      *         The request was denied due to request throttling.
      * @throws AccessDeniedException
-     *         You don't have sufficient access to perform this action.
+     *         You don't have sufficient access to perform this operation.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
      * @throws InternalServerException
      *         The request processing has failed because of an unknown error, exception or failure.
      * @sample AWSSSMIncidents.DeleteIncidentRecord
@@ -434,11 +434,11 @@ public class AWSSSMIncidentsClient extends AmazonWebServiceClient implements AWS
      * @throws ThrottlingException
      *         The request was denied due to request throttling.
      * @throws ResourceNotFoundException
-     *         Request references a resource which does not exist.
+     *         Request references a resource which doesn't exist.
      * @throws AccessDeniedException
-     *         You don't have sufficient access to perform this action.
+     *         You don't have sufficient access to perform this operation.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
      * @throws InternalServerException
      *         The request processing has failed because of an unknown error, exception or failure.
      * @sample AWSSSMIncidents.DeleteReplicationSet
@@ -491,7 +491,7 @@ public class AWSSSMIncidentsClient extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
-     * Deletes the resource policy that AWS Resource Access Manager uses to share your Incident Manager resource.
+     * Deletes the resource policy that Resource Access Manager uses to share your Incident Manager resource.
      * </p>
      * 
      * @param deleteResourcePolicyRequest
@@ -499,11 +499,11 @@ public class AWSSSMIncidentsClient extends AmazonWebServiceClient implements AWS
      * @throws ThrottlingException
      *         The request was denied due to request throttling.
      * @throws ResourceNotFoundException
-     *         Request references a resource which does not exist.
+     *         Request references a resource which doesn't exist.
      * @throws AccessDeniedException
-     *         You don't have sufficient access to perform this action.
+     *         You don't have sufficient access to perform this operation.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
      * @throws InternalServerException
      *         The request processing has failed because of an unknown error, exception or failure.
      * @sample AWSSSMIncidents.DeleteResourcePolicy
@@ -565,9 +565,9 @@ public class AWSSSMIncidentsClient extends AmazonWebServiceClient implements AWS
      * @throws ThrottlingException
      *         The request was denied due to request throttling.
      * @throws AccessDeniedException
-     *         You don't have sufficient access to perform this action.
+     *         You don't have sufficient access to perform this operation.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
      * @throws InternalServerException
      *         The request processing has failed because of an unknown error, exception or failure.
      * @sample AWSSSMIncidents.DeleteResponsePlan
@@ -628,9 +628,9 @@ public class AWSSSMIncidentsClient extends AmazonWebServiceClient implements AWS
      * @throws ThrottlingException
      *         The request was denied due to request throttling.
      * @throws AccessDeniedException
-     *         You don't have sufficient access to perform this action.
+     *         You don't have sufficient access to perform this operation.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
      * @throws InternalServerException
      *         The request processing has failed because of an unknown error, exception or failure.
      * @sample AWSSSMIncidents.DeleteTimelineEvent
@@ -683,7 +683,7 @@ public class AWSSSMIncidentsClient extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
-     * Returns the details of the specified incident record.
+     * Returns the details for the specified incident record.
      * </p>
      * 
      * @param getIncidentRecordRequest
@@ -691,11 +691,11 @@ public class AWSSSMIncidentsClient extends AmazonWebServiceClient implements AWS
      * @throws ThrottlingException
      *         The request was denied due to request throttling.
      * @throws ResourceNotFoundException
-     *         Request references a resource which does not exist.
+     *         Request references a resource which doesn't exist.
      * @throws AccessDeniedException
-     *         You don't have sufficient access to perform this action.
+     *         You don't have sufficient access to perform this operation.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
      * @throws InternalServerException
      *         The request processing has failed because of an unknown error, exception or failure.
      * @sample AWSSSMIncidents.GetIncidentRecord
@@ -756,11 +756,11 @@ public class AWSSSMIncidentsClient extends AmazonWebServiceClient implements AWS
      * @throws ThrottlingException
      *         The request was denied due to request throttling.
      * @throws ResourceNotFoundException
-     *         Request references a resource which does not exist.
+     *         Request references a resource which doesn't exist.
      * @throws AccessDeniedException
-     *         You don't have sufficient access to perform this action.
+     *         You don't have sufficient access to perform this operation.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
      * @throws InternalServerException
      *         The request processing has failed because of an unknown error, exception or failure.
      * @sample AWSSSMIncidents.GetReplicationSet
@@ -821,11 +821,11 @@ public class AWSSSMIncidentsClient extends AmazonWebServiceClient implements AWS
      * @throws ThrottlingException
      *         The request was denied due to request throttling.
      * @throws ResourceNotFoundException
-     *         Request references a resource which does not exist.
+     *         Request references a resource which doesn't exist.
      * @throws AccessDeniedException
-     *         You don't have sufficient access to perform this action.
+     *         You don't have sufficient access to perform this operation.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
      * @throws InternalServerException
      *         The request processing has failed because of an unknown error, exception or failure.
      * @sample AWSSSMIncidents.GetResourcePolicies
@@ -886,11 +886,11 @@ public class AWSSSMIncidentsClient extends AmazonWebServiceClient implements AWS
      * @throws ThrottlingException
      *         The request was denied due to request throttling.
      * @throws ResourceNotFoundException
-     *         Request references a resource which does not exist.
+     *         Request references a resource which doesn't exist.
      * @throws AccessDeniedException
-     *         You don't have sufficient access to perform this action.
+     *         You don't have sufficient access to perform this operation.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
      * @throws InternalServerException
      *         The request processing has failed because of an unknown error, exception or failure.
      * @sample AWSSSMIncidents.GetResponsePlan
@@ -951,11 +951,11 @@ public class AWSSSMIncidentsClient extends AmazonWebServiceClient implements AWS
      * @throws ThrottlingException
      *         The request was denied due to request throttling.
      * @throws ResourceNotFoundException
-     *         Request references a resource which does not exist.
+     *         Request references a resource which doesn't exist.
      * @throws AccessDeniedException
-     *         You don't have sufficient access to perform this action.
+     *         You don't have sufficient access to perform this operation.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
      * @throws InternalServerException
      *         The request processing has failed because of an unknown error, exception or failure.
      * @sample AWSSSMIncidents.GetTimelineEvent
@@ -1017,9 +1017,9 @@ public class AWSSSMIncidentsClient extends AmazonWebServiceClient implements AWS
      * @throws ThrottlingException
      *         The request was denied due to request throttling.
      * @throws AccessDeniedException
-     *         You don't have sufficient access to perform this action.
+     *         You don't have sufficient access to perform this operation.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
      * @throws InternalServerException
      *         The request processing has failed because of an unknown error, exception or failure.
      * @sample AWSSSMIncidents.ListIncidentRecords
@@ -1080,9 +1080,9 @@ public class AWSSSMIncidentsClient extends AmazonWebServiceClient implements AWS
      * @throws ThrottlingException
      *         The request was denied due to request throttling.
      * @throws AccessDeniedException
-     *         You don't have sufficient access to perform this action.
+     *         You don't have sufficient access to perform this operation.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
      * @throws InternalServerException
      *         The request processing has failed because of an unknown error, exception or failure.
      * @sample AWSSSMIncidents.ListRelatedItems
@@ -1143,9 +1143,9 @@ public class AWSSSMIncidentsClient extends AmazonWebServiceClient implements AWS
      * @throws ThrottlingException
      *         The request was denied due to request throttling.
      * @throws AccessDeniedException
-     *         You don't have sufficient access to perform this action.
+     *         You don't have sufficient access to perform this operation.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
      * @throws InternalServerException
      *         The request processing has failed because of an unknown error, exception or failure.
      * @sample AWSSSMIncidents.ListReplicationSets
@@ -1206,9 +1206,9 @@ public class AWSSSMIncidentsClient extends AmazonWebServiceClient implements AWS
      * @throws ThrottlingException
      *         The request was denied due to request throttling.
      * @throws AccessDeniedException
-     *         You don't have sufficient access to perform this action.
+     *         You don't have sufficient access to perform this operation.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
      * @throws InternalServerException
      *         The request processing has failed because of an unknown error, exception or failure.
      * @sample AWSSSMIncidents.ListResponsePlans
@@ -1269,11 +1269,11 @@ public class AWSSSMIncidentsClient extends AmazonWebServiceClient implements AWS
      * @throws ThrottlingException
      *         The request was denied due to request throttling.
      * @throws ResourceNotFoundException
-     *         Request references a resource which does not exist.
+     *         Request references a resource which doesn't exist.
      * @throws AccessDeniedException
-     *         You don't have sufficient access to perform this action.
+     *         You don't have sufficient access to perform this operation.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
      * @throws InternalServerException
      *         The request processing has failed because of an unknown error, exception or failure.
      * @sample AWSSSMIncidents.ListTagsForResource
@@ -1326,7 +1326,7 @@ public class AWSSSMIncidentsClient extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
-     * Lists timeline events of the specified incident record.
+     * Lists timeline events for the specified incident record.
      * </p>
      * 
      * @param listTimelineEventsRequest
@@ -1334,9 +1334,9 @@ public class AWSSSMIncidentsClient extends AmazonWebServiceClient implements AWS
      * @throws ThrottlingException
      *         The request was denied due to request throttling.
      * @throws AccessDeniedException
-     *         You don't have sufficient access to perform this action.
+     *         You don't have sufficient access to perform this operation.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
      * @throws InternalServerException
      *         The request processing has failed because of an unknown error, exception or failure.
      * @sample AWSSSMIncidents.ListTimelineEvents
@@ -1397,11 +1397,11 @@ public class AWSSSMIncidentsClient extends AmazonWebServiceClient implements AWS
      * @throws ThrottlingException
      *         The request was denied due to request throttling.
      * @throws ResourceNotFoundException
-     *         Request references a resource which does not exist.
+     *         Request references a resource which doesn't exist.
      * @throws AccessDeniedException
-     *         You don't have sufficient access to perform this action.
+     *         You don't have sufficient access to perform this operation.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
      * @throws InternalServerException
      *         The request processing has failed because of an unknown error, exception or failure.
      * @sample AWSSSMIncidents.PutResourcePolicy
@@ -1462,11 +1462,11 @@ public class AWSSSMIncidentsClient extends AmazonWebServiceClient implements AWS
      * @throws ThrottlingException
      *         The request was denied due to request throttling.
      * @throws ResourceNotFoundException
-     *         Request references a resource which does not exist.
+     *         Request references a resource which doesn't exist.
      * @throws AccessDeniedException
-     *         You don't have sufficient access to perform this action.
+     *         You don't have sufficient access to perform this operation.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
      * @throws ConflictException
      *         Updating or deleting a resource causes an inconsistent state.
      * @throws InternalServerException
@@ -1531,11 +1531,11 @@ public class AWSSSMIncidentsClient extends AmazonWebServiceClient implements AWS
      * @throws ThrottlingException
      *         The request was denied due to request throttling.
      * @throws ResourceNotFoundException
-     *         Request references a resource which does not exist.
+     *         Request references a resource which doesn't exist.
      * @throws AccessDeniedException
-     *         You don't have sufficient access to perform this action.
+     *         You don't have sufficient access to perform this operation.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
      * @throws ConflictException
      *         Updating or deleting a resource causes an inconsistent state.
      * @throws InternalServerException
@@ -1598,11 +1598,11 @@ public class AWSSSMIncidentsClient extends AmazonWebServiceClient implements AWS
      * @throws ThrottlingException
      *         The request was denied due to request throttling.
      * @throws ResourceNotFoundException
-     *         Request references a resource which does not exist.
+     *         Request references a resource which doesn't exist.
      * @throws AccessDeniedException
-     *         You don't have sufficient access to perform this action.
+     *         You don't have sufficient access to perform this operation.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
      * @throws ConflictException
      *         Updating or deleting a resource causes an inconsistent state.
      * @throws InternalServerException
@@ -1665,11 +1665,11 @@ public class AWSSSMIncidentsClient extends AmazonWebServiceClient implements AWS
      * @throws ThrottlingException
      *         The request was denied due to request throttling.
      * @throws ResourceNotFoundException
-     *         Request references a resource which does not exist.
+     *         Request references a resource which doesn't exist.
      * @throws AccessDeniedException
-     *         You don't have sufficient access to perform this action.
+     *         You don't have sufficient access to perform this operation.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
      * @throws InternalServerException
      *         The request processing has failed because of an unknown error, exception or failure.
      * @sample AWSSSMIncidents.UpdateDeletionProtection
@@ -1724,8 +1724,8 @@ public class AWSSSMIncidentsClient extends AmazonWebServiceClient implements AWS
 
     /**
      * <p>
-     * Update the details of an incident record. You can use this action to update an incident record from the defined
-     * chat channel. For more information about using actions in chat channels, see <a
+     * Update the details of an incident record. You can use this operation to update an incident record from the
+     * defined chat channel. For more information about using actions in chat channels, see <a
      * href="https://docs.aws.amazon.com/incident-manager/latest/userguide/chat.html#chat-interact">Interacting through
      * chat</a>.
      * </p>
@@ -1735,11 +1735,11 @@ public class AWSSSMIncidentsClient extends AmazonWebServiceClient implements AWS
      * @throws ThrottlingException
      *         The request was denied due to request throttling.
      * @throws ResourceNotFoundException
-     *         Request references a resource which does not exist.
+     *         Request references a resource which doesn't exist.
      * @throws AccessDeniedException
-     *         You don't have sufficient access to perform this action.
+     *         You don't have sufficient access to perform this operation.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
      * @throws ConflictException
      *         Updating or deleting a resource causes an inconsistent state.
      * @throws InternalServerException
@@ -1802,11 +1802,11 @@ public class AWSSSMIncidentsClient extends AmazonWebServiceClient implements AWS
      * @throws ThrottlingException
      *         The request was denied due to request throttling.
      * @throws ResourceNotFoundException
-     *         Request references a resource which does not exist.
+     *         Request references a resource which doesn't exist.
      * @throws AccessDeniedException
-     *         You don't have sufficient access to perform this action.
+     *         You don't have sufficient access to perform this operation.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
      * @throws ConflictException
      *         Updating or deleting a resource causes an inconsistent state.
      * @throws InternalServerException
@@ -1869,11 +1869,11 @@ public class AWSSSMIncidentsClient extends AmazonWebServiceClient implements AWS
      * @throws ThrottlingException
      *         The request was denied due to request throttling.
      * @throws ResourceNotFoundException
-     *         Request references a resource which does not exist.
+     *         Request references a resource which doesn't exist.
      * @throws AccessDeniedException
-     *         You don't have sufficient access to perform this action.
+     *         You don't have sufficient access to perform this operation.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
      * @throws InternalServerException
      *         The request processing has failed because of an unknown error, exception or failure.
      * @sample AWSSSMIncidents.UpdateReplicationSet
@@ -1934,11 +1934,11 @@ public class AWSSSMIncidentsClient extends AmazonWebServiceClient implements AWS
      * @throws ThrottlingException
      *         The request was denied due to request throttling.
      * @throws ResourceNotFoundException
-     *         Request references a resource which does not exist.
+     *         Request references a resource which doesn't exist.
      * @throws AccessDeniedException
-     *         You don't have sufficient access to perform this action.
+     *         You don't have sufficient access to perform this operation.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
      * @throws ConflictException
      *         Updating or deleting a resource causes an inconsistent state.
      * @throws InternalServerException
@@ -2001,11 +2001,11 @@ public class AWSSSMIncidentsClient extends AmazonWebServiceClient implements AWS
      * @throws ThrottlingException
      *         The request was denied due to request throttling.
      * @throws ResourceNotFoundException
-     *         Request references a resource which does not exist.
+     *         Request references a resource which doesn't exist.
      * @throws AccessDeniedException
-     *         You don't have sufficient access to perform this action.
+     *         You don't have sufficient access to perform this operation.
      * @throws ValidationException
-     *         The input fails to satisfy the constraints specified by an AWS service.
+     *         The input fails to satisfy the constraints specified by an Amazon Web Services service.
      * @throws ConflictException
      *         Updating or deleting a resource causes an inconsistent state.
      * @throws InternalServerException

@@ -82,6 +82,18 @@ public class UserSettings implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private TensorBoardAppSettings tensorBoardAppSettings;
+    /**
+     * <p>
+     * A collection of settings that configure user interaction with the <code>RStudioServerPro</code> app.
+     * </p>
+     */
+    private RStudioServerProAppSettings rStudioServerProAppSettings;
+    /**
+     * <p>
+     * A collection of settings that configure the <code>RSessionGateway</code> app.
+     * </p>
+     */
+    private RSessionAppSettings rSessionAppSettings;
 
     /**
      * <p>
@@ -439,6 +451,86 @@ public class UserSettings implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * A collection of settings that configure user interaction with the <code>RStudioServerPro</code> app.
+     * </p>
+     * 
+     * @param rStudioServerProAppSettings
+     *        A collection of settings that configure user interaction with the <code>RStudioServerPro</code> app.
+     */
+
+    public void setRStudioServerProAppSettings(RStudioServerProAppSettings rStudioServerProAppSettings) {
+        this.rStudioServerProAppSettings = rStudioServerProAppSettings;
+    }
+
+    /**
+     * <p>
+     * A collection of settings that configure user interaction with the <code>RStudioServerPro</code> app.
+     * </p>
+     * 
+     * @return A collection of settings that configure user interaction with the <code>RStudioServerPro</code> app.
+     */
+
+    public RStudioServerProAppSettings getRStudioServerProAppSettings() {
+        return this.rStudioServerProAppSettings;
+    }
+
+    /**
+     * <p>
+     * A collection of settings that configure user interaction with the <code>RStudioServerPro</code> app.
+     * </p>
+     * 
+     * @param rStudioServerProAppSettings
+     *        A collection of settings that configure user interaction with the <code>RStudioServerPro</code> app.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UserSettings withRStudioServerProAppSettings(RStudioServerProAppSettings rStudioServerProAppSettings) {
+        setRStudioServerProAppSettings(rStudioServerProAppSettings);
+        return this;
+    }
+
+    /**
+     * <p>
+     * A collection of settings that configure the <code>RSessionGateway</code> app.
+     * </p>
+     * 
+     * @param rSessionAppSettings
+     *        A collection of settings that configure the <code>RSessionGateway</code> app.
+     */
+
+    public void setRSessionAppSettings(RSessionAppSettings rSessionAppSettings) {
+        this.rSessionAppSettings = rSessionAppSettings;
+    }
+
+    /**
+     * <p>
+     * A collection of settings that configure the <code>RSessionGateway</code> app.
+     * </p>
+     * 
+     * @return A collection of settings that configure the <code>RSessionGateway</code> app.
+     */
+
+    public RSessionAppSettings getRSessionAppSettings() {
+        return this.rSessionAppSettings;
+    }
+
+    /**
+     * <p>
+     * A collection of settings that configure the <code>RSessionGateway</code> app.
+     * </p>
+     * 
+     * @param rSessionAppSettings
+     *        A collection of settings that configure the <code>RSessionGateway</code> app.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UserSettings withRSessionAppSettings(RSessionAppSettings rSessionAppSettings) {
+        setRSessionAppSettings(rSessionAppSettings);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -461,7 +553,11 @@ public class UserSettings implements Serializable, Cloneable, StructuredPojo {
         if (getKernelGatewayAppSettings() != null)
             sb.append("KernelGatewayAppSettings: ").append(getKernelGatewayAppSettings()).append(",");
         if (getTensorBoardAppSettings() != null)
-            sb.append("TensorBoardAppSettings: ").append(getTensorBoardAppSettings());
+            sb.append("TensorBoardAppSettings: ").append(getTensorBoardAppSettings()).append(",");
+        if (getRStudioServerProAppSettings() != null)
+            sb.append("RStudioServerProAppSettings: ").append(getRStudioServerProAppSettings()).append(",");
+        if (getRSessionAppSettings() != null)
+            sb.append("RSessionAppSettings: ").append(getRSessionAppSettings());
         sb.append("}");
         return sb.toString();
     }
@@ -500,6 +596,14 @@ public class UserSettings implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getTensorBoardAppSettings() != null && other.getTensorBoardAppSettings().equals(this.getTensorBoardAppSettings()) == false)
             return false;
+        if (other.getRStudioServerProAppSettings() == null ^ this.getRStudioServerProAppSettings() == null)
+            return false;
+        if (other.getRStudioServerProAppSettings() != null && other.getRStudioServerProAppSettings().equals(this.getRStudioServerProAppSettings()) == false)
+            return false;
+        if (other.getRSessionAppSettings() == null ^ this.getRSessionAppSettings() == null)
+            return false;
+        if (other.getRSessionAppSettings() != null && other.getRSessionAppSettings().equals(this.getRSessionAppSettings()) == false)
+            return false;
         return true;
     }
 
@@ -514,6 +618,8 @@ public class UserSettings implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getJupyterServerAppSettings() == null) ? 0 : getJupyterServerAppSettings().hashCode());
         hashCode = prime * hashCode + ((getKernelGatewayAppSettings() == null) ? 0 : getKernelGatewayAppSettings().hashCode());
         hashCode = prime * hashCode + ((getTensorBoardAppSettings() == null) ? 0 : getTensorBoardAppSettings().hashCode());
+        hashCode = prime * hashCode + ((getRStudioServerProAppSettings() == null) ? 0 : getRStudioServerProAppSettings().hashCode());
+        hashCode = prime * hashCode + ((getRSessionAppSettings() == null) ? 0 : getRSessionAppSettings().hashCode());
         return hashCode;
     }
 

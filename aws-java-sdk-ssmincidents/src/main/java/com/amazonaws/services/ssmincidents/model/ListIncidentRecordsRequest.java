@@ -27,7 +27,7 @@ public class ListIncidentRecordsRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Filter the list of incident records you are searching through. You can filter on the following keys:
+     * Filters the list of incident records through which you are searching. You can filter on the following keys:
      * </p>
      * <ul>
      * <li>
@@ -48,6 +48,28 @@ public class ListIncidentRecordsRequest extends com.amazonaws.AmazonWebServiceRe
      * <li>
      * <p>
      * <code>createdBy</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Note the following when deciding how to use Filters:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * If you don't specify a Filter, the response includes all incident records.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you specify more than one filter in a single request, the response returns incident records that match all
+     * filters.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you specify a filter with more than one value, the response returns incident records that match any of the
+     * values provided.
      * </p>
      * </li>
      * </ul>
@@ -68,7 +90,7 @@ public class ListIncidentRecordsRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Filter the list of incident records you are searching through. You can filter on the following keys:
+     * Filters the list of incident records through which you are searching. You can filter on the following keys:
      * </p>
      * <ul>
      * <li>
@@ -92,8 +114,31 @@ public class ListIncidentRecordsRequest extends com.amazonaws.AmazonWebServiceRe
      * </p>
      * </li>
      * </ul>
+     * <p>
+     * Note the following when deciding how to use Filters:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * If you don't specify a Filter, the response includes all incident records.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you specify more than one filter in a single request, the response returns incident records that match all
+     * filters.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you specify a filter with more than one value, the response returns incident records that match any of the
+     * values provided.
+     * </p>
+     * </li>
+     * </ul>
      * 
-     * @return Filter the list of incident records you are searching through. You can filter on the following keys:</p>
+     * @return Filters the list of incident records through which you are searching. You can filter on the following
+     *         keys:</p>
      *         <ul>
      *         <li>
      *         <p>
@@ -115,6 +160,28 @@ public class ListIncidentRecordsRequest extends com.amazonaws.AmazonWebServiceRe
      *         <code>createdBy</code>
      *         </p>
      *         </li>
+     *         </ul>
+     *         <p>
+     *         Note the following when deciding how to use Filters:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         If you don't specify a Filter, the response includes all incident records.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         If you specify more than one filter in a single request, the response returns incident records that match
+     *         all filters.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         If you specify a filter with more than one value, the response returns incident records that match any of
+     *         the values provided.
+     *         </p>
+     *         </li>
      */
 
     public java.util.List<Filter> getFilters() {
@@ -123,7 +190,7 @@ public class ListIncidentRecordsRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Filter the list of incident records you are searching through. You can filter on the following keys:
+     * Filters the list of incident records through which you are searching. You can filter on the following keys:
      * </p>
      * <ul>
      * <li>
@@ -147,9 +214,32 @@ public class ListIncidentRecordsRequest extends com.amazonaws.AmazonWebServiceRe
      * </p>
      * </li>
      * </ul>
+     * <p>
+     * Note the following when deciding how to use Filters:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * If you don't specify a Filter, the response includes all incident records.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you specify more than one filter in a single request, the response returns incident records that match all
+     * filters.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you specify a filter with more than one value, the response returns incident records that match any of the
+     * values provided.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param filters
-     *        Filter the list of incident records you are searching through. You can filter on the following keys:</p>
+     *        Filters the list of incident records through which you are searching. You can filter on the following
+     *        keys:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -169,6 +259,28 @@ public class ListIncidentRecordsRequest extends com.amazonaws.AmazonWebServiceRe
      *        <li>
      *        <p>
      *        <code>createdBy</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        Note the following when deciding how to use Filters:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        If you don't specify a Filter, the response includes all incident records.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        If you specify more than one filter in a single request, the response returns incident records that match
+     *        all filters.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        If you specify a filter with more than one value, the response returns incident records that match any of
+     *        the values provided.
      *        </p>
      *        </li>
      */
@@ -184,7 +296,7 @@ public class ListIncidentRecordsRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Filter the list of incident records you are searching through. You can filter on the following keys:
+     * Filters the list of incident records through which you are searching. You can filter on the following keys:
      * </p>
      * <ul>
      * <li>
@@ -209,13 +321,36 @@ public class ListIncidentRecordsRequest extends com.amazonaws.AmazonWebServiceRe
      * </li>
      * </ul>
      * <p>
+     * Note the following when deciding how to use Filters:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * If you don't specify a Filter, the response includes all incident records.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you specify more than one filter in a single request, the response returns incident records that match all
+     * filters.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you specify a filter with more than one value, the response returns incident records that match any of the
+     * values provided.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setFilters(java.util.Collection)} or {@link #withFilters(java.util.Collection)} if you want to override
      * the existing values.
      * </p>
      * 
      * @param filters
-     *        Filter the list of incident records you are searching through. You can filter on the following keys:</p>
+     *        Filters the list of incident records through which you are searching. You can filter on the following
+     *        keys:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -235,6 +370,28 @@ public class ListIncidentRecordsRequest extends com.amazonaws.AmazonWebServiceRe
      *        <li>
      *        <p>
      *        <code>createdBy</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        Note the following when deciding how to use Filters:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        If you don't specify a Filter, the response includes all incident records.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        If you specify more than one filter in a single request, the response returns incident records that match
+     *        all filters.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        If you specify a filter with more than one value, the response returns incident records that match any of
+     *        the values provided.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -252,7 +409,7 @@ public class ListIncidentRecordsRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * Filter the list of incident records you are searching through. You can filter on the following keys:
+     * Filters the list of incident records through which you are searching. You can filter on the following keys:
      * </p>
      * <ul>
      * <li>
@@ -276,9 +433,32 @@ public class ListIncidentRecordsRequest extends com.amazonaws.AmazonWebServiceRe
      * </p>
      * </li>
      * </ul>
+     * <p>
+     * Note the following when deciding how to use Filters:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * If you don't specify a Filter, the response includes all incident records.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you specify more than one filter in a single request, the response returns incident records that match all
+     * filters.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you specify a filter with more than one value, the response returns incident records that match any of the
+     * values provided.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param filters
-     *        Filter the list of incident records you are searching through. You can filter on the following keys:</p>
+     *        Filters the list of incident records through which you are searching. You can filter on the following
+     *        keys:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -298,6 +478,28 @@ public class ListIncidentRecordsRequest extends com.amazonaws.AmazonWebServiceRe
      *        <li>
      *        <p>
      *        <code>createdBy</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        Note the following when deciding how to use Filters:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        If you don't specify a Filter, the response includes all incident records.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        If you specify more than one filter in a single request, the response returns incident records that match
+     *        all filters.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        If you specify a filter with more than one value, the response returns incident records that match any of
+     *        the values provided.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

@@ -42,11 +42,33 @@ public class ListTimelineEventsRequest extends com.amazonaws.AmazonWebServiceReq
      * </p>
      * </li>
      * </ul>
+     * <p>
+     * Note the following when deciding how to use Filters:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * If you don't specify a Filter, the response includes all timeline events.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you specify more than one filter in a single request, the response returns timeline events that match all
+     * filters.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you specify a filter with more than one value, the response returns timeline events that match any of the
+     * values provided.
+     * </p>
+     * </li>
+     * </ul>
      */
     private java.util.List<Filter> filters;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the incident that the event is part of.
+     * The Amazon Resource Name (ARN) of the incident that includes the timeline event.
      * </p>
      */
     private String incidentRecordArn;
@@ -92,6 +114,28 @@ public class ListTimelineEventsRequest extends com.amazonaws.AmazonWebServiceReq
      * </p>
      * </li>
      * </ul>
+     * <p>
+     * Note the following when deciding how to use Filters:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * If you don't specify a Filter, the response includes all timeline events.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you specify more than one filter in a single request, the response returns timeline events that match all
+     * filters.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you specify a filter with more than one value, the response returns timeline events that match any of the
+     * values provided.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @return Filters the timeline events based on the provided conditional values. You can filter timeline events
      *         using the following keys:</p>
@@ -104,6 +148,28 @@ public class ListTimelineEventsRequest extends com.amazonaws.AmazonWebServiceReq
      *         <li>
      *         <p>
      *         <code>eventType</code>
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         Note the following when deciding how to use Filters:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         If you don't specify a Filter, the response includes all timeline events.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         If you specify more than one filter in a single request, the response returns timeline events that match
+     *         all filters.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         If you specify a filter with more than one value, the response returns timeline events that match any of
+     *         the values provided.
      *         </p>
      *         </li>
      */
@@ -129,6 +195,28 @@ public class ListTimelineEventsRequest extends com.amazonaws.AmazonWebServiceReq
      * </p>
      * </li>
      * </ul>
+     * <p>
+     * Note the following when deciding how to use Filters:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * If you don't specify a Filter, the response includes all timeline events.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you specify more than one filter in a single request, the response returns timeline events that match all
+     * filters.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you specify a filter with more than one value, the response returns timeline events that match any of the
+     * values provided.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param filters
      *        Filters the timeline events based on the provided conditional values. You can filter timeline events using
@@ -142,6 +230,28 @@ public class ListTimelineEventsRequest extends com.amazonaws.AmazonWebServiceReq
      *        <li>
      *        <p>
      *        <code>eventType</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        Note the following when deciding how to use Filters:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        If you don't specify a Filter, the response includes all timeline events.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        If you specify more than one filter in a single request, the response returns timeline events that match
+     *        all filters.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        If you specify a filter with more than one value, the response returns timeline events that match any of
+     *        the values provided.
      *        </p>
      *        </li>
      */
@@ -173,6 +283,28 @@ public class ListTimelineEventsRequest extends com.amazonaws.AmazonWebServiceReq
      * </li>
      * </ul>
      * <p>
+     * Note the following when deciding how to use Filters:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * If you don't specify a Filter, the response includes all timeline events.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you specify more than one filter in a single request, the response returns timeline events that match all
+     * filters.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you specify a filter with more than one value, the response returns timeline events that match any of the
+     * values provided.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setFilters(java.util.Collection)} or {@link #withFilters(java.util.Collection)} if you want to override
      * the existing values.
@@ -190,6 +322,28 @@ public class ListTimelineEventsRequest extends com.amazonaws.AmazonWebServiceReq
      *        <li>
      *        <p>
      *        <code>eventType</code>
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        Note the following when deciding how to use Filters:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        If you don't specify a Filter, the response includes all timeline events.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        If you specify more than one filter in a single request, the response returns timeline events that match
+     *        all filters.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        If you specify a filter with more than one value, the response returns timeline events that match any of
+     *        the values provided.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -222,6 +376,28 @@ public class ListTimelineEventsRequest extends com.amazonaws.AmazonWebServiceReq
      * </p>
      * </li>
      * </ul>
+     * <p>
+     * Note the following when deciding how to use Filters:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * If you don't specify a Filter, the response includes all timeline events.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you specify more than one filter in a single request, the response returns timeline events that match all
+     * filters.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you specify a filter with more than one value, the response returns timeline events that match any of the
+     * values provided.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param filters
      *        Filters the timeline events based on the provided conditional values. You can filter timeline events using
@@ -237,6 +413,28 @@ public class ListTimelineEventsRequest extends com.amazonaws.AmazonWebServiceReq
      *        <code>eventType</code>
      *        </p>
      *        </li>
+     *        </ul>
+     *        <p>
+     *        Note the following when deciding how to use Filters:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        If you don't specify a Filter, the response includes all timeline events.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        If you specify more than one filter in a single request, the response returns timeline events that match
+     *        all filters.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        If you specify a filter with more than one value, the response returns timeline events that match any of
+     *        the values provided.
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -247,11 +445,11 @@ public class ListTimelineEventsRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the incident that the event is part of.
+     * The Amazon Resource Name (ARN) of the incident that includes the timeline event.
      * </p>
      * 
      * @param incidentRecordArn
-     *        The Amazon Resource Name (ARN) of the incident that the event is part of.
+     *        The Amazon Resource Name (ARN) of the incident that includes the timeline event.
      */
 
     public void setIncidentRecordArn(String incidentRecordArn) {
@@ -260,10 +458,10 @@ public class ListTimelineEventsRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the incident that the event is part of.
+     * The Amazon Resource Name (ARN) of the incident that includes the timeline event.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the incident that the event is part of.
+     * @return The Amazon Resource Name (ARN) of the incident that includes the timeline event.
      */
 
     public String getIncidentRecordArn() {
@@ -272,11 +470,11 @@ public class ListTimelineEventsRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the incident that the event is part of.
+     * The Amazon Resource Name (ARN) of the incident that includes the timeline event.
      * </p>
      * 
      * @param incidentRecordArn
-     *        The Amazon Resource Name (ARN) of the incident that the event is part of.
+     *        The Amazon Resource Name (ARN) of the incident that includes the timeline event.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

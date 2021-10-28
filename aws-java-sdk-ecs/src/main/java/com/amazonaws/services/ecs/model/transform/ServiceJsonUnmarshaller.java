@@ -103,6 +103,10 @@ public class ServiceJsonUnmarshaller implements Unmarshaller<Service, JsonUnmars
                     context.nextToken();
                     service.setPlatformVersion(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("platformFamily", targetDepth)) {
+                    context.nextToken();
+                    service.setPlatformFamily(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("taskDefinition", targetDepth)) {
                     context.nextToken();
                     service.setTaskDefinition(context.getUnmarshaller(String.class).unmarshall(context));

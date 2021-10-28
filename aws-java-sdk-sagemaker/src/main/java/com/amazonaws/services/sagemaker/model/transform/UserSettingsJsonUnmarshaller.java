@@ -74,6 +74,14 @@ public class UserSettingsJsonUnmarshaller implements Unmarshaller<UserSettings, 
                     context.nextToken();
                     userSettings.setTensorBoardAppSettings(TensorBoardAppSettingsJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("RStudioServerProAppSettings", targetDepth)) {
+                    context.nextToken();
+                    userSettings.setRStudioServerProAppSettings(RStudioServerProAppSettingsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("RSessionAppSettings", targetDepth)) {
+                    context.nextToken();
+                    userSettings.setRSessionAppSettings(RSessionAppSettingsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

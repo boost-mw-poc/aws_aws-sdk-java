@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Information about a Region in your replication set.
+ * Information about a Amazon Web Services Region in your replication set.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-incidents-2018-05-10/RegionInfo" target="_top">AWS API
@@ -30,36 +30,36 @@ public class RegionInfo implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID of the KMS key used to encrypt the data in this Region.
+     * The ID of the KMS key used to encrypt the data in this Amazon Web Services Region.
      * </p>
      */
     private String sseKmsKeyId;
     /**
      * <p>
-     * The status of the Region in the replication set.
+     * The status of the Amazon Web Services Region in the replication set.
      * </p>
      */
     private String status;
     /**
      * <p>
-     * Information displayed about the status of the Region.
+     * Information displayed about the status of the Amazon Web Services Region.
      * </p>
      */
     private String statusMessage;
     /**
      * <p>
-     * The most recent date and time that the Region's status was updated.
+     * The most recent date and time that Incident Manager updated the Amazon Web Services Region's status.
      * </p>
      */
     private java.util.Date statusUpdateDateTime;
 
     /**
      * <p>
-     * The ID of the KMS key used to encrypt the data in this Region.
+     * The ID of the KMS key used to encrypt the data in this Amazon Web Services Region.
      * </p>
      * 
      * @param sseKmsKeyId
-     *        The ID of the KMS key used to encrypt the data in this Region.
+     *        The ID of the KMS key used to encrypt the data in this Amazon Web Services Region.
      */
 
     public void setSseKmsKeyId(String sseKmsKeyId) {
@@ -68,10 +68,10 @@ public class RegionInfo implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID of the KMS key used to encrypt the data in this Region.
+     * The ID of the KMS key used to encrypt the data in this Amazon Web Services Region.
      * </p>
      * 
-     * @return The ID of the KMS key used to encrypt the data in this Region.
+     * @return The ID of the KMS key used to encrypt the data in this Amazon Web Services Region.
      */
 
     public String getSseKmsKeyId() {
@@ -80,11 +80,11 @@ public class RegionInfo implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID of the KMS key used to encrypt the data in this Region.
+     * The ID of the KMS key used to encrypt the data in this Amazon Web Services Region.
      * </p>
      * 
      * @param sseKmsKeyId
-     *        The ID of the KMS key used to encrypt the data in this Region.
+     *        The ID of the KMS key used to encrypt the data in this Amazon Web Services Region.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -95,11 +95,11 @@ public class RegionInfo implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The status of the Region in the replication set.
+     * The status of the Amazon Web Services Region in the replication set.
      * </p>
      * 
      * @param status
-     *        The status of the Region in the replication set.
+     *        The status of the Amazon Web Services Region in the replication set.
      * @see RegionStatus
      */
 
@@ -109,10 +109,10 @@ public class RegionInfo implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The status of the Region in the replication set.
+     * The status of the Amazon Web Services Region in the replication set.
      * </p>
      * 
-     * @return The status of the Region in the replication set.
+     * @return The status of the Amazon Web Services Region in the replication set.
      * @see RegionStatus
      */
 
@@ -122,11 +122,11 @@ public class RegionInfo implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The status of the Region in the replication set.
+     * The status of the Amazon Web Services Region in the replication set.
      * </p>
      * 
      * @param status
-     *        The status of the Region in the replication set.
+     *        The status of the Amazon Web Services Region in the replication set.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see RegionStatus
      */
@@ -138,11 +138,11 @@ public class RegionInfo implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The status of the Region in the replication set.
+     * The status of the Amazon Web Services Region in the replication set.
      * </p>
      * 
      * @param status
-     *        The status of the Region in the replication set.
+     *        The status of the Amazon Web Services Region in the replication set.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see RegionStatus
      */
@@ -154,11 +154,11 @@ public class RegionInfo implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Information displayed about the status of the Region.
+     * Information displayed about the status of the Amazon Web Services Region.
      * </p>
      * 
      * @param statusMessage
-     *        Information displayed about the status of the Region.
+     *        Information displayed about the status of the Amazon Web Services Region.
      */
 
     public void setStatusMessage(String statusMessage) {
@@ -167,10 +167,10 @@ public class RegionInfo implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Information displayed about the status of the Region.
+     * Information displayed about the status of the Amazon Web Services Region.
      * </p>
      * 
-     * @return Information displayed about the status of the Region.
+     * @return Information displayed about the status of the Amazon Web Services Region.
      */
 
     public String getStatusMessage() {
@@ -179,11 +179,11 @@ public class RegionInfo implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Information displayed about the status of the Region.
+     * Information displayed about the status of the Amazon Web Services Region.
      * </p>
      * 
      * @param statusMessage
-     *        Information displayed about the status of the Region.
+     *        Information displayed about the status of the Amazon Web Services Region.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -194,11 +194,11 @@ public class RegionInfo implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The most recent date and time that the Region's status was updated.
+     * The most recent date and time that Incident Manager updated the Amazon Web Services Region's status.
      * </p>
      * 
      * @param statusUpdateDateTime
-     *        The most recent date and time that the Region's status was updated.
+     *        The most recent date and time that Incident Manager updated the Amazon Web Services Region's status.
      */
 
     public void setStatusUpdateDateTime(java.util.Date statusUpdateDateTime) {
@@ -207,10 +207,10 @@ public class RegionInfo implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The most recent date and time that the Region's status was updated.
+     * The most recent date and time that Incident Manager updated the Amazon Web Services Region's status.
      * </p>
      * 
-     * @return The most recent date and time that the Region's status was updated.
+     * @return The most recent date and time that Incident Manager updated the Amazon Web Services Region's status.
      */
 
     public java.util.Date getStatusUpdateDateTime() {
@@ -219,11 +219,11 @@ public class RegionInfo implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The most recent date and time that the Region's status was updated.
+     * The most recent date and time that Incident Manager updated the Amazon Web Services Region's status.
      * </p>
      * 
      * @param statusUpdateDateTime
-     *        The most recent date and time that the Region's status was updated.
+     *        The most recent date and time that Incident Manager updated the Amazon Web Services Region's status.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

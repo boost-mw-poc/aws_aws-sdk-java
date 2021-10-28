@@ -37,6 +37,12 @@ public class UpdateDomainRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </p>
      */
     private UserSettings defaultUserSettings;
+    /**
+     * <p>
+     * A collection of <code>DomainSettings</code> configuration values to update.
+     * </p>
+     */
+    private DomainSettingsForUpdate domainSettingsForUpdate;
 
     /**
      * <p>
@@ -119,6 +125,46 @@ public class UpdateDomainRequest extends com.amazonaws.AmazonWebServiceRequest i
     }
 
     /**
+     * <p>
+     * A collection of <code>DomainSettings</code> configuration values to update.
+     * </p>
+     * 
+     * @param domainSettingsForUpdate
+     *        A collection of <code>DomainSettings</code> configuration values to update.
+     */
+
+    public void setDomainSettingsForUpdate(DomainSettingsForUpdate domainSettingsForUpdate) {
+        this.domainSettingsForUpdate = domainSettingsForUpdate;
+    }
+
+    /**
+     * <p>
+     * A collection of <code>DomainSettings</code> configuration values to update.
+     * </p>
+     * 
+     * @return A collection of <code>DomainSettings</code> configuration values to update.
+     */
+
+    public DomainSettingsForUpdate getDomainSettingsForUpdate() {
+        return this.domainSettingsForUpdate;
+    }
+
+    /**
+     * <p>
+     * A collection of <code>DomainSettings</code> configuration values to update.
+     * </p>
+     * 
+     * @param domainSettingsForUpdate
+     *        A collection of <code>DomainSettings</code> configuration values to update.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateDomainRequest withDomainSettingsForUpdate(DomainSettingsForUpdate domainSettingsForUpdate) {
+        setDomainSettingsForUpdate(domainSettingsForUpdate);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -133,7 +179,9 @@ public class UpdateDomainRequest extends com.amazonaws.AmazonWebServiceRequest i
         if (getDomainId() != null)
             sb.append("DomainId: ").append(getDomainId()).append(",");
         if (getDefaultUserSettings() != null)
-            sb.append("DefaultUserSettings: ").append(getDefaultUserSettings());
+            sb.append("DefaultUserSettings: ").append(getDefaultUserSettings()).append(",");
+        if (getDomainSettingsForUpdate() != null)
+            sb.append("DomainSettingsForUpdate: ").append(getDomainSettingsForUpdate());
         sb.append("}");
         return sb.toString();
     }
@@ -156,6 +204,10 @@ public class UpdateDomainRequest extends com.amazonaws.AmazonWebServiceRequest i
             return false;
         if (other.getDefaultUserSettings() != null && other.getDefaultUserSettings().equals(this.getDefaultUserSettings()) == false)
             return false;
+        if (other.getDomainSettingsForUpdate() == null ^ this.getDomainSettingsForUpdate() == null)
+            return false;
+        if (other.getDomainSettingsForUpdate() != null && other.getDomainSettingsForUpdate().equals(this.getDomainSettingsForUpdate()) == false)
+            return false;
         return true;
     }
 
@@ -166,6 +218,7 @@ public class UpdateDomainRequest extends com.amazonaws.AmazonWebServiceRequest i
 
         hashCode = prime * hashCode + ((getDomainId() == null) ? 0 : getDomainId().hashCode());
         hashCode = prime * hashCode + ((getDefaultUserSettings() == null) ? 0 : getDefaultUserSettings().hashCode());
+        hashCode = prime * hashCode + ((getDomainSettingsForUpdate() == null) ? 0 : getDomainSettingsForUpdate().hashCode());
         return hashCode;
     }
 
