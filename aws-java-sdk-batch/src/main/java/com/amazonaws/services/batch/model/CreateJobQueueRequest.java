@@ -44,6 +44,17 @@ public class CreateJobQueueRequest extends com.amazonaws.AmazonWebServiceRequest
     private String state;
     /**
      * <p>
+     * Amazon Resource Name (ARN) of the fair share scheduling policy. If this parameter is specified, the job queue
+     * will use a fair share scheduling policy. If this parameter is not specified, the job queue will use a first in,
+     * first out (FIFO) scheduling policy. Once a job queue is created, the fair share scheduling policy can be replaced
+     * but not removed. The format is
+     * <code>aws:<i>Partition</i>:batch:<i>Region</i>:<i>Account</i>:scheduling-policy/<i>Name</i> </code>. For example,
+     * <code>aws:aws:batch:us-west-2:012345678910:scheduling-policy/MySchedulingPolicy</code>.
+     * </p>
+     */
+    private String schedulingPolicyArn;
+    /**
+     * <p>
      * The priority of the job queue. Job queues with a higher priority (or a higher integer value for the
      * <code>priority</code> parameter) are evaluated first when associated with the same compute environment. Priority
      * is determined in descending order. For example, a job queue with a priority value of <code>10</code> is given
@@ -213,6 +224,76 @@ public class CreateJobQueueRequest extends com.amazonaws.AmazonWebServiceRequest
 
     public CreateJobQueueRequest withState(JQState state) {
         this.state = state.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * Amazon Resource Name (ARN) of the fair share scheduling policy. If this parameter is specified, the job queue
+     * will use a fair share scheduling policy. If this parameter is not specified, the job queue will use a first in,
+     * first out (FIFO) scheduling policy. Once a job queue is created, the fair share scheduling policy can be replaced
+     * but not removed. The format is
+     * <code>aws:<i>Partition</i>:batch:<i>Region</i>:<i>Account</i>:scheduling-policy/<i>Name</i> </code>. For example,
+     * <code>aws:aws:batch:us-west-2:012345678910:scheduling-policy/MySchedulingPolicy</code>.
+     * </p>
+     * 
+     * @param schedulingPolicyArn
+     *        Amazon Resource Name (ARN) of the fair share scheduling policy. If this parameter is specified, the job
+     *        queue will use a fair share scheduling policy. If this parameter is not specified, the job queue will use
+     *        a first in, first out (FIFO) scheduling policy. Once a job queue is created, the fair share scheduling
+     *        policy can be replaced but not removed. The format is
+     *        <code>aws:<i>Partition</i>:batch:<i>Region</i>:<i>Account</i>:scheduling-policy/<i>Name</i> </code>. For
+     *        example, <code>aws:aws:batch:us-west-2:012345678910:scheduling-policy/MySchedulingPolicy</code>.
+     */
+
+    public void setSchedulingPolicyArn(String schedulingPolicyArn) {
+        this.schedulingPolicyArn = schedulingPolicyArn;
+    }
+
+    /**
+     * <p>
+     * Amazon Resource Name (ARN) of the fair share scheduling policy. If this parameter is specified, the job queue
+     * will use a fair share scheduling policy. If this parameter is not specified, the job queue will use a first in,
+     * first out (FIFO) scheduling policy. Once a job queue is created, the fair share scheduling policy can be replaced
+     * but not removed. The format is
+     * <code>aws:<i>Partition</i>:batch:<i>Region</i>:<i>Account</i>:scheduling-policy/<i>Name</i> </code>. For example,
+     * <code>aws:aws:batch:us-west-2:012345678910:scheduling-policy/MySchedulingPolicy</code>.
+     * </p>
+     * 
+     * @return Amazon Resource Name (ARN) of the fair share scheduling policy. If this parameter is specified, the job
+     *         queue will use a fair share scheduling policy. If this parameter is not specified, the job queue will use
+     *         a first in, first out (FIFO) scheduling policy. Once a job queue is created, the fair share scheduling
+     *         policy can be replaced but not removed. The format is
+     *         <code>aws:<i>Partition</i>:batch:<i>Region</i>:<i>Account</i>:scheduling-policy/<i>Name</i> </code>. For
+     *         example, <code>aws:aws:batch:us-west-2:012345678910:scheduling-policy/MySchedulingPolicy</code>.
+     */
+
+    public String getSchedulingPolicyArn() {
+        return this.schedulingPolicyArn;
+    }
+
+    /**
+     * <p>
+     * Amazon Resource Name (ARN) of the fair share scheduling policy. If this parameter is specified, the job queue
+     * will use a fair share scheduling policy. If this parameter is not specified, the job queue will use a first in,
+     * first out (FIFO) scheduling policy. Once a job queue is created, the fair share scheduling policy can be replaced
+     * but not removed. The format is
+     * <code>aws:<i>Partition</i>:batch:<i>Region</i>:<i>Account</i>:scheduling-policy/<i>Name</i> </code>. For example,
+     * <code>aws:aws:batch:us-west-2:012345678910:scheduling-policy/MySchedulingPolicy</code>.
+     * </p>
+     * 
+     * @param schedulingPolicyArn
+     *        Amazon Resource Name (ARN) of the fair share scheduling policy. If this parameter is specified, the job
+     *        queue will use a fair share scheduling policy. If this parameter is not specified, the job queue will use
+     *        a first in, first out (FIFO) scheduling policy. Once a job queue is created, the fair share scheduling
+     *        policy can be replaced but not removed. The format is
+     *        <code>aws:<i>Partition</i>:batch:<i>Region</i>:<i>Account</i>:scheduling-policy/<i>Name</i> </code>. For
+     *        example, <code>aws:aws:batch:us-west-2:012345678910:scheduling-policy/MySchedulingPolicy</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateJobQueueRequest withSchedulingPolicyArn(String schedulingPolicyArn) {
+        setSchedulingPolicyArn(schedulingPolicyArn);
         return this;
     }
 
@@ -538,6 +619,8 @@ public class CreateJobQueueRequest extends com.amazonaws.AmazonWebServiceRequest
             sb.append("JobQueueName: ").append(getJobQueueName()).append(",");
         if (getState() != null)
             sb.append("State: ").append(getState()).append(",");
+        if (getSchedulingPolicyArn() != null)
+            sb.append("SchedulingPolicyArn: ").append(getSchedulingPolicyArn()).append(",");
         if (getPriority() != null)
             sb.append("Priority: ").append(getPriority()).append(",");
         if (getComputeEnvironmentOrder() != null)
@@ -566,6 +649,10 @@ public class CreateJobQueueRequest extends com.amazonaws.AmazonWebServiceRequest
             return false;
         if (other.getState() != null && other.getState().equals(this.getState()) == false)
             return false;
+        if (other.getSchedulingPolicyArn() == null ^ this.getSchedulingPolicyArn() == null)
+            return false;
+        if (other.getSchedulingPolicyArn() != null && other.getSchedulingPolicyArn().equals(this.getSchedulingPolicyArn()) == false)
+            return false;
         if (other.getPriority() == null ^ this.getPriority() == null)
             return false;
         if (other.getPriority() != null && other.getPriority().equals(this.getPriority()) == false)
@@ -588,6 +675,7 @@ public class CreateJobQueueRequest extends com.amazonaws.AmazonWebServiceRequest
 
         hashCode = prime * hashCode + ((getJobQueueName() == null) ? 0 : getJobQueueName().hashCode());
         hashCode = prime * hashCode + ((getState() == null) ? 0 : getState().hashCode());
+        hashCode = prime * hashCode + ((getSchedulingPolicyArn() == null) ? 0 : getSchedulingPolicyArn().hashCode());
         hashCode = prime * hashCode + ((getPriority() == null) ? 0 : getPriority().hashCode());
         hashCode = prime * hashCode + ((getComputeEnvironmentOrder() == null) ? 0 : getComputeEnvironmentOrder().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());

@@ -54,13 +54,20 @@ public class JobDefinition implements Serializable, Cloneable, StructuredPojo {
     private String status;
     /**
      * <p>
-     * The type of job definition. If the job is run on Fargate resources, then <code>multinode</code> isn't supported.
-     * For more information about multi-node parallel jobs, see <a
-     * href="https://docs.aws.amazon.com/batch/latest/userguide/multi-node-job-def.html">Creating a multi-node parallel
-     * job definition</a> in the <i>Batch User Guide</i>.
+     * The type of job definition, either <code>container</code> or <code>multinode</code>. If the job is run on Fargate
+     * resources, then <code>multinode</code> isn't supported. For more information about multi-node parallel jobs, see
+     * <a href="https://docs.aws.amazon.com/batch/latest/userguide/multi-node-job-def.html">Creating a multi-node
+     * parallel job definition</a> in the <i>Batch User Guide</i>.
      * </p>
      */
     private String type;
+    /**
+     * <p>
+     * The scheduling priority of the job definition. This will only affect jobs in job queues with a fair share policy.
+     * Jobs with a higher scheduling priority will be scheduled before jobs with a lower scheduling priority.
+     * </p>
+     */
+    private Integer schedulingPriority;
     /**
      * <p>
      * Default parameters or parameter substitution placeholders that are set in the job definition. Parameters are
@@ -287,15 +294,16 @@ public class JobDefinition implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of job definition. If the job is run on Fargate resources, then <code>multinode</code> isn't supported.
-     * For more information about multi-node parallel jobs, see <a
-     * href="https://docs.aws.amazon.com/batch/latest/userguide/multi-node-job-def.html">Creating a multi-node parallel
-     * job definition</a> in the <i>Batch User Guide</i>.
+     * The type of job definition, either <code>container</code> or <code>multinode</code>. If the job is run on Fargate
+     * resources, then <code>multinode</code> isn't supported. For more information about multi-node parallel jobs, see
+     * <a href="https://docs.aws.amazon.com/batch/latest/userguide/multi-node-job-def.html">Creating a multi-node
+     * parallel job definition</a> in the <i>Batch User Guide</i>.
      * </p>
      * 
      * @param type
-     *        The type of job definition. If the job is run on Fargate resources, then <code>multinode</code> isn't
-     *        supported. For more information about multi-node parallel jobs, see <a
+     *        The type of job definition, either <code>container</code> or <code>multinode</code>. If the job is run on
+     *        Fargate resources, then <code>multinode</code> isn't supported. For more information about multi-node
+     *        parallel jobs, see <a
      *        href="https://docs.aws.amazon.com/batch/latest/userguide/multi-node-job-def.html">Creating a multi-node
      *        parallel job definition</a> in the <i>Batch User Guide</i>.
      */
@@ -306,14 +314,15 @@ public class JobDefinition implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of job definition. If the job is run on Fargate resources, then <code>multinode</code> isn't supported.
-     * For more information about multi-node parallel jobs, see <a
-     * href="https://docs.aws.amazon.com/batch/latest/userguide/multi-node-job-def.html">Creating a multi-node parallel
-     * job definition</a> in the <i>Batch User Guide</i>.
+     * The type of job definition, either <code>container</code> or <code>multinode</code>. If the job is run on Fargate
+     * resources, then <code>multinode</code> isn't supported. For more information about multi-node parallel jobs, see
+     * <a href="https://docs.aws.amazon.com/batch/latest/userguide/multi-node-job-def.html">Creating a multi-node
+     * parallel job definition</a> in the <i>Batch User Guide</i>.
      * </p>
      * 
-     * @return The type of job definition. If the job is run on Fargate resources, then <code>multinode</code> isn't
-     *         supported. For more information about multi-node parallel jobs, see <a
+     * @return The type of job definition, either <code>container</code> or <code>multinode</code>. If the job is run on
+     *         Fargate resources, then <code>multinode</code> isn't supported. For more information about multi-node
+     *         parallel jobs, see <a
      *         href="https://docs.aws.amazon.com/batch/latest/userguide/multi-node-job-def.html">Creating a multi-node
      *         parallel job definition</a> in the <i>Batch User Guide</i>.
      */
@@ -324,15 +333,16 @@ public class JobDefinition implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of job definition. If the job is run on Fargate resources, then <code>multinode</code> isn't supported.
-     * For more information about multi-node parallel jobs, see <a
-     * href="https://docs.aws.amazon.com/batch/latest/userguide/multi-node-job-def.html">Creating a multi-node parallel
-     * job definition</a> in the <i>Batch User Guide</i>.
+     * The type of job definition, either <code>container</code> or <code>multinode</code>. If the job is run on Fargate
+     * resources, then <code>multinode</code> isn't supported. For more information about multi-node parallel jobs, see
+     * <a href="https://docs.aws.amazon.com/batch/latest/userguide/multi-node-job-def.html">Creating a multi-node
+     * parallel job definition</a> in the <i>Batch User Guide</i>.
      * </p>
      * 
      * @param type
-     *        The type of job definition. If the job is run on Fargate resources, then <code>multinode</code> isn't
-     *        supported. For more information about multi-node parallel jobs, see <a
+     *        The type of job definition, either <code>container</code> or <code>multinode</code>. If the job is run on
+     *        Fargate resources, then <code>multinode</code> isn't supported. For more information about multi-node
+     *        parallel jobs, see <a
      *        href="https://docs.aws.amazon.com/batch/latest/userguide/multi-node-job-def.html">Creating a multi-node
      *        parallel job definition</a> in the <i>Batch User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -340,6 +350,55 @@ public class JobDefinition implements Serializable, Cloneable, StructuredPojo {
 
     public JobDefinition withType(String type) {
         setType(type);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The scheduling priority of the job definition. This will only affect jobs in job queues with a fair share policy.
+     * Jobs with a higher scheduling priority will be scheduled before jobs with a lower scheduling priority.
+     * </p>
+     * 
+     * @param schedulingPriority
+     *        The scheduling priority of the job definition. This will only affect jobs in job queues with a fair share
+     *        policy. Jobs with a higher scheduling priority will be scheduled before jobs with a lower scheduling
+     *        priority.
+     */
+
+    public void setSchedulingPriority(Integer schedulingPriority) {
+        this.schedulingPriority = schedulingPriority;
+    }
+
+    /**
+     * <p>
+     * The scheduling priority of the job definition. This will only affect jobs in job queues with a fair share policy.
+     * Jobs with a higher scheduling priority will be scheduled before jobs with a lower scheduling priority.
+     * </p>
+     * 
+     * @return The scheduling priority of the job definition. This will only affect jobs in job queues with a fair share
+     *         policy. Jobs with a higher scheduling priority will be scheduled before jobs with a lower scheduling
+     *         priority.
+     */
+
+    public Integer getSchedulingPriority() {
+        return this.schedulingPriority;
+    }
+
+    /**
+     * <p>
+     * The scheduling priority of the job definition. This will only affect jobs in job queues with a fair share policy.
+     * Jobs with a higher scheduling priority will be scheduled before jobs with a lower scheduling priority.
+     * </p>
+     * 
+     * @param schedulingPriority
+     *        The scheduling priority of the job definition. This will only affect jobs in job queues with a fair share
+     *        policy. Jobs with a higher scheduling priority will be scheduled before jobs with a lower scheduling
+     *        priority.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public JobDefinition withSchedulingPriority(Integer schedulingPriority) {
+        setSchedulingPriority(schedulingPriority);
         return this;
     }
 
@@ -912,6 +971,8 @@ public class JobDefinition implements Serializable, Cloneable, StructuredPojo {
             sb.append("Status: ").append(getStatus()).append(",");
         if (getType() != null)
             sb.append("Type: ").append(getType()).append(",");
+        if (getSchedulingPriority() != null)
+            sb.append("SchedulingPriority: ").append(getSchedulingPriority()).append(",");
         if (getParameters() != null)
             sb.append("Parameters: ").append(getParameters()).append(",");
         if (getRetryStrategy() != null)
@@ -962,6 +1023,10 @@ public class JobDefinition implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getType() != null && other.getType().equals(this.getType()) == false)
             return false;
+        if (other.getSchedulingPriority() == null ^ this.getSchedulingPriority() == null)
+            return false;
+        if (other.getSchedulingPriority() != null && other.getSchedulingPriority().equals(this.getSchedulingPriority()) == false)
+            return false;
         if (other.getParameters() == null ^ this.getParameters() == null)
             return false;
         if (other.getParameters() != null && other.getParameters().equals(this.getParameters()) == false)
@@ -1007,6 +1072,7 @@ public class JobDefinition implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getRevision() == null) ? 0 : getRevision().hashCode());
         hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
         hashCode = prime * hashCode + ((getType() == null) ? 0 : getType().hashCode());
+        hashCode = prime * hashCode + ((getSchedulingPriority() == null) ? 0 : getSchedulingPriority().hashCode());
         hashCode = prime * hashCode + ((getParameters() == null) ? 0 : getParameters().hashCode());
         hashCode = prime * hashCode + ((getRetryStrategy() == null) ? 0 : getRetryStrategy().hashCode());
         hashCode = prime * hashCode + ((getContainerProperties() == null) ? 0 : getContainerProperties().hashCode());

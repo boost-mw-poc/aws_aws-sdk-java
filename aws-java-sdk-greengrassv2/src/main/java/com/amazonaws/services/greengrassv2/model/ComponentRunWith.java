@@ -33,9 +33,10 @@ public class ComponentRunWith implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The POSIX system user and (optional) group to use to run this component. Specify the user and group separated by
-     * a colon (<code>:</code>) in the following format: <code>user:group</code>. The group is optional. If you don't
-     * specify a group, the IoT Greengrass Core software uses the primary user for the group.
+     * The POSIX system user and, optionally, group to use to run this component on Linux core devices. The user, and
+     * group if specified, must exist on each Linux core device. Specify the user and group separated by a colon (
+     * <code>:</code>) in the following format: <code>user:group</code>. The group is optional. If you don't specify a
+     * group, the IoT Greengrass Core software uses the primary user for the group.
      * </p>
      * <p>
      * If you omit this parameter, the IoT Greengrass Core software uses the default system user and group that you
@@ -47,7 +48,8 @@ public class ComponentRunWith implements Serializable, Cloneable, StructuredPojo
     private String posixUser;
     /**
      * <p>
-     * The system resource limits to apply to this component's process on the core device.
+     * The system resource limits to apply to this component's process on the core device. IoT Greengrass currently
+     * supports this feature on only Linux core devices.
      * </p>
      * <p>
      * If you omit this parameter, the IoT Greengrass Core software uses the default system resource limits that you
@@ -57,12 +59,26 @@ public class ComponentRunWith implements Serializable, Cloneable, StructuredPojo
      * </p>
      */
     private SystemResourceLimits systemResourceLimits;
+    /**
+     * <p>
+     * The Windows user to use to run this component on Windows core devices. The user must exist on each Windows core
+     * device, and its name and password must be in the LocalSystem account's Credentials Manager instance.
+     * </p>
+     * <p>
+     * If you omit this parameter, the IoT Greengrass Core software uses the default Windows user that you configure on
+     * the Greengrass nucleus component. For more information, see <a href=
+     * "https://docs.aws.amazon.com/greengrass/v2/developerguide/configure-greengrass-core-v2.html#configure-component-user"
+     * >Configure the user and group that run components</a>.
+     * </p>
+     */
+    private String windowsUser;
 
     /**
      * <p>
-     * The POSIX system user and (optional) group to use to run this component. Specify the user and group separated by
-     * a colon (<code>:</code>) in the following format: <code>user:group</code>. The group is optional. If you don't
-     * specify a group, the IoT Greengrass Core software uses the primary user for the group.
+     * The POSIX system user and, optionally, group to use to run this component on Linux core devices. The user, and
+     * group if specified, must exist on each Linux core device. Specify the user and group separated by a colon (
+     * <code>:</code>) in the following format: <code>user:group</code>. The group is optional. If you don't specify a
+     * group, the IoT Greengrass Core software uses the primary user for the group.
      * </p>
      * <p>
      * If you omit this parameter, the IoT Greengrass Core software uses the default system user and group that you
@@ -72,10 +88,10 @@ public class ComponentRunWith implements Serializable, Cloneable, StructuredPojo
      * </p>
      * 
      * @param posixUser
-     *        The POSIX system user and (optional) group to use to run this component. Specify the user and group
-     *        separated by a colon (<code>:</code>) in the following format: <code>user:group</code>. The group is
-     *        optional. If you don't specify a group, the IoT Greengrass Core software uses the primary user for the
-     *        group.</p>
+     *        The POSIX system user and, optionally, group to use to run this component on Linux core devices. The user,
+     *        and group if specified, must exist on each Linux core device. Specify the user and group separated by a
+     *        colon (<code>:</code>) in the following format: <code>user:group</code>. The group is optional. If you
+     *        don't specify a group, the IoT Greengrass Core software uses the primary user for the group.</p>
      *        <p>
      *        If you omit this parameter, the IoT Greengrass Core software uses the default system user and group that
      *        you configure on the Greengrass nucleus component. For more information, see <a href=
@@ -89,9 +105,10 @@ public class ComponentRunWith implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The POSIX system user and (optional) group to use to run this component. Specify the user and group separated by
-     * a colon (<code>:</code>) in the following format: <code>user:group</code>. The group is optional. If you don't
-     * specify a group, the IoT Greengrass Core software uses the primary user for the group.
+     * The POSIX system user and, optionally, group to use to run this component on Linux core devices. The user, and
+     * group if specified, must exist on each Linux core device. Specify the user and group separated by a colon (
+     * <code>:</code>) in the following format: <code>user:group</code>. The group is optional. If you don't specify a
+     * group, the IoT Greengrass Core software uses the primary user for the group.
      * </p>
      * <p>
      * If you omit this parameter, the IoT Greengrass Core software uses the default system user and group that you
@@ -100,10 +117,10 @@ public class ComponentRunWith implements Serializable, Cloneable, StructuredPojo
      * >Configure the user and group that run components</a>.
      * </p>
      * 
-     * @return The POSIX system user and (optional) group to use to run this component. Specify the user and group
-     *         separated by a colon (<code>:</code>) in the following format: <code>user:group</code>. The group is
-     *         optional. If you don't specify a group, the IoT Greengrass Core software uses the primary user for the
-     *         group.</p>
+     * @return The POSIX system user and, optionally, group to use to run this component on Linux core devices. The
+     *         user, and group if specified, must exist on each Linux core device. Specify the user and group separated
+     *         by a colon (<code>:</code>) in the following format: <code>user:group</code>. The group is optional. If
+     *         you don't specify a group, the IoT Greengrass Core software uses the primary user for the group.</p>
      *         <p>
      *         If you omit this parameter, the IoT Greengrass Core software uses the default system user and group that
      *         you configure on the Greengrass nucleus component. For more information, see <a href=
@@ -117,9 +134,10 @@ public class ComponentRunWith implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The POSIX system user and (optional) group to use to run this component. Specify the user and group separated by
-     * a colon (<code>:</code>) in the following format: <code>user:group</code>. The group is optional. If you don't
-     * specify a group, the IoT Greengrass Core software uses the primary user for the group.
+     * The POSIX system user and, optionally, group to use to run this component on Linux core devices. The user, and
+     * group if specified, must exist on each Linux core device. Specify the user and group separated by a colon (
+     * <code>:</code>) in the following format: <code>user:group</code>. The group is optional. If you don't specify a
+     * group, the IoT Greengrass Core software uses the primary user for the group.
      * </p>
      * <p>
      * If you omit this parameter, the IoT Greengrass Core software uses the default system user and group that you
@@ -129,10 +147,10 @@ public class ComponentRunWith implements Serializable, Cloneable, StructuredPojo
      * </p>
      * 
      * @param posixUser
-     *        The POSIX system user and (optional) group to use to run this component. Specify the user and group
-     *        separated by a colon (<code>:</code>) in the following format: <code>user:group</code>. The group is
-     *        optional. If you don't specify a group, the IoT Greengrass Core software uses the primary user for the
-     *        group.</p>
+     *        The POSIX system user and, optionally, group to use to run this component on Linux core devices. The user,
+     *        and group if specified, must exist on each Linux core device. Specify the user and group separated by a
+     *        colon (<code>:</code>) in the following format: <code>user:group</code>. The group is optional. If you
+     *        don't specify a group, the IoT Greengrass Core software uses the primary user for the group.</p>
      *        <p>
      *        If you omit this parameter, the IoT Greengrass Core software uses the default system user and group that
      *        you configure on the Greengrass nucleus component. For more information, see <a href=
@@ -148,7 +166,8 @@ public class ComponentRunWith implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The system resource limits to apply to this component's process on the core device.
+     * The system resource limits to apply to this component's process on the core device. IoT Greengrass currently
+     * supports this feature on only Linux core devices.
      * </p>
      * <p>
      * If you omit this parameter, the IoT Greengrass Core software uses the default system resource limits that you
@@ -158,7 +177,8 @@ public class ComponentRunWith implements Serializable, Cloneable, StructuredPojo
      * </p>
      * 
      * @param systemResourceLimits
-     *        The system resource limits to apply to this component's process on the core device.</p>
+     *        The system resource limits to apply to this component's process on the core device. IoT Greengrass
+     *        currently supports this feature on only Linux core devices.</p>
      *        <p>
      *        If you omit this parameter, the IoT Greengrass Core software uses the default system resource limits that
      *        you configure on the Greengrass nucleus component. For more information, see <a href=
@@ -172,7 +192,8 @@ public class ComponentRunWith implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The system resource limits to apply to this component's process on the core device.
+     * The system resource limits to apply to this component's process on the core device. IoT Greengrass currently
+     * supports this feature on only Linux core devices.
      * </p>
      * <p>
      * If you omit this parameter, the IoT Greengrass Core software uses the default system resource limits that you
@@ -181,7 +202,8 @@ public class ComponentRunWith implements Serializable, Cloneable, StructuredPojo
      * >Configure system resource limits for components</a>.
      * </p>
      * 
-     * @return The system resource limits to apply to this component's process on the core device.</p>
+     * @return The system resource limits to apply to this component's process on the core device. IoT Greengrass
+     *         currently supports this feature on only Linux core devices.</p>
      *         <p>
      *         If you omit this parameter, the IoT Greengrass Core software uses the default system resource limits that
      *         you configure on the Greengrass nucleus component. For more information, see <a href=
@@ -195,7 +217,8 @@ public class ComponentRunWith implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The system resource limits to apply to this component's process on the core device.
+     * The system resource limits to apply to this component's process on the core device. IoT Greengrass currently
+     * supports this feature on only Linux core devices.
      * </p>
      * <p>
      * If you omit this parameter, the IoT Greengrass Core software uses the default system resource limits that you
@@ -205,7 +228,8 @@ public class ComponentRunWith implements Serializable, Cloneable, StructuredPojo
      * </p>
      * 
      * @param systemResourceLimits
-     *        The system resource limits to apply to this component's process on the core device.</p>
+     *        The system resource limits to apply to this component's process on the core device. IoT Greengrass
+     *        currently supports this feature on only Linux core devices.</p>
      *        <p>
      *        If you omit this parameter, the IoT Greengrass Core software uses the default system resource limits that
      *        you configure on the Greengrass nucleus component. For more information, see <a href=
@@ -216,6 +240,88 @@ public class ComponentRunWith implements Serializable, Cloneable, StructuredPojo
 
     public ComponentRunWith withSystemResourceLimits(SystemResourceLimits systemResourceLimits) {
         setSystemResourceLimits(systemResourceLimits);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The Windows user to use to run this component on Windows core devices. The user must exist on each Windows core
+     * device, and its name and password must be in the LocalSystem account's Credentials Manager instance.
+     * </p>
+     * <p>
+     * If you omit this parameter, the IoT Greengrass Core software uses the default Windows user that you configure on
+     * the Greengrass nucleus component. For more information, see <a href=
+     * "https://docs.aws.amazon.com/greengrass/v2/developerguide/configure-greengrass-core-v2.html#configure-component-user"
+     * >Configure the user and group that run components</a>.
+     * </p>
+     * 
+     * @param windowsUser
+     *        The Windows user to use to run this component on Windows core devices. The user must exist on each Windows
+     *        core device, and its name and password must be in the LocalSystem account's Credentials Manager
+     *        instance.</p>
+     *        <p>
+     *        If you omit this parameter, the IoT Greengrass Core software uses the default Windows user that you
+     *        configure on the Greengrass nucleus component. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/greengrass/v2/developerguide/configure-greengrass-core-v2.html#configure-component-user"
+     *        >Configure the user and group that run components</a>.
+     */
+
+    public void setWindowsUser(String windowsUser) {
+        this.windowsUser = windowsUser;
+    }
+
+    /**
+     * <p>
+     * The Windows user to use to run this component on Windows core devices. The user must exist on each Windows core
+     * device, and its name and password must be in the LocalSystem account's Credentials Manager instance.
+     * </p>
+     * <p>
+     * If you omit this parameter, the IoT Greengrass Core software uses the default Windows user that you configure on
+     * the Greengrass nucleus component. For more information, see <a href=
+     * "https://docs.aws.amazon.com/greengrass/v2/developerguide/configure-greengrass-core-v2.html#configure-component-user"
+     * >Configure the user and group that run components</a>.
+     * </p>
+     * 
+     * @return The Windows user to use to run this component on Windows core devices. The user must exist on each
+     *         Windows core device, and its name and password must be in the LocalSystem account's Credentials Manager
+     *         instance.</p>
+     *         <p>
+     *         If you omit this parameter, the IoT Greengrass Core software uses the default Windows user that you
+     *         configure on the Greengrass nucleus component. For more information, see <a href=
+     *         "https://docs.aws.amazon.com/greengrass/v2/developerguide/configure-greengrass-core-v2.html#configure-component-user"
+     *         >Configure the user and group that run components</a>.
+     */
+
+    public String getWindowsUser() {
+        return this.windowsUser;
+    }
+
+    /**
+     * <p>
+     * The Windows user to use to run this component on Windows core devices. The user must exist on each Windows core
+     * device, and its name and password must be in the LocalSystem account's Credentials Manager instance.
+     * </p>
+     * <p>
+     * If you omit this parameter, the IoT Greengrass Core software uses the default Windows user that you configure on
+     * the Greengrass nucleus component. For more information, see <a href=
+     * "https://docs.aws.amazon.com/greengrass/v2/developerguide/configure-greengrass-core-v2.html#configure-component-user"
+     * >Configure the user and group that run components</a>.
+     * </p>
+     * 
+     * @param windowsUser
+     *        The Windows user to use to run this component on Windows core devices. The user must exist on each Windows
+     *        core device, and its name and password must be in the LocalSystem account's Credentials Manager
+     *        instance.</p>
+     *        <p>
+     *        If you omit this parameter, the IoT Greengrass Core software uses the default Windows user that you
+     *        configure on the Greengrass nucleus component. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/greengrass/v2/developerguide/configure-greengrass-core-v2.html#configure-component-user"
+     *        >Configure the user and group that run components</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ComponentRunWith withWindowsUser(String windowsUser) {
+        setWindowsUser(windowsUser);
         return this;
     }
 
@@ -234,7 +340,9 @@ public class ComponentRunWith implements Serializable, Cloneable, StructuredPojo
         if (getPosixUser() != null)
             sb.append("PosixUser: ").append(getPosixUser()).append(",");
         if (getSystemResourceLimits() != null)
-            sb.append("SystemResourceLimits: ").append(getSystemResourceLimits());
+            sb.append("SystemResourceLimits: ").append(getSystemResourceLimits()).append(",");
+        if (getWindowsUser() != null)
+            sb.append("WindowsUser: ").append(getWindowsUser());
         sb.append("}");
         return sb.toString();
     }
@@ -257,6 +365,10 @@ public class ComponentRunWith implements Serializable, Cloneable, StructuredPojo
             return false;
         if (other.getSystemResourceLimits() != null && other.getSystemResourceLimits().equals(this.getSystemResourceLimits()) == false)
             return false;
+        if (other.getWindowsUser() == null ^ this.getWindowsUser() == null)
+            return false;
+        if (other.getWindowsUser() != null && other.getWindowsUser().equals(this.getWindowsUser()) == false)
+            return false;
         return true;
     }
 
@@ -267,6 +379,7 @@ public class ComponentRunWith implements Serializable, Cloneable, StructuredPojo
 
         hashCode = prime * hashCode + ((getPosixUser() == null) ? 0 : getPosixUser().hashCode());
         hashCode = prime * hashCode + ((getSystemResourceLimits() == null) ? 0 : getSystemResourceLimits().hashCode());
+        hashCode = prime * hashCode + ((getWindowsUser() == null) ? 0 : getWindowsUser().hashCode());
         return hashCode;
     }
 

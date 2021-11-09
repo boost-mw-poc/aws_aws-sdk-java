@@ -33,6 +33,8 @@ public class ComputeEnvironmentDetailMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("computeEnvironmentName").build();
     private static final MarshallingInfo<String> COMPUTEENVIRONMENTARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("computeEnvironmentArn").build();
+    private static final MarshallingInfo<Integer> UNMANAGEDVCPUS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("unmanagedvCpus").build();
     private static final MarshallingInfo<String> ECSCLUSTERARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ecsClusterArn").build();
     private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
@@ -68,6 +70,7 @@ public class ComputeEnvironmentDetailMarshaller {
         try {
             protocolMarshaller.marshall(computeEnvironmentDetail.getComputeEnvironmentName(), COMPUTEENVIRONMENTNAME_BINDING);
             protocolMarshaller.marshall(computeEnvironmentDetail.getComputeEnvironmentArn(), COMPUTEENVIRONMENTARN_BINDING);
+            protocolMarshaller.marshall(computeEnvironmentDetail.getUnmanagedvCpus(), UNMANAGEDVCPUS_BINDING);
             protocolMarshaller.marshall(computeEnvironmentDetail.getEcsClusterArn(), ECSCLUSTERARN_BINDING);
             protocolMarshaller.marshall(computeEnvironmentDetail.getTags(), TAGS_BINDING);
             protocolMarshaller.marshall(computeEnvironmentDetail.getType(), TYPE_BINDING);

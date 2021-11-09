@@ -38,7 +38,7 @@ public class ContainerDetail implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * The number of vCPUs reserved for the container. For jobs that run on EC2 resources, you can specify the vCPU
      * requirement for the job using <code>resourceRequirements</code>, but you can't specify the vCPU requirements in
-     * both the <code>vcpus</code> and <code>resourceRequirement</code> object. This parameter maps to
+     * both the <code>vcpus</code> and <code>resourceRequirements</code> object. This parameter maps to
      * <code>CpuShares</code> in the <a href="https://docs.docker.com/engine/api/v1.23/#create-a-container">Create a
      * container</a> section of the <a href="https://docs.docker.com/engine/api/v1.23/">Docker Remote API</a> and the
      * <code>--cpu-shares</code> option to <a href="https://docs.docker.com/engine/reference/run/">docker run</a>. Each
@@ -55,8 +55,8 @@ public class ContainerDetail implements Serializable, Cloneable, StructuredPojo 
     private Integer vcpus;
     /**
      * <p>
-     * For jobs run on EC2 resources that didn't specify memory requirements using <code>ResourceRequirement</code>, the
-     * number of MiB of memory reserved for the job. For other jobs, including all run on Fargate resources, see
+     * For jobs run on EC2 resources that didn't specify memory requirements using <code>resourceRequirements</code>,
+     * the number of MiB of memory reserved for the job. For other jobs, including all run on Fargate resources, see
      * <code>resourceRequirements</code>.
      * </p>
      */
@@ -322,7 +322,7 @@ public class ContainerDetail implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * The number of vCPUs reserved for the container. For jobs that run on EC2 resources, you can specify the vCPU
      * requirement for the job using <code>resourceRequirements</code>, but you can't specify the vCPU requirements in
-     * both the <code>vcpus</code> and <code>resourceRequirement</code> object. This parameter maps to
+     * both the <code>vcpus</code> and <code>resourceRequirements</code> object. This parameter maps to
      * <code>CpuShares</code> in the <a href="https://docs.docker.com/engine/api/v1.23/#create-a-container">Create a
      * container</a> section of the <a href="https://docs.docker.com/engine/api/v1.23/">Docker Remote API</a> and the
      * <code>--cpu-shares</code> option to <a href="https://docs.docker.com/engine/reference/run/">docker run</a>. Each
@@ -339,7 +339,7 @@ public class ContainerDetail implements Serializable, Cloneable, StructuredPojo 
      * @param vcpus
      *        The number of vCPUs reserved for the container. For jobs that run on EC2 resources, you can specify the
      *        vCPU requirement for the job using <code>resourceRequirements</code>, but you can't specify the vCPU
-     *        requirements in both the <code>vcpus</code> and <code>resourceRequirement</code> object. This parameter
+     *        requirements in both the <code>vcpus</code> and <code>resourceRequirements</code> object. This parameter
      *        maps to <code>CpuShares</code> in the <a
      *        href="https://docs.docker.com/engine/api/v1.23/#create-a-container">Create a container</a> section of the
      *        <a href="https://docs.docker.com/engine/api/v1.23/">Docker Remote API</a> and the
@@ -360,7 +360,7 @@ public class ContainerDetail implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * The number of vCPUs reserved for the container. For jobs that run on EC2 resources, you can specify the vCPU
      * requirement for the job using <code>resourceRequirements</code>, but you can't specify the vCPU requirements in
-     * both the <code>vcpus</code> and <code>resourceRequirement</code> object. This parameter maps to
+     * both the <code>vcpus</code> and <code>resourceRequirements</code> object. This parameter maps to
      * <code>CpuShares</code> in the <a href="https://docs.docker.com/engine/api/v1.23/#create-a-container">Create a
      * container</a> section of the <a href="https://docs.docker.com/engine/api/v1.23/">Docker Remote API</a> and the
      * <code>--cpu-shares</code> option to <a href="https://docs.docker.com/engine/reference/run/">docker run</a>. Each
@@ -376,7 +376,7 @@ public class ContainerDetail implements Serializable, Cloneable, StructuredPojo 
      * 
      * @return The number of vCPUs reserved for the container. For jobs that run on EC2 resources, you can specify the
      *         vCPU requirement for the job using <code>resourceRequirements</code>, but you can't specify the vCPU
-     *         requirements in both the <code>vcpus</code> and <code>resourceRequirement</code> object. This parameter
+     *         requirements in both the <code>vcpus</code> and <code>resourceRequirements</code> object. This parameter
      *         maps to <code>CpuShares</code> in the <a
      *         href="https://docs.docker.com/engine/api/v1.23/#create-a-container">Create a container</a> section of the
      *         <a href="https://docs.docker.com/engine/api/v1.23/">Docker Remote API</a> and the
@@ -398,7 +398,7 @@ public class ContainerDetail implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * The number of vCPUs reserved for the container. For jobs that run on EC2 resources, you can specify the vCPU
      * requirement for the job using <code>resourceRequirements</code>, but you can't specify the vCPU requirements in
-     * both the <code>vcpus</code> and <code>resourceRequirement</code> object. This parameter maps to
+     * both the <code>vcpus</code> and <code>resourceRequirements</code> object. This parameter maps to
      * <code>CpuShares</code> in the <a href="https://docs.docker.com/engine/api/v1.23/#create-a-container">Create a
      * container</a> section of the <a href="https://docs.docker.com/engine/api/v1.23/">Docker Remote API</a> and the
      * <code>--cpu-shares</code> option to <a href="https://docs.docker.com/engine/reference/run/">docker run</a>. Each
@@ -415,7 +415,7 @@ public class ContainerDetail implements Serializable, Cloneable, StructuredPojo 
      * @param vcpus
      *        The number of vCPUs reserved for the container. For jobs that run on EC2 resources, you can specify the
      *        vCPU requirement for the job using <code>resourceRequirements</code>, but you can't specify the vCPU
-     *        requirements in both the <code>vcpus</code> and <code>resourceRequirement</code> object. This parameter
+     *        requirements in both the <code>vcpus</code> and <code>resourceRequirements</code> object. This parameter
      *        maps to <code>CpuShares</code> in the <a
      *        href="https://docs.docker.com/engine/api/v1.23/#create-a-container">Create a container</a> section of the
      *        <a href="https://docs.docker.com/engine/api/v1.23/">Docker Remote API</a> and the
@@ -436,14 +436,14 @@ public class ContainerDetail implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * For jobs run on EC2 resources that didn't specify memory requirements using <code>ResourceRequirement</code>, the
-     * number of MiB of memory reserved for the job. For other jobs, including all run on Fargate resources, see
+     * For jobs run on EC2 resources that didn't specify memory requirements using <code>resourceRequirements</code>,
+     * the number of MiB of memory reserved for the job. For other jobs, including all run on Fargate resources, see
      * <code>resourceRequirements</code>.
      * </p>
      * 
      * @param memory
      *        For jobs run on EC2 resources that didn't specify memory requirements using
-     *        <code>ResourceRequirement</code>, the number of MiB of memory reserved for the job. For other jobs,
+     *        <code>resourceRequirements</code>, the number of MiB of memory reserved for the job. For other jobs,
      *        including all run on Fargate resources, see <code>resourceRequirements</code>.
      */
 
@@ -453,13 +453,13 @@ public class ContainerDetail implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * For jobs run on EC2 resources that didn't specify memory requirements using <code>ResourceRequirement</code>, the
-     * number of MiB of memory reserved for the job. For other jobs, including all run on Fargate resources, see
+     * For jobs run on EC2 resources that didn't specify memory requirements using <code>resourceRequirements</code>,
+     * the number of MiB of memory reserved for the job. For other jobs, including all run on Fargate resources, see
      * <code>resourceRequirements</code>.
      * </p>
      * 
      * @return For jobs run on EC2 resources that didn't specify memory requirements using
-     *         <code>ResourceRequirement</code>, the number of MiB of memory reserved for the job. For other jobs,
+     *         <code>resourceRequirements</code>, the number of MiB of memory reserved for the job. For other jobs,
      *         including all run on Fargate resources, see <code>resourceRequirements</code>.
      */
 
@@ -469,14 +469,14 @@ public class ContainerDetail implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * For jobs run on EC2 resources that didn't specify memory requirements using <code>ResourceRequirement</code>, the
-     * number of MiB of memory reserved for the job. For other jobs, including all run on Fargate resources, see
+     * For jobs run on EC2 resources that didn't specify memory requirements using <code>resourceRequirements</code>,
+     * the number of MiB of memory reserved for the job. For other jobs, including all run on Fargate resources, see
      * <code>resourceRequirements</code>.
      * </p>
      * 
      * @param memory
      *        For jobs run on EC2 resources that didn't specify memory requirements using
-     *        <code>ResourceRequirement</code>, the number of MiB of memory reserved for the job. For other jobs,
+     *        <code>resourceRequirements</code>, the number of MiB of memory reserved for the job. For other jobs,
      *        including all run on Fargate resources, see <code>resourceRequirements</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

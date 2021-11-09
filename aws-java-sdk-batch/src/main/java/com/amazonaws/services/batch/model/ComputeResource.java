@@ -234,7 +234,7 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      * Key-value pair tags to be applied to EC2 resources that are launched in the compute environment. For Batch, these
      * take the form of "String1": "String2", where String1 is the tag key and String2 is the tag value−for example,
      * <code>{ "Name": "Batch Instance - C4OnDemand" }</code>. This is helpful for recognizing your Batch instances in
-     * the Amazon EC2 console. These tags can't be updated or removed after the compute environment is created.Aany
+     * the Amazon EC2 console. These tags can't be updated or removed after the compute environment is created. Any
      * changes to these tags require that you create a new compute environment and remove the old compute environment.
      * These tags aren't seen when using the Batch <code>ListTagsForResource</code> API operation.
      * </p>
@@ -317,7 +317,10 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * Provides information used to select Amazon Machine Images (AMIs) for EC2 instances in the compute environment. If
-     * <code>Ec2Configuration</code> isn't specified, the default is <code>ECS_AL1</code>.
+     * <code>Ec2Configuration</code> isn't specified, the default is <code>ECS_AL2</code>.
+     * </p>
+     * <p>
+     * One or two values can be provided.
      * </p>
      * <note>
      * <p>
@@ -1955,7 +1958,7 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      * Key-value pair tags to be applied to EC2 resources that are launched in the compute environment. For Batch, these
      * take the form of "String1": "String2", where String1 is the tag key and String2 is the tag value−for example,
      * <code>{ "Name": "Batch Instance - C4OnDemand" }</code>. This is helpful for recognizing your Batch instances in
-     * the Amazon EC2 console. These tags can't be updated or removed after the compute environment is created.Aany
+     * the Amazon EC2 console. These tags can't be updated or removed after the compute environment is created. Any
      * changes to these tags require that you create a new compute environment and remove the old compute environment.
      * These tags aren't seen when using the Batch <code>ListTagsForResource</code> API operation.
      * </p>
@@ -1969,7 +1972,7 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      *         Batch, these take the form of "String1": "String2", where String1 is the tag key and String2 is the tag
      *         value−for example, <code>{ "Name": "Batch Instance - C4OnDemand" }</code>. This is helpful for
      *         recognizing your Batch instances in the Amazon EC2 console. These tags can't be updated or removed after
-     *         the compute environment is created.Aany changes to these tags require that you create a new compute
+     *         the compute environment is created. Any changes to these tags require that you create a new compute
      *         environment and remove the old compute environment. These tags aren't seen when using the Batch
      *         <code>ListTagsForResource</code> API operation.</p> <note>
      *         <p>
@@ -1987,7 +1990,7 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      * Key-value pair tags to be applied to EC2 resources that are launched in the compute environment. For Batch, these
      * take the form of "String1": "String2", where String1 is the tag key and String2 is the tag value−for example,
      * <code>{ "Name": "Batch Instance - C4OnDemand" }</code>. This is helpful for recognizing your Batch instances in
-     * the Amazon EC2 console. These tags can't be updated or removed after the compute environment is created.Aany
+     * the Amazon EC2 console. These tags can't be updated or removed after the compute environment is created. Any
      * changes to these tags require that you create a new compute environment and remove the old compute environment.
      * These tags aren't seen when using the Batch <code>ListTagsForResource</code> API operation.
      * </p>
@@ -2002,7 +2005,7 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      *        Batch, these take the form of "String1": "String2", where String1 is the tag key and String2 is the tag
      *        value−for example, <code>{ "Name": "Batch Instance - C4OnDemand" }</code>. This is helpful for recognizing
      *        your Batch instances in the Amazon EC2 console. These tags can't be updated or removed after the compute
-     *        environment is created.Aany changes to these tags require that you create a new compute environment and
+     *        environment is created. Any changes to these tags require that you create a new compute environment and
      *        remove the old compute environment. These tags aren't seen when using the Batch
      *        <code>ListTagsForResource</code> API operation.</p> <note>
      *        <p>
@@ -2019,7 +2022,7 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      * Key-value pair tags to be applied to EC2 resources that are launched in the compute environment. For Batch, these
      * take the form of "String1": "String2", where String1 is the tag key and String2 is the tag value−for example,
      * <code>{ "Name": "Batch Instance - C4OnDemand" }</code>. This is helpful for recognizing your Batch instances in
-     * the Amazon EC2 console. These tags can't be updated or removed after the compute environment is created.Aany
+     * the Amazon EC2 console. These tags can't be updated or removed after the compute environment is created. Any
      * changes to these tags require that you create a new compute environment and remove the old compute environment.
      * These tags aren't seen when using the Batch <code>ListTagsForResource</code> API operation.
      * </p>
@@ -2034,7 +2037,7 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      *        Batch, these take the form of "String1": "String2", where String1 is the tag key and String2 is the tag
      *        value−for example, <code>{ "Name": "Batch Instance - C4OnDemand" }</code>. This is helpful for recognizing
      *        your Batch instances in the Amazon EC2 console. These tags can't be updated or removed after the compute
-     *        environment is created.Aany changes to these tags require that you create a new compute environment and
+     *        environment is created. Any changes to these tags require that you create a new compute environment and
      *        remove the old compute environment. These tags aren't seen when using the Batch
      *        <code>ListTagsForResource</code> API operation.</p> <note>
      *        <p>
@@ -2498,7 +2501,10 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * Provides information used to select Amazon Machine Images (AMIs) for EC2 instances in the compute environment. If
-     * <code>Ec2Configuration</code> isn't specified, the default is <code>ECS_AL1</code>.
+     * <code>Ec2Configuration</code> isn't specified, the default is <code>ECS_AL2</code>.
+     * </p>
+     * <p>
+     * One or two values can be provided.
      * </p>
      * <note>
      * <p>
@@ -2507,7 +2513,10 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      * </note>
      * 
      * @return Provides information used to select Amazon Machine Images (AMIs) for EC2 instances in the compute
-     *         environment. If <code>Ec2Configuration</code> isn't specified, the default is <code>ECS_AL1</code>.</p>
+     *         environment. If <code>Ec2Configuration</code> isn't specified, the default is <code>ECS_AL2</code>.</p>
+     *         <p>
+     *         One or two values can be provided.
+     *         </p>
      *         <note>
      *         <p>
      *         This parameter isn't applicable to jobs that are running on Fargate resources, and shouldn't be
@@ -2522,7 +2531,10 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * Provides information used to select Amazon Machine Images (AMIs) for EC2 instances in the compute environment. If
-     * <code>Ec2Configuration</code> isn't specified, the default is <code>ECS_AL1</code>.
+     * <code>Ec2Configuration</code> isn't specified, the default is <code>ECS_AL2</code>.
+     * </p>
+     * <p>
+     * One or two values can be provided.
      * </p>
      * <note>
      * <p>
@@ -2532,7 +2544,10 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      * 
      * @param ec2Configuration
      *        Provides information used to select Amazon Machine Images (AMIs) for EC2 instances in the compute
-     *        environment. If <code>Ec2Configuration</code> isn't specified, the default is <code>ECS_AL1</code>.</p>
+     *        environment. If <code>Ec2Configuration</code> isn't specified, the default is <code>ECS_AL2</code>.</p>
+     *        <p>
+     *        One or two values can be provided.
+     *        </p>
      *        <note>
      *        <p>
      *        This parameter isn't applicable to jobs that are running on Fargate resources, and shouldn't be specified.
@@ -2551,7 +2566,10 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * Provides information used to select Amazon Machine Images (AMIs) for EC2 instances in the compute environment. If
-     * <code>Ec2Configuration</code> isn't specified, the default is <code>ECS_AL1</code>.
+     * <code>Ec2Configuration</code> isn't specified, the default is <code>ECS_AL2</code>.
+     * </p>
+     * <p>
+     * One or two values can be provided.
      * </p>
      * <note>
      * <p>
@@ -2566,7 +2584,10 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      * 
      * @param ec2Configuration
      *        Provides information used to select Amazon Machine Images (AMIs) for EC2 instances in the compute
-     *        environment. If <code>Ec2Configuration</code> isn't specified, the default is <code>ECS_AL1</code>.</p>
+     *        environment. If <code>Ec2Configuration</code> isn't specified, the default is <code>ECS_AL2</code>.</p>
+     *        <p>
+     *        One or two values can be provided.
+     *        </p>
      *        <note>
      *        <p>
      *        This parameter isn't applicable to jobs that are running on Fargate resources, and shouldn't be specified.
@@ -2587,7 +2608,10 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * Provides information used to select Amazon Machine Images (AMIs) for EC2 instances in the compute environment. If
-     * <code>Ec2Configuration</code> isn't specified, the default is <code>ECS_AL1</code>.
+     * <code>Ec2Configuration</code> isn't specified, the default is <code>ECS_AL2</code>.
+     * </p>
+     * <p>
+     * One or two values can be provided.
      * </p>
      * <note>
      * <p>
@@ -2597,7 +2621,10 @@ public class ComputeResource implements Serializable, Cloneable, StructuredPojo 
      * 
      * @param ec2Configuration
      *        Provides information used to select Amazon Machine Images (AMIs) for EC2 instances in the compute
-     *        environment. If <code>Ec2Configuration</code> isn't specified, the default is <code>ECS_AL1</code>.</p>
+     *        environment. If <code>Ec2Configuration</code> isn't specified, the default is <code>ECS_AL2</code>.</p>
+     *        <p>
+     *        One or two values can be provided.
+     *        </p>
      *        <note>
      *        <p>
      *        This parameter isn't applicable to jobs that are running on Fargate resources, and shouldn't be specified.

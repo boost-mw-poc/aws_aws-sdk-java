@@ -63,6 +63,19 @@ public class CreateComputeEnvironmentRequest extends com.amazonaws.AmazonWebServ
     private String state;
     /**
      * <p>
+     * The maximum number of vCPUs for an unmanaged compute environment. This parameter is only used for fair share
+     * scheduling to reserve vCPU capacity for new share identifiers. If this parameter is not provided for a fair share
+     * job queue, no vCPU capacity will be reserved.
+     * </p>
+     * <note>
+     * <p>
+     * This parameter is only supported when the <code>type</code> parameter is set to <code>UNMANAGED</code>/
+     * </p>
+     * </note>
+     */
+    private Integer unmanagedvCpus;
+    /**
+     * <p>
      * Details about the compute resources managed by the compute environment. This parameter is required for managed
      * compute environments. For more information, see <a
      * href="https://docs.aws.amazon.com/batch/latest/userguide/compute_environments.html">Compute Environments</a> in
@@ -444,6 +457,82 @@ public class CreateComputeEnvironmentRequest extends com.amazonaws.AmazonWebServ
 
     public CreateComputeEnvironmentRequest withState(CEState state) {
         this.state = state.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * The maximum number of vCPUs for an unmanaged compute environment. This parameter is only used for fair share
+     * scheduling to reserve vCPU capacity for new share identifiers. If this parameter is not provided for a fair share
+     * job queue, no vCPU capacity will be reserved.
+     * </p>
+     * <note>
+     * <p>
+     * This parameter is only supported when the <code>type</code> parameter is set to <code>UNMANAGED</code>/
+     * </p>
+     * </note>
+     * 
+     * @param unmanagedvCpus
+     *        The maximum number of vCPUs for an unmanaged compute environment. This parameter is only used for fair
+     *        share scheduling to reserve vCPU capacity for new share identifiers. If this parameter is not provided for
+     *        a fair share job queue, no vCPU capacity will be reserved.</p> <note>
+     *        <p>
+     *        This parameter is only supported when the <code>type</code> parameter is set to <code>UNMANAGED</code>/
+     *        </p>
+     */
+
+    public void setUnmanagedvCpus(Integer unmanagedvCpus) {
+        this.unmanagedvCpus = unmanagedvCpus;
+    }
+
+    /**
+     * <p>
+     * The maximum number of vCPUs for an unmanaged compute environment. This parameter is only used for fair share
+     * scheduling to reserve vCPU capacity for new share identifiers. If this parameter is not provided for a fair share
+     * job queue, no vCPU capacity will be reserved.
+     * </p>
+     * <note>
+     * <p>
+     * This parameter is only supported when the <code>type</code> parameter is set to <code>UNMANAGED</code>/
+     * </p>
+     * </note>
+     * 
+     * @return The maximum number of vCPUs for an unmanaged compute environment. This parameter is only used for fair
+     *         share scheduling to reserve vCPU capacity for new share identifiers. If this parameter is not provided
+     *         for a fair share job queue, no vCPU capacity will be reserved.</p> <note>
+     *         <p>
+     *         This parameter is only supported when the <code>type</code> parameter is set to <code>UNMANAGED</code>/
+     *         </p>
+     */
+
+    public Integer getUnmanagedvCpus() {
+        return this.unmanagedvCpus;
+    }
+
+    /**
+     * <p>
+     * The maximum number of vCPUs for an unmanaged compute environment. This parameter is only used for fair share
+     * scheduling to reserve vCPU capacity for new share identifiers. If this parameter is not provided for a fair share
+     * job queue, no vCPU capacity will be reserved.
+     * </p>
+     * <note>
+     * <p>
+     * This parameter is only supported when the <code>type</code> parameter is set to <code>UNMANAGED</code>/
+     * </p>
+     * </note>
+     * 
+     * @param unmanagedvCpus
+     *        The maximum number of vCPUs for an unmanaged compute environment. This parameter is only used for fair
+     *        share scheduling to reserve vCPU capacity for new share identifiers. If this parameter is not provided for
+     *        a fair share job queue, no vCPU capacity will be reserved.</p> <note>
+     *        <p>
+     *        This parameter is only supported when the <code>type</code> parameter is set to <code>UNMANAGED</code>/
+     *        </p>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateComputeEnvironmentRequest withUnmanagedvCpus(Integer unmanagedvCpus) {
+        setUnmanagedvCpus(unmanagedvCpus);
         return this;
     }
 
@@ -838,6 +927,8 @@ public class CreateComputeEnvironmentRequest extends com.amazonaws.AmazonWebServ
             sb.append("Type: ").append(getType()).append(",");
         if (getState() != null)
             sb.append("State: ").append(getState()).append(",");
+        if (getUnmanagedvCpus() != null)
+            sb.append("UnmanagedvCpus: ").append(getUnmanagedvCpus()).append(",");
         if (getComputeResources() != null)
             sb.append("ComputeResources: ").append(getComputeResources()).append(",");
         if (getServiceRole() != null)
@@ -870,6 +961,10 @@ public class CreateComputeEnvironmentRequest extends com.amazonaws.AmazonWebServ
             return false;
         if (other.getState() != null && other.getState().equals(this.getState()) == false)
             return false;
+        if (other.getUnmanagedvCpus() == null ^ this.getUnmanagedvCpus() == null)
+            return false;
+        if (other.getUnmanagedvCpus() != null && other.getUnmanagedvCpus().equals(this.getUnmanagedvCpus()) == false)
+            return false;
         if (other.getComputeResources() == null ^ this.getComputeResources() == null)
             return false;
         if (other.getComputeResources() != null && other.getComputeResources().equals(this.getComputeResources()) == false)
@@ -893,6 +988,7 @@ public class CreateComputeEnvironmentRequest extends com.amazonaws.AmazonWebServ
         hashCode = prime * hashCode + ((getComputeEnvironmentName() == null) ? 0 : getComputeEnvironmentName().hashCode());
         hashCode = prime * hashCode + ((getType() == null) ? 0 : getType().hashCode());
         hashCode = prime * hashCode + ((getState() == null) ? 0 : getState().hashCode());
+        hashCode = prime * hashCode + ((getUnmanagedvCpus() == null) ? 0 : getUnmanagedvCpus().hashCode());
         hashCode = prime * hashCode + ((getComputeResources() == null) ? 0 : getComputeResources().hashCode());
         hashCode = prime * hashCode + ((getServiceRole() == null) ? 0 : getServiceRole().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());

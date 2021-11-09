@@ -35,6 +35,8 @@ public class JobQueueDetailMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("jobQueueArn").build();
     private static final MarshallingInfo<String> STATE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("state").build();
+    private static final MarshallingInfo<String> SCHEDULINGPOLICYARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("schedulingPolicyArn").build();
     private static final MarshallingInfo<String> STATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("status").build();
     private static final MarshallingInfo<String> STATUSREASON_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
@@ -65,6 +67,7 @@ public class JobQueueDetailMarshaller {
             protocolMarshaller.marshall(jobQueueDetail.getJobQueueName(), JOBQUEUENAME_BINDING);
             protocolMarshaller.marshall(jobQueueDetail.getJobQueueArn(), JOBQUEUEARN_BINDING);
             protocolMarshaller.marshall(jobQueueDetail.getState(), STATE_BINDING);
+            protocolMarshaller.marshall(jobQueueDetail.getSchedulingPolicyArn(), SCHEDULINGPOLICYARN_BINDING);
             protocolMarshaller.marshall(jobQueueDetail.getStatus(), STATUS_BINDING);
             protocolMarshaller.marshall(jobQueueDetail.getStatusReason(), STATUSREASON_BINDING);
             protocolMarshaller.marshall(jobQueueDetail.getPriority(), PRIORITY_BINDING);

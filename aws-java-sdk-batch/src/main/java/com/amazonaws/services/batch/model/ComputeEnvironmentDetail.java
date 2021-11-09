@@ -43,6 +43,12 @@ public class ComputeEnvironmentDetail implements Serializable, Cloneable, Struct
     private String computeEnvironmentArn;
     /**
      * <p>
+     * The maximum number of VCPUs expected to be used for an unmanaged compute environment.
+     * </p>
+     */
+    private Integer unmanagedvCpus;
+    /**
+     * <p>
      * The Amazon Resource Name (ARN) of the underlying Amazon ECS cluster used by the compute environment.
      * </p>
      */
@@ -191,6 +197,46 @@ public class ComputeEnvironmentDetail implements Serializable, Cloneable, Struct
 
     public ComputeEnvironmentDetail withComputeEnvironmentArn(String computeEnvironmentArn) {
         setComputeEnvironmentArn(computeEnvironmentArn);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The maximum number of VCPUs expected to be used for an unmanaged compute environment.
+     * </p>
+     * 
+     * @param unmanagedvCpus
+     *        The maximum number of VCPUs expected to be used for an unmanaged compute environment.
+     */
+
+    public void setUnmanagedvCpus(Integer unmanagedvCpus) {
+        this.unmanagedvCpus = unmanagedvCpus;
+    }
+
+    /**
+     * <p>
+     * The maximum number of VCPUs expected to be used for an unmanaged compute environment.
+     * </p>
+     * 
+     * @return The maximum number of VCPUs expected to be used for an unmanaged compute environment.
+     */
+
+    public Integer getUnmanagedvCpus() {
+        return this.unmanagedvCpus;
+    }
+
+    /**
+     * <p>
+     * The maximum number of VCPUs expected to be used for an unmanaged compute environment.
+     * </p>
+     * 
+     * @param unmanagedvCpus
+     *        The maximum number of VCPUs expected to be used for an unmanaged compute environment.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ComputeEnvironmentDetail withUnmanagedvCpus(Integer unmanagedvCpus) {
+        setUnmanagedvCpus(unmanagedvCpus);
         return this;
     }
 
@@ -821,6 +867,8 @@ public class ComputeEnvironmentDetail implements Serializable, Cloneable, Struct
             sb.append("ComputeEnvironmentName: ").append(getComputeEnvironmentName()).append(",");
         if (getComputeEnvironmentArn() != null)
             sb.append("ComputeEnvironmentArn: ").append(getComputeEnvironmentArn()).append(",");
+        if (getUnmanagedvCpus() != null)
+            sb.append("UnmanagedvCpus: ").append(getUnmanagedvCpus()).append(",");
         if (getEcsClusterArn() != null)
             sb.append("EcsClusterArn: ").append(getEcsClusterArn()).append(",");
         if (getTags() != null)
@@ -858,6 +906,10 @@ public class ComputeEnvironmentDetail implements Serializable, Cloneable, Struct
         if (other.getComputeEnvironmentArn() == null ^ this.getComputeEnvironmentArn() == null)
             return false;
         if (other.getComputeEnvironmentArn() != null && other.getComputeEnvironmentArn().equals(this.getComputeEnvironmentArn()) == false)
+            return false;
+        if (other.getUnmanagedvCpus() == null ^ this.getUnmanagedvCpus() == null)
+            return false;
+        if (other.getUnmanagedvCpus() != null && other.getUnmanagedvCpus().equals(this.getUnmanagedvCpus()) == false)
             return false;
         if (other.getEcsClusterArn() == null ^ this.getEcsClusterArn() == null)
             return false;
@@ -901,6 +953,7 @@ public class ComputeEnvironmentDetail implements Serializable, Cloneable, Struct
 
         hashCode = prime * hashCode + ((getComputeEnvironmentName() == null) ? 0 : getComputeEnvironmentName().hashCode());
         hashCode = prime * hashCode + ((getComputeEnvironmentArn() == null) ? 0 : getComputeEnvironmentArn().hashCode());
+        hashCode = prime * hashCode + ((getUnmanagedvCpus() == null) ? 0 : getUnmanagedvCpus().hashCode());
         hashCode = prime * hashCode + ((getEcsClusterArn() == null) ? 0 : getEcsClusterArn().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getType() == null) ? 0 : getType().hashCode());

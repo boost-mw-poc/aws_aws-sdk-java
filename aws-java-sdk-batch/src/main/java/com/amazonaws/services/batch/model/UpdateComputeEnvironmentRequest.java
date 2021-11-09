@@ -54,6 +54,15 @@ public class UpdateComputeEnvironmentRequest extends com.amazonaws.AmazonWebServ
     private String state;
     /**
      * <p>
+     * The maximum number of vCPUs expected to be used for an unmanaged compute environment. This parameter should not
+     * be specified for a managed compute environment. This parameter is only used for fair share scheduling to reserve
+     * vCPU capacity for new share identifiers. If this parameter is not provided for a fair share job queue, no vCPU
+     * capacity will be reserved.
+     * </p>
+     */
+    private Integer unmanagedvCpus;
+    /**
+     * <p>
      * Details of the compute resources managed by the compute environment. Required for a managed compute environment.
      * For more information, see <a
      * href="https://docs.aws.amazon.com/batch/latest/userguide/compute_environments.html">Compute Environments</a> in
@@ -324,6 +333,64 @@ public class UpdateComputeEnvironmentRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
+     * The maximum number of vCPUs expected to be used for an unmanaged compute environment. This parameter should not
+     * be specified for a managed compute environment. This parameter is only used for fair share scheduling to reserve
+     * vCPU capacity for new share identifiers. If this parameter is not provided for a fair share job queue, no vCPU
+     * capacity will be reserved.
+     * </p>
+     * 
+     * @param unmanagedvCpus
+     *        The maximum number of vCPUs expected to be used for an unmanaged compute environment. This parameter
+     *        should not be specified for a managed compute environment. This parameter is only used for fair share
+     *        scheduling to reserve vCPU capacity for new share identifiers. If this parameter is not provided for a
+     *        fair share job queue, no vCPU capacity will be reserved.
+     */
+
+    public void setUnmanagedvCpus(Integer unmanagedvCpus) {
+        this.unmanagedvCpus = unmanagedvCpus;
+    }
+
+    /**
+     * <p>
+     * The maximum number of vCPUs expected to be used for an unmanaged compute environment. This parameter should not
+     * be specified for a managed compute environment. This parameter is only used for fair share scheduling to reserve
+     * vCPU capacity for new share identifiers. If this parameter is not provided for a fair share job queue, no vCPU
+     * capacity will be reserved.
+     * </p>
+     * 
+     * @return The maximum number of vCPUs expected to be used for an unmanaged compute environment. This parameter
+     *         should not be specified for a managed compute environment. This parameter is only used for fair share
+     *         scheduling to reserve vCPU capacity for new share identifiers. If this parameter is not provided for a
+     *         fair share job queue, no vCPU capacity will be reserved.
+     */
+
+    public Integer getUnmanagedvCpus() {
+        return this.unmanagedvCpus;
+    }
+
+    /**
+     * <p>
+     * The maximum number of vCPUs expected to be used for an unmanaged compute environment. This parameter should not
+     * be specified for a managed compute environment. This parameter is only used for fair share scheduling to reserve
+     * vCPU capacity for new share identifiers. If this parameter is not provided for a fair share job queue, no vCPU
+     * capacity will be reserved.
+     * </p>
+     * 
+     * @param unmanagedvCpus
+     *        The maximum number of vCPUs expected to be used for an unmanaged compute environment. This parameter
+     *        should not be specified for a managed compute environment. This parameter is only used for fair share
+     *        scheduling to reserve vCPU capacity for new share identifiers. If this parameter is not provided for a
+     *        fair share job queue, no vCPU capacity will be reserved.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateComputeEnvironmentRequest withUnmanagedvCpus(Integer unmanagedvCpus) {
+        setUnmanagedvCpus(unmanagedvCpus);
+        return this;
+    }
+
+    /**
+     * <p>
      * Details of the compute resources managed by the compute environment. Required for a managed compute environment.
      * For more information, see <a
      * href="https://docs.aws.amazon.com/batch/latest/userguide/compute_environments.html">Compute Environments</a> in
@@ -559,6 +626,8 @@ public class UpdateComputeEnvironmentRequest extends com.amazonaws.AmazonWebServ
             sb.append("ComputeEnvironment: ").append(getComputeEnvironment()).append(",");
         if (getState() != null)
             sb.append("State: ").append(getState()).append(",");
+        if (getUnmanagedvCpus() != null)
+            sb.append("UnmanagedvCpus: ").append(getUnmanagedvCpus()).append(",");
         if (getComputeResources() != null)
             sb.append("ComputeResources: ").append(getComputeResources()).append(",");
         if (getServiceRole() != null)
@@ -585,6 +654,10 @@ public class UpdateComputeEnvironmentRequest extends com.amazonaws.AmazonWebServ
             return false;
         if (other.getState() != null && other.getState().equals(this.getState()) == false)
             return false;
+        if (other.getUnmanagedvCpus() == null ^ this.getUnmanagedvCpus() == null)
+            return false;
+        if (other.getUnmanagedvCpus() != null && other.getUnmanagedvCpus().equals(this.getUnmanagedvCpus()) == false)
+            return false;
         if (other.getComputeResources() == null ^ this.getComputeResources() == null)
             return false;
         if (other.getComputeResources() != null && other.getComputeResources().equals(this.getComputeResources()) == false)
@@ -603,6 +676,7 @@ public class UpdateComputeEnvironmentRequest extends com.amazonaws.AmazonWebServ
 
         hashCode = prime * hashCode + ((getComputeEnvironment() == null) ? 0 : getComputeEnvironment().hashCode());
         hashCode = prime * hashCode + ((getState() == null) ? 0 : getState().hashCode());
+        hashCode = prime * hashCode + ((getUnmanagedvCpus() == null) ? 0 : getUnmanagedvCpus().hashCode());
         hashCode = prime * hashCode + ((getComputeResources() == null) ? 0 : getComputeResources().hashCode());
         hashCode = prime * hashCode + ((getServiceRole() == null) ? 0 : getServiceRole().hashCode());
         return hashCode;

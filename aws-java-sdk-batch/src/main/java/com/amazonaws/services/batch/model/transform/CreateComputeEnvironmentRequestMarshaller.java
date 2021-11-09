@@ -35,6 +35,8 @@ public class CreateComputeEnvironmentRequestMarshaller {
             .marshallLocationName("type").build();
     private static final MarshallingInfo<String> STATE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("state").build();
+    private static final MarshallingInfo<Integer> UNMANAGEDVCPUS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("unmanagedvCpus").build();
     private static final MarshallingInfo<StructuredPojo> COMPUTERESOURCES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("computeResources").build();
     private static final MarshallingInfo<String> SERVICEROLE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
@@ -61,6 +63,7 @@ public class CreateComputeEnvironmentRequestMarshaller {
             protocolMarshaller.marshall(createComputeEnvironmentRequest.getComputeEnvironmentName(), COMPUTEENVIRONMENTNAME_BINDING);
             protocolMarshaller.marshall(createComputeEnvironmentRequest.getType(), TYPE_BINDING);
             protocolMarshaller.marshall(createComputeEnvironmentRequest.getState(), STATE_BINDING);
+            protocolMarshaller.marshall(createComputeEnvironmentRequest.getUnmanagedvCpus(), UNMANAGEDVCPUS_BINDING);
             protocolMarshaller.marshall(createComputeEnvironmentRequest.getComputeResources(), COMPUTERESOURCES_BINDING);
             protocolMarshaller.marshall(createComputeEnvironmentRequest.getServiceRole(), SERVICEROLE_BINDING);
             protocolMarshaller.marshall(createComputeEnvironmentRequest.getTags(), TAGS_BINDING);

@@ -68,6 +68,10 @@ public class JobDefinitionJsonUnmarshaller implements Unmarshaller<JobDefinition
                     context.nextToken();
                     jobDefinition.setType(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("schedulingPriority", targetDepth)) {
+                    context.nextToken();
+                    jobDefinition.setSchedulingPriority(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
                 if (context.testExpression("parameters", targetDepth)) {
                     context.nextToken();
                     jobDefinition.setParameters(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context

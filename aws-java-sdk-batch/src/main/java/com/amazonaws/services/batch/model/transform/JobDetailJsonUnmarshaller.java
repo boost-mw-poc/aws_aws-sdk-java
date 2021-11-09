@@ -68,6 +68,14 @@ public class JobDetailJsonUnmarshaller implements Unmarshaller<JobDetail, JsonUn
                     context.nextToken();
                     jobDetail.setStatus(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("shareIdentifier", targetDepth)) {
+                    context.nextToken();
+                    jobDetail.setShareIdentifier(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("schedulingPriority", targetDepth)) {
+                    context.nextToken();
+                    jobDetail.setSchedulingPriority(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
                 if (context.testExpression("attempts", targetDepth)) {
                     context.nextToken();
                     jobDetail.setAttempts(new ListUnmarshaller<AttemptDetail>(AttemptDetailJsonUnmarshaller.getInstance())

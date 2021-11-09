@@ -64,7 +64,7 @@ public class AffectedEntity implements Serializable, Cloneable, StructuredPojo {
     private String entityUrl;
     /**
      * <p>
-     * The 12-digit AWS account number that contains the affected entity.
+     * The 12-digit Amazon Web Services account number that contains the affected entity.
      * </p>
      */
     private String awsAccountId;
@@ -312,11 +312,11 @@ public class AffectedEntity implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The 12-digit AWS account number that contains the affected entity.
+     * The 12-digit Amazon Web Services account number that contains the affected entity.
      * </p>
      * 
      * @param awsAccountId
-     *        The 12-digit AWS account number that contains the affected entity.
+     *        The 12-digit Amazon Web Services account number that contains the affected entity.
      */
 
     public void setAwsAccountId(String awsAccountId) {
@@ -325,10 +325,10 @@ public class AffectedEntity implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The 12-digit AWS account number that contains the affected entity.
+     * The 12-digit Amazon Web Services account number that contains the affected entity.
      * </p>
      * 
-     * @return The 12-digit AWS account number that contains the affected entity.
+     * @return The 12-digit Amazon Web Services account number that contains the affected entity.
      */
 
     public String getAwsAccountId() {
@@ -337,11 +337,11 @@ public class AffectedEntity implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The 12-digit AWS account number that contains the affected entity.
+     * The 12-digit Amazon Web Services account number that contains the affected entity.
      * </p>
      * 
      * @param awsAccountId
-     *        The 12-digit AWS account number that contains the affected entity.
+     *        The 12-digit Amazon Web Services account number that contains the affected entity.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

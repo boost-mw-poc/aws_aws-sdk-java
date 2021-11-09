@@ -60,6 +60,10 @@ public class JobQueueDetailJsonUnmarshaller implements Unmarshaller<JobQueueDeta
                     context.nextToken();
                     jobQueueDetail.setState(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("schedulingPolicyArn", targetDepth)) {
+                    context.nextToken();
+                    jobQueueDetail.setSchedulingPolicyArn(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("status", targetDepth)) {
                     context.nextToken();
                     jobQueueDetail.setStatus(context.getUnmarshaller(String.class).unmarshall(context));

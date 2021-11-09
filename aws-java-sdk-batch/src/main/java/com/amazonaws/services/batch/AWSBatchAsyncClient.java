@@ -32,12 +32,12 @@ import com.amazonaws.auth.DefaultAWSCredentialsProviderChain;
  * <p>
  * <fullname>Batch</fullname>
  * <p>
- * Using Batch, you can run batch computing workloads on the Cloud. Batch computing is a common means for developers,
- * scientists, and engineers to access large amounts of compute resources. Batch uses the advantages of this computing
- * workload to remove the undifferentiated heavy lifting of configuring and managing required infrastructure. At the
- * same time, it also adopts a familiar batch computing software approach. Given these advantages, Batch can help you to
- * efficiently provision resources in response to jobs submitted, thus effectively helping you to eliminate capacity
- * constraints, reduce compute costs, and deliver your results more quickly.
+ * Using Batch, you can run batch computing workloads on the Amazon Web Services Cloud. Batch computing is a common
+ * means for developers, scientists, and engineers to access large amounts of compute resources. Batch uses the
+ * advantages of this computing workload to remove the undifferentiated heavy lifting of configuring and managing
+ * required infrastructure. At the same time, it also adopts a familiar batch computing software approach. Given these
+ * advantages, Batch can help you to efficiently provision resources in response to jobs submitted, thus effectively
+ * helping you to eliminate capacity constraints, reduce compute costs, and deliver your results more quickly.
  * </p>
  * <p>
  * As a fully managed service, Batch can run batch computing workloads of any scale. Batch automatically provisions
@@ -367,6 +367,39 @@ public class AWSBatchAsyncClient extends AWSBatchClient implements AWSBatchAsync
     }
 
     @Override
+    public java.util.concurrent.Future<CreateSchedulingPolicyResult> createSchedulingPolicyAsync(CreateSchedulingPolicyRequest request) {
+
+        return createSchedulingPolicyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateSchedulingPolicyResult> createSchedulingPolicyAsync(final CreateSchedulingPolicyRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateSchedulingPolicyRequest, CreateSchedulingPolicyResult> asyncHandler) {
+        final CreateSchedulingPolicyRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateSchedulingPolicyResult>() {
+            @Override
+            public CreateSchedulingPolicyResult call() throws Exception {
+                CreateSchedulingPolicyResult result = null;
+
+                try {
+                    result = executeCreateSchedulingPolicy(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteComputeEnvironmentResult> deleteComputeEnvironmentAsync(DeleteComputeEnvironmentRequest request) {
 
         return deleteComputeEnvironmentAsync(request, null);
@@ -417,6 +450,39 @@ public class AWSBatchAsyncClient extends AWSBatchClient implements AWSBatchAsync
 
                 try {
                     result = executeDeleteJobQueue(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteSchedulingPolicyResult> deleteSchedulingPolicyAsync(DeleteSchedulingPolicyRequest request) {
+
+        return deleteSchedulingPolicyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteSchedulingPolicyResult> deleteSchedulingPolicyAsync(final DeleteSchedulingPolicyRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteSchedulingPolicyRequest, DeleteSchedulingPolicyResult> asyncHandler) {
+        final DeleteSchedulingPolicyRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteSchedulingPolicyResult>() {
+            @Override
+            public DeleteSchedulingPolicyResult call() throws Exception {
+                DeleteSchedulingPolicyResult result = null;
+
+                try {
+                    result = executeDeleteSchedulingPolicy(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -598,6 +664,39 @@ public class AWSBatchAsyncClient extends AWSBatchClient implements AWSBatchAsync
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeSchedulingPoliciesResult> describeSchedulingPoliciesAsync(DescribeSchedulingPoliciesRequest request) {
+
+        return describeSchedulingPoliciesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeSchedulingPoliciesResult> describeSchedulingPoliciesAsync(final DescribeSchedulingPoliciesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeSchedulingPoliciesRequest, DescribeSchedulingPoliciesResult> asyncHandler) {
+        final DescribeSchedulingPoliciesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeSchedulingPoliciesResult>() {
+            @Override
+            public DescribeSchedulingPoliciesResult call() throws Exception {
+                DescribeSchedulingPoliciesResult result = null;
+
+                try {
+                    result = executeDescribeSchedulingPolicies(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ListJobsResult> listJobsAsync(ListJobsRequest request) {
 
         return listJobsAsync(request, null);
@@ -615,6 +714,39 @@ public class AWSBatchAsyncClient extends AWSBatchClient implements AWSBatchAsync
 
                 try {
                     result = executeListJobs(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListSchedulingPoliciesResult> listSchedulingPoliciesAsync(ListSchedulingPoliciesRequest request) {
+
+        return listSchedulingPoliciesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListSchedulingPoliciesResult> listSchedulingPoliciesAsync(final ListSchedulingPoliciesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListSchedulingPoliciesRequest, ListSchedulingPoliciesResult> asyncHandler) {
+        final ListSchedulingPoliciesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListSchedulingPoliciesResult>() {
+            @Override
+            public ListSchedulingPoliciesResult call() throws Exception {
+                ListSchedulingPoliciesResult result = null;
+
+                try {
+                    result = executeListSchedulingPolicies(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -879,6 +1011,39 @@ public class AWSBatchAsyncClient extends AWSBatchClient implements AWSBatchAsync
 
                 try {
                     result = executeUpdateJobQueue(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateSchedulingPolicyResult> updateSchedulingPolicyAsync(UpdateSchedulingPolicyRequest request) {
+
+        return updateSchedulingPolicyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateSchedulingPolicyResult> updateSchedulingPolicyAsync(final UpdateSchedulingPolicyRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateSchedulingPolicyRequest, UpdateSchedulingPolicyResult> asyncHandler) {
+        final UpdateSchedulingPolicyRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateSchedulingPolicyResult>() {
+            @Override
+            public UpdateSchedulingPolicyResult call() throws Exception {
+                UpdateSchedulingPolicyResult result = null;
+
+                try {
+                    result = executeUpdateSchedulingPolicy(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

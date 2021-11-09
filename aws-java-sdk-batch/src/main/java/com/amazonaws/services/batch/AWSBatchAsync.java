@@ -27,12 +27,12 @@ import com.amazonaws.services.batch.model.*;
  * <p>
  * <fullname>Batch</fullname>
  * <p>
- * Using Batch, you can run batch computing workloads on the Cloud. Batch computing is a common means for developers,
- * scientists, and engineers to access large amounts of compute resources. Batch uses the advantages of this computing
- * workload to remove the undifferentiated heavy lifting of configuring and managing required infrastructure. At the
- * same time, it also adopts a familiar batch computing software approach. Given these advantages, Batch can help you to
- * efficiently provision resources in response to jobs submitted, thus effectively helping you to eliminate capacity
- * constraints, reduce compute costs, and deliver your results more quickly.
+ * Using Batch, you can run batch computing workloads on the Amazon Web Services Cloud. Batch computing is a common
+ * means for developers, scientists, and engineers to access large amounts of compute resources. Batch uses the
+ * advantages of this computing workload to remove the undifferentiated heavy lifting of configuring and managing
+ * required infrastructure. At the same time, it also adopts a familiar batch computing software approach. Given these
+ * advantages, Batch can help you to efficiently provision resources in response to jobs submitted, thus effectively
+ * helping you to eliminate capacity constraints, reduce compute costs, and deliver your results more quickly.
  * </p>
  * <p>
  * As a fully managed service, Batch can run batch computing workloads of any scale. Batch automatically provisions
@@ -281,6 +281,37 @@ public interface AWSBatchAsync extends AWSBatch {
 
     /**
      * <p>
+     * Creates an Batch scheduling policy.
+     * </p>
+     * 
+     * @param createSchedulingPolicyRequest
+     * @return A Java Future containing the result of the CreateSchedulingPolicy operation returned by the service.
+     * @sample AWSBatchAsync.CreateSchedulingPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/batch-2016-08-10/CreateSchedulingPolicy" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateSchedulingPolicyResult> createSchedulingPolicyAsync(CreateSchedulingPolicyRequest createSchedulingPolicyRequest);
+
+    /**
+     * <p>
+     * Creates an Batch scheduling policy.
+     * </p>
+     * 
+     * @param createSchedulingPolicyRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateSchedulingPolicy operation returned by the service.
+     * @sample AWSBatchAsyncHandler.CreateSchedulingPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/batch-2016-08-10/CreateSchedulingPolicy" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateSchedulingPolicyResult> createSchedulingPolicyAsync(CreateSchedulingPolicyRequest createSchedulingPolicyRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateSchedulingPolicyRequest, CreateSchedulingPolicyResult> asyncHandler);
+
+    /**
+     * <p>
      * Deletes an Batch compute environment.
      * </p>
      * <p>
@@ -370,6 +401,43 @@ public interface AWSBatchAsync extends AWSBatch {
      */
     java.util.concurrent.Future<DeleteJobQueueResult> deleteJobQueueAsync(DeleteJobQueueRequest deleteJobQueueRequest,
             com.amazonaws.handlers.AsyncHandler<DeleteJobQueueRequest, DeleteJobQueueResult> asyncHandler);
+
+    /**
+     * <p>
+     * Deletes the specified scheduling policy.
+     * </p>
+     * <p>
+     * You can't delete a scheduling policy that is used in any job queues.
+     * </p>
+     * 
+     * @param deleteSchedulingPolicyRequest
+     * @return A Java Future containing the result of the DeleteSchedulingPolicy operation returned by the service.
+     * @sample AWSBatchAsync.DeleteSchedulingPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/batch-2016-08-10/DeleteSchedulingPolicy" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteSchedulingPolicyResult> deleteSchedulingPolicyAsync(DeleteSchedulingPolicyRequest deleteSchedulingPolicyRequest);
+
+    /**
+     * <p>
+     * Deletes the specified scheduling policy.
+     * </p>
+     * <p>
+     * You can't delete a scheduling policy that is used in any job queues.
+     * </p>
+     * 
+     * @param deleteSchedulingPolicyRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteSchedulingPolicy operation returned by the service.
+     * @sample AWSBatchAsyncHandler.DeleteSchedulingPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/batch-2016-08-10/DeleteSchedulingPolicy" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteSchedulingPolicyResult> deleteSchedulingPolicyAsync(DeleteSchedulingPolicyRequest deleteSchedulingPolicyRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteSchedulingPolicyRequest, DeleteSchedulingPolicyResult> asyncHandler);
 
     /**
      * <p>
@@ -550,6 +618,39 @@ public interface AWSBatchAsync extends AWSBatch {
 
     /**
      * <p>
+     * Describes one or more of your scheduling policies.
+     * </p>
+     * 
+     * @param describeSchedulingPoliciesRequest
+     * @return A Java Future containing the result of the DescribeSchedulingPolicies operation returned by the service.
+     * @sample AWSBatchAsync.DescribeSchedulingPolicies
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/batch-2016-08-10/DescribeSchedulingPolicies"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeSchedulingPoliciesResult> describeSchedulingPoliciesAsync(
+            DescribeSchedulingPoliciesRequest describeSchedulingPoliciesRequest);
+
+    /**
+     * <p>
+     * Describes one or more of your scheduling policies.
+     * </p>
+     * 
+     * @param describeSchedulingPoliciesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeSchedulingPolicies operation returned by the service.
+     * @sample AWSBatchAsyncHandler.DescribeSchedulingPolicies
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/batch-2016-08-10/DescribeSchedulingPolicies"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeSchedulingPoliciesResult> describeSchedulingPoliciesAsync(
+            DescribeSchedulingPoliciesRequest describeSchedulingPoliciesRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeSchedulingPoliciesRequest, DescribeSchedulingPoliciesResult> asyncHandler);
+
+    /**
+     * <p>
      * Returns a list of Batch jobs.
      * </p>
      * <p>
@@ -631,8 +732,40 @@ public interface AWSBatchAsync extends AWSBatch {
 
     /**
      * <p>
+     * Returns a list of Batch scheduling policies.
+     * </p>
+     * 
+     * @param listSchedulingPoliciesRequest
+     * @return A Java Future containing the result of the ListSchedulingPolicies operation returned by the service.
+     * @sample AWSBatchAsync.ListSchedulingPolicies
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/batch-2016-08-10/ListSchedulingPolicies" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListSchedulingPoliciesResult> listSchedulingPoliciesAsync(ListSchedulingPoliciesRequest listSchedulingPoliciesRequest);
+
+    /**
+     * <p>
+     * Returns a list of Batch scheduling policies.
+     * </p>
+     * 
+     * @param listSchedulingPoliciesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListSchedulingPolicies operation returned by the service.
+     * @sample AWSBatchAsyncHandler.ListSchedulingPolicies
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/batch-2016-08-10/ListSchedulingPolicies" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListSchedulingPoliciesResult> listSchedulingPoliciesAsync(ListSchedulingPoliciesRequest listSchedulingPoliciesRequest,
+            com.amazonaws.handlers.AsyncHandler<ListSchedulingPoliciesRequest, ListSchedulingPoliciesResult> asyncHandler);
+
+    /**
+     * <p>
      * Lists the tags for an Batch resource. Batch resources that support tags are compute environments, jobs, job
-     * definitions, and job queues. ARNs for child jobs of array and multi-node parallel (MNP) jobs are not supported.
+     * definitions, job queues, and scheduling policies. ARNs for child jobs of array and multi-node parallel (MNP) jobs
+     * are not supported.
      * </p>
      * 
      * @param listTagsForResourceRequest
@@ -646,7 +779,8 @@ public interface AWSBatchAsync extends AWSBatch {
     /**
      * <p>
      * Lists the tags for an Batch resource. Batch resources that support tags are compute environments, jobs, job
-     * definitions, and job queues. ARNs for child jobs of array and multi-node parallel (MNP) jobs are not supported.
+     * definitions, job queues, and scheduling policies. ARNs for child jobs of array and multi-node parallel (MNP) jobs
+     * are not supported.
      * </p>
      * 
      * @param listTagsForResourceRequest
@@ -699,12 +833,16 @@ public interface AWSBatchAsync extends AWSBatch {
      * <p>
      * Submits an Batch job from a job definition. Parameters that are specified during <a>SubmitJob</a> override
      * parameters defined in the job definition. vCPU and memory requirements that are specified in the
-     * <code>ResourceRequirements</code> objects in the job definition are the exception. They can't be overridden this
+     * <code>resourceRequirements</code> objects in the job definition are the exception. They can't be overridden this
      * way using the <code>memory</code> and <code>vcpus</code> parameters. Rather, you must specify updates to job
      * definition parameters in a <code>ResourceRequirements</code> object that's included in the
      * <code>containerOverrides</code> parameter.
      * </p>
-     * <important>
+     * <note>
+     * <p>
+     * Job queues with a scheduling policy are limited to 500 active fair share identifiers at a time.
+     * </p>
+     * </note> <important>
      * <p>
      * Jobs that run on Fargate resources can't be guaranteed to run for more than 14 days. This is because, after 14
      * days, Fargate resources might become unavailable and job might be terminated.
@@ -724,12 +862,16 @@ public interface AWSBatchAsync extends AWSBatch {
      * <p>
      * Submits an Batch job from a job definition. Parameters that are specified during <a>SubmitJob</a> override
      * parameters defined in the job definition. vCPU and memory requirements that are specified in the
-     * <code>ResourceRequirements</code> objects in the job definition are the exception. They can't be overridden this
+     * <code>resourceRequirements</code> objects in the job definition are the exception. They can't be overridden this
      * way using the <code>memory</code> and <code>vcpus</code> parameters. Rather, you must specify updates to job
      * definition parameters in a <code>ResourceRequirements</code> object that's included in the
      * <code>containerOverrides</code> parameter.
      * </p>
-     * <important>
+     * <note>
+     * <p>
+     * Job queues with a scheduling policy are limited to 500 active fair share identifiers at a time.
+     * </p>
+     * </note> <important>
      * <p>
      * Jobs that run on Fargate resources can't be guaranteed to run for more than 14 days. This is because, after 14
      * days, Fargate resources might become unavailable and job might be terminated.
@@ -755,8 +897,8 @@ public interface AWSBatchAsync extends AWSBatch {
      * Associates the specified tags to a resource with the specified <code>resourceArn</code>. If existing tags on a
      * resource aren't specified in the request parameters, they aren't changed. When a resource is deleted, the tags
      * that are associated with that resource are deleted as well. Batch resources that support tags are compute
-     * environments, jobs, job definitions, and job queues. ARNs for child jobs of array and multi-node parallel (MNP)
-     * jobs are not supported.
+     * environments, jobs, job definitions, job queues, and scheduling policies. ARNs for child jobs of array and
+     * multi-node parallel (MNP) jobs are not supported.
      * </p>
      * 
      * @param tagResourceRequest
@@ -772,8 +914,8 @@ public interface AWSBatchAsync extends AWSBatch {
      * Associates the specified tags to a resource with the specified <code>resourceArn</code>. If existing tags on a
      * resource aren't specified in the request parameters, they aren't changed. When a resource is deleted, the tags
      * that are associated with that resource are deleted as well. Batch resources that support tags are compute
-     * environments, jobs, job definitions, and job queues. ARNs for child jobs of array and multi-node parallel (MNP)
-     * jobs are not supported.
+     * environments, jobs, job definitions, job queues, and scheduling policies. ARNs for child jobs of array and
+     * multi-node parallel (MNP) jobs are not supported.
      * </p>
      * 
      * @param tagResourceRequest
@@ -922,5 +1064,36 @@ public interface AWSBatchAsync extends AWSBatch {
      */
     java.util.concurrent.Future<UpdateJobQueueResult> updateJobQueueAsync(UpdateJobQueueRequest updateJobQueueRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateJobQueueRequest, UpdateJobQueueResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates a scheduling policy.
+     * </p>
+     * 
+     * @param updateSchedulingPolicyRequest
+     * @return A Java Future containing the result of the UpdateSchedulingPolicy operation returned by the service.
+     * @sample AWSBatchAsync.UpdateSchedulingPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/batch-2016-08-10/UpdateSchedulingPolicy" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateSchedulingPolicyResult> updateSchedulingPolicyAsync(UpdateSchedulingPolicyRequest updateSchedulingPolicyRequest);
+
+    /**
+     * <p>
+     * Updates a scheduling policy.
+     * </p>
+     * 
+     * @param updateSchedulingPolicyRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateSchedulingPolicy operation returned by the service.
+     * @sample AWSBatchAsyncHandler.UpdateSchedulingPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/batch-2016-08-10/UpdateSchedulingPolicy" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateSchedulingPolicyResult> updateSchedulingPolicyAsync(UpdateSchedulingPolicyRequest updateSchedulingPolicyRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateSchedulingPolicyRequest, UpdateSchedulingPolicyResult> asyncHandler);
 
 }

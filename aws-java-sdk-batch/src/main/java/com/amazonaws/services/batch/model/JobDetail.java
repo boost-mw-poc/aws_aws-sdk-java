@@ -67,6 +67,19 @@ public class JobDetail implements Serializable, Cloneable, StructuredPojo {
     private String status;
     /**
      * <p>
+     * The share identifier for the job.
+     * </p>
+     */
+    private String shareIdentifier;
+    /**
+     * <p>
+     * The scheduling policy of the job definition. This will only affect jobs in job queues with a fair share policy.
+     * Jobs with a higher scheduling priority will be scheduled before jobs with a lower scheduling priority.
+     * </p>
+     */
+    private Integer schedulingPriority;
+    /**
+     * <p>
      * A list of job attempts associated with this job.
      * </p>
      */
@@ -473,6 +486,95 @@ public class JobDetail implements Serializable, Cloneable, StructuredPojo {
 
     public JobDetail withStatus(JobStatus status) {
         this.status = status.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * The share identifier for the job.
+     * </p>
+     * 
+     * @param shareIdentifier
+     *        The share identifier for the job.
+     */
+
+    public void setShareIdentifier(String shareIdentifier) {
+        this.shareIdentifier = shareIdentifier;
+    }
+
+    /**
+     * <p>
+     * The share identifier for the job.
+     * </p>
+     * 
+     * @return The share identifier for the job.
+     */
+
+    public String getShareIdentifier() {
+        return this.shareIdentifier;
+    }
+
+    /**
+     * <p>
+     * The share identifier for the job.
+     * </p>
+     * 
+     * @param shareIdentifier
+     *        The share identifier for the job.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public JobDetail withShareIdentifier(String shareIdentifier) {
+        setShareIdentifier(shareIdentifier);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The scheduling policy of the job definition. This will only affect jobs in job queues with a fair share policy.
+     * Jobs with a higher scheduling priority will be scheduled before jobs with a lower scheduling priority.
+     * </p>
+     * 
+     * @param schedulingPriority
+     *        The scheduling policy of the job definition. This will only affect jobs in job queues with a fair share
+     *        policy. Jobs with a higher scheduling priority will be scheduled before jobs with a lower scheduling
+     *        priority.
+     */
+
+    public void setSchedulingPriority(Integer schedulingPriority) {
+        this.schedulingPriority = schedulingPriority;
+    }
+
+    /**
+     * <p>
+     * The scheduling policy of the job definition. This will only affect jobs in job queues with a fair share policy.
+     * Jobs with a higher scheduling priority will be scheduled before jobs with a lower scheduling priority.
+     * </p>
+     * 
+     * @return The scheduling policy of the job definition. This will only affect jobs in job queues with a fair share
+     *         policy. Jobs with a higher scheduling priority will be scheduled before jobs with a lower scheduling
+     *         priority.
+     */
+
+    public Integer getSchedulingPriority() {
+        return this.schedulingPriority;
+    }
+
+    /**
+     * <p>
+     * The scheduling policy of the job definition. This will only affect jobs in job queues with a fair share policy.
+     * Jobs with a higher scheduling priority will be scheduled before jobs with a lower scheduling priority.
+     * </p>
+     * 
+     * @param schedulingPriority
+     *        The scheduling policy of the job definition. This will only affect jobs in job queues with a fair share
+     *        policy. Jobs with a higher scheduling priority will be scheduled before jobs with a lower scheduling
+     *        priority.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public JobDetail withSchedulingPriority(Integer schedulingPriority) {
+        setSchedulingPriority(schedulingPriority);
         return this;
     }
 
@@ -1465,6 +1567,10 @@ public class JobDetail implements Serializable, Cloneable, StructuredPojo {
             sb.append("JobQueue: ").append(getJobQueue()).append(",");
         if (getStatus() != null)
             sb.append("Status: ").append(getStatus()).append(",");
+        if (getShareIdentifier() != null)
+            sb.append("ShareIdentifier: ").append(getShareIdentifier()).append(",");
+        if (getSchedulingPriority() != null)
+            sb.append("SchedulingPriority: ").append(getSchedulingPriority()).append(",");
         if (getAttempts() != null)
             sb.append("Attempts: ").append(getAttempts()).append(",");
         if (getStatusReason() != null)
@@ -1532,6 +1638,14 @@ public class JobDetail implements Serializable, Cloneable, StructuredPojo {
         if (other.getStatus() == null ^ this.getStatus() == null)
             return false;
         if (other.getStatus() != null && other.getStatus().equals(this.getStatus()) == false)
+            return false;
+        if (other.getShareIdentifier() == null ^ this.getShareIdentifier() == null)
+            return false;
+        if (other.getShareIdentifier() != null && other.getShareIdentifier().equals(this.getShareIdentifier()) == false)
+            return false;
+        if (other.getSchedulingPriority() == null ^ this.getSchedulingPriority() == null)
+            return false;
+        if (other.getSchedulingPriority() != null && other.getSchedulingPriority().equals(this.getSchedulingPriority()) == false)
             return false;
         if (other.getAttempts() == null ^ this.getAttempts() == null)
             return false;
@@ -1614,6 +1728,8 @@ public class JobDetail implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getJobId() == null) ? 0 : getJobId().hashCode());
         hashCode = prime * hashCode + ((getJobQueue() == null) ? 0 : getJobQueue().hashCode());
         hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
+        hashCode = prime * hashCode + ((getShareIdentifier() == null) ? 0 : getShareIdentifier().hashCode());
+        hashCode = prime * hashCode + ((getSchedulingPriority() == null) ? 0 : getSchedulingPriority().hashCode());
         hashCode = prime * hashCode + ((getAttempts() == null) ? 0 : getAttempts().hashCode());
         hashCode = prime * hashCode + ((getStatusReason() == null) ? 0 : getStatusReason().hashCode());
         hashCode = prime * hashCode + ((getCreatedAt() == null) ? 0 : getCreatedAt().hashCode());

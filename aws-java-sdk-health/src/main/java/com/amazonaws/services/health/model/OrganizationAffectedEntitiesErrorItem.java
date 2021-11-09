@@ -32,7 +32,7 @@ public class OrganizationAffectedEntitiesErrorItem implements Serializable, Clon
 
     /**
      * <p>
-     * The 12-digit AWS account numbers that contains the affected entities.
+     * The 12-digit Amazon Web Services account numbers that contains the affected entities.
      * </p>
      */
     private String awsAccountId;
@@ -66,11 +66,11 @@ public class OrganizationAffectedEntitiesErrorItem implements Serializable, Clon
 
     /**
      * <p>
-     * The 12-digit AWS account numbers that contains the affected entities.
+     * The 12-digit Amazon Web Services account numbers that contains the affected entities.
      * </p>
      * 
      * @param awsAccountId
-     *        The 12-digit AWS account numbers that contains the affected entities.
+     *        The 12-digit Amazon Web Services account numbers that contains the affected entities.
      */
 
     public void setAwsAccountId(String awsAccountId) {
@@ -79,10 +79,10 @@ public class OrganizationAffectedEntitiesErrorItem implements Serializable, Clon
 
     /**
      * <p>
-     * The 12-digit AWS account numbers that contains the affected entities.
+     * The 12-digit Amazon Web Services account numbers that contains the affected entities.
      * </p>
      * 
-     * @return The 12-digit AWS account numbers that contains the affected entities.
+     * @return The 12-digit Amazon Web Services account numbers that contains the affected entities.
      */
 
     public String getAwsAccountId() {
@@ -91,11 +91,11 @@ public class OrganizationAffectedEntitiesErrorItem implements Serializable, Clon
 
     /**
      * <p>
-     * The 12-digit AWS account numbers that contains the affected entities.
+     * The 12-digit Amazon Web Services account numbers that contains the affected entities.
      * </p>
      * 
      * @param awsAccountId
-     *        The 12-digit AWS account numbers that contains the affected entities.
+     *        The 12-digit Amazon Web Services account numbers that contains the affected entities.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

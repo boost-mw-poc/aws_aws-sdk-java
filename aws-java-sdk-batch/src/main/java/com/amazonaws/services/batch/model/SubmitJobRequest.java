@@ -44,6 +44,23 @@ public class SubmitJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
     private String jobQueue;
     /**
      * <p>
+     * The share identifier for the job.
+     * </p>
+     */
+    private String shareIdentifier;
+    /**
+     * <p>
+     * The scheduling priority for the job. This will only affect jobs in job queues with a fair share policy. Jobs with
+     * a higher scheduling priority will be scheduled before jobs with a lower scheduling priority. This will override
+     * any scheduling priority in the job definition.
+     * </p>
+     * <p>
+     * The minimum supported value is 0 and the maximum supported value is 9999.
+     * </p>
+     */
+    private Integer schedulingPriorityOverride;
+    /**
+     * <p>
      * The array properties for the submitted job, such as the size of the array. The array size can be between 2 and
      * 10,000. If you specify array properties for a job, it becomes an array job. For more information, see <a
      * href="https://docs.aws.amazon.com/batch/latest/userguide/array_jobs.html">Array Jobs</a> in the <i>Batch User
@@ -227,6 +244,113 @@ public class SubmitJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     public SubmitJobRequest withJobQueue(String jobQueue) {
         setJobQueue(jobQueue);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The share identifier for the job.
+     * </p>
+     * 
+     * @param shareIdentifier
+     *        The share identifier for the job.
+     */
+
+    public void setShareIdentifier(String shareIdentifier) {
+        this.shareIdentifier = shareIdentifier;
+    }
+
+    /**
+     * <p>
+     * The share identifier for the job.
+     * </p>
+     * 
+     * @return The share identifier for the job.
+     */
+
+    public String getShareIdentifier() {
+        return this.shareIdentifier;
+    }
+
+    /**
+     * <p>
+     * The share identifier for the job.
+     * </p>
+     * 
+     * @param shareIdentifier
+     *        The share identifier for the job.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public SubmitJobRequest withShareIdentifier(String shareIdentifier) {
+        setShareIdentifier(shareIdentifier);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The scheduling priority for the job. This will only affect jobs in job queues with a fair share policy. Jobs with
+     * a higher scheduling priority will be scheduled before jobs with a lower scheduling priority. This will override
+     * any scheduling priority in the job definition.
+     * </p>
+     * <p>
+     * The minimum supported value is 0 and the maximum supported value is 9999.
+     * </p>
+     * 
+     * @param schedulingPriorityOverride
+     *        The scheduling priority for the job. This will only affect jobs in job queues with a fair share policy.
+     *        Jobs with a higher scheduling priority will be scheduled before jobs with a lower scheduling priority.
+     *        This will override any scheduling priority in the job definition.</p>
+     *        <p>
+     *        The minimum supported value is 0 and the maximum supported value is 9999.
+     */
+
+    public void setSchedulingPriorityOverride(Integer schedulingPriorityOverride) {
+        this.schedulingPriorityOverride = schedulingPriorityOverride;
+    }
+
+    /**
+     * <p>
+     * The scheduling priority for the job. This will only affect jobs in job queues with a fair share policy. Jobs with
+     * a higher scheduling priority will be scheduled before jobs with a lower scheduling priority. This will override
+     * any scheduling priority in the job definition.
+     * </p>
+     * <p>
+     * The minimum supported value is 0 and the maximum supported value is 9999.
+     * </p>
+     * 
+     * @return The scheduling priority for the job. This will only affect jobs in job queues with a fair share policy.
+     *         Jobs with a higher scheduling priority will be scheduled before jobs with a lower scheduling priority.
+     *         This will override any scheduling priority in the job definition.</p>
+     *         <p>
+     *         The minimum supported value is 0 and the maximum supported value is 9999.
+     */
+
+    public Integer getSchedulingPriorityOverride() {
+        return this.schedulingPriorityOverride;
+    }
+
+    /**
+     * <p>
+     * The scheduling priority for the job. This will only affect jobs in job queues with a fair share policy. Jobs with
+     * a higher scheduling priority will be scheduled before jobs with a lower scheduling priority. This will override
+     * any scheduling priority in the job definition.
+     * </p>
+     * <p>
+     * The minimum supported value is 0 and the maximum supported value is 9999.
+     * </p>
+     * 
+     * @param schedulingPriorityOverride
+     *        The scheduling priority for the job. This will only affect jobs in job queues with a fair share policy.
+     *        Jobs with a higher scheduling priority will be scheduled before jobs with a lower scheduling priority.
+     *        This will override any scheduling priority in the job definition.</p>
+     *        <p>
+     *        The minimum supported value is 0 and the maximum supported value is 9999.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public SubmitJobRequest withSchedulingPriorityOverride(Integer schedulingPriorityOverride) {
+        setSchedulingPriorityOverride(schedulingPriorityOverride);
         return this;
     }
 
@@ -971,6 +1095,10 @@ public class SubmitJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
             sb.append("JobName: ").append(getJobName()).append(",");
         if (getJobQueue() != null)
             sb.append("JobQueue: ").append(getJobQueue()).append(",");
+        if (getShareIdentifier() != null)
+            sb.append("ShareIdentifier: ").append(getShareIdentifier()).append(",");
+        if (getSchedulingPriorityOverride() != null)
+            sb.append("SchedulingPriorityOverride: ").append(getSchedulingPriorityOverride()).append(",");
         if (getArrayProperties() != null)
             sb.append("ArrayProperties: ").append(getArrayProperties()).append(",");
         if (getDependsOn() != null)
@@ -1012,6 +1140,14 @@ public class SubmitJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
         if (other.getJobQueue() == null ^ this.getJobQueue() == null)
             return false;
         if (other.getJobQueue() != null && other.getJobQueue().equals(this.getJobQueue()) == false)
+            return false;
+        if (other.getShareIdentifier() == null ^ this.getShareIdentifier() == null)
+            return false;
+        if (other.getShareIdentifier() != null && other.getShareIdentifier().equals(this.getShareIdentifier()) == false)
+            return false;
+        if (other.getSchedulingPriorityOverride() == null ^ this.getSchedulingPriorityOverride() == null)
+            return false;
+        if (other.getSchedulingPriorityOverride() != null && other.getSchedulingPriorityOverride().equals(this.getSchedulingPriorityOverride()) == false)
             return false;
         if (other.getArrayProperties() == null ^ this.getArrayProperties() == null)
             return false;
@@ -1063,6 +1199,8 @@ public class SubmitJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
         hashCode = prime * hashCode + ((getJobName() == null) ? 0 : getJobName().hashCode());
         hashCode = prime * hashCode + ((getJobQueue() == null) ? 0 : getJobQueue().hashCode());
+        hashCode = prime * hashCode + ((getShareIdentifier() == null) ? 0 : getShareIdentifier().hashCode());
+        hashCode = prime * hashCode + ((getSchedulingPriorityOverride() == null) ? 0 : getSchedulingPriorityOverride().hashCode());
         hashCode = prime * hashCode + ((getArrayProperties() == null) ? 0 : getArrayProperties().hashCode());
         hashCode = prime * hashCode + ((getDependsOn() == null) ? 0 : getDependsOn().hashCode());
         hashCode = prime * hashCode + ((getJobDefinition() == null) ? 0 : getJobDefinition().hashCode());

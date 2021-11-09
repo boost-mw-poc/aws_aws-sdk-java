@@ -32,7 +32,8 @@ public class DescribeAffectedAccountsForOrganizationResult extends com.amazonaws
     private java.util.List<String> affectedAccounts;
     /**
      * <p>
-     * This parameter specifies if the AWS Health event is a public AWS service event or an account-specific event.
+     * This parameter specifies if the Health event is a public Amazon Web Services service event or an account-specific
+     * event.
      * </p>
      * <ul>
      * <li>
@@ -44,9 +45,9 @@ public class DescribeAffectedAccountsForOrganizationResult extends com.amazonaws
      * <li>
      * <p>
      * If the <code>eventScopeCode</code> value is <code>ACCOUNT_SPECIFIC</code>, then the <code>affectedAccounts</code>
-     * value lists the affected AWS accounts in your organization. For example, if an event affects a service such as
-     * Amazon Elastic Compute Cloud and you have AWS accounts that use that service, those account IDs appear in the
-     * response.
+     * value lists the affected Amazon Web Services accounts in your organization. For example, if an event affects a
+     * service such as Amazon Elastic Compute Cloud and you have Amazon Web Services accounts that use that service,
+     * those account IDs appear in the response.
      * </p>
      * </li>
      * <li>
@@ -140,7 +141,8 @@ public class DescribeAffectedAccountsForOrganizationResult extends com.amazonaws
 
     /**
      * <p>
-     * This parameter specifies if the AWS Health event is a public AWS service event or an account-specific event.
+     * This parameter specifies if the Health event is a public Amazon Web Services service event or an account-specific
+     * event.
      * </p>
      * <ul>
      * <li>
@@ -152,9 +154,9 @@ public class DescribeAffectedAccountsForOrganizationResult extends com.amazonaws
      * <li>
      * <p>
      * If the <code>eventScopeCode</code> value is <code>ACCOUNT_SPECIFIC</code>, then the <code>affectedAccounts</code>
-     * value lists the affected AWS accounts in your organization. For example, if an event affects a service such as
-     * Amazon Elastic Compute Cloud and you have AWS accounts that use that service, those account IDs appear in the
-     * response.
+     * value lists the affected Amazon Web Services accounts in your organization. For example, if an event affects a
+     * service such as Amazon Elastic Compute Cloud and you have Amazon Web Services accounts that use that service,
+     * those account IDs appear in the response.
      * </p>
      * </li>
      * <li>
@@ -166,8 +168,8 @@ public class DescribeAffectedAccountsForOrganizationResult extends com.amazonaws
      * </ul>
      * 
      * @param eventScopeCode
-     *        This parameter specifies if the AWS Health event is a public AWS service event or an account-specific
-     *        event.</p>
+     *        This parameter specifies if the Health event is a public Amazon Web Services service event or an
+     *        account-specific event.</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -178,9 +180,9 @@ public class DescribeAffectedAccountsForOrganizationResult extends com.amazonaws
      *        <li>
      *        <p>
      *        If the <code>eventScopeCode</code> value is <code>ACCOUNT_SPECIFIC</code>, then the
-     *        <code>affectedAccounts</code> value lists the affected AWS accounts in your organization. For example, if
-     *        an event affects a service such as Amazon Elastic Compute Cloud and you have AWS accounts that use that
-     *        service, those account IDs appear in the response.
+     *        <code>affectedAccounts</code> value lists the affected Amazon Web Services accounts in your organization.
+     *        For example, if an event affects a service such as Amazon Elastic Compute Cloud and you have Amazon Web
+     *        Services accounts that use that service, those account IDs appear in the response.
      *        </p>
      *        </li>
      *        <li>
@@ -198,7 +200,8 @@ public class DescribeAffectedAccountsForOrganizationResult extends com.amazonaws
 
     /**
      * <p>
-     * This parameter specifies if the AWS Health event is a public AWS service event or an account-specific event.
+     * This parameter specifies if the Health event is a public Amazon Web Services service event or an account-specific
+     * event.
      * </p>
      * <ul>
      * <li>
@@ -210,9 +213,9 @@ public class DescribeAffectedAccountsForOrganizationResult extends com.amazonaws
      * <li>
      * <p>
      * If the <code>eventScopeCode</code> value is <code>ACCOUNT_SPECIFIC</code>, then the <code>affectedAccounts</code>
-     * value lists the affected AWS accounts in your organization. For example, if an event affects a service such as
-     * Amazon Elastic Compute Cloud and you have AWS accounts that use that service, those account IDs appear in the
-     * response.
+     * value lists the affected Amazon Web Services accounts in your organization. For example, if an event affects a
+     * service such as Amazon Elastic Compute Cloud and you have Amazon Web Services accounts that use that service,
+     * those account IDs appear in the response.
      * </p>
      * </li>
      * <li>
@@ -223,8 +226,8 @@ public class DescribeAffectedAccountsForOrganizationResult extends com.amazonaws
      * </li>
      * </ul>
      * 
-     * @return This parameter specifies if the AWS Health event is a public AWS service event or an account-specific
-     *         event.</p>
+     * @return This parameter specifies if the Health event is a public Amazon Web Services service event or an
+     *         account-specific event.</p>
      *         <ul>
      *         <li>
      *         <p>
@@ -235,9 +238,9 @@ public class DescribeAffectedAccountsForOrganizationResult extends com.amazonaws
      *         <li>
      *         <p>
      *         If the <code>eventScopeCode</code> value is <code>ACCOUNT_SPECIFIC</code>, then the
-     *         <code>affectedAccounts</code> value lists the affected AWS accounts in your organization. For example, if
-     *         an event affects a service such as Amazon Elastic Compute Cloud and you have AWS accounts that use that
-     *         service, those account IDs appear in the response.
+     *         <code>affectedAccounts</code> value lists the affected Amazon Web Services accounts in your organization.
+     *         For example, if an event affects a service such as Amazon Elastic Compute Cloud and you have Amazon Web
+     *         Services accounts that use that service, those account IDs appear in the response.
      *         </p>
      *         </li>
      *         <li>
@@ -255,7 +258,8 @@ public class DescribeAffectedAccountsForOrganizationResult extends com.amazonaws
 
     /**
      * <p>
-     * This parameter specifies if the AWS Health event is a public AWS service event or an account-specific event.
+     * This parameter specifies if the Health event is a public Amazon Web Services service event or an account-specific
+     * event.
      * </p>
      * <ul>
      * <li>
@@ -267,9 +271,9 @@ public class DescribeAffectedAccountsForOrganizationResult extends com.amazonaws
      * <li>
      * <p>
      * If the <code>eventScopeCode</code> value is <code>ACCOUNT_SPECIFIC</code>, then the <code>affectedAccounts</code>
-     * value lists the affected AWS accounts in your organization. For example, if an event affects a service such as
-     * Amazon Elastic Compute Cloud and you have AWS accounts that use that service, those account IDs appear in the
-     * response.
+     * value lists the affected Amazon Web Services accounts in your organization. For example, if an event affects a
+     * service such as Amazon Elastic Compute Cloud and you have Amazon Web Services accounts that use that service,
+     * those account IDs appear in the response.
      * </p>
      * </li>
      * <li>
@@ -281,8 +285,8 @@ public class DescribeAffectedAccountsForOrganizationResult extends com.amazonaws
      * </ul>
      * 
      * @param eventScopeCode
-     *        This parameter specifies if the AWS Health event is a public AWS service event or an account-specific
-     *        event.</p>
+     *        This parameter specifies if the Health event is a public Amazon Web Services service event or an
+     *        account-specific event.</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -293,9 +297,9 @@ public class DescribeAffectedAccountsForOrganizationResult extends com.amazonaws
      *        <li>
      *        <p>
      *        If the <code>eventScopeCode</code> value is <code>ACCOUNT_SPECIFIC</code>, then the
-     *        <code>affectedAccounts</code> value lists the affected AWS accounts in your organization. For example, if
-     *        an event affects a service such as Amazon Elastic Compute Cloud and you have AWS accounts that use that
-     *        service, those account IDs appear in the response.
+     *        <code>affectedAccounts</code> value lists the affected Amazon Web Services accounts in your organization.
+     *        For example, if an event affects a service such as Amazon Elastic Compute Cloud and you have Amazon Web
+     *        Services accounts that use that service, those account IDs appear in the response.
      *        </p>
      *        </li>
      *        <li>
@@ -315,7 +319,8 @@ public class DescribeAffectedAccountsForOrganizationResult extends com.amazonaws
 
     /**
      * <p>
-     * This parameter specifies if the AWS Health event is a public AWS service event or an account-specific event.
+     * This parameter specifies if the Health event is a public Amazon Web Services service event or an account-specific
+     * event.
      * </p>
      * <ul>
      * <li>
@@ -327,9 +332,9 @@ public class DescribeAffectedAccountsForOrganizationResult extends com.amazonaws
      * <li>
      * <p>
      * If the <code>eventScopeCode</code> value is <code>ACCOUNT_SPECIFIC</code>, then the <code>affectedAccounts</code>
-     * value lists the affected AWS accounts in your organization. For example, if an event affects a service such as
-     * Amazon Elastic Compute Cloud and you have AWS accounts that use that service, those account IDs appear in the
-     * response.
+     * value lists the affected Amazon Web Services accounts in your organization. For example, if an event affects a
+     * service such as Amazon Elastic Compute Cloud and you have Amazon Web Services accounts that use that service,
+     * those account IDs appear in the response.
      * </p>
      * </li>
      * <li>
@@ -341,8 +346,8 @@ public class DescribeAffectedAccountsForOrganizationResult extends com.amazonaws
      * </ul>
      * 
      * @param eventScopeCode
-     *        This parameter specifies if the AWS Health event is a public AWS service event or an account-specific
-     *        event.</p>
+     *        This parameter specifies if the Health event is a public Amazon Web Services service event or an
+     *        account-specific event.</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -353,9 +358,9 @@ public class DescribeAffectedAccountsForOrganizationResult extends com.amazonaws
      *        <li>
      *        <p>
      *        If the <code>eventScopeCode</code> value is <code>ACCOUNT_SPECIFIC</code>, then the
-     *        <code>affectedAccounts</code> value lists the affected AWS accounts in your organization. For example, if
-     *        an event affects a service such as Amazon Elastic Compute Cloud and you have AWS accounts that use that
-     *        service, those account IDs appear in the response.
+     *        <code>affectedAccounts</code> value lists the affected Amazon Web Services accounts in your organization.
+     *        For example, if an event affects a service such as Amazon Elastic Compute Cloud and you have Amazon Web
+     *        Services accounts that use that service, those account IDs appear in the response.
      *        </p>
      *        </li>
      *        <li>

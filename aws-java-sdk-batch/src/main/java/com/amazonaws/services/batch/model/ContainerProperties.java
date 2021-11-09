@@ -74,53 +74,28 @@ public class ContainerProperties implements Serializable, Cloneable, StructuredP
     private String image;
     /**
      * <p>
-     * The number of vCPUs reserved for the job. Each vCPU is equivalent to 1,024 CPU shares. This parameter maps to
-     * <code>CpuShares</code> in the <a href="https://docs.docker.com/engine/api/v1.23/#create-a-container">Create a
-     * container</a> section of the <a href="https://docs.docker.com/engine/api/v1.23/">Docker Remote API</a> and the
-     * <code>--cpu-shares</code> option to <a href="https://docs.docker.com/engine/reference/run/">docker run</a>. The
-     * number of vCPUs must be specified but can be specified in several places. You must specify it at least once for
-     * each node.
+     * This parameter is deprecated, use <code>resourceRequirements</code> to specify the vCPU requirements for the job
+     * definition. It's not supported for jobs that run on Fargate resources. For jobs run on EC2 resources, it
+     * specifies the number of vCPUs reserved for the job.
      * </p>
      * <p>
-     * This parameter is supported on EC2 resources but isn't supported for jobs that run on Fargate resources. For
-     * these resources, use <code>resourceRequirement</code> instead. You can use this parameter or
-     * <code>resourceRequirements</code> structure but not both.
+     * Each vCPU is equivalent to 1,024 CPU shares. This parameter maps to <code>CpuShares</code> in the <a
+     * href="https://docs.docker.com/engine/api/v1.23/#create-a-container">Create a container</a> section of the <a
+     * href="https://docs.docker.com/engine/api/v1.23/">Docker Remote API</a> and the <code>--cpu-shares</code> option
+     * to <a href="https://docs.docker.com/engine/reference/run/">docker run</a>. The number of vCPUs must be specified
+     * but can be specified in several places. You must specify it at least once for each node.
      * </p>
-     * <note>
-     * <p>
-     * This parameter isn't applicable to jobs that are running on Fargate resources and shouldn't be provided. For jobs
-     * that run on Fargate resources, you must specify the vCPU requirement for the job using
-     * <code>resourceRequirements</code>.
-     * </p>
-     * </note>
      */
     @Deprecated
     private Integer vcpus;
     /**
      * <p>
-     * This parameter indicates the memory hard limit (in MiB) for a container. If your container attempts to exceed the
-     * specified number, it's terminated. You must specify at least 4 MiB of memory for a job using this parameter. The
-     * memory hard limit can be specified in several places. It must be specified for each node at least once.
+     * This parameter is deprecated, use <code>resourceRequirements</code> to specify the memory requirements for the
+     * job definition. It's not supported for jobs that run on Fargate resources. For jobs run on EC2 resources, it
+     * specifies the memory hard limit (in MiB) for a container. If your container attempts to exceed the specified
+     * number, it's terminated. You must specify at least 4 MiB of memory for a job using this parameter. The memory
+     * hard limit can be specified in several places. It must be specified for each node at least once.
      * </p>
-     * <p>
-     * This parameter maps to <code>Memory</code> in the <a
-     * href="https://docs.docker.com/engine/api/v1.23/#create-a-container">Create a container</a> section of the <a
-     * href="https://docs.docker.com/engine/api/v1.23/">Docker Remote API</a> and the <code>--memory</code> option to <a
-     * href="https://docs.docker.com/engine/reference/run/">docker run</a>.
-     * </p>
-     * <p>
-     * This parameter is supported on EC2 resources but isn't supported on Fargate resources. For Fargate resources, you
-     * should specify the memory requirement using <code>resourceRequirement</code>. You can also do this for EC2
-     * resources.
-     * </p>
-     * <note>
-     * <p>
-     * If you're trying to maximize your resource utilization by providing your jobs as much memory as possible for a
-     * particular instance type, see <a
-     * href="https://docs.aws.amazon.com/batch/latest/userguide/memory-management.html">Memory Management</a> in the
-     * <i>Batch User Guide</i>.
-     * </p>
-     * </note>
      */
     @Deprecated
     private Integer memory;
@@ -590,45 +565,29 @@ public class ContainerProperties implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The number of vCPUs reserved for the job. Each vCPU is equivalent to 1,024 CPU shares. This parameter maps to
-     * <code>CpuShares</code> in the <a href="https://docs.docker.com/engine/api/v1.23/#create-a-container">Create a
-     * container</a> section of the <a href="https://docs.docker.com/engine/api/v1.23/">Docker Remote API</a> and the
-     * <code>--cpu-shares</code> option to <a href="https://docs.docker.com/engine/reference/run/">docker run</a>. The
-     * number of vCPUs must be specified but can be specified in several places. You must specify it at least once for
-     * each node.
+     * This parameter is deprecated, use <code>resourceRequirements</code> to specify the vCPU requirements for the job
+     * definition. It's not supported for jobs that run on Fargate resources. For jobs run on EC2 resources, it
+     * specifies the number of vCPUs reserved for the job.
      * </p>
      * <p>
-     * This parameter is supported on EC2 resources but isn't supported for jobs that run on Fargate resources. For
-     * these resources, use <code>resourceRequirement</code> instead. You can use this parameter or
-     * <code>resourceRequirements</code> structure but not both.
+     * Each vCPU is equivalent to 1,024 CPU shares. This parameter maps to <code>CpuShares</code> in the <a
+     * href="https://docs.docker.com/engine/api/v1.23/#create-a-container">Create a container</a> section of the <a
+     * href="https://docs.docker.com/engine/api/v1.23/">Docker Remote API</a> and the <code>--cpu-shares</code> option
+     * to <a href="https://docs.docker.com/engine/reference/run/">docker run</a>. The number of vCPUs must be specified
+     * but can be specified in several places. You must specify it at least once for each node.
      * </p>
-     * <note>
-     * <p>
-     * This parameter isn't applicable to jobs that are running on Fargate resources and shouldn't be provided. For jobs
-     * that run on Fargate resources, you must specify the vCPU requirement for the job using
-     * <code>resourceRequirements</code>.
-     * </p>
-     * </note>
      * 
      * @param vcpus
-     *        The number of vCPUs reserved for the job. Each vCPU is equivalent to 1,024 CPU shares. This parameter maps
-     *        to <code>CpuShares</code> in the <a
+     *        This parameter is deprecated, use <code>resourceRequirements</code> to specify the vCPU requirements for
+     *        the job definition. It's not supported for jobs that run on Fargate resources. For jobs run on EC2
+     *        resources, it specifies the number of vCPUs reserved for the job.</p>
+     *        <p>
+     *        Each vCPU is equivalent to 1,024 CPU shares. This parameter maps to <code>CpuShares</code> in the <a
      *        href="https://docs.docker.com/engine/api/v1.23/#create-a-container">Create a container</a> section of the
      *        <a href="https://docs.docker.com/engine/api/v1.23/">Docker Remote API</a> and the
      *        <code>--cpu-shares</code> option to <a href="https://docs.docker.com/engine/reference/run/">docker
      *        run</a>. The number of vCPUs must be specified but can be specified in several places. You must specify it
-     *        at least once for each node.</p>
-     *        <p>
-     *        This parameter is supported on EC2 resources but isn't supported for jobs that run on Fargate resources.
-     *        For these resources, use <code>resourceRequirement</code> instead. You can use this parameter or
-     *        <code>resourceRequirements</code> structure but not both.
-     *        </p>
-     *        <note>
-     *        <p>
-     *        This parameter isn't applicable to jobs that are running on Fargate resources and shouldn't be provided.
-     *        For jobs that run on Fargate resources, you must specify the vCPU requirement for the job using
-     *        <code>resourceRequirements</code>.
-     *        </p>
+     *        at least once for each node.
      */
     @Deprecated
     public void setVcpus(Integer vcpus) {
@@ -637,44 +596,28 @@ public class ContainerProperties implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The number of vCPUs reserved for the job. Each vCPU is equivalent to 1,024 CPU shares. This parameter maps to
-     * <code>CpuShares</code> in the <a href="https://docs.docker.com/engine/api/v1.23/#create-a-container">Create a
-     * container</a> section of the <a href="https://docs.docker.com/engine/api/v1.23/">Docker Remote API</a> and the
-     * <code>--cpu-shares</code> option to <a href="https://docs.docker.com/engine/reference/run/">docker run</a>. The
-     * number of vCPUs must be specified but can be specified in several places. You must specify it at least once for
-     * each node.
+     * This parameter is deprecated, use <code>resourceRequirements</code> to specify the vCPU requirements for the job
+     * definition. It's not supported for jobs that run on Fargate resources. For jobs run on EC2 resources, it
+     * specifies the number of vCPUs reserved for the job.
      * </p>
      * <p>
-     * This parameter is supported on EC2 resources but isn't supported for jobs that run on Fargate resources. For
-     * these resources, use <code>resourceRequirement</code> instead. You can use this parameter or
-     * <code>resourceRequirements</code> structure but not both.
+     * Each vCPU is equivalent to 1,024 CPU shares. This parameter maps to <code>CpuShares</code> in the <a
+     * href="https://docs.docker.com/engine/api/v1.23/#create-a-container">Create a container</a> section of the <a
+     * href="https://docs.docker.com/engine/api/v1.23/">Docker Remote API</a> and the <code>--cpu-shares</code> option
+     * to <a href="https://docs.docker.com/engine/reference/run/">docker run</a>. The number of vCPUs must be specified
+     * but can be specified in several places. You must specify it at least once for each node.
      * </p>
-     * <note>
-     * <p>
-     * This parameter isn't applicable to jobs that are running on Fargate resources and shouldn't be provided. For jobs
-     * that run on Fargate resources, you must specify the vCPU requirement for the job using
-     * <code>resourceRequirements</code>.
-     * </p>
-     * </note>
      * 
-     * @return The number of vCPUs reserved for the job. Each vCPU is equivalent to 1,024 CPU shares. This parameter
-     *         maps to <code>CpuShares</code> in the <a
+     * @return This parameter is deprecated, use <code>resourceRequirements</code> to specify the vCPU requirements for
+     *         the job definition. It's not supported for jobs that run on Fargate resources. For jobs run on EC2
+     *         resources, it specifies the number of vCPUs reserved for the job.</p>
+     *         <p>
+     *         Each vCPU is equivalent to 1,024 CPU shares. This parameter maps to <code>CpuShares</code> in the <a
      *         href="https://docs.docker.com/engine/api/v1.23/#create-a-container">Create a container</a> section of the
      *         <a href="https://docs.docker.com/engine/api/v1.23/">Docker Remote API</a> and the
      *         <code>--cpu-shares</code> option to <a href="https://docs.docker.com/engine/reference/run/">docker
      *         run</a>. The number of vCPUs must be specified but can be specified in several places. You must specify
-     *         it at least once for each node.</p>
-     *         <p>
-     *         This parameter is supported on EC2 resources but isn't supported for jobs that run on Fargate resources.
-     *         For these resources, use <code>resourceRequirement</code> instead. You can use this parameter or
-     *         <code>resourceRequirements</code> structure but not both.
-     *         </p>
-     *         <note>
-     *         <p>
-     *         This parameter isn't applicable to jobs that are running on Fargate resources and shouldn't be provided.
-     *         For jobs that run on Fargate resources, you must specify the vCPU requirement for the job using
-     *         <code>resourceRequirements</code>.
-     *         </p>
+     *         it at least once for each node.
      */
     @Deprecated
     public Integer getVcpus() {
@@ -683,45 +626,29 @@ public class ContainerProperties implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The number of vCPUs reserved for the job. Each vCPU is equivalent to 1,024 CPU shares. This parameter maps to
-     * <code>CpuShares</code> in the <a href="https://docs.docker.com/engine/api/v1.23/#create-a-container">Create a
-     * container</a> section of the <a href="https://docs.docker.com/engine/api/v1.23/">Docker Remote API</a> and the
-     * <code>--cpu-shares</code> option to <a href="https://docs.docker.com/engine/reference/run/">docker run</a>. The
-     * number of vCPUs must be specified but can be specified in several places. You must specify it at least once for
-     * each node.
+     * This parameter is deprecated, use <code>resourceRequirements</code> to specify the vCPU requirements for the job
+     * definition. It's not supported for jobs that run on Fargate resources. For jobs run on EC2 resources, it
+     * specifies the number of vCPUs reserved for the job.
      * </p>
      * <p>
-     * This parameter is supported on EC2 resources but isn't supported for jobs that run on Fargate resources. For
-     * these resources, use <code>resourceRequirement</code> instead. You can use this parameter or
-     * <code>resourceRequirements</code> structure but not both.
+     * Each vCPU is equivalent to 1,024 CPU shares. This parameter maps to <code>CpuShares</code> in the <a
+     * href="https://docs.docker.com/engine/api/v1.23/#create-a-container">Create a container</a> section of the <a
+     * href="https://docs.docker.com/engine/api/v1.23/">Docker Remote API</a> and the <code>--cpu-shares</code> option
+     * to <a href="https://docs.docker.com/engine/reference/run/">docker run</a>. The number of vCPUs must be specified
+     * but can be specified in several places. You must specify it at least once for each node.
      * </p>
-     * <note>
-     * <p>
-     * This parameter isn't applicable to jobs that are running on Fargate resources and shouldn't be provided. For jobs
-     * that run on Fargate resources, you must specify the vCPU requirement for the job using
-     * <code>resourceRequirements</code>.
-     * </p>
-     * </note>
      * 
      * @param vcpus
-     *        The number of vCPUs reserved for the job. Each vCPU is equivalent to 1,024 CPU shares. This parameter maps
-     *        to <code>CpuShares</code> in the <a
+     *        This parameter is deprecated, use <code>resourceRequirements</code> to specify the vCPU requirements for
+     *        the job definition. It's not supported for jobs that run on Fargate resources. For jobs run on EC2
+     *        resources, it specifies the number of vCPUs reserved for the job.</p>
+     *        <p>
+     *        Each vCPU is equivalent to 1,024 CPU shares. This parameter maps to <code>CpuShares</code> in the <a
      *        href="https://docs.docker.com/engine/api/v1.23/#create-a-container">Create a container</a> section of the
      *        <a href="https://docs.docker.com/engine/api/v1.23/">Docker Remote API</a> and the
      *        <code>--cpu-shares</code> option to <a href="https://docs.docker.com/engine/reference/run/">docker
      *        run</a>. The number of vCPUs must be specified but can be specified in several places. You must specify it
-     *        at least once for each node.</p>
-     *        <p>
-     *        This parameter is supported on EC2 resources but isn't supported for jobs that run on Fargate resources.
-     *        For these resources, use <code>resourceRequirement</code> instead. You can use this parameter or
-     *        <code>resourceRequirements</code> structure but not both.
-     *        </p>
-     *        <note>
-     *        <p>
-     *        This parameter isn't applicable to jobs that are running on Fargate resources and shouldn't be provided.
-     *        For jobs that run on Fargate resources, you must specify the vCPU requirement for the job using
-     *        <code>resourceRequirements</code>.
-     *        </p>
+     *        at least once for each node.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
     @Deprecated
@@ -732,53 +659,20 @@ public class ContainerProperties implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * This parameter indicates the memory hard limit (in MiB) for a container. If your container attempts to exceed the
-     * specified number, it's terminated. You must specify at least 4 MiB of memory for a job using this parameter. The
-     * memory hard limit can be specified in several places. It must be specified for each node at least once.
+     * This parameter is deprecated, use <code>resourceRequirements</code> to specify the memory requirements for the
+     * job definition. It's not supported for jobs that run on Fargate resources. For jobs run on EC2 resources, it
+     * specifies the memory hard limit (in MiB) for a container. If your container attempts to exceed the specified
+     * number, it's terminated. You must specify at least 4 MiB of memory for a job using this parameter. The memory
+     * hard limit can be specified in several places. It must be specified for each node at least once.
      * </p>
-     * <p>
-     * This parameter maps to <code>Memory</code> in the <a
-     * href="https://docs.docker.com/engine/api/v1.23/#create-a-container">Create a container</a> section of the <a
-     * href="https://docs.docker.com/engine/api/v1.23/">Docker Remote API</a> and the <code>--memory</code> option to <a
-     * href="https://docs.docker.com/engine/reference/run/">docker run</a>.
-     * </p>
-     * <p>
-     * This parameter is supported on EC2 resources but isn't supported on Fargate resources. For Fargate resources, you
-     * should specify the memory requirement using <code>resourceRequirement</code>. You can also do this for EC2
-     * resources.
-     * </p>
-     * <note>
-     * <p>
-     * If you're trying to maximize your resource utilization by providing your jobs as much memory as possible for a
-     * particular instance type, see <a
-     * href="https://docs.aws.amazon.com/batch/latest/userguide/memory-management.html">Memory Management</a> in the
-     * <i>Batch User Guide</i>.
-     * </p>
-     * </note>
      * 
      * @param memory
-     *        This parameter indicates the memory hard limit (in MiB) for a container. If your container attempts to
+     *        This parameter is deprecated, use <code>resourceRequirements</code> to specify the memory requirements for
+     *        the job definition. It's not supported for jobs that run on Fargate resources. For jobs run on EC2
+     *        resources, it specifies the memory hard limit (in MiB) for a container. If your container attempts to
      *        exceed the specified number, it's terminated. You must specify at least 4 MiB of memory for a job using
      *        this parameter. The memory hard limit can be specified in several places. It must be specified for each
-     *        node at least once.</p>
-     *        <p>
-     *        This parameter maps to <code>Memory</code> in the <a
-     *        href="https://docs.docker.com/engine/api/v1.23/#create-a-container">Create a container</a> section of the
-     *        <a href="https://docs.docker.com/engine/api/v1.23/">Docker Remote API</a> and the <code>--memory</code>
-     *        option to <a href="https://docs.docker.com/engine/reference/run/">docker run</a>.
-     *        </p>
-     *        <p>
-     *        This parameter is supported on EC2 resources but isn't supported on Fargate resources. For Fargate
-     *        resources, you should specify the memory requirement using <code>resourceRequirement</code>. You can also
-     *        do this for EC2 resources.
-     *        </p>
-     *        <note>
-     *        <p>
-     *        If you're trying to maximize your resource utilization by providing your jobs as much memory as possible
-     *        for a particular instance type, see <a
-     *        href="https://docs.aws.amazon.com/batch/latest/userguide/memory-management.html">Memory Management</a> in
-     *        the <i>Batch User Guide</i>.
-     *        </p>
+     *        node at least once.
      */
     @Deprecated
     public void setMemory(Integer memory) {
@@ -787,52 +681,19 @@ public class ContainerProperties implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * This parameter indicates the memory hard limit (in MiB) for a container. If your container attempts to exceed the
-     * specified number, it's terminated. You must specify at least 4 MiB of memory for a job using this parameter. The
-     * memory hard limit can be specified in several places. It must be specified for each node at least once.
+     * This parameter is deprecated, use <code>resourceRequirements</code> to specify the memory requirements for the
+     * job definition. It's not supported for jobs that run on Fargate resources. For jobs run on EC2 resources, it
+     * specifies the memory hard limit (in MiB) for a container. If your container attempts to exceed the specified
+     * number, it's terminated. You must specify at least 4 MiB of memory for a job using this parameter. The memory
+     * hard limit can be specified in several places. It must be specified for each node at least once.
      * </p>
-     * <p>
-     * This parameter maps to <code>Memory</code> in the <a
-     * href="https://docs.docker.com/engine/api/v1.23/#create-a-container">Create a container</a> section of the <a
-     * href="https://docs.docker.com/engine/api/v1.23/">Docker Remote API</a> and the <code>--memory</code> option to <a
-     * href="https://docs.docker.com/engine/reference/run/">docker run</a>.
-     * </p>
-     * <p>
-     * This parameter is supported on EC2 resources but isn't supported on Fargate resources. For Fargate resources, you
-     * should specify the memory requirement using <code>resourceRequirement</code>. You can also do this for EC2
-     * resources.
-     * </p>
-     * <note>
-     * <p>
-     * If you're trying to maximize your resource utilization by providing your jobs as much memory as possible for a
-     * particular instance type, see <a
-     * href="https://docs.aws.amazon.com/batch/latest/userguide/memory-management.html">Memory Management</a> in the
-     * <i>Batch User Guide</i>.
-     * </p>
-     * </note>
      * 
-     * @return This parameter indicates the memory hard limit (in MiB) for a container. If your container attempts to
+     * @return This parameter is deprecated, use <code>resourceRequirements</code> to specify the memory requirements
+     *         for the job definition. It's not supported for jobs that run on Fargate resources. For jobs run on EC2
+     *         resources, it specifies the memory hard limit (in MiB) for a container. If your container attempts to
      *         exceed the specified number, it's terminated. You must specify at least 4 MiB of memory for a job using
      *         this parameter. The memory hard limit can be specified in several places. It must be specified for each
-     *         node at least once.</p>
-     *         <p>
-     *         This parameter maps to <code>Memory</code> in the <a
-     *         href="https://docs.docker.com/engine/api/v1.23/#create-a-container">Create a container</a> section of the
-     *         <a href="https://docs.docker.com/engine/api/v1.23/">Docker Remote API</a> and the <code>--memory</code>
-     *         option to <a href="https://docs.docker.com/engine/reference/run/">docker run</a>.
-     *         </p>
-     *         <p>
-     *         This parameter is supported on EC2 resources but isn't supported on Fargate resources. For Fargate
-     *         resources, you should specify the memory requirement using <code>resourceRequirement</code>. You can also
-     *         do this for EC2 resources.
-     *         </p>
-     *         <note>
-     *         <p>
-     *         If you're trying to maximize your resource utilization by providing your jobs as much memory as possible
-     *         for a particular instance type, see <a
-     *         href="https://docs.aws.amazon.com/batch/latest/userguide/memory-management.html">Memory Management</a> in
-     *         the <i>Batch User Guide</i>.
-     *         </p>
+     *         node at least once.
      */
     @Deprecated
     public Integer getMemory() {
@@ -841,53 +702,20 @@ public class ContainerProperties implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * This parameter indicates the memory hard limit (in MiB) for a container. If your container attempts to exceed the
-     * specified number, it's terminated. You must specify at least 4 MiB of memory for a job using this parameter. The
-     * memory hard limit can be specified in several places. It must be specified for each node at least once.
+     * This parameter is deprecated, use <code>resourceRequirements</code> to specify the memory requirements for the
+     * job definition. It's not supported for jobs that run on Fargate resources. For jobs run on EC2 resources, it
+     * specifies the memory hard limit (in MiB) for a container. If your container attempts to exceed the specified
+     * number, it's terminated. You must specify at least 4 MiB of memory for a job using this parameter. The memory
+     * hard limit can be specified in several places. It must be specified for each node at least once.
      * </p>
-     * <p>
-     * This parameter maps to <code>Memory</code> in the <a
-     * href="https://docs.docker.com/engine/api/v1.23/#create-a-container">Create a container</a> section of the <a
-     * href="https://docs.docker.com/engine/api/v1.23/">Docker Remote API</a> and the <code>--memory</code> option to <a
-     * href="https://docs.docker.com/engine/reference/run/">docker run</a>.
-     * </p>
-     * <p>
-     * This parameter is supported on EC2 resources but isn't supported on Fargate resources. For Fargate resources, you
-     * should specify the memory requirement using <code>resourceRequirement</code>. You can also do this for EC2
-     * resources.
-     * </p>
-     * <note>
-     * <p>
-     * If you're trying to maximize your resource utilization by providing your jobs as much memory as possible for a
-     * particular instance type, see <a
-     * href="https://docs.aws.amazon.com/batch/latest/userguide/memory-management.html">Memory Management</a> in the
-     * <i>Batch User Guide</i>.
-     * </p>
-     * </note>
      * 
      * @param memory
-     *        This parameter indicates the memory hard limit (in MiB) for a container. If your container attempts to
+     *        This parameter is deprecated, use <code>resourceRequirements</code> to specify the memory requirements for
+     *        the job definition. It's not supported for jobs that run on Fargate resources. For jobs run on EC2
+     *        resources, it specifies the memory hard limit (in MiB) for a container. If your container attempts to
      *        exceed the specified number, it's terminated. You must specify at least 4 MiB of memory for a job using
      *        this parameter. The memory hard limit can be specified in several places. It must be specified for each
-     *        node at least once.</p>
-     *        <p>
-     *        This parameter maps to <code>Memory</code> in the <a
-     *        href="https://docs.docker.com/engine/api/v1.23/#create-a-container">Create a container</a> section of the
-     *        <a href="https://docs.docker.com/engine/api/v1.23/">Docker Remote API</a> and the <code>--memory</code>
-     *        option to <a href="https://docs.docker.com/engine/reference/run/">docker run</a>.
-     *        </p>
-     *        <p>
-     *        This parameter is supported on EC2 resources but isn't supported on Fargate resources. For Fargate
-     *        resources, you should specify the memory requirement using <code>resourceRequirement</code>. You can also
-     *        do this for EC2 resources.
-     *        </p>
-     *        <note>
-     *        <p>
-     *        If you're trying to maximize your resource utilization by providing your jobs as much memory as possible
-     *        for a particular instance type, see <a
-     *        href="https://docs.aws.amazon.com/batch/latest/userguide/memory-management.html">Memory Management</a> in
-     *        the <i>Batch User Guide</i>.
-     *        </p>
+     *        node at least once.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
     @Deprecated

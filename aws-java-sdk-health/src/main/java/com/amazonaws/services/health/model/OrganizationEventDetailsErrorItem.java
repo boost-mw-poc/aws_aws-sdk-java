@@ -70,19 +70,19 @@ public class OrganizationEventDetailsErrorItem implements Serializable, Cloneabl
      * <li>
      * <p>
      * We couldn't find a public event that matches your request. To find an event that is account specific, you must
-     * enter an AWS account ID in the request.
+     * enter an Amazon Web Services account ID in the request.
      * </p>
      * </li>
      * <li>
      * <p>
-     * We couldn't find an account specific event for the specified AWS account. To find an event that is public, you
-     * must enter a null value for the AWS account ID in the request.
+     * We couldn't find an account specific event for the specified Amazon Web Services account. To find an event that
+     * is public, you must enter a null value for the Amazon Web Services account ID in the request.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Your AWS account doesn't include the AWS Support plan required to use the AWS Health API. You must have either a
-     * Business or Enterprise Support plan.
+     * Your Amazon Web Services account doesn't include the Amazon Web Services Support plan required to use the Health
+     * API. You must have either a Business or Enterprise Support plan.
      * </p>
      * </li>
      * </ul>
@@ -278,19 +278,19 @@ public class OrganizationEventDetailsErrorItem implements Serializable, Cloneabl
      * <li>
      * <p>
      * We couldn't find a public event that matches your request. To find an event that is account specific, you must
-     * enter an AWS account ID in the request.
+     * enter an Amazon Web Services account ID in the request.
      * </p>
      * </li>
      * <li>
      * <p>
-     * We couldn't find an account specific event for the specified AWS account. To find an event that is public, you
-     * must enter a null value for the AWS account ID in the request.
+     * We couldn't find an account specific event for the specified Amazon Web Services account. To find an event that
+     * is public, you must enter a null value for the Amazon Web Services account ID in the request.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Your AWS account doesn't include the AWS Support plan required to use the AWS Health API. You must have either a
-     * Business or Enterprise Support plan.
+     * Your Amazon Web Services account doesn't include the Amazon Web Services Support plan required to use the Health
+     * API. You must have either a Business or Enterprise Support plan.
      * </p>
      * </li>
      * </ul>
@@ -305,19 +305,19 @@ public class OrganizationEventDetailsErrorItem implements Serializable, Cloneabl
      *        <li>
      *        <p>
      *        We couldn't find a public event that matches your request. To find an event that is account specific, you
-     *        must enter an AWS account ID in the request.
+     *        must enter an Amazon Web Services account ID in the request.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        We couldn't find an account specific event for the specified AWS account. To find an event that is public,
-     *        you must enter a null value for the AWS account ID in the request.
+     *        We couldn't find an account specific event for the specified Amazon Web Services account. To find an event
+     *        that is public, you must enter a null value for the Amazon Web Services account ID in the request.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        Your AWS account doesn't include the AWS Support plan required to use the AWS Health API. You must have
-     *        either a Business or Enterprise Support plan.
+     *        Your Amazon Web Services account doesn't include the Amazon Web Services Support plan required to use the
+     *        Health API. You must have either a Business or Enterprise Support plan.
      *        </p>
      *        </li>
      */
@@ -338,19 +338,19 @@ public class OrganizationEventDetailsErrorItem implements Serializable, Cloneabl
      * <li>
      * <p>
      * We couldn't find a public event that matches your request. To find an event that is account specific, you must
-     * enter an AWS account ID in the request.
+     * enter an Amazon Web Services account ID in the request.
      * </p>
      * </li>
      * <li>
      * <p>
-     * We couldn't find an account specific event for the specified AWS account. To find an event that is public, you
-     * must enter a null value for the AWS account ID in the request.
+     * We couldn't find an account specific event for the specified Amazon Web Services account. To find an event that
+     * is public, you must enter a null value for the Amazon Web Services account ID in the request.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Your AWS account doesn't include the AWS Support plan required to use the AWS Health API. You must have either a
-     * Business or Enterprise Support plan.
+     * Your Amazon Web Services account doesn't include the Amazon Web Services Support plan required to use the Health
+     * API. You must have either a Business or Enterprise Support plan.
      * </p>
      * </li>
      * </ul>
@@ -364,19 +364,19 @@ public class OrganizationEventDetailsErrorItem implements Serializable, Cloneabl
      *         <li>
      *         <p>
      *         We couldn't find a public event that matches your request. To find an event that is account specific, you
-     *         must enter an AWS account ID in the request.
+     *         must enter an Amazon Web Services account ID in the request.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         We couldn't find an account specific event for the specified AWS account. To find an event that is
-     *         public, you must enter a null value for the AWS account ID in the request.
+     *         We couldn't find an account specific event for the specified Amazon Web Services account. To find an
+     *         event that is public, you must enter a null value for the Amazon Web Services account ID in the request.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         Your AWS account doesn't include the AWS Support plan required to use the AWS Health API. You must have
-     *         either a Business or Enterprise Support plan.
+     *         Your Amazon Web Services account doesn't include the Amazon Web Services Support plan required to use the
+     *         Health API. You must have either a Business or Enterprise Support plan.
      *         </p>
      *         </li>
      */
@@ -397,19 +397,19 @@ public class OrganizationEventDetailsErrorItem implements Serializable, Cloneabl
      * <li>
      * <p>
      * We couldn't find a public event that matches your request. To find an event that is account specific, you must
-     * enter an AWS account ID in the request.
+     * enter an Amazon Web Services account ID in the request.
      * </p>
      * </li>
      * <li>
      * <p>
-     * We couldn't find an account specific event for the specified AWS account. To find an event that is public, you
-     * must enter a null value for the AWS account ID in the request.
+     * We couldn't find an account specific event for the specified Amazon Web Services account. To find an event that
+     * is public, you must enter a null value for the Amazon Web Services account ID in the request.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Your AWS account doesn't include the AWS Support plan required to use the AWS Health API. You must have either a
-     * Business or Enterprise Support plan.
+     * Your Amazon Web Services account doesn't include the Amazon Web Services Support plan required to use the Health
+     * API. You must have either a Business or Enterprise Support plan.
      * </p>
      * </li>
      * </ul>
@@ -424,19 +424,19 @@ public class OrganizationEventDetailsErrorItem implements Serializable, Cloneabl
      *        <li>
      *        <p>
      *        We couldn't find a public event that matches your request. To find an event that is account specific, you
-     *        must enter an AWS account ID in the request.
+     *        must enter an Amazon Web Services account ID in the request.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        We couldn't find an account specific event for the specified AWS account. To find an event that is public,
-     *        you must enter a null value for the AWS account ID in the request.
+     *        We couldn't find an account specific event for the specified Amazon Web Services account. To find an event
+     *        that is public, you must enter a null value for the Amazon Web Services account ID in the request.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        Your AWS account doesn't include the AWS Support plan required to use the AWS Health API. You must have
-     *        either a Business or Enterprise Support plan.
+     *        Your Amazon Web Services account doesn't include the Amazon Web Services Support plan required to use the
+     *        Health API. You must have either a Business or Enterprise Support plan.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

@@ -39,6 +39,10 @@ public class JobDetailMarshaller {
             .marshallLocationName("jobQueue").build();
     private static final MarshallingInfo<String> STATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("status").build();
+    private static final MarshallingInfo<String> SHAREIDENTIFIER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("shareIdentifier").build();
+    private static final MarshallingInfo<Integer> SCHEDULINGPRIORITY_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("schedulingPriority").build();
     private static final MarshallingInfo<List> ATTEMPTS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("attempts").build();
     private static final MarshallingInfo<String> STATUSREASON_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
@@ -95,6 +99,8 @@ public class JobDetailMarshaller {
             protocolMarshaller.marshall(jobDetail.getJobId(), JOBID_BINDING);
             protocolMarshaller.marshall(jobDetail.getJobQueue(), JOBQUEUE_BINDING);
             protocolMarshaller.marshall(jobDetail.getStatus(), STATUS_BINDING);
+            protocolMarshaller.marshall(jobDetail.getShareIdentifier(), SHAREIDENTIFIER_BINDING);
+            protocolMarshaller.marshall(jobDetail.getSchedulingPriority(), SCHEDULINGPRIORITY_BINDING);
             protocolMarshaller.marshall(jobDetail.getAttempts(), ATTEMPTS_BINDING);
             protocolMarshaller.marshall(jobDetail.getStatusReason(), STATUSREASON_BINDING);
             protocolMarshaller.marshall(jobDetail.getCreatedAt(), CREATEDAT_BINDING);

@@ -28,12 +28,12 @@ import com.amazonaws.services.batch.model.*;
  * <p>
  * <fullname>Batch</fullname>
  * <p>
- * Using Batch, you can run batch computing workloads on the Cloud. Batch computing is a common means for developers,
- * scientists, and engineers to access large amounts of compute resources. Batch uses the advantages of this computing
- * workload to remove the undifferentiated heavy lifting of configuring and managing required infrastructure. At the
- * same time, it also adopts a familiar batch computing software approach. Given these advantages, Batch can help you to
- * efficiently provision resources in response to jobs submitted, thus effectively helping you to eliminate capacity
- * constraints, reduce compute costs, and deliver your results more quickly.
+ * Using Batch, you can run batch computing workloads on the Amazon Web Services Cloud. Batch computing is a common
+ * means for developers, scientists, and engineers to access large amounts of compute resources. Batch uses the
+ * advantages of this computing workload to remove the undifferentiated heavy lifting of configuring and managing
+ * required infrastructure. At the same time, it also adopts a familiar batch computing software approach. Given these
+ * advantages, Batch can help you to efficiently provision resources in response to jobs submitted, thus effectively
+ * helping you to eliminate capacity constraints, reduce compute costs, and deliver your results more quickly.
  * </p>
  * <p>
  * As a fully managed service, Batch can run batch computing workloads of any scale. Batch automatically provisions
@@ -234,6 +234,25 @@ public interface AWSBatch {
 
     /**
      * <p>
+     * Creates an Batch scheduling policy.
+     * </p>
+     * 
+     * @param createSchedulingPolicyRequest
+     * @return Result of the CreateSchedulingPolicy operation returned by the service.
+     * @throws ClientException
+     *         These errors are usually caused by a client action, such as using an action or resource on behalf of a
+     *         user that doesn't have permissions to use the action or resource, or specifying an identifier that's not
+     *         valid.
+     * @throws ServerException
+     *         These errors are usually caused by a server issue.
+     * @sample AWSBatch.CreateSchedulingPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/batch-2016-08-10/CreateSchedulingPolicy" target="_top">AWS
+     *      API Documentation</a>
+     */
+    CreateSchedulingPolicyResult createSchedulingPolicy(CreateSchedulingPolicyRequest createSchedulingPolicyRequest);
+
+    /**
+     * <p>
      * Deletes an Batch compute environment.
      * </p>
      * <p>
@@ -284,6 +303,28 @@ public interface AWSBatch {
      *      Documentation</a>
      */
     DeleteJobQueueResult deleteJobQueue(DeleteJobQueueRequest deleteJobQueueRequest);
+
+    /**
+     * <p>
+     * Deletes the specified scheduling policy.
+     * </p>
+     * <p>
+     * You can't delete a scheduling policy that is used in any job queues.
+     * </p>
+     * 
+     * @param deleteSchedulingPolicyRequest
+     * @return Result of the DeleteSchedulingPolicy operation returned by the service.
+     * @throws ClientException
+     *         These errors are usually caused by a client action, such as using an action or resource on behalf of a
+     *         user that doesn't have permissions to use the action or resource, or specifying an identifier that's not
+     *         valid.
+     * @throws ServerException
+     *         These errors are usually caused by a server issue.
+     * @sample AWSBatch.DeleteSchedulingPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/batch-2016-08-10/DeleteSchedulingPolicy" target="_top">AWS
+     *      API Documentation</a>
+     */
+    DeleteSchedulingPolicyResult deleteSchedulingPolicy(DeleteSchedulingPolicyRequest deleteSchedulingPolicyRequest);
 
     /**
      * <p>
@@ -392,6 +433,25 @@ public interface AWSBatch {
 
     /**
      * <p>
+     * Describes one or more of your scheduling policies.
+     * </p>
+     * 
+     * @param describeSchedulingPoliciesRequest
+     * @return Result of the DescribeSchedulingPolicies operation returned by the service.
+     * @throws ClientException
+     *         These errors are usually caused by a client action, such as using an action or resource on behalf of a
+     *         user that doesn't have permissions to use the action or resource, or specifying an identifier that's not
+     *         valid.
+     * @throws ServerException
+     *         These errors are usually caused by a server issue.
+     * @sample AWSBatch.DescribeSchedulingPolicies
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/batch-2016-08-10/DescribeSchedulingPolicies"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DescribeSchedulingPoliciesResult describeSchedulingPolicies(DescribeSchedulingPoliciesRequest describeSchedulingPoliciesRequest);
+
+    /**
+     * <p>
      * Returns a list of Batch jobs.
      * </p>
      * <p>
@@ -436,8 +496,28 @@ public interface AWSBatch {
 
     /**
      * <p>
+     * Returns a list of Batch scheduling policies.
+     * </p>
+     * 
+     * @param listSchedulingPoliciesRequest
+     * @return Result of the ListSchedulingPolicies operation returned by the service.
+     * @throws ClientException
+     *         These errors are usually caused by a client action, such as using an action or resource on behalf of a
+     *         user that doesn't have permissions to use the action or resource, or specifying an identifier that's not
+     *         valid.
+     * @throws ServerException
+     *         These errors are usually caused by a server issue.
+     * @sample AWSBatch.ListSchedulingPolicies
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/batch-2016-08-10/ListSchedulingPolicies" target="_top">AWS
+     *      API Documentation</a>
+     */
+    ListSchedulingPoliciesResult listSchedulingPolicies(ListSchedulingPoliciesRequest listSchedulingPoliciesRequest);
+
+    /**
+     * <p>
      * Lists the tags for an Batch resource. Batch resources that support tags are compute environments, jobs, job
-     * definitions, and job queues. ARNs for child jobs of array and multi-node parallel (MNP) jobs are not supported.
+     * definitions, job queues, and scheduling policies. ARNs for child jobs of array and multi-node parallel (MNP) jobs
+     * are not supported.
      * </p>
      * 
      * @param listTagsForResourceRequest
@@ -478,12 +558,16 @@ public interface AWSBatch {
      * <p>
      * Submits an Batch job from a job definition. Parameters that are specified during <a>SubmitJob</a> override
      * parameters defined in the job definition. vCPU and memory requirements that are specified in the
-     * <code>ResourceRequirements</code> objects in the job definition are the exception. They can't be overridden this
+     * <code>resourceRequirements</code> objects in the job definition are the exception. They can't be overridden this
      * way using the <code>memory</code> and <code>vcpus</code> parameters. Rather, you must specify updates to job
      * definition parameters in a <code>ResourceRequirements</code> object that's included in the
      * <code>containerOverrides</code> parameter.
      * </p>
-     * <important>
+     * <note>
+     * <p>
+     * Job queues with a scheduling policy are limited to 500 active fair share identifiers at a time.
+     * </p>
+     * </note> <important>
      * <p>
      * Jobs that run on Fargate resources can't be guaranteed to run for more than 14 days. This is because, after 14
      * days, Fargate resources might become unavailable and job might be terminated.
@@ -510,8 +594,8 @@ public interface AWSBatch {
      * Associates the specified tags to a resource with the specified <code>resourceArn</code>. If existing tags on a
      * resource aren't specified in the request parameters, they aren't changed. When a resource is deleted, the tags
      * that are associated with that resource are deleted as well. Batch resources that support tags are compute
-     * environments, jobs, job definitions, and job queues. ARNs for child jobs of array and multi-node parallel (MNP)
-     * jobs are not supported.
+     * environments, jobs, job definitions, job queues, and scheduling policies. ARNs for child jobs of array and
+     * multi-node parallel (MNP) jobs are not supported.
      * </p>
      * 
      * @param tagResourceRequest
@@ -608,6 +692,25 @@ public interface AWSBatch {
      *      Documentation</a>
      */
     UpdateJobQueueResult updateJobQueue(UpdateJobQueueRequest updateJobQueueRequest);
+
+    /**
+     * <p>
+     * Updates a scheduling policy.
+     * </p>
+     * 
+     * @param updateSchedulingPolicyRequest
+     * @return Result of the UpdateSchedulingPolicy operation returned by the service.
+     * @throws ClientException
+     *         These errors are usually caused by a client action, such as using an action or resource on behalf of a
+     *         user that doesn't have permissions to use the action or resource, or specifying an identifier that's not
+     *         valid.
+     * @throws ServerException
+     *         These errors are usually caused by a server issue.
+     * @sample AWSBatch.UpdateSchedulingPolicy
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/batch-2016-08-10/UpdateSchedulingPolicy" target="_top">AWS
+     *      API Documentation</a>
+     */
+    UpdateSchedulingPolicyResult updateSchedulingPolicy(UpdateSchedulingPolicyRequest updateSchedulingPolicyRequest);
 
     /**
      * Shuts down this client object, releasing any resources that might be held open. This is an optional method, and

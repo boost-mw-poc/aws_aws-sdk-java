@@ -31,6 +31,8 @@ public class UpdateComputeEnvironmentRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("computeEnvironment").build();
     private static final MarshallingInfo<String> STATE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("state").build();
+    private static final MarshallingInfo<Integer> UNMANAGEDVCPUS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("unmanagedvCpus").build();
     private static final MarshallingInfo<StructuredPojo> COMPUTERESOURCES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("computeResources").build();
     private static final MarshallingInfo<String> SERVICEROLE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
@@ -54,6 +56,7 @@ public class UpdateComputeEnvironmentRequestMarshaller {
         try {
             protocolMarshaller.marshall(updateComputeEnvironmentRequest.getComputeEnvironment(), COMPUTEENVIRONMENT_BINDING);
             protocolMarshaller.marshall(updateComputeEnvironmentRequest.getState(), STATE_BINDING);
+            protocolMarshaller.marshall(updateComputeEnvironmentRequest.getUnmanagedvCpus(), UNMANAGEDVCPUS_BINDING);
             protocolMarshaller.marshall(updateComputeEnvironmentRequest.getComputeResources(), COMPUTERESOURCES_BINDING);
             protocolMarshaller.marshall(updateComputeEnvironmentRequest.getServiceRole(), SERVICEROLE_BINDING);
         } catch (Exception e) {

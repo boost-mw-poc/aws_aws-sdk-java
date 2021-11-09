@@ -39,19 +39,19 @@ public class OrganizationEventFilter implements Serializable, Cloneable, Structu
     private java.util.List<String> eventTypeCodes;
     /**
      * <p>
-     * A list of 12-digit AWS account numbers that contains the affected entities.
+     * A list of 12-digit Amazon Web Services account numbers that contains the affected entities.
      * </p>
      */
     private java.util.List<String> awsAccountIds;
     /**
      * <p>
-     * The AWS services associated with the event. For example, <code>EC2</code>, <code>RDS</code>.
+     * The Amazon Web Services services associated with the event. For example, <code>EC2</code>, <code>RDS</code>.
      * </p>
      */
     private java.util.List<String> services;
     /**
      * <p>
-     * A list of AWS Regions.
+     * A list of Amazon Web Services Regions.
      * </p>
      */
     private java.util.List<String> regions;
@@ -75,7 +75,8 @@ public class OrganizationEventFilter implements Serializable, Cloneable, Structu
     private java.util.List<String> entityValues;
     /**
      * <p>
-     * A list of event type category codes (issue, scheduledChange, or accountNotification).
+     * A list of event type category codes. Possible values are <code>issue</code>, <code>accountNotification</code>, or
+     * <code>scheduledChange</code>. Currently, the <code>investigation</code> value isn't supported at this time.
      * </p>
      */
     private java.util.List<String> eventTypeCategories;
@@ -166,10 +167,10 @@ public class OrganizationEventFilter implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * A list of 12-digit AWS account numbers that contains the affected entities.
+     * A list of 12-digit Amazon Web Services account numbers that contains the affected entities.
      * </p>
      * 
-     * @return A list of 12-digit AWS account numbers that contains the affected entities.
+     * @return A list of 12-digit Amazon Web Services account numbers that contains the affected entities.
      */
 
     public java.util.List<String> getAwsAccountIds() {
@@ -178,11 +179,11 @@ public class OrganizationEventFilter implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * A list of 12-digit AWS account numbers that contains the affected entities.
+     * A list of 12-digit Amazon Web Services account numbers that contains the affected entities.
      * </p>
      * 
      * @param awsAccountIds
-     *        A list of 12-digit AWS account numbers that contains the affected entities.
+     *        A list of 12-digit Amazon Web Services account numbers that contains the affected entities.
      */
 
     public void setAwsAccountIds(java.util.Collection<String> awsAccountIds) {
@@ -196,7 +197,7 @@ public class OrganizationEventFilter implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * A list of 12-digit AWS account numbers that contains the affected entities.
+     * A list of 12-digit Amazon Web Services account numbers that contains the affected entities.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -205,7 +206,7 @@ public class OrganizationEventFilter implements Serializable, Cloneable, Structu
      * </p>
      * 
      * @param awsAccountIds
-     *        A list of 12-digit AWS account numbers that contains the affected entities.
+     *        A list of 12-digit Amazon Web Services account numbers that contains the affected entities.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -221,11 +222,11 @@ public class OrganizationEventFilter implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * A list of 12-digit AWS account numbers that contains the affected entities.
+     * A list of 12-digit Amazon Web Services account numbers that contains the affected entities.
      * </p>
      * 
      * @param awsAccountIds
-     *        A list of 12-digit AWS account numbers that contains the affected entities.
+     *        A list of 12-digit Amazon Web Services account numbers that contains the affected entities.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -236,10 +237,11 @@ public class OrganizationEventFilter implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The AWS services associated with the event. For example, <code>EC2</code>, <code>RDS</code>.
+     * The Amazon Web Services services associated with the event. For example, <code>EC2</code>, <code>RDS</code>.
      * </p>
      * 
-     * @return The AWS services associated with the event. For example, <code>EC2</code>, <code>RDS</code>.
+     * @return The Amazon Web Services services associated with the event. For example, <code>EC2</code>,
+     *         <code>RDS</code>.
      */
 
     public java.util.List<String> getServices() {
@@ -248,11 +250,12 @@ public class OrganizationEventFilter implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The AWS services associated with the event. For example, <code>EC2</code>, <code>RDS</code>.
+     * The Amazon Web Services services associated with the event. For example, <code>EC2</code>, <code>RDS</code>.
      * </p>
      * 
      * @param services
-     *        The AWS services associated with the event. For example, <code>EC2</code>, <code>RDS</code>.
+     *        The Amazon Web Services services associated with the event. For example, <code>EC2</code>,
+     *        <code>RDS</code>.
      */
 
     public void setServices(java.util.Collection<String> services) {
@@ -266,7 +269,7 @@ public class OrganizationEventFilter implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The AWS services associated with the event. For example, <code>EC2</code>, <code>RDS</code>.
+     * The Amazon Web Services services associated with the event. For example, <code>EC2</code>, <code>RDS</code>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -275,7 +278,8 @@ public class OrganizationEventFilter implements Serializable, Cloneable, Structu
      * </p>
      * 
      * @param services
-     *        The AWS services associated with the event. For example, <code>EC2</code>, <code>RDS</code>.
+     *        The Amazon Web Services services associated with the event. For example, <code>EC2</code>,
+     *        <code>RDS</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -291,11 +295,12 @@ public class OrganizationEventFilter implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * The AWS services associated with the event. For example, <code>EC2</code>, <code>RDS</code>.
+     * The Amazon Web Services services associated with the event. For example, <code>EC2</code>, <code>RDS</code>.
      * </p>
      * 
      * @param services
-     *        The AWS services associated with the event. For example, <code>EC2</code>, <code>RDS</code>.
+     *        The Amazon Web Services services associated with the event. For example, <code>EC2</code>,
+     *        <code>RDS</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -306,10 +311,10 @@ public class OrganizationEventFilter implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * A list of AWS Regions.
+     * A list of Amazon Web Services Regions.
      * </p>
      * 
-     * @return A list of AWS Regions.
+     * @return A list of Amazon Web Services Regions.
      */
 
     public java.util.List<String> getRegions() {
@@ -318,11 +323,11 @@ public class OrganizationEventFilter implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * A list of AWS Regions.
+     * A list of Amazon Web Services Regions.
      * </p>
      * 
      * @param regions
-     *        A list of AWS Regions.
+     *        A list of Amazon Web Services Regions.
      */
 
     public void setRegions(java.util.Collection<String> regions) {
@@ -336,7 +341,7 @@ public class OrganizationEventFilter implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * A list of AWS Regions.
+     * A list of Amazon Web Services Regions.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -345,7 +350,7 @@ public class OrganizationEventFilter implements Serializable, Cloneable, Structu
      * </p>
      * 
      * @param regions
-     *        A list of AWS Regions.
+     *        A list of Amazon Web Services Regions.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -361,11 +366,11 @@ public class OrganizationEventFilter implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * A list of AWS Regions.
+     * A list of Amazon Web Services Regions.
      * </p>
      * 
      * @param regions
-     *        A list of AWS Regions.
+     *        A list of Amazon Web Services Regions.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -594,10 +599,13 @@ public class OrganizationEventFilter implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * A list of event type category codes (issue, scheduledChange, or accountNotification).
+     * A list of event type category codes. Possible values are <code>issue</code>, <code>accountNotification</code>, or
+     * <code>scheduledChange</code>. Currently, the <code>investigation</code> value isn't supported at this time.
      * </p>
      * 
-     * @return A list of event type category codes (issue, scheduledChange, or accountNotification).
+     * @return A list of event type category codes. Possible values are <code>issue</code>,
+     *         <code>accountNotification</code>, or <code>scheduledChange</code>. Currently, the
+     *         <code>investigation</code> value isn't supported at this time.
      * @see EventTypeCategory
      */
 
@@ -607,11 +615,14 @@ public class OrganizationEventFilter implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * A list of event type category codes (issue, scheduledChange, or accountNotification).
+     * A list of event type category codes. Possible values are <code>issue</code>, <code>accountNotification</code>, or
+     * <code>scheduledChange</code>. Currently, the <code>investigation</code> value isn't supported at this time.
      * </p>
      * 
      * @param eventTypeCategories
-     *        A list of event type category codes (issue, scheduledChange, or accountNotification).
+     *        A list of event type category codes. Possible values are <code>issue</code>,
+     *        <code>accountNotification</code>, or <code>scheduledChange</code>. Currently, the
+     *        <code>investigation</code> value isn't supported at this time.
      * @see EventTypeCategory
      */
 
@@ -626,7 +637,8 @@ public class OrganizationEventFilter implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * A list of event type category codes (issue, scheduledChange, or accountNotification).
+     * A list of event type category codes. Possible values are <code>issue</code>, <code>accountNotification</code>, or
+     * <code>scheduledChange</code>. Currently, the <code>investigation</code> value isn't supported at this time.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -635,7 +647,9 @@ public class OrganizationEventFilter implements Serializable, Cloneable, Structu
      * </p>
      * 
      * @param eventTypeCategories
-     *        A list of event type category codes (issue, scheduledChange, or accountNotification).
+     *        A list of event type category codes. Possible values are <code>issue</code>,
+     *        <code>accountNotification</code>, or <code>scheduledChange</code>. Currently, the
+     *        <code>investigation</code> value isn't supported at this time.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see EventTypeCategory
      */
@@ -652,11 +666,14 @@ public class OrganizationEventFilter implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * A list of event type category codes (issue, scheduledChange, or accountNotification).
+     * A list of event type category codes. Possible values are <code>issue</code>, <code>accountNotification</code>, or
+     * <code>scheduledChange</code>. Currently, the <code>investigation</code> value isn't supported at this time.
      * </p>
      * 
      * @param eventTypeCategories
-     *        A list of event type category codes (issue, scheduledChange, or accountNotification).
+     *        A list of event type category codes. Possible values are <code>issue</code>,
+     *        <code>accountNotification</code>, or <code>scheduledChange</code>. Currently, the
+     *        <code>investigation</code> value isn't supported at this time.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see EventTypeCategory
      */
@@ -668,11 +685,14 @@ public class OrganizationEventFilter implements Serializable, Cloneable, Structu
 
     /**
      * <p>
-     * A list of event type category codes (issue, scheduledChange, or accountNotification).
+     * A list of event type category codes. Possible values are <code>issue</code>, <code>accountNotification</code>, or
+     * <code>scheduledChange</code>. Currently, the <code>investigation</code> value isn't supported at this time.
      * </p>
      * 
      * @param eventTypeCategories
-     *        A list of event type category codes (issue, scheduledChange, or accountNotification).
+     *        A list of event type category codes. Possible values are <code>issue</code>,
+     *        <code>accountNotification</code>, or <code>scheduledChange</code>. Currently, the
+     *        <code>investigation</code> value isn't supported at this time.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see EventTypeCategory
      */

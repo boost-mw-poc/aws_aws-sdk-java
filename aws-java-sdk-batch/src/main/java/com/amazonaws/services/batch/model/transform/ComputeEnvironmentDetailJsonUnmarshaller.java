@@ -56,6 +56,10 @@ public class ComputeEnvironmentDetailJsonUnmarshaller implements Unmarshaller<Co
                     context.nextToken();
                     computeEnvironmentDetail.setComputeEnvironmentArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("unmanagedvCpus", targetDepth)) {
+                    context.nextToken();
+                    computeEnvironmentDetail.setUnmanagedvCpus(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
                 if (context.testExpression("ecsClusterArn", targetDepth)) {
                     context.nextToken();
                     computeEnvironmentDetail.setEcsClusterArn(context.getUnmarshaller(String.class).unmarshall(context));

@@ -26,7 +26,8 @@ public class DescribeHealthServiceStatusForOrganizationResult extends com.amazon
 
     /**
      * <p>
-     * Information about the status of enabling or disabling AWS Health Organizational View in your organization.
+     * Information about the status of enabling or disabling the Health organizational view feature in your
+     * organization.
      * </p>
      * <p>
      * Valid values are <code>ENABLED | DISABLED | PENDING</code>.
@@ -36,14 +37,15 @@ public class DescribeHealthServiceStatusForOrganizationResult extends com.amazon
 
     /**
      * <p>
-     * Information about the status of enabling or disabling AWS Health Organizational View in your organization.
+     * Information about the status of enabling or disabling the Health organizational view feature in your
+     * organization.
      * </p>
      * <p>
      * Valid values are <code>ENABLED | DISABLED | PENDING</code>.
      * </p>
      * 
      * @param healthServiceAccessStatusForOrganization
-     *        Information about the status of enabling or disabling AWS Health Organizational View in your
+     *        Information about the status of enabling or disabling the Health organizational view feature in your
      *        organization.</p>
      *        <p>
      *        Valid values are <code>ENABLED | DISABLED | PENDING</code>.
@@ -55,13 +57,14 @@ public class DescribeHealthServiceStatusForOrganizationResult extends com.amazon
 
     /**
      * <p>
-     * Information about the status of enabling or disabling AWS Health Organizational View in your organization.
+     * Information about the status of enabling or disabling the Health organizational view feature in your
+     * organization.
      * </p>
      * <p>
      * Valid values are <code>ENABLED | DISABLED | PENDING</code>.
      * </p>
      * 
-     * @return Information about the status of enabling or disabling AWS Health Organizational View in your
+     * @return Information about the status of enabling or disabling the Health organizational view feature in your
      *         organization.</p>
      *         <p>
      *         Valid values are <code>ENABLED | DISABLED | PENDING</code>.
@@ -73,14 +76,15 @@ public class DescribeHealthServiceStatusForOrganizationResult extends com.amazon
 
     /**
      * <p>
-     * Information about the status of enabling or disabling AWS Health Organizational View in your organization.
+     * Information about the status of enabling or disabling the Health organizational view feature in your
+     * organization.
      * </p>
      * <p>
      * Valid values are <code>ENABLED | DISABLED | PENDING</code>.
      * </p>
      * 
      * @param healthServiceAccessStatusForOrganization
-     *        Information about the status of enabling or disabling AWS Health Organizational View in your
+     *        Information about the status of enabling or disabling the Health organizational view feature in your
      *        organization.</p>
      *        <p>
      *        Valid values are <code>ENABLED | DISABLED | PENDING</code>.

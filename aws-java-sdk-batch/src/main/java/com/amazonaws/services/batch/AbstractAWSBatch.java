@@ -53,12 +53,22 @@ public class AbstractAWSBatch implements AWSBatch {
     }
 
     @Override
+    public CreateSchedulingPolicyResult createSchedulingPolicy(CreateSchedulingPolicyRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DeleteComputeEnvironmentResult deleteComputeEnvironment(DeleteComputeEnvironmentRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
     @Override
     public DeleteJobQueueResult deleteJobQueue(DeleteJobQueueRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteSchedulingPolicyResult deleteSchedulingPolicy(DeleteSchedulingPolicyRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -88,7 +98,17 @@ public class AbstractAWSBatch implements AWSBatch {
     }
 
     @Override
+    public DescribeSchedulingPoliciesResult describeSchedulingPolicies(DescribeSchedulingPoliciesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListJobsResult listJobs(ListJobsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListSchedulingPoliciesResult listSchedulingPolicies(ListSchedulingPoliciesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -129,6 +149,11 @@ public class AbstractAWSBatch implements AWSBatch {
 
     @Override
     public UpdateJobQueueResult updateJobQueue(UpdateJobQueueRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateSchedulingPolicyResult updateSchedulingPolicy(UpdateSchedulingPolicyRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

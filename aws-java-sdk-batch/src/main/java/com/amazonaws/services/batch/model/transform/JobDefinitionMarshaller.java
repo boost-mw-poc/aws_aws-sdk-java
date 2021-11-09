@@ -39,6 +39,8 @@ public class JobDefinitionMarshaller {
             .marshallLocationName("status").build();
     private static final MarshallingInfo<String> TYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("type").build();
+    private static final MarshallingInfo<Integer> SCHEDULINGPRIORITY_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("schedulingPriority").build();
     private static final MarshallingInfo<Map> PARAMETERS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("parameters").build();
     private static final MarshallingInfo<StructuredPojo> RETRYSTRATEGY_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
@@ -77,6 +79,7 @@ public class JobDefinitionMarshaller {
             protocolMarshaller.marshall(jobDefinition.getRevision(), REVISION_BINDING);
             protocolMarshaller.marshall(jobDefinition.getStatus(), STATUS_BINDING);
             protocolMarshaller.marshall(jobDefinition.getType(), TYPE_BINDING);
+            protocolMarshaller.marshall(jobDefinition.getSchedulingPriority(), SCHEDULINGPRIORITY_BINDING);
             protocolMarshaller.marshall(jobDefinition.getParameters(), PARAMETERS_BINDING);
             protocolMarshaller.marshall(jobDefinition.getRetryStrategy(), RETRYSTRATEGY_BINDING);
             protocolMarshaller.marshall(jobDefinition.getContainerProperties(), CONTAINERPROPERTIES_BINDING);

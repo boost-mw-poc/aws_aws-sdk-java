@@ -50,6 +50,14 @@ public class JobQueueDetail implements Serializable, Cloneable, StructuredPojo {
     private String state;
     /**
      * <p>
+     * Amazon Resource Name (ARN) of the scheduling policy. The format is
+     * <code>aws:<i>Partition</i>:batch:<i>Region</i>:<i>Account</i>:scheduling-policy/<i>Name</i> </code>. For example,
+     * <code>aws:aws:batch:us-west-2:012345678910:scheduling-policy/MySchedulingPolicy</code>.
+     * </p>
+     */
+    private String schedulingPolicyArn;
+    /**
+     * <p>
      * The status of the job queue (for example, <code>CREATING</code> or <code>VALID</code>).
      * </p>
      */
@@ -257,6 +265,58 @@ public class JobQueueDetail implements Serializable, Cloneable, StructuredPojo {
 
     public JobQueueDetail withState(JQState state) {
         this.state = state.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * Amazon Resource Name (ARN) of the scheduling policy. The format is
+     * <code>aws:<i>Partition</i>:batch:<i>Region</i>:<i>Account</i>:scheduling-policy/<i>Name</i> </code>. For example,
+     * <code>aws:aws:batch:us-west-2:012345678910:scheduling-policy/MySchedulingPolicy</code>.
+     * </p>
+     * 
+     * @param schedulingPolicyArn
+     *        Amazon Resource Name (ARN) of the scheduling policy. The format is
+     *        <code>aws:<i>Partition</i>:batch:<i>Region</i>:<i>Account</i>:scheduling-policy/<i>Name</i> </code>. For
+     *        example, <code>aws:aws:batch:us-west-2:012345678910:scheduling-policy/MySchedulingPolicy</code>.
+     */
+
+    public void setSchedulingPolicyArn(String schedulingPolicyArn) {
+        this.schedulingPolicyArn = schedulingPolicyArn;
+    }
+
+    /**
+     * <p>
+     * Amazon Resource Name (ARN) of the scheduling policy. The format is
+     * <code>aws:<i>Partition</i>:batch:<i>Region</i>:<i>Account</i>:scheduling-policy/<i>Name</i> </code>. For example,
+     * <code>aws:aws:batch:us-west-2:012345678910:scheduling-policy/MySchedulingPolicy</code>.
+     * </p>
+     * 
+     * @return Amazon Resource Name (ARN) of the scheduling policy. The format is
+     *         <code>aws:<i>Partition</i>:batch:<i>Region</i>:<i>Account</i>:scheduling-policy/<i>Name</i> </code>. For
+     *         example, <code>aws:aws:batch:us-west-2:012345678910:scheduling-policy/MySchedulingPolicy</code>.
+     */
+
+    public String getSchedulingPolicyArn() {
+        return this.schedulingPolicyArn;
+    }
+
+    /**
+     * <p>
+     * Amazon Resource Name (ARN) of the scheduling policy. The format is
+     * <code>aws:<i>Partition</i>:batch:<i>Region</i>:<i>Account</i>:scheduling-policy/<i>Name</i> </code>. For example,
+     * <code>aws:aws:batch:us-west-2:012345678910:scheduling-policy/MySchedulingPolicy</code>.
+     * </p>
+     * 
+     * @param schedulingPolicyArn
+     *        Amazon Resource Name (ARN) of the scheduling policy. The format is
+     *        <code>aws:<i>Partition</i>:batch:<i>Region</i>:<i>Account</i>:scheduling-policy/<i>Name</i> </code>. For
+     *        example, <code>aws:aws:batch:us-west-2:012345678910:scheduling-policy/MySchedulingPolicy</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public JobQueueDetail withSchedulingPolicyArn(String schedulingPolicyArn) {
+        setSchedulingPolicyArn(schedulingPolicyArn);
         return this;
     }
 
@@ -619,6 +679,8 @@ public class JobQueueDetail implements Serializable, Cloneable, StructuredPojo {
             sb.append("JobQueueArn: ").append(getJobQueueArn()).append(",");
         if (getState() != null)
             sb.append("State: ").append(getState()).append(",");
+        if (getSchedulingPolicyArn() != null)
+            sb.append("SchedulingPolicyArn: ").append(getSchedulingPolicyArn()).append(",");
         if (getStatus() != null)
             sb.append("Status: ").append(getStatus()).append(",");
         if (getStatusReason() != null)
@@ -655,6 +717,10 @@ public class JobQueueDetail implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getState() != null && other.getState().equals(this.getState()) == false)
             return false;
+        if (other.getSchedulingPolicyArn() == null ^ this.getSchedulingPolicyArn() == null)
+            return false;
+        if (other.getSchedulingPolicyArn() != null && other.getSchedulingPolicyArn().equals(this.getSchedulingPolicyArn()) == false)
+            return false;
         if (other.getStatus() == null ^ this.getStatus() == null)
             return false;
         if (other.getStatus() != null && other.getStatus().equals(this.getStatus()) == false)
@@ -686,6 +752,7 @@ public class JobQueueDetail implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getJobQueueName() == null) ? 0 : getJobQueueName().hashCode());
         hashCode = prime * hashCode + ((getJobQueueArn() == null) ? 0 : getJobQueueArn().hashCode());
         hashCode = prime * hashCode + ((getState() == null) ? 0 : getState().hashCode());
+        hashCode = prime * hashCode + ((getSchedulingPolicyArn() == null) ? 0 : getSchedulingPolicyArn().hashCode());
         hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
         hashCode = prime * hashCode + ((getStatusReason() == null) ? 0 : getStatusReason().hashCode());
         hashCode = prime * hashCode + ((getPriority() == null) ? 0 : getPriority().hashCode());

@@ -32,6 +32,8 @@ public class UpdateJobQueueRequestMarshaller {
             .marshallLocationName("jobQueue").build();
     private static final MarshallingInfo<String> STATE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("state").build();
+    private static final MarshallingInfo<String> SCHEDULINGPOLICYARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("schedulingPolicyArn").build();
     private static final MarshallingInfo<Integer> PRIORITY_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("priority").build();
     private static final MarshallingInfo<List> COMPUTEENVIRONMENTORDER_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
@@ -55,6 +57,7 @@ public class UpdateJobQueueRequestMarshaller {
         try {
             protocolMarshaller.marshall(updateJobQueueRequest.getJobQueue(), JOBQUEUE_BINDING);
             protocolMarshaller.marshall(updateJobQueueRequest.getState(), STATE_BINDING);
+            protocolMarshaller.marshall(updateJobQueueRequest.getSchedulingPolicyArn(), SCHEDULINGPOLICYARN_BINDING);
             protocolMarshaller.marshall(updateJobQueueRequest.getPriority(), PRIORITY_BINDING);
             protocolMarshaller.marshall(updateJobQueueRequest.getComputeEnvironmentOrder(), COMPUTEENVIRONMENTORDER_BINDING);
         } catch (Exception e) {

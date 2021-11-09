@@ -58,6 +58,17 @@ public class RegisterJobDefinitionRequest extends com.amazonaws.AmazonWebService
     private java.util.Map<String, String> parameters;
     /**
      * <p>
+     * The scheduling priority for jobs that are submitted with this job definition. This will only affect jobs in job
+     * queues with a fair share policy. Jobs with a higher scheduling priority will be scheduled before jobs with a
+     * lower scheduling priority.
+     * </p>
+     * <p>
+     * The minimum supported value is 0 and the maximum supported value is 9999.
+     * </p>
+     */
+    private Integer schedulingPriority;
+    /**
+     * <p>
      * An object with various properties specific to single-node container-based jobs. If the job definition's
      * <code>type</code> parameter is <code>container</code>, then you must specify either
      * <code>containerProperties</code> or <code>nodeProperties</code>.
@@ -388,6 +399,73 @@ public class RegisterJobDefinitionRequest extends com.amazonaws.AmazonWebService
 
     public RegisterJobDefinitionRequest clearParametersEntries() {
         this.parameters = null;
+        return this;
+    }
+
+    /**
+     * <p>
+     * The scheduling priority for jobs that are submitted with this job definition. This will only affect jobs in job
+     * queues with a fair share policy. Jobs with a higher scheduling priority will be scheduled before jobs with a
+     * lower scheduling priority.
+     * </p>
+     * <p>
+     * The minimum supported value is 0 and the maximum supported value is 9999.
+     * </p>
+     * 
+     * @param schedulingPriority
+     *        The scheduling priority for jobs that are submitted with this job definition. This will only affect jobs
+     *        in job queues with a fair share policy. Jobs with a higher scheduling priority will be scheduled before
+     *        jobs with a lower scheduling priority.</p>
+     *        <p>
+     *        The minimum supported value is 0 and the maximum supported value is 9999.
+     */
+
+    public void setSchedulingPriority(Integer schedulingPriority) {
+        this.schedulingPriority = schedulingPriority;
+    }
+
+    /**
+     * <p>
+     * The scheduling priority for jobs that are submitted with this job definition. This will only affect jobs in job
+     * queues with a fair share policy. Jobs with a higher scheduling priority will be scheduled before jobs with a
+     * lower scheduling priority.
+     * </p>
+     * <p>
+     * The minimum supported value is 0 and the maximum supported value is 9999.
+     * </p>
+     * 
+     * @return The scheduling priority for jobs that are submitted with this job definition. This will only affect jobs
+     *         in job queues with a fair share policy. Jobs with a higher scheduling priority will be scheduled before
+     *         jobs with a lower scheduling priority.</p>
+     *         <p>
+     *         The minimum supported value is 0 and the maximum supported value is 9999.
+     */
+
+    public Integer getSchedulingPriority() {
+        return this.schedulingPriority;
+    }
+
+    /**
+     * <p>
+     * The scheduling priority for jobs that are submitted with this job definition. This will only affect jobs in job
+     * queues with a fair share policy. Jobs with a higher scheduling priority will be scheduled before jobs with a
+     * lower scheduling priority.
+     * </p>
+     * <p>
+     * The minimum supported value is 0 and the maximum supported value is 9999.
+     * </p>
+     * 
+     * @param schedulingPriority
+     *        The scheduling priority for jobs that are submitted with this job definition. This will only affect jobs
+     *        in job queues with a fair share policy. Jobs with a higher scheduling priority will be scheduled before
+     *        jobs with a lower scheduling priority.</p>
+     *        <p>
+     *        The minimum supported value is 0 and the maximum supported value is 9999.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public RegisterJobDefinitionRequest withSchedulingPriority(Integer schedulingPriority) {
+        setSchedulingPriority(schedulingPriority);
         return this;
     }
 
@@ -987,6 +1065,8 @@ public class RegisterJobDefinitionRequest extends com.amazonaws.AmazonWebService
             sb.append("Type: ").append(getType()).append(",");
         if (getParameters() != null)
             sb.append("Parameters: ").append(getParameters()).append(",");
+        if (getSchedulingPriority() != null)
+            sb.append("SchedulingPriority: ").append(getSchedulingPriority()).append(",");
         if (getContainerProperties() != null)
             sb.append("ContainerProperties: ").append(getContainerProperties()).append(",");
         if (getNodeProperties() != null)
@@ -1027,6 +1107,10 @@ public class RegisterJobDefinitionRequest extends com.amazonaws.AmazonWebService
             return false;
         if (other.getParameters() != null && other.getParameters().equals(this.getParameters()) == false)
             return false;
+        if (other.getSchedulingPriority() == null ^ this.getSchedulingPriority() == null)
+            return false;
+        if (other.getSchedulingPriority() != null && other.getSchedulingPriority().equals(this.getSchedulingPriority()) == false)
+            return false;
         if (other.getContainerProperties() == null ^ this.getContainerProperties() == null)
             return false;
         if (other.getContainerProperties() != null && other.getContainerProperties().equals(this.getContainerProperties()) == false)
@@ -1066,6 +1150,7 @@ public class RegisterJobDefinitionRequest extends com.amazonaws.AmazonWebService
         hashCode = prime * hashCode + ((getJobDefinitionName() == null) ? 0 : getJobDefinitionName().hashCode());
         hashCode = prime * hashCode + ((getType() == null) ? 0 : getType().hashCode());
         hashCode = prime * hashCode + ((getParameters() == null) ? 0 : getParameters().hashCode());
+        hashCode = prime * hashCode + ((getSchedulingPriority() == null) ? 0 : getSchedulingPriority().hashCode());
         hashCode = prime * hashCode + ((getContainerProperties() == null) ? 0 : getContainerProperties().hashCode());
         hashCode = prime * hashCode + ((getNodeProperties() == null) ? 0 : getNodeProperties().hashCode());
         hashCode = prime * hashCode + ((getRetryStrategy() == null) ? 0 : getRetryStrategy().hashCode());

@@ -1,3 +1,16 @@
+# __1.12.107__ __2021-11-09__
+## __AWS Batch__
+  - ### Features
+    - Adds support for scheduling policy APIs.
+
+## __AWS Health APIs and Notifications__
+  - ### Features
+    - Documentation updates for AWS Health.
+
+## __AWS IoT Greengrass V2__
+  - ### Features
+    - This release adds support for Greengrass core devices running Windows. You can now specify name of a Windows user to run a component.
+
 # __1.12.106__ __2021-11-08__
 ## __AWS WAFV2__
   - ### Features

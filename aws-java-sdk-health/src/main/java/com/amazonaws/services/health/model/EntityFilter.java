@@ -20,7 +20,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 /**
  * <p>
  * The values to use to filter results from the <a
- * href="https://docs.aws.amazon.com/health/latest/APIReference/API_EntityFilter.html">EntityFilter</a> operation.
+ * href="https://docs.aws.amazon.com/health/latest/APIReference/API_DescribeAffectedEntities.html"
+ * >DescribeAffectedEntities</a> operation.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/health-2016-08-04/EntityFilter" target="_top">AWS API

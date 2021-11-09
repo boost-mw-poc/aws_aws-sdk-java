@@ -463,7 +463,11 @@ public class AWSGreengrassV2Client extends AmazonWebServiceClient implements AWS
      * <p>
      * To create a component from a Lambda function, specify <code>lambdaFunction</code> when you call this operation.
      * </p>
-     * </li>
+     * <note>
+     * <p>
+     * IoT Greengrass currently supports Lambda functions on only Linux core devices.
+     * </p>
+     * </note></li>
      * </ul>
      * 
      * @param createComponentVersionRequest

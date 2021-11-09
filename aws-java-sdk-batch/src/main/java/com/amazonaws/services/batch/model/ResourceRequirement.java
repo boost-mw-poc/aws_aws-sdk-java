@@ -143,8 +143,8 @@ public class ResourceRequirement implements Serializable, Cloneable, StructuredP
      * </p>
      * <p>
      * For jobs that are running on Fargate resources, then <code>value</code> must match one of the supported values
-     * and the <code>MEMORY</code> values must be one of the values supported for that VCPU value. The supported values
-     * are 0.25, 0.5, 1, 2, and 4
+     * and the <code>MEMORY</code> values must be one of the values supported for that <code>VCPU</code> value. The
+     * supported values are 0.25, 0.5, 1, 2, and 4
      * </p>
      * <dl>
      * <dt>value = 0.25</dt>
@@ -305,8 +305,8 @@ public class ResourceRequirement implements Serializable, Cloneable, StructuredP
      * </p>
      * <p>
      * For jobs that are running on Fargate resources, then <code>value</code> must match one of the supported values
-     * and the <code>MEMORY</code> values must be one of the values supported for that VCPU value. The supported values
-     * are 0.25, 0.5, 1, 2, and 4
+     * and the <code>MEMORY</code> values must be one of the values supported for that <code>VCPU</code> value. The
+     * supported values are 0.25, 0.5, 1, 2, and 4
      * </p>
      * <dl>
      * <dt>value = 0.25</dt>
@@ -460,8 +460,8 @@ public class ResourceRequirement implements Serializable, Cloneable, StructuredP
      *        </p>
      *        <p>
      *        For jobs that are running on Fargate resources, then <code>value</code> must match one of the supported
-     *        values and the <code>MEMORY</code> values must be one of the values supported for that VCPU value. The
-     *        supported values are 0.25, 0.5, 1, 2, and 4
+     *        values and the <code>MEMORY</code> values must be one of the values supported for that <code>VCPU</code>
+     *        value. The supported values are 0.25, 0.5, 1, 2, and 4
      *        </p>
      *        <dl>
      *        <dt>value = 0.25</dt>
@@ -618,8 +618,8 @@ public class ResourceRequirement implements Serializable, Cloneable, StructuredP
      * </p>
      * <p>
      * For jobs that are running on Fargate resources, then <code>value</code> must match one of the supported values
-     * and the <code>MEMORY</code> values must be one of the values supported for that VCPU value. The supported values
-     * are 0.25, 0.5, 1, 2, and 4
+     * and the <code>MEMORY</code> values must be one of the values supported for that <code>VCPU</code> value. The
+     * supported values are 0.25, 0.5, 1, 2, and 4
      * </p>
      * <dl>
      * <dt>value = 0.25</dt>
@@ -772,8 +772,8 @@ public class ResourceRequirement implements Serializable, Cloneable, StructuredP
      *         </p>
      *         <p>
      *         For jobs that are running on Fargate resources, then <code>value</code> must match one of the supported
-     *         values and the <code>MEMORY</code> values must be one of the values supported for that VCPU value. The
-     *         supported values are 0.25, 0.5, 1, 2, and 4
+     *         values and the <code>MEMORY</code> values must be one of the values supported for that <code>VCPU</code>
+     *         value. The supported values are 0.25, 0.5, 1, 2, and 4
      *         </p>
      *         <dl>
      *         <dt>value = 0.25</dt>
@@ -930,8 +930,8 @@ public class ResourceRequirement implements Serializable, Cloneable, StructuredP
      * </p>
      * <p>
      * For jobs that are running on Fargate resources, then <code>value</code> must match one of the supported values
-     * and the <code>MEMORY</code> values must be one of the values supported for that VCPU value. The supported values
-     * are 0.25, 0.5, 1, 2, and 4
+     * and the <code>MEMORY</code> values must be one of the values supported for that <code>VCPU</code> value. The
+     * supported values are 0.25, 0.5, 1, 2, and 4
      * </p>
      * <dl>
      * <dt>value = 0.25</dt>
@@ -1085,8 +1085,8 @@ public class ResourceRequirement implements Serializable, Cloneable, StructuredP
      *        </p>
      *        <p>
      *        For jobs that are running on Fargate resources, then <code>value</code> must match one of the supported
-     *        values and the <code>MEMORY</code> values must be one of the values supported for that VCPU value. The
-     *        supported values are 0.25, 0.5, 1, 2, and 4
+     *        values and the <code>MEMORY</code> values must be one of the values supported for that <code>VCPU</code>
+     *        value. The supported values are 0.25, 0.5, 1, 2, and 4
      *        </p>
      *        <dl>
      *        <dt>value = 0.25</dt>
