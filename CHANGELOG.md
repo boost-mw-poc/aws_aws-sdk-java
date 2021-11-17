@@ -1,3 +1,32 @@
+# __1.12.113__ __2021-11-17__
+## __AWS AppConfig Data__
+  - ### Features
+    - AWS AppConfig Data is a new service that allows you to retrieve configuration deployed by AWS AppConfig. See the AppConfig user guide for more details on getting started. https://docs.aws.amazon.com/appconfig/latest/userguide/what-is-appconfig.html
+
+## __Amazon API Gateway__
+  - ### Features
+    - Documentation updates for Amazon API Gateway.
+
+## __Amazon DevOps Guru__
+  - ### Features
+    - Add paginator for DescribeResourceCollectionHealth
+
+## __Amazon Simple Notification Service__
+  - ### Features
+    - Amazon SNS introduces the PublishBatch API, which enables customers to publish up to 10 messages per API request. The new API is valid for Standard and FIFO topics.
+
+## __AmplifyBackend__
+  - ### Features
+    - New APIs to support the Amplify Storage category. Add and manage file storage in your Amplify app backend.
+
+## __Elastic Disaster Recovery Service__
+  - ### Features
+    - Introducing AWS Elastic Disaster Recovery (AWS DRS), a new service that minimizes downtime and data loss with fast, reliable recovery of on-premises and cloud-based applications using affordable storage, minimal compute, and point-in-time recovery.
+
+## __Redshift Data API Service__
+  - ### Features
+    - Data API now supports serverless requests.
+
 # __1.12.112__ __2021-11-16__
 ## __AWS CloudTrail__
   - ### Features

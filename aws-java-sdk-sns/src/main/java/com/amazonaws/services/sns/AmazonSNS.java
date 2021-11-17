@@ -112,8 +112,8 @@ public interface AmazonSNS {
 
     /**
      * <p>
-     * Adds a statement to a topic's access control policy, granting access for the specified accounts to the specified
-     * actions.
+     * Adds a statement to a topic's access control policy, granting access for the specified Amazon Web Services
+     * accounts to the specified actions.
      * </p>
      * 
      * @param addPermissionRequest
@@ -142,7 +142,7 @@ public interface AmazonSNS {
     /**
      * <p>
      * Accepts a phone number and indicates whether the phone holder has opted out of receiving SMS messages from your
-     * account. You cannot send SMS messages to a number that is opted out.
+     * Amazon Web Services account. You cannot send SMS messages to a number that is opted out.
      * </p>
      * <p>
      * To resume sending messages, you can opt in the number by using the <code>OptInPhoneNumber</code> action.
@@ -153,7 +153,7 @@ public interface AmazonSNS {
      * @return Result of the CheckIfPhoneNumberIsOptedOut operation returned by the service.
      * @throws ThrottledException
      *         Indicates that the rate at which requests have been submitted for this action exceeds the limit for your
-     *         account.
+     *         Amazon Web Services account.
      * @throws InternalErrorException
      *         Indicates an internal service error.
      * @throws AuthorizationErrorException
@@ -188,8 +188,8 @@ public interface AmazonSNS {
      * @throws AuthorizationErrorException
      *         Indicates that the user has been denied access to the requested resource.
      * @throws FilterPolicyLimitExceededException
-     *         Indicates that the number of filter polices in your account exceeds the limit. To add more filter
-     *         polices, submit an SNS Limit Increase case in the Amazon Web Services Support Center.
+     *         Indicates that the number of filter polices in your Amazon Web Services account exceeds the limit. To add
+     *         more filter polices, submit an Amazon SNS Limit Increase case in the Amazon Web Services Support Center.
      * @sample AmazonSNS.ConfirmSubscription
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/ConfirmSubscription" target="_top">AWS API
      *      Documentation</a>
@@ -235,8 +235,14 @@ public interface AmazonSNS {
      * </li>
      * <li>
      * <p>
-     * For <code>APNS</code> and <code>APNS_SANDBOX</code>, <code>PlatformPrincipal</code> is
-     * <code>SSL certificate</code> and <code>PlatformCredential</code> is <code>private key</code>.
+     * For <code>APNS</code> and <code>APNS_SANDBOX</code> using certificate credentials, <code>PlatformPrincipal</code>
+     * is <code>SSL certificate</code> and <code>PlatformCredential</code> is <code>private key</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For <code>APNS</code> and <code>APNS_SANDBOX</code> using token credentials, <code>PlatformPrincipal</code> is
+     * <code>signing key ID</code> and <code>PlatformCredential</code> is <code>signing key</code>.
      * </p>
      * </li>
      * <li>
@@ -316,15 +322,15 @@ public interface AmazonSNS {
 
     /**
      * <p>
-     * Adds a destination phone number to an account in the SMS sandbox and sends a one-time password (OTP) to that
-     * phone number.
+     * Adds a destination phone number to an Amazon Web Services account in the SMS sandbox and sends a one-time
+     * password (OTP) to that phone number.
      * </p>
      * <p>
-     * When you start using Amazon SNS to send SMS messages, your account is in the <i>SMS sandbox</i>. The SMS sandbox
-     * provides a safe environment for you to try Amazon SNS features without risking your reputation as an SMS sender.
-     * While your account is in the SMS sandbox, you can use all of the features of Amazon SNS. However, you can send
-     * SMS messages only to verified destination phone numbers. For more information, including how to move out of the
-     * sandbox to send messages without restrictions, see <a
+     * When you start using Amazon SNS to send SMS messages, your Amazon Web Services account is in the <i>SMS
+     * sandbox</i>. The SMS sandbox provides a safe environment for you to try Amazon SNS features without risking your
+     * reputation as an SMS sender. While your Amazon Web Services account is in the SMS sandbox, you can use all of the
+     * features of Amazon SNS. However, you can send SMS messages only to verified destination phone numbers. For more
+     * information, including how to move out of the sandbox to send messages without restrictions, see <a
      * href="https://docs.aws.amazon.com/sns/latest/dg/sns-sms-sandbox.html">SMS sandbox</a> in the <i>Amazon SNS
      * Developer Guide</i>.
      * </p>
@@ -338,13 +344,13 @@ public interface AmazonSNS {
      * @throws InvalidParameterException
      *         Indicates that a request parameter does not comply with the associated constraints.
      * @throws OptedOutException
-     *         Indicates that the specified phone number opted out of receiving SMS messages from your account. You
-     *         can't send SMS messages to phone numbers that opt out.
+     *         Indicates that the specified phone number opted out of receiving SMS messages from your Amazon Web
+     *         Services account. You can't send SMS messages to phone numbers that opt out.
      * @throws UserErrorException
      *         Indicates that a request parameter does not comply with the associated constraints.
      * @throws ThrottledException
      *         Indicates that the rate at which requests have been submitted for this action exceeds the limit for your
-     *         account.
+     *         Amazon Web Services account.
      * @sample AmazonSNS.CreateSMSSandboxPhoneNumber
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/CreateSMSSandboxPhoneNumber"
      *      target="_top">AWS API Documentation</a>
@@ -447,14 +453,14 @@ public interface AmazonSNS {
 
     /**
      * <p>
-     * Deletes an account's verified or pending phone number from the SMS sandbox.
+     * Deletes an Amazon Web Services account's verified or pending phone number from the SMS sandbox.
      * </p>
      * <p>
-     * When you start using Amazon SNS to send SMS messages, your account is in the <i>SMS sandbox</i>. The SMS sandbox
-     * provides a safe environment for you to try Amazon SNS features without risking your reputation as an SMS sender.
-     * While your account is in the SMS sandbox, you can use all of the features of Amazon SNS. However, you can send
-     * SMS messages only to verified destination phone numbers. For more information, including how to move out of the
-     * sandbox to send messages without restrictions, see <a
+     * When you start using Amazon SNS to send SMS messages, your Amazon Web Services account is in the <i>SMS
+     * sandbox</i>. The SMS sandbox provides a safe environment for you to try Amazon SNS features without risking your
+     * reputation as an SMS sender. While your Amazon Web Services account is in the SMS sandbox, you can use all of the
+     * features of Amazon SNS. However, you can send SMS messages only to verified destination phone numbers. For more
+     * information, including how to move out of the sandbox to send messages without restrictions, see <a
      * href="https://docs.aws.amazon.com/sns/latest/dg/sns-sms-sandbox.html">SMS sandbox</a> in the <i>Amazon SNS
      * Developer Guide</i>.
      * </p>
@@ -473,7 +479,7 @@ public interface AmazonSNS {
      *         Indicates that a request parameter does not comply with the associated constraints.
      * @throws ThrottledException
      *         Indicates that the rate at which requests have been submitted for this action exceeds the limit for your
-     *         account.
+     *         Amazon Web Services account.
      * @sample AmazonSNS.DeleteSMSSandboxPhoneNumber
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/DeleteSMSSandboxPhoneNumber"
      *      target="_top">AWS API Documentation</a>
@@ -569,7 +575,7 @@ public interface AmazonSNS {
 
     /**
      * <p>
-     * Returns the settings for sending SMS messages from your account.
+     * Returns the settings for sending SMS messages from your Amazon Web Services account.
      * </p>
      * <p>
      * These settings are set with the <code>SetSMSAttributes</code> action.
@@ -580,7 +586,7 @@ public interface AmazonSNS {
      * @return Result of the GetSMSAttributes operation returned by the service.
      * @throws ThrottledException
      *         Indicates that the rate at which requests have been submitted for this action exceeds the limit for your
-     *         account.
+     *         Amazon Web Services account.
      * @throws InternalErrorException
      *         Indicates an internal service error.
      * @throws AuthorizationErrorException
@@ -595,14 +601,15 @@ public interface AmazonSNS {
 
     /**
      * <p>
-     * Retrieves the SMS sandbox status for the calling account in the target Region.
+     * Retrieves the SMS sandbox status for the calling Amazon Web Services account in the target Amazon Web Services
+     * Region.
      * </p>
      * <p>
-     * When you start using Amazon SNS to send SMS messages, your account is in the <i>SMS sandbox</i>. The SMS sandbox
-     * provides a safe environment for you to try Amazon SNS features without risking your reputation as an SMS sender.
-     * While your account is in the SMS sandbox, you can use all of the features of Amazon SNS. However, you can send
-     * SMS messages only to verified destination phone numbers. For more information, including how to move out of the
-     * sandbox to send messages without restrictions, see <a
+     * When you start using Amazon SNS to send SMS messages, your Amazon Web Services account is in the <i>SMS
+     * sandbox</i>. The SMS sandbox provides a safe environment for you to try Amazon SNS features without risking your
+     * reputation as an SMS sender. While your Amazon Web Services account is in the SMS sandbox, you can use all of the
+     * features of Amazon SNS. However, you can send SMS messages only to verified destination phone numbers. For more
+     * information, including how to move out of the sandbox to send messages without restrictions, see <a
      * href="https://docs.aws.amazon.com/sns/latest/dg/sns-sms-sandbox.html">SMS sandbox</a> in the <i>Amazon SNS
      * Developer Guide</i>.
      * </p>
@@ -615,7 +622,7 @@ public interface AmazonSNS {
      *         Indicates an internal service error.
      * @throws ThrottledException
      *         Indicates that the rate at which requests have been submitted for this action exceeds the limit for your
-     *         account.
+     *         Amazon Web Services account.
      * @sample AmazonSNS.GetSMSSandboxAccountStatus
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/GetSMSSandboxAccountStatus" target="_top">AWS
      *      API Documentation</a>
@@ -719,8 +726,8 @@ public interface AmazonSNS {
 
     /**
      * <p>
-     * Lists the calling account's dedicated origination numbers and their metadata. For more information about
-     * origination numbers, see <a
+     * Lists the calling Amazon Web Services account's dedicated origination numbers and their metadata. For more
+     * information about origination numbers, see <a
      * href="https://docs.aws.amazon.com/sns/latest/dg/channels-sms-originating-identities-origination-numbers.html"
      * >Origination numbers</a> in the <i>Amazon SNS Developer Guide</i>.
      * </p>
@@ -733,7 +740,7 @@ public interface AmazonSNS {
      *         Indicates that the user has been denied access to the requested resource.
      * @throws ThrottledException
      *         Indicates that the rate at which requests have been submitted for this action exceeds the limit for your
-     *         account.
+     *         Amazon Web Services account.
      * @throws InvalidParameterException
      *         Indicates that a request parameter does not comply with the associated constraints.
      * @throws ValidationException
@@ -761,7 +768,7 @@ public interface AmazonSNS {
      * @return Result of the ListPhoneNumbersOptedOut operation returned by the service.
      * @throws ThrottledException
      *         Indicates that the rate at which requests have been submitted for this action exceeds the limit for your
-     *         account.
+     *         Amazon Web Services account.
      * @throws InternalErrorException
      *         Indicates an internal service error.
      * @throws AuthorizationErrorException
@@ -813,14 +820,15 @@ public interface AmazonSNS {
 
     /**
      * <p>
-     * Lists the calling account's current verified and pending destination phone numbers in the SMS sandbox.
+     * Lists the calling Amazon Web Services account's current verified and pending destination phone numbers in the SMS
+     * sandbox.
      * </p>
      * <p>
-     * When you start using Amazon SNS to send SMS messages, your account is in the <i>SMS sandbox</i>. The SMS sandbox
-     * provides a safe environment for you to try Amazon SNS features without risking your reputation as an SMS sender.
-     * While your account is in the SMS sandbox, you can use all of the features of Amazon SNS. However, you can send
-     * SMS messages only to verified destination phone numbers. For more information, including how to move out of the
-     * sandbox to send messages without restrictions, see <a
+     * When you start using Amazon SNS to send SMS messages, your Amazon Web Services account is in the <i>SMS
+     * sandbox</i>. The SMS sandbox provides a safe environment for you to try Amazon SNS features without risking your
+     * reputation as an SMS sender. While your Amazon Web Services account is in the SMS sandbox, you can use all of the
+     * features of Amazon SNS. However, you can send SMS messages only to verified destination phone numbers. For more
+     * information, including how to move out of the sandbox to send messages without restrictions, see <a
      * href="https://docs.aws.amazon.com/sns/latest/dg/sns-sms-sandbox.html">SMS sandbox</a> in the <i>Amazon SNS
      * Developer Guide</i>.
      * </p>
@@ -837,7 +845,7 @@ public interface AmazonSNS {
      *         Can’t perform the action on the specified resource. Make sure that the resource exists.
      * @throws ThrottledException
      *         Indicates that the rate at which requests have been submitted for this action exceeds the limit for your
-     *         account.
+     *         Amazon Web Services account.
      * @sample AmazonSNS.ListSMSSandboxPhoneNumbers
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/ListSMSSandboxPhoneNumbers" target="_top">AWS
      *      API Documentation</a>
@@ -1001,7 +1009,7 @@ public interface AmazonSNS {
      * @return Result of the OptInPhoneNumber operation returned by the service.
      * @throws ThrottledException
      *         Indicates that the rate at which requests have been submitted for this action exceeds the limit for your
-     *         account.
+     *         Amazon Web Services account.
      * @throws InternalErrorException
      *         Indicates an internal service error.
      * @throws AuthorizationErrorException
@@ -1024,11 +1032,11 @@ public interface AmazonSNS {
      * topic. The format of the message depends on the notification protocol for each subscribed endpoint.
      * </p>
      * <p>
-     * When a <code>messageId</code> is returned, the message has been saved and Amazon SNS will attempt to deliver it
-     * shortly.
+     * When a <code>messageId</code> is returned, the message is saved and Amazon SNS immediately deliverers it to
+     * subscribers.
      * </p>
      * <p>
-     * To use the <code>Publish</code> action for sending a message to a mobile endpoint, such as an app on a Kindle
+     * To use the <code>Publish</code> action for publishing a message to a mobile endpoint, such as an app on a Kindle
      * device or mobile phone, you must specify the EndpointArn for the TargetArn parameter. The EndpointArn is returned
      * when making a call with the <code>CreatePlatformEndpoint</code> action.
      * </p>
@@ -1039,7 +1047,7 @@ public interface AmazonSNS {
      * </p>
      * <important>
      * <p>
-     * You can publish messages only to topics and endpoints in the same Region.
+     * You can publish messages only to topics and endpoints in the same Amazon Web Services Region.
      * </p>
      * </important>
      * 
@@ -1098,6 +1106,92 @@ public interface AmazonSNS {
      * @see #publish(PublishRequest)
      */
     PublishResult publish(String topicArn, String message, String subject);
+
+    /**
+     * <p>
+     * Publishes up to ten messages to the specified topic. This is a batch version of <code>Publish</code>. For FIFO
+     * topics, multiple messages within a single batch are published in the order they are sent, and messages are
+     * deduplicated within the batch and across batches for 5 minutes.
+     * </p>
+     * <p>
+     * The result of publishing each message is reported individually in the response. Because the batch request can
+     * result in a combination of successful and unsuccessful actions, you should check for batch errors even when the
+     * call returns an HTTP status code of <code>200</code>.
+     * </p>
+     * <p>
+     * The maximum allowed individual message size and the maximum total payload size (the sum of the individual lengths
+     * of all of the batched messages) are both 256 KB (262,144 bytes).
+     * </p>
+     * <p>
+     * Some actions take lists of parameters. These lists are specified using the <code>param.n</code> notation. Values
+     * of <code>n</code> are integers starting from 1. For example, a parameter list with two elements looks like this:
+     * </p>
+     * <p>
+     * &amp;AttributeName.1=first
+     * </p>
+     * <p>
+     * &amp;AttributeName.2=second
+     * </p>
+     * <p>
+     * If you send a batch message to a topic, Amazon SNS publishes the batch message to each endpoint that is
+     * subscribed to the topic. The format of the batch message depends on the notification protocol for each subscribed
+     * endpoint.
+     * </p>
+     * <p>
+     * When a <code>messageId</code> is returned, the batch message is saved and Amazon SNS immediately delivers the
+     * message to subscribers.
+     * </p>
+     * 
+     * @param publishBatchRequest
+     * @return Result of the PublishBatch operation returned by the service.
+     * @throws InvalidParameterException
+     *         Indicates that a request parameter does not comply with the associated constraints.
+     * @throws InvalidParameterValueException
+     *         Indicates that a request parameter does not comply with the associated constraints.
+     * @throws InternalErrorException
+     *         Indicates an internal service error.
+     * @throws NotFoundException
+     *         Indicates that the requested resource does not exist.
+     * @throws EndpointDisabledException
+     *         Exception error indicating endpoint disabled.
+     * @throws PlatformApplicationDisabledException
+     *         Exception error indicating platform application disabled.
+     * @throws AuthorizationErrorException
+     *         Indicates that the user has been denied access to the requested resource.
+     * @throws BatchEntryIdsNotDistinctException
+     *         Two or more batch entries in the request have the same <code>Id</code>.
+     * @throws BatchRequestTooLongException
+     *         The length of all the batch messages put together is more than the limit.
+     * @throws EmptyBatchRequestException
+     *         The batch request doesn't contain any entries.
+     * @throws InvalidBatchEntryIdException
+     *         The <code>Id</code> of a batch entry in a batch request doesn't abide by the specification.
+     * @throws TooManyEntriesInBatchRequestException
+     *         The batch request contains more entries than permissible.
+     * @throws KMSDisabledException
+     *         The request was rejected because the specified customer master key (CMK) isn't enabled.
+     * @throws KMSInvalidStateException
+     *         The request was rejected because the state of the specified resource isn't valid for this request. For
+     *         more information, see <a href="https://docs.aws.amazon.com/kms/latest/developerguide/key-state.html">How
+     *         Key State Affects Use of a Customer Master Key</a> in the <i>Key Management Service Developer Guide</i>.
+     * @throws KMSNotFoundException
+     *         The request was rejected because the specified entity or resource can't be found.
+     * @throws KMSOptInRequiredException
+     *         The Amazon Web Services access key ID needs a subscription for the service.
+     * @throws KMSThrottlingException
+     *         The request was denied due to request throttling. For more information about throttling, see <a
+     *         href="https://docs.aws.amazon.com/kms/latest/developerguide/limits.html#requests-per-second">Limits</a>
+     *         in the <i>Key Management Service Developer Guide.</i>
+     * @throws KMSAccessDeniedException
+     *         The ciphertext references a key that doesn't exist or that you don't have access to.
+     * @throws InvalidSecurityException
+     *         The credential signature isn't valid. You must use an HTTPS endpoint and sign your request using
+     *         Signature Version 4.
+     * @sample AmazonSNS.PublishBatch
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/PublishBatch" target="_top">AWS API
+     *      Documentation</a>
+     */
+    PublishBatchResult publishBatch(PublishBatchRequest publishBatchRequest);
 
     /**
      * <p>
@@ -1204,7 +1298,7 @@ public interface AmazonSNS {
      *         Indicates that a request parameter does not comply with the associated constraints.
      * @throws ThrottledException
      *         Indicates that the rate at which requests have been submitted for this action exceeds the limit for your
-     *         account.
+     *         Amazon Web Services account.
      * @throws InternalErrorException
      *         Indicates an internal service error.
      * @throws AuthorizationErrorException
@@ -1226,8 +1320,8 @@ public interface AmazonSNS {
      * @throws InvalidParameterException
      *         Indicates that a request parameter does not comply with the associated constraints.
      * @throws FilterPolicyLimitExceededException
-     *         Indicates that the number of filter polices in your account exceeds the limit. To add more filter
-     *         polices, submit an SNS Limit Increase case in the Amazon Web Services Support Center.
+     *         Indicates that the number of filter polices in your Amazon Web Services account exceeds the limit. To add
+     *         more filter polices, submit an Amazon SNS Limit Increase case in the Amazon Web Services Support Center.
      * @throws InternalErrorException
      *         Indicates an internal service error.
      * @throws NotFoundException
@@ -1282,8 +1376,8 @@ public interface AmazonSNS {
     /**
      * <p>
      * Subscribes an endpoint to an Amazon SNS topic. If the endpoint type is HTTP/S or email, or if the endpoint and
-     * the topic are not in the same account, the endpoint owner must run the <code>ConfirmSubscription</code> action to
-     * confirm the subscription.
+     * the topic are not in the same Amazon Web Services account, the endpoint owner must run the
+     * <code>ConfirmSubscription</code> action to confirm the subscription.
      * </p>
      * <p>
      * You call the <code>ConfirmSubscription</code> action with the token from the subscription response. Confirmation
@@ -1299,8 +1393,8 @@ public interface AmazonSNS {
      * @throws SubscriptionLimitExceededException
      *         Indicates that the customer already owns the maximum allowed number of subscriptions.
      * @throws FilterPolicyLimitExceededException
-     *         Indicates that the number of filter polices in your account exceeds the limit. To add more filter
-     *         polices, submit an SNS Limit Increase case in the Amazon Web Services Support Center.
+     *         Indicates that the number of filter polices in your Amazon Web Services account exceeds the limit. To add
+     *         more filter polices, submit an Amazon SNS Limit Increase case in the Amazon Web Services Support Center.
      * @throws InvalidParameterException
      *         Indicates that a request parameter does not comply with the associated constraints.
      * @throws InternalErrorException
@@ -1357,8 +1451,9 @@ public interface AmazonSNS {
      * </li>
      * <li>
      * <p>
-     * Tagging actions are limited to 10 TPS per account, per Region. If your application requires a higher throughput,
-     * file a <a href="https://console.aws.amazon.com/support/home#/case/create?issueType=technical">technical support
+     * Tagging actions are limited to 10 TPS per Amazon Web Services account, per Amazon Web Services Region. If your
+     * application requires a higher throughput, file a <a
+     * href="https://console.aws.amazon.com/support/home#/case/create?issueType=technical">technical support
      * request</a>.
      * </p>
      * </li>
@@ -1458,14 +1553,14 @@ public interface AmazonSNS {
 
     /**
      * <p>
-     * Verifies a destination phone number with a one-time password (OTP) for the calling account.
+     * Verifies a destination phone number with a one-time password (OTP) for the calling Amazon Web Services account.
      * </p>
      * <p>
-     * When you start using Amazon SNS to send SMS messages, your account is in the <i>SMS sandbox</i>. The SMS sandbox
-     * provides a safe environment for you to try Amazon SNS features without risking your reputation as an SMS sender.
-     * While your account is in the SMS sandbox, you can use all of the features of Amazon SNS. However, you can send
-     * SMS messages only to verified destination phone numbers. For more information, including how to move out of the
-     * sandbox to send messages without restrictions, see <a
+     * When you start using Amazon SNS to send SMS messages, your Amazon Web Services account is in the <i>SMS
+     * sandbox</i>. The SMS sandbox provides a safe environment for you to try Amazon SNS features without risking your
+     * reputation as an SMS sender. While your Amazon Web Services account is in the SMS sandbox, you can use all of the
+     * features of Amazon SNS. However, you can send SMS messages only to verified destination phone numbers. For more
+     * information, including how to move out of the sandbox to send messages without restrictions, see <a
      * href="https://docs.aws.amazon.com/sns/latest/dg/sns-sms-sandbox.html">SMS sandbox</a> in the <i>Amazon SNS
      * Developer Guide</i>.
      * </p>
@@ -1484,7 +1579,7 @@ public interface AmazonSNS {
      *         Indicates that the one-time password (OTP) used for verification is invalid.
      * @throws ThrottledException
      *         Indicates that the rate at which requests have been submitted for this action exceeds the limit for your
-     *         account.
+     *         Amazon Web Services account.
      * @sample AmazonSNS.VerifySMSSandboxPhoneNumber
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/VerifySMSSandboxPhoneNumber"
      *      target="_top">AWS API Documentation</a>

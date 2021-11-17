@@ -154,6 +154,28 @@ public interface AWSAmplifyBackend {
 
     /**
      * <p>
+     * Creates a backend storage resource.
+     * </p>
+     * 
+     * @param createBackendStorageRequest
+     *        The request body for CreateBackendStorage.
+     * @return Result of the CreateBackendStorage operation returned by the service.
+     * @throws NotFoundException
+     *         404 response
+     * @throws GatewayTimeoutException
+     *         504 response
+     * @throws TooManyRequestsException
+     *         429 response
+     * @throws BadRequestException
+     *         400 response
+     * @sample AWSAmplifyBackend.CreateBackendStorage
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/amplifybackend-2020-08-11/CreateBackendStorage"
+     *      target="_top">AWS API Documentation</a>
+     */
+    CreateBackendStorageResult createBackendStorage(CreateBackendStorageRequest createBackendStorageRequest);
+
+    /**
+     * <p>
      * Generates a one-time challenge code to authenticate a user into your Amplify Admin UI.
      * </p>
      * 
@@ -237,6 +259,28 @@ public interface AWSAmplifyBackend {
      *      target="_top">AWS API Documentation</a>
      */
     DeleteBackendAuthResult deleteBackendAuth(DeleteBackendAuthRequest deleteBackendAuthRequest);
+
+    /**
+     * <p>
+     * Removes the specified backend storage resource.
+     * </p>
+     * 
+     * @param deleteBackendStorageRequest
+     *        The request body for DeleteBackendStorage.
+     * @return Result of the DeleteBackendStorage operation returned by the service.
+     * @throws NotFoundException
+     *         404 response
+     * @throws GatewayTimeoutException
+     *         504 response
+     * @throws TooManyRequestsException
+     *         429 response
+     * @throws BadRequestException
+     *         400 response
+     * @sample AWSAmplifyBackend.DeleteBackendStorage
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/amplifybackend-2020-08-11/DeleteBackendStorage"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DeleteBackendStorageResult deleteBackendStorage(DeleteBackendStorageRequest deleteBackendStorageRequest);
 
     /**
      * <p>
@@ -392,6 +436,28 @@ public interface AWSAmplifyBackend {
 
     /**
      * <p>
+     * Gets details for a backend storage resource.
+     * </p>
+     * 
+     * @param getBackendStorageRequest
+     *        The request body for GetBackendStorage.
+     * @return Result of the GetBackendStorage operation returned by the service.
+     * @throws NotFoundException
+     *         404 response
+     * @throws GatewayTimeoutException
+     *         504 response
+     * @throws TooManyRequestsException
+     *         429 response
+     * @throws BadRequestException
+     *         400 response
+     * @sample AWSAmplifyBackend.GetBackendStorage
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/amplifybackend-2020-08-11/GetBackendStorage"
+     *      target="_top">AWS API Documentation</a>
+     */
+    GetBackendStorageResult getBackendStorage(GetBackendStorageRequest getBackendStorageRequest);
+
+    /**
+     * <p>
      * Gets the challenge token based on the given appId and sessionId.
      * </p>
      * 
@@ -435,6 +501,28 @@ public interface AWSAmplifyBackend {
 
     /**
      * <p>
+     * Imports an existing backend storage resource.
+     * </p>
+     * 
+     * @param importBackendStorageRequest
+     *        The request body for ImportBackendStorage.
+     * @return Result of the ImportBackendStorage operation returned by the service.
+     * @throws NotFoundException
+     *         404 response
+     * @throws GatewayTimeoutException
+     *         504 response
+     * @throws TooManyRequestsException
+     *         429 response
+     * @throws BadRequestException
+     *         400 response
+     * @sample AWSAmplifyBackend.ImportBackendStorage
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/amplifybackend-2020-08-11/ImportBackendStorage"
+     *      target="_top">AWS API Documentation</a>
+     */
+    ImportBackendStorageResult importBackendStorage(ImportBackendStorageRequest importBackendStorageRequest);
+
+    /**
+     * <p>
      * Lists the jobs for the backend of an Amplify app.
      * </p>
      * 
@@ -454,6 +542,28 @@ public interface AWSAmplifyBackend {
      *      API Documentation</a>
      */
     ListBackendJobsResult listBackendJobs(ListBackendJobsRequest listBackendJobsRequest);
+
+    /**
+     * <p>
+     * The list of S3 buckets in your account.
+     * </p>
+     * 
+     * @param listS3BucketsRequest
+     *        The request body for S3Buckets.
+     * @return Result of the ListS3Buckets operation returned by the service.
+     * @throws NotFoundException
+     *         404 response
+     * @throws GatewayTimeoutException
+     *         504 response
+     * @throws TooManyRequestsException
+     *         429 response
+     * @throws BadRequestException
+     *         400 response
+     * @sample AWSAmplifyBackend.ListS3Buckets
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/amplifybackend-2020-08-11/ListS3Buckets" target="_top">AWS
+     *      API Documentation</a>
+     */
+    ListS3BucketsResult listS3Buckets(ListS3BucketsRequest listS3BucketsRequest);
 
     /**
      * <p>
@@ -585,6 +695,28 @@ public interface AWSAmplifyBackend {
      *      target="_top">AWS API Documentation</a>
      */
     UpdateBackendJobResult updateBackendJob(UpdateBackendJobRequest updateBackendJobRequest);
+
+    /**
+     * <p>
+     * Updates an existing backend storage resource.
+     * </p>
+     * 
+     * @param updateBackendStorageRequest
+     *        The request body for UpdateBackendStorage.
+     * @return Result of the UpdateBackendStorage operation returned by the service.
+     * @throws NotFoundException
+     *         404 response
+     * @throws GatewayTimeoutException
+     *         504 response
+     * @throws TooManyRequestsException
+     *         429 response
+     * @throws BadRequestException
+     *         400 response
+     * @sample AWSAmplifyBackend.UpdateBackendStorage
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/amplifybackend-2020-08-11/UpdateBackendStorage"
+     *      target="_top">AWS API Documentation</a>
+     */
+    UpdateBackendStorageResult updateBackendStorage(UpdateBackendStorageRequest updateBackendStorageRequest);
 
     /**
      * Shuts down this client object, releasing any resources that might be held open. This is an optional method, and

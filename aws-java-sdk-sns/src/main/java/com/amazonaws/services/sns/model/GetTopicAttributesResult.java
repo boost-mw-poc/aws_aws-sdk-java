@@ -44,7 +44,7 @@ public class GetTopicAttributesResult extends com.amazonaws.AmazonWebServiceResu
      * </li>
      * <li>
      * <p>
-     * <code>Owner</code> – The account ID of the topic's owner.
+     * <code>Owner</code> – The Amazon Web Services account ID of the topic's owner.
      * </p>
      * </li>
      * <li>
@@ -152,7 +152,7 @@ public class GetTopicAttributesResult extends com.amazonaws.AmazonWebServiceResu
      * </li>
      * <li>
      * <p>
-     * <code>Owner</code> – The account ID of the topic's owner.
+     * <code>Owner</code> – The Amazon Web Services account ID of the topic's owner.
      * </p>
      * </li>
      * <li>
@@ -255,7 +255,7 @@ public class GetTopicAttributesResult extends com.amazonaws.AmazonWebServiceResu
      *         </li>
      *         <li>
      *         <p>
-     *         <code>Owner</code> – The account ID of the topic's owner.
+     *         <code>Owner</code> – The Amazon Web Services account ID of the topic's owner.
      *         </p>
      *         </li>
      *         <li>
@@ -370,7 +370,7 @@ public class GetTopicAttributesResult extends com.amazonaws.AmazonWebServiceResu
      * </li>
      * <li>
      * <p>
-     * <code>Owner</code> – The account ID of the topic's owner.
+     * <code>Owner</code> – The Amazon Web Services account ID of the topic's owner.
      * </p>
      * </li>
      * <li>
@@ -474,7 +474,7 @@ public class GetTopicAttributesResult extends com.amazonaws.AmazonWebServiceResu
      *        </li>
      *        <li>
      *        <p>
-     *        <code>Owner</code> – The account ID of the topic's owner.
+     *        <code>Owner</code> – The Amazon Web Services account ID of the topic's owner.
      *        </p>
      *        </li>
      *        <li>
@@ -586,7 +586,7 @@ public class GetTopicAttributesResult extends com.amazonaws.AmazonWebServiceResu
      * </li>
      * <li>
      * <p>
-     * <code>Owner</code> – The account ID of the topic's owner.
+     * <code>Owner</code> – The Amazon Web Services account ID of the topic's owner.
      * </p>
      * </li>
      * <li>
@@ -690,7 +690,7 @@ public class GetTopicAttributesResult extends com.amazonaws.AmazonWebServiceResu
      *        </li>
      *        <li>
      *        <p>
-     *        <code>Owner</code> – The account ID of the topic's owner.
+     *        <code>Owner</code> – The Amazon Web Services account ID of the topic's owner.
      *        </p>
      *        </li>
      *        <li>

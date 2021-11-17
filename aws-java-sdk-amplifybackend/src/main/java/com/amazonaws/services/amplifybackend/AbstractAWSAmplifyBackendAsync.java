@@ -93,6 +93,19 @@ public class AbstractAWSAmplifyBackendAsync extends AbstractAWSAmplifyBackend im
     }
 
     @Override
+    public java.util.concurrent.Future<CreateBackendStorageResult> createBackendStorageAsync(CreateBackendStorageRequest request) {
+
+        return createBackendStorageAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateBackendStorageResult> createBackendStorageAsync(CreateBackendStorageRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateBackendStorageRequest, CreateBackendStorageResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateTokenResult> createTokenAsync(CreateTokenRequest request) {
 
         return createTokenAsync(request, null);
@@ -140,6 +153,19 @@ public class AbstractAWSAmplifyBackendAsync extends AbstractAWSAmplifyBackend im
     @Override
     public java.util.concurrent.Future<DeleteBackendAuthResult> deleteBackendAuthAsync(DeleteBackendAuthRequest request,
             com.amazonaws.handlers.AsyncHandler<DeleteBackendAuthRequest, DeleteBackendAuthResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteBackendStorageResult> deleteBackendStorageAsync(DeleteBackendStorageRequest request) {
+
+        return deleteBackendStorageAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteBackendStorageResult> deleteBackendStorageAsync(DeleteBackendStorageRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteBackendStorageRequest, DeleteBackendStorageResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -236,6 +262,19 @@ public class AbstractAWSAmplifyBackendAsync extends AbstractAWSAmplifyBackend im
     }
 
     @Override
+    public java.util.concurrent.Future<GetBackendStorageResult> getBackendStorageAsync(GetBackendStorageRequest request) {
+
+        return getBackendStorageAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetBackendStorageResult> getBackendStorageAsync(GetBackendStorageRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetBackendStorageRequest, GetBackendStorageResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetTokenResult> getTokenAsync(GetTokenRequest request) {
 
         return getTokenAsync(request, null);
@@ -262,6 +301,19 @@ public class AbstractAWSAmplifyBackendAsync extends AbstractAWSAmplifyBackend im
     }
 
     @Override
+    public java.util.concurrent.Future<ImportBackendStorageResult> importBackendStorageAsync(ImportBackendStorageRequest request) {
+
+        return importBackendStorageAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ImportBackendStorageResult> importBackendStorageAsync(ImportBackendStorageRequest request,
+            com.amazonaws.handlers.AsyncHandler<ImportBackendStorageRequest, ImportBackendStorageResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ListBackendJobsResult> listBackendJobsAsync(ListBackendJobsRequest request) {
 
         return listBackendJobsAsync(request, null);
@@ -270,6 +322,19 @@ public class AbstractAWSAmplifyBackendAsync extends AbstractAWSAmplifyBackend im
     @Override
     public java.util.concurrent.Future<ListBackendJobsResult> listBackendJobsAsync(ListBackendJobsRequest request,
             com.amazonaws.handlers.AsyncHandler<ListBackendJobsRequest, ListBackendJobsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListS3BucketsResult> listS3BucketsAsync(ListS3BucketsRequest request) {
+
+        return listS3BucketsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListS3BucketsResult> listS3BucketsAsync(ListS3BucketsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListS3BucketsRequest, ListS3BucketsResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -348,6 +413,19 @@ public class AbstractAWSAmplifyBackendAsync extends AbstractAWSAmplifyBackend im
     @Override
     public java.util.concurrent.Future<UpdateBackendJobResult> updateBackendJobAsync(UpdateBackendJobRequest request,
             com.amazonaws.handlers.AsyncHandler<UpdateBackendJobRequest, UpdateBackendJobResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateBackendStorageResult> updateBackendStorageAsync(UpdateBackendStorageRequest request) {
+
+        return updateBackendStorageAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateBackendStorageResult> updateBackendStorageAsync(UpdateBackendStorageRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateBackendStorageRequest, UpdateBackendStorageResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

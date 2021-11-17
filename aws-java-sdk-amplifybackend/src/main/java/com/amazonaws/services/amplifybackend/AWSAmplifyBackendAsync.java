@@ -201,6 +201,39 @@ public interface AWSAmplifyBackendAsync extends AWSAmplifyBackend {
 
     /**
      * <p>
+     * Creates a backend storage resource.
+     * </p>
+     * 
+     * @param createBackendStorageRequest
+     *        The request body for CreateBackendStorage.
+     * @return A Java Future containing the result of the CreateBackendStorage operation returned by the service.
+     * @sample AWSAmplifyBackendAsync.CreateBackendStorage
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/amplifybackend-2020-08-11/CreateBackendStorage"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateBackendStorageResult> createBackendStorageAsync(CreateBackendStorageRequest createBackendStorageRequest);
+
+    /**
+     * <p>
+     * Creates a backend storage resource.
+     * </p>
+     * 
+     * @param createBackendStorageRequest
+     *        The request body for CreateBackendStorage.
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateBackendStorage operation returned by the service.
+     * @sample AWSAmplifyBackendAsyncHandler.CreateBackendStorage
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/amplifybackend-2020-08-11/CreateBackendStorage"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateBackendStorageResult> createBackendStorageAsync(CreateBackendStorageRequest createBackendStorageRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateBackendStorageRequest, CreateBackendStorageResult> asyncHandler);
+
+    /**
+     * <p>
      * Generates a one-time challenge code to authenticate a user into your Amplify Admin UI.
      * </p>
      * 
@@ -326,6 +359,39 @@ public interface AWSAmplifyBackendAsync extends AWSAmplifyBackend {
      */
     java.util.concurrent.Future<DeleteBackendAuthResult> deleteBackendAuthAsync(DeleteBackendAuthRequest deleteBackendAuthRequest,
             com.amazonaws.handlers.AsyncHandler<DeleteBackendAuthRequest, DeleteBackendAuthResult> asyncHandler);
+
+    /**
+     * <p>
+     * Removes the specified backend storage resource.
+     * </p>
+     * 
+     * @param deleteBackendStorageRequest
+     *        The request body for DeleteBackendStorage.
+     * @return A Java Future containing the result of the DeleteBackendStorage operation returned by the service.
+     * @sample AWSAmplifyBackendAsync.DeleteBackendStorage
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/amplifybackend-2020-08-11/DeleteBackendStorage"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteBackendStorageResult> deleteBackendStorageAsync(DeleteBackendStorageRequest deleteBackendStorageRequest);
+
+    /**
+     * <p>
+     * Removes the specified backend storage resource.
+     * </p>
+     * 
+     * @param deleteBackendStorageRequest
+     *        The request body for DeleteBackendStorage.
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteBackendStorage operation returned by the service.
+     * @sample AWSAmplifyBackendAsyncHandler.DeleteBackendStorage
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/amplifybackend-2020-08-11/DeleteBackendStorage"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteBackendStorageResult> deleteBackendStorageAsync(DeleteBackendStorageRequest deleteBackendStorageRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteBackendStorageRequest, DeleteBackendStorageResult> asyncHandler);
 
     /**
      * <p>
@@ -556,6 +622,39 @@ public interface AWSAmplifyBackendAsync extends AWSAmplifyBackend {
 
     /**
      * <p>
+     * Gets details for a backend storage resource.
+     * </p>
+     * 
+     * @param getBackendStorageRequest
+     *        The request body for GetBackendStorage.
+     * @return A Java Future containing the result of the GetBackendStorage operation returned by the service.
+     * @sample AWSAmplifyBackendAsync.GetBackendStorage
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/amplifybackend-2020-08-11/GetBackendStorage"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetBackendStorageResult> getBackendStorageAsync(GetBackendStorageRequest getBackendStorageRequest);
+
+    /**
+     * <p>
+     * Gets details for a backend storage resource.
+     * </p>
+     * 
+     * @param getBackendStorageRequest
+     *        The request body for GetBackendStorage.
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetBackendStorage operation returned by the service.
+     * @sample AWSAmplifyBackendAsyncHandler.GetBackendStorage
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/amplifybackend-2020-08-11/GetBackendStorage"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetBackendStorageResult> getBackendStorageAsync(GetBackendStorageRequest getBackendStorageRequest,
+            com.amazonaws.handlers.AsyncHandler<GetBackendStorageRequest, GetBackendStorageResult> asyncHandler);
+
+    /**
+     * <p>
      * Gets the challenge token based on the given appId and sessionId.
      * </p>
      * 
@@ -620,6 +719,39 @@ public interface AWSAmplifyBackendAsync extends AWSAmplifyBackend {
 
     /**
      * <p>
+     * Imports an existing backend storage resource.
+     * </p>
+     * 
+     * @param importBackendStorageRequest
+     *        The request body for ImportBackendStorage.
+     * @return A Java Future containing the result of the ImportBackendStorage operation returned by the service.
+     * @sample AWSAmplifyBackendAsync.ImportBackendStorage
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/amplifybackend-2020-08-11/ImportBackendStorage"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ImportBackendStorageResult> importBackendStorageAsync(ImportBackendStorageRequest importBackendStorageRequest);
+
+    /**
+     * <p>
+     * Imports an existing backend storage resource.
+     * </p>
+     * 
+     * @param importBackendStorageRequest
+     *        The request body for ImportBackendStorage.
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ImportBackendStorage operation returned by the service.
+     * @sample AWSAmplifyBackendAsyncHandler.ImportBackendStorage
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/amplifybackend-2020-08-11/ImportBackendStorage"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ImportBackendStorageResult> importBackendStorageAsync(ImportBackendStorageRequest importBackendStorageRequest,
+            com.amazonaws.handlers.AsyncHandler<ImportBackendStorageRequest, ImportBackendStorageResult> asyncHandler);
+
+    /**
+     * <p>
      * Lists the jobs for the backend of an Amplify app.
      * </p>
      * 
@@ -650,6 +782,39 @@ public interface AWSAmplifyBackendAsync extends AWSAmplifyBackend {
      */
     java.util.concurrent.Future<ListBackendJobsResult> listBackendJobsAsync(ListBackendJobsRequest listBackendJobsRequest,
             com.amazonaws.handlers.AsyncHandler<ListBackendJobsRequest, ListBackendJobsResult> asyncHandler);
+
+    /**
+     * <p>
+     * The list of S3 buckets in your account.
+     * </p>
+     * 
+     * @param listS3BucketsRequest
+     *        The request body for S3Buckets.
+     * @return A Java Future containing the result of the ListS3Buckets operation returned by the service.
+     * @sample AWSAmplifyBackendAsync.ListS3Buckets
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/amplifybackend-2020-08-11/ListS3Buckets" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListS3BucketsResult> listS3BucketsAsync(ListS3BucketsRequest listS3BucketsRequest);
+
+    /**
+     * <p>
+     * The list of S3 buckets in your account.
+     * </p>
+     * 
+     * @param listS3BucketsRequest
+     *        The request body for S3Buckets.
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListS3Buckets operation returned by the service.
+     * @sample AWSAmplifyBackendAsyncHandler.ListS3Buckets
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/amplifybackend-2020-08-11/ListS3Buckets" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListS3BucketsResult> listS3BucketsAsync(ListS3BucketsRequest listS3BucketsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListS3BucketsRequest, ListS3BucketsResult> asyncHandler);
 
     /**
      * <p>
@@ -846,5 +1011,38 @@ public interface AWSAmplifyBackendAsync extends AWSAmplifyBackend {
      */
     java.util.concurrent.Future<UpdateBackendJobResult> updateBackendJobAsync(UpdateBackendJobRequest updateBackendJobRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateBackendJobRequest, UpdateBackendJobResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates an existing backend storage resource.
+     * </p>
+     * 
+     * @param updateBackendStorageRequest
+     *        The request body for UpdateBackendStorage.
+     * @return A Java Future containing the result of the UpdateBackendStorage operation returned by the service.
+     * @sample AWSAmplifyBackendAsync.UpdateBackendStorage
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/amplifybackend-2020-08-11/UpdateBackendStorage"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateBackendStorageResult> updateBackendStorageAsync(UpdateBackendStorageRequest updateBackendStorageRequest);
+
+    /**
+     * <p>
+     * Updates an existing backend storage resource.
+     * </p>
+     * 
+     * @param updateBackendStorageRequest
+     *        The request body for UpdateBackendStorage.
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateBackendStorage operation returned by the service.
+     * @sample AWSAmplifyBackendAsyncHandler.UpdateBackendStorage
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/amplifybackend-2020-08-11/UpdateBackendStorage"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateBackendStorageResult> updateBackendStorageAsync(UpdateBackendStorageRequest updateBackendStorageRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateBackendStorageRequest, UpdateBackendStorageResult> asyncHandler);
 
 }

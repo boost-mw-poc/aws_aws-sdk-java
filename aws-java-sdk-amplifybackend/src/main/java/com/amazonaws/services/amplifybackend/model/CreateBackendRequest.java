@@ -48,7 +48,7 @@ public class CreateBackendRequest extends com.amazonaws.AmazonWebServiceRequest 
     private String backendEnvironmentName;
     /**
      * <p>
-     * The resource configuration for the create backend request.
+     * The resource configuration for creating backend storage.
      * </p>
      */
     private ResourceConfig resourceConfig;
@@ -181,11 +181,11 @@ public class CreateBackendRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The resource configuration for the create backend request.
+     * The resource configuration for creating backend storage.
      * </p>
      * 
      * @param resourceConfig
-     *        The resource configuration for the create backend request.
+     *        The resource configuration for creating backend storage.
      */
 
     public void setResourceConfig(ResourceConfig resourceConfig) {
@@ -194,10 +194,10 @@ public class CreateBackendRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The resource configuration for the create backend request.
+     * The resource configuration for creating backend storage.
      * </p>
      * 
-     * @return The resource configuration for the create backend request.
+     * @return The resource configuration for creating backend storage.
      */
 
     public ResourceConfig getResourceConfig() {
@@ -206,11 +206,11 @@ public class CreateBackendRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The resource configuration for the create backend request.
+     * The resource configuration for creating backend storage.
      * </p>
      * 
      * @param resourceConfig
-     *        The resource configuration for the create backend request.
+     *        The resource configuration for creating backend storage.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

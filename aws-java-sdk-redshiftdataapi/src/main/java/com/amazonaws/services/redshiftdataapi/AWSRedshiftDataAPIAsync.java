@@ -46,14 +46,16 @@ public interface AWSRedshiftDataAPIAsync extends AWSRedshiftDataAPI {
      * <ul>
      * <li>
      * <p>
-     * Secrets Manager - specify the Amazon Resource Name (ARN) of the secret, the database name, and the cluster
-     * identifier that matches the cluster in the secret.
+     * Secrets Manager - when connecting to a cluster, specify the Amazon Resource Name (ARN) of the secret, the
+     * database name, and the cluster identifier that matches the cluster in the secret. When connecting to a serverless
+     * endpoint, specify the Amazon Resource Name (ARN) of the secret and the database name.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Temporary credentials - specify the cluster identifier, the database name, and the database user name. Permission
-     * to call the <code>redshift:GetClusterCredentials</code> operation is required to use this method.
+     * Temporary credentials - when connecting to a cluster, specify the cluster identifier, the database name, and the
+     * database user name. Also, permission to call the <code>redshift:GetClusterCredentials</code> operation is
+     * required. When connecting to a serverless endpoint, specify the database name.
      * </p>
      * </li>
      * </ul>
@@ -74,14 +76,16 @@ public interface AWSRedshiftDataAPIAsync extends AWSRedshiftDataAPI {
      * <ul>
      * <li>
      * <p>
-     * Secrets Manager - specify the Amazon Resource Name (ARN) of the secret, the database name, and the cluster
-     * identifier that matches the cluster in the secret.
+     * Secrets Manager - when connecting to a cluster, specify the Amazon Resource Name (ARN) of the secret, the
+     * database name, and the cluster identifier that matches the cluster in the secret. When connecting to a serverless
+     * endpoint, specify the Amazon Resource Name (ARN) of the secret and the database name.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Temporary credentials - specify the cluster identifier, the database name, and the database user name. Permission
-     * to call the <code>redshift:GetClusterCredentials</code> operation is required to use this method.
+     * Temporary credentials - when connecting to a cluster, specify the cluster identifier, the database name, and the
+     * database user name. Also, permission to call the <code>redshift:GetClusterCredentials</code> operation is
+     * required. When connecting to a serverless endpoint, specify the database name.
      * </p>
      * </li>
      * </ul>
@@ -174,14 +178,16 @@ public interface AWSRedshiftDataAPIAsync extends AWSRedshiftDataAPI {
      * <ul>
      * <li>
      * <p>
-     * Secrets Manager - specify the Amazon Resource Name (ARN) of the secret, the database name, and the cluster
-     * identifier that matches the cluster in the secret.
+     * Secrets Manager - when connecting to a cluster, specify the Amazon Resource Name (ARN) of the secret, the
+     * database name, and the cluster identifier that matches the cluster in the secret. When connecting to a serverless
+     * endpoint, specify the Amazon Resource Name (ARN) of the secret and the database name.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Temporary credentials - specify the cluster identifier, the database name, and the database user name. Permission
-     * to call the <code>redshift:GetClusterCredentials</code> operation is required to use this method.
+     * Temporary credentials - when connecting to a cluster, specify the cluster identifier, the database name, and the
+     * database user name. Also, permission to call the <code>redshift:GetClusterCredentials</code> operation is
+     * required. When connecting to a serverless endpoint, specify the database name.
      * </p>
      * </li>
      * </ul>
@@ -203,14 +209,16 @@ public interface AWSRedshiftDataAPIAsync extends AWSRedshiftDataAPI {
      * <ul>
      * <li>
      * <p>
-     * Secrets Manager - specify the Amazon Resource Name (ARN) of the secret, the database name, and the cluster
-     * identifier that matches the cluster in the secret.
+     * Secrets Manager - when connecting to a cluster, specify the Amazon Resource Name (ARN) of the secret, the
+     * database name, and the cluster identifier that matches the cluster in the secret. When connecting to a serverless
+     * endpoint, specify the Amazon Resource Name (ARN) of the secret and the database name.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Temporary credentials - specify the cluster identifier, the database name, and the database user name. Permission
-     * to call the <code>redshift:GetClusterCredentials</code> operation is required to use this method.
+     * Temporary credentials - when connecting to a cluster, specify the cluster identifier, the database name, and the
+     * database user name. Also, permission to call the <code>redshift:GetClusterCredentials</code> operation is
+     * required. When connecting to a serverless endpoint, specify the database name.
      * </p>
      * </li>
      * </ul>
@@ -237,14 +245,16 @@ public interface AWSRedshiftDataAPIAsync extends AWSRedshiftDataAPI {
      * <ul>
      * <li>
      * <p>
-     * Secrets Manager - specify the Amazon Resource Name (ARN) of the secret, the database name, and the cluster
-     * identifier that matches the cluster in the secret.
+     * Secrets Manager - when connecting to a cluster, specify the Amazon Resource Name (ARN) of the secret, the
+     * database name, and the cluster identifier that matches the cluster in the secret. When connecting to a serverless
+     * endpoint, specify the Amazon Resource Name (ARN) of the secret and the database name.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Temporary credentials - specify the cluster identifier, the database name, and the database user name. Permission
-     * to call the <code>redshift:GetClusterCredentials</code> operation is required to use this method.
+     * Temporary credentials - when connecting to a cluster, specify the cluster identifier, the database name, and the
+     * database user name. Also, permission to call the <code>redshift:GetClusterCredentials</code> operation is
+     * required. When connecting to a serverless endpoint, specify the database name.
      * </p>
      * </li>
      * </ul>
@@ -266,14 +276,16 @@ public interface AWSRedshiftDataAPIAsync extends AWSRedshiftDataAPI {
      * <ul>
      * <li>
      * <p>
-     * Secrets Manager - specify the Amazon Resource Name (ARN) of the secret, the database name, and the cluster
-     * identifier that matches the cluster in the secret.
+     * Secrets Manager - when connecting to a cluster, specify the Amazon Resource Name (ARN) of the secret, the
+     * database name, and the cluster identifier that matches the cluster in the secret. When connecting to a serverless
+     * endpoint, specify the Amazon Resource Name (ARN) of the secret and the database name.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Temporary credentials - specify the cluster identifier, the database name, and the database user name. Permission
-     * to call the <code>redshift:GetClusterCredentials</code> operation is required to use this method.
+     * Temporary credentials - when connecting to a cluster, specify the cluster identifier, the database name, and the
+     * database user name. Also, permission to call the <code>redshift:GetClusterCredentials</code> operation is
+     * required. When connecting to a serverless endpoint, specify the database name.
      * </p>
      * </li>
      * </ul>
@@ -332,14 +344,16 @@ public interface AWSRedshiftDataAPIAsync extends AWSRedshiftDataAPI {
      * <ul>
      * <li>
      * <p>
-     * Secrets Manager - specify the Amazon Resource Name (ARN) of the secret, the database name, and the cluster
-     * identifier that matches the cluster in the secret.
+     * Secrets Manager - when connecting to a cluster, specify the Amazon Resource Name (ARN) of the secret, the
+     * database name, and the cluster identifier that matches the cluster in the secret. When connecting to a serverless
+     * endpoint, specify the Amazon Resource Name (ARN) of the secret and the database name.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Temporary credentials - specify the cluster identifier, the database name, and the database user name. Permission
-     * to call the <code>redshift:GetClusterCredentials</code> operation is required to use this method.
+     * Temporary credentials - when connecting to a cluster, specify the cluster identifier, the database name, and the
+     * database user name. Also, permission to call the <code>redshift:GetClusterCredentials</code> operation is
+     * required. When connecting to a serverless endpoint, specify the database name.
      * </p>
      * </li>
      * </ul>
@@ -360,14 +374,16 @@ public interface AWSRedshiftDataAPIAsync extends AWSRedshiftDataAPI {
      * <ul>
      * <li>
      * <p>
-     * Secrets Manager - specify the Amazon Resource Name (ARN) of the secret, the database name, and the cluster
-     * identifier that matches the cluster in the secret.
+     * Secrets Manager - when connecting to a cluster, specify the Amazon Resource Name (ARN) of the secret, the
+     * database name, and the cluster identifier that matches the cluster in the secret. When connecting to a serverless
+     * endpoint, specify the Amazon Resource Name (ARN) of the secret and the database name.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Temporary credentials - specify the cluster identifier, the database name, and the database user name. Permission
-     * to call the <code>redshift:GetClusterCredentials</code> operation is required to use this method.
+     * Temporary credentials - when connecting to a cluster, specify the cluster identifier, the database name, and the
+     * database user name. Also, permission to call the <code>redshift:GetClusterCredentials</code> operation is
+     * required. When connecting to a serverless endpoint, specify the database name.
      * </p>
      * </li>
      * </ul>
@@ -393,14 +409,16 @@ public interface AWSRedshiftDataAPIAsync extends AWSRedshiftDataAPI {
      * <ul>
      * <li>
      * <p>
-     * Secrets Manager - specify the Amazon Resource Name (ARN) of the secret, the database name, and the cluster
-     * identifier that matches the cluster in the secret.
+     * Secrets Manager - when connecting to a cluster, specify the Amazon Resource Name (ARN) of the secret, the
+     * database name, and the cluster identifier that matches the cluster in the secret. When connecting to a serverless
+     * endpoint, specify the Amazon Resource Name (ARN) of the secret and the database name.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Temporary credentials - specify the cluster identifier, the database name, and the database user name. Permission
-     * to call the <code>redshift:GetClusterCredentials</code> operation is required to use this method.
+     * Temporary credentials - when connecting to a cluster, specify the cluster identifier, the database name, and the
+     * database user name. Also, permission to call the <code>redshift:GetClusterCredentials</code> operation is
+     * required. When connecting to a serverless endpoint, specify the database name.
      * </p>
      * </li>
      * </ul>
@@ -421,14 +439,16 @@ public interface AWSRedshiftDataAPIAsync extends AWSRedshiftDataAPI {
      * <ul>
      * <li>
      * <p>
-     * Secrets Manager - specify the Amazon Resource Name (ARN) of the secret, the database name, and the cluster
-     * identifier that matches the cluster in the secret.
+     * Secrets Manager - when connecting to a cluster, specify the Amazon Resource Name (ARN) of the secret, the
+     * database name, and the cluster identifier that matches the cluster in the secret. When connecting to a serverless
+     * endpoint, specify the Amazon Resource Name (ARN) of the secret and the database name.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Temporary credentials - specify the cluster identifier, the database name, and the database user name. Permission
-     * to call the <code>redshift:GetClusterCredentials</code> operation is required to use this method.
+     * Temporary credentials - when connecting to a cluster, specify the cluster identifier, the database name, and the
+     * database user name. Also, permission to call the <code>redshift:GetClusterCredentials</code> operation is
+     * required. When connecting to a serverless endpoint, specify the database name.
      * </p>
      * </li>
      * </ul>
@@ -488,14 +508,16 @@ public interface AWSRedshiftDataAPIAsync extends AWSRedshiftDataAPI {
      * <ul>
      * <li>
      * <p>
-     * Secrets Manager - specify the Amazon Resource Name (ARN) of the secret, the database name, and the cluster
-     * identifier that matches the cluster in the secret.
+     * Secrets Manager - when connecting to a cluster, specify the Amazon Resource Name (ARN) of the secret, the
+     * database name, and the cluster identifier that matches the cluster in the secret. When connecting to a serverless
+     * endpoint, specify the Amazon Resource Name (ARN) of the secret and the database name.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Temporary credentials - specify the cluster identifier, the database name, and the database user name. Permission
-     * to call the <code>redshift:GetClusterCredentials</code> operation is required to use this method.
+     * Temporary credentials - when connecting to a cluster, specify the cluster identifier, the database name, and the
+     * database user name. Also, permission to call the <code>redshift:GetClusterCredentials</code> operation is
+     * required. When connecting to a serverless endpoint, specify the database name.
      * </p>
      * </li>
      * </ul>
@@ -517,14 +539,16 @@ public interface AWSRedshiftDataAPIAsync extends AWSRedshiftDataAPI {
      * <ul>
      * <li>
      * <p>
-     * Secrets Manager - specify the Amazon Resource Name (ARN) of the secret, the database name, and the cluster
-     * identifier that matches the cluster in the secret.
+     * Secrets Manager - when connecting to a cluster, specify the Amazon Resource Name (ARN) of the secret, the
+     * database name, and the cluster identifier that matches the cluster in the secret. When connecting to a serverless
+     * endpoint, specify the Amazon Resource Name (ARN) of the secret and the database name.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Temporary credentials - specify the cluster identifier, the database name, and the database user name. Permission
-     * to call the <code>redshift:GetClusterCredentials</code> operation is required to use this method.
+     * Temporary credentials - when connecting to a cluster, specify the cluster identifier, the database name, and the
+     * database user name. Also, permission to call the <code>redshift:GetClusterCredentials</code> operation is
+     * required. When connecting to a serverless endpoint, specify the database name.
      * </p>
      * </li>
      * </ul>

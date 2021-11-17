@@ -17,7 +17,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * Endpoint for mobile app and device.
+ * The endpoint for mobile app and device.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/sns-2010-03-31/Endpoint" target="_top">AWS API Documentation</a>
@@ -27,7 +27,7 @@ public class Endpoint implements Serializable, Cloneable {
 
     /**
      * <p>
-     * EndpointArn for mobile app and device.
+     * The <code>EndpointArn</code> for mobile app and device.
      * </p>
      */
     private String endpointArn;
@@ -40,11 +40,11 @@ public class Endpoint implements Serializable, Cloneable {
 
     /**
      * <p>
-     * EndpointArn for mobile app and device.
+     * The <code>EndpointArn</code> for mobile app and device.
      * </p>
      * 
      * @param endpointArn
-     *        EndpointArn for mobile app and device.
+     *        The <code>EndpointArn</code> for mobile app and device.
      */
 
     public void setEndpointArn(String endpointArn) {
@@ -53,10 +53,10 @@ public class Endpoint implements Serializable, Cloneable {
 
     /**
      * <p>
-     * EndpointArn for mobile app and device.
+     * The <code>EndpointArn</code> for mobile app and device.
      * </p>
      * 
-     * @return EndpointArn for mobile app and device.
+     * @return The <code>EndpointArn</code> for mobile app and device.
      */
 
     public String getEndpointArn() {
@@ -65,11 +65,11 @@ public class Endpoint implements Serializable, Cloneable {
 
     /**
      * <p>
-     * EndpointArn for mobile app and device.
+     * The <code>EndpointArn</code> for mobile app and device.
      * </p>
      * 
      * @param endpointArn
-     *        EndpointArn for mobile app and device.
+     *        The <code>EndpointArn</code> for mobile app and device.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

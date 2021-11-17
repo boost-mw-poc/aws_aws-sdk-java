@@ -25,18 +25,18 @@ public class GetSMSSandboxAccountStatusResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * Indicates whether the calling account is in the SMS sandbox.
+     * Indicates whether the calling Amazon Web Services account is in the SMS sandbox.
      * </p>
      */
     private Boolean isInSandbox;
 
     /**
      * <p>
-     * Indicates whether the calling account is in the SMS sandbox.
+     * Indicates whether the calling Amazon Web Services account is in the SMS sandbox.
      * </p>
      * 
      * @param isInSandbox
-     *        Indicates whether the calling account is in the SMS sandbox.
+     *        Indicates whether the calling Amazon Web Services account is in the SMS sandbox.
      */
 
     public void setIsInSandbox(Boolean isInSandbox) {
@@ -45,10 +45,10 @@ public class GetSMSSandboxAccountStatusResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * Indicates whether the calling account is in the SMS sandbox.
+     * Indicates whether the calling Amazon Web Services account is in the SMS sandbox.
      * </p>
      * 
-     * @return Indicates whether the calling account is in the SMS sandbox.
+     * @return Indicates whether the calling Amazon Web Services account is in the SMS sandbox.
      */
 
     public Boolean getIsInSandbox() {
@@ -57,11 +57,11 @@ public class GetSMSSandboxAccountStatusResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * Indicates whether the calling account is in the SMS sandbox.
+     * Indicates whether the calling Amazon Web Services account is in the SMS sandbox.
      * </p>
      * 
      * @param isInSandbox
-     *        Indicates whether the calling account is in the SMS sandbox.
+     *        Indicates whether the calling Amazon Web Services account is in the SMS sandbox.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -72,10 +72,10 @@ public class GetSMSSandboxAccountStatusResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * Indicates whether the calling account is in the SMS sandbox.
+     * Indicates whether the calling Amazon Web Services account is in the SMS sandbox.
      * </p>
      * 
-     * @return Indicates whether the calling account is in the SMS sandbox.
+     * @return Indicates whether the calling Amazon Web Services account is in the SMS sandbox.
      */
 
     public Boolean isInSandbox() {

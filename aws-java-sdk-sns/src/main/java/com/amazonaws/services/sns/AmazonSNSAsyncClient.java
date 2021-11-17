@@ -1573,6 +1573,39 @@ public class AmazonSNSAsyncClient extends AmazonSNSClient implements AmazonSNSAs
     }
 
     @Override
+    public java.util.concurrent.Future<PublishBatchResult> publishBatchAsync(PublishBatchRequest request) {
+
+        return publishBatchAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<PublishBatchResult> publishBatchAsync(final PublishBatchRequest request,
+            final com.amazonaws.handlers.AsyncHandler<PublishBatchRequest, PublishBatchResult> asyncHandler) {
+        final PublishBatchRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<PublishBatchResult>() {
+            @Override
+            public PublishBatchResult call() throws Exception {
+                PublishBatchResult result = null;
+
+                try {
+                    result = executePublishBatch(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<RemovePermissionResult> removePermissionAsync(RemovePermissionRequest request) {
 
         return removePermissionAsync(request, null);

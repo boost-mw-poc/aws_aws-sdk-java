@@ -44,9 +44,10 @@ public class MethodSetting implements Serializable, Cloneable, StructuredPojo {
     private String loggingLevel;
     /**
      * <p>
-     * Specifies whether data trace logging is enabled for this method, which affects the log entries pushed to Amazon
-     * CloudWatch Logs. The PATCH path for this setting is <code>/{method_setting_key}/logging/dataTrace</code>, and the
-     * value is a Boolean.
+     * Specifies whether full requests and responses are logged for this method, which affects the log entries pushed to
+     * Amazon CloudWatch Logs. This can be useful to troubleshoot APIs, but can result in logging sensitive data. We
+     * recommend that you don't enable this option for production APIs. The PATCH path for this setting is
+     * <code>/{method_setting_key}/logging/dataTrace</code>, and the value is a Boolean.
      * </p>
      */
     private Boolean dataTraceEnabled;
@@ -230,15 +231,17 @@ public class MethodSetting implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Specifies whether data trace logging is enabled for this method, which affects the log entries pushed to Amazon
-     * CloudWatch Logs. The PATCH path for this setting is <code>/{method_setting_key}/logging/dataTrace</code>, and the
-     * value is a Boolean.
+     * Specifies whether full requests and responses are logged for this method, which affects the log entries pushed to
+     * Amazon CloudWatch Logs. This can be useful to troubleshoot APIs, but can result in logging sensitive data. We
+     * recommend that you don't enable this option for production APIs. The PATCH path for this setting is
+     * <code>/{method_setting_key}/logging/dataTrace</code>, and the value is a Boolean.
      * </p>
      * 
      * @param dataTraceEnabled
-     *        Specifies whether data trace logging is enabled for this method, which affects the log entries pushed to
-     *        Amazon CloudWatch Logs. The PATCH path for this setting is
-     *        <code>/{method_setting_key}/logging/dataTrace</code>, and the value is a Boolean.
+     *        Specifies whether full requests and responses are logged for this method, which affects the log entries
+     *        pushed to Amazon CloudWatch Logs. This can be useful to troubleshoot APIs, but can result in logging
+     *        sensitive data. We recommend that you don't enable this option for production APIs. The PATCH path for
+     *        this setting is <code>/{method_setting_key}/logging/dataTrace</code>, and the value is a Boolean.
      */
 
     public void setDataTraceEnabled(Boolean dataTraceEnabled) {
@@ -247,14 +250,16 @@ public class MethodSetting implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Specifies whether data trace logging is enabled for this method, which affects the log entries pushed to Amazon
-     * CloudWatch Logs. The PATCH path for this setting is <code>/{method_setting_key}/logging/dataTrace</code>, and the
-     * value is a Boolean.
+     * Specifies whether full requests and responses are logged for this method, which affects the log entries pushed to
+     * Amazon CloudWatch Logs. This can be useful to troubleshoot APIs, but can result in logging sensitive data. We
+     * recommend that you don't enable this option for production APIs. The PATCH path for this setting is
+     * <code>/{method_setting_key}/logging/dataTrace</code>, and the value is a Boolean.
      * </p>
      * 
-     * @return Specifies whether data trace logging is enabled for this method, which affects the log entries pushed to
-     *         Amazon CloudWatch Logs. The PATCH path for this setting is
-     *         <code>/{method_setting_key}/logging/dataTrace</code>, and the value is a Boolean.
+     * @return Specifies whether full requests and responses are logged for this method, which affects the log entries
+     *         pushed to Amazon CloudWatch Logs. This can be useful to troubleshoot APIs, but can result in logging
+     *         sensitive data. We recommend that you don't enable this option for production APIs. The PATCH path for
+     *         this setting is <code>/{method_setting_key}/logging/dataTrace</code>, and the value is a Boolean.
      */
 
     public Boolean getDataTraceEnabled() {
@@ -263,15 +268,17 @@ public class MethodSetting implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Specifies whether data trace logging is enabled for this method, which affects the log entries pushed to Amazon
-     * CloudWatch Logs. The PATCH path for this setting is <code>/{method_setting_key}/logging/dataTrace</code>, and the
-     * value is a Boolean.
+     * Specifies whether full requests and responses are logged for this method, which affects the log entries pushed to
+     * Amazon CloudWatch Logs. This can be useful to troubleshoot APIs, but can result in logging sensitive data. We
+     * recommend that you don't enable this option for production APIs. The PATCH path for this setting is
+     * <code>/{method_setting_key}/logging/dataTrace</code>, and the value is a Boolean.
      * </p>
      * 
      * @param dataTraceEnabled
-     *        Specifies whether data trace logging is enabled for this method, which affects the log entries pushed to
-     *        Amazon CloudWatch Logs. The PATCH path for this setting is
-     *        <code>/{method_setting_key}/logging/dataTrace</code>, and the value is a Boolean.
+     *        Specifies whether full requests and responses are logged for this method, which affects the log entries
+     *        pushed to Amazon CloudWatch Logs. This can be useful to troubleshoot APIs, but can result in logging
+     *        sensitive data. We recommend that you don't enable this option for production APIs. The PATCH path for
+     *        this setting is <code>/{method_setting_key}/logging/dataTrace</code>, and the value is a Boolean.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -282,14 +289,16 @@ public class MethodSetting implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Specifies whether data trace logging is enabled for this method, which affects the log entries pushed to Amazon
-     * CloudWatch Logs. The PATCH path for this setting is <code>/{method_setting_key}/logging/dataTrace</code>, and the
-     * value is a Boolean.
+     * Specifies whether full requests and responses are logged for this method, which affects the log entries pushed to
+     * Amazon CloudWatch Logs. This can be useful to troubleshoot APIs, but can result in logging sensitive data. We
+     * recommend that you don't enable this option for production APIs. The PATCH path for this setting is
+     * <code>/{method_setting_key}/logging/dataTrace</code>, and the value is a Boolean.
      * </p>
      * 
-     * @return Specifies whether data trace logging is enabled for this method, which affects the log entries pushed to
-     *         Amazon CloudWatch Logs. The PATCH path for this setting is
-     *         <code>/{method_setting_key}/logging/dataTrace</code>, and the value is a Boolean.
+     * @return Specifies whether full requests and responses are logged for this method, which affects the log entries
+     *         pushed to Amazon CloudWatch Logs. This can be useful to troubleshoot APIs, but can result in logging
+     *         sensitive data. We recommend that you don't enable this option for production APIs. The PATCH path for
+     *         this setting is <code>/{method_setting_key}/logging/dataTrace</code>, and the value is a Boolean.
      */
 
     public Boolean isDataTraceEnabled() {

@@ -53,6 +53,11 @@ public class AbstractAWSAmplifyBackend implements AWSAmplifyBackend {
     }
 
     @Override
+    public CreateBackendStorageResult createBackendStorage(CreateBackendStorageRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateTokenResult createToken(CreateTokenRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -69,6 +74,11 @@ public class AbstractAWSAmplifyBackend implements AWSAmplifyBackend {
 
     @Override
     public DeleteBackendAuthResult deleteBackendAuth(DeleteBackendAuthRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteBackendStorageResult deleteBackendStorage(DeleteBackendStorageRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -108,6 +118,11 @@ public class AbstractAWSAmplifyBackend implements AWSAmplifyBackend {
     }
 
     @Override
+    public GetBackendStorageResult getBackendStorage(GetBackendStorageRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetTokenResult getToken(GetTokenRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -118,7 +133,17 @@ public class AbstractAWSAmplifyBackend implements AWSAmplifyBackend {
     }
 
     @Override
+    public ImportBackendStorageResult importBackendStorage(ImportBackendStorageRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListBackendJobsResult listBackendJobs(ListBackendJobsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListS3BucketsResult listS3Buckets(ListS3BucketsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -149,6 +174,11 @@ public class AbstractAWSAmplifyBackend implements AWSAmplifyBackend {
 
     @Override
     public UpdateBackendJobResult updateBackendJob(UpdateBackendJobRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateBackendStorageResult updateBackendStorage(UpdateBackendStorageRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

@@ -16,7 +16,8 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * Indicates that the rate at which requests have been submitted for this action exceeds the limit for your account.
+ * Indicates that the rate at which requests have been submitted for this action exceeds the limit for your Amazon Web
+ * Services account.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

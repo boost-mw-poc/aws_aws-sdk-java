@@ -30,8 +30,8 @@ public class SetSMSAttributesRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The default settings for sending SMS messages from your account. You can set values for the following attribute
-     * names:
+     * The default settings for sending SMS messages from your Amazon Web Services account. You can set values for the
+     * following attribute names:
      * </p>
      * <p>
      * <code>MonthlySpendLimit</code> – The maximum amount in USD that you are willing to spend each month to send SMS
@@ -89,7 +89,7 @@ public class SetSMSAttributesRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * <code>UsageReportS3Bucket</code> – The name of the Amazon S3 bucket to receive daily SMS usage reports from
      * Amazon SNS. Each day, Amazon SNS will deliver a usage report as a CSV file to the bucket. The report includes the
-     * following information for each SMS message that was successfully delivered by your account:
+     * following information for each SMS message that was successfully delivered by your Amazon Web Services account:
      * </p>
      * <ul>
      * <li>
@@ -147,8 +147,8 @@ public class SetSMSAttributesRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The default settings for sending SMS messages from your account. You can set values for the following attribute
-     * names:
+     * The default settings for sending SMS messages from your Amazon Web Services account. You can set values for the
+     * following attribute names:
      * </p>
      * <p>
      * <code>MonthlySpendLimit</code> – The maximum amount in USD that you are willing to spend each month to send SMS
@@ -206,7 +206,7 @@ public class SetSMSAttributesRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * <code>UsageReportS3Bucket</code> – The name of the Amazon S3 bucket to receive daily SMS usage reports from
      * Amazon SNS. Each day, Amazon SNS will deliver a usage report as a CSV file to the bucket. The report includes the
-     * following information for each SMS message that was successfully delivered by your account:
+     * following information for each SMS message that was successfully delivered by your Amazon Web Services account:
      * </p>
      * <ul>
      * <li>
@@ -260,8 +260,8 @@ public class SetSMSAttributesRequest extends com.amazonaws.AmazonWebServiceReque
      * Developer Guide</i>.
      * </p>
      * 
-     * @return The default settings for sending SMS messages from your account. You can set values for the following
-     *         attribute names:</p>
+     * @return The default settings for sending SMS messages from your Amazon Web Services account. You can set values
+     *         for the following attribute names:</p>
      *         <p>
      *         <code>MonthlySpendLimit</code> – The maximum amount in USD that you are willing to spend each month to
      *         send SMS messages. When Amazon SNS determines that sending an SMS message would incur a cost that exceeds
@@ -319,7 +319,8 @@ public class SetSMSAttributesRequest extends com.amazonaws.AmazonWebServiceReque
      *         <p>
      *         <code>UsageReportS3Bucket</code> – The name of the Amazon S3 bucket to receive daily SMS usage reports
      *         from Amazon SNS. Each day, Amazon SNS will deliver a usage report as a CSV file to the bucket. The report
-     *         includes the following information for each SMS message that was successfully delivered by your account:
+     *         includes the following information for each SMS message that was successfully delivered by your Amazon
+     *         Web Services account:
      *         </p>
      *         <ul>
      *         <li>
@@ -382,8 +383,8 @@ public class SetSMSAttributesRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The default settings for sending SMS messages from your account. You can set values for the following attribute
-     * names:
+     * The default settings for sending SMS messages from your Amazon Web Services account. You can set values for the
+     * following attribute names:
      * </p>
      * <p>
      * <code>MonthlySpendLimit</code> – The maximum amount in USD that you are willing to spend each month to send SMS
@@ -441,7 +442,7 @@ public class SetSMSAttributesRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * <code>UsageReportS3Bucket</code> – The name of the Amazon S3 bucket to receive daily SMS usage reports from
      * Amazon SNS. Each day, Amazon SNS will deliver a usage report as a CSV file to the bucket. The report includes the
-     * following information for each SMS message that was successfully delivered by your account:
+     * following information for each SMS message that was successfully delivered by your Amazon Web Services account:
      * </p>
      * <ul>
      * <li>
@@ -496,8 +497,8 @@ public class SetSMSAttributesRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * 
      * @param attributes
-     *        The default settings for sending SMS messages from your account. You can set values for the following
-     *        attribute names:</p>
+     *        The default settings for sending SMS messages from your Amazon Web Services account. You can set values
+     *        for the following attribute names:</p>
      *        <p>
      *        <code>MonthlySpendLimit</code> – The maximum amount in USD that you are willing to spend each month to
      *        send SMS messages. When Amazon SNS determines that sending an SMS message would incur a cost that exceeds
@@ -555,7 +556,8 @@ public class SetSMSAttributesRequest extends com.amazonaws.AmazonWebServiceReque
      *        <p>
      *        <code>UsageReportS3Bucket</code> – The name of the Amazon S3 bucket to receive daily SMS usage reports
      *        from Amazon SNS. Each day, Amazon SNS will deliver a usage report as a CSV file to the bucket. The report
-     *        includes the following information for each SMS message that was successfully delivered by your account:
+     *        includes the following information for each SMS message that was successfully delivered by your Amazon Web
+     *        Services account:
      *        </p>
      *        <ul>
      *        <li>
@@ -615,8 +617,8 @@ public class SetSMSAttributesRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The default settings for sending SMS messages from your account. You can set values for the following attribute
-     * names:
+     * The default settings for sending SMS messages from your Amazon Web Services account. You can set values for the
+     * following attribute names:
      * </p>
      * <p>
      * <code>MonthlySpendLimit</code> – The maximum amount in USD that you are willing to spend each month to send SMS
@@ -674,7 +676,7 @@ public class SetSMSAttributesRequest extends com.amazonaws.AmazonWebServiceReque
      * <p>
      * <code>UsageReportS3Bucket</code> – The name of the Amazon S3 bucket to receive daily SMS usage reports from
      * Amazon SNS. Each day, Amazon SNS will deliver a usage report as a CSV file to the bucket. The report includes the
-     * following information for each SMS message that was successfully delivered by your account:
+     * following information for each SMS message that was successfully delivered by your Amazon Web Services account:
      * </p>
      * <ul>
      * <li>
@@ -729,8 +731,8 @@ public class SetSMSAttributesRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * 
      * @param attributes
-     *        The default settings for sending SMS messages from your account. You can set values for the following
-     *        attribute names:</p>
+     *        The default settings for sending SMS messages from your Amazon Web Services account. You can set values
+     *        for the following attribute names:</p>
      *        <p>
      *        <code>MonthlySpendLimit</code> – The maximum amount in USD that you are willing to spend each month to
      *        send SMS messages. When Amazon SNS determines that sending an SMS message would incur a cost that exceeds
@@ -788,7 +790,8 @@ public class SetSMSAttributesRequest extends com.amazonaws.AmazonWebServiceReque
      *        <p>
      *        <code>UsageReportS3Bucket</code> – The name of the Amazon S3 bucket to receive daily SMS usage reports
      *        from Amazon SNS. Each day, Amazon SNS will deliver a usage report as a CSV file to the bucket. The report
-     *        includes the following information for each SMS message that was successfully delivered by your account:
+     *        includes the following information for each SMS message that was successfully delivered by your Amazon Web
+     *        Services account:
      *        </p>
      *        <ul>
      *        <li>

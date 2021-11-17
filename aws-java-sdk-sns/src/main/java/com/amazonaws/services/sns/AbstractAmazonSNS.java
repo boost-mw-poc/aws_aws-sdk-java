@@ -259,6 +259,11 @@ public class AbstractAmazonSNS implements AmazonSNS {
     }
 
     @Override
+    public PublishBatchResult publishBatch(PublishBatchRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public RemovePermissionResult removePermission(RemovePermissionRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

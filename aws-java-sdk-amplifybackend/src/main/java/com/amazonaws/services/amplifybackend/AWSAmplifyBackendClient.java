@@ -460,6 +460,70 @@ public class AWSAmplifyBackendClient extends AmazonWebServiceClient implements A
 
     /**
      * <p>
+     * Creates a backend storage resource.
+     * </p>
+     * 
+     * @param createBackendStorageRequest
+     *        The request body for CreateBackendStorage.
+     * @return Result of the CreateBackendStorage operation returned by the service.
+     * @throws NotFoundException
+     *         404 response
+     * @throws GatewayTimeoutException
+     *         504 response
+     * @throws TooManyRequestsException
+     *         429 response
+     * @throws BadRequestException
+     *         400 response
+     * @sample AWSAmplifyBackend.CreateBackendStorage
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/amplifybackend-2020-08-11/CreateBackendStorage"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public CreateBackendStorageResult createBackendStorage(CreateBackendStorageRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateBackendStorage(request);
+    }
+
+    @SdkInternalApi
+    final CreateBackendStorageResult executeCreateBackendStorage(CreateBackendStorageRequest createBackendStorageRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createBackendStorageRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateBackendStorageRequest> request = null;
+        Response<CreateBackendStorageResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateBackendStorageRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(createBackendStorageRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "AmplifyBackend");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateBackendStorage");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CreateBackendStorageResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new CreateBackendStorageResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Generates a one-time challenge code to authenticate a user into your Amplify Admin UI.
      * </p>
      * 
@@ -702,6 +766,70 @@ public class AWSAmplifyBackendClient extends AmazonWebServiceClient implements A
 
             HttpResponseHandler<AmazonWebServiceResponse<DeleteBackendAuthResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DeleteBackendAuthResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Removes the specified backend storage resource.
+     * </p>
+     * 
+     * @param deleteBackendStorageRequest
+     *        The request body for DeleteBackendStorage.
+     * @return Result of the DeleteBackendStorage operation returned by the service.
+     * @throws NotFoundException
+     *         404 response
+     * @throws GatewayTimeoutException
+     *         504 response
+     * @throws TooManyRequestsException
+     *         429 response
+     * @throws BadRequestException
+     *         400 response
+     * @sample AWSAmplifyBackend.DeleteBackendStorage
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/amplifybackend-2020-08-11/DeleteBackendStorage"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DeleteBackendStorageResult deleteBackendStorage(DeleteBackendStorageRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteBackendStorage(request);
+    }
+
+    @SdkInternalApi
+    final DeleteBackendStorageResult executeDeleteBackendStorage(DeleteBackendStorageRequest deleteBackendStorageRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteBackendStorageRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteBackendStorageRequest> request = null;
+        Response<DeleteBackendStorageResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteBackendStorageRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(deleteBackendStorageRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "AmplifyBackend");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteBackendStorage");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteBackendStorageResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DeleteBackendStorageResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -1162,6 +1290,70 @@ public class AWSAmplifyBackendClient extends AmazonWebServiceClient implements A
 
     /**
      * <p>
+     * Gets details for a backend storage resource.
+     * </p>
+     * 
+     * @param getBackendStorageRequest
+     *        The request body for GetBackendStorage.
+     * @return Result of the GetBackendStorage operation returned by the service.
+     * @throws NotFoundException
+     *         404 response
+     * @throws GatewayTimeoutException
+     *         504 response
+     * @throws TooManyRequestsException
+     *         429 response
+     * @throws BadRequestException
+     *         400 response
+     * @sample AWSAmplifyBackend.GetBackendStorage
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/amplifybackend-2020-08-11/GetBackendStorage"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetBackendStorageResult getBackendStorage(GetBackendStorageRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetBackendStorage(request);
+    }
+
+    @SdkInternalApi
+    final GetBackendStorageResult executeGetBackendStorage(GetBackendStorageRequest getBackendStorageRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getBackendStorageRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetBackendStorageRequest> request = null;
+        Response<GetBackendStorageResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetBackendStorageRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getBackendStorageRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "AmplifyBackend");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetBackendStorage");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetBackendStorageResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetBackendStorageResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Gets the challenge token based on the given appId and sessionId.
      * </p>
      * 
@@ -1289,6 +1481,70 @@ public class AWSAmplifyBackendClient extends AmazonWebServiceClient implements A
 
     /**
      * <p>
+     * Imports an existing backend storage resource.
+     * </p>
+     * 
+     * @param importBackendStorageRequest
+     *        The request body for ImportBackendStorage.
+     * @return Result of the ImportBackendStorage operation returned by the service.
+     * @throws NotFoundException
+     *         404 response
+     * @throws GatewayTimeoutException
+     *         504 response
+     * @throws TooManyRequestsException
+     *         429 response
+     * @throws BadRequestException
+     *         400 response
+     * @sample AWSAmplifyBackend.ImportBackendStorage
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/amplifybackend-2020-08-11/ImportBackendStorage"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ImportBackendStorageResult importBackendStorage(ImportBackendStorageRequest request) {
+        request = beforeClientExecution(request);
+        return executeImportBackendStorage(request);
+    }
+
+    @SdkInternalApi
+    final ImportBackendStorageResult executeImportBackendStorage(ImportBackendStorageRequest importBackendStorageRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(importBackendStorageRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ImportBackendStorageRequest> request = null;
+        Response<ImportBackendStorageResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ImportBackendStorageRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(importBackendStorageRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "AmplifyBackend");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ImportBackendStorage");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ImportBackendStorageResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ImportBackendStorageResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Lists the jobs for the backend of an Amplify app.
      * </p>
      * 
@@ -1341,6 +1597,70 @@ public class AWSAmplifyBackendClient extends AmazonWebServiceClient implements A
 
             HttpResponseHandler<AmazonWebServiceResponse<ListBackendJobsResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListBackendJobsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * The list of S3 buckets in your account.
+     * </p>
+     * 
+     * @param listS3BucketsRequest
+     *        The request body for S3Buckets.
+     * @return Result of the ListS3Buckets operation returned by the service.
+     * @throws NotFoundException
+     *         404 response
+     * @throws GatewayTimeoutException
+     *         504 response
+     * @throws TooManyRequestsException
+     *         429 response
+     * @throws BadRequestException
+     *         400 response
+     * @sample AWSAmplifyBackend.ListS3Buckets
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/amplifybackend-2020-08-11/ListS3Buckets" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public ListS3BucketsResult listS3Buckets(ListS3BucketsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListS3Buckets(request);
+    }
+
+    @SdkInternalApi
+    final ListS3BucketsResult executeListS3Buckets(ListS3BucketsRequest listS3BucketsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listS3BucketsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListS3BucketsRequest> request = null;
+        Response<ListS3BucketsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListS3BucketsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listS3BucketsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "AmplifyBackend");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListS3Buckets");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListS3BucketsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListS3BucketsResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -1724,6 +2044,70 @@ public class AWSAmplifyBackendClient extends AmazonWebServiceClient implements A
 
             HttpResponseHandler<AmazonWebServiceResponse<UpdateBackendJobResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UpdateBackendJobResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Updates an existing backend storage resource.
+     * </p>
+     * 
+     * @param updateBackendStorageRequest
+     *        The request body for UpdateBackendStorage.
+     * @return Result of the UpdateBackendStorage operation returned by the service.
+     * @throws NotFoundException
+     *         404 response
+     * @throws GatewayTimeoutException
+     *         504 response
+     * @throws TooManyRequestsException
+     *         429 response
+     * @throws BadRequestException
+     *         400 response
+     * @sample AWSAmplifyBackend.UpdateBackendStorage
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/amplifybackend-2020-08-11/UpdateBackendStorage"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public UpdateBackendStorageResult updateBackendStorage(UpdateBackendStorageRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateBackendStorage(request);
+    }
+
+    @SdkInternalApi
+    final UpdateBackendStorageResult executeUpdateBackendStorage(UpdateBackendStorageRequest updateBackendStorageRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateBackendStorageRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateBackendStorageRequest> request = null;
+        Response<UpdateBackendStorageResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateBackendStorageRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(updateBackendStorageRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "AmplifyBackend");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateBackendStorage");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateBackendStorageResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UpdateBackendStorageResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

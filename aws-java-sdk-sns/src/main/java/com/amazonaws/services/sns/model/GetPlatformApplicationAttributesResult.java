@@ -34,6 +34,22 @@ public class GetPlatformApplicationAttributesResult extends com.amazonaws.Amazon
      * <ul>
      * <li>
      * <p>
+     * <code>AppleCertificateExpiryDate</code> – The expiry date of the SSL certificate used to configure
+     * certificate-based authentication.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ApplePlatformTeamID</code> – The Apple developer account ID used to configure token-based authentication.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ApplePlatformBundleID</code> – The app identifier used to configure token-based authentication.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>EventEndpointCreated</code> – Topic ARN to which EndpointCreated event notifications should be sent.
      * </p>
      * </li>
@@ -64,6 +80,22 @@ public class GetPlatformApplicationAttributesResult extends com.amazonaws.Amazon
      * <ul>
      * <li>
      * <p>
+     * <code>AppleCertificateExpiryDate</code> – The expiry date of the SSL certificate used to configure
+     * certificate-based authentication.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ApplePlatformTeamID</code> – The Apple developer account ID used to configure token-based authentication.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ApplePlatformBundleID</code> – The app identifier used to configure token-based authentication.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>EventEndpointCreated</code> – Topic ARN to which EndpointCreated event notifications should be sent.
      * </p>
      * </li>
@@ -87,6 +119,23 @@ public class GetPlatformApplicationAttributesResult extends com.amazonaws.Amazon
      * 
      * @return Attributes include the following:</p>
      *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>AppleCertificateExpiryDate</code> – The expiry date of the SSL certificate used to configure
+     *         certificate-based authentication.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>ApplePlatformTeamID</code> – The Apple developer account ID used to configure token-based
+     *         authentication.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>ApplePlatformBundleID</code> – The app identifier used to configure token-based authentication.
+     *         </p>
+     *         </li>
      *         <li>
      *         <p>
      *         <code>EventEndpointCreated</code> – Topic ARN to which EndpointCreated event notifications should be
@@ -126,6 +175,22 @@ public class GetPlatformApplicationAttributesResult extends com.amazonaws.Amazon
      * <ul>
      * <li>
      * <p>
+     * <code>AppleCertificateExpiryDate</code> – The expiry date of the SSL certificate used to configure
+     * certificate-based authentication.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ApplePlatformTeamID</code> – The Apple developer account ID used to configure token-based authentication.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ApplePlatformBundleID</code> – The app identifier used to configure token-based authentication.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>EventEndpointCreated</code> – Topic ARN to which EndpointCreated event notifications should be sent.
      * </p>
      * </li>
@@ -150,6 +215,23 @@ public class GetPlatformApplicationAttributesResult extends com.amazonaws.Amazon
      * @param attributes
      *        Attributes include the following:</p>
      *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>AppleCertificateExpiryDate</code> – The expiry date of the SSL certificate used to configure
+     *        certificate-based authentication.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>ApplePlatformTeamID</code> – The Apple developer account ID used to configure token-based
+     *        authentication.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>ApplePlatformBundleID</code> – The app identifier used to configure token-based authentication.
+     *        </p>
+     *        </li>
      *        <li>
      *        <p>
      *        <code>EventEndpointCreated</code> – Topic ARN to which EndpointCreated event notifications should be sent.
@@ -184,6 +266,22 @@ public class GetPlatformApplicationAttributesResult extends com.amazonaws.Amazon
      * <ul>
      * <li>
      * <p>
+     * <code>AppleCertificateExpiryDate</code> – The expiry date of the SSL certificate used to configure
+     * certificate-based authentication.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ApplePlatformTeamID</code> – The Apple developer account ID used to configure token-based authentication.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ApplePlatformBundleID</code> – The app identifier used to configure token-based authentication.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>EventEndpointCreated</code> – Topic ARN to which EndpointCreated event notifications should be sent.
      * </p>
      * </li>
@@ -208,6 +306,23 @@ public class GetPlatformApplicationAttributesResult extends com.amazonaws.Amazon
      * @param attributes
      *        Attributes include the following:</p>
      *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>AppleCertificateExpiryDate</code> – The expiry date of the SSL certificate used to configure
+     *        certificate-based authentication.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>ApplePlatformTeamID</code> – The Apple developer account ID used to configure token-based
+     *        authentication.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>ApplePlatformBundleID</code> – The app identifier used to configure token-based authentication.
+     *        </p>
+     *        </li>
      *        <li>
      *        <p>
      *        <code>EventEndpointCreated</code> – Topic ARN to which EndpointCreated event notifications should be sent.

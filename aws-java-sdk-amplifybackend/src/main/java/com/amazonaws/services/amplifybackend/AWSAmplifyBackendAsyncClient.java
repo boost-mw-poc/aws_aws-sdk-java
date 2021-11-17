@@ -239,6 +239,39 @@ public class AWSAmplifyBackendAsyncClient extends AWSAmplifyBackendClient implem
     }
 
     @Override
+    public java.util.concurrent.Future<CreateBackendStorageResult> createBackendStorageAsync(CreateBackendStorageRequest request) {
+
+        return createBackendStorageAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateBackendStorageResult> createBackendStorageAsync(final CreateBackendStorageRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateBackendStorageRequest, CreateBackendStorageResult> asyncHandler) {
+        final CreateBackendStorageRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateBackendStorageResult>() {
+            @Override
+            public CreateBackendStorageResult call() throws Exception {
+                CreateBackendStorageResult result = null;
+
+                try {
+                    result = executeCreateBackendStorage(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateTokenResult> createTokenAsync(CreateTokenRequest request) {
 
         return createTokenAsync(request, null);
@@ -355,6 +388,39 @@ public class AWSAmplifyBackendAsyncClient extends AWSAmplifyBackendClient implem
 
                 try {
                     result = executeDeleteBackendAuth(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteBackendStorageResult> deleteBackendStorageAsync(DeleteBackendStorageRequest request) {
+
+        return deleteBackendStorageAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteBackendStorageResult> deleteBackendStorageAsync(final DeleteBackendStorageRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteBackendStorageRequest, DeleteBackendStorageResult> asyncHandler) {
+        final DeleteBackendStorageRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteBackendStorageResult>() {
+            @Override
+            public DeleteBackendStorageResult call() throws Exception {
+                DeleteBackendStorageResult result = null;
+
+                try {
+                    result = executeDeleteBackendStorage(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -602,6 +668,39 @@ public class AWSAmplifyBackendAsyncClient extends AWSAmplifyBackendClient implem
     }
 
     @Override
+    public java.util.concurrent.Future<GetBackendStorageResult> getBackendStorageAsync(GetBackendStorageRequest request) {
+
+        return getBackendStorageAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetBackendStorageResult> getBackendStorageAsync(final GetBackendStorageRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetBackendStorageRequest, GetBackendStorageResult> asyncHandler) {
+        final GetBackendStorageRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetBackendStorageResult>() {
+            @Override
+            public GetBackendStorageResult call() throws Exception {
+                GetBackendStorageResult result = null;
+
+                try {
+                    result = executeGetBackendStorage(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetTokenResult> getTokenAsync(GetTokenRequest request) {
 
         return getTokenAsync(request, null);
@@ -668,6 +767,39 @@ public class AWSAmplifyBackendAsyncClient extends AWSAmplifyBackendClient implem
     }
 
     @Override
+    public java.util.concurrent.Future<ImportBackendStorageResult> importBackendStorageAsync(ImportBackendStorageRequest request) {
+
+        return importBackendStorageAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ImportBackendStorageResult> importBackendStorageAsync(final ImportBackendStorageRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ImportBackendStorageRequest, ImportBackendStorageResult> asyncHandler) {
+        final ImportBackendStorageRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ImportBackendStorageResult>() {
+            @Override
+            public ImportBackendStorageResult call() throws Exception {
+                ImportBackendStorageResult result = null;
+
+                try {
+                    result = executeImportBackendStorage(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ListBackendJobsResult> listBackendJobsAsync(ListBackendJobsRequest request) {
 
         return listBackendJobsAsync(request, null);
@@ -685,6 +817,39 @@ public class AWSAmplifyBackendAsyncClient extends AWSAmplifyBackendClient implem
 
                 try {
                     result = executeListBackendJobs(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListS3BucketsResult> listS3BucketsAsync(ListS3BucketsRequest request) {
+
+        return listS3BucketsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListS3BucketsResult> listS3BucketsAsync(final ListS3BucketsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListS3BucketsRequest, ListS3BucketsResult> asyncHandler) {
+        final ListS3BucketsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListS3BucketsResult>() {
+            @Override
+            public ListS3BucketsResult call() throws Exception {
+                ListS3BucketsResult result = null;
+
+                try {
+                    result = executeListS3Buckets(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -883,6 +1048,39 @@ public class AWSAmplifyBackendAsyncClient extends AWSAmplifyBackendClient implem
 
                 try {
                     result = executeUpdateBackendJob(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateBackendStorageResult> updateBackendStorageAsync(UpdateBackendStorageRequest request) {
+
+        return updateBackendStorageAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateBackendStorageResult> updateBackendStorageAsync(final UpdateBackendStorageRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateBackendStorageRequest, UpdateBackendStorageResult> asyncHandler) {
+        final UpdateBackendStorageRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateBackendStorageResult>() {
+            @Override
+            public UpdateBackendStorageResult call() throws Exception {
+                UpdateBackendStorageResult result = null;
+
+                try {
+                    result = executeUpdateBackendStorage(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

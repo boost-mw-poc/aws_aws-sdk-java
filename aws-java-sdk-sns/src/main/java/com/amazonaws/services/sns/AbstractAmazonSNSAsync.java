@@ -767,6 +767,19 @@ public class AbstractAmazonSNSAsync extends AbstractAmazonSNS implements AmazonS
     }
 
     @Override
+    public java.util.concurrent.Future<PublishBatchResult> publishBatchAsync(PublishBatchRequest request) {
+
+        return publishBatchAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<PublishBatchResult> publishBatchAsync(PublishBatchRequest request,
+            com.amazonaws.handlers.AsyncHandler<PublishBatchRequest, PublishBatchResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<RemovePermissionResult> removePermissionAsync(RemovePermissionRequest request) {
 
         return removePermissionAsync(request, null);

@@ -191,7 +191,7 @@ public class PublishRequest extends com.amazonaws.AmazonWebServiceRequest implem
     /**
      * <p>
      * This parameter applies only to FIFO (first-in-first-out) topics. The <code>MessageDeduplicationId</code> can
-     * contain up to 128 alphanumeric characters (a-z, A-Z, 0-9) and punctuation
+     * contain up to 128 alphanumeric characters <code>(a-z, A-Z, 0-9)</code> and punctuation
      * <code>(!"#$%&amp;'()*+,-./:;&lt;=&gt;?@[\]^_`{|}~)</code>.
      * </p>
      * <p>
@@ -210,7 +210,7 @@ public class PublishRequest extends com.amazonaws.AmazonWebServiceRequest implem
     /**
      * <p>
      * This parameter applies only to FIFO (first-in-first-out) topics. The <code>MessageGroupId</code> can contain up
-     * to 128 alphanumeric characters (a-z, A-Z, 0-9) and punctuation
+     * to 128 alphanumeric characters <code>(a-z, A-Z, 0-9)</code> and punctuation
      * <code>(!"#$%&amp;'()*+,-./:;&lt;=&gt;?@[\]^_`{|}~)</code>.
      * </p>
      * <p>
@@ -1464,7 +1464,7 @@ public class PublishRequest extends com.amazonaws.AmazonWebServiceRequest implem
     /**
      * <p>
      * This parameter applies only to FIFO (first-in-first-out) topics. The <code>MessageDeduplicationId</code> can
-     * contain up to 128 alphanumeric characters (a-z, A-Z, 0-9) and punctuation
+     * contain up to 128 alphanumeric characters <code>(a-z, A-Z, 0-9)</code> and punctuation
      * <code>(!"#$%&amp;'()*+,-./:;&lt;=&gt;?@[\]^_`{|}~)</code>.
      * </p>
      * <p>
@@ -1481,7 +1481,7 @@ public class PublishRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * 
      * @param messageDeduplicationId
      *        This parameter applies only to FIFO (first-in-first-out) topics. The <code>MessageDeduplicationId</code>
-     *        can contain up to 128 alphanumeric characters (a-z, A-Z, 0-9) and punctuation
+     *        can contain up to 128 alphanumeric characters <code>(a-z, A-Z, 0-9)</code> and punctuation
      *        <code>(!"#$%&amp;'()*+,-./:;&lt;=&gt;?@[\]^_`{|}~)</code>.</p>
      *        <p>
      *        Every message must have a unique <code>MessageDeduplicationId</code>, which is a token used for
@@ -1502,7 +1502,7 @@ public class PublishRequest extends com.amazonaws.AmazonWebServiceRequest implem
     /**
      * <p>
      * This parameter applies only to FIFO (first-in-first-out) topics. The <code>MessageDeduplicationId</code> can
-     * contain up to 128 alphanumeric characters (a-z, A-Z, 0-9) and punctuation
+     * contain up to 128 alphanumeric characters <code>(a-z, A-Z, 0-9)</code> and punctuation
      * <code>(!"#$%&amp;'()*+,-./:;&lt;=&gt;?@[\]^_`{|}~)</code>.
      * </p>
      * <p>
@@ -1518,7 +1518,7 @@ public class PublishRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * </p>
      * 
      * @return This parameter applies only to FIFO (first-in-first-out) topics. The <code>MessageDeduplicationId</code>
-     *         can contain up to 128 alphanumeric characters (a-z, A-Z, 0-9) and punctuation
+     *         can contain up to 128 alphanumeric characters <code>(a-z, A-Z, 0-9)</code> and punctuation
      *         <code>(!"#$%&amp;'()*+,-./:;&lt;=&gt;?@[\]^_`{|}~)</code>.</p>
      *         <p>
      *         Every message must have a unique <code>MessageDeduplicationId</code>, which is a token used for
@@ -1539,7 +1539,7 @@ public class PublishRequest extends com.amazonaws.AmazonWebServiceRequest implem
     /**
      * <p>
      * This parameter applies only to FIFO (first-in-first-out) topics. The <code>MessageDeduplicationId</code> can
-     * contain up to 128 alphanumeric characters (a-z, A-Z, 0-9) and punctuation
+     * contain up to 128 alphanumeric characters <code>(a-z, A-Z, 0-9)</code> and punctuation
      * <code>(!"#$%&amp;'()*+,-./:;&lt;=&gt;?@[\]^_`{|}~)</code>.
      * </p>
      * <p>
@@ -1556,7 +1556,7 @@ public class PublishRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * 
      * @param messageDeduplicationId
      *        This parameter applies only to FIFO (first-in-first-out) topics. The <code>MessageDeduplicationId</code>
-     *        can contain up to 128 alphanumeric characters (a-z, A-Z, 0-9) and punctuation
+     *        can contain up to 128 alphanumeric characters <code>(a-z, A-Z, 0-9)</code> and punctuation
      *        <code>(!"#$%&amp;'()*+,-./:;&lt;=&gt;?@[\]^_`{|}~)</code>.</p>
      *        <p>
      *        Every message must have a unique <code>MessageDeduplicationId</code>, which is a token used for
@@ -1579,7 +1579,7 @@ public class PublishRequest extends com.amazonaws.AmazonWebServiceRequest implem
     /**
      * <p>
      * This parameter applies only to FIFO (first-in-first-out) topics. The <code>MessageGroupId</code> can contain up
-     * to 128 alphanumeric characters (a-z, A-Z, 0-9) and punctuation
+     * to 128 alphanumeric characters <code>(a-z, A-Z, 0-9)</code> and punctuation
      * <code>(!"#$%&amp;'()*+,-./:;&lt;=&gt;?@[\]^_`{|}~)</code>.
      * </p>
      * <p>
@@ -1590,7 +1590,7 @@ public class PublishRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * 
      * @param messageGroupId
      *        This parameter applies only to FIFO (first-in-first-out) topics. The <code>MessageGroupId</code> can
-     *        contain up to 128 alphanumeric characters (a-z, A-Z, 0-9) and punctuation
+     *        contain up to 128 alphanumeric characters <code>(a-z, A-Z, 0-9)</code> and punctuation
      *        <code>(!"#$%&amp;'()*+,-./:;&lt;=&gt;?@[\]^_`{|}~)</code>.</p>
      *        <p>
      *        The <code>MessageGroupId</code> is a tag that specifies that a message belongs to a specific message
@@ -1606,7 +1606,7 @@ public class PublishRequest extends com.amazonaws.AmazonWebServiceRequest implem
     /**
      * <p>
      * This parameter applies only to FIFO (first-in-first-out) topics. The <code>MessageGroupId</code> can contain up
-     * to 128 alphanumeric characters (a-z, A-Z, 0-9) and punctuation
+     * to 128 alphanumeric characters <code>(a-z, A-Z, 0-9)</code> and punctuation
      * <code>(!"#$%&amp;'()*+,-./:;&lt;=&gt;?@[\]^_`{|}~)</code>.
      * </p>
      * <p>
@@ -1616,7 +1616,7 @@ public class PublishRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * </p>
      * 
      * @return This parameter applies only to FIFO (first-in-first-out) topics. The <code>MessageGroupId</code> can
-     *         contain up to 128 alphanumeric characters (a-z, A-Z, 0-9) and punctuation
+     *         contain up to 128 alphanumeric characters <code>(a-z, A-Z, 0-9)</code> and punctuation
      *         <code>(!"#$%&amp;'()*+,-./:;&lt;=&gt;?@[\]^_`{|}~)</code>.</p>
      *         <p>
      *         The <code>MessageGroupId</code> is a tag that specifies that a message belongs to a specific message
@@ -1632,7 +1632,7 @@ public class PublishRequest extends com.amazonaws.AmazonWebServiceRequest implem
     /**
      * <p>
      * This parameter applies only to FIFO (first-in-first-out) topics. The <code>MessageGroupId</code> can contain up
-     * to 128 alphanumeric characters (a-z, A-Z, 0-9) and punctuation
+     * to 128 alphanumeric characters <code>(a-z, A-Z, 0-9)</code> and punctuation
      * <code>(!"#$%&amp;'()*+,-./:;&lt;=&gt;?@[\]^_`{|}~)</code>.
      * </p>
      * <p>
@@ -1643,7 +1643,7 @@ public class PublishRequest extends com.amazonaws.AmazonWebServiceRequest implem
      * 
      * @param messageGroupId
      *        This parameter applies only to FIFO (first-in-first-out) topics. The <code>MessageGroupId</code> can
-     *        contain up to 128 alphanumeric characters (a-z, A-Z, 0-9) and punctuation
+     *        contain up to 128 alphanumeric characters <code>(a-z, A-Z, 0-9)</code> and punctuation
      *        <code>(!"#$%&amp;'()*+,-./:;&lt;=&gt;?@[\]^_`{|}~)</code>.</p>
      *        <p>
      *        The <code>MessageGroupId</code> is a tag that specifies that a message belongs to a specific message

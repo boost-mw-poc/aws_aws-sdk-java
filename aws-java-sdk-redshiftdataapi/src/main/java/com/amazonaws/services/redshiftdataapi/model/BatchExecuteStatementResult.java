@@ -25,7 +25,7 @@ public class BatchExecuteStatementResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The cluster identifier.
+     * The cluster identifier. This parameter is not returned when connecting to a serverless endpoint.
      * </p>
      */
     private String clusterIdentifier;
@@ -64,11 +64,11 @@ public class BatchExecuteStatementResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The cluster identifier.
+     * The cluster identifier. This parameter is not returned when connecting to a serverless endpoint.
      * </p>
      * 
      * @param clusterIdentifier
-     *        The cluster identifier.
+     *        The cluster identifier. This parameter is not returned when connecting to a serverless endpoint.
      */
 
     public void setClusterIdentifier(String clusterIdentifier) {
@@ -77,10 +77,10 @@ public class BatchExecuteStatementResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The cluster identifier.
+     * The cluster identifier. This parameter is not returned when connecting to a serverless endpoint.
      * </p>
      * 
-     * @return The cluster identifier.
+     * @return The cluster identifier. This parameter is not returned when connecting to a serverless endpoint.
      */
 
     public String getClusterIdentifier() {
@@ -89,11 +89,11 @@ public class BatchExecuteStatementResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The cluster identifier.
+     * The cluster identifier. This parameter is not returned when connecting to a serverless endpoint.
      * </p>
      * 
      * @param clusterIdentifier
-     *        The cluster identifier.
+     *        The cluster identifier. This parameter is not returned when connecting to a serverless endpoint.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

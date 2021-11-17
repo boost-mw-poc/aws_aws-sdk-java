@@ -27,8 +27,8 @@ public class ListDatabasesRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The cluster identifier. This parameter is required when authenticating using either Secrets Manager or temporary
-     * credentials.
+     * The cluster identifier. This parameter is required when connecting to a cluster and authenticating using either
+     * Secrets Manager or temporary credentials.
      * </p>
      */
     private String clusterIdentifier;
@@ -41,7 +41,8 @@ public class ListDatabasesRequest extends com.amazonaws.AmazonWebServiceRequest 
     private String database;
     /**
      * <p>
-     * The database user name. This parameter is required when authenticating using temporary credentials.
+     * The database user name. This parameter is required when connecting to a cluster and authenticating using
+     * temporary credentials.
      * </p>
      */
     private String dbUser;
@@ -71,13 +72,13 @@ public class ListDatabasesRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The cluster identifier. This parameter is required when authenticating using either Secrets Manager or temporary
-     * credentials.
+     * The cluster identifier. This parameter is required when connecting to a cluster and authenticating using either
+     * Secrets Manager or temporary credentials.
      * </p>
      * 
      * @param clusterIdentifier
-     *        The cluster identifier. This parameter is required when authenticating using either Secrets Manager or
-     *        temporary credentials.
+     *        The cluster identifier. This parameter is required when connecting to a cluster and authenticating using
+     *        either Secrets Manager or temporary credentials.
      */
 
     public void setClusterIdentifier(String clusterIdentifier) {
@@ -86,12 +87,12 @@ public class ListDatabasesRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The cluster identifier. This parameter is required when authenticating using either Secrets Manager or temporary
-     * credentials.
+     * The cluster identifier. This parameter is required when connecting to a cluster and authenticating using either
+     * Secrets Manager or temporary credentials.
      * </p>
      * 
-     * @return The cluster identifier. This parameter is required when authenticating using either Secrets Manager or
-     *         temporary credentials.
+     * @return The cluster identifier. This parameter is required when connecting to a cluster and authenticating using
+     *         either Secrets Manager or temporary credentials.
      */
 
     public String getClusterIdentifier() {
@@ -100,13 +101,13 @@ public class ListDatabasesRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The cluster identifier. This parameter is required when authenticating using either Secrets Manager or temporary
-     * credentials.
+     * The cluster identifier. This parameter is required when connecting to a cluster and authenticating using either
+     * Secrets Manager or temporary credentials.
      * </p>
      * 
      * @param clusterIdentifier
-     *        The cluster identifier. This parameter is required when authenticating using either Secrets Manager or
-     *        temporary credentials.
+     *        The cluster identifier. This parameter is required when connecting to a cluster and authenticating using
+     *        either Secrets Manager or temporary credentials.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -163,11 +164,13 @@ public class ListDatabasesRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The database user name. This parameter is required when authenticating using temporary credentials.
+     * The database user name. This parameter is required when connecting to a cluster and authenticating using
+     * temporary credentials.
      * </p>
      * 
      * @param dbUser
-     *        The database user name. This parameter is required when authenticating using temporary credentials.
+     *        The database user name. This parameter is required when connecting to a cluster and authenticating using
+     *        temporary credentials.
      */
 
     public void setDbUser(String dbUser) {
@@ -176,10 +179,12 @@ public class ListDatabasesRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The database user name. This parameter is required when authenticating using temporary credentials.
+     * The database user name. This parameter is required when connecting to a cluster and authenticating using
+     * temporary credentials.
      * </p>
      * 
-     * @return The database user name. This parameter is required when authenticating using temporary credentials.
+     * @return The database user name. This parameter is required when connecting to a cluster and authenticating using
+     *         temporary credentials.
      */
 
     public String getDbUser() {
@@ -188,11 +193,13 @@ public class ListDatabasesRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The database user name. This parameter is required when authenticating using temporary credentials.
+     * The database user name. This parameter is required when connecting to a cluster and authenticating using
+     * temporary credentials.
      * </p>
      * 
      * @param dbUser
-     *        The database user name. This parameter is required when authenticating using temporary credentials.
+     *        The database user name. This parameter is required when connecting to a cluster and authenticating using
+     *        temporary credentials.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
