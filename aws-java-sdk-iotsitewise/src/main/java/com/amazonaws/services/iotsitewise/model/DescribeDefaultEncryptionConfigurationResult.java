@@ -32,8 +32,7 @@ public class DescribeDefaultEncryptionConfigurationResult extends com.amazonaws.
     private String encryptionType;
     /**
      * <p>
-     * The key ARN of the customer managed customer master key (CMK) used for KMS encryption if you use
-     * <code>KMS_BASED_ENCRYPTION</code>.
+     * The key ARN of the customer managed key used for KMS encryption if you use <code>KMS_BASED_ENCRYPTION</code>.
      * </p>
      */
     private String kmsKeyArn;
@@ -106,12 +105,11 @@ public class DescribeDefaultEncryptionConfigurationResult extends com.amazonaws.
 
     /**
      * <p>
-     * The key ARN of the customer managed customer master key (CMK) used for KMS encryption if you use
-     * <code>KMS_BASED_ENCRYPTION</code>.
+     * The key ARN of the customer managed key used for KMS encryption if you use <code>KMS_BASED_ENCRYPTION</code>.
      * </p>
      * 
      * @param kmsKeyArn
-     *        The key ARN of the customer managed customer master key (CMK) used for KMS encryption if you use
+     *        The key ARN of the customer managed key used for KMS encryption if you use
      *        <code>KMS_BASED_ENCRYPTION</code>.
      */
 
@@ -121,11 +119,10 @@ public class DescribeDefaultEncryptionConfigurationResult extends com.amazonaws.
 
     /**
      * <p>
-     * The key ARN of the customer managed customer master key (CMK) used for KMS encryption if you use
-     * <code>KMS_BASED_ENCRYPTION</code>.
+     * The key ARN of the customer managed key used for KMS encryption if you use <code>KMS_BASED_ENCRYPTION</code>.
      * </p>
      * 
-     * @return The key ARN of the customer managed customer master key (CMK) used for KMS encryption if you use
+     * @return The key ARN of the customer managed key used for KMS encryption if you use
      *         <code>KMS_BASED_ENCRYPTION</code>.
      */
 
@@ -135,12 +132,11 @@ public class DescribeDefaultEncryptionConfigurationResult extends com.amazonaws.
 
     /**
      * <p>
-     * The key ARN of the customer managed customer master key (CMK) used for KMS encryption if you use
-     * <code>KMS_BASED_ENCRYPTION</code>.
+     * The key ARN of the customer managed key used for KMS encryption if you use <code>KMS_BASED_ENCRYPTION</code>.
      * </p>
      * 
      * @param kmsKeyArn
-     *        The key ARN of the customer managed customer master key (CMK) used for KMS encryption if you use
+     *        The key ARN of the customer managed key used for KMS encryption if you use
      *        <code>KMS_BASED_ENCRYPTION</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

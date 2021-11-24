@@ -58,6 +58,10 @@ public class MatchItemJsonUnmarshaller implements Unmarshaller<MatchItem, JsonUn
 
                     .unmarshall(context));
                 }
+                if (context.testExpression("ConfidenceScore", targetDepth)) {
+                    context.nextToken();
+                    matchItem.setConfidenceScore(context.getUnmarshaller(Double.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

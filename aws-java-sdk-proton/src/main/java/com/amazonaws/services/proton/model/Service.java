@@ -36,7 +36,7 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
     private String arn;
     /**
      * <p>
-     * The name of the code repository branch that holds the code that's deployed in AWS Proton.
+     * The name of the code repository branch that holds the code that's deployed in Proton.
      * </p>
      */
     private String branchName;
@@ -74,15 +74,15 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The Amazon Resource Name (ARN) of the repository connection. For more information, see <a
      * href="https://docs.aws.amazon.com/proton/latest/adminguide/setting-up-for-service.html#setting-up-vcontrol">Set
-     * up a repository connection</a> in the <i>AWS Proton Administrator Guide</i> and <a
+     * up a repository connection</a> in the <i>Proton Administrator Guide</i> and <a
      * href="https://docs.aws.amazon.com/proton/latest/userguide/proton-setup.html#setup-repo-connection">Setting up
-     * with AWS Proton</a> in the <i>AWS Proton User Guide</i>.
+     * with Proton</a> in the <i>Proton User Guide</i>.
      * </p>
      */
     private String repositoryConnectionArn;
     /**
      * <p>
-     * The ID of the code repository.
+     * The ID of the source code repository.
      * </p>
      */
     private String repositoryId;
@@ -153,11 +153,11 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the code repository branch that holds the code that's deployed in AWS Proton.
+     * The name of the code repository branch that holds the code that's deployed in Proton.
      * </p>
      * 
      * @param branchName
-     *        The name of the code repository branch that holds the code that's deployed in AWS Proton.
+     *        The name of the code repository branch that holds the code that's deployed in Proton.
      */
 
     public void setBranchName(String branchName) {
@@ -166,10 +166,10 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the code repository branch that holds the code that's deployed in AWS Proton.
+     * The name of the code repository branch that holds the code that's deployed in Proton.
      * </p>
      * 
-     * @return The name of the code repository branch that holds the code that's deployed in AWS Proton.
+     * @return The name of the code repository branch that holds the code that's deployed in Proton.
      */
 
     public String getBranchName() {
@@ -178,11 +178,11 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The name of the code repository branch that holds the code that's deployed in AWS Proton.
+     * The name of the code repository branch that holds the code that's deployed in Proton.
      * </p>
      * 
      * @param branchName
-     *        The name of the code repository branch that holds the code that's deployed in AWS Proton.
+     *        The name of the code repository branch that holds the code that's deployed in Proton.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -395,17 +395,17 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The Amazon Resource Name (ARN) of the repository connection. For more information, see <a
      * href="https://docs.aws.amazon.com/proton/latest/adminguide/setting-up-for-service.html#setting-up-vcontrol">Set
-     * up a repository connection</a> in the <i>AWS Proton Administrator Guide</i> and <a
+     * up a repository connection</a> in the <i>Proton Administrator Guide</i> and <a
      * href="https://docs.aws.amazon.com/proton/latest/userguide/proton-setup.html#setup-repo-connection">Setting up
-     * with AWS Proton</a> in the <i>AWS Proton User Guide</i>.
+     * with Proton</a> in the <i>Proton User Guide</i>.
      * </p>
      * 
      * @param repositoryConnectionArn
      *        The Amazon Resource Name (ARN) of the repository connection. For more information, see <a href=
      *        "https://docs.aws.amazon.com/proton/latest/adminguide/setting-up-for-service.html#setting-up-vcontrol">Set
-     *        up a repository connection</a> in the <i>AWS Proton Administrator Guide</i> and <a
+     *        up a repository connection</a> in the <i>Proton Administrator Guide</i> and <a
      *        href="https://docs.aws.amazon.com/proton/latest/userguide/proton-setup.html#setup-repo-connection">Setting
-     *        up with AWS Proton</a> in the <i>AWS Proton User Guide</i>.
+     *        up with Proton</a> in the <i>Proton User Guide</i>.
      */
 
     public void setRepositoryConnectionArn(String repositoryConnectionArn) {
@@ -416,16 +416,16 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The Amazon Resource Name (ARN) of the repository connection. For more information, see <a
      * href="https://docs.aws.amazon.com/proton/latest/adminguide/setting-up-for-service.html#setting-up-vcontrol">Set
-     * up a repository connection</a> in the <i>AWS Proton Administrator Guide</i> and <a
+     * up a repository connection</a> in the <i>Proton Administrator Guide</i> and <a
      * href="https://docs.aws.amazon.com/proton/latest/userguide/proton-setup.html#setup-repo-connection">Setting up
-     * with AWS Proton</a> in the <i>AWS Proton User Guide</i>.
+     * with Proton</a> in the <i>Proton User Guide</i>.
      * </p>
      * 
      * @return The Amazon Resource Name (ARN) of the repository connection. For more information, see <a
      *         href="https://docs.aws.amazon.com/proton/latest/adminguide/setting-up-for-service.html#setting-up-vcontrol"
-     *         >Set up a repository connection</a> in the <i>AWS Proton Administrator Guide</i> and <a
+     *         >Set up a repository connection</a> in the <i>Proton Administrator Guide</i> and <a
      *         href="https://docs.aws.amazon.com/proton/latest/userguide/proton-setup.html#setup-repo-connection"
-     *         >Setting up with AWS Proton</a> in the <i>AWS Proton User Guide</i>.
+     *         >Setting up with Proton</a> in the <i>Proton User Guide</i>.
      */
 
     public String getRepositoryConnectionArn() {
@@ -436,17 +436,17 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The Amazon Resource Name (ARN) of the repository connection. For more information, see <a
      * href="https://docs.aws.amazon.com/proton/latest/adminguide/setting-up-for-service.html#setting-up-vcontrol">Set
-     * up a repository connection</a> in the <i>AWS Proton Administrator Guide</i> and <a
+     * up a repository connection</a> in the <i>Proton Administrator Guide</i> and <a
      * href="https://docs.aws.amazon.com/proton/latest/userguide/proton-setup.html#setup-repo-connection">Setting up
-     * with AWS Proton</a> in the <i>AWS Proton User Guide</i>.
+     * with Proton</a> in the <i>Proton User Guide</i>.
      * </p>
      * 
      * @param repositoryConnectionArn
      *        The Amazon Resource Name (ARN) of the repository connection. For more information, see <a href=
      *        "https://docs.aws.amazon.com/proton/latest/adminguide/setting-up-for-service.html#setting-up-vcontrol">Set
-     *        up a repository connection</a> in the <i>AWS Proton Administrator Guide</i> and <a
+     *        up a repository connection</a> in the <i>Proton Administrator Guide</i> and <a
      *        href="https://docs.aws.amazon.com/proton/latest/userguide/proton-setup.html#setup-repo-connection">Setting
-     *        up with AWS Proton</a> in the <i>AWS Proton User Guide</i>.
+     *        up with Proton</a> in the <i>Proton User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -457,11 +457,11 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID of the code repository.
+     * The ID of the source code repository.
      * </p>
      * 
      * @param repositoryId
-     *        The ID of the code repository.
+     *        The ID of the source code repository.
      */
 
     public void setRepositoryId(String repositoryId) {
@@ -470,10 +470,10 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID of the code repository.
+     * The ID of the source code repository.
      * </p>
      * 
-     * @return The ID of the code repository.
+     * @return The ID of the source code repository.
      */
 
     public String getRepositoryId() {
@@ -482,11 +482,11 @@ public class Service implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID of the code repository.
+     * The ID of the source code repository.
      * </p>
      * 
      * @param repositoryId
-     *        The ID of the code repository.
+     *        The ID of the source code repository.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

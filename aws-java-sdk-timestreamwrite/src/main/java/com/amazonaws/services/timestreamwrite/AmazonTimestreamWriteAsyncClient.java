@@ -25,6 +25,7 @@ import java.util.concurrent.ExecutorService;
  * representing the asynchronous operation; overloads which accept an {@code AsyncHandler} can be used to receive
  * notification when an asynchronous operation completes.
  * <p>
+ * <fullname>Amazon Timestream Write</fullname>
  * <p>
  * Amazon Timestream is a fast, scalable, fully managed time series database service that makes it easy to store and
  * analyze trillions of time series data points per day. With Timestream, you can easily store and analyze IoT sensor

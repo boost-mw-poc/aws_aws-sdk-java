@@ -386,6 +386,39 @@ public class AmazonCustomerProfilesAsyncClient extends AmazonCustomerProfilesCli
     }
 
     @Override
+    public java.util.concurrent.Future<GetAutoMergingPreviewResult> getAutoMergingPreviewAsync(GetAutoMergingPreviewRequest request) {
+
+        return getAutoMergingPreviewAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetAutoMergingPreviewResult> getAutoMergingPreviewAsync(final GetAutoMergingPreviewRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetAutoMergingPreviewRequest, GetAutoMergingPreviewResult> asyncHandler) {
+        final GetAutoMergingPreviewRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetAutoMergingPreviewResult>() {
+            @Override
+            public GetAutoMergingPreviewResult call() throws Exception {
+                GetAutoMergingPreviewResult result = null;
+
+                try {
+                    result = executeGetAutoMergingPreview(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetDomainResult> getDomainAsync(GetDomainRequest request) {
 
         return getDomainAsync(request, null);
@@ -403,6 +436,39 @@ public class AmazonCustomerProfilesAsyncClient extends AmazonCustomerProfilesCli
 
                 try {
                     result = executeGetDomain(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetIdentityResolutionJobResult> getIdentityResolutionJobAsync(GetIdentityResolutionJobRequest request) {
+
+        return getIdentityResolutionJobAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetIdentityResolutionJobResult> getIdentityResolutionJobAsync(final GetIdentityResolutionJobRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetIdentityResolutionJobRequest, GetIdentityResolutionJobResult> asyncHandler) {
+        final GetIdentityResolutionJobRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetIdentityResolutionJobResult>() {
+            @Override
+            public GetIdentityResolutionJobResult call() throws Exception {
+                GetIdentityResolutionJobResult result = null;
+
+                try {
+                    result = executeGetIdentityResolutionJob(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -601,6 +667,39 @@ public class AmazonCustomerProfilesAsyncClient extends AmazonCustomerProfilesCli
 
                 try {
                     result = executeListDomains(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListIdentityResolutionJobsResult> listIdentityResolutionJobsAsync(ListIdentityResolutionJobsRequest request) {
+
+        return listIdentityResolutionJobsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListIdentityResolutionJobsResult> listIdentityResolutionJobsAsync(final ListIdentityResolutionJobsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListIdentityResolutionJobsRequest, ListIdentityResolutionJobsResult> asyncHandler) {
+        final ListIdentityResolutionJobsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListIdentityResolutionJobsResult>() {
+            @Override
+            public ListIdentityResolutionJobsResult call() throws Exception {
+                ListIdentityResolutionJobsResult result = null;
+
+                try {
+                    result = executeListIdentityResolutionJobs(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

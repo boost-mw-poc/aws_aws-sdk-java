@@ -114,6 +114,41 @@ public class AWSIoTSiteWiseAsyncClient extends AWSIoTSiteWiseClient implements A
     }
 
     @Override
+    public java.util.concurrent.Future<AssociateTimeSeriesToAssetPropertyResult> associateTimeSeriesToAssetPropertyAsync(
+            AssociateTimeSeriesToAssetPropertyRequest request) {
+
+        return associateTimeSeriesToAssetPropertyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<AssociateTimeSeriesToAssetPropertyResult> associateTimeSeriesToAssetPropertyAsync(
+            final AssociateTimeSeriesToAssetPropertyRequest request,
+            final com.amazonaws.handlers.AsyncHandler<AssociateTimeSeriesToAssetPropertyRequest, AssociateTimeSeriesToAssetPropertyResult> asyncHandler) {
+        final AssociateTimeSeriesToAssetPropertyRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<AssociateTimeSeriesToAssetPropertyResult>() {
+            @Override
+            public AssociateTimeSeriesToAssetPropertyResult call() throws Exception {
+                AssociateTimeSeriesToAssetPropertyResult result = null;
+
+                try {
+                    result = executeAssociateTimeSeriesToAssetProperty(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<BatchAssociateProjectAssetsResult> batchAssociateProjectAssetsAsync(BatchAssociateProjectAssetsRequest request) {
 
         return batchAssociateProjectAssetsAsync(request, null);
@@ -676,6 +711,39 @@ public class AWSIoTSiteWiseAsyncClient extends AWSIoTSiteWiseClient implements A
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteTimeSeriesResult> deleteTimeSeriesAsync(DeleteTimeSeriesRequest request) {
+
+        return deleteTimeSeriesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteTimeSeriesResult> deleteTimeSeriesAsync(final DeleteTimeSeriesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteTimeSeriesRequest, DeleteTimeSeriesResult> asyncHandler) {
+        final DeleteTimeSeriesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteTimeSeriesResult>() {
+            @Override
+            public DeleteTimeSeriesResult call() throws Exception {
+                DeleteTimeSeriesResult result = null;
+
+                try {
+                    result = executeDeleteTimeSeries(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeAccessPolicyResult> describeAccessPolicyAsync(DescribeAccessPolicyRequest request) {
 
         return describeAccessPolicyAsync(request, null);
@@ -1076,6 +1144,39 @@ public class AWSIoTSiteWiseAsyncClient extends AWSIoTSiteWiseClient implements A
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeTimeSeriesResult> describeTimeSeriesAsync(DescribeTimeSeriesRequest request) {
+
+        return describeTimeSeriesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeTimeSeriesResult> describeTimeSeriesAsync(final DescribeTimeSeriesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeTimeSeriesRequest, DescribeTimeSeriesResult> asyncHandler) {
+        final DescribeTimeSeriesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeTimeSeriesResult>() {
+            @Override
+            public DescribeTimeSeriesResult call() throws Exception {
+                DescribeTimeSeriesResult result = null;
+
+                try {
+                    result = executeDescribeTimeSeries(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DisassociateAssetsResult> disassociateAssetsAsync(DisassociateAssetsRequest request) {
 
         return disassociateAssetsAsync(request, null);
@@ -1093,6 +1194,41 @@ public class AWSIoTSiteWiseAsyncClient extends AWSIoTSiteWiseClient implements A
 
                 try {
                     result = executeDisassociateAssets(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DisassociateTimeSeriesFromAssetPropertyResult> disassociateTimeSeriesFromAssetPropertyAsync(
+            DisassociateTimeSeriesFromAssetPropertyRequest request) {
+
+        return disassociateTimeSeriesFromAssetPropertyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DisassociateTimeSeriesFromAssetPropertyResult> disassociateTimeSeriesFromAssetPropertyAsync(
+            final DisassociateTimeSeriesFromAssetPropertyRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DisassociateTimeSeriesFromAssetPropertyRequest, DisassociateTimeSeriesFromAssetPropertyResult> asyncHandler) {
+        final DisassociateTimeSeriesFromAssetPropertyRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DisassociateTimeSeriesFromAssetPropertyResult>() {
+            @Override
+            public DisassociateTimeSeriesFromAssetPropertyResult call() throws Exception {
+                DisassociateTimeSeriesFromAssetPropertyResult result = null;
+
+                try {
+                    result = executeDisassociateTimeSeriesFromAssetProperty(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -1590,6 +1726,39 @@ public class AWSIoTSiteWiseAsyncClient extends AWSIoTSiteWiseClient implements A
 
                 try {
                     result = executeListTagsForResource(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListTimeSeriesResult> listTimeSeriesAsync(ListTimeSeriesRequest request) {
+
+        return listTimeSeriesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListTimeSeriesResult> listTimeSeriesAsync(final ListTimeSeriesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListTimeSeriesRequest, ListTimeSeriesResult> asyncHandler) {
+        final ListTimeSeriesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListTimeSeriesResult>() {
+            @Override
+            public ListTimeSeriesResult call() throws Exception {
+                ListTimeSeriesResult result = null;
+
+                try {
+                    result = executeListTimeSeries(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

@@ -41,7 +41,7 @@ public class ParallelDataDataLocation implements Serializable, Cloneable, Struct
      * </p>
      * <important>
      * <p>
-     * Amazon Translate doesn't scan parallel data input files for the risk of CSV injection attacks.
+     * Amazon Translate doesn't scan all input files for the risk of CSV injection attacks.
      * </p>
      * <p>
      * CSV injection occurs when a .csv or .tsv file is altered so that a record contains malicious code. The record
@@ -49,8 +49,7 @@ public class ParallelDataDataLocation implements Serializable, Cloneable, Struct
      * program might interpret the record as a formula and run the code within it.
      * </p>
      * <p>
-     * Before you download a parallel data input file from Amazon S3, ensure that you recognize the file and trust its
-     * creator.
+     * Before you download an input file from Amazon S3, ensure that you recognize the file and trust its creator.
      * </p>
      * </important>
      */
@@ -103,7 +102,7 @@ public class ParallelDataDataLocation implements Serializable, Cloneable, Struct
      * </p>
      * <important>
      * <p>
-     * Amazon Translate doesn't scan parallel data input files for the risk of CSV injection attacks.
+     * Amazon Translate doesn't scan all input files for the risk of CSV injection attacks.
      * </p>
      * <p>
      * CSV injection occurs when a .csv or .tsv file is altered so that a record contains malicious code. The record
@@ -111,8 +110,7 @@ public class ParallelDataDataLocation implements Serializable, Cloneable, Struct
      * program might interpret the record as a formula and run the code within it.
      * </p>
      * <p>
-     * Before you download a parallel data input file from Amazon S3, ensure that you recognize the file and trust its
-     * creator.
+     * Before you download an input file from Amazon S3, ensure that you recognize the file and trust its creator.
      * </p>
      * </important>
      * 
@@ -120,7 +118,7 @@ public class ParallelDataDataLocation implements Serializable, Cloneable, Struct
      *        The Amazon S3 location of the parallel data input file. The location is returned as a presigned URL to
      *        that has a 30 minute expiration.</p> <important>
      *        <p>
-     *        Amazon Translate doesn't scan parallel data input files for the risk of CSV injection attacks.
+     *        Amazon Translate doesn't scan all input files for the risk of CSV injection attacks.
      *        </p>
      *        <p>
      *        CSV injection occurs when a .csv or .tsv file is altered so that a record contains malicious code. The
@@ -128,8 +126,8 @@ public class ParallelDataDataLocation implements Serializable, Cloneable, Struct
      *        program, the program might interpret the record as a formula and run the code within it.
      *        </p>
      *        <p>
-     *        Before you download a parallel data input file from Amazon S3, ensure that you recognize the file and
-     *        trust its creator.
+     *        Before you download an input file from Amazon S3, ensure that you recognize the file and trust its
+     *        creator.
      *        </p>
      */
 
@@ -144,7 +142,7 @@ public class ParallelDataDataLocation implements Serializable, Cloneable, Struct
      * </p>
      * <important>
      * <p>
-     * Amazon Translate doesn't scan parallel data input files for the risk of CSV injection attacks.
+     * Amazon Translate doesn't scan all input files for the risk of CSV injection attacks.
      * </p>
      * <p>
      * CSV injection occurs when a .csv or .tsv file is altered so that a record contains malicious code. The record
@@ -152,15 +150,14 @@ public class ParallelDataDataLocation implements Serializable, Cloneable, Struct
      * program might interpret the record as a formula and run the code within it.
      * </p>
      * <p>
-     * Before you download a parallel data input file from Amazon S3, ensure that you recognize the file and trust its
-     * creator.
+     * Before you download an input file from Amazon S3, ensure that you recognize the file and trust its creator.
      * </p>
      * </important>
      * 
      * @return The Amazon S3 location of the parallel data input file. The location is returned as a presigned URL to
      *         that has a 30 minute expiration.</p> <important>
      *         <p>
-     *         Amazon Translate doesn't scan parallel data input files for the risk of CSV injection attacks.
+     *         Amazon Translate doesn't scan all input files for the risk of CSV injection attacks.
      *         </p>
      *         <p>
      *         CSV injection occurs when a .csv or .tsv file is altered so that a record contains malicious code. The
@@ -168,8 +165,8 @@ public class ParallelDataDataLocation implements Serializable, Cloneable, Struct
      *         program, the program might interpret the record as a formula and run the code within it.
      *         </p>
      *         <p>
-     *         Before you download a parallel data input file from Amazon S3, ensure that you recognize the file and
-     *         trust its creator.
+     *         Before you download an input file from Amazon S3, ensure that you recognize the file and trust its
+     *         creator.
      *         </p>
      */
 
@@ -184,7 +181,7 @@ public class ParallelDataDataLocation implements Serializable, Cloneable, Struct
      * </p>
      * <important>
      * <p>
-     * Amazon Translate doesn't scan parallel data input files for the risk of CSV injection attacks.
+     * Amazon Translate doesn't scan all input files for the risk of CSV injection attacks.
      * </p>
      * <p>
      * CSV injection occurs when a .csv or .tsv file is altered so that a record contains malicious code. The record
@@ -192,8 +189,7 @@ public class ParallelDataDataLocation implements Serializable, Cloneable, Struct
      * program might interpret the record as a formula and run the code within it.
      * </p>
      * <p>
-     * Before you download a parallel data input file from Amazon S3, ensure that you recognize the file and trust its
-     * creator.
+     * Before you download an input file from Amazon S3, ensure that you recognize the file and trust its creator.
      * </p>
      * </important>
      * 
@@ -201,7 +197,7 @@ public class ParallelDataDataLocation implements Serializable, Cloneable, Struct
      *        The Amazon S3 location of the parallel data input file. The location is returned as a presigned URL to
      *        that has a 30 minute expiration.</p> <important>
      *        <p>
-     *        Amazon Translate doesn't scan parallel data input files for the risk of CSV injection attacks.
+     *        Amazon Translate doesn't scan all input files for the risk of CSV injection attacks.
      *        </p>
      *        <p>
      *        CSV injection occurs when a .csv or .tsv file is altered so that a record contains malicious code. The
@@ -209,8 +205,8 @@ public class ParallelDataDataLocation implements Serializable, Cloneable, Struct
      *        program, the program might interpret the record as a formula and run the code within it.
      *        </p>
      *        <p>
-     *        Before you download a parallel data input file from Amazon S3, ensure that you recognize the file and
-     *        trust its creator.
+     *        Before you download an input file from Amazon S3, ensure that you recognize the file and trust its
+     *        creator.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */

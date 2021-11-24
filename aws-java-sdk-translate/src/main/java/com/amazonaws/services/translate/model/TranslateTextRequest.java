@@ -59,6 +59,12 @@ public class TranslateTextRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      */
     private String targetLanguageCode;
+    /**
+     * <p>
+     * Settings to configure your translation output, including the option to mask profane words and phrases.
+     * </p>
+     */
+    private TranslationSettings settings;
 
     /**
      * <p>
@@ -314,6 +320,46 @@ public class TranslateTextRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
+     * <p>
+     * Settings to configure your translation output, including the option to mask profane words and phrases.
+     * </p>
+     * 
+     * @param settings
+     *        Settings to configure your translation output, including the option to mask profane words and phrases.
+     */
+
+    public void setSettings(TranslationSettings settings) {
+        this.settings = settings;
+    }
+
+    /**
+     * <p>
+     * Settings to configure your translation output, including the option to mask profane words and phrases.
+     * </p>
+     * 
+     * @return Settings to configure your translation output, including the option to mask profane words and phrases.
+     */
+
+    public TranslationSettings getSettings() {
+        return this.settings;
+    }
+
+    /**
+     * <p>
+     * Settings to configure your translation output, including the option to mask profane words and phrases.
+     * </p>
+     * 
+     * @param settings
+     *        Settings to configure your translation output, including the option to mask profane words and phrases.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public TranslateTextRequest withSettings(TranslationSettings settings) {
+        setSettings(settings);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -332,7 +378,9 @@ public class TranslateTextRequest extends com.amazonaws.AmazonWebServiceRequest 
         if (getSourceLanguageCode() != null)
             sb.append("SourceLanguageCode: ").append(getSourceLanguageCode()).append(",");
         if (getTargetLanguageCode() != null)
-            sb.append("TargetLanguageCode: ").append(getTargetLanguageCode());
+            sb.append("TargetLanguageCode: ").append(getTargetLanguageCode()).append(",");
+        if (getSettings() != null)
+            sb.append("Settings: ").append(getSettings());
         sb.append("}");
         return sb.toString();
     }
@@ -363,6 +411,10 @@ public class TranslateTextRequest extends com.amazonaws.AmazonWebServiceRequest 
             return false;
         if (other.getTargetLanguageCode() != null && other.getTargetLanguageCode().equals(this.getTargetLanguageCode()) == false)
             return false;
+        if (other.getSettings() == null ^ this.getSettings() == null)
+            return false;
+        if (other.getSettings() != null && other.getSettings().equals(this.getSettings()) == false)
+            return false;
         return true;
     }
 
@@ -375,6 +427,7 @@ public class TranslateTextRequest extends com.amazonaws.AmazonWebServiceRequest 
         hashCode = prime * hashCode + ((getTerminologyNames() == null) ? 0 : getTerminologyNames().hashCode());
         hashCode = prime * hashCode + ((getSourceLanguageCode() == null) ? 0 : getSourceLanguageCode().hashCode());
         hashCode = prime * hashCode + ((getTargetLanguageCode() == null) ? 0 : getTargetLanguageCode().hashCode());
+        hashCode = prime * hashCode + ((getSettings() == null) ? 0 : getSettings().hashCode());
         return hashCode;
     }
 

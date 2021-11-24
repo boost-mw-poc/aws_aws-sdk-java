@@ -25,18 +25,18 @@ public class CreateEnvironmentTemplateResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The environment template detail data that's returned by AWS Proton.
+     * The environment template detail data that's returned by Proton.
      * </p>
      */
     private EnvironmentTemplate environmentTemplate;
 
     /**
      * <p>
-     * The environment template detail data that's returned by AWS Proton.
+     * The environment template detail data that's returned by Proton.
      * </p>
      * 
      * @param environmentTemplate
-     *        The environment template detail data that's returned by AWS Proton.
+     *        The environment template detail data that's returned by Proton.
      */
 
     public void setEnvironmentTemplate(EnvironmentTemplate environmentTemplate) {
@@ -45,10 +45,10 @@ public class CreateEnvironmentTemplateResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The environment template detail data that's returned by AWS Proton.
+     * The environment template detail data that's returned by Proton.
      * </p>
      * 
-     * @return The environment template detail data that's returned by AWS Proton.
+     * @return The environment template detail data that's returned by Proton.
      */
 
     public EnvironmentTemplate getEnvironmentTemplate() {
@@ -57,11 +57,11 @@ public class CreateEnvironmentTemplateResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The environment template detail data that's returned by AWS Proton.
+     * The environment template detail data that's returned by Proton.
      * </p>
      * 
      * @param environmentTemplate
-     *        The environment template detail data that's returned by AWS Proton.
+     *        The environment template detail data that's returned by Proton.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

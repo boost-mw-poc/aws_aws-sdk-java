@@ -48,6 +48,35 @@ public class PutStorageConfigurationResult extends com.amazonaws.AmazonWebServic
      * </p>
      */
     private MultiLayerStorage multiLayerStorage;
+    /**
+     * <p>
+     * Contains the storage configuration for time series (data streams) that aren't associated with asset properties.
+     * The <code>disassociatedDataStorage</code> can be one of the following values:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>ENABLED</code> – IoT SiteWise accepts time series that aren't associated with asset properties.
+     * </p>
+     * <important>
+     * <p>
+     * After the <code>disassociatedDataStorage</code> is enabled, you can't disable it.
+     * </p>
+     * </important></li>
+     * <li>
+     * <p>
+     * <code>DISABLED</code> – IoT SiteWise doesn't accept time series (data streams) that aren't associated with asset
+     * properties.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/data-streams.html">Data streams</a> in the <i>IoT
+     * SiteWise User Guide</i>.
+     * </p>
+     */
+    private String disassociatedDataStorage;
 
     private ConfigurationStatus configurationStatus;
 
@@ -256,6 +285,245 @@ public class PutStorageConfigurationResult extends com.amazonaws.AmazonWebServic
     }
 
     /**
+     * <p>
+     * Contains the storage configuration for time series (data streams) that aren't associated with asset properties.
+     * The <code>disassociatedDataStorage</code> can be one of the following values:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>ENABLED</code> – IoT SiteWise accepts time series that aren't associated with asset properties.
+     * </p>
+     * <important>
+     * <p>
+     * After the <code>disassociatedDataStorage</code> is enabled, you can't disable it.
+     * </p>
+     * </important></li>
+     * <li>
+     * <p>
+     * <code>DISABLED</code> – IoT SiteWise doesn't accept time series (data streams) that aren't associated with asset
+     * properties.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/data-streams.html">Data streams</a> in the <i>IoT
+     * SiteWise User Guide</i>.
+     * </p>
+     * 
+     * @param disassociatedDataStorage
+     *        Contains the storage configuration for time series (data streams) that aren't associated with asset
+     *        properties. The <code>disassociatedDataStorage</code> can be one of the following values:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>ENABLED</code> – IoT SiteWise accepts time series that aren't associated with asset properties.
+     *        </p>
+     *        <important>
+     *        <p>
+     *        After the <code>disassociatedDataStorage</code> is enabled, you can't disable it.
+     *        </p>
+     *        </important></li>
+     *        <li>
+     *        <p>
+     *        <code>DISABLED</code> – IoT SiteWise doesn't accept time series (data streams) that aren't associated with
+     *        asset properties.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/data-streams.html">Data streams</a> in the
+     *        <i>IoT SiteWise User Guide</i>.
+     * @see DisassociatedDataStorageState
+     */
+
+    public void setDisassociatedDataStorage(String disassociatedDataStorage) {
+        this.disassociatedDataStorage = disassociatedDataStorage;
+    }
+
+    /**
+     * <p>
+     * Contains the storage configuration for time series (data streams) that aren't associated with asset properties.
+     * The <code>disassociatedDataStorage</code> can be one of the following values:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>ENABLED</code> – IoT SiteWise accepts time series that aren't associated with asset properties.
+     * </p>
+     * <important>
+     * <p>
+     * After the <code>disassociatedDataStorage</code> is enabled, you can't disable it.
+     * </p>
+     * </important></li>
+     * <li>
+     * <p>
+     * <code>DISABLED</code> – IoT SiteWise doesn't accept time series (data streams) that aren't associated with asset
+     * properties.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/data-streams.html">Data streams</a> in the <i>IoT
+     * SiteWise User Guide</i>.
+     * </p>
+     * 
+     * @return Contains the storage configuration for time series (data streams) that aren't associated with asset
+     *         properties. The <code>disassociatedDataStorage</code> can be one of the following values:</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>ENABLED</code> – IoT SiteWise accepts time series that aren't associated with asset properties.
+     *         </p>
+     *         <important>
+     *         <p>
+     *         After the <code>disassociatedDataStorage</code> is enabled, you can't disable it.
+     *         </p>
+     *         </important></li>
+     *         <li>
+     *         <p>
+     *         <code>DISABLED</code> – IoT SiteWise doesn't accept time series (data streams) that aren't associated
+     *         with asset properties.
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         For more information, see <a
+     *         href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/data-streams.html">Data streams</a> in
+     *         the <i>IoT SiteWise User Guide</i>.
+     * @see DisassociatedDataStorageState
+     */
+
+    public String getDisassociatedDataStorage() {
+        return this.disassociatedDataStorage;
+    }
+
+    /**
+     * <p>
+     * Contains the storage configuration for time series (data streams) that aren't associated with asset properties.
+     * The <code>disassociatedDataStorage</code> can be one of the following values:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>ENABLED</code> – IoT SiteWise accepts time series that aren't associated with asset properties.
+     * </p>
+     * <important>
+     * <p>
+     * After the <code>disassociatedDataStorage</code> is enabled, you can't disable it.
+     * </p>
+     * </important></li>
+     * <li>
+     * <p>
+     * <code>DISABLED</code> – IoT SiteWise doesn't accept time series (data streams) that aren't associated with asset
+     * properties.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/data-streams.html">Data streams</a> in the <i>IoT
+     * SiteWise User Guide</i>.
+     * </p>
+     * 
+     * @param disassociatedDataStorage
+     *        Contains the storage configuration for time series (data streams) that aren't associated with asset
+     *        properties. The <code>disassociatedDataStorage</code> can be one of the following values:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>ENABLED</code> – IoT SiteWise accepts time series that aren't associated with asset properties.
+     *        </p>
+     *        <important>
+     *        <p>
+     *        After the <code>disassociatedDataStorage</code> is enabled, you can't disable it.
+     *        </p>
+     *        </important></li>
+     *        <li>
+     *        <p>
+     *        <code>DISABLED</code> – IoT SiteWise doesn't accept time series (data streams) that aren't associated with
+     *        asset properties.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/data-streams.html">Data streams</a> in the
+     *        <i>IoT SiteWise User Guide</i>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see DisassociatedDataStorageState
+     */
+
+    public PutStorageConfigurationResult withDisassociatedDataStorage(String disassociatedDataStorage) {
+        setDisassociatedDataStorage(disassociatedDataStorage);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Contains the storage configuration for time series (data streams) that aren't associated with asset properties.
+     * The <code>disassociatedDataStorage</code> can be one of the following values:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>ENABLED</code> – IoT SiteWise accepts time series that aren't associated with asset properties.
+     * </p>
+     * <important>
+     * <p>
+     * After the <code>disassociatedDataStorage</code> is enabled, you can't disable it.
+     * </p>
+     * </important></li>
+     * <li>
+     * <p>
+     * <code>DISABLED</code> – IoT SiteWise doesn't accept time series (data streams) that aren't associated with asset
+     * properties.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/data-streams.html">Data streams</a> in the <i>IoT
+     * SiteWise User Guide</i>.
+     * </p>
+     * 
+     * @param disassociatedDataStorage
+     *        Contains the storage configuration for time series (data streams) that aren't associated with asset
+     *        properties. The <code>disassociatedDataStorage</code> can be one of the following values:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>ENABLED</code> – IoT SiteWise accepts time series that aren't associated with asset properties.
+     *        </p>
+     *        <important>
+     *        <p>
+     *        After the <code>disassociatedDataStorage</code> is enabled, you can't disable it.
+     *        </p>
+     *        </important></li>
+     *        <li>
+     *        <p>
+     *        <code>DISABLED</code> – IoT SiteWise doesn't accept time series (data streams) that aren't associated with
+     *        asset properties.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/data-streams.html">Data streams</a> in the
+     *        <i>IoT SiteWise User Guide</i>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see DisassociatedDataStorageState
+     */
+
+    public PutStorageConfigurationResult withDisassociatedDataStorage(DisassociatedDataStorageState disassociatedDataStorage) {
+        this.disassociatedDataStorage = disassociatedDataStorage.toString();
+        return this;
+    }
+
+    /**
      * @param configurationStatus
      */
 
@@ -297,6 +565,8 @@ public class PutStorageConfigurationResult extends com.amazonaws.AmazonWebServic
             sb.append("StorageType: ").append(getStorageType()).append(",");
         if (getMultiLayerStorage() != null)
             sb.append("MultiLayerStorage: ").append(getMultiLayerStorage()).append(",");
+        if (getDisassociatedDataStorage() != null)
+            sb.append("DisassociatedDataStorage: ").append(getDisassociatedDataStorage()).append(",");
         if (getConfigurationStatus() != null)
             sb.append("ConfigurationStatus: ").append(getConfigurationStatus());
         sb.append("}");
@@ -321,6 +591,10 @@ public class PutStorageConfigurationResult extends com.amazonaws.AmazonWebServic
             return false;
         if (other.getMultiLayerStorage() != null && other.getMultiLayerStorage().equals(this.getMultiLayerStorage()) == false)
             return false;
+        if (other.getDisassociatedDataStorage() == null ^ this.getDisassociatedDataStorage() == null)
+            return false;
+        if (other.getDisassociatedDataStorage() != null && other.getDisassociatedDataStorage().equals(this.getDisassociatedDataStorage()) == false)
+            return false;
         if (other.getConfigurationStatus() == null ^ this.getConfigurationStatus() == null)
             return false;
         if (other.getConfigurationStatus() != null && other.getConfigurationStatus().equals(this.getConfigurationStatus()) == false)
@@ -335,6 +609,7 @@ public class PutStorageConfigurationResult extends com.amazonaws.AmazonWebServic
 
         hashCode = prime * hashCode + ((getStorageType() == null) ? 0 : getStorageType().hashCode());
         hashCode = prime * hashCode + ((getMultiLayerStorage() == null) ? 0 : getMultiLayerStorage().hashCode());
+        hashCode = prime * hashCode + ((getDisassociatedDataStorage() == null) ? 0 : getDisassociatedDataStorage().hashCode());
         hashCode = prime * hashCode + ((getConfigurationStatus() == null) ? 0 : getConfigurationStatus().hashCode());
         return hashCode;
     }

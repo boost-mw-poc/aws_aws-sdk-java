@@ -73,7 +73,17 @@ public class AbstractAmazonCustomerProfiles implements AmazonCustomerProfiles {
     }
 
     @Override
+    public GetAutoMergingPreviewResult getAutoMergingPreview(GetAutoMergingPreviewRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetDomainResult getDomain(GetDomainRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetIdentityResolutionJobResult getIdentityResolutionJob(GetIdentityResolutionJobRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -104,6 +114,11 @@ public class AbstractAmazonCustomerProfiles implements AmazonCustomerProfiles {
 
     @Override
     public ListDomainsResult listDomains(ListDomainsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListIdentityResolutionJobsResult listIdentityResolutionJobs(ListIdentityResolutionJobsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

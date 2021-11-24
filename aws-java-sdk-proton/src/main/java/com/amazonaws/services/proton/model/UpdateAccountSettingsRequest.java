@@ -27,18 +27,126 @@ public class UpdateAccountSettingsRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Proton pipeline service role.
+     * The repository that you provide with pull request provisioning.
      * </p>
+     * <important>
+     * <p>
+     * Provisioning by pull request is currently in feature preview and is only usable with Terraform based Proton
+     * Templates. To learn more about <a href="https://aws.amazon.com/service-terms">Amazon Web Services Feature Preview
+     * terms</a>, see section 2 on Beta and Previews.
+     * </p>
+     * </important>
+     */
+    private RepositoryBranchInput pipelineProvisioningRepository;
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the Proton pipeline service role.
+     * </p>
+     * <important>
+     * <p>
+     * Provisioning by pull request is currently in feature preview and is only usable with Terraform based Proton
+     * Templates. To learn more about <a href="https://aws.amazon.com/service-terms">Amazon Web Services Feature Preview
+     * terms</a>, see section 2 on Beta and Previews.
+     * </p>
+     * </important>
      */
     private String pipelineServiceRoleArn;
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Proton pipeline service role.
+     * The repository that you provide with pull request provisioning.
      * </p>
+     * <important>
+     * <p>
+     * Provisioning by pull request is currently in feature preview and is only usable with Terraform based Proton
+     * Templates. To learn more about <a href="https://aws.amazon.com/service-terms">Amazon Web Services Feature Preview
+     * terms</a>, see section 2 on Beta and Previews.
+     * </p>
+     * </important>
+     * 
+     * @param pipelineProvisioningRepository
+     *        The repository that you provide with pull request provisioning.</p> <important>
+     *        <p>
+     *        Provisioning by pull request is currently in feature preview and is only usable with Terraform based
+     *        Proton Templates. To learn more about <a href="https://aws.amazon.com/service-terms">Amazon Web Services
+     *        Feature Preview terms</a>, see section 2 on Beta and Previews.
+     *        </p>
+     */
+
+    public void setPipelineProvisioningRepository(RepositoryBranchInput pipelineProvisioningRepository) {
+        this.pipelineProvisioningRepository = pipelineProvisioningRepository;
+    }
+
+    /**
+     * <p>
+     * The repository that you provide with pull request provisioning.
+     * </p>
+     * <important>
+     * <p>
+     * Provisioning by pull request is currently in feature preview and is only usable with Terraform based Proton
+     * Templates. To learn more about <a href="https://aws.amazon.com/service-terms">Amazon Web Services Feature Preview
+     * terms</a>, see section 2 on Beta and Previews.
+     * </p>
+     * </important>
+     * 
+     * @return The repository that you provide with pull request provisioning.</p> <important>
+     *         <p>
+     *         Provisioning by pull request is currently in feature preview and is only usable with Terraform based
+     *         Proton Templates. To learn more about <a href="https://aws.amazon.com/service-terms">Amazon Web Services
+     *         Feature Preview terms</a>, see section 2 on Beta and Previews.
+     *         </p>
+     */
+
+    public RepositoryBranchInput getPipelineProvisioningRepository() {
+        return this.pipelineProvisioningRepository;
+    }
+
+    /**
+     * <p>
+     * The repository that you provide with pull request provisioning.
+     * </p>
+     * <important>
+     * <p>
+     * Provisioning by pull request is currently in feature preview and is only usable with Terraform based Proton
+     * Templates. To learn more about <a href="https://aws.amazon.com/service-terms">Amazon Web Services Feature Preview
+     * terms</a>, see section 2 on Beta and Previews.
+     * </p>
+     * </important>
+     * 
+     * @param pipelineProvisioningRepository
+     *        The repository that you provide with pull request provisioning.</p> <important>
+     *        <p>
+     *        Provisioning by pull request is currently in feature preview and is only usable with Terraform based
+     *        Proton Templates. To learn more about <a href="https://aws.amazon.com/service-terms">Amazon Web Services
+     *        Feature Preview terms</a>, see section 2 on Beta and Previews.
+     *        </p>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateAccountSettingsRequest withPipelineProvisioningRepository(RepositoryBranchInput pipelineProvisioningRepository) {
+        setPipelineProvisioningRepository(pipelineProvisioningRepository);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the Proton pipeline service role.
+     * </p>
+     * <important>
+     * <p>
+     * Provisioning by pull request is currently in feature preview and is only usable with Terraform based Proton
+     * Templates. To learn more about <a href="https://aws.amazon.com/service-terms">Amazon Web Services Feature Preview
+     * terms</a>, see section 2 on Beta and Previews.
+     * </p>
+     * </important>
      * 
      * @param pipelineServiceRoleArn
-     *        The Amazon Resource Name (ARN) of the AWS Proton pipeline service role.
+     *        The Amazon Resource Name (ARN) of the Proton pipeline service role.</p> <important>
+     *        <p>
+     *        Provisioning by pull request is currently in feature preview and is only usable with Terraform based
+     *        Proton Templates. To learn more about <a href="https://aws.amazon.com/service-terms">Amazon Web Services
+     *        Feature Preview terms</a>, see section 2 on Beta and Previews.
+     *        </p>
      */
 
     public void setPipelineServiceRoleArn(String pipelineServiceRoleArn) {
@@ -47,10 +155,22 @@ public class UpdateAccountSettingsRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Proton pipeline service role.
+     * The Amazon Resource Name (ARN) of the Proton pipeline service role.
      * </p>
+     * <important>
+     * <p>
+     * Provisioning by pull request is currently in feature preview and is only usable with Terraform based Proton
+     * Templates. To learn more about <a href="https://aws.amazon.com/service-terms">Amazon Web Services Feature Preview
+     * terms</a>, see section 2 on Beta and Previews.
+     * </p>
+     * </important>
      * 
-     * @return The Amazon Resource Name (ARN) of the AWS Proton pipeline service role.
+     * @return The Amazon Resource Name (ARN) of the Proton pipeline service role.</p> <important>
+     *         <p>
+     *         Provisioning by pull request is currently in feature preview and is only usable with Terraform based
+     *         Proton Templates. To learn more about <a href="https://aws.amazon.com/service-terms">Amazon Web Services
+     *         Feature Preview terms</a>, see section 2 on Beta and Previews.
+     *         </p>
      */
 
     public String getPipelineServiceRoleArn() {
@@ -59,11 +179,23 @@ public class UpdateAccountSettingsRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Proton pipeline service role.
+     * The Amazon Resource Name (ARN) of the Proton pipeline service role.
      * </p>
+     * <important>
+     * <p>
+     * Provisioning by pull request is currently in feature preview and is only usable with Terraform based Proton
+     * Templates. To learn more about <a href="https://aws.amazon.com/service-terms">Amazon Web Services Feature Preview
+     * terms</a>, see section 2 on Beta and Previews.
+     * </p>
+     * </important>
      * 
      * @param pipelineServiceRoleArn
-     *        The Amazon Resource Name (ARN) of the AWS Proton pipeline service role.
+     *        The Amazon Resource Name (ARN) of the Proton pipeline service role.</p> <important>
+     *        <p>
+     *        Provisioning by pull request is currently in feature preview and is only usable with Terraform based
+     *        Proton Templates. To learn more about <a href="https://aws.amazon.com/service-terms">Amazon Web Services
+     *        Feature Preview terms</a>, see section 2 on Beta and Previews.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -84,6 +216,8 @@ public class UpdateAccountSettingsRequest extends com.amazonaws.AmazonWebService
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getPipelineProvisioningRepository() != null)
+            sb.append("PipelineProvisioningRepository: ").append(getPipelineProvisioningRepository()).append(",");
         if (getPipelineServiceRoleArn() != null)
             sb.append("PipelineServiceRoleArn: ").append(getPipelineServiceRoleArn());
         sb.append("}");
@@ -100,6 +234,11 @@ public class UpdateAccountSettingsRequest extends com.amazonaws.AmazonWebService
         if (obj instanceof UpdateAccountSettingsRequest == false)
             return false;
         UpdateAccountSettingsRequest other = (UpdateAccountSettingsRequest) obj;
+        if (other.getPipelineProvisioningRepository() == null ^ this.getPipelineProvisioningRepository() == null)
+            return false;
+        if (other.getPipelineProvisioningRepository() != null
+                && other.getPipelineProvisioningRepository().equals(this.getPipelineProvisioningRepository()) == false)
+            return false;
         if (other.getPipelineServiceRoleArn() == null ^ this.getPipelineServiceRoleArn() == null)
             return false;
         if (other.getPipelineServiceRoleArn() != null && other.getPipelineServiceRoleArn().equals(this.getPipelineServiceRoleArn()) == false)
@@ -112,6 +251,7 @@ public class UpdateAccountSettingsRequest extends com.amazonaws.AmazonWebService
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getPipelineProvisioningRepository() == null) ? 0 : getPipelineProvisioningRepository().hashCode());
         hashCode = prime * hashCode + ((getPipelineServiceRoleArn() == null) ? 0 : getPipelineServiceRoleArn().hashCode());
         return hashCode;
     }

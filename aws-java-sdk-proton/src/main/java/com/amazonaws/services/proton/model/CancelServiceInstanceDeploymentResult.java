@@ -26,18 +26,18 @@ public class CancelServiceInstanceDeploymentResult extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The service instance summary data that's returned by AWS Proton.
+     * The service instance summary data that's returned by Proton.
      * </p>
      */
     private ServiceInstance serviceInstance;
 
     /**
      * <p>
-     * The service instance summary data that's returned by AWS Proton.
+     * The service instance summary data that's returned by Proton.
      * </p>
      * 
      * @param serviceInstance
-     *        The service instance summary data that's returned by AWS Proton.
+     *        The service instance summary data that's returned by Proton.
      */
 
     public void setServiceInstance(ServiceInstance serviceInstance) {
@@ -46,10 +46,10 @@ public class CancelServiceInstanceDeploymentResult extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The service instance summary data that's returned by AWS Proton.
+     * The service instance summary data that's returned by Proton.
      * </p>
      * 
-     * @return The service instance summary data that's returned by AWS Proton.
+     * @return The service instance summary data that's returned by Proton.
      */
 
     public ServiceInstance getServiceInstance() {
@@ -58,11 +58,11 @@ public class CancelServiceInstanceDeploymentResult extends com.amazonaws.AmazonW
 
     /**
      * <p>
-     * The service instance summary data that's returned by AWS Proton.
+     * The service instance summary data that's returned by Proton.
      * </p>
      * 
      * @param serviceInstance
-     *        The service instance summary data that's returned by AWS Proton.
+     *        The service instance summary data that's returned by Proton.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

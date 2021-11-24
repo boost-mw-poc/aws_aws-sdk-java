@@ -31,9 +31,22 @@ public class GetTerminologyResult extends com.amazonaws.AmazonWebServiceResult<c
     private TerminologyProperties terminologyProperties;
     /**
      * <p>
-     * The data location of the custom terminology being retrieved. The custom terminology file is returned in a
-     * presigned url that has a 30 minute expiration.
+     * The Amazon S3 location of the most recent custom terminology input file that was successfully imported into
+     * Amazon Translate. The location is returned as a presigned URL that has a 30 minute expiration.
      * </p>
+     * <important>
+     * <p>
+     * Amazon Translate doesn't scan all input files for the risk of CSV injection attacks.
+     * </p>
+     * <p>
+     * CSV injection occurs when a .csv or .tsv file is altered so that a record contains malicious code. The record
+     * begins with a special character, such as =, +, -, or @. When the file is opened in a spreadsheet program, the
+     * program might interpret the record as a formula and run the code within it.
+     * </p>
+     * <p>
+     * Before you download an input file from Amazon S3, ensure that you recognize the file and trust its creator.
+     * </p>
+     * </important>
      */
     private TerminologyDataLocation terminologyDataLocation;
     /**
@@ -87,13 +100,39 @@ public class GetTerminologyResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The data location of the custom terminology being retrieved. The custom terminology file is returned in a
-     * presigned url that has a 30 minute expiration.
+     * The Amazon S3 location of the most recent custom terminology input file that was successfully imported into
+     * Amazon Translate. The location is returned as a presigned URL that has a 30 minute expiration.
      * </p>
+     * <important>
+     * <p>
+     * Amazon Translate doesn't scan all input files for the risk of CSV injection attacks.
+     * </p>
+     * <p>
+     * CSV injection occurs when a .csv or .tsv file is altered so that a record contains malicious code. The record
+     * begins with a special character, such as =, +, -, or @. When the file is opened in a spreadsheet program, the
+     * program might interpret the record as a formula and run the code within it.
+     * </p>
+     * <p>
+     * Before you download an input file from Amazon S3, ensure that you recognize the file and trust its creator.
+     * </p>
+     * </important>
      * 
      * @param terminologyDataLocation
-     *        The data location of the custom terminology being retrieved. The custom terminology file is returned in a
-     *        presigned url that has a 30 minute expiration.
+     *        The Amazon S3 location of the most recent custom terminology input file that was successfully imported
+     *        into Amazon Translate. The location is returned as a presigned URL that has a 30 minute expiration.</p>
+     *        <important>
+     *        <p>
+     *        Amazon Translate doesn't scan all input files for the risk of CSV injection attacks.
+     *        </p>
+     *        <p>
+     *        CSV injection occurs when a .csv or .tsv file is altered so that a record contains malicious code. The
+     *        record begins with a special character, such as =, +, -, or @. When the file is opened in a spreadsheet
+     *        program, the program might interpret the record as a formula and run the code within it.
+     *        </p>
+     *        <p>
+     *        Before you download an input file from Amazon S3, ensure that you recognize the file and trust its
+     *        creator.
+     *        </p>
      */
 
     public void setTerminologyDataLocation(TerminologyDataLocation terminologyDataLocation) {
@@ -102,12 +141,38 @@ public class GetTerminologyResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The data location of the custom terminology being retrieved. The custom terminology file is returned in a
-     * presigned url that has a 30 minute expiration.
+     * The Amazon S3 location of the most recent custom terminology input file that was successfully imported into
+     * Amazon Translate. The location is returned as a presigned URL that has a 30 minute expiration.
      * </p>
+     * <important>
+     * <p>
+     * Amazon Translate doesn't scan all input files for the risk of CSV injection attacks.
+     * </p>
+     * <p>
+     * CSV injection occurs when a .csv or .tsv file is altered so that a record contains malicious code. The record
+     * begins with a special character, such as =, +, -, or @. When the file is opened in a spreadsheet program, the
+     * program might interpret the record as a formula and run the code within it.
+     * </p>
+     * <p>
+     * Before you download an input file from Amazon S3, ensure that you recognize the file and trust its creator.
+     * </p>
+     * </important>
      * 
-     * @return The data location of the custom terminology being retrieved. The custom terminology file is returned in a
-     *         presigned url that has a 30 minute expiration.
+     * @return The Amazon S3 location of the most recent custom terminology input file that was successfully imported
+     *         into Amazon Translate. The location is returned as a presigned URL that has a 30 minute expiration.</p>
+     *         <important>
+     *         <p>
+     *         Amazon Translate doesn't scan all input files for the risk of CSV injection attacks.
+     *         </p>
+     *         <p>
+     *         CSV injection occurs when a .csv or .tsv file is altered so that a record contains malicious code. The
+     *         record begins with a special character, such as =, +, -, or @. When the file is opened in a spreadsheet
+     *         program, the program might interpret the record as a formula and run the code within it.
+     *         </p>
+     *         <p>
+     *         Before you download an input file from Amazon S3, ensure that you recognize the file and trust its
+     *         creator.
+     *         </p>
      */
 
     public TerminologyDataLocation getTerminologyDataLocation() {
@@ -116,13 +181,39 @@ public class GetTerminologyResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The data location of the custom terminology being retrieved. The custom terminology file is returned in a
-     * presigned url that has a 30 minute expiration.
+     * The Amazon S3 location of the most recent custom terminology input file that was successfully imported into
+     * Amazon Translate. The location is returned as a presigned URL that has a 30 minute expiration.
      * </p>
+     * <important>
+     * <p>
+     * Amazon Translate doesn't scan all input files for the risk of CSV injection attacks.
+     * </p>
+     * <p>
+     * CSV injection occurs when a .csv or .tsv file is altered so that a record contains malicious code. The record
+     * begins with a special character, such as =, +, -, or @. When the file is opened in a spreadsheet program, the
+     * program might interpret the record as a formula and run the code within it.
+     * </p>
+     * <p>
+     * Before you download an input file from Amazon S3, ensure that you recognize the file and trust its creator.
+     * </p>
+     * </important>
      * 
      * @param terminologyDataLocation
-     *        The data location of the custom terminology being retrieved. The custom terminology file is returned in a
-     *        presigned url that has a 30 minute expiration.
+     *        The Amazon S3 location of the most recent custom terminology input file that was successfully imported
+     *        into Amazon Translate. The location is returned as a presigned URL that has a 30 minute expiration.</p>
+     *        <important>
+     *        <p>
+     *        Amazon Translate doesn't scan all input files for the risk of CSV injection attacks.
+     *        </p>
+     *        <p>
+     *        CSV injection occurs when a .csv or .tsv file is altered so that a record contains malicious code. The
+     *        record begins with a special character, such as =, +, -, or @. When the file is opened in a spreadsheet
+     *        program, the program might interpret the record as a formula and run the code within it.
+     *        </p>
+     *        <p>
+     *        Before you download an input file from Amazon S3, ensure that you recognize the file and trust its
+     *        creator.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

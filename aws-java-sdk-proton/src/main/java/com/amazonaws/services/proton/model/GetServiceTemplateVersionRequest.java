@@ -27,7 +27,7 @@ public class GetServiceTemplateVersionRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * To view service template major version detail data, include <code>majorVersion</code>.
+     * To view service template major version detail data, include <code>major Version</code>.
      * </p>
      */
     private String majorVersion;
@@ -46,11 +46,11 @@ public class GetServiceTemplateVersionRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * To view service template major version detail data, include <code>majorVersion</code>.
+     * To view service template major version detail data, include <code>major Version</code>.
      * </p>
      * 
      * @param majorVersion
-     *        To view service template major version detail data, include <code>majorVersion</code>.
+     *        To view service template major version detail data, include <code>major Version</code>.
      */
 
     public void setMajorVersion(String majorVersion) {
@@ -59,10 +59,10 @@ public class GetServiceTemplateVersionRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * To view service template major version detail data, include <code>majorVersion</code>.
+     * To view service template major version detail data, include <code>major Version</code>.
      * </p>
      * 
-     * @return To view service template major version detail data, include <code>majorVersion</code>.
+     * @return To view service template major version detail data, include <code>major Version</code>.
      */
 
     public String getMajorVersion() {
@@ -71,11 +71,11 @@ public class GetServiceTemplateVersionRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * To view service template major version detail data, include <code>majorVersion</code>.
+     * To view service template major version detail data, include <code>major Version</code>.
      * </p>
      * 
      * @param majorVersion
-     *        To view service template major version detail data, include <code>majorVersion</code>.
+     *        To view service template major version detail data, include <code>major Version</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

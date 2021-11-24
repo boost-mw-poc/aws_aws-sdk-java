@@ -41,6 +41,21 @@ public class AbstractAWSIoTSiteWiseAsync extends AbstractAWSIoTSiteWise implemen
     }
 
     @Override
+    public java.util.concurrent.Future<AssociateTimeSeriesToAssetPropertyResult> associateTimeSeriesToAssetPropertyAsync(
+            AssociateTimeSeriesToAssetPropertyRequest request) {
+
+        return associateTimeSeriesToAssetPropertyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<AssociateTimeSeriesToAssetPropertyResult> associateTimeSeriesToAssetPropertyAsync(
+            AssociateTimeSeriesToAssetPropertyRequest request,
+            com.amazonaws.handlers.AsyncHandler<AssociateTimeSeriesToAssetPropertyRequest, AssociateTimeSeriesToAssetPropertyResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<BatchAssociateProjectAssetsResult> batchAssociateProjectAssetsAsync(BatchAssociateProjectAssetsRequest request) {
 
         return batchAssociateProjectAssetsAsync(request, null);
@@ -262,6 +277,19 @@ public class AbstractAWSIoTSiteWiseAsync extends AbstractAWSIoTSiteWise implemen
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteTimeSeriesResult> deleteTimeSeriesAsync(DeleteTimeSeriesRequest request) {
+
+        return deleteTimeSeriesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteTimeSeriesResult> deleteTimeSeriesAsync(DeleteTimeSeriesRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteTimeSeriesRequest, DeleteTimeSeriesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeAccessPolicyResult> describeAccessPolicyAsync(DescribeAccessPolicyRequest request) {
 
         return describeAccessPolicyAsync(request, null);
@@ -422,6 +450,19 @@ public class AbstractAWSIoTSiteWiseAsync extends AbstractAWSIoTSiteWise implemen
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeTimeSeriesResult> describeTimeSeriesAsync(DescribeTimeSeriesRequest request) {
+
+        return describeTimeSeriesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeTimeSeriesResult> describeTimeSeriesAsync(DescribeTimeSeriesRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeTimeSeriesRequest, DescribeTimeSeriesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DisassociateAssetsResult> disassociateAssetsAsync(DisassociateAssetsRequest request) {
 
         return disassociateAssetsAsync(request, null);
@@ -430,6 +471,21 @@ public class AbstractAWSIoTSiteWiseAsync extends AbstractAWSIoTSiteWise implemen
     @Override
     public java.util.concurrent.Future<DisassociateAssetsResult> disassociateAssetsAsync(DisassociateAssetsRequest request,
             com.amazonaws.handlers.AsyncHandler<DisassociateAssetsRequest, DisassociateAssetsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DisassociateTimeSeriesFromAssetPropertyResult> disassociateTimeSeriesFromAssetPropertyAsync(
+            DisassociateTimeSeriesFromAssetPropertyRequest request) {
+
+        return disassociateTimeSeriesFromAssetPropertyAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DisassociateTimeSeriesFromAssetPropertyResult> disassociateTimeSeriesFromAssetPropertyAsync(
+            DisassociateTimeSeriesFromAssetPropertyRequest request,
+            com.amazonaws.handlers.AsyncHandler<DisassociateTimeSeriesFromAssetPropertyRequest, DisassociateTimeSeriesFromAssetPropertyResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -627,6 +683,19 @@ public class AbstractAWSIoTSiteWiseAsync extends AbstractAWSIoTSiteWise implemen
     @Override
     public java.util.concurrent.Future<ListTagsForResourceResult> listTagsForResourceAsync(ListTagsForResourceRequest request,
             com.amazonaws.handlers.AsyncHandler<ListTagsForResourceRequest, ListTagsForResourceResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListTimeSeriesResult> listTimeSeriesAsync(ListTimeSeriesRequest request) {
+
+        return listTimeSeriesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListTimeSeriesResult> listTimeSeriesAsync(ListTimeSeriesRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListTimeSeriesRequest, ListTimeSeriesResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

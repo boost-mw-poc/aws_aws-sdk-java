@@ -100,6 +100,11 @@ public interface AmazonCustomerProfilesAsync extends AmazonCustomerProfiles {
      * enable <a href="https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_GetMatches.html">identity
      * resolution</a>: set <code>Matching</code> to true.
      * </p>
+     * <p>
+     * To prevent cross-service impersonation when you call this API, see <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/cross-service-confused-deputy-prevention.html"
+     * >Cross-service confused deputy prevention</a> for sample policies that you should apply.
+     * </p>
      * 
      * @param createDomainRequest
      * @return A Java Future containing the result of the CreateDomain operation returned by the service.
@@ -124,6 +129,11 @@ public interface AmazonCustomerProfilesAsync extends AmazonCustomerProfiles {
      * href="https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_UpdateDomain.html">UpdateDomain</a> to
      * enable <a href="https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_GetMatches.html">identity
      * resolution</a>: set <code>Matching</code> to true.
+     * </p>
+     * <p>
+     * To prevent cross-service impersonation when you call this API, see <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/cross-service-confused-deputy-prevention.html"
+     * >Cross-service confused deputy prevention</a> for sample policies that you should apply.
      * </p>
      * 
      * @param createDomainRequest
@@ -370,6 +380,67 @@ public interface AmazonCustomerProfilesAsync extends AmazonCustomerProfiles {
 
     /**
      * <p>
+     * Tests the auto-merging settings of your Identity Resolution Job without merging your data. It randomly selects a
+     * sample of matching groups from the existing matching results, and applies the automerging settings that you
+     * provided. You can then view the number of profiles in the sample, the number of matches, and the number of
+     * profiles identified to be merged. This enables you to evaluate the accuracy of the attributes in your matching
+     * list.
+     * </p>
+     * <p>
+     * You can't view which profiles are matched and would be merged.
+     * </p>
+     * <important>
+     * <p>
+     * We strongly recommend you use this API to do a dry run of the automerging process before running the Identity
+     * Resolution Job. Include <b>at least</b> two matching attributes. If your matching list includes too few
+     * attributes (such as only <code>FirstName</code> or only <code>LastName</code>), there may be a large number of
+     * matches. This increases the chances of erroneous merges.
+     * </p>
+     * </important>
+     * 
+     * @param getAutoMergingPreviewRequest
+     * @return A Java Future containing the result of the GetAutoMergingPreview operation returned by the service.
+     * @sample AmazonCustomerProfilesAsync.GetAutoMergingPreview
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/customer-profiles-2020-08-15/GetAutoMergingPreview"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetAutoMergingPreviewResult> getAutoMergingPreviewAsync(GetAutoMergingPreviewRequest getAutoMergingPreviewRequest);
+
+    /**
+     * <p>
+     * Tests the auto-merging settings of your Identity Resolution Job without merging your data. It randomly selects a
+     * sample of matching groups from the existing matching results, and applies the automerging settings that you
+     * provided. You can then view the number of profiles in the sample, the number of matches, and the number of
+     * profiles identified to be merged. This enables you to evaluate the accuracy of the attributes in your matching
+     * list.
+     * </p>
+     * <p>
+     * You can't view which profiles are matched and would be merged.
+     * </p>
+     * <important>
+     * <p>
+     * We strongly recommend you use this API to do a dry run of the automerging process before running the Identity
+     * Resolution Job. Include <b>at least</b> two matching attributes. If your matching list includes too few
+     * attributes (such as only <code>FirstName</code> or only <code>LastName</code>), there may be a large number of
+     * matches. This increases the chances of erroneous merges.
+     * </p>
+     * </important>
+     * 
+     * @param getAutoMergingPreviewRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetAutoMergingPreview operation returned by the service.
+     * @sample AmazonCustomerProfilesAsyncHandler.GetAutoMergingPreview
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/customer-profiles-2020-08-15/GetAutoMergingPreview"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetAutoMergingPreviewResult> getAutoMergingPreviewAsync(GetAutoMergingPreviewRequest getAutoMergingPreviewRequest,
+            com.amazonaws.handlers.AsyncHandler<GetAutoMergingPreviewRequest, GetAutoMergingPreviewResult> asyncHandler);
+
+    /**
+     * <p>
      * Returns information about a specific domain.
      * </p>
      * 
@@ -398,6 +469,47 @@ public interface AmazonCustomerProfilesAsync extends AmazonCustomerProfiles {
      */
     java.util.concurrent.Future<GetDomainResult> getDomainAsync(GetDomainRequest getDomainRequest,
             com.amazonaws.handlers.AsyncHandler<GetDomainRequest, GetDomainResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns information about an Identity Resolution Job in a specific domain.
+     * </p>
+     * <p>
+     * Identity Resolution Jobs are set up using the Amazon Connect admin console. For more information, see <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/use-identity-resolution.html">Use Identity Resolution
+     * to consolidate similar profiles</a>.
+     * </p>
+     * 
+     * @param getIdentityResolutionJobRequest
+     * @return A Java Future containing the result of the GetIdentityResolutionJob operation returned by the service.
+     * @sample AmazonCustomerProfilesAsync.GetIdentityResolutionJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/customer-profiles-2020-08-15/GetIdentityResolutionJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetIdentityResolutionJobResult> getIdentityResolutionJobAsync(GetIdentityResolutionJobRequest getIdentityResolutionJobRequest);
+
+    /**
+     * <p>
+     * Returns information about an Identity Resolution Job in a specific domain.
+     * </p>
+     * <p>
+     * Identity Resolution Jobs are set up using the Amazon Connect admin console. For more information, see <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/use-identity-resolution.html">Use Identity Resolution
+     * to consolidate similar profiles</a>.
+     * </p>
+     * 
+     * @param getIdentityResolutionJobRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetIdentityResolutionJob operation returned by the service.
+     * @sample AmazonCustomerProfilesAsyncHandler.GetIdentityResolutionJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/customer-profiles-2020-08-15/GetIdentityResolutionJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetIdentityResolutionJobResult> getIdentityResolutionJobAsync(GetIdentityResolutionJobRequest getIdentityResolutionJobRequest,
+            com.amazonaws.handlers.AsyncHandler<GetIdentityResolutionJobRequest, GetIdentityResolutionJobResult> asyncHandler);
 
     /**
      * <p>
@@ -446,8 +558,16 @@ public interface AmazonCustomerProfilesAsync extends AmazonCustomerProfiles {
      * </p>
      * <important>
      * <p>
-     * Amazon Connect starts a batch process every Saturday at 12AM UTC to identify matching profiles. The results are
-     * returned up to seven days after the Saturday run.
+     * The process of matching duplicate profiles. If <code>Matching</code> = <code>true</code>, Amazon Connect Customer
+     * Profiles starts a weekly batch process called Identity Resolution Job. If you do not specify a date and time for
+     * Identity Resolution Job to run, by default it runs every Saturday at 12AM UTC to detect duplicate profiles in
+     * your domains.
+     * </p>
+     * <p>
+     * After the Identity Resolution Job completes, use the <a
+     * href="https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_GetMatches.html">GetMatches</a> API to
+     * return and review the results. Or, if you have configured <code>ExportingConfig</code> in the
+     * <code>MatchingRequest</code>, you can download the results from S3.
      * </p>
      * </important>
      * <p>
@@ -531,8 +651,16 @@ public interface AmazonCustomerProfilesAsync extends AmazonCustomerProfiles {
      * </p>
      * <important>
      * <p>
-     * Amazon Connect starts a batch process every Saturday at 12AM UTC to identify matching profiles. The results are
-     * returned up to seven days after the Saturday run.
+     * The process of matching duplicate profiles. If <code>Matching</code> = <code>true</code>, Amazon Connect Customer
+     * Profiles starts a weekly batch process called Identity Resolution Job. If you do not specify a date and time for
+     * Identity Resolution Job to run, by default it runs every Saturday at 12AM UTC to detect duplicate profiles in
+     * your domains.
+     * </p>
+     * <p>
+     * After the Identity Resolution Job completes, use the <a
+     * href="https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_GetMatches.html">GetMatches</a> API to
+     * return and review the results. Or, if you have configured <code>ExportingConfig</code> in the
+     * <code>MatchingRequest</code>, you can download the results from S3.
      * </p>
      * </important>
      * <p>
@@ -742,6 +870,41 @@ public interface AmazonCustomerProfilesAsync extends AmazonCustomerProfiles {
      */
     java.util.concurrent.Future<ListDomainsResult> listDomainsAsync(ListDomainsRequest listDomainsRequest,
             com.amazonaws.handlers.AsyncHandler<ListDomainsRequest, ListDomainsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Lists all of the Identity Resolution Jobs in your domain. The response sorts the list by
+     * <code>JobStartTime</code>.
+     * </p>
+     * 
+     * @param listIdentityResolutionJobsRequest
+     * @return A Java Future containing the result of the ListIdentityResolutionJobs operation returned by the service.
+     * @sample AmazonCustomerProfilesAsync.ListIdentityResolutionJobs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/customer-profiles-2020-08-15/ListIdentityResolutionJobs"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListIdentityResolutionJobsResult> listIdentityResolutionJobsAsync(
+            ListIdentityResolutionJobsRequest listIdentityResolutionJobsRequest);
+
+    /**
+     * <p>
+     * Lists all of the Identity Resolution Jobs in your domain. The response sorts the list by
+     * <code>JobStartTime</code>.
+     * </p>
+     * 
+     * @param listIdentityResolutionJobsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListIdentityResolutionJobs operation returned by the service.
+     * @sample AmazonCustomerProfilesAsyncHandler.ListIdentityResolutionJobs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/customer-profiles-2020-08-15/ListIdentityResolutionJobs"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListIdentityResolutionJobsResult> listIdentityResolutionJobsAsync(
+            ListIdentityResolutionJobsRequest listIdentityResolutionJobsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListIdentityResolutionJobsRequest, ListIdentityResolutionJobsResult> asyncHandler);
 
     /**
      * <p>
@@ -1322,6 +1485,11 @@ public interface AmazonCustomerProfilesAsync extends AmazonCustomerProfiles {
      * enable <a href="https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_GetMatches.html">identity
      * resolution</a>: set <code>Matching</code> to true.
      * </p>
+     * <p>
+     * To prevent cross-service impersonation when you call this API, see <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/cross-service-confused-deputy-prevention.html"
+     * >Cross-service confused deputy prevention</a> for sample policies that you should apply.
+     * </p>
      * 
      * @param updateDomainRequest
      * @return A Java Future containing the result of the UpdateDomain operation returned by the service.
@@ -1343,6 +1511,11 @@ public interface AmazonCustomerProfilesAsync extends AmazonCustomerProfiles {
      * href="https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_CreateDomain.html">CreateDomain</a> to
      * enable <a href="https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_GetMatches.html">identity
      * resolution</a>: set <code>Matching</code> to true.
+     * </p>
+     * <p>
+     * To prevent cross-service impersonation when you call this API, see <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/cross-service-confused-deputy-prevention.html"
+     * >Cross-service confused deputy prevention</a> for sample policies that you should apply.
      * </p>
      * 
      * @param updateDomainRequest

@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The environment detail data. An AWS Proton environment is a set resources shared across an AWS Proton service.
+ * The environment detail data. An Proton environment is a set resources shared across an Proton service.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/proton-2020-07-20/Environment" target="_top">AWS API
@@ -91,8 +91,8 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
     private String name;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Proton service role that allows AWS Proton to make calls to other
-     * services on your behalf.
+     * The Amazon Resource Name (ARN) of the Proton service role that allows Proton to make calls to other services on
+     * your behalf.
      * </p>
      */
     private String protonServiceRoleArn;
@@ -102,6 +102,19 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private String provisioning;
+    /**
+     * <p>
+     * The repository that you provide with pull request provisioning.
+     * </p>
+     * <important>
+     * <p>
+     * Provisioning by pull request is currently in feature preview and is only usable with Terraform based Proton
+     * Templates. To learn more about <a href="https://aws.amazon.com/service-terms">Amazon Web Services Feature Preview
+     * terms</a>, see section 2 on Beta and Previews.
+     * </p>
+     * </important>
+     */
+    private RepositoryBranch provisioningRepository;
     /**
      * <p>
      * The environment spec.
@@ -554,13 +567,13 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Proton service role that allows AWS Proton to make calls to other
-     * services on your behalf.
+     * The Amazon Resource Name (ARN) of the Proton service role that allows Proton to make calls to other services on
+     * your behalf.
      * </p>
      * 
      * @param protonServiceRoleArn
-     *        The Amazon Resource Name (ARN) of the AWS Proton service role that allows AWS Proton to make calls to
-     *        other services on your behalf.
+     *        The Amazon Resource Name (ARN) of the Proton service role that allows Proton to make calls to other
+     *        services on your behalf.
      */
 
     public void setProtonServiceRoleArn(String protonServiceRoleArn) {
@@ -569,12 +582,12 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Proton service role that allows AWS Proton to make calls to other
-     * services on your behalf.
+     * The Amazon Resource Name (ARN) of the Proton service role that allows Proton to make calls to other services on
+     * your behalf.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the AWS Proton service role that allows AWS Proton to make calls to
-     *         other services on your behalf.
+     * @return The Amazon Resource Name (ARN) of the Proton service role that allows Proton to make calls to other
+     *         services on your behalf.
      */
 
     public String getProtonServiceRoleArn() {
@@ -583,13 +596,13 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Proton service role that allows AWS Proton to make calls to other
-     * services on your behalf.
+     * The Amazon Resource Name (ARN) of the Proton service role that allows Proton to make calls to other services on
+     * your behalf.
      * </p>
      * 
      * @param protonServiceRoleArn
-     *        The Amazon Resource Name (ARN) of the AWS Proton service role that allows AWS Proton to make calls to
-     *        other services on your behalf.
+     *        The Amazon Resource Name (ARN) of the Proton service role that allows Proton to make calls to other
+     *        services on your behalf.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -658,6 +671,82 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
 
     public Environment withProvisioning(Provisioning provisioning) {
         this.provisioning = provisioning.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * The repository that you provide with pull request provisioning.
+     * </p>
+     * <important>
+     * <p>
+     * Provisioning by pull request is currently in feature preview and is only usable with Terraform based Proton
+     * Templates. To learn more about <a href="https://aws.amazon.com/service-terms">Amazon Web Services Feature Preview
+     * terms</a>, see section 2 on Beta and Previews.
+     * </p>
+     * </important>
+     * 
+     * @param provisioningRepository
+     *        The repository that you provide with pull request provisioning.</p> <important>
+     *        <p>
+     *        Provisioning by pull request is currently in feature preview and is only usable with Terraform based
+     *        Proton Templates. To learn more about <a href="https://aws.amazon.com/service-terms">Amazon Web Services
+     *        Feature Preview terms</a>, see section 2 on Beta and Previews.
+     *        </p>
+     */
+
+    public void setProvisioningRepository(RepositoryBranch provisioningRepository) {
+        this.provisioningRepository = provisioningRepository;
+    }
+
+    /**
+     * <p>
+     * The repository that you provide with pull request provisioning.
+     * </p>
+     * <important>
+     * <p>
+     * Provisioning by pull request is currently in feature preview and is only usable with Terraform based Proton
+     * Templates. To learn more about <a href="https://aws.amazon.com/service-terms">Amazon Web Services Feature Preview
+     * terms</a>, see section 2 on Beta and Previews.
+     * </p>
+     * </important>
+     * 
+     * @return The repository that you provide with pull request provisioning.</p> <important>
+     *         <p>
+     *         Provisioning by pull request is currently in feature preview and is only usable with Terraform based
+     *         Proton Templates. To learn more about <a href="https://aws.amazon.com/service-terms">Amazon Web Services
+     *         Feature Preview terms</a>, see section 2 on Beta and Previews.
+     *         </p>
+     */
+
+    public RepositoryBranch getProvisioningRepository() {
+        return this.provisioningRepository;
+    }
+
+    /**
+     * <p>
+     * The repository that you provide with pull request provisioning.
+     * </p>
+     * <important>
+     * <p>
+     * Provisioning by pull request is currently in feature preview and is only usable with Terraform based Proton
+     * Templates. To learn more about <a href="https://aws.amazon.com/service-terms">Amazon Web Services Feature Preview
+     * terms</a>, see section 2 on Beta and Previews.
+     * </p>
+     * </important>
+     * 
+     * @param provisioningRepository
+     *        The repository that you provide with pull request provisioning.</p> <important>
+     *        <p>
+     *        Provisioning by pull request is currently in feature preview and is only usable with Terraform based
+     *        Proton Templates. To learn more about <a href="https://aws.amazon.com/service-terms">Amazon Web Services
+     *        Feature Preview terms</a>, see section 2 on Beta and Previews.
+     *        </p>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Environment withProvisioningRepository(RepositoryBranch provisioningRepository) {
+        setProvisioningRepository(provisioningRepository);
         return this;
     }
 
@@ -857,6 +946,8 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
             sb.append("ProtonServiceRoleArn: ").append(getProtonServiceRoleArn()).append(",");
         if (getProvisioning() != null)
             sb.append("Provisioning: ").append(getProvisioning()).append(",");
+        if (getProvisioningRepository() != null)
+            sb.append("ProvisioningRepository: ").append(getProvisioningRepository()).append(",");
         if (getSpec() != null)
             sb.append("Spec: ").append("***Sensitive Data Redacted***").append(",");
         if (getTemplateMajorVersion() != null)
@@ -928,6 +1019,10 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getProvisioning() != null && other.getProvisioning().equals(this.getProvisioning()) == false)
             return false;
+        if (other.getProvisioningRepository() == null ^ this.getProvisioningRepository() == null)
+            return false;
+        if (other.getProvisioningRepository() != null && other.getProvisioningRepository().equals(this.getProvisioningRepository()) == false)
+            return false;
         if (other.getSpec() == null ^ this.getSpec() == null)
             return false;
         if (other.getSpec() != null && other.getSpec().equals(this.getSpec()) == false)
@@ -964,6 +1059,7 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
         hashCode = prime * hashCode + ((getProtonServiceRoleArn() == null) ? 0 : getProtonServiceRoleArn().hashCode());
         hashCode = prime * hashCode + ((getProvisioning() == null) ? 0 : getProvisioning().hashCode());
+        hashCode = prime * hashCode + ((getProvisioningRepository() == null) ? 0 : getProvisioningRepository().hashCode());
         hashCode = prime * hashCode + ((getSpec() == null) ? 0 : getSpec().hashCode());
         hashCode = prime * hashCode + ((getTemplateMajorVersion() == null) ? 0 : getTemplateMajorVersion().hashCode());
         hashCode = prime * hashCode + ((getTemplateMinorVersion() == null) ? 0 : getTemplateMinorVersion().hashCode());

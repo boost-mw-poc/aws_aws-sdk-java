@@ -39,7 +39,7 @@ public class CreateEnvironmentTemplateRequest extends com.amazonaws.AmazonWebSer
     private String displayName;
     /**
      * <p>
-     * A customer provided encryption key that AWS Proton uses to encrypt data.
+     * A customer provided encryption key that Proton uses to encrypt data.
      * </p>
      */
     private String encryptionKey;
@@ -57,10 +57,9 @@ public class CreateEnvironmentTemplateRequest extends com.amazonaws.AmazonWebSer
     private String provisioning;
     /**
      * <p>
-     * Create tags for your environment template. For more information, see <i>AWS Proton resources and tagging</i> in
-     * the <a href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">AWS Proton Administrator
-     * Guide</a> or <a href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">AWS Proton User
-     * Guide</a>.
+     * Create tags for your environment template. For more information, see <i>Proton resources and tagging</i> in the
+     * <a href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton Administrator Guide</a> or
+     * <a href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton User Guide</a>.
      * </p>
      */
     private java.util.List<Tag> tags;
@@ -147,11 +146,11 @@ public class CreateEnvironmentTemplateRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * A customer provided encryption key that AWS Proton uses to encrypt data.
+     * A customer provided encryption key that Proton uses to encrypt data.
      * </p>
      * 
      * @param encryptionKey
-     *        A customer provided encryption key that AWS Proton uses to encrypt data.
+     *        A customer provided encryption key that Proton uses to encrypt data.
      */
 
     public void setEncryptionKey(String encryptionKey) {
@@ -160,10 +159,10 @@ public class CreateEnvironmentTemplateRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * A customer provided encryption key that AWS Proton uses to encrypt data.
+     * A customer provided encryption key that Proton uses to encrypt data.
      * </p>
      * 
-     * @return A customer provided encryption key that AWS Proton uses to encrypt data.
+     * @return A customer provided encryption key that Proton uses to encrypt data.
      */
 
     public String getEncryptionKey() {
@@ -172,11 +171,11 @@ public class CreateEnvironmentTemplateRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * A customer provided encryption key that AWS Proton uses to encrypt data.
+     * A customer provided encryption key that Proton uses to encrypt data.
      * </p>
      * 
      * @param encryptionKey
-     *        A customer provided encryption key that AWS Proton uses to encrypt data.
+     *        A customer provided encryption key that Proton uses to encrypt data.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -290,16 +289,15 @@ public class CreateEnvironmentTemplateRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * Create tags for your environment template. For more information, see <i>AWS Proton resources and tagging</i> in
-     * the <a href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">AWS Proton Administrator
-     * Guide</a> or <a href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">AWS Proton User
-     * Guide</a>.
+     * Create tags for your environment template. For more information, see <i>Proton resources and tagging</i> in the
+     * <a href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton Administrator Guide</a> or
+     * <a href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton User Guide</a>.
      * </p>
      * 
-     * @return Create tags for your environment template. For more information, see <i>AWS Proton resources and
-     *         tagging</i> in the <a href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">AWS
-     *         Proton Administrator Guide</a> or <a
-     *         href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">AWS Proton User Guide</a>.
+     * @return Create tags for your environment template. For more information, see <i>Proton resources and tagging</i>
+     *         in the <a href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton Administrator
+     *         Guide</a> or <a href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton User
+     *         Guide</a>.
      */
 
     public java.util.List<Tag> getTags() {
@@ -308,17 +306,16 @@ public class CreateEnvironmentTemplateRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * Create tags for your environment template. For more information, see <i>AWS Proton resources and tagging</i> in
-     * the <a href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">AWS Proton Administrator
-     * Guide</a> or <a href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">AWS Proton User
-     * Guide</a>.
+     * Create tags for your environment template. For more information, see <i>Proton resources and tagging</i> in the
+     * <a href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton Administrator Guide</a> or
+     * <a href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton User Guide</a>.
      * </p>
      * 
      * @param tags
-     *        Create tags for your environment template. For more information, see <i>AWS Proton resources and
-     *        tagging</i> in the <a href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">AWS
-     *        Proton Administrator Guide</a> or <a
-     *        href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">AWS Proton User Guide</a>.
+     *        Create tags for your environment template. For more information, see <i>Proton resources and tagging</i>
+     *        in the <a href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton Administrator
+     *        Guide</a> or <a href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton User
+     *        Guide</a>.
      */
 
     public void setTags(java.util.Collection<Tag> tags) {
@@ -332,10 +329,9 @@ public class CreateEnvironmentTemplateRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * Create tags for your environment template. For more information, see <i>AWS Proton resources and tagging</i> in
-     * the <a href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">AWS Proton Administrator
-     * Guide</a> or <a href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">AWS Proton User
-     * Guide</a>.
+     * Create tags for your environment template. For more information, see <i>Proton resources and tagging</i> in the
+     * <a href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton Administrator Guide</a> or
+     * <a href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton User Guide</a>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -344,10 +340,10 @@ public class CreateEnvironmentTemplateRequest extends com.amazonaws.AmazonWebSer
      * </p>
      * 
      * @param tags
-     *        Create tags for your environment template. For more information, see <i>AWS Proton resources and
-     *        tagging</i> in the <a href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">AWS
-     *        Proton Administrator Guide</a> or <a
-     *        href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">AWS Proton User Guide</a>.
+     *        Create tags for your environment template. For more information, see <i>Proton resources and tagging</i>
+     *        in the <a href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton Administrator
+     *        Guide</a> or <a href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton User
+     *        Guide</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -363,17 +359,16 @@ public class CreateEnvironmentTemplateRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * Create tags for your environment template. For more information, see <i>AWS Proton resources and tagging</i> in
-     * the <a href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">AWS Proton Administrator
-     * Guide</a> or <a href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">AWS Proton User
-     * Guide</a>.
+     * Create tags for your environment template. For more information, see <i>Proton resources and tagging</i> in the
+     * <a href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton Administrator Guide</a> or
+     * <a href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton User Guide</a>.
      * </p>
      * 
      * @param tags
-     *        Create tags for your environment template. For more information, see <i>AWS Proton resources and
-     *        tagging</i> in the <a href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">AWS
-     *        Proton Administrator Guide</a> or <a
-     *        href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">AWS Proton User Guide</a>.
+     *        Create tags for your environment template. For more information, see <i>Proton resources and tagging</i>
+     *        in the <a href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton Administrator
+     *        Guide</a> or <a href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton User
+     *        Guide</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

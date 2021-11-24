@@ -72,7 +72,7 @@ public class EnvironmentTemplateSummary implements Serializable, Cloneable, Stru
     private String provisioning;
     /**
      * <p>
-     * The ID of the recommended version of the environment template.
+     * The recommended version of the environment template.
      * </p>
      */
     private String recommendedVersion;
@@ -382,11 +382,11 @@ public class EnvironmentTemplateSummary implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The ID of the recommended version of the environment template.
+     * The recommended version of the environment template.
      * </p>
      * 
      * @param recommendedVersion
-     *        The ID of the recommended version of the environment template.
+     *        The recommended version of the environment template.
      */
 
     public void setRecommendedVersion(String recommendedVersion) {
@@ -395,10 +395,10 @@ public class EnvironmentTemplateSummary implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The ID of the recommended version of the environment template.
+     * The recommended version of the environment template.
      * </p>
      * 
-     * @return The ID of the recommended version of the environment template.
+     * @return The recommended version of the environment template.
      */
 
     public String getRecommendedVersion() {
@@ -407,11 +407,11 @@ public class EnvironmentTemplateSummary implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The ID of the recommended version of the environment template.
+     * The recommended version of the environment template.
      * </p>
      * 
      * @param recommendedVersion
-     *        The ID of the recommended version of the environment template.
+     *        The recommended version of the environment template.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

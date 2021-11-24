@@ -63,8 +63,9 @@ public class UpdateFunctionConfigurationRequest extends com.amazonaws.AmazonWebS
     private String role;
     /**
      * <p>
-     * The name of the method within your code that Lambda calls to execute your function. The format includes the file
-     * name. It can also include namespaces and other qualifiers, depending on the runtime. For more information, see <a
+     * The name of the method within your code that Lambda calls to execute your function. Handler is required if the
+     * deployment package is a .zip file archive. The format includes the file name. It can also include namespaces and
+     * other qualifiers, depending on the runtime. For more information, see <a
      * href="https://docs.aws.amazon.com/lambda/latest/dg/programming-model-v2.html">Programming Model</a>.
      * </p>
      */
@@ -109,7 +110,8 @@ public class UpdateFunctionConfigurationRequest extends com.amazonaws.AmazonWebS
     /**
      * <p>
      * The identifier of the function's <a
-     * href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html">runtime</a>.
+     * href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html">runtime</a>. Runtime is required if the
+     * deployment package is a .zip file archive.
      * </p>
      */
     private String runtime;
@@ -386,15 +388,16 @@ public class UpdateFunctionConfigurationRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The name of the method within your code that Lambda calls to execute your function. The format includes the file
-     * name. It can also include namespaces and other qualifiers, depending on the runtime. For more information, see <a
+     * The name of the method within your code that Lambda calls to execute your function. Handler is required if the
+     * deployment package is a .zip file archive. The format includes the file name. It can also include namespaces and
+     * other qualifiers, depending on the runtime. For more information, see <a
      * href="https://docs.aws.amazon.com/lambda/latest/dg/programming-model-v2.html">Programming Model</a>.
      * </p>
      * 
      * @param handler
-     *        The name of the method within your code that Lambda calls to execute your function. The format includes
-     *        the file name. It can also include namespaces and other qualifiers, depending on the runtime. For more
-     *        information, see <a
+     *        The name of the method within your code that Lambda calls to execute your function. Handler is required if
+     *        the deployment package is a .zip file archive. The format includes the file name. It can also include
+     *        namespaces and other qualifiers, depending on the runtime. For more information, see <a
      *        href="https://docs.aws.amazon.com/lambda/latest/dg/programming-model-v2.html">Programming Model</a>.
      */
 
@@ -404,14 +407,15 @@ public class UpdateFunctionConfigurationRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The name of the method within your code that Lambda calls to execute your function. The format includes the file
-     * name. It can also include namespaces and other qualifiers, depending on the runtime. For more information, see <a
+     * The name of the method within your code that Lambda calls to execute your function. Handler is required if the
+     * deployment package is a .zip file archive. The format includes the file name. It can also include namespaces and
+     * other qualifiers, depending on the runtime. For more information, see <a
      * href="https://docs.aws.amazon.com/lambda/latest/dg/programming-model-v2.html">Programming Model</a>.
      * </p>
      * 
-     * @return The name of the method within your code that Lambda calls to execute your function. The format includes
-     *         the file name. It can also include namespaces and other qualifiers, depending on the runtime. For more
-     *         information, see <a
+     * @return The name of the method within your code that Lambda calls to execute your function. Handler is required
+     *         if the deployment package is a .zip file archive. The format includes the file name. It can also include
+     *         namespaces and other qualifiers, depending on the runtime. For more information, see <a
      *         href="https://docs.aws.amazon.com/lambda/latest/dg/programming-model-v2.html">Programming Model</a>.
      */
 
@@ -421,15 +425,16 @@ public class UpdateFunctionConfigurationRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The name of the method within your code that Lambda calls to execute your function. The format includes the file
-     * name. It can also include namespaces and other qualifiers, depending on the runtime. For more information, see <a
+     * The name of the method within your code that Lambda calls to execute your function. Handler is required if the
+     * deployment package is a .zip file archive. The format includes the file name. It can also include namespaces and
+     * other qualifiers, depending on the runtime. For more information, see <a
      * href="https://docs.aws.amazon.com/lambda/latest/dg/programming-model-v2.html">Programming Model</a>.
      * </p>
      * 
      * @param handler
-     *        The name of the method within your code that Lambda calls to execute your function. The format includes
-     *        the file name. It can also include namespaces and other qualifiers, depending on the runtime. For more
-     *        information, see <a
+     *        The name of the method within your code that Lambda calls to execute your function. Handler is required if
+     *        the deployment package is a .zip file archive. The format includes the file name. It can also include
+     *        namespaces and other qualifiers, depending on the runtime. For more information, see <a
      *        href="https://docs.aws.amazon.com/lambda/latest/dg/programming-model-v2.html">Programming Model</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -687,12 +692,14 @@ public class UpdateFunctionConfigurationRequest extends com.amazonaws.AmazonWebS
     /**
      * <p>
      * The identifier of the function's <a
-     * href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html">runtime</a>.
+     * href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html">runtime</a>. Runtime is required if the
+     * deployment package is a .zip file archive.
      * </p>
      * 
      * @param runtime
      *        The identifier of the function's <a
-     *        href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html">runtime</a>.
+     *        href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html">runtime</a>. Runtime is required
+     *        if the deployment package is a .zip file archive.
      * @see Runtime
      */
 
@@ -703,11 +710,13 @@ public class UpdateFunctionConfigurationRequest extends com.amazonaws.AmazonWebS
     /**
      * <p>
      * The identifier of the function's <a
-     * href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html">runtime</a>.
+     * href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html">runtime</a>. Runtime is required if the
+     * deployment package is a .zip file archive.
      * </p>
      * 
      * @return The identifier of the function's <a
-     *         href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html">runtime</a>.
+     *         href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html">runtime</a>. Runtime is required
+     *         if the deployment package is a .zip file archive.
      * @see Runtime
      */
 
@@ -718,12 +727,14 @@ public class UpdateFunctionConfigurationRequest extends com.amazonaws.AmazonWebS
     /**
      * <p>
      * The identifier of the function's <a
-     * href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html">runtime</a>.
+     * href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html">runtime</a>. Runtime is required if the
+     * deployment package is a .zip file archive.
      * </p>
      * 
      * @param runtime
      *        The identifier of the function's <a
-     *        href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html">runtime</a>.
+     *        href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html">runtime</a>. Runtime is required
+     *        if the deployment package is a .zip file archive.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Runtime
      */
@@ -736,12 +747,14 @@ public class UpdateFunctionConfigurationRequest extends com.amazonaws.AmazonWebS
     /**
      * <p>
      * The identifier of the function's <a
-     * href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html">runtime</a>.
+     * href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html">runtime</a>. Runtime is required if the
+     * deployment package is a .zip file archive.
      * </p>
      * 
      * @param runtime
      *        The identifier of the function's <a
-     *        href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html">runtime</a>.
+     *        href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html">runtime</a>. Runtime is required
+     *        if the deployment package is a .zip file archive.
      * @see Runtime
      */
 
@@ -752,12 +765,14 @@ public class UpdateFunctionConfigurationRequest extends com.amazonaws.AmazonWebS
     /**
      * <p>
      * The identifier of the function's <a
-     * href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html">runtime</a>.
+     * href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html">runtime</a>. Runtime is required if the
+     * deployment package is a .zip file archive.
      * </p>
      * 
      * @param runtime
      *        The identifier of the function's <a
-     *        href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html">runtime</a>.
+     *        href="https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html">runtime</a>. Runtime is required
+     *        if the deployment package is a .zip file archive.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Runtime
      */

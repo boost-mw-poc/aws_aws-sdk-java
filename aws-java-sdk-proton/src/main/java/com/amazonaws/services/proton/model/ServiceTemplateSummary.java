@@ -73,7 +73,7 @@ public class ServiceTemplateSummary implements Serializable, Cloneable, Structur
     private String pipelineProvisioning;
     /**
      * <p>
-     * The ID of the recommended version of the service template.
+     * The recommended version of the service template.
      * </p>
      */
     private String recommendedVersion;
@@ -387,11 +387,11 @@ public class ServiceTemplateSummary implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The ID of the recommended version of the service template.
+     * The recommended version of the service template.
      * </p>
      * 
      * @param recommendedVersion
-     *        The ID of the recommended version of the service template.
+     *        The recommended version of the service template.
      */
 
     public void setRecommendedVersion(String recommendedVersion) {
@@ -400,10 +400,10 @@ public class ServiceTemplateSummary implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The ID of the recommended version of the service template.
+     * The recommended version of the service template.
      * </p>
      * 
-     * @return The ID of the recommended version of the service template.
+     * @return The recommended version of the service template.
      */
 
     public String getRecommendedVersion() {
@@ -412,11 +412,11 @@ public class ServiceTemplateSummary implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The ID of the recommended version of the service template.
+     * The recommended version of the service template.
      * </p>
      * 
      * @param recommendedVersion
-     *        The ID of the recommended version of the service template.
+     *        The recommended version of the service template.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

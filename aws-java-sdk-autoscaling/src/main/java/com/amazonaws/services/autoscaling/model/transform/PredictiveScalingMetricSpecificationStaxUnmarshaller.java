@@ -65,6 +65,24 @@ public class PredictiveScalingMetricSpecificationStaxUnmarshaller implements Unm
                             .getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("CustomizedScalingMetricSpecification", targetDepth)) {
+                    predictiveScalingMetricSpecification.setCustomizedScalingMetricSpecification(PredictiveScalingCustomizedScalingMetricStaxUnmarshaller
+                            .getInstance().unmarshall(context));
+                    continue;
+                }
+
+                if (context.testExpression("CustomizedLoadMetricSpecification", targetDepth)) {
+                    predictiveScalingMetricSpecification.setCustomizedLoadMetricSpecification(PredictiveScalingCustomizedLoadMetricStaxUnmarshaller
+                            .getInstance().unmarshall(context));
+                    continue;
+                }
+
+                if (context.testExpression("CustomizedCapacityMetricSpecification", targetDepth)) {
+                    predictiveScalingMetricSpecification.setCustomizedCapacityMetricSpecification(PredictiveScalingCustomizedCapacityMetricStaxUnmarshaller
+                            .getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return predictiveScalingMetricSpecification;

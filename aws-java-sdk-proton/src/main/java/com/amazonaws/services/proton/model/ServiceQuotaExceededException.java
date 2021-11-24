@@ -17,7 +17,7 @@ import javax.annotation.Generated;
 /**
  * <p>
  * A quota was exceeded. For more information, see <a
- * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-limits.html">AWS Proton Quotas</a> in the <i>AWS Proton
+ * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-limits.html">Proton Quotas</a> in the <i>Proton
  * Administrator Guide</i>.
  * </p>
  */

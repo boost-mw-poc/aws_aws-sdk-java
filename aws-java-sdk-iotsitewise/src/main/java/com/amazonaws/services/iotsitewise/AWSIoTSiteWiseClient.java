@@ -258,6 +258,90 @@ public class AWSIoTSiteWiseClient extends AmazonWebServiceClient implements AWSI
 
     /**
      * <p>
+     * Associates a time series (data stream) with an asset property.
+     * </p>
+     * 
+     * @param associateTimeSeriesToAssetPropertyRequest
+     * @return Result of the AssociateTimeSeriesToAssetProperty operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request isn't valid. This can occur if your request contains malformed JSON or unsupported
+     *         characters. Check your request and try again.
+     * @throws ResourceNotFoundException
+     *         The requested resource can't be found.
+     * @throws InternalFailureException
+     *         IoT SiteWise can't process your request right now. Try again later.
+     * @throws ThrottlingException
+     *         Your request exceeded a rate limit. For example, you might have exceeded the number of IoT SiteWise
+     *         assets that can be created per second, the allowed number of messages per second, and so on.</p>
+     *         <p>
+     *         For more information, see <a
+     *         href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/quotas.html">Quotas</a> in the <i>IoT
+     *         SiteWise User Guide</i>.
+     * @throws ConflictingOperationException
+     *         Your request has conflicting operations. This can occur if you're trying to perform more than one
+     *         operation on the same resource at the same time.
+     * @sample AWSIoTSiteWise.AssociateTimeSeriesToAssetProperty
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotsitewise-2019-12-02/AssociateTimeSeriesToAssetProperty"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public AssociateTimeSeriesToAssetPropertyResult associateTimeSeriesToAssetProperty(AssociateTimeSeriesToAssetPropertyRequest request) {
+        request = beforeClientExecution(request);
+        return executeAssociateTimeSeriesToAssetProperty(request);
+    }
+
+    @SdkInternalApi
+    final AssociateTimeSeriesToAssetPropertyResult executeAssociateTimeSeriesToAssetProperty(
+            AssociateTimeSeriesToAssetPropertyRequest associateTimeSeriesToAssetPropertyRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(associateTimeSeriesToAssetPropertyRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<AssociateTimeSeriesToAssetPropertyRequest> request = null;
+        Response<AssociateTimeSeriesToAssetPropertyResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new AssociateTimeSeriesToAssetPropertyRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(associateTimeSeriesToAssetPropertyRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "IoTSiteWise");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "AssociateTimeSeriesToAssetProperty");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            URI endpointTraitHost = null;
+            if (!clientConfiguration.isDisableHostPrefixInjection()) {
+
+                String hostPrefix = "api.";
+                String resolvedHostPrefix = String.format("api.");
+
+                endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<AssociateTimeSeriesToAssetPropertyResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new AssociateTimeSeriesToAssetPropertyResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Associates a group (batch) of assets with an IoT SiteWise Monitor project.
      * </p>
      * 
@@ -1113,6 +1197,11 @@ public class AWSIoTSiteWiseClient extends AmazonWebServiceClient implements AWSI
      * <p>
      * Creates a project in the specified portal.
      * </p>
+     * <note>
+     * <p>
+     * Make sure that the project name and description don't contain confidential information.
+     * </p>
+     * </note>
      * 
      * @param createProjectRequest
      * @return Result of the CreateProject operation returned by the service.
@@ -1757,6 +1846,115 @@ public class AWSIoTSiteWiseClient extends AmazonWebServiceClient implements AWSI
 
             HttpResponseHandler<AmazonWebServiceResponse<DeleteProjectResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DeleteProjectResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Deletes a time series (data stream). If you delete a time series that's associated with an asset property, the
+     * asset property still exists, but the time series will no longer be associated with this asset property.
+     * </p>
+     * <p>
+     * To identify a time series, do one of the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * If the time series isn't associated with an asset property, specify the <code>alias</code> of the time series.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If the time series is associated with an asset property, specify one of the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The <code>alias</code> of the time series.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The <code>assetId</code> and <code>propertyId</code> that identifies the asset property.
+     * </p>
+     * </li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
+     * @param deleteTimeSeriesRequest
+     * @return Result of the DeleteTimeSeries operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request isn't valid. This can occur if your request contains malformed JSON or unsupported
+     *         characters. Check your request and try again.
+     * @throws ResourceNotFoundException
+     *         The requested resource can't be found.
+     * @throws InternalFailureException
+     *         IoT SiteWise can't process your request right now. Try again later.
+     * @throws ThrottlingException
+     *         Your request exceeded a rate limit. For example, you might have exceeded the number of IoT SiteWise
+     *         assets that can be created per second, the allowed number of messages per second, and so on.</p>
+     *         <p>
+     *         For more information, see <a
+     *         href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/quotas.html">Quotas</a> in the <i>IoT
+     *         SiteWise User Guide</i>.
+     * @throws ConflictingOperationException
+     *         Your request has conflicting operations. This can occur if you're trying to perform more than one
+     *         operation on the same resource at the same time.
+     * @sample AWSIoTSiteWise.DeleteTimeSeries
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotsitewise-2019-12-02/DeleteTimeSeries" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public DeleteTimeSeriesResult deleteTimeSeries(DeleteTimeSeriesRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteTimeSeries(request);
+    }
+
+    @SdkInternalApi
+    final DeleteTimeSeriesResult executeDeleteTimeSeries(DeleteTimeSeriesRequest deleteTimeSeriesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteTimeSeriesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteTimeSeriesRequest> request = null;
+        Response<DeleteTimeSeriesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteTimeSeriesRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(deleteTimeSeriesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "IoTSiteWise");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteTimeSeries");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            URI endpointTraitHost = null;
+            if (!clientConfiguration.isDisableHostPrefixInjection()) {
+
+                String hostPrefix = "api.";
+                String resolvedHostPrefix = String.format("api.");
+
+                endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteTimeSeriesResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DeleteTimeSeriesResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
 
             return response.getAwsResponse();
@@ -2746,6 +2944,111 @@ public class AWSIoTSiteWiseClient extends AmazonWebServiceClient implements AWSI
 
     /**
      * <p>
+     * Retrieves information about a time series (data stream).
+     * </p>
+     * <p>
+     * To identify a time series, do one of the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * If the time series isn't associated with an asset property, specify the <code>alias</code> of the time series.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If the time series is associated with an asset property, specify one of the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The <code>alias</code> of the time series.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The <code>assetId</code> and <code>propertyId</code> that identifies the asset property.
+     * </p>
+     * </li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
+     * @param describeTimeSeriesRequest
+     * @return Result of the DescribeTimeSeries operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request isn't valid. This can occur if your request contains malformed JSON or unsupported
+     *         characters. Check your request and try again.
+     * @throws ResourceNotFoundException
+     *         The requested resource can't be found.
+     * @throws InternalFailureException
+     *         IoT SiteWise can't process your request right now. Try again later.
+     * @throws ThrottlingException
+     *         Your request exceeded a rate limit. For example, you might have exceeded the number of IoT SiteWise
+     *         assets that can be created per second, the allowed number of messages per second, and so on.</p>
+     *         <p>
+     *         For more information, see <a
+     *         href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/quotas.html">Quotas</a> in the <i>IoT
+     *         SiteWise User Guide</i>.
+     * @sample AWSIoTSiteWise.DescribeTimeSeries
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotsitewise-2019-12-02/DescribeTimeSeries" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public DescribeTimeSeriesResult describeTimeSeries(DescribeTimeSeriesRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeTimeSeries(request);
+    }
+
+    @SdkInternalApi
+    final DescribeTimeSeriesResult executeDescribeTimeSeries(DescribeTimeSeriesRequest describeTimeSeriesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeTimeSeriesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeTimeSeriesRequest> request = null;
+        Response<DescribeTimeSeriesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeTimeSeriesRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(describeTimeSeriesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "IoTSiteWise");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeTimeSeries");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            URI endpointTraitHost = null;
+            if (!clientConfiguration.isDisableHostPrefixInjection()) {
+
+                String hostPrefix = "api.";
+                String resolvedHostPrefix = String.format("api.");
+
+                endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DescribeTimeSeriesResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DescribeTimeSeriesResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Disassociates a child asset from the given parent asset through a hierarchy defined in the parent asset's model.
      * </p>
      * 
@@ -2815,6 +3118,91 @@ public class AWSIoTSiteWiseClient extends AmazonWebServiceClient implements AWSI
 
             HttpResponseHandler<AmazonWebServiceResponse<DisassociateAssetsResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DisassociateAssetsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Disassociates a time series (data stream) from an asset property.
+     * </p>
+     * 
+     * @param disassociateTimeSeriesFromAssetPropertyRequest
+     * @return Result of the DisassociateTimeSeriesFromAssetProperty operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request isn't valid. This can occur if your request contains malformed JSON or unsupported
+     *         characters. Check your request and try again.
+     * @throws ResourceNotFoundException
+     *         The requested resource can't be found.
+     * @throws InternalFailureException
+     *         IoT SiteWise can't process your request right now. Try again later.
+     * @throws ThrottlingException
+     *         Your request exceeded a rate limit. For example, you might have exceeded the number of IoT SiteWise
+     *         assets that can be created per second, the allowed number of messages per second, and so on.</p>
+     *         <p>
+     *         For more information, see <a
+     *         href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/quotas.html">Quotas</a> in the <i>IoT
+     *         SiteWise User Guide</i>.
+     * @throws ConflictingOperationException
+     *         Your request has conflicting operations. This can occur if you're trying to perform more than one
+     *         operation on the same resource at the same time.
+     * @sample AWSIoTSiteWise.DisassociateTimeSeriesFromAssetProperty
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/iotsitewise-2019-12-02/DisassociateTimeSeriesFromAssetProperty"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DisassociateTimeSeriesFromAssetPropertyResult disassociateTimeSeriesFromAssetProperty(DisassociateTimeSeriesFromAssetPropertyRequest request) {
+        request = beforeClientExecution(request);
+        return executeDisassociateTimeSeriesFromAssetProperty(request);
+    }
+
+    @SdkInternalApi
+    final DisassociateTimeSeriesFromAssetPropertyResult executeDisassociateTimeSeriesFromAssetProperty(
+            DisassociateTimeSeriesFromAssetPropertyRequest disassociateTimeSeriesFromAssetPropertyRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(disassociateTimeSeriesFromAssetPropertyRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DisassociateTimeSeriesFromAssetPropertyRequest> request = null;
+        Response<DisassociateTimeSeriesFromAssetPropertyResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DisassociateTimeSeriesFromAssetPropertyRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(disassociateTimeSeriesFromAssetPropertyRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "IoTSiteWise");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DisassociateTimeSeriesFromAssetProperty");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            URI endpointTraitHost = null;
+            if (!clientConfiguration.isDisableHostPrefixInjection()) {
+
+                String hostPrefix = "api.";
+                String resolvedHostPrefix = String.format("api.");
+
+                endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DisassociateTimeSeriesFromAssetPropertyResult>> responseHandler = protocolFactory
+                    .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                            new DisassociateTimeSeriesFromAssetPropertyResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
 
             return response.getAwsResponse();
@@ -4123,6 +4511,84 @@ public class AWSIoTSiteWiseClient extends AmazonWebServiceClient implements AWSI
 
             HttpResponseHandler<AmazonWebServiceResponse<ListTagsForResourceResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListTagsForResourceResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Retrieves a paginated list of time series (data streams).
+     * </p>
+     * 
+     * @param listTimeSeriesRequest
+     * @return Result of the ListTimeSeries operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request isn't valid. This can occur if your request contains malformed JSON or unsupported
+     *         characters. Check your request and try again.
+     * @throws ResourceNotFoundException
+     *         The requested resource can't be found.
+     * @throws InternalFailureException
+     *         IoT SiteWise can't process your request right now. Try again later.
+     * @throws ThrottlingException
+     *         Your request exceeded a rate limit. For example, you might have exceeded the number of IoT SiteWise
+     *         assets that can be created per second, the allowed number of messages per second, and so on.</p>
+     *         <p>
+     *         For more information, see <a
+     *         href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/quotas.html">Quotas</a> in the <i>IoT
+     *         SiteWise User Guide</i>.
+     * @sample AWSIoTSiteWise.ListTimeSeries
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotsitewise-2019-12-02/ListTimeSeries" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public ListTimeSeriesResult listTimeSeries(ListTimeSeriesRequest request) {
+        request = beforeClientExecution(request);
+        return executeListTimeSeries(request);
+    }
+
+    @SdkInternalApi
+    final ListTimeSeriesResult executeListTimeSeries(ListTimeSeriesRequest listTimeSeriesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listTimeSeriesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListTimeSeriesRequest> request = null;
+        Response<ListTimeSeriesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListTimeSeriesRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listTimeSeriesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "IoTSiteWise");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListTimeSeries");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            URI endpointTraitHost = null;
+            if (!clientConfiguration.isDisableHostPrefixInjection()) {
+
+                String hostPrefix = "api.";
+                String resolvedHostPrefix = String.format("api.");
+
+                endpointTraitHost = UriResourcePathUtils.updateUriHost(endpoint, resolvedHostPrefix);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListTimeSeriesResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListTimeSeriesResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext, null, endpointTraitHost);
 
             return response.getAwsResponse();

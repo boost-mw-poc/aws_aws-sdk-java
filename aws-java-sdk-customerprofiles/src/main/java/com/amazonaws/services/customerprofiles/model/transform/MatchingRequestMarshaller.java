@@ -29,6 +29,12 @@ public class MatchingRequestMarshaller {
 
     private static final MarshallingInfo<Boolean> ENABLED_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Enabled").build();
+    private static final MarshallingInfo<StructuredPojo> JOBSCHEDULE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("JobSchedule").build();
+    private static final MarshallingInfo<StructuredPojo> AUTOMERGING_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AutoMerging").build();
+    private static final MarshallingInfo<StructuredPojo> EXPORTINGCONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ExportingConfig").build();
 
     private static final MatchingRequestMarshaller instance = new MatchingRequestMarshaller();
 
@@ -47,6 +53,9 @@ public class MatchingRequestMarshaller {
 
         try {
             protocolMarshaller.marshall(matchingRequest.getEnabled(), ENABLED_BINDING);
+            protocolMarshaller.marshall(matchingRequest.getJobSchedule(), JOBSCHEDULE_BINDING);
+            protocolMarshaller.marshall(matchingRequest.getAutoMerging(), AUTOMERGING_BINDING);
+            protocolMarshaller.marshall(matchingRequest.getExportingConfig(), EXPORTINGCONFIG_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

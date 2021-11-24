@@ -37,6 +37,8 @@ public class UpdateEnvironmentRequestMarshaller {
             .marshallLocationName("name").build();
     private static final MarshallingInfo<String> PROTONSERVICEROLEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("protonServiceRoleArn").build();
+    private static final MarshallingInfo<StructuredPojo> PROVISIONINGREPOSITORY_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("provisioningRepository").build();
     private static final MarshallingInfo<String> SPEC_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("spec").build();
     private static final MarshallingInfo<String> TEMPLATEMAJORVERSION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
@@ -65,6 +67,7 @@ public class UpdateEnvironmentRequestMarshaller {
             protocolMarshaller.marshall(updateEnvironmentRequest.getEnvironmentAccountConnectionId(), ENVIRONMENTACCOUNTCONNECTIONID_BINDING);
             protocolMarshaller.marshall(updateEnvironmentRequest.getName(), NAME_BINDING);
             protocolMarshaller.marshall(updateEnvironmentRequest.getProtonServiceRoleArn(), PROTONSERVICEROLEARN_BINDING);
+            protocolMarshaller.marshall(updateEnvironmentRequest.getProvisioningRepository(), PROVISIONINGREPOSITORY_BINDING);
             protocolMarshaller.marshall(updateEnvironmentRequest.getSpec(), SPEC_BINDING);
             protocolMarshaller.marshall(updateEnvironmentRequest.getTemplateMajorVersion(), TEMPLATEMAJORVERSION_BINDING);
             protocolMarshaller.marshall(updateEnvironmentRequest.getTemplateMinorVersion(), TEMPLATEMINORVERSION_BINDING);

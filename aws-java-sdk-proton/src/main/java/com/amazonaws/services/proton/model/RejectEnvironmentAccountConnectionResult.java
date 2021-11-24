@@ -26,18 +26,18 @@ public class RejectEnvironmentAccountConnectionResult extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * The environment connection account detail data that's returned by AWS Proton.
+     * The environment connection account detail data that's returned by Proton.
      * </p>
      */
     private EnvironmentAccountConnection environmentAccountConnection;
 
     /**
      * <p>
-     * The environment connection account detail data that's returned by AWS Proton.
+     * The environment connection account detail data that's returned by Proton.
      * </p>
      * 
      * @param environmentAccountConnection
-     *        The environment connection account detail data that's returned by AWS Proton.
+     *        The environment connection account detail data that's returned by Proton.
      */
 
     public void setEnvironmentAccountConnection(EnvironmentAccountConnection environmentAccountConnection) {
@@ -46,10 +46,10 @@ public class RejectEnvironmentAccountConnectionResult extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * The environment connection account detail data that's returned by AWS Proton.
+     * The environment connection account detail data that's returned by Proton.
      * </p>
      * 
-     * @return The environment connection account detail data that's returned by AWS Proton.
+     * @return The environment connection account detail data that's returned by Proton.
      */
 
     public EnvironmentAccountConnection getEnvironmentAccountConnection() {
@@ -58,11 +58,11 @@ public class RejectEnvironmentAccountConnectionResult extends com.amazonaws.Amaz
 
     /**
      * <p>
-     * The environment connection account detail data that's returned by AWS Proton.
+     * The environment connection account detail data that's returned by Proton.
      * </p>
      * 
      * @param environmentAccountConnection
-     *        The environment connection account detail data that's returned by AWS Proton.
+     *        The environment connection account detail data that's returned by Proton.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

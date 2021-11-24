@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * An object that specifies a filter criteria.
+ * A structure within a <code>FilterCriteria</code> object that defines an event filtering pattern.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/Filter" target="_top">AWS API
@@ -31,8 +31,8 @@ public class Filter implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * A filter pattern. For more information on the syntax of a filter pattern, see <a
-     * href="https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html#filtering-syntax"> Filter
-     * criteria syntax</a>.
+     * href="https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html#filtering-syntax"> Filter rule
+     * syntax</a>.
      * </p>
      */
     private String pattern;
@@ -40,14 +40,14 @@ public class Filter implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * A filter pattern. For more information on the syntax of a filter pattern, see <a
-     * href="https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html#filtering-syntax"> Filter
-     * criteria syntax</a>.
+     * href="https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html#filtering-syntax"> Filter rule
+     * syntax</a>.
      * </p>
      * 
      * @param pattern
      *        A filter pattern. For more information on the syntax of a filter pattern, see <a
      *        href="https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html#filtering-syntax">
-     *        Filter criteria syntax</a>.
+     *        Filter rule syntax</a>.
      */
 
     public void setPattern(String pattern) {
@@ -57,13 +57,13 @@ public class Filter implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * A filter pattern. For more information on the syntax of a filter pattern, see <a
-     * href="https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html#filtering-syntax"> Filter
-     * criteria syntax</a>.
+     * href="https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html#filtering-syntax"> Filter rule
+     * syntax</a>.
      * </p>
      * 
      * @return A filter pattern. For more information on the syntax of a filter pattern, see <a
      *         href="https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html#filtering-syntax">
-     *         Filter criteria syntax</a>.
+     *         Filter rule syntax</a>.
      */
 
     public String getPattern() {
@@ -73,14 +73,14 @@ public class Filter implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * A filter pattern. For more information on the syntax of a filter pattern, see <a
-     * href="https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html#filtering-syntax"> Filter
-     * criteria syntax</a>.
+     * href="https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html#filtering-syntax"> Filter rule
+     * syntax</a>.
      * </p>
      * 
      * @param pattern
      *        A filter pattern. For more information on the syntax of a filter pattern, see <a
      *        href="https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html#filtering-syntax">
-     *        Filter criteria syntax</a>.
+     *        Filter rule syntax</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -1091,69 +1091,6 @@ public class AWSLambdaClient extends AmazonWebServiceClient implements AWSLambda
     }
 
     /**
-     * @param createFunctionUrlConfigRequest
-     * @return Result of the CreateFunctionUrlConfig operation returned by the service.
-     * @throws ResourceConflictException
-     *         The resource already exists, or another operation is in progress.
-     * @throws ResourceNotFoundException
-     *         The resource specified in the request does not exist.
-     * @throws InvalidParameterValueException
-     *         One of the parameters in the request is invalid.
-     * @throws ServiceException
-     *         The Lambda service encountered an internal error.
-     * @throws TooManyRequestsException
-     *         The request throughput limit was exceeded.
-     * @sample AWSLambda.CreateFunctionUrlConfig
-     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/CreateFunctionUrlConfig" target="_top">AWS
-     *      API Documentation</a>
-     */
-    @Override
-    public CreateFunctionUrlConfigResult createFunctionUrlConfig(CreateFunctionUrlConfigRequest request) {
-        request = beforeClientExecution(request);
-        return executeCreateFunctionUrlConfig(request);
-    }
-
-    @SdkInternalApi
-    final CreateFunctionUrlConfigResult executeCreateFunctionUrlConfig(CreateFunctionUrlConfigRequest createFunctionUrlConfigRequest) {
-
-        ExecutionContext executionContext = createExecutionContext(createFunctionUrlConfigRequest);
-        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
-        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
-        Request<CreateFunctionUrlConfigRequest> request = null;
-        Response<CreateFunctionUrlConfigResult> response = null;
-
-        try {
-            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
-            try {
-                request = new CreateFunctionUrlConfigRequestProtocolMarshaller(protocolFactory).marshall(super
-                        .beforeMarshalling(createFunctionUrlConfigRequest));
-                // Binds the request metrics to the current request.
-                request.setAWSRequestMetrics(awsRequestMetrics);
-                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
-                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
-                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
-                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Lambda");
-                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateFunctionUrlConfig");
-                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
-
-            } finally {
-                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
-            }
-
-            HttpResponseHandler<AmazonWebServiceResponse<CreateFunctionUrlConfigResult>> responseHandler = protocolFactory.createResponseHandler(
-                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
-                    new CreateFunctionUrlConfigResultJsonUnmarshaller());
-            response = invoke(request, responseHandler, executionContext);
-
-            return response.getAwsResponse();
-
-        } finally {
-
-            endClientExecution(awsRequestMetrics, request, response);
-        }
-    }
-
-    /**
      * <p>
      * Deletes a Lambda function <a
      * href="https://docs.aws.amazon.com/lambda/latest/dg/versioning-aliases.html">alias</a>.
@@ -1626,67 +1563,6 @@ public class AWSLambdaClient extends AmazonWebServiceClient implements AWSLambda
             HttpResponseHandler<AmazonWebServiceResponse<DeleteFunctionEventInvokeConfigResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new DeleteFunctionEventInvokeConfigResultJsonUnmarshaller());
-            response = invoke(request, responseHandler, executionContext);
-
-            return response.getAwsResponse();
-
-        } finally {
-
-            endClientExecution(awsRequestMetrics, request, response);
-        }
-    }
-
-    /**
-     * @param deleteFunctionUrlConfigRequest
-     * @return Result of the DeleteFunctionUrlConfig operation returned by the service.
-     * @throws ResourceConflictException
-     *         The resource already exists, or another operation is in progress.
-     * @throws ResourceNotFoundException
-     *         The resource specified in the request does not exist.
-     * @throws ServiceException
-     *         The Lambda service encountered an internal error.
-     * @throws TooManyRequestsException
-     *         The request throughput limit was exceeded.
-     * @sample AWSLambda.DeleteFunctionUrlConfig
-     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/DeleteFunctionUrlConfig" target="_top">AWS
-     *      API Documentation</a>
-     */
-    @Override
-    public DeleteFunctionUrlConfigResult deleteFunctionUrlConfig(DeleteFunctionUrlConfigRequest request) {
-        request = beforeClientExecution(request);
-        return executeDeleteFunctionUrlConfig(request);
-    }
-
-    @SdkInternalApi
-    final DeleteFunctionUrlConfigResult executeDeleteFunctionUrlConfig(DeleteFunctionUrlConfigRequest deleteFunctionUrlConfigRequest) {
-
-        ExecutionContext executionContext = createExecutionContext(deleteFunctionUrlConfigRequest);
-        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
-        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
-        Request<DeleteFunctionUrlConfigRequest> request = null;
-        Response<DeleteFunctionUrlConfigResult> response = null;
-
-        try {
-            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
-            try {
-                request = new DeleteFunctionUrlConfigRequestProtocolMarshaller(protocolFactory).marshall(super
-                        .beforeMarshalling(deleteFunctionUrlConfigRequest));
-                // Binds the request metrics to the current request.
-                request.setAWSRequestMetrics(awsRequestMetrics);
-                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
-                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
-                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
-                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Lambda");
-                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteFunctionUrlConfig");
-                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
-
-            } finally {
-                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
-            }
-
-            HttpResponseHandler<AmazonWebServiceResponse<DeleteFunctionUrlConfigResult>> responseHandler = protocolFactory.createResponseHandler(
-                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
-                    new DeleteFunctionUrlConfigResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -2399,65 +2275,6 @@ public class AWSLambdaClient extends AmazonWebServiceClient implements AWSLambda
             HttpResponseHandler<AmazonWebServiceResponse<GetFunctionEventInvokeConfigResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new GetFunctionEventInvokeConfigResultJsonUnmarshaller());
-            response = invoke(request, responseHandler, executionContext);
-
-            return response.getAwsResponse();
-
-        } finally {
-
-            endClientExecution(awsRequestMetrics, request, response);
-        }
-    }
-
-    /**
-     * @param getFunctionUrlConfigRequest
-     * @return Result of the GetFunctionUrlConfig operation returned by the service.
-     * @throws InvalidParameterValueException
-     *         One of the parameters in the request is invalid.
-     * @throws ServiceException
-     *         The Lambda service encountered an internal error.
-     * @throws ResourceNotFoundException
-     *         The resource specified in the request does not exist.
-     * @throws TooManyRequestsException
-     *         The request throughput limit was exceeded.
-     * @sample AWSLambda.GetFunctionUrlConfig
-     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/GetFunctionUrlConfig" target="_top">AWS
-     *      API Documentation</a>
-     */
-    @Override
-    public GetFunctionUrlConfigResult getFunctionUrlConfig(GetFunctionUrlConfigRequest request) {
-        request = beforeClientExecution(request);
-        return executeGetFunctionUrlConfig(request);
-    }
-
-    @SdkInternalApi
-    final GetFunctionUrlConfigResult executeGetFunctionUrlConfig(GetFunctionUrlConfigRequest getFunctionUrlConfigRequest) {
-
-        ExecutionContext executionContext = createExecutionContext(getFunctionUrlConfigRequest);
-        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
-        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
-        Request<GetFunctionUrlConfigRequest> request = null;
-        Response<GetFunctionUrlConfigResult> response = null;
-
-        try {
-            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
-            try {
-                request = new GetFunctionUrlConfigRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getFunctionUrlConfigRequest));
-                // Binds the request metrics to the current request.
-                request.setAWSRequestMetrics(awsRequestMetrics);
-                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
-                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
-                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
-                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Lambda");
-                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetFunctionUrlConfig");
-                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
-
-            } finally {
-                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
-            }
-
-            HttpResponseHandler<AmazonWebServiceResponse<GetFunctionUrlConfigResult>> responseHandler = protocolFactory.createResponseHandler(
-                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetFunctionUrlConfigResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -3281,66 +3098,6 @@ public class AWSLambdaClient extends AmazonWebServiceClient implements AWSLambda
             HttpResponseHandler<AmazonWebServiceResponse<ListFunctionEventInvokeConfigsResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new ListFunctionEventInvokeConfigsResultJsonUnmarshaller());
-            response = invoke(request, responseHandler, executionContext);
-
-            return response.getAwsResponse();
-
-        } finally {
-
-            endClientExecution(awsRequestMetrics, request, response);
-        }
-    }
-
-    /**
-     * @param listFunctionUrlConfigsRequest
-     * @return Result of the ListFunctionUrlConfigs operation returned by the service.
-     * @throws InvalidParameterValueException
-     *         One of the parameters in the request is invalid.
-     * @throws ServiceException
-     *         The Lambda service encountered an internal error.
-     * @throws ResourceNotFoundException
-     *         The resource specified in the request does not exist.
-     * @throws TooManyRequestsException
-     *         The request throughput limit was exceeded.
-     * @sample AWSLambda.ListFunctionUrlConfigs
-     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/ListFunctionUrlConfigs" target="_top">AWS
-     *      API Documentation</a>
-     */
-    @Override
-    public ListFunctionUrlConfigsResult listFunctionUrlConfigs(ListFunctionUrlConfigsRequest request) {
-        request = beforeClientExecution(request);
-        return executeListFunctionUrlConfigs(request);
-    }
-
-    @SdkInternalApi
-    final ListFunctionUrlConfigsResult executeListFunctionUrlConfigs(ListFunctionUrlConfigsRequest listFunctionUrlConfigsRequest) {
-
-        ExecutionContext executionContext = createExecutionContext(listFunctionUrlConfigsRequest);
-        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
-        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
-        Request<ListFunctionUrlConfigsRequest> request = null;
-        Response<ListFunctionUrlConfigsResult> response = null;
-
-        try {
-            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
-            try {
-                request = new ListFunctionUrlConfigsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listFunctionUrlConfigsRequest));
-                // Binds the request metrics to the current request.
-                request.setAWSRequestMetrics(awsRequestMetrics);
-                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
-                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
-                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
-                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Lambda");
-                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListFunctionUrlConfigs");
-                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
-
-            } finally {
-                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
-            }
-
-            HttpResponseHandler<AmazonWebServiceResponse<ListFunctionUrlConfigsResult>> responseHandler = protocolFactory.createResponseHandler(
-                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
-                    new ListFunctionUrlConfigsResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -5106,69 +4863,6 @@ public class AWSLambdaClient extends AmazonWebServiceClient implements AWSLambda
             HttpResponseHandler<AmazonWebServiceResponse<UpdateFunctionEventInvokeConfigResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new UpdateFunctionEventInvokeConfigResultJsonUnmarshaller());
-            response = invoke(request, responseHandler, executionContext);
-
-            return response.getAwsResponse();
-
-        } finally {
-
-            endClientExecution(awsRequestMetrics, request, response);
-        }
-    }
-
-    /**
-     * @param updateFunctionUrlConfigRequest
-     * @return Result of the UpdateFunctionUrlConfig operation returned by the service.
-     * @throws ResourceConflictException
-     *         The resource already exists, or another operation is in progress.
-     * @throws ResourceNotFoundException
-     *         The resource specified in the request does not exist.
-     * @throws InvalidParameterValueException
-     *         One of the parameters in the request is invalid.
-     * @throws ServiceException
-     *         The Lambda service encountered an internal error.
-     * @throws TooManyRequestsException
-     *         The request throughput limit was exceeded.
-     * @sample AWSLambda.UpdateFunctionUrlConfig
-     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lambda-2015-03-31/UpdateFunctionUrlConfig" target="_top">AWS
-     *      API Documentation</a>
-     */
-    @Override
-    public UpdateFunctionUrlConfigResult updateFunctionUrlConfig(UpdateFunctionUrlConfigRequest request) {
-        request = beforeClientExecution(request);
-        return executeUpdateFunctionUrlConfig(request);
-    }
-
-    @SdkInternalApi
-    final UpdateFunctionUrlConfigResult executeUpdateFunctionUrlConfig(UpdateFunctionUrlConfigRequest updateFunctionUrlConfigRequest) {
-
-        ExecutionContext executionContext = createExecutionContext(updateFunctionUrlConfigRequest);
-        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
-        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
-        Request<UpdateFunctionUrlConfigRequest> request = null;
-        Response<UpdateFunctionUrlConfigResult> response = null;
-
-        try {
-            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
-            try {
-                request = new UpdateFunctionUrlConfigRequestProtocolMarshaller(protocolFactory).marshall(super
-                        .beforeMarshalling(updateFunctionUrlConfigRequest));
-                // Binds the request metrics to the current request.
-                request.setAWSRequestMetrics(awsRequestMetrics);
-                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
-                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
-                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
-                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Lambda");
-                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateFunctionUrlConfig");
-                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
-
-            } finally {
-                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
-            }
-
-            HttpResponseHandler<AmazonWebServiceResponse<UpdateFunctionUrlConfigResult>> responseHandler = protocolFactory.createResponseHandler(
-                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
-                    new UpdateFunctionUrlConfigResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

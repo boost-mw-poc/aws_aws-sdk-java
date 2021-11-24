@@ -109,6 +109,13 @@ public class Snapshot implements Serializable, Cloneable {
      * <code>cache.m4.4xlarge</code>, <code>cache.m4.10xlarge</code>
      * </p>
      * <p>
+     * <b>T4g node types</b> (available only for Redis engine version 5.0.6 onward and Memcached engine version 1.5.16
+     * onward):
+     * </p>
+     * <p>
+     * <code>cache.t4g.micro</code>, <code>cache.t4g.small</code>, <code>cache.t4g.medium</code>
+     * </p>
+     * <p>
      * <b>T3 node types:</b> <code>cache.t3.micro</code>, <code>cache.t3.small</code>, <code>cache.t3.medium</code>
      * </p>
      * <p>
@@ -150,7 +157,7 @@ public class Snapshot implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * Memory optimized:
+     * Memory optimized with data tiering:
      * </p>
      * <ul>
      * <li>
@@ -164,6 +171,18 @@ public class Snapshot implements Serializable, Cloneable {
      * <code>cache.r6gd.xlarge</code>, <code>cache.r6gd.2xlarge</code>, <code>cache.r6gd.4xlarge</code>,
      * <code>cache.r6gd.8xlarge</code>, <code>cache.r6gd.12xlarge</code>, <code>cache.r6gd.16xlarge</code>
      * </p>
+     * </li>
+     * </ul>
+     * </li>
+     * <li>
+     * <p>
+     * Memory optimized:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Current generation:
+     * </p>
      * <p>
      * <b>R6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine version
      * 1.5.16 onward).
@@ -174,6 +193,12 @@ public class Snapshot implements Serializable, Cloneable {
      * <code>cache.r6g.16xlarge</code>
      * </p>
      * <note>
+     * <p>
+     * For region availability, see <a href=
+     * "https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html#CacheNodes.SupportedTypesByRegion"
+     * >Supported Node Types</a>
+     * </p>
+     * </note> <note>
      * <p>
      * For region availability, see <a href=
      * "https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html#CacheNodes.SupportedTypesByRegion"
@@ -355,7 +380,7 @@ public class Snapshot implements Serializable, Cloneable {
     /**
      * <p>
      *  If you are running Redis engine version 6.0 or later, set this parameter to yes if you want to opt-in to the
-     * next minor version upgrade campaign. This parameter is disabled for previous versions. 
+     * next auto minor version upgrade campaign. This parameter is disabled for previous versions. 
      * </p>
      */
     private Boolean autoMinorVersionUpgrade;
@@ -721,6 +746,13 @@ public class Snapshot implements Serializable, Cloneable {
      * <code>cache.m4.4xlarge</code>, <code>cache.m4.10xlarge</code>
      * </p>
      * <p>
+     * <b>T4g node types</b> (available only for Redis engine version 5.0.6 onward and Memcached engine version 1.5.16
+     * onward):
+     * </p>
+     * <p>
+     * <code>cache.t4g.micro</code>, <code>cache.t4g.small</code>, <code>cache.t4g.medium</code>
+     * </p>
+     * <p>
      * <b>T3 node types:</b> <code>cache.t3.micro</code>, <code>cache.t3.small</code>, <code>cache.t3.medium</code>
      * </p>
      * <p>
@@ -762,7 +794,7 @@ public class Snapshot implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * Memory optimized:
+     * Memory optimized with data tiering:
      * </p>
      * <ul>
      * <li>
@@ -776,6 +808,18 @@ public class Snapshot implements Serializable, Cloneable {
      * <code>cache.r6gd.xlarge</code>, <code>cache.r6gd.2xlarge</code>, <code>cache.r6gd.4xlarge</code>,
      * <code>cache.r6gd.8xlarge</code>, <code>cache.r6gd.12xlarge</code>, <code>cache.r6gd.16xlarge</code>
      * </p>
+     * </li>
+     * </ul>
+     * </li>
+     * <li>
+     * <p>
+     * Memory optimized:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Current generation:
+     * </p>
      * <p>
      * <b>R6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine version
      * 1.5.16 onward).
@@ -786,6 +830,12 @@ public class Snapshot implements Serializable, Cloneable {
      * <code>cache.r6g.16xlarge</code>
      * </p>
      * <note>
+     * <p>
+     * For region availability, see <a href=
+     * "https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html#CacheNodes.SupportedTypesByRegion"
+     * >Supported Node Types</a>
+     * </p>
+     * </note> <note>
      * <p>
      * For region availability, see <a href=
      * "https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html#CacheNodes.SupportedTypesByRegion"
@@ -886,6 +936,13 @@ public class Snapshot implements Serializable, Cloneable {
      *        <code>cache.m4.2xlarge</code>, <code>cache.m4.4xlarge</code>, <code>cache.m4.10xlarge</code>
      *        </p>
      *        <p>
+     *        <b>T4g node types</b> (available only for Redis engine version 5.0.6 onward and Memcached engine version
+     *        1.5.16 onward):
+     *        </p>
+     *        <p>
+     *        <code>cache.t4g.micro</code>, <code>cache.t4g.small</code>, <code>cache.t4g.medium</code>
+     *        </p>
+     *        <p>
      *        <b>T3 node types:</b> <code>cache.t3.micro</code>, <code>cache.t3.small</code>,
      *        <code>cache.t3.medium</code>
      *        </p>
@@ -929,7 +986,7 @@ public class Snapshot implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        Memory optimized:
+     *        Memory optimized with data tiering:
      *        </p>
      *        <ul>
      *        <li>
@@ -943,6 +1000,18 @@ public class Snapshot implements Serializable, Cloneable {
      *        <code>cache.r6gd.xlarge</code>, <code>cache.r6gd.2xlarge</code>, <code>cache.r6gd.4xlarge</code>,
      *        <code>cache.r6gd.8xlarge</code>, <code>cache.r6gd.12xlarge</code>, <code>cache.r6gd.16xlarge</code>
      *        </p>
+     *        </li>
+     *        </ul>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Memory optimized:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        Current generation:
+     *        </p>
      *        <p>
      *        <b>R6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine
      *        version 1.5.16 onward).
@@ -953,6 +1022,12 @@ public class Snapshot implements Serializable, Cloneable {
      *        <code>cache.r6g.16xlarge</code>
      *        </p>
      *        <note>
+     *        <p>
+     *        For region availability, see <a href=
+     *        "https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html#CacheNodes.SupportedTypesByRegion"
+     *        >Supported Node Types</a>
+     *        </p>
+     *        </note> <note>
      *        <p>
      *        For region availability, see <a href=
      *        "https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html#CacheNodes.SupportedTypesByRegion"
@@ -1061,6 +1136,13 @@ public class Snapshot implements Serializable, Cloneable {
      * <code>cache.m4.4xlarge</code>, <code>cache.m4.10xlarge</code>
      * </p>
      * <p>
+     * <b>T4g node types</b> (available only for Redis engine version 5.0.6 onward and Memcached engine version 1.5.16
+     * onward):
+     * </p>
+     * <p>
+     * <code>cache.t4g.micro</code>, <code>cache.t4g.small</code>, <code>cache.t4g.medium</code>
+     * </p>
+     * <p>
      * <b>T3 node types:</b> <code>cache.t3.micro</code>, <code>cache.t3.small</code>, <code>cache.t3.medium</code>
      * </p>
      * <p>
@@ -1102,7 +1184,7 @@ public class Snapshot implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * Memory optimized:
+     * Memory optimized with data tiering:
      * </p>
      * <ul>
      * <li>
@@ -1116,6 +1198,18 @@ public class Snapshot implements Serializable, Cloneable {
      * <code>cache.r6gd.xlarge</code>, <code>cache.r6gd.2xlarge</code>, <code>cache.r6gd.4xlarge</code>,
      * <code>cache.r6gd.8xlarge</code>, <code>cache.r6gd.12xlarge</code>, <code>cache.r6gd.16xlarge</code>
      * </p>
+     * </li>
+     * </ul>
+     * </li>
+     * <li>
+     * <p>
+     * Memory optimized:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Current generation:
+     * </p>
      * <p>
      * <b>R6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine version
      * 1.5.16 onward).
@@ -1126,6 +1220,12 @@ public class Snapshot implements Serializable, Cloneable {
      * <code>cache.r6g.16xlarge</code>
      * </p>
      * <note>
+     * <p>
+     * For region availability, see <a href=
+     * "https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html#CacheNodes.SupportedTypesByRegion"
+     * >Supported Node Types</a>
+     * </p>
+     * </note> <note>
      * <p>
      * For region availability, see <a href=
      * "https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html#CacheNodes.SupportedTypesByRegion"
@@ -1225,6 +1325,13 @@ public class Snapshot implements Serializable, Cloneable {
      *         <code>cache.m4.2xlarge</code>, <code>cache.m4.4xlarge</code>, <code>cache.m4.10xlarge</code>
      *         </p>
      *         <p>
+     *         <b>T4g node types</b> (available only for Redis engine version 5.0.6 onward and Memcached engine version
+     *         1.5.16 onward):
+     *         </p>
+     *         <p>
+     *         <code>cache.t4g.micro</code>, <code>cache.t4g.small</code>, <code>cache.t4g.medium</code>
+     *         </p>
+     *         <p>
      *         <b>T3 node types:</b> <code>cache.t3.micro</code>, <code>cache.t3.small</code>,
      *         <code>cache.t3.medium</code>
      *         </p>
@@ -1268,7 +1375,7 @@ public class Snapshot implements Serializable, Cloneable {
      *         </li>
      *         <li>
      *         <p>
-     *         Memory optimized:
+     *         Memory optimized with data tiering:
      *         </p>
      *         <ul>
      *         <li>
@@ -1282,6 +1389,18 @@ public class Snapshot implements Serializable, Cloneable {
      *         <code>cache.r6gd.xlarge</code>, <code>cache.r6gd.2xlarge</code>, <code>cache.r6gd.4xlarge</code>,
      *         <code>cache.r6gd.8xlarge</code>, <code>cache.r6gd.12xlarge</code>, <code>cache.r6gd.16xlarge</code>
      *         </p>
+     *         </li>
+     *         </ul>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Memory optimized:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         Current generation:
+     *         </p>
      *         <p>
      *         <b>R6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine
      *         version 1.5.16 onward).
@@ -1292,6 +1411,12 @@ public class Snapshot implements Serializable, Cloneable {
      *         <code>cache.r6g.16xlarge</code>
      *         </p>
      *         <note>
+     *         <p>
+     *         For region availability, see <a href=
+     *         "https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html#CacheNodes.SupportedTypesByRegion"
+     *         >Supported Node Types</a>
+     *         </p>
+     *         </note> <note>
      *         <p>
      *         For region availability, see <a href=
      *         "https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html#CacheNodes.SupportedTypesByRegion"
@@ -1400,6 +1525,13 @@ public class Snapshot implements Serializable, Cloneable {
      * <code>cache.m4.4xlarge</code>, <code>cache.m4.10xlarge</code>
      * </p>
      * <p>
+     * <b>T4g node types</b> (available only for Redis engine version 5.0.6 onward and Memcached engine version 1.5.16
+     * onward):
+     * </p>
+     * <p>
+     * <code>cache.t4g.micro</code>, <code>cache.t4g.small</code>, <code>cache.t4g.medium</code>
+     * </p>
+     * <p>
      * <b>T3 node types:</b> <code>cache.t3.micro</code>, <code>cache.t3.small</code>, <code>cache.t3.medium</code>
      * </p>
      * <p>
@@ -1441,7 +1573,7 @@ public class Snapshot implements Serializable, Cloneable {
      * </li>
      * <li>
      * <p>
-     * Memory optimized:
+     * Memory optimized with data tiering:
      * </p>
      * <ul>
      * <li>
@@ -1455,6 +1587,18 @@ public class Snapshot implements Serializable, Cloneable {
      * <code>cache.r6gd.xlarge</code>, <code>cache.r6gd.2xlarge</code>, <code>cache.r6gd.4xlarge</code>,
      * <code>cache.r6gd.8xlarge</code>, <code>cache.r6gd.12xlarge</code>, <code>cache.r6gd.16xlarge</code>
      * </p>
+     * </li>
+     * </ul>
+     * </li>
+     * <li>
+     * <p>
+     * Memory optimized:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Current generation:
+     * </p>
      * <p>
      * <b>R6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine version
      * 1.5.16 onward).
@@ -1465,6 +1609,12 @@ public class Snapshot implements Serializable, Cloneable {
      * <code>cache.r6g.16xlarge</code>
      * </p>
      * <note>
+     * <p>
+     * For region availability, see <a href=
+     * "https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html#CacheNodes.SupportedTypesByRegion"
+     * >Supported Node Types</a>
+     * </p>
+     * </note> <note>
      * <p>
      * For region availability, see <a href=
      * "https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html#CacheNodes.SupportedTypesByRegion"
@@ -1565,6 +1715,13 @@ public class Snapshot implements Serializable, Cloneable {
      *        <code>cache.m4.2xlarge</code>, <code>cache.m4.4xlarge</code>, <code>cache.m4.10xlarge</code>
      *        </p>
      *        <p>
+     *        <b>T4g node types</b> (available only for Redis engine version 5.0.6 onward and Memcached engine version
+     *        1.5.16 onward):
+     *        </p>
+     *        <p>
+     *        <code>cache.t4g.micro</code>, <code>cache.t4g.small</code>, <code>cache.t4g.medium</code>
+     *        </p>
+     *        <p>
      *        <b>T3 node types:</b> <code>cache.t3.micro</code>, <code>cache.t3.small</code>,
      *        <code>cache.t3.medium</code>
      *        </p>
@@ -1608,7 +1765,7 @@ public class Snapshot implements Serializable, Cloneable {
      *        </li>
      *        <li>
      *        <p>
-     *        Memory optimized:
+     *        Memory optimized with data tiering:
      *        </p>
      *        <ul>
      *        <li>
@@ -1622,6 +1779,18 @@ public class Snapshot implements Serializable, Cloneable {
      *        <code>cache.r6gd.xlarge</code>, <code>cache.r6gd.2xlarge</code>, <code>cache.r6gd.4xlarge</code>,
      *        <code>cache.r6gd.8xlarge</code>, <code>cache.r6gd.12xlarge</code>, <code>cache.r6gd.16xlarge</code>
      *        </p>
+     *        </li>
+     *        </ul>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Memory optimized:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        Current generation:
+     *        </p>
      *        <p>
      *        <b>R6g node types</b> (available only for Redis engine version 5.0.6 onward and for Memcached engine
      *        version 1.5.16 onward).
@@ -1632,6 +1801,12 @@ public class Snapshot implements Serializable, Cloneable {
      *        <code>cache.r6g.16xlarge</code>
      *        </p>
      *        <note>
+     *        <p>
+     *        For region availability, see <a href=
+     *        "https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html#CacheNodes.SupportedTypesByRegion"
+     *        >Supported Node Types</a>
+     *        </p>
+     *        </note> <note>
      *        <p>
      *        For region availability, see <a href=
      *        "https://docs.aws.amazon.com/AmazonElastiCache/latest/red-ug/CacheNodes.SupportedTypes.html#CacheNodes.SupportedTypesByRegion"
@@ -2466,12 +2641,12 @@ public class Snapshot implements Serializable, Cloneable {
     /**
      * <p>
      *  If you are running Redis engine version 6.0 or later, set this parameter to yes if you want to opt-in to the
-     * next minor version upgrade campaign. This parameter is disabled for previous versions. 
+     * next auto minor version upgrade campaign. This parameter is disabled for previous versions. 
      * </p>
      * 
      * @param autoMinorVersionUpgrade
      *         If you are running Redis engine version 6.0 or later, set this parameter to yes if you want to opt-in to
-     *        the next minor version upgrade campaign. This parameter is disabled for previous versions. 
+     *        the next auto minor version upgrade campaign. This parameter is disabled for previous versions. 
      */
 
     public void setAutoMinorVersionUpgrade(Boolean autoMinorVersionUpgrade) {
@@ -2481,11 +2656,11 @@ public class Snapshot implements Serializable, Cloneable {
     /**
      * <p>
      *  If you are running Redis engine version 6.0 or later, set this parameter to yes if you want to opt-in to the
-     * next minor version upgrade campaign. This parameter is disabled for previous versions. 
+     * next auto minor version upgrade campaign. This parameter is disabled for previous versions. 
      * </p>
      * 
      * @return  If you are running Redis engine version 6.0 or later, set this parameter to yes if you want to opt-in to
-     *         the next minor version upgrade campaign. This parameter is disabled for previous versions. 
+     *         the next auto minor version upgrade campaign. This parameter is disabled for previous versions. 
      */
 
     public Boolean getAutoMinorVersionUpgrade() {
@@ -2495,12 +2670,12 @@ public class Snapshot implements Serializable, Cloneable {
     /**
      * <p>
      *  If you are running Redis engine version 6.0 or later, set this parameter to yes if you want to opt-in to the
-     * next minor version upgrade campaign. This parameter is disabled for previous versions. 
+     * next auto minor version upgrade campaign. This parameter is disabled for previous versions. 
      * </p>
      * 
      * @param autoMinorVersionUpgrade
      *         If you are running Redis engine version 6.0 or later, set this parameter to yes if you want to opt-in to
-     *        the next minor version upgrade campaign. This parameter is disabled for previous versions. 
+     *        the next auto minor version upgrade campaign. This parameter is disabled for previous versions. 
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -2512,11 +2687,11 @@ public class Snapshot implements Serializable, Cloneable {
     /**
      * <p>
      *  If you are running Redis engine version 6.0 or later, set this parameter to yes if you want to opt-in to the
-     * next minor version upgrade campaign. This parameter is disabled for previous versions. 
+     * next auto minor version upgrade campaign. This parameter is disabled for previous versions. 
      * </p>
      * 
      * @return  If you are running Redis engine version 6.0 or later, set this parameter to yes if you want to opt-in to
-     *         the next minor version upgrade campaign. This parameter is disabled for previous versions. 
+     *         the next auto minor version upgrade campaign. This parameter is disabled for previous versions. 
      */
 
     public Boolean isAutoMinorVersionUpgrade() {

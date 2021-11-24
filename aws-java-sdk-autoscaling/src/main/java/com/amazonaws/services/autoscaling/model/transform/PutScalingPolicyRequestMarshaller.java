@@ -266,6 +266,391 @@ public class PutScalingPolicyRequestMarshaller implements Marshaller<Request<Put
                                     }
                                 }
                             }
+
+                            {
+                                PredictiveScalingCustomizedScalingMetric customizedScalingMetricSpecification = metricSpecificationsListValue
+                                        .getCustomizedScalingMetricSpecification();
+                                if (customizedScalingMetricSpecification != null) {
+
+                                    if (!customizedScalingMetricSpecification.getMetricDataQueries().isEmpty()
+                                            || !((com.amazonaws.internal.SdkInternalList<MetricDataQuery>) customizedScalingMetricSpecification
+                                                    .getMetricDataQueries()).isAutoConstruct()) {
+                                        com.amazonaws.internal.SdkInternalList<MetricDataQuery> metricDataQueriesList = (com.amazonaws.internal.SdkInternalList<MetricDataQuery>) customizedScalingMetricSpecification
+                                                .getMetricDataQueries();
+                                        int metricDataQueriesListIndex = 1;
+
+                                        for (MetricDataQuery metricDataQueriesListValue : metricDataQueriesList) {
+                                            if (metricDataQueriesListValue != null) {
+
+                                                if (metricDataQueriesListValue.getId() != null) {
+                                                    request.addParameter("PredictiveScalingConfiguration.MetricSpecifications.member."
+                                                            + metricSpecificationsListIndex + ".CustomizedScalingMetricSpecification.MetricDataQueries.member."
+                                                            + metricDataQueriesListIndex + ".Id", StringUtils.fromString(metricDataQueriesListValue.getId()));
+                                                }
+
+                                                if (metricDataQueriesListValue.getExpression() != null) {
+                                                    request.addParameter("PredictiveScalingConfiguration.MetricSpecifications.member."
+                                                            + metricSpecificationsListIndex + ".CustomizedScalingMetricSpecification.MetricDataQueries.member."
+                                                            + metricDataQueriesListIndex + ".Expression",
+                                                            StringUtils.fromString(metricDataQueriesListValue.getExpression()));
+                                                }
+
+                                                {
+                                                    MetricStat metricStat = metricDataQueriesListValue.getMetricStat();
+                                                    if (metricStat != null) {
+
+                                                        {
+                                                            Metric metric = metricStat.getMetric();
+                                                            if (metric != null) {
+
+                                                                if (metric.getNamespace() != null) {
+                                                                    request.addParameter("PredictiveScalingConfiguration.MetricSpecifications.member."
+                                                                            + metricSpecificationsListIndex
+                                                                            + ".CustomizedScalingMetricSpecification.MetricDataQueries.member."
+                                                                            + metricDataQueriesListIndex + ".MetricStat.Metric.Namespace",
+                                                                            StringUtils.fromString(metric.getNamespace()));
+                                                                }
+
+                                                                if (metric.getMetricName() != null) {
+                                                                    request.addParameter("PredictiveScalingConfiguration.MetricSpecifications.member."
+                                                                            + metricSpecificationsListIndex
+                                                                            + ".CustomizedScalingMetricSpecification.MetricDataQueries.member."
+                                                                            + metricDataQueriesListIndex + ".MetricStat.Metric.MetricName",
+                                                                            StringUtils.fromString(metric.getMetricName()));
+                                                                }
+
+                                                                if (!metric.getDimensions().isEmpty()
+                                                                        || !((com.amazonaws.internal.SdkInternalList<MetricDimension>) metric.getDimensions())
+                                                                                .isAutoConstruct()) {
+                                                                    com.amazonaws.internal.SdkInternalList<MetricDimension> dimensionsList = (com.amazonaws.internal.SdkInternalList<MetricDimension>) metric
+                                                                            .getDimensions();
+                                                                    int dimensionsListIndex = 1;
+
+                                                                    for (MetricDimension dimensionsListValue : dimensionsList) {
+                                                                        if (dimensionsListValue != null) {
+
+                                                                            if (dimensionsListValue.getName() != null) {
+                                                                                request.addParameter(
+                                                                                        "PredictiveScalingConfiguration.MetricSpecifications.member."
+                                                                                                + metricSpecificationsListIndex
+                                                                                                + ".CustomizedScalingMetricSpecification.MetricDataQueries.member."
+                                                                                                + metricDataQueriesListIndex
+                                                                                                + ".MetricStat.Metric.Dimensions.member." + dimensionsListIndex
+                                                                                                + ".Name",
+                                                                                        StringUtils.fromString(dimensionsListValue.getName()));
+                                                                            }
+
+                                                                            if (dimensionsListValue.getValue() != null) {
+                                                                                request.addParameter(
+                                                                                        "PredictiveScalingConfiguration.MetricSpecifications.member."
+                                                                                                + metricSpecificationsListIndex
+                                                                                                + ".CustomizedScalingMetricSpecification.MetricDataQueries.member."
+                                                                                                + metricDataQueriesListIndex
+                                                                                                + ".MetricStat.Metric.Dimensions.member." + dimensionsListIndex
+                                                                                                + ".Value",
+                                                                                        StringUtils.fromString(dimensionsListValue.getValue()));
+                                                                            }
+                                                                        }
+                                                                        dimensionsListIndex++;
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+
+                                                        if (metricStat.getStat() != null) {
+                                                            request.addParameter("PredictiveScalingConfiguration.MetricSpecifications.member."
+                                                                    + metricSpecificationsListIndex
+                                                                    + ".CustomizedScalingMetricSpecification.MetricDataQueries.member."
+                                                                    + metricDataQueriesListIndex + ".MetricStat.Stat",
+                                                                    StringUtils.fromString(metricStat.getStat()));
+                                                        }
+
+                                                        if (metricStat.getUnit() != null) {
+                                                            request.addParameter("PredictiveScalingConfiguration.MetricSpecifications.member."
+                                                                    + metricSpecificationsListIndex
+                                                                    + ".CustomizedScalingMetricSpecification.MetricDataQueries.member."
+                                                                    + metricDataQueriesListIndex + ".MetricStat.Unit",
+                                                                    StringUtils.fromString(metricStat.getUnit()));
+                                                        }
+                                                    }
+                                                }
+
+                                                if (metricDataQueriesListValue.getLabel() != null) {
+                                                    request.addParameter("PredictiveScalingConfiguration.MetricSpecifications.member."
+                                                            + metricSpecificationsListIndex + ".CustomizedScalingMetricSpecification.MetricDataQueries.member."
+                                                            + metricDataQueriesListIndex + ".Label",
+                                                            StringUtils.fromString(metricDataQueriesListValue.getLabel()));
+                                                }
+
+                                                if (metricDataQueriesListValue.getReturnData() != null) {
+                                                    request.addParameter("PredictiveScalingConfiguration.MetricSpecifications.member."
+                                                            + metricSpecificationsListIndex + ".CustomizedScalingMetricSpecification.MetricDataQueries.member."
+                                                            + metricDataQueriesListIndex + ".ReturnData",
+                                                            StringUtils.fromBoolean(metricDataQueriesListValue.getReturnData()));
+                                                }
+                                            }
+                                            metricDataQueriesListIndex++;
+                                        }
+                                    }
+                                }
+                            }
+
+                            {
+                                PredictiveScalingCustomizedLoadMetric customizedLoadMetricSpecification = metricSpecificationsListValue
+                                        .getCustomizedLoadMetricSpecification();
+                                if (customizedLoadMetricSpecification != null) {
+
+                                    if (!customizedLoadMetricSpecification.getMetricDataQueries().isEmpty()
+                                            || !((com.amazonaws.internal.SdkInternalList<MetricDataQuery>) customizedLoadMetricSpecification
+                                                    .getMetricDataQueries()).isAutoConstruct()) {
+                                        com.amazonaws.internal.SdkInternalList<MetricDataQuery> metricDataQueriesList = (com.amazonaws.internal.SdkInternalList<MetricDataQuery>) customizedLoadMetricSpecification
+                                                .getMetricDataQueries();
+                                        int metricDataQueriesListIndex = 1;
+
+                                        for (MetricDataQuery metricDataQueriesListValue : metricDataQueriesList) {
+                                            if (metricDataQueriesListValue != null) {
+
+                                                if (metricDataQueriesListValue.getId() != null) {
+                                                    request.addParameter("PredictiveScalingConfiguration.MetricSpecifications.member."
+                                                            + metricSpecificationsListIndex + ".CustomizedLoadMetricSpecification.MetricDataQueries.member."
+                                                            + metricDataQueriesListIndex + ".Id", StringUtils.fromString(metricDataQueriesListValue.getId()));
+                                                }
+
+                                                if (metricDataQueriesListValue.getExpression() != null) {
+                                                    request.addParameter("PredictiveScalingConfiguration.MetricSpecifications.member."
+                                                            + metricSpecificationsListIndex + ".CustomizedLoadMetricSpecification.MetricDataQueries.member."
+                                                            + metricDataQueriesListIndex + ".Expression",
+                                                            StringUtils.fromString(metricDataQueriesListValue.getExpression()));
+                                                }
+
+                                                {
+                                                    MetricStat metricStat = metricDataQueriesListValue.getMetricStat();
+                                                    if (metricStat != null) {
+
+                                                        {
+                                                            Metric metric = metricStat.getMetric();
+                                                            if (metric != null) {
+
+                                                                if (metric.getNamespace() != null) {
+                                                                    request.addParameter("PredictiveScalingConfiguration.MetricSpecifications.member."
+                                                                            + metricSpecificationsListIndex
+                                                                            + ".CustomizedLoadMetricSpecification.MetricDataQueries.member."
+                                                                            + metricDataQueriesListIndex + ".MetricStat.Metric.Namespace",
+                                                                            StringUtils.fromString(metric.getNamespace()));
+                                                                }
+
+                                                                if (metric.getMetricName() != null) {
+                                                                    request.addParameter("PredictiveScalingConfiguration.MetricSpecifications.member."
+                                                                            + metricSpecificationsListIndex
+                                                                            + ".CustomizedLoadMetricSpecification.MetricDataQueries.member."
+                                                                            + metricDataQueriesListIndex + ".MetricStat.Metric.MetricName",
+                                                                            StringUtils.fromString(metric.getMetricName()));
+                                                                }
+
+                                                                if (!metric.getDimensions().isEmpty()
+                                                                        || !((com.amazonaws.internal.SdkInternalList<MetricDimension>) metric.getDimensions())
+                                                                                .isAutoConstruct()) {
+                                                                    com.amazonaws.internal.SdkInternalList<MetricDimension> dimensionsList = (com.amazonaws.internal.SdkInternalList<MetricDimension>) metric
+                                                                            .getDimensions();
+                                                                    int dimensionsListIndex = 1;
+
+                                                                    for (MetricDimension dimensionsListValue : dimensionsList) {
+                                                                        if (dimensionsListValue != null) {
+
+                                                                            if (dimensionsListValue.getName() != null) {
+                                                                                request.addParameter(
+                                                                                        "PredictiveScalingConfiguration.MetricSpecifications.member."
+                                                                                                + metricSpecificationsListIndex
+                                                                                                + ".CustomizedLoadMetricSpecification.MetricDataQueries.member."
+                                                                                                + metricDataQueriesListIndex
+                                                                                                + ".MetricStat.Metric.Dimensions.member." + dimensionsListIndex
+                                                                                                + ".Name",
+                                                                                        StringUtils.fromString(dimensionsListValue.getName()));
+                                                                            }
+
+                                                                            if (dimensionsListValue.getValue() != null) {
+                                                                                request.addParameter(
+                                                                                        "PredictiveScalingConfiguration.MetricSpecifications.member."
+                                                                                                + metricSpecificationsListIndex
+                                                                                                + ".CustomizedLoadMetricSpecification.MetricDataQueries.member."
+                                                                                                + metricDataQueriesListIndex
+                                                                                                + ".MetricStat.Metric.Dimensions.member." + dimensionsListIndex
+                                                                                                + ".Value",
+                                                                                        StringUtils.fromString(dimensionsListValue.getValue()));
+                                                                            }
+                                                                        }
+                                                                        dimensionsListIndex++;
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+
+                                                        if (metricStat.getStat() != null) {
+                                                            request.addParameter("PredictiveScalingConfiguration.MetricSpecifications.member."
+                                                                    + metricSpecificationsListIndex
+                                                                    + ".CustomizedLoadMetricSpecification.MetricDataQueries.member."
+                                                                    + metricDataQueriesListIndex + ".MetricStat.Stat",
+                                                                    StringUtils.fromString(metricStat.getStat()));
+                                                        }
+
+                                                        if (metricStat.getUnit() != null) {
+                                                            request.addParameter("PredictiveScalingConfiguration.MetricSpecifications.member."
+                                                                    + metricSpecificationsListIndex
+                                                                    + ".CustomizedLoadMetricSpecification.MetricDataQueries.member."
+                                                                    + metricDataQueriesListIndex + ".MetricStat.Unit",
+                                                                    StringUtils.fromString(metricStat.getUnit()));
+                                                        }
+                                                    }
+                                                }
+
+                                                if (metricDataQueriesListValue.getLabel() != null) {
+                                                    request.addParameter("PredictiveScalingConfiguration.MetricSpecifications.member."
+                                                            + metricSpecificationsListIndex + ".CustomizedLoadMetricSpecification.MetricDataQueries.member."
+                                                            + metricDataQueriesListIndex + ".Label",
+                                                            StringUtils.fromString(metricDataQueriesListValue.getLabel()));
+                                                }
+
+                                                if (metricDataQueriesListValue.getReturnData() != null) {
+                                                    request.addParameter("PredictiveScalingConfiguration.MetricSpecifications.member."
+                                                            + metricSpecificationsListIndex + ".CustomizedLoadMetricSpecification.MetricDataQueries.member."
+                                                            + metricDataQueriesListIndex + ".ReturnData",
+                                                            StringUtils.fromBoolean(metricDataQueriesListValue.getReturnData()));
+                                                }
+                                            }
+                                            metricDataQueriesListIndex++;
+                                        }
+                                    }
+                                }
+                            }
+
+                            {
+                                PredictiveScalingCustomizedCapacityMetric customizedCapacityMetricSpecification = metricSpecificationsListValue
+                                        .getCustomizedCapacityMetricSpecification();
+                                if (customizedCapacityMetricSpecification != null) {
+
+                                    if (!customizedCapacityMetricSpecification.getMetricDataQueries().isEmpty()
+                                            || !((com.amazonaws.internal.SdkInternalList<MetricDataQuery>) customizedCapacityMetricSpecification
+                                                    .getMetricDataQueries()).isAutoConstruct()) {
+                                        com.amazonaws.internal.SdkInternalList<MetricDataQuery> metricDataQueriesList = (com.amazonaws.internal.SdkInternalList<MetricDataQuery>) customizedCapacityMetricSpecification
+                                                .getMetricDataQueries();
+                                        int metricDataQueriesListIndex = 1;
+
+                                        for (MetricDataQuery metricDataQueriesListValue : metricDataQueriesList) {
+                                            if (metricDataQueriesListValue != null) {
+
+                                                if (metricDataQueriesListValue.getId() != null) {
+                                                    request.addParameter("PredictiveScalingConfiguration.MetricSpecifications.member."
+                                                            + metricSpecificationsListIndex
+                                                            + ".CustomizedCapacityMetricSpecification.MetricDataQueries.member." + metricDataQueriesListIndex
+                                                            + ".Id", StringUtils.fromString(metricDataQueriesListValue.getId()));
+                                                }
+
+                                                if (metricDataQueriesListValue.getExpression() != null) {
+                                                    request.addParameter("PredictiveScalingConfiguration.MetricSpecifications.member."
+                                                            + metricSpecificationsListIndex
+                                                            + ".CustomizedCapacityMetricSpecification.MetricDataQueries.member." + metricDataQueriesListIndex
+                                                            + ".Expression", StringUtils.fromString(metricDataQueriesListValue.getExpression()));
+                                                }
+
+                                                {
+                                                    MetricStat metricStat = metricDataQueriesListValue.getMetricStat();
+                                                    if (metricStat != null) {
+
+                                                        {
+                                                            Metric metric = metricStat.getMetric();
+                                                            if (metric != null) {
+
+                                                                if (metric.getNamespace() != null) {
+                                                                    request.addParameter("PredictiveScalingConfiguration.MetricSpecifications.member."
+                                                                            + metricSpecificationsListIndex
+                                                                            + ".CustomizedCapacityMetricSpecification.MetricDataQueries.member."
+                                                                            + metricDataQueriesListIndex + ".MetricStat.Metric.Namespace",
+                                                                            StringUtils.fromString(metric.getNamespace()));
+                                                                }
+
+                                                                if (metric.getMetricName() != null) {
+                                                                    request.addParameter("PredictiveScalingConfiguration.MetricSpecifications.member."
+                                                                            + metricSpecificationsListIndex
+                                                                            + ".CustomizedCapacityMetricSpecification.MetricDataQueries.member."
+                                                                            + metricDataQueriesListIndex + ".MetricStat.Metric.MetricName",
+                                                                            StringUtils.fromString(metric.getMetricName()));
+                                                                }
+
+                                                                if (!metric.getDimensions().isEmpty()
+                                                                        || !((com.amazonaws.internal.SdkInternalList<MetricDimension>) metric.getDimensions())
+                                                                                .isAutoConstruct()) {
+                                                                    com.amazonaws.internal.SdkInternalList<MetricDimension> dimensionsList = (com.amazonaws.internal.SdkInternalList<MetricDimension>) metric
+                                                                            .getDimensions();
+                                                                    int dimensionsListIndex = 1;
+
+                                                                    for (MetricDimension dimensionsListValue : dimensionsList) {
+                                                                        if (dimensionsListValue != null) {
+
+                                                                            if (dimensionsListValue.getName() != null) {
+                                                                                request.addParameter(
+                                                                                        "PredictiveScalingConfiguration.MetricSpecifications.member."
+                                                                                                + metricSpecificationsListIndex
+                                                                                                + ".CustomizedCapacityMetricSpecification.MetricDataQueries.member."
+                                                                                                + metricDataQueriesListIndex
+                                                                                                + ".MetricStat.Metric.Dimensions.member." + dimensionsListIndex
+                                                                                                + ".Name",
+                                                                                        StringUtils.fromString(dimensionsListValue.getName()));
+                                                                            }
+
+                                                                            if (dimensionsListValue.getValue() != null) {
+                                                                                request.addParameter(
+                                                                                        "PredictiveScalingConfiguration.MetricSpecifications.member."
+                                                                                                + metricSpecificationsListIndex
+                                                                                                + ".CustomizedCapacityMetricSpecification.MetricDataQueries.member."
+                                                                                                + metricDataQueriesListIndex
+                                                                                                + ".MetricStat.Metric.Dimensions.member." + dimensionsListIndex
+                                                                                                + ".Value",
+                                                                                        StringUtils.fromString(dimensionsListValue.getValue()));
+                                                                            }
+                                                                        }
+                                                                        dimensionsListIndex++;
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+
+                                                        if (metricStat.getStat() != null) {
+                                                            request.addParameter("PredictiveScalingConfiguration.MetricSpecifications.member."
+                                                                    + metricSpecificationsListIndex
+                                                                    + ".CustomizedCapacityMetricSpecification.MetricDataQueries.member."
+                                                                    + metricDataQueriesListIndex + ".MetricStat.Stat",
+                                                                    StringUtils.fromString(metricStat.getStat()));
+                                                        }
+
+                                                        if (metricStat.getUnit() != null) {
+                                                            request.addParameter("PredictiveScalingConfiguration.MetricSpecifications.member."
+                                                                    + metricSpecificationsListIndex
+                                                                    + ".CustomizedCapacityMetricSpecification.MetricDataQueries.member."
+                                                                    + metricDataQueriesListIndex + ".MetricStat.Unit",
+                                                                    StringUtils.fromString(metricStat.getUnit()));
+                                                        }
+                                                    }
+                                                }
+
+                                                if (metricDataQueriesListValue.getLabel() != null) {
+                                                    request.addParameter("PredictiveScalingConfiguration.MetricSpecifications.member."
+                                                            + metricSpecificationsListIndex
+                                                            + ".CustomizedCapacityMetricSpecification.MetricDataQueries.member." + metricDataQueriesListIndex
+                                                            + ".Label", StringUtils.fromString(metricDataQueriesListValue.getLabel()));
+                                                }
+
+                                                if (metricDataQueriesListValue.getReturnData() != null) {
+                                                    request.addParameter("PredictiveScalingConfiguration.MetricSpecifications.member."
+                                                            + metricSpecificationsListIndex
+                                                            + ".CustomizedCapacityMetricSpecification.MetricDataQueries.member." + metricDataQueriesListIndex
+                                                            + ".ReturnData", StringUtils.fromBoolean(metricDataQueriesListValue.getReturnData()));
+                                                }
+                                            }
+                                            metricDataQueriesListIndex++;
+                                        }
+                                    }
+                                }
+                            }
                         }
                         metricSpecificationsListIndex++;
                     }

@@ -30,13 +30,13 @@ public class Datum implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Indicates if the data point is a scalar value such as integer, string, double, or boolean.
+     * Indicates if the data point is a scalar value such as integer, string, double, or Boolean.
      * </p>
      */
     private String scalarValue;
     /**
      * <p>
-     * Indicates if the data point is of timeseries data type.
+     * Indicates if the data point is a timeseries data type.
      * </p>
      */
     private java.util.List<TimeSeriesDataPoint> timeSeriesValue;
@@ -61,11 +61,11 @@ public class Datum implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Indicates if the data point is a scalar value such as integer, string, double, or boolean.
+     * Indicates if the data point is a scalar value such as integer, string, double, or Boolean.
      * </p>
      * 
      * @param scalarValue
-     *        Indicates if the data point is a scalar value such as integer, string, double, or boolean.
+     *        Indicates if the data point is a scalar value such as integer, string, double, or Boolean.
      */
 
     public void setScalarValue(String scalarValue) {
@@ -74,10 +74,10 @@ public class Datum implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Indicates if the data point is a scalar value such as integer, string, double, or boolean.
+     * Indicates if the data point is a scalar value such as integer, string, double, or Boolean.
      * </p>
      * 
-     * @return Indicates if the data point is a scalar value such as integer, string, double, or boolean.
+     * @return Indicates if the data point is a scalar value such as integer, string, double, or Boolean.
      */
 
     public String getScalarValue() {
@@ -86,11 +86,11 @@ public class Datum implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Indicates if the data point is a scalar value such as integer, string, double, or boolean.
+     * Indicates if the data point is a scalar value such as integer, string, double, or Boolean.
      * </p>
      * 
      * @param scalarValue
-     *        Indicates if the data point is a scalar value such as integer, string, double, or boolean.
+     *        Indicates if the data point is a scalar value such as integer, string, double, or Boolean.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -101,10 +101,10 @@ public class Datum implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Indicates if the data point is of timeseries data type.
+     * Indicates if the data point is a timeseries data type.
      * </p>
      * 
-     * @return Indicates if the data point is of timeseries data type.
+     * @return Indicates if the data point is a timeseries data type.
      */
 
     public java.util.List<TimeSeriesDataPoint> getTimeSeriesValue() {
@@ -113,11 +113,11 @@ public class Datum implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Indicates if the data point is of timeseries data type.
+     * Indicates if the data point is a timeseries data type.
      * </p>
      * 
      * @param timeSeriesValue
-     *        Indicates if the data point is of timeseries data type.
+     *        Indicates if the data point is a timeseries data type.
      */
 
     public void setTimeSeriesValue(java.util.Collection<TimeSeriesDataPoint> timeSeriesValue) {
@@ -131,7 +131,7 @@ public class Datum implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Indicates if the data point is of timeseries data type.
+     * Indicates if the data point is a timeseries data type.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -140,7 +140,7 @@ public class Datum implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param timeSeriesValue
-     *        Indicates if the data point is of timeseries data type.
+     *        Indicates if the data point is a timeseries data type.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -156,11 +156,11 @@ public class Datum implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Indicates if the data point is of timeseries data type.
+     * Indicates if the data point is a timeseries data type.
      * </p>
      * 
      * @param timeSeriesValue
-     *        Indicates if the data point is of timeseries data type.
+     *        Indicates if the data point is a timeseries data type.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

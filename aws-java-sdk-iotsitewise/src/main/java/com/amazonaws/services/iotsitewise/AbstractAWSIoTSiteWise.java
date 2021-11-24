@@ -34,6 +34,11 @@ public class AbstractAWSIoTSiteWise implements AWSIoTSiteWise {
     }
 
     @Override
+    public AssociateTimeSeriesToAssetPropertyResult associateTimeSeriesToAssetProperty(AssociateTimeSeriesToAssetPropertyRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public BatchAssociateProjectAssetsResult batchAssociateProjectAssets(BatchAssociateProjectAssetsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -119,6 +124,11 @@ public class AbstractAWSIoTSiteWise implements AWSIoTSiteWise {
     }
 
     @Override
+    public DeleteTimeSeriesResult deleteTimeSeries(DeleteTimeSeriesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DescribeAccessPolicyResult describeAccessPolicy(DescribeAccessPolicyRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -179,7 +189,17 @@ public class AbstractAWSIoTSiteWise implements AWSIoTSiteWise {
     }
 
     @Override
+    public DescribeTimeSeriesResult describeTimeSeries(DescribeTimeSeriesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DisassociateAssetsResult disassociateAssets(DisassociateAssetsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DisassociateTimeSeriesFromAssetPropertyResult disassociateTimeSeriesFromAssetProperty(DisassociateTimeSeriesFromAssetPropertyRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -255,6 +275,11 @@ public class AbstractAWSIoTSiteWise implements AWSIoTSiteWise {
 
     @Override
     public ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListTimeSeriesResult listTimeSeries(ListTimeSeriesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

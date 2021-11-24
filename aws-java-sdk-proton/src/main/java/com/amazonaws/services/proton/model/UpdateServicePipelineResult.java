@@ -25,18 +25,18 @@ public class UpdateServicePipelineResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The pipeline details returned by AWS Proton.
+     * The pipeline details returned by Proton.
      * </p>
      */
     private ServicePipeline pipeline;
 
     /**
      * <p>
-     * The pipeline details returned by AWS Proton.
+     * The pipeline details returned by Proton.
      * </p>
      * 
      * @param pipeline
-     *        The pipeline details returned by AWS Proton.
+     *        The pipeline details returned by Proton.
      */
 
     public void setPipeline(ServicePipeline pipeline) {
@@ -45,10 +45,10 @@ public class UpdateServicePipelineResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The pipeline details returned by AWS Proton.
+     * The pipeline details returned by Proton.
      * </p>
      * 
-     * @return The pipeline details returned by AWS Proton.
+     * @return The pipeline details returned by Proton.
      */
 
     public ServicePipeline getPipeline() {
@@ -57,11 +57,11 @@ public class UpdateServicePipelineResult extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The pipeline details returned by AWS Proton.
+     * The pipeline details returned by Proton.
      * </p>
      * 
      * @param pipeline
-     *        The pipeline details returned by AWS Proton.
+     *        The pipeline details returned by Proton.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

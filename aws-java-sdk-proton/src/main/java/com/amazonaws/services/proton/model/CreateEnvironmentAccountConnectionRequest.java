@@ -27,42 +27,50 @@ public class CreateEnvironmentAccountConnectionRequest extends com.amazonaws.Ama
 
     /**
      * <p>
-     * When included, if two identicial requests are made with the same client token, AWS Proton returns the environment
+     * When included, if two identical requests are made with the same client token, Proton returns the environment
      * account connection that the first request created.
      * </p>
      */
     private String clientToken;
     /**
      * <p>
-     * The name of the AWS Proton environment that's created in the associated management account.
+     * The name of the Proton environment that's created in the associated management account.
      * </p>
      */
     private String environmentName;
     /**
      * <p>
      * The ID of the management account that accepts or rejects the environment account connection. You create an manage
-     * the AWS Proton environment in this account. If the management account accepts the environment account connection,
-     * AWS Proton can use the associated IAM role to provision environment infrastructure resources in the associated
+     * the Proton environment in this account. If the management account accepts the environment account connection,
+     * Proton can use the associated IAM role to provision environment infrastructure resources in the associated
      * environment account.
      * </p>
      */
     private String managementAccountId;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the IAM service role that's created in the environment account. AWS Proton uses
+     * The Amazon Resource Name (ARN) of the IAM service role that's created in the environment account. Proton uses
      * this role to provision infrastructure resources in the associated environment account.
      * </p>
      */
     private String roleArn;
+    /**
+     * <p>
+     * Tags for your environment account connection. For more information, see <a
+     * href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton resources and tagging</a> in
+     * the <i>Proton Administrator Guide</i>.
+     * </p>
+     */
+    private java.util.List<Tag> tags;
 
     /**
      * <p>
-     * When included, if two identicial requests are made with the same client token, AWS Proton returns the environment
+     * When included, if two identical requests are made with the same client token, Proton returns the environment
      * account connection that the first request created.
      * </p>
      * 
      * @param clientToken
-     *        When included, if two identicial requests are made with the same client token, AWS Proton returns the
+     *        When included, if two identical requests are made with the same client token, Proton returns the
      *        environment account connection that the first request created.
      */
 
@@ -72,11 +80,11 @@ public class CreateEnvironmentAccountConnectionRequest extends com.amazonaws.Ama
 
     /**
      * <p>
-     * When included, if two identicial requests are made with the same client token, AWS Proton returns the environment
+     * When included, if two identical requests are made with the same client token, Proton returns the environment
      * account connection that the first request created.
      * </p>
      * 
-     * @return When included, if two identicial requests are made with the same client token, AWS Proton returns the
+     * @return When included, if two identical requests are made with the same client token, Proton returns the
      *         environment account connection that the first request created.
      */
 
@@ -86,12 +94,12 @@ public class CreateEnvironmentAccountConnectionRequest extends com.amazonaws.Ama
 
     /**
      * <p>
-     * When included, if two identicial requests are made with the same client token, AWS Proton returns the environment
+     * When included, if two identical requests are made with the same client token, Proton returns the environment
      * account connection that the first request created.
      * </p>
      * 
      * @param clientToken
-     *        When included, if two identicial requests are made with the same client token, AWS Proton returns the
+     *        When included, if two identical requests are made with the same client token, Proton returns the
      *        environment account connection that the first request created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -103,11 +111,11 @@ public class CreateEnvironmentAccountConnectionRequest extends com.amazonaws.Ama
 
     /**
      * <p>
-     * The name of the AWS Proton environment that's created in the associated management account.
+     * The name of the Proton environment that's created in the associated management account.
      * </p>
      * 
      * @param environmentName
-     *        The name of the AWS Proton environment that's created in the associated management account.
+     *        The name of the Proton environment that's created in the associated management account.
      */
 
     public void setEnvironmentName(String environmentName) {
@@ -116,10 +124,10 @@ public class CreateEnvironmentAccountConnectionRequest extends com.amazonaws.Ama
 
     /**
      * <p>
-     * The name of the AWS Proton environment that's created in the associated management account.
+     * The name of the Proton environment that's created in the associated management account.
      * </p>
      * 
-     * @return The name of the AWS Proton environment that's created in the associated management account.
+     * @return The name of the Proton environment that's created in the associated management account.
      */
 
     public String getEnvironmentName() {
@@ -128,11 +136,11 @@ public class CreateEnvironmentAccountConnectionRequest extends com.amazonaws.Ama
 
     /**
      * <p>
-     * The name of the AWS Proton environment that's created in the associated management account.
+     * The name of the Proton environment that's created in the associated management account.
      * </p>
      * 
      * @param environmentName
-     *        The name of the AWS Proton environment that's created in the associated management account.
+     *        The name of the Proton environment that's created in the associated management account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -144,16 +152,16 @@ public class CreateEnvironmentAccountConnectionRequest extends com.amazonaws.Ama
     /**
      * <p>
      * The ID of the management account that accepts or rejects the environment account connection. You create an manage
-     * the AWS Proton environment in this account. If the management account accepts the environment account connection,
-     * AWS Proton can use the associated IAM role to provision environment infrastructure resources in the associated
+     * the Proton environment in this account. If the management account accepts the environment account connection,
+     * Proton can use the associated IAM role to provision environment infrastructure resources in the associated
      * environment account.
      * </p>
      * 
      * @param managementAccountId
      *        The ID of the management account that accepts or rejects the environment account connection. You create an
-     *        manage the AWS Proton environment in this account. If the management account accepts the environment
-     *        account connection, AWS Proton can use the associated IAM role to provision environment infrastructure
-     *        resources in the associated environment account.
+     *        manage the Proton environment in this account. If the management account accepts the environment account
+     *        connection, Proton can use the associated IAM role to provision environment infrastructure resources in
+     *        the associated environment account.
      */
 
     public void setManagementAccountId(String managementAccountId) {
@@ -163,14 +171,14 @@ public class CreateEnvironmentAccountConnectionRequest extends com.amazonaws.Ama
     /**
      * <p>
      * The ID of the management account that accepts or rejects the environment account connection. You create an manage
-     * the AWS Proton environment in this account. If the management account accepts the environment account connection,
-     * AWS Proton can use the associated IAM role to provision environment infrastructure resources in the associated
+     * the Proton environment in this account. If the management account accepts the environment account connection,
+     * Proton can use the associated IAM role to provision environment infrastructure resources in the associated
      * environment account.
      * </p>
      * 
      * @return The ID of the management account that accepts or rejects the environment account connection. You create
-     *         an manage the AWS Proton environment in this account. If the management account accepts the environment
-     *         account connection, AWS Proton can use the associated IAM role to provision environment infrastructure
+     *         an manage the Proton environment in this account. If the management account accepts the environment
+     *         account connection, Proton can use the associated IAM role to provision environment infrastructure
      *         resources in the associated environment account.
      */
 
@@ -181,16 +189,16 @@ public class CreateEnvironmentAccountConnectionRequest extends com.amazonaws.Ama
     /**
      * <p>
      * The ID of the management account that accepts or rejects the environment account connection. You create an manage
-     * the AWS Proton environment in this account. If the management account accepts the environment account connection,
-     * AWS Proton can use the associated IAM role to provision environment infrastructure resources in the associated
+     * the Proton environment in this account. If the management account accepts the environment account connection,
+     * Proton can use the associated IAM role to provision environment infrastructure resources in the associated
      * environment account.
      * </p>
      * 
      * @param managementAccountId
      *        The ID of the management account that accepts or rejects the environment account connection. You create an
-     *        manage the AWS Proton environment in this account. If the management account accepts the environment
-     *        account connection, AWS Proton can use the associated IAM role to provision environment infrastructure
-     *        resources in the associated environment account.
+     *        manage the Proton environment in this account. If the management account accepts the environment account
+     *        connection, Proton can use the associated IAM role to provision environment infrastructure resources in
+     *        the associated environment account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -201,13 +209,13 @@ public class CreateEnvironmentAccountConnectionRequest extends com.amazonaws.Ama
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the IAM service role that's created in the environment account. AWS Proton uses
+     * The Amazon Resource Name (ARN) of the IAM service role that's created in the environment account. Proton uses
      * this role to provision infrastructure resources in the associated environment account.
      * </p>
      * 
      * @param roleArn
-     *        The Amazon Resource Name (ARN) of the IAM service role that's created in the environment account. AWS
-     *        Proton uses this role to provision infrastructure resources in the associated environment account.
+     *        The Amazon Resource Name (ARN) of the IAM service role that's created in the environment account. Proton
+     *        uses this role to provision infrastructure resources in the associated environment account.
      */
 
     public void setRoleArn(String roleArn) {
@@ -216,12 +224,12 @@ public class CreateEnvironmentAccountConnectionRequest extends com.amazonaws.Ama
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the IAM service role that's created in the environment account. AWS Proton uses
+     * The Amazon Resource Name (ARN) of the IAM service role that's created in the environment account. Proton uses
      * this role to provision infrastructure resources in the associated environment account.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the IAM service role that's created in the environment account. AWS
-     *         Proton uses this role to provision infrastructure resources in the associated environment account.
+     * @return The Amazon Resource Name (ARN) of the IAM service role that's created in the environment account. Proton
+     *         uses this role to provision infrastructure resources in the associated environment account.
      */
 
     public String getRoleArn() {
@@ -230,18 +238,104 @@ public class CreateEnvironmentAccountConnectionRequest extends com.amazonaws.Ama
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the IAM service role that's created in the environment account. AWS Proton uses
+     * The Amazon Resource Name (ARN) of the IAM service role that's created in the environment account. Proton uses
      * this role to provision infrastructure resources in the associated environment account.
      * </p>
      * 
      * @param roleArn
-     *        The Amazon Resource Name (ARN) of the IAM service role that's created in the environment account. AWS
-     *        Proton uses this role to provision infrastructure resources in the associated environment account.
+     *        The Amazon Resource Name (ARN) of the IAM service role that's created in the environment account. Proton
+     *        uses this role to provision infrastructure resources in the associated environment account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public CreateEnvironmentAccountConnectionRequest withRoleArn(String roleArn) {
         setRoleArn(roleArn);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Tags for your environment account connection. For more information, see <a
+     * href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton resources and tagging</a> in
+     * the <i>Proton Administrator Guide</i>.
+     * </p>
+     * 
+     * @return Tags for your environment account connection. For more information, see <a
+     *         href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton resources and
+     *         tagging</a> in the <i>Proton Administrator Guide</i>.
+     */
+
+    public java.util.List<Tag> getTags() {
+        return tags;
+    }
+
+    /**
+     * <p>
+     * Tags for your environment account connection. For more information, see <a
+     * href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton resources and tagging</a> in
+     * the <i>Proton Administrator Guide</i>.
+     * </p>
+     * 
+     * @param tags
+     *        Tags for your environment account connection. For more information, see <a
+     *        href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton resources and
+     *        tagging</a> in the <i>Proton Administrator Guide</i>.
+     */
+
+    public void setTags(java.util.Collection<Tag> tags) {
+        if (tags == null) {
+            this.tags = null;
+            return;
+        }
+
+        this.tags = new java.util.ArrayList<Tag>(tags);
+    }
+
+    /**
+     * <p>
+     * Tags for your environment account connection. For more information, see <a
+     * href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton resources and tagging</a> in
+     * the <i>Proton Administrator Guide</i>.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setTags(java.util.Collection)} or {@link #withTags(java.util.Collection)} if you want to override the
+     * existing values.
+     * </p>
+     * 
+     * @param tags
+     *        Tags for your environment account connection. For more information, see <a
+     *        href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton resources and
+     *        tagging</a> in the <i>Proton Administrator Guide</i>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateEnvironmentAccountConnectionRequest withTags(Tag... tags) {
+        if (this.tags == null) {
+            setTags(new java.util.ArrayList<Tag>(tags.length));
+        }
+        for (Tag ele : tags) {
+            this.tags.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * Tags for your environment account connection. For more information, see <a
+     * href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton resources and tagging</a> in
+     * the <i>Proton Administrator Guide</i>.
+     * </p>
+     * 
+     * @param tags
+     *        Tags for your environment account connection. For more information, see <a
+     *        href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton resources and
+     *        tagging</a> in the <i>Proton Administrator Guide</i>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateEnvironmentAccountConnectionRequest withTags(java.util.Collection<Tag> tags) {
+        setTags(tags);
         return this;
     }
 
@@ -264,7 +358,9 @@ public class CreateEnvironmentAccountConnectionRequest extends com.amazonaws.Ama
         if (getManagementAccountId() != null)
             sb.append("ManagementAccountId: ").append(getManagementAccountId()).append(",");
         if (getRoleArn() != null)
-            sb.append("RoleArn: ").append(getRoleArn());
+            sb.append("RoleArn: ").append(getRoleArn()).append(",");
+        if (getTags() != null)
+            sb.append("Tags: ").append(getTags());
         sb.append("}");
         return sb.toString();
     }
@@ -295,6 +391,10 @@ public class CreateEnvironmentAccountConnectionRequest extends com.amazonaws.Ama
             return false;
         if (other.getRoleArn() != null && other.getRoleArn().equals(this.getRoleArn()) == false)
             return false;
+        if (other.getTags() == null ^ this.getTags() == null)
+            return false;
+        if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
+            return false;
         return true;
     }
 
@@ -307,6 +407,7 @@ public class CreateEnvironmentAccountConnectionRequest extends com.amazonaws.Ama
         hashCode = prime * hashCode + ((getEnvironmentName() == null) ? 0 : getEnvironmentName().hashCode());
         hashCode = prime * hashCode + ((getManagementAccountId() == null) ? 0 : getManagementAccountId().hashCode());
         hashCode = prime * hashCode + ((getRoleArn() == null) ? 0 : getRoleArn().hashCode());
+        hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         return hashCode;
     }
 

@@ -145,6 +145,19 @@ public class AbstractAmazonCustomerProfilesAsync extends AbstractAmazonCustomerP
     }
 
     @Override
+    public java.util.concurrent.Future<GetAutoMergingPreviewResult> getAutoMergingPreviewAsync(GetAutoMergingPreviewRequest request) {
+
+        return getAutoMergingPreviewAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetAutoMergingPreviewResult> getAutoMergingPreviewAsync(GetAutoMergingPreviewRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetAutoMergingPreviewRequest, GetAutoMergingPreviewResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetDomainResult> getDomainAsync(GetDomainRequest request) {
 
         return getDomainAsync(request, null);
@@ -153,6 +166,19 @@ public class AbstractAmazonCustomerProfilesAsync extends AbstractAmazonCustomerP
     @Override
     public java.util.concurrent.Future<GetDomainResult> getDomainAsync(GetDomainRequest request,
             com.amazonaws.handlers.AsyncHandler<GetDomainRequest, GetDomainResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetIdentityResolutionJobResult> getIdentityResolutionJobAsync(GetIdentityResolutionJobRequest request) {
+
+        return getIdentityResolutionJobAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetIdentityResolutionJobResult> getIdentityResolutionJobAsync(GetIdentityResolutionJobRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetIdentityResolutionJobRequest, GetIdentityResolutionJobResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -231,6 +257,19 @@ public class AbstractAmazonCustomerProfilesAsync extends AbstractAmazonCustomerP
     @Override
     public java.util.concurrent.Future<ListDomainsResult> listDomainsAsync(ListDomainsRequest request,
             com.amazonaws.handlers.AsyncHandler<ListDomainsRequest, ListDomainsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListIdentityResolutionJobsResult> listIdentityResolutionJobsAsync(ListIdentityResolutionJobsRequest request) {
+
+        return listIdentityResolutionJobsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListIdentityResolutionJobsResult> listIdentityResolutionJobsAsync(ListIdentityResolutionJobsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListIdentityResolutionJobsRequest, ListIdentityResolutionJobsResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

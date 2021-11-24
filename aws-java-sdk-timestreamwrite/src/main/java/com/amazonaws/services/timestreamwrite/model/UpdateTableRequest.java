@@ -33,7 +33,7 @@ public class UpdateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
     private String databaseName;
     /**
      * <p>
-     * The name of the Timesream table.
+     * The name of the Timestream table.
      * </p>
      */
     private String tableName;
@@ -43,6 +43,12 @@ public class UpdateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      */
     private RetentionProperties retentionProperties;
+    /**
+     * <p>
+     * Contains properties to set on the table when enabling magnetic store writes.
+     * </p>
+     */
+    private MagneticStoreWriteProperties magneticStoreWriteProperties;
 
     /**
      * <p>
@@ -86,11 +92,11 @@ public class UpdateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The name of the Timesream table.
+     * The name of the Timestream table.
      * </p>
      * 
      * @param tableName
-     *        The name of the Timesream table.
+     *        The name of the Timestream table.
      */
 
     public void setTableName(String tableName) {
@@ -99,10 +105,10 @@ public class UpdateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The name of the Timesream table.
+     * The name of the Timestream table.
      * </p>
      * 
-     * @return The name of the Timesream table.
+     * @return The name of the Timestream table.
      */
 
     public String getTableName() {
@@ -111,11 +117,11 @@ public class UpdateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The name of the Timesream table.
+     * The name of the Timestream table.
      * </p>
      * 
      * @param tableName
-     *        The name of the Timesream table.
+     *        The name of the Timestream table.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -165,6 +171,46 @@ public class UpdateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
     }
 
     /**
+     * <p>
+     * Contains properties to set on the table when enabling magnetic store writes.
+     * </p>
+     * 
+     * @param magneticStoreWriteProperties
+     *        Contains properties to set on the table when enabling magnetic store writes.
+     */
+
+    public void setMagneticStoreWriteProperties(MagneticStoreWriteProperties magneticStoreWriteProperties) {
+        this.magneticStoreWriteProperties = magneticStoreWriteProperties;
+    }
+
+    /**
+     * <p>
+     * Contains properties to set on the table when enabling magnetic store writes.
+     * </p>
+     * 
+     * @return Contains properties to set on the table when enabling magnetic store writes.
+     */
+
+    public MagneticStoreWriteProperties getMagneticStoreWriteProperties() {
+        return this.magneticStoreWriteProperties;
+    }
+
+    /**
+     * <p>
+     * Contains properties to set on the table when enabling magnetic store writes.
+     * </p>
+     * 
+     * @param magneticStoreWriteProperties
+     *        Contains properties to set on the table when enabling magnetic store writes.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateTableRequest withMagneticStoreWriteProperties(MagneticStoreWriteProperties magneticStoreWriteProperties) {
+        setMagneticStoreWriteProperties(magneticStoreWriteProperties);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -181,7 +227,9 @@ public class UpdateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
         if (getTableName() != null)
             sb.append("TableName: ").append(getTableName()).append(",");
         if (getRetentionProperties() != null)
-            sb.append("RetentionProperties: ").append(getRetentionProperties());
+            sb.append("RetentionProperties: ").append(getRetentionProperties()).append(",");
+        if (getMagneticStoreWriteProperties() != null)
+            sb.append("MagneticStoreWriteProperties: ").append(getMagneticStoreWriteProperties());
         sb.append("}");
         return sb.toString();
     }
@@ -208,6 +256,10 @@ public class UpdateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
             return false;
         if (other.getRetentionProperties() != null && other.getRetentionProperties().equals(this.getRetentionProperties()) == false)
             return false;
+        if (other.getMagneticStoreWriteProperties() == null ^ this.getMagneticStoreWriteProperties() == null)
+            return false;
+        if (other.getMagneticStoreWriteProperties() != null && other.getMagneticStoreWriteProperties().equals(this.getMagneticStoreWriteProperties()) == false)
+            return false;
         return true;
     }
 
@@ -219,6 +271,7 @@ public class UpdateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
         hashCode = prime * hashCode + ((getDatabaseName() == null) ? 0 : getDatabaseName().hashCode());
         hashCode = prime * hashCode + ((getTableName() == null) ? 0 : getTableName().hashCode());
         hashCode = prime * hashCode + ((getRetentionProperties() == null) ? 0 : getRetentionProperties().hashCode());
+        hashCode = prime * hashCode + ((getMagneticStoreWriteProperties() == null) ? 0 : getMagneticStoreWriteProperties().hashCode());
         return hashCode;
     }
 

@@ -84,13 +84,13 @@ public class ServiceInstanceSummary implements Serializable, Cloneable, Structur
     private String serviceName;
     /**
      * <p>
-     * The ID of the major version of a service template.
+     * The service instance template major version.
      * </p>
      */
     private String templateMajorVersion;
     /**
      * <p>
-     * The ID of the minor version of a service template.
+     * The service instance template minor version.
      * </p>
      */
     private String templateMinorVersion;
@@ -482,11 +482,11 @@ public class ServiceInstanceSummary implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The ID of the major version of a service template.
+     * The service instance template major version.
      * </p>
      * 
      * @param templateMajorVersion
-     *        The ID of the major version of a service template.
+     *        The service instance template major version.
      */
 
     public void setTemplateMajorVersion(String templateMajorVersion) {
@@ -495,10 +495,10 @@ public class ServiceInstanceSummary implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The ID of the major version of a service template.
+     * The service instance template major version.
      * </p>
      * 
-     * @return The ID of the major version of a service template.
+     * @return The service instance template major version.
      */
 
     public String getTemplateMajorVersion() {
@@ -507,11 +507,11 @@ public class ServiceInstanceSummary implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The ID of the major version of a service template.
+     * The service instance template major version.
      * </p>
      * 
      * @param templateMajorVersion
-     *        The ID of the major version of a service template.
+     *        The service instance template major version.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -522,11 +522,11 @@ public class ServiceInstanceSummary implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The ID of the minor version of a service template.
+     * The service instance template minor version.
      * </p>
      * 
      * @param templateMinorVersion
-     *        The ID of the minor version of a service template.
+     *        The service instance template minor version.
      */
 
     public void setTemplateMinorVersion(String templateMinorVersion) {
@@ -535,10 +535,10 @@ public class ServiceInstanceSummary implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The ID of the minor version of a service template.
+     * The service instance template minor version.
      * </p>
      * 
-     * @return The ID of the minor version of a service template.
+     * @return The service instance template minor version.
      */
 
     public String getTemplateMinorVersion() {
@@ -547,11 +547,11 @@ public class ServiceInstanceSummary implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The ID of the minor version of a service template.
+     * The service instance template minor version.
      * </p>
      * 
      * @param templateMinorVersion
-     *        The ID of the minor version of a service template.
+     *        The service instance template minor version.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

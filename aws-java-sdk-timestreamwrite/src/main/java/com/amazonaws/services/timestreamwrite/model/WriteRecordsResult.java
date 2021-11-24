@@ -24,6 +24,53 @@ import javax.annotation.Generated;
 public class WriteRecordsResult extends com.amazonaws.AmazonWebServiceResult<com.amazonaws.ResponseMetadata> implements Serializable, Cloneable {
 
     /**
+     * <p>
+     * Information on the records ingested by this request.
+     * </p>
+     */
+    private RecordsIngested recordsIngested;
+
+    /**
+     * <p>
+     * Information on the records ingested by this request.
+     * </p>
+     * 
+     * @param recordsIngested
+     *        Information on the records ingested by this request.
+     */
+
+    public void setRecordsIngested(RecordsIngested recordsIngested) {
+        this.recordsIngested = recordsIngested;
+    }
+
+    /**
+     * <p>
+     * Information on the records ingested by this request.
+     * </p>
+     * 
+     * @return Information on the records ingested by this request.
+     */
+
+    public RecordsIngested getRecordsIngested() {
+        return this.recordsIngested;
+    }
+
+    /**
+     * <p>
+     * Information on the records ingested by this request.
+     * </p>
+     * 
+     * @param recordsIngested
+     *        Information on the records ingested by this request.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public WriteRecordsResult withRecordsIngested(RecordsIngested recordsIngested) {
+        setRecordsIngested(recordsIngested);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -35,6 +82,8 @@ public class WriteRecordsResult extends com.amazonaws.AmazonWebServiceResult<com
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getRecordsIngested() != null)
+            sb.append("RecordsIngested: ").append(getRecordsIngested());
         sb.append("}");
         return sb.toString();
     }
@@ -49,6 +98,10 @@ public class WriteRecordsResult extends com.amazonaws.AmazonWebServiceResult<com
         if (obj instanceof WriteRecordsResult == false)
             return false;
         WriteRecordsResult other = (WriteRecordsResult) obj;
+        if (other.getRecordsIngested() == null ^ this.getRecordsIngested() == null)
+            return false;
+        if (other.getRecordsIngested() != null && other.getRecordsIngested().equals(this.getRecordsIngested()) == false)
+            return false;
         return true;
     }
 
@@ -57,6 +110,7 @@ public class WriteRecordsResult extends com.amazonaws.AmazonWebServiceResult<com
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getRecordsIngested() == null) ? 0 : getRecordsIngested().hashCode());
         return hashCode;
     }
 

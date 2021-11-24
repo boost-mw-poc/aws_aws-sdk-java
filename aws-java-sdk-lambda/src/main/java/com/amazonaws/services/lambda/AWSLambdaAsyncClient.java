@@ -547,39 +547,6 @@ public class AWSLambdaAsyncClient extends AWSLambdaClient implements AWSLambdaAs
     }
 
     @Override
-    public java.util.concurrent.Future<CreateFunctionUrlConfigResult> createFunctionUrlConfigAsync(CreateFunctionUrlConfigRequest request) {
-
-        return createFunctionUrlConfigAsync(request, null);
-    }
-
-    @Override
-    public java.util.concurrent.Future<CreateFunctionUrlConfigResult> createFunctionUrlConfigAsync(final CreateFunctionUrlConfigRequest request,
-            final com.amazonaws.handlers.AsyncHandler<CreateFunctionUrlConfigRequest, CreateFunctionUrlConfigResult> asyncHandler) {
-        final CreateFunctionUrlConfigRequest finalRequest = beforeClientExecution(request);
-
-        return executorService.submit(new java.util.concurrent.Callable<CreateFunctionUrlConfigResult>() {
-            @Override
-            public CreateFunctionUrlConfigResult call() throws Exception {
-                CreateFunctionUrlConfigResult result = null;
-
-                try {
-                    result = executeCreateFunctionUrlConfig(finalRequest);
-                } catch (Exception ex) {
-                    if (asyncHandler != null) {
-                        asyncHandler.onError(ex);
-                    }
-                    throw ex;
-                }
-
-                if (asyncHandler != null) {
-                    asyncHandler.onSuccess(finalRequest, result);
-                }
-                return result;
-            }
-        });
-    }
-
-    @Override
     public java.util.concurrent.Future<DeleteAliasResult> deleteAliasAsync(DeleteAliasRequest request) {
 
         return deleteAliasAsync(request, null);
@@ -799,39 +766,6 @@ public class AWSLambdaAsyncClient extends AWSLambdaClient implements AWSLambdaAs
 
                 try {
                     result = executeDeleteFunctionEventInvokeConfig(finalRequest);
-                } catch (Exception ex) {
-                    if (asyncHandler != null) {
-                        asyncHandler.onError(ex);
-                    }
-                    throw ex;
-                }
-
-                if (asyncHandler != null) {
-                    asyncHandler.onSuccess(finalRequest, result);
-                }
-                return result;
-            }
-        });
-    }
-
-    @Override
-    public java.util.concurrent.Future<DeleteFunctionUrlConfigResult> deleteFunctionUrlConfigAsync(DeleteFunctionUrlConfigRequest request) {
-
-        return deleteFunctionUrlConfigAsync(request, null);
-    }
-
-    @Override
-    public java.util.concurrent.Future<DeleteFunctionUrlConfigResult> deleteFunctionUrlConfigAsync(final DeleteFunctionUrlConfigRequest request,
-            final com.amazonaws.handlers.AsyncHandler<DeleteFunctionUrlConfigRequest, DeleteFunctionUrlConfigResult> asyncHandler) {
-        final DeleteFunctionUrlConfigRequest finalRequest = beforeClientExecution(request);
-
-        return executorService.submit(new java.util.concurrent.Callable<DeleteFunctionUrlConfigResult>() {
-            @Override
-            public DeleteFunctionUrlConfigResult call() throws Exception {
-                DeleteFunctionUrlConfigResult result = null;
-
-                try {
-                    result = executeDeleteFunctionUrlConfig(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -1197,39 +1131,6 @@ public class AWSLambdaAsyncClient extends AWSLambdaClient implements AWSLambdaAs
 
                 try {
                     result = executeGetFunctionEventInvokeConfig(finalRequest);
-                } catch (Exception ex) {
-                    if (asyncHandler != null) {
-                        asyncHandler.onError(ex);
-                    }
-                    throw ex;
-                }
-
-                if (asyncHandler != null) {
-                    asyncHandler.onSuccess(finalRequest, result);
-                }
-                return result;
-            }
-        });
-    }
-
-    @Override
-    public java.util.concurrent.Future<GetFunctionUrlConfigResult> getFunctionUrlConfigAsync(GetFunctionUrlConfigRequest request) {
-
-        return getFunctionUrlConfigAsync(request, null);
-    }
-
-    @Override
-    public java.util.concurrent.Future<GetFunctionUrlConfigResult> getFunctionUrlConfigAsync(final GetFunctionUrlConfigRequest request,
-            final com.amazonaws.handlers.AsyncHandler<GetFunctionUrlConfigRequest, GetFunctionUrlConfigResult> asyncHandler) {
-        final GetFunctionUrlConfigRequest finalRequest = beforeClientExecution(request);
-
-        return executorService.submit(new java.util.concurrent.Callable<GetFunctionUrlConfigResult>() {
-            @Override
-            public GetFunctionUrlConfigResult call() throws Exception {
-                GetFunctionUrlConfigResult result = null;
-
-                try {
-                    result = executeGetFunctionUrlConfig(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -1621,39 +1522,6 @@ public class AWSLambdaAsyncClient extends AWSLambdaClient implements AWSLambdaAs
 
                 try {
                     result = executeListFunctionEventInvokeConfigs(finalRequest);
-                } catch (Exception ex) {
-                    if (asyncHandler != null) {
-                        asyncHandler.onError(ex);
-                    }
-                    throw ex;
-                }
-
-                if (asyncHandler != null) {
-                    asyncHandler.onSuccess(finalRequest, result);
-                }
-                return result;
-            }
-        });
-    }
-
-    @Override
-    public java.util.concurrent.Future<ListFunctionUrlConfigsResult> listFunctionUrlConfigsAsync(ListFunctionUrlConfigsRequest request) {
-
-        return listFunctionUrlConfigsAsync(request, null);
-    }
-
-    @Override
-    public java.util.concurrent.Future<ListFunctionUrlConfigsResult> listFunctionUrlConfigsAsync(final ListFunctionUrlConfigsRequest request,
-            final com.amazonaws.handlers.AsyncHandler<ListFunctionUrlConfigsRequest, ListFunctionUrlConfigsResult> asyncHandler) {
-        final ListFunctionUrlConfigsRequest finalRequest = beforeClientExecution(request);
-
-        return executorService.submit(new java.util.concurrent.Callable<ListFunctionUrlConfigsResult>() {
-            @Override
-            public ListFunctionUrlConfigsResult call() throws Exception {
-                ListFunctionUrlConfigsResult result = null;
-
-                try {
-                    result = executeListFunctionUrlConfigs(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -2444,39 +2312,6 @@ public class AWSLambdaAsyncClient extends AWSLambdaClient implements AWSLambdaAs
 
                 try {
                     result = executeUpdateFunctionEventInvokeConfig(finalRequest);
-                } catch (Exception ex) {
-                    if (asyncHandler != null) {
-                        asyncHandler.onError(ex);
-                    }
-                    throw ex;
-                }
-
-                if (asyncHandler != null) {
-                    asyncHandler.onSuccess(finalRequest, result);
-                }
-                return result;
-            }
-        });
-    }
-
-    @Override
-    public java.util.concurrent.Future<UpdateFunctionUrlConfigResult> updateFunctionUrlConfigAsync(UpdateFunctionUrlConfigRequest request) {
-
-        return updateFunctionUrlConfigAsync(request, null);
-    }
-
-    @Override
-    public java.util.concurrent.Future<UpdateFunctionUrlConfigResult> updateFunctionUrlConfigAsync(final UpdateFunctionUrlConfigRequest request,
-            final com.amazonaws.handlers.AsyncHandler<UpdateFunctionUrlConfigRequest, UpdateFunctionUrlConfigResult> asyncHandler) {
-        final UpdateFunctionUrlConfigRequest finalRequest = beforeClientExecution(request);
-
-        return executorService.submit(new java.util.concurrent.Callable<UpdateFunctionUrlConfigResult>() {
-            @Override
-            public UpdateFunctionUrlConfigResult call() throws Exception {
-                UpdateFunctionUrlConfigResult result = null;
-
-                try {
-                    result = executeUpdateFunctionUrlConfig(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

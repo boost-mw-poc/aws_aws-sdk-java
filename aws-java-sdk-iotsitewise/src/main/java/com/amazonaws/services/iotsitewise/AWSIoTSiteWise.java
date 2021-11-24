@@ -91,6 +91,37 @@ public interface AWSIoTSiteWise {
 
     /**
      * <p>
+     * Associates a time series (data stream) with an asset property.
+     * </p>
+     * 
+     * @param associateTimeSeriesToAssetPropertyRequest
+     * @return Result of the AssociateTimeSeriesToAssetProperty operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request isn't valid. This can occur if your request contains malformed JSON or unsupported
+     *         characters. Check your request and try again.
+     * @throws ResourceNotFoundException
+     *         The requested resource can't be found.
+     * @throws InternalFailureException
+     *         IoT SiteWise can't process your request right now. Try again later.
+     * @throws ThrottlingException
+     *         Your request exceeded a rate limit. For example, you might have exceeded the number of IoT SiteWise
+     *         assets that can be created per second, the allowed number of messages per second, and so on.</p>
+     *         <p>
+     *         For more information, see <a
+     *         href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/quotas.html">Quotas</a> in the <i>IoT
+     *         SiteWise User Guide</i>.
+     * @throws ConflictingOperationException
+     *         Your request has conflicting operations. This can occur if you're trying to perform more than one
+     *         operation on the same resource at the same time.
+     * @sample AWSIoTSiteWise.AssociateTimeSeriesToAssetProperty
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotsitewise-2019-12-02/AssociateTimeSeriesToAssetProperty"
+     *      target="_top">AWS API Documentation</a>
+     */
+    AssociateTimeSeriesToAssetPropertyResult associateTimeSeriesToAssetProperty(
+            AssociateTimeSeriesToAssetPropertyRequest associateTimeSeriesToAssetPropertyRequest);
+
+    /**
+     * <p>
      * Associates a group (batch) of assets with an IoT SiteWise Monitor project.
      * </p>
      * 
@@ -481,6 +512,11 @@ public interface AWSIoTSiteWise {
      * <p>
      * Creates a project in the specified portal.
      * </p>
+     * <note>
+     * <p>
+     * Make sure that the project name and description don't contain confidential information.
+     * </p>
+     * </note>
      * 
      * @param createProjectRequest
      * @return Result of the CreateProject operation returned by the service.
@@ -726,6 +762,64 @@ public interface AWSIoTSiteWise {
      *      Documentation</a>
      */
     DeleteProjectResult deleteProject(DeleteProjectRequest deleteProjectRequest);
+
+    /**
+     * <p>
+     * Deletes a time series (data stream). If you delete a time series that's associated with an asset property, the
+     * asset property still exists, but the time series will no longer be associated with this asset property.
+     * </p>
+     * <p>
+     * To identify a time series, do one of the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * If the time series isn't associated with an asset property, specify the <code>alias</code> of the time series.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If the time series is associated with an asset property, specify one of the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The <code>alias</code> of the time series.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The <code>assetId</code> and <code>propertyId</code> that identifies the asset property.
+     * </p>
+     * </li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
+     * @param deleteTimeSeriesRequest
+     * @return Result of the DeleteTimeSeries operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request isn't valid. This can occur if your request contains malformed JSON or unsupported
+     *         characters. Check your request and try again.
+     * @throws ResourceNotFoundException
+     *         The requested resource can't be found.
+     * @throws InternalFailureException
+     *         IoT SiteWise can't process your request right now. Try again later.
+     * @throws ThrottlingException
+     *         Your request exceeded a rate limit. For example, you might have exceeded the number of IoT SiteWise
+     *         assets that can be created per second, the allowed number of messages per second, and so on.</p>
+     *         <p>
+     *         For more information, see <a
+     *         href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/quotas.html">Quotas</a> in the <i>IoT
+     *         SiteWise User Guide</i>.
+     * @throws ConflictingOperationException
+     *         Your request has conflicting operations. This can occur if you're trying to perform more than one
+     *         operation on the same resource at the same time.
+     * @sample AWSIoTSiteWise.DeleteTimeSeries
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotsitewise-2019-12-02/DeleteTimeSeries" target="_top">AWS
+     *      API Documentation</a>
+     */
+    DeleteTimeSeriesResult deleteTimeSeries(DeleteTimeSeriesRequest deleteTimeSeriesRequest);
 
     /**
      * <p>
@@ -1086,6 +1180,60 @@ public interface AWSIoTSiteWise {
 
     /**
      * <p>
+     * Retrieves information about a time series (data stream).
+     * </p>
+     * <p>
+     * To identify a time series, do one of the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * If the time series isn't associated with an asset property, specify the <code>alias</code> of the time series.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If the time series is associated with an asset property, specify one of the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The <code>alias</code> of the time series.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The <code>assetId</code> and <code>propertyId</code> that identifies the asset property.
+     * </p>
+     * </li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
+     * @param describeTimeSeriesRequest
+     * @return Result of the DescribeTimeSeries operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request isn't valid. This can occur if your request contains malformed JSON or unsupported
+     *         characters. Check your request and try again.
+     * @throws ResourceNotFoundException
+     *         The requested resource can't be found.
+     * @throws InternalFailureException
+     *         IoT SiteWise can't process your request right now. Try again later.
+     * @throws ThrottlingException
+     *         Your request exceeded a rate limit. For example, you might have exceeded the number of IoT SiteWise
+     *         assets that can be created per second, the allowed number of messages per second, and so on.</p>
+     *         <p>
+     *         For more information, see <a
+     *         href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/quotas.html">Quotas</a> in the <i>IoT
+     *         SiteWise User Guide</i>.
+     * @sample AWSIoTSiteWise.DescribeTimeSeries
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotsitewise-2019-12-02/DescribeTimeSeries" target="_top">AWS
+     *      API Documentation</a>
+     */
+    DescribeTimeSeriesResult describeTimeSeries(DescribeTimeSeriesRequest describeTimeSeriesRequest);
+
+    /**
+     * <p>
      * Disassociates a child asset from the given parent asset through a hierarchy defined in the parent asset's model.
      * </p>
      * 
@@ -1113,6 +1261,38 @@ public interface AWSIoTSiteWise {
      *      API Documentation</a>
      */
     DisassociateAssetsResult disassociateAssets(DisassociateAssetsRequest disassociateAssetsRequest);
+
+    /**
+     * <p>
+     * Disassociates a time series (data stream) from an asset property.
+     * </p>
+     * 
+     * @param disassociateTimeSeriesFromAssetPropertyRequest
+     * @return Result of the DisassociateTimeSeriesFromAssetProperty operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request isn't valid. This can occur if your request contains malformed JSON or unsupported
+     *         characters. Check your request and try again.
+     * @throws ResourceNotFoundException
+     *         The requested resource can't be found.
+     * @throws InternalFailureException
+     *         IoT SiteWise can't process your request right now. Try again later.
+     * @throws ThrottlingException
+     *         Your request exceeded a rate limit. For example, you might have exceeded the number of IoT SiteWise
+     *         assets that can be created per second, the allowed number of messages per second, and so on.</p>
+     *         <p>
+     *         For more information, see <a
+     *         href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/quotas.html">Quotas</a> in the <i>IoT
+     *         SiteWise User Guide</i>.
+     * @throws ConflictingOperationException
+     *         Your request has conflicting operations. This can occur if you're trying to perform more than one
+     *         operation on the same resource at the same time.
+     * @sample AWSIoTSiteWise.DisassociateTimeSeriesFromAssetProperty
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/iotsitewise-2019-12-02/DisassociateTimeSeriesFromAssetProperty"
+     *      target="_top">AWS API Documentation</a>
+     */
+    DisassociateTimeSeriesFromAssetPropertyResult disassociateTimeSeriesFromAssetProperty(
+            DisassociateTimeSeriesFromAssetPropertyRequest disassociateTimeSeriesFromAssetPropertyRequest);
 
     /**
      * <p>
@@ -1648,6 +1828,33 @@ public interface AWSIoTSiteWise {
      *      target="_top">AWS API Documentation</a>
      */
     ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest listTagsForResourceRequest);
+
+    /**
+     * <p>
+     * Retrieves a paginated list of time series (data streams).
+     * </p>
+     * 
+     * @param listTimeSeriesRequest
+     * @return Result of the ListTimeSeries operation returned by the service.
+     * @throws InvalidRequestException
+     *         The request isn't valid. This can occur if your request contains malformed JSON or unsupported
+     *         characters. Check your request and try again.
+     * @throws ResourceNotFoundException
+     *         The requested resource can't be found.
+     * @throws InternalFailureException
+     *         IoT SiteWise can't process your request right now. Try again later.
+     * @throws ThrottlingException
+     *         Your request exceeded a rate limit. For example, you might have exceeded the number of IoT SiteWise
+     *         assets that can be created per second, the allowed number of messages per second, and so on.</p>
+     *         <p>
+     *         For more information, see <a
+     *         href="https://docs.aws.amazon.com/iot-sitewise/latest/userguide/quotas.html">Quotas</a> in the <i>IoT
+     *         SiteWise User Guide</i>.
+     * @sample AWSIoTSiteWise.ListTimeSeries
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotsitewise-2019-12-02/ListTimeSeries" target="_top">AWS API
+     *      Documentation</a>
+     */
+    ListTimeSeriesResult listTimeSeries(ListTimeSeriesRequest listTimeSeriesRequest);
 
     /**
      * <p>

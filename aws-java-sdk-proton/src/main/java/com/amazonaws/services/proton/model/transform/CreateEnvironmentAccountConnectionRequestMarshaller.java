@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.proton.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -38,6 +39,8 @@ public class CreateEnvironmentAccountConnectionRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("managementAccountId").build();
     private static final MarshallingInfo<String> ROLEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("roleArn").build();
+    private static final MarshallingInfo<List> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("tags").build();
 
     private static final CreateEnvironmentAccountConnectionRequestMarshaller instance = new CreateEnvironmentAccountConnectionRequestMarshaller();
 
@@ -59,6 +62,7 @@ public class CreateEnvironmentAccountConnectionRequestMarshaller {
             protocolMarshaller.marshall(createEnvironmentAccountConnectionRequest.getEnvironmentName(), ENVIRONMENTNAME_BINDING);
             protocolMarshaller.marshall(createEnvironmentAccountConnectionRequest.getManagementAccountId(), MANAGEMENTACCOUNTID_BINDING);
             protocolMarshaller.marshall(createEnvironmentAccountConnectionRequest.getRoleArn(), ROLEARN_BINDING);
+            protocolMarshaller.marshall(createEnvironmentAccountConnectionRequest.getTags(), TAGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

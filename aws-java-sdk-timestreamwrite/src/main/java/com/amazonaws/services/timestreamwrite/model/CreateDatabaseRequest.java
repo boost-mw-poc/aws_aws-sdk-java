@@ -35,8 +35,8 @@ public class CreateDatabaseRequest extends com.amazonaws.AmazonWebServiceRequest
      * <p>
      * The KMS key for the database. If the KMS key is not specified, the database will be encrypted with a Timestream
      * managed KMS key located in your account. Refer to <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#aws-managed-cmk">AWS managed KMS
-     * keys</a> for more info.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#aws-managed-cmk">Amazon Web Services
+     * managed KMS keys</a> for more info.
      * </p>
      */
     private String kmsKeyId;
@@ -91,15 +91,15 @@ public class CreateDatabaseRequest extends com.amazonaws.AmazonWebServiceRequest
      * <p>
      * The KMS key for the database. If the KMS key is not specified, the database will be encrypted with a Timestream
      * managed KMS key located in your account. Refer to <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#aws-managed-cmk">AWS managed KMS
-     * keys</a> for more info.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#aws-managed-cmk">Amazon Web Services
+     * managed KMS keys</a> for more info.
      * </p>
      * 
      * @param kmsKeyId
      *        The KMS key for the database. If the KMS key is not specified, the database will be encrypted with a
      *        Timestream managed KMS key located in your account. Refer to <a
-     *        href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#aws-managed-cmk">AWS managed KMS
-     *        keys</a> for more info.
+     *        href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#aws-managed-cmk">Amazon Web
+     *        Services managed KMS keys</a> for more info.
      */
 
     public void setKmsKeyId(String kmsKeyId) {
@@ -110,14 +110,14 @@ public class CreateDatabaseRequest extends com.amazonaws.AmazonWebServiceRequest
      * <p>
      * The KMS key for the database. If the KMS key is not specified, the database will be encrypted with a Timestream
      * managed KMS key located in your account. Refer to <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#aws-managed-cmk">AWS managed KMS
-     * keys</a> for more info.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#aws-managed-cmk">Amazon Web Services
+     * managed KMS keys</a> for more info.
      * </p>
      * 
      * @return The KMS key for the database. If the KMS key is not specified, the database will be encrypted with a
      *         Timestream managed KMS key located in your account. Refer to <a
-     *         href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#aws-managed-cmk">AWS managed
-     *         KMS keys</a> for more info.
+     *         href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#aws-managed-cmk">Amazon Web
+     *         Services managed KMS keys</a> for more info.
      */
 
     public String getKmsKeyId() {
@@ -128,15 +128,15 @@ public class CreateDatabaseRequest extends com.amazonaws.AmazonWebServiceRequest
      * <p>
      * The KMS key for the database. If the KMS key is not specified, the database will be encrypted with a Timestream
      * managed KMS key located in your account. Refer to <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#aws-managed-cmk">AWS managed KMS
-     * keys</a> for more info.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#aws-managed-cmk">Amazon Web Services
+     * managed KMS keys</a> for more info.
      * </p>
      * 
      * @param kmsKeyId
      *        The KMS key for the database. If the KMS key is not specified, the database will be encrypted with a
      *        Timestream managed KMS key located in your account. Refer to <a
-     *        href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#aws-managed-cmk">AWS managed KMS
-     *        keys</a> for more info.
+     *        href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#aws-managed-cmk">Amazon Web
+     *        Services managed KMS keys</a> for more info.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

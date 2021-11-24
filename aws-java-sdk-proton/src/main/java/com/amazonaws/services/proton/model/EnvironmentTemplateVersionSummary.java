@@ -54,19 +54,19 @@ public class EnvironmentTemplateVersionSummary implements Serializable, Cloneabl
     private java.util.Date lastModifiedAt;
     /**
      * <p>
-     * The ID of the latest major version that's associated with the version of an environment template.
+     * The latest major version that's associated with the version of an environment template.
      * </p>
      */
     private String majorVersion;
     /**
      * <p>
-     * The ID of the version of an environment template.
+     * The version of an environment template.
      * </p>
      */
     private String minorVersion;
     /**
      * <p>
-     * The ID of the recommended minor version of the environment template.
+     * The recommended minor version of the environment template.
      * </p>
      */
     private String recommendedMinorVersion;
@@ -251,11 +251,11 @@ public class EnvironmentTemplateVersionSummary implements Serializable, Cloneabl
 
     /**
      * <p>
-     * The ID of the latest major version that's associated with the version of an environment template.
+     * The latest major version that's associated with the version of an environment template.
      * </p>
      * 
      * @param majorVersion
-     *        The ID of the latest major version that's associated with the version of an environment template.
+     *        The latest major version that's associated with the version of an environment template.
      */
 
     public void setMajorVersion(String majorVersion) {
@@ -264,10 +264,10 @@ public class EnvironmentTemplateVersionSummary implements Serializable, Cloneabl
 
     /**
      * <p>
-     * The ID of the latest major version that's associated with the version of an environment template.
+     * The latest major version that's associated with the version of an environment template.
      * </p>
      * 
-     * @return The ID of the latest major version that's associated with the version of an environment template.
+     * @return The latest major version that's associated with the version of an environment template.
      */
 
     public String getMajorVersion() {
@@ -276,11 +276,11 @@ public class EnvironmentTemplateVersionSummary implements Serializable, Cloneabl
 
     /**
      * <p>
-     * The ID of the latest major version that's associated with the version of an environment template.
+     * The latest major version that's associated with the version of an environment template.
      * </p>
      * 
      * @param majorVersion
-     *        The ID of the latest major version that's associated with the version of an environment template.
+     *        The latest major version that's associated with the version of an environment template.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -291,11 +291,11 @@ public class EnvironmentTemplateVersionSummary implements Serializable, Cloneabl
 
     /**
      * <p>
-     * The ID of the version of an environment template.
+     * The version of an environment template.
      * </p>
      * 
      * @param minorVersion
-     *        The ID of the version of an environment template.
+     *        The version of an environment template.
      */
 
     public void setMinorVersion(String minorVersion) {
@@ -304,10 +304,10 @@ public class EnvironmentTemplateVersionSummary implements Serializable, Cloneabl
 
     /**
      * <p>
-     * The ID of the version of an environment template.
+     * The version of an environment template.
      * </p>
      * 
-     * @return The ID of the version of an environment template.
+     * @return The version of an environment template.
      */
 
     public String getMinorVersion() {
@@ -316,11 +316,11 @@ public class EnvironmentTemplateVersionSummary implements Serializable, Cloneabl
 
     /**
      * <p>
-     * The ID of the version of an environment template.
+     * The version of an environment template.
      * </p>
      * 
      * @param minorVersion
-     *        The ID of the version of an environment template.
+     *        The version of an environment template.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -331,11 +331,11 @@ public class EnvironmentTemplateVersionSummary implements Serializable, Cloneabl
 
     /**
      * <p>
-     * The ID of the recommended minor version of the environment template.
+     * The recommended minor version of the environment template.
      * </p>
      * 
      * @param recommendedMinorVersion
-     *        The ID of the recommended minor version of the environment template.
+     *        The recommended minor version of the environment template.
      */
 
     public void setRecommendedMinorVersion(String recommendedMinorVersion) {
@@ -344,10 +344,10 @@ public class EnvironmentTemplateVersionSummary implements Serializable, Cloneabl
 
     /**
      * <p>
-     * The ID of the recommended minor version of the environment template.
+     * The recommended minor version of the environment template.
      * </p>
      * 
-     * @return The ID of the recommended minor version of the environment template.
+     * @return The recommended minor version of the environment template.
      */
 
     public String getRecommendedMinorVersion() {
@@ -356,11 +356,11 @@ public class EnvironmentTemplateVersionSummary implements Serializable, Cloneabl
 
     /**
      * <p>
-     * The ID of the recommended minor version of the environment template.
+     * The recommended minor version of the environment template.
      * </p>
      * 
      * @param recommendedMinorVersion
-     *        The ID of the recommended minor version of the environment template.
+     *        The recommended minor version of the environment template.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

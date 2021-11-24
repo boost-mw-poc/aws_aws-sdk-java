@@ -54,19 +54,19 @@ public class ServiceTemplateVersionSummary implements Serializable, Cloneable, S
     private java.util.Date lastModifiedAt;
     /**
      * <p>
-     * The ID of the latest major version that's associated with the version of a service template.
+     * The latest major version that's associated with the version of a service template.
      * </p>
      */
     private String majorVersion;
     /**
      * <p>
-     * The ID of the minor version of a service template.
+     * The minor version of a service template.
      * </p>
      */
     private String minorVersion;
     /**
      * <p>
-     * The ID of the recommended minor version of the service template.
+     * The recommended minor version of the service template.
      * </p>
      */
     private String recommendedMinorVersion;
@@ -251,11 +251,11 @@ public class ServiceTemplateVersionSummary implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The ID of the latest major version that's associated with the version of a service template.
+     * The latest major version that's associated with the version of a service template.
      * </p>
      * 
      * @param majorVersion
-     *        The ID of the latest major version that's associated with the version of a service template.
+     *        The latest major version that's associated with the version of a service template.
      */
 
     public void setMajorVersion(String majorVersion) {
@@ -264,10 +264,10 @@ public class ServiceTemplateVersionSummary implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The ID of the latest major version that's associated with the version of a service template.
+     * The latest major version that's associated with the version of a service template.
      * </p>
      * 
-     * @return The ID of the latest major version that's associated with the version of a service template.
+     * @return The latest major version that's associated with the version of a service template.
      */
 
     public String getMajorVersion() {
@@ -276,11 +276,11 @@ public class ServiceTemplateVersionSummary implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The ID of the latest major version that's associated with the version of a service template.
+     * The latest major version that's associated with the version of a service template.
      * </p>
      * 
      * @param majorVersion
-     *        The ID of the latest major version that's associated with the version of a service template.
+     *        The latest major version that's associated with the version of a service template.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -291,11 +291,11 @@ public class ServiceTemplateVersionSummary implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The ID of the minor version of a service template.
+     * The minor version of a service template.
      * </p>
      * 
      * @param minorVersion
-     *        The ID of the minor version of a service template.
+     *        The minor version of a service template.
      */
 
     public void setMinorVersion(String minorVersion) {
@@ -304,10 +304,10 @@ public class ServiceTemplateVersionSummary implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The ID of the minor version of a service template.
+     * The minor version of a service template.
      * </p>
      * 
-     * @return The ID of the minor version of a service template.
+     * @return The minor version of a service template.
      */
 
     public String getMinorVersion() {
@@ -316,11 +316,11 @@ public class ServiceTemplateVersionSummary implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The ID of the minor version of a service template.
+     * The minor version of a service template.
      * </p>
      * 
      * @param minorVersion
-     *        The ID of the minor version of a service template.
+     *        The minor version of a service template.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -331,11 +331,11 @@ public class ServiceTemplateVersionSummary implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The ID of the recommended minor version of the service template.
+     * The recommended minor version of the service template.
      * </p>
      * 
      * @param recommendedMinorVersion
-     *        The ID of the recommended minor version of the service template.
+     *        The recommended minor version of the service template.
      */
 
     public void setRecommendedMinorVersion(String recommendedMinorVersion) {
@@ -344,10 +344,10 @@ public class ServiceTemplateVersionSummary implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The ID of the recommended minor version of the service template.
+     * The recommended minor version of the service template.
      * </p>
      * 
-     * @return The ID of the recommended minor version of the service template.
+     * @return The recommended minor version of the service template.
      */
 
     public String getRecommendedMinorVersion() {
@@ -356,11 +356,11 @@ public class ServiceTemplateVersionSummary implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The ID of the recommended minor version of the service template.
+     * The recommended minor version of the service template.
      * </p>
      * 
      * @param recommendedMinorVersion
-     *        The ID of the recommended minor version of the service template.
+     *        The recommended minor version of the service template.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

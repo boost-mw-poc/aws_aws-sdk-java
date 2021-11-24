@@ -20,7 +20,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 /**
  * <p>
  * Contains the data type of a column in a query result set. The data type can be scalar or complex. The supported
- * scalar data types are integers, boolean, string, double, timestamp, date, time, and intervals. The supported complex
+ * scalar data types are integers, Boolean, string, double, timestamp, date, time, and intervals. The supported complex
  * data types are arrays, rows, and timeseries.
  * </p>
  * 
@@ -32,7 +32,7 @@ public class Type implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Indicates if the column is of type string, integer, boolean, double, timestamp, date, time.
+     * Indicates if the column is of type string, integer, Boolean, double, timestamp, date, time.
      * </p>
      */
     private String scalarType;
@@ -57,11 +57,11 @@ public class Type implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Indicates if the column is of type string, integer, boolean, double, timestamp, date, time.
+     * Indicates if the column is of type string, integer, Boolean, double, timestamp, date, time.
      * </p>
      * 
      * @param scalarType
-     *        Indicates if the column is of type string, integer, boolean, double, timestamp, date, time.
+     *        Indicates if the column is of type string, integer, Boolean, double, timestamp, date, time.
      * @see ScalarType
      */
 
@@ -71,10 +71,10 @@ public class Type implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Indicates if the column is of type string, integer, boolean, double, timestamp, date, time.
+     * Indicates if the column is of type string, integer, Boolean, double, timestamp, date, time.
      * </p>
      * 
-     * @return Indicates if the column is of type string, integer, boolean, double, timestamp, date, time.
+     * @return Indicates if the column is of type string, integer, Boolean, double, timestamp, date, time.
      * @see ScalarType
      */
 
@@ -84,11 +84,11 @@ public class Type implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Indicates if the column is of type string, integer, boolean, double, timestamp, date, time.
+     * Indicates if the column is of type string, integer, Boolean, double, timestamp, date, time.
      * </p>
      * 
      * @param scalarType
-     *        Indicates if the column is of type string, integer, boolean, double, timestamp, date, time.
+     *        Indicates if the column is of type string, integer, Boolean, double, timestamp, date, time.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ScalarType
      */
@@ -100,11 +100,11 @@ public class Type implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Indicates if the column is of type string, integer, boolean, double, timestamp, date, time.
+     * Indicates if the column is of type string, integer, Boolean, double, timestamp, date, time.
      * </p>
      * 
      * @param scalarType
-     *        Indicates if the column is of type string, integer, boolean, double, timestamp, date, time.
+     *        Indicates if the column is of type string, integer, Boolean, double, timestamp, date, time.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ScalarType
      */

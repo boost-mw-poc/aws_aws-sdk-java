@@ -51,8 +51,8 @@ import com.amazonaws.services.timestreamquery.model.transform.*;
  * Client for accessing Timestream Query. All service calls made using this client are blocking, and will not return
  * until the service call completes.
  * <p>
- * <p>
- * </p>
+ * <fullname>Amazon Timestream Query </fullname>
+ * <p/>
  */
 @ThreadSafe
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
@@ -83,23 +83,29 @@ public class AmazonTimestreamQueryClient extends AmazonWebServiceClient implemen
                             new JsonErrorShapeMetadata().withErrorCode("AccessDeniedException").withExceptionUnmarshaller(
                                     com.amazonaws.services.timestreamquery.model.transform.AccessDeniedExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("ValidationException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.timestreamquery.model.transform.ValidationExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ConflictException").withExceptionUnmarshaller(
                                     com.amazonaws.services.timestreamquery.model.transform.ConflictExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("InternalServerException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.timestreamquery.model.transform.InternalServerExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("InvalidEndpointException").withExceptionUnmarshaller(
                                     com.amazonaws.services.timestreamquery.model.transform.InvalidEndpointExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("QueryExecutionException").withExceptionUnmarshaller(
-                                    com.amazonaws.services.timestreamquery.model.transform.QueryExecutionExceptionUnmarshaller.getInstance()))
+                            new JsonErrorShapeMetadata().withErrorCode("ResourceNotFoundException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.timestreamquery.model.transform.ResourceNotFoundExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ThrottlingException").withExceptionUnmarshaller(
                                     com.amazonaws.services.timestreamquery.model.transform.ThrottlingExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ValidationException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.timestreamquery.model.transform.ValidationExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ServiceQuotaExceededException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.timestreamquery.model.transform.ServiceQuotaExceededExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("InternalServerException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.timestreamquery.model.transform.InternalServerExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("QueryExecutionException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.timestreamquery.model.transform.QueryExecutionExceptionUnmarshaller.getInstance()))
                     .withBaseServiceExceptionClass(com.amazonaws.services.timestreamquery.model.AmazonTimestreamQueryException.class));
 
     public static AmazonTimestreamQueryClientBuilder builder() {
@@ -154,10 +160,11 @@ public class AmazonTimestreamQueryClient extends AmazonWebServiceClient implemen
 
     /**
      * <p>
-     * Cancels a query that has been issued. Cancellation is guaranteed only if the query has not completed execution
-     * before the cancellation request was issued. Because cancellation is an idempotent operation, subsequent
-     * cancellation requests will return a <code>CancellationMessage</code>, indicating that the query has already been
-     * canceled.
+     * Cancels a query that has been issued. Cancellation is provided only if the query has not completed running before
+     * the cancellation request was issued. Because cancellation is an idempotent operation, subsequent cancellation
+     * requests will return a <code>CancellationMessage</code>, indicating that the query has already been canceled. See
+     * <a href="https://docs.aws.amazon.com/Timestream/latest/developerguide/code-samples.cancel-query.html">code
+     * sample</a> for details.
      * </p>
      * 
      * @param cancelQueryRequest
@@ -171,7 +178,7 @@ public class AmazonTimestreamQueryClient extends AmazonWebServiceClient implemen
      * @throws ValidationException
      *         Invalid or malformed request.
      * @throws InvalidEndpointException
-     *         The requested endpoint was invalid.
+     *         The requested endpoint was not valid.
      * @sample AmazonTimestreamQuery.CancelQuery
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/timestream-query-2018-11-01/CancelQuery" target="_top">AWS
      *      API Documentation</a>
@@ -228,14 +235,171 @@ public class AmazonTimestreamQueryClient extends AmazonWebServiceClient implemen
 
     /**
      * <p>
+     * Create a scheduled query that will be run on your behalf at the configured schedule. Timestream assumes the
+     * execution role provided as part of the <code>ScheduledQueryExecutionRoleArn</code> parameter to run the query.
+     * You can use the <code>NotificationConfiguration</code> parameter to configure notification for your scheduled
+     * query operations.
+     * </p>
+     * 
+     * @param createScheduledQueryRequest
+     * @return Result of the CreateScheduledQuery operation returned by the service.
+     * @throws AccessDeniedException
+     *         You are not authorized to perform this action.
+     * @throws ConflictException
+     *         Unable to poll results for a cancelled query.
+     * @throws InternalServerException
+     *         Timestream was unable to fully process this request because of an internal server error.
+     * @throws ServiceQuotaExceededException
+     *         You have exceeded the service quota.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ValidationException
+     *         Invalid or malformed request.
+     * @throws InvalidEndpointException
+     *         The requested endpoint was not valid.
+     * @sample AmazonTimestreamQuery.CreateScheduledQuery
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/timestream-query-2018-11-01/CreateScheduledQuery"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public CreateScheduledQueryResult createScheduledQuery(CreateScheduledQueryRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateScheduledQuery(request);
+    }
+
+    @SdkInternalApi
+    final CreateScheduledQueryResult executeCreateScheduledQuery(CreateScheduledQueryRequest createScheduledQueryRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createScheduledQueryRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateScheduledQueryRequest> request = null;
+        Response<CreateScheduledQueryResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateScheduledQueryRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(createScheduledQueryRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Timestream Query");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateScheduledQuery");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            URI cachedEndpoint = null;
+            if (endpointDiscoveryEnabled) {
+                DescribeEndpointsRequest discoveryRequest = new DescribeEndpointsRequest();
+                cachedEndpoint = cache.get(awsCredentialsProvider.getCredentials().getAWSAccessKeyId(), discoveryRequest, true, endpoint);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CreateScheduledQueryResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new CreateScheduledQueryResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext, cachedEndpoint, null);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Deletes a given scheduled query. This is an irreversible operation.
+     * </p>
+     * 
+     * @param deleteScheduledQueryRequest
+     * @return Result of the DeleteScheduledQuery operation returned by the service.
+     * @throws AccessDeniedException
+     *         You are not authorized to perform this action.
+     * @throws InternalServerException
+     *         Timestream was unable to fully process this request because of an internal server error.
+     * @throws ResourceNotFoundException
+     *         The requested resource could not be found.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ValidationException
+     *         Invalid or malformed request.
+     * @throws InvalidEndpointException
+     *         The requested endpoint was not valid.
+     * @sample AmazonTimestreamQuery.DeleteScheduledQuery
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/timestream-query-2018-11-01/DeleteScheduledQuery"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DeleteScheduledQueryResult deleteScheduledQuery(DeleteScheduledQueryRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteScheduledQuery(request);
+    }
+
+    @SdkInternalApi
+    final DeleteScheduledQueryResult executeDeleteScheduledQuery(DeleteScheduledQueryRequest deleteScheduledQueryRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteScheduledQueryRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteScheduledQueryRequest> request = null;
+        Response<DeleteScheduledQueryResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteScheduledQueryRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(deleteScheduledQueryRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Timestream Query");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteScheduledQuery");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            URI cachedEndpoint = null;
+            if (endpointDiscoveryEnabled) {
+                DescribeEndpointsRequest discoveryRequest = new DescribeEndpointsRequest();
+                cachedEndpoint = cache.get(awsCredentialsProvider.getCredentials().getAWSAccessKeyId(), discoveryRequest, true, endpoint);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteScheduledQueryResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DeleteScheduledQueryResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext, cachedEndpoint, null);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * DescribeEndpoints returns a list of available endpoints to make Timestream API calls against. This API is
      * available through both Write and Query.
      * </p>
      * <p>
-     * Because Timestream’s SDKs are designed to transparently work with the service’s architecture, including the
+     * Because the Timestream SDKs are designed to transparently work with the service’s architecture, including the
      * management and mapping of the service endpoints, <i>it is not recommended that you use this API unless</i>:
      * </p>
      * <ul>
+     * <li>
+     * <p>
+     * You are using <a href="https://docs.aws.amazon.com/Timestream/latest/developerguide/VPCEndpoints">VPC endpoints
+     * (Amazon Web Services PrivateLink) with Timestream </a>
+     * </p>
+     * </li>
      * <li>
      * <p>
      * Your application uses a programming language that does not yet have SDK support
@@ -248,9 +412,9 @@ public class AmazonTimestreamQueryClient extends AmazonWebServiceClient implemen
      * </li>
      * </ul>
      * <p>
-     * For detailed information on how to use DescribeEndpoints, see <a
-     * href="https://docs.aws.amazon.com/timestream/latest/developerguide/Using-API.endpoint-discovery.html">The
-     * Endpoint Discovery Pattern and REST APIs</a>.
+     * For detailed information on how and when to use and implement DescribeEndpoints, see <a
+     * href="https://docs.aws.amazon.com/Timestream/latest/developerguide/Using.API.html#Using-API.endpoint-discovery"
+     * >The Endpoint Discovery Pattern</a>.
      * </p>
      * 
      * @param describeEndpointsRequest
@@ -311,10 +475,406 @@ public class AmazonTimestreamQueryClient extends AmazonWebServiceClient implemen
 
     /**
      * <p>
-     * Query is a synchronous operation that enables you to execute a query. Query will timeout after 60 seconds. You
-     * must update the default timeout in the SDK to support a timeout of 60 seconds. The result set will be truncated
-     * to 1MB. Service quotas apply. For more information, see Quotas in the Timestream Developer Guide.
+     * Provides detailed information about a scheduled query.
      * </p>
+     * 
+     * @param describeScheduledQueryRequest
+     * @return Result of the DescribeScheduledQuery operation returned by the service.
+     * @throws AccessDeniedException
+     *         You are not authorized to perform this action.
+     * @throws InternalServerException
+     *         Timestream was unable to fully process this request because of an internal server error.
+     * @throws ResourceNotFoundException
+     *         The requested resource could not be found.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ValidationException
+     *         Invalid or malformed request.
+     * @throws InvalidEndpointException
+     *         The requested endpoint was not valid.
+     * @sample AmazonTimestreamQuery.DescribeScheduledQuery
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/timestream-query-2018-11-01/DescribeScheduledQuery"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DescribeScheduledQueryResult describeScheduledQuery(DescribeScheduledQueryRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeScheduledQuery(request);
+    }
+
+    @SdkInternalApi
+    final DescribeScheduledQueryResult executeDescribeScheduledQuery(DescribeScheduledQueryRequest describeScheduledQueryRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeScheduledQueryRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeScheduledQueryRequest> request = null;
+        Response<DescribeScheduledQueryResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeScheduledQueryRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(describeScheduledQueryRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Timestream Query");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeScheduledQuery");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            URI cachedEndpoint = null;
+            if (endpointDiscoveryEnabled) {
+                DescribeEndpointsRequest discoveryRequest = new DescribeEndpointsRequest();
+                cachedEndpoint = cache.get(awsCredentialsProvider.getCredentials().getAWSAccessKeyId(), discoveryRequest, true, endpoint);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DescribeScheduledQueryResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new DescribeScheduledQueryResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext, cachedEndpoint, null);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * You can use this API to run a scheduled query manually.
+     * </p>
+     * 
+     * @param executeScheduledQueryRequest
+     * @return Result of the ExecuteScheduledQuery operation returned by the service.
+     * @throws AccessDeniedException
+     *         You are not authorized to perform this action.
+     * @throws InternalServerException
+     *         Timestream was unable to fully process this request because of an internal server error.
+     * @throws ResourceNotFoundException
+     *         The requested resource could not be found.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ValidationException
+     *         Invalid or malformed request.
+     * @throws InvalidEndpointException
+     *         The requested endpoint was not valid.
+     * @sample AmazonTimestreamQuery.ExecuteScheduledQuery
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/timestream-query-2018-11-01/ExecuteScheduledQuery"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ExecuteScheduledQueryResult executeScheduledQuery(ExecuteScheduledQueryRequest request) {
+        request = beforeClientExecution(request);
+        return executeExecuteScheduledQuery(request);
+    }
+
+    @SdkInternalApi
+    final ExecuteScheduledQueryResult executeExecuteScheduledQuery(ExecuteScheduledQueryRequest executeScheduledQueryRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(executeScheduledQueryRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ExecuteScheduledQueryRequest> request = null;
+        Response<ExecuteScheduledQueryResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ExecuteScheduledQueryRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(executeScheduledQueryRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Timestream Query");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ExecuteScheduledQuery");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            URI cachedEndpoint = null;
+            if (endpointDiscoveryEnabled) {
+                DescribeEndpointsRequest discoveryRequest = new DescribeEndpointsRequest();
+                cachedEndpoint = cache.get(awsCredentialsProvider.getCredentials().getAWSAccessKeyId(), discoveryRequest, true, endpoint);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ExecuteScheduledQueryResult>> responseHandler = protocolFactory
+                    .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                            new ExecuteScheduledQueryResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext, cachedEndpoint, null);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Gets a list of all scheduled queries in the caller's Amazon account and Region. <code>ListScheduledQueries</code>
+     * is eventually consistent.
+     * </p>
+     * 
+     * @param listScheduledQueriesRequest
+     * @return Result of the ListScheduledQueries operation returned by the service.
+     * @throws AccessDeniedException
+     *         You are not authorized to perform this action.
+     * @throws InternalServerException
+     *         Timestream was unable to fully process this request because of an internal server error.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ValidationException
+     *         Invalid or malformed request.
+     * @throws InvalidEndpointException
+     *         The requested endpoint was not valid.
+     * @sample AmazonTimestreamQuery.ListScheduledQueries
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/timestream-query-2018-11-01/ListScheduledQueries"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListScheduledQueriesResult listScheduledQueries(ListScheduledQueriesRequest request) {
+        request = beforeClientExecution(request);
+        return executeListScheduledQueries(request);
+    }
+
+    @SdkInternalApi
+    final ListScheduledQueriesResult executeListScheduledQueries(ListScheduledQueriesRequest listScheduledQueriesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listScheduledQueriesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListScheduledQueriesRequest> request = null;
+        Response<ListScheduledQueriesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListScheduledQueriesRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listScheduledQueriesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Timestream Query");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListScheduledQueries");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            URI cachedEndpoint = null;
+            if (endpointDiscoveryEnabled) {
+                DescribeEndpointsRequest discoveryRequest = new DescribeEndpointsRequest();
+                cachedEndpoint = cache.get(awsCredentialsProvider.getCredentials().getAWSAccessKeyId(), discoveryRequest, true, endpoint);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListScheduledQueriesResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListScheduledQueriesResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext, cachedEndpoint, null);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * List all tags on a Timestream query resource.
+     * </p>
+     * 
+     * @param listTagsForResourceRequest
+     * @return Result of the ListTagsForResource operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The requested resource could not be found.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ValidationException
+     *         Invalid or malformed request.
+     * @throws InvalidEndpointException
+     *         The requested endpoint was not valid.
+     * @sample AmazonTimestreamQuery.ListTagsForResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/timestream-query-2018-11-01/ListTagsForResource"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest request) {
+        request = beforeClientExecution(request);
+        return executeListTagsForResource(request);
+    }
+
+    @SdkInternalApi
+    final ListTagsForResourceResult executeListTagsForResource(ListTagsForResourceRequest listTagsForResourceRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listTagsForResourceRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListTagsForResourceRequest> request = null;
+        Response<ListTagsForResourceResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListTagsForResourceRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listTagsForResourceRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Timestream Query");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListTagsForResource");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            URI cachedEndpoint = null;
+            if (endpointDiscoveryEnabled) {
+                DescribeEndpointsRequest discoveryRequest = new DescribeEndpointsRequest();
+                cachedEndpoint = cache.get(awsCredentialsProvider.getCredentials().getAWSAccessKeyId(), discoveryRequest, true, endpoint);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListTagsForResourceResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListTagsForResourceResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext, cachedEndpoint, null);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * A synchronous operation that allows you to submit a query with parameters to be stored by Timestream for later
+     * running. Timestream only supports using this operation with the <code>PrepareQueryRequest$ValidateOnly</code> set
+     * to <code>true</code>.
+     * </p>
+     * 
+     * @param prepareQueryRequest
+     * @return Result of the PrepareQuery operation returned by the service.
+     * @throws AccessDeniedException
+     *         You are not authorized to perform this action.
+     * @throws InternalServerException
+     *         Timestream was unable to fully process this request because of an internal server error.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ValidationException
+     *         Invalid or malformed request.
+     * @throws InvalidEndpointException
+     *         The requested endpoint was not valid.
+     * @sample AmazonTimestreamQuery.PrepareQuery
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/timestream-query-2018-11-01/PrepareQuery" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public PrepareQueryResult prepareQuery(PrepareQueryRequest request) {
+        request = beforeClientExecution(request);
+        return executePrepareQuery(request);
+    }
+
+    @SdkInternalApi
+    final PrepareQueryResult executePrepareQuery(PrepareQueryRequest prepareQueryRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(prepareQueryRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<PrepareQueryRequest> request = null;
+        Response<PrepareQueryResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new PrepareQueryRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(prepareQueryRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Timestream Query");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "PrepareQuery");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            URI cachedEndpoint = null;
+            if (endpointDiscoveryEnabled) {
+                DescribeEndpointsRequest discoveryRequest = new DescribeEndpointsRequest();
+                cachedEndpoint = cache.get(awsCredentialsProvider.getCredentials().getAWSAccessKeyId(), discoveryRequest, true, endpoint);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<PrepareQueryResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new PrepareQueryResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext, cachedEndpoint, null);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * <code>Query</code> is a synchronous operation that enables you to run a query against your Amazon Timestream
+     * data. <code>Query</code> will time out after 60 seconds. You must update the default timeout in the SDK to
+     * support a timeout of 60 seconds. See the <a
+     * href="https://docs.aws.amazon.com/Timestream/latest/developerguide/code-samples.run-query.html">code sample</a>
+     * for details.
+     * </p>
+     * <p>
+     * Your query request will fail in the following cases:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * If you submit a <code>Query</code> request with the same client token outside of the 5-minute idempotency window.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If you submit a <code>Query</code> request with the same client token, but change other parameters, within the
+     * 5-minute idempotency window.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If the size of the row (including the query metadata) exceeds 1 MB, then the query will fail with the following
+     * error message:
+     * </p>
+     * <p>
+     * <code>Query aborted as max page response size has been exceeded by the output result row</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If the IAM principal of the query initiator and the result reader are not the same and/or the query initiator and
+     * the result reader do not have the same query string in the query requests, the query will fail with an
+     * <code>Invalid pagination token</code> error.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param queryRequest
      * @return Result of the Query operation returned by the service.
@@ -331,7 +891,7 @@ public class AmazonTimestreamQueryClient extends AmazonWebServiceClient implemen
      * @throws ValidationException
      *         Invalid or malformed request.
      * @throws InvalidEndpointException
-     *         The requested endpoint was invalid.
+     *         The requested endpoint was not valid.
      * @sample AmazonTimestreamQuery.Query
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/timestream-query-2018-11-01/Query" target="_top">AWS API
      *      Documentation</a>
@@ -376,6 +936,220 @@ public class AmazonTimestreamQueryClient extends AmazonWebServiceClient implemen
 
             HttpResponseHandler<AmazonWebServiceResponse<QueryResult>> responseHandler = protocolFactory.createResponseHandler(new JsonOperationMetadata()
                     .withPayloadJson(true).withHasStreamingSuccessResponse(false), new QueryResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext, cachedEndpoint, null);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Associate a set of tags with a Timestream resource. You can then activate these user-defined tags so that they
+     * appear on the Billing and Cost Management console for cost allocation tracking.
+     * </p>
+     * 
+     * @param tagResourceRequest
+     * @return Result of the TagResource operation returned by the service.
+     * @throws ResourceNotFoundException
+     *         The requested resource could not be found.
+     * @throws ServiceQuotaExceededException
+     *         You have exceeded the service quota.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ValidationException
+     *         Invalid or malformed request.
+     * @throws InvalidEndpointException
+     *         The requested endpoint was not valid.
+     * @sample AmazonTimestreamQuery.TagResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/timestream-query-2018-11-01/TagResource" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public TagResourceResult tagResource(TagResourceRequest request) {
+        request = beforeClientExecution(request);
+        return executeTagResource(request);
+    }
+
+    @SdkInternalApi
+    final TagResourceResult executeTagResource(TagResourceRequest tagResourceRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(tagResourceRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<TagResourceRequest> request = null;
+        Response<TagResourceResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new TagResourceRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(tagResourceRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Timestream Query");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "TagResource");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            URI cachedEndpoint = null;
+            if (endpointDiscoveryEnabled) {
+                DescribeEndpointsRequest discoveryRequest = new DescribeEndpointsRequest();
+                cachedEndpoint = cache.get(awsCredentialsProvider.getCredentials().getAWSAccessKeyId(), discoveryRequest, true, endpoint);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<TagResourceResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new TagResourceResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext, cachedEndpoint, null);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Removes the association of tags from a Timestream query resource.
+     * </p>
+     * 
+     * @param untagResourceRequest
+     * @return Result of the UntagResource operation returned by the service.
+     * @throws ValidationException
+     *         Invalid or malformed request.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ResourceNotFoundException
+     *         The requested resource could not be found.
+     * @throws InvalidEndpointException
+     *         The requested endpoint was not valid.
+     * @sample AmazonTimestreamQuery.UntagResource
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/timestream-query-2018-11-01/UntagResource" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public UntagResourceResult untagResource(UntagResourceRequest request) {
+        request = beforeClientExecution(request);
+        return executeUntagResource(request);
+    }
+
+    @SdkInternalApi
+    final UntagResourceResult executeUntagResource(UntagResourceRequest untagResourceRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(untagResourceRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UntagResourceRequest> request = null;
+        Response<UntagResourceResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UntagResourceRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(untagResourceRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Timestream Query");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UntagResource");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            URI cachedEndpoint = null;
+            if (endpointDiscoveryEnabled) {
+                DescribeEndpointsRequest discoveryRequest = new DescribeEndpointsRequest();
+                cachedEndpoint = cache.get(awsCredentialsProvider.getCredentials().getAWSAccessKeyId(), discoveryRequest, true, endpoint);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UntagResourceResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UntagResourceResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext, cachedEndpoint, null);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Update a scheduled query.
+     * </p>
+     * 
+     * @param updateScheduledQueryRequest
+     * @return Result of the UpdateScheduledQuery operation returned by the service.
+     * @throws AccessDeniedException
+     *         You are not authorized to perform this action.
+     * @throws InternalServerException
+     *         Timestream was unable to fully process this request because of an internal server error.
+     * @throws ResourceNotFoundException
+     *         The requested resource could not be found.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws ValidationException
+     *         Invalid or malformed request.
+     * @throws InvalidEndpointException
+     *         The requested endpoint was not valid.
+     * @sample AmazonTimestreamQuery.UpdateScheduledQuery
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/timestream-query-2018-11-01/UpdateScheduledQuery"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public UpdateScheduledQueryResult updateScheduledQuery(UpdateScheduledQueryRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateScheduledQuery(request);
+    }
+
+    @SdkInternalApi
+    final UpdateScheduledQueryResult executeUpdateScheduledQuery(UpdateScheduledQueryRequest updateScheduledQueryRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateScheduledQueryRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateScheduledQueryRequest> request = null;
+        Response<UpdateScheduledQueryResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateScheduledQueryRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(updateScheduledQueryRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Timestream Query");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateScheduledQuery");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            URI cachedEndpoint = null;
+            if (endpointDiscoveryEnabled) {
+                DescribeEndpointsRequest discoveryRequest = new DescribeEndpointsRequest();
+                cachedEndpoint = cache.get(awsCredentialsProvider.getCredentials().getAWSAccessKeyId(), discoveryRequest, true, endpoint);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateScheduledQueryResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UpdateScheduledQueryResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext, cachedEndpoint, null);
 
             return response.getAwsResponse();

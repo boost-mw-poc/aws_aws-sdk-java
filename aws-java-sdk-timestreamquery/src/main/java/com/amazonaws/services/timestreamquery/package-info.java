@@ -12,8 +12,8 @@
  */
 
 /**
- * <p>
- * </p>
+ * <fullname>Amazon Timestream Query </fullname>
+ * <p/>
  */
 package com.amazonaws.services.timestreamquery;
 

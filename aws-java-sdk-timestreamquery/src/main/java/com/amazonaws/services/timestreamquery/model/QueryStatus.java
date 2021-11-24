@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Information about the status of the query, including progress and bytes scannned.
+ * Information about the status of the query, including progress and bytes scanned.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/timestream-query-2018-11-01/QueryStatus" target="_top">AWS API
@@ -45,7 +45,7 @@ public class QueryStatus implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The amount of data scanned by the query in bytes that you will be charged for. This is a cumulative sum and
      * represents the total amount of data that you will be charged for since the query was started. The charge is
-     * applied only once and is either applied when the query completes execution or when the query is cancelled.
+     * applied only once and is either applied when the query completes running or when the query is cancelled.
      * </p>
      */
     private Long cumulativeBytesMetered;
@@ -140,13 +140,13 @@ public class QueryStatus implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The amount of data scanned by the query in bytes that you will be charged for. This is a cumulative sum and
      * represents the total amount of data that you will be charged for since the query was started. The charge is
-     * applied only once and is either applied when the query completes execution or when the query is cancelled.
+     * applied only once and is either applied when the query completes running or when the query is cancelled.
      * </p>
      * 
      * @param cumulativeBytesMetered
      *        The amount of data scanned by the query in bytes that you will be charged for. This is a cumulative sum
      *        and represents the total amount of data that you will be charged for since the query was started. The
-     *        charge is applied only once and is either applied when the query completes execution or when the query is
+     *        charge is applied only once and is either applied when the query completes running or when the query is
      *        cancelled.
      */
 
@@ -158,12 +158,12 @@ public class QueryStatus implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The amount of data scanned by the query in bytes that you will be charged for. This is a cumulative sum and
      * represents the total amount of data that you will be charged for since the query was started. The charge is
-     * applied only once and is either applied when the query completes execution or when the query is cancelled.
+     * applied only once and is either applied when the query completes running or when the query is cancelled.
      * </p>
      * 
      * @return The amount of data scanned by the query in bytes that you will be charged for. This is a cumulative sum
      *         and represents the total amount of data that you will be charged for since the query was started. The
-     *         charge is applied only once and is either applied when the query completes execution or when the query is
+     *         charge is applied only once and is either applied when the query completes running or when the query is
      *         cancelled.
      */
 
@@ -175,13 +175,13 @@ public class QueryStatus implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * The amount of data scanned by the query in bytes that you will be charged for. This is a cumulative sum and
      * represents the total amount of data that you will be charged for since the query was started. The charge is
-     * applied only once and is either applied when the query completes execution or when the query is cancelled.
+     * applied only once and is either applied when the query completes running or when the query is cancelled.
      * </p>
      * 
      * @param cumulativeBytesMetered
      *        The amount of data scanned by the query in bytes that you will be charged for. This is a cumulative sum
      *        and represents the total amount of data that you will be charged for since the query was started. The
-     *        charge is applied only once and is either applied when the query completes execution or when the query is
+     *        charge is applied only once and is either applied when the query completes running or when the query is
      *        cancelled.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

@@ -116,6 +116,12 @@ public class TextTranslationJobProperties implements Serializable, Cloneable, St
      * </p>
      */
     private String dataAccessRoleArn;
+    /**
+     * <p>
+     * Settings that configure the translation output.
+     * </p>
+     */
+    private TranslationSettings settings;
 
     /**
      * <p>
@@ -815,6 +821,46 @@ public class TextTranslationJobProperties implements Serializable, Cloneable, St
     }
 
     /**
+     * <p>
+     * Settings that configure the translation output.
+     * </p>
+     * 
+     * @param settings
+     *        Settings that configure the translation output.
+     */
+
+    public void setSettings(TranslationSettings settings) {
+        this.settings = settings;
+    }
+
+    /**
+     * <p>
+     * Settings that configure the translation output.
+     * </p>
+     * 
+     * @return Settings that configure the translation output.
+     */
+
+    public TranslationSettings getSettings() {
+        return this.settings;
+    }
+
+    /**
+     * <p>
+     * Settings that configure the translation output.
+     * </p>
+     * 
+     * @param settings
+     *        Settings that configure the translation output.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public TextTranslationJobProperties withSettings(TranslationSettings settings) {
+        setSettings(settings);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -853,7 +899,9 @@ public class TextTranslationJobProperties implements Serializable, Cloneable, St
         if (getOutputDataConfig() != null)
             sb.append("OutputDataConfig: ").append(getOutputDataConfig()).append(",");
         if (getDataAccessRoleArn() != null)
-            sb.append("DataAccessRoleArn: ").append(getDataAccessRoleArn());
+            sb.append("DataAccessRoleArn: ").append(getDataAccessRoleArn()).append(",");
+        if (getSettings() != null)
+            sb.append("Settings: ").append(getSettings());
         sb.append("}");
         return sb.toString();
     }
@@ -924,6 +972,10 @@ public class TextTranslationJobProperties implements Serializable, Cloneable, St
             return false;
         if (other.getDataAccessRoleArn() != null && other.getDataAccessRoleArn().equals(this.getDataAccessRoleArn()) == false)
             return false;
+        if (other.getSettings() == null ^ this.getSettings() == null)
+            return false;
+        if (other.getSettings() != null && other.getSettings().equals(this.getSettings()) == false)
+            return false;
         return true;
     }
 
@@ -946,6 +998,7 @@ public class TextTranslationJobProperties implements Serializable, Cloneable, St
         hashCode = prime * hashCode + ((getInputDataConfig() == null) ? 0 : getInputDataConfig().hashCode());
         hashCode = prime * hashCode + ((getOutputDataConfig() == null) ? 0 : getOutputDataConfig().hashCode());
         hashCode = prime * hashCode + ((getDataAccessRoleArn() == null) ? 0 : getDataAccessRoleArn().hashCode());
+        hashCode = prime * hashCode + ((getSettings() == null) ? 0 : getSettings().hashCode());
         return hashCode;
     }
 

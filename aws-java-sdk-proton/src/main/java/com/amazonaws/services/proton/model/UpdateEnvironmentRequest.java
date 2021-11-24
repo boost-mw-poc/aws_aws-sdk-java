@@ -100,11 +100,24 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
     private String name;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Proton service role that allows AWS Proton to make API calls to other
-     * services your behalf.
+     * The Amazon Resource Name (ARN) of the Proton service role that allows Proton to make API calls to other services
+     * your behalf.
      * </p>
      */
     private String protonServiceRoleArn;
+    /**
+     * <p>
+     * The repository that you provide with pull request provisioning.
+     * </p>
+     * <important>
+     * <p>
+     * Provisioning by pull request is currently in feature preview and is only usable with Terraform based Proton
+     * Templates. To learn more about <a href="https://aws.amazon.com/service-terms">Amazon Web Services Feature Preview
+     * terms</a>, see section 2 on Beta and Previews.
+     * </p>
+     * </important>
+     */
+    private RepositoryBranchInput provisioningRepository;
     /**
      * <p>
      * The formatted specification that defines the update.
@@ -113,13 +126,13 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
     private String spec;
     /**
      * <p>
-     * The ID of the major version of the environment to update.
+     * The major version of the environment to update.
      * </p>
      */
     private String templateMajorVersion;
     /**
      * <p>
-     * The ID of the minor version of the environment to update.
+     * The minor version of the environment to update.
      * </p>
      */
     private String templateMinorVersion;
@@ -685,13 +698,13 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Proton service role that allows AWS Proton to make API calls to other
-     * services your behalf.
+     * The Amazon Resource Name (ARN) of the Proton service role that allows Proton to make API calls to other services
+     * your behalf.
      * </p>
      * 
      * @param protonServiceRoleArn
-     *        The Amazon Resource Name (ARN) of the AWS Proton service role that allows AWS Proton to make API calls to
-     *        other services your behalf.
+     *        The Amazon Resource Name (ARN) of the Proton service role that allows Proton to make API calls to other
+     *        services your behalf.
      */
 
     public void setProtonServiceRoleArn(String protonServiceRoleArn) {
@@ -700,12 +713,12 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Proton service role that allows AWS Proton to make API calls to other
-     * services your behalf.
+     * The Amazon Resource Name (ARN) of the Proton service role that allows Proton to make API calls to other services
+     * your behalf.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the AWS Proton service role that allows AWS Proton to make API calls to
-     *         other services your behalf.
+     * @return The Amazon Resource Name (ARN) of the Proton service role that allows Proton to make API calls to other
+     *         services your behalf.
      */
 
     public String getProtonServiceRoleArn() {
@@ -714,18 +727,94 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Proton service role that allows AWS Proton to make API calls to other
-     * services your behalf.
+     * The Amazon Resource Name (ARN) of the Proton service role that allows Proton to make API calls to other services
+     * your behalf.
      * </p>
      * 
      * @param protonServiceRoleArn
-     *        The Amazon Resource Name (ARN) of the AWS Proton service role that allows AWS Proton to make API calls to
-     *        other services your behalf.
+     *        The Amazon Resource Name (ARN) of the Proton service role that allows Proton to make API calls to other
+     *        services your behalf.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public UpdateEnvironmentRequest withProtonServiceRoleArn(String protonServiceRoleArn) {
         setProtonServiceRoleArn(protonServiceRoleArn);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The repository that you provide with pull request provisioning.
+     * </p>
+     * <important>
+     * <p>
+     * Provisioning by pull request is currently in feature preview and is only usable with Terraform based Proton
+     * Templates. To learn more about <a href="https://aws.amazon.com/service-terms">Amazon Web Services Feature Preview
+     * terms</a>, see section 2 on Beta and Previews.
+     * </p>
+     * </important>
+     * 
+     * @param provisioningRepository
+     *        The repository that you provide with pull request provisioning.</p> <important>
+     *        <p>
+     *        Provisioning by pull request is currently in feature preview and is only usable with Terraform based
+     *        Proton Templates. To learn more about <a href="https://aws.amazon.com/service-terms">Amazon Web Services
+     *        Feature Preview terms</a>, see section 2 on Beta and Previews.
+     *        </p>
+     */
+
+    public void setProvisioningRepository(RepositoryBranchInput provisioningRepository) {
+        this.provisioningRepository = provisioningRepository;
+    }
+
+    /**
+     * <p>
+     * The repository that you provide with pull request provisioning.
+     * </p>
+     * <important>
+     * <p>
+     * Provisioning by pull request is currently in feature preview and is only usable with Terraform based Proton
+     * Templates. To learn more about <a href="https://aws.amazon.com/service-terms">Amazon Web Services Feature Preview
+     * terms</a>, see section 2 on Beta and Previews.
+     * </p>
+     * </important>
+     * 
+     * @return The repository that you provide with pull request provisioning.</p> <important>
+     *         <p>
+     *         Provisioning by pull request is currently in feature preview and is only usable with Terraform based
+     *         Proton Templates. To learn more about <a href="https://aws.amazon.com/service-terms">Amazon Web Services
+     *         Feature Preview terms</a>, see section 2 on Beta and Previews.
+     *         </p>
+     */
+
+    public RepositoryBranchInput getProvisioningRepository() {
+        return this.provisioningRepository;
+    }
+
+    /**
+     * <p>
+     * The repository that you provide with pull request provisioning.
+     * </p>
+     * <important>
+     * <p>
+     * Provisioning by pull request is currently in feature preview and is only usable with Terraform based Proton
+     * Templates. To learn more about <a href="https://aws.amazon.com/service-terms">Amazon Web Services Feature Preview
+     * terms</a>, see section 2 on Beta and Previews.
+     * </p>
+     * </important>
+     * 
+     * @param provisioningRepository
+     *        The repository that you provide with pull request provisioning.</p> <important>
+     *        <p>
+     *        Provisioning by pull request is currently in feature preview and is only usable with Terraform based
+     *        Proton Templates. To learn more about <a href="https://aws.amazon.com/service-terms">Amazon Web Services
+     *        Feature Preview terms</a>, see section 2 on Beta and Previews.
+     *        </p>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateEnvironmentRequest withProvisioningRepository(RepositoryBranchInput provisioningRepository) {
+        setProvisioningRepository(provisioningRepository);
         return this;
     }
 
@@ -771,11 +860,11 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The ID of the major version of the environment to update.
+     * The major version of the environment to update.
      * </p>
      * 
      * @param templateMajorVersion
-     *        The ID of the major version of the environment to update.
+     *        The major version of the environment to update.
      */
 
     public void setTemplateMajorVersion(String templateMajorVersion) {
@@ -784,10 +873,10 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The ID of the major version of the environment to update.
+     * The major version of the environment to update.
      * </p>
      * 
-     * @return The ID of the major version of the environment to update.
+     * @return The major version of the environment to update.
      */
 
     public String getTemplateMajorVersion() {
@@ -796,11 +885,11 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The ID of the major version of the environment to update.
+     * The major version of the environment to update.
      * </p>
      * 
      * @param templateMajorVersion
-     *        The ID of the major version of the environment to update.
+     *        The major version of the environment to update.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -811,11 +900,11 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The ID of the minor version of the environment to update.
+     * The minor version of the environment to update.
      * </p>
      * 
      * @param templateMinorVersion
-     *        The ID of the minor version of the environment to update.
+     *        The minor version of the environment to update.
      */
 
     public void setTemplateMinorVersion(String templateMinorVersion) {
@@ -824,10 +913,10 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The ID of the minor version of the environment to update.
+     * The minor version of the environment to update.
      * </p>
      * 
-     * @return The ID of the minor version of the environment to update.
+     * @return The minor version of the environment to update.
      */
 
     public String getTemplateMinorVersion() {
@@ -836,11 +925,11 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The ID of the minor version of the environment to update.
+     * The minor version of the environment to update.
      * </p>
      * 
      * @param templateMinorVersion
-     *        The ID of the minor version of the environment to update.
+     *        The minor version of the environment to update.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -871,6 +960,8 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
             sb.append("Name: ").append(getName()).append(",");
         if (getProtonServiceRoleArn() != null)
             sb.append("ProtonServiceRoleArn: ").append(getProtonServiceRoleArn()).append(",");
+        if (getProvisioningRepository() != null)
+            sb.append("ProvisioningRepository: ").append(getProvisioningRepository()).append(",");
         if (getSpec() != null)
             sb.append("Spec: ").append("***Sensitive Data Redacted***").append(",");
         if (getTemplateMajorVersion() != null)
@@ -912,6 +1003,10 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
             return false;
         if (other.getProtonServiceRoleArn() != null && other.getProtonServiceRoleArn().equals(this.getProtonServiceRoleArn()) == false)
             return false;
+        if (other.getProvisioningRepository() == null ^ this.getProvisioningRepository() == null)
+            return false;
+        if (other.getProvisioningRepository() != null && other.getProvisioningRepository().equals(this.getProvisioningRepository()) == false)
+            return false;
         if (other.getSpec() == null ^ this.getSpec() == null)
             return false;
         if (other.getSpec() != null && other.getSpec().equals(this.getSpec()) == false)
@@ -937,6 +1032,7 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
         hashCode = prime * hashCode + ((getEnvironmentAccountConnectionId() == null) ? 0 : getEnvironmentAccountConnectionId().hashCode());
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
         hashCode = prime * hashCode + ((getProtonServiceRoleArn() == null) ? 0 : getProtonServiceRoleArn().hashCode());
+        hashCode = prime * hashCode + ((getProvisioningRepository() == null) ? 0 : getProvisioningRepository().hashCode());
         hashCode = prime * hashCode + ((getSpec() == null) ? 0 : getSpec().hashCode());
         hashCode = prime * hashCode + ((getTemplateMajorVersion() == null) ? 0 : getTemplateMajorVersion().hashCode());
         hashCode = prime * hashCode + ((getTemplateMinorVersion() == null) ? 0 : getTemplateMinorVersion().hashCode());

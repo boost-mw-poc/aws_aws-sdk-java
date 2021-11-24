@@ -64,6 +64,10 @@ public class GetProfileObjectTypeTemplateResultJsonUnmarshaller implements Unmar
                     context.nextToken();
                     getProfileObjectTypeTemplateResult.setAllowProfileCreation(context.getUnmarshaller(Boolean.class).unmarshall(context));
                 }
+                if (context.testExpression("SourceLastUpdatedTimestampFormat", targetDepth)) {
+                    context.nextToken();
+                    getProfileObjectTypeTemplateResult.setSourceLastUpdatedTimestampFormat(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("Fields", targetDepth)) {
                     context.nextToken();
                     getProfileObjectTypeTemplateResult.setFields(new MapUnmarshaller<String, ObjectTypeField>(context.getUnmarshaller(String.class),

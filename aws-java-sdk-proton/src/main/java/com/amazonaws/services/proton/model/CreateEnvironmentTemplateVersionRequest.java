@@ -27,7 +27,7 @@ public class CreateEnvironmentTemplateVersionRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * When included, if two identicial requests are made with the same client token, AWS Proton returns the environment
+     * When included, if two identical requests are made with the same client token, Proton returns the environment
      * template version that the first request created.
      * </p>
      */
@@ -40,10 +40,10 @@ public class CreateEnvironmentTemplateVersionRequest extends com.amazonaws.Amazo
     private String description;
     /**
      * <p>
-     * To create a new minor version of the environment template, include a <code>majorVersion</code>.
+     * To create a new minor version of the environment template, include a <code>major Version</code>.
      * </p>
      * <p>
-     * To create a new major and minor version of the environment template, <i>exclude</i> <code>majorVersion</code>.
+     * To create a new major and minor version of the environment template, <i>exclude</i> <code>major Version</code>.
      * </p>
      */
     private String majorVersion;
@@ -68,12 +68,12 @@ public class CreateEnvironmentTemplateVersionRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * When included, if two identicial requests are made with the same client token, AWS Proton returns the environment
+     * When included, if two identical requests are made with the same client token, Proton returns the environment
      * template version that the first request created.
      * </p>
      * 
      * @param clientToken
-     *        When included, if two identicial requests are made with the same client token, AWS Proton returns the
+     *        When included, if two identical requests are made with the same client token, Proton returns the
      *        environment template version that the first request created.
      */
 
@@ -83,11 +83,11 @@ public class CreateEnvironmentTemplateVersionRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * When included, if two identicial requests are made with the same client token, AWS Proton returns the environment
+     * When included, if two identical requests are made with the same client token, Proton returns the environment
      * template version that the first request created.
      * </p>
      * 
-     * @return When included, if two identicial requests are made with the same client token, AWS Proton returns the
+     * @return When included, if two identical requests are made with the same client token, Proton returns the
      *         environment template version that the first request created.
      */
 
@@ -97,12 +97,12 @@ public class CreateEnvironmentTemplateVersionRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * When included, if two identicial requests are made with the same client token, AWS Proton returns the environment
+     * When included, if two identical requests are made with the same client token, Proton returns the environment
      * template version that the first request created.
      * </p>
      * 
      * @param clientToken
-     *        When included, if two identicial requests are made with the same client token, AWS Proton returns the
+     *        When included, if two identical requests are made with the same client token, Proton returns the
      *        environment template version that the first request created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -154,17 +154,17 @@ public class CreateEnvironmentTemplateVersionRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * To create a new minor version of the environment template, include a <code>majorVersion</code>.
+     * To create a new minor version of the environment template, include a <code>major Version</code>.
      * </p>
      * <p>
-     * To create a new major and minor version of the environment template, <i>exclude</i> <code>majorVersion</code>.
+     * To create a new major and minor version of the environment template, <i>exclude</i> <code>major Version</code>.
      * </p>
      * 
      * @param majorVersion
-     *        To create a new minor version of the environment template, include a <code>majorVersion</code>.</p>
+     *        To create a new minor version of the environment template, include a <code>major Version</code>.</p>
      *        <p>
      *        To create a new major and minor version of the environment template, <i>exclude</i>
-     *        <code>majorVersion</code>.
+     *        <code>major Version</code>.
      */
 
     public void setMajorVersion(String majorVersion) {
@@ -173,16 +173,16 @@ public class CreateEnvironmentTemplateVersionRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * To create a new minor version of the environment template, include a <code>majorVersion</code>.
+     * To create a new minor version of the environment template, include a <code>major Version</code>.
      * </p>
      * <p>
-     * To create a new major and minor version of the environment template, <i>exclude</i> <code>majorVersion</code>.
+     * To create a new major and minor version of the environment template, <i>exclude</i> <code>major Version</code>.
      * </p>
      * 
-     * @return To create a new minor version of the environment template, include a <code>majorVersion</code>.</p>
+     * @return To create a new minor version of the environment template, include a <code>major Version</code>.</p>
      *         <p>
      *         To create a new major and minor version of the environment template, <i>exclude</i>
-     *         <code>majorVersion</code>.
+     *         <code>major Version</code>.
      */
 
     public String getMajorVersion() {
@@ -191,17 +191,17 @@ public class CreateEnvironmentTemplateVersionRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * To create a new minor version of the environment template, include a <code>majorVersion</code>.
+     * To create a new minor version of the environment template, include a <code>major Version</code>.
      * </p>
      * <p>
-     * To create a new major and minor version of the environment template, <i>exclude</i> <code>majorVersion</code>.
+     * To create a new major and minor version of the environment template, <i>exclude</i> <code>major Version</code>.
      * </p>
      * 
      * @param majorVersion
-     *        To create a new minor version of the environment template, include a <code>majorVersion</code>.</p>
+     *        To create a new minor version of the environment template, include a <code>major Version</code>.</p>
      *        <p>
      *        To create a new major and minor version of the environment template, <i>exclude</i>
-     *        <code>majorVersion</code>.
+     *        <code>major Version</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

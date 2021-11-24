@@ -26,41 +26,39 @@ import java.util.concurrent.ExecutorService;
  * notification when an asynchronous operation completes.
  * <p>
  * <p>
- * This is the AWS Proton Service API Reference. It provides descriptions, syntax and usage examples for each of the <a
+ * This is the Proton Service API Reference. It provides descriptions, syntax and usage examples for each of the <a
  * href="https://docs.aws.amazon.com/proton/latest/APIReference/API_Operations.html">actions</a> and <a
- * href="https://docs.aws.amazon.com/proton/latest/APIReference/API_Types.html">data types</a> for the AWS Proton
- * service.
+ * href="https://docs.aws.amazon.com/proton/latest/APIReference/API_Types.html">data types</a> for the Proton service.
  * </p>
  * <p>
  * The documentation for each action shows the Query API request parameters and the XML response.
  * </p>
  * <p>
- * Alternatively, you can use the AWS CLI to access an API. For more information, see the <a
- * href="https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-welcome.html">AWS Command Line Interface User
- * Guide</a>.
+ * Alternatively, you can use the Amazon Web Services CLI to access an API. For more information, see the <a
+ * href="https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-welcome.html">Amazon Web Services Command Line
+ * Interface User Guide</a>.
  * </p>
  * <p>
- * The AWS Proton service is a two-pronged automation framework. Administrators create service templates to provide
+ * The Proton service is a two-pronged automation framework. Administrators create service templates to provide
  * standardized infrastructure and deployment tooling for serverless and container based applications. Developers, in
  * turn, select from the available service templates to automate their application or service deployments.
  * </p>
  * <p>
- * Because administrators define the infrastructure and tooling that AWS Proton deploys and manages, they need
- * permissions to use all of the listed API operations.
+ * Because administrators define the infrastructure and tooling that Proton deploys and manages, they need permissions
+ * to use all of the listed API operations.
  * </p>
  * <p>
- * When developers select a specific infrastructure and tooling set, AWS Proton deploys their applications. To monitor
- * their applications that are running on AWS Proton, developers need permissions to the service <i>create</i>,
- * <i>list</i>, <i>update</i> and <i>delete</i> API operations and the service instance <i>list</i> and <i>update</i>
- * API operations.
+ * When developers select a specific infrastructure and tooling set, Proton deploys their applications. To monitor their
+ * applications that are running on Proton, developers need permissions to the service <i>create</i>, <i>list</i>,
+ * <i>update</i> and <i>delete</i> API operations and the service instance <i>list</i> and <i>update</i> API operations.
  * </p>
  * <p>
- * To learn more about AWS Proton administration, see the <a
- * href="https://docs.aws.amazon.com/proton/latest/adminguide/Welcome.html">AWS Proton Administrator Guide</a>.
+ * To learn more about Proton administration, see the <a
+ * href="https://docs.aws.amazon.com/proton/latest/adminguide/Welcome.html">Proton Administrator Guide</a>.
  * </p>
  * <p>
- * To learn more about deploying serverless and containerized applications on AWS Proton, see the <a
- * href="https://docs.aws.amazon.com/proton/latest/userguide/Welcome.html">AWS Proton User Guide</a>.
+ * To learn more about deploying serverless and containerized applications on Proton, see the <a
+ * href="https://docs.aws.amazon.com/proton/latest/userguide/Welcome.html">Proton User Guide</a>.
  * </p>
  * <p>
  * <b>Ensuring Idempotency</b>
@@ -85,11 +83,11 @@ import java.util.concurrent.ExecutorService;
  * <b>Idempotent create APIs with a client token</b>
  * </p>
  * <p>
- * The API actions in this list support idempotency with the use of a <i>client token</i>. The corresponding AWS CLI
- * commands also support idempotency using a client token. A client token is a unique, case-sensitive string of up to 64
- * ASCII characters. To make an idempotent API request using one of these actions, specify a client token in the
- * request. We recommend that you <i>don't</i> reuse the same client token for other API requests. If you don’t provide
- * a client token for these APIs, a default client token is automatically provided by SDKs.
+ * The API actions in this list support idempotency with the use of a <i>client token</i>. The corresponding Amazon Web
+ * Services CLI commands also support idempotency using a client token. A client token is a unique, case-sensitive
+ * string of up to 64 ASCII characters. To make an idempotent API request using one of these actions, specify a client
+ * token in the request. We recommend that you <i>don't</i> reuse the same client token for other API requests. If you
+ * don’t provide a client token for these APIs, a default client token is automatically provided by SDKs.
  * </p>
  * <p>
  * Given a request action that has succeeded:
@@ -567,6 +565,39 @@ public class AWSProtonAsyncClient extends AWSProtonClient implements AWSProtonAs
     }
 
     @Override
+    public java.util.concurrent.Future<CreateRepositoryResult> createRepositoryAsync(CreateRepositoryRequest request) {
+
+        return createRepositoryAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateRepositoryResult> createRepositoryAsync(final CreateRepositoryRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateRepositoryRequest, CreateRepositoryResult> asyncHandler) {
+        final CreateRepositoryRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateRepositoryResult>() {
+            @Override
+            public CreateRepositoryResult call() throws Exception {
+                CreateRepositoryResult result = null;
+
+                try {
+                    result = executeCreateRepository(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateServiceResult> createServiceAsync(CreateServiceRequest request) {
 
         return createServiceAsync(request, null);
@@ -650,6 +681,39 @@ public class AWSProtonAsyncClient extends AWSProtonClient implements AWSProtonAs
 
                 try {
                     result = executeCreateServiceTemplateVersion(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateTemplateSyncConfigResult> createTemplateSyncConfigAsync(CreateTemplateSyncConfigRequest request) {
+
+        return createTemplateSyncConfigAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateTemplateSyncConfigResult> createTemplateSyncConfigAsync(final CreateTemplateSyncConfigRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateTemplateSyncConfigRequest, CreateTemplateSyncConfigResult> asyncHandler) {
+        final CreateTemplateSyncConfigRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateTemplateSyncConfigResult>() {
+            @Override
+            public CreateTemplateSyncConfigResult call() throws Exception {
+                CreateTemplateSyncConfigResult result = null;
+
+                try {
+                    result = executeCreateTemplateSyncConfig(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -802,6 +866,39 @@ public class AWSProtonAsyncClient extends AWSProtonClient implements AWSProtonAs
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteRepositoryResult> deleteRepositoryAsync(DeleteRepositoryRequest request) {
+
+        return deleteRepositoryAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteRepositoryResult> deleteRepositoryAsync(final DeleteRepositoryRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteRepositoryRequest, DeleteRepositoryResult> asyncHandler) {
+        final DeleteRepositoryRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteRepositoryResult>() {
+            @Override
+            public DeleteRepositoryResult call() throws Exception {
+                DeleteRepositoryResult result = null;
+
+                try {
+                    result = executeDeleteRepository(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteServiceResult> deleteServiceAsync(DeleteServiceRequest request) {
 
         return deleteServiceAsync(request, null);
@@ -885,6 +982,39 @@ public class AWSProtonAsyncClient extends AWSProtonClient implements AWSProtonAs
 
                 try {
                     result = executeDeleteServiceTemplateVersion(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteTemplateSyncConfigResult> deleteTemplateSyncConfigAsync(DeleteTemplateSyncConfigRequest request) {
+
+        return deleteTemplateSyncConfigAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteTemplateSyncConfigResult> deleteTemplateSyncConfigAsync(final DeleteTemplateSyncConfigRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteTemplateSyncConfigRequest, DeleteTemplateSyncConfigResult> asyncHandler) {
+        final DeleteTemplateSyncConfigRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteTemplateSyncConfigResult>() {
+            @Override
+            public DeleteTemplateSyncConfigResult call() throws Exception {
+                DeleteTemplateSyncConfigResult result = null;
+
+                try {
+                    result = executeDeleteTemplateSyncConfig(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -1069,6 +1199,72 @@ public class AWSProtonAsyncClient extends AWSProtonClient implements AWSProtonAs
     }
 
     @Override
+    public java.util.concurrent.Future<GetRepositoryResult> getRepositoryAsync(GetRepositoryRequest request) {
+
+        return getRepositoryAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetRepositoryResult> getRepositoryAsync(final GetRepositoryRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetRepositoryRequest, GetRepositoryResult> asyncHandler) {
+        final GetRepositoryRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetRepositoryResult>() {
+            @Override
+            public GetRepositoryResult call() throws Exception {
+                GetRepositoryResult result = null;
+
+                try {
+                    result = executeGetRepository(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetRepositorySyncStatusResult> getRepositorySyncStatusAsync(GetRepositorySyncStatusRequest request) {
+
+        return getRepositorySyncStatusAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetRepositorySyncStatusResult> getRepositorySyncStatusAsync(final GetRepositorySyncStatusRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetRepositorySyncStatusRequest, GetRepositorySyncStatusResult> asyncHandler) {
+        final GetRepositorySyncStatusRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetRepositorySyncStatusResult>() {
+            @Override
+            public GetRepositorySyncStatusResult call() throws Exception {
+                GetRepositorySyncStatusResult result = null;
+
+                try {
+                    result = executeGetRepositorySyncStatus(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetServiceResult> getServiceAsync(GetServiceRequest request) {
 
         return getServiceAsync(request, null);
@@ -1201,6 +1397,72 @@ public class AWSProtonAsyncClient extends AWSProtonClient implements AWSProtonAs
     }
 
     @Override
+    public java.util.concurrent.Future<GetTemplateSyncConfigResult> getTemplateSyncConfigAsync(GetTemplateSyncConfigRequest request) {
+
+        return getTemplateSyncConfigAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetTemplateSyncConfigResult> getTemplateSyncConfigAsync(final GetTemplateSyncConfigRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetTemplateSyncConfigRequest, GetTemplateSyncConfigResult> asyncHandler) {
+        final GetTemplateSyncConfigRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetTemplateSyncConfigResult>() {
+            @Override
+            public GetTemplateSyncConfigResult call() throws Exception {
+                GetTemplateSyncConfigResult result = null;
+
+                try {
+                    result = executeGetTemplateSyncConfig(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetTemplateSyncStatusResult> getTemplateSyncStatusAsync(GetTemplateSyncStatusRequest request) {
+
+        return getTemplateSyncStatusAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetTemplateSyncStatusResult> getTemplateSyncStatusAsync(final GetTemplateSyncStatusRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetTemplateSyncStatusRequest, GetTemplateSyncStatusResult> asyncHandler) {
+        final GetTemplateSyncStatusRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetTemplateSyncStatusResult>() {
+            @Override
+            public GetTemplateSyncStatusResult call() throws Exception {
+                GetTemplateSyncStatusResult result = null;
+
+                try {
+                    result = executeGetTemplateSyncStatus(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ListEnvironmentAccountConnectionsResult> listEnvironmentAccountConnectionsAsync(
             ListEnvironmentAccountConnectionsRequest request) {
 
@@ -1220,6 +1482,74 @@ public class AWSProtonAsyncClient extends AWSProtonClient implements AWSProtonAs
 
                 try {
                     result = executeListEnvironmentAccountConnections(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListEnvironmentOutputsResult> listEnvironmentOutputsAsync(ListEnvironmentOutputsRequest request) {
+
+        return listEnvironmentOutputsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListEnvironmentOutputsResult> listEnvironmentOutputsAsync(final ListEnvironmentOutputsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListEnvironmentOutputsRequest, ListEnvironmentOutputsResult> asyncHandler) {
+        final ListEnvironmentOutputsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListEnvironmentOutputsResult>() {
+            @Override
+            public ListEnvironmentOutputsResult call() throws Exception {
+                ListEnvironmentOutputsResult result = null;
+
+                try {
+                    result = executeListEnvironmentOutputs(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListEnvironmentProvisionedResourcesResult> listEnvironmentProvisionedResourcesAsync(
+            ListEnvironmentProvisionedResourcesRequest request) {
+
+        return listEnvironmentProvisionedResourcesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListEnvironmentProvisionedResourcesResult> listEnvironmentProvisionedResourcesAsync(
+            final ListEnvironmentProvisionedResourcesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListEnvironmentProvisionedResourcesRequest, ListEnvironmentProvisionedResourcesResult> asyncHandler) {
+        final ListEnvironmentProvisionedResourcesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListEnvironmentProvisionedResourcesResult>() {
+            @Override
+            public ListEnvironmentProvisionedResourcesResult call() throws Exception {
+                ListEnvironmentProvisionedResourcesResult result = null;
+
+                try {
+                    result = executeListEnvironmentProvisionedResources(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -1337,6 +1667,141 @@ public class AWSProtonAsyncClient extends AWSProtonClient implements AWSProtonAs
     }
 
     @Override
+    public java.util.concurrent.Future<ListRepositoriesResult> listRepositoriesAsync(ListRepositoriesRequest request) {
+
+        return listRepositoriesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListRepositoriesResult> listRepositoriesAsync(final ListRepositoriesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListRepositoriesRequest, ListRepositoriesResult> asyncHandler) {
+        final ListRepositoriesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListRepositoriesResult>() {
+            @Override
+            public ListRepositoriesResult call() throws Exception {
+                ListRepositoriesResult result = null;
+
+                try {
+                    result = executeListRepositories(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListRepositorySyncDefinitionsResult> listRepositorySyncDefinitionsAsync(ListRepositorySyncDefinitionsRequest request) {
+
+        return listRepositorySyncDefinitionsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListRepositorySyncDefinitionsResult> listRepositorySyncDefinitionsAsync(
+            final ListRepositorySyncDefinitionsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListRepositorySyncDefinitionsRequest, ListRepositorySyncDefinitionsResult> asyncHandler) {
+        final ListRepositorySyncDefinitionsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListRepositorySyncDefinitionsResult>() {
+            @Override
+            public ListRepositorySyncDefinitionsResult call() throws Exception {
+                ListRepositorySyncDefinitionsResult result = null;
+
+                try {
+                    result = executeListRepositorySyncDefinitions(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListServiceInstanceOutputsResult> listServiceInstanceOutputsAsync(ListServiceInstanceOutputsRequest request) {
+
+        return listServiceInstanceOutputsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListServiceInstanceOutputsResult> listServiceInstanceOutputsAsync(final ListServiceInstanceOutputsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListServiceInstanceOutputsRequest, ListServiceInstanceOutputsResult> asyncHandler) {
+        final ListServiceInstanceOutputsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListServiceInstanceOutputsResult>() {
+            @Override
+            public ListServiceInstanceOutputsResult call() throws Exception {
+                ListServiceInstanceOutputsResult result = null;
+
+                try {
+                    result = executeListServiceInstanceOutputs(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListServiceInstanceProvisionedResourcesResult> listServiceInstanceProvisionedResourcesAsync(
+            ListServiceInstanceProvisionedResourcesRequest request) {
+
+        return listServiceInstanceProvisionedResourcesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListServiceInstanceProvisionedResourcesResult> listServiceInstanceProvisionedResourcesAsync(
+            final ListServiceInstanceProvisionedResourcesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListServiceInstanceProvisionedResourcesRequest, ListServiceInstanceProvisionedResourcesResult> asyncHandler) {
+        final ListServiceInstanceProvisionedResourcesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListServiceInstanceProvisionedResourcesResult>() {
+            @Override
+            public ListServiceInstanceProvisionedResourcesResult call() throws Exception {
+                ListServiceInstanceProvisionedResourcesResult result = null;
+
+                try {
+                    result = executeListServiceInstanceProvisionedResources(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<ListServiceInstancesResult> listServiceInstancesAsync(ListServiceInstancesRequest request) {
 
         return listServiceInstancesAsync(request, null);
@@ -1354,6 +1819,74 @@ public class AWSProtonAsyncClient extends AWSProtonClient implements AWSProtonAs
 
                 try {
                     result = executeListServiceInstances(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListServicePipelineOutputsResult> listServicePipelineOutputsAsync(ListServicePipelineOutputsRequest request) {
+
+        return listServicePipelineOutputsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListServicePipelineOutputsResult> listServicePipelineOutputsAsync(final ListServicePipelineOutputsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListServicePipelineOutputsRequest, ListServicePipelineOutputsResult> asyncHandler) {
+        final ListServicePipelineOutputsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListServicePipelineOutputsResult>() {
+            @Override
+            public ListServicePipelineOutputsResult call() throws Exception {
+                ListServicePipelineOutputsResult result = null;
+
+                try {
+                    result = executeListServicePipelineOutputs(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListServicePipelineProvisionedResourcesResult> listServicePipelineProvisionedResourcesAsync(
+            ListServicePipelineProvisionedResourcesRequest request) {
+
+        return listServicePipelineProvisionedResourcesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListServicePipelineProvisionedResourcesResult> listServicePipelineProvisionedResourcesAsync(
+            final ListServicePipelineProvisionedResourcesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListServicePipelineProvisionedResourcesRequest, ListServicePipelineProvisionedResourcesResult> asyncHandler) {
+        final ListServicePipelineProvisionedResourcesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListServicePipelineProvisionedResourcesResult>() {
+            @Override
+            public ListServicePipelineProvisionedResourcesResult call() throws Exception {
+                ListServicePipelineProvisionedResourcesResult result = null;
+
+                try {
+                    result = executeListServicePipelineProvisionedResources(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -1486,6 +2019,41 @@ public class AWSProtonAsyncClient extends AWSProtonClient implements AWSProtonAs
 
                 try {
                     result = executeListTagsForResource(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<NotifyResourceDeploymentStatusChangeResult> notifyResourceDeploymentStatusChangeAsync(
+            NotifyResourceDeploymentStatusChangeRequest request) {
+
+        return notifyResourceDeploymentStatusChangeAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<NotifyResourceDeploymentStatusChangeResult> notifyResourceDeploymentStatusChangeAsync(
+            final NotifyResourceDeploymentStatusChangeRequest request,
+            final com.amazonaws.handlers.AsyncHandler<NotifyResourceDeploymentStatusChangeRequest, NotifyResourceDeploymentStatusChangeResult> asyncHandler) {
+        final NotifyResourceDeploymentStatusChangeRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<NotifyResourceDeploymentStatusChangeResult>() {
+            @Override
+            public NotifyResourceDeploymentStatusChangeResult call() throws Exception {
+                NotifyResourceDeploymentStatusChangeResult result = null;
+
+                try {
+                    result = executeNotifyResourceDeploymentStatusChange(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -1921,6 +2489,39 @@ public class AWSProtonAsyncClient extends AWSProtonClient implements AWSProtonAs
 
                 try {
                     result = executeUpdateServiceTemplateVersion(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateTemplateSyncConfigResult> updateTemplateSyncConfigAsync(UpdateTemplateSyncConfigRequest request) {
+
+        return updateTemplateSyncConfigAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateTemplateSyncConfigResult> updateTemplateSyncConfigAsync(final UpdateTemplateSyncConfigRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateTemplateSyncConfigRequest, UpdateTemplateSyncConfigResult> asyncHandler) {
+        final UpdateTemplateSyncConfigRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateTemplateSyncConfigResult>() {
+            @Override
+            public UpdateTemplateSyncConfigResult call() throws Exception {
+                UpdateTemplateSyncConfigResult result = null;
+
+                try {
+                    result = executeUpdateTemplateSyncConfig(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

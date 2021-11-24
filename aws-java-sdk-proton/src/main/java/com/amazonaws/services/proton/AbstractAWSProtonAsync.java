@@ -141,6 +141,19 @@ public class AbstractAWSProtonAsync extends AbstractAWSProton implements AWSProt
     }
 
     @Override
+    public java.util.concurrent.Future<CreateRepositoryResult> createRepositoryAsync(CreateRepositoryRequest request) {
+
+        return createRepositoryAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateRepositoryResult> createRepositoryAsync(CreateRepositoryRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateRepositoryRequest, CreateRepositoryResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateServiceResult> createServiceAsync(CreateServiceRequest request) {
 
         return createServiceAsync(request, null);
@@ -175,6 +188,19 @@ public class AbstractAWSProtonAsync extends AbstractAWSProton implements AWSProt
     @Override
     public java.util.concurrent.Future<CreateServiceTemplateVersionResult> createServiceTemplateVersionAsync(CreateServiceTemplateVersionRequest request,
             com.amazonaws.handlers.AsyncHandler<CreateServiceTemplateVersionRequest, CreateServiceTemplateVersionResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateTemplateSyncConfigResult> createTemplateSyncConfigAsync(CreateTemplateSyncConfigRequest request) {
+
+        return createTemplateSyncConfigAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateTemplateSyncConfigResult> createTemplateSyncConfigAsync(CreateTemplateSyncConfigRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateTemplateSyncConfigRequest, CreateTemplateSyncConfigResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -236,6 +262,19 @@ public class AbstractAWSProtonAsync extends AbstractAWSProton implements AWSProt
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteRepositoryResult> deleteRepositoryAsync(DeleteRepositoryRequest request) {
+
+        return deleteRepositoryAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteRepositoryResult> deleteRepositoryAsync(DeleteRepositoryRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteRepositoryRequest, DeleteRepositoryResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteServiceResult> deleteServiceAsync(DeleteServiceRequest request) {
 
         return deleteServiceAsync(request, null);
@@ -270,6 +309,19 @@ public class AbstractAWSProtonAsync extends AbstractAWSProton implements AWSProt
     @Override
     public java.util.concurrent.Future<DeleteServiceTemplateVersionResult> deleteServiceTemplateVersionAsync(DeleteServiceTemplateVersionRequest request,
             com.amazonaws.handlers.AsyncHandler<DeleteServiceTemplateVersionRequest, DeleteServiceTemplateVersionResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteTemplateSyncConfigResult> deleteTemplateSyncConfigAsync(DeleteTemplateSyncConfigRequest request) {
+
+        return deleteTemplateSyncConfigAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteTemplateSyncConfigResult> deleteTemplateSyncConfigAsync(DeleteTemplateSyncConfigRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteTemplateSyncConfigRequest, DeleteTemplateSyncConfigResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -342,6 +394,32 @@ public class AbstractAWSProtonAsync extends AbstractAWSProton implements AWSProt
     }
 
     @Override
+    public java.util.concurrent.Future<GetRepositoryResult> getRepositoryAsync(GetRepositoryRequest request) {
+
+        return getRepositoryAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetRepositoryResult> getRepositoryAsync(GetRepositoryRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetRepositoryRequest, GetRepositoryResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetRepositorySyncStatusResult> getRepositorySyncStatusAsync(GetRepositorySyncStatusRequest request) {
+
+        return getRepositorySyncStatusAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetRepositorySyncStatusResult> getRepositorySyncStatusAsync(GetRepositorySyncStatusRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetRepositorySyncStatusRequest, GetRepositorySyncStatusResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetServiceResult> getServiceAsync(GetServiceRequest request) {
 
         return getServiceAsync(request, null);
@@ -394,6 +472,32 @@ public class AbstractAWSProtonAsync extends AbstractAWSProton implements AWSProt
     }
 
     @Override
+    public java.util.concurrent.Future<GetTemplateSyncConfigResult> getTemplateSyncConfigAsync(GetTemplateSyncConfigRequest request) {
+
+        return getTemplateSyncConfigAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetTemplateSyncConfigResult> getTemplateSyncConfigAsync(GetTemplateSyncConfigRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetTemplateSyncConfigRequest, GetTemplateSyncConfigResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetTemplateSyncStatusResult> getTemplateSyncStatusAsync(GetTemplateSyncStatusRequest request) {
+
+        return getTemplateSyncStatusAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetTemplateSyncStatusResult> getTemplateSyncStatusAsync(GetTemplateSyncStatusRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetTemplateSyncStatusRequest, GetTemplateSyncStatusResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ListEnvironmentAccountConnectionsResult> listEnvironmentAccountConnectionsAsync(
             ListEnvironmentAccountConnectionsRequest request) {
 
@@ -404,6 +508,34 @@ public class AbstractAWSProtonAsync extends AbstractAWSProton implements AWSProt
     public java.util.concurrent.Future<ListEnvironmentAccountConnectionsResult> listEnvironmentAccountConnectionsAsync(
             ListEnvironmentAccountConnectionsRequest request,
             com.amazonaws.handlers.AsyncHandler<ListEnvironmentAccountConnectionsRequest, ListEnvironmentAccountConnectionsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListEnvironmentOutputsResult> listEnvironmentOutputsAsync(ListEnvironmentOutputsRequest request) {
+
+        return listEnvironmentOutputsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListEnvironmentOutputsResult> listEnvironmentOutputsAsync(ListEnvironmentOutputsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListEnvironmentOutputsRequest, ListEnvironmentOutputsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListEnvironmentProvisionedResourcesResult> listEnvironmentProvisionedResourcesAsync(
+            ListEnvironmentProvisionedResourcesRequest request) {
+
+        return listEnvironmentProvisionedResourcesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListEnvironmentProvisionedResourcesResult> listEnvironmentProvisionedResourcesAsync(
+            ListEnvironmentProvisionedResourcesRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListEnvironmentProvisionedResourcesRequest, ListEnvironmentProvisionedResourcesResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -450,6 +582,60 @@ public class AbstractAWSProtonAsync extends AbstractAWSProton implements AWSProt
     }
 
     @Override
+    public java.util.concurrent.Future<ListRepositoriesResult> listRepositoriesAsync(ListRepositoriesRequest request) {
+
+        return listRepositoriesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListRepositoriesResult> listRepositoriesAsync(ListRepositoriesRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListRepositoriesRequest, ListRepositoriesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListRepositorySyncDefinitionsResult> listRepositorySyncDefinitionsAsync(ListRepositorySyncDefinitionsRequest request) {
+
+        return listRepositorySyncDefinitionsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListRepositorySyncDefinitionsResult> listRepositorySyncDefinitionsAsync(ListRepositorySyncDefinitionsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListRepositorySyncDefinitionsRequest, ListRepositorySyncDefinitionsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListServiceInstanceOutputsResult> listServiceInstanceOutputsAsync(ListServiceInstanceOutputsRequest request) {
+
+        return listServiceInstanceOutputsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListServiceInstanceOutputsResult> listServiceInstanceOutputsAsync(ListServiceInstanceOutputsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListServiceInstanceOutputsRequest, ListServiceInstanceOutputsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListServiceInstanceProvisionedResourcesResult> listServiceInstanceProvisionedResourcesAsync(
+            ListServiceInstanceProvisionedResourcesRequest request) {
+
+        return listServiceInstanceProvisionedResourcesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListServiceInstanceProvisionedResourcesResult> listServiceInstanceProvisionedResourcesAsync(
+            ListServiceInstanceProvisionedResourcesRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListServiceInstanceProvisionedResourcesRequest, ListServiceInstanceProvisionedResourcesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<ListServiceInstancesResult> listServiceInstancesAsync(ListServiceInstancesRequest request) {
 
         return listServiceInstancesAsync(request, null);
@@ -458,6 +644,34 @@ public class AbstractAWSProtonAsync extends AbstractAWSProton implements AWSProt
     @Override
     public java.util.concurrent.Future<ListServiceInstancesResult> listServiceInstancesAsync(ListServiceInstancesRequest request,
             com.amazonaws.handlers.AsyncHandler<ListServiceInstancesRequest, ListServiceInstancesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListServicePipelineOutputsResult> listServicePipelineOutputsAsync(ListServicePipelineOutputsRequest request) {
+
+        return listServicePipelineOutputsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListServicePipelineOutputsResult> listServicePipelineOutputsAsync(ListServicePipelineOutputsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListServicePipelineOutputsRequest, ListServicePipelineOutputsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListServicePipelineProvisionedResourcesResult> listServicePipelineProvisionedResourcesAsync(
+            ListServicePipelineProvisionedResourcesRequest request) {
+
+        return listServicePipelineProvisionedResourcesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListServicePipelineProvisionedResourcesResult> listServicePipelineProvisionedResourcesAsync(
+            ListServicePipelineProvisionedResourcesRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListServicePipelineProvisionedResourcesRequest, ListServicePipelineProvisionedResourcesResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -510,6 +724,21 @@ public class AbstractAWSProtonAsync extends AbstractAWSProton implements AWSProt
     @Override
     public java.util.concurrent.Future<ListTagsForResourceResult> listTagsForResourceAsync(ListTagsForResourceRequest request,
             com.amazonaws.handlers.AsyncHandler<ListTagsForResourceRequest, ListTagsForResourceResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<NotifyResourceDeploymentStatusChangeResult> notifyResourceDeploymentStatusChangeAsync(
+            NotifyResourceDeploymentStatusChangeRequest request) {
+
+        return notifyResourceDeploymentStatusChangeAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<NotifyResourceDeploymentStatusChangeResult> notifyResourceDeploymentStatusChangeAsync(
+            NotifyResourceDeploymentStatusChangeRequest request,
+            com.amazonaws.handlers.AsyncHandler<NotifyResourceDeploymentStatusChangeRequest, NotifyResourceDeploymentStatusChangeResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -685,6 +914,19 @@ public class AbstractAWSProtonAsync extends AbstractAWSProton implements AWSProt
     @Override
     public java.util.concurrent.Future<UpdateServiceTemplateVersionResult> updateServiceTemplateVersionAsync(UpdateServiceTemplateVersionRequest request,
             com.amazonaws.handlers.AsyncHandler<UpdateServiceTemplateVersionRequest, UpdateServiceTemplateVersionResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateTemplateSyncConfigResult> updateTemplateSyncConfigAsync(UpdateTemplateSyncConfigRequest request) {
+
+        return updateTemplateSyncConfigAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateTemplateSyncConfigResult> updateTemplateSyncConfigAsync(UpdateTemplateSyncConfigRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateTemplateSyncConfigRequest, UpdateTemplateSyncConfigResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

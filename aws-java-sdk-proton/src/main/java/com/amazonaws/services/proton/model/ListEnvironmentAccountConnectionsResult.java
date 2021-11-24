@@ -26,7 +26,7 @@ public class ListEnvironmentAccountConnectionsResult extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * An array of environment account connections with details that's returned by AWS Proton.
+     * An array of environment account connections with details that's returned by Proton.
      * </p>
      */
     private java.util.List<EnvironmentAccountConnectionSummary> environmentAccountConnections;
@@ -40,10 +40,10 @@ public class ListEnvironmentAccountConnectionsResult extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * An array of environment account connections with details that's returned by AWS Proton.
+     * An array of environment account connections with details that's returned by Proton.
      * </p>
      * 
-     * @return An array of environment account connections with details that's returned by AWS Proton.
+     * @return An array of environment account connections with details that's returned by Proton.
      */
 
     public java.util.List<EnvironmentAccountConnectionSummary> getEnvironmentAccountConnections() {
@@ -52,11 +52,11 @@ public class ListEnvironmentAccountConnectionsResult extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * An array of environment account connections with details that's returned by AWS Proton.
+     * An array of environment account connections with details that's returned by Proton.
      * </p>
      * 
      * @param environmentAccountConnections
-     *        An array of environment account connections with details that's returned by AWS Proton.
+     *        An array of environment account connections with details that's returned by Proton.
      */
 
     public void setEnvironmentAccountConnections(java.util.Collection<EnvironmentAccountConnectionSummary> environmentAccountConnections) {
@@ -70,7 +70,7 @@ public class ListEnvironmentAccountConnectionsResult extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * An array of environment account connections with details that's returned by AWS Proton.
+     * An array of environment account connections with details that's returned by Proton.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -79,7 +79,7 @@ public class ListEnvironmentAccountConnectionsResult extends com.amazonaws.Amazo
      * </p>
      * 
      * @param environmentAccountConnections
-     *        An array of environment account connections with details that's returned by AWS Proton.
+     *        An array of environment account connections with details that's returned by Proton.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -95,11 +95,11 @@ public class ListEnvironmentAccountConnectionsResult extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * An array of environment account connections with details that's returned by AWS Proton.
+     * An array of environment account connections with details that's returned by Proton.
      * </p>
      * 
      * @param environmentAccountConnections
-     *        An array of environment account connections with details that's returned by AWS Proton.
+     *        An array of environment account connections with details that's returned by Proton.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

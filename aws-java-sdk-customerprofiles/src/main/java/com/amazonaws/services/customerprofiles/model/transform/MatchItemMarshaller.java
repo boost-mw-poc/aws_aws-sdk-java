@@ -32,6 +32,8 @@ public class MatchItemMarshaller {
             .marshallLocationName("MatchId").build();
     private static final MarshallingInfo<List> PROFILEIDS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("ProfileIds").build();
+    private static final MarshallingInfo<Double> CONFIDENCESCORE_BINDING = MarshallingInfo.builder(MarshallingType.DOUBLE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ConfidenceScore").build();
 
     private static final MatchItemMarshaller instance = new MatchItemMarshaller();
 
@@ -51,6 +53,7 @@ public class MatchItemMarshaller {
         try {
             protocolMarshaller.marshall(matchItem.getMatchId(), MATCHID_BINDING);
             protocolMarshaller.marshall(matchItem.getProfileIds(), PROFILEIDS_BINDING);
+            protocolMarshaller.marshall(matchItem.getConfidenceScore(), CONFIDENCESCORE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

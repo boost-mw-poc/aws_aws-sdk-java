@@ -72,13 +72,13 @@ public class ServicePipeline implements Serializable, Cloneable, StructuredPojo 
     private String spec;
     /**
      * <p>
-     * The ID of the major version of the service template that was used to create the service pipeline.
+     * The major version of the service template that was used to create the service pipeline.
      * </p>
      */
     private String templateMajorVersion;
     /**
      * <p>
-     * The ID of the minor version of the service template that was used to create the service pipeline.
+     * The minor version of the service template that was used to create the service pipeline.
      * </p>
      */
     private String templateMinorVersion;
@@ -390,11 +390,11 @@ public class ServicePipeline implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The ID of the major version of the service template that was used to create the service pipeline.
+     * The major version of the service template that was used to create the service pipeline.
      * </p>
      * 
      * @param templateMajorVersion
-     *        The ID of the major version of the service template that was used to create the service pipeline.
+     *        The major version of the service template that was used to create the service pipeline.
      */
 
     public void setTemplateMajorVersion(String templateMajorVersion) {
@@ -403,10 +403,10 @@ public class ServicePipeline implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The ID of the major version of the service template that was used to create the service pipeline.
+     * The major version of the service template that was used to create the service pipeline.
      * </p>
      * 
-     * @return The ID of the major version of the service template that was used to create the service pipeline.
+     * @return The major version of the service template that was used to create the service pipeline.
      */
 
     public String getTemplateMajorVersion() {
@@ -415,11 +415,11 @@ public class ServicePipeline implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The ID of the major version of the service template that was used to create the service pipeline.
+     * The major version of the service template that was used to create the service pipeline.
      * </p>
      * 
      * @param templateMajorVersion
-     *        The ID of the major version of the service template that was used to create the service pipeline.
+     *        The major version of the service template that was used to create the service pipeline.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -430,11 +430,11 @@ public class ServicePipeline implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The ID of the minor version of the service template that was used to create the service pipeline.
+     * The minor version of the service template that was used to create the service pipeline.
      * </p>
      * 
      * @param templateMinorVersion
-     *        The ID of the minor version of the service template that was used to create the service pipeline.
+     *        The minor version of the service template that was used to create the service pipeline.
      */
 
     public void setTemplateMinorVersion(String templateMinorVersion) {
@@ -443,10 +443,10 @@ public class ServicePipeline implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The ID of the minor version of the service template that was used to create the service pipeline.
+     * The minor version of the service template that was used to create the service pipeline.
      * </p>
      * 
-     * @return The ID of the minor version of the service template that was used to create the service pipeline.
+     * @return The minor version of the service template that was used to create the service pipeline.
      */
 
     public String getTemplateMinorVersion() {
@@ -455,11 +455,11 @@ public class ServicePipeline implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The ID of the minor version of the service template that was used to create the service pipeline.
+     * The minor version of the service template that was used to create the service pipeline.
      * </p>
      * 
      * @param templateMinorVersion
-     *        The ID of the minor version of the service template that was used to create the service pipeline.
+     *        The minor version of the service template that was used to create the service pipeline.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

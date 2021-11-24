@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Contains the meta data for query results such as the column names, data types, and other attributes.
+ * Contains the metadata for query results such as the column names, data types, and other attributes.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/timestream-query-2018-11-01/ColumnInfo" target="_top">AWS API
@@ -38,7 +38,7 @@ public class ColumnInfo implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The data type of the result set column. The data type can be a scalar or complex. Scalar data types are integers,
-     * strings, doubles, booleans, and others. Complex data types are types such as arrays, rows, and others.
+     * strings, doubles, Booleans, and others. Complex data types are types such as arrays, rows, and others.
      * </p>
      */
     private Type type;
@@ -92,12 +92,12 @@ public class ColumnInfo implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The data type of the result set column. The data type can be a scalar or complex. Scalar data types are integers,
-     * strings, doubles, booleans, and others. Complex data types are types such as arrays, rows, and others.
+     * strings, doubles, Booleans, and others. Complex data types are types such as arrays, rows, and others.
      * </p>
      * 
      * @param type
      *        The data type of the result set column. The data type can be a scalar or complex. Scalar data types are
-     *        integers, strings, doubles, booleans, and others. Complex data types are types such as arrays, rows, and
+     *        integers, strings, doubles, Booleans, and others. Complex data types are types such as arrays, rows, and
      *        others.
      */
 
@@ -108,11 +108,11 @@ public class ColumnInfo implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The data type of the result set column. The data type can be a scalar or complex. Scalar data types are integers,
-     * strings, doubles, booleans, and others. Complex data types are types such as arrays, rows, and others.
+     * strings, doubles, Booleans, and others. Complex data types are types such as arrays, rows, and others.
      * </p>
      * 
      * @return The data type of the result set column. The data type can be a scalar or complex. Scalar data types are
-     *         integers, strings, doubles, booleans, and others. Complex data types are types such as arrays, rows, and
+     *         integers, strings, doubles, Booleans, and others. Complex data types are types such as arrays, rows, and
      *         others.
      */
 
@@ -123,12 +123,12 @@ public class ColumnInfo implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The data type of the result set column. The data type can be a scalar or complex. Scalar data types are integers,
-     * strings, doubles, booleans, and others. Complex data types are types such as arrays, rows, and others.
+     * strings, doubles, Booleans, and others. Complex data types are types such as arrays, rows, and others.
      * </p>
      * 
      * @param type
      *        The data type of the result set column. The data type can be a scalar or complex. Scalar data types are
-     *        integers, strings, doubles, booleans, and others. Complex data types are types such as arrays, rows, and
+     *        integers, strings, doubles, Booleans, and others. Complex data types are types such as arrays, rows, and
      *        others.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

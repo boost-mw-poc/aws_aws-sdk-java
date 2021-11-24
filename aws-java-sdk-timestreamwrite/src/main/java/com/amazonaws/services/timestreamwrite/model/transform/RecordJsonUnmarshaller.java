@@ -78,6 +78,12 @@ public class RecordJsonUnmarshaller implements Unmarshaller<Record, JsonUnmarsha
                     context.nextToken();
                     record.setVersion(context.getUnmarshaller(Long.class).unmarshall(context));
                 }
+                if (context.testExpression("MeasureValues", targetDepth)) {
+                    context.nextToken();
+                    record.setMeasureValues(new ListUnmarshaller<MeasureValue>(MeasureValueJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

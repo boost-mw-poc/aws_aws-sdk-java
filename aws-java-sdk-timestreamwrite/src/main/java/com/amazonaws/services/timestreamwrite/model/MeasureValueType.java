@@ -23,7 +23,9 @@ public enum MeasureValueType {
     DOUBLE("DOUBLE"),
     BIGINT("BIGINT"),
     VARCHAR("VARCHAR"),
-    BOOLEAN("BOOLEAN");
+    BOOLEAN("BOOLEAN"),
+    TIMESTAMP("TIMESTAMP"),
+    MULTI("MULTI");
 
     private String value;
 

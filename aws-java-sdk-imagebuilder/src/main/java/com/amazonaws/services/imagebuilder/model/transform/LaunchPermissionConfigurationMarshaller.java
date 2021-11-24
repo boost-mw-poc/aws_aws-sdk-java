@@ -32,6 +32,10 @@ public class LaunchPermissionConfigurationMarshaller {
             .marshallLocationName("userIds").build();
     private static final MarshallingInfo<List> USERGROUPS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("userGroups").build();
+    private static final MarshallingInfo<List> ORGANIZATIONARNS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("organizationArns").build();
+    private static final MarshallingInfo<List> ORGANIZATIONALUNITARNS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("organizationalUnitArns").build();
 
     private static final LaunchPermissionConfigurationMarshaller instance = new LaunchPermissionConfigurationMarshaller();
 
@@ -51,6 +55,8 @@ public class LaunchPermissionConfigurationMarshaller {
         try {
             protocolMarshaller.marshall(launchPermissionConfiguration.getUserIds(), USERIDS_BINDING);
             protocolMarshaller.marshall(launchPermissionConfiguration.getUserGroups(), USERGROUPS_BINDING);
+            protocolMarshaller.marshall(launchPermissionConfiguration.getOrganizationArns(), ORGANIZATIONARNS_BINDING);
+            protocolMarshaller.marshall(launchPermissionConfiguration.getOrganizationalUnitArns(), ORGANIZATIONALUNITARNS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

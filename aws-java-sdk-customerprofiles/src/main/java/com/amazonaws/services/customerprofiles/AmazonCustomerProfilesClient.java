@@ -238,6 +238,11 @@ public class AmazonCustomerProfilesClient extends AmazonWebServiceClient impleme
      * enable <a href="https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_GetMatches.html">identity
      * resolution</a>: set <code>Matching</code> to true.
      * </p>
+     * <p>
+     * To prevent cross-service impersonation when you call this API, see <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/cross-service-confused-deputy-prevention.html"
+     * >Cross-service confused deputy prevention</a> for sample policies that you should apply.
+     * </p>
      * 
      * @param createDomainRequest
      * @return Result of the CreateDomain operation returned by the service.
@@ -764,6 +769,87 @@ public class AmazonCustomerProfilesClient extends AmazonWebServiceClient impleme
 
     /**
      * <p>
+     * Tests the auto-merging settings of your Identity Resolution Job without merging your data. It randomly selects a
+     * sample of matching groups from the existing matching results, and applies the automerging settings that you
+     * provided. You can then view the number of profiles in the sample, the number of matches, and the number of
+     * profiles identified to be merged. This enables you to evaluate the accuracy of the attributes in your matching
+     * list.
+     * </p>
+     * <p>
+     * You can't view which profiles are matched and would be merged.
+     * </p>
+     * <important>
+     * <p>
+     * We strongly recommend you use this API to do a dry run of the automerging process before running the Identity
+     * Resolution Job. Include <b>at least</b> two matching attributes. If your matching list includes too few
+     * attributes (such as only <code>FirstName</code> or only <code>LastName</code>), there may be a large number of
+     * matches. This increases the chances of erroneous merges.
+     * </p>
+     * </important>
+     * 
+     * @param getAutoMergingPreviewRequest
+     * @return Result of the GetAutoMergingPreview operation returned by the service.
+     * @throws BadRequestException
+     *         The input you provided is invalid.
+     * @throws ResourceNotFoundException
+     *         The requested resource does not exist, or access was denied.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         You exceeded the maximum number of requests.
+     * @throws InternalServerException
+     *         An internal service error occurred.
+     * @sample AmazonCustomerProfiles.GetAutoMergingPreview
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/customer-profiles-2020-08-15/GetAutoMergingPreview"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetAutoMergingPreviewResult getAutoMergingPreview(GetAutoMergingPreviewRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetAutoMergingPreview(request);
+    }
+
+    @SdkInternalApi
+    final GetAutoMergingPreviewResult executeGetAutoMergingPreview(GetAutoMergingPreviewRequest getAutoMergingPreviewRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getAutoMergingPreviewRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetAutoMergingPreviewRequest> request = null;
+        Response<GetAutoMergingPreviewResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetAutoMergingPreviewRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getAutoMergingPreviewRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Customer Profiles");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetAutoMergingPreview");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetAutoMergingPreviewResult>> responseHandler = protocolFactory
+                    .createResponseHandler(new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                            new GetAutoMergingPreviewResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Returns information about a specific domain.
      * </p>
      * 
@@ -817,6 +903,78 @@ public class AmazonCustomerProfilesClient extends AmazonWebServiceClient impleme
 
             HttpResponseHandler<AmazonWebServiceResponse<GetDomainResult>> responseHandler = protocolFactory.createResponseHandler(new JsonOperationMetadata()
                     .withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetDomainResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Returns information about an Identity Resolution Job in a specific domain.
+     * </p>
+     * <p>
+     * Identity Resolution Jobs are set up using the Amazon Connect admin console. For more information, see <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/use-identity-resolution.html">Use Identity Resolution
+     * to consolidate similar profiles</a>.
+     * </p>
+     * 
+     * @param getIdentityResolutionJobRequest
+     * @return Result of the GetIdentityResolutionJob operation returned by the service.
+     * @throws BadRequestException
+     *         The input you provided is invalid.
+     * @throws ResourceNotFoundException
+     *         The requested resource does not exist, or access was denied.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         You exceeded the maximum number of requests.
+     * @throws InternalServerException
+     *         An internal service error occurred.
+     * @sample AmazonCustomerProfiles.GetIdentityResolutionJob
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/customer-profiles-2020-08-15/GetIdentityResolutionJob"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public GetIdentityResolutionJobResult getIdentityResolutionJob(GetIdentityResolutionJobRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetIdentityResolutionJob(request);
+    }
+
+    @SdkInternalApi
+    final GetIdentityResolutionJobResult executeGetIdentityResolutionJob(GetIdentityResolutionJobRequest getIdentityResolutionJobRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getIdentityResolutionJobRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetIdentityResolutionJobRequest> request = null;
+        Response<GetIdentityResolutionJobResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetIdentityResolutionJobRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(getIdentityResolutionJobRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Customer Profiles");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetIdentityResolutionJob");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetIdentityResolutionJobResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new GetIdentityResolutionJobResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -908,8 +1066,16 @@ public class AmazonCustomerProfilesClient extends AmazonWebServiceClient impleme
      * </p>
      * <important>
      * <p>
-     * Amazon Connect starts a batch process every Saturday at 12AM UTC to identify matching profiles. The results are
-     * returned up to seven days after the Saturday run.
+     * The process of matching duplicate profiles. If <code>Matching</code> = <code>true</code>, Amazon Connect Customer
+     * Profiles starts a weekly batch process called Identity Resolution Job. If you do not specify a date and time for
+     * Identity Resolution Job to run, by default it runs every Saturday at 12AM UTC to detect duplicate profiles in
+     * your domains.
+     * </p>
+     * <p>
+     * After the Identity Resolution Job completes, use the <a
+     * href="https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_GetMatches.html">GetMatches</a> API to
+     * return and review the results. Or, if you have configured <code>ExportingConfig</code> in the
+     * <code>MatchingRequest</code>, you can download the results from S3.
      * </p>
      * </important>
      * <p>
@@ -1288,6 +1454,74 @@ public class AmazonCustomerProfilesClient extends AmazonWebServiceClient impleme
 
             HttpResponseHandler<AmazonWebServiceResponse<ListDomainsResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListDomainsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Lists all of the Identity Resolution Jobs in your domain. The response sorts the list by
+     * <code>JobStartTime</code>.
+     * </p>
+     * 
+     * @param listIdentityResolutionJobsRequest
+     * @return Result of the ListIdentityResolutionJobs operation returned by the service.
+     * @throws BadRequestException
+     *         The input you provided is invalid.
+     * @throws ResourceNotFoundException
+     *         The requested resource does not exist, or access was denied.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ThrottlingException
+     *         You exceeded the maximum number of requests.
+     * @throws InternalServerException
+     *         An internal service error occurred.
+     * @sample AmazonCustomerProfiles.ListIdentityResolutionJobs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/customer-profiles-2020-08-15/ListIdentityResolutionJobs"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ListIdentityResolutionJobsResult listIdentityResolutionJobs(ListIdentityResolutionJobsRequest request) {
+        request = beforeClientExecution(request);
+        return executeListIdentityResolutionJobs(request);
+    }
+
+    @SdkInternalApi
+    final ListIdentityResolutionJobsResult executeListIdentityResolutionJobs(ListIdentityResolutionJobsRequest listIdentityResolutionJobsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listIdentityResolutionJobsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListIdentityResolutionJobsRequest> request = null;
+        Response<ListIdentityResolutionJobsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListIdentityResolutionJobsRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(listIdentityResolutionJobsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Customer Profiles");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListIdentityResolutionJobs");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListIdentityResolutionJobsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new ListIdentityResolutionJobsResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -2174,6 +2408,11 @@ public class AmazonCustomerProfilesClient extends AmazonWebServiceClient impleme
      * href="https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_CreateDomain.html">CreateDomain</a> to
      * enable <a href="https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_GetMatches.html">identity
      * resolution</a>: set <code>Matching</code> to true.
+     * </p>
+     * <p>
+     * To prevent cross-service impersonation when you call this API, see <a
+     * href="https://docs.aws.amazon.com/connect/latest/adminguide/cross-service-confused-deputy-prevention.html"
+     * >Cross-service confused deputy prevention</a> for sample policies that you should apply.
      * </p>
      * 
      * @param updateDomainRequest

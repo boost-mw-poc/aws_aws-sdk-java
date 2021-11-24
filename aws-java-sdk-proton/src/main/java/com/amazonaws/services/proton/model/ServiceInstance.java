@@ -90,13 +90,13 @@ public class ServiceInstance implements Serializable, Cloneable, StructuredPojo 
     private String spec;
     /**
      * <p>
-     * The ID of the major version of the service template that was used to create the service instance.
+     * The major version of the service template that was used to create the service instance.
      * </p>
      */
     private String templateMajorVersion;
     /**
      * <p>
-     * The ID of the minor version of the service template that was used to create the service instance.
+     * The minor version of the service template that was used to create the service instance.
      * </p>
      */
     private String templateMinorVersion;
@@ -528,11 +528,11 @@ public class ServiceInstance implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The ID of the major version of the service template that was used to create the service instance.
+     * The major version of the service template that was used to create the service instance.
      * </p>
      * 
      * @param templateMajorVersion
-     *        The ID of the major version of the service template that was used to create the service instance.
+     *        The major version of the service template that was used to create the service instance.
      */
 
     public void setTemplateMajorVersion(String templateMajorVersion) {
@@ -541,10 +541,10 @@ public class ServiceInstance implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The ID of the major version of the service template that was used to create the service instance.
+     * The major version of the service template that was used to create the service instance.
      * </p>
      * 
-     * @return The ID of the major version of the service template that was used to create the service instance.
+     * @return The major version of the service template that was used to create the service instance.
      */
 
     public String getTemplateMajorVersion() {
@@ -553,11 +553,11 @@ public class ServiceInstance implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The ID of the major version of the service template that was used to create the service instance.
+     * The major version of the service template that was used to create the service instance.
      * </p>
      * 
      * @param templateMajorVersion
-     *        The ID of the major version of the service template that was used to create the service instance.
+     *        The major version of the service template that was used to create the service instance.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -568,11 +568,11 @@ public class ServiceInstance implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The ID of the minor version of the service template that was used to create the service instance.
+     * The minor version of the service template that was used to create the service instance.
      * </p>
      * 
      * @param templateMinorVersion
-     *        The ID of the minor version of the service template that was used to create the service instance.
+     *        The minor version of the service template that was used to create the service instance.
      */
 
     public void setTemplateMinorVersion(String templateMinorVersion) {
@@ -581,10 +581,10 @@ public class ServiceInstance implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The ID of the minor version of the service template that was used to create the service instance.
+     * The minor version of the service template that was used to create the service instance.
      * </p>
      * 
-     * @return The ID of the minor version of the service template that was used to create the service instance.
+     * @return The minor version of the service template that was used to create the service instance.
      */
 
     public String getTemplateMinorVersion() {
@@ -593,11 +593,11 @@ public class ServiceInstance implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The ID of the minor version of the service template that was used to create the service instance.
+     * The minor version of the service template that was used to create the service instance.
      * </p>
      * 
      * @param templateMinorVersion
-     *        The ID of the minor version of the service template that was used to create the service instance.
+     *        The minor version of the service template that was used to create the service instance.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

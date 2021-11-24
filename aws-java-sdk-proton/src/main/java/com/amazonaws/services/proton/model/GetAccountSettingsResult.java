@@ -25,18 +25,18 @@ public class GetAccountSettingsResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * The AWS Proton pipeline service role detail data that's returned by AWS Proton.
+     * The Proton pipeline service role detail data that's returned by Proton.
      * </p>
      */
     private AccountSettings accountSettings;
 
     /**
      * <p>
-     * The AWS Proton pipeline service role detail data that's returned by AWS Proton.
+     * The Proton pipeline service role detail data that's returned by Proton.
      * </p>
      * 
      * @param accountSettings
-     *        The AWS Proton pipeline service role detail data that's returned by AWS Proton.
+     *        The Proton pipeline service role detail data that's returned by Proton.
      */
 
     public void setAccountSettings(AccountSettings accountSettings) {
@@ -45,10 +45,10 @@ public class GetAccountSettingsResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * The AWS Proton pipeline service role detail data that's returned by AWS Proton.
+     * The Proton pipeline service role detail data that's returned by Proton.
      * </p>
      * 
-     * @return The AWS Proton pipeline service role detail data that's returned by AWS Proton.
+     * @return The Proton pipeline service role detail data that's returned by Proton.
      */
 
     public AccountSettings getAccountSettings() {
@@ -57,11 +57,11 @@ public class GetAccountSettingsResult extends com.amazonaws.AmazonWebServiceResu
 
     /**
      * <p>
-     * The AWS Proton pipeline service role detail data that's returned by AWS Proton.
+     * The Proton pipeline service role detail data that's returned by Proton.
      * </p>
      * 
      * @param accountSettings
-     *        The AWS Proton pipeline service role detail data that's returned by AWS Proton.
+     *        The Proton pipeline service role detail data that's returned by Proton.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

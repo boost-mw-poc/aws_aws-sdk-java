@@ -52,6 +52,18 @@ public class MatchingResponseJsonUnmarshaller implements Unmarshaller<MatchingRe
                     context.nextToken();
                     matchingResponse.setEnabled(context.getUnmarshaller(Boolean.class).unmarshall(context));
                 }
+                if (context.testExpression("JobSchedule", targetDepth)) {
+                    context.nextToken();
+                    matchingResponse.setJobSchedule(JobScheduleJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("AutoMerging", targetDepth)) {
+                    context.nextToken();
+                    matchingResponse.setAutoMerging(AutoMergingJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+                if (context.testExpression("ExportingConfig", targetDepth)) {
+                    context.nextToken();
+                    matchingResponse.setExportingConfig(ExportingConfigJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

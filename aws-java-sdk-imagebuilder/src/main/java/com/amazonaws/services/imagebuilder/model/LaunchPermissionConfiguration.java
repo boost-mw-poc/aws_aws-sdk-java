@@ -45,6 +45,23 @@ public class LaunchPermissionConfiguration implements Serializable, Cloneable, S
      * </p>
      */
     private java.util.List<String> userGroups;
+    /**
+     * <p>
+     * The ARN for an Amazon Web Services Organization that you want to share your AMI with. For more information, see
+     * <a href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_introduction.html">What is
+     * Organizations?</a>.
+     * </p>
+     */
+    private java.util.List<String> organizationArns;
+    /**
+     * <p>
+     * The ARN for an Organizations organizational unit (OU) that you want to share your AMI with. For more information
+     * about key concepts for Organizations, see <a
+     * href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_getting-started_concepts.html"
+     * >Organizations terminology and concepts</a>.
+     * </p>
+     */
+    private java.util.List<String> organizationalUnitArns;
 
     /**
      * <p>
@@ -187,6 +204,190 @@ public class LaunchPermissionConfiguration implements Serializable, Cloneable, S
     }
 
     /**
+     * <p>
+     * The ARN for an Amazon Web Services Organization that you want to share your AMI with. For more information, see
+     * <a href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_introduction.html">What is
+     * Organizations?</a>.
+     * </p>
+     * 
+     * @return The ARN for an Amazon Web Services Organization that you want to share your AMI with. For more
+     *         information, see <a
+     *         href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_introduction.html">What is
+     *         Organizations?</a>.
+     */
+
+    public java.util.List<String> getOrganizationArns() {
+        return organizationArns;
+    }
+
+    /**
+     * <p>
+     * The ARN for an Amazon Web Services Organization that you want to share your AMI with. For more information, see
+     * <a href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_introduction.html">What is
+     * Organizations?</a>.
+     * </p>
+     * 
+     * @param organizationArns
+     *        The ARN for an Amazon Web Services Organization that you want to share your AMI with. For more
+     *        information, see <a
+     *        href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_introduction.html">What is
+     *        Organizations?</a>.
+     */
+
+    public void setOrganizationArns(java.util.Collection<String> organizationArns) {
+        if (organizationArns == null) {
+            this.organizationArns = null;
+            return;
+        }
+
+        this.organizationArns = new java.util.ArrayList<String>(organizationArns);
+    }
+
+    /**
+     * <p>
+     * The ARN for an Amazon Web Services Organization that you want to share your AMI with. For more information, see
+     * <a href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_introduction.html">What is
+     * Organizations?</a>.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setOrganizationArns(java.util.Collection)} or {@link #withOrganizationArns(java.util.Collection)} if you
+     * want to override the existing values.
+     * </p>
+     * 
+     * @param organizationArns
+     *        The ARN for an Amazon Web Services Organization that you want to share your AMI with. For more
+     *        information, see <a
+     *        href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_introduction.html">What is
+     *        Organizations?</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public LaunchPermissionConfiguration withOrganizationArns(String... organizationArns) {
+        if (this.organizationArns == null) {
+            setOrganizationArns(new java.util.ArrayList<String>(organizationArns.length));
+        }
+        for (String ele : organizationArns) {
+            this.organizationArns.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The ARN for an Amazon Web Services Organization that you want to share your AMI with. For more information, see
+     * <a href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_introduction.html">What is
+     * Organizations?</a>.
+     * </p>
+     * 
+     * @param organizationArns
+     *        The ARN for an Amazon Web Services Organization that you want to share your AMI with. For more
+     *        information, see <a
+     *        href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_introduction.html">What is
+     *        Organizations?</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public LaunchPermissionConfiguration withOrganizationArns(java.util.Collection<String> organizationArns) {
+        setOrganizationArns(organizationArns);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The ARN for an Organizations organizational unit (OU) that you want to share your AMI with. For more information
+     * about key concepts for Organizations, see <a
+     * href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_getting-started_concepts.html"
+     * >Organizations terminology and concepts</a>.
+     * </p>
+     * 
+     * @return The ARN for an Organizations organizational unit (OU) that you want to share your AMI with. For more
+     *         information about key concepts for Organizations, see <a
+     *         href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_getting-started_concepts.html"
+     *         >Organizations terminology and concepts</a>.
+     */
+
+    public java.util.List<String> getOrganizationalUnitArns() {
+        return organizationalUnitArns;
+    }
+
+    /**
+     * <p>
+     * The ARN for an Organizations organizational unit (OU) that you want to share your AMI with. For more information
+     * about key concepts for Organizations, see <a
+     * href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_getting-started_concepts.html"
+     * >Organizations terminology and concepts</a>.
+     * </p>
+     * 
+     * @param organizationalUnitArns
+     *        The ARN for an Organizations organizational unit (OU) that you want to share your AMI with. For more
+     *        information about key concepts for Organizations, see <a
+     *        href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_getting-started_concepts.html"
+     *        >Organizations terminology and concepts</a>.
+     */
+
+    public void setOrganizationalUnitArns(java.util.Collection<String> organizationalUnitArns) {
+        if (organizationalUnitArns == null) {
+            this.organizationalUnitArns = null;
+            return;
+        }
+
+        this.organizationalUnitArns = new java.util.ArrayList<String>(organizationalUnitArns);
+    }
+
+    /**
+     * <p>
+     * The ARN for an Organizations organizational unit (OU) that you want to share your AMI with. For more information
+     * about key concepts for Organizations, see <a
+     * href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_getting-started_concepts.html"
+     * >Organizations terminology and concepts</a>.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setOrganizationalUnitArns(java.util.Collection)} or
+     * {@link #withOrganizationalUnitArns(java.util.Collection)} if you want to override the existing values.
+     * </p>
+     * 
+     * @param organizationalUnitArns
+     *        The ARN for an Organizations organizational unit (OU) that you want to share your AMI with. For more
+     *        information about key concepts for Organizations, see <a
+     *        href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_getting-started_concepts.html"
+     *        >Organizations terminology and concepts</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public LaunchPermissionConfiguration withOrganizationalUnitArns(String... organizationalUnitArns) {
+        if (this.organizationalUnitArns == null) {
+            setOrganizationalUnitArns(new java.util.ArrayList<String>(organizationalUnitArns.length));
+        }
+        for (String ele : organizationalUnitArns) {
+            this.organizationalUnitArns.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The ARN for an Organizations organizational unit (OU) that you want to share your AMI with. For more information
+     * about key concepts for Organizations, see <a
+     * href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_getting-started_concepts.html"
+     * >Organizations terminology and concepts</a>.
+     * </p>
+     * 
+     * @param organizationalUnitArns
+     *        The ARN for an Organizations organizational unit (OU) that you want to share your AMI with. For more
+     *        information about key concepts for Organizations, see <a
+     *        href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_getting-started_concepts.html"
+     *        >Organizations terminology and concepts</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public LaunchPermissionConfiguration withOrganizationalUnitArns(java.util.Collection<String> organizationalUnitArns) {
+        setOrganizationalUnitArns(organizationalUnitArns);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -201,7 +402,11 @@ public class LaunchPermissionConfiguration implements Serializable, Cloneable, S
         if (getUserIds() != null)
             sb.append("UserIds: ").append(getUserIds()).append(",");
         if (getUserGroups() != null)
-            sb.append("UserGroups: ").append(getUserGroups());
+            sb.append("UserGroups: ").append(getUserGroups()).append(",");
+        if (getOrganizationArns() != null)
+            sb.append("OrganizationArns: ").append(getOrganizationArns()).append(",");
+        if (getOrganizationalUnitArns() != null)
+            sb.append("OrganizationalUnitArns: ").append(getOrganizationalUnitArns());
         sb.append("}");
         return sb.toString();
     }
@@ -224,6 +429,14 @@ public class LaunchPermissionConfiguration implements Serializable, Cloneable, S
             return false;
         if (other.getUserGroups() != null && other.getUserGroups().equals(this.getUserGroups()) == false)
             return false;
+        if (other.getOrganizationArns() == null ^ this.getOrganizationArns() == null)
+            return false;
+        if (other.getOrganizationArns() != null && other.getOrganizationArns().equals(this.getOrganizationArns()) == false)
+            return false;
+        if (other.getOrganizationalUnitArns() == null ^ this.getOrganizationalUnitArns() == null)
+            return false;
+        if (other.getOrganizationalUnitArns() != null && other.getOrganizationalUnitArns().equals(this.getOrganizationalUnitArns()) == false)
+            return false;
         return true;
     }
 
@@ -234,6 +447,8 @@ public class LaunchPermissionConfiguration implements Serializable, Cloneable, S
 
         hashCode = prime * hashCode + ((getUserIds() == null) ? 0 : getUserIds().hashCode());
         hashCode = prime * hashCode + ((getUserGroups() == null) ? 0 : getUserGroups().hashCode());
+        hashCode = prime * hashCode + ((getOrganizationArns() == null) ? 0 : getOrganizationArns().hashCode());
+        hashCode = prime * hashCode + ((getOrganizationalUnitArns() == null) ? 0 : getOrganizationalUnitArns().hashCode());
         return hashCode;
     }
 

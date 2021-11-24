@@ -43,6 +43,8 @@ public class PutProfileObjectTypeRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("EncryptionKey").build();
     private static final MarshallingInfo<Boolean> ALLOWPROFILECREATION_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AllowProfileCreation").build();
+    private static final MarshallingInfo<String> SOURCELASTUPDATEDTIMESTAMPFORMAT_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SourceLastUpdatedTimestampFormat").build();
     private static final MarshallingInfo<Map> FIELDS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Fields").build();
     private static final MarshallingInfo<Map> KEYS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
@@ -73,6 +75,7 @@ public class PutProfileObjectTypeRequestMarshaller {
             protocolMarshaller.marshall(putProfileObjectTypeRequest.getExpirationDays(), EXPIRATIONDAYS_BINDING);
             protocolMarshaller.marshall(putProfileObjectTypeRequest.getEncryptionKey(), ENCRYPTIONKEY_BINDING);
             protocolMarshaller.marshall(putProfileObjectTypeRequest.getAllowProfileCreation(), ALLOWPROFILECREATION_BINDING);
+            protocolMarshaller.marshall(putProfileObjectTypeRequest.getSourceLastUpdatedTimestampFormat(), SOURCELASTUPDATEDTIMESTAMPFORMAT_BINDING);
             protocolMarshaller.marshall(putProfileObjectTypeRequest.getFields(), FIELDS_BINDING);
             protocolMarshaller.marshall(putProfileObjectTypeRequest.getKeys(), KEYS_BINDING);
             protocolMarshaller.marshall(putProfileObjectTypeRequest.getTags(), TAGS_BINDING);

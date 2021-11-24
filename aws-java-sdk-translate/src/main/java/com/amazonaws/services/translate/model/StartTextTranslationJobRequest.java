@@ -110,6 +110,12 @@ public class StartTextTranslationJobRequest extends com.amazonaws.AmazonWebServi
      * </p>
      */
     private String clientToken;
+    /**
+     * <p>
+     * Settings to configure your translation output, including the option to mask profane words and phrases.
+     * </p>
+     */
+    private TranslationSettings settings;
 
     /**
      * <p>
@@ -793,6 +799,46 @@ public class StartTextTranslationJobRequest extends com.amazonaws.AmazonWebServi
     }
 
     /**
+     * <p>
+     * Settings to configure your translation output, including the option to mask profane words and phrases.
+     * </p>
+     * 
+     * @param settings
+     *        Settings to configure your translation output, including the option to mask profane words and phrases.
+     */
+
+    public void setSettings(TranslationSettings settings) {
+        this.settings = settings;
+    }
+
+    /**
+     * <p>
+     * Settings to configure your translation output, including the option to mask profane words and phrases.
+     * </p>
+     * 
+     * @return Settings to configure your translation output, including the option to mask profane words and phrases.
+     */
+
+    public TranslationSettings getSettings() {
+        return this.settings;
+    }
+
+    /**
+     * <p>
+     * Settings to configure your translation output, including the option to mask profane words and phrases.
+     * </p>
+     * 
+     * @param settings
+     *        Settings to configure your translation output, including the option to mask profane words and phrases.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public StartTextTranslationJobRequest withSettings(TranslationSettings settings) {
+        setSettings(settings);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -821,7 +867,9 @@ public class StartTextTranslationJobRequest extends com.amazonaws.AmazonWebServi
         if (getParallelDataNames() != null)
             sb.append("ParallelDataNames: ").append(getParallelDataNames()).append(",");
         if (getClientToken() != null)
-            sb.append("ClientToken: ").append(getClientToken());
+            sb.append("ClientToken: ").append(getClientToken()).append(",");
+        if (getSettings() != null)
+            sb.append("Settings: ").append(getSettings());
         sb.append("}");
         return sb.toString();
     }
@@ -872,6 +920,10 @@ public class StartTextTranslationJobRequest extends com.amazonaws.AmazonWebServi
             return false;
         if (other.getClientToken() != null && other.getClientToken().equals(this.getClientToken()) == false)
             return false;
+        if (other.getSettings() == null ^ this.getSettings() == null)
+            return false;
+        if (other.getSettings() != null && other.getSettings().equals(this.getSettings()) == false)
+            return false;
         return true;
     }
 
@@ -889,6 +941,7 @@ public class StartTextTranslationJobRequest extends com.amazonaws.AmazonWebServi
         hashCode = prime * hashCode + ((getTerminologyNames() == null) ? 0 : getTerminologyNames().hashCode());
         hashCode = prime * hashCode + ((getParallelDataNames() == null) ? 0 : getParallelDataNames().hashCode());
         hashCode = prime * hashCode + ((getClientToken() == null) ? 0 : getClientToken().hashCode());
+        hashCode = prime * hashCode + ((getSettings() == null) ? 0 : getSettings().hashCode());
         return hashCode;
     }
 

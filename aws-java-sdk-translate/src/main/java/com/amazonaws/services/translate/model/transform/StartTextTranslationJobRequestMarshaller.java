@@ -49,6 +49,8 @@ public class StartTextTranslationJobRequestMarshaller {
     private static final MarshallingInfo<String> CLIENTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ClientToken")
             .defaultValueSupplier(com.amazonaws.util.IdempotentUtils.getGenerator()).build();
+    private static final MarshallingInfo<StructuredPojo> SETTINGS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Settings").build();
 
     private static final StartTextTranslationJobRequestMarshaller instance = new StartTextTranslationJobRequestMarshaller();
 
@@ -75,6 +77,7 @@ public class StartTextTranslationJobRequestMarshaller {
             protocolMarshaller.marshall(startTextTranslationJobRequest.getTerminologyNames(), TERMINOLOGYNAMES_BINDING);
             protocolMarshaller.marshall(startTextTranslationJobRequest.getParallelDataNames(), PARALLELDATANAMES_BINDING);
             protocolMarshaller.marshall(startTextTranslationJobRequest.getClientToken(), CLIENTTOKEN_BINDING);
+            protocolMarshaller.marshall(startTextTranslationJobRequest.getSettings(), SETTINGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

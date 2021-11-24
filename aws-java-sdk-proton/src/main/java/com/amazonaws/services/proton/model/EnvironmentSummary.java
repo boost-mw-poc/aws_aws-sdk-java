@@ -90,8 +90,8 @@ public class EnvironmentSummary implements Serializable, Cloneable, StructuredPo
     private String name;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Proton service role that allows AWS Proton to make calls to other
-     * services on your behalf.
+     * The Amazon Resource Name (ARN) of the Proton service role that allows Proton to make calls to other services on
+     * your behalf.
      * </p>
      */
     private String protonServiceRoleArn;
@@ -103,13 +103,13 @@ public class EnvironmentSummary implements Serializable, Cloneable, StructuredPo
     private String provisioning;
     /**
      * <p>
-     * The ID of the major version of the environment template.
+     * The major version of the environment template.
      * </p>
      */
     private String templateMajorVersion;
     /**
      * <p>
-     * The ID of the minor version of the environment template.
+     * The minor version of the environment template.
      * </p>
      */
     private String templateMinorVersion;
@@ -541,13 +541,13 @@ public class EnvironmentSummary implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Proton service role that allows AWS Proton to make calls to other
-     * services on your behalf.
+     * The Amazon Resource Name (ARN) of the Proton service role that allows Proton to make calls to other services on
+     * your behalf.
      * </p>
      * 
      * @param protonServiceRoleArn
-     *        The Amazon Resource Name (ARN) of the AWS Proton service role that allows AWS Proton to make calls to
-     *        other services on your behalf.
+     *        The Amazon Resource Name (ARN) of the Proton service role that allows Proton to make calls to other
+     *        services on your behalf.
      */
 
     public void setProtonServiceRoleArn(String protonServiceRoleArn) {
@@ -556,12 +556,12 @@ public class EnvironmentSummary implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Proton service role that allows AWS Proton to make calls to other
-     * services on your behalf.
+     * The Amazon Resource Name (ARN) of the Proton service role that allows Proton to make calls to other services on
+     * your behalf.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the AWS Proton service role that allows AWS Proton to make calls to
-     *         other services on your behalf.
+     * @return The Amazon Resource Name (ARN) of the Proton service role that allows Proton to make calls to other
+     *         services on your behalf.
      */
 
     public String getProtonServiceRoleArn() {
@@ -570,13 +570,13 @@ public class EnvironmentSummary implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Proton service role that allows AWS Proton to make calls to other
-     * services on your behalf.
+     * The Amazon Resource Name (ARN) of the Proton service role that allows Proton to make calls to other services on
+     * your behalf.
      * </p>
      * 
      * @param protonServiceRoleArn
-     *        The Amazon Resource Name (ARN) of the AWS Proton service role that allows AWS Proton to make calls to
-     *        other services on your behalf.
+     *        The Amazon Resource Name (ARN) of the Proton service role that allows Proton to make calls to other
+     *        services on your behalf.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -650,11 +650,11 @@ public class EnvironmentSummary implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The ID of the major version of the environment template.
+     * The major version of the environment template.
      * </p>
      * 
      * @param templateMajorVersion
-     *        The ID of the major version of the environment template.
+     *        The major version of the environment template.
      */
 
     public void setTemplateMajorVersion(String templateMajorVersion) {
@@ -663,10 +663,10 @@ public class EnvironmentSummary implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The ID of the major version of the environment template.
+     * The major version of the environment template.
      * </p>
      * 
-     * @return The ID of the major version of the environment template.
+     * @return The major version of the environment template.
      */
 
     public String getTemplateMajorVersion() {
@@ -675,11 +675,11 @@ public class EnvironmentSummary implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The ID of the major version of the environment template.
+     * The major version of the environment template.
      * </p>
      * 
      * @param templateMajorVersion
-     *        The ID of the major version of the environment template.
+     *        The major version of the environment template.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -690,11 +690,11 @@ public class EnvironmentSummary implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The ID of the minor version of the environment template.
+     * The minor version of the environment template.
      * </p>
      * 
      * @param templateMinorVersion
-     *        The ID of the minor version of the environment template.
+     *        The minor version of the environment template.
      */
 
     public void setTemplateMinorVersion(String templateMinorVersion) {
@@ -703,10 +703,10 @@ public class EnvironmentSummary implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The ID of the minor version of the environment template.
+     * The minor version of the environment template.
      * </p>
      * 
-     * @return The ID of the minor version of the environment template.
+     * @return The minor version of the environment template.
      */
 
     public String getTemplateMinorVersion() {
@@ -715,11 +715,11 @@ public class EnvironmentSummary implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The ID of the minor version of the environment template.
+     * The minor version of the environment template.
      * </p>
      * 
      * @param templateMinorVersion
-     *        The ID of the minor version of the environment template.
+     *        The minor version of the environment template.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

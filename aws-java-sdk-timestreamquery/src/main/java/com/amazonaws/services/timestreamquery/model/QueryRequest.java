@@ -27,59 +27,133 @@ public class QueryRequest extends com.amazonaws.AmazonWebServiceRequest implemen
 
     /**
      * <p>
-     * The query to be executed by Timestream.
+     * The query to be run by Timestream.
      * </p>
      */
     private String queryString;
     /**
      * <p>
-     * Unique, case-sensitive string of up to 64 ASCII characters that you specify when you make a Query request.
-     * Providing a <code>ClientToken</code> makes the call to <code>Query</code> idempotent, meaning that multiple
-     * identical calls have the same effect as one single call.
-     * </p>
-     * <p>
-     * Your query request will fail in the following cases:
+     * Unique, case-sensitive string of up to 64 ASCII characters specified when a <code>Query</code> request is made.
+     * Providing a <code>ClientToken</code> makes the call to <code>Query</code> <i>idempotent</i>. This means that
+     * running the same query repeatedly will produce the same result. In other words, making multiple identical
+     * <code>Query</code> requests has the same effect as making a single request. When using <code>ClientToken</code>
+     * in a query, note the following:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * If you submit a request with the same client token outside the 5-minute idepotency window.
+     * If the Query API is instantiated without a <code>ClientToken</code>, the Query SDK generates a
+     * <code>ClientToken</code> on your behalf.
      * </p>
      * </li>
      * <li>
      * <p>
-     * If you submit a request with the same client token but a change in other parameters within the 5-minute
-     * idempotency window.
+     * If the <code>Query</code> invocation only contains the <code>ClientToken</code> but does not include a
+     * <code>NextToken</code>, that invocation of <code>Query</code> is assumed to be a new query run.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If the invocation contains <code>NextToken</code>, that particular invocation is assumed to be a subsequent
+     * invocation of a prior call to the Query API, and a result set is returned.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * After 4 hours, any request with the same <code>ClientToken</code> is treated as a new request.
      * </p>
      * </li>
      * </ul>
-     * <p>
-     * After 4 hours, any request with the same client token is treated as a new request.
-     * </p>
      */
     private String clientToken;
     /**
      * <p>
-     * A pagination token passed to get a set of results.
+     * A pagination token used to return a set of results. When the <code>Query</code> API is invoked using
+     * <code>NextToken</code>, that particular invocation is assumed to be a subsequent invocation of a prior call to
+     * <code>Query</code>, and a result set is returned. However, if the <code>Query</code> invocation only contains the
+     * <code>ClientToken</code>, that invocation of <code>Query</code> is assumed to be a new query run.
      * </p>
+     * <p>
+     * Note the following when using NextToken in a query:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * A pagination token can be used for up to five <code>Query</code> invocations, OR for a duration of up to 1 hour –
+     * whichever comes first.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Using the same <code>NextToken</code> will return the same set of records. To keep paginating through the result
+     * set, you must to use the most recent <code>nextToken</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Suppose a <code>Query</code> invocation returns two <code>NextToken</code> values, <code>TokenA</code> and
+     * <code>TokenB</code>. If <code>TokenB</code> is used in a subsequent <code>Query</code> invocation, then
+     * <code>TokenA</code> is invalidated and cannot be reused.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * To request a previous result set from a query after pagination has begun, you must re-invoke the Query API.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The latest <code>NextToken</code> should be used to paginate until <code>null</code> is returned, at which point
+     * a new <code>NextToken</code> should be used.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If the IAM principal of the query initiator and the result reader are not the same and/or the query initiator and
+     * the result reader do not have the same query string in the query requests, the query will fail with an
+     * <code>Invalid pagination token</code> error.
+     * </p>
+     * </li>
+     * </ul>
      */
     private String nextToken;
     /**
      * <p>
-     * The total number of rows to return in the output. If the total number of rows available is more than the value
-     * specified, a NextToken is provided in the command's output. To resume pagination, provide the NextToken value in
-     * the starting-token argument of a subsequent command.
+     * The total number of rows to be returned in the <code>Query</code> output. The initial run of <code>Query</code>
+     * with a <code>MaxRows</code> value specified will return the result set of the query in two cases:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The size of the result is less than <code>1MB</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The number of rows in the result set is less than the value of <code>maxRows</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Otherwise, the initial invocation of <code>Query</code> only returns a <code>NextToken</code>, which can then be
+     * used in subsequent calls to fetch the result set. To resume pagination, provide the <code>NextToken</code> value
+     * in the subsequent command.
+     * </p>
+     * <p>
+     * If the row size is large (e.g. a row has many columns), Timestream may return fewer rows to keep the response
+     * size from exceeding the 1 MB limit. If <code>MaxRows</code> is not provided, Timestream will send the necessary
+     * number of rows to meet the 1 MB limit.
      * </p>
      */
     private Integer maxRows;
 
     /**
      * <p>
-     * The query to be executed by Timestream.
+     * The query to be run by Timestream.
      * </p>
      * 
      * @param queryString
-     *        The query to be executed by Timestream.
+     *        The query to be run by Timestream.
      */
 
     public void setQueryString(String queryString) {
@@ -88,10 +162,10 @@ public class QueryRequest extends com.amazonaws.AmazonWebServiceRequest implemen
 
     /**
      * <p>
-     * The query to be executed by Timestream.
+     * The query to be run by Timestream.
      * </p>
      * 
-     * @return The query to be executed by Timestream.
+     * @return The query to be run by Timestream.
      */
 
     public String getQueryString() {
@@ -100,11 +174,11 @@ public class QueryRequest extends com.amazonaws.AmazonWebServiceRequest implemen
 
     /**
      * <p>
-     * The query to be executed by Timestream.
+     * The query to be run by Timestream.
      * </p>
      * 
      * @param queryString
-     *        The query to be executed by Timestream.
+     *        The query to be run by Timestream.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -115,52 +189,68 @@ public class QueryRequest extends com.amazonaws.AmazonWebServiceRequest implemen
 
     /**
      * <p>
-     * Unique, case-sensitive string of up to 64 ASCII characters that you specify when you make a Query request.
-     * Providing a <code>ClientToken</code> makes the call to <code>Query</code> idempotent, meaning that multiple
-     * identical calls have the same effect as one single call.
-     * </p>
-     * <p>
-     * Your query request will fail in the following cases:
+     * Unique, case-sensitive string of up to 64 ASCII characters specified when a <code>Query</code> request is made.
+     * Providing a <code>ClientToken</code> makes the call to <code>Query</code> <i>idempotent</i>. This means that
+     * running the same query repeatedly will produce the same result. In other words, making multiple identical
+     * <code>Query</code> requests has the same effect as making a single request. When using <code>ClientToken</code>
+     * in a query, note the following:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * If you submit a request with the same client token outside the 5-minute idepotency window.
+     * If the Query API is instantiated without a <code>ClientToken</code>, the Query SDK generates a
+     * <code>ClientToken</code> on your behalf.
      * </p>
      * </li>
      * <li>
      * <p>
-     * If you submit a request with the same client token but a change in other parameters within the 5-minute
-     * idempotency window.
+     * If the <code>Query</code> invocation only contains the <code>ClientToken</code> but does not include a
+     * <code>NextToken</code>, that invocation of <code>Query</code> is assumed to be a new query run.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If the invocation contains <code>NextToken</code>, that particular invocation is assumed to be a subsequent
+     * invocation of a prior call to the Query API, and a result set is returned.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * After 4 hours, any request with the same <code>ClientToken</code> is treated as a new request.
      * </p>
      * </li>
      * </ul>
-     * <p>
-     * After 4 hours, any request with the same client token is treated as a new request.
-     * </p>
      * 
      * @param clientToken
-     *        Unique, case-sensitive string of up to 64 ASCII characters that you specify when you make a Query request.
-     *        Providing a <code>ClientToken</code> makes the call to <code>Query</code> idempotent, meaning that
-     *        multiple identical calls have the same effect as one single call. </p>
-     *        <p>
-     *        Your query request will fail in the following cases:
-     *        </p>
+     *        Unique, case-sensitive string of up to 64 ASCII characters specified when a <code>Query</code> request is
+     *        made. Providing a <code>ClientToken</code> makes the call to <code>Query</code> <i>idempotent</i>. This
+     *        means that running the same query repeatedly will produce the same result. In other words, making multiple
+     *        identical <code>Query</code> requests has the same effect as making a single request. When using
+     *        <code>ClientToken</code> in a query, note the following: </p>
      *        <ul>
      *        <li>
      *        <p>
-     *        If you submit a request with the same client token outside the 5-minute idepotency window.
+     *        If the Query API is instantiated without a <code>ClientToken</code>, the Query SDK generates a
+     *        <code>ClientToken</code> on your behalf.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        If you submit a request with the same client token but a change in other parameters within the 5-minute
-     *        idempotency window.
+     *        If the <code>Query</code> invocation only contains the <code>ClientToken</code> but does not include a
+     *        <code>NextToken</code>, that invocation of <code>Query</code> is assumed to be a new query run.
      *        </p>
      *        </li>
-     *        </ul>
+     *        <li>
      *        <p>
-     *        After 4 hours, any request with the same client token is treated as a new request.
+     *        If the invocation contains <code>NextToken</code>, that particular invocation is assumed to be a
+     *        subsequent invocation of a prior call to the Query API, and a result set is returned.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        After 4 hours, any request with the same <code>ClientToken</code> is treated as a new request.
+     *        </p>
+     *        </li>
      */
 
     public void setClientToken(String clientToken) {
@@ -169,51 +259,67 @@ public class QueryRequest extends com.amazonaws.AmazonWebServiceRequest implemen
 
     /**
      * <p>
-     * Unique, case-sensitive string of up to 64 ASCII characters that you specify when you make a Query request.
-     * Providing a <code>ClientToken</code> makes the call to <code>Query</code> idempotent, meaning that multiple
-     * identical calls have the same effect as one single call.
-     * </p>
-     * <p>
-     * Your query request will fail in the following cases:
+     * Unique, case-sensitive string of up to 64 ASCII characters specified when a <code>Query</code> request is made.
+     * Providing a <code>ClientToken</code> makes the call to <code>Query</code> <i>idempotent</i>. This means that
+     * running the same query repeatedly will produce the same result. In other words, making multiple identical
+     * <code>Query</code> requests has the same effect as making a single request. When using <code>ClientToken</code>
+     * in a query, note the following:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * If you submit a request with the same client token outside the 5-minute idepotency window.
+     * If the Query API is instantiated without a <code>ClientToken</code>, the Query SDK generates a
+     * <code>ClientToken</code> on your behalf.
      * </p>
      * </li>
      * <li>
      * <p>
-     * If you submit a request with the same client token but a change in other parameters within the 5-minute
-     * idempotency window.
+     * If the <code>Query</code> invocation only contains the <code>ClientToken</code> but does not include a
+     * <code>NextToken</code>, that invocation of <code>Query</code> is assumed to be a new query run.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If the invocation contains <code>NextToken</code>, that particular invocation is assumed to be a subsequent
+     * invocation of a prior call to the Query API, and a result set is returned.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * After 4 hours, any request with the same <code>ClientToken</code> is treated as a new request.
      * </p>
      * </li>
      * </ul>
-     * <p>
-     * After 4 hours, any request with the same client token is treated as a new request.
-     * </p>
      * 
-     * @return Unique, case-sensitive string of up to 64 ASCII characters that you specify when you make a Query
-     *         request. Providing a <code>ClientToken</code> makes the call to <code>Query</code> idempotent, meaning
-     *         that multiple identical calls have the same effect as one single call. </p>
-     *         <p>
-     *         Your query request will fail in the following cases:
-     *         </p>
+     * @return Unique, case-sensitive string of up to 64 ASCII characters specified when a <code>Query</code> request is
+     *         made. Providing a <code>ClientToken</code> makes the call to <code>Query</code> <i>idempotent</i>. This
+     *         means that running the same query repeatedly will produce the same result. In other words, making
+     *         multiple identical <code>Query</code> requests has the same effect as making a single request. When using
+     *         <code>ClientToken</code> in a query, note the following: </p>
      *         <ul>
      *         <li>
      *         <p>
-     *         If you submit a request with the same client token outside the 5-minute idepotency window.
+     *         If the Query API is instantiated without a <code>ClientToken</code>, the Query SDK generates a
+     *         <code>ClientToken</code> on your behalf.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         If you submit a request with the same client token but a change in other parameters within the 5-minute
-     *         idempotency window.
+     *         If the <code>Query</code> invocation only contains the <code>ClientToken</code> but does not include a
+     *         <code>NextToken</code>, that invocation of <code>Query</code> is assumed to be a new query run.
      *         </p>
      *         </li>
-     *         </ul>
+     *         <li>
      *         <p>
-     *         After 4 hours, any request with the same client token is treated as a new request.
+     *         If the invocation contains <code>NextToken</code>, that particular invocation is assumed to be a
+     *         subsequent invocation of a prior call to the Query API, and a result set is returned.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         After 4 hours, any request with the same <code>ClientToken</code> is treated as a new request.
+     *         </p>
+     *         </li>
      */
 
     public String getClientToken() {
@@ -222,52 +328,68 @@ public class QueryRequest extends com.amazonaws.AmazonWebServiceRequest implemen
 
     /**
      * <p>
-     * Unique, case-sensitive string of up to 64 ASCII characters that you specify when you make a Query request.
-     * Providing a <code>ClientToken</code> makes the call to <code>Query</code> idempotent, meaning that multiple
-     * identical calls have the same effect as one single call.
-     * </p>
-     * <p>
-     * Your query request will fail in the following cases:
+     * Unique, case-sensitive string of up to 64 ASCII characters specified when a <code>Query</code> request is made.
+     * Providing a <code>ClientToken</code> makes the call to <code>Query</code> <i>idempotent</i>. This means that
+     * running the same query repeatedly will produce the same result. In other words, making multiple identical
+     * <code>Query</code> requests has the same effect as making a single request. When using <code>ClientToken</code>
+     * in a query, note the following:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * If you submit a request with the same client token outside the 5-minute idepotency window.
+     * If the Query API is instantiated without a <code>ClientToken</code>, the Query SDK generates a
+     * <code>ClientToken</code> on your behalf.
      * </p>
      * </li>
      * <li>
      * <p>
-     * If you submit a request with the same client token but a change in other parameters within the 5-minute
-     * idempotency window.
+     * If the <code>Query</code> invocation only contains the <code>ClientToken</code> but does not include a
+     * <code>NextToken</code>, that invocation of <code>Query</code> is assumed to be a new query run.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If the invocation contains <code>NextToken</code>, that particular invocation is assumed to be a subsequent
+     * invocation of a prior call to the Query API, and a result set is returned.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * After 4 hours, any request with the same <code>ClientToken</code> is treated as a new request.
      * </p>
      * </li>
      * </ul>
-     * <p>
-     * After 4 hours, any request with the same client token is treated as a new request.
-     * </p>
      * 
      * @param clientToken
-     *        Unique, case-sensitive string of up to 64 ASCII characters that you specify when you make a Query request.
-     *        Providing a <code>ClientToken</code> makes the call to <code>Query</code> idempotent, meaning that
-     *        multiple identical calls have the same effect as one single call. </p>
-     *        <p>
-     *        Your query request will fail in the following cases:
-     *        </p>
+     *        Unique, case-sensitive string of up to 64 ASCII characters specified when a <code>Query</code> request is
+     *        made. Providing a <code>ClientToken</code> makes the call to <code>Query</code> <i>idempotent</i>. This
+     *        means that running the same query repeatedly will produce the same result. In other words, making multiple
+     *        identical <code>Query</code> requests has the same effect as making a single request. When using
+     *        <code>ClientToken</code> in a query, note the following: </p>
      *        <ul>
      *        <li>
      *        <p>
-     *        If you submit a request with the same client token outside the 5-minute idepotency window.
+     *        If the Query API is instantiated without a <code>ClientToken</code>, the Query SDK generates a
+     *        <code>ClientToken</code> on your behalf.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        If you submit a request with the same client token but a change in other parameters within the 5-minute
-     *        idempotency window.
+     *        If the <code>Query</code> invocation only contains the <code>ClientToken</code> but does not include a
+     *        <code>NextToken</code>, that invocation of <code>Query</code> is assumed to be a new query run.
      *        </p>
      *        </li>
-     *        </ul>
+     *        <li>
      *        <p>
-     *        After 4 hours, any request with the same client token is treated as a new request.
+     *        If the invocation contains <code>NextToken</code>, that particular invocation is assumed to be a
+     *        subsequent invocation of a prior call to the Query API, and a result set is returned.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        After 4 hours, any request with the same <code>ClientToken</code> is treated as a new request.
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -278,11 +400,102 @@ public class QueryRequest extends com.amazonaws.AmazonWebServiceRequest implemen
 
     /**
      * <p>
-     * A pagination token passed to get a set of results.
+     * A pagination token used to return a set of results. When the <code>Query</code> API is invoked using
+     * <code>NextToken</code>, that particular invocation is assumed to be a subsequent invocation of a prior call to
+     * <code>Query</code>, and a result set is returned. However, if the <code>Query</code> invocation only contains the
+     * <code>ClientToken</code>, that invocation of <code>Query</code> is assumed to be a new query run.
      * </p>
+     * <p>
+     * Note the following when using NextToken in a query:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * A pagination token can be used for up to five <code>Query</code> invocations, OR for a duration of up to 1 hour –
+     * whichever comes first.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Using the same <code>NextToken</code> will return the same set of records. To keep paginating through the result
+     * set, you must to use the most recent <code>nextToken</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Suppose a <code>Query</code> invocation returns two <code>NextToken</code> values, <code>TokenA</code> and
+     * <code>TokenB</code>. If <code>TokenB</code> is used in a subsequent <code>Query</code> invocation, then
+     * <code>TokenA</code> is invalidated and cannot be reused.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * To request a previous result set from a query after pagination has begun, you must re-invoke the Query API.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The latest <code>NextToken</code> should be used to paginate until <code>null</code> is returned, at which point
+     * a new <code>NextToken</code> should be used.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If the IAM principal of the query initiator and the result reader are not the same and/or the query initiator and
+     * the result reader do not have the same query string in the query requests, the query will fail with an
+     * <code>Invalid pagination token</code> error.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param nextToken
-     *        A pagination token passed to get a set of results.
+     *        A pagination token used to return a set of results. When the <code>Query</code> API is invoked using
+     *        <code>NextToken</code>, that particular invocation is assumed to be a subsequent invocation of a prior
+     *        call to <code>Query</code>, and a result set is returned. However, if the <code>Query</code> invocation
+     *        only contains the <code>ClientToken</code>, that invocation of <code>Query</code> is assumed to be a new
+     *        query run. </p>
+     *        <p>
+     *        Note the following when using NextToken in a query:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        A pagination token can be used for up to five <code>Query</code> invocations, OR for a duration of up to 1
+     *        hour – whichever comes first.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Using the same <code>NextToken</code> will return the same set of records. To keep paginating through the
+     *        result set, you must to use the most recent <code>nextToken</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Suppose a <code>Query</code> invocation returns two <code>NextToken</code> values, <code>TokenA</code> and
+     *        <code>TokenB</code>. If <code>TokenB</code> is used in a subsequent <code>Query</code> invocation, then
+     *        <code>TokenA</code> is invalidated and cannot be reused.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        To request a previous result set from a query after pagination has begun, you must re-invoke the Query
+     *        API.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The latest <code>NextToken</code> should be used to paginate until <code>null</code> is returned, at which
+     *        point a new <code>NextToken</code> should be used.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        If the IAM principal of the query initiator and the result reader are not the same and/or the query
+     *        initiator and the result reader do not have the same query string in the query requests, the query will
+     *        fail with an <code>Invalid pagination token</code> error.
+     *        </p>
+     *        </li>
      */
 
     public void setNextToken(String nextToken) {
@@ -291,10 +504,101 @@ public class QueryRequest extends com.amazonaws.AmazonWebServiceRequest implemen
 
     /**
      * <p>
-     * A pagination token passed to get a set of results.
+     * A pagination token used to return a set of results. When the <code>Query</code> API is invoked using
+     * <code>NextToken</code>, that particular invocation is assumed to be a subsequent invocation of a prior call to
+     * <code>Query</code>, and a result set is returned. However, if the <code>Query</code> invocation only contains the
+     * <code>ClientToken</code>, that invocation of <code>Query</code> is assumed to be a new query run.
      * </p>
+     * <p>
+     * Note the following when using NextToken in a query:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * A pagination token can be used for up to five <code>Query</code> invocations, OR for a duration of up to 1 hour –
+     * whichever comes first.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Using the same <code>NextToken</code> will return the same set of records. To keep paginating through the result
+     * set, you must to use the most recent <code>nextToken</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Suppose a <code>Query</code> invocation returns two <code>NextToken</code> values, <code>TokenA</code> and
+     * <code>TokenB</code>. If <code>TokenB</code> is used in a subsequent <code>Query</code> invocation, then
+     * <code>TokenA</code> is invalidated and cannot be reused.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * To request a previous result set from a query after pagination has begun, you must re-invoke the Query API.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The latest <code>NextToken</code> should be used to paginate until <code>null</code> is returned, at which point
+     * a new <code>NextToken</code> should be used.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If the IAM principal of the query initiator and the result reader are not the same and/or the query initiator and
+     * the result reader do not have the same query string in the query requests, the query will fail with an
+     * <code>Invalid pagination token</code> error.
+     * </p>
+     * </li>
+     * </ul>
      * 
-     * @return A pagination token passed to get a set of results.
+     * @return A pagination token used to return a set of results. When the <code>Query</code> API is invoked using
+     *         <code>NextToken</code>, that particular invocation is assumed to be a subsequent invocation of a prior
+     *         call to <code>Query</code>, and a result set is returned. However, if the <code>Query</code> invocation
+     *         only contains the <code>ClientToken</code>, that invocation of <code>Query</code> is assumed to be a new
+     *         query run. </p>
+     *         <p>
+     *         Note the following when using NextToken in a query:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         A pagination token can be used for up to five <code>Query</code> invocations, OR for a duration of up to
+     *         1 hour – whichever comes first.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Using the same <code>NextToken</code> will return the same set of records. To keep paginating through the
+     *         result set, you must to use the most recent <code>nextToken</code>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Suppose a <code>Query</code> invocation returns two <code>NextToken</code> values, <code>TokenA</code>
+     *         and <code>TokenB</code>. If <code>TokenB</code> is used in a subsequent <code>Query</code> invocation,
+     *         then <code>TokenA</code> is invalidated and cannot be reused.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         To request a previous result set from a query after pagination has begun, you must re-invoke the Query
+     *         API.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         The latest <code>NextToken</code> should be used to paginate until <code>null</code> is returned, at
+     *         which point a new <code>NextToken</code> should be used.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         If the IAM principal of the query initiator and the result reader are not the same and/or the query
+     *         initiator and the result reader do not have the same query string in the query requests, the query will
+     *         fail with an <code>Invalid pagination token</code> error.
+     *         </p>
+     *         </li>
      */
 
     public String getNextToken() {
@@ -303,11 +607,102 @@ public class QueryRequest extends com.amazonaws.AmazonWebServiceRequest implemen
 
     /**
      * <p>
-     * A pagination token passed to get a set of results.
+     * A pagination token used to return a set of results. When the <code>Query</code> API is invoked using
+     * <code>NextToken</code>, that particular invocation is assumed to be a subsequent invocation of a prior call to
+     * <code>Query</code>, and a result set is returned. However, if the <code>Query</code> invocation only contains the
+     * <code>ClientToken</code>, that invocation of <code>Query</code> is assumed to be a new query run.
      * </p>
+     * <p>
+     * Note the following when using NextToken in a query:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * A pagination token can be used for up to five <code>Query</code> invocations, OR for a duration of up to 1 hour –
+     * whichever comes first.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Using the same <code>NextToken</code> will return the same set of records. To keep paginating through the result
+     * set, you must to use the most recent <code>nextToken</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Suppose a <code>Query</code> invocation returns two <code>NextToken</code> values, <code>TokenA</code> and
+     * <code>TokenB</code>. If <code>TokenB</code> is used in a subsequent <code>Query</code> invocation, then
+     * <code>TokenA</code> is invalidated and cannot be reused.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * To request a previous result set from a query after pagination has begun, you must re-invoke the Query API.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The latest <code>NextToken</code> should be used to paginate until <code>null</code> is returned, at which point
+     * a new <code>NextToken</code> should be used.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If the IAM principal of the query initiator and the result reader are not the same and/or the query initiator and
+     * the result reader do not have the same query string in the query requests, the query will fail with an
+     * <code>Invalid pagination token</code> error.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param nextToken
-     *        A pagination token passed to get a set of results.
+     *        A pagination token used to return a set of results. When the <code>Query</code> API is invoked using
+     *        <code>NextToken</code>, that particular invocation is assumed to be a subsequent invocation of a prior
+     *        call to <code>Query</code>, and a result set is returned. However, if the <code>Query</code> invocation
+     *        only contains the <code>ClientToken</code>, that invocation of <code>Query</code> is assumed to be a new
+     *        query run. </p>
+     *        <p>
+     *        Note the following when using NextToken in a query:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        A pagination token can be used for up to five <code>Query</code> invocations, OR for a duration of up to 1
+     *        hour – whichever comes first.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Using the same <code>NextToken</code> will return the same set of records. To keep paginating through the
+     *        result set, you must to use the most recent <code>nextToken</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Suppose a <code>Query</code> invocation returns two <code>NextToken</code> values, <code>TokenA</code> and
+     *        <code>TokenB</code>. If <code>TokenB</code> is used in a subsequent <code>Query</code> invocation, then
+     *        <code>TokenA</code> is invalidated and cannot be reused.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        To request a previous result set from a query after pagination has begun, you must re-invoke the Query
+     *        API.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The latest <code>NextToken</code> should be used to paginate until <code>null</code> is returned, at which
+     *        point a new <code>NextToken</code> should be used.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        If the IAM principal of the query initiator and the result reader are not the same and/or the query
+     *        initiator and the result reader do not have the same query string in the query requests, the query will
+     *        fail with an <code>Invalid pagination token</code> error.
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -318,15 +713,57 @@ public class QueryRequest extends com.amazonaws.AmazonWebServiceRequest implemen
 
     /**
      * <p>
-     * The total number of rows to return in the output. If the total number of rows available is more than the value
-     * specified, a NextToken is provided in the command's output. To resume pagination, provide the NextToken value in
-     * the starting-token argument of a subsequent command.
+     * The total number of rows to be returned in the <code>Query</code> output. The initial run of <code>Query</code>
+     * with a <code>MaxRows</code> value specified will return the result set of the query in two cases:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The size of the result is less than <code>1MB</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The number of rows in the result set is less than the value of <code>maxRows</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Otherwise, the initial invocation of <code>Query</code> only returns a <code>NextToken</code>, which can then be
+     * used in subsequent calls to fetch the result set. To resume pagination, provide the <code>NextToken</code> value
+     * in the subsequent command.
+     * </p>
+     * <p>
+     * If the row size is large (e.g. a row has many columns), Timestream may return fewer rows to keep the response
+     * size from exceeding the 1 MB limit. If <code>MaxRows</code> is not provided, Timestream will send the necessary
+     * number of rows to meet the 1 MB limit.
      * </p>
      * 
      * @param maxRows
-     *        The total number of rows to return in the output. If the total number of rows available is more than the
-     *        value specified, a NextToken is provided in the command's output. To resume pagination, provide the
-     *        NextToken value in the starting-token argument of a subsequent command.
+     *        The total number of rows to be returned in the <code>Query</code> output. The initial run of
+     *        <code>Query</code> with a <code>MaxRows</code> value specified will return the result set of the query in
+     *        two cases: </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        The size of the result is less than <code>1MB</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The number of rows in the result set is less than the value of <code>maxRows</code>.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        Otherwise, the initial invocation of <code>Query</code> only returns a <code>NextToken</code>, which can
+     *        then be used in subsequent calls to fetch the result set. To resume pagination, provide the
+     *        <code>NextToken</code> value in the subsequent command.
+     *        </p>
+     *        <p>
+     *        If the row size is large (e.g. a row has many columns), Timestream may return fewer rows to keep the
+     *        response size from exceeding the 1 MB limit. If <code>MaxRows</code> is not provided, Timestream will send
+     *        the necessary number of rows to meet the 1 MB limit.
      */
 
     public void setMaxRows(Integer maxRows) {
@@ -335,14 +772,56 @@ public class QueryRequest extends com.amazonaws.AmazonWebServiceRequest implemen
 
     /**
      * <p>
-     * The total number of rows to return in the output. If the total number of rows available is more than the value
-     * specified, a NextToken is provided in the command's output. To resume pagination, provide the NextToken value in
-     * the starting-token argument of a subsequent command.
+     * The total number of rows to be returned in the <code>Query</code> output. The initial run of <code>Query</code>
+     * with a <code>MaxRows</code> value specified will return the result set of the query in two cases:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The size of the result is less than <code>1MB</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The number of rows in the result set is less than the value of <code>maxRows</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Otherwise, the initial invocation of <code>Query</code> only returns a <code>NextToken</code>, which can then be
+     * used in subsequent calls to fetch the result set. To resume pagination, provide the <code>NextToken</code> value
+     * in the subsequent command.
+     * </p>
+     * <p>
+     * If the row size is large (e.g. a row has many columns), Timestream may return fewer rows to keep the response
+     * size from exceeding the 1 MB limit. If <code>MaxRows</code> is not provided, Timestream will send the necessary
+     * number of rows to meet the 1 MB limit.
      * </p>
      * 
-     * @return The total number of rows to return in the output. If the total number of rows available is more than the
-     *         value specified, a NextToken is provided in the command's output. To resume pagination, provide the
-     *         NextToken value in the starting-token argument of a subsequent command.
+     * @return The total number of rows to be returned in the <code>Query</code> output. The initial run of
+     *         <code>Query</code> with a <code>MaxRows</code> value specified will return the result set of the query in
+     *         two cases: </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         The size of the result is less than <code>1MB</code>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         The number of rows in the result set is less than the value of <code>maxRows</code>.
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         Otherwise, the initial invocation of <code>Query</code> only returns a <code>NextToken</code>, which can
+     *         then be used in subsequent calls to fetch the result set. To resume pagination, provide the
+     *         <code>NextToken</code> value in the subsequent command.
+     *         </p>
+     *         <p>
+     *         If the row size is large (e.g. a row has many columns), Timestream may return fewer rows to keep the
+     *         response size from exceeding the 1 MB limit. If <code>MaxRows</code> is not provided, Timestream will
+     *         send the necessary number of rows to meet the 1 MB limit.
      */
 
     public Integer getMaxRows() {
@@ -351,15 +830,57 @@ public class QueryRequest extends com.amazonaws.AmazonWebServiceRequest implemen
 
     /**
      * <p>
-     * The total number of rows to return in the output. If the total number of rows available is more than the value
-     * specified, a NextToken is provided in the command's output. To resume pagination, provide the NextToken value in
-     * the starting-token argument of a subsequent command.
+     * The total number of rows to be returned in the <code>Query</code> output. The initial run of <code>Query</code>
+     * with a <code>MaxRows</code> value specified will return the result set of the query in two cases:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The size of the result is less than <code>1MB</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The number of rows in the result set is less than the value of <code>maxRows</code>.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * Otherwise, the initial invocation of <code>Query</code> only returns a <code>NextToken</code>, which can then be
+     * used in subsequent calls to fetch the result set. To resume pagination, provide the <code>NextToken</code> value
+     * in the subsequent command.
+     * </p>
+     * <p>
+     * If the row size is large (e.g. a row has many columns), Timestream may return fewer rows to keep the response
+     * size from exceeding the 1 MB limit. If <code>MaxRows</code> is not provided, Timestream will send the necessary
+     * number of rows to meet the 1 MB limit.
      * </p>
      * 
      * @param maxRows
-     *        The total number of rows to return in the output. If the total number of rows available is more than the
-     *        value specified, a NextToken is provided in the command's output. To resume pagination, provide the
-     *        NextToken value in the starting-token argument of a subsequent command.
+     *        The total number of rows to be returned in the <code>Query</code> output. The initial run of
+     *        <code>Query</code> with a <code>MaxRows</code> value specified will return the result set of the query in
+     *        two cases: </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        The size of the result is less than <code>1MB</code>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The number of rows in the result set is less than the value of <code>maxRows</code>.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        Otherwise, the initial invocation of <code>Query</code> only returns a <code>NextToken</code>, which can
+     *        then be used in subsequent calls to fetch the result set. To resume pagination, provide the
+     *        <code>NextToken</code> value in the subsequent command.
+     *        </p>
+     *        <p>
+     *        If the row size is large (e.g. a row has many columns), Timestream may return fewer rows to keep the
+     *        response size from exceeding the 1 MB limit. If <code>MaxRows</code> is not provided, Timestream will send
+     *        the necessary number of rows to meet the 1 MB limit.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

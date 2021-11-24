@@ -49,7 +49,7 @@ public class QueryResult extends com.amazonaws.AmazonWebServiceResult<com.amazon
     private java.util.List<ColumnInfo> columnInfo;
     /**
      * <p>
-     * Information about the status of the query, including progress and bytes scannned.
+     * Information about the status of the query, including progress and bytes scanned.
      * </p>
      */
     private QueryStatus queryStatus;
@@ -276,11 +276,11 @@ public class QueryResult extends com.amazonaws.AmazonWebServiceResult<com.amazon
 
     /**
      * <p>
-     * Information about the status of the query, including progress and bytes scannned.
+     * Information about the status of the query, including progress and bytes scanned.
      * </p>
      * 
      * @param queryStatus
-     *        Information about the status of the query, including progress and bytes scannned.
+     *        Information about the status of the query, including progress and bytes scanned.
      */
 
     public void setQueryStatus(QueryStatus queryStatus) {
@@ -289,10 +289,10 @@ public class QueryResult extends com.amazonaws.AmazonWebServiceResult<com.amazon
 
     /**
      * <p>
-     * Information about the status of the query, including progress and bytes scannned.
+     * Information about the status of the query, including progress and bytes scanned.
      * </p>
      * 
-     * @return Information about the status of the query, including progress and bytes scannned.
+     * @return Information about the status of the query, including progress and bytes scanned.
      */
 
     public QueryStatus getQueryStatus() {
@@ -301,11 +301,11 @@ public class QueryResult extends com.amazonaws.AmazonWebServiceResult<com.amazon
 
     /**
      * <p>
-     * Information about the status of the query, including progress and bytes scannned.
+     * Information about the status of the query, including progress and bytes scanned.
      * </p>
      * 
      * @param queryStatus
-     *        Information about the status of the query, including progress and bytes scannned.
+     *        Information about the status of the query, including progress and bytes scanned.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -49,6 +49,12 @@ public class CreateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      */
     private java.util.List<Tag> tags;
+    /**
+     * <p>
+     * Contains properties to set on the table when enabling magnetic store writes.
+     * </p>
+     */
+    private MagneticStoreWriteProperties magneticStoreWriteProperties;
 
     /**
      * <p>
@@ -241,6 +247,46 @@ public class CreateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
     }
 
     /**
+     * <p>
+     * Contains properties to set on the table when enabling magnetic store writes.
+     * </p>
+     * 
+     * @param magneticStoreWriteProperties
+     *        Contains properties to set on the table when enabling magnetic store writes.
+     */
+
+    public void setMagneticStoreWriteProperties(MagneticStoreWriteProperties magneticStoreWriteProperties) {
+        this.magneticStoreWriteProperties = magneticStoreWriteProperties;
+    }
+
+    /**
+     * <p>
+     * Contains properties to set on the table when enabling magnetic store writes.
+     * </p>
+     * 
+     * @return Contains properties to set on the table when enabling magnetic store writes.
+     */
+
+    public MagneticStoreWriteProperties getMagneticStoreWriteProperties() {
+        return this.magneticStoreWriteProperties;
+    }
+
+    /**
+     * <p>
+     * Contains properties to set on the table when enabling magnetic store writes.
+     * </p>
+     * 
+     * @param magneticStoreWriteProperties
+     *        Contains properties to set on the table when enabling magnetic store writes.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateTableRequest withMagneticStoreWriteProperties(MagneticStoreWriteProperties magneticStoreWriteProperties) {
+        setMagneticStoreWriteProperties(magneticStoreWriteProperties);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -259,7 +305,9 @@ public class CreateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
         if (getRetentionProperties() != null)
             sb.append("RetentionProperties: ").append(getRetentionProperties()).append(",");
         if (getTags() != null)
-            sb.append("Tags: ").append(getTags());
+            sb.append("Tags: ").append(getTags()).append(",");
+        if (getMagneticStoreWriteProperties() != null)
+            sb.append("MagneticStoreWriteProperties: ").append(getMagneticStoreWriteProperties());
         sb.append("}");
         return sb.toString();
     }
@@ -290,6 +338,10 @@ public class CreateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
             return false;
+        if (other.getMagneticStoreWriteProperties() == null ^ this.getMagneticStoreWriteProperties() == null)
+            return false;
+        if (other.getMagneticStoreWriteProperties() != null && other.getMagneticStoreWriteProperties().equals(this.getMagneticStoreWriteProperties()) == false)
+            return false;
         return true;
     }
 
@@ -302,6 +354,7 @@ public class CreateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
         hashCode = prime * hashCode + ((getTableName() == null) ? 0 : getTableName().hashCode());
         hashCode = prime * hashCode + ((getRetentionProperties() == null) ? 0 : getRetentionProperties().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getMagneticStoreWriteProperties() == null) ? 0 : getMagneticStoreWriteProperties().hashCode());
         return hashCode;
     }
 

@@ -64,6 +64,12 @@ public class GetProfileObjectTypeResult extends com.amazonaws.AmazonWebServiceRe
     private Boolean allowProfileCreation;
     /**
      * <p>
+     * The format of your <code>sourceLastUpdatedTimestamp</code> that was previously set up.
+     * </p>
+     */
+    private String sourceLastUpdatedTimestampFormat;
+    /**
+     * <p>
      * A map of the name and ObjectType field.
      * </p>
      */
@@ -375,6 +381,46 @@ public class GetProfileObjectTypeResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
+     * The format of your <code>sourceLastUpdatedTimestamp</code> that was previously set up.
+     * </p>
+     * 
+     * @param sourceLastUpdatedTimestampFormat
+     *        The format of your <code>sourceLastUpdatedTimestamp</code> that was previously set up.
+     */
+
+    public void setSourceLastUpdatedTimestampFormat(String sourceLastUpdatedTimestampFormat) {
+        this.sourceLastUpdatedTimestampFormat = sourceLastUpdatedTimestampFormat;
+    }
+
+    /**
+     * <p>
+     * The format of your <code>sourceLastUpdatedTimestamp</code> that was previously set up.
+     * </p>
+     * 
+     * @return The format of your <code>sourceLastUpdatedTimestamp</code> that was previously set up.
+     */
+
+    public String getSourceLastUpdatedTimestampFormat() {
+        return this.sourceLastUpdatedTimestampFormat;
+    }
+
+    /**
+     * <p>
+     * The format of your <code>sourceLastUpdatedTimestamp</code> that was previously set up.
+     * </p>
+     * 
+     * @param sourceLastUpdatedTimestampFormat
+     *        The format of your <code>sourceLastUpdatedTimestamp</code> that was previously set up.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetProfileObjectTypeResult withSourceLastUpdatedTimestampFormat(String sourceLastUpdatedTimestampFormat) {
+        setSourceLastUpdatedTimestampFormat(sourceLastUpdatedTimestampFormat);
+        return this;
+    }
+
+    /**
+     * <p>
      * A map of the name and ObjectType field.
      * </p>
      * 
@@ -681,6 +727,8 @@ public class GetProfileObjectTypeResult extends com.amazonaws.AmazonWebServiceRe
             sb.append("EncryptionKey: ").append(getEncryptionKey()).append(",");
         if (getAllowProfileCreation() != null)
             sb.append("AllowProfileCreation: ").append(getAllowProfileCreation()).append(",");
+        if (getSourceLastUpdatedTimestampFormat() != null)
+            sb.append("SourceLastUpdatedTimestampFormat: ").append(getSourceLastUpdatedTimestampFormat()).append(",");
         if (getFields() != null)
             sb.append("Fields: ").append(getFields()).append(",");
         if (getKeys() != null)
@@ -729,6 +777,11 @@ public class GetProfileObjectTypeResult extends com.amazonaws.AmazonWebServiceRe
             return false;
         if (other.getAllowProfileCreation() != null && other.getAllowProfileCreation().equals(this.getAllowProfileCreation()) == false)
             return false;
+        if (other.getSourceLastUpdatedTimestampFormat() == null ^ this.getSourceLastUpdatedTimestampFormat() == null)
+            return false;
+        if (other.getSourceLastUpdatedTimestampFormat() != null
+                && other.getSourceLastUpdatedTimestampFormat().equals(this.getSourceLastUpdatedTimestampFormat()) == false)
+            return false;
         if (other.getFields() == null ^ this.getFields() == null)
             return false;
         if (other.getFields() != null && other.getFields().equals(this.getFields()) == false)
@@ -763,6 +816,7 @@ public class GetProfileObjectTypeResult extends com.amazonaws.AmazonWebServiceRe
         hashCode = prime * hashCode + ((getExpirationDays() == null) ? 0 : getExpirationDays().hashCode());
         hashCode = prime * hashCode + ((getEncryptionKey() == null) ? 0 : getEncryptionKey().hashCode());
         hashCode = prime * hashCode + ((getAllowProfileCreation() == null) ? 0 : getAllowProfileCreation().hashCode());
+        hashCode = prime * hashCode + ((getSourceLastUpdatedTimestampFormat() == null) ? 0 : getSourceLastUpdatedTimestampFormat().hashCode());
         hashCode = prime * hashCode + ((getFields() == null) ? 0 : getFields().hashCode());
         hashCode = prime * hashCode + ((getKeys() == null) ? 0 : getKeys().hashCode());
         hashCode = prime * hashCode + ((getCreatedAt() == null) ? 0 : getCreatedAt().hashCode());

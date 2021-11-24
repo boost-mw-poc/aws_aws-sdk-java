@@ -26,18 +26,18 @@ public class UpdateEnvironmentTemplateVersionResult extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The environment template version detail data that's returned by AWS Proton.
+     * The environment template version detail data that's returned by Proton.
      * </p>
      */
     private EnvironmentTemplateVersion environmentTemplateVersion;
 
     /**
      * <p>
-     * The environment template version detail data that's returned by AWS Proton.
+     * The environment template version detail data that's returned by Proton.
      * </p>
      * 
      * @param environmentTemplateVersion
-     *        The environment template version detail data that's returned by AWS Proton.
+     *        The environment template version detail data that's returned by Proton.
      */
 
     public void setEnvironmentTemplateVersion(EnvironmentTemplateVersion environmentTemplateVersion) {
@@ -46,10 +46,10 @@ public class UpdateEnvironmentTemplateVersionResult extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The environment template version detail data that's returned by AWS Proton.
+     * The environment template version detail data that's returned by Proton.
      * </p>
      * 
-     * @return The environment template version detail data that's returned by AWS Proton.
+     * @return The environment template version detail data that's returned by Proton.
      */
 
     public EnvironmentTemplateVersion getEnvironmentTemplateVersion() {
@@ -58,11 +58,11 @@ public class UpdateEnvironmentTemplateVersionResult extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * The environment template version detail data that's returned by AWS Proton.
+     * The environment template version detail data that's returned by Proton.
      * </p>
      * 
      * @param environmentTemplateVersion
-     *        The environment template version detail data that's returned by AWS Proton.
+     *        The environment template version detail data that's returned by Proton.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

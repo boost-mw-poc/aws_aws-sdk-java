@@ -34,6 +34,24 @@ public class MatchingResponse implements Serializable, Cloneable, StructuredPojo
      * </p>
      */
     private Boolean enabled;
+    /**
+     * <p>
+     * The day and time when do you want to start the Identity Resolution Job every week.
+     * </p>
+     */
+    private JobSchedule jobSchedule;
+    /**
+     * <p>
+     * Configuration information about the auto-merging process.
+     * </p>
+     */
+    private AutoMerging autoMerging;
+    /**
+     * <p>
+     * Configuration information for exporting Identity Resolution results, for example, to an S3 bucket.
+     * </p>
+     */
+    private ExportingConfig exportingConfig;
 
     /**
      * <p>
@@ -88,6 +106,126 @@ public class MatchingResponse implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
+     * <p>
+     * The day and time when do you want to start the Identity Resolution Job every week.
+     * </p>
+     * 
+     * @param jobSchedule
+     *        The day and time when do you want to start the Identity Resolution Job every week.
+     */
+
+    public void setJobSchedule(JobSchedule jobSchedule) {
+        this.jobSchedule = jobSchedule;
+    }
+
+    /**
+     * <p>
+     * The day and time when do you want to start the Identity Resolution Job every week.
+     * </p>
+     * 
+     * @return The day and time when do you want to start the Identity Resolution Job every week.
+     */
+
+    public JobSchedule getJobSchedule() {
+        return this.jobSchedule;
+    }
+
+    /**
+     * <p>
+     * The day and time when do you want to start the Identity Resolution Job every week.
+     * </p>
+     * 
+     * @param jobSchedule
+     *        The day and time when do you want to start the Identity Resolution Job every week.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public MatchingResponse withJobSchedule(JobSchedule jobSchedule) {
+        setJobSchedule(jobSchedule);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Configuration information about the auto-merging process.
+     * </p>
+     * 
+     * @param autoMerging
+     *        Configuration information about the auto-merging process.
+     */
+
+    public void setAutoMerging(AutoMerging autoMerging) {
+        this.autoMerging = autoMerging;
+    }
+
+    /**
+     * <p>
+     * Configuration information about the auto-merging process.
+     * </p>
+     * 
+     * @return Configuration information about the auto-merging process.
+     */
+
+    public AutoMerging getAutoMerging() {
+        return this.autoMerging;
+    }
+
+    /**
+     * <p>
+     * Configuration information about the auto-merging process.
+     * </p>
+     * 
+     * @param autoMerging
+     *        Configuration information about the auto-merging process.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public MatchingResponse withAutoMerging(AutoMerging autoMerging) {
+        setAutoMerging(autoMerging);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Configuration information for exporting Identity Resolution results, for example, to an S3 bucket.
+     * </p>
+     * 
+     * @param exportingConfig
+     *        Configuration information for exporting Identity Resolution results, for example, to an S3 bucket.
+     */
+
+    public void setExportingConfig(ExportingConfig exportingConfig) {
+        this.exportingConfig = exportingConfig;
+    }
+
+    /**
+     * <p>
+     * Configuration information for exporting Identity Resolution results, for example, to an S3 bucket.
+     * </p>
+     * 
+     * @return Configuration information for exporting Identity Resolution results, for example, to an S3 bucket.
+     */
+
+    public ExportingConfig getExportingConfig() {
+        return this.exportingConfig;
+    }
+
+    /**
+     * <p>
+     * Configuration information for exporting Identity Resolution results, for example, to an S3 bucket.
+     * </p>
+     * 
+     * @param exportingConfig
+     *        Configuration information for exporting Identity Resolution results, for example, to an S3 bucket.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public MatchingResponse withExportingConfig(ExportingConfig exportingConfig) {
+        setExportingConfig(exportingConfig);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -100,7 +238,13 @@ public class MatchingResponse implements Serializable, Cloneable, StructuredPojo
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getEnabled() != null)
-            sb.append("Enabled: ").append(getEnabled());
+            sb.append("Enabled: ").append(getEnabled()).append(",");
+        if (getJobSchedule() != null)
+            sb.append("JobSchedule: ").append(getJobSchedule()).append(",");
+        if (getAutoMerging() != null)
+            sb.append("AutoMerging: ").append(getAutoMerging()).append(",");
+        if (getExportingConfig() != null)
+            sb.append("ExportingConfig: ").append(getExportingConfig());
         sb.append("}");
         return sb.toString();
     }
@@ -119,6 +263,18 @@ public class MatchingResponse implements Serializable, Cloneable, StructuredPojo
             return false;
         if (other.getEnabled() != null && other.getEnabled().equals(this.getEnabled()) == false)
             return false;
+        if (other.getJobSchedule() == null ^ this.getJobSchedule() == null)
+            return false;
+        if (other.getJobSchedule() != null && other.getJobSchedule().equals(this.getJobSchedule()) == false)
+            return false;
+        if (other.getAutoMerging() == null ^ this.getAutoMerging() == null)
+            return false;
+        if (other.getAutoMerging() != null && other.getAutoMerging().equals(this.getAutoMerging()) == false)
+            return false;
+        if (other.getExportingConfig() == null ^ this.getExportingConfig() == null)
+            return false;
+        if (other.getExportingConfig() != null && other.getExportingConfig().equals(this.getExportingConfig()) == false)
+            return false;
         return true;
     }
 
@@ -128,6 +284,9 @@ public class MatchingResponse implements Serializable, Cloneable, StructuredPojo
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getEnabled() == null) ? 0 : getEnabled().hashCode());
+        hashCode = prime * hashCode + ((getJobSchedule() == null) ? 0 : getJobSchedule().hashCode());
+        hashCode = prime * hashCode + ((getAutoMerging() == null) ? 0 : getAutoMerging().hashCode());
+        hashCode = prime * hashCode + ((getExportingConfig() == null) ? 0 : getExportingConfig().hashCode());
         return hashCode;
     }
 

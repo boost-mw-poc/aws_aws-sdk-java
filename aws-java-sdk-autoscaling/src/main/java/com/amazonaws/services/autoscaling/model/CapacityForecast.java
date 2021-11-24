@@ -29,7 +29,7 @@ public class CapacityForecast implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The time stamps for the data points, in UTC format.
+     * The timestamps for the data points, in UTC format.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<java.util.Date> timestamps;
@@ -42,10 +42,10 @@ public class CapacityForecast implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The time stamps for the data points, in UTC format.
+     * The timestamps for the data points, in UTC format.
      * </p>
      * 
-     * @return The time stamps for the data points, in UTC format.
+     * @return The timestamps for the data points, in UTC format.
      */
 
     public java.util.List<java.util.Date> getTimestamps() {
@@ -57,11 +57,11 @@ public class CapacityForecast implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The time stamps for the data points, in UTC format.
+     * The timestamps for the data points, in UTC format.
      * </p>
      * 
      * @param timestamps
-     *        The time stamps for the data points, in UTC format.
+     *        The timestamps for the data points, in UTC format.
      */
 
     public void setTimestamps(java.util.Collection<java.util.Date> timestamps) {
@@ -75,7 +75,7 @@ public class CapacityForecast implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The time stamps for the data points, in UTC format.
+     * The timestamps for the data points, in UTC format.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -84,7 +84,7 @@ public class CapacityForecast implements Serializable, Cloneable {
      * </p>
      * 
      * @param timestamps
-     *        The time stamps for the data points, in UTC format.
+     *        The timestamps for the data points, in UTC format.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -100,11 +100,11 @@ public class CapacityForecast implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The time stamps for the data points, in UTC format.
+     * The timestamps for the data points, in UTC format.
      * </p>
      * 
      * @param timestamps
-     *        The time stamps for the data points, in UTC format.
+     *        The timestamps for the data points, in UTC format.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

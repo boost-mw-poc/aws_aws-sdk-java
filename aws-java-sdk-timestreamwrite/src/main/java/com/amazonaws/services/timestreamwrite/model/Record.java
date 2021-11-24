@@ -26,6 +26,13 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * type which is the data type of the measure value. In addition, the record contains the timestamp when the measure was
  * collected that the timestamp unit which represents the granularity of the timestamp.
  * </p>
+ * <p>
+ * Records have a <code>Version</code> field, which is a 64-bit <code>long</code> that you can use for updating data
+ * points. Writes of a duplicate record with the same dimension, timestamp, and measure name but different measure value
+ * will only succeed if the <code>Version</code> attribute of the record in the write request is higher than that of the
+ * existing record. Timestream defaults to a <code>Version</code> of <code>1</code> for records without the
+ * <code>Version</code> field.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/timestream-write-2018-11-01/Record" target="_top">AWS API
  *      Documentation</a>
@@ -54,7 +61,7 @@ public class Record implements Serializable, Cloneable, StructuredPojo {
     private String measureValue;
     /**
      * <p>
-     * Contains the data type of the measure value for the time series data point.
+     * Contains the data type of the measure value for the time series data point. Default type is <code>DOUBLE</code>.
      * </p>
      */
     private String measureValueType;
@@ -69,7 +76,7 @@ public class Record implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The granularity of the timestamp unit. It indicates if the time value is in seconds, milliseconds, nanoseconds or
-     * other supported values.
+     * other supported values. Default is <code>MILLISECONDS</code>.
      * </p>
      */
     private String timeUnit;
@@ -77,10 +84,26 @@ public class Record implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * 64-bit attribute used for record updates. Write requests for duplicate data with a higher version number will
      * update the existing measure value and version. In cases where the measure value is the same, <code>Version</code>
-     * will still be updated . Default value is to 1.
+     * will still be updated . Default value is <code>1</code>.
      * </p>
+     * <note>
+     * <p>
+     * <code>Version</code> must be <code>1</code> or greater, or you will receive a <code>ValidationException</code>
+     * error.
+     * </p>
+     * </note>
      */
     private Long version;
+    /**
+     * <p>
+     * Contains the list of MeasureValue for time series data points.
+     * </p>
+     * <p>
+     * This is only allowed for type <code>MULTI</code>. For scalar values, use <code>MeasureValue</code> attribute of
+     * the Record directly.
+     * </p>
+     */
+    private java.util.List<MeasureValue> measureValues;
 
     /**
      * <p>
@@ -240,11 +263,12 @@ public class Record implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Contains the data type of the measure value for the time series data point.
+     * Contains the data type of the measure value for the time series data point. Default type is <code>DOUBLE</code>.
      * </p>
      * 
      * @param measureValueType
-     *        Contains the data type of the measure value for the time series data point.
+     *        Contains the data type of the measure value for the time series data point. Default type is
+     *        <code>DOUBLE</code>.
      * @see MeasureValueType
      */
 
@@ -254,10 +278,11 @@ public class Record implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Contains the data type of the measure value for the time series data point.
+     * Contains the data type of the measure value for the time series data point. Default type is <code>DOUBLE</code>.
      * </p>
      * 
-     * @return Contains the data type of the measure value for the time series data point.
+     * @return Contains the data type of the measure value for the time series data point. Default type is
+     *         <code>DOUBLE</code>.
      * @see MeasureValueType
      */
 
@@ -267,11 +292,12 @@ public class Record implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Contains the data type of the measure value for the time series data point.
+     * Contains the data type of the measure value for the time series data point. Default type is <code>DOUBLE</code>.
      * </p>
      * 
      * @param measureValueType
-     *        Contains the data type of the measure value for the time series data point.
+     *        Contains the data type of the measure value for the time series data point. Default type is
+     *        <code>DOUBLE</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see MeasureValueType
      */
@@ -283,11 +309,12 @@ public class Record implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Contains the data type of the measure value for the time series data point.
+     * Contains the data type of the measure value for the time series data point. Default type is <code>DOUBLE</code>.
      * </p>
      * 
      * @param measureValueType
-     *        Contains the data type of the measure value for the time series data point.
+     *        Contains the data type of the measure value for the time series data point. Default type is
+     *        <code>DOUBLE</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see MeasureValueType
      */
@@ -352,12 +379,12 @@ public class Record implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The granularity of the timestamp unit. It indicates if the time value is in seconds, milliseconds, nanoseconds or
-     * other supported values.
+     * other supported values. Default is <code>MILLISECONDS</code>.
      * </p>
      * 
      * @param timeUnit
      *        The granularity of the timestamp unit. It indicates if the time value is in seconds, milliseconds,
-     *        nanoseconds or other supported values.
+     *        nanoseconds or other supported values. Default is <code>MILLISECONDS</code>.
      * @see TimeUnit
      */
 
@@ -368,11 +395,11 @@ public class Record implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The granularity of the timestamp unit. It indicates if the time value is in seconds, milliseconds, nanoseconds or
-     * other supported values.
+     * other supported values. Default is <code>MILLISECONDS</code>.
      * </p>
      * 
      * @return The granularity of the timestamp unit. It indicates if the time value is in seconds, milliseconds,
-     *         nanoseconds or other supported values.
+     *         nanoseconds or other supported values. Default is <code>MILLISECONDS</code>.
      * @see TimeUnit
      */
 
@@ -383,12 +410,12 @@ public class Record implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The granularity of the timestamp unit. It indicates if the time value is in seconds, milliseconds, nanoseconds or
-     * other supported values.
+     * other supported values. Default is <code>MILLISECONDS</code>.
      * </p>
      * 
      * @param timeUnit
      *        The granularity of the timestamp unit. It indicates if the time value is in seconds, milliseconds,
-     *        nanoseconds or other supported values.
+     *        nanoseconds or other supported values. Default is <code>MILLISECONDS</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see TimeUnit
      */
@@ -401,12 +428,12 @@ public class Record implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The granularity of the timestamp unit. It indicates if the time value is in seconds, milliseconds, nanoseconds or
-     * other supported values.
+     * other supported values. Default is <code>MILLISECONDS</code>.
      * </p>
      * 
      * @param timeUnit
      *        The granularity of the timestamp unit. It indicates if the time value is in seconds, milliseconds,
-     *        nanoseconds or other supported values.
+     *        nanoseconds or other supported values. Default is <code>MILLISECONDS</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see TimeUnit
      */
@@ -420,13 +447,23 @@ public class Record implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * 64-bit attribute used for record updates. Write requests for duplicate data with a higher version number will
      * update the existing measure value and version. In cases where the measure value is the same, <code>Version</code>
-     * will still be updated . Default value is to 1.
+     * will still be updated . Default value is <code>1</code>.
      * </p>
+     * <note>
+     * <p>
+     * <code>Version</code> must be <code>1</code> or greater, or you will receive a <code>ValidationException</code>
+     * error.
+     * </p>
+     * </note>
      * 
      * @param version
      *        64-bit attribute used for record updates. Write requests for duplicate data with a higher version number
      *        will update the existing measure value and version. In cases where the measure value is the same,
-     *        <code>Version</code> will still be updated . Default value is to 1.
+     *        <code>Version</code> will still be updated . Default value is <code>1</code>.</p> <note>
+     *        <p>
+     *        <code>Version</code> must be <code>1</code> or greater, or you will receive a
+     *        <code>ValidationException</code> error.
+     *        </p>
      */
 
     public void setVersion(Long version) {
@@ -437,12 +474,22 @@ public class Record implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * 64-bit attribute used for record updates. Write requests for duplicate data with a higher version number will
      * update the existing measure value and version. In cases where the measure value is the same, <code>Version</code>
-     * will still be updated . Default value is to 1.
+     * will still be updated . Default value is <code>1</code>.
      * </p>
+     * <note>
+     * <p>
+     * <code>Version</code> must be <code>1</code> or greater, or you will receive a <code>ValidationException</code>
+     * error.
+     * </p>
+     * </note>
      * 
      * @return 64-bit attribute used for record updates. Write requests for duplicate data with a higher version number
      *         will update the existing measure value and version. In cases where the measure value is the same,
-     *         <code>Version</code> will still be updated . Default value is to 1.
+     *         <code>Version</code> will still be updated . Default value is <code>1</code>.</p> <note>
+     *         <p>
+     *         <code>Version</code> must be <code>1</code> or greater, or you will receive a
+     *         <code>ValidationException</code> error.
+     *         </p>
      */
 
     public Long getVersion() {
@@ -453,18 +500,126 @@ public class Record implements Serializable, Cloneable, StructuredPojo {
      * <p>
      * 64-bit attribute used for record updates. Write requests for duplicate data with a higher version number will
      * update the existing measure value and version. In cases where the measure value is the same, <code>Version</code>
-     * will still be updated . Default value is to 1.
+     * will still be updated . Default value is <code>1</code>.
      * </p>
+     * <note>
+     * <p>
+     * <code>Version</code> must be <code>1</code> or greater, or you will receive a <code>ValidationException</code>
+     * error.
+     * </p>
+     * </note>
      * 
      * @param version
      *        64-bit attribute used for record updates. Write requests for duplicate data with a higher version number
      *        will update the existing measure value and version. In cases where the measure value is the same,
-     *        <code>Version</code> will still be updated . Default value is to 1.
+     *        <code>Version</code> will still be updated . Default value is <code>1</code>.</p> <note>
+     *        <p>
+     *        <code>Version</code> must be <code>1</code> or greater, or you will receive a
+     *        <code>ValidationException</code> error.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public Record withVersion(Long version) {
         setVersion(version);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Contains the list of MeasureValue for time series data points.
+     * </p>
+     * <p>
+     * This is only allowed for type <code>MULTI</code>. For scalar values, use <code>MeasureValue</code> attribute of
+     * the Record directly.
+     * </p>
+     * 
+     * @return Contains the list of MeasureValue for time series data points. </p>
+     *         <p>
+     *         This is only allowed for type <code>MULTI</code>. For scalar values, use <code>MeasureValue</code>
+     *         attribute of the Record directly.
+     */
+
+    public java.util.List<MeasureValue> getMeasureValues() {
+        return measureValues;
+    }
+
+    /**
+     * <p>
+     * Contains the list of MeasureValue for time series data points.
+     * </p>
+     * <p>
+     * This is only allowed for type <code>MULTI</code>. For scalar values, use <code>MeasureValue</code> attribute of
+     * the Record directly.
+     * </p>
+     * 
+     * @param measureValues
+     *        Contains the list of MeasureValue for time series data points. </p>
+     *        <p>
+     *        This is only allowed for type <code>MULTI</code>. For scalar values, use <code>MeasureValue</code>
+     *        attribute of the Record directly.
+     */
+
+    public void setMeasureValues(java.util.Collection<MeasureValue> measureValues) {
+        if (measureValues == null) {
+            this.measureValues = null;
+            return;
+        }
+
+        this.measureValues = new java.util.ArrayList<MeasureValue>(measureValues);
+    }
+
+    /**
+     * <p>
+     * Contains the list of MeasureValue for time series data points.
+     * </p>
+     * <p>
+     * This is only allowed for type <code>MULTI</code>. For scalar values, use <code>MeasureValue</code> attribute of
+     * the Record directly.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setMeasureValues(java.util.Collection)} or {@link #withMeasureValues(java.util.Collection)} if you want
+     * to override the existing values.
+     * </p>
+     * 
+     * @param measureValues
+     *        Contains the list of MeasureValue for time series data points. </p>
+     *        <p>
+     *        This is only allowed for type <code>MULTI</code>. For scalar values, use <code>MeasureValue</code>
+     *        attribute of the Record directly.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Record withMeasureValues(MeasureValue... measureValues) {
+        if (this.measureValues == null) {
+            setMeasureValues(new java.util.ArrayList<MeasureValue>(measureValues.length));
+        }
+        for (MeasureValue ele : measureValues) {
+            this.measureValues.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * Contains the list of MeasureValue for time series data points.
+     * </p>
+     * <p>
+     * This is only allowed for type <code>MULTI</code>. For scalar values, use <code>MeasureValue</code> attribute of
+     * the Record directly.
+     * </p>
+     * 
+     * @param measureValues
+     *        Contains the list of MeasureValue for time series data points. </p>
+     *        <p>
+     *        This is only allowed for type <code>MULTI</code>. For scalar values, use <code>MeasureValue</code>
+     *        attribute of the Record directly.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Record withMeasureValues(java.util.Collection<MeasureValue> measureValues) {
+        setMeasureValues(measureValues);
         return this;
     }
 
@@ -493,7 +648,9 @@ public class Record implements Serializable, Cloneable, StructuredPojo {
         if (getTimeUnit() != null)
             sb.append("TimeUnit: ").append(getTimeUnit()).append(",");
         if (getVersion() != null)
-            sb.append("Version: ").append(getVersion());
+            sb.append("Version: ").append(getVersion()).append(",");
+        if (getMeasureValues() != null)
+            sb.append("MeasureValues: ").append(getMeasureValues());
         sb.append("}");
         return sb.toString();
     }
@@ -536,6 +693,10 @@ public class Record implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getVersion() != null && other.getVersion().equals(this.getVersion()) == false)
             return false;
+        if (other.getMeasureValues() == null ^ this.getMeasureValues() == null)
+            return false;
+        if (other.getMeasureValues() != null && other.getMeasureValues().equals(this.getMeasureValues()) == false)
+            return false;
         return true;
     }
 
@@ -551,6 +712,7 @@ public class Record implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getTime() == null) ? 0 : getTime().hashCode());
         hashCode = prime * hashCode + ((getTimeUnit() == null) ? 0 : getTimeUnit().hashCode());
         hashCode = prime * hashCode + ((getVersion() == null) ? 0 : getVersion().hashCode());
+        hashCode = prime * hashCode + ((getMeasureValues() == null) ? 0 : getMeasureValues().hashCode());
         return hashCode;
     }
 

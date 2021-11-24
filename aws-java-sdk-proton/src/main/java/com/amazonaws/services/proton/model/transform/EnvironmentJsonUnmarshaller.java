@@ -96,6 +96,10 @@ public class EnvironmentJsonUnmarshaller implements Unmarshaller<Environment, Js
                     context.nextToken();
                     environment.setProvisioning(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("provisioningRepository", targetDepth)) {
+                    context.nextToken();
+                    environment.setProvisioningRepository(RepositoryBranchJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("spec", targetDepth)) {
                     context.nextToken();
                     environment.setSpec(context.getUnmarshaller(String.class).unmarshall(context));

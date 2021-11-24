@@ -40,6 +40,13 @@ public class MatchItem implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private java.util.List<String> profileIds;
+    /**
+     * <p>
+     * A number between 0 and 1 that represents the confidence level of assigning profiles to a matching group. A score
+     * of 1 likely indicates an exact match.
+     * </p>
+     */
+    private Double confidenceScore;
 
     /**
      * <p>
@@ -152,6 +159,52 @@ public class MatchItem implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * A number between 0 and 1 that represents the confidence level of assigning profiles to a matching group. A score
+     * of 1 likely indicates an exact match.
+     * </p>
+     * 
+     * @param confidenceScore
+     *        A number between 0 and 1 that represents the confidence level of assigning profiles to a matching group. A
+     *        score of 1 likely indicates an exact match.
+     */
+
+    public void setConfidenceScore(Double confidenceScore) {
+        this.confidenceScore = confidenceScore;
+    }
+
+    /**
+     * <p>
+     * A number between 0 and 1 that represents the confidence level of assigning profiles to a matching group. A score
+     * of 1 likely indicates an exact match.
+     * </p>
+     * 
+     * @return A number between 0 and 1 that represents the confidence level of assigning profiles to a matching group.
+     *         A score of 1 likely indicates an exact match.
+     */
+
+    public Double getConfidenceScore() {
+        return this.confidenceScore;
+    }
+
+    /**
+     * <p>
+     * A number between 0 and 1 that represents the confidence level of assigning profiles to a matching group. A score
+     * of 1 likely indicates an exact match.
+     * </p>
+     * 
+     * @param confidenceScore
+     *        A number between 0 and 1 that represents the confidence level of assigning profiles to a matching group. A
+     *        score of 1 likely indicates an exact match.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public MatchItem withConfidenceScore(Double confidenceScore) {
+        setConfidenceScore(confidenceScore);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -166,7 +219,9 @@ public class MatchItem implements Serializable, Cloneable, StructuredPojo {
         if (getMatchId() != null)
             sb.append("MatchId: ").append(getMatchId()).append(",");
         if (getProfileIds() != null)
-            sb.append("ProfileIds: ").append(getProfileIds());
+            sb.append("ProfileIds: ").append(getProfileIds()).append(",");
+        if (getConfidenceScore() != null)
+            sb.append("ConfidenceScore: ").append(getConfidenceScore());
         sb.append("}");
         return sb.toString();
     }
@@ -189,6 +244,10 @@ public class MatchItem implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getProfileIds() != null && other.getProfileIds().equals(this.getProfileIds()) == false)
             return false;
+        if (other.getConfidenceScore() == null ^ this.getConfidenceScore() == null)
+            return false;
+        if (other.getConfidenceScore() != null && other.getConfidenceScore().equals(this.getConfidenceScore()) == false)
+            return false;
         return true;
     }
 
@@ -199,6 +258,7 @@ public class MatchItem implements Serializable, Cloneable, StructuredPojo {
 
         hashCode = prime * hashCode + ((getMatchId() == null) ? 0 : getMatchId().hashCode());
         hashCode = prime * hashCode + ((getProfileIds() == null) ? 0 : getProfileIds().hashCode());
+        hashCode = prime * hashCode + ((getConfidenceScore() == null) ? 0 : getConfidenceScore().hashCode());
         return hashCode;
     }
 

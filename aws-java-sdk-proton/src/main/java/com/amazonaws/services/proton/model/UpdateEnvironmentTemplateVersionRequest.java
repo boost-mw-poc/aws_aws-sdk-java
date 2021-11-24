@@ -33,7 +33,7 @@ public class UpdateEnvironmentTemplateVersionRequest extends com.amazonaws.Amazo
     private String description;
     /**
      * <p>
-     * To update a major version of an environment template, include <code>majorVersion</code>.
+     * To update a major version of an environment template, include <code>major Version</code>.
      * </p>
      */
     private String majorVersion;
@@ -98,11 +98,11 @@ public class UpdateEnvironmentTemplateVersionRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * To update a major version of an environment template, include <code>majorVersion</code>.
+     * To update a major version of an environment template, include <code>major Version</code>.
      * </p>
      * 
      * @param majorVersion
-     *        To update a major version of an environment template, include <code>majorVersion</code>.
+     *        To update a major version of an environment template, include <code>major Version</code>.
      */
 
     public void setMajorVersion(String majorVersion) {
@@ -111,10 +111,10 @@ public class UpdateEnvironmentTemplateVersionRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * To update a major version of an environment template, include <code>majorVersion</code>.
+     * To update a major version of an environment template, include <code>major Version</code>.
      * </p>
      * 
-     * @return To update a major version of an environment template, include <code>majorVersion</code>.
+     * @return To update a major version of an environment template, include <code>major Version</code>.
      */
 
     public String getMajorVersion() {
@@ -123,11 +123,11 @@ public class UpdateEnvironmentTemplateVersionRequest extends com.amazonaws.Amazo
 
     /**
      * <p>
-     * To update a major version of an environment template, include <code>majorVersion</code>.
+     * To update a major version of an environment template, include <code>major Version</code>.
      * </p>
      * 
      * @param majorVersion
-     *        To update a major version of an environment template, include <code>majorVersion</code>.
+     *        To update a major version of an environment template, include <code>major Version</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -25,18 +25,18 @@ public class CreateServiceTemplateVersionResult extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The service template version summary of detail data that's returned by AWS Proton.
+     * The service template version summary of detail data that's returned by Proton.
      * </p>
      */
     private ServiceTemplateVersion serviceTemplateVersion;
 
     /**
      * <p>
-     * The service template version summary of detail data that's returned by AWS Proton.
+     * The service template version summary of detail data that's returned by Proton.
      * </p>
      * 
      * @param serviceTemplateVersion
-     *        The service template version summary of detail data that's returned by AWS Proton.
+     *        The service template version summary of detail data that's returned by Proton.
      */
 
     public void setServiceTemplateVersion(ServiceTemplateVersion serviceTemplateVersion) {
@@ -45,10 +45,10 @@ public class CreateServiceTemplateVersionResult extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The service template version summary of detail data that's returned by AWS Proton.
+     * The service template version summary of detail data that's returned by Proton.
      * </p>
      * 
-     * @return The service template version summary of detail data that's returned by AWS Proton.
+     * @return The service template version summary of detail data that's returned by Proton.
      */
 
     public ServiceTemplateVersion getServiceTemplateVersion() {
@@ -57,11 +57,11 @@ public class CreateServiceTemplateVersionResult extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The service template version summary of detail data that's returned by AWS Proton.
+     * The service template version summary of detail data that's returned by Proton.
      * </p>
      * 
      * @param serviceTemplateVersion
-     *        The service template version summary of detail data that's returned by AWS Proton.
+     *        The service template version summary of detail data that's returned by Proton.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -41,6 +41,8 @@ public class TableMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CreationTime").timestampFormat("unixTimestamp").build();
     private static final MarshallingInfo<java.util.Date> LASTUPDATEDTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LastUpdatedTime").timestampFormat("unixTimestamp").build();
+    private static final MarshallingInfo<StructuredPojo> MAGNETICSTOREWRITEPROPERTIES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MagneticStoreWriteProperties").build();
 
     private static final TableMarshaller instance = new TableMarshaller();
 
@@ -65,6 +67,7 @@ public class TableMarshaller {
             protocolMarshaller.marshall(table.getRetentionProperties(), RETENTIONPROPERTIES_BINDING);
             protocolMarshaller.marshall(table.getCreationTime(), CREATIONTIME_BINDING);
             protocolMarshaller.marshall(table.getLastUpdatedTime(), LASTUPDATEDTIME_BINDING);
+            protocolMarshaller.marshall(table.getMagneticStoreWriteProperties(), MAGNETICSTOREWRITEPROPERTIES_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

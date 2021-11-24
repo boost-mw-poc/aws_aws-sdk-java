@@ -27,18 +27,19 @@ public class CancelQueryRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The id of the query that needs to be cancelled. <code>QueryID</code> is returned as part of QueryResult.
+     * The ID of the query that needs to be cancelled. <code>QueryID</code> is returned as part of the query result.
      * </p>
      */
     private String queryId;
 
     /**
      * <p>
-     * The id of the query that needs to be cancelled. <code>QueryID</code> is returned as part of QueryResult.
+     * The ID of the query that needs to be cancelled. <code>QueryID</code> is returned as part of the query result.
      * </p>
      * 
      * @param queryId
-     *        The id of the query that needs to be cancelled. <code>QueryID</code> is returned as part of QueryResult.
+     *        The ID of the query that needs to be cancelled. <code>QueryID</code> is returned as part of the query
+     *        result.
      */
 
     public void setQueryId(String queryId) {
@@ -47,10 +48,11 @@ public class CancelQueryRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The id of the query that needs to be cancelled. <code>QueryID</code> is returned as part of QueryResult.
+     * The ID of the query that needs to be cancelled. <code>QueryID</code> is returned as part of the query result.
      * </p>
      * 
-     * @return The id of the query that needs to be cancelled. <code>QueryID</code> is returned as part of QueryResult.
+     * @return The ID of the query that needs to be cancelled. <code>QueryID</code> is returned as part of the query
+     *         result.
      */
 
     public String getQueryId() {
@@ -59,11 +61,12 @@ public class CancelQueryRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The id of the query that needs to be cancelled. <code>QueryID</code> is returned as part of QueryResult.
+     * The ID of the query that needs to be cancelled. <code>QueryID</code> is returned as part of the query result.
      * </p>
      * 
      * @param queryId
-     *        The id of the query that needs to be cancelled. <code>QueryID</code> is returned as part of QueryResult.
+     *        The ID of the query that needs to be cancelled. <code>QueryID</code> is returned as part of the query
+     *        result.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

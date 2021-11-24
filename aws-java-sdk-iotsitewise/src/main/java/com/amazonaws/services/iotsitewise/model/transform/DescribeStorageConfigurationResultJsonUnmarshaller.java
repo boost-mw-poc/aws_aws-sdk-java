@@ -56,6 +56,10 @@ public class DescribeStorageConfigurationResultJsonUnmarshaller implements Unmar
                     context.nextToken();
                     describeStorageConfigurationResult.setMultiLayerStorage(MultiLayerStorageJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("disassociatedDataStorage", targetDepth)) {
+                    context.nextToken();
+                    describeStorageConfigurationResult.setDisassociatedDataStorage(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("configurationStatus", targetDepth)) {
                     context.nextToken();
                     describeStorageConfigurationResult.setConfigurationStatus(ConfigurationStatusJsonUnmarshaller.getInstance().unmarshall(context));

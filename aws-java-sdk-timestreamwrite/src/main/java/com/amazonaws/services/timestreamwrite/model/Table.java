@@ -83,6 +83,12 @@ public class Table implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private java.util.Date lastUpdatedTime;
+    /**
+     * <p>
+     * Contains properties to set on the table when enabling magnetic store writes.
+     * </p>
+     */
+    private MagneticStoreWriteProperties magneticStoreWriteProperties;
 
     /**
      * <p>
@@ -476,6 +482,46 @@ public class Table implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Contains properties to set on the table when enabling magnetic store writes.
+     * </p>
+     * 
+     * @param magneticStoreWriteProperties
+     *        Contains properties to set on the table when enabling magnetic store writes.
+     */
+
+    public void setMagneticStoreWriteProperties(MagneticStoreWriteProperties magneticStoreWriteProperties) {
+        this.magneticStoreWriteProperties = magneticStoreWriteProperties;
+    }
+
+    /**
+     * <p>
+     * Contains properties to set on the table when enabling magnetic store writes.
+     * </p>
+     * 
+     * @return Contains properties to set on the table when enabling magnetic store writes.
+     */
+
+    public MagneticStoreWriteProperties getMagneticStoreWriteProperties() {
+        return this.magneticStoreWriteProperties;
+    }
+
+    /**
+     * <p>
+     * Contains properties to set on the table when enabling magnetic store writes.
+     * </p>
+     * 
+     * @param magneticStoreWriteProperties
+     *        Contains properties to set on the table when enabling magnetic store writes.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Table withMagneticStoreWriteProperties(MagneticStoreWriteProperties magneticStoreWriteProperties) {
+        setMagneticStoreWriteProperties(magneticStoreWriteProperties);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -500,7 +546,9 @@ public class Table implements Serializable, Cloneable, StructuredPojo {
         if (getCreationTime() != null)
             sb.append("CreationTime: ").append(getCreationTime()).append(",");
         if (getLastUpdatedTime() != null)
-            sb.append("LastUpdatedTime: ").append(getLastUpdatedTime());
+            sb.append("LastUpdatedTime: ").append(getLastUpdatedTime()).append(",");
+        if (getMagneticStoreWriteProperties() != null)
+            sb.append("MagneticStoreWriteProperties: ").append(getMagneticStoreWriteProperties());
         sb.append("}");
         return sb.toString();
     }
@@ -543,6 +591,10 @@ public class Table implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getLastUpdatedTime() != null && other.getLastUpdatedTime().equals(this.getLastUpdatedTime()) == false)
             return false;
+        if (other.getMagneticStoreWriteProperties() == null ^ this.getMagneticStoreWriteProperties() == null)
+            return false;
+        if (other.getMagneticStoreWriteProperties() != null && other.getMagneticStoreWriteProperties().equals(this.getMagneticStoreWriteProperties()) == false)
+            return false;
         return true;
     }
 
@@ -558,6 +610,7 @@ public class Table implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getRetentionProperties() == null) ? 0 : getRetentionProperties().hashCode());
         hashCode = prime * hashCode + ((getCreationTime() == null) ? 0 : getCreationTime().hashCode());
         hashCode = prime * hashCode + ((getLastUpdatedTime() == null) ? 0 : getLastUpdatedTime().hashCode());
+        hashCode = prime * hashCode + ((getMagneticStoreWriteProperties() == null) ? 0 : getMagneticStoreWriteProperties().hashCode());
         return hashCode;
     }
 

@@ -140,8 +140,8 @@ public class CreateEventSourceMappingRequest extends com.amazonaws.AmazonWebServ
     private Integer batchSize;
     /**
      * <p>
-     * (Streams and Amazon SQS) A object that defines the filter criteria used to determine whether Lambda should
-     * process an event. For more information, see <a
+     * (Streams and Amazon SQS) An object that defines the filter criteria that determine whether Lambda should process
+     * an event. For more information, see <a
      * href="https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html">Lambda event filtering</a>.
      * </p>
      */
@@ -236,7 +236,7 @@ public class CreateEventSourceMappingRequest extends com.amazonaws.AmazonWebServ
     private SelfManagedEventSource selfManagedEventSource;
     /**
      * <p>
-     * (Streams only) A list of current response type enums applied to the event source mapping.
+     * (Streams and Amazon SQS) A list of current response type enums applied to the event source mapping.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> functionResponseTypes;
@@ -943,13 +943,13 @@ public class CreateEventSourceMappingRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * (Streams and Amazon SQS) A object that defines the filter criteria used to determine whether Lambda should
-     * process an event. For more information, see <a
+     * (Streams and Amazon SQS) An object that defines the filter criteria that determine whether Lambda should process
+     * an event. For more information, see <a
      * href="https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html">Lambda event filtering</a>.
      * </p>
      * 
      * @param filterCriteria
-     *        (Streams and Amazon SQS) A object that defines the filter criteria used to determine whether Lambda should
+     *        (Streams and Amazon SQS) An object that defines the filter criteria that determine whether Lambda should
      *        process an event. For more information, see <a
      *        href="https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html">Lambda event
      *        filtering</a>.
@@ -961,13 +961,13 @@ public class CreateEventSourceMappingRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * (Streams and Amazon SQS) A object that defines the filter criteria used to determine whether Lambda should
-     * process an event. For more information, see <a
+     * (Streams and Amazon SQS) An object that defines the filter criteria that determine whether Lambda should process
+     * an event. For more information, see <a
      * href="https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html">Lambda event filtering</a>.
      * </p>
      * 
-     * @return (Streams and Amazon SQS) A object that defines the filter criteria used to determine whether Lambda
-     *         should process an event. For more information, see <a
+     * @return (Streams and Amazon SQS) An object that defines the filter criteria that determine whether Lambda should
+     *         process an event. For more information, see <a
      *         href="https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html">Lambda event
      *         filtering</a>.
      */
@@ -978,13 +978,13 @@ public class CreateEventSourceMappingRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * (Streams and Amazon SQS) A object that defines the filter criteria used to determine whether Lambda should
-     * process an event. For more information, see <a
+     * (Streams and Amazon SQS) An object that defines the filter criteria that determine whether Lambda should process
+     * an event. For more information, see <a
      * href="https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html">Lambda event filtering</a>.
      * </p>
      * 
      * @param filterCriteria
-     *        (Streams and Amazon SQS) A object that defines the filter criteria used to determine whether Lambda should
+     *        (Streams and Amazon SQS) An object that defines the filter criteria that determine whether Lambda should
      *        process an event. For more information, see <a
      *        href="https://docs.aws.amazon.com/lambda/latest/dg/invocation-eventfiltering.html">Lambda event
      *        filtering</a>.
@@ -1727,10 +1727,10 @@ public class CreateEventSourceMappingRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * (Streams only) A list of current response type enums applied to the event source mapping.
+     * (Streams and Amazon SQS) A list of current response type enums applied to the event source mapping.
      * </p>
      * 
-     * @return (Streams only) A list of current response type enums applied to the event source mapping.
+     * @return (Streams and Amazon SQS) A list of current response type enums applied to the event source mapping.
      * @see FunctionResponseType
      */
 
@@ -1743,11 +1743,11 @@ public class CreateEventSourceMappingRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * (Streams only) A list of current response type enums applied to the event source mapping.
+     * (Streams and Amazon SQS) A list of current response type enums applied to the event source mapping.
      * </p>
      * 
      * @param functionResponseTypes
-     *        (Streams only) A list of current response type enums applied to the event source mapping.
+     *        (Streams and Amazon SQS) A list of current response type enums applied to the event source mapping.
      * @see FunctionResponseType
      */
 
@@ -1762,7 +1762,7 @@ public class CreateEventSourceMappingRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * (Streams only) A list of current response type enums applied to the event source mapping.
+     * (Streams and Amazon SQS) A list of current response type enums applied to the event source mapping.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -1771,7 +1771,7 @@ public class CreateEventSourceMappingRequest extends com.amazonaws.AmazonWebServ
      * </p>
      * 
      * @param functionResponseTypes
-     *        (Streams only) A list of current response type enums applied to the event source mapping.
+     *        (Streams and Amazon SQS) A list of current response type enums applied to the event source mapping.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see FunctionResponseType
      */
@@ -1788,11 +1788,11 @@ public class CreateEventSourceMappingRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * (Streams only) A list of current response type enums applied to the event source mapping.
+     * (Streams and Amazon SQS) A list of current response type enums applied to the event source mapping.
      * </p>
      * 
      * @param functionResponseTypes
-     *        (Streams only) A list of current response type enums applied to the event source mapping.
+     *        (Streams and Amazon SQS) A list of current response type enums applied to the event source mapping.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see FunctionResponseType
      */
@@ -1804,11 +1804,11 @@ public class CreateEventSourceMappingRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * (Streams only) A list of current response type enums applied to the event source mapping.
+     * (Streams and Amazon SQS) A list of current response type enums applied to the event source mapping.
      * </p>
      * 
      * @param functionResponseTypes
-     *        (Streams only) A list of current response type enums applied to the event source mapping.
+     *        (Streams and Amazon SQS) A list of current response type enums applied to the event source mapping.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see FunctionResponseType
      */

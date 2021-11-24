@@ -39,7 +39,7 @@ public class UpdateServiceTemplateVersionRequest extends com.amazonaws.AmazonWeb
     private String description;
     /**
      * <p>
-     * To update a major version of a service template, include <code>majorVersion</code>.
+     * To update a major version of a service template, include <code>major Version</code>.
      * </p>
      */
     private String majorVersion;
@@ -175,11 +175,11 @@ public class UpdateServiceTemplateVersionRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * To update a major version of a service template, include <code>majorVersion</code>.
+     * To update a major version of a service template, include <code>major Version</code>.
      * </p>
      * 
      * @param majorVersion
-     *        To update a major version of a service template, include <code>majorVersion</code>.
+     *        To update a major version of a service template, include <code>major Version</code>.
      */
 
     public void setMajorVersion(String majorVersion) {
@@ -188,10 +188,10 @@ public class UpdateServiceTemplateVersionRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * To update a major version of a service template, include <code>majorVersion</code>.
+     * To update a major version of a service template, include <code>major Version</code>.
      * </p>
      * 
-     * @return To update a major version of a service template, include <code>majorVersion</code>.
+     * @return To update a major version of a service template, include <code>major Version</code>.
      */
 
     public String getMajorVersion() {
@@ -200,11 +200,11 @@ public class UpdateServiceTemplateVersionRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * To update a major version of a service template, include <code>majorVersion</code>.
+     * To update a major version of a service template, include <code>major Version</code>.
      * </p>
      * 
      * @param majorVersion
-     *        To update a major version of a service template, include <code>majorVersion</code>.
+     *        To update a major version of a service template, include <code>major Version</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

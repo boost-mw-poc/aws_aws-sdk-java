@@ -41,6 +41,32 @@ public class AbstractAmazonTimestreamQueryAsync extends AbstractAmazonTimestream
     }
 
     @Override
+    public java.util.concurrent.Future<CreateScheduledQueryResult> createScheduledQueryAsync(CreateScheduledQueryRequest request) {
+
+        return createScheduledQueryAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateScheduledQueryResult> createScheduledQueryAsync(CreateScheduledQueryRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateScheduledQueryRequest, CreateScheduledQueryResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteScheduledQueryResult> deleteScheduledQueryAsync(DeleteScheduledQueryRequest request) {
+
+        return deleteScheduledQueryAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteScheduledQueryResult> deleteScheduledQueryAsync(DeleteScheduledQueryRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteScheduledQueryRequest, DeleteScheduledQueryResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeEndpointsResult> describeEndpointsAsync(DescribeEndpointsRequest request) {
 
         return describeEndpointsAsync(request, null);
@@ -54,6 +80,71 @@ public class AbstractAmazonTimestreamQueryAsync extends AbstractAmazonTimestream
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeScheduledQueryResult> describeScheduledQueryAsync(DescribeScheduledQueryRequest request) {
+
+        return describeScheduledQueryAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeScheduledQueryResult> describeScheduledQueryAsync(DescribeScheduledQueryRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeScheduledQueryRequest, DescribeScheduledQueryResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ExecuteScheduledQueryResult> executeScheduledQueryAsync(ExecuteScheduledQueryRequest request) {
+
+        return executeScheduledQueryAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ExecuteScheduledQueryResult> executeScheduledQueryAsync(ExecuteScheduledQueryRequest request,
+            com.amazonaws.handlers.AsyncHandler<ExecuteScheduledQueryRequest, ExecuteScheduledQueryResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListScheduledQueriesResult> listScheduledQueriesAsync(ListScheduledQueriesRequest request) {
+
+        return listScheduledQueriesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListScheduledQueriesResult> listScheduledQueriesAsync(ListScheduledQueriesRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListScheduledQueriesRequest, ListScheduledQueriesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListTagsForResourceResult> listTagsForResourceAsync(ListTagsForResourceRequest request) {
+
+        return listTagsForResourceAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListTagsForResourceResult> listTagsForResourceAsync(ListTagsForResourceRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListTagsForResourceRequest, ListTagsForResourceResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<PrepareQueryResult> prepareQueryAsync(PrepareQueryRequest request) {
+
+        return prepareQueryAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<PrepareQueryResult> prepareQueryAsync(PrepareQueryRequest request,
+            com.amazonaws.handlers.AsyncHandler<PrepareQueryRequest, PrepareQueryResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<QueryResult> queryAsync(QueryRequest request) {
 
         return queryAsync(request, null);
@@ -61,6 +152,45 @@ public class AbstractAmazonTimestreamQueryAsync extends AbstractAmazonTimestream
 
     @Override
     public java.util.concurrent.Future<QueryResult> queryAsync(QueryRequest request, com.amazonaws.handlers.AsyncHandler<QueryRequest, QueryResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<TagResourceResult> tagResourceAsync(TagResourceRequest request) {
+
+        return tagResourceAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<TagResourceResult> tagResourceAsync(TagResourceRequest request,
+            com.amazonaws.handlers.AsyncHandler<TagResourceRequest, TagResourceResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UntagResourceResult> untagResourceAsync(UntagResourceRequest request) {
+
+        return untagResourceAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UntagResourceResult> untagResourceAsync(UntagResourceRequest request,
+            com.amazonaws.handlers.AsyncHandler<UntagResourceRequest, UntagResourceResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateScheduledQueryResult> updateScheduledQueryAsync(UpdateScheduledQueryRequest request) {
+
+        return updateScheduledQueryAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateScheduledQueryResult> updateScheduledQueryAsync(UpdateScheduledQueryRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateScheduledQueryRequest, UpdateScheduledQueryResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

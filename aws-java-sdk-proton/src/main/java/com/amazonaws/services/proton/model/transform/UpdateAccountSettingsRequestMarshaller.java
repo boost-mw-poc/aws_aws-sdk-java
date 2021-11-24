@@ -27,6 +27,8 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class UpdateAccountSettingsRequestMarshaller {
 
+    private static final MarshallingInfo<StructuredPojo> PIPELINEPROVISIONINGREPOSITORY_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("pipelineProvisioningRepository").build();
     private static final MarshallingInfo<String> PIPELINESERVICEROLEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("pipelineServiceRoleArn").build();
 
@@ -46,6 +48,7 @@ public class UpdateAccountSettingsRequestMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(updateAccountSettingsRequest.getPipelineProvisioningRepository(), PIPELINEPROVISIONINGREPOSITORY_BINDING);
             protocolMarshaller.marshall(updateAccountSettingsRequest.getPipelineServiceRoleArn(), PIPELINESERVICEROLEARN_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

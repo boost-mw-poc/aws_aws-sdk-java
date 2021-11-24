@@ -28,10 +28,10 @@ public class ListEnvironmentTemplateVersionsRequest extends com.amazonaws.Amazon
     /**
      * <p>
      * To view a list of minor of versions under a major version of an environment template, include
-     * <code>majorVersion</code>.
+     * <code>major Version</code>.
      * </p>
      * <p>
-     * To view a list of major versions of an environment template, <i>exclude</i> <code>majorVersion</code>.
+     * To view a list of major versions of an environment template, <i>exclude</i> <code>major Version</code>.
      * </p>
      */
     private String majorVersion;
@@ -58,17 +58,17 @@ public class ListEnvironmentTemplateVersionsRequest extends com.amazonaws.Amazon
     /**
      * <p>
      * To view a list of minor of versions under a major version of an environment template, include
-     * <code>majorVersion</code>.
+     * <code>major Version</code>.
      * </p>
      * <p>
-     * To view a list of major versions of an environment template, <i>exclude</i> <code>majorVersion</code>.
+     * To view a list of major versions of an environment template, <i>exclude</i> <code>major Version</code>.
      * </p>
      * 
      * @param majorVersion
      *        To view a list of minor of versions under a major version of an environment template, include
-     *        <code>majorVersion</code>.</p>
+     *        <code>major Version</code>.</p>
      *        <p>
-     *        To view a list of major versions of an environment template, <i>exclude</i> <code>majorVersion</code>.
+     *        To view a list of major versions of an environment template, <i>exclude</i> <code>major Version</code>.
      */
 
     public void setMajorVersion(String majorVersion) {
@@ -78,16 +78,16 @@ public class ListEnvironmentTemplateVersionsRequest extends com.amazonaws.Amazon
     /**
      * <p>
      * To view a list of minor of versions under a major version of an environment template, include
-     * <code>majorVersion</code>.
+     * <code>major Version</code>.
      * </p>
      * <p>
-     * To view a list of major versions of an environment template, <i>exclude</i> <code>majorVersion</code>.
+     * To view a list of major versions of an environment template, <i>exclude</i> <code>major Version</code>.
      * </p>
      * 
      * @return To view a list of minor of versions under a major version of an environment template, include
-     *         <code>majorVersion</code>.</p>
+     *         <code>major Version</code>.</p>
      *         <p>
-     *         To view a list of major versions of an environment template, <i>exclude</i> <code>majorVersion</code>.
+     *         To view a list of major versions of an environment template, <i>exclude</i> <code>major Version</code>.
      */
 
     public String getMajorVersion() {
@@ -97,17 +97,17 @@ public class ListEnvironmentTemplateVersionsRequest extends com.amazonaws.Amazon
     /**
      * <p>
      * To view a list of minor of versions under a major version of an environment template, include
-     * <code>majorVersion</code>.
+     * <code>major Version</code>.
      * </p>
      * <p>
-     * To view a list of major versions of an environment template, <i>exclude</i> <code>majorVersion</code>.
+     * To view a list of major versions of an environment template, <i>exclude</i> <code>major Version</code>.
      * </p>
      * 
      * @param majorVersion
      *        To view a list of minor of versions under a major version of an environment template, include
-     *        <code>majorVersion</code>.</p>
+     *        <code>major Version</code>.</p>
      *        <p>
-     *        To view a list of major versions of an environment template, <i>exclude</i> <code>majorVersion</code>.
+     *        To view a list of major versions of an environment template, <i>exclude</i> <code>major Version</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

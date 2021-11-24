@@ -69,6 +69,11 @@ public class AbstractAWSProton implements AWSProton {
     }
 
     @Override
+    public CreateRepositoryResult createRepository(CreateRepositoryRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateServiceResult createService(CreateServiceRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -80,6 +85,11 @@ public class AbstractAWSProton implements AWSProton {
 
     @Override
     public CreateServiceTemplateVersionResult createServiceTemplateVersion(CreateServiceTemplateVersionRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public CreateTemplateSyncConfigResult createTemplateSyncConfig(CreateTemplateSyncConfigRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -104,6 +114,11 @@ public class AbstractAWSProton implements AWSProton {
     }
 
     @Override
+    public DeleteRepositoryResult deleteRepository(DeleteRepositoryRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DeleteServiceResult deleteService(DeleteServiceRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -115,6 +130,11 @@ public class AbstractAWSProton implements AWSProton {
 
     @Override
     public DeleteServiceTemplateVersionResult deleteServiceTemplateVersion(DeleteServiceTemplateVersionRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteTemplateSyncConfigResult deleteTemplateSyncConfig(DeleteTemplateSyncConfigRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -144,6 +164,16 @@ public class AbstractAWSProton implements AWSProton {
     }
 
     @Override
+    public GetRepositoryResult getRepository(GetRepositoryRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetRepositorySyncStatusResult getRepositorySyncStatus(GetRepositorySyncStatusRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetServiceResult getService(GetServiceRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -164,7 +194,27 @@ public class AbstractAWSProton implements AWSProton {
     }
 
     @Override
+    public GetTemplateSyncConfigResult getTemplateSyncConfig(GetTemplateSyncConfigRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetTemplateSyncStatusResult getTemplateSyncStatus(GetTemplateSyncStatusRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListEnvironmentAccountConnectionsResult listEnvironmentAccountConnections(ListEnvironmentAccountConnectionsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListEnvironmentOutputsResult listEnvironmentOutputs(ListEnvironmentOutputsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListEnvironmentProvisionedResourcesResult listEnvironmentProvisionedResources(ListEnvironmentProvisionedResourcesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -184,7 +234,37 @@ public class AbstractAWSProton implements AWSProton {
     }
 
     @Override
+    public ListRepositoriesResult listRepositories(ListRepositoriesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListRepositorySyncDefinitionsResult listRepositorySyncDefinitions(ListRepositorySyncDefinitionsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListServiceInstanceOutputsResult listServiceInstanceOutputs(ListServiceInstanceOutputsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListServiceInstanceProvisionedResourcesResult listServiceInstanceProvisionedResources(ListServiceInstanceProvisionedResourcesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public ListServiceInstancesResult listServiceInstances(ListServiceInstancesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListServicePipelineOutputsResult listServicePipelineOutputs(ListServicePipelineOutputsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListServicePipelineProvisionedResourcesResult listServicePipelineProvisionedResources(ListServicePipelineProvisionedResourcesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -205,6 +285,11 @@ public class AbstractAWSProton implements AWSProton {
 
     @Override
     public ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public NotifyResourceDeploymentStatusChangeResult notifyResourceDeploymentStatusChange(NotifyResourceDeploymentStatusChangeRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -270,6 +355,11 @@ public class AbstractAWSProton implements AWSProton {
 
     @Override
     public UpdateServiceTemplateVersionResult updateServiceTemplateVersion(UpdateServiceTemplateVersionRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateTemplateSyncConfigResult updateTemplateSyncConfig(UpdateTemplateSyncConfigRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

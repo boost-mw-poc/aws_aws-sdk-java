@@ -26,6 +26,7 @@ import com.amazonaws.services.timestreamwrite.model.*;
  * {@link com.amazonaws.services.timestreamwrite.AbstractAmazonTimestreamWrite} instead.
  * </p>
  * <p>
+ * <fullname>Amazon Timestream Write</fullname>
  * <p>
  * Amazon Timestream is a fast, scalable, fully managed time series database service that makes it easy to store and
  * analyze trillions of time series data points per day. With Timestream, you can easily store and analyze IoT sensor
@@ -53,10 +54,11 @@ public interface AmazonTimestreamWrite {
      * <p>
      * Creates a new Timestream database. If the KMS key is not specified, the database will be encrypted with a
      * Timestream managed KMS key located in your account. Refer to <a
-     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#aws-managed-cmk">AWS managed KMS
-     * keys</a> for more info. Service quotas apply. For more information, see <a
-     * href="https://docs.aws.amazon.com/timestream/latest/developerguide/ts-limits.html">Access Management</a> in the
-     * Timestream Developer Guide.
+     * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#aws-managed-cmk">Amazon Web Services
+     * managed KMS keys</a> for more info. <a
+     * href="https://docs.aws.amazon.com/timestream/latest/developerguide/ts-limits.html">Service quotas apply</a>. See
+     * <a href="https://docs.aws.amazon.com/timestream/latest/developerguide/code-samples.create-db.html">code
+     * sample</a> for details.
      * </p>
      * 
      * @param createDatabaseRequest
@@ -75,6 +77,8 @@ public interface AmazonTimestreamWrite {
      *         The requested endpoint was invalid.
      * @throws InternalServerException
      *         Timestream was unable to fully process this request because of an internal server error.
+     * @throws InvalidEndpointException
+     *         The requested endpoint was invalid.
      * @sample AmazonTimestreamWrite.CreateDatabase
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/timestream-write-2018-11-01/CreateDatabase"
      *      target="_top">AWS API Documentation</a>
@@ -83,12 +87,13 @@ public interface AmazonTimestreamWrite {
 
     /**
      * <p>
-     * The CreateTable operation adds a new table to an existing database in your account. In an AWS account, table
-     * names must be at least unique within each Region if they are in the same database. You may have identical table
-     * names in the same Region if the tables are in seperate databases. While creating the table, you must specify the
-     * table name, database name, and the retention properties. Service quotas apply. For more information, see <a
-     * href="https://docs.aws.amazon.com/timestream/latest/developerguide/ts-limits.html">Access Management</a> in the
-     * Timestream Developer Guide.
+     * The CreateTable operation adds a new table to an existing database in your account. In an Amazon Web Services
+     * account, table names must be at least unique within each Region if they are in the same database. You may have
+     * identical table names in the same Region if the tables are in separate databases. While creating the table, you
+     * must specify the table name, database name, and the retention properties. <a
+     * href="https://docs.aws.amazon.com/timestream/latest/developerguide/ts-limits.html">Service quotas apply</a>. See
+     * <a href="https://docs.aws.amazon.com/timestream/latest/developerguide/code-samples.create-table.html">code
+     * sample</a> for details.
      * </p>
      * 
      * @param createTableRequest
@@ -106,6 +111,8 @@ public interface AmazonTimestreamWrite {
      *         Instance quota of resource exceeded for this account.
      * @throws ThrottlingException
      *         Too many requests were made by a user exceeding service quotas. The request was throttled.
+     * @throws InvalidEndpointException
+     *         The requested endpoint was invalid.
      * @throws InternalServerException
      *         Timestream was unable to fully process this request because of an internal server error.
      * @throws InvalidEndpointException
@@ -121,12 +128,18 @@ public interface AmazonTimestreamWrite {
      * Deletes a given Timestream database. <i>This is an irreversible operation. After a database is deleted, the time
      * series data from its tables cannot be recovered.</i>
      * </p>
+     * <note>
      * <p>
      * All tables in the database must be deleted first, or a ValidationException error will be thrown.
      * </p>
      * <p>
      * Due to the nature of distributed retries, the operation can return either success or a ResourceNotFoundException.
      * Clients should consider them equivalent.
+     * </p>
+     * </note>
+     * <p>
+     * See <a href="https://docs.aws.amazon.com/timestream/latest/developerguide/code-samples.delete-db.html">code
+     * sample</a> for details.
      * </p>
      * 
      * @param deleteDatabaseRequest
@@ -155,9 +168,15 @@ public interface AmazonTimestreamWrite {
      * Deletes a given Timestream table. This is an irreversible operation. After a Timestream database table is
      * deleted, the time series data stored in the table cannot be recovered.
      * </p>
+     * <note>
      * <p>
      * Due to the nature of distributed retries, the operation can return either success or a ResourceNotFoundException.
      * Clients should consider them equivalent.
+     * </p>
+     * </note>
+     * <p>
+     * See <a href="https://docs.aws.amazon.com/timestream/latest/developerguide/code-samples.delete-table.html">code
+     * sample</a> for details.
      * </p>
      * 
      * @param deleteTableRequest
@@ -184,9 +203,10 @@ public interface AmazonTimestreamWrite {
     /**
      * <p>
      * Returns information about the database, including the database name, time that the database was created, and the
-     * total number of tables found within the database. Service quotas apply. For more information, see <a
-     * href="https://docs.aws.amazon.com/timestream/latest/developerguide/ts-limits.html">Access Management</a> in the
-     * Timestream Developer Guide.
+     * total number of tables found within the database. <a
+     * href="https://docs.aws.amazon.com/timestream/latest/developerguide/ts-limits.html">Service quotas apply</a>. See
+     * <a href="https://docs.aws.amazon.com/timestream/latest/developerguide/code-samples.describe-db.html">code
+     * sample</a> for details.
      * </p>
      * 
      * @param describeDatabaseRequest
@@ -216,10 +236,16 @@ public interface AmazonTimestreamWrite {
      * available through both Write and Query.
      * </p>
      * <p>
-     * Because Timestream’s SDKs are designed to transparently work with the service’s architecture, including the
+     * Because the Timestream SDKs are designed to transparently work with the service’s architecture, including the
      * management and mapping of the service endpoints, <i>it is not recommended that you use this API unless</i>:
      * </p>
      * <ul>
+     * <li>
+     * <p>
+     * You are using <a href="https://docs.aws.amazon.com/timestream/latest/developerguide/VPCEndpoints">VPC endpoints
+     * (Amazon Web Services PrivateLink) with Timestream</a>
+     * </p>
+     * </li>
      * <li>
      * <p>
      * Your application uses a programming language that does not yet have SDK support
@@ -232,9 +258,9 @@ public interface AmazonTimestreamWrite {
      * </li>
      * </ul>
      * <p>
-     * For detailed information on how to use DescribeEndpoints, see <a
-     * href="https://docs.aws.amazon.com/timestream/latest/developerguide/Using-API.endpoint-discovery.html">The
-     * Endpoint Discovery Pattern and REST APIs</a>.
+     * For detailed information on how and when to use and implement DescribeEndpoints, see <a
+     * href="https://docs.aws.amazon.com/timestream/latest/developerguide/Using.API.html#Using-API.endpoint-discovery"
+     * >The Endpoint Discovery Pattern</a>.
      * </p>
      * 
      * @param describeEndpointsRequest
@@ -254,9 +280,10 @@ public interface AmazonTimestreamWrite {
     /**
      * <p>
      * Returns information about the table, including the table name, database name, retention duration of the memory
-     * store and the magnetic store. Service quotas apply. For more information, see <a
-     * href="https://docs.aws.amazon.com/timestream/latest/developerguide/ts-limits.html">Access Management</a> in the
-     * Timestream Developer Guide.
+     * store and the magnetic store. <a
+     * href="https://docs.aws.amazon.com/timestream/latest/developerguide/ts-limits.html">Service quotas apply</a>. See
+     * <a href="https://docs.aws.amazon.com/timestream/latest/developerguide/code-samples.describe-table.html">code
+     * sample</a> for details.
      * </p>
      * 
      * @param describeTableRequest
@@ -282,9 +309,10 @@ public interface AmazonTimestreamWrite {
 
     /**
      * <p>
-     * Returns a list of your Timestream databases. Service quotas apply. For more information, see <a
-     * href="https://docs.aws.amazon.com/timestream/latest/developerguide/ts-limits.html">Access Management</a> in the
-     * Timestream Developer Guide.
+     * Returns a list of your Timestream databases. <a
+     * href="https://docs.aws.amazon.com/timestream/latest/developerguide/ts-limits.html">Service quotas apply</a>. See
+     * <a href="https://docs.aws.amazon.com/timestream/latest/developerguide/code-samples.list-db.html">code sample</a>
+     * for details.
      * </p>
      * 
      * @param listDatabasesRequest
@@ -307,7 +335,9 @@ public interface AmazonTimestreamWrite {
 
     /**
      * <p>
-     * A list of tables, along with the name, status and retention properties of each table.
+     * A list of tables, along with the name, status and retention properties of each table. See <a
+     * href="https://docs.aws.amazon.com/timestream/latest/developerguide/code-samples.list-table.html">code sample</a>
+     * for details.
      * </p>
      * 
      * @param listTablesRequest
@@ -408,6 +438,10 @@ public interface AmazonTimestreamWrite {
      * and the identifier of the new KMS key to be used (<code>KmsKeyId</code>). If there are any concurrent
      * <code>UpdateDatabase</code> requests, first writer wins.
      * </p>
+     * <p>
+     * See <a href="https://docs.aws.amazon.com/timestream/latest/developerguide/code-samples.update-db.html">code
+     * sample</a> for details.
+     * </p>
      * 
      * @param updateDatabaseRequest
      * @return Result of the UpdateDatabase operation returned by the service.
@@ -441,9 +475,8 @@ public interface AmazonTimestreamWrite {
      * retrieve data from the magnetic store to populate the memory store.
      * </p>
      * <p>
-     * Service quotas apply. For more information, see <a
-     * href="https://docs.aws.amazon.com/timestream/latest/developerguide/ts-limits.html">Access Management</a> in the
-     * Timestream Developer Guide.
+     * See <a href="https://docs.aws.amazon.com/timestream/latest/developerguide/code-samples.update-table.html">code
+     * sample</a> for details.
      * </p>
      * 
      * @param updateTableRequest
@@ -476,9 +509,38 @@ public interface AmazonTimestreamWrite {
      * consistency read semantics. This means that when you query data immediately after writing a batch of data into
      * Timestream, the query results might not reflect the results of a recently completed write operation. The results
      * may also include some stale data. If you repeat the query request after a short time, the results should return
-     * the latest data. Service quotas apply. For more information, see <a
-     * href="https://docs.aws.amazon.com/timestream/latest/developerguide/ts-limits.html">Access Management</a> in the
-     * Timestream Developer Guide.
+     * the latest data. <a href="https://docs.aws.amazon.com/timestream/latest/developerguide/ts-limits.html">Service
+     * quotas apply</a>.
+     * </p>
+     * <p>
+     * See <a href="https://docs.aws.amazon.com/timestream/latest/developerguide/code-samples.write.html">code
+     * sample</a> for details.
+     * </p>
+     * <p>
+     * <b>Upserts</b>
+     * </p>
+     * <p>
+     * You can use the <code>Version</code> parameter in a <code>WriteRecords</code> request to update data points.
+     * Timestream tracks a version number with each record. <code>Version</code> defaults to <code>1</code> when not
+     * specified for the record in the request. Timestream will update an existing record’s measure value along with its
+     * <code>Version</code> upon receiving a write request with a higher <code>Version</code> number for that record.
+     * Upon receiving an update request where the measure value is the same as that of the existing record, Timestream
+     * still updates <code>Version</code>, if it is greater than the existing value of <code>Version</code>. You can
+     * update a data point as many times as desired, as long as the value of <code>Version</code> continuously
+     * increases.
+     * </p>
+     * <p>
+     * For example, suppose you write a new record without indicating <code>Version</code> in the request. Timestream
+     * will store this record, and set <code>Version</code> to <code>1</code>. Now, suppose you try to update this
+     * record with a <code>WriteRecords</code> request of the same record with a different measure value but, like
+     * before, do not provide <code>Version</code>. In this case, Timestream will reject this update with a
+     * <code>RejectedRecordsException</code> since the updated record’s version is not greater than the existing value
+     * of Version. However, if you were to resend the update request with <code>Version</code> set to <code>2</code>,
+     * Timestream would then succeed in updating the record’s value, and the <code>Version</code> would be set to
+     * <code>2</code>. Next, suppose you sent a <code>WriteRecords</code> request with this same record and an identical
+     * measure value, but with <code>Version</code> set to <code>3</code>. In this case, Timestream would only update
+     * <code>Version</code> to <code>3</code>. Any further updates would need to send a version number greater than
+     * <code>3</code>, or the update requests would receive a <code>RejectedRecordsException</code>.
      * </p>
      * 
      * @param writeRecordsRequest
@@ -500,7 +562,26 @@ public interface AmazonTimestreamWrite {
      *         <li>
      *         <p>
      *         Records with duplicate data where there are multiple records with the same dimensions, timestamps, and
-     *         measure names but different measure values.
+     *         measure names but:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         Measure values are different
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Version is not present in the request <i>or</i> the value of version in the new record is equal to or
+     *         lower than the existing value
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         In this case, if Timestream rejects data, the <code>ExistingVersion</code> field in the
+     *         <code>RejectedRecords</code> response will indicate the current record’s version. To force an update, you
+     *         can resend the request with a version for the record set to a value greater than the
+     *         <code>ExistingVersion</code>.
      *         </p>
      *         </li>
      *         <li>
@@ -516,8 +597,8 @@ public interface AmazonTimestreamWrite {
      *         </ul>
      *         <p>
      *         For more information, see <a
-     *         href="https://docs.aws.amazon.com/timestream/latest/developerguide/ts-limits.html">Access Management</a>
-     *         in the Timestream Developer Guide.
+     *         href="https://docs.aws.amazon.com/timestream/latest/developerguide/ts-limits.html">Quotas</a> in the
+     *         Timestream Developer Guide.
      * @throws InvalidEndpointException
      *         The requested endpoint was invalid.
      * @sample AmazonTimestreamWrite.WriteRecords

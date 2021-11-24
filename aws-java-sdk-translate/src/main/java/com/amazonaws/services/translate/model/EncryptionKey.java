@@ -30,24 +30,24 @@ public class EncryptionKey implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of encryption key used by Amazon Translate to encrypt custom terminologies.
+     * The type of encryption key used by Amazon Translate to encrypt this object.
      * </p>
      */
     private String type;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the encryption key being used to encrypt the custom terminology.
+     * The Amazon Resource Name (ARN) of the encryption key being used to encrypt this object.
      * </p>
      */
     private String id;
 
     /**
      * <p>
-     * The type of encryption key used by Amazon Translate to encrypt custom terminologies.
+     * The type of encryption key used by Amazon Translate to encrypt this object.
      * </p>
      * 
      * @param type
-     *        The type of encryption key used by Amazon Translate to encrypt custom terminologies.
+     *        The type of encryption key used by Amazon Translate to encrypt this object.
      * @see EncryptionKeyType
      */
 
@@ -57,10 +57,10 @@ public class EncryptionKey implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of encryption key used by Amazon Translate to encrypt custom terminologies.
+     * The type of encryption key used by Amazon Translate to encrypt this object.
      * </p>
      * 
-     * @return The type of encryption key used by Amazon Translate to encrypt custom terminologies.
+     * @return The type of encryption key used by Amazon Translate to encrypt this object.
      * @see EncryptionKeyType
      */
 
@@ -70,11 +70,11 @@ public class EncryptionKey implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of encryption key used by Amazon Translate to encrypt custom terminologies.
+     * The type of encryption key used by Amazon Translate to encrypt this object.
      * </p>
      * 
      * @param type
-     *        The type of encryption key used by Amazon Translate to encrypt custom terminologies.
+     *        The type of encryption key used by Amazon Translate to encrypt this object.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see EncryptionKeyType
      */
@@ -86,11 +86,11 @@ public class EncryptionKey implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of encryption key used by Amazon Translate to encrypt custom terminologies.
+     * The type of encryption key used by Amazon Translate to encrypt this object.
      * </p>
      * 
      * @param type
-     *        The type of encryption key used by Amazon Translate to encrypt custom terminologies.
+     *        The type of encryption key used by Amazon Translate to encrypt this object.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see EncryptionKeyType
      */
@@ -102,11 +102,11 @@ public class EncryptionKey implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the encryption key being used to encrypt the custom terminology.
+     * The Amazon Resource Name (ARN) of the encryption key being used to encrypt this object.
      * </p>
      * 
      * @param id
-     *        The Amazon Resource Name (ARN) of the encryption key being used to encrypt the custom terminology.
+     *        The Amazon Resource Name (ARN) of the encryption key being used to encrypt this object.
      */
 
     public void setId(String id) {
@@ -115,10 +115,10 @@ public class EncryptionKey implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the encryption key being used to encrypt the custom terminology.
+     * The Amazon Resource Name (ARN) of the encryption key being used to encrypt this object.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the encryption key being used to encrypt the custom terminology.
+     * @return The Amazon Resource Name (ARN) of the encryption key being used to encrypt this object.
      */
 
     public String getId() {
@@ -127,11 +127,11 @@ public class EncryptionKey implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the encryption key being used to encrypt the custom terminology.
+     * The Amazon Resource Name (ARN) of the encryption key being used to encrypt this object.
      * </p>
      * 
      * @param id
-     *        The Amazon Resource Name (ARN) of the encryption key being used to encrypt the custom terminology.
+     *        The Amazon Resource Name (ARN) of the encryption key being used to encrypt this object.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

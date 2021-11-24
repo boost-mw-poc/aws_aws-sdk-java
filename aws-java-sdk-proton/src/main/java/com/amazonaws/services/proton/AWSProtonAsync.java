@@ -26,41 +26,39 @@ import com.amazonaws.services.proton.model.*;
  * </p>
  * <p>
  * <p>
- * This is the AWS Proton Service API Reference. It provides descriptions, syntax and usage examples for each of the <a
+ * This is the Proton Service API Reference. It provides descriptions, syntax and usage examples for each of the <a
  * href="https://docs.aws.amazon.com/proton/latest/APIReference/API_Operations.html">actions</a> and <a
- * href="https://docs.aws.amazon.com/proton/latest/APIReference/API_Types.html">data types</a> for the AWS Proton
- * service.
+ * href="https://docs.aws.amazon.com/proton/latest/APIReference/API_Types.html">data types</a> for the Proton service.
  * </p>
  * <p>
  * The documentation for each action shows the Query API request parameters and the XML response.
  * </p>
  * <p>
- * Alternatively, you can use the AWS CLI to access an API. For more information, see the <a
- * href="https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-welcome.html">AWS Command Line Interface User
- * Guide</a>.
+ * Alternatively, you can use the Amazon Web Services CLI to access an API. For more information, see the <a
+ * href="https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-welcome.html">Amazon Web Services Command Line
+ * Interface User Guide</a>.
  * </p>
  * <p>
- * The AWS Proton service is a two-pronged automation framework. Administrators create service templates to provide
+ * The Proton service is a two-pronged automation framework. Administrators create service templates to provide
  * standardized infrastructure and deployment tooling for serverless and container based applications. Developers, in
  * turn, select from the available service templates to automate their application or service deployments.
  * </p>
  * <p>
- * Because administrators define the infrastructure and tooling that AWS Proton deploys and manages, they need
- * permissions to use all of the listed API operations.
+ * Because administrators define the infrastructure and tooling that Proton deploys and manages, they need permissions
+ * to use all of the listed API operations.
  * </p>
  * <p>
- * When developers select a specific infrastructure and tooling set, AWS Proton deploys their applications. To monitor
- * their applications that are running on AWS Proton, developers need permissions to the service <i>create</i>,
- * <i>list</i>, <i>update</i> and <i>delete</i> API operations and the service instance <i>list</i> and <i>update</i>
- * API operations.
+ * When developers select a specific infrastructure and tooling set, Proton deploys their applications. To monitor their
+ * applications that are running on Proton, developers need permissions to the service <i>create</i>, <i>list</i>,
+ * <i>update</i> and <i>delete</i> API operations and the service instance <i>list</i> and <i>update</i> API operations.
  * </p>
  * <p>
- * To learn more about AWS Proton administration, see the <a
- * href="https://docs.aws.amazon.com/proton/latest/adminguide/Welcome.html">AWS Proton Administrator Guide</a>.
+ * To learn more about Proton administration, see the <a
+ * href="https://docs.aws.amazon.com/proton/latest/adminguide/Welcome.html">Proton Administrator Guide</a>.
  * </p>
  * <p>
- * To learn more about deploying serverless and containerized applications on AWS Proton, see the <a
- * href="https://docs.aws.amazon.com/proton/latest/userguide/Welcome.html">AWS Proton User Guide</a>.
+ * To learn more about deploying serverless and containerized applications on Proton, see the <a
+ * href="https://docs.aws.amazon.com/proton/latest/userguide/Welcome.html">Proton User Guide</a>.
  * </p>
  * <p>
  * <b>Ensuring Idempotency</b>
@@ -85,11 +83,11 @@ import com.amazonaws.services.proton.model.*;
  * <b>Idempotent create APIs with a client token</b>
  * </p>
  * <p>
- * The API actions in this list support idempotency with the use of a <i>client token</i>. The corresponding AWS CLI
- * commands also support idempotency using a client token. A client token is a unique, case-sensitive string of up to 64
- * ASCII characters. To make an idempotent API request using one of these actions, specify a client token in the
- * request. We recommend that you <i>don't</i> reuse the same client token for other API requests. If you don’t provide
- * a client token for these APIs, a default client token is automatically provided by SDKs.
+ * The API actions in this list support idempotency with the use of a <i>client token</i>. The corresponding Amazon Web
+ * Services CLI commands also support idempotency using a client token. A client token is a unique, case-sensitive
+ * string of up to 64 ASCII characters. To make an idempotent API request using one of these actions, specify a client
+ * token in the request. We recommend that you <i>don't</i> reuse the same client token for other API requests. If you
+ * don’t provide a client token for these APIs, a default client token is automatically provided by SDKs.
  * </p>
  * <p>
  * Given a request action that has succeeded:
@@ -254,13 +252,13 @@ public interface AWSProtonAsync extends AWSProton {
     /**
      * <p>
      * In a management account, an environment account connection request is accepted. When the environment account
-     * connection request is accepted, AWS Proton can use the associated IAM role to provision environment
-     * infrastructure resources in the associated environment account.
+     * connection request is accepted, Proton can use the associated IAM role to provision environment infrastructure
+     * resources in the associated environment account.
      * </p>
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-env-account-connections.html">Environment account
-     * connections</a> in the <i>AWS Proton Administrator guide</i>.
+     * connections</a> in the <i>Proton Administrator guide</i>.
      * </p>
      * 
      * @param acceptEnvironmentAccountConnectionRequest
@@ -276,13 +274,13 @@ public interface AWSProtonAsync extends AWSProton {
     /**
      * <p>
      * In a management account, an environment account connection request is accepted. When the environment account
-     * connection request is accepted, AWS Proton can use the associated IAM role to provision environment
-     * infrastructure resources in the associated environment account.
+     * connection request is accepted, Proton can use the associated IAM role to provision environment infrastructure
+     * resources in the associated environment account.
      * </p>
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-env-account-connections.html">Environment account
-     * connections</a> in the <i>AWS Proton Administrator guide</i>.
+     * connections</a> in the <i>Proton Administrator guide</i>.
      * </p>
      * 
      * @param acceptEnvironmentAccountConnectionRequest
@@ -305,7 +303,7 @@ public interface AWSProtonAsync extends AWSProton {
      * Attempts to cancel an environment deployment on an <a>UpdateEnvironment</a> action, if the deployment is
      * <code>IN_PROGRESS</code>. For more information, see <a
      * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-env-update.html">Update an environment</a> in the
-     * <i>AWS Proton Administrator guide</i>.
+     * <i>Proton Administrator guide</i>.
      * </p>
      * <p>
      * The following list includes potential cancellation scenarios.
@@ -343,7 +341,7 @@ public interface AWSProtonAsync extends AWSProton {
      * Attempts to cancel an environment deployment on an <a>UpdateEnvironment</a> action, if the deployment is
      * <code>IN_PROGRESS</code>. For more information, see <a
      * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-env-update.html">Update an environment</a> in the
-     * <i>AWS Proton Administrator guide</i>.
+     * <i>Proton Administrator guide</i>.
      * </p>
      * <p>
      * The following list includes potential cancellation scenarios.
@@ -385,9 +383,9 @@ public interface AWSProtonAsync extends AWSProton {
      * <p>
      * Attempts to cancel a service instance deployment on an <a>UpdateServiceInstance</a> action, if the deployment is
      * <code>IN_PROGRESS</code>. For more information, see <i>Update a service instance</i> in the <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-svc-instance-update.html">AWS Proton Administrator
-     * guide</a> or the <a href="https://docs.aws.amazon.com/proton/latest/userguide/ug-svc-instance-update.html">AWS
-     * Proton User guide</a>.
+     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-svc-instance-update.html">Proton Administrator
+     * guide</a> or the <a href="https://docs.aws.amazon.com/proton/latest/userguide/ug-svc-instance-update.html">Proton
+     * User guide</a>.
      * </p>
      * <p>
      * The following list includes potential cancellation scenarios.
@@ -425,9 +423,9 @@ public interface AWSProtonAsync extends AWSProton {
      * <p>
      * Attempts to cancel a service instance deployment on an <a>UpdateServiceInstance</a> action, if the deployment is
      * <code>IN_PROGRESS</code>. For more information, see <i>Update a service instance</i> in the <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-svc-instance-update.html">AWS Proton Administrator
-     * guide</a> or the <a href="https://docs.aws.amazon.com/proton/latest/userguide/ug-svc-instance-update.html">AWS
-     * Proton User guide</a>.
+     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-svc-instance-update.html">Proton Administrator
+     * guide</a> or the <a href="https://docs.aws.amazon.com/proton/latest/userguide/ug-svc-instance-update.html">Proton
+     * User guide</a>.
      * </p>
      * <p>
      * The following list includes potential cancellation scenarios.
@@ -470,9 +468,9 @@ public interface AWSProtonAsync extends AWSProton {
      * <p>
      * Attempts to cancel a service pipeline deployment on an <a>UpdateServicePipeline</a> action, if the deployment is
      * <code>IN_PROGRESS</code>. For more information, see <i>Update a service pipeline</i> in the <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-svc-pipeline-update.html">AWS Proton Administrator
-     * guide</a> or the <a href="https://docs.aws.amazon.com/proton/latest/userguide/ug-svc-pipeline-update.html">AWS
-     * Proton User guide</a>.
+     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-svc-pipeline-update.html">Proton Administrator
+     * guide</a> or the <a href="https://docs.aws.amazon.com/proton/latest/userguide/ug-svc-pipeline-update.html">Proton
+     * User guide</a>.
      * </p>
      * <p>
      * The following list includes potential cancellation scenarios.
@@ -510,9 +508,9 @@ public interface AWSProtonAsync extends AWSProton {
      * <p>
      * Attempts to cancel a service pipeline deployment on an <a>UpdateServicePipeline</a> action, if the deployment is
      * <code>IN_PROGRESS</code>. For more information, see <i>Update a service pipeline</i> in the <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-svc-pipeline-update.html">AWS Proton Administrator
-     * guide</a> or the <a href="https://docs.aws.amazon.com/proton/latest/userguide/ug-svc-pipeline-update.html">AWS
-     * Proton User guide</a>.
+     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-svc-pipeline-update.html">Proton Administrator
+     * guide</a> or the <a href="https://docs.aws.amazon.com/proton/latest/userguide/ug-svc-pipeline-update.html">Proton
+     * User guide</a>.
      * </p>
      * <p>
      * The following list includes potential cancellation scenarios.
@@ -553,10 +551,29 @@ public interface AWSProtonAsync extends AWSProton {
 
     /**
      * <p>
-     * Deploy a new environment. An AWS Proton environment is created from an environment template that defines
-     * infrastructure and resources that can be shared across services. For more information, see the <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-environments.html">Environments</a> in the <i>AWS
-     * Proton Administrator Guide.</i>
+     * Deploy a new environment. An Proton environment is created from an environment template that defines
+     * infrastructure and resources that can be shared across services.
+     * </p>
+     * <p class="title">
+     * <b>You can provision environments using the following methods:</b>
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Standard provisioning: Proton makes direct calls to provision your resources.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Pull request provisioning: Proton makes pull requests on your repository to provide compiled infrastructure as
+     * code (IaC) files that your IaC engine uses to provision resources.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For more information, see the <a
+     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-environments.html">Environments</a> in the
+     * <i>Proton Administrator Guide.</i>
      * </p>
      * 
      * @param createEnvironmentRequest
@@ -569,10 +586,29 @@ public interface AWSProtonAsync extends AWSProton {
 
     /**
      * <p>
-     * Deploy a new environment. An AWS Proton environment is created from an environment template that defines
-     * infrastructure and resources that can be shared across services. For more information, see the <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-environments.html">Environments</a> in the <i>AWS
-     * Proton Administrator Guide.</i>
+     * Deploy a new environment. An Proton environment is created from an environment template that defines
+     * infrastructure and resources that can be shared across services.
+     * </p>
+     * <p class="title">
+     * <b>You can provision environments using the following methods:</b>
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Standard provisioning: Proton makes direct calls to provision your resources.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Pull request provisioning: Proton makes pull requests on your repository to provide compiled infrastructure as
+     * code (IaC) files that your IaC engine uses to provision resources.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For more information, see the <a
+     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-environments.html">Environments</a> in the
+     * <i>Proton Administrator Guide.</i>
      * </p>
      * 
      * @param createEnvironmentRequest
@@ -597,7 +633,7 @@ public interface AWSProtonAsync extends AWSProton {
      * An environment account connection is a secure bi-directional connection between a <i>management account</i> and
      * an <i>environment account</i> that maintains authorization and permissions. For more information, see <a
      * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-env-account-connections.html">Environment account
-     * connections</a> in the <i>AWS Proton Administrator guide</i>.
+     * connections</a> in the <i>Proton Administrator guide</i>.
      * </p>
      * 
      * @param createEnvironmentAccountConnectionRequest
@@ -619,7 +655,7 @@ public interface AWSProtonAsync extends AWSProton {
      * An environment account connection is a secure bi-directional connection between a <i>management account</i> and
      * an <i>environment account</i> that maintains authorization and permissions. For more information, see <a
      * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-env-account-connections.html">Environment account
-     * connections</a> in the <i>AWS Proton Administrator guide</i>.
+     * connections</a> in the <i>Proton Administrator guide</i>.
      * </p>
      * 
      * @param createEnvironmentAccountConnectionRequest
@@ -639,9 +675,9 @@ public interface AWSProtonAsync extends AWSProton {
 
     /**
      * <p>
-     * Create an environment template for AWS Proton. For more information, see <a
+     * Create an environment template for Proton. For more information, see <a
      * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-templates.html">Environment Templates</a> in the
-     * <i>AWS Proton Administrator Guide</i>.
+     * <i>Proton Administrator Guide</i>.
      * </p>
      * <p>
      * You can create an environment template in one of the two following ways:
@@ -649,18 +685,18 @@ public interface AWSProtonAsync extends AWSProton {
      * <ul>
      * <li>
      * <p>
-     * Register and publish a <i>standard</i> environment template that instructs AWS Proton to deploy and manage
+     * Register and publish a <i>standard</i> environment template that instructs Proton to deploy and manage
      * environment infrastructure.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Register and publish a <i>customer managed</i> environment template that connects AWS Proton to your existing
-     * provisioned infrastructure that you manage. AWS Proton <i>doesn't</i> manage your existing provisioned
+     * Register and publish a <i>customer managed</i> environment template that connects Proton to your existing
+     * provisioned infrastructure that you manage. Proton <i>doesn't</i> manage your existing provisioned
      * infrastructure. To create an environment template for customer provisioned and managed infrastructure, include
      * the <code>provisioning</code> parameter and set the value to <code>CUSTOMER_MANAGED</code>. For more information,
      * see <a href="https://docs.aws.amazon.com/proton/latest/adminguide/template-create.html">Register and publish an
-     * environment template</a> in the <i>AWS Proton Administrator Guide</i>.
+     * environment template</a> in the <i>Proton Administrator Guide</i>.
      * </p>
      * </li>
      * </ul>
@@ -676,9 +712,9 @@ public interface AWSProtonAsync extends AWSProton {
 
     /**
      * <p>
-     * Create an environment template for AWS Proton. For more information, see <a
+     * Create an environment template for Proton. For more information, see <a
      * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-templates.html">Environment Templates</a> in the
-     * <i>AWS Proton Administrator Guide</i>.
+     * <i>Proton Administrator Guide</i>.
      * </p>
      * <p>
      * You can create an environment template in one of the two following ways:
@@ -686,18 +722,18 @@ public interface AWSProtonAsync extends AWSProton {
      * <ul>
      * <li>
      * <p>
-     * Register and publish a <i>standard</i> environment template that instructs AWS Proton to deploy and manage
+     * Register and publish a <i>standard</i> environment template that instructs Proton to deploy and manage
      * environment infrastructure.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Register and publish a <i>customer managed</i> environment template that connects AWS Proton to your existing
-     * provisioned infrastructure that you manage. AWS Proton <i>doesn't</i> manage your existing provisioned
+     * Register and publish a <i>customer managed</i> environment template that connects Proton to your existing
+     * provisioned infrastructure that you manage. Proton <i>doesn't</i> manage your existing provisioned
      * infrastructure. To create an environment template for customer provisioned and managed infrastructure, include
      * the <code>provisioning</code> parameter and set the value to <code>CUSTOMER_MANAGED</code>. For more information,
      * see <a href="https://docs.aws.amazon.com/proton/latest/adminguide/template-create.html">Register and publish an
-     * environment template</a> in the <i>AWS Proton Administrator Guide</i>.
+     * environment template</a> in the <i>Proton Administrator Guide</i>.
      * </p>
      * </li>
      * </ul>
@@ -757,11 +793,50 @@ public interface AWSProtonAsync extends AWSProton {
 
     /**
      * <p>
-     * Create an AWS Proton service. An AWS Proton service is an instantiation of a service template and often includes
-     * several service instances and pipeline. For more information, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-services.html">Services</a> in the <i>AWS Proton
+     * Create and register a link to a repository that can be used with pull request provisioning or template sync
+     * configurations. For more information, see <a
+     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-template-bundles.html">Template bundles</a> and <a
+     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-template-sync-configs.html">Template sync
+     * configurations</a> in the <i>Proton Administrator Guide</i>.
+     * </p>
+     * 
+     * @param createRepositoryRequest
+     * @return A Java Future containing the result of the CreateRepository operation returned by the service.
+     * @sample AWSProtonAsync.CreateRepository
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/proton-2020-07-20/CreateRepository" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<CreateRepositoryResult> createRepositoryAsync(CreateRepositoryRequest createRepositoryRequest);
+
+    /**
+     * <p>
+     * Create and register a link to a repository that can be used with pull request provisioning or template sync
+     * configurations. For more information, see <a
+     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-template-bundles.html">Template bundles</a> and <a
+     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-template-sync-configs.html">Template sync
+     * configurations</a> in the <i>Proton Administrator Guide</i>.
+     * </p>
+     * 
+     * @param createRepositoryRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateRepository operation returned by the service.
+     * @sample AWSProtonAsyncHandler.CreateRepository
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/proton-2020-07-20/CreateRepository" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<CreateRepositoryResult> createRepositoryAsync(CreateRepositoryRequest createRepositoryRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateRepositoryRequest, CreateRepositoryResult> asyncHandler);
+
+    /**
+     * <p>
+     * Create an Proton service. An Proton service is an instantiation of a service template and often includes several
+     * service instances and pipeline. For more information, see <a
+     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-services.html">Services</a> in the <i>Proton
      * Administrator Guide</i> and <a
-     * href="https://docs.aws.amazon.com/proton/latest/userguide/ug-service.html">Services</a> in the <i>AWS Proton User
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/ug-service.html">Services</a> in the <i>Proton User
      * Guide</i>.
      * </p>
      * 
@@ -775,11 +850,11 @@ public interface AWSProtonAsync extends AWSProton {
 
     /**
      * <p>
-     * Create an AWS Proton service. An AWS Proton service is an instantiation of a service template and often includes
-     * several service instances and pipeline. For more information, see <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-services.html">Services</a> in the <i>AWS Proton
+     * Create an Proton service. An Proton service is an instantiation of a service template and often includes several
+     * service instances and pipeline. For more information, see <a
+     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-services.html">Services</a> in the <i>Proton
      * Administrator Guide</i> and <a
-     * href="https://docs.aws.amazon.com/proton/latest/userguide/ug-service.html">Services</a> in the <i>AWS Proton User
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/ug-service.html">Services</a> in the <i>Proton User
      * Guide</i>.
      * </p>
      * 
@@ -799,12 +874,12 @@ public interface AWSProtonAsync extends AWSProton {
     /**
      * <p>
      * Create a service template. The administrator creates a service template to define standardized infrastructure and
-     * an optional CICD service pipeline. Developers, in turn, select the service template from AWS Proton. If the
-     * selected service template includes a service pipeline definition, they provide a link to their source code
-     * repository. AWS Proton then deploys and manages the infrastructure defined by the selected service template. For
-     * more information, see <a
+     * an optional CICD service pipeline. Developers, in turn, select the service template from Proton. If the selected
+     * service template includes a service pipeline definition, they provide a link to their source code repository.
+     * Proton then deploys and manages the infrastructure defined by the selected service template. For more
+     * information, see <a
      * href="https://docs.aws.amazon.com/proton/latest/adminguide/managing-svc-templates.html">Service Templates</a> in
-     * the <i>AWS Proton Administrator Guide</i>.
+     * the <i>Proton Administrator Guide</i>.
      * </p>
      * 
      * @param createServiceTemplateRequest
@@ -818,12 +893,12 @@ public interface AWSProtonAsync extends AWSProton {
     /**
      * <p>
      * Create a service template. The administrator creates a service template to define standardized infrastructure and
-     * an optional CICD service pipeline. Developers, in turn, select the service template from AWS Proton. If the
-     * selected service template includes a service pipeline definition, they provide a link to their source code
-     * repository. AWS Proton then deploys and manages the infrastructure defined by the selected service template. For
-     * more information, see <a
+     * an optional CICD service pipeline. Developers, in turn, select the service template from Proton. If the selected
+     * service template includes a service pipeline definition, they provide a link to their source code repository.
+     * Proton then deploys and manages the infrastructure defined by the selected service template. For more
+     * information, see <a
      * href="https://docs.aws.amazon.com/proton/latest/adminguide/managing-svc-templates.html">Service Templates</a> in
-     * the <i>AWS Proton Administrator Guide</i>.
+     * the <i>Proton Administrator Guide</i>.
      * </p>
      * 
      * @param createServiceTemplateRequest
@@ -842,7 +917,7 @@ public interface AWSProtonAsync extends AWSProton {
     /**
      * <p>
      * Create a new major or minor version of a service template. A major version of a service template is a version
-     * that <i>isn't</i> backwards compatible. A minor version of a service template is a version that's backwards
+     * that <i>isn't</i> backward compatible. A minor version of a service template is a version that's backward
      * compatible within its major version.
      * </p>
      * 
@@ -859,7 +934,7 @@ public interface AWSProtonAsync extends AWSProton {
     /**
      * <p>
      * Create a new major or minor version of a service template. A major version of a service template is a version
-     * that <i>isn't</i> backwards compatible. A minor version of a service template is a version that's backwards
+     * that <i>isn't</i> backward compatible. A minor version of a service template is a version that's backward
      * compatible within its major version.
      * </p>
      * 
@@ -877,6 +952,47 @@ public interface AWSProtonAsync extends AWSProton {
     java.util.concurrent.Future<CreateServiceTemplateVersionResult> createServiceTemplateVersionAsync(
             CreateServiceTemplateVersionRequest createServiceTemplateVersionRequest,
             com.amazonaws.handlers.AsyncHandler<CreateServiceTemplateVersionRequest, CreateServiceTemplateVersionResult> asyncHandler);
+
+    /**
+     * <p>
+     * Set up a template for automated template version creation. When a commit is pushed to your registered <a
+     * href="https://docs.aws.amazon.com/proton/latest/APIReference/API_Repository.html">repository</a>, Proton checks
+     * for changes to your repository template bundles. If it detects a template bundle change, a new minor or major
+     * version of its template is created, if the version doesn’t already exist. For more information, see <a
+     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-template-sync-configs.html">Template sync
+     * configurations</a> in the <i>Proton Administrator Guide</i>.
+     * </p>
+     * 
+     * @param createTemplateSyncConfigRequest
+     * @return A Java Future containing the result of the CreateTemplateSyncConfig operation returned by the service.
+     * @sample AWSProtonAsync.CreateTemplateSyncConfig
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/proton-2020-07-20/CreateTemplateSyncConfig"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateTemplateSyncConfigResult> createTemplateSyncConfigAsync(CreateTemplateSyncConfigRequest createTemplateSyncConfigRequest);
+
+    /**
+     * <p>
+     * Set up a template for automated template version creation. When a commit is pushed to your registered <a
+     * href="https://docs.aws.amazon.com/proton/latest/APIReference/API_Repository.html">repository</a>, Proton checks
+     * for changes to your repository template bundles. If it detects a template bundle change, a new minor or major
+     * version of its template is created, if the version doesn’t already exist. For more information, see <a
+     * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-template-sync-configs.html">Template sync
+     * configurations</a> in the <i>Proton Administrator Guide</i>.
+     * </p>
+     * 
+     * @param createTemplateSyncConfigRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateTemplateSyncConfig operation returned by the service.
+     * @sample AWSProtonAsyncHandler.CreateTemplateSyncConfig
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/proton-2020-07-20/CreateTemplateSyncConfig"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateTemplateSyncConfigResult> createTemplateSyncConfigAsync(CreateTemplateSyncConfigRequest createTemplateSyncConfigRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateTemplateSyncConfigRequest, CreateTemplateSyncConfigResult> asyncHandler);
 
     /**
      * <p>
@@ -914,15 +1030,15 @@ public interface AWSProtonAsync extends AWSProton {
      * In an environment account, delete an environment account connection.
      * </p>
      * <p>
-     * After you delete an environment account connection that’s in use by an AWS Proton environment, AWS Proton
-     * <i>can’t</i> manage the environment infrastructure resources until a new environment account connection is
-     * accepted for the environment account and associated environment. You're responsible for cleaning up provisioned
-     * resources that remain without an environment connection.
+     * After you delete an environment account connection that’s in use by an Proton environment, Proton <i>can’t</i>
+     * manage the environment infrastructure resources until a new environment account connection is accepted for the
+     * environment account and associated environment. You're responsible for cleaning up provisioned resources that
+     * remain without an environment connection.
      * </p>
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-env-account-connections.html">Environment account
-     * connections</a> in the <i>AWS Proton Administrator guide</i>.
+     * connections</a> in the <i>Proton Administrator guide</i>.
      * </p>
      * 
      * @param deleteEnvironmentAccountConnectionRequest
@@ -940,15 +1056,15 @@ public interface AWSProtonAsync extends AWSProton {
      * In an environment account, delete an environment account connection.
      * </p>
      * <p>
-     * After you delete an environment account connection that’s in use by an AWS Proton environment, AWS Proton
-     * <i>can’t</i> manage the environment infrastructure resources until a new environment account connection is
-     * accepted for the environment account and associated environment. You're responsible for cleaning up provisioned
-     * resources that remain without an environment connection.
+     * After you delete an environment account connection that’s in use by an Proton environment, Proton <i>can’t</i>
+     * manage the environment infrastructure resources until a new environment account connection is accepted for the
+     * environment account and associated environment. You're responsible for cleaning up provisioned resources that
+     * remain without an environment connection.
      * </p>
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-env-account-connections.html">Environment account
-     * connections</a> in the <i>AWS Proton Administrator guide</i>.
+     * connections</a> in the <i>Proton Administrator guide</i>.
      * </p>
      * 
      * @param deleteEnvironmentAccountConnectionRequest
@@ -1004,12 +1120,12 @@ public interface AWSProtonAsync extends AWSProton {
      * If no other minor versions of an environment template exist, delete a major version of the environment template
      * if it's not the <code>Recommended</code> version. Delete the <code>Recommended</code> version of the environment
      * template if no other major versions or minor versions of the environment template exist. A major version of an
-     * environment template is a version that's not backwards compatible.
+     * environment template is a version that's not backward compatible.
      * </p>
      * <p>
      * Delete a minor version of an environment template if it <i>isn't</i> the <code>Recommended</code> version. Delete
      * a <code>Recommended</code> minor version of the environment template if no other minor versions of the
-     * environment template exist. A minor version of an environment template is a version that's backwards compatible.
+     * environment template exist. A minor version of an environment template is a version that's backward compatible.
      * </p>
      * 
      * @param deleteEnvironmentTemplateVersionRequest
@@ -1027,12 +1143,12 @@ public interface AWSProtonAsync extends AWSProton {
      * If no other minor versions of an environment template exist, delete a major version of the environment template
      * if it's not the <code>Recommended</code> version. Delete the <code>Recommended</code> version of the environment
      * template if no other major versions or minor versions of the environment template exist. A major version of an
-     * environment template is a version that's not backwards compatible.
+     * environment template is a version that's not backward compatible.
      * </p>
      * <p>
      * Delete a minor version of an environment template if it <i>isn't</i> the <code>Recommended</code> version. Delete
      * a <code>Recommended</code> minor version of the environment template if no other minor versions of the
-     * environment template exist. A minor version of an environment template is a version that's backwards compatible.
+     * environment template exist. A minor version of an environment template is a version that's backward compatible.
      * </p>
      * 
      * @param deleteEnvironmentTemplateVersionRequest
@@ -1049,6 +1165,37 @@ public interface AWSProtonAsync extends AWSProton {
     java.util.concurrent.Future<DeleteEnvironmentTemplateVersionResult> deleteEnvironmentTemplateVersionAsync(
             DeleteEnvironmentTemplateVersionRequest deleteEnvironmentTemplateVersionRequest,
             com.amazonaws.handlers.AsyncHandler<DeleteEnvironmentTemplateVersionRequest, DeleteEnvironmentTemplateVersionResult> asyncHandler);
+
+    /**
+     * <p>
+     * De-register and unlink your repository.
+     * </p>
+     * 
+     * @param deleteRepositoryRequest
+     * @return A Java Future containing the result of the DeleteRepository operation returned by the service.
+     * @sample AWSProtonAsync.DeleteRepository
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/proton-2020-07-20/DeleteRepository" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteRepositoryResult> deleteRepositoryAsync(DeleteRepositoryRequest deleteRepositoryRequest);
+
+    /**
+     * <p>
+     * De-register and unlink your repository.
+     * </p>
+     * 
+     * @param deleteRepositoryRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteRepository operation returned by the service.
+     * @sample AWSProtonAsyncHandler.DeleteRepository
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/proton-2020-07-20/DeleteRepository" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteRepositoryResult> deleteRepositoryAsync(DeleteRepositoryRequest deleteRepositoryRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteRepositoryRequest, DeleteRepositoryResult> asyncHandler);
 
     /**
      * <p>
@@ -1165,7 +1312,38 @@ public interface AWSProtonAsync extends AWSProton {
 
     /**
      * <p>
-     * Get detail data for the AWS Proton pipeline service role.
+     * Delete a template sync configuration.
+     * </p>
+     * 
+     * @param deleteTemplateSyncConfigRequest
+     * @return A Java Future containing the result of the DeleteTemplateSyncConfig operation returned by the service.
+     * @sample AWSProtonAsync.DeleteTemplateSyncConfig
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/proton-2020-07-20/DeleteTemplateSyncConfig"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteTemplateSyncConfigResult> deleteTemplateSyncConfigAsync(DeleteTemplateSyncConfigRequest deleteTemplateSyncConfigRequest);
+
+    /**
+     * <p>
+     * Delete a template sync configuration.
+     * </p>
+     * 
+     * @param deleteTemplateSyncConfigRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteTemplateSyncConfig operation returned by the service.
+     * @sample AWSProtonAsyncHandler.DeleteTemplateSyncConfig
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/proton-2020-07-20/DeleteTemplateSyncConfig"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteTemplateSyncConfigResult> deleteTemplateSyncConfigAsync(DeleteTemplateSyncConfigRequest deleteTemplateSyncConfigRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteTemplateSyncConfigRequest, DeleteTemplateSyncConfigResult> asyncHandler);
+
+    /**
+     * <p>
+     * Get detail data for the Proton pipeline service role.
      * </p>
      * 
      * @param getAccountSettingsRequest
@@ -1178,7 +1356,7 @@ public interface AWSProtonAsync extends AWSProton {
 
     /**
      * <p>
-     * Get detail data for the AWS Proton pipeline service role.
+     * Get detail data for the Proton pipeline service role.
      * </p>
      * 
      * @param getAccountSettingsRequest
@@ -1232,7 +1410,7 @@ public interface AWSProtonAsync extends AWSProton {
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-env-account-connections.html">Environment account
-     * connections</a> in the <i>AWS Proton Administrator guide</i>.
+     * connections</a> in the <i>Proton Administrator guide</i>.
      * </p>
      * 
      * @param getEnvironmentAccountConnectionRequest
@@ -1252,7 +1430,7 @@ public interface AWSProtonAsync extends AWSProton {
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-env-account-connections.html">Environment account
-     * connections</a> in the <i>AWS Proton Administrator guide</i>.
+     * connections</a> in the <i>Proton Administrator guide</i>.
      * </p>
      * 
      * @param getEnvironmentAccountConnectionRequest
@@ -1335,6 +1513,68 @@ public interface AWSProtonAsync extends AWSProton {
     java.util.concurrent.Future<GetEnvironmentTemplateVersionResult> getEnvironmentTemplateVersionAsync(
             GetEnvironmentTemplateVersionRequest getEnvironmentTemplateVersionRequest,
             com.amazonaws.handlers.AsyncHandler<GetEnvironmentTemplateVersionRequest, GetEnvironmentTemplateVersionResult> asyncHandler);
+
+    /**
+     * <p>
+     * Get detail data for a repository.
+     * </p>
+     * 
+     * @param getRepositoryRequest
+     * @return A Java Future containing the result of the GetRepository operation returned by the service.
+     * @sample AWSProtonAsync.GetRepository
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/proton-2020-07-20/GetRepository" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetRepositoryResult> getRepositoryAsync(GetRepositoryRequest getRepositoryRequest);
+
+    /**
+     * <p>
+     * Get detail data for a repository.
+     * </p>
+     * 
+     * @param getRepositoryRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetRepository operation returned by the service.
+     * @sample AWSProtonAsyncHandler.GetRepository
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/proton-2020-07-20/GetRepository" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetRepositoryResult> getRepositoryAsync(GetRepositoryRequest getRepositoryRequest,
+            com.amazonaws.handlers.AsyncHandler<GetRepositoryRequest, GetRepositoryResult> asyncHandler);
+
+    /**
+     * <p>
+     * Get the repository sync status.
+     * </p>
+     * 
+     * @param getRepositorySyncStatusRequest
+     * @return A Java Future containing the result of the GetRepositorySyncStatus operation returned by the service.
+     * @sample AWSProtonAsync.GetRepositorySyncStatus
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/proton-2020-07-20/GetRepositorySyncStatus" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<GetRepositorySyncStatusResult> getRepositorySyncStatusAsync(GetRepositorySyncStatusRequest getRepositorySyncStatusRequest);
+
+    /**
+     * <p>
+     * Get the repository sync status.
+     * </p>
+     * 
+     * @param getRepositorySyncStatusRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetRepositorySyncStatus operation returned by the service.
+     * @sample AWSProtonAsyncHandler.GetRepositorySyncStatus
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/proton-2020-07-20/GetRepositorySyncStatus" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<GetRepositorySyncStatusResult> getRepositorySyncStatusAsync(GetRepositorySyncStatusRequest getRepositorySyncStatusRequest,
+            com.amazonaws.handlers.AsyncHandler<GetRepositorySyncStatusRequest, GetRepositorySyncStatusResult> asyncHandler);
 
     /**
      * <p>
@@ -1466,12 +1706,74 @@ public interface AWSProtonAsync extends AWSProton {
 
     /**
      * <p>
+     * Get detail data for a template sync configuration.
+     * </p>
+     * 
+     * @param getTemplateSyncConfigRequest
+     * @return A Java Future containing the result of the GetTemplateSyncConfig operation returned by the service.
+     * @sample AWSProtonAsync.GetTemplateSyncConfig
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/proton-2020-07-20/GetTemplateSyncConfig" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<GetTemplateSyncConfigResult> getTemplateSyncConfigAsync(GetTemplateSyncConfigRequest getTemplateSyncConfigRequest);
+
+    /**
+     * <p>
+     * Get detail data for a template sync configuration.
+     * </p>
+     * 
+     * @param getTemplateSyncConfigRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetTemplateSyncConfig operation returned by the service.
+     * @sample AWSProtonAsyncHandler.GetTemplateSyncConfig
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/proton-2020-07-20/GetTemplateSyncConfig" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<GetTemplateSyncConfigResult> getTemplateSyncConfigAsync(GetTemplateSyncConfigRequest getTemplateSyncConfigRequest,
+            com.amazonaws.handlers.AsyncHandler<GetTemplateSyncConfigRequest, GetTemplateSyncConfigResult> asyncHandler);
+
+    /**
+     * <p>
+     * Get the status of a template sync.
+     * </p>
+     * 
+     * @param getTemplateSyncStatusRequest
+     * @return A Java Future containing the result of the GetTemplateSyncStatus operation returned by the service.
+     * @sample AWSProtonAsync.GetTemplateSyncStatus
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/proton-2020-07-20/GetTemplateSyncStatus" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<GetTemplateSyncStatusResult> getTemplateSyncStatusAsync(GetTemplateSyncStatusRequest getTemplateSyncStatusRequest);
+
+    /**
+     * <p>
+     * Get the status of a template sync.
+     * </p>
+     * 
+     * @param getTemplateSyncStatusRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetTemplateSyncStatus operation returned by the service.
+     * @sample AWSProtonAsyncHandler.GetTemplateSyncStatus
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/proton-2020-07-20/GetTemplateSyncStatus" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<GetTemplateSyncStatusResult> getTemplateSyncStatusAsync(GetTemplateSyncStatusRequest getTemplateSyncStatusRequest,
+            com.amazonaws.handlers.AsyncHandler<GetTemplateSyncStatusRequest, GetTemplateSyncStatusResult> asyncHandler);
+
+    /**
+     * <p>
      * View a list of environment account connections.
      * </p>
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-env-account-connections.html">Environment account
-     * connections</a> in the <i>AWS Proton Administrator guide</i>.
+     * connections</a> in the <i>Proton Administrator guide</i>.
      * </p>
      * 
      * @param listEnvironmentAccountConnectionsRequest
@@ -1491,7 +1793,7 @@ public interface AWSProtonAsync extends AWSProton {
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-env-account-connections.html">Environment account
-     * connections</a> in the <i>AWS Proton Administrator guide</i>.
+     * connections</a> in the <i>Proton Administrator guide</i>.
      * </p>
      * 
      * @param listEnvironmentAccountConnectionsRequest
@@ -1508,6 +1810,72 @@ public interface AWSProtonAsync extends AWSProton {
     java.util.concurrent.Future<ListEnvironmentAccountConnectionsResult> listEnvironmentAccountConnectionsAsync(
             ListEnvironmentAccountConnectionsRequest listEnvironmentAccountConnectionsRequest,
             com.amazonaws.handlers.AsyncHandler<ListEnvironmentAccountConnectionsRequest, ListEnvironmentAccountConnectionsResult> asyncHandler);
+
+    /**
+     * <p>
+     * List the infrastructure as code outputs for your environment.
+     * </p>
+     * 
+     * @param listEnvironmentOutputsRequest
+     * @return A Java Future containing the result of the ListEnvironmentOutputs operation returned by the service.
+     * @sample AWSProtonAsync.ListEnvironmentOutputs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/proton-2020-07-20/ListEnvironmentOutputs" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListEnvironmentOutputsResult> listEnvironmentOutputsAsync(ListEnvironmentOutputsRequest listEnvironmentOutputsRequest);
+
+    /**
+     * <p>
+     * List the infrastructure as code outputs for your environment.
+     * </p>
+     * 
+     * @param listEnvironmentOutputsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListEnvironmentOutputs operation returned by the service.
+     * @sample AWSProtonAsyncHandler.ListEnvironmentOutputs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/proton-2020-07-20/ListEnvironmentOutputs" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListEnvironmentOutputsResult> listEnvironmentOutputsAsync(ListEnvironmentOutputsRequest listEnvironmentOutputsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListEnvironmentOutputsRequest, ListEnvironmentOutputsResult> asyncHandler);
+
+    /**
+     * <p>
+     * List the provisioned resources for your environment.
+     * </p>
+     * 
+     * @param listEnvironmentProvisionedResourcesRequest
+     * @return A Java Future containing the result of the ListEnvironmentProvisionedResources operation returned by the
+     *         service.
+     * @sample AWSProtonAsync.ListEnvironmentProvisionedResources
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/proton-2020-07-20/ListEnvironmentProvisionedResources"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListEnvironmentProvisionedResourcesResult> listEnvironmentProvisionedResourcesAsync(
+            ListEnvironmentProvisionedResourcesRequest listEnvironmentProvisionedResourcesRequest);
+
+    /**
+     * <p>
+     * List the provisioned resources for your environment.
+     * </p>
+     * 
+     * @param listEnvironmentProvisionedResourcesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListEnvironmentProvisionedResources operation returned by the
+     *         service.
+     * @sample AWSProtonAsyncHandler.ListEnvironmentProvisionedResources
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/proton-2020-07-20/ListEnvironmentProvisionedResources"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListEnvironmentProvisionedResourcesResult> listEnvironmentProvisionedResourcesAsync(
+            ListEnvironmentProvisionedResourcesRequest listEnvironmentProvisionedResourcesRequest,
+            com.amazonaws.handlers.AsyncHandler<ListEnvironmentProvisionedResourcesRequest, ListEnvironmentProvisionedResourcesResult> asyncHandler);
 
     /**
      * <p>
@@ -1608,6 +1976,140 @@ public interface AWSProtonAsync extends AWSProton {
 
     /**
      * <p>
+     * List repositories with detail data.
+     * </p>
+     * 
+     * @param listRepositoriesRequest
+     * @return A Java Future containing the result of the ListRepositories operation returned by the service.
+     * @sample AWSProtonAsync.ListRepositories
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/proton-2020-07-20/ListRepositories" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListRepositoriesResult> listRepositoriesAsync(ListRepositoriesRequest listRepositoriesRequest);
+
+    /**
+     * <p>
+     * List repositories with detail data.
+     * </p>
+     * 
+     * @param listRepositoriesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListRepositories operation returned by the service.
+     * @sample AWSProtonAsyncHandler.ListRepositories
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/proton-2020-07-20/ListRepositories" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListRepositoriesResult> listRepositoriesAsync(ListRepositoriesRequest listRepositoriesRequest,
+            com.amazonaws.handlers.AsyncHandler<ListRepositoriesRequest, ListRepositoriesResult> asyncHandler);
+
+    /**
+     * <p>
+     * List repository sync definitions with detail data.
+     * </p>
+     * 
+     * @param listRepositorySyncDefinitionsRequest
+     * @return A Java Future containing the result of the ListRepositorySyncDefinitions operation returned by the
+     *         service.
+     * @sample AWSProtonAsync.ListRepositorySyncDefinitions
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/proton-2020-07-20/ListRepositorySyncDefinitions"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListRepositorySyncDefinitionsResult> listRepositorySyncDefinitionsAsync(
+            ListRepositorySyncDefinitionsRequest listRepositorySyncDefinitionsRequest);
+
+    /**
+     * <p>
+     * List repository sync definitions with detail data.
+     * </p>
+     * 
+     * @param listRepositorySyncDefinitionsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListRepositorySyncDefinitions operation returned by the
+     *         service.
+     * @sample AWSProtonAsyncHandler.ListRepositorySyncDefinitions
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/proton-2020-07-20/ListRepositorySyncDefinitions"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListRepositorySyncDefinitionsResult> listRepositorySyncDefinitionsAsync(
+            ListRepositorySyncDefinitionsRequest listRepositorySyncDefinitionsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListRepositorySyncDefinitionsRequest, ListRepositorySyncDefinitionsResult> asyncHandler);
+
+    /**
+     * <p>
+     * View a list service instance infrastructure as code outputs with detail data.
+     * </p>
+     * 
+     * @param listServiceInstanceOutputsRequest
+     * @return A Java Future containing the result of the ListServiceInstanceOutputs operation returned by the service.
+     * @sample AWSProtonAsync.ListServiceInstanceOutputs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/proton-2020-07-20/ListServiceInstanceOutputs"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListServiceInstanceOutputsResult> listServiceInstanceOutputsAsync(
+            ListServiceInstanceOutputsRequest listServiceInstanceOutputsRequest);
+
+    /**
+     * <p>
+     * View a list service instance infrastructure as code outputs with detail data.
+     * </p>
+     * 
+     * @param listServiceInstanceOutputsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListServiceInstanceOutputs operation returned by the service.
+     * @sample AWSProtonAsyncHandler.ListServiceInstanceOutputs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/proton-2020-07-20/ListServiceInstanceOutputs"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListServiceInstanceOutputsResult> listServiceInstanceOutputsAsync(
+            ListServiceInstanceOutputsRequest listServiceInstanceOutputsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListServiceInstanceOutputsRequest, ListServiceInstanceOutputsResult> asyncHandler);
+
+    /**
+     * <p>
+     * List provisioned resources for a service instance with details.
+     * </p>
+     * 
+     * @param listServiceInstanceProvisionedResourcesRequest
+     * @return A Java Future containing the result of the ListServiceInstanceProvisionedResources operation returned by
+     *         the service.
+     * @sample AWSProtonAsync.ListServiceInstanceProvisionedResources
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/proton-2020-07-20/ListServiceInstanceProvisionedResources"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListServiceInstanceProvisionedResourcesResult> listServiceInstanceProvisionedResourcesAsync(
+            ListServiceInstanceProvisionedResourcesRequest listServiceInstanceProvisionedResourcesRequest);
+
+    /**
+     * <p>
+     * List provisioned resources for a service instance with details.
+     * </p>
+     * 
+     * @param listServiceInstanceProvisionedResourcesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListServiceInstanceProvisionedResources operation returned by
+     *         the service.
+     * @sample AWSProtonAsyncHandler.ListServiceInstanceProvisionedResources
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/proton-2020-07-20/ListServiceInstanceProvisionedResources"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListServiceInstanceProvisionedResourcesResult> listServiceInstanceProvisionedResourcesAsync(
+            ListServiceInstanceProvisionedResourcesRequest listServiceInstanceProvisionedResourcesRequest,
+            com.amazonaws.handlers.AsyncHandler<ListServiceInstanceProvisionedResourcesRequest, ListServiceInstanceProvisionedResourcesResult> asyncHandler);
+
+    /**
+     * <p>
      * List service instances with summaries of detail data.
      * </p>
      * 
@@ -1636,6 +2138,74 @@ public interface AWSProtonAsync extends AWSProton {
      */
     java.util.concurrent.Future<ListServiceInstancesResult> listServiceInstancesAsync(ListServiceInstancesRequest listServiceInstancesRequest,
             com.amazonaws.handlers.AsyncHandler<ListServiceInstancesRequest, ListServiceInstancesResult> asyncHandler);
+
+    /**
+     * <p>
+     * View a list service pipeline infrastructure as code outputs with detail.
+     * </p>
+     * 
+     * @param listServicePipelineOutputsRequest
+     * @return A Java Future containing the result of the ListServicePipelineOutputs operation returned by the service.
+     * @sample AWSProtonAsync.ListServicePipelineOutputs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/proton-2020-07-20/ListServicePipelineOutputs"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListServicePipelineOutputsResult> listServicePipelineOutputsAsync(
+            ListServicePipelineOutputsRequest listServicePipelineOutputsRequest);
+
+    /**
+     * <p>
+     * View a list service pipeline infrastructure as code outputs with detail.
+     * </p>
+     * 
+     * @param listServicePipelineOutputsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListServicePipelineOutputs operation returned by the service.
+     * @sample AWSProtonAsyncHandler.ListServicePipelineOutputs
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/proton-2020-07-20/ListServicePipelineOutputs"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListServicePipelineOutputsResult> listServicePipelineOutputsAsync(
+            ListServicePipelineOutputsRequest listServicePipelineOutputsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListServicePipelineOutputsRequest, ListServicePipelineOutputsResult> asyncHandler);
+
+    /**
+     * <p>
+     * List provisioned resources for a service and pipeline with details.
+     * </p>
+     * 
+     * @param listServicePipelineProvisionedResourcesRequest
+     * @return A Java Future containing the result of the ListServicePipelineProvisionedResources operation returned by
+     *         the service.
+     * @sample AWSProtonAsync.ListServicePipelineProvisionedResources
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/proton-2020-07-20/ListServicePipelineProvisionedResources"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListServicePipelineProvisionedResourcesResult> listServicePipelineProvisionedResourcesAsync(
+            ListServicePipelineProvisionedResourcesRequest listServicePipelineProvisionedResourcesRequest);
+
+    /**
+     * <p>
+     * List provisioned resources for a service and pipeline with details.
+     * </p>
+     * 
+     * @param listServicePipelineProvisionedResourcesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListServicePipelineProvisionedResources operation returned by
+     *         the service.
+     * @sample AWSProtonAsyncHandler.ListServicePipelineProvisionedResources
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/proton-2020-07-20/ListServicePipelineProvisionedResources"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListServicePipelineProvisionedResourcesResult> listServicePipelineProvisionedResourcesAsync(
+            ListServicePipelineProvisionedResourcesRequest listServicePipelineProvisionedResourcesRequest,
+            com.amazonaws.handlers.AsyncHandler<ListServicePipelineProvisionedResourcesRequest, ListServicePipelineProvisionedResourcesResult> asyncHandler);
 
     /**
      * <p>
@@ -1734,9 +2304,9 @@ public interface AWSProtonAsync extends AWSProton {
 
     /**
      * <p>
-     * List tags for a resource. For more information, see <i>AWS Proton resources and tagging</i> in the <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">AWS Proton Administrator Guide</a> or
-     * <a href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">AWS Proton User Guide</a>.
+     * List tags for a resource. For more information, see <i>Proton resources and tagging</i> in the <a
+     * href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton Administrator Guide</a> or <a
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton User Guide</a>.
      * </p>
      * 
      * @param listTagsForResourceRequest
@@ -1749,9 +2319,9 @@ public interface AWSProtonAsync extends AWSProton {
 
     /**
      * <p>
-     * List tags for a resource. For more information, see <i>AWS Proton resources and tagging</i> in the <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">AWS Proton Administrator Guide</a> or
-     * <a href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">AWS Proton User Guide</a>.
+     * List tags for a resource. For more information, see <i>Proton resources and tagging</i> in the <a
+     * href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton Administrator Guide</a> or <a
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton User Guide</a>.
      * </p>
      * 
      * @param listTagsForResourceRequest
@@ -1769,6 +2339,59 @@ public interface AWSProtonAsync extends AWSProton {
 
     /**
      * <p>
+     * Notify Proton of status changes to a provisioned resource when you use pull request provisioning. For more
+     * information, see <a href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-template-bundles.html">Template
+     * bundles</a>.
+     * </p>
+     * <important>
+     * <p>
+     * Provisioning by pull request is currently in feature preview and is only usable with Terraform based Proton
+     * Templates. To learn more about <a href="https://aws.amazon.com/service-terms">Amazon Web Services Feature Preview
+     * terms</a>, see section 2 on Beta and Previews.
+     * </p>
+     * </important>
+     * 
+     * @param notifyResourceDeploymentStatusChangeRequest
+     * @return A Java Future containing the result of the NotifyResourceDeploymentStatusChange operation returned by the
+     *         service.
+     * @sample AWSProtonAsync.NotifyResourceDeploymentStatusChange
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/proton-2020-07-20/NotifyResourceDeploymentStatusChange"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<NotifyResourceDeploymentStatusChangeResult> notifyResourceDeploymentStatusChangeAsync(
+            NotifyResourceDeploymentStatusChangeRequest notifyResourceDeploymentStatusChangeRequest);
+
+    /**
+     * <p>
+     * Notify Proton of status changes to a provisioned resource when you use pull request provisioning. For more
+     * information, see <a href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-template-bundles.html">Template
+     * bundles</a>.
+     * </p>
+     * <important>
+     * <p>
+     * Provisioning by pull request is currently in feature preview and is only usable with Terraform based Proton
+     * Templates. To learn more about <a href="https://aws.amazon.com/service-terms">Amazon Web Services Feature Preview
+     * terms</a>, see section 2 on Beta and Previews.
+     * </p>
+     * </important>
+     * 
+     * @param notifyResourceDeploymentStatusChangeRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the NotifyResourceDeploymentStatusChange operation returned by the
+     *         service.
+     * @sample AWSProtonAsyncHandler.NotifyResourceDeploymentStatusChange
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/proton-2020-07-20/NotifyResourceDeploymentStatusChange"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<NotifyResourceDeploymentStatusChangeResult> notifyResourceDeploymentStatusChangeAsync(
+            NotifyResourceDeploymentStatusChangeRequest notifyResourceDeploymentStatusChangeRequest,
+            com.amazonaws.handlers.AsyncHandler<NotifyResourceDeploymentStatusChangeRequest, NotifyResourceDeploymentStatusChangeResult> asyncHandler);
+
+    /**
+     * <p>
      * In a management account, reject an environment account connection from another environment account.
      * </p>
      * <p>
@@ -1781,7 +2404,7 @@ public interface AWSProtonAsync extends AWSProton {
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-env-account-connections.html">Environment account
-     * connections</a> in the <i>AWS Proton Administrator guide</i>.
+     * connections</a> in the <i>Proton Administrator guide</i>.
      * </p>
      * 
      * @param rejectEnvironmentAccountConnectionRequest
@@ -1808,7 +2431,7 @@ public interface AWSProtonAsync extends AWSProton {
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-env-account-connections.html">Environment account
-     * connections</a> in the <i>AWS Proton Administrator guide</i>.
+     * connections</a> in the <i>Proton Administrator guide</i>.
      * </p>
      * 
      * @param rejectEnvironmentAccountConnectionRequest
@@ -1828,9 +2451,9 @@ public interface AWSProtonAsync extends AWSProton {
 
     /**
      * <p>
-     * Tag a resource. For more information, see <i>AWS Proton resources and tagging</i> in the <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">AWS Proton Administrator Guide</a> or
-     * <a href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">AWS Proton User Guide</a>.
+     * Tag a resource. For more information, see <i>Proton resources and tagging</i> in the <a
+     * href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton Administrator Guide</a> or <a
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton User Guide</a>.
      * </p>
      * 
      * @param tagResourceRequest
@@ -1843,9 +2466,9 @@ public interface AWSProtonAsync extends AWSProton {
 
     /**
      * <p>
-     * Tag a resource. For more information, see <i>AWS Proton resources and tagging</i> in the <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">AWS Proton Administrator Guide</a> or
-     * <a href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">AWS Proton User Guide</a>.
+     * Tag a resource. For more information, see <i>Proton resources and tagging</i> in the <a
+     * href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton Administrator Guide</a> or <a
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton User Guide</a>.
      * </p>
      * 
      * @param tagResourceRequest
@@ -1863,9 +2486,9 @@ public interface AWSProtonAsync extends AWSProton {
 
     /**
      * <p>
-     * Remove a tag from a resource. For more information, see <i>AWS Proton resources and tagging</i> in the <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">AWS Proton Administrator Guide</a> or
-     * <a href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">AWS Proton User Guide</a>.
+     * Remove a tag from a resource. For more information, see <i>Proton resources and tagging</i> in the <a
+     * href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton Administrator Guide</a> or <a
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton User Guide</a>.
      * </p>
      * 
      * @param untagResourceRequest
@@ -1878,9 +2501,9 @@ public interface AWSProtonAsync extends AWSProton {
 
     /**
      * <p>
-     * Remove a tag from a resource. For more information, see <i>AWS Proton resources and tagging</i> in the <a
-     * href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">AWS Proton Administrator Guide</a> or
-     * <a href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">AWS Proton User Guide</a>.
+     * Remove a tag from a resource. For more information, see <i>Proton resources and tagging</i> in the <a
+     * href="https://docs.aws.amazon.com/proton/latest/adminguide/resources.html">Proton Administrator Guide</a> or <a
+     * href="https://docs.aws.amazon.com/proton/latest/userguide/resources.html">Proton User Guide</a>.
      * </p>
      * 
      * @param untagResourceRequest
@@ -1898,7 +2521,7 @@ public interface AWSProtonAsync extends AWSProton {
 
     /**
      * <p>
-     * Update the AWS Proton pipeline service account settings.
+     * Update the Proton service pipeline role or repository settings.
      * </p>
      * 
      * @param updateAccountSettingsRequest
@@ -1911,7 +2534,7 @@ public interface AWSProtonAsync extends AWSProton {
 
     /**
      * <p>
-     * Update the AWS Proton pipeline service account settings.
+     * Update the Proton service pipeline role or repository settings.
      * </p>
      * 
      * @param updateAccountSettingsRequest
@@ -1933,7 +2556,8 @@ public interface AWSProtonAsync extends AWSProton {
      * </p>
      * <p>
      * If the environment is associated with an environment account connection, <i>don't</i> update or include the
-     * <code>protonServiceRoleArn</code> parameter to update or connect to an environment account connection.
+     * <code>protonServiceRoleArn</code> and <code>provisioningRepository</code> parameter to update or connect to an
+     * environment account connection.
      * </p>
      * <p>
      * You can only update to a new environment account connection if it was created in the same environment account
@@ -1947,6 +2571,15 @@ public interface AWSProtonAsync extends AWSProton {
      * <p>
      * You can update either the <code>environmentAccountConnectionId</code> or <code>protonServiceRoleArn</code>
      * parameter and value. You can’t update both.
+     * </p>
+     * <p>
+     * If the environment was provisioned with pull request provisioning, include the
+     * <code>provisioningRepository</code> parameter and omit the <code>protonServiceRoleArn</code> and
+     * <code>environmentAccountConnectionId</code> parameters.
+     * </p>
+     * <p>
+     * If the environment wasn't provisioned with pull request provisioning, omit the
+     * <code>provisioningRepository</code> parameter.
      * </p>
      * <p>
      * There are four modes for updating an environment as described in the following. The <code>deploymentType</code>
@@ -2011,7 +2644,8 @@ public interface AWSProtonAsync extends AWSProton {
      * </p>
      * <p>
      * If the environment is associated with an environment account connection, <i>don't</i> update or include the
-     * <code>protonServiceRoleArn</code> parameter to update or connect to an environment account connection.
+     * <code>protonServiceRoleArn</code> and <code>provisioningRepository</code> parameter to update or connect to an
+     * environment account connection.
      * </p>
      * <p>
      * You can only update to a new environment account connection if it was created in the same environment account
@@ -2025,6 +2659,15 @@ public interface AWSProtonAsync extends AWSProton {
      * <p>
      * You can update either the <code>environmentAccountConnectionId</code> or <code>protonServiceRoleArn</code>
      * parameter and value. You can’t update both.
+     * </p>
+     * <p>
+     * If the environment was provisioned with pull request provisioning, include the
+     * <code>provisioningRepository</code> parameter and omit the <code>protonServiceRoleArn</code> and
+     * <code>environmentAccountConnectionId</code> parameters.
+     * </p>
+     * <p>
+     * If the environment wasn't provisioned with pull request provisioning, omit the
+     * <code>provisioningRepository</code> parameter.
      * </p>
      * <p>
      * There are four modes for updating an environment as described in the following. The <code>deploymentType</code>
@@ -2095,7 +2738,7 @@ public interface AWSProtonAsync extends AWSProton {
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-env-account-connections.html">Environment account
-     * connections</a> in the <i>AWS Proton Administrator guide</i>.
+     * connections</a> in the <i>Proton Administrator guide</i>.
      * </p>
      * 
      * @param updateEnvironmentAccountConnectionRequest
@@ -2115,7 +2758,7 @@ public interface AWSProtonAsync extends AWSProton {
      * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/proton/latest/adminguide/ag-env-account-connections.html">Environment account
-     * connections</a> in the <i>AWS Proton Administrator guide</i>.
+     * connections</a> in the <i>Proton Administrator guide</i>.
      * </p>
      * 
      * @param updateEnvironmentAccountConnectionRequest
@@ -2575,5 +3218,38 @@ public interface AWSProtonAsync extends AWSProton {
     java.util.concurrent.Future<UpdateServiceTemplateVersionResult> updateServiceTemplateVersionAsync(
             UpdateServiceTemplateVersionRequest updateServiceTemplateVersionRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateServiceTemplateVersionRequest, UpdateServiceTemplateVersionResult> asyncHandler);
+
+    /**
+     * <p>
+     * Update template sync configuration parameters, except for the <code>templateName</code> and
+     * <code>templateType</code>.
+     * </p>
+     * 
+     * @param updateTemplateSyncConfigRequest
+     * @return A Java Future containing the result of the UpdateTemplateSyncConfig operation returned by the service.
+     * @sample AWSProtonAsync.UpdateTemplateSyncConfig
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/proton-2020-07-20/UpdateTemplateSyncConfig"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateTemplateSyncConfigResult> updateTemplateSyncConfigAsync(UpdateTemplateSyncConfigRequest updateTemplateSyncConfigRequest);
+
+    /**
+     * <p>
+     * Update template sync configuration parameters, except for the <code>templateName</code> and
+     * <code>templateType</code>.
+     * </p>
+     * 
+     * @param updateTemplateSyncConfigRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateTemplateSyncConfig operation returned by the service.
+     * @sample AWSProtonAsyncHandler.UpdateTemplateSyncConfig
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/proton-2020-07-20/UpdateTemplateSyncConfig"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateTemplateSyncConfigResult> updateTemplateSyncConfigAsync(UpdateTemplateSyncConfigRequest updateTemplateSyncConfigRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateTemplateSyncConfigRequest, UpdateTemplateSyncConfigResult> asyncHandler);
 
 }

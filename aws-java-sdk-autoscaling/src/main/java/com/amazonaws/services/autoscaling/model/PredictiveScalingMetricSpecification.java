@@ -65,6 +65,12 @@ import javax.annotation.Generated;
  * </p>
  * </li>
  * </ul>
+ * <p>
+ * For information about using customized metrics with predictive scaling, see <a href=
+ * "https://docs.aws.amazon.com/autoscaling/ec2/userguide/predictive-scaling-customized-metric-specification.html"
+ * >Advanced predictive scaling policy configurations using customized metrics</a> in the <i>Amazon EC2 Auto Scaling
+ * User Guide</i>.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/autoscaling-2011-01-01/PredictiveScalingMetricSpecification"
  *      target="_top">AWS API Documentation</a>
@@ -76,35 +82,75 @@ public class PredictiveScalingMetricSpecification implements Serializable, Clone
      * <p>
      * Specifies the target utilization.
      * </p>
+     * <note>
+     * <p>
+     * Some metrics are based on a count instead of a percentage, such as the request count for an Application Load
+     * Balancer or the number of messages in an SQS queue. If the scaling policy specifies one of these metrics, specify
+     * the target utilization as the optimal average request or message count per instance during any one-minute
+     * interval.
+     * </p>
+     * </note>
      */
     private Double targetValue;
     /**
      * <p>
-     * The metric pair specification from which Amazon EC2 Auto Scaling determines the appropriate scaling metric and
-     * load metric to use.
+     * The predefined metric pair specification from which Amazon EC2 Auto Scaling determines the appropriate scaling
+     * metric and load metric to use.
      * </p>
      */
     private PredictiveScalingPredefinedMetricPair predefinedMetricPairSpecification;
     /**
      * <p>
-     * The scaling metric specification.
+     * The predefined scaling metric specification.
      * </p>
      */
     private PredictiveScalingPredefinedScalingMetric predefinedScalingMetricSpecification;
     /**
      * <p>
-     * The load metric specification.
+     * The predefined load metric specification.
      * </p>
      */
     private PredictiveScalingPredefinedLoadMetric predefinedLoadMetricSpecification;
+    /**
+     * <p>
+     * The customized scaling metric specification.
+     * </p>
+     */
+    private PredictiveScalingCustomizedScalingMetric customizedScalingMetricSpecification;
+    /**
+     * <p>
+     * The customized load metric specification.
+     * </p>
+     */
+    private PredictiveScalingCustomizedLoadMetric customizedLoadMetricSpecification;
+    /**
+     * <p>
+     * The customized capacity metric specification.
+     * </p>
+     */
+    private PredictiveScalingCustomizedCapacityMetric customizedCapacityMetricSpecification;
 
     /**
      * <p>
      * Specifies the target utilization.
      * </p>
+     * <note>
+     * <p>
+     * Some metrics are based on a count instead of a percentage, such as the request count for an Application Load
+     * Balancer or the number of messages in an SQS queue. If the scaling policy specifies one of these metrics, specify
+     * the target utilization as the optimal average request or message count per instance during any one-minute
+     * interval.
+     * </p>
+     * </note>
      * 
      * @param targetValue
-     *        Specifies the target utilization.
+     *        Specifies the target utilization.</p> <note>
+     *        <p>
+     *        Some metrics are based on a count instead of a percentage, such as the request count for an Application
+     *        Load Balancer or the number of messages in an SQS queue. If the scaling policy specifies one of these
+     *        metrics, specify the target utilization as the optimal average request or message count per instance
+     *        during any one-minute interval.
+     *        </p>
      */
 
     public void setTargetValue(Double targetValue) {
@@ -115,8 +161,22 @@ public class PredictiveScalingMetricSpecification implements Serializable, Clone
      * <p>
      * Specifies the target utilization.
      * </p>
+     * <note>
+     * <p>
+     * Some metrics are based on a count instead of a percentage, such as the request count for an Application Load
+     * Balancer or the number of messages in an SQS queue. If the scaling policy specifies one of these metrics, specify
+     * the target utilization as the optimal average request or message count per instance during any one-minute
+     * interval.
+     * </p>
+     * </note>
      * 
-     * @return Specifies the target utilization.
+     * @return Specifies the target utilization.</p> <note>
+     *         <p>
+     *         Some metrics are based on a count instead of a percentage, such as the request count for an Application
+     *         Load Balancer or the number of messages in an SQS queue. If the scaling policy specifies one of these
+     *         metrics, specify the target utilization as the optimal average request or message count per instance
+     *         during any one-minute interval.
+     *         </p>
      */
 
     public Double getTargetValue() {
@@ -127,9 +187,23 @@ public class PredictiveScalingMetricSpecification implements Serializable, Clone
      * <p>
      * Specifies the target utilization.
      * </p>
+     * <note>
+     * <p>
+     * Some metrics are based on a count instead of a percentage, such as the request count for an Application Load
+     * Balancer or the number of messages in an SQS queue. If the scaling policy specifies one of these metrics, specify
+     * the target utilization as the optimal average request or message count per instance during any one-minute
+     * interval.
+     * </p>
+     * </note>
      * 
      * @param targetValue
-     *        Specifies the target utilization.
+     *        Specifies the target utilization.</p> <note>
+     *        <p>
+     *        Some metrics are based on a count instead of a percentage, such as the request count for an Application
+     *        Load Balancer or the number of messages in an SQS queue. If the scaling policy specifies one of these
+     *        metrics, specify the target utilization as the optimal average request or message count per instance
+     *        during any one-minute interval.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -140,13 +214,13 @@ public class PredictiveScalingMetricSpecification implements Serializable, Clone
 
     /**
      * <p>
-     * The metric pair specification from which Amazon EC2 Auto Scaling determines the appropriate scaling metric and
-     * load metric to use.
+     * The predefined metric pair specification from which Amazon EC2 Auto Scaling determines the appropriate scaling
+     * metric and load metric to use.
      * </p>
      * 
      * @param predefinedMetricPairSpecification
-     *        The metric pair specification from which Amazon EC2 Auto Scaling determines the appropriate scaling metric
-     *        and load metric to use.
+     *        The predefined metric pair specification from which Amazon EC2 Auto Scaling determines the appropriate
+     *        scaling metric and load metric to use.
      */
 
     public void setPredefinedMetricPairSpecification(PredictiveScalingPredefinedMetricPair predefinedMetricPairSpecification) {
@@ -155,12 +229,12 @@ public class PredictiveScalingMetricSpecification implements Serializable, Clone
 
     /**
      * <p>
-     * The metric pair specification from which Amazon EC2 Auto Scaling determines the appropriate scaling metric and
-     * load metric to use.
+     * The predefined metric pair specification from which Amazon EC2 Auto Scaling determines the appropriate scaling
+     * metric and load metric to use.
      * </p>
      * 
-     * @return The metric pair specification from which Amazon EC2 Auto Scaling determines the appropriate scaling
-     *         metric and load metric to use.
+     * @return The predefined metric pair specification from which Amazon EC2 Auto Scaling determines the appropriate
+     *         scaling metric and load metric to use.
      */
 
     public PredictiveScalingPredefinedMetricPair getPredefinedMetricPairSpecification() {
@@ -169,13 +243,13 @@ public class PredictiveScalingMetricSpecification implements Serializable, Clone
 
     /**
      * <p>
-     * The metric pair specification from which Amazon EC2 Auto Scaling determines the appropriate scaling metric and
-     * load metric to use.
+     * The predefined metric pair specification from which Amazon EC2 Auto Scaling determines the appropriate scaling
+     * metric and load metric to use.
      * </p>
      * 
      * @param predefinedMetricPairSpecification
-     *        The metric pair specification from which Amazon EC2 Auto Scaling determines the appropriate scaling metric
-     *        and load metric to use.
+     *        The predefined metric pair specification from which Amazon EC2 Auto Scaling determines the appropriate
+     *        scaling metric and load metric to use.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -186,11 +260,11 @@ public class PredictiveScalingMetricSpecification implements Serializable, Clone
 
     /**
      * <p>
-     * The scaling metric specification.
+     * The predefined scaling metric specification.
      * </p>
      * 
      * @param predefinedScalingMetricSpecification
-     *        The scaling metric specification.
+     *        The predefined scaling metric specification.
      */
 
     public void setPredefinedScalingMetricSpecification(PredictiveScalingPredefinedScalingMetric predefinedScalingMetricSpecification) {
@@ -199,10 +273,10 @@ public class PredictiveScalingMetricSpecification implements Serializable, Clone
 
     /**
      * <p>
-     * The scaling metric specification.
+     * The predefined scaling metric specification.
      * </p>
      * 
-     * @return The scaling metric specification.
+     * @return The predefined scaling metric specification.
      */
 
     public PredictiveScalingPredefinedScalingMetric getPredefinedScalingMetricSpecification() {
@@ -211,11 +285,11 @@ public class PredictiveScalingMetricSpecification implements Serializable, Clone
 
     /**
      * <p>
-     * The scaling metric specification.
+     * The predefined scaling metric specification.
      * </p>
      * 
      * @param predefinedScalingMetricSpecification
-     *        The scaling metric specification.
+     *        The predefined scaling metric specification.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -227,11 +301,11 @@ public class PredictiveScalingMetricSpecification implements Serializable, Clone
 
     /**
      * <p>
-     * The load metric specification.
+     * The predefined load metric specification.
      * </p>
      * 
      * @param predefinedLoadMetricSpecification
-     *        The load metric specification.
+     *        The predefined load metric specification.
      */
 
     public void setPredefinedLoadMetricSpecification(PredictiveScalingPredefinedLoadMetric predefinedLoadMetricSpecification) {
@@ -240,10 +314,10 @@ public class PredictiveScalingMetricSpecification implements Serializable, Clone
 
     /**
      * <p>
-     * The load metric specification.
+     * The predefined load metric specification.
      * </p>
      * 
-     * @return The load metric specification.
+     * @return The predefined load metric specification.
      */
 
     public PredictiveScalingPredefinedLoadMetric getPredefinedLoadMetricSpecification() {
@@ -252,16 +326,138 @@ public class PredictiveScalingMetricSpecification implements Serializable, Clone
 
     /**
      * <p>
-     * The load metric specification.
+     * The predefined load metric specification.
      * </p>
      * 
      * @param predefinedLoadMetricSpecification
-     *        The load metric specification.
+     *        The predefined load metric specification.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public PredictiveScalingMetricSpecification withPredefinedLoadMetricSpecification(PredictiveScalingPredefinedLoadMetric predefinedLoadMetricSpecification) {
         setPredefinedLoadMetricSpecification(predefinedLoadMetricSpecification);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The customized scaling metric specification.
+     * </p>
+     * 
+     * @param customizedScalingMetricSpecification
+     *        The customized scaling metric specification.
+     */
+
+    public void setCustomizedScalingMetricSpecification(PredictiveScalingCustomizedScalingMetric customizedScalingMetricSpecification) {
+        this.customizedScalingMetricSpecification = customizedScalingMetricSpecification;
+    }
+
+    /**
+     * <p>
+     * The customized scaling metric specification.
+     * </p>
+     * 
+     * @return The customized scaling metric specification.
+     */
+
+    public PredictiveScalingCustomizedScalingMetric getCustomizedScalingMetricSpecification() {
+        return this.customizedScalingMetricSpecification;
+    }
+
+    /**
+     * <p>
+     * The customized scaling metric specification.
+     * </p>
+     * 
+     * @param customizedScalingMetricSpecification
+     *        The customized scaling metric specification.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PredictiveScalingMetricSpecification withCustomizedScalingMetricSpecification(
+            PredictiveScalingCustomizedScalingMetric customizedScalingMetricSpecification) {
+        setCustomizedScalingMetricSpecification(customizedScalingMetricSpecification);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The customized load metric specification.
+     * </p>
+     * 
+     * @param customizedLoadMetricSpecification
+     *        The customized load metric specification.
+     */
+
+    public void setCustomizedLoadMetricSpecification(PredictiveScalingCustomizedLoadMetric customizedLoadMetricSpecification) {
+        this.customizedLoadMetricSpecification = customizedLoadMetricSpecification;
+    }
+
+    /**
+     * <p>
+     * The customized load metric specification.
+     * </p>
+     * 
+     * @return The customized load metric specification.
+     */
+
+    public PredictiveScalingCustomizedLoadMetric getCustomizedLoadMetricSpecification() {
+        return this.customizedLoadMetricSpecification;
+    }
+
+    /**
+     * <p>
+     * The customized load metric specification.
+     * </p>
+     * 
+     * @param customizedLoadMetricSpecification
+     *        The customized load metric specification.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PredictiveScalingMetricSpecification withCustomizedLoadMetricSpecification(PredictiveScalingCustomizedLoadMetric customizedLoadMetricSpecification) {
+        setCustomizedLoadMetricSpecification(customizedLoadMetricSpecification);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The customized capacity metric specification.
+     * </p>
+     * 
+     * @param customizedCapacityMetricSpecification
+     *        The customized capacity metric specification.
+     */
+
+    public void setCustomizedCapacityMetricSpecification(PredictiveScalingCustomizedCapacityMetric customizedCapacityMetricSpecification) {
+        this.customizedCapacityMetricSpecification = customizedCapacityMetricSpecification;
+    }
+
+    /**
+     * <p>
+     * The customized capacity metric specification.
+     * </p>
+     * 
+     * @return The customized capacity metric specification.
+     */
+
+    public PredictiveScalingCustomizedCapacityMetric getCustomizedCapacityMetricSpecification() {
+        return this.customizedCapacityMetricSpecification;
+    }
+
+    /**
+     * <p>
+     * The customized capacity metric specification.
+     * </p>
+     * 
+     * @param customizedCapacityMetricSpecification
+     *        The customized capacity metric specification.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PredictiveScalingMetricSpecification withCustomizedCapacityMetricSpecification(
+            PredictiveScalingCustomizedCapacityMetric customizedCapacityMetricSpecification) {
+        setCustomizedCapacityMetricSpecification(customizedCapacityMetricSpecification);
         return this;
     }
 
@@ -284,7 +480,13 @@ public class PredictiveScalingMetricSpecification implements Serializable, Clone
         if (getPredefinedScalingMetricSpecification() != null)
             sb.append("PredefinedScalingMetricSpecification: ").append(getPredefinedScalingMetricSpecification()).append(",");
         if (getPredefinedLoadMetricSpecification() != null)
-            sb.append("PredefinedLoadMetricSpecification: ").append(getPredefinedLoadMetricSpecification());
+            sb.append("PredefinedLoadMetricSpecification: ").append(getPredefinedLoadMetricSpecification()).append(",");
+        if (getCustomizedScalingMetricSpecification() != null)
+            sb.append("CustomizedScalingMetricSpecification: ").append(getCustomizedScalingMetricSpecification()).append(",");
+        if (getCustomizedLoadMetricSpecification() != null)
+            sb.append("CustomizedLoadMetricSpecification: ").append(getCustomizedLoadMetricSpecification()).append(",");
+        if (getCustomizedCapacityMetricSpecification() != null)
+            sb.append("CustomizedCapacityMetricSpecification: ").append(getCustomizedCapacityMetricSpecification());
         sb.append("}");
         return sb.toString();
     }
@@ -318,6 +520,21 @@ public class PredictiveScalingMetricSpecification implements Serializable, Clone
         if (other.getPredefinedLoadMetricSpecification() != null
                 && other.getPredefinedLoadMetricSpecification().equals(this.getPredefinedLoadMetricSpecification()) == false)
             return false;
+        if (other.getCustomizedScalingMetricSpecification() == null ^ this.getCustomizedScalingMetricSpecification() == null)
+            return false;
+        if (other.getCustomizedScalingMetricSpecification() != null
+                && other.getCustomizedScalingMetricSpecification().equals(this.getCustomizedScalingMetricSpecification()) == false)
+            return false;
+        if (other.getCustomizedLoadMetricSpecification() == null ^ this.getCustomizedLoadMetricSpecification() == null)
+            return false;
+        if (other.getCustomizedLoadMetricSpecification() != null
+                && other.getCustomizedLoadMetricSpecification().equals(this.getCustomizedLoadMetricSpecification()) == false)
+            return false;
+        if (other.getCustomizedCapacityMetricSpecification() == null ^ this.getCustomizedCapacityMetricSpecification() == null)
+            return false;
+        if (other.getCustomizedCapacityMetricSpecification() != null
+                && other.getCustomizedCapacityMetricSpecification().equals(this.getCustomizedCapacityMetricSpecification()) == false)
+            return false;
         return true;
     }
 
@@ -330,6 +547,9 @@ public class PredictiveScalingMetricSpecification implements Serializable, Clone
         hashCode = prime * hashCode + ((getPredefinedMetricPairSpecification() == null) ? 0 : getPredefinedMetricPairSpecification().hashCode());
         hashCode = prime * hashCode + ((getPredefinedScalingMetricSpecification() == null) ? 0 : getPredefinedScalingMetricSpecification().hashCode());
         hashCode = prime * hashCode + ((getPredefinedLoadMetricSpecification() == null) ? 0 : getPredefinedLoadMetricSpecification().hashCode());
+        hashCode = prime * hashCode + ((getCustomizedScalingMetricSpecification() == null) ? 0 : getCustomizedScalingMetricSpecification().hashCode());
+        hashCode = prime * hashCode + ((getCustomizedLoadMetricSpecification() == null) ? 0 : getCustomizedLoadMetricSpecification().hashCode());
+        hashCode = prime * hashCode + ((getCustomizedCapacityMetricSpecification() == null) ? 0 : getCustomizedCapacityMetricSpecification().hashCode());
         return hashCode;
     }
 

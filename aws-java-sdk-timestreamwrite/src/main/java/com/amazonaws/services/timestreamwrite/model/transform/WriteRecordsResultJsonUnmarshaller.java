@@ -20,6 +20,7 @@ import com.amazonaws.services.timestreamwrite.model.*;
 import com.amazonaws.transform.SimpleTypeJsonUnmarshallers.*;
 import com.amazonaws.transform.*;
 
+import com.fasterxml.jackson.core.JsonToken;
 import static com.fasterxml.jackson.core.JsonToken.*;
 
 /**
@@ -30,6 +31,35 @@ public class WriteRecordsResultJsonUnmarshaller implements Unmarshaller<WriteRec
 
     public WriteRecordsResult unmarshall(JsonUnmarshallerContext context) throws Exception {
         WriteRecordsResult writeRecordsResult = new WriteRecordsResult();
+
+        int originalDepth = context.getCurrentDepth();
+        String currentParentElement = context.getCurrentParentElement();
+        int targetDepth = originalDepth + 1;
+
+        JsonToken token = context.getCurrentToken();
+        if (token == null)
+            token = context.nextToken();
+        if (token == VALUE_NULL) {
+            return writeRecordsResult;
+        }
+
+        while (true) {
+            if (token == null)
+                break;
+
+            if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("RecordsIngested", targetDepth)) {
+                    context.nextToken();
+                    writeRecordsResult.setRecordsIngested(RecordsIngestedJsonUnmarshaller.getInstance().unmarshall(context));
+                }
+            } else if (token == END_ARRAY || token == END_OBJECT) {
+                if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
+                    if (context.getCurrentDepth() <= originalDepth)
+                        break;
+                }
+            }
+            token = context.nextToken();
+        }
 
         return writeRecordsResult;
     }

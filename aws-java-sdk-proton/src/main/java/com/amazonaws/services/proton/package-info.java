@@ -13,41 +13,39 @@
 
 /**
  * <p>
- * This is the AWS Proton Service API Reference. It provides descriptions, syntax and usage examples for each of the <a
+ * This is the Proton Service API Reference. It provides descriptions, syntax and usage examples for each of the <a
  * href="https://docs.aws.amazon.com/proton/latest/APIReference/API_Operations.html">actions</a> and <a
- * href="https://docs.aws.amazon.com/proton/latest/APIReference/API_Types.html">data types</a> for the AWS Proton
- * service.
+ * href="https://docs.aws.amazon.com/proton/latest/APIReference/API_Types.html">data types</a> for the Proton service.
  * </p>
  * <p>
  * The documentation for each action shows the Query API request parameters and the XML response.
  * </p>
  * <p>
- * Alternatively, you can use the AWS CLI to access an API. For more information, see the <a
- * href="https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-welcome.html">AWS Command Line Interface User
- * Guide</a>.
+ * Alternatively, you can use the Amazon Web Services CLI to access an API. For more information, see the <a
+ * href="https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-welcome.html">Amazon Web Services Command Line
+ * Interface User Guide</a>.
  * </p>
  * <p>
- * The AWS Proton service is a two-pronged automation framework. Administrators create service templates to provide
+ * The Proton service is a two-pronged automation framework. Administrators create service templates to provide
  * standardized infrastructure and deployment tooling for serverless and container based applications. Developers, in
  * turn, select from the available service templates to automate their application or service deployments.
  * </p>
  * <p>
- * Because administrators define the infrastructure and tooling that AWS Proton deploys and manages, they need
- * permissions to use all of the listed API operations.
+ * Because administrators define the infrastructure and tooling that Proton deploys and manages, they need permissions
+ * to use all of the listed API operations.
  * </p>
  * <p>
- * When developers select a specific infrastructure and tooling set, AWS Proton deploys their applications. To monitor
- * their applications that are running on AWS Proton, developers need permissions to the service <i>create</i>,
- * <i>list</i>, <i>update</i> and <i>delete</i> API operations and the service instance <i>list</i> and <i>update</i>
- * API operations.
+ * When developers select a specific infrastructure and tooling set, Proton deploys their applications. To monitor their
+ * applications that are running on Proton, developers need permissions to the service <i>create</i>, <i>list</i>,
+ * <i>update</i> and <i>delete</i> API operations and the service instance <i>list</i> and <i>update</i> API operations.
  * </p>
  * <p>
- * To learn more about AWS Proton administration, see the <a
- * href="https://docs.aws.amazon.com/proton/latest/adminguide/Welcome.html">AWS Proton Administrator Guide</a>.
+ * To learn more about Proton administration, see the <a
+ * href="https://docs.aws.amazon.com/proton/latest/adminguide/Welcome.html">Proton Administrator Guide</a>.
  * </p>
  * <p>
- * To learn more about deploying serverless and containerized applications on AWS Proton, see the <a
- * href="https://docs.aws.amazon.com/proton/latest/userguide/Welcome.html">AWS Proton User Guide</a>.
+ * To learn more about deploying serverless and containerized applications on Proton, see the <a
+ * href="https://docs.aws.amazon.com/proton/latest/userguide/Welcome.html">Proton User Guide</a>.
  * </p>
  * <p>
  * <b>Ensuring Idempotency</b>
@@ -72,11 +70,11 @@
  * <b>Idempotent create APIs with a client token</b>
  * </p>
  * <p>
- * The API actions in this list support idempotency with the use of a <i>client token</i>. The corresponding AWS CLI
- * commands also support idempotency using a client token. A client token is a unique, case-sensitive string of up to 64
- * ASCII characters. To make an idempotent API request using one of these actions, specify a client token in the
- * request. We recommend that you <i>don't</i> reuse the same client token for other API requests. If you don’t provide
- * a client token for these APIs, a default client token is automatically provided by SDKs.
+ * The API actions in this list support idempotency with the use of a <i>client token</i>. The corresponding Amazon Web
+ * Services CLI commands also support idempotency using a client token. A client token is a unique, case-sensitive
+ * string of up to 64 ASCII characters. To make an idempotent API request using one of these actions, specify a client
+ * token in the request. We recommend that you <i>don't</i> reuse the same client token for other API requests. If you
+ * don’t provide a client token for these APIs, a default client token is automatically provided by SDKs.
  * </p>
  * <p>
  * Given a request action that has succeeded:

@@ -33,12 +33,62 @@ public class AbstractAmazonTimestreamQuery implements AmazonTimestreamQuery {
     }
 
     @Override
+    public CreateScheduledQueryResult createScheduledQuery(CreateScheduledQueryRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteScheduledQueryResult deleteScheduledQuery(DeleteScheduledQueryRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DescribeEndpointsResult describeEndpoints(DescribeEndpointsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
     @Override
+    public DescribeScheduledQueryResult describeScheduledQuery(DescribeScheduledQueryRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ExecuteScheduledQueryResult executeScheduledQuery(ExecuteScheduledQueryRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListScheduledQueriesResult listScheduledQueries(ListScheduledQueriesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListTagsForResourceResult listTagsForResource(ListTagsForResourceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public PrepareQueryResult prepareQuery(PrepareQueryRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public QueryResult query(QueryRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public TagResourceResult tagResource(TagResourceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UntagResourceResult untagResource(UntagResourceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateScheduledQueryResult updateScheduledQuery(UpdateScheduledQueryRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

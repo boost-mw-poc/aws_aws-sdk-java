@@ -76,6 +76,41 @@ public interface AWSIoTSiteWiseAsync extends AWSIoTSiteWise {
 
     /**
      * <p>
+     * Associates a time series (data stream) with an asset property.
+     * </p>
+     * 
+     * @param associateTimeSeriesToAssetPropertyRequest
+     * @return A Java Future containing the result of the AssociateTimeSeriesToAssetProperty operation returned by the
+     *         service.
+     * @sample AWSIoTSiteWiseAsync.AssociateTimeSeriesToAssetProperty
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotsitewise-2019-12-02/AssociateTimeSeriesToAssetProperty"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<AssociateTimeSeriesToAssetPropertyResult> associateTimeSeriesToAssetPropertyAsync(
+            AssociateTimeSeriesToAssetPropertyRequest associateTimeSeriesToAssetPropertyRequest);
+
+    /**
+     * <p>
+     * Associates a time series (data stream) with an asset property.
+     * </p>
+     * 
+     * @param associateTimeSeriesToAssetPropertyRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the AssociateTimeSeriesToAssetProperty operation returned by the
+     *         service.
+     * @sample AWSIoTSiteWiseAsyncHandler.AssociateTimeSeriesToAssetProperty
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotsitewise-2019-12-02/AssociateTimeSeriesToAssetProperty"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<AssociateTimeSeriesToAssetPropertyResult> associateTimeSeriesToAssetPropertyAsync(
+            AssociateTimeSeriesToAssetPropertyRequest associateTimeSeriesToAssetPropertyRequest,
+            com.amazonaws.handlers.AsyncHandler<AssociateTimeSeriesToAssetPropertyRequest, AssociateTimeSeriesToAssetPropertyResult> asyncHandler);
+
+    /**
+     * <p>
      * Associates a group (batch) of assets with an IoT SiteWise Monitor project.
      * </p>
      * 
@@ -481,6 +516,11 @@ public interface AWSIoTSiteWiseAsync extends AWSIoTSiteWise {
      * <p>
      * Creates a project in the specified portal.
      * </p>
+     * <note>
+     * <p>
+     * Make sure that the project name and description don't contain confidential information.
+     * </p>
+     * </note>
      * 
      * @param createProjectRequest
      * @return A Java Future containing the result of the CreateProject operation returned by the service.
@@ -494,6 +534,11 @@ public interface AWSIoTSiteWiseAsync extends AWSIoTSiteWise {
      * <p>
      * Creates a project in the specified portal.
      * </p>
+     * <note>
+     * <p>
+     * Make sure that the project name and description don't contain confidential information.
+     * </p>
+     * </note>
      * 
      * @param createProjectRequest
      * @param asyncHandler
@@ -756,6 +801,93 @@ public interface AWSIoTSiteWiseAsync extends AWSIoTSiteWise {
      */
     java.util.concurrent.Future<DeleteProjectResult> deleteProjectAsync(DeleteProjectRequest deleteProjectRequest,
             com.amazonaws.handlers.AsyncHandler<DeleteProjectRequest, DeleteProjectResult> asyncHandler);
+
+    /**
+     * <p>
+     * Deletes a time series (data stream). If you delete a time series that's associated with an asset property, the
+     * asset property still exists, but the time series will no longer be associated with this asset property.
+     * </p>
+     * <p>
+     * To identify a time series, do one of the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * If the time series isn't associated with an asset property, specify the <code>alias</code> of the time series.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If the time series is associated with an asset property, specify one of the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The <code>alias</code> of the time series.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The <code>assetId</code> and <code>propertyId</code> that identifies the asset property.
+     * </p>
+     * </li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
+     * @param deleteTimeSeriesRequest
+     * @return A Java Future containing the result of the DeleteTimeSeries operation returned by the service.
+     * @sample AWSIoTSiteWiseAsync.DeleteTimeSeries
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotsitewise-2019-12-02/DeleteTimeSeries" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteTimeSeriesResult> deleteTimeSeriesAsync(DeleteTimeSeriesRequest deleteTimeSeriesRequest);
+
+    /**
+     * <p>
+     * Deletes a time series (data stream). If you delete a time series that's associated with an asset property, the
+     * asset property still exists, but the time series will no longer be associated with this asset property.
+     * </p>
+     * <p>
+     * To identify a time series, do one of the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * If the time series isn't associated with an asset property, specify the <code>alias</code> of the time series.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If the time series is associated with an asset property, specify one of the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The <code>alias</code> of the time series.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The <code>assetId</code> and <code>propertyId</code> that identifies the asset property.
+     * </p>
+     * </li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
+     * @param deleteTimeSeriesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteTimeSeries operation returned by the service.
+     * @sample AWSIoTSiteWiseAsyncHandler.DeleteTimeSeries
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotsitewise-2019-12-02/DeleteTimeSeries" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteTimeSeriesResult> deleteTimeSeriesAsync(DeleteTimeSeriesRequest deleteTimeSeriesRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteTimeSeriesRequest, DeleteTimeSeriesResult> asyncHandler);
 
     /**
      * <p>
@@ -1185,6 +1317,91 @@ public interface AWSIoTSiteWiseAsync extends AWSIoTSiteWise {
 
     /**
      * <p>
+     * Retrieves information about a time series (data stream).
+     * </p>
+     * <p>
+     * To identify a time series, do one of the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * If the time series isn't associated with an asset property, specify the <code>alias</code> of the time series.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If the time series is associated with an asset property, specify one of the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The <code>alias</code> of the time series.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The <code>assetId</code> and <code>propertyId</code> that identifies the asset property.
+     * </p>
+     * </li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
+     * @param describeTimeSeriesRequest
+     * @return A Java Future containing the result of the DescribeTimeSeries operation returned by the service.
+     * @sample AWSIoTSiteWiseAsync.DescribeTimeSeries
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotsitewise-2019-12-02/DescribeTimeSeries" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeTimeSeriesResult> describeTimeSeriesAsync(DescribeTimeSeriesRequest describeTimeSeriesRequest);
+
+    /**
+     * <p>
+     * Retrieves information about a time series (data stream).
+     * </p>
+     * <p>
+     * To identify a time series, do one of the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * If the time series isn't associated with an asset property, specify the <code>alias</code> of the time series.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * If the time series is associated with an asset property, specify one of the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The <code>alias</code> of the time series.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The <code>assetId</code> and <code>propertyId</code> that identifies the asset property.
+     * </p>
+     * </li>
+     * </ul>
+     * </li>
+     * </ul>
+     * 
+     * @param describeTimeSeriesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeTimeSeries operation returned by the service.
+     * @sample AWSIoTSiteWiseAsyncHandler.DescribeTimeSeries
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotsitewise-2019-12-02/DescribeTimeSeries" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeTimeSeriesResult> describeTimeSeriesAsync(DescribeTimeSeriesRequest describeTimeSeriesRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeTimeSeriesRequest, DescribeTimeSeriesResult> asyncHandler);
+
+    /**
+     * <p>
      * Disassociates a child asset from the given parent asset through a hierarchy defined in the parent asset's model.
      * </p>
      * 
@@ -1213,6 +1430,43 @@ public interface AWSIoTSiteWiseAsync extends AWSIoTSiteWise {
      */
     java.util.concurrent.Future<DisassociateAssetsResult> disassociateAssetsAsync(DisassociateAssetsRequest disassociateAssetsRequest,
             com.amazonaws.handlers.AsyncHandler<DisassociateAssetsRequest, DisassociateAssetsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Disassociates a time series (data stream) from an asset property.
+     * </p>
+     * 
+     * @param disassociateTimeSeriesFromAssetPropertyRequest
+     * @return A Java Future containing the result of the DisassociateTimeSeriesFromAssetProperty operation returned by
+     *         the service.
+     * @sample AWSIoTSiteWiseAsync.DisassociateTimeSeriesFromAssetProperty
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/iotsitewise-2019-12-02/DisassociateTimeSeriesFromAssetProperty"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DisassociateTimeSeriesFromAssetPropertyResult> disassociateTimeSeriesFromAssetPropertyAsync(
+            DisassociateTimeSeriesFromAssetPropertyRequest disassociateTimeSeriesFromAssetPropertyRequest);
+
+    /**
+     * <p>
+     * Disassociates a time series (data stream) from an asset property.
+     * </p>
+     * 
+     * @param disassociateTimeSeriesFromAssetPropertyRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DisassociateTimeSeriesFromAssetProperty operation returned by
+     *         the service.
+     * @sample AWSIoTSiteWiseAsyncHandler.DisassociateTimeSeriesFromAssetProperty
+     * @see <a
+     *      href="http://docs.aws.amazon.com/goto/WebAPI/iotsitewise-2019-12-02/DisassociateTimeSeriesFromAssetProperty"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DisassociateTimeSeriesFromAssetPropertyResult> disassociateTimeSeriesFromAssetPropertyAsync(
+            DisassociateTimeSeriesFromAssetPropertyRequest disassociateTimeSeriesFromAssetPropertyRequest,
+            com.amazonaws.handlers.AsyncHandler<DisassociateTimeSeriesFromAssetPropertyRequest, DisassociateTimeSeriesFromAssetPropertyResult> asyncHandler);
 
     /**
      * <p>
@@ -1930,6 +2184,37 @@ public interface AWSIoTSiteWiseAsync extends AWSIoTSiteWise {
      */
     java.util.concurrent.Future<ListTagsForResourceResult> listTagsForResourceAsync(ListTagsForResourceRequest listTagsForResourceRequest,
             com.amazonaws.handlers.AsyncHandler<ListTagsForResourceRequest, ListTagsForResourceResult> asyncHandler);
+
+    /**
+     * <p>
+     * Retrieves a paginated list of time series (data streams).
+     * </p>
+     * 
+     * @param listTimeSeriesRequest
+     * @return A Java Future containing the result of the ListTimeSeries operation returned by the service.
+     * @sample AWSIoTSiteWiseAsync.ListTimeSeries
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotsitewise-2019-12-02/ListTimeSeries" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListTimeSeriesResult> listTimeSeriesAsync(ListTimeSeriesRequest listTimeSeriesRequest);
+
+    /**
+     * <p>
+     * Retrieves a paginated list of time series (data streams).
+     * </p>
+     * 
+     * @param listTimeSeriesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListTimeSeries operation returned by the service.
+     * @sample AWSIoTSiteWiseAsyncHandler.ListTimeSeries
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotsitewise-2019-12-02/ListTimeSeries" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListTimeSeriesResult> listTimeSeriesAsync(ListTimeSeriesRequest listTimeSeriesRequest,
+            com.amazonaws.handlers.AsyncHandler<ListTimeSeriesRequest, ListTimeSeriesResult> asyncHandler);
 
     /**
      * <p>

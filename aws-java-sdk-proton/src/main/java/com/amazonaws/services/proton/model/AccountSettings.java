@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The AWS Proton pipeline service role data.
+ * The Proton pipeline service role and repository data.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/proton-2020-07-20/AccountSettings" target="_top">AWS API
@@ -30,18 +30,107 @@ public class AccountSettings implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Proton pipeline service role.
+     * The repository that you provide with pull request provisioning.
+     * </p>
+     * <important>
+     * <p>
+     * Provisioning by pull request is currently in feature preview and is only usable with Terraform based Proton
+     * Templates. To learn more about <a href="https://aws.amazon.com/service-terms">Amazon Web Services Feature Preview
+     * terms</a>, see section 2 on Beta and Previews.
+     * </p>
+     * </important>
+     */
+    private RepositoryBranch pipelineProvisioningRepository;
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the Proton pipeline service role.
      * </p>
      */
     private String pipelineServiceRoleArn;
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Proton pipeline service role.
+     * The repository that you provide with pull request provisioning.
+     * </p>
+     * <important>
+     * <p>
+     * Provisioning by pull request is currently in feature preview and is only usable with Terraform based Proton
+     * Templates. To learn more about <a href="https://aws.amazon.com/service-terms">Amazon Web Services Feature Preview
+     * terms</a>, see section 2 on Beta and Previews.
+     * </p>
+     * </important>
+     * 
+     * @param pipelineProvisioningRepository
+     *        The repository that you provide with pull request provisioning.</p> <important>
+     *        <p>
+     *        Provisioning by pull request is currently in feature preview and is only usable with Terraform based
+     *        Proton Templates. To learn more about <a href="https://aws.amazon.com/service-terms">Amazon Web Services
+     *        Feature Preview terms</a>, see section 2 on Beta and Previews.
+     *        </p>
+     */
+
+    public void setPipelineProvisioningRepository(RepositoryBranch pipelineProvisioningRepository) {
+        this.pipelineProvisioningRepository = pipelineProvisioningRepository;
+    }
+
+    /**
+     * <p>
+     * The repository that you provide with pull request provisioning.
+     * </p>
+     * <important>
+     * <p>
+     * Provisioning by pull request is currently in feature preview and is only usable with Terraform based Proton
+     * Templates. To learn more about <a href="https://aws.amazon.com/service-terms">Amazon Web Services Feature Preview
+     * terms</a>, see section 2 on Beta and Previews.
+     * </p>
+     * </important>
+     * 
+     * @return The repository that you provide with pull request provisioning.</p> <important>
+     *         <p>
+     *         Provisioning by pull request is currently in feature preview and is only usable with Terraform based
+     *         Proton Templates. To learn more about <a href="https://aws.amazon.com/service-terms">Amazon Web Services
+     *         Feature Preview terms</a>, see section 2 on Beta and Previews.
+     *         </p>
+     */
+
+    public RepositoryBranch getPipelineProvisioningRepository() {
+        return this.pipelineProvisioningRepository;
+    }
+
+    /**
+     * <p>
+     * The repository that you provide with pull request provisioning.
+     * </p>
+     * <important>
+     * <p>
+     * Provisioning by pull request is currently in feature preview and is only usable with Terraform based Proton
+     * Templates. To learn more about <a href="https://aws.amazon.com/service-terms">Amazon Web Services Feature Preview
+     * terms</a>, see section 2 on Beta and Previews.
+     * </p>
+     * </important>
+     * 
+     * @param pipelineProvisioningRepository
+     *        The repository that you provide with pull request provisioning.</p> <important>
+     *        <p>
+     *        Provisioning by pull request is currently in feature preview and is only usable with Terraform based
+     *        Proton Templates. To learn more about <a href="https://aws.amazon.com/service-terms">Amazon Web Services
+     *        Feature Preview terms</a>, see section 2 on Beta and Previews.
+     *        </p>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AccountSettings withPipelineProvisioningRepository(RepositoryBranch pipelineProvisioningRepository) {
+        setPipelineProvisioningRepository(pipelineProvisioningRepository);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the Proton pipeline service role.
      * </p>
      * 
      * @param pipelineServiceRoleArn
-     *        The Amazon Resource Name (ARN) of the AWS Proton pipeline service role.
+     *        The Amazon Resource Name (ARN) of the Proton pipeline service role.
      */
 
     public void setPipelineServiceRoleArn(String pipelineServiceRoleArn) {
@@ -50,10 +139,10 @@ public class AccountSettings implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Proton pipeline service role.
+     * The Amazon Resource Name (ARN) of the Proton pipeline service role.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the AWS Proton pipeline service role.
+     * @return The Amazon Resource Name (ARN) of the Proton pipeline service role.
      */
 
     public String getPipelineServiceRoleArn() {
@@ -62,11 +151,11 @@ public class AccountSettings implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the AWS Proton pipeline service role.
+     * The Amazon Resource Name (ARN) of the Proton pipeline service role.
      * </p>
      * 
      * @param pipelineServiceRoleArn
-     *        The Amazon Resource Name (ARN) of the AWS Proton pipeline service role.
+     *        The Amazon Resource Name (ARN) of the Proton pipeline service role.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -87,6 +176,8 @@ public class AccountSettings implements Serializable, Cloneable, StructuredPojo 
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getPipelineProvisioningRepository() != null)
+            sb.append("PipelineProvisioningRepository: ").append(getPipelineProvisioningRepository()).append(",");
         if (getPipelineServiceRoleArn() != null)
             sb.append("PipelineServiceRoleArn: ").append(getPipelineServiceRoleArn());
         sb.append("}");
@@ -103,6 +194,11 @@ public class AccountSettings implements Serializable, Cloneable, StructuredPojo 
         if (obj instanceof AccountSettings == false)
             return false;
         AccountSettings other = (AccountSettings) obj;
+        if (other.getPipelineProvisioningRepository() == null ^ this.getPipelineProvisioningRepository() == null)
+            return false;
+        if (other.getPipelineProvisioningRepository() != null
+                && other.getPipelineProvisioningRepository().equals(this.getPipelineProvisioningRepository()) == false)
+            return false;
         if (other.getPipelineServiceRoleArn() == null ^ this.getPipelineServiceRoleArn() == null)
             return false;
         if (other.getPipelineServiceRoleArn() != null && other.getPipelineServiceRoleArn().equals(this.getPipelineServiceRoleArn()) == false)
@@ -115,6 +211,7 @@ public class AccountSettings implements Serializable, Cloneable, StructuredPojo 
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getPipelineProvisioningRepository() == null) ? 0 : getPipelineProvisioningRepository().hashCode());
         hashCode = prime * hashCode + ((getPipelineServiceRoleArn() == null) ? 0 : getPipelineServiceRoleArn().hashCode());
         return hashCode;
     }
