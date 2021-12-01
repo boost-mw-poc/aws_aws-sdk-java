@@ -43,6 +43,10 @@ public class GetPartitionsRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MaxResults").build();
     private static final MarshallingInfo<Boolean> EXCLUDECOLUMNSCHEMA_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ExcludeColumnSchema").build();
+    private static final MarshallingInfo<String> TRANSACTIONID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TransactionId").build();
+    private static final MarshallingInfo<java.util.Date> QUERYASOFTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("QueryAsOfTime").timestampFormat("unixTimestamp").build();
 
     private static final GetPartitionsRequestMarshaller instance = new GetPartitionsRequestMarshaller();
 
@@ -68,6 +72,8 @@ public class GetPartitionsRequestMarshaller {
             protocolMarshaller.marshall(getPartitionsRequest.getSegment(), SEGMENT_BINDING);
             protocolMarshaller.marshall(getPartitionsRequest.getMaxResults(), MAXRESULTS_BINDING);
             protocolMarshaller.marshall(getPartitionsRequest.getExcludeColumnSchema(), EXCLUDECOLUMNSCHEMA_BINDING);
+            protocolMarshaller.marshall(getPartitionsRequest.getTransactionId(), TRANSACTIONID_BINDING);
+            protocolMarshaller.marshall(getPartitionsRequest.getQueryAsOfTime(), QUERYASOFTIME_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

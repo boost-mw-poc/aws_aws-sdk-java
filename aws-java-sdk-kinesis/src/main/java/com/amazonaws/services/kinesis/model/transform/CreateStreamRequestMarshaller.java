@@ -31,6 +31,8 @@ public class CreateStreamRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("StreamName").build();
     private static final MarshallingInfo<Integer> SHARDCOUNT_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ShardCount").build();
+    private static final MarshallingInfo<StructuredPojo> STREAMMODEDETAILS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("StreamModeDetails").build();
 
     private static final CreateStreamRequestMarshaller instance = new CreateStreamRequestMarshaller();
 
@@ -50,6 +52,7 @@ public class CreateStreamRequestMarshaller {
         try {
             protocolMarshaller.marshall(createStreamRequest.getStreamName(), STREAMNAME_BINDING);
             protocolMarshaller.marshall(createStreamRequest.getShardCount(), SHARDCOUNT_BINDING);
+            protocolMarshaller.marshall(createStreamRequest.getStreamModeDetails(), STREAMMODEDETAILS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -70,6 +70,11 @@ public class SubnetStaxUnmarshaller implements Unmarshaller<Subnet, StaxUnmarsha
                     continue;
                 }
 
+                if (context.testExpression("enableLniAtDeviceIndex", targetDepth)) {
+                    subnet.setEnableLniAtDeviceIndex(IntegerStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
                 if (context.testExpression("mapPublicIpOnLaunch", targetDepth)) {
                     subnet.setMapPublicIpOnLaunch(BooleanStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;

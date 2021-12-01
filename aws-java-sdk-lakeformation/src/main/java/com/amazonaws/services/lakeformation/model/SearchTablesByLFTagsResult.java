@@ -31,7 +31,7 @@ public class SearchTablesByLFTagsResult extends com.amazonaws.AmazonWebServiceRe
     private String nextToken;
     /**
      * <p>
-     * A list of tables that meet the tag conditions.
+     * A list of tables that meet the LF-tag conditions.
      * </p>
      */
     private java.util.List<TaggedTable> tableList;
@@ -78,10 +78,10 @@ public class SearchTablesByLFTagsResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * A list of tables that meet the tag conditions.
+     * A list of tables that meet the LF-tag conditions.
      * </p>
      * 
-     * @return A list of tables that meet the tag conditions.
+     * @return A list of tables that meet the LF-tag conditions.
      */
 
     public java.util.List<TaggedTable> getTableList() {
@@ -90,11 +90,11 @@ public class SearchTablesByLFTagsResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * A list of tables that meet the tag conditions.
+     * A list of tables that meet the LF-tag conditions.
      * </p>
      * 
      * @param tableList
-     *        A list of tables that meet the tag conditions.
+     *        A list of tables that meet the LF-tag conditions.
      */
 
     public void setTableList(java.util.Collection<TaggedTable> tableList) {
@@ -108,7 +108,7 @@ public class SearchTablesByLFTagsResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * A list of tables that meet the tag conditions.
+     * A list of tables that meet the LF-tag conditions.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -117,7 +117,7 @@ public class SearchTablesByLFTagsResult extends com.amazonaws.AmazonWebServiceRe
      * </p>
      * 
      * @param tableList
-     *        A list of tables that meet the tag conditions.
+     *        A list of tables that meet the LF-tag conditions.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -133,11 +133,11 @@ public class SearchTablesByLFTagsResult extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * A list of tables that meet the tag conditions.
+     * A list of tables that meet the LF-tag conditions.
      * </p>
      * 
      * @param tableList
-     *        A list of tables that meet the tag conditions.
+     *        A list of tables that meet the LF-tag conditions.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -30,7 +30,7 @@ public class UpdateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Identifies the file system that you are updating.
+     * The ID of the file system that you are updating.
      * </p>
      */
     private String fileSystemId;
@@ -44,14 +44,19 @@ public class UpdateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * Use this parameter to increase the storage capacity of an Amazon FSx for Windows File Server or Amazon FSx for
-     * Lustre file system. Specifies the storage capacity target value, GiB, to increase the storage capacity for the
-     * file system that you're updating. You cannot make a storage capacity increase request if there is an existing
-     * storage capacity increase request in progress.
+     * Lustre file system. Specifies the storage capacity target value, in GiB, to increase the storage capacity for the
+     * file system that you're updating.
      * </p>
+     * <note>
      * <p>
-     * For Windows file systems, the storage capacity target value must be at least 10 percent (%) greater than the
-     * current storage capacity value. In order to increase storage capacity, the file system must have at least 16 MB/s
-     * of throughput capacity.
+     * You can't make a storage capacity increase request if there is an existing storage capacity increase request in
+     * progress.
+     * </p>
+     * </note>
+     * <p>
+     * For Windows file systems, the storage capacity target value must be at least 10 percent greater than the current
+     * storage capacity value. To increase storage capacity, the file system must have at least 16 MBps of throughput
+     * capacity.
      * </p>
      * <p>
      * For Lustre file systems, the storage capacity target value can be the following:
@@ -65,23 +70,30 @@ public class UpdateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * <li>
      * <p>
-     * For <code>PERSISTENT HDD</code> file systems, valid values are multiples of 6000 GiB for 12 MB/s/TiB file systems
-     * and multiples of 1800 GiB for 40 MB/s/TiB file systems. The values must be greater than the current storage
-     * capacity.
+     * For <code>PERSISTENT HDD</code> file systems, valid values are multiples of 6000 GiB for 12-MBps throughput per
+     * TiB file systems and multiples of 1800 GiB for 40-MBps throughput per TiB file systems. The values must be
+     * greater than the current storage capacity.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For <code>SCRATCH_1</code> file systems, you cannot increase the storage capacity.
+     * For <code>SCRATCH_1</code> file systems, you can't increase the storage capacity.
      * </p>
      * </li>
      * </ul>
      * <p>
+     * For OpenZFS file systems, the input/output operations per second (IOPS) automatically scale with increases to the
+     * storage capacity if IOPS is configured for automatic scaling. If the storage capacity increase would result in
+     * less than 3 IOPS per GiB of storage, this operation returns an error.
+     * </p>
+     * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/fsx/latest/WindowsGuide/managing-storage-capacity.html">Managing storage
-     * capacity</a> in the <i>Amazon FSx for Windows File Server User Guide</i> and <a
+     * capacity</a> in the <i>Amazon FSx for Windows File Server User Guide</i>, <a
      * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/managing-storage-capacity.html">Managing storage and
-     * throughput capacity</a> in the <i>Amazon FSx for Lustre User Guide</i>.
+     * throughput capacity</a> in the <i>Amazon FSx for Lustre User Guide</i>, and <a
+     * href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/managing-storage-capacity.html">Managing storage
+     * capacity</a> in the <i>Amazon FSx for OpenZFS User Guide</i>.
      * </p>
      */
     private Integer storageCapacity;
@@ -95,14 +107,20 @@ public class UpdateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
     private UpdateFileSystemLustreConfiguration lustreConfiguration;
 
     private UpdateFileSystemOntapConfiguration ontapConfiguration;
+    /**
+     * <p>
+     * The configuration updates for an Amazon FSx for OpenZFS file system.
+     * </p>
+     */
+    private UpdateFileSystemOpenZFSConfiguration openZFSConfiguration;
 
     /**
      * <p>
-     * Identifies the file system that you are updating.
+     * The ID of the file system that you are updating.
      * </p>
      * 
      * @param fileSystemId
-     *        Identifies the file system that you are updating.
+     *        The ID of the file system that you are updating.
      */
 
     public void setFileSystemId(String fileSystemId) {
@@ -111,10 +129,10 @@ public class UpdateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Identifies the file system that you are updating.
+     * The ID of the file system that you are updating.
      * </p>
      * 
-     * @return Identifies the file system that you are updating.
+     * @return The ID of the file system that you are updating.
      */
 
     public String getFileSystemId() {
@@ -123,11 +141,11 @@ public class UpdateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Identifies the file system that you are updating.
+     * The ID of the file system that you are updating.
      * </p>
      * 
      * @param fileSystemId
-     *        Identifies the file system that you are updating.
+     *        The ID of the file system that you are updating.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -188,14 +206,19 @@ public class UpdateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * Use this parameter to increase the storage capacity of an Amazon FSx for Windows File Server or Amazon FSx for
-     * Lustre file system. Specifies the storage capacity target value, GiB, to increase the storage capacity for the
-     * file system that you're updating. You cannot make a storage capacity increase request if there is an existing
-     * storage capacity increase request in progress.
+     * Lustre file system. Specifies the storage capacity target value, in GiB, to increase the storage capacity for the
+     * file system that you're updating.
      * </p>
+     * <note>
      * <p>
-     * For Windows file systems, the storage capacity target value must be at least 10 percent (%) greater than the
-     * current storage capacity value. In order to increase storage capacity, the file system must have at least 16 MB/s
-     * of throughput capacity.
+     * You can't make a storage capacity increase request if there is an existing storage capacity increase request in
+     * progress.
+     * </p>
+     * </note>
+     * <p>
+     * For Windows file systems, the storage capacity target value must be at least 10 percent greater than the current
+     * storage capacity value. To increase storage capacity, the file system must have at least 16 MBps of throughput
+     * capacity.
      * </p>
      * <p>
      * For Lustre file systems, the storage capacity target value can be the following:
@@ -209,34 +232,45 @@ public class UpdateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * <li>
      * <p>
-     * For <code>PERSISTENT HDD</code> file systems, valid values are multiples of 6000 GiB for 12 MB/s/TiB file systems
-     * and multiples of 1800 GiB for 40 MB/s/TiB file systems. The values must be greater than the current storage
-     * capacity.
+     * For <code>PERSISTENT HDD</code> file systems, valid values are multiples of 6000 GiB for 12-MBps throughput per
+     * TiB file systems and multiples of 1800 GiB for 40-MBps throughput per TiB file systems. The values must be
+     * greater than the current storage capacity.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For <code>SCRATCH_1</code> file systems, you cannot increase the storage capacity.
+     * For <code>SCRATCH_1</code> file systems, you can't increase the storage capacity.
      * </p>
      * </li>
      * </ul>
      * <p>
+     * For OpenZFS file systems, the input/output operations per second (IOPS) automatically scale with increases to the
+     * storage capacity if IOPS is configured for automatic scaling. If the storage capacity increase would result in
+     * less than 3 IOPS per GiB of storage, this operation returns an error.
+     * </p>
+     * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/fsx/latest/WindowsGuide/managing-storage-capacity.html">Managing storage
-     * capacity</a> in the <i>Amazon FSx for Windows File Server User Guide</i> and <a
+     * capacity</a> in the <i>Amazon FSx for Windows File Server User Guide</i>, <a
      * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/managing-storage-capacity.html">Managing storage and
-     * throughput capacity</a> in the <i>Amazon FSx for Lustre User Guide</i>.
+     * throughput capacity</a> in the <i>Amazon FSx for Lustre User Guide</i>, and <a
+     * href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/managing-storage-capacity.html">Managing storage
+     * capacity</a> in the <i>Amazon FSx for OpenZFS User Guide</i>.
      * </p>
      * 
      * @param storageCapacity
      *        Use this parameter to increase the storage capacity of an Amazon FSx for Windows File Server or Amazon FSx
-     *        for Lustre file system. Specifies the storage capacity target value, GiB, to increase the storage capacity
-     *        for the file system that you're updating. You cannot make a storage capacity increase request if there is
-     *        an existing storage capacity increase request in progress.</p>
+     *        for Lustre file system. Specifies the storage capacity target value, in GiB, to increase the storage
+     *        capacity for the file system that you're updating. </p> <note>
      *        <p>
-     *        For Windows file systems, the storage capacity target value must be at least 10 percent (%) greater than
-     *        the current storage capacity value. In order to increase storage capacity, the file system must have at
-     *        least 16 MB/s of throughput capacity.
+     *        You can't make a storage capacity increase request if there is an existing storage capacity increase
+     *        request in progress.
+     *        </p>
+     *        </note>
+     *        <p>
+     *        For Windows file systems, the storage capacity target value must be at least 10 percent greater than the
+     *        current storage capacity value. To increase storage capacity, the file system must have at least 16 MBps
+     *        of throughput capacity.
      *        </p>
      *        <p>
      *        For Lustre file systems, the storage capacity target value can be the following:
@@ -250,23 +284,30 @@ public class UpdateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      *        </li>
      *        <li>
      *        <p>
-     *        For <code>PERSISTENT HDD</code> file systems, valid values are multiples of 6000 GiB for 12 MB/s/TiB file
-     *        systems and multiples of 1800 GiB for 40 MB/s/TiB file systems. The values must be greater than the
-     *        current storage capacity.
+     *        For <code>PERSISTENT HDD</code> file systems, valid values are multiples of 6000 GiB for 12-MBps
+     *        throughput per TiB file systems and multiples of 1800 GiB for 40-MBps throughput per TiB file systems. The
+     *        values must be greater than the current storage capacity.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        For <code>SCRATCH_1</code> file systems, you cannot increase the storage capacity.
+     *        For <code>SCRATCH_1</code> file systems, you can't increase the storage capacity.
      *        </p>
      *        </li>
      *        </ul>
      *        <p>
+     *        For OpenZFS file systems, the input/output operations per second (IOPS) automatically scale with increases
+     *        to the storage capacity if IOPS is configured for automatic scaling. If the storage capacity increase
+     *        would result in less than 3 IOPS per GiB of storage, this operation returns an error.
+     *        </p>
+     *        <p>
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/fsx/latest/WindowsGuide/managing-storage-capacity.html">Managing storage
-     *        capacity</a> in the <i>Amazon FSx for Windows File Server User Guide</i> and <a
+     *        capacity</a> in the <i>Amazon FSx for Windows File Server User Guide</i>, <a
      *        href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/managing-storage-capacity.html">Managing storage
-     *        and throughput capacity</a> in the <i>Amazon FSx for Lustre User Guide</i>.
+     *        and throughput capacity</a> in the <i>Amazon FSx for Lustre User Guide</i>, and <a
+     *        href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/managing-storage-capacity.html">Managing storage
+     *        capacity</a> in the <i>Amazon FSx for OpenZFS User Guide</i>.
      */
 
     public void setStorageCapacity(Integer storageCapacity) {
@@ -276,14 +317,19 @@ public class UpdateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * Use this parameter to increase the storage capacity of an Amazon FSx for Windows File Server or Amazon FSx for
-     * Lustre file system. Specifies the storage capacity target value, GiB, to increase the storage capacity for the
-     * file system that you're updating. You cannot make a storage capacity increase request if there is an existing
-     * storage capacity increase request in progress.
+     * Lustre file system. Specifies the storage capacity target value, in GiB, to increase the storage capacity for the
+     * file system that you're updating.
      * </p>
+     * <note>
      * <p>
-     * For Windows file systems, the storage capacity target value must be at least 10 percent (%) greater than the
-     * current storage capacity value. In order to increase storage capacity, the file system must have at least 16 MB/s
-     * of throughput capacity.
+     * You can't make a storage capacity increase request if there is an existing storage capacity increase request in
+     * progress.
+     * </p>
+     * </note>
+     * <p>
+     * For Windows file systems, the storage capacity target value must be at least 10 percent greater than the current
+     * storage capacity value. To increase storage capacity, the file system must have at least 16 MBps of throughput
+     * capacity.
      * </p>
      * <p>
      * For Lustre file systems, the storage capacity target value can be the following:
@@ -297,33 +343,44 @@ public class UpdateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * <li>
      * <p>
-     * For <code>PERSISTENT HDD</code> file systems, valid values are multiples of 6000 GiB for 12 MB/s/TiB file systems
-     * and multiples of 1800 GiB for 40 MB/s/TiB file systems. The values must be greater than the current storage
-     * capacity.
+     * For <code>PERSISTENT HDD</code> file systems, valid values are multiples of 6000 GiB for 12-MBps throughput per
+     * TiB file systems and multiples of 1800 GiB for 40-MBps throughput per TiB file systems. The values must be
+     * greater than the current storage capacity.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For <code>SCRATCH_1</code> file systems, you cannot increase the storage capacity.
+     * For <code>SCRATCH_1</code> file systems, you can't increase the storage capacity.
      * </p>
      * </li>
      * </ul>
      * <p>
+     * For OpenZFS file systems, the input/output operations per second (IOPS) automatically scale with increases to the
+     * storage capacity if IOPS is configured for automatic scaling. If the storage capacity increase would result in
+     * less than 3 IOPS per GiB of storage, this operation returns an error.
+     * </p>
+     * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/fsx/latest/WindowsGuide/managing-storage-capacity.html">Managing storage
-     * capacity</a> in the <i>Amazon FSx for Windows File Server User Guide</i> and <a
+     * capacity</a> in the <i>Amazon FSx for Windows File Server User Guide</i>, <a
      * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/managing-storage-capacity.html">Managing storage and
-     * throughput capacity</a> in the <i>Amazon FSx for Lustre User Guide</i>.
+     * throughput capacity</a> in the <i>Amazon FSx for Lustre User Guide</i>, and <a
+     * href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/managing-storage-capacity.html">Managing storage
+     * capacity</a> in the <i>Amazon FSx for OpenZFS User Guide</i>.
      * </p>
      * 
      * @return Use this parameter to increase the storage capacity of an Amazon FSx for Windows File Server or Amazon
-     *         FSx for Lustre file system. Specifies the storage capacity target value, GiB, to increase the storage
-     *         capacity for the file system that you're updating. You cannot make a storage capacity increase request if
-     *         there is an existing storage capacity increase request in progress.</p>
+     *         FSx for Lustre file system. Specifies the storage capacity target value, in GiB, to increase the storage
+     *         capacity for the file system that you're updating. </p> <note>
      *         <p>
-     *         For Windows file systems, the storage capacity target value must be at least 10 percent (%) greater than
-     *         the current storage capacity value. In order to increase storage capacity, the file system must have at
-     *         least 16 MB/s of throughput capacity.
+     *         You can't make a storage capacity increase request if there is an existing storage capacity increase
+     *         request in progress.
+     *         </p>
+     *         </note>
+     *         <p>
+     *         For Windows file systems, the storage capacity target value must be at least 10 percent greater than the
+     *         current storage capacity value. To increase storage capacity, the file system must have at least 16 MBps
+     *         of throughput capacity.
      *         </p>
      *         <p>
      *         For Lustre file systems, the storage capacity target value can be the following:
@@ -337,23 +394,30 @@ public class UpdateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      *         </li>
      *         <li>
      *         <p>
-     *         For <code>PERSISTENT HDD</code> file systems, valid values are multiples of 6000 GiB for 12 MB/s/TiB file
-     *         systems and multiples of 1800 GiB for 40 MB/s/TiB file systems. The values must be greater than the
-     *         current storage capacity.
+     *         For <code>PERSISTENT HDD</code> file systems, valid values are multiples of 6000 GiB for 12-MBps
+     *         throughput per TiB file systems and multiples of 1800 GiB for 40-MBps throughput per TiB file systems.
+     *         The values must be greater than the current storage capacity.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         For <code>SCRATCH_1</code> file systems, you cannot increase the storage capacity.
+     *         For <code>SCRATCH_1</code> file systems, you can't increase the storage capacity.
      *         </p>
      *         </li>
      *         </ul>
      *         <p>
+     *         For OpenZFS file systems, the input/output operations per second (IOPS) automatically scale with
+     *         increases to the storage capacity if IOPS is configured for automatic scaling. If the storage capacity
+     *         increase would result in less than 3 IOPS per GiB of storage, this operation returns an error.
+     *         </p>
+     *         <p>
      *         For more information, see <a
      *         href="https://docs.aws.amazon.com/fsx/latest/WindowsGuide/managing-storage-capacity.html">Managing
-     *         storage capacity</a> in the <i>Amazon FSx for Windows File Server User Guide</i> and <a
+     *         storage capacity</a> in the <i>Amazon FSx for Windows File Server User Guide</i>, <a
      *         href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/managing-storage-capacity.html">Managing storage
-     *         and throughput capacity</a> in the <i>Amazon FSx for Lustre User Guide</i>.
+     *         and throughput capacity</a> in the <i>Amazon FSx for Lustre User Guide</i>, and <a
+     *         href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/managing-storage-capacity.html">Managing
+     *         storage capacity</a> in the <i>Amazon FSx for OpenZFS User Guide</i>.
      */
 
     public Integer getStorageCapacity() {
@@ -363,14 +427,19 @@ public class UpdateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * Use this parameter to increase the storage capacity of an Amazon FSx for Windows File Server or Amazon FSx for
-     * Lustre file system. Specifies the storage capacity target value, GiB, to increase the storage capacity for the
-     * file system that you're updating. You cannot make a storage capacity increase request if there is an existing
-     * storage capacity increase request in progress.
+     * Lustre file system. Specifies the storage capacity target value, in GiB, to increase the storage capacity for the
+     * file system that you're updating.
      * </p>
+     * <note>
      * <p>
-     * For Windows file systems, the storage capacity target value must be at least 10 percent (%) greater than the
-     * current storage capacity value. In order to increase storage capacity, the file system must have at least 16 MB/s
-     * of throughput capacity.
+     * You can't make a storage capacity increase request if there is an existing storage capacity increase request in
+     * progress.
+     * </p>
+     * </note>
+     * <p>
+     * For Windows file systems, the storage capacity target value must be at least 10 percent greater than the current
+     * storage capacity value. To increase storage capacity, the file system must have at least 16 MBps of throughput
+     * capacity.
      * </p>
      * <p>
      * For Lustre file systems, the storage capacity target value can be the following:
@@ -384,34 +453,45 @@ public class UpdateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * <li>
      * <p>
-     * For <code>PERSISTENT HDD</code> file systems, valid values are multiples of 6000 GiB for 12 MB/s/TiB file systems
-     * and multiples of 1800 GiB for 40 MB/s/TiB file systems. The values must be greater than the current storage
-     * capacity.
+     * For <code>PERSISTENT HDD</code> file systems, valid values are multiples of 6000 GiB for 12-MBps throughput per
+     * TiB file systems and multiples of 1800 GiB for 40-MBps throughput per TiB file systems. The values must be
+     * greater than the current storage capacity.
      * </p>
      * </li>
      * <li>
      * <p>
-     * For <code>SCRATCH_1</code> file systems, you cannot increase the storage capacity.
+     * For <code>SCRATCH_1</code> file systems, you can't increase the storage capacity.
      * </p>
      * </li>
      * </ul>
      * <p>
+     * For OpenZFS file systems, the input/output operations per second (IOPS) automatically scale with increases to the
+     * storage capacity if IOPS is configured for automatic scaling. If the storage capacity increase would result in
+     * less than 3 IOPS per GiB of storage, this operation returns an error.
+     * </p>
+     * <p>
      * For more information, see <a
      * href="https://docs.aws.amazon.com/fsx/latest/WindowsGuide/managing-storage-capacity.html">Managing storage
-     * capacity</a> in the <i>Amazon FSx for Windows File Server User Guide</i> and <a
+     * capacity</a> in the <i>Amazon FSx for Windows File Server User Guide</i>, <a
      * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/managing-storage-capacity.html">Managing storage and
-     * throughput capacity</a> in the <i>Amazon FSx for Lustre User Guide</i>.
+     * throughput capacity</a> in the <i>Amazon FSx for Lustre User Guide</i>, and <a
+     * href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/managing-storage-capacity.html">Managing storage
+     * capacity</a> in the <i>Amazon FSx for OpenZFS User Guide</i>.
      * </p>
      * 
      * @param storageCapacity
      *        Use this parameter to increase the storage capacity of an Amazon FSx for Windows File Server or Amazon FSx
-     *        for Lustre file system. Specifies the storage capacity target value, GiB, to increase the storage capacity
-     *        for the file system that you're updating. You cannot make a storage capacity increase request if there is
-     *        an existing storage capacity increase request in progress.</p>
+     *        for Lustre file system. Specifies the storage capacity target value, in GiB, to increase the storage
+     *        capacity for the file system that you're updating. </p> <note>
      *        <p>
-     *        For Windows file systems, the storage capacity target value must be at least 10 percent (%) greater than
-     *        the current storage capacity value. In order to increase storage capacity, the file system must have at
-     *        least 16 MB/s of throughput capacity.
+     *        You can't make a storage capacity increase request if there is an existing storage capacity increase
+     *        request in progress.
+     *        </p>
+     *        </note>
+     *        <p>
+     *        For Windows file systems, the storage capacity target value must be at least 10 percent greater than the
+     *        current storage capacity value. To increase storage capacity, the file system must have at least 16 MBps
+     *        of throughput capacity.
      *        </p>
      *        <p>
      *        For Lustre file systems, the storage capacity target value can be the following:
@@ -425,23 +505,30 @@ public class UpdateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
      *        </li>
      *        <li>
      *        <p>
-     *        For <code>PERSISTENT HDD</code> file systems, valid values are multiples of 6000 GiB for 12 MB/s/TiB file
-     *        systems and multiples of 1800 GiB for 40 MB/s/TiB file systems. The values must be greater than the
-     *        current storage capacity.
+     *        For <code>PERSISTENT HDD</code> file systems, valid values are multiples of 6000 GiB for 12-MBps
+     *        throughput per TiB file systems and multiples of 1800 GiB for 40-MBps throughput per TiB file systems. The
+     *        values must be greater than the current storage capacity.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        For <code>SCRATCH_1</code> file systems, you cannot increase the storage capacity.
+     *        For <code>SCRATCH_1</code> file systems, you can't increase the storage capacity.
      *        </p>
      *        </li>
      *        </ul>
      *        <p>
+     *        For OpenZFS file systems, the input/output operations per second (IOPS) automatically scale with increases
+     *        to the storage capacity if IOPS is configured for automatic scaling. If the storage capacity increase
+     *        would result in less than 3 IOPS per GiB of storage, this operation returns an error.
+     *        </p>
+     *        <p>
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/fsx/latest/WindowsGuide/managing-storage-capacity.html">Managing storage
-     *        capacity</a> in the <i>Amazon FSx for Windows File Server User Guide</i> and <a
+     *        capacity</a> in the <i>Amazon FSx for Windows File Server User Guide</i>, <a
      *        href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/managing-storage-capacity.html">Managing storage
-     *        and throughput capacity</a> in the <i>Amazon FSx for Lustre User Guide</i>.
+     *        and throughput capacity</a> in the <i>Amazon FSx for Lustre User Guide</i>, and <a
+     *        href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/managing-storage-capacity.html">Managing storage
+     *        capacity</a> in the <i>Amazon FSx for OpenZFS User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -543,6 +630,46 @@ public class UpdateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
+     * <p>
+     * The configuration updates for an Amazon FSx for OpenZFS file system.
+     * </p>
+     * 
+     * @param openZFSConfiguration
+     *        The configuration updates for an Amazon FSx for OpenZFS file system.
+     */
+
+    public void setOpenZFSConfiguration(UpdateFileSystemOpenZFSConfiguration openZFSConfiguration) {
+        this.openZFSConfiguration = openZFSConfiguration;
+    }
+
+    /**
+     * <p>
+     * The configuration updates for an Amazon FSx for OpenZFS file system.
+     * </p>
+     * 
+     * @return The configuration updates for an Amazon FSx for OpenZFS file system.
+     */
+
+    public UpdateFileSystemOpenZFSConfiguration getOpenZFSConfiguration() {
+        return this.openZFSConfiguration;
+    }
+
+    /**
+     * <p>
+     * The configuration updates for an Amazon FSx for OpenZFS file system.
+     * </p>
+     * 
+     * @param openZFSConfiguration
+     *        The configuration updates for an Amazon FSx for OpenZFS file system.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateFileSystemRequest withOpenZFSConfiguration(UpdateFileSystemOpenZFSConfiguration openZFSConfiguration) {
+        setOpenZFSConfiguration(openZFSConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -565,7 +692,9 @@ public class UpdateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
         if (getLustreConfiguration() != null)
             sb.append("LustreConfiguration: ").append(getLustreConfiguration()).append(",");
         if (getOntapConfiguration() != null)
-            sb.append("OntapConfiguration: ").append(getOntapConfiguration());
+            sb.append("OntapConfiguration: ").append(getOntapConfiguration()).append(",");
+        if (getOpenZFSConfiguration() != null)
+            sb.append("OpenZFSConfiguration: ").append(getOpenZFSConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -604,6 +733,10 @@ public class UpdateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
             return false;
         if (other.getOntapConfiguration() != null && other.getOntapConfiguration().equals(this.getOntapConfiguration()) == false)
             return false;
+        if (other.getOpenZFSConfiguration() == null ^ this.getOpenZFSConfiguration() == null)
+            return false;
+        if (other.getOpenZFSConfiguration() != null && other.getOpenZFSConfiguration().equals(this.getOpenZFSConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -618,6 +751,7 @@ public class UpdateFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
         hashCode = prime * hashCode + ((getWindowsConfiguration() == null) ? 0 : getWindowsConfiguration().hashCode());
         hashCode = prime * hashCode + ((getLustreConfiguration() == null) ? 0 : getLustreConfiguration().hashCode());
         hashCode = prime * hashCode + ((getOntapConfiguration() == null) ? 0 : getOntapConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getOpenZFSConfiguration() == null) ? 0 : getOpenZFSConfiguration().hashCode());
         return hashCode;
     }
 

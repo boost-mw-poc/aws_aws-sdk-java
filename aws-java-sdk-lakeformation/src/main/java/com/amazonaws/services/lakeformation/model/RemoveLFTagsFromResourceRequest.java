@@ -28,20 +28,20 @@ public class RemoveLFTagsFromResourceRequest extends com.amazonaws.AmazonWebServ
     /**
      * <p>
      * The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent metadata
-     * store. It contains database definitions, table definitions, and other control information to manage your AWS Lake
+     * store. It contains database definitions, table definitions, and other control information to manage your Lake
      * Formation environment.
      * </p>
      */
     private String catalogId;
     /**
      * <p>
-     * The resource where you want to remove a tag.
+     * The database, table, or column resource where you want to remove an LF-tag.
      * </p>
      */
     private Resource resource;
     /**
      * <p>
-     * The tags to be removed from the resource.
+     * The LF-tags to be removed from the resource.
      * </p>
      */
     private java.util.List<LFTagPair> lFTags;
@@ -49,14 +49,14 @@ public class RemoveLFTagsFromResourceRequest extends com.amazonaws.AmazonWebServ
     /**
      * <p>
      * The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent metadata
-     * store. It contains database definitions, table definitions, and other control information to manage your AWS Lake
+     * store. It contains database definitions, table definitions, and other control information to manage your Lake
      * Formation environment.
      * </p>
      * 
      * @param catalogId
      *        The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent
      *        metadata store. It contains database definitions, table definitions, and other control information to
-     *        manage your AWS Lake Formation environment.
+     *        manage your Lake Formation environment.
      */
 
     public void setCatalogId(String catalogId) {
@@ -66,13 +66,13 @@ public class RemoveLFTagsFromResourceRequest extends com.amazonaws.AmazonWebServ
     /**
      * <p>
      * The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent metadata
-     * store. It contains database definitions, table definitions, and other control information to manage your AWS Lake
+     * store. It contains database definitions, table definitions, and other control information to manage your Lake
      * Formation environment.
      * </p>
      * 
      * @return The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent
      *         metadata store. It contains database definitions, table definitions, and other control information to
-     *         manage your AWS Lake Formation environment.
+     *         manage your Lake Formation environment.
      */
 
     public String getCatalogId() {
@@ -82,14 +82,14 @@ public class RemoveLFTagsFromResourceRequest extends com.amazonaws.AmazonWebServ
     /**
      * <p>
      * The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent metadata
-     * store. It contains database definitions, table definitions, and other control information to manage your AWS Lake
+     * store. It contains database definitions, table definitions, and other control information to manage your Lake
      * Formation environment.
      * </p>
      * 
      * @param catalogId
      *        The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent
      *        metadata store. It contains database definitions, table definitions, and other control information to
-     *        manage your AWS Lake Formation environment.
+     *        manage your Lake Formation environment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -100,11 +100,11 @@ public class RemoveLFTagsFromResourceRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The resource where you want to remove a tag.
+     * The database, table, or column resource where you want to remove an LF-tag.
      * </p>
      * 
      * @param resource
-     *        The resource where you want to remove a tag.
+     *        The database, table, or column resource where you want to remove an LF-tag.
      */
 
     public void setResource(Resource resource) {
@@ -113,10 +113,10 @@ public class RemoveLFTagsFromResourceRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The resource where you want to remove a tag.
+     * The database, table, or column resource where you want to remove an LF-tag.
      * </p>
      * 
-     * @return The resource where you want to remove a tag.
+     * @return The database, table, or column resource where you want to remove an LF-tag.
      */
 
     public Resource getResource() {
@@ -125,11 +125,11 @@ public class RemoveLFTagsFromResourceRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The resource where you want to remove a tag.
+     * The database, table, or column resource where you want to remove an LF-tag.
      * </p>
      * 
      * @param resource
-     *        The resource where you want to remove a tag.
+     *        The database, table, or column resource where you want to remove an LF-tag.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -140,10 +140,10 @@ public class RemoveLFTagsFromResourceRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The tags to be removed from the resource.
+     * The LF-tags to be removed from the resource.
      * </p>
      * 
-     * @return The tags to be removed from the resource.
+     * @return The LF-tags to be removed from the resource.
      */
 
     public java.util.List<LFTagPair> getLFTags() {
@@ -152,11 +152,11 @@ public class RemoveLFTagsFromResourceRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The tags to be removed from the resource.
+     * The LF-tags to be removed from the resource.
      * </p>
      * 
      * @param lFTags
-     *        The tags to be removed from the resource.
+     *        The LF-tags to be removed from the resource.
      */
 
     public void setLFTags(java.util.Collection<LFTagPair> lFTags) {
@@ -170,7 +170,7 @@ public class RemoveLFTagsFromResourceRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The tags to be removed from the resource.
+     * The LF-tags to be removed from the resource.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -179,7 +179,7 @@ public class RemoveLFTagsFromResourceRequest extends com.amazonaws.AmazonWebServ
      * </p>
      * 
      * @param lFTags
-     *        The tags to be removed from the resource.
+     *        The LF-tags to be removed from the resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -195,11 +195,11 @@ public class RemoveLFTagsFromResourceRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The tags to be removed from the resource.
+     * The LF-tags to be removed from the resource.
      * </p>
      * 
      * @param lFTags
-     *        The tags to be removed from the resource.
+     *        The LF-tags to be removed from the resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

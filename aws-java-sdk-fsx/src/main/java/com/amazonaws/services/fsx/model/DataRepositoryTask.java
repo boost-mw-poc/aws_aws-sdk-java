@@ -20,7 +20,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 /**
  * <p>
  * A description of the data repository task. You use data repository tasks to perform bulk transfer operations between
- * your Amazon FSx file system and its linked data repository.
+ * your Amazon FSx file system and a linked data repository.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/DataRepositoryTask" target="_top">AWS API
@@ -86,8 +86,22 @@ public class DataRepositoryTask implements Serializable, Cloneable, StructuredPo
     private String lifecycle;
     /**
      * <p>
-     * The type of data repository task; EXPORT_TO_REPOSITORY is the only type currently supported.
+     * The type of data repository task.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The <code>EXPORT_TO_REPOSITORY</code> data repository task exports from your Lustre file system from to a linked
+     * S3 bucket.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The <code>IMPORT_METADATA_FROM_REPOSITORY</code> data repository task imports metadata changes from a linked S3
+     * bucket to your Lustre file system.
+     * </p>
+     * </li>
+     * </ul>
      */
     private String type;
 
@@ -578,11 +592,38 @@ public class DataRepositoryTask implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The type of data repository task; EXPORT_TO_REPOSITORY is the only type currently supported.
+     * The type of data repository task.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The <code>EXPORT_TO_REPOSITORY</code> data repository task exports from your Lustre file system from to a linked
+     * S3 bucket.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The <code>IMPORT_METADATA_FROM_REPOSITORY</code> data repository task imports metadata changes from a linked S3
+     * bucket to your Lustre file system.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param type
-     *        The type of data repository task; EXPORT_TO_REPOSITORY is the only type currently supported.
+     *        The type of data repository task.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        The <code>EXPORT_TO_REPOSITORY</code> data repository task exports from your Lustre file system from to a
+     *        linked S3 bucket.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The <code>IMPORT_METADATA_FROM_REPOSITORY</code> data repository task imports metadata changes from a
+     *        linked S3 bucket to your Lustre file system.
+     *        </p>
+     *        </li>
      * @see DataRepositoryTaskType
      */
 
@@ -592,10 +633,37 @@ public class DataRepositoryTask implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The type of data repository task; EXPORT_TO_REPOSITORY is the only type currently supported.
+     * The type of data repository task.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The <code>EXPORT_TO_REPOSITORY</code> data repository task exports from your Lustre file system from to a linked
+     * S3 bucket.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The <code>IMPORT_METADATA_FROM_REPOSITORY</code> data repository task imports metadata changes from a linked S3
+     * bucket to your Lustre file system.
+     * </p>
+     * </li>
+     * </ul>
      * 
-     * @return The type of data repository task; EXPORT_TO_REPOSITORY is the only type currently supported.
+     * @return The type of data repository task.</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         The <code>EXPORT_TO_REPOSITORY</code> data repository task exports from your Lustre file system from to a
+     *         linked S3 bucket.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         The <code>IMPORT_METADATA_FROM_REPOSITORY</code> data repository task imports metadata changes from a
+     *         linked S3 bucket to your Lustre file system.
+     *         </p>
+     *         </li>
      * @see DataRepositoryTaskType
      */
 
@@ -605,11 +673,38 @@ public class DataRepositoryTask implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The type of data repository task; EXPORT_TO_REPOSITORY is the only type currently supported.
+     * The type of data repository task.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The <code>EXPORT_TO_REPOSITORY</code> data repository task exports from your Lustre file system from to a linked
+     * S3 bucket.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The <code>IMPORT_METADATA_FROM_REPOSITORY</code> data repository task imports metadata changes from a linked S3
+     * bucket to your Lustre file system.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param type
-     *        The type of data repository task; EXPORT_TO_REPOSITORY is the only type currently supported.
+     *        The type of data repository task.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        The <code>EXPORT_TO_REPOSITORY</code> data repository task exports from your Lustre file system from to a
+     *        linked S3 bucket.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The <code>IMPORT_METADATA_FROM_REPOSITORY</code> data repository task imports metadata changes from a
+     *        linked S3 bucket to your Lustre file system.
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DataRepositoryTaskType
      */
@@ -621,11 +716,38 @@ public class DataRepositoryTask implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * The type of data repository task; EXPORT_TO_REPOSITORY is the only type currently supported.
+     * The type of data repository task.
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The <code>EXPORT_TO_REPOSITORY</code> data repository task exports from your Lustre file system from to a linked
+     * S3 bucket.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The <code>IMPORT_METADATA_FROM_REPOSITORY</code> data repository task imports metadata changes from a linked S3
+     * bucket to your Lustre file system.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param type
-     *        The type of data repository task; EXPORT_TO_REPOSITORY is the only type currently supported.
+     *        The type of data repository task.</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        The <code>EXPORT_TO_REPOSITORY</code> data repository task exports from your Lustre file system from to a
+     *        linked S3 bucket.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        The <code>IMPORT_METADATA_FROM_REPOSITORY</code> data repository task imports metadata changes from a
+     *        linked S3 bucket to your Lustre file system.
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DataRepositoryTaskType
      */

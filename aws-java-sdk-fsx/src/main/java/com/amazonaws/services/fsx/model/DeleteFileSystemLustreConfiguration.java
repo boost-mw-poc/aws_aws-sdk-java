@@ -35,6 +35,12 @@ public class DeleteFileSystemLustreConfiguration implements Serializable, Clonea
      * By default, Amazon FSx will not take a final backup on your behalf when the <code>DeleteFileSystem</code>
      * operation is invoked. (Default = true)
      * </p>
+     * <note>
+     * <p>
+     * The <code>fsx:CreateBackup</code> permission is required if you set <code>SkipFinalBackup</code> to
+     * <code>false</code> in order to delete the file system and take a final backup.
+     * </p>
+     * </note>
      */
     private Boolean skipFinalBackup;
     /**
@@ -53,11 +59,21 @@ public class DeleteFileSystemLustreConfiguration implements Serializable, Clonea
      * By default, Amazon FSx will not take a final backup on your behalf when the <code>DeleteFileSystem</code>
      * operation is invoked. (Default = true)
      * </p>
+     * <note>
+     * <p>
+     * The <code>fsx:CreateBackup</code> permission is required if you set <code>SkipFinalBackup</code> to
+     * <code>false</code> in order to delete the file system and take a final backup.
+     * </p>
+     * </note>
      * 
      * @param skipFinalBackup
      *        Set <code>SkipFinalBackup</code> to false if you want to take a final backup of the file system you are
      *        deleting. By default, Amazon FSx will not take a final backup on your behalf when the
-     *        <code>DeleteFileSystem</code> operation is invoked. (Default = true)
+     *        <code>DeleteFileSystem</code> operation is invoked. (Default = true)</p> <note>
+     *        <p>
+     *        The <code>fsx:CreateBackup</code> permission is required if you set <code>SkipFinalBackup</code> to
+     *        <code>false</code> in order to delete the file system and take a final backup.
+     *        </p>
      */
 
     public void setSkipFinalBackup(Boolean skipFinalBackup) {
@@ -70,10 +86,20 @@ public class DeleteFileSystemLustreConfiguration implements Serializable, Clonea
      * By default, Amazon FSx will not take a final backup on your behalf when the <code>DeleteFileSystem</code>
      * operation is invoked. (Default = true)
      * </p>
+     * <note>
+     * <p>
+     * The <code>fsx:CreateBackup</code> permission is required if you set <code>SkipFinalBackup</code> to
+     * <code>false</code> in order to delete the file system and take a final backup.
+     * </p>
+     * </note>
      * 
      * @return Set <code>SkipFinalBackup</code> to false if you want to take a final backup of the file system you are
      *         deleting. By default, Amazon FSx will not take a final backup on your behalf when the
-     *         <code>DeleteFileSystem</code> operation is invoked. (Default = true)
+     *         <code>DeleteFileSystem</code> operation is invoked. (Default = true)</p> <note>
+     *         <p>
+     *         The <code>fsx:CreateBackup</code> permission is required if you set <code>SkipFinalBackup</code> to
+     *         <code>false</code> in order to delete the file system and take a final backup.
+     *         </p>
      */
 
     public Boolean getSkipFinalBackup() {
@@ -86,11 +112,21 @@ public class DeleteFileSystemLustreConfiguration implements Serializable, Clonea
      * By default, Amazon FSx will not take a final backup on your behalf when the <code>DeleteFileSystem</code>
      * operation is invoked. (Default = true)
      * </p>
+     * <note>
+     * <p>
+     * The <code>fsx:CreateBackup</code> permission is required if you set <code>SkipFinalBackup</code> to
+     * <code>false</code> in order to delete the file system and take a final backup.
+     * </p>
+     * </note>
      * 
      * @param skipFinalBackup
      *        Set <code>SkipFinalBackup</code> to false if you want to take a final backup of the file system you are
      *        deleting. By default, Amazon FSx will not take a final backup on your behalf when the
-     *        <code>DeleteFileSystem</code> operation is invoked. (Default = true)
+     *        <code>DeleteFileSystem</code> operation is invoked. (Default = true)</p> <note>
+     *        <p>
+     *        The <code>fsx:CreateBackup</code> permission is required if you set <code>SkipFinalBackup</code> to
+     *        <code>false</code> in order to delete the file system and take a final backup.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -105,10 +141,20 @@ public class DeleteFileSystemLustreConfiguration implements Serializable, Clonea
      * By default, Amazon FSx will not take a final backup on your behalf when the <code>DeleteFileSystem</code>
      * operation is invoked. (Default = true)
      * </p>
+     * <note>
+     * <p>
+     * The <code>fsx:CreateBackup</code> permission is required if you set <code>SkipFinalBackup</code> to
+     * <code>false</code> in order to delete the file system and take a final backup.
+     * </p>
+     * </note>
      * 
      * @return Set <code>SkipFinalBackup</code> to false if you want to take a final backup of the file system you are
      *         deleting. By default, Amazon FSx will not take a final backup on your behalf when the
-     *         <code>DeleteFileSystem</code> operation is invoked. (Default = true)
+     *         <code>DeleteFileSystem</code> operation is invoked. (Default = true)</p> <note>
+     *         <p>
+     *         The <code>fsx:CreateBackup</code> permission is required if you set <code>SkipFinalBackup</code> to
+     *         <code>false</code> in order to delete the file system and take a final backup.
+     *         </p>
      */
 
     public Boolean isSkipFinalBackup() {

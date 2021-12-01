@@ -30,7 +30,8 @@ public class ListStreamsRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The maximum number of streams to list.
+     * The maximum number of streams to list. The default value is 100. If you specify a value greater than 100, at most
+     * 100 results are returned.
      * </p>
      */
     private Integer limit;
@@ -43,11 +44,13 @@ public class ListStreamsRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The maximum number of streams to list.
+     * The maximum number of streams to list. The default value is 100. If you specify a value greater than 100, at most
+     * 100 results are returned.
      * </p>
      * 
      * @param limit
-     *        The maximum number of streams to list.
+     *        The maximum number of streams to list. The default value is 100. If you specify a value greater than 100,
+     *        at most 100 results are returned.
      */
 
     public void setLimit(Integer limit) {
@@ -56,10 +59,12 @@ public class ListStreamsRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The maximum number of streams to list.
+     * The maximum number of streams to list. The default value is 100. If you specify a value greater than 100, at most
+     * 100 results are returned.
      * </p>
      * 
-     * @return The maximum number of streams to list.
+     * @return The maximum number of streams to list. The default value is 100. If you specify a value greater than 100,
+     *         at most 100 results are returned.
      */
 
     public Integer getLimit() {
@@ -68,11 +73,13 @@ public class ListStreamsRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The maximum number of streams to list.
+     * The maximum number of streams to list. The default value is 100. If you specify a value greater than 100, at most
+     * 100 results are returned.
      * </p>
      * 
      * @param limit
-     *        The maximum number of streams to list.
+     *        The maximum number of streams to list. The default value is 100. If you specify a value greater than 100,
+     *        at most 100 results are returned.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

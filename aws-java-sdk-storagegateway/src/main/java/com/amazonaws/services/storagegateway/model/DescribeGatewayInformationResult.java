@@ -112,7 +112,7 @@ public class DescribeGatewayInformationResult extends com.amazonaws.AmazonWebSer
     private String cloudWatchLogGroupARN;
     /**
      * <p>
-     * The type of hypervisor environment used by the host.
+     * The type of hardware or software platform on which the gateway is running.
      * </p>
      */
     private String hostEnvironment;
@@ -149,6 +149,13 @@ public class DescribeGatewayInformationResult extends com.amazonaws.AmazonWebSer
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> supportedGatewayCapacities;
+    /**
+     * <p>
+     * A unique identifier for the specific instance of the host platform running the gateway. This value is only
+     * available for certain host environments, and its format depends on the host environment type.
+     * </p>
+     */
+    private String hostEnvironmentId;
 
     /**
      * @param gatewayARN
@@ -801,11 +808,11 @@ public class DescribeGatewayInformationResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The type of hypervisor environment used by the host.
+     * The type of hardware or software platform on which the gateway is running.
      * </p>
      * 
      * @param hostEnvironment
-     *        The type of hypervisor environment used by the host.
+     *        The type of hardware or software platform on which the gateway is running.
      * @see HostEnvironment
      */
 
@@ -815,10 +822,10 @@ public class DescribeGatewayInformationResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The type of hypervisor environment used by the host.
+     * The type of hardware or software platform on which the gateway is running.
      * </p>
      * 
-     * @return The type of hypervisor environment used by the host.
+     * @return The type of hardware or software platform on which the gateway is running.
      * @see HostEnvironment
      */
 
@@ -828,11 +835,11 @@ public class DescribeGatewayInformationResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The type of hypervisor environment used by the host.
+     * The type of hardware or software platform on which the gateway is running.
      * </p>
      * 
      * @param hostEnvironment
-     *        The type of hypervisor environment used by the host.
+     *        The type of hardware or software platform on which the gateway is running.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see HostEnvironment
      */
@@ -844,11 +851,11 @@ public class DescribeGatewayInformationResult extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The type of hypervisor environment used by the host.
+     * The type of hardware or software platform on which the gateway is running.
      * </p>
      * 
      * @param hostEnvironment
-     *        The type of hypervisor environment used by the host.
+     *        The type of hardware or software platform on which the gateway is running.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see HostEnvironment
      */
@@ -1160,6 +1167,52 @@ public class DescribeGatewayInformationResult extends com.amazonaws.AmazonWebSer
     }
 
     /**
+     * <p>
+     * A unique identifier for the specific instance of the host platform running the gateway. This value is only
+     * available for certain host environments, and its format depends on the host environment type.
+     * </p>
+     * 
+     * @param hostEnvironmentId
+     *        A unique identifier for the specific instance of the host platform running the gateway. This value is only
+     *        available for certain host environments, and its format depends on the host environment type.
+     */
+
+    public void setHostEnvironmentId(String hostEnvironmentId) {
+        this.hostEnvironmentId = hostEnvironmentId;
+    }
+
+    /**
+     * <p>
+     * A unique identifier for the specific instance of the host platform running the gateway. This value is only
+     * available for certain host environments, and its format depends on the host environment type.
+     * </p>
+     * 
+     * @return A unique identifier for the specific instance of the host platform running the gateway. This value is
+     *         only available for certain host environments, and its format depends on the host environment type.
+     */
+
+    public String getHostEnvironmentId() {
+        return this.hostEnvironmentId;
+    }
+
+    /**
+     * <p>
+     * A unique identifier for the specific instance of the host platform running the gateway. This value is only
+     * available for certain host environments, and its format depends on the host environment type.
+     * </p>
+     * 
+     * @param hostEnvironmentId
+     *        A unique identifier for the specific instance of the host platform running the gateway. This value is only
+     *        available for certain host environments, and its format depends on the host environment type.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeGatewayInformationResult withHostEnvironmentId(String hostEnvironmentId) {
+        setHostEnvironmentId(hostEnvironmentId);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1210,7 +1263,9 @@ public class DescribeGatewayInformationResult extends com.amazonaws.AmazonWebSer
         if (getGatewayCapacity() != null)
             sb.append("GatewayCapacity: ").append(getGatewayCapacity()).append(",");
         if (getSupportedGatewayCapacities() != null)
-            sb.append("SupportedGatewayCapacities: ").append(getSupportedGatewayCapacities());
+            sb.append("SupportedGatewayCapacities: ").append(getSupportedGatewayCapacities()).append(",");
+        if (getHostEnvironmentId() != null)
+            sb.append("HostEnvironmentId: ").append(getHostEnvironmentId());
         sb.append("}");
         return sb.toString();
     }
@@ -1305,6 +1360,10 @@ public class DescribeGatewayInformationResult extends com.amazonaws.AmazonWebSer
             return false;
         if (other.getSupportedGatewayCapacities() != null && other.getSupportedGatewayCapacities().equals(this.getSupportedGatewayCapacities()) == false)
             return false;
+        if (other.getHostEnvironmentId() == null ^ this.getHostEnvironmentId() == null)
+            return false;
+        if (other.getHostEnvironmentId() != null && other.getHostEnvironmentId().equals(this.getHostEnvironmentId()) == false)
+            return false;
         return true;
     }
 
@@ -1333,6 +1392,7 @@ public class DescribeGatewayInformationResult extends com.amazonaws.AmazonWebSer
         hashCode = prime * hashCode + ((getDeprecationDate() == null) ? 0 : getDeprecationDate().hashCode());
         hashCode = prime * hashCode + ((getGatewayCapacity() == null) ? 0 : getGatewayCapacity().hashCode());
         hashCode = prime * hashCode + ((getSupportedGatewayCapacities() == null) ? 0 : getSupportedGatewayCapacities().hashCode());
+        hashCode = prime * hashCode + ((getHostEnvironmentId() == null) ? 0 : getHostEnvironmentId().hashCode());
         return hashCode;
     }
 

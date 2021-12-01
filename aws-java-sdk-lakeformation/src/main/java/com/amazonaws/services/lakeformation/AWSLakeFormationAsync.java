@@ -25,9 +25,9 @@ import com.amazonaws.services.lakeformation.model.*;
  * {@link com.amazonaws.services.lakeformation.AbstractAWSLakeFormationAsync} instead.
  * </p>
  * <p>
- * <fullname>AWS Lake Formation</fullname>
+ * <fullname>Lake Formation</fullname>
  * <p>
- * Defines the public endpoint for the AWS Lake Formation service.
+ * Defines the public endpoint for the Lake Formation service.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
@@ -35,7 +35,7 @@ public interface AWSLakeFormationAsync extends AWSLakeFormation {
 
     /**
      * <p>
-     * Attaches one or more tags to an existing resource.
+     * Attaches one or more LF-tags to an existing resource.
      * </p>
      * 
      * @param addLFTagsToResourceRequest
@@ -48,7 +48,7 @@ public interface AWSLakeFormationAsync extends AWSLakeFormation {
 
     /**
      * <p>
-     * Attaches one or more tags to an existing resource.
+     * Attaches one or more LF-tags to an existing resource.
      * </p>
      * 
      * @param addLFTagsToResourceRequest
@@ -128,7 +128,102 @@ public interface AWSLakeFormationAsync extends AWSLakeFormation {
 
     /**
      * <p>
-     * Creates a tag with the specified name and values.
+     * Attempts to cancel the specified transaction. Returns an exception if the transaction was previously committed.
+     * </p>
+     * 
+     * @param cancelTransactionRequest
+     * @return A Java Future containing the result of the CancelTransaction operation returned by the service.
+     * @sample AWSLakeFormationAsync.CancelTransaction
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lakeformation-2017-03-31/CancelTransaction"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CancelTransactionResult> cancelTransactionAsync(CancelTransactionRequest cancelTransactionRequest);
+
+    /**
+     * <p>
+     * Attempts to cancel the specified transaction. Returns an exception if the transaction was previously committed.
+     * </p>
+     * 
+     * @param cancelTransactionRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CancelTransaction operation returned by the service.
+     * @sample AWSLakeFormationAsyncHandler.CancelTransaction
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lakeformation-2017-03-31/CancelTransaction"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CancelTransactionResult> cancelTransactionAsync(CancelTransactionRequest cancelTransactionRequest,
+            com.amazonaws.handlers.AsyncHandler<CancelTransactionRequest, CancelTransactionResult> asyncHandler);
+
+    /**
+     * <p>
+     * Attempts to commit the specified transaction. Returns an exception if the transaction was previously aborted.
+     * This API action is idempotent if called multiple times for the same transaction.
+     * </p>
+     * 
+     * @param commitTransactionRequest
+     * @return A Java Future containing the result of the CommitTransaction operation returned by the service.
+     * @sample AWSLakeFormationAsync.CommitTransaction
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lakeformation-2017-03-31/CommitTransaction"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CommitTransactionResult> commitTransactionAsync(CommitTransactionRequest commitTransactionRequest);
+
+    /**
+     * <p>
+     * Attempts to commit the specified transaction. Returns an exception if the transaction was previously aborted.
+     * This API action is idempotent if called multiple times for the same transaction.
+     * </p>
+     * 
+     * @param commitTransactionRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CommitTransaction operation returned by the service.
+     * @sample AWSLakeFormationAsyncHandler.CommitTransaction
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lakeformation-2017-03-31/CommitTransaction"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CommitTransactionResult> commitTransactionAsync(CommitTransactionRequest commitTransactionRequest,
+            com.amazonaws.handlers.AsyncHandler<CommitTransactionRequest, CommitTransactionResult> asyncHandler);
+
+    /**
+     * <p>
+     * Creates a data cell filter to allow one to grant access to certain columns on certain rows.
+     * </p>
+     * 
+     * @param createDataCellsFilterRequest
+     * @return A Java Future containing the result of the CreateDataCellsFilter operation returned by the service.
+     * @sample AWSLakeFormationAsync.CreateDataCellsFilter
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lakeformation-2017-03-31/CreateDataCellsFilter"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateDataCellsFilterResult> createDataCellsFilterAsync(CreateDataCellsFilterRequest createDataCellsFilterRequest);
+
+    /**
+     * <p>
+     * Creates a data cell filter to allow one to grant access to certain columns on certain rows.
+     * </p>
+     * 
+     * @param createDataCellsFilterRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateDataCellsFilter operation returned by the service.
+     * @sample AWSLakeFormationAsyncHandler.CreateDataCellsFilter
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lakeformation-2017-03-31/CreateDataCellsFilter"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateDataCellsFilterResult> createDataCellsFilterAsync(CreateDataCellsFilterRequest createDataCellsFilterRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateDataCellsFilterRequest, CreateDataCellsFilterResult> asyncHandler);
+
+    /**
+     * <p>
+     * Creates an LF-tag with the specified name and values.
      * </p>
      * 
      * @param createLFTagRequest
@@ -141,7 +236,7 @@ public interface AWSLakeFormationAsync extends AWSLakeFormation {
 
     /**
      * <p>
-     * Creates a tag with the specified name and values.
+     * Creates an LF-tag with the specified name and values.
      * </p>
      * 
      * @param createLFTagRequest
@@ -159,10 +254,41 @@ public interface AWSLakeFormationAsync extends AWSLakeFormation {
 
     /**
      * <p>
-     * Deletes the specified tag key name. If the attribute key does not exist or the tag does not exist, then the
+     * Deletes a data cell filter.
+     * </p>
+     * 
+     * @param deleteDataCellsFilterRequest
+     * @return A Java Future containing the result of the DeleteDataCellsFilter operation returned by the service.
+     * @sample AWSLakeFormationAsync.DeleteDataCellsFilter
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lakeformation-2017-03-31/DeleteDataCellsFilter"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteDataCellsFilterResult> deleteDataCellsFilterAsync(DeleteDataCellsFilterRequest deleteDataCellsFilterRequest);
+
+    /**
+     * <p>
+     * Deletes a data cell filter.
+     * </p>
+     * 
+     * @param deleteDataCellsFilterRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteDataCellsFilter operation returned by the service.
+     * @sample AWSLakeFormationAsyncHandler.DeleteDataCellsFilter
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lakeformation-2017-03-31/DeleteDataCellsFilter"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteDataCellsFilterResult> deleteDataCellsFilterAsync(DeleteDataCellsFilterRequest deleteDataCellsFilterRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteDataCellsFilterRequest, DeleteDataCellsFilterResult> asyncHandler);
+
+    /**
+     * <p>
+     * Deletes the specified LF-tag key name. If the attribute key does not exist or the LF-tag does not exist, then the
      * operation will not do anything. If the attribute key exists, then the operation checks if any resources are
      * tagged with this attribute key, if yes, the API throws a 400 Exception with the message "Delete not allowed" as
-     * the tag key is still attached with resources. You can consider untagging resources with this tag key.
+     * the LF-tag key is still attached with resources. You can consider untagging resources with this LF-tag key.
      * </p>
      * 
      * @param deleteLFTagRequest
@@ -175,10 +301,10 @@ public interface AWSLakeFormationAsync extends AWSLakeFormation {
 
     /**
      * <p>
-     * Deletes the specified tag key name. If the attribute key does not exist or the tag does not exist, then the
+     * Deletes the specified LF-tag key name. If the attribute key does not exist or the LF-tag does not exist, then the
      * operation will not do anything. If the attribute key exists, then the operation checks if any resources are
      * tagged with this attribute key, if yes, the API throws a 400 Exception with the message "Delete not allowed" as
-     * the tag key is still attached with resources. You can consider untagging resources with this tag key.
+     * the LF-tag key is still attached with resources. You can consider untagging resources with this LF-tag key.
      * </p>
      * 
      * @param deleteLFTagRequest
@@ -193,6 +319,53 @@ public interface AWSLakeFormationAsync extends AWSLakeFormation {
      */
     java.util.concurrent.Future<DeleteLFTagResult> deleteLFTagAsync(DeleteLFTagRequest deleteLFTagRequest,
             com.amazonaws.handlers.AsyncHandler<DeleteLFTagRequest, DeleteLFTagResult> asyncHandler);
+
+    /**
+     * <p>
+     * For a specific governed table, provides a list of Amazon S3 objects that will be written during the current
+     * transaction and that can be automatically deleted if the transaction is canceled. Without this call, no Amazon S3
+     * objects are automatically deleted when a transaction cancels.
+     * </p>
+     * <p>
+     * The Glue ETL library function <code>write_dynamic_frame.from_catalog()</code> includes an option to automatically
+     * call <code>DeleteObjectsOnCancel</code> before writes. For more information, see <a href=
+     * "https://docs.aws.amazon.com/lake-formation/latest/dg/transactions-data-operations.html#rolling-back-writes"
+     * >Rolling Back Amazon S3 Writes</a>.
+     * </p>
+     * 
+     * @param deleteObjectsOnCancelRequest
+     * @return A Java Future containing the result of the DeleteObjectsOnCancel operation returned by the service.
+     * @sample AWSLakeFormationAsync.DeleteObjectsOnCancel
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lakeformation-2017-03-31/DeleteObjectsOnCancel"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteObjectsOnCancelResult> deleteObjectsOnCancelAsync(DeleteObjectsOnCancelRequest deleteObjectsOnCancelRequest);
+
+    /**
+     * <p>
+     * For a specific governed table, provides a list of Amazon S3 objects that will be written during the current
+     * transaction and that can be automatically deleted if the transaction is canceled. Without this call, no Amazon S3
+     * objects are automatically deleted when a transaction cancels.
+     * </p>
+     * <p>
+     * The Glue ETL library function <code>write_dynamic_frame.from_catalog()</code> includes an option to automatically
+     * call <code>DeleteObjectsOnCancel</code> before writes. For more information, see <a href=
+     * "https://docs.aws.amazon.com/lake-formation/latest/dg/transactions-data-operations.html#rolling-back-writes"
+     * >Rolling Back Amazon S3 Writes</a>.
+     * </p>
+     * 
+     * @param deleteObjectsOnCancelRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteObjectsOnCancel operation returned by the service.
+     * @sample AWSLakeFormationAsyncHandler.DeleteObjectsOnCancel
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lakeformation-2017-03-31/DeleteObjectsOnCancel"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteObjectsOnCancelResult> deleteObjectsOnCancelAsync(DeleteObjectsOnCancelRequest deleteObjectsOnCancelRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteObjectsOnCancelRequest, DeleteObjectsOnCancelResult> asyncHandler);
 
     /**
      * <p>
@@ -235,7 +408,7 @@ public interface AWSLakeFormationAsync extends AWSLakeFormation {
 
     /**
      * <p>
-     * Retrieves the current data access role for the given resource registered in AWS Lake Formation.
+     * Retrieves the current data access role for the given resource registered in Lake Formation.
      * </p>
      * 
      * @param describeResourceRequest
@@ -248,7 +421,7 @@ public interface AWSLakeFormationAsync extends AWSLakeFormation {
 
     /**
      * <p>
-     * Retrieves the current data access role for the given resource registered in AWS Lake Formation.
+     * Retrieves the current data access role for the given resource registered in Lake Formation.
      * </p>
      * 
      * @param describeResourceRequest
@@ -263,6 +436,76 @@ public interface AWSLakeFormationAsync extends AWSLakeFormation {
      */
     java.util.concurrent.Future<DescribeResourceResult> describeResourceAsync(DescribeResourceRequest describeResourceRequest,
             com.amazonaws.handlers.AsyncHandler<DescribeResourceRequest, DescribeResourceResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns the details of a single transaction.
+     * </p>
+     * 
+     * @param describeTransactionRequest
+     * @return A Java Future containing the result of the DescribeTransaction operation returned by the service.
+     * @sample AWSLakeFormationAsync.DescribeTransaction
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lakeformation-2017-03-31/DescribeTransaction"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeTransactionResult> describeTransactionAsync(DescribeTransactionRequest describeTransactionRequest);
+
+    /**
+     * <p>
+     * Returns the details of a single transaction.
+     * </p>
+     * 
+     * @param describeTransactionRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeTransaction operation returned by the service.
+     * @sample AWSLakeFormationAsyncHandler.DescribeTransaction
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lakeformation-2017-03-31/DescribeTransaction"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeTransactionResult> describeTransactionAsync(DescribeTransactionRequest describeTransactionRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeTransactionRequest, DescribeTransactionResult> asyncHandler);
+
+    /**
+     * <p>
+     * Indicates to the service that the specified transaction is still active and should not be treated as idle and
+     * aborted.
+     * </p>
+     * <p>
+     * Write transactions that remain idle for a long period are automatically aborted unless explicitly extended.
+     * </p>
+     * 
+     * @param extendTransactionRequest
+     * @return A Java Future containing the result of the ExtendTransaction operation returned by the service.
+     * @sample AWSLakeFormationAsync.ExtendTransaction
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lakeformation-2017-03-31/ExtendTransaction"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ExtendTransactionResult> extendTransactionAsync(ExtendTransactionRequest extendTransactionRequest);
+
+    /**
+     * <p>
+     * Indicates to the service that the specified transaction is still active and should not be treated as idle and
+     * aborted.
+     * </p>
+     * <p>
+     * Write transactions that remain idle for a long period are automatically aborted unless explicitly extended.
+     * </p>
+     * 
+     * @param extendTransactionRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ExtendTransaction operation returned by the service.
+     * @sample AWSLakeFormationAsyncHandler.ExtendTransaction
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lakeformation-2017-03-31/ExtendTransaction"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ExtendTransactionResult> extendTransactionAsync(ExtendTransactionRequest extendTransactionRequest,
+            com.amazonaws.handlers.AsyncHandler<ExtendTransactionRequest, ExtendTransactionResult> asyncHandler);
 
     /**
      * <p>
@@ -334,7 +577,7 @@ public interface AWSLakeFormationAsync extends AWSLakeFormation {
 
     /**
      * <p>
-     * Returns a tag definition.
+     * Returns an LF-tag definition.
      * </p>
      * 
      * @param getLFTagRequest
@@ -347,7 +590,7 @@ public interface AWSLakeFormationAsync extends AWSLakeFormation {
 
     /**
      * <p>
-     * Returns a tag definition.
+     * Returns an LF-tag definition.
      * </p>
      * 
      * @param getLFTagRequest
@@ -365,7 +608,73 @@ public interface AWSLakeFormationAsync extends AWSLakeFormation {
 
     /**
      * <p>
-     * Returns the tags applied to a resource.
+     * Returns the state of a query previously submitted. Clients are expected to poll <code>GetQueryState</code> to
+     * monitor the current state of the planning before retrieving the work units. A query state is only visible to the
+     * principal that made the initial call to <code>StartQueryPlanning</code>.
+     * </p>
+     * 
+     * @param getQueryStateRequest
+     * @return A Java Future containing the result of the GetQueryState operation returned by the service.
+     * @sample AWSLakeFormationAsync.GetQueryState
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lakeformation-2017-03-31/GetQueryState" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<GetQueryStateResult> getQueryStateAsync(GetQueryStateRequest getQueryStateRequest);
+
+    /**
+     * <p>
+     * Returns the state of a query previously submitted. Clients are expected to poll <code>GetQueryState</code> to
+     * monitor the current state of the planning before retrieving the work units. A query state is only visible to the
+     * principal that made the initial call to <code>StartQueryPlanning</code>.
+     * </p>
+     * 
+     * @param getQueryStateRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetQueryState operation returned by the service.
+     * @sample AWSLakeFormationAsyncHandler.GetQueryState
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lakeformation-2017-03-31/GetQueryState" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<GetQueryStateResult> getQueryStateAsync(GetQueryStateRequest getQueryStateRequest,
+            com.amazonaws.handlers.AsyncHandler<GetQueryStateRequest, GetQueryStateResult> asyncHandler);
+
+    /**
+     * <p>
+     * Retrieves statistics on the planning and execution of a query.
+     * </p>
+     * 
+     * @param getQueryStatisticsRequest
+     * @return A Java Future containing the result of the GetQueryStatistics operation returned by the service.
+     * @sample AWSLakeFormationAsync.GetQueryStatistics
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lakeformation-2017-03-31/GetQueryStatistics"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetQueryStatisticsResult> getQueryStatisticsAsync(GetQueryStatisticsRequest getQueryStatisticsRequest);
+
+    /**
+     * <p>
+     * Retrieves statistics on the planning and execution of a query.
+     * </p>
+     * 
+     * @param getQueryStatisticsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetQueryStatistics operation returned by the service.
+     * @sample AWSLakeFormationAsyncHandler.GetQueryStatistics
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lakeformation-2017-03-31/GetQueryStatistics"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetQueryStatisticsResult> getQueryStatisticsAsync(GetQueryStatisticsRequest getQueryStatisticsRequest,
+            com.amazonaws.handlers.AsyncHandler<GetQueryStatisticsRequest, GetQueryStatisticsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns the LF-tags applied to a resource.
      * </p>
      * 
      * @param getResourceLFTagsRequest
@@ -378,7 +687,7 @@ public interface AWSLakeFormationAsync extends AWSLakeFormation {
 
     /**
      * <p>
-     * Returns the tags applied to a resource.
+     * Returns the LF-tags applied to a resource.
      * </p>
      * 
      * @param getResourceLFTagsRequest
@@ -393,6 +702,101 @@ public interface AWSLakeFormationAsync extends AWSLakeFormation {
      */
     java.util.concurrent.Future<GetResourceLFTagsResult> getResourceLFTagsAsync(GetResourceLFTagsRequest getResourceLFTagsRequest,
             com.amazonaws.handlers.AsyncHandler<GetResourceLFTagsRequest, GetResourceLFTagsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns the set of Amazon S3 objects that make up the specified governed table. A transaction ID or timestamp can
+     * be specified for time-travel queries.
+     * </p>
+     * 
+     * @param getTableObjectsRequest
+     * @return A Java Future containing the result of the GetTableObjects operation returned by the service.
+     * @sample AWSLakeFormationAsync.GetTableObjects
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lakeformation-2017-03-31/GetTableObjects" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<GetTableObjectsResult> getTableObjectsAsync(GetTableObjectsRequest getTableObjectsRequest);
+
+    /**
+     * <p>
+     * Returns the set of Amazon S3 objects that make up the specified governed table. A transaction ID or timestamp can
+     * be specified for time-travel queries.
+     * </p>
+     * 
+     * @param getTableObjectsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetTableObjects operation returned by the service.
+     * @sample AWSLakeFormationAsyncHandler.GetTableObjects
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lakeformation-2017-03-31/GetTableObjects" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<GetTableObjectsResult> getTableObjectsAsync(GetTableObjectsRequest getTableObjectsRequest,
+            com.amazonaws.handlers.AsyncHandler<GetTableObjectsRequest, GetTableObjectsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns the work units resulting from the query. Work units can be executed in any order and in parallel.
+     * </p>
+     * 
+     * @param getWorkUnitResultsRequest
+     * @return A Java Future containing the result of the GetWorkUnitResults operation returned by the service.
+     * @sample AWSLakeFormationAsync.GetWorkUnitResults
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lakeformation-2017-03-31/GetWorkUnitResults"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetWorkUnitResultsResult> getWorkUnitResultsAsync(GetWorkUnitResultsRequest getWorkUnitResultsRequest);
+
+    /**
+     * <p>
+     * Returns the work units resulting from the query. Work units can be executed in any order and in parallel.
+     * </p>
+     * 
+     * @param getWorkUnitResultsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetWorkUnitResults operation returned by the service.
+     * @sample AWSLakeFormationAsyncHandler.GetWorkUnitResults
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lakeformation-2017-03-31/GetWorkUnitResults"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<GetWorkUnitResultsResult> getWorkUnitResultsAsync(GetWorkUnitResultsRequest getWorkUnitResultsRequest,
+            com.amazonaws.handlers.AsyncHandler<GetWorkUnitResultsRequest, GetWorkUnitResultsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Retrieves the work units generated by the <code>StartQueryPlanning</code> operation.
+     * </p>
+     * 
+     * @param getWorkUnitsRequest
+     * @return A Java Future containing the result of the GetWorkUnits operation returned by the service.
+     * @sample AWSLakeFormationAsync.GetWorkUnits
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lakeformation-2017-03-31/GetWorkUnits" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetWorkUnitsResult> getWorkUnitsAsync(GetWorkUnitsRequest getWorkUnitsRequest);
+
+    /**
+     * <p>
+     * Retrieves the work units generated by the <code>StartQueryPlanning</code> operation.
+     * </p>
+     * 
+     * @param getWorkUnitsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetWorkUnits operation returned by the service.
+     * @sample AWSLakeFormationAsyncHandler.GetWorkUnits
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lakeformation-2017-03-31/GetWorkUnits" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetWorkUnitsResult> getWorkUnitsAsync(GetWorkUnitsRequest getWorkUnitsRequest,
+            com.amazonaws.handlers.AsyncHandler<GetWorkUnitsRequest, GetWorkUnitsResult> asyncHandler);
 
     /**
      * <p>
@@ -439,7 +843,38 @@ public interface AWSLakeFormationAsync extends AWSLakeFormation {
 
     /**
      * <p>
-     * Lists tags that the requester has permission to view.
+     * Lists all the data cell filters on a table.
+     * </p>
+     * 
+     * @param listDataCellsFilterRequest
+     * @return A Java Future containing the result of the ListDataCellsFilter operation returned by the service.
+     * @sample AWSLakeFormationAsync.ListDataCellsFilter
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lakeformation-2017-03-31/ListDataCellsFilter"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListDataCellsFilterResult> listDataCellsFilterAsync(ListDataCellsFilterRequest listDataCellsFilterRequest);
+
+    /**
+     * <p>
+     * Lists all the data cell filters on a table.
+     * </p>
+     * 
+     * @param listDataCellsFilterRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListDataCellsFilter operation returned by the service.
+     * @sample AWSLakeFormationAsyncHandler.ListDataCellsFilter
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lakeformation-2017-03-31/ListDataCellsFilter"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListDataCellsFilterResult> listDataCellsFilterAsync(ListDataCellsFilterRequest listDataCellsFilterRequest,
+            com.amazonaws.handlers.AsyncHandler<ListDataCellsFilterRequest, ListDataCellsFilterResult> asyncHandler);
+
+    /**
+     * <p>
+     * Lists LF-tags that the requester has permission to view.
      * </p>
      * 
      * @param listLFTagsRequest
@@ -452,7 +887,7 @@ public interface AWSLakeFormationAsync extends AWSLakeFormation {
 
     /**
      * <p>
-     * Lists tags that the requester has permission to view.
+     * Lists LF-tags that the requester has permission to view.
      * </p>
      * 
      * @param listLFTagsRequest
@@ -550,6 +985,78 @@ public interface AWSLakeFormationAsync extends AWSLakeFormation {
 
     /**
      * <p>
+     * Returns the configuration of all storage optimizers associated with a specified table.
+     * </p>
+     * 
+     * @param listTableStorageOptimizersRequest
+     * @return A Java Future containing the result of the ListTableStorageOptimizers operation returned by the service.
+     * @sample AWSLakeFormationAsync.ListTableStorageOptimizers
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lakeformation-2017-03-31/ListTableStorageOptimizers"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListTableStorageOptimizersResult> listTableStorageOptimizersAsync(
+            ListTableStorageOptimizersRequest listTableStorageOptimizersRequest);
+
+    /**
+     * <p>
+     * Returns the configuration of all storage optimizers associated with a specified table.
+     * </p>
+     * 
+     * @param listTableStorageOptimizersRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListTableStorageOptimizers operation returned by the service.
+     * @sample AWSLakeFormationAsyncHandler.ListTableStorageOptimizers
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lakeformation-2017-03-31/ListTableStorageOptimizers"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ListTableStorageOptimizersResult> listTableStorageOptimizersAsync(
+            ListTableStorageOptimizersRequest listTableStorageOptimizersRequest,
+            com.amazonaws.handlers.AsyncHandler<ListTableStorageOptimizersRequest, ListTableStorageOptimizersResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns metadata about transactions and their status. To prevent the response from growing indefinitely, only
+     * uncommitted transactions and those available for time-travel queries are returned.
+     * </p>
+     * <p>
+     * This operation can help you identify uncommitted transactions or to get information about transactions.
+     * </p>
+     * 
+     * @param listTransactionsRequest
+     * @return A Java Future containing the result of the ListTransactions operation returned by the service.
+     * @sample AWSLakeFormationAsync.ListTransactions
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lakeformation-2017-03-31/ListTransactions" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListTransactionsResult> listTransactionsAsync(ListTransactionsRequest listTransactionsRequest);
+
+    /**
+     * <p>
+     * Returns metadata about transactions and their status. To prevent the response from growing indefinitely, only
+     * uncommitted transactions and those available for time-travel queries are returned.
+     * </p>
+     * <p>
+     * This operation can help you identify uncommitted transactions or to get information about transactions.
+     * </p>
+     * 
+     * @param listTransactionsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListTransactions operation returned by the service.
+     * @sample AWSLakeFormationAsyncHandler.ListTransactions
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lakeformation-2017-03-31/ListTransactions" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListTransactionsResult> listTransactionsAsync(ListTransactionsRequest listTransactionsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListTransactionsRequest, ListTransactionsResult> asyncHandler);
+
+    /**
+     * <p>
      * Sets the list of data lake administrators who have admin privileges on all resources managed by Lake Formation.
      * For more information on admin privileges, see <a
      * href="https://docs.aws.amazon.com/lake-formation/latest/dg/lake-formation-permissions.html">Granting Lake
@@ -605,8 +1112,8 @@ public interface AWSLakeFormationAsync extends AWSLakeFormation {
      * you register subsequent paths, Lake Formation adds the path to the existing policy.
      * </p>
      * <p>
-     * The following request registers a new location and gives AWS Lake Formation permission to use the service-linked
-     * role to access that location.
+     * The following request registers a new location and gives Lake Formation permission to use the service-linked role
+     * to access that location.
      * </p>
      * <p>
      * <code>ResourceArn = arn:aws:s3:::my-bucket UseServiceLinkedRole = true</code>
@@ -638,8 +1145,8 @@ public interface AWSLakeFormationAsync extends AWSLakeFormation {
      * you register subsequent paths, Lake Formation adds the path to the existing policy.
      * </p>
      * <p>
-     * The following request registers a new location and gives AWS Lake Formation permission to use the service-linked
-     * role to access that location.
+     * The following request registers a new location and gives Lake Formation permission to use the service-linked role
+     * to access that location.
      * </p>
      * <p>
      * <code>ResourceArn = arn:aws:s3:::my-bucket UseServiceLinkedRole = true</code>
@@ -666,8 +1173,8 @@ public interface AWSLakeFormationAsync extends AWSLakeFormation {
 
     /**
      * <p>
-     * Removes a tag from the resource. Only database, table, or tableWithColumns resource are allowed. To tag columns,
-     * use the column inclusion list in <code>tableWithColumns</code> to specify column input.
+     * Removes an LF-tag from the resource. Only database, table, or tableWithColumns resource are allowed. To tag
+     * columns, use the column inclusion list in <code>tableWithColumns</code> to specify column input.
      * </p>
      * 
      * @param removeLFTagsFromResourceRequest
@@ -680,8 +1187,8 @@ public interface AWSLakeFormationAsync extends AWSLakeFormation {
 
     /**
      * <p>
-     * Removes a tag from the resource. Only database, table, or tableWithColumns resource are allowed. To tag columns,
-     * use the column inclusion list in <code>tableWithColumns</code> to specify column input.
+     * Removes an LF-tag from the resource. Only database, table, or tableWithColumns resource are allowed. To tag
+     * columns, use the column inclusion list in <code>tableWithColumns</code> to specify column input.
      * </p>
      * 
      * @param removeLFTagsFromResourceRequest
@@ -770,7 +1277,7 @@ public interface AWSLakeFormationAsync extends AWSLakeFormation {
     /**
      * <p>
      * This operation allows a search on <code>TABLE</code> resources by <code>LFTag</code>s. This will be used by
-     * admins who want to grant user permissions on certain LFTags. Before making a grant, the admin can use
+     * admins who want to grant user permissions on certain LF-tags. Before making a grant, the admin can use
      * <code>SearchTablesByLFTags</code> to find all resources where the given <code>LFTag</code>s are valid to verify
      * whether the returned resources can be shared.
      * </p>
@@ -786,7 +1293,7 @@ public interface AWSLakeFormationAsync extends AWSLakeFormation {
     /**
      * <p>
      * This operation allows a search on <code>TABLE</code> resources by <code>LFTag</code>s. This will be used by
-     * admins who want to grant user permissions on certain LFTags. Before making a grant, the admin can use
+     * admins who want to grant user permissions on certain LF-tags. Before making a grant, the admin can use
      * <code>SearchTablesByLFTags</code> to find all resources where the given <code>LFTag</code>s are valid to verify
      * whether the returned resources can be shared.
      * </p>
@@ -806,10 +1313,82 @@ public interface AWSLakeFormationAsync extends AWSLakeFormation {
 
     /**
      * <p>
-     * Updates the list of possible values for the specified tag key. If the tag does not exist, the operation throws an
-     * EntityNotFoundException. The values in the delete key values will be deleted from list of possible values. If any
-     * value in the delete key values is attached to a resource, then API errors out with a 400 Exception -
-     * "Update not allowed". Untag the attribute before deleting the tag key's value.
+     * Submits a request to process a query statement.
+     * </p>
+     * <p>
+     * This operation generates work units that can be retrieved with the <code>GetWorkUnits</code> operation as soon as
+     * the query state is WORKUNITS_AVAILABLE or FINISHED.
+     * </p>
+     * 
+     * @param startQueryPlanningRequest
+     * @return A Java Future containing the result of the StartQueryPlanning operation returned by the service.
+     * @sample AWSLakeFormationAsync.StartQueryPlanning
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lakeformation-2017-03-31/StartQueryPlanning"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<StartQueryPlanningResult> startQueryPlanningAsync(StartQueryPlanningRequest startQueryPlanningRequest);
+
+    /**
+     * <p>
+     * Submits a request to process a query statement.
+     * </p>
+     * <p>
+     * This operation generates work units that can be retrieved with the <code>GetWorkUnits</code> operation as soon as
+     * the query state is WORKUNITS_AVAILABLE or FINISHED.
+     * </p>
+     * 
+     * @param startQueryPlanningRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the StartQueryPlanning operation returned by the service.
+     * @sample AWSLakeFormationAsyncHandler.StartQueryPlanning
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lakeformation-2017-03-31/StartQueryPlanning"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<StartQueryPlanningResult> startQueryPlanningAsync(StartQueryPlanningRequest startQueryPlanningRequest,
+            com.amazonaws.handlers.AsyncHandler<StartQueryPlanningRequest, StartQueryPlanningResult> asyncHandler);
+
+    /**
+     * <p>
+     * Starts a new transaction and returns its transaction ID. Transaction IDs are opaque objects that you can use to
+     * identify a transaction.
+     * </p>
+     * 
+     * @param startTransactionRequest
+     * @return A Java Future containing the result of the StartTransaction operation returned by the service.
+     * @sample AWSLakeFormationAsync.StartTransaction
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lakeformation-2017-03-31/StartTransaction" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<StartTransactionResult> startTransactionAsync(StartTransactionRequest startTransactionRequest);
+
+    /**
+     * <p>
+     * Starts a new transaction and returns its transaction ID. Transaction IDs are opaque objects that you can use to
+     * identify a transaction.
+     * </p>
+     * 
+     * @param startTransactionRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the StartTransaction operation returned by the service.
+     * @sample AWSLakeFormationAsyncHandler.StartTransaction
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lakeformation-2017-03-31/StartTransaction" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<StartTransactionResult> startTransactionAsync(StartTransactionRequest startTransactionRequest,
+            com.amazonaws.handlers.AsyncHandler<StartTransactionRequest, StartTransactionResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates the list of possible values for the specified LF-tag key. If the LF-tag does not exist, the operation
+     * throws an EntityNotFoundException. The values in the delete key values will be deleted from list of possible
+     * values. If any value in the delete key values is attached to a resource, then API errors out with a 400 Exception
+     * - "Update not allowed". Untag the attribute before deleting the LF-tag key's value.
      * </p>
      * 
      * @param updateLFTagRequest
@@ -822,10 +1401,10 @@ public interface AWSLakeFormationAsync extends AWSLakeFormation {
 
     /**
      * <p>
-     * Updates the list of possible values for the specified tag key. If the tag does not exist, the operation throws an
-     * EntityNotFoundException. The values in the delete key values will be deleted from list of possible values. If any
-     * value in the delete key values is attached to a resource, then API errors out with a 400 Exception -
-     * "Update not allowed". Untag the attribute before deleting the tag key's value.
+     * Updates the list of possible values for the specified LF-tag key. If the LF-tag does not exist, the operation
+     * throws an EntityNotFoundException. The values in the delete key values will be deleted from list of possible
+     * values. If any value in the delete key values is attached to a resource, then API errors out with a 400 Exception
+     * - "Update not allowed". Untag the attribute before deleting the LF-tag key's value.
      * </p>
      * 
      * @param updateLFTagRequest
@@ -843,7 +1422,7 @@ public interface AWSLakeFormationAsync extends AWSLakeFormation {
 
     /**
      * <p>
-     * Updates the data access role used for vending access to the given (registered) resource in AWS Lake Formation.
+     * Updates the data access role used for vending access to the given (registered) resource in Lake Formation.
      * </p>
      * 
      * @param updateResourceRequest
@@ -856,7 +1435,7 @@ public interface AWSLakeFormationAsync extends AWSLakeFormation {
 
     /**
      * <p>
-     * Updates the data access role used for vending access to the given (registered) resource in AWS Lake Formation.
+     * Updates the data access role used for vending access to the given (registered) resource in Lake Formation.
      * </p>
      * 
      * @param updateResourceRequest
@@ -871,5 +1450,69 @@ public interface AWSLakeFormationAsync extends AWSLakeFormation {
      */
     java.util.concurrent.Future<UpdateResourceResult> updateResourceAsync(UpdateResourceRequest updateResourceRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateResourceRequest, UpdateResourceResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates the manifest of Amazon S3 objects that make up the specified governed table.
+     * </p>
+     * 
+     * @param updateTableObjectsRequest
+     * @return A Java Future containing the result of the UpdateTableObjects operation returned by the service.
+     * @sample AWSLakeFormationAsync.UpdateTableObjects
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lakeformation-2017-03-31/UpdateTableObjects"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateTableObjectsResult> updateTableObjectsAsync(UpdateTableObjectsRequest updateTableObjectsRequest);
+
+    /**
+     * <p>
+     * Updates the manifest of Amazon S3 objects that make up the specified governed table.
+     * </p>
+     * 
+     * @param updateTableObjectsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateTableObjects operation returned by the service.
+     * @sample AWSLakeFormationAsyncHandler.UpdateTableObjects
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lakeformation-2017-03-31/UpdateTableObjects"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateTableObjectsResult> updateTableObjectsAsync(UpdateTableObjectsRequest updateTableObjectsRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateTableObjectsRequest, UpdateTableObjectsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates the configuration of the storage optimizers for a table.
+     * </p>
+     * 
+     * @param updateTableStorageOptimizerRequest
+     * @return A Java Future containing the result of the UpdateTableStorageOptimizer operation returned by the service.
+     * @sample AWSLakeFormationAsync.UpdateTableStorageOptimizer
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lakeformation-2017-03-31/UpdateTableStorageOptimizer"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateTableStorageOptimizerResult> updateTableStorageOptimizerAsync(
+            UpdateTableStorageOptimizerRequest updateTableStorageOptimizerRequest);
+
+    /**
+     * <p>
+     * Updates the configuration of the storage optimizers for a table.
+     * </p>
+     * 
+     * @param updateTableStorageOptimizerRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateTableStorageOptimizer operation returned by the service.
+     * @sample AWSLakeFormationAsyncHandler.UpdateTableStorageOptimizer
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lakeformation-2017-03-31/UpdateTableStorageOptimizer"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateTableStorageOptimizerResult> updateTableStorageOptimizerAsync(
+            UpdateTableStorageOptimizerRequest updateTableStorageOptimizerRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateTableStorageOptimizerRequest, UpdateTableStorageOptimizerResult> asyncHandler);
 
 }

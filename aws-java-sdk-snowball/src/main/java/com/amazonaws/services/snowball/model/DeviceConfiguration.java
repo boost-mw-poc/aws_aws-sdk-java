@@ -30,18 +30,18 @@ public class DeviceConfiguration implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * Returns information about the device configuration for an AWS Snowcone job.
+     * Returns information about the device configuration for an Snowcone job.
      * </p>
      */
     private SnowconeDeviceConfiguration snowconeDeviceConfiguration;
 
     /**
      * <p>
-     * Returns information about the device configuration for an AWS Snowcone job.
+     * Returns information about the device configuration for an Snowcone job.
      * </p>
      * 
      * @param snowconeDeviceConfiguration
-     *        Returns information about the device configuration for an AWS Snowcone job.
+     *        Returns information about the device configuration for an Snowcone job.
      */
 
     public void setSnowconeDeviceConfiguration(SnowconeDeviceConfiguration snowconeDeviceConfiguration) {
@@ -50,10 +50,10 @@ public class DeviceConfiguration implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * Returns information about the device configuration for an AWS Snowcone job.
+     * Returns information about the device configuration for an Snowcone job.
      * </p>
      * 
-     * @return Returns information about the device configuration for an AWS Snowcone job.
+     * @return Returns information about the device configuration for an Snowcone job.
      */
 
     public SnowconeDeviceConfiguration getSnowconeDeviceConfiguration() {
@@ -62,11 +62,11 @@ public class DeviceConfiguration implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * Returns information about the device configuration for an AWS Snowcone job.
+     * Returns information about the device configuration for an Snowcone job.
      * </p>
      * 
      * @param snowconeDeviceConfiguration
-     *        Returns information about the device configuration for an AWS Snowcone job.
+     *        Returns information about the device configuration for an Snowcone job.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A structure containing the name of a column resource and the tags attached to it.
+ * A structure containing the name of a column resource and the LF-tags attached to it.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lakeformation-2017-03-31/ColumnLFTag" target="_top">AWS API
@@ -36,7 +36,7 @@ public class ColumnLFTag implements Serializable, Cloneable, StructuredPojo {
     private String name;
     /**
      * <p>
-     * The tags attached to a column resource.
+     * The LF-tags attached to a column resource.
      * </p>
      */
     private java.util.List<LFTagPair> lFTags;
@@ -83,10 +83,10 @@ public class ColumnLFTag implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The tags attached to a column resource.
+     * The LF-tags attached to a column resource.
      * </p>
      * 
-     * @return The tags attached to a column resource.
+     * @return The LF-tags attached to a column resource.
      */
 
     public java.util.List<LFTagPair> getLFTags() {
@@ -95,11 +95,11 @@ public class ColumnLFTag implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The tags attached to a column resource.
+     * The LF-tags attached to a column resource.
      * </p>
      * 
      * @param lFTags
-     *        The tags attached to a column resource.
+     *        The LF-tags attached to a column resource.
      */
 
     public void setLFTags(java.util.Collection<LFTagPair> lFTags) {
@@ -113,7 +113,7 @@ public class ColumnLFTag implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The tags attached to a column resource.
+     * The LF-tags attached to a column resource.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -122,7 +122,7 @@ public class ColumnLFTag implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param lFTags
-     *        The tags attached to a column resource.
+     *        The LF-tags attached to a column resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -138,11 +138,11 @@ public class ColumnLFTag implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The tags attached to a column resource.
+     * The LF-tags attached to a column resource.
      * </p>
      * 
      * @param lFTags
-     *        The tags attached to a column resource.
+     *        The LF-tags attached to a column resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

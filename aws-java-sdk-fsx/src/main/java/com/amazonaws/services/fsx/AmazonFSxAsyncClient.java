@@ -207,6 +207,41 @@ public class AmazonFSxAsyncClient extends AmazonFSxClient implements AmazonFSxAs
     }
 
     @Override
+    public java.util.concurrent.Future<CreateDataRepositoryAssociationResult> createDataRepositoryAssociationAsync(
+            CreateDataRepositoryAssociationRequest request) {
+
+        return createDataRepositoryAssociationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateDataRepositoryAssociationResult> createDataRepositoryAssociationAsync(
+            final CreateDataRepositoryAssociationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateDataRepositoryAssociationRequest, CreateDataRepositoryAssociationResult> asyncHandler) {
+        final CreateDataRepositoryAssociationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateDataRepositoryAssociationResult>() {
+            @Override
+            public CreateDataRepositoryAssociationResult call() throws Exception {
+                CreateDataRepositoryAssociationResult result = null;
+
+                try {
+                    result = executeCreateDataRepositoryAssociation(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateDataRepositoryTaskResult> createDataRepositoryTaskAsync(CreateDataRepositoryTaskRequest request) {
 
         return createDataRepositoryTaskAsync(request, null);
@@ -290,6 +325,39 @@ public class AmazonFSxAsyncClient extends AmazonFSxClient implements AmazonFSxAs
 
                 try {
                     result = executeCreateFileSystemFromBackup(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateSnapshotResult> createSnapshotAsync(CreateSnapshotRequest request) {
+
+        return createSnapshotAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateSnapshotResult> createSnapshotAsync(final CreateSnapshotRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateSnapshotRequest, CreateSnapshotResult> asyncHandler) {
+        final CreateSnapshotRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateSnapshotResult>() {
+            @Override
+            public CreateSnapshotResult call() throws Exception {
+                CreateSnapshotResult result = null;
+
+                try {
+                    result = executeCreateSnapshot(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -438,6 +506,41 @@ public class AmazonFSxAsyncClient extends AmazonFSxClient implements AmazonFSxAs
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteDataRepositoryAssociationResult> deleteDataRepositoryAssociationAsync(
+            DeleteDataRepositoryAssociationRequest request) {
+
+        return deleteDataRepositoryAssociationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteDataRepositoryAssociationResult> deleteDataRepositoryAssociationAsync(
+            final DeleteDataRepositoryAssociationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteDataRepositoryAssociationRequest, DeleteDataRepositoryAssociationResult> asyncHandler) {
+        final DeleteDataRepositoryAssociationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteDataRepositoryAssociationResult>() {
+            @Override
+            public DeleteDataRepositoryAssociationResult call() throws Exception {
+                DeleteDataRepositoryAssociationResult result = null;
+
+                try {
+                    result = executeDeleteDataRepositoryAssociation(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteFileSystemResult> deleteFileSystemAsync(DeleteFileSystemRequest request) {
 
         return deleteFileSystemAsync(request, null);
@@ -455,6 +558,39 @@ public class AmazonFSxAsyncClient extends AmazonFSxClient implements AmazonFSxAs
 
                 try {
                     result = executeDeleteFileSystem(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteSnapshotResult> deleteSnapshotAsync(DeleteSnapshotRequest request) {
+
+        return deleteSnapshotAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteSnapshotResult> deleteSnapshotAsync(final DeleteSnapshotRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteSnapshotRequest, DeleteSnapshotResult> asyncHandler) {
+        final DeleteSnapshotRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteSnapshotResult>() {
+            @Override
+            public DeleteSnapshotResult call() throws Exception {
+                DeleteSnapshotResult result = null;
+
+                try {
+                    result = executeDeleteSnapshot(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -570,6 +706,41 @@ public class AmazonFSxAsyncClient extends AmazonFSxClient implements AmazonFSxAs
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeDataRepositoryAssociationsResult> describeDataRepositoryAssociationsAsync(
+            DescribeDataRepositoryAssociationsRequest request) {
+
+        return describeDataRepositoryAssociationsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeDataRepositoryAssociationsResult> describeDataRepositoryAssociationsAsync(
+            final DescribeDataRepositoryAssociationsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeDataRepositoryAssociationsRequest, DescribeDataRepositoryAssociationsResult> asyncHandler) {
+        final DescribeDataRepositoryAssociationsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeDataRepositoryAssociationsResult>() {
+            @Override
+            public DescribeDataRepositoryAssociationsResult call() throws Exception {
+                DescribeDataRepositoryAssociationsResult result = null;
+
+                try {
+                    result = executeDescribeDataRepositoryAssociations(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeDataRepositoryTasksResult> describeDataRepositoryTasksAsync(DescribeDataRepositoryTasksRequest request) {
 
         return describeDataRepositoryTasksAsync(request, null);
@@ -653,6 +824,39 @@ public class AmazonFSxAsyncClient extends AmazonFSxClient implements AmazonFSxAs
 
                 try {
                     result = executeDescribeFileSystems(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeSnapshotsResult> describeSnapshotsAsync(DescribeSnapshotsRequest request) {
+
+        return describeSnapshotsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeSnapshotsResult> describeSnapshotsAsync(final DescribeSnapshotsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeSnapshotsRequest, DescribeSnapshotsResult> asyncHandler) {
+        final DescribeSnapshotsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeSnapshotsResult>() {
+            @Override
+            public DescribeSnapshotsResult call() throws Exception {
+                DescribeSnapshotsResult result = null;
+
+                try {
+                    result = executeDescribeSnapshots(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -803,6 +1007,72 @@ public class AmazonFSxAsyncClient extends AmazonFSxClient implements AmazonFSxAs
     }
 
     @Override
+    public java.util.concurrent.Future<ReleaseFileSystemNfsV3LocksResult> releaseFileSystemNfsV3LocksAsync(ReleaseFileSystemNfsV3LocksRequest request) {
+
+        return releaseFileSystemNfsV3LocksAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ReleaseFileSystemNfsV3LocksResult> releaseFileSystemNfsV3LocksAsync(final ReleaseFileSystemNfsV3LocksRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ReleaseFileSystemNfsV3LocksRequest, ReleaseFileSystemNfsV3LocksResult> asyncHandler) {
+        final ReleaseFileSystemNfsV3LocksRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ReleaseFileSystemNfsV3LocksResult>() {
+            @Override
+            public ReleaseFileSystemNfsV3LocksResult call() throws Exception {
+                ReleaseFileSystemNfsV3LocksResult result = null;
+
+                try {
+                    result = executeReleaseFileSystemNfsV3Locks(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<RestoreVolumeFromSnapshotResult> restoreVolumeFromSnapshotAsync(RestoreVolumeFromSnapshotRequest request) {
+
+        return restoreVolumeFromSnapshotAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<RestoreVolumeFromSnapshotResult> restoreVolumeFromSnapshotAsync(final RestoreVolumeFromSnapshotRequest request,
+            final com.amazonaws.handlers.AsyncHandler<RestoreVolumeFromSnapshotRequest, RestoreVolumeFromSnapshotResult> asyncHandler) {
+        final RestoreVolumeFromSnapshotRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<RestoreVolumeFromSnapshotResult>() {
+            @Override
+            public RestoreVolumeFromSnapshotResult call() throws Exception {
+                RestoreVolumeFromSnapshotResult result = null;
+
+                try {
+                    result = executeRestoreVolumeFromSnapshot(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<TagResourceResult> tagResourceAsync(TagResourceRequest request) {
 
         return tagResourceAsync(request, null);
@@ -869,6 +1139,41 @@ public class AmazonFSxAsyncClient extends AmazonFSxClient implements AmazonFSxAs
     }
 
     @Override
+    public java.util.concurrent.Future<UpdateDataRepositoryAssociationResult> updateDataRepositoryAssociationAsync(
+            UpdateDataRepositoryAssociationRequest request) {
+
+        return updateDataRepositoryAssociationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateDataRepositoryAssociationResult> updateDataRepositoryAssociationAsync(
+            final UpdateDataRepositoryAssociationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateDataRepositoryAssociationRequest, UpdateDataRepositoryAssociationResult> asyncHandler) {
+        final UpdateDataRepositoryAssociationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateDataRepositoryAssociationResult>() {
+            @Override
+            public UpdateDataRepositoryAssociationResult call() throws Exception {
+                UpdateDataRepositoryAssociationResult result = null;
+
+                try {
+                    result = executeUpdateDataRepositoryAssociation(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<UpdateFileSystemResult> updateFileSystemAsync(UpdateFileSystemRequest request) {
 
         return updateFileSystemAsync(request, null);
@@ -886,6 +1191,39 @@ public class AmazonFSxAsyncClient extends AmazonFSxClient implements AmazonFSxAs
 
                 try {
                     result = executeUpdateFileSystem(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateSnapshotResult> updateSnapshotAsync(UpdateSnapshotRequest request) {
+
+        return updateSnapshotAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateSnapshotResult> updateSnapshotAsync(final UpdateSnapshotRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateSnapshotRequest, UpdateSnapshotResult> asyncHandler) {
+        final UpdateSnapshotRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateSnapshotResult>() {
+            @Override
+            public UpdateSnapshotResult call() throws Exception {
+                UpdateSnapshotResult result = null;
+
+                try {
+                    result = executeUpdateSnapshot(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

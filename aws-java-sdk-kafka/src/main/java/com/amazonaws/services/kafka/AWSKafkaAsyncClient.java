@@ -174,6 +174,39 @@ public class AWSKafkaAsyncClient extends AWSKafkaClient implements AWSKafkaAsync
     }
 
     @Override
+    public java.util.concurrent.Future<CreateClusterV2Result> createClusterV2Async(CreateClusterV2Request request) {
+
+        return createClusterV2Async(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateClusterV2Result> createClusterV2Async(final CreateClusterV2Request request,
+            final com.amazonaws.handlers.AsyncHandler<CreateClusterV2Request, CreateClusterV2Result> asyncHandler) {
+        final CreateClusterV2Request finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateClusterV2Result>() {
+            @Override
+            public CreateClusterV2Result call() throws Exception {
+                CreateClusterV2Result result = null;
+
+                try {
+                    result = executeCreateClusterV2(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateConfigurationResult> createConfigurationAsync(CreateConfigurationRequest request) {
 
         return createConfigurationAsync(request, null);
@@ -323,6 +356,39 @@ public class AWSKafkaAsyncClient extends AWSKafkaClient implements AWSKafkaAsync
 
                 try {
                     result = executeDescribeClusterOperation(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeClusterV2Result> describeClusterV2Async(DescribeClusterV2Request request) {
+
+        return describeClusterV2Async(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeClusterV2Result> describeClusterV2Async(final DescribeClusterV2Request request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeClusterV2Request, DescribeClusterV2Result> asyncHandler) {
+        final DescribeClusterV2Request finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeClusterV2Result>() {
+            @Override
+            public DescribeClusterV2Result call() throws Exception {
+                DescribeClusterV2Result result = null;
+
+                try {
+                    result = executeDescribeClusterV2(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -522,6 +588,39 @@ public class AWSKafkaAsyncClient extends AWSKafkaClient implements AWSKafkaAsync
 
                 try {
                     result = executeListClusters(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListClustersV2Result> listClustersV2Async(ListClustersV2Request request) {
+
+        return listClustersV2Async(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListClustersV2Result> listClustersV2Async(final ListClustersV2Request request,
+            final com.amazonaws.handlers.AsyncHandler<ListClustersV2Request, ListClustersV2Result> asyncHandler) {
+        final ListClustersV2Request finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListClustersV2Result>() {
+            @Override
+            public ListClustersV2Result call() throws Exception {
+                ListClustersV2Result result = null;
+
+                try {
+                    result = executeListClustersV2(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

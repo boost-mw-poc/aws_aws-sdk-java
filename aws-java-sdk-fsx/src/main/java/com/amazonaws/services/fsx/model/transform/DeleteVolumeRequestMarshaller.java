@@ -36,6 +36,8 @@ public class DeleteVolumeRequestMarshaller {
             .marshallLocationName("VolumeId").build();
     private static final MarshallingInfo<StructuredPojo> ONTAPCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("OntapConfiguration").build();
+    private static final MarshallingInfo<StructuredPojo> OPENZFSCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("OpenZFSConfiguration").build();
 
     private static final DeleteVolumeRequestMarshaller instance = new DeleteVolumeRequestMarshaller();
 
@@ -56,6 +58,7 @@ public class DeleteVolumeRequestMarshaller {
             protocolMarshaller.marshall(deleteVolumeRequest.getClientRequestToken(), CLIENTREQUESTTOKEN_BINDING);
             protocolMarshaller.marshall(deleteVolumeRequest.getVolumeId(), VOLUMEID_BINDING);
             protocolMarshaller.marshall(deleteVolumeRequest.getOntapConfiguration(), ONTAPCONFIGURATION_BINDING);
+            protocolMarshaller.marshall(deleteVolumeRequest.getOpenZFSConfiguration(), OPENZFSCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

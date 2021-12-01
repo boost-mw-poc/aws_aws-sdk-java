@@ -21,14 +21,14 @@ import javax.annotation.Generated;
  * <ul>
  * <li>
  * <p>
- * <code>FILE_SYSTEM_UPDATE</code> - A file system update administrative action initiated by the user from the Amazon
- * FSx console, API (UpdateFileSystem), or CLI (update-file-system).
+ * <code>FILE_SYSTEM_UPDATE</code> - A file system update administrative action initiated from the Amazon FSx console,
+ * API (<code>UpdateFileSystem</code>), or CLI (<code>update-file-system</code>).
  * </p>
  * </li>
  * <li>
  * <p>
- * <code>STORAGE_OPTIMIZATION</code> - Once the <code>FILE_SYSTEM_UPDATE</code> task to increase a file system's storage
- * capacity completes successfully, a <code>STORAGE_OPTIMIZATION</code> task starts.
+ * <code>STORAGE_OPTIMIZATION</code> - After the <code>FILE_SYSTEM_UPDATE</code> task to increase a file system's
+ * storage capacity has been completed successfully, a <code>STORAGE_OPTIMIZATION</code> task starts.
  * </p>
  * <ul>
  * <li>
@@ -41,27 +41,56 @@ import javax.annotation.Generated;
  * For Lustre, storage optimization consists of rebalancing the data across the existing and newly added file servers.
  * </p>
  * </li>
+ * <li>
+ * <p>
+ * For OpenZFS, storage optimization consists of migrating data from the older smaller disks to the newer larger disks.
+ * </p>
+ * </li>
  * </ul>
  * <p>
- * You can track the storage optimization progress using the <code>ProgressPercent</code> property. When
- * <code>STORAGE_OPTIMIZATION</code> completes successfully, the parent <code>FILE_SYSTEM_UPDATE</code> action status
- * changes to <code>COMPLETED</code>. For more information, see <a
+ * You can track the storage-optimization progress using the <code>ProgressPercent</code> property. When
+ * <code>STORAGE_OPTIMIZATION</code> has been completed successfully, the parent <code>FILE_SYSTEM_UPDATE</code> action
+ * status changes to <code>COMPLETED</code>. For more information, see <a
  * href="https://docs.aws.amazon.com/fsx/latest/WindowsGuide/managing-storage-capacity.html">Managing storage
- * capacity</a> in the <i>Amazon FSx for Windows File Server User Guide</i> and <a
+ * capacity</a> in the <i>Amazon FSx for Windows File Server User Guide</i>, <a
  * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/managing-storage-capacity.html">Managing storage and
- * throughput capacity</a> in the <i>Amazon FSx for Lustre User Guide</i>.
+ * throughput capacity</a> in the <i>Amazon FSx for Lustre User Guide</i>, and <a
+ * href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/managing-storage-capacity.html">Managing storage
+ * capacity</a> in the <i>Amazon FSx for OpenZFS User Guide</i>.
  * </p>
  * </li>
  * <li>
  * <p>
- * <code>FILE_SYSTEM_ALIAS_ASSOCIATION</code> - A file system update to associate a new DNS alias with the file system.
- * For more information, see .
+ * <code>FILE_SYSTEM_ALIAS_ASSOCIATION</code> - A file system update to associate a new Domain Name System (DNS) alias
+ * with the file system. For more information, see <a
+ * href="https://docs.aws.amazon.com/fsx/latest/APIReference/API_AssociateFileSystemAliases.html">
+ * AssociateFileSystemAliases</a>.
  * </p>
  * </li>
  * <li>
  * <p>
  * <code>FILE_SYSTEM_ALIAS_DISASSOCIATION</code> - A file system update to disassociate a DNS alias from the file
- * system. For more information, see .
+ * system. For more information, see <a
+ * href="https://docs.aws.amazon.com/fsx/latest/APIReference/API_DisassociateFileSystemAliases.html"
+ * >DisassociateFileSystemAliases</a>.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <code>VOLUME_UPDATE</code> - A volume update to an Amazon FSx for NetApp ONTAP or Amazon FSx for OpenZFS volume
+ * initiated from the Amazon FSx console, API (<code>UpdateVolume</code>), or CLI (<code>update-volume</code>).
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <code>SNAPSHOT_UPDATE</code> - A snapshot update to an Amazon FSx for OpenZFS volume initiated from the Amazon FSx
+ * console, API (<code>UpdateSnapshot</code>), or CLI (<code>update-snapshot</code>).
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <code>RELEASE_NFS_V3_LOCKS</code> - Tracks the release of Network File System (NFS) V3 locks on an Amazon FSx for
+ * OpenZFS file system.
  * </p>
  * </li>
  * </ul>
@@ -72,7 +101,10 @@ public enum AdministrativeActionType {
     FILE_SYSTEM_UPDATE("FILE_SYSTEM_UPDATE"),
     STORAGE_OPTIMIZATION("STORAGE_OPTIMIZATION"),
     FILE_SYSTEM_ALIAS_ASSOCIATION("FILE_SYSTEM_ALIAS_ASSOCIATION"),
-    FILE_SYSTEM_ALIAS_DISASSOCIATION("FILE_SYSTEM_ALIAS_DISASSOCIATION");
+    FILE_SYSTEM_ALIAS_DISASSOCIATION("FILE_SYSTEM_ALIAS_DISASSOCIATION"),
+    VOLUME_UPDATE("VOLUME_UPDATE"),
+    SNAPSHOT_UPDATE("SNAPSHOT_UPDATE"),
+    RELEASE_NFS_V3_LOCKS("RELEASE_NFS_V3_LOCKS");
 
     private String value;
 

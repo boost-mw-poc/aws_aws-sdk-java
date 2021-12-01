@@ -47,7 +47,12 @@ public class GetRecordsResult extends com.amazonaws.AmazonWebServiceResult<com.a
      * </p>
      */
     private Long millisBehindLatest;
-
+    /**
+     * <p>
+     * The list of the current shard's child shards, returned in the <code>GetRecords</code> API's response only when
+     * the end of the current shard is reached.
+     * </p>
+     */
     private com.amazonaws.internal.SdkInternalList<ChildShard> childShards;
 
     /**
@@ -222,7 +227,13 @@ public class GetRecordsResult extends com.amazonaws.AmazonWebServiceResult<com.a
     }
 
     /**
-     * @return
+     * <p>
+     * The list of the current shard's child shards, returned in the <code>GetRecords</code> API's response only when
+     * the end of the current shard is reached.
+     * </p>
+     * 
+     * @return The list of the current shard's child shards, returned in the <code>GetRecords</code> API's response only
+     *         when the end of the current shard is reached.
      */
 
     public java.util.List<ChildShard> getChildShards() {
@@ -233,7 +244,14 @@ public class GetRecordsResult extends com.amazonaws.AmazonWebServiceResult<com.a
     }
 
     /**
+     * <p>
+     * The list of the current shard's child shards, returned in the <code>GetRecords</code> API's response only when
+     * the end of the current shard is reached.
+     * </p>
+     * 
      * @param childShards
+     *        The list of the current shard's child shards, returned in the <code>GetRecords</code> API's response only
+     *        when the end of the current shard is reached.
      */
 
     public void setChildShards(java.util.Collection<ChildShard> childShards) {
@@ -247,12 +265,18 @@ public class GetRecordsResult extends com.amazonaws.AmazonWebServiceResult<com.a
 
     /**
      * <p>
+     * The list of the current shard's child shards, returned in the <code>GetRecords</code> API's response only when
+     * the end of the current shard is reached.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setChildShards(java.util.Collection)} or {@link #withChildShards(java.util.Collection)} if you want to
      * override the existing values.
      * </p>
      * 
      * @param childShards
+     *        The list of the current shard's child shards, returned in the <code>GetRecords</code> API's response only
+     *        when the end of the current shard is reached.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -267,7 +291,14 @@ public class GetRecordsResult extends com.amazonaws.AmazonWebServiceResult<com.a
     }
 
     /**
+     * <p>
+     * The list of the current shard's child shards, returned in the <code>GetRecords</code> API's response only when
+     * the end of the current shard is reached.
+     * </p>
+     * 
      * @param childShards
+     *        The list of the current shard's child shards, returned in the <code>GetRecords</code> API's response only
+     *        when the end of the current shard is reached.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

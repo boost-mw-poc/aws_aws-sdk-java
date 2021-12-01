@@ -47,6 +47,8 @@ public class LustreFileSystemConfigurationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DriveCacheType").build();
     private static final MarshallingInfo<String> DATACOMPRESSIONTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DataCompressionType").build();
+    private static final MarshallingInfo<StructuredPojo> LOGCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LogConfiguration").build();
 
     private static final LustreFileSystemConfigurationMarshaller instance = new LustreFileSystemConfigurationMarshaller();
 
@@ -74,6 +76,7 @@ public class LustreFileSystemConfigurationMarshaller {
             protocolMarshaller.marshall(lustreFileSystemConfiguration.getCopyTagsToBackups(), COPYTAGSTOBACKUPS_BINDING);
             protocolMarshaller.marshall(lustreFileSystemConfiguration.getDriveCacheType(), DRIVECACHETYPE_BINDING);
             protocolMarshaller.marshall(lustreFileSystemConfiguration.getDataCompressionType(), DATACOMPRESSIONTYPE_BINDING);
+            protocolMarshaller.marshall(lustreFileSystemConfiguration.getLogConfiguration(), LOGCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

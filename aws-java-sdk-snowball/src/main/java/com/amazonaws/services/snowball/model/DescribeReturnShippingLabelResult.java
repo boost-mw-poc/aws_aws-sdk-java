@@ -25,7 +25,7 @@ public class DescribeReturnShippingLabelResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The status information of the task on a Snow device that is being returned to AWS.
+     * The status information of the task on a Snow device that is being returned to Amazon Web Services.
      * </p>
      */
     private String status;
@@ -35,14 +35,20 @@ public class DescribeReturnShippingLabelResult extends com.amazonaws.AmazonWebSe
      * </p>
      */
     private java.util.Date expirationDate;
+    /**
+     * <p>
+     * The pre-signed Amazon S3 URI used to download the return shipping label.
+     * </p>
+     */
+    private String returnShippingLabelURI;
 
     /**
      * <p>
-     * The status information of the task on a Snow device that is being returned to AWS.
+     * The status information of the task on a Snow device that is being returned to Amazon Web Services.
      * </p>
      * 
      * @param status
-     *        The status information of the task on a Snow device that is being returned to AWS.
+     *        The status information of the task on a Snow device that is being returned to Amazon Web Services.
      * @see ShippingLabelStatus
      */
 
@@ -52,10 +58,10 @@ public class DescribeReturnShippingLabelResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The status information of the task on a Snow device that is being returned to AWS.
+     * The status information of the task on a Snow device that is being returned to Amazon Web Services.
      * </p>
      * 
-     * @return The status information of the task on a Snow device that is being returned to AWS.
+     * @return The status information of the task on a Snow device that is being returned to Amazon Web Services.
      * @see ShippingLabelStatus
      */
 
@@ -65,11 +71,11 @@ public class DescribeReturnShippingLabelResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The status information of the task on a Snow device that is being returned to AWS.
+     * The status information of the task on a Snow device that is being returned to Amazon Web Services.
      * </p>
      * 
      * @param status
-     *        The status information of the task on a Snow device that is being returned to AWS.
+     *        The status information of the task on a Snow device that is being returned to Amazon Web Services.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ShippingLabelStatus
      */
@@ -81,11 +87,11 @@ public class DescribeReturnShippingLabelResult extends com.amazonaws.AmazonWebSe
 
     /**
      * <p>
-     * The status information of the task on a Snow device that is being returned to AWS.
+     * The status information of the task on a Snow device that is being returned to Amazon Web Services.
      * </p>
      * 
      * @param status
-     *        The status information of the task on a Snow device that is being returned to AWS.
+     *        The status information of the task on a Snow device that is being returned to Amazon Web Services.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ShippingLabelStatus
      */
@@ -136,6 +142,46 @@ public class DescribeReturnShippingLabelResult extends com.amazonaws.AmazonWebSe
     }
 
     /**
+     * <p>
+     * The pre-signed Amazon S3 URI used to download the return shipping label.
+     * </p>
+     * 
+     * @param returnShippingLabelURI
+     *        The pre-signed Amazon S3 URI used to download the return shipping label.
+     */
+
+    public void setReturnShippingLabelURI(String returnShippingLabelURI) {
+        this.returnShippingLabelURI = returnShippingLabelURI;
+    }
+
+    /**
+     * <p>
+     * The pre-signed Amazon S3 URI used to download the return shipping label.
+     * </p>
+     * 
+     * @return The pre-signed Amazon S3 URI used to download the return shipping label.
+     */
+
+    public String getReturnShippingLabelURI() {
+        return this.returnShippingLabelURI;
+    }
+
+    /**
+     * <p>
+     * The pre-signed Amazon S3 URI used to download the return shipping label.
+     * </p>
+     * 
+     * @param returnShippingLabelURI
+     *        The pre-signed Amazon S3 URI used to download the return shipping label.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DescribeReturnShippingLabelResult withReturnShippingLabelURI(String returnShippingLabelURI) {
+        setReturnShippingLabelURI(returnShippingLabelURI);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -150,7 +196,9 @@ public class DescribeReturnShippingLabelResult extends com.amazonaws.AmazonWebSe
         if (getStatus() != null)
             sb.append("Status: ").append(getStatus()).append(",");
         if (getExpirationDate() != null)
-            sb.append("ExpirationDate: ").append(getExpirationDate());
+            sb.append("ExpirationDate: ").append(getExpirationDate()).append(",");
+        if (getReturnShippingLabelURI() != null)
+            sb.append("ReturnShippingLabelURI: ").append(getReturnShippingLabelURI());
         sb.append("}");
         return sb.toString();
     }
@@ -173,6 +221,10 @@ public class DescribeReturnShippingLabelResult extends com.amazonaws.AmazonWebSe
             return false;
         if (other.getExpirationDate() != null && other.getExpirationDate().equals(this.getExpirationDate()) == false)
             return false;
+        if (other.getReturnShippingLabelURI() == null ^ this.getReturnShippingLabelURI() == null)
+            return false;
+        if (other.getReturnShippingLabelURI() != null && other.getReturnShippingLabelURI().equals(this.getReturnShippingLabelURI()) == false)
+            return false;
         return true;
     }
 
@@ -183,6 +235,7 @@ public class DescribeReturnShippingLabelResult extends com.amazonaws.AmazonWebSe
 
         hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
         hashCode = prime * hashCode + ((getExpirationDate() == null) ? 0 : getExpirationDate().hashCode());
+        hashCode = prime * hashCode + ((getReturnShippingLabelURI() == null) ? 0 : getReturnShippingLabelURI().hashCode());
         return hashCode;
     }
 

@@ -93,6 +93,10 @@ public class OutpostJsonUnmarshaller implements Unmarshaller<Outpost, JsonUnmars
                     context.nextToken();
                     outpost.setSiteArn(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("SupportedHardwareType", targetDepth)) {
+                    context.nextToken();
+                    outpost.setSupportedHardwareType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

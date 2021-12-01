@@ -52,6 +52,12 @@ public class UpdateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      */
     private Boolean skipArchive;
+    /**
+     * <p>
+     * The transaction ID at which to update the table contents.
+     * </p>
+     */
+    private String transactionId;
 
     /**
      * <p>
@@ -250,6 +256,46 @@ public class UpdateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
     }
 
     /**
+     * <p>
+     * The transaction ID at which to update the table contents.
+     * </p>
+     * 
+     * @param transactionId
+     *        The transaction ID at which to update the table contents.
+     */
+
+    public void setTransactionId(String transactionId) {
+        this.transactionId = transactionId;
+    }
+
+    /**
+     * <p>
+     * The transaction ID at which to update the table contents.
+     * </p>
+     * 
+     * @return The transaction ID at which to update the table contents.
+     */
+
+    public String getTransactionId() {
+        return this.transactionId;
+    }
+
+    /**
+     * <p>
+     * The transaction ID at which to update the table contents.
+     * </p>
+     * 
+     * @param transactionId
+     *        The transaction ID at which to update the table contents.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateTableRequest withTransactionId(String transactionId) {
+        setTransactionId(transactionId);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -268,7 +314,9 @@ public class UpdateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
         if (getTableInput() != null)
             sb.append("TableInput: ").append(getTableInput()).append(",");
         if (getSkipArchive() != null)
-            sb.append("SkipArchive: ").append(getSkipArchive());
+            sb.append("SkipArchive: ").append(getSkipArchive()).append(",");
+        if (getTransactionId() != null)
+            sb.append("TransactionId: ").append(getTransactionId());
         sb.append("}");
         return sb.toString();
     }
@@ -299,6 +347,10 @@ public class UpdateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
             return false;
         if (other.getSkipArchive() != null && other.getSkipArchive().equals(this.getSkipArchive()) == false)
             return false;
+        if (other.getTransactionId() == null ^ this.getTransactionId() == null)
+            return false;
+        if (other.getTransactionId() != null && other.getTransactionId().equals(this.getTransactionId()) == false)
+            return false;
         return true;
     }
 
@@ -311,6 +363,7 @@ public class UpdateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
         hashCode = prime * hashCode + ((getDatabaseName() == null) ? 0 : getDatabaseName().hashCode());
         hashCode = prime * hashCode + ((getTableInput() == null) ? 0 : getTableInput().hashCode());
         hashCode = prime * hashCode + ((getSkipArchive() == null) ? 0 : getSkipArchive().hashCode());
+        hashCode = prime * hashCode + ((getTransactionId() == null) ? 0 : getTransactionId().hashCode());
         return hashCode;
     }
 

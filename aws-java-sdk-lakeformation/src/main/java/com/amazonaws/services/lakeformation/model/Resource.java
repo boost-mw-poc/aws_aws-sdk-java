@@ -31,7 +31,7 @@ public class Resource implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent metadata
-     * store. It contains database definitions, table definitions, and other control information to manage your AWS Lake
+     * store. It contains database definitions, table definitions, and other control information to manage your Lake
      * Formation environment.
      * </p>
      */
@@ -65,13 +65,19 @@ public class Resource implements Serializable, Cloneable, StructuredPojo {
     private DataLocationResource dataLocation;
     /**
      * <p>
-     * The tag key and values attached to a resource.
+     * A data cell filter.
+     * </p>
+     */
+    private DataCellsFilterResource dataCellsFilter;
+    /**
+     * <p>
+     * The LF-tag key and values attached to a resource.
      * </p>
      */
     private LFTagKeyResource lFTag;
     /**
      * <p>
-     * A list of tag conditions that define a resource's tag policy.
+     * A list of LF-tag conditions that define a resource's LF-tag policy.
      * </p>
      */
     private LFTagPolicyResource lFTagPolicy;
@@ -79,14 +85,14 @@ public class Resource implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent metadata
-     * store. It contains database definitions, table definitions, and other control information to manage your AWS Lake
+     * store. It contains database definitions, table definitions, and other control information to manage your Lake
      * Formation environment.
      * </p>
      * 
      * @param catalog
      *        The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent
      *        metadata store. It contains database definitions, table definitions, and other control information to
-     *        manage your AWS Lake Formation environment.
+     *        manage your Lake Formation environment.
      */
 
     public void setCatalog(CatalogResource catalog) {
@@ -96,13 +102,13 @@ public class Resource implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent metadata
-     * store. It contains database definitions, table definitions, and other control information to manage your AWS Lake
+     * store. It contains database definitions, table definitions, and other control information to manage your Lake
      * Formation environment.
      * </p>
      * 
      * @return The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent
      *         metadata store. It contains database definitions, table definitions, and other control information to
-     *         manage your AWS Lake Formation environment.
+     *         manage your Lake Formation environment.
      */
 
     public CatalogResource getCatalog() {
@@ -112,14 +118,14 @@ public class Resource implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent metadata
-     * store. It contains database definitions, table definitions, and other control information to manage your AWS Lake
+     * store. It contains database definitions, table definitions, and other control information to manage your Lake
      * Formation environment.
      * </p>
      * 
      * @param catalog
      *        The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent
      *        metadata store. It contains database definitions, table definitions, and other control information to
-     *        manage your AWS Lake Formation environment.
+     *        manage your Lake Formation environment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -308,11 +314,51 @@ public class Resource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The tag key and values attached to a resource.
+     * A data cell filter.
+     * </p>
+     * 
+     * @param dataCellsFilter
+     *        A data cell filter.
+     */
+
+    public void setDataCellsFilter(DataCellsFilterResource dataCellsFilter) {
+        this.dataCellsFilter = dataCellsFilter;
+    }
+
+    /**
+     * <p>
+     * A data cell filter.
+     * </p>
+     * 
+     * @return A data cell filter.
+     */
+
+    public DataCellsFilterResource getDataCellsFilter() {
+        return this.dataCellsFilter;
+    }
+
+    /**
+     * <p>
+     * A data cell filter.
+     * </p>
+     * 
+     * @param dataCellsFilter
+     *        A data cell filter.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Resource withDataCellsFilter(DataCellsFilterResource dataCellsFilter) {
+        setDataCellsFilter(dataCellsFilter);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The LF-tag key and values attached to a resource.
      * </p>
      * 
      * @param lFTag
-     *        The tag key and values attached to a resource.
+     *        The LF-tag key and values attached to a resource.
      */
 
     public void setLFTag(LFTagKeyResource lFTag) {
@@ -321,10 +367,10 @@ public class Resource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The tag key and values attached to a resource.
+     * The LF-tag key and values attached to a resource.
      * </p>
      * 
-     * @return The tag key and values attached to a resource.
+     * @return The LF-tag key and values attached to a resource.
      */
 
     public LFTagKeyResource getLFTag() {
@@ -333,11 +379,11 @@ public class Resource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The tag key and values attached to a resource.
+     * The LF-tag key and values attached to a resource.
      * </p>
      * 
      * @param lFTag
-     *        The tag key and values attached to a resource.
+     *        The LF-tag key and values attached to a resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -348,11 +394,11 @@ public class Resource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A list of tag conditions that define a resource's tag policy.
+     * A list of LF-tag conditions that define a resource's LF-tag policy.
      * </p>
      * 
      * @param lFTagPolicy
-     *        A list of tag conditions that define a resource's tag policy.
+     *        A list of LF-tag conditions that define a resource's LF-tag policy.
      */
 
     public void setLFTagPolicy(LFTagPolicyResource lFTagPolicy) {
@@ -361,10 +407,10 @@ public class Resource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A list of tag conditions that define a resource's tag policy.
+     * A list of LF-tag conditions that define a resource's LF-tag policy.
      * </p>
      * 
-     * @return A list of tag conditions that define a resource's tag policy.
+     * @return A list of LF-tag conditions that define a resource's LF-tag policy.
      */
 
     public LFTagPolicyResource getLFTagPolicy() {
@@ -373,11 +419,11 @@ public class Resource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A list of tag conditions that define a resource's tag policy.
+     * A list of LF-tag conditions that define a resource's LF-tag policy.
      * </p>
      * 
      * @param lFTagPolicy
-     *        A list of tag conditions that define a resource's tag policy.
+     *        A list of LF-tag conditions that define a resource's LF-tag policy.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -408,6 +454,8 @@ public class Resource implements Serializable, Cloneable, StructuredPojo {
             sb.append("TableWithColumns: ").append(getTableWithColumns()).append(",");
         if (getDataLocation() != null)
             sb.append("DataLocation: ").append(getDataLocation()).append(",");
+        if (getDataCellsFilter() != null)
+            sb.append("DataCellsFilter: ").append(getDataCellsFilter()).append(",");
         if (getLFTag() != null)
             sb.append("LFTag: ").append(getLFTag()).append(",");
         if (getLFTagPolicy() != null)
@@ -446,6 +494,10 @@ public class Resource implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getDataLocation() != null && other.getDataLocation().equals(this.getDataLocation()) == false)
             return false;
+        if (other.getDataCellsFilter() == null ^ this.getDataCellsFilter() == null)
+            return false;
+        if (other.getDataCellsFilter() != null && other.getDataCellsFilter().equals(this.getDataCellsFilter()) == false)
+            return false;
         if (other.getLFTag() == null ^ this.getLFTag() == null)
             return false;
         if (other.getLFTag() != null && other.getLFTag().equals(this.getLFTag()) == false)
@@ -467,6 +519,7 @@ public class Resource implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getTable() == null) ? 0 : getTable().hashCode());
         hashCode = prime * hashCode + ((getTableWithColumns() == null) ? 0 : getTableWithColumns().hashCode());
         hashCode = prime * hashCode + ((getDataLocation() == null) ? 0 : getDataLocation().hashCode());
+        hashCode = prime * hashCode + ((getDataCellsFilter() == null) ? 0 : getDataCellsFilter().hashCode());
         hashCode = prime * hashCode + ((getLFTag() == null) ? 0 : getLFTag().hashCode());
         hashCode = prime * hashCode + ((getLFTagPolicy() == null) ? 0 : getLFTagPolicy().hashCode());
         return hashCode;

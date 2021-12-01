@@ -84,6 +84,9 @@ public class AWSGlueClient extends AmazonWebServiceClient implements AWSGlue {
                             new JsonErrorShapeMetadata().withErrorCode("SchedulerRunningException").withExceptionUnmarshaller(
                                     com.amazonaws.services.glue.model.transform.SchedulerRunningExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ResourceNotReadyException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.glue.model.transform.ResourceNotReadyExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("SchedulerTransitioningException").withExceptionUnmarshaller(
                                     com.amazonaws.services.glue.model.transform.SchedulerTransitioningExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
@@ -128,6 +131,9 @@ public class AWSGlueClient extends AmazonWebServiceClient implements AWSGlue {
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("IllegalBlueprintStateException").withExceptionUnmarshaller(
                                     com.amazonaws.services.glue.model.transform.IllegalBlueprintStateExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("InvalidStateException").withExceptionUnmarshaller(
+                                    com.amazonaws.services.glue.model.transform.InvalidStateExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("NoScheduleException").withExceptionUnmarshaller(
                                     com.amazonaws.services.glue.model.transform.NoScheduleExceptionUnmarshaller.getInstance()))
@@ -419,6 +425,10 @@ public class AWSGlueClient extends AmazonWebServiceClient implements AWSGlue {
      *         An internal service error occurred.
      * @throws OperationTimeoutException
      *         The operation timed out.
+     * @throws GlueEncryptionException
+     *         An encryption operation failed.
+     * @throws ResourceNotReadyException
+     *         A resource was not ready for a transaction.
      * @sample AWSGlue.BatchDeleteTable
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/BatchDeleteTable" target="_top">AWS API
      *      Documentation</a>
@@ -799,6 +809,8 @@ public class AWSGlueClient extends AmazonWebServiceClient implements AWSGlue {
      *         An internal service error occurred.
      * @throws GlueEncryptionException
      *         An encryption operation failed.
+     * @throws InvalidStateException
+     *         An error that indicates your data is in an invalid state.
      * @sample AWSGlue.BatchGetPartition
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/BatchGetPartition" target="_top">AWS API
      *      Documentation</a>
@@ -2214,6 +2226,8 @@ public class AWSGlueClient extends AmazonWebServiceClient implements AWSGlue {
      *         An encryption operation failed.
      * @throws ConcurrentModificationException
      *         Two processes are trying to modify a resource simultaneously.
+     * @throws ResourceNotReadyException
+     *         A resource was not ready for a transaction.
      * @sample AWSGlue.CreateTable
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/CreateTable" target="_top">AWS API
      *      Documentation</a>
@@ -3624,6 +3638,8 @@ public class AWSGlueClient extends AmazonWebServiceClient implements AWSGlue {
      *         The operation timed out.
      * @throws ConcurrentModificationException
      *         Two processes are trying to modify a resource simultaneously.
+     * @throws ResourceNotReadyException
+     *         A resource was not ready for a transaction.
      * @sample AWSGlue.DeleteTable
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/DeleteTable" target="_top">AWS API
      *      Documentation</a>
@@ -5916,6 +5932,10 @@ public class AWSGlueClient extends AmazonWebServiceClient implements AWSGlue {
      *         An internal service error occurred.
      * @throws GlueEncryptionException
      *         An encryption operation failed.
+     * @throws InvalidStateException
+     *         An error that indicates your data is in an invalid state.
+     * @throws ResourceNotReadyException
+     *         A resource was not ready for a transaction.
      * @sample AWSGlue.GetPartitions
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetPartitions" target="_top">AWS API
      *      Documentation</a>
@@ -6628,6 +6648,8 @@ public class AWSGlueClient extends AmazonWebServiceClient implements AWSGlue {
      *         The operation timed out.
      * @throws GlueEncryptionException
      *         An encryption operation failed.
+     * @throws ResourceNotReadyException
+     *         A resource was not ready for a transaction.
      * @sample AWSGlue.GetTable
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetTable" target="_top">AWS API
      *      Documentation</a>
@@ -10904,6 +10926,8 @@ public class AWSGlueClient extends AmazonWebServiceClient implements AWSGlue {
      *         A resource numerical limit was exceeded.
      * @throws GlueEncryptionException
      *         An encryption operation failed.
+     * @throws ResourceNotReadyException
+     *         A resource was not ready for a transaction.
      * @sample AWSGlue.UpdateTable
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/UpdateTable" target="_top">AWS API
      *      Documentation</a>

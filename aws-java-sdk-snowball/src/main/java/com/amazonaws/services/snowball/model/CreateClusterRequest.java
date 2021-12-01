@@ -39,7 +39,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
     private String jobType;
     /**
      * <p>
-     * The resources associated with the cluster job. These resources include Amazon S3 buckets and optional AWS Lambda
+     * The resources associated with the cluster job. These resources include Amazon S3 buckets and optional Lambda
      * functions written in the Python language.
      * </p>
      */
@@ -47,7 +47,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
     /**
      * <p>
      * Specifies the service or services on the Snow Family device that your transferred data will be exported from or
-     * imported into. AWS Snow Family supports Amazon S3 and NFS (Network File System).
+     * imported into. Amazon Web Services Snow Family device clusters support Amazon S3 and NFS (Network File System).
      * </p>
      */
     private OnDeviceServiceConfiguration onDeviceServiceConfiguration;
@@ -67,8 +67,8 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <p>
      * The <code>KmsKeyARN</code> value that you want to associate with this cluster. <code>KmsKeyARN</code> values are
      * created by using the <a
-     * href="https://docs.aws.amazon.com/kms/latest/APIReference/API_CreateKey.html">CreateKey</a> API action in AWS Key
-     * Management Service (AWS KMS).
+     * href="https://docs.aws.amazon.com/kms/latest/APIReference/API_CreateKey.html">CreateKey</a> API action in Key
+     * Management Service (KMS).
      * </p>
      */
     private String kmsKeyARN;
@@ -76,17 +76,17 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <p>
      * The <code>RoleARN</code> that you want to associate with this cluster. <code>RoleArn</code> values are created by
      * using the <a href="https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html">CreateRole</a> API
-     * action in AWS Identity and Access Management (IAM).
+     * action in Identity and Access Management (IAM).
      * </p>
      */
     private String roleARN;
     /**
      * <p>
-     * The type of AWS Snow Family device to use for this cluster.
+     * The type of Snow Family Devices to use for this cluster.
      * </p>
      * <note>
      * <p>
-     * For cluster jobs, AWS Snow Family currently supports only the <code>EDGE</code> device type.
+     * For cluster jobs, Amazon Web Services Snow Family currently supports only the <code>EDGE</code> device type.
      * </p>
      * </note>
      * <p>
@@ -169,7 +169,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
     private String forwardingAddressId;
     /**
      * <p>
-     * The tax documents required in your AWS Region.
+     * The tax documents required in your Amazon Web Services Region.
      * </p>
      */
     private TaxDocuments taxDocuments;
@@ -322,12 +322,12 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The resources associated with the cluster job. These resources include Amazon S3 buckets and optional AWS Lambda
+     * The resources associated with the cluster job. These resources include Amazon S3 buckets and optional Lambda
      * functions written in the Python language.
      * </p>
      * 
      * @param resources
-     *        The resources associated with the cluster job. These resources include Amazon S3 buckets and optional AWS
+     *        The resources associated with the cluster job. These resources include Amazon S3 buckets and optional
      *        Lambda functions written in the Python language.
      */
 
@@ -337,11 +337,11 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The resources associated with the cluster job. These resources include Amazon S3 buckets and optional AWS Lambda
+     * The resources associated with the cluster job. These resources include Amazon S3 buckets and optional Lambda
      * functions written in the Python language.
      * </p>
      * 
-     * @return The resources associated with the cluster job. These resources include Amazon S3 buckets and optional AWS
+     * @return The resources associated with the cluster job. These resources include Amazon S3 buckets and optional
      *         Lambda functions written in the Python language.
      */
 
@@ -351,12 +351,12 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The resources associated with the cluster job. These resources include Amazon S3 buckets and optional AWS Lambda
+     * The resources associated with the cluster job. These resources include Amazon S3 buckets and optional Lambda
      * functions written in the Python language.
      * </p>
      * 
      * @param resources
-     *        The resources associated with the cluster job. These resources include Amazon S3 buckets and optional AWS
+     *        The resources associated with the cluster job. These resources include Amazon S3 buckets and optional
      *        Lambda functions written in the Python language.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -369,12 +369,13 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
     /**
      * <p>
      * Specifies the service or services on the Snow Family device that your transferred data will be exported from or
-     * imported into. AWS Snow Family supports Amazon S3 and NFS (Network File System).
+     * imported into. Amazon Web Services Snow Family device clusters support Amazon S3 and NFS (Network File System).
      * </p>
      * 
      * @param onDeviceServiceConfiguration
      *        Specifies the service or services on the Snow Family device that your transferred data will be exported
-     *        from or imported into. AWS Snow Family supports Amazon S3 and NFS (Network File System).
+     *        from or imported into. Amazon Web Services Snow Family device clusters support Amazon S3 and NFS (Network
+     *        File System).
      */
 
     public void setOnDeviceServiceConfiguration(OnDeviceServiceConfiguration onDeviceServiceConfiguration) {
@@ -384,11 +385,12 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
     /**
      * <p>
      * Specifies the service or services on the Snow Family device that your transferred data will be exported from or
-     * imported into. AWS Snow Family supports Amazon S3 and NFS (Network File System).
+     * imported into. Amazon Web Services Snow Family device clusters support Amazon S3 and NFS (Network File System).
      * </p>
      * 
      * @return Specifies the service or services on the Snow Family device that your transferred data will be exported
-     *         from or imported into. AWS Snow Family supports Amazon S3 and NFS (Network File System).
+     *         from or imported into. Amazon Web Services Snow Family device clusters support Amazon S3 and NFS (Network
+     *         File System).
      */
 
     public OnDeviceServiceConfiguration getOnDeviceServiceConfiguration() {
@@ -398,12 +400,13 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
     /**
      * <p>
      * Specifies the service or services on the Snow Family device that your transferred data will be exported from or
-     * imported into. AWS Snow Family supports Amazon S3 and NFS (Network File System).
+     * imported into. Amazon Web Services Snow Family device clusters support Amazon S3 and NFS (Network File System).
      * </p>
      * 
      * @param onDeviceServiceConfiguration
      *        Specifies the service or services on the Snow Family device that your transferred data will be exported
-     *        from or imported into. AWS Snow Family supports Amazon S3 and NFS (Network File System).
+     *        from or imported into. Amazon Web Services Snow Family device clusters support Amazon S3 and NFS (Network
+     *        File System).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -496,15 +499,15 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <p>
      * The <code>KmsKeyARN</code> value that you want to associate with this cluster. <code>KmsKeyARN</code> values are
      * created by using the <a
-     * href="https://docs.aws.amazon.com/kms/latest/APIReference/API_CreateKey.html">CreateKey</a> API action in AWS Key
-     * Management Service (AWS KMS).
+     * href="https://docs.aws.amazon.com/kms/latest/APIReference/API_CreateKey.html">CreateKey</a> API action in Key
+     * Management Service (KMS).
      * </p>
      * 
      * @param kmsKeyARN
      *        The <code>KmsKeyARN</code> value that you want to associate with this cluster. <code>KmsKeyARN</code>
      *        values are created by using the <a
      *        href="https://docs.aws.amazon.com/kms/latest/APIReference/API_CreateKey.html">CreateKey</a> API action in
-     *        AWS Key Management Service (AWS KMS).
+     *        Key Management Service (KMS).
      */
 
     public void setKmsKeyARN(String kmsKeyARN) {
@@ -515,14 +518,14 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <p>
      * The <code>KmsKeyARN</code> value that you want to associate with this cluster. <code>KmsKeyARN</code> values are
      * created by using the <a
-     * href="https://docs.aws.amazon.com/kms/latest/APIReference/API_CreateKey.html">CreateKey</a> API action in AWS Key
-     * Management Service (AWS KMS).
+     * href="https://docs.aws.amazon.com/kms/latest/APIReference/API_CreateKey.html">CreateKey</a> API action in Key
+     * Management Service (KMS).
      * </p>
      * 
      * @return The <code>KmsKeyARN</code> value that you want to associate with this cluster. <code>KmsKeyARN</code>
      *         values are created by using the <a
      *         href="https://docs.aws.amazon.com/kms/latest/APIReference/API_CreateKey.html">CreateKey</a> API action in
-     *         AWS Key Management Service (AWS KMS).
+     *         Key Management Service (KMS).
      */
 
     public String getKmsKeyARN() {
@@ -533,15 +536,15 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <p>
      * The <code>KmsKeyARN</code> value that you want to associate with this cluster. <code>KmsKeyARN</code> values are
      * created by using the <a
-     * href="https://docs.aws.amazon.com/kms/latest/APIReference/API_CreateKey.html">CreateKey</a> API action in AWS Key
-     * Management Service (AWS KMS).
+     * href="https://docs.aws.amazon.com/kms/latest/APIReference/API_CreateKey.html">CreateKey</a> API action in Key
+     * Management Service (KMS).
      * </p>
      * 
      * @param kmsKeyARN
      *        The <code>KmsKeyARN</code> value that you want to associate with this cluster. <code>KmsKeyARN</code>
      *        values are created by using the <a
      *        href="https://docs.aws.amazon.com/kms/latest/APIReference/API_CreateKey.html">CreateKey</a> API action in
-     *        AWS Key Management Service (AWS KMS).
+     *        Key Management Service (KMS).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -554,14 +557,14 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <p>
      * The <code>RoleARN</code> that you want to associate with this cluster. <code>RoleArn</code> values are created by
      * using the <a href="https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html">CreateRole</a> API
-     * action in AWS Identity and Access Management (IAM).
+     * action in Identity and Access Management (IAM).
      * </p>
      * 
      * @param roleARN
      *        The <code>RoleARN</code> that you want to associate with this cluster. <code>RoleArn</code> values are
      *        created by using the <a
      *        href="https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html">CreateRole</a> API action
-     *        in AWS Identity and Access Management (IAM).
+     *        in Identity and Access Management (IAM).
      */
 
     public void setRoleARN(String roleARN) {
@@ -572,13 +575,13 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <p>
      * The <code>RoleARN</code> that you want to associate with this cluster. <code>RoleArn</code> values are created by
      * using the <a href="https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html">CreateRole</a> API
-     * action in AWS Identity and Access Management (IAM).
+     * action in Identity and Access Management (IAM).
      * </p>
      * 
      * @return The <code>RoleARN</code> that you want to associate with this cluster. <code>RoleArn</code> values are
      *         created by using the <a
      *         href="https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html">CreateRole</a> API action
-     *         in AWS Identity and Access Management (IAM).
+     *         in Identity and Access Management (IAM).
      */
 
     public String getRoleARN() {
@@ -589,14 +592,14 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <p>
      * The <code>RoleARN</code> that you want to associate with this cluster. <code>RoleArn</code> values are created by
      * using the <a href="https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html">CreateRole</a> API
-     * action in AWS Identity and Access Management (IAM).
+     * action in Identity and Access Management (IAM).
      * </p>
      * 
      * @param roleARN
      *        The <code>RoleARN</code> that you want to associate with this cluster. <code>RoleArn</code> values are
      *        created by using the <a
      *        href="https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html">CreateRole</a> API action
-     *        in AWS Identity and Access Management (IAM).
+     *        in Identity and Access Management (IAM).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -607,11 +610,11 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The type of AWS Snow Family device to use for this cluster.
+     * The type of Snow Family Devices to use for this cluster.
      * </p>
      * <note>
      * <p>
-     * For cluster jobs, AWS Snow Family currently supports only the <code>EDGE</code> device type.
+     * For cluster jobs, Amazon Web Services Snow Family currently supports only the <code>EDGE</code> device type.
      * </p>
      * </note>
      * <p>
@@ -622,9 +625,10 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      * 
      * @param snowballType
-     *        The type of AWS Snow Family device to use for this cluster. </p> <note>
+     *        The type of Snow Family Devices to use for this cluster. </p> <note>
      *        <p>
-     *        For cluster jobs, AWS Snow Family currently supports only the <code>EDGE</code> device type.
+     *        For cluster jobs, Amazon Web Services Snow Family currently supports only the <code>EDGE</code> device
+     *        type.
      *        </p>
      *        </note>
      *        <p>
@@ -642,11 +646,11 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The type of AWS Snow Family device to use for this cluster.
+     * The type of Snow Family Devices to use for this cluster.
      * </p>
      * <note>
      * <p>
-     * For cluster jobs, AWS Snow Family currently supports only the <code>EDGE</code> device type.
+     * For cluster jobs, Amazon Web Services Snow Family currently supports only the <code>EDGE</code> device type.
      * </p>
      * </note>
      * <p>
@@ -656,9 +660,10 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * Capacity) in the <i>Snowcone User Guide</i>.
      * </p>
      * 
-     * @return The type of AWS Snow Family device to use for this cluster. </p> <note>
+     * @return The type of Snow Family Devices to use for this cluster. </p> <note>
      *         <p>
-     *         For cluster jobs, AWS Snow Family currently supports only the <code>EDGE</code> device type.
+     *         For cluster jobs, Amazon Web Services Snow Family currently supports only the <code>EDGE</code> device
+     *         type.
      *         </p>
      *         </note>
      *         <p>
@@ -676,11 +681,11 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The type of AWS Snow Family device to use for this cluster.
+     * The type of Snow Family Devices to use for this cluster.
      * </p>
      * <note>
      * <p>
-     * For cluster jobs, AWS Snow Family currently supports only the <code>EDGE</code> device type.
+     * For cluster jobs, Amazon Web Services Snow Family currently supports only the <code>EDGE</code> device type.
      * </p>
      * </note>
      * <p>
@@ -691,9 +696,10 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      * 
      * @param snowballType
-     *        The type of AWS Snow Family device to use for this cluster. </p> <note>
+     *        The type of Snow Family Devices to use for this cluster. </p> <note>
      *        <p>
-     *        For cluster jobs, AWS Snow Family currently supports only the <code>EDGE</code> device type.
+     *        For cluster jobs, Amazon Web Services Snow Family currently supports only the <code>EDGE</code> device
+     *        type.
      *        </p>
      *        </note>
      *        <p>
@@ -713,11 +719,11 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The type of AWS Snow Family device to use for this cluster.
+     * The type of Snow Family Devices to use for this cluster.
      * </p>
      * <note>
      * <p>
-     * For cluster jobs, AWS Snow Family currently supports only the <code>EDGE</code> device type.
+     * For cluster jobs, Amazon Web Services Snow Family currently supports only the <code>EDGE</code> device type.
      * </p>
      * </note>
      * <p>
@@ -728,9 +734,10 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      * 
      * @param snowballType
-     *        The type of AWS Snow Family device to use for this cluster. </p> <note>
+     *        The type of Snow Family Devices to use for this cluster. </p> <note>
      *        <p>
-     *        For cluster jobs, AWS Snow Family currently supports only the <code>EDGE</code> device type.
+     *        For cluster jobs, Amazon Web Services Snow Family currently supports only the <code>EDGE</code> device
+     *        type.
      *        </p>
      *        </note>
      *        <p>
@@ -748,11 +755,11 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The type of AWS Snow Family device to use for this cluster.
+     * The type of Snow Family Devices to use for this cluster.
      * </p>
      * <note>
      * <p>
-     * For cluster jobs, AWS Snow Family currently supports only the <code>EDGE</code> device type.
+     * For cluster jobs, Amazon Web Services Snow Family currently supports only the <code>EDGE</code> device type.
      * </p>
      * </note>
      * <p>
@@ -763,9 +770,10 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      * 
      * @param snowballType
-     *        The type of AWS Snow Family device to use for this cluster. </p> <note>
+     *        The type of Snow Family Devices to use for this cluster. </p> <note>
      *        <p>
-     *        For cluster jobs, AWS Snow Family currently supports only the <code>EDGE</code> device type.
+     *        For cluster jobs, Amazon Web Services Snow Family currently supports only the <code>EDGE</code> device
+     *        type.
      *        </p>
      *        </note>
      *        <p>
@@ -1453,11 +1461,11 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The tax documents required in your AWS Region.
+     * The tax documents required in your Amazon Web Services Region.
      * </p>
      * 
      * @param taxDocuments
-     *        The tax documents required in your AWS Region.
+     *        The tax documents required in your Amazon Web Services Region.
      */
 
     public void setTaxDocuments(TaxDocuments taxDocuments) {
@@ -1466,10 +1474,10 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The tax documents required in your AWS Region.
+     * The tax documents required in your Amazon Web Services Region.
      * </p>
      * 
-     * @return The tax documents required in your AWS Region.
+     * @return The tax documents required in your Amazon Web Services Region.
      */
 
     public TaxDocuments getTaxDocuments() {
@@ -1478,11 +1486,11 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The tax documents required in your AWS Region.
+     * The tax documents required in your Amazon Web Services Region.
      * </p>
      * 
      * @param taxDocuments
-     *        The tax documents required in your AWS Region.
+     *        The tax documents required in your Amazon Web Services Region.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

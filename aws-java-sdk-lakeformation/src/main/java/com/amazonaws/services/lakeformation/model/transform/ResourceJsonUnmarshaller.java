@@ -68,6 +68,10 @@ public class ResourceJsonUnmarshaller implements Unmarshaller<Resource, JsonUnma
                     context.nextToken();
                     resource.setDataLocation(DataLocationResourceJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("DataCellsFilter", targetDepth)) {
+                    context.nextToken();
+                    resource.setDataCellsFilter(DataCellsFilterResourceJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("LFTag", targetDepth)) {
                     context.nextToken();
                     resource.setLFTag(LFTagKeyResourceJsonUnmarshaller.getInstance().unmarshall(context));

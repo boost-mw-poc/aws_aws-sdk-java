@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A structure containing a list of tag conditions that apply to a resource's tag policy.
+ * A structure containing a list of LF-tag conditions that apply to a resource's LF-tag policy.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lakeformation-2017-03-31/LFTagPolicyResource" target="_top">AWS
@@ -31,20 +31,20 @@ public class LFTagPolicyResource implements Serializable, Cloneable, StructuredP
     /**
      * <p>
      * The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent metadata
-     * store. It contains database definitions, table definitions, and other control information to manage your AWS Lake
+     * store. It contains database definitions, table definitions, and other control information to manage your Lake
      * Formation environment.
      * </p>
      */
     private String catalogId;
     /**
      * <p>
-     * The resource type for which the tag policy applies.
+     * The resource type for which the LF-tag policy applies.
      * </p>
      */
     private String resourceType;
     /**
      * <p>
-     * A list of tag conditions that apply to the resource's tag policy.
+     * A list of LF-tag conditions that apply to the resource's LF-tag policy.
      * </p>
      */
     private java.util.List<LFTag> expression;
@@ -52,14 +52,14 @@ public class LFTagPolicyResource implements Serializable, Cloneable, StructuredP
     /**
      * <p>
      * The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent metadata
-     * store. It contains database definitions, table definitions, and other control information to manage your AWS Lake
+     * store. It contains database definitions, table definitions, and other control information to manage your Lake
      * Formation environment.
      * </p>
      * 
      * @param catalogId
      *        The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent
      *        metadata store. It contains database definitions, table definitions, and other control information to
-     *        manage your AWS Lake Formation environment.
+     *        manage your Lake Formation environment.
      */
 
     public void setCatalogId(String catalogId) {
@@ -69,13 +69,13 @@ public class LFTagPolicyResource implements Serializable, Cloneable, StructuredP
     /**
      * <p>
      * The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent metadata
-     * store. It contains database definitions, table definitions, and other control information to manage your AWS Lake
+     * store. It contains database definitions, table definitions, and other control information to manage your Lake
      * Formation environment.
      * </p>
      * 
      * @return The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent
      *         metadata store. It contains database definitions, table definitions, and other control information to
-     *         manage your AWS Lake Formation environment.
+     *         manage your Lake Formation environment.
      */
 
     public String getCatalogId() {
@@ -85,14 +85,14 @@ public class LFTagPolicyResource implements Serializable, Cloneable, StructuredP
     /**
      * <p>
      * The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent metadata
-     * store. It contains database definitions, table definitions, and other control information to manage your AWS Lake
+     * store. It contains database definitions, table definitions, and other control information to manage your Lake
      * Formation environment.
      * </p>
      * 
      * @param catalogId
      *        The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent
      *        metadata store. It contains database definitions, table definitions, and other control information to
-     *        manage your AWS Lake Formation environment.
+     *        manage your Lake Formation environment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -103,11 +103,11 @@ public class LFTagPolicyResource implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The resource type for which the tag policy applies.
+     * The resource type for which the LF-tag policy applies.
      * </p>
      * 
      * @param resourceType
-     *        The resource type for which the tag policy applies.
+     *        The resource type for which the LF-tag policy applies.
      * @see ResourceType
      */
 
@@ -117,10 +117,10 @@ public class LFTagPolicyResource implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The resource type for which the tag policy applies.
+     * The resource type for which the LF-tag policy applies.
      * </p>
      * 
-     * @return The resource type for which the tag policy applies.
+     * @return The resource type for which the LF-tag policy applies.
      * @see ResourceType
      */
 
@@ -130,11 +130,11 @@ public class LFTagPolicyResource implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The resource type for which the tag policy applies.
+     * The resource type for which the LF-tag policy applies.
      * </p>
      * 
      * @param resourceType
-     *        The resource type for which the tag policy applies.
+     *        The resource type for which the LF-tag policy applies.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ResourceType
      */
@@ -146,11 +146,11 @@ public class LFTagPolicyResource implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The resource type for which the tag policy applies.
+     * The resource type for which the LF-tag policy applies.
      * </p>
      * 
      * @param resourceType
-     *        The resource type for which the tag policy applies.
+     *        The resource type for which the LF-tag policy applies.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ResourceType
      */
@@ -162,10 +162,10 @@ public class LFTagPolicyResource implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * A list of tag conditions that apply to the resource's tag policy.
+     * A list of LF-tag conditions that apply to the resource's LF-tag policy.
      * </p>
      * 
-     * @return A list of tag conditions that apply to the resource's tag policy.
+     * @return A list of LF-tag conditions that apply to the resource's LF-tag policy.
      */
 
     public java.util.List<LFTag> getExpression() {
@@ -174,11 +174,11 @@ public class LFTagPolicyResource implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * A list of tag conditions that apply to the resource's tag policy.
+     * A list of LF-tag conditions that apply to the resource's LF-tag policy.
      * </p>
      * 
      * @param expression
-     *        A list of tag conditions that apply to the resource's tag policy.
+     *        A list of LF-tag conditions that apply to the resource's LF-tag policy.
      */
 
     public void setExpression(java.util.Collection<LFTag> expression) {
@@ -192,7 +192,7 @@ public class LFTagPolicyResource implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * A list of tag conditions that apply to the resource's tag policy.
+     * A list of LF-tag conditions that apply to the resource's LF-tag policy.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -201,7 +201,7 @@ public class LFTagPolicyResource implements Serializable, Cloneable, StructuredP
      * </p>
      * 
      * @param expression
-     *        A list of tag conditions that apply to the resource's tag policy.
+     *        A list of LF-tag conditions that apply to the resource's LF-tag policy.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -217,11 +217,11 @@ public class LFTagPolicyResource implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * A list of tag conditions that apply to the resource's tag policy.
+     * A list of LF-tag conditions that apply to the resource's LF-tag policy.
      * </p>
      * 
      * @param expression
-     *        A list of tag conditions that apply to the resource's tag policy.
+     *        A list of LF-tag conditions that apply to the resource's LF-tag policy.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

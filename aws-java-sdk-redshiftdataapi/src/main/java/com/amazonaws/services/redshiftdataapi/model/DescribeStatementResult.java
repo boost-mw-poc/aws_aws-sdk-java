@@ -61,7 +61,8 @@ public class DescribeStatementResult extends com.amazonaws.AmazonWebServiceResul
     private String error;
     /**
      * <p>
-     * A value that indicates whether the statement has a result set. The result set can be empty.
+     * A value that indicates whether the statement has a result set. The result set can be empty. The value is true for
+     * an empty result set. The value is true if any substatement returns a result set.
      * </p>
      */
     private Boolean hasResultSet;
@@ -416,11 +417,13 @@ public class DescribeStatementResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * A value that indicates whether the statement has a result set. The result set can be empty.
+     * A value that indicates whether the statement has a result set. The result set can be empty. The value is true for
+     * an empty result set. The value is true if any substatement returns a result set.
      * </p>
      * 
      * @param hasResultSet
-     *        A value that indicates whether the statement has a result set. The result set can be empty.
+     *        A value that indicates whether the statement has a result set. The result set can be empty. The value is
+     *        true for an empty result set. The value is true if any substatement returns a result set.
      */
 
     public void setHasResultSet(Boolean hasResultSet) {
@@ -429,10 +432,12 @@ public class DescribeStatementResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * A value that indicates whether the statement has a result set. The result set can be empty.
+     * A value that indicates whether the statement has a result set. The result set can be empty. The value is true for
+     * an empty result set. The value is true if any substatement returns a result set.
      * </p>
      * 
-     * @return A value that indicates whether the statement has a result set. The result set can be empty.
+     * @return A value that indicates whether the statement has a result set. The result set can be empty. The value is
+     *         true for an empty result set. The value is true if any substatement returns a result set.
      */
 
     public Boolean getHasResultSet() {
@@ -441,11 +446,13 @@ public class DescribeStatementResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * A value that indicates whether the statement has a result set. The result set can be empty.
+     * A value that indicates whether the statement has a result set. The result set can be empty. The value is true for
+     * an empty result set. The value is true if any substatement returns a result set.
      * </p>
      * 
      * @param hasResultSet
-     *        A value that indicates whether the statement has a result set. The result set can be empty.
+     *        A value that indicates whether the statement has a result set. The result set can be empty. The value is
+     *        true for an empty result set. The value is true if any substatement returns a result set.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -456,10 +463,12 @@ public class DescribeStatementResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * A value that indicates whether the statement has a result set. The result set can be empty.
+     * A value that indicates whether the statement has a result set. The result set can be empty. The value is true for
+     * an empty result set. The value is true if any substatement returns a result set.
      * </p>
      * 
-     * @return A value that indicates whether the statement has a result set. The result set can be empty.
+     * @return A value that indicates whether the statement has a result set. The result set can be empty. The value is
+     *         true for an empty result set. The value is true if any substatement returns a result set.
      */
 
     public Boolean isHasResultSet() {

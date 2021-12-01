@@ -44,14 +44,14 @@ public class ClusterMetadata implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * The <code>KmsKeyARN</code> Amazon Resource Name (ARN) associated with this cluster. This ARN was created using
      * the <a href="https://docs.aws.amazon.com/kms/latest/APIReference/API_CreateKey.html">CreateKey</a> API action in
-     * AWS Key Management Service (AWS KMS).
+     * Key Management Service (KMS.
      * </p>
      */
     private String kmsKeyARN;
     /**
      * <p>
      * The role ARN associated with this cluster. This ARN was created using the <a
-     * href="https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html">CreateRole</a> API action in AWS
+     * href="https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html">CreateRole</a> API action in
      * Identity and Access Management (IAM).
      * </p>
      */
@@ -70,11 +70,11 @@ public class ClusterMetadata implements Serializable, Cloneable, StructuredPojo 
     private String jobType;
     /**
      * <p>
-     * The type of AWS Snow device to use for this cluster.
+     * The type of Snowcone device to use for this cluster.
      * </p>
      * <note>
      * <p>
-     * For cluster jobs, AWS Snow Family currently supports only the <code>EDGE</code> device type.
+     * For cluster jobs, Amazon Web Services Snow Family currently supports only the <code>EDGE</code> device type.
      * </p>
      * </note>
      */
@@ -146,13 +146,13 @@ public class ClusterMetadata implements Serializable, Cloneable, StructuredPojo 
     private String forwardingAddressId;
     /**
      * <p>
-     * The tax documents required in your AWS Region.
+     * The tax documents required in your Amazon Web Services Region.
      * </p>
      */
     private TaxDocuments taxDocuments;
     /**
      * <p>
-     * Represents metadata and configuration settings for services on an AWS Snow Family device.
+     * Represents metadata and configuration settings for services on an Amazon Web Services Snow Family device.
      * </p>
      */
     private OnDeviceServiceConfiguration onDeviceServiceConfiguration;
@@ -241,13 +241,13 @@ public class ClusterMetadata implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * The <code>KmsKeyARN</code> Amazon Resource Name (ARN) associated with this cluster. This ARN was created using
      * the <a href="https://docs.aws.amazon.com/kms/latest/APIReference/API_CreateKey.html">CreateKey</a> API action in
-     * AWS Key Management Service (AWS KMS).
+     * Key Management Service (KMS.
      * </p>
      * 
      * @param kmsKeyARN
      *        The <code>KmsKeyARN</code> Amazon Resource Name (ARN) associated with this cluster. This ARN was created
      *        using the <a href="https://docs.aws.amazon.com/kms/latest/APIReference/API_CreateKey.html">CreateKey</a>
-     *        API action in AWS Key Management Service (AWS KMS).
+     *        API action in Key Management Service (KMS.
      */
 
     public void setKmsKeyARN(String kmsKeyARN) {
@@ -258,12 +258,12 @@ public class ClusterMetadata implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * The <code>KmsKeyARN</code> Amazon Resource Name (ARN) associated with this cluster. This ARN was created using
      * the <a href="https://docs.aws.amazon.com/kms/latest/APIReference/API_CreateKey.html">CreateKey</a> API action in
-     * AWS Key Management Service (AWS KMS).
+     * Key Management Service (KMS.
      * </p>
      * 
      * @return The <code>KmsKeyARN</code> Amazon Resource Name (ARN) associated with this cluster. This ARN was created
      *         using the <a href="https://docs.aws.amazon.com/kms/latest/APIReference/API_CreateKey.html">CreateKey</a>
-     *         API action in AWS Key Management Service (AWS KMS).
+     *         API action in Key Management Service (KMS.
      */
 
     public String getKmsKeyARN() {
@@ -274,13 +274,13 @@ public class ClusterMetadata implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * The <code>KmsKeyARN</code> Amazon Resource Name (ARN) associated with this cluster. This ARN was created using
      * the <a href="https://docs.aws.amazon.com/kms/latest/APIReference/API_CreateKey.html">CreateKey</a> API action in
-     * AWS Key Management Service (AWS KMS).
+     * Key Management Service (KMS.
      * </p>
      * 
      * @param kmsKeyARN
      *        The <code>KmsKeyARN</code> Amazon Resource Name (ARN) associated with this cluster. This ARN was created
      *        using the <a href="https://docs.aws.amazon.com/kms/latest/APIReference/API_CreateKey.html">CreateKey</a>
-     *        API action in AWS Key Management Service (AWS KMS).
+     *        API action in Key Management Service (KMS.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -292,14 +292,14 @@ public class ClusterMetadata implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * The role ARN associated with this cluster. This ARN was created using the <a
-     * href="https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html">CreateRole</a> API action in AWS
+     * href="https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html">CreateRole</a> API action in
      * Identity and Access Management (IAM).
      * </p>
      * 
      * @param roleARN
      *        The role ARN associated with this cluster. This ARN was created using the <a
      *        href="https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html">CreateRole</a> API action
-     *        in AWS Identity and Access Management (IAM).
+     *        in Identity and Access Management (IAM).
      */
 
     public void setRoleARN(String roleARN) {
@@ -309,13 +309,13 @@ public class ClusterMetadata implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * The role ARN associated with this cluster. This ARN was created using the <a
-     * href="https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html">CreateRole</a> API action in AWS
+     * href="https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html">CreateRole</a> API action in
      * Identity and Access Management (IAM).
      * </p>
      * 
      * @return The role ARN associated with this cluster. This ARN was created using the <a
      *         href="https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html">CreateRole</a> API action
-     *         in AWS Identity and Access Management (IAM).
+     *         in Identity and Access Management (IAM).
      */
 
     public String getRoleARN() {
@@ -325,14 +325,14 @@ public class ClusterMetadata implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * The role ARN associated with this cluster. This ARN was created using the <a
-     * href="https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html">CreateRole</a> API action in AWS
+     * href="https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html">CreateRole</a> API action in
      * Identity and Access Management (IAM).
      * </p>
      * 
      * @param roleARN
      *        The role ARN associated with this cluster. This ARN was created using the <a
      *        href="https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html">CreateRole</a> API action
-     *        in AWS Identity and Access Management (IAM).
+     *        in Identity and Access Management (IAM).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -494,18 +494,19 @@ public class ClusterMetadata implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The type of AWS Snow device to use for this cluster.
+     * The type of Snowcone device to use for this cluster.
      * </p>
      * <note>
      * <p>
-     * For cluster jobs, AWS Snow Family currently supports only the <code>EDGE</code> device type.
+     * For cluster jobs, Amazon Web Services Snow Family currently supports only the <code>EDGE</code> device type.
      * </p>
      * </note>
      * 
      * @param snowballType
-     *        The type of AWS Snow device to use for this cluster. </p> <note>
+     *        The type of Snowcone device to use for this cluster. </p> <note>
      *        <p>
-     *        For cluster jobs, AWS Snow Family currently supports only the <code>EDGE</code> device type.
+     *        For cluster jobs, Amazon Web Services Snow Family currently supports only the <code>EDGE</code> device
+     *        type.
      *        </p>
      * @see SnowballType
      */
@@ -516,17 +517,18 @@ public class ClusterMetadata implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The type of AWS Snow device to use for this cluster.
+     * The type of Snowcone device to use for this cluster.
      * </p>
      * <note>
      * <p>
-     * For cluster jobs, AWS Snow Family currently supports only the <code>EDGE</code> device type.
+     * For cluster jobs, Amazon Web Services Snow Family currently supports only the <code>EDGE</code> device type.
      * </p>
      * </note>
      * 
-     * @return The type of AWS Snow device to use for this cluster. </p> <note>
+     * @return The type of Snowcone device to use for this cluster. </p> <note>
      *         <p>
-     *         For cluster jobs, AWS Snow Family currently supports only the <code>EDGE</code> device type.
+     *         For cluster jobs, Amazon Web Services Snow Family currently supports only the <code>EDGE</code> device
+     *         type.
      *         </p>
      * @see SnowballType
      */
@@ -537,18 +539,19 @@ public class ClusterMetadata implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The type of AWS Snow device to use for this cluster.
+     * The type of Snowcone device to use for this cluster.
      * </p>
      * <note>
      * <p>
-     * For cluster jobs, AWS Snow Family currently supports only the <code>EDGE</code> device type.
+     * For cluster jobs, Amazon Web Services Snow Family currently supports only the <code>EDGE</code> device type.
      * </p>
      * </note>
      * 
      * @param snowballType
-     *        The type of AWS Snow device to use for this cluster. </p> <note>
+     *        The type of Snowcone device to use for this cluster. </p> <note>
      *        <p>
-     *        For cluster jobs, AWS Snow Family currently supports only the <code>EDGE</code> device type.
+     *        For cluster jobs, Amazon Web Services Snow Family currently supports only the <code>EDGE</code> device
+     *        type.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SnowballType
@@ -561,18 +564,19 @@ public class ClusterMetadata implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The type of AWS Snow device to use for this cluster.
+     * The type of Snowcone device to use for this cluster.
      * </p>
      * <note>
      * <p>
-     * For cluster jobs, AWS Snow Family currently supports only the <code>EDGE</code> device type.
+     * For cluster jobs, Amazon Web Services Snow Family currently supports only the <code>EDGE</code> device type.
      * </p>
      * </note>
      * 
      * @param snowballType
-     *        The type of AWS Snow device to use for this cluster. </p> <note>
+     *        The type of Snowcone device to use for this cluster. </p> <note>
      *        <p>
-     *        For cluster jobs, AWS Snow Family currently supports only the <code>EDGE</code> device type.
+     *        For cluster jobs, Amazon Web Services Snow Family currently supports only the <code>EDGE</code> device
+     *        type.
      *        </p>
      * @see SnowballType
      */
@@ -583,18 +587,19 @@ public class ClusterMetadata implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The type of AWS Snow device to use for this cluster.
+     * The type of Snowcone device to use for this cluster.
      * </p>
      * <note>
      * <p>
-     * For cluster jobs, AWS Snow Family currently supports only the <code>EDGE</code> device type.
+     * For cluster jobs, Amazon Web Services Snow Family currently supports only the <code>EDGE</code> device type.
      * </p>
      * </note>
      * 
      * @param snowballType
-     *        The type of AWS Snow device to use for this cluster. </p> <note>
+     *        The type of Snowcone device to use for this cluster. </p> <note>
      *        <p>
-     *        For cluster jobs, AWS Snow Family currently supports only the <code>EDGE</code> device type.
+     *        For cluster jobs, Amazon Web Services Snow Family currently supports only the <code>EDGE</code> device
+     *        type.
      *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see SnowballType
@@ -1157,11 +1162,11 @@ public class ClusterMetadata implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The tax documents required in your AWS Region.
+     * The tax documents required in your Amazon Web Services Region.
      * </p>
      * 
      * @param taxDocuments
-     *        The tax documents required in your AWS Region.
+     *        The tax documents required in your Amazon Web Services Region.
      */
 
     public void setTaxDocuments(TaxDocuments taxDocuments) {
@@ -1170,10 +1175,10 @@ public class ClusterMetadata implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The tax documents required in your AWS Region.
+     * The tax documents required in your Amazon Web Services Region.
      * </p>
      * 
-     * @return The tax documents required in your AWS Region.
+     * @return The tax documents required in your Amazon Web Services Region.
      */
 
     public TaxDocuments getTaxDocuments() {
@@ -1182,11 +1187,11 @@ public class ClusterMetadata implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The tax documents required in your AWS Region.
+     * The tax documents required in your Amazon Web Services Region.
      * </p>
      * 
      * @param taxDocuments
-     *        The tax documents required in your AWS Region.
+     *        The tax documents required in your Amazon Web Services Region.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1197,11 +1202,11 @@ public class ClusterMetadata implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Represents metadata and configuration settings for services on an AWS Snow Family device.
+     * Represents metadata and configuration settings for services on an Amazon Web Services Snow Family device.
      * </p>
      * 
      * @param onDeviceServiceConfiguration
-     *        Represents metadata and configuration settings for services on an AWS Snow Family device.
+     *        Represents metadata and configuration settings for services on an Amazon Web Services Snow Family device.
      */
 
     public void setOnDeviceServiceConfiguration(OnDeviceServiceConfiguration onDeviceServiceConfiguration) {
@@ -1210,10 +1215,10 @@ public class ClusterMetadata implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Represents metadata and configuration settings for services on an AWS Snow Family device.
+     * Represents metadata and configuration settings for services on an Amazon Web Services Snow Family device.
      * </p>
      * 
-     * @return Represents metadata and configuration settings for services on an AWS Snow Family device.
+     * @return Represents metadata and configuration settings for services on an Amazon Web Services Snow Family device.
      */
 
     public OnDeviceServiceConfiguration getOnDeviceServiceConfiguration() {
@@ -1222,11 +1227,11 @@ public class ClusterMetadata implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * Represents metadata and configuration settings for services on an AWS Snow Family device.
+     * Represents metadata and configuration settings for services on an Amazon Web Services Snow Family device.
      * </p>
      * 
      * @param onDeviceServiceConfiguration
-     *        Represents metadata and configuration settings for services on an AWS Snow Family device.
+     *        Represents metadata and configuration settings for services on an Amazon Web Services Snow Family device.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

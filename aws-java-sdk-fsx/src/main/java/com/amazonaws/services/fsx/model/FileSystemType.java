@@ -24,7 +24,8 @@ public enum FileSystemType {
 
     WINDOWS("WINDOWS"),
     LUSTRE("LUSTRE"),
-    ONTAP("ONTAP");
+    ONTAP("ONTAP"),
+    OPENZFS("OPENZFS");
 
     private String value;
 

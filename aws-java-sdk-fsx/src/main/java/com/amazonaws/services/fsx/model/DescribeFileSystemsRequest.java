@@ -45,7 +45,7 @@ public class DescribeFileSystemsRequest extends com.amazonaws.AmazonWebServiceRe
     /**
      * <p>
      * Opaque pagination token returned from a previous <code>DescribeFileSystems</code> operation (String). If a token
-     * present, the action continues the list from where the returning call left off.
+     * present, the operation continues the list from where the returning call left off.
      * </p>
      */
     private String nextToken;
@@ -175,12 +175,12 @@ public class DescribeFileSystemsRequest extends com.amazonaws.AmazonWebServiceRe
     /**
      * <p>
      * Opaque pagination token returned from a previous <code>DescribeFileSystems</code> operation (String). If a token
-     * present, the action continues the list from where the returning call left off.
+     * present, the operation continues the list from where the returning call left off.
      * </p>
      * 
      * @param nextToken
      *        Opaque pagination token returned from a previous <code>DescribeFileSystems</code> operation (String). If a
-     *        token present, the action continues the list from where the returning call left off.
+     *        token present, the operation continues the list from where the returning call left off.
      */
 
     public void setNextToken(String nextToken) {
@@ -190,11 +190,11 @@ public class DescribeFileSystemsRequest extends com.amazonaws.AmazonWebServiceRe
     /**
      * <p>
      * Opaque pagination token returned from a previous <code>DescribeFileSystems</code> operation (String). If a token
-     * present, the action continues the list from where the returning call left off.
+     * present, the operation continues the list from where the returning call left off.
      * </p>
      * 
      * @return Opaque pagination token returned from a previous <code>DescribeFileSystems</code> operation (String). If
-     *         a token present, the action continues the list from where the returning call left off.
+     *         a token present, the operation continues the list from where the returning call left off.
      */
 
     public String getNextToken() {
@@ -204,12 +204,12 @@ public class DescribeFileSystemsRequest extends com.amazonaws.AmazonWebServiceRe
     /**
      * <p>
      * Opaque pagination token returned from a previous <code>DescribeFileSystems</code> operation (String). If a token
-     * present, the action continues the list from where the returning call left off.
+     * present, the operation continues the list from where the returning call left off.
      * </p>
      * 
      * @param nextToken
      *        Opaque pagination token returned from a previous <code>DescribeFileSystems</code> operation (String). If a
-     *        token present, the action continues the list from where the returning call left off.
+     *        token present, the operation continues the list from where the returning call left off.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Configures the wireless connection on an AWS Snowcone device.
+ * Configures the wireless connection on an Snowcone device.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/snowball-2016-06-30/WirelessConnection" target="_top">AWS API
@@ -30,18 +30,18 @@ public class WirelessConnection implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * Enables the Wi-Fi adapter on an AWS Snowcone device.
+     * Enables the Wi-Fi adapter on an Snowcone device.
      * </p>
      */
     private Boolean isWifiEnabled;
 
     /**
      * <p>
-     * Enables the Wi-Fi adapter on an AWS Snowcone device.
+     * Enables the Wi-Fi adapter on an Snowcone device.
      * </p>
      * 
      * @param isWifiEnabled
-     *        Enables the Wi-Fi adapter on an AWS Snowcone device.
+     *        Enables the Wi-Fi adapter on an Snowcone device.
      */
 
     public void setIsWifiEnabled(Boolean isWifiEnabled) {
@@ -50,10 +50,10 @@ public class WirelessConnection implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * Enables the Wi-Fi adapter on an AWS Snowcone device.
+     * Enables the Wi-Fi adapter on an Snowcone device.
      * </p>
      * 
-     * @return Enables the Wi-Fi adapter on an AWS Snowcone device.
+     * @return Enables the Wi-Fi adapter on an Snowcone device.
      */
 
     public Boolean getIsWifiEnabled() {
@@ -62,11 +62,11 @@ public class WirelessConnection implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * Enables the Wi-Fi adapter on an AWS Snowcone device.
+     * Enables the Wi-Fi adapter on an Snowcone device.
      * </p>
      * 
      * @param isWifiEnabled
-     *        Enables the Wi-Fi adapter on an AWS Snowcone device.
+     *        Enables the Wi-Fi adapter on an Snowcone device.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -77,10 +77,10 @@ public class WirelessConnection implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * Enables the Wi-Fi adapter on an AWS Snowcone device.
+     * Enables the Wi-Fi adapter on an Snowcone device.
      * </p>
      * 
-     * @return Enables the Wi-Fi adapter on an AWS Snowcone device.
+     * @return Enables the Wi-Fi adapter on an Snowcone device.
      */
 
     public Boolean isWifiEnabled() {

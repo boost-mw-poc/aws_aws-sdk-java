@@ -28,14 +28,14 @@ public class DeleteLFTagRequest extends com.amazonaws.AmazonWebServiceRequest im
     /**
      * <p>
      * The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent metadata
-     * store. It contains database definitions, table definitions, and other control information to manage your AWS Lake
+     * store. It contains database definitions, table definitions, and other control information to manage your Lake
      * Formation environment.
      * </p>
      */
     private String catalogId;
     /**
      * <p>
-     * The key-name for the tag to delete.
+     * The key-name for the LF-tag to delete.
      * </p>
      */
     private String tagKey;
@@ -43,14 +43,14 @@ public class DeleteLFTagRequest extends com.amazonaws.AmazonWebServiceRequest im
     /**
      * <p>
      * The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent metadata
-     * store. It contains database definitions, table definitions, and other control information to manage your AWS Lake
+     * store. It contains database definitions, table definitions, and other control information to manage your Lake
      * Formation environment.
      * </p>
      * 
      * @param catalogId
      *        The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent
      *        metadata store. It contains database definitions, table definitions, and other control information to
-     *        manage your AWS Lake Formation environment.
+     *        manage your Lake Formation environment.
      */
 
     public void setCatalogId(String catalogId) {
@@ -60,13 +60,13 @@ public class DeleteLFTagRequest extends com.amazonaws.AmazonWebServiceRequest im
     /**
      * <p>
      * The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent metadata
-     * store. It contains database definitions, table definitions, and other control information to manage your AWS Lake
+     * store. It contains database definitions, table definitions, and other control information to manage your Lake
      * Formation environment.
      * </p>
      * 
      * @return The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent
      *         metadata store. It contains database definitions, table definitions, and other control information to
-     *         manage your AWS Lake Formation environment.
+     *         manage your Lake Formation environment.
      */
 
     public String getCatalogId() {
@@ -76,14 +76,14 @@ public class DeleteLFTagRequest extends com.amazonaws.AmazonWebServiceRequest im
     /**
      * <p>
      * The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent metadata
-     * store. It contains database definitions, table definitions, and other control information to manage your AWS Lake
+     * store. It contains database definitions, table definitions, and other control information to manage your Lake
      * Formation environment.
      * </p>
      * 
      * @param catalogId
      *        The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent
      *        metadata store. It contains database definitions, table definitions, and other control information to
-     *        manage your AWS Lake Formation environment.
+     *        manage your Lake Formation environment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -94,11 +94,11 @@ public class DeleteLFTagRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The key-name for the tag to delete.
+     * The key-name for the LF-tag to delete.
      * </p>
      * 
      * @param tagKey
-     *        The key-name for the tag to delete.
+     *        The key-name for the LF-tag to delete.
      */
 
     public void setTagKey(String tagKey) {
@@ -107,10 +107,10 @@ public class DeleteLFTagRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The key-name for the tag to delete.
+     * The key-name for the LF-tag to delete.
      * </p>
      * 
-     * @return The key-name for the tag to delete.
+     * @return The key-name for the LF-tag to delete.
      */
 
     public String getTagKey() {
@@ -119,11 +119,11 @@ public class DeleteLFTagRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The key-name for the tag to delete.
+     * The key-name for the LF-tag to delete.
      * </p>
      * 
      * @param tagKey
-     *        The key-name for the tag to delete.
+     *        The key-name for the LF-tag to delete.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

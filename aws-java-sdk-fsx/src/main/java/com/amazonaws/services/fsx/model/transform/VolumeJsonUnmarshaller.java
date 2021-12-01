@@ -90,6 +90,16 @@ public class VolumeJsonUnmarshaller implements Unmarshaller<Volume, JsonUnmarsha
                     context.nextToken();
                     volume.setLifecycleTransitionReason(LifecycleTransitionReasonJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("AdministrativeActions", targetDepth)) {
+                    context.nextToken();
+                    volume.setAdministrativeActions(new ListUnmarshaller<AdministrativeAction>(AdministrativeActionJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
+                if (context.testExpression("OpenZFSConfiguration", targetDepth)) {
+                    context.nextToken();
+                    volume.setOpenZFSConfiguration(OpenZFSVolumeConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

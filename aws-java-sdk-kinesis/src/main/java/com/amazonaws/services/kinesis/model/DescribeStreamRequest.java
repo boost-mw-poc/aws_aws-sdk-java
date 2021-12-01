@@ -37,13 +37,21 @@ public class DescribeStreamRequest extends com.amazonaws.AmazonWebServiceRequest
     /**
      * <p>
      * The maximum number of shards to return in a single call. The default value is 100. If you specify a value greater
-     * than 100, at most 100 shards are returned.
+     * than 100, at most 100 results are returned.
      * </p>
      */
     private Integer limit;
     /**
      * <p>
      * The shard ID of the shard to start with.
+     * </p>
+     * <p>
+     * Specify this parameter to indicate that you want to describe the stream starting with the shard whose ID
+     * immediately follows <code>ExclusiveStartShardId</code>.
+     * </p>
+     * <p>
+     * If you don't specify this parameter, the default behavior for <code>DescribeStream</code> is to describe the
+     * stream starting with the first shard in the stream.
      * </p>
      */
     private String exclusiveStartShardId;
@@ -91,12 +99,12 @@ public class DescribeStreamRequest extends com.amazonaws.AmazonWebServiceRequest
     /**
      * <p>
      * The maximum number of shards to return in a single call. The default value is 100. If you specify a value greater
-     * than 100, at most 100 shards are returned.
+     * than 100, at most 100 results are returned.
      * </p>
      * 
      * @param limit
      *        The maximum number of shards to return in a single call. The default value is 100. If you specify a value
-     *        greater than 100, at most 100 shards are returned.
+     *        greater than 100, at most 100 results are returned.
      */
 
     public void setLimit(Integer limit) {
@@ -106,11 +114,11 @@ public class DescribeStreamRequest extends com.amazonaws.AmazonWebServiceRequest
     /**
      * <p>
      * The maximum number of shards to return in a single call. The default value is 100. If you specify a value greater
-     * than 100, at most 100 shards are returned.
+     * than 100, at most 100 results are returned.
      * </p>
      * 
      * @return The maximum number of shards to return in a single call. The default value is 100. If you specify a value
-     *         greater than 100, at most 100 shards are returned.
+     *         greater than 100, at most 100 results are returned.
      */
 
     public Integer getLimit() {
@@ -120,12 +128,12 @@ public class DescribeStreamRequest extends com.amazonaws.AmazonWebServiceRequest
     /**
      * <p>
      * The maximum number of shards to return in a single call. The default value is 100. If you specify a value greater
-     * than 100, at most 100 shards are returned.
+     * than 100, at most 100 results are returned.
      * </p>
      * 
      * @param limit
      *        The maximum number of shards to return in a single call. The default value is 100. If you specify a value
-     *        greater than 100, at most 100 shards are returned.
+     *        greater than 100, at most 100 results are returned.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -138,9 +146,24 @@ public class DescribeStreamRequest extends com.amazonaws.AmazonWebServiceRequest
      * <p>
      * The shard ID of the shard to start with.
      * </p>
+     * <p>
+     * Specify this parameter to indicate that you want to describe the stream starting with the shard whose ID
+     * immediately follows <code>ExclusiveStartShardId</code>.
+     * </p>
+     * <p>
+     * If you don't specify this parameter, the default behavior for <code>DescribeStream</code> is to describe the
+     * stream starting with the first shard in the stream.
+     * </p>
      * 
      * @param exclusiveStartShardId
-     *        The shard ID of the shard to start with.
+     *        The shard ID of the shard to start with.</p>
+     *        <p>
+     *        Specify this parameter to indicate that you want to describe the stream starting with the shard whose ID
+     *        immediately follows <code>ExclusiveStartShardId</code>.
+     *        </p>
+     *        <p>
+     *        If you don't specify this parameter, the default behavior for <code>DescribeStream</code> is to describe
+     *        the stream starting with the first shard in the stream.
      */
 
     public void setExclusiveStartShardId(String exclusiveStartShardId) {
@@ -151,8 +174,23 @@ public class DescribeStreamRequest extends com.amazonaws.AmazonWebServiceRequest
      * <p>
      * The shard ID of the shard to start with.
      * </p>
+     * <p>
+     * Specify this parameter to indicate that you want to describe the stream starting with the shard whose ID
+     * immediately follows <code>ExclusiveStartShardId</code>.
+     * </p>
+     * <p>
+     * If you don't specify this parameter, the default behavior for <code>DescribeStream</code> is to describe the
+     * stream starting with the first shard in the stream.
+     * </p>
      * 
-     * @return The shard ID of the shard to start with.
+     * @return The shard ID of the shard to start with.</p>
+     *         <p>
+     *         Specify this parameter to indicate that you want to describe the stream starting with the shard whose ID
+     *         immediately follows <code>ExclusiveStartShardId</code>.
+     *         </p>
+     *         <p>
+     *         If you don't specify this parameter, the default behavior for <code>DescribeStream</code> is to describe
+     *         the stream starting with the first shard in the stream.
      */
 
     public String getExclusiveStartShardId() {
@@ -163,9 +201,24 @@ public class DescribeStreamRequest extends com.amazonaws.AmazonWebServiceRequest
      * <p>
      * The shard ID of the shard to start with.
      * </p>
+     * <p>
+     * Specify this parameter to indicate that you want to describe the stream starting with the shard whose ID
+     * immediately follows <code>ExclusiveStartShardId</code>.
+     * </p>
+     * <p>
+     * If you don't specify this parameter, the default behavior for <code>DescribeStream</code> is to describe the
+     * stream starting with the first shard in the stream.
+     * </p>
      * 
      * @param exclusiveStartShardId
-     *        The shard ID of the shard to start with.
+     *        The shard ID of the shard to start with.</p>
+     *        <p>
+     *        Specify this parameter to indicate that you want to describe the stream starting with the shard whose ID
+     *        immediately follows <code>ExclusiveStartShardId</code>.
+     *        </p>
+     *        <p>
+     *        If you don't specify this parameter, the default behavior for <code>DescribeStream</code> is to describe
+     *        the stream starting with the first shard in the stream.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

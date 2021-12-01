@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Updates the Microsoft Active Directory (AD) configuration of an SVM joined to an AD. Pleae note, account credentials
+ * Updates the Microsoft Active Directory (AD) configuration of an SVM joined to an AD. Please note, account credentials
  * are not returned in the response payload.
  * </p>
  * 

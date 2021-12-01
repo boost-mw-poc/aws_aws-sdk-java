@@ -19,8 +19,9 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Defines the real-time status of a Snow device's data transfer while the device is at AWS. This data is only available
- * while a job has a <code>JobState</code> value of <code>InProgress</code>, for both import and export jobs.
+ * Defines the real-time status of a Snow device's data transfer while the device is at Amazon Web Services. This data
+ * is only available while a job has a <code>JobState</code> value of <code>InProgress</code>, for both import and
+ * export jobs.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/snowball-2016-06-30/DataTransfer" target="_top">AWS API

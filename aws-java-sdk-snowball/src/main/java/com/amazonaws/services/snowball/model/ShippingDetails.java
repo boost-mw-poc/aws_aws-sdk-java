@@ -63,8 +63,8 @@ public class ShippingDetails implements Serializable, Cloneable, StructuredPojo 
     private String shippingOption;
     /**
      * <p>
-     * The <code>Status</code> and <code>TrackingNumber</code> values for a Snow device being returned to AWS for a
-     * particular job.
+     * The <code>Status</code> and <code>TrackingNumber</code> values for a Snow device being returned to Amazon Web
+     * Services for a particular job.
      * </p>
      */
     private Shipment inboundShipment;
@@ -416,13 +416,13 @@ public class ShippingDetails implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The <code>Status</code> and <code>TrackingNumber</code> values for a Snow device being returned to AWS for a
-     * particular job.
+     * The <code>Status</code> and <code>TrackingNumber</code> values for a Snow device being returned to Amazon Web
+     * Services for a particular job.
      * </p>
      * 
      * @param inboundShipment
-     *        The <code>Status</code> and <code>TrackingNumber</code> values for a Snow device being returned to AWS for
-     *        a particular job.
+     *        The <code>Status</code> and <code>TrackingNumber</code> values for a Snow device being returned to Amazon
+     *        Web Services for a particular job.
      */
 
     public void setInboundShipment(Shipment inboundShipment) {
@@ -431,12 +431,12 @@ public class ShippingDetails implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The <code>Status</code> and <code>TrackingNumber</code> values for a Snow device being returned to AWS for a
-     * particular job.
+     * The <code>Status</code> and <code>TrackingNumber</code> values for a Snow device being returned to Amazon Web
+     * Services for a particular job.
      * </p>
      * 
-     * @return The <code>Status</code> and <code>TrackingNumber</code> values for a Snow device being returned to AWS
-     *         for a particular job.
+     * @return The <code>Status</code> and <code>TrackingNumber</code> values for a Snow device being returned to Amazon
+     *         Web Services for a particular job.
      */
 
     public Shipment getInboundShipment() {
@@ -445,13 +445,13 @@ public class ShippingDetails implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The <code>Status</code> and <code>TrackingNumber</code> values for a Snow device being returned to AWS for a
-     * particular job.
+     * The <code>Status</code> and <code>TrackingNumber</code> values for a Snow device being returned to Amazon Web
+     * Services for a particular job.
      * </p>
      * 
      * @param inboundShipment
-     *        The <code>Status</code> and <code>TrackingNumber</code> values for a Snow device being returned to AWS for
-     *        a particular job.
+     *        The <code>Status</code> and <code>TrackingNumber</code> values for a Snow device being returned to Amazon
+     *        Web Services for a particular job.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

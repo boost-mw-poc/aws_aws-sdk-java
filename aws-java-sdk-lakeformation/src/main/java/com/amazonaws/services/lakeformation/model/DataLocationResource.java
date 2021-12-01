@@ -30,8 +30,8 @@ public class DataLocationResource implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The identifier for the Data Catalog where the location is registered with AWS Lake Formation. By default, it is
-     * the account ID of the caller.
+     * The identifier for the Data Catalog where the location is registered with Lake Formation. By default, it is the
+     * account ID of the caller.
      * </p>
      */
     private String catalogId;
@@ -44,13 +44,13 @@ public class DataLocationResource implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The identifier for the Data Catalog where the location is registered with AWS Lake Formation. By default, it is
-     * the account ID of the caller.
+     * The identifier for the Data Catalog where the location is registered with Lake Formation. By default, it is the
+     * account ID of the caller.
      * </p>
      * 
      * @param catalogId
-     *        The identifier for the Data Catalog where the location is registered with AWS Lake Formation. By default,
-     *        it is the account ID of the caller.
+     *        The identifier for the Data Catalog where the location is registered with Lake Formation. By default, it
+     *        is the account ID of the caller.
      */
 
     public void setCatalogId(String catalogId) {
@@ -59,12 +59,12 @@ public class DataLocationResource implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The identifier for the Data Catalog where the location is registered with AWS Lake Formation. By default, it is
-     * the account ID of the caller.
+     * The identifier for the Data Catalog where the location is registered with Lake Formation. By default, it is the
+     * account ID of the caller.
      * </p>
      * 
-     * @return The identifier for the Data Catalog where the location is registered with AWS Lake Formation. By default,
-     *         it is the account ID of the caller.
+     * @return The identifier for the Data Catalog where the location is registered with Lake Formation. By default, it
+     *         is the account ID of the caller.
      */
 
     public String getCatalogId() {
@@ -73,13 +73,13 @@ public class DataLocationResource implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The identifier for the Data Catalog where the location is registered with AWS Lake Formation. By default, it is
-     * the account ID of the caller.
+     * The identifier for the Data Catalog where the location is registered with Lake Formation. By default, it is the
+     * account ID of the caller.
      * </p>
      * 
      * @param catalogId
-     *        The identifier for the Data Catalog where the location is registered with AWS Lake Formation. By default,
-     *        it is the account ID of the caller.
+     *        The identifier for the Data Catalog where the location is registered with Lake Formation. By default, it
+     *        is the account ID of the caller.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

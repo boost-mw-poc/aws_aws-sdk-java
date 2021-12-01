@@ -39,6 +39,8 @@ public class ListPermissionsRequestMarshaller {
             .marshallLocationName("NextToken").build();
     private static final MarshallingInfo<Integer> MAXRESULTS_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MaxResults").build();
+    private static final MarshallingInfo<String> INCLUDERELATED_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("IncludeRelated").build();
 
     private static final ListPermissionsRequestMarshaller instance = new ListPermissionsRequestMarshaller();
 
@@ -62,6 +64,7 @@ public class ListPermissionsRequestMarshaller {
             protocolMarshaller.marshall(listPermissionsRequest.getResource(), RESOURCE_BINDING);
             protocolMarshaller.marshall(listPermissionsRequest.getNextToken(), NEXTTOKEN_BINDING);
             protocolMarshaller.marshall(listPermissionsRequest.getMaxResults(), MAXRESULTS_BINDING);
+            protocolMarshaller.marshall(listPermissionsRequest.getIncludeRelated(), INCLUDERELATED_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

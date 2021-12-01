@@ -51,6 +51,8 @@ public class OutpostMarshaller {
             .marshallLocationName("Tags").build();
     private static final MarshallingInfo<String> SITEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("SiteArn").build();
+    private static final MarshallingInfo<String> SUPPORTEDHARDWARETYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SupportedHardwareType").build();
 
     private static final OutpostMarshaller instance = new OutpostMarshaller();
 
@@ -79,6 +81,7 @@ public class OutpostMarshaller {
             protocolMarshaller.marshall(outpost.getAvailabilityZoneId(), AVAILABILITYZONEID_BINDING);
             protocolMarshaller.marshall(outpost.getTags(), TAGS_BINDING);
             protocolMarshaller.marshall(outpost.getSiteArn(), SITEARN_BINDING);
+            protocolMarshaller.marshall(outpost.getSupportedHardwareType(), SUPPORTEDHARDWARETYPE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

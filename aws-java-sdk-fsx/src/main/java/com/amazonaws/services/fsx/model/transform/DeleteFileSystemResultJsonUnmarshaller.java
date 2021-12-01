@@ -64,6 +64,10 @@ public class DeleteFileSystemResultJsonUnmarshaller implements Unmarshaller<Dele
                     context.nextToken();
                     deleteFileSystemResult.setLustreResponse(DeleteFileSystemLustreResponseJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("OpenZFSResponse", targetDepth)) {
+                    context.nextToken();
+                    deleteFileSystemResult.setOpenZFSResponse(DeleteFileSystemOpenZFSResponseJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

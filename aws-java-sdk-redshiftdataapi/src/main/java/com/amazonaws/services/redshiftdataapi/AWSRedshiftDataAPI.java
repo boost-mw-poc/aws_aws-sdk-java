@@ -55,14 +55,16 @@ public interface AWSRedshiftDataAPI {
      * <ul>
      * <li>
      * <p>
-     * Secrets Manager - specify the Amazon Resource Name (ARN) of the secret, the database name, and the cluster
-     * identifier that matches the cluster in the secret.
+     * Secrets Manager - when connecting to a cluster, specify the Amazon Resource Name (ARN) of the secret, the
+     * database name, and the cluster identifier that matches the cluster in the secret. When connecting to a serverless
+     * endpoint, specify the Amazon Resource Name (ARN) of the secret and the database name.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Temporary credentials - specify the cluster identifier, the database name, and the database user name. Permission
-     * to call the <code>redshift:GetClusterCredentials</code> operation is required to use this method.
+     * Temporary credentials - when connecting to a cluster, specify the cluster identifier, the database name, and the
+     * database user name. Also, permission to call the <code>redshift:GetClusterCredentials</code> operation is
+     * required. When connecting to a serverless endpoint, specify the database name.
      * </p>
      * </li>
      * </ul>
@@ -94,6 +96,8 @@ public interface AWSRedshiftDataAPI {
      *         The Amazon Redshift Data API operation failed due to a missing resource.
      * @throws InternalServerException
      *         The Amazon Redshift Data API operation failed due to invalid input.
+     * @throws DatabaseConnectionException
+     *         Connection to a database failed.
      * @sample AWSRedshiftDataAPI.CancelStatement
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-data-2019-12-20/CancelStatement" target="_top">AWS
      *      API Documentation</a>
@@ -130,14 +134,16 @@ public interface AWSRedshiftDataAPI {
      * <ul>
      * <li>
      * <p>
-     * Secrets Manager - specify the Amazon Resource Name (ARN) of the secret, the database name, and the cluster
-     * identifier that matches the cluster in the secret.
+     * Secrets Manager - when connecting to a cluster, specify the Amazon Resource Name (ARN) of the secret, the
+     * database name, and the cluster identifier that matches the cluster in the secret. When connecting to a serverless
+     * endpoint, specify the Amazon Resource Name (ARN) of the secret and the database name.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Temporary credentials - specify the cluster identifier, the database name, and the database user name. Permission
-     * to call the <code>redshift:GetClusterCredentials</code> operation is required to use this method.
+     * Temporary credentials - when connecting to a cluster, specify the cluster identifier, the database name, and the
+     * database user name. Also, permission to call the <code>redshift:GetClusterCredentials</code> operation is
+     * required. When connecting to a serverless endpoint, specify the database name.
      * </p>
      * </li>
      * </ul>
@@ -148,6 +154,8 @@ public interface AWSRedshiftDataAPI {
      *         The Amazon Redshift Data API operation failed due to invalid input.
      * @throws InternalServerException
      *         The Amazon Redshift Data API operation failed due to invalid input.
+     * @throws DatabaseConnectionException
+     *         Connection to a database failed.
      * @sample AWSRedshiftDataAPI.DescribeTable
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-data-2019-12-20/DescribeTable" target="_top">AWS
      *      API Documentation</a>
@@ -163,14 +171,16 @@ public interface AWSRedshiftDataAPI {
      * <ul>
      * <li>
      * <p>
-     * Secrets Manager - specify the Amazon Resource Name (ARN) of the secret, the database name, and the cluster
-     * identifier that matches the cluster in the secret.
+     * Secrets Manager - when connecting to a cluster, specify the Amazon Resource Name (ARN) of the secret, the
+     * database name, and the cluster identifier that matches the cluster in the secret. When connecting to a serverless
+     * endpoint, specify the Amazon Resource Name (ARN) of the secret and the database name.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Temporary credentials - specify the cluster identifier, the database name, and the database user name. Permission
-     * to call the <code>redshift:GetClusterCredentials</code> operation is required to use this method.
+     * Temporary credentials - when connecting to a cluster, specify the cluster identifier, the database name, and the
+     * database user name. Also, permission to call the <code>redshift:GetClusterCredentials</code> operation is
+     * required. When connecting to a serverless endpoint, specify the database name.
      * </p>
      * </li>
      * </ul>
@@ -217,14 +227,16 @@ public interface AWSRedshiftDataAPI {
      * <ul>
      * <li>
      * <p>
-     * Secrets Manager - specify the Amazon Resource Name (ARN) of the secret, the database name, and the cluster
-     * identifier that matches the cluster in the secret.
+     * Secrets Manager - when connecting to a cluster, specify the Amazon Resource Name (ARN) of the secret, the
+     * database name, and the cluster identifier that matches the cluster in the secret. When connecting to a serverless
+     * endpoint, specify the Amazon Resource Name (ARN) of the secret and the database name.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Temporary credentials - specify the cluster identifier, the database name, and the database user name. Permission
-     * to call the <code>redshift:GetClusterCredentials</code> operation is required to use this method.
+     * Temporary credentials - when connecting to a cluster, specify the cluster identifier, the database name, and the
+     * database user name. Also, permission to call the <code>redshift:GetClusterCredentials</code> operation is
+     * required. When connecting to a serverless endpoint, specify the database name.
      * </p>
      * </li>
      * </ul>
@@ -235,6 +247,8 @@ public interface AWSRedshiftDataAPI {
      *         The Amazon Redshift Data API operation failed due to invalid input.
      * @throws InternalServerException
      *         The Amazon Redshift Data API operation failed due to invalid input.
+     * @throws DatabaseConnectionException
+     *         Connection to a database failed.
      * @sample AWSRedshiftDataAPI.ListDatabases
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-data-2019-12-20/ListDatabases" target="_top">AWS
      *      API Documentation</a>
@@ -249,14 +263,16 @@ public interface AWSRedshiftDataAPI {
      * <ul>
      * <li>
      * <p>
-     * Secrets Manager - specify the Amazon Resource Name (ARN) of the secret, the database name, and the cluster
-     * identifier that matches the cluster in the secret.
+     * Secrets Manager - when connecting to a cluster, specify the Amazon Resource Name (ARN) of the secret, the
+     * database name, and the cluster identifier that matches the cluster in the secret. When connecting to a serverless
+     * endpoint, specify the Amazon Resource Name (ARN) of the secret and the database name.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Temporary credentials - specify the cluster identifier, the database name, and the database user name. Permission
-     * to call the <code>redshift:GetClusterCredentials</code> operation is required to use this method.
+     * Temporary credentials - when connecting to a cluster, specify the cluster identifier, the database name, and the
+     * database user name. Also, permission to call the <code>redshift:GetClusterCredentials</code> operation is
+     * required. When connecting to a serverless endpoint, specify the database name.
      * </p>
      * </li>
      * </ul>
@@ -267,6 +283,8 @@ public interface AWSRedshiftDataAPI {
      *         The Amazon Redshift Data API operation failed due to invalid input.
      * @throws InternalServerException
      *         The Amazon Redshift Data API operation failed due to invalid input.
+     * @throws DatabaseConnectionException
+     *         Connection to a database failed.
      * @sample AWSRedshiftDataAPI.ListSchemas
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-data-2019-12-20/ListSchemas" target="_top">AWS API
      *      Documentation</a>
@@ -300,14 +318,16 @@ public interface AWSRedshiftDataAPI {
      * <ul>
      * <li>
      * <p>
-     * Secrets Manager - specify the Amazon Resource Name (ARN) of the secret, the database name, and the cluster
-     * identifier that matches the cluster in the secret.
+     * Secrets Manager - when connecting to a cluster, specify the Amazon Resource Name (ARN) of the secret, the
+     * database name, and the cluster identifier that matches the cluster in the secret. When connecting to a serverless
+     * endpoint, specify the Amazon Resource Name (ARN) of the secret and the database name.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Temporary credentials - specify the cluster identifier, the database name, and the database user name. Permission
-     * to call the <code>redshift:GetClusterCredentials</code> operation is required to use this method.
+     * Temporary credentials - when connecting to a cluster, specify the cluster identifier, the database name, and the
+     * database user name. Also, permission to call the <code>redshift:GetClusterCredentials</code> operation is
+     * required. When connecting to a serverless endpoint, specify the database name.
      * </p>
      * </li>
      * </ul>
@@ -318,6 +338,8 @@ public interface AWSRedshiftDataAPI {
      *         The Amazon Redshift Data API operation failed due to invalid input.
      * @throws InternalServerException
      *         The Amazon Redshift Data API operation failed due to invalid input.
+     * @throws DatabaseConnectionException
+     *         Connection to a database failed.
      * @sample AWSRedshiftDataAPI.ListTables
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/redshift-data-2019-12-20/ListTables" target="_top">AWS API
      *      Documentation</a>

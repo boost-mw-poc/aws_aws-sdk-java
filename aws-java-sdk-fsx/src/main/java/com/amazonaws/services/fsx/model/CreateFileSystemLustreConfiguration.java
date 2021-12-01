@@ -21,6 +21,35 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * <p>
  * The Lustre configuration for the file system being created.
  * </p>
+ * <note>
+ * <p>
+ * The following parameters are not supported for file systems with the <code>Persistent_2</code> deployment type.
+ * Instead, use <code>CreateDataRepositoryAssociation</code> to create a data repository association to link your Lustre
+ * file system to a data repository.
+ * </p>
+ * <ul>
+ * <li>
+ * <p>
+ * <code>AutoImportPolicy</code>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <code>ExportPath</code>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <code>ImportedChunkSize</code>
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * <code>ImportPath</code>
+ * </p>
+ * </li>
+ * </ul>
+ * </note>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/CreateFileSystemLustreConfiguration"
  *      target="_top">AWS API Documentation</a>
@@ -43,23 +72,38 @@ public class CreateFileSystemLustreConfiguration implements Serializable, Clonea
      * you specify a prefix after the Amazon S3 bucket name, only object keys with that prefix are loaded into the file
      * system.
      * </p>
+     * <note>
+     * <p>
+     * This parameter is not supported for file systems with the <code>Persistent_2</code> deployment type. Instead, use
+     * <code>CreateDataRepositoryAssociation</code> to create a data repository association to link your Lustre file
+     * system to a data repository.
+     * </p>
+     * </note>
      */
     private String importPath;
     /**
      * <p>
-     * (Optional) The path in Amazon S3 where the root of your Amazon FSx file system is exported. The path must use the
-     * same Amazon S3 bucket as specified in ImportPath. You can provide an optional prefix to which new and changed
-     * data is to be exported from your Amazon FSx for Lustre file system. If an <code>ExportPath</code> value is not
-     * provided, Amazon FSx sets a default export path, <code>s3://import-bucket/FSxLustre[creation-timestamp]</code>.
-     * The timestamp is in UTC format, for example <code>s3://import-bucket/FSxLustre20181105T222312Z</code>.
+     * (Optional) Available with <code>Scratch</code> and <code>Persistent_1</code> deployment types. Specifies the path
+     * in the Amazon S3 bucket where the root of your Amazon FSx file system is exported. The path must use the same
+     * Amazon S3 bucket as specified in ImportPath. You can provide an optional prefix to which new and changed data is
+     * to be exported from your Amazon FSx for Lustre file system. If an <code>ExportPath</code> value is not provided,
+     * Amazon FSx sets a default export path, <code>s3://import-bucket/FSxLustre[creation-timestamp]</code>. The
+     * timestamp is in UTC format, for example <code>s3://import-bucket/FSxLustre20181105T222312Z</code>.
      * </p>
      * <p>
      * The Amazon S3 export bucket must be the same as the import bucket specified by <code>ImportPath</code>. If you
-     * only specify a bucket name, such as <code>s3://import-bucket</code>, you get a 1:1 mapping of file system objects
+     * specify only a bucket name, such as <code>s3://import-bucket</code>, you get a 1:1 mapping of file system objects
      * to S3 bucket objects. This mapping means that the input data in S3 is overwritten on export. If you provide a
      * custom prefix in the export path, such as <code>s3://import-bucket/[custom-optional-prefix]</code>, Amazon FSx
      * exports the contents of your file system to that export prefix in the Amazon S3 bucket.
      * </p>
+     * <note>
+     * <p>
+     * This parameter is not supported for file systems with the <code>Persistent_2</code> deployment type. Instead, use
+     * <code>CreateDataRepositoryAssociation</code> to create a data repository association to link your Lustre file
+     * system to a data repository.
+     * </p>
+     * </note>
      */
     private String exportPath;
     /**
@@ -72,39 +116,59 @@ public class CreateFileSystemLustreConfiguration implements Serializable, Clonea
      * The default chunk size is 1,024 MiB (1 GiB) and can go as high as 512,000 MiB (500 GiB). Amazon S3 objects have a
      * maximum size of 5 TB.
      * </p>
+     * <p>
+     * This parameter is not supported for file systems with the <code>Persistent_2</code> deployment type. Instead, use
+     * <code>CreateDataRepositoryAssociation</code> to create a data repository association to link your Lustre file
+     * system to a data repository.
+     * </p>
      */
     private Integer importedFileChunkSize;
     /**
      * <p>
-     * Choose <code>SCRATCH_1</code> and <code>SCRATCH_2</code> deployment types when you need temporary storage and
-     * shorter-term processing of data. The <code>SCRATCH_2</code> deployment type provides in-transit encryption of
-     * data and higher burst throughput capacity than <code>SCRATCH_1</code>.
+     * (Optional) Choose <code>SCRATCH_1</code> and <code>SCRATCH_2</code> deployment types when you need temporary
+     * storage and shorter-term processing of data. The <code>SCRATCH_2</code> deployment type provides in-transit
+     * encryption of data and higher burst throughput capacity than <code>SCRATCH_1</code>.
      * </p>
      * <p>
-     * Choose <code>PERSISTENT_1</code> deployment type for longer-term storage and workloads and encryption of data in
-     * transit. To learn more about deployment types, see <a
-     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/lustre-deployment-types.html"> FSx for Lustre Deployment
-     * Options</a>.
+     * Choose <code>PERSISTENT_1</code> for longer-term storage and for throughput-focused workloads that aren’t
+     * latency-sensitive. a. <code>PERSISTENT_1</code> supports encryption of data in transit, and is available in all
+     * Amazon Web Services Regions in which FSx for Lustre is available.
      * </p>
      * <p>
-     * Encryption of data in-transit is automatically enabled when you access a <code>SCRATCH_2</code> or
-     * <code>PERSISTENT_1</code> file system from Amazon EC2 instances that <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/data- protection.html">support this feature</a>.
+     * Choose <code>PERSISTENT_2</code> for longer-term storage and for latency-sensitive workloads that require the
+     * highest levels of IOPS/throughput. <code>PERSISTENT_2</code> supports SSD storage, and offers higher
+     * <code>PerUnitStorageThroughput</code> (up to 1000 MB/s/TiB). <code>PERSISTENT_2</code> is available in a limited
+     * number of Amazon Web Services Regions. For more information, and an up-to-date list of Amazon Web Services
+     * Regions in which <code>PERSISTENT_2</code> is available, see <a
+     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/using-fsx-lustre.html#lustre-deployment-types">File
+     * system deployment options for FSx for Lustre</a> in the <i>Amazon FSx for Lustre User Guide</i>.
+     * </p>
+     * <note>
+     * <p>
+     * If you choose <code>PERSISTENT_2</code>, and you set <code>FileSystemTypeVersion</code> to <code>2.10</code>, the
+     * <code>CreateFileSystem</code> operation fails.
+     * </p>
+     * </note>
+     * <p>
+     * Encryption of data in transit is automatically turned on when you access <code>SCRATCH_2</code>,
+     * <code>PERSISTENT_1</code> and <code>PERSISTENT_2</code> file systems from Amazon EC2 instances that <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/data- protection.html">support automatic encryption</a>
+     * in the Amazon Web Services Regions where they are available. For more information about encryption in transit for
+     * FSx for Lustre file systems, see <a
+     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/encryption-in-transit-fsxl.html">Encrypting data in
+     * transit</a> in the <i>Amazon FSx for Lustre User Guide</i>.
+     * </p>
+     * <p>
      * (Default = <code>SCRATCH_1</code>)
-     * </p>
-     * <p>
-     * Encryption of data in-transit for <code>SCRATCH_2</code> and <code>PERSISTENT_1</code> deployment types is
-     * supported when accessed from supported instance types in supported Amazon Web Services Regions. To learn more, <a
-     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/encryption-in-transit-fsxl.html">Encrypting Data in
-     * Transit</a>.
      * </p>
      */
     private String deploymentType;
     /**
      * <p>
-     * (Optional) When you create your file system, your existing S3 objects appear as file and directory listings. Use
-     * this property to choose how Amazon FSx keeps your file and directory listings up to date as you add or modify
-     * objects in your linked S3 bucket. <code>AutoImportPolicy</code> can have the following values:
+     * (Optional) Available with <code>Scratch</code> and <code>Persistent_1</code> deployment types. When you create
+     * your file system, your existing S3 objects appear as file and directory listings. Use this property to choose how
+     * Amazon FSx keeps your file and directory listings up to date as you add or modify objects in your linked S3
+     * bucket. <code>AutoImportPolicy</code> can have the following values:
      * </p>
      * <ul>
      * <li>
@@ -127,25 +191,56 @@ public class CreateFileSystemLustreConfiguration implements Serializable, Clonea
      * this option.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>NEW_CHANGED_DELETED</code> - AutoImport is on. Amazon FSx automatically imports file and directory listings
+     * of any new objects added to the S3 bucket, any existing objects that are changed in the S3 bucket, and any
+     * objects that were deleted in the S3 bucket.
+     * </p>
+     * </li>
      * </ul>
      * <p>
-     * For more information, see <a
-     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/autoimport-data-repo.html">Automatically import updates
-     * from your S3 bucket</a>.
+     * For more information, see <a href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/autoimport-data-repo.html">
+     * Automatically import updates from your S3 bucket</a>.
      * </p>
+     * <note>
+     * <p>
+     * This parameter is not supported for file systems with the <code>Persistent_2</code> deployment type. Instead, use
+     * <code>CreateDataRepositoryAssociation"</code> to create a data repository association to link your Lustre file
+     * system to a data repository.
+     * </p>
+     * </note>
      */
     private String autoImportPolicy;
     /**
      * <p>
-     * Required for the <code>PERSISTENT_1</code> deployment type, describes the amount of read and write throughput for
-     * each 1 tebibyte of storage, in MB/s/TiB. File system throughput capacity is calculated by multiplying ﬁle system
-     * storage capacity (TiB) by the PerUnitStorageThroughput (MB/s/TiB). For a 2.4 TiB ﬁle system, provisioning 50
-     * MB/s/TiB of PerUnitStorageThroughput yields 120 MB/s of ﬁle system throughput. You pay for the amount of
+     * Required with <code>PERSISTENT_1</code> and <code>PERSISTENT_2</code> deployment types, provisions the amount of
+     * read and write throughput for each 1 tebibyte (TiB) of file system storage capacity, in MB/s/TiB. File system
+     * throughput capacity is calculated by multiplying ﬁle system storage capacity (TiB) by the
+     * <code>PerUnitStorageThroughput</code> (MB/s/TiB). For a 2.4-TiB ﬁle system, provisioning 50 MB/s/TiB of
+     * <code>PerUnitStorageThroughput</code> yields 120 MB/s of ﬁle system throughput. You pay for the amount of
      * throughput that you provision.
      * </p>
      * <p>
-     * Valid values for SSD storage: 50, 100, 200. Valid values for HDD storage: 12, 40.
+     * Valid values:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * For <code>PERSISTENT_1</code> SSD storage: 50, 100, 200 MB/s/TiB.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For <code>PERSISTENT_1</code> HDD storage: 12, 40 MB/s/TiB.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For <code>PERSISTENT_2</code> SSD storage: 125, 250, 500, 1000 MB/s/TiB.
+     * </p>
+     * </li>
+     * </ul>
      */
     private Integer perUnitStorageThroughput;
 
@@ -154,27 +249,32 @@ public class CreateFileSystemLustreConfiguration implements Serializable, Clonea
     private Integer automaticBackupRetentionDays;
     /**
      * <p>
-     * (Optional) Not available to use with file systems that are linked to a data repository. A boolean flag indicating
-     * whether tags for the file system should be copied to backups. The default value is false. If it's set to true,
-     * all file system tags are copied to all automatic and user-initiated backups when the user doesn't specify any
-     * backup-specific tags. If this value is true, and you specify one or more backup tags, only the specified tags are
-     * copied to backups. If you specify one or more tags when creating a user-initiated backup, no tags are copied from
-     * the file system, regardless of this value.
+     * (Optional) Not available for use with file systems that are linked to a data repository. A boolean flag
+     * indicating whether tags for the file system should be copied to backups. The default value is false. If
+     * <code>CopyTagsToBackups</code> is set to true, all file system tags are copied to all automatic and
+     * user-initiated backups when the user doesn't specify any backup-specific tags. If <code>CopyTagsToBackups</code>
+     * is set to true and you specify one or more backup tags, only the specified tags are copied to backups. If you
+     * specify one or more tags when creating a user-initiated backup, no tags are copied from the file system,
+     * regardless of this value.
      * </p>
      * <p>
-     * For more information, see <a
-     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/using-backups-fsx.html">Working with backups</a>.
+     * (Default = <code>false</code>)
+     * </p>
+     * <p>
+     * For more information, see <a href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/using-backups-fsx.html">
+     * Working with backups</a> in the <i>Amazon FSx for Lustre User Guide</i>.
      * </p>
      */
     private Boolean copyTagsToBackups;
     /**
      * <p>
-     * The type of drive cache used by PERSISTENT_1 file systems that are provisioned with HDD storage devices. This
-     * parameter is required when storage type is HDD. Set to <code>READ</code>, improve the performance for frequently
-     * accessed files and allows 20% of the total storage capacity of the file system to be cached.
+     * The type of drive cache used by <code>PERSISTENT_1</code> file systems that are provisioned with HDD storage
+     * devices. This parameter is required when storage type is HDD. Set this property to <code>READ</code> to improve
+     * the performance for frequently accessed files by caching up to 20% of the total storage capacity of the file
+     * system.
      * </p>
      * <p>
-     * This parameter is required when <code>StorageType</code> is set to HDD.
+     * This parameter is required when <code>StorageType</code> is set to <code>HDD</code>.
      * </p>
      */
     private String driveCacheType;
@@ -197,10 +297,19 @@ public class CreateFileSystemLustreConfiguration implements Serializable, Clonea
      * </ul>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/data-compression.html">Lustre data compression</a>.
+     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/data-compression.html">Lustre data compression</a> in
+     * the <i>Amazon FSx for Lustre User Guide</i>.
      * </p>
      */
     private String dataCompressionType;
+    /**
+     * <p>
+     * The Lustre logging configuration used when creating an Amazon FSx for Lustre file system. When logging is
+     * enabled, Lustre logs error and warning events for data repositories associated with your file system to Amazon
+     * CloudWatch Logs.
+     * </p>
+     */
+    private LustreLogCreateConfiguration logConfiguration;
 
     /**
      * <p>
@@ -256,13 +365,25 @@ public class CreateFileSystemLustreConfiguration implements Serializable, Clonea
      * you specify a prefix after the Amazon S3 bucket name, only object keys with that prefix are loaded into the file
      * system.
      * </p>
+     * <note>
+     * <p>
+     * This parameter is not supported for file systems with the <code>Persistent_2</code> deployment type. Instead, use
+     * <code>CreateDataRepositoryAssociation</code> to create a data repository association to link your Lustre file
+     * system to a data repository.
+     * </p>
+     * </note>
      * 
      * @param importPath
      *        (Optional) The path to the Amazon S3 bucket (including the optional prefix) that you're using as the data
      *        repository for your Amazon FSx for Lustre file system. The root of your FSx for Lustre file system will be
      *        mapped to the root of the Amazon S3 bucket you select. An example is
      *        <code>s3://import-bucket/optional-prefix</code>. If you specify a prefix after the Amazon S3 bucket name,
-     *        only object keys with that prefix are loaded into the file system.
+     *        only object keys with that prefix are loaded into the file system.</p> <note>
+     *        <p>
+     *        This parameter is not supported for file systems with the <code>Persistent_2</code> deployment type.
+     *        Instead, use <code>CreateDataRepositoryAssociation</code> to create a data repository association to link
+     *        your Lustre file system to a data repository.
+     *        </p>
      */
 
     public void setImportPath(String importPath) {
@@ -277,12 +398,24 @@ public class CreateFileSystemLustreConfiguration implements Serializable, Clonea
      * you specify a prefix after the Amazon S3 bucket name, only object keys with that prefix are loaded into the file
      * system.
      * </p>
+     * <note>
+     * <p>
+     * This parameter is not supported for file systems with the <code>Persistent_2</code> deployment type. Instead, use
+     * <code>CreateDataRepositoryAssociation</code> to create a data repository association to link your Lustre file
+     * system to a data repository.
+     * </p>
+     * </note>
      * 
      * @return (Optional) The path to the Amazon S3 bucket (including the optional prefix) that you're using as the data
      *         repository for your Amazon FSx for Lustre file system. The root of your FSx for Lustre file system will
      *         be mapped to the root of the Amazon S3 bucket you select. An example is
      *         <code>s3://import-bucket/optional-prefix</code>. If you specify a prefix after the Amazon S3 bucket name,
-     *         only object keys with that prefix are loaded into the file system.
+     *         only object keys with that prefix are loaded into the file system.</p> <note>
+     *         <p>
+     *         This parameter is not supported for file systems with the <code>Persistent_2</code> deployment type.
+     *         Instead, use <code>CreateDataRepositoryAssociation</code> to create a data repository association to link
+     *         your Lustre file system to a data repository.
+     *         </p>
      */
 
     public String getImportPath() {
@@ -297,13 +430,25 @@ public class CreateFileSystemLustreConfiguration implements Serializable, Clonea
      * you specify a prefix after the Amazon S3 bucket name, only object keys with that prefix are loaded into the file
      * system.
      * </p>
+     * <note>
+     * <p>
+     * This parameter is not supported for file systems with the <code>Persistent_2</code> deployment type. Instead, use
+     * <code>CreateDataRepositoryAssociation</code> to create a data repository association to link your Lustre file
+     * system to a data repository.
+     * </p>
+     * </note>
      * 
      * @param importPath
      *        (Optional) The path to the Amazon S3 bucket (including the optional prefix) that you're using as the data
      *        repository for your Amazon FSx for Lustre file system. The root of your FSx for Lustre file system will be
      *        mapped to the root of the Amazon S3 bucket you select. An example is
      *        <code>s3://import-bucket/optional-prefix</code>. If you specify a prefix after the Amazon S3 bucket name,
-     *        only object keys with that prefix are loaded into the file system.
+     *        only object keys with that prefix are loaded into the file system.</p> <note>
+     *        <p>
+     *        This parameter is not supported for file systems with the <code>Persistent_2</code> deployment type.
+     *        Instead, use <code>CreateDataRepositoryAssociation</code> to create a data repository association to link
+     *        your Lustre file system to a data repository.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -314,22 +459,31 @@ public class CreateFileSystemLustreConfiguration implements Serializable, Clonea
 
     /**
      * <p>
-     * (Optional) The path in Amazon S3 where the root of your Amazon FSx file system is exported. The path must use the
-     * same Amazon S3 bucket as specified in ImportPath. You can provide an optional prefix to which new and changed
-     * data is to be exported from your Amazon FSx for Lustre file system. If an <code>ExportPath</code> value is not
-     * provided, Amazon FSx sets a default export path, <code>s3://import-bucket/FSxLustre[creation-timestamp]</code>.
-     * The timestamp is in UTC format, for example <code>s3://import-bucket/FSxLustre20181105T222312Z</code>.
+     * (Optional) Available with <code>Scratch</code> and <code>Persistent_1</code> deployment types. Specifies the path
+     * in the Amazon S3 bucket where the root of your Amazon FSx file system is exported. The path must use the same
+     * Amazon S3 bucket as specified in ImportPath. You can provide an optional prefix to which new and changed data is
+     * to be exported from your Amazon FSx for Lustre file system. If an <code>ExportPath</code> value is not provided,
+     * Amazon FSx sets a default export path, <code>s3://import-bucket/FSxLustre[creation-timestamp]</code>. The
+     * timestamp is in UTC format, for example <code>s3://import-bucket/FSxLustre20181105T222312Z</code>.
      * </p>
      * <p>
      * The Amazon S3 export bucket must be the same as the import bucket specified by <code>ImportPath</code>. If you
-     * only specify a bucket name, such as <code>s3://import-bucket</code>, you get a 1:1 mapping of file system objects
+     * specify only a bucket name, such as <code>s3://import-bucket</code>, you get a 1:1 mapping of file system objects
      * to S3 bucket objects. This mapping means that the input data in S3 is overwritten on export. If you provide a
      * custom prefix in the export path, such as <code>s3://import-bucket/[custom-optional-prefix]</code>, Amazon FSx
      * exports the contents of your file system to that export prefix in the Amazon S3 bucket.
      * </p>
+     * <note>
+     * <p>
+     * This parameter is not supported for file systems with the <code>Persistent_2</code> deployment type. Instead, use
+     * <code>CreateDataRepositoryAssociation</code> to create a data repository association to link your Lustre file
+     * system to a data repository.
+     * </p>
+     * </note>
      * 
      * @param exportPath
-     *        (Optional) The path in Amazon S3 where the root of your Amazon FSx file system is exported. The path must
+     *        (Optional) Available with <code>Scratch</code> and <code>Persistent_1</code> deployment types. Specifies
+     *        the path in the Amazon S3 bucket where the root of your Amazon FSx file system is exported. The path must
      *        use the same Amazon S3 bucket as specified in ImportPath. You can provide an optional prefix to which new
      *        and changed data is to be exported from your Amazon FSx for Lustre file system. If an
      *        <code>ExportPath</code> value is not provided, Amazon FSx sets a default export path,
@@ -337,11 +491,18 @@ public class CreateFileSystemLustreConfiguration implements Serializable, Clonea
      *        <code>s3://import-bucket/FSxLustre20181105T222312Z</code>.</p>
      *        <p>
      *        The Amazon S3 export bucket must be the same as the import bucket specified by <code>ImportPath</code>. If
-     *        you only specify a bucket name, such as <code>s3://import-bucket</code>, you get a 1:1 mapping of file
+     *        you specify only a bucket name, such as <code>s3://import-bucket</code>, you get a 1:1 mapping of file
      *        system objects to S3 bucket objects. This mapping means that the input data in S3 is overwritten on
      *        export. If you provide a custom prefix in the export path, such as
      *        <code>s3://import-bucket/[custom-optional-prefix]</code>, Amazon FSx exports the contents of your file
      *        system to that export prefix in the Amazon S3 bucket.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        This parameter is not supported for file systems with the <code>Persistent_2</code> deployment type.
+     *        Instead, use <code>CreateDataRepositoryAssociation</code> to create a data repository association to link
+     *        your Lustre file system to a data repository.
+     *        </p>
      */
 
     public void setExportPath(String exportPath) {
@@ -350,21 +511,30 @@ public class CreateFileSystemLustreConfiguration implements Serializable, Clonea
 
     /**
      * <p>
-     * (Optional) The path in Amazon S3 where the root of your Amazon FSx file system is exported. The path must use the
-     * same Amazon S3 bucket as specified in ImportPath. You can provide an optional prefix to which new and changed
-     * data is to be exported from your Amazon FSx for Lustre file system. If an <code>ExportPath</code> value is not
-     * provided, Amazon FSx sets a default export path, <code>s3://import-bucket/FSxLustre[creation-timestamp]</code>.
-     * The timestamp is in UTC format, for example <code>s3://import-bucket/FSxLustre20181105T222312Z</code>.
+     * (Optional) Available with <code>Scratch</code> and <code>Persistent_1</code> deployment types. Specifies the path
+     * in the Amazon S3 bucket where the root of your Amazon FSx file system is exported. The path must use the same
+     * Amazon S3 bucket as specified in ImportPath. You can provide an optional prefix to which new and changed data is
+     * to be exported from your Amazon FSx for Lustre file system. If an <code>ExportPath</code> value is not provided,
+     * Amazon FSx sets a default export path, <code>s3://import-bucket/FSxLustre[creation-timestamp]</code>. The
+     * timestamp is in UTC format, for example <code>s3://import-bucket/FSxLustre20181105T222312Z</code>.
      * </p>
      * <p>
      * The Amazon S3 export bucket must be the same as the import bucket specified by <code>ImportPath</code>. If you
-     * only specify a bucket name, such as <code>s3://import-bucket</code>, you get a 1:1 mapping of file system objects
+     * specify only a bucket name, such as <code>s3://import-bucket</code>, you get a 1:1 mapping of file system objects
      * to S3 bucket objects. This mapping means that the input data in S3 is overwritten on export. If you provide a
      * custom prefix in the export path, such as <code>s3://import-bucket/[custom-optional-prefix]</code>, Amazon FSx
      * exports the contents of your file system to that export prefix in the Amazon S3 bucket.
      * </p>
+     * <note>
+     * <p>
+     * This parameter is not supported for file systems with the <code>Persistent_2</code> deployment type. Instead, use
+     * <code>CreateDataRepositoryAssociation</code> to create a data repository association to link your Lustre file
+     * system to a data repository.
+     * </p>
+     * </note>
      * 
-     * @return (Optional) The path in Amazon S3 where the root of your Amazon FSx file system is exported. The path must
+     * @return (Optional) Available with <code>Scratch</code> and <code>Persistent_1</code> deployment types. Specifies
+     *         the path in the Amazon S3 bucket where the root of your Amazon FSx file system is exported. The path must
      *         use the same Amazon S3 bucket as specified in ImportPath. You can provide an optional prefix to which new
      *         and changed data is to be exported from your Amazon FSx for Lustre file system. If an
      *         <code>ExportPath</code> value is not provided, Amazon FSx sets a default export path,
@@ -372,11 +542,18 @@ public class CreateFileSystemLustreConfiguration implements Serializable, Clonea
      *         example <code>s3://import-bucket/FSxLustre20181105T222312Z</code>.</p>
      *         <p>
      *         The Amazon S3 export bucket must be the same as the import bucket specified by <code>ImportPath</code>.
-     *         If you only specify a bucket name, such as <code>s3://import-bucket</code>, you get a 1:1 mapping of file
+     *         If you specify only a bucket name, such as <code>s3://import-bucket</code>, you get a 1:1 mapping of file
      *         system objects to S3 bucket objects. This mapping means that the input data in S3 is overwritten on
      *         export. If you provide a custom prefix in the export path, such as
      *         <code>s3://import-bucket/[custom-optional-prefix]</code>, Amazon FSx exports the contents of your file
      *         system to that export prefix in the Amazon S3 bucket.
+     *         </p>
+     *         <note>
+     *         <p>
+     *         This parameter is not supported for file systems with the <code>Persistent_2</code> deployment type.
+     *         Instead, use <code>CreateDataRepositoryAssociation</code> to create a data repository association to link
+     *         your Lustre file system to a data repository.
+     *         </p>
      */
 
     public String getExportPath() {
@@ -385,22 +562,31 @@ public class CreateFileSystemLustreConfiguration implements Serializable, Clonea
 
     /**
      * <p>
-     * (Optional) The path in Amazon S3 where the root of your Amazon FSx file system is exported. The path must use the
-     * same Amazon S3 bucket as specified in ImportPath. You can provide an optional prefix to which new and changed
-     * data is to be exported from your Amazon FSx for Lustre file system. If an <code>ExportPath</code> value is not
-     * provided, Amazon FSx sets a default export path, <code>s3://import-bucket/FSxLustre[creation-timestamp]</code>.
-     * The timestamp is in UTC format, for example <code>s3://import-bucket/FSxLustre20181105T222312Z</code>.
+     * (Optional) Available with <code>Scratch</code> and <code>Persistent_1</code> deployment types. Specifies the path
+     * in the Amazon S3 bucket where the root of your Amazon FSx file system is exported. The path must use the same
+     * Amazon S3 bucket as specified in ImportPath. You can provide an optional prefix to which new and changed data is
+     * to be exported from your Amazon FSx for Lustre file system. If an <code>ExportPath</code> value is not provided,
+     * Amazon FSx sets a default export path, <code>s3://import-bucket/FSxLustre[creation-timestamp]</code>. The
+     * timestamp is in UTC format, for example <code>s3://import-bucket/FSxLustre20181105T222312Z</code>.
      * </p>
      * <p>
      * The Amazon S3 export bucket must be the same as the import bucket specified by <code>ImportPath</code>. If you
-     * only specify a bucket name, such as <code>s3://import-bucket</code>, you get a 1:1 mapping of file system objects
+     * specify only a bucket name, such as <code>s3://import-bucket</code>, you get a 1:1 mapping of file system objects
      * to S3 bucket objects. This mapping means that the input data in S3 is overwritten on export. If you provide a
      * custom prefix in the export path, such as <code>s3://import-bucket/[custom-optional-prefix]</code>, Amazon FSx
      * exports the contents of your file system to that export prefix in the Amazon S3 bucket.
      * </p>
+     * <note>
+     * <p>
+     * This parameter is not supported for file systems with the <code>Persistent_2</code> deployment type. Instead, use
+     * <code>CreateDataRepositoryAssociation</code> to create a data repository association to link your Lustre file
+     * system to a data repository.
+     * </p>
+     * </note>
      * 
      * @param exportPath
-     *        (Optional) The path in Amazon S3 where the root of your Amazon FSx file system is exported. The path must
+     *        (Optional) Available with <code>Scratch</code> and <code>Persistent_1</code> deployment types. Specifies
+     *        the path in the Amazon S3 bucket where the root of your Amazon FSx file system is exported. The path must
      *        use the same Amazon S3 bucket as specified in ImportPath. You can provide an optional prefix to which new
      *        and changed data is to be exported from your Amazon FSx for Lustre file system. If an
      *        <code>ExportPath</code> value is not provided, Amazon FSx sets a default export path,
@@ -408,11 +594,18 @@ public class CreateFileSystemLustreConfiguration implements Serializable, Clonea
      *        <code>s3://import-bucket/FSxLustre20181105T222312Z</code>.</p>
      *        <p>
      *        The Amazon S3 export bucket must be the same as the import bucket specified by <code>ImportPath</code>. If
-     *        you only specify a bucket name, such as <code>s3://import-bucket</code>, you get a 1:1 mapping of file
+     *        you specify only a bucket name, such as <code>s3://import-bucket</code>, you get a 1:1 mapping of file
      *        system objects to S3 bucket objects. This mapping means that the input data in S3 is overwritten on
      *        export. If you provide a custom prefix in the export path, such as
      *        <code>s3://import-bucket/[custom-optional-prefix]</code>, Amazon FSx exports the contents of your file
      *        system to that export prefix in the Amazon S3 bucket.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        This parameter is not supported for file systems with the <code>Persistent_2</code> deployment type.
+     *        Instead, use <code>CreateDataRepositoryAssociation</code> to create a data repository association to link
+     *        your Lustre file system to a data repository.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -431,6 +624,11 @@ public class CreateFileSystemLustreConfiguration implements Serializable, Clonea
      * The default chunk size is 1,024 MiB (1 GiB) and can go as high as 512,000 MiB (500 GiB). Amazon S3 objects have a
      * maximum size of 5 TB.
      * </p>
+     * <p>
+     * This parameter is not supported for file systems with the <code>Persistent_2</code> deployment type. Instead, use
+     * <code>CreateDataRepositoryAssociation</code> to create a data repository association to link your Lustre file
+     * system to a data repository.
+     * </p>
      * 
      * @param importedFileChunkSize
      *        (Optional) For files imported from a data repository, this value determines the stripe count and maximum
@@ -440,6 +638,11 @@ public class CreateFileSystemLustreConfiguration implements Serializable, Clonea
      *        <p>
      *        The default chunk size is 1,024 MiB (1 GiB) and can go as high as 512,000 MiB (500 GiB). Amazon S3 objects
      *        have a maximum size of 5 TB.
+     *        </p>
+     *        <p>
+     *        This parameter is not supported for file systems with the <code>Persistent_2</code> deployment type.
+     *        Instead, use <code>CreateDataRepositoryAssociation</code> to create a data repository association to link
+     *        your Lustre file system to a data repository.
      */
 
     public void setImportedFileChunkSize(Integer importedFileChunkSize) {
@@ -456,6 +659,11 @@ public class CreateFileSystemLustreConfiguration implements Serializable, Clonea
      * The default chunk size is 1,024 MiB (1 GiB) and can go as high as 512,000 MiB (500 GiB). Amazon S3 objects have a
      * maximum size of 5 TB.
      * </p>
+     * <p>
+     * This parameter is not supported for file systems with the <code>Persistent_2</code> deployment type. Instead, use
+     * <code>CreateDataRepositoryAssociation</code> to create a data repository association to link your Lustre file
+     * system to a data repository.
+     * </p>
      * 
      * @return (Optional) For files imported from a data repository, this value determines the stripe count and maximum
      *         amount of data per file (in MiB) stored on a single physical disk. The maximum number of disks that a
@@ -464,6 +672,11 @@ public class CreateFileSystemLustreConfiguration implements Serializable, Clonea
      *         <p>
      *         The default chunk size is 1,024 MiB (1 GiB) and can go as high as 512,000 MiB (500 GiB). Amazon S3
      *         objects have a maximum size of 5 TB.
+     *         </p>
+     *         <p>
+     *         This parameter is not supported for file systems with the <code>Persistent_2</code> deployment type.
+     *         Instead, use <code>CreateDataRepositoryAssociation</code> to create a data repository association to link
+     *         your Lustre file system to a data repository.
      */
 
     public Integer getImportedFileChunkSize() {
@@ -480,6 +693,11 @@ public class CreateFileSystemLustreConfiguration implements Serializable, Clonea
      * The default chunk size is 1,024 MiB (1 GiB) and can go as high as 512,000 MiB (500 GiB). Amazon S3 objects have a
      * maximum size of 5 TB.
      * </p>
+     * <p>
+     * This parameter is not supported for file systems with the <code>Persistent_2</code> deployment type. Instead, use
+     * <code>CreateDataRepositoryAssociation</code> to create a data repository association to link your Lustre file
+     * system to a data repository.
+     * </p>
      * 
      * @param importedFileChunkSize
      *        (Optional) For files imported from a data repository, this value determines the stripe count and maximum
@@ -489,6 +707,11 @@ public class CreateFileSystemLustreConfiguration implements Serializable, Clonea
      *        <p>
      *        The default chunk size is 1,024 MiB (1 GiB) and can go as high as 512,000 MiB (500 GiB). Amazon S3 objects
      *        have a maximum size of 5 TB.
+     *        </p>
+     *        <p>
+     *        This parameter is not supported for file systems with the <code>Persistent_2</code> deployment type.
+     *        Instead, use <code>CreateDataRepositoryAssociation</code> to create a data repository association to link
+     *        your Lustre file system to a data repository.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -499,51 +722,78 @@ public class CreateFileSystemLustreConfiguration implements Serializable, Clonea
 
     /**
      * <p>
-     * Choose <code>SCRATCH_1</code> and <code>SCRATCH_2</code> deployment types when you need temporary storage and
-     * shorter-term processing of data. The <code>SCRATCH_2</code> deployment type provides in-transit encryption of
-     * data and higher burst throughput capacity than <code>SCRATCH_1</code>.
+     * (Optional) Choose <code>SCRATCH_1</code> and <code>SCRATCH_2</code> deployment types when you need temporary
+     * storage and shorter-term processing of data. The <code>SCRATCH_2</code> deployment type provides in-transit
+     * encryption of data and higher burst throughput capacity than <code>SCRATCH_1</code>.
      * </p>
      * <p>
-     * Choose <code>PERSISTENT_1</code> deployment type for longer-term storage and workloads and encryption of data in
-     * transit. To learn more about deployment types, see <a
-     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/lustre-deployment-types.html"> FSx for Lustre Deployment
-     * Options</a>.
+     * Choose <code>PERSISTENT_1</code> for longer-term storage and for throughput-focused workloads that aren’t
+     * latency-sensitive. a. <code>PERSISTENT_1</code> supports encryption of data in transit, and is available in all
+     * Amazon Web Services Regions in which FSx for Lustre is available.
      * </p>
      * <p>
-     * Encryption of data in-transit is automatically enabled when you access a <code>SCRATCH_2</code> or
-     * <code>PERSISTENT_1</code> file system from Amazon EC2 instances that <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/data- protection.html">support this feature</a>.
+     * Choose <code>PERSISTENT_2</code> for longer-term storage and for latency-sensitive workloads that require the
+     * highest levels of IOPS/throughput. <code>PERSISTENT_2</code> supports SSD storage, and offers higher
+     * <code>PerUnitStorageThroughput</code> (up to 1000 MB/s/TiB). <code>PERSISTENT_2</code> is available in a limited
+     * number of Amazon Web Services Regions. For more information, and an up-to-date list of Amazon Web Services
+     * Regions in which <code>PERSISTENT_2</code> is available, see <a
+     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/using-fsx-lustre.html#lustre-deployment-types">File
+     * system deployment options for FSx for Lustre</a> in the <i>Amazon FSx for Lustre User Guide</i>.
+     * </p>
+     * <note>
+     * <p>
+     * If you choose <code>PERSISTENT_2</code>, and you set <code>FileSystemTypeVersion</code> to <code>2.10</code>, the
+     * <code>CreateFileSystem</code> operation fails.
+     * </p>
+     * </note>
+     * <p>
+     * Encryption of data in transit is automatically turned on when you access <code>SCRATCH_2</code>,
+     * <code>PERSISTENT_1</code> and <code>PERSISTENT_2</code> file systems from Amazon EC2 instances that <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/data- protection.html">support automatic encryption</a>
+     * in the Amazon Web Services Regions where they are available. For more information about encryption in transit for
+     * FSx for Lustre file systems, see <a
+     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/encryption-in-transit-fsxl.html">Encrypting data in
+     * transit</a> in the <i>Amazon FSx for Lustre User Guide</i>.
+     * </p>
+     * <p>
      * (Default = <code>SCRATCH_1</code>)
-     * </p>
-     * <p>
-     * Encryption of data in-transit for <code>SCRATCH_2</code> and <code>PERSISTENT_1</code> deployment types is
-     * supported when accessed from supported instance types in supported Amazon Web Services Regions. To learn more, <a
-     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/encryption-in-transit-fsxl.html">Encrypting Data in
-     * Transit</a>.
      * </p>
      * 
      * @param deploymentType
-     *        Choose <code>SCRATCH_1</code> and <code>SCRATCH_2</code> deployment types when you need temporary storage
-     *        and shorter-term processing of data. The <code>SCRATCH_2</code> deployment type provides in-transit
-     *        encryption of data and higher burst throughput capacity than <code>SCRATCH_1</code>.</p>
+     *        (Optional) Choose <code>SCRATCH_1</code> and <code>SCRATCH_2</code> deployment types when you need
+     *        temporary storage and shorter-term processing of data. The <code>SCRATCH_2</code> deployment type provides
+     *        in-transit encryption of data and higher burst throughput capacity than <code>SCRATCH_1</code>.</p>
      *        <p>
-     *        Choose <code>PERSISTENT_1</code> deployment type for longer-term storage and workloads and encryption of
-     *        data in transit. To learn more about deployment types, see <a
-     *        href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/lustre-deployment-types.html"> FSx for Lustre
-     *        Deployment Options</a>.
+     *        Choose <code>PERSISTENT_1</code> for longer-term storage and for throughput-focused workloads that aren’t
+     *        latency-sensitive. a. <code>PERSISTENT_1</code> supports encryption of data in transit, and is available
+     *        in all Amazon Web Services Regions in which FSx for Lustre is available.
      *        </p>
      *        <p>
-     *        Encryption of data in-transit is automatically enabled when you access a <code>SCRATCH_2</code> or
-     *        <code>PERSISTENT_1</code> file system from Amazon EC2 instances that <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/data- protection.html">support this feature</a>.
+     *        Choose <code>PERSISTENT_2</code> for longer-term storage and for latency-sensitive workloads that require
+     *        the highest levels of IOPS/throughput. <code>PERSISTENT_2</code> supports SSD storage, and offers higher
+     *        <code>PerUnitStorageThroughput</code> (up to 1000 MB/s/TiB). <code>PERSISTENT_2</code> is available in a
+     *        limited number of Amazon Web Services Regions. For more information, and an up-to-date list of Amazon Web
+     *        Services Regions in which <code>PERSISTENT_2</code> is available, see <a
+     *        href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/using-fsx-lustre.html#lustre-deployment-types"
+     *        >File system deployment options for FSx for Lustre</a> in the <i>Amazon FSx for Lustre User Guide</i>.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        If you choose <code>PERSISTENT_2</code>, and you set <code>FileSystemTypeVersion</code> to
+     *        <code>2.10</code>, the <code>CreateFileSystem</code> operation fails.
+     *        </p>
+     *        </note>
+     *        <p>
+     *        Encryption of data in transit is automatically turned on when you access <code>SCRATCH_2</code>,
+     *        <code>PERSISTENT_1</code> and <code>PERSISTENT_2</code> file systems from Amazon EC2 instances that <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/data- protection.html">support automatic
+     *        encryption</a> in the Amazon Web Services Regions where they are available. For more information about
+     *        encryption in transit for FSx for Lustre file systems, see <a
+     *        href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/encryption-in-transit-fsxl.html">Encrypting data
+     *        in transit</a> in the <i>Amazon FSx for Lustre User Guide</i>.
+     *        </p>
+     *        <p>
      *        (Default = <code>SCRATCH_1</code>)
-     *        </p>
-     *        <p>
-     *        Encryption of data in-transit for <code>SCRATCH_2</code> and <code>PERSISTENT_1</code> deployment types is
-     *        supported when accessed from supported instance types in supported Amazon Web Services Regions. To learn
-     *        more, <a
-     *        href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/encryption-in-transit-fsxl.html">Encrypting Data
-     *        in Transit</a>.
      * @see LustreDeploymentType
      */
 
@@ -553,50 +803,78 @@ public class CreateFileSystemLustreConfiguration implements Serializable, Clonea
 
     /**
      * <p>
-     * Choose <code>SCRATCH_1</code> and <code>SCRATCH_2</code> deployment types when you need temporary storage and
-     * shorter-term processing of data. The <code>SCRATCH_2</code> deployment type provides in-transit encryption of
-     * data and higher burst throughput capacity than <code>SCRATCH_1</code>.
+     * (Optional) Choose <code>SCRATCH_1</code> and <code>SCRATCH_2</code> deployment types when you need temporary
+     * storage and shorter-term processing of data. The <code>SCRATCH_2</code> deployment type provides in-transit
+     * encryption of data and higher burst throughput capacity than <code>SCRATCH_1</code>.
      * </p>
      * <p>
-     * Choose <code>PERSISTENT_1</code> deployment type for longer-term storage and workloads and encryption of data in
-     * transit. To learn more about deployment types, see <a
-     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/lustre-deployment-types.html"> FSx for Lustre Deployment
-     * Options</a>.
+     * Choose <code>PERSISTENT_1</code> for longer-term storage and for throughput-focused workloads that aren’t
+     * latency-sensitive. a. <code>PERSISTENT_1</code> supports encryption of data in transit, and is available in all
+     * Amazon Web Services Regions in which FSx for Lustre is available.
      * </p>
      * <p>
-     * Encryption of data in-transit is automatically enabled when you access a <code>SCRATCH_2</code> or
-     * <code>PERSISTENT_1</code> file system from Amazon EC2 instances that <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/data- protection.html">support this feature</a>.
+     * Choose <code>PERSISTENT_2</code> for longer-term storage and for latency-sensitive workloads that require the
+     * highest levels of IOPS/throughput. <code>PERSISTENT_2</code> supports SSD storage, and offers higher
+     * <code>PerUnitStorageThroughput</code> (up to 1000 MB/s/TiB). <code>PERSISTENT_2</code> is available in a limited
+     * number of Amazon Web Services Regions. For more information, and an up-to-date list of Amazon Web Services
+     * Regions in which <code>PERSISTENT_2</code> is available, see <a
+     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/using-fsx-lustre.html#lustre-deployment-types">File
+     * system deployment options for FSx for Lustre</a> in the <i>Amazon FSx for Lustre User Guide</i>.
+     * </p>
+     * <note>
+     * <p>
+     * If you choose <code>PERSISTENT_2</code>, and you set <code>FileSystemTypeVersion</code> to <code>2.10</code>, the
+     * <code>CreateFileSystem</code> operation fails.
+     * </p>
+     * </note>
+     * <p>
+     * Encryption of data in transit is automatically turned on when you access <code>SCRATCH_2</code>,
+     * <code>PERSISTENT_1</code> and <code>PERSISTENT_2</code> file systems from Amazon EC2 instances that <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/data- protection.html">support automatic encryption</a>
+     * in the Amazon Web Services Regions where they are available. For more information about encryption in transit for
+     * FSx for Lustre file systems, see <a
+     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/encryption-in-transit-fsxl.html">Encrypting data in
+     * transit</a> in the <i>Amazon FSx for Lustre User Guide</i>.
+     * </p>
+     * <p>
      * (Default = <code>SCRATCH_1</code>)
      * </p>
-     * <p>
-     * Encryption of data in-transit for <code>SCRATCH_2</code> and <code>PERSISTENT_1</code> deployment types is
-     * supported when accessed from supported instance types in supported Amazon Web Services Regions. To learn more, <a
-     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/encryption-in-transit-fsxl.html">Encrypting Data in
-     * Transit</a>.
-     * </p>
      * 
-     * @return Choose <code>SCRATCH_1</code> and <code>SCRATCH_2</code> deployment types when you need temporary storage
-     *         and shorter-term processing of data. The <code>SCRATCH_2</code> deployment type provides in-transit
-     *         encryption of data and higher burst throughput capacity than <code>SCRATCH_1</code>.</p>
+     * @return (Optional) Choose <code>SCRATCH_1</code> and <code>SCRATCH_2</code> deployment types when you need
+     *         temporary storage and shorter-term processing of data. The <code>SCRATCH_2</code> deployment type
+     *         provides in-transit encryption of data and higher burst throughput capacity than <code>SCRATCH_1</code>
+     *         .</p>
      *         <p>
-     *         Choose <code>PERSISTENT_1</code> deployment type for longer-term storage and workloads and encryption of
-     *         data in transit. To learn more about deployment types, see <a
-     *         href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/lustre-deployment-types.html"> FSx for Lustre
-     *         Deployment Options</a>.
+     *         Choose <code>PERSISTENT_1</code> for longer-term storage and for throughput-focused workloads that aren’t
+     *         latency-sensitive. a. <code>PERSISTENT_1</code> supports encryption of data in transit, and is available
+     *         in all Amazon Web Services Regions in which FSx for Lustre is available.
      *         </p>
      *         <p>
-     *         Encryption of data in-transit is automatically enabled when you access a <code>SCRATCH_2</code> or
-     *         <code>PERSISTENT_1</code> file system from Amazon EC2 instances that <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/data- protection.html">support this
-     *         feature</a>. (Default = <code>SCRATCH_1</code>)
+     *         Choose <code>PERSISTENT_2</code> for longer-term storage and for latency-sensitive workloads that require
+     *         the highest levels of IOPS/throughput. <code>PERSISTENT_2</code> supports SSD storage, and offers higher
+     *         <code>PerUnitStorageThroughput</code> (up to 1000 MB/s/TiB). <code>PERSISTENT_2</code> is available in a
+     *         limited number of Amazon Web Services Regions. For more information, and an up-to-date list of Amazon Web
+     *         Services Regions in which <code>PERSISTENT_2</code> is available, see <a
+     *         href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/using-fsx-lustre.html#lustre-deployment-types"
+     *         >File system deployment options for FSx for Lustre</a> in the <i>Amazon FSx for Lustre User Guide</i>.
+     *         </p>
+     *         <note>
+     *         <p>
+     *         If you choose <code>PERSISTENT_2</code>, and you set <code>FileSystemTypeVersion</code> to
+     *         <code>2.10</code>, the <code>CreateFileSystem</code> operation fails.
+     *         </p>
+     *         </note>
+     *         <p>
+     *         Encryption of data in transit is automatically turned on when you access <code>SCRATCH_2</code>,
+     *         <code>PERSISTENT_1</code> and <code>PERSISTENT_2</code> file systems from Amazon EC2 instances that <a
+     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/data- protection.html">support automatic
+     *         encryption</a> in the Amazon Web Services Regions where they are available. For more information about
+     *         encryption in transit for FSx for Lustre file systems, see <a
+     *         href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/encryption-in-transit-fsxl.html">Encrypting data
+     *         in transit</a> in the <i>Amazon FSx for Lustre User Guide</i>.
      *         </p>
      *         <p>
-     *         Encryption of data in-transit for <code>SCRATCH_2</code> and <code>PERSISTENT_1</code> deployment types
-     *         is supported when accessed from supported instance types in supported Amazon Web Services Regions. To
-     *         learn more, <a
-     *         href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/encryption-in-transit-fsxl.html">Encrypting Data
-     *         in Transit</a>.
+     *         (Default = <code>SCRATCH_1</code>)
      * @see LustreDeploymentType
      */
 
@@ -606,51 +884,78 @@ public class CreateFileSystemLustreConfiguration implements Serializable, Clonea
 
     /**
      * <p>
-     * Choose <code>SCRATCH_1</code> and <code>SCRATCH_2</code> deployment types when you need temporary storage and
-     * shorter-term processing of data. The <code>SCRATCH_2</code> deployment type provides in-transit encryption of
-     * data and higher burst throughput capacity than <code>SCRATCH_1</code>.
+     * (Optional) Choose <code>SCRATCH_1</code> and <code>SCRATCH_2</code> deployment types when you need temporary
+     * storage and shorter-term processing of data. The <code>SCRATCH_2</code> deployment type provides in-transit
+     * encryption of data and higher burst throughput capacity than <code>SCRATCH_1</code>.
      * </p>
      * <p>
-     * Choose <code>PERSISTENT_1</code> deployment type for longer-term storage and workloads and encryption of data in
-     * transit. To learn more about deployment types, see <a
-     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/lustre-deployment-types.html"> FSx for Lustre Deployment
-     * Options</a>.
+     * Choose <code>PERSISTENT_1</code> for longer-term storage and for throughput-focused workloads that aren’t
+     * latency-sensitive. a. <code>PERSISTENT_1</code> supports encryption of data in transit, and is available in all
+     * Amazon Web Services Regions in which FSx for Lustre is available.
      * </p>
      * <p>
-     * Encryption of data in-transit is automatically enabled when you access a <code>SCRATCH_2</code> or
-     * <code>PERSISTENT_1</code> file system from Amazon EC2 instances that <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/data- protection.html">support this feature</a>.
+     * Choose <code>PERSISTENT_2</code> for longer-term storage and for latency-sensitive workloads that require the
+     * highest levels of IOPS/throughput. <code>PERSISTENT_2</code> supports SSD storage, and offers higher
+     * <code>PerUnitStorageThroughput</code> (up to 1000 MB/s/TiB). <code>PERSISTENT_2</code> is available in a limited
+     * number of Amazon Web Services Regions. For more information, and an up-to-date list of Amazon Web Services
+     * Regions in which <code>PERSISTENT_2</code> is available, see <a
+     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/using-fsx-lustre.html#lustre-deployment-types">File
+     * system deployment options for FSx for Lustre</a> in the <i>Amazon FSx for Lustre User Guide</i>.
+     * </p>
+     * <note>
+     * <p>
+     * If you choose <code>PERSISTENT_2</code>, and you set <code>FileSystemTypeVersion</code> to <code>2.10</code>, the
+     * <code>CreateFileSystem</code> operation fails.
+     * </p>
+     * </note>
+     * <p>
+     * Encryption of data in transit is automatically turned on when you access <code>SCRATCH_2</code>,
+     * <code>PERSISTENT_1</code> and <code>PERSISTENT_2</code> file systems from Amazon EC2 instances that <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/data- protection.html">support automatic encryption</a>
+     * in the Amazon Web Services Regions where they are available. For more information about encryption in transit for
+     * FSx for Lustre file systems, see <a
+     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/encryption-in-transit-fsxl.html">Encrypting data in
+     * transit</a> in the <i>Amazon FSx for Lustre User Guide</i>.
+     * </p>
+     * <p>
      * (Default = <code>SCRATCH_1</code>)
-     * </p>
-     * <p>
-     * Encryption of data in-transit for <code>SCRATCH_2</code> and <code>PERSISTENT_1</code> deployment types is
-     * supported when accessed from supported instance types in supported Amazon Web Services Regions. To learn more, <a
-     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/encryption-in-transit-fsxl.html">Encrypting Data in
-     * Transit</a>.
      * </p>
      * 
      * @param deploymentType
-     *        Choose <code>SCRATCH_1</code> and <code>SCRATCH_2</code> deployment types when you need temporary storage
-     *        and shorter-term processing of data. The <code>SCRATCH_2</code> deployment type provides in-transit
-     *        encryption of data and higher burst throughput capacity than <code>SCRATCH_1</code>.</p>
+     *        (Optional) Choose <code>SCRATCH_1</code> and <code>SCRATCH_2</code> deployment types when you need
+     *        temporary storage and shorter-term processing of data. The <code>SCRATCH_2</code> deployment type provides
+     *        in-transit encryption of data and higher burst throughput capacity than <code>SCRATCH_1</code>.</p>
      *        <p>
-     *        Choose <code>PERSISTENT_1</code> deployment type for longer-term storage and workloads and encryption of
-     *        data in transit. To learn more about deployment types, see <a
-     *        href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/lustre-deployment-types.html"> FSx for Lustre
-     *        Deployment Options</a>.
+     *        Choose <code>PERSISTENT_1</code> for longer-term storage and for throughput-focused workloads that aren’t
+     *        latency-sensitive. a. <code>PERSISTENT_1</code> supports encryption of data in transit, and is available
+     *        in all Amazon Web Services Regions in which FSx for Lustre is available.
      *        </p>
      *        <p>
-     *        Encryption of data in-transit is automatically enabled when you access a <code>SCRATCH_2</code> or
-     *        <code>PERSISTENT_1</code> file system from Amazon EC2 instances that <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/data- protection.html">support this feature</a>.
+     *        Choose <code>PERSISTENT_2</code> for longer-term storage and for latency-sensitive workloads that require
+     *        the highest levels of IOPS/throughput. <code>PERSISTENT_2</code> supports SSD storage, and offers higher
+     *        <code>PerUnitStorageThroughput</code> (up to 1000 MB/s/TiB). <code>PERSISTENT_2</code> is available in a
+     *        limited number of Amazon Web Services Regions. For more information, and an up-to-date list of Amazon Web
+     *        Services Regions in which <code>PERSISTENT_2</code> is available, see <a
+     *        href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/using-fsx-lustre.html#lustre-deployment-types"
+     *        >File system deployment options for FSx for Lustre</a> in the <i>Amazon FSx for Lustre User Guide</i>.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        If you choose <code>PERSISTENT_2</code>, and you set <code>FileSystemTypeVersion</code> to
+     *        <code>2.10</code>, the <code>CreateFileSystem</code> operation fails.
+     *        </p>
+     *        </note>
+     *        <p>
+     *        Encryption of data in transit is automatically turned on when you access <code>SCRATCH_2</code>,
+     *        <code>PERSISTENT_1</code> and <code>PERSISTENT_2</code> file systems from Amazon EC2 instances that <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/data- protection.html">support automatic
+     *        encryption</a> in the Amazon Web Services Regions where they are available. For more information about
+     *        encryption in transit for FSx for Lustre file systems, see <a
+     *        href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/encryption-in-transit-fsxl.html">Encrypting data
+     *        in transit</a> in the <i>Amazon FSx for Lustre User Guide</i>.
+     *        </p>
+     *        <p>
      *        (Default = <code>SCRATCH_1</code>)
-     *        </p>
-     *        <p>
-     *        Encryption of data in-transit for <code>SCRATCH_2</code> and <code>PERSISTENT_1</code> deployment types is
-     *        supported when accessed from supported instance types in supported Amazon Web Services Regions. To learn
-     *        more, <a
-     *        href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/encryption-in-transit-fsxl.html">Encrypting Data
-     *        in Transit</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see LustreDeploymentType
      */
@@ -662,51 +967,78 @@ public class CreateFileSystemLustreConfiguration implements Serializable, Clonea
 
     /**
      * <p>
-     * Choose <code>SCRATCH_1</code> and <code>SCRATCH_2</code> deployment types when you need temporary storage and
-     * shorter-term processing of data. The <code>SCRATCH_2</code> deployment type provides in-transit encryption of
-     * data and higher burst throughput capacity than <code>SCRATCH_1</code>.
+     * (Optional) Choose <code>SCRATCH_1</code> and <code>SCRATCH_2</code> deployment types when you need temporary
+     * storage and shorter-term processing of data. The <code>SCRATCH_2</code> deployment type provides in-transit
+     * encryption of data and higher burst throughput capacity than <code>SCRATCH_1</code>.
      * </p>
      * <p>
-     * Choose <code>PERSISTENT_1</code> deployment type for longer-term storage and workloads and encryption of data in
-     * transit. To learn more about deployment types, see <a
-     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/lustre-deployment-types.html"> FSx for Lustre Deployment
-     * Options</a>.
+     * Choose <code>PERSISTENT_1</code> for longer-term storage and for throughput-focused workloads that aren’t
+     * latency-sensitive. a. <code>PERSISTENT_1</code> supports encryption of data in transit, and is available in all
+     * Amazon Web Services Regions in which FSx for Lustre is available.
      * </p>
      * <p>
-     * Encryption of data in-transit is automatically enabled when you access a <code>SCRATCH_2</code> or
-     * <code>PERSISTENT_1</code> file system from Amazon EC2 instances that <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/data- protection.html">support this feature</a>.
+     * Choose <code>PERSISTENT_2</code> for longer-term storage and for latency-sensitive workloads that require the
+     * highest levels of IOPS/throughput. <code>PERSISTENT_2</code> supports SSD storage, and offers higher
+     * <code>PerUnitStorageThroughput</code> (up to 1000 MB/s/TiB). <code>PERSISTENT_2</code> is available in a limited
+     * number of Amazon Web Services Regions. For more information, and an up-to-date list of Amazon Web Services
+     * Regions in which <code>PERSISTENT_2</code> is available, see <a
+     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/using-fsx-lustre.html#lustre-deployment-types">File
+     * system deployment options for FSx for Lustre</a> in the <i>Amazon FSx for Lustre User Guide</i>.
+     * </p>
+     * <note>
+     * <p>
+     * If you choose <code>PERSISTENT_2</code>, and you set <code>FileSystemTypeVersion</code> to <code>2.10</code>, the
+     * <code>CreateFileSystem</code> operation fails.
+     * </p>
+     * </note>
+     * <p>
+     * Encryption of data in transit is automatically turned on when you access <code>SCRATCH_2</code>,
+     * <code>PERSISTENT_1</code> and <code>PERSISTENT_2</code> file systems from Amazon EC2 instances that <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/data- protection.html">support automatic encryption</a>
+     * in the Amazon Web Services Regions where they are available. For more information about encryption in transit for
+     * FSx for Lustre file systems, see <a
+     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/encryption-in-transit-fsxl.html">Encrypting data in
+     * transit</a> in the <i>Amazon FSx for Lustre User Guide</i>.
+     * </p>
+     * <p>
      * (Default = <code>SCRATCH_1</code>)
-     * </p>
-     * <p>
-     * Encryption of data in-transit for <code>SCRATCH_2</code> and <code>PERSISTENT_1</code> deployment types is
-     * supported when accessed from supported instance types in supported Amazon Web Services Regions. To learn more, <a
-     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/encryption-in-transit-fsxl.html">Encrypting Data in
-     * Transit</a>.
      * </p>
      * 
      * @param deploymentType
-     *        Choose <code>SCRATCH_1</code> and <code>SCRATCH_2</code> deployment types when you need temporary storage
-     *        and shorter-term processing of data. The <code>SCRATCH_2</code> deployment type provides in-transit
-     *        encryption of data and higher burst throughput capacity than <code>SCRATCH_1</code>.</p>
+     *        (Optional) Choose <code>SCRATCH_1</code> and <code>SCRATCH_2</code> deployment types when you need
+     *        temporary storage and shorter-term processing of data. The <code>SCRATCH_2</code> deployment type provides
+     *        in-transit encryption of data and higher burst throughput capacity than <code>SCRATCH_1</code>.</p>
      *        <p>
-     *        Choose <code>PERSISTENT_1</code> deployment type for longer-term storage and workloads and encryption of
-     *        data in transit. To learn more about deployment types, see <a
-     *        href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/lustre-deployment-types.html"> FSx for Lustre
-     *        Deployment Options</a>.
+     *        Choose <code>PERSISTENT_1</code> for longer-term storage and for throughput-focused workloads that aren’t
+     *        latency-sensitive. a. <code>PERSISTENT_1</code> supports encryption of data in transit, and is available
+     *        in all Amazon Web Services Regions in which FSx for Lustre is available.
      *        </p>
      *        <p>
-     *        Encryption of data in-transit is automatically enabled when you access a <code>SCRATCH_2</code> or
-     *        <code>PERSISTENT_1</code> file system from Amazon EC2 instances that <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/data- protection.html">support this feature</a>.
+     *        Choose <code>PERSISTENT_2</code> for longer-term storage and for latency-sensitive workloads that require
+     *        the highest levels of IOPS/throughput. <code>PERSISTENT_2</code> supports SSD storage, and offers higher
+     *        <code>PerUnitStorageThroughput</code> (up to 1000 MB/s/TiB). <code>PERSISTENT_2</code> is available in a
+     *        limited number of Amazon Web Services Regions. For more information, and an up-to-date list of Amazon Web
+     *        Services Regions in which <code>PERSISTENT_2</code> is available, see <a
+     *        href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/using-fsx-lustre.html#lustre-deployment-types"
+     *        >File system deployment options for FSx for Lustre</a> in the <i>Amazon FSx for Lustre User Guide</i>.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        If you choose <code>PERSISTENT_2</code>, and you set <code>FileSystemTypeVersion</code> to
+     *        <code>2.10</code>, the <code>CreateFileSystem</code> operation fails.
+     *        </p>
+     *        </note>
+     *        <p>
+     *        Encryption of data in transit is automatically turned on when you access <code>SCRATCH_2</code>,
+     *        <code>PERSISTENT_1</code> and <code>PERSISTENT_2</code> file systems from Amazon EC2 instances that <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/data- protection.html">support automatic
+     *        encryption</a> in the Amazon Web Services Regions where they are available. For more information about
+     *        encryption in transit for FSx for Lustre file systems, see <a
+     *        href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/encryption-in-transit-fsxl.html">Encrypting data
+     *        in transit</a> in the <i>Amazon FSx for Lustre User Guide</i>.
+     *        </p>
+     *        <p>
      *        (Default = <code>SCRATCH_1</code>)
-     *        </p>
-     *        <p>
-     *        Encryption of data in-transit for <code>SCRATCH_2</code> and <code>PERSISTENT_1</code> deployment types is
-     *        supported when accessed from supported instance types in supported Amazon Web Services Regions. To learn
-     *        more, <a
-     *        href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/encryption-in-transit-fsxl.html">Encrypting Data
-     *        in Transit</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see LustreDeploymentType
      */
@@ -718,9 +1050,10 @@ public class CreateFileSystemLustreConfiguration implements Serializable, Clonea
 
     /**
      * <p>
-     * (Optional) When you create your file system, your existing S3 objects appear as file and directory listings. Use
-     * this property to choose how Amazon FSx keeps your file and directory listings up to date as you add or modify
-     * objects in your linked S3 bucket. <code>AutoImportPolicy</code> can have the following values:
+     * (Optional) Available with <code>Scratch</code> and <code>Persistent_1</code> deployment types. When you create
+     * your file system, your existing S3 objects appear as file and directory listings. Use this property to choose how
+     * Amazon FSx keeps your file and directory listings up to date as you add or modify objects in your linked S3
+     * bucket. <code>AutoImportPolicy</code> can have the following values:
      * </p>
      * <ul>
      * <li>
@@ -743,18 +1076,31 @@ public class CreateFileSystemLustreConfiguration implements Serializable, Clonea
      * this option.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>NEW_CHANGED_DELETED</code> - AutoImport is on. Amazon FSx automatically imports file and directory listings
+     * of any new objects added to the S3 bucket, any existing objects that are changed in the S3 bucket, and any
+     * objects that were deleted in the S3 bucket.
+     * </p>
+     * </li>
      * </ul>
      * <p>
-     * For more information, see <a
-     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/autoimport-data-repo.html">Automatically import updates
-     * from your S3 bucket</a>.
+     * For more information, see <a href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/autoimport-data-repo.html">
+     * Automatically import updates from your S3 bucket</a>.
      * </p>
+     * <note>
+     * <p>
+     * This parameter is not supported for file systems with the <code>Persistent_2</code> deployment type. Instead, use
+     * <code>CreateDataRepositoryAssociation"</code> to create a data repository association to link your Lustre file
+     * system to a data repository.
+     * </p>
+     * </note>
      * 
      * @param autoImportPolicy
-     *        (Optional) When you create your file system, your existing S3 objects appear as file and directory
-     *        listings. Use this property to choose how Amazon FSx keeps your file and directory listings up to date as
-     *        you add or modify objects in your linked S3 bucket. <code>AutoImportPolicy</code> can have the following
-     *        values:</p>
+     *        (Optional) Available with <code>Scratch</code> and <code>Persistent_1</code> deployment types. When you
+     *        create your file system, your existing S3 objects appear as file and directory listings. Use this property
+     *        to choose how Amazon FSx keeps your file and directory listings up to date as you add or modify objects in
+     *        your linked S3 bucket. <code>AutoImportPolicy</code> can have the following values:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -776,11 +1122,25 @@ public class CreateFileSystemLustreConfiguration implements Serializable, Clonea
      *        you choose this option.
      *        </p>
      *        </li>
+     *        <li>
+     *        <p>
+     *        <code>NEW_CHANGED_DELETED</code> - AutoImport is on. Amazon FSx automatically imports file and directory
+     *        listings of any new objects added to the S3 bucket, any existing objects that are changed in the S3
+     *        bucket, and any objects that were deleted in the S3 bucket.
+     *        </p>
+     *        </li>
      *        </ul>
      *        <p>
      *        For more information, see <a
-     *        href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/autoimport-data-repo.html">Automatically import
+     *        href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/autoimport-data-repo.html"> Automatically import
      *        updates from your S3 bucket</a>.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        This parameter is not supported for file systems with the <code>Persistent_2</code> deployment type.
+     *        Instead, use <code>CreateDataRepositoryAssociation"</code> to create a data repository association to link
+     *        your Lustre file system to a data repository.
+     *        </p>
      * @see AutoImportPolicyType
      */
 
@@ -790,9 +1150,10 @@ public class CreateFileSystemLustreConfiguration implements Serializable, Clonea
 
     /**
      * <p>
-     * (Optional) When you create your file system, your existing S3 objects appear as file and directory listings. Use
-     * this property to choose how Amazon FSx keeps your file and directory listings up to date as you add or modify
-     * objects in your linked S3 bucket. <code>AutoImportPolicy</code> can have the following values:
+     * (Optional) Available with <code>Scratch</code> and <code>Persistent_1</code> deployment types. When you create
+     * your file system, your existing S3 objects appear as file and directory listings. Use this property to choose how
+     * Amazon FSx keeps your file and directory listings up to date as you add or modify objects in your linked S3
+     * bucket. <code>AutoImportPolicy</code> can have the following values:
      * </p>
      * <ul>
      * <li>
@@ -815,17 +1176,30 @@ public class CreateFileSystemLustreConfiguration implements Serializable, Clonea
      * this option.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>NEW_CHANGED_DELETED</code> - AutoImport is on. Amazon FSx automatically imports file and directory listings
+     * of any new objects added to the S3 bucket, any existing objects that are changed in the S3 bucket, and any
+     * objects that were deleted in the S3 bucket.
+     * </p>
+     * </li>
      * </ul>
      * <p>
-     * For more information, see <a
-     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/autoimport-data-repo.html">Automatically import updates
-     * from your S3 bucket</a>.
+     * For more information, see <a href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/autoimport-data-repo.html">
+     * Automatically import updates from your S3 bucket</a>.
      * </p>
+     * <note>
+     * <p>
+     * This parameter is not supported for file systems with the <code>Persistent_2</code> deployment type. Instead, use
+     * <code>CreateDataRepositoryAssociation"</code> to create a data repository association to link your Lustre file
+     * system to a data repository.
+     * </p>
+     * </note>
      * 
-     * @return (Optional) When you create your file system, your existing S3 objects appear as file and directory
-     *         listings. Use this property to choose how Amazon FSx keeps your file and directory listings up to date as
-     *         you add or modify objects in your linked S3 bucket. <code>AutoImportPolicy</code> can have the following
-     *         values:</p>
+     * @return (Optional) Available with <code>Scratch</code> and <code>Persistent_1</code> deployment types. When you
+     *         create your file system, your existing S3 objects appear as file and directory listings. Use this
+     *         property to choose how Amazon FSx keeps your file and directory listings up to date as you add or modify
+     *         objects in your linked S3 bucket. <code>AutoImportPolicy</code> can have the following values:</p>
      *         <ul>
      *         <li>
      *         <p>
@@ -847,11 +1221,25 @@ public class CreateFileSystemLustreConfiguration implements Serializable, Clonea
      *         after you choose this option.
      *         </p>
      *         </li>
+     *         <li>
+     *         <p>
+     *         <code>NEW_CHANGED_DELETED</code> - AutoImport is on. Amazon FSx automatically imports file and directory
+     *         listings of any new objects added to the S3 bucket, any existing objects that are changed in the S3
+     *         bucket, and any objects that were deleted in the S3 bucket.
+     *         </p>
+     *         </li>
      *         </ul>
      *         <p>
      *         For more information, see <a
-     *         href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/autoimport-data-repo.html">Automatically import
+     *         href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/autoimport-data-repo.html"> Automatically import
      *         updates from your S3 bucket</a>.
+     *         </p>
+     *         <note>
+     *         <p>
+     *         This parameter is not supported for file systems with the <code>Persistent_2</code> deployment type.
+     *         Instead, use <code>CreateDataRepositoryAssociation"</code> to create a data repository association to
+     *         link your Lustre file system to a data repository.
+     *         </p>
      * @see AutoImportPolicyType
      */
 
@@ -861,9 +1249,10 @@ public class CreateFileSystemLustreConfiguration implements Serializable, Clonea
 
     /**
      * <p>
-     * (Optional) When you create your file system, your existing S3 objects appear as file and directory listings. Use
-     * this property to choose how Amazon FSx keeps your file and directory listings up to date as you add or modify
-     * objects in your linked S3 bucket. <code>AutoImportPolicy</code> can have the following values:
+     * (Optional) Available with <code>Scratch</code> and <code>Persistent_1</code> deployment types. When you create
+     * your file system, your existing S3 objects appear as file and directory listings. Use this property to choose how
+     * Amazon FSx keeps your file and directory listings up to date as you add or modify objects in your linked S3
+     * bucket. <code>AutoImportPolicy</code> can have the following values:
      * </p>
      * <ul>
      * <li>
@@ -886,18 +1275,31 @@ public class CreateFileSystemLustreConfiguration implements Serializable, Clonea
      * this option.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>NEW_CHANGED_DELETED</code> - AutoImport is on. Amazon FSx automatically imports file and directory listings
+     * of any new objects added to the S3 bucket, any existing objects that are changed in the S3 bucket, and any
+     * objects that were deleted in the S3 bucket.
+     * </p>
+     * </li>
      * </ul>
      * <p>
-     * For more information, see <a
-     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/autoimport-data-repo.html">Automatically import updates
-     * from your S3 bucket</a>.
+     * For more information, see <a href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/autoimport-data-repo.html">
+     * Automatically import updates from your S3 bucket</a>.
      * </p>
+     * <note>
+     * <p>
+     * This parameter is not supported for file systems with the <code>Persistent_2</code> deployment type. Instead, use
+     * <code>CreateDataRepositoryAssociation"</code> to create a data repository association to link your Lustre file
+     * system to a data repository.
+     * </p>
+     * </note>
      * 
      * @param autoImportPolicy
-     *        (Optional) When you create your file system, your existing S3 objects appear as file and directory
-     *        listings. Use this property to choose how Amazon FSx keeps your file and directory listings up to date as
-     *        you add or modify objects in your linked S3 bucket. <code>AutoImportPolicy</code> can have the following
-     *        values:</p>
+     *        (Optional) Available with <code>Scratch</code> and <code>Persistent_1</code> deployment types. When you
+     *        create your file system, your existing S3 objects appear as file and directory listings. Use this property
+     *        to choose how Amazon FSx keeps your file and directory listings up to date as you add or modify objects in
+     *        your linked S3 bucket. <code>AutoImportPolicy</code> can have the following values:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -919,11 +1321,25 @@ public class CreateFileSystemLustreConfiguration implements Serializable, Clonea
      *        you choose this option.
      *        </p>
      *        </li>
+     *        <li>
+     *        <p>
+     *        <code>NEW_CHANGED_DELETED</code> - AutoImport is on. Amazon FSx automatically imports file and directory
+     *        listings of any new objects added to the S3 bucket, any existing objects that are changed in the S3
+     *        bucket, and any objects that were deleted in the S3 bucket.
+     *        </p>
+     *        </li>
      *        </ul>
      *        <p>
      *        For more information, see <a
-     *        href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/autoimport-data-repo.html">Automatically import
+     *        href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/autoimport-data-repo.html"> Automatically import
      *        updates from your S3 bucket</a>.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        This parameter is not supported for file systems with the <code>Persistent_2</code> deployment type.
+     *        Instead, use <code>CreateDataRepositoryAssociation"</code> to create a data repository association to link
+     *        your Lustre file system to a data repository.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AutoImportPolicyType
      */
@@ -935,9 +1351,10 @@ public class CreateFileSystemLustreConfiguration implements Serializable, Clonea
 
     /**
      * <p>
-     * (Optional) When you create your file system, your existing S3 objects appear as file and directory listings. Use
-     * this property to choose how Amazon FSx keeps your file and directory listings up to date as you add or modify
-     * objects in your linked S3 bucket. <code>AutoImportPolicy</code> can have the following values:
+     * (Optional) Available with <code>Scratch</code> and <code>Persistent_1</code> deployment types. When you create
+     * your file system, your existing S3 objects appear as file and directory listings. Use this property to choose how
+     * Amazon FSx keeps your file and directory listings up to date as you add or modify objects in your linked S3
+     * bucket. <code>AutoImportPolicy</code> can have the following values:
      * </p>
      * <ul>
      * <li>
@@ -960,18 +1377,31 @@ public class CreateFileSystemLustreConfiguration implements Serializable, Clonea
      * this option.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>NEW_CHANGED_DELETED</code> - AutoImport is on. Amazon FSx automatically imports file and directory listings
+     * of any new objects added to the S3 bucket, any existing objects that are changed in the S3 bucket, and any
+     * objects that were deleted in the S3 bucket.
+     * </p>
+     * </li>
      * </ul>
      * <p>
-     * For more information, see <a
-     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/autoimport-data-repo.html">Automatically import updates
-     * from your S3 bucket</a>.
+     * For more information, see <a href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/autoimport-data-repo.html">
+     * Automatically import updates from your S3 bucket</a>.
      * </p>
+     * <note>
+     * <p>
+     * This parameter is not supported for file systems with the <code>Persistent_2</code> deployment type. Instead, use
+     * <code>CreateDataRepositoryAssociation"</code> to create a data repository association to link your Lustre file
+     * system to a data repository.
+     * </p>
+     * </note>
      * 
      * @param autoImportPolicy
-     *        (Optional) When you create your file system, your existing S3 objects appear as file and directory
-     *        listings. Use this property to choose how Amazon FSx keeps your file and directory listings up to date as
-     *        you add or modify objects in your linked S3 bucket. <code>AutoImportPolicy</code> can have the following
-     *        values:</p>
+     *        (Optional) Available with <code>Scratch</code> and <code>Persistent_1</code> deployment types. When you
+     *        create your file system, your existing S3 objects appear as file and directory listings. Use this property
+     *        to choose how Amazon FSx keeps your file and directory listings up to date as you add or modify objects in
+     *        your linked S3 bucket. <code>AutoImportPolicy</code> can have the following values:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -993,11 +1423,25 @@ public class CreateFileSystemLustreConfiguration implements Serializable, Clonea
      *        you choose this option.
      *        </p>
      *        </li>
+     *        <li>
+     *        <p>
+     *        <code>NEW_CHANGED_DELETED</code> - AutoImport is on. Amazon FSx automatically imports file and directory
+     *        listings of any new objects added to the S3 bucket, any existing objects that are changed in the S3
+     *        bucket, and any objects that were deleted in the S3 bucket.
+     *        </p>
+     *        </li>
      *        </ul>
      *        <p>
      *        For more information, see <a
-     *        href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/autoimport-data-repo.html">Automatically import
+     *        href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/autoimport-data-repo.html"> Automatically import
      *        updates from your S3 bucket</a>.
+     *        </p>
+     *        <note>
+     *        <p>
+     *        This parameter is not supported for file systems with the <code>Persistent_2</code> deployment type.
+     *        Instead, use <code>CreateDataRepositoryAssociation"</code> to create a data repository association to link
+     *        your Lustre file system to a data repository.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AutoImportPolicyType
      */
@@ -1009,24 +1453,60 @@ public class CreateFileSystemLustreConfiguration implements Serializable, Clonea
 
     /**
      * <p>
-     * Required for the <code>PERSISTENT_1</code> deployment type, describes the amount of read and write throughput for
-     * each 1 tebibyte of storage, in MB/s/TiB. File system throughput capacity is calculated by multiplying ﬁle system
-     * storage capacity (TiB) by the PerUnitStorageThroughput (MB/s/TiB). For a 2.4 TiB ﬁle system, provisioning 50
-     * MB/s/TiB of PerUnitStorageThroughput yields 120 MB/s of ﬁle system throughput. You pay for the amount of
+     * Required with <code>PERSISTENT_1</code> and <code>PERSISTENT_2</code> deployment types, provisions the amount of
+     * read and write throughput for each 1 tebibyte (TiB) of file system storage capacity, in MB/s/TiB. File system
+     * throughput capacity is calculated by multiplying ﬁle system storage capacity (TiB) by the
+     * <code>PerUnitStorageThroughput</code> (MB/s/TiB). For a 2.4-TiB ﬁle system, provisioning 50 MB/s/TiB of
+     * <code>PerUnitStorageThroughput</code> yields 120 MB/s of ﬁle system throughput. You pay for the amount of
      * throughput that you provision.
      * </p>
      * <p>
-     * Valid values for SSD storage: 50, 100, 200. Valid values for HDD storage: 12, 40.
+     * Valid values:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * For <code>PERSISTENT_1</code> SSD storage: 50, 100, 200 MB/s/TiB.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For <code>PERSISTENT_1</code> HDD storage: 12, 40 MB/s/TiB.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For <code>PERSISTENT_2</code> SSD storage: 125, 250, 500, 1000 MB/s/TiB.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param perUnitStorageThroughput
-     *        Required for the <code>PERSISTENT_1</code> deployment type, describes the amount of read and write
-     *        throughput for each 1 tebibyte of storage, in MB/s/TiB. File system throughput capacity is calculated by
-     *        multiplying ﬁle system storage capacity (TiB) by the PerUnitStorageThroughput (MB/s/TiB). For a 2.4 TiB
-     *        ﬁle system, provisioning 50 MB/s/TiB of PerUnitStorageThroughput yields 120 MB/s of ﬁle system throughput.
-     *        You pay for the amount of throughput that you provision. </p>
+     *        Required with <code>PERSISTENT_1</code> and <code>PERSISTENT_2</code> deployment types, provisions the
+     *        amount of read and write throughput for each 1 tebibyte (TiB) of file system storage capacity, in
+     *        MB/s/TiB. File system throughput capacity is calculated by multiplying ﬁle system storage capacity (TiB)
+     *        by the <code>PerUnitStorageThroughput</code> (MB/s/TiB). For a 2.4-TiB ﬁle system, provisioning 50
+     *        MB/s/TiB of <code>PerUnitStorageThroughput</code> yields 120 MB/s of ﬁle system throughput. You pay for
+     *        the amount of throughput that you provision. </p>
      *        <p>
-     *        Valid values for SSD storage: 50, 100, 200. Valid values for HDD storage: 12, 40.
+     *        Valid values:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        For <code>PERSISTENT_1</code> SSD storage: 50, 100, 200 MB/s/TiB.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For <code>PERSISTENT_1</code> HDD storage: 12, 40 MB/s/TiB.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For <code>PERSISTENT_2</code> SSD storage: 125, 250, 500, 1000 MB/s/TiB.
+     *        </p>
+     *        </li>
      */
 
     public void setPerUnitStorageThroughput(Integer perUnitStorageThroughput) {
@@ -1035,23 +1515,59 @@ public class CreateFileSystemLustreConfiguration implements Serializable, Clonea
 
     /**
      * <p>
-     * Required for the <code>PERSISTENT_1</code> deployment type, describes the amount of read and write throughput for
-     * each 1 tebibyte of storage, in MB/s/TiB. File system throughput capacity is calculated by multiplying ﬁle system
-     * storage capacity (TiB) by the PerUnitStorageThroughput (MB/s/TiB). For a 2.4 TiB ﬁle system, provisioning 50
-     * MB/s/TiB of PerUnitStorageThroughput yields 120 MB/s of ﬁle system throughput. You pay for the amount of
+     * Required with <code>PERSISTENT_1</code> and <code>PERSISTENT_2</code> deployment types, provisions the amount of
+     * read and write throughput for each 1 tebibyte (TiB) of file system storage capacity, in MB/s/TiB. File system
+     * throughput capacity is calculated by multiplying ﬁle system storage capacity (TiB) by the
+     * <code>PerUnitStorageThroughput</code> (MB/s/TiB). For a 2.4-TiB ﬁle system, provisioning 50 MB/s/TiB of
+     * <code>PerUnitStorageThroughput</code> yields 120 MB/s of ﬁle system throughput. You pay for the amount of
      * throughput that you provision.
      * </p>
      * <p>
-     * Valid values for SSD storage: 50, 100, 200. Valid values for HDD storage: 12, 40.
+     * Valid values:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * For <code>PERSISTENT_1</code> SSD storage: 50, 100, 200 MB/s/TiB.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For <code>PERSISTENT_1</code> HDD storage: 12, 40 MB/s/TiB.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For <code>PERSISTENT_2</code> SSD storage: 125, 250, 500, 1000 MB/s/TiB.
+     * </p>
+     * </li>
+     * </ul>
      * 
-     * @return Required for the <code>PERSISTENT_1</code> deployment type, describes the amount of read and write
-     *         throughput for each 1 tebibyte of storage, in MB/s/TiB. File system throughput capacity is calculated by
-     *         multiplying ﬁle system storage capacity (TiB) by the PerUnitStorageThroughput (MB/s/TiB). For a 2.4 TiB
-     *         ﬁle system, provisioning 50 MB/s/TiB of PerUnitStorageThroughput yields 120 MB/s of ﬁle system
-     *         throughput. You pay for the amount of throughput that you provision. </p>
+     * @return Required with <code>PERSISTENT_1</code> and <code>PERSISTENT_2</code> deployment types, provisions the
+     *         amount of read and write throughput for each 1 tebibyte (TiB) of file system storage capacity, in
+     *         MB/s/TiB. File system throughput capacity is calculated by multiplying ﬁle system storage capacity (TiB)
+     *         by the <code>PerUnitStorageThroughput</code> (MB/s/TiB). For a 2.4-TiB ﬁle system, provisioning 50
+     *         MB/s/TiB of <code>PerUnitStorageThroughput</code> yields 120 MB/s of ﬁle system throughput. You pay for
+     *         the amount of throughput that you provision. </p>
      *         <p>
-     *         Valid values for SSD storage: 50, 100, 200. Valid values for HDD storage: 12, 40.
+     *         Valid values:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         For <code>PERSISTENT_1</code> SSD storage: 50, 100, 200 MB/s/TiB.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         For <code>PERSISTENT_1</code> HDD storage: 12, 40 MB/s/TiB.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         For <code>PERSISTENT_2</code> SSD storage: 125, 250, 500, 1000 MB/s/TiB.
+     *         </p>
+     *         </li>
      */
 
     public Integer getPerUnitStorageThroughput() {
@@ -1060,24 +1576,60 @@ public class CreateFileSystemLustreConfiguration implements Serializable, Clonea
 
     /**
      * <p>
-     * Required for the <code>PERSISTENT_1</code> deployment type, describes the amount of read and write throughput for
-     * each 1 tebibyte of storage, in MB/s/TiB. File system throughput capacity is calculated by multiplying ﬁle system
-     * storage capacity (TiB) by the PerUnitStorageThroughput (MB/s/TiB). For a 2.4 TiB ﬁle system, provisioning 50
-     * MB/s/TiB of PerUnitStorageThroughput yields 120 MB/s of ﬁle system throughput. You pay for the amount of
+     * Required with <code>PERSISTENT_1</code> and <code>PERSISTENT_2</code> deployment types, provisions the amount of
+     * read and write throughput for each 1 tebibyte (TiB) of file system storage capacity, in MB/s/TiB. File system
+     * throughput capacity is calculated by multiplying ﬁle system storage capacity (TiB) by the
+     * <code>PerUnitStorageThroughput</code> (MB/s/TiB). For a 2.4-TiB ﬁle system, provisioning 50 MB/s/TiB of
+     * <code>PerUnitStorageThroughput</code> yields 120 MB/s of ﬁle system throughput. You pay for the amount of
      * throughput that you provision.
      * </p>
      * <p>
-     * Valid values for SSD storage: 50, 100, 200. Valid values for HDD storage: 12, 40.
+     * Valid values:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * For <code>PERSISTENT_1</code> SSD storage: 50, 100, 200 MB/s/TiB.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For <code>PERSISTENT_1</code> HDD storage: 12, 40 MB/s/TiB.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For <code>PERSISTENT_2</code> SSD storage: 125, 250, 500, 1000 MB/s/TiB.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param perUnitStorageThroughput
-     *        Required for the <code>PERSISTENT_1</code> deployment type, describes the amount of read and write
-     *        throughput for each 1 tebibyte of storage, in MB/s/TiB. File system throughput capacity is calculated by
-     *        multiplying ﬁle system storage capacity (TiB) by the PerUnitStorageThroughput (MB/s/TiB). For a 2.4 TiB
-     *        ﬁle system, provisioning 50 MB/s/TiB of PerUnitStorageThroughput yields 120 MB/s of ﬁle system throughput.
-     *        You pay for the amount of throughput that you provision. </p>
+     *        Required with <code>PERSISTENT_1</code> and <code>PERSISTENT_2</code> deployment types, provisions the
+     *        amount of read and write throughput for each 1 tebibyte (TiB) of file system storage capacity, in
+     *        MB/s/TiB. File system throughput capacity is calculated by multiplying ﬁle system storage capacity (TiB)
+     *        by the <code>PerUnitStorageThroughput</code> (MB/s/TiB). For a 2.4-TiB ﬁle system, provisioning 50
+     *        MB/s/TiB of <code>PerUnitStorageThroughput</code> yields 120 MB/s of ﬁle system throughput. You pay for
+     *        the amount of throughput that you provision. </p>
      *        <p>
-     *        Valid values for SSD storage: 50, 100, 200. Valid values for HDD storage: 12, 40.
+     *        Valid values:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        For <code>PERSISTENT_1</code> SSD storage: 50, 100, 200 MB/s/TiB.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For <code>PERSISTENT_1</code> HDD storage: 12, 40 MB/s/TiB.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For <code>PERSISTENT_2</code> SSD storage: 125, 250, 500, 1000 MB/s/TiB.
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1140,28 +1692,37 @@ public class CreateFileSystemLustreConfiguration implements Serializable, Clonea
 
     /**
      * <p>
-     * (Optional) Not available to use with file systems that are linked to a data repository. A boolean flag indicating
-     * whether tags for the file system should be copied to backups. The default value is false. If it's set to true,
-     * all file system tags are copied to all automatic and user-initiated backups when the user doesn't specify any
-     * backup-specific tags. If this value is true, and you specify one or more backup tags, only the specified tags are
-     * copied to backups. If you specify one or more tags when creating a user-initiated backup, no tags are copied from
-     * the file system, regardless of this value.
+     * (Optional) Not available for use with file systems that are linked to a data repository. A boolean flag
+     * indicating whether tags for the file system should be copied to backups. The default value is false. If
+     * <code>CopyTagsToBackups</code> is set to true, all file system tags are copied to all automatic and
+     * user-initiated backups when the user doesn't specify any backup-specific tags. If <code>CopyTagsToBackups</code>
+     * is set to true and you specify one or more backup tags, only the specified tags are copied to backups. If you
+     * specify one or more tags when creating a user-initiated backup, no tags are copied from the file system,
+     * regardless of this value.
      * </p>
      * <p>
-     * For more information, see <a
-     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/using-backups-fsx.html">Working with backups</a>.
+     * (Default = <code>false</code>)
+     * </p>
+     * <p>
+     * For more information, see <a href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/using-backups-fsx.html">
+     * Working with backups</a> in the <i>Amazon FSx for Lustre User Guide</i>.
      * </p>
      * 
      * @param copyTagsToBackups
-     *        (Optional) Not available to use with file systems that are linked to a data repository. A boolean flag
+     *        (Optional) Not available for use with file systems that are linked to a data repository. A boolean flag
      *        indicating whether tags for the file system should be copied to backups. The default value is false. If
-     *        it's set to true, all file system tags are copied to all automatic and user-initiated backups when the
-     *        user doesn't specify any backup-specific tags. If this value is true, and you specify one or more backup
-     *        tags, only the specified tags are copied to backups. If you specify one or more tags when creating a
-     *        user-initiated backup, no tags are copied from the file system, regardless of this value.</p>
+     *        <code>CopyTagsToBackups</code> is set to true, all file system tags are copied to all automatic and
+     *        user-initiated backups when the user doesn't specify any backup-specific tags. If
+     *        <code>CopyTagsToBackups</code> is set to true and you specify one or more backup tags, only the specified
+     *        tags are copied to backups. If you specify one or more tags when creating a user-initiated backup, no tags
+     *        are copied from the file system, regardless of this value.</p>
+     *        <p>
+     *        (Default = <code>false</code>)
+     *        </p>
      *        <p>
      *        For more information, see <a
-     *        href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/using-backups-fsx.html">Working with backups</a>.
+     *        href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/using-backups-fsx.html"> Working with backups</a>
+     *        in the <i>Amazon FSx for Lustre User Guide</i>.
      */
 
     public void setCopyTagsToBackups(Boolean copyTagsToBackups) {
@@ -1170,28 +1731,36 @@ public class CreateFileSystemLustreConfiguration implements Serializable, Clonea
 
     /**
      * <p>
-     * (Optional) Not available to use with file systems that are linked to a data repository. A boolean flag indicating
-     * whether tags for the file system should be copied to backups. The default value is false. If it's set to true,
-     * all file system tags are copied to all automatic and user-initiated backups when the user doesn't specify any
-     * backup-specific tags. If this value is true, and you specify one or more backup tags, only the specified tags are
-     * copied to backups. If you specify one or more tags when creating a user-initiated backup, no tags are copied from
-     * the file system, regardless of this value.
+     * (Optional) Not available for use with file systems that are linked to a data repository. A boolean flag
+     * indicating whether tags for the file system should be copied to backups. The default value is false. If
+     * <code>CopyTagsToBackups</code> is set to true, all file system tags are copied to all automatic and
+     * user-initiated backups when the user doesn't specify any backup-specific tags. If <code>CopyTagsToBackups</code>
+     * is set to true and you specify one or more backup tags, only the specified tags are copied to backups. If you
+     * specify one or more tags when creating a user-initiated backup, no tags are copied from the file system,
+     * regardless of this value.
      * </p>
      * <p>
-     * For more information, see <a
-     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/using-backups-fsx.html">Working with backups</a>.
+     * (Default = <code>false</code>)
+     * </p>
+     * <p>
+     * For more information, see <a href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/using-backups-fsx.html">
+     * Working with backups</a> in the <i>Amazon FSx for Lustre User Guide</i>.
      * </p>
      * 
-     * @return (Optional) Not available to use with file systems that are linked to a data repository. A boolean flag
+     * @return (Optional) Not available for use with file systems that are linked to a data repository. A boolean flag
      *         indicating whether tags for the file system should be copied to backups. The default value is false. If
-     *         it's set to true, all file system tags are copied to all automatic and user-initiated backups when the
-     *         user doesn't specify any backup-specific tags. If this value is true, and you specify one or more backup
-     *         tags, only the specified tags are copied to backups. If you specify one or more tags when creating a
-     *         user-initiated backup, no tags are copied from the file system, regardless of this value.</p>
+     *         <code>CopyTagsToBackups</code> is set to true, all file system tags are copied to all automatic and
+     *         user-initiated backups when the user doesn't specify any backup-specific tags. If
+     *         <code>CopyTagsToBackups</code> is set to true and you specify one or more backup tags, only the specified
+     *         tags are copied to backups. If you specify one or more tags when creating a user-initiated backup, no
+     *         tags are copied from the file system, regardless of this value.</p>
+     *         <p>
+     *         (Default = <code>false</code>)
+     *         </p>
      *         <p>
      *         For more information, see <a
-     *         href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/using-backups-fsx.html">Working with
-     *         backups</a>.
+     *         href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/using-backups-fsx.html"> Working with
+     *         backups</a> in the <i>Amazon FSx for Lustre User Guide</i>.
      */
 
     public Boolean getCopyTagsToBackups() {
@@ -1200,28 +1769,37 @@ public class CreateFileSystemLustreConfiguration implements Serializable, Clonea
 
     /**
      * <p>
-     * (Optional) Not available to use with file systems that are linked to a data repository. A boolean flag indicating
-     * whether tags for the file system should be copied to backups. The default value is false. If it's set to true,
-     * all file system tags are copied to all automatic and user-initiated backups when the user doesn't specify any
-     * backup-specific tags. If this value is true, and you specify one or more backup tags, only the specified tags are
-     * copied to backups. If you specify one or more tags when creating a user-initiated backup, no tags are copied from
-     * the file system, regardless of this value.
+     * (Optional) Not available for use with file systems that are linked to a data repository. A boolean flag
+     * indicating whether tags for the file system should be copied to backups. The default value is false. If
+     * <code>CopyTagsToBackups</code> is set to true, all file system tags are copied to all automatic and
+     * user-initiated backups when the user doesn't specify any backup-specific tags. If <code>CopyTagsToBackups</code>
+     * is set to true and you specify one or more backup tags, only the specified tags are copied to backups. If you
+     * specify one or more tags when creating a user-initiated backup, no tags are copied from the file system,
+     * regardless of this value.
      * </p>
      * <p>
-     * For more information, see <a
-     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/using-backups-fsx.html">Working with backups</a>.
+     * (Default = <code>false</code>)
+     * </p>
+     * <p>
+     * For more information, see <a href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/using-backups-fsx.html">
+     * Working with backups</a> in the <i>Amazon FSx for Lustre User Guide</i>.
      * </p>
      * 
      * @param copyTagsToBackups
-     *        (Optional) Not available to use with file systems that are linked to a data repository. A boolean flag
+     *        (Optional) Not available for use with file systems that are linked to a data repository. A boolean flag
      *        indicating whether tags for the file system should be copied to backups. The default value is false. If
-     *        it's set to true, all file system tags are copied to all automatic and user-initiated backups when the
-     *        user doesn't specify any backup-specific tags. If this value is true, and you specify one or more backup
-     *        tags, only the specified tags are copied to backups. If you specify one or more tags when creating a
-     *        user-initiated backup, no tags are copied from the file system, regardless of this value.</p>
+     *        <code>CopyTagsToBackups</code> is set to true, all file system tags are copied to all automatic and
+     *        user-initiated backups when the user doesn't specify any backup-specific tags. If
+     *        <code>CopyTagsToBackups</code> is set to true and you specify one or more backup tags, only the specified
+     *        tags are copied to backups. If you specify one or more tags when creating a user-initiated backup, no tags
+     *        are copied from the file system, regardless of this value.</p>
+     *        <p>
+     *        (Default = <code>false</code>)
+     *        </p>
      *        <p>
      *        For more information, see <a
-     *        href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/using-backups-fsx.html">Working with backups</a>.
+     *        href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/using-backups-fsx.html"> Working with backups</a>
+     *        in the <i>Amazon FSx for Lustre User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1232,28 +1810,36 @@ public class CreateFileSystemLustreConfiguration implements Serializable, Clonea
 
     /**
      * <p>
-     * (Optional) Not available to use with file systems that are linked to a data repository. A boolean flag indicating
-     * whether tags for the file system should be copied to backups. The default value is false. If it's set to true,
-     * all file system tags are copied to all automatic and user-initiated backups when the user doesn't specify any
-     * backup-specific tags. If this value is true, and you specify one or more backup tags, only the specified tags are
-     * copied to backups. If you specify one or more tags when creating a user-initiated backup, no tags are copied from
-     * the file system, regardless of this value.
+     * (Optional) Not available for use with file systems that are linked to a data repository. A boolean flag
+     * indicating whether tags for the file system should be copied to backups. The default value is false. If
+     * <code>CopyTagsToBackups</code> is set to true, all file system tags are copied to all automatic and
+     * user-initiated backups when the user doesn't specify any backup-specific tags. If <code>CopyTagsToBackups</code>
+     * is set to true and you specify one or more backup tags, only the specified tags are copied to backups. If you
+     * specify one or more tags when creating a user-initiated backup, no tags are copied from the file system,
+     * regardless of this value.
      * </p>
      * <p>
-     * For more information, see <a
-     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/using-backups-fsx.html">Working with backups</a>.
+     * (Default = <code>false</code>)
+     * </p>
+     * <p>
+     * For more information, see <a href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/using-backups-fsx.html">
+     * Working with backups</a> in the <i>Amazon FSx for Lustre User Guide</i>.
      * </p>
      * 
-     * @return (Optional) Not available to use with file systems that are linked to a data repository. A boolean flag
+     * @return (Optional) Not available for use with file systems that are linked to a data repository. A boolean flag
      *         indicating whether tags for the file system should be copied to backups. The default value is false. If
-     *         it's set to true, all file system tags are copied to all automatic and user-initiated backups when the
-     *         user doesn't specify any backup-specific tags. If this value is true, and you specify one or more backup
-     *         tags, only the specified tags are copied to backups. If you specify one or more tags when creating a
-     *         user-initiated backup, no tags are copied from the file system, regardless of this value.</p>
+     *         <code>CopyTagsToBackups</code> is set to true, all file system tags are copied to all automatic and
+     *         user-initiated backups when the user doesn't specify any backup-specific tags. If
+     *         <code>CopyTagsToBackups</code> is set to true and you specify one or more backup tags, only the specified
+     *         tags are copied to backups. If you specify one or more tags when creating a user-initiated backup, no
+     *         tags are copied from the file system, regardless of this value.</p>
+     *         <p>
+     *         (Default = <code>false</code>)
+     *         </p>
      *         <p>
      *         For more information, see <a
-     *         href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/using-backups-fsx.html">Working with
-     *         backups</a>.
+     *         href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/using-backups-fsx.html"> Working with
+     *         backups</a> in the <i>Amazon FSx for Lustre User Guide</i>.
      */
 
     public Boolean isCopyTagsToBackups() {
@@ -1262,21 +1848,22 @@ public class CreateFileSystemLustreConfiguration implements Serializable, Clonea
 
     /**
      * <p>
-     * The type of drive cache used by PERSISTENT_1 file systems that are provisioned with HDD storage devices. This
-     * parameter is required when storage type is HDD. Set to <code>READ</code>, improve the performance for frequently
-     * accessed files and allows 20% of the total storage capacity of the file system to be cached.
+     * The type of drive cache used by <code>PERSISTENT_1</code> file systems that are provisioned with HDD storage
+     * devices. This parameter is required when storage type is HDD. Set this property to <code>READ</code> to improve
+     * the performance for frequently accessed files by caching up to 20% of the total storage capacity of the file
+     * system.
      * </p>
      * <p>
-     * This parameter is required when <code>StorageType</code> is set to HDD.
+     * This parameter is required when <code>StorageType</code> is set to <code>HDD</code>.
      * </p>
      * 
      * @param driveCacheType
-     *        The type of drive cache used by PERSISTENT_1 file systems that are provisioned with HDD storage devices.
-     *        This parameter is required when storage type is HDD. Set to <code>READ</code>, improve the performance for
-     *        frequently accessed files and allows 20% of the total storage capacity of the file system to be cached.
-     *        </p>
+     *        The type of drive cache used by <code>PERSISTENT_1</code> file systems that are provisioned with HDD
+     *        storage devices. This parameter is required when storage type is HDD. Set this property to
+     *        <code>READ</code> to improve the performance for frequently accessed files by caching up to 20% of the
+     *        total storage capacity of the file system.</p>
      *        <p>
-     *        This parameter is required when <code>StorageType</code> is set to HDD.
+     *        This parameter is required when <code>StorageType</code> is set to <code>HDD</code>.
      * @see DriveCacheType
      */
 
@@ -1286,20 +1873,21 @@ public class CreateFileSystemLustreConfiguration implements Serializable, Clonea
 
     /**
      * <p>
-     * The type of drive cache used by PERSISTENT_1 file systems that are provisioned with HDD storage devices. This
-     * parameter is required when storage type is HDD. Set to <code>READ</code>, improve the performance for frequently
-     * accessed files and allows 20% of the total storage capacity of the file system to be cached.
+     * The type of drive cache used by <code>PERSISTENT_1</code> file systems that are provisioned with HDD storage
+     * devices. This parameter is required when storage type is HDD. Set this property to <code>READ</code> to improve
+     * the performance for frequently accessed files by caching up to 20% of the total storage capacity of the file
+     * system.
      * </p>
      * <p>
-     * This parameter is required when <code>StorageType</code> is set to HDD.
+     * This parameter is required when <code>StorageType</code> is set to <code>HDD</code>.
      * </p>
      * 
-     * @return The type of drive cache used by PERSISTENT_1 file systems that are provisioned with HDD storage devices.
-     *         This parameter is required when storage type is HDD. Set to <code>READ</code>, improve the performance
-     *         for frequently accessed files and allows 20% of the total storage capacity of the file system to be
-     *         cached. </p>
+     * @return The type of drive cache used by <code>PERSISTENT_1</code> file systems that are provisioned with HDD
+     *         storage devices. This parameter is required when storage type is HDD. Set this property to
+     *         <code>READ</code> to improve the performance for frequently accessed files by caching up to 20% of the
+     *         total storage capacity of the file system.</p>
      *         <p>
-     *         This parameter is required when <code>StorageType</code> is set to HDD.
+     *         This parameter is required when <code>StorageType</code> is set to <code>HDD</code>.
      * @see DriveCacheType
      */
 
@@ -1309,21 +1897,22 @@ public class CreateFileSystemLustreConfiguration implements Serializable, Clonea
 
     /**
      * <p>
-     * The type of drive cache used by PERSISTENT_1 file systems that are provisioned with HDD storage devices. This
-     * parameter is required when storage type is HDD. Set to <code>READ</code>, improve the performance for frequently
-     * accessed files and allows 20% of the total storage capacity of the file system to be cached.
+     * The type of drive cache used by <code>PERSISTENT_1</code> file systems that are provisioned with HDD storage
+     * devices. This parameter is required when storage type is HDD. Set this property to <code>READ</code> to improve
+     * the performance for frequently accessed files by caching up to 20% of the total storage capacity of the file
+     * system.
      * </p>
      * <p>
-     * This parameter is required when <code>StorageType</code> is set to HDD.
+     * This parameter is required when <code>StorageType</code> is set to <code>HDD</code>.
      * </p>
      * 
      * @param driveCacheType
-     *        The type of drive cache used by PERSISTENT_1 file systems that are provisioned with HDD storage devices.
-     *        This parameter is required when storage type is HDD. Set to <code>READ</code>, improve the performance for
-     *        frequently accessed files and allows 20% of the total storage capacity of the file system to be cached.
-     *        </p>
+     *        The type of drive cache used by <code>PERSISTENT_1</code> file systems that are provisioned with HDD
+     *        storage devices. This parameter is required when storage type is HDD. Set this property to
+     *        <code>READ</code> to improve the performance for frequently accessed files by caching up to 20% of the
+     *        total storage capacity of the file system.</p>
      *        <p>
-     *        This parameter is required when <code>StorageType</code> is set to HDD.
+     *        This parameter is required when <code>StorageType</code> is set to <code>HDD</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DriveCacheType
      */
@@ -1335,21 +1924,22 @@ public class CreateFileSystemLustreConfiguration implements Serializable, Clonea
 
     /**
      * <p>
-     * The type of drive cache used by PERSISTENT_1 file systems that are provisioned with HDD storage devices. This
-     * parameter is required when storage type is HDD. Set to <code>READ</code>, improve the performance for frequently
-     * accessed files and allows 20% of the total storage capacity of the file system to be cached.
+     * The type of drive cache used by <code>PERSISTENT_1</code> file systems that are provisioned with HDD storage
+     * devices. This parameter is required when storage type is HDD. Set this property to <code>READ</code> to improve
+     * the performance for frequently accessed files by caching up to 20% of the total storage capacity of the file
+     * system.
      * </p>
      * <p>
-     * This parameter is required when <code>StorageType</code> is set to HDD.
+     * This parameter is required when <code>StorageType</code> is set to <code>HDD</code>.
      * </p>
      * 
      * @param driveCacheType
-     *        The type of drive cache used by PERSISTENT_1 file systems that are provisioned with HDD storage devices.
-     *        This parameter is required when storage type is HDD. Set to <code>READ</code>, improve the performance for
-     *        frequently accessed files and allows 20% of the total storage capacity of the file system to be cached.
-     *        </p>
+     *        The type of drive cache used by <code>PERSISTENT_1</code> file systems that are provisioned with HDD
+     *        storage devices. This parameter is required when storage type is HDD. Set this property to
+     *        <code>READ</code> to improve the performance for frequently accessed files by caching up to 20% of the
+     *        total storage capacity of the file system.</p>
      *        <p>
-     *        This parameter is required when <code>StorageType</code> is set to HDD.
+     *        This parameter is required when <code>StorageType</code> is set to <code>HDD</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DriveCacheType
      */
@@ -1378,7 +1968,8 @@ public class CreateFileSystemLustreConfiguration implements Serializable, Clonea
      * </ul>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/data-compression.html">Lustre data compression</a>.
+     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/data-compression.html">Lustre data compression</a> in
+     * the <i>Amazon FSx for Lustre User Guide</i>.
      * </p>
      * 
      * @param dataCompressionType
@@ -1399,7 +1990,7 @@ public class CreateFileSystemLustreConfiguration implements Serializable, Clonea
      *        <p>
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/data-compression.html">Lustre data
-     *        compression</a>.
+     *        compression</a> in the <i>Amazon FSx for Lustre User Guide</i>.
      * @see DataCompressionType
      */
 
@@ -1426,7 +2017,8 @@ public class CreateFileSystemLustreConfiguration implements Serializable, Clonea
      * </ul>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/data-compression.html">Lustre data compression</a>.
+     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/data-compression.html">Lustre data compression</a> in
+     * the <i>Amazon FSx for Lustre User Guide</i>.
      * </p>
      * 
      * @return Sets the data compression configuration for the file system. <code>DataCompressionType</code> can have
@@ -1446,7 +2038,7 @@ public class CreateFileSystemLustreConfiguration implements Serializable, Clonea
      *         <p>
      *         For more information, see <a
      *         href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/data-compression.html">Lustre data
-     *         compression</a>.
+     *         compression</a> in the <i>Amazon FSx for Lustre User Guide</i>.
      * @see DataCompressionType
      */
 
@@ -1473,7 +2065,8 @@ public class CreateFileSystemLustreConfiguration implements Serializable, Clonea
      * </ul>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/data-compression.html">Lustre data compression</a>.
+     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/data-compression.html">Lustre data compression</a> in
+     * the <i>Amazon FSx for Lustre User Guide</i>.
      * </p>
      * 
      * @param dataCompressionType
@@ -1494,7 +2087,7 @@ public class CreateFileSystemLustreConfiguration implements Serializable, Clonea
      *        <p>
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/data-compression.html">Lustre data
-     *        compression</a>.
+     *        compression</a> in the <i>Amazon FSx for Lustre User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DataCompressionType
      */
@@ -1523,7 +2116,8 @@ public class CreateFileSystemLustreConfiguration implements Serializable, Clonea
      * </ul>
      * <p>
      * For more information, see <a
-     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/data-compression.html">Lustre data compression</a>.
+     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/data-compression.html">Lustre data compression</a> in
+     * the <i>Amazon FSx for Lustre User Guide</i>.
      * </p>
      * 
      * @param dataCompressionType
@@ -1544,13 +2138,65 @@ public class CreateFileSystemLustreConfiguration implements Serializable, Clonea
      *        <p>
      *        For more information, see <a
      *        href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/data-compression.html">Lustre data
-     *        compression</a>.
+     *        compression</a> in the <i>Amazon FSx for Lustre User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see DataCompressionType
      */
 
     public CreateFileSystemLustreConfiguration withDataCompressionType(DataCompressionType dataCompressionType) {
         this.dataCompressionType = dataCompressionType.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * The Lustre logging configuration used when creating an Amazon FSx for Lustre file system. When logging is
+     * enabled, Lustre logs error and warning events for data repositories associated with your file system to Amazon
+     * CloudWatch Logs.
+     * </p>
+     * 
+     * @param logConfiguration
+     *        The Lustre logging configuration used when creating an Amazon FSx for Lustre file system. When logging is
+     *        enabled, Lustre logs error and warning events for data repositories associated with your file system to
+     *        Amazon CloudWatch Logs.
+     */
+
+    public void setLogConfiguration(LustreLogCreateConfiguration logConfiguration) {
+        this.logConfiguration = logConfiguration;
+    }
+
+    /**
+     * <p>
+     * The Lustre logging configuration used when creating an Amazon FSx for Lustre file system. When logging is
+     * enabled, Lustre logs error and warning events for data repositories associated with your file system to Amazon
+     * CloudWatch Logs.
+     * </p>
+     * 
+     * @return The Lustre logging configuration used when creating an Amazon FSx for Lustre file system. When logging is
+     *         enabled, Lustre logs error and warning events for data repositories associated with your file system to
+     *         Amazon CloudWatch Logs.
+     */
+
+    public LustreLogCreateConfiguration getLogConfiguration() {
+        return this.logConfiguration;
+    }
+
+    /**
+     * <p>
+     * The Lustre logging configuration used when creating an Amazon FSx for Lustre file system. When logging is
+     * enabled, Lustre logs error and warning events for data repositories associated with your file system to Amazon
+     * CloudWatch Logs.
+     * </p>
+     * 
+     * @param logConfiguration
+     *        The Lustre logging configuration used when creating an Amazon FSx for Lustre file system. When logging is
+     *        enabled, Lustre logs error and warning events for data repositories associated with your file system to
+     *        Amazon CloudWatch Logs.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateFileSystemLustreConfiguration withLogConfiguration(LustreLogCreateConfiguration logConfiguration) {
+        setLogConfiguration(logConfiguration);
         return this;
     }
 
@@ -1589,7 +2235,9 @@ public class CreateFileSystemLustreConfiguration implements Serializable, Clonea
         if (getDriveCacheType() != null)
             sb.append("DriveCacheType: ").append(getDriveCacheType()).append(",");
         if (getDataCompressionType() != null)
-            sb.append("DataCompressionType: ").append(getDataCompressionType());
+            sb.append("DataCompressionType: ").append(getDataCompressionType()).append(",");
+        if (getLogConfiguration() != null)
+            sb.append("LogConfiguration: ").append(getLogConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -1653,6 +2301,10 @@ public class CreateFileSystemLustreConfiguration implements Serializable, Clonea
             return false;
         if (other.getDataCompressionType() != null && other.getDataCompressionType().equals(this.getDataCompressionType()) == false)
             return false;
+        if (other.getLogConfiguration() == null ^ this.getLogConfiguration() == null)
+            return false;
+        if (other.getLogConfiguration() != null && other.getLogConfiguration().equals(this.getLogConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -1673,6 +2325,7 @@ public class CreateFileSystemLustreConfiguration implements Serializable, Clonea
         hashCode = prime * hashCode + ((getCopyTagsToBackups() == null) ? 0 : getCopyTagsToBackups().hashCode());
         hashCode = prime * hashCode + ((getDriveCacheType() == null) ? 0 : getDriveCacheType().hashCode());
         hashCode = prime * hashCode + ((getDataCompressionType() == null) ? 0 : getDataCompressionType().hashCode());
+        hashCode = prime * hashCode + ((getLogConfiguration() == null) ? 0 : getLogConfiguration().hashCode());
         return hashCode;
     }
 

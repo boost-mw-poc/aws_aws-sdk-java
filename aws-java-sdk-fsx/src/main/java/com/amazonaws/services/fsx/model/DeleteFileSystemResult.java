@@ -28,13 +28,14 @@ public class DeleteFileSystemResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The ID of the file system being deleted.
+     * The ID of the file system that's being deleted.
      * </p>
      */
     private String fileSystemId;
     /**
      * <p>
-     * The file system lifecycle for the deletion request. Should be <code>DELETING</code>.
+     * The file system lifecycle for the deletion request. If the <code>DeleteFileSystem</code> operation is successful,
+     * this status is <code>DELETING</code>.
      * </p>
      */
     private String lifecycle;
@@ -42,14 +43,21 @@ public class DeleteFileSystemResult extends com.amazonaws.AmazonWebServiceResult
     private DeleteFileSystemWindowsResponse windowsResponse;
 
     private DeleteFileSystemLustreResponse lustreResponse;
+    /**
+     * <p>
+     * The response object for the OpenZFS file system that's being deleted in the <code>DeleteFileSystem</code>
+     * operation.
+     * </p>
+     */
+    private DeleteFileSystemOpenZFSResponse openZFSResponse;
 
     /**
      * <p>
-     * The ID of the file system being deleted.
+     * The ID of the file system that's being deleted.
      * </p>
      * 
      * @param fileSystemId
-     *        The ID of the file system being deleted.
+     *        The ID of the file system that's being deleted.
      */
 
     public void setFileSystemId(String fileSystemId) {
@@ -58,10 +66,10 @@ public class DeleteFileSystemResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The ID of the file system being deleted.
+     * The ID of the file system that's being deleted.
      * </p>
      * 
-     * @return The ID of the file system being deleted.
+     * @return The ID of the file system that's being deleted.
      */
 
     public String getFileSystemId() {
@@ -70,11 +78,11 @@ public class DeleteFileSystemResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The ID of the file system being deleted.
+     * The ID of the file system that's being deleted.
      * </p>
      * 
      * @param fileSystemId
-     *        The ID of the file system being deleted.
+     *        The ID of the file system that's being deleted.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -85,11 +93,13 @@ public class DeleteFileSystemResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The file system lifecycle for the deletion request. Should be <code>DELETING</code>.
+     * The file system lifecycle for the deletion request. If the <code>DeleteFileSystem</code> operation is successful,
+     * this status is <code>DELETING</code>.
      * </p>
      * 
      * @param lifecycle
-     *        The file system lifecycle for the deletion request. Should be <code>DELETING</code>.
+     *        The file system lifecycle for the deletion request. If the <code>DeleteFileSystem</code> operation is
+     *        successful, this status is <code>DELETING</code>.
      * @see FileSystemLifecycle
      */
 
@@ -99,10 +109,12 @@ public class DeleteFileSystemResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The file system lifecycle for the deletion request. Should be <code>DELETING</code>.
+     * The file system lifecycle for the deletion request. If the <code>DeleteFileSystem</code> operation is successful,
+     * this status is <code>DELETING</code>.
      * </p>
      * 
-     * @return The file system lifecycle for the deletion request. Should be <code>DELETING</code>.
+     * @return The file system lifecycle for the deletion request. If the <code>DeleteFileSystem</code> operation is
+     *         successful, this status is <code>DELETING</code>.
      * @see FileSystemLifecycle
      */
 
@@ -112,11 +124,13 @@ public class DeleteFileSystemResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The file system lifecycle for the deletion request. Should be <code>DELETING</code>.
+     * The file system lifecycle for the deletion request. If the <code>DeleteFileSystem</code> operation is successful,
+     * this status is <code>DELETING</code>.
      * </p>
      * 
      * @param lifecycle
-     *        The file system lifecycle for the deletion request. Should be <code>DELETING</code>.
+     *        The file system lifecycle for the deletion request. If the <code>DeleteFileSystem</code> operation is
+     *        successful, this status is <code>DELETING</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see FileSystemLifecycle
      */
@@ -128,11 +142,13 @@ public class DeleteFileSystemResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * The file system lifecycle for the deletion request. Should be <code>DELETING</code>.
+     * The file system lifecycle for the deletion request. If the <code>DeleteFileSystem</code> operation is successful,
+     * this status is <code>DELETING</code>.
      * </p>
      * 
      * @param lifecycle
-     *        The file system lifecycle for the deletion request. Should be <code>DELETING</code>.
+     *        The file system lifecycle for the deletion request. If the <code>DeleteFileSystem</code> operation is
+     *        successful, this status is <code>DELETING</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see FileSystemLifecycle
      */
@@ -195,6 +211,52 @@ public class DeleteFileSystemResult extends com.amazonaws.AmazonWebServiceResult
     }
 
     /**
+     * <p>
+     * The response object for the OpenZFS file system that's being deleted in the <code>DeleteFileSystem</code>
+     * operation.
+     * </p>
+     * 
+     * @param openZFSResponse
+     *        The response object for the OpenZFS file system that's being deleted in the <code>DeleteFileSystem</code>
+     *        operation.
+     */
+
+    public void setOpenZFSResponse(DeleteFileSystemOpenZFSResponse openZFSResponse) {
+        this.openZFSResponse = openZFSResponse;
+    }
+
+    /**
+     * <p>
+     * The response object for the OpenZFS file system that's being deleted in the <code>DeleteFileSystem</code>
+     * operation.
+     * </p>
+     * 
+     * @return The response object for the OpenZFS file system that's being deleted in the <code>DeleteFileSystem</code>
+     *         operation.
+     */
+
+    public DeleteFileSystemOpenZFSResponse getOpenZFSResponse() {
+        return this.openZFSResponse;
+    }
+
+    /**
+     * <p>
+     * The response object for the OpenZFS file system that's being deleted in the <code>DeleteFileSystem</code>
+     * operation.
+     * </p>
+     * 
+     * @param openZFSResponse
+     *        The response object for the OpenZFS file system that's being deleted in the <code>DeleteFileSystem</code>
+     *        operation.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DeleteFileSystemResult withOpenZFSResponse(DeleteFileSystemOpenZFSResponse openZFSResponse) {
+        setOpenZFSResponse(openZFSResponse);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -213,7 +275,9 @@ public class DeleteFileSystemResult extends com.amazonaws.AmazonWebServiceResult
         if (getWindowsResponse() != null)
             sb.append("WindowsResponse: ").append(getWindowsResponse()).append(",");
         if (getLustreResponse() != null)
-            sb.append("LustreResponse: ").append(getLustreResponse());
+            sb.append("LustreResponse: ").append(getLustreResponse()).append(",");
+        if (getOpenZFSResponse() != null)
+            sb.append("OpenZFSResponse: ").append(getOpenZFSResponse());
         sb.append("}");
         return sb.toString();
     }
@@ -244,6 +308,10 @@ public class DeleteFileSystemResult extends com.amazonaws.AmazonWebServiceResult
             return false;
         if (other.getLustreResponse() != null && other.getLustreResponse().equals(this.getLustreResponse()) == false)
             return false;
+        if (other.getOpenZFSResponse() == null ^ this.getOpenZFSResponse() == null)
+            return false;
+        if (other.getOpenZFSResponse() != null && other.getOpenZFSResponse().equals(this.getOpenZFSResponse()) == false)
+            return false;
         return true;
     }
 
@@ -256,6 +324,7 @@ public class DeleteFileSystemResult extends com.amazonaws.AmazonWebServiceResult
         hashCode = prime * hashCode + ((getLifecycle() == null) ? 0 : getLifecycle().hashCode());
         hashCode = prime * hashCode + ((getWindowsResponse() == null) ? 0 : getWindowsResponse().hashCode());
         hashCode = prime * hashCode + ((getLustreResponse() == null) ? 0 : getLustreResponse().hashCode());
+        hashCode = prime * hashCode + ((getOpenZFSResponse() == null) ? 0 : getOpenZFSResponse().hashCode());
         return hashCode;
     }
 

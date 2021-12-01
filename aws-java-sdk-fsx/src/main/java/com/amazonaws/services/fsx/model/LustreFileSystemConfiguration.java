@@ -30,8 +30,8 @@ public class LustreFileSystemConfiguration implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The preferred start time to perform weekly maintenance, formatted d:HH:MM in the UTC time zone. d is the weekday
-     * number, from 1 through 7, beginning with Monday and ending with Sunday.
+     * The preferred start time to perform weekly maintenance, formatted d:HH:MM in the UTC time zone. Here, d is the
+     * weekday number, from 1 through 7, beginning with Monday and ending with Sunday.
      * </p>
      */
     private String weeklyMaintenanceStartTime;
@@ -39,7 +39,7 @@ public class LustreFileSystemConfiguration implements Serializable, Cloneable, S
     private DataRepositoryConfiguration dataRepositoryConfiguration;
     /**
      * <p>
-     * The deployment type of the FSX for Lustre file system. <i>Scratch deployment type</i> is designed for temporary
+     * The deployment type of the FSx for Lustre file system. <i>Scratch deployment type</i> is designed for temporary
      * storage and shorter-term processing of data.
      * </p>
      * <p>
@@ -48,10 +48,15 @@ public class LustreFileSystemConfiguration implements Serializable, Cloneable, S
      * encryption of data and higher burst throughput capacity than <code>SCRATCH_1</code>.
      * </p>
      * <p>
-     * The <code>PERSISTENT_1</code> deployment type is used for longer-term storage and workloads and encryption of
-     * data in transit. To learn more about deployment types, see <a
-     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/lustre-deployment-types.html"> FSx for Lustre Deployment
-     * Options</a>. (Default = <code>SCRATCH_1</code>)
+     * The <code>PERSISTENT_1</code> and <code>PERSISTENT_2</code> deployment type is used for longer-term storage and
+     * workloads and encryption of data in transit. <code>PERSISTENT_2</code> is built on Lustre v2.12 and offers higher
+     * <code>PerUnitStorageThroughput</code> (up to 1000 MB/s/TiB) along with a lower minimum storage capacity
+     * requirement (600 GiB). To learn more about FSx for Lustre deployment types, see <a
+     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/lustre-deployment-types.html"> FSx for Lustre deployment
+     * options</a>.
+     * </p>
+     * <p>
+     * The default is <code>SCRATCH_1</code>.
      * </p>
      */
     private String deploymentType;
@@ -59,11 +64,29 @@ public class LustreFileSystemConfiguration implements Serializable, Cloneable, S
      * <p>
      * Per unit storage throughput represents the megabytes per second of read or write throughput per 1 tebibyte of
      * storage provisioned. File system throughput capacity is equal to Storage capacity (TiB) *
-     * PerUnitStorageThroughput (MB/s/TiB). This option is only valid for <code>PERSISTENT_1</code> deployment types.
+     * PerUnitStorageThroughput (MB/s/TiB). This option is only valid for <code>PERSISTENT_1</code> and
+     * <code>PERSISTENT_2</code> deployment types.
      * </p>
      * <p>
-     * Valid values for SSD storage: 50, 100, 200. Valid values for HDD storage: 12, 40.
+     * Valid values:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * For <code>PERSISTENT_1</code> SSD storage: 50, 100, 200.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For <code>PERSISTENT_1</code> HDD storage: 12, 40.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For <code>PERSISTENT_2</code> SSD storage: 125, 250, 500, 1000.
+     * </p>
+     * </li>
+     * </ul>
      */
     private Integer perUnitStorageThroughput;
     /**
@@ -72,8 +95,8 @@ public class LustreFileSystemConfiguration implements Serializable, Cloneable, S
      * </p>
      * <p>
      * For the <code>SCRATCH_1</code> deployment type, this value is always "<code>fsx</code>". For
-     * <code>SCRATCH_2</code> and <code>PERSISTENT_1</code> deployment types, this value is a string that is unique
-     * within an Amazon Web Services Region.
+     * <code>SCRATCH_2</code>, <code>PERSISTENT_1</code>, and <code>PERSISTENT_2</code> deployment types, this value is
+     * a string that is unique within an Amazon Web Services Region.
      * </p>
      */
     private String mountName;
@@ -83,19 +106,20 @@ public class LustreFileSystemConfiguration implements Serializable, Cloneable, S
     private Integer automaticBackupRetentionDays;
     /**
      * <p>
-     * A boolean flag indicating whether tags on the file system should be copied to backups. If it's set to true, all
-     * tags on the file system are copied to all automatic backups and any user-initiated backups where the user doesn't
-     * specify any tags. If this value is true, and you specify one or more tags, only the specified tags are copied to
-     * backups. If you specify one or more tags when creating a user-initiated backup, no tags are copied from the file
-     * system, regardless of this value. (Default = false)
+     * A boolean flag indicating whether tags on the file system are copied to backups. If it's set to true, all tags on
+     * the file system are copied to all automatic backups and any user-initiated backups where the user doesn't specify
+     * any tags. If this value is true, and you specify one or more tags, only the specified tags are copied to backups.
+     * If you specify one or more tags when creating a user-initiated backup, no tags are copied from the file system,
+     * regardless of this value. (Default = false)
      * </p>
      */
     private Boolean copyTagsToBackups;
     /**
      * <p>
-     * The type of drive cache used by PERSISTENT_1 file systems that are provisioned with HDD storage devices. This
-     * parameter is required when storage type is HDD. Set to <code>READ</code>, improve the performance for frequently
-     * accessed files and allows 20% of the total storage capacity of the file system to be cached.
+     * The type of drive cache used by <code>PERSISTENT_1</code> file systems that are provisioned with HDD storage
+     * devices. This parameter is required when <code>StorageType</code> is HDD. When set to <code>READ</code> the file
+     * system has an SSD storage cache that is sized to 20% of the file system's storage capacity. This improves the
+     * performance for frequently accessed files by caching up to 20% of the total storage capacity.
      * </p>
      * <p>
      * This parameter is required when <code>StorageType</code> is set to HDD.
@@ -125,16 +149,23 @@ public class LustreFileSystemConfiguration implements Serializable, Cloneable, S
      * </p>
      */
     private String dataCompressionType;
+    /**
+     * <p>
+     * The Lustre logging configuration. Lustre logging writes the enabled log events for your file system to Amazon
+     * CloudWatch Logs.
+     * </p>
+     */
+    private LustreLogConfiguration logConfiguration;
 
     /**
      * <p>
-     * The preferred start time to perform weekly maintenance, formatted d:HH:MM in the UTC time zone. d is the weekday
-     * number, from 1 through 7, beginning with Monday and ending with Sunday.
+     * The preferred start time to perform weekly maintenance, formatted d:HH:MM in the UTC time zone. Here, d is the
+     * weekday number, from 1 through 7, beginning with Monday and ending with Sunday.
      * </p>
      * 
      * @param weeklyMaintenanceStartTime
-     *        The preferred start time to perform weekly maintenance, formatted d:HH:MM in the UTC time zone. d is the
-     *        weekday number, from 1 through 7, beginning with Monday and ending with Sunday.
+     *        The preferred start time to perform weekly maintenance, formatted d:HH:MM in the UTC time zone. Here, d is
+     *        the weekday number, from 1 through 7, beginning with Monday and ending with Sunday.
      */
 
     public void setWeeklyMaintenanceStartTime(String weeklyMaintenanceStartTime) {
@@ -143,12 +174,12 @@ public class LustreFileSystemConfiguration implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The preferred start time to perform weekly maintenance, formatted d:HH:MM in the UTC time zone. d is the weekday
-     * number, from 1 through 7, beginning with Monday and ending with Sunday.
+     * The preferred start time to perform weekly maintenance, formatted d:HH:MM in the UTC time zone. Here, d is the
+     * weekday number, from 1 through 7, beginning with Monday and ending with Sunday.
      * </p>
      * 
-     * @return The preferred start time to perform weekly maintenance, formatted d:HH:MM in the UTC time zone. d is the
-     *         weekday number, from 1 through 7, beginning with Monday and ending with Sunday.
+     * @return The preferred start time to perform weekly maintenance, formatted d:HH:MM in the UTC time zone. Here, d
+     *         is the weekday number, from 1 through 7, beginning with Monday and ending with Sunday.
      */
 
     public String getWeeklyMaintenanceStartTime() {
@@ -157,13 +188,13 @@ public class LustreFileSystemConfiguration implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The preferred start time to perform weekly maintenance, formatted d:HH:MM in the UTC time zone. d is the weekday
-     * number, from 1 through 7, beginning with Monday and ending with Sunday.
+     * The preferred start time to perform weekly maintenance, formatted d:HH:MM in the UTC time zone. Here, d is the
+     * weekday number, from 1 through 7, beginning with Monday and ending with Sunday.
      * </p>
      * 
      * @param weeklyMaintenanceStartTime
-     *        The preferred start time to perform weekly maintenance, formatted d:HH:MM in the UTC time zone. d is the
-     *        weekday number, from 1 through 7, beginning with Monday and ending with Sunday.
+     *        The preferred start time to perform weekly maintenance, formatted d:HH:MM in the UTC time zone. Here, d is
+     *        the weekday number, from 1 through 7, beginning with Monday and ending with Sunday.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -200,7 +231,7 @@ public class LustreFileSystemConfiguration implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The deployment type of the FSX for Lustre file system. <i>Scratch deployment type</i> is designed for temporary
+     * The deployment type of the FSx for Lustre file system. <i>Scratch deployment type</i> is designed for temporary
      * storage and shorter-term processing of data.
      * </p>
      * <p>
@@ -209,14 +240,19 @@ public class LustreFileSystemConfiguration implements Serializable, Cloneable, S
      * encryption of data and higher burst throughput capacity than <code>SCRATCH_1</code>.
      * </p>
      * <p>
-     * The <code>PERSISTENT_1</code> deployment type is used for longer-term storage and workloads and encryption of
-     * data in transit. To learn more about deployment types, see <a
-     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/lustre-deployment-types.html"> FSx for Lustre Deployment
-     * Options</a>. (Default = <code>SCRATCH_1</code>)
+     * The <code>PERSISTENT_1</code> and <code>PERSISTENT_2</code> deployment type is used for longer-term storage and
+     * workloads and encryption of data in transit. <code>PERSISTENT_2</code> is built on Lustre v2.12 and offers higher
+     * <code>PerUnitStorageThroughput</code> (up to 1000 MB/s/TiB) along with a lower minimum storage capacity
+     * requirement (600 GiB). To learn more about FSx for Lustre deployment types, see <a
+     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/lustre-deployment-types.html"> FSx for Lustre deployment
+     * options</a>.
+     * </p>
+     * <p>
+     * The default is <code>SCRATCH_1</code>.
      * </p>
      * 
      * @param deploymentType
-     *        The deployment type of the FSX for Lustre file system. <i>Scratch deployment type</i> is designed for
+     *        The deployment type of the FSx for Lustre file system. <i>Scratch deployment type</i> is designed for
      *        temporary storage and shorter-term processing of data.</p>
      *        <p>
      *        <code>SCRATCH_1</code> and <code>SCRATCH_2</code> deployment types are best suited for when you need
@@ -224,10 +260,15 @@ public class LustreFileSystemConfiguration implements Serializable, Cloneable, S
      *        in-transit encryption of data and higher burst throughput capacity than <code>SCRATCH_1</code>.
      *        </p>
      *        <p>
-     *        The <code>PERSISTENT_1</code> deployment type is used for longer-term storage and workloads and encryption
-     *        of data in transit. To learn more about deployment types, see <a
-     *        href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/lustre-deployment-types.html"> FSx for Lustre
-     *        Deployment Options</a>. (Default = <code>SCRATCH_1</code>)
+     *        The <code>PERSISTENT_1</code> and <code>PERSISTENT_2</code> deployment type is used for longer-term
+     *        storage and workloads and encryption of data in transit. <code>PERSISTENT_2</code> is built on Lustre
+     *        v2.12 and offers higher <code>PerUnitStorageThroughput</code> (up to 1000 MB/s/TiB) along with a lower
+     *        minimum storage capacity requirement (600 GiB). To learn more about FSx for Lustre deployment types, see
+     *        <a href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/lustre-deployment-types.html"> FSx for Lustre
+     *        deployment options</a>.
+     *        </p>
+     *        <p>
+     *        The default is <code>SCRATCH_1</code>.
      * @see LustreDeploymentType
      */
 
@@ -237,7 +278,7 @@ public class LustreFileSystemConfiguration implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The deployment type of the FSX for Lustre file system. <i>Scratch deployment type</i> is designed for temporary
+     * The deployment type of the FSx for Lustre file system. <i>Scratch deployment type</i> is designed for temporary
      * storage and shorter-term processing of data.
      * </p>
      * <p>
@@ -246,13 +287,18 @@ public class LustreFileSystemConfiguration implements Serializable, Cloneable, S
      * encryption of data and higher burst throughput capacity than <code>SCRATCH_1</code>.
      * </p>
      * <p>
-     * The <code>PERSISTENT_1</code> deployment type is used for longer-term storage and workloads and encryption of
-     * data in transit. To learn more about deployment types, see <a
-     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/lustre-deployment-types.html"> FSx for Lustre Deployment
-     * Options</a>. (Default = <code>SCRATCH_1</code>)
+     * The <code>PERSISTENT_1</code> and <code>PERSISTENT_2</code> deployment type is used for longer-term storage and
+     * workloads and encryption of data in transit. <code>PERSISTENT_2</code> is built on Lustre v2.12 and offers higher
+     * <code>PerUnitStorageThroughput</code> (up to 1000 MB/s/TiB) along with a lower minimum storage capacity
+     * requirement (600 GiB). To learn more about FSx for Lustre deployment types, see <a
+     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/lustre-deployment-types.html"> FSx for Lustre deployment
+     * options</a>.
+     * </p>
+     * <p>
+     * The default is <code>SCRATCH_1</code>.
      * </p>
      * 
-     * @return The deployment type of the FSX for Lustre file system. <i>Scratch deployment type</i> is designed for
+     * @return The deployment type of the FSx for Lustre file system. <i>Scratch deployment type</i> is designed for
      *         temporary storage and shorter-term processing of data.</p>
      *         <p>
      *         <code>SCRATCH_1</code> and <code>SCRATCH_2</code> deployment types are best suited for when you need
@@ -260,10 +306,15 @@ public class LustreFileSystemConfiguration implements Serializable, Cloneable, S
      *         provides in-transit encryption of data and higher burst throughput capacity than <code>SCRATCH_1</code>.
      *         </p>
      *         <p>
-     *         The <code>PERSISTENT_1</code> deployment type is used for longer-term storage and workloads and
-     *         encryption of data in transit. To learn more about deployment types, see <a
-     *         href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/lustre-deployment-types.html"> FSx for Lustre
-     *         Deployment Options</a>. (Default = <code>SCRATCH_1</code>)
+     *         The <code>PERSISTENT_1</code> and <code>PERSISTENT_2</code> deployment type is used for longer-term
+     *         storage and workloads and encryption of data in transit. <code>PERSISTENT_2</code> is built on Lustre
+     *         v2.12 and offers higher <code>PerUnitStorageThroughput</code> (up to 1000 MB/s/TiB) along with a lower
+     *         minimum storage capacity requirement (600 GiB). To learn more about FSx for Lustre deployment types, see
+     *         <a href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/lustre-deployment-types.html"> FSx for Lustre
+     *         deployment options</a>.
+     *         </p>
+     *         <p>
+     *         The default is <code>SCRATCH_1</code>.
      * @see LustreDeploymentType
      */
 
@@ -273,7 +324,7 @@ public class LustreFileSystemConfiguration implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The deployment type of the FSX for Lustre file system. <i>Scratch deployment type</i> is designed for temporary
+     * The deployment type of the FSx for Lustre file system. <i>Scratch deployment type</i> is designed for temporary
      * storage and shorter-term processing of data.
      * </p>
      * <p>
@@ -282,14 +333,19 @@ public class LustreFileSystemConfiguration implements Serializable, Cloneable, S
      * encryption of data and higher burst throughput capacity than <code>SCRATCH_1</code>.
      * </p>
      * <p>
-     * The <code>PERSISTENT_1</code> deployment type is used for longer-term storage and workloads and encryption of
-     * data in transit. To learn more about deployment types, see <a
-     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/lustre-deployment-types.html"> FSx for Lustre Deployment
-     * Options</a>. (Default = <code>SCRATCH_1</code>)
+     * The <code>PERSISTENT_1</code> and <code>PERSISTENT_2</code> deployment type is used for longer-term storage and
+     * workloads and encryption of data in transit. <code>PERSISTENT_2</code> is built on Lustre v2.12 and offers higher
+     * <code>PerUnitStorageThroughput</code> (up to 1000 MB/s/TiB) along with a lower minimum storage capacity
+     * requirement (600 GiB). To learn more about FSx for Lustre deployment types, see <a
+     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/lustre-deployment-types.html"> FSx for Lustre deployment
+     * options</a>.
+     * </p>
+     * <p>
+     * The default is <code>SCRATCH_1</code>.
      * </p>
      * 
      * @param deploymentType
-     *        The deployment type of the FSX for Lustre file system. <i>Scratch deployment type</i> is designed for
+     *        The deployment type of the FSx for Lustre file system. <i>Scratch deployment type</i> is designed for
      *        temporary storage and shorter-term processing of data.</p>
      *        <p>
      *        <code>SCRATCH_1</code> and <code>SCRATCH_2</code> deployment types are best suited for when you need
@@ -297,10 +353,15 @@ public class LustreFileSystemConfiguration implements Serializable, Cloneable, S
      *        in-transit encryption of data and higher burst throughput capacity than <code>SCRATCH_1</code>.
      *        </p>
      *        <p>
-     *        The <code>PERSISTENT_1</code> deployment type is used for longer-term storage and workloads and encryption
-     *        of data in transit. To learn more about deployment types, see <a
-     *        href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/lustre-deployment-types.html"> FSx for Lustre
-     *        Deployment Options</a>. (Default = <code>SCRATCH_1</code>)
+     *        The <code>PERSISTENT_1</code> and <code>PERSISTENT_2</code> deployment type is used for longer-term
+     *        storage and workloads and encryption of data in transit. <code>PERSISTENT_2</code> is built on Lustre
+     *        v2.12 and offers higher <code>PerUnitStorageThroughput</code> (up to 1000 MB/s/TiB) along with a lower
+     *        minimum storage capacity requirement (600 GiB). To learn more about FSx for Lustre deployment types, see
+     *        <a href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/lustre-deployment-types.html"> FSx for Lustre
+     *        deployment options</a>.
+     *        </p>
+     *        <p>
+     *        The default is <code>SCRATCH_1</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see LustreDeploymentType
      */
@@ -312,7 +373,7 @@ public class LustreFileSystemConfiguration implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The deployment type of the FSX for Lustre file system. <i>Scratch deployment type</i> is designed for temporary
+     * The deployment type of the FSx for Lustre file system. <i>Scratch deployment type</i> is designed for temporary
      * storage and shorter-term processing of data.
      * </p>
      * <p>
@@ -321,14 +382,19 @@ public class LustreFileSystemConfiguration implements Serializable, Cloneable, S
      * encryption of data and higher burst throughput capacity than <code>SCRATCH_1</code>.
      * </p>
      * <p>
-     * The <code>PERSISTENT_1</code> deployment type is used for longer-term storage and workloads and encryption of
-     * data in transit. To learn more about deployment types, see <a
-     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/lustre-deployment-types.html"> FSx for Lustre Deployment
-     * Options</a>. (Default = <code>SCRATCH_1</code>)
+     * The <code>PERSISTENT_1</code> and <code>PERSISTENT_2</code> deployment type is used for longer-term storage and
+     * workloads and encryption of data in transit. <code>PERSISTENT_2</code> is built on Lustre v2.12 and offers higher
+     * <code>PerUnitStorageThroughput</code> (up to 1000 MB/s/TiB) along with a lower minimum storage capacity
+     * requirement (600 GiB). To learn more about FSx for Lustre deployment types, see <a
+     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/lustre-deployment-types.html"> FSx for Lustre deployment
+     * options</a>.
+     * </p>
+     * <p>
+     * The default is <code>SCRATCH_1</code>.
      * </p>
      * 
      * @param deploymentType
-     *        The deployment type of the FSX for Lustre file system. <i>Scratch deployment type</i> is designed for
+     *        The deployment type of the FSx for Lustre file system. <i>Scratch deployment type</i> is designed for
      *        temporary storage and shorter-term processing of data.</p>
      *        <p>
      *        <code>SCRATCH_1</code> and <code>SCRATCH_2</code> deployment types are best suited for when you need
@@ -336,10 +402,15 @@ public class LustreFileSystemConfiguration implements Serializable, Cloneable, S
      *        in-transit encryption of data and higher burst throughput capacity than <code>SCRATCH_1</code>.
      *        </p>
      *        <p>
-     *        The <code>PERSISTENT_1</code> deployment type is used for longer-term storage and workloads and encryption
-     *        of data in transit. To learn more about deployment types, see <a
-     *        href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/lustre-deployment-types.html"> FSx for Lustre
-     *        Deployment Options</a>. (Default = <code>SCRATCH_1</code>)
+     *        The <code>PERSISTENT_1</code> and <code>PERSISTENT_2</code> deployment type is used for longer-term
+     *        storage and workloads and encryption of data in transit. <code>PERSISTENT_2</code> is built on Lustre
+     *        v2.12 and offers higher <code>PerUnitStorageThroughput</code> (up to 1000 MB/s/TiB) along with a lower
+     *        minimum storage capacity requirement (600 GiB). To learn more about FSx for Lustre deployment types, see
+     *        <a href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/lustre-deployment-types.html"> FSx for Lustre
+     *        deployment options</a>.
+     *        </p>
+     *        <p>
+     *        The default is <code>SCRATCH_1</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see LustreDeploymentType
      */
@@ -353,19 +424,54 @@ public class LustreFileSystemConfiguration implements Serializable, Cloneable, S
      * <p>
      * Per unit storage throughput represents the megabytes per second of read or write throughput per 1 tebibyte of
      * storage provisioned. File system throughput capacity is equal to Storage capacity (TiB) *
-     * PerUnitStorageThroughput (MB/s/TiB). This option is only valid for <code>PERSISTENT_1</code> deployment types.
+     * PerUnitStorageThroughput (MB/s/TiB). This option is only valid for <code>PERSISTENT_1</code> and
+     * <code>PERSISTENT_2</code> deployment types.
      * </p>
      * <p>
-     * Valid values for SSD storage: 50, 100, 200. Valid values for HDD storage: 12, 40.
+     * Valid values:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * For <code>PERSISTENT_1</code> SSD storage: 50, 100, 200.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For <code>PERSISTENT_1</code> HDD storage: 12, 40.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For <code>PERSISTENT_2</code> SSD storage: 125, 250, 500, 1000.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param perUnitStorageThroughput
      *        Per unit storage throughput represents the megabytes per second of read or write throughput per 1 tebibyte
      *        of storage provisioned. File system throughput capacity is equal to Storage capacity (TiB) *
-     *        PerUnitStorageThroughput (MB/s/TiB). This option is only valid for <code>PERSISTENT_1</code> deployment
-     *        types. </p>
+     *        PerUnitStorageThroughput (MB/s/TiB). This option is only valid for <code>PERSISTENT_1</code> and
+     *        <code>PERSISTENT_2</code> deployment types. </p>
      *        <p>
-     *        Valid values for SSD storage: 50, 100, 200. Valid values for HDD storage: 12, 40.
+     *        Valid values:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        For <code>PERSISTENT_1</code> SSD storage: 50, 100, 200.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For <code>PERSISTENT_1</code> HDD storage: 12, 40.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For <code>PERSISTENT_2</code> SSD storage: 125, 250, 500, 1000.
+     *        </p>
+     *        </li>
      */
 
     public void setPerUnitStorageThroughput(Integer perUnitStorageThroughput) {
@@ -376,18 +482,53 @@ public class LustreFileSystemConfiguration implements Serializable, Cloneable, S
      * <p>
      * Per unit storage throughput represents the megabytes per second of read or write throughput per 1 tebibyte of
      * storage provisioned. File system throughput capacity is equal to Storage capacity (TiB) *
-     * PerUnitStorageThroughput (MB/s/TiB). This option is only valid for <code>PERSISTENT_1</code> deployment types.
+     * PerUnitStorageThroughput (MB/s/TiB). This option is only valid for <code>PERSISTENT_1</code> and
+     * <code>PERSISTENT_2</code> deployment types.
      * </p>
      * <p>
-     * Valid values for SSD storage: 50, 100, 200. Valid values for HDD storage: 12, 40.
+     * Valid values:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * For <code>PERSISTENT_1</code> SSD storage: 50, 100, 200.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For <code>PERSISTENT_1</code> HDD storage: 12, 40.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For <code>PERSISTENT_2</code> SSD storage: 125, 250, 500, 1000.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @return Per unit storage throughput represents the megabytes per second of read or write throughput per 1
      *         tebibyte of storage provisioned. File system throughput capacity is equal to Storage capacity (TiB) *
-     *         PerUnitStorageThroughput (MB/s/TiB). This option is only valid for <code>PERSISTENT_1</code> deployment
-     *         types. </p>
+     *         PerUnitStorageThroughput (MB/s/TiB). This option is only valid for <code>PERSISTENT_1</code> and
+     *         <code>PERSISTENT_2</code> deployment types. </p>
      *         <p>
-     *         Valid values for SSD storage: 50, 100, 200. Valid values for HDD storage: 12, 40.
+     *         Valid values:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         For <code>PERSISTENT_1</code> SSD storage: 50, 100, 200.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         For <code>PERSISTENT_1</code> HDD storage: 12, 40.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         For <code>PERSISTENT_2</code> SSD storage: 125, 250, 500, 1000.
+     *         </p>
+     *         </li>
      */
 
     public Integer getPerUnitStorageThroughput() {
@@ -398,19 +539,54 @@ public class LustreFileSystemConfiguration implements Serializable, Cloneable, S
      * <p>
      * Per unit storage throughput represents the megabytes per second of read or write throughput per 1 tebibyte of
      * storage provisioned. File system throughput capacity is equal to Storage capacity (TiB) *
-     * PerUnitStorageThroughput (MB/s/TiB). This option is only valid for <code>PERSISTENT_1</code> deployment types.
+     * PerUnitStorageThroughput (MB/s/TiB). This option is only valid for <code>PERSISTENT_1</code> and
+     * <code>PERSISTENT_2</code> deployment types.
      * </p>
      * <p>
-     * Valid values for SSD storage: 50, 100, 200. Valid values for HDD storage: 12, 40.
+     * Valid values:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * For <code>PERSISTENT_1</code> SSD storage: 50, 100, 200.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For <code>PERSISTENT_1</code> HDD storage: 12, 40.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * For <code>PERSISTENT_2</code> SSD storage: 125, 250, 500, 1000.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param perUnitStorageThroughput
      *        Per unit storage throughput represents the megabytes per second of read or write throughput per 1 tebibyte
      *        of storage provisioned. File system throughput capacity is equal to Storage capacity (TiB) *
-     *        PerUnitStorageThroughput (MB/s/TiB). This option is only valid for <code>PERSISTENT_1</code> deployment
-     *        types. </p>
+     *        PerUnitStorageThroughput (MB/s/TiB). This option is only valid for <code>PERSISTENT_1</code> and
+     *        <code>PERSISTENT_2</code> deployment types. </p>
      *        <p>
-     *        Valid values for SSD storage: 50, 100, 200. Valid values for HDD storage: 12, 40.
+     *        Valid values:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        For <code>PERSISTENT_1</code> SSD storage: 50, 100, 200.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For <code>PERSISTENT_1</code> HDD storage: 12, 40.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        For <code>PERSISTENT_2</code> SSD storage: 125, 250, 500, 1000.
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -425,16 +601,16 @@ public class LustreFileSystemConfiguration implements Serializable, Cloneable, S
      * </p>
      * <p>
      * For the <code>SCRATCH_1</code> deployment type, this value is always "<code>fsx</code>". For
-     * <code>SCRATCH_2</code> and <code>PERSISTENT_1</code> deployment types, this value is a string that is unique
-     * within an Amazon Web Services Region.
+     * <code>SCRATCH_2</code>, <code>PERSISTENT_1</code>, and <code>PERSISTENT_2</code> deployment types, this value is
+     * a string that is unique within an Amazon Web Services Region.
      * </p>
      * 
      * @param mountName
      *        You use the <code>MountName</code> value when mounting the file system.</p>
      *        <p>
      *        For the <code>SCRATCH_1</code> deployment type, this value is always "<code>fsx</code>". For
-     *        <code>SCRATCH_2</code> and <code>PERSISTENT_1</code> deployment types, this value is a string that is
-     *        unique within an Amazon Web Services Region.
+     *        <code>SCRATCH_2</code>, <code>PERSISTENT_1</code>, and <code>PERSISTENT_2</code> deployment types, this
+     *        value is a string that is unique within an Amazon Web Services Region.
      */
 
     public void setMountName(String mountName) {
@@ -447,15 +623,15 @@ public class LustreFileSystemConfiguration implements Serializable, Cloneable, S
      * </p>
      * <p>
      * For the <code>SCRATCH_1</code> deployment type, this value is always "<code>fsx</code>". For
-     * <code>SCRATCH_2</code> and <code>PERSISTENT_1</code> deployment types, this value is a string that is unique
-     * within an Amazon Web Services Region.
+     * <code>SCRATCH_2</code>, <code>PERSISTENT_1</code>, and <code>PERSISTENT_2</code> deployment types, this value is
+     * a string that is unique within an Amazon Web Services Region.
      * </p>
      * 
      * @return You use the <code>MountName</code> value when mounting the file system.</p>
      *         <p>
      *         For the <code>SCRATCH_1</code> deployment type, this value is always "<code>fsx</code>". For
-     *         <code>SCRATCH_2</code> and <code>PERSISTENT_1</code> deployment types, this value is a string that is
-     *         unique within an Amazon Web Services Region.
+     *         <code>SCRATCH_2</code>, <code>PERSISTENT_1</code>, and <code>PERSISTENT_2</code> deployment types, this
+     *         value is a string that is unique within an Amazon Web Services Region.
      */
 
     public String getMountName() {
@@ -468,16 +644,16 @@ public class LustreFileSystemConfiguration implements Serializable, Cloneable, S
      * </p>
      * <p>
      * For the <code>SCRATCH_1</code> deployment type, this value is always "<code>fsx</code>". For
-     * <code>SCRATCH_2</code> and <code>PERSISTENT_1</code> deployment types, this value is a string that is unique
-     * within an Amazon Web Services Region.
+     * <code>SCRATCH_2</code>, <code>PERSISTENT_1</code>, and <code>PERSISTENT_2</code> deployment types, this value is
+     * a string that is unique within an Amazon Web Services Region.
      * </p>
      * 
      * @param mountName
      *        You use the <code>MountName</code> value when mounting the file system.</p>
      *        <p>
      *        For the <code>SCRATCH_1</code> deployment type, this value is always "<code>fsx</code>". For
-     *        <code>SCRATCH_2</code> and <code>PERSISTENT_1</code> deployment types, this value is a string that is
-     *        unique within an Amazon Web Services Region.
+     *        <code>SCRATCH_2</code>, <code>PERSISTENT_1</code>, and <code>PERSISTENT_2</code> deployment types, this
+     *        value is a string that is unique within an Amazon Web Services Region.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -540,19 +716,19 @@ public class LustreFileSystemConfiguration implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * A boolean flag indicating whether tags on the file system should be copied to backups. If it's set to true, all
-     * tags on the file system are copied to all automatic backups and any user-initiated backups where the user doesn't
-     * specify any tags. If this value is true, and you specify one or more tags, only the specified tags are copied to
-     * backups. If you specify one or more tags when creating a user-initiated backup, no tags are copied from the file
-     * system, regardless of this value. (Default = false)
+     * A boolean flag indicating whether tags on the file system are copied to backups. If it's set to true, all tags on
+     * the file system are copied to all automatic backups and any user-initiated backups where the user doesn't specify
+     * any tags. If this value is true, and you specify one or more tags, only the specified tags are copied to backups.
+     * If you specify one or more tags when creating a user-initiated backup, no tags are copied from the file system,
+     * regardless of this value. (Default = false)
      * </p>
      * 
      * @param copyTagsToBackups
-     *        A boolean flag indicating whether tags on the file system should be copied to backups. If it's set to
-     *        true, all tags on the file system are copied to all automatic backups and any user-initiated backups where
-     *        the user doesn't specify any tags. If this value is true, and you specify one or more tags, only the
-     *        specified tags are copied to backups. If you specify one or more tags when creating a user-initiated
-     *        backup, no tags are copied from the file system, regardless of this value. (Default = false)
+     *        A boolean flag indicating whether tags on the file system are copied to backups. If it's set to true, all
+     *        tags on the file system are copied to all automatic backups and any user-initiated backups where the user
+     *        doesn't specify any tags. If this value is true, and you specify one or more tags, only the specified tags
+     *        are copied to backups. If you specify one or more tags when creating a user-initiated backup, no tags are
+     *        copied from the file system, regardless of this value. (Default = false)
      */
 
     public void setCopyTagsToBackups(Boolean copyTagsToBackups) {
@@ -561,18 +737,18 @@ public class LustreFileSystemConfiguration implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * A boolean flag indicating whether tags on the file system should be copied to backups. If it's set to true, all
-     * tags on the file system are copied to all automatic backups and any user-initiated backups where the user doesn't
-     * specify any tags. If this value is true, and you specify one or more tags, only the specified tags are copied to
-     * backups. If you specify one or more tags when creating a user-initiated backup, no tags are copied from the file
-     * system, regardless of this value. (Default = false)
+     * A boolean flag indicating whether tags on the file system are copied to backups. If it's set to true, all tags on
+     * the file system are copied to all automatic backups and any user-initiated backups where the user doesn't specify
+     * any tags. If this value is true, and you specify one or more tags, only the specified tags are copied to backups.
+     * If you specify one or more tags when creating a user-initiated backup, no tags are copied from the file system,
+     * regardless of this value. (Default = false)
      * </p>
      * 
-     * @return A boolean flag indicating whether tags on the file system should be copied to backups. If it's set to
-     *         true, all tags on the file system are copied to all automatic backups and any user-initiated backups
-     *         where the user doesn't specify any tags. If this value is true, and you specify one or more tags, only
-     *         the specified tags are copied to backups. If you specify one or more tags when creating a user-initiated
-     *         backup, no tags are copied from the file system, regardless of this value. (Default = false)
+     * @return A boolean flag indicating whether tags on the file system are copied to backups. If it's set to true, all
+     *         tags on the file system are copied to all automatic backups and any user-initiated backups where the user
+     *         doesn't specify any tags. If this value is true, and you specify one or more tags, only the specified
+     *         tags are copied to backups. If you specify one or more tags when creating a user-initiated backup, no
+     *         tags are copied from the file system, regardless of this value. (Default = false)
      */
 
     public Boolean getCopyTagsToBackups() {
@@ -581,19 +757,19 @@ public class LustreFileSystemConfiguration implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * A boolean flag indicating whether tags on the file system should be copied to backups. If it's set to true, all
-     * tags on the file system are copied to all automatic backups and any user-initiated backups where the user doesn't
-     * specify any tags. If this value is true, and you specify one or more tags, only the specified tags are copied to
-     * backups. If you specify one or more tags when creating a user-initiated backup, no tags are copied from the file
-     * system, regardless of this value. (Default = false)
+     * A boolean flag indicating whether tags on the file system are copied to backups. If it's set to true, all tags on
+     * the file system are copied to all automatic backups and any user-initiated backups where the user doesn't specify
+     * any tags. If this value is true, and you specify one or more tags, only the specified tags are copied to backups.
+     * If you specify one or more tags when creating a user-initiated backup, no tags are copied from the file system,
+     * regardless of this value. (Default = false)
      * </p>
      * 
      * @param copyTagsToBackups
-     *        A boolean flag indicating whether tags on the file system should be copied to backups. If it's set to
-     *        true, all tags on the file system are copied to all automatic backups and any user-initiated backups where
-     *        the user doesn't specify any tags. If this value is true, and you specify one or more tags, only the
-     *        specified tags are copied to backups. If you specify one or more tags when creating a user-initiated
-     *        backup, no tags are copied from the file system, regardless of this value. (Default = false)
+     *        A boolean flag indicating whether tags on the file system are copied to backups. If it's set to true, all
+     *        tags on the file system are copied to all automatic backups and any user-initiated backups where the user
+     *        doesn't specify any tags. If this value is true, and you specify one or more tags, only the specified tags
+     *        are copied to backups. If you specify one or more tags when creating a user-initiated backup, no tags are
+     *        copied from the file system, regardless of this value. (Default = false)
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -604,18 +780,18 @@ public class LustreFileSystemConfiguration implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * A boolean flag indicating whether tags on the file system should be copied to backups. If it's set to true, all
-     * tags on the file system are copied to all automatic backups and any user-initiated backups where the user doesn't
-     * specify any tags. If this value is true, and you specify one or more tags, only the specified tags are copied to
-     * backups. If you specify one or more tags when creating a user-initiated backup, no tags are copied from the file
-     * system, regardless of this value. (Default = false)
+     * A boolean flag indicating whether tags on the file system are copied to backups. If it's set to true, all tags on
+     * the file system are copied to all automatic backups and any user-initiated backups where the user doesn't specify
+     * any tags. If this value is true, and you specify one or more tags, only the specified tags are copied to backups.
+     * If you specify one or more tags when creating a user-initiated backup, no tags are copied from the file system,
+     * regardless of this value. (Default = false)
      * </p>
      * 
-     * @return A boolean flag indicating whether tags on the file system should be copied to backups. If it's set to
-     *         true, all tags on the file system are copied to all automatic backups and any user-initiated backups
-     *         where the user doesn't specify any tags. If this value is true, and you specify one or more tags, only
-     *         the specified tags are copied to backups. If you specify one or more tags when creating a user-initiated
-     *         backup, no tags are copied from the file system, regardless of this value. (Default = false)
+     * @return A boolean flag indicating whether tags on the file system are copied to backups. If it's set to true, all
+     *         tags on the file system are copied to all automatic backups and any user-initiated backups where the user
+     *         doesn't specify any tags. If this value is true, and you specify one or more tags, only the specified
+     *         tags are copied to backups. If you specify one or more tags when creating a user-initiated backup, no
+     *         tags are copied from the file system, regardless of this value. (Default = false)
      */
 
     public Boolean isCopyTagsToBackups() {
@@ -624,19 +800,21 @@ public class LustreFileSystemConfiguration implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The type of drive cache used by PERSISTENT_1 file systems that are provisioned with HDD storage devices. This
-     * parameter is required when storage type is HDD. Set to <code>READ</code>, improve the performance for frequently
-     * accessed files and allows 20% of the total storage capacity of the file system to be cached.
+     * The type of drive cache used by <code>PERSISTENT_1</code> file systems that are provisioned with HDD storage
+     * devices. This parameter is required when <code>StorageType</code> is HDD. When set to <code>READ</code> the file
+     * system has an SSD storage cache that is sized to 20% of the file system's storage capacity. This improves the
+     * performance for frequently accessed files by caching up to 20% of the total storage capacity.
      * </p>
      * <p>
      * This parameter is required when <code>StorageType</code> is set to HDD.
      * </p>
      * 
      * @param driveCacheType
-     *        The type of drive cache used by PERSISTENT_1 file systems that are provisioned with HDD storage devices.
-     *        This parameter is required when storage type is HDD. Set to <code>READ</code>, improve the performance for
-     *        frequently accessed files and allows 20% of the total storage capacity of the file system to be cached.
-     *        </p>
+     *        The type of drive cache used by <code>PERSISTENT_1</code> file systems that are provisioned with HDD
+     *        storage devices. This parameter is required when <code>StorageType</code> is HDD. When set to
+     *        <code>READ</code> the file system has an SSD storage cache that is sized to 20% of the file system's
+     *        storage capacity. This improves the performance for frequently accessed files by caching up to 20% of the
+     *        total storage capacity.</p>
      *        <p>
      *        This parameter is required when <code>StorageType</code> is set to HDD.
      * @see DriveCacheType
@@ -648,18 +826,20 @@ public class LustreFileSystemConfiguration implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The type of drive cache used by PERSISTENT_1 file systems that are provisioned with HDD storage devices. This
-     * parameter is required when storage type is HDD. Set to <code>READ</code>, improve the performance for frequently
-     * accessed files and allows 20% of the total storage capacity of the file system to be cached.
+     * The type of drive cache used by <code>PERSISTENT_1</code> file systems that are provisioned with HDD storage
+     * devices. This parameter is required when <code>StorageType</code> is HDD. When set to <code>READ</code> the file
+     * system has an SSD storage cache that is sized to 20% of the file system's storage capacity. This improves the
+     * performance for frequently accessed files by caching up to 20% of the total storage capacity.
      * </p>
      * <p>
      * This parameter is required when <code>StorageType</code> is set to HDD.
      * </p>
      * 
-     * @return The type of drive cache used by PERSISTENT_1 file systems that are provisioned with HDD storage devices.
-     *         This parameter is required when storage type is HDD. Set to <code>READ</code>, improve the performance
-     *         for frequently accessed files and allows 20% of the total storage capacity of the file system to be
-     *         cached. </p>
+     * @return The type of drive cache used by <code>PERSISTENT_1</code> file systems that are provisioned with HDD
+     *         storage devices. This parameter is required when <code>StorageType</code> is HDD. When set to
+     *         <code>READ</code> the file system has an SSD storage cache that is sized to 20% of the file system's
+     *         storage capacity. This improves the performance for frequently accessed files by caching up to 20% of the
+     *         total storage capacity.</p>
      *         <p>
      *         This parameter is required when <code>StorageType</code> is set to HDD.
      * @see DriveCacheType
@@ -671,19 +851,21 @@ public class LustreFileSystemConfiguration implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The type of drive cache used by PERSISTENT_1 file systems that are provisioned with HDD storage devices. This
-     * parameter is required when storage type is HDD. Set to <code>READ</code>, improve the performance for frequently
-     * accessed files and allows 20% of the total storage capacity of the file system to be cached.
+     * The type of drive cache used by <code>PERSISTENT_1</code> file systems that are provisioned with HDD storage
+     * devices. This parameter is required when <code>StorageType</code> is HDD. When set to <code>READ</code> the file
+     * system has an SSD storage cache that is sized to 20% of the file system's storage capacity. This improves the
+     * performance for frequently accessed files by caching up to 20% of the total storage capacity.
      * </p>
      * <p>
      * This parameter is required when <code>StorageType</code> is set to HDD.
      * </p>
      * 
      * @param driveCacheType
-     *        The type of drive cache used by PERSISTENT_1 file systems that are provisioned with HDD storage devices.
-     *        This parameter is required when storage type is HDD. Set to <code>READ</code>, improve the performance for
-     *        frequently accessed files and allows 20% of the total storage capacity of the file system to be cached.
-     *        </p>
+     *        The type of drive cache used by <code>PERSISTENT_1</code> file systems that are provisioned with HDD
+     *        storage devices. This parameter is required when <code>StorageType</code> is HDD. When set to
+     *        <code>READ</code> the file system has an SSD storage cache that is sized to 20% of the file system's
+     *        storage capacity. This improves the performance for frequently accessed files by caching up to 20% of the
+     *        total storage capacity.</p>
      *        <p>
      *        This parameter is required when <code>StorageType</code> is set to HDD.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -697,19 +879,21 @@ public class LustreFileSystemConfiguration implements Serializable, Cloneable, S
 
     /**
      * <p>
-     * The type of drive cache used by PERSISTENT_1 file systems that are provisioned with HDD storage devices. This
-     * parameter is required when storage type is HDD. Set to <code>READ</code>, improve the performance for frequently
-     * accessed files and allows 20% of the total storage capacity of the file system to be cached.
+     * The type of drive cache used by <code>PERSISTENT_1</code> file systems that are provisioned with HDD storage
+     * devices. This parameter is required when <code>StorageType</code> is HDD. When set to <code>READ</code> the file
+     * system has an SSD storage cache that is sized to 20% of the file system's storage capacity. This improves the
+     * performance for frequently accessed files by caching up to 20% of the total storage capacity.
      * </p>
      * <p>
      * This parameter is required when <code>StorageType</code> is set to HDD.
      * </p>
      * 
      * @param driveCacheType
-     *        The type of drive cache used by PERSISTENT_1 file systems that are provisioned with HDD storage devices.
-     *        This parameter is required when storage type is HDD. Set to <code>READ</code>, improve the performance for
-     *        frequently accessed files and allows 20% of the total storage capacity of the file system to be cached.
-     *        </p>
+     *        The type of drive cache used by <code>PERSISTENT_1</code> file systems that are provisioned with HDD
+     *        storage devices. This parameter is required when <code>StorageType</code> is HDD. When set to
+     *        <code>READ</code> the file system has an SSD storage cache that is sized to 20% of the file system's
+     *        storage capacity. This improves the performance for frequently accessed files by caching up to 20% of the
+     *        total storage capacity.</p>
      *        <p>
      *        This parameter is required when <code>StorageType</code> is set to HDD.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -917,6 +1101,52 @@ public class LustreFileSystemConfiguration implements Serializable, Cloneable, S
     }
 
     /**
+     * <p>
+     * The Lustre logging configuration. Lustre logging writes the enabled log events for your file system to Amazon
+     * CloudWatch Logs.
+     * </p>
+     * 
+     * @param logConfiguration
+     *        The Lustre logging configuration. Lustre logging writes the enabled log events for your file system to
+     *        Amazon CloudWatch Logs.
+     */
+
+    public void setLogConfiguration(LustreLogConfiguration logConfiguration) {
+        this.logConfiguration = logConfiguration;
+    }
+
+    /**
+     * <p>
+     * The Lustre logging configuration. Lustre logging writes the enabled log events for your file system to Amazon
+     * CloudWatch Logs.
+     * </p>
+     * 
+     * @return The Lustre logging configuration. Lustre logging writes the enabled log events for your file system to
+     *         Amazon CloudWatch Logs.
+     */
+
+    public LustreLogConfiguration getLogConfiguration() {
+        return this.logConfiguration;
+    }
+
+    /**
+     * <p>
+     * The Lustre logging configuration. Lustre logging writes the enabled log events for your file system to Amazon
+     * CloudWatch Logs.
+     * </p>
+     * 
+     * @param logConfiguration
+     *        The Lustre logging configuration. Lustre logging writes the enabled log events for your file system to
+     *        Amazon CloudWatch Logs.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public LustreFileSystemConfiguration withLogConfiguration(LustreLogConfiguration logConfiguration) {
+        setLogConfiguration(logConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -947,7 +1177,9 @@ public class LustreFileSystemConfiguration implements Serializable, Cloneable, S
         if (getDriveCacheType() != null)
             sb.append("DriveCacheType: ").append(getDriveCacheType()).append(",");
         if (getDataCompressionType() != null)
-            sb.append("DataCompressionType: ").append(getDataCompressionType());
+            sb.append("DataCompressionType: ").append(getDataCompressionType()).append(",");
+        if (getLogConfiguration() != null)
+            sb.append("LogConfiguration: ").append(getLogConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -1003,6 +1235,10 @@ public class LustreFileSystemConfiguration implements Serializable, Cloneable, S
             return false;
         if (other.getDataCompressionType() != null && other.getDataCompressionType().equals(this.getDataCompressionType()) == false)
             return false;
+        if (other.getLogConfiguration() == null ^ this.getLogConfiguration() == null)
+            return false;
+        if (other.getLogConfiguration() != null && other.getLogConfiguration().equals(this.getLogConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -1021,6 +1257,7 @@ public class LustreFileSystemConfiguration implements Serializable, Cloneable, S
         hashCode = prime * hashCode + ((getCopyTagsToBackups() == null) ? 0 : getCopyTagsToBackups().hashCode());
         hashCode = prime * hashCode + ((getDriveCacheType() == null) ? 0 : getDriveCacheType().hashCode());
         hashCode = prime * hashCode + ((getDataCompressionType() == null) ? 0 : getDataCompressionType().hashCode());
+        hashCode = prime * hashCode + ((getLogConfiguration() == null) ? 0 : getLogConfiguration().hashCode());
         return hashCode;
     }
 

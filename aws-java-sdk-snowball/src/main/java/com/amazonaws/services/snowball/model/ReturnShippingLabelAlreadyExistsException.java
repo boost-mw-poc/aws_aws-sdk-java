@@ -17,7 +17,7 @@ import javax.annotation.Generated;
 /**
  * <p>
  * You get this exception if you call <code>CreateReturnShippingLabel</code> and a valid return shipping label already
- * exists. In this case, use <code>DescribeReturnShippingLabel</code> to get the url.
+ * exists. In this case, use <code>DescribeReturnShippingLabel</code> to get the URL.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

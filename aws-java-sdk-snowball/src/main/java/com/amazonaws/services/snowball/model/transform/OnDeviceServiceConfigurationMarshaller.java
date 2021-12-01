@@ -29,6 +29,8 @@ public class OnDeviceServiceConfigurationMarshaller {
 
     private static final MarshallingInfo<StructuredPojo> NFSONDEVICESERVICE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("NFSOnDeviceService").build();
+    private static final MarshallingInfo<StructuredPojo> TGWONDEVICESERVICE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TGWOnDeviceService").build();
 
     private static final OnDeviceServiceConfigurationMarshaller instance = new OnDeviceServiceConfigurationMarshaller();
 
@@ -47,6 +49,7 @@ public class OnDeviceServiceConfigurationMarshaller {
 
         try {
             protocolMarshaller.marshall(onDeviceServiceConfiguration.getNFSOnDeviceService(), NFSONDEVICESERVICE_BINDING);
+            protocolMarshaller.marshall(onDeviceServiceConfiguration.getTGWOnDeviceService(), TGWONDEVICESERVICE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

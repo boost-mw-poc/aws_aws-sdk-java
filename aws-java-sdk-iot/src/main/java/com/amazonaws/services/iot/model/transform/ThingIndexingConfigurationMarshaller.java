@@ -32,6 +32,10 @@ public class ThingIndexingConfigurationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("thingIndexingMode").build();
     private static final MarshallingInfo<String> THINGCONNECTIVITYINDEXINGMODE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("thingConnectivityIndexingMode").build();
+    private static final MarshallingInfo<String> DEVICEDEFENDERINDEXINGMODE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("deviceDefenderIndexingMode").build();
+    private static final MarshallingInfo<String> NAMEDSHADOWINDEXINGMODE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("namedShadowIndexingMode").build();
     private static final MarshallingInfo<List> MANAGEDFIELDS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("managedFields").build();
     private static final MarshallingInfo<List> CUSTOMFIELDS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
@@ -55,6 +59,8 @@ public class ThingIndexingConfigurationMarshaller {
         try {
             protocolMarshaller.marshall(thingIndexingConfiguration.getThingIndexingMode(), THINGINDEXINGMODE_BINDING);
             protocolMarshaller.marshall(thingIndexingConfiguration.getThingConnectivityIndexingMode(), THINGCONNECTIVITYINDEXINGMODE_BINDING);
+            protocolMarshaller.marshall(thingIndexingConfiguration.getDeviceDefenderIndexingMode(), DEVICEDEFENDERINDEXINGMODE_BINDING);
+            protocolMarshaller.marshall(thingIndexingConfiguration.getNamedShadowIndexingMode(), NAMEDSHADOWINDEXINGMODE_BINDING);
             protocolMarshaller.marshall(thingIndexingConfiguration.getManagedFields(), MANAGEDFIELDS_BINDING);
             protocolMarshaller.marshall(thingIndexingConfiguration.getCustomFields(), CUSTOMFIELDS_BINDING);
         } catch (Exception e) {

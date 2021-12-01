@@ -25,7 +25,7 @@ public class ListLFTagsResult extends com.amazonaws.AmazonWebServiceResult<com.a
 
     /**
      * <p>
-     * A list of tags that the requested has permission to view.
+     * A list of LF-tags that the requested has permission to view.
      * </p>
      */
     private java.util.List<LFTagPair> lFTags;
@@ -38,10 +38,10 @@ public class ListLFTagsResult extends com.amazonaws.AmazonWebServiceResult<com.a
 
     /**
      * <p>
-     * A list of tags that the requested has permission to view.
+     * A list of LF-tags that the requested has permission to view.
      * </p>
      * 
-     * @return A list of tags that the requested has permission to view.
+     * @return A list of LF-tags that the requested has permission to view.
      */
 
     public java.util.List<LFTagPair> getLFTags() {
@@ -50,11 +50,11 @@ public class ListLFTagsResult extends com.amazonaws.AmazonWebServiceResult<com.a
 
     /**
      * <p>
-     * A list of tags that the requested has permission to view.
+     * A list of LF-tags that the requested has permission to view.
      * </p>
      * 
      * @param lFTags
-     *        A list of tags that the requested has permission to view.
+     *        A list of LF-tags that the requested has permission to view.
      */
 
     public void setLFTags(java.util.Collection<LFTagPair> lFTags) {
@@ -68,7 +68,7 @@ public class ListLFTagsResult extends com.amazonaws.AmazonWebServiceResult<com.a
 
     /**
      * <p>
-     * A list of tags that the requested has permission to view.
+     * A list of LF-tags that the requested has permission to view.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -77,7 +77,7 @@ public class ListLFTagsResult extends com.amazonaws.AmazonWebServiceResult<com.a
      * </p>
      * 
      * @param lFTags
-     *        A list of tags that the requested has permission to view.
+     *        A list of LF-tags that the requested has permission to view.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -93,11 +93,11 @@ public class ListLFTagsResult extends com.amazonaws.AmazonWebServiceResult<com.a
 
     /**
      * <p>
-     * A list of tags that the requested has permission to view.
+     * A list of LF-tags that the requested has permission to view.
      * </p>
      * 
      * @param lFTags
-     *        A list of tags that the requested has permission to view.
+     *        A list of LF-tags that the requested has permission to view.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -19,7 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * An object that represents metadata and configuration settings for services on an AWS Snow Family device.
+ * An object that represents the metadata and configuration settings for services on an Amazon Web Services Snow Family
+ * device.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/snowball-2016-06-30/OnDeviceServiceConfiguration"
@@ -30,18 +31,24 @@ public class OnDeviceServiceConfiguration implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * Represents the NFS service on a Snow Family device.
+     * Represents the NFS (Network File System) service on a Snow Family device.
      * </p>
      */
     private NFSOnDeviceServiceConfiguration nFSOnDeviceService;
+    /**
+     * <p>
+     * Represents the Storage Gateway service Tape Gateway type on a Snow Family device.
+     * </p>
+     */
+    private TGWOnDeviceServiceConfiguration tGWOnDeviceService;
 
     /**
      * <p>
-     * Represents the NFS service on a Snow Family device.
+     * Represents the NFS (Network File System) service on a Snow Family device.
      * </p>
      * 
      * @param nFSOnDeviceService
-     *        Represents the NFS service on a Snow Family device.
+     *        Represents the NFS (Network File System) service on a Snow Family device.
      */
 
     public void setNFSOnDeviceService(NFSOnDeviceServiceConfiguration nFSOnDeviceService) {
@@ -50,10 +57,10 @@ public class OnDeviceServiceConfiguration implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * Represents the NFS service on a Snow Family device.
+     * Represents the NFS (Network File System) service on a Snow Family device.
      * </p>
      * 
-     * @return Represents the NFS service on a Snow Family device.
+     * @return Represents the NFS (Network File System) service on a Snow Family device.
      */
 
     public NFSOnDeviceServiceConfiguration getNFSOnDeviceService() {
@@ -62,16 +69,56 @@ public class OnDeviceServiceConfiguration implements Serializable, Cloneable, St
 
     /**
      * <p>
-     * Represents the NFS service on a Snow Family device.
+     * Represents the NFS (Network File System) service on a Snow Family device.
      * </p>
      * 
      * @param nFSOnDeviceService
-     *        Represents the NFS service on a Snow Family device.
+     *        Represents the NFS (Network File System) service on a Snow Family device.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public OnDeviceServiceConfiguration withNFSOnDeviceService(NFSOnDeviceServiceConfiguration nFSOnDeviceService) {
         setNFSOnDeviceService(nFSOnDeviceService);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Represents the Storage Gateway service Tape Gateway type on a Snow Family device.
+     * </p>
+     * 
+     * @param tGWOnDeviceService
+     *        Represents the Storage Gateway service Tape Gateway type on a Snow Family device.
+     */
+
+    public void setTGWOnDeviceService(TGWOnDeviceServiceConfiguration tGWOnDeviceService) {
+        this.tGWOnDeviceService = tGWOnDeviceService;
+    }
+
+    /**
+     * <p>
+     * Represents the Storage Gateway service Tape Gateway type on a Snow Family device.
+     * </p>
+     * 
+     * @return Represents the Storage Gateway service Tape Gateway type on a Snow Family device.
+     */
+
+    public TGWOnDeviceServiceConfiguration getTGWOnDeviceService() {
+        return this.tGWOnDeviceService;
+    }
+
+    /**
+     * <p>
+     * Represents the Storage Gateway service Tape Gateway type on a Snow Family device.
+     * </p>
+     * 
+     * @param tGWOnDeviceService
+     *        Represents the Storage Gateway service Tape Gateway type on a Snow Family device.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public OnDeviceServiceConfiguration withTGWOnDeviceService(TGWOnDeviceServiceConfiguration tGWOnDeviceService) {
+        setTGWOnDeviceService(tGWOnDeviceService);
         return this;
     }
 
@@ -88,7 +135,9 @@ public class OnDeviceServiceConfiguration implements Serializable, Cloneable, St
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getNFSOnDeviceService() != null)
-            sb.append("NFSOnDeviceService: ").append(getNFSOnDeviceService());
+            sb.append("NFSOnDeviceService: ").append(getNFSOnDeviceService()).append(",");
+        if (getTGWOnDeviceService() != null)
+            sb.append("TGWOnDeviceService: ").append(getTGWOnDeviceService());
         sb.append("}");
         return sb.toString();
     }
@@ -107,6 +156,10 @@ public class OnDeviceServiceConfiguration implements Serializable, Cloneable, St
             return false;
         if (other.getNFSOnDeviceService() != null && other.getNFSOnDeviceService().equals(this.getNFSOnDeviceService()) == false)
             return false;
+        if (other.getTGWOnDeviceService() == null ^ this.getTGWOnDeviceService() == null)
+            return false;
+        if (other.getTGWOnDeviceService() != null && other.getTGWOnDeviceService().equals(this.getTGWOnDeviceService()) == false)
+            return false;
         return true;
     }
 
@@ -116,6 +169,7 @@ public class OnDeviceServiceConfiguration implements Serializable, Cloneable, St
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getNFSOnDeviceService() == null) ? 0 : getNFSOnDeviceService().hashCode());
+        hashCode = prime * hashCode + ((getTGWOnDeviceService() == null) ? 0 : getTGWOnDeviceService().hashCode());
         return hashCode;
     }
 

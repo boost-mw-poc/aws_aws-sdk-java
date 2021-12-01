@@ -34,9 +34,9 @@ public class CreateReturnShippingLabelRequest extends com.amazonaws.AmazonWebSer
     private String jobId;
     /**
      * <p>
-     * The shipping speed for a particular job. This speed doesn't dictate how soon the device is returned to AWS. This
-     * speed represents how quickly it moves to its destination while in transit. Regional shipping speeds are as
-     * follows:
+     * The shipping speed for a particular job. This speed doesn't dictate how soon the device is returned to Amazon Web
+     * Services. This speed represents how quickly it moves to its destination while in transit. Regional shipping
+     * speeds are as follows:
      * </p>
      */
     private String shippingOption;
@@ -89,15 +89,15 @@ public class CreateReturnShippingLabelRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The shipping speed for a particular job. This speed doesn't dictate how soon the device is returned to AWS. This
-     * speed represents how quickly it moves to its destination while in transit. Regional shipping speeds are as
-     * follows:
+     * The shipping speed for a particular job. This speed doesn't dictate how soon the device is returned to Amazon Web
+     * Services. This speed represents how quickly it moves to its destination while in transit. Regional shipping
+     * speeds are as follows:
      * </p>
      * 
      * @param shippingOption
      *        The shipping speed for a particular job. This speed doesn't dictate how soon the device is returned to
-     *        AWS. This speed represents how quickly it moves to its destination while in transit. Regional shipping
-     *        speeds are as follows:
+     *        Amazon Web Services. This speed represents how quickly it moves to its destination while in transit.
+     *        Regional shipping speeds are as follows:
      * @see ShippingOption
      */
 
@@ -107,14 +107,14 @@ public class CreateReturnShippingLabelRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The shipping speed for a particular job. This speed doesn't dictate how soon the device is returned to AWS. This
-     * speed represents how quickly it moves to its destination while in transit. Regional shipping speeds are as
-     * follows:
+     * The shipping speed for a particular job. This speed doesn't dictate how soon the device is returned to Amazon Web
+     * Services. This speed represents how quickly it moves to its destination while in transit. Regional shipping
+     * speeds are as follows:
      * </p>
      * 
      * @return The shipping speed for a particular job. This speed doesn't dictate how soon the device is returned to
-     *         AWS. This speed represents how quickly it moves to its destination while in transit. Regional shipping
-     *         speeds are as follows:
+     *         Amazon Web Services. This speed represents how quickly it moves to its destination while in transit.
+     *         Regional shipping speeds are as follows:
      * @see ShippingOption
      */
 
@@ -124,15 +124,15 @@ public class CreateReturnShippingLabelRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The shipping speed for a particular job. This speed doesn't dictate how soon the device is returned to AWS. This
-     * speed represents how quickly it moves to its destination while in transit. Regional shipping speeds are as
-     * follows:
+     * The shipping speed for a particular job. This speed doesn't dictate how soon the device is returned to Amazon Web
+     * Services. This speed represents how quickly it moves to its destination while in transit. Regional shipping
+     * speeds are as follows:
      * </p>
      * 
      * @param shippingOption
      *        The shipping speed for a particular job. This speed doesn't dictate how soon the device is returned to
-     *        AWS. This speed represents how quickly it moves to its destination while in transit. Regional shipping
-     *        speeds are as follows:
+     *        Amazon Web Services. This speed represents how quickly it moves to its destination while in transit.
+     *        Regional shipping speeds are as follows:
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ShippingOption
      */
@@ -144,15 +144,15 @@ public class CreateReturnShippingLabelRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * The shipping speed for a particular job. This speed doesn't dictate how soon the device is returned to AWS. This
-     * speed represents how quickly it moves to its destination while in transit. Regional shipping speeds are as
-     * follows:
+     * The shipping speed for a particular job. This speed doesn't dictate how soon the device is returned to Amazon Web
+     * Services. This speed represents how quickly it moves to its destination while in transit. Regional shipping
+     * speeds are as follows:
      * </p>
      * 
      * @param shippingOption
      *        The shipping speed for a particular job. This speed doesn't dictate how soon the device is returned to
-     *        AWS. This speed represents how quickly it moves to its destination while in transit. Regional shipping
-     *        speeds are as follows:
+     *        Amazon Web Services. This speed represents how quickly it moves to its destination while in transit.
+     *        Regional shipping speeds are as follows:
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ShippingOption
      */

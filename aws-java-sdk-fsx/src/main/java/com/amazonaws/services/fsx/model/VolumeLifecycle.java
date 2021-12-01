@@ -25,7 +25,8 @@ public enum VolumeLifecycle {
     DELETING("DELETING"),
     FAILED("FAILED"),
     MISCONFIGURED("MISCONFIGURED"),
-    PENDING("PENDING");
+    PENDING("PENDING"),
+    AVAILABLE("AVAILABLE");
 
     private String value;
 

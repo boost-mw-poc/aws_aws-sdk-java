@@ -17,7 +17,7 @@ import javax.annotation.Generated;
 /**
  * <p>
  * The address is either outside the serviceable area for your region, or an error occurred. Check the address with your
- * region's carrier and try again. If the issue persists, contact AWS Support.
+ * region's carrier and try again. If the issue persists, contact Amazon Web Services Support.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

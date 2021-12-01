@@ -36,7 +36,7 @@ public class UpdateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <p>
      * The new role Amazon Resource Name (ARN) that you want to associate with this cluster. To create a role ARN, use
      * the <a href="https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html">CreateRole</a> API action
-     * in AWS Identity and Access Management (IAM).
+     * in Identity and Access Management (IAM).
      * </p>
      */
     private String roleARN;
@@ -56,7 +56,7 @@ public class UpdateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
     /**
      * <p>
      * Specifies the service or services on the Snow Family device that your transferred data will be exported from or
-     * imported into. AWS Snow Family supports Amazon S3 and NFS (Network File System).
+     * imported into. Amazon Web Services Snow Family device clusters support Amazon S3 and NFS (Network File System).
      * </p>
      */
     private OnDeviceServiceConfiguration onDeviceServiceConfiguration;
@@ -135,14 +135,14 @@ public class UpdateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <p>
      * The new role Amazon Resource Name (ARN) that you want to associate with this cluster. To create a role ARN, use
      * the <a href="https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html">CreateRole</a> API action
-     * in AWS Identity and Access Management (IAM).
+     * in Identity and Access Management (IAM).
      * </p>
      * 
      * @param roleARN
      *        The new role Amazon Resource Name (ARN) that you want to associate with this cluster. To create a role
      *        ARN, use the <a
      *        href="https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html">CreateRole</a> API action
-     *        in AWS Identity and Access Management (IAM).
+     *        in Identity and Access Management (IAM).
      */
 
     public void setRoleARN(String roleARN) {
@@ -153,13 +153,13 @@ public class UpdateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <p>
      * The new role Amazon Resource Name (ARN) that you want to associate with this cluster. To create a role ARN, use
      * the <a href="https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html">CreateRole</a> API action
-     * in AWS Identity and Access Management (IAM).
+     * in Identity and Access Management (IAM).
      * </p>
      * 
      * @return The new role Amazon Resource Name (ARN) that you want to associate with this cluster. To create a role
      *         ARN, use the <a
      *         href="https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html">CreateRole</a> API action
-     *         in AWS Identity and Access Management (IAM).
+     *         in Identity and Access Management (IAM).
      */
 
     public String getRoleARN() {
@@ -170,14 +170,14 @@ public class UpdateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <p>
      * The new role Amazon Resource Name (ARN) that you want to associate with this cluster. To create a role ARN, use
      * the <a href="https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html">CreateRole</a> API action
-     * in AWS Identity and Access Management (IAM).
+     * in Identity and Access Management (IAM).
      * </p>
      * 
      * @param roleARN
      *        The new role Amazon Resource Name (ARN) that you want to associate with this cluster. To create a role
      *        ARN, use the <a
      *        href="https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html">CreateRole</a> API action
-     *        in AWS Identity and Access Management (IAM).
+     *        in Identity and Access Management (IAM).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -275,12 +275,13 @@ public class UpdateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
     /**
      * <p>
      * Specifies the service or services on the Snow Family device that your transferred data will be exported from or
-     * imported into. AWS Snow Family supports Amazon S3 and NFS (Network File System).
+     * imported into. Amazon Web Services Snow Family device clusters support Amazon S3 and NFS (Network File System).
      * </p>
      * 
      * @param onDeviceServiceConfiguration
      *        Specifies the service or services on the Snow Family device that your transferred data will be exported
-     *        from or imported into. AWS Snow Family supports Amazon S3 and NFS (Network File System).
+     *        from or imported into. Amazon Web Services Snow Family device clusters support Amazon S3 and NFS (Network
+     *        File System).
      */
 
     public void setOnDeviceServiceConfiguration(OnDeviceServiceConfiguration onDeviceServiceConfiguration) {
@@ -290,11 +291,12 @@ public class UpdateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
     /**
      * <p>
      * Specifies the service or services on the Snow Family device that your transferred data will be exported from or
-     * imported into. AWS Snow Family supports Amazon S3 and NFS (Network File System).
+     * imported into. Amazon Web Services Snow Family device clusters support Amazon S3 and NFS (Network File System).
      * </p>
      * 
      * @return Specifies the service or services on the Snow Family device that your transferred data will be exported
-     *         from or imported into. AWS Snow Family supports Amazon S3 and NFS (Network File System).
+     *         from or imported into. Amazon Web Services Snow Family device clusters support Amazon S3 and NFS (Network
+     *         File System).
      */
 
     public OnDeviceServiceConfiguration getOnDeviceServiceConfiguration() {
@@ -304,12 +306,13 @@ public class UpdateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
     /**
      * <p>
      * Specifies the service or services on the Snow Family device that your transferred data will be exported from or
-     * imported into. AWS Snow Family supports Amazon S3 and NFS (Network File System).
+     * imported into. Amazon Web Services Snow Family device clusters support Amazon S3 and NFS (Network File System).
      * </p>
      * 
      * @param onDeviceServiceConfiguration
      *        Specifies the service or services on the Snow Family device that your transferred data will be exported
-     *        from or imported into. AWS Snow Family supports Amazon S3 and NFS (Network File System).
+     *        from or imported into. Amazon Web Services Snow Family device clusters support Amazon S3 and NFS (Network
+     *        File System).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

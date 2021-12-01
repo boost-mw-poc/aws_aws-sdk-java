@@ -88,6 +88,10 @@ public class LustreFileSystemConfigurationJsonUnmarshaller implements Unmarshall
                     context.nextToken();
                     lustreFileSystemConfiguration.setDataCompressionType(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("LogConfiguration", targetDepth)) {
+                    context.nextToken();
+                    lustreFileSystemConfiguration.setLogConfiguration(LustreLogConfigurationJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

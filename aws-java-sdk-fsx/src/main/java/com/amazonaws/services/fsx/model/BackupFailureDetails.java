@@ -30,18 +30,18 @@ public class BackupFailureDetails implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * A message describing the backup creation failure.
+     * A message describing the backup-creation failure.
      * </p>
      */
     private String message;
 
     /**
      * <p>
-     * A message describing the backup creation failure.
+     * A message describing the backup-creation failure.
      * </p>
      * 
      * @param message
-     *        A message describing the backup creation failure.
+     *        A message describing the backup-creation failure.
      */
 
     public void setMessage(String message) {
@@ -50,10 +50,10 @@ public class BackupFailureDetails implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * A message describing the backup creation failure.
+     * A message describing the backup-creation failure.
      * </p>
      * 
-     * @return A message describing the backup creation failure.
+     * @return A message describing the backup-creation failure.
      */
 
     public String getMessage() {
@@ -62,11 +62,11 @@ public class BackupFailureDetails implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * A message describing the backup creation failure.
+     * A message describing the backup-creation failure.
      * </p>
      * 
      * @param message
-     *        A message describing the backup creation failure.
+     *        A message describing the backup-creation failure.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

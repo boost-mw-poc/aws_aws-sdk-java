@@ -50,6 +50,12 @@ public class CreateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      */
     private java.util.List<PartitionIndex> partitionIndexes;
+    /**
+     * <p>
+     * The ID of the transaction.
+     * </p>
+     */
+    private String transactionId;
 
     /**
      * <p>
@@ -251,6 +257,46 @@ public class CreateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
     }
 
     /**
+     * <p>
+     * The ID of the transaction.
+     * </p>
+     * 
+     * @param transactionId
+     *        The ID of the transaction.
+     */
+
+    public void setTransactionId(String transactionId) {
+        this.transactionId = transactionId;
+    }
+
+    /**
+     * <p>
+     * The ID of the transaction.
+     * </p>
+     * 
+     * @return The ID of the transaction.
+     */
+
+    public String getTransactionId() {
+        return this.transactionId;
+    }
+
+    /**
+     * <p>
+     * The ID of the transaction.
+     * </p>
+     * 
+     * @param transactionId
+     *        The ID of the transaction.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateTableRequest withTransactionId(String transactionId) {
+        setTransactionId(transactionId);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -269,7 +315,9 @@ public class CreateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
         if (getTableInput() != null)
             sb.append("TableInput: ").append(getTableInput()).append(",");
         if (getPartitionIndexes() != null)
-            sb.append("PartitionIndexes: ").append(getPartitionIndexes());
+            sb.append("PartitionIndexes: ").append(getPartitionIndexes()).append(",");
+        if (getTransactionId() != null)
+            sb.append("TransactionId: ").append(getTransactionId());
         sb.append("}");
         return sb.toString();
     }
@@ -300,6 +348,10 @@ public class CreateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
             return false;
         if (other.getPartitionIndexes() != null && other.getPartitionIndexes().equals(this.getPartitionIndexes()) == false)
             return false;
+        if (other.getTransactionId() == null ^ this.getTransactionId() == null)
+            return false;
+        if (other.getTransactionId() != null && other.getTransactionId().equals(this.getTransactionId()) == false)
+            return false;
         return true;
     }
 
@@ -312,6 +364,7 @@ public class CreateTableRequest extends com.amazonaws.AmazonWebServiceRequest im
         hashCode = prime * hashCode + ((getDatabaseName() == null) ? 0 : getDatabaseName().hashCode());
         hashCode = prime * hashCode + ((getTableInput() == null) ? 0 : getTableInput().hashCode());
         hashCode = prime * hashCode + ((getPartitionIndexes() == null) ? 0 : getPartitionIndexes().hashCode());
+        hashCode = prime * hashCode + ((getTransactionId() == null) ? 0 : getTransactionId().hashCode());
         return hashCode;
     }
 

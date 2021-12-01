@@ -28,24 +28,31 @@ public class CreateVolumeRequest extends com.amazonaws.AmazonWebServiceRequest i
     private String clientRequestToken;
     /**
      * <p>
-     * Specifies the type of volume to create; <code>ONTAP</code> is the only valid volume type.
+     * Specifies the type of volume to create; <code>ONTAP</code> and <code>OPENZFS</code> are the only valid volume
+     * types.
      * </p>
      */
     private String volumeType;
     /**
      * <p>
-     * Specifies the name of the volume you're creating.
+     * Specifies the name of the volume that you're creating.
      * </p>
      */
     private String name;
     /**
      * <p>
-     * Specifies the <code>ONTAP</code> configuration to use in creating the volume.
+     * Specifies the configuration to use when creating the ONTAP volume.
      * </p>
      */
     private CreateOntapVolumeConfiguration ontapConfiguration;
 
     private java.util.List<Tag> tags;
+    /**
+     * <p>
+     * Specifies the configuration to use when creating the OpenZFS volume.
+     * </p>
+     */
+    private CreateOpenZFSVolumeConfiguration openZFSConfiguration;
 
     /**
      * @param clientRequestToken
@@ -75,11 +82,13 @@ public class CreateVolumeRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * Specifies the type of volume to create; <code>ONTAP</code> is the only valid volume type.
+     * Specifies the type of volume to create; <code>ONTAP</code> and <code>OPENZFS</code> are the only valid volume
+     * types.
      * </p>
      * 
      * @param volumeType
-     *        Specifies the type of volume to create; <code>ONTAP</code> is the only valid volume type.
+     *        Specifies the type of volume to create; <code>ONTAP</code> and <code>OPENZFS</code> are the only valid
+     *        volume types.
      * @see VolumeType
      */
 
@@ -89,10 +98,12 @@ public class CreateVolumeRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * Specifies the type of volume to create; <code>ONTAP</code> is the only valid volume type.
+     * Specifies the type of volume to create; <code>ONTAP</code> and <code>OPENZFS</code> are the only valid volume
+     * types.
      * </p>
      * 
-     * @return Specifies the type of volume to create; <code>ONTAP</code> is the only valid volume type.
+     * @return Specifies the type of volume to create; <code>ONTAP</code> and <code>OPENZFS</code> are the only valid
+     *         volume types.
      * @see VolumeType
      */
 
@@ -102,11 +113,13 @@ public class CreateVolumeRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * Specifies the type of volume to create; <code>ONTAP</code> is the only valid volume type.
+     * Specifies the type of volume to create; <code>ONTAP</code> and <code>OPENZFS</code> are the only valid volume
+     * types.
      * </p>
      * 
      * @param volumeType
-     *        Specifies the type of volume to create; <code>ONTAP</code> is the only valid volume type.
+     *        Specifies the type of volume to create; <code>ONTAP</code> and <code>OPENZFS</code> are the only valid
+     *        volume types.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see VolumeType
      */
@@ -118,11 +131,13 @@ public class CreateVolumeRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * Specifies the type of volume to create; <code>ONTAP</code> is the only valid volume type.
+     * Specifies the type of volume to create; <code>ONTAP</code> and <code>OPENZFS</code> are the only valid volume
+     * types.
      * </p>
      * 
      * @param volumeType
-     *        Specifies the type of volume to create; <code>ONTAP</code> is the only valid volume type.
+     *        Specifies the type of volume to create; <code>ONTAP</code> and <code>OPENZFS</code> are the only valid
+     *        volume types.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see VolumeType
      */
@@ -134,11 +149,11 @@ public class CreateVolumeRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * Specifies the name of the volume you're creating.
+     * Specifies the name of the volume that you're creating.
      * </p>
      * 
      * @param name
-     *        Specifies the name of the volume you're creating.
+     *        Specifies the name of the volume that you're creating.
      */
 
     public void setName(String name) {
@@ -147,10 +162,10 @@ public class CreateVolumeRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * Specifies the name of the volume you're creating.
+     * Specifies the name of the volume that you're creating.
      * </p>
      * 
-     * @return Specifies the name of the volume you're creating.
+     * @return Specifies the name of the volume that you're creating.
      */
 
     public String getName() {
@@ -159,11 +174,11 @@ public class CreateVolumeRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * Specifies the name of the volume you're creating.
+     * Specifies the name of the volume that you're creating.
      * </p>
      * 
      * @param name
-     *        Specifies the name of the volume you're creating.
+     *        Specifies the name of the volume that you're creating.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -174,11 +189,11 @@ public class CreateVolumeRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * Specifies the <code>ONTAP</code> configuration to use in creating the volume.
+     * Specifies the configuration to use when creating the ONTAP volume.
      * </p>
      * 
      * @param ontapConfiguration
-     *        Specifies the <code>ONTAP</code> configuration to use in creating the volume.
+     *        Specifies the configuration to use when creating the ONTAP volume.
      */
 
     public void setOntapConfiguration(CreateOntapVolumeConfiguration ontapConfiguration) {
@@ -187,10 +202,10 @@ public class CreateVolumeRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * Specifies the <code>ONTAP</code> configuration to use in creating the volume.
+     * Specifies the configuration to use when creating the ONTAP volume.
      * </p>
      * 
-     * @return Specifies the <code>ONTAP</code> configuration to use in creating the volume.
+     * @return Specifies the configuration to use when creating the ONTAP volume.
      */
 
     public CreateOntapVolumeConfiguration getOntapConfiguration() {
@@ -199,11 +214,11 @@ public class CreateVolumeRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * Specifies the <code>ONTAP</code> configuration to use in creating the volume.
+     * Specifies the configuration to use when creating the ONTAP volume.
      * </p>
      * 
      * @param ontapConfiguration
-     *        Specifies the <code>ONTAP</code> configuration to use in creating the volume.
+     *        Specifies the configuration to use when creating the ONTAP volume.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -265,6 +280,46 @@ public class CreateVolumeRequest extends com.amazonaws.AmazonWebServiceRequest i
     }
 
     /**
+     * <p>
+     * Specifies the configuration to use when creating the OpenZFS volume.
+     * </p>
+     * 
+     * @param openZFSConfiguration
+     *        Specifies the configuration to use when creating the OpenZFS volume.
+     */
+
+    public void setOpenZFSConfiguration(CreateOpenZFSVolumeConfiguration openZFSConfiguration) {
+        this.openZFSConfiguration = openZFSConfiguration;
+    }
+
+    /**
+     * <p>
+     * Specifies the configuration to use when creating the OpenZFS volume.
+     * </p>
+     * 
+     * @return Specifies the configuration to use when creating the OpenZFS volume.
+     */
+
+    public CreateOpenZFSVolumeConfiguration getOpenZFSConfiguration() {
+        return this.openZFSConfiguration;
+    }
+
+    /**
+     * <p>
+     * Specifies the configuration to use when creating the OpenZFS volume.
+     * </p>
+     * 
+     * @param openZFSConfiguration
+     *        Specifies the configuration to use when creating the OpenZFS volume.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateVolumeRequest withOpenZFSConfiguration(CreateOpenZFSVolumeConfiguration openZFSConfiguration) {
+        setOpenZFSConfiguration(openZFSConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -285,7 +340,9 @@ public class CreateVolumeRequest extends com.amazonaws.AmazonWebServiceRequest i
         if (getOntapConfiguration() != null)
             sb.append("OntapConfiguration: ").append(getOntapConfiguration()).append(",");
         if (getTags() != null)
-            sb.append("Tags: ").append(getTags());
+            sb.append("Tags: ").append(getTags()).append(",");
+        if (getOpenZFSConfiguration() != null)
+            sb.append("OpenZFSConfiguration: ").append(getOpenZFSConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -320,6 +377,10 @@ public class CreateVolumeRequest extends com.amazonaws.AmazonWebServiceRequest i
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
             return false;
+        if (other.getOpenZFSConfiguration() == null ^ this.getOpenZFSConfiguration() == null)
+            return false;
+        if (other.getOpenZFSConfiguration() != null && other.getOpenZFSConfiguration().equals(this.getOpenZFSConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -333,6 +394,7 @@ public class CreateVolumeRequest extends com.amazonaws.AmazonWebServiceRequest i
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
         hashCode = prime * hashCode + ((getOntapConfiguration() == null) ? 0 : getOntapConfiguration().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getOpenZFSConfiguration() == null) ? 0 : getOpenZFSConfiguration().hashCode());
         return hashCode;
     }
 

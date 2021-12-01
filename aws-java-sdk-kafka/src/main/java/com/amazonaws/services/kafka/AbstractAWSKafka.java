@@ -43,6 +43,11 @@ public class AbstractAWSKafka implements AWSKafka {
     }
 
     @Override
+    public CreateClusterV2Result createClusterV2(CreateClusterV2Request request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateConfigurationResult createConfiguration(CreateConfigurationRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -64,6 +69,11 @@ public class AbstractAWSKafka implements AWSKafka {
 
     @Override
     public DescribeClusterOperationResult describeClusterOperation(DescribeClusterOperationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DescribeClusterV2Result describeClusterV2(DescribeClusterV2Request request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -94,6 +104,11 @@ public class AbstractAWSKafka implements AWSKafka {
 
     @Override
     public ListClustersResult listClusters(ListClustersRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListClustersV2Result listClustersV2(ListClustersV2Request request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

@@ -34,6 +34,8 @@ public class BatchDeleteTableRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DatabaseName").build();
     private static final MarshallingInfo<List> TABLESTODELETE_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TablesToDelete").build();
+    private static final MarshallingInfo<String> TRANSACTIONID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TransactionId").build();
 
     private static final BatchDeleteTableRequestMarshaller instance = new BatchDeleteTableRequestMarshaller();
 
@@ -54,6 +56,7 @@ public class BatchDeleteTableRequestMarshaller {
             protocolMarshaller.marshall(batchDeleteTableRequest.getCatalogId(), CATALOGID_BINDING);
             protocolMarshaller.marshall(batchDeleteTableRequest.getDatabaseName(), DATABASENAME_BINDING);
             protocolMarshaller.marshall(batchDeleteTableRequest.getTablesToDelete(), TABLESTODELETE_BINDING);
+            protocolMarshaller.marshall(batchDeleteTableRequest.getTransactionId(), TRANSACTIONID_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

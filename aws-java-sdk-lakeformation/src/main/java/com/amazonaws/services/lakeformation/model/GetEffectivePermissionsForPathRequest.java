@@ -28,7 +28,7 @@ public class GetEffectivePermissionsForPathRequest extends com.amazonaws.AmazonW
     /**
      * <p>
      * The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent metadata
-     * store. It contains database definitions, table definitions, and other control information to manage your AWS Lake
+     * store. It contains database definitions, table definitions, and other control information to manage your Lake
      * Formation environment.
      * </p>
      */
@@ -55,14 +55,14 @@ public class GetEffectivePermissionsForPathRequest extends com.amazonaws.AmazonW
     /**
      * <p>
      * The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent metadata
-     * store. It contains database definitions, table definitions, and other control information to manage your AWS Lake
+     * store. It contains database definitions, table definitions, and other control information to manage your Lake
      * Formation environment.
      * </p>
      * 
      * @param catalogId
      *        The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent
      *        metadata store. It contains database definitions, table definitions, and other control information to
-     *        manage your AWS Lake Formation environment.
+     *        manage your Lake Formation environment.
      */
 
     public void setCatalogId(String catalogId) {
@@ -72,13 +72,13 @@ public class GetEffectivePermissionsForPathRequest extends com.amazonaws.AmazonW
     /**
      * <p>
      * The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent metadata
-     * store. It contains database definitions, table definitions, and other control information to manage your AWS Lake
+     * store. It contains database definitions, table definitions, and other control information to manage your Lake
      * Formation environment.
      * </p>
      * 
      * @return The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent
      *         metadata store. It contains database definitions, table definitions, and other control information to
-     *         manage your AWS Lake Formation environment.
+     *         manage your Lake Formation environment.
      */
 
     public String getCatalogId() {
@@ -88,14 +88,14 @@ public class GetEffectivePermissionsForPathRequest extends com.amazonaws.AmazonW
     /**
      * <p>
      * The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent metadata
-     * store. It contains database definitions, table definitions, and other control information to manage your AWS Lake
+     * store. It contains database definitions, table definitions, and other control information to manage your Lake
      * Formation environment.
      * </p>
      * 
      * @param catalogId
      *        The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent
      *        metadata store. It contains database definitions, table definitions, and other control information to
-     *        manage your AWS Lake Formation environment.
+     *        manage your Lake Formation environment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

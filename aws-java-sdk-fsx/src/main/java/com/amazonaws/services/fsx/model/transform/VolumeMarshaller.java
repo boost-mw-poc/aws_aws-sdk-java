@@ -48,6 +48,10 @@ public class VolumeMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("VolumeType").build();
     private static final MarshallingInfo<StructuredPojo> LIFECYCLETRANSITIONREASON_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LifecycleTransitionReason").build();
+    private static final MarshallingInfo<List> ADMINISTRATIVEACTIONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AdministrativeActions").build();
+    private static final MarshallingInfo<StructuredPojo> OPENZFSCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("OpenZFSConfiguration").build();
 
     private static final VolumeMarshaller instance = new VolumeMarshaller();
 
@@ -75,6 +79,8 @@ public class VolumeMarshaller {
             protocolMarshaller.marshall(volume.getVolumeId(), VOLUMEID_BINDING);
             protocolMarshaller.marshall(volume.getVolumeType(), VOLUMETYPE_BINDING);
             protocolMarshaller.marshall(volume.getLifecycleTransitionReason(), LIFECYCLETRANSITIONREASON_BINDING);
+            protocolMarshaller.marshall(volume.getAdministrativeActions(), ADMINISTRATIVEACTIONS_BINDING);
+            protocolMarshaller.marshall(volume.getOpenZFSConfiguration(), OPENZFSCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

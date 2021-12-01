@@ -31,7 +31,7 @@ public class SearchDatabasesByLFTagsResult extends com.amazonaws.AmazonWebServic
     private String nextToken;
     /**
      * <p>
-     * A list of databases that meet the tag conditions.
+     * A list of databases that meet the LF-tag conditions.
      * </p>
      */
     private java.util.List<TaggedDatabase> databaseList;
@@ -78,10 +78,10 @@ public class SearchDatabasesByLFTagsResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * A list of databases that meet the tag conditions.
+     * A list of databases that meet the LF-tag conditions.
      * </p>
      * 
-     * @return A list of databases that meet the tag conditions.
+     * @return A list of databases that meet the LF-tag conditions.
      */
 
     public java.util.List<TaggedDatabase> getDatabaseList() {
@@ -90,11 +90,11 @@ public class SearchDatabasesByLFTagsResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * A list of databases that meet the tag conditions.
+     * A list of databases that meet the LF-tag conditions.
      * </p>
      * 
      * @param databaseList
-     *        A list of databases that meet the tag conditions.
+     *        A list of databases that meet the LF-tag conditions.
      */
 
     public void setDatabaseList(java.util.Collection<TaggedDatabase> databaseList) {
@@ -108,7 +108,7 @@ public class SearchDatabasesByLFTagsResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * A list of databases that meet the tag conditions.
+     * A list of databases that meet the LF-tag conditions.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -117,7 +117,7 @@ public class SearchDatabasesByLFTagsResult extends com.amazonaws.AmazonWebServic
      * </p>
      * 
      * @param databaseList
-     *        A list of databases that meet the tag conditions.
+     *        A list of databases that meet the LF-tag conditions.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -133,11 +133,11 @@ public class SearchDatabasesByLFTagsResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * A list of databases that meet the tag conditions.
+     * A list of databases that meet the LF-tag conditions.
      * </p>
      * 
      * @param databaseList
-     *        A list of databases that meet the tag conditions.
+     *        A list of databases that meet the LF-tag conditions.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

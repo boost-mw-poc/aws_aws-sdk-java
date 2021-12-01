@@ -28,7 +28,7 @@ public class ListPermissionsRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent metadata
-     * store. It contains database definitions, table definitions, and other control information to manage your AWS Lake
+     * store. It contains database definitions, table definitions, and other control information to manage your Lake
      * Formation environment.
      * </p>
      */
@@ -67,18 +67,24 @@ public class ListPermissionsRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      */
     private Integer maxResults;
+    /**
+     * <p>
+     * Indicates that related permissions should be included in the results.
+     * </p>
+     */
+    private String includeRelated;
 
     /**
      * <p>
      * The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent metadata
-     * store. It contains database definitions, table definitions, and other control information to manage your AWS Lake
+     * store. It contains database definitions, table definitions, and other control information to manage your Lake
      * Formation environment.
      * </p>
      * 
      * @param catalogId
      *        The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent
      *        metadata store. It contains database definitions, table definitions, and other control information to
-     *        manage your AWS Lake Formation environment.
+     *        manage your Lake Formation environment.
      */
 
     public void setCatalogId(String catalogId) {
@@ -88,13 +94,13 @@ public class ListPermissionsRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent metadata
-     * store. It contains database definitions, table definitions, and other control information to manage your AWS Lake
+     * store. It contains database definitions, table definitions, and other control information to manage your Lake
      * Formation environment.
      * </p>
      * 
      * @return The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent
      *         metadata store. It contains database definitions, table definitions, and other control information to
-     *         manage your AWS Lake Formation environment.
+     *         manage your Lake Formation environment.
      */
 
     public String getCatalogId() {
@@ -104,14 +110,14 @@ public class ListPermissionsRequest extends com.amazonaws.AmazonWebServiceReques
     /**
      * <p>
      * The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent metadata
-     * store. It contains database definitions, table definitions, and other control information to manage your AWS Lake
+     * store. It contains database definitions, table definitions, and other control information to manage your Lake
      * Formation environment.
      * </p>
      * 
      * @param catalogId
      *        The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent
      *        metadata store. It contains database definitions, table definitions, and other control information to
-     *        manage your AWS Lake Formation environment.
+     *        manage your Lake Formation environment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -361,6 +367,46 @@ public class ListPermissionsRequest extends com.amazonaws.AmazonWebServiceReques
     }
 
     /**
+     * <p>
+     * Indicates that related permissions should be included in the results.
+     * </p>
+     * 
+     * @param includeRelated
+     *        Indicates that related permissions should be included in the results.
+     */
+
+    public void setIncludeRelated(String includeRelated) {
+        this.includeRelated = includeRelated;
+    }
+
+    /**
+     * <p>
+     * Indicates that related permissions should be included in the results.
+     * </p>
+     * 
+     * @return Indicates that related permissions should be included in the results.
+     */
+
+    public String getIncludeRelated() {
+        return this.includeRelated;
+    }
+
+    /**
+     * <p>
+     * Indicates that related permissions should be included in the results.
+     * </p>
+     * 
+     * @param includeRelated
+     *        Indicates that related permissions should be included in the results.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListPermissionsRequest withIncludeRelated(String includeRelated) {
+        setIncludeRelated(includeRelated);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -383,7 +429,9 @@ public class ListPermissionsRequest extends com.amazonaws.AmazonWebServiceReques
         if (getNextToken() != null)
             sb.append("NextToken: ").append(getNextToken()).append(",");
         if (getMaxResults() != null)
-            sb.append("MaxResults: ").append(getMaxResults());
+            sb.append("MaxResults: ").append(getMaxResults()).append(",");
+        if (getIncludeRelated() != null)
+            sb.append("IncludeRelated: ").append(getIncludeRelated());
         sb.append("}");
         return sb.toString();
     }
@@ -422,6 +470,10 @@ public class ListPermissionsRequest extends com.amazonaws.AmazonWebServiceReques
             return false;
         if (other.getMaxResults() != null && other.getMaxResults().equals(this.getMaxResults()) == false)
             return false;
+        if (other.getIncludeRelated() == null ^ this.getIncludeRelated() == null)
+            return false;
+        if (other.getIncludeRelated() != null && other.getIncludeRelated().equals(this.getIncludeRelated()) == false)
+            return false;
         return true;
     }
 
@@ -436,6 +488,7 @@ public class ListPermissionsRequest extends com.amazonaws.AmazonWebServiceReques
         hashCode = prime * hashCode + ((getResource() == null) ? 0 : getResource().hashCode());
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
         hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
+        hashCode = prime * hashCode + ((getIncludeRelated() == null) ? 0 : getIncludeRelated().hashCode());
         return hashCode;
     }
 

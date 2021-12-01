@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A structure describing a database resource with tags.
+ * A structure describing a database resource with LF-tags.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lakeformation-2017-03-31/TaggedDatabase" target="_top">AWS API
@@ -30,24 +30,24 @@ public class TaggedDatabase implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A database that has tags attached to it.
+     * A database that has LF-tags attached to it.
      * </p>
      */
     private DatabaseResource database;
     /**
      * <p>
-     * A list of tags attached to the database.
+     * A list of LF-tags attached to the database.
      * </p>
      */
     private java.util.List<LFTagPair> lFTags;
 
     /**
      * <p>
-     * A database that has tags attached to it.
+     * A database that has LF-tags attached to it.
      * </p>
      * 
      * @param database
-     *        A database that has tags attached to it.
+     *        A database that has LF-tags attached to it.
      */
 
     public void setDatabase(DatabaseResource database) {
@@ -56,10 +56,10 @@ public class TaggedDatabase implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A database that has tags attached to it.
+     * A database that has LF-tags attached to it.
      * </p>
      * 
-     * @return A database that has tags attached to it.
+     * @return A database that has LF-tags attached to it.
      */
 
     public DatabaseResource getDatabase() {
@@ -68,11 +68,11 @@ public class TaggedDatabase implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A database that has tags attached to it.
+     * A database that has LF-tags attached to it.
      * </p>
      * 
      * @param database
-     *        A database that has tags attached to it.
+     *        A database that has LF-tags attached to it.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -83,10 +83,10 @@ public class TaggedDatabase implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A list of tags attached to the database.
+     * A list of LF-tags attached to the database.
      * </p>
      * 
-     * @return A list of tags attached to the database.
+     * @return A list of LF-tags attached to the database.
      */
 
     public java.util.List<LFTagPair> getLFTags() {
@@ -95,11 +95,11 @@ public class TaggedDatabase implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A list of tags attached to the database.
+     * A list of LF-tags attached to the database.
      * </p>
      * 
      * @param lFTags
-     *        A list of tags attached to the database.
+     *        A list of LF-tags attached to the database.
      */
 
     public void setLFTags(java.util.Collection<LFTagPair> lFTags) {
@@ -113,7 +113,7 @@ public class TaggedDatabase implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A list of tags attached to the database.
+     * A list of LF-tags attached to the database.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -122,7 +122,7 @@ public class TaggedDatabase implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param lFTags
-     *        A list of tags attached to the database.
+     *        A list of LF-tags attached to the database.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -138,11 +138,11 @@ public class TaggedDatabase implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A list of tags attached to the database.
+     * A list of LF-tags attached to the database.
      * </p>
      * 
      * @param lFTags
-     *        A list of tags attached to the database.
+     *        A list of LF-tags attached to the database.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

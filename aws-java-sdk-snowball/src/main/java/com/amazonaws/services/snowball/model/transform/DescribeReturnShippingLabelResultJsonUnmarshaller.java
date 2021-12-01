@@ -56,6 +56,10 @@ public class DescribeReturnShippingLabelResultJsonUnmarshaller implements Unmars
                     context.nextToken();
                     describeReturnShippingLabelResult.setExpirationDate(DateJsonUnmarshallerFactory.getInstance("unixTimestamp").unmarshall(context));
                 }
+                if (context.testExpression("ReturnShippingLabelURI", targetDepth)) {
+                    context.nextToken();
+                    describeReturnShippingLabelResult.setReturnShippingLabelURI(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

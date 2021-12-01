@@ -66,6 +66,19 @@ public class AbstractAWSKafkaAsync extends AbstractAWSKafka implements AWSKafkaA
     }
 
     @Override
+    public java.util.concurrent.Future<CreateClusterV2Result> createClusterV2Async(CreateClusterV2Request request) {
+
+        return createClusterV2Async(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateClusterV2Result> createClusterV2Async(CreateClusterV2Request request,
+            com.amazonaws.handlers.AsyncHandler<CreateClusterV2Request, CreateClusterV2Result> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateConfigurationResult> createConfigurationAsync(CreateConfigurationRequest request) {
 
         return createConfigurationAsync(request, null);
@@ -126,6 +139,19 @@ public class AbstractAWSKafkaAsync extends AbstractAWSKafka implements AWSKafkaA
     @Override
     public java.util.concurrent.Future<DescribeClusterOperationResult> describeClusterOperationAsync(DescribeClusterOperationRequest request,
             com.amazonaws.handlers.AsyncHandler<DescribeClusterOperationRequest, DescribeClusterOperationResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeClusterV2Result> describeClusterV2Async(DescribeClusterV2Request request) {
+
+        return describeClusterV2Async(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeClusterV2Result> describeClusterV2Async(DescribeClusterV2Request request,
+            com.amazonaws.handlers.AsyncHandler<DescribeClusterV2Request, DescribeClusterV2Result> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -204,6 +230,19 @@ public class AbstractAWSKafkaAsync extends AbstractAWSKafka implements AWSKafkaA
     @Override
     public java.util.concurrent.Future<ListClustersResult> listClustersAsync(ListClustersRequest request,
             com.amazonaws.handlers.AsyncHandler<ListClustersRequest, ListClustersResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListClustersV2Result> listClustersV2Async(ListClustersV2Request request) {
+
+        return listClustersV2Async(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListClustersV2Result> listClustersV2Async(ListClustersV2Request request,
+            com.amazonaws.handlers.AsyncHandler<ListClustersV2Request, ListClustersV2Result> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

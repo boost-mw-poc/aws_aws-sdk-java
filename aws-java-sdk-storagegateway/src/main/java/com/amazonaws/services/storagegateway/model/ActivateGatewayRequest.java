@@ -115,8 +115,8 @@ public class ActivateGatewayRequest extends com.amazonaws.AmazonWebServiceReques
      * the gateway and cannot be changed after activation. The default value is <code>CACHED</code>.
      * </p>
      * <p>
-     * Valid Values: <code>STORED</code> | <code>CACHED</code> | <code>VTL</code> | <code>FILE_S3</code> |
-     * <code>FILE_FSX_SMB|</code>
+     * Valid Values: <code>STORED</code> | <code>CACHED</code> | <code>VTL</code> | <code>VTL_SNOW</code> |
+     * <code>FILE_S3</code> | <code>FILE_FSX_SMB</code>
      * </p>
      */
     private String gatewayType;
@@ -435,8 +435,8 @@ public class ActivateGatewayRequest extends com.amazonaws.AmazonWebServiceReques
      * the gateway and cannot be changed after activation. The default value is <code>CACHED</code>.
      * </p>
      * <p>
-     * Valid Values: <code>STORED</code> | <code>CACHED</code> | <code>VTL</code> | <code>FILE_S3</code> |
-     * <code>FILE_FSX_SMB|</code>
+     * Valid Values: <code>STORED</code> | <code>CACHED</code> | <code>VTL</code> | <code>VTL_SNOW</code> |
+     * <code>FILE_S3</code> | <code>FILE_FSX_SMB</code>
      * </p>
      * 
      * @param gatewayType
@@ -444,8 +444,8 @@ public class ActivateGatewayRequest extends com.amazonaws.AmazonWebServiceReques
      *        functions of the gateway and cannot be changed after activation. The default value is <code>CACHED</code>
      *        .</p>
      *        <p>
-     *        Valid Values: <code>STORED</code> | <code>CACHED</code> | <code>VTL</code> | <code>FILE_S3</code> |
-     *        <code>FILE_FSX_SMB|</code>
+     *        Valid Values: <code>STORED</code> | <code>CACHED</code> | <code>VTL</code> | <code>VTL_SNOW</code> |
+     *        <code>FILE_S3</code> | <code>FILE_FSX_SMB</code>
      */
 
     public void setGatewayType(String gatewayType) {
@@ -458,16 +458,16 @@ public class ActivateGatewayRequest extends com.amazonaws.AmazonWebServiceReques
      * the gateway and cannot be changed after activation. The default value is <code>CACHED</code>.
      * </p>
      * <p>
-     * Valid Values: <code>STORED</code> | <code>CACHED</code> | <code>VTL</code> | <code>FILE_S3</code> |
-     * <code>FILE_FSX_SMB|</code>
+     * Valid Values: <code>STORED</code> | <code>CACHED</code> | <code>VTL</code> | <code>VTL_SNOW</code> |
+     * <code>FILE_S3</code> | <code>FILE_FSX_SMB</code>
      * </p>
      * 
      * @return A value that defines the type of gateway to activate. The type specified is critical to all later
      *         functions of the gateway and cannot be changed after activation. The default value is <code>CACHED</code>
      *         .</p>
      *         <p>
-     *         Valid Values: <code>STORED</code> | <code>CACHED</code> | <code>VTL</code> | <code>FILE_S3</code> |
-     *         <code>FILE_FSX_SMB|</code>
+     *         Valid Values: <code>STORED</code> | <code>CACHED</code> | <code>VTL</code> | <code>VTL_SNOW</code> |
+     *         <code>FILE_S3</code> | <code>FILE_FSX_SMB</code>
      */
 
     public String getGatewayType() {
@@ -480,8 +480,8 @@ public class ActivateGatewayRequest extends com.amazonaws.AmazonWebServiceReques
      * the gateway and cannot be changed after activation. The default value is <code>CACHED</code>.
      * </p>
      * <p>
-     * Valid Values: <code>STORED</code> | <code>CACHED</code> | <code>VTL</code> | <code>FILE_S3</code> |
-     * <code>FILE_FSX_SMB|</code>
+     * Valid Values: <code>STORED</code> | <code>CACHED</code> | <code>VTL</code> | <code>VTL_SNOW</code> |
+     * <code>FILE_S3</code> | <code>FILE_FSX_SMB</code>
      * </p>
      * 
      * @param gatewayType
@@ -489,8 +489,8 @@ public class ActivateGatewayRequest extends com.amazonaws.AmazonWebServiceReques
      *        functions of the gateway and cannot be changed after activation. The default value is <code>CACHED</code>
      *        .</p>
      *        <p>
-     *        Valid Values: <code>STORED</code> | <code>CACHED</code> | <code>VTL</code> | <code>FILE_S3</code> |
-     *        <code>FILE_FSX_SMB|</code>
+     *        Valid Values: <code>STORED</code> | <code>CACHED</code> | <code>VTL</code> | <code>VTL_SNOW</code> |
+     *        <code>FILE_S3</code> | <code>FILE_FSX_SMB</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -20,7 +20,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 /**
  * <p>
  * A structure that allows an admin to grant user permissions on certain conditions. For example, granting a role access
- * to all columns not tagged 'PII' of tables tagged 'Prod'.
+ * to all columns that do not have the LF-tag 'PII' in tables that have the LF-tag 'Prod'.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lakeformation-2017-03-31/LFTag" target="_top">AWS API
@@ -31,7 +31,7 @@ public class LFTag implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The key-name for the tag.
+     * The key-name for the LF-tag.
      * </p>
      */
     private String tagKey;
@@ -44,11 +44,11 @@ public class LFTag implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The key-name for the tag.
+     * The key-name for the LF-tag.
      * </p>
      * 
      * @param tagKey
-     *        The key-name for the tag.
+     *        The key-name for the LF-tag.
      */
 
     public void setTagKey(String tagKey) {
@@ -57,10 +57,10 @@ public class LFTag implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The key-name for the tag.
+     * The key-name for the LF-tag.
      * </p>
      * 
-     * @return The key-name for the tag.
+     * @return The key-name for the LF-tag.
      */
 
     public String getTagKey() {
@@ -69,11 +69,11 @@ public class LFTag implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The key-name for the tag.
+     * The key-name for the LF-tag.
      * </p>
      * 
      * @param tagKey
-     *        The key-name for the tag.
+     *        The key-name for the LF-tag.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

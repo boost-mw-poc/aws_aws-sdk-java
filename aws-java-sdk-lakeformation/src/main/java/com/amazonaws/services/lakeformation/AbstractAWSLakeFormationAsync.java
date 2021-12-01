@@ -67,6 +67,45 @@ public class AbstractAWSLakeFormationAsync extends AbstractAWSLakeFormation impl
     }
 
     @Override
+    public java.util.concurrent.Future<CancelTransactionResult> cancelTransactionAsync(CancelTransactionRequest request) {
+
+        return cancelTransactionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CancelTransactionResult> cancelTransactionAsync(CancelTransactionRequest request,
+            com.amazonaws.handlers.AsyncHandler<CancelTransactionRequest, CancelTransactionResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<CommitTransactionResult> commitTransactionAsync(CommitTransactionRequest request) {
+
+        return commitTransactionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CommitTransactionResult> commitTransactionAsync(CommitTransactionRequest request,
+            com.amazonaws.handlers.AsyncHandler<CommitTransactionRequest, CommitTransactionResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateDataCellsFilterResult> createDataCellsFilterAsync(CreateDataCellsFilterRequest request) {
+
+        return createDataCellsFilterAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateDataCellsFilterResult> createDataCellsFilterAsync(CreateDataCellsFilterRequest request,
+            com.amazonaws.handlers.AsyncHandler<CreateDataCellsFilterRequest, CreateDataCellsFilterResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateLFTagResult> createLFTagAsync(CreateLFTagRequest request) {
 
         return createLFTagAsync(request, null);
@@ -80,6 +119,19 @@ public class AbstractAWSLakeFormationAsync extends AbstractAWSLakeFormation impl
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteDataCellsFilterResult> deleteDataCellsFilterAsync(DeleteDataCellsFilterRequest request) {
+
+        return deleteDataCellsFilterAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteDataCellsFilterResult> deleteDataCellsFilterAsync(DeleteDataCellsFilterRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteDataCellsFilterRequest, DeleteDataCellsFilterResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteLFTagResult> deleteLFTagAsync(DeleteLFTagRequest request) {
 
         return deleteLFTagAsync(request, null);
@@ -88,6 +140,19 @@ public class AbstractAWSLakeFormationAsync extends AbstractAWSLakeFormation impl
     @Override
     public java.util.concurrent.Future<DeleteLFTagResult> deleteLFTagAsync(DeleteLFTagRequest request,
             com.amazonaws.handlers.AsyncHandler<DeleteLFTagRequest, DeleteLFTagResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteObjectsOnCancelResult> deleteObjectsOnCancelAsync(DeleteObjectsOnCancelRequest request) {
+
+        return deleteObjectsOnCancelAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteObjectsOnCancelResult> deleteObjectsOnCancelAsync(DeleteObjectsOnCancelRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteObjectsOnCancelRequest, DeleteObjectsOnCancelResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -114,6 +179,32 @@ public class AbstractAWSLakeFormationAsync extends AbstractAWSLakeFormation impl
     @Override
     public java.util.concurrent.Future<DescribeResourceResult> describeResourceAsync(DescribeResourceRequest request,
             com.amazonaws.handlers.AsyncHandler<DescribeResourceRequest, DescribeResourceResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeTransactionResult> describeTransactionAsync(DescribeTransactionRequest request) {
+
+        return describeTransactionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeTransactionResult> describeTransactionAsync(DescribeTransactionRequest request,
+            com.amazonaws.handlers.AsyncHandler<DescribeTransactionRequest, DescribeTransactionResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ExtendTransactionResult> extendTransactionAsync(ExtendTransactionRequest request) {
+
+        return extendTransactionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ExtendTransactionResult> extendTransactionAsync(ExtendTransactionRequest request,
+            com.amazonaws.handlers.AsyncHandler<ExtendTransactionRequest, ExtendTransactionResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -158,6 +249,32 @@ public class AbstractAWSLakeFormationAsync extends AbstractAWSLakeFormation impl
     }
 
     @Override
+    public java.util.concurrent.Future<GetQueryStateResult> getQueryStateAsync(GetQueryStateRequest request) {
+
+        return getQueryStateAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetQueryStateResult> getQueryStateAsync(GetQueryStateRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetQueryStateRequest, GetQueryStateResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetQueryStatisticsResult> getQueryStatisticsAsync(GetQueryStatisticsRequest request) {
+
+        return getQueryStatisticsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetQueryStatisticsResult> getQueryStatisticsAsync(GetQueryStatisticsRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetQueryStatisticsRequest, GetQueryStatisticsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GetResourceLFTagsResult> getResourceLFTagsAsync(GetResourceLFTagsRequest request) {
 
         return getResourceLFTagsAsync(request, null);
@@ -171,6 +288,45 @@ public class AbstractAWSLakeFormationAsync extends AbstractAWSLakeFormation impl
     }
 
     @Override
+    public java.util.concurrent.Future<GetTableObjectsResult> getTableObjectsAsync(GetTableObjectsRequest request) {
+
+        return getTableObjectsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetTableObjectsResult> getTableObjectsAsync(GetTableObjectsRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetTableObjectsRequest, GetTableObjectsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetWorkUnitResultsResult> getWorkUnitResultsAsync(GetWorkUnitResultsRequest request) {
+
+        return getWorkUnitResultsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetWorkUnitResultsResult> getWorkUnitResultsAsync(GetWorkUnitResultsRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetWorkUnitResultsRequest, GetWorkUnitResultsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetWorkUnitsResult> getWorkUnitsAsync(GetWorkUnitsRequest request) {
+
+        return getWorkUnitsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetWorkUnitsResult> getWorkUnitsAsync(GetWorkUnitsRequest request,
+            com.amazonaws.handlers.AsyncHandler<GetWorkUnitsRequest, GetWorkUnitsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<GrantPermissionsResult> grantPermissionsAsync(GrantPermissionsRequest request) {
 
         return grantPermissionsAsync(request, null);
@@ -179,6 +335,19 @@ public class AbstractAWSLakeFormationAsync extends AbstractAWSLakeFormation impl
     @Override
     public java.util.concurrent.Future<GrantPermissionsResult> grantPermissionsAsync(GrantPermissionsRequest request,
             com.amazonaws.handlers.AsyncHandler<GrantPermissionsRequest, GrantPermissionsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListDataCellsFilterResult> listDataCellsFilterAsync(ListDataCellsFilterRequest request) {
+
+        return listDataCellsFilterAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListDataCellsFilterResult> listDataCellsFilterAsync(ListDataCellsFilterRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListDataCellsFilterRequest, ListDataCellsFilterResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -218,6 +387,32 @@ public class AbstractAWSLakeFormationAsync extends AbstractAWSLakeFormation impl
     @Override
     public java.util.concurrent.Future<ListResourcesResult> listResourcesAsync(ListResourcesRequest request,
             com.amazonaws.handlers.AsyncHandler<ListResourcesRequest, ListResourcesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListTableStorageOptimizersResult> listTableStorageOptimizersAsync(ListTableStorageOptimizersRequest request) {
+
+        return listTableStorageOptimizersAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListTableStorageOptimizersResult> listTableStorageOptimizersAsync(ListTableStorageOptimizersRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListTableStorageOptimizersRequest, ListTableStorageOptimizersResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListTransactionsResult> listTransactionsAsync(ListTransactionsRequest request) {
+
+        return listTransactionsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListTransactionsResult> listTransactionsAsync(ListTransactionsRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListTransactionsRequest, ListTransactionsResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }
@@ -301,6 +496,32 @@ public class AbstractAWSLakeFormationAsync extends AbstractAWSLakeFormation impl
     }
 
     @Override
+    public java.util.concurrent.Future<StartQueryPlanningResult> startQueryPlanningAsync(StartQueryPlanningRequest request) {
+
+        return startQueryPlanningAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartQueryPlanningResult> startQueryPlanningAsync(StartQueryPlanningRequest request,
+            com.amazonaws.handlers.AsyncHandler<StartQueryPlanningRequest, StartQueryPlanningResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartTransactionResult> startTransactionAsync(StartTransactionRequest request) {
+
+        return startTransactionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartTransactionResult> startTransactionAsync(StartTransactionRequest request,
+            com.amazonaws.handlers.AsyncHandler<StartTransactionRequest, StartTransactionResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<UpdateLFTagResult> updateLFTagAsync(UpdateLFTagRequest request) {
 
         return updateLFTagAsync(request, null);
@@ -322,6 +543,32 @@ public class AbstractAWSLakeFormationAsync extends AbstractAWSLakeFormation impl
     @Override
     public java.util.concurrent.Future<UpdateResourceResult> updateResourceAsync(UpdateResourceRequest request,
             com.amazonaws.handlers.AsyncHandler<UpdateResourceRequest, UpdateResourceResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateTableObjectsResult> updateTableObjectsAsync(UpdateTableObjectsRequest request) {
+
+        return updateTableObjectsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateTableObjectsResult> updateTableObjectsAsync(UpdateTableObjectsRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateTableObjectsRequest, UpdateTableObjectsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateTableStorageOptimizerResult> updateTableStorageOptimizerAsync(UpdateTableStorageOptimizerRequest request) {
+
+        return updateTableStorageOptimizerAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateTableStorageOptimizerResult> updateTableStorageOptimizerAsync(UpdateTableStorageOptimizerRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateTableStorageOptimizerRequest, UpdateTableStorageOptimizerResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

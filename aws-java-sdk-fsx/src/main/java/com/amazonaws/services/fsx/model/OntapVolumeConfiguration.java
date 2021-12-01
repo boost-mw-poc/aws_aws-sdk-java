@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The configuration of an Amazon FSx for NetApp ONTAP volume
+ * The configuration of an Amazon FSx for NetApp ONTAP volume.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/OntapVolumeConfiguration" target="_top">AWS API
@@ -54,10 +54,11 @@ public class OntapVolumeConfiguration implements Serializable, Cloneable, Struct
     private String flexCacheEndpointType;
     /**
      * <p>
-     * Specifies the directory that NAS clients use to mount the volume, along with the SVM DNS name or IP address. You
-     * can create a <code>JunctionPath</code> directly below a parent volume junction or on a directory within a volume.
-     * A <code>JunctionPath</code> for a volume named vol3 might be /vol1/vol2/vol3, or /vol1/dir2/vol3, or even
-     * /dir1/dir2/vol3..
+     * Specifies the directory that network-attached storage (NAS) clients use to mount the volume, along with the
+     * storage virtual machine (SVM) Domain Name System (DNS) name or IP address. You can create a
+     * <code>JunctionPath</code> directly below a parent volume junction or on a directory within a volume. A
+     * <code>JunctionPath</code> for a volume named <code>vol3</code> might be <code>/vol1/vol2/vol3</code>, or
+     * <code>/vol1/dir2/vol3</code>, or even <code>/dir1/dir2/vol3</code>.
      * </p>
      */
     private String junctionPath;
@@ -87,13 +88,13 @@ public class OntapVolumeConfiguration implements Serializable, Cloneable, Struct
     private String storageVirtualMachineId;
     /**
      * <p>
-     * A boolean flag indicating whether this volume is the root volume for its storage virtual machine (SVM). Only one
-     * volume on an SVM can be the root volume. This value defaults to false. If this value is true, then this is the
-     * SVM root volume.
+     * A Boolean flag indicating whether this volume is the root volume for its storage virtual machine (SVM). Only one
+     * volume on an SVM can be the root volume. This value defaults to <code>false</code>. If this value is
+     * <code>true</code>, then this is the SVM root volume.
      * </p>
      * <p>
      * This flag is useful when you're deleting an SVM, because you must first delete all non-root volumes. This flag,
-     * when set to false, helps you identify which volumes to delete before you can delete the SVM.
+     * when set to <code>false</code>, helps you identify which volumes to delete before you can delete the SVM.
      * </p>
      */
     private Boolean storageVirtualMachineRoot;
@@ -105,7 +106,7 @@ public class OntapVolumeConfiguration implements Serializable, Cloneable, Struct
     private TieringPolicy tieringPolicy;
     /**
      * <p>
-     * The volume's UUID (universally unique identifier).
+     * The volume's universally unique identifier (UUID).
      * </p>
      */
     private String uUID;
@@ -116,13 +117,13 @@ public class OntapVolumeConfiguration implements Serializable, Cloneable, Struct
      * <ul>
      * <li>
      * <p>
-     * <code>RW</code> specifies a read-write volume. <code>RW</code> is the default.
+     * <code>RW</code> specifies a read/write volume. <code>RW</code> is the default.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>DP</code> specifies a data protection volume. You can protect data by replicating it to data protection
-     * mirror copies and use data protection mirror copies to recover data when a disaster occurs.
+     * <code>DP</code> specifies a data-protection volume. You can protect data by replicating it to data-protection
+     * mirror copies. If a disaster occurs, you can use these data-protection mirror copies to recover data.
      * </p>
      * </li>
      * <li>
@@ -336,17 +337,19 @@ public class OntapVolumeConfiguration implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * Specifies the directory that NAS clients use to mount the volume, along with the SVM DNS name or IP address. You
-     * can create a <code>JunctionPath</code> directly below a parent volume junction or on a directory within a volume.
-     * A <code>JunctionPath</code> for a volume named vol3 might be /vol1/vol2/vol3, or /vol1/dir2/vol3, or even
-     * /dir1/dir2/vol3..
+     * Specifies the directory that network-attached storage (NAS) clients use to mount the volume, along with the
+     * storage virtual machine (SVM) Domain Name System (DNS) name or IP address. You can create a
+     * <code>JunctionPath</code> directly below a parent volume junction or on a directory within a volume. A
+     * <code>JunctionPath</code> for a volume named <code>vol3</code> might be <code>/vol1/vol2/vol3</code>, or
+     * <code>/vol1/dir2/vol3</code>, or even <code>/dir1/dir2/vol3</code>.
      * </p>
      * 
      * @param junctionPath
-     *        Specifies the directory that NAS clients use to mount the volume, along with the SVM DNS name or IP
-     *        address. You can create a <code>JunctionPath</code> directly below a parent volume junction or on a
-     *        directory within a volume. A <code>JunctionPath</code> for a volume named vol3 might be /vol1/vol2/vol3,
-     *        or /vol1/dir2/vol3, or even /dir1/dir2/vol3..
+     *        Specifies the directory that network-attached storage (NAS) clients use to mount the volume, along with
+     *        the storage virtual machine (SVM) Domain Name System (DNS) name or IP address. You can create a
+     *        <code>JunctionPath</code> directly below a parent volume junction or on a directory within a volume. A
+     *        <code>JunctionPath</code> for a volume named <code>vol3</code> might be <code>/vol1/vol2/vol3</code>, or
+     *        <code>/vol1/dir2/vol3</code>, or even <code>/dir1/dir2/vol3</code>.
      */
 
     public void setJunctionPath(String junctionPath) {
@@ -355,16 +358,18 @@ public class OntapVolumeConfiguration implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * Specifies the directory that NAS clients use to mount the volume, along with the SVM DNS name or IP address. You
-     * can create a <code>JunctionPath</code> directly below a parent volume junction or on a directory within a volume.
-     * A <code>JunctionPath</code> for a volume named vol3 might be /vol1/vol2/vol3, or /vol1/dir2/vol3, or even
-     * /dir1/dir2/vol3..
+     * Specifies the directory that network-attached storage (NAS) clients use to mount the volume, along with the
+     * storage virtual machine (SVM) Domain Name System (DNS) name or IP address. You can create a
+     * <code>JunctionPath</code> directly below a parent volume junction or on a directory within a volume. A
+     * <code>JunctionPath</code> for a volume named <code>vol3</code> might be <code>/vol1/vol2/vol3</code>, or
+     * <code>/vol1/dir2/vol3</code>, or even <code>/dir1/dir2/vol3</code>.
      * </p>
      * 
-     * @return Specifies the directory that NAS clients use to mount the volume, along with the SVM DNS name or IP
-     *         address. You can create a <code>JunctionPath</code> directly below a parent volume junction or on a
-     *         directory within a volume. A <code>JunctionPath</code> for a volume named vol3 might be /vol1/vol2/vol3,
-     *         or /vol1/dir2/vol3, or even /dir1/dir2/vol3..
+     * @return Specifies the directory that network-attached storage (NAS) clients use to mount the volume, along with
+     *         the storage virtual machine (SVM) Domain Name System (DNS) name or IP address. You can create a
+     *         <code>JunctionPath</code> directly below a parent volume junction or on a directory within a volume. A
+     *         <code>JunctionPath</code> for a volume named <code>vol3</code> might be <code>/vol1/vol2/vol3</code>, or
+     *         <code>/vol1/dir2/vol3</code>, or even <code>/dir1/dir2/vol3</code>.
      */
 
     public String getJunctionPath() {
@@ -373,17 +378,19 @@ public class OntapVolumeConfiguration implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * Specifies the directory that NAS clients use to mount the volume, along with the SVM DNS name or IP address. You
-     * can create a <code>JunctionPath</code> directly below a parent volume junction or on a directory within a volume.
-     * A <code>JunctionPath</code> for a volume named vol3 might be /vol1/vol2/vol3, or /vol1/dir2/vol3, or even
-     * /dir1/dir2/vol3..
+     * Specifies the directory that network-attached storage (NAS) clients use to mount the volume, along with the
+     * storage virtual machine (SVM) Domain Name System (DNS) name or IP address. You can create a
+     * <code>JunctionPath</code> directly below a parent volume junction or on a directory within a volume. A
+     * <code>JunctionPath</code> for a volume named <code>vol3</code> might be <code>/vol1/vol2/vol3</code>, or
+     * <code>/vol1/dir2/vol3</code>, or even <code>/dir1/dir2/vol3</code>.
      * </p>
      * 
      * @param junctionPath
-     *        Specifies the directory that NAS clients use to mount the volume, along with the SVM DNS name or IP
-     *        address. You can create a <code>JunctionPath</code> directly below a parent volume junction or on a
-     *        directory within a volume. A <code>JunctionPath</code> for a volume named vol3 might be /vol1/vol2/vol3,
-     *        or /vol1/dir2/vol3, or even /dir1/dir2/vol3..
+     *        Specifies the directory that network-attached storage (NAS) clients use to mount the volume, along with
+     *        the storage virtual machine (SVM) Domain Name System (DNS) name or IP address. You can create a
+     *        <code>JunctionPath</code> directly below a parent volume junction or on a directory within a volume. A
+     *        <code>JunctionPath</code> for a volume named <code>vol3</code> might be <code>/vol1/vol2/vol3</code>, or
+     *        <code>/vol1/dir2/vol3</code>, or even <code>/dir1/dir2/vol3</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -589,22 +596,23 @@ public class OntapVolumeConfiguration implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * A boolean flag indicating whether this volume is the root volume for its storage virtual machine (SVM). Only one
-     * volume on an SVM can be the root volume. This value defaults to false. If this value is true, then this is the
-     * SVM root volume.
+     * A Boolean flag indicating whether this volume is the root volume for its storage virtual machine (SVM). Only one
+     * volume on an SVM can be the root volume. This value defaults to <code>false</code>. If this value is
+     * <code>true</code>, then this is the SVM root volume.
      * </p>
      * <p>
      * This flag is useful when you're deleting an SVM, because you must first delete all non-root volumes. This flag,
-     * when set to false, helps you identify which volumes to delete before you can delete the SVM.
+     * when set to <code>false</code>, helps you identify which volumes to delete before you can delete the SVM.
      * </p>
      * 
      * @param storageVirtualMachineRoot
-     *        A boolean flag indicating whether this volume is the root volume for its storage virtual machine (SVM).
-     *        Only one volume on an SVM can be the root volume. This value defaults to false. If this value is true,
-     *        then this is the SVM root volume.</p>
+     *        A Boolean flag indicating whether this volume is the root volume for its storage virtual machine (SVM).
+     *        Only one volume on an SVM can be the root volume. This value defaults to <code>false</code>. If this value
+     *        is <code>true</code>, then this is the SVM root volume.</p>
      *        <p>
      *        This flag is useful when you're deleting an SVM, because you must first delete all non-root volumes. This
-     *        flag, when set to false, helps you identify which volumes to delete before you can delete the SVM.
+     *        flag, when set to <code>false</code>, helps you identify which volumes to delete before you can delete the
+     *        SVM.
      */
 
     public void setStorageVirtualMachineRoot(Boolean storageVirtualMachineRoot) {
@@ -613,21 +621,22 @@ public class OntapVolumeConfiguration implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * A boolean flag indicating whether this volume is the root volume for its storage virtual machine (SVM). Only one
-     * volume on an SVM can be the root volume. This value defaults to false. If this value is true, then this is the
-     * SVM root volume.
+     * A Boolean flag indicating whether this volume is the root volume for its storage virtual machine (SVM). Only one
+     * volume on an SVM can be the root volume. This value defaults to <code>false</code>. If this value is
+     * <code>true</code>, then this is the SVM root volume.
      * </p>
      * <p>
      * This flag is useful when you're deleting an SVM, because you must first delete all non-root volumes. This flag,
-     * when set to false, helps you identify which volumes to delete before you can delete the SVM.
+     * when set to <code>false</code>, helps you identify which volumes to delete before you can delete the SVM.
      * </p>
      * 
-     * @return A boolean flag indicating whether this volume is the root volume for its storage virtual machine (SVM).
-     *         Only one volume on an SVM can be the root volume. This value defaults to false. If this value is true,
-     *         then this is the SVM root volume.</p>
+     * @return A Boolean flag indicating whether this volume is the root volume for its storage virtual machine (SVM).
+     *         Only one volume on an SVM can be the root volume. This value defaults to <code>false</code>. If this
+     *         value is <code>true</code>, then this is the SVM root volume.</p>
      *         <p>
      *         This flag is useful when you're deleting an SVM, because you must first delete all non-root volumes. This
-     *         flag, when set to false, helps you identify which volumes to delete before you can delete the SVM.
+     *         flag, when set to <code>false</code>, helps you identify which volumes to delete before you can delete
+     *         the SVM.
      */
 
     public Boolean getStorageVirtualMachineRoot() {
@@ -636,22 +645,23 @@ public class OntapVolumeConfiguration implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * A boolean flag indicating whether this volume is the root volume for its storage virtual machine (SVM). Only one
-     * volume on an SVM can be the root volume. This value defaults to false. If this value is true, then this is the
-     * SVM root volume.
+     * A Boolean flag indicating whether this volume is the root volume for its storage virtual machine (SVM). Only one
+     * volume on an SVM can be the root volume. This value defaults to <code>false</code>. If this value is
+     * <code>true</code>, then this is the SVM root volume.
      * </p>
      * <p>
      * This flag is useful when you're deleting an SVM, because you must first delete all non-root volumes. This flag,
-     * when set to false, helps you identify which volumes to delete before you can delete the SVM.
+     * when set to <code>false</code>, helps you identify which volumes to delete before you can delete the SVM.
      * </p>
      * 
      * @param storageVirtualMachineRoot
-     *        A boolean flag indicating whether this volume is the root volume for its storage virtual machine (SVM).
-     *        Only one volume on an SVM can be the root volume. This value defaults to false. If this value is true,
-     *        then this is the SVM root volume.</p>
+     *        A Boolean flag indicating whether this volume is the root volume for its storage virtual machine (SVM).
+     *        Only one volume on an SVM can be the root volume. This value defaults to <code>false</code>. If this value
+     *        is <code>true</code>, then this is the SVM root volume.</p>
      *        <p>
      *        This flag is useful when you're deleting an SVM, because you must first delete all non-root volumes. This
-     *        flag, when set to false, helps you identify which volumes to delete before you can delete the SVM.
+     *        flag, when set to <code>false</code>, helps you identify which volumes to delete before you can delete the
+     *        SVM.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -662,21 +672,22 @@ public class OntapVolumeConfiguration implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * A boolean flag indicating whether this volume is the root volume for its storage virtual machine (SVM). Only one
-     * volume on an SVM can be the root volume. This value defaults to false. If this value is true, then this is the
-     * SVM root volume.
+     * A Boolean flag indicating whether this volume is the root volume for its storage virtual machine (SVM). Only one
+     * volume on an SVM can be the root volume. This value defaults to <code>false</code>. If this value is
+     * <code>true</code>, then this is the SVM root volume.
      * </p>
      * <p>
      * This flag is useful when you're deleting an SVM, because you must first delete all non-root volumes. This flag,
-     * when set to false, helps you identify which volumes to delete before you can delete the SVM.
+     * when set to <code>false</code>, helps you identify which volumes to delete before you can delete the SVM.
      * </p>
      * 
-     * @return A boolean flag indicating whether this volume is the root volume for its storage virtual machine (SVM).
-     *         Only one volume on an SVM can be the root volume. This value defaults to false. If this value is true,
-     *         then this is the SVM root volume.</p>
+     * @return A Boolean flag indicating whether this volume is the root volume for its storage virtual machine (SVM).
+     *         Only one volume on an SVM can be the root volume. This value defaults to <code>false</code>. If this
+     *         value is <code>true</code>, then this is the SVM root volume.</p>
      *         <p>
      *         This flag is useful when you're deleting an SVM, because you must first delete all non-root volumes. This
-     *         flag, when set to false, helps you identify which volumes to delete before you can delete the SVM.
+     *         flag, when set to <code>false</code>, helps you identify which volumes to delete before you can delete
+     *         the SVM.
      */
 
     public Boolean isStorageVirtualMachineRoot() {
@@ -725,11 +736,11 @@ public class OntapVolumeConfiguration implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The volume's UUID (universally unique identifier).
+     * The volume's universally unique identifier (UUID).
      * </p>
      * 
      * @param uUID
-     *        The volume's UUID (universally unique identifier).
+     *        The volume's universally unique identifier (UUID).
      */
 
     public void setUUID(String uUID) {
@@ -738,10 +749,10 @@ public class OntapVolumeConfiguration implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The volume's UUID (universally unique identifier).
+     * The volume's universally unique identifier (UUID).
      * </p>
      * 
-     * @return The volume's UUID (universally unique identifier).
+     * @return The volume's universally unique identifier (UUID).
      */
 
     public String getUUID() {
@@ -750,11 +761,11 @@ public class OntapVolumeConfiguration implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The volume's UUID (universally unique identifier).
+     * The volume's universally unique identifier (UUID).
      * </p>
      * 
      * @param uUID
-     *        The volume's UUID (universally unique identifier).
+     *        The volume's universally unique identifier (UUID).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -770,13 +781,13 @@ public class OntapVolumeConfiguration implements Serializable, Cloneable, Struct
      * <ul>
      * <li>
      * <p>
-     * <code>RW</code> specifies a read-write volume. <code>RW</code> is the default.
+     * <code>RW</code> specifies a read/write volume. <code>RW</code> is the default.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>DP</code> specifies a data protection volume. You can protect data by replicating it to data protection
-     * mirror copies and use data protection mirror copies to recover data when a disaster occurs.
+     * <code>DP</code> specifies a data-protection volume. You can protect data by replicating it to data-protection
+     * mirror copies. If a disaster occurs, you can use these data-protection mirror copies to recover data.
      * </p>
      * </li>
      * <li>
@@ -792,13 +803,14 @@ public class OntapVolumeConfiguration implements Serializable, Cloneable, Struct
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>RW</code> specifies a read-write volume. <code>RW</code> is the default.
+     *        <code>RW</code> specifies a read/write volume. <code>RW</code> is the default.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>DP</code> specifies a data protection volume. You can protect data by replicating it to data
-     *        protection mirror copies and use data protection mirror copies to recover data when a disaster occurs.
+     *        <code>DP</code> specifies a data-protection volume. You can protect data by replicating it to
+     *        data-protection mirror copies. If a disaster occurs, you can use these data-protection mirror copies to
+     *        recover data.
      *        </p>
      *        </li>
      *        <li>
@@ -821,13 +833,13 @@ public class OntapVolumeConfiguration implements Serializable, Cloneable, Struct
      * <ul>
      * <li>
      * <p>
-     * <code>RW</code> specifies a read-write volume. <code>RW</code> is the default.
+     * <code>RW</code> specifies a read/write volume. <code>RW</code> is the default.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>DP</code> specifies a data protection volume. You can protect data by replicating it to data protection
-     * mirror copies and use data protection mirror copies to recover data when a disaster occurs.
+     * <code>DP</code> specifies a data-protection volume. You can protect data by replicating it to data-protection
+     * mirror copies. If a disaster occurs, you can use these data-protection mirror copies to recover data.
      * </p>
      * </li>
      * <li>
@@ -842,13 +854,14 @@ public class OntapVolumeConfiguration implements Serializable, Cloneable, Struct
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>RW</code> specifies a read-write volume. <code>RW</code> is the default.
+     *         <code>RW</code> specifies a read/write volume. <code>RW</code> is the default.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>DP</code> specifies a data protection volume. You can protect data by replicating it to data
-     *         protection mirror copies and use data protection mirror copies to recover data when a disaster occurs.
+     *         <code>DP</code> specifies a data-protection volume. You can protect data by replicating it to
+     *         data-protection mirror copies. If a disaster occurs, you can use these data-protection mirror copies to
+     *         recover data.
      *         </p>
      *         </li>
      *         <li>
@@ -871,13 +884,13 @@ public class OntapVolumeConfiguration implements Serializable, Cloneable, Struct
      * <ul>
      * <li>
      * <p>
-     * <code>RW</code> specifies a read-write volume. <code>RW</code> is the default.
+     * <code>RW</code> specifies a read/write volume. <code>RW</code> is the default.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>DP</code> specifies a data protection volume. You can protect data by replicating it to data protection
-     * mirror copies and use data protection mirror copies to recover data when a disaster occurs.
+     * <code>DP</code> specifies a data-protection volume. You can protect data by replicating it to data-protection
+     * mirror copies. If a disaster occurs, you can use these data-protection mirror copies to recover data.
      * </p>
      * </li>
      * <li>
@@ -893,13 +906,14 @@ public class OntapVolumeConfiguration implements Serializable, Cloneable, Struct
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>RW</code> specifies a read-write volume. <code>RW</code> is the default.
+     *        <code>RW</code> specifies a read/write volume. <code>RW</code> is the default.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>DP</code> specifies a data protection volume. You can protect data by replicating it to data
-     *        protection mirror copies and use data protection mirror copies to recover data when a disaster occurs.
+     *        <code>DP</code> specifies a data-protection volume. You can protect data by replicating it to
+     *        data-protection mirror copies. If a disaster occurs, you can use these data-protection mirror copies to
+     *        recover data.
      *        </p>
      *        </li>
      *        <li>
@@ -924,13 +938,13 @@ public class OntapVolumeConfiguration implements Serializable, Cloneable, Struct
      * <ul>
      * <li>
      * <p>
-     * <code>RW</code> specifies a read-write volume. <code>RW</code> is the default.
+     * <code>RW</code> specifies a read/write volume. <code>RW</code> is the default.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>DP</code> specifies a data protection volume. You can protect data by replicating it to data protection
-     * mirror copies and use data protection mirror copies to recover data when a disaster occurs.
+     * <code>DP</code> specifies a data-protection volume. You can protect data by replicating it to data-protection
+     * mirror copies. If a disaster occurs, you can use these data-protection mirror copies to recover data.
      * </p>
      * </li>
      * <li>
@@ -946,13 +960,14 @@ public class OntapVolumeConfiguration implements Serializable, Cloneable, Struct
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>RW</code> specifies a read-write volume. <code>RW</code> is the default.
+     *        <code>RW</code> specifies a read/write volume. <code>RW</code> is the default.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>DP</code> specifies a data protection volume. You can protect data by replicating it to data
-     *        protection mirror copies and use data protection mirror copies to recover data when a disaster occurs.
+     *        <code>DP</code> specifies a data-protection volume. You can protect data by replicating it to
+     *        data-protection mirror copies. If a disaster occurs, you can use these data-protection mirror copies to
+     *        recover data.
      *        </p>
      *        </li>
      *        <li>

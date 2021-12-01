@@ -28,7 +28,7 @@ public class CopyBackupRequest extends com.amazonaws.AmazonWebServiceRequest imp
     private String clientRequestToken;
     /**
      * <p>
-     * The ID of the source backup. Specifies the ID of the backup that is being copied.
+     * The ID of the source backup. Specifies the ID of the backup that's being copied.
      * </p>
      */
     private String sourceBackupId;
@@ -36,7 +36,8 @@ public class CopyBackupRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * <p>
      * The source Amazon Web Services Region of the backup. Specifies the Amazon Web Services Region from which the
      * backup is being copied. The source and destination Regions must be in the same Amazon Web Services partition. If
-     * you don't specify a Region, it defaults to the Region where the request is sent from (in-Region copy).
+     * you don't specify a Region, <code>SourceRegion</code> defaults to the Region where the request is sent from
+     * (in-Region copy).
      * </p>
      */
     private String sourceRegion;
@@ -44,11 +45,11 @@ public class CopyBackupRequest extends com.amazonaws.AmazonWebServiceRequest imp
     private String kmsKeyId;
     /**
      * <p>
-     * A boolean flag indicating whether tags from the source backup should be copied to the backup copy. This value
-     * defaults to false.
+     * A Boolean flag indicating whether tags from the source backup should be copied to the backup copy. This value
+     * defaults to <code>false</code>.
      * </p>
      * <p>
-     * If you set <code>CopyTags</code> to true and the source backup has existing tags, you can use the
+     * If you set <code>CopyTags</code> to <code>true</code> and the source backup has existing tags, you can use the
      * <code>Tags</code> parameter to create new tags, provided that the sum of the source backup tags and the new tags
      * doesn't exceed 50. Both sets of tags are merged. If there are tag conflicts (for example, two tags with the same
      * key but different values), the tags created with the <code>Tags</code> parameter take precedence.
@@ -86,11 +87,11 @@ public class CopyBackupRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The ID of the source backup. Specifies the ID of the backup that is being copied.
+     * The ID of the source backup. Specifies the ID of the backup that's being copied.
      * </p>
      * 
      * @param sourceBackupId
-     *        The ID of the source backup. Specifies the ID of the backup that is being copied.
+     *        The ID of the source backup. Specifies the ID of the backup that's being copied.
      */
 
     public void setSourceBackupId(String sourceBackupId) {
@@ -99,10 +100,10 @@ public class CopyBackupRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The ID of the source backup. Specifies the ID of the backup that is being copied.
+     * The ID of the source backup. Specifies the ID of the backup that's being copied.
      * </p>
      * 
-     * @return The ID of the source backup. Specifies the ID of the backup that is being copied.
+     * @return The ID of the source backup. Specifies the ID of the backup that's being copied.
      */
 
     public String getSourceBackupId() {
@@ -111,11 +112,11 @@ public class CopyBackupRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The ID of the source backup. Specifies the ID of the backup that is being copied.
+     * The ID of the source backup. Specifies the ID of the backup that's being copied.
      * </p>
      * 
      * @param sourceBackupId
-     *        The ID of the source backup. Specifies the ID of the backup that is being copied.
+     *        The ID of the source backup. Specifies the ID of the backup that's being copied.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -128,14 +129,15 @@ public class CopyBackupRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * <p>
      * The source Amazon Web Services Region of the backup. Specifies the Amazon Web Services Region from which the
      * backup is being copied. The source and destination Regions must be in the same Amazon Web Services partition. If
-     * you don't specify a Region, it defaults to the Region where the request is sent from (in-Region copy).
+     * you don't specify a Region, <code>SourceRegion</code> defaults to the Region where the request is sent from
+     * (in-Region copy).
      * </p>
      * 
      * @param sourceRegion
      *        The source Amazon Web Services Region of the backup. Specifies the Amazon Web Services Region from which
      *        the backup is being copied. The source and destination Regions must be in the same Amazon Web Services
-     *        partition. If you don't specify a Region, it defaults to the Region where the request is sent from
-     *        (in-Region copy).
+     *        partition. If you don't specify a Region, <code>SourceRegion</code> defaults to the Region where the
+     *        request is sent from (in-Region copy).
      */
 
     public void setSourceRegion(String sourceRegion) {
@@ -146,13 +148,14 @@ public class CopyBackupRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * <p>
      * The source Amazon Web Services Region of the backup. Specifies the Amazon Web Services Region from which the
      * backup is being copied. The source and destination Regions must be in the same Amazon Web Services partition. If
-     * you don't specify a Region, it defaults to the Region where the request is sent from (in-Region copy).
+     * you don't specify a Region, <code>SourceRegion</code> defaults to the Region where the request is sent from
+     * (in-Region copy).
      * </p>
      * 
      * @return The source Amazon Web Services Region of the backup. Specifies the Amazon Web Services Region from which
      *         the backup is being copied. The source and destination Regions must be in the same Amazon Web Services
-     *         partition. If you don't specify a Region, it defaults to the Region where the request is sent from
-     *         (in-Region copy).
+     *         partition. If you don't specify a Region, <code>SourceRegion</code> defaults to the Region where the
+     *         request is sent from (in-Region copy).
      */
 
     public String getSourceRegion() {
@@ -163,14 +166,15 @@ public class CopyBackupRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * <p>
      * The source Amazon Web Services Region of the backup. Specifies the Amazon Web Services Region from which the
      * backup is being copied. The source and destination Regions must be in the same Amazon Web Services partition. If
-     * you don't specify a Region, it defaults to the Region where the request is sent from (in-Region copy).
+     * you don't specify a Region, <code>SourceRegion</code> defaults to the Region where the request is sent from
+     * (in-Region copy).
      * </p>
      * 
      * @param sourceRegion
      *        The source Amazon Web Services Region of the backup. Specifies the Amazon Web Services Region from which
      *        the backup is being copied. The source and destination Regions must be in the same Amazon Web Services
-     *        partition. If you don't specify a Region, it defaults to the Region where the request is sent from
-     *        (in-Region copy).
+     *        partition. If you don't specify a Region, <code>SourceRegion</code> defaults to the Region where the
+     *        request is sent from (in-Region copy).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -207,23 +211,23 @@ public class CopyBackupRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * A boolean flag indicating whether tags from the source backup should be copied to the backup copy. This value
-     * defaults to false.
+     * A Boolean flag indicating whether tags from the source backup should be copied to the backup copy. This value
+     * defaults to <code>false</code>.
      * </p>
      * <p>
-     * If you set <code>CopyTags</code> to true and the source backup has existing tags, you can use the
+     * If you set <code>CopyTags</code> to <code>true</code> and the source backup has existing tags, you can use the
      * <code>Tags</code> parameter to create new tags, provided that the sum of the source backup tags and the new tags
      * doesn't exceed 50. Both sets of tags are merged. If there are tag conflicts (for example, two tags with the same
      * key but different values), the tags created with the <code>Tags</code> parameter take precedence.
      * </p>
      * 
      * @param copyTags
-     *        A boolean flag indicating whether tags from the source backup should be copied to the backup copy. This
-     *        value defaults to false.</p>
+     *        A Boolean flag indicating whether tags from the source backup should be copied to the backup copy. This
+     *        value defaults to <code>false</code>.</p>
      *        <p>
-     *        If you set <code>CopyTags</code> to true and the source backup has existing tags, you can use the
-     *        <code>Tags</code> parameter to create new tags, provided that the sum of the source backup tags and the
-     *        new tags doesn't exceed 50. Both sets of tags are merged. If there are tag conflicts (for example, two
+     *        If you set <code>CopyTags</code> to <code>true</code> and the source backup has existing tags, you can use
+     *        the <code>Tags</code> parameter to create new tags, provided that the sum of the source backup tags and
+     *        the new tags doesn't exceed 50. Both sets of tags are merged. If there are tag conflicts (for example, two
      *        tags with the same key but different values), the tags created with the <code>Tags</code> parameter take
      *        precedence.
      */
@@ -234,24 +238,24 @@ public class CopyBackupRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * A boolean flag indicating whether tags from the source backup should be copied to the backup copy. This value
-     * defaults to false.
+     * A Boolean flag indicating whether tags from the source backup should be copied to the backup copy. This value
+     * defaults to <code>false</code>.
      * </p>
      * <p>
-     * If you set <code>CopyTags</code> to true and the source backup has existing tags, you can use the
+     * If you set <code>CopyTags</code> to <code>true</code> and the source backup has existing tags, you can use the
      * <code>Tags</code> parameter to create new tags, provided that the sum of the source backup tags and the new tags
      * doesn't exceed 50. Both sets of tags are merged. If there are tag conflicts (for example, two tags with the same
      * key but different values), the tags created with the <code>Tags</code> parameter take precedence.
      * </p>
      * 
-     * @return A boolean flag indicating whether tags from the source backup should be copied to the backup copy. This
-     *         value defaults to false.</p>
+     * @return A Boolean flag indicating whether tags from the source backup should be copied to the backup copy. This
+     *         value defaults to <code>false</code>.</p>
      *         <p>
-     *         If you set <code>CopyTags</code> to true and the source backup has existing tags, you can use the
-     *         <code>Tags</code> parameter to create new tags, provided that the sum of the source backup tags and the
-     *         new tags doesn't exceed 50. Both sets of tags are merged. If there are tag conflicts (for example, two
-     *         tags with the same key but different values), the tags created with the <code>Tags</code> parameter take
-     *         precedence.
+     *         If you set <code>CopyTags</code> to <code>true</code> and the source backup has existing tags, you can
+     *         use the <code>Tags</code> parameter to create new tags, provided that the sum of the source backup tags
+     *         and the new tags doesn't exceed 50. Both sets of tags are merged. If there are tag conflicts (for
+     *         example, two tags with the same key but different values), the tags created with the <code>Tags</code>
+     *         parameter take precedence.
      */
 
     public Boolean getCopyTags() {
@@ -260,23 +264,23 @@ public class CopyBackupRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * A boolean flag indicating whether tags from the source backup should be copied to the backup copy. This value
-     * defaults to false.
+     * A Boolean flag indicating whether tags from the source backup should be copied to the backup copy. This value
+     * defaults to <code>false</code>.
      * </p>
      * <p>
-     * If you set <code>CopyTags</code> to true and the source backup has existing tags, you can use the
+     * If you set <code>CopyTags</code> to <code>true</code> and the source backup has existing tags, you can use the
      * <code>Tags</code> parameter to create new tags, provided that the sum of the source backup tags and the new tags
      * doesn't exceed 50. Both sets of tags are merged. If there are tag conflicts (for example, two tags with the same
      * key but different values), the tags created with the <code>Tags</code> parameter take precedence.
      * </p>
      * 
      * @param copyTags
-     *        A boolean flag indicating whether tags from the source backup should be copied to the backup copy. This
-     *        value defaults to false.</p>
+     *        A Boolean flag indicating whether tags from the source backup should be copied to the backup copy. This
+     *        value defaults to <code>false</code>.</p>
      *        <p>
-     *        If you set <code>CopyTags</code> to true and the source backup has existing tags, you can use the
-     *        <code>Tags</code> parameter to create new tags, provided that the sum of the source backup tags and the
-     *        new tags doesn't exceed 50. Both sets of tags are merged. If there are tag conflicts (for example, two
+     *        If you set <code>CopyTags</code> to <code>true</code> and the source backup has existing tags, you can use
+     *        the <code>Tags</code> parameter to create new tags, provided that the sum of the source backup tags and
+     *        the new tags doesn't exceed 50. Both sets of tags are merged. If there are tag conflicts (for example, two
      *        tags with the same key but different values), the tags created with the <code>Tags</code> parameter take
      *        precedence.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -289,24 +293,24 @@ public class CopyBackupRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * A boolean flag indicating whether tags from the source backup should be copied to the backup copy. This value
-     * defaults to false.
+     * A Boolean flag indicating whether tags from the source backup should be copied to the backup copy. This value
+     * defaults to <code>false</code>.
      * </p>
      * <p>
-     * If you set <code>CopyTags</code> to true and the source backup has existing tags, you can use the
+     * If you set <code>CopyTags</code> to <code>true</code> and the source backup has existing tags, you can use the
      * <code>Tags</code> parameter to create new tags, provided that the sum of the source backup tags and the new tags
      * doesn't exceed 50. Both sets of tags are merged. If there are tag conflicts (for example, two tags with the same
      * key but different values), the tags created with the <code>Tags</code> parameter take precedence.
      * </p>
      * 
-     * @return A boolean flag indicating whether tags from the source backup should be copied to the backup copy. This
-     *         value defaults to false.</p>
+     * @return A Boolean flag indicating whether tags from the source backup should be copied to the backup copy. This
+     *         value defaults to <code>false</code>.</p>
      *         <p>
-     *         If you set <code>CopyTags</code> to true and the source backup has existing tags, you can use the
-     *         <code>Tags</code> parameter to create new tags, provided that the sum of the source backup tags and the
-     *         new tags doesn't exceed 50. Both sets of tags are merged. If there are tag conflicts (for example, two
-     *         tags with the same key but different values), the tags created with the <code>Tags</code> parameter take
-     *         precedence.
+     *         If you set <code>CopyTags</code> to <code>true</code> and the source backup has existing tags, you can
+     *         use the <code>Tags</code> parameter to create new tags, provided that the sum of the source backup tags
+     *         and the new tags doesn't exceed 50. Both sets of tags are merged. If there are tag conflicts (for
+     *         example, two tags with the same key but different values), the tags created with the <code>Tags</code>
+     *         parameter take precedence.
      */
 
     public Boolean isCopyTags() {

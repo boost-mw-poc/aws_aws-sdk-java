@@ -20,7 +20,8 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public enum VolumeType {
 
-    ONTAP("ONTAP");
+    ONTAP("ONTAP"),
+    OPENZFS("OPENZFS");
 
     private String value;
 

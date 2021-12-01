@@ -28,16 +28,30 @@ public class UpdateVolumeRequest extends com.amazonaws.AmazonWebServiceRequest i
     private String clientRequestToken;
     /**
      * <p>
-     * Specifies the volume that you want to update, formatted <code>fsvol-0123456789abcdef0</code>.
+     * The ID of the volume that you want to update, in the format <code>fsvol-0123456789abcdef0</code>.
      * </p>
      */
     private String volumeId;
     /**
      * <p>
-     * The <code>ONTAP</code> configuration of the volume you are updating.
+     * The configuration of the ONTAP volume that you are updating.
      * </p>
      */
     private UpdateOntapVolumeConfiguration ontapConfiguration;
+    /**
+     * <p>
+     * The name of the OpenZFS volume. OpenZFS root volumes are automatically named <code>FSX</code>. Child volume names
+     * must be unique among their parent volume's children. The name of the volume is part of the mount string for the
+     * OpenZFS volume.
+     * </p>
+     */
+    private String name;
+    /**
+     * <p>
+     * The configuration of the OpenZFS volume that you are updating.
+     * </p>
+     */
+    private UpdateOpenZFSVolumeConfiguration openZFSConfiguration;
 
     /**
      * @param clientRequestToken
@@ -67,11 +81,11 @@ public class UpdateVolumeRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * Specifies the volume that you want to update, formatted <code>fsvol-0123456789abcdef0</code>.
+     * The ID of the volume that you want to update, in the format <code>fsvol-0123456789abcdef0</code>.
      * </p>
      * 
      * @param volumeId
-     *        Specifies the volume that you want to update, formatted <code>fsvol-0123456789abcdef0</code>.
+     *        The ID of the volume that you want to update, in the format <code>fsvol-0123456789abcdef0</code>.
      */
 
     public void setVolumeId(String volumeId) {
@@ -80,10 +94,10 @@ public class UpdateVolumeRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * Specifies the volume that you want to update, formatted <code>fsvol-0123456789abcdef0</code>.
+     * The ID of the volume that you want to update, in the format <code>fsvol-0123456789abcdef0</code>.
      * </p>
      * 
-     * @return Specifies the volume that you want to update, formatted <code>fsvol-0123456789abcdef0</code>.
+     * @return The ID of the volume that you want to update, in the format <code>fsvol-0123456789abcdef0</code>.
      */
 
     public String getVolumeId() {
@@ -92,11 +106,11 @@ public class UpdateVolumeRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * Specifies the volume that you want to update, formatted <code>fsvol-0123456789abcdef0</code>.
+     * The ID of the volume that you want to update, in the format <code>fsvol-0123456789abcdef0</code>.
      * </p>
      * 
      * @param volumeId
-     *        Specifies the volume that you want to update, formatted <code>fsvol-0123456789abcdef0</code>.
+     *        The ID of the volume that you want to update, in the format <code>fsvol-0123456789abcdef0</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -107,11 +121,11 @@ public class UpdateVolumeRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The <code>ONTAP</code> configuration of the volume you are updating.
+     * The configuration of the ONTAP volume that you are updating.
      * </p>
      * 
      * @param ontapConfiguration
-     *        The <code>ONTAP</code> configuration of the volume you are updating.
+     *        The configuration of the ONTAP volume that you are updating.
      */
 
     public void setOntapConfiguration(UpdateOntapVolumeConfiguration ontapConfiguration) {
@@ -120,10 +134,10 @@ public class UpdateVolumeRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The <code>ONTAP</code> configuration of the volume you are updating.
+     * The configuration of the ONTAP volume that you are updating.
      * </p>
      * 
-     * @return The <code>ONTAP</code> configuration of the volume you are updating.
+     * @return The configuration of the ONTAP volume that you are updating.
      */
 
     public UpdateOntapVolumeConfiguration getOntapConfiguration() {
@@ -132,16 +146,108 @@ public class UpdateVolumeRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The <code>ONTAP</code> configuration of the volume you are updating.
+     * The configuration of the ONTAP volume that you are updating.
      * </p>
      * 
      * @param ontapConfiguration
-     *        The <code>ONTAP</code> configuration of the volume you are updating.
+     *        The configuration of the ONTAP volume that you are updating.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public UpdateVolumeRequest withOntapConfiguration(UpdateOntapVolumeConfiguration ontapConfiguration) {
         setOntapConfiguration(ontapConfiguration);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The name of the OpenZFS volume. OpenZFS root volumes are automatically named <code>FSX</code>. Child volume names
+     * must be unique among their parent volume's children. The name of the volume is part of the mount string for the
+     * OpenZFS volume.
+     * </p>
+     * 
+     * @param name
+     *        The name of the OpenZFS volume. OpenZFS root volumes are automatically named <code>FSX</code>. Child
+     *        volume names must be unique among their parent volume's children. The name of the volume is part of the
+     *        mount string for the OpenZFS volume.
+     */
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    /**
+     * <p>
+     * The name of the OpenZFS volume. OpenZFS root volumes are automatically named <code>FSX</code>. Child volume names
+     * must be unique among their parent volume's children. The name of the volume is part of the mount string for the
+     * OpenZFS volume.
+     * </p>
+     * 
+     * @return The name of the OpenZFS volume. OpenZFS root volumes are automatically named <code>FSX</code>. Child
+     *         volume names must be unique among their parent volume's children. The name of the volume is part of the
+     *         mount string for the OpenZFS volume.
+     */
+
+    public String getName() {
+        return this.name;
+    }
+
+    /**
+     * <p>
+     * The name of the OpenZFS volume. OpenZFS root volumes are automatically named <code>FSX</code>. Child volume names
+     * must be unique among their parent volume's children. The name of the volume is part of the mount string for the
+     * OpenZFS volume.
+     * </p>
+     * 
+     * @param name
+     *        The name of the OpenZFS volume. OpenZFS root volumes are automatically named <code>FSX</code>. Child
+     *        volume names must be unique among their parent volume's children. The name of the volume is part of the
+     *        mount string for the OpenZFS volume.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateVolumeRequest withName(String name) {
+        setName(name);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The configuration of the OpenZFS volume that you are updating.
+     * </p>
+     * 
+     * @param openZFSConfiguration
+     *        The configuration of the OpenZFS volume that you are updating.
+     */
+
+    public void setOpenZFSConfiguration(UpdateOpenZFSVolumeConfiguration openZFSConfiguration) {
+        this.openZFSConfiguration = openZFSConfiguration;
+    }
+
+    /**
+     * <p>
+     * The configuration of the OpenZFS volume that you are updating.
+     * </p>
+     * 
+     * @return The configuration of the OpenZFS volume that you are updating.
+     */
+
+    public UpdateOpenZFSVolumeConfiguration getOpenZFSConfiguration() {
+        return this.openZFSConfiguration;
+    }
+
+    /**
+     * <p>
+     * The configuration of the OpenZFS volume that you are updating.
+     * </p>
+     * 
+     * @param openZFSConfiguration
+     *        The configuration of the OpenZFS volume that you are updating.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateVolumeRequest withOpenZFSConfiguration(UpdateOpenZFSVolumeConfiguration openZFSConfiguration) {
+        setOpenZFSConfiguration(openZFSConfiguration);
         return this;
     }
 
@@ -162,7 +268,11 @@ public class UpdateVolumeRequest extends com.amazonaws.AmazonWebServiceRequest i
         if (getVolumeId() != null)
             sb.append("VolumeId: ").append(getVolumeId()).append(",");
         if (getOntapConfiguration() != null)
-            sb.append("OntapConfiguration: ").append(getOntapConfiguration());
+            sb.append("OntapConfiguration: ").append(getOntapConfiguration()).append(",");
+        if (getName() != null)
+            sb.append("Name: ").append(getName()).append(",");
+        if (getOpenZFSConfiguration() != null)
+            sb.append("OpenZFSConfiguration: ").append(getOpenZFSConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -189,6 +299,14 @@ public class UpdateVolumeRequest extends com.amazonaws.AmazonWebServiceRequest i
             return false;
         if (other.getOntapConfiguration() != null && other.getOntapConfiguration().equals(this.getOntapConfiguration()) == false)
             return false;
+        if (other.getName() == null ^ this.getName() == null)
+            return false;
+        if (other.getName() != null && other.getName().equals(this.getName()) == false)
+            return false;
+        if (other.getOpenZFSConfiguration() == null ^ this.getOpenZFSConfiguration() == null)
+            return false;
+        if (other.getOpenZFSConfiguration() != null && other.getOpenZFSConfiguration().equals(this.getOpenZFSConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -200,6 +318,8 @@ public class UpdateVolumeRequest extends com.amazonaws.AmazonWebServiceRequest i
         hashCode = prime * hashCode + ((getClientRequestToken() == null) ? 0 : getClientRequestToken().hashCode());
         hashCode = prime * hashCode + ((getVolumeId() == null) ? 0 : getVolumeId().hashCode());
         hashCode = prime * hashCode + ((getOntapConfiguration() == null) ? 0 : getOntapConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
+        hashCode = prime * hashCode + ((getOpenZFSConfiguration() == null) ? 0 : getOpenZFSConfiguration().hashCode());
         return hashCode;
     }
 

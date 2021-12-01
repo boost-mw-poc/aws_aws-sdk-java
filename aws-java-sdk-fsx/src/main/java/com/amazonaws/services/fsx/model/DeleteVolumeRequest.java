@@ -28,17 +28,23 @@ public class DeleteVolumeRequest extends com.amazonaws.AmazonWebServiceRequest i
     private String clientRequestToken;
     /**
      * <p>
-     * The ID of the volume you are deleting.
+     * The ID of the volume that you are deleting.
      * </p>
      */
     private String volumeId;
     /**
      * <p>
-     * For Amazon FSx for ONTAP volumes, specify whether to take a final backup of the volume, and apply tags to the
-     * backup.
+     * For Amazon FSx for ONTAP volumes, specify whether to take a final backup of the volume and apply tags to the
+     * backup. To apply tags to the backup, you must have the <code>fsx:TagResource</code> permission.
      * </p>
      */
     private DeleteVolumeOntapConfiguration ontapConfiguration;
+    /**
+     * <p>
+     * For Amazon FSx for OpenZFS volumes, specify whether to delete all child volumes and snapshots.
+     * </p>
+     */
+    private DeleteVolumeOpenZFSConfiguration openZFSConfiguration;
 
     /**
      * @param clientRequestToken
@@ -68,11 +74,11 @@ public class DeleteVolumeRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The ID of the volume you are deleting.
+     * The ID of the volume that you are deleting.
      * </p>
      * 
      * @param volumeId
-     *        The ID of the volume you are deleting.
+     *        The ID of the volume that you are deleting.
      */
 
     public void setVolumeId(String volumeId) {
@@ -81,10 +87,10 @@ public class DeleteVolumeRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The ID of the volume you are deleting.
+     * The ID of the volume that you are deleting.
      * </p>
      * 
-     * @return The ID of the volume you are deleting.
+     * @return The ID of the volume that you are deleting.
      */
 
     public String getVolumeId() {
@@ -93,11 +99,11 @@ public class DeleteVolumeRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The ID of the volume you are deleting.
+     * The ID of the volume that you are deleting.
      * </p>
      * 
      * @param volumeId
-     *        The ID of the volume you are deleting.
+     *        The ID of the volume that you are deleting.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -108,13 +114,13 @@ public class DeleteVolumeRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * For Amazon FSx for ONTAP volumes, specify whether to take a final backup of the volume, and apply tags to the
-     * backup.
+     * For Amazon FSx for ONTAP volumes, specify whether to take a final backup of the volume and apply tags to the
+     * backup. To apply tags to the backup, you must have the <code>fsx:TagResource</code> permission.
      * </p>
      * 
      * @param ontapConfiguration
-     *        For Amazon FSx for ONTAP volumes, specify whether to take a final backup of the volume, and apply tags to
-     *        the backup.
+     *        For Amazon FSx for ONTAP volumes, specify whether to take a final backup of the volume and apply tags to
+     *        the backup. To apply tags to the backup, you must have the <code>fsx:TagResource</code> permission.
      */
 
     public void setOntapConfiguration(DeleteVolumeOntapConfiguration ontapConfiguration) {
@@ -123,12 +129,12 @@ public class DeleteVolumeRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * For Amazon FSx for ONTAP volumes, specify whether to take a final backup of the volume, and apply tags to the
-     * backup.
+     * For Amazon FSx for ONTAP volumes, specify whether to take a final backup of the volume and apply tags to the
+     * backup. To apply tags to the backup, you must have the <code>fsx:TagResource</code> permission.
      * </p>
      * 
-     * @return For Amazon FSx for ONTAP volumes, specify whether to take a final backup of the volume, and apply tags to
-     *         the backup.
+     * @return For Amazon FSx for ONTAP volumes, specify whether to take a final backup of the volume and apply tags to
+     *         the backup. To apply tags to the backup, you must have the <code>fsx:TagResource</code> permission.
      */
 
     public DeleteVolumeOntapConfiguration getOntapConfiguration() {
@@ -137,18 +143,58 @@ public class DeleteVolumeRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * For Amazon FSx for ONTAP volumes, specify whether to take a final backup of the volume, and apply tags to the
-     * backup.
+     * For Amazon FSx for ONTAP volumes, specify whether to take a final backup of the volume and apply tags to the
+     * backup. To apply tags to the backup, you must have the <code>fsx:TagResource</code> permission.
      * </p>
      * 
      * @param ontapConfiguration
-     *        For Amazon FSx for ONTAP volumes, specify whether to take a final backup of the volume, and apply tags to
-     *        the backup.
+     *        For Amazon FSx for ONTAP volumes, specify whether to take a final backup of the volume and apply tags to
+     *        the backup. To apply tags to the backup, you must have the <code>fsx:TagResource</code> permission.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public DeleteVolumeRequest withOntapConfiguration(DeleteVolumeOntapConfiguration ontapConfiguration) {
         setOntapConfiguration(ontapConfiguration);
+        return this;
+    }
+
+    /**
+     * <p>
+     * For Amazon FSx for OpenZFS volumes, specify whether to delete all child volumes and snapshots.
+     * </p>
+     * 
+     * @param openZFSConfiguration
+     *        For Amazon FSx for OpenZFS volumes, specify whether to delete all child volumes and snapshots.
+     */
+
+    public void setOpenZFSConfiguration(DeleteVolumeOpenZFSConfiguration openZFSConfiguration) {
+        this.openZFSConfiguration = openZFSConfiguration;
+    }
+
+    /**
+     * <p>
+     * For Amazon FSx for OpenZFS volumes, specify whether to delete all child volumes and snapshots.
+     * </p>
+     * 
+     * @return For Amazon FSx for OpenZFS volumes, specify whether to delete all child volumes and snapshots.
+     */
+
+    public DeleteVolumeOpenZFSConfiguration getOpenZFSConfiguration() {
+        return this.openZFSConfiguration;
+    }
+
+    /**
+     * <p>
+     * For Amazon FSx for OpenZFS volumes, specify whether to delete all child volumes and snapshots.
+     * </p>
+     * 
+     * @param openZFSConfiguration
+     *        For Amazon FSx for OpenZFS volumes, specify whether to delete all child volumes and snapshots.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DeleteVolumeRequest withOpenZFSConfiguration(DeleteVolumeOpenZFSConfiguration openZFSConfiguration) {
+        setOpenZFSConfiguration(openZFSConfiguration);
         return this;
     }
 
@@ -169,7 +215,9 @@ public class DeleteVolumeRequest extends com.amazonaws.AmazonWebServiceRequest i
         if (getVolumeId() != null)
             sb.append("VolumeId: ").append(getVolumeId()).append(",");
         if (getOntapConfiguration() != null)
-            sb.append("OntapConfiguration: ").append(getOntapConfiguration());
+            sb.append("OntapConfiguration: ").append(getOntapConfiguration()).append(",");
+        if (getOpenZFSConfiguration() != null)
+            sb.append("OpenZFSConfiguration: ").append(getOpenZFSConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -196,6 +244,10 @@ public class DeleteVolumeRequest extends com.amazonaws.AmazonWebServiceRequest i
             return false;
         if (other.getOntapConfiguration() != null && other.getOntapConfiguration().equals(this.getOntapConfiguration()) == false)
             return false;
+        if (other.getOpenZFSConfiguration() == null ^ this.getOpenZFSConfiguration() == null)
+            return false;
+        if (other.getOpenZFSConfiguration() != null && other.getOpenZFSConfiguration().equals(this.getOpenZFSConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -207,6 +259,7 @@ public class DeleteVolumeRequest extends com.amazonaws.AmazonWebServiceRequest i
         hashCode = prime * hashCode + ((getClientRequestToken() == null) ? 0 : getClientRequestToken().hashCode());
         hashCode = prime * hashCode + ((getVolumeId() == null) ? 0 : getVolumeId().hashCode());
         hashCode = prime * hashCode + ((getOntapConfiguration() == null) ? 0 : getOntapConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getOpenZFSConfiguration() == null) ? 0 : getOpenZFSConfiguration().hashCode());
         return hashCode;
     }
 

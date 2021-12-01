@@ -1484,6 +1484,39 @@ public class AmazonKinesisAsyncClient extends AmazonKinesisClient implements Ama
         });
     }
 
+    @Override
+    public java.util.concurrent.Future<UpdateStreamModeResult> updateStreamModeAsync(UpdateStreamModeRequest request) {
+
+        return updateStreamModeAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateStreamModeResult> updateStreamModeAsync(final UpdateStreamModeRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateStreamModeRequest, UpdateStreamModeResult> asyncHandler) {
+        final UpdateStreamModeRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateStreamModeResult>() {
+            @Override
+            public UpdateStreamModeResult call() throws Exception {
+                UpdateStreamModeResult result = null;
+
+                try {
+                    result = executeUpdateStreamMode(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
     /**
      * Shuts down the client, releasing all managed resources. This includes forcibly terminating all pending
      * asynchronous service calls. Clients who wish to give pending asynchronous service calls time to complete should

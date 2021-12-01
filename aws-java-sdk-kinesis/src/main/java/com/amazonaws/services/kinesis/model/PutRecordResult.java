@@ -52,7 +52,8 @@ public class PutRecordResult extends com.amazonaws.AmazonWebServiceResult<com.am
      * </li>
      * <li>
      * <p>
-     * <code>KMS</code>: Use server-side encryption on the records in the stream using a customer-managed AWS KMS key.
+     * <code>KMS</code>: Use server-side encryption on the records in the stream using a customer-managed Amazon Web
+     * Services KMS key.
      * </p>
      * </li>
      * </ul>
@@ -163,7 +164,8 @@ public class PutRecordResult extends com.amazonaws.AmazonWebServiceResult<com.am
      * </li>
      * <li>
      * <p>
-     * <code>KMS</code>: Use server-side encryption on the records in the stream using a customer-managed AWS KMS key.
+     * <code>KMS</code>: Use server-side encryption on the records in the stream using a customer-managed Amazon Web
+     * Services KMS key.
      * </p>
      * </li>
      * </ul>
@@ -178,8 +180,8 @@ public class PutRecordResult extends com.amazonaws.AmazonWebServiceResult<com.am
      *        </li>
      *        <li>
      *        <p>
-     *        <code>KMS</code>: Use server-side encryption on the records in the stream using a customer-managed AWS KMS
-     *        key.
+     *        <code>KMS</code>: Use server-side encryption on the records in the stream using a customer-managed Amazon
+     *        Web Services KMS key.
      *        </p>
      *        </li>
      * @see EncryptionType
@@ -201,7 +203,8 @@ public class PutRecordResult extends com.amazonaws.AmazonWebServiceResult<com.am
      * </li>
      * <li>
      * <p>
-     * <code>KMS</code>: Use server-side encryption on the records in the stream using a customer-managed AWS KMS key.
+     * <code>KMS</code>: Use server-side encryption on the records in the stream using a customer-managed Amazon Web
+     * Services KMS key.
      * </p>
      * </li>
      * </ul>
@@ -215,8 +218,8 @@ public class PutRecordResult extends com.amazonaws.AmazonWebServiceResult<com.am
      *         </li>
      *         <li>
      *         <p>
-     *         <code>KMS</code>: Use server-side encryption on the records in the stream using a customer-managed AWS
-     *         KMS key.
+     *         <code>KMS</code>: Use server-side encryption on the records in the stream using a customer-managed Amazon
+     *         Web Services KMS key.
      *         </p>
      *         </li>
      * @see EncryptionType
@@ -238,7 +241,8 @@ public class PutRecordResult extends com.amazonaws.AmazonWebServiceResult<com.am
      * </li>
      * <li>
      * <p>
-     * <code>KMS</code>: Use server-side encryption on the records in the stream using a customer-managed AWS KMS key.
+     * <code>KMS</code>: Use server-side encryption on the records in the stream using a customer-managed Amazon Web
+     * Services KMS key.
      * </p>
      * </li>
      * </ul>
@@ -253,8 +257,8 @@ public class PutRecordResult extends com.amazonaws.AmazonWebServiceResult<com.am
      *        </li>
      *        <li>
      *        <p>
-     *        <code>KMS</code>: Use server-side encryption on the records in the stream using a customer-managed AWS KMS
-     *        key.
+     *        <code>KMS</code>: Use server-side encryption on the records in the stream using a customer-managed Amazon
+     *        Web Services KMS key.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -278,7 +282,8 @@ public class PutRecordResult extends com.amazonaws.AmazonWebServiceResult<com.am
      * </li>
      * <li>
      * <p>
-     * <code>KMS</code>: Use server-side encryption on the records in the stream using a customer-managed AWS KMS key.
+     * <code>KMS</code>: Use server-side encryption on the records in the stream using a customer-managed Amazon Web
+     * Services KMS key.
      * </p>
      * </li>
      * </ul>
@@ -293,8 +298,8 @@ public class PutRecordResult extends com.amazonaws.AmazonWebServiceResult<com.am
      *        </li>
      *        <li>
      *        <p>
-     *        <code>KMS</code>: Use server-side encryption on the records in the stream using a customer-managed AWS KMS
-     *        key.
+     *        <code>KMS</code>: Use server-side encryption on the records in the stream using a customer-managed Amazon
+     *        Web Services KMS key.
      *        </p>
      *        </li>
      * @see EncryptionType
@@ -316,7 +321,8 @@ public class PutRecordResult extends com.amazonaws.AmazonWebServiceResult<com.am
      * </li>
      * <li>
      * <p>
-     * <code>KMS</code>: Use server-side encryption on the records in the stream using a customer-managed AWS KMS key.
+     * <code>KMS</code>: Use server-side encryption on the records in the stream using a customer-managed Amazon Web
+     * Services KMS key.
      * </p>
      * </li>
      * </ul>
@@ -331,8 +337,8 @@ public class PutRecordResult extends com.amazonaws.AmazonWebServiceResult<com.am
      *        </li>
      *        <li>
      *        <p>
-     *        <code>KMS</code>: Use server-side encryption on the records in the stream using a customer-managed AWS KMS
-     *        key.
+     *        <code>KMS</code>: Use server-side encryption on the records in the stream using a customer-managed Amazon
+     *        Web Services KMS key.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

@@ -48,7 +48,7 @@ public class S3Resource implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * Specifies the service or services on the Snow Family device that your transferred data will be exported from or
-     * imported into. AWS Snow Family supports Amazon S3 and NFS (Network File System).
+     * imported into. Amazon Web Services Snow Family supports Amazon S3 and NFS (Network File System).
      * </p>
      */
     private java.util.List<TargetOnDeviceService> targetOnDeviceServices;
@@ -148,11 +148,11 @@ public class S3Resource implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * Specifies the service or services on the Snow Family device that your transferred data will be exported from or
-     * imported into. AWS Snow Family supports Amazon S3 and NFS (Network File System).
+     * imported into. Amazon Web Services Snow Family supports Amazon S3 and NFS (Network File System).
      * </p>
      * 
      * @return Specifies the service or services on the Snow Family device that your transferred data will be exported
-     *         from or imported into. AWS Snow Family supports Amazon S3 and NFS (Network File System).
+     *         from or imported into. Amazon Web Services Snow Family supports Amazon S3 and NFS (Network File System).
      */
 
     public java.util.List<TargetOnDeviceService> getTargetOnDeviceServices() {
@@ -162,12 +162,12 @@ public class S3Resource implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * Specifies the service or services on the Snow Family device that your transferred data will be exported from or
-     * imported into. AWS Snow Family supports Amazon S3 and NFS (Network File System).
+     * imported into. Amazon Web Services Snow Family supports Amazon S3 and NFS (Network File System).
      * </p>
      * 
      * @param targetOnDeviceServices
      *        Specifies the service or services on the Snow Family device that your transferred data will be exported
-     *        from or imported into. AWS Snow Family supports Amazon S3 and NFS (Network File System).
+     *        from or imported into. Amazon Web Services Snow Family supports Amazon S3 and NFS (Network File System).
      */
 
     public void setTargetOnDeviceServices(java.util.Collection<TargetOnDeviceService> targetOnDeviceServices) {
@@ -182,7 +182,7 @@ public class S3Resource implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * Specifies the service or services on the Snow Family device that your transferred data will be exported from or
-     * imported into. AWS Snow Family supports Amazon S3 and NFS (Network File System).
+     * imported into. Amazon Web Services Snow Family supports Amazon S3 and NFS (Network File System).
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -192,7 +192,7 @@ public class S3Resource implements Serializable, Cloneable, StructuredPojo {
      * 
      * @param targetOnDeviceServices
      *        Specifies the service or services on the Snow Family device that your transferred data will be exported
-     *        from or imported into. AWS Snow Family supports Amazon S3 and NFS (Network File System).
+     *        from or imported into. Amazon Web Services Snow Family supports Amazon S3 and NFS (Network File System).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -209,12 +209,12 @@ public class S3Resource implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * Specifies the service or services on the Snow Family device that your transferred data will be exported from or
-     * imported into. AWS Snow Family supports Amazon S3 and NFS (Network File System).
+     * imported into. Amazon Web Services Snow Family supports Amazon S3 and NFS (Network File System).
      * </p>
      * 
      * @param targetOnDeviceServices
      *        Specifies the service or services on the Snow Family device that your transferred data will be exported
-     *        from or imported into. AWS Snow Family supports Amazon S3 and NFS (Network File System).
+     *        from or imported into. Amazon Web Services Snow Family supports Amazon S3 and NFS (Network File System).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

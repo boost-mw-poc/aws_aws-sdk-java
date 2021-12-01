@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The provided AWS Key Management Service key lacks the permissions to perform the specified <a>CreateJob</a> or
+ * The provided Key Management Service key lacks the permissions to perform the specified <a>CreateJob</a> or
  * <a>UpdateJob</a> action.
  * </p>
  */

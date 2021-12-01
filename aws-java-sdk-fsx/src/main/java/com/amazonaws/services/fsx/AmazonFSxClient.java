@@ -78,14 +78,8 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
                     .withSupportsCbor(false)
                     .withSupportsIon(false)
                     .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("MissingVolumeConfiguration").withExceptionUnmarshaller(
-                                    com.amazonaws.services.fsx.model.transform.MissingVolumeConfigurationExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("InvalidImportPath").withExceptionUnmarshaller(
                                     com.amazonaws.services.fsx.model.transform.InvalidImportPathExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("InvalidSourceKmsKey").withExceptionUnmarshaller(
-                                    com.amazonaws.services.fsx.model.transform.InvalidSourceKmsKeyExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("InvalidNetworkSettings").withExceptionUnmarshaller(
                                     com.amazonaws.services.fsx.model.transform.InvalidNetworkSettingsExceptionUnmarshaller.getInstance()))
@@ -93,17 +87,50 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
                             new JsonErrorShapeMetadata().withErrorCode("IncompatibleRegionForMultiAZ").withExceptionUnmarshaller(
                                     com.amazonaws.services.fsx.model.transform.IncompatibleRegionForMultiAZExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("DataRepositoryTaskExecuting").withExceptionUnmarshaller(
-                                    com.amazonaws.services.fsx.model.transform.DataRepositoryTaskExecutingExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("FileSystemNotFound").withExceptionUnmarshaller(
                                     com.amazonaws.services.fsx.model.transform.FileSystemNotFoundExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("DataRepositoryAssociationNotFound").withExceptionUnmarshaller(
+                                    com.amazonaws.services.fsx.model.transform.DataRepositoryAssociationNotFoundExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ResourceDoesNotSupportTagging").withExceptionUnmarshaller(
                                     com.amazonaws.services.fsx.model.transform.ResourceDoesNotSupportTaggingExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("DataRepositoryTaskNotFound").withExceptionUnmarshaller(
                                     com.amazonaws.services.fsx.model.transform.DataRepositoryTaskNotFoundExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("SourceBackupUnavailable").withExceptionUnmarshaller(
+                                    com.amazonaws.services.fsx.model.transform.SourceBackupUnavailableExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("ResourceNotFound").withExceptionUnmarshaller(
+                                    com.amazonaws.services.fsx.model.transform.ResourceNotFoundExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("UnsupportedOperation").withExceptionUnmarshaller(
+                                    com.amazonaws.services.fsx.model.transform.UnsupportedOperationExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("StorageVirtualMachineNotFound").withExceptionUnmarshaller(
+                                    com.amazonaws.services.fsx.model.transform.StorageVirtualMachineNotFoundExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("BackupRestoring").withExceptionUnmarshaller(
+                                    com.amazonaws.services.fsx.model.transform.BackupRestoringExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("BackupInProgress").withExceptionUnmarshaller(
+                                    com.amazonaws.services.fsx.model.transform.BackupInProgressExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("InvalidExportPath").withExceptionUnmarshaller(
+                                    com.amazonaws.services.fsx.model.transform.InvalidExportPathExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("InvalidRegion").withExceptionUnmarshaller(
+                                    com.amazonaws.services.fsx.model.transform.InvalidRegionExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("MissingVolumeConfiguration").withExceptionUnmarshaller(
+                                    com.amazonaws.services.fsx.model.transform.MissingVolumeConfigurationExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("InvalidSourceKmsKey").withExceptionUnmarshaller(
+                                    com.amazonaws.services.fsx.model.transform.InvalidSourceKmsKeyExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("DataRepositoryTaskExecuting").withExceptionUnmarshaller(
+                                    com.amazonaws.services.fsx.model.transform.DataRepositoryTaskExecutingExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("BackupNotFound").withExceptionUnmarshaller(
                                     com.amazonaws.services.fsx.model.transform.BackupNotFoundExceptionUnmarshaller.getInstance()))
@@ -117,20 +144,8 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
                             new JsonErrorShapeMetadata().withErrorCode("ServiceLimitExceeded").withExceptionUnmarshaller(
                                     com.amazonaws.services.fsx.model.transform.ServiceLimitExceededExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("SourceBackupUnavailable").withExceptionUnmarshaller(
-                                    com.amazonaws.services.fsx.model.transform.SourceBackupUnavailableExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("ResourceNotFound").withExceptionUnmarshaller(
-                                    com.amazonaws.services.fsx.model.transform.ResourceNotFoundExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("NotServiceResourceError").withExceptionUnmarshaller(
                                     com.amazonaws.services.fsx.model.transform.NotServiceResourceErrorExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("UnsupportedOperation").withExceptionUnmarshaller(
-                                    com.amazonaws.services.fsx.model.transform.UnsupportedOperationExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("StorageVirtualMachineNotFound").withExceptionUnmarshaller(
-                                    com.amazonaws.services.fsx.model.transform.StorageVirtualMachineNotFoundExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("MissingFileSystemConfiguration").withExceptionUnmarshaller(
                                     com.amazonaws.services.fsx.model.transform.MissingFileSystemConfigurationExceptionUnmarshaller.getInstance()))
@@ -138,26 +153,20 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
                             new JsonErrorShapeMetadata().withErrorCode("BackupBeingCopied").withExceptionUnmarshaller(
                                     com.amazonaws.services.fsx.model.transform.BackupBeingCopiedExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("BackupRestoring").withExceptionUnmarshaller(
-                                    com.amazonaws.services.fsx.model.transform.BackupRestoringExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("IncompatibleParameterError").withExceptionUnmarshaller(
                                     com.amazonaws.services.fsx.model.transform.IncompatibleParameterErrorExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("DataRepositoryTaskEnded").withExceptionUnmarshaller(
                                     com.amazonaws.services.fsx.model.transform.DataRepositoryTaskEndedExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("InvalidDataRepositoryType").withExceptionUnmarshaller(
+                                    com.amazonaws.services.fsx.model.transform.InvalidDataRepositoryTypeExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
+                            new JsonErrorShapeMetadata().withErrorCode("SnapshotNotFound").withExceptionUnmarshaller(
+                                    com.amazonaws.services.fsx.model.transform.SnapshotNotFoundExceptionUnmarshaller.getInstance()))
+                    .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("InvalidPerUnitStorageThroughput").withExceptionUnmarshaller(
                                     com.amazonaws.services.fsx.model.transform.InvalidPerUnitStorageThroughputExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("BackupInProgress").withExceptionUnmarshaller(
-                                    com.amazonaws.services.fsx.model.transform.BackupInProgressExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("InvalidExportPath").withExceptionUnmarshaller(
-                                    com.amazonaws.services.fsx.model.transform.InvalidExportPathExceptionUnmarshaller.getInstance()))
-                    .addErrorMetadata(
-                            new JsonErrorShapeMetadata().withErrorCode("InvalidRegion").withExceptionUnmarshaller(
-                                    com.amazonaws.services.fsx.model.transform.InvalidRegionExceptionUnmarshaller.getInstance()))
                     .addErrorMetadata(
                             new JsonErrorShapeMetadata().withErrorCode("ActiveDirectoryError").withExceptionUnmarshaller(
                                     com.amazonaws.services.fsx.model.transform.ActiveDirectoryErrorExceptionUnmarshaller.getInstance()))
@@ -384,13 +393,15 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
      * backup copy requests in progress to a single destination Region per account.
      * </p>
      * <p>
-     * You can use cross-Region backup copies for cross-region disaster recovery. You periodically take backups and copy
-     * them to another Region so that in the event of a disaster in the primary Region, you can restore from backup and
-     * recover availability quickly in the other Region. You can make cross-Region copies only within your Amazon Web
-     * Services partition.
+     * You can use cross-Region backup copies for cross-Region disaster recovery. You can periodically take backups and
+     * copy them to another Region so that in the event of a disaster in the primary Region, you can restore from backup
+     * and recover availability quickly in the other Region. You can make cross-Region copies only within your Amazon
+     * Web Services partition. A partition is a grouping of Regions. Amazon Web Services currently has three partitions:
+     * <code>aws</code> (Standard Regions), <code>aws-cn</code> (China Regions), and <code>aws-us-gov</code> (Amazon Web
+     * Services GovCloud [US] Regions).
      * </p>
      * <p>
-     * You can also use backup copies to clone your file data set to another Region or within the same Region.
+     * You can also use backup copies to clone your file dataset to another Region or within the same Region.
      * </p>
      * <p>
      * You can use the <code>SourceRegion</code> parameter to specify the Amazon Web Services Region from which the
@@ -400,11 +411,13 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
      * is created in the same Region where the request is sent from (in-Region copy).
      * </p>
      * <p>
-     * For more information on creating backup copies, see <a
+     * For more information about creating backup copies, see <a
      * href="https://docs.aws.amazon.com/fsx/latest/WindowsGuide/using-backups.html#copy-backups"> Copying backups</a>
-     * in the <i>Amazon FSx for Windows User Guide</i> and <a
+     * in the <i>Amazon FSx for Windows User Guide</i>, <a
      * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/using-backups-fsx.html#copy-backups">Copying backups</a>
-     * in the <i>Amazon FSx for Lustre User Guide</i>.
+     * in the <i>Amazon FSx for Lustre User Guide</i>, and <a
+     * href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/using-backups.html#copy-backups">Copying backups</a> in
+     * the <i>Amazon FSx for OpenZFS User Guide</i>.
      * </p>
      * 
      * @param copyBackupRequest
@@ -424,14 +437,14 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
      * @throws InternalServerErrorException
      *         A generic error indicating a server-side failure.
      * @throws InvalidSourceKmsKeyException
-     *         The Key Management Service (KMS) key of the source backup is invalid.
+     *         The Key Management Service (KMS) key of the source backup is not valid.
      * @throws InvalidDestinationKmsKeyException
-     *         The Key Management Service (KMS) key of the destination backup is invalid.
+     *         The Key Management Service (KMS) key of the destination backup is not valid.
      * @throws InvalidRegionException
-     *         The Region provided for <code>Source Region</code> is invalid or is in a different Amazon Web Services
+     *         The Region provided for <code>SourceRegion</code> is not valid or is in a different Amazon Web Services
      *         partition.
      * @throws SourceBackupUnavailableException
-     *         The request was rejected because the lifecycle status of the source backup is not <code>AVAILABLE</code>.
+     *         The request was rejected because the lifecycle status of the source backup isn't <code>AVAILABLE</code>.
      * @throws IncompatibleRegionForMultiAZException
      *         Amazon FSx doesn't support Multi-AZ Windows File Server copy backup in the destination Region, so the
      *         copied backup can't be restored.
@@ -485,23 +498,24 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
 
     /**
      * <p>
-     * Creates a backup of an existing Amazon FSx for Windows File Server or Amazon FSx for Lustre file system, or of an
-     * Amazon FSx for NetApp ONTAP volume. Creating regular backups is a best practice, enabling you to restore a file
-     * system or volume from a backup if an issue arises with the original file system or volume.
+     * Creates a backup of an existing Amazon FSx for Windows File Server file system, Amazon FSx for Lustre file
+     * system, Amazon FSx for NetApp ONTAP volume, or Amazon FSx for OpenZFS file system. We recommend creating regular
+     * backups so that you can restore a file system or volume from a backup if an issue arises with the original file
+     * system or volume.
      * </p>
      * <p>
-     * For Amazon FSx for Lustre file systems, you can create a backup only for file systems with the following
+     * For Amazon FSx for Lustre file systems, you can create a backup only for file systems that have the following
      * configuration:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * a Persistent deployment type
+     * A Persistent deployment type
      * </p>
      * </li>
      * <li>
      * <p>
-     * is <i>not</i> linked to a data repository.
+     * Are <i>not</i> linked to a data repository
      * </p>
      * </li>
      * </ul>
@@ -530,12 +544,19 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
      * backups</a>.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * For Amazon FSx for OpenZFS, see <a
+     * href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/using-backups.html">Working with FSx for OpenZFS
+     * backups</a>.
+     * </p>
+     * </li>
      * </ul>
      * <p>
-     * If a backup with the specified client request token exists, and the parameters match, this operation returns the
-     * description of the existing backup. If a backup specified client request token exists, and the parameters don't
-     * match, this operation returns <code>IncompatibleParameterError</code>. If a backup with the specified client
-     * request token doesn't exist, <code>CreateBackup</code> does the following:
+     * If a backup with the specified client request token exists and the parameters match, this operation returns the
+     * description of the existing backup. If a backup with the specified client request token exists and the parameters
+     * don't match, this operation returns <code>IncompatibleParameterError</code>. If a backup with the specified
+     * client request token doesn't exist, <code>CreateBackup</code> does the following:
      * </p>
      * <ul>
      * <li>
@@ -557,8 +578,9 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
      * </p>
      * <p>
      * The <code>CreateBackup</code> operation returns while the backup's lifecycle state is still <code>CREATING</code>
-     * . You can check the backup creation status by calling the <a>DescribeBackups</a> operation, which returns the
-     * backup state along with other information.
+     * . You can check the backup creation status by calling the <a
+     * href="https://docs.aws.amazon.com/fsx/latest/APIReference/API_DescribeBackups.html">DescribeBackups</a>
+     * operation, which returns the backup state along with other information.
      * </p>
      * 
      * @param createBackupRequest
@@ -633,15 +655,97 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
 
     /**
      * <p>
+     * Creates an Amazon FSx for Lustre data repository association (DRA). A data repository association is a link
+     * between a directory on the file system and an Amazon S3 bucket or prefix. You can have a maximum of 8 data
+     * repository associations on a file system. Data repository associations are supported only for file systems with
+     * the <code>Persistent_2</code> deployment type.
+     * </p>
+     * <p>
+     * Each data repository association must have a unique Amazon FSx file system directory and a unique S3 bucket or
+     * prefix associated with it. You can configure a data repository association for automatic import only, for
+     * automatic export only, or for both. To learn more about linking a data repository to your file system, see <a
+     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/create-dra-linked-data-repo.html">Linking your file
+     * system to an S3 bucket</a>.
+     * </p>
+     * 
+     * @param createDataRepositoryAssociationRequest
+     * @return Result of the CreateDataRepositoryAssociation operation returned by the service.
+     * @throws BadRequestException
+     *         A generic error indicating a failure with a client request.
+     * @throws UnsupportedOperationException
+     *         The requested operation is not supported for this resource or API.
+     * @throws FileSystemNotFoundException
+     *         No Amazon FSx file systems were found based upon supplied parameters.
+     * @throws IncompatibleParameterErrorException
+     *         The error returned when a second request is received with the same client request token but different
+     *         parameters settings. A client request token should always uniquely identify a single request.
+     * @throws ServiceLimitExceededException
+     *         An error indicating that a particular service limit was exceeded. You can increase some service limits by
+     *         contacting Amazon Web Services Support.
+     * @throws InternalServerErrorException
+     *         A generic error indicating a server-side failure.
+     * @sample AmazonFSx.CreateDataRepositoryAssociation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/CreateDataRepositoryAssociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public CreateDataRepositoryAssociationResult createDataRepositoryAssociation(CreateDataRepositoryAssociationRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateDataRepositoryAssociation(request);
+    }
+
+    @SdkInternalApi
+    final CreateDataRepositoryAssociationResult executeCreateDataRepositoryAssociation(
+            CreateDataRepositoryAssociationRequest createDataRepositoryAssociationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createDataRepositoryAssociationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateDataRepositoryAssociationRequest> request = null;
+        Response<CreateDataRepositoryAssociationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateDataRepositoryAssociationRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(createDataRepositoryAssociationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "FSx");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateDataRepositoryAssociation");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CreateDataRepositoryAssociationResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new CreateDataRepositoryAssociationResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Creates an Amazon FSx for Lustre data repository task. You use data repository tasks to perform bulk operations
-     * between your Amazon FSx file system and its linked data repository. An example of a data repository task is
+     * between your Amazon FSx file system and its linked data repositories. An example of a data repository task is
      * exporting any data and metadata changes, including POSIX metadata, to files, directories, and symbolic links
-     * (symlinks) from your FSx file system to its linked data repository. A <code>CreateDataRepositoryTask</code>
+     * (symlinks) from your FSx file system to a linked data repository. A <code>CreateDataRepositoryTask</code>
      * operation will fail if a data repository is not linked to the FSx file system. To learn more about data
      * repository tasks, see <a
      * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/data-repository-tasks.html">Data Repository Tasks</a>.
      * To learn more about linking a data repository to your file system, see <a
-     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/create-fs-linked-data-repo.html">Linking your file
+     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/create-dra-linked-data-repo.html">Linking your file
      * system to an S3 bucket</a>.
      * </p>
      * 
@@ -716,12 +820,39 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
 
     /**
      * <p>
-     * Creates a new, empty Amazon FSx file system.
+     * Creates a new, empty Amazon FSx file system. You can create the following supported Amazon FSx file systems using
+     * the <code>CreateFileSystem</code> API operation:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Amazon FSx for Lustre
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Amazon FSx for NetApp ONTAP
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Amazon FSx for Windows File Server
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * This operation requires a client request token in the request that Amazon FSx uses to ensure idempotent creation.
+     * This means that calling the operation multiple times with the same client request token has no effect. By using
+     * the idempotent operation, you can retry a <code>CreateFileSystem</code> operation without the risk of creating an
+     * extra file system. This approach can be useful when an initial call fails in a way that makes it unclear whether
+     * a file system was created. Examples are if a transport level timeout occurred, or your connection was reset. If
+     * you use the same client request token and the initial call created a file system, the client receives success as
+     * long as the parameters are the same.
      * </p>
      * <p>
      * If a file system with the specified client request token exists and the parameters match,
-     * <code>CreateFileSystem</code> returns the description of the existing file system. If a file system specified
-     * client request token exists and the parameters don't match, this call returns
+     * <code>CreateFileSystem</code> returns the description of the existing file system. If a file system with the
+     * specified client request token exists and the parameters don't match, this call returns
      * <code>IncompatibleParameterError</code>. If a file system with the specified client request token doesn't exist,
      * <code>CreateFileSystem</code> does the following:
      * </p>
@@ -743,14 +874,15 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
      * This means that calling the operation multiple times with the same client request token has no effect. By using
      * the idempotent operation, you can retry a <code>CreateFileSystem</code> operation without the risk of creating an
      * extra file system. This approach can be useful when an initial call fails in a way that makes it unclear whether
-     * a file system was created. Examples are if a transport level timeout occurred, or your connection was reset. If
-     * you use the same client request token and the initial call created a file system, the client receives success as
-     * long as the parameters are the same.
+     * a file system was created. Examples are if a transport-level timeout occurred, or your connection was reset. If
+     * you use the same client request token and the initial call created a file system, the client receives a success
+     * message as long as the parameters are the same.
      * </p>
      * <note>
      * <p>
      * The <code>CreateFileSystem</code> call returns while the file system's lifecycle state is still
-     * <code>CREATING</code>. You can check the file-system creation status by calling the <a>DescribeFileSystems</a>
+     * <code>CREATING</code>. You can check the file-system creation status by calling the <a
+     * href="https://docs.aws.amazon.com/fsx/latest/APIReference/API_DescribeFileSystems.html">DescribeFileSystems</a>
      * operation, which returns the file system state along with other information.
      * </p>
      * </note>
@@ -831,13 +963,13 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
 
     /**
      * <p>
-     * Creates a new Amazon FSx for Lustre or Amazon FSx for Windows File Server file system from an existing Amazon FSx
-     * backup.
+     * Creates a new Amazon FSx for Lustre, Amazon FSx for Windows File Server, or Amazon FSx for OpenZFS file system
+     * from an existing Amazon FSx backup.
      * </p>
      * <p>
      * If a file system with the specified client request token exists and the parameters match, this operation returns
-     * the description of the file system. If a client request token specified by the file system exists and the
-     * parameters don't match, this call returns <code>IncompatibleParameterError</code>. If a file system with the
+     * the description of the file system. If a client request token with the specified by the file system exists and
+     * the parameters don't match, this call returns <code>IncompatibleParameterError</code>. If a file system with the
      * specified client request token doesn't exist, this operation does the following:
      * </p>
      * <ul>
@@ -854,7 +986,7 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
      * </li>
      * </ul>
      * <p>
-     * Parameters like Active Directory, default share name, automatic backup, and backup settings default to the
+     * Parameters like the Active Directory, default share name, automatic backup, and backup settings default to the
      * parameters of the file system that was backed up, unless overridden. You can explicitly supply other settings.
      * </p>
      * <p>
@@ -862,12 +994,13 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
      * of creating an extra file system. This approach can be useful when an initial call fails in a way that makes it
      * unclear whether a file system was created. Examples are if a transport level timeout occurred, or your connection
      * was reset. If you use the same client request token and the initial call created a file system, the client
-     * receives success as long as the parameters are the same.
+     * receives a success message as long as the parameters are the same.
      * </p>
      * <note>
      * <p>
      * The <code>CreateFileSystemFromBackup</code> call returns while the file system's lifecycle state is still
-     * <code>CREATING</code>. You can check the file-system creation status by calling the <a>DescribeFileSystems</a>
+     * <code>CREATING</code>. You can check the file-system creation status by calling the <a
+     * href="https://docs.aws.amazon.com/fsx/latest/APIReference/API_DescribeFileSystems.html"> DescribeFileSystems</a>
      * operation, which returns the file system state along with other information.
      * </p>
      * </note>
@@ -936,6 +1069,101 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
             HttpResponseHandler<AmazonWebServiceResponse<CreateFileSystemFromBackupResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
                     new CreateFileSystemFromBackupResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Creates a snapshot of an existing Amazon FSx for OpenZFS file system. With snapshots, you can easily undo file
+     * changes and compare file versions by restoring the volume to a previous version.
+     * </p>
+     * <p>
+     * If a snapshot with the specified client request token exists, and the parameters match, this operation returns
+     * the description of the existing snapshot. If a snapshot with the specified client request token exists, and the
+     * parameters don't match, this operation returns <code>IncompatibleParameterError</code>. If a snapshot with the
+     * specified client request token doesn't exist, <code>CreateSnapshot</code> does the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Creates a new OpenZFS snapshot with an assigned ID, and an initial lifecycle state of <code>CREATING</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Returns the description of the snapshot.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * By using the idempotent operation, you can retry a <code>CreateSnapshot</code> operation without the risk of
+     * creating an extra snapshot. This approach can be useful when an initial call fails in a way that makes it unclear
+     * whether a snapshot was created. If you use the same client request token and the initial call created a snapshot,
+     * the operation returns a successful result because all the parameters are the same.
+     * </p>
+     * <p>
+     * The <code>CreateSnapshot</code> operation returns while the snapshot's lifecycle state is still
+     * <code>CREATING</code>. You can check the snapshot creation status by calling the <a
+     * href="https://docs.aws.amazon.com/fsx/latest/APIReference/API_DescribeSnapshots.html">DescribeSnapshots</a>
+     * operation, which returns the snapshot state along with other information.
+     * </p>
+     * 
+     * @param createSnapshotRequest
+     * @return Result of the CreateSnapshot operation returned by the service.
+     * @throws BadRequestException
+     *         A generic error indicating a failure with a client request.
+     * @throws VolumeNotFoundException
+     *         No Amazon FSx for NetApp ONTAP volumes were found based upon the supplied parameters.
+     * @throws ServiceLimitExceededException
+     *         An error indicating that a particular service limit was exceeded. You can increase some service limits by
+     *         contacting Amazon Web Services Support.
+     * @throws InternalServerErrorException
+     *         A generic error indicating a server-side failure.
+     * @sample AmazonFSx.CreateSnapshot
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/CreateSnapshot" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public CreateSnapshotResult createSnapshot(CreateSnapshotRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateSnapshot(request);
+    }
+
+    @SdkInternalApi
+    final CreateSnapshotResult executeCreateSnapshot(CreateSnapshotRequest createSnapshotRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createSnapshotRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateSnapshotRequest> request = null;
+        Response<CreateSnapshotResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateSnapshotRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(createSnapshotRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "FSx");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateSnapshot");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CreateSnapshotResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new CreateSnapshotResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -1021,7 +1249,7 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
 
     /**
      * <p>
-     * Creates an Amazon FSx for NetApp ONTAP storage volume.
+     * Creates an Amazon FSx for NetApp ONTAP or Amazon FSx for OpenZFS storage volume.
      * </p>
      * 
      * @param createVolumeRequest
@@ -1168,11 +1396,10 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
 
     /**
      * <p>
-     * Deletes an Amazon FSx backup, deleting its contents. After deletion, the backup no longer exists, and its data is
-     * gone.
+     * Deletes an Amazon FSx backup. After deletion, the backup no longer exists, and its data is gone.
      * </p>
      * <p>
-     * The <code>DeleteBackup</code> call returns instantly. The backup will not show up in later
+     * The <code>DeleteBackup</code> call returns instantly. The backup won't show up in later
      * <code>DescribeBackups</code> calls.
      * </p>
      * <important>
@@ -1182,7 +1409,7 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
      * </important>
      * 
      * @param deleteBackupRequest
-     *        The request object for <code>DeleteBackup</code> operation.
+     *        The request object for the <code>DeleteBackup</code> operation.
      * @return Result of the DeleteBackup operation returned by the service.
      * @throws BadRequestException
      *         A generic error indicating a failure with a client request.
@@ -1250,27 +1477,102 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
 
     /**
      * <p>
-     * Deletes a file system, deleting its contents. After deletion, the file system no longer exists, and its data is
-     * gone. Any existing automatic backups will also be deleted.
+     * Deletes a data repository association on an Amazon FSx for Lustre file system. Deleting the data repository
+     * association unlinks the file system from the Amazon S3 bucket. When deleting a data repository association, you
+     * have the option of deleting the data in the file system that corresponds to the data repository association. Data
+     * repository associations are supported only for file systems with the <code>Persistent_2</code> deployment type.
+     * </p>
+     * 
+     * @param deleteDataRepositoryAssociationRequest
+     * @return Result of the DeleteDataRepositoryAssociation operation returned by the service.
+     * @throws BadRequestException
+     *         A generic error indicating a failure with a client request.
+     * @throws IncompatibleParameterErrorException
+     *         The error returned when a second request is received with the same client request token but different
+     *         parameters settings. A client request token should always uniquely identify a single request.
+     * @throws DataRepositoryAssociationNotFoundException
+     *         No data repository associations were found based upon the supplied parameters.
+     * @throws ServiceLimitExceededException
+     *         An error indicating that a particular service limit was exceeded. You can increase some service limits by
+     *         contacting Amazon Web Services Support.
+     * @throws InternalServerErrorException
+     *         A generic error indicating a server-side failure.
+     * @sample AmazonFSx.DeleteDataRepositoryAssociation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/DeleteDataRepositoryAssociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DeleteDataRepositoryAssociationResult deleteDataRepositoryAssociation(DeleteDataRepositoryAssociationRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteDataRepositoryAssociation(request);
+    }
+
+    @SdkInternalApi
+    final DeleteDataRepositoryAssociationResult executeDeleteDataRepositoryAssociation(
+            DeleteDataRepositoryAssociationRequest deleteDataRepositoryAssociationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteDataRepositoryAssociationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteDataRepositoryAssociationRequest> request = null;
+        Response<DeleteDataRepositoryAssociationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteDataRepositoryAssociationRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(deleteDataRepositoryAssociationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "FSx");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteDataRepositoryAssociation");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteDataRepositoryAssociationResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new DeleteDataRepositoryAssociationResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Deletes a file system. After deletion, the file system no longer exists, and its data is gone. Any existing
+     * automatic backups and snapshots are also deleted.
      * </p>
      * <p>
-     * To delete an Amazon FSx for NetApp ONTAP file system, first delete all the volumes and SVMs on the file system.
-     * Then provide a <code>FileSystemId</code> value to the <code>DeleFileSystem</code> operation.
+     * To delete an Amazon FSx for NetApp ONTAP file system, first delete all the volumes and storage virtual machines
+     * (SVMs) on the file system. Then provide a <code>FileSystemId</code> value to the <code>DeleFileSystem</code>
+     * operation.
      * </p>
      * <p>
      * By default, when you delete an Amazon FSx for Windows File Server file system, a final backup is created upon
-     * deletion. This final backup is not subject to the file system's retention policy, and must be manually deleted.
+     * deletion. This final backup isn't subject to the file system's retention policy, and must be manually deleted.
      * </p>
      * <p>
-     * The <code>DeleteFileSystem</code> action returns while the file system has the <code>DELETING</code> status. You
-     * can check the file system deletion status by calling the <a>DescribeFileSystems</a> action, which returns a list
-     * of file systems in your account. If you pass the file system ID for a deleted file system, the
-     * <a>DescribeFileSystems</a> returns a <code>FileSystemNotFound</code> error.
+     * The <code>DeleteFileSystem</code> operation returns while the file system has the <code>DELETING</code> status.
+     * You can check the file system deletion status by calling the <a
+     * href="https://docs.aws.amazon.com/fsx/latest/APIReference/API_DescribeFileSystems.html">DescribeFileSystems</a>
+     * operation, which returns a list of file systems in your account. If you pass the file system ID for a deleted
+     * file system, the <code>DescribeFileSystems</code> operation returns a <code>FileSystemNotFound</code> error.
      * </p>
      * <note>
      * <p>
-     * Deleting an Amazon FSx for Lustre file system will fail with a 400 BadRequest if a data repository task is in a
-     * <code>PENDING</code> or <code>EXECUTING</code> state.
+     * If a data repository task is in a <code>PENDING</code> or <code>EXECUTING</code> state, deleting an Amazon FSx
+     * for Lustre file system will fail with an HTTP status code 400 (Bad Request).
      * </p>
      * </note> <important>
      * <p>
@@ -1331,6 +1633,72 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
 
             HttpResponseHandler<AmazonWebServiceResponse<DeleteFileSystemResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DeleteFileSystemResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Deletes the Amazon FSx snapshot. After deletion, the snapshot no longer exists, and its data is gone. Deleting a
+     * snapshot doesn't affect snapshots stored in a file system backup.
+     * </p>
+     * <p>
+     * The <code>DeleteSnapshot</code> operation returns instantly. The snapshot appears with the lifecycle status of
+     * <code>DELETING</code> until the deletion is complete.
+     * </p>
+     * 
+     * @param deleteSnapshotRequest
+     * @return Result of the DeleteSnapshot operation returned by the service.
+     * @throws BadRequestException
+     *         A generic error indicating a failure with a client request.
+     * @throws InternalServerErrorException
+     *         A generic error indicating a server-side failure.
+     * @throws SnapshotNotFoundException
+     *         No Amazon FSx snapshots were found based on the supplied parameters.
+     * @sample AmazonFSx.DeleteSnapshot
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/DeleteSnapshot" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public DeleteSnapshotResult deleteSnapshot(DeleteSnapshotRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteSnapshot(request);
+    }
+
+    @SdkInternalApi
+    final DeleteSnapshotResult executeDeleteSnapshot(DeleteSnapshotRequest deleteSnapshotRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteSnapshotRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteSnapshotRequest> request = null;
+        Response<DeleteSnapshotResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteSnapshotRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(deleteSnapshotRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "FSx");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteSnapshot");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteSnapshotResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DeleteSnapshotResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -1410,9 +1778,7 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
 
     /**
      * <p>
-     * Deletes an Amazon FSx for NetApp ONTAP volume. When deleting a volume, you have the option of creating a final
-     * backup. If you create a final backup, you have the option to apply Tags to the backup. You need to have
-     * <code>fsx:TagResource</code> permission in order to apply tags to the backup.
+     * Deletes an Amazon FSx for NetApp ONTAP or Amazon FSx for OpenZFS volume.
      * </p>
      * 
      * @param deleteVolumeRequest
@@ -1476,7 +1842,7 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
 
     /**
      * <p>
-     * Returns the description of specific Amazon FSx backups, if a <code>BackupIds</code> value is provided for that
+     * Returns the description of a specific Amazon FSx backup, if a <code>BackupIds</code> value is provided for that
      * backup. Otherwise, it returns all backups owned by your Amazon Web Services account in the Amazon Web Services
      * Region of the endpoint that you're calling.
      * </p>
@@ -1484,34 +1850,34 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
      * When retrieving all backups, you can optionally specify the <code>MaxResults</code> parameter to limit the number
      * of backups in a response. If more backups remain, Amazon FSx returns a <code>NextToken</code> value in the
      * response. In this case, send a later request with the <code>NextToken</code> request parameter set to the value
-     * of <code>NextToken</code> from the last response.
+     * of the <code>NextToken</code> value from the last response.
      * </p>
      * <p>
-     * This action is used in an iterative process to retrieve a list of your backups. <code>DescribeBackups</code> is
-     * called first without a <code>NextToken</code>value. Then the action continues to be called with the
+     * This operation is used in an iterative process to retrieve a list of your backups. <code>DescribeBackups</code>
+     * is called first without a <code>NextToken</code> value. Then the operation continues to be called with the
      * <code>NextToken</code> parameter set to the value of the last <code>NextToken</code> value until a response has
-     * no <code>NextToken</code>.
+     * no <code>NextToken</code> value.
      * </p>
      * <p>
-     * When using this action, keep the following in mind:
+     * When using this operation, keep the following in mind:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * The implementation might return fewer than <code>MaxResults</code> backup descriptions while still including a
-     * <code>NextToken</code> value.
+     * The operation might return fewer than the <code>MaxResults</code> value of backup descriptions while still
+     * including a <code>NextToken</code> value.
      * </p>
      * </li>
      * <li>
      * <p>
-     * The order of backups returned in the response of one <code>DescribeBackups</code> call and the order of backups
-     * returned across the responses of a multi-call iteration is unspecified.
+     * The order of the backups returned in the response of one <code>DescribeBackups</code> call and the order of the
+     * backups returned across the responses of a multi-call iteration is unspecified.
      * </p>
      * </li>
      * </ul>
      * 
      * @param describeBackupsRequest
-     *        The request object for <code>DescribeBackups</code> operation.
+     *        The request object for the <code>DescribeBackups</code> operation.
      * @return Result of the DescribeBackups operation returned by the service.
      * @throws BadRequestException
      *         A generic error indicating a failure with a client request.
@@ -1561,6 +1927,90 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
 
             HttpResponseHandler<AmazonWebServiceResponse<DescribeBackupsResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DescribeBackupsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Returns the description of specific Amazon FSx for Lustre data repository associations, if one or more
+     * <code>AssociationIds</code> values are provided in the request, or if filters are used in the request. Data
+     * repository associations are supported only for file systems with the <code>Persistent_2</code> deployment type.
+     * </p>
+     * <p>
+     * You can use filters to narrow the response to include just data repository associations for specific file systems
+     * (use the <code>file-system-id</code> filter with the ID of the file system) or data repository associations for a
+     * specific repository type (use the <code>data-repository-type</code> filter with a value of <code>S3</code>). If
+     * you don't use filters, the response returns all data repository associations owned by your Amazon Web Services
+     * account in the Amazon Web Services Region of the endpoint that you're calling.
+     * </p>
+     * <p>
+     * When retrieving all data repository associations, you can paginate the response by using the optional
+     * <code>MaxResults</code> parameter to limit the number of data repository associations returned in a response. If
+     * more data repository associations remain, Amazon FSx returns a <code>NextToken</code> value in the response. In
+     * this case, send a later request with the <code>NextToken</code> request parameter set to the value of
+     * <code>NextToken</code> from the last response.
+     * </p>
+     * 
+     * @param describeDataRepositoryAssociationsRequest
+     * @return Result of the DescribeDataRepositoryAssociations operation returned by the service.
+     * @throws BadRequestException
+     *         A generic error indicating a failure with a client request.
+     * @throws FileSystemNotFoundException
+     *         No Amazon FSx file systems were found based upon supplied parameters.
+     * @throws DataRepositoryAssociationNotFoundException
+     *         No data repository associations were found based upon the supplied parameters.
+     * @throws InvalidDataRepositoryTypeException
+     *         You have filtered the response to a data repository type that is not supported.
+     * @throws InternalServerErrorException
+     *         A generic error indicating a server-side failure.
+     * @sample AmazonFSx.DescribeDataRepositoryAssociations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/DescribeDataRepositoryAssociations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DescribeDataRepositoryAssociationsResult describeDataRepositoryAssociations(DescribeDataRepositoryAssociationsRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeDataRepositoryAssociations(request);
+    }
+
+    @SdkInternalApi
+    final DescribeDataRepositoryAssociationsResult executeDescribeDataRepositoryAssociations(
+            DescribeDataRepositoryAssociationsRequest describeDataRepositoryAssociationsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeDataRepositoryAssociationsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeDataRepositoryAssociationsRequest> request = null;
+        Response<DescribeDataRepositoryAssociationsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeDataRepositoryAssociationsRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(describeDataRepositoryAssociationsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "FSx");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeDataRepositoryAssociations");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DescribeDataRepositoryAssociationsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new DescribeDataRepositoryAssociationsResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -1725,13 +2175,13 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
      * request parameter set to the value of <code>NextToken</code> from the last response.
      * </p>
      * <p>
-     * This action is used in an iterative process to retrieve a list of your file system descriptions.
-     * <code>DescribeFileSystems</code> is called first without a <code>NextToken</code>value. Then the action continues
-     * to be called with the <code>NextToken</code> parameter set to the value of the last <code>NextToken</code> value
-     * until a response has no <code>NextToken</code>.
+     * This operation is used in an iterative process to retrieve a list of your file system descriptions.
+     * <code>DescribeFileSystems</code> is called first without a <code>NextToken</code>value. Then the operation
+     * continues to be called with the <code>NextToken</code> parameter set to the value of the last
+     * <code>NextToken</code> value until a response has no <code>NextToken</code>.
      * </p>
      * <p>
-     * When using this action, keep the following in mind:
+     * When using this operation, keep the following in mind:
      * </p>
      * <ul>
      * <li>
@@ -1807,6 +2257,98 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
 
     /**
      * <p>
+     * Returns the description of specific Amazon FSx snapshots, if a <code>SnapshotIds</code> value is provided.
+     * Otherwise, this operation returns all snapshots owned by your Amazon Web Services account in the Amazon Web
+     * Services Region of the endpoint that you're calling.
+     * </p>
+     * <p>
+     * When retrieving all snapshots, you can optionally specify the <code>MaxResults</code> parameter to limit the
+     * number of snapshots in a response. If more backups remain, Amazon FSx returns a <code>NextToken</code> value in
+     * the response. In this case, send a later request with the <code>NextToken</code> request parameter set to the
+     * value of <code>NextToken</code> from the last response.
+     * </p>
+     * <p>
+     * Use this operation in an iterative process to retrieve a list of your snapshots. <code>DescribeSnapshots</code>
+     * is called first without a <code>NextToken</code> value. Then the operation continues to be called with the
+     * <code>NextToken</code> parameter set to the value of the last <code>NextToken</code> value until a response has
+     * no <code>NextToken</code> value.
+     * </p>
+     * <p>
+     * When using this operation, keep the following in mind:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The operation might return fewer than the <code>MaxResults</code> value of snapshot descriptions while still
+     * including a <code>NextToken</code> value.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The order of snapshots returned in the response of one <code>DescribeSnapshots</code> call and the order of
+     * backups returned across the responses of a multi-call iteration is unspecified.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param describeSnapshotsRequest
+     * @return Result of the DescribeSnapshots operation returned by the service.
+     * @throws BadRequestException
+     *         A generic error indicating a failure with a client request.
+     * @throws InternalServerErrorException
+     *         A generic error indicating a server-side failure.
+     * @throws SnapshotNotFoundException
+     *         No Amazon FSx snapshots were found based on the supplied parameters.
+     * @sample AmazonFSx.DescribeSnapshots
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/DescribeSnapshots" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public DescribeSnapshotsResult describeSnapshots(DescribeSnapshotsRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeSnapshots(request);
+    }
+
+    @SdkInternalApi
+    final DescribeSnapshotsResult executeDescribeSnapshots(DescribeSnapshotsRequest describeSnapshotsRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeSnapshotsRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeSnapshotsRequest> request = null;
+        Response<DescribeSnapshotsResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeSnapshotsRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(describeSnapshotsRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "FSx");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeSnapshots");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DescribeSnapshotsResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DescribeSnapshotsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Describes one or more Amazon FSx for NetApp ONTAP storage virtual machines (SVMs).
      * </p>
      * 
@@ -1870,7 +2412,7 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
 
     /**
      * <p>
-     * Describes one or more Amazon FSx for NetApp ONTAP volumes.
+     * Describes one or more Amazon FSx for NetApp ONTAP or Amazon FSx for OpenZFS volumes.
      * </p>
      * 
      * @param describeVolumesRequest
@@ -2100,6 +2642,138 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
 
     /**
      * <p>
+     * Releases the file system lock from an Amazon FSx for OpenZFS file system.
+     * </p>
+     * 
+     * @param releaseFileSystemNfsV3LocksRequest
+     * @return Result of the ReleaseFileSystemNfsV3Locks operation returned by the service.
+     * @throws BadRequestException
+     *         A generic error indicating a failure with a client request.
+     * @throws IncompatibleParameterErrorException
+     *         The error returned when a second request is received with the same client request token but different
+     *         parameters settings. A client request token should always uniquely identify a single request.
+     * @throws FileSystemNotFoundException
+     *         No Amazon FSx file systems were found based upon supplied parameters.
+     * @throws ServiceLimitExceededException
+     *         An error indicating that a particular service limit was exceeded. You can increase some service limits by
+     *         contacting Amazon Web Services Support.
+     * @throws InternalServerErrorException
+     *         A generic error indicating a server-side failure.
+     * @sample AmazonFSx.ReleaseFileSystemNfsV3Locks
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/ReleaseFileSystemNfsV3Locks"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public ReleaseFileSystemNfsV3LocksResult releaseFileSystemNfsV3Locks(ReleaseFileSystemNfsV3LocksRequest request) {
+        request = beforeClientExecution(request);
+        return executeReleaseFileSystemNfsV3Locks(request);
+    }
+
+    @SdkInternalApi
+    final ReleaseFileSystemNfsV3LocksResult executeReleaseFileSystemNfsV3Locks(ReleaseFileSystemNfsV3LocksRequest releaseFileSystemNfsV3LocksRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(releaseFileSystemNfsV3LocksRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ReleaseFileSystemNfsV3LocksRequest> request = null;
+        Response<ReleaseFileSystemNfsV3LocksResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ReleaseFileSystemNfsV3LocksRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(releaseFileSystemNfsV3LocksRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "FSx");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ReleaseFileSystemNfsV3Locks");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ReleaseFileSystemNfsV3LocksResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new ReleaseFileSystemNfsV3LocksResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Returns an Amazon FSx for OpenZFS volume to the state saved by the specified snapshot.
+     * </p>
+     * 
+     * @param restoreVolumeFromSnapshotRequest
+     * @return Result of the RestoreVolumeFromSnapshot operation returned by the service.
+     * @throws BadRequestException
+     *         A generic error indicating a failure with a client request.
+     * @throws InternalServerErrorException
+     *         A generic error indicating a server-side failure.
+     * @throws VolumeNotFoundException
+     *         No Amazon FSx for NetApp ONTAP volumes were found based upon the supplied parameters.
+     * @sample AmazonFSx.RestoreVolumeFromSnapshot
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/RestoreVolumeFromSnapshot" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public RestoreVolumeFromSnapshotResult restoreVolumeFromSnapshot(RestoreVolumeFromSnapshotRequest request) {
+        request = beforeClientExecution(request);
+        return executeRestoreVolumeFromSnapshot(request);
+    }
+
+    @SdkInternalApi
+    final RestoreVolumeFromSnapshotResult executeRestoreVolumeFromSnapshot(RestoreVolumeFromSnapshotRequest restoreVolumeFromSnapshotRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(restoreVolumeFromSnapshotRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<RestoreVolumeFromSnapshotRequest> request = null;
+        Response<RestoreVolumeFromSnapshotResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new RestoreVolumeFromSnapshotRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(restoreVolumeFromSnapshotRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "FSx");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "RestoreVolumeFromSnapshot");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<RestoreVolumeFromSnapshotResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new RestoreVolumeFromSnapshotResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Tags an Amazon FSx resource.
      * </p>
      * 
@@ -2234,6 +2908,78 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
 
     /**
      * <p>
+     * Updates the configuration of an existing data repository association on an Amazon FSx for Lustre file system.
+     * Data repository associations are supported only for file systems with the <code>Persistent_2</code> deployment
+     * type.
+     * </p>
+     * 
+     * @param updateDataRepositoryAssociationRequest
+     * @return Result of the UpdateDataRepositoryAssociation operation returned by the service.
+     * @throws BadRequestException
+     *         A generic error indicating a failure with a client request.
+     * @throws IncompatibleParameterErrorException
+     *         The error returned when a second request is received with the same client request token but different
+     *         parameters settings. A client request token should always uniquely identify a single request.
+     * @throws DataRepositoryAssociationNotFoundException
+     *         No data repository associations were found based upon the supplied parameters.
+     * @throws ServiceLimitExceededException
+     *         An error indicating that a particular service limit was exceeded. You can increase some service limits by
+     *         contacting Amazon Web Services Support.
+     * @throws InternalServerErrorException
+     *         A generic error indicating a server-side failure.
+     * @sample AmazonFSx.UpdateDataRepositoryAssociation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/UpdateDataRepositoryAssociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public UpdateDataRepositoryAssociationResult updateDataRepositoryAssociation(UpdateDataRepositoryAssociationRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateDataRepositoryAssociation(request);
+    }
+
+    @SdkInternalApi
+    final UpdateDataRepositoryAssociationResult executeUpdateDataRepositoryAssociation(
+            UpdateDataRepositoryAssociationRequest updateDataRepositoryAssociationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateDataRepositoryAssociationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateDataRepositoryAssociationRequest> request = null;
+        Response<UpdateDataRepositoryAssociationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateDataRepositoryAssociationRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(updateDataRepositoryAssociationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "FSx");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateDataRepositoryAssociation");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateDataRepositoryAssociationResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new UpdateDataRepositoryAssociationResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Use this operation to update the configuration of an existing Amazon FSx file system. You can update multiple
      * properties in a single request.
      * </p>
@@ -2243,97 +2989,137 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
      * <ul>
      * <li>
      * <p>
-     * AuditLogConfiguration
+     * <code>AuditLogConfiguration</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * AutomaticBackupRetentionDays
+     * <code>AutomaticBackupRetentionDays</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * DailyAutomaticBackupStartTime
+     * <code>DailyAutomaticBackupStartTime</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * SelfManagedActiveDirectoryConfiguration
+     * <code>SelfManagedActiveDirectoryConfiguration</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * StorageCapacity
+     * <code>StorageCapacity</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * ThroughputCapacity
+     * <code>ThroughputCapacity</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * WeeklyMaintenanceStartTime
-     * </p>
-     * </li>
-     * </ul>
-     * <p>
-     * For Amazon FSx for Lustre file systems, you can update the following properties:
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * AutoImportPolicy
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * AutomaticBackupRetentionDays
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * DailyAutomaticBackupStartTime
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * DataCompressionType
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * StorageCapacity
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * WeeklyMaintenanceStartTime
+     * <code>WeeklyMaintenanceStartTime</code>
      * </p>
      * </li>
      * </ul>
      * <p>
-     * For Amazon FSx for NetApp ONTAP file systems, you can update the following properties:
+     * For FSx for Lustre file systems, you can update the following properties:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * AutomaticBackupRetentionDays
+     * <code>AutoImportPolicy</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * DailyAutomaticBackupStartTime
+     * <code>AutomaticBackupRetentionDays</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * FsxAdminPassword
+     * <code>DailyAutomaticBackupStartTime</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * WeeklyMaintenanceStartTime
+     * <code>DataCompressionType</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>StorageCapacity</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>WeeklyMaintenanceStartTime</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For FSx for ONTAP file systems, you can update the following properties:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>AutomaticBackupRetentionDays</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>DailyAutomaticBackupStartTime</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>FsxAdminPassword</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>WeeklyMaintenanceStartTime</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For the Amazon FSx for OpenZFS file systems, you can update the following properties:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>AutomaticBackupRetentionDays</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>CopyTagsToBackups</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>CopyTagsToVolumes</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>DailyAutomaticBackupStartTime</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>DiskIopsConfiguration</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ThroughputCapacity</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>WeeklyMaintenanceStartTime</code>
      * </p>
      * </li>
      * </ul>
@@ -2395,6 +3181,67 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
 
             HttpResponseHandler<AmazonWebServiceResponse<UpdateFileSystemResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UpdateFileSystemResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * Updates the name of a snapshot.
+     * </p>
+     * 
+     * @param updateSnapshotRequest
+     * @return Result of the UpdateSnapshot operation returned by the service.
+     * @throws BadRequestException
+     *         A generic error indicating a failure with a client request.
+     * @throws SnapshotNotFoundException
+     *         No Amazon FSx snapshots were found based on the supplied parameters.
+     * @throws InternalServerErrorException
+     *         A generic error indicating a server-side failure.
+     * @sample AmazonFSx.UpdateSnapshot
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/UpdateSnapshot" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public UpdateSnapshotResult updateSnapshot(UpdateSnapshotRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateSnapshot(request);
+    }
+
+    @SdkInternalApi
+    final UpdateSnapshotResult executeUpdateSnapshot(UpdateSnapshotRequest updateSnapshotRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateSnapshotRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateSnapshotRequest> request = null;
+        Response<UpdateSnapshotResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateSnapshotRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(updateSnapshotRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "FSx");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateSnapshot");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateSnapshotResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UpdateSnapshotResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -2475,7 +3322,7 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
 
     /**
      * <p>
-     * Updates an Amazon FSx for NetApp ONTAP volume's configuration.
+     * Updates the configuration of an Amazon FSx for NetApp ONTAP or Amazon FSx for OpenZFS volume.
      * </p>
      * 
      * @param updateVolumeRequest

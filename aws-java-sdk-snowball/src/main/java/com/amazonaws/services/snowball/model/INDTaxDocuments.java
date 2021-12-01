@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The tax documents required in AWS Regions in India.
+ * The tax documents required in Amazon Web Services Region in India.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/snowball-2016-06-30/INDTaxDocuments" target="_top">AWS API
@@ -30,18 +30,18 @@ public class INDTaxDocuments implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The Goods and Services Tax (GST) documents required in AWS Regions in India.
+     * The Goods and Services Tax (GST) documents required in Amazon Web Services Region in India.
      * </p>
      */
     private String gSTIN;
 
     /**
      * <p>
-     * The Goods and Services Tax (GST) documents required in AWS Regions in India.
+     * The Goods and Services Tax (GST) documents required in Amazon Web Services Region in India.
      * </p>
      * 
      * @param gSTIN
-     *        The Goods and Services Tax (GST) documents required in AWS Regions in India.
+     *        The Goods and Services Tax (GST) documents required in Amazon Web Services Region in India.
      */
 
     public void setGSTIN(String gSTIN) {
@@ -50,10 +50,10 @@ public class INDTaxDocuments implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The Goods and Services Tax (GST) documents required in AWS Regions in India.
+     * The Goods and Services Tax (GST) documents required in Amazon Web Services Region in India.
      * </p>
      * 
-     * @return The Goods and Services Tax (GST) documents required in AWS Regions in India.
+     * @return The Goods and Services Tax (GST) documents required in Amazon Web Services Region in India.
      */
 
     public String getGSTIN() {
@@ -62,11 +62,11 @@ public class INDTaxDocuments implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The Goods and Services Tax (GST) documents required in AWS Regions in India.
+     * The Goods and Services Tax (GST) documents required in Amazon Web Services Region in India.
      * </p>
      * 
      * @param gSTIN
-     *        The Goods and Services Tax (GST) documents required in AWS Regions in India.
+     *        The Goods and Services Tax (GST) documents required in Amazon Web Services Region in India.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

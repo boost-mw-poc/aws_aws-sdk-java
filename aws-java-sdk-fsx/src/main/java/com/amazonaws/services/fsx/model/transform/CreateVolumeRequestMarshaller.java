@@ -41,6 +41,8 @@ public class CreateVolumeRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("OntapConfiguration").build();
     private static final MarshallingInfo<List> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Tags").build();
+    private static final MarshallingInfo<StructuredPojo> OPENZFSCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("OpenZFSConfiguration").build();
 
     private static final CreateVolumeRequestMarshaller instance = new CreateVolumeRequestMarshaller();
 
@@ -63,6 +65,7 @@ public class CreateVolumeRequestMarshaller {
             protocolMarshaller.marshall(createVolumeRequest.getName(), NAME_BINDING);
             protocolMarshaller.marshall(createVolumeRequest.getOntapConfiguration(), ONTAPCONFIGURATION_BINDING);
             protocolMarshaller.marshall(createVolumeRequest.getTags(), TAGS_BINDING);
+            protocolMarshaller.marshall(createVolumeRequest.getOpenZFSConfiguration(), OPENZFSCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

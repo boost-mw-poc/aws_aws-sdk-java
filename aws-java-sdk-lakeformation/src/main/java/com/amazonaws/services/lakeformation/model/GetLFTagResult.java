@@ -26,14 +26,14 @@ public class GetLFTagResult extends com.amazonaws.AmazonWebServiceResult<com.ama
     /**
      * <p>
      * The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent metadata
-     * store. It contains database definitions, table definitions, and other control information to manage your AWS Lake
+     * store. It contains database definitions, table definitions, and other control information to manage your Lake
      * Formation environment.
      * </p>
      */
     private String catalogId;
     /**
      * <p>
-     * The key-name for the tag.
+     * The key-name for the LF-tag.
      * </p>
      */
     private String tagKey;
@@ -47,14 +47,14 @@ public class GetLFTagResult extends com.amazonaws.AmazonWebServiceResult<com.ama
     /**
      * <p>
      * The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent metadata
-     * store. It contains database definitions, table definitions, and other control information to manage your AWS Lake
+     * store. It contains database definitions, table definitions, and other control information to manage your Lake
      * Formation environment.
      * </p>
      * 
      * @param catalogId
      *        The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent
      *        metadata store. It contains database definitions, table definitions, and other control information to
-     *        manage your AWS Lake Formation environment.
+     *        manage your Lake Formation environment.
      */
 
     public void setCatalogId(String catalogId) {
@@ -64,13 +64,13 @@ public class GetLFTagResult extends com.amazonaws.AmazonWebServiceResult<com.ama
     /**
      * <p>
      * The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent metadata
-     * store. It contains database definitions, table definitions, and other control information to manage your AWS Lake
+     * store. It contains database definitions, table definitions, and other control information to manage your Lake
      * Formation environment.
      * </p>
      * 
      * @return The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent
      *         metadata store. It contains database definitions, table definitions, and other control information to
-     *         manage your AWS Lake Formation environment.
+     *         manage your Lake Formation environment.
      */
 
     public String getCatalogId() {
@@ -80,14 +80,14 @@ public class GetLFTagResult extends com.amazonaws.AmazonWebServiceResult<com.ama
     /**
      * <p>
      * The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent metadata
-     * store. It contains database definitions, table definitions, and other control information to manage your AWS Lake
+     * store. It contains database definitions, table definitions, and other control information to manage your Lake
      * Formation environment.
      * </p>
      * 
      * @param catalogId
      *        The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent
      *        metadata store. It contains database definitions, table definitions, and other control information to
-     *        manage your AWS Lake Formation environment.
+     *        manage your Lake Formation environment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -98,11 +98,11 @@ public class GetLFTagResult extends com.amazonaws.AmazonWebServiceResult<com.ama
 
     /**
      * <p>
-     * The key-name for the tag.
+     * The key-name for the LF-tag.
      * </p>
      * 
      * @param tagKey
-     *        The key-name for the tag.
+     *        The key-name for the LF-tag.
      */
 
     public void setTagKey(String tagKey) {
@@ -111,10 +111,10 @@ public class GetLFTagResult extends com.amazonaws.AmazonWebServiceResult<com.ama
 
     /**
      * <p>
-     * The key-name for the tag.
+     * The key-name for the LF-tag.
      * </p>
      * 
-     * @return The key-name for the tag.
+     * @return The key-name for the LF-tag.
      */
 
     public String getTagKey() {
@@ -123,11 +123,11 @@ public class GetLFTagResult extends com.amazonaws.AmazonWebServiceResult<com.ama
 
     /**
      * <p>
-     * The key-name for the tag.
+     * The key-name for the LF-tag.
      * </p>
      * 
      * @param tagKey
-     *        The key-name for the tag.
+     *        The key-name for the LF-tag.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

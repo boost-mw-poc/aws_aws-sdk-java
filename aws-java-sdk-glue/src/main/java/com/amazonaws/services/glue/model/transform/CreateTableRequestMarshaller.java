@@ -36,6 +36,8 @@ public class CreateTableRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TableInput").build();
     private static final MarshallingInfo<List> PARTITIONINDEXES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PartitionIndexes").build();
+    private static final MarshallingInfo<String> TRANSACTIONID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TransactionId").build();
 
     private static final CreateTableRequestMarshaller instance = new CreateTableRequestMarshaller();
 
@@ -57,6 +59,7 @@ public class CreateTableRequestMarshaller {
             protocolMarshaller.marshall(createTableRequest.getDatabaseName(), DATABASENAME_BINDING);
             protocolMarshaller.marshall(createTableRequest.getTableInput(), TABLEINPUT_BINDING);
             protocolMarshaller.marshall(createTableRequest.getPartitionIndexes(), PARTITIONINDEXES_BINDING);
+            protocolMarshaller.marshall(createTableRequest.getTransactionId(), TRANSACTIONID_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

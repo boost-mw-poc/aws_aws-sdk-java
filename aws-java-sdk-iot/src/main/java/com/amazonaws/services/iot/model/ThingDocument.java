@@ -57,10 +57,25 @@ public class ThingDocument implements Serializable, Cloneable, StructuredPojo {
     private java.util.Map<String, String> attributes;
     /**
      * <p>
-     * The shadow.
+     * The unnamed shadow and named shadow.
+     * </p>
+     * <p>
+     * For more information about shadows, see <a
+     * href="https://docs.aws.amazon.com/iot/latest/developerguide/iot-device-shadows.html">IoT Device Shadow
+     * service.</a>
      * </p>
      */
     private String shadow;
+    /**
+     * <p>
+     * Contains Device Defender data.
+     * </p>
+     * <p>
+     * For more information about Device Defender, see <a
+     * href="https://docs.aws.amazon.com/iot/latest/developerguide/device-defender.html">Device Defender</a>.
+     * </p>
+     */
+    private String deviceDefender;
     /**
      * <p>
      * Indicates whether the thing is connected to the Amazon Web Services IoT Core service.
@@ -328,11 +343,20 @@ public class ThingDocument implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The shadow.
+     * The unnamed shadow and named shadow.
+     * </p>
+     * <p>
+     * For more information about shadows, see <a
+     * href="https://docs.aws.amazon.com/iot/latest/developerguide/iot-device-shadows.html">IoT Device Shadow
+     * service.</a>
      * </p>
      * 
      * @param shadow
-     *        The shadow.
+     *        The unnamed shadow and named shadow.</p>
+     *        <p>
+     *        For more information about shadows, see <a
+     *        href="https://docs.aws.amazon.com/iot/latest/developerguide/iot-device-shadows.html">IoT Device Shadow
+     *        service.</a>
      */
 
     public void setShadow(String shadow) {
@@ -341,10 +365,19 @@ public class ThingDocument implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The shadow.
+     * The unnamed shadow and named shadow.
+     * </p>
+     * <p>
+     * For more information about shadows, see <a
+     * href="https://docs.aws.amazon.com/iot/latest/developerguide/iot-device-shadows.html">IoT Device Shadow
+     * service.</a>
      * </p>
      * 
-     * @return The shadow.
+     * @return The unnamed shadow and named shadow.</p>
+     *         <p>
+     *         For more information about shadows, see <a
+     *         href="https://docs.aws.amazon.com/iot/latest/developerguide/iot-device-shadows.html">IoT Device Shadow
+     *         service.</a>
      */
 
     public String getShadow() {
@@ -353,16 +386,86 @@ public class ThingDocument implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The shadow.
+     * The unnamed shadow and named shadow.
+     * </p>
+     * <p>
+     * For more information about shadows, see <a
+     * href="https://docs.aws.amazon.com/iot/latest/developerguide/iot-device-shadows.html">IoT Device Shadow
+     * service.</a>
      * </p>
      * 
      * @param shadow
-     *        The shadow.
+     *        The unnamed shadow and named shadow.</p>
+     *        <p>
+     *        For more information about shadows, see <a
+     *        href="https://docs.aws.amazon.com/iot/latest/developerguide/iot-device-shadows.html">IoT Device Shadow
+     *        service.</a>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public ThingDocument withShadow(String shadow) {
         setShadow(shadow);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Contains Device Defender data.
+     * </p>
+     * <p>
+     * For more information about Device Defender, see <a
+     * href="https://docs.aws.amazon.com/iot/latest/developerguide/device-defender.html">Device Defender</a>.
+     * </p>
+     * 
+     * @param deviceDefender
+     *        Contains Device Defender data.</p>
+     *        <p>
+     *        For more information about Device Defender, see <a
+     *        href="https://docs.aws.amazon.com/iot/latest/developerguide/device-defender.html">Device Defender</a>.
+     */
+
+    public void setDeviceDefender(String deviceDefender) {
+        this.deviceDefender = deviceDefender;
+    }
+
+    /**
+     * <p>
+     * Contains Device Defender data.
+     * </p>
+     * <p>
+     * For more information about Device Defender, see <a
+     * href="https://docs.aws.amazon.com/iot/latest/developerguide/device-defender.html">Device Defender</a>.
+     * </p>
+     * 
+     * @return Contains Device Defender data.</p>
+     *         <p>
+     *         For more information about Device Defender, see <a
+     *         href="https://docs.aws.amazon.com/iot/latest/developerguide/device-defender.html">Device Defender</a>.
+     */
+
+    public String getDeviceDefender() {
+        return this.deviceDefender;
+    }
+
+    /**
+     * <p>
+     * Contains Device Defender data.
+     * </p>
+     * <p>
+     * For more information about Device Defender, see <a
+     * href="https://docs.aws.amazon.com/iot/latest/developerguide/device-defender.html">Device Defender</a>.
+     * </p>
+     * 
+     * @param deviceDefender
+     *        Contains Device Defender data.</p>
+     *        <p>
+     *        For more information about Device Defender, see <a
+     *        href="https://docs.aws.amazon.com/iot/latest/developerguide/device-defender.html">Device Defender</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ThingDocument withDeviceDefender(String deviceDefender) {
+        setDeviceDefender(deviceDefender);
         return this;
     }
 
@@ -430,6 +533,8 @@ public class ThingDocument implements Serializable, Cloneable, StructuredPojo {
             sb.append("Attributes: ").append(getAttributes()).append(",");
         if (getShadow() != null)
             sb.append("Shadow: ").append(getShadow()).append(",");
+        if (getDeviceDefender() != null)
+            sb.append("DeviceDefender: ").append(getDeviceDefender()).append(",");
         if (getConnectivity() != null)
             sb.append("Connectivity: ").append(getConnectivity());
         sb.append("}");
@@ -470,6 +575,10 @@ public class ThingDocument implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getShadow() != null && other.getShadow().equals(this.getShadow()) == false)
             return false;
+        if (other.getDeviceDefender() == null ^ this.getDeviceDefender() == null)
+            return false;
+        if (other.getDeviceDefender() != null && other.getDeviceDefender().equals(this.getDeviceDefender()) == false)
+            return false;
         if (other.getConnectivity() == null ^ this.getConnectivity() == null)
             return false;
         if (other.getConnectivity() != null && other.getConnectivity().equals(this.getConnectivity()) == false)
@@ -488,6 +597,7 @@ public class ThingDocument implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getThingGroupNames() == null) ? 0 : getThingGroupNames().hashCode());
         hashCode = prime * hashCode + ((getAttributes() == null) ? 0 : getAttributes().hashCode());
         hashCode = prime * hashCode + ((getShadow() == null) ? 0 : getShadow().hashCode());
+        hashCode = prime * hashCode + ((getDeviceDefender() == null) ? 0 : getDeviceDefender().hashCode());
         hashCode = prime * hashCode + ((getConnectivity() == null) ? 0 : getConnectivity().hashCode());
         return hashCode;
     }

@@ -49,14 +49,14 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
     private String fileSystemId;
     /**
      * <p>
-     * The type of Amazon FSx file system, which can be <code>LUSTRE</code>, <code>WINDOWS</code>, or <code>ONTAP</code>
-     * .
+     * The type of Amazon FSx file system, which can be <code>LUSTRE</code>, <code>WINDOWS</code>, <code>ONTAP</code>,
+     * or <code>OPENZFS</code>.
      * </p>
      */
     private String fileSystemType;
     /**
      * <p>
-     * The lifecycle status of the file system, following are the possible values and what they mean:
+     * The lifecycle status of the file system. The following are the possible values and what they mean:
      * </p>
      * <ul>
      * <li>
@@ -82,12 +82,12 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>MISCONFIGURED</code> indicates that the file system is in a failed but recoverable state.
+     * <code>MISCONFIGURED</code> - The file system is in a failed but recoverable state.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>UPDATING</code> indicates that the file system is undergoing a customer initiated update.
+     * <code>UPDATING</code> - The file system is undergoing a customer-initiated update.
      * </p>
      * </li>
      * </ul>
@@ -103,38 +103,38 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
     private Integer storageCapacity;
     /**
      * <p>
-     * The storage type of the file system. Valid values are <code>SSD</code> and <code>HDD</code>. If set to
-     * <code>SSD</code>, the file system uses solid state drive storage. If set to <code>HDD</code>, the file system
-     * uses hard disk drive storage.
+     * The type of storage the file system is using. If set to <code>SSD</code>, the file system uses solid state drive
+     * storage. If set to <code>HDD</code>, the file system uses hard disk drive storage.
      * </p>
      */
     private String storageType;
     /**
      * <p>
-     * The ID of the primary VPC for the file system.
+     * The ID of the primary virtual private cloud (VPC) for the file system.
      * </p>
      */
     private String vpcId;
     /**
      * <p>
-     * Specifies the IDs of the subnets that the file system is accessible from. For Windows and ONTAP
+     * Specifies the IDs of the subnets that the file system is accessible from. For the Amazon FSx Windows and ONTAP
      * <code>MULTI_AZ_1</code> file system deployment type, there are two subnet IDs, one for the preferred file server
      * and one for the standby file server. The preferred file server subnet identified in the
      * <code>PreferredSubnetID</code> property. All other file systems have only one subnet ID.
      * </p>
      * <p>
-     * For Lustre file systems, and Single-AZ Windows file systems, this is the ID of the subnet that contains the
-     * endpoint for the file system. For <code>MULTI_AZ_1</code> Windows and ONTAP file systems, the endpoint for the
-     * file system is available in the <code>PreferredSubnetID</code>.
+     * For FSx for Lustre file systems, and Single-AZ Windows file systems, this is the ID of the subnet that contains
+     * the file system's endpoint. For <code>MULTI_AZ_1</code> Windows and ONTAP file systems, the file system endpoint
+     * is available in the <code>PreferredSubnetID</code>.
      * </p>
      */
     private java.util.List<String> subnetIds;
     /**
      * <p>
-     * The IDs of the elastic network interface from which a specific file system is accessible. The elastic network
-     * interface is automatically created in the same VPC that the Amazon FSx file system was created in. For more
-     * information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html">Elastic Network
-     * Interfaces</a> in the <i>Amazon EC2 User Guide.</i>
+     * The IDs of the elastic network interfaces from which a specific file system is accessible. The elastic network
+     * interface is automatically created in the same virtual private cloud (VPC) that the Amazon FSx file system was
+     * created in. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html">Elastic Network Interfaces</a> in the
+     * <i>Amazon EC2 User Guide.</i>
      * </p>
      * <p>
      * For an Amazon FSx for Windows File Server file system, you can have one network interface ID. For an Amazon FSx
@@ -144,16 +144,17 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
     private java.util.List<String> networkInterfaceIds;
     /**
      * <p>
-     * The DNS name for the file system.
+     * The Domain Name System (DNS) name for the file system.
      * </p>
      */
     private String dNSName;
     /**
      * <p>
      * The ID of the Key Management Service (KMS) key used to encrypt the file system's data for Amazon FSx for Windows
-     * File Server file systems, Amazon FSx for NetApp ONTAP file systems, and persistent Amazon FSx for Lustre file
-     * systems at rest. If not specified, the Amazon FSx managed key is used. The scratch Amazon FSx for Lustre file
-     * systems are always encrypted at rest using Amazon FSx managed keys. For more information, see <a
+     * File Server file systems, Amazon FSx for NetApp ONTAP file systems, and <code>PERSISTENT</code> Amazon FSx for
+     * Lustre file systems at rest. If this ID isn't specified, the Amazon FSx-managed key for your account is used. The
+     * scratch Amazon FSx for Lustre file systems are always encrypted at rest using the Amazon FSx-managed key for your
+     * account. For more information, see <a
      * href="https://docs.aws.amazon.com/kms/latest/APIReference/API_Encrypt.html">Encrypt</a> in the <i>Key Management
      * Service API Reference</i>.
      * </p>
@@ -168,14 +169,14 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The tags to associate with the file system. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html">Tagging Your Amazon EC2 Resources</a>
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html">Tagging your Amazon EC2 resources</a>
      * in the <i>Amazon EC2 User Guide</i>.
      * </p>
      */
     private java.util.List<Tag> tags;
     /**
      * <p>
-     * The configuration for this Microsoft Windows file system.
+     * The configuration for this FSx for Windows File Server file system.
      * </p>
      */
     private WindowsFileSystemConfiguration windowsConfiguration;
@@ -184,23 +185,29 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * A list of administrative actions for the file system that are in process or waiting to be processed.
-     * Administrative actions describe changes to the Amazon FSx file system that you have initiated using the
-     * <code>UpdateFileSystem</code> action.
+     * Administrative actions describe changes to the Amazon FSx system that you have initiated using the
+     * <code>UpdateFileSystem</code> operation.
      * </p>
      */
     private java.util.List<AdministrativeAction> administrativeActions;
     /**
      * <p>
-     * The configuration for this FSx for NetApp ONTAP file system.
+     * The configuration for this FSx for ONTAP file system.
      * </p>
      */
     private OntapFileSystemConfiguration ontapConfiguration;
     /**
      * <p>
-     * The version of your Amazon FSx for Lustre file system, either <code>2.10</code> or <code>2.12</code>.
+     * The Lustre version of the Amazon FSx for Lustrefile system, either <code>2.10</code> or <code>2.12</code>.
      * </p>
      */
     private String fileSystemTypeVersion;
+    /**
+     * <p>
+     * The configuration for this Amazon FSx for OpenZFS file system.
+     * </p>
+     */
+    private OpenZFSFileSystemConfiguration openZFSConfiguration;
 
     /**
      * <p>
@@ -336,13 +343,13 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of Amazon FSx file system, which can be <code>LUSTRE</code>, <code>WINDOWS</code>, or <code>ONTAP</code>
-     * .
+     * The type of Amazon FSx file system, which can be <code>LUSTRE</code>, <code>WINDOWS</code>, <code>ONTAP</code>,
+     * or <code>OPENZFS</code>.
      * </p>
      * 
      * @param fileSystemType
-     *        The type of Amazon FSx file system, which can be <code>LUSTRE</code>, <code>WINDOWS</code>, or
-     *        <code>ONTAP</code>.
+     *        The type of Amazon FSx file system, which can be <code>LUSTRE</code>, <code>WINDOWS</code>,
+     *        <code>ONTAP</code>, or <code>OPENZFS</code>.
      * @see FileSystemType
      */
 
@@ -352,12 +359,12 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of Amazon FSx file system, which can be <code>LUSTRE</code>, <code>WINDOWS</code>, or <code>ONTAP</code>
-     * .
+     * The type of Amazon FSx file system, which can be <code>LUSTRE</code>, <code>WINDOWS</code>, <code>ONTAP</code>,
+     * or <code>OPENZFS</code>.
      * </p>
      * 
-     * @return The type of Amazon FSx file system, which can be <code>LUSTRE</code>, <code>WINDOWS</code>, or
-     *         <code>ONTAP</code>.
+     * @return The type of Amazon FSx file system, which can be <code>LUSTRE</code>, <code>WINDOWS</code>,
+     *         <code>ONTAP</code>, or <code>OPENZFS</code>.
      * @see FileSystemType
      */
 
@@ -367,13 +374,13 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of Amazon FSx file system, which can be <code>LUSTRE</code>, <code>WINDOWS</code>, or <code>ONTAP</code>
-     * .
+     * The type of Amazon FSx file system, which can be <code>LUSTRE</code>, <code>WINDOWS</code>, <code>ONTAP</code>,
+     * or <code>OPENZFS</code>.
      * </p>
      * 
      * @param fileSystemType
-     *        The type of Amazon FSx file system, which can be <code>LUSTRE</code>, <code>WINDOWS</code>, or
-     *        <code>ONTAP</code>.
+     *        The type of Amazon FSx file system, which can be <code>LUSTRE</code>, <code>WINDOWS</code>,
+     *        <code>ONTAP</code>, or <code>OPENZFS</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see FileSystemType
      */
@@ -385,13 +392,13 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of Amazon FSx file system, which can be <code>LUSTRE</code>, <code>WINDOWS</code>, or <code>ONTAP</code>
-     * .
+     * The type of Amazon FSx file system, which can be <code>LUSTRE</code>, <code>WINDOWS</code>, <code>ONTAP</code>,
+     * or <code>OPENZFS</code>.
      * </p>
      * 
      * @param fileSystemType
-     *        The type of Amazon FSx file system, which can be <code>LUSTRE</code>, <code>WINDOWS</code>, or
-     *        <code>ONTAP</code>.
+     *        The type of Amazon FSx file system, which can be <code>LUSTRE</code>, <code>WINDOWS</code>,
+     *        <code>ONTAP</code>, or <code>OPENZFS</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see FileSystemType
      */
@@ -403,7 +410,7 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The lifecycle status of the file system, following are the possible values and what they mean:
+     * The lifecycle status of the file system. The following are the possible values and what they mean:
      * </p>
      * <ul>
      * <li>
@@ -429,18 +436,18 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>MISCONFIGURED</code> indicates that the file system is in a failed but recoverable state.
+     * <code>MISCONFIGURED</code> - The file system is in a failed but recoverable state.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>UPDATING</code> indicates that the file system is undergoing a customer initiated update.
+     * <code>UPDATING</code> - The file system is undergoing a customer-initiated update.
      * </p>
      * </li>
      * </ul>
      * 
      * @param lifecycle
-     *        The lifecycle status of the file system, following are the possible values and what they mean:</p>
+     *        The lifecycle status of the file system. The following are the possible values and what they mean:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -465,12 +472,12 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>MISCONFIGURED</code> indicates that the file system is in a failed but recoverable state.
+     *        <code>MISCONFIGURED</code> - The file system is in a failed but recoverable state.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>UPDATING</code> indicates that the file system is undergoing a customer initiated update.
+     *        <code>UPDATING</code> - The file system is undergoing a customer-initiated update.
      *        </p>
      *        </li>
      * @see FileSystemLifecycle
@@ -482,7 +489,7 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The lifecycle status of the file system, following are the possible values and what they mean:
+     * The lifecycle status of the file system. The following are the possible values and what they mean:
      * </p>
      * <ul>
      * <li>
@@ -508,17 +515,17 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>MISCONFIGURED</code> indicates that the file system is in a failed but recoverable state.
+     * <code>MISCONFIGURED</code> - The file system is in a failed but recoverable state.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>UPDATING</code> indicates that the file system is undergoing a customer initiated update.
+     * <code>UPDATING</code> - The file system is undergoing a customer-initiated update.
      * </p>
      * </li>
      * </ul>
      * 
-     * @return The lifecycle status of the file system, following are the possible values and what they mean:</p>
+     * @return The lifecycle status of the file system. The following are the possible values and what they mean:</p>
      *         <ul>
      *         <li>
      *         <p>
@@ -543,12 +550,12 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
      *         </li>
      *         <li>
      *         <p>
-     *         <code>MISCONFIGURED</code> indicates that the file system is in a failed but recoverable state.
+     *         <code>MISCONFIGURED</code> - The file system is in a failed but recoverable state.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>UPDATING</code> indicates that the file system is undergoing a customer initiated update.
+     *         <code>UPDATING</code> - The file system is undergoing a customer-initiated update.
      *         </p>
      *         </li>
      * @see FileSystemLifecycle
@@ -560,7 +567,7 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The lifecycle status of the file system, following are the possible values and what they mean:
+     * The lifecycle status of the file system. The following are the possible values and what they mean:
      * </p>
      * <ul>
      * <li>
@@ -586,18 +593,18 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>MISCONFIGURED</code> indicates that the file system is in a failed but recoverable state.
+     * <code>MISCONFIGURED</code> - The file system is in a failed but recoverable state.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>UPDATING</code> indicates that the file system is undergoing a customer initiated update.
+     * <code>UPDATING</code> - The file system is undergoing a customer-initiated update.
      * </p>
      * </li>
      * </ul>
      * 
      * @param lifecycle
-     *        The lifecycle status of the file system, following are the possible values and what they mean:</p>
+     *        The lifecycle status of the file system. The following are the possible values and what they mean:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -622,12 +629,12 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>MISCONFIGURED</code> indicates that the file system is in a failed but recoverable state.
+     *        <code>MISCONFIGURED</code> - The file system is in a failed but recoverable state.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>UPDATING</code> indicates that the file system is undergoing a customer initiated update.
+     *        <code>UPDATING</code> - The file system is undergoing a customer-initiated update.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -641,7 +648,7 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The lifecycle status of the file system, following are the possible values and what they mean:
+     * The lifecycle status of the file system. The following are the possible values and what they mean:
      * </p>
      * <ul>
      * <li>
@@ -667,18 +674,18 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>MISCONFIGURED</code> indicates that the file system is in a failed but recoverable state.
+     * <code>MISCONFIGURED</code> - The file system is in a failed but recoverable state.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>UPDATING</code> indicates that the file system is undergoing a customer initiated update.
+     * <code>UPDATING</code> - The file system is undergoing a customer-initiated update.
      * </p>
      * </li>
      * </ul>
      * 
      * @param lifecycle
-     *        The lifecycle status of the file system, following are the possible values and what they mean:</p>
+     *        The lifecycle status of the file system. The following are the possible values and what they mean:</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -703,12 +710,12 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>MISCONFIGURED</code> indicates that the file system is in a failed but recoverable state.
+     *        <code>MISCONFIGURED</code> - The file system is in a failed but recoverable state.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>UPDATING</code> indicates that the file system is undergoing a customer initiated update.
+     *        <code>UPDATING</code> - The file system is undergoing a customer-initiated update.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -788,15 +795,13 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The storage type of the file system. Valid values are <code>SSD</code> and <code>HDD</code>. If set to
-     * <code>SSD</code>, the file system uses solid state drive storage. If set to <code>HDD</code>, the file system
-     * uses hard disk drive storage.
+     * The type of storage the file system is using. If set to <code>SSD</code>, the file system uses solid state drive
+     * storage. If set to <code>HDD</code>, the file system uses hard disk drive storage.
      * </p>
      * 
      * @param storageType
-     *        The storage type of the file system. Valid values are <code>SSD</code> and <code>HDD</code>. If set to
-     *        <code>SSD</code>, the file system uses solid state drive storage. If set to <code>HDD</code>, the file
-     *        system uses hard disk drive storage.
+     *        The type of storage the file system is using. If set to <code>SSD</code>, the file system uses solid state
+     *        drive storage. If set to <code>HDD</code>, the file system uses hard disk drive storage.
      * @see StorageType
      */
 
@@ -806,14 +811,12 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The storage type of the file system. Valid values are <code>SSD</code> and <code>HDD</code>. If set to
-     * <code>SSD</code>, the file system uses solid state drive storage. If set to <code>HDD</code>, the file system
-     * uses hard disk drive storage.
+     * The type of storage the file system is using. If set to <code>SSD</code>, the file system uses solid state drive
+     * storage. If set to <code>HDD</code>, the file system uses hard disk drive storage.
      * </p>
      * 
-     * @return The storage type of the file system. Valid values are <code>SSD</code> and <code>HDD</code>. If set to
-     *         <code>SSD</code>, the file system uses solid state drive storage. If set to <code>HDD</code>, the file
-     *         system uses hard disk drive storage.
+     * @return The type of storage the file system is using. If set to <code>SSD</code>, the file system uses solid
+     *         state drive storage. If set to <code>HDD</code>, the file system uses hard disk drive storage.
      * @see StorageType
      */
 
@@ -823,15 +826,13 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The storage type of the file system. Valid values are <code>SSD</code> and <code>HDD</code>. If set to
-     * <code>SSD</code>, the file system uses solid state drive storage. If set to <code>HDD</code>, the file system
-     * uses hard disk drive storage.
+     * The type of storage the file system is using. If set to <code>SSD</code>, the file system uses solid state drive
+     * storage. If set to <code>HDD</code>, the file system uses hard disk drive storage.
      * </p>
      * 
      * @param storageType
-     *        The storage type of the file system. Valid values are <code>SSD</code> and <code>HDD</code>. If set to
-     *        <code>SSD</code>, the file system uses solid state drive storage. If set to <code>HDD</code>, the file
-     *        system uses hard disk drive storage.
+     *        The type of storage the file system is using. If set to <code>SSD</code>, the file system uses solid state
+     *        drive storage. If set to <code>HDD</code>, the file system uses hard disk drive storage.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see StorageType
      */
@@ -843,15 +844,13 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The storage type of the file system. Valid values are <code>SSD</code> and <code>HDD</code>. If set to
-     * <code>SSD</code>, the file system uses solid state drive storage. If set to <code>HDD</code>, the file system
-     * uses hard disk drive storage.
+     * The type of storage the file system is using. If set to <code>SSD</code>, the file system uses solid state drive
+     * storage. If set to <code>HDD</code>, the file system uses hard disk drive storage.
      * </p>
      * 
      * @param storageType
-     *        The storage type of the file system. Valid values are <code>SSD</code> and <code>HDD</code>. If set to
-     *        <code>SSD</code>, the file system uses solid state drive storage. If set to <code>HDD</code>, the file
-     *        system uses hard disk drive storage.
+     *        The type of storage the file system is using. If set to <code>SSD</code>, the file system uses solid state
+     *        drive storage. If set to <code>HDD</code>, the file system uses hard disk drive storage.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see StorageType
      */
@@ -863,11 +862,11 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID of the primary VPC for the file system.
+     * The ID of the primary virtual private cloud (VPC) for the file system.
      * </p>
      * 
      * @param vpcId
-     *        The ID of the primary VPC for the file system.
+     *        The ID of the primary virtual private cloud (VPC) for the file system.
      */
 
     public void setVpcId(String vpcId) {
@@ -876,10 +875,10 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID of the primary VPC for the file system.
+     * The ID of the primary virtual private cloud (VPC) for the file system.
      * </p>
      * 
-     * @return The ID of the primary VPC for the file system.
+     * @return The ID of the primary virtual private cloud (VPC) for the file system.
      */
 
     public String getVpcId() {
@@ -888,11 +887,11 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ID of the primary VPC for the file system.
+     * The ID of the primary virtual private cloud (VPC) for the file system.
      * </p>
      * 
      * @param vpcId
-     *        The ID of the primary VPC for the file system.
+     *        The ID of the primary virtual private cloud (VPC) for the file system.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -903,25 +902,25 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Specifies the IDs of the subnets that the file system is accessible from. For Windows and ONTAP
+     * Specifies the IDs of the subnets that the file system is accessible from. For the Amazon FSx Windows and ONTAP
      * <code>MULTI_AZ_1</code> file system deployment type, there are two subnet IDs, one for the preferred file server
      * and one for the standby file server. The preferred file server subnet identified in the
      * <code>PreferredSubnetID</code> property. All other file systems have only one subnet ID.
      * </p>
      * <p>
-     * For Lustre file systems, and Single-AZ Windows file systems, this is the ID of the subnet that contains the
-     * endpoint for the file system. For <code>MULTI_AZ_1</code> Windows and ONTAP file systems, the endpoint for the
-     * file system is available in the <code>PreferredSubnetID</code>.
+     * For FSx for Lustre file systems, and Single-AZ Windows file systems, this is the ID of the subnet that contains
+     * the file system's endpoint. For <code>MULTI_AZ_1</code> Windows and ONTAP file systems, the file system endpoint
+     * is available in the <code>PreferredSubnetID</code>.
      * </p>
      * 
-     * @return Specifies the IDs of the subnets that the file system is accessible from. For Windows and ONTAP
-     *         <code>MULTI_AZ_1</code> file system deployment type, there are two subnet IDs, one for the preferred file
-     *         server and one for the standby file server. The preferred file server subnet identified in the
-     *         <code>PreferredSubnetID</code> property. All other file systems have only one subnet ID.</p>
+     * @return Specifies the IDs of the subnets that the file system is accessible from. For the Amazon FSx Windows and
+     *         ONTAP <code>MULTI_AZ_1</code> file system deployment type, there are two subnet IDs, one for the
+     *         preferred file server and one for the standby file server. The preferred file server subnet identified in
+     *         the <code>PreferredSubnetID</code> property. All other file systems have only one subnet ID.</p>
      *         <p>
-     *         For Lustre file systems, and Single-AZ Windows file systems, this is the ID of the subnet that contains
-     *         the endpoint for the file system. For <code>MULTI_AZ_1</code> Windows and ONTAP file systems, the
-     *         endpoint for the file system is available in the <code>PreferredSubnetID</code>.
+     *         For FSx for Lustre file systems, and Single-AZ Windows file systems, this is the ID of the subnet that
+     *         contains the file system's endpoint. For <code>MULTI_AZ_1</code> Windows and ONTAP file systems, the file
+     *         system endpoint is available in the <code>PreferredSubnetID</code>.
      */
 
     public java.util.List<String> getSubnetIds() {
@@ -930,26 +929,26 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Specifies the IDs of the subnets that the file system is accessible from. For Windows and ONTAP
+     * Specifies the IDs of the subnets that the file system is accessible from. For the Amazon FSx Windows and ONTAP
      * <code>MULTI_AZ_1</code> file system deployment type, there are two subnet IDs, one for the preferred file server
      * and one for the standby file server. The preferred file server subnet identified in the
      * <code>PreferredSubnetID</code> property. All other file systems have only one subnet ID.
      * </p>
      * <p>
-     * For Lustre file systems, and Single-AZ Windows file systems, this is the ID of the subnet that contains the
-     * endpoint for the file system. For <code>MULTI_AZ_1</code> Windows and ONTAP file systems, the endpoint for the
-     * file system is available in the <code>PreferredSubnetID</code>.
+     * For FSx for Lustre file systems, and Single-AZ Windows file systems, this is the ID of the subnet that contains
+     * the file system's endpoint. For <code>MULTI_AZ_1</code> Windows and ONTAP file systems, the file system endpoint
+     * is available in the <code>PreferredSubnetID</code>.
      * </p>
      * 
      * @param subnetIds
-     *        Specifies the IDs of the subnets that the file system is accessible from. For Windows and ONTAP
-     *        <code>MULTI_AZ_1</code> file system deployment type, there are two subnet IDs, one for the preferred file
-     *        server and one for the standby file server. The preferred file server subnet identified in the
+     *        Specifies the IDs of the subnets that the file system is accessible from. For the Amazon FSx Windows and
+     *        ONTAP <code>MULTI_AZ_1</code> file system deployment type, there are two subnet IDs, one for the preferred
+     *        file server and one for the standby file server. The preferred file server subnet identified in the
      *        <code>PreferredSubnetID</code> property. All other file systems have only one subnet ID.</p>
      *        <p>
-     *        For Lustre file systems, and Single-AZ Windows file systems, this is the ID of the subnet that contains
-     *        the endpoint for the file system. For <code>MULTI_AZ_1</code> Windows and ONTAP file systems, the endpoint
-     *        for the file system is available in the <code>PreferredSubnetID</code>.
+     *        For FSx for Lustre file systems, and Single-AZ Windows file systems, this is the ID of the subnet that
+     *        contains the file system's endpoint. For <code>MULTI_AZ_1</code> Windows and ONTAP file systems, the file
+     *        system endpoint is available in the <code>PreferredSubnetID</code>.
      */
 
     public void setSubnetIds(java.util.Collection<String> subnetIds) {
@@ -963,15 +962,15 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Specifies the IDs of the subnets that the file system is accessible from. For Windows and ONTAP
+     * Specifies the IDs of the subnets that the file system is accessible from. For the Amazon FSx Windows and ONTAP
      * <code>MULTI_AZ_1</code> file system deployment type, there are two subnet IDs, one for the preferred file server
      * and one for the standby file server. The preferred file server subnet identified in the
      * <code>PreferredSubnetID</code> property. All other file systems have only one subnet ID.
      * </p>
      * <p>
-     * For Lustre file systems, and Single-AZ Windows file systems, this is the ID of the subnet that contains the
-     * endpoint for the file system. For <code>MULTI_AZ_1</code> Windows and ONTAP file systems, the endpoint for the
-     * file system is available in the <code>PreferredSubnetID</code>.
+     * For FSx for Lustre file systems, and Single-AZ Windows file systems, this is the ID of the subnet that contains
+     * the file system's endpoint. For <code>MULTI_AZ_1</code> Windows and ONTAP file systems, the file system endpoint
+     * is available in the <code>PreferredSubnetID</code>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -980,14 +979,14 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param subnetIds
-     *        Specifies the IDs of the subnets that the file system is accessible from. For Windows and ONTAP
-     *        <code>MULTI_AZ_1</code> file system deployment type, there are two subnet IDs, one for the preferred file
-     *        server and one for the standby file server. The preferred file server subnet identified in the
+     *        Specifies the IDs of the subnets that the file system is accessible from. For the Amazon FSx Windows and
+     *        ONTAP <code>MULTI_AZ_1</code> file system deployment type, there are two subnet IDs, one for the preferred
+     *        file server and one for the standby file server. The preferred file server subnet identified in the
      *        <code>PreferredSubnetID</code> property. All other file systems have only one subnet ID.</p>
      *        <p>
-     *        For Lustre file systems, and Single-AZ Windows file systems, this is the ID of the subnet that contains
-     *        the endpoint for the file system. For <code>MULTI_AZ_1</code> Windows and ONTAP file systems, the endpoint
-     *        for the file system is available in the <code>PreferredSubnetID</code>.
+     *        For FSx for Lustre file systems, and Single-AZ Windows file systems, this is the ID of the subnet that
+     *        contains the file system's endpoint. For <code>MULTI_AZ_1</code> Windows and ONTAP file systems, the file
+     *        system endpoint is available in the <code>PreferredSubnetID</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1003,26 +1002,26 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Specifies the IDs of the subnets that the file system is accessible from. For Windows and ONTAP
+     * Specifies the IDs of the subnets that the file system is accessible from. For the Amazon FSx Windows and ONTAP
      * <code>MULTI_AZ_1</code> file system deployment type, there are two subnet IDs, one for the preferred file server
      * and one for the standby file server. The preferred file server subnet identified in the
      * <code>PreferredSubnetID</code> property. All other file systems have only one subnet ID.
      * </p>
      * <p>
-     * For Lustre file systems, and Single-AZ Windows file systems, this is the ID of the subnet that contains the
-     * endpoint for the file system. For <code>MULTI_AZ_1</code> Windows and ONTAP file systems, the endpoint for the
-     * file system is available in the <code>PreferredSubnetID</code>.
+     * For FSx for Lustre file systems, and Single-AZ Windows file systems, this is the ID of the subnet that contains
+     * the file system's endpoint. For <code>MULTI_AZ_1</code> Windows and ONTAP file systems, the file system endpoint
+     * is available in the <code>PreferredSubnetID</code>.
      * </p>
      * 
      * @param subnetIds
-     *        Specifies the IDs of the subnets that the file system is accessible from. For Windows and ONTAP
-     *        <code>MULTI_AZ_1</code> file system deployment type, there are two subnet IDs, one for the preferred file
-     *        server and one for the standby file server. The preferred file server subnet identified in the
+     *        Specifies the IDs of the subnets that the file system is accessible from. For the Amazon FSx Windows and
+     *        ONTAP <code>MULTI_AZ_1</code> file system deployment type, there are two subnet IDs, one for the preferred
+     *        file server and one for the standby file server. The preferred file server subnet identified in the
      *        <code>PreferredSubnetID</code> property. All other file systems have only one subnet ID.</p>
      *        <p>
-     *        For Lustre file systems, and Single-AZ Windows file systems, this is the ID of the subnet that contains
-     *        the endpoint for the file system. For <code>MULTI_AZ_1</code> Windows and ONTAP file systems, the endpoint
-     *        for the file system is available in the <code>PreferredSubnetID</code>.
+     *        For FSx for Lustre file systems, and Single-AZ Windows file systems, this is the ID of the subnet that
+     *        contains the file system's endpoint. For <code>MULTI_AZ_1</code> Windows and ONTAP file systems, the file
+     *        system endpoint is available in the <code>PreferredSubnetID</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1033,19 +1032,20 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The IDs of the elastic network interface from which a specific file system is accessible. The elastic network
-     * interface is automatically created in the same VPC that the Amazon FSx file system was created in. For more
-     * information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html">Elastic Network
-     * Interfaces</a> in the <i>Amazon EC2 User Guide.</i>
+     * The IDs of the elastic network interfaces from which a specific file system is accessible. The elastic network
+     * interface is automatically created in the same virtual private cloud (VPC) that the Amazon FSx file system was
+     * created in. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html">Elastic Network Interfaces</a> in the
+     * <i>Amazon EC2 User Guide.</i>
      * </p>
      * <p>
      * For an Amazon FSx for Windows File Server file system, you can have one network interface ID. For an Amazon FSx
      * for Lustre file system, you can have more than one.
      * </p>
      * 
-     * @return The IDs of the elastic network interface from which a specific file system is accessible. The elastic
-     *         network interface is automatically created in the same VPC that the Amazon FSx file system was created
-     *         in. For more information, see <a
+     * @return The IDs of the elastic network interfaces from which a specific file system is accessible. The elastic
+     *         network interface is automatically created in the same virtual private cloud (VPC) that the Amazon FSx
+     *         file system was created in. For more information, see <a
      *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html">Elastic Network Interfaces</a>
      *         in the <i>Amazon EC2 User Guide.</i> </p>
      *         <p>
@@ -1059,10 +1059,11 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The IDs of the elastic network interface from which a specific file system is accessible. The elastic network
-     * interface is automatically created in the same VPC that the Amazon FSx file system was created in. For more
-     * information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html">Elastic Network
-     * Interfaces</a> in the <i>Amazon EC2 User Guide.</i>
+     * The IDs of the elastic network interfaces from which a specific file system is accessible. The elastic network
+     * interface is automatically created in the same virtual private cloud (VPC) that the Amazon FSx file system was
+     * created in. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html">Elastic Network Interfaces</a> in the
+     * <i>Amazon EC2 User Guide.</i>
      * </p>
      * <p>
      * For an Amazon FSx for Windows File Server file system, you can have one network interface ID. For an Amazon FSx
@@ -1070,9 +1071,9 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param networkInterfaceIds
-     *        The IDs of the elastic network interface from which a specific file system is accessible. The elastic
-     *        network interface is automatically created in the same VPC that the Amazon FSx file system was created in.
-     *        For more information, see <a
+     *        The IDs of the elastic network interfaces from which a specific file system is accessible. The elastic
+     *        network interface is automatically created in the same virtual private cloud (VPC) that the Amazon FSx
+     *        file system was created in. For more information, see <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html">Elastic Network Interfaces</a>
      *        in the <i>Amazon EC2 User Guide.</i> </p>
      *        <p>
@@ -1091,10 +1092,11 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The IDs of the elastic network interface from which a specific file system is accessible. The elastic network
-     * interface is automatically created in the same VPC that the Amazon FSx file system was created in. For more
-     * information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html">Elastic Network
-     * Interfaces</a> in the <i>Amazon EC2 User Guide.</i>
+     * The IDs of the elastic network interfaces from which a specific file system is accessible. The elastic network
+     * interface is automatically created in the same virtual private cloud (VPC) that the Amazon FSx file system was
+     * created in. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html">Elastic Network Interfaces</a> in the
+     * <i>Amazon EC2 User Guide.</i>
      * </p>
      * <p>
      * For an Amazon FSx for Windows File Server file system, you can have one network interface ID. For an Amazon FSx
@@ -1107,9 +1109,9 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param networkInterfaceIds
-     *        The IDs of the elastic network interface from which a specific file system is accessible. The elastic
-     *        network interface is automatically created in the same VPC that the Amazon FSx file system was created in.
-     *        For more information, see <a
+     *        The IDs of the elastic network interfaces from which a specific file system is accessible. The elastic
+     *        network interface is automatically created in the same virtual private cloud (VPC) that the Amazon FSx
+     *        file system was created in. For more information, see <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html">Elastic Network Interfaces</a>
      *        in the <i>Amazon EC2 User Guide.</i> </p>
      *        <p>
@@ -1130,10 +1132,11 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The IDs of the elastic network interface from which a specific file system is accessible. The elastic network
-     * interface is automatically created in the same VPC that the Amazon FSx file system was created in. For more
-     * information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html">Elastic Network
-     * Interfaces</a> in the <i>Amazon EC2 User Guide.</i>
+     * The IDs of the elastic network interfaces from which a specific file system is accessible. The elastic network
+     * interface is automatically created in the same virtual private cloud (VPC) that the Amazon FSx file system was
+     * created in. For more information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html">Elastic Network Interfaces</a> in the
+     * <i>Amazon EC2 User Guide.</i>
      * </p>
      * <p>
      * For an Amazon FSx for Windows File Server file system, you can have one network interface ID. For an Amazon FSx
@@ -1141,9 +1144,9 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param networkInterfaceIds
-     *        The IDs of the elastic network interface from which a specific file system is accessible. The elastic
-     *        network interface is automatically created in the same VPC that the Amazon FSx file system was created in.
-     *        For more information, see <a
+     *        The IDs of the elastic network interfaces from which a specific file system is accessible. The elastic
+     *        network interface is automatically created in the same virtual private cloud (VPC) that the Amazon FSx
+     *        file system was created in. For more information, see <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html">Elastic Network Interfaces</a>
      *        in the <i>Amazon EC2 User Guide.</i> </p>
      *        <p>
@@ -1159,11 +1162,11 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The DNS name for the file system.
+     * The Domain Name System (DNS) name for the file system.
      * </p>
      * 
      * @param dNSName
-     *        The DNS name for the file system.
+     *        The Domain Name System (DNS) name for the file system.
      */
 
     public void setDNSName(String dNSName) {
@@ -1172,10 +1175,10 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The DNS name for the file system.
+     * The Domain Name System (DNS) name for the file system.
      * </p>
      * 
-     * @return The DNS name for the file system.
+     * @return The Domain Name System (DNS) name for the file system.
      */
 
     public String getDNSName() {
@@ -1184,11 +1187,11 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The DNS name for the file system.
+     * The Domain Name System (DNS) name for the file system.
      * </p>
      * 
      * @param dNSName
-     *        The DNS name for the file system.
+     *        The Domain Name System (DNS) name for the file system.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1200,20 +1203,22 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The ID of the Key Management Service (KMS) key used to encrypt the file system's data for Amazon FSx for Windows
-     * File Server file systems, Amazon FSx for NetApp ONTAP file systems, and persistent Amazon FSx for Lustre file
-     * systems at rest. If not specified, the Amazon FSx managed key is used. The scratch Amazon FSx for Lustre file
-     * systems are always encrypted at rest using Amazon FSx managed keys. For more information, see <a
+     * File Server file systems, Amazon FSx for NetApp ONTAP file systems, and <code>PERSISTENT</code> Amazon FSx for
+     * Lustre file systems at rest. If this ID isn't specified, the Amazon FSx-managed key for your account is used. The
+     * scratch Amazon FSx for Lustre file systems are always encrypted at rest using the Amazon FSx-managed key for your
+     * account. For more information, see <a
      * href="https://docs.aws.amazon.com/kms/latest/APIReference/API_Encrypt.html">Encrypt</a> in the <i>Key Management
      * Service API Reference</i>.
      * </p>
      * 
      * @param kmsKeyId
      *        The ID of the Key Management Service (KMS) key used to encrypt the file system's data for Amazon FSx for
-     *        Windows File Server file systems, Amazon FSx for NetApp ONTAP file systems, and persistent Amazon FSx for
-     *        Lustre file systems at rest. If not specified, the Amazon FSx managed key is used. The scratch Amazon FSx
-     *        for Lustre file systems are always encrypted at rest using Amazon FSx managed keys. For more information,
-     *        see <a href="https://docs.aws.amazon.com/kms/latest/APIReference/API_Encrypt.html">Encrypt</a> in the
-     *        <i>Key Management Service API Reference</i>.
+     *        Windows File Server file systems, Amazon FSx for NetApp ONTAP file systems, and <code>PERSISTENT</code>
+     *        Amazon FSx for Lustre file systems at rest. If this ID isn't specified, the Amazon FSx-managed key for
+     *        your account is used. The scratch Amazon FSx for Lustre file systems are always encrypted at rest using
+     *        the Amazon FSx-managed key for your account. For more information, see <a
+     *        href="https://docs.aws.amazon.com/kms/latest/APIReference/API_Encrypt.html">Encrypt</a> in the <i>Key
+     *        Management Service API Reference</i>.
      */
 
     public void setKmsKeyId(String kmsKeyId) {
@@ -1223,19 +1228,21 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The ID of the Key Management Service (KMS) key used to encrypt the file system's data for Amazon FSx for Windows
-     * File Server file systems, Amazon FSx for NetApp ONTAP file systems, and persistent Amazon FSx for Lustre file
-     * systems at rest. If not specified, the Amazon FSx managed key is used. The scratch Amazon FSx for Lustre file
-     * systems are always encrypted at rest using Amazon FSx managed keys. For more information, see <a
+     * File Server file systems, Amazon FSx for NetApp ONTAP file systems, and <code>PERSISTENT</code> Amazon FSx for
+     * Lustre file systems at rest. If this ID isn't specified, the Amazon FSx-managed key for your account is used. The
+     * scratch Amazon FSx for Lustre file systems are always encrypted at rest using the Amazon FSx-managed key for your
+     * account. For more information, see <a
      * href="https://docs.aws.amazon.com/kms/latest/APIReference/API_Encrypt.html">Encrypt</a> in the <i>Key Management
      * Service API Reference</i>.
      * </p>
      * 
      * @return The ID of the Key Management Service (KMS) key used to encrypt the file system's data for Amazon FSx for
-     *         Windows File Server file systems, Amazon FSx for NetApp ONTAP file systems, and persistent Amazon FSx for
-     *         Lustre file systems at rest. If not specified, the Amazon FSx managed key is used. The scratch Amazon FSx
-     *         for Lustre file systems are always encrypted at rest using Amazon FSx managed keys. For more information,
-     *         see <a href="https://docs.aws.amazon.com/kms/latest/APIReference/API_Encrypt.html">Encrypt</a> in the
-     *         <i>Key Management Service API Reference</i>.
+     *         Windows File Server file systems, Amazon FSx for NetApp ONTAP file systems, and <code>PERSISTENT</code>
+     *         Amazon FSx for Lustre file systems at rest. If this ID isn't specified, the Amazon FSx-managed key for
+     *         your account is used. The scratch Amazon FSx for Lustre file systems are always encrypted at rest using
+     *         the Amazon FSx-managed key for your account. For more information, see <a
+     *         href="https://docs.aws.amazon.com/kms/latest/APIReference/API_Encrypt.html">Encrypt</a> in the <i>Key
+     *         Management Service API Reference</i>.
      */
 
     public String getKmsKeyId() {
@@ -1245,20 +1252,22 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The ID of the Key Management Service (KMS) key used to encrypt the file system's data for Amazon FSx for Windows
-     * File Server file systems, Amazon FSx for NetApp ONTAP file systems, and persistent Amazon FSx for Lustre file
-     * systems at rest. If not specified, the Amazon FSx managed key is used. The scratch Amazon FSx for Lustre file
-     * systems are always encrypted at rest using Amazon FSx managed keys. For more information, see <a
+     * File Server file systems, Amazon FSx for NetApp ONTAP file systems, and <code>PERSISTENT</code> Amazon FSx for
+     * Lustre file systems at rest. If this ID isn't specified, the Amazon FSx-managed key for your account is used. The
+     * scratch Amazon FSx for Lustre file systems are always encrypted at rest using the Amazon FSx-managed key for your
+     * account. For more information, see <a
      * href="https://docs.aws.amazon.com/kms/latest/APIReference/API_Encrypt.html">Encrypt</a> in the <i>Key Management
      * Service API Reference</i>.
      * </p>
      * 
      * @param kmsKeyId
      *        The ID of the Key Management Service (KMS) key used to encrypt the file system's data for Amazon FSx for
-     *        Windows File Server file systems, Amazon FSx for NetApp ONTAP file systems, and persistent Amazon FSx for
-     *        Lustre file systems at rest. If not specified, the Amazon FSx managed key is used. The scratch Amazon FSx
-     *        for Lustre file systems are always encrypted at rest using Amazon FSx managed keys. For more information,
-     *        see <a href="https://docs.aws.amazon.com/kms/latest/APIReference/API_Encrypt.html">Encrypt</a> in the
-     *        <i>Key Management Service API Reference</i>.
+     *        Windows File Server file systems, Amazon FSx for NetApp ONTAP file systems, and <code>PERSISTENT</code>
+     *        Amazon FSx for Lustre file systems at rest. If this ID isn't specified, the Amazon FSx-managed key for
+     *        your account is used. The scratch Amazon FSx for Lustre file systems are always encrypted at rest using
+     *        the Amazon FSx-managed key for your account. For more information, see <a
+     *        href="https://docs.aws.amazon.com/kms/latest/APIReference/API_Encrypt.html">Encrypt</a> in the <i>Key
+     *        Management Service API Reference</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1310,13 +1319,13 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The tags to associate with the file system. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html">Tagging Your Amazon EC2 Resources</a>
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html">Tagging your Amazon EC2 resources</a>
      * in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @return The tags to associate with the file system. For more information, see <a
-     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html">Tagging Your Amazon EC2
-     *         Resources</a> in the <i>Amazon EC2 User Guide</i>.
+     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html">Tagging your Amazon EC2
+     *         resources</a> in the <i>Amazon EC2 User Guide</i>.
      */
 
     public java.util.List<Tag> getTags() {
@@ -1326,14 +1335,14 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The tags to associate with the file system. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html">Tagging Your Amazon EC2 Resources</a>
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html">Tagging your Amazon EC2 resources</a>
      * in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param tags
      *        The tags to associate with the file system. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html">Tagging Your Amazon EC2
-     *        Resources</a> in the <i>Amazon EC2 User Guide</i>.
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html">Tagging your Amazon EC2
+     *        resources</a> in the <i>Amazon EC2 User Guide</i>.
      */
 
     public void setTags(java.util.Collection<Tag> tags) {
@@ -1348,7 +1357,7 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The tags to associate with the file system. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html">Tagging Your Amazon EC2 Resources</a>
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html">Tagging your Amazon EC2 resources</a>
      * in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * <p>
@@ -1359,8 +1368,8 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
      * 
      * @param tags
      *        The tags to associate with the file system. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html">Tagging Your Amazon EC2
-     *        Resources</a> in the <i>Amazon EC2 User Guide</i>.
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html">Tagging your Amazon EC2
+     *        resources</a> in the <i>Amazon EC2 User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1377,14 +1386,14 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The tags to associate with the file system. For more information, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html">Tagging Your Amazon EC2 Resources</a>
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html">Tagging your Amazon EC2 resources</a>
      * in the <i>Amazon EC2 User Guide</i>.
      * </p>
      * 
      * @param tags
      *        The tags to associate with the file system. For more information, see <a
-     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html">Tagging Your Amazon EC2
-     *        Resources</a> in the <i>Amazon EC2 User Guide</i>.
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html">Tagging your Amazon EC2
+     *        resources</a> in the <i>Amazon EC2 User Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1395,11 +1404,11 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The configuration for this Microsoft Windows file system.
+     * The configuration for this FSx for Windows File Server file system.
      * </p>
      * 
      * @param windowsConfiguration
-     *        The configuration for this Microsoft Windows file system.
+     *        The configuration for this FSx for Windows File Server file system.
      */
 
     public void setWindowsConfiguration(WindowsFileSystemConfiguration windowsConfiguration) {
@@ -1408,10 +1417,10 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The configuration for this Microsoft Windows file system.
+     * The configuration for this FSx for Windows File Server file system.
      * </p>
      * 
-     * @return The configuration for this Microsoft Windows file system.
+     * @return The configuration for this FSx for Windows File Server file system.
      */
 
     public WindowsFileSystemConfiguration getWindowsConfiguration() {
@@ -1420,11 +1429,11 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The configuration for this Microsoft Windows file system.
+     * The configuration for this FSx for Windows File Server file system.
      * </p>
      * 
      * @param windowsConfiguration
-     *        The configuration for this Microsoft Windows file system.
+     *        The configuration for this FSx for Windows File Server file system.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1462,13 +1471,13 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * A list of administrative actions for the file system that are in process or waiting to be processed.
-     * Administrative actions describe changes to the Amazon FSx file system that you have initiated using the
-     * <code>UpdateFileSystem</code> action.
+     * Administrative actions describe changes to the Amazon FSx system that you have initiated using the
+     * <code>UpdateFileSystem</code> operation.
      * </p>
      * 
      * @return A list of administrative actions for the file system that are in process or waiting to be processed.
-     *         Administrative actions describe changes to the Amazon FSx file system that you have initiated using the
-     *         <code>UpdateFileSystem</code> action.
+     *         Administrative actions describe changes to the Amazon FSx system that you have initiated using the
+     *         <code>UpdateFileSystem</code> operation.
      */
 
     public java.util.List<AdministrativeAction> getAdministrativeActions() {
@@ -1478,14 +1487,14 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * A list of administrative actions for the file system that are in process or waiting to be processed.
-     * Administrative actions describe changes to the Amazon FSx file system that you have initiated using the
-     * <code>UpdateFileSystem</code> action.
+     * Administrative actions describe changes to the Amazon FSx system that you have initiated using the
+     * <code>UpdateFileSystem</code> operation.
      * </p>
      * 
      * @param administrativeActions
      *        A list of administrative actions for the file system that are in process or waiting to be processed.
-     *        Administrative actions describe changes to the Amazon FSx file system that you have initiated using the
-     *        <code>UpdateFileSystem</code> action.
+     *        Administrative actions describe changes to the Amazon FSx system that you have initiated using the
+     *        <code>UpdateFileSystem</code> operation.
      */
 
     public void setAdministrativeActions(java.util.Collection<AdministrativeAction> administrativeActions) {
@@ -1500,8 +1509,8 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * A list of administrative actions for the file system that are in process or waiting to be processed.
-     * Administrative actions describe changes to the Amazon FSx file system that you have initiated using the
-     * <code>UpdateFileSystem</code> action.
+     * Administrative actions describe changes to the Amazon FSx system that you have initiated using the
+     * <code>UpdateFileSystem</code> operation.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -1511,8 +1520,8 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
      * 
      * @param administrativeActions
      *        A list of administrative actions for the file system that are in process or waiting to be processed.
-     *        Administrative actions describe changes to the Amazon FSx file system that you have initiated using the
-     *        <code>UpdateFileSystem</code> action.
+     *        Administrative actions describe changes to the Amazon FSx system that you have initiated using the
+     *        <code>UpdateFileSystem</code> operation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1529,14 +1538,14 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * A list of administrative actions for the file system that are in process or waiting to be processed.
-     * Administrative actions describe changes to the Amazon FSx file system that you have initiated using the
-     * <code>UpdateFileSystem</code> action.
+     * Administrative actions describe changes to the Amazon FSx system that you have initiated using the
+     * <code>UpdateFileSystem</code> operation.
      * </p>
      * 
      * @param administrativeActions
      *        A list of administrative actions for the file system that are in process or waiting to be processed.
-     *        Administrative actions describe changes to the Amazon FSx file system that you have initiated using the
-     *        <code>UpdateFileSystem</code> action.
+     *        Administrative actions describe changes to the Amazon FSx system that you have initiated using the
+     *        <code>UpdateFileSystem</code> operation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1547,11 +1556,11 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The configuration for this FSx for NetApp ONTAP file system.
+     * The configuration for this FSx for ONTAP file system.
      * </p>
      * 
      * @param ontapConfiguration
-     *        The configuration for this FSx for NetApp ONTAP file system.
+     *        The configuration for this FSx for ONTAP file system.
      */
 
     public void setOntapConfiguration(OntapFileSystemConfiguration ontapConfiguration) {
@@ -1560,10 +1569,10 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The configuration for this FSx for NetApp ONTAP file system.
+     * The configuration for this FSx for ONTAP file system.
      * </p>
      * 
-     * @return The configuration for this FSx for NetApp ONTAP file system.
+     * @return The configuration for this FSx for ONTAP file system.
      */
 
     public OntapFileSystemConfiguration getOntapConfiguration() {
@@ -1572,11 +1581,11 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The configuration for this FSx for NetApp ONTAP file system.
+     * The configuration for this FSx for ONTAP file system.
      * </p>
      * 
      * @param ontapConfiguration
-     *        The configuration for this FSx for NetApp ONTAP file system.
+     *        The configuration for this FSx for ONTAP file system.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1587,11 +1596,11 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The version of your Amazon FSx for Lustre file system, either <code>2.10</code> or <code>2.12</code>.
+     * The Lustre version of the Amazon FSx for Lustrefile system, either <code>2.10</code> or <code>2.12</code>.
      * </p>
      * 
      * @param fileSystemTypeVersion
-     *        The version of your Amazon FSx for Lustre file system, either <code>2.10</code> or <code>2.12</code>.
+     *        The Lustre version of the Amazon FSx for Lustrefile system, either <code>2.10</code> or <code>2.12</code>.
      */
 
     public void setFileSystemTypeVersion(String fileSystemTypeVersion) {
@@ -1600,10 +1609,11 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The version of your Amazon FSx for Lustre file system, either <code>2.10</code> or <code>2.12</code>.
+     * The Lustre version of the Amazon FSx for Lustrefile system, either <code>2.10</code> or <code>2.12</code>.
      * </p>
      * 
-     * @return The version of your Amazon FSx for Lustre file system, either <code>2.10</code> or <code>2.12</code>.
+     * @return The Lustre version of the Amazon FSx for Lustrefile system, either <code>2.10</code> or <code>2.12</code>
+     *         .
      */
 
     public String getFileSystemTypeVersion() {
@@ -1612,16 +1622,56 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The version of your Amazon FSx for Lustre file system, either <code>2.10</code> or <code>2.12</code>.
+     * The Lustre version of the Amazon FSx for Lustrefile system, either <code>2.10</code> or <code>2.12</code>.
      * </p>
      * 
      * @param fileSystemTypeVersion
-     *        The version of your Amazon FSx for Lustre file system, either <code>2.10</code> or <code>2.12</code>.
+     *        The Lustre version of the Amazon FSx for Lustrefile system, either <code>2.10</code> or <code>2.12</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public FileSystem withFileSystemTypeVersion(String fileSystemTypeVersion) {
         setFileSystemTypeVersion(fileSystemTypeVersion);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The configuration for this Amazon FSx for OpenZFS file system.
+     * </p>
+     * 
+     * @param openZFSConfiguration
+     *        The configuration for this Amazon FSx for OpenZFS file system.
+     */
+
+    public void setOpenZFSConfiguration(OpenZFSFileSystemConfiguration openZFSConfiguration) {
+        this.openZFSConfiguration = openZFSConfiguration;
+    }
+
+    /**
+     * <p>
+     * The configuration for this Amazon FSx for OpenZFS file system.
+     * </p>
+     * 
+     * @return The configuration for this Amazon FSx for OpenZFS file system.
+     */
+
+    public OpenZFSFileSystemConfiguration getOpenZFSConfiguration() {
+        return this.openZFSConfiguration;
+    }
+
+    /**
+     * <p>
+     * The configuration for this Amazon FSx for OpenZFS file system.
+     * </p>
+     * 
+     * @param openZFSConfiguration
+     *        The configuration for this Amazon FSx for OpenZFS file system.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public FileSystem withOpenZFSConfiguration(OpenZFSFileSystemConfiguration openZFSConfiguration) {
+        setOpenZFSConfiguration(openZFSConfiguration);
         return this;
     }
 
@@ -1676,7 +1726,9 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
         if (getOntapConfiguration() != null)
             sb.append("OntapConfiguration: ").append(getOntapConfiguration()).append(",");
         if (getFileSystemTypeVersion() != null)
-            sb.append("FileSystemTypeVersion: ").append(getFileSystemTypeVersion());
+            sb.append("FileSystemTypeVersion: ").append(getFileSystemTypeVersion()).append(",");
+        if (getOpenZFSConfiguration() != null)
+            sb.append("OpenZFSConfiguration: ").append(getOpenZFSConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -1771,6 +1823,10 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getFileSystemTypeVersion() != null && other.getFileSystemTypeVersion().equals(this.getFileSystemTypeVersion()) == false)
             return false;
+        if (other.getOpenZFSConfiguration() == null ^ this.getOpenZFSConfiguration() == null)
+            return false;
+        if (other.getOpenZFSConfiguration() != null && other.getOpenZFSConfiguration().equals(this.getOpenZFSConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -1799,6 +1855,7 @@ public class FileSystem implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getAdministrativeActions() == null) ? 0 : getAdministrativeActions().hashCode());
         hashCode = prime * hashCode + ((getOntapConfiguration() == null) ? 0 : getOntapConfiguration().hashCode());
         hashCode = prime * hashCode + ((getFileSystemTypeVersion() == null) ? 0 : getFileSystemTypeVersion().hashCode());
+        hashCode = prime * hashCode + ((getOpenZFSConfiguration() == null) ? 0 : getOpenZFSConfiguration().hashCode());
         return hashCode;
     }
 

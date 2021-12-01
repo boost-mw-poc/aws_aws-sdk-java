@@ -173,6 +173,47 @@ public interface AWSKafka {
 
     /**
      * <p>
+     * Creates a new MSK cluster.
+     * </p>
+     * 
+     * @param createClusterV2Request
+     * @return Result of the CreateClusterV2 operation returned by the service.
+     * @throws BadRequestException
+     *         <p>
+     *         The request isn't valid because the input is incorrect. Correct your input and then submit it again.
+     *         </p>
+     * @throws InternalServerErrorException
+     *         <p>
+     *         There was an unexpected internal server error. Retrying your request might resolve the issue.
+     *         </p>
+     * @throws UnauthorizedException
+     *         <p>
+     *         The request is not authorized. The provided credentials couldn't be validated.
+     *         </p>
+     * @throws ForbiddenException
+     *         <p>
+     *         Access forbidden. Check your credentials and then retry your request.
+     *         </p>
+     * @throws ServiceUnavailableException
+     *         <p>
+     *         503 response
+     *         </p>
+     * @throws TooManyRequestsException
+     *         <p>
+     *         429 response
+     *         </p>
+     * @throws ConflictException
+     *         <p>
+     *         This cluster name already exists. Retry your request using another name.
+     *         </p>
+     * @sample AWSKafka.CreateClusterV2
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kafka-2018-11-14/CreateClusterV2" target="_top">AWS API
+     *      Documentation</a>
+     */
+    CreateClusterV2Result createClusterV2(CreateClusterV2Request createClusterV2Request);
+
+    /**
+     * <p>
      * Creates a new MSK configuration.
      * </p>
      * 
@@ -335,6 +376,39 @@ public interface AWSKafka {
      *      API Documentation</a>
      */
     DescribeClusterOperationResult describeClusterOperation(DescribeClusterOperationRequest describeClusterOperationRequest);
+
+    /**
+     * <p>
+     * Returns a description of the MSK cluster whose Amazon Resource Name (ARN) is specified in the request.
+     * </p>
+     * 
+     * @param describeClusterV2Request
+     * @return Result of the DescribeClusterV2 operation returned by the service.
+     * @throws NotFoundException
+     *         <p>
+     *         The resource could not be found due to incorrect input. Correct the input, then retry the request.
+     *         </p>
+     * @throws BadRequestException
+     *         <p>
+     *         The request isn't valid because the input is incorrect. Correct your input and then submit it again.
+     *         </p>
+     * @throws UnauthorizedException
+     *         <p>
+     *         The request is not authorized. The provided credentials couldn't be validated.
+     *         </p>
+     * @throws InternalServerErrorException
+     *         <p>
+     *         There was an unexpected internal server error. Retrying your request might resolve the issue.
+     *         </p>
+     * @throws ForbiddenException
+     *         <p>
+     *         Access forbidden. Check your credentials and then retry your request.
+     *         </p>
+     * @sample AWSKafka.DescribeClusterV2
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kafka-2018-11-14/DescribeClusterV2" target="_top">AWS API
+     *      Documentation</a>
+     */
+    DescribeClusterV2Result describeClusterV2(DescribeClusterV2Request describeClusterV2Request);
 
     /**
      * <p>
@@ -555,6 +629,35 @@ public interface AWSKafka {
      *      Documentation</a>
      */
     ListClustersResult listClusters(ListClustersRequest listClustersRequest);
+
+    /**
+     * <p>
+     * Returns a list of all the MSK clusters in the current Region.
+     * </p>
+     * 
+     * @param listClustersV2Request
+     * @return Result of the ListClustersV2 operation returned by the service.
+     * @throws BadRequestException
+     *         <p>
+     *         The request isn't valid because the input is incorrect. Correct your input and then submit it again.
+     *         </p>
+     * @throws InternalServerErrorException
+     *         <p>
+     *         There was an unexpected internal server error. Retrying your request might resolve the issue.
+     *         </p>
+     * @throws UnauthorizedException
+     *         <p>
+     *         The request is not authorized. The provided credentials couldn't be validated.
+     *         </p>
+     * @throws ForbiddenException
+     *         <p>
+     *         Access forbidden. Check your credentials and then retry your request.
+     *         </p>
+     * @sample AWSKafka.ListClustersV2
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kafka-2018-11-14/ListClustersV2" target="_top">AWS API
+     *      Documentation</a>
+     */
+    ListClustersV2Result listClustersV2(ListClustersV2Request listClustersV2Request);
 
     /**
      * <p>

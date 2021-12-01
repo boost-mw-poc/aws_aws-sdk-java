@@ -25,29 +25,29 @@ public class GetResourceLFTagsResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * A list of tags applied to a database resource.
+     * A list of LF-tags applied to a database resource.
      * </p>
      */
     private java.util.List<LFTagPair> lFTagOnDatabase;
     /**
      * <p>
-     * A list of tags applied to a table resource.
+     * A list of LF-tags applied to a table resource.
      * </p>
      */
     private java.util.List<LFTagPair> lFTagsOnTable;
     /**
      * <p>
-     * A list of tags applied to a column resource.
+     * A list of LF-tags applied to a column resource.
      * </p>
      */
     private java.util.List<ColumnLFTag> lFTagsOnColumns;
 
     /**
      * <p>
-     * A list of tags applied to a database resource.
+     * A list of LF-tags applied to a database resource.
      * </p>
      * 
-     * @return A list of tags applied to a database resource.
+     * @return A list of LF-tags applied to a database resource.
      */
 
     public java.util.List<LFTagPair> getLFTagOnDatabase() {
@@ -56,11 +56,11 @@ public class GetResourceLFTagsResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * A list of tags applied to a database resource.
+     * A list of LF-tags applied to a database resource.
      * </p>
      * 
      * @param lFTagOnDatabase
-     *        A list of tags applied to a database resource.
+     *        A list of LF-tags applied to a database resource.
      */
 
     public void setLFTagOnDatabase(java.util.Collection<LFTagPair> lFTagOnDatabase) {
@@ -74,7 +74,7 @@ public class GetResourceLFTagsResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * A list of tags applied to a database resource.
+     * A list of LF-tags applied to a database resource.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -83,7 +83,7 @@ public class GetResourceLFTagsResult extends com.amazonaws.AmazonWebServiceResul
      * </p>
      * 
      * @param lFTagOnDatabase
-     *        A list of tags applied to a database resource.
+     *        A list of LF-tags applied to a database resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -99,11 +99,11 @@ public class GetResourceLFTagsResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * A list of tags applied to a database resource.
+     * A list of LF-tags applied to a database resource.
      * </p>
      * 
      * @param lFTagOnDatabase
-     *        A list of tags applied to a database resource.
+     *        A list of LF-tags applied to a database resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -114,10 +114,10 @@ public class GetResourceLFTagsResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * A list of tags applied to a table resource.
+     * A list of LF-tags applied to a table resource.
      * </p>
      * 
-     * @return A list of tags applied to a table resource.
+     * @return A list of LF-tags applied to a table resource.
      */
 
     public java.util.List<LFTagPair> getLFTagsOnTable() {
@@ -126,11 +126,11 @@ public class GetResourceLFTagsResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * A list of tags applied to a table resource.
+     * A list of LF-tags applied to a table resource.
      * </p>
      * 
      * @param lFTagsOnTable
-     *        A list of tags applied to a table resource.
+     *        A list of LF-tags applied to a table resource.
      */
 
     public void setLFTagsOnTable(java.util.Collection<LFTagPair> lFTagsOnTable) {
@@ -144,7 +144,7 @@ public class GetResourceLFTagsResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * A list of tags applied to a table resource.
+     * A list of LF-tags applied to a table resource.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -153,7 +153,7 @@ public class GetResourceLFTagsResult extends com.amazonaws.AmazonWebServiceResul
      * </p>
      * 
      * @param lFTagsOnTable
-     *        A list of tags applied to a table resource.
+     *        A list of LF-tags applied to a table resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -169,11 +169,11 @@ public class GetResourceLFTagsResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * A list of tags applied to a table resource.
+     * A list of LF-tags applied to a table resource.
      * </p>
      * 
      * @param lFTagsOnTable
-     *        A list of tags applied to a table resource.
+     *        A list of LF-tags applied to a table resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -184,10 +184,10 @@ public class GetResourceLFTagsResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * A list of tags applied to a column resource.
+     * A list of LF-tags applied to a column resource.
      * </p>
      * 
-     * @return A list of tags applied to a column resource.
+     * @return A list of LF-tags applied to a column resource.
      */
 
     public java.util.List<ColumnLFTag> getLFTagsOnColumns() {
@@ -196,11 +196,11 @@ public class GetResourceLFTagsResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * A list of tags applied to a column resource.
+     * A list of LF-tags applied to a column resource.
      * </p>
      * 
      * @param lFTagsOnColumns
-     *        A list of tags applied to a column resource.
+     *        A list of LF-tags applied to a column resource.
      */
 
     public void setLFTagsOnColumns(java.util.Collection<ColumnLFTag> lFTagsOnColumns) {
@@ -214,7 +214,7 @@ public class GetResourceLFTagsResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * A list of tags applied to a column resource.
+     * A list of LF-tags applied to a column resource.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -223,7 +223,7 @@ public class GetResourceLFTagsResult extends com.amazonaws.AmazonWebServiceResul
      * </p>
      * 
      * @param lFTagsOnColumns
-     *        A list of tags applied to a column resource.
+     *        A list of LF-tags applied to a column resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -239,11 +239,11 @@ public class GetResourceLFTagsResult extends com.amazonaws.AmazonWebServiceResul
 
     /**
      * <p>
-     * A list of tags applied to a column resource.
+     * A list of LF-tags applied to a column resource.
      * </p>
      * 
      * @param lFTagsOnColumns
-     *        A list of tags applied to a column resource.
+     *        A list of LF-tags applied to a column resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -28,26 +28,26 @@ public class UpdateLFTagRequest extends com.amazonaws.AmazonWebServiceRequest im
     /**
      * <p>
      * The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent metadata
-     * store. It contains database definitions, table definitions, and other control information to manage your AWS Lake
+     * store. It contains database definitions, table definitions, and other control information to manage your Lake
      * Formation environment.
      * </p>
      */
     private String catalogId;
     /**
      * <p>
-     * The key-name for the tag for which to add or delete values.
+     * The key-name for the LF-tag for which to add or delete values.
      * </p>
      */
     private String tagKey;
     /**
      * <p>
-     * A list of tag values to delete from the tag.
+     * A list of LF-tag values to delete from the LF-tag.
      * </p>
      */
     private java.util.List<String> tagValuesToDelete;
     /**
      * <p>
-     * A list of tag values to add from the tag.
+     * A list of LF-tag values to add from the LF-tag.
      * </p>
      */
     private java.util.List<String> tagValuesToAdd;
@@ -55,14 +55,14 @@ public class UpdateLFTagRequest extends com.amazonaws.AmazonWebServiceRequest im
     /**
      * <p>
      * The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent metadata
-     * store. It contains database definitions, table definitions, and other control information to manage your AWS Lake
+     * store. It contains database definitions, table definitions, and other control information to manage your Lake
      * Formation environment.
      * </p>
      * 
      * @param catalogId
      *        The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent
      *        metadata store. It contains database definitions, table definitions, and other control information to
-     *        manage your AWS Lake Formation environment.
+     *        manage your Lake Formation environment.
      */
 
     public void setCatalogId(String catalogId) {
@@ -72,13 +72,13 @@ public class UpdateLFTagRequest extends com.amazonaws.AmazonWebServiceRequest im
     /**
      * <p>
      * The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent metadata
-     * store. It contains database definitions, table definitions, and other control information to manage your AWS Lake
+     * store. It contains database definitions, table definitions, and other control information to manage your Lake
      * Formation environment.
      * </p>
      * 
      * @return The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent
      *         metadata store. It contains database definitions, table definitions, and other control information to
-     *         manage your AWS Lake Formation environment.
+     *         manage your Lake Formation environment.
      */
 
     public String getCatalogId() {
@@ -88,14 +88,14 @@ public class UpdateLFTagRequest extends com.amazonaws.AmazonWebServiceRequest im
     /**
      * <p>
      * The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent metadata
-     * store. It contains database definitions, table definitions, and other control information to manage your AWS Lake
+     * store. It contains database definitions, table definitions, and other control information to manage your Lake
      * Formation environment.
      * </p>
      * 
      * @param catalogId
      *        The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent
      *        metadata store. It contains database definitions, table definitions, and other control information to
-     *        manage your AWS Lake Formation environment.
+     *        manage your Lake Formation environment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -106,11 +106,11 @@ public class UpdateLFTagRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The key-name for the tag for which to add or delete values.
+     * The key-name for the LF-tag for which to add or delete values.
      * </p>
      * 
      * @param tagKey
-     *        The key-name for the tag for which to add or delete values.
+     *        The key-name for the LF-tag for which to add or delete values.
      */
 
     public void setTagKey(String tagKey) {
@@ -119,10 +119,10 @@ public class UpdateLFTagRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The key-name for the tag for which to add or delete values.
+     * The key-name for the LF-tag for which to add or delete values.
      * </p>
      * 
-     * @return The key-name for the tag for which to add or delete values.
+     * @return The key-name for the LF-tag for which to add or delete values.
      */
 
     public String getTagKey() {
@@ -131,11 +131,11 @@ public class UpdateLFTagRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The key-name for the tag for which to add or delete values.
+     * The key-name for the LF-tag for which to add or delete values.
      * </p>
      * 
      * @param tagKey
-     *        The key-name for the tag for which to add or delete values.
+     *        The key-name for the LF-tag for which to add or delete values.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -146,10 +146,10 @@ public class UpdateLFTagRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * A list of tag values to delete from the tag.
+     * A list of LF-tag values to delete from the LF-tag.
      * </p>
      * 
-     * @return A list of tag values to delete from the tag.
+     * @return A list of LF-tag values to delete from the LF-tag.
      */
 
     public java.util.List<String> getTagValuesToDelete() {
@@ -158,11 +158,11 @@ public class UpdateLFTagRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * A list of tag values to delete from the tag.
+     * A list of LF-tag values to delete from the LF-tag.
      * </p>
      * 
      * @param tagValuesToDelete
-     *        A list of tag values to delete from the tag.
+     *        A list of LF-tag values to delete from the LF-tag.
      */
 
     public void setTagValuesToDelete(java.util.Collection<String> tagValuesToDelete) {
@@ -176,7 +176,7 @@ public class UpdateLFTagRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * A list of tag values to delete from the tag.
+     * A list of LF-tag values to delete from the LF-tag.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -185,7 +185,7 @@ public class UpdateLFTagRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * 
      * @param tagValuesToDelete
-     *        A list of tag values to delete from the tag.
+     *        A list of LF-tag values to delete from the LF-tag.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -201,11 +201,11 @@ public class UpdateLFTagRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * A list of tag values to delete from the tag.
+     * A list of LF-tag values to delete from the LF-tag.
      * </p>
      * 
      * @param tagValuesToDelete
-     *        A list of tag values to delete from the tag.
+     *        A list of LF-tag values to delete from the LF-tag.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -216,10 +216,10 @@ public class UpdateLFTagRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * A list of tag values to add from the tag.
+     * A list of LF-tag values to add from the LF-tag.
      * </p>
      * 
-     * @return A list of tag values to add from the tag.
+     * @return A list of LF-tag values to add from the LF-tag.
      */
 
     public java.util.List<String> getTagValuesToAdd() {
@@ -228,11 +228,11 @@ public class UpdateLFTagRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * A list of tag values to add from the tag.
+     * A list of LF-tag values to add from the LF-tag.
      * </p>
      * 
      * @param tagValuesToAdd
-     *        A list of tag values to add from the tag.
+     *        A list of LF-tag values to add from the LF-tag.
      */
 
     public void setTagValuesToAdd(java.util.Collection<String> tagValuesToAdd) {
@@ -246,7 +246,7 @@ public class UpdateLFTagRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * A list of tag values to add from the tag.
+     * A list of LF-tag values to add from the LF-tag.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -255,7 +255,7 @@ public class UpdateLFTagRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * 
      * @param tagValuesToAdd
-     *        A list of tag values to add from the tag.
+     *        A list of LF-tag values to add from the LF-tag.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -271,11 +271,11 @@ public class UpdateLFTagRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * A list of tag values to add from the tag.
+     * A list of LF-tag values to add from the LF-tag.
      * </p>
      * 
      * @param tagValuesToAdd
-     *        A list of tag values to add from the tag.
+     *        A list of LF-tag values to add from the LF-tag.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

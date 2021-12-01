@@ -34,7 +34,7 @@ public class UpdateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
     /**
      * <p>
      * The new role Amazon Resource Name (ARN) that you want to associate with this job. To create a role ARN, use the
-     * <a href="https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html">CreateRole</a>AWS Identity and
+     * <a href="https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html">CreateRole</a>Identity and
      * Access Management (IAM) API action.
      * </p>
      */
@@ -54,7 +54,8 @@ public class UpdateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
     /**
      * <p>
      * Specifies the service or services on the Snow Family device that your transferred data will be exported from or
-     * imported into. AWS Snow Family supports Amazon S3 and NFS (Network File System).
+     * imported into. Amazon Web Services Snow Family supports Amazon S3 and NFS (Network File System) and the Amazon
+     * Web Services Storage Gateway service Tape Gateway type.
      * </p>
      */
     private OnDeviceServiceConfiguration onDeviceServiceConfiguration;
@@ -142,15 +143,15 @@ public class UpdateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
     /**
      * <p>
      * The new role Amazon Resource Name (ARN) that you want to associate with this job. To create a role ARN, use the
-     * <a href="https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html">CreateRole</a>AWS Identity and
+     * <a href="https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html">CreateRole</a>Identity and
      * Access Management (IAM) API action.
      * </p>
      * 
      * @param roleARN
      *        The new role Amazon Resource Name (ARN) that you want to associate with this job. To create a role ARN,
      *        use the <a
-     *        href="https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html">CreateRole</a>AWS Identity
-     *        and Access Management (IAM) API action.
+     *        href="https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html">CreateRole</a>Identity and
+     *        Access Management (IAM) API action.
      */
 
     public void setRoleARN(String roleARN) {
@@ -160,14 +161,14 @@ public class UpdateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
     /**
      * <p>
      * The new role Amazon Resource Name (ARN) that you want to associate with this job. To create a role ARN, use the
-     * <a href="https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html">CreateRole</a>AWS Identity and
+     * <a href="https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html">CreateRole</a>Identity and
      * Access Management (IAM) API action.
      * </p>
      * 
      * @return The new role Amazon Resource Name (ARN) that you want to associate with this job. To create a role ARN,
      *         use the <a
-     *         href="https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html">CreateRole</a>AWS Identity
-     *         and Access Management (IAM) API action.
+     *         href="https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html">CreateRole</a>Identity and
+     *         Access Management (IAM) API action.
      */
 
     public String getRoleARN() {
@@ -177,15 +178,15 @@ public class UpdateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
     /**
      * <p>
      * The new role Amazon Resource Name (ARN) that you want to associate with this job. To create a role ARN, use the
-     * <a href="https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html">CreateRole</a>AWS Identity and
+     * <a href="https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html">CreateRole</a>Identity and
      * Access Management (IAM) API action.
      * </p>
      * 
      * @param roleARN
      *        The new role Amazon Resource Name (ARN) that you want to associate with this job. To create a role ARN,
      *        use the <a
-     *        href="https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html">CreateRole</a>AWS Identity
-     *        and Access Management (IAM) API action.
+     *        href="https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html">CreateRole</a>Identity and
+     *        Access Management (IAM) API action.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -277,12 +278,14 @@ public class UpdateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
     /**
      * <p>
      * Specifies the service or services on the Snow Family device that your transferred data will be exported from or
-     * imported into. AWS Snow Family supports Amazon S3 and NFS (Network File System).
+     * imported into. Amazon Web Services Snow Family supports Amazon S3 and NFS (Network File System) and the Amazon
+     * Web Services Storage Gateway service Tape Gateway type.
      * </p>
      * 
      * @param onDeviceServiceConfiguration
      *        Specifies the service or services on the Snow Family device that your transferred data will be exported
-     *        from or imported into. AWS Snow Family supports Amazon S3 and NFS (Network File System).
+     *        from or imported into. Amazon Web Services Snow Family supports Amazon S3 and NFS (Network File System)
+     *        and the Amazon Web Services Storage Gateway service Tape Gateway type.
      */
 
     public void setOnDeviceServiceConfiguration(OnDeviceServiceConfiguration onDeviceServiceConfiguration) {
@@ -292,11 +295,13 @@ public class UpdateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
     /**
      * <p>
      * Specifies the service or services on the Snow Family device that your transferred data will be exported from or
-     * imported into. AWS Snow Family supports Amazon S3 and NFS (Network File System).
+     * imported into. Amazon Web Services Snow Family supports Amazon S3 and NFS (Network File System) and the Amazon
+     * Web Services Storage Gateway service Tape Gateway type.
      * </p>
      * 
      * @return Specifies the service or services on the Snow Family device that your transferred data will be exported
-     *         from or imported into. AWS Snow Family supports Amazon S3 and NFS (Network File System).
+     *         from or imported into. Amazon Web Services Snow Family supports Amazon S3 and NFS (Network File System)
+     *         and the Amazon Web Services Storage Gateway service Tape Gateway type.
      */
 
     public OnDeviceServiceConfiguration getOnDeviceServiceConfiguration() {
@@ -306,12 +311,14 @@ public class UpdateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
     /**
      * <p>
      * Specifies the service or services on the Snow Family device that your transferred data will be exported from or
-     * imported into. AWS Snow Family supports Amazon S3 and NFS (Network File System).
+     * imported into. Amazon Web Services Snow Family supports Amazon S3 and NFS (Network File System) and the Amazon
+     * Web Services Storage Gateway service Tape Gateway type.
      * </p>
      * 
      * @param onDeviceServiceConfiguration
      *        Specifies the service or services on the Snow Family device that your transferred data will be exported
-     *        from or imported into. AWS Snow Family supports Amazon S3 and NFS (Network File System).
+     *        from or imported into. Amazon Web Services Snow Family supports Amazon S3 and NFS (Network File System)
+     *        and the Amazon Web Services Storage Gateway service Tape Gateway type.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

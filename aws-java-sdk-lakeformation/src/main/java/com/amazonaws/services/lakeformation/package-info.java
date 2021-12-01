@@ -12,9 +12,9 @@
  */
 
 /**
- * <fullname>AWS Lake Formation</fullname>
+ * <fullname>Lake Formation</fullname>
  * <p>
- * Defines the public endpoint for the AWS Lake Formation service.
+ * Defines the public endpoint for the Lake Formation service.
  * </p>
  */
 package com.amazonaws.services.lakeformation;

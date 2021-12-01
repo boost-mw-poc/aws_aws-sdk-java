@@ -80,8 +80,8 @@ public class CreateFileSystemWindowsConfiguration implements Serializable, Clone
     private String preferredSubnetId;
     /**
      * <p>
-     * The throughput of an Amazon FSx file system, measured in megabytes per second, in 2 to the <i>n</i>th increments,
-     * between 2^3 (8) and 2^11 (2048).
+     * Sets the throughput capacity of an Amazon FSx file system, measured in megabytes per second (MB/s), in 2 to the
+     * <i>n</i>th increments, between 2^3 (8) and 2^11 (2048).
      * </p>
      */
     private Integer throughputCapacity;
@@ -567,13 +567,13 @@ public class CreateFileSystemWindowsConfiguration implements Serializable, Clone
 
     /**
      * <p>
-     * The throughput of an Amazon FSx file system, measured in megabytes per second, in 2 to the <i>n</i>th increments,
-     * between 2^3 (8) and 2^11 (2048).
+     * Sets the throughput capacity of an Amazon FSx file system, measured in megabytes per second (MB/s), in 2 to the
+     * <i>n</i>th increments, between 2^3 (8) and 2^11 (2048).
      * </p>
      * 
      * @param throughputCapacity
-     *        The throughput of an Amazon FSx file system, measured in megabytes per second, in 2 to the <i>n</i>th
-     *        increments, between 2^3 (8) and 2^11 (2048).
+     *        Sets the throughput capacity of an Amazon FSx file system, measured in megabytes per second (MB/s), in 2
+     *        to the <i>n</i>th increments, between 2^3 (8) and 2^11 (2048).
      */
 
     public void setThroughputCapacity(Integer throughputCapacity) {
@@ -582,12 +582,12 @@ public class CreateFileSystemWindowsConfiguration implements Serializable, Clone
 
     /**
      * <p>
-     * The throughput of an Amazon FSx file system, measured in megabytes per second, in 2 to the <i>n</i>th increments,
-     * between 2^3 (8) and 2^11 (2048).
+     * Sets the throughput capacity of an Amazon FSx file system, measured in megabytes per second (MB/s), in 2 to the
+     * <i>n</i>th increments, between 2^3 (8) and 2^11 (2048).
      * </p>
      * 
-     * @return The throughput of an Amazon FSx file system, measured in megabytes per second, in 2 to the <i>n</i>th
-     *         increments, between 2^3 (8) and 2^11 (2048).
+     * @return Sets the throughput capacity of an Amazon FSx file system, measured in megabytes per second (MB/s), in 2
+     *         to the <i>n</i>th increments, between 2^3 (8) and 2^11 (2048).
      */
 
     public Integer getThroughputCapacity() {
@@ -596,13 +596,13 @@ public class CreateFileSystemWindowsConfiguration implements Serializable, Clone
 
     /**
      * <p>
-     * The throughput of an Amazon FSx file system, measured in megabytes per second, in 2 to the <i>n</i>th increments,
-     * between 2^3 (8) and 2^11 (2048).
+     * Sets the throughput capacity of an Amazon FSx file system, measured in megabytes per second (MB/s), in 2 to the
+     * <i>n</i>th increments, between 2^3 (8) and 2^11 (2048).
      * </p>
      * 
      * @param throughputCapacity
-     *        The throughput of an Amazon FSx file system, measured in megabytes per second, in 2 to the <i>n</i>th
-     *        increments, between 2^3 (8) and 2^11 (2048).
+     *        Sets the throughput capacity of an Amazon FSx file system, measured in megabytes per second (MB/s), in 2
+     *        to the <i>n</i>th increments, between 2^3 (8) and 2^11 (2048).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

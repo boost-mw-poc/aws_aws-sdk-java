@@ -19,10 +19,10 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The SSD IOPS (input/output operations per second) configuration for an Amazon FSx for NetApp ONTAP file system. The
- * default is 3 IOPS per GB of storage capacity, but you can provision additional IOPS per GB of storage. The
- * configuration consists of the total number of provisioned SSD IOPS and how the amount was provisioned (by the
- * customer or by the system).
+ * The SSD IOPS (input/output operations per second) configuration for an Amazon FSx for NetApp ONTAP or Amazon FSx for
+ * OpenZFS file system. The default is 3 IOPS per GB of storage capacity, but you can provision additional IOPS per GB
+ * of storage. The configuration consists of the total number of provisioned SSD IOPS and how the amount was provisioned
+ * (by the customer or by the system).
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/DiskIopsConfiguration" target="_top">AWS API

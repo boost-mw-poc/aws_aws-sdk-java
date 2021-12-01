@@ -134,6 +134,10 @@ public interface AWSGlue {
      *         An internal service error occurred.
      * @throws OperationTimeoutException
      *         The operation timed out.
+     * @throws GlueEncryptionException
+     *         An encryption operation failed.
+     * @throws ResourceNotReadyException
+     *         A resource was not ready for a transaction.
      * @sample AWSGlue.BatchDeleteTable
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/BatchDeleteTable" target="_top">AWS API
      *      Documentation</a>
@@ -260,6 +264,8 @@ public interface AWSGlue {
      *         An internal service error occurred.
      * @throws GlueEncryptionException
      *         An encryption operation failed.
+     * @throws InvalidStateException
+     *         An error that indicates your data is in an invalid state.
      * @sample AWSGlue.BatchGetPartition
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/BatchGetPartition" target="_top">AWS API
      *      Documentation</a>
@@ -789,6 +795,8 @@ public interface AWSGlue {
      *         An encryption operation failed.
      * @throws ConcurrentModificationException
      *         Two processes are trying to modify a resource simultaneously.
+     * @throws ResourceNotReadyException
+     *         A resource was not ready for a transaction.
      * @sample AWSGlue.CreateTable
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/CreateTable" target="_top">AWS API
      *      Documentation</a>
@@ -1309,6 +1317,8 @@ public interface AWSGlue {
      *         The operation timed out.
      * @throws ConcurrentModificationException
      *         Two processes are trying to modify a resource simultaneously.
+     * @throws ResourceNotReadyException
+     *         A resource was not ready for a transaction.
      * @sample AWSGlue.DeleteTable
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/DeleteTable" target="_top">AWS API
      *      Documentation</a>
@@ -2078,6 +2088,10 @@ public interface AWSGlue {
      *         An internal service error occurred.
      * @throws GlueEncryptionException
      *         An encryption operation failed.
+     * @throws InvalidStateException
+     *         An error that indicates your data is in an invalid state.
+     * @throws ResourceNotReadyException
+     *         A resource was not ready for a transaction.
      * @sample AWSGlue.GetPartitions
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetPartitions" target="_top">AWS API
      *      Documentation</a>
@@ -2322,6 +2336,8 @@ public interface AWSGlue {
      *         The operation timed out.
      * @throws GlueEncryptionException
      *         An encryption operation failed.
+     * @throws ResourceNotReadyException
+     *         A resource was not ready for a transaction.
      * @sample AWSGlue.GetTable
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/GetTable" target="_top">AWS API
      *      Documentation</a>
@@ -3880,6 +3896,8 @@ public interface AWSGlue {
      *         A resource numerical limit was exceeded.
      * @throws GlueEncryptionException
      *         An encryption operation failed.
+     * @throws ResourceNotReadyException
+     *         A resource was not ready for a transaction.
      * @sample AWSGlue.UpdateTable
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/glue-2017-03-31/UpdateTable" target="_top">AWS API
      *      Documentation</a>

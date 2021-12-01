@@ -28,9 +28,9 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * policy, the access preview uses the existing policy for the secret. If the access preview is for a new resource and
  * you do not specify the policy, the access preview assumes a secret without a policy. To propose deletion of an
  * existing policy, you can specify an empty string. If the proposed configuration is for a new secret and you do not
- * specify the KMS key ID, the access preview uses the default CMK of the Amazon Web Services account. If you specify an
- * empty string for the KMS key ID, the access preview uses the default CMK of the Amazon Web Services account. For more
- * information about secret policy limits, see <a
+ * specify the KMS key ID, the access preview uses the Amazon Web Services managed key <code>aws/secretsmanager</code>.
+ * If you specify an empty string for the KMS key ID, the access preview uses the Amazon Web Services managed key of the
+ * Amazon Web Services account. For more information about secret policy limits, see <a
  * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_limits.html">Quotas for Secrets
  * Manager.</a>.
  * </p>
@@ -43,7 +43,7 @@ public class SecretsManagerSecretConfiguration implements Serializable, Cloneabl
 
     /**
      * <p>
-     * The proposed ARN, key ID, or alias of the KMS customer master key (CMK).
+     * The proposed ARN, key ID, or alias of the KMS key.
      * </p>
      */
     private String kmsKeyId;
@@ -56,11 +56,11 @@ public class SecretsManagerSecretConfiguration implements Serializable, Cloneabl
 
     /**
      * <p>
-     * The proposed ARN, key ID, or alias of the KMS customer master key (CMK).
+     * The proposed ARN, key ID, or alias of the KMS key.
      * </p>
      * 
      * @param kmsKeyId
-     *        The proposed ARN, key ID, or alias of the KMS customer master key (CMK).
+     *        The proposed ARN, key ID, or alias of the KMS key.
      */
 
     public void setKmsKeyId(String kmsKeyId) {
@@ -69,10 +69,10 @@ public class SecretsManagerSecretConfiguration implements Serializable, Cloneabl
 
     /**
      * <p>
-     * The proposed ARN, key ID, or alias of the KMS customer master key (CMK).
+     * The proposed ARN, key ID, or alias of the KMS key.
      * </p>
      * 
-     * @return The proposed ARN, key ID, or alias of the KMS customer master key (CMK).
+     * @return The proposed ARN, key ID, or alias of the KMS key.
      */
 
     public String getKmsKeyId() {
@@ -81,11 +81,11 @@ public class SecretsManagerSecretConfiguration implements Serializable, Cloneabl
 
     /**
      * <p>
-     * The proposed ARN, key ID, or alias of the KMS customer master key (CMK).
+     * The proposed ARN, key ID, or alias of the KMS key.
      * </p>
      * 
      * @param kmsKeyId
-     *        The proposed ARN, key ID, or alias of the KMS customer master key (CMK).
+     *        The proposed ARN, key ID, or alias of the KMS key.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

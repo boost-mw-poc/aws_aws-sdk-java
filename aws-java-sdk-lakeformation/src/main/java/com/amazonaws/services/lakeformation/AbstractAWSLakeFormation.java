@@ -43,12 +43,37 @@ public class AbstractAWSLakeFormation implements AWSLakeFormation {
     }
 
     @Override
+    public CancelTransactionResult cancelTransaction(CancelTransactionRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public CommitTransactionResult commitTransaction(CommitTransactionRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public CreateDataCellsFilterResult createDataCellsFilter(CreateDataCellsFilterRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateLFTagResult createLFTag(CreateLFTagRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
     @Override
+    public DeleteDataCellsFilterResult deleteDataCellsFilter(DeleteDataCellsFilterRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DeleteLFTagResult deleteLFTag(DeleteLFTagRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteObjectsOnCancelResult deleteObjectsOnCancel(DeleteObjectsOnCancelRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -59,6 +84,16 @@ public class AbstractAWSLakeFormation implements AWSLakeFormation {
 
     @Override
     public DescribeResourceResult describeResource(DescribeResourceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DescribeTransactionResult describeTransaction(DescribeTransactionRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ExtendTransactionResult extendTransaction(ExtendTransactionRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -78,12 +113,42 @@ public class AbstractAWSLakeFormation implements AWSLakeFormation {
     }
 
     @Override
+    public GetQueryStateResult getQueryState(GetQueryStateRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetQueryStatisticsResult getQueryStatistics(GetQueryStatisticsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetResourceLFTagsResult getResourceLFTags(GetResourceLFTagsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
     @Override
+    public GetTableObjectsResult getTableObjects(GetTableObjectsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetWorkUnitResultsResult getWorkUnitResults(GetWorkUnitResultsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetWorkUnitsResult getWorkUnits(GetWorkUnitsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GrantPermissionsResult grantPermissions(GrantPermissionsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListDataCellsFilterResult listDataCellsFilter(ListDataCellsFilterRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -99,6 +164,16 @@ public class AbstractAWSLakeFormation implements AWSLakeFormation {
 
     @Override
     public ListResourcesResult listResources(ListResourcesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListTableStorageOptimizersResult listTableStorageOptimizers(ListTableStorageOptimizersRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListTransactionsResult listTransactions(ListTransactionsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -133,12 +208,32 @@ public class AbstractAWSLakeFormation implements AWSLakeFormation {
     }
 
     @Override
+    public StartQueryPlanningResult startQueryPlanning(StartQueryPlanningRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public StartTransactionResult startTransaction(StartTransactionRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public UpdateLFTagResult updateLFTag(UpdateLFTagRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
     @Override
     public UpdateResourceResult updateResource(UpdateResourceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateTableObjectsResult updateTableObjects(UpdateTableObjectsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateTableStorageOptimizerResult updateTableStorageOptimizer(UpdateTableStorageOptimizerRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

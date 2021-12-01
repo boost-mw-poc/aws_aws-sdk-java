@@ -28,7 +28,8 @@ public class ListStreamsResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * The names of the streams that are associated with the AWS account making the <code>ListStreams</code> request.
+     * The names of the streams that are associated with the Amazon Web Services account making the
+     * <code>ListStreams</code> request.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> streamNames;
@@ -41,11 +42,12 @@ public class ListStreamsResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * The names of the streams that are associated with the AWS account making the <code>ListStreams</code> request.
+     * The names of the streams that are associated with the Amazon Web Services account making the
+     * <code>ListStreams</code> request.
      * </p>
      * 
-     * @return The names of the streams that are associated with the AWS account making the <code>ListStreams</code>
-     *         request.
+     * @return The names of the streams that are associated with the Amazon Web Services account making the
+     *         <code>ListStreams</code> request.
      */
 
     public java.util.List<String> getStreamNames() {
@@ -57,12 +59,13 @@ public class ListStreamsResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * The names of the streams that are associated with the AWS account making the <code>ListStreams</code> request.
+     * The names of the streams that are associated with the Amazon Web Services account making the
+     * <code>ListStreams</code> request.
      * </p>
      * 
      * @param streamNames
-     *        The names of the streams that are associated with the AWS account making the <code>ListStreams</code>
-     *        request.
+     *        The names of the streams that are associated with the Amazon Web Services account making the
+     *        <code>ListStreams</code> request.
      */
 
     public void setStreamNames(java.util.Collection<String> streamNames) {
@@ -76,7 +79,8 @@ public class ListStreamsResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * The names of the streams that are associated with the AWS account making the <code>ListStreams</code> request.
+     * The names of the streams that are associated with the Amazon Web Services account making the
+     * <code>ListStreams</code> request.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -85,8 +89,8 @@ public class ListStreamsResult extends com.amazonaws.AmazonWebServiceResult<com.
      * </p>
      * 
      * @param streamNames
-     *        The names of the streams that are associated with the AWS account making the <code>ListStreams</code>
-     *        request.
+     *        The names of the streams that are associated with the Amazon Web Services account making the
+     *        <code>ListStreams</code> request.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -102,12 +106,13 @@ public class ListStreamsResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * The names of the streams that are associated with the AWS account making the <code>ListStreams</code> request.
+     * The names of the streams that are associated with the Amazon Web Services account making the
+     * <code>ListStreams</code> request.
      * </p>
      * 
      * @param streamNames
-     *        The names of the streams that are associated with the AWS account making the <code>ListStreams</code>
-     *        request.
+     *        The names of the streams that are associated with the Amazon Web Services account making the
+     *        <code>ListStreams</code> request.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

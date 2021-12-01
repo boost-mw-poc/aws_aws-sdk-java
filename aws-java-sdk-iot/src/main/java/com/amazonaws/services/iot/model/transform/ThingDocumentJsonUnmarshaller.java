@@ -75,6 +75,10 @@ public class ThingDocumentJsonUnmarshaller implements Unmarshaller<ThingDocument
                     context.nextToken();
                     thingDocument.setShadow(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("deviceDefender", targetDepth)) {
+                    context.nextToken();
+                    thingDocument.setDeviceDefender(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("connectivity", targetDepth)) {
                     context.nextToken();
                     thingDocument.setConnectivity(ThingConnectivityJsonUnmarshaller.getInstance().unmarshall(context));

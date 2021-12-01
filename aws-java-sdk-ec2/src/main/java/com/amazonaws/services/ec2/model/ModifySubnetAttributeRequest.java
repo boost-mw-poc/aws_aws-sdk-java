@@ -99,6 +99,20 @@ public class ModifySubnetAttributeRequest extends AmazonWebServiceRequest implem
      * </p>
      */
     private Boolean enableResourceNameDnsAAAARecordOnLaunch;
+    /**
+     * <p>
+     * Indicates the device position for local network interfaces in this subnet. For example, <code>1</code> indicates
+     * local network interfaces in this subnet are the secondary network interface (eth1). A local network interface
+     * cannot be the primary network interface (eth0).
+     * </p>
+     */
+    private Integer enableLniAtDeviceIndex;
+    /**
+     * <p>
+     * Specify <code>true</code> to indicate that local network interfaces at the current position should be disabled.
+     * </p>
+     */
+    private Boolean disableLniAtDeviceIndex;
 
     /**
      * <p>
@@ -691,6 +705,114 @@ public class ModifySubnetAttributeRequest extends AmazonWebServiceRequest implem
     }
 
     /**
+     * <p>
+     * Indicates the device position for local network interfaces in this subnet. For example, <code>1</code> indicates
+     * local network interfaces in this subnet are the secondary network interface (eth1). A local network interface
+     * cannot be the primary network interface (eth0).
+     * </p>
+     * 
+     * @param enableLniAtDeviceIndex
+     *        Indicates the device position for local network interfaces in this subnet. For example, <code>1</code>
+     *        indicates local network interfaces in this subnet are the secondary network interface (eth1). A local
+     *        network interface cannot be the primary network interface (eth0).
+     */
+
+    public void setEnableLniAtDeviceIndex(Integer enableLniAtDeviceIndex) {
+        this.enableLniAtDeviceIndex = enableLniAtDeviceIndex;
+    }
+
+    /**
+     * <p>
+     * Indicates the device position for local network interfaces in this subnet. For example, <code>1</code> indicates
+     * local network interfaces in this subnet are the secondary network interface (eth1). A local network interface
+     * cannot be the primary network interface (eth0).
+     * </p>
+     * 
+     * @return Indicates the device position for local network interfaces in this subnet. For example, <code>1</code>
+     *         indicates local network interfaces in this subnet are the secondary network interface (eth1). A local
+     *         network interface cannot be the primary network interface (eth0).
+     */
+
+    public Integer getEnableLniAtDeviceIndex() {
+        return this.enableLniAtDeviceIndex;
+    }
+
+    /**
+     * <p>
+     * Indicates the device position for local network interfaces in this subnet. For example, <code>1</code> indicates
+     * local network interfaces in this subnet are the secondary network interface (eth1). A local network interface
+     * cannot be the primary network interface (eth0).
+     * </p>
+     * 
+     * @param enableLniAtDeviceIndex
+     *        Indicates the device position for local network interfaces in this subnet. For example, <code>1</code>
+     *        indicates local network interfaces in this subnet are the secondary network interface (eth1). A local
+     *        network interface cannot be the primary network interface (eth0).
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ModifySubnetAttributeRequest withEnableLniAtDeviceIndex(Integer enableLniAtDeviceIndex) {
+        setEnableLniAtDeviceIndex(enableLniAtDeviceIndex);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specify <code>true</code> to indicate that local network interfaces at the current position should be disabled.
+     * </p>
+     * 
+     * @param disableLniAtDeviceIndex
+     *        Specify <code>true</code> to indicate that local network interfaces at the current position should be
+     *        disabled.
+     */
+
+    public void setDisableLniAtDeviceIndex(Boolean disableLniAtDeviceIndex) {
+        this.disableLniAtDeviceIndex = disableLniAtDeviceIndex;
+    }
+
+    /**
+     * <p>
+     * Specify <code>true</code> to indicate that local network interfaces at the current position should be disabled.
+     * </p>
+     * 
+     * @return Specify <code>true</code> to indicate that local network interfaces at the current position should be
+     *         disabled.
+     */
+
+    public Boolean getDisableLniAtDeviceIndex() {
+        return this.disableLniAtDeviceIndex;
+    }
+
+    /**
+     * <p>
+     * Specify <code>true</code> to indicate that local network interfaces at the current position should be disabled.
+     * </p>
+     * 
+     * @param disableLniAtDeviceIndex
+     *        Specify <code>true</code> to indicate that local network interfaces at the current position should be
+     *        disabled.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ModifySubnetAttributeRequest withDisableLniAtDeviceIndex(Boolean disableLniAtDeviceIndex) {
+        setDisableLniAtDeviceIndex(disableLniAtDeviceIndex);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specify <code>true</code> to indicate that local network interfaces at the current position should be disabled.
+     * </p>
+     * 
+     * @return Specify <code>true</code> to indicate that local network interfaces at the current position should be
+     *         disabled.
+     */
+
+    public Boolean isDisableLniAtDeviceIndex() {
+        return this.disableLniAtDeviceIndex;
+    }
+
+    /**
      * This method is intended for internal use only. Returns the marshaled request configured with additional
      * parameters to enable operation dry-run.
      */
@@ -730,7 +852,11 @@ public class ModifySubnetAttributeRequest extends AmazonWebServiceRequest implem
         if (getEnableResourceNameDnsARecordOnLaunch() != null)
             sb.append("EnableResourceNameDnsARecordOnLaunch: ").append(getEnableResourceNameDnsARecordOnLaunch()).append(",");
         if (getEnableResourceNameDnsAAAARecordOnLaunch() != null)
-            sb.append("EnableResourceNameDnsAAAARecordOnLaunch: ").append(getEnableResourceNameDnsAAAARecordOnLaunch());
+            sb.append("EnableResourceNameDnsAAAARecordOnLaunch: ").append(getEnableResourceNameDnsAAAARecordOnLaunch()).append(",");
+        if (getEnableLniAtDeviceIndex() != null)
+            sb.append("EnableLniAtDeviceIndex: ").append(getEnableLniAtDeviceIndex()).append(",");
+        if (getDisableLniAtDeviceIndex() != null)
+            sb.append("DisableLniAtDeviceIndex: ").append(getDisableLniAtDeviceIndex());
         sb.append("}");
         return sb.toString();
     }
@@ -784,6 +910,14 @@ public class ModifySubnetAttributeRequest extends AmazonWebServiceRequest implem
         if (other.getEnableResourceNameDnsAAAARecordOnLaunch() != null
                 && other.getEnableResourceNameDnsAAAARecordOnLaunch().equals(this.getEnableResourceNameDnsAAAARecordOnLaunch()) == false)
             return false;
+        if (other.getEnableLniAtDeviceIndex() == null ^ this.getEnableLniAtDeviceIndex() == null)
+            return false;
+        if (other.getEnableLniAtDeviceIndex() != null && other.getEnableLniAtDeviceIndex().equals(this.getEnableLniAtDeviceIndex()) == false)
+            return false;
+        if (other.getDisableLniAtDeviceIndex() == null ^ this.getDisableLniAtDeviceIndex() == null)
+            return false;
+        if (other.getDisableLniAtDeviceIndex() != null && other.getDisableLniAtDeviceIndex().equals(this.getDisableLniAtDeviceIndex()) == false)
+            return false;
         return true;
     }
 
@@ -801,6 +935,8 @@ public class ModifySubnetAttributeRequest extends AmazonWebServiceRequest implem
         hashCode = prime * hashCode + ((getPrivateDnsHostnameTypeOnLaunch() == null) ? 0 : getPrivateDnsHostnameTypeOnLaunch().hashCode());
         hashCode = prime * hashCode + ((getEnableResourceNameDnsARecordOnLaunch() == null) ? 0 : getEnableResourceNameDnsARecordOnLaunch().hashCode());
         hashCode = prime * hashCode + ((getEnableResourceNameDnsAAAARecordOnLaunch() == null) ? 0 : getEnableResourceNameDnsAAAARecordOnLaunch().hashCode());
+        hashCode = prime * hashCode + ((getEnableLniAtDeviceIndex() == null) ? 0 : getEnableLniAtDeviceIndex().hashCode());
+        hashCode = prime * hashCode + ((getDisableLniAtDeviceIndex() == null) ? 0 : getDisableLniAtDeviceIndex().hashCode());
         return hashCode;
     }
 

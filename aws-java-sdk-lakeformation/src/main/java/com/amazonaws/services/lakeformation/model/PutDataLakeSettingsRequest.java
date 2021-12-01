@@ -28,14 +28,14 @@ public class PutDataLakeSettingsRequest extends com.amazonaws.AmazonWebServiceRe
     /**
      * <p>
      * The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent metadata
-     * store. It contains database definitions, table definitions, and other control information to manage your AWS Lake
+     * store. It contains database definitions, table definitions, and other control information to manage your Lake
      * Formation environment.
      * </p>
      */
     private String catalogId;
     /**
      * <p>
-     * A structure representing a list of AWS Lake Formation principals designated as data lake administrators.
+     * A structure representing a list of Lake Formation principals designated as data lake administrators.
      * </p>
      */
     private DataLakeSettings dataLakeSettings;
@@ -43,14 +43,14 @@ public class PutDataLakeSettingsRequest extends com.amazonaws.AmazonWebServiceRe
     /**
      * <p>
      * The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent metadata
-     * store. It contains database definitions, table definitions, and other control information to manage your AWS Lake
+     * store. It contains database definitions, table definitions, and other control information to manage your Lake
      * Formation environment.
      * </p>
      * 
      * @param catalogId
      *        The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent
      *        metadata store. It contains database definitions, table definitions, and other control information to
-     *        manage your AWS Lake Formation environment.
+     *        manage your Lake Formation environment.
      */
 
     public void setCatalogId(String catalogId) {
@@ -60,13 +60,13 @@ public class PutDataLakeSettingsRequest extends com.amazonaws.AmazonWebServiceRe
     /**
      * <p>
      * The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent metadata
-     * store. It contains database definitions, table definitions, and other control information to manage your AWS Lake
+     * store. It contains database definitions, table definitions, and other control information to manage your Lake
      * Formation environment.
      * </p>
      * 
      * @return The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent
      *         metadata store. It contains database definitions, table definitions, and other control information to
-     *         manage your AWS Lake Formation environment.
+     *         manage your Lake Formation environment.
      */
 
     public String getCatalogId() {
@@ -76,14 +76,14 @@ public class PutDataLakeSettingsRequest extends com.amazonaws.AmazonWebServiceRe
     /**
      * <p>
      * The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent metadata
-     * store. It contains database definitions, table definitions, and other control information to manage your AWS Lake
+     * store. It contains database definitions, table definitions, and other control information to manage your Lake
      * Formation environment.
      * </p>
      * 
      * @param catalogId
      *        The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent
      *        metadata store. It contains database definitions, table definitions, and other control information to
-     *        manage your AWS Lake Formation environment.
+     *        manage your Lake Formation environment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -94,11 +94,11 @@ public class PutDataLakeSettingsRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * A structure representing a list of AWS Lake Formation principals designated as data lake administrators.
+     * A structure representing a list of Lake Formation principals designated as data lake administrators.
      * </p>
      * 
      * @param dataLakeSettings
-     *        A structure representing a list of AWS Lake Formation principals designated as data lake administrators.
+     *        A structure representing a list of Lake Formation principals designated as data lake administrators.
      */
 
     public void setDataLakeSettings(DataLakeSettings dataLakeSettings) {
@@ -107,10 +107,10 @@ public class PutDataLakeSettingsRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * A structure representing a list of AWS Lake Formation principals designated as data lake administrators.
+     * A structure representing a list of Lake Formation principals designated as data lake administrators.
      * </p>
      * 
-     * @return A structure representing a list of AWS Lake Formation principals designated as data lake administrators.
+     * @return A structure representing a list of Lake Formation principals designated as data lake administrators.
      */
 
     public DataLakeSettings getDataLakeSettings() {
@@ -119,11 +119,11 @@ public class PutDataLakeSettingsRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * A structure representing a list of AWS Lake Formation principals designated as data lake administrators.
+     * A structure representing a list of Lake Formation principals designated as data lake administrators.
      * </p>
      * 
      * @param dataLakeSettings
-     *        A structure representing a list of AWS Lake Formation principals designated as data lake administrators.
+     *        A structure representing a list of Lake Formation principals designated as data lake administrators.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -41,6 +41,10 @@ public class GatewayInfoMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Ec2InstanceId").build();
     private static final MarshallingInfo<String> EC2INSTANCEREGION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Ec2InstanceRegion").build();
+    private static final MarshallingInfo<String> HOSTENVIRONMENT_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("HostEnvironment").build();
+    private static final MarshallingInfo<String> HOSTENVIRONMENTID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("HostEnvironmentId").build();
 
     private static final GatewayInfoMarshaller instance = new GatewayInfoMarshaller();
 
@@ -65,6 +69,8 @@ public class GatewayInfoMarshaller {
             protocolMarshaller.marshall(gatewayInfo.getGatewayName(), GATEWAYNAME_BINDING);
             protocolMarshaller.marshall(gatewayInfo.getEc2InstanceId(), EC2INSTANCEID_BINDING);
             protocolMarshaller.marshall(gatewayInfo.getEc2InstanceRegion(), EC2INSTANCEREGION_BINDING);
+            protocolMarshaller.marshall(gatewayInfo.getHostEnvironment(), HOSTENVIRONMENT_BINDING);
+            protocolMarshaller.marshall(gatewayInfo.getHostEnvironmentId(), HOSTENVIRONMENTID_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

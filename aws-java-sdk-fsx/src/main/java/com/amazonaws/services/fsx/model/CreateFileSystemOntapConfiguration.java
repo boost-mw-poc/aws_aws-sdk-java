@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The ONTAP configuration properties of the FSx for NetApp ONTAP file system that you are creating.
+ * The ONTAP configuration properties of the FSx for ONTAP file system that you are creating.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/CreateFileSystemOntapConfiguration"
@@ -33,7 +33,8 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
     private String dailyAutomaticBackupStartTime;
     /**
      * <p>
-     * Specifies the ONTAP file system deployment type to use in creating the file system.
+     * Specifies the FSx for ONTAP file system deployment type to use in creating the file system.
+     * <code>MULTI_AZ_1</code> is the supported ONTAP deployment type.
      * </p>
      */
     private String deploymentType;
@@ -46,28 +47,37 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
     private String endpointIpAddressRange;
     /**
      * <p>
-     * The ONTAP administrative password for the <code>fsxadmin</code> user that you can use to administer your file
-     * system using the ONTAP CLI and REST API.
+     * The ONTAP administrative password for the <code>fsxadmin</code> user with which you administer your file system
+     * using the NetApp ONTAP CLI and REST API.
      * </p>
      */
     private String fsxAdminPassword;
     /**
      * <p>
-     * The SSD IOPS configuration for the Amazon FSx for NetApp ONTAP file system.
+     * The SSD IOPS configuration for the FSx for ONTAP file system.
      * </p>
      */
     private DiskIopsConfiguration diskIopsConfiguration;
-
+    /**
+     * <p>
+     * Required when <code>DeploymentType</code> is set to <code>MULTI_AZ_1</code>. This specifies the subnet in which
+     * you want the preferred file server to be located.
+     * </p>
+     */
     private String preferredSubnetId;
     /**
      * <p>
-     * Specifies the VPC route tables in which your file system's endpoints will be created. You should specify all VPC
-     * route tables associated with the subnets in which your clients are located. By default, Amazon FSx selects your
-     * VPC's default route table.
+     * Specifies the virtual private cloud (VPC) route tables in which your file system's endpoints will be created. You
+     * should specify all VPC route tables associated with the subnets in which your clients are located. By default,
+     * Amazon FSx selects your VPC's default route table.
      * </p>
      */
     private java.util.List<String> routeTableIds;
-
+    /**
+     * <p>
+     * Sets the throughput capacity for the file system that you're creating. Valid values are 512, 1024, and 2048 MBps.
+     * </p>
+     */
     private Integer throughputCapacity;
 
     private String weeklyMaintenanceStartTime;
@@ -126,11 +136,13 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
 
     /**
      * <p>
-     * Specifies the ONTAP file system deployment type to use in creating the file system.
+     * Specifies the FSx for ONTAP file system deployment type to use in creating the file system.
+     * <code>MULTI_AZ_1</code> is the supported ONTAP deployment type.
      * </p>
      * 
      * @param deploymentType
-     *        Specifies the ONTAP file system deployment type to use in creating the file system.
+     *        Specifies the FSx for ONTAP file system deployment type to use in creating the file system.
+     *        <code>MULTI_AZ_1</code> is the supported ONTAP deployment type.
      * @see OntapDeploymentType
      */
 
@@ -140,10 +152,12 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
 
     /**
      * <p>
-     * Specifies the ONTAP file system deployment type to use in creating the file system.
+     * Specifies the FSx for ONTAP file system deployment type to use in creating the file system.
+     * <code>MULTI_AZ_1</code> is the supported ONTAP deployment type.
      * </p>
      * 
-     * @return Specifies the ONTAP file system deployment type to use in creating the file system.
+     * @return Specifies the FSx for ONTAP file system deployment type to use in creating the file system.
+     *         <code>MULTI_AZ_1</code> is the supported ONTAP deployment type.
      * @see OntapDeploymentType
      */
 
@@ -153,11 +167,13 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
 
     /**
      * <p>
-     * Specifies the ONTAP file system deployment type to use in creating the file system.
+     * Specifies the FSx for ONTAP file system deployment type to use in creating the file system.
+     * <code>MULTI_AZ_1</code> is the supported ONTAP deployment type.
      * </p>
      * 
      * @param deploymentType
-     *        Specifies the ONTAP file system deployment type to use in creating the file system.
+     *        Specifies the FSx for ONTAP file system deployment type to use in creating the file system.
+     *        <code>MULTI_AZ_1</code> is the supported ONTAP deployment type.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see OntapDeploymentType
      */
@@ -169,11 +185,13 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
 
     /**
      * <p>
-     * Specifies the ONTAP file system deployment type to use in creating the file system.
+     * Specifies the FSx for ONTAP file system deployment type to use in creating the file system.
+     * <code>MULTI_AZ_1</code> is the supported ONTAP deployment type.
      * </p>
      * 
      * @param deploymentType
-     *        Specifies the ONTAP file system deployment type to use in creating the file system.
+     *        Specifies the FSx for ONTAP file system deployment type to use in creating the file system.
+     *        <code>MULTI_AZ_1</code> is the supported ONTAP deployment type.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see OntapDeploymentType
      */
@@ -231,13 +249,13 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
 
     /**
      * <p>
-     * The ONTAP administrative password for the <code>fsxadmin</code> user that you can use to administer your file
-     * system using the ONTAP CLI and REST API.
+     * The ONTAP administrative password for the <code>fsxadmin</code> user with which you administer your file system
+     * using the NetApp ONTAP CLI and REST API.
      * </p>
      * 
      * @param fsxAdminPassword
-     *        The ONTAP administrative password for the <code>fsxadmin</code> user that you can use to administer your
-     *        file system using the ONTAP CLI and REST API.
+     *        The ONTAP administrative password for the <code>fsxadmin</code> user with which you administer your file
+     *        system using the NetApp ONTAP CLI and REST API.
      */
 
     public void setFsxAdminPassword(String fsxAdminPassword) {
@@ -246,12 +264,12 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
 
     /**
      * <p>
-     * The ONTAP administrative password for the <code>fsxadmin</code> user that you can use to administer your file
-     * system using the ONTAP CLI and REST API.
+     * The ONTAP administrative password for the <code>fsxadmin</code> user with which you administer your file system
+     * using the NetApp ONTAP CLI and REST API.
      * </p>
      * 
-     * @return The ONTAP administrative password for the <code>fsxadmin</code> user that you can use to administer your
-     *         file system using the ONTAP CLI and REST API.
+     * @return The ONTAP administrative password for the <code>fsxadmin</code> user with which you administer your file
+     *         system using the NetApp ONTAP CLI and REST API.
      */
 
     public String getFsxAdminPassword() {
@@ -260,13 +278,13 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
 
     /**
      * <p>
-     * The ONTAP administrative password for the <code>fsxadmin</code> user that you can use to administer your file
-     * system using the ONTAP CLI and REST API.
+     * The ONTAP administrative password for the <code>fsxadmin</code> user with which you administer your file system
+     * using the NetApp ONTAP CLI and REST API.
      * </p>
      * 
      * @param fsxAdminPassword
-     *        The ONTAP administrative password for the <code>fsxadmin</code> user that you can use to administer your
-     *        file system using the ONTAP CLI and REST API.
+     *        The ONTAP administrative password for the <code>fsxadmin</code> user with which you administer your file
+     *        system using the NetApp ONTAP CLI and REST API.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -277,11 +295,11 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
 
     /**
      * <p>
-     * The SSD IOPS configuration for the Amazon FSx for NetApp ONTAP file system.
+     * The SSD IOPS configuration for the FSx for ONTAP file system.
      * </p>
      * 
      * @param diskIopsConfiguration
-     *        The SSD IOPS configuration for the Amazon FSx for NetApp ONTAP file system.
+     *        The SSD IOPS configuration for the FSx for ONTAP file system.
      */
 
     public void setDiskIopsConfiguration(DiskIopsConfiguration diskIopsConfiguration) {
@@ -290,10 +308,10 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
 
     /**
      * <p>
-     * The SSD IOPS configuration for the Amazon FSx for NetApp ONTAP file system.
+     * The SSD IOPS configuration for the FSx for ONTAP file system.
      * </p>
      * 
-     * @return The SSD IOPS configuration for the Amazon FSx for NetApp ONTAP file system.
+     * @return The SSD IOPS configuration for the FSx for ONTAP file system.
      */
 
     public DiskIopsConfiguration getDiskIopsConfiguration() {
@@ -302,11 +320,11 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
 
     /**
      * <p>
-     * The SSD IOPS configuration for the Amazon FSx for NetApp ONTAP file system.
+     * The SSD IOPS configuration for the FSx for ONTAP file system.
      * </p>
      * 
      * @param diskIopsConfiguration
-     *        The SSD IOPS configuration for the Amazon FSx for NetApp ONTAP file system.
+     *        The SSD IOPS configuration for the FSx for ONTAP file system.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -316,7 +334,14 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
     }
 
     /**
+     * <p>
+     * Required when <code>DeploymentType</code> is set to <code>MULTI_AZ_1</code>. This specifies the subnet in which
+     * you want the preferred file server to be located.
+     * </p>
+     * 
      * @param preferredSubnetId
+     *        Required when <code>DeploymentType</code> is set to <code>MULTI_AZ_1</code>. This specifies the subnet in
+     *        which you want the preferred file server to be located.
      */
 
     public void setPreferredSubnetId(String preferredSubnetId) {
@@ -324,7 +349,13 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
     }
 
     /**
-     * @return
+     * <p>
+     * Required when <code>DeploymentType</code> is set to <code>MULTI_AZ_1</code>. This specifies the subnet in which
+     * you want the preferred file server to be located.
+     * </p>
+     * 
+     * @return Required when <code>DeploymentType</code> is set to <code>MULTI_AZ_1</code>. This specifies the subnet in
+     *         which you want the preferred file server to be located.
      */
 
     public String getPreferredSubnetId() {
@@ -332,7 +363,14 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
     }
 
     /**
+     * <p>
+     * Required when <code>DeploymentType</code> is set to <code>MULTI_AZ_1</code>. This specifies the subnet in which
+     * you want the preferred file server to be located.
+     * </p>
+     * 
      * @param preferredSubnetId
+     *        Required when <code>DeploymentType</code> is set to <code>MULTI_AZ_1</code>. This specifies the subnet in
+     *        which you want the preferred file server to be located.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -343,14 +381,14 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
 
     /**
      * <p>
-     * Specifies the VPC route tables in which your file system's endpoints will be created. You should specify all VPC
-     * route tables associated with the subnets in which your clients are located. By default, Amazon FSx selects your
-     * VPC's default route table.
+     * Specifies the virtual private cloud (VPC) route tables in which your file system's endpoints will be created. You
+     * should specify all VPC route tables associated with the subnets in which your clients are located. By default,
+     * Amazon FSx selects your VPC's default route table.
      * </p>
      * 
-     * @return Specifies the VPC route tables in which your file system's endpoints will be created. You should specify
-     *         all VPC route tables associated with the subnets in which your clients are located. By default, Amazon
-     *         FSx selects your VPC's default route table.
+     * @return Specifies the virtual private cloud (VPC) route tables in which your file system's endpoints will be
+     *         created. You should specify all VPC route tables associated with the subnets in which your clients are
+     *         located. By default, Amazon FSx selects your VPC's default route table.
      */
 
     public java.util.List<String> getRouteTableIds() {
@@ -359,15 +397,15 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
 
     /**
      * <p>
-     * Specifies the VPC route tables in which your file system's endpoints will be created. You should specify all VPC
-     * route tables associated with the subnets in which your clients are located. By default, Amazon FSx selects your
-     * VPC's default route table.
+     * Specifies the virtual private cloud (VPC) route tables in which your file system's endpoints will be created. You
+     * should specify all VPC route tables associated with the subnets in which your clients are located. By default,
+     * Amazon FSx selects your VPC's default route table.
      * </p>
      * 
      * @param routeTableIds
-     *        Specifies the VPC route tables in which your file system's endpoints will be created. You should specify
-     *        all VPC route tables associated with the subnets in which your clients are located. By default, Amazon FSx
-     *        selects your VPC's default route table.
+     *        Specifies the virtual private cloud (VPC) route tables in which your file system's endpoints will be
+     *        created. You should specify all VPC route tables associated with the subnets in which your clients are
+     *        located. By default, Amazon FSx selects your VPC's default route table.
      */
 
     public void setRouteTableIds(java.util.Collection<String> routeTableIds) {
@@ -381,9 +419,9 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
 
     /**
      * <p>
-     * Specifies the VPC route tables in which your file system's endpoints will be created. You should specify all VPC
-     * route tables associated with the subnets in which your clients are located. By default, Amazon FSx selects your
-     * VPC's default route table.
+     * Specifies the virtual private cloud (VPC) route tables in which your file system's endpoints will be created. You
+     * should specify all VPC route tables associated with the subnets in which your clients are located. By default,
+     * Amazon FSx selects your VPC's default route table.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -392,9 +430,9 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
      * </p>
      * 
      * @param routeTableIds
-     *        Specifies the VPC route tables in which your file system's endpoints will be created. You should specify
-     *        all VPC route tables associated with the subnets in which your clients are located. By default, Amazon FSx
-     *        selects your VPC's default route table.
+     *        Specifies the virtual private cloud (VPC) route tables in which your file system's endpoints will be
+     *        created. You should specify all VPC route tables associated with the subnets in which your clients are
+     *        located. By default, Amazon FSx selects your VPC's default route table.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -410,15 +448,15 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
 
     /**
      * <p>
-     * Specifies the VPC route tables in which your file system's endpoints will be created. You should specify all VPC
-     * route tables associated with the subnets in which your clients are located. By default, Amazon FSx selects your
-     * VPC's default route table.
+     * Specifies the virtual private cloud (VPC) route tables in which your file system's endpoints will be created. You
+     * should specify all VPC route tables associated with the subnets in which your clients are located. By default,
+     * Amazon FSx selects your VPC's default route table.
      * </p>
      * 
      * @param routeTableIds
-     *        Specifies the VPC route tables in which your file system's endpoints will be created. You should specify
-     *        all VPC route tables associated with the subnets in which your clients are located. By default, Amazon FSx
-     *        selects your VPC's default route table.
+     *        Specifies the virtual private cloud (VPC) route tables in which your file system's endpoints will be
+     *        created. You should specify all VPC route tables associated with the subnets in which your clients are
+     *        located. By default, Amazon FSx selects your VPC's default route table.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -428,7 +466,13 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
     }
 
     /**
+     * <p>
+     * Sets the throughput capacity for the file system that you're creating. Valid values are 512, 1024, and 2048 MBps.
+     * </p>
+     * 
      * @param throughputCapacity
+     *        Sets the throughput capacity for the file system that you're creating. Valid values are 512, 1024, and
+     *        2048 MBps.
      */
 
     public void setThroughputCapacity(Integer throughputCapacity) {
@@ -436,7 +480,12 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
     }
 
     /**
-     * @return
+     * <p>
+     * Sets the throughput capacity for the file system that you're creating. Valid values are 512, 1024, and 2048 MBps.
+     * </p>
+     * 
+     * @return Sets the throughput capacity for the file system that you're creating. Valid values are 512, 1024, and
+     *         2048 MBps.
      */
 
     public Integer getThroughputCapacity() {
@@ -444,7 +493,13 @@ public class CreateFileSystemOntapConfiguration implements Serializable, Cloneab
     }
 
     /**
+     * <p>
+     * Sets the throughput capacity for the file system that you're creating. Valid values are 512, 1024, and 2048 MBps.
+     * </p>
+     * 
      * @param throughputCapacity
+     *        Sets the throughput capacity for the file system that you're creating. Valid values are 512, 1024, and
+     *        2048 MBps.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

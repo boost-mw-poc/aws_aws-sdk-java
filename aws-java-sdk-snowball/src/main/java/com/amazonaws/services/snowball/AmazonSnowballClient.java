@@ -51,13 +51,13 @@ import com.amazonaws.services.snowball.model.transform.*;
  * until the service call completes.
  * <p>
  * <p>
- * AWS Snow Family is a petabyte-scale data transport solution that uses secure devices to transfer large amounts of
- * data between your on-premises data centers and Amazon Simple Storage Service (Amazon S3). The Snow commands described
- * here provide access to the same functionality that is available in the AWS Snow Family Management Console, which
- * enables you to create and manage jobs for a Snow device. To transfer data locally with a Snow device, you'll need to
- * use the Snowball Edge client or the Amazon S3 API Interface for Snowball or AWS OpsHub for Snow Family. For more
- * information, see the <a href="https://docs.aws.amazon.com/AWSImportExport/latest/ug/api-reference.html">User
- * Guide</a>.
+ * The Amazon Web Services Snow Family provides a petabyte-scale data transport solution that uses secure devices to
+ * transfer large amounts of data between your on-premises data centers and Amazon Simple Storage Service (Amazon S3).
+ * The Snow Family commands described here provide access to the same functionality that is available in the Amazon Web
+ * Services Snow Family Management Console, which enables you to create and manage jobs for a Snow Family device. To
+ * transfer data locally with a Snow Family device, you'll need to use the Snowball Edge client or the Amazon S3 API
+ * Interface for Snowball or OpsHub for Snow Family. For more information, see the <a
+ * href="https://docs.aws.amazon.com/AWSImportExport/latest/ug/api-reference.html">User Guide</a>.
  * </p>
  */
 @ThreadSafe
@@ -325,8 +325,8 @@ public class AmazonSnowballClient extends AmazonWebServiceClient implements Amaz
      * @param cancelClusterRequest
      * @return Result of the CancelCluster operation returned by the service.
      * @throws KMSRequestFailedException
-     *         The provided AWS Key Management Service key lacks the permissions to perform the specified
-     *         <a>CreateJob</a> or <a>UpdateJob</a> action.
+     *         The provided Key Management Service key lacks the permissions to perform the specified <a>CreateJob</a>
+     *         or <a>UpdateJob</a> action.
      * @throws InvalidJobStateException
      *         The action can't be performed because the job's current state doesn't allow that action to be performed.
      * @throws InvalidResourceException
@@ -395,8 +395,8 @@ public class AmazonSnowballClient extends AmazonWebServiceClient implements Amaz
      * @throws InvalidJobStateException
      *         The action can't be performed because the job's current state doesn't allow that action to be performed.
      * @throws KMSRequestFailedException
-     *         The provided AWS Key Management Service key lacks the permissions to perform the specified
-     *         <a>CreateJob</a> or <a>UpdateJob</a> action.
+     *         The provided Key Management Service key lacks the permissions to perform the specified <a>CreateJob</a>
+     *         or <a>UpdateJob</a> action.
      * @sample AmazonSnowball.CancelJob
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/snowball-2016-06-30/CancelJob" target="_top">AWS API
      *      Documentation</a>
@@ -458,7 +458,8 @@ public class AmazonSnowballClient extends AmazonWebServiceClient implements Amaz
      *         The address provided was invalid. Check the address with your region's carrier, and try again.
      * @throws UnsupportedAddressException
      *         The address is either outside the serviceable area for your region, or an error occurred. Check the
-     *         address with your region's carrier and try again. If the issue persists, contact AWS Support.
+     *         address with your region's carrier and try again. If the issue persists, contact Amazon Web Services
+     *         Support.
      * @sample AmazonSnowball.CreateAddress
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/snowball-2016-06-30/CreateAddress" target="_top">AWS API
      *      Documentation</a>
@@ -519,8 +520,8 @@ public class AmazonSnowballClient extends AmazonWebServiceClient implements Amaz
      *         The specified resource can't be found. Check the information you provided in your last request, and try
      *         again.
      * @throws KMSRequestFailedException
-     *         The provided AWS Key Management Service key lacks the permissions to perform the specified
-     *         <a>CreateJob</a> or <a>UpdateJob</a> action.
+     *         The provided Key Management Service key lacks the permissions to perform the specified <a>CreateJob</a>
+     *         or <a>UpdateJob</a> action.
      * @throws InvalidInputCombinationException
      *         Job or cluster creation failed. One or more inputs were invalid. Confirm that the
      *         <a>CreateClusterRequest$SnowballType</a> value supports your <a>CreateJobRequest$JobType</a>, and try
@@ -577,10 +578,10 @@ public class AmazonSnowballClient extends AmazonWebServiceClient implements Amaz
 
     /**
      * <p>
-     * Creates a job to import or export data between Amazon S3 and your on-premises data center. Your AWS account must
-     * have the right trust policies and permissions in place to create a job for a Snow device. If you're creating a
-     * job for a node in a cluster, you only need to provide the <code>clusterId</code> value; the other job attributes
-     * are inherited from the cluster.
+     * Creates a job to import or export data between Amazon S3 and your on-premises data center. Your Amazon Web
+     * Services account must have the right trust policies and permissions in place to create a job for a Snow device.
+     * If you're creating a job for a node in a cluster, you only need to provide the <code>clusterId</code> value; the
+     * other job attributes are inherited from the cluster.
      * </p>
      * <note>
      * <p>
@@ -590,14 +591,15 @@ public class AmazonSnowballClient extends AmazonWebServiceClient implements Amaz
      * The device capacity is optional.
      * </p>
      * <p>
-     * Availability of device types differ by AWS Region. For more information about Region availability, see <a
-     * href="https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/?p=ngi&amp;loc=4">AWS
-     * Regional Services</a>.
+     * Availability of device types differ by Amazon Web Services Region. For more information about Region
+     * availability, see <a
+     * href="https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/?p=ngi&amp;loc=4">Amazon
+     * Web Services Regional Services</a>.
      * </p>
      * </note>
      * <p/>
      * <p class="title">
-     * <b>AWS Snow Family device types and their capacities.</b>
+     * <b>Snow Family Devices and their capacities.</b>
      * </p>
      * <ul>
      * <li>
@@ -718,7 +720,7 @@ public class AmazonSnowballClient extends AmazonWebServiceClient implements Amaz
      * </p>
      * <note>
      * <p>
-     * This device is only available in the Ningxia, Beijing, and Singapore AWS Regions.
+     * This device is only available in the Ningxia, Beijing, and Singapore Amazon Web Services Region
      * </p>
      * </note></li>
      * </ul>
@@ -739,7 +741,7 @@ public class AmazonSnowballClient extends AmazonWebServiceClient implements Amaz
      * </p>
      * <note>
      * <p>
-     * This device is only available in the Ningxia, Beijing, and Singapore AWS Regions.
+     * This device is only available in the Ningxia, Beijing, and Singapore Amazon Web Services Region.
      * </p>
      * </note></li>
      * </ul>
@@ -752,8 +754,8 @@ public class AmazonSnowballClient extends AmazonWebServiceClient implements Amaz
      *         The specified resource can't be found. Check the information you provided in your last request, and try
      *         again.
      * @throws KMSRequestFailedException
-     *         The provided AWS Key Management Service key lacks the permissions to perform the specified
-     *         <a>CreateJob</a> or <a>UpdateJob</a> action.
+     *         The provided Key Management Service key lacks the permissions to perform the specified <a>CreateJob</a>
+     *         or <a>UpdateJob</a> action.
      * @throws InvalidInputCombinationException
      *         Job or cluster creation failed. One or more inputs were invalid. Confirm that the
      *         <a>CreateClusterRequest$SnowballType</a> value supports your <a>CreateJobRequest$JobType</a>, and try
@@ -815,7 +817,8 @@ public class AmazonSnowballClient extends AmazonWebServiceClient implements Amaz
     /**
      * <p>
      * Creates a job with the long-term usage option for a device. The long-term usage is a 1-year or 3-year long-term
-     * pricing type for the device. You are billed upfront, and AWS provides discounts for long-term pricing.
+     * pricing type for the device. You are billed upfront, and Amazon Web Services provides discounts for long-term
+     * pricing.
      * </p>
      * 
      * @param createLongTermPricingRequest
@@ -874,7 +877,7 @@ public class AmazonSnowballClient extends AmazonWebServiceClient implements Amaz
 
     /**
      * <p>
-     * Creates a shipping label that will be used to return the Snow device to AWS.
+     * Creates a shipping label that will be used to return the Snow device to Amazon Web Services.
      * </p>
      * 
      * @param createReturnShippingLabelRequest
@@ -893,7 +896,7 @@ public class AmazonSnowballClient extends AmazonWebServiceClient implements Amaz
      *         requests are not completed.
      * @throws ReturnShippingLabelAlreadyExistsException
      *         You get this exception if you call <code>CreateReturnShippingLabel</code> and a valid return shipping
-     *         label already exists. In this case, use <code>DescribeReturnShippingLabel</code> to get the url.
+     *         label already exists. In this case, use <code>DescribeReturnShippingLabel</code> to get the URL.
      * @sample AmazonSnowball.CreateReturnShippingLabel
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/snowball-2016-06-30/CreateReturnShippingLabel"
      *      target="_top">AWS API Documentation</a>
@@ -1185,7 +1188,7 @@ public class AmazonSnowballClient extends AmazonWebServiceClient implements Amaz
 
     /**
      * <p>
-     * Information on the shipping label of a Snow device that is being returned to AWS.
+     * Information on the shipping label of a Snow device that is being returned to Amazon Web Services.
      * </p>
      * 
      * @param describeReturnShippingLabelRequest
@@ -1403,7 +1406,7 @@ public class AmazonSnowballClient extends AmazonWebServiceClient implements Amaz
      * </p>
      * <p>
      * The default service limit for the number of Snow devices that you can have at one time is 1. If you want to
-     * increase your service limit, contact AWS Support.
+     * increase your service limit, contact Amazon Web Services Support.
      * </p>
      * 
      * @param getSnowballUsageRequest
@@ -1640,10 +1643,10 @@ public class AmazonSnowballClient extends AmazonWebServiceClient implements Amaz
 
     /**
      * <p>
-     * This action returns a list of the different Amazon EC2 Amazon Machine Images (AMIs) that are owned by your AWS
-     * account that would be supported for use on a Snow device. Currently, supported AMIs are based on the CentOS 7
-     * (x86_64) - with Updates HVM, Ubuntu Server 14.04 LTS (HVM), and Ubuntu 16.04 LTS - Xenial (HVM) images, available
-     * on the AWS Marketplace.
+     * This action returns a list of the different Amazon EC2 Amazon Machine Images (AMIs) that are owned by your Amazon
+     * Web Services accountthat would be supported for use on a Snow device. Currently, supported AMIs are based on the
+     * CentOS 7 (x86_64) - with Updates HVM, Ubuntu Server 14.04 LTS (HVM), and Ubuntu 16.04 LTS - Xenial (HVM) images,
+     * available on the Amazon Web Services Marketplace.
      * </p>
      * 
      * @param listCompatibleImagesRequest
@@ -1838,8 +1841,8 @@ public class AmazonSnowballClient extends AmazonWebServiceClient implements Amaz
      * @throws InvalidJobStateException
      *         The action can't be performed because the job's current state doesn't allow that action to be performed.
      * @throws KMSRequestFailedException
-     *         The provided AWS Key Management Service key lacks the permissions to perform the specified
-     *         <a>CreateJob</a> or <a>UpdateJob</a> action.
+     *         The provided Key Management Service key lacks the permissions to perform the specified <a>CreateJob</a>
+     *         or <a>UpdateJob</a> action.
      * @throws InvalidInputCombinationException
      *         Job or cluster creation failed. One or more inputs were invalid. Confirm that the
      *         <a>CreateClusterRequest$SnowballType</a> value supports your <a>CreateJobRequest$JobType</a>, and try
@@ -1909,8 +1912,8 @@ public class AmazonSnowballClient extends AmazonWebServiceClient implements Amaz
      * @throws InvalidJobStateException
      *         The action can't be performed because the job's current state doesn't allow that action to be performed.
      * @throws KMSRequestFailedException
-     *         The provided AWS Key Management Service key lacks the permissions to perform the specified
-     *         <a>CreateJob</a> or <a>UpdateJob</a> action.
+     *         The provided Key Management Service key lacks the permissions to perform the specified <a>CreateJob</a>
+     *         or <a>UpdateJob</a> action.
      * @throws InvalidInputCombinationException
      *         Job or cluster creation failed. One or more inputs were invalid. Confirm that the
      *         <a>CreateClusterRequest$SnowballType</a> value supports your <a>CreateJobRequest$JobType</a>, and try

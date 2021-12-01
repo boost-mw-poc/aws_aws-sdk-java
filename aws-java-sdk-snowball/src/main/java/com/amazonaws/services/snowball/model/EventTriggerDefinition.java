@@ -30,7 +30,7 @@ public class EventTriggerDefinition implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) for any local Amazon S3 resource that is an AWS Lambda function's event trigger
+     * The Amazon Resource Name (ARN) for any local Amazon S3 resource that is an Lambda function's event trigger
      * associated with this job.
      * </p>
      */
@@ -38,13 +38,13 @@ public class EventTriggerDefinition implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) for any local Amazon S3 resource that is an AWS Lambda function's event trigger
+     * The Amazon Resource Name (ARN) for any local Amazon S3 resource that is an Lambda function's event trigger
      * associated with this job.
      * </p>
      * 
      * @param eventResourceARN
-     *        The Amazon Resource Name (ARN) for any local Amazon S3 resource that is an AWS Lambda function's event
-     *        trigger associated with this job.
+     *        The Amazon Resource Name (ARN) for any local Amazon S3 resource that is an Lambda function's event trigger
+     *        associated with this job.
      */
 
     public void setEventResourceARN(String eventResourceARN) {
@@ -53,11 +53,11 @@ public class EventTriggerDefinition implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) for any local Amazon S3 resource that is an AWS Lambda function's event trigger
+     * The Amazon Resource Name (ARN) for any local Amazon S3 resource that is an Lambda function's event trigger
      * associated with this job.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) for any local Amazon S3 resource that is an AWS Lambda function's event
+     * @return The Amazon Resource Name (ARN) for any local Amazon S3 resource that is an Lambda function's event
      *         trigger associated with this job.
      */
 
@@ -67,13 +67,13 @@ public class EventTriggerDefinition implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) for any local Amazon S3 resource that is an AWS Lambda function's event trigger
+     * The Amazon Resource Name (ARN) for any local Amazon S3 resource that is an Lambda function's event trigger
      * associated with this job.
      * </p>
      * 
      * @param eventResourceARN
-     *        The Amazon Resource Name (ARN) for any local Amazon S3 resource that is an AWS Lambda function's event
-     *        trigger associated with this job.
+     *        The Amazon Resource Name (ARN) for any local Amazon S3 resource that is an Lambda function's event trigger
+     *        associated with this job.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

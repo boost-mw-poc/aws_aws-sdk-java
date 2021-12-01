@@ -40,7 +40,7 @@ public class UpdateJobShipmentStateRequest extends com.amazonaws.AmazonWebServic
      * Set to <code>RECEIVED</code> when the device arrives at your location.
      * </p>
      * <p>
-     * Set to <code>RETURNED</code> when you have returned the device to AWS.
+     * Set to <code>RETURNED</code> when you have returned the device to Amazon Web Services.
      * </p>
      */
     private String shipmentState;
@@ -99,7 +99,7 @@ public class UpdateJobShipmentStateRequest extends com.amazonaws.AmazonWebServic
      * Set to <code>RECEIVED</code> when the device arrives at your location.
      * </p>
      * <p>
-     * Set to <code>RETURNED</code> when you have returned the device to AWS.
+     * Set to <code>RETURNED</code> when you have returned the device to Amazon Web Services.
      * </p>
      * 
      * @param shipmentState
@@ -108,7 +108,7 @@ public class UpdateJobShipmentStateRequest extends com.amazonaws.AmazonWebServic
      *        Set to <code>RECEIVED</code> when the device arrives at your location.
      *        </p>
      *        <p>
-     *        Set to <code>RETURNED</code> when you have returned the device to AWS.
+     *        Set to <code>RETURNED</code> when you have returned the device to Amazon Web Services.
      * @see ShipmentState
      */
 
@@ -124,7 +124,7 @@ public class UpdateJobShipmentStateRequest extends com.amazonaws.AmazonWebServic
      * Set to <code>RECEIVED</code> when the device arrives at your location.
      * </p>
      * <p>
-     * Set to <code>RETURNED</code> when you have returned the device to AWS.
+     * Set to <code>RETURNED</code> when you have returned the device to Amazon Web Services.
      * </p>
      * 
      * @return The state of a device when it is being shipped. </p>
@@ -132,7 +132,7 @@ public class UpdateJobShipmentStateRequest extends com.amazonaws.AmazonWebServic
      *         Set to <code>RECEIVED</code> when the device arrives at your location.
      *         </p>
      *         <p>
-     *         Set to <code>RETURNED</code> when you have returned the device to AWS.
+     *         Set to <code>RETURNED</code> when you have returned the device to Amazon Web Services.
      * @see ShipmentState
      */
 
@@ -148,7 +148,7 @@ public class UpdateJobShipmentStateRequest extends com.amazonaws.AmazonWebServic
      * Set to <code>RECEIVED</code> when the device arrives at your location.
      * </p>
      * <p>
-     * Set to <code>RETURNED</code> when you have returned the device to AWS.
+     * Set to <code>RETURNED</code> when you have returned the device to Amazon Web Services.
      * </p>
      * 
      * @param shipmentState
@@ -157,7 +157,7 @@ public class UpdateJobShipmentStateRequest extends com.amazonaws.AmazonWebServic
      *        Set to <code>RECEIVED</code> when the device arrives at your location.
      *        </p>
      *        <p>
-     *        Set to <code>RETURNED</code> when you have returned the device to AWS.
+     *        Set to <code>RETURNED</code> when you have returned the device to Amazon Web Services.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ShipmentState
      */
@@ -175,7 +175,7 @@ public class UpdateJobShipmentStateRequest extends com.amazonaws.AmazonWebServic
      * Set to <code>RECEIVED</code> when the device arrives at your location.
      * </p>
      * <p>
-     * Set to <code>RETURNED</code> when you have returned the device to AWS.
+     * Set to <code>RETURNED</code> when you have returned the device to Amazon Web Services.
      * </p>
      * 
      * @param shipmentState
@@ -184,7 +184,7 @@ public class UpdateJobShipmentStateRequest extends com.amazonaws.AmazonWebServic
      *        Set to <code>RECEIVED</code> when the device arrives at your location.
      *        </p>
      *        <p>
-     *        Set to <code>RETURNED</code> when you have returned the device to AWS.
+     *        Set to <code>RETURNED</code> when you have returned the device to Amazon Web Services.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ShipmentState
      */

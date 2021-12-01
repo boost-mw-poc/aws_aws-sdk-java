@@ -60,6 +60,10 @@ public class StreamDescriptionJsonUnmarshaller implements Unmarshaller<StreamDes
                     context.nextToken();
                     streamDescription.setStreamStatus(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("StreamModeDetails", targetDepth)) {
+                    context.nextToken();
+                    streamDescription.setStreamModeDetails(StreamModeDetailsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("Shards", targetDepth)) {
                     context.nextToken();
                     streamDescription.setShards(new ListUnmarshaller<Shard>(ShardJsonUnmarshaller.getInstance())

@@ -146,6 +146,37 @@ public interface AWSKafkaAsync extends AWSKafka {
 
     /**
      * <p>
+     * Creates a new MSK cluster.
+     * </p>
+     * 
+     * @param createClusterV2Request
+     * @return A Java Future containing the result of the CreateClusterV2 operation returned by the service.
+     * @sample AWSKafkaAsync.CreateClusterV2
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kafka-2018-11-14/CreateClusterV2" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<CreateClusterV2Result> createClusterV2Async(CreateClusterV2Request createClusterV2Request);
+
+    /**
+     * <p>
+     * Creates a new MSK cluster.
+     * </p>
+     * 
+     * @param createClusterV2Request
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateClusterV2 operation returned by the service.
+     * @sample AWSKafkaAsyncHandler.CreateClusterV2
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kafka-2018-11-14/CreateClusterV2" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<CreateClusterV2Result> createClusterV2Async(CreateClusterV2Request createClusterV2Request,
+            com.amazonaws.handlers.AsyncHandler<CreateClusterV2Request, CreateClusterV2Result> asyncHandler);
+
+    /**
+     * <p>
      * Creates a new MSK configuration.
      * </p>
      * 
@@ -298,6 +329,37 @@ public interface AWSKafkaAsync extends AWSKafka {
      */
     java.util.concurrent.Future<DescribeClusterOperationResult> describeClusterOperationAsync(DescribeClusterOperationRequest describeClusterOperationRequest,
             com.amazonaws.handlers.AsyncHandler<DescribeClusterOperationRequest, DescribeClusterOperationResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns a description of the MSK cluster whose Amazon Resource Name (ARN) is specified in the request.
+     * </p>
+     * 
+     * @param describeClusterV2Request
+     * @return A Java Future containing the result of the DescribeClusterV2 operation returned by the service.
+     * @sample AWSKafkaAsync.DescribeClusterV2
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kafka-2018-11-14/DescribeClusterV2" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeClusterV2Result> describeClusterV2Async(DescribeClusterV2Request describeClusterV2Request);
+
+    /**
+     * <p>
+     * Returns a description of the MSK cluster whose Amazon Resource Name (ARN) is specified in the request.
+     * </p>
+     * 
+     * @param describeClusterV2Request
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeClusterV2 operation returned by the service.
+     * @sample AWSKafkaAsyncHandler.DescribeClusterV2
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kafka-2018-11-14/DescribeClusterV2" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeClusterV2Result> describeClusterV2Async(DescribeClusterV2Request describeClusterV2Request,
+            com.amazonaws.handlers.AsyncHandler<DescribeClusterV2Request, DescribeClusterV2Result> asyncHandler);
 
     /**
      * <p>
@@ -490,6 +552,37 @@ public interface AWSKafkaAsync extends AWSKafka {
      */
     java.util.concurrent.Future<ListClustersResult> listClustersAsync(ListClustersRequest listClustersRequest,
             com.amazonaws.handlers.AsyncHandler<ListClustersRequest, ListClustersResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns a list of all the MSK clusters in the current Region.
+     * </p>
+     * 
+     * @param listClustersV2Request
+     * @return A Java Future containing the result of the ListClustersV2 operation returned by the service.
+     * @sample AWSKafkaAsync.ListClustersV2
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kafka-2018-11-14/ListClustersV2" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListClustersV2Result> listClustersV2Async(ListClustersV2Request listClustersV2Request);
+
+    /**
+     * <p>
+     * Returns a list of all the MSK clusters in the current Region.
+     * </p>
+     * 
+     * @param listClustersV2Request
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListClustersV2 operation returned by the service.
+     * @sample AWSKafkaAsyncHandler.ListClustersV2
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kafka-2018-11-14/ListClustersV2" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListClustersV2Result> listClustersV2Async(ListClustersV2Request listClustersV2Request,
+            com.amazonaws.handlers.AsyncHandler<ListClustersV2Request, ListClustersV2Result> asyncHandler);
 
     /**
      * <p>

@@ -60,6 +60,10 @@ public class StreamDescriptionSummaryJsonUnmarshaller implements Unmarshaller<St
                     context.nextToken();
                     streamDescriptionSummary.setStreamStatus(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("StreamModeDetails", targetDepth)) {
+                    context.nextToken();
+                    streamDescriptionSummary.setStreamModeDetails(StreamModeDetailsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("RetentionPeriodHours", targetDepth)) {
                     context.nextToken();
                     streamDescriptionSummary.setRetentionPeriodHours(context.getUnmarshaller(Integer.class).unmarshall(context));

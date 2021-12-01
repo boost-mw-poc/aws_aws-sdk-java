@@ -48,13 +48,13 @@ public class UpdateShardCountRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * <li>
      * <p>
-     * Set this value to more than 500 shards in a stream (the default limit for shard count per stream is 500 per
+     * Set this value to more than 10000 shards in a stream (the default limit for shard count per stream is 10000 per
      * account per region), unless you request a limit increase.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Scale a stream with more than 500 shards down unless you set this value to less than 500 shards.
+     * Scale a stream with more than 10000 shards down unless you set this value to less than 10000 shards.
      * </p>
      * </li>
      * </ul>
@@ -124,13 +124,13 @@ public class UpdateShardCountRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * <li>
      * <p>
-     * Set this value to more than 500 shards in a stream (the default limit for shard count per stream is 500 per
+     * Set this value to more than 10000 shards in a stream (the default limit for shard count per stream is 10000 per
      * account per region), unless you request a limit increase.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Scale a stream with more than 500 shards down unless you set this value to less than 500 shards.
+     * Scale a stream with more than 10000 shards down unless you set this value to less than 10000 shards.
      * </p>
      * </li>
      * </ul>
@@ -151,13 +151,13 @@ public class UpdateShardCountRequest extends com.amazonaws.AmazonWebServiceReque
      *        </li>
      *        <li>
      *        <p>
-     *        Set this value to more than 500 shards in a stream (the default limit for shard count per stream is 500
-     *        per account per region), unless you request a limit increase.
+     *        Set this value to more than 10000 shards in a stream (the default limit for shard count per stream is
+     *        10000 per account per region), unless you request a limit increase.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        Scale a stream with more than 500 shards down unless you set this value to less than 500 shards.
+     *        Scale a stream with more than 10000 shards down unless you set this value to less than 10000 shards.
      *        </p>
      *        </li>
      */
@@ -183,13 +183,13 @@ public class UpdateShardCountRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * <li>
      * <p>
-     * Set this value to more than 500 shards in a stream (the default limit for shard count per stream is 500 per
+     * Set this value to more than 10000 shards in a stream (the default limit for shard count per stream is 10000 per
      * account per region), unless you request a limit increase.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Scale a stream with more than 500 shards down unless you set this value to less than 500 shards.
+     * Scale a stream with more than 10000 shards down unless you set this value to less than 10000 shards.
      * </p>
      * </li>
      * </ul>
@@ -209,13 +209,13 @@ public class UpdateShardCountRequest extends com.amazonaws.AmazonWebServiceReque
      *         </li>
      *         <li>
      *         <p>
-     *         Set this value to more than 500 shards in a stream (the default limit for shard count per stream is 500
-     *         per account per region), unless you request a limit increase.
+     *         Set this value to more than 10000 shards in a stream (the default limit for shard count per stream is
+     *         10000 per account per region), unless you request a limit increase.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         Scale a stream with more than 500 shards down unless you set this value to less than 500 shards.
+     *         Scale a stream with more than 10000 shards down unless you set this value to less than 10000 shards.
      *         </p>
      *         </li>
      */
@@ -241,13 +241,13 @@ public class UpdateShardCountRequest extends com.amazonaws.AmazonWebServiceReque
      * </li>
      * <li>
      * <p>
-     * Set this value to more than 500 shards in a stream (the default limit for shard count per stream is 500 per
+     * Set this value to more than 10000 shards in a stream (the default limit for shard count per stream is 10000 per
      * account per region), unless you request a limit increase.
      * </p>
      * </li>
      * <li>
      * <p>
-     * Scale a stream with more than 500 shards down unless you set this value to less than 500 shards.
+     * Scale a stream with more than 10000 shards down unless you set this value to less than 10000 shards.
      * </p>
      * </li>
      * </ul>
@@ -268,13 +268,13 @@ public class UpdateShardCountRequest extends com.amazonaws.AmazonWebServiceReque
      *        </li>
      *        <li>
      *        <p>
-     *        Set this value to more than 500 shards in a stream (the default limit for shard count per stream is 500
-     *        per account per region), unless you request a limit increase.
+     *        Set this value to more than 10000 shards in a stream (the default limit for shard count per stream is
+     *        10000 per account per region), unless you request a limit increase.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        Scale a stream with more than 500 shards down unless you set this value to less than 500 shards.
+     *        Scale a stream with more than 10000 shards down unless you set this value to less than 10000 shards.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

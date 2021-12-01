@@ -28,20 +28,20 @@ public class GetResourceLFTagsRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent metadata
-     * store. It contains database definitions, table definitions, and other control information to manage your AWS Lake
+     * store. It contains database definitions, table definitions, and other control information to manage your Lake
      * Formation environment.
      * </p>
      */
     private String catalogId;
     /**
      * <p>
-     * The resource for which you want to return tags.
+     * The database, table, or column resource for which you want to return LF-tags.
      * </p>
      */
     private Resource resource;
     /**
      * <p>
-     * Indicates whether to show the assigned tags.
+     * Indicates whether to show the assigned LF-tags.
      * </p>
      */
     private Boolean showAssignedLFTags;
@@ -49,14 +49,14 @@ public class GetResourceLFTagsRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent metadata
-     * store. It contains database definitions, table definitions, and other control information to manage your AWS Lake
+     * store. It contains database definitions, table definitions, and other control information to manage your Lake
      * Formation environment.
      * </p>
      * 
      * @param catalogId
      *        The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent
      *        metadata store. It contains database definitions, table definitions, and other control information to
-     *        manage your AWS Lake Formation environment.
+     *        manage your Lake Formation environment.
      */
 
     public void setCatalogId(String catalogId) {
@@ -66,13 +66,13 @@ public class GetResourceLFTagsRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent metadata
-     * store. It contains database definitions, table definitions, and other control information to manage your AWS Lake
+     * store. It contains database definitions, table definitions, and other control information to manage your Lake
      * Formation environment.
      * </p>
      * 
      * @return The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent
      *         metadata store. It contains database definitions, table definitions, and other control information to
-     *         manage your AWS Lake Formation environment.
+     *         manage your Lake Formation environment.
      */
 
     public String getCatalogId() {
@@ -82,14 +82,14 @@ public class GetResourceLFTagsRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent metadata
-     * store. It contains database definitions, table definitions, and other control information to manage your AWS Lake
+     * store. It contains database definitions, table definitions, and other control information to manage your Lake
      * Formation environment.
      * </p>
      * 
      * @param catalogId
      *        The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent
      *        metadata store. It contains database definitions, table definitions, and other control information to
-     *        manage your AWS Lake Formation environment.
+     *        manage your Lake Formation environment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -100,11 +100,11 @@ public class GetResourceLFTagsRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The resource for which you want to return tags.
+     * The database, table, or column resource for which you want to return LF-tags.
      * </p>
      * 
      * @param resource
-     *        The resource for which you want to return tags.
+     *        The database, table, or column resource for which you want to return LF-tags.
      */
 
     public void setResource(Resource resource) {
@@ -113,10 +113,10 @@ public class GetResourceLFTagsRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The resource for which you want to return tags.
+     * The database, table, or column resource for which you want to return LF-tags.
      * </p>
      * 
-     * @return The resource for which you want to return tags.
+     * @return The database, table, or column resource for which you want to return LF-tags.
      */
 
     public Resource getResource() {
@@ -125,11 +125,11 @@ public class GetResourceLFTagsRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The resource for which you want to return tags.
+     * The database, table, or column resource for which you want to return LF-tags.
      * </p>
      * 
      * @param resource
-     *        The resource for which you want to return tags.
+     *        The database, table, or column resource for which you want to return LF-tags.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -140,11 +140,11 @@ public class GetResourceLFTagsRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * Indicates whether to show the assigned tags.
+     * Indicates whether to show the assigned LF-tags.
      * </p>
      * 
      * @param showAssignedLFTags
-     *        Indicates whether to show the assigned tags.
+     *        Indicates whether to show the assigned LF-tags.
      */
 
     public void setShowAssignedLFTags(Boolean showAssignedLFTags) {
@@ -153,10 +153,10 @@ public class GetResourceLFTagsRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * Indicates whether to show the assigned tags.
+     * Indicates whether to show the assigned LF-tags.
      * </p>
      * 
-     * @return Indicates whether to show the assigned tags.
+     * @return Indicates whether to show the assigned LF-tags.
      */
 
     public Boolean getShowAssignedLFTags() {
@@ -165,11 +165,11 @@ public class GetResourceLFTagsRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * Indicates whether to show the assigned tags.
+     * Indicates whether to show the assigned LF-tags.
      * </p>
      * 
      * @param showAssignedLFTags
-     *        Indicates whether to show the assigned tags.
+     *        Indicates whether to show the assigned LF-tags.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -180,10 +180,10 @@ public class GetResourceLFTagsRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * Indicates whether to show the assigned tags.
+     * Indicates whether to show the assigned LF-tags.
      * </p>
      * 
-     * @return Indicates whether to show the assigned tags.
+     * @return Indicates whether to show the assigned LF-tags.
      */
 
     public Boolean isShowAssignedLFTags() {

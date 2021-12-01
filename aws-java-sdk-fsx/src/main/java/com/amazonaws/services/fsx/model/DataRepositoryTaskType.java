@@ -20,7 +20,8 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public enum DataRepositoryTaskType {
 
-    EXPORT_TO_REPOSITORY("EXPORT_TO_REPOSITORY");
+    EXPORT_TO_REPOSITORY("EXPORT_TO_REPOSITORY"),
+    IMPORT_METADATA_FROM_REPOSITORY("IMPORT_METADATA_FROM_REPOSITORY");
 
     private String value;
 

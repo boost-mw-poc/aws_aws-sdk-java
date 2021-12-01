@@ -21,7 +21,8 @@ import javax.annotation.Generated;
 public enum DataRepositoryTaskFilterName {
 
     FileSystemId("file-system-id"),
-    TaskLifecycle("task-lifecycle");
+    TaskLifecycle("task-lifecycle"),
+    DataRepositoryAssociationId("data-repository-association-id");
 
     private String value;
 

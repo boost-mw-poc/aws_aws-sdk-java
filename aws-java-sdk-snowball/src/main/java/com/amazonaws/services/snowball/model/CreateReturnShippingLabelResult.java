@@ -25,18 +25,18 @@ public class CreateReturnShippingLabelResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The status information of the task on a Snow device that is being returned to AWS.
+     * The status information of the task on a Snow device that is being returned to Amazon Web Services.
      * </p>
      */
     private String status;
 
     /**
      * <p>
-     * The status information of the task on a Snow device that is being returned to AWS.
+     * The status information of the task on a Snow device that is being returned to Amazon Web Services.
      * </p>
      * 
      * @param status
-     *        The status information of the task on a Snow device that is being returned to AWS.
+     *        The status information of the task on a Snow device that is being returned to Amazon Web Services.
      * @see ShippingLabelStatus
      */
 
@@ -46,10 +46,10 @@ public class CreateReturnShippingLabelResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The status information of the task on a Snow device that is being returned to AWS.
+     * The status information of the task on a Snow device that is being returned to Amazon Web Services.
      * </p>
      * 
-     * @return The status information of the task on a Snow device that is being returned to AWS.
+     * @return The status information of the task on a Snow device that is being returned to Amazon Web Services.
      * @see ShippingLabelStatus
      */
 
@@ -59,11 +59,11 @@ public class CreateReturnShippingLabelResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The status information of the task on a Snow device that is being returned to AWS.
+     * The status information of the task on a Snow device that is being returned to Amazon Web Services.
      * </p>
      * 
      * @param status
-     *        The status information of the task on a Snow device that is being returned to AWS.
+     *        The status information of the task on a Snow device that is being returned to Amazon Web Services.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ShippingLabelStatus
      */
@@ -75,11 +75,11 @@ public class CreateReturnShippingLabelResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The status information of the task on a Snow device that is being returned to AWS.
+     * The status information of the task on a Snow device that is being returned to Amazon Web Services.
      * </p>
      * 
      * @param status
-     *        The status information of the task on a Snow device that is being returned to AWS.
+     *        The status information of the task on a Snow device that is being returned to Amazon Web Services.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ShippingLabelStatus
      */

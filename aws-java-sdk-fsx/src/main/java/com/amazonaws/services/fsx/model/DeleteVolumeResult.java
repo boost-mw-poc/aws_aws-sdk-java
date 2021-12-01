@@ -25,30 +25,31 @@ public class DeleteVolumeResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The ID of the volume being deleted.
+     * The ID of the volume that's being deleted.
      * </p>
      */
     private String volumeId;
     /**
      * <p>
-     * Describes the lifecycle state of the volume being deleted.
+     * The lifecycle state of the volume being deleted. If the <code>DeleteVolume</code> operation is successful, this
+     * value is <code>DELETING</code>.
      * </p>
      */
     private String lifecycle;
     /**
      * <p>
-     * Returned after a <code>DeleteVolume request, showing the status of the delete request.</code>
+     * Returned after a <code>DeleteVolume</code> request, showing the status of the delete request.
      * </p>
      */
     private DeleteVolumeOntapResponse ontapResponse;
 
     /**
      * <p>
-     * The ID of the volume being deleted.
+     * The ID of the volume that's being deleted.
      * </p>
      * 
      * @param volumeId
-     *        The ID of the volume being deleted.
+     *        The ID of the volume that's being deleted.
      */
 
     public void setVolumeId(String volumeId) {
@@ -57,10 +58,10 @@ public class DeleteVolumeResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The ID of the volume being deleted.
+     * The ID of the volume that's being deleted.
      * </p>
      * 
-     * @return The ID of the volume being deleted.
+     * @return The ID of the volume that's being deleted.
      */
 
     public String getVolumeId() {
@@ -69,11 +70,11 @@ public class DeleteVolumeResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The ID of the volume being deleted.
+     * The ID of the volume that's being deleted.
      * </p>
      * 
      * @param volumeId
-     *        The ID of the volume being deleted.
+     *        The ID of the volume that's being deleted.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -84,11 +85,13 @@ public class DeleteVolumeResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * Describes the lifecycle state of the volume being deleted.
+     * The lifecycle state of the volume being deleted. If the <code>DeleteVolume</code> operation is successful, this
+     * value is <code>DELETING</code>.
      * </p>
      * 
      * @param lifecycle
-     *        Describes the lifecycle state of the volume being deleted.
+     *        The lifecycle state of the volume being deleted. If the <code>DeleteVolume</code> operation is successful,
+     *        this value is <code>DELETING</code>.
      * @see VolumeLifecycle
      */
 
@@ -98,10 +101,12 @@ public class DeleteVolumeResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * Describes the lifecycle state of the volume being deleted.
+     * The lifecycle state of the volume being deleted. If the <code>DeleteVolume</code> operation is successful, this
+     * value is <code>DELETING</code>.
      * </p>
      * 
-     * @return Describes the lifecycle state of the volume being deleted.
+     * @return The lifecycle state of the volume being deleted. If the <code>DeleteVolume</code> operation is
+     *         successful, this value is <code>DELETING</code>.
      * @see VolumeLifecycle
      */
 
@@ -111,11 +116,13 @@ public class DeleteVolumeResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * Describes the lifecycle state of the volume being deleted.
+     * The lifecycle state of the volume being deleted. If the <code>DeleteVolume</code> operation is successful, this
+     * value is <code>DELETING</code>.
      * </p>
      * 
      * @param lifecycle
-     *        Describes the lifecycle state of the volume being deleted.
+     *        The lifecycle state of the volume being deleted. If the <code>DeleteVolume</code> operation is successful,
+     *        this value is <code>DELETING</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see VolumeLifecycle
      */
@@ -127,11 +134,13 @@ public class DeleteVolumeResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * Describes the lifecycle state of the volume being deleted.
+     * The lifecycle state of the volume being deleted. If the <code>DeleteVolume</code> operation is successful, this
+     * value is <code>DELETING</code>.
      * </p>
      * 
      * @param lifecycle
-     *        Describes the lifecycle state of the volume being deleted.
+     *        The lifecycle state of the volume being deleted. If the <code>DeleteVolume</code> operation is successful,
+     *        this value is <code>DELETING</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see VolumeLifecycle
      */
@@ -143,11 +152,11 @@ public class DeleteVolumeResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * Returned after a <code>DeleteVolume request, showing the status of the delete request.</code>
+     * Returned after a <code>DeleteVolume</code> request, showing the status of the delete request.
      * </p>
      * 
      * @param ontapResponse
-     *        Returned after a <code>DeleteVolume request, showing the status of the delete request.</code>
+     *        Returned after a <code>DeleteVolume</code> request, showing the status of the delete request.
      */
 
     public void setOntapResponse(DeleteVolumeOntapResponse ontapResponse) {
@@ -156,10 +165,10 @@ public class DeleteVolumeResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * Returned after a <code>DeleteVolume request, showing the status of the delete request.</code>
+     * Returned after a <code>DeleteVolume</code> request, showing the status of the delete request.
      * </p>
      * 
-     * @return Returned after a <code>DeleteVolume request, showing the status of the delete request.</code>
+     * @return Returned after a <code>DeleteVolume</code> request, showing the status of the delete request.
      */
 
     public DeleteVolumeOntapResponse getOntapResponse() {
@@ -168,11 +177,11 @@ public class DeleteVolumeResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * Returned after a <code>DeleteVolume request, showing the status of the delete request.</code>
+     * Returned after a <code>DeleteVolume</code> request, showing the status of the delete request.
      * </p>
      * 
      * @param ontapResponse
-     *        Returned after a <code>DeleteVolume request, showing the status of the delete request.</code>
+     *        Returned after a <code>DeleteVolume</code> request, showing the status of the delete request.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

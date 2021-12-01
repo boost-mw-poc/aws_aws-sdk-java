@@ -19,8 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Contains an array of AWS resource objects. Each object represents an Amazon S3 bucket, an AWS Lambda function, or an
- * Amazon Machine Image (AMI) based on Amazon EC2 that is associated with a particular job.
+ * Contains an array of Amazon Web Services resource objects. Each object represents an Amazon S3 bucket, an Lambda
+ * function, or an Amazon Machine Image (AMI) based on Amazon EC2 that is associated with a particular job.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/snowball-2016-06-30/JobResource" target="_top">AWS API

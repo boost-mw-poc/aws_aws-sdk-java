@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Describes an Amazon FSx for NetApp ONTAP volume.
+ * Describes an Amazon FSx for NetApp ONTAP or Amazon FSx for OpenZFS volume.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/Volume" target="_top">AWS API Documentation</a>
@@ -37,7 +37,12 @@ public class Volume implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * <code>CREATED</code> - The volume is fully available for use.
+     * <code>AVAILABLE</code> - The volume is fully available for use.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>CREATED</code> - The volume has been created.
      * </p>
      * </li>
      * <li>
@@ -62,7 +67,7 @@ public class Volume implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>PENDING</code> - Amazon FSx has not started creating the volume.
+     * <code>PENDING</code> - Amazon FSx hasn't started creating the volume.
      * </p>
      * </li>
      * </ul>
@@ -88,16 +93,29 @@ public class Volume implements Serializable, Cloneable, StructuredPojo {
     private String volumeId;
     /**
      * <p>
-     * The type of volume; <code>ONTAP</code> is the only valid volume type.
+     * The type of the volume.
      * </p>
      */
     private String volumeType;
     /**
      * <p>
-     * Describes why the volume lifecycle state changed.
+     * The reason why the volume lifecycle status changed.
      * </p>
      */
     private LifecycleTransitionReason lifecycleTransitionReason;
+    /**
+     * <p>
+     * A list of administrative actions for the file system that are in process or waiting to be processed.
+     * Administrative actions describe changes to the Amazon FSx system that you initiated.
+     * </p>
+     */
+    private java.util.List<AdministrativeAction> administrativeActions;
+    /**
+     * <p>
+     * The configuration of an Amazon FSx for OpenZFS volume.
+     * </p>
+     */
+    private OpenZFSVolumeConfiguration openZFSConfiguration;
 
     /**
      * @param creationTime
@@ -158,7 +176,12 @@ public class Volume implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * <code>CREATED</code> - The volume is fully available for use.
+     * <code>AVAILABLE</code> - The volume is fully available for use.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>CREATED</code> - The volume has been created.
      * </p>
      * </li>
      * <li>
@@ -183,7 +206,7 @@ public class Volume implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>PENDING</code> - Amazon FSx has not started creating the volume.
+     * <code>PENDING</code> - Amazon FSx hasn't started creating the volume.
      * </p>
      * </li>
      * </ul>
@@ -193,7 +216,12 @@ public class Volume implements Serializable, Cloneable, StructuredPojo {
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>CREATED</code> - The volume is fully available for use.
+     *        <code>AVAILABLE</code> - The volume is fully available for use.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>CREATED</code> - The volume has been created.
      *        </p>
      *        </li>
      *        <li>
@@ -218,7 +246,7 @@ public class Volume implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>PENDING</code> - Amazon FSx has not started creating the volume.
+     *        <code>PENDING</code> - Amazon FSx hasn't started creating the volume.
      *        </p>
      *        </li>
      * @see VolumeLifecycle
@@ -235,7 +263,12 @@ public class Volume implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * <code>CREATED</code> - The volume is fully available for use.
+     * <code>AVAILABLE</code> - The volume is fully available for use.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>CREATED</code> - The volume has been created.
      * </p>
      * </li>
      * <li>
@@ -260,7 +293,7 @@ public class Volume implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>PENDING</code> - Amazon FSx has not started creating the volume.
+     * <code>PENDING</code> - Amazon FSx hasn't started creating the volume.
      * </p>
      * </li>
      * </ul>
@@ -269,7 +302,12 @@ public class Volume implements Serializable, Cloneable, StructuredPojo {
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>CREATED</code> - The volume is fully available for use.
+     *         <code>AVAILABLE</code> - The volume is fully available for use.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>CREATED</code> - The volume has been created.
      *         </p>
      *         </li>
      *         <li>
@@ -294,7 +332,7 @@ public class Volume implements Serializable, Cloneable, StructuredPojo {
      *         </li>
      *         <li>
      *         <p>
-     *         <code>PENDING</code> - Amazon FSx has not started creating the volume.
+     *         <code>PENDING</code> - Amazon FSx hasn't started creating the volume.
      *         </p>
      *         </li>
      * @see VolumeLifecycle
@@ -311,7 +349,12 @@ public class Volume implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * <code>CREATED</code> - The volume is fully available for use.
+     * <code>AVAILABLE</code> - The volume is fully available for use.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>CREATED</code> - The volume has been created.
      * </p>
      * </li>
      * <li>
@@ -336,7 +379,7 @@ public class Volume implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>PENDING</code> - Amazon FSx has not started creating the volume.
+     * <code>PENDING</code> - Amazon FSx hasn't started creating the volume.
      * </p>
      * </li>
      * </ul>
@@ -346,7 +389,12 @@ public class Volume implements Serializable, Cloneable, StructuredPojo {
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>CREATED</code> - The volume is fully available for use.
+     *        <code>AVAILABLE</code> - The volume is fully available for use.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>CREATED</code> - The volume has been created.
      *        </p>
      *        </li>
      *        <li>
@@ -371,7 +419,7 @@ public class Volume implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>PENDING</code> - Amazon FSx has not started creating the volume.
+     *        <code>PENDING</code> - Amazon FSx hasn't started creating the volume.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -390,7 +438,12 @@ public class Volume implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * <code>CREATED</code> - The volume is fully available for use.
+     * <code>AVAILABLE</code> - The volume is fully available for use.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>CREATED</code> - The volume has been created.
      * </p>
      * </li>
      * <li>
@@ -415,7 +468,7 @@ public class Volume implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <code>PENDING</code> - Amazon FSx has not started creating the volume.
+     * <code>PENDING</code> - Amazon FSx hasn't started creating the volume.
      * </p>
      * </li>
      * </ul>
@@ -425,7 +478,12 @@ public class Volume implements Serializable, Cloneable, StructuredPojo {
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>CREATED</code> - The volume is fully available for use.
+     *        <code>AVAILABLE</code> - The volume is fully available for use.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>CREATED</code> - The volume has been created.
      *        </p>
      *        </li>
      *        <li>
@@ -450,7 +508,7 @@ public class Volume implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        <code>PENDING</code> - Amazon FSx has not started creating the volume.
+     *        <code>PENDING</code> - Amazon FSx hasn't started creating the volume.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -648,11 +706,11 @@ public class Volume implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of volume; <code>ONTAP</code> is the only valid volume type.
+     * The type of the volume.
      * </p>
      * 
      * @param volumeType
-     *        The type of volume; <code>ONTAP</code> is the only valid volume type.
+     *        The type of the volume.
      * @see VolumeType
      */
 
@@ -662,10 +720,10 @@ public class Volume implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of volume; <code>ONTAP</code> is the only valid volume type.
+     * The type of the volume.
      * </p>
      * 
-     * @return The type of volume; <code>ONTAP</code> is the only valid volume type.
+     * @return The type of the volume.
      * @see VolumeType
      */
 
@@ -675,11 +733,11 @@ public class Volume implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of volume; <code>ONTAP</code> is the only valid volume type.
+     * The type of the volume.
      * </p>
      * 
      * @param volumeType
-     *        The type of volume; <code>ONTAP</code> is the only valid volume type.
+     *        The type of the volume.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see VolumeType
      */
@@ -691,11 +749,11 @@ public class Volume implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The type of volume; <code>ONTAP</code> is the only valid volume type.
+     * The type of the volume.
      * </p>
      * 
      * @param volumeType
-     *        The type of volume; <code>ONTAP</code> is the only valid volume type.
+     *        The type of the volume.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see VolumeType
      */
@@ -707,11 +765,11 @@ public class Volume implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Describes why the volume lifecycle state changed.
+     * The reason why the volume lifecycle status changed.
      * </p>
      * 
      * @param lifecycleTransitionReason
-     *        Describes why the volume lifecycle state changed.
+     *        The reason why the volume lifecycle status changed.
      */
 
     public void setLifecycleTransitionReason(LifecycleTransitionReason lifecycleTransitionReason) {
@@ -720,10 +778,10 @@ public class Volume implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Describes why the volume lifecycle state changed.
+     * The reason why the volume lifecycle status changed.
      * </p>
      * 
-     * @return Describes why the volume lifecycle state changed.
+     * @return The reason why the volume lifecycle status changed.
      */
 
     public LifecycleTransitionReason getLifecycleTransitionReason() {
@@ -732,16 +790,134 @@ public class Volume implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Describes why the volume lifecycle state changed.
+     * The reason why the volume lifecycle status changed.
      * </p>
      * 
      * @param lifecycleTransitionReason
-     *        Describes why the volume lifecycle state changed.
+     *        The reason why the volume lifecycle status changed.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public Volume withLifecycleTransitionReason(LifecycleTransitionReason lifecycleTransitionReason) {
         setLifecycleTransitionReason(lifecycleTransitionReason);
+        return this;
+    }
+
+    /**
+     * <p>
+     * A list of administrative actions for the file system that are in process or waiting to be processed.
+     * Administrative actions describe changes to the Amazon FSx system that you initiated.
+     * </p>
+     * 
+     * @return A list of administrative actions for the file system that are in process or waiting to be processed.
+     *         Administrative actions describe changes to the Amazon FSx system that you initiated.
+     */
+
+    public java.util.List<AdministrativeAction> getAdministrativeActions() {
+        return administrativeActions;
+    }
+
+    /**
+     * <p>
+     * A list of administrative actions for the file system that are in process or waiting to be processed.
+     * Administrative actions describe changes to the Amazon FSx system that you initiated.
+     * </p>
+     * 
+     * @param administrativeActions
+     *        A list of administrative actions for the file system that are in process or waiting to be processed.
+     *        Administrative actions describe changes to the Amazon FSx system that you initiated.
+     */
+
+    public void setAdministrativeActions(java.util.Collection<AdministrativeAction> administrativeActions) {
+        if (administrativeActions == null) {
+            this.administrativeActions = null;
+            return;
+        }
+
+        this.administrativeActions = new java.util.ArrayList<AdministrativeAction>(administrativeActions);
+    }
+
+    /**
+     * <p>
+     * A list of administrative actions for the file system that are in process or waiting to be processed.
+     * Administrative actions describe changes to the Amazon FSx system that you initiated.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setAdministrativeActions(java.util.Collection)} or
+     * {@link #withAdministrativeActions(java.util.Collection)} if you want to override the existing values.
+     * </p>
+     * 
+     * @param administrativeActions
+     *        A list of administrative actions for the file system that are in process or waiting to be processed.
+     *        Administrative actions describe changes to the Amazon FSx system that you initiated.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Volume withAdministrativeActions(AdministrativeAction... administrativeActions) {
+        if (this.administrativeActions == null) {
+            setAdministrativeActions(new java.util.ArrayList<AdministrativeAction>(administrativeActions.length));
+        }
+        for (AdministrativeAction ele : administrativeActions) {
+            this.administrativeActions.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * A list of administrative actions for the file system that are in process or waiting to be processed.
+     * Administrative actions describe changes to the Amazon FSx system that you initiated.
+     * </p>
+     * 
+     * @param administrativeActions
+     *        A list of administrative actions for the file system that are in process or waiting to be processed.
+     *        Administrative actions describe changes to the Amazon FSx system that you initiated.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Volume withAdministrativeActions(java.util.Collection<AdministrativeAction> administrativeActions) {
+        setAdministrativeActions(administrativeActions);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The configuration of an Amazon FSx for OpenZFS volume.
+     * </p>
+     * 
+     * @param openZFSConfiguration
+     *        The configuration of an Amazon FSx for OpenZFS volume.
+     */
+
+    public void setOpenZFSConfiguration(OpenZFSVolumeConfiguration openZFSConfiguration) {
+        this.openZFSConfiguration = openZFSConfiguration;
+    }
+
+    /**
+     * <p>
+     * The configuration of an Amazon FSx for OpenZFS volume.
+     * </p>
+     * 
+     * @return The configuration of an Amazon FSx for OpenZFS volume.
+     */
+
+    public OpenZFSVolumeConfiguration getOpenZFSConfiguration() {
+        return this.openZFSConfiguration;
+    }
+
+    /**
+     * <p>
+     * The configuration of an Amazon FSx for OpenZFS volume.
+     * </p>
+     * 
+     * @param openZFSConfiguration
+     *        The configuration of an Amazon FSx for OpenZFS volume.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Volume withOpenZFSConfiguration(OpenZFSVolumeConfiguration openZFSConfiguration) {
+        setOpenZFSConfiguration(openZFSConfiguration);
         return this;
     }
 
@@ -776,7 +952,11 @@ public class Volume implements Serializable, Cloneable, StructuredPojo {
         if (getVolumeType() != null)
             sb.append("VolumeType: ").append(getVolumeType()).append(",");
         if (getLifecycleTransitionReason() != null)
-            sb.append("LifecycleTransitionReason: ").append(getLifecycleTransitionReason());
+            sb.append("LifecycleTransitionReason: ").append(getLifecycleTransitionReason()).append(",");
+        if (getAdministrativeActions() != null)
+            sb.append("AdministrativeActions: ").append(getAdministrativeActions()).append(",");
+        if (getOpenZFSConfiguration() != null)
+            sb.append("OpenZFSConfiguration: ").append(getOpenZFSConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -831,6 +1011,14 @@ public class Volume implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getLifecycleTransitionReason() != null && other.getLifecycleTransitionReason().equals(this.getLifecycleTransitionReason()) == false)
             return false;
+        if (other.getAdministrativeActions() == null ^ this.getAdministrativeActions() == null)
+            return false;
+        if (other.getAdministrativeActions() != null && other.getAdministrativeActions().equals(this.getAdministrativeActions()) == false)
+            return false;
+        if (other.getOpenZFSConfiguration() == null ^ this.getOpenZFSConfiguration() == null)
+            return false;
+        if (other.getOpenZFSConfiguration() != null && other.getOpenZFSConfiguration().equals(this.getOpenZFSConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -849,6 +1037,8 @@ public class Volume implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getVolumeId() == null) ? 0 : getVolumeId().hashCode());
         hashCode = prime * hashCode + ((getVolumeType() == null) ? 0 : getVolumeType().hashCode());
         hashCode = prime * hashCode + ((getLifecycleTransitionReason() == null) ? 0 : getLifecycleTransitionReason().hashCode());
+        hashCode = prime * hashCode + ((getAdministrativeActions() == null) ? 0 : getAdministrativeActions().hashCode());
+        hashCode = prime * hashCode + ((getOpenZFSConfiguration() == null) ? 0 : getOpenZFSConfiguration().hashCode());
         return hashCode;
     }
 

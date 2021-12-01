@@ -58,6 +58,12 @@ public class Outpost implements Serializable, Cloneable, StructuredPojo {
     private java.util.Map<String, String> tags;
 
     private String siteArn;
+    /**
+     * <p>
+     * The hardware type.
+     * </p>
+     */
+    private String supportedHardwareType;
 
     /**
      * <p>
@@ -402,6 +408,65 @@ public class Outpost implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The hardware type.
+     * </p>
+     * 
+     * @param supportedHardwareType
+     *        The hardware type.
+     * @see SupportedHardwareType
+     */
+
+    public void setSupportedHardwareType(String supportedHardwareType) {
+        this.supportedHardwareType = supportedHardwareType;
+    }
+
+    /**
+     * <p>
+     * The hardware type.
+     * </p>
+     * 
+     * @return The hardware type.
+     * @see SupportedHardwareType
+     */
+
+    public String getSupportedHardwareType() {
+        return this.supportedHardwareType;
+    }
+
+    /**
+     * <p>
+     * The hardware type.
+     * </p>
+     * 
+     * @param supportedHardwareType
+     *        The hardware type.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see SupportedHardwareType
+     */
+
+    public Outpost withSupportedHardwareType(String supportedHardwareType) {
+        setSupportedHardwareType(supportedHardwareType);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The hardware type.
+     * </p>
+     * 
+     * @param supportedHardwareType
+     *        The hardware type.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see SupportedHardwareType
+     */
+
+    public Outpost withSupportedHardwareType(SupportedHardwareType supportedHardwareType) {
+        this.supportedHardwareType = supportedHardwareType.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -434,7 +499,9 @@ public class Outpost implements Serializable, Cloneable, StructuredPojo {
         if (getTags() != null)
             sb.append("Tags: ").append(getTags()).append(",");
         if (getSiteArn() != null)
-            sb.append("SiteArn: ").append(getSiteArn());
+            sb.append("SiteArn: ").append(getSiteArn()).append(",");
+        if (getSupportedHardwareType() != null)
+            sb.append("SupportedHardwareType: ").append(getSupportedHardwareType());
         sb.append("}");
         return sb.toString();
     }
@@ -493,6 +560,10 @@ public class Outpost implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getSiteArn() != null && other.getSiteArn().equals(this.getSiteArn()) == false)
             return false;
+        if (other.getSupportedHardwareType() == null ^ this.getSupportedHardwareType() == null)
+            return false;
+        if (other.getSupportedHardwareType() != null && other.getSupportedHardwareType().equals(this.getSupportedHardwareType()) == false)
+            return false;
         return true;
     }
 
@@ -512,6 +583,7 @@ public class Outpost implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getAvailabilityZoneId() == null) ? 0 : getAvailabilityZoneId().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getSiteArn() == null) ? 0 : getSiteArn().hashCode());
+        hashCode = prime * hashCode + ((getSupportedHardwareType() == null) ? 0 : getSupportedHardwareType().hashCode());
         return hashCode;
     }
 

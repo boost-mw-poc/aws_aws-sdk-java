@@ -30,24 +30,24 @@ public class LFTagError implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The key-name of the tag.
+     * The key-name of the LF-tag.
      * </p>
      */
     private LFTagPair lFTag;
     /**
      * <p>
-     * An error that occurred with the attachment or detachment of the tag.
+     * An error that occurred with the attachment or detachment of the LF-tag.
      * </p>
      */
     private ErrorDetail error;
 
     /**
      * <p>
-     * The key-name of the tag.
+     * The key-name of the LF-tag.
      * </p>
      * 
      * @param lFTag
-     *        The key-name of the tag.
+     *        The key-name of the LF-tag.
      */
 
     public void setLFTag(LFTagPair lFTag) {
@@ -56,10 +56,10 @@ public class LFTagError implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The key-name of the tag.
+     * The key-name of the LF-tag.
      * </p>
      * 
-     * @return The key-name of the tag.
+     * @return The key-name of the LF-tag.
      */
 
     public LFTagPair getLFTag() {
@@ -68,11 +68,11 @@ public class LFTagError implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The key-name of the tag.
+     * The key-name of the LF-tag.
      * </p>
      * 
      * @param lFTag
-     *        The key-name of the tag.
+     *        The key-name of the LF-tag.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -83,11 +83,11 @@ public class LFTagError implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * An error that occurred with the attachment or detachment of the tag.
+     * An error that occurred with the attachment or detachment of the LF-tag.
      * </p>
      * 
      * @param error
-     *        An error that occurred with the attachment or detachment of the tag.
+     *        An error that occurred with the attachment or detachment of the LF-tag.
      */
 
     public void setError(ErrorDetail error) {
@@ -96,10 +96,10 @@ public class LFTagError implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * An error that occurred with the attachment or detachment of the tag.
+     * An error that occurred with the attachment or detachment of the LF-tag.
      * </p>
      * 
-     * @return An error that occurred with the attachment or detachment of the tag.
+     * @return An error that occurred with the attachment or detachment of the LF-tag.
      */
 
     public ErrorDetail getError() {
@@ -108,11 +108,11 @@ public class LFTagError implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * An error that occurred with the attachment or detachment of the tag.
+     * An error that occurred with the attachment or detachment of the LF-tag.
      * </p>
      * 
      * @param error
-     *        An error that occurred with the attachment or detachment of the tag.
+     *        An error that occurred with the attachment or detachment of the LF-tag.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

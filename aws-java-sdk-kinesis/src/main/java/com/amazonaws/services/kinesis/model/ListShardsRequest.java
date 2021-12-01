@@ -77,8 +77,9 @@ public class ListShardsRequest extends com.amazonaws.AmazonWebServiceRequest imp
     private String exclusiveStartShardId;
     /**
      * <p>
-     * The maximum number of shards to return in a single call to <code>ListShards</code>. The minimum value you can
-     * specify for this parameter is 1, and the maximum is 10,000, which is also the default.
+     * The maximum number of shards to return in a single call to <code>ListShards</code>. The maximum number of shards
+     * to return in a single call. The default value is 1000. If you specify a value greater than 1000, at most 1000
+     * results are returned.
      * </p>
      * <p>
      * When the number of shards to be listed is greater than the value of <code>MaxResults</code>, the response
@@ -98,7 +99,31 @@ public class ListShardsRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * </p>
      */
     private java.util.Date streamCreationTimestamp;
-
+    /**
+     * <p>
+     * Enables you to filter out the response of the <code>ListShards</code> API. You can only specify one filter at a
+     * time.
+     * </p>
+     * <p>
+     * If you use the <code>ShardFilter</code> parameter when invoking the ListShards API, the <code>Type</code> is the
+     * required property and must be specified. If you specify the <code>AT_TRIM_HORIZON</code>,
+     * <code>FROM_TRIM_HORIZON</code>, or <code>AT_LATEST</code> types, you do not need to specify either the
+     * <code>ShardId</code> or the <code>Timestamp</code> optional properties.
+     * </p>
+     * <p>
+     * If you specify the <code>AFTER_SHARD_ID</code> type, you must also provide the value for the optional
+     * <code>ShardId</code> property. The <code>ShardId</code> property is identical in fuctionality to the
+     * <code>ExclusiveStartShardId</code> parameter of the <code>ListShards</code> API. When <code>ShardId</code>
+     * property is specified, the response includes the shards starting with the shard whose ID immediately follows the
+     * <code>ShardId</code> that you provided.
+     * </p>
+     * <p>
+     * If you specify the <code>AT_TIMESTAMP</code> or <code>FROM_TIMESTAMP_ID</code> type, you must also provide the
+     * value for the optional <code>Timestamp</code> property. If you specify the AT_TIMESTAMP type, then all shards
+     * that were open at the provided timestamp are returned. If you specify the FROM_TIMESTAMP type, then all shards
+     * starting from the provided timestamp to TIP are returned.
+     * </p>
+     */
     private ShardFilter shardFilter;
 
     /**
@@ -409,8 +434,9 @@ public class ListShardsRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The maximum number of shards to return in a single call to <code>ListShards</code>. The minimum value you can
-     * specify for this parameter is 1, and the maximum is 10,000, which is also the default.
+     * The maximum number of shards to return in a single call to <code>ListShards</code>. The maximum number of shards
+     * to return in a single call. The default value is 1000. If you specify a value greater than 1000, at most 1000
+     * results are returned.
      * </p>
      * <p>
      * When the number of shards to be listed is greater than the value of <code>MaxResults</code>, the response
@@ -419,8 +445,9 @@ public class ListShardsRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * </p>
      * 
      * @param maxResults
-     *        The maximum number of shards to return in a single call to <code>ListShards</code>. The minimum value you
-     *        can specify for this parameter is 1, and the maximum is 10,000, which is also the default.</p>
+     *        The maximum number of shards to return in a single call to <code>ListShards</code>. The maximum number of
+     *        shards to return in a single call. The default value is 1000. If you specify a value greater than 1000, at
+     *        most 1000 results are returned. </p>
      *        <p>
      *        When the number of shards to be listed is greater than the value of <code>MaxResults</code>, the response
      *        contains a <code>NextToken</code> value that you can use in a subsequent call to <code>ListShards</code>
@@ -433,8 +460,9 @@ public class ListShardsRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The maximum number of shards to return in a single call to <code>ListShards</code>. The minimum value you can
-     * specify for this parameter is 1, and the maximum is 10,000, which is also the default.
+     * The maximum number of shards to return in a single call to <code>ListShards</code>. The maximum number of shards
+     * to return in a single call. The default value is 1000. If you specify a value greater than 1000, at most 1000
+     * results are returned.
      * </p>
      * <p>
      * When the number of shards to be listed is greater than the value of <code>MaxResults</code>, the response
@@ -442,8 +470,9 @@ public class ListShardsRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * the next set of shards.
      * </p>
      * 
-     * @return The maximum number of shards to return in a single call to <code>ListShards</code>. The minimum value you
-     *         can specify for this parameter is 1, and the maximum is 10,000, which is also the default.</p>
+     * @return The maximum number of shards to return in a single call to <code>ListShards</code>. The maximum number of
+     *         shards to return in a single call. The default value is 1000. If you specify a value greater than 1000,
+     *         at most 1000 results are returned. </p>
      *         <p>
      *         When the number of shards to be listed is greater than the value of <code>MaxResults</code>, the response
      *         contains a <code>NextToken</code> value that you can use in a subsequent call to <code>ListShards</code>
@@ -456,8 +485,9 @@ public class ListShardsRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * The maximum number of shards to return in a single call to <code>ListShards</code>. The minimum value you can
-     * specify for this parameter is 1, and the maximum is 10,000, which is also the default.
+     * The maximum number of shards to return in a single call to <code>ListShards</code>. The maximum number of shards
+     * to return in a single call. The default value is 1000. If you specify a value greater than 1000, at most 1000
+     * results are returned.
      * </p>
      * <p>
      * When the number of shards to be listed is greater than the value of <code>MaxResults</code>, the response
@@ -466,8 +496,9 @@ public class ListShardsRequest extends com.amazonaws.AmazonWebServiceRequest imp
      * </p>
      * 
      * @param maxResults
-     *        The maximum number of shards to return in a single call to <code>ListShards</code>. The minimum value you
-     *        can specify for this parameter is 1, and the maximum is 10,000, which is also the default.</p>
+     *        The maximum number of shards to return in a single call to <code>ListShards</code>. The maximum number of
+     *        shards to return in a single call. The default value is 1000. If you specify a value greater than 1000, at
+     *        most 1000 results are returned. </p>
      *        <p>
      *        When the number of shards to be listed is greater than the value of <code>MaxResults</code>, the response
      *        contains a <code>NextToken</code> value that you can use in a subsequent call to <code>ListShards</code>
@@ -548,7 +579,51 @@ public class ListShardsRequest extends com.amazonaws.AmazonWebServiceRequest imp
     }
 
     /**
+     * <p>
+     * Enables you to filter out the response of the <code>ListShards</code> API. You can only specify one filter at a
+     * time.
+     * </p>
+     * <p>
+     * If you use the <code>ShardFilter</code> parameter when invoking the ListShards API, the <code>Type</code> is the
+     * required property and must be specified. If you specify the <code>AT_TRIM_HORIZON</code>,
+     * <code>FROM_TRIM_HORIZON</code>, or <code>AT_LATEST</code> types, you do not need to specify either the
+     * <code>ShardId</code> or the <code>Timestamp</code> optional properties.
+     * </p>
+     * <p>
+     * If you specify the <code>AFTER_SHARD_ID</code> type, you must also provide the value for the optional
+     * <code>ShardId</code> property. The <code>ShardId</code> property is identical in fuctionality to the
+     * <code>ExclusiveStartShardId</code> parameter of the <code>ListShards</code> API. When <code>ShardId</code>
+     * property is specified, the response includes the shards starting with the shard whose ID immediately follows the
+     * <code>ShardId</code> that you provided.
+     * </p>
+     * <p>
+     * If you specify the <code>AT_TIMESTAMP</code> or <code>FROM_TIMESTAMP_ID</code> type, you must also provide the
+     * value for the optional <code>Timestamp</code> property. If you specify the AT_TIMESTAMP type, then all shards
+     * that were open at the provided timestamp are returned. If you specify the FROM_TIMESTAMP type, then all shards
+     * starting from the provided timestamp to TIP are returned.
+     * </p>
+     * 
      * @param shardFilter
+     *        Enables you to filter out the response of the <code>ListShards</code> API. You can only specify one filter
+     *        at a time. </p>
+     *        <p>
+     *        If you use the <code>ShardFilter</code> parameter when invoking the ListShards API, the <code>Type</code>
+     *        is the required property and must be specified. If you specify the <code>AT_TRIM_HORIZON</code>,
+     *        <code>FROM_TRIM_HORIZON</code>, or <code>AT_LATEST</code> types, you do not need to specify either the
+     *        <code>ShardId</code> or the <code>Timestamp</code> optional properties.
+     *        </p>
+     *        <p>
+     *        If you specify the <code>AFTER_SHARD_ID</code> type, you must also provide the value for the optional
+     *        <code>ShardId</code> property. The <code>ShardId</code> property is identical in fuctionality to the
+     *        <code>ExclusiveStartShardId</code> parameter of the <code>ListShards</code> API. When <code>ShardId</code>
+     *        property is specified, the response includes the shards starting with the shard whose ID immediately
+     *        follows the <code>ShardId</code> that you provided.
+     *        </p>
+     *        <p>
+     *        If you specify the <code>AT_TIMESTAMP</code> or <code>FROM_TIMESTAMP_ID</code> type, you must also provide
+     *        the value for the optional <code>Timestamp</code> property. If you specify the AT_TIMESTAMP type, then all
+     *        shards that were open at the provided timestamp are returned. If you specify the FROM_TIMESTAMP type, then
+     *        all shards starting from the provided timestamp to TIP are returned.
      */
 
     public void setShardFilter(ShardFilter shardFilter) {
@@ -556,7 +631,50 @@ public class ListShardsRequest extends com.amazonaws.AmazonWebServiceRequest imp
     }
 
     /**
-     * @return
+     * <p>
+     * Enables you to filter out the response of the <code>ListShards</code> API. You can only specify one filter at a
+     * time.
+     * </p>
+     * <p>
+     * If you use the <code>ShardFilter</code> parameter when invoking the ListShards API, the <code>Type</code> is the
+     * required property and must be specified. If you specify the <code>AT_TRIM_HORIZON</code>,
+     * <code>FROM_TRIM_HORIZON</code>, or <code>AT_LATEST</code> types, you do not need to specify either the
+     * <code>ShardId</code> or the <code>Timestamp</code> optional properties.
+     * </p>
+     * <p>
+     * If you specify the <code>AFTER_SHARD_ID</code> type, you must also provide the value for the optional
+     * <code>ShardId</code> property. The <code>ShardId</code> property is identical in fuctionality to the
+     * <code>ExclusiveStartShardId</code> parameter of the <code>ListShards</code> API. When <code>ShardId</code>
+     * property is specified, the response includes the shards starting with the shard whose ID immediately follows the
+     * <code>ShardId</code> that you provided.
+     * </p>
+     * <p>
+     * If you specify the <code>AT_TIMESTAMP</code> or <code>FROM_TIMESTAMP_ID</code> type, you must also provide the
+     * value for the optional <code>Timestamp</code> property. If you specify the AT_TIMESTAMP type, then all shards
+     * that were open at the provided timestamp are returned. If you specify the FROM_TIMESTAMP type, then all shards
+     * starting from the provided timestamp to TIP are returned.
+     * </p>
+     * 
+     * @return Enables you to filter out the response of the <code>ListShards</code> API. You can only specify one
+     *         filter at a time. </p>
+     *         <p>
+     *         If you use the <code>ShardFilter</code> parameter when invoking the ListShards API, the <code>Type</code>
+     *         is the required property and must be specified. If you specify the <code>AT_TRIM_HORIZON</code>,
+     *         <code>FROM_TRIM_HORIZON</code>, or <code>AT_LATEST</code> types, you do not need to specify either the
+     *         <code>ShardId</code> or the <code>Timestamp</code> optional properties.
+     *         </p>
+     *         <p>
+     *         If you specify the <code>AFTER_SHARD_ID</code> type, you must also provide the value for the optional
+     *         <code>ShardId</code> property. The <code>ShardId</code> property is identical in fuctionality to the
+     *         <code>ExclusiveStartShardId</code> parameter of the <code>ListShards</code> API. When
+     *         <code>ShardId</code> property is specified, the response includes the shards starting with the shard
+     *         whose ID immediately follows the <code>ShardId</code> that you provided.
+     *         </p>
+     *         <p>
+     *         If you specify the <code>AT_TIMESTAMP</code> or <code>FROM_TIMESTAMP_ID</code> type, you must also
+     *         provide the value for the optional <code>Timestamp</code> property. If you specify the AT_TIMESTAMP type,
+     *         then all shards that were open at the provided timestamp are returned. If you specify the FROM_TIMESTAMP
+     *         type, then all shards starting from the provided timestamp to TIP are returned.
      */
 
     public ShardFilter getShardFilter() {
@@ -564,7 +682,51 @@ public class ListShardsRequest extends com.amazonaws.AmazonWebServiceRequest imp
     }
 
     /**
+     * <p>
+     * Enables you to filter out the response of the <code>ListShards</code> API. You can only specify one filter at a
+     * time.
+     * </p>
+     * <p>
+     * If you use the <code>ShardFilter</code> parameter when invoking the ListShards API, the <code>Type</code> is the
+     * required property and must be specified. If you specify the <code>AT_TRIM_HORIZON</code>,
+     * <code>FROM_TRIM_HORIZON</code>, or <code>AT_LATEST</code> types, you do not need to specify either the
+     * <code>ShardId</code> or the <code>Timestamp</code> optional properties.
+     * </p>
+     * <p>
+     * If you specify the <code>AFTER_SHARD_ID</code> type, you must also provide the value for the optional
+     * <code>ShardId</code> property. The <code>ShardId</code> property is identical in fuctionality to the
+     * <code>ExclusiveStartShardId</code> parameter of the <code>ListShards</code> API. When <code>ShardId</code>
+     * property is specified, the response includes the shards starting with the shard whose ID immediately follows the
+     * <code>ShardId</code> that you provided.
+     * </p>
+     * <p>
+     * If you specify the <code>AT_TIMESTAMP</code> or <code>FROM_TIMESTAMP_ID</code> type, you must also provide the
+     * value for the optional <code>Timestamp</code> property. If you specify the AT_TIMESTAMP type, then all shards
+     * that were open at the provided timestamp are returned. If you specify the FROM_TIMESTAMP type, then all shards
+     * starting from the provided timestamp to TIP are returned.
+     * </p>
+     * 
      * @param shardFilter
+     *        Enables you to filter out the response of the <code>ListShards</code> API. You can only specify one filter
+     *        at a time. </p>
+     *        <p>
+     *        If you use the <code>ShardFilter</code> parameter when invoking the ListShards API, the <code>Type</code>
+     *        is the required property and must be specified. If you specify the <code>AT_TRIM_HORIZON</code>,
+     *        <code>FROM_TRIM_HORIZON</code>, or <code>AT_LATEST</code> types, you do not need to specify either the
+     *        <code>ShardId</code> or the <code>Timestamp</code> optional properties.
+     *        </p>
+     *        <p>
+     *        If you specify the <code>AFTER_SHARD_ID</code> type, you must also provide the value for the optional
+     *        <code>ShardId</code> property. The <code>ShardId</code> property is identical in fuctionality to the
+     *        <code>ExclusiveStartShardId</code> parameter of the <code>ListShards</code> API. When <code>ShardId</code>
+     *        property is specified, the response includes the shards starting with the shard whose ID immediately
+     *        follows the <code>ShardId</code> that you provided.
+     *        </p>
+     *        <p>
+     *        If you specify the <code>AT_TIMESTAMP</code> or <code>FROM_TIMESTAMP_ID</code> type, you must also provide
+     *        the value for the optional <code>Timestamp</code> property. If you specify the AT_TIMESTAMP type, then all
+     *        shards that were open at the provided timestamp are returned. If you specify the FROM_TIMESTAMP type, then
+     *        all shards starting from the provided timestamp to TIP are returned.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

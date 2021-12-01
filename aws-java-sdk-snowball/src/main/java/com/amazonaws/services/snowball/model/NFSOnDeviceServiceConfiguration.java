@@ -19,7 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * An object that represents metadata and configuration settings for NFS service on an AWS Snow Family device.
+ * An object that represents the metadata and configuration settings for the NFS (Network File System) service on an
+ * Amazon Web Services Snow Family device.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/snowball-2016-06-30/NFSOnDeviceServiceConfiguration"
@@ -30,7 +31,7 @@ public class NFSOnDeviceServiceConfiguration implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The maximum NFS storage for one Snowball Family device.
+     * The maximum NFS storage for one Snow Family device.
      * </p>
      */
     private Integer storageLimit;
@@ -46,11 +47,11 @@ public class NFSOnDeviceServiceConfiguration implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The maximum NFS storage for one Snowball Family device.
+     * The maximum NFS storage for one Snow Family device.
      * </p>
      * 
      * @param storageLimit
-     *        The maximum NFS storage for one Snowball Family device.
+     *        The maximum NFS storage for one Snow Family device.
      */
 
     public void setStorageLimit(Integer storageLimit) {
@@ -59,10 +60,10 @@ public class NFSOnDeviceServiceConfiguration implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The maximum NFS storage for one Snowball Family device.
+     * The maximum NFS storage for one Snow Family device.
      * </p>
      * 
-     * @return The maximum NFS storage for one Snowball Family device.
+     * @return The maximum NFS storage for one Snow Family device.
      */
 
     public Integer getStorageLimit() {
@@ -71,11 +72,11 @@ public class NFSOnDeviceServiceConfiguration implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The maximum NFS storage for one Snowball Family device.
+     * The maximum NFS storage for one Snow Family device.
      * </p>
      * 
      * @param storageLimit
-     *        The maximum NFS storage for one Snowball Family device.
+     *        The maximum NFS storage for one Snow Family device.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

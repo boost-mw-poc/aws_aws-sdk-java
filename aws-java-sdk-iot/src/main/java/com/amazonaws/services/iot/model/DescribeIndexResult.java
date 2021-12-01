@@ -56,6 +56,13 @@ public class DescribeIndexResult extends com.amazonaws.AmazonWebServiceResult<co
      * connectivity status data.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * MULTI_INDEXING_MODE - Your thing index contains multiple data sources. For more information, see <a
+     * href="https://docs.aws.amazon.com/iot/latest/apireference/API_GetIndexingConfiguration.html"
+     * >GetIndexingConfiguration</a>.
+     * </p>
+     * </li>
      * </ul>
      */
     private String schema;
@@ -185,6 +192,13 @@ public class DescribeIndexResult extends com.amazonaws.AmazonWebServiceResult<co
      * connectivity status data.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * MULTI_INDEXING_MODE - Your thing index contains multiple data sources. For more information, see <a
+     * href="https://docs.aws.amazon.com/iot/latest/apireference/API_GetIndexingConfiguration.html"
+     * >GetIndexingConfiguration</a>.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param schema
@@ -210,6 +224,13 @@ public class DescribeIndexResult extends com.amazonaws.AmazonWebServiceResult<co
      *        <p>
      *        REGISTRY_AND_SHADOW_AND_CONNECTIVITY_STATUS - Your thing index contains registry data, shadow data, and
      *        thing connectivity status data.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        MULTI_INDEXING_MODE - Your thing index contains multiple data sources. For more information, see <a
+     *        href="https://docs.aws.amazon.com/iot/latest/apireference/API_GetIndexingConfiguration.html"
+     *        >GetIndexingConfiguration</a>.
      *        </p>
      *        </li>
      */
@@ -244,6 +265,13 @@ public class DescribeIndexResult extends com.amazonaws.AmazonWebServiceResult<co
      * connectivity status data.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * MULTI_INDEXING_MODE - Your thing index contains multiple data sources. For more information, see <a
+     * href="https://docs.aws.amazon.com/iot/latest/apireference/API_GetIndexingConfiguration.html"
+     * >GetIndexingConfiguration</a>.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @return Contains a value that specifies the type of indexing performed. Valid values are:</p>
@@ -268,6 +296,13 @@ public class DescribeIndexResult extends com.amazonaws.AmazonWebServiceResult<co
      *         <p>
      *         REGISTRY_AND_SHADOW_AND_CONNECTIVITY_STATUS - Your thing index contains registry data, shadow data, and
      *         thing connectivity status data.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         MULTI_INDEXING_MODE - Your thing index contains multiple data sources. For more information, see <a
+     *         href="https://docs.aws.amazon.com/iot/latest/apireference/API_GetIndexingConfiguration.html"
+     *         >GetIndexingConfiguration</a>.
      *         </p>
      *         </li>
      */
@@ -302,6 +337,13 @@ public class DescribeIndexResult extends com.amazonaws.AmazonWebServiceResult<co
      * connectivity status data.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * MULTI_INDEXING_MODE - Your thing index contains multiple data sources. For more information, see <a
+     * href="https://docs.aws.amazon.com/iot/latest/apireference/API_GetIndexingConfiguration.html"
+     * >GetIndexingConfiguration</a>.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param schema
@@ -327,6 +369,13 @@ public class DescribeIndexResult extends com.amazonaws.AmazonWebServiceResult<co
      *        <p>
      *        REGISTRY_AND_SHADOW_AND_CONNECTIVITY_STATUS - Your thing index contains registry data, shadow data, and
      *        thing connectivity status data.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        MULTI_INDEXING_MODE - Your thing index contains multiple data sources. For more information, see <a
+     *        href="https://docs.aws.amazon.com/iot/latest/apireference/API_GetIndexingConfiguration.html"
+     *        >GetIndexingConfiguration</a>.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

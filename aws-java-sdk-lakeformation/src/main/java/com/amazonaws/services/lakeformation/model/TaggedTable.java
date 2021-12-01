@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A structure describing a table resource with tags.
+ * A structure describing a table resource with LF-tags.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lakeformation-2017-03-31/TaggedTable" target="_top">AWS API
@@ -30,36 +30,36 @@ public class TaggedTable implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A table that has tags attached to it.
+     * A table that has LF-tags attached to it.
      * </p>
      */
     private TableResource table;
     /**
      * <p>
-     * A list of tags attached to the database where the table resides.
+     * A list of LF-tags attached to the database where the table resides.
      * </p>
      */
     private java.util.List<LFTagPair> lFTagOnDatabase;
     /**
      * <p>
-     * A list of tags attached to the table.
+     * A list of LF-tags attached to the table.
      * </p>
      */
     private java.util.List<LFTagPair> lFTagsOnTable;
     /**
      * <p>
-     * A list of tags attached to columns in the table.
+     * A list of LF-tags attached to columns in the table.
      * </p>
      */
     private java.util.List<ColumnLFTag> lFTagsOnColumns;
 
     /**
      * <p>
-     * A table that has tags attached to it.
+     * A table that has LF-tags attached to it.
      * </p>
      * 
      * @param table
-     *        A table that has tags attached to it.
+     *        A table that has LF-tags attached to it.
      */
 
     public void setTable(TableResource table) {
@@ -68,10 +68,10 @@ public class TaggedTable implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A table that has tags attached to it.
+     * A table that has LF-tags attached to it.
      * </p>
      * 
-     * @return A table that has tags attached to it.
+     * @return A table that has LF-tags attached to it.
      */
 
     public TableResource getTable() {
@@ -80,11 +80,11 @@ public class TaggedTable implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A table that has tags attached to it.
+     * A table that has LF-tags attached to it.
      * </p>
      * 
      * @param table
-     *        A table that has tags attached to it.
+     *        A table that has LF-tags attached to it.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -95,10 +95,10 @@ public class TaggedTable implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A list of tags attached to the database where the table resides.
+     * A list of LF-tags attached to the database where the table resides.
      * </p>
      * 
-     * @return A list of tags attached to the database where the table resides.
+     * @return A list of LF-tags attached to the database where the table resides.
      */
 
     public java.util.List<LFTagPair> getLFTagOnDatabase() {
@@ -107,11 +107,11 @@ public class TaggedTable implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A list of tags attached to the database where the table resides.
+     * A list of LF-tags attached to the database where the table resides.
      * </p>
      * 
      * @param lFTagOnDatabase
-     *        A list of tags attached to the database where the table resides.
+     *        A list of LF-tags attached to the database where the table resides.
      */
 
     public void setLFTagOnDatabase(java.util.Collection<LFTagPair> lFTagOnDatabase) {
@@ -125,7 +125,7 @@ public class TaggedTable implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A list of tags attached to the database where the table resides.
+     * A list of LF-tags attached to the database where the table resides.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -134,7 +134,7 @@ public class TaggedTable implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param lFTagOnDatabase
-     *        A list of tags attached to the database where the table resides.
+     *        A list of LF-tags attached to the database where the table resides.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -150,11 +150,11 @@ public class TaggedTable implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A list of tags attached to the database where the table resides.
+     * A list of LF-tags attached to the database where the table resides.
      * </p>
      * 
      * @param lFTagOnDatabase
-     *        A list of tags attached to the database where the table resides.
+     *        A list of LF-tags attached to the database where the table resides.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -165,10 +165,10 @@ public class TaggedTable implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A list of tags attached to the table.
+     * A list of LF-tags attached to the table.
      * </p>
      * 
-     * @return A list of tags attached to the table.
+     * @return A list of LF-tags attached to the table.
      */
 
     public java.util.List<LFTagPair> getLFTagsOnTable() {
@@ -177,11 +177,11 @@ public class TaggedTable implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A list of tags attached to the table.
+     * A list of LF-tags attached to the table.
      * </p>
      * 
      * @param lFTagsOnTable
-     *        A list of tags attached to the table.
+     *        A list of LF-tags attached to the table.
      */
 
     public void setLFTagsOnTable(java.util.Collection<LFTagPair> lFTagsOnTable) {
@@ -195,7 +195,7 @@ public class TaggedTable implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A list of tags attached to the table.
+     * A list of LF-tags attached to the table.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -204,7 +204,7 @@ public class TaggedTable implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param lFTagsOnTable
-     *        A list of tags attached to the table.
+     *        A list of LF-tags attached to the table.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -220,11 +220,11 @@ public class TaggedTable implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A list of tags attached to the table.
+     * A list of LF-tags attached to the table.
      * </p>
      * 
      * @param lFTagsOnTable
-     *        A list of tags attached to the table.
+     *        A list of LF-tags attached to the table.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -235,10 +235,10 @@ public class TaggedTable implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A list of tags attached to columns in the table.
+     * A list of LF-tags attached to columns in the table.
      * </p>
      * 
-     * @return A list of tags attached to columns in the table.
+     * @return A list of LF-tags attached to columns in the table.
      */
 
     public java.util.List<ColumnLFTag> getLFTagsOnColumns() {
@@ -247,11 +247,11 @@ public class TaggedTable implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A list of tags attached to columns in the table.
+     * A list of LF-tags attached to columns in the table.
      * </p>
      * 
      * @param lFTagsOnColumns
-     *        A list of tags attached to columns in the table.
+     *        A list of LF-tags attached to columns in the table.
      */
 
     public void setLFTagsOnColumns(java.util.Collection<ColumnLFTag> lFTagsOnColumns) {
@@ -265,7 +265,7 @@ public class TaggedTable implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A list of tags attached to columns in the table.
+     * A list of LF-tags attached to columns in the table.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -274,7 +274,7 @@ public class TaggedTable implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param lFTagsOnColumns
-     *        A list of tags attached to columns in the table.
+     *        A list of LF-tags attached to columns in the table.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -290,11 +290,11 @@ public class TaggedTable implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A list of tags attached to columns in the table.
+     * A list of LF-tags attached to columns in the table.
      * </p>
      * 
      * @param lFTagsOnColumns
-     *        A list of tags attached to columns in the table.
+     *        A list of LF-tags attached to columns in the table.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

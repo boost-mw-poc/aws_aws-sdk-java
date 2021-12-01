@@ -40,6 +40,12 @@ public class CreateOutpostRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      */
     private java.util.Map<String, String> tags;
+    /**
+     * <p>
+     * The type of hardware for this Outpost.
+     * </p>
+     */
+    private String supportedHardwareType;
 
     /**
      * @param name
@@ -240,6 +246,65 @@ public class CreateOutpostRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
+     * <p>
+     * The type of hardware for this Outpost.
+     * </p>
+     * 
+     * @param supportedHardwareType
+     *        The type of hardware for this Outpost.
+     * @see SupportedHardwareType
+     */
+
+    public void setSupportedHardwareType(String supportedHardwareType) {
+        this.supportedHardwareType = supportedHardwareType;
+    }
+
+    /**
+     * <p>
+     * The type of hardware for this Outpost.
+     * </p>
+     * 
+     * @return The type of hardware for this Outpost.
+     * @see SupportedHardwareType
+     */
+
+    public String getSupportedHardwareType() {
+        return this.supportedHardwareType;
+    }
+
+    /**
+     * <p>
+     * The type of hardware for this Outpost.
+     * </p>
+     * 
+     * @param supportedHardwareType
+     *        The type of hardware for this Outpost.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see SupportedHardwareType
+     */
+
+    public CreateOutpostRequest withSupportedHardwareType(String supportedHardwareType) {
+        setSupportedHardwareType(supportedHardwareType);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The type of hardware for this Outpost.
+     * </p>
+     * 
+     * @param supportedHardwareType
+     *        The type of hardware for this Outpost.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see SupportedHardwareType
+     */
+
+    public CreateOutpostRequest withSupportedHardwareType(SupportedHardwareType supportedHardwareType) {
+        this.supportedHardwareType = supportedHardwareType.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -262,7 +327,9 @@ public class CreateOutpostRequest extends com.amazonaws.AmazonWebServiceRequest 
         if (getAvailabilityZoneId() != null)
             sb.append("AvailabilityZoneId: ").append(getAvailabilityZoneId()).append(",");
         if (getTags() != null)
-            sb.append("Tags: ").append(getTags());
+            sb.append("Tags: ").append(getTags()).append(",");
+        if (getSupportedHardwareType() != null)
+            sb.append("SupportedHardwareType: ").append(getSupportedHardwareType());
         sb.append("}");
         return sb.toString();
     }
@@ -301,6 +368,10 @@ public class CreateOutpostRequest extends com.amazonaws.AmazonWebServiceRequest 
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
             return false;
+        if (other.getSupportedHardwareType() == null ^ this.getSupportedHardwareType() == null)
+            return false;
+        if (other.getSupportedHardwareType() != null && other.getSupportedHardwareType().equals(this.getSupportedHardwareType()) == false)
+            return false;
         return true;
     }
 
@@ -315,6 +386,7 @@ public class CreateOutpostRequest extends com.amazonaws.AmazonWebServiceRequest 
         hashCode = prime * hashCode + ((getAvailabilityZone() == null) ? 0 : getAvailabilityZone().hashCode());
         hashCode = prime * hashCode + ((getAvailabilityZoneId() == null) ? 0 : getAvailabilityZoneId().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getSupportedHardwareType() == null) ? 0 : getSupportedHardwareType().hashCode());
         return hashCode;
     }
 

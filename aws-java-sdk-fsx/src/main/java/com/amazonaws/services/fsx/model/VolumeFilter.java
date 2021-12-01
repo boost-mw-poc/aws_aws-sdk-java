@@ -19,8 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A filter used to restrict the results of describe calls for Amazon FSx for NetApp ONTAP volumes. You can use multiple
- * filters to return results that meet all applied filter requirements.
+ * A filter used to restrict the results of describe calls for Amazon FSx for NetApp ONTAP or Amazon FSx for OpenZFS
+ * volumes. You can use multiple filters to return results that meet all applied filter requirements.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/VolumeFilter" target="_top">AWS API

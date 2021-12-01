@@ -712,4 +712,17 @@ public class AbstractAmazonKinesisAsync extends AbstractAmazonKinesis implements
         throw new java.lang.UnsupportedOperationException();
     }
 
+    @Override
+    public java.util.concurrent.Future<UpdateStreamModeResult> updateStreamModeAsync(UpdateStreamModeRequest request) {
+
+        return updateStreamModeAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateStreamModeResult> updateStreamModeAsync(UpdateStreamModeRequest request,
+            com.amazonaws.handlers.AsyncHandler<UpdateStreamModeRequest, UpdateStreamModeResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
 }

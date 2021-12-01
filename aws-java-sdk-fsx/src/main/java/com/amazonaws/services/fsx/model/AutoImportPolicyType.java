@@ -22,7 +22,8 @@ public enum AutoImportPolicyType {
 
     NONE("NONE"),
     NEW("NEW"),
-    NEW_CHANGED("NEW_CHANGED");
+    NEW_CHANGED("NEW_CHANGED"),
+    NEW_CHANGED_DELETED("NEW_CHANGED_DELETED");
 
     private String value;
 

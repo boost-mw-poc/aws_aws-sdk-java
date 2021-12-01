@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A structure representing a list of AWS Lake Formation principals designated as data lake administrators and lists of
+ * A structure representing a list of Lake Formation principals designated as data lake administrators and lists of
  * principal permission entries for default create database and default create table permissions.
  * </p>
  * 
@@ -31,28 +31,58 @@ public class DataLakeSettings implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * A list of AWS Lake Formation principals. Supported principals are IAM users or IAM roles.
+     * A list of Lake Formation principals. Supported principals are IAM users or IAM roles.
      * </p>
      */
     private java.util.List<DataLakePrincipal> dataLakeAdmins;
     /**
      * <p>
-     * A structure representing a list of up to three principal permissions entries for default create database
-     * permissions.
+     * Specifies whether access control on newly created database is managed by Lake Formation permissions or
+     * exclusively by IAM permissions. You can override this default setting when you create a database.
+     * </p>
+     * <p>
+     * A null value indicates access control by Lake Formation permissions. A value that assigns ALL to
+     * IAM_ALLOWED_PRINCIPALS indicates access control by IAM permissions. This is referred to as the setting
+     * "Use only IAM access control," and is for backward compatibility with the Glue permission model implemented by
+     * IAM permissions.
+     * </p>
+     * <p>
+     * The only permitted values are an empty array or an array that contains a single JSON object that grants ALL to
+     * IAM_ALLOWED_PRINCIPALS.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/lake-formation/latest/dg/change-settings.html">Changing the Default Security
+     * Settings for Your Data Lake</a>.
      * </p>
      */
     private java.util.List<PrincipalPermissions> createDatabaseDefaultPermissions;
     /**
      * <p>
-     * A structure representing a list of up to three principal permissions entries for default create table
-     * permissions.
+     * Specifies whether access control on newly created table is managed by Lake Formation permissions or exclusively
+     * by IAM permissions.
+     * </p>
+     * <p>
+     * A null value indicates access control by Lake Formation permissions. A value that assigns ALL to
+     * IAM_ALLOWED_PRINCIPALS indicates access control by IAM permissions. This is referred to as the setting
+     * "Use only IAM access control," and is for backward compatibility with the Glue permission model implemented by
+     * IAM permissions.
+     * </p>
+     * <p>
+     * The only permitted values are an empty array or an array that contains a single JSON object that grants ALL to
+     * IAM_ALLOWED_PRINCIPALS.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/lake-formation/latest/dg/change-settings.html">Changing the Default Security
+     * Settings for Your Data Lake</a>.
      * </p>
      */
     private java.util.List<PrincipalPermissions> createTableDefaultPermissions;
     /**
      * <p>
      * A list of the resource-owning account IDs that the caller's account can use to share their user access details
-     * (user ARNs). The user ARNs can be logged in the resource owner's AWS CloudTrail log.
+     * (user ARNs). The user ARNs can be logged in the resource owner's CloudTrail log.
      * </p>
      * <p>
      * You may want to specify this property when you are in a high-trust boundary, such as the same team or company.
@@ -62,10 +92,10 @@ public class DataLakeSettings implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * A list of AWS Lake Formation principals. Supported principals are IAM users or IAM roles.
+     * A list of Lake Formation principals. Supported principals are IAM users or IAM roles.
      * </p>
      * 
-     * @return A list of AWS Lake Formation principals. Supported principals are IAM users or IAM roles.
+     * @return A list of Lake Formation principals. Supported principals are IAM users or IAM roles.
      */
 
     public java.util.List<DataLakePrincipal> getDataLakeAdmins() {
@@ -74,11 +104,11 @@ public class DataLakeSettings implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * A list of AWS Lake Formation principals. Supported principals are IAM users or IAM roles.
+     * A list of Lake Formation principals. Supported principals are IAM users or IAM roles.
      * </p>
      * 
      * @param dataLakeAdmins
-     *        A list of AWS Lake Formation principals. Supported principals are IAM users or IAM roles.
+     *        A list of Lake Formation principals. Supported principals are IAM users or IAM roles.
      */
 
     public void setDataLakeAdmins(java.util.Collection<DataLakePrincipal> dataLakeAdmins) {
@@ -92,7 +122,7 @@ public class DataLakeSettings implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * A list of AWS Lake Formation principals. Supported principals are IAM users or IAM roles.
+     * A list of Lake Formation principals. Supported principals are IAM users or IAM roles.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -101,7 +131,7 @@ public class DataLakeSettings implements Serializable, Cloneable, StructuredPojo
      * </p>
      * 
      * @param dataLakeAdmins
-     *        A list of AWS Lake Formation principals. Supported principals are IAM users or IAM roles.
+     *        A list of Lake Formation principals. Supported principals are IAM users or IAM roles.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -117,11 +147,11 @@ public class DataLakeSettings implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * A list of AWS Lake Formation principals. Supported principals are IAM users or IAM roles.
+     * A list of Lake Formation principals. Supported principals are IAM users or IAM roles.
      * </p>
      * 
      * @param dataLakeAdmins
-     *        A list of AWS Lake Formation principals. Supported principals are IAM users or IAM roles.
+     *        A list of Lake Formation principals. Supported principals are IAM users or IAM roles.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -132,12 +162,41 @@ public class DataLakeSettings implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * A structure representing a list of up to three principal permissions entries for default create database
-     * permissions.
+     * Specifies whether access control on newly created database is managed by Lake Formation permissions or
+     * exclusively by IAM permissions. You can override this default setting when you create a database.
+     * </p>
+     * <p>
+     * A null value indicates access control by Lake Formation permissions. A value that assigns ALL to
+     * IAM_ALLOWED_PRINCIPALS indicates access control by IAM permissions. This is referred to as the setting
+     * "Use only IAM access control," and is for backward compatibility with the Glue permission model implemented by
+     * IAM permissions.
+     * </p>
+     * <p>
+     * The only permitted values are an empty array or an array that contains a single JSON object that grants ALL to
+     * IAM_ALLOWED_PRINCIPALS.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/lake-formation/latest/dg/change-settings.html">Changing the Default Security
+     * Settings for Your Data Lake</a>.
      * </p>
      * 
-     * @return A structure representing a list of up to three principal permissions entries for default create database
-     *         permissions.
+     * @return Specifies whether access control on newly created database is managed by Lake Formation permissions or
+     *         exclusively by IAM permissions. You can override this default setting when you create a database.</p>
+     *         <p>
+     *         A null value indicates access control by Lake Formation permissions. A value that assigns ALL to
+     *         IAM_ALLOWED_PRINCIPALS indicates access control by IAM permissions. This is referred to as the setting
+     *         "Use only IAM access control," and is for backward compatibility with the Glue permission model
+     *         implemented by IAM permissions.
+     *         </p>
+     *         <p>
+     *         The only permitted values are an empty array or an array that contains a single JSON object that grants
+     *         ALL to IAM_ALLOWED_PRINCIPALS.
+     *         </p>
+     *         <p>
+     *         For more information, see <a
+     *         href="https://docs.aws.amazon.com/lake-formation/latest/dg/change-settings.html">Changing the Default
+     *         Security Settings for Your Data Lake</a>.
      */
 
     public java.util.List<PrincipalPermissions> getCreateDatabaseDefaultPermissions() {
@@ -146,13 +205,42 @@ public class DataLakeSettings implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * A structure representing a list of up to three principal permissions entries for default create database
-     * permissions.
+     * Specifies whether access control on newly created database is managed by Lake Formation permissions or
+     * exclusively by IAM permissions. You can override this default setting when you create a database.
+     * </p>
+     * <p>
+     * A null value indicates access control by Lake Formation permissions. A value that assigns ALL to
+     * IAM_ALLOWED_PRINCIPALS indicates access control by IAM permissions. This is referred to as the setting
+     * "Use only IAM access control," and is for backward compatibility with the Glue permission model implemented by
+     * IAM permissions.
+     * </p>
+     * <p>
+     * The only permitted values are an empty array or an array that contains a single JSON object that grants ALL to
+     * IAM_ALLOWED_PRINCIPALS.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/lake-formation/latest/dg/change-settings.html">Changing the Default Security
+     * Settings for Your Data Lake</a>.
      * </p>
      * 
      * @param createDatabaseDefaultPermissions
-     *        A structure representing a list of up to three principal permissions entries for default create database
-     *        permissions.
+     *        Specifies whether access control on newly created database is managed by Lake Formation permissions or
+     *        exclusively by IAM permissions. You can override this default setting when you create a database.</p>
+     *        <p>
+     *        A null value indicates access control by Lake Formation permissions. A value that assigns ALL to
+     *        IAM_ALLOWED_PRINCIPALS indicates access control by IAM permissions. This is referred to as the setting
+     *        "Use only IAM access control," and is for backward compatibility with the Glue permission model
+     *        implemented by IAM permissions.
+     *        </p>
+     *        <p>
+     *        The only permitted values are an empty array or an array that contains a single JSON object that grants
+     *        ALL to IAM_ALLOWED_PRINCIPALS.
+     *        </p>
+     *        <p>
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/lake-formation/latest/dg/change-settings.html">Changing the Default
+     *        Security Settings for Your Data Lake</a>.
      */
 
     public void setCreateDatabaseDefaultPermissions(java.util.Collection<PrincipalPermissions> createDatabaseDefaultPermissions) {
@@ -166,8 +254,23 @@ public class DataLakeSettings implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * A structure representing a list of up to three principal permissions entries for default create database
-     * permissions.
+     * Specifies whether access control on newly created database is managed by Lake Formation permissions or
+     * exclusively by IAM permissions. You can override this default setting when you create a database.
+     * </p>
+     * <p>
+     * A null value indicates access control by Lake Formation permissions. A value that assigns ALL to
+     * IAM_ALLOWED_PRINCIPALS indicates access control by IAM permissions. This is referred to as the setting
+     * "Use only IAM access control," and is for backward compatibility with the Glue permission model implemented by
+     * IAM permissions.
+     * </p>
+     * <p>
+     * The only permitted values are an empty array or an array that contains a single JSON object that grants ALL to
+     * IAM_ALLOWED_PRINCIPALS.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/lake-formation/latest/dg/change-settings.html">Changing the Default Security
+     * Settings for Your Data Lake</a>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -176,8 +279,22 @@ public class DataLakeSettings implements Serializable, Cloneable, StructuredPojo
      * </p>
      * 
      * @param createDatabaseDefaultPermissions
-     *        A structure representing a list of up to three principal permissions entries for default create database
-     *        permissions.
+     *        Specifies whether access control on newly created database is managed by Lake Formation permissions or
+     *        exclusively by IAM permissions. You can override this default setting when you create a database.</p>
+     *        <p>
+     *        A null value indicates access control by Lake Formation permissions. A value that assigns ALL to
+     *        IAM_ALLOWED_PRINCIPALS indicates access control by IAM permissions. This is referred to as the setting
+     *        "Use only IAM access control," and is for backward compatibility with the Glue permission model
+     *        implemented by IAM permissions.
+     *        </p>
+     *        <p>
+     *        The only permitted values are an empty array or an array that contains a single JSON object that grants
+     *        ALL to IAM_ALLOWED_PRINCIPALS.
+     *        </p>
+     *        <p>
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/lake-formation/latest/dg/change-settings.html">Changing the Default
+     *        Security Settings for Your Data Lake</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -193,13 +310,42 @@ public class DataLakeSettings implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * A structure representing a list of up to three principal permissions entries for default create database
-     * permissions.
+     * Specifies whether access control on newly created database is managed by Lake Formation permissions or
+     * exclusively by IAM permissions. You can override this default setting when you create a database.
+     * </p>
+     * <p>
+     * A null value indicates access control by Lake Formation permissions. A value that assigns ALL to
+     * IAM_ALLOWED_PRINCIPALS indicates access control by IAM permissions. This is referred to as the setting
+     * "Use only IAM access control," and is for backward compatibility with the Glue permission model implemented by
+     * IAM permissions.
+     * </p>
+     * <p>
+     * The only permitted values are an empty array or an array that contains a single JSON object that grants ALL to
+     * IAM_ALLOWED_PRINCIPALS.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/lake-formation/latest/dg/change-settings.html">Changing the Default Security
+     * Settings for Your Data Lake</a>.
      * </p>
      * 
      * @param createDatabaseDefaultPermissions
-     *        A structure representing a list of up to three principal permissions entries for default create database
-     *        permissions.
+     *        Specifies whether access control on newly created database is managed by Lake Formation permissions or
+     *        exclusively by IAM permissions. You can override this default setting when you create a database.</p>
+     *        <p>
+     *        A null value indicates access control by Lake Formation permissions. A value that assigns ALL to
+     *        IAM_ALLOWED_PRINCIPALS indicates access control by IAM permissions. This is referred to as the setting
+     *        "Use only IAM access control," and is for backward compatibility with the Glue permission model
+     *        implemented by IAM permissions.
+     *        </p>
+     *        <p>
+     *        The only permitted values are an empty array or an array that contains a single JSON object that grants
+     *        ALL to IAM_ALLOWED_PRINCIPALS.
+     *        </p>
+     *        <p>
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/lake-formation/latest/dg/change-settings.html">Changing the Default
+     *        Security Settings for Your Data Lake</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -210,12 +356,41 @@ public class DataLakeSettings implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * A structure representing a list of up to three principal permissions entries for default create table
-     * permissions.
+     * Specifies whether access control on newly created table is managed by Lake Formation permissions or exclusively
+     * by IAM permissions.
+     * </p>
+     * <p>
+     * A null value indicates access control by Lake Formation permissions. A value that assigns ALL to
+     * IAM_ALLOWED_PRINCIPALS indicates access control by IAM permissions. This is referred to as the setting
+     * "Use only IAM access control," and is for backward compatibility with the Glue permission model implemented by
+     * IAM permissions.
+     * </p>
+     * <p>
+     * The only permitted values are an empty array or an array that contains a single JSON object that grants ALL to
+     * IAM_ALLOWED_PRINCIPALS.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/lake-formation/latest/dg/change-settings.html">Changing the Default Security
+     * Settings for Your Data Lake</a>.
      * </p>
      * 
-     * @return A structure representing a list of up to three principal permissions entries for default create table
-     *         permissions.
+     * @return Specifies whether access control on newly created table is managed by Lake Formation permissions or
+     *         exclusively by IAM permissions.</p>
+     *         <p>
+     *         A null value indicates access control by Lake Formation permissions. A value that assigns ALL to
+     *         IAM_ALLOWED_PRINCIPALS indicates access control by IAM permissions. This is referred to as the setting
+     *         "Use only IAM access control," and is for backward compatibility with the Glue permission model
+     *         implemented by IAM permissions.
+     *         </p>
+     *         <p>
+     *         The only permitted values are an empty array or an array that contains a single JSON object that grants
+     *         ALL to IAM_ALLOWED_PRINCIPALS.
+     *         </p>
+     *         <p>
+     *         For more information, see <a
+     *         href="https://docs.aws.amazon.com/lake-formation/latest/dg/change-settings.html">Changing the Default
+     *         Security Settings for Your Data Lake</a>.
      */
 
     public java.util.List<PrincipalPermissions> getCreateTableDefaultPermissions() {
@@ -224,13 +399,42 @@ public class DataLakeSettings implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * A structure representing a list of up to three principal permissions entries for default create table
-     * permissions.
+     * Specifies whether access control on newly created table is managed by Lake Formation permissions or exclusively
+     * by IAM permissions.
+     * </p>
+     * <p>
+     * A null value indicates access control by Lake Formation permissions. A value that assigns ALL to
+     * IAM_ALLOWED_PRINCIPALS indicates access control by IAM permissions. This is referred to as the setting
+     * "Use only IAM access control," and is for backward compatibility with the Glue permission model implemented by
+     * IAM permissions.
+     * </p>
+     * <p>
+     * The only permitted values are an empty array or an array that contains a single JSON object that grants ALL to
+     * IAM_ALLOWED_PRINCIPALS.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/lake-formation/latest/dg/change-settings.html">Changing the Default Security
+     * Settings for Your Data Lake</a>.
      * </p>
      * 
      * @param createTableDefaultPermissions
-     *        A structure representing a list of up to three principal permissions entries for default create table
-     *        permissions.
+     *        Specifies whether access control on newly created table is managed by Lake Formation permissions or
+     *        exclusively by IAM permissions.</p>
+     *        <p>
+     *        A null value indicates access control by Lake Formation permissions. A value that assigns ALL to
+     *        IAM_ALLOWED_PRINCIPALS indicates access control by IAM permissions. This is referred to as the setting
+     *        "Use only IAM access control," and is for backward compatibility with the Glue permission model
+     *        implemented by IAM permissions.
+     *        </p>
+     *        <p>
+     *        The only permitted values are an empty array or an array that contains a single JSON object that grants
+     *        ALL to IAM_ALLOWED_PRINCIPALS.
+     *        </p>
+     *        <p>
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/lake-formation/latest/dg/change-settings.html">Changing the Default
+     *        Security Settings for Your Data Lake</a>.
      */
 
     public void setCreateTableDefaultPermissions(java.util.Collection<PrincipalPermissions> createTableDefaultPermissions) {
@@ -244,8 +448,23 @@ public class DataLakeSettings implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * A structure representing a list of up to three principal permissions entries for default create table
-     * permissions.
+     * Specifies whether access control on newly created table is managed by Lake Formation permissions or exclusively
+     * by IAM permissions.
+     * </p>
+     * <p>
+     * A null value indicates access control by Lake Formation permissions. A value that assigns ALL to
+     * IAM_ALLOWED_PRINCIPALS indicates access control by IAM permissions. This is referred to as the setting
+     * "Use only IAM access control," and is for backward compatibility with the Glue permission model implemented by
+     * IAM permissions.
+     * </p>
+     * <p>
+     * The only permitted values are an empty array or an array that contains a single JSON object that grants ALL to
+     * IAM_ALLOWED_PRINCIPALS.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/lake-formation/latest/dg/change-settings.html">Changing the Default Security
+     * Settings for Your Data Lake</a>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -254,8 +473,22 @@ public class DataLakeSettings implements Serializable, Cloneable, StructuredPojo
      * </p>
      * 
      * @param createTableDefaultPermissions
-     *        A structure representing a list of up to three principal permissions entries for default create table
-     *        permissions.
+     *        Specifies whether access control on newly created table is managed by Lake Formation permissions or
+     *        exclusively by IAM permissions.</p>
+     *        <p>
+     *        A null value indicates access control by Lake Formation permissions. A value that assigns ALL to
+     *        IAM_ALLOWED_PRINCIPALS indicates access control by IAM permissions. This is referred to as the setting
+     *        "Use only IAM access control," and is for backward compatibility with the Glue permission model
+     *        implemented by IAM permissions.
+     *        </p>
+     *        <p>
+     *        The only permitted values are an empty array or an array that contains a single JSON object that grants
+     *        ALL to IAM_ALLOWED_PRINCIPALS.
+     *        </p>
+     *        <p>
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/lake-formation/latest/dg/change-settings.html">Changing the Default
+     *        Security Settings for Your Data Lake</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -271,13 +504,42 @@ public class DataLakeSettings implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * A structure representing a list of up to three principal permissions entries for default create table
-     * permissions.
+     * Specifies whether access control on newly created table is managed by Lake Formation permissions or exclusively
+     * by IAM permissions.
+     * </p>
+     * <p>
+     * A null value indicates access control by Lake Formation permissions. A value that assigns ALL to
+     * IAM_ALLOWED_PRINCIPALS indicates access control by IAM permissions. This is referred to as the setting
+     * "Use only IAM access control," and is for backward compatibility with the Glue permission model implemented by
+     * IAM permissions.
+     * </p>
+     * <p>
+     * The only permitted values are an empty array or an array that contains a single JSON object that grants ALL to
+     * IAM_ALLOWED_PRINCIPALS.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/lake-formation/latest/dg/change-settings.html">Changing the Default Security
+     * Settings for Your Data Lake</a>.
      * </p>
      * 
      * @param createTableDefaultPermissions
-     *        A structure representing a list of up to three principal permissions entries for default create table
-     *        permissions.
+     *        Specifies whether access control on newly created table is managed by Lake Formation permissions or
+     *        exclusively by IAM permissions.</p>
+     *        <p>
+     *        A null value indicates access control by Lake Formation permissions. A value that assigns ALL to
+     *        IAM_ALLOWED_PRINCIPALS indicates access control by IAM permissions. This is referred to as the setting
+     *        "Use only IAM access control," and is for backward compatibility with the Glue permission model
+     *        implemented by IAM permissions.
+     *        </p>
+     *        <p>
+     *        The only permitted values are an empty array or an array that contains a single JSON object that grants
+     *        ALL to IAM_ALLOWED_PRINCIPALS.
+     *        </p>
+     *        <p>
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/lake-formation/latest/dg/change-settings.html">Changing the Default
+     *        Security Settings for Your Data Lake</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -289,14 +551,14 @@ public class DataLakeSettings implements Serializable, Cloneable, StructuredPojo
     /**
      * <p>
      * A list of the resource-owning account IDs that the caller's account can use to share their user access details
-     * (user ARNs). The user ARNs can be logged in the resource owner's AWS CloudTrail log.
+     * (user ARNs). The user ARNs can be logged in the resource owner's CloudTrail log.
      * </p>
      * <p>
      * You may want to specify this property when you are in a high-trust boundary, such as the same team or company.
      * </p>
      * 
      * @return A list of the resource-owning account IDs that the caller's account can use to share their user access
-     *         details (user ARNs). The user ARNs can be logged in the resource owner's AWS CloudTrail log.</p>
+     *         details (user ARNs). The user ARNs can be logged in the resource owner's CloudTrail log.</p>
      *         <p>
      *         You may want to specify this property when you are in a high-trust boundary, such as the same team or
      *         company.
@@ -309,7 +571,7 @@ public class DataLakeSettings implements Serializable, Cloneable, StructuredPojo
     /**
      * <p>
      * A list of the resource-owning account IDs that the caller's account can use to share their user access details
-     * (user ARNs). The user ARNs can be logged in the resource owner's AWS CloudTrail log.
+     * (user ARNs). The user ARNs can be logged in the resource owner's CloudTrail log.
      * </p>
      * <p>
      * You may want to specify this property when you are in a high-trust boundary, such as the same team or company.
@@ -317,7 +579,7 @@ public class DataLakeSettings implements Serializable, Cloneable, StructuredPojo
      * 
      * @param trustedResourceOwners
      *        A list of the resource-owning account IDs that the caller's account can use to share their user access
-     *        details (user ARNs). The user ARNs can be logged in the resource owner's AWS CloudTrail log.</p>
+     *        details (user ARNs). The user ARNs can be logged in the resource owner's CloudTrail log.</p>
      *        <p>
      *        You may want to specify this property when you are in a high-trust boundary, such as the same team or
      *        company.
@@ -335,7 +597,7 @@ public class DataLakeSettings implements Serializable, Cloneable, StructuredPojo
     /**
      * <p>
      * A list of the resource-owning account IDs that the caller's account can use to share their user access details
-     * (user ARNs). The user ARNs can be logged in the resource owner's AWS CloudTrail log.
+     * (user ARNs). The user ARNs can be logged in the resource owner's CloudTrail log.
      * </p>
      * <p>
      * You may want to specify this property when you are in a high-trust boundary, such as the same team or company.
@@ -348,7 +610,7 @@ public class DataLakeSettings implements Serializable, Cloneable, StructuredPojo
      * 
      * @param trustedResourceOwners
      *        A list of the resource-owning account IDs that the caller's account can use to share their user access
-     *        details (user ARNs). The user ARNs can be logged in the resource owner's AWS CloudTrail log.</p>
+     *        details (user ARNs). The user ARNs can be logged in the resource owner's CloudTrail log.</p>
      *        <p>
      *        You may want to specify this property when you are in a high-trust boundary, such as the same team or
      *        company.
@@ -368,7 +630,7 @@ public class DataLakeSettings implements Serializable, Cloneable, StructuredPojo
     /**
      * <p>
      * A list of the resource-owning account IDs that the caller's account can use to share their user access details
-     * (user ARNs). The user ARNs can be logged in the resource owner's AWS CloudTrail log.
+     * (user ARNs). The user ARNs can be logged in the resource owner's CloudTrail log.
      * </p>
      * <p>
      * You may want to specify this property when you are in a high-trust boundary, such as the same team or company.
@@ -376,7 +638,7 @@ public class DataLakeSettings implements Serializable, Cloneable, StructuredPojo
      * 
      * @param trustedResourceOwners
      *        A list of the resource-owning account IDs that the caller's account can use to share their user access
-     *        details (user ARNs). The user ARNs can be logged in the resource owner's AWS CloudTrail log.</p>
+     *        details (user ARNs). The user ARNs can be logged in the resource owner's CloudTrail log.</p>
      *        <p>
      *        You may want to specify this property when you are in a high-trust boundary, such as the same team or
      *        company.

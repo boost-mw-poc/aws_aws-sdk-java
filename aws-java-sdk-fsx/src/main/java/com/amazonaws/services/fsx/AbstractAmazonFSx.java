@@ -48,6 +48,11 @@ public class AbstractAmazonFSx implements AmazonFSx {
     }
 
     @Override
+    public CreateDataRepositoryAssociationResult createDataRepositoryAssociation(CreateDataRepositoryAssociationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateDataRepositoryTaskResult createDataRepositoryTask(CreateDataRepositoryTaskRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -59,6 +64,11 @@ public class AbstractAmazonFSx implements AmazonFSx {
 
     @Override
     public CreateFileSystemFromBackupResult createFileSystemFromBackup(CreateFileSystemFromBackupRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public CreateSnapshotResult createSnapshot(CreateSnapshotRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -83,7 +93,17 @@ public class AbstractAmazonFSx implements AmazonFSx {
     }
 
     @Override
+    public DeleteDataRepositoryAssociationResult deleteDataRepositoryAssociation(DeleteDataRepositoryAssociationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DeleteFileSystemResult deleteFileSystem(DeleteFileSystemRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeleteSnapshotResult deleteSnapshot(DeleteSnapshotRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -103,6 +123,11 @@ public class AbstractAmazonFSx implements AmazonFSx {
     }
 
     @Override
+    public DescribeDataRepositoryAssociationsResult describeDataRepositoryAssociations(DescribeDataRepositoryAssociationsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DescribeDataRepositoryTasksResult describeDataRepositoryTasks(DescribeDataRepositoryTasksRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -114,6 +139,11 @@ public class AbstractAmazonFSx implements AmazonFSx {
 
     @Override
     public DescribeFileSystemsResult describeFileSystems(DescribeFileSystemsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DescribeSnapshotsResult describeSnapshots(DescribeSnapshotsRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -138,6 +168,16 @@ public class AbstractAmazonFSx implements AmazonFSx {
     }
 
     @Override
+    public ReleaseFileSystemNfsV3LocksResult releaseFileSystemNfsV3Locks(ReleaseFileSystemNfsV3LocksRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public RestoreVolumeFromSnapshotResult restoreVolumeFromSnapshot(RestoreVolumeFromSnapshotRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public TagResourceResult tagResource(TagResourceRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -148,7 +188,17 @@ public class AbstractAmazonFSx implements AmazonFSx {
     }
 
     @Override
+    public UpdateDataRepositoryAssociationResult updateDataRepositoryAssociation(UpdateDataRepositoryAssociationRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public UpdateFileSystemResult updateFileSystem(UpdateFileSystemRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateSnapshotResult updateSnapshot(UpdateSnapshotRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

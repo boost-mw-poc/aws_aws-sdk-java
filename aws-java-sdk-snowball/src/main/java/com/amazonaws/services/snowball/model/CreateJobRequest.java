@@ -50,7 +50,8 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
     /**
      * <p>
      * Specifies the service or services on the Snow Family device that your transferred data will be exported from or
-     * imported into. AWS Snow Family supports Amazon S3 and NFS (Network File System).
+     * imported into. Amazon Web Services Snow Family supports Amazon S3 and NFS (Network File System) and the Amazon
+     * Web Services Storage Gateway service Tape Gateway type.
      * </p>
      */
     private OnDeviceServiceConfiguration onDeviceServiceConfiguration;
@@ -69,16 +70,16 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
     /**
      * <p>
      * The <code>KmsKeyARN</code> that you want to associate with this job. <code>KmsKeyARN</code>s are created using
-     * the <a href="https://docs.aws.amazon.com/kms/latest/APIReference/API_CreateKey.html">CreateKey</a> AWS Key
-     * Management Service (KMS) API action.
+     * the <a href="https://docs.aws.amazon.com/kms/latest/APIReference/API_CreateKey.html">CreateKey</a> Key Management
+     * Service (KMS) API action.
      * </p>
      */
     private String kmsKeyARN;
     /**
      * <p>
      * The <code>RoleARN</code> that you want to associate with this job. <code>RoleArn</code>s are created using the <a
-     * href="https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html">CreateRole</a> AWS Identity and
-     * Access Management (IAM) API action.
+     * href="https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html">CreateRole</a> Identity and Access
+     * Management (IAM) API action.
      * </p>
      */
     private String roleARN;
@@ -143,16 +144,16 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
     private String clusterId;
     /**
      * <p>
-     * The type of AWS Snow Family device to use for this job.
+     * The type of Snow Family Devices to use for this job.
      * </p>
      * <note>
      * <p>
-     * For cluster jobs, AWS Snow Family currently supports only the <code>EDGE</code> device type.
+     * For cluster jobs, Amazon Web Services Snow Family currently supports only the <code>EDGE</code> device type.
      * </p>
      * </note>
      * <p>
-     * The type of AWS Snow device to use for this job. Currently, the only supported device type for cluster jobs is
-     * <code>EDGE</code>.
+     * The type of Amazon Web Services Snow device to use for this job. Currently, the only supported device type for
+     * cluster jobs is <code>EDGE</code>.
      * </p>
      * <p>
      * For more information, see <a
@@ -175,13 +176,13 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
     private String forwardingAddressId;
     /**
      * <p>
-     * The tax documents required in your AWS Region.
+     * The tax documents required in your Amazon Web Services Region.
      * </p>
      */
     private TaxDocuments taxDocuments;
     /**
      * <p>
-     * Defines the device configuration for an AWS Snowcone job.
+     * Defines the device configuration for an Snowcone job.
      * </p>
      * <p>
      * For more information, see "https://docs.aws.amazon.com/snowball/latest/snowcone-guide/snow-device-types.html"
@@ -379,12 +380,14 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
     /**
      * <p>
      * Specifies the service or services on the Snow Family device that your transferred data will be exported from or
-     * imported into. AWS Snow Family supports Amazon S3 and NFS (Network File System).
+     * imported into. Amazon Web Services Snow Family supports Amazon S3 and NFS (Network File System) and the Amazon
+     * Web Services Storage Gateway service Tape Gateway type.
      * </p>
      * 
      * @param onDeviceServiceConfiguration
      *        Specifies the service or services on the Snow Family device that your transferred data will be exported
-     *        from or imported into. AWS Snow Family supports Amazon S3 and NFS (Network File System).
+     *        from or imported into. Amazon Web Services Snow Family supports Amazon S3 and NFS (Network File System)
+     *        and the Amazon Web Services Storage Gateway service Tape Gateway type.
      */
 
     public void setOnDeviceServiceConfiguration(OnDeviceServiceConfiguration onDeviceServiceConfiguration) {
@@ -394,11 +397,13 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
     /**
      * <p>
      * Specifies the service or services on the Snow Family device that your transferred data will be exported from or
-     * imported into. AWS Snow Family supports Amazon S3 and NFS (Network File System).
+     * imported into. Amazon Web Services Snow Family supports Amazon S3 and NFS (Network File System) and the Amazon
+     * Web Services Storage Gateway service Tape Gateway type.
      * </p>
      * 
      * @return Specifies the service or services on the Snow Family device that your transferred data will be exported
-     *         from or imported into. AWS Snow Family supports Amazon S3 and NFS (Network File System).
+     *         from or imported into. Amazon Web Services Snow Family supports Amazon S3 and NFS (Network File System)
+     *         and the Amazon Web Services Storage Gateway service Tape Gateway type.
      */
 
     public OnDeviceServiceConfiguration getOnDeviceServiceConfiguration() {
@@ -408,12 +413,14 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
     /**
      * <p>
      * Specifies the service or services on the Snow Family device that your transferred data will be exported from or
-     * imported into. AWS Snow Family supports Amazon S3 and NFS (Network File System).
+     * imported into. Amazon Web Services Snow Family supports Amazon S3 and NFS (Network File System) and the Amazon
+     * Web Services Storage Gateway service Tape Gateway type.
      * </p>
      * 
      * @param onDeviceServiceConfiguration
      *        Specifies the service or services on the Snow Family device that your transferred data will be exported
-     *        from or imported into. AWS Snow Family supports Amazon S3 and NFS (Network File System).
+     *        from or imported into. Amazon Web Services Snow Family supports Amazon S3 and NFS (Network File System)
+     *        and the Amazon Web Services Storage Gateway service Tape Gateway type.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -508,14 +515,14 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
     /**
      * <p>
      * The <code>KmsKeyARN</code> that you want to associate with this job. <code>KmsKeyARN</code>s are created using
-     * the <a href="https://docs.aws.amazon.com/kms/latest/APIReference/API_CreateKey.html">CreateKey</a> AWS Key
-     * Management Service (KMS) API action.
+     * the <a href="https://docs.aws.amazon.com/kms/latest/APIReference/API_CreateKey.html">CreateKey</a> Key Management
+     * Service (KMS) API action.
      * </p>
      * 
      * @param kmsKeyARN
      *        The <code>KmsKeyARN</code> that you want to associate with this job. <code>KmsKeyARN</code>s are created
      *        using the <a href="https://docs.aws.amazon.com/kms/latest/APIReference/API_CreateKey.html">CreateKey</a>
-     *        AWS Key Management Service (KMS) API action.
+     *        Key Management Service (KMS) API action.
      */
 
     public void setKmsKeyARN(String kmsKeyARN) {
@@ -525,13 +532,13 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
     /**
      * <p>
      * The <code>KmsKeyARN</code> that you want to associate with this job. <code>KmsKeyARN</code>s are created using
-     * the <a href="https://docs.aws.amazon.com/kms/latest/APIReference/API_CreateKey.html">CreateKey</a> AWS Key
-     * Management Service (KMS) API action.
+     * the <a href="https://docs.aws.amazon.com/kms/latest/APIReference/API_CreateKey.html">CreateKey</a> Key Management
+     * Service (KMS) API action.
      * </p>
      * 
      * @return The <code>KmsKeyARN</code> that you want to associate with this job. <code>KmsKeyARN</code>s are created
      *         using the <a href="https://docs.aws.amazon.com/kms/latest/APIReference/API_CreateKey.html">CreateKey</a>
-     *         AWS Key Management Service (KMS) API action.
+     *         Key Management Service (KMS) API action.
      */
 
     public String getKmsKeyARN() {
@@ -541,14 +548,14 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
     /**
      * <p>
      * The <code>KmsKeyARN</code> that you want to associate with this job. <code>KmsKeyARN</code>s are created using
-     * the <a href="https://docs.aws.amazon.com/kms/latest/APIReference/API_CreateKey.html">CreateKey</a> AWS Key
-     * Management Service (KMS) API action.
+     * the <a href="https://docs.aws.amazon.com/kms/latest/APIReference/API_CreateKey.html">CreateKey</a> Key Management
+     * Service (KMS) API action.
      * </p>
      * 
      * @param kmsKeyARN
      *        The <code>KmsKeyARN</code> that you want to associate with this job. <code>KmsKeyARN</code>s are created
      *        using the <a href="https://docs.aws.amazon.com/kms/latest/APIReference/API_CreateKey.html">CreateKey</a>
-     *        AWS Key Management Service (KMS) API action.
+     *        Key Management Service (KMS) API action.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -560,13 +567,13 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
     /**
      * <p>
      * The <code>RoleARN</code> that you want to associate with this job. <code>RoleArn</code>s are created using the <a
-     * href="https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html">CreateRole</a> AWS Identity and
-     * Access Management (IAM) API action.
+     * href="https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html">CreateRole</a> Identity and Access
+     * Management (IAM) API action.
      * </p>
      * 
      * @param roleARN
      *        The <code>RoleARN</code> that you want to associate with this job. <code>RoleArn</code>s are created using
-     *        the <a href="https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html">CreateRole</a> AWS
+     *        the <a href="https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html">CreateRole</a>
      *        Identity and Access Management (IAM) API action.
      */
 
@@ -577,14 +584,14 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
     /**
      * <p>
      * The <code>RoleARN</code> that you want to associate with this job. <code>RoleArn</code>s are created using the <a
-     * href="https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html">CreateRole</a> AWS Identity and
-     * Access Management (IAM) API action.
+     * href="https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html">CreateRole</a> Identity and Access
+     * Management (IAM) API action.
      * </p>
      * 
      * @return The <code>RoleARN</code> that you want to associate with this job. <code>RoleArn</code>s are created
      *         using the <a
-     *         href="https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html">CreateRole</a> AWS
-     *         Identity and Access Management (IAM) API action.
+     *         href="https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html">CreateRole</a> Identity
+     *         and Access Management (IAM) API action.
      */
 
     public String getRoleARN() {
@@ -594,13 +601,13 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
     /**
      * <p>
      * The <code>RoleARN</code> that you want to associate with this job. <code>RoleArn</code>s are created using the <a
-     * href="https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html">CreateRole</a> AWS Identity and
-     * Access Management (IAM) API action.
+     * href="https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html">CreateRole</a> Identity and Access
+     * Management (IAM) API action.
      * </p>
      * 
      * @param roleARN
      *        The <code>RoleARN</code> that you want to associate with this job. <code>RoleArn</code>s are created using
-     *        the <a href="https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html">CreateRole</a> AWS
+     *        the <a href="https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html">CreateRole</a>
      *        Identity and Access Management (IAM) API action.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -1179,16 +1186,16 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * The type of AWS Snow Family device to use for this job.
+     * The type of Snow Family Devices to use for this job.
      * </p>
      * <note>
      * <p>
-     * For cluster jobs, AWS Snow Family currently supports only the <code>EDGE</code> device type.
+     * For cluster jobs, Amazon Web Services Snow Family currently supports only the <code>EDGE</code> device type.
      * </p>
      * </note>
      * <p>
-     * The type of AWS Snow device to use for this job. Currently, the only supported device type for cluster jobs is
-     * <code>EDGE</code>.
+     * The type of Amazon Web Services Snow device to use for this job. Currently, the only supported device type for
+     * cluster jobs is <code>EDGE</code>.
      * </p>
      * <p>
      * For more information, see <a
@@ -1203,14 +1210,15 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </p>
      * 
      * @param snowballType
-     *        The type of AWS Snow Family device to use for this job. </p> <note>
+     *        The type of Snow Family Devices to use for this job. </p> <note>
      *        <p>
-     *        For cluster jobs, AWS Snow Family currently supports only the <code>EDGE</code> device type.
+     *        For cluster jobs, Amazon Web Services Snow Family currently supports only the <code>EDGE</code> device
+     *        type.
      *        </p>
      *        </note>
      *        <p>
-     *        The type of AWS Snow device to use for this job. Currently, the only supported device type for cluster
-     *        jobs is <code>EDGE</code>.
+     *        The type of Amazon Web Services Snow device to use for this job. Currently, the only supported device type
+     *        for cluster jobs is <code>EDGE</code>.
      *        </p>
      *        <p>
      *        For more information, see <a
@@ -1232,16 +1240,16 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * The type of AWS Snow Family device to use for this job.
+     * The type of Snow Family Devices to use for this job.
      * </p>
      * <note>
      * <p>
-     * For cluster jobs, AWS Snow Family currently supports only the <code>EDGE</code> device type.
+     * For cluster jobs, Amazon Web Services Snow Family currently supports only the <code>EDGE</code> device type.
      * </p>
      * </note>
      * <p>
-     * The type of AWS Snow device to use for this job. Currently, the only supported device type for cluster jobs is
-     * <code>EDGE</code>.
+     * The type of Amazon Web Services Snow device to use for this job. Currently, the only supported device type for
+     * cluster jobs is <code>EDGE</code>.
      * </p>
      * <p>
      * For more information, see <a
@@ -1255,14 +1263,15 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * Capacity) in the <i>Snowcone User Guide</i>.
      * </p>
      * 
-     * @return The type of AWS Snow Family device to use for this job. </p> <note>
+     * @return The type of Snow Family Devices to use for this job. </p> <note>
      *         <p>
-     *         For cluster jobs, AWS Snow Family currently supports only the <code>EDGE</code> device type.
+     *         For cluster jobs, Amazon Web Services Snow Family currently supports only the <code>EDGE</code> device
+     *         type.
      *         </p>
      *         </note>
      *         <p>
-     *         The type of AWS Snow device to use for this job. Currently, the only supported device type for cluster
-     *         jobs is <code>EDGE</code>.
+     *         The type of Amazon Web Services Snow device to use for this job. Currently, the only supported device
+     *         type for cluster jobs is <code>EDGE</code>.
      *         </p>
      *         <p>
      *         For more information, see <a
@@ -1284,16 +1293,16 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * The type of AWS Snow Family device to use for this job.
+     * The type of Snow Family Devices to use for this job.
      * </p>
      * <note>
      * <p>
-     * For cluster jobs, AWS Snow Family currently supports only the <code>EDGE</code> device type.
+     * For cluster jobs, Amazon Web Services Snow Family currently supports only the <code>EDGE</code> device type.
      * </p>
      * </note>
      * <p>
-     * The type of AWS Snow device to use for this job. Currently, the only supported device type for cluster jobs is
-     * <code>EDGE</code>.
+     * The type of Amazon Web Services Snow device to use for this job. Currently, the only supported device type for
+     * cluster jobs is <code>EDGE</code>.
      * </p>
      * <p>
      * For more information, see <a
@@ -1308,14 +1317,15 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </p>
      * 
      * @param snowballType
-     *        The type of AWS Snow Family device to use for this job. </p> <note>
+     *        The type of Snow Family Devices to use for this job. </p> <note>
      *        <p>
-     *        For cluster jobs, AWS Snow Family currently supports only the <code>EDGE</code> device type.
+     *        For cluster jobs, Amazon Web Services Snow Family currently supports only the <code>EDGE</code> device
+     *        type.
      *        </p>
      *        </note>
      *        <p>
-     *        The type of AWS Snow device to use for this job. Currently, the only supported device type for cluster
-     *        jobs is <code>EDGE</code>.
+     *        The type of Amazon Web Services Snow device to use for this job. Currently, the only supported device type
+     *        for cluster jobs is <code>EDGE</code>.
      *        </p>
      *        <p>
      *        For more information, see <a
@@ -1339,16 +1349,16 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * The type of AWS Snow Family device to use for this job.
+     * The type of Snow Family Devices to use for this job.
      * </p>
      * <note>
      * <p>
-     * For cluster jobs, AWS Snow Family currently supports only the <code>EDGE</code> device type.
+     * For cluster jobs, Amazon Web Services Snow Family currently supports only the <code>EDGE</code> device type.
      * </p>
      * </note>
      * <p>
-     * The type of AWS Snow device to use for this job. Currently, the only supported device type for cluster jobs is
-     * <code>EDGE</code>.
+     * The type of Amazon Web Services Snow device to use for this job. Currently, the only supported device type for
+     * cluster jobs is <code>EDGE</code>.
      * </p>
      * <p>
      * For more information, see <a
@@ -1363,14 +1373,15 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </p>
      * 
      * @param snowballType
-     *        The type of AWS Snow Family device to use for this job. </p> <note>
+     *        The type of Snow Family Devices to use for this job. </p> <note>
      *        <p>
-     *        For cluster jobs, AWS Snow Family currently supports only the <code>EDGE</code> device type.
+     *        For cluster jobs, Amazon Web Services Snow Family currently supports only the <code>EDGE</code> device
+     *        type.
      *        </p>
      *        </note>
      *        <p>
-     *        The type of AWS Snow device to use for this job. Currently, the only supported device type for cluster
-     *        jobs is <code>EDGE</code>.
+     *        The type of Amazon Web Services Snow device to use for this job. Currently, the only supported device type
+     *        for cluster jobs is <code>EDGE</code>.
      *        </p>
      *        <p>
      *        For more information, see <a
@@ -1392,16 +1403,16 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * The type of AWS Snow Family device to use for this job.
+     * The type of Snow Family Devices to use for this job.
      * </p>
      * <note>
      * <p>
-     * For cluster jobs, AWS Snow Family currently supports only the <code>EDGE</code> device type.
+     * For cluster jobs, Amazon Web Services Snow Family currently supports only the <code>EDGE</code> device type.
      * </p>
      * </note>
      * <p>
-     * The type of AWS Snow device to use for this job. Currently, the only supported device type for cluster jobs is
-     * <code>EDGE</code>.
+     * The type of Amazon Web Services Snow device to use for this job. Currently, the only supported device type for
+     * cluster jobs is <code>EDGE</code>.
      * </p>
      * <p>
      * For more information, see <a
@@ -1416,14 +1427,15 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </p>
      * 
      * @param snowballType
-     *        The type of AWS Snow Family device to use for this job. </p> <note>
+     *        The type of Snow Family Devices to use for this job. </p> <note>
      *        <p>
-     *        For cluster jobs, AWS Snow Family currently supports only the <code>EDGE</code> device type.
+     *        For cluster jobs, Amazon Web Services Snow Family currently supports only the <code>EDGE</code> device
+     *        type.
      *        </p>
      *        </note>
      *        <p>
-     *        The type of AWS Snow device to use for this job. Currently, the only supported device type for cluster
-     *        jobs is <code>EDGE</code>.
+     *        The type of Amazon Web Services Snow device to use for this job. Currently, the only supported device type
+     *        for cluster jobs is <code>EDGE</code>.
      *        </p>
      *        <p>
      *        For more information, see <a
@@ -1487,11 +1499,11 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * The tax documents required in your AWS Region.
+     * The tax documents required in your Amazon Web Services Region.
      * </p>
      * 
      * @param taxDocuments
-     *        The tax documents required in your AWS Region.
+     *        The tax documents required in your Amazon Web Services Region.
      */
 
     public void setTaxDocuments(TaxDocuments taxDocuments) {
@@ -1500,10 +1512,10 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * The tax documents required in your AWS Region.
+     * The tax documents required in your Amazon Web Services Region.
      * </p>
      * 
-     * @return The tax documents required in your AWS Region.
+     * @return The tax documents required in your Amazon Web Services Region.
      */
 
     public TaxDocuments getTaxDocuments() {
@@ -1512,11 +1524,11 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * The tax documents required in your AWS Region.
+     * The tax documents required in your Amazon Web Services Region.
      * </p>
      * 
      * @param taxDocuments
-     *        The tax documents required in your AWS Region.
+     *        The tax documents required in your Amazon Web Services Region.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1527,7 +1539,7 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * Defines the device configuration for an AWS Snowcone job.
+     * Defines the device configuration for an Snowcone job.
      * </p>
      * <p>
      * For more information, see "https://docs.aws.amazon.com/snowball/latest/snowcone-guide/snow-device-types.html"
@@ -1537,7 +1549,7 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </p>
      * 
      * @param deviceConfiguration
-     *        Defines the device configuration for an AWS Snowcone job.</p>
+     *        Defines the device configuration for an Snowcone job.</p>
      *        <p>
      *        For more information, see
      *        "https://docs.aws.amazon.com/snowball/latest/snowcone-guide/snow-device-types.html" (Snow Family Devices
@@ -1552,7 +1564,7 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * Defines the device configuration for an AWS Snowcone job.
+     * Defines the device configuration for an Snowcone job.
      * </p>
      * <p>
      * For more information, see "https://docs.aws.amazon.com/snowball/latest/snowcone-guide/snow-device-types.html"
@@ -1561,7 +1573,7 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * Capacity) in the <i>Snowcone User Guide</i>.
      * </p>
      * 
-     * @return Defines the device configuration for an AWS Snowcone job.</p>
+     * @return Defines the device configuration for an Snowcone job.</p>
      *         <p>
      *         For more information, see
      *         "https://docs.aws.amazon.com/snowball/latest/snowcone-guide/snow-device-types.html" (Snow Family Devices
@@ -1576,7 +1588,7 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
 
     /**
      * <p>
-     * Defines the device configuration for an AWS Snowcone job.
+     * Defines the device configuration for an Snowcone job.
      * </p>
      * <p>
      * For more information, see "https://docs.aws.amazon.com/snowball/latest/snowcone-guide/snow-device-types.html"
@@ -1586,7 +1598,7 @@ public class CreateJobRequest extends com.amazonaws.AmazonWebServiceRequest impl
      * </p>
      * 
      * @param deviceConfiguration
-     *        Defines the device configuration for an AWS Snowcone job.</p>
+     *        Defines the device configuration for an Snowcone job.</p>
      *        <p>
      *        For more information, see
      *        "https://docs.aws.amazon.com/snowball/latest/snowcone-guide/snow-device-types.html" (Snow Family Devices

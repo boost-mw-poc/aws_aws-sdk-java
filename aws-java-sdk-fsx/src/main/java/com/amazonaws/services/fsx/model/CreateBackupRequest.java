@@ -45,15 +45,15 @@ public class CreateBackupRequest extends com.amazonaws.AmazonWebServiceRequest i
     /**
      * <p>
      * (Optional) The tags to apply to the backup at backup creation. The key value of the <code>Name</code> tag appears
-     * in the console as the backup name. If you have set <code>CopyTagsToBackups</code> to true, and you specify one or
-     * more tags using the <code>CreateBackup</code> action, no existing file system tags are copied from the file
-     * system to the backup.
+     * in the console as the backup name. If you have set <code>CopyTagsToBackups</code> to <code>true</code>, and you
+     * specify one or more tags using the <code>CreateBackup</code> operation, no existing file system tags are copied
+     * from the file system to the backup.
      * </p>
      */
     private java.util.List<Tag> tags;
     /**
      * <p>
-     * The ID of he FSx for NetApp ONTAP volume to back up.
+     * (Optional) The ID of the FSx for ONTAP volume to back up.
      * </p>
      */
     private String volumeId;
@@ -153,15 +153,15 @@ public class CreateBackupRequest extends com.amazonaws.AmazonWebServiceRequest i
     /**
      * <p>
      * (Optional) The tags to apply to the backup at backup creation. The key value of the <code>Name</code> tag appears
-     * in the console as the backup name. If you have set <code>CopyTagsToBackups</code> to true, and you specify one or
-     * more tags using the <code>CreateBackup</code> action, no existing file system tags are copied from the file
-     * system to the backup.
+     * in the console as the backup name. If you have set <code>CopyTagsToBackups</code> to <code>true</code>, and you
+     * specify one or more tags using the <code>CreateBackup</code> operation, no existing file system tags are copied
+     * from the file system to the backup.
      * </p>
      * 
      * @return (Optional) The tags to apply to the backup at backup creation. The key value of the <code>Name</code> tag
-     *         appears in the console as the backup name. If you have set <code>CopyTagsToBackups</code> to true, and
-     *         you specify one or more tags using the <code>CreateBackup</code> action, no existing file system tags are
-     *         copied from the file system to the backup.
+     *         appears in the console as the backup name. If you have set <code>CopyTagsToBackups</code> to
+     *         <code>true</code>, and you specify one or more tags using the <code>CreateBackup</code> operation, no
+     *         existing file system tags are copied from the file system to the backup.
      */
 
     public java.util.List<Tag> getTags() {
@@ -171,16 +171,16 @@ public class CreateBackupRequest extends com.amazonaws.AmazonWebServiceRequest i
     /**
      * <p>
      * (Optional) The tags to apply to the backup at backup creation. The key value of the <code>Name</code> tag appears
-     * in the console as the backup name. If you have set <code>CopyTagsToBackups</code> to true, and you specify one or
-     * more tags using the <code>CreateBackup</code> action, no existing file system tags are copied from the file
-     * system to the backup.
+     * in the console as the backup name. If you have set <code>CopyTagsToBackups</code> to <code>true</code>, and you
+     * specify one or more tags using the <code>CreateBackup</code> operation, no existing file system tags are copied
+     * from the file system to the backup.
      * </p>
      * 
      * @param tags
      *        (Optional) The tags to apply to the backup at backup creation. The key value of the <code>Name</code> tag
-     *        appears in the console as the backup name. If you have set <code>CopyTagsToBackups</code> to true, and you
-     *        specify one or more tags using the <code>CreateBackup</code> action, no existing file system tags are
-     *        copied from the file system to the backup.
+     *        appears in the console as the backup name. If you have set <code>CopyTagsToBackups</code> to
+     *        <code>true</code>, and you specify one or more tags using the <code>CreateBackup</code> operation, no
+     *        existing file system tags are copied from the file system to the backup.
      */
 
     public void setTags(java.util.Collection<Tag> tags) {
@@ -195,9 +195,9 @@ public class CreateBackupRequest extends com.amazonaws.AmazonWebServiceRequest i
     /**
      * <p>
      * (Optional) The tags to apply to the backup at backup creation. The key value of the <code>Name</code> tag appears
-     * in the console as the backup name. If you have set <code>CopyTagsToBackups</code> to true, and you specify one or
-     * more tags using the <code>CreateBackup</code> action, no existing file system tags are copied from the file
-     * system to the backup.
+     * in the console as the backup name. If you have set <code>CopyTagsToBackups</code> to <code>true</code>, and you
+     * specify one or more tags using the <code>CreateBackup</code> operation, no existing file system tags are copied
+     * from the file system to the backup.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -207,9 +207,9 @@ public class CreateBackupRequest extends com.amazonaws.AmazonWebServiceRequest i
      * 
      * @param tags
      *        (Optional) The tags to apply to the backup at backup creation. The key value of the <code>Name</code> tag
-     *        appears in the console as the backup name. If you have set <code>CopyTagsToBackups</code> to true, and you
-     *        specify one or more tags using the <code>CreateBackup</code> action, no existing file system tags are
-     *        copied from the file system to the backup.
+     *        appears in the console as the backup name. If you have set <code>CopyTagsToBackups</code> to
+     *        <code>true</code>, and you specify one or more tags using the <code>CreateBackup</code> operation, no
+     *        existing file system tags are copied from the file system to the backup.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -226,16 +226,16 @@ public class CreateBackupRequest extends com.amazonaws.AmazonWebServiceRequest i
     /**
      * <p>
      * (Optional) The tags to apply to the backup at backup creation. The key value of the <code>Name</code> tag appears
-     * in the console as the backup name. If you have set <code>CopyTagsToBackups</code> to true, and you specify one or
-     * more tags using the <code>CreateBackup</code> action, no existing file system tags are copied from the file
-     * system to the backup.
+     * in the console as the backup name. If you have set <code>CopyTagsToBackups</code> to <code>true</code>, and you
+     * specify one or more tags using the <code>CreateBackup</code> operation, no existing file system tags are copied
+     * from the file system to the backup.
      * </p>
      * 
      * @param tags
      *        (Optional) The tags to apply to the backup at backup creation. The key value of the <code>Name</code> tag
-     *        appears in the console as the backup name. If you have set <code>CopyTagsToBackups</code> to true, and you
-     *        specify one or more tags using the <code>CreateBackup</code> action, no existing file system tags are
-     *        copied from the file system to the backup.
+     *        appears in the console as the backup name. If you have set <code>CopyTagsToBackups</code> to
+     *        <code>true</code>, and you specify one or more tags using the <code>CreateBackup</code> operation, no
+     *        existing file system tags are copied from the file system to the backup.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -246,11 +246,11 @@ public class CreateBackupRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The ID of he FSx for NetApp ONTAP volume to back up.
+     * (Optional) The ID of the FSx for ONTAP volume to back up.
      * </p>
      * 
      * @param volumeId
-     *        The ID of he FSx for NetApp ONTAP volume to back up.
+     *        (Optional) The ID of the FSx for ONTAP volume to back up.
      */
 
     public void setVolumeId(String volumeId) {
@@ -259,10 +259,10 @@ public class CreateBackupRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The ID of he FSx for NetApp ONTAP volume to back up.
+     * (Optional) The ID of the FSx for ONTAP volume to back up.
      * </p>
      * 
-     * @return The ID of he FSx for NetApp ONTAP volume to back up.
+     * @return (Optional) The ID of the FSx for ONTAP volume to back up.
      */
 
     public String getVolumeId() {
@@ -271,11 +271,11 @@ public class CreateBackupRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * The ID of he FSx for NetApp ONTAP volume to back up.
+     * (Optional) The ID of the FSx for ONTAP volume to back up.
      * </p>
      * 
      * @param volumeId
-     *        The ID of he FSx for NetApp ONTAP volume to back up.
+     *        (Optional) The ID of the FSx for ONTAP volume to back up.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

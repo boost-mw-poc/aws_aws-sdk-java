@@ -62,6 +62,20 @@ public class ValidatePolicyRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      */
     private String policyType;
+    /**
+     * <p>
+     * The type of resource to attach to your resource policy. Specify a value for the policy validation resource type
+     * only if the policy type is <code>RESOURCE_POLICY</code>. For example, to validate a resource policy to attach to
+     * an Amazon S3 bucket, you can choose <code>AWS::S3::Bucket</code> for the policy validation resource type.
+     * </p>
+     * <p>
+     * For resource types not supported as valid values, IAM Access Analyzer runs policy checks that apply to all
+     * resource policies. For example, to validate a resource policy to attach to a KMS key, do not specify a value for
+     * the policy validation resource type and IAM Access Analyzer will run policy checks that apply to all resource
+     * policies.
+     * </p>
+     */
+    private String validatePolicyResourceType;
 
     /**
      * <p>
@@ -358,6 +372,129 @@ public class ValidatePolicyRequest extends com.amazonaws.AmazonWebServiceRequest
     }
 
     /**
+     * <p>
+     * The type of resource to attach to your resource policy. Specify a value for the policy validation resource type
+     * only if the policy type is <code>RESOURCE_POLICY</code>. For example, to validate a resource policy to attach to
+     * an Amazon S3 bucket, you can choose <code>AWS::S3::Bucket</code> for the policy validation resource type.
+     * </p>
+     * <p>
+     * For resource types not supported as valid values, IAM Access Analyzer runs policy checks that apply to all
+     * resource policies. For example, to validate a resource policy to attach to a KMS key, do not specify a value for
+     * the policy validation resource type and IAM Access Analyzer will run policy checks that apply to all resource
+     * policies.
+     * </p>
+     * 
+     * @param validatePolicyResourceType
+     *        The type of resource to attach to your resource policy. Specify a value for the policy validation resource
+     *        type only if the policy type is <code>RESOURCE_POLICY</code>. For example, to validate a resource policy
+     *        to attach to an Amazon S3 bucket, you can choose <code>AWS::S3::Bucket</code> for the policy validation
+     *        resource type.</p>
+     *        <p>
+     *        For resource types not supported as valid values, IAM Access Analyzer runs policy checks that apply to all
+     *        resource policies. For example, to validate a resource policy to attach to a KMS key, do not specify a
+     *        value for the policy validation resource type and IAM Access Analyzer will run policy checks that apply to
+     *        all resource policies.
+     * @see ValidatePolicyResourceType
+     */
+
+    public void setValidatePolicyResourceType(String validatePolicyResourceType) {
+        this.validatePolicyResourceType = validatePolicyResourceType;
+    }
+
+    /**
+     * <p>
+     * The type of resource to attach to your resource policy. Specify a value for the policy validation resource type
+     * only if the policy type is <code>RESOURCE_POLICY</code>. For example, to validate a resource policy to attach to
+     * an Amazon S3 bucket, you can choose <code>AWS::S3::Bucket</code> for the policy validation resource type.
+     * </p>
+     * <p>
+     * For resource types not supported as valid values, IAM Access Analyzer runs policy checks that apply to all
+     * resource policies. For example, to validate a resource policy to attach to a KMS key, do not specify a value for
+     * the policy validation resource type and IAM Access Analyzer will run policy checks that apply to all resource
+     * policies.
+     * </p>
+     * 
+     * @return The type of resource to attach to your resource policy. Specify a value for the policy validation
+     *         resource type only if the policy type is <code>RESOURCE_POLICY</code>. For example, to validate a
+     *         resource policy to attach to an Amazon S3 bucket, you can choose <code>AWS::S3::Bucket</code> for the
+     *         policy validation resource type.</p>
+     *         <p>
+     *         For resource types not supported as valid values, IAM Access Analyzer runs policy checks that apply to
+     *         all resource policies. For example, to validate a resource policy to attach to a KMS key, do not specify
+     *         a value for the policy validation resource type and IAM Access Analyzer will run policy checks that apply
+     *         to all resource policies.
+     * @see ValidatePolicyResourceType
+     */
+
+    public String getValidatePolicyResourceType() {
+        return this.validatePolicyResourceType;
+    }
+
+    /**
+     * <p>
+     * The type of resource to attach to your resource policy. Specify a value for the policy validation resource type
+     * only if the policy type is <code>RESOURCE_POLICY</code>. For example, to validate a resource policy to attach to
+     * an Amazon S3 bucket, you can choose <code>AWS::S3::Bucket</code> for the policy validation resource type.
+     * </p>
+     * <p>
+     * For resource types not supported as valid values, IAM Access Analyzer runs policy checks that apply to all
+     * resource policies. For example, to validate a resource policy to attach to a KMS key, do not specify a value for
+     * the policy validation resource type and IAM Access Analyzer will run policy checks that apply to all resource
+     * policies.
+     * </p>
+     * 
+     * @param validatePolicyResourceType
+     *        The type of resource to attach to your resource policy. Specify a value for the policy validation resource
+     *        type only if the policy type is <code>RESOURCE_POLICY</code>. For example, to validate a resource policy
+     *        to attach to an Amazon S3 bucket, you can choose <code>AWS::S3::Bucket</code> for the policy validation
+     *        resource type.</p>
+     *        <p>
+     *        For resource types not supported as valid values, IAM Access Analyzer runs policy checks that apply to all
+     *        resource policies. For example, to validate a resource policy to attach to a KMS key, do not specify a
+     *        value for the policy validation resource type and IAM Access Analyzer will run policy checks that apply to
+     *        all resource policies.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ValidatePolicyResourceType
+     */
+
+    public ValidatePolicyRequest withValidatePolicyResourceType(String validatePolicyResourceType) {
+        setValidatePolicyResourceType(validatePolicyResourceType);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The type of resource to attach to your resource policy. Specify a value for the policy validation resource type
+     * only if the policy type is <code>RESOURCE_POLICY</code>. For example, to validate a resource policy to attach to
+     * an Amazon S3 bucket, you can choose <code>AWS::S3::Bucket</code> for the policy validation resource type.
+     * </p>
+     * <p>
+     * For resource types not supported as valid values, IAM Access Analyzer runs policy checks that apply to all
+     * resource policies. For example, to validate a resource policy to attach to a KMS key, do not specify a value for
+     * the policy validation resource type and IAM Access Analyzer will run policy checks that apply to all resource
+     * policies.
+     * </p>
+     * 
+     * @param validatePolicyResourceType
+     *        The type of resource to attach to your resource policy. Specify a value for the policy validation resource
+     *        type only if the policy type is <code>RESOURCE_POLICY</code>. For example, to validate a resource policy
+     *        to attach to an Amazon S3 bucket, you can choose <code>AWS::S3::Bucket</code> for the policy validation
+     *        resource type.</p>
+     *        <p>
+     *        For resource types not supported as valid values, IAM Access Analyzer runs policy checks that apply to all
+     *        resource policies. For example, to validate a resource policy to attach to a KMS key, do not specify a
+     *        value for the policy validation resource type and IAM Access Analyzer will run policy checks that apply to
+     *        all resource policies.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ValidatePolicyResourceType
+     */
+
+    public ValidatePolicyRequest withValidatePolicyResourceType(ValidatePolicyResourceType validatePolicyResourceType) {
+        this.validatePolicyResourceType = validatePolicyResourceType.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -378,7 +515,9 @@ public class ValidatePolicyRequest extends com.amazonaws.AmazonWebServiceRequest
         if (getPolicyDocument() != null)
             sb.append("PolicyDocument: ").append(getPolicyDocument()).append(",");
         if (getPolicyType() != null)
-            sb.append("PolicyType: ").append(getPolicyType());
+            sb.append("PolicyType: ").append(getPolicyType()).append(",");
+        if (getValidatePolicyResourceType() != null)
+            sb.append("ValidatePolicyResourceType: ").append(getValidatePolicyResourceType());
         sb.append("}");
         return sb.toString();
     }
@@ -413,6 +552,10 @@ public class ValidatePolicyRequest extends com.amazonaws.AmazonWebServiceRequest
             return false;
         if (other.getPolicyType() != null && other.getPolicyType().equals(this.getPolicyType()) == false)
             return false;
+        if (other.getValidatePolicyResourceType() == null ^ this.getValidatePolicyResourceType() == null)
+            return false;
+        if (other.getValidatePolicyResourceType() != null && other.getValidatePolicyResourceType().equals(this.getValidatePolicyResourceType()) == false)
+            return false;
         return true;
     }
 
@@ -426,6 +569,7 @@ public class ValidatePolicyRequest extends com.amazonaws.AmazonWebServiceRequest
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
         hashCode = prime * hashCode + ((getPolicyDocument() == null) ? 0 : getPolicyDocument().hashCode());
         hashCode = prime * hashCode + ((getPolicyType() == null) ? 0 : getPolicyType().hashCode());
+        hashCode = prime * hashCode + ((getValidatePolicyResourceType() == null) ? 0 : getValidatePolicyResourceType().hashCode());
         return hashCode;
     }
 

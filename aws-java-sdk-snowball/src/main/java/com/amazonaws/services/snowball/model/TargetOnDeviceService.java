@@ -20,7 +20,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 /**
  * <p>
  * An object that represents the service or services on the Snow Family device that your transferred data will be
- * exported from or imported into. AWS Snow Family supports Amazon S3 and NFS (Network File System).
+ * exported from or imported into. Amazon Web Services Snow Family supports Amazon S3 and NFS (Network File System).
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/snowball-2016-06-30/TargetOnDeviceService" target="_top">AWS API

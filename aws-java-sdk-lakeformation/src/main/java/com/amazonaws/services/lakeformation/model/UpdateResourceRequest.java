@@ -27,7 +27,7 @@ public class UpdateResourceRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The new role to use for the given resource registered in AWS Lake Formation.
+     * The new role to use for the given resource registered in Lake Formation.
      * </p>
      */
     private String roleArn;
@@ -40,11 +40,11 @@ public class UpdateResourceRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The new role to use for the given resource registered in AWS Lake Formation.
+     * The new role to use for the given resource registered in Lake Formation.
      * </p>
      * 
      * @param roleArn
-     *        The new role to use for the given resource registered in AWS Lake Formation.
+     *        The new role to use for the given resource registered in Lake Formation.
      */
 
     public void setRoleArn(String roleArn) {
@@ -53,10 +53,10 @@ public class UpdateResourceRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The new role to use for the given resource registered in AWS Lake Formation.
+     * The new role to use for the given resource registered in Lake Formation.
      * </p>
      * 
-     * @return The new role to use for the given resource registered in AWS Lake Formation.
+     * @return The new role to use for the given resource registered in Lake Formation.
      */
 
     public String getRoleArn() {
@@ -65,11 +65,11 @@ public class UpdateResourceRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The new role to use for the given resource registered in AWS Lake Formation.
+     * The new role to use for the given resource registered in Lake Formation.
      * </p>
      * 
      * @param roleArn
-     *        The new role to use for the given resource registered in AWS Lake Formation.
+     *        The new role to use for the given resource registered in Lake Formation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

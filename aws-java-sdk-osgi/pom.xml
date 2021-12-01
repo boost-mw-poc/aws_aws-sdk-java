@@ -5,7 +5,7 @@
   <parent>
     <groupId>com.amazonaws</groupId>
     <artifactId>aws-java-sdk-pom</artifactId>
-    <version>1.12.122-SNAPSHOT</version>
+    <version>1.12.122</version>
   </parent>
   <groupId>com.amazonaws</groupId>
   <artifactId>aws-java-sdk-osgi</artifactId>
@@ -15,6 +15,24 @@
 
   <!-- The dependencies section in pom.xml is auto generated. No manual changes are allowed -->
   <dependencies>
+    <dependency>
+        <artifactId>aws-java-sdk-backupgateway</artifactId>
+        <groupId>com.amazonaws</groupId>
+        <optional>false</optional>
+        <version>${awsjavasdk.version}</version>
+    </dependency>
+    <dependency>
+        <artifactId>aws-java-sdk-workspacesweb</artifactId>
+        <groupId>com.amazonaws</groupId>
+        <optional>false</optional>
+        <version>${awsjavasdk.version}</version>
+    </dependency>
+    <dependency>
+        <artifactId>aws-java-sdk-iottwinmaker</artifactId>
+        <groupId>com.amazonaws</groupId>
+        <optional>false</optional>
+        <version>${awsjavasdk.version}</version>
+    </dependency>
     <dependency>
         <artifactId>aws-java-sdk-recyclebin</artifactId>
         <groupId>com.amazonaws</groupId>
@@ -1898,6 +1916,18 @@
                               </taglet>
                           </taglets>
                           <groups>
+                              <group>
+                                  <title>AWS Backup Gateway</title>
+                                  <packages>com.amazonaws.services.backupgateway*</packages>
+                              </group>
+                              <group>
+                                  <title>Amazon WorkSpaces Web</title>
+                                  <packages>com.amazonaws.services.workspacesweb*</packages>
+                              </group>
+                              <group>
+                                  <title>AWS IoT TwinMaker</title>
+                                  <packages>com.amazonaws.services.iottwinmaker*</packages>
+                              </group>
                               <group>
                                   <title>Amazon Recycle Bin</title>
                                   <packages>com.amazonaws.services.recyclebin*</packages>

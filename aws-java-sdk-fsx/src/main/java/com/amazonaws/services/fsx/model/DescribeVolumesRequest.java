@@ -27,13 +27,13 @@ public class DescribeVolumesRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * IDs of the volumes whose descriptions you want to retrieve.
+     * The IDs of the volumes whose descriptions you want to retrieve.
      * </p>
      */
     private java.util.List<String> volumeIds;
     /**
      * <p>
-     * Enter a filter name:value pair to view a select set of volumes.
+     * Enter a filter <code>Name</code> and <code>Values</code> pair to view a select set of volumes.
      * </p>
      */
     private java.util.List<VolumeFilter> filters;
@@ -44,10 +44,10 @@ public class DescribeVolumesRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * IDs of the volumes whose descriptions you want to retrieve.
+     * The IDs of the volumes whose descriptions you want to retrieve.
      * </p>
      * 
-     * @return IDs of the volumes whose descriptions you want to retrieve.
+     * @return The IDs of the volumes whose descriptions you want to retrieve.
      */
 
     public java.util.List<String> getVolumeIds() {
@@ -56,11 +56,11 @@ public class DescribeVolumesRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * IDs of the volumes whose descriptions you want to retrieve.
+     * The IDs of the volumes whose descriptions you want to retrieve.
      * </p>
      * 
      * @param volumeIds
-     *        IDs of the volumes whose descriptions you want to retrieve.
+     *        The IDs of the volumes whose descriptions you want to retrieve.
      */
 
     public void setVolumeIds(java.util.Collection<String> volumeIds) {
@@ -74,7 +74,7 @@ public class DescribeVolumesRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * IDs of the volumes whose descriptions you want to retrieve.
+     * The IDs of the volumes whose descriptions you want to retrieve.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -83,7 +83,7 @@ public class DescribeVolumesRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * 
      * @param volumeIds
-     *        IDs of the volumes whose descriptions you want to retrieve.
+     *        The IDs of the volumes whose descriptions you want to retrieve.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -99,11 +99,11 @@ public class DescribeVolumesRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * IDs of the volumes whose descriptions you want to retrieve.
+     * The IDs of the volumes whose descriptions you want to retrieve.
      * </p>
      * 
      * @param volumeIds
-     *        IDs of the volumes whose descriptions you want to retrieve.
+     *        The IDs of the volumes whose descriptions you want to retrieve.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -114,10 +114,10 @@ public class DescribeVolumesRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * Enter a filter name:value pair to view a select set of volumes.
+     * Enter a filter <code>Name</code> and <code>Values</code> pair to view a select set of volumes.
      * </p>
      * 
-     * @return Enter a filter name:value pair to view a select set of volumes.
+     * @return Enter a filter <code>Name</code> and <code>Values</code> pair to view a select set of volumes.
      */
 
     public java.util.List<VolumeFilter> getFilters() {
@@ -126,11 +126,11 @@ public class DescribeVolumesRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * Enter a filter name:value pair to view a select set of volumes.
+     * Enter a filter <code>Name</code> and <code>Values</code> pair to view a select set of volumes.
      * </p>
      * 
      * @param filters
-     *        Enter a filter name:value pair to view a select set of volumes.
+     *        Enter a filter <code>Name</code> and <code>Values</code> pair to view a select set of volumes.
      */
 
     public void setFilters(java.util.Collection<VolumeFilter> filters) {
@@ -144,7 +144,7 @@ public class DescribeVolumesRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * Enter a filter name:value pair to view a select set of volumes.
+     * Enter a filter <code>Name</code> and <code>Values</code> pair to view a select set of volumes.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -153,7 +153,7 @@ public class DescribeVolumesRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      * 
      * @param filters
-     *        Enter a filter name:value pair to view a select set of volumes.
+     *        Enter a filter <code>Name</code> and <code>Values</code> pair to view a select set of volumes.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -169,11 +169,11 @@ public class DescribeVolumesRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * Enter a filter name:value pair to view a select set of volumes.
+     * Enter a filter <code>Name</code> and <code>Values</code> pair to view a select set of volumes.
      * </p>
      * 
      * @param filters
-     *        Enter a filter name:value pair to view a select set of volumes.
+     *        Enter a filter <code>Name</code> and <code>Values</code> pair to view a select set of volumes.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -25,9 +25,9 @@ import java.util.concurrent.ExecutorService;
  * representing the asynchronous operation; overloads which accept an {@code AsyncHandler} can be used to receive
  * notification when an asynchronous operation completes.
  * <p>
- * <fullname>AWS Lake Formation</fullname>
+ * <fullname>Lake Formation</fullname>
  * <p>
- * Defines the public endpoint for the AWS Lake Formation service.
+ * Defines the public endpoint for the Lake Formation service.
  * </p>
  */
 @ThreadSafe
@@ -176,6 +176,105 @@ public class AWSLakeFormationAsyncClient extends AWSLakeFormationClient implemen
     }
 
     @Override
+    public java.util.concurrent.Future<CancelTransactionResult> cancelTransactionAsync(CancelTransactionRequest request) {
+
+        return cancelTransactionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CancelTransactionResult> cancelTransactionAsync(final CancelTransactionRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CancelTransactionRequest, CancelTransactionResult> asyncHandler) {
+        final CancelTransactionRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CancelTransactionResult>() {
+            @Override
+            public CancelTransactionResult call() throws Exception {
+                CancelTransactionResult result = null;
+
+                try {
+                    result = executeCancelTransaction(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<CommitTransactionResult> commitTransactionAsync(CommitTransactionRequest request) {
+
+        return commitTransactionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CommitTransactionResult> commitTransactionAsync(final CommitTransactionRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CommitTransactionRequest, CommitTransactionResult> asyncHandler) {
+        final CommitTransactionRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CommitTransactionResult>() {
+            @Override
+            public CommitTransactionResult call() throws Exception {
+                CommitTransactionResult result = null;
+
+                try {
+                    result = executeCommitTransaction(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateDataCellsFilterResult> createDataCellsFilterAsync(CreateDataCellsFilterRequest request) {
+
+        return createDataCellsFilterAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateDataCellsFilterResult> createDataCellsFilterAsync(final CreateDataCellsFilterRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateDataCellsFilterRequest, CreateDataCellsFilterResult> asyncHandler) {
+        final CreateDataCellsFilterRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateDataCellsFilterResult>() {
+            @Override
+            public CreateDataCellsFilterResult call() throws Exception {
+                CreateDataCellsFilterResult result = null;
+
+                try {
+                    result = executeCreateDataCellsFilter(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateLFTagResult> createLFTagAsync(CreateLFTagRequest request) {
 
         return createLFTagAsync(request, null);
@@ -209,6 +308,39 @@ public class AWSLakeFormationAsyncClient extends AWSLakeFormationClient implemen
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteDataCellsFilterResult> deleteDataCellsFilterAsync(DeleteDataCellsFilterRequest request) {
+
+        return deleteDataCellsFilterAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteDataCellsFilterResult> deleteDataCellsFilterAsync(final DeleteDataCellsFilterRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteDataCellsFilterRequest, DeleteDataCellsFilterResult> asyncHandler) {
+        final DeleteDataCellsFilterRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteDataCellsFilterResult>() {
+            @Override
+            public DeleteDataCellsFilterResult call() throws Exception {
+                DeleteDataCellsFilterResult result = null;
+
+                try {
+                    result = executeDeleteDataCellsFilter(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteLFTagResult> deleteLFTagAsync(DeleteLFTagRequest request) {
 
         return deleteLFTagAsync(request, null);
@@ -226,6 +358,39 @@ public class AWSLakeFormationAsyncClient extends AWSLakeFormationClient implemen
 
                 try {
                     result = executeDeleteLFTag(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteObjectsOnCancelResult> deleteObjectsOnCancelAsync(DeleteObjectsOnCancelRequest request) {
+
+        return deleteObjectsOnCancelAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteObjectsOnCancelResult> deleteObjectsOnCancelAsync(final DeleteObjectsOnCancelRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteObjectsOnCancelRequest, DeleteObjectsOnCancelResult> asyncHandler) {
+        final DeleteObjectsOnCancelRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteObjectsOnCancelResult>() {
+            @Override
+            public DeleteObjectsOnCancelResult call() throws Exception {
+                DeleteObjectsOnCancelResult result = null;
+
+                try {
+                    result = executeDeleteObjectsOnCancel(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -292,6 +457,72 @@ public class AWSLakeFormationAsyncClient extends AWSLakeFormationClient implemen
 
                 try {
                     result = executeDescribeResource(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeTransactionResult> describeTransactionAsync(DescribeTransactionRequest request) {
+
+        return describeTransactionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeTransactionResult> describeTransactionAsync(final DescribeTransactionRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeTransactionRequest, DescribeTransactionResult> asyncHandler) {
+        final DescribeTransactionRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeTransactionResult>() {
+            @Override
+            public DescribeTransactionResult call() throws Exception {
+                DescribeTransactionResult result = null;
+
+                try {
+                    result = executeDescribeTransaction(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ExtendTransactionResult> extendTransactionAsync(ExtendTransactionRequest request) {
+
+        return extendTransactionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ExtendTransactionResult> extendTransactionAsync(final ExtendTransactionRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ExtendTransactionRequest, ExtendTransactionResult> asyncHandler) {
+        final ExtendTransactionRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ExtendTransactionResult>() {
+            @Override
+            public ExtendTransactionResult call() throws Exception {
+                ExtendTransactionResult result = null;
+
+                try {
+                    result = executeExtendTransaction(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -408,6 +639,72 @@ public class AWSLakeFormationAsyncClient extends AWSLakeFormationClient implemen
     }
 
     @Override
+    public java.util.concurrent.Future<GetQueryStateResult> getQueryStateAsync(GetQueryStateRequest request) {
+
+        return getQueryStateAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetQueryStateResult> getQueryStateAsync(final GetQueryStateRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetQueryStateRequest, GetQueryStateResult> asyncHandler) {
+        final GetQueryStateRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetQueryStateResult>() {
+            @Override
+            public GetQueryStateResult call() throws Exception {
+                GetQueryStateResult result = null;
+
+                try {
+                    result = executeGetQueryState(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetQueryStatisticsResult> getQueryStatisticsAsync(GetQueryStatisticsRequest request) {
+
+        return getQueryStatisticsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetQueryStatisticsResult> getQueryStatisticsAsync(final GetQueryStatisticsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetQueryStatisticsRequest, GetQueryStatisticsResult> asyncHandler) {
+        final GetQueryStatisticsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetQueryStatisticsResult>() {
+            @Override
+            public GetQueryStatisticsResult call() throws Exception {
+                GetQueryStatisticsResult result = null;
+
+                try {
+                    result = executeGetQueryStatistics(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetResourceLFTagsResult> getResourceLFTagsAsync(GetResourceLFTagsRequest request) {
 
         return getResourceLFTagsAsync(request, null);
@@ -441,6 +738,105 @@ public class AWSLakeFormationAsyncClient extends AWSLakeFormationClient implemen
     }
 
     @Override
+    public java.util.concurrent.Future<GetTableObjectsResult> getTableObjectsAsync(GetTableObjectsRequest request) {
+
+        return getTableObjectsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetTableObjectsResult> getTableObjectsAsync(final GetTableObjectsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetTableObjectsRequest, GetTableObjectsResult> asyncHandler) {
+        final GetTableObjectsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetTableObjectsResult>() {
+            @Override
+            public GetTableObjectsResult call() throws Exception {
+                GetTableObjectsResult result = null;
+
+                try {
+                    result = executeGetTableObjects(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetWorkUnitResultsResult> getWorkUnitResultsAsync(GetWorkUnitResultsRequest request) {
+
+        return getWorkUnitResultsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetWorkUnitResultsResult> getWorkUnitResultsAsync(final GetWorkUnitResultsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetWorkUnitResultsRequest, GetWorkUnitResultsResult> asyncHandler) {
+        final GetWorkUnitResultsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetWorkUnitResultsResult>() {
+            @Override
+            public GetWorkUnitResultsResult call() throws Exception {
+                GetWorkUnitResultsResult result = null;
+
+                try {
+                    result = executeGetWorkUnitResults(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetWorkUnitsResult> getWorkUnitsAsync(GetWorkUnitsRequest request) {
+
+        return getWorkUnitsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetWorkUnitsResult> getWorkUnitsAsync(final GetWorkUnitsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetWorkUnitsRequest, GetWorkUnitsResult> asyncHandler) {
+        final GetWorkUnitsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetWorkUnitsResult>() {
+            @Override
+            public GetWorkUnitsResult call() throws Exception {
+                GetWorkUnitsResult result = null;
+
+                try {
+                    result = executeGetWorkUnits(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GrantPermissionsResult> grantPermissionsAsync(GrantPermissionsRequest request) {
 
         return grantPermissionsAsync(request, null);
@@ -458,6 +854,39 @@ public class AWSLakeFormationAsyncClient extends AWSLakeFormationClient implemen
 
                 try {
                     result = executeGrantPermissions(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListDataCellsFilterResult> listDataCellsFilterAsync(ListDataCellsFilterRequest request) {
+
+        return listDataCellsFilterAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListDataCellsFilterResult> listDataCellsFilterAsync(final ListDataCellsFilterRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListDataCellsFilterRequest, ListDataCellsFilterResult> asyncHandler) {
+        final ListDataCellsFilterRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListDataCellsFilterResult>() {
+            @Override
+            public ListDataCellsFilterResult call() throws Exception {
+                ListDataCellsFilterResult result = null;
+
+                try {
+                    result = executeListDataCellsFilter(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -557,6 +986,72 @@ public class AWSLakeFormationAsyncClient extends AWSLakeFormationClient implemen
 
                 try {
                     result = executeListResources(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListTableStorageOptimizersResult> listTableStorageOptimizersAsync(ListTableStorageOptimizersRequest request) {
+
+        return listTableStorageOptimizersAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListTableStorageOptimizersResult> listTableStorageOptimizersAsync(final ListTableStorageOptimizersRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListTableStorageOptimizersRequest, ListTableStorageOptimizersResult> asyncHandler) {
+        final ListTableStorageOptimizersRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListTableStorageOptimizersResult>() {
+            @Override
+            public ListTableStorageOptimizersResult call() throws Exception {
+                ListTableStorageOptimizersResult result = null;
+
+                try {
+                    result = executeListTableStorageOptimizers(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListTransactionsResult> listTransactionsAsync(ListTransactionsRequest request) {
+
+        return listTransactionsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListTransactionsResult> listTransactionsAsync(final ListTransactionsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListTransactionsRequest, ListTransactionsResult> asyncHandler) {
+        final ListTransactionsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListTransactionsResult>() {
+            @Override
+            public ListTransactionsResult call() throws Exception {
+                ListTransactionsResult result = null;
+
+                try {
+                    result = executeListTransactions(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -771,6 +1266,72 @@ public class AWSLakeFormationAsyncClient extends AWSLakeFormationClient implemen
     }
 
     @Override
+    public java.util.concurrent.Future<StartQueryPlanningResult> startQueryPlanningAsync(StartQueryPlanningRequest request) {
+
+        return startQueryPlanningAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartQueryPlanningResult> startQueryPlanningAsync(final StartQueryPlanningRequest request,
+            final com.amazonaws.handlers.AsyncHandler<StartQueryPlanningRequest, StartQueryPlanningResult> asyncHandler) {
+        final StartQueryPlanningRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<StartQueryPlanningResult>() {
+            @Override
+            public StartQueryPlanningResult call() throws Exception {
+                StartQueryPlanningResult result = null;
+
+                try {
+                    result = executeStartQueryPlanning(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartTransactionResult> startTransactionAsync(StartTransactionRequest request) {
+
+        return startTransactionAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<StartTransactionResult> startTransactionAsync(final StartTransactionRequest request,
+            final com.amazonaws.handlers.AsyncHandler<StartTransactionRequest, StartTransactionResult> asyncHandler) {
+        final StartTransactionRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<StartTransactionResult>() {
+            @Override
+            public StartTransactionResult call() throws Exception {
+                StartTransactionResult result = null;
+
+                try {
+                    result = executeStartTransaction(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<UpdateLFTagResult> updateLFTagAsync(UpdateLFTagRequest request) {
 
         return updateLFTagAsync(request, null);
@@ -821,6 +1382,72 @@ public class AWSLakeFormationAsyncClient extends AWSLakeFormationClient implemen
 
                 try {
                     result = executeUpdateResource(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateTableObjectsResult> updateTableObjectsAsync(UpdateTableObjectsRequest request) {
+
+        return updateTableObjectsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateTableObjectsResult> updateTableObjectsAsync(final UpdateTableObjectsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateTableObjectsRequest, UpdateTableObjectsResult> asyncHandler) {
+        final UpdateTableObjectsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateTableObjectsResult>() {
+            @Override
+            public UpdateTableObjectsResult call() throws Exception {
+                UpdateTableObjectsResult result = null;
+
+                try {
+                    result = executeUpdateTableObjects(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateTableStorageOptimizerResult> updateTableStorageOptimizerAsync(UpdateTableStorageOptimizerRequest request) {
+
+        return updateTableStorageOptimizerAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateTableStorageOptimizerResult> updateTableStorageOptimizerAsync(final UpdateTableStorageOptimizerRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateTableStorageOptimizerRequest, UpdateTableStorageOptimizerResult> asyncHandler) {
+        final UpdateTableStorageOptimizerRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateTableStorageOptimizerResult>() {
+            @Override
+            public UpdateTableStorageOptimizerResult call() throws Exception {
+                UpdateTableStorageOptimizerResult result = null;
+
+                try {
+                    result = executeUpdateTableStorageOptimizer(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

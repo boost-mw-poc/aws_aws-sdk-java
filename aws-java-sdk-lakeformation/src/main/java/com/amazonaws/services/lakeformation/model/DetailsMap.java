@@ -23,8 +23,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * <code>PrincipalResourcePermissions</code>.
  * </p>
  * <p>
- * If a catalog resource is shared through AWS Resource Access Manager (AWS RAM), then there will exist a corresponding
- * RAM resource share ARN.
+ * If a catalog resource is shared through Resource Access Manager (RAM), then there will exist a corresponding RAM
+ * resource share ARN.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/lakeformation-2017-03-31/DetailsMap" target="_top">AWS API
@@ -35,17 +35,17 @@ public class DetailsMap implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A resource share ARN for a catalog resource shared through AWS Resource Access Manager (AWS RAM).
+     * A resource share ARN for a catalog resource shared through RAM.
      * </p>
      */
     private java.util.List<String> resourceShare;
 
     /**
      * <p>
-     * A resource share ARN for a catalog resource shared through AWS Resource Access Manager (AWS RAM).
+     * A resource share ARN for a catalog resource shared through RAM.
      * </p>
      * 
-     * @return A resource share ARN for a catalog resource shared through AWS Resource Access Manager (AWS RAM).
+     * @return A resource share ARN for a catalog resource shared through RAM.
      */
 
     public java.util.List<String> getResourceShare() {
@@ -54,11 +54,11 @@ public class DetailsMap implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A resource share ARN for a catalog resource shared through AWS Resource Access Manager (AWS RAM).
+     * A resource share ARN for a catalog resource shared through RAM.
      * </p>
      * 
      * @param resourceShare
-     *        A resource share ARN for a catalog resource shared through AWS Resource Access Manager (AWS RAM).
+     *        A resource share ARN for a catalog resource shared through RAM.
      */
 
     public void setResourceShare(java.util.Collection<String> resourceShare) {
@@ -72,7 +72,7 @@ public class DetailsMap implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A resource share ARN for a catalog resource shared through AWS Resource Access Manager (AWS RAM).
+     * A resource share ARN for a catalog resource shared through RAM.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -81,7 +81,7 @@ public class DetailsMap implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param resourceShare
-     *        A resource share ARN for a catalog resource shared through AWS Resource Access Manager (AWS RAM).
+     *        A resource share ARN for a catalog resource shared through RAM.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -97,11 +97,11 @@ public class DetailsMap implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A resource share ARN for a catalog resource shared through AWS Resource Access Manager (AWS RAM).
+     * A resource share ARN for a catalog resource shared through RAM.
      * </p>
      * 
      * @param resourceShare
-     *        A resource share ARN for a catalog resource shared through AWS Resource Access Manager (AWS RAM).
+     *        A resource share ARN for a catalog resource shared through RAM.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

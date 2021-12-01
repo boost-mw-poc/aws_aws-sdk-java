@@ -24,7 +24,8 @@ public enum DataRepositoryLifecycle {
     AVAILABLE("AVAILABLE"),
     MISCONFIGURED("MISCONFIGURED"),
     UPDATING("UPDATING"),
-    DELETING("DELETING");
+    DELETING("DELETING"),
+    FAILED("FAILED");
 
     private String value;
 

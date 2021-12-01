@@ -20,7 +20,7 @@
     "customServiceMetadata" : null,
     "customServiceNameForRequest" : null,
     "customSignerProvider" : null,
-    "deprecatedSuppressions" : [ "EnumSetterOverload", "ClientMutationMethods", "ClientConstructors" ],
+    "deprecatedSuppressions" : [ "ClientConstructors", "ClientMutationMethods", "EnumSetterOverload" ],
     "emitLegacyEnumSetterFor" : null,
     "operationModifiers" : null,
     "operationsWithResponseStreamContentLengthValidation" : null,
@@ -48135,7 +48135,7 @@
         "skipGeneratingUnmarshaller" : false
       },
       "deprecated" : false,
-      "documentation" : "<p>The configuration for a Secrets Manager secret. For more information, see <a href=\"https://docs.aws.amazon.com/secretsmanager/latest/apireference/API_CreateSecret.html\">CreateSecret</a>.</p> <p>You can propose a configuration for a new secret or an existing secret that you own by specifying the secret policy and optional KMS encryption key. If the configuration is for an existing secret and you do not specify the secret policy, the access preview uses the existing policy for the secret. If the access preview is for a new resource and you do not specify the policy, the access preview assumes a secret without a policy. To propose deletion of an existing policy, you can specify an empty string. If the proposed configuration is for a new secret and you do not specify the KMS key ID, the access preview uses the default CMK of the Amazon Web Services account. If you specify an empty string for the KMS key ID, the access preview uses the default CMK of the Amazon Web Services account. For more information about secret policy limits, see <a href=\"https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_limits.html\">Quotas for Secrets Manager.</a>.</p>",
+      "documentation" : "<p>The configuration for a Secrets Manager secret. For more information, see <a href=\"https://docs.aws.amazon.com/secretsmanager/latest/apireference/API_CreateSecret.html\">CreateSecret</a>.</p> <p>You can propose a configuration for a new secret or an existing secret that you own by specifying the secret policy and optional KMS encryption key. If the configuration is for an existing secret and you do not specify the secret policy, the access preview uses the existing policy for the secret. If the access preview is for a new resource and you do not specify the policy, the access preview assumes a secret without a policy. To propose deletion of an existing policy, you can specify an empty string. If the proposed configuration is for a new secret and you do not specify the KMS key ID, the access preview uses the Amazon Web Services managed key <code>aws/secretsmanager</code>. If you specify an empty string for the KMS key ID, the access preview uses the Amazon Web Services managed key of the Amazon Web Services account. For more information about secret policy limits, see <a href=\"https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_limits.html\">Quotas for Secrets Manager.</a>.</p>",
       "endpointDiscoveryMembers" : null,
       "enums" : null,
       "errorCode" : null,
@@ -48150,12 +48150,12 @@
         "c2jName" : "kmsKeyId",
         "c2jShape" : "SecretsManagerSecretKmsId",
         "deprecated" : false,
-        "documentation" : "<p>The proposed ARN, key ID, or alias of the KMS customer master key (CMK).</p>",
+        "documentation" : "<p>The proposed ARN, key ID, or alias of the KMS key.</p>",
         "endpointDiscoveryId" : false,
         "enumType" : null,
-        "fluentSetterDocumentation" : "/**<p>The proposed ARN, key ID, or alias of the KMS customer master key (CMK).</p>\n@param kmsKeyId The proposed ARN, key ID, or alias of the KMS customer master key (CMK).\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterDocumentation" : "/**<p>The proposed ARN, key ID, or alias of the KMS key.</p>\n@param kmsKeyId The proposed ARN, key ID, or alias of the KMS key.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "fluentSetterMethodName" : "withKmsKeyId",
-        "getterDocumentation" : "/**<p>The proposed ARN, key ID, or alias of the KMS customer master key (CMK).</p>\n@return The proposed ARN, key ID, or alias of the KMS customer master key (CMK).*/",
+        "getterDocumentation" : "/**<p>The proposed ARN, key ID, or alias of the KMS key.</p>\n@return The proposed ARN, key ID, or alias of the KMS key.*/",
         "getterMethodName" : "getKmsKeyId",
         "getterModel" : {
           "returnType" : "String",
@@ -48189,7 +48189,7 @@
         "marshallingType" : "STRING",
         "name" : "KmsKeyId",
         "sensitive" : false,
-        "setterDocumentation" : "/**<p>The proposed ARN, key ID, or alias of the KMS customer master key (CMK).</p>\n@param kmsKeyId The proposed ARN, key ID, or alias of the KMS customer master key (CMK).*/",
+        "setterDocumentation" : "/**<p>The proposed ARN, key ID, or alias of the KMS key.</p>\n@param kmsKeyId The proposed ARN, key ID, or alias of the KMS key.*/",
         "setterMethodName" : "setKmsKeyId",
         "setterModel" : {
           "timestampFormat" : null,
@@ -48204,13 +48204,13 @@
         "shouldFullyQualify" : false,
         "simple" : true,
         "unmarshallingType" : null,
-        "varargSetterDocumentation" : "/**<p>The proposed ARN, key ID, or alias of the KMS customer master key (CMK).</p>\n@param kmsKeyId The proposed ARN, key ID, or alias of the KMS customer master key (CMK).\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "varargSetterDocumentation" : "/**<p>The proposed ARN, key ID, or alias of the KMS key.</p>\n@param kmsKeyId The proposed ARN, key ID, or alias of the KMS key.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "variable" : {
           "timestampFormat" : null,
           "variableDeclarationType" : "String",
           "variableName" : "kmsKeyId",
           "variableType" : "String",
-          "documentation" : "<p>The proposed ARN, key ID, or alias of the KMS customer master key (CMK).</p>",
+          "documentation" : "<p>The proposed ARN, key ID, or alias of the KMS key.</p>",
           "simpleType" : "String",
           "variableSetterType" : "String"
         },
@@ -48290,12 +48290,12 @@
           "c2jName" : "kmsKeyId",
           "c2jShape" : "SecretsManagerSecretKmsId",
           "deprecated" : false,
-          "documentation" : "<p>The proposed ARN, key ID, or alias of the KMS customer master key (CMK).</p>",
+          "documentation" : "<p>The proposed ARN, key ID, or alias of the KMS key.</p>",
           "endpointDiscoveryId" : false,
           "enumType" : null,
-          "fluentSetterDocumentation" : "/**<p>The proposed ARN, key ID, or alias of the KMS customer master key (CMK).</p>\n@param kmsKeyId The proposed ARN, key ID, or alias of the KMS customer master key (CMK).\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "fluentSetterDocumentation" : "/**<p>The proposed ARN, key ID, or alias of the KMS key.</p>\n@param kmsKeyId The proposed ARN, key ID, or alias of the KMS key.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "fluentSetterMethodName" : "withKmsKeyId",
-          "getterDocumentation" : "/**<p>The proposed ARN, key ID, or alias of the KMS customer master key (CMK).</p>\n@return The proposed ARN, key ID, or alias of the KMS customer master key (CMK).*/",
+          "getterDocumentation" : "/**<p>The proposed ARN, key ID, or alias of the KMS key.</p>\n@return The proposed ARN, key ID, or alias of the KMS key.*/",
           "getterMethodName" : "getKmsKeyId",
           "getterModel" : {
             "returnType" : "String",
@@ -48329,7 +48329,7 @@
           "marshallingType" : "STRING",
           "name" : "KmsKeyId",
           "sensitive" : false,
-          "setterDocumentation" : "/**<p>The proposed ARN, key ID, or alias of the KMS customer master key (CMK).</p>\n@param kmsKeyId The proposed ARN, key ID, or alias of the KMS customer master key (CMK).*/",
+          "setterDocumentation" : "/**<p>The proposed ARN, key ID, or alias of the KMS key.</p>\n@param kmsKeyId The proposed ARN, key ID, or alias of the KMS key.*/",
           "setterMethodName" : "setKmsKeyId",
           "setterModel" : {
             "timestampFormat" : null,
@@ -48344,13 +48344,13 @@
           "shouldFullyQualify" : false,
           "simple" : true,
           "unmarshallingType" : null,
-          "varargSetterDocumentation" : "/**<p>The proposed ARN, key ID, or alias of the KMS customer master key (CMK).</p>\n@param kmsKeyId The proposed ARN, key ID, or alias of the KMS customer master key (CMK).\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "varargSetterDocumentation" : "/**<p>The proposed ARN, key ID, or alias of the KMS key.</p>\n@param kmsKeyId The proposed ARN, key ID, or alias of the KMS key.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "variable" : {
             "timestampFormat" : null,
             "variableDeclarationType" : "String",
             "variableName" : "kmsKeyId",
             "variableType" : "String",
-            "documentation" : "<p>The proposed ARN, key ID, or alias of the KMS customer master key (CMK).</p>",
+            "documentation" : "<p>The proposed ARN, key ID, or alias of the KMS key.</p>",
             "simpleType" : "String",
             "variableSetterType" : "String"
           },
@@ -56805,6 +56805,75 @@
           "variableSetterType" : "String"
         },
         "xmlNameSpaceUri" : null
+      }, {
+        "c2jName" : "validatePolicyResourceType",
+        "c2jShape" : "ValidatePolicyResourceType",
+        "deprecated" : false,
+        "documentation" : "<p>The type of resource to attach to your resource policy. Specify a value for the policy validation resource type only if the policy type is <code>RESOURCE_POLICY</code>. For example, to validate a resource policy to attach to an Amazon S3 bucket, you can choose <code>AWS::S3::Bucket</code> for the policy validation resource type.</p> <p>For resource types not supported as valid values, IAM Access Analyzer runs policy checks that apply to all resource policies. For example, to validate a resource policy to attach to a KMS key, do not specify a value for the policy validation resource type and IAM Access Analyzer will run policy checks that apply to all resource policies.</p>",
+        "endpointDiscoveryId" : false,
+        "enumType" : "ValidatePolicyResourceType",
+        "fluentSetterDocumentation" : "/**<p>The type of resource to attach to your resource policy. Specify a value for the policy validation resource type only if the policy type is <code>RESOURCE_POLICY</code>. For example, to validate a resource policy to attach to an Amazon S3 bucket, you can choose <code>AWS::S3::Bucket</code> for the policy validation resource type.</p> <p>For resource types not supported as valid values, IAM Access Analyzer runs policy checks that apply to all resource policies. For example, to validate a resource policy to attach to a KMS key, do not specify a value for the policy validation resource type and IAM Access Analyzer will run policy checks that apply to all resource policies.</p>\n@param validatePolicyResourceType The type of resource to attach to your resource policy. Specify a value for the policy validation resource type only if the policy type is <code>RESOURCE_POLICY</code>. For example, to validate a resource policy to attach to an Amazon S3 bucket, you can choose <code>AWS::S3::Bucket</code> for the policy validation resource type.</p> <p>For resource types not supported as valid values, IAM Access Analyzer runs policy checks that apply to all resource policies. For example, to validate a resource policy to attach to a KMS key, do not specify a value for the policy validation resource type and IAM Access Analyzer will run policy checks that apply to all resource policies.\n@return Returns a reference to this object so that method calls can be chained together.\n@see ValidatePolicyResourceType*/",
+        "fluentSetterMethodName" : "withValidatePolicyResourceType",
+        "getterDocumentation" : "/**<p>The type of resource to attach to your resource policy. Specify a value for the policy validation resource type only if the policy type is <code>RESOURCE_POLICY</code>. For example, to validate a resource policy to attach to an Amazon S3 bucket, you can choose <code>AWS::S3::Bucket</code> for the policy validation resource type.</p> <p>For resource types not supported as valid values, IAM Access Analyzer runs policy checks that apply to all resource policies. For example, to validate a resource policy to attach to a KMS key, do not specify a value for the policy validation resource type and IAM Access Analyzer will run policy checks that apply to all resource policies.</p>\n@return The type of resource to attach to your resource policy. Specify a value for the policy validation resource type only if the policy type is <code>RESOURCE_POLICY</code>. For example, to validate a resource policy to attach to an Amazon S3 bucket, you can choose <code>AWS::S3::Bucket</code> for the policy validation resource type.</p> <p>For resource types not supported as valid values, IAM Access Analyzer runs policy checks that apply to all resource policies. For example, to validate a resource policy to attach to a KMS key, do not specify a value for the policy validation resource type and IAM Access Analyzer will run policy checks that apply to all resource policies.\n@see ValidatePolicyResourceType*/",
+        "getterMethodName" : "getValidatePolicyResourceType",
+        "getterModel" : {
+          "returnType" : "String",
+          "documentation" : null
+        },
+        "http" : {
+          "additionalMarshallingPath" : null,
+          "additionalUnmarshallingPath" : null,
+          "flattened" : false,
+          "greedy" : false,
+          "header" : false,
+          "isPayload" : false,
+          "isStreaming" : false,
+          "location" : null,
+          "marshallLocation" : "PAYLOAD",
+          "marshallLocationName" : "validatePolicyResourceType",
+          "queryString" : false,
+          "requiresLength" : false,
+          "statusCode" : false,
+          "unmarshallLocationName" : "validatePolicyResourceType",
+          "uri" : false
+        },
+        "idempotencyToken" : false,
+        "isBinary" : false,
+        "jsonValue" : false,
+        "list" : false,
+        "listModel" : null,
+        "map" : false,
+        "mapModel" : null,
+        "marshallingTargetClass" : "String",
+        "marshallingType" : "STRING",
+        "name" : "ValidatePolicyResourceType",
+        "sensitive" : false,
+        "setterDocumentation" : "/**<p>The type of resource to attach to your resource policy. Specify a value for the policy validation resource type only if the policy type is <code>RESOURCE_POLICY</code>. For example, to validate a resource policy to attach to an Amazon S3 bucket, you can choose <code>AWS::S3::Bucket</code> for the policy validation resource type.</p> <p>For resource types not supported as valid values, IAM Access Analyzer runs policy checks that apply to all resource policies. For example, to validate a resource policy to attach to a KMS key, do not specify a value for the policy validation resource type and IAM Access Analyzer will run policy checks that apply to all resource policies.</p>\n@param validatePolicyResourceType The type of resource to attach to your resource policy. Specify a value for the policy validation resource type only if the policy type is <code>RESOURCE_POLICY</code>. For example, to validate a resource policy to attach to an Amazon S3 bucket, you can choose <code>AWS::S3::Bucket</code> for the policy validation resource type.</p> <p>For resource types not supported as valid values, IAM Access Analyzer runs policy checks that apply to all resource policies. For example, to validate a resource policy to attach to a KMS key, do not specify a value for the policy validation resource type and IAM Access Analyzer will run policy checks that apply to all resource policies.\n@see ValidatePolicyResourceType*/",
+        "setterMethodName" : "setValidatePolicyResourceType",
+        "setterModel" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "String",
+          "variableName" : "validatePolicyResourceType",
+          "variableType" : "String",
+          "documentation" : "",
+          "simpleType" : "String",
+          "variableSetterType" : "String"
+        },
+        "shouldEmitLegacyEnumSetter" : false,
+        "shouldFullyQualify" : false,
+        "simple" : true,
+        "unmarshallingType" : null,
+        "varargSetterDocumentation" : "/**<p>The type of resource to attach to your resource policy. Specify a value for the policy validation resource type only if the policy type is <code>RESOURCE_POLICY</code>. For example, to validate a resource policy to attach to an Amazon S3 bucket, you can choose <code>AWS::S3::Bucket</code> for the policy validation resource type.</p> <p>For resource types not supported as valid values, IAM Access Analyzer runs policy checks that apply to all resource policies. For example, to validate a resource policy to attach to a KMS key, do not specify a value for the policy validation resource type and IAM Access Analyzer will run policy checks that apply to all resource policies.</p>\n@param validatePolicyResourceType The type of resource to attach to your resource policy. Specify a value for the policy validation resource type only if the policy type is <code>RESOURCE_POLICY</code>. For example, to validate a resource policy to attach to an Amazon S3 bucket, you can choose <code>AWS::S3::Bucket</code> for the policy validation resource type.</p> <p>For resource types not supported as valid values, IAM Access Analyzer runs policy checks that apply to all resource policies. For example, to validate a resource policy to attach to a KMS key, do not specify a value for the policy validation resource type and IAM Access Analyzer will run policy checks that apply to all resource policies.\n@return Returns a reference to this object so that method calls can be chained together.\n@see ValidatePolicyResourceType*/",
+        "variable" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "String",
+          "variableName" : "validatePolicyResourceType",
+          "variableType" : "String",
+          "documentation" : "<p>The type of resource to attach to your resource policy. Specify a value for the policy validation resource type only if the policy type is <code>RESOURCE_POLICY</code>. For example, to validate a resource policy to attach to an Amazon S3 bucket, you can choose <code>AWS::S3::Bucket</code> for the policy validation resource type.</p> <p>For resource types not supported as valid values, IAM Access Analyzer runs policy checks that apply to all resource policies. For example, to validate a resource policy to attach to a KMS key, do not specify a value for the policy validation resource type and IAM Access Analyzer will run policy checks that apply to all resource policies.</p>",
+          "simpleType" : "String",
+          "variableSetterType" : "String"
+        },
+        "xmlNameSpaceUri" : null
       } ],
       "membersAsMap" : {
         "Locale" : {
@@ -57156,6 +57225,76 @@
             "variableSetterType" : "String"
           },
           "xmlNameSpaceUri" : null
+        },
+        "ValidatePolicyResourceType" : {
+          "c2jName" : "validatePolicyResourceType",
+          "c2jShape" : "ValidatePolicyResourceType",
+          "deprecated" : false,
+          "documentation" : "<p>The type of resource to attach to your resource policy. Specify a value for the policy validation resource type only if the policy type is <code>RESOURCE_POLICY</code>. For example, to validate a resource policy to attach to an Amazon S3 bucket, you can choose <code>AWS::S3::Bucket</code> for the policy validation resource type.</p> <p>For resource types not supported as valid values, IAM Access Analyzer runs policy checks that apply to all resource policies. For example, to validate a resource policy to attach to a KMS key, do not specify a value for the policy validation resource type and IAM Access Analyzer will run policy checks that apply to all resource policies.</p>",
+          "endpointDiscoveryId" : false,
+          "enumType" : "ValidatePolicyResourceType",
+          "fluentSetterDocumentation" : "/**<p>The type of resource to attach to your resource policy. Specify a value for the policy validation resource type only if the policy type is <code>RESOURCE_POLICY</code>. For example, to validate a resource policy to attach to an Amazon S3 bucket, you can choose <code>AWS::S3::Bucket</code> for the policy validation resource type.</p> <p>For resource types not supported as valid values, IAM Access Analyzer runs policy checks that apply to all resource policies. For example, to validate a resource policy to attach to a KMS key, do not specify a value for the policy validation resource type and IAM Access Analyzer will run policy checks that apply to all resource policies.</p>\n@param validatePolicyResourceType The type of resource to attach to your resource policy. Specify a value for the policy validation resource type only if the policy type is <code>RESOURCE_POLICY</code>. For example, to validate a resource policy to attach to an Amazon S3 bucket, you can choose <code>AWS::S3::Bucket</code> for the policy validation resource type.</p> <p>For resource types not supported as valid values, IAM Access Analyzer runs policy checks that apply to all resource policies. For example, to validate a resource policy to attach to a KMS key, do not specify a value for the policy validation resource type and IAM Access Analyzer will run policy checks that apply to all resource policies.\n@return Returns a reference to this object so that method calls can be chained together.\n@see ValidatePolicyResourceType*/",
+          "fluentSetterMethodName" : "withValidatePolicyResourceType",
+          "getterDocumentation" : "/**<p>The type of resource to attach to your resource policy. Specify a value for the policy validation resource type only if the policy type is <code>RESOURCE_POLICY</code>. For example, to validate a resource policy to attach to an Amazon S3 bucket, you can choose <code>AWS::S3::Bucket</code> for the policy validation resource type.</p> <p>For resource types not supported as valid values, IAM Access Analyzer runs policy checks that apply to all resource policies. For example, to validate a resource policy to attach to a KMS key, do not specify a value for the policy validation resource type and IAM Access Analyzer will run policy checks that apply to all resource policies.</p>\n@return The type of resource to attach to your resource policy. Specify a value for the policy validation resource type only if the policy type is <code>RESOURCE_POLICY</code>. For example, to validate a resource policy to attach to an Amazon S3 bucket, you can choose <code>AWS::S3::Bucket</code> for the policy validation resource type.</p> <p>For resource types not supported as valid values, IAM Access Analyzer runs policy checks that apply to all resource policies. For example, to validate a resource policy to attach to a KMS key, do not specify a value for the policy validation resource type and IAM Access Analyzer will run policy checks that apply to all resource policies.\n@see ValidatePolicyResourceType*/",
+          "getterMethodName" : "getValidatePolicyResourceType",
+          "getterModel" : {
+            "returnType" : "String",
+            "documentation" : null
+          },
+          "http" : {
+            "additionalMarshallingPath" : null,
+            "additionalUnmarshallingPath" : null,
+            "flattened" : false,
+            "greedy" : false,
+            "header" : false,
+            "isPayload" : false,
+            "isStreaming" : false,
+            "location" : null,
+            "marshallLocation" : "PAYLOAD",
+            "marshallLocationName" : "validatePolicyResourceType",
+            "queryString" : false,
+            "requiresLength" : false,
+            "statusCode" : false,
+            "unmarshallLocationName" : "validatePolicyResourceType",
+            "uri" : false
+          },
+          "idempotencyToken" : false,
+          "isBinary" : false,
+          "jsonValue" : false,
+          "list" : false,
+          "listModel" : null,
+          "map" : false,
+          "mapModel" : null,
+          "marshallingTargetClass" : "String",
+          "marshallingType" : "STRING",
+          "name" : "ValidatePolicyResourceType",
+          "sensitive" : false,
+          "setterDocumentation" : "/**<p>The type of resource to attach to your resource policy. Specify a value for the policy validation resource type only if the policy type is <code>RESOURCE_POLICY</code>. For example, to validate a resource policy to attach to an Amazon S3 bucket, you can choose <code>AWS::S3::Bucket</code> for the policy validation resource type.</p> <p>For resource types not supported as valid values, IAM Access Analyzer runs policy checks that apply to all resource policies. For example, to validate a resource policy to attach to a KMS key, do not specify a value for the policy validation resource type and IAM Access Analyzer will run policy checks that apply to all resource policies.</p>\n@param validatePolicyResourceType The type of resource to attach to your resource policy. Specify a value for the policy validation resource type only if the policy type is <code>RESOURCE_POLICY</code>. For example, to validate a resource policy to attach to an Amazon S3 bucket, you can choose <code>AWS::S3::Bucket</code> for the policy validation resource type.</p> <p>For resource types not supported as valid values, IAM Access Analyzer runs policy checks that apply to all resource policies. For example, to validate a resource policy to attach to a KMS key, do not specify a value for the policy validation resource type and IAM Access Analyzer will run policy checks that apply to all resource policies.\n@see ValidatePolicyResourceType*/",
+          "setterMethodName" : "setValidatePolicyResourceType",
+          "setterModel" : {
+            "timestampFormat" : null,
+            "variableDeclarationType" : "String",
+            "variableName" : "validatePolicyResourceType",
+            "variableType" : "String",
+            "documentation" : "",
+            "simpleType" : "String",
+            "variableSetterType" : "String"
+          },
+          "shouldEmitLegacyEnumSetter" : false,
+          "shouldFullyQualify" : false,
+          "simple" : true,
+          "unmarshallingType" : null,
+          "varargSetterDocumentation" : "/**<p>The type of resource to attach to your resource policy. Specify a value for the policy validation resource type only if the policy type is <code>RESOURCE_POLICY</code>. For example, to validate a resource policy to attach to an Amazon S3 bucket, you can choose <code>AWS::S3::Bucket</code> for the policy validation resource type.</p> <p>For resource types not supported as valid values, IAM Access Analyzer runs policy checks that apply to all resource policies. For example, to validate a resource policy to attach to a KMS key, do not specify a value for the policy validation resource type and IAM Access Analyzer will run policy checks that apply to all resource policies.</p>\n@param validatePolicyResourceType The type of resource to attach to your resource policy. Specify a value for the policy validation resource type only if the policy type is <code>RESOURCE_POLICY</code>. For example, to validate a resource policy to attach to an Amazon S3 bucket, you can choose <code>AWS::S3::Bucket</code> for the policy validation resource type.</p> <p>For resource types not supported as valid values, IAM Access Analyzer runs policy checks that apply to all resource policies. For example, to validate a resource policy to attach to a KMS key, do not specify a value for the policy validation resource type and IAM Access Analyzer will run policy checks that apply to all resource policies.\n@return Returns a reference to this object so that method calls can be chained together.\n@see ValidatePolicyResourceType*/",
+          "variable" : {
+            "timestampFormat" : null,
+            "variableDeclarationType" : "String",
+            "variableName" : "validatePolicyResourceType",
+            "variableType" : "String",
+            "documentation" : "<p>The type of resource to attach to your resource policy. Specify a value for the policy validation resource type only if the policy type is <code>RESOURCE_POLICY</code>. For example, to validate a resource policy to attach to an Amazon S3 bucket, you can choose <code>AWS::S3::Bucket</code> for the policy validation resource type.</p> <p>For resource types not supported as valid values, IAM Access Analyzer runs policy checks that apply to all resource policies. For example, to validate a resource policy to attach to a KMS key, do not specify a value for the policy validation resource type and IAM Access Analyzer will run policy checks that apply to all resource policies.</p>",
+            "simpleType" : "String",
+            "variableSetterType" : "String"
+          },
+          "xmlNameSpaceUri" : null
         }
       },
       "packageName" : "com.amazonaws.services.accessanalyzer.request",
@@ -57174,6 +57313,62 @@
         "documentation" : null,
         "simpleType" : "ValidatePolicyRequest",
         "variableSetterType" : "ValidatePolicyRequest"
+      },
+      "wrapper" : false
+    },
+    "ValidatePolicyResourceType" : {
+      "c2jName" : "ValidatePolicyResourceType",
+      "customization" : {
+        "artificialResultWrapper" : null,
+        "skipGeneratingMarshaller" : false,
+        "skipGeneratingModelClass" : false,
+        "skipGeneratingUnmarshaller" : false
+      },
+      "deprecated" : false,
+      "documentation" : "",
+      "endpointDiscoveryMembers" : null,
+      "enums" : [ {
+        "name" : "AWSS3Bucket",
+        "value" : "AWS::S3::Bucket"
+      }, {
+        "name" : "AWSS3AccessPoint",
+        "value" : "AWS::S3::AccessPoint"
+      }, {
+        "name" : "AWSS3MultiRegionAccessPoint",
+        "value" : "AWS::S3::MultiRegionAccessPoint"
+      }, {
+        "name" : "AWSS3ObjectLambdaAccessPoint",
+        "value" : "AWS::S3ObjectLambda::AccessPoint"
+      } ],
+      "errorCode" : null,
+      "fullyQualifiedName" : "com.amazonaws.services.accessanalyzer.enum.ValidatePolicyResourceType",
+      "hasHeaderMember" : false,
+      "hasPayloadMember" : false,
+      "hasRequiresLengthMember" : false,
+      "hasStatusCodeMember" : false,
+      "hasStreamingMember" : false,
+      "marshaller" : null,
+      "members" : null,
+      "membersAsMap" : { },
+      "packageName" : "com.amazonaws.services.accessanalyzer.enum",
+      "requestSignerAware" : false,
+      "requestSignerClassFqcn" : null,
+      "required" : [ ],
+      "shapeName" : "ValidatePolicyResourceType",
+      "signerAware" : false,
+      "signerType" : null,
+      "unmarshaller" : {
+        "flattened" : false,
+        "resultWrapper" : null
+      },
+      "variable" : {
+        "timestampFormat" : null,
+        "variableDeclarationType" : "ValidatePolicyResourceType",
+        "variableName" : "validatePolicyResourceType",
+        "variableType" : "ValidatePolicyResourceType",
+        "documentation" : null,
+        "simpleType" : "ValidatePolicyResourceType",
+        "variableSetterType" : "ValidatePolicyResourceType"
       },
       "wrapper" : false
     },

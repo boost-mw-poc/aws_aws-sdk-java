@@ -76,6 +76,10 @@ public class AdministrativeActionJsonUnmarshaller implements Unmarshaller<Admini
                     context.nextToken();
                     administrativeAction.setTargetVolumeValues(VolumeJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("TargetSnapshotValues", targetDepth)) {
+                    context.nextToken();
+                    administrativeAction.setTargetSnapshotValues(SnapshotJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

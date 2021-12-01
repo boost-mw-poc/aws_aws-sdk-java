@@ -213,6 +213,19 @@ public class GetPartitionsRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </p>
      */
     private Boolean excludeColumnSchema;
+    /**
+     * <p>
+     * The transaction ID at which to read the partition contents.
+     * </p>
+     */
+    private String transactionId;
+    /**
+     * <p>
+     * The time as of when to read the partition contents. If not set, the most recent transaction commit time will be
+     * used. Cannot be specified along with <code>TransactionId</code>.
+     * </p>
+     */
+    private java.util.Date queryAsOfTime;
 
     /**
      * <p>
@@ -1394,6 +1407,92 @@ public class GetPartitionsRequest extends com.amazonaws.AmazonWebServiceRequest 
     }
 
     /**
+     * <p>
+     * The transaction ID at which to read the partition contents.
+     * </p>
+     * 
+     * @param transactionId
+     *        The transaction ID at which to read the partition contents.
+     */
+
+    public void setTransactionId(String transactionId) {
+        this.transactionId = transactionId;
+    }
+
+    /**
+     * <p>
+     * The transaction ID at which to read the partition contents.
+     * </p>
+     * 
+     * @return The transaction ID at which to read the partition contents.
+     */
+
+    public String getTransactionId() {
+        return this.transactionId;
+    }
+
+    /**
+     * <p>
+     * The transaction ID at which to read the partition contents.
+     * </p>
+     * 
+     * @param transactionId
+     *        The transaction ID at which to read the partition contents.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetPartitionsRequest withTransactionId(String transactionId) {
+        setTransactionId(transactionId);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The time as of when to read the partition contents. If not set, the most recent transaction commit time will be
+     * used. Cannot be specified along with <code>TransactionId</code>.
+     * </p>
+     * 
+     * @param queryAsOfTime
+     *        The time as of when to read the partition contents. If not set, the most recent transaction commit time
+     *        will be used. Cannot be specified along with <code>TransactionId</code>.
+     */
+
+    public void setQueryAsOfTime(java.util.Date queryAsOfTime) {
+        this.queryAsOfTime = queryAsOfTime;
+    }
+
+    /**
+     * <p>
+     * The time as of when to read the partition contents. If not set, the most recent transaction commit time will be
+     * used. Cannot be specified along with <code>TransactionId</code>.
+     * </p>
+     * 
+     * @return The time as of when to read the partition contents. If not set, the most recent transaction commit time
+     *         will be used. Cannot be specified along with <code>TransactionId</code>.
+     */
+
+    public java.util.Date getQueryAsOfTime() {
+        return this.queryAsOfTime;
+    }
+
+    /**
+     * <p>
+     * The time as of when to read the partition contents. If not set, the most recent transaction commit time will be
+     * used. Cannot be specified along with <code>TransactionId</code>.
+     * </p>
+     * 
+     * @param queryAsOfTime
+     *        The time as of when to read the partition contents. If not set, the most recent transaction commit time
+     *        will be used. Cannot be specified along with <code>TransactionId</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GetPartitionsRequest withQueryAsOfTime(java.util.Date queryAsOfTime) {
+        setQueryAsOfTime(queryAsOfTime);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1420,7 +1519,11 @@ public class GetPartitionsRequest extends com.amazonaws.AmazonWebServiceRequest 
         if (getMaxResults() != null)
             sb.append("MaxResults: ").append(getMaxResults()).append(",");
         if (getExcludeColumnSchema() != null)
-            sb.append("ExcludeColumnSchema: ").append(getExcludeColumnSchema());
+            sb.append("ExcludeColumnSchema: ").append(getExcludeColumnSchema()).append(",");
+        if (getTransactionId() != null)
+            sb.append("TransactionId: ").append(getTransactionId()).append(",");
+        if (getQueryAsOfTime() != null)
+            sb.append("QueryAsOfTime: ").append(getQueryAsOfTime());
         sb.append("}");
         return sb.toString();
     }
@@ -1467,6 +1570,14 @@ public class GetPartitionsRequest extends com.amazonaws.AmazonWebServiceRequest 
             return false;
         if (other.getExcludeColumnSchema() != null && other.getExcludeColumnSchema().equals(this.getExcludeColumnSchema()) == false)
             return false;
+        if (other.getTransactionId() == null ^ this.getTransactionId() == null)
+            return false;
+        if (other.getTransactionId() != null && other.getTransactionId().equals(this.getTransactionId()) == false)
+            return false;
+        if (other.getQueryAsOfTime() == null ^ this.getQueryAsOfTime() == null)
+            return false;
+        if (other.getQueryAsOfTime() != null && other.getQueryAsOfTime().equals(this.getQueryAsOfTime()) == false)
+            return false;
         return true;
     }
 
@@ -1483,6 +1594,8 @@ public class GetPartitionsRequest extends com.amazonaws.AmazonWebServiceRequest 
         hashCode = prime * hashCode + ((getSegment() == null) ? 0 : getSegment().hashCode());
         hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
         hashCode = prime * hashCode + ((getExcludeColumnSchema() == null) ? 0 : getExcludeColumnSchema().hashCode());
+        hashCode = prime * hashCode + ((getTransactionId() == null) ? 0 : getTransactionId().hashCode());
+        hashCode = prime * hashCode + ((getQueryAsOfTime() == null) ? 0 : getQueryAsOfTime().hashCode());
         return hashCode;
     }
 

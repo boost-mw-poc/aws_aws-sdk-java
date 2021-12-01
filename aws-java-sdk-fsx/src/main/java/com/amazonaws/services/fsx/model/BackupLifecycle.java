@@ -26,13 +26,13 @@ import javax.annotation.Generated;
  * </li>
  * <li>
  * <p>
- * <code>PENDING</code> - For user-initiated backups on Lustre file systems only; Amazon FSx has not started creating
- * the backup.
+ * <code>PENDING</code> - For user-initiated backups on Lustre file systems only; Amazon FSx hasn't started creating the
+ * backup.
  * </p>
  * </li>
  * <li>
  * <p>
- * <code>CREATING</code> - Amazon FSx is creating the new user-intiated backup
+ * <code>CREATING</code> - Amazon FSx is creating the new user-initiated backup.
  * </p>
  * </li>
  * <li>
@@ -48,12 +48,12 @@ import javax.annotation.Generated;
  * </li>
  * <li>
  * <p>
- * <code>DELETED</code> - Amazon FSx deleted the backup and it is no longer available.
+ * <code>DELETED</code> - Amazon FSx deleted the backup and it's no longer available.
  * </p>
  * </li>
  * <li>
  * <p>
- * <code>FAILED</code> - Amazon FSx could not complete the backup.
+ * <code>FAILED</code> - Amazon FSx couldn't finish the backup.
  * </p>
  * </li>
  * </ul>

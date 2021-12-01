@@ -30,14 +30,14 @@ public class DeleteFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The ID of the file system you want to delete.
+     * The ID of the file system that you want to delete.
      * </p>
      */
     private String fileSystemId;
     /**
      * <p>
-     * A string of up to 64 ASCII characters that Amazon FSx uses to ensure idempotent deletion. This is automatically
-     * filled on your behalf when using the Command Line Interface (CLI) or an Amazon Web Services SDK.
+     * A string of up to 64 ASCII characters that Amazon FSx uses to ensure idempotent deletion. This token is
+     * automatically filled on your behalf when using the Command Line Interface (CLI) or an Amazon Web Services SDK.
      * </p>
      */
     private String clientRequestToken;
@@ -45,14 +45,20 @@ public class DeleteFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
     private DeleteFileSystemWindowsConfiguration windowsConfiguration;
 
     private DeleteFileSystemLustreConfiguration lustreConfiguration;
+    /**
+     * <p>
+     * The configuration object for the OpenZFS file system used in the <code>DeleteFileSystem</code> operation.
+     * </p>
+     */
+    private DeleteFileSystemOpenZFSConfiguration openZFSConfiguration;
 
     /**
      * <p>
-     * The ID of the file system you want to delete.
+     * The ID of the file system that you want to delete.
      * </p>
      * 
      * @param fileSystemId
-     *        The ID of the file system you want to delete.
+     *        The ID of the file system that you want to delete.
      */
 
     public void setFileSystemId(String fileSystemId) {
@@ -61,10 +67,10 @@ public class DeleteFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The ID of the file system you want to delete.
+     * The ID of the file system that you want to delete.
      * </p>
      * 
-     * @return The ID of the file system you want to delete.
+     * @return The ID of the file system that you want to delete.
      */
 
     public String getFileSystemId() {
@@ -73,11 +79,11 @@ public class DeleteFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The ID of the file system you want to delete.
+     * The ID of the file system that you want to delete.
      * </p>
      * 
      * @param fileSystemId
-     *        The ID of the file system you want to delete.
+     *        The ID of the file system that you want to delete.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -88,12 +94,12 @@ public class DeleteFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * A string of up to 64 ASCII characters that Amazon FSx uses to ensure idempotent deletion. This is automatically
-     * filled on your behalf when using the Command Line Interface (CLI) or an Amazon Web Services SDK.
+     * A string of up to 64 ASCII characters that Amazon FSx uses to ensure idempotent deletion. This token is
+     * automatically filled on your behalf when using the Command Line Interface (CLI) or an Amazon Web Services SDK.
      * </p>
      * 
      * @param clientRequestToken
-     *        A string of up to 64 ASCII characters that Amazon FSx uses to ensure idempotent deletion. This is
+     *        A string of up to 64 ASCII characters that Amazon FSx uses to ensure idempotent deletion. This token is
      *        automatically filled on your behalf when using the Command Line Interface (CLI) or an Amazon Web Services
      *        SDK.
      */
@@ -104,11 +110,11 @@ public class DeleteFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * A string of up to 64 ASCII characters that Amazon FSx uses to ensure idempotent deletion. This is automatically
-     * filled on your behalf when using the Command Line Interface (CLI) or an Amazon Web Services SDK.
+     * A string of up to 64 ASCII characters that Amazon FSx uses to ensure idempotent deletion. This token is
+     * automatically filled on your behalf when using the Command Line Interface (CLI) or an Amazon Web Services SDK.
      * </p>
      * 
-     * @return A string of up to 64 ASCII characters that Amazon FSx uses to ensure idempotent deletion. This is
+     * @return A string of up to 64 ASCII characters that Amazon FSx uses to ensure idempotent deletion. This token is
      *         automatically filled on your behalf when using the Command Line Interface (CLI) or an Amazon Web Services
      *         SDK.
      */
@@ -119,12 +125,12 @@ public class DeleteFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * A string of up to 64 ASCII characters that Amazon FSx uses to ensure idempotent deletion. This is automatically
-     * filled on your behalf when using the Command Line Interface (CLI) or an Amazon Web Services SDK.
+     * A string of up to 64 ASCII characters that Amazon FSx uses to ensure idempotent deletion. This token is
+     * automatically filled on your behalf when using the Command Line Interface (CLI) or an Amazon Web Services SDK.
      * </p>
      * 
      * @param clientRequestToken
-     *        A string of up to 64 ASCII characters that Amazon FSx uses to ensure idempotent deletion. This is
+     *        A string of up to 64 ASCII characters that Amazon FSx uses to ensure idempotent deletion. This token is
      *        automatically filled on your behalf when using the Command Line Interface (CLI) or an Amazon Web Services
      *        SDK.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -188,6 +194,46 @@ public class DeleteFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
+     * <p>
+     * The configuration object for the OpenZFS file system used in the <code>DeleteFileSystem</code> operation.
+     * </p>
+     * 
+     * @param openZFSConfiguration
+     *        The configuration object for the OpenZFS file system used in the <code>DeleteFileSystem</code> operation.
+     */
+
+    public void setOpenZFSConfiguration(DeleteFileSystemOpenZFSConfiguration openZFSConfiguration) {
+        this.openZFSConfiguration = openZFSConfiguration;
+    }
+
+    /**
+     * <p>
+     * The configuration object for the OpenZFS file system used in the <code>DeleteFileSystem</code> operation.
+     * </p>
+     * 
+     * @return The configuration object for the OpenZFS file system used in the <code>DeleteFileSystem</code> operation.
+     */
+
+    public DeleteFileSystemOpenZFSConfiguration getOpenZFSConfiguration() {
+        return this.openZFSConfiguration;
+    }
+
+    /**
+     * <p>
+     * The configuration object for the OpenZFS file system used in the <code>DeleteFileSystem</code> operation.
+     * </p>
+     * 
+     * @param openZFSConfiguration
+     *        The configuration object for the OpenZFS file system used in the <code>DeleteFileSystem</code> operation.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DeleteFileSystemRequest withOpenZFSConfiguration(DeleteFileSystemOpenZFSConfiguration openZFSConfiguration) {
+        setOpenZFSConfiguration(openZFSConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -206,7 +252,9 @@ public class DeleteFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
         if (getWindowsConfiguration() != null)
             sb.append("WindowsConfiguration: ").append(getWindowsConfiguration()).append(",");
         if (getLustreConfiguration() != null)
-            sb.append("LustreConfiguration: ").append(getLustreConfiguration());
+            sb.append("LustreConfiguration: ").append(getLustreConfiguration()).append(",");
+        if (getOpenZFSConfiguration() != null)
+            sb.append("OpenZFSConfiguration: ").append(getOpenZFSConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -237,6 +285,10 @@ public class DeleteFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
             return false;
         if (other.getLustreConfiguration() != null && other.getLustreConfiguration().equals(this.getLustreConfiguration()) == false)
             return false;
+        if (other.getOpenZFSConfiguration() == null ^ this.getOpenZFSConfiguration() == null)
+            return false;
+        if (other.getOpenZFSConfiguration() != null && other.getOpenZFSConfiguration().equals(this.getOpenZFSConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -249,6 +301,7 @@ public class DeleteFileSystemRequest extends com.amazonaws.AmazonWebServiceReque
         hashCode = prime * hashCode + ((getClientRequestToken() == null) ? 0 : getClientRequestToken().hashCode());
         hashCode = prime * hashCode + ((getWindowsConfiguration() == null) ? 0 : getWindowsConfiguration().hashCode());
         hashCode = prime * hashCode + ((getLustreConfiguration() == null) ? 0 : getLustreConfiguration().hashCode());
+        hashCode = prime * hashCode + ((getOpenZFSConfiguration() == null) ? 0 : getOpenZFSConfiguration().hashCode());
         return hashCode;
     }
 

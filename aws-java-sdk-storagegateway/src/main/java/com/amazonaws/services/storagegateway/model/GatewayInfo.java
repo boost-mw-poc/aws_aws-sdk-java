@@ -75,6 +75,19 @@ public class GatewayInfo implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private String ec2InstanceRegion;
+    /**
+     * <p>
+     * The type of hardware or software platform on which the gateway is running.
+     * </p>
+     */
+    private String hostEnvironment;
+    /**
+     * <p>
+     * A unique identifier for the specific instance of the host platform running the gateway. This value is only
+     * available for certain host environments, and its format depends on the host environment type.
+     * </p>
+     */
+    private String hostEnvironmentId;
 
     /**
      * <p>
@@ -384,6 +397,111 @@ public class GatewayInfo implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The type of hardware or software platform on which the gateway is running.
+     * </p>
+     * 
+     * @param hostEnvironment
+     *        The type of hardware or software platform on which the gateway is running.
+     * @see HostEnvironment
+     */
+
+    public void setHostEnvironment(String hostEnvironment) {
+        this.hostEnvironment = hostEnvironment;
+    }
+
+    /**
+     * <p>
+     * The type of hardware or software platform on which the gateway is running.
+     * </p>
+     * 
+     * @return The type of hardware or software platform on which the gateway is running.
+     * @see HostEnvironment
+     */
+
+    public String getHostEnvironment() {
+        return this.hostEnvironment;
+    }
+
+    /**
+     * <p>
+     * The type of hardware or software platform on which the gateway is running.
+     * </p>
+     * 
+     * @param hostEnvironment
+     *        The type of hardware or software platform on which the gateway is running.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see HostEnvironment
+     */
+
+    public GatewayInfo withHostEnvironment(String hostEnvironment) {
+        setHostEnvironment(hostEnvironment);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The type of hardware or software platform on which the gateway is running.
+     * </p>
+     * 
+     * @param hostEnvironment
+     *        The type of hardware or software platform on which the gateway is running.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see HostEnvironment
+     */
+
+    public GatewayInfo withHostEnvironment(HostEnvironment hostEnvironment) {
+        this.hostEnvironment = hostEnvironment.toString();
+        return this;
+    }
+
+    /**
+     * <p>
+     * A unique identifier for the specific instance of the host platform running the gateway. This value is only
+     * available for certain host environments, and its format depends on the host environment type.
+     * </p>
+     * 
+     * @param hostEnvironmentId
+     *        A unique identifier for the specific instance of the host platform running the gateway. This value is only
+     *        available for certain host environments, and its format depends on the host environment type.
+     */
+
+    public void setHostEnvironmentId(String hostEnvironmentId) {
+        this.hostEnvironmentId = hostEnvironmentId;
+    }
+
+    /**
+     * <p>
+     * A unique identifier for the specific instance of the host platform running the gateway. This value is only
+     * available for certain host environments, and its format depends on the host environment type.
+     * </p>
+     * 
+     * @return A unique identifier for the specific instance of the host platform running the gateway. This value is
+     *         only available for certain host environments, and its format depends on the host environment type.
+     */
+
+    public String getHostEnvironmentId() {
+        return this.hostEnvironmentId;
+    }
+
+    /**
+     * <p>
+     * A unique identifier for the specific instance of the host platform running the gateway. This value is only
+     * available for certain host environments, and its format depends on the host environment type.
+     * </p>
+     * 
+     * @param hostEnvironmentId
+     *        A unique identifier for the specific instance of the host platform running the gateway. This value is only
+     *        available for certain host environments, and its format depends on the host environment type.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public GatewayInfo withHostEnvironmentId(String hostEnvironmentId) {
+        setHostEnvironmentId(hostEnvironmentId);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -408,7 +526,11 @@ public class GatewayInfo implements Serializable, Cloneable, StructuredPojo {
         if (getEc2InstanceId() != null)
             sb.append("Ec2InstanceId: ").append(getEc2InstanceId()).append(",");
         if (getEc2InstanceRegion() != null)
-            sb.append("Ec2InstanceRegion: ").append(getEc2InstanceRegion());
+            sb.append("Ec2InstanceRegion: ").append(getEc2InstanceRegion()).append(",");
+        if (getHostEnvironment() != null)
+            sb.append("HostEnvironment: ").append(getHostEnvironment()).append(",");
+        if (getHostEnvironmentId() != null)
+            sb.append("HostEnvironmentId: ").append(getHostEnvironmentId());
         sb.append("}");
         return sb.toString();
     }
@@ -451,6 +573,14 @@ public class GatewayInfo implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getEc2InstanceRegion() != null && other.getEc2InstanceRegion().equals(this.getEc2InstanceRegion()) == false)
             return false;
+        if (other.getHostEnvironment() == null ^ this.getHostEnvironment() == null)
+            return false;
+        if (other.getHostEnvironment() != null && other.getHostEnvironment().equals(this.getHostEnvironment()) == false)
+            return false;
+        if (other.getHostEnvironmentId() == null ^ this.getHostEnvironmentId() == null)
+            return false;
+        if (other.getHostEnvironmentId() != null && other.getHostEnvironmentId().equals(this.getHostEnvironmentId()) == false)
+            return false;
         return true;
     }
 
@@ -466,6 +596,8 @@ public class GatewayInfo implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getGatewayName() == null) ? 0 : getGatewayName().hashCode());
         hashCode = prime * hashCode + ((getEc2InstanceId() == null) ? 0 : getEc2InstanceId().hashCode());
         hashCode = prime * hashCode + ((getEc2InstanceRegion() == null) ? 0 : getEc2InstanceRegion().hashCode());
+        hashCode = prime * hashCode + ((getHostEnvironment() == null) ? 0 : getHostEnvironment().hashCode());
+        hashCode = prime * hashCode + ((getHostEnvironmentId() == null) ? 0 : getHostEnvironmentId().hashCode());
         return hashCode;
     }
 

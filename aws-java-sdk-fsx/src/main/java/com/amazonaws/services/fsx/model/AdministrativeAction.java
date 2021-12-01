@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Describes a specific Amazon FSx administrative action for the current Windows or Lustre file system.
+ * Describes a specific Amazon FSx administrative action for the current Windows, Lustre, or OpenZFS file system.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/AdministrativeAction" target="_top">AWS API
@@ -31,14 +31,14 @@ public class AdministrativeAction implements Serializable, Cloneable, Structured
     private String administrativeActionType;
     /**
      * <p>
-     * Provides the percent complete of a <code>STORAGE_OPTIMIZATION</code> administrative action. Does not apply to any
-     * other administrative action type.
+     * The percentage-complete status of a <code>STORAGE_OPTIMIZATION</code> administrative action. Does not apply to
+     * any other administrative action type.
      * </p>
      */
     private Integer progressPercent;
     /**
      * <p>
-     * Time that the administrative action request was received.
+     * The time that the administrative action request was received.
      * </p>
      */
     private java.util.Date requestTime;
@@ -69,12 +69,8 @@ public class AdministrativeAction implements Serializable, Cloneable, Structured
      * </li>
      * <li>
      * <p>
-     * <code>UPDATED_OPTIMIZING</code> - For a storage capacity increase update, Amazon FSx has updated the file system
-     * with the new storage capacity, and is now performing the storage optimization process. For more information, see
-     * <a href="https://docs.aws.amazon.com/fsx/latest/WindowsGuide/managing-storage-capacity.html">Managing storage
-     * capacity</a> in the <i>Amazon FSx for Windows File Server User Guide</i> and <a
-     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/managing-storage-capacity.html">Managing storage and
-     * throughput capacity</a> in the <i>Amazon FSx for Lustre User Guide</i>.
+     * <code>UPDATED_OPTIMIZING</code> - For a storage-capacity increase update, Amazon FSx has updated the file system
+     * with the new storage capacity, and is now performing the storage-optimization process.
      * </p>
      * </li>
      * </ul>
@@ -91,6 +87,8 @@ public class AdministrativeAction implements Serializable, Cloneable, Structured
     private AdministrativeActionFailureDetails failureDetails;
 
     private Volume targetVolumeValues;
+
+    private Snapshot targetSnapshotValues;
 
     /**
      * @param administrativeActionType
@@ -134,13 +132,13 @@ public class AdministrativeAction implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Provides the percent complete of a <code>STORAGE_OPTIMIZATION</code> administrative action. Does not apply to any
-     * other administrative action type.
+     * The percentage-complete status of a <code>STORAGE_OPTIMIZATION</code> administrative action. Does not apply to
+     * any other administrative action type.
      * </p>
      * 
      * @param progressPercent
-     *        Provides the percent complete of a <code>STORAGE_OPTIMIZATION</code> administrative action. Does not apply
-     *        to any other administrative action type.
+     *        The percentage-complete status of a <code>STORAGE_OPTIMIZATION</code> administrative action. Does not
+     *        apply to any other administrative action type.
      */
 
     public void setProgressPercent(Integer progressPercent) {
@@ -149,11 +147,11 @@ public class AdministrativeAction implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Provides the percent complete of a <code>STORAGE_OPTIMIZATION</code> administrative action. Does not apply to any
-     * other administrative action type.
+     * The percentage-complete status of a <code>STORAGE_OPTIMIZATION</code> administrative action. Does not apply to
+     * any other administrative action type.
      * </p>
      * 
-     * @return Provides the percent complete of a <code>STORAGE_OPTIMIZATION</code> administrative action. Does not
+     * @return The percentage-complete status of a <code>STORAGE_OPTIMIZATION</code> administrative action. Does not
      *         apply to any other administrative action type.
      */
 
@@ -163,13 +161,13 @@ public class AdministrativeAction implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Provides the percent complete of a <code>STORAGE_OPTIMIZATION</code> administrative action. Does not apply to any
-     * other administrative action type.
+     * The percentage-complete status of a <code>STORAGE_OPTIMIZATION</code> administrative action. Does not apply to
+     * any other administrative action type.
      * </p>
      * 
      * @param progressPercent
-     *        Provides the percent complete of a <code>STORAGE_OPTIMIZATION</code> administrative action. Does not apply
-     *        to any other administrative action type.
+     *        The percentage-complete status of a <code>STORAGE_OPTIMIZATION</code> administrative action. Does not
+     *        apply to any other administrative action type.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -180,11 +178,11 @@ public class AdministrativeAction implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Time that the administrative action request was received.
+     * The time that the administrative action request was received.
      * </p>
      * 
      * @param requestTime
-     *        Time that the administrative action request was received.
+     *        The time that the administrative action request was received.
      */
 
     public void setRequestTime(java.util.Date requestTime) {
@@ -193,10 +191,10 @@ public class AdministrativeAction implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Time that the administrative action request was received.
+     * The time that the administrative action request was received.
      * </p>
      * 
-     * @return Time that the administrative action request was received.
+     * @return The time that the administrative action request was received.
      */
 
     public java.util.Date getRequestTime() {
@@ -205,11 +203,11 @@ public class AdministrativeAction implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * Time that the administrative action request was received.
+     * The time that the administrative action request was received.
      * </p>
      * 
      * @param requestTime
-     *        Time that the administrative action request was received.
+     *        The time that the administrative action request was received.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -245,12 +243,8 @@ public class AdministrativeAction implements Serializable, Cloneable, Structured
      * </li>
      * <li>
      * <p>
-     * <code>UPDATED_OPTIMIZING</code> - For a storage capacity increase update, Amazon FSx has updated the file system
-     * with the new storage capacity, and is now performing the storage optimization process. For more information, see
-     * <a href="https://docs.aws.amazon.com/fsx/latest/WindowsGuide/managing-storage-capacity.html">Managing storage
-     * capacity</a> in the <i>Amazon FSx for Windows File Server User Guide</i> and <a
-     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/managing-storage-capacity.html">Managing storage and
-     * throughput capacity</a> in the <i>Amazon FSx for Lustre User Guide</i>.
+     * <code>UPDATED_OPTIMIZING</code> - For a storage-capacity increase update, Amazon FSx has updated the file system
+     * with the new storage capacity, and is now performing the storage-optimization process.
      * </p>
      * </li>
      * </ul>
@@ -280,13 +274,8 @@ public class AdministrativeAction implements Serializable, Cloneable, Structured
      *        </li>
      *        <li>
      *        <p>
-     *        <code>UPDATED_OPTIMIZING</code> - For a storage capacity increase update, Amazon FSx has updated the file
-     *        system with the new storage capacity, and is now performing the storage optimization process. For more
-     *        information, see <a
-     *        href="https://docs.aws.amazon.com/fsx/latest/WindowsGuide/managing-storage-capacity.html">Managing storage
-     *        capacity</a> in the <i>Amazon FSx for Windows File Server User Guide</i> and <a
-     *        href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/managing-storage-capacity.html">Managing storage
-     *        and throughput capacity</a> in the <i>Amazon FSx for Lustre User Guide</i>.
+     *        <code>UPDATED_OPTIMIZING</code> - For a storage-capacity increase update, Amazon FSx has updated the file
+     *        system with the new storage capacity, and is now performing the storage-optimization process.
      *        </p>
      *        </li>
      * @see Status
@@ -323,12 +312,8 @@ public class AdministrativeAction implements Serializable, Cloneable, Structured
      * </li>
      * <li>
      * <p>
-     * <code>UPDATED_OPTIMIZING</code> - For a storage capacity increase update, Amazon FSx has updated the file system
-     * with the new storage capacity, and is now performing the storage optimization process. For more information, see
-     * <a href="https://docs.aws.amazon.com/fsx/latest/WindowsGuide/managing-storage-capacity.html">Managing storage
-     * capacity</a> in the <i>Amazon FSx for Windows File Server User Guide</i> and <a
-     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/managing-storage-capacity.html">Managing storage and
-     * throughput capacity</a> in the <i>Amazon FSx for Lustre User Guide</i>.
+     * <code>UPDATED_OPTIMIZING</code> - For a storage-capacity increase update, Amazon FSx has updated the file system
+     * with the new storage capacity, and is now performing the storage-optimization process.
      * </p>
      * </li>
      * </ul>
@@ -357,13 +342,8 @@ public class AdministrativeAction implements Serializable, Cloneable, Structured
      *         </li>
      *         <li>
      *         <p>
-     *         <code>UPDATED_OPTIMIZING</code> - For a storage capacity increase update, Amazon FSx has updated the file
-     *         system with the new storage capacity, and is now performing the storage optimization process. For more
-     *         information, see <a
-     *         href="https://docs.aws.amazon.com/fsx/latest/WindowsGuide/managing-storage-capacity.html">Managing
-     *         storage capacity</a> in the <i>Amazon FSx for Windows File Server User Guide</i> and <a
-     *         href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/managing-storage-capacity.html">Managing storage
-     *         and throughput capacity</a> in the <i>Amazon FSx for Lustre User Guide</i>.
+     *         <code>UPDATED_OPTIMIZING</code> - For a storage-capacity increase update, Amazon FSx has updated the file
+     *         system with the new storage capacity, and is now performing the storage-optimization process.
      *         </p>
      *         </li>
      * @see Status
@@ -400,12 +380,8 @@ public class AdministrativeAction implements Serializable, Cloneable, Structured
      * </li>
      * <li>
      * <p>
-     * <code>UPDATED_OPTIMIZING</code> - For a storage capacity increase update, Amazon FSx has updated the file system
-     * with the new storage capacity, and is now performing the storage optimization process. For more information, see
-     * <a href="https://docs.aws.amazon.com/fsx/latest/WindowsGuide/managing-storage-capacity.html">Managing storage
-     * capacity</a> in the <i>Amazon FSx for Windows File Server User Guide</i> and <a
-     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/managing-storage-capacity.html">Managing storage and
-     * throughput capacity</a> in the <i>Amazon FSx for Lustre User Guide</i>.
+     * <code>UPDATED_OPTIMIZING</code> - For a storage-capacity increase update, Amazon FSx has updated the file system
+     * with the new storage capacity, and is now performing the storage-optimization process.
      * </p>
      * </li>
      * </ul>
@@ -435,13 +411,8 @@ public class AdministrativeAction implements Serializable, Cloneable, Structured
      *        </li>
      *        <li>
      *        <p>
-     *        <code>UPDATED_OPTIMIZING</code> - For a storage capacity increase update, Amazon FSx has updated the file
-     *        system with the new storage capacity, and is now performing the storage optimization process. For more
-     *        information, see <a
-     *        href="https://docs.aws.amazon.com/fsx/latest/WindowsGuide/managing-storage-capacity.html">Managing storage
-     *        capacity</a> in the <i>Amazon FSx for Windows File Server User Guide</i> and <a
-     *        href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/managing-storage-capacity.html">Managing storage
-     *        and throughput capacity</a> in the <i>Amazon FSx for Lustre User Guide</i>.
+     *        <code>UPDATED_OPTIMIZING</code> - For a storage-capacity increase update, Amazon FSx has updated the file
+     *        system with the new storage capacity, and is now performing the storage-optimization process.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -480,12 +451,8 @@ public class AdministrativeAction implements Serializable, Cloneable, Structured
      * </li>
      * <li>
      * <p>
-     * <code>UPDATED_OPTIMIZING</code> - For a storage capacity increase update, Amazon FSx has updated the file system
-     * with the new storage capacity, and is now performing the storage optimization process. For more information, see
-     * <a href="https://docs.aws.amazon.com/fsx/latest/WindowsGuide/managing-storage-capacity.html">Managing storage
-     * capacity</a> in the <i>Amazon FSx for Windows File Server User Guide</i> and <a
-     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/managing-storage-capacity.html">Managing storage and
-     * throughput capacity</a> in the <i>Amazon FSx for Lustre User Guide</i>.
+     * <code>UPDATED_OPTIMIZING</code> - For a storage-capacity increase update, Amazon FSx has updated the file system
+     * with the new storage capacity, and is now performing the storage-optimization process.
      * </p>
      * </li>
      * </ul>
@@ -515,13 +482,8 @@ public class AdministrativeAction implements Serializable, Cloneable, Structured
      *        </li>
      *        <li>
      *        <p>
-     *        <code>UPDATED_OPTIMIZING</code> - For a storage capacity increase update, Amazon FSx has updated the file
-     *        system with the new storage capacity, and is now performing the storage optimization process. For more
-     *        information, see <a
-     *        href="https://docs.aws.amazon.com/fsx/latest/WindowsGuide/managing-storage-capacity.html">Managing storage
-     *        capacity</a> in the <i>Amazon FSx for Windows File Server User Guide</i> and <a
-     *        href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/managing-storage-capacity.html">Managing storage
-     *        and throughput capacity</a> in the <i>Amazon FSx for Lustre User Guide</i>.
+     *        <code>UPDATED_OPTIMIZING</code> - For a storage-capacity increase update, Amazon FSx has updated the file
+     *        system with the new storage capacity, and is now performing the storage-optimization process.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -632,6 +594,32 @@ public class AdministrativeAction implements Serializable, Cloneable, Structured
     }
 
     /**
+     * @param targetSnapshotValues
+     */
+
+    public void setTargetSnapshotValues(Snapshot targetSnapshotValues) {
+        this.targetSnapshotValues = targetSnapshotValues;
+    }
+
+    /**
+     * @return
+     */
+
+    public Snapshot getTargetSnapshotValues() {
+        return this.targetSnapshotValues;
+    }
+
+    /**
+     * @param targetSnapshotValues
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AdministrativeAction withTargetSnapshotValues(Snapshot targetSnapshotValues) {
+        setTargetSnapshotValues(targetSnapshotValues);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -656,7 +644,9 @@ public class AdministrativeAction implements Serializable, Cloneable, Structured
         if (getFailureDetails() != null)
             sb.append("FailureDetails: ").append(getFailureDetails()).append(",");
         if (getTargetVolumeValues() != null)
-            sb.append("TargetVolumeValues: ").append(getTargetVolumeValues());
+            sb.append("TargetVolumeValues: ").append(getTargetVolumeValues()).append(",");
+        if (getTargetSnapshotValues() != null)
+            sb.append("TargetSnapshotValues: ").append(getTargetSnapshotValues());
         sb.append("}");
         return sb.toString();
     }
@@ -699,6 +689,10 @@ public class AdministrativeAction implements Serializable, Cloneable, Structured
             return false;
         if (other.getTargetVolumeValues() != null && other.getTargetVolumeValues().equals(this.getTargetVolumeValues()) == false)
             return false;
+        if (other.getTargetSnapshotValues() == null ^ this.getTargetSnapshotValues() == null)
+            return false;
+        if (other.getTargetSnapshotValues() != null && other.getTargetSnapshotValues().equals(this.getTargetSnapshotValues()) == false)
+            return false;
         return true;
     }
 
@@ -714,6 +708,7 @@ public class AdministrativeAction implements Serializable, Cloneable, Structured
         hashCode = prime * hashCode + ((getTargetFileSystemValues() == null) ? 0 : getTargetFileSystemValues().hashCode());
         hashCode = prime * hashCode + ((getFailureDetails() == null) ? 0 : getFailureDetails().hashCode());
         hashCode = prime * hashCode + ((getTargetVolumeValues() == null) ? 0 : getTargetVolumeValues().hashCode());
+        hashCode = prime * hashCode + ((getTargetSnapshotValues() == null) ? 0 : getTargetSnapshotValues().hashCode());
         return hashCode;
     }
 

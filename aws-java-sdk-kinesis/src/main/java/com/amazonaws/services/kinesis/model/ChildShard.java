@@ -18,6 +18,9 @@ import com.amazonaws.protocol.StructuredPojo;
 import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
+ * <p>
+ * Output parameter of the GetRecords API. The existing child shard of the current shard.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/kinesis-2013-12-02/ChildShard" target="_top">AWS API
  *      Documentation</a>
@@ -25,14 +28,28 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class ChildShard implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * The shard ID of the existing child shard of the current shard.
+     * </p>
+     */
     private String shardId;
-
+    /**
+     * <p>
+     * The current shard that is the parent of the existing child shard.
+     * </p>
+     */
     private com.amazonaws.internal.SdkInternalList<String> parentShards;
 
     private HashKeyRange hashKeyRange;
 
     /**
+     * <p>
+     * The shard ID of the existing child shard of the current shard.
+     * </p>
+     * 
      * @param shardId
+     *        The shard ID of the existing child shard of the current shard.
      */
 
     public void setShardId(String shardId) {
@@ -40,7 +57,11 @@ public class ChildShard implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * The shard ID of the existing child shard of the current shard.
+     * </p>
+     * 
+     * @return The shard ID of the existing child shard of the current shard.
      */
 
     public String getShardId() {
@@ -48,7 +69,12 @@ public class ChildShard implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The shard ID of the existing child shard of the current shard.
+     * </p>
+     * 
      * @param shardId
+     *        The shard ID of the existing child shard of the current shard.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -58,7 +84,11 @@ public class ChildShard implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * The current shard that is the parent of the existing child shard.
+     * </p>
+     * 
+     * @return The current shard that is the parent of the existing child shard.
      */
 
     public java.util.List<String> getParentShards() {
@@ -69,7 +99,12 @@ public class ChildShard implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The current shard that is the parent of the existing child shard.
+     * </p>
+     * 
      * @param parentShards
+     *        The current shard that is the parent of the existing child shard.
      */
 
     public void setParentShards(java.util.Collection<String> parentShards) {
@@ -83,12 +118,16 @@ public class ChildShard implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
+     * The current shard that is the parent of the existing child shard.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setParentShards(java.util.Collection)} or {@link #withParentShards(java.util.Collection)} if you want to
      * override the existing values.
      * </p>
      * 
      * @param parentShards
+     *        The current shard that is the parent of the existing child shard.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -103,7 +142,12 @@ public class ChildShard implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The current shard that is the parent of the existing child shard.
+     * </p>
+     * 
      * @param parentShards
+     *        The current shard that is the parent of the existing child shard.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

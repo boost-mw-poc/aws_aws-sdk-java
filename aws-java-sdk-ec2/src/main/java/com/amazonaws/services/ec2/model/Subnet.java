@@ -58,6 +58,13 @@ public class Subnet implements Serializable, Cloneable {
     private Boolean defaultForAz;
     /**
      * <p>
+     * Indicates the device position for local network interfaces in this subnet. For example, <code>1</code> indicates
+     * local network interfaces in this subnet are the secondary network interface (eth1).
+     * </p>
+     */
+    private Integer enableLniAtDeviceIndex;
+    /**
+     * <p>
      * Indicates whether instances launched in this subnet receive a public IPv4 address.
      * </p>
      */
@@ -367,6 +374,52 @@ public class Subnet implements Serializable, Cloneable {
 
     public Boolean isDefaultForAz() {
         return this.defaultForAz;
+    }
+
+    /**
+     * <p>
+     * Indicates the device position for local network interfaces in this subnet. For example, <code>1</code> indicates
+     * local network interfaces in this subnet are the secondary network interface (eth1).
+     * </p>
+     * 
+     * @param enableLniAtDeviceIndex
+     *        Indicates the device position for local network interfaces in this subnet. For example, <code>1</code>
+     *        indicates local network interfaces in this subnet are the secondary network interface (eth1).
+     */
+
+    public void setEnableLniAtDeviceIndex(Integer enableLniAtDeviceIndex) {
+        this.enableLniAtDeviceIndex = enableLniAtDeviceIndex;
+    }
+
+    /**
+     * <p>
+     * Indicates the device position for local network interfaces in this subnet. For example, <code>1</code> indicates
+     * local network interfaces in this subnet are the secondary network interface (eth1).
+     * </p>
+     * 
+     * @return Indicates the device position for local network interfaces in this subnet. For example, <code>1</code>
+     *         indicates local network interfaces in this subnet are the secondary network interface (eth1).
+     */
+
+    public Integer getEnableLniAtDeviceIndex() {
+        return this.enableLniAtDeviceIndex;
+    }
+
+    /**
+     * <p>
+     * Indicates the device position for local network interfaces in this subnet. For example, <code>1</code> indicates
+     * local network interfaces in this subnet are the secondary network interface (eth1).
+     * </p>
+     * 
+     * @param enableLniAtDeviceIndex
+     *        Indicates the device position for local network interfaces in this subnet. For example, <code>1</code>
+     *        indicates local network interfaces in this subnet are the secondary network interface (eth1).
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Subnet withEnableLniAtDeviceIndex(Integer enableLniAtDeviceIndex) {
+        setEnableLniAtDeviceIndex(enableLniAtDeviceIndex);
+        return this;
     }
 
     /**
@@ -1180,6 +1233,8 @@ public class Subnet implements Serializable, Cloneable {
             sb.append("CidrBlock: ").append(getCidrBlock()).append(",");
         if (getDefaultForAz() != null)
             sb.append("DefaultForAz: ").append(getDefaultForAz()).append(",");
+        if (getEnableLniAtDeviceIndex() != null)
+            sb.append("EnableLniAtDeviceIndex: ").append(getEnableLniAtDeviceIndex()).append(",");
         if (getMapPublicIpOnLaunch() != null)
             sb.append("MapPublicIpOnLaunch: ").append(getMapPublicIpOnLaunch()).append(",");
         if (getMapCustomerOwnedIpOnLaunch() != null)
@@ -1243,6 +1298,10 @@ public class Subnet implements Serializable, Cloneable {
         if (other.getDefaultForAz() == null ^ this.getDefaultForAz() == null)
             return false;
         if (other.getDefaultForAz() != null && other.getDefaultForAz().equals(this.getDefaultForAz()) == false)
+            return false;
+        if (other.getEnableLniAtDeviceIndex() == null ^ this.getEnableLniAtDeviceIndex() == null)
+            return false;
+        if (other.getEnableLniAtDeviceIndex() != null && other.getEnableLniAtDeviceIndex().equals(this.getEnableLniAtDeviceIndex()) == false)
             return false;
         if (other.getMapPublicIpOnLaunch() == null ^ this.getMapPublicIpOnLaunch() == null)
             return false;
@@ -1318,6 +1377,7 @@ public class Subnet implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getAvailableIpAddressCount() == null) ? 0 : getAvailableIpAddressCount().hashCode());
         hashCode = prime * hashCode + ((getCidrBlock() == null) ? 0 : getCidrBlock().hashCode());
         hashCode = prime * hashCode + ((getDefaultForAz() == null) ? 0 : getDefaultForAz().hashCode());
+        hashCode = prime * hashCode + ((getEnableLniAtDeviceIndex() == null) ? 0 : getEnableLniAtDeviceIndex().hashCode());
         hashCode = prime * hashCode + ((getMapPublicIpOnLaunch() == null) ? 0 : getMapPublicIpOnLaunch().hashCode());
         hashCode = prime * hashCode + ((getMapCustomerOwnedIpOnLaunch() == null) ? 0 : getMapCustomerOwnedIpOnLaunch().hashCode());
         hashCode = prime * hashCode + ((getCustomerOwnedIpv4Pool() == null) ? 0 : getCustomerOwnedIpv4Pool().hashCode());

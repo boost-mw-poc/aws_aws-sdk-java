@@ -33,6 +33,8 @@ public class DeleteTableRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DatabaseName").build();
     private static final MarshallingInfo<String> NAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Name").build();
+    private static final MarshallingInfo<String> TRANSACTIONID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("TransactionId").build();
 
     private static final DeleteTableRequestMarshaller instance = new DeleteTableRequestMarshaller();
 
@@ -53,6 +55,7 @@ public class DeleteTableRequestMarshaller {
             protocolMarshaller.marshall(deleteTableRequest.getCatalogId(), CATALOGID_BINDING);
             protocolMarshaller.marshall(deleteTableRequest.getDatabaseName(), DATABASENAME_BINDING);
             protocolMarshaller.marshall(deleteTableRequest.getName(), NAME_BINDING);
+            protocolMarshaller.marshall(deleteTableRequest.getTransactionId(), TRANSACTIONID_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

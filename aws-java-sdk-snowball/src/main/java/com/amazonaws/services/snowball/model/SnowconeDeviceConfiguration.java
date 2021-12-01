@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Specifies the device configuration for an AWS Snowcone job.
+ * Specifies the device configuration for an Snowcone job.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/snowball-2016-06-30/SnowconeDeviceConfiguration"
@@ -30,18 +30,18 @@ public class SnowconeDeviceConfiguration implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * Configures the wireless connection for the AWS Snowcone device.
+     * Configures the wireless connection for the Snowcone device.
      * </p>
      */
     private WirelessConnection wirelessConnection;
 
     /**
      * <p>
-     * Configures the wireless connection for the AWS Snowcone device.
+     * Configures the wireless connection for the Snowcone device.
      * </p>
      * 
      * @param wirelessConnection
-     *        Configures the wireless connection for the AWS Snowcone device.
+     *        Configures the wireless connection for the Snowcone device.
      */
 
     public void setWirelessConnection(WirelessConnection wirelessConnection) {
@@ -50,10 +50,10 @@ public class SnowconeDeviceConfiguration implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * Configures the wireless connection for the AWS Snowcone device.
+     * Configures the wireless connection for the Snowcone device.
      * </p>
      * 
-     * @return Configures the wireless connection for the AWS Snowcone device.
+     * @return Configures the wireless connection for the Snowcone device.
      */
 
     public WirelessConnection getWirelessConnection() {
@@ -62,11 +62,11 @@ public class SnowconeDeviceConfiguration implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * Configures the wireless connection for the AWS Snowcone device.
+     * Configures the wireless connection for the Snowcone device.
      * </p>
      * 
      * @param wirelessConnection
-     *        Configures the wireless connection for the AWS Snowcone device.
+     *        Configures the wireless connection for the Snowcone device.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

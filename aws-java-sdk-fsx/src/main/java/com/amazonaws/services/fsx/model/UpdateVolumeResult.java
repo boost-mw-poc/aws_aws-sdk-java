@@ -25,18 +25,19 @@ public class UpdateVolumeResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * Returned after a successful <code>UpdateVolume</code> API operation, describing the volume just updated.
+     * A description of the volume just updated. Returned after a successful <code>UpdateVolume</code> API operation.
      * </p>
      */
     private Volume volume;
 
     /**
      * <p>
-     * Returned after a successful <code>UpdateVolume</code> API operation, describing the volume just updated.
+     * A description of the volume just updated. Returned after a successful <code>UpdateVolume</code> API operation.
      * </p>
      * 
      * @param volume
-     *        Returned after a successful <code>UpdateVolume</code> API operation, describing the volume just updated.
+     *        A description of the volume just updated. Returned after a successful <code>UpdateVolume</code> API
+     *        operation.
      */
 
     public void setVolume(Volume volume) {
@@ -45,10 +46,11 @@ public class UpdateVolumeResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * Returned after a successful <code>UpdateVolume</code> API operation, describing the volume just updated.
+     * A description of the volume just updated. Returned after a successful <code>UpdateVolume</code> API operation.
      * </p>
      * 
-     * @return Returned after a successful <code>UpdateVolume</code> API operation, describing the volume just updated.
+     * @return A description of the volume just updated. Returned after a successful <code>UpdateVolume</code> API
+     *         operation.
      */
 
     public Volume getVolume() {
@@ -57,11 +59,12 @@ public class UpdateVolumeResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * Returned after a successful <code>UpdateVolume</code> API operation, describing the volume just updated.
+     * A description of the volume just updated. Returned after a successful <code>UpdateVolume</code> API operation.
      * </p>
      * 
      * @param volume
-     *        Returned after a successful <code>UpdateVolume</code> API operation, describing the volume just updated.
+     *        A description of the volume just updated. Returned after a successful <code>UpdateVolume</code> API
+     *        operation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -66,11 +66,18 @@ public class UpdateFileSystemLustreConfiguration implements Serializable, Clonea
      * this option.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>NEW_CHANGED_DELETED</code> - AutoImport is on. Amazon FSx automatically imports file and directory listings
+     * of any new objects added to the S3 bucket, any existing objects that are changed in the S3 bucket, and any
+     * objects that were deleted in the S3 bucket.
+     * </p>
+     * </li>
      * </ul>
      * <p>
-     * For more information, see <a
-     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/autoimport-data-repo.html">Automatically import updates
-     * from your S3 bucket</a>.
+     * The <code>AutoImportPolicy</code> parameter is not supported for Lustre file systems with the
+     * <code>Persistent_2</code> deployment type. Instead, use to update a data repository association on your
+     * <code>Persistent_2</code> file system.
      * </p>
      */
     private String autoImportPolicy;
@@ -101,6 +108,14 @@ public class UpdateFileSystemLustreConfiguration implements Serializable, Clonea
      * </p>
      */
     private String dataCompressionType;
+    /**
+     * <p>
+     * The Lustre logging configuration used when updating an Amazon FSx for Lustre file system. When logging is
+     * enabled, Lustre logs error and warning events for data repositories associated with your file system to Amazon
+     * CloudWatch Logs.
+     * </p>
+     */
+    private LustreLogCreateConfiguration logConfiguration;
 
     /**
      * <p>
@@ -227,11 +242,18 @@ public class UpdateFileSystemLustreConfiguration implements Serializable, Clonea
      * this option.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>NEW_CHANGED_DELETED</code> - AutoImport is on. Amazon FSx automatically imports file and directory listings
+     * of any new objects added to the S3 bucket, any existing objects that are changed in the S3 bucket, and any
+     * objects that were deleted in the S3 bucket.
+     * </p>
+     * </li>
      * </ul>
      * <p>
-     * For more information, see <a
-     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/autoimport-data-repo.html">Automatically import updates
-     * from your S3 bucket</a>.
+     * The <code>AutoImportPolicy</code> parameter is not supported for Lustre file systems with the
+     * <code>Persistent_2</code> deployment type. Instead, use to update a data repository association on your
+     * <code>Persistent_2</code> file system.
      * </p>
      * 
      * @param autoImportPolicy
@@ -260,11 +282,18 @@ public class UpdateFileSystemLustreConfiguration implements Serializable, Clonea
      *        you choose this option.
      *        </p>
      *        </li>
+     *        <li>
+     *        <p>
+     *        <code>NEW_CHANGED_DELETED</code> - AutoImport is on. Amazon FSx automatically imports file and directory
+     *        listings of any new objects added to the S3 bucket, any existing objects that are changed in the S3
+     *        bucket, and any objects that were deleted in the S3 bucket.
+     *        </p>
+     *        </li>
      *        </ul>
      *        <p>
-     *        For more information, see <a
-     *        href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/autoimport-data-repo.html">Automatically import
-     *        updates from your S3 bucket</a>.
+     *        The <code>AutoImportPolicy</code> parameter is not supported for Lustre file systems with the
+     *        <code>Persistent_2</code> deployment type. Instead, use to update a data repository association on your
+     *        <code>Persistent_2</code> file system.
      * @see AutoImportPolicyType
      */
 
@@ -299,11 +328,18 @@ public class UpdateFileSystemLustreConfiguration implements Serializable, Clonea
      * this option.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>NEW_CHANGED_DELETED</code> - AutoImport is on. Amazon FSx automatically imports file and directory listings
+     * of any new objects added to the S3 bucket, any existing objects that are changed in the S3 bucket, and any
+     * objects that were deleted in the S3 bucket.
+     * </p>
+     * </li>
      * </ul>
      * <p>
-     * For more information, see <a
-     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/autoimport-data-repo.html">Automatically import updates
-     * from your S3 bucket</a>.
+     * The <code>AutoImportPolicy</code> parameter is not supported for Lustre file systems with the
+     * <code>Persistent_2</code> deployment type. Instead, use to update a data repository association on your
+     * <code>Persistent_2</code> file system.
      * </p>
      * 
      * @return (Optional) When you create your file system, your existing S3 objects appear as file and directory
@@ -331,11 +367,18 @@ public class UpdateFileSystemLustreConfiguration implements Serializable, Clonea
      *         after you choose this option.
      *         </p>
      *         </li>
+     *         <li>
+     *         <p>
+     *         <code>NEW_CHANGED_DELETED</code> - AutoImport is on. Amazon FSx automatically imports file and directory
+     *         listings of any new objects added to the S3 bucket, any existing objects that are changed in the S3
+     *         bucket, and any objects that were deleted in the S3 bucket.
+     *         </p>
+     *         </li>
      *         </ul>
      *         <p>
-     *         For more information, see <a
-     *         href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/autoimport-data-repo.html">Automatically import
-     *         updates from your S3 bucket</a>.
+     *         The <code>AutoImportPolicy</code> parameter is not supported for Lustre file systems with the
+     *         <code>Persistent_2</code> deployment type. Instead, use to update a data repository association on your
+     *         <code>Persistent_2</code> file system.
      * @see AutoImportPolicyType
      */
 
@@ -370,11 +413,18 @@ public class UpdateFileSystemLustreConfiguration implements Serializable, Clonea
      * this option.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>NEW_CHANGED_DELETED</code> - AutoImport is on. Amazon FSx automatically imports file and directory listings
+     * of any new objects added to the S3 bucket, any existing objects that are changed in the S3 bucket, and any
+     * objects that were deleted in the S3 bucket.
+     * </p>
+     * </li>
      * </ul>
      * <p>
-     * For more information, see <a
-     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/autoimport-data-repo.html">Automatically import updates
-     * from your S3 bucket</a>.
+     * The <code>AutoImportPolicy</code> parameter is not supported for Lustre file systems with the
+     * <code>Persistent_2</code> deployment type. Instead, use to update a data repository association on your
+     * <code>Persistent_2</code> file system.
      * </p>
      * 
      * @param autoImportPolicy
@@ -403,11 +453,18 @@ public class UpdateFileSystemLustreConfiguration implements Serializable, Clonea
      *        you choose this option.
      *        </p>
      *        </li>
+     *        <li>
+     *        <p>
+     *        <code>NEW_CHANGED_DELETED</code> - AutoImport is on. Amazon FSx automatically imports file and directory
+     *        listings of any new objects added to the S3 bucket, any existing objects that are changed in the S3
+     *        bucket, and any objects that were deleted in the S3 bucket.
+     *        </p>
+     *        </li>
      *        </ul>
      *        <p>
-     *        For more information, see <a
-     *        href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/autoimport-data-repo.html">Automatically import
-     *        updates from your S3 bucket</a>.
+     *        The <code>AutoImportPolicy</code> parameter is not supported for Lustre file systems with the
+     *        <code>Persistent_2</code> deployment type. Instead, use to update a data repository association on your
+     *        <code>Persistent_2</code> file system.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AutoImportPolicyType
      */
@@ -444,11 +501,18 @@ public class UpdateFileSystemLustreConfiguration implements Serializable, Clonea
      * this option.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>NEW_CHANGED_DELETED</code> - AutoImport is on. Amazon FSx automatically imports file and directory listings
+     * of any new objects added to the S3 bucket, any existing objects that are changed in the S3 bucket, and any
+     * objects that were deleted in the S3 bucket.
+     * </p>
+     * </li>
      * </ul>
      * <p>
-     * For more information, see <a
-     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/autoimport-data-repo.html">Automatically import updates
-     * from your S3 bucket</a>.
+     * The <code>AutoImportPolicy</code> parameter is not supported for Lustre file systems with the
+     * <code>Persistent_2</code> deployment type. Instead, use to update a data repository association on your
+     * <code>Persistent_2</code> file system.
      * </p>
      * 
      * @param autoImportPolicy
@@ -477,11 +541,18 @@ public class UpdateFileSystemLustreConfiguration implements Serializable, Clonea
      *        you choose this option.
      *        </p>
      *        </li>
+     *        <li>
+     *        <p>
+     *        <code>NEW_CHANGED_DELETED</code> - AutoImport is on. Amazon FSx automatically imports file and directory
+     *        listings of any new objects added to the S3 bucket, any existing objects that are changed in the S3
+     *        bucket, and any objects that were deleted in the S3 bucket.
+     *        </p>
+     *        </li>
      *        </ul>
      *        <p>
-     *        For more information, see <a
-     *        href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/autoimport-data-repo.html">Automatically import
-     *        updates from your S3 bucket</a>.
+     *        The <code>AutoImportPolicy</code> parameter is not supported for Lustre file systems with the
+     *        <code>Persistent_2</code> deployment type. Instead, use to update a data repository association on your
+     *        <code>Persistent_2</code> file system.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AutoImportPolicyType
      */
@@ -719,6 +790,58 @@ public class UpdateFileSystemLustreConfiguration implements Serializable, Clonea
     }
 
     /**
+     * <p>
+     * The Lustre logging configuration used when updating an Amazon FSx for Lustre file system. When logging is
+     * enabled, Lustre logs error and warning events for data repositories associated with your file system to Amazon
+     * CloudWatch Logs.
+     * </p>
+     * 
+     * @param logConfiguration
+     *        The Lustre logging configuration used when updating an Amazon FSx for Lustre file system. When logging is
+     *        enabled, Lustre logs error and warning events for data repositories associated with your file system to
+     *        Amazon CloudWatch Logs.
+     */
+
+    public void setLogConfiguration(LustreLogCreateConfiguration logConfiguration) {
+        this.logConfiguration = logConfiguration;
+    }
+
+    /**
+     * <p>
+     * The Lustre logging configuration used when updating an Amazon FSx for Lustre file system. When logging is
+     * enabled, Lustre logs error and warning events for data repositories associated with your file system to Amazon
+     * CloudWatch Logs.
+     * </p>
+     * 
+     * @return The Lustre logging configuration used when updating an Amazon FSx for Lustre file system. When logging is
+     *         enabled, Lustre logs error and warning events for data repositories associated with your file system to
+     *         Amazon CloudWatch Logs.
+     */
+
+    public LustreLogCreateConfiguration getLogConfiguration() {
+        return this.logConfiguration;
+    }
+
+    /**
+     * <p>
+     * The Lustre logging configuration used when updating an Amazon FSx for Lustre file system. When logging is
+     * enabled, Lustre logs error and warning events for data repositories associated with your file system to Amazon
+     * CloudWatch Logs.
+     * </p>
+     * 
+     * @param logConfiguration
+     *        The Lustre logging configuration used when updating an Amazon FSx for Lustre file system. When logging is
+     *        enabled, Lustre logs error and warning events for data repositories associated with your file system to
+     *        Amazon CloudWatch Logs.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateFileSystemLustreConfiguration withLogConfiguration(LustreLogCreateConfiguration logConfiguration) {
+        setLogConfiguration(logConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -739,7 +862,9 @@ public class UpdateFileSystemLustreConfiguration implements Serializable, Clonea
         if (getAutoImportPolicy() != null)
             sb.append("AutoImportPolicy: ").append(getAutoImportPolicy()).append(",");
         if (getDataCompressionType() != null)
-            sb.append("DataCompressionType: ").append(getDataCompressionType());
+            sb.append("DataCompressionType: ").append(getDataCompressionType()).append(",");
+        if (getLogConfiguration() != null)
+            sb.append("LogConfiguration: ").append(getLogConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -775,6 +900,10 @@ public class UpdateFileSystemLustreConfiguration implements Serializable, Clonea
             return false;
         if (other.getDataCompressionType() != null && other.getDataCompressionType().equals(this.getDataCompressionType()) == false)
             return false;
+        if (other.getLogConfiguration() == null ^ this.getLogConfiguration() == null)
+            return false;
+        if (other.getLogConfiguration() != null && other.getLogConfiguration().equals(this.getLogConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -788,6 +917,7 @@ public class UpdateFileSystemLustreConfiguration implements Serializable, Clonea
         hashCode = prime * hashCode + ((getAutomaticBackupRetentionDays() == null) ? 0 : getAutomaticBackupRetentionDays().hashCode());
         hashCode = prime * hashCode + ((getAutoImportPolicy() == null) ? 0 : getAutoImportPolicy().hashCode());
         hashCode = prime * hashCode + ((getDataCompressionType() == null) ? 0 : getDataCompressionType().hashCode());
+        hashCode = prime * hashCode + ((getLogConfiguration() == null) ? 0 : getLogConfiguration().hashCode());
         return hashCode;
     }
 

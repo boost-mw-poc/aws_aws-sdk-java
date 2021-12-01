@@ -74,18 +74,17 @@ public class JobMetadata implements Serializable, Cloneable, StructuredPojo {
     private String description;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) for the AWS Key Management Service (AWS KMS) key associated with this job. This
-     * ARN was created using the <a
-     * href="https://docs.aws.amazon.com/kms/latest/APIReference/API_CreateKey.html">CreateKey</a> API action in AWS
-     * KMS.
+     * The Amazon Resource Name (ARN) for the Key Management Service (KMS) key associated with this job. This ARN was
+     * created using the <a href="https://docs.aws.amazon.com/kms/latest/APIReference/API_CreateKey.html">CreateKey</a>
+     * API action in KMS.
      * </p>
      */
     private String kmsKeyARN;
     /**
      * <p>
      * The role ARN associated with this job. This ARN was created using the <a
-     * href="https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html">CreateRole</a> API action in AWS
-     * Identity and Access Management (IAM).
+     * href="https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html">CreateRole</a> API action in
+     * Identity and Access Management.
      * </p>
      */
     private String roleARN;
@@ -124,9 +123,9 @@ public class JobMetadata implements Serializable, Cloneable, StructuredPojo {
     private Notification notification;
     /**
      * <p>
-     * A value that defines the real-time status of a Snow device's data transfer while the device is at AWS. This data
-     * is only available while a job has a <code>JobState</code> value of <code>InProgress</code>, for both import and
-     * export jobs.
+     * A value that defines the real-time status of a Snow device's data transfer while the device is at Amazon Web
+     * Services. This data is only available while a job has a <code>JobState</code> value of <code>InProgress</code>,
+     * for both import and export jobs.
      * </p>
      */
     private DataTransfer dataTransferProgress;
@@ -153,7 +152,7 @@ public class JobMetadata implements Serializable, Cloneable, StructuredPojo {
     private String forwardingAddressId;
     /**
      * <p>
-     * The metadata associated with the tax documents required in your AWS Region.
+     * The metadata associated with the tax documents required in your Amazon Web Services Region.
      * </p>
      */
     private TaxDocuments taxDocuments;
@@ -175,7 +174,7 @@ public class JobMetadata implements Serializable, Cloneable, StructuredPojo {
     private String longTermPricingId;
     /**
      * <p>
-     * Represents metadata and configuration settings for services on an AWS Snow Family device.
+     * Represents metadata and configuration settings for services on an Amazon Web Services Snow Family device.
      * </p>
      */
     private OnDeviceServiceConfiguration onDeviceServiceConfiguration;
@@ -570,17 +569,16 @@ public class JobMetadata implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) for the AWS Key Management Service (AWS KMS) key associated with this job. This
-     * ARN was created using the <a
-     * href="https://docs.aws.amazon.com/kms/latest/APIReference/API_CreateKey.html">CreateKey</a> API action in AWS
-     * KMS.
+     * The Amazon Resource Name (ARN) for the Key Management Service (KMS) key associated with this job. This ARN was
+     * created using the <a href="https://docs.aws.amazon.com/kms/latest/APIReference/API_CreateKey.html">CreateKey</a>
+     * API action in KMS.
      * </p>
      * 
      * @param kmsKeyARN
-     *        The Amazon Resource Name (ARN) for the AWS Key Management Service (AWS KMS) key associated with this job.
-     *        This ARN was created using the <a
+     *        The Amazon Resource Name (ARN) for the Key Management Service (KMS) key associated with this job. This ARN
+     *        was created using the <a
      *        href="https://docs.aws.amazon.com/kms/latest/APIReference/API_CreateKey.html">CreateKey</a> API action in
-     *        AWS KMS.
+     *        KMS.
      */
 
     public void setKmsKeyARN(String kmsKeyARN) {
@@ -589,16 +587,15 @@ public class JobMetadata implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) for the AWS Key Management Service (AWS KMS) key associated with this job. This
-     * ARN was created using the <a
-     * href="https://docs.aws.amazon.com/kms/latest/APIReference/API_CreateKey.html">CreateKey</a> API action in AWS
-     * KMS.
+     * The Amazon Resource Name (ARN) for the Key Management Service (KMS) key associated with this job. This ARN was
+     * created using the <a href="https://docs.aws.amazon.com/kms/latest/APIReference/API_CreateKey.html">CreateKey</a>
+     * API action in KMS.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) for the AWS Key Management Service (AWS KMS) key associated with this job.
-     *         This ARN was created using the <a
+     * @return The Amazon Resource Name (ARN) for the Key Management Service (KMS) key associated with this job. This
+     *         ARN was created using the <a
      *         href="https://docs.aws.amazon.com/kms/latest/APIReference/API_CreateKey.html">CreateKey</a> API action in
-     *         AWS KMS.
+     *         KMS.
      */
 
     public String getKmsKeyARN() {
@@ -607,17 +604,16 @@ public class JobMetadata implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) for the AWS Key Management Service (AWS KMS) key associated with this job. This
-     * ARN was created using the <a
-     * href="https://docs.aws.amazon.com/kms/latest/APIReference/API_CreateKey.html">CreateKey</a> API action in AWS
-     * KMS.
+     * The Amazon Resource Name (ARN) for the Key Management Service (KMS) key associated with this job. This ARN was
+     * created using the <a href="https://docs.aws.amazon.com/kms/latest/APIReference/API_CreateKey.html">CreateKey</a>
+     * API action in KMS.
      * </p>
      * 
      * @param kmsKeyARN
-     *        The Amazon Resource Name (ARN) for the AWS Key Management Service (AWS KMS) key associated with this job.
-     *        This ARN was created using the <a
+     *        The Amazon Resource Name (ARN) for the Key Management Service (KMS) key associated with this job. This ARN
+     *        was created using the <a
      *        href="https://docs.aws.amazon.com/kms/latest/APIReference/API_CreateKey.html">CreateKey</a> API action in
-     *        AWS KMS.
+     *        KMS.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -629,14 +625,14 @@ public class JobMetadata implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The role ARN associated with this job. This ARN was created using the <a
-     * href="https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html">CreateRole</a> API action in AWS
-     * Identity and Access Management (IAM).
+     * href="https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html">CreateRole</a> API action in
+     * Identity and Access Management.
      * </p>
      * 
      * @param roleARN
      *        The role ARN associated with this job. This ARN was created using the <a
      *        href="https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html">CreateRole</a> API action
-     *        in AWS Identity and Access Management (IAM).
+     *        in Identity and Access Management.
      */
 
     public void setRoleARN(String roleARN) {
@@ -646,13 +642,13 @@ public class JobMetadata implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The role ARN associated with this job. This ARN was created using the <a
-     * href="https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html">CreateRole</a> API action in AWS
-     * Identity and Access Management (IAM).
+     * href="https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html">CreateRole</a> API action in
+     * Identity and Access Management.
      * </p>
      * 
      * @return The role ARN associated with this job. This ARN was created using the <a
      *         href="https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html">CreateRole</a> API action
-     *         in AWS Identity and Access Management (IAM).
+     *         in Identity and Access Management.
      */
 
     public String getRoleARN() {
@@ -662,14 +658,14 @@ public class JobMetadata implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The role ARN associated with this job. This ARN was created using the <a
-     * href="https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html">CreateRole</a> API action in AWS
-     * Identity and Access Management (IAM).
+     * href="https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html">CreateRole</a> API action in
+     * Identity and Access Management.
      * </p>
      * 
      * @param roleARN
      *        The role ARN associated with this job. This ARN was created using the <a
      *        href="https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html">CreateRole</a> API action
-     *        in AWS Identity and Access Management (IAM).
+     *        in Identity and Access Management.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -955,15 +951,15 @@ public class JobMetadata implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A value that defines the real-time status of a Snow device's data transfer while the device is at AWS. This data
-     * is only available while a job has a <code>JobState</code> value of <code>InProgress</code>, for both import and
-     * export jobs.
+     * A value that defines the real-time status of a Snow device's data transfer while the device is at Amazon Web
+     * Services. This data is only available while a job has a <code>JobState</code> value of <code>InProgress</code>,
+     * for both import and export jobs.
      * </p>
      * 
      * @param dataTransferProgress
-     *        A value that defines the real-time status of a Snow device's data transfer while the device is at AWS.
-     *        This data is only available while a job has a <code>JobState</code> value of <code>InProgress</code>, for
-     *        both import and export jobs.
+     *        A value that defines the real-time status of a Snow device's data transfer while the device is at Amazon
+     *        Web Services. This data is only available while a job has a <code>JobState</code> value of
+     *        <code>InProgress</code>, for both import and export jobs.
      */
 
     public void setDataTransferProgress(DataTransfer dataTransferProgress) {
@@ -972,14 +968,14 @@ public class JobMetadata implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A value that defines the real-time status of a Snow device's data transfer while the device is at AWS. This data
-     * is only available while a job has a <code>JobState</code> value of <code>InProgress</code>, for both import and
-     * export jobs.
+     * A value that defines the real-time status of a Snow device's data transfer while the device is at Amazon Web
+     * Services. This data is only available while a job has a <code>JobState</code> value of <code>InProgress</code>,
+     * for both import and export jobs.
      * </p>
      * 
-     * @return A value that defines the real-time status of a Snow device's data transfer while the device is at AWS.
-     *         This data is only available while a job has a <code>JobState</code> value of <code>InProgress</code>, for
-     *         both import and export jobs.
+     * @return A value that defines the real-time status of a Snow device's data transfer while the device is at Amazon
+     *         Web Services. This data is only available while a job has a <code>JobState</code> value of
+     *         <code>InProgress</code>, for both import and export jobs.
      */
 
     public DataTransfer getDataTransferProgress() {
@@ -988,15 +984,15 @@ public class JobMetadata implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A value that defines the real-time status of a Snow device's data transfer while the device is at AWS. This data
-     * is only available while a job has a <code>JobState</code> value of <code>InProgress</code>, for both import and
-     * export jobs.
+     * A value that defines the real-time status of a Snow device's data transfer while the device is at Amazon Web
+     * Services. This data is only available while a job has a <code>JobState</code> value of <code>InProgress</code>,
+     * for both import and export jobs.
      * </p>
      * 
      * @param dataTransferProgress
-     *        A value that defines the real-time status of a Snow device's data transfer while the device is at AWS.
-     *        This data is only available while a job has a <code>JobState</code> value of <code>InProgress</code>, for
-     *        both import and export jobs.
+     *        A value that defines the real-time status of a Snow device's data transfer while the device is at Amazon
+     *        Web Services. This data is only available while a job has a <code>JobState</code> value of
+     *        <code>InProgress</code>, for both import and export jobs.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1145,11 +1141,11 @@ public class JobMetadata implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The metadata associated with the tax documents required in your AWS Region.
+     * The metadata associated with the tax documents required in your Amazon Web Services Region.
      * </p>
      * 
      * @param taxDocuments
-     *        The metadata associated with the tax documents required in your AWS Region.
+     *        The metadata associated with the tax documents required in your Amazon Web Services Region.
      */
 
     public void setTaxDocuments(TaxDocuments taxDocuments) {
@@ -1158,10 +1154,10 @@ public class JobMetadata implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The metadata associated with the tax documents required in your AWS Region.
+     * The metadata associated with the tax documents required in your Amazon Web Services Region.
      * </p>
      * 
-     * @return The metadata associated with the tax documents required in your AWS Region.
+     * @return The metadata associated with the tax documents required in your Amazon Web Services Region.
      */
 
     public TaxDocuments getTaxDocuments() {
@@ -1170,11 +1166,11 @@ public class JobMetadata implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The metadata associated with the tax documents required in your AWS Region.
+     * The metadata associated with the tax documents required in your Amazon Web Services Region.
      * </p>
      * 
      * @param taxDocuments
-     *        The metadata associated with the tax documents required in your AWS Region.
+     *        The metadata associated with the tax documents required in your Amazon Web Services Region.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1345,11 +1341,11 @@ public class JobMetadata implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Represents metadata and configuration settings for services on an AWS Snow Family device.
+     * Represents metadata and configuration settings for services on an Amazon Web Services Snow Family device.
      * </p>
      * 
      * @param onDeviceServiceConfiguration
-     *        Represents metadata and configuration settings for services on an AWS Snow Family device.
+     *        Represents metadata and configuration settings for services on an Amazon Web Services Snow Family device.
      */
 
     public void setOnDeviceServiceConfiguration(OnDeviceServiceConfiguration onDeviceServiceConfiguration) {
@@ -1358,10 +1354,10 @@ public class JobMetadata implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Represents metadata and configuration settings for services on an AWS Snow Family device.
+     * Represents metadata and configuration settings for services on an Amazon Web Services Snow Family device.
      * </p>
      * 
-     * @return Represents metadata and configuration settings for services on an AWS Snow Family device.
+     * @return Represents metadata and configuration settings for services on an Amazon Web Services Snow Family device.
      */
 
     public OnDeviceServiceConfiguration getOnDeviceServiceConfiguration() {
@@ -1370,11 +1366,11 @@ public class JobMetadata implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Represents metadata and configuration settings for services on an AWS Snow Family device.
+     * Represents metadata and configuration settings for services on an Amazon Web Services Snow Family device.
      * </p>
      * 
      * @param onDeviceServiceConfiguration
-     *        Represents metadata and configuration settings for services on an AWS Snow Family device.
+     *        Represents metadata and configuration settings for services on an Amazon Web Services Snow Family device.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

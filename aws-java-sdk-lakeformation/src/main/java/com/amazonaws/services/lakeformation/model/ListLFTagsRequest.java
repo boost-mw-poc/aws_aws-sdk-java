@@ -28,17 +28,17 @@ public class ListLFTagsRequest extends com.amazonaws.AmazonWebServiceRequest imp
     /**
      * <p>
      * The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent metadata
-     * store. It contains database definitions, table definitions, and other control information to manage your AWS Lake
+     * store. It contains database definitions, table definitions, and other control information to manage your Lake
      * Formation environment.
      * </p>
      */
     private String catalogId;
     /**
      * <p>
-     * If resource share type is <code>ALL</code>, returns both in-account tags and shared tags that the requester has
-     * permission to view. If resource share type is <code>FOREIGN</code>, returns all share tags that the requester can
-     * view. If no resource share type is passed, lists tags in the given catalog ID that the requester has permission
-     * to view.
+     * If resource share type is <code>ALL</code>, returns both in-account LF-tags and shared LF-tags that the requester
+     * has permission to view. If resource share type is <code>FOREIGN</code>, returns all share LF-tags that the
+     * requester can view. If no resource share type is passed, lists LF-tags in the given catalog ID that the requester
+     * has permission to view.
      * </p>
      */
     private String resourceShareType;
@@ -58,14 +58,14 @@ public class ListLFTagsRequest extends com.amazonaws.AmazonWebServiceRequest imp
     /**
      * <p>
      * The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent metadata
-     * store. It contains database definitions, table definitions, and other control information to manage your AWS Lake
+     * store. It contains database definitions, table definitions, and other control information to manage your Lake
      * Formation environment.
      * </p>
      * 
      * @param catalogId
      *        The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent
      *        metadata store. It contains database definitions, table definitions, and other control information to
-     *        manage your AWS Lake Formation environment.
+     *        manage your Lake Formation environment.
      */
 
     public void setCatalogId(String catalogId) {
@@ -75,13 +75,13 @@ public class ListLFTagsRequest extends com.amazonaws.AmazonWebServiceRequest imp
     /**
      * <p>
      * The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent metadata
-     * store. It contains database definitions, table definitions, and other control information to manage your AWS Lake
+     * store. It contains database definitions, table definitions, and other control information to manage your Lake
      * Formation environment.
      * </p>
      * 
      * @return The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent
      *         metadata store. It contains database definitions, table definitions, and other control information to
-     *         manage your AWS Lake Formation environment.
+     *         manage your Lake Formation environment.
      */
 
     public String getCatalogId() {
@@ -91,14 +91,14 @@ public class ListLFTagsRequest extends com.amazonaws.AmazonWebServiceRequest imp
     /**
      * <p>
      * The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent metadata
-     * store. It contains database definitions, table definitions, and other control information to manage your AWS Lake
+     * store. It contains database definitions, table definitions, and other control information to manage your Lake
      * Formation environment.
      * </p>
      * 
      * @param catalogId
      *        The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent
      *        metadata store. It contains database definitions, table definitions, and other control information to
-     *        manage your AWS Lake Formation environment.
+     *        manage your Lake Formation environment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -109,17 +109,17 @@ public class ListLFTagsRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * If resource share type is <code>ALL</code>, returns both in-account tags and shared tags that the requester has
-     * permission to view. If resource share type is <code>FOREIGN</code>, returns all share tags that the requester can
-     * view. If no resource share type is passed, lists tags in the given catalog ID that the requester has permission
-     * to view.
+     * If resource share type is <code>ALL</code>, returns both in-account LF-tags and shared LF-tags that the requester
+     * has permission to view. If resource share type is <code>FOREIGN</code>, returns all share LF-tags that the
+     * requester can view. If no resource share type is passed, lists LF-tags in the given catalog ID that the requester
+     * has permission to view.
      * </p>
      * 
      * @param resourceShareType
-     *        If resource share type is <code>ALL</code>, returns both in-account tags and shared tags that the
-     *        requester has permission to view. If resource share type is <code>FOREIGN</code>, returns all share tags
-     *        that the requester can view. If no resource share type is passed, lists tags in the given catalog ID that
-     *        the requester has permission to view.
+     *        If resource share type is <code>ALL</code>, returns both in-account LF-tags and shared LF-tags that the
+     *        requester has permission to view. If resource share type is <code>FOREIGN</code>, returns all share
+     *        LF-tags that the requester can view. If no resource share type is passed, lists LF-tags in the given
+     *        catalog ID that the requester has permission to view.
      * @see ResourceShareType
      */
 
@@ -129,16 +129,16 @@ public class ListLFTagsRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * If resource share type is <code>ALL</code>, returns both in-account tags and shared tags that the requester has
-     * permission to view. If resource share type is <code>FOREIGN</code>, returns all share tags that the requester can
-     * view. If no resource share type is passed, lists tags in the given catalog ID that the requester has permission
-     * to view.
+     * If resource share type is <code>ALL</code>, returns both in-account LF-tags and shared LF-tags that the requester
+     * has permission to view. If resource share type is <code>FOREIGN</code>, returns all share LF-tags that the
+     * requester can view. If no resource share type is passed, lists LF-tags in the given catalog ID that the requester
+     * has permission to view.
      * </p>
      * 
-     * @return If resource share type is <code>ALL</code>, returns both in-account tags and shared tags that the
-     *         requester has permission to view. If resource share type is <code>FOREIGN</code>, returns all share tags
-     *         that the requester can view. If no resource share type is passed, lists tags in the given catalog ID that
-     *         the requester has permission to view.
+     * @return If resource share type is <code>ALL</code>, returns both in-account LF-tags and shared LF-tags that the
+     *         requester has permission to view. If resource share type is <code>FOREIGN</code>, returns all share
+     *         LF-tags that the requester can view. If no resource share type is passed, lists LF-tags in the given
+     *         catalog ID that the requester has permission to view.
      * @see ResourceShareType
      */
 
@@ -148,17 +148,17 @@ public class ListLFTagsRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * If resource share type is <code>ALL</code>, returns both in-account tags and shared tags that the requester has
-     * permission to view. If resource share type is <code>FOREIGN</code>, returns all share tags that the requester can
-     * view. If no resource share type is passed, lists tags in the given catalog ID that the requester has permission
-     * to view.
+     * If resource share type is <code>ALL</code>, returns both in-account LF-tags and shared LF-tags that the requester
+     * has permission to view. If resource share type is <code>FOREIGN</code>, returns all share LF-tags that the
+     * requester can view. If no resource share type is passed, lists LF-tags in the given catalog ID that the requester
+     * has permission to view.
      * </p>
      * 
      * @param resourceShareType
-     *        If resource share type is <code>ALL</code>, returns both in-account tags and shared tags that the
-     *        requester has permission to view. If resource share type is <code>FOREIGN</code>, returns all share tags
-     *        that the requester can view. If no resource share type is passed, lists tags in the given catalog ID that
-     *        the requester has permission to view.
+     *        If resource share type is <code>ALL</code>, returns both in-account LF-tags and shared LF-tags that the
+     *        requester has permission to view. If resource share type is <code>FOREIGN</code>, returns all share
+     *        LF-tags that the requester can view. If no resource share type is passed, lists LF-tags in the given
+     *        catalog ID that the requester has permission to view.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ResourceShareType
      */
@@ -170,17 +170,17 @@ public class ListLFTagsRequest extends com.amazonaws.AmazonWebServiceRequest imp
 
     /**
      * <p>
-     * If resource share type is <code>ALL</code>, returns both in-account tags and shared tags that the requester has
-     * permission to view. If resource share type is <code>FOREIGN</code>, returns all share tags that the requester can
-     * view. If no resource share type is passed, lists tags in the given catalog ID that the requester has permission
-     * to view.
+     * If resource share type is <code>ALL</code>, returns both in-account LF-tags and shared LF-tags that the requester
+     * has permission to view. If resource share type is <code>FOREIGN</code>, returns all share LF-tags that the
+     * requester can view. If no resource share type is passed, lists LF-tags in the given catalog ID that the requester
+     * has permission to view.
      * </p>
      * 
      * @param resourceShareType
-     *        If resource share type is <code>ALL</code>, returns both in-account tags and shared tags that the
-     *        requester has permission to view. If resource share type is <code>FOREIGN</code>, returns all share tags
-     *        that the requester can view. If no resource share type is passed, lists tags in the given catalog ID that
-     *        the requester has permission to view.
+     *        If resource share type is <code>ALL</code>, returns both in-account LF-tags and shared LF-tags that the
+     *        requester has permission to view. If resource share type is <code>FOREIGN</code>, returns all share
+     *        LF-tags that the requester can view. If no resource share type is passed, lists LF-tags in the given
+     *        catalog ID that the requester has permission to view.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see ResourceShareType
      */

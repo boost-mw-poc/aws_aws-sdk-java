@@ -168,13 +168,15 @@ public interface AmazonFSxAsync extends AmazonFSx {
      * backup copy requests in progress to a single destination Region per account.
      * </p>
      * <p>
-     * You can use cross-Region backup copies for cross-region disaster recovery. You periodically take backups and copy
-     * them to another Region so that in the event of a disaster in the primary Region, you can restore from backup and
-     * recover availability quickly in the other Region. You can make cross-Region copies only within your Amazon Web
-     * Services partition.
+     * You can use cross-Region backup copies for cross-Region disaster recovery. You can periodically take backups and
+     * copy them to another Region so that in the event of a disaster in the primary Region, you can restore from backup
+     * and recover availability quickly in the other Region. You can make cross-Region copies only within your Amazon
+     * Web Services partition. A partition is a grouping of Regions. Amazon Web Services currently has three partitions:
+     * <code>aws</code> (Standard Regions), <code>aws-cn</code> (China Regions), and <code>aws-us-gov</code> (Amazon Web
+     * Services GovCloud [US] Regions).
      * </p>
      * <p>
-     * You can also use backup copies to clone your file data set to another Region or within the same Region.
+     * You can also use backup copies to clone your file dataset to another Region or within the same Region.
      * </p>
      * <p>
      * You can use the <code>SourceRegion</code> parameter to specify the Amazon Web Services Region from which the
@@ -184,11 +186,13 @@ public interface AmazonFSxAsync extends AmazonFSx {
      * is created in the same Region where the request is sent from (in-Region copy).
      * </p>
      * <p>
-     * For more information on creating backup copies, see <a
+     * For more information about creating backup copies, see <a
      * href="https://docs.aws.amazon.com/fsx/latest/WindowsGuide/using-backups.html#copy-backups"> Copying backups</a>
-     * in the <i>Amazon FSx for Windows User Guide</i> and <a
+     * in the <i>Amazon FSx for Windows User Guide</i>, <a
      * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/using-backups-fsx.html#copy-backups">Copying backups</a>
-     * in the <i>Amazon FSx for Lustre User Guide</i>.
+     * in the <i>Amazon FSx for Lustre User Guide</i>, and <a
+     * href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/using-backups.html#copy-backups">Copying backups</a> in
+     * the <i>Amazon FSx for OpenZFS User Guide</i>.
      * </p>
      * 
      * @param copyBackupRequest
@@ -206,13 +210,15 @@ public interface AmazonFSxAsync extends AmazonFSx {
      * backup copy requests in progress to a single destination Region per account.
      * </p>
      * <p>
-     * You can use cross-Region backup copies for cross-region disaster recovery. You periodically take backups and copy
-     * them to another Region so that in the event of a disaster in the primary Region, you can restore from backup and
-     * recover availability quickly in the other Region. You can make cross-Region copies only within your Amazon Web
-     * Services partition.
+     * You can use cross-Region backup copies for cross-Region disaster recovery. You can periodically take backups and
+     * copy them to another Region so that in the event of a disaster in the primary Region, you can restore from backup
+     * and recover availability quickly in the other Region. You can make cross-Region copies only within your Amazon
+     * Web Services partition. A partition is a grouping of Regions. Amazon Web Services currently has three partitions:
+     * <code>aws</code> (Standard Regions), <code>aws-cn</code> (China Regions), and <code>aws-us-gov</code> (Amazon Web
+     * Services GovCloud [US] Regions).
      * </p>
      * <p>
-     * You can also use backup copies to clone your file data set to another Region or within the same Region.
+     * You can also use backup copies to clone your file dataset to another Region or within the same Region.
      * </p>
      * <p>
      * You can use the <code>SourceRegion</code> parameter to specify the Amazon Web Services Region from which the
@@ -222,11 +228,13 @@ public interface AmazonFSxAsync extends AmazonFSx {
      * is created in the same Region where the request is sent from (in-Region copy).
      * </p>
      * <p>
-     * For more information on creating backup copies, see <a
+     * For more information about creating backup copies, see <a
      * href="https://docs.aws.amazon.com/fsx/latest/WindowsGuide/using-backups.html#copy-backups"> Copying backups</a>
-     * in the <i>Amazon FSx for Windows User Guide</i> and <a
+     * in the <i>Amazon FSx for Windows User Guide</i>, <a
      * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/using-backups-fsx.html#copy-backups">Copying backups</a>
-     * in the <i>Amazon FSx for Lustre User Guide</i>.
+     * in the <i>Amazon FSx for Lustre User Guide</i>, and <a
+     * href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/using-backups.html#copy-backups">Copying backups</a> in
+     * the <i>Amazon FSx for OpenZFS User Guide</i>.
      * </p>
      * 
      * @param copyBackupRequest
@@ -244,23 +252,24 @@ public interface AmazonFSxAsync extends AmazonFSx {
 
     /**
      * <p>
-     * Creates a backup of an existing Amazon FSx for Windows File Server or Amazon FSx for Lustre file system, or of an
-     * Amazon FSx for NetApp ONTAP volume. Creating regular backups is a best practice, enabling you to restore a file
-     * system or volume from a backup if an issue arises with the original file system or volume.
+     * Creates a backup of an existing Amazon FSx for Windows File Server file system, Amazon FSx for Lustre file
+     * system, Amazon FSx for NetApp ONTAP volume, or Amazon FSx for OpenZFS file system. We recommend creating regular
+     * backups so that you can restore a file system or volume from a backup if an issue arises with the original file
+     * system or volume.
      * </p>
      * <p>
-     * For Amazon FSx for Lustre file systems, you can create a backup only for file systems with the following
+     * For Amazon FSx for Lustre file systems, you can create a backup only for file systems that have the following
      * configuration:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * a Persistent deployment type
+     * A Persistent deployment type
      * </p>
      * </li>
      * <li>
      * <p>
-     * is <i>not</i> linked to a data repository.
+     * Are <i>not</i> linked to a data repository
      * </p>
      * </li>
      * </ul>
@@ -289,12 +298,19 @@ public interface AmazonFSxAsync extends AmazonFSx {
      * backups</a>.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * For Amazon FSx for OpenZFS, see <a
+     * href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/using-backups.html">Working with FSx for OpenZFS
+     * backups</a>.
+     * </p>
+     * </li>
      * </ul>
      * <p>
-     * If a backup with the specified client request token exists, and the parameters match, this operation returns the
-     * description of the existing backup. If a backup specified client request token exists, and the parameters don't
-     * match, this operation returns <code>IncompatibleParameterError</code>. If a backup with the specified client
-     * request token doesn't exist, <code>CreateBackup</code> does the following:
+     * If a backup with the specified client request token exists and the parameters match, this operation returns the
+     * description of the existing backup. If a backup with the specified client request token exists and the parameters
+     * don't match, this operation returns <code>IncompatibleParameterError</code>. If a backup with the specified
+     * client request token doesn't exist, <code>CreateBackup</code> does the following:
      * </p>
      * <ul>
      * <li>
@@ -316,8 +332,9 @@ public interface AmazonFSxAsync extends AmazonFSx {
      * </p>
      * <p>
      * The <code>CreateBackup</code> operation returns while the backup's lifecycle state is still <code>CREATING</code>
-     * . You can check the backup creation status by calling the <a>DescribeBackups</a> operation, which returns the
-     * backup state along with other information.
+     * . You can check the backup creation status by calling the <a
+     * href="https://docs.aws.amazon.com/fsx/latest/APIReference/API_DescribeBackups.html">DescribeBackups</a>
+     * operation, which returns the backup state along with other information.
      * </p>
      * 
      * @param createBackupRequest
@@ -331,23 +348,24 @@ public interface AmazonFSxAsync extends AmazonFSx {
 
     /**
      * <p>
-     * Creates a backup of an existing Amazon FSx for Windows File Server or Amazon FSx for Lustre file system, or of an
-     * Amazon FSx for NetApp ONTAP volume. Creating regular backups is a best practice, enabling you to restore a file
-     * system or volume from a backup if an issue arises with the original file system or volume.
+     * Creates a backup of an existing Amazon FSx for Windows File Server file system, Amazon FSx for Lustre file
+     * system, Amazon FSx for NetApp ONTAP volume, or Amazon FSx for OpenZFS file system. We recommend creating regular
+     * backups so that you can restore a file system or volume from a backup if an issue arises with the original file
+     * system or volume.
      * </p>
      * <p>
-     * For Amazon FSx for Lustre file systems, you can create a backup only for file systems with the following
+     * For Amazon FSx for Lustre file systems, you can create a backup only for file systems that have the following
      * configuration:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * a Persistent deployment type
+     * A Persistent deployment type
      * </p>
      * </li>
      * <li>
      * <p>
-     * is <i>not</i> linked to a data repository.
+     * Are <i>not</i> linked to a data repository
      * </p>
      * </li>
      * </ul>
@@ -376,12 +394,19 @@ public interface AmazonFSxAsync extends AmazonFSx {
      * backups</a>.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * For Amazon FSx for OpenZFS, see <a
+     * href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/using-backups.html">Working with FSx for OpenZFS
+     * backups</a>.
+     * </p>
+     * </li>
      * </ul>
      * <p>
-     * If a backup with the specified client request token exists, and the parameters match, this operation returns the
-     * description of the existing backup. If a backup specified client request token exists, and the parameters don't
-     * match, this operation returns <code>IncompatibleParameterError</code>. If a backup with the specified client
-     * request token doesn't exist, <code>CreateBackup</code> does the following:
+     * If a backup with the specified client request token exists and the parameters match, this operation returns the
+     * description of the existing backup. If a backup with the specified client request token exists and the parameters
+     * don't match, this operation returns <code>IncompatibleParameterError</code>. If a backup with the specified
+     * client request token doesn't exist, <code>CreateBackup</code> does the following:
      * </p>
      * <ul>
      * <li>
@@ -403,8 +428,9 @@ public interface AmazonFSxAsync extends AmazonFSx {
      * </p>
      * <p>
      * The <code>CreateBackup</code> operation returns while the backup's lifecycle state is still <code>CREATING</code>
-     * . You can check the backup creation status by calling the <a>DescribeBackups</a> operation, which returns the
-     * backup state along with other information.
+     * . You can check the backup creation status by calling the <a
+     * href="https://docs.aws.amazon.com/fsx/latest/APIReference/API_DescribeBackups.html">DescribeBackups</a>
+     * operation, which returns the backup state along with other information.
      * </p>
      * 
      * @param createBackupRequest
@@ -423,15 +449,70 @@ public interface AmazonFSxAsync extends AmazonFSx {
 
     /**
      * <p>
+     * Creates an Amazon FSx for Lustre data repository association (DRA). A data repository association is a link
+     * between a directory on the file system and an Amazon S3 bucket or prefix. You can have a maximum of 8 data
+     * repository associations on a file system. Data repository associations are supported only for file systems with
+     * the <code>Persistent_2</code> deployment type.
+     * </p>
+     * <p>
+     * Each data repository association must have a unique Amazon FSx file system directory and a unique S3 bucket or
+     * prefix associated with it. You can configure a data repository association for automatic import only, for
+     * automatic export only, or for both. To learn more about linking a data repository to your file system, see <a
+     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/create-dra-linked-data-repo.html">Linking your file
+     * system to an S3 bucket</a>.
+     * </p>
+     * 
+     * @param createDataRepositoryAssociationRequest
+     * @return A Java Future containing the result of the CreateDataRepositoryAssociation operation returned by the
+     *         service.
+     * @sample AmazonFSxAsync.CreateDataRepositoryAssociation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/CreateDataRepositoryAssociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateDataRepositoryAssociationResult> createDataRepositoryAssociationAsync(
+            CreateDataRepositoryAssociationRequest createDataRepositoryAssociationRequest);
+
+    /**
+     * <p>
+     * Creates an Amazon FSx for Lustre data repository association (DRA). A data repository association is a link
+     * between a directory on the file system and an Amazon S3 bucket or prefix. You can have a maximum of 8 data
+     * repository associations on a file system. Data repository associations are supported only for file systems with
+     * the <code>Persistent_2</code> deployment type.
+     * </p>
+     * <p>
+     * Each data repository association must have a unique Amazon FSx file system directory and a unique S3 bucket or
+     * prefix associated with it. You can configure a data repository association for automatic import only, for
+     * automatic export only, or for both. To learn more about linking a data repository to your file system, see <a
+     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/create-dra-linked-data-repo.html">Linking your file
+     * system to an S3 bucket</a>.
+     * </p>
+     * 
+     * @param createDataRepositoryAssociationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateDataRepositoryAssociation operation returned by the
+     *         service.
+     * @sample AmazonFSxAsyncHandler.CreateDataRepositoryAssociation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/CreateDataRepositoryAssociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<CreateDataRepositoryAssociationResult> createDataRepositoryAssociationAsync(
+            CreateDataRepositoryAssociationRequest createDataRepositoryAssociationRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateDataRepositoryAssociationRequest, CreateDataRepositoryAssociationResult> asyncHandler);
+
+    /**
+     * <p>
      * Creates an Amazon FSx for Lustre data repository task. You use data repository tasks to perform bulk operations
-     * between your Amazon FSx file system and its linked data repository. An example of a data repository task is
+     * between your Amazon FSx file system and its linked data repositories. An example of a data repository task is
      * exporting any data and metadata changes, including POSIX metadata, to files, directories, and symbolic links
-     * (symlinks) from your FSx file system to its linked data repository. A <code>CreateDataRepositoryTask</code>
+     * (symlinks) from your FSx file system to a linked data repository. A <code>CreateDataRepositoryTask</code>
      * operation will fail if a data repository is not linked to the FSx file system. To learn more about data
      * repository tasks, see <a
      * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/data-repository-tasks.html">Data Repository Tasks</a>.
      * To learn more about linking a data repository to your file system, see <a
-     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/create-fs-linked-data-repo.html">Linking your file
+     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/create-dra-linked-data-repo.html">Linking your file
      * system to an S3 bucket</a>.
      * </p>
      * 
@@ -446,14 +527,14 @@ public interface AmazonFSxAsync extends AmazonFSx {
     /**
      * <p>
      * Creates an Amazon FSx for Lustre data repository task. You use data repository tasks to perform bulk operations
-     * between your Amazon FSx file system and its linked data repository. An example of a data repository task is
+     * between your Amazon FSx file system and its linked data repositories. An example of a data repository task is
      * exporting any data and metadata changes, including POSIX metadata, to files, directories, and symbolic links
-     * (symlinks) from your FSx file system to its linked data repository. A <code>CreateDataRepositoryTask</code>
+     * (symlinks) from your FSx file system to a linked data repository. A <code>CreateDataRepositoryTask</code>
      * operation will fail if a data repository is not linked to the FSx file system. To learn more about data
      * repository tasks, see <a
      * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/data-repository-tasks.html">Data Repository Tasks</a>.
      * To learn more about linking a data repository to your file system, see <a
-     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/create-fs-linked-data-repo.html">Linking your file
+     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/create-dra-linked-data-repo.html">Linking your file
      * system to an S3 bucket</a>.
      * </p>
      * 
@@ -472,12 +553,39 @@ public interface AmazonFSxAsync extends AmazonFSx {
 
     /**
      * <p>
-     * Creates a new, empty Amazon FSx file system.
+     * Creates a new, empty Amazon FSx file system. You can create the following supported Amazon FSx file systems using
+     * the <code>CreateFileSystem</code> API operation:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Amazon FSx for Lustre
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Amazon FSx for NetApp ONTAP
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Amazon FSx for Windows File Server
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * This operation requires a client request token in the request that Amazon FSx uses to ensure idempotent creation.
+     * This means that calling the operation multiple times with the same client request token has no effect. By using
+     * the idempotent operation, you can retry a <code>CreateFileSystem</code> operation without the risk of creating an
+     * extra file system. This approach can be useful when an initial call fails in a way that makes it unclear whether
+     * a file system was created. Examples are if a transport level timeout occurred, or your connection was reset. If
+     * you use the same client request token and the initial call created a file system, the client receives success as
+     * long as the parameters are the same.
      * </p>
      * <p>
      * If a file system with the specified client request token exists and the parameters match,
-     * <code>CreateFileSystem</code> returns the description of the existing file system. If a file system specified
-     * client request token exists and the parameters don't match, this call returns
+     * <code>CreateFileSystem</code> returns the description of the existing file system. If a file system with the
+     * specified client request token exists and the parameters don't match, this call returns
      * <code>IncompatibleParameterError</code>. If a file system with the specified client request token doesn't exist,
      * <code>CreateFileSystem</code> does the following:
      * </p>
@@ -499,14 +607,15 @@ public interface AmazonFSxAsync extends AmazonFSx {
      * This means that calling the operation multiple times with the same client request token has no effect. By using
      * the idempotent operation, you can retry a <code>CreateFileSystem</code> operation without the risk of creating an
      * extra file system. This approach can be useful when an initial call fails in a way that makes it unclear whether
-     * a file system was created. Examples are if a transport level timeout occurred, or your connection was reset. If
-     * you use the same client request token and the initial call created a file system, the client receives success as
-     * long as the parameters are the same.
+     * a file system was created. Examples are if a transport-level timeout occurred, or your connection was reset. If
+     * you use the same client request token and the initial call created a file system, the client receives a success
+     * message as long as the parameters are the same.
      * </p>
      * <note>
      * <p>
      * The <code>CreateFileSystem</code> call returns while the file system's lifecycle state is still
-     * <code>CREATING</code>. You can check the file-system creation status by calling the <a>DescribeFileSystems</a>
+     * <code>CREATING</code>. You can check the file-system creation status by calling the <a
+     * href="https://docs.aws.amazon.com/fsx/latest/APIReference/API_DescribeFileSystems.html">DescribeFileSystems</a>
      * operation, which returns the file system state along with other information.
      * </p>
      * </note>
@@ -522,12 +631,39 @@ public interface AmazonFSxAsync extends AmazonFSx {
 
     /**
      * <p>
-     * Creates a new, empty Amazon FSx file system.
+     * Creates a new, empty Amazon FSx file system. You can create the following supported Amazon FSx file systems using
+     * the <code>CreateFileSystem</code> API operation:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Amazon FSx for Lustre
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Amazon FSx for NetApp ONTAP
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Amazon FSx for Windows File Server
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * This operation requires a client request token in the request that Amazon FSx uses to ensure idempotent creation.
+     * This means that calling the operation multiple times with the same client request token has no effect. By using
+     * the idempotent operation, you can retry a <code>CreateFileSystem</code> operation without the risk of creating an
+     * extra file system. This approach can be useful when an initial call fails in a way that makes it unclear whether
+     * a file system was created. Examples are if a transport level timeout occurred, or your connection was reset. If
+     * you use the same client request token and the initial call created a file system, the client receives success as
+     * long as the parameters are the same.
      * </p>
      * <p>
      * If a file system with the specified client request token exists and the parameters match,
-     * <code>CreateFileSystem</code> returns the description of the existing file system. If a file system specified
-     * client request token exists and the parameters don't match, this call returns
+     * <code>CreateFileSystem</code> returns the description of the existing file system. If a file system with the
+     * specified client request token exists and the parameters don't match, this call returns
      * <code>IncompatibleParameterError</code>. If a file system with the specified client request token doesn't exist,
      * <code>CreateFileSystem</code> does the following:
      * </p>
@@ -549,14 +685,15 @@ public interface AmazonFSxAsync extends AmazonFSx {
      * This means that calling the operation multiple times with the same client request token has no effect. By using
      * the idempotent operation, you can retry a <code>CreateFileSystem</code> operation without the risk of creating an
      * extra file system. This approach can be useful when an initial call fails in a way that makes it unclear whether
-     * a file system was created. Examples are if a transport level timeout occurred, or your connection was reset. If
-     * you use the same client request token and the initial call created a file system, the client receives success as
-     * long as the parameters are the same.
+     * a file system was created. Examples are if a transport-level timeout occurred, or your connection was reset. If
+     * you use the same client request token and the initial call created a file system, the client receives a success
+     * message as long as the parameters are the same.
      * </p>
      * <note>
      * <p>
      * The <code>CreateFileSystem</code> call returns while the file system's lifecycle state is still
-     * <code>CREATING</code>. You can check the file-system creation status by calling the <a>DescribeFileSystems</a>
+     * <code>CREATING</code>. You can check the file-system creation status by calling the <a
+     * href="https://docs.aws.amazon.com/fsx/latest/APIReference/API_DescribeFileSystems.html">DescribeFileSystems</a>
      * operation, which returns the file system state along with other information.
      * </p>
      * </note>
@@ -577,13 +714,13 @@ public interface AmazonFSxAsync extends AmazonFSx {
 
     /**
      * <p>
-     * Creates a new Amazon FSx for Lustre or Amazon FSx for Windows File Server file system from an existing Amazon FSx
-     * backup.
+     * Creates a new Amazon FSx for Lustre, Amazon FSx for Windows File Server, or Amazon FSx for OpenZFS file system
+     * from an existing Amazon FSx backup.
      * </p>
      * <p>
      * If a file system with the specified client request token exists and the parameters match, this operation returns
-     * the description of the file system. If a client request token specified by the file system exists and the
-     * parameters don't match, this call returns <code>IncompatibleParameterError</code>. If a file system with the
+     * the description of the file system. If a client request token with the specified by the file system exists and
+     * the parameters don't match, this call returns <code>IncompatibleParameterError</code>. If a file system with the
      * specified client request token doesn't exist, this operation does the following:
      * </p>
      * <ul>
@@ -600,7 +737,7 @@ public interface AmazonFSxAsync extends AmazonFSx {
      * </li>
      * </ul>
      * <p>
-     * Parameters like Active Directory, default share name, automatic backup, and backup settings default to the
+     * Parameters like the Active Directory, default share name, automatic backup, and backup settings default to the
      * parameters of the file system that was backed up, unless overridden. You can explicitly supply other settings.
      * </p>
      * <p>
@@ -608,12 +745,13 @@ public interface AmazonFSxAsync extends AmazonFSx {
      * of creating an extra file system. This approach can be useful when an initial call fails in a way that makes it
      * unclear whether a file system was created. Examples are if a transport level timeout occurred, or your connection
      * was reset. If you use the same client request token and the initial call created a file system, the client
-     * receives success as long as the parameters are the same.
+     * receives a success message as long as the parameters are the same.
      * </p>
      * <note>
      * <p>
      * The <code>CreateFileSystemFromBackup</code> call returns while the file system's lifecycle state is still
-     * <code>CREATING</code>. You can check the file-system creation status by calling the <a>DescribeFileSystems</a>
+     * <code>CREATING</code>. You can check the file-system creation status by calling the <a
+     * href="https://docs.aws.amazon.com/fsx/latest/APIReference/API_DescribeFileSystems.html"> DescribeFileSystems</a>
      * operation, which returns the file system state along with other information.
      * </p>
      * </note>
@@ -630,13 +768,13 @@ public interface AmazonFSxAsync extends AmazonFSx {
 
     /**
      * <p>
-     * Creates a new Amazon FSx for Lustre or Amazon FSx for Windows File Server file system from an existing Amazon FSx
-     * backup.
+     * Creates a new Amazon FSx for Lustre, Amazon FSx for Windows File Server, or Amazon FSx for OpenZFS file system
+     * from an existing Amazon FSx backup.
      * </p>
      * <p>
      * If a file system with the specified client request token exists and the parameters match, this operation returns
-     * the description of the file system. If a client request token specified by the file system exists and the
-     * parameters don't match, this call returns <code>IncompatibleParameterError</code>. If a file system with the
+     * the description of the file system. If a client request token with the specified by the file system exists and
+     * the parameters don't match, this call returns <code>IncompatibleParameterError</code>. If a file system with the
      * specified client request token doesn't exist, this operation does the following:
      * </p>
      * <ul>
@@ -653,7 +791,7 @@ public interface AmazonFSxAsync extends AmazonFSx {
      * </li>
      * </ul>
      * <p>
-     * Parameters like Active Directory, default share name, automatic backup, and backup settings default to the
+     * Parameters like the Active Directory, default share name, automatic backup, and backup settings default to the
      * parameters of the file system that was backed up, unless overridden. You can explicitly supply other settings.
      * </p>
      * <p>
@@ -661,12 +799,13 @@ public interface AmazonFSxAsync extends AmazonFSx {
      * of creating an extra file system. This approach can be useful when an initial call fails in a way that makes it
      * unclear whether a file system was created. Examples are if a transport level timeout occurred, or your connection
      * was reset. If you use the same client request token and the initial call created a file system, the client
-     * receives success as long as the parameters are the same.
+     * receives a success message as long as the parameters are the same.
      * </p>
      * <note>
      * <p>
      * The <code>CreateFileSystemFromBackup</code> call returns while the file system's lifecycle state is still
-     * <code>CREATING</code>. You can check the file-system creation status by calling the <a>DescribeFileSystems</a>
+     * <code>CREATING</code>. You can check the file-system creation status by calling the <a
+     * href="https://docs.aws.amazon.com/fsx/latest/APIReference/API_DescribeFileSystems.html"> DescribeFileSystems</a>
      * operation, which returns the file system state along with other information.
      * </p>
      * </note>
@@ -685,6 +824,99 @@ public interface AmazonFSxAsync extends AmazonFSx {
     java.util.concurrent.Future<CreateFileSystemFromBackupResult> createFileSystemFromBackupAsync(
             CreateFileSystemFromBackupRequest createFileSystemFromBackupRequest,
             com.amazonaws.handlers.AsyncHandler<CreateFileSystemFromBackupRequest, CreateFileSystemFromBackupResult> asyncHandler);
+
+    /**
+     * <p>
+     * Creates a snapshot of an existing Amazon FSx for OpenZFS file system. With snapshots, you can easily undo file
+     * changes and compare file versions by restoring the volume to a previous version.
+     * </p>
+     * <p>
+     * If a snapshot with the specified client request token exists, and the parameters match, this operation returns
+     * the description of the existing snapshot. If a snapshot with the specified client request token exists, and the
+     * parameters don't match, this operation returns <code>IncompatibleParameterError</code>. If a snapshot with the
+     * specified client request token doesn't exist, <code>CreateSnapshot</code> does the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Creates a new OpenZFS snapshot with an assigned ID, and an initial lifecycle state of <code>CREATING</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Returns the description of the snapshot.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * By using the idempotent operation, you can retry a <code>CreateSnapshot</code> operation without the risk of
+     * creating an extra snapshot. This approach can be useful when an initial call fails in a way that makes it unclear
+     * whether a snapshot was created. If you use the same client request token and the initial call created a snapshot,
+     * the operation returns a successful result because all the parameters are the same.
+     * </p>
+     * <p>
+     * The <code>CreateSnapshot</code> operation returns while the snapshot's lifecycle state is still
+     * <code>CREATING</code>. You can check the snapshot creation status by calling the <a
+     * href="https://docs.aws.amazon.com/fsx/latest/APIReference/API_DescribeSnapshots.html">DescribeSnapshots</a>
+     * operation, which returns the snapshot state along with other information.
+     * </p>
+     * 
+     * @param createSnapshotRequest
+     * @return A Java Future containing the result of the CreateSnapshot operation returned by the service.
+     * @sample AmazonFSxAsync.CreateSnapshot
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/CreateSnapshot" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<CreateSnapshotResult> createSnapshotAsync(CreateSnapshotRequest createSnapshotRequest);
+
+    /**
+     * <p>
+     * Creates a snapshot of an existing Amazon FSx for OpenZFS file system. With snapshots, you can easily undo file
+     * changes and compare file versions by restoring the volume to a previous version.
+     * </p>
+     * <p>
+     * If a snapshot with the specified client request token exists, and the parameters match, this operation returns
+     * the description of the existing snapshot. If a snapshot with the specified client request token exists, and the
+     * parameters don't match, this operation returns <code>IncompatibleParameterError</code>. If a snapshot with the
+     * specified client request token doesn't exist, <code>CreateSnapshot</code> does the following:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Creates a new OpenZFS snapshot with an assigned ID, and an initial lifecycle state of <code>CREATING</code>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Returns the description of the snapshot.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * By using the idempotent operation, you can retry a <code>CreateSnapshot</code> operation without the risk of
+     * creating an extra snapshot. This approach can be useful when an initial call fails in a way that makes it unclear
+     * whether a snapshot was created. If you use the same client request token and the initial call created a snapshot,
+     * the operation returns a successful result because all the parameters are the same.
+     * </p>
+     * <p>
+     * The <code>CreateSnapshot</code> operation returns while the snapshot's lifecycle state is still
+     * <code>CREATING</code>. You can check the snapshot creation status by calling the <a
+     * href="https://docs.aws.amazon.com/fsx/latest/APIReference/API_DescribeSnapshots.html">DescribeSnapshots</a>
+     * operation, which returns the snapshot state along with other information.
+     * </p>
+     * 
+     * @param createSnapshotRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateSnapshot operation returned by the service.
+     * @sample AmazonFSxAsyncHandler.CreateSnapshot
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/CreateSnapshot" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<CreateSnapshotResult> createSnapshotAsync(CreateSnapshotRequest createSnapshotRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateSnapshotRequest, CreateSnapshotResult> asyncHandler);
 
     /**
      * <p>
@@ -721,7 +953,7 @@ public interface AmazonFSxAsync extends AmazonFSx {
 
     /**
      * <p>
-     * Creates an Amazon FSx for NetApp ONTAP storage volume.
+     * Creates an Amazon FSx for NetApp ONTAP or Amazon FSx for OpenZFS storage volume.
      * </p>
      * 
      * @param createVolumeRequest
@@ -734,7 +966,7 @@ public interface AmazonFSxAsync extends AmazonFSx {
 
     /**
      * <p>
-     * Creates an Amazon FSx for NetApp ONTAP storage volume.
+     * Creates an Amazon FSx for NetApp ONTAP or Amazon FSx for OpenZFS storage volume.
      * </p>
      * 
      * @param createVolumeRequest
@@ -783,11 +1015,10 @@ public interface AmazonFSxAsync extends AmazonFSx {
 
     /**
      * <p>
-     * Deletes an Amazon FSx backup, deleting its contents. After deletion, the backup no longer exists, and its data is
-     * gone.
+     * Deletes an Amazon FSx backup. After deletion, the backup no longer exists, and its data is gone.
      * </p>
      * <p>
-     * The <code>DeleteBackup</code> call returns instantly. The backup will not show up in later
+     * The <code>DeleteBackup</code> call returns instantly. The backup won't show up in later
      * <code>DescribeBackups</code> calls.
      * </p>
      * <important>
@@ -797,7 +1028,7 @@ public interface AmazonFSxAsync extends AmazonFSx {
      * </important>
      * 
      * @param deleteBackupRequest
-     *        The request object for <code>DeleteBackup</code> operation.
+     *        The request object for the <code>DeleteBackup</code> operation.
      * @return A Java Future containing the result of the DeleteBackup operation returned by the service.
      * @sample AmazonFSxAsync.DeleteBackup
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/DeleteBackup" target="_top">AWS API
@@ -807,11 +1038,10 @@ public interface AmazonFSxAsync extends AmazonFSx {
 
     /**
      * <p>
-     * Deletes an Amazon FSx backup, deleting its contents. After deletion, the backup no longer exists, and its data is
-     * gone.
+     * Deletes an Amazon FSx backup. After deletion, the backup no longer exists, and its data is gone.
      * </p>
      * <p>
-     * The <code>DeleteBackup</code> call returns instantly. The backup will not show up in later
+     * The <code>DeleteBackup</code> call returns instantly. The backup won't show up in later
      * <code>DescribeBackups</code> calls.
      * </p>
      * <important>
@@ -821,7 +1051,7 @@ public interface AmazonFSxAsync extends AmazonFSx {
      * </important>
      * 
      * @param deleteBackupRequest
-     *        The request object for <code>DeleteBackup</code> operation.
+     *        The request object for the <code>DeleteBackup</code> operation.
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
      *        implementation of the callback methods in this interface to receive notification of successful or
@@ -836,27 +1066,70 @@ public interface AmazonFSxAsync extends AmazonFSx {
 
     /**
      * <p>
-     * Deletes a file system, deleting its contents. After deletion, the file system no longer exists, and its data is
-     * gone. Any existing automatic backups will also be deleted.
+     * Deletes a data repository association on an Amazon FSx for Lustre file system. Deleting the data repository
+     * association unlinks the file system from the Amazon S3 bucket. When deleting a data repository association, you
+     * have the option of deleting the data in the file system that corresponds to the data repository association. Data
+     * repository associations are supported only for file systems with the <code>Persistent_2</code> deployment type.
+     * </p>
+     * 
+     * @param deleteDataRepositoryAssociationRequest
+     * @return A Java Future containing the result of the DeleteDataRepositoryAssociation operation returned by the
+     *         service.
+     * @sample AmazonFSxAsync.DeleteDataRepositoryAssociation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/DeleteDataRepositoryAssociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteDataRepositoryAssociationResult> deleteDataRepositoryAssociationAsync(
+            DeleteDataRepositoryAssociationRequest deleteDataRepositoryAssociationRequest);
+
+    /**
+     * <p>
+     * Deletes a data repository association on an Amazon FSx for Lustre file system. Deleting the data repository
+     * association unlinks the file system from the Amazon S3 bucket. When deleting a data repository association, you
+     * have the option of deleting the data in the file system that corresponds to the data repository association. Data
+     * repository associations are supported only for file systems with the <code>Persistent_2</code> deployment type.
+     * </p>
+     * 
+     * @param deleteDataRepositoryAssociationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteDataRepositoryAssociation operation returned by the
+     *         service.
+     * @sample AmazonFSxAsyncHandler.DeleteDataRepositoryAssociation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/DeleteDataRepositoryAssociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteDataRepositoryAssociationResult> deleteDataRepositoryAssociationAsync(
+            DeleteDataRepositoryAssociationRequest deleteDataRepositoryAssociationRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteDataRepositoryAssociationRequest, DeleteDataRepositoryAssociationResult> asyncHandler);
+
+    /**
+     * <p>
+     * Deletes a file system. After deletion, the file system no longer exists, and its data is gone. Any existing
+     * automatic backups and snapshots are also deleted.
      * </p>
      * <p>
-     * To delete an Amazon FSx for NetApp ONTAP file system, first delete all the volumes and SVMs on the file system.
-     * Then provide a <code>FileSystemId</code> value to the <code>DeleFileSystem</code> operation.
+     * To delete an Amazon FSx for NetApp ONTAP file system, first delete all the volumes and storage virtual machines
+     * (SVMs) on the file system. Then provide a <code>FileSystemId</code> value to the <code>DeleFileSystem</code>
+     * operation.
      * </p>
      * <p>
      * By default, when you delete an Amazon FSx for Windows File Server file system, a final backup is created upon
-     * deletion. This final backup is not subject to the file system's retention policy, and must be manually deleted.
+     * deletion. This final backup isn't subject to the file system's retention policy, and must be manually deleted.
      * </p>
      * <p>
-     * The <code>DeleteFileSystem</code> action returns while the file system has the <code>DELETING</code> status. You
-     * can check the file system deletion status by calling the <a>DescribeFileSystems</a> action, which returns a list
-     * of file systems in your account. If you pass the file system ID for a deleted file system, the
-     * <a>DescribeFileSystems</a> returns a <code>FileSystemNotFound</code> error.
+     * The <code>DeleteFileSystem</code> operation returns while the file system has the <code>DELETING</code> status.
+     * You can check the file system deletion status by calling the <a
+     * href="https://docs.aws.amazon.com/fsx/latest/APIReference/API_DescribeFileSystems.html">DescribeFileSystems</a>
+     * operation, which returns a list of file systems in your account. If you pass the file system ID for a deleted
+     * file system, the <code>DescribeFileSystems</code> operation returns a <code>FileSystemNotFound</code> error.
      * </p>
      * <note>
      * <p>
-     * Deleting an Amazon FSx for Lustre file system will fail with a 400 BadRequest if a data repository task is in a
-     * <code>PENDING</code> or <code>EXECUTING</code> state.
+     * If a data repository task is in a <code>PENDING</code> or <code>EXECUTING</code> state, deleting an Amazon FSx
+     * for Lustre file system will fail with an HTTP status code 400 (Bad Request).
      * </p>
      * </note> <important>
      * <p>
@@ -875,27 +1148,29 @@ public interface AmazonFSxAsync extends AmazonFSx {
 
     /**
      * <p>
-     * Deletes a file system, deleting its contents. After deletion, the file system no longer exists, and its data is
-     * gone. Any existing automatic backups will also be deleted.
+     * Deletes a file system. After deletion, the file system no longer exists, and its data is gone. Any existing
+     * automatic backups and snapshots are also deleted.
      * </p>
      * <p>
-     * To delete an Amazon FSx for NetApp ONTAP file system, first delete all the volumes and SVMs on the file system.
-     * Then provide a <code>FileSystemId</code> value to the <code>DeleFileSystem</code> operation.
+     * To delete an Amazon FSx for NetApp ONTAP file system, first delete all the volumes and storage virtual machines
+     * (SVMs) on the file system. Then provide a <code>FileSystemId</code> value to the <code>DeleFileSystem</code>
+     * operation.
      * </p>
      * <p>
      * By default, when you delete an Amazon FSx for Windows File Server file system, a final backup is created upon
-     * deletion. This final backup is not subject to the file system's retention policy, and must be manually deleted.
+     * deletion. This final backup isn't subject to the file system's retention policy, and must be manually deleted.
      * </p>
      * <p>
-     * The <code>DeleteFileSystem</code> action returns while the file system has the <code>DELETING</code> status. You
-     * can check the file system deletion status by calling the <a>DescribeFileSystems</a> action, which returns a list
-     * of file systems in your account. If you pass the file system ID for a deleted file system, the
-     * <a>DescribeFileSystems</a> returns a <code>FileSystemNotFound</code> error.
+     * The <code>DeleteFileSystem</code> operation returns while the file system has the <code>DELETING</code> status.
+     * You can check the file system deletion status by calling the <a
+     * href="https://docs.aws.amazon.com/fsx/latest/APIReference/API_DescribeFileSystems.html">DescribeFileSystems</a>
+     * operation, which returns a list of file systems in your account. If you pass the file system ID for a deleted
+     * file system, the <code>DescribeFileSystems</code> operation returns a <code>FileSystemNotFound</code> error.
      * </p>
      * <note>
      * <p>
-     * Deleting an Amazon FSx for Lustre file system will fail with a 400 BadRequest if a data repository task is in a
-     * <code>PENDING</code> or <code>EXECUTING</code> state.
+     * If a data repository task is in a <code>PENDING</code> or <code>EXECUTING</code> state, deleting an Amazon FSx
+     * for Lustre file system will fail with an HTTP status code 400 (Bad Request).
      * </p>
      * </note> <important>
      * <p>
@@ -916,6 +1191,47 @@ public interface AmazonFSxAsync extends AmazonFSx {
      */
     java.util.concurrent.Future<DeleteFileSystemResult> deleteFileSystemAsync(DeleteFileSystemRequest deleteFileSystemRequest,
             com.amazonaws.handlers.AsyncHandler<DeleteFileSystemRequest, DeleteFileSystemResult> asyncHandler);
+
+    /**
+     * <p>
+     * Deletes the Amazon FSx snapshot. After deletion, the snapshot no longer exists, and its data is gone. Deleting a
+     * snapshot doesn't affect snapshots stored in a file system backup.
+     * </p>
+     * <p>
+     * The <code>DeleteSnapshot</code> operation returns instantly. The snapshot appears with the lifecycle status of
+     * <code>DELETING</code> until the deletion is complete.
+     * </p>
+     * 
+     * @param deleteSnapshotRequest
+     * @return A Java Future containing the result of the DeleteSnapshot operation returned by the service.
+     * @sample AmazonFSxAsync.DeleteSnapshot
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/DeleteSnapshot" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteSnapshotResult> deleteSnapshotAsync(DeleteSnapshotRequest deleteSnapshotRequest);
+
+    /**
+     * <p>
+     * Deletes the Amazon FSx snapshot. After deletion, the snapshot no longer exists, and its data is gone. Deleting a
+     * snapshot doesn't affect snapshots stored in a file system backup.
+     * </p>
+     * <p>
+     * The <code>DeleteSnapshot</code> operation returns instantly. The snapshot appears with the lifecycle status of
+     * <code>DELETING</code> until the deletion is complete.
+     * </p>
+     * 
+     * @param deleteSnapshotRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteSnapshot operation returned by the service.
+     * @sample AmazonFSxAsyncHandler.DeleteSnapshot
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/DeleteSnapshot" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteSnapshotResult> deleteSnapshotAsync(DeleteSnapshotRequest deleteSnapshotRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteSnapshotRequest, DeleteSnapshotResult> asyncHandler);
 
     /**
      * <p>
@@ -954,9 +1270,7 @@ public interface AmazonFSxAsync extends AmazonFSx {
 
     /**
      * <p>
-     * Deletes an Amazon FSx for NetApp ONTAP volume. When deleting a volume, you have the option of creating a final
-     * backup. If you create a final backup, you have the option to apply Tags to the backup. You need to have
-     * <code>fsx:TagResource</code> permission in order to apply tags to the backup.
+     * Deletes an Amazon FSx for NetApp ONTAP or Amazon FSx for OpenZFS volume.
      * </p>
      * 
      * @param deleteVolumeRequest
@@ -969,9 +1283,7 @@ public interface AmazonFSxAsync extends AmazonFSx {
 
     /**
      * <p>
-     * Deletes an Amazon FSx for NetApp ONTAP volume. When deleting a volume, you have the option of creating a final
-     * backup. If you create a final backup, you have the option to apply Tags to the backup. You need to have
-     * <code>fsx:TagResource</code> permission in order to apply tags to the backup.
+     * Deletes an Amazon FSx for NetApp ONTAP or Amazon FSx for OpenZFS volume.
      * </p>
      * 
      * @param deleteVolumeRequest
@@ -989,7 +1301,7 @@ public interface AmazonFSxAsync extends AmazonFSx {
 
     /**
      * <p>
-     * Returns the description of specific Amazon FSx backups, if a <code>BackupIds</code> value is provided for that
+     * Returns the description of a specific Amazon FSx backup, if a <code>BackupIds</code> value is provided for that
      * backup. Otherwise, it returns all backups owned by your Amazon Web Services account in the Amazon Web Services
      * Region of the endpoint that you're calling.
      * </p>
@@ -997,34 +1309,34 @@ public interface AmazonFSxAsync extends AmazonFSx {
      * When retrieving all backups, you can optionally specify the <code>MaxResults</code> parameter to limit the number
      * of backups in a response. If more backups remain, Amazon FSx returns a <code>NextToken</code> value in the
      * response. In this case, send a later request with the <code>NextToken</code> request parameter set to the value
-     * of <code>NextToken</code> from the last response.
+     * of the <code>NextToken</code> value from the last response.
      * </p>
      * <p>
-     * This action is used in an iterative process to retrieve a list of your backups. <code>DescribeBackups</code> is
-     * called first without a <code>NextToken</code>value. Then the action continues to be called with the
+     * This operation is used in an iterative process to retrieve a list of your backups. <code>DescribeBackups</code>
+     * is called first without a <code>NextToken</code> value. Then the operation continues to be called with the
      * <code>NextToken</code> parameter set to the value of the last <code>NextToken</code> value until a response has
-     * no <code>NextToken</code>.
+     * no <code>NextToken</code> value.
      * </p>
      * <p>
-     * When using this action, keep the following in mind:
+     * When using this operation, keep the following in mind:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * The implementation might return fewer than <code>MaxResults</code> backup descriptions while still including a
-     * <code>NextToken</code> value.
+     * The operation might return fewer than the <code>MaxResults</code> value of backup descriptions while still
+     * including a <code>NextToken</code> value.
      * </p>
      * </li>
      * <li>
      * <p>
-     * The order of backups returned in the response of one <code>DescribeBackups</code> call and the order of backups
-     * returned across the responses of a multi-call iteration is unspecified.
+     * The order of the backups returned in the response of one <code>DescribeBackups</code> call and the order of the
+     * backups returned across the responses of a multi-call iteration is unspecified.
      * </p>
      * </li>
      * </ul>
      * 
      * @param describeBackupsRequest
-     *        The request object for <code>DescribeBackups</code> operation.
+     *        The request object for the <code>DescribeBackups</code> operation.
      * @return A Java Future containing the result of the DescribeBackups operation returned by the service.
      * @sample AmazonFSxAsync.DescribeBackups
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/DescribeBackups" target="_top">AWS API
@@ -1034,7 +1346,7 @@ public interface AmazonFSxAsync extends AmazonFSx {
 
     /**
      * <p>
-     * Returns the description of specific Amazon FSx backups, if a <code>BackupIds</code> value is provided for that
+     * Returns the description of a specific Amazon FSx backup, if a <code>BackupIds</code> value is provided for that
      * backup. Otherwise, it returns all backups owned by your Amazon Web Services account in the Amazon Web Services
      * Region of the endpoint that you're calling.
      * </p>
@@ -1042,34 +1354,34 @@ public interface AmazonFSxAsync extends AmazonFSx {
      * When retrieving all backups, you can optionally specify the <code>MaxResults</code> parameter to limit the number
      * of backups in a response. If more backups remain, Amazon FSx returns a <code>NextToken</code> value in the
      * response. In this case, send a later request with the <code>NextToken</code> request parameter set to the value
-     * of <code>NextToken</code> from the last response.
+     * of the <code>NextToken</code> value from the last response.
      * </p>
      * <p>
-     * This action is used in an iterative process to retrieve a list of your backups. <code>DescribeBackups</code> is
-     * called first without a <code>NextToken</code>value. Then the action continues to be called with the
+     * This operation is used in an iterative process to retrieve a list of your backups. <code>DescribeBackups</code>
+     * is called first without a <code>NextToken</code> value. Then the operation continues to be called with the
      * <code>NextToken</code> parameter set to the value of the last <code>NextToken</code> value until a response has
-     * no <code>NextToken</code>.
+     * no <code>NextToken</code> value.
      * </p>
      * <p>
-     * When using this action, keep the following in mind:
+     * When using this operation, keep the following in mind:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * The implementation might return fewer than <code>MaxResults</code> backup descriptions while still including a
-     * <code>NextToken</code> value.
+     * The operation might return fewer than the <code>MaxResults</code> value of backup descriptions while still
+     * including a <code>NextToken</code> value.
      * </p>
      * </li>
      * <li>
      * <p>
-     * The order of backups returned in the response of one <code>DescribeBackups</code> call and the order of backups
-     * returned across the responses of a multi-call iteration is unspecified.
+     * The order of the backups returned in the response of one <code>DescribeBackups</code> call and the order of the
+     * backups returned across the responses of a multi-call iteration is unspecified.
      * </p>
      * </li>
      * </ul>
      * 
      * @param describeBackupsRequest
-     *        The request object for <code>DescribeBackups</code> operation.
+     *        The request object for the <code>DescribeBackups</code> operation.
      * @param asyncHandler
      *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
      *        implementation of the callback methods in this interface to receive notification of successful or
@@ -1081,6 +1393,73 @@ public interface AmazonFSxAsync extends AmazonFSx {
      */
     java.util.concurrent.Future<DescribeBackupsResult> describeBackupsAsync(DescribeBackupsRequest describeBackupsRequest,
             com.amazonaws.handlers.AsyncHandler<DescribeBackupsRequest, DescribeBackupsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns the description of specific Amazon FSx for Lustre data repository associations, if one or more
+     * <code>AssociationIds</code> values are provided in the request, or if filters are used in the request. Data
+     * repository associations are supported only for file systems with the <code>Persistent_2</code> deployment type.
+     * </p>
+     * <p>
+     * You can use filters to narrow the response to include just data repository associations for specific file systems
+     * (use the <code>file-system-id</code> filter with the ID of the file system) or data repository associations for a
+     * specific repository type (use the <code>data-repository-type</code> filter with a value of <code>S3</code>). If
+     * you don't use filters, the response returns all data repository associations owned by your Amazon Web Services
+     * account in the Amazon Web Services Region of the endpoint that you're calling.
+     * </p>
+     * <p>
+     * When retrieving all data repository associations, you can paginate the response by using the optional
+     * <code>MaxResults</code> parameter to limit the number of data repository associations returned in a response. If
+     * more data repository associations remain, Amazon FSx returns a <code>NextToken</code> value in the response. In
+     * this case, send a later request with the <code>NextToken</code> request parameter set to the value of
+     * <code>NextToken</code> from the last response.
+     * </p>
+     * 
+     * @param describeDataRepositoryAssociationsRequest
+     * @return A Java Future containing the result of the DescribeDataRepositoryAssociations operation returned by the
+     *         service.
+     * @sample AmazonFSxAsync.DescribeDataRepositoryAssociations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/DescribeDataRepositoryAssociations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeDataRepositoryAssociationsResult> describeDataRepositoryAssociationsAsync(
+            DescribeDataRepositoryAssociationsRequest describeDataRepositoryAssociationsRequest);
+
+    /**
+     * <p>
+     * Returns the description of specific Amazon FSx for Lustre data repository associations, if one or more
+     * <code>AssociationIds</code> values are provided in the request, or if filters are used in the request. Data
+     * repository associations are supported only for file systems with the <code>Persistent_2</code> deployment type.
+     * </p>
+     * <p>
+     * You can use filters to narrow the response to include just data repository associations for specific file systems
+     * (use the <code>file-system-id</code> filter with the ID of the file system) or data repository associations for a
+     * specific repository type (use the <code>data-repository-type</code> filter with a value of <code>S3</code>). If
+     * you don't use filters, the response returns all data repository associations owned by your Amazon Web Services
+     * account in the Amazon Web Services Region of the endpoint that you're calling.
+     * </p>
+     * <p>
+     * When retrieving all data repository associations, you can paginate the response by using the optional
+     * <code>MaxResults</code> parameter to limit the number of data repository associations returned in a response. If
+     * more data repository associations remain, Amazon FSx returns a <code>NextToken</code> value in the response. In
+     * this case, send a later request with the <code>NextToken</code> request parameter set to the value of
+     * <code>NextToken</code> from the last response.
+     * </p>
+     * 
+     * @param describeDataRepositoryAssociationsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeDataRepositoryAssociations operation returned by the
+     *         service.
+     * @sample AmazonFSxAsyncHandler.DescribeDataRepositoryAssociations
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/DescribeDataRepositoryAssociations"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeDataRepositoryAssociationsResult> describeDataRepositoryAssociationsAsync(
+            DescribeDataRepositoryAssociationsRequest describeDataRepositoryAssociationsRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeDataRepositoryAssociationsRequest, DescribeDataRepositoryAssociationsResult> asyncHandler);
 
     /**
      * <p>
@@ -1187,13 +1566,13 @@ public interface AmazonFSxAsync extends AmazonFSx {
      * request parameter set to the value of <code>NextToken</code> from the last response.
      * </p>
      * <p>
-     * This action is used in an iterative process to retrieve a list of your file system descriptions.
-     * <code>DescribeFileSystems</code> is called first without a <code>NextToken</code>value. Then the action continues
-     * to be called with the <code>NextToken</code> parameter set to the value of the last <code>NextToken</code> value
-     * until a response has no <code>NextToken</code>.
+     * This operation is used in an iterative process to retrieve a list of your file system descriptions.
+     * <code>DescribeFileSystems</code> is called first without a <code>NextToken</code>value. Then the operation
+     * continues to be called with the <code>NextToken</code> parameter set to the value of the last
+     * <code>NextToken</code> value until a response has no <code>NextToken</code>.
      * </p>
      * <p>
-     * When using this action, keep the following in mind:
+     * When using this operation, keep the following in mind:
      * </p>
      * <ul>
      * <li>
@@ -1232,13 +1611,13 @@ public interface AmazonFSxAsync extends AmazonFSx {
      * request parameter set to the value of <code>NextToken</code> from the last response.
      * </p>
      * <p>
-     * This action is used in an iterative process to retrieve a list of your file system descriptions.
-     * <code>DescribeFileSystems</code> is called first without a <code>NextToken</code>value. Then the action continues
-     * to be called with the <code>NextToken</code> parameter set to the value of the last <code>NextToken</code> value
-     * until a response has no <code>NextToken</code>.
+     * This operation is used in an iterative process to retrieve a list of your file system descriptions.
+     * <code>DescribeFileSystems</code> is called first without a <code>NextToken</code>value. Then the operation
+     * continues to be called with the <code>NextToken</code> parameter set to the value of the last
+     * <code>NextToken</code> value until a response has no <code>NextToken</code>.
      * </p>
      * <p>
-     * When using this action, keep the following in mind:
+     * When using this operation, keep the following in mind:
      * </p>
      * <ul>
      * <li>
@@ -1268,6 +1647,99 @@ public interface AmazonFSxAsync extends AmazonFSx {
      */
     java.util.concurrent.Future<DescribeFileSystemsResult> describeFileSystemsAsync(DescribeFileSystemsRequest describeFileSystemsRequest,
             com.amazonaws.handlers.AsyncHandler<DescribeFileSystemsRequest, DescribeFileSystemsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns the description of specific Amazon FSx snapshots, if a <code>SnapshotIds</code> value is provided.
+     * Otherwise, this operation returns all snapshots owned by your Amazon Web Services account in the Amazon Web
+     * Services Region of the endpoint that you're calling.
+     * </p>
+     * <p>
+     * When retrieving all snapshots, you can optionally specify the <code>MaxResults</code> parameter to limit the
+     * number of snapshots in a response. If more backups remain, Amazon FSx returns a <code>NextToken</code> value in
+     * the response. In this case, send a later request with the <code>NextToken</code> request parameter set to the
+     * value of <code>NextToken</code> from the last response.
+     * </p>
+     * <p>
+     * Use this operation in an iterative process to retrieve a list of your snapshots. <code>DescribeSnapshots</code>
+     * is called first without a <code>NextToken</code> value. Then the operation continues to be called with the
+     * <code>NextToken</code> parameter set to the value of the last <code>NextToken</code> value until a response has
+     * no <code>NextToken</code> value.
+     * </p>
+     * <p>
+     * When using this operation, keep the following in mind:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The operation might return fewer than the <code>MaxResults</code> value of snapshot descriptions while still
+     * including a <code>NextToken</code> value.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The order of snapshots returned in the response of one <code>DescribeSnapshots</code> call and the order of
+     * backups returned across the responses of a multi-call iteration is unspecified.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param describeSnapshotsRequest
+     * @return A Java Future containing the result of the DescribeSnapshots operation returned by the service.
+     * @sample AmazonFSxAsync.DescribeSnapshots
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/DescribeSnapshots" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeSnapshotsResult> describeSnapshotsAsync(DescribeSnapshotsRequest describeSnapshotsRequest);
+
+    /**
+     * <p>
+     * Returns the description of specific Amazon FSx snapshots, if a <code>SnapshotIds</code> value is provided.
+     * Otherwise, this operation returns all snapshots owned by your Amazon Web Services account in the Amazon Web
+     * Services Region of the endpoint that you're calling.
+     * </p>
+     * <p>
+     * When retrieving all snapshots, you can optionally specify the <code>MaxResults</code> parameter to limit the
+     * number of snapshots in a response. If more backups remain, Amazon FSx returns a <code>NextToken</code> value in
+     * the response. In this case, send a later request with the <code>NextToken</code> request parameter set to the
+     * value of <code>NextToken</code> from the last response.
+     * </p>
+     * <p>
+     * Use this operation in an iterative process to retrieve a list of your snapshots. <code>DescribeSnapshots</code>
+     * is called first without a <code>NextToken</code> value. Then the operation continues to be called with the
+     * <code>NextToken</code> parameter set to the value of the last <code>NextToken</code> value until a response has
+     * no <code>NextToken</code> value.
+     * </p>
+     * <p>
+     * When using this operation, keep the following in mind:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * The operation might return fewer than the <code>MaxResults</code> value of snapshot descriptions while still
+     * including a <code>NextToken</code> value.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * The order of snapshots returned in the response of one <code>DescribeSnapshots</code> call and the order of
+     * backups returned across the responses of a multi-call iteration is unspecified.
+     * </p>
+     * </li>
+     * </ul>
+     * 
+     * @param describeSnapshotsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeSnapshots operation returned by the service.
+     * @sample AmazonFSxAsyncHandler.DescribeSnapshots
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/DescribeSnapshots" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DescribeSnapshotsResult> describeSnapshotsAsync(DescribeSnapshotsRequest describeSnapshotsRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeSnapshotsRequest, DescribeSnapshotsResult> asyncHandler);
 
     /**
      * <p>
@@ -1306,7 +1778,7 @@ public interface AmazonFSxAsync extends AmazonFSx {
 
     /**
      * <p>
-     * Describes one or more Amazon FSx for NetApp ONTAP volumes.
+     * Describes one or more Amazon FSx for NetApp ONTAP or Amazon FSx for OpenZFS volumes.
      * </p>
      * 
      * @param describeVolumesRequest
@@ -1319,7 +1791,7 @@ public interface AmazonFSxAsync extends AmazonFSx {
 
     /**
      * <p>
-     * Describes one or more Amazon FSx for NetApp ONTAP volumes.
+     * Describes one or more Amazon FSx for NetApp ONTAP or Amazon FSx for OpenZFS volumes.
      * </p>
      * 
      * @param describeVolumesRequest
@@ -1483,6 +1955,72 @@ public interface AmazonFSxAsync extends AmazonFSx {
 
     /**
      * <p>
+     * Releases the file system lock from an Amazon FSx for OpenZFS file system.
+     * </p>
+     * 
+     * @param releaseFileSystemNfsV3LocksRequest
+     * @return A Java Future containing the result of the ReleaseFileSystemNfsV3Locks operation returned by the service.
+     * @sample AmazonFSxAsync.ReleaseFileSystemNfsV3Locks
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/ReleaseFileSystemNfsV3Locks"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ReleaseFileSystemNfsV3LocksResult> releaseFileSystemNfsV3LocksAsync(
+            ReleaseFileSystemNfsV3LocksRequest releaseFileSystemNfsV3LocksRequest);
+
+    /**
+     * <p>
+     * Releases the file system lock from an Amazon FSx for OpenZFS file system.
+     * </p>
+     * 
+     * @param releaseFileSystemNfsV3LocksRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ReleaseFileSystemNfsV3Locks operation returned by the service.
+     * @sample AmazonFSxAsyncHandler.ReleaseFileSystemNfsV3Locks
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/ReleaseFileSystemNfsV3Locks"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<ReleaseFileSystemNfsV3LocksResult> releaseFileSystemNfsV3LocksAsync(
+            ReleaseFileSystemNfsV3LocksRequest releaseFileSystemNfsV3LocksRequest,
+            com.amazonaws.handlers.AsyncHandler<ReleaseFileSystemNfsV3LocksRequest, ReleaseFileSystemNfsV3LocksResult> asyncHandler);
+
+    /**
+     * <p>
+     * Returns an Amazon FSx for OpenZFS volume to the state saved by the specified snapshot.
+     * </p>
+     * 
+     * @param restoreVolumeFromSnapshotRequest
+     * @return A Java Future containing the result of the RestoreVolumeFromSnapshot operation returned by the service.
+     * @sample AmazonFSxAsync.RestoreVolumeFromSnapshot
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/RestoreVolumeFromSnapshot" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<RestoreVolumeFromSnapshotResult> restoreVolumeFromSnapshotAsync(
+            RestoreVolumeFromSnapshotRequest restoreVolumeFromSnapshotRequest);
+
+    /**
+     * <p>
+     * Returns an Amazon FSx for OpenZFS volume to the state saved by the specified snapshot.
+     * </p>
+     * 
+     * @param restoreVolumeFromSnapshotRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the RestoreVolumeFromSnapshot operation returned by the service.
+     * @sample AmazonFSxAsyncHandler.RestoreVolumeFromSnapshot
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/RestoreVolumeFromSnapshot" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<RestoreVolumeFromSnapshotResult> restoreVolumeFromSnapshotAsync(
+            RestoreVolumeFromSnapshotRequest restoreVolumeFromSnapshotRequest,
+            com.amazonaws.handlers.AsyncHandler<RestoreVolumeFromSnapshotRequest, RestoreVolumeFromSnapshotResult> asyncHandler);
+
+    /**
+     * <p>
      * Tags an Amazon FSx resource.
      * </p>
      * 
@@ -1549,6 +2087,45 @@ public interface AmazonFSxAsync extends AmazonFSx {
 
     /**
      * <p>
+     * Updates the configuration of an existing data repository association on an Amazon FSx for Lustre file system.
+     * Data repository associations are supported only for file systems with the <code>Persistent_2</code> deployment
+     * type.
+     * </p>
+     * 
+     * @param updateDataRepositoryAssociationRequest
+     * @return A Java Future containing the result of the UpdateDataRepositoryAssociation operation returned by the
+     *         service.
+     * @sample AmazonFSxAsync.UpdateDataRepositoryAssociation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/UpdateDataRepositoryAssociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateDataRepositoryAssociationResult> updateDataRepositoryAssociationAsync(
+            UpdateDataRepositoryAssociationRequest updateDataRepositoryAssociationRequest);
+
+    /**
+     * <p>
+     * Updates the configuration of an existing data repository association on an Amazon FSx for Lustre file system.
+     * Data repository associations are supported only for file systems with the <code>Persistent_2</code> deployment
+     * type.
+     * </p>
+     * 
+     * @param updateDataRepositoryAssociationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateDataRepositoryAssociation operation returned by the
+     *         service.
+     * @sample AmazonFSxAsyncHandler.UpdateDataRepositoryAssociation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/UpdateDataRepositoryAssociation"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateDataRepositoryAssociationResult> updateDataRepositoryAssociationAsync(
+            UpdateDataRepositoryAssociationRequest updateDataRepositoryAssociationRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateDataRepositoryAssociationRequest, UpdateDataRepositoryAssociationResult> asyncHandler);
+
+    /**
+     * <p>
      * Use this operation to update the configuration of an existing Amazon FSx file system. You can update multiple
      * properties in a single request.
      * </p>
@@ -1558,97 +2135,137 @@ public interface AmazonFSxAsync extends AmazonFSx {
      * <ul>
      * <li>
      * <p>
-     * AuditLogConfiguration
+     * <code>AuditLogConfiguration</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * AutomaticBackupRetentionDays
+     * <code>AutomaticBackupRetentionDays</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * DailyAutomaticBackupStartTime
+     * <code>DailyAutomaticBackupStartTime</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * SelfManagedActiveDirectoryConfiguration
+     * <code>SelfManagedActiveDirectoryConfiguration</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * StorageCapacity
+     * <code>StorageCapacity</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * ThroughputCapacity
+     * <code>ThroughputCapacity</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * WeeklyMaintenanceStartTime
-     * </p>
-     * </li>
-     * </ul>
-     * <p>
-     * For Amazon FSx for Lustre file systems, you can update the following properties:
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * AutoImportPolicy
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * AutomaticBackupRetentionDays
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * DailyAutomaticBackupStartTime
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * DataCompressionType
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * StorageCapacity
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * WeeklyMaintenanceStartTime
+     * <code>WeeklyMaintenanceStartTime</code>
      * </p>
      * </li>
      * </ul>
      * <p>
-     * For Amazon FSx for NetApp ONTAP file systems, you can update the following properties:
+     * For FSx for Lustre file systems, you can update the following properties:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * AutomaticBackupRetentionDays
+     * <code>AutoImportPolicy</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * DailyAutomaticBackupStartTime
+     * <code>AutomaticBackupRetentionDays</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * FsxAdminPassword
+     * <code>DailyAutomaticBackupStartTime</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * WeeklyMaintenanceStartTime
+     * <code>DataCompressionType</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>StorageCapacity</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>WeeklyMaintenanceStartTime</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For FSx for ONTAP file systems, you can update the following properties:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>AutomaticBackupRetentionDays</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>DailyAutomaticBackupStartTime</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>FsxAdminPassword</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>WeeklyMaintenanceStartTime</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For the Amazon FSx for OpenZFS file systems, you can update the following properties:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>AutomaticBackupRetentionDays</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>CopyTagsToBackups</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>CopyTagsToVolumes</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>DailyAutomaticBackupStartTime</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>DiskIopsConfiguration</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ThroughputCapacity</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>WeeklyMaintenanceStartTime</code>
      * </p>
      * </li>
      * </ul>
@@ -1673,97 +2290,137 @@ public interface AmazonFSxAsync extends AmazonFSx {
      * <ul>
      * <li>
      * <p>
-     * AuditLogConfiguration
+     * <code>AuditLogConfiguration</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * AutomaticBackupRetentionDays
+     * <code>AutomaticBackupRetentionDays</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * DailyAutomaticBackupStartTime
+     * <code>DailyAutomaticBackupStartTime</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * SelfManagedActiveDirectoryConfiguration
+     * <code>SelfManagedActiveDirectoryConfiguration</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * StorageCapacity
+     * <code>StorageCapacity</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * ThroughputCapacity
+     * <code>ThroughputCapacity</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * WeeklyMaintenanceStartTime
-     * </p>
-     * </li>
-     * </ul>
-     * <p>
-     * For Amazon FSx for Lustre file systems, you can update the following properties:
-     * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * AutoImportPolicy
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * AutomaticBackupRetentionDays
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * DailyAutomaticBackupStartTime
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * DataCompressionType
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * StorageCapacity
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * WeeklyMaintenanceStartTime
+     * <code>WeeklyMaintenanceStartTime</code>
      * </p>
      * </li>
      * </ul>
      * <p>
-     * For Amazon FSx for NetApp ONTAP file systems, you can update the following properties:
+     * For FSx for Lustre file systems, you can update the following properties:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * AutomaticBackupRetentionDays
+     * <code>AutoImportPolicy</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * DailyAutomaticBackupStartTime
+     * <code>AutomaticBackupRetentionDays</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * FsxAdminPassword
+     * <code>DailyAutomaticBackupStartTime</code>
      * </p>
      * </li>
      * <li>
      * <p>
-     * WeeklyMaintenanceStartTime
+     * <code>DataCompressionType</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>StorageCapacity</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>WeeklyMaintenanceStartTime</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For FSx for ONTAP file systems, you can update the following properties:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>AutomaticBackupRetentionDays</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>DailyAutomaticBackupStartTime</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>FsxAdminPassword</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>WeeklyMaintenanceStartTime</code>
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For the Amazon FSx for OpenZFS file systems, you can update the following properties:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>AutomaticBackupRetentionDays</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>CopyTagsToBackups</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>CopyTagsToVolumes</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>DailyAutomaticBackupStartTime</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>DiskIopsConfiguration</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>ThroughputCapacity</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>WeeklyMaintenanceStartTime</code>
      * </p>
      * </li>
      * </ul>
@@ -1781,6 +2438,37 @@ public interface AmazonFSxAsync extends AmazonFSx {
      */
     java.util.concurrent.Future<UpdateFileSystemResult> updateFileSystemAsync(UpdateFileSystemRequest updateFileSystemRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateFileSystemRequest, UpdateFileSystemResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates the name of a snapshot.
+     * </p>
+     * 
+     * @param updateSnapshotRequest
+     * @return A Java Future containing the result of the UpdateSnapshot operation returned by the service.
+     * @sample AmazonFSxAsync.UpdateSnapshot
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/UpdateSnapshot" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateSnapshotResult> updateSnapshotAsync(UpdateSnapshotRequest updateSnapshotRequest);
+
+    /**
+     * <p>
+     * Updates the name of a snapshot.
+     * </p>
+     * 
+     * @param updateSnapshotRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateSnapshot operation returned by the service.
+     * @sample AmazonFSxAsyncHandler.UpdateSnapshot
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/UpdateSnapshot" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateSnapshotResult> updateSnapshotAsync(UpdateSnapshotRequest updateSnapshotRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateSnapshotRequest, UpdateSnapshotResult> asyncHandler);
 
     /**
      * <p>
@@ -1817,7 +2505,7 @@ public interface AmazonFSxAsync extends AmazonFSx {
 
     /**
      * <p>
-     * Updates an Amazon FSx for NetApp ONTAP volume's configuration.
+     * Updates the configuration of an Amazon FSx for NetApp ONTAP or Amazon FSx for OpenZFS volume.
      * </p>
      * 
      * @param updateVolumeRequest
@@ -1830,7 +2518,7 @@ public interface AmazonFSxAsync extends AmazonFSx {
 
     /**
      * <p>
-     * Updates an Amazon FSx for NetApp ONTAP volume's configuration.
+     * Updates the configuration of an Amazon FSx for NetApp ONTAP or Amazon FSx for OpenZFS volume.
      * </p>
      * 
      * @param updateVolumeRequest

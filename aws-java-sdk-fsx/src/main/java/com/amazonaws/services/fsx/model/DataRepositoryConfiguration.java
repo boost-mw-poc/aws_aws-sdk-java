@@ -22,6 +22,9 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * The data repository configuration object for Lustre file systems returned in the response of the
  * <code>CreateFileSystem</code> operation.
  * </p>
+ * <p>
+ * This data type is not supported for file systems with the <code>Persistent_2</code> deployment type. Instead, use .
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/DataRepositoryConfiguration" target="_top">AWS
  *      API Documentation</a>
@@ -58,6 +61,11 @@ public class DataRepositoryConfiguration implements Serializable, Cloneable, Str
      * <p>
      * <code>UPDATING</code> - The data repository is undergoing a customer initiated update and availability may be
      * impacted.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>FAILED</code> - The data repository is in a terminal state that cannot be recovered.
      * </p>
      * </li>
      * </ul>
@@ -117,12 +125,14 @@ public class DataRepositoryConfiguration implements Serializable, Cloneable, Str
      * this option.
      * </p>
      * </li>
-     * </ul>
+     * <li>
      * <p>
-     * For more information, see <a
-     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/autoimport-data-repo.html">Automatically import updates
-     * from your S3 bucket</a>.
+     * <code>NEW_CHANGED_DELETED</code> - AutoImport is on. Amazon FSx automatically imports file and directory listings
+     * of any new objects added to the S3 bucket, any existing objects that are changed in the S3 bucket, and any
+     * objects that were deleted in the S3 bucket.
      * </p>
+     * </li>
+     * </ul>
      */
     private String autoImportPolicy;
 
@@ -159,6 +169,11 @@ public class DataRepositoryConfiguration implements Serializable, Cloneable, Str
      * impacted.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>FAILED</code> - The data repository is in a terminal state that cannot be recovered.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param lifecycle
@@ -188,6 +203,11 @@ public class DataRepositoryConfiguration implements Serializable, Cloneable, Str
      *        <p>
      *        <code>UPDATING</code> - The data repository is undergoing a customer initiated update and availability may
      *        be impacted.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>FAILED</code> - The data repository is in a terminal state that cannot be recovered.
      *        </p>
      *        </li>
      * @see DataRepositoryLifecycle
@@ -228,6 +248,11 @@ public class DataRepositoryConfiguration implements Serializable, Cloneable, Str
      * impacted.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>FAILED</code> - The data repository is in a terminal state that cannot be recovered.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @return Describes the state of the file system's S3 durable data repository, if it is configured with an S3
@@ -256,6 +281,11 @@ public class DataRepositoryConfiguration implements Serializable, Cloneable, Str
      *         <p>
      *         <code>UPDATING</code> - The data repository is undergoing a customer initiated update and availability
      *         may be impacted.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>FAILED</code> - The data repository is in a terminal state that cannot be recovered.
      *         </p>
      *         </li>
      * @see DataRepositoryLifecycle
@@ -296,6 +326,11 @@ public class DataRepositoryConfiguration implements Serializable, Cloneable, Str
      * impacted.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>FAILED</code> - The data repository is in a terminal state that cannot be recovered.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param lifecycle
@@ -325,6 +360,11 @@ public class DataRepositoryConfiguration implements Serializable, Cloneable, Str
      *        <p>
      *        <code>UPDATING</code> - The data repository is undergoing a customer initiated update and availability may
      *        be impacted.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>FAILED</code> - The data repository is in a terminal state that cannot be recovered.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -367,6 +407,11 @@ public class DataRepositoryConfiguration implements Serializable, Cloneable, Str
      * impacted.
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>FAILED</code> - The data repository is in a terminal state that cannot be recovered.
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param lifecycle
@@ -396,6 +441,11 @@ public class DataRepositoryConfiguration implements Serializable, Cloneable, Str
      *        <p>
      *        <code>UPDATING</code> - The data repository is undergoing a customer initiated update and availability may
      *        be impacted.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>FAILED</code> - The data repository is in a terminal state that cannot be recovered.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -608,12 +658,14 @@ public class DataRepositoryConfiguration implements Serializable, Cloneable, Str
      * this option.
      * </p>
      * </li>
-     * </ul>
+     * <li>
      * <p>
-     * For more information, see <a
-     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/autoimport-data-repo.html">Automatically import updates
-     * from your S3 bucket</a>.
+     * <code>NEW_CHANGED_DELETED</code> - AutoImport is on. Amazon FSx automatically imports file and directory listings
+     * of any new objects added to the S3 bucket, any existing objects that are changed in the S3 bucket, and any
+     * objects that were deleted in the S3 bucket.
      * </p>
+     * </li>
+     * </ul>
      * 
      * @param autoImportPolicy
      *        Describes the file system's linked S3 data repository's <code>AutoImportPolicy</code>. The
@@ -640,11 +692,13 @@ public class DataRepositoryConfiguration implements Serializable, Cloneable, Str
      *        you choose this option.
      *        </p>
      *        </li>
-     *        </ul>
+     *        <li>
      *        <p>
-     *        For more information, see <a
-     *        href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/autoimport-data-repo.html">Automatically import
-     *        updates from your S3 bucket</a>.
+     *        <code>NEW_CHANGED_DELETED</code> - AutoImport is on. Amazon FSx automatically imports file and directory
+     *        listings of any new objects added to the S3 bucket, any existing objects that are changed in the S3
+     *        bucket, and any objects that were deleted in the S3 bucket.
+     *        </p>
+     *        </li>
      * @see AutoImportPolicyType
      */
 
@@ -679,12 +733,14 @@ public class DataRepositoryConfiguration implements Serializable, Cloneable, Str
      * this option.
      * </p>
      * </li>
-     * </ul>
+     * <li>
      * <p>
-     * For more information, see <a
-     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/autoimport-data-repo.html">Automatically import updates
-     * from your S3 bucket</a>.
+     * <code>NEW_CHANGED_DELETED</code> - AutoImport is on. Amazon FSx automatically imports file and directory listings
+     * of any new objects added to the S3 bucket, any existing objects that are changed in the S3 bucket, and any
+     * objects that were deleted in the S3 bucket.
      * </p>
+     * </li>
+     * </ul>
      * 
      * @return Describes the file system's linked S3 data repository's <code>AutoImportPolicy</code>. The
      *         AutoImportPolicy configures how Amazon FSx keeps your file and directory listings up to date as you add
@@ -711,11 +767,13 @@ public class DataRepositoryConfiguration implements Serializable, Cloneable, Str
      *         after you choose this option.
      *         </p>
      *         </li>
-     *         </ul>
+     *         <li>
      *         <p>
-     *         For more information, see <a
-     *         href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/autoimport-data-repo.html">Automatically import
-     *         updates from your S3 bucket</a>.
+     *         <code>NEW_CHANGED_DELETED</code> - AutoImport is on. Amazon FSx automatically imports file and directory
+     *         listings of any new objects added to the S3 bucket, any existing objects that are changed in the S3
+     *         bucket, and any objects that were deleted in the S3 bucket.
+     *         </p>
+     *         </li>
      * @see AutoImportPolicyType
      */
 
@@ -750,12 +808,14 @@ public class DataRepositoryConfiguration implements Serializable, Cloneable, Str
      * this option.
      * </p>
      * </li>
-     * </ul>
+     * <li>
      * <p>
-     * For more information, see <a
-     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/autoimport-data-repo.html">Automatically import updates
-     * from your S3 bucket</a>.
+     * <code>NEW_CHANGED_DELETED</code> - AutoImport is on. Amazon FSx automatically imports file and directory listings
+     * of any new objects added to the S3 bucket, any existing objects that are changed in the S3 bucket, and any
+     * objects that were deleted in the S3 bucket.
      * </p>
+     * </li>
+     * </ul>
      * 
      * @param autoImportPolicy
      *        Describes the file system's linked S3 data repository's <code>AutoImportPolicy</code>. The
@@ -782,11 +842,13 @@ public class DataRepositoryConfiguration implements Serializable, Cloneable, Str
      *        you choose this option.
      *        </p>
      *        </li>
-     *        </ul>
+     *        <li>
      *        <p>
-     *        For more information, see <a
-     *        href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/autoimport-data-repo.html">Automatically import
-     *        updates from your S3 bucket</a>.
+     *        <code>NEW_CHANGED_DELETED</code> - AutoImport is on. Amazon FSx automatically imports file and directory
+     *        listings of any new objects added to the S3 bucket, any existing objects that are changed in the S3
+     *        bucket, and any objects that were deleted in the S3 bucket.
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AutoImportPolicyType
      */
@@ -823,12 +885,14 @@ public class DataRepositoryConfiguration implements Serializable, Cloneable, Str
      * this option.
      * </p>
      * </li>
-     * </ul>
+     * <li>
      * <p>
-     * For more information, see <a
-     * href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/autoimport-data-repo.html">Automatically import updates
-     * from your S3 bucket</a>.
+     * <code>NEW_CHANGED_DELETED</code> - AutoImport is on. Amazon FSx automatically imports file and directory listings
+     * of any new objects added to the S3 bucket, any existing objects that are changed in the S3 bucket, and any
+     * objects that were deleted in the S3 bucket.
      * </p>
+     * </li>
+     * </ul>
      * 
      * @param autoImportPolicy
      *        Describes the file system's linked S3 data repository's <code>AutoImportPolicy</code>. The
@@ -855,11 +919,13 @@ public class DataRepositoryConfiguration implements Serializable, Cloneable, Str
      *        you choose this option.
      *        </p>
      *        </li>
-     *        </ul>
+     *        <li>
      *        <p>
-     *        For more information, see <a
-     *        href="https://docs.aws.amazon.com/fsx/latest/LustreGuide/autoimport-data-repo.html">Automatically import
-     *        updates from your S3 bucket</a>.
+     *        <code>NEW_CHANGED_DELETED</code> - AutoImport is on. Amazon FSx automatically imports file and directory
+     *        listings of any new objects added to the S3 bucket, any existing objects that are changed in the S3
+     *        bucket, and any objects that were deleted in the S3 bucket.
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AutoImportPolicyType
      */

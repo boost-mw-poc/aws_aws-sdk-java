@@ -24,7 +24,8 @@ public enum HostEnvironment {
     HYPERV("HYPER-V"),
     EC2("EC2"),
     KVM("KVM"),
-    OTHER("OTHER");
+    OTHER("OTHER"),
+    SNOWBALL("SNOWBALL");
 
     private String value;
 

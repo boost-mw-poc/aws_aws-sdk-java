@@ -28,7 +28,7 @@ public class GrantPermissionsRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent metadata
-     * store. It contains database definitions, table definitions, and other control information to manage your AWS Lake
+     * store. It contains database definitions, table definitions, and other control information to manage your Lake
      * Formation environment.
      * </p>
      */
@@ -46,17 +46,16 @@ public class GrantPermissionsRequest extends com.amazonaws.AmazonWebServiceReque
     private DataLakePrincipal principal;
     /**
      * <p>
-     * The resource to which permissions are to be granted. Resources in AWS Lake Formation are the Data Catalog,
-     * databases, and tables.
+     * The resource to which permissions are to be granted. Resources in Lake Formation are the Data Catalog, databases,
+     * and tables.
      * </p>
      */
     private Resource resource;
     /**
      * <p>
-     * The permissions granted to the principal on the resource. AWS Lake Formation defines privileges to grant and
-     * revoke access to metadata in the Data Catalog and data organized in underlying data storage such as Amazon S3.
-     * AWS Lake Formation requires that each principal be authorized to perform a specific task on AWS Lake Formation
-     * resources.
+     * The permissions granted to the principal on the resource. Lake Formation defines privileges to grant and revoke
+     * access to metadata in the Data Catalog and data organized in underlying data storage such as Amazon S3. Lake
+     * Formation requires that each principal be authorized to perform a specific task on Lake Formation resources.
      * </p>
      */
     private java.util.List<String> permissions;
@@ -71,14 +70,14 @@ public class GrantPermissionsRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent metadata
-     * store. It contains database definitions, table definitions, and other control information to manage your AWS Lake
+     * store. It contains database definitions, table definitions, and other control information to manage your Lake
      * Formation environment.
      * </p>
      * 
      * @param catalogId
      *        The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent
      *        metadata store. It contains database definitions, table definitions, and other control information to
-     *        manage your AWS Lake Formation environment.
+     *        manage your Lake Formation environment.
      */
 
     public void setCatalogId(String catalogId) {
@@ -88,13 +87,13 @@ public class GrantPermissionsRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent metadata
-     * store. It contains database definitions, table definitions, and other control information to manage your AWS Lake
+     * store. It contains database definitions, table definitions, and other control information to manage your Lake
      * Formation environment.
      * </p>
      * 
      * @return The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent
      *         metadata store. It contains database definitions, table definitions, and other control information to
-     *         manage your AWS Lake Formation environment.
+     *         manage your Lake Formation environment.
      */
 
     public String getCatalogId() {
@@ -104,14 +103,14 @@ public class GrantPermissionsRequest extends com.amazonaws.AmazonWebServiceReque
     /**
      * <p>
      * The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent metadata
-     * store. It contains database definitions, table definitions, and other control information to manage your AWS Lake
+     * store. It contains database definitions, table definitions, and other control information to manage your Lake
      * Formation environment.
      * </p>
      * 
      * @param catalogId
      *        The identifier for the Data Catalog. By default, the account ID. The Data Catalog is the persistent
      *        metadata store. It contains database definitions, table definitions, and other control information to
-     *        manage your AWS Lake Formation environment.
+     *        manage your Lake Formation environment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -189,12 +188,12 @@ public class GrantPermissionsRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The resource to which permissions are to be granted. Resources in AWS Lake Formation are the Data Catalog,
-     * databases, and tables.
+     * The resource to which permissions are to be granted. Resources in Lake Formation are the Data Catalog, databases,
+     * and tables.
      * </p>
      * 
      * @param resource
-     *        The resource to which permissions are to be granted. Resources in AWS Lake Formation are the Data Catalog,
+     *        The resource to which permissions are to be granted. Resources in Lake Formation are the Data Catalog,
      *        databases, and tables.
      */
 
@@ -204,12 +203,12 @@ public class GrantPermissionsRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The resource to which permissions are to be granted. Resources in AWS Lake Formation are the Data Catalog,
-     * databases, and tables.
+     * The resource to which permissions are to be granted. Resources in Lake Formation are the Data Catalog, databases,
+     * and tables.
      * </p>
      * 
-     * @return The resource to which permissions are to be granted. Resources in AWS Lake Formation are the Data
-     *         Catalog, databases, and tables.
+     * @return The resource to which permissions are to be granted. Resources in Lake Formation are the Data Catalog,
+     *         databases, and tables.
      */
 
     public Resource getResource() {
@@ -218,12 +217,12 @@ public class GrantPermissionsRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The resource to which permissions are to be granted. Resources in AWS Lake Formation are the Data Catalog,
-     * databases, and tables.
+     * The resource to which permissions are to be granted. Resources in Lake Formation are the Data Catalog, databases,
+     * and tables.
      * </p>
      * 
      * @param resource
-     *        The resource to which permissions are to be granted. Resources in AWS Lake Formation are the Data Catalog,
+     *        The resource to which permissions are to be granted. Resources in Lake Formation are the Data Catalog,
      *        databases, and tables.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -235,16 +234,15 @@ public class GrantPermissionsRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The permissions granted to the principal on the resource. AWS Lake Formation defines privileges to grant and
-     * revoke access to metadata in the Data Catalog and data organized in underlying data storage such as Amazon S3.
-     * AWS Lake Formation requires that each principal be authorized to perform a specific task on AWS Lake Formation
-     * resources.
+     * The permissions granted to the principal on the resource. Lake Formation defines privileges to grant and revoke
+     * access to metadata in the Data Catalog and data organized in underlying data storage such as Amazon S3. Lake
+     * Formation requires that each principal be authorized to perform a specific task on Lake Formation resources.
      * </p>
      * 
-     * @return The permissions granted to the principal on the resource. AWS Lake Formation defines privileges to grant
-     *         and revoke access to metadata in the Data Catalog and data organized in underlying data storage such as
-     *         Amazon S3. AWS Lake Formation requires that each principal be authorized to perform a specific task on
-     *         AWS Lake Formation resources.
+     * @return The permissions granted to the principal on the resource. Lake Formation defines privileges to grant and
+     *         revoke access to metadata in the Data Catalog and data organized in underlying data storage such as
+     *         Amazon S3. Lake Formation requires that each principal be authorized to perform a specific task on Lake
+     *         Formation resources.
      * @see Permission
      */
 
@@ -254,17 +252,16 @@ public class GrantPermissionsRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The permissions granted to the principal on the resource. AWS Lake Formation defines privileges to grant and
-     * revoke access to metadata in the Data Catalog and data organized in underlying data storage such as Amazon S3.
-     * AWS Lake Formation requires that each principal be authorized to perform a specific task on AWS Lake Formation
-     * resources.
+     * The permissions granted to the principal on the resource. Lake Formation defines privileges to grant and revoke
+     * access to metadata in the Data Catalog and data organized in underlying data storage such as Amazon S3. Lake
+     * Formation requires that each principal be authorized to perform a specific task on Lake Formation resources.
      * </p>
      * 
      * @param permissions
-     *        The permissions granted to the principal on the resource. AWS Lake Formation defines privileges to grant
-     *        and revoke access to metadata in the Data Catalog and data organized in underlying data storage such as
-     *        Amazon S3. AWS Lake Formation requires that each principal be authorized to perform a specific task on AWS
-     *        Lake Formation resources.
+     *        The permissions granted to the principal on the resource. Lake Formation defines privileges to grant and
+     *        revoke access to metadata in the Data Catalog and data organized in underlying data storage such as Amazon
+     *        S3. Lake Formation requires that each principal be authorized to perform a specific task on Lake Formation
+     *        resources.
      * @see Permission
      */
 
@@ -279,10 +276,9 @@ public class GrantPermissionsRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The permissions granted to the principal on the resource. AWS Lake Formation defines privileges to grant and
-     * revoke access to metadata in the Data Catalog and data organized in underlying data storage such as Amazon S3.
-     * AWS Lake Formation requires that each principal be authorized to perform a specific task on AWS Lake Formation
-     * resources.
+     * The permissions granted to the principal on the resource. Lake Formation defines privileges to grant and revoke
+     * access to metadata in the Data Catalog and data organized in underlying data storage such as Amazon S3. Lake
+     * Formation requires that each principal be authorized to perform a specific task on Lake Formation resources.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -291,10 +287,10 @@ public class GrantPermissionsRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * 
      * @param permissions
-     *        The permissions granted to the principal on the resource. AWS Lake Formation defines privileges to grant
-     *        and revoke access to metadata in the Data Catalog and data organized in underlying data storage such as
-     *        Amazon S3. AWS Lake Formation requires that each principal be authorized to perform a specific task on AWS
-     *        Lake Formation resources.
+     *        The permissions granted to the principal on the resource. Lake Formation defines privileges to grant and
+     *        revoke access to metadata in the Data Catalog and data organized in underlying data storage such as Amazon
+     *        S3. Lake Formation requires that each principal be authorized to perform a specific task on Lake Formation
+     *        resources.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Permission
      */
@@ -311,17 +307,16 @@ public class GrantPermissionsRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The permissions granted to the principal on the resource. AWS Lake Formation defines privileges to grant and
-     * revoke access to metadata in the Data Catalog and data organized in underlying data storage such as Amazon S3.
-     * AWS Lake Formation requires that each principal be authorized to perform a specific task on AWS Lake Formation
-     * resources.
+     * The permissions granted to the principal on the resource. Lake Formation defines privileges to grant and revoke
+     * access to metadata in the Data Catalog and data organized in underlying data storage such as Amazon S3. Lake
+     * Formation requires that each principal be authorized to perform a specific task on Lake Formation resources.
      * </p>
      * 
      * @param permissions
-     *        The permissions granted to the principal on the resource. AWS Lake Formation defines privileges to grant
-     *        and revoke access to metadata in the Data Catalog and data organized in underlying data storage such as
-     *        Amazon S3. AWS Lake Formation requires that each principal be authorized to perform a specific task on AWS
-     *        Lake Formation resources.
+     *        The permissions granted to the principal on the resource. Lake Formation defines privileges to grant and
+     *        revoke access to metadata in the Data Catalog and data organized in underlying data storage such as Amazon
+     *        S3. Lake Formation requires that each principal be authorized to perform a specific task on Lake Formation
+     *        resources.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Permission
      */
@@ -333,17 +328,16 @@ public class GrantPermissionsRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The permissions granted to the principal on the resource. AWS Lake Formation defines privileges to grant and
-     * revoke access to metadata in the Data Catalog and data organized in underlying data storage such as Amazon S3.
-     * AWS Lake Formation requires that each principal be authorized to perform a specific task on AWS Lake Formation
-     * resources.
+     * The permissions granted to the principal on the resource. Lake Formation defines privileges to grant and revoke
+     * access to metadata in the Data Catalog and data organized in underlying data storage such as Amazon S3. Lake
+     * Formation requires that each principal be authorized to perform a specific task on Lake Formation resources.
      * </p>
      * 
      * @param permissions
-     *        The permissions granted to the principal on the resource. AWS Lake Formation defines privileges to grant
-     *        and revoke access to metadata in the Data Catalog and data organized in underlying data storage such as
-     *        Amazon S3. AWS Lake Formation requires that each principal be authorized to perform a specific task on AWS
-     *        Lake Formation resources.
+     *        The permissions granted to the principal on the resource. Lake Formation defines privileges to grant and
+     *        revoke access to metadata in the Data Catalog and data organized in underlying data storage such as Amazon
+     *        S3. Lake Formation requires that each principal be authorized to perform a specific task on Lake Formation
+     *        resources.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Permission
      */

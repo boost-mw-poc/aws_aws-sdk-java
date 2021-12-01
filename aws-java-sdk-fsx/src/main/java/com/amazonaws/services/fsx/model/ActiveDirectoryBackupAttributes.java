@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The Microsoft AD attributes of the Amazon FSx for Windows File Server file system.
+ * The Microsoft Active Directory attributes of the Amazon FSx for Windows File Server file system.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/ActiveDirectoryBackupAttributes"
@@ -30,7 +30,7 @@ public class ActiveDirectoryBackupAttributes implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The fully qualified domain name of the self-managed AD directory.
+     * The fully qualified domain name of the self-managed Active Directory directory.
      * </p>
      */
     private String domainName;
@@ -45,11 +45,11 @@ public class ActiveDirectoryBackupAttributes implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The fully qualified domain name of the self-managed AD directory.
+     * The fully qualified domain name of the self-managed Active Directory directory.
      * </p>
      * 
      * @param domainName
-     *        The fully qualified domain name of the self-managed AD directory.
+     *        The fully qualified domain name of the self-managed Active Directory directory.
      */
 
     public void setDomainName(String domainName) {
@@ -58,10 +58,10 @@ public class ActiveDirectoryBackupAttributes implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The fully qualified domain name of the self-managed AD directory.
+     * The fully qualified domain name of the self-managed Active Directory directory.
      * </p>
      * 
-     * @return The fully qualified domain name of the self-managed AD directory.
+     * @return The fully qualified domain name of the self-managed Active Directory directory.
      */
 
     public String getDomainName() {
@@ -70,11 +70,11 @@ public class ActiveDirectoryBackupAttributes implements Serializable, Cloneable,
 
     /**
      * <p>
-     * The fully qualified domain name of the self-managed AD directory.
+     * The fully qualified domain name of the self-managed Active Directory directory.
      * </p>
      * 
      * @param domainName
-     *        The fully qualified domain name of the self-managed AD directory.
+     *        The fully qualified domain name of the self-managed Active Directory directory.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

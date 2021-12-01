@@ -33,7 +33,7 @@ public class RegisterResourceRequest extends com.amazonaws.AmazonWebServiceReque
     private String resourceArn;
     /**
      * <p>
-     * Designates an AWS Identity and Access Management (IAM) service-linked role by registering this role with the Data
+     * Designates an Identity and Access Management (IAM) service-linked role by registering this role with the Data
      * Catalog. A service-linked role is a unique type of IAM role that is linked directly to Lake Formation.
      * </p>
      * <p>
@@ -92,7 +92,7 @@ public class RegisterResourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Designates an AWS Identity and Access Management (IAM) service-linked role by registering this role with the Data
+     * Designates an Identity and Access Management (IAM) service-linked role by registering this role with the Data
      * Catalog. A service-linked role is a unique type of IAM role that is linked directly to Lake Formation.
      * </p>
      * <p>
@@ -102,8 +102,8 @@ public class RegisterResourceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * 
      * @param useServiceLinkedRole
-     *        Designates an AWS Identity and Access Management (IAM) service-linked role by registering this role with
-     *        the Data Catalog. A service-linked role is a unique type of IAM role that is linked directly to Lake
+     *        Designates an Identity and Access Management (IAM) service-linked role by registering this role with the
+     *        Data Catalog. A service-linked role is a unique type of IAM role that is linked directly to Lake
      *        Formation.</p>
      *        <p>
      *        For more information, see <a
@@ -117,7 +117,7 @@ public class RegisterResourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Designates an AWS Identity and Access Management (IAM) service-linked role by registering this role with the Data
+     * Designates an Identity and Access Management (IAM) service-linked role by registering this role with the Data
      * Catalog. A service-linked role is a unique type of IAM role that is linked directly to Lake Formation.
      * </p>
      * <p>
@@ -126,8 +126,8 @@ public class RegisterResourceRequest extends com.amazonaws.AmazonWebServiceReque
      * for Lake Formation</a>.
      * </p>
      * 
-     * @return Designates an AWS Identity and Access Management (IAM) service-linked role by registering this role with
-     *         the Data Catalog. A service-linked role is a unique type of IAM role that is linked directly to Lake
+     * @return Designates an Identity and Access Management (IAM) service-linked role by registering this role with the
+     *         Data Catalog. A service-linked role is a unique type of IAM role that is linked directly to Lake
      *         Formation.</p>
      *         <p>
      *         For more information, see <a
@@ -141,7 +141,7 @@ public class RegisterResourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Designates an AWS Identity and Access Management (IAM) service-linked role by registering this role with the Data
+     * Designates an Identity and Access Management (IAM) service-linked role by registering this role with the Data
      * Catalog. A service-linked role is a unique type of IAM role that is linked directly to Lake Formation.
      * </p>
      * <p>
@@ -151,8 +151,8 @@ public class RegisterResourceRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      * 
      * @param useServiceLinkedRole
-     *        Designates an AWS Identity and Access Management (IAM) service-linked role by registering this role with
-     *        the Data Catalog. A service-linked role is a unique type of IAM role that is linked directly to Lake
+     *        Designates an Identity and Access Management (IAM) service-linked role by registering this role with the
+     *        Data Catalog. A service-linked role is a unique type of IAM role that is linked directly to Lake
      *        Formation.</p>
      *        <p>
      *        For more information, see <a
@@ -168,7 +168,7 @@ public class RegisterResourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Designates an AWS Identity and Access Management (IAM) service-linked role by registering this role with the Data
+     * Designates an Identity and Access Management (IAM) service-linked role by registering this role with the Data
      * Catalog. A service-linked role is a unique type of IAM role that is linked directly to Lake Formation.
      * </p>
      * <p>
@@ -177,8 +177,8 @@ public class RegisterResourceRequest extends com.amazonaws.AmazonWebServiceReque
      * for Lake Formation</a>.
      * </p>
      * 
-     * @return Designates an AWS Identity and Access Management (IAM) service-linked role by registering this role with
-     *         the Data Catalog. A service-linked role is a unique type of IAM role that is linked directly to Lake
+     * @return Designates an Identity and Access Management (IAM) service-linked role by registering this role with the
+     *         Data Catalog. A service-linked role is a unique type of IAM role that is linked directly to Lake
      *         Formation.</p>
      *         <p>
      *         For more information, see <a

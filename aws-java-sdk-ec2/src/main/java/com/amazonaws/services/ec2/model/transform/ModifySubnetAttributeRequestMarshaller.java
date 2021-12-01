@@ -78,6 +78,14 @@ public class ModifySubnetAttributeRequestMarshaller implements Marshaller<Reques
                     StringUtils.fromBoolean(modifySubnetAttributeRequest.getEnableResourceNameDnsAAAARecordOnLaunch()));
         }
 
+        if (modifySubnetAttributeRequest.getEnableLniAtDeviceIndex() != null) {
+            request.addParameter("EnableLniAtDeviceIndex", StringUtils.fromInteger(modifySubnetAttributeRequest.getEnableLniAtDeviceIndex()));
+        }
+
+        if (modifySubnetAttributeRequest.getDisableLniAtDeviceIndex() != null) {
+            request.addParameter("DisableLniAtDeviceIndex.Value", StringUtils.fromBoolean(modifySubnetAttributeRequest.getDisableLniAtDeviceIndex()));
+        }
+
         return request;
     }
 

@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * The request was rejected because the lifecycle status of the source backup is not <code>AVAILABLE</code>.
+ * The request was rejected because the lifecycle status of the source backup isn't <code>AVAILABLE</code>.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

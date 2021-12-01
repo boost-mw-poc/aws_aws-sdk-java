@@ -56,6 +56,14 @@ public class ThingIndexingConfigurationJsonUnmarshaller implements Unmarshaller<
                     context.nextToken();
                     thingIndexingConfiguration.setThingConnectivityIndexingMode(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("deviceDefenderIndexingMode", targetDepth)) {
+                    context.nextToken();
+                    thingIndexingConfiguration.setDeviceDefenderIndexingMode(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("namedShadowIndexingMode", targetDepth)) {
+                    context.nextToken();
+                    thingIndexingConfiguration.setNamedShadowIndexingMode(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("managedFields", targetDepth)) {
                     context.nextToken();
                     thingIndexingConfiguration.setManagedFields(new ListUnmarshaller<Field>(FieldJsonUnmarshaller.getInstance())

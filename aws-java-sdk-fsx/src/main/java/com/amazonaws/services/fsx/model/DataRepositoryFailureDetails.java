@@ -20,7 +20,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 /**
  * <p>
  * Provides detailed information about the data respository if its <code>Lifecycle</code> is set to
- * <code>MISCONFIGURED</code>.
+ * <code>MISCONFIGURED</code> or <code>FAILED</code>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/DataRepositoryFailureDetails" target="_top">AWS

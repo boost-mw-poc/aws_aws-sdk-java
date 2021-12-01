@@ -22,7 +22,8 @@ public enum LustreDeploymentType {
 
     SCRATCH_1("SCRATCH_1"),
     SCRATCH_2("SCRATCH_2"),
-    PERSISTENT_1("PERSISTENT_1");
+    PERSISTENT_1("PERSISTENT_1"),
+    PERSISTENT_2("PERSISTENT_2");
 
     private String value;
 

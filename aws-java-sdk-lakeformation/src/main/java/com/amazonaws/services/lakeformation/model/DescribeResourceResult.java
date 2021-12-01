@@ -25,18 +25,18 @@ public class DescribeResourceResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * A structure containing information about an AWS Lake Formation resource.
+     * A structure containing information about an Lake Formation resource.
      * </p>
      */
     private ResourceInfo resourceInfo;
 
     /**
      * <p>
-     * A structure containing information about an AWS Lake Formation resource.
+     * A structure containing information about an Lake Formation resource.
      * </p>
      * 
      * @param resourceInfo
-     *        A structure containing information about an AWS Lake Formation resource.
+     *        A structure containing information about an Lake Formation resource.
      */
 
     public void setResourceInfo(ResourceInfo resourceInfo) {
@@ -45,10 +45,10 @@ public class DescribeResourceResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * A structure containing information about an AWS Lake Formation resource.
+     * A structure containing information about an Lake Formation resource.
      * </p>
      * 
-     * @return A structure containing information about an AWS Lake Formation resource.
+     * @return A structure containing information about an Lake Formation resource.
      */
 
     public ResourceInfo getResourceInfo() {
@@ -57,11 +57,11 @@ public class DescribeResourceResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * A structure containing information about an AWS Lake Formation resource.
+     * A structure containing information about an Lake Formation resource.
      * </p>
      * 
      * @param resourceInfo
-     *        A structure containing information about an AWS Lake Formation resource.
+     *        A structure containing information about an Lake Formation resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
