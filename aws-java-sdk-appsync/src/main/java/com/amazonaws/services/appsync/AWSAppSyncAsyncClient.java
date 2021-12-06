@@ -74,6 +74,39 @@ public class AWSAppSyncAsyncClient extends AWSAppSyncClient implements AWSAppSyn
     }
 
     @Override
+    public java.util.concurrent.Future<AssociateApiResult> associateApiAsync(AssociateApiRequest request) {
+
+        return associateApiAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<AssociateApiResult> associateApiAsync(final AssociateApiRequest request,
+            final com.amazonaws.handlers.AsyncHandler<AssociateApiRequest, AssociateApiResult> asyncHandler) {
+        final AssociateApiRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<AssociateApiResult>() {
+            @Override
+            public AssociateApiResult call() throws Exception {
+                AssociateApiResult result = null;
+
+                try {
+                    result = executeAssociateApi(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<CreateApiCacheResult> createApiCacheAsync(CreateApiCacheRequest request) {
 
         return createApiCacheAsync(request, null);
@@ -157,6 +190,39 @@ public class AWSAppSyncAsyncClient extends AWSAppSyncClient implements AWSAppSyn
 
                 try {
                     result = executeCreateDataSource(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateDomainNameResult> createDomainNameAsync(CreateDomainNameRequest request) {
+
+        return createDomainNameAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateDomainNameResult> createDomainNameAsync(final CreateDomainNameRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateDomainNameRequest, CreateDomainNameResult> asyncHandler) {
+        final CreateDomainNameRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateDomainNameResult>() {
+            @Override
+            public CreateDomainNameResult call() throws Exception {
+                CreateDomainNameResult result = null;
+
+                try {
+                    result = executeCreateDomainName(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -404,6 +470,39 @@ public class AWSAppSyncAsyncClient extends AWSAppSyncClient implements AWSAppSyn
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteDomainNameResult> deleteDomainNameAsync(DeleteDomainNameRequest request) {
+
+        return deleteDomainNameAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteDomainNameResult> deleteDomainNameAsync(final DeleteDomainNameRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteDomainNameRequest, DeleteDomainNameResult> asyncHandler) {
+        final DeleteDomainNameRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteDomainNameResult>() {
+            @Override
+            public DeleteDomainNameResult call() throws Exception {
+                DeleteDomainNameResult result = null;
+
+                try {
+                    result = executeDeleteDomainName(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteFunctionResult> deleteFunctionAsync(DeleteFunctionRequest request) {
 
         return deleteFunctionAsync(request, null);
@@ -536,6 +635,39 @@ public class AWSAppSyncAsyncClient extends AWSAppSyncClient implements AWSAppSyn
     }
 
     @Override
+    public java.util.concurrent.Future<DisassociateApiResult> disassociateApiAsync(DisassociateApiRequest request) {
+
+        return disassociateApiAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DisassociateApiResult> disassociateApiAsync(final DisassociateApiRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DisassociateApiRequest, DisassociateApiResult> asyncHandler) {
+        final DisassociateApiRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DisassociateApiResult>() {
+            @Override
+            public DisassociateApiResult call() throws Exception {
+                DisassociateApiResult result = null;
+
+                try {
+                    result = executeDisassociateApi(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<FlushApiCacheResult> flushApiCacheAsync(FlushApiCacheRequest request) {
 
         return flushApiCacheAsync(request, null);
@@ -553,6 +685,39 @@ public class AWSAppSyncAsyncClient extends AWSAppSyncClient implements AWSAppSyn
 
                 try {
                     result = executeFlushApiCache(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetApiAssociationResult> getApiAssociationAsync(GetApiAssociationRequest request) {
+
+        return getApiAssociationAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetApiAssociationResult> getApiAssociationAsync(final GetApiAssociationRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetApiAssociationRequest, GetApiAssociationResult> asyncHandler) {
+        final GetApiAssociationRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetApiAssociationResult>() {
+            @Override
+            public GetApiAssociationResult call() throws Exception {
+                GetApiAssociationResult result = null;
+
+                try {
+                    result = executeGetApiAssociation(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -619,6 +784,39 @@ public class AWSAppSyncAsyncClient extends AWSAppSyncClient implements AWSAppSyn
 
                 try {
                     result = executeGetDataSource(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetDomainNameResult> getDomainNameAsync(GetDomainNameRequest request) {
+
+        return getDomainNameAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetDomainNameResult> getDomainNameAsync(final GetDomainNameRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetDomainNameRequest, GetDomainNameResult> asyncHandler) {
+        final GetDomainNameRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetDomainNameResult>() {
+            @Override
+            public GetDomainNameResult call() throws Exception {
+                GetDomainNameResult result = null;
+
+                try {
+                    result = executeGetDomainName(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -883,6 +1081,39 @@ public class AWSAppSyncAsyncClient extends AWSAppSyncClient implements AWSAppSyn
 
                 try {
                     result = executeListDataSources(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListDomainNamesResult> listDomainNamesAsync(ListDomainNamesRequest request) {
+
+        return listDomainNamesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListDomainNamesResult> listDomainNamesAsync(final ListDomainNamesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListDomainNamesRequest, ListDomainNamesResult> asyncHandler) {
+        final ListDomainNamesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListDomainNamesResult>() {
+            @Override
+            public ListDomainNamesResult call() throws Exception {
+                ListDomainNamesResult result = null;
+
+                try {
+                    result = executeListDomainNames(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -1279,6 +1510,39 @@ public class AWSAppSyncAsyncClient extends AWSAppSyncClient implements AWSAppSyn
 
                 try {
                     result = executeUpdateDataSource(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateDomainNameResult> updateDomainNameAsync(UpdateDomainNameRequest request) {
+
+        return updateDomainNameAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateDomainNameResult> updateDomainNameAsync(final UpdateDomainNameRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateDomainNameRequest, UpdateDomainNameResult> asyncHandler) {
+        final UpdateDomainNameRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateDomainNameResult>() {
+            @Override
+            public UpdateDomainNameResult call() throws Exception {
+                UpdateDomainNameResult result = null;
+
+                try {
+                    result = executeUpdateDomainName(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

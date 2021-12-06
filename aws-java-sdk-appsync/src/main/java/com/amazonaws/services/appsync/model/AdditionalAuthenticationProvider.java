@@ -30,14 +30,14 @@ public class AdditionalAuthenticationProvider implements Serializable, Cloneable
 
     /**
      * <p>
-     * The authentication type: API key, Identity and Access Management, OIDC, Amazon Cognito user pools, or Amazon Web
-     * Services Lambda.
+     * The authentication type: API key, Identity and Access Management (IAM), OpenID Connect (OIDC), Amazon Cognito
+     * user pools, or Lambda.
      * </p>
      */
     private String authenticationType;
     /**
      * <p>
-     * The OpenID Connect configuration.
+     * The OIDC configuration.
      * </p>
      */
     private OpenIDConnectConfig openIDConnectConfig;
@@ -49,20 +49,20 @@ public class AdditionalAuthenticationProvider implements Serializable, Cloneable
     private CognitoUserPoolConfig userPoolConfig;
     /**
      * <p>
-     * Configuration for Amazon Web Services Lambda function authorization.
+     * Configuration for Lambda function authorization.
      * </p>
      */
     private LambdaAuthorizerConfig lambdaAuthorizerConfig;
 
     /**
      * <p>
-     * The authentication type: API key, Identity and Access Management, OIDC, Amazon Cognito user pools, or Amazon Web
-     * Services Lambda.
+     * The authentication type: API key, Identity and Access Management (IAM), OpenID Connect (OIDC), Amazon Cognito
+     * user pools, or Lambda.
      * </p>
      * 
      * @param authenticationType
-     *        The authentication type: API key, Identity and Access Management, OIDC, Amazon Cognito user pools, or
-     *        Amazon Web Services Lambda.
+     *        The authentication type: API key, Identity and Access Management (IAM), OpenID Connect (OIDC), Amazon
+     *        Cognito user pools, or Lambda.
      * @see AuthenticationType
      */
 
@@ -72,12 +72,12 @@ public class AdditionalAuthenticationProvider implements Serializable, Cloneable
 
     /**
      * <p>
-     * The authentication type: API key, Identity and Access Management, OIDC, Amazon Cognito user pools, or Amazon Web
-     * Services Lambda.
+     * The authentication type: API key, Identity and Access Management (IAM), OpenID Connect (OIDC), Amazon Cognito
+     * user pools, or Lambda.
      * </p>
      * 
-     * @return The authentication type: API key, Identity and Access Management, OIDC, Amazon Cognito user pools, or
-     *         Amazon Web Services Lambda.
+     * @return The authentication type: API key, Identity and Access Management (IAM), OpenID Connect (OIDC), Amazon
+     *         Cognito user pools, or Lambda.
      * @see AuthenticationType
      */
 
@@ -87,13 +87,13 @@ public class AdditionalAuthenticationProvider implements Serializable, Cloneable
 
     /**
      * <p>
-     * The authentication type: API key, Identity and Access Management, OIDC, Amazon Cognito user pools, or Amazon Web
-     * Services Lambda.
+     * The authentication type: API key, Identity and Access Management (IAM), OpenID Connect (OIDC), Amazon Cognito
+     * user pools, or Lambda.
      * </p>
      * 
      * @param authenticationType
-     *        The authentication type: API key, Identity and Access Management, OIDC, Amazon Cognito user pools, or
-     *        Amazon Web Services Lambda.
+     *        The authentication type: API key, Identity and Access Management (IAM), OpenID Connect (OIDC), Amazon
+     *        Cognito user pools, or Lambda.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AuthenticationType
      */
@@ -105,13 +105,13 @@ public class AdditionalAuthenticationProvider implements Serializable, Cloneable
 
     /**
      * <p>
-     * The authentication type: API key, Identity and Access Management, OIDC, Amazon Cognito user pools, or Amazon Web
-     * Services Lambda.
+     * The authentication type: API key, Identity and Access Management (IAM), OpenID Connect (OIDC), Amazon Cognito
+     * user pools, or Lambda.
      * </p>
      * 
      * @param authenticationType
-     *        The authentication type: API key, Identity and Access Management, OIDC, Amazon Cognito user pools, or
-     *        Amazon Web Services Lambda.
+     *        The authentication type: API key, Identity and Access Management (IAM), OpenID Connect (OIDC), Amazon
+     *        Cognito user pools, or Lambda.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AuthenticationType
      */
@@ -123,11 +123,11 @@ public class AdditionalAuthenticationProvider implements Serializable, Cloneable
 
     /**
      * <p>
-     * The OpenID Connect configuration.
+     * The OIDC configuration.
      * </p>
      * 
      * @param openIDConnectConfig
-     *        The OpenID Connect configuration.
+     *        The OIDC configuration.
      */
 
     public void setOpenIDConnectConfig(OpenIDConnectConfig openIDConnectConfig) {
@@ -136,10 +136,10 @@ public class AdditionalAuthenticationProvider implements Serializable, Cloneable
 
     /**
      * <p>
-     * The OpenID Connect configuration.
+     * The OIDC configuration.
      * </p>
      * 
-     * @return The OpenID Connect configuration.
+     * @return The OIDC configuration.
      */
 
     public OpenIDConnectConfig getOpenIDConnectConfig() {
@@ -148,11 +148,11 @@ public class AdditionalAuthenticationProvider implements Serializable, Cloneable
 
     /**
      * <p>
-     * The OpenID Connect configuration.
+     * The OIDC configuration.
      * </p>
      * 
      * @param openIDConnectConfig
-     *        The OpenID Connect configuration.
+     *        The OIDC configuration.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -203,11 +203,11 @@ public class AdditionalAuthenticationProvider implements Serializable, Cloneable
 
     /**
      * <p>
-     * Configuration for Amazon Web Services Lambda function authorization.
+     * Configuration for Lambda function authorization.
      * </p>
      * 
      * @param lambdaAuthorizerConfig
-     *        Configuration for Amazon Web Services Lambda function authorization.
+     *        Configuration for Lambda function authorization.
      */
 
     public void setLambdaAuthorizerConfig(LambdaAuthorizerConfig lambdaAuthorizerConfig) {
@@ -216,10 +216,10 @@ public class AdditionalAuthenticationProvider implements Serializable, Cloneable
 
     /**
      * <p>
-     * Configuration for Amazon Web Services Lambda function authorization.
+     * Configuration for Lambda function authorization.
      * </p>
      * 
-     * @return Configuration for Amazon Web Services Lambda function authorization.
+     * @return Configuration for Lambda function authorization.
      */
 
     public LambdaAuthorizerConfig getLambdaAuthorizerConfig() {
@@ -228,11 +228,11 @@ public class AdditionalAuthenticationProvider implements Serializable, Cloneable
 
     /**
      * <p>
-     * Configuration for Amazon Web Services Lambda function authorization.
+     * Configuration for Lambda function authorization.
      * </p>
      * 
      * @param lambdaAuthorizerConfig
-     *        Configuration for Amazon Web Services Lambda function authorization.
+     *        Configuration for Lambda function authorization.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

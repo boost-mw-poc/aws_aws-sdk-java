@@ -64,7 +64,7 @@ public class CreateFunctionRequest extends com.amazonaws.AmazonWebServiceRequest
     private String responseMappingTemplate;
     /**
      * <p>
-     * The <code>version</code> of the request mapping template. Currently the supported value is 2018-05-29.
+     * The <code>version</code> of the request mapping template. Currently, the supported value is 2018-05-29.
      * </p>
      */
     private String functionVersion;
@@ -319,11 +319,11 @@ public class CreateFunctionRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The <code>version</code> of the request mapping template. Currently the supported value is 2018-05-29.
+     * The <code>version</code> of the request mapping template. Currently, the supported value is 2018-05-29.
      * </p>
      * 
      * @param functionVersion
-     *        The <code>version</code> of the request mapping template. Currently the supported value is 2018-05-29.
+     *        The <code>version</code> of the request mapping template. Currently, the supported value is 2018-05-29.
      */
 
     public void setFunctionVersion(String functionVersion) {
@@ -332,10 +332,10 @@ public class CreateFunctionRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The <code>version</code> of the request mapping template. Currently the supported value is 2018-05-29.
+     * The <code>version</code> of the request mapping template. Currently, the supported value is 2018-05-29.
      * </p>
      * 
-     * @return The <code>version</code> of the request mapping template. Currently the supported value is 2018-05-29.
+     * @return The <code>version</code> of the request mapping template. Currently, the supported value is 2018-05-29.
      */
 
     public String getFunctionVersion() {
@@ -344,11 +344,11 @@ public class CreateFunctionRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The <code>version</code> of the request mapping template. Currently the supported value is 2018-05-29.
+     * The <code>version</code> of the request mapping template. Currently, the supported value is 2018-05-29.
      * </p>
      * 
      * @param functionVersion
-     *        The <code>version</code> of the request mapping template. Currently the supported value is 2018-05-29.
+     *        The <code>version</code> of the request mapping template. Currently, the supported value is 2018-05-29.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

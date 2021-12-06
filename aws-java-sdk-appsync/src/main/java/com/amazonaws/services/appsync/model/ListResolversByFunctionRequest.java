@@ -33,7 +33,7 @@ public class ListResolversByFunctionRequest extends com.amazonaws.AmazonWebServi
     private String apiId;
     /**
      * <p>
-     * The Function ID.
+     * The function ID.
      * </p>
      */
     private String functionId;
@@ -46,7 +46,7 @@ public class ListResolversByFunctionRequest extends com.amazonaws.AmazonWebServi
     private String nextToken;
     /**
      * <p>
-     * The maximum number of results you want the request to return.
+     * The maximum number of results that you want the request to return.
      * </p>
      */
     private Integer maxResults;
@@ -93,11 +93,11 @@ public class ListResolversByFunctionRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The Function ID.
+     * The function ID.
      * </p>
      * 
      * @param functionId
-     *        The Function ID.
+     *        The function ID.
      */
 
     public void setFunctionId(String functionId) {
@@ -106,10 +106,10 @@ public class ListResolversByFunctionRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The Function ID.
+     * The function ID.
      * </p>
      * 
-     * @return The Function ID.
+     * @return The function ID.
      */
 
     public String getFunctionId() {
@@ -118,11 +118,11 @@ public class ListResolversByFunctionRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The Function ID.
+     * The function ID.
      * </p>
      * 
      * @param functionId
-     *        The Function ID.
+     *        The function ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -179,11 +179,11 @@ public class ListResolversByFunctionRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The maximum number of results you want the request to return.
+     * The maximum number of results that you want the request to return.
      * </p>
      * 
      * @param maxResults
-     *        The maximum number of results you want the request to return.
+     *        The maximum number of results that you want the request to return.
      */
 
     public void setMaxResults(Integer maxResults) {
@@ -192,10 +192,10 @@ public class ListResolversByFunctionRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The maximum number of results you want the request to return.
+     * The maximum number of results that you want the request to return.
      * </p>
      * 
-     * @return The maximum number of results you want the request to return.
+     * @return The maximum number of results that you want the request to return.
      */
 
     public Integer getMaxResults() {
@@ -204,11 +204,11 @@ public class ListResolversByFunctionRequest extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * The maximum number of results you want the request to return.
+     * The maximum number of results that you want the request to return.
      * </p>
      * 
      * @param maxResults
-     *        The maximum number of results you want the request to return.
+     *        The maximum number of results that you want the request to return.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

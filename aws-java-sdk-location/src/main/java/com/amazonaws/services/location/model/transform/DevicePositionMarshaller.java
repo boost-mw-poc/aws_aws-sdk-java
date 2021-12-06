@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.location.model.transform;
 
+import java.util.Map;
 import java.util.List;
 import javax.annotation.Generated;
 
@@ -28,10 +29,14 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class DevicePositionMarshaller {
 
+    private static final MarshallingInfo<StructuredPojo> ACCURACY_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Accuracy").build();
     private static final MarshallingInfo<String> DEVICEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("DeviceId").build();
     private static final MarshallingInfo<List> POSITION_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Position").build();
+    private static final MarshallingInfo<Map> POSITIONPROPERTIES_BINDING = MarshallingInfo.builder(MarshallingType.MAP)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PositionProperties").build();
     private static final MarshallingInfo<java.util.Date> RECEIVEDTIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ReceivedTime").timestampFormat("iso8601").build();
     private static final MarshallingInfo<java.util.Date> SAMPLETIME_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
@@ -53,8 +58,10 @@ public class DevicePositionMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(devicePosition.getAccuracy(), ACCURACY_BINDING);
             protocolMarshaller.marshall(devicePosition.getDeviceId(), DEVICEID_BINDING);
             protocolMarshaller.marshall(devicePosition.getPosition(), POSITION_BINDING);
+            protocolMarshaller.marshall(devicePosition.getPositionProperties(), POSITIONPROPERTIES_BINDING);
             protocolMarshaller.marshall(devicePosition.getReceivedTime(), RECEIVEDTIME_BINDING);
             protocolMarshaller.marshall(devicePosition.getSampleTime(), SAMPLETIME_BINDING);
         } catch (Exception e) {

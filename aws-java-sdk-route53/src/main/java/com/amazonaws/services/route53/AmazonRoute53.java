@@ -620,8 +620,7 @@ public interface AmazonRoute53 {
      * @throws InvalidKeySigningKeyNameException
      *         The key-signing key (KSK) name that you specified isn't a valid name.
      * @throws KeySigningKeyAlreadyExistsException
-     *         You've already created a key-signing key (KSK) with this name or with the same customer managed customer
-     *         master key (CMK) ARN.
+     *         You've already created a key-signing key (KSK) with this name or with the same customer managed key ARN.
      * @throws TooManyKeySigningKeysException
      *         You've reached the limit for the number of key-signing keys (KSKs). Remove at least one KSK, and then try
      *         again.
@@ -1278,6 +1277,14 @@ public interface AmazonRoute53 {
      * <p>
      * Deletes a key-signing key (KSK). Before you can delete a KSK, you must deactivate it. The KSK must be deactivated
      * before you can delete it regardless of whether the hosted zone is enabled for DNSSEC signing.
+     * </p>
+     * <p>
+     * You can use <a href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_DeactivateKeySigningKey.html">
+     * DeactivateKeySigningKey</a> to deactivate the key before you delete it.
+     * </p>
+     * <p>
+     * Use <a href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_GetDNSSEC.html">GetDNSSEC</a> to verify
+     * that the KSK is in an <code>INACTIVE</code> status.
      * </p>
      * 
      * @param deleteKeySigningKeyRequest
@@ -2748,6 +2755,11 @@ public interface AmazonRoute53 {
      *         No hosted zone exists with the ID that you specified.
      * @throws InvalidInputException
      *         The input is not valid.
+     * @throws PriorRequestNotCompleteException
+     *         If Amazon Route 53 can't process a request before the next request arrives, it will reject subsequent
+     *         requests for the same hosted zone and return an <code>HTTP 400 error</code> (<code>Bad request</code>).
+     *         If Route 53 returns this error repeatedly for the same request, we recommend that you wait, in intervals
+     *         of increasing duration, before you try the request again.
      * @sample AmazonRoute53.UpdateHostedZoneComment
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/route53-2013-04-01/UpdateHostedZoneComment"
      *      target="_top">AWS API Documentation</a>

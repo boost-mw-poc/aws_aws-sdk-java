@@ -32,6 +32,14 @@ public class SearchPlaceIndexForTextSummary implements Serializable, Cloneable, 
      * <p>
      * Contains the coordinates for the optional bias position specified in the request.
      * </p>
+     * <p>
+     * This parameter contains a pair of numbers. The first number represents the X coordinate, or longitude; the second
+     * number represents the Y coordinate, or latitude.
+     * </p>
+     * <p>
+     * For example, <code>[-123.1174, 49.2847]</code> represents the position with longitude <code>-123.1174</code> and
+     * latitude <code>49.2847</code>.
+     * </p>
      */
     private java.util.List<Double> biasPosition;
     /**
@@ -106,8 +114,23 @@ public class SearchPlaceIndexForTextSummary implements Serializable, Cloneable, 
      * <p>
      * Contains the coordinates for the optional bias position specified in the request.
      * </p>
+     * <p>
+     * This parameter contains a pair of numbers. The first number represents the X coordinate, or longitude; the second
+     * number represents the Y coordinate, or latitude.
+     * </p>
+     * <p>
+     * For example, <code>[-123.1174, 49.2847]</code> represents the position with longitude <code>-123.1174</code> and
+     * latitude <code>49.2847</code>.
+     * </p>
      * 
-     * @return Contains the coordinates for the optional bias position specified in the request.
+     * @return Contains the coordinates for the optional bias position specified in the request.</p>
+     *         <p>
+     *         This parameter contains a pair of numbers. The first number represents the X coordinate, or longitude;
+     *         the second number represents the Y coordinate, or latitude.
+     *         </p>
+     *         <p>
+     *         For example, <code>[-123.1174, 49.2847]</code> represents the position with longitude
+     *         <code>-123.1174</code> and latitude <code>49.2847</code>.
      */
 
     public java.util.List<Double> getBiasPosition() {
@@ -118,9 +141,24 @@ public class SearchPlaceIndexForTextSummary implements Serializable, Cloneable, 
      * <p>
      * Contains the coordinates for the optional bias position specified in the request.
      * </p>
+     * <p>
+     * This parameter contains a pair of numbers. The first number represents the X coordinate, or longitude; the second
+     * number represents the Y coordinate, or latitude.
+     * </p>
+     * <p>
+     * For example, <code>[-123.1174, 49.2847]</code> represents the position with longitude <code>-123.1174</code> and
+     * latitude <code>49.2847</code>.
+     * </p>
      * 
      * @param biasPosition
-     *        Contains the coordinates for the optional bias position specified in the request.
+     *        Contains the coordinates for the optional bias position specified in the request.</p>
+     *        <p>
+     *        This parameter contains a pair of numbers. The first number represents the X coordinate, or longitude; the
+     *        second number represents the Y coordinate, or latitude.
+     *        </p>
+     *        <p>
+     *        For example, <code>[-123.1174, 49.2847]</code> represents the position with longitude
+     *        <code>-123.1174</code> and latitude <code>49.2847</code>.
      */
 
     public void setBiasPosition(java.util.Collection<Double> biasPosition) {
@@ -137,13 +175,28 @@ public class SearchPlaceIndexForTextSummary implements Serializable, Cloneable, 
      * Contains the coordinates for the optional bias position specified in the request.
      * </p>
      * <p>
+     * This parameter contains a pair of numbers. The first number represents the X coordinate, or longitude; the second
+     * number represents the Y coordinate, or latitude.
+     * </p>
+     * <p>
+     * For example, <code>[-123.1174, 49.2847]</code> represents the position with longitude <code>-123.1174</code> and
+     * latitude <code>49.2847</code>.
+     * </p>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setBiasPosition(java.util.Collection)} or {@link #withBiasPosition(java.util.Collection)} if you want to
      * override the existing values.
      * </p>
      * 
      * @param biasPosition
-     *        Contains the coordinates for the optional bias position specified in the request.
+     *        Contains the coordinates for the optional bias position specified in the request.</p>
+     *        <p>
+     *        This parameter contains a pair of numbers. The first number represents the X coordinate, or longitude; the
+     *        second number represents the Y coordinate, or latitude.
+     *        </p>
+     *        <p>
+     *        For example, <code>[-123.1174, 49.2847]</code> represents the position with longitude
+     *        <code>-123.1174</code> and latitude <code>49.2847</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -161,9 +214,24 @@ public class SearchPlaceIndexForTextSummary implements Serializable, Cloneable, 
      * <p>
      * Contains the coordinates for the optional bias position specified in the request.
      * </p>
+     * <p>
+     * This parameter contains a pair of numbers. The first number represents the X coordinate, or longitude; the second
+     * number represents the Y coordinate, or latitude.
+     * </p>
+     * <p>
+     * For example, <code>[-123.1174, 49.2847]</code> represents the position with longitude <code>-123.1174</code> and
+     * latitude <code>49.2847</code>.
+     * </p>
      * 
      * @param biasPosition
-     *        Contains the coordinates for the optional bias position specified in the request.
+     *        Contains the coordinates for the optional bias position specified in the request.</p>
+     *        <p>
+     *        This parameter contains a pair of numbers. The first number represents the X coordinate, or longitude; the
+     *        second number represents the Y coordinate, or latitude.
+     *        </p>
+     *        <p>
+     *        For example, <code>[-123.1174, 49.2847]</code> represents the position with longitude
+     *        <code>-123.1174</code> and latitude <code>49.2847</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

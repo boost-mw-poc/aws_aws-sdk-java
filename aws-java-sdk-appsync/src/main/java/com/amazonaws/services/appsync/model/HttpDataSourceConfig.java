@@ -30,29 +30,29 @@ public class HttpDataSourceConfig implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The HTTP URL endpoint. You can either specify the domain name or IP, and port combination, and the URL scheme
-     * must be HTTP or HTTPS. If the port is not specified, AppSync uses the default port 80 for the HTTP endpoint and
+     * The HTTP URL endpoint. You can specify either the domain name or IP, and port combination, and the URL scheme
+     * must be HTTP or HTTPS. If you don't specify the port, AppSync uses the default port 80 for the HTTP endpoint and
      * port 443 for HTTPS endpoints.
      * </p>
      */
     private String endpoint;
     /**
      * <p>
-     * The authorization config in case the HTTP endpoint requires authorization.
+     * The authorization configuration in case the HTTP endpoint requires authorization.
      * </p>
      */
     private AuthorizationConfig authorizationConfig;
 
     /**
      * <p>
-     * The HTTP URL endpoint. You can either specify the domain name or IP, and port combination, and the URL scheme
-     * must be HTTP or HTTPS. If the port is not specified, AppSync uses the default port 80 for the HTTP endpoint and
+     * The HTTP URL endpoint. You can specify either the domain name or IP, and port combination, and the URL scheme
+     * must be HTTP or HTTPS. If you don't specify the port, AppSync uses the default port 80 for the HTTP endpoint and
      * port 443 for HTTPS endpoints.
      * </p>
      * 
      * @param endpoint
-     *        The HTTP URL endpoint. You can either specify the domain name or IP, and port combination, and the URL
-     *        scheme must be HTTP or HTTPS. If the port is not specified, AppSync uses the default port 80 for the HTTP
+     *        The HTTP URL endpoint. You can specify either the domain name or IP, and port combination, and the URL
+     *        scheme must be HTTP or HTTPS. If you don't specify the port, AppSync uses the default port 80 for the HTTP
      *        endpoint and port 443 for HTTPS endpoints.
      */
 
@@ -62,14 +62,14 @@ public class HttpDataSourceConfig implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The HTTP URL endpoint. You can either specify the domain name or IP, and port combination, and the URL scheme
-     * must be HTTP or HTTPS. If the port is not specified, AppSync uses the default port 80 for the HTTP endpoint and
+     * The HTTP URL endpoint. You can specify either the domain name or IP, and port combination, and the URL scheme
+     * must be HTTP or HTTPS. If you don't specify the port, AppSync uses the default port 80 for the HTTP endpoint and
      * port 443 for HTTPS endpoints.
      * </p>
      * 
-     * @return The HTTP URL endpoint. You can either specify the domain name or IP, and port combination, and the URL
-     *         scheme must be HTTP or HTTPS. If the port is not specified, AppSync uses the default port 80 for the HTTP
-     *         endpoint and port 443 for HTTPS endpoints.
+     * @return The HTTP URL endpoint. You can specify either the domain name or IP, and port combination, and the URL
+     *         scheme must be HTTP or HTTPS. If you don't specify the port, AppSync uses the default port 80 for the
+     *         HTTP endpoint and port 443 for HTTPS endpoints.
      */
 
     public String getEndpoint() {
@@ -78,14 +78,14 @@ public class HttpDataSourceConfig implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The HTTP URL endpoint. You can either specify the domain name or IP, and port combination, and the URL scheme
-     * must be HTTP or HTTPS. If the port is not specified, AppSync uses the default port 80 for the HTTP endpoint and
+     * The HTTP URL endpoint. You can specify either the domain name or IP, and port combination, and the URL scheme
+     * must be HTTP or HTTPS. If you don't specify the port, AppSync uses the default port 80 for the HTTP endpoint and
      * port 443 for HTTPS endpoints.
      * </p>
      * 
      * @param endpoint
-     *        The HTTP URL endpoint. You can either specify the domain name or IP, and port combination, and the URL
-     *        scheme must be HTTP or HTTPS. If the port is not specified, AppSync uses the default port 80 for the HTTP
+     *        The HTTP URL endpoint. You can specify either the domain name or IP, and port combination, and the URL
+     *        scheme must be HTTP or HTTPS. If you don't specify the port, AppSync uses the default port 80 for the HTTP
      *        endpoint and port 443 for HTTPS endpoints.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -97,11 +97,11 @@ public class HttpDataSourceConfig implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The authorization config in case the HTTP endpoint requires authorization.
+     * The authorization configuration in case the HTTP endpoint requires authorization.
      * </p>
      * 
      * @param authorizationConfig
-     *        The authorization config in case the HTTP endpoint requires authorization.
+     *        The authorization configuration in case the HTTP endpoint requires authorization.
      */
 
     public void setAuthorizationConfig(AuthorizationConfig authorizationConfig) {
@@ -110,10 +110,10 @@ public class HttpDataSourceConfig implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The authorization config in case the HTTP endpoint requires authorization.
+     * The authorization configuration in case the HTTP endpoint requires authorization.
      * </p>
      * 
-     * @return The authorization config in case the HTTP endpoint requires authorization.
+     * @return The authorization configuration in case the HTTP endpoint requires authorization.
      */
 
     public AuthorizationConfig getAuthorizationConfig() {
@@ -122,11 +122,11 @@ public class HttpDataSourceConfig implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The authorization config in case the HTTP endpoint requires authorization.
+     * The authorization configuration in case the HTTP endpoint requires authorization.
      * </p>
      * 
      * @param authorizationConfig
-     *        The authorization config in case the HTTP endpoint requires authorization.
+     *        The authorization configuration in case the HTTP endpoint requires authorization.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

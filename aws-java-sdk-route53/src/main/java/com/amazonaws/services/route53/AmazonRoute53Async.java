@@ -1677,6 +1677,14 @@ public interface AmazonRoute53Async extends AmazonRoute53 {
      * Deletes a key-signing key (KSK). Before you can delete a KSK, you must deactivate it. The KSK must be deactivated
      * before you can delete it regardless of whether the hosted zone is enabled for DNSSEC signing.
      * </p>
+     * <p>
+     * You can use <a href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_DeactivateKeySigningKey.html">
+     * DeactivateKeySigningKey</a> to deactivate the key before you delete it.
+     * </p>
+     * <p>
+     * Use <a href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_GetDNSSEC.html">GetDNSSEC</a> to verify
+     * that the KSK is in an <code>INACTIVE</code> status.
+     * </p>
      * 
      * @param deleteKeySigningKeyRequest
      * @return A Java Future containing the result of the DeleteKeySigningKey operation returned by the service.
@@ -1690,6 +1698,14 @@ public interface AmazonRoute53Async extends AmazonRoute53 {
      * <p>
      * Deletes a key-signing key (KSK). Before you can delete a KSK, you must deactivate it. The KSK must be deactivated
      * before you can delete it regardless of whether the hosted zone is enabled for DNSSEC signing.
+     * </p>
+     * <p>
+     * You can use <a href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_DeactivateKeySigningKey.html">
+     * DeactivateKeySigningKey</a> to deactivate the key before you delete it.
+     * </p>
+     * <p>
+     * Use <a href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_GetDNSSEC.html">GetDNSSEC</a> to verify
+     * that the KSK is in an <code>INACTIVE</code> status.
      * </p>
      * 
      * @param deleteKeySigningKeyRequest

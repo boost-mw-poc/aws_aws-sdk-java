@@ -28,6 +28,11 @@ public class AbstractAWSAppSync implements AWSAppSync {
     }
 
     @Override
+    public AssociateApiResult associateApi(AssociateApiRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public CreateApiCacheResult createApiCache(CreateApiCacheRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -39,6 +44,11 @@ public class AbstractAWSAppSync implements AWSAppSync {
 
     @Override
     public CreateDataSourceResult createDataSource(CreateDataSourceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public CreateDomainNameResult createDomainName(CreateDomainNameRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -78,6 +88,11 @@ public class AbstractAWSAppSync implements AWSAppSync {
     }
 
     @Override
+    public DeleteDomainNameResult deleteDomainName(DeleteDomainNameRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DeleteFunctionResult deleteFunction(DeleteFunctionRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -98,7 +113,17 @@ public class AbstractAWSAppSync implements AWSAppSync {
     }
 
     @Override
+    public DisassociateApiResult disassociateApi(DisassociateApiRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public FlushApiCacheResult flushApiCache(FlushApiCacheRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetApiAssociationResult getApiAssociation(GetApiAssociationRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -109,6 +134,11 @@ public class AbstractAWSAppSync implements AWSAppSync {
 
     @Override
     public GetDataSourceResult getDataSource(GetDataSourceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public GetDomainNameResult getDomainName(GetDomainNameRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -149,6 +179,11 @@ public class AbstractAWSAppSync implements AWSAppSync {
 
     @Override
     public ListDataSourcesResult listDataSources(ListDataSourcesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListDomainNamesResult listDomainNames(ListDomainNamesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -209,6 +244,11 @@ public class AbstractAWSAppSync implements AWSAppSync {
 
     @Override
     public UpdateDataSourceResult updateDataSource(UpdateDataSourceRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateDomainNameResult updateDomainName(UpdateDomainNameRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

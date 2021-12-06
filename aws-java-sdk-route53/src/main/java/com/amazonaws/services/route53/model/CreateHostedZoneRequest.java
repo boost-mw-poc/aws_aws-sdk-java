@@ -47,8 +47,11 @@ public class CreateHostedZoneRequest extends com.amazonaws.AmazonWebServiceReque
      * with this hosted zone.
      * </p>
      * <p>
-     * You can specify only one Amazon VPC when you create a private hosted zone. To associate additional Amazon VPCs
-     * with the hosted zone, use <a
+     * You can specify only one Amazon VPC when you create a private hosted zone. If you are associating a VPC with a
+     * hosted zone with this request, the paramaters <code>VPCId</code> and <code>VPCRegion</code> are also required.
+     * </p>
+     * <p>
+     * To associate additional Amazon VPCs with the hosted zone, use <a
      * href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_AssociateVPCWithHostedZone.html"
      * >AssociateVPCWithHostedZone</a> after you create a hosted zone.
      * </p>
@@ -218,8 +221,11 @@ public class CreateHostedZoneRequest extends com.amazonaws.AmazonWebServiceReque
      * with this hosted zone.
      * </p>
      * <p>
-     * You can specify only one Amazon VPC when you create a private hosted zone. To associate additional Amazon VPCs
-     * with the hosted zone, use <a
+     * You can specify only one Amazon VPC when you create a private hosted zone. If you are associating a VPC with a
+     * hosted zone with this request, the paramaters <code>VPCId</code> and <code>VPCRegion</code> are also required.
+     * </p>
+     * <p>
+     * To associate additional Amazon VPCs with the hosted zone, use <a
      * href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_AssociateVPCWithHostedZone.html"
      * >AssociateVPCWithHostedZone</a> after you create a hosted zone.
      * </p>
@@ -228,8 +234,12 @@ public class CreateHostedZoneRequest extends com.amazonaws.AmazonWebServiceReque
      *        (Private hosted zones only) A complex type that contains information about the Amazon VPC that you're
      *        associating with this hosted zone.</p>
      *        <p>
-     *        You can specify only one Amazon VPC when you create a private hosted zone. To associate additional Amazon
-     *        VPCs with the hosted zone, use <a
+     *        You can specify only one Amazon VPC when you create a private hosted zone. If you are associating a VPC
+     *        with a hosted zone with this request, the paramaters <code>VPCId</code> and <code>VPCRegion</code> are
+     *        also required.
+     *        </p>
+     *        <p>
+     *        To associate additional Amazon VPCs with the hosted zone, use <a
      *        href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_AssociateVPCWithHostedZone.html"
      *        >AssociateVPCWithHostedZone</a> after you create a hosted zone.
      */
@@ -244,8 +254,11 @@ public class CreateHostedZoneRequest extends com.amazonaws.AmazonWebServiceReque
      * with this hosted zone.
      * </p>
      * <p>
-     * You can specify only one Amazon VPC when you create a private hosted zone. To associate additional Amazon VPCs
-     * with the hosted zone, use <a
+     * You can specify only one Amazon VPC when you create a private hosted zone. If you are associating a VPC with a
+     * hosted zone with this request, the paramaters <code>VPCId</code> and <code>VPCRegion</code> are also required.
+     * </p>
+     * <p>
+     * To associate additional Amazon VPCs with the hosted zone, use <a
      * href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_AssociateVPCWithHostedZone.html"
      * >AssociateVPCWithHostedZone</a> after you create a hosted zone.
      * </p>
@@ -253,8 +266,12 @@ public class CreateHostedZoneRequest extends com.amazonaws.AmazonWebServiceReque
      * @return (Private hosted zones only) A complex type that contains information about the Amazon VPC that you're
      *         associating with this hosted zone.</p>
      *         <p>
-     *         You can specify only one Amazon VPC when you create a private hosted zone. To associate additional Amazon
-     *         VPCs with the hosted zone, use <a
+     *         You can specify only one Amazon VPC when you create a private hosted zone. If you are associating a VPC
+     *         with a hosted zone with this request, the paramaters <code>VPCId</code> and <code>VPCRegion</code> are
+     *         also required.
+     *         </p>
+     *         <p>
+     *         To associate additional Amazon VPCs with the hosted zone, use <a
      *         href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_AssociateVPCWithHostedZone.html"
      *         >AssociateVPCWithHostedZone</a> after you create a hosted zone.
      */
@@ -269,8 +286,11 @@ public class CreateHostedZoneRequest extends com.amazonaws.AmazonWebServiceReque
      * with this hosted zone.
      * </p>
      * <p>
-     * You can specify only one Amazon VPC when you create a private hosted zone. To associate additional Amazon VPCs
-     * with the hosted zone, use <a
+     * You can specify only one Amazon VPC when you create a private hosted zone. If you are associating a VPC with a
+     * hosted zone with this request, the paramaters <code>VPCId</code> and <code>VPCRegion</code> are also required.
+     * </p>
+     * <p>
+     * To associate additional Amazon VPCs with the hosted zone, use <a
      * href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_AssociateVPCWithHostedZone.html"
      * >AssociateVPCWithHostedZone</a> after you create a hosted zone.
      * </p>
@@ -279,8 +299,12 @@ public class CreateHostedZoneRequest extends com.amazonaws.AmazonWebServiceReque
      *        (Private hosted zones only) A complex type that contains information about the Amazon VPC that you're
      *        associating with this hosted zone.</p>
      *        <p>
-     *        You can specify only one Amazon VPC when you create a private hosted zone. To associate additional Amazon
-     *        VPCs with the hosted zone, use <a
+     *        You can specify only one Amazon VPC when you create a private hosted zone. If you are associating a VPC
+     *        with a hosted zone with this request, the paramaters <code>VPCId</code> and <code>VPCRegion</code> are
+     *        also required.
+     *        </p>
+     *        <p>
+     *        To associate additional Amazon VPCs with the hosted zone, use <a
      *        href="https://docs.aws.amazon.com/Route53/latest/APIReference/API_AssociateVPCWithHostedZone.html"
      *        >AssociateVPCWithHostedZone</a> after you create a hosted zone.
      * @return Returns a reference to this object so that method calls can be chained together.

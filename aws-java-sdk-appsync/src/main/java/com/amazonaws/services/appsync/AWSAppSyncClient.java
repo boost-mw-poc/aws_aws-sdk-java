@@ -160,6 +160,70 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
 
     /**
      * <p>
+     * Maps an endpoint to your custom domain.
+     * </p>
+     * 
+     * @param associateApiRequest
+     * @return Result of the AssociateApi operation returned by the service.
+     * @throws AccessDeniedException
+     *         You don't have access to perform this operation on this resource.
+     * @throws BadRequestException
+     *         The request is not well formed. For example, a value is invalid or a required field is missing. Check the
+     *         field values, and then try again.
+     * @throws InternalFailureException
+     *         An internal AppSync error occurred. Try your request again.
+     * @throws NotFoundException
+     *         The resource specified in the request was not found. Check the resource, and then try again.
+     * @sample AWSAppSync.AssociateApi
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/AssociateApi" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public AssociateApiResult associateApi(AssociateApiRequest request) {
+        request = beforeClientExecution(request);
+        return executeAssociateApi(request);
+    }
+
+    @SdkInternalApi
+    final AssociateApiResult executeAssociateApi(AssociateApiRequest associateApiRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(associateApiRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<AssociateApiRequest> request = null;
+        Response<AssociateApiResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new AssociateApiRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(associateApiRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "AppSync");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "AssociateApi");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<AssociateApiResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new AssociateApiResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Creates a cache for the GraphQL API.
      * </p>
      * 
@@ -174,7 +238,7 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
      * @throws NotFoundException
      *         The resource specified in the request was not found. Check the resource, and then try again.
      * @throws UnauthorizedException
-     *         You are not authorized to perform this operation.
+     *         You aren't authorized to perform this operation.
      * @throws InternalFailureException
      *         An internal AppSync error occurred. Try your request again.
      * @sample AWSAppSync.CreateApiCache
@@ -227,7 +291,7 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
 
     /**
      * <p>
-     * Creates a unique key that you can distribute to clients who are executing your API.
+     * Creates a unique key that you can distribute to clients who invoke your API.
      * </p>
      * 
      * @param createApiKeyRequest
@@ -240,7 +304,7 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
      * @throws LimitExceededException
      *         The request exceeded a limit. Try your request again.
      * @throws UnauthorizedException
-     *         You are not authorized to perform this operation.
+     *         You aren't authorized to perform this operation.
      * @throws LimitExceededException
      *         The request exceeded a limit. Try your request again.
      * @throws InternalFailureException
@@ -313,7 +377,7 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
      * @throws NotFoundException
      *         The resource specified in the request was not found. Check the resource, and then try again.
      * @throws UnauthorizedException
-     *         You are not authorized to perform this operation.
+     *         You aren't authorized to perform this operation.
      * @throws InternalFailureException
      *         An internal AppSync error occurred. Try your request again.
      * @sample AWSAppSync.CreateDataSource
@@ -366,10 +430,72 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
 
     /**
      * <p>
+     * Creates a custom <code>DomainName</code> object.
+     * </p>
+     * 
+     * @param createDomainNameRequest
+     * @return Result of the CreateDomainName operation returned by the service.
+     * @throws AccessDeniedException
+     *         You don't have access to perform this operation on this resource.
+     * @throws BadRequestException
+     *         The request is not well formed. For example, a value is invalid or a required field is missing. Check the
+     *         field values, and then try again.
+     * @throws InternalFailureException
+     *         An internal AppSync error occurred. Try your request again.
+     * @sample AWSAppSync.CreateDomainName
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/CreateDomainName" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public CreateDomainNameResult createDomainName(CreateDomainNameRequest request) {
+        request = beforeClientExecution(request);
+        return executeCreateDomainName(request);
+    }
+
+    @SdkInternalApi
+    final CreateDomainNameResult executeCreateDomainName(CreateDomainNameRequest createDomainNameRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(createDomainNameRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<CreateDomainNameRequest> request = null;
+        Response<CreateDomainNameResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new CreateDomainNameRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(createDomainNameRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "AppSync");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "CreateDomainName");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<CreateDomainNameResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new CreateDomainNameResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Creates a <code>Function</code> object.
      * </p>
      * <p>
-     * A function is a reusable entity. Multiple functions can be used to compose the resolver logic.
+     * A function is a reusable entity. You can use multiple functions to compose the resolver logic.
      * </p>
      * 
      * @param createFunctionRequest
@@ -379,7 +505,7 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
      * @throws NotFoundException
      *         The resource specified in the request was not found. Check the resource, and then try again.
      * @throws UnauthorizedException
-     *         You are not authorized to perform this operation.
+     *         You aren't authorized to perform this operation.
      * @throws InternalFailureException
      *         An internal AppSync error occurred. Try your request again.
      * @sample AWSAppSync.CreateFunction
@@ -445,7 +571,7 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
      * @throws ConcurrentModificationException
      *         Another modification is in progress at this time and it must complete before you can make your change.
      * @throws UnauthorizedException
-     *         You are not authorized to perform this operation.
+     *         You aren't authorized to perform this operation.
      * @throws InternalFailureException
      *         An internal AppSync error occurred. Try your request again.
      * @throws ApiLimitExceededException
@@ -503,7 +629,7 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
      * Creates a <code>Resolver</code> object.
      * </p>
      * <p>
-     * A resolver converts incoming requests into a format that a data source can understand and converts the data
+     * A resolver converts incoming requests into a format that a data source can understand, and converts the data
      * source's responses into GraphQL.
      * </p>
      * 
@@ -514,7 +640,7 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
      * @throws NotFoundException
      *         The resource specified in the request was not found. Check the resource, and then try again.
      * @throws UnauthorizedException
-     *         You are not authorized to perform this operation.
+     *         You aren't authorized to perform this operation.
      * @throws InternalFailureException
      *         An internal AppSync error occurred. Try your request again.
      * @sample AWSAppSync.CreateResolver
@@ -580,7 +706,7 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
      * @throws NotFoundException
      *         The resource specified in the request was not found. Check the resource, and then try again.
      * @throws UnauthorizedException
-     *         You are not authorized to perform this operation.
+     *         You aren't authorized to perform this operation.
      * @throws InternalFailureException
      *         An internal AppSync error occurred. Try your request again.
      * @sample AWSAppSync.CreateType
@@ -647,7 +773,7 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
      * @throws NotFoundException
      *         The resource specified in the request was not found. Check the resource, and then try again.
      * @throws UnauthorizedException
-     *         You are not authorized to perform this operation.
+     *         You aren't authorized to perform this operation.
      * @throws InternalFailureException
      *         An internal AppSync error occurred. Try your request again.
      * @sample AWSAppSync.DeleteApiCache
@@ -711,7 +837,7 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
      * @throws NotFoundException
      *         The resource specified in the request was not found. Check the resource, and then try again.
      * @throws UnauthorizedException
-     *         You are not authorized to perform this operation.
+     *         You aren't authorized to perform this operation.
      * @throws InternalFailureException
      *         An internal AppSync error occurred. Try your request again.
      * @sample AWSAppSync.DeleteApiKey
@@ -777,7 +903,7 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
      * @throws NotFoundException
      *         The resource specified in the request was not found. Check the resource, and then try again.
      * @throws UnauthorizedException
-     *         You are not authorized to perform this operation.
+     *         You aren't authorized to perform this operation.
      * @throws InternalFailureException
      *         An internal AppSync error occurred. Try your request again.
      * @sample AWSAppSync.DeleteDataSource
@@ -830,6 +956,72 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
 
     /**
      * <p>
+     * Deletes a custom <code>DomainName</code> object.
+     * </p>
+     * 
+     * @param deleteDomainNameRequest
+     * @return Result of the DeleteDomainName operation returned by the service.
+     * @throws AccessDeniedException
+     *         You don't have access to perform this operation on this resource.
+     * @throws BadRequestException
+     *         The request is not well formed. For example, a value is invalid or a required field is missing. Check the
+     *         field values, and then try again.
+     * @throws ConcurrentModificationException
+     *         Another modification is in progress at this time and it must complete before you can make your change.
+     * @throws InternalFailureException
+     *         An internal AppSync error occurred. Try your request again.
+     * @throws NotFoundException
+     *         The resource specified in the request was not found. Check the resource, and then try again.
+     * @sample AWSAppSync.DeleteDomainName
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/DeleteDomainName" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public DeleteDomainNameResult deleteDomainName(DeleteDomainNameRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteDomainName(request);
+    }
+
+    @SdkInternalApi
+    final DeleteDomainNameResult executeDeleteDomainName(DeleteDomainNameRequest deleteDomainNameRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteDomainNameRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteDomainNameRequest> request = null;
+        Response<DeleteDomainNameResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteDomainNameRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(deleteDomainNameRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "AppSync");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteDomainName");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteDomainNameResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DeleteDomainNameResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Deletes a <code>Function</code>.
      * </p>
      * 
@@ -840,7 +1032,7 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
      * @throws NotFoundException
      *         The resource specified in the request was not found. Check the resource, and then try again.
      * @throws UnauthorizedException
-     *         You are not authorized to perform this operation.
+     *         You aren't authorized to perform this operation.
      * @throws InternalFailureException
      *         An internal AppSync error occurred. Try your request again.
      * @sample AWSAppSync.DeleteFunction
@@ -906,11 +1098,11 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
      * @throws NotFoundException
      *         The resource specified in the request was not found. Check the resource, and then try again.
      * @throws UnauthorizedException
-     *         You are not authorized to perform this operation.
+     *         You aren't authorized to perform this operation.
      * @throws InternalFailureException
      *         An internal AppSync error occurred. Try your request again.
      * @throws AccessDeniedException
-     *         You do not have access to perform this operation on this resource.
+     *         You don't have access to perform this operation on this resource.
      * @sample AWSAppSync.DeleteGraphqlApi
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/DeleteGraphqlApi" target="_top">AWS API
      *      Documentation</a>
@@ -971,7 +1163,7 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
      * @throws NotFoundException
      *         The resource specified in the request was not found. Check the resource, and then try again.
      * @throws UnauthorizedException
-     *         You are not authorized to perform this operation.
+     *         You aren't authorized to perform this operation.
      * @throws InternalFailureException
      *         An internal AppSync error occurred. Try your request again.
      * @sample AWSAppSync.DeleteResolver
@@ -1037,7 +1229,7 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
      * @throws NotFoundException
      *         The resource specified in the request was not found. Check the resource, and then try again.
      * @throws UnauthorizedException
-     *         You are not authorized to perform this operation.
+     *         You aren't authorized to perform this operation.
      * @throws InternalFailureException
      *         An internal AppSync error occurred. Try your request again.
      * @sample AWSAppSync.DeleteType
@@ -1090,6 +1282,72 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
 
     /**
      * <p>
+     * Removes an <code>ApiAssociation</code> object from a custom domain.
+     * </p>
+     * 
+     * @param disassociateApiRequest
+     * @return Result of the DisassociateApi operation returned by the service.
+     * @throws AccessDeniedException
+     *         You don't have access to perform this operation on this resource.
+     * @throws BadRequestException
+     *         The request is not well formed. For example, a value is invalid or a required field is missing. Check the
+     *         field values, and then try again.
+     * @throws ConcurrentModificationException
+     *         Another modification is in progress at this time and it must complete before you can make your change.
+     * @throws InternalFailureException
+     *         An internal AppSync error occurred. Try your request again.
+     * @throws NotFoundException
+     *         The resource specified in the request was not found. Check the resource, and then try again.
+     * @sample AWSAppSync.DisassociateApi
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/DisassociateApi" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public DisassociateApiResult disassociateApi(DisassociateApiRequest request) {
+        request = beforeClientExecution(request);
+        return executeDisassociateApi(request);
+    }
+
+    @SdkInternalApi
+    final DisassociateApiResult executeDisassociateApi(DisassociateApiRequest disassociateApiRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(disassociateApiRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DisassociateApiRequest> request = null;
+        Response<DisassociateApiResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DisassociateApiRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(disassociateApiRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "AppSync");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DisassociateApi");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DisassociateApiResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DisassociateApiResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Flushes an <code>ApiCache</code> object.
      * </p>
      * 
@@ -1104,7 +1362,7 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
      * @throws NotFoundException
      *         The resource specified in the request was not found. Check the resource, and then try again.
      * @throws UnauthorizedException
-     *         You are not authorized to perform this operation.
+     *         You aren't authorized to perform this operation.
      * @throws InternalFailureException
      *         An internal AppSync error occurred. Try your request again.
      * @sample AWSAppSync.FlushApiCache
@@ -1157,6 +1415,70 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
 
     /**
      * <p>
+     * Retrieves an <code>ApiAssociation</code> object.
+     * </p>
+     * 
+     * @param getApiAssociationRequest
+     * @return Result of the GetApiAssociation operation returned by the service.
+     * @throws AccessDeniedException
+     *         You don't have access to perform this operation on this resource.
+     * @throws BadRequestException
+     *         The request is not well formed. For example, a value is invalid or a required field is missing. Check the
+     *         field values, and then try again.
+     * @throws InternalFailureException
+     *         An internal AppSync error occurred. Try your request again.
+     * @throws NotFoundException
+     *         The resource specified in the request was not found. Check the resource, and then try again.
+     * @sample AWSAppSync.GetApiAssociation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/GetApiAssociation" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public GetApiAssociationResult getApiAssociation(GetApiAssociationRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetApiAssociation(request);
+    }
+
+    @SdkInternalApi
+    final GetApiAssociationResult executeGetApiAssociation(GetApiAssociationRequest getApiAssociationRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getApiAssociationRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetApiAssociationRequest> request = null;
+        Response<GetApiAssociationResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetApiAssociationRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getApiAssociationRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "AppSync");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetApiAssociation");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetApiAssociationResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetApiAssociationResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Retrieves an <code>ApiCache</code> object.
      * </p>
      * 
@@ -1171,7 +1493,7 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
      * @throws NotFoundException
      *         The resource specified in the request was not found. Check the resource, and then try again.
      * @throws UnauthorizedException
-     *         You are not authorized to perform this operation.
+     *         You aren't authorized to perform this operation.
      * @throws InternalFailureException
      *         An internal AppSync error occurred. Try your request again.
      * @sample AWSAppSync.GetApiCache
@@ -1237,7 +1559,7 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
      * @throws NotFoundException
      *         The resource specified in the request was not found. Check the resource, and then try again.
      * @throws UnauthorizedException
-     *         You are not authorized to perform this operation.
+     *         You aren't authorized to perform this operation.
      * @throws InternalFailureException
      *         An internal AppSync error occurred. Try your request again.
      * @sample AWSAppSync.GetDataSource
@@ -1290,6 +1612,70 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
 
     /**
      * <p>
+     * Retrieves a custom <code>DomainName</code> object.
+     * </p>
+     * 
+     * @param getDomainNameRequest
+     * @return Result of the GetDomainName operation returned by the service.
+     * @throws AccessDeniedException
+     *         You don't have access to perform this operation on this resource.
+     * @throws BadRequestException
+     *         The request is not well formed. For example, a value is invalid or a required field is missing. Check the
+     *         field values, and then try again.
+     * @throws InternalFailureException
+     *         An internal AppSync error occurred. Try your request again.
+     * @throws NotFoundException
+     *         The resource specified in the request was not found. Check the resource, and then try again.
+     * @sample AWSAppSync.GetDomainName
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/GetDomainName" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public GetDomainNameResult getDomainName(GetDomainNameRequest request) {
+        request = beforeClientExecution(request);
+        return executeGetDomainName(request);
+    }
+
+    @SdkInternalApi
+    final GetDomainNameResult executeGetDomainName(GetDomainNameRequest getDomainNameRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(getDomainNameRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<GetDomainNameRequest> request = null;
+        Response<GetDomainNameResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new GetDomainNameRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(getDomainNameRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "AppSync");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "GetDomainName");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<GetDomainNameResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new GetDomainNameResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Get a <code>Function</code>.
      * </p>
      * 
@@ -1300,7 +1686,7 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
      * @throws NotFoundException
      *         The resource specified in the request was not found. Check the resource, and then try again.
      * @throws UnauthorizedException
-     *         You are not authorized to perform this operation.
+     *         You aren't authorized to perform this operation.
      * @sample AWSAppSync.GetFunction
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/GetFunction" target="_top">AWS API
      *      Documentation</a>
@@ -1362,11 +1748,11 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
      * @throws NotFoundException
      *         The resource specified in the request was not found. Check the resource, and then try again.
      * @throws UnauthorizedException
-     *         You are not authorized to perform this operation.
+     *         You aren't authorized to perform this operation.
      * @throws InternalFailureException
      *         An internal AppSync error occurred. Try your request again.
      * @throws AccessDeniedException
-     *         You do not have access to perform this operation on this resource.
+     *         You don't have access to perform this operation on this resource.
      * @sample AWSAppSync.GetGraphqlApi
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/GetGraphqlApi" target="_top">AWS API
      *      Documentation</a>
@@ -1427,7 +1813,7 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
      * @throws NotFoundException
      *         The resource specified in the request was not found. Check the resource, and then try again.
      * @throws UnauthorizedException
-     *         You are not authorized to perform this operation.
+     *         You aren't authorized to perform this operation.
      * @throws InternalFailureException
      *         An internal AppSync error occurred. Try your request again.
      * @sample AWSAppSync.GetIntrospectionSchema
@@ -1491,7 +1877,7 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
      * @throws NotFoundException
      *         The resource specified in the request was not found. Check the resource, and then try again.
      * @throws UnauthorizedException
-     *         You are not authorized to perform this operation.
+     *         You aren't authorized to perform this operation.
      * @sample AWSAppSync.GetResolver
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/GetResolver" target="_top">AWS API
      *      Documentation</a>
@@ -1553,7 +1939,7 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
      * @throws NotFoundException
      *         The resource specified in the request was not found. Check the resource, and then try again.
      * @throws UnauthorizedException
-     *         You are not authorized to perform this operation.
+     *         You aren't authorized to perform this operation.
      * @throws InternalFailureException
      *         An internal AppSync error occurred. Try your request again.
      * @sample AWSAppSync.GetSchemaCreationStatus
@@ -1621,7 +2007,7 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
      * @throws NotFoundException
      *         The resource specified in the request was not found. Check the resource, and then try again.
      * @throws UnauthorizedException
-     *         You are not authorized to perform this operation.
+     *         You aren't authorized to perform this operation.
      * @throws InternalFailureException
      *         An internal AppSync error occurred. Try your request again.
      * @sample AWSAppSync.GetType
@@ -1692,7 +2078,7 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
      * @throws NotFoundException
      *         The resource specified in the request was not found. Check the resource, and then try again.
      * @throws UnauthorizedException
-     *         You are not authorized to perform this operation.
+     *         You aren't authorized to perform this operation.
      * @throws InternalFailureException
      *         An internal AppSync error occurred. Try your request again.
      * @sample AWSAppSync.ListApiKeys
@@ -1756,7 +2142,7 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
      * @throws NotFoundException
      *         The resource specified in the request was not found. Check the resource, and then try again.
      * @throws UnauthorizedException
-     *         You are not authorized to perform this operation.
+     *         You aren't authorized to perform this operation.
      * @throws InternalFailureException
      *         An internal AppSync error occurred. Try your request again.
      * @sample AWSAppSync.ListDataSources
@@ -1809,6 +2195,68 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
 
     /**
      * <p>
+     * Lists multiple custom domain names.
+     * </p>
+     * 
+     * @param listDomainNamesRequest
+     * @return Result of the ListDomainNames operation returned by the service.
+     * @throws AccessDeniedException
+     *         You don't have access to perform this operation on this resource.
+     * @throws BadRequestException
+     *         The request is not well formed. For example, a value is invalid or a required field is missing. Check the
+     *         field values, and then try again.
+     * @throws InternalFailureException
+     *         An internal AppSync error occurred. Try your request again.
+     * @sample AWSAppSync.ListDomainNames
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/ListDomainNames" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public ListDomainNamesResult listDomainNames(ListDomainNamesRequest request) {
+        request = beforeClientExecution(request);
+        return executeListDomainNames(request);
+    }
+
+    @SdkInternalApi
+    final ListDomainNamesResult executeListDomainNames(ListDomainNamesRequest listDomainNamesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listDomainNamesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListDomainNamesRequest> request = null;
+        Response<ListDomainNamesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListDomainNamesRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listDomainNamesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "AppSync");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListDomainNames");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListDomainNamesResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListDomainNamesResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * List multiple functions.
      * </p>
      * 
@@ -1820,7 +2268,7 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
      * @throws NotFoundException
      *         The resource specified in the request was not found. Check the resource, and then try again.
      * @throws UnauthorizedException
-     *         You are not authorized to perform this operation.
+     *         You aren't authorized to perform this operation.
      * @throws InternalFailureException
      *         An internal AppSync error occurred. Try your request again.
      * @sample AWSAppSync.ListFunctions
@@ -1882,7 +2330,7 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
      *         The request is not well formed. For example, a value is invalid or a required field is missing. Check the
      *         field values, and then try again.
      * @throws UnauthorizedException
-     *         You are not authorized to perform this operation.
+     *         You aren't authorized to perform this operation.
      * @throws InternalFailureException
      *         An internal AppSync error occurred. Try your request again.
      * @sample AWSAppSync.ListGraphqlApis
@@ -1946,7 +2394,7 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
      * @throws NotFoundException
      *         The resource specified in the request was not found. Check the resource, and then try again.
      * @throws UnauthorizedException
-     *         You are not authorized to perform this operation.
+     *         You aren't authorized to perform this operation.
      * @throws InternalFailureException
      *         An internal AppSync error occurred. Try your request again.
      * @sample AWSAppSync.ListResolvers
@@ -2010,7 +2458,7 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
      * @throws NotFoundException
      *         The resource specified in the request was not found. Check the resource, and then try again.
      * @throws UnauthorizedException
-     *         You are not authorized to perform this operation.
+     *         You aren't authorized to perform this operation.
      * @throws InternalFailureException
      *         An internal AppSync error occurred. Try your request again.
      * @sample AWSAppSync.ListResolversByFunction
@@ -2078,11 +2526,11 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
      * @throws LimitExceededException
      *         The request exceeded a limit. Try your request again.
      * @throws UnauthorizedException
-     *         You are not authorized to perform this operation.
+     *         You aren't authorized to perform this operation.
      * @throws InternalFailureException
      *         An internal AppSync error occurred. Try your request again.
      * @throws AccessDeniedException
-     *         You do not have access to perform this operation on this resource.
+     *         You don't have access to perform this operation on this resource.
      * @sample AWSAppSync.ListTagsForResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/ListTagsForResource" target="_top">AWS
      *      API Documentation</a>
@@ -2146,7 +2594,7 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
      * @throws NotFoundException
      *         The resource specified in the request was not found. Check the resource, and then try again.
      * @throws UnauthorizedException
-     *         You are not authorized to perform this operation.
+     *         You aren't authorized to perform this operation.
      * @throws InternalFailureException
      *         An internal AppSync error occurred. Try your request again.
      * @sample AWSAppSync.ListTypes
@@ -2215,7 +2663,7 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
      * @throws NotFoundException
      *         The resource specified in the request was not found. Check the resource, and then try again.
      * @throws UnauthorizedException
-     *         You are not authorized to perform this operation.
+     *         You aren't authorized to perform this operation.
      * @throws InternalFailureException
      *         An internal AppSync error occurred. Try your request again.
      * @sample AWSAppSync.StartSchemaCreation
@@ -2281,11 +2729,11 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
      * @throws LimitExceededException
      *         The request exceeded a limit. Try your request again.
      * @throws UnauthorizedException
-     *         You are not authorized to perform this operation.
+     *         You aren't authorized to perform this operation.
      * @throws InternalFailureException
      *         An internal AppSync error occurred. Try your request again.
      * @throws AccessDeniedException
-     *         You do not have access to perform this operation on this resource.
+     *         You don't have access to perform this operation on this resource.
      * @sample AWSAppSync.TagResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/TagResource" target="_top">AWS API
      *      Documentation</a>
@@ -2349,11 +2797,11 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
      * @throws LimitExceededException
      *         The request exceeded a limit. Try your request again.
      * @throws UnauthorizedException
-     *         You are not authorized to perform this operation.
+     *         You aren't authorized to perform this operation.
      * @throws InternalFailureException
      *         An internal AppSync error occurred. Try your request again.
      * @throws AccessDeniedException
-     *         You do not have access to perform this operation on this resource.
+     *         You don't have access to perform this operation on this resource.
      * @sample AWSAppSync.UntagResource
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/UntagResource" target="_top">AWS API
      *      Documentation</a>
@@ -2418,7 +2866,7 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
      * @throws NotFoundException
      *         The resource specified in the request was not found. Check the resource, and then try again.
      * @throws UnauthorizedException
-     *         You are not authorized to perform this operation.
+     *         You aren't authorized to perform this operation.
      * @throws InternalFailureException
      *         An internal AppSync error occurred. Try your request again.
      * @sample AWSAppSync.UpdateApiCache
@@ -2471,7 +2919,7 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
 
     /**
      * <p>
-     * Updates an API key. The key can be updated while it is not deleted.
+     * Updates an API key. You can update the key as long as it's not deleted.
      * </p>
      * 
      * @param updateApiKeyRequest
@@ -2482,7 +2930,7 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
      * @throws NotFoundException
      *         The resource specified in the request was not found. Check the resource, and then try again.
      * @throws UnauthorizedException
-     *         You are not authorized to perform this operation.
+     *         You aren't authorized to perform this operation.
      * @throws LimitExceededException
      *         The request exceeded a limit. Try your request again.
      * @throws InternalFailureException
@@ -2553,7 +3001,7 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
      * @throws NotFoundException
      *         The resource specified in the request was not found. Check the resource, and then try again.
      * @throws UnauthorizedException
-     *         You are not authorized to perform this operation.
+     *         You aren't authorized to perform this operation.
      * @throws InternalFailureException
      *         An internal AppSync error occurred. Try your request again.
      * @sample AWSAppSync.UpdateDataSource
@@ -2606,6 +3054,72 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
 
     /**
      * <p>
+     * Updates a custom <code>DomainName</code> object.
+     * </p>
+     * 
+     * @param updateDomainNameRequest
+     * @return Result of the UpdateDomainName operation returned by the service.
+     * @throws AccessDeniedException
+     *         You don't have access to perform this operation on this resource.
+     * @throws BadRequestException
+     *         The request is not well formed. For example, a value is invalid or a required field is missing. Check the
+     *         field values, and then try again.
+     * @throws ConcurrentModificationException
+     *         Another modification is in progress at this time and it must complete before you can make your change.
+     * @throws InternalFailureException
+     *         An internal AppSync error occurred. Try your request again.
+     * @throws NotFoundException
+     *         The resource specified in the request was not found. Check the resource, and then try again.
+     * @sample AWSAppSync.UpdateDomainName
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/UpdateDomainName" target="_top">AWS API
+     *      Documentation</a>
+     */
+    @Override
+    public UpdateDomainNameResult updateDomainName(UpdateDomainNameRequest request) {
+        request = beforeClientExecution(request);
+        return executeUpdateDomainName(request);
+    }
+
+    @SdkInternalApi
+    final UpdateDomainNameResult executeUpdateDomainName(UpdateDomainNameRequest updateDomainNameRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(updateDomainNameRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<UpdateDomainNameRequest> request = null;
+        Response<UpdateDomainNameResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new UpdateDomainNameRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(updateDomainNameRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "AppSync");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "UpdateDomainName");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<UpdateDomainNameResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new UpdateDomainNameResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Updates a <code>Function</code> object.
      * </p>
      * 
@@ -2616,7 +3130,7 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
      * @throws NotFoundException
      *         The resource specified in the request was not found. Check the resource, and then try again.
      * @throws UnauthorizedException
-     *         You are not authorized to perform this operation.
+     *         You aren't authorized to perform this operation.
      * @throws InternalFailureException
      *         An internal AppSync error occurred. Try your request again.
      * @sample AWSAppSync.UpdateFunction
@@ -2682,11 +3196,11 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
      * @throws NotFoundException
      *         The resource specified in the request was not found. Check the resource, and then try again.
      * @throws UnauthorizedException
-     *         You are not authorized to perform this operation.
+     *         You aren't authorized to perform this operation.
      * @throws InternalFailureException
      *         An internal AppSync error occurred. Try your request again.
      * @throws AccessDeniedException
-     *         You do not have access to perform this operation on this resource.
+     *         You don't have access to perform this operation on this resource.
      * @sample AWSAppSync.UpdateGraphqlApi
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/UpdateGraphqlApi" target="_top">AWS API
      *      Documentation</a>
@@ -2747,7 +3261,7 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
      * @throws NotFoundException
      *         The resource specified in the request was not found. Check the resource, and then try again.
      * @throws UnauthorizedException
-     *         You are not authorized to perform this operation.
+     *         You aren't authorized to perform this operation.
      * @throws InternalFailureException
      *         An internal AppSync error occurred. Try your request again.
      * @sample AWSAppSync.UpdateResolver
@@ -2813,7 +3327,7 @@ public class AWSAppSyncClient extends AmazonWebServiceClient implements AWSAppSy
      * @throws NotFoundException
      *         The resource specified in the request was not found. Check the resource, and then try again.
      * @throws UnauthorizedException
-     *         You are not authorized to perform this operation.
+     *         You aren't authorized to perform this operation.
      * @throws InternalFailureException
      *         An internal AppSync error occurred. Try your request again.
      * @sample AWSAppSync.UpdateType

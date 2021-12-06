@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A function is a reusable entity. Multiple functions can be used to compose the resolver logic.
+ * A function is a reusable entity. You can use multiple functions to compose the resolver logic.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/FunctionConfiguration" target="_top">AWS API
@@ -36,7 +36,7 @@ public class FunctionConfiguration implements Serializable, Cloneable, Structure
     private String functionId;
     /**
      * <p>
-     * The ARN of the <code>Function</code> object.
+     * The Amazon Resource Name (ARN) of the <code>Function</code> object.
      * </p>
      */
     private String functionArn;
@@ -73,7 +73,7 @@ public class FunctionConfiguration implements Serializable, Cloneable, Structure
     private String responseMappingTemplate;
     /**
      * <p>
-     * The version of the request mapping template. Currently only the 2018-05-29 version of the template is supported.
+     * The version of the request mapping template. Currently, only the 2018-05-29 version of the template is supported.
      * </p>
      */
     private String functionVersion;
@@ -122,11 +122,11 @@ public class FunctionConfiguration implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The ARN of the <code>Function</code> object.
+     * The Amazon Resource Name (ARN) of the <code>Function</code> object.
      * </p>
      * 
      * @param functionArn
-     *        The ARN of the <code>Function</code> object.
+     *        The Amazon Resource Name (ARN) of the <code>Function</code> object.
      */
 
     public void setFunctionArn(String functionArn) {
@@ -135,10 +135,10 @@ public class FunctionConfiguration implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The ARN of the <code>Function</code> object.
+     * The Amazon Resource Name (ARN) of the <code>Function</code> object.
      * </p>
      * 
-     * @return The ARN of the <code>Function</code> object.
+     * @return The Amazon Resource Name (ARN) of the <code>Function</code> object.
      */
 
     public String getFunctionArn() {
@@ -147,11 +147,11 @@ public class FunctionConfiguration implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The ARN of the <code>Function</code> object.
+     * The Amazon Resource Name (ARN) of the <code>Function</code> object.
      * </p>
      * 
      * @param functionArn
-     *        The ARN of the <code>Function</code> object.
+     *        The Amazon Resource Name (ARN) of the <code>Function</code> object.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -368,11 +368,11 @@ public class FunctionConfiguration implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The version of the request mapping template. Currently only the 2018-05-29 version of the template is supported.
+     * The version of the request mapping template. Currently, only the 2018-05-29 version of the template is supported.
      * </p>
      * 
      * @param functionVersion
-     *        The version of the request mapping template. Currently only the 2018-05-29 version of the template is
+     *        The version of the request mapping template. Currently, only the 2018-05-29 version of the template is
      *        supported.
      */
 
@@ -382,10 +382,10 @@ public class FunctionConfiguration implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The version of the request mapping template. Currently only the 2018-05-29 version of the template is supported.
+     * The version of the request mapping template. Currently, only the 2018-05-29 version of the template is supported.
      * </p>
      * 
-     * @return The version of the request mapping template. Currently only the 2018-05-29 version of the template is
+     * @return The version of the request mapping template. Currently, only the 2018-05-29 version of the template is
      *         supported.
      */
 
@@ -395,11 +395,11 @@ public class FunctionConfiguration implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The version of the request mapping template. Currently only the 2018-05-29 version of the template is supported.
+     * The version of the request mapping template. Currently, only the 2018-05-29 version of the template is supported.
      * </p>
      * 
      * @param functionVersion
-     *        The version of the request mapping template. Currently only the 2018-05-29 version of the template is
+     *        The version of the request mapping template. Currently, only the 2018-05-29 version of the template is
      *        supported.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

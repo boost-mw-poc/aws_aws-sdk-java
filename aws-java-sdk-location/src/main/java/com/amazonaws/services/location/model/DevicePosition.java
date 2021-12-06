@@ -30,6 +30,12 @@ public class DevicePosition implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
+     * The accuracy of the device position.
+     * </p>
+     */
+    private PositionalAccuracy accuracy;
+    /**
+     * <p>
      * The device whose position you retrieved.
      * </p>
      */
@@ -40,6 +46,12 @@ public class DevicePosition implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private java.util.List<Double> position;
+    /**
+     * <p>
+     * The properties associated with the position.
+     * </p>
+     */
+    private java.util.Map<String, String> positionProperties;
     /**
      * <p>
      * The timestamp for when the tracker resource received the device position in <a
@@ -56,6 +68,46 @@ public class DevicePosition implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private java.util.Date sampleTime;
+
+    /**
+     * <p>
+     * The accuracy of the device position.
+     * </p>
+     * 
+     * @param accuracy
+     *        The accuracy of the device position.
+     */
+
+    public void setAccuracy(PositionalAccuracy accuracy) {
+        this.accuracy = accuracy;
+    }
+
+    /**
+     * <p>
+     * The accuracy of the device position.
+     * </p>
+     * 
+     * @return The accuracy of the device position.
+     */
+
+    public PositionalAccuracy getAccuracy() {
+        return this.accuracy;
+    }
+
+    /**
+     * <p>
+     * The accuracy of the device position.
+     * </p>
+     * 
+     * @param accuracy
+     *        The accuracy of the device position.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DevicePosition withAccuracy(PositionalAccuracy accuracy) {
+        setAccuracy(accuracy);
+        return this;
+    }
 
     /**
      * <p>
@@ -164,6 +216,74 @@ public class DevicePosition implements Serializable, Cloneable, StructuredPojo {
 
     public DevicePosition withPosition(java.util.Collection<Double> position) {
         setPosition(position);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The properties associated with the position.
+     * </p>
+     * 
+     * @return The properties associated with the position.
+     */
+
+    public java.util.Map<String, String> getPositionProperties() {
+        return positionProperties;
+    }
+
+    /**
+     * <p>
+     * The properties associated with the position.
+     * </p>
+     * 
+     * @param positionProperties
+     *        The properties associated with the position.
+     */
+
+    public void setPositionProperties(java.util.Map<String, String> positionProperties) {
+        this.positionProperties = positionProperties;
+    }
+
+    /**
+     * <p>
+     * The properties associated with the position.
+     * </p>
+     * 
+     * @param positionProperties
+     *        The properties associated with the position.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DevicePosition withPositionProperties(java.util.Map<String, String> positionProperties) {
+        setPositionProperties(positionProperties);
+        return this;
+    }
+
+    /**
+     * Add a single PositionProperties entry
+     *
+     * @see DevicePosition#withPositionProperties
+     * @returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DevicePosition addPositionPropertiesEntry(String key, String value) {
+        if (null == this.positionProperties) {
+            this.positionProperties = new java.util.HashMap<String, String>();
+        }
+        if (this.positionProperties.containsKey(key))
+            throw new IllegalArgumentException("Duplicated keys (" + key.toString() + ") are provided.");
+        this.positionProperties.put(key, value);
+        return this;
+    }
+
+    /**
+     * Removes all the entries added into PositionProperties.
+     *
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DevicePosition clearPositionPropertiesEntries() {
+        this.positionProperties = null;
         return this;
     }
 
@@ -283,10 +403,14 @@ public class DevicePosition implements Serializable, Cloneable, StructuredPojo {
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getAccuracy() != null)
+            sb.append("Accuracy: ").append(getAccuracy()).append(",");
         if (getDeviceId() != null)
             sb.append("DeviceId: ").append(getDeviceId()).append(",");
         if (getPosition() != null)
             sb.append("Position: ").append("***Sensitive Data Redacted***").append(",");
+        if (getPositionProperties() != null)
+            sb.append("PositionProperties: ").append("***Sensitive Data Redacted***").append(",");
         if (getReceivedTime() != null)
             sb.append("ReceivedTime: ").append(getReceivedTime()).append(",");
         if (getSampleTime() != null)
@@ -305,6 +429,10 @@ public class DevicePosition implements Serializable, Cloneable, StructuredPojo {
         if (obj instanceof DevicePosition == false)
             return false;
         DevicePosition other = (DevicePosition) obj;
+        if (other.getAccuracy() == null ^ this.getAccuracy() == null)
+            return false;
+        if (other.getAccuracy() != null && other.getAccuracy().equals(this.getAccuracy()) == false)
+            return false;
         if (other.getDeviceId() == null ^ this.getDeviceId() == null)
             return false;
         if (other.getDeviceId() != null && other.getDeviceId().equals(this.getDeviceId()) == false)
@@ -312,6 +440,10 @@ public class DevicePosition implements Serializable, Cloneable, StructuredPojo {
         if (other.getPosition() == null ^ this.getPosition() == null)
             return false;
         if (other.getPosition() != null && other.getPosition().equals(this.getPosition()) == false)
+            return false;
+        if (other.getPositionProperties() == null ^ this.getPositionProperties() == null)
+            return false;
+        if (other.getPositionProperties() != null && other.getPositionProperties().equals(this.getPositionProperties()) == false)
             return false;
         if (other.getReceivedTime() == null ^ this.getReceivedTime() == null)
             return false;
@@ -329,8 +461,10 @@ public class DevicePosition implements Serializable, Cloneable, StructuredPojo {
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getAccuracy() == null) ? 0 : getAccuracy().hashCode());
         hashCode = prime * hashCode + ((getDeviceId() == null) ? 0 : getDeviceId().hashCode());
         hashCode = prime * hashCode + ((getPosition() == null) ? 0 : getPosition().hashCode());
+        hashCode = prime * hashCode + ((getPositionProperties() == null) ? 0 : getPositionProperties().hashCode());
         hashCode = prime * hashCode + ((getReceivedTime() == null) ? 0 : getReceivedTime().hashCode());
         hashCode = prime * hashCode + ((getSampleTime() == null) ? 0 : getSampleTime().hashCode());
         return hashCode;

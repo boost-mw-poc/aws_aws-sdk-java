@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The CloudWatch Logs configuration.
+ * The Amazon CloudWatch Logs configuration.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/LogConfig" target="_top">AWS API
@@ -82,7 +82,7 @@ public class LogConfig implements Serializable, Cloneable, StructuredPojo {
     private String fieldLogLevel;
     /**
      * <p>
-     * The service role that AppSync will assume to publish to Amazon CloudWatch logs in your account.
+     * The service role that AppSync assumes to publish to CloudWatch logs in your account.
      * </p>
      */
     private String cloudWatchLogsRoleArn;
@@ -146,7 +146,7 @@ public class LogConfig implements Serializable, Cloneable, StructuredPojo {
      * </ul>
      * 
      * @param fieldLogLevel
-     *        The field logging level. Values can be NONE, ERROR, or ALL. </p>
+     *        The field logging level. Values can be NONE, ERROR, or ALL.</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -250,7 +250,7 @@ public class LogConfig implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * </ul>
      * 
-     * @return The field logging level. Values can be NONE, ERROR, or ALL. </p>
+     * @return The field logging level. Values can be NONE, ERROR, or ALL.</p>
      *         <ul>
      *         <li>
      *         <p>
@@ -355,7 +355,7 @@ public class LogConfig implements Serializable, Cloneable, StructuredPojo {
      * </ul>
      * 
      * @param fieldLogLevel
-     *        The field logging level. Values can be NONE, ERROR, or ALL. </p>
+     *        The field logging level. Values can be NONE, ERROR, or ALL.</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -462,7 +462,7 @@ public class LogConfig implements Serializable, Cloneable, StructuredPojo {
      * </ul>
      * 
      * @param fieldLogLevel
-     *        The field logging level. Values can be NONE, ERROR, or ALL. </p>
+     *        The field logging level. Values can be NONE, ERROR, or ALL.</p>
      *        <ul>
      *        <li>
      *        <p>
@@ -519,11 +519,11 @@ public class LogConfig implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The service role that AppSync will assume to publish to Amazon CloudWatch logs in your account.
+     * The service role that AppSync assumes to publish to CloudWatch logs in your account.
      * </p>
      * 
      * @param cloudWatchLogsRoleArn
-     *        The service role that AppSync will assume to publish to Amazon CloudWatch logs in your account.
+     *        The service role that AppSync assumes to publish to CloudWatch logs in your account.
      */
 
     public void setCloudWatchLogsRoleArn(String cloudWatchLogsRoleArn) {
@@ -532,10 +532,10 @@ public class LogConfig implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The service role that AppSync will assume to publish to Amazon CloudWatch logs in your account.
+     * The service role that AppSync assumes to publish to CloudWatch logs in your account.
      * </p>
      * 
-     * @return The service role that AppSync will assume to publish to Amazon CloudWatch logs in your account.
+     * @return The service role that AppSync assumes to publish to CloudWatch logs in your account.
      */
 
     public String getCloudWatchLogsRoleArn() {
@@ -544,11 +544,11 @@ public class LogConfig implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The service role that AppSync will assume to publish to Amazon CloudWatch logs in your account.
+     * The service role that AppSync assumes to publish to CloudWatch logs in your account.
      * </p>
      * 
      * @param cloudWatchLogsRoleArn
-     *        The service role that AppSync will assume to publish to Amazon CloudWatch logs in your account.
+     *        The service role that AppSync assumes to publish to CloudWatch logs in your account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

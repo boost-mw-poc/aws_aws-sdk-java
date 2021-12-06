@@ -1,3 +1,16 @@
+# __1.12.126__ __2021-12-06__
+## __AWS AppSync__
+  - ### Features
+    - AWS AppSync now supports custom domain names, allowing you to associate a domain name that you own with an AppSync API in your account.
+
+## __Amazon Location Service__
+  - ### Features
+    - This release adds support for Accuracy position filtering, position metadata and autocomplete for addresses and points of interest based on partial or misspelled free-form text.
+
+## __Amazon Route 53__
+  - ### Features
+    - Add PriorRequestNotComplete exception to UpdateHostedZoneComment API
+
 # __1.12.125__ __2021-12-03__
 ## __Amazon Rekognition__
   - ### Features

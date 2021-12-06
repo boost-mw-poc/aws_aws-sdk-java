@@ -1464,6 +1464,40 @@ public class AmazonLocationAsyncClient extends AmazonLocationClient implements A
     }
 
     @Override
+    public java.util.concurrent.Future<SearchPlaceIndexForSuggestionsResult> searchPlaceIndexForSuggestionsAsync(SearchPlaceIndexForSuggestionsRequest request) {
+
+        return searchPlaceIndexForSuggestionsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<SearchPlaceIndexForSuggestionsResult> searchPlaceIndexForSuggestionsAsync(
+            final SearchPlaceIndexForSuggestionsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<SearchPlaceIndexForSuggestionsRequest, SearchPlaceIndexForSuggestionsResult> asyncHandler) {
+        final SearchPlaceIndexForSuggestionsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<SearchPlaceIndexForSuggestionsResult>() {
+            @Override
+            public SearchPlaceIndexForSuggestionsResult call() throws Exception {
+                SearchPlaceIndexForSuggestionsResult result = null;
+
+                try {
+                    result = executeSearchPlaceIndexForSuggestions(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<SearchPlaceIndexForTextResult> searchPlaceIndexForTextAsync(SearchPlaceIndexForTextRequest request) {
 
         return searchPlaceIndexForTextAsync(request, null);

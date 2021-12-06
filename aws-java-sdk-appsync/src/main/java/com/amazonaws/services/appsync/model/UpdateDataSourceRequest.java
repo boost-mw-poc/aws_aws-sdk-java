@@ -51,7 +51,7 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
     private String type;
     /**
      * <p>
-     * The new service role ARN for the data source.
+     * The new service role Amazon Resource Name (ARN) for the data source.
      * </p>
      */
     private String serviceRoleArn;
@@ -63,7 +63,7 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
     private DynamodbDataSourceConfig dynamodbConfig;
     /**
      * <p>
-     * The new Amazon Web Services Lambda configuration.
+     * The new Lambda configuration.
      * </p>
      */
     private LambdaDataSourceConfig lambdaConfig;
@@ -278,11 +278,11 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The new service role ARN for the data source.
+     * The new service role Amazon Resource Name (ARN) for the data source.
      * </p>
      * 
      * @param serviceRoleArn
-     *        The new service role ARN for the data source.
+     *        The new service role Amazon Resource Name (ARN) for the data source.
      */
 
     public void setServiceRoleArn(String serviceRoleArn) {
@@ -291,10 +291,10 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The new service role ARN for the data source.
+     * The new service role Amazon Resource Name (ARN) for the data source.
      * </p>
      * 
-     * @return The new service role ARN for the data source.
+     * @return The new service role Amazon Resource Name (ARN) for the data source.
      */
 
     public String getServiceRoleArn() {
@@ -303,11 +303,11 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The new service role ARN for the data source.
+     * The new service role Amazon Resource Name (ARN) for the data source.
      * </p>
      * 
      * @param serviceRoleArn
-     *        The new service role ARN for the data source.
+     *        The new service role Amazon Resource Name (ARN) for the data source.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -358,11 +358,11 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The new Amazon Web Services Lambda configuration.
+     * The new Lambda configuration.
      * </p>
      * 
      * @param lambdaConfig
-     *        The new Amazon Web Services Lambda configuration.
+     *        The new Lambda configuration.
      */
 
     public void setLambdaConfig(LambdaDataSourceConfig lambdaConfig) {
@@ -371,10 +371,10 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The new Amazon Web Services Lambda configuration.
+     * The new Lambda configuration.
      * </p>
      * 
-     * @return The new Amazon Web Services Lambda configuration.
+     * @return The new Lambda configuration.
      */
 
     public LambdaDataSourceConfig getLambdaConfig() {
@@ -383,11 +383,11 @@ public class UpdateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The new Amazon Web Services Lambda configuration.
+     * The new Lambda configuration.
      * </p>
      * 
      * @param lambdaConfig
-     *        The new Amazon Web Services Lambda configuration.
+     *        The new Lambda configuration.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

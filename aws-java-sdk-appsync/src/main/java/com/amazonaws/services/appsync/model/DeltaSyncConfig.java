@@ -30,7 +30,7 @@ public class DeltaSyncConfig implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The number of minutes an Item is stored in the datasource.
+     * The number of minutes that an Item is stored in the data source.
      * </p>
      */
     private Long baseTableTTL;
@@ -42,18 +42,18 @@ public class DeltaSyncConfig implements Serializable, Cloneable, StructuredPojo 
     private String deltaSyncTableName;
     /**
      * <p>
-     * The number of minutes a Delta Sync log entry is stored in the Delta Sync table.
+     * The number of minutes that a Delta Sync log entry is stored in the Delta Sync table.
      * </p>
      */
     private Long deltaSyncTableTTL;
 
     /**
      * <p>
-     * The number of minutes an Item is stored in the datasource.
+     * The number of minutes that an Item is stored in the data source.
      * </p>
      * 
      * @param baseTableTTL
-     *        The number of minutes an Item is stored in the datasource.
+     *        The number of minutes that an Item is stored in the data source.
      */
 
     public void setBaseTableTTL(Long baseTableTTL) {
@@ -62,10 +62,10 @@ public class DeltaSyncConfig implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The number of minutes an Item is stored in the datasource.
+     * The number of minutes that an Item is stored in the data source.
      * </p>
      * 
-     * @return The number of minutes an Item is stored in the datasource.
+     * @return The number of minutes that an Item is stored in the data source.
      */
 
     public Long getBaseTableTTL() {
@@ -74,11 +74,11 @@ public class DeltaSyncConfig implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The number of minutes an Item is stored in the datasource.
+     * The number of minutes that an Item is stored in the data source.
      * </p>
      * 
      * @param baseTableTTL
-     *        The number of minutes an Item is stored in the datasource.
+     *        The number of minutes that an Item is stored in the data source.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -129,11 +129,11 @@ public class DeltaSyncConfig implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The number of minutes a Delta Sync log entry is stored in the Delta Sync table.
+     * The number of minutes that a Delta Sync log entry is stored in the Delta Sync table.
      * </p>
      * 
      * @param deltaSyncTableTTL
-     *        The number of minutes a Delta Sync log entry is stored in the Delta Sync table.
+     *        The number of minutes that a Delta Sync log entry is stored in the Delta Sync table.
      */
 
     public void setDeltaSyncTableTTL(Long deltaSyncTableTTL) {
@@ -142,10 +142,10 @@ public class DeltaSyncConfig implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The number of minutes a Delta Sync log entry is stored in the Delta Sync table.
+     * The number of minutes that a Delta Sync log entry is stored in the Delta Sync table.
      * </p>
      * 
-     * @return The number of minutes a Delta Sync log entry is stored in the Delta Sync table.
+     * @return The number of minutes that a Delta Sync log entry is stored in the Delta Sync table.
      */
 
     public Long getDeltaSyncTableTTL() {
@@ -154,11 +154,11 @@ public class DeltaSyncConfig implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The number of minutes a Delta Sync log entry is stored in the Delta Sync table.
+     * The number of minutes that a Delta Sync log entry is stored in the Delta Sync table.
      * </p>
      * 
      * @param deltaSyncTableTTL
-     *        The number of minutes a Delta Sync log entry is stored in the Delta Sync table.
+     *        The number of minutes that a Delta Sync log entry is stored in the Delta Sync table.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

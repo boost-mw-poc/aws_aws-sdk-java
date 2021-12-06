@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The <code>LambdaConflictHandlerConfig</code> object when configuring LAMBDA as the Conflict Handler.
+ * The <code>LambdaConflictHandlerConfig</code> object when configuring <code>LAMBDA</code> as the Conflict Handler.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/LambdaConflictHandlerConfig"
@@ -30,18 +30,18 @@ public class LambdaConflictHandlerConfig implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The Arn for the Lambda function to use as the Conflict Handler.
+     * The Amazon Resource Name (ARN) for the Lambda function to use as the Conflict Handler.
      * </p>
      */
     private String lambdaConflictHandlerArn;
 
     /**
      * <p>
-     * The Arn for the Lambda function to use as the Conflict Handler.
+     * The Amazon Resource Name (ARN) for the Lambda function to use as the Conflict Handler.
      * </p>
      * 
      * @param lambdaConflictHandlerArn
-     *        The Arn for the Lambda function to use as the Conflict Handler.
+     *        The Amazon Resource Name (ARN) for the Lambda function to use as the Conflict Handler.
      */
 
     public void setLambdaConflictHandlerArn(String lambdaConflictHandlerArn) {
@@ -50,10 +50,10 @@ public class LambdaConflictHandlerConfig implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The Arn for the Lambda function to use as the Conflict Handler.
+     * The Amazon Resource Name (ARN) for the Lambda function to use as the Conflict Handler.
      * </p>
      * 
-     * @return The Arn for the Lambda function to use as the Conflict Handler.
+     * @return The Amazon Resource Name (ARN) for the Lambda function to use as the Conflict Handler.
      */
 
     public String getLambdaConflictHandlerArn() {
@@ -62,11 +62,11 @@ public class LambdaConflictHandlerConfig implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The Arn for the Lambda function to use as the Conflict Handler.
+     * The Amazon Resource Name (ARN) for the Lambda function to use as the Conflict Handler.
      * </p>
      * 
      * @param lambdaConflictHandlerArn
-     *        The Arn for the Lambda function to use as the Conflict Handler.
+     *        The Amazon Resource Name (ARN) for the Lambda function to use as the Conflict Handler.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

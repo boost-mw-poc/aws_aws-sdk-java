@@ -27,7 +27,7 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The <code>GraphqlApi</code> ARN.
+     * The <code>GraphqlApi</code> Amazon Resource Name (ARN).
      * </p>
      */
     private String resourceArn;
@@ -40,11 +40,11 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The <code>GraphqlApi</code> ARN.
+     * The <code>GraphqlApi</code> Amazon Resource Name (ARN).
      * </p>
      * 
      * @param resourceArn
-     *        The <code>GraphqlApi</code> ARN.
+     *        The <code>GraphqlApi</code> Amazon Resource Name (ARN).
      */
 
     public void setResourceArn(String resourceArn) {
@@ -53,10 +53,10 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The <code>GraphqlApi</code> ARN.
+     * The <code>GraphqlApi</code> Amazon Resource Name (ARN).
      * </p>
      * 
-     * @return The <code>GraphqlApi</code> ARN.
+     * @return The <code>GraphqlApi</code> Amazon Resource Name (ARN).
      */
 
     public String getResourceArn() {
@@ -65,11 +65,11 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The <code>GraphqlApi</code> ARN.
+     * The <code>GraphqlApi</code> Amazon Resource Name (ARN).
      * </p>
      * 
      * @param resourceArn
-     *        The <code>GraphqlApi</code> ARN.
+     *        The <code>GraphqlApi</code> Amazon Resource Name (ARN).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -30,7 +30,7 @@ public class UpdateApiCacheRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The GraphQL API Id.
+     * The GraphQL API ID.
      * </p>
      */
     private String apiId;
@@ -39,7 +39,7 @@ public class UpdateApiCacheRequest extends com.amazonaws.AmazonWebServiceRequest
      * TTL in seconds for cache entries.
      * </p>
      * <p>
-     * Valid values are between 1 and 3600 seconds.
+     * Valid values are 1–3,600 seconds.
      * </p>
      */
     private Long ttl;
@@ -156,11 +156,11 @@ public class UpdateApiCacheRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The GraphQL API Id.
+     * The GraphQL API ID.
      * </p>
      * 
      * @param apiId
-     *        The GraphQL API Id.
+     *        The GraphQL API ID.
      */
 
     public void setApiId(String apiId) {
@@ -169,10 +169,10 @@ public class UpdateApiCacheRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The GraphQL API Id.
+     * The GraphQL API ID.
      * </p>
      * 
-     * @return The GraphQL API Id.
+     * @return The GraphQL API ID.
      */
 
     public String getApiId() {
@@ -181,11 +181,11 @@ public class UpdateApiCacheRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The GraphQL API Id.
+     * The GraphQL API ID.
      * </p>
      * 
      * @param apiId
-     *        The GraphQL API Id.
+     *        The GraphQL API ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -199,13 +199,13 @@ public class UpdateApiCacheRequest extends com.amazonaws.AmazonWebServiceRequest
      * TTL in seconds for cache entries.
      * </p>
      * <p>
-     * Valid values are between 1 and 3600 seconds.
+     * Valid values are 1–3,600 seconds.
      * </p>
      * 
      * @param ttl
      *        TTL in seconds for cache entries.</p>
      *        <p>
-     *        Valid values are between 1 and 3600 seconds.
+     *        Valid values are 1–3,600 seconds.
      */
 
     public void setTtl(Long ttl) {
@@ -217,12 +217,12 @@ public class UpdateApiCacheRequest extends com.amazonaws.AmazonWebServiceRequest
      * TTL in seconds for cache entries.
      * </p>
      * <p>
-     * Valid values are between 1 and 3600 seconds.
+     * Valid values are 1–3,600 seconds.
      * </p>
      * 
      * @return TTL in seconds for cache entries.</p>
      *         <p>
-     *         Valid values are between 1 and 3600 seconds.
+     *         Valid values are 1–3,600 seconds.
      */
 
     public Long getTtl() {
@@ -234,13 +234,13 @@ public class UpdateApiCacheRequest extends com.amazonaws.AmazonWebServiceRequest
      * TTL in seconds for cache entries.
      * </p>
      * <p>
-     * Valid values are between 1 and 3600 seconds.
+     * Valid values are 1–3,600 seconds.
      * </p>
      * 
      * @param ttl
      *        TTL in seconds for cache entries.</p>
      *        <p>
-     *        Valid values are between 1 and 3600 seconds.
+     *        Valid values are 1–3,600 seconds.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

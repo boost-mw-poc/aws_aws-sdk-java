@@ -31,7 +31,7 @@ public class ListFunctionsResult extends com.amazonaws.AmazonWebServiceResult<co
     private java.util.List<FunctionConfiguration> functions;
     /**
      * <p>
-     * An identifier that was returned from the previous call to this operation, which can be used to return the next
+     * An identifier that was returned from the previous call to this operation, which you can use to return the next
      * set of items in the list.
      * </p>
      */
@@ -109,12 +109,12 @@ public class ListFunctionsResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * An identifier that was returned from the previous call to this operation, which can be used to return the next
+     * An identifier that was returned from the previous call to this operation, which you can use to return the next
      * set of items in the list.
      * </p>
      * 
      * @param nextToken
-     *        An identifier that was returned from the previous call to this operation, which can be used to return the
+     *        An identifier that was returned from the previous call to this operation, which you can use to return the
      *        next set of items in the list.
      */
 
@@ -124,11 +124,11 @@ public class ListFunctionsResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * An identifier that was returned from the previous call to this operation, which can be used to return the next
+     * An identifier that was returned from the previous call to this operation, which you can use to return the next
      * set of items in the list.
      * </p>
      * 
-     * @return An identifier that was returned from the previous call to this operation, which can be used to return the
+     * @return An identifier that was returned from the previous call to this operation, which you can use to return the
      *         next set of items in the list.
      */
 
@@ -138,12 +138,12 @@ public class ListFunctionsResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * An identifier that was returned from the previous call to this operation, which can be used to return the next
+     * An identifier that was returned from the previous call to this operation, which you can use to return the next
      * set of items in the list.
      * </p>
      * 
      * @param nextToken
-     *        An identifier that was returned from the previous call to this operation, which can be used to return the
+     *        An identifier that was returned from the previous call to this operation, which you can use to return the
      *        next set of items in the list.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

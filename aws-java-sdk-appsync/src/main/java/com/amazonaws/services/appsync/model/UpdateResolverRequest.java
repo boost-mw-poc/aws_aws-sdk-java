@@ -58,7 +58,7 @@ public class UpdateResolverRequest extends com.amazonaws.AmazonWebServiceRequest
      * understand. Mapping templates are written in Apache Velocity Template Language (VTL).
      * </p>
      * <p>
-     * VTL request mapping templates are optional when using a Lambda data source. For all other data sources, VTL
+     * VTL request mapping templates are optional when using an Lambda data source. For all other data sources, VTL
      * request and response mapping templates are required.
      * </p>
      */
@@ -76,14 +76,14 @@ public class UpdateResolverRequest extends com.amazonaws.AmazonWebServiceRequest
      * <ul>
      * <li>
      * <p>
-     * <b>UNIT</b>: A UNIT resolver type. A UNIT resolver is the default resolver type. A UNIT resolver enables you to
-     * execute a GraphQL query against a single data source.
+     * <b>UNIT</b>: A UNIT resolver type. A UNIT resolver is the default resolver type. You can use a UNIT resolver to
+     * run a GraphQL query against a single data source.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b>PIPELINE</b>: A PIPELINE resolver type. A PIPELINE resolver enables you to execute a series of
-     * <code>Function</code> in a serial manner. You can use a pipeline resolver to execute a GraphQL query against
+     * <b>PIPELINE</b>: A PIPELINE resolver type. You can use a PIPELINE resolver to invoke a series of
+     * <code>Function</code> objects in a serial manner. You can use a pipeline resolver to run a GraphQL query against
      * multiple data sources.
      * </p>
      * </li>
@@ -98,7 +98,7 @@ public class UpdateResolverRequest extends com.amazonaws.AmazonWebServiceRequest
     private PipelineConfig pipelineConfig;
     /**
      * <p>
-     * The <code>SyncConfig</code> for a resolver attached to a versioned datasource.
+     * The <code>SyncConfig</code> for a resolver attached to a versioned data source.
      * </p>
      */
     private SyncConfig syncConfig;
@@ -278,7 +278,7 @@ public class UpdateResolverRequest extends com.amazonaws.AmazonWebServiceRequest
      * understand. Mapping templates are written in Apache Velocity Template Language (VTL).
      * </p>
      * <p>
-     * VTL request mapping templates are optional when using a Lambda data source. For all other data sources, VTL
+     * VTL request mapping templates are optional when using an Lambda data source. For all other data sources, VTL
      * request and response mapping templates are required.
      * </p>
      * 
@@ -289,7 +289,7 @@ public class UpdateResolverRequest extends com.amazonaws.AmazonWebServiceRequest
      *        source can understand. Mapping templates are written in Apache Velocity Template Language (VTL).
      *        </p>
      *        <p>
-     *        VTL request mapping templates are optional when using a Lambda data source. For all other data sources,
+     *        VTL request mapping templates are optional when using an Lambda data source. For all other data sources,
      *        VTL request and response mapping templates are required.
      */
 
@@ -306,7 +306,7 @@ public class UpdateResolverRequest extends com.amazonaws.AmazonWebServiceRequest
      * understand. Mapping templates are written in Apache Velocity Template Language (VTL).
      * </p>
      * <p>
-     * VTL request mapping templates are optional when using a Lambda data source. For all other data sources, VTL
+     * VTL request mapping templates are optional when using an Lambda data source. For all other data sources, VTL
      * request and response mapping templates are required.
      * </p>
      * 
@@ -316,7 +316,7 @@ public class UpdateResolverRequest extends com.amazonaws.AmazonWebServiceRequest
      *         source can understand. Mapping templates are written in Apache Velocity Template Language (VTL).
      *         </p>
      *         <p>
-     *         VTL request mapping templates are optional when using a Lambda data source. For all other data sources,
+     *         VTL request mapping templates are optional when using an Lambda data source. For all other data sources,
      *         VTL request and response mapping templates are required.
      */
 
@@ -333,7 +333,7 @@ public class UpdateResolverRequest extends com.amazonaws.AmazonWebServiceRequest
      * understand. Mapping templates are written in Apache Velocity Template Language (VTL).
      * </p>
      * <p>
-     * VTL request mapping templates are optional when using a Lambda data source. For all other data sources, VTL
+     * VTL request mapping templates are optional when using an Lambda data source. For all other data sources, VTL
      * request and response mapping templates are required.
      * </p>
      * 
@@ -344,7 +344,7 @@ public class UpdateResolverRequest extends com.amazonaws.AmazonWebServiceRequest
      *        source can understand. Mapping templates are written in Apache Velocity Template Language (VTL).
      *        </p>
      *        <p>
-     *        VTL request mapping templates are optional when using a Lambda data source. For all other data sources,
+     *        VTL request mapping templates are optional when using an Lambda data source. For all other data sources,
      *        VTL request and response mapping templates are required.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -401,14 +401,14 @@ public class UpdateResolverRequest extends com.amazonaws.AmazonWebServiceRequest
      * <ul>
      * <li>
      * <p>
-     * <b>UNIT</b>: A UNIT resolver type. A UNIT resolver is the default resolver type. A UNIT resolver enables you to
-     * execute a GraphQL query against a single data source.
+     * <b>UNIT</b>: A UNIT resolver type. A UNIT resolver is the default resolver type. You can use a UNIT resolver to
+     * run a GraphQL query against a single data source.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b>PIPELINE</b>: A PIPELINE resolver type. A PIPELINE resolver enables you to execute a series of
-     * <code>Function</code> in a serial manner. You can use a pipeline resolver to execute a GraphQL query against
+     * <b>PIPELINE</b>: A PIPELINE resolver type. You can use a PIPELINE resolver to invoke a series of
+     * <code>Function</code> objects in a serial manner. You can use a pipeline resolver to run a GraphQL query against
      * multiple data sources.
      * </p>
      * </li>
@@ -419,14 +419,14 @@ public class UpdateResolverRequest extends com.amazonaws.AmazonWebServiceRequest
      *        <ul>
      *        <li>
      *        <p>
-     *        <b>UNIT</b>: A UNIT resolver type. A UNIT resolver is the default resolver type. A UNIT resolver enables
-     *        you to execute a GraphQL query against a single data source.
+     *        <b>UNIT</b>: A UNIT resolver type. A UNIT resolver is the default resolver type. You can use a UNIT
+     *        resolver to run a GraphQL query against a single data source.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <b>PIPELINE</b>: A PIPELINE resolver type. A PIPELINE resolver enables you to execute a series of
-     *        <code>Function</code> in a serial manner. You can use a pipeline resolver to execute a GraphQL query
+     *        <b>PIPELINE</b>: A PIPELINE resolver type. You can use a PIPELINE resolver to invoke a series of
+     *        <code>Function</code> objects in a serial manner. You can use a pipeline resolver to run a GraphQL query
      *        against multiple data sources.
      *        </p>
      *        </li>
@@ -444,14 +444,14 @@ public class UpdateResolverRequest extends com.amazonaws.AmazonWebServiceRequest
      * <ul>
      * <li>
      * <p>
-     * <b>UNIT</b>: A UNIT resolver type. A UNIT resolver is the default resolver type. A UNIT resolver enables you to
-     * execute a GraphQL query against a single data source.
+     * <b>UNIT</b>: A UNIT resolver type. A UNIT resolver is the default resolver type. You can use a UNIT resolver to
+     * run a GraphQL query against a single data source.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b>PIPELINE</b>: A PIPELINE resolver type. A PIPELINE resolver enables you to execute a series of
-     * <code>Function</code> in a serial manner. You can use a pipeline resolver to execute a GraphQL query against
+     * <b>PIPELINE</b>: A PIPELINE resolver type. You can use a PIPELINE resolver to invoke a series of
+     * <code>Function</code> objects in a serial manner. You can use a pipeline resolver to run a GraphQL query against
      * multiple data sources.
      * </p>
      * </li>
@@ -461,14 +461,14 @@ public class UpdateResolverRequest extends com.amazonaws.AmazonWebServiceRequest
      *         <ul>
      *         <li>
      *         <p>
-     *         <b>UNIT</b>: A UNIT resolver type. A UNIT resolver is the default resolver type. A UNIT resolver enables
-     *         you to execute a GraphQL query against a single data source.
+     *         <b>UNIT</b>: A UNIT resolver type. A UNIT resolver is the default resolver type. You can use a UNIT
+     *         resolver to run a GraphQL query against a single data source.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <b>PIPELINE</b>: A PIPELINE resolver type. A PIPELINE resolver enables you to execute a series of
-     *         <code>Function</code> in a serial manner. You can use a pipeline resolver to execute a GraphQL query
+     *         <b>PIPELINE</b>: A PIPELINE resolver type. You can use a PIPELINE resolver to invoke a series of
+     *         <code>Function</code> objects in a serial manner. You can use a pipeline resolver to run a GraphQL query
      *         against multiple data sources.
      *         </p>
      *         </li>
@@ -486,14 +486,14 @@ public class UpdateResolverRequest extends com.amazonaws.AmazonWebServiceRequest
      * <ul>
      * <li>
      * <p>
-     * <b>UNIT</b>: A UNIT resolver type. A UNIT resolver is the default resolver type. A UNIT resolver enables you to
-     * execute a GraphQL query against a single data source.
+     * <b>UNIT</b>: A UNIT resolver type. A UNIT resolver is the default resolver type. You can use a UNIT resolver to
+     * run a GraphQL query against a single data source.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b>PIPELINE</b>: A PIPELINE resolver type. A PIPELINE resolver enables you to execute a series of
-     * <code>Function</code> in a serial manner. You can use a pipeline resolver to execute a GraphQL query against
+     * <b>PIPELINE</b>: A PIPELINE resolver type. You can use a PIPELINE resolver to invoke a series of
+     * <code>Function</code> objects in a serial manner. You can use a pipeline resolver to run a GraphQL query against
      * multiple data sources.
      * </p>
      * </li>
@@ -504,14 +504,14 @@ public class UpdateResolverRequest extends com.amazonaws.AmazonWebServiceRequest
      *        <ul>
      *        <li>
      *        <p>
-     *        <b>UNIT</b>: A UNIT resolver type. A UNIT resolver is the default resolver type. A UNIT resolver enables
-     *        you to execute a GraphQL query against a single data source.
+     *        <b>UNIT</b>: A UNIT resolver type. A UNIT resolver is the default resolver type. You can use a UNIT
+     *        resolver to run a GraphQL query against a single data source.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <b>PIPELINE</b>: A PIPELINE resolver type. A PIPELINE resolver enables you to execute a series of
-     *        <code>Function</code> in a serial manner. You can use a pipeline resolver to execute a GraphQL query
+     *        <b>PIPELINE</b>: A PIPELINE resolver type. You can use a PIPELINE resolver to invoke a series of
+     *        <code>Function</code> objects in a serial manner. You can use a pipeline resolver to run a GraphQL query
      *        against multiple data sources.
      *        </p>
      *        </li>
@@ -531,14 +531,14 @@ public class UpdateResolverRequest extends com.amazonaws.AmazonWebServiceRequest
      * <ul>
      * <li>
      * <p>
-     * <b>UNIT</b>: A UNIT resolver type. A UNIT resolver is the default resolver type. A UNIT resolver enables you to
-     * execute a GraphQL query against a single data source.
+     * <b>UNIT</b>: A UNIT resolver type. A UNIT resolver is the default resolver type. You can use a UNIT resolver to
+     * run a GraphQL query against a single data source.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b>PIPELINE</b>: A PIPELINE resolver type. A PIPELINE resolver enables you to execute a series of
-     * <code>Function</code> in a serial manner. You can use a pipeline resolver to execute a GraphQL query against
+     * <b>PIPELINE</b>: A PIPELINE resolver type. You can use a PIPELINE resolver to invoke a series of
+     * <code>Function</code> objects in a serial manner. You can use a pipeline resolver to run a GraphQL query against
      * multiple data sources.
      * </p>
      * </li>
@@ -549,14 +549,14 @@ public class UpdateResolverRequest extends com.amazonaws.AmazonWebServiceRequest
      *        <ul>
      *        <li>
      *        <p>
-     *        <b>UNIT</b>: A UNIT resolver type. A UNIT resolver is the default resolver type. A UNIT resolver enables
-     *        you to execute a GraphQL query against a single data source.
+     *        <b>UNIT</b>: A UNIT resolver type. A UNIT resolver is the default resolver type. You can use a UNIT
+     *        resolver to run a GraphQL query against a single data source.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <b>PIPELINE</b>: A PIPELINE resolver type. A PIPELINE resolver enables you to execute a series of
-     *        <code>Function</code> in a serial manner. You can use a pipeline resolver to execute a GraphQL query
+     *        <b>PIPELINE</b>: A PIPELINE resolver type. You can use a PIPELINE resolver to invoke a series of
+     *        <code>Function</code> objects in a serial manner. You can use a pipeline resolver to run a GraphQL query
      *        against multiple data sources.
      *        </p>
      *        </li>
@@ -611,11 +611,11 @@ public class UpdateResolverRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The <code>SyncConfig</code> for a resolver attached to a versioned datasource.
+     * The <code>SyncConfig</code> for a resolver attached to a versioned data source.
      * </p>
      * 
      * @param syncConfig
-     *        The <code>SyncConfig</code> for a resolver attached to a versioned datasource.
+     *        The <code>SyncConfig</code> for a resolver attached to a versioned data source.
      */
 
     public void setSyncConfig(SyncConfig syncConfig) {
@@ -624,10 +624,10 @@ public class UpdateResolverRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The <code>SyncConfig</code> for a resolver attached to a versioned datasource.
+     * The <code>SyncConfig</code> for a resolver attached to a versioned data source.
      * </p>
      * 
-     * @return The <code>SyncConfig</code> for a resolver attached to a versioned datasource.
+     * @return The <code>SyncConfig</code> for a resolver attached to a versioned data source.
      */
 
     public SyncConfig getSyncConfig() {
@@ -636,11 +636,11 @@ public class UpdateResolverRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The <code>SyncConfig</code> for a resolver attached to a versioned datasource.
+     * The <code>SyncConfig</code> for a resolver attached to a versioned data source.
      * </p>
      * 
      * @param syncConfig
-     *        The <code>SyncConfig</code> for a resolver attached to a versioned datasource.
+     *        The <code>SyncConfig</code> for a resolver attached to a versioned data source.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

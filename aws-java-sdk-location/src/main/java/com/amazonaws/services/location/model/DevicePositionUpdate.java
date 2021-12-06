@@ -30,6 +30,12 @@ public class DevicePositionUpdate implements Serializable, Cloneable, Structured
 
     /**
      * <p>
+     * The accuracy of the device position.
+     * </p>
+     */
+    private PositionalAccuracy accuracy;
+    /**
+     * <p>
      * The device associated to the position update.
      * </p>
      */
@@ -43,12 +49,62 @@ public class DevicePositionUpdate implements Serializable, Cloneable, Structured
     private java.util.List<Double> position;
     /**
      * <p>
+     * Associates one of more properties with the position update. A property is a key-value pair stored with the
+     * position update and added to any geofence event the update may trigger.
+     * </p>
+     * <p>
+     * Format: <code>"key" : "value"</code>
+     * </p>
+     */
+    private java.util.Map<String, String> positionProperties;
+    /**
+     * <p>
      * The timestamp at which the device's position was determined. Uses <a
      * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
      * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>
      * </p>
      */
     private java.util.Date sampleTime;
+
+    /**
+     * <p>
+     * The accuracy of the device position.
+     * </p>
+     * 
+     * @param accuracy
+     *        The accuracy of the device position.
+     */
+
+    public void setAccuracy(PositionalAccuracy accuracy) {
+        this.accuracy = accuracy;
+    }
+
+    /**
+     * <p>
+     * The accuracy of the device position.
+     * </p>
+     * 
+     * @return The accuracy of the device position.
+     */
+
+    public PositionalAccuracy getAccuracy() {
+        return this.accuracy;
+    }
+
+    /**
+     * <p>
+     * The accuracy of the device position.
+     * </p>
+     * 
+     * @param accuracy
+     *        The accuracy of the device position.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DevicePositionUpdate withAccuracy(PositionalAccuracy accuracy) {
+        setAccuracy(accuracy);
+        return this;
+    }
 
     /**
      * <p>
@@ -170,6 +226,95 @@ public class DevicePositionUpdate implements Serializable, Cloneable, Structured
 
     /**
      * <p>
+     * Associates one of more properties with the position update. A property is a key-value pair stored with the
+     * position update and added to any geofence event the update may trigger.
+     * </p>
+     * <p>
+     * Format: <code>"key" : "value"</code>
+     * </p>
+     * 
+     * @return Associates one of more properties with the position update. A property is a key-value pair stored with
+     *         the position update and added to any geofence event the update may trigger.</p>
+     *         <p>
+     *         Format: <code>"key" : "value"</code>
+     */
+
+    public java.util.Map<String, String> getPositionProperties() {
+        return positionProperties;
+    }
+
+    /**
+     * <p>
+     * Associates one of more properties with the position update. A property is a key-value pair stored with the
+     * position update and added to any geofence event the update may trigger.
+     * </p>
+     * <p>
+     * Format: <code>"key" : "value"</code>
+     * </p>
+     * 
+     * @param positionProperties
+     *        Associates one of more properties with the position update. A property is a key-value pair stored with the
+     *        position update and added to any geofence event the update may trigger.</p>
+     *        <p>
+     *        Format: <code>"key" : "value"</code>
+     */
+
+    public void setPositionProperties(java.util.Map<String, String> positionProperties) {
+        this.positionProperties = positionProperties;
+    }
+
+    /**
+     * <p>
+     * Associates one of more properties with the position update. A property is a key-value pair stored with the
+     * position update and added to any geofence event the update may trigger.
+     * </p>
+     * <p>
+     * Format: <code>"key" : "value"</code>
+     * </p>
+     * 
+     * @param positionProperties
+     *        Associates one of more properties with the position update. A property is a key-value pair stored with the
+     *        position update and added to any geofence event the update may trigger.</p>
+     *        <p>
+     *        Format: <code>"key" : "value"</code>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DevicePositionUpdate withPositionProperties(java.util.Map<String, String> positionProperties) {
+        setPositionProperties(positionProperties);
+        return this;
+    }
+
+    /**
+     * Add a single PositionProperties entry
+     *
+     * @see DevicePositionUpdate#withPositionProperties
+     * @returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DevicePositionUpdate addPositionPropertiesEntry(String key, String value) {
+        if (null == this.positionProperties) {
+            this.positionProperties = new java.util.HashMap<String, String>();
+        }
+        if (this.positionProperties.containsKey(key))
+            throw new IllegalArgumentException("Duplicated keys (" + key.toString() + ") are provided.");
+        this.positionProperties.put(key, value);
+        return this;
+    }
+
+    /**
+     * Removes all the entries added into PositionProperties.
+     *
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DevicePositionUpdate clearPositionPropertiesEntries() {
+        this.positionProperties = null;
+        return this;
+    }
+
+    /**
+     * <p>
      * The timestamp at which the device's position was determined. Uses <a
      * href="https://www.iso.org/iso-8601-date-and-time-format.html">ISO 8601</a> format:
      * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>
@@ -232,10 +377,14 @@ public class DevicePositionUpdate implements Serializable, Cloneable, Structured
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getAccuracy() != null)
+            sb.append("Accuracy: ").append(getAccuracy()).append(",");
         if (getDeviceId() != null)
             sb.append("DeviceId: ").append(getDeviceId()).append(",");
         if (getPosition() != null)
             sb.append("Position: ").append("***Sensitive Data Redacted***").append(",");
+        if (getPositionProperties() != null)
+            sb.append("PositionProperties: ").append("***Sensitive Data Redacted***").append(",");
         if (getSampleTime() != null)
             sb.append("SampleTime: ").append(getSampleTime());
         sb.append("}");
@@ -252,6 +401,10 @@ public class DevicePositionUpdate implements Serializable, Cloneable, Structured
         if (obj instanceof DevicePositionUpdate == false)
             return false;
         DevicePositionUpdate other = (DevicePositionUpdate) obj;
+        if (other.getAccuracy() == null ^ this.getAccuracy() == null)
+            return false;
+        if (other.getAccuracy() != null && other.getAccuracy().equals(this.getAccuracy()) == false)
+            return false;
         if (other.getDeviceId() == null ^ this.getDeviceId() == null)
             return false;
         if (other.getDeviceId() != null && other.getDeviceId().equals(this.getDeviceId()) == false)
@@ -259,6 +412,10 @@ public class DevicePositionUpdate implements Serializable, Cloneable, Structured
         if (other.getPosition() == null ^ this.getPosition() == null)
             return false;
         if (other.getPosition() != null && other.getPosition().equals(this.getPosition()) == false)
+            return false;
+        if (other.getPositionProperties() == null ^ this.getPositionProperties() == null)
+            return false;
+        if (other.getPositionProperties() != null && other.getPositionProperties().equals(this.getPositionProperties()) == false)
             return false;
         if (other.getSampleTime() == null ^ this.getSampleTime() == null)
             return false;
@@ -272,8 +429,10 @@ public class DevicePositionUpdate implements Serializable, Cloneable, Structured
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getAccuracy() == null) ? 0 : getAccuracy().hashCode());
         hashCode = prime * hashCode + ((getDeviceId() == null) ? 0 : getDeviceId().hashCode());
         hashCode = prime * hashCode + ((getPosition() == null) ? 0 : getPosition().hashCode());
+        hashCode = prime * hashCode + ((getPositionProperties() == null) ? 0 : getPositionProperties().hashCode());
         hashCode = prime * hashCode + ((getSampleTime() == null) ? 0 : getSampleTime().hashCode());
         return hashCode;
     }

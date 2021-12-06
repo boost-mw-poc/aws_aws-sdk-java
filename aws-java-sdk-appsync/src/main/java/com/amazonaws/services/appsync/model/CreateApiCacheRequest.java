@@ -30,7 +30,7 @@ public class CreateApiCacheRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The GraphQL API Id.
+     * The GraphQL API ID.
      * </p>
      */
     private String apiId;
@@ -39,19 +39,19 @@ public class CreateApiCacheRequest extends com.amazonaws.AmazonWebServiceRequest
      * TTL in seconds for cache entries.
      * </p>
      * <p>
-     * Valid values are between 1 and 3600 seconds.
+     * Valid values are 1–3,600 seconds.
      * </p>
      */
     private Long ttl;
     /**
      * <p>
-     * Transit encryption flag when connecting to cache. This setting cannot be updated after creation.
+     * Transit encryption flag when connecting to cache. You cannot update this setting after creation.
      * </p>
      */
     private Boolean transitEncryptionEnabled;
     /**
      * <p>
-     * At rest encryption flag for cache. This setting cannot be updated after creation.
+     * At-rest encryption flag for cache. You cannot update this setting after creation.
      * </p>
      */
     private Boolean atRestEncryptionEnabled;
@@ -168,11 +168,11 @@ public class CreateApiCacheRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The GraphQL API Id.
+     * The GraphQL API ID.
      * </p>
      * 
      * @param apiId
-     *        The GraphQL API Id.
+     *        The GraphQL API ID.
      */
 
     public void setApiId(String apiId) {
@@ -181,10 +181,10 @@ public class CreateApiCacheRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The GraphQL API Id.
+     * The GraphQL API ID.
      * </p>
      * 
-     * @return The GraphQL API Id.
+     * @return The GraphQL API ID.
      */
 
     public String getApiId() {
@@ -193,11 +193,11 @@ public class CreateApiCacheRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The GraphQL API Id.
+     * The GraphQL API ID.
      * </p>
      * 
      * @param apiId
-     *        The GraphQL API Id.
+     *        The GraphQL API ID.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -211,13 +211,13 @@ public class CreateApiCacheRequest extends com.amazonaws.AmazonWebServiceRequest
      * TTL in seconds for cache entries.
      * </p>
      * <p>
-     * Valid values are between 1 and 3600 seconds.
+     * Valid values are 1–3,600 seconds.
      * </p>
      * 
      * @param ttl
      *        TTL in seconds for cache entries.</p>
      *        <p>
-     *        Valid values are between 1 and 3600 seconds.
+     *        Valid values are 1–3,600 seconds.
      */
 
     public void setTtl(Long ttl) {
@@ -229,12 +229,12 @@ public class CreateApiCacheRequest extends com.amazonaws.AmazonWebServiceRequest
      * TTL in seconds for cache entries.
      * </p>
      * <p>
-     * Valid values are between 1 and 3600 seconds.
+     * Valid values are 1–3,600 seconds.
      * </p>
      * 
      * @return TTL in seconds for cache entries.</p>
      *         <p>
-     *         Valid values are between 1 and 3600 seconds.
+     *         Valid values are 1–3,600 seconds.
      */
 
     public Long getTtl() {
@@ -246,13 +246,13 @@ public class CreateApiCacheRequest extends com.amazonaws.AmazonWebServiceRequest
      * TTL in seconds for cache entries.
      * </p>
      * <p>
-     * Valid values are between 1 and 3600 seconds.
+     * Valid values are 1–3,600 seconds.
      * </p>
      * 
      * @param ttl
      *        TTL in seconds for cache entries.</p>
      *        <p>
-     *        Valid values are between 1 and 3600 seconds.
+     *        Valid values are 1–3,600 seconds.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -263,11 +263,11 @@ public class CreateApiCacheRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * Transit encryption flag when connecting to cache. This setting cannot be updated after creation.
+     * Transit encryption flag when connecting to cache. You cannot update this setting after creation.
      * </p>
      * 
      * @param transitEncryptionEnabled
-     *        Transit encryption flag when connecting to cache. This setting cannot be updated after creation.
+     *        Transit encryption flag when connecting to cache. You cannot update this setting after creation.
      */
 
     public void setTransitEncryptionEnabled(Boolean transitEncryptionEnabled) {
@@ -276,10 +276,10 @@ public class CreateApiCacheRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * Transit encryption flag when connecting to cache. This setting cannot be updated after creation.
+     * Transit encryption flag when connecting to cache. You cannot update this setting after creation.
      * </p>
      * 
-     * @return Transit encryption flag when connecting to cache. This setting cannot be updated after creation.
+     * @return Transit encryption flag when connecting to cache. You cannot update this setting after creation.
      */
 
     public Boolean getTransitEncryptionEnabled() {
@@ -288,11 +288,11 @@ public class CreateApiCacheRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * Transit encryption flag when connecting to cache. This setting cannot be updated after creation.
+     * Transit encryption flag when connecting to cache. You cannot update this setting after creation.
      * </p>
      * 
      * @param transitEncryptionEnabled
-     *        Transit encryption flag when connecting to cache. This setting cannot be updated after creation.
+     *        Transit encryption flag when connecting to cache. You cannot update this setting after creation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -303,10 +303,10 @@ public class CreateApiCacheRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * Transit encryption flag when connecting to cache. This setting cannot be updated after creation.
+     * Transit encryption flag when connecting to cache. You cannot update this setting after creation.
      * </p>
      * 
-     * @return Transit encryption flag when connecting to cache. This setting cannot be updated after creation.
+     * @return Transit encryption flag when connecting to cache. You cannot update this setting after creation.
      */
 
     public Boolean isTransitEncryptionEnabled() {
@@ -315,11 +315,11 @@ public class CreateApiCacheRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * At rest encryption flag for cache. This setting cannot be updated after creation.
+     * At-rest encryption flag for cache. You cannot update this setting after creation.
      * </p>
      * 
      * @param atRestEncryptionEnabled
-     *        At rest encryption flag for cache. This setting cannot be updated after creation.
+     *        At-rest encryption flag for cache. You cannot update this setting after creation.
      */
 
     public void setAtRestEncryptionEnabled(Boolean atRestEncryptionEnabled) {
@@ -328,10 +328,10 @@ public class CreateApiCacheRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * At rest encryption flag for cache. This setting cannot be updated after creation.
+     * At-rest encryption flag for cache. You cannot update this setting after creation.
      * </p>
      * 
-     * @return At rest encryption flag for cache. This setting cannot be updated after creation.
+     * @return At-rest encryption flag for cache. You cannot update this setting after creation.
      */
 
     public Boolean getAtRestEncryptionEnabled() {
@@ -340,11 +340,11 @@ public class CreateApiCacheRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * At rest encryption flag for cache. This setting cannot be updated after creation.
+     * At-rest encryption flag for cache. You cannot update this setting after creation.
      * </p>
      * 
      * @param atRestEncryptionEnabled
-     *        At rest encryption flag for cache. This setting cannot be updated after creation.
+     *        At-rest encryption flag for cache. You cannot update this setting after creation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -355,10 +355,10 @@ public class CreateApiCacheRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * At rest encryption flag for cache. This setting cannot be updated after creation.
+     * At-rest encryption flag for cache. You cannot update this setting after creation.
      * </p>
      * 
-     * @return At rest encryption flag for cache. This setting cannot be updated after creation.
+     * @return At-rest encryption flag for cache. You cannot update this setting after creation.
      */
 
     public Boolean isAtRestEncryptionEnabled() {

@@ -39,8 +39,8 @@ public class CreateGraphqlApiRequest extends com.amazonaws.AmazonWebServiceReque
     private LogConfig logConfig;
     /**
      * <p>
-     * The authentication type: API key, Identity and Access Management, OIDC, Amazon Cognito user pools, or Amazon Web
-     * Services Lambda.
+     * The authentication type: API key, Identity and Access Management (IAM), OpenID Connect (OIDC), Amazon Cognito
+     * user pools, or Lambda.
      * </p>
      */
     private String authenticationType;
@@ -52,7 +52,7 @@ public class CreateGraphqlApiRequest extends com.amazonaws.AmazonWebServiceReque
     private UserPoolConfig userPoolConfig;
     /**
      * <p>
-     * The OpenID Connect configuration.
+     * The OIDC configuration.
      * </p>
      */
     private OpenIDConnectConfig openIDConnectConfig;
@@ -70,13 +70,13 @@ public class CreateGraphqlApiRequest extends com.amazonaws.AmazonWebServiceReque
     private java.util.List<AdditionalAuthenticationProvider> additionalAuthenticationProviders;
     /**
      * <p>
-     * A flag indicating whether to enable X-Ray tracing for the <code>GraphqlApi</code>.
+     * A flag indicating whether to use X-Ray tracing for the <code>GraphqlApi</code>.
      * </p>
      */
     private Boolean xrayEnabled;
     /**
      * <p>
-     * Configuration for Amazon Web Services Lambda function authorization.
+     * Configuration for Lambda function authorization.
      * </p>
      */
     private LambdaAuthorizerConfig lambdaAuthorizerConfig;
@@ -163,13 +163,13 @@ public class CreateGraphqlApiRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The authentication type: API key, Identity and Access Management, OIDC, Amazon Cognito user pools, or Amazon Web
-     * Services Lambda.
+     * The authentication type: API key, Identity and Access Management (IAM), OpenID Connect (OIDC), Amazon Cognito
+     * user pools, or Lambda.
      * </p>
      * 
      * @param authenticationType
-     *        The authentication type: API key, Identity and Access Management, OIDC, Amazon Cognito user pools, or
-     *        Amazon Web Services Lambda.
+     *        The authentication type: API key, Identity and Access Management (IAM), OpenID Connect (OIDC), Amazon
+     *        Cognito user pools, or Lambda.
      * @see AuthenticationType
      */
 
@@ -179,12 +179,12 @@ public class CreateGraphqlApiRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The authentication type: API key, Identity and Access Management, OIDC, Amazon Cognito user pools, or Amazon Web
-     * Services Lambda.
+     * The authentication type: API key, Identity and Access Management (IAM), OpenID Connect (OIDC), Amazon Cognito
+     * user pools, or Lambda.
      * </p>
      * 
-     * @return The authentication type: API key, Identity and Access Management, OIDC, Amazon Cognito user pools, or
-     *         Amazon Web Services Lambda.
+     * @return The authentication type: API key, Identity and Access Management (IAM), OpenID Connect (OIDC), Amazon
+     *         Cognito user pools, or Lambda.
      * @see AuthenticationType
      */
 
@@ -194,13 +194,13 @@ public class CreateGraphqlApiRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The authentication type: API key, Identity and Access Management, OIDC, Amazon Cognito user pools, or Amazon Web
-     * Services Lambda.
+     * The authentication type: API key, Identity and Access Management (IAM), OpenID Connect (OIDC), Amazon Cognito
+     * user pools, or Lambda.
      * </p>
      * 
      * @param authenticationType
-     *        The authentication type: API key, Identity and Access Management, OIDC, Amazon Cognito user pools, or
-     *        Amazon Web Services Lambda.
+     *        The authentication type: API key, Identity and Access Management (IAM), OpenID Connect (OIDC), Amazon
+     *        Cognito user pools, or Lambda.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AuthenticationType
      */
@@ -212,13 +212,13 @@ public class CreateGraphqlApiRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The authentication type: API key, Identity and Access Management, OIDC, Amazon Cognito user pools, or Amazon Web
-     * Services Lambda.
+     * The authentication type: API key, Identity and Access Management (IAM), OpenID Connect (OIDC), Amazon Cognito
+     * user pools, or Lambda.
      * </p>
      * 
      * @param authenticationType
-     *        The authentication type: API key, Identity and Access Management, OIDC, Amazon Cognito user pools, or
-     *        Amazon Web Services Lambda.
+     *        The authentication type: API key, Identity and Access Management (IAM), OpenID Connect (OIDC), Amazon
+     *        Cognito user pools, or Lambda.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see AuthenticationType
      */
@@ -270,11 +270,11 @@ public class CreateGraphqlApiRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The OpenID Connect configuration.
+     * The OIDC configuration.
      * </p>
      * 
      * @param openIDConnectConfig
-     *        The OpenID Connect configuration.
+     *        The OIDC configuration.
      */
 
     public void setOpenIDConnectConfig(OpenIDConnectConfig openIDConnectConfig) {
@@ -283,10 +283,10 @@ public class CreateGraphqlApiRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The OpenID Connect configuration.
+     * The OIDC configuration.
      * </p>
      * 
-     * @return The OpenID Connect configuration.
+     * @return The OIDC configuration.
      */
 
     public OpenIDConnectConfig getOpenIDConnectConfig() {
@@ -295,11 +295,11 @@ public class CreateGraphqlApiRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The OpenID Connect configuration.
+     * The OIDC configuration.
      * </p>
      * 
      * @param openIDConnectConfig
-     *        The OpenID Connect configuration.
+     *        The OIDC configuration.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -449,11 +449,11 @@ public class CreateGraphqlApiRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * A flag indicating whether to enable X-Ray tracing for the <code>GraphqlApi</code>.
+     * A flag indicating whether to use X-Ray tracing for the <code>GraphqlApi</code>.
      * </p>
      * 
      * @param xrayEnabled
-     *        A flag indicating whether to enable X-Ray tracing for the <code>GraphqlApi</code>.
+     *        A flag indicating whether to use X-Ray tracing for the <code>GraphqlApi</code>.
      */
 
     public void setXrayEnabled(Boolean xrayEnabled) {
@@ -462,10 +462,10 @@ public class CreateGraphqlApiRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * A flag indicating whether to enable X-Ray tracing for the <code>GraphqlApi</code>.
+     * A flag indicating whether to use X-Ray tracing for the <code>GraphqlApi</code>.
      * </p>
      * 
-     * @return A flag indicating whether to enable X-Ray tracing for the <code>GraphqlApi</code>.
+     * @return A flag indicating whether to use X-Ray tracing for the <code>GraphqlApi</code>.
      */
 
     public Boolean getXrayEnabled() {
@@ -474,11 +474,11 @@ public class CreateGraphqlApiRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * A flag indicating whether to enable X-Ray tracing for the <code>GraphqlApi</code>.
+     * A flag indicating whether to use X-Ray tracing for the <code>GraphqlApi</code>.
      * </p>
      * 
      * @param xrayEnabled
-     *        A flag indicating whether to enable X-Ray tracing for the <code>GraphqlApi</code>.
+     *        A flag indicating whether to use X-Ray tracing for the <code>GraphqlApi</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -489,10 +489,10 @@ public class CreateGraphqlApiRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * A flag indicating whether to enable X-Ray tracing for the <code>GraphqlApi</code>.
+     * A flag indicating whether to use X-Ray tracing for the <code>GraphqlApi</code>.
      * </p>
      * 
-     * @return A flag indicating whether to enable X-Ray tracing for the <code>GraphqlApi</code>.
+     * @return A flag indicating whether to use X-Ray tracing for the <code>GraphqlApi</code>.
      */
 
     public Boolean isXrayEnabled() {
@@ -501,11 +501,11 @@ public class CreateGraphqlApiRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Configuration for Amazon Web Services Lambda function authorization.
+     * Configuration for Lambda function authorization.
      * </p>
      * 
      * @param lambdaAuthorizerConfig
-     *        Configuration for Amazon Web Services Lambda function authorization.
+     *        Configuration for Lambda function authorization.
      */
 
     public void setLambdaAuthorizerConfig(LambdaAuthorizerConfig lambdaAuthorizerConfig) {
@@ -514,10 +514,10 @@ public class CreateGraphqlApiRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Configuration for Amazon Web Services Lambda function authorization.
+     * Configuration for Lambda function authorization.
      * </p>
      * 
-     * @return Configuration for Amazon Web Services Lambda function authorization.
+     * @return Configuration for Lambda function authorization.
      */
 
     public LambdaAuthorizerConfig getLambdaAuthorizerConfig() {
@@ -526,11 +526,11 @@ public class CreateGraphqlApiRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Configuration for Amazon Web Services Lambda function authorization.
+     * Configuration for Lambda function authorization.
      * </p>
      * 
      * @param lambdaAuthorizerConfig
-     *        Configuration for Amazon Web Services Lambda function authorization.
+     *        Configuration for Lambda function authorization.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

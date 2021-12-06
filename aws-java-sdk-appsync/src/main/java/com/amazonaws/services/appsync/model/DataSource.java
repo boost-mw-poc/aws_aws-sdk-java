@@ -30,7 +30,7 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The data source ARN.
+     * The data source Amazon Resource Name (ARN).
      * </p>
      */
     private String dataSourceArn;
@@ -53,7 +53,7 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * <b>AWS_LAMBDA</b>: The data source is an Amazon Web Services Lambda function.
+     * <b>AWS_LAMBDA</b>: The data source is an Lambda function.
      * </p>
      * </li>
      * <li>
@@ -73,9 +73,9 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <b>NONE</b>: There is no data source. This type is used when you wish to invoke a GraphQL operation without
-     * connecting to a data source, such as performing data transformation with resolvers or triggering a subscription
-     * to be invoked from a mutation.
+     * <b>NONE</b>: There is no data source. Use this type when you want to invoke a GraphQL operation without
+     * connecting to a data source, such as when you're performing data transformation with resolvers or invoking a
+     * subscription from a mutation.
      * </p>
      * </li>
      * <li>
@@ -93,20 +93,20 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
     private String type;
     /**
      * <p>
-     * The Identity and Access Management service role ARN for the data source. The system assumes this role when
-     * accessing the data source.
+     * The Identity and Access Management (IAM) service role Amazon Resource Name (ARN) for the data source. The system
+     * assumes this role when accessing the data source.
      * </p>
      */
     private String serviceRoleArn;
     /**
      * <p>
-     * Amazon DynamoDB settings.
+     * DynamoDB settings.
      * </p>
      */
     private DynamodbDataSourceConfig dynamodbConfig;
     /**
      * <p>
-     * Amazon Web Services Lambda settings.
+     * Lambda settings.
      * </p>
      */
     private LambdaDataSourceConfig lambdaConfig;
@@ -137,11 +137,11 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The data source ARN.
+     * The data source Amazon Resource Name (ARN).
      * </p>
      * 
      * @param dataSourceArn
-     *        The data source ARN.
+     *        The data source Amazon Resource Name (ARN).
      */
 
     public void setDataSourceArn(String dataSourceArn) {
@@ -150,10 +150,10 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The data source ARN.
+     * The data source Amazon Resource Name (ARN).
      * </p>
      * 
-     * @return The data source ARN.
+     * @return The data source Amazon Resource Name (ARN).
      */
 
     public String getDataSourceArn() {
@@ -162,11 +162,11 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The data source ARN.
+     * The data source Amazon Resource Name (ARN).
      * </p>
      * 
      * @param dataSourceArn
-     *        The data source ARN.
+     *        The data source Amazon Resource Name (ARN).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -262,7 +262,7 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * <b>AWS_LAMBDA</b>: The data source is an Amazon Web Services Lambda function.
+     * <b>AWS_LAMBDA</b>: The data source is an Lambda function.
      * </p>
      * </li>
      * <li>
@@ -282,9 +282,9 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <b>NONE</b>: There is no data source. This type is used when you wish to invoke a GraphQL operation without
-     * connecting to a data source, such as performing data transformation with resolvers or triggering a subscription
-     * to be invoked from a mutation.
+     * <b>NONE</b>: There is no data source. Use this type when you want to invoke a GraphQL operation without
+     * connecting to a data source, such as when you're performing data transformation with resolvers or invoking a
+     * subscription from a mutation.
      * </p>
      * </li>
      * <li>
@@ -304,7 +304,7 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
      *        <ul>
      *        <li>
      *        <p>
-     *        <b>AWS_LAMBDA</b>: The data source is an Amazon Web Services Lambda function.
+     *        <b>AWS_LAMBDA</b>: The data source is an Lambda function.
      *        </p>
      *        </li>
      *        <li>
@@ -324,9 +324,9 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        <b>NONE</b>: There is no data source. This type is used when you wish to invoke a GraphQL operation
-     *        without connecting to a data source, such as performing data transformation with resolvers or triggering a
-     *        subscription to be invoked from a mutation.
+     *        <b>NONE</b>: There is no data source. Use this type when you want to invoke a GraphQL operation without
+     *        connecting to a data source, such as when you're performing data transformation with resolvers or invoking
+     *        a subscription from a mutation.
      *        </p>
      *        </li>
      *        <li>
@@ -353,7 +353,7 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * <b>AWS_LAMBDA</b>: The data source is an Amazon Web Services Lambda function.
+     * <b>AWS_LAMBDA</b>: The data source is an Lambda function.
      * </p>
      * </li>
      * <li>
@@ -373,9 +373,9 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <b>NONE</b>: There is no data source. This type is used when you wish to invoke a GraphQL operation without
-     * connecting to a data source, such as performing data transformation with resolvers or triggering a subscription
-     * to be invoked from a mutation.
+     * <b>NONE</b>: There is no data source. Use this type when you want to invoke a GraphQL operation without
+     * connecting to a data source, such as when you're performing data transformation with resolvers or invoking a
+     * subscription from a mutation.
      * </p>
      * </li>
      * <li>
@@ -394,7 +394,7 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
      *         <ul>
      *         <li>
      *         <p>
-     *         <b>AWS_LAMBDA</b>: The data source is an Amazon Web Services Lambda function.
+     *         <b>AWS_LAMBDA</b>: The data source is an Lambda function.
      *         </p>
      *         </li>
      *         <li>
@@ -414,9 +414,9 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
      *         </li>
      *         <li>
      *         <p>
-     *         <b>NONE</b>: There is no data source. This type is used when you wish to invoke a GraphQL operation
-     *         without connecting to a data source, such as performing data transformation with resolvers or triggering
-     *         a subscription to be invoked from a mutation.
+     *         <b>NONE</b>: There is no data source. Use this type when you want to invoke a GraphQL operation without
+     *         connecting to a data source, such as when you're performing data transformation with resolvers or
+     *         invoking a subscription from a mutation.
      *         </p>
      *         </li>
      *         <li>
@@ -443,7 +443,7 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * <b>AWS_LAMBDA</b>: The data source is an Amazon Web Services Lambda function.
+     * <b>AWS_LAMBDA</b>: The data source is an Lambda function.
      * </p>
      * </li>
      * <li>
@@ -463,9 +463,9 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <b>NONE</b>: There is no data source. This type is used when you wish to invoke a GraphQL operation without
-     * connecting to a data source, such as performing data transformation with resolvers or triggering a subscription
-     * to be invoked from a mutation.
+     * <b>NONE</b>: There is no data source. Use this type when you want to invoke a GraphQL operation without
+     * connecting to a data source, such as when you're performing data transformation with resolvers or invoking a
+     * subscription from a mutation.
      * </p>
      * </li>
      * <li>
@@ -485,7 +485,7 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
      *        <ul>
      *        <li>
      *        <p>
-     *        <b>AWS_LAMBDA</b>: The data source is an Amazon Web Services Lambda function.
+     *        <b>AWS_LAMBDA</b>: The data source is an Lambda function.
      *        </p>
      *        </li>
      *        <li>
@@ -505,9 +505,9 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        <b>NONE</b>: There is no data source. This type is used when you wish to invoke a GraphQL operation
-     *        without connecting to a data source, such as performing data transformation with resolvers or triggering a
-     *        subscription to be invoked from a mutation.
+     *        <b>NONE</b>: There is no data source. Use this type when you want to invoke a GraphQL operation without
+     *        connecting to a data source, such as when you're performing data transformation with resolvers or invoking
+     *        a subscription from a mutation.
      *        </p>
      *        </li>
      *        <li>
@@ -536,7 +536,7 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * <b>AWS_LAMBDA</b>: The data source is an Amazon Web Services Lambda function.
+     * <b>AWS_LAMBDA</b>: The data source is an Lambda function.
      * </p>
      * </li>
      * <li>
@@ -556,9 +556,9 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <b>NONE</b>: There is no data source. This type is used when you wish to invoke a GraphQL operation without
-     * connecting to a data source, such as performing data transformation with resolvers or triggering a subscription
-     * to be invoked from a mutation.
+     * <b>NONE</b>: There is no data source. Use this type when you want to invoke a GraphQL operation without
+     * connecting to a data source, such as when you're performing data transformation with resolvers or invoking a
+     * subscription from a mutation.
      * </p>
      * </li>
      * <li>
@@ -578,7 +578,7 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
      *        <ul>
      *        <li>
      *        <p>
-     *        <b>AWS_LAMBDA</b>: The data source is an Amazon Web Services Lambda function.
+     *        <b>AWS_LAMBDA</b>: The data source is an Lambda function.
      *        </p>
      *        </li>
      *        <li>
@@ -598,9 +598,9 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        <b>NONE</b>: There is no data source. This type is used when you wish to invoke a GraphQL operation
-     *        without connecting to a data source, such as performing data transformation with resolvers or triggering a
-     *        subscription to be invoked from a mutation.
+     *        <b>NONE</b>: There is no data source. Use this type when you want to invoke a GraphQL operation without
+     *        connecting to a data source, such as when you're performing data transformation with resolvers or invoking
+     *        a subscription from a mutation.
      *        </p>
      *        </li>
      *        <li>
@@ -624,13 +624,13 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Identity and Access Management service role ARN for the data source. The system assumes this role when
-     * accessing the data source.
+     * The Identity and Access Management (IAM) service role Amazon Resource Name (ARN) for the data source. The system
+     * assumes this role when accessing the data source.
      * </p>
      * 
      * @param serviceRoleArn
-     *        The Identity and Access Management service role ARN for the data source. The system assumes this role when
-     *        accessing the data source.
+     *        The Identity and Access Management (IAM) service role Amazon Resource Name (ARN) for the data source. The
+     *        system assumes this role when accessing the data source.
      */
 
     public void setServiceRoleArn(String serviceRoleArn) {
@@ -639,12 +639,12 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Identity and Access Management service role ARN for the data source. The system assumes this role when
-     * accessing the data source.
+     * The Identity and Access Management (IAM) service role Amazon Resource Name (ARN) for the data source. The system
+     * assumes this role when accessing the data source.
      * </p>
      * 
-     * @return The Identity and Access Management service role ARN for the data source. The system assumes this role
-     *         when accessing the data source.
+     * @return The Identity and Access Management (IAM) service role Amazon Resource Name (ARN) for the data source. The
+     *         system assumes this role when accessing the data source.
      */
 
     public String getServiceRoleArn() {
@@ -653,13 +653,13 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Identity and Access Management service role ARN for the data source. The system assumes this role when
-     * accessing the data source.
+     * The Identity and Access Management (IAM) service role Amazon Resource Name (ARN) for the data source. The system
+     * assumes this role when accessing the data source.
      * </p>
      * 
      * @param serviceRoleArn
-     *        The Identity and Access Management service role ARN for the data source. The system assumes this role when
-     *        accessing the data source.
+     *        The Identity and Access Management (IAM) service role Amazon Resource Name (ARN) for the data source. The
+     *        system assumes this role when accessing the data source.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -670,11 +670,11 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Amazon DynamoDB settings.
+     * DynamoDB settings.
      * </p>
      * 
      * @param dynamodbConfig
-     *        Amazon DynamoDB settings.
+     *        DynamoDB settings.
      */
 
     public void setDynamodbConfig(DynamodbDataSourceConfig dynamodbConfig) {
@@ -683,10 +683,10 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Amazon DynamoDB settings.
+     * DynamoDB settings.
      * </p>
      * 
-     * @return Amazon DynamoDB settings.
+     * @return DynamoDB settings.
      */
 
     public DynamodbDataSourceConfig getDynamodbConfig() {
@@ -695,11 +695,11 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Amazon DynamoDB settings.
+     * DynamoDB settings.
      * </p>
      * 
      * @param dynamodbConfig
-     *        Amazon DynamoDB settings.
+     *        DynamoDB settings.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -710,11 +710,11 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Amazon Web Services Lambda settings.
+     * Lambda settings.
      * </p>
      * 
      * @param lambdaConfig
-     *        Amazon Web Services Lambda settings.
+     *        Lambda settings.
      */
 
     public void setLambdaConfig(LambdaDataSourceConfig lambdaConfig) {
@@ -723,10 +723,10 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Amazon Web Services Lambda settings.
+     * Lambda settings.
      * </p>
      * 
-     * @return Amazon Web Services Lambda settings.
+     * @return Lambda settings.
      */
 
     public LambdaDataSourceConfig getLambdaConfig() {
@@ -735,11 +735,11 @@ public class DataSource implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Amazon Web Services Lambda settings.
+     * Lambda settings.
      * </p>
      * 
      * @param lambdaConfig
-     *        Amazon Web Services Lambda settings.
+     *        Lambda settings.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

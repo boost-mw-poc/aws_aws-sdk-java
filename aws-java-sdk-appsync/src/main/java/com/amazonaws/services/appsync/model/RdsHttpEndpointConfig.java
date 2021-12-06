@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The Amazon RDS HTTP endpoint configuration.
+ * The Amazon Relational Database Service (Amazon RDS) HTTP endpoint configuration.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/RdsHttpEndpointConfig" target="_top">AWS API
@@ -30,13 +30,13 @@ public class RdsHttpEndpointConfig implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * Amazon Web Services Region for RDS HTTP endpoint.
+     * Amazon Web Services Region for Amazon RDS HTTP endpoint.
      * </p>
      */
     private String awsRegion;
     /**
      * <p>
-     * Amazon RDS cluster ARN.
+     * Amazon RDS cluster Amazon Resource Name (ARN).
      * </p>
      */
     private String dbClusterIdentifier;
@@ -54,18 +54,18 @@ public class RdsHttpEndpointConfig implements Serializable, Cloneable, Structure
     private String schema;
     /**
      * <p>
-     * Amazon Web Services secret store ARN for database credentials.
+     * Amazon Web Services secret store Amazon Resource Name (ARN) for database credentials.
      * </p>
      */
     private String awsSecretStoreArn;
 
     /**
      * <p>
-     * Amazon Web Services Region for RDS HTTP endpoint.
+     * Amazon Web Services Region for Amazon RDS HTTP endpoint.
      * </p>
      * 
      * @param awsRegion
-     *        Amazon Web Services Region for RDS HTTP endpoint.
+     *        Amazon Web Services Region for Amazon RDS HTTP endpoint.
      */
 
     public void setAwsRegion(String awsRegion) {
@@ -74,10 +74,10 @@ public class RdsHttpEndpointConfig implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * Amazon Web Services Region for RDS HTTP endpoint.
+     * Amazon Web Services Region for Amazon RDS HTTP endpoint.
      * </p>
      * 
-     * @return Amazon Web Services Region for RDS HTTP endpoint.
+     * @return Amazon Web Services Region for Amazon RDS HTTP endpoint.
      */
 
     public String getAwsRegion() {
@@ -86,11 +86,11 @@ public class RdsHttpEndpointConfig implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * Amazon Web Services Region for RDS HTTP endpoint.
+     * Amazon Web Services Region for Amazon RDS HTTP endpoint.
      * </p>
      * 
      * @param awsRegion
-     *        Amazon Web Services Region for RDS HTTP endpoint.
+     *        Amazon Web Services Region for Amazon RDS HTTP endpoint.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -101,11 +101,11 @@ public class RdsHttpEndpointConfig implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * Amazon RDS cluster ARN.
+     * Amazon RDS cluster Amazon Resource Name (ARN).
      * </p>
      * 
      * @param dbClusterIdentifier
-     *        Amazon RDS cluster ARN.
+     *        Amazon RDS cluster Amazon Resource Name (ARN).
      */
 
     public void setDbClusterIdentifier(String dbClusterIdentifier) {
@@ -114,10 +114,10 @@ public class RdsHttpEndpointConfig implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * Amazon RDS cluster ARN.
+     * Amazon RDS cluster Amazon Resource Name (ARN).
      * </p>
      * 
-     * @return Amazon RDS cluster ARN.
+     * @return Amazon RDS cluster Amazon Resource Name (ARN).
      */
 
     public String getDbClusterIdentifier() {
@@ -126,11 +126,11 @@ public class RdsHttpEndpointConfig implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * Amazon RDS cluster ARN.
+     * Amazon RDS cluster Amazon Resource Name (ARN).
      * </p>
      * 
      * @param dbClusterIdentifier
-     *        Amazon RDS cluster ARN.
+     *        Amazon RDS cluster Amazon Resource Name (ARN).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -221,11 +221,11 @@ public class RdsHttpEndpointConfig implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * Amazon Web Services secret store ARN for database credentials.
+     * Amazon Web Services secret store Amazon Resource Name (ARN) for database credentials.
      * </p>
      * 
      * @param awsSecretStoreArn
-     *        Amazon Web Services secret store ARN for database credentials.
+     *        Amazon Web Services secret store Amazon Resource Name (ARN) for database credentials.
      */
 
     public void setAwsSecretStoreArn(String awsSecretStoreArn) {
@@ -234,10 +234,10 @@ public class RdsHttpEndpointConfig implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * Amazon Web Services secret store ARN for database credentials.
+     * Amazon Web Services secret store Amazon Resource Name (ARN) for database credentials.
      * </p>
      * 
-     * @return Amazon Web Services secret store ARN for database credentials.
+     * @return Amazon Web Services secret store Amazon Resource Name (ARN) for database credentials.
      */
 
     public String getAwsSecretStoreArn() {
@@ -246,11 +246,11 @@ public class RdsHttpEndpointConfig implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * Amazon Web Services secret store ARN for database credentials.
+     * Amazon Web Services secret store Amazon Resource Name (ARN) for database credentials.
      * </p>
      * 
      * @param awsSecretStoreArn
-     *        Amazon Web Services secret store ARN for database credentials.
+     *        Amazon Web Services secret store Amazon Resource Name (ARN) for database credentials.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

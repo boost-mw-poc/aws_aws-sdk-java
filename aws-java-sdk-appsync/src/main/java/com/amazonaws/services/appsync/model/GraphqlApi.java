@@ -66,7 +66,7 @@ public class GraphqlApi implements Serializable, Cloneable, StructuredPojo {
     private OpenIDConnectConfig openIDConnectConfig;
     /**
      * <p>
-     * The ARN.
+     * The Amazon Resource Name (ARN).
      * </p>
      */
     private String arn;
@@ -90,19 +90,19 @@ public class GraphqlApi implements Serializable, Cloneable, StructuredPojo {
     private java.util.List<AdditionalAuthenticationProvider> additionalAuthenticationProviders;
     /**
      * <p>
-     * A flag representing whether X-Ray tracing is enabled for this <code>GraphqlApi</code>.
+     * A flag indicating whether to use X-Ray tracing for this <code>GraphqlApi</code>.
      * </p>
      */
     private Boolean xrayEnabled;
     /**
      * <p>
-     * The ARN of the WAF ACL associated with this <code>GraphqlApi</code>, if one exists.
+     * The ARN of the WAF access control list (ACL) associated with this <code>GraphqlApi</code>, if one exists.
      * </p>
      */
     private String wafWebAclArn;
     /**
      * <p>
-     * Configuration for Amazon Web Services Lambda function authorization.
+     * Configuration for Lambda function authorization.
      * </p>
      */
     private LambdaAuthorizerConfig lambdaAuthorizerConfig;
@@ -368,11 +368,11 @@ public class GraphqlApi implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ARN.
+     * The Amazon Resource Name (ARN).
      * </p>
      * 
      * @param arn
-     *        The ARN.
+     *        The Amazon Resource Name (ARN).
      */
 
     public void setArn(String arn) {
@@ -381,10 +381,10 @@ public class GraphqlApi implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ARN.
+     * The Amazon Resource Name (ARN).
      * </p>
      * 
-     * @return The ARN.
+     * @return The Amazon Resource Name (ARN).
      */
 
     public String getArn() {
@@ -393,11 +393,11 @@ public class GraphqlApi implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ARN.
+     * The Amazon Resource Name (ARN).
      * </p>
      * 
      * @param arn
-     *        The ARN.
+     *        The Amazon Resource Name (ARN).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -614,11 +614,11 @@ public class GraphqlApi implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A flag representing whether X-Ray tracing is enabled for this <code>GraphqlApi</code>.
+     * A flag indicating whether to use X-Ray tracing for this <code>GraphqlApi</code>.
      * </p>
      * 
      * @param xrayEnabled
-     *        A flag representing whether X-Ray tracing is enabled for this <code>GraphqlApi</code>.
+     *        A flag indicating whether to use X-Ray tracing for this <code>GraphqlApi</code>.
      */
 
     public void setXrayEnabled(Boolean xrayEnabled) {
@@ -627,10 +627,10 @@ public class GraphqlApi implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A flag representing whether X-Ray tracing is enabled for this <code>GraphqlApi</code>.
+     * A flag indicating whether to use X-Ray tracing for this <code>GraphqlApi</code>.
      * </p>
      * 
-     * @return A flag representing whether X-Ray tracing is enabled for this <code>GraphqlApi</code>.
+     * @return A flag indicating whether to use X-Ray tracing for this <code>GraphqlApi</code>.
      */
 
     public Boolean getXrayEnabled() {
@@ -639,11 +639,11 @@ public class GraphqlApi implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A flag representing whether X-Ray tracing is enabled for this <code>GraphqlApi</code>.
+     * A flag indicating whether to use X-Ray tracing for this <code>GraphqlApi</code>.
      * </p>
      * 
      * @param xrayEnabled
-     *        A flag representing whether X-Ray tracing is enabled for this <code>GraphqlApi</code>.
+     *        A flag indicating whether to use X-Ray tracing for this <code>GraphqlApi</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -654,10 +654,10 @@ public class GraphqlApi implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * A flag representing whether X-Ray tracing is enabled for this <code>GraphqlApi</code>.
+     * A flag indicating whether to use X-Ray tracing for this <code>GraphqlApi</code>.
      * </p>
      * 
-     * @return A flag representing whether X-Ray tracing is enabled for this <code>GraphqlApi</code>.
+     * @return A flag indicating whether to use X-Ray tracing for this <code>GraphqlApi</code>.
      */
 
     public Boolean isXrayEnabled() {
@@ -666,11 +666,11 @@ public class GraphqlApi implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ARN of the WAF ACL associated with this <code>GraphqlApi</code>, if one exists.
+     * The ARN of the WAF access control list (ACL) associated with this <code>GraphqlApi</code>, if one exists.
      * </p>
      * 
      * @param wafWebAclArn
-     *        The ARN of the WAF ACL associated with this <code>GraphqlApi</code>, if one exists.
+     *        The ARN of the WAF access control list (ACL) associated with this <code>GraphqlApi</code>, if one exists.
      */
 
     public void setWafWebAclArn(String wafWebAclArn) {
@@ -679,10 +679,10 @@ public class GraphqlApi implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ARN of the WAF ACL associated with this <code>GraphqlApi</code>, if one exists.
+     * The ARN of the WAF access control list (ACL) associated with this <code>GraphqlApi</code>, if one exists.
      * </p>
      * 
-     * @return The ARN of the WAF ACL associated with this <code>GraphqlApi</code>, if one exists.
+     * @return The ARN of the WAF access control list (ACL) associated with this <code>GraphqlApi</code>, if one exists.
      */
 
     public String getWafWebAclArn() {
@@ -691,11 +691,11 @@ public class GraphqlApi implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The ARN of the WAF ACL associated with this <code>GraphqlApi</code>, if one exists.
+     * The ARN of the WAF access control list (ACL) associated with this <code>GraphqlApi</code>, if one exists.
      * </p>
      * 
      * @param wafWebAclArn
-     *        The ARN of the WAF ACL associated with this <code>GraphqlApi</code>, if one exists.
+     *        The ARN of the WAF access control list (ACL) associated with this <code>GraphqlApi</code>, if one exists.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -706,11 +706,11 @@ public class GraphqlApi implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Configuration for Amazon Web Services Lambda function authorization.
+     * Configuration for Lambda function authorization.
      * </p>
      * 
      * @param lambdaAuthorizerConfig
-     *        Configuration for Amazon Web Services Lambda function authorization.
+     *        Configuration for Lambda function authorization.
      */
 
     public void setLambdaAuthorizerConfig(LambdaAuthorizerConfig lambdaAuthorizerConfig) {
@@ -719,10 +719,10 @@ public class GraphqlApi implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Configuration for Amazon Web Services Lambda function authorization.
+     * Configuration for Lambda function authorization.
      * </p>
      * 
-     * @return Configuration for Amazon Web Services Lambda function authorization.
+     * @return Configuration for Lambda function authorization.
      */
 
     public LambdaAuthorizerConfig getLambdaAuthorizerConfig() {
@@ -731,11 +731,11 @@ public class GraphqlApi implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Configuration for Amazon Web Services Lambda function authorization.
+     * Configuration for Lambda function authorization.
      * </p>
      * 
      * @param lambdaAuthorizerConfig
-     *        Configuration for Amazon Web Services Lambda function authorization.
+     *        Configuration for Lambda function authorization.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

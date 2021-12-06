@@ -48,7 +48,7 @@ public class Resolver implements Serializable, Cloneable, StructuredPojo {
     private String dataSourceName;
     /**
      * <p>
-     * The resolver ARN.
+     * The resolver Amazon Resource Name (ARN).
      * </p>
      */
     private String resolverArn;
@@ -71,14 +71,14 @@ public class Resolver implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * <b>UNIT</b>: A UNIT resolver type. A UNIT resolver is the default resolver type. A UNIT resolver enables you to
-     * execute a GraphQL query against a single data source.
+     * <b>UNIT</b>: A UNIT resolver type. A UNIT resolver is the default resolver type. You can use a UNIT resolver to
+     * run a GraphQL query against a single data source.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b>PIPELINE</b>: A PIPELINE resolver type. A PIPELINE resolver enables you to execute a series of
-     * <code>Function</code> in a serial manner. You can use a pipeline resolver to execute a GraphQL query against
+     * <b>PIPELINE</b>: A PIPELINE resolver type. You can use a PIPELINE resolver to invoke a series of
+     * <code>Function</code> objects in a serial manner. You can use a pipeline resolver to run a GraphQL query against
      * multiple data sources.
      * </p>
      * </li>
@@ -93,7 +93,7 @@ public class Resolver implements Serializable, Cloneable, StructuredPojo {
     private PipelineConfig pipelineConfig;
     /**
      * <p>
-     * The <code>SyncConfig</code> for a resolver attached to a versioned datasource.
+     * The <code>SyncConfig</code> for a resolver attached to a versioned data source.
      * </p>
      */
     private SyncConfig syncConfig;
@@ -226,11 +226,11 @@ public class Resolver implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The resolver ARN.
+     * The resolver Amazon Resource Name (ARN).
      * </p>
      * 
      * @param resolverArn
-     *        The resolver ARN.
+     *        The resolver Amazon Resource Name (ARN).
      */
 
     public void setResolverArn(String resolverArn) {
@@ -239,10 +239,10 @@ public class Resolver implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The resolver ARN.
+     * The resolver Amazon Resource Name (ARN).
      * </p>
      * 
-     * @return The resolver ARN.
+     * @return The resolver Amazon Resource Name (ARN).
      */
 
     public String getResolverArn() {
@@ -251,11 +251,11 @@ public class Resolver implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The resolver ARN.
+     * The resolver Amazon Resource Name (ARN).
      * </p>
      * 
      * @param resolverArn
-     *        The resolver ARN.
+     *        The resolver Amazon Resource Name (ARN).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -351,14 +351,14 @@ public class Resolver implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * <b>UNIT</b>: A UNIT resolver type. A UNIT resolver is the default resolver type. A UNIT resolver enables you to
-     * execute a GraphQL query against a single data source.
+     * <b>UNIT</b>: A UNIT resolver type. A UNIT resolver is the default resolver type. You can use a UNIT resolver to
+     * run a GraphQL query against a single data source.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b>PIPELINE</b>: A PIPELINE resolver type. A PIPELINE resolver enables you to execute a series of
-     * <code>Function</code> in a serial manner. You can use a pipeline resolver to execute a GraphQL query against
+     * <b>PIPELINE</b>: A PIPELINE resolver type. You can use a PIPELINE resolver to invoke a series of
+     * <code>Function</code> objects in a serial manner. You can use a pipeline resolver to run a GraphQL query against
      * multiple data sources.
      * </p>
      * </li>
@@ -369,14 +369,14 @@ public class Resolver implements Serializable, Cloneable, StructuredPojo {
      *        <ul>
      *        <li>
      *        <p>
-     *        <b>UNIT</b>: A UNIT resolver type. A UNIT resolver is the default resolver type. A UNIT resolver enables
-     *        you to execute a GraphQL query against a single data source.
+     *        <b>UNIT</b>: A UNIT resolver type. A UNIT resolver is the default resolver type. You can use a UNIT
+     *        resolver to run a GraphQL query against a single data source.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <b>PIPELINE</b>: A PIPELINE resolver type. A PIPELINE resolver enables you to execute a series of
-     *        <code>Function</code> in a serial manner. You can use a pipeline resolver to execute a GraphQL query
+     *        <b>PIPELINE</b>: A PIPELINE resolver type. You can use a PIPELINE resolver to invoke a series of
+     *        <code>Function</code> objects in a serial manner. You can use a pipeline resolver to run a GraphQL query
      *        against multiple data sources.
      *        </p>
      *        </li>
@@ -394,14 +394,14 @@ public class Resolver implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * <b>UNIT</b>: A UNIT resolver type. A UNIT resolver is the default resolver type. A UNIT resolver enables you to
-     * execute a GraphQL query against a single data source.
+     * <b>UNIT</b>: A UNIT resolver type. A UNIT resolver is the default resolver type. You can use a UNIT resolver to
+     * run a GraphQL query against a single data source.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b>PIPELINE</b>: A PIPELINE resolver type. A PIPELINE resolver enables you to execute a series of
-     * <code>Function</code> in a serial manner. You can use a pipeline resolver to execute a GraphQL query against
+     * <b>PIPELINE</b>: A PIPELINE resolver type. You can use a PIPELINE resolver to invoke a series of
+     * <code>Function</code> objects in a serial manner. You can use a pipeline resolver to run a GraphQL query against
      * multiple data sources.
      * </p>
      * </li>
@@ -411,14 +411,14 @@ public class Resolver implements Serializable, Cloneable, StructuredPojo {
      *         <ul>
      *         <li>
      *         <p>
-     *         <b>UNIT</b>: A UNIT resolver type. A UNIT resolver is the default resolver type. A UNIT resolver enables
-     *         you to execute a GraphQL query against a single data source.
+     *         <b>UNIT</b>: A UNIT resolver type. A UNIT resolver is the default resolver type. You can use a UNIT
+     *         resolver to run a GraphQL query against a single data source.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <b>PIPELINE</b>: A PIPELINE resolver type. A PIPELINE resolver enables you to execute a series of
-     *         <code>Function</code> in a serial manner. You can use a pipeline resolver to execute a GraphQL query
+     *         <b>PIPELINE</b>: A PIPELINE resolver type. You can use a PIPELINE resolver to invoke a series of
+     *         <code>Function</code> objects in a serial manner. You can use a pipeline resolver to run a GraphQL query
      *         against multiple data sources.
      *         </p>
      *         </li>
@@ -436,14 +436,14 @@ public class Resolver implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * <b>UNIT</b>: A UNIT resolver type. A UNIT resolver is the default resolver type. A UNIT resolver enables you to
-     * execute a GraphQL query against a single data source.
+     * <b>UNIT</b>: A UNIT resolver type. A UNIT resolver is the default resolver type. You can use a UNIT resolver to
+     * run a GraphQL query against a single data source.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b>PIPELINE</b>: A PIPELINE resolver type. A PIPELINE resolver enables you to execute a series of
-     * <code>Function</code> in a serial manner. You can use a pipeline resolver to execute a GraphQL query against
+     * <b>PIPELINE</b>: A PIPELINE resolver type. You can use a PIPELINE resolver to invoke a series of
+     * <code>Function</code> objects in a serial manner. You can use a pipeline resolver to run a GraphQL query against
      * multiple data sources.
      * </p>
      * </li>
@@ -454,14 +454,14 @@ public class Resolver implements Serializable, Cloneable, StructuredPojo {
      *        <ul>
      *        <li>
      *        <p>
-     *        <b>UNIT</b>: A UNIT resolver type. A UNIT resolver is the default resolver type. A UNIT resolver enables
-     *        you to execute a GraphQL query against a single data source.
+     *        <b>UNIT</b>: A UNIT resolver type. A UNIT resolver is the default resolver type. You can use a UNIT
+     *        resolver to run a GraphQL query against a single data source.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <b>PIPELINE</b>: A PIPELINE resolver type. A PIPELINE resolver enables you to execute a series of
-     *        <code>Function</code> in a serial manner. You can use a pipeline resolver to execute a GraphQL query
+     *        <b>PIPELINE</b>: A PIPELINE resolver type. You can use a PIPELINE resolver to invoke a series of
+     *        <code>Function</code> objects in a serial manner. You can use a pipeline resolver to run a GraphQL query
      *        against multiple data sources.
      *        </p>
      *        </li>
@@ -481,14 +481,14 @@ public class Resolver implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * <b>UNIT</b>: A UNIT resolver type. A UNIT resolver is the default resolver type. A UNIT resolver enables you to
-     * execute a GraphQL query against a single data source.
+     * <b>UNIT</b>: A UNIT resolver type. A UNIT resolver is the default resolver type. You can use a UNIT resolver to
+     * run a GraphQL query against a single data source.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <b>PIPELINE</b>: A PIPELINE resolver type. A PIPELINE resolver enables you to execute a series of
-     * <code>Function</code> in a serial manner. You can use a pipeline resolver to execute a GraphQL query against
+     * <b>PIPELINE</b>: A PIPELINE resolver type. You can use a PIPELINE resolver to invoke a series of
+     * <code>Function</code> objects in a serial manner. You can use a pipeline resolver to run a GraphQL query against
      * multiple data sources.
      * </p>
      * </li>
@@ -499,14 +499,14 @@ public class Resolver implements Serializable, Cloneable, StructuredPojo {
      *        <ul>
      *        <li>
      *        <p>
-     *        <b>UNIT</b>: A UNIT resolver type. A UNIT resolver is the default resolver type. A UNIT resolver enables
-     *        you to execute a GraphQL query against a single data source.
+     *        <b>UNIT</b>: A UNIT resolver type. A UNIT resolver is the default resolver type. You can use a UNIT
+     *        resolver to run a GraphQL query against a single data source.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <b>PIPELINE</b>: A PIPELINE resolver type. A PIPELINE resolver enables you to execute a series of
-     *        <code>Function</code> in a serial manner. You can use a pipeline resolver to execute a GraphQL query
+     *        <b>PIPELINE</b>: A PIPELINE resolver type. You can use a PIPELINE resolver to invoke a series of
+     *        <code>Function</code> objects in a serial manner. You can use a pipeline resolver to run a GraphQL query
      *        against multiple data sources.
      *        </p>
      *        </li>
@@ -561,11 +561,11 @@ public class Resolver implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The <code>SyncConfig</code> for a resolver attached to a versioned datasource.
+     * The <code>SyncConfig</code> for a resolver attached to a versioned data source.
      * </p>
      * 
      * @param syncConfig
-     *        The <code>SyncConfig</code> for a resolver attached to a versioned datasource.
+     *        The <code>SyncConfig</code> for a resolver attached to a versioned data source.
      */
 
     public void setSyncConfig(SyncConfig syncConfig) {
@@ -574,10 +574,10 @@ public class Resolver implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The <code>SyncConfig</code> for a resolver attached to a versioned datasource.
+     * The <code>SyncConfig</code> for a resolver attached to a versioned data source.
      * </p>
      * 
-     * @return The <code>SyncConfig</code> for a resolver attached to a versioned datasource.
+     * @return The <code>SyncConfig</code> for a resolver attached to a versioned data source.
      */
 
     public SyncConfig getSyncConfig() {
@@ -586,11 +586,11 @@ public class Resolver implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The <code>SyncConfig</code> for a resolver attached to a versioned datasource.
+     * The <code>SyncConfig</code> for a resolver attached to a versioned data source.
      * </p>
      * 
      * @param syncConfig
-     *        The <code>SyncConfig</code> for a resolver attached to a versioned datasource.
+     *        The <code>SyncConfig</code> for a resolver attached to a versioned data source.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

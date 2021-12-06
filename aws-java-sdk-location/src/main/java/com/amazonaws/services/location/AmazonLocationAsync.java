@@ -185,6 +185,11 @@ public interface AmazonLocationAsync extends AmazonLocation {
      * The last geofence that a device was observed within is tracked for 30 days after the most recent device position
      * update.
      * </p>
+     * </note> <note>
+     * <p>
+     * Geofence evaluation uses the given device position. It does not account for the optional <code>Accuracy</code> of
+     * a <code>DevicePositionUpdate</code>.
+     * </p>
      * </note>
      * 
      * @param batchEvaluateGeofencesRequest
@@ -220,6 +225,11 @@ public interface AmazonLocationAsync extends AmazonLocation {
      * <p>
      * The last geofence that a device was observed within is tracked for 30 days after the most recent device position
      * update.
+     * </p>
+     * </note> <note>
+     * <p>
+     * Geofence evaluation uses the given device position. It does not account for the optional <code>Accuracy</code> of
+     * a <code>DevicePositionUpdate</code>.
      * </p>
      * </note>
      * 
@@ -311,8 +321,19 @@ public interface AmazonLocationAsync extends AmazonLocation {
      * <code>PositionFiltering</code> is set to <code>TimeBased</code>, updates are evaluated against linked geofence
      * collections, and location data is stored at a maximum of one position per 30 second interval. If your update
      * frequency is more often than every 30 seconds, only one update per 30 seconds is stored for each unique device
-     * ID. When <code>PositionFiltering</code> is set to <code>DistanceBased</code> filtering, location data is stored
-     * and evaluated against linked geofence collections only if the device has moved more than 30 m (98.4 ft).
+     * ID.
+     * </p>
+     * <p>
+     * When <code>PositionFiltering</code> is set to <code>DistanceBased</code> filtering, location data is stored and
+     * evaluated against linked geofence collections only if the device has moved more than 30 m (98.4 ft).
+     * </p>
+     * <p>
+     * When <code>PositionFiltering</code> is set to <code>AccuracyBased</code> filtering, location data is stored and
+     * evaluated against linked geofence collections only if the device has moved more than the measured accuracy. For
+     * example, if two consecutive updates from a device have a horizontal accuracy of 5 m and 10 m, the second update
+     * is neither stored or evaluated if the device has moved less than 15 m. If <code>PositionFiltering</code> is set
+     * to <code>AccuracyBased</code> filtering, Amazon Location uses the default value <code>{ "Horizontal": 0}</code>
+     * when accuracy is not provided on a <code>DevicePositionUpdate</code>.
      * </p>
      * </note>
      * 
@@ -336,8 +357,19 @@ public interface AmazonLocationAsync extends AmazonLocation {
      * <code>PositionFiltering</code> is set to <code>TimeBased</code>, updates are evaluated against linked geofence
      * collections, and location data is stored at a maximum of one position per 30 second interval. If your update
      * frequency is more often than every 30 seconds, only one update per 30 seconds is stored for each unique device
-     * ID. When <code>PositionFiltering</code> is set to <code>DistanceBased</code> filtering, location data is stored
-     * and evaluated against linked geofence collections only if the device has moved more than 30 m (98.4 ft).
+     * ID.
+     * </p>
+     * <p>
+     * When <code>PositionFiltering</code> is set to <code>DistanceBased</code> filtering, location data is stored and
+     * evaluated against linked geofence collections only if the device has moved more than 30 m (98.4 ft).
+     * </p>
+     * <p>
+     * When <code>PositionFiltering</code> is set to <code>AccuracyBased</code> filtering, location data is stored and
+     * evaluated against linked geofence collections only if the device has moved more than the measured accuracy. For
+     * example, if two consecutive updates from a device have a horizontal accuracy of 5 m and 10 m, the second update
+     * is neither stored or evaluated if the device has moved less than 15 m. If <code>PositionFiltering</code> is set
+     * to <code>AccuracyBased</code> filtering, Amazon Location uses the default value <code>{ "Horizontal": 0}</code>
+     * when accuracy is not provided on a <code>DevicePositionUpdate</code>.
      * </p>
      * </note>
      * 
@@ -524,7 +556,8 @@ public interface AmazonLocationAsync extends AmazonLocation {
      * <p>
      * Creates a place index resource in your AWS account. Use a place index resource to geocode addresses and other
      * text queries by using the <code>SearchPlaceIndexForText</code> operation, and reverse geocode coordinates by
-     * using the <code>SearchPlaceIndexForPosition</code> operation.
+     * using the <code>SearchPlaceIndexForPosition</code> operation, and enable autosuggestions by using the
+     * <code>SearchPlaceIndexForSuggestions</code> operation.
      * </p>
      * 
      * @param createPlaceIndexRequest
@@ -539,7 +572,8 @@ public interface AmazonLocationAsync extends AmazonLocation {
      * <p>
      * Creates a place index resource in your AWS account. Use a place index resource to geocode addresses and other
      * text queries by using the <code>SearchPlaceIndexForText</code> operation, and reverse geocode coordinates by
-     * using the <code>SearchPlaceIndexForPosition</code> operation.
+     * using the <code>SearchPlaceIndexForPosition</code> operation, and enable autosuggestions by using the
+     * <code>SearchPlaceIndexForSuggestions</code> operation.
      * </p>
      * 
      * @param createPlaceIndexRequest
@@ -1647,6 +1681,65 @@ public interface AmazonLocationAsync extends AmazonLocation {
     java.util.concurrent.Future<SearchPlaceIndexForPositionResult> searchPlaceIndexForPositionAsync(
             SearchPlaceIndexForPositionRequest searchPlaceIndexForPositionRequest,
             com.amazonaws.handlers.AsyncHandler<SearchPlaceIndexForPositionRequest, SearchPlaceIndexForPositionResult> asyncHandler);
+
+    /**
+     * <p>
+     * Generates suggestions for addresses and points of interest based on partial or misspelled free-form text. This
+     * operation is also known as autocomplete, autosuggest, or fuzzy matching.
+     * </p>
+     * <p>
+     * Optional parameters let you narrow your search results by bounding box or country, or bias your search toward a
+     * specific position on the globe.
+     * </p>
+     * <note>
+     * <p>
+     * You can search for suggested place names near a specified position by using <code>BiasPosition</code>, or filter
+     * results within a bounding box by using <code>FilterBBox</code>. These parameters are mutually exclusive; using
+     * both <code>BiasPosition</code> and <code>FilterBBox</code> in the same command returns an error.
+     * </p>
+     * </note>
+     * 
+     * @param searchPlaceIndexForSuggestionsRequest
+     * @return A Java Future containing the result of the SearchPlaceIndexForSuggestions operation returned by the
+     *         service.
+     * @sample AmazonLocationAsync.SearchPlaceIndexForSuggestions
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/SearchPlaceIndexForSuggestions"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<SearchPlaceIndexForSuggestionsResult> searchPlaceIndexForSuggestionsAsync(
+            SearchPlaceIndexForSuggestionsRequest searchPlaceIndexForSuggestionsRequest);
+
+    /**
+     * <p>
+     * Generates suggestions for addresses and points of interest based on partial or misspelled free-form text. This
+     * operation is also known as autocomplete, autosuggest, or fuzzy matching.
+     * </p>
+     * <p>
+     * Optional parameters let you narrow your search results by bounding box or country, or bias your search toward a
+     * specific position on the globe.
+     * </p>
+     * <note>
+     * <p>
+     * You can search for suggested place names near a specified position by using <code>BiasPosition</code>, or filter
+     * results within a bounding box by using <code>FilterBBox</code>. These parameters are mutually exclusive; using
+     * both <code>BiasPosition</code> and <code>FilterBBox</code> in the same command returns an error.
+     * </p>
+     * </note>
+     * 
+     * @param searchPlaceIndexForSuggestionsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the SearchPlaceIndexForSuggestions operation returned by the
+     *         service.
+     * @sample AmazonLocationAsyncHandler.SearchPlaceIndexForSuggestions
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/location-2020-11-19/SearchPlaceIndexForSuggestions"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<SearchPlaceIndexForSuggestionsResult> searchPlaceIndexForSuggestionsAsync(
+            SearchPlaceIndexForSuggestionsRequest searchPlaceIndexForSuggestionsRequest,
+            com.amazonaws.handlers.AsyncHandler<SearchPlaceIndexForSuggestionsRequest, SearchPlaceIndexForSuggestionsResult> asyncHandler);
 
     /**
      * <p>

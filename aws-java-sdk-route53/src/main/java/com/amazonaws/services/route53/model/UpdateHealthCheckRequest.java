@@ -404,9 +404,9 @@ public class UpdateHealthCheckRequest extends com.amazonaws.AmazonWebServiceRequ
      * </li>
      * <li>
      * <p>
-     * <code>LastKnownStatus</code>: Route 53 uses the status of the health check from the last time CloudWatch had
-     * sufficient data to determine the alarm state. For new health checks that have no last known status, the default
-     * status for the health check is healthy.
+     * <code>LastKnownStatus</code>: By default, Route 53 uses the status of the health check from the last time
+     * CloudWatch had sufficient data to determine the alarm state. For new health checks that have no last known
+     * status, the status for the health check is healthy.
      * </p>
      * </li>
      * </ul>
@@ -2905,9 +2905,9 @@ public class UpdateHealthCheckRequest extends com.amazonaws.AmazonWebServiceRequ
      * </li>
      * <li>
      * <p>
-     * <code>LastKnownStatus</code>: Route 53 uses the status of the health check from the last time CloudWatch had
-     * sufficient data to determine the alarm state. For new health checks that have no last known status, the default
-     * status for the health check is healthy.
+     * <code>LastKnownStatus</code>: By default, Route 53 uses the status of the health check from the last time
+     * CloudWatch had sufficient data to determine the alarm state. For new health checks that have no last known
+     * status, the status for the health check is healthy.
      * </p>
      * </li>
      * </ul>
@@ -2928,9 +2928,9 @@ public class UpdateHealthCheckRequest extends com.amazonaws.AmazonWebServiceRequ
      *        </li>
      *        <li>
      *        <p>
-     *        <code>LastKnownStatus</code>: Route 53 uses the status of the health check from the last time CloudWatch
-     *        had sufficient data to determine the alarm state. For new health checks that have no last known status,
-     *        the default status for the health check is healthy.
+     *        <code>LastKnownStatus</code>: By default, Route 53 uses the status of the health check from the last time
+     *        CloudWatch had sufficient data to determine the alarm state. For new health checks that have no last known
+     *        status, the status for the health check is healthy.
      *        </p>
      *        </li>
      * @see InsufficientDataHealthStatus
@@ -2958,9 +2958,9 @@ public class UpdateHealthCheckRequest extends com.amazonaws.AmazonWebServiceRequ
      * </li>
      * <li>
      * <p>
-     * <code>LastKnownStatus</code>: Route 53 uses the status of the health check from the last time CloudWatch had
-     * sufficient data to determine the alarm state. For new health checks that have no last known status, the default
-     * status for the health check is healthy.
+     * <code>LastKnownStatus</code>: By default, Route 53 uses the status of the health check from the last time
+     * CloudWatch had sufficient data to determine the alarm state. For new health checks that have no last known
+     * status, the status for the health check is healthy.
      * </p>
      * </li>
      * </ul>
@@ -2980,9 +2980,9 @@ public class UpdateHealthCheckRequest extends com.amazonaws.AmazonWebServiceRequ
      *         </li>
      *         <li>
      *         <p>
-     *         <code>LastKnownStatus</code>: Route 53 uses the status of the health check from the last time CloudWatch
-     *         had sufficient data to determine the alarm state. For new health checks that have no last known status,
-     *         the default status for the health check is healthy.
+     *         <code>LastKnownStatus</code>: By default, Route 53 uses the status of the health check from the last time
+     *         CloudWatch had sufficient data to determine the alarm state. For new health checks that have no last
+     *         known status, the status for the health check is healthy.
      *         </p>
      *         </li>
      * @see InsufficientDataHealthStatus
@@ -3010,9 +3010,9 @@ public class UpdateHealthCheckRequest extends com.amazonaws.AmazonWebServiceRequ
      * </li>
      * <li>
      * <p>
-     * <code>LastKnownStatus</code>: Route 53 uses the status of the health check from the last time CloudWatch had
-     * sufficient data to determine the alarm state. For new health checks that have no last known status, the default
-     * status for the health check is healthy.
+     * <code>LastKnownStatus</code>: By default, Route 53 uses the status of the health check from the last time
+     * CloudWatch had sufficient data to determine the alarm state. For new health checks that have no last known
+     * status, the status for the health check is healthy.
      * </p>
      * </li>
      * </ul>
@@ -3033,9 +3033,9 @@ public class UpdateHealthCheckRequest extends com.amazonaws.AmazonWebServiceRequ
      *        </li>
      *        <li>
      *        <p>
-     *        <code>LastKnownStatus</code>: Route 53 uses the status of the health check from the last time CloudWatch
-     *        had sufficient data to determine the alarm state. For new health checks that have no last known status,
-     *        the default status for the health check is healthy.
+     *        <code>LastKnownStatus</code>: By default, Route 53 uses the status of the health check from the last time
+     *        CloudWatch had sufficient data to determine the alarm state. For new health checks that have no last known
+     *        status, the status for the health check is healthy.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -3065,9 +3065,9 @@ public class UpdateHealthCheckRequest extends com.amazonaws.AmazonWebServiceRequ
      * </li>
      * <li>
      * <p>
-     * <code>LastKnownStatus</code>: Route 53 uses the status of the health check from the last time CloudWatch had
-     * sufficient data to determine the alarm state. For new health checks that have no last known status, the default
-     * status for the health check is healthy.
+     * <code>LastKnownStatus</code>: By default, Route 53 uses the status of the health check from the last time
+     * CloudWatch had sufficient data to determine the alarm state. For new health checks that have no last known
+     * status, the status for the health check is healthy.
      * </p>
      * </li>
      * </ul>
@@ -3088,9 +3088,9 @@ public class UpdateHealthCheckRequest extends com.amazonaws.AmazonWebServiceRequ
      *        </li>
      *        <li>
      *        <p>
-     *        <code>LastKnownStatus</code>: Route 53 uses the status of the health check from the last time CloudWatch
-     *        had sufficient data to determine the alarm state. For new health checks that have no last known status,
-     *        the default status for the health check is healthy.
+     *        <code>LastKnownStatus</code>: By default, Route 53 uses the status of the health check from the last time
+     *        CloudWatch had sufficient data to determine the alarm state. For new health checks that have no last known
+     *        status, the status for the health check is healthy.
      *        </p>
      *        </li>
      * @see InsufficientDataHealthStatus
@@ -3118,9 +3118,9 @@ public class UpdateHealthCheckRequest extends com.amazonaws.AmazonWebServiceRequ
      * </li>
      * <li>
      * <p>
-     * <code>LastKnownStatus</code>: Route 53 uses the status of the health check from the last time CloudWatch had
-     * sufficient data to determine the alarm state. For new health checks that have no last known status, the default
-     * status for the health check is healthy.
+     * <code>LastKnownStatus</code>: By default, Route 53 uses the status of the health check from the last time
+     * CloudWatch had sufficient data to determine the alarm state. For new health checks that have no last known
+     * status, the status for the health check is healthy.
      * </p>
      * </li>
      * </ul>
@@ -3141,9 +3141,9 @@ public class UpdateHealthCheckRequest extends com.amazonaws.AmazonWebServiceRequ
      *        </li>
      *        <li>
      *        <p>
-     *        <code>LastKnownStatus</code>: Route 53 uses the status of the health check from the last time CloudWatch
-     *        had sufficient data to determine the alarm state. For new health checks that have no last known status,
-     *        the default status for the health check is healthy.
+     *        <code>LastKnownStatus</code>: By default, Route 53 uses the status of the health check from the last time
+     *        CloudWatch had sufficient data to determine the alarm state. For new health checks that have no last known
+     *        status, the status for the health check is healthy.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

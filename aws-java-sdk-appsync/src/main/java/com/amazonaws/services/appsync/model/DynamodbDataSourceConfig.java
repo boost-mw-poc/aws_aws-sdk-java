@@ -48,7 +48,7 @@ public class DynamodbDataSourceConfig implements Serializable, Cloneable, Struct
     private Boolean useCallerCredentials;
     /**
      * <p>
-     * The <code>DeltaSyncConfig</code> for a versioned datasource.
+     * The <code>DeltaSyncConfig</code> for a versioned data source.
      * </p>
      */
     private DeltaSyncConfig deltaSyncConfig;
@@ -193,11 +193,11 @@ public class DynamodbDataSourceConfig implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The <code>DeltaSyncConfig</code> for a versioned datasource.
+     * The <code>DeltaSyncConfig</code> for a versioned data source.
      * </p>
      * 
      * @param deltaSyncConfig
-     *        The <code>DeltaSyncConfig</code> for a versioned datasource.
+     *        The <code>DeltaSyncConfig</code> for a versioned data source.
      */
 
     public void setDeltaSyncConfig(DeltaSyncConfig deltaSyncConfig) {
@@ -206,10 +206,10 @@ public class DynamodbDataSourceConfig implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The <code>DeltaSyncConfig</code> for a versioned datasource.
+     * The <code>DeltaSyncConfig</code> for a versioned data source.
      * </p>
      * 
-     * @return The <code>DeltaSyncConfig</code> for a versioned datasource.
+     * @return The <code>DeltaSyncConfig</code> for a versioned data source.
      */
 
     public DeltaSyncConfig getDeltaSyncConfig() {
@@ -218,11 +218,11 @@ public class DynamodbDataSourceConfig implements Serializable, Cloneable, Struct
 
     /**
      * <p>
-     * The <code>DeltaSyncConfig</code> for a versioned datasource.
+     * The <code>DeltaSyncConfig</code> for a versioned data source.
      * </p>
      * 
      * @param deltaSyncConfig
-     *        The <code>DeltaSyncConfig</code> for a versioned datasource.
+     *        The <code>DeltaSyncConfig</code> for a versioned data source.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

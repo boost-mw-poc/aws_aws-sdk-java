@@ -34,6 +34,37 @@ public interface AWSAppSyncAsync extends AWSAppSync {
 
     /**
      * <p>
+     * Maps an endpoint to your custom domain.
+     * </p>
+     * 
+     * @param associateApiRequest
+     * @return A Java Future containing the result of the AssociateApi operation returned by the service.
+     * @sample AWSAppSyncAsync.AssociateApi
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/AssociateApi" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<AssociateApiResult> associateApiAsync(AssociateApiRequest associateApiRequest);
+
+    /**
+     * <p>
+     * Maps an endpoint to your custom domain.
+     * </p>
+     * 
+     * @param associateApiRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the AssociateApi operation returned by the service.
+     * @sample AWSAppSyncAsyncHandler.AssociateApi
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/AssociateApi" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<AssociateApiResult> associateApiAsync(AssociateApiRequest associateApiRequest,
+            com.amazonaws.handlers.AsyncHandler<AssociateApiRequest, AssociateApiResult> asyncHandler);
+
+    /**
+     * <p>
      * Creates a cache for the GraphQL API.
      * </p>
      * 
@@ -67,7 +98,7 @@ public interface AWSAppSyncAsync extends AWSAppSync {
 
     /**
      * <p>
-     * Creates a unique key that you can distribute to clients who are executing your API.
+     * Creates a unique key that you can distribute to clients who invoke your API.
      * </p>
      * 
      * @param createApiKeyRequest
@@ -80,7 +111,7 @@ public interface AWSAppSyncAsync extends AWSAppSync {
 
     /**
      * <p>
-     * Creates a unique key that you can distribute to clients who are executing your API.
+     * Creates a unique key that you can distribute to clients who invoke your API.
      * </p>
      * 
      * @param createApiKeyRequest
@@ -129,10 +160,41 @@ public interface AWSAppSyncAsync extends AWSAppSync {
 
     /**
      * <p>
+     * Creates a custom <code>DomainName</code> object.
+     * </p>
+     * 
+     * @param createDomainNameRequest
+     * @return A Java Future containing the result of the CreateDomainName operation returned by the service.
+     * @sample AWSAppSyncAsync.CreateDomainName
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/CreateDomainName" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<CreateDomainNameResult> createDomainNameAsync(CreateDomainNameRequest createDomainNameRequest);
+
+    /**
+     * <p>
+     * Creates a custom <code>DomainName</code> object.
+     * </p>
+     * 
+     * @param createDomainNameRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateDomainName operation returned by the service.
+     * @sample AWSAppSyncAsyncHandler.CreateDomainName
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/CreateDomainName" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<CreateDomainNameResult> createDomainNameAsync(CreateDomainNameRequest createDomainNameRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateDomainNameRequest, CreateDomainNameResult> asyncHandler);
+
+    /**
+     * <p>
      * Creates a <code>Function</code> object.
      * </p>
      * <p>
-     * A function is a reusable entity. Multiple functions can be used to compose the resolver logic.
+     * A function is a reusable entity. You can use multiple functions to compose the resolver logic.
      * </p>
      * 
      * @param createFunctionRequest
@@ -148,7 +210,7 @@ public interface AWSAppSyncAsync extends AWSAppSync {
      * Creates a <code>Function</code> object.
      * </p>
      * <p>
-     * A function is a reusable entity. Multiple functions can be used to compose the resolver logic.
+     * A function is a reusable entity. You can use multiple functions to compose the resolver logic.
      * </p>
      * 
      * @param createFunctionRequest
@@ -200,7 +262,7 @@ public interface AWSAppSyncAsync extends AWSAppSync {
      * Creates a <code>Resolver</code> object.
      * </p>
      * <p>
-     * A resolver converts incoming requests into a format that a data source can understand and converts the data
+     * A resolver converts incoming requests into a format that a data source can understand, and converts the data
      * source's responses into GraphQL.
      * </p>
      * 
@@ -217,7 +279,7 @@ public interface AWSAppSyncAsync extends AWSAppSync {
      * Creates a <code>Resolver</code> object.
      * </p>
      * <p>
-     * A resolver converts incoming requests into a format that a data source can understand and converts the data
+     * A resolver converts incoming requests into a format that a data source can understand, and converts the data
      * source's responses into GraphQL.
      * </p>
      * 
@@ -362,6 +424,37 @@ public interface AWSAppSyncAsync extends AWSAppSync {
 
     /**
      * <p>
+     * Deletes a custom <code>DomainName</code> object.
+     * </p>
+     * 
+     * @param deleteDomainNameRequest
+     * @return A Java Future containing the result of the DeleteDomainName operation returned by the service.
+     * @sample AWSAppSyncAsync.DeleteDomainName
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/DeleteDomainName" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteDomainNameResult> deleteDomainNameAsync(DeleteDomainNameRequest deleteDomainNameRequest);
+
+    /**
+     * <p>
+     * Deletes a custom <code>DomainName</code> object.
+     * </p>
+     * 
+     * @param deleteDomainNameRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteDomainName operation returned by the service.
+     * @sample AWSAppSyncAsyncHandler.DeleteDomainName
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/DeleteDomainName" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteDomainNameResult> deleteDomainNameAsync(DeleteDomainNameRequest deleteDomainNameRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteDomainNameRequest, DeleteDomainNameResult> asyncHandler);
+
+    /**
+     * <p>
      * Deletes a <code>Function</code>.
      * </p>
      * 
@@ -486,6 +579,37 @@ public interface AWSAppSyncAsync extends AWSAppSync {
 
     /**
      * <p>
+     * Removes an <code>ApiAssociation</code> object from a custom domain.
+     * </p>
+     * 
+     * @param disassociateApiRequest
+     * @return A Java Future containing the result of the DisassociateApi operation returned by the service.
+     * @sample AWSAppSyncAsync.DisassociateApi
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/DisassociateApi" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DisassociateApiResult> disassociateApiAsync(DisassociateApiRequest disassociateApiRequest);
+
+    /**
+     * <p>
+     * Removes an <code>ApiAssociation</code> object from a custom domain.
+     * </p>
+     * 
+     * @param disassociateApiRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DisassociateApi operation returned by the service.
+     * @sample AWSAppSyncAsyncHandler.DisassociateApi
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/DisassociateApi" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DisassociateApiResult> disassociateApiAsync(DisassociateApiRequest disassociateApiRequest,
+            com.amazonaws.handlers.AsyncHandler<DisassociateApiRequest, DisassociateApiResult> asyncHandler);
+
+    /**
+     * <p>
      * Flushes an <code>ApiCache</code> object.
      * </p>
      * 
@@ -516,6 +640,37 @@ public interface AWSAppSyncAsync extends AWSAppSync {
      */
     java.util.concurrent.Future<FlushApiCacheResult> flushApiCacheAsync(FlushApiCacheRequest flushApiCacheRequest,
             com.amazonaws.handlers.AsyncHandler<FlushApiCacheRequest, FlushApiCacheResult> asyncHandler);
+
+    /**
+     * <p>
+     * Retrieves an <code>ApiAssociation</code> object.
+     * </p>
+     * 
+     * @param getApiAssociationRequest
+     * @return A Java Future containing the result of the GetApiAssociation operation returned by the service.
+     * @sample AWSAppSyncAsync.GetApiAssociation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/GetApiAssociation" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetApiAssociationResult> getApiAssociationAsync(GetApiAssociationRequest getApiAssociationRequest);
+
+    /**
+     * <p>
+     * Retrieves an <code>ApiAssociation</code> object.
+     * </p>
+     * 
+     * @param getApiAssociationRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetApiAssociation operation returned by the service.
+     * @sample AWSAppSyncAsyncHandler.GetApiAssociation
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/GetApiAssociation" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetApiAssociationResult> getApiAssociationAsync(GetApiAssociationRequest getApiAssociationRequest,
+            com.amazonaws.handlers.AsyncHandler<GetApiAssociationRequest, GetApiAssociationResult> asyncHandler);
 
     /**
      * <p>
@@ -580,6 +735,37 @@ public interface AWSAppSyncAsync extends AWSAppSync {
      */
     java.util.concurrent.Future<GetDataSourceResult> getDataSourceAsync(GetDataSourceRequest getDataSourceRequest,
             com.amazonaws.handlers.AsyncHandler<GetDataSourceRequest, GetDataSourceResult> asyncHandler);
+
+    /**
+     * <p>
+     * Retrieves a custom <code>DomainName</code> object.
+     * </p>
+     * 
+     * @param getDomainNameRequest
+     * @return A Java Future containing the result of the GetDomainName operation returned by the service.
+     * @sample AWSAppSyncAsync.GetDomainName
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/GetDomainName" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetDomainNameResult> getDomainNameAsync(GetDomainNameRequest getDomainNameRequest);
+
+    /**
+     * <p>
+     * Retrieves a custom <code>DomainName</code> object.
+     * </p>
+     * 
+     * @param getDomainNameRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetDomainName operation returned by the service.
+     * @sample AWSAppSyncAsyncHandler.GetDomainName
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/GetDomainName" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetDomainNameResult> getDomainNameAsync(GetDomainNameRequest getDomainNameRequest,
+            com.amazonaws.handlers.AsyncHandler<GetDomainNameRequest, GetDomainNameResult> asyncHandler);
 
     /**
      * <p>
@@ -842,6 +1028,37 @@ public interface AWSAppSyncAsync extends AWSAppSync {
      */
     java.util.concurrent.Future<ListDataSourcesResult> listDataSourcesAsync(ListDataSourcesRequest listDataSourcesRequest,
             com.amazonaws.handlers.AsyncHandler<ListDataSourcesRequest, ListDataSourcesResult> asyncHandler);
+
+    /**
+     * <p>
+     * Lists multiple custom domain names.
+     * </p>
+     * 
+     * @param listDomainNamesRequest
+     * @return A Java Future containing the result of the ListDomainNames operation returned by the service.
+     * @sample AWSAppSyncAsync.ListDomainNames
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/ListDomainNames" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListDomainNamesResult> listDomainNamesAsync(ListDomainNamesRequest listDomainNamesRequest);
+
+    /**
+     * <p>
+     * Lists multiple custom domain names.
+     * </p>
+     * 
+     * @param listDomainNamesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListDomainNames operation returned by the service.
+     * @sample AWSAppSyncAsyncHandler.ListDomainNames
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/ListDomainNames" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListDomainNamesResult> listDomainNamesAsync(ListDomainNamesRequest listDomainNamesRequest,
+            com.amazonaws.handlers.AsyncHandler<ListDomainNamesRequest, ListDomainNamesResult> asyncHandler);
 
     /**
      * <p>
@@ -1163,7 +1380,7 @@ public interface AWSAppSyncAsync extends AWSAppSync {
 
     /**
      * <p>
-     * Updates an API key. The key can be updated while it is not deleted.
+     * Updates an API key. You can update the key as long as it's not deleted.
      * </p>
      * 
      * @param updateApiKeyRequest
@@ -1176,7 +1393,7 @@ public interface AWSAppSyncAsync extends AWSAppSync {
 
     /**
      * <p>
-     * Updates an API key. The key can be updated while it is not deleted.
+     * Updates an API key. You can update the key as long as it's not deleted.
      * </p>
      * 
      * @param updateApiKeyRequest
@@ -1222,6 +1439,37 @@ public interface AWSAppSyncAsync extends AWSAppSync {
      */
     java.util.concurrent.Future<UpdateDataSourceResult> updateDataSourceAsync(UpdateDataSourceRequest updateDataSourceRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateDataSourceRequest, UpdateDataSourceResult> asyncHandler);
+
+    /**
+     * <p>
+     * Updates a custom <code>DomainName</code> object.
+     * </p>
+     * 
+     * @param updateDomainNameRequest
+     * @return A Java Future containing the result of the UpdateDomainName operation returned by the service.
+     * @sample AWSAppSyncAsync.UpdateDomainName
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/UpdateDomainName" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateDomainNameResult> updateDomainNameAsync(UpdateDomainNameRequest updateDomainNameRequest);
+
+    /**
+     * <p>
+     * Updates a custom <code>DomainName</code> object.
+     * </p>
+     * 
+     * @param updateDomainNameRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateDomainName operation returned by the service.
+     * @sample AWSAppSyncAsyncHandler.UpdateDomainName
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/UpdateDomainName" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateDomainNameResult> updateDomainNameAsync(UpdateDomainNameRequest updateDomainNameRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateDomainNameRequest, UpdateDomainNameResult> asyncHandler);
 
     /**
      * <p>

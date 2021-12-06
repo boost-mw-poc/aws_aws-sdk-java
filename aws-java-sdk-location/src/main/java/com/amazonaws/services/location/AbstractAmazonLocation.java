@@ -238,6 +238,11 @@ public class AbstractAmazonLocation implements AmazonLocation {
     }
 
     @Override
+    public SearchPlaceIndexForSuggestionsResult searchPlaceIndexForSuggestions(SearchPlaceIndexForSuggestionsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public SearchPlaceIndexForTextResult searchPlaceIndexForText(SearchPlaceIndexForTextRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

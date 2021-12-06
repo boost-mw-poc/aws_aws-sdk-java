@@ -576,6 +576,19 @@ public class AbstractAmazonLocationAsync extends AbstractAmazonLocation implemen
     }
 
     @Override
+    public java.util.concurrent.Future<SearchPlaceIndexForSuggestionsResult> searchPlaceIndexForSuggestionsAsync(SearchPlaceIndexForSuggestionsRequest request) {
+
+        return searchPlaceIndexForSuggestionsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<SearchPlaceIndexForSuggestionsResult> searchPlaceIndexForSuggestionsAsync(SearchPlaceIndexForSuggestionsRequest request,
+            com.amazonaws.handlers.AsyncHandler<SearchPlaceIndexForSuggestionsRequest, SearchPlaceIndexForSuggestionsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<SearchPlaceIndexForTextResult> searchPlaceIndexForTextAsync(SearchPlaceIndexForTextRequest request) {
 
         return searchPlaceIndexForTextAsync(request, null);

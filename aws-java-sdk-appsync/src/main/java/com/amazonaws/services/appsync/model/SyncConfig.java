@@ -22,8 +22,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * Describes a Sync configuration for a resolver.
  * </p>
  * <p>
- * Contains information on which Conflict Detection as well as Resolution strategy should be performed when the resolver
- * is invoked.
+ * Specifies which Conflict Detection strategy and Resolution strategy to use when the resolver is invoked.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/SyncConfig" target="_top">AWS API
@@ -39,7 +38,7 @@ public class SyncConfig implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * <b>OPTIMISTIC_CONCURRENCY</b>: Resolve conflicts by rejecting mutations when versions do not match the latest
+     * <b>OPTIMISTIC_CONCURRENCY</b>: Resolve conflicts by rejecting mutations when versions don't match the latest
      * version at the server.
      * </p>
      * </li>
@@ -50,7 +49,8 @@ public class SyncConfig implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <b>LAMBDA</b>: Resolve conflicts with a Lambda function supplied in the LambdaConflictHandlerConfig.
+     * <b>LAMBDA</b>: Resolve conflicts with an Lambda function supplied in the <code>LambdaConflictHandlerConfig</code>
+     * .
      * </p>
      * </li>
      * </ul>
@@ -68,7 +68,7 @@ public class SyncConfig implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <b>NONE</b>: Do not detect conflicts when executing this resolver.
+     * <b>NONE</b>: Do not detect conflicts when invoking this resolver.
      * </p>
      * </li>
      * </ul>
@@ -76,7 +76,7 @@ public class SyncConfig implements Serializable, Cloneable, StructuredPojo {
     private String conflictDetection;
     /**
      * <p>
-     * The <code>LambdaConflictHandlerConfig</code> when configuring LAMBDA as the Conflict Handler.
+     * The <code>LambdaConflictHandlerConfig</code> when configuring <code>LAMBDA</code> as the Conflict Handler.
      * </p>
      */
     private LambdaConflictHandlerConfig lambdaConflictHandlerConfig;
@@ -88,7 +88,7 @@ public class SyncConfig implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * <b>OPTIMISTIC_CONCURRENCY</b>: Resolve conflicts by rejecting mutations when versions do not match the latest
+     * <b>OPTIMISTIC_CONCURRENCY</b>: Resolve conflicts by rejecting mutations when versions don't match the latest
      * version at the server.
      * </p>
      * </li>
@@ -99,7 +99,8 @@ public class SyncConfig implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <b>LAMBDA</b>: Resolve conflicts with a Lambda function supplied in the LambdaConflictHandlerConfig.
+     * <b>LAMBDA</b>: Resolve conflicts with an Lambda function supplied in the <code>LambdaConflictHandlerConfig</code>
+     * .
      * </p>
      * </li>
      * </ul>
@@ -109,7 +110,7 @@ public class SyncConfig implements Serializable, Cloneable, StructuredPojo {
      *        <ul>
      *        <li>
      *        <p>
-     *        <b>OPTIMISTIC_CONCURRENCY</b>: Resolve conflicts by rejecting mutations when versions do not match the
+     *        <b>OPTIMISTIC_CONCURRENCY</b>: Resolve conflicts by rejecting mutations when versions don't match the
      *        latest version at the server.
      *        </p>
      *        </li>
@@ -120,7 +121,8 @@ public class SyncConfig implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        <b>LAMBDA</b>: Resolve conflicts with a Lambda function supplied in the LambdaConflictHandlerConfig.
+     *        <b>LAMBDA</b>: Resolve conflicts with an Lambda function supplied in the
+     *        <code>LambdaConflictHandlerConfig</code>.
      *        </p>
      *        </li>
      * @see ConflictHandlerType
@@ -137,7 +139,7 @@ public class SyncConfig implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * <b>OPTIMISTIC_CONCURRENCY</b>: Resolve conflicts by rejecting mutations when versions do not match the latest
+     * <b>OPTIMISTIC_CONCURRENCY</b>: Resolve conflicts by rejecting mutations when versions don't match the latest
      * version at the server.
      * </p>
      * </li>
@@ -148,7 +150,8 @@ public class SyncConfig implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <b>LAMBDA</b>: Resolve conflicts with a Lambda function supplied in the LambdaConflictHandlerConfig.
+     * <b>LAMBDA</b>: Resolve conflicts with an Lambda function supplied in the <code>LambdaConflictHandlerConfig</code>
+     * .
      * </p>
      * </li>
      * </ul>
@@ -157,7 +160,7 @@ public class SyncConfig implements Serializable, Cloneable, StructuredPojo {
      *         <ul>
      *         <li>
      *         <p>
-     *         <b>OPTIMISTIC_CONCURRENCY</b>: Resolve conflicts by rejecting mutations when versions do not match the
+     *         <b>OPTIMISTIC_CONCURRENCY</b>: Resolve conflicts by rejecting mutations when versions don't match the
      *         latest version at the server.
      *         </p>
      *         </li>
@@ -168,7 +171,8 @@ public class SyncConfig implements Serializable, Cloneable, StructuredPojo {
      *         </li>
      *         <li>
      *         <p>
-     *         <b>LAMBDA</b>: Resolve conflicts with a Lambda function supplied in the LambdaConflictHandlerConfig.
+     *         <b>LAMBDA</b>: Resolve conflicts with an Lambda function supplied in the
+     *         <code>LambdaConflictHandlerConfig</code>.
      *         </p>
      *         </li>
      * @see ConflictHandlerType
@@ -185,7 +189,7 @@ public class SyncConfig implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * <b>OPTIMISTIC_CONCURRENCY</b>: Resolve conflicts by rejecting mutations when versions do not match the latest
+     * <b>OPTIMISTIC_CONCURRENCY</b>: Resolve conflicts by rejecting mutations when versions don't match the latest
      * version at the server.
      * </p>
      * </li>
@@ -196,7 +200,8 @@ public class SyncConfig implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <b>LAMBDA</b>: Resolve conflicts with a Lambda function supplied in the LambdaConflictHandlerConfig.
+     * <b>LAMBDA</b>: Resolve conflicts with an Lambda function supplied in the <code>LambdaConflictHandlerConfig</code>
+     * .
      * </p>
      * </li>
      * </ul>
@@ -206,7 +211,7 @@ public class SyncConfig implements Serializable, Cloneable, StructuredPojo {
      *        <ul>
      *        <li>
      *        <p>
-     *        <b>OPTIMISTIC_CONCURRENCY</b>: Resolve conflicts by rejecting mutations when versions do not match the
+     *        <b>OPTIMISTIC_CONCURRENCY</b>: Resolve conflicts by rejecting mutations when versions don't match the
      *        latest version at the server.
      *        </p>
      *        </li>
@@ -217,7 +222,8 @@ public class SyncConfig implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        <b>LAMBDA</b>: Resolve conflicts with a Lambda function supplied in the LambdaConflictHandlerConfig.
+     *        <b>LAMBDA</b>: Resolve conflicts with an Lambda function supplied in the
+     *        <code>LambdaConflictHandlerConfig</code>.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -236,7 +242,7 @@ public class SyncConfig implements Serializable, Cloneable, StructuredPojo {
      * <ul>
      * <li>
      * <p>
-     * <b>OPTIMISTIC_CONCURRENCY</b>: Resolve conflicts by rejecting mutations when versions do not match the latest
+     * <b>OPTIMISTIC_CONCURRENCY</b>: Resolve conflicts by rejecting mutations when versions don't match the latest
      * version at the server.
      * </p>
      * </li>
@@ -247,7 +253,8 @@ public class SyncConfig implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <b>LAMBDA</b>: Resolve conflicts with a Lambda function supplied in the LambdaConflictHandlerConfig.
+     * <b>LAMBDA</b>: Resolve conflicts with an Lambda function supplied in the <code>LambdaConflictHandlerConfig</code>
+     * .
      * </p>
      * </li>
      * </ul>
@@ -257,7 +264,7 @@ public class SyncConfig implements Serializable, Cloneable, StructuredPojo {
      *        <ul>
      *        <li>
      *        <p>
-     *        <b>OPTIMISTIC_CONCURRENCY</b>: Resolve conflicts by rejecting mutations when versions do not match the
+     *        <b>OPTIMISTIC_CONCURRENCY</b>: Resolve conflicts by rejecting mutations when versions don't match the
      *        latest version at the server.
      *        </p>
      *        </li>
@@ -268,7 +275,8 @@ public class SyncConfig implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        <b>LAMBDA</b>: Resolve conflicts with a Lambda function supplied in the LambdaConflictHandlerConfig.
+     *        <b>LAMBDA</b>: Resolve conflicts with an Lambda function supplied in the
+     *        <code>LambdaConflictHandlerConfig</code>.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -292,7 +300,7 @@ public class SyncConfig implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <b>NONE</b>: Do not detect conflicts when executing this resolver.
+     * <b>NONE</b>: Do not detect conflicts when invoking this resolver.
      * </p>
      * </li>
      * </ul>
@@ -307,7 +315,7 @@ public class SyncConfig implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        <b>NONE</b>: Do not detect conflicts when executing this resolver.
+     *        <b>NONE</b>: Do not detect conflicts when invoking this resolver.
      *        </p>
      *        </li>
      * @see ConflictDetectionType
@@ -329,7 +337,7 @@ public class SyncConfig implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <b>NONE</b>: Do not detect conflicts when executing this resolver.
+     * <b>NONE</b>: Do not detect conflicts when invoking this resolver.
      * </p>
      * </li>
      * </ul>
@@ -343,7 +351,7 @@ public class SyncConfig implements Serializable, Cloneable, StructuredPojo {
      *         </li>
      *         <li>
      *         <p>
-     *         <b>NONE</b>: Do not detect conflicts when executing this resolver.
+     *         <b>NONE</b>: Do not detect conflicts when invoking this resolver.
      *         </p>
      *         </li>
      * @see ConflictDetectionType
@@ -365,7 +373,7 @@ public class SyncConfig implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <b>NONE</b>: Do not detect conflicts when executing this resolver.
+     * <b>NONE</b>: Do not detect conflicts when invoking this resolver.
      * </p>
      * </li>
      * </ul>
@@ -380,7 +388,7 @@ public class SyncConfig implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        <b>NONE</b>: Do not detect conflicts when executing this resolver.
+     *        <b>NONE</b>: Do not detect conflicts when invoking this resolver.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -404,7 +412,7 @@ public class SyncConfig implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * <b>NONE</b>: Do not detect conflicts when executing this resolver.
+     * <b>NONE</b>: Do not detect conflicts when invoking this resolver.
      * </p>
      * </li>
      * </ul>
@@ -419,7 +427,7 @@ public class SyncConfig implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        <b>NONE</b>: Do not detect conflicts when executing this resolver.
+     *        <b>NONE</b>: Do not detect conflicts when invoking this resolver.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -433,11 +441,11 @@ public class SyncConfig implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The <code>LambdaConflictHandlerConfig</code> when configuring LAMBDA as the Conflict Handler.
+     * The <code>LambdaConflictHandlerConfig</code> when configuring <code>LAMBDA</code> as the Conflict Handler.
      * </p>
      * 
      * @param lambdaConflictHandlerConfig
-     *        The <code>LambdaConflictHandlerConfig</code> when configuring LAMBDA as the Conflict Handler.
+     *        The <code>LambdaConflictHandlerConfig</code> when configuring <code>LAMBDA</code> as the Conflict Handler.
      */
 
     public void setLambdaConflictHandlerConfig(LambdaConflictHandlerConfig lambdaConflictHandlerConfig) {
@@ -446,10 +454,11 @@ public class SyncConfig implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The <code>LambdaConflictHandlerConfig</code> when configuring LAMBDA as the Conflict Handler.
+     * The <code>LambdaConflictHandlerConfig</code> when configuring <code>LAMBDA</code> as the Conflict Handler.
      * </p>
      * 
-     * @return The <code>LambdaConflictHandlerConfig</code> when configuring LAMBDA as the Conflict Handler.
+     * @return The <code>LambdaConflictHandlerConfig</code> when configuring <code>LAMBDA</code> as the Conflict
+     *         Handler.
      */
 
     public LambdaConflictHandlerConfig getLambdaConflictHandlerConfig() {
@@ -458,11 +467,11 @@ public class SyncConfig implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The <code>LambdaConflictHandlerConfig</code> when configuring LAMBDA as the Conflict Handler.
+     * The <code>LambdaConflictHandlerConfig</code> when configuring <code>LAMBDA</code> as the Conflict Handler.
      * </p>
      * 
      * @param lambdaConflictHandlerConfig
-     *        The <code>LambdaConflictHandlerConfig</code> when configuring LAMBDA as the Conflict Handler.
+     *        The <code>LambdaConflictHandlerConfig</code> when configuring <code>LAMBDA</code> as the Conflict Handler.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The caching configuration for a resolver that has caching enabled.
+ * The caching configuration for a resolver that has caching activated.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/appsync-2017-07-25/CachingConfig" target="_top">AWS API
@@ -30,16 +30,16 @@ public class CachingConfig implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The TTL in seconds for a resolver that has caching enabled.
+     * The TTL in seconds for a resolver that has caching activated.
      * </p>
      * <p>
-     * Valid values are between 1 and 3600 seconds.
+     * Valid values are 1–3,600 seconds.
      * </p>
      */
     private Long ttl;
     /**
      * <p>
-     * The caching keys for a resolver that has caching enabled.
+     * The caching keys for a resolver that has caching activated.
      * </p>
      * <p>
      * Valid values are entries from the <code>$context.arguments</code>, <code>$context.source</code>, and
@@ -50,16 +50,16 @@ public class CachingConfig implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The TTL in seconds for a resolver that has caching enabled.
+     * The TTL in seconds for a resolver that has caching activated.
      * </p>
      * <p>
-     * Valid values are between 1 and 3600 seconds.
+     * Valid values are 1–3,600 seconds.
      * </p>
      * 
      * @param ttl
-     *        The TTL in seconds for a resolver that has caching enabled.</p>
+     *        The TTL in seconds for a resolver that has caching activated.</p>
      *        <p>
-     *        Valid values are between 1 and 3600 seconds.
+     *        Valid values are 1–3,600 seconds.
      */
 
     public void setTtl(Long ttl) {
@@ -68,15 +68,15 @@ public class CachingConfig implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The TTL in seconds for a resolver that has caching enabled.
+     * The TTL in seconds for a resolver that has caching activated.
      * </p>
      * <p>
-     * Valid values are between 1 and 3600 seconds.
+     * Valid values are 1–3,600 seconds.
      * </p>
      * 
-     * @return The TTL in seconds for a resolver that has caching enabled.</p>
+     * @return The TTL in seconds for a resolver that has caching activated.</p>
      *         <p>
-     *         Valid values are between 1 and 3600 seconds.
+     *         Valid values are 1–3,600 seconds.
      */
 
     public Long getTtl() {
@@ -85,16 +85,16 @@ public class CachingConfig implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The TTL in seconds for a resolver that has caching enabled.
+     * The TTL in seconds for a resolver that has caching activated.
      * </p>
      * <p>
-     * Valid values are between 1 and 3600 seconds.
+     * Valid values are 1–3,600 seconds.
      * </p>
      * 
      * @param ttl
-     *        The TTL in seconds for a resolver that has caching enabled.</p>
+     *        The TTL in seconds for a resolver that has caching activated.</p>
      *        <p>
-     *        Valid values are between 1 and 3600 seconds.
+     *        Valid values are 1–3,600 seconds.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -105,14 +105,14 @@ public class CachingConfig implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The caching keys for a resolver that has caching enabled.
+     * The caching keys for a resolver that has caching activated.
      * </p>
      * <p>
      * Valid values are entries from the <code>$context.arguments</code>, <code>$context.source</code>, and
      * <code>$context.identity</code> maps.
      * </p>
      * 
-     * @return The caching keys for a resolver that has caching enabled.</p>
+     * @return The caching keys for a resolver that has caching activated.</p>
      *         <p>
      *         Valid values are entries from the <code>$context.arguments</code>, <code>$context.source</code>, and
      *         <code>$context.identity</code> maps.
@@ -124,7 +124,7 @@ public class CachingConfig implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The caching keys for a resolver that has caching enabled.
+     * The caching keys for a resolver that has caching activated.
      * </p>
      * <p>
      * Valid values are entries from the <code>$context.arguments</code>, <code>$context.source</code>, and
@@ -132,7 +132,7 @@ public class CachingConfig implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param cachingKeys
-     *        The caching keys for a resolver that has caching enabled.</p>
+     *        The caching keys for a resolver that has caching activated.</p>
      *        <p>
      *        Valid values are entries from the <code>$context.arguments</code>, <code>$context.source</code>, and
      *        <code>$context.identity</code> maps.
@@ -149,7 +149,7 @@ public class CachingConfig implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The caching keys for a resolver that has caching enabled.
+     * The caching keys for a resolver that has caching activated.
      * </p>
      * <p>
      * Valid values are entries from the <code>$context.arguments</code>, <code>$context.source</code>, and
@@ -162,7 +162,7 @@ public class CachingConfig implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param cachingKeys
-     *        The caching keys for a resolver that has caching enabled.</p>
+     *        The caching keys for a resolver that has caching activated.</p>
      *        <p>
      *        Valid values are entries from the <code>$context.arguments</code>, <code>$context.source</code>, and
      *        <code>$context.identity</code> maps.
@@ -181,7 +181,7 @@ public class CachingConfig implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The caching keys for a resolver that has caching enabled.
+     * The caching keys for a resolver that has caching activated.
      * </p>
      * <p>
      * Valid values are entries from the <code>$context.arguments</code>, <code>$context.source</code>, and
@@ -189,7 +189,7 @@ public class CachingConfig implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param cachingKeys
-     *        The caching keys for a resolver that has caching enabled.</p>
+     *        The caching keys for a resolver that has caching activated.</p>
      *        <p>
      *        Valid values are entries from the <code>$context.arguments</code>, <code>$context.source</code>, and
      *        <code>$context.identity</code> maps.

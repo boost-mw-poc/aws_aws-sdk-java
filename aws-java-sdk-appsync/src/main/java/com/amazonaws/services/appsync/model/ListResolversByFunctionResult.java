@@ -31,7 +31,7 @@ public class ListResolversByFunctionResult extends com.amazonaws.AmazonWebServic
     private java.util.List<Resolver> resolvers;
     /**
      * <p>
-     * An identifier that can be used to return the next set of items in the list.
+     * An identifier that you can use to return the next set of items in the list.
      * </p>
      */
     private String nextToken;
@@ -108,11 +108,11 @@ public class ListResolversByFunctionResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * An identifier that can be used to return the next set of items in the list.
+     * An identifier that you can use to return the next set of items in the list.
      * </p>
      * 
      * @param nextToken
-     *        An identifier that can be used to return the next set of items in the list.
+     *        An identifier that you can use to return the next set of items in the list.
      */
 
     public void setNextToken(String nextToken) {
@@ -121,10 +121,10 @@ public class ListResolversByFunctionResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * An identifier that can be used to return the next set of items in the list.
+     * An identifier that you can use to return the next set of items in the list.
      * </p>
      * 
-     * @return An identifier that can be used to return the next set of items in the list.
+     * @return An identifier that you can use to return the next set of items in the list.
      */
 
     public String getNextToken() {
@@ -133,11 +133,11 @@ public class ListResolversByFunctionResult extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * An identifier that can be used to return the next set of items in the list.
+     * An identifier that you can use to return the next set of items in the list.
      * </p>
      * 
      * @param nextToken
-     *        An identifier that can be used to return the next set of items in the list.
+     *        An identifier that you can use to return the next set of items in the list.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

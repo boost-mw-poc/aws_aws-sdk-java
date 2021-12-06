@@ -51,8 +51,8 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
     private String type;
     /**
      * <p>
-     * The Identity and Access Management service role ARN for the data source. The system assumes this role when
-     * accessing the data source.
+     * The Identity and Access Management (IAM) service role Amazon Resource Name (ARN) for the data source. The system
+     * assumes this role when accessing the data source.
      * </p>
      */
     private String serviceRoleArn;
@@ -64,7 +64,7 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
     private DynamodbDataSourceConfig dynamodbConfig;
     /**
      * <p>
-     * Amazon Web Services Lambda settings.
+     * Lambda settings.
      * </p>
      */
     private LambdaDataSourceConfig lambdaConfig;
@@ -279,13 +279,13 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The Identity and Access Management service role ARN for the data source. The system assumes this role when
-     * accessing the data source.
+     * The Identity and Access Management (IAM) service role Amazon Resource Name (ARN) for the data source. The system
+     * assumes this role when accessing the data source.
      * </p>
      * 
      * @param serviceRoleArn
-     *        The Identity and Access Management service role ARN for the data source. The system assumes this role when
-     *        accessing the data source.
+     *        The Identity and Access Management (IAM) service role Amazon Resource Name (ARN) for the data source. The
+     *        system assumes this role when accessing the data source.
      */
 
     public void setServiceRoleArn(String serviceRoleArn) {
@@ -294,12 +294,12 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The Identity and Access Management service role ARN for the data source. The system assumes this role when
-     * accessing the data source.
+     * The Identity and Access Management (IAM) service role Amazon Resource Name (ARN) for the data source. The system
+     * assumes this role when accessing the data source.
      * </p>
      * 
-     * @return The Identity and Access Management service role ARN for the data source. The system assumes this role
-     *         when accessing the data source.
+     * @return The Identity and Access Management (IAM) service role Amazon Resource Name (ARN) for the data source. The
+     *         system assumes this role when accessing the data source.
      */
 
     public String getServiceRoleArn() {
@@ -308,13 +308,13 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The Identity and Access Management service role ARN for the data source. The system assumes this role when
-     * accessing the data source.
+     * The Identity and Access Management (IAM) service role Amazon Resource Name (ARN) for the data source. The system
+     * assumes this role when accessing the data source.
      * </p>
      * 
      * @param serviceRoleArn
-     *        The Identity and Access Management service role ARN for the data source. The system assumes this role when
-     *        accessing the data source.
+     *        The Identity and Access Management (IAM) service role Amazon Resource Name (ARN) for the data source. The
+     *        system assumes this role when accessing the data source.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -365,11 +365,11 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Amazon Web Services Lambda settings.
+     * Lambda settings.
      * </p>
      * 
      * @param lambdaConfig
-     *        Amazon Web Services Lambda settings.
+     *        Lambda settings.
      */
 
     public void setLambdaConfig(LambdaDataSourceConfig lambdaConfig) {
@@ -378,10 +378,10 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Amazon Web Services Lambda settings.
+     * Lambda settings.
      * </p>
      * 
-     * @return Amazon Web Services Lambda settings.
+     * @return Lambda settings.
      */
 
     public LambdaDataSourceConfig getLambdaConfig() {
@@ -390,11 +390,11 @@ public class CreateDataSourceRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Amazon Web Services Lambda settings.
+     * Lambda settings.
      * </p>
      * 
      * @param lambdaConfig
-     *        Amazon Web Services Lambda settings.
+     *        Lambda settings.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

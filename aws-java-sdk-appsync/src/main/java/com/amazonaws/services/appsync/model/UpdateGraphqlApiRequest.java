@@ -51,7 +51,7 @@ public class UpdateGraphqlApiRequest extends com.amazonaws.AmazonWebServiceReque
     private String authenticationType;
     /**
      * <p>
-     * The new Amazon Cognito user pool configuration for the <code>GraphqlApi</code> object.
+     * The new Amazon Cognito user pool configuration for the <code>~GraphqlApi</code> object.
      * </p>
      */
     private UserPoolConfig userPoolConfig;
@@ -69,13 +69,13 @@ public class UpdateGraphqlApiRequest extends com.amazonaws.AmazonWebServiceReque
     private java.util.List<AdditionalAuthenticationProvider> additionalAuthenticationProviders;
     /**
      * <p>
-     * A flag indicating whether to enable X-Ray tracing for the <code>GraphqlApi</code>.
+     * A flag indicating whether to use X-Ray tracing for the <code>GraphqlApi</code>.
      * </p>
      */
     private Boolean xrayEnabled;
     /**
      * <p>
-     * Configuration for Amazon Web Services Lambda function authorization.
+     * Configuration for Lambda function authorization.
      * </p>
      */
     private LambdaAuthorizerConfig lambdaAuthorizerConfig;
@@ -261,11 +261,11 @@ public class UpdateGraphqlApiRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The new Amazon Cognito user pool configuration for the <code>GraphqlApi</code> object.
+     * The new Amazon Cognito user pool configuration for the <code>~GraphqlApi</code> object.
      * </p>
      * 
      * @param userPoolConfig
-     *        The new Amazon Cognito user pool configuration for the <code>GraphqlApi</code> object.
+     *        The new Amazon Cognito user pool configuration for the <code>~GraphqlApi</code> object.
      */
 
     public void setUserPoolConfig(UserPoolConfig userPoolConfig) {
@@ -274,10 +274,10 @@ public class UpdateGraphqlApiRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The new Amazon Cognito user pool configuration for the <code>GraphqlApi</code> object.
+     * The new Amazon Cognito user pool configuration for the <code>~GraphqlApi</code> object.
      * </p>
      * 
-     * @return The new Amazon Cognito user pool configuration for the <code>GraphqlApi</code> object.
+     * @return The new Amazon Cognito user pool configuration for the <code>~GraphqlApi</code> object.
      */
 
     public UserPoolConfig getUserPoolConfig() {
@@ -286,11 +286,11 @@ public class UpdateGraphqlApiRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The new Amazon Cognito user pool configuration for the <code>GraphqlApi</code> object.
+     * The new Amazon Cognito user pool configuration for the <code>~GraphqlApi</code> object.
      * </p>
      * 
      * @param userPoolConfig
-     *        The new Amazon Cognito user pool configuration for the <code>GraphqlApi</code> object.
+     *        The new Amazon Cognito user pool configuration for the <code>~GraphqlApi</code> object.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -412,11 +412,11 @@ public class UpdateGraphqlApiRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * A flag indicating whether to enable X-Ray tracing for the <code>GraphqlApi</code>.
+     * A flag indicating whether to use X-Ray tracing for the <code>GraphqlApi</code>.
      * </p>
      * 
      * @param xrayEnabled
-     *        A flag indicating whether to enable X-Ray tracing for the <code>GraphqlApi</code>.
+     *        A flag indicating whether to use X-Ray tracing for the <code>GraphqlApi</code>.
      */
 
     public void setXrayEnabled(Boolean xrayEnabled) {
@@ -425,10 +425,10 @@ public class UpdateGraphqlApiRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * A flag indicating whether to enable X-Ray tracing for the <code>GraphqlApi</code>.
+     * A flag indicating whether to use X-Ray tracing for the <code>GraphqlApi</code>.
      * </p>
      * 
-     * @return A flag indicating whether to enable X-Ray tracing for the <code>GraphqlApi</code>.
+     * @return A flag indicating whether to use X-Ray tracing for the <code>GraphqlApi</code>.
      */
 
     public Boolean getXrayEnabled() {
@@ -437,11 +437,11 @@ public class UpdateGraphqlApiRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * A flag indicating whether to enable X-Ray tracing for the <code>GraphqlApi</code>.
+     * A flag indicating whether to use X-Ray tracing for the <code>GraphqlApi</code>.
      * </p>
      * 
      * @param xrayEnabled
-     *        A flag indicating whether to enable X-Ray tracing for the <code>GraphqlApi</code>.
+     *        A flag indicating whether to use X-Ray tracing for the <code>GraphqlApi</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -452,10 +452,10 @@ public class UpdateGraphqlApiRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * A flag indicating whether to enable X-Ray tracing for the <code>GraphqlApi</code>.
+     * A flag indicating whether to use X-Ray tracing for the <code>GraphqlApi</code>.
      * </p>
      * 
-     * @return A flag indicating whether to enable X-Ray tracing for the <code>GraphqlApi</code>.
+     * @return A flag indicating whether to use X-Ray tracing for the <code>GraphqlApi</code>.
      */
 
     public Boolean isXrayEnabled() {
@@ -464,11 +464,11 @@ public class UpdateGraphqlApiRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Configuration for Amazon Web Services Lambda function authorization.
+     * Configuration for Lambda function authorization.
      * </p>
      * 
      * @param lambdaAuthorizerConfig
-     *        Configuration for Amazon Web Services Lambda function authorization.
+     *        Configuration for Lambda function authorization.
      */
 
     public void setLambdaAuthorizerConfig(LambdaAuthorizerConfig lambdaAuthorizerConfig) {
@@ -477,10 +477,10 @@ public class UpdateGraphqlApiRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Configuration for Amazon Web Services Lambda function authorization.
+     * Configuration for Lambda function authorization.
      * </p>
      * 
-     * @return Configuration for Amazon Web Services Lambda function authorization.
+     * @return Configuration for Lambda function authorization.
      */
 
     public LambdaAuthorizerConfig getLambdaAuthorizerConfig() {
@@ -489,11 +489,11 @@ public class UpdateGraphqlApiRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * Configuration for Amazon Web Services Lambda function authorization.
+     * Configuration for Lambda function authorization.
      * </p>
      * 
      * @param lambdaAuthorizerConfig
-     *        Configuration for Amazon Web Services Lambda function authorization.
+     *        Configuration for Lambda function authorization.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

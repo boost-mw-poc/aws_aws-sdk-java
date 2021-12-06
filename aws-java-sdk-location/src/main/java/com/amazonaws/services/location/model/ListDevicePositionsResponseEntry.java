@@ -30,6 +30,12 @@ public class ListDevicePositionsResponseEntry implements Serializable, Cloneable
 
     /**
      * <p>
+     * The accuracy of the device position.
+     * </p>
+     */
+    private PositionalAccuracy accuracy;
+    /**
+     * <p>
      * The ID of the device for this position.
      * </p>
      */
@@ -42,12 +48,58 @@ public class ListDevicePositionsResponseEntry implements Serializable, Cloneable
     private java.util.List<Double> position;
     /**
      * <p>
+     * The properties associated with the position.
+     * </p>
+     */
+    private java.util.Map<String, String> positionProperties;
+    /**
+     * <p>
      * The timestamp at which the device position was determined. Uses <a
      * href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
      * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
      * </p>
      */
     private java.util.Date sampleTime;
+
+    /**
+     * <p>
+     * The accuracy of the device position.
+     * </p>
+     * 
+     * @param accuracy
+     *        The accuracy of the device position.
+     */
+
+    public void setAccuracy(PositionalAccuracy accuracy) {
+        this.accuracy = accuracy;
+    }
+
+    /**
+     * <p>
+     * The accuracy of the device position.
+     * </p>
+     * 
+     * @return The accuracy of the device position.
+     */
+
+    public PositionalAccuracy getAccuracy() {
+        return this.accuracy;
+    }
+
+    /**
+     * <p>
+     * The accuracy of the device position.
+     * </p>
+     * 
+     * @param accuracy
+     *        The accuracy of the device position.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListDevicePositionsResponseEntry withAccuracy(PositionalAccuracy accuracy) {
+        setAccuracy(accuracy);
+        return this;
+    }
 
     /**
      * <p>
@@ -161,6 +213,74 @@ public class ListDevicePositionsResponseEntry implements Serializable, Cloneable
 
     /**
      * <p>
+     * The properties associated with the position.
+     * </p>
+     * 
+     * @return The properties associated with the position.
+     */
+
+    public java.util.Map<String, String> getPositionProperties() {
+        return positionProperties;
+    }
+
+    /**
+     * <p>
+     * The properties associated with the position.
+     * </p>
+     * 
+     * @param positionProperties
+     *        The properties associated with the position.
+     */
+
+    public void setPositionProperties(java.util.Map<String, String> positionProperties) {
+        this.positionProperties = positionProperties;
+    }
+
+    /**
+     * <p>
+     * The properties associated with the position.
+     * </p>
+     * 
+     * @param positionProperties
+     *        The properties associated with the position.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListDevicePositionsResponseEntry withPositionProperties(java.util.Map<String, String> positionProperties) {
+        setPositionProperties(positionProperties);
+        return this;
+    }
+
+    /**
+     * Add a single PositionProperties entry
+     *
+     * @see ListDevicePositionsResponseEntry#withPositionProperties
+     * @returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListDevicePositionsResponseEntry addPositionPropertiesEntry(String key, String value) {
+        if (null == this.positionProperties) {
+            this.positionProperties = new java.util.HashMap<String, String>();
+        }
+        if (this.positionProperties.containsKey(key))
+            throw new IllegalArgumentException("Duplicated keys (" + key.toString() + ") are provided.");
+        this.positionProperties.put(key, value);
+        return this;
+    }
+
+    /**
+     * Removes all the entries added into PositionProperties.
+     *
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ListDevicePositionsResponseEntry clearPositionPropertiesEntries() {
+        this.positionProperties = null;
+        return this;
+    }
+
+    /**
+     * <p>
      * The timestamp at which the device position was determined. Uses <a
      * href="https://www.iso.org/iso-8601-date-and-time-format.html"> ISO 8601</a> format:
      * <code>YYYY-MM-DDThh:mm:ss.sssZ</code>.
@@ -223,10 +343,14 @@ public class ListDevicePositionsResponseEntry implements Serializable, Cloneable
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getAccuracy() != null)
+            sb.append("Accuracy: ").append(getAccuracy()).append(",");
         if (getDeviceId() != null)
             sb.append("DeviceId: ").append(getDeviceId()).append(",");
         if (getPosition() != null)
             sb.append("Position: ").append("***Sensitive Data Redacted***").append(",");
+        if (getPositionProperties() != null)
+            sb.append("PositionProperties: ").append("***Sensitive Data Redacted***").append(",");
         if (getSampleTime() != null)
             sb.append("SampleTime: ").append(getSampleTime());
         sb.append("}");
@@ -243,6 +367,10 @@ public class ListDevicePositionsResponseEntry implements Serializable, Cloneable
         if (obj instanceof ListDevicePositionsResponseEntry == false)
             return false;
         ListDevicePositionsResponseEntry other = (ListDevicePositionsResponseEntry) obj;
+        if (other.getAccuracy() == null ^ this.getAccuracy() == null)
+            return false;
+        if (other.getAccuracy() != null && other.getAccuracy().equals(this.getAccuracy()) == false)
+            return false;
         if (other.getDeviceId() == null ^ this.getDeviceId() == null)
             return false;
         if (other.getDeviceId() != null && other.getDeviceId().equals(this.getDeviceId()) == false)
@@ -250,6 +378,10 @@ public class ListDevicePositionsResponseEntry implements Serializable, Cloneable
         if (other.getPosition() == null ^ this.getPosition() == null)
             return false;
         if (other.getPosition() != null && other.getPosition().equals(this.getPosition()) == false)
+            return false;
+        if (other.getPositionProperties() == null ^ this.getPositionProperties() == null)
+            return false;
+        if (other.getPositionProperties() != null && other.getPositionProperties().equals(this.getPositionProperties()) == false)
             return false;
         if (other.getSampleTime() == null ^ this.getSampleTime() == null)
             return false;
@@ -263,8 +395,10 @@ public class ListDevicePositionsResponseEntry implements Serializable, Cloneable
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getAccuracy() == null) ? 0 : getAccuracy().hashCode());
         hashCode = prime * hashCode + ((getDeviceId() == null) ? 0 : getDeviceId().hashCode());
         hashCode = prime * hashCode + ((getPosition() == null) ? 0 : getPosition().hashCode());
+        hashCode = prime * hashCode + ((getPositionProperties() == null) ? 0 : getPositionProperties().hashCode());
         hashCode = prime * hashCode + ((getSampleTime() == null) ? 0 : getSampleTime().hashCode());
         return hashCode;
     }

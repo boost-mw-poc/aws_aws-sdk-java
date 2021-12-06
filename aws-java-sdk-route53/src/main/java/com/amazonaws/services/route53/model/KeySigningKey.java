@@ -37,11 +37,11 @@ public class KeySigningKey implements Serializable, Cloneable {
     private String name;
     /**
      * <p>
-     * The Amazon resource name (ARN) used to identify the customer managed customer master key (CMK) in Key Management
-     * Service (KMS). The <code>KmsArn</code> must be unique for each key-signing key (KSK) in a single hosted zone.
+     * The Amazon resource name (ARN) used to identify the customer managed key in Key Management Service (KMS). The
+     * <code>KmsArn</code> must be unique for each key-signing key (KSK) in a single hosted zone.
      * </p>
      * <p>
-     * You must configure the CMK as follows:
+     * You must configure the customer managed key as follows:
      * </p>
      * <dl>
      * <dt>Status</dt>
@@ -98,7 +98,7 @@ public class KeySigningKey implements Serializable, Cloneable {
      * </dd>
      * </dl>
      * <p>
-     * For more information about working with the customer managed CMK in KMS, see <a
+     * For more information about working with the customer managed key in KMS, see <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html">Key Management Service concepts</a>.
      * </p>
      */
@@ -201,8 +201,7 @@ public class KeySigningKey implements Serializable, Cloneable {
      * <dd>
      * <p>
      * There is a problem with the KSK that requires you to take action to resolve. For example, the customer managed
-     * customer master key (CMK) might have been deleted, or the permissions for the customer managed CMK might have
-     * been changed.
+     * key might have been deleted, or the permissions for the customer managed key might have been changed.
      * </p>
      * </dd>
      * <dt>INTERNAL_FAILURE</dt>
@@ -284,11 +283,11 @@ public class KeySigningKey implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The Amazon resource name (ARN) used to identify the customer managed customer master key (CMK) in Key Management
-     * Service (KMS). The <code>KmsArn</code> must be unique for each key-signing key (KSK) in a single hosted zone.
+     * The Amazon resource name (ARN) used to identify the customer managed key in Key Management Service (KMS). The
+     * <code>KmsArn</code> must be unique for each key-signing key (KSK) in a single hosted zone.
      * </p>
      * <p>
-     * You must configure the CMK as follows:
+     * You must configure the customer managed key as follows:
      * </p>
      * <dl>
      * <dt>Status</dt>
@@ -345,16 +344,15 @@ public class KeySigningKey implements Serializable, Cloneable {
      * </dd>
      * </dl>
      * <p>
-     * For more information about working with the customer managed CMK in KMS, see <a
+     * For more information about working with the customer managed key in KMS, see <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html">Key Management Service concepts</a>.
      * </p>
      * 
      * @param kmsArn
-     *        The Amazon resource name (ARN) used to identify the customer managed customer master key (CMK) in Key
-     *        Management Service (KMS). The <code>KmsArn</code> must be unique for each key-signing key (KSK) in a
-     *        single hosted zone.</p>
+     *        The Amazon resource name (ARN) used to identify the customer managed key in Key Management Service (KMS).
+     *        The <code>KmsArn</code> must be unique for each key-signing key (KSK) in a single hosted zone.</p>
      *        <p>
-     *        You must configure the CMK as follows:
+     *        You must configure the customer managed key as follows:
      *        </p>
      *        <dl>
      *        <dt>Status</dt>
@@ -411,7 +409,7 @@ public class KeySigningKey implements Serializable, Cloneable {
      *        </dd>
      *        </dl>
      *        <p>
-     *        For more information about working with the customer managed CMK in KMS, see <a
+     *        For more information about working with the customer managed key in KMS, see <a
      *        href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html">Key Management Service
      *        concepts</a>.
      */
@@ -422,11 +420,11 @@ public class KeySigningKey implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The Amazon resource name (ARN) used to identify the customer managed customer master key (CMK) in Key Management
-     * Service (KMS). The <code>KmsArn</code> must be unique for each key-signing key (KSK) in a single hosted zone.
+     * The Amazon resource name (ARN) used to identify the customer managed key in Key Management Service (KMS). The
+     * <code>KmsArn</code> must be unique for each key-signing key (KSK) in a single hosted zone.
      * </p>
      * <p>
-     * You must configure the CMK as follows:
+     * You must configure the customer managed key as follows:
      * </p>
      * <dl>
      * <dt>Status</dt>
@@ -483,15 +481,14 @@ public class KeySigningKey implements Serializable, Cloneable {
      * </dd>
      * </dl>
      * <p>
-     * For more information about working with the customer managed CMK in KMS, see <a
+     * For more information about working with the customer managed key in KMS, see <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html">Key Management Service concepts</a>.
      * </p>
      * 
-     * @return The Amazon resource name (ARN) used to identify the customer managed customer master key (CMK) in Key
-     *         Management Service (KMS). The <code>KmsArn</code> must be unique for each key-signing key (KSK) in a
-     *         single hosted zone.</p>
+     * @return The Amazon resource name (ARN) used to identify the customer managed key in Key Management Service (KMS).
+     *         The <code>KmsArn</code> must be unique for each key-signing key (KSK) in a single hosted zone.</p>
      *         <p>
-     *         You must configure the CMK as follows:
+     *         You must configure the customer managed key as follows:
      *         </p>
      *         <dl>
      *         <dt>Status</dt>
@@ -548,7 +545,7 @@ public class KeySigningKey implements Serializable, Cloneable {
      *         </dd>
      *         </dl>
      *         <p>
-     *         For more information about working with the customer managed CMK in KMS, see <a
+     *         For more information about working with the customer managed key in KMS, see <a
      *         href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html">Key Management Service
      *         concepts</a>.
      */
@@ -559,11 +556,11 @@ public class KeySigningKey implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The Amazon resource name (ARN) used to identify the customer managed customer master key (CMK) in Key Management
-     * Service (KMS). The <code>KmsArn</code> must be unique for each key-signing key (KSK) in a single hosted zone.
+     * The Amazon resource name (ARN) used to identify the customer managed key in Key Management Service (KMS). The
+     * <code>KmsArn</code> must be unique for each key-signing key (KSK) in a single hosted zone.
      * </p>
      * <p>
-     * You must configure the CMK as follows:
+     * You must configure the customer managed key as follows:
      * </p>
      * <dl>
      * <dt>Status</dt>
@@ -620,16 +617,15 @@ public class KeySigningKey implements Serializable, Cloneable {
      * </dd>
      * </dl>
      * <p>
-     * For more information about working with the customer managed CMK in KMS, see <a
+     * For more information about working with the customer managed key in KMS, see <a
      * href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html">Key Management Service concepts</a>.
      * </p>
      * 
      * @param kmsArn
-     *        The Amazon resource name (ARN) used to identify the customer managed customer master key (CMK) in Key
-     *        Management Service (KMS). The <code>KmsArn</code> must be unique for each key-signing key (KSK) in a
-     *        single hosted zone.</p>
+     *        The Amazon resource name (ARN) used to identify the customer managed key in Key Management Service (KMS).
+     *        The <code>KmsArn</code> must be unique for each key-signing key (KSK) in a single hosted zone.</p>
      *        <p>
-     *        You must configure the CMK as follows:
+     *        You must configure the customer managed key as follows:
      *        </p>
      *        <dl>
      *        <dt>Status</dt>
@@ -686,7 +682,7 @@ public class KeySigningKey implements Serializable, Cloneable {
      *        </dd>
      *        </dl>
      *        <p>
-     *        For more information about working with the customer managed CMK in KMS, see <a
+     *        For more information about working with the customer managed key in KMS, see <a
      *        href="https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html">Key Management Service
      *        concepts</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -1176,8 +1172,7 @@ public class KeySigningKey implements Serializable, Cloneable {
      * <dd>
      * <p>
      * There is a problem with the KSK that requires you to take action to resolve. For example, the customer managed
-     * customer master key (CMK) might have been deleted, or the permissions for the customer managed CMK might have
-     * been changed.
+     * key might have been deleted, or the permissions for the customer managed key might have been changed.
      * </p>
      * </dd>
      * <dt>INTERNAL_FAILURE</dt>
@@ -1217,8 +1212,8 @@ public class KeySigningKey implements Serializable, Cloneable {
      *        <dd>
      *        <p>
      *        There is a problem with the KSK that requires you to take action to resolve. For example, the customer
-     *        managed customer master key (CMK) might have been deleted, or the permissions for the customer managed CMK
-     *        might have been changed.
+     *        managed key might have been deleted, or the permissions for the customer managed key might have been
+     *        changed.
      *        </p>
      *        </dd>
      *        <dt>INTERNAL_FAILURE</dt>
@@ -1265,8 +1260,7 @@ public class KeySigningKey implements Serializable, Cloneable {
      * <dd>
      * <p>
      * There is a problem with the KSK that requires you to take action to resolve. For example, the customer managed
-     * customer master key (CMK) might have been deleted, or the permissions for the customer managed CMK might have
-     * been changed.
+     * key might have been deleted, or the permissions for the customer managed key might have been changed.
      * </p>
      * </dd>
      * <dt>INTERNAL_FAILURE</dt>
@@ -1305,8 +1299,8 @@ public class KeySigningKey implements Serializable, Cloneable {
      *         <dd>
      *         <p>
      *         There is a problem with the KSK that requires you to take action to resolve. For example, the customer
-     *         managed customer master key (CMK) might have been deleted, or the permissions for the customer managed
-     *         CMK might have been changed.
+     *         managed key might have been deleted, or the permissions for the customer managed key might have been
+     *         changed.
      *         </p>
      *         </dd>
      *         <dt>INTERNAL_FAILURE</dt>
@@ -1353,8 +1347,7 @@ public class KeySigningKey implements Serializable, Cloneable {
      * <dd>
      * <p>
      * There is a problem with the KSK that requires you to take action to resolve. For example, the customer managed
-     * customer master key (CMK) might have been deleted, or the permissions for the customer managed CMK might have
-     * been changed.
+     * key might have been deleted, or the permissions for the customer managed key might have been changed.
      * </p>
      * </dd>
      * <dt>INTERNAL_FAILURE</dt>
@@ -1394,8 +1387,8 @@ public class KeySigningKey implements Serializable, Cloneable {
      *        <dd>
      *        <p>
      *        There is a problem with the KSK that requires you to take action to resolve. For example, the customer
-     *        managed customer master key (CMK) might have been deleted, or the permissions for the customer managed CMK
-     *        might have been changed.
+     *        managed key might have been deleted, or the permissions for the customer managed key might have been
+     *        changed.
      *        </p>
      *        </dd>
      *        <dt>INTERNAL_FAILURE</dt>

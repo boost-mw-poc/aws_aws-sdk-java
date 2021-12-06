@@ -48,6 +48,10 @@ public class DevicePositionJsonUnmarshaller implements Unmarshaller<DevicePositi
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("Accuracy", targetDepth)) {
+                    context.nextToken();
+                    devicePosition.setAccuracy(PositionalAccuracyJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("DeviceId", targetDepth)) {
                     context.nextToken();
                     devicePosition.setDeviceId(context.getUnmarshaller(String.class).unmarshall(context));
@@ -57,6 +61,11 @@ public class DevicePositionJsonUnmarshaller implements Unmarshaller<DevicePositi
                     devicePosition.setPosition(new ListUnmarshaller<Double>(context.getUnmarshaller(Double.class))
 
                     .unmarshall(context));
+                }
+                if (context.testExpression("PositionProperties", targetDepth)) {
+                    context.nextToken();
+                    devicePosition.setPositionProperties(new MapUnmarshaller<String, String>(context.getUnmarshaller(String.class), context
+                            .getUnmarshaller(String.class)).unmarshall(context));
                 }
                 if (context.testExpression("ReceivedTime", targetDepth)) {
                     context.nextToken();
