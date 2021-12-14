@@ -27,30 +27,30 @@ public class ReplicateSecretToRegionsRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Use the <code>Secret Id</code> to replicate a secret to regions.
+     * The ARN or name of the secret to replicate.
      * </p>
      */
     private String secretId;
     /**
      * <p>
-     * Add Regions to replicate the secret.
+     * A list of Regions in which to replicate the secret.
      * </p>
      */
     private java.util.List<ReplicaRegionType> addReplicaRegions;
     /**
      * <p>
-     * (Optional) If set, Secrets Manager replication overwrites a secret with the same name in the destination region.
+     * Specifies whether to overwrite a secret with the same name in the destination Region.
      * </p>
      */
     private Boolean forceOverwriteReplicaSecret;
 
     /**
      * <p>
-     * Use the <code>Secret Id</code> to replicate a secret to regions.
+     * The ARN or name of the secret to replicate.
      * </p>
      * 
      * @param secretId
-     *        Use the <code>Secret Id</code> to replicate a secret to regions.
+     *        The ARN or name of the secret to replicate.
      */
 
     public void setSecretId(String secretId) {
@@ -59,10 +59,10 @@ public class ReplicateSecretToRegionsRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Use the <code>Secret Id</code> to replicate a secret to regions.
+     * The ARN or name of the secret to replicate.
      * </p>
      * 
-     * @return Use the <code>Secret Id</code> to replicate a secret to regions.
+     * @return The ARN or name of the secret to replicate.
      */
 
     public String getSecretId() {
@@ -71,11 +71,11 @@ public class ReplicateSecretToRegionsRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Use the <code>Secret Id</code> to replicate a secret to regions.
+     * The ARN or name of the secret to replicate.
      * </p>
      * 
      * @param secretId
-     *        Use the <code>Secret Id</code> to replicate a secret to regions.
+     *        The ARN or name of the secret to replicate.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -86,10 +86,10 @@ public class ReplicateSecretToRegionsRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Add Regions to replicate the secret.
+     * A list of Regions in which to replicate the secret.
      * </p>
      * 
-     * @return Add Regions to replicate the secret.
+     * @return A list of Regions in which to replicate the secret.
      */
 
     public java.util.List<ReplicaRegionType> getAddReplicaRegions() {
@@ -98,11 +98,11 @@ public class ReplicateSecretToRegionsRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Add Regions to replicate the secret.
+     * A list of Regions in which to replicate the secret.
      * </p>
      * 
      * @param addReplicaRegions
-     *        Add Regions to replicate the secret.
+     *        A list of Regions in which to replicate the secret.
      */
 
     public void setAddReplicaRegions(java.util.Collection<ReplicaRegionType> addReplicaRegions) {
@@ -116,7 +116,7 @@ public class ReplicateSecretToRegionsRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Add Regions to replicate the secret.
+     * A list of Regions in which to replicate the secret.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -125,7 +125,7 @@ public class ReplicateSecretToRegionsRequest extends com.amazonaws.AmazonWebServ
      * </p>
      * 
      * @param addReplicaRegions
-     *        Add Regions to replicate the secret.
+     *        A list of Regions in which to replicate the secret.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -141,11 +141,11 @@ public class ReplicateSecretToRegionsRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Add Regions to replicate the secret.
+     * A list of Regions in which to replicate the secret.
      * </p>
      * 
      * @param addReplicaRegions
-     *        Add Regions to replicate the secret.
+     *        A list of Regions in which to replicate the secret.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -156,12 +156,11 @@ public class ReplicateSecretToRegionsRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * (Optional) If set, Secrets Manager replication overwrites a secret with the same name in the destination region.
+     * Specifies whether to overwrite a secret with the same name in the destination Region.
      * </p>
      * 
      * @param forceOverwriteReplicaSecret
-     *        (Optional) If set, Secrets Manager replication overwrites a secret with the same name in the destination
-     *        region.
+     *        Specifies whether to overwrite a secret with the same name in the destination Region.
      */
 
     public void setForceOverwriteReplicaSecret(Boolean forceOverwriteReplicaSecret) {
@@ -170,11 +169,10 @@ public class ReplicateSecretToRegionsRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * (Optional) If set, Secrets Manager replication overwrites a secret with the same name in the destination region.
+     * Specifies whether to overwrite a secret with the same name in the destination Region.
      * </p>
      * 
-     * @return (Optional) If set, Secrets Manager replication overwrites a secret with the same name in the destination
-     *         region.
+     * @return Specifies whether to overwrite a secret with the same name in the destination Region.
      */
 
     public Boolean getForceOverwriteReplicaSecret() {
@@ -183,12 +181,11 @@ public class ReplicateSecretToRegionsRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * (Optional) If set, Secrets Manager replication overwrites a secret with the same name in the destination region.
+     * Specifies whether to overwrite a secret with the same name in the destination Region.
      * </p>
      * 
      * @param forceOverwriteReplicaSecret
-     *        (Optional) If set, Secrets Manager replication overwrites a secret with the same name in the destination
-     *        region.
+     *        Specifies whether to overwrite a secret with the same name in the destination Region.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -199,11 +196,10 @@ public class ReplicateSecretToRegionsRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * (Optional) If set, Secrets Manager replication overwrites a secret with the same name in the destination region.
+     * Specifies whether to overwrite a secret with the same name in the destination Region.
      * </p>
      * 
-     * @return (Optional) If set, Secrets Manager replication overwrites a secret with the same name in the destination
-     *         region.
+     * @return Specifies whether to overwrite a secret with the same name in the destination Region.
      */
 
     public Boolean isForceOverwriteReplicaSecret() {

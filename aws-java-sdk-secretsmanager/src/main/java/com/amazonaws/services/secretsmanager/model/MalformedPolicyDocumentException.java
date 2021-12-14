@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * You provided a resource-based policy with syntax errors.
+ * The resource policy has syntax errors.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

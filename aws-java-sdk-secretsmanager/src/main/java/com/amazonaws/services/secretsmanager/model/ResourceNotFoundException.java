@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * We can't find the resource that you asked for.
+ * Secrets Manager can't find the resource that you asked for.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

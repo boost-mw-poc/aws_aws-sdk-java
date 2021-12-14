@@ -27,32 +27,30 @@ public class CreateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * Specifies the friendly name of the new secret.
+     * The name of the new secret.
      * </p>
      * <p>
-     * The secret name must be ASCII letters, digits, or the following characters : /_+=.@-
+     * The secret name can contain ASCII letters, numbers, and the following characters: /_+=.@-
      * </p>
-     * <note>
      * <p>
      * Do not end your secret name with a hyphen followed by six characters. If you do so, you risk confusion and
      * unexpected results when searching for a secret by partial ARN. Secrets Manager automatically adds a hyphen and
-     * six random characters at the end of the ARN.
+     * six random characters after the secret name at the end of the ARN.
      * </p>
-     * </note>
      */
     private String name;
     /**
      * <p>
-     * (Optional) If you include <code>SecretString</code> or <code>SecretBinary</code>, then an initial version is
-     * created as part of the secret, and this parameter specifies a unique identifier for the new version.
+     * If you include <code>SecretString</code> or <code>SecretBinary</code>, then Secrets Manager creates an initial
+     * version for the secret, and this parameter specifies the unique identifier for the new version.
      * </p>
      * <note>
      * <p>
-     * If you use the Amazon Web Services CLI or one of the Amazon Web Services SDK to call this operation, then you can
-     * leave this parameter empty. The CLI or SDK generates a random UUID for you and includes it as the value for this
-     * parameter in the request. If you don't use the SDK and instead generate a raw HTTP request to the Secrets Manager
-     * service endpoint, then you must generate a <code>ClientRequestToken</code> yourself for the new version and
-     * include the value in the request.
+     * If you use the Amazon Web Services CLI or one of the Amazon Web Services SDKs to call this operation, then you
+     * can leave this parameter empty. The CLI or SDK generates a random UUID for you and includes it as the value for
+     * this parameter in the request. If you don't use the SDK and instead generate a raw HTTP request to the Secrets
+     * Manager service endpoint, then you must generate a <code>ClientRequestToken</code> yourself for the new version
+     * and include the value in the request.
      * </p>
      * </note>
      * <p>
@@ -89,125 +87,102 @@ public class CreateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
     private String clientRequestToken;
     /**
      * <p>
-     * (Optional) Specifies a user-provided description of the secret.
+     * The description of the secret.
      * </p>
      */
     private String description;
     /**
      * <p>
-     * (Optional) Specifies the ARN, Key ID, or alias of the Amazon Web Services KMS customer master key (CMK) to be
-     * used to encrypt the <code>SecretString</code> or <code>SecretBinary</code> values in the versions stored in this
-     * secret.
+     * The ARN, key ID, or alias of the KMS key that Secrets Manager uses to encrypt the secret value in the secret.
      * </p>
      * <p>
-     * You can specify any of the supported ways to identify a Amazon Web Services KMS key ID. If you need to reference
-     * a CMK in a different account, you can use only the key ARN or the alias ARN.
+     * To use a KMS key in a different account, use the key ARN or the alias ARN.
      * </p>
      * <p>
-     * If you don't specify this value, then Secrets Manager defaults to using the Amazon Web Services account's default
-     * CMK (the one named <code>aws/secretsmanager</code>). If a Amazon Web Services KMS CMK with that name doesn't yet
-     * exist, then Secrets Manager creates it for you automatically the first time it needs to encrypt a version's
-     * <code>SecretString</code> or <code>SecretBinary</code> fields.
+     * If you don't specify this value, then Secrets Manager uses the key <code>aws/secretsmanager</code>. If that key
+     * doesn't yet exist, then Secrets Manager creates it for you automatically the first time it encrypts the secret
+     * value.
      * </p>
-     * <important>
      * <p>
-     * You can use the account default CMK to encrypt and decrypt only if you call this operation using credentials from
-     * the same account that owns the secret. If the secret resides in a different account, then you must create a
-     * custom CMK and specify the ARN in this field.
+     * If the secret is in a different Amazon Web Services account from the credentials calling the API, then you can't
+     * use <code>aws/secretsmanager</code> to encrypt the secret, and you must create and use a customer managed KMS
+     * key.
      * </p>
-     * </important>
      */
     private String kmsKeyId;
     /**
      * <p>
-     * (Optional) Specifies binary data that you want to encrypt and store in the new version of the secret. To use this
-     * parameter in the command-line tools, we recommend that you store your binary data in a file and then use the
-     * appropriate technique for your tool to pass the contents of the file as a parameter.
+     * The binary data to encrypt and store in the new version of the secret. We recommend that you store your binary
+     * data in a file and then pass the contents of the file as a parameter.
      * </p>
      * <p>
-     * Either <code>SecretString</code> or <code>SecretBinary</code> must have a value, but not both. They cannot both
-     * be empty.
+     * Either <code>SecretString</code> or <code>SecretBinary</code> must have a value, but not both.
      * </p>
      * <p>
-     * This parameter is not available using the Secrets Manager console. It can be accessed only by using the Amazon
-     * Web Services CLI or one of the Amazon Web Services SDKs.
+     * This parameter is not available in the Secrets Manager console.
      * </p>
      */
     private java.nio.ByteBuffer secretBinary;
     /**
      * <p>
-     * (Optional) Specifies text data that you want to encrypt and store in this new version of the secret.
+     * The text data to encrypt and store in this new version of the secret. We recommend you use a JSON structure of
+     * key/value pairs for your secret value.
      * </p>
      * <p>
-     * Either <code>SecretString</code> or <code>SecretBinary</code> must have a value, but not both. They cannot both
-     * be empty.
+     * Either <code>SecretString</code> or <code>SecretBinary</code> must have a value, but not both.
      * </p>
      * <p>
      * If you create a secret by using the Secrets Manager console then Secrets Manager puts the protected secret text
      * in only the <code>SecretString</code> parameter. The Secrets Manager console stores the information as a JSON
-     * structure of key/value pairs that the Lambda rotation function knows how to parse.
-     * </p>
-     * <p>
-     * For storing multiple values, we recommend that you use a JSON text string argument and specify key/value pairs.
-     * For more information, see <a
-     * href="https://docs.aws.amazon.com/cli/latest/userguide/cli-usage-parameters.html">Specifying parameter values for
-     * the Amazon Web Services CLI</a> in the Amazon Web Services CLI User Guide.
+     * structure of key/value pairs that a Lambda rotation function can parse.
      * </p>
      */
     private String secretString;
     /**
      * <p>
-     * (Optional) Specifies a list of user-defined tags that are attached to the secret. Each tag is a "Key" and "Value"
-     * pair of strings. This operation only appends tags to the existing list of tags. To remove tags, you must use
-     * <a>UntagResource</a>.
-     * </p>
-     * <important>
-     * <ul>
-     * <li>
-     * <p>
-     * Secrets Manager tag key names are case sensitive. A tag with the key "ABC" is a different tag from one with key
-     * "abc".
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * If you check tags in IAM policy <code>Condition</code> elements as part of your security strategy, then adding or
-     * removing a tag can change permissions. If the successful completion of this operation would result in you losing
-     * your permissions for this secret, then this operation is blocked and returns an <code>Access Denied</code> error.
-     * </p>
-     * </li>
-     * </ul>
-     * </important>
-     * <p>
-     * This parameter requires a JSON text string argument. For information on how to format a JSON parameter for the
-     * various command line tool environments, see <a
-     * href="https://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#cli-using-param-json">Using JSON for
-     * Parameters</a> in the <i>CLI User Guide</i>. For example:
+     * A list of tags to attach to the secret. Each tag is a key and value pair of strings in a JSON text string, for
+     * example:
      * </p>
      * <p>
      * <code>[{"Key":"CostCenter","Value":"12345"},{"Key":"environment","Value":"production"}]</code>
      * </p>
      * <p>
-     * If your command-line tool or SDK requires quotation marks around the parameter, you should use single quotes to
-     * avoid confusion with the double quotes required in the JSON text.
+     * Secrets Manager tag key names are case sensitive. A tag with the key "ABC" is a different tag from one with key
+     * "abc".
      * </p>
      * <p>
-     * The following basic restrictions apply to tags:
+     * If you check tags in permissions policies as part of your security strategy, then adding or removing a tag can
+     * change permissions. If the completion of this operation would result in you losing your permissions for this
+     * secret, then Secrets Manager blocks the operation and returns an <code>Access Denied</code> error. For more
+     * information, see <a href=
+     * "https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_examples.html#tag-secrets-abac"
+     * >Control access to secrets using tags</a> and <a href=
+     * "https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_examples.html#auth-and-access_tags2"
+     * >Limit access to identities with tags that match secrets' tags</a>.
+     * </p>
+     * <p>
+     * For information about how to format a JSON parameter for the various command line tool environments, see <a
+     * href="https://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#cli-using-param-json">Using JSON for
+     * Parameters</a>. If your command-line tool or SDK requires quotation marks around the parameter, you should use
+     * single quotes to avoid confusion with the double quotes required in the JSON text.
+     * </p>
+     * <p>
+     * The following restrictions apply to tags:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * Maximum number of tags per secret—50
+     * Maximum number of tags per secret: 50
      * </p>
      * </li>
      * <li>
      * <p>
-     * Maximum key length—127 Unicode characters in UTF-8
+     * Maximum key length: 127 Unicode characters in UTF-8
      * </p>
      * </li>
      * <li>
      * <p>
-     * Maximum value length—255 Unicode characters in UTF-8
+     * Maximum value length: 255 Unicode characters in UTF-8
      * </p>
      * </li>
      * <li>
@@ -224,9 +199,9 @@ public class CreateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </li>
      * <li>
      * <p>
-     * If you use your tagging schema across multiple services and resources, remember other services might have
-     * restrictions on allowed characters. Generally allowed characters: letters, spaces, and numbers representable in
-     * UTF-8, plus the following special characters: + - = . _ : / @.
+     * If you use your tagging schema across multiple services and resources, other services might have restrictions on
+     * allowed characters. Generally allowed characters: letters, spaces, and numbers representable in UTF-8, plus the
+     * following special characters: + - = . _ : / @.
      * </p>
      * </li>
      * </ul>
@@ -234,44 +209,39 @@ public class CreateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
     private java.util.List<Tag> tags;
     /**
      * <p>
-     * (Optional) Add a list of regions to replicate secrets. Secrets Manager replicates the KMSKeyID objects to the
-     * list of regions specified in the parameter.
+     * A list of Regions and KMS keys to replicate secrets.
      * </p>
      */
     private java.util.List<ReplicaRegionType> addReplicaRegions;
     /**
      * <p>
-     * (Optional) If set, the replication overwrites a secret with the same name in the destination region.
+     * Specifies whether to overwrite a secret with the same name in the destination Region.
      * </p>
      */
     private Boolean forceOverwriteReplicaSecret;
 
     /**
      * <p>
-     * Specifies the friendly name of the new secret.
+     * The name of the new secret.
      * </p>
      * <p>
-     * The secret name must be ASCII letters, digits, or the following characters : /_+=.@-
+     * The secret name can contain ASCII letters, numbers, and the following characters: /_+=.@-
      * </p>
-     * <note>
      * <p>
      * Do not end your secret name with a hyphen followed by six characters. If you do so, you risk confusion and
      * unexpected results when searching for a secret by partial ARN. Secrets Manager automatically adds a hyphen and
-     * six random characters at the end of the ARN.
+     * six random characters after the secret name at the end of the ARN.
      * </p>
-     * </note>
      * 
      * @param name
-     *        Specifies the friendly name of the new secret.</p>
+     *        The name of the new secret.</p>
      *        <p>
-     *        The secret name must be ASCII letters, digits, or the following characters : /_+=.@-
+     *        The secret name can contain ASCII letters, numbers, and the following characters: /_+=.@-
      *        </p>
-     *        <note>
      *        <p>
      *        Do not end your secret name with a hyphen followed by six characters. If you do so, you risk confusion and
      *        unexpected results when searching for a secret by partial ARN. Secrets Manager automatically adds a hyphen
-     *        and six random characters at the end of the ARN.
-     *        </p>
+     *        and six random characters after the secret name at the end of the ARN.
      */
 
     public void setName(String name) {
@@ -280,29 +250,25 @@ public class CreateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * Specifies the friendly name of the new secret.
+     * The name of the new secret.
      * </p>
      * <p>
-     * The secret name must be ASCII letters, digits, or the following characters : /_+=.@-
+     * The secret name can contain ASCII letters, numbers, and the following characters: /_+=.@-
      * </p>
-     * <note>
      * <p>
      * Do not end your secret name with a hyphen followed by six characters. If you do so, you risk confusion and
      * unexpected results when searching for a secret by partial ARN. Secrets Manager automatically adds a hyphen and
-     * six random characters at the end of the ARN.
+     * six random characters after the secret name at the end of the ARN.
      * </p>
-     * </note>
      * 
-     * @return Specifies the friendly name of the new secret.</p>
+     * @return The name of the new secret.</p>
      *         <p>
-     *         The secret name must be ASCII letters, digits, or the following characters : /_+=.@-
+     *         The secret name can contain ASCII letters, numbers, and the following characters: /_+=.@-
      *         </p>
-     *         <note>
      *         <p>
      *         Do not end your secret name with a hyphen followed by six characters. If you do so, you risk confusion
      *         and unexpected results when searching for a secret by partial ARN. Secrets Manager automatically adds a
-     *         hyphen and six random characters at the end of the ARN.
-     *         </p>
+     *         hyphen and six random characters after the secret name at the end of the ARN.
      */
 
     public String getName() {
@@ -311,30 +277,26 @@ public class CreateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * Specifies the friendly name of the new secret.
+     * The name of the new secret.
      * </p>
      * <p>
-     * The secret name must be ASCII letters, digits, or the following characters : /_+=.@-
+     * The secret name can contain ASCII letters, numbers, and the following characters: /_+=.@-
      * </p>
-     * <note>
      * <p>
      * Do not end your secret name with a hyphen followed by six characters. If you do so, you risk confusion and
      * unexpected results when searching for a secret by partial ARN. Secrets Manager automatically adds a hyphen and
-     * six random characters at the end of the ARN.
+     * six random characters after the secret name at the end of the ARN.
      * </p>
-     * </note>
      * 
      * @param name
-     *        Specifies the friendly name of the new secret.</p>
+     *        The name of the new secret.</p>
      *        <p>
-     *        The secret name must be ASCII letters, digits, or the following characters : /_+=.@-
+     *        The secret name can contain ASCII letters, numbers, and the following characters: /_+=.@-
      *        </p>
-     *        <note>
      *        <p>
      *        Do not end your secret name with a hyphen followed by six characters. If you do so, you risk confusion and
      *        unexpected results when searching for a secret by partial ARN. Secrets Manager automatically adds a hyphen
-     *        and six random characters at the end of the ARN.
-     *        </p>
+     *        and six random characters after the secret name at the end of the ARN.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -345,16 +307,16 @@ public class CreateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * (Optional) If you include <code>SecretString</code> or <code>SecretBinary</code>, then an initial version is
-     * created as part of the secret, and this parameter specifies a unique identifier for the new version.
+     * If you include <code>SecretString</code> or <code>SecretBinary</code>, then Secrets Manager creates an initial
+     * version for the secret, and this parameter specifies the unique identifier for the new version.
      * </p>
      * <note>
      * <p>
-     * If you use the Amazon Web Services CLI or one of the Amazon Web Services SDK to call this operation, then you can
-     * leave this parameter empty. The CLI or SDK generates a random UUID for you and includes it as the value for this
-     * parameter in the request. If you don't use the SDK and instead generate a raw HTTP request to the Secrets Manager
-     * service endpoint, then you must generate a <code>ClientRequestToken</code> yourself for the new version and
-     * include the value in the request.
+     * If you use the Amazon Web Services CLI or one of the Amazon Web Services SDKs to call this operation, then you
+     * can leave this parameter empty. The CLI or SDK generates a random UUID for you and includes it as the value for
+     * this parameter in the request. If you don't use the SDK and instead generate a raw HTTP request to the Secrets
+     * Manager service endpoint, then you must generate a <code>ClientRequestToken</code> yourself for the new version
+     * and include the value in the request.
      * </p>
      * </note>
      * <p>
@@ -389,11 +351,11 @@ public class CreateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </p>
      * 
      * @param clientRequestToken
-     *        (Optional) If you include <code>SecretString</code> or <code>SecretBinary</code>, then an initial version
-     *        is created as part of the secret, and this parameter specifies a unique identifier for the new version.
+     *        If you include <code>SecretString</code> or <code>SecretBinary</code>, then Secrets Manager creates an
+     *        initial version for the secret, and this parameter specifies the unique identifier for the new version.
      *        </p> <note>
      *        <p>
-     *        If you use the Amazon Web Services CLI or one of the Amazon Web Services SDK to call this operation, then
+     *        If you use the Amazon Web Services CLI or one of the Amazon Web Services SDKs to call this operation, then
      *        you can leave this parameter empty. The CLI or SDK generates a random UUID for you and includes it as the
      *        value for this parameter in the request. If you don't use the SDK and instead generate a raw HTTP request
      *        to the Secrets Manager service endpoint, then you must generate a <code>ClientRequestToken</code> yourself
@@ -437,16 +399,16 @@ public class CreateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * (Optional) If you include <code>SecretString</code> or <code>SecretBinary</code>, then an initial version is
-     * created as part of the secret, and this parameter specifies a unique identifier for the new version.
+     * If you include <code>SecretString</code> or <code>SecretBinary</code>, then Secrets Manager creates an initial
+     * version for the secret, and this parameter specifies the unique identifier for the new version.
      * </p>
      * <note>
      * <p>
-     * If you use the Amazon Web Services CLI or one of the Amazon Web Services SDK to call this operation, then you can
-     * leave this parameter empty. The CLI or SDK generates a random UUID for you and includes it as the value for this
-     * parameter in the request. If you don't use the SDK and instead generate a raw HTTP request to the Secrets Manager
-     * service endpoint, then you must generate a <code>ClientRequestToken</code> yourself for the new version and
-     * include the value in the request.
+     * If you use the Amazon Web Services CLI or one of the Amazon Web Services SDKs to call this operation, then you
+     * can leave this parameter empty. The CLI or SDK generates a random UUID for you and includes it as the value for
+     * this parameter in the request. If you don't use the SDK and instead generate a raw HTTP request to the Secrets
+     * Manager service endpoint, then you must generate a <code>ClientRequestToken</code> yourself for the new version
+     * and include the value in the request.
      * </p>
      * </note>
      * <p>
@@ -480,14 +442,14 @@ public class CreateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
      * This value becomes the <code>VersionId</code> of the new version.
      * </p>
      * 
-     * @return (Optional) If you include <code>SecretString</code> or <code>SecretBinary</code>, then an initial version
-     *         is created as part of the secret, and this parameter specifies a unique identifier for the new version.
+     * @return If you include <code>SecretString</code> or <code>SecretBinary</code>, then Secrets Manager creates an
+     *         initial version for the secret, and this parameter specifies the unique identifier for the new version.
      *         </p> <note>
      *         <p>
-     *         If you use the Amazon Web Services CLI or one of the Amazon Web Services SDK to call this operation, then
-     *         you can leave this parameter empty. The CLI or SDK generates a random UUID for you and includes it as the
-     *         value for this parameter in the request. If you don't use the SDK and instead generate a raw HTTP request
-     *         to the Secrets Manager service endpoint, then you must generate a <code>ClientRequestToken</code>
+     *         If you use the Amazon Web Services CLI or one of the Amazon Web Services SDKs to call this operation,
+     *         then you can leave this parameter empty. The CLI or SDK generates a random UUID for you and includes it
+     *         as the value for this parameter in the request. If you don't use the SDK and instead generate a raw HTTP
+     *         request to the Secrets Manager service endpoint, then you must generate a <code>ClientRequestToken</code>
      *         yourself for the new version and include the value in the request.
      *         </p>
      *         </note>
@@ -528,16 +490,16 @@ public class CreateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * (Optional) If you include <code>SecretString</code> or <code>SecretBinary</code>, then an initial version is
-     * created as part of the secret, and this parameter specifies a unique identifier for the new version.
+     * If you include <code>SecretString</code> or <code>SecretBinary</code>, then Secrets Manager creates an initial
+     * version for the secret, and this parameter specifies the unique identifier for the new version.
      * </p>
      * <note>
      * <p>
-     * If you use the Amazon Web Services CLI or one of the Amazon Web Services SDK to call this operation, then you can
-     * leave this parameter empty. The CLI or SDK generates a random UUID for you and includes it as the value for this
-     * parameter in the request. If you don't use the SDK and instead generate a raw HTTP request to the Secrets Manager
-     * service endpoint, then you must generate a <code>ClientRequestToken</code> yourself for the new version and
-     * include the value in the request.
+     * If you use the Amazon Web Services CLI or one of the Amazon Web Services SDKs to call this operation, then you
+     * can leave this parameter empty. The CLI or SDK generates a random UUID for you and includes it as the value for
+     * this parameter in the request. If you don't use the SDK and instead generate a raw HTTP request to the Secrets
+     * Manager service endpoint, then you must generate a <code>ClientRequestToken</code> yourself for the new version
+     * and include the value in the request.
      * </p>
      * </note>
      * <p>
@@ -572,11 +534,11 @@ public class CreateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </p>
      * 
      * @param clientRequestToken
-     *        (Optional) If you include <code>SecretString</code> or <code>SecretBinary</code>, then an initial version
-     *        is created as part of the secret, and this parameter specifies a unique identifier for the new version.
+     *        If you include <code>SecretString</code> or <code>SecretBinary</code>, then Secrets Manager creates an
+     *        initial version for the secret, and this parameter specifies the unique identifier for the new version.
      *        </p> <note>
      *        <p>
-     *        If you use the Amazon Web Services CLI or one of the Amazon Web Services SDK to call this operation, then
+     *        If you use the Amazon Web Services CLI or one of the Amazon Web Services SDKs to call this operation, then
      *        you can leave this parameter empty. The CLI or SDK generates a random UUID for you and includes it as the
      *        value for this parameter in the request. If you don't use the SDK and instead generate a raw HTTP request
      *        to the Secrets Manager service endpoint, then you must generate a <code>ClientRequestToken</code> yourself
@@ -622,11 +584,11 @@ public class CreateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * (Optional) Specifies a user-provided description of the secret.
+     * The description of the secret.
      * </p>
      * 
      * @param description
-     *        (Optional) Specifies a user-provided description of the secret.
+     *        The description of the secret.
      */
 
     public void setDescription(String description) {
@@ -635,10 +597,10 @@ public class CreateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * (Optional) Specifies a user-provided description of the secret.
+     * The description of the secret.
      * </p>
      * 
-     * @return (Optional) Specifies a user-provided description of the secret.
+     * @return The description of the secret.
      */
 
     public String getDescription() {
@@ -647,11 +609,11 @@ public class CreateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * (Optional) Specifies a user-provided description of the secret.
+     * The description of the secret.
      * </p>
      * 
      * @param description
-     *        (Optional) Specifies a user-provided description of the secret.
+     *        The description of the secret.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -662,48 +624,37 @@ public class CreateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * (Optional) Specifies the ARN, Key ID, or alias of the Amazon Web Services KMS customer master key (CMK) to be
-     * used to encrypt the <code>SecretString</code> or <code>SecretBinary</code> values in the versions stored in this
-     * secret.
+     * The ARN, key ID, or alias of the KMS key that Secrets Manager uses to encrypt the secret value in the secret.
      * </p>
      * <p>
-     * You can specify any of the supported ways to identify a Amazon Web Services KMS key ID. If you need to reference
-     * a CMK in a different account, you can use only the key ARN or the alias ARN.
+     * To use a KMS key in a different account, use the key ARN or the alias ARN.
      * </p>
      * <p>
-     * If you don't specify this value, then Secrets Manager defaults to using the Amazon Web Services account's default
-     * CMK (the one named <code>aws/secretsmanager</code>). If a Amazon Web Services KMS CMK with that name doesn't yet
-     * exist, then Secrets Manager creates it for you automatically the first time it needs to encrypt a version's
-     * <code>SecretString</code> or <code>SecretBinary</code> fields.
+     * If you don't specify this value, then Secrets Manager uses the key <code>aws/secretsmanager</code>. If that key
+     * doesn't yet exist, then Secrets Manager creates it for you automatically the first time it encrypts the secret
+     * value.
      * </p>
-     * <important>
      * <p>
-     * You can use the account default CMK to encrypt and decrypt only if you call this operation using credentials from
-     * the same account that owns the secret. If the secret resides in a different account, then you must create a
-     * custom CMK and specify the ARN in this field.
+     * If the secret is in a different Amazon Web Services account from the credentials calling the API, then you can't
+     * use <code>aws/secretsmanager</code> to encrypt the secret, and you must create and use a customer managed KMS
+     * key.
      * </p>
-     * </important>
      * 
      * @param kmsKeyId
-     *        (Optional) Specifies the ARN, Key ID, or alias of the Amazon Web Services KMS customer master key (CMK) to
-     *        be used to encrypt the <code>SecretString</code> or <code>SecretBinary</code> values in the versions
-     *        stored in this secret.</p>
+     *        The ARN, key ID, or alias of the KMS key that Secrets Manager uses to encrypt the secret value in the
+     *        secret.</p>
      *        <p>
-     *        You can specify any of the supported ways to identify a Amazon Web Services KMS key ID. If you need to
-     *        reference a CMK in a different account, you can use only the key ARN or the alias ARN.
+     *        To use a KMS key in a different account, use the key ARN or the alias ARN.
      *        </p>
      *        <p>
-     *        If you don't specify this value, then Secrets Manager defaults to using the Amazon Web Services account's
-     *        default CMK (the one named <code>aws/secretsmanager</code>). If a Amazon Web Services KMS CMK with that
-     *        name doesn't yet exist, then Secrets Manager creates it for you automatically the first time it needs to
-     *        encrypt a version's <code>SecretString</code> or <code>SecretBinary</code> fields.
+     *        If you don't specify this value, then Secrets Manager uses the key <code>aws/secretsmanager</code>. If
+     *        that key doesn't yet exist, then Secrets Manager creates it for you automatically the first time it
+     *        encrypts the secret value.
      *        </p>
-     *        <important>
      *        <p>
-     *        You can use the account default CMK to encrypt and decrypt only if you call this operation using
-     *        credentials from the same account that owns the secret. If the secret resides in a different account, then
-     *        you must create a custom CMK and specify the ARN in this field.
-     *        </p>
+     *        If the secret is in a different Amazon Web Services account from the credentials calling the API, then you
+     *        can't use <code>aws/secretsmanager</code> to encrypt the secret, and you must create and use a customer
+     *        managed KMS key.
      */
 
     public void setKmsKeyId(String kmsKeyId) {
@@ -712,47 +663,36 @@ public class CreateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * (Optional) Specifies the ARN, Key ID, or alias of the Amazon Web Services KMS customer master key (CMK) to be
-     * used to encrypt the <code>SecretString</code> or <code>SecretBinary</code> values in the versions stored in this
-     * secret.
+     * The ARN, key ID, or alias of the KMS key that Secrets Manager uses to encrypt the secret value in the secret.
      * </p>
      * <p>
-     * You can specify any of the supported ways to identify a Amazon Web Services KMS key ID. If you need to reference
-     * a CMK in a different account, you can use only the key ARN or the alias ARN.
+     * To use a KMS key in a different account, use the key ARN or the alias ARN.
      * </p>
      * <p>
-     * If you don't specify this value, then Secrets Manager defaults to using the Amazon Web Services account's default
-     * CMK (the one named <code>aws/secretsmanager</code>). If a Amazon Web Services KMS CMK with that name doesn't yet
-     * exist, then Secrets Manager creates it for you automatically the first time it needs to encrypt a version's
-     * <code>SecretString</code> or <code>SecretBinary</code> fields.
+     * If you don't specify this value, then Secrets Manager uses the key <code>aws/secretsmanager</code>. If that key
+     * doesn't yet exist, then Secrets Manager creates it for you automatically the first time it encrypts the secret
+     * value.
      * </p>
-     * <important>
      * <p>
-     * You can use the account default CMK to encrypt and decrypt only if you call this operation using credentials from
-     * the same account that owns the secret. If the secret resides in a different account, then you must create a
-     * custom CMK and specify the ARN in this field.
+     * If the secret is in a different Amazon Web Services account from the credentials calling the API, then you can't
+     * use <code>aws/secretsmanager</code> to encrypt the secret, and you must create and use a customer managed KMS
+     * key.
      * </p>
-     * </important>
      * 
-     * @return (Optional) Specifies the ARN, Key ID, or alias of the Amazon Web Services KMS customer master key (CMK)
-     *         to be used to encrypt the <code>SecretString</code> or <code>SecretBinary</code> values in the versions
-     *         stored in this secret.</p>
+     * @return The ARN, key ID, or alias of the KMS key that Secrets Manager uses to encrypt the secret value in the
+     *         secret.</p>
      *         <p>
-     *         You can specify any of the supported ways to identify a Amazon Web Services KMS key ID. If you need to
-     *         reference a CMK in a different account, you can use only the key ARN or the alias ARN.
+     *         To use a KMS key in a different account, use the key ARN or the alias ARN.
      *         </p>
      *         <p>
-     *         If you don't specify this value, then Secrets Manager defaults to using the Amazon Web Services account's
-     *         default CMK (the one named <code>aws/secretsmanager</code>). If a Amazon Web Services KMS CMK with that
-     *         name doesn't yet exist, then Secrets Manager creates it for you automatically the first time it needs to
-     *         encrypt a version's <code>SecretString</code> or <code>SecretBinary</code> fields.
+     *         If you don't specify this value, then Secrets Manager uses the key <code>aws/secretsmanager</code>. If
+     *         that key doesn't yet exist, then Secrets Manager creates it for you automatically the first time it
+     *         encrypts the secret value.
      *         </p>
-     *         <important>
      *         <p>
-     *         You can use the account default CMK to encrypt and decrypt only if you call this operation using
-     *         credentials from the same account that owns the secret. If the secret resides in a different account,
-     *         then you must create a custom CMK and specify the ARN in this field.
-     *         </p>
+     *         If the secret is in a different Amazon Web Services account from the credentials calling the API, then
+     *         you can't use <code>aws/secretsmanager</code> to encrypt the secret, and you must create and use a
+     *         customer managed KMS key.
      */
 
     public String getKmsKeyId() {
@@ -761,48 +701,37 @@ public class CreateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * (Optional) Specifies the ARN, Key ID, or alias of the Amazon Web Services KMS customer master key (CMK) to be
-     * used to encrypt the <code>SecretString</code> or <code>SecretBinary</code> values in the versions stored in this
-     * secret.
+     * The ARN, key ID, or alias of the KMS key that Secrets Manager uses to encrypt the secret value in the secret.
      * </p>
      * <p>
-     * You can specify any of the supported ways to identify a Amazon Web Services KMS key ID. If you need to reference
-     * a CMK in a different account, you can use only the key ARN or the alias ARN.
+     * To use a KMS key in a different account, use the key ARN or the alias ARN.
      * </p>
      * <p>
-     * If you don't specify this value, then Secrets Manager defaults to using the Amazon Web Services account's default
-     * CMK (the one named <code>aws/secretsmanager</code>). If a Amazon Web Services KMS CMK with that name doesn't yet
-     * exist, then Secrets Manager creates it for you automatically the first time it needs to encrypt a version's
-     * <code>SecretString</code> or <code>SecretBinary</code> fields.
+     * If you don't specify this value, then Secrets Manager uses the key <code>aws/secretsmanager</code>. If that key
+     * doesn't yet exist, then Secrets Manager creates it for you automatically the first time it encrypts the secret
+     * value.
      * </p>
-     * <important>
      * <p>
-     * You can use the account default CMK to encrypt and decrypt only if you call this operation using credentials from
-     * the same account that owns the secret. If the secret resides in a different account, then you must create a
-     * custom CMK and specify the ARN in this field.
+     * If the secret is in a different Amazon Web Services account from the credentials calling the API, then you can't
+     * use <code>aws/secretsmanager</code> to encrypt the secret, and you must create and use a customer managed KMS
+     * key.
      * </p>
-     * </important>
      * 
      * @param kmsKeyId
-     *        (Optional) Specifies the ARN, Key ID, or alias of the Amazon Web Services KMS customer master key (CMK) to
-     *        be used to encrypt the <code>SecretString</code> or <code>SecretBinary</code> values in the versions
-     *        stored in this secret.</p>
+     *        The ARN, key ID, or alias of the KMS key that Secrets Manager uses to encrypt the secret value in the
+     *        secret.</p>
      *        <p>
-     *        You can specify any of the supported ways to identify a Amazon Web Services KMS key ID. If you need to
-     *        reference a CMK in a different account, you can use only the key ARN or the alias ARN.
+     *        To use a KMS key in a different account, use the key ARN or the alias ARN.
      *        </p>
      *        <p>
-     *        If you don't specify this value, then Secrets Manager defaults to using the Amazon Web Services account's
-     *        default CMK (the one named <code>aws/secretsmanager</code>). If a Amazon Web Services KMS CMK with that
-     *        name doesn't yet exist, then Secrets Manager creates it for you automatically the first time it needs to
-     *        encrypt a version's <code>SecretString</code> or <code>SecretBinary</code> fields.
+     *        If you don't specify this value, then Secrets Manager uses the key <code>aws/secretsmanager</code>. If
+     *        that key doesn't yet exist, then Secrets Manager creates it for you automatically the first time it
+     *        encrypts the secret value.
      *        </p>
-     *        <important>
      *        <p>
-     *        You can use the account default CMK to encrypt and decrypt only if you call this operation using
-     *        credentials from the same account that owns the secret. If the secret resides in a different account, then
-     *        you must create a custom CMK and specify the ARN in this field.
-     *        </p>
+     *        If the secret is in a different Amazon Web Services account from the credentials calling the API, then you
+     *        can't use <code>aws/secretsmanager</code> to encrypt the secret, and you must create and use a customer
+     *        managed KMS key.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -813,17 +742,14 @@ public class CreateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * (Optional) Specifies binary data that you want to encrypt and store in the new version of the secret. To use this
-     * parameter in the command-line tools, we recommend that you store your binary data in a file and then use the
-     * appropriate technique for your tool to pass the contents of the file as a parameter.
+     * The binary data to encrypt and store in the new version of the secret. We recommend that you store your binary
+     * data in a file and then pass the contents of the file as a parameter.
      * </p>
      * <p>
-     * Either <code>SecretString</code> or <code>SecretBinary</code> must have a value, but not both. They cannot both
-     * be empty.
+     * Either <code>SecretString</code> or <code>SecretBinary</code> must have a value, but not both.
      * </p>
      * <p>
-     * This parameter is not available using the Secrets Manager console. It can be accessed only by using the Amazon
-     * Web Services CLI or one of the Amazon Web Services SDKs.
+     * This parameter is not available in the Secrets Manager console.
      * </p>
      * <p>
      * The AWS SDK for Java performs a Base64 encoding on this field before sending this request to the AWS service.
@@ -837,16 +763,13 @@ public class CreateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </p>
      * 
      * @param secretBinary
-     *        (Optional) Specifies binary data that you want to encrypt and store in the new version of the secret. To
-     *        use this parameter in the command-line tools, we recommend that you store your binary data in a file and
-     *        then use the appropriate technique for your tool to pass the contents of the file as a parameter.</p>
+     *        The binary data to encrypt and store in the new version of the secret. We recommend that you store your
+     *        binary data in a file and then pass the contents of the file as a parameter.</p>
      *        <p>
-     *        Either <code>SecretString</code> or <code>SecretBinary</code> must have a value, but not both. They cannot
-     *        both be empty.
+     *        Either <code>SecretString</code> or <code>SecretBinary</code> must have a value, but not both.
      *        </p>
      *        <p>
-     *        This parameter is not available using the Secrets Manager console. It can be accessed only by using the
-     *        Amazon Web Services CLI or one of the Amazon Web Services SDKs.
+     *        This parameter is not available in the Secrets Manager console.
      */
 
     public void setSecretBinary(java.nio.ByteBuffer secretBinary) {
@@ -855,17 +778,14 @@ public class CreateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * (Optional) Specifies binary data that you want to encrypt and store in the new version of the secret. To use this
-     * parameter in the command-line tools, we recommend that you store your binary data in a file and then use the
-     * appropriate technique for your tool to pass the contents of the file as a parameter.
+     * The binary data to encrypt and store in the new version of the secret. We recommend that you store your binary
+     * data in a file and then pass the contents of the file as a parameter.
      * </p>
      * <p>
-     * Either <code>SecretString</code> or <code>SecretBinary</code> must have a value, but not both. They cannot both
-     * be empty.
+     * Either <code>SecretString</code> or <code>SecretBinary</code> must have a value, but not both.
      * </p>
      * <p>
-     * This parameter is not available using the Secrets Manager console. It can be accessed only by using the Amazon
-     * Web Services CLI or one of the Amazon Web Services SDKs.
+     * This parameter is not available in the Secrets Manager console.
      * </p>
      * <p>
      * {@code ByteBuffer}s are stateful. Calling their {@code get} methods changes their {@code position}. We recommend
@@ -875,16 +795,13 @@ public class CreateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
      * {@code position}.
      * </p>
      * 
-     * @return (Optional) Specifies binary data that you want to encrypt and store in the new version of the secret. To
-     *         use this parameter in the command-line tools, we recommend that you store your binary data in a file and
-     *         then use the appropriate technique for your tool to pass the contents of the file as a parameter.</p>
+     * @return The binary data to encrypt and store in the new version of the secret. We recommend that you store your
+     *         binary data in a file and then pass the contents of the file as a parameter.</p>
      *         <p>
-     *         Either <code>SecretString</code> or <code>SecretBinary</code> must have a value, but not both. They
-     *         cannot both be empty.
+     *         Either <code>SecretString</code> or <code>SecretBinary</code> must have a value, but not both.
      *         </p>
      *         <p>
-     *         This parameter is not available using the Secrets Manager console. It can be accessed only by using the
-     *         Amazon Web Services CLI or one of the Amazon Web Services SDKs.
+     *         This parameter is not available in the Secrets Manager console.
      */
 
     public java.nio.ByteBuffer getSecretBinary() {
@@ -893,17 +810,14 @@ public class CreateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * (Optional) Specifies binary data that you want to encrypt and store in the new version of the secret. To use this
-     * parameter in the command-line tools, we recommend that you store your binary data in a file and then use the
-     * appropriate technique for your tool to pass the contents of the file as a parameter.
+     * The binary data to encrypt and store in the new version of the secret. We recommend that you store your binary
+     * data in a file and then pass the contents of the file as a parameter.
      * </p>
      * <p>
-     * Either <code>SecretString</code> or <code>SecretBinary</code> must have a value, but not both. They cannot both
-     * be empty.
+     * Either <code>SecretString</code> or <code>SecretBinary</code> must have a value, but not both.
      * </p>
      * <p>
-     * This parameter is not available using the Secrets Manager console. It can be accessed only by using the Amazon
-     * Web Services CLI or one of the Amazon Web Services SDKs.
+     * This parameter is not available in the Secrets Manager console.
      * </p>
      * <p>
      * The AWS SDK for Java performs a Base64 encoding on this field before sending this request to the AWS service.
@@ -917,16 +831,13 @@ public class CreateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </p>
      * 
      * @param secretBinary
-     *        (Optional) Specifies binary data that you want to encrypt and store in the new version of the secret. To
-     *        use this parameter in the command-line tools, we recommend that you store your binary data in a file and
-     *        then use the appropriate technique for your tool to pass the contents of the file as a parameter.</p>
+     *        The binary data to encrypt and store in the new version of the secret. We recommend that you store your
+     *        binary data in a file and then pass the contents of the file as a parameter.</p>
      *        <p>
-     *        Either <code>SecretString</code> or <code>SecretBinary</code> must have a value, but not both. They cannot
-     *        both be empty.
+     *        Either <code>SecretString</code> or <code>SecretBinary</code> must have a value, but not both.
      *        </p>
      *        <p>
-     *        This parameter is not available using the Secrets Manager console. It can be accessed only by using the
-     *        Amazon Web Services CLI or one of the Amazon Web Services SDKs.
+     *        This parameter is not available in the Secrets Manager console.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -937,40 +848,28 @@ public class CreateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * (Optional) Specifies text data that you want to encrypt and store in this new version of the secret.
+     * The text data to encrypt and store in this new version of the secret. We recommend you use a JSON structure of
+     * key/value pairs for your secret value.
      * </p>
      * <p>
-     * Either <code>SecretString</code> or <code>SecretBinary</code> must have a value, but not both. They cannot both
-     * be empty.
+     * Either <code>SecretString</code> or <code>SecretBinary</code> must have a value, but not both.
      * </p>
      * <p>
      * If you create a secret by using the Secrets Manager console then Secrets Manager puts the protected secret text
      * in only the <code>SecretString</code> parameter. The Secrets Manager console stores the information as a JSON
-     * structure of key/value pairs that the Lambda rotation function knows how to parse.
-     * </p>
-     * <p>
-     * For storing multiple values, we recommend that you use a JSON text string argument and specify key/value pairs.
-     * For more information, see <a
-     * href="https://docs.aws.amazon.com/cli/latest/userguide/cli-usage-parameters.html">Specifying parameter values for
-     * the Amazon Web Services CLI</a> in the Amazon Web Services CLI User Guide.
+     * structure of key/value pairs that a Lambda rotation function can parse.
      * </p>
      * 
      * @param secretString
-     *        (Optional) Specifies text data that you want to encrypt and store in this new version of the secret.</p>
+     *        The text data to encrypt and store in this new version of the secret. We recommend you use a JSON
+     *        structure of key/value pairs for your secret value.</p>
      *        <p>
-     *        Either <code>SecretString</code> or <code>SecretBinary</code> must have a value, but not both. They cannot
-     *        both be empty.
+     *        Either <code>SecretString</code> or <code>SecretBinary</code> must have a value, but not both.
      *        </p>
      *        <p>
      *        If you create a secret by using the Secrets Manager console then Secrets Manager puts the protected secret
      *        text in only the <code>SecretString</code> parameter. The Secrets Manager console stores the information
-     *        as a JSON structure of key/value pairs that the Lambda rotation function knows how to parse.
-     *        </p>
-     *        <p>
-     *        For storing multiple values, we recommend that you use a JSON text string argument and specify key/value
-     *        pairs. For more information, see <a
-     *        href="https://docs.aws.amazon.com/cli/latest/userguide/cli-usage-parameters.html">Specifying parameter
-     *        values for the Amazon Web Services CLI</a> in the Amazon Web Services CLI User Guide.
+     *        as a JSON structure of key/value pairs that a Lambda rotation function can parse.
      */
 
     public void setSecretString(String secretString) {
@@ -979,39 +878,27 @@ public class CreateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * (Optional) Specifies text data that you want to encrypt and store in this new version of the secret.
+     * The text data to encrypt and store in this new version of the secret. We recommend you use a JSON structure of
+     * key/value pairs for your secret value.
      * </p>
      * <p>
-     * Either <code>SecretString</code> or <code>SecretBinary</code> must have a value, but not both. They cannot both
-     * be empty.
+     * Either <code>SecretString</code> or <code>SecretBinary</code> must have a value, but not both.
      * </p>
      * <p>
      * If you create a secret by using the Secrets Manager console then Secrets Manager puts the protected secret text
      * in only the <code>SecretString</code> parameter. The Secrets Manager console stores the information as a JSON
-     * structure of key/value pairs that the Lambda rotation function knows how to parse.
-     * </p>
-     * <p>
-     * For storing multiple values, we recommend that you use a JSON text string argument and specify key/value pairs.
-     * For more information, see <a
-     * href="https://docs.aws.amazon.com/cli/latest/userguide/cli-usage-parameters.html">Specifying parameter values for
-     * the Amazon Web Services CLI</a> in the Amazon Web Services CLI User Guide.
+     * structure of key/value pairs that a Lambda rotation function can parse.
      * </p>
      * 
-     * @return (Optional) Specifies text data that you want to encrypt and store in this new version of the secret.</p>
+     * @return The text data to encrypt and store in this new version of the secret. We recommend you use a JSON
+     *         structure of key/value pairs for your secret value.</p>
      *         <p>
-     *         Either <code>SecretString</code> or <code>SecretBinary</code> must have a value, but not both. They
-     *         cannot both be empty.
+     *         Either <code>SecretString</code> or <code>SecretBinary</code> must have a value, but not both.
      *         </p>
      *         <p>
      *         If you create a secret by using the Secrets Manager console then Secrets Manager puts the protected
      *         secret text in only the <code>SecretString</code> parameter. The Secrets Manager console stores the
-     *         information as a JSON structure of key/value pairs that the Lambda rotation function knows how to parse.
-     *         </p>
-     *         <p>
-     *         For storing multiple values, we recommend that you use a JSON text string argument and specify key/value
-     *         pairs. For more information, see <a
-     *         href="https://docs.aws.amazon.com/cli/latest/userguide/cli-usage-parameters.html">Specifying parameter
-     *         values for the Amazon Web Services CLI</a> in the Amazon Web Services CLI User Guide.
+     *         information as a JSON structure of key/value pairs that a Lambda rotation function can parse.
      */
 
     public String getSecretString() {
@@ -1020,40 +907,28 @@ public class CreateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * (Optional) Specifies text data that you want to encrypt and store in this new version of the secret.
+     * The text data to encrypt and store in this new version of the secret. We recommend you use a JSON structure of
+     * key/value pairs for your secret value.
      * </p>
      * <p>
-     * Either <code>SecretString</code> or <code>SecretBinary</code> must have a value, but not both. They cannot both
-     * be empty.
+     * Either <code>SecretString</code> or <code>SecretBinary</code> must have a value, but not both.
      * </p>
      * <p>
      * If you create a secret by using the Secrets Manager console then Secrets Manager puts the protected secret text
      * in only the <code>SecretString</code> parameter. The Secrets Manager console stores the information as a JSON
-     * structure of key/value pairs that the Lambda rotation function knows how to parse.
-     * </p>
-     * <p>
-     * For storing multiple values, we recommend that you use a JSON text string argument and specify key/value pairs.
-     * For more information, see <a
-     * href="https://docs.aws.amazon.com/cli/latest/userguide/cli-usage-parameters.html">Specifying parameter values for
-     * the Amazon Web Services CLI</a> in the Amazon Web Services CLI User Guide.
+     * structure of key/value pairs that a Lambda rotation function can parse.
      * </p>
      * 
      * @param secretString
-     *        (Optional) Specifies text data that you want to encrypt and store in this new version of the secret.</p>
+     *        The text data to encrypt and store in this new version of the secret. We recommend you use a JSON
+     *        structure of key/value pairs for your secret value.</p>
      *        <p>
-     *        Either <code>SecretString</code> or <code>SecretBinary</code> must have a value, but not both. They cannot
-     *        both be empty.
+     *        Either <code>SecretString</code> or <code>SecretBinary</code> must have a value, but not both.
      *        </p>
      *        <p>
      *        If you create a secret by using the Secrets Manager console then Secrets Manager puts the protected secret
      *        text in only the <code>SecretString</code> parameter. The Secrets Manager console stores the information
-     *        as a JSON structure of key/value pairs that the Lambda rotation function knows how to parse.
-     *        </p>
-     *        <p>
-     *        For storing multiple values, we recommend that you use a JSON text string argument and specify key/value
-     *        pairs. For more information, see <a
-     *        href="https://docs.aws.amazon.com/cli/latest/userguide/cli-usage-parameters.html">Specifying parameter
-     *        values for the Amazon Web Services CLI</a> in the Amazon Web Services CLI User Guide.
+     *        as a JSON structure of key/value pairs that a Lambda rotation function can parse.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1064,57 +939,49 @@ public class CreateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * (Optional) Specifies a list of user-defined tags that are attached to the secret. Each tag is a "Key" and "Value"
-     * pair of strings. This operation only appends tags to the existing list of tags. To remove tags, you must use
-     * <a>UntagResource</a>.
-     * </p>
-     * <important>
-     * <ul>
-     * <li>
-     * <p>
-     * Secrets Manager tag key names are case sensitive. A tag with the key "ABC" is a different tag from one with key
-     * "abc".
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * If you check tags in IAM policy <code>Condition</code> elements as part of your security strategy, then adding or
-     * removing a tag can change permissions. If the successful completion of this operation would result in you losing
-     * your permissions for this secret, then this operation is blocked and returns an <code>Access Denied</code> error.
-     * </p>
-     * </li>
-     * </ul>
-     * </important>
-     * <p>
-     * This parameter requires a JSON text string argument. For information on how to format a JSON parameter for the
-     * various command line tool environments, see <a
-     * href="https://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#cli-using-param-json">Using JSON for
-     * Parameters</a> in the <i>CLI User Guide</i>. For example:
+     * A list of tags to attach to the secret. Each tag is a key and value pair of strings in a JSON text string, for
+     * example:
      * </p>
      * <p>
      * <code>[{"Key":"CostCenter","Value":"12345"},{"Key":"environment","Value":"production"}]</code>
      * </p>
      * <p>
-     * If your command-line tool or SDK requires quotation marks around the parameter, you should use single quotes to
-     * avoid confusion with the double quotes required in the JSON text.
+     * Secrets Manager tag key names are case sensitive. A tag with the key "ABC" is a different tag from one with key
+     * "abc".
      * </p>
      * <p>
-     * The following basic restrictions apply to tags:
+     * If you check tags in permissions policies as part of your security strategy, then adding or removing a tag can
+     * change permissions. If the completion of this operation would result in you losing your permissions for this
+     * secret, then Secrets Manager blocks the operation and returns an <code>Access Denied</code> error. For more
+     * information, see <a href=
+     * "https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_examples.html#tag-secrets-abac"
+     * >Control access to secrets using tags</a> and <a href=
+     * "https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_examples.html#auth-and-access_tags2"
+     * >Limit access to identities with tags that match secrets' tags</a>.
+     * </p>
+     * <p>
+     * For information about how to format a JSON parameter for the various command line tool environments, see <a
+     * href="https://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#cli-using-param-json">Using JSON for
+     * Parameters</a>. If your command-line tool or SDK requires quotation marks around the parameter, you should use
+     * single quotes to avoid confusion with the double quotes required in the JSON text.
+     * </p>
+     * <p>
+     * The following restrictions apply to tags:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * Maximum number of tags per secret—50
+     * Maximum number of tags per secret: 50
      * </p>
      * </li>
      * <li>
      * <p>
-     * Maximum key length—127 Unicode characters in UTF-8
+     * Maximum key length: 127 Unicode characters in UTF-8
      * </p>
      * </li>
      * <li>
      * <p>
-     * Maximum value length—255 Unicode characters in UTF-8
+     * Maximum value length: 255 Unicode characters in UTF-8
      * </p>
      * </li>
      * <li>
@@ -1131,63 +998,56 @@ public class CreateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </li>
      * <li>
      * <p>
-     * If you use your tagging schema across multiple services and resources, remember other services might have
-     * restrictions on allowed characters. Generally allowed characters: letters, spaces, and numbers representable in
-     * UTF-8, plus the following special characters: + - = . _ : / @.
+     * If you use your tagging schema across multiple services and resources, other services might have restrictions on
+     * allowed characters. Generally allowed characters: letters, spaces, and numbers representable in UTF-8, plus the
+     * following special characters: + - = . _ : / @.
      * </p>
      * </li>
      * </ul>
      * 
-     * @return (Optional) Specifies a list of user-defined tags that are attached to the secret. Each tag is a "Key" and
-     *         "Value" pair of strings. This operation only appends tags to the existing list of tags. To remove tags,
-     *         you must use <a>UntagResource</a>.</p> <important>
-     *         <ul>
-     *         <li>
-     *         <p>
-     *         Secrets Manager tag key names are case sensitive. A tag with the key "ABC" is a different tag from one
-     *         with key "abc".
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
-     *         If you check tags in IAM policy <code>Condition</code> elements as part of your security strategy, then
-     *         adding or removing a tag can change permissions. If the successful completion of this operation would
-     *         result in you losing your permissions for this secret, then this operation is blocked and returns an
-     *         <code>Access Denied</code> error.
-     *         </p>
-     *         </li>
-     *         </ul>
-     *         </important>
-     *         <p>
-     *         This parameter requires a JSON text string argument. For information on how to format a JSON parameter
-     *         for the various command line tool environments, see <a
-     *         href="https://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#cli-using-param-json">Using
-     *         JSON for Parameters</a> in the <i>CLI User Guide</i>. For example:
-     *         </p>
+     * @return A list of tags to attach to the secret. Each tag is a key and value pair of strings in a JSON text
+     *         string, for example:</p>
      *         <p>
      *         <code>[{"Key":"CostCenter","Value":"12345"},{"Key":"environment","Value":"production"}]</code>
      *         </p>
      *         <p>
-     *         If your command-line tool or SDK requires quotation marks around the parameter, you should use single
-     *         quotes to avoid confusion with the double quotes required in the JSON text.
+     *         Secrets Manager tag key names are case sensitive. A tag with the key "ABC" is a different tag from one
+     *         with key "abc".
      *         </p>
      *         <p>
-     *         The following basic restrictions apply to tags:
+     *         If you check tags in permissions policies as part of your security strategy, then adding or removing a
+     *         tag can change permissions. If the completion of this operation would result in you losing your
+     *         permissions for this secret, then Secrets Manager blocks the operation and returns an
+     *         <code>Access Denied</code> error. For more information, see <a href=
+     *         "https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_examples.html#tag-secrets-abac"
+     *         >Control access to secrets using tags</a> and <a href=
+     *         "https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_examples.html#auth-and-access_tags2"
+     *         >Limit access to identities with tags that match secrets' tags</a>.
+     *         </p>
+     *         <p>
+     *         For information about how to format a JSON parameter for the various command line tool environments, see
+     *         <a
+     *         href="https://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#cli-using-param-json">Using
+     *         JSON for Parameters</a>. If your command-line tool or SDK requires quotation marks around the parameter,
+     *         you should use single quotes to avoid confusion with the double quotes required in the JSON text.
+     *         </p>
+     *         <p>
+     *         The following restrictions apply to tags:
      *         </p>
      *         <ul>
      *         <li>
      *         <p>
-     *         Maximum number of tags per secret—50
+     *         Maximum number of tags per secret: 50
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         Maximum key length—127 Unicode characters in UTF-8
+     *         Maximum key length: 127 Unicode characters in UTF-8
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         Maximum value length—255 Unicode characters in UTF-8
+     *         Maximum value length: 255 Unicode characters in UTF-8
      *         </p>
      *         </li>
      *         <li>
@@ -1204,7 +1064,7 @@ public class CreateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
      *         </li>
      *         <li>
      *         <p>
-     *         If you use your tagging schema across multiple services and resources, remember other services might have
+     *         If you use your tagging schema across multiple services and resources, other services might have
      *         restrictions on allowed characters. Generally allowed characters: letters, spaces, and numbers
      *         representable in UTF-8, plus the following special characters: + - = . _ : / @.
      *         </p>
@@ -1217,57 +1077,49 @@ public class CreateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * (Optional) Specifies a list of user-defined tags that are attached to the secret. Each tag is a "Key" and "Value"
-     * pair of strings. This operation only appends tags to the existing list of tags. To remove tags, you must use
-     * <a>UntagResource</a>.
-     * </p>
-     * <important>
-     * <ul>
-     * <li>
-     * <p>
-     * Secrets Manager tag key names are case sensitive. A tag with the key "ABC" is a different tag from one with key
-     * "abc".
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * If you check tags in IAM policy <code>Condition</code> elements as part of your security strategy, then adding or
-     * removing a tag can change permissions. If the successful completion of this operation would result in you losing
-     * your permissions for this secret, then this operation is blocked and returns an <code>Access Denied</code> error.
-     * </p>
-     * </li>
-     * </ul>
-     * </important>
-     * <p>
-     * This parameter requires a JSON text string argument. For information on how to format a JSON parameter for the
-     * various command line tool environments, see <a
-     * href="https://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#cli-using-param-json">Using JSON for
-     * Parameters</a> in the <i>CLI User Guide</i>. For example:
+     * A list of tags to attach to the secret. Each tag is a key and value pair of strings in a JSON text string, for
+     * example:
      * </p>
      * <p>
      * <code>[{"Key":"CostCenter","Value":"12345"},{"Key":"environment","Value":"production"}]</code>
      * </p>
      * <p>
-     * If your command-line tool or SDK requires quotation marks around the parameter, you should use single quotes to
-     * avoid confusion with the double quotes required in the JSON text.
+     * Secrets Manager tag key names are case sensitive. A tag with the key "ABC" is a different tag from one with key
+     * "abc".
      * </p>
      * <p>
-     * The following basic restrictions apply to tags:
+     * If you check tags in permissions policies as part of your security strategy, then adding or removing a tag can
+     * change permissions. If the completion of this operation would result in you losing your permissions for this
+     * secret, then Secrets Manager blocks the operation and returns an <code>Access Denied</code> error. For more
+     * information, see <a href=
+     * "https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_examples.html#tag-secrets-abac"
+     * >Control access to secrets using tags</a> and <a href=
+     * "https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_examples.html#auth-and-access_tags2"
+     * >Limit access to identities with tags that match secrets' tags</a>.
+     * </p>
+     * <p>
+     * For information about how to format a JSON parameter for the various command line tool environments, see <a
+     * href="https://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#cli-using-param-json">Using JSON for
+     * Parameters</a>. If your command-line tool or SDK requires quotation marks around the parameter, you should use
+     * single quotes to avoid confusion with the double quotes required in the JSON text.
+     * </p>
+     * <p>
+     * The following restrictions apply to tags:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * Maximum number of tags per secret—50
+     * Maximum number of tags per secret: 50
      * </p>
      * </li>
      * <li>
      * <p>
-     * Maximum key length—127 Unicode characters in UTF-8
+     * Maximum key length: 127 Unicode characters in UTF-8
      * </p>
      * </li>
      * <li>
      * <p>
-     * Maximum value length—255 Unicode characters in UTF-8
+     * Maximum value length: 255 Unicode characters in UTF-8
      * </p>
      * </li>
      * <li>
@@ -1284,64 +1136,56 @@ public class CreateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </li>
      * <li>
      * <p>
-     * If you use your tagging schema across multiple services and resources, remember other services might have
-     * restrictions on allowed characters. Generally allowed characters: letters, spaces, and numbers representable in
-     * UTF-8, plus the following special characters: + - = . _ : / @.
+     * If you use your tagging schema across multiple services and resources, other services might have restrictions on
+     * allowed characters. Generally allowed characters: letters, spaces, and numbers representable in UTF-8, plus the
+     * following special characters: + - = . _ : / @.
      * </p>
      * </li>
      * </ul>
      * 
      * @param tags
-     *        (Optional) Specifies a list of user-defined tags that are attached to the secret. Each tag is a "Key" and
-     *        "Value" pair of strings. This operation only appends tags to the existing list of tags. To remove tags,
-     *        you must use <a>UntagResource</a>.</p> <important>
-     *        <ul>
-     *        <li>
-     *        <p>
-     *        Secrets Manager tag key names are case sensitive. A tag with the key "ABC" is a different tag from one
-     *        with key "abc".
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        If you check tags in IAM policy <code>Condition</code> elements as part of your security strategy, then
-     *        adding or removing a tag can change permissions. If the successful completion of this operation would
-     *        result in you losing your permissions for this secret, then this operation is blocked and returns an
-     *        <code>Access Denied</code> error.
-     *        </p>
-     *        </li>
-     *        </ul>
-     *        </important>
-     *        <p>
-     *        This parameter requires a JSON text string argument. For information on how to format a JSON parameter for
-     *        the various command line tool environments, see <a
-     *        href="https://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#cli-using-param-json">Using
-     *        JSON for Parameters</a> in the <i>CLI User Guide</i>. For example:
-     *        </p>
+     *        A list of tags to attach to the secret. Each tag is a key and value pair of strings in a JSON text string,
+     *        for example:</p>
      *        <p>
      *        <code>[{"Key":"CostCenter","Value":"12345"},{"Key":"environment","Value":"production"}]</code>
      *        </p>
      *        <p>
-     *        If your command-line tool or SDK requires quotation marks around the parameter, you should use single
-     *        quotes to avoid confusion with the double quotes required in the JSON text.
+     *        Secrets Manager tag key names are case sensitive. A tag with the key "ABC" is a different tag from one
+     *        with key "abc".
      *        </p>
      *        <p>
-     *        The following basic restrictions apply to tags:
+     *        If you check tags in permissions policies as part of your security strategy, then adding or removing a tag
+     *        can change permissions. If the completion of this operation would result in you losing your permissions
+     *        for this secret, then Secrets Manager blocks the operation and returns an <code>Access Denied</code>
+     *        error. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_examples.html#tag-secrets-abac"
+     *        >Control access to secrets using tags</a> and <a href=
+     *        "https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_examples.html#auth-and-access_tags2"
+     *        >Limit access to identities with tags that match secrets' tags</a>.
+     *        </p>
+     *        <p>
+     *        For information about how to format a JSON parameter for the various command line tool environments, see
+     *        <a href="https://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#cli-using-param-json">Using
+     *        JSON for Parameters</a>. If your command-line tool or SDK requires quotation marks around the parameter,
+     *        you should use single quotes to avoid confusion with the double quotes required in the JSON text.
+     *        </p>
+     *        <p>
+     *        The following restrictions apply to tags:
      *        </p>
      *        <ul>
      *        <li>
      *        <p>
-     *        Maximum number of tags per secret—50
+     *        Maximum number of tags per secret: 50
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        Maximum key length—127 Unicode characters in UTF-8
+     *        Maximum key length: 127 Unicode characters in UTF-8
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        Maximum value length—255 Unicode characters in UTF-8
+     *        Maximum value length: 255 Unicode characters in UTF-8
      *        </p>
      *        </li>
      *        <li>
@@ -1358,7 +1202,7 @@ public class CreateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        </li>
      *        <li>
      *        <p>
-     *        If you use your tagging schema across multiple services and resources, remember other services might have
+     *        If you use your tagging schema across multiple services and resources, other services might have
      *        restrictions on allowed characters. Generally allowed characters: letters, spaces, and numbers
      *        representable in UTF-8, plus the following special characters: + - = . _ : / @.
      *        </p>
@@ -1376,57 +1220,49 @@ public class CreateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * (Optional) Specifies a list of user-defined tags that are attached to the secret. Each tag is a "Key" and "Value"
-     * pair of strings. This operation only appends tags to the existing list of tags. To remove tags, you must use
-     * <a>UntagResource</a>.
-     * </p>
-     * <important>
-     * <ul>
-     * <li>
-     * <p>
-     * Secrets Manager tag key names are case sensitive. A tag with the key "ABC" is a different tag from one with key
-     * "abc".
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * If you check tags in IAM policy <code>Condition</code> elements as part of your security strategy, then adding or
-     * removing a tag can change permissions. If the successful completion of this operation would result in you losing
-     * your permissions for this secret, then this operation is blocked and returns an <code>Access Denied</code> error.
-     * </p>
-     * </li>
-     * </ul>
-     * </important>
-     * <p>
-     * This parameter requires a JSON text string argument. For information on how to format a JSON parameter for the
-     * various command line tool environments, see <a
-     * href="https://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#cli-using-param-json">Using JSON for
-     * Parameters</a> in the <i>CLI User Guide</i>. For example:
+     * A list of tags to attach to the secret. Each tag is a key and value pair of strings in a JSON text string, for
+     * example:
      * </p>
      * <p>
      * <code>[{"Key":"CostCenter","Value":"12345"},{"Key":"environment","Value":"production"}]</code>
      * </p>
      * <p>
-     * If your command-line tool or SDK requires quotation marks around the parameter, you should use single quotes to
-     * avoid confusion with the double quotes required in the JSON text.
+     * Secrets Manager tag key names are case sensitive. A tag with the key "ABC" is a different tag from one with key
+     * "abc".
      * </p>
      * <p>
-     * The following basic restrictions apply to tags:
+     * If you check tags in permissions policies as part of your security strategy, then adding or removing a tag can
+     * change permissions. If the completion of this operation would result in you losing your permissions for this
+     * secret, then Secrets Manager blocks the operation and returns an <code>Access Denied</code> error. For more
+     * information, see <a href=
+     * "https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_examples.html#tag-secrets-abac"
+     * >Control access to secrets using tags</a> and <a href=
+     * "https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_examples.html#auth-and-access_tags2"
+     * >Limit access to identities with tags that match secrets' tags</a>.
+     * </p>
+     * <p>
+     * For information about how to format a JSON parameter for the various command line tool environments, see <a
+     * href="https://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#cli-using-param-json">Using JSON for
+     * Parameters</a>. If your command-line tool or SDK requires quotation marks around the parameter, you should use
+     * single quotes to avoid confusion with the double quotes required in the JSON text.
+     * </p>
+     * <p>
+     * The following restrictions apply to tags:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * Maximum number of tags per secret—50
+     * Maximum number of tags per secret: 50
      * </p>
      * </li>
      * <li>
      * <p>
-     * Maximum key length—127 Unicode characters in UTF-8
+     * Maximum key length: 127 Unicode characters in UTF-8
      * </p>
      * </li>
      * <li>
      * <p>
-     * Maximum value length—255 Unicode characters in UTF-8
+     * Maximum value length: 255 Unicode characters in UTF-8
      * </p>
      * </li>
      * <li>
@@ -1443,9 +1279,9 @@ public class CreateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </li>
      * <li>
      * <p>
-     * If you use your tagging schema across multiple services and resources, remember other services might have
-     * restrictions on allowed characters. Generally allowed characters: letters, spaces, and numbers representable in
-     * UTF-8, plus the following special characters: + - = . _ : / @.
+     * If you use your tagging schema across multiple services and resources, other services might have restrictions on
+     * allowed characters. Generally allowed characters: letters, spaces, and numbers representable in UTF-8, plus the
+     * following special characters: + - = . _ : / @.
      * </p>
      * </li>
      * </ul>
@@ -1456,56 +1292,48 @@ public class CreateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </p>
      * 
      * @param tags
-     *        (Optional) Specifies a list of user-defined tags that are attached to the secret. Each tag is a "Key" and
-     *        "Value" pair of strings. This operation only appends tags to the existing list of tags. To remove tags,
-     *        you must use <a>UntagResource</a>.</p> <important>
-     *        <ul>
-     *        <li>
-     *        <p>
-     *        Secrets Manager tag key names are case sensitive. A tag with the key "ABC" is a different tag from one
-     *        with key "abc".
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        If you check tags in IAM policy <code>Condition</code> elements as part of your security strategy, then
-     *        adding or removing a tag can change permissions. If the successful completion of this operation would
-     *        result in you losing your permissions for this secret, then this operation is blocked and returns an
-     *        <code>Access Denied</code> error.
-     *        </p>
-     *        </li>
-     *        </ul>
-     *        </important>
-     *        <p>
-     *        This parameter requires a JSON text string argument. For information on how to format a JSON parameter for
-     *        the various command line tool environments, see <a
-     *        href="https://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#cli-using-param-json">Using
-     *        JSON for Parameters</a> in the <i>CLI User Guide</i>. For example:
-     *        </p>
+     *        A list of tags to attach to the secret. Each tag is a key and value pair of strings in a JSON text string,
+     *        for example:</p>
      *        <p>
      *        <code>[{"Key":"CostCenter","Value":"12345"},{"Key":"environment","Value":"production"}]</code>
      *        </p>
      *        <p>
-     *        If your command-line tool or SDK requires quotation marks around the parameter, you should use single
-     *        quotes to avoid confusion with the double quotes required in the JSON text.
+     *        Secrets Manager tag key names are case sensitive. A tag with the key "ABC" is a different tag from one
+     *        with key "abc".
      *        </p>
      *        <p>
-     *        The following basic restrictions apply to tags:
+     *        If you check tags in permissions policies as part of your security strategy, then adding or removing a tag
+     *        can change permissions. If the completion of this operation would result in you losing your permissions
+     *        for this secret, then Secrets Manager blocks the operation and returns an <code>Access Denied</code>
+     *        error. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_examples.html#tag-secrets-abac"
+     *        >Control access to secrets using tags</a> and <a href=
+     *        "https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_examples.html#auth-and-access_tags2"
+     *        >Limit access to identities with tags that match secrets' tags</a>.
+     *        </p>
+     *        <p>
+     *        For information about how to format a JSON parameter for the various command line tool environments, see
+     *        <a href="https://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#cli-using-param-json">Using
+     *        JSON for Parameters</a>. If your command-line tool or SDK requires quotation marks around the parameter,
+     *        you should use single quotes to avoid confusion with the double quotes required in the JSON text.
+     *        </p>
+     *        <p>
+     *        The following restrictions apply to tags:
      *        </p>
      *        <ul>
      *        <li>
      *        <p>
-     *        Maximum number of tags per secret—50
+     *        Maximum number of tags per secret: 50
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        Maximum key length—127 Unicode characters in UTF-8
+     *        Maximum key length: 127 Unicode characters in UTF-8
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        Maximum value length—255 Unicode characters in UTF-8
+     *        Maximum value length: 255 Unicode characters in UTF-8
      *        </p>
      *        </li>
      *        <li>
@@ -1522,7 +1350,7 @@ public class CreateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        </li>
      *        <li>
      *        <p>
-     *        If you use your tagging schema across multiple services and resources, remember other services might have
+     *        If you use your tagging schema across multiple services and resources, other services might have
      *        restrictions on allowed characters. Generally allowed characters: letters, spaces, and numbers
      *        representable in UTF-8, plus the following special characters: + - = . _ : / @.
      *        </p>
@@ -1542,57 +1370,49 @@ public class CreateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * (Optional) Specifies a list of user-defined tags that are attached to the secret. Each tag is a "Key" and "Value"
-     * pair of strings. This operation only appends tags to the existing list of tags. To remove tags, you must use
-     * <a>UntagResource</a>.
-     * </p>
-     * <important>
-     * <ul>
-     * <li>
-     * <p>
-     * Secrets Manager tag key names are case sensitive. A tag with the key "ABC" is a different tag from one with key
-     * "abc".
-     * </p>
-     * </li>
-     * <li>
-     * <p>
-     * If you check tags in IAM policy <code>Condition</code> elements as part of your security strategy, then adding or
-     * removing a tag can change permissions. If the successful completion of this operation would result in you losing
-     * your permissions for this secret, then this operation is blocked and returns an <code>Access Denied</code> error.
-     * </p>
-     * </li>
-     * </ul>
-     * </important>
-     * <p>
-     * This parameter requires a JSON text string argument. For information on how to format a JSON parameter for the
-     * various command line tool environments, see <a
-     * href="https://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#cli-using-param-json">Using JSON for
-     * Parameters</a> in the <i>CLI User Guide</i>. For example:
+     * A list of tags to attach to the secret. Each tag is a key and value pair of strings in a JSON text string, for
+     * example:
      * </p>
      * <p>
      * <code>[{"Key":"CostCenter","Value":"12345"},{"Key":"environment","Value":"production"}]</code>
      * </p>
      * <p>
-     * If your command-line tool or SDK requires quotation marks around the parameter, you should use single quotes to
-     * avoid confusion with the double quotes required in the JSON text.
+     * Secrets Manager tag key names are case sensitive. A tag with the key "ABC" is a different tag from one with key
+     * "abc".
      * </p>
      * <p>
-     * The following basic restrictions apply to tags:
+     * If you check tags in permissions policies as part of your security strategy, then adding or removing a tag can
+     * change permissions. If the completion of this operation would result in you losing your permissions for this
+     * secret, then Secrets Manager blocks the operation and returns an <code>Access Denied</code> error. For more
+     * information, see <a href=
+     * "https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_examples.html#tag-secrets-abac"
+     * >Control access to secrets using tags</a> and <a href=
+     * "https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_examples.html#auth-and-access_tags2"
+     * >Limit access to identities with tags that match secrets' tags</a>.
+     * </p>
+     * <p>
+     * For information about how to format a JSON parameter for the various command line tool environments, see <a
+     * href="https://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#cli-using-param-json">Using JSON for
+     * Parameters</a>. If your command-line tool or SDK requires quotation marks around the parameter, you should use
+     * single quotes to avoid confusion with the double quotes required in the JSON text.
+     * </p>
+     * <p>
+     * The following restrictions apply to tags:
      * </p>
      * <ul>
      * <li>
      * <p>
-     * Maximum number of tags per secret—50
+     * Maximum number of tags per secret: 50
      * </p>
      * </li>
      * <li>
      * <p>
-     * Maximum key length—127 Unicode characters in UTF-8
+     * Maximum key length: 127 Unicode characters in UTF-8
      * </p>
      * </li>
      * <li>
      * <p>
-     * Maximum value length—255 Unicode characters in UTF-8
+     * Maximum value length: 255 Unicode characters in UTF-8
      * </p>
      * </li>
      * <li>
@@ -1609,64 +1429,56 @@ public class CreateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </li>
      * <li>
      * <p>
-     * If you use your tagging schema across multiple services and resources, remember other services might have
-     * restrictions on allowed characters. Generally allowed characters: letters, spaces, and numbers representable in
-     * UTF-8, plus the following special characters: + - = . _ : / @.
+     * If you use your tagging schema across multiple services and resources, other services might have restrictions on
+     * allowed characters. Generally allowed characters: letters, spaces, and numbers representable in UTF-8, plus the
+     * following special characters: + - = . _ : / @.
      * </p>
      * </li>
      * </ul>
      * 
      * @param tags
-     *        (Optional) Specifies a list of user-defined tags that are attached to the secret. Each tag is a "Key" and
-     *        "Value" pair of strings. This operation only appends tags to the existing list of tags. To remove tags,
-     *        you must use <a>UntagResource</a>.</p> <important>
-     *        <ul>
-     *        <li>
-     *        <p>
-     *        Secrets Manager tag key names are case sensitive. A tag with the key "ABC" is a different tag from one
-     *        with key "abc".
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
-     *        If you check tags in IAM policy <code>Condition</code> elements as part of your security strategy, then
-     *        adding or removing a tag can change permissions. If the successful completion of this operation would
-     *        result in you losing your permissions for this secret, then this operation is blocked and returns an
-     *        <code>Access Denied</code> error.
-     *        </p>
-     *        </li>
-     *        </ul>
-     *        </important>
-     *        <p>
-     *        This parameter requires a JSON text string argument. For information on how to format a JSON parameter for
-     *        the various command line tool environments, see <a
-     *        href="https://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#cli-using-param-json">Using
-     *        JSON for Parameters</a> in the <i>CLI User Guide</i>. For example:
-     *        </p>
+     *        A list of tags to attach to the secret. Each tag is a key and value pair of strings in a JSON text string,
+     *        for example:</p>
      *        <p>
      *        <code>[{"Key":"CostCenter","Value":"12345"},{"Key":"environment","Value":"production"}]</code>
      *        </p>
      *        <p>
-     *        If your command-line tool or SDK requires quotation marks around the parameter, you should use single
-     *        quotes to avoid confusion with the double quotes required in the JSON text.
+     *        Secrets Manager tag key names are case sensitive. A tag with the key "ABC" is a different tag from one
+     *        with key "abc".
      *        </p>
      *        <p>
-     *        The following basic restrictions apply to tags:
+     *        If you check tags in permissions policies as part of your security strategy, then adding or removing a tag
+     *        can change permissions. If the completion of this operation would result in you losing your permissions
+     *        for this secret, then Secrets Manager blocks the operation and returns an <code>Access Denied</code>
+     *        error. For more information, see <a href=
+     *        "https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_examples.html#tag-secrets-abac"
+     *        >Control access to secrets using tags</a> and <a href=
+     *        "https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_examples.html#auth-and-access_tags2"
+     *        >Limit access to identities with tags that match secrets' tags</a>.
+     *        </p>
+     *        <p>
+     *        For information about how to format a JSON parameter for the various command line tool environments, see
+     *        <a href="https://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#cli-using-param-json">Using
+     *        JSON for Parameters</a>. If your command-line tool or SDK requires quotation marks around the parameter,
+     *        you should use single quotes to avoid confusion with the double quotes required in the JSON text.
+     *        </p>
+     *        <p>
+     *        The following restrictions apply to tags:
      *        </p>
      *        <ul>
      *        <li>
      *        <p>
-     *        Maximum number of tags per secret—50
+     *        Maximum number of tags per secret: 50
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        Maximum key length—127 Unicode characters in UTF-8
+     *        Maximum key length: 127 Unicode characters in UTF-8
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        Maximum value length—255 Unicode characters in UTF-8
+     *        Maximum value length: 255 Unicode characters in UTF-8
      *        </p>
      *        </li>
      *        <li>
@@ -1683,7 +1495,7 @@ public class CreateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        </li>
      *        <li>
      *        <p>
-     *        If you use your tagging schema across multiple services and resources, remember other services might have
+     *        If you use your tagging schema across multiple services and resources, other services might have
      *        restrictions on allowed characters. Generally allowed characters: letters, spaces, and numbers
      *        representable in UTF-8, plus the following special characters: + - = . _ : / @.
      *        </p>
@@ -1698,12 +1510,10 @@ public class CreateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * (Optional) Add a list of regions to replicate secrets. Secrets Manager replicates the KMSKeyID objects to the
-     * list of regions specified in the parameter.
+     * A list of Regions and KMS keys to replicate secrets.
      * </p>
      * 
-     * @return (Optional) Add a list of regions to replicate secrets. Secrets Manager replicates the KMSKeyID objects to
-     *         the list of regions specified in the parameter.
+     * @return A list of Regions and KMS keys to replicate secrets.
      */
 
     public java.util.List<ReplicaRegionType> getAddReplicaRegions() {
@@ -1712,13 +1522,11 @@ public class CreateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * (Optional) Add a list of regions to replicate secrets. Secrets Manager replicates the KMSKeyID objects to the
-     * list of regions specified in the parameter.
+     * A list of Regions and KMS keys to replicate secrets.
      * </p>
      * 
      * @param addReplicaRegions
-     *        (Optional) Add a list of regions to replicate secrets. Secrets Manager replicates the KMSKeyID objects to
-     *        the list of regions specified in the parameter.
+     *        A list of Regions and KMS keys to replicate secrets.
      */
 
     public void setAddReplicaRegions(java.util.Collection<ReplicaRegionType> addReplicaRegions) {
@@ -1732,8 +1540,7 @@ public class CreateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * (Optional) Add a list of regions to replicate secrets. Secrets Manager replicates the KMSKeyID objects to the
-     * list of regions specified in the parameter.
+     * A list of Regions and KMS keys to replicate secrets.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -1742,8 +1549,7 @@ public class CreateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </p>
      * 
      * @param addReplicaRegions
-     *        (Optional) Add a list of regions to replicate secrets. Secrets Manager replicates the KMSKeyID objects to
-     *        the list of regions specified in the parameter.
+     *        A list of Regions and KMS keys to replicate secrets.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1759,13 +1565,11 @@ public class CreateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * (Optional) Add a list of regions to replicate secrets. Secrets Manager replicates the KMSKeyID objects to the
-     * list of regions specified in the parameter.
+     * A list of Regions and KMS keys to replicate secrets.
      * </p>
      * 
      * @param addReplicaRegions
-     *        (Optional) Add a list of regions to replicate secrets. Secrets Manager replicates the KMSKeyID objects to
-     *        the list of regions specified in the parameter.
+     *        A list of Regions and KMS keys to replicate secrets.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1776,11 +1580,11 @@ public class CreateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * (Optional) If set, the replication overwrites a secret with the same name in the destination region.
+     * Specifies whether to overwrite a secret with the same name in the destination Region.
      * </p>
      * 
      * @param forceOverwriteReplicaSecret
-     *        (Optional) If set, the replication overwrites a secret with the same name in the destination region.
+     *        Specifies whether to overwrite a secret with the same name in the destination Region.
      */
 
     public void setForceOverwriteReplicaSecret(Boolean forceOverwriteReplicaSecret) {
@@ -1789,10 +1593,10 @@ public class CreateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * (Optional) If set, the replication overwrites a secret with the same name in the destination region.
+     * Specifies whether to overwrite a secret with the same name in the destination Region.
      * </p>
      * 
-     * @return (Optional) If set, the replication overwrites a secret with the same name in the destination region.
+     * @return Specifies whether to overwrite a secret with the same name in the destination Region.
      */
 
     public Boolean getForceOverwriteReplicaSecret() {
@@ -1801,11 +1605,11 @@ public class CreateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * (Optional) If set, the replication overwrites a secret with the same name in the destination region.
+     * Specifies whether to overwrite a secret with the same name in the destination Region.
      * </p>
      * 
      * @param forceOverwriteReplicaSecret
-     *        (Optional) If set, the replication overwrites a secret with the same name in the destination region.
+     *        Specifies whether to overwrite a secret with the same name in the destination Region.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1816,10 +1620,10 @@ public class CreateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * (Optional) If set, the replication overwrites a secret with the same name in the destination region.
+     * Specifies whether to overwrite a secret with the same name in the destination Region.
      * </p>
      * 
-     * @return (Optional) If set, the replication overwrites a secret with the same name in the destination region.
+     * @return Specifies whether to overwrite a secret with the same name in the destination Region.
      */
 
     public Boolean isForceOverwriteReplicaSecret() {

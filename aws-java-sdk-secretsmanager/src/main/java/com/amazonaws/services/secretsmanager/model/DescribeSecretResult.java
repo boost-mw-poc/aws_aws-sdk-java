@@ -31,56 +31,50 @@ public class DescribeSecretResult extends com.amazonaws.AmazonWebServiceResult<c
     private String aRN;
     /**
      * <p>
-     * The user-provided friendly name of the secret.
+     * The name of the secret.
      * </p>
      */
     private String name;
     /**
      * <p>
-     * The user-provided description of the secret.
+     * The description of the secret.
      * </p>
      */
     private String description;
     /**
      * <p>
-     * The ARN or alias of the Amazon Web Services KMS customer master key (CMK) that's used to encrypt the
-     * <code>SecretString</code> or <code>SecretBinary</code> fields in each version of the secret. If you don't provide
-     * a key, then Secrets Manager defaults to encrypting the secret fields with the default Amazon Web Services KMS CMK
-     * (the one named <code>awssecretsmanager</code>) for this account.
+     * The ARN of the KMS key that Secrets Manager uses to encrypt the secret value. If the secret is encrypted with the
+     * Amazon Web Services managed key <code>aws/secretsmanager</code>, this field is omitted.
      * </p>
      */
     private String kmsKeyId;
     /**
      * <p>
-     * Specifies whether automatic rotation is enabled for this secret.
+     * Specifies whether automatic rotation is turned on for this secret.
      * </p>
      * <p>
-     * To enable rotation, use <a>RotateSecret</a> with <code>AutomaticallyRotateAfterDays</code> set to a value greater
-     * than 0. To disable rotation, use <a>CancelRotateSecret</a>.
+     * To turn on rotation, use <a>RotateSecret</a>. To turn off rotation, use <a>CancelRotateSecret</a>.
      * </p>
      */
     private Boolean rotationEnabled;
     /**
      * <p>
-     * The ARN of a Lambda function that's invoked by Secrets Manager to rotate the secret either automatically per the
-     * schedule or manually by a call to <code>RotateSecret</code>.
+     * The ARN of the Lambda function that Secrets Manager invokes to rotate the secret.
      * </p>
      */
     private String rotationLambdaARN;
     /**
      * <p>
-     * A structure with the rotation configuration for this secret. This field is only populated if rotation is
-     * configured.
+     * The rotation schedule and Lambda function for this secret. If the secret previously had rotation turned on, but
+     * it is now turned off, this field shows the previous rotation schedule and rotation function. If the secret never
+     * had rotation turned on, this field is omitted.
      * </p>
      */
     private RotationRulesType rotationRules;
     /**
      * <p>
-     * The last date and time that the rotation process for this secret was invoked.
-     * </p>
-     * <p>
-     * The most recent date and time that the Secrets Manager rotation process successfully completed. If the secret
-     * doesn't rotate, Secrets Manager returns a null value.
+     * The last date and time that Secrets Manager rotated the secret. If the secret isn't configured for rotation,
+     * Secrets Manager returns null.
      * </p>
      */
     private java.util.Date lastRotatedDate;
@@ -92,66 +86,109 @@ public class DescribeSecretResult extends com.amazonaws.AmazonWebServiceResult<c
     private java.util.Date lastChangedDate;
     /**
      * <p>
-     * The last date that this secret was accessed. This value is truncated to midnight of the date and therefore shows
-     * only the date, not the time.
+     * The last date that the secret value was retrieved. This value does not include the time. This field is omitted if
+     * the secret has never been retrieved.
      * </p>
      */
     private java.util.Date lastAccessedDate;
     /**
      * <p>
-     * This value exists if the secret is scheduled for deletion. Some time after the specified date and time, Secrets
-     * Manager deletes the secret and all of its versions.
+     * The date the secret is scheduled for deletion. If it is not scheduled for deletion, this field is omitted. When
+     * you delete a secret, Secrets Manager requires a recovery window of at least 7 days before deleting the secret.
+     * Some time after the deleted date, Secrets Manager deletes the secret, including all of its versions.
      * </p>
      * <p>
-     * If a secret is scheduled for deletion, then its details, including the encrypted secret information, is not
-     * accessible. To cancel a scheduled deletion and restore access, use <a>RestoreSecret</a>.
+     * If a secret is scheduled for deletion, then its details, including the encrypted secret value, is not accessible.
+     * To cancel a scheduled deletion and restore access to the secret, use <a>RestoreSecret</a>.
      * </p>
      */
     private java.util.Date deletedDate;
     /**
      * <p>
-     * The list of user-defined tags that are associated with the secret. To add tags to a secret, use
-     * <a>TagResource</a>. To remove tags, use <a>UntagResource</a>.
+     * The list of tags attached to the secret. To add tags to a secret, use <a>TagResource</a>. To remove tags, use
+     * <a>UntagResource</a>.
      * </p>
      */
     private java.util.List<Tag> tags;
     /**
      * <p>
-     * A list of all of the currently assigned <code>VersionStage</code> staging labels and the <code>VersionId</code>
-     * that each is attached to. Staging labels are used to keep track of the different versions during the rotation
-     * process.
+     * A list of the versions of the secret that have staging labels attached. Versions that don't have staging labels
+     * are considered deprecated and Secrets Manager can delete them.
      * </p>
-     * <note>
      * <p>
-     * A version that does not have any staging labels attached is considered deprecated and subject to deletion. Such
-     * versions are not included in this list.
+     * Secrets Manager uses staging labels to indicate the status of a secret version during rotation. The three staging
+     * labels for rotation are:
      * </p>
-     * </note>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>AWSCURRENT</code>, which indicates the current version of the secret.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWSPENDING</code>, which indicates the version of the secret that contains new secret information that will
+     * become the next current version when rotation finishes.
+     * </p>
+     * <p>
+     * During rotation, Secrets Manager creates an <code>AWSPENDING</code> version ID before creating the new secret
+     * version. To check if a secret version exists, call <a>GetSecretValue</a>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWSPREVIOUS</code>, which indicates the previous current version of the secret. You can use this as the
+     * <i>last known good</i> version.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For more information about rotation and staging labels, see <a
+     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotate-secrets_how.html">How rotation
+     * works</a>.
+     * </p>
      */
     private java.util.Map<String, java.util.List<String>> versionIdsToStages;
     /**
      * <p>
-     * Returns the name of the service that created this secret.
+     * The name of the service that created this secret.
      * </p>
      */
     private String owningService;
     /**
      * <p>
-     * The date you created the secret.
+     * The date the secret was created.
      * </p>
      */
     private java.util.Date createdDate;
     /**
      * <p>
-     * Specifies the primary region for secret replication.
+     * The Region the secret is in. If a secret is replicated to other Regions, the replicas are listed in
+     * <code>ReplicationStatus</code>.
      * </p>
      */
     private String primaryRegion;
     /**
      * <p>
-     * Describes a list of replication status objects as <code>InProgress</code>, <code>Failed</code> or
-     * <code>InSync</code>.<code>P</code>
+     * A list of the replicas of this secret and their status:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>Failed</code>, which indicates that the replica was not created.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>InProgress</code>, which indicates that Secrets Manager is in the process of creating the replica.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>InSync</code>, which indicates that the replica was created.
+     * </p>
+     * </li>
+     * </ul>
      */
     private java.util.List<ReplicationStatusType> replicationStatus;
 
@@ -197,11 +234,11 @@ public class DescribeSecretResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The user-provided friendly name of the secret.
+     * The name of the secret.
      * </p>
      * 
      * @param name
-     *        The user-provided friendly name of the secret.
+     *        The name of the secret.
      */
 
     public void setName(String name) {
@@ -210,10 +247,10 @@ public class DescribeSecretResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The user-provided friendly name of the secret.
+     * The name of the secret.
      * </p>
      * 
-     * @return The user-provided friendly name of the secret.
+     * @return The name of the secret.
      */
 
     public String getName() {
@@ -222,11 +259,11 @@ public class DescribeSecretResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The user-provided friendly name of the secret.
+     * The name of the secret.
      * </p>
      * 
      * @param name
-     *        The user-provided friendly name of the secret.
+     *        The name of the secret.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -237,11 +274,11 @@ public class DescribeSecretResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The user-provided description of the secret.
+     * The description of the secret.
      * </p>
      * 
      * @param description
-     *        The user-provided description of the secret.
+     *        The description of the secret.
      */
 
     public void setDescription(String description) {
@@ -250,10 +287,10 @@ public class DescribeSecretResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The user-provided description of the secret.
+     * The description of the secret.
      * </p>
      * 
-     * @return The user-provided description of the secret.
+     * @return The description of the secret.
      */
 
     public String getDescription() {
@@ -262,11 +299,11 @@ public class DescribeSecretResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The user-provided description of the secret.
+     * The description of the secret.
      * </p>
      * 
      * @param description
-     *        The user-provided description of the secret.
+     *        The description of the secret.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -277,17 +314,13 @@ public class DescribeSecretResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The ARN or alias of the Amazon Web Services KMS customer master key (CMK) that's used to encrypt the
-     * <code>SecretString</code> or <code>SecretBinary</code> fields in each version of the secret. If you don't provide
-     * a key, then Secrets Manager defaults to encrypting the secret fields with the default Amazon Web Services KMS CMK
-     * (the one named <code>awssecretsmanager</code>) for this account.
+     * The ARN of the KMS key that Secrets Manager uses to encrypt the secret value. If the secret is encrypted with the
+     * Amazon Web Services managed key <code>aws/secretsmanager</code>, this field is omitted.
      * </p>
      * 
      * @param kmsKeyId
-     *        The ARN or alias of the Amazon Web Services KMS customer master key (CMK) that's used to encrypt the
-     *        <code>SecretString</code> or <code>SecretBinary</code> fields in each version of the secret. If you don't
-     *        provide a key, then Secrets Manager defaults to encrypting the secret fields with the default Amazon Web
-     *        Services KMS CMK (the one named <code>awssecretsmanager</code>) for this account.
+     *        The ARN of the KMS key that Secrets Manager uses to encrypt the secret value. If the secret is encrypted
+     *        with the Amazon Web Services managed key <code>aws/secretsmanager</code>, this field is omitted.
      */
 
     public void setKmsKeyId(String kmsKeyId) {
@@ -296,16 +329,12 @@ public class DescribeSecretResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The ARN or alias of the Amazon Web Services KMS customer master key (CMK) that's used to encrypt the
-     * <code>SecretString</code> or <code>SecretBinary</code> fields in each version of the secret. If you don't provide
-     * a key, then Secrets Manager defaults to encrypting the secret fields with the default Amazon Web Services KMS CMK
-     * (the one named <code>awssecretsmanager</code>) for this account.
+     * The ARN of the KMS key that Secrets Manager uses to encrypt the secret value. If the secret is encrypted with the
+     * Amazon Web Services managed key <code>aws/secretsmanager</code>, this field is omitted.
      * </p>
      * 
-     * @return The ARN or alias of the Amazon Web Services KMS customer master key (CMK) that's used to encrypt the
-     *         <code>SecretString</code> or <code>SecretBinary</code> fields in each version of the secret. If you don't
-     *         provide a key, then Secrets Manager defaults to encrypting the secret fields with the default Amazon Web
-     *         Services KMS CMK (the one named <code>awssecretsmanager</code>) for this account.
+     * @return The ARN of the KMS key that Secrets Manager uses to encrypt the secret value. If the secret is encrypted
+     *         with the Amazon Web Services managed key <code>aws/secretsmanager</code>, this field is omitted.
      */
 
     public String getKmsKeyId() {
@@ -314,17 +343,13 @@ public class DescribeSecretResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The ARN or alias of the Amazon Web Services KMS customer master key (CMK) that's used to encrypt the
-     * <code>SecretString</code> or <code>SecretBinary</code> fields in each version of the secret. If you don't provide
-     * a key, then Secrets Manager defaults to encrypting the secret fields with the default Amazon Web Services KMS CMK
-     * (the one named <code>awssecretsmanager</code>) for this account.
+     * The ARN of the KMS key that Secrets Manager uses to encrypt the secret value. If the secret is encrypted with the
+     * Amazon Web Services managed key <code>aws/secretsmanager</code>, this field is omitted.
      * </p>
      * 
      * @param kmsKeyId
-     *        The ARN or alias of the Amazon Web Services KMS customer master key (CMK) that's used to encrypt the
-     *        <code>SecretString</code> or <code>SecretBinary</code> fields in each version of the secret. If you don't
-     *        provide a key, then Secrets Manager defaults to encrypting the secret fields with the default Amazon Web
-     *        Services KMS CMK (the one named <code>awssecretsmanager</code>) for this account.
+     *        The ARN of the KMS key that Secrets Manager uses to encrypt the secret value. If the secret is encrypted
+     *        with the Amazon Web Services managed key <code>aws/secretsmanager</code>, this field is omitted.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -335,18 +360,16 @@ public class DescribeSecretResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * Specifies whether automatic rotation is enabled for this secret.
+     * Specifies whether automatic rotation is turned on for this secret.
      * </p>
      * <p>
-     * To enable rotation, use <a>RotateSecret</a> with <code>AutomaticallyRotateAfterDays</code> set to a value greater
-     * than 0. To disable rotation, use <a>CancelRotateSecret</a>.
+     * To turn on rotation, use <a>RotateSecret</a>. To turn off rotation, use <a>CancelRotateSecret</a>.
      * </p>
      * 
      * @param rotationEnabled
-     *        Specifies whether automatic rotation is enabled for this secret.</p>
+     *        Specifies whether automatic rotation is turned on for this secret.</p>
      *        <p>
-     *        To enable rotation, use <a>RotateSecret</a> with <code>AutomaticallyRotateAfterDays</code> set to a value
-     *        greater than 0. To disable rotation, use <a>CancelRotateSecret</a>.
+     *        To turn on rotation, use <a>RotateSecret</a>. To turn off rotation, use <a>CancelRotateSecret</a>.
      */
 
     public void setRotationEnabled(Boolean rotationEnabled) {
@@ -355,17 +378,15 @@ public class DescribeSecretResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * Specifies whether automatic rotation is enabled for this secret.
+     * Specifies whether automatic rotation is turned on for this secret.
      * </p>
      * <p>
-     * To enable rotation, use <a>RotateSecret</a> with <code>AutomaticallyRotateAfterDays</code> set to a value greater
-     * than 0. To disable rotation, use <a>CancelRotateSecret</a>.
+     * To turn on rotation, use <a>RotateSecret</a>. To turn off rotation, use <a>CancelRotateSecret</a>.
      * </p>
      * 
-     * @return Specifies whether automatic rotation is enabled for this secret.</p>
+     * @return Specifies whether automatic rotation is turned on for this secret.</p>
      *         <p>
-     *         To enable rotation, use <a>RotateSecret</a> with <code>AutomaticallyRotateAfterDays</code> set to a value
-     *         greater than 0. To disable rotation, use <a>CancelRotateSecret</a>.
+     *         To turn on rotation, use <a>RotateSecret</a>. To turn off rotation, use <a>CancelRotateSecret</a>.
      */
 
     public Boolean getRotationEnabled() {
@@ -374,18 +395,16 @@ public class DescribeSecretResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * Specifies whether automatic rotation is enabled for this secret.
+     * Specifies whether automatic rotation is turned on for this secret.
      * </p>
      * <p>
-     * To enable rotation, use <a>RotateSecret</a> with <code>AutomaticallyRotateAfterDays</code> set to a value greater
-     * than 0. To disable rotation, use <a>CancelRotateSecret</a>.
+     * To turn on rotation, use <a>RotateSecret</a>. To turn off rotation, use <a>CancelRotateSecret</a>.
      * </p>
      * 
      * @param rotationEnabled
-     *        Specifies whether automatic rotation is enabled for this secret.</p>
+     *        Specifies whether automatic rotation is turned on for this secret.</p>
      *        <p>
-     *        To enable rotation, use <a>RotateSecret</a> with <code>AutomaticallyRotateAfterDays</code> set to a value
-     *        greater than 0. To disable rotation, use <a>CancelRotateSecret</a>.
+     *        To turn on rotation, use <a>RotateSecret</a>. To turn off rotation, use <a>CancelRotateSecret</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -396,17 +415,15 @@ public class DescribeSecretResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * Specifies whether automatic rotation is enabled for this secret.
+     * Specifies whether automatic rotation is turned on for this secret.
      * </p>
      * <p>
-     * To enable rotation, use <a>RotateSecret</a> with <code>AutomaticallyRotateAfterDays</code> set to a value greater
-     * than 0. To disable rotation, use <a>CancelRotateSecret</a>.
+     * To turn on rotation, use <a>RotateSecret</a>. To turn off rotation, use <a>CancelRotateSecret</a>.
      * </p>
      * 
-     * @return Specifies whether automatic rotation is enabled for this secret.</p>
+     * @return Specifies whether automatic rotation is turned on for this secret.</p>
      *         <p>
-     *         To enable rotation, use <a>RotateSecret</a> with <code>AutomaticallyRotateAfterDays</code> set to a value
-     *         greater than 0. To disable rotation, use <a>CancelRotateSecret</a>.
+     *         To turn on rotation, use <a>RotateSecret</a>. To turn off rotation, use <a>CancelRotateSecret</a>.
      */
 
     public Boolean isRotationEnabled() {
@@ -415,13 +432,11 @@ public class DescribeSecretResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The ARN of a Lambda function that's invoked by Secrets Manager to rotate the secret either automatically per the
-     * schedule or manually by a call to <code>RotateSecret</code>.
+     * The ARN of the Lambda function that Secrets Manager invokes to rotate the secret.
      * </p>
      * 
      * @param rotationLambdaARN
-     *        The ARN of a Lambda function that's invoked by Secrets Manager to rotate the secret either automatically
-     *        per the schedule or manually by a call to <code>RotateSecret</code>.
+     *        The ARN of the Lambda function that Secrets Manager invokes to rotate the secret.
      */
 
     public void setRotationLambdaARN(String rotationLambdaARN) {
@@ -430,12 +445,10 @@ public class DescribeSecretResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The ARN of a Lambda function that's invoked by Secrets Manager to rotate the secret either automatically per the
-     * schedule or manually by a call to <code>RotateSecret</code>.
+     * The ARN of the Lambda function that Secrets Manager invokes to rotate the secret.
      * </p>
      * 
-     * @return The ARN of a Lambda function that's invoked by Secrets Manager to rotate the secret either automatically
-     *         per the schedule or manually by a call to <code>RotateSecret</code>.
+     * @return The ARN of the Lambda function that Secrets Manager invokes to rotate the secret.
      */
 
     public String getRotationLambdaARN() {
@@ -444,13 +457,11 @@ public class DescribeSecretResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The ARN of a Lambda function that's invoked by Secrets Manager to rotate the secret either automatically per the
-     * schedule or manually by a call to <code>RotateSecret</code>.
+     * The ARN of the Lambda function that Secrets Manager invokes to rotate the secret.
      * </p>
      * 
      * @param rotationLambdaARN
-     *        The ARN of a Lambda function that's invoked by Secrets Manager to rotate the secret either automatically
-     *        per the schedule or manually by a call to <code>RotateSecret</code>.
+     *        The ARN of the Lambda function that Secrets Manager invokes to rotate the secret.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -461,13 +472,15 @@ public class DescribeSecretResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * A structure with the rotation configuration for this secret. This field is only populated if rotation is
-     * configured.
+     * The rotation schedule and Lambda function for this secret. If the secret previously had rotation turned on, but
+     * it is now turned off, this field shows the previous rotation schedule and rotation function. If the secret never
+     * had rotation turned on, this field is omitted.
      * </p>
      * 
      * @param rotationRules
-     *        A structure with the rotation configuration for this secret. This field is only populated if rotation is
-     *        configured.
+     *        The rotation schedule and Lambda function for this secret. If the secret previously had rotation turned
+     *        on, but it is now turned off, this field shows the previous rotation schedule and rotation function. If
+     *        the secret never had rotation turned on, this field is omitted.
      */
 
     public void setRotationRules(RotationRulesType rotationRules) {
@@ -476,12 +489,14 @@ public class DescribeSecretResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * A structure with the rotation configuration for this secret. This field is only populated if rotation is
-     * configured.
+     * The rotation schedule and Lambda function for this secret. If the secret previously had rotation turned on, but
+     * it is now turned off, this field shows the previous rotation schedule and rotation function. If the secret never
+     * had rotation turned on, this field is omitted.
      * </p>
      * 
-     * @return A structure with the rotation configuration for this secret. This field is only populated if rotation is
-     *         configured.
+     * @return The rotation schedule and Lambda function for this secret. If the secret previously had rotation turned
+     *         on, but it is now turned off, this field shows the previous rotation schedule and rotation function. If
+     *         the secret never had rotation turned on, this field is omitted.
      */
 
     public RotationRulesType getRotationRules() {
@@ -490,13 +505,15 @@ public class DescribeSecretResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * A structure with the rotation configuration for this secret. This field is only populated if rotation is
-     * configured.
+     * The rotation schedule and Lambda function for this secret. If the secret previously had rotation turned on, but
+     * it is now turned off, this field shows the previous rotation schedule and rotation function. If the secret never
+     * had rotation turned on, this field is omitted.
      * </p>
      * 
      * @param rotationRules
-     *        A structure with the rotation configuration for this secret. This field is only populated if rotation is
-     *        configured.
+     *        The rotation schedule and Lambda function for this secret. If the secret previously had rotation turned
+     *        on, but it is now turned off, this field shows the previous rotation schedule and rotation function. If
+     *        the secret never had rotation turned on, this field is omitted.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -507,18 +524,13 @@ public class DescribeSecretResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The last date and time that the rotation process for this secret was invoked.
-     * </p>
-     * <p>
-     * The most recent date and time that the Secrets Manager rotation process successfully completed. If the secret
-     * doesn't rotate, Secrets Manager returns a null value.
+     * The last date and time that Secrets Manager rotated the secret. If the secret isn't configured for rotation,
+     * Secrets Manager returns null.
      * </p>
      * 
      * @param lastRotatedDate
-     *        The last date and time that the rotation process for this secret was invoked.</p>
-     *        <p>
-     *        The most recent date and time that the Secrets Manager rotation process successfully completed. If the
-     *        secret doesn't rotate, Secrets Manager returns a null value.
+     *        The last date and time that Secrets Manager rotated the secret. If the secret isn't configured for
+     *        rotation, Secrets Manager returns null.
      */
 
     public void setLastRotatedDate(java.util.Date lastRotatedDate) {
@@ -527,17 +539,12 @@ public class DescribeSecretResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The last date and time that the rotation process for this secret was invoked.
-     * </p>
-     * <p>
-     * The most recent date and time that the Secrets Manager rotation process successfully completed. If the secret
-     * doesn't rotate, Secrets Manager returns a null value.
+     * The last date and time that Secrets Manager rotated the secret. If the secret isn't configured for rotation,
+     * Secrets Manager returns null.
      * </p>
      * 
-     * @return The last date and time that the rotation process for this secret was invoked.</p>
-     *         <p>
-     *         The most recent date and time that the Secrets Manager rotation process successfully completed. If the
-     *         secret doesn't rotate, Secrets Manager returns a null value.
+     * @return The last date and time that Secrets Manager rotated the secret. If the secret isn't configured for
+     *         rotation, Secrets Manager returns null.
      */
 
     public java.util.Date getLastRotatedDate() {
@@ -546,18 +553,13 @@ public class DescribeSecretResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The last date and time that the rotation process for this secret was invoked.
-     * </p>
-     * <p>
-     * The most recent date and time that the Secrets Manager rotation process successfully completed. If the secret
-     * doesn't rotate, Secrets Manager returns a null value.
+     * The last date and time that Secrets Manager rotated the secret. If the secret isn't configured for rotation,
+     * Secrets Manager returns null.
      * </p>
      * 
      * @param lastRotatedDate
-     *        The last date and time that the rotation process for this secret was invoked.</p>
-     *        <p>
-     *        The most recent date and time that the Secrets Manager rotation process successfully completed. If the
-     *        secret doesn't rotate, Secrets Manager returns a null value.
+     *        The last date and time that Secrets Manager rotated the secret. If the secret isn't configured for
+     *        rotation, Secrets Manager returns null.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -608,13 +610,13 @@ public class DescribeSecretResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The last date that this secret was accessed. This value is truncated to midnight of the date and therefore shows
-     * only the date, not the time.
+     * The last date that the secret value was retrieved. This value does not include the time. This field is omitted if
+     * the secret has never been retrieved.
      * </p>
      * 
      * @param lastAccessedDate
-     *        The last date that this secret was accessed. This value is truncated to midnight of the date and therefore
-     *        shows only the date, not the time.
+     *        The last date that the secret value was retrieved. This value does not include the time. This field is
+     *        omitted if the secret has never been retrieved.
      */
 
     public void setLastAccessedDate(java.util.Date lastAccessedDate) {
@@ -623,12 +625,12 @@ public class DescribeSecretResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The last date that this secret was accessed. This value is truncated to midnight of the date and therefore shows
-     * only the date, not the time.
+     * The last date that the secret value was retrieved. This value does not include the time. This field is omitted if
+     * the secret has never been retrieved.
      * </p>
      * 
-     * @return The last date that this secret was accessed. This value is truncated to midnight of the date and
-     *         therefore shows only the date, not the time.
+     * @return The last date that the secret value was retrieved. This value does not include the time. This field is
+     *         omitted if the secret has never been retrieved.
      */
 
     public java.util.Date getLastAccessedDate() {
@@ -637,13 +639,13 @@ public class DescribeSecretResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The last date that this secret was accessed. This value is truncated to midnight of the date and therefore shows
-     * only the date, not the time.
+     * The last date that the secret value was retrieved. This value does not include the time. This field is omitted if
+     * the secret has never been retrieved.
      * </p>
      * 
      * @param lastAccessedDate
-     *        The last date that this secret was accessed. This value is truncated to midnight of the date and therefore
-     *        shows only the date, not the time.
+     *        The last date that the secret value was retrieved. This value does not include the time. This field is
+     *        omitted if the secret has never been retrieved.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -654,20 +656,23 @@ public class DescribeSecretResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * This value exists if the secret is scheduled for deletion. Some time after the specified date and time, Secrets
-     * Manager deletes the secret and all of its versions.
+     * The date the secret is scheduled for deletion. If it is not scheduled for deletion, this field is omitted. When
+     * you delete a secret, Secrets Manager requires a recovery window of at least 7 days before deleting the secret.
+     * Some time after the deleted date, Secrets Manager deletes the secret, including all of its versions.
      * </p>
      * <p>
-     * If a secret is scheduled for deletion, then its details, including the encrypted secret information, is not
-     * accessible. To cancel a scheduled deletion and restore access, use <a>RestoreSecret</a>.
+     * If a secret is scheduled for deletion, then its details, including the encrypted secret value, is not accessible.
+     * To cancel a scheduled deletion and restore access to the secret, use <a>RestoreSecret</a>.
      * </p>
      * 
      * @param deletedDate
-     *        This value exists if the secret is scheduled for deletion. Some time after the specified date and time,
-     *        Secrets Manager deletes the secret and all of its versions.</p>
+     *        The date the secret is scheduled for deletion. If it is not scheduled for deletion, this field is omitted.
+     *        When you delete a secret, Secrets Manager requires a recovery window of at least 7 days before deleting
+     *        the secret. Some time after the deleted date, Secrets Manager deletes the secret, including all of its
+     *        versions.</p>
      *        <p>
-     *        If a secret is scheduled for deletion, then its details, including the encrypted secret information, is
-     *        not accessible. To cancel a scheduled deletion and restore access, use <a>RestoreSecret</a>.
+     *        If a secret is scheduled for deletion, then its details, including the encrypted secret value, is not
+     *        accessible. To cancel a scheduled deletion and restore access to the secret, use <a>RestoreSecret</a>.
      */
 
     public void setDeletedDate(java.util.Date deletedDate) {
@@ -676,19 +681,22 @@ public class DescribeSecretResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * This value exists if the secret is scheduled for deletion. Some time after the specified date and time, Secrets
-     * Manager deletes the secret and all of its versions.
+     * The date the secret is scheduled for deletion. If it is not scheduled for deletion, this field is omitted. When
+     * you delete a secret, Secrets Manager requires a recovery window of at least 7 days before deleting the secret.
+     * Some time after the deleted date, Secrets Manager deletes the secret, including all of its versions.
      * </p>
      * <p>
-     * If a secret is scheduled for deletion, then its details, including the encrypted secret information, is not
-     * accessible. To cancel a scheduled deletion and restore access, use <a>RestoreSecret</a>.
+     * If a secret is scheduled for deletion, then its details, including the encrypted secret value, is not accessible.
+     * To cancel a scheduled deletion and restore access to the secret, use <a>RestoreSecret</a>.
      * </p>
      * 
-     * @return This value exists if the secret is scheduled for deletion. Some time after the specified date and time,
-     *         Secrets Manager deletes the secret and all of its versions.</p>
+     * @return The date the secret is scheduled for deletion. If it is not scheduled for deletion, this field is
+     *         omitted. When you delete a secret, Secrets Manager requires a recovery window of at least 7 days before
+     *         deleting the secret. Some time after the deleted date, Secrets Manager deletes the secret, including all
+     *         of its versions.</p>
      *         <p>
-     *         If a secret is scheduled for deletion, then its details, including the encrypted secret information, is
-     *         not accessible. To cancel a scheduled deletion and restore access, use <a>RestoreSecret</a>.
+     *         If a secret is scheduled for deletion, then its details, including the encrypted secret value, is not
+     *         accessible. To cancel a scheduled deletion and restore access to the secret, use <a>RestoreSecret</a>.
      */
 
     public java.util.Date getDeletedDate() {
@@ -697,20 +705,23 @@ public class DescribeSecretResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * This value exists if the secret is scheduled for deletion. Some time after the specified date and time, Secrets
-     * Manager deletes the secret and all of its versions.
+     * The date the secret is scheduled for deletion. If it is not scheduled for deletion, this field is omitted. When
+     * you delete a secret, Secrets Manager requires a recovery window of at least 7 days before deleting the secret.
+     * Some time after the deleted date, Secrets Manager deletes the secret, including all of its versions.
      * </p>
      * <p>
-     * If a secret is scheduled for deletion, then its details, including the encrypted secret information, is not
-     * accessible. To cancel a scheduled deletion and restore access, use <a>RestoreSecret</a>.
+     * If a secret is scheduled for deletion, then its details, including the encrypted secret value, is not accessible.
+     * To cancel a scheduled deletion and restore access to the secret, use <a>RestoreSecret</a>.
      * </p>
      * 
      * @param deletedDate
-     *        This value exists if the secret is scheduled for deletion. Some time after the specified date and time,
-     *        Secrets Manager deletes the secret and all of its versions.</p>
+     *        The date the secret is scheduled for deletion. If it is not scheduled for deletion, this field is omitted.
+     *        When you delete a secret, Secrets Manager requires a recovery window of at least 7 days before deleting
+     *        the secret. Some time after the deleted date, Secrets Manager deletes the secret, including all of its
+     *        versions.</p>
      *        <p>
-     *        If a secret is scheduled for deletion, then its details, including the encrypted secret information, is
-     *        not accessible. To cancel a scheduled deletion and restore access, use <a>RestoreSecret</a>.
+     *        If a secret is scheduled for deletion, then its details, including the encrypted secret value, is not
+     *        accessible. To cancel a scheduled deletion and restore access to the secret, use <a>RestoreSecret</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -721,12 +732,12 @@ public class DescribeSecretResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The list of user-defined tags that are associated with the secret. To add tags to a secret, use
-     * <a>TagResource</a>. To remove tags, use <a>UntagResource</a>.
+     * The list of tags attached to the secret. To add tags to a secret, use <a>TagResource</a>. To remove tags, use
+     * <a>UntagResource</a>.
      * </p>
      * 
-     * @return The list of user-defined tags that are associated with the secret. To add tags to a secret, use
-     *         <a>TagResource</a>. To remove tags, use <a>UntagResource</a>.
+     * @return The list of tags attached to the secret. To add tags to a secret, use <a>TagResource</a>. To remove tags,
+     *         use <a>UntagResource</a>.
      */
 
     public java.util.List<Tag> getTags() {
@@ -735,13 +746,13 @@ public class DescribeSecretResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The list of user-defined tags that are associated with the secret. To add tags to a secret, use
-     * <a>TagResource</a>. To remove tags, use <a>UntagResource</a>.
+     * The list of tags attached to the secret. To add tags to a secret, use <a>TagResource</a>. To remove tags, use
+     * <a>UntagResource</a>.
      * </p>
      * 
      * @param tags
-     *        The list of user-defined tags that are associated with the secret. To add tags to a secret, use
-     *        <a>TagResource</a>. To remove tags, use <a>UntagResource</a>.
+     *        The list of tags attached to the secret. To add tags to a secret, use <a>TagResource</a>. To remove tags,
+     *        use <a>UntagResource</a>.
      */
 
     public void setTags(java.util.Collection<Tag> tags) {
@@ -755,8 +766,8 @@ public class DescribeSecretResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The list of user-defined tags that are associated with the secret. To add tags to a secret, use
-     * <a>TagResource</a>. To remove tags, use <a>UntagResource</a>.
+     * The list of tags attached to the secret. To add tags to a secret, use <a>TagResource</a>. To remove tags, use
+     * <a>UntagResource</a>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -765,8 +776,8 @@ public class DescribeSecretResult extends com.amazonaws.AmazonWebServiceResult<c
      * </p>
      * 
      * @param tags
-     *        The list of user-defined tags that are associated with the secret. To add tags to a secret, use
-     *        <a>TagResource</a>. To remove tags, use <a>UntagResource</a>.
+     *        The list of tags attached to the secret. To add tags to a secret, use <a>TagResource</a>. To remove tags,
+     *        use <a>UntagResource</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -782,13 +793,13 @@ public class DescribeSecretResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The list of user-defined tags that are associated with the secret. To add tags to a secret, use
-     * <a>TagResource</a>. To remove tags, use <a>UntagResource</a>.
+     * The list of tags attached to the secret. To add tags to a secret, use <a>TagResource</a>. To remove tags, use
+     * <a>UntagResource</a>.
      * </p>
      * 
      * @param tags
-     *        The list of user-defined tags that are associated with the secret. To add tags to a secret, use
-     *        <a>TagResource</a>. To remove tags, use <a>UntagResource</a>.
+     *        The list of tags attached to the secret. To add tags to a secret, use <a>TagResource</a>. To remove tags,
+     *        use <a>UntagResource</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -799,24 +810,75 @@ public class DescribeSecretResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * A list of all of the currently assigned <code>VersionStage</code> staging labels and the <code>VersionId</code>
-     * that each is attached to. Staging labels are used to keep track of the different versions during the rotation
-     * process.
+     * A list of the versions of the secret that have staging labels attached. Versions that don't have staging labels
+     * are considered deprecated and Secrets Manager can delete them.
      * </p>
-     * <note>
      * <p>
-     * A version that does not have any staging labels attached is considered deprecated and subject to deletion. Such
-     * versions are not included in this list.
+     * Secrets Manager uses staging labels to indicate the status of a secret version during rotation. The three staging
+     * labels for rotation are:
      * </p>
-     * </note>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>AWSCURRENT</code>, which indicates the current version of the secret.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWSPENDING</code>, which indicates the version of the secret that contains new secret information that will
+     * become the next current version when rotation finishes.
+     * </p>
+     * <p>
+     * During rotation, Secrets Manager creates an <code>AWSPENDING</code> version ID before creating the new secret
+     * version. To check if a secret version exists, call <a>GetSecretValue</a>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWSPREVIOUS</code>, which indicates the previous current version of the secret. You can use this as the
+     * <i>last known good</i> version.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For more information about rotation and staging labels, see <a
+     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotate-secrets_how.html">How rotation
+     * works</a>.
+     * </p>
      * 
-     * @return A list of all of the currently assigned <code>VersionStage</code> staging labels and the
-     *         <code>VersionId</code> that each is attached to. Staging labels are used to keep track of the different
-     *         versions during the rotation process.</p> <note>
+     * @return A list of the versions of the secret that have staging labels attached. Versions that don't have staging
+     *         labels are considered deprecated and Secrets Manager can delete them.</p>
      *         <p>
-     *         A version that does not have any staging labels attached is considered deprecated and subject to
-     *         deletion. Such versions are not included in this list.
+     *         Secrets Manager uses staging labels to indicate the status of a secret version during rotation. The three
+     *         staging labels for rotation are:
      *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>AWSCURRENT</code>, which indicates the current version of the secret.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>AWSPENDING</code>, which indicates the version of the secret that contains new secret information
+     *         that will become the next current version when rotation finishes.
+     *         </p>
+     *         <p>
+     *         During rotation, Secrets Manager creates an <code>AWSPENDING</code> version ID before creating the new
+     *         secret version. To check if a secret version exists, call <a>GetSecretValue</a>.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>AWSPREVIOUS</code>, which indicates the previous current version of the secret. You can use this as
+     *         the <i>last known good</i> version.
+     *         </p>
+     *         </li>
+     *         </ul>
+     *         <p>
+     *         For more information about rotation and staging labels, see <a
+     *         href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotate-secrets_how.html">How rotation
+     *         works</a>.
      */
 
     public java.util.Map<String, java.util.List<String>> getVersionIdsToStages() {
@@ -825,25 +887,76 @@ public class DescribeSecretResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * A list of all of the currently assigned <code>VersionStage</code> staging labels and the <code>VersionId</code>
-     * that each is attached to. Staging labels are used to keep track of the different versions during the rotation
-     * process.
+     * A list of the versions of the secret that have staging labels attached. Versions that don't have staging labels
+     * are considered deprecated and Secrets Manager can delete them.
      * </p>
-     * <note>
      * <p>
-     * A version that does not have any staging labels attached is considered deprecated and subject to deletion. Such
-     * versions are not included in this list.
+     * Secrets Manager uses staging labels to indicate the status of a secret version during rotation. The three staging
+     * labels for rotation are:
      * </p>
-     * </note>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>AWSCURRENT</code>, which indicates the current version of the secret.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWSPENDING</code>, which indicates the version of the secret that contains new secret information that will
+     * become the next current version when rotation finishes.
+     * </p>
+     * <p>
+     * During rotation, Secrets Manager creates an <code>AWSPENDING</code> version ID before creating the new secret
+     * version. To check if a secret version exists, call <a>GetSecretValue</a>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWSPREVIOUS</code>, which indicates the previous current version of the secret. You can use this as the
+     * <i>last known good</i> version.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For more information about rotation and staging labels, see <a
+     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotate-secrets_how.html">How rotation
+     * works</a>.
+     * </p>
      * 
      * @param versionIdsToStages
-     *        A list of all of the currently assigned <code>VersionStage</code> staging labels and the
-     *        <code>VersionId</code> that each is attached to. Staging labels are used to keep track of the different
-     *        versions during the rotation process.</p> <note>
+     *        A list of the versions of the secret that have staging labels attached. Versions that don't have staging
+     *        labels are considered deprecated and Secrets Manager can delete them.</p>
      *        <p>
-     *        A version that does not have any staging labels attached is considered deprecated and subject to deletion.
-     *        Such versions are not included in this list.
+     *        Secrets Manager uses staging labels to indicate the status of a secret version during rotation. The three
+     *        staging labels for rotation are:
      *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>AWSCURRENT</code>, which indicates the current version of the secret.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWSPENDING</code>, which indicates the version of the secret that contains new secret information
+     *        that will become the next current version when rotation finishes.
+     *        </p>
+     *        <p>
+     *        During rotation, Secrets Manager creates an <code>AWSPENDING</code> version ID before creating the new
+     *        secret version. To check if a secret version exists, call <a>GetSecretValue</a>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWSPREVIOUS</code>, which indicates the previous current version of the secret. You can use this as
+     *        the <i>last known good</i> version.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        For more information about rotation and staging labels, see <a
+     *        href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotate-secrets_how.html">How rotation
+     *        works</a>.
      */
 
     public void setVersionIdsToStages(java.util.Map<String, java.util.List<String>> versionIdsToStages) {
@@ -852,25 +965,76 @@ public class DescribeSecretResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * A list of all of the currently assigned <code>VersionStage</code> staging labels and the <code>VersionId</code>
-     * that each is attached to. Staging labels are used to keep track of the different versions during the rotation
-     * process.
+     * A list of the versions of the secret that have staging labels attached. Versions that don't have staging labels
+     * are considered deprecated and Secrets Manager can delete them.
      * </p>
-     * <note>
      * <p>
-     * A version that does not have any staging labels attached is considered deprecated and subject to deletion. Such
-     * versions are not included in this list.
+     * Secrets Manager uses staging labels to indicate the status of a secret version during rotation. The three staging
+     * labels for rotation are:
      * </p>
-     * </note>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>AWSCURRENT</code>, which indicates the current version of the secret.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWSPENDING</code>, which indicates the version of the secret that contains new secret information that will
+     * become the next current version when rotation finishes.
+     * </p>
+     * <p>
+     * During rotation, Secrets Manager creates an <code>AWSPENDING</code> version ID before creating the new secret
+     * version. To check if a secret version exists, call <a>GetSecretValue</a>.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>AWSPREVIOUS</code>, which indicates the previous current version of the secret. You can use this as the
+     * <i>last known good</i> version.
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
+     * For more information about rotation and staging labels, see <a
+     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotate-secrets_how.html">How rotation
+     * works</a>.
+     * </p>
      * 
      * @param versionIdsToStages
-     *        A list of all of the currently assigned <code>VersionStage</code> staging labels and the
-     *        <code>VersionId</code> that each is attached to. Staging labels are used to keep track of the different
-     *        versions during the rotation process.</p> <note>
+     *        A list of the versions of the secret that have staging labels attached. Versions that don't have staging
+     *        labels are considered deprecated and Secrets Manager can delete them.</p>
      *        <p>
-     *        A version that does not have any staging labels attached is considered deprecated and subject to deletion.
-     *        Such versions are not included in this list.
+     *        Secrets Manager uses staging labels to indicate the status of a secret version during rotation. The three
+     *        staging labels for rotation are:
      *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>AWSCURRENT</code>, which indicates the current version of the secret.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWSPENDING</code>, which indicates the version of the secret that contains new secret information
+     *        that will become the next current version when rotation finishes.
+     *        </p>
+     *        <p>
+     *        During rotation, Secrets Manager creates an <code>AWSPENDING</code> version ID before creating the new
+     *        secret version. To check if a secret version exists, call <a>GetSecretValue</a>.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>AWSPREVIOUS</code>, which indicates the previous current version of the secret. You can use this as
+     *        the <i>last known good</i> version.
+     *        </p>
+     *        </li>
+     *        </ul>
+     *        <p>
+     *        For more information about rotation and staging labels, see <a
+     *        href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/rotate-secrets_how.html">How rotation
+     *        works</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -909,11 +1073,11 @@ public class DescribeSecretResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * Returns the name of the service that created this secret.
+     * The name of the service that created this secret.
      * </p>
      * 
      * @param owningService
-     *        Returns the name of the service that created this secret.
+     *        The name of the service that created this secret.
      */
 
     public void setOwningService(String owningService) {
@@ -922,10 +1086,10 @@ public class DescribeSecretResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * Returns the name of the service that created this secret.
+     * The name of the service that created this secret.
      * </p>
      * 
-     * @return Returns the name of the service that created this secret.
+     * @return The name of the service that created this secret.
      */
 
     public String getOwningService() {
@@ -934,11 +1098,11 @@ public class DescribeSecretResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * Returns the name of the service that created this secret.
+     * The name of the service that created this secret.
      * </p>
      * 
      * @param owningService
-     *        Returns the name of the service that created this secret.
+     *        The name of the service that created this secret.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -949,11 +1113,11 @@ public class DescribeSecretResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The date you created the secret.
+     * The date the secret was created.
      * </p>
      * 
      * @param createdDate
-     *        The date you created the secret.
+     *        The date the secret was created.
      */
 
     public void setCreatedDate(java.util.Date createdDate) {
@@ -962,10 +1126,10 @@ public class DescribeSecretResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The date you created the secret.
+     * The date the secret was created.
      * </p>
      * 
-     * @return The date you created the secret.
+     * @return The date the secret was created.
      */
 
     public java.util.Date getCreatedDate() {
@@ -974,11 +1138,11 @@ public class DescribeSecretResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * The date you created the secret.
+     * The date the secret was created.
      * </p>
      * 
      * @param createdDate
-     *        The date you created the secret.
+     *        The date the secret was created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -989,11 +1153,13 @@ public class DescribeSecretResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * Specifies the primary region for secret replication.
+     * The Region the secret is in. If a secret is replicated to other Regions, the replicas are listed in
+     * <code>ReplicationStatus</code>.
      * </p>
      * 
      * @param primaryRegion
-     *        Specifies the primary region for secret replication.
+     *        The Region the secret is in. If a secret is replicated to other Regions, the replicas are listed in
+     *        <code>ReplicationStatus</code>.
      */
 
     public void setPrimaryRegion(String primaryRegion) {
@@ -1002,10 +1168,12 @@ public class DescribeSecretResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * Specifies the primary region for secret replication.
+     * The Region the secret is in. If a secret is replicated to other Regions, the replicas are listed in
+     * <code>ReplicationStatus</code>.
      * </p>
      * 
-     * @return Specifies the primary region for secret replication.
+     * @return The Region the secret is in. If a secret is replicated to other Regions, the replicas are listed in
+     *         <code>ReplicationStatus</code>.
      */
 
     public String getPrimaryRegion() {
@@ -1014,11 +1182,13 @@ public class DescribeSecretResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * Specifies the primary region for secret replication.
+     * The Region the secret is in. If a secret is replicated to other Regions, the replicas are listed in
+     * <code>ReplicationStatus</code>.
      * </p>
      * 
      * @param primaryRegion
-     *        Specifies the primary region for secret replication.
+     *        The Region the secret is in. If a secret is replicated to other Regions, the replicas are listed in
+     *        <code>ReplicationStatus</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1029,12 +1199,43 @@ public class DescribeSecretResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * Describes a list of replication status objects as <code>InProgress</code>, <code>Failed</code> or
-     * <code>InSync</code>.<code>P</code>
+     * A list of the replicas of this secret and their status:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>Failed</code>, which indicates that the replica was not created.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>InProgress</code>, which indicates that Secrets Manager is in the process of creating the replica.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>InSync</code>, which indicates that the replica was created.
+     * </p>
+     * </li>
+     * </ul>
      * 
-     * @return Describes a list of replication status objects as <code>InProgress</code>, <code>Failed</code> or
-     *         <code>InSync</code>.<code>P</code>
+     * @return A list of the replicas of this secret and their status: </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>Failed</code>, which indicates that the replica was not created.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>InProgress</code>, which indicates that Secrets Manager is in the process of creating the replica.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>InSync</code>, which indicates that the replica was created.
+     *         </p>
+     *         </li>
      */
 
     public java.util.List<ReplicationStatusType> getReplicationStatus() {
@@ -1043,13 +1244,44 @@ public class DescribeSecretResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * Describes a list of replication status objects as <code>InProgress</code>, <code>Failed</code> or
-     * <code>InSync</code>.<code>P</code>
+     * A list of the replicas of this secret and their status:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>Failed</code>, which indicates that the replica was not created.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>InProgress</code>, which indicates that Secrets Manager is in the process of creating the replica.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>InSync</code>, which indicates that the replica was created.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param replicationStatus
-     *        Describes a list of replication status objects as <code>InProgress</code>, <code>Failed</code> or
-     *        <code>InSync</code>.<code>P</code>
+     *        A list of the replicas of this secret and their status: </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>Failed</code>, which indicates that the replica was not created.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>InProgress</code>, which indicates that Secrets Manager is in the process of creating the replica.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>InSync</code>, which indicates that the replica was created.
+     *        </p>
+     *        </li>
      */
 
     public void setReplicationStatus(java.util.Collection<ReplicationStatusType> replicationStatus) {
@@ -1063,9 +1295,25 @@ public class DescribeSecretResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * Describes a list of replication status objects as <code>InProgress</code>, <code>Failed</code> or
-     * <code>InSync</code>.<code>P</code>
+     * A list of the replicas of this secret and their status:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>Failed</code>, which indicates that the replica was not created.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>InProgress</code>, which indicates that Secrets Manager is in the process of creating the replica.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>InSync</code>, which indicates that the replica was created.
+     * </p>
+     * </li>
+     * </ul>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setReplicationStatus(java.util.Collection)} or {@link #withReplicationStatus(java.util.Collection)} if
@@ -1073,8 +1321,23 @@ public class DescribeSecretResult extends com.amazonaws.AmazonWebServiceResult<c
      * </p>
      * 
      * @param replicationStatus
-     *        Describes a list of replication status objects as <code>InProgress</code>, <code>Failed</code> or
-     *        <code>InSync</code>.<code>P</code>
+     *        A list of the replicas of this secret and their status: </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>Failed</code>, which indicates that the replica was not created.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>InProgress</code>, which indicates that Secrets Manager is in the process of creating the replica.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>InSync</code>, which indicates that the replica was created.
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1090,13 +1353,44 @@ public class DescribeSecretResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * Describes a list of replication status objects as <code>InProgress</code>, <code>Failed</code> or
-     * <code>InSync</code>.<code>P</code>
+     * A list of the replicas of this secret and their status:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <code>Failed</code>, which indicates that the replica was not created.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>InProgress</code>, which indicates that Secrets Manager is in the process of creating the replica.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>InSync</code>, which indicates that the replica was created.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param replicationStatus
-     *        Describes a list of replication status objects as <code>InProgress</code>, <code>Failed</code> or
-     *        <code>InSync</code>.<code>P</code>
+     *        A list of the replicas of this secret and their status: </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>Failed</code>, which indicates that the replica was not created.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>InProgress</code>, which indicates that Secrets Manager is in the process of creating the replica.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>InSync</code>, which indicates that the replica was created.
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

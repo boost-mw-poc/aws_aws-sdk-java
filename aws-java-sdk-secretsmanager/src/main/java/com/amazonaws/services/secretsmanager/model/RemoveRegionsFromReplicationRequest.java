@@ -27,24 +27,24 @@ public class RemoveRegionsFromReplicationRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * Remove a secret by <code>SecretId</code> from replica Regions.
+     * The ARN or name of the secret.
      * </p>
      */
     private String secretId;
     /**
      * <p>
-     * Remove replication from specific Regions.
+     * The Regions of the replicas to remove.
      * </p>
      */
     private java.util.List<String> removeReplicaRegions;
 
     /**
      * <p>
-     * Remove a secret by <code>SecretId</code> from replica Regions.
+     * The ARN or name of the secret.
      * </p>
      * 
      * @param secretId
-     *        Remove a secret by <code>SecretId</code> from replica Regions.
+     *        The ARN or name of the secret.
      */
 
     public void setSecretId(String secretId) {
@@ -53,10 +53,10 @@ public class RemoveRegionsFromReplicationRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * Remove a secret by <code>SecretId</code> from replica Regions.
+     * The ARN or name of the secret.
      * </p>
      * 
-     * @return Remove a secret by <code>SecretId</code> from replica Regions.
+     * @return The ARN or name of the secret.
      */
 
     public String getSecretId() {
@@ -65,11 +65,11 @@ public class RemoveRegionsFromReplicationRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * Remove a secret by <code>SecretId</code> from replica Regions.
+     * The ARN or name of the secret.
      * </p>
      * 
      * @param secretId
-     *        Remove a secret by <code>SecretId</code> from replica Regions.
+     *        The ARN or name of the secret.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -80,10 +80,10 @@ public class RemoveRegionsFromReplicationRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * Remove replication from specific Regions.
+     * The Regions of the replicas to remove.
      * </p>
      * 
-     * @return Remove replication from specific Regions.
+     * @return The Regions of the replicas to remove.
      */
 
     public java.util.List<String> getRemoveReplicaRegions() {
@@ -92,11 +92,11 @@ public class RemoveRegionsFromReplicationRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * Remove replication from specific Regions.
+     * The Regions of the replicas to remove.
      * </p>
      * 
      * @param removeReplicaRegions
-     *        Remove replication from specific Regions.
+     *        The Regions of the replicas to remove.
      */
 
     public void setRemoveReplicaRegions(java.util.Collection<String> removeReplicaRegions) {
@@ -110,7 +110,7 @@ public class RemoveRegionsFromReplicationRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * Remove replication from specific Regions.
+     * The Regions of the replicas to remove.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -119,7 +119,7 @@ public class RemoveRegionsFromReplicationRequest extends com.amazonaws.AmazonWeb
      * </p>
      * 
      * @param removeReplicaRegions
-     *        Remove replication from specific Regions.
+     *        The Regions of the replicas to remove.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -135,11 +135,11 @@ public class RemoveRegionsFromReplicationRequest extends com.amazonaws.AmazonWeb
 
     /**
      * <p>
-     * Remove replication from specific Regions.
+     * The Regions of the replicas to remove.
      * </p>
      * 
      * @param removeReplicaRegions
-     *        Remove replication from specific Regions.
+     *        The Regions of the replicas to remove.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

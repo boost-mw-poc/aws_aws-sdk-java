@@ -27,31 +27,33 @@ public class PutSecretValueRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * Specifies the secret to which you want to add a new version. You can specify either the Amazon Resource Name
-     * (ARN) or the friendly name of the secret. The secret must already exist.
+     * The ARN or name of the secret to add a new version to.
      * </p>
      * <p>
      * For an ARN, we recommend that you specify a complete ARN rather than a partial ARN.
+     * </p>
+     * <p>
+     * If the secret doesn't already exist, use <code>CreateSecret</code> instead.
      * </p>
      */
     private String secretId;
     /**
      * <p>
-     * (Optional) Specifies a unique identifier for the new version of the secret.
+     * A unique identifier for the new version of the secret.
      * </p>
      * <note>
      * <p>
-     * If you use the Amazon Web Services CLI or one of the Amazon Web Services SDK to call this operation, then you can
-     * leave this parameter empty. The CLI or SDK generates a random UUID for you and includes that in the request. If
-     * you don't use the SDK and instead generate a raw HTTP request to the Secrets Manager service endpoint, then you
-     * must generate a <code>ClientRequestToken</code> yourself for new versions and include that value in the request.
+     * If you use the Amazon Web Services CLI or one of the Amazon Web Services SDKs to call this operation, then you
+     * can leave this parameter empty because they generate a random UUID for you. If you don't use the SDK and instead
+     * generate a raw HTTP request to the Secrets Manager service endpoint, then you must generate a
+     * <code>ClientRequestToken</code> yourself for new versions and include that value in the request.
      * </p>
      * </note>
      * <p>
      * This value helps ensure idempotency. Secrets Manager uses this value to prevent the accidental creation of
-     * duplicate versions if there are failures and retries during the Lambda rotation function's processing. We
-     * recommend that you generate a <a href="https://wikipedia.org/wiki/Universally_unique_identifier">UUID-type</a>
-     * value to ensure uniqueness within the specified secret.
+     * duplicate versions if there are failures and retries during the Lambda rotation function processing. We recommend
+     * that you generate a <a href="https://wikipedia.org/wiki/Universally_unique_identifier">UUID-type</a> value to
+     * ensure uniqueness within the specified secret.
      * </p>
      * <ul>
      * <li>
@@ -63,15 +65,15 @@ public class PutSecretValueRequest extends com.amazonaws.AmazonWebServiceRequest
      * <li>
      * <p>
      * If a version with this value already exists and that version's <code>SecretString</code> or
-     * <code>SecretBinary</code> values are the same as those in the request then the request is ignored (the operation
-     * is idempotent).
+     * <code>SecretBinary</code> values are the same as those in the request then the request is ignored. The operation
+     * is idempotent.
      * </p>
      * </li>
      * <li>
      * <p>
      * If a version with this value already exists and the version of the <code>SecretString</code> and
-     * <code>SecretBinary</code> values are different from those in the request then the request fails because you
-     * cannot modify an existing secret version. You can only create new versions to store new secret values.
+     * <code>SecretBinary</code> values are different from those in the request, then the request fails because you
+     * can't modify a secret version. You can only create new versions to store new secret values.
      * </p>
      * </li>
      * </ul>
@@ -82,68 +84,66 @@ public class PutSecretValueRequest extends com.amazonaws.AmazonWebServiceRequest
     private String clientRequestToken;
     /**
      * <p>
-     * (Optional) Specifies binary data that you want to encrypt and store in the new version of the secret. To use this
-     * parameter in the command-line tools, we recommend that you store your binary data in a file and then use the
-     * appropriate technique for your tool to pass the contents of the file as a parameter. Either
-     * <code>SecretBinary</code> or <code>SecretString</code> must have a value, but not both. They cannot both be
-     * empty.
+     * The binary data to encrypt and store in the new version of the secret. To use this parameter in the command-line
+     * tools, we recommend that you store your binary data in a file and then pass the contents of the file as a
+     * parameter.
      * </p>
      * <p>
-     * This parameter is not accessible if the secret using the Secrets Manager console.
+     * You must include <code>SecretBinary</code> or <code>SecretString</code>, but not both.
      * </p>
-     * <p/>
+     * <p>
+     * You can't access this value from the Secrets Manager console.
+     * </p>
      */
     private java.nio.ByteBuffer secretBinary;
     /**
      * <p>
-     * (Optional) Specifies text data that you want to encrypt and store in this new version of the secret. Either
-     * <code>SecretString</code> or <code>SecretBinary</code> must have a value, but not both. They cannot both be
-     * empty.
+     * The text to encrypt and store in the new version of the secret.
      * </p>
      * <p>
-     * If you create this secret by using the Secrets Manager console then Secrets Manager puts the protected secret
-     * text in only the <code>SecretString</code> parameter. The Secrets Manager console stores the information as a
-     * JSON structure of key/value pairs that the default Lambda rotation function knows how to parse.
+     * You must include <code>SecretBinary</code> or <code>SecretString</code>, but not both.
      * </p>
      * <p>
-     * For storing multiple values, we recommend that you use a JSON text string argument and specify key/value pairs.
-     * For more information, see <a
-     * href="https://docs.aws.amazon.com/cli/latest/userguide/cli-usage-parameters.html">Specifying parameter values for
-     * the Amazon Web Services CLI</a> in the Amazon Web Services CLI User Guide.
+     * We recommend you create the secret string as JSON key/value pairs, as shown in the example.
      * </p>
      */
     private String secretString;
     /**
      * <p>
-     * (Optional) Specifies a list of staging labels that are attached to this version of the secret. These staging
-     * labels are used to track the versions through the rotation process by the Lambda rotation function.
+     * A list of staging labels to attach to this version of the secret. Secrets Manager uses staging labels to track
+     * versions of a secret through the rotation process.
      * </p>
      * <p>
-     * A staging label must be unique to a single version of the secret. If you specify a staging label that's already
-     * associated with a different version of the same secret then that staging label is automatically removed from the
-     * other version and attached to this version.
+     * If you specify a staging label that's already associated with a different version of the same secret, then
+     * Secrets Manager removes the label from the other version and attaches it to this version. If you specify
+     * <code>AWSCURRENT</code>, and it is already attached to another version, then Secrets Manager also moves the
+     * staging label <code>AWSPREVIOUS</code> to the version that <code>AWSCURRENT</code> was removed from.
      * </p>
      * <p>
-     * If you do not specify a value for <code>VersionStages</code> then Secrets Manager automatically moves the staging
-     * label <code>AWSCURRENT</code> to this new version.
+     * If you don't include <code>VersionStages</code>, then Secrets Manager automatically moves the staging label
+     * <code>AWSCURRENT</code> to this version.
      * </p>
      */
     private java.util.List<String> versionStages;
 
     /**
      * <p>
-     * Specifies the secret to which you want to add a new version. You can specify either the Amazon Resource Name
-     * (ARN) or the friendly name of the secret. The secret must already exist.
+     * The ARN or name of the secret to add a new version to.
      * </p>
      * <p>
      * For an ARN, we recommend that you specify a complete ARN rather than a partial ARN.
      * </p>
+     * <p>
+     * If the secret doesn't already exist, use <code>CreateSecret</code> instead.
+     * </p>
      * 
      * @param secretId
-     *        Specifies the secret to which you want to add a new version. You can specify either the Amazon Resource
-     *        Name (ARN) or the friendly name of the secret. The secret must already exist.</p>
+     *        The ARN or name of the secret to add a new version to.</p>
      *        <p>
      *        For an ARN, we recommend that you specify a complete ARN rather than a partial ARN.
+     *        </p>
+     *        <p>
+     *        If the secret doesn't already exist, use <code>CreateSecret</code> instead.
      */
 
     public void setSecretId(String secretId) {
@@ -152,17 +152,21 @@ public class PutSecretValueRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * Specifies the secret to which you want to add a new version. You can specify either the Amazon Resource Name
-     * (ARN) or the friendly name of the secret. The secret must already exist.
+     * The ARN or name of the secret to add a new version to.
      * </p>
      * <p>
      * For an ARN, we recommend that you specify a complete ARN rather than a partial ARN.
      * </p>
+     * <p>
+     * If the secret doesn't already exist, use <code>CreateSecret</code> instead.
+     * </p>
      * 
-     * @return Specifies the secret to which you want to add a new version. You can specify either the Amazon Resource
-     *         Name (ARN) or the friendly name of the secret. The secret must already exist.</p>
+     * @return The ARN or name of the secret to add a new version to.</p>
      *         <p>
      *         For an ARN, we recommend that you specify a complete ARN rather than a partial ARN.
+     *         </p>
+     *         <p>
+     *         If the secret doesn't already exist, use <code>CreateSecret</code> instead.
      */
 
     public String getSecretId() {
@@ -171,18 +175,22 @@ public class PutSecretValueRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * Specifies the secret to which you want to add a new version. You can specify either the Amazon Resource Name
-     * (ARN) or the friendly name of the secret. The secret must already exist.
+     * The ARN or name of the secret to add a new version to.
      * </p>
      * <p>
      * For an ARN, we recommend that you specify a complete ARN rather than a partial ARN.
      * </p>
+     * <p>
+     * If the secret doesn't already exist, use <code>CreateSecret</code> instead.
+     * </p>
      * 
      * @param secretId
-     *        Specifies the secret to which you want to add a new version. You can specify either the Amazon Resource
-     *        Name (ARN) or the friendly name of the secret. The secret must already exist.</p>
+     *        The ARN or name of the secret to add a new version to.</p>
      *        <p>
      *        For an ARN, we recommend that you specify a complete ARN rather than a partial ARN.
+     *        </p>
+     *        <p>
+     *        If the secret doesn't already exist, use <code>CreateSecret</code> instead.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -193,21 +201,21 @@ public class PutSecretValueRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * (Optional) Specifies a unique identifier for the new version of the secret.
+     * A unique identifier for the new version of the secret.
      * </p>
      * <note>
      * <p>
-     * If you use the Amazon Web Services CLI or one of the Amazon Web Services SDK to call this operation, then you can
-     * leave this parameter empty. The CLI or SDK generates a random UUID for you and includes that in the request. If
-     * you don't use the SDK and instead generate a raw HTTP request to the Secrets Manager service endpoint, then you
-     * must generate a <code>ClientRequestToken</code> yourself for new versions and include that value in the request.
+     * If you use the Amazon Web Services CLI or one of the Amazon Web Services SDKs to call this operation, then you
+     * can leave this parameter empty because they generate a random UUID for you. If you don't use the SDK and instead
+     * generate a raw HTTP request to the Secrets Manager service endpoint, then you must generate a
+     * <code>ClientRequestToken</code> yourself for new versions and include that value in the request.
      * </p>
      * </note>
      * <p>
      * This value helps ensure idempotency. Secrets Manager uses this value to prevent the accidental creation of
-     * duplicate versions if there are failures and retries during the Lambda rotation function's processing. We
-     * recommend that you generate a <a href="https://wikipedia.org/wiki/Universally_unique_identifier">UUID-type</a>
-     * value to ensure uniqueness within the specified secret.
+     * duplicate versions if there are failures and retries during the Lambda rotation function processing. We recommend
+     * that you generate a <a href="https://wikipedia.org/wiki/Universally_unique_identifier">UUID-type</a> value to
+     * ensure uniqueness within the specified secret.
      * </p>
      * <ul>
      * <li>
@@ -219,15 +227,15 @@ public class PutSecretValueRequest extends com.amazonaws.AmazonWebServiceRequest
      * <li>
      * <p>
      * If a version with this value already exists and that version's <code>SecretString</code> or
-     * <code>SecretBinary</code> values are the same as those in the request then the request is ignored (the operation
-     * is idempotent).
+     * <code>SecretBinary</code> values are the same as those in the request then the request is ignored. The operation
+     * is idempotent.
      * </p>
      * </li>
      * <li>
      * <p>
      * If a version with this value already exists and the version of the <code>SecretString</code> and
-     * <code>SecretBinary</code> values are different from those in the request then the request fails because you
-     * cannot modify an existing secret version. You can only create new versions to store new secret values.
+     * <code>SecretBinary</code> values are different from those in the request, then the request fails because you
+     * can't modify a secret version. You can only create new versions to store new secret values.
      * </p>
      * </li>
      * </ul>
@@ -236,18 +244,17 @@ public class PutSecretValueRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      * 
      * @param clientRequestToken
-     *        (Optional) Specifies a unique identifier for the new version of the secret. </p> <note>
+     *        A unique identifier for the new version of the secret. </p> <note>
      *        <p>
-     *        If you use the Amazon Web Services CLI or one of the Amazon Web Services SDK to call this operation, then
-     *        you can leave this parameter empty. The CLI or SDK generates a random UUID for you and includes that in
-     *        the request. If you don't use the SDK and instead generate a raw HTTP request to the Secrets Manager
-     *        service endpoint, then you must generate a <code>ClientRequestToken</code> yourself for new versions and
-     *        include that value in the request.
+     *        If you use the Amazon Web Services CLI or one of the Amazon Web Services SDKs to call this operation, then
+     *        you can leave this parameter empty because they generate a random UUID for you. If you don't use the SDK
+     *        and instead generate a raw HTTP request to the Secrets Manager service endpoint, then you must generate a
+     *        <code>ClientRequestToken</code> yourself for new versions and include that value in the request.
      *        </p>
      *        </note>
      *        <p>
      *        This value helps ensure idempotency. Secrets Manager uses this value to prevent the accidental creation of
-     *        duplicate versions if there are failures and retries during the Lambda rotation function's processing. We
+     *        duplicate versions if there are failures and retries during the Lambda rotation function processing. We
      *        recommend that you generate a <a
      *        href="https://wikipedia.org/wiki/Universally_unique_identifier">UUID-type</a> value to ensure uniqueness
      *        within the specified secret.
@@ -262,15 +269,15 @@ public class PutSecretValueRequest extends com.amazonaws.AmazonWebServiceRequest
      *        <li>
      *        <p>
      *        If a version with this value already exists and that version's <code>SecretString</code> or
-     *        <code>SecretBinary</code> values are the same as those in the request then the request is ignored (the
-     *        operation is idempotent).
+     *        <code>SecretBinary</code> values are the same as those in the request then the request is ignored. The
+     *        operation is idempotent.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        If a version with this value already exists and the version of the <code>SecretString</code> and
-     *        <code>SecretBinary</code> values are different from those in the request then the request fails because
-     *        you cannot modify an existing secret version. You can only create new versions to store new secret values.
+     *        <code>SecretBinary</code> values are different from those in the request, then the request fails because
+     *        you can't modify a secret version. You can only create new versions to store new secret values.
      *        </p>
      *        </li>
      *        </ul>
@@ -284,21 +291,21 @@ public class PutSecretValueRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * (Optional) Specifies a unique identifier for the new version of the secret.
+     * A unique identifier for the new version of the secret.
      * </p>
      * <note>
      * <p>
-     * If you use the Amazon Web Services CLI or one of the Amazon Web Services SDK to call this operation, then you can
-     * leave this parameter empty. The CLI or SDK generates a random UUID for you and includes that in the request. If
-     * you don't use the SDK and instead generate a raw HTTP request to the Secrets Manager service endpoint, then you
-     * must generate a <code>ClientRequestToken</code> yourself for new versions and include that value in the request.
+     * If you use the Amazon Web Services CLI or one of the Amazon Web Services SDKs to call this operation, then you
+     * can leave this parameter empty because they generate a random UUID for you. If you don't use the SDK and instead
+     * generate a raw HTTP request to the Secrets Manager service endpoint, then you must generate a
+     * <code>ClientRequestToken</code> yourself for new versions and include that value in the request.
      * </p>
      * </note>
      * <p>
      * This value helps ensure idempotency. Secrets Manager uses this value to prevent the accidental creation of
-     * duplicate versions if there are failures and retries during the Lambda rotation function's processing. We
-     * recommend that you generate a <a href="https://wikipedia.org/wiki/Universally_unique_identifier">UUID-type</a>
-     * value to ensure uniqueness within the specified secret.
+     * duplicate versions if there are failures and retries during the Lambda rotation function processing. We recommend
+     * that you generate a <a href="https://wikipedia.org/wiki/Universally_unique_identifier">UUID-type</a> value to
+     * ensure uniqueness within the specified secret.
      * </p>
      * <ul>
      * <li>
@@ -310,15 +317,15 @@ public class PutSecretValueRequest extends com.amazonaws.AmazonWebServiceRequest
      * <li>
      * <p>
      * If a version with this value already exists and that version's <code>SecretString</code> or
-     * <code>SecretBinary</code> values are the same as those in the request then the request is ignored (the operation
-     * is idempotent).
+     * <code>SecretBinary</code> values are the same as those in the request then the request is ignored. The operation
+     * is idempotent.
      * </p>
      * </li>
      * <li>
      * <p>
      * If a version with this value already exists and the version of the <code>SecretString</code> and
-     * <code>SecretBinary</code> values are different from those in the request then the request fails because you
-     * cannot modify an existing secret version. You can only create new versions to store new secret values.
+     * <code>SecretBinary</code> values are different from those in the request, then the request fails because you
+     * can't modify a secret version. You can only create new versions to store new secret values.
      * </p>
      * </li>
      * </ul>
@@ -326,18 +333,18 @@ public class PutSecretValueRequest extends com.amazonaws.AmazonWebServiceRequest
      * This value becomes the <code>VersionId</code> of the new version.
      * </p>
      * 
-     * @return (Optional) Specifies a unique identifier for the new version of the secret. </p> <note>
+     * @return A unique identifier for the new version of the secret. </p> <note>
      *         <p>
-     *         If you use the Amazon Web Services CLI or one of the Amazon Web Services SDK to call this operation, then
-     *         you can leave this parameter empty. The CLI or SDK generates a random UUID for you and includes that in
-     *         the request. If you don't use the SDK and instead generate a raw HTTP request to the Secrets Manager
-     *         service endpoint, then you must generate a <code>ClientRequestToken</code> yourself for new versions and
-     *         include that value in the request.
+     *         If you use the Amazon Web Services CLI or one of the Amazon Web Services SDKs to call this operation,
+     *         then you can leave this parameter empty because they generate a random UUID for you. If you don't use the
+     *         SDK and instead generate a raw HTTP request to the Secrets Manager service endpoint, then you must
+     *         generate a <code>ClientRequestToken</code> yourself for new versions and include that value in the
+     *         request.
      *         </p>
      *         </note>
      *         <p>
      *         This value helps ensure idempotency. Secrets Manager uses this value to prevent the accidental creation
-     *         of duplicate versions if there are failures and retries during the Lambda rotation function's processing.
+     *         of duplicate versions if there are failures and retries during the Lambda rotation function processing.
      *         We recommend that you generate a <a
      *         href="https://wikipedia.org/wiki/Universally_unique_identifier">UUID-type</a> value to ensure uniqueness
      *         within the specified secret.
@@ -352,16 +359,15 @@ public class PutSecretValueRequest extends com.amazonaws.AmazonWebServiceRequest
      *         <li>
      *         <p>
      *         If a version with this value already exists and that version's <code>SecretString</code> or
-     *         <code>SecretBinary</code> values are the same as those in the request then the request is ignored (the
-     *         operation is idempotent).
+     *         <code>SecretBinary</code> values are the same as those in the request then the request is ignored. The
+     *         operation is idempotent.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
      *         If a version with this value already exists and the version of the <code>SecretString</code> and
-     *         <code>SecretBinary</code> values are different from those in the request then the request fails because
-     *         you cannot modify an existing secret version. You can only create new versions to store new secret
-     *         values.
+     *         <code>SecretBinary</code> values are different from those in the request, then the request fails because
+     *         you can't modify a secret version. You can only create new versions to store new secret values.
      *         </p>
      *         </li>
      *         </ul>
@@ -375,21 +381,21 @@ public class PutSecretValueRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * (Optional) Specifies a unique identifier for the new version of the secret.
+     * A unique identifier for the new version of the secret.
      * </p>
      * <note>
      * <p>
-     * If you use the Amazon Web Services CLI or one of the Amazon Web Services SDK to call this operation, then you can
-     * leave this parameter empty. The CLI or SDK generates a random UUID for you and includes that in the request. If
-     * you don't use the SDK and instead generate a raw HTTP request to the Secrets Manager service endpoint, then you
-     * must generate a <code>ClientRequestToken</code> yourself for new versions and include that value in the request.
+     * If you use the Amazon Web Services CLI or one of the Amazon Web Services SDKs to call this operation, then you
+     * can leave this parameter empty because they generate a random UUID for you. If you don't use the SDK and instead
+     * generate a raw HTTP request to the Secrets Manager service endpoint, then you must generate a
+     * <code>ClientRequestToken</code> yourself for new versions and include that value in the request.
      * </p>
      * </note>
      * <p>
      * This value helps ensure idempotency. Secrets Manager uses this value to prevent the accidental creation of
-     * duplicate versions if there are failures and retries during the Lambda rotation function's processing. We
-     * recommend that you generate a <a href="https://wikipedia.org/wiki/Universally_unique_identifier">UUID-type</a>
-     * value to ensure uniqueness within the specified secret.
+     * duplicate versions if there are failures and retries during the Lambda rotation function processing. We recommend
+     * that you generate a <a href="https://wikipedia.org/wiki/Universally_unique_identifier">UUID-type</a> value to
+     * ensure uniqueness within the specified secret.
      * </p>
      * <ul>
      * <li>
@@ -401,15 +407,15 @@ public class PutSecretValueRequest extends com.amazonaws.AmazonWebServiceRequest
      * <li>
      * <p>
      * If a version with this value already exists and that version's <code>SecretString</code> or
-     * <code>SecretBinary</code> values are the same as those in the request then the request is ignored (the operation
-     * is idempotent).
+     * <code>SecretBinary</code> values are the same as those in the request then the request is ignored. The operation
+     * is idempotent.
      * </p>
      * </li>
      * <li>
      * <p>
      * If a version with this value already exists and the version of the <code>SecretString</code> and
-     * <code>SecretBinary</code> values are different from those in the request then the request fails because you
-     * cannot modify an existing secret version. You can only create new versions to store new secret values.
+     * <code>SecretBinary</code> values are different from those in the request, then the request fails because you
+     * can't modify a secret version. You can only create new versions to store new secret values.
      * </p>
      * </li>
      * </ul>
@@ -418,18 +424,17 @@ public class PutSecretValueRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      * 
      * @param clientRequestToken
-     *        (Optional) Specifies a unique identifier for the new version of the secret. </p> <note>
+     *        A unique identifier for the new version of the secret. </p> <note>
      *        <p>
-     *        If you use the Amazon Web Services CLI or one of the Amazon Web Services SDK to call this operation, then
-     *        you can leave this parameter empty. The CLI or SDK generates a random UUID for you and includes that in
-     *        the request. If you don't use the SDK and instead generate a raw HTTP request to the Secrets Manager
-     *        service endpoint, then you must generate a <code>ClientRequestToken</code> yourself for new versions and
-     *        include that value in the request.
+     *        If you use the Amazon Web Services CLI or one of the Amazon Web Services SDKs to call this operation, then
+     *        you can leave this parameter empty because they generate a random UUID for you. If you don't use the SDK
+     *        and instead generate a raw HTTP request to the Secrets Manager service endpoint, then you must generate a
+     *        <code>ClientRequestToken</code> yourself for new versions and include that value in the request.
      *        </p>
      *        </note>
      *        <p>
      *        This value helps ensure idempotency. Secrets Manager uses this value to prevent the accidental creation of
-     *        duplicate versions if there are failures and retries during the Lambda rotation function's processing. We
+     *        duplicate versions if there are failures and retries during the Lambda rotation function processing. We
      *        recommend that you generate a <a
      *        href="https://wikipedia.org/wiki/Universally_unique_identifier">UUID-type</a> value to ensure uniqueness
      *        within the specified secret.
@@ -444,15 +449,15 @@ public class PutSecretValueRequest extends com.amazonaws.AmazonWebServiceRequest
      *        <li>
      *        <p>
      *        If a version with this value already exists and that version's <code>SecretString</code> or
-     *        <code>SecretBinary</code> values are the same as those in the request then the request is ignored (the
-     *        operation is idempotent).
+     *        <code>SecretBinary</code> values are the same as those in the request then the request is ignored. The
+     *        operation is idempotent.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        If a version with this value already exists and the version of the <code>SecretString</code> and
-     *        <code>SecretBinary</code> values are different from those in the request then the request fails because
-     *        you cannot modify an existing secret version. You can only create new versions to store new secret values.
+     *        <code>SecretBinary</code> values are different from those in the request, then the request fails because
+     *        you can't modify a secret version. You can only create new versions to store new secret values.
      *        </p>
      *        </li>
      *        </ul>
@@ -468,16 +473,16 @@ public class PutSecretValueRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * (Optional) Specifies binary data that you want to encrypt and store in the new version of the secret. To use this
-     * parameter in the command-line tools, we recommend that you store your binary data in a file and then use the
-     * appropriate technique for your tool to pass the contents of the file as a parameter. Either
-     * <code>SecretBinary</code> or <code>SecretString</code> must have a value, but not both. They cannot both be
-     * empty.
+     * The binary data to encrypt and store in the new version of the secret. To use this parameter in the command-line
+     * tools, we recommend that you store your binary data in a file and then pass the contents of the file as a
+     * parameter.
      * </p>
      * <p>
-     * This parameter is not accessible if the secret using the Secrets Manager console.
+     * You must include <code>SecretBinary</code> or <code>SecretString</code>, but not both.
      * </p>
-     * <p/>
+     * <p>
+     * You can't access this value from the Secrets Manager console.
+     * </p>
      * <p>
      * The AWS SDK for Java performs a Base64 encoding on this field before sending this request to the AWS service.
      * Users of the SDK should not perform Base64 encoding on this field.
@@ -490,14 +495,14 @@ public class PutSecretValueRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      * 
      * @param secretBinary
-     *        (Optional) Specifies binary data that you want to encrypt and store in the new version of the secret. To
-     *        use this parameter in the command-line tools, we recommend that you store your binary data in a file and
-     *        then use the appropriate technique for your tool to pass the contents of the file as a parameter. Either
-     *        <code>SecretBinary</code> or <code>SecretString</code> must have a value, but not both. They cannot both
-     *        be empty.</p>
+     *        The binary data to encrypt and store in the new version of the secret. To use this parameter in the
+     *        command-line tools, we recommend that you store your binary data in a file and then pass the contents of
+     *        the file as a parameter. </p>
      *        <p>
-     *        This parameter is not accessible if the secret using the Secrets Manager console.
+     *        You must include <code>SecretBinary</code> or <code>SecretString</code>, but not both.
      *        </p>
+     *        <p>
+     *        You can't access this value from the Secrets Manager console.
      */
 
     public void setSecretBinary(java.nio.ByteBuffer secretBinary) {
@@ -506,16 +511,16 @@ public class PutSecretValueRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * (Optional) Specifies binary data that you want to encrypt and store in the new version of the secret. To use this
-     * parameter in the command-line tools, we recommend that you store your binary data in a file and then use the
-     * appropriate technique for your tool to pass the contents of the file as a parameter. Either
-     * <code>SecretBinary</code> or <code>SecretString</code> must have a value, but not both. They cannot both be
-     * empty.
+     * The binary data to encrypt and store in the new version of the secret. To use this parameter in the command-line
+     * tools, we recommend that you store your binary data in a file and then pass the contents of the file as a
+     * parameter.
      * </p>
      * <p>
-     * This parameter is not accessible if the secret using the Secrets Manager console.
+     * You must include <code>SecretBinary</code> or <code>SecretString</code>, but not both.
      * </p>
-     * <p/>
+     * <p>
+     * You can't access this value from the Secrets Manager console.
+     * </p>
      * <p>
      * {@code ByteBuffer}s are stateful. Calling their {@code get} methods changes their {@code position}. We recommend
      * using {@link java.nio.ByteBuffer#asReadOnlyBuffer()} to create a read-only view of the buffer with an independent
@@ -524,14 +529,14 @@ public class PutSecretValueRequest extends com.amazonaws.AmazonWebServiceRequest
      * {@code position}.
      * </p>
      * 
-     * @return (Optional) Specifies binary data that you want to encrypt and store in the new version of the secret. To
-     *         use this parameter in the command-line tools, we recommend that you store your binary data in a file and
-     *         then use the appropriate technique for your tool to pass the contents of the file as a parameter. Either
-     *         <code>SecretBinary</code> or <code>SecretString</code> must have a value, but not both. They cannot both
-     *         be empty.</p>
+     * @return The binary data to encrypt and store in the new version of the secret. To use this parameter in the
+     *         command-line tools, we recommend that you store your binary data in a file and then pass the contents of
+     *         the file as a parameter. </p>
      *         <p>
-     *         This parameter is not accessible if the secret using the Secrets Manager console.
+     *         You must include <code>SecretBinary</code> or <code>SecretString</code>, but not both.
      *         </p>
+     *         <p>
+     *         You can't access this value from the Secrets Manager console.
      */
 
     public java.nio.ByteBuffer getSecretBinary() {
@@ -540,16 +545,16 @@ public class PutSecretValueRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * (Optional) Specifies binary data that you want to encrypt and store in the new version of the secret. To use this
-     * parameter in the command-line tools, we recommend that you store your binary data in a file and then use the
-     * appropriate technique for your tool to pass the contents of the file as a parameter. Either
-     * <code>SecretBinary</code> or <code>SecretString</code> must have a value, but not both. They cannot both be
-     * empty.
+     * The binary data to encrypt and store in the new version of the secret. To use this parameter in the command-line
+     * tools, we recommend that you store your binary data in a file and then pass the contents of the file as a
+     * parameter.
      * </p>
      * <p>
-     * This parameter is not accessible if the secret using the Secrets Manager console.
+     * You must include <code>SecretBinary</code> or <code>SecretString</code>, but not both.
      * </p>
-     * <p/>
+     * <p>
+     * You can't access this value from the Secrets Manager console.
+     * </p>
      * <p>
      * The AWS SDK for Java performs a Base64 encoding on this field before sending this request to the AWS service.
      * Users of the SDK should not perform Base64 encoding on this field.
@@ -562,14 +567,14 @@ public class PutSecretValueRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      * 
      * @param secretBinary
-     *        (Optional) Specifies binary data that you want to encrypt and store in the new version of the secret. To
-     *        use this parameter in the command-line tools, we recommend that you store your binary data in a file and
-     *        then use the appropriate technique for your tool to pass the contents of the file as a parameter. Either
-     *        <code>SecretBinary</code> or <code>SecretString</code> must have a value, but not both. They cannot both
-     *        be empty.</p>
+     *        The binary data to encrypt and store in the new version of the secret. To use this parameter in the
+     *        command-line tools, we recommend that you store your binary data in a file and then pass the contents of
+     *        the file as a parameter. </p>
      *        <p>
-     *        This parameter is not accessible if the secret using the Secrets Manager console.
+     *        You must include <code>SecretBinary</code> or <code>SecretString</code>, but not both.
      *        </p>
+     *        <p>
+     *        You can't access this value from the Secrets Manager console.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -580,37 +585,22 @@ public class PutSecretValueRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * (Optional) Specifies text data that you want to encrypt and store in this new version of the secret. Either
-     * <code>SecretString</code> or <code>SecretBinary</code> must have a value, but not both. They cannot both be
-     * empty.
+     * The text to encrypt and store in the new version of the secret.
      * </p>
      * <p>
-     * If you create this secret by using the Secrets Manager console then Secrets Manager puts the protected secret
-     * text in only the <code>SecretString</code> parameter. The Secrets Manager console stores the information as a
-     * JSON structure of key/value pairs that the default Lambda rotation function knows how to parse.
+     * You must include <code>SecretBinary</code> or <code>SecretString</code>, but not both.
      * </p>
      * <p>
-     * For storing multiple values, we recommend that you use a JSON text string argument and specify key/value pairs.
-     * For more information, see <a
-     * href="https://docs.aws.amazon.com/cli/latest/userguide/cli-usage-parameters.html">Specifying parameter values for
-     * the Amazon Web Services CLI</a> in the Amazon Web Services CLI User Guide.
+     * We recommend you create the secret string as JSON key/value pairs, as shown in the example.
      * </p>
      * 
      * @param secretString
-     *        (Optional) Specifies text data that you want to encrypt and store in this new version of the secret.
-     *        Either <code>SecretString</code> or <code>SecretBinary</code> must have a value, but not both. They cannot
-     *        both be empty.</p>
+     *        The text to encrypt and store in the new version of the secret. </p>
      *        <p>
-     *        If you create this secret by using the Secrets Manager console then Secrets Manager puts the protected
-     *        secret text in only the <code>SecretString</code> parameter. The Secrets Manager console stores the
-     *        information as a JSON structure of key/value pairs that the default Lambda rotation function knows how to
-     *        parse.
+     *        You must include <code>SecretBinary</code> or <code>SecretString</code>, but not both.
      *        </p>
      *        <p>
-     *        For storing multiple values, we recommend that you use a JSON text string argument and specify key/value
-     *        pairs. For more information, see <a
-     *        href="https://docs.aws.amazon.com/cli/latest/userguide/cli-usage-parameters.html">Specifying parameter
-     *        values for the Amazon Web Services CLI</a> in the Amazon Web Services CLI User Guide.
+     *        We recommend you create the secret string as JSON key/value pairs, as shown in the example.
      */
 
     public void setSecretString(String secretString) {
@@ -619,36 +609,21 @@ public class PutSecretValueRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * (Optional) Specifies text data that you want to encrypt and store in this new version of the secret. Either
-     * <code>SecretString</code> or <code>SecretBinary</code> must have a value, but not both. They cannot both be
-     * empty.
+     * The text to encrypt and store in the new version of the secret.
      * </p>
      * <p>
-     * If you create this secret by using the Secrets Manager console then Secrets Manager puts the protected secret
-     * text in only the <code>SecretString</code> parameter. The Secrets Manager console stores the information as a
-     * JSON structure of key/value pairs that the default Lambda rotation function knows how to parse.
+     * You must include <code>SecretBinary</code> or <code>SecretString</code>, but not both.
      * </p>
      * <p>
-     * For storing multiple values, we recommend that you use a JSON text string argument and specify key/value pairs.
-     * For more information, see <a
-     * href="https://docs.aws.amazon.com/cli/latest/userguide/cli-usage-parameters.html">Specifying parameter values for
-     * the Amazon Web Services CLI</a> in the Amazon Web Services CLI User Guide.
+     * We recommend you create the secret string as JSON key/value pairs, as shown in the example.
      * </p>
      * 
-     * @return (Optional) Specifies text data that you want to encrypt and store in this new version of the secret.
-     *         Either <code>SecretString</code> or <code>SecretBinary</code> must have a value, but not both. They
-     *         cannot both be empty.</p>
+     * @return The text to encrypt and store in the new version of the secret. </p>
      *         <p>
-     *         If you create this secret by using the Secrets Manager console then Secrets Manager puts the protected
-     *         secret text in only the <code>SecretString</code> parameter. The Secrets Manager console stores the
-     *         information as a JSON structure of key/value pairs that the default Lambda rotation function knows how to
-     *         parse.
+     *         You must include <code>SecretBinary</code> or <code>SecretString</code>, but not both.
      *         </p>
      *         <p>
-     *         For storing multiple values, we recommend that you use a JSON text string argument and specify key/value
-     *         pairs. For more information, see <a
-     *         href="https://docs.aws.amazon.com/cli/latest/userguide/cli-usage-parameters.html">Specifying parameter
-     *         values for the Amazon Web Services CLI</a> in the Amazon Web Services CLI User Guide.
+     *         We recommend you create the secret string as JSON key/value pairs, as shown in the example.
      */
 
     public String getSecretString() {
@@ -657,37 +632,22 @@ public class PutSecretValueRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * (Optional) Specifies text data that you want to encrypt and store in this new version of the secret. Either
-     * <code>SecretString</code> or <code>SecretBinary</code> must have a value, but not both. They cannot both be
-     * empty.
+     * The text to encrypt and store in the new version of the secret.
      * </p>
      * <p>
-     * If you create this secret by using the Secrets Manager console then Secrets Manager puts the protected secret
-     * text in only the <code>SecretString</code> parameter. The Secrets Manager console stores the information as a
-     * JSON structure of key/value pairs that the default Lambda rotation function knows how to parse.
+     * You must include <code>SecretBinary</code> or <code>SecretString</code>, but not both.
      * </p>
      * <p>
-     * For storing multiple values, we recommend that you use a JSON text string argument and specify key/value pairs.
-     * For more information, see <a
-     * href="https://docs.aws.amazon.com/cli/latest/userguide/cli-usage-parameters.html">Specifying parameter values for
-     * the Amazon Web Services CLI</a> in the Amazon Web Services CLI User Guide.
+     * We recommend you create the secret string as JSON key/value pairs, as shown in the example.
      * </p>
      * 
      * @param secretString
-     *        (Optional) Specifies text data that you want to encrypt and store in this new version of the secret.
-     *        Either <code>SecretString</code> or <code>SecretBinary</code> must have a value, but not both. They cannot
-     *        both be empty.</p>
+     *        The text to encrypt and store in the new version of the secret. </p>
      *        <p>
-     *        If you create this secret by using the Secrets Manager console then Secrets Manager puts the protected
-     *        secret text in only the <code>SecretString</code> parameter. The Secrets Manager console stores the
-     *        information as a JSON structure of key/value pairs that the default Lambda rotation function knows how to
-     *        parse.
+     *        You must include <code>SecretBinary</code> or <code>SecretString</code>, but not both.
      *        </p>
      *        <p>
-     *        For storing multiple values, we recommend that you use a JSON text string argument and specify key/value
-     *        pairs. For more information, see <a
-     *        href="https://docs.aws.amazon.com/cli/latest/userguide/cli-usage-parameters.html">Specifying parameter
-     *        values for the Amazon Web Services CLI</a> in the Amazon Web Services CLI User Guide.
+     *        We recommend you create the secret string as JSON key/value pairs, as shown in the example.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -698,30 +658,32 @@ public class PutSecretValueRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * (Optional) Specifies a list of staging labels that are attached to this version of the secret. These staging
-     * labels are used to track the versions through the rotation process by the Lambda rotation function.
+     * A list of staging labels to attach to this version of the secret. Secrets Manager uses staging labels to track
+     * versions of a secret through the rotation process.
      * </p>
      * <p>
-     * A staging label must be unique to a single version of the secret. If you specify a staging label that's already
-     * associated with a different version of the same secret then that staging label is automatically removed from the
-     * other version and attached to this version.
+     * If you specify a staging label that's already associated with a different version of the same secret, then
+     * Secrets Manager removes the label from the other version and attaches it to this version. If you specify
+     * <code>AWSCURRENT</code>, and it is already attached to another version, then Secrets Manager also moves the
+     * staging label <code>AWSPREVIOUS</code> to the version that <code>AWSCURRENT</code> was removed from.
      * </p>
      * <p>
-     * If you do not specify a value for <code>VersionStages</code> then Secrets Manager automatically moves the staging
-     * label <code>AWSCURRENT</code> to this new version.
+     * If you don't include <code>VersionStages</code>, then Secrets Manager automatically moves the staging label
+     * <code>AWSCURRENT</code> to this version.
      * </p>
      * 
-     * @return (Optional) Specifies a list of staging labels that are attached to this version of the secret. These
-     *         staging labels are used to track the versions through the rotation process by the Lambda rotation
-     *         function.</p>
+     * @return A list of staging labels to attach to this version of the secret. Secrets Manager uses staging labels to
+     *         track versions of a secret through the rotation process.</p>
      *         <p>
-     *         A staging label must be unique to a single version of the secret. If you specify a staging label that's
-     *         already associated with a different version of the same secret then that staging label is automatically
-     *         removed from the other version and attached to this version.
+     *         If you specify a staging label that's already associated with a different version of the same secret,
+     *         then Secrets Manager removes the label from the other version and attaches it to this version. If you
+     *         specify <code>AWSCURRENT</code>, and it is already attached to another version, then Secrets Manager also
+     *         moves the staging label <code>AWSPREVIOUS</code> to the version that <code>AWSCURRENT</code> was removed
+     *         from.
      *         </p>
      *         <p>
-     *         If you do not specify a value for <code>VersionStages</code> then Secrets Manager automatically moves the
-     *         staging label <code>AWSCURRENT</code> to this new version.
+     *         If you don't include <code>VersionStages</code>, then Secrets Manager automatically moves the staging
+     *         label <code>AWSCURRENT</code> to this version.
      */
 
     public java.util.List<String> getVersionStages() {
@@ -730,31 +692,32 @@ public class PutSecretValueRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * (Optional) Specifies a list of staging labels that are attached to this version of the secret. These staging
-     * labels are used to track the versions through the rotation process by the Lambda rotation function.
+     * A list of staging labels to attach to this version of the secret. Secrets Manager uses staging labels to track
+     * versions of a secret through the rotation process.
      * </p>
      * <p>
-     * A staging label must be unique to a single version of the secret. If you specify a staging label that's already
-     * associated with a different version of the same secret then that staging label is automatically removed from the
-     * other version and attached to this version.
+     * If you specify a staging label that's already associated with a different version of the same secret, then
+     * Secrets Manager removes the label from the other version and attaches it to this version. If you specify
+     * <code>AWSCURRENT</code>, and it is already attached to another version, then Secrets Manager also moves the
+     * staging label <code>AWSPREVIOUS</code> to the version that <code>AWSCURRENT</code> was removed from.
      * </p>
      * <p>
-     * If you do not specify a value for <code>VersionStages</code> then Secrets Manager automatically moves the staging
-     * label <code>AWSCURRENT</code> to this new version.
+     * If you don't include <code>VersionStages</code>, then Secrets Manager automatically moves the staging label
+     * <code>AWSCURRENT</code> to this version.
      * </p>
      * 
      * @param versionStages
-     *        (Optional) Specifies a list of staging labels that are attached to this version of the secret. These
-     *        staging labels are used to track the versions through the rotation process by the Lambda rotation
-     *        function.</p>
+     *        A list of staging labels to attach to this version of the secret. Secrets Manager uses staging labels to
+     *        track versions of a secret through the rotation process.</p>
      *        <p>
-     *        A staging label must be unique to a single version of the secret. If you specify a staging label that's
-     *        already associated with a different version of the same secret then that staging label is automatically
-     *        removed from the other version and attached to this version.
+     *        If you specify a staging label that's already associated with a different version of the same secret, then
+     *        Secrets Manager removes the label from the other version and attaches it to this version. If you specify
+     *        <code>AWSCURRENT</code>, and it is already attached to another version, then Secrets Manager also moves
+     *        the staging label <code>AWSPREVIOUS</code> to the version that <code>AWSCURRENT</code> was removed from.
      *        </p>
      *        <p>
-     *        If you do not specify a value for <code>VersionStages</code> then Secrets Manager automatically moves the
-     *        staging label <code>AWSCURRENT</code> to this new version.
+     *        If you don't include <code>VersionStages</code>, then Secrets Manager automatically moves the staging
+     *        label <code>AWSCURRENT</code> to this version.
      */
 
     public void setVersionStages(java.util.Collection<String> versionStages) {
@@ -768,17 +731,18 @@ public class PutSecretValueRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * (Optional) Specifies a list of staging labels that are attached to this version of the secret. These staging
-     * labels are used to track the versions through the rotation process by the Lambda rotation function.
+     * A list of staging labels to attach to this version of the secret. Secrets Manager uses staging labels to track
+     * versions of a secret through the rotation process.
      * </p>
      * <p>
-     * A staging label must be unique to a single version of the secret. If you specify a staging label that's already
-     * associated with a different version of the same secret then that staging label is automatically removed from the
-     * other version and attached to this version.
+     * If you specify a staging label that's already associated with a different version of the same secret, then
+     * Secrets Manager removes the label from the other version and attaches it to this version. If you specify
+     * <code>AWSCURRENT</code>, and it is already attached to another version, then Secrets Manager also moves the
+     * staging label <code>AWSPREVIOUS</code> to the version that <code>AWSCURRENT</code> was removed from.
      * </p>
      * <p>
-     * If you do not specify a value for <code>VersionStages</code> then Secrets Manager automatically moves the staging
-     * label <code>AWSCURRENT</code> to this new version.
+     * If you don't include <code>VersionStages</code>, then Secrets Manager automatically moves the staging label
+     * <code>AWSCURRENT</code> to this version.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -787,17 +751,17 @@ public class PutSecretValueRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      * 
      * @param versionStages
-     *        (Optional) Specifies a list of staging labels that are attached to this version of the secret. These
-     *        staging labels are used to track the versions through the rotation process by the Lambda rotation
-     *        function.</p>
+     *        A list of staging labels to attach to this version of the secret. Secrets Manager uses staging labels to
+     *        track versions of a secret through the rotation process.</p>
      *        <p>
-     *        A staging label must be unique to a single version of the secret. If you specify a staging label that's
-     *        already associated with a different version of the same secret then that staging label is automatically
-     *        removed from the other version and attached to this version.
+     *        If you specify a staging label that's already associated with a different version of the same secret, then
+     *        Secrets Manager removes the label from the other version and attaches it to this version. If you specify
+     *        <code>AWSCURRENT</code>, and it is already attached to another version, then Secrets Manager also moves
+     *        the staging label <code>AWSPREVIOUS</code> to the version that <code>AWSCURRENT</code> was removed from.
      *        </p>
      *        <p>
-     *        If you do not specify a value for <code>VersionStages</code> then Secrets Manager automatically moves the
-     *        staging label <code>AWSCURRENT</code> to this new version.
+     *        If you don't include <code>VersionStages</code>, then Secrets Manager automatically moves the staging
+     *        label <code>AWSCURRENT</code> to this version.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -813,31 +777,32 @@ public class PutSecretValueRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * (Optional) Specifies a list of staging labels that are attached to this version of the secret. These staging
-     * labels are used to track the versions through the rotation process by the Lambda rotation function.
+     * A list of staging labels to attach to this version of the secret. Secrets Manager uses staging labels to track
+     * versions of a secret through the rotation process.
      * </p>
      * <p>
-     * A staging label must be unique to a single version of the secret. If you specify a staging label that's already
-     * associated with a different version of the same secret then that staging label is automatically removed from the
-     * other version and attached to this version.
+     * If you specify a staging label that's already associated with a different version of the same secret, then
+     * Secrets Manager removes the label from the other version and attaches it to this version. If you specify
+     * <code>AWSCURRENT</code>, and it is already attached to another version, then Secrets Manager also moves the
+     * staging label <code>AWSPREVIOUS</code> to the version that <code>AWSCURRENT</code> was removed from.
      * </p>
      * <p>
-     * If you do not specify a value for <code>VersionStages</code> then Secrets Manager automatically moves the staging
-     * label <code>AWSCURRENT</code> to this new version.
+     * If you don't include <code>VersionStages</code>, then Secrets Manager automatically moves the staging label
+     * <code>AWSCURRENT</code> to this version.
      * </p>
      * 
      * @param versionStages
-     *        (Optional) Specifies a list of staging labels that are attached to this version of the secret. These
-     *        staging labels are used to track the versions through the rotation process by the Lambda rotation
-     *        function.</p>
+     *        A list of staging labels to attach to this version of the secret. Secrets Manager uses staging labels to
+     *        track versions of a secret through the rotation process.</p>
      *        <p>
-     *        A staging label must be unique to a single version of the secret. If you specify a staging label that's
-     *        already associated with a different version of the same secret then that staging label is automatically
-     *        removed from the other version and attached to this version.
+     *        If you specify a staging label that's already associated with a different version of the same secret, then
+     *        Secrets Manager removes the label from the other version and attaches it to this version. If you specify
+     *        <code>AWSCURRENT</code>, and it is already attached to another version, then Secrets Manager also moves
+     *        the staging label <code>AWSPREVIOUS</code> to the version that <code>AWSCURRENT</code> was removed from.
      *        </p>
      *        <p>
-     *        If you do not specify a value for <code>VersionStages</code> then Secrets Manager automatically moves the
-     *        staging label <code>AWSCURRENT</code> to this new version.
+     *        If you don't include <code>VersionStages</code>, then Secrets Manager automatically moves the staging
+     *        label <code>AWSCURRENT</code> to this version.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

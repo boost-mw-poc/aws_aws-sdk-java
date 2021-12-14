@@ -27,18 +27,18 @@ public class StopReplicationToReplicaRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Response to <code>StopReplicationToReplica</code> of a secret, based on the <code>SecretId</code>.
+     * The ARN of the primary secret.
      * </p>
      */
     private String secretId;
 
     /**
      * <p>
-     * Response to <code>StopReplicationToReplica</code> of a secret, based on the <code>SecretId</code>.
+     * The ARN of the primary secret.
      * </p>
      * 
      * @param secretId
-     *        Response to <code>StopReplicationToReplica</code> of a secret, based on the <code>SecretId</code>.
+     *        The ARN of the primary secret.
      */
 
     public void setSecretId(String secretId) {
@@ -47,10 +47,10 @@ public class StopReplicationToReplicaRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Response to <code>StopReplicationToReplica</code> of a secret, based on the <code>SecretId</code>.
+     * The ARN of the primary secret.
      * </p>
      * 
-     * @return Response to <code>StopReplicationToReplica</code> of a secret, based on the <code>SecretId</code>.
+     * @return The ARN of the primary secret.
      */
 
     public String getSecretId() {
@@ -59,11 +59,11 @@ public class StopReplicationToReplicaRequest extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * Response to <code>StopReplicationToReplica</code> of a secret, based on the <code>SecretId</code>.
+     * The ARN of the primary secret.
      * </p>
      * 
      * @param secretId
-     *        Response to <code>StopReplicationToReplica</code> of a secret, based on the <code>SecretId</code>.
+     *        The ARN of the primary secret.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * You provided a parameter value that is not valid for the current state of the resource.
+ * A parameter value is not valid for the current state of the resource.
  * </p>
  * <p>
  * Possible causes:
@@ -24,7 +24,7 @@ import javax.annotation.Generated;
  * <ul>
  * <li>
  * <p>
- * You tried to perform the operation on a secret that's currently marked deleted.
+ * The secret is scheduled for deletion.
  * </p>
  * </li>
  * <li>

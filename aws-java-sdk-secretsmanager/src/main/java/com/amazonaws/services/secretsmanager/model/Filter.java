@@ -19,7 +19,9 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Allows you to add filters when you use the search function in Secrets Manager.
+ * Allows you to add filters when you use the search function in Secrets Manager. For more information, see <a
+ * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/manage_search-secret.html">Find secrets in Secrets
+ * Manager</a>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/secretsmanager-2017-10-17/Filter" target="_top">AWS API
@@ -30,13 +32,46 @@ public class Filter implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Filters your list of secrets by a specific key.
+     * The following are keys you can use:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <b>description</b>: Prefix match, not case-sensitive.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>name</b>: Prefix match, case-sensitive.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>tag-key</b>: Prefix match, case-sensitive.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>tag-value</b>: Prefix match, case-sensitive.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>primary-region</b>: Prefix match, case-sensitive.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>all</b>: Breaks the filter value string into words and then searches all attributes for matches. Not
+     * case-sensitive.
+     * </p>
+     * </li>
+     * </ul>
      */
     private String key;
     /**
      * <p>
-     * Filters your list of secrets by a specific value.
+     * The keyword to filter for.
      * </p>
      * <p>
      * You can prefix your search value with an exclamation mark (<code>!</code>) in order to perform negation filters.
@@ -46,11 +81,76 @@ public class Filter implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Filters your list of secrets by a specific key.
+     * The following are keys you can use:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <b>description</b>: Prefix match, not case-sensitive.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>name</b>: Prefix match, case-sensitive.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>tag-key</b>: Prefix match, case-sensitive.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>tag-value</b>: Prefix match, case-sensitive.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>primary-region</b>: Prefix match, case-sensitive.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>all</b>: Breaks the filter value string into words and then searches all attributes for matches. Not
+     * case-sensitive.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param key
-     *        Filters your list of secrets by a specific key.
+     *        The following are keys you can use:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <b>description</b>: Prefix match, not case-sensitive.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <b>name</b>: Prefix match, case-sensitive.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <b>tag-key</b>: Prefix match, case-sensitive.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <b>tag-value</b>: Prefix match, case-sensitive.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <b>primary-region</b>: Prefix match, case-sensitive.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <b>all</b>: Breaks the filter value string into words and then searches all attributes for matches. Not
+     *        case-sensitive.
+     *        </p>
+     *        </li>
      * @see FilterNameStringType
      */
 
@@ -60,10 +160,75 @@ public class Filter implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Filters your list of secrets by a specific key.
+     * The following are keys you can use:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <b>description</b>: Prefix match, not case-sensitive.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>name</b>: Prefix match, case-sensitive.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>tag-key</b>: Prefix match, case-sensitive.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>tag-value</b>: Prefix match, case-sensitive.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>primary-region</b>: Prefix match, case-sensitive.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>all</b>: Breaks the filter value string into words and then searches all attributes for matches. Not
+     * case-sensitive.
+     * </p>
+     * </li>
+     * </ul>
      * 
-     * @return Filters your list of secrets by a specific key.
+     * @return The following are keys you can use:</p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         <b>description</b>: Prefix match, not case-sensitive.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <b>name</b>: Prefix match, case-sensitive.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <b>tag-key</b>: Prefix match, case-sensitive.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <b>tag-value</b>: Prefix match, case-sensitive.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <b>primary-region</b>: Prefix match, case-sensitive.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <b>all</b>: Breaks the filter value string into words and then searches all attributes for matches. Not
+     *         case-sensitive.
+     *         </p>
+     *         </li>
      * @see FilterNameStringType
      */
 
@@ -73,11 +238,76 @@ public class Filter implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Filters your list of secrets by a specific key.
+     * The following are keys you can use:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <b>description</b>: Prefix match, not case-sensitive.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>name</b>: Prefix match, case-sensitive.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>tag-key</b>: Prefix match, case-sensitive.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>tag-value</b>: Prefix match, case-sensitive.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>primary-region</b>: Prefix match, case-sensitive.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>all</b>: Breaks the filter value string into words and then searches all attributes for matches. Not
+     * case-sensitive.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param key
-     *        Filters your list of secrets by a specific key.
+     *        The following are keys you can use:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <b>description</b>: Prefix match, not case-sensitive.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <b>name</b>: Prefix match, case-sensitive.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <b>tag-key</b>: Prefix match, case-sensitive.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <b>tag-value</b>: Prefix match, case-sensitive.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <b>primary-region</b>: Prefix match, case-sensitive.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <b>all</b>: Breaks the filter value string into words and then searches all attributes for matches. Not
+     *        case-sensitive.
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see FilterNameStringType
      */
@@ -89,11 +319,76 @@ public class Filter implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Filters your list of secrets by a specific key.
+     * The following are keys you can use:
      * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * <b>description</b>: Prefix match, not case-sensitive.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>name</b>: Prefix match, case-sensitive.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>tag-key</b>: Prefix match, case-sensitive.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>tag-value</b>: Prefix match, case-sensitive.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>primary-region</b>: Prefix match, case-sensitive.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <b>all</b>: Breaks the filter value string into words and then searches all attributes for matches. Not
+     * case-sensitive.
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param key
-     *        Filters your list of secrets by a specific key.
+     *        The following are keys you can use:</p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        <b>description</b>: Prefix match, not case-sensitive.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <b>name</b>: Prefix match, case-sensitive.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <b>tag-key</b>: Prefix match, case-sensitive.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <b>tag-value</b>: Prefix match, case-sensitive.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <b>primary-region</b>: Prefix match, case-sensitive.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <b>all</b>: Breaks the filter value string into words and then searches all attributes for matches. Not
+     *        case-sensitive.
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see FilterNameStringType
      */
@@ -105,13 +400,13 @@ public class Filter implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Filters your list of secrets by a specific value.
+     * The keyword to filter for.
      * </p>
      * <p>
      * You can prefix your search value with an exclamation mark (<code>!</code>) in order to perform negation filters.
      * </p>
      * 
-     * @return Filters your list of secrets by a specific value.</p>
+     * @return The keyword to filter for.</p>
      *         <p>
      *         You can prefix your search value with an exclamation mark (<code>!</code>) in order to perform negation
      *         filters.
@@ -123,14 +418,14 @@ public class Filter implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Filters your list of secrets by a specific value.
+     * The keyword to filter for.
      * </p>
      * <p>
      * You can prefix your search value with an exclamation mark (<code>!</code>) in order to perform negation filters.
      * </p>
      * 
      * @param values
-     *        Filters your list of secrets by a specific value.</p>
+     *        The keyword to filter for.</p>
      *        <p>
      *        You can prefix your search value with an exclamation mark (<code>!</code>) in order to perform negation
      *        filters.
@@ -147,7 +442,7 @@ public class Filter implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Filters your list of secrets by a specific value.
+     * The keyword to filter for.
      * </p>
      * <p>
      * You can prefix your search value with an exclamation mark (<code>!</code>) in order to perform negation filters.
@@ -159,7 +454,7 @@ public class Filter implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param values
-     *        Filters your list of secrets by a specific value.</p>
+     *        The keyword to filter for.</p>
      *        <p>
      *        You can prefix your search value with an exclamation mark (<code>!</code>) in order to perform negation
      *        filters.
@@ -178,14 +473,14 @@ public class Filter implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Filters your list of secrets by a specific value.
+     * The keyword to filter for.
      * </p>
      * <p>
      * You can prefix your search value with an exclamation mark (<code>!</code>) in order to perform negation filters.
      * </p>
      * 
      * @param values
-     *        Filters your list of secrets by a specific value.</p>
+     *        The keyword to filter for.</p>
      *        <p>
      *        You can prefix your search value with an exclamation mark (<code>!</code>) in order to perform negation
      *        filters.

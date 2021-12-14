@@ -27,27 +27,24 @@ public class ListSecretsRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * (Optional) Limits the number of results you want to include in the response. If you don't include this parameter,
-     * it defaults to a value that's specific to the operation. If additional items exist beyond the maximum you
-     * specify, the <code>NextToken</code> response element is present and has a value (isn't null). Include that value
-     * as the <code>NextToken</code> request parameter in the next call to the operation to get the next part of the
-     * results. Note that Secrets Manager might return fewer results than the maximum even when there are more results
-     * available. You should check <code>NextToken</code> after every operation to ensure that you receive all of the
-     * results.
+     * The number of results to include in the response.
+     * </p>
+     * <p>
+     * If there are more results available, in the response, Secrets Manager includes <code>NextToken</code>. To get the
+     * next results, call <code>ListSecrets</code> again with the value from <code>NextToken</code>.
      * </p>
      */
     private Integer maxResults;
     /**
      * <p>
-     * (Optional) Use this parameter in a request if you receive a <code>NextToken</code> response in a previous request
-     * indicating there's more output available. In a subsequent call, set it to the value of the previous call
-     * <code>NextToken</code> response to indicate where the output should continue from.
+     * A token that indicates where the output should continue from, if a previous call did not show all results. To get
+     * the next results, call <code>ListSecrets</code> again with this value.
      * </p>
      */
     private String nextToken;
     /**
      * <p>
-     * Lists the secret request filters.
+     * The filters to apply to the list of secrets.
      * </p>
      */
     private java.util.List<Filter> filters;
@@ -60,23 +57,18 @@ public class ListSecretsRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * (Optional) Limits the number of results you want to include in the response. If you don't include this parameter,
-     * it defaults to a value that's specific to the operation. If additional items exist beyond the maximum you
-     * specify, the <code>NextToken</code> response element is present and has a value (isn't null). Include that value
-     * as the <code>NextToken</code> request parameter in the next call to the operation to get the next part of the
-     * results. Note that Secrets Manager might return fewer results than the maximum even when there are more results
-     * available. You should check <code>NextToken</code> after every operation to ensure that you receive all of the
-     * results.
+     * The number of results to include in the response.
+     * </p>
+     * <p>
+     * If there are more results available, in the response, Secrets Manager includes <code>NextToken</code>. To get the
+     * next results, call <code>ListSecrets</code> again with the value from <code>NextToken</code>.
      * </p>
      * 
      * @param maxResults
-     *        (Optional) Limits the number of results you want to include in the response. If you don't include this
-     *        parameter, it defaults to a value that's specific to the operation. If additional items exist beyond the
-     *        maximum you specify, the <code>NextToken</code> response element is present and has a value (isn't null).
-     *        Include that value as the <code>NextToken</code> request parameter in the next call to the operation to
-     *        get the next part of the results. Note that Secrets Manager might return fewer results than the maximum
-     *        even when there are more results available. You should check <code>NextToken</code> after every operation
-     *        to ensure that you receive all of the results.
+     *        The number of results to include in the response.</p>
+     *        <p>
+     *        If there are more results available, in the response, Secrets Manager includes <code>NextToken</code>. To
+     *        get the next results, call <code>ListSecrets</code> again with the value from <code>NextToken</code>.
      */
 
     public void setMaxResults(Integer maxResults) {
@@ -85,22 +77,17 @@ public class ListSecretsRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * (Optional) Limits the number of results you want to include in the response. If you don't include this parameter,
-     * it defaults to a value that's specific to the operation. If additional items exist beyond the maximum you
-     * specify, the <code>NextToken</code> response element is present and has a value (isn't null). Include that value
-     * as the <code>NextToken</code> request parameter in the next call to the operation to get the next part of the
-     * results. Note that Secrets Manager might return fewer results than the maximum even when there are more results
-     * available. You should check <code>NextToken</code> after every operation to ensure that you receive all of the
-     * results.
+     * The number of results to include in the response.
+     * </p>
+     * <p>
+     * If there are more results available, in the response, Secrets Manager includes <code>NextToken</code>. To get the
+     * next results, call <code>ListSecrets</code> again with the value from <code>NextToken</code>.
      * </p>
      * 
-     * @return (Optional) Limits the number of results you want to include in the response. If you don't include this
-     *         parameter, it defaults to a value that's specific to the operation. If additional items exist beyond the
-     *         maximum you specify, the <code>NextToken</code> response element is present and has a value (isn't null).
-     *         Include that value as the <code>NextToken</code> request parameter in the next call to the operation to
-     *         get the next part of the results. Note that Secrets Manager might return fewer results than the maximum
-     *         even when there are more results available. You should check <code>NextToken</code> after every operation
-     *         to ensure that you receive all of the results.
+     * @return The number of results to include in the response.</p>
+     *         <p>
+     *         If there are more results available, in the response, Secrets Manager includes <code>NextToken</code>. To
+     *         get the next results, call <code>ListSecrets</code> again with the value from <code>NextToken</code>.
      */
 
     public Integer getMaxResults() {
@@ -109,23 +96,18 @@ public class ListSecretsRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * (Optional) Limits the number of results you want to include in the response. If you don't include this parameter,
-     * it defaults to a value that's specific to the operation. If additional items exist beyond the maximum you
-     * specify, the <code>NextToken</code> response element is present and has a value (isn't null). Include that value
-     * as the <code>NextToken</code> request parameter in the next call to the operation to get the next part of the
-     * results. Note that Secrets Manager might return fewer results than the maximum even when there are more results
-     * available. You should check <code>NextToken</code> after every operation to ensure that you receive all of the
-     * results.
+     * The number of results to include in the response.
+     * </p>
+     * <p>
+     * If there are more results available, in the response, Secrets Manager includes <code>NextToken</code>. To get the
+     * next results, call <code>ListSecrets</code> again with the value from <code>NextToken</code>.
      * </p>
      * 
      * @param maxResults
-     *        (Optional) Limits the number of results you want to include in the response. If you don't include this
-     *        parameter, it defaults to a value that's specific to the operation. If additional items exist beyond the
-     *        maximum you specify, the <code>NextToken</code> response element is present and has a value (isn't null).
-     *        Include that value as the <code>NextToken</code> request parameter in the next call to the operation to
-     *        get the next part of the results. Note that Secrets Manager might return fewer results than the maximum
-     *        even when there are more results available. You should check <code>NextToken</code> after every operation
-     *        to ensure that you receive all of the results.
+     *        The number of results to include in the response.</p>
+     *        <p>
+     *        If there are more results available, in the response, Secrets Manager includes <code>NextToken</code>. To
+     *        get the next results, call <code>ListSecrets</code> again with the value from <code>NextToken</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -136,15 +118,13 @@ public class ListSecretsRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * (Optional) Use this parameter in a request if you receive a <code>NextToken</code> response in a previous request
-     * indicating there's more output available. In a subsequent call, set it to the value of the previous call
-     * <code>NextToken</code> response to indicate where the output should continue from.
+     * A token that indicates where the output should continue from, if a previous call did not show all results. To get
+     * the next results, call <code>ListSecrets</code> again with this value.
      * </p>
      * 
      * @param nextToken
-     *        (Optional) Use this parameter in a request if you receive a <code>NextToken</code> response in a previous
-     *        request indicating there's more output available. In a subsequent call, set it to the value of the
-     *        previous call <code>NextToken</code> response to indicate where the output should continue from.
+     *        A token that indicates where the output should continue from, if a previous call did not show all results.
+     *        To get the next results, call <code>ListSecrets</code> again with this value.
      */
 
     public void setNextToken(String nextToken) {
@@ -153,14 +133,12 @@ public class ListSecretsRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * (Optional) Use this parameter in a request if you receive a <code>NextToken</code> response in a previous request
-     * indicating there's more output available. In a subsequent call, set it to the value of the previous call
-     * <code>NextToken</code> response to indicate where the output should continue from.
+     * A token that indicates where the output should continue from, if a previous call did not show all results. To get
+     * the next results, call <code>ListSecrets</code> again with this value.
      * </p>
      * 
-     * @return (Optional) Use this parameter in a request if you receive a <code>NextToken</code> response in a previous
-     *         request indicating there's more output available. In a subsequent call, set it to the value of the
-     *         previous call <code>NextToken</code> response to indicate where the output should continue from.
+     * @return A token that indicates where the output should continue from, if a previous call did not show all
+     *         results. To get the next results, call <code>ListSecrets</code> again with this value.
      */
 
     public String getNextToken() {
@@ -169,15 +147,13 @@ public class ListSecretsRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * (Optional) Use this parameter in a request if you receive a <code>NextToken</code> response in a previous request
-     * indicating there's more output available. In a subsequent call, set it to the value of the previous call
-     * <code>NextToken</code> response to indicate where the output should continue from.
+     * A token that indicates where the output should continue from, if a previous call did not show all results. To get
+     * the next results, call <code>ListSecrets</code> again with this value.
      * </p>
      * 
      * @param nextToken
-     *        (Optional) Use this parameter in a request if you receive a <code>NextToken</code> response in a previous
-     *        request indicating there's more output available. In a subsequent call, set it to the value of the
-     *        previous call <code>NextToken</code> response to indicate where the output should continue from.
+     *        A token that indicates where the output should continue from, if a previous call did not show all results.
+     *        To get the next results, call <code>ListSecrets</code> again with this value.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -188,10 +164,10 @@ public class ListSecretsRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * Lists the secret request filters.
+     * The filters to apply to the list of secrets.
      * </p>
      * 
-     * @return Lists the secret request filters.
+     * @return The filters to apply to the list of secrets.
      */
 
     public java.util.List<Filter> getFilters() {
@@ -200,11 +176,11 @@ public class ListSecretsRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * Lists the secret request filters.
+     * The filters to apply to the list of secrets.
      * </p>
      * 
      * @param filters
-     *        Lists the secret request filters.
+     *        The filters to apply to the list of secrets.
      */
 
     public void setFilters(java.util.Collection<Filter> filters) {
@@ -218,7 +194,7 @@ public class ListSecretsRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * Lists the secret request filters.
+     * The filters to apply to the list of secrets.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -227,7 +203,7 @@ public class ListSecretsRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * 
      * @param filters
-     *        Lists the secret request filters.
+     *        The filters to apply to the list of secrets.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -243,11 +219,11 @@ public class ListSecretsRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * Lists the secret request filters.
+     * The filters to apply to the list of secrets.
      * </p>
      * 
      * @param filters
-     *        Lists the secret request filters.
+     *        The filters to apply to the list of secrets.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

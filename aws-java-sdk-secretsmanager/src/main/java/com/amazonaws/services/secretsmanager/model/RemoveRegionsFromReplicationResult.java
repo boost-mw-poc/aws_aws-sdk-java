@@ -25,24 +25,24 @@ public class RemoveRegionsFromReplicationResult extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The secret <code>ARN</code> removed from replication regions.
+     * The ARN of the primary secret.
      * </p>
      */
     private String aRN;
     /**
      * <p>
-     * Describes the remaining replication status after you remove regions from the replication list.
+     * The status of replicas for this secret after you remove Regions.
      * </p>
      */
     private java.util.List<ReplicationStatusType> replicationStatus;
 
     /**
      * <p>
-     * The secret <code>ARN</code> removed from replication regions.
+     * The ARN of the primary secret.
      * </p>
      * 
      * @param aRN
-     *        The secret <code>ARN</code> removed from replication regions.
+     *        The ARN of the primary secret.
      */
 
     public void setARN(String aRN) {
@@ -51,10 +51,10 @@ public class RemoveRegionsFromReplicationResult extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The secret <code>ARN</code> removed from replication regions.
+     * The ARN of the primary secret.
      * </p>
      * 
-     * @return The secret <code>ARN</code> removed from replication regions.
+     * @return The ARN of the primary secret.
      */
 
     public String getARN() {
@@ -63,11 +63,11 @@ public class RemoveRegionsFromReplicationResult extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The secret <code>ARN</code> removed from replication regions.
+     * The ARN of the primary secret.
      * </p>
      * 
      * @param aRN
-     *        The secret <code>ARN</code> removed from replication regions.
+     *        The ARN of the primary secret.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -78,10 +78,10 @@ public class RemoveRegionsFromReplicationResult extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * Describes the remaining replication status after you remove regions from the replication list.
+     * The status of replicas for this secret after you remove Regions.
      * </p>
      * 
-     * @return Describes the remaining replication status after you remove regions from the replication list.
+     * @return The status of replicas for this secret after you remove Regions.
      */
 
     public java.util.List<ReplicationStatusType> getReplicationStatus() {
@@ -90,11 +90,11 @@ public class RemoveRegionsFromReplicationResult extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * Describes the remaining replication status after you remove regions from the replication list.
+     * The status of replicas for this secret after you remove Regions.
      * </p>
      * 
      * @param replicationStatus
-     *        Describes the remaining replication status after you remove regions from the replication list.
+     *        The status of replicas for this secret after you remove Regions.
      */
 
     public void setReplicationStatus(java.util.Collection<ReplicationStatusType> replicationStatus) {
@@ -108,7 +108,7 @@ public class RemoveRegionsFromReplicationResult extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * Describes the remaining replication status after you remove regions from the replication list.
+     * The status of replicas for this secret after you remove Regions.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -117,7 +117,7 @@ public class RemoveRegionsFromReplicationResult extends com.amazonaws.AmazonWebS
      * </p>
      * 
      * @param replicationStatus
-     *        Describes the remaining replication status after you remove regions from the replication list.
+     *        The status of replicas for this secret after you remove Regions.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -133,11 +133,11 @@ public class RemoveRegionsFromReplicationResult extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * Describes the remaining replication status after you remove regions from the replication list.
+     * The status of replicas for this secret after you remove Regions.
      * </p>
      * 
      * @param replicationStatus
-     *        Describes the remaining replication status after you remove regions from the replication list.
+     *        The status of replicas for this secret after you remove Regions.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

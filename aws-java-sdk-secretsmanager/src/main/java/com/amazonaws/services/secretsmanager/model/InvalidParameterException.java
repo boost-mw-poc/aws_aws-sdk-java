@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * You provided an invalid value for a parameter.
+ * The parameter name is invalid value.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

@@ -33,11 +33,6 @@ public class SecretListEntry implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * The Amazon Resource Name (ARN) of the secret.
      * </p>
-     * <p>
-     * For more information about ARNs in Secrets Manager, see <a
-     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#iam-resources"
-     * >Policy Resources</a> in the <i>Amazon Web Services Secrets Manager User Guide</i>.
-     * </p>
      */
     private String aRN;
     /**
@@ -56,10 +51,8 @@ public class SecretListEntry implements Serializable, Cloneable, StructuredPojo 
     private String description;
     /**
      * <p>
-     * The ARN or alias of the Amazon Web Services KMS customer master key (CMK) used to encrypt the
-     * <code>SecretString</code> and <code>SecretBinary</code> fields in each version of the secret. If you don't
-     * provide a key, then Secrets Manager defaults to encrypting the secret fields with the default KMS CMK, the key
-     * named <code>awssecretsmanager</code>, for this account.
+     * The ARN of the KMS key that Secrets Manager uses to encrypt the secret value. If the secret is encrypted with the
+     * Amazon Web Services managed key <code>aws/secretsmanager</code>, this field is omitted.
      * </p>
      */
     private String kmsKeyId;
@@ -154,18 +147,9 @@ public class SecretListEntry implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * The Amazon Resource Name (ARN) of the secret.
      * </p>
-     * <p>
-     * For more information about ARNs in Secrets Manager, see <a
-     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#iam-resources"
-     * >Policy Resources</a> in the <i>Amazon Web Services Secrets Manager User Guide</i>.
-     * </p>
      * 
      * @param aRN
-     *        The Amazon Resource Name (ARN) of the secret.</p>
-     *        <p>
-     *        For more information about ARNs in Secrets Manager, see <a href=
-     *        "https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#iam-resources"
-     *        >Policy Resources</a> in the <i>Amazon Web Services Secrets Manager User Guide</i>.
+     *        The Amazon Resource Name (ARN) of the secret.
      */
 
     public void setARN(String aRN) {
@@ -176,17 +160,8 @@ public class SecretListEntry implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * The Amazon Resource Name (ARN) of the secret.
      * </p>
-     * <p>
-     * For more information about ARNs in Secrets Manager, see <a
-     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#iam-resources"
-     * >Policy Resources</a> in the <i>Amazon Web Services Secrets Manager User Guide</i>.
-     * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the secret.</p>
-     *         <p>
-     *         For more information about ARNs in Secrets Manager, see <a href=
-     *         "https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#iam-resources"
-     *         >Policy Resources</a> in the <i>Amazon Web Services Secrets Manager User Guide</i>.
+     * @return The Amazon Resource Name (ARN) of the secret.
      */
 
     public String getARN() {
@@ -197,18 +172,9 @@ public class SecretListEntry implements Serializable, Cloneable, StructuredPojo 
      * <p>
      * The Amazon Resource Name (ARN) of the secret.
      * </p>
-     * <p>
-     * For more information about ARNs in Secrets Manager, see <a
-     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#iam-resources"
-     * >Policy Resources</a> in the <i>Amazon Web Services Secrets Manager User Guide</i>.
-     * </p>
      * 
      * @param aRN
-     *        The Amazon Resource Name (ARN) of the secret.</p>
-     *        <p>
-     *        For more information about ARNs in Secrets Manager, see <a href=
-     *        "https://docs.aws.amazon.com/secretsmanager/latest/userguide/reference_iam-permissions.html#iam-resources"
-     *        >Policy Resources</a> in the <i>Amazon Web Services Secrets Manager User Guide</i>.
+     *        The Amazon Resource Name (ARN) of the secret.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -311,17 +277,13 @@ public class SecretListEntry implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The ARN or alias of the Amazon Web Services KMS customer master key (CMK) used to encrypt the
-     * <code>SecretString</code> and <code>SecretBinary</code> fields in each version of the secret. If you don't
-     * provide a key, then Secrets Manager defaults to encrypting the secret fields with the default KMS CMK, the key
-     * named <code>awssecretsmanager</code>, for this account.
+     * The ARN of the KMS key that Secrets Manager uses to encrypt the secret value. If the secret is encrypted with the
+     * Amazon Web Services managed key <code>aws/secretsmanager</code>, this field is omitted.
      * </p>
      * 
      * @param kmsKeyId
-     *        The ARN or alias of the Amazon Web Services KMS customer master key (CMK) used to encrypt the
-     *        <code>SecretString</code> and <code>SecretBinary</code> fields in each version of the secret. If you don't
-     *        provide a key, then Secrets Manager defaults to encrypting the secret fields with the default KMS CMK, the
-     *        key named <code>awssecretsmanager</code>, for this account.
+     *        The ARN of the KMS key that Secrets Manager uses to encrypt the secret value. If the secret is encrypted
+     *        with the Amazon Web Services managed key <code>aws/secretsmanager</code>, this field is omitted.
      */
 
     public void setKmsKeyId(String kmsKeyId) {
@@ -330,16 +292,12 @@ public class SecretListEntry implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The ARN or alias of the Amazon Web Services KMS customer master key (CMK) used to encrypt the
-     * <code>SecretString</code> and <code>SecretBinary</code> fields in each version of the secret. If you don't
-     * provide a key, then Secrets Manager defaults to encrypting the secret fields with the default KMS CMK, the key
-     * named <code>awssecretsmanager</code>, for this account.
+     * The ARN of the KMS key that Secrets Manager uses to encrypt the secret value. If the secret is encrypted with the
+     * Amazon Web Services managed key <code>aws/secretsmanager</code>, this field is omitted.
      * </p>
      * 
-     * @return The ARN or alias of the Amazon Web Services KMS customer master key (CMK) used to encrypt the
-     *         <code>SecretString</code> and <code>SecretBinary</code> fields in each version of the secret. If you
-     *         don't provide a key, then Secrets Manager defaults to encrypting the secret fields with the default KMS
-     *         CMK, the key named <code>awssecretsmanager</code>, for this account.
+     * @return The ARN of the KMS key that Secrets Manager uses to encrypt the secret value. If the secret is encrypted
+     *         with the Amazon Web Services managed key <code>aws/secretsmanager</code>, this field is omitted.
      */
 
     public String getKmsKeyId() {
@@ -348,17 +306,13 @@ public class SecretListEntry implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The ARN or alias of the Amazon Web Services KMS customer master key (CMK) used to encrypt the
-     * <code>SecretString</code> and <code>SecretBinary</code> fields in each version of the secret. If you don't
-     * provide a key, then Secrets Manager defaults to encrypting the secret fields with the default KMS CMK, the key
-     * named <code>awssecretsmanager</code>, for this account.
+     * The ARN of the KMS key that Secrets Manager uses to encrypt the secret value. If the secret is encrypted with the
+     * Amazon Web Services managed key <code>aws/secretsmanager</code>, this field is omitted.
      * </p>
      * 
      * @param kmsKeyId
-     *        The ARN or alias of the Amazon Web Services KMS customer master key (CMK) used to encrypt the
-     *        <code>SecretString</code> and <code>SecretBinary</code> fields in each version of the secret. If you don't
-     *        provide a key, then Secrets Manager defaults to encrypting the secret fields with the default KMS CMK, the
-     *        key named <code>awssecretsmanager</code>, for this account.
+     *        The ARN of the KMS key that Secrets Manager uses to encrypt the secret value. If the secret is encrypted
+     *        with the Amazon Web Services managed key <code>aws/secretsmanager</code>, this field is omitted.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

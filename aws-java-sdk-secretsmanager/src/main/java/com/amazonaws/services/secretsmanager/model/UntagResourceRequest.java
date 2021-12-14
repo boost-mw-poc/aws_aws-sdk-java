@@ -27,8 +27,7 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The identifier for the secret that you want to remove tags from. You can specify either the Amazon Resource Name
-     * (ARN) or the friendly name of the secret.
+     * The ARN or name of the secret.
      * </p>
      * <p>
      * For an ARN, we recommend that you specify a complete ARN rather than a partial ARN.
@@ -41,7 +40,7 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * value are removed.
      * </p>
      * <p>
-     * This parameter to the API requires a JSON text string argument.
+     * This parameter requires a JSON text string argument.
      * </p>
      * <p>
      * For storing multiple values, we recommend that you use a JSON text string argument and specify key/value pairs.
@@ -54,16 +53,14 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The identifier for the secret that you want to remove tags from. You can specify either the Amazon Resource Name
-     * (ARN) or the friendly name of the secret.
+     * The ARN or name of the secret.
      * </p>
      * <p>
      * For an ARN, we recommend that you specify a complete ARN rather than a partial ARN.
      * </p>
      * 
      * @param secretId
-     *        The identifier for the secret that you want to remove tags from. You can specify either the Amazon
-     *        Resource Name (ARN) or the friendly name of the secret.</p>
+     *        The ARN or name of the secret.</p>
      *        <p>
      *        For an ARN, we recommend that you specify a complete ARN rather than a partial ARN.
      */
@@ -74,15 +71,13 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The identifier for the secret that you want to remove tags from. You can specify either the Amazon Resource Name
-     * (ARN) or the friendly name of the secret.
+     * The ARN or name of the secret.
      * </p>
      * <p>
      * For an ARN, we recommend that you specify a complete ARN rather than a partial ARN.
      * </p>
      * 
-     * @return The identifier for the secret that you want to remove tags from. You can specify either the Amazon
-     *         Resource Name (ARN) or the friendly name of the secret.</p>
+     * @return The ARN or name of the secret.</p>
      *         <p>
      *         For an ARN, we recommend that you specify a complete ARN rather than a partial ARN.
      */
@@ -93,16 +88,14 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     /**
      * <p>
-     * The identifier for the secret that you want to remove tags from. You can specify either the Amazon Resource Name
-     * (ARN) or the friendly name of the secret.
+     * The ARN or name of the secret.
      * </p>
      * <p>
      * For an ARN, we recommend that you specify a complete ARN rather than a partial ARN.
      * </p>
      * 
      * @param secretId
-     *        The identifier for the secret that you want to remove tags from. You can specify either the Amazon
-     *        Resource Name (ARN) or the friendly name of the secret.</p>
+     *        The ARN or name of the secret.</p>
      *        <p>
      *        For an ARN, we recommend that you specify a complete ARN rather than a partial ARN.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -119,7 +112,7 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * value are removed.
      * </p>
      * <p>
-     * This parameter to the API requires a JSON text string argument.
+     * This parameter requires a JSON text string argument.
      * </p>
      * <p>
      * For storing multiple values, we recommend that you use a JSON text string argument and specify key/value pairs.
@@ -131,7 +124,7 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * @return A list of tag key names to remove from the secret. You don't specify the value. Both the key and its
      *         associated value are removed.</p>
      *         <p>
-     *         This parameter to the API requires a JSON text string argument.
+     *         This parameter requires a JSON text string argument.
      *         </p>
      *         <p>
      *         For storing multiple values, we recommend that you use a JSON text string argument and specify key/value
@@ -150,7 +143,7 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * value are removed.
      * </p>
      * <p>
-     * This parameter to the API requires a JSON text string argument.
+     * This parameter requires a JSON text string argument.
      * </p>
      * <p>
      * For storing multiple values, we recommend that you use a JSON text string argument and specify key/value pairs.
@@ -163,7 +156,7 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        A list of tag key names to remove from the secret. You don't specify the value. Both the key and its
      *        associated value are removed.</p>
      *        <p>
-     *        This parameter to the API requires a JSON text string argument.
+     *        This parameter requires a JSON text string argument.
      *        </p>
      *        <p>
      *        For storing multiple values, we recommend that you use a JSON text string argument and specify key/value
@@ -187,7 +180,7 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * value are removed.
      * </p>
      * <p>
-     * This parameter to the API requires a JSON text string argument.
+     * This parameter requires a JSON text string argument.
      * </p>
      * <p>
      * For storing multiple values, we recommend that you use a JSON text string argument and specify key/value pairs.
@@ -205,7 +198,7 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        A list of tag key names to remove from the secret. You don't specify the value. Both the key and its
      *        associated value are removed.</p>
      *        <p>
-     *        This parameter to the API requires a JSON text string argument.
+     *        This parameter requires a JSON text string argument.
      *        </p>
      *        <p>
      *        For storing multiple values, we recommend that you use a JSON text string argument and specify key/value
@@ -231,7 +224,7 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
      * value are removed.
      * </p>
      * <p>
-     * This parameter to the API requires a JSON text string argument.
+     * This parameter requires a JSON text string argument.
      * </p>
      * <p>
      * For storing multiple values, we recommend that you use a JSON text string argument and specify key/value pairs.
@@ -244,7 +237,7 @@ public class UntagResourceRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        A list of tag key names to remove from the secret. You don't specify the value. Both the key and its
      *        associated value are removed.</p>
      *        <p>
-     *        This parameter to the API requires a JSON text string argument.
+     *        This parameter requires a JSON text string argument.
      *        </p>
      *        <p>
      *        For storing multiple values, we recommend that you use a JSON text string argument and specify key/value

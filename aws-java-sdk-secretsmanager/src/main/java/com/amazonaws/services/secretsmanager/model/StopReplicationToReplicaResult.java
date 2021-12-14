@@ -25,18 +25,19 @@ public class StopReplicationToReplicaResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * Response <code>StopReplicationToReplica</code> of a secret, based on the <code>ARN,</code>.
+     * The ARN of the promoted secret. The ARN is the same as the original primary secret except the Region is changed.
      * </p>
      */
     private String aRN;
 
     /**
      * <p>
-     * Response <code>StopReplicationToReplica</code> of a secret, based on the <code>ARN,</code>.
+     * The ARN of the promoted secret. The ARN is the same as the original primary secret except the Region is changed.
      * </p>
      * 
      * @param aRN
-     *        Response <code>StopReplicationToReplica</code> of a secret, based on the <code>ARN,</code>.
+     *        The ARN of the promoted secret. The ARN is the same as the original primary secret except the Region is
+     *        changed.
      */
 
     public void setARN(String aRN) {
@@ -45,10 +46,11 @@ public class StopReplicationToReplicaResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * Response <code>StopReplicationToReplica</code> of a secret, based on the <code>ARN,</code>.
+     * The ARN of the promoted secret. The ARN is the same as the original primary secret except the Region is changed.
      * </p>
      * 
-     * @return Response <code>StopReplicationToReplica</code> of a secret, based on the <code>ARN,</code>.
+     * @return The ARN of the promoted secret. The ARN is the same as the original primary secret except the Region is
+     *         changed.
      */
 
     public String getARN() {
@@ -57,11 +59,12 @@ public class StopReplicationToReplicaResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * Response <code>StopReplicationToReplica</code> of a secret, based on the <code>ARN,</code>.
+     * The ARN of the promoted secret. The ARN is the same as the original primary secret except the Region is changed.
      * </p>
      * 
      * @param aRN
-     *        Response <code>StopReplicationToReplica</code> of a secret, based on the <code>ARN,</code>.
+     *        The ARN of the promoted secret. The ARN is the same as the original primary secret except the Region is
+     *        changed.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

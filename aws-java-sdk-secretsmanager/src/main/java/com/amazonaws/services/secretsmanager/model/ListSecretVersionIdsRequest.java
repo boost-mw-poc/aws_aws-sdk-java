@@ -27,8 +27,7 @@ public class ListSecretVersionIdsRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The identifier for the secret containing the versions you want to list. You can specify either the Amazon
-     * Resource Name (ARN) or the friendly name of the secret.
+     * The ARN or name of the secret whose versions you want to list.
      * </p>
      * <p>
      * For an ARN, we recommend that you specify a complete ARN rather than a partial ARN.
@@ -37,44 +36,39 @@ public class ListSecretVersionIdsRequest extends com.amazonaws.AmazonWebServiceR
     private String secretId;
     /**
      * <p>
-     * (Optional) Limits the number of results you want to include in the response. If you don't include this parameter,
-     * it defaults to a value that's specific to the operation. If additional items exist beyond the maximum you
-     * specify, the <code>NextToken</code> response element is present and has a value (isn't null). Include that value
-     * as the <code>NextToken</code> request parameter in the next call to the operation to get the next part of the
-     * results. Note that Secrets Manager might return fewer results than the maximum even when there are more results
-     * available. You should check <code>NextToken</code> after every operation to ensure that you receive all of the
-     * results.
+     * The number of results to include in the response.
+     * </p>
+     * <p>
+     * If there are more results available, in the response, Secrets Manager includes <code>NextToken</code>. To get the
+     * next results, call <code>ListSecretVersionIds</code> again with the value from <code>NextToken</code>.
      * </p>
      */
     private Integer maxResults;
     /**
      * <p>
-     * (Optional) Use this parameter in a request if you receive a <code>NextToken</code> response in a previous request
-     * indicating there's more output available. In a subsequent call, set it to the value of the previous call
-     * <code>NextToken</code> response to indicate where the output should continue from.
+     * A token that indicates where the output should continue from, if a previous call did not show all results. To get
+     * the next results, call <code>ListSecretVersionIds</code> again with this value.
      * </p>
      */
     private String nextToken;
     /**
      * <p>
-     * (Optional) Specifies that you want the results to include versions that do not have any staging labels attached
-     * to them. Such versions are considered deprecated and are subject to deletion by Secrets Manager as needed.
+     * Specifies whether to include versions of secrets that don't have any staging labels attached to them. Versions
+     * without staging labels are considered deprecated and are subject to deletion by Secrets Manager.
      * </p>
      */
     private Boolean includeDeprecated;
 
     /**
      * <p>
-     * The identifier for the secret containing the versions you want to list. You can specify either the Amazon
-     * Resource Name (ARN) or the friendly name of the secret.
+     * The ARN or name of the secret whose versions you want to list.
      * </p>
      * <p>
      * For an ARN, we recommend that you specify a complete ARN rather than a partial ARN.
      * </p>
      * 
      * @param secretId
-     *        The identifier for the secret containing the versions you want to list. You can specify either the Amazon
-     *        Resource Name (ARN) or the friendly name of the secret.</p>
+     *        The ARN or name of the secret whose versions you want to list.</p>
      *        <p>
      *        For an ARN, we recommend that you specify a complete ARN rather than a partial ARN.
      */
@@ -85,15 +79,13 @@ public class ListSecretVersionIdsRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The identifier for the secret containing the versions you want to list. You can specify either the Amazon
-     * Resource Name (ARN) or the friendly name of the secret.
+     * The ARN or name of the secret whose versions you want to list.
      * </p>
      * <p>
      * For an ARN, we recommend that you specify a complete ARN rather than a partial ARN.
      * </p>
      * 
-     * @return The identifier for the secret containing the versions you want to list. You can specify either the Amazon
-     *         Resource Name (ARN) or the friendly name of the secret.</p>
+     * @return The ARN or name of the secret whose versions you want to list.</p>
      *         <p>
      *         For an ARN, we recommend that you specify a complete ARN rather than a partial ARN.
      */
@@ -104,16 +96,14 @@ public class ListSecretVersionIdsRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The identifier for the secret containing the versions you want to list. You can specify either the Amazon
-     * Resource Name (ARN) or the friendly name of the secret.
+     * The ARN or name of the secret whose versions you want to list.
      * </p>
      * <p>
      * For an ARN, we recommend that you specify a complete ARN rather than a partial ARN.
      * </p>
      * 
      * @param secretId
-     *        The identifier for the secret containing the versions you want to list. You can specify either the Amazon
-     *        Resource Name (ARN) or the friendly name of the secret.</p>
+     *        The ARN or name of the secret whose versions you want to list.</p>
      *        <p>
      *        For an ARN, we recommend that you specify a complete ARN rather than a partial ARN.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -126,23 +116,19 @@ public class ListSecretVersionIdsRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * (Optional) Limits the number of results you want to include in the response. If you don't include this parameter,
-     * it defaults to a value that's specific to the operation. If additional items exist beyond the maximum you
-     * specify, the <code>NextToken</code> response element is present and has a value (isn't null). Include that value
-     * as the <code>NextToken</code> request parameter in the next call to the operation to get the next part of the
-     * results. Note that Secrets Manager might return fewer results than the maximum even when there are more results
-     * available. You should check <code>NextToken</code> after every operation to ensure that you receive all of the
-     * results.
+     * The number of results to include in the response.
+     * </p>
+     * <p>
+     * If there are more results available, in the response, Secrets Manager includes <code>NextToken</code>. To get the
+     * next results, call <code>ListSecretVersionIds</code> again with the value from <code>NextToken</code>.
      * </p>
      * 
      * @param maxResults
-     *        (Optional) Limits the number of results you want to include in the response. If you don't include this
-     *        parameter, it defaults to a value that's specific to the operation. If additional items exist beyond the
-     *        maximum you specify, the <code>NextToken</code> response element is present and has a value (isn't null).
-     *        Include that value as the <code>NextToken</code> request parameter in the next call to the operation to
-     *        get the next part of the results. Note that Secrets Manager might return fewer results than the maximum
-     *        even when there are more results available. You should check <code>NextToken</code> after every operation
-     *        to ensure that you receive all of the results.
+     *        The number of results to include in the response.</p>
+     *        <p>
+     *        If there are more results available, in the response, Secrets Manager includes <code>NextToken</code>. To
+     *        get the next results, call <code>ListSecretVersionIds</code> again with the value from
+     *        <code>NextToken</code>.
      */
 
     public void setMaxResults(Integer maxResults) {
@@ -151,22 +137,18 @@ public class ListSecretVersionIdsRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * (Optional) Limits the number of results you want to include in the response. If you don't include this parameter,
-     * it defaults to a value that's specific to the operation. If additional items exist beyond the maximum you
-     * specify, the <code>NextToken</code> response element is present and has a value (isn't null). Include that value
-     * as the <code>NextToken</code> request parameter in the next call to the operation to get the next part of the
-     * results. Note that Secrets Manager might return fewer results than the maximum even when there are more results
-     * available. You should check <code>NextToken</code> after every operation to ensure that you receive all of the
-     * results.
+     * The number of results to include in the response.
+     * </p>
+     * <p>
+     * If there are more results available, in the response, Secrets Manager includes <code>NextToken</code>. To get the
+     * next results, call <code>ListSecretVersionIds</code> again with the value from <code>NextToken</code>.
      * </p>
      * 
-     * @return (Optional) Limits the number of results you want to include in the response. If you don't include this
-     *         parameter, it defaults to a value that's specific to the operation. If additional items exist beyond the
-     *         maximum you specify, the <code>NextToken</code> response element is present and has a value (isn't null).
-     *         Include that value as the <code>NextToken</code> request parameter in the next call to the operation to
-     *         get the next part of the results. Note that Secrets Manager might return fewer results than the maximum
-     *         even when there are more results available. You should check <code>NextToken</code> after every operation
-     *         to ensure that you receive all of the results.
+     * @return The number of results to include in the response.</p>
+     *         <p>
+     *         If there are more results available, in the response, Secrets Manager includes <code>NextToken</code>. To
+     *         get the next results, call <code>ListSecretVersionIds</code> again with the value from
+     *         <code>NextToken</code>.
      */
 
     public Integer getMaxResults() {
@@ -175,23 +157,19 @@ public class ListSecretVersionIdsRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * (Optional) Limits the number of results you want to include in the response. If you don't include this parameter,
-     * it defaults to a value that's specific to the operation. If additional items exist beyond the maximum you
-     * specify, the <code>NextToken</code> response element is present and has a value (isn't null). Include that value
-     * as the <code>NextToken</code> request parameter in the next call to the operation to get the next part of the
-     * results. Note that Secrets Manager might return fewer results than the maximum even when there are more results
-     * available. You should check <code>NextToken</code> after every operation to ensure that you receive all of the
-     * results.
+     * The number of results to include in the response.
+     * </p>
+     * <p>
+     * If there are more results available, in the response, Secrets Manager includes <code>NextToken</code>. To get the
+     * next results, call <code>ListSecretVersionIds</code> again with the value from <code>NextToken</code>.
      * </p>
      * 
      * @param maxResults
-     *        (Optional) Limits the number of results you want to include in the response. If you don't include this
-     *        parameter, it defaults to a value that's specific to the operation. If additional items exist beyond the
-     *        maximum you specify, the <code>NextToken</code> response element is present and has a value (isn't null).
-     *        Include that value as the <code>NextToken</code> request parameter in the next call to the operation to
-     *        get the next part of the results. Note that Secrets Manager might return fewer results than the maximum
-     *        even when there are more results available. You should check <code>NextToken</code> after every operation
-     *        to ensure that you receive all of the results.
+     *        The number of results to include in the response.</p>
+     *        <p>
+     *        If there are more results available, in the response, Secrets Manager includes <code>NextToken</code>. To
+     *        get the next results, call <code>ListSecretVersionIds</code> again with the value from
+     *        <code>NextToken</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -202,15 +180,13 @@ public class ListSecretVersionIdsRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * (Optional) Use this parameter in a request if you receive a <code>NextToken</code> response in a previous request
-     * indicating there's more output available. In a subsequent call, set it to the value of the previous call
-     * <code>NextToken</code> response to indicate where the output should continue from.
+     * A token that indicates where the output should continue from, if a previous call did not show all results. To get
+     * the next results, call <code>ListSecretVersionIds</code> again with this value.
      * </p>
      * 
      * @param nextToken
-     *        (Optional) Use this parameter in a request if you receive a <code>NextToken</code> response in a previous
-     *        request indicating there's more output available. In a subsequent call, set it to the value of the
-     *        previous call <code>NextToken</code> response to indicate where the output should continue from.
+     *        A token that indicates where the output should continue from, if a previous call did not show all results.
+     *        To get the next results, call <code>ListSecretVersionIds</code> again with this value.
      */
 
     public void setNextToken(String nextToken) {
@@ -219,14 +195,12 @@ public class ListSecretVersionIdsRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * (Optional) Use this parameter in a request if you receive a <code>NextToken</code> response in a previous request
-     * indicating there's more output available. In a subsequent call, set it to the value of the previous call
-     * <code>NextToken</code> response to indicate where the output should continue from.
+     * A token that indicates where the output should continue from, if a previous call did not show all results. To get
+     * the next results, call <code>ListSecretVersionIds</code> again with this value.
      * </p>
      * 
-     * @return (Optional) Use this parameter in a request if you receive a <code>NextToken</code> response in a previous
-     *         request indicating there's more output available. In a subsequent call, set it to the value of the
-     *         previous call <code>NextToken</code> response to indicate where the output should continue from.
+     * @return A token that indicates where the output should continue from, if a previous call did not show all
+     *         results. To get the next results, call <code>ListSecretVersionIds</code> again with this value.
      */
 
     public String getNextToken() {
@@ -235,15 +209,13 @@ public class ListSecretVersionIdsRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * (Optional) Use this parameter in a request if you receive a <code>NextToken</code> response in a previous request
-     * indicating there's more output available. In a subsequent call, set it to the value of the previous call
-     * <code>NextToken</code> response to indicate where the output should continue from.
+     * A token that indicates where the output should continue from, if a previous call did not show all results. To get
+     * the next results, call <code>ListSecretVersionIds</code> again with this value.
      * </p>
      * 
      * @param nextToken
-     *        (Optional) Use this parameter in a request if you receive a <code>NextToken</code> response in a previous
-     *        request indicating there's more output available. In a subsequent call, set it to the value of the
-     *        previous call <code>NextToken</code> response to indicate where the output should continue from.
+     *        A token that indicates where the output should continue from, if a previous call did not show all results.
+     *        To get the next results, call <code>ListSecretVersionIds</code> again with this value.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -254,14 +226,13 @@ public class ListSecretVersionIdsRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * (Optional) Specifies that you want the results to include versions that do not have any staging labels attached
-     * to them. Such versions are considered deprecated and are subject to deletion by Secrets Manager as needed.
+     * Specifies whether to include versions of secrets that don't have any staging labels attached to them. Versions
+     * without staging labels are considered deprecated and are subject to deletion by Secrets Manager.
      * </p>
      * 
      * @param includeDeprecated
-     *        (Optional) Specifies that you want the results to include versions that do not have any staging labels
-     *        attached to them. Such versions are considered deprecated and are subject to deletion by Secrets Manager
-     *        as needed.
+     *        Specifies whether to include versions of secrets that don't have any staging labels attached to them.
+     *        Versions without staging labels are considered deprecated and are subject to deletion by Secrets Manager.
      */
 
     public void setIncludeDeprecated(Boolean includeDeprecated) {
@@ -270,13 +241,12 @@ public class ListSecretVersionIdsRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * (Optional) Specifies that you want the results to include versions that do not have any staging labels attached
-     * to them. Such versions are considered deprecated and are subject to deletion by Secrets Manager as needed.
+     * Specifies whether to include versions of secrets that don't have any staging labels attached to them. Versions
+     * without staging labels are considered deprecated and are subject to deletion by Secrets Manager.
      * </p>
      * 
-     * @return (Optional) Specifies that you want the results to include versions that do not have any staging labels
-     *         attached to them. Such versions are considered deprecated and are subject to deletion by Secrets Manager
-     *         as needed.
+     * @return Specifies whether to include versions of secrets that don't have any staging labels attached to them.
+     *         Versions without staging labels are considered deprecated and are subject to deletion by Secrets Manager.
      */
 
     public Boolean getIncludeDeprecated() {
@@ -285,14 +255,13 @@ public class ListSecretVersionIdsRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * (Optional) Specifies that you want the results to include versions that do not have any staging labels attached
-     * to them. Such versions are considered deprecated and are subject to deletion by Secrets Manager as needed.
+     * Specifies whether to include versions of secrets that don't have any staging labels attached to them. Versions
+     * without staging labels are considered deprecated and are subject to deletion by Secrets Manager.
      * </p>
      * 
      * @param includeDeprecated
-     *        (Optional) Specifies that you want the results to include versions that do not have any staging labels
-     *        attached to them. Such versions are considered deprecated and are subject to deletion by Secrets Manager
-     *        as needed.
+     *        Specifies whether to include versions of secrets that don't have any staging labels attached to them.
+     *        Versions without staging labels are considered deprecated and are subject to deletion by Secrets Manager.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -303,13 +272,12 @@ public class ListSecretVersionIdsRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * (Optional) Specifies that you want the results to include versions that do not have any staging labels attached
-     * to them. Such versions are considered deprecated and are subject to deletion by Secrets Manager as needed.
+     * Specifies whether to include versions of secrets that don't have any staging labels attached to them. Versions
+     * without staging labels are considered deprecated and are subject to deletion by Secrets Manager.
      * </p>
      * 
-     * @return (Optional) Specifies that you want the results to include versions that do not have any staging labels
-     *         attached to them. Such versions are considered deprecated and are subject to deletion by Secrets Manager
-     *         as needed.
+     * @return Specifies whether to include versions of secrets that don't have any staging labels attached to them.
+     *         Versions without staging labels are considered deprecated and are subject to deletion by Secrets Manager.
      */
 
     public Boolean isIncludeDeprecated() {

@@ -25,24 +25,24 @@ public class ValidateResourcePolicyResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * Returns a message stating that your Reource Policy passed validation.
+     * True if your policy passes validation, otherwise false.
      * </p>
      */
     private Boolean policyValidationPassed;
     /**
      * <p>
-     * Returns an error message if your policy doesn't pass validatation.
+     * Validation errors if your policy didn't pass validation.
      * </p>
      */
     private java.util.List<ValidationErrorsEntry> validationErrors;
 
     /**
      * <p>
-     * Returns a message stating that your Reource Policy passed validation.
+     * True if your policy passes validation, otherwise false.
      * </p>
      * 
      * @param policyValidationPassed
-     *        Returns a message stating that your Reource Policy passed validation.
+     *        True if your policy passes validation, otherwise false.
      */
 
     public void setPolicyValidationPassed(Boolean policyValidationPassed) {
@@ -51,10 +51,10 @@ public class ValidateResourcePolicyResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * Returns a message stating that your Reource Policy passed validation.
+     * True if your policy passes validation, otherwise false.
      * </p>
      * 
-     * @return Returns a message stating that your Reource Policy passed validation.
+     * @return True if your policy passes validation, otherwise false.
      */
 
     public Boolean getPolicyValidationPassed() {
@@ -63,11 +63,11 @@ public class ValidateResourcePolicyResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * Returns a message stating that your Reource Policy passed validation.
+     * True if your policy passes validation, otherwise false.
      * </p>
      * 
      * @param policyValidationPassed
-     *        Returns a message stating that your Reource Policy passed validation.
+     *        True if your policy passes validation, otherwise false.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -78,10 +78,10 @@ public class ValidateResourcePolicyResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * Returns a message stating that your Reource Policy passed validation.
+     * True if your policy passes validation, otherwise false.
      * </p>
      * 
-     * @return Returns a message stating that your Reource Policy passed validation.
+     * @return True if your policy passes validation, otherwise false.
      */
 
     public Boolean isPolicyValidationPassed() {
@@ -90,10 +90,10 @@ public class ValidateResourcePolicyResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * Returns an error message if your policy doesn't pass validatation.
+     * Validation errors if your policy didn't pass validation.
      * </p>
      * 
-     * @return Returns an error message if your policy doesn't pass validatation.
+     * @return Validation errors if your policy didn't pass validation.
      */
 
     public java.util.List<ValidationErrorsEntry> getValidationErrors() {
@@ -102,11 +102,11 @@ public class ValidateResourcePolicyResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * Returns an error message if your policy doesn't pass validatation.
+     * Validation errors if your policy didn't pass validation.
      * </p>
      * 
      * @param validationErrors
-     *        Returns an error message if your policy doesn't pass validatation.
+     *        Validation errors if your policy didn't pass validation.
      */
 
     public void setValidationErrors(java.util.Collection<ValidationErrorsEntry> validationErrors) {
@@ -120,7 +120,7 @@ public class ValidateResourcePolicyResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * Returns an error message if your policy doesn't pass validatation.
+     * Validation errors if your policy didn't pass validation.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -129,7 +129,7 @@ public class ValidateResourcePolicyResult extends com.amazonaws.AmazonWebService
      * </p>
      * 
      * @param validationErrors
-     *        Returns an error message if your policy doesn't pass validatation.
+     *        Validation errors if your policy didn't pass validation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -145,11 +145,11 @@ public class ValidateResourcePolicyResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * Returns an error message if your policy doesn't pass validatation.
+     * Validation errors if your policy didn't pass validation.
      * </p>
      * 
      * @param validationErrors
-     *        Returns an error message if your policy doesn't pass validatation.
+     *        Validation errors if your policy didn't pass validation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -25,27 +25,24 @@ public class ReplicateSecretToRegionsResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * Replicate a secret based on the <code>ReplicaRegionType</code>&gt; consisting of a Region(required) and a
-     * KMSKeyId (optional) which can be the ARN, KeyID, or Alias.
+     * The ARN of the primary secret.
      * </p>
      */
     private String aRN;
     /**
      * <p>
-     * Describes the secret replication status as <code>PENDING</code>, <code>SUCCESS</code> or <code>FAIL</code>.
+     * The status of replication.
      * </p>
      */
     private java.util.List<ReplicationStatusType> replicationStatus;
 
     /**
      * <p>
-     * Replicate a secret based on the <code>ReplicaRegionType</code>&gt; consisting of a Region(required) and a
-     * KMSKeyId (optional) which can be the ARN, KeyID, or Alias.
+     * The ARN of the primary secret.
      * </p>
      * 
      * @param aRN
-     *        Replicate a secret based on the <code>ReplicaRegionType</code>&gt; consisting of a Region(required) and a
-     *        KMSKeyId (optional) which can be the ARN, KeyID, or Alias.
+     *        The ARN of the primary secret.
      */
 
     public void setARN(String aRN) {
@@ -54,12 +51,10 @@ public class ReplicateSecretToRegionsResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * Replicate a secret based on the <code>ReplicaRegionType</code>&gt; consisting of a Region(required) and a
-     * KMSKeyId (optional) which can be the ARN, KeyID, or Alias.
+     * The ARN of the primary secret.
      * </p>
      * 
-     * @return Replicate a secret based on the <code>ReplicaRegionType</code>&gt; consisting of a Region(required) and a
-     *         KMSKeyId (optional) which can be the ARN, KeyID, or Alias.
+     * @return The ARN of the primary secret.
      */
 
     public String getARN() {
@@ -68,13 +63,11 @@ public class ReplicateSecretToRegionsResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * Replicate a secret based on the <code>ReplicaRegionType</code>&gt; consisting of a Region(required) and a
-     * KMSKeyId (optional) which can be the ARN, KeyID, or Alias.
+     * The ARN of the primary secret.
      * </p>
      * 
      * @param aRN
-     *        Replicate a secret based on the <code>ReplicaRegionType</code>&gt; consisting of a Region(required) and a
-     *        KMSKeyId (optional) which can be the ARN, KeyID, or Alias.
+     *        The ARN of the primary secret.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -85,11 +78,10 @@ public class ReplicateSecretToRegionsResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * Describes the secret replication status as <code>PENDING</code>, <code>SUCCESS</code> or <code>FAIL</code>.
+     * The status of replication.
      * </p>
      * 
-     * @return Describes the secret replication status as <code>PENDING</code>, <code>SUCCESS</code> or
-     *         <code>FAIL</code>.
+     * @return The status of replication.
      */
 
     public java.util.List<ReplicationStatusType> getReplicationStatus() {
@@ -98,12 +90,11 @@ public class ReplicateSecretToRegionsResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * Describes the secret replication status as <code>PENDING</code>, <code>SUCCESS</code> or <code>FAIL</code>.
+     * The status of replication.
      * </p>
      * 
      * @param replicationStatus
-     *        Describes the secret replication status as <code>PENDING</code>, <code>SUCCESS</code> or <code>FAIL</code>
-     *        .
+     *        The status of replication.
      */
 
     public void setReplicationStatus(java.util.Collection<ReplicationStatusType> replicationStatus) {
@@ -117,7 +108,7 @@ public class ReplicateSecretToRegionsResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * Describes the secret replication status as <code>PENDING</code>, <code>SUCCESS</code> or <code>FAIL</code>.
+     * The status of replication.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -126,8 +117,7 @@ public class ReplicateSecretToRegionsResult extends com.amazonaws.AmazonWebServi
      * </p>
      * 
      * @param replicationStatus
-     *        Describes the secret replication status as <code>PENDING</code>, <code>SUCCESS</code> or <code>FAIL</code>
-     *        .
+     *        The status of replication.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -143,12 +133,11 @@ public class ReplicateSecretToRegionsResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * Describes the secret replication status as <code>PENDING</code>, <code>SUCCESS</code> or <code>FAIL</code>.
+     * The status of replication.
      * </p>
      * 
      * @param replicationStatus
-     *        Describes the secret replication status as <code>PENDING</code>, <code>SUCCESS</code> or <code>FAIL</code>
-     *        .
+     *        The status of replication.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -31,11 +31,9 @@ public class ListSecretsResult extends com.amazonaws.AmazonWebServiceResult<com.
     private java.util.List<SecretListEntry> secretList;
     /**
      * <p>
-     * If present in the response, this value indicates that there's more output available than included in the current
+     * Secrets Manager includes this value if there's more output available than what is included in the current
      * response. This can occur even when the response includes no values at all, such as when you ask for a filtered
-     * view of a very long list. Use this value in the <code>NextToken</code> request parameter in a subsequent call to
-     * the operation to continue processing and get the next part of the output. You should repeat this until the
-     * <code>NextToken</code> response element comes back empty (as <code>null</code>).
+     * view of a long list. To get the next results, call <code>ListSecrets</code> again with this value.
      * </p>
      */
     private String nextToken;
@@ -112,19 +110,16 @@ public class ListSecretsResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * If present in the response, this value indicates that there's more output available than included in the current
+     * Secrets Manager includes this value if there's more output available than what is included in the current
      * response. This can occur even when the response includes no values at all, such as when you ask for a filtered
-     * view of a very long list. Use this value in the <code>NextToken</code> request parameter in a subsequent call to
-     * the operation to continue processing and get the next part of the output. You should repeat this until the
-     * <code>NextToken</code> response element comes back empty (as <code>null</code>).
+     * view of a long list. To get the next results, call <code>ListSecrets</code> again with this value.
      * </p>
      * 
      * @param nextToken
-     *        If present in the response, this value indicates that there's more output available than included in the
-     *        current response. This can occur even when the response includes no values at all, such as when you ask
-     *        for a filtered view of a very long list. Use this value in the <code>NextToken</code> request parameter in
-     *        a subsequent call to the operation to continue processing and get the next part of the output. You should
-     *        repeat this until the <code>NextToken</code> response element comes back empty (as <code>null</code>).
+     *        Secrets Manager includes this value if there's more output available than what is included in the current
+     *        response. This can occur even when the response includes no values at all, such as when you ask for a
+     *        filtered view of a long list. To get the next results, call <code>ListSecrets</code> again with this
+     *        value.
      */
 
     public void setNextToken(String nextToken) {
@@ -133,19 +128,15 @@ public class ListSecretsResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * If present in the response, this value indicates that there's more output available than included in the current
+     * Secrets Manager includes this value if there's more output available than what is included in the current
      * response. This can occur even when the response includes no values at all, such as when you ask for a filtered
-     * view of a very long list. Use this value in the <code>NextToken</code> request parameter in a subsequent call to
-     * the operation to continue processing and get the next part of the output. You should repeat this until the
-     * <code>NextToken</code> response element comes back empty (as <code>null</code>).
+     * view of a long list. To get the next results, call <code>ListSecrets</code> again with this value.
      * </p>
      * 
-     * @return If present in the response, this value indicates that there's more output available than included in the
-     *         current response. This can occur even when the response includes no values at all, such as when you ask
-     *         for a filtered view of a very long list. Use this value in the <code>NextToken</code> request parameter
-     *         in a subsequent call to the operation to continue processing and get the next part of the output. You
-     *         should repeat this until the <code>NextToken</code> response element comes back empty (as
-     *         <code>null</code>).
+     * @return Secrets Manager includes this value if there's more output available than what is included in the current
+     *         response. This can occur even when the response includes no values at all, such as when you ask for a
+     *         filtered view of a long list. To get the next results, call <code>ListSecrets</code> again with this
+     *         value.
      */
 
     public String getNextToken() {
@@ -154,19 +145,16 @@ public class ListSecretsResult extends com.amazonaws.AmazonWebServiceResult<com.
 
     /**
      * <p>
-     * If present in the response, this value indicates that there's more output available than included in the current
+     * Secrets Manager includes this value if there's more output available than what is included in the current
      * response. This can occur even when the response includes no values at all, such as when you ask for a filtered
-     * view of a very long list. Use this value in the <code>NextToken</code> request parameter in a subsequent call to
-     * the operation to continue processing and get the next part of the output. You should repeat this until the
-     * <code>NextToken</code> response element comes back empty (as <code>null</code>).
+     * view of a long list. To get the next results, call <code>ListSecrets</code> again with this value.
      * </p>
      * 
      * @param nextToken
-     *        If present in the response, this value indicates that there's more output available than included in the
-     *        current response. This can occur even when the response includes no values at all, such as when you ask
-     *        for a filtered view of a very long list. Use this value in the <code>NextToken</code> request parameter in
-     *        a subsequent call to the operation to continue processing and get the next part of the output. You should
-     *        repeat this until the <code>NextToken</code> response element comes back empty (as <code>null</code>).
+     *        Secrets Manager includes this value if there's more output available than what is included in the current
+     *        response. This can occur even when the response includes no values at all, such as when you ask for a
+     *        filtered view of a long list. To get the next results, call <code>ListSecrets</code> again with this
+     *        value.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

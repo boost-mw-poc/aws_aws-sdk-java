@@ -31,7 +31,7 @@ public class RestoreSecretResult extends com.amazonaws.AmazonWebServiceResult<co
     private String aRN;
     /**
      * <p>
-     * The friendly name of the secret that was restored.
+     * The name of the secret that was restored.
      * </p>
      */
     private String name;
@@ -78,11 +78,11 @@ public class RestoreSecretResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The friendly name of the secret that was restored.
+     * The name of the secret that was restored.
      * </p>
      * 
      * @param name
-     *        The friendly name of the secret that was restored.
+     *        The name of the secret that was restored.
      */
 
     public void setName(String name) {
@@ -91,10 +91,10 @@ public class RestoreSecretResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The friendly name of the secret that was restored.
+     * The name of the secret that was restored.
      * </p>
      * 
-     * @return The friendly name of the secret that was restored.
+     * @return The name of the secret that was restored.
      */
 
     public String getName() {
@@ -103,11 +103,11 @@ public class RestoreSecretResult extends com.amazonaws.AmazonWebServiceResult<co
 
     /**
      * <p>
-     * The friendly name of the secret that was restored.
+     * The name of the secret that was restored.
      * </p>
      * 
      * @param name
-     *        The friendly name of the secret that was restored.
+     *        The name of the secret that was restored.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

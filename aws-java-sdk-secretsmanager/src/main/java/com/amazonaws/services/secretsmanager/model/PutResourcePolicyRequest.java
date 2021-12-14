@@ -27,8 +27,7 @@ public class PutResourcePolicyRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * Specifies the secret that you want to attach the resource-based policy. You can specify either the ARN or the
-     * friendly name of the secret.
+     * The ARN or name of the secret to attach the resource-based policy.
      * </p>
      * <p>
      * For an ARN, we recommend that you specify a complete ARN rather than a partial ARN.
@@ -37,34 +36,30 @@ public class PutResourcePolicyRequest extends com.amazonaws.AmazonWebServiceRequ
     private String secretId;
     /**
      * <p>
-     * A JSON-formatted string constructed according to the grammar and syntax for an Amazon Web Services resource-based
-     * policy. The policy in the string identifies who can access or manage this secret and its versions. For
-     * information on how to format a JSON parameter for the various command line tool environments, see <a
-     * href="http://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#cli-using-param-json">Using JSON for
-     * Parameters</a> in the <i>CLI User Guide</i>.
+     * A JSON-formatted string for an Amazon Web Services resource-based policy. For example policies, see <a
+     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_examples.html">Permissions
+     * policy examples</a>.
      * </p>
      */
     private String resourcePolicy;
     /**
      * <p>
-     * (Optional) If you set the parameter, <code>BlockPublicPolicy</code> to true, then you block resource-based
-     * policies that allow broad access to the secret.
+     * Specifies whether to block resource-based policies that allow broad access to the secret. By default, Secrets
+     * Manager blocks policies that allow broad access, for example those that use a wildcard for the principal.
      * </p>
      */
     private Boolean blockPublicPolicy;
 
     /**
      * <p>
-     * Specifies the secret that you want to attach the resource-based policy. You can specify either the ARN or the
-     * friendly name of the secret.
+     * The ARN or name of the secret to attach the resource-based policy.
      * </p>
      * <p>
      * For an ARN, we recommend that you specify a complete ARN rather than a partial ARN.
      * </p>
      * 
      * @param secretId
-     *        Specifies the secret that you want to attach the resource-based policy. You can specify either the ARN or
-     *        the friendly name of the secret.</p>
+     *        The ARN or name of the secret to attach the resource-based policy.</p>
      *        <p>
      *        For an ARN, we recommend that you specify a complete ARN rather than a partial ARN.
      */
@@ -75,15 +70,13 @@ public class PutResourcePolicyRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * Specifies the secret that you want to attach the resource-based policy. You can specify either the ARN or the
-     * friendly name of the secret.
+     * The ARN or name of the secret to attach the resource-based policy.
      * </p>
      * <p>
      * For an ARN, we recommend that you specify a complete ARN rather than a partial ARN.
      * </p>
      * 
-     * @return Specifies the secret that you want to attach the resource-based policy. You can specify either the ARN or
-     *         the friendly name of the secret.</p>
+     * @return The ARN or name of the secret to attach the resource-based policy.</p>
      *         <p>
      *         For an ARN, we recommend that you specify a complete ARN rather than a partial ARN.
      */
@@ -94,16 +87,14 @@ public class PutResourcePolicyRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * Specifies the secret that you want to attach the resource-based policy. You can specify either the ARN or the
-     * friendly name of the secret.
+     * The ARN or name of the secret to attach the resource-based policy.
      * </p>
      * <p>
      * For an ARN, we recommend that you specify a complete ARN rather than a partial ARN.
      * </p>
      * 
      * @param secretId
-     *        Specifies the secret that you want to attach the resource-based policy. You can specify either the ARN or
-     *        the friendly name of the secret.</p>
+     *        The ARN or name of the secret to attach the resource-based policy.</p>
      *        <p>
      *        For an ARN, we recommend that you specify a complete ARN rather than a partial ARN.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -116,20 +107,16 @@ public class PutResourcePolicyRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * A JSON-formatted string constructed according to the grammar and syntax for an Amazon Web Services resource-based
-     * policy. The policy in the string identifies who can access or manage this secret and its versions. For
-     * information on how to format a JSON parameter for the various command line tool environments, see <a
-     * href="http://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#cli-using-param-json">Using JSON for
-     * Parameters</a> in the <i>CLI User Guide</i>.
+     * A JSON-formatted string for an Amazon Web Services resource-based policy. For example policies, see <a
+     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_examples.html">Permissions
+     * policy examples</a>.
      * </p>
      * 
      * @param resourcePolicy
-     *        A JSON-formatted string constructed according to the grammar and syntax for an Amazon Web Services
-     *        resource-based policy. The policy in the string identifies who can access or manage this secret and its
-     *        versions. For information on how to format a JSON parameter for the various command line tool
-     *        environments, see <a
-     *        href="http://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#cli-using-param-json">Using
-     *        JSON for Parameters</a> in the <i>CLI User Guide</i>.
+     *        A JSON-formatted string for an Amazon Web Services resource-based policy. For example policies, see <a
+     *        href
+     *        ="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_examples.html">Permissions
+     *        policy examples</a>.
      */
 
     public void setResourcePolicy(String resourcePolicy) {
@@ -138,19 +125,15 @@ public class PutResourcePolicyRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * A JSON-formatted string constructed according to the grammar and syntax for an Amazon Web Services resource-based
-     * policy. The policy in the string identifies who can access or manage this secret and its versions. For
-     * information on how to format a JSON parameter for the various command line tool environments, see <a
-     * href="http://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#cli-using-param-json">Using JSON for
-     * Parameters</a> in the <i>CLI User Guide</i>.
+     * A JSON-formatted string for an Amazon Web Services resource-based policy. For example policies, see <a
+     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_examples.html">Permissions
+     * policy examples</a>.
      * </p>
      * 
-     * @return A JSON-formatted string constructed according to the grammar and syntax for an Amazon Web Services
-     *         resource-based policy. The policy in the string identifies who can access or manage this secret and its
-     *         versions. For information on how to format a JSON parameter for the various command line tool
-     *         environments, see <a
-     *         href="http://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#cli-using-param-json">Using
-     *         JSON for Parameters</a> in the <i>CLI User Guide</i>.
+     * @return A JSON-formatted string for an Amazon Web Services resource-based policy. For example policies, see <a
+     *         href
+     *         ="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_examples.html">Permissions
+     *         policy examples</a>.
      */
 
     public String getResourcePolicy() {
@@ -159,20 +142,16 @@ public class PutResourcePolicyRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * A JSON-formatted string constructed according to the grammar and syntax for an Amazon Web Services resource-based
-     * policy. The policy in the string identifies who can access or manage this secret and its versions. For
-     * information on how to format a JSON parameter for the various command line tool environments, see <a
-     * href="http://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#cli-using-param-json">Using JSON for
-     * Parameters</a> in the <i>CLI User Guide</i>.
+     * A JSON-formatted string for an Amazon Web Services resource-based policy. For example policies, see <a
+     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_examples.html">Permissions
+     * policy examples</a>.
      * </p>
      * 
      * @param resourcePolicy
-     *        A JSON-formatted string constructed according to the grammar and syntax for an Amazon Web Services
-     *        resource-based policy. The policy in the string identifies who can access or manage this secret and its
-     *        versions. For information on how to format a JSON parameter for the various command line tool
-     *        environments, see <a
-     *        href="http://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#cli-using-param-json">Using
-     *        JSON for Parameters</a> in the <i>CLI User Guide</i>.
+     *        A JSON-formatted string for an Amazon Web Services resource-based policy. For example policies, see <a
+     *        href
+     *        ="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_examples.html">Permissions
+     *        policy examples</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -183,13 +162,14 @@ public class PutResourcePolicyRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * (Optional) If you set the parameter, <code>BlockPublicPolicy</code> to true, then you block resource-based
-     * policies that allow broad access to the secret.
+     * Specifies whether to block resource-based policies that allow broad access to the secret. By default, Secrets
+     * Manager blocks policies that allow broad access, for example those that use a wildcard for the principal.
      * </p>
      * 
      * @param blockPublicPolicy
-     *        (Optional) If you set the parameter, <code>BlockPublicPolicy</code> to true, then you block resource-based
-     *        policies that allow broad access to the secret.
+     *        Specifies whether to block resource-based policies that allow broad access to the secret. By default,
+     *        Secrets Manager blocks policies that allow broad access, for example those that use a wildcard for the
+     *        principal.
      */
 
     public void setBlockPublicPolicy(Boolean blockPublicPolicy) {
@@ -198,12 +178,13 @@ public class PutResourcePolicyRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * (Optional) If you set the parameter, <code>BlockPublicPolicy</code> to true, then you block resource-based
-     * policies that allow broad access to the secret.
+     * Specifies whether to block resource-based policies that allow broad access to the secret. By default, Secrets
+     * Manager blocks policies that allow broad access, for example those that use a wildcard for the principal.
      * </p>
      * 
-     * @return (Optional) If you set the parameter, <code>BlockPublicPolicy</code> to true, then you block
-     *         resource-based policies that allow broad access to the secret.
+     * @return Specifies whether to block resource-based policies that allow broad access to the secret. By default,
+     *         Secrets Manager blocks policies that allow broad access, for example those that use a wildcard for the
+     *         principal.
      */
 
     public Boolean getBlockPublicPolicy() {
@@ -212,13 +193,14 @@ public class PutResourcePolicyRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * (Optional) If you set the parameter, <code>BlockPublicPolicy</code> to true, then you block resource-based
-     * policies that allow broad access to the secret.
+     * Specifies whether to block resource-based policies that allow broad access to the secret. By default, Secrets
+     * Manager blocks policies that allow broad access, for example those that use a wildcard for the principal.
      * </p>
      * 
      * @param blockPublicPolicy
-     *        (Optional) If you set the parameter, <code>BlockPublicPolicy</code> to true, then you block resource-based
-     *        policies that allow broad access to the secret.
+     *        Specifies whether to block resource-based policies that allow broad access to the secret. By default,
+     *        Secrets Manager blocks policies that allow broad access, for example those that use a wildcard for the
+     *        principal.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -229,12 +211,13 @@ public class PutResourcePolicyRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * (Optional) If you set the parameter, <code>BlockPublicPolicy</code> to true, then you block resource-based
-     * policies that allow broad access to the secret.
+     * Specifies whether to block resource-based policies that allow broad access to the secret. By default, Secrets
+     * Manager blocks policies that allow broad access, for example those that use a wildcard for the principal.
      * </p>
      * 
-     * @return (Optional) If you set the parameter, <code>BlockPublicPolicy</code> to true, then you block
-     *         resource-based policies that allow broad access to the secret.
+     * @return Specifies whether to block resource-based policies that allow broad access to the secret. By default,
+     *         Secrets Manager blocks policies that allow broad access, for example those that use a wildcard for the
+     *         principal.
      */
 
     public Boolean isBlockPublicPolicy() {

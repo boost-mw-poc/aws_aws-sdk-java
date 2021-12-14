@@ -19,8 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * (Optional) Custom type consisting of a <code>Region</code> (required) and the <code>KmsKeyId</code> which can be an
- * <code>ARN</code>, <code>Key ID</code>, or <code>Alias</code>.
+ * A custom type that specifies a <code>Region</code> and the <code>KmsKeyId</code> for a replica secret.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/secretsmanager-2017-10-17/ReplicaRegionType" target="_top">AWS
@@ -31,24 +30,29 @@ public class ReplicaRegionType implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Describes a single instance of Region objects.
+     * A Region code. For a list of Region codes, see <a
+     * href="https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints">Name and code of Regions</a>.
      * </p>
      */
     private String region;
     /**
      * <p>
-     * Can be an <code>ARN</code>, <code>Key ID</code>, or <code>Alias</code>.
+     * The ARN, key ID, or alias of the KMS key to encrypt the secret. If you don't include this field, Secrets Manager
+     * uses <code>aws/secretsmanager</code>.
      * </p>
      */
     private String kmsKeyId;
 
     /**
      * <p>
-     * Describes a single instance of Region objects.
+     * A Region code. For a list of Region codes, see <a
+     * href="https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints">Name and code of Regions</a>.
      * </p>
      * 
      * @param region
-     *        Describes a single instance of Region objects.
+     *        A Region code. For a list of Region codes, see <a
+     *        href="https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints">Name and code of
+     *        Regions</a>.
      */
 
     public void setRegion(String region) {
@@ -57,10 +61,13 @@ public class ReplicaRegionType implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Describes a single instance of Region objects.
+     * A Region code. For a list of Region codes, see <a
+     * href="https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints">Name and code of Regions</a>.
      * </p>
      * 
-     * @return Describes a single instance of Region objects.
+     * @return A Region code. For a list of Region codes, see <a
+     *         href="https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints">Name and code of
+     *         Regions</a>.
      */
 
     public String getRegion() {
@@ -69,11 +76,14 @@ public class ReplicaRegionType implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Describes a single instance of Region objects.
+     * A Region code. For a list of Region codes, see <a
+     * href="https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints">Name and code of Regions</a>.
      * </p>
      * 
      * @param region
-     *        Describes a single instance of Region objects.
+     *        A Region code. For a list of Region codes, see <a
+     *        href="https://docs.aws.amazon.com/general/latest/gr/rande.html#regional-endpoints">Name and code of
+     *        Regions</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -84,11 +94,13 @@ public class ReplicaRegionType implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Can be an <code>ARN</code>, <code>Key ID</code>, or <code>Alias</code>.
+     * The ARN, key ID, or alias of the KMS key to encrypt the secret. If you don't include this field, Secrets Manager
+     * uses <code>aws/secretsmanager</code>.
      * </p>
      * 
      * @param kmsKeyId
-     *        Can be an <code>ARN</code>, <code>Key ID</code>, or <code>Alias</code>.
+     *        The ARN, key ID, or alias of the KMS key to encrypt the secret. If you don't include this field, Secrets
+     *        Manager uses <code>aws/secretsmanager</code>.
      */
 
     public void setKmsKeyId(String kmsKeyId) {
@@ -97,10 +109,12 @@ public class ReplicaRegionType implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Can be an <code>ARN</code>, <code>Key ID</code>, or <code>Alias</code>.
+     * The ARN, key ID, or alias of the KMS key to encrypt the secret. If you don't include this field, Secrets Manager
+     * uses <code>aws/secretsmanager</code>.
      * </p>
      * 
-     * @return Can be an <code>ARN</code>, <code>Key ID</code>, or <code>Alias</code>.
+     * @return The ARN, key ID, or alias of the KMS key to encrypt the secret. If you don't include this field, Secrets
+     *         Manager uses <code>aws/secretsmanager</code>.
      */
 
     public String getKmsKeyId() {
@@ -109,11 +123,13 @@ public class ReplicaRegionType implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * Can be an <code>ARN</code>, <code>Key ID</code>, or <code>Alias</code>.
+     * The ARN, key ID, or alias of the KMS key to encrypt the secret. If you don't include this field, Secrets Manager
+     * uses <code>aws/secretsmanager</code>.
      * </p>
      * 
      * @param kmsKeyId
-     *        Can be an <code>ARN</code>, <code>Key ID</code>, or <code>Alias</code>.
+     *        The ARN, key ID, or alias of the KMS key to encrypt the secret. If you don't include this field, Secrets
+     *        Manager uses <code>aws/secretsmanager</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

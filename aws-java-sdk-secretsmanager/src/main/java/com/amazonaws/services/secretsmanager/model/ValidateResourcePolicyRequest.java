@@ -27,39 +27,27 @@ public class ValidateResourcePolicyRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * (Optional) The identifier of the secret with the resource-based policy you want to validate. You can specify
-     * either the Amazon Resource Name (ARN) or the friendly name of the secret.
-     * </p>
-     * <p>
-     * For an ARN, we recommend that you specify a complete ARN rather than a partial ARN.
+     * This field is reserved for internal use.
      * </p>
      */
     private String secretId;
     /**
      * <p>
-     * A JSON-formatted string constructed according to the grammar and syntax for an Amazon Web Services resource-based
-     * policy. The policy in the string identifies who can access or manage this secret and its versions. For
-     * information on how to format a JSON parameter for the various command line tool environments, see <a
-     * href="http://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#cli-using-param-json">Using JSON for
-     * Parameters</a> in the <i>CLI User Guide</i>.publi
+     * A JSON-formatted string that contains an Amazon Web Services resource-based policy. The policy in the string
+     * identifies who can access or manage this secret and its versions. For example policies, see <a
+     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_examples.html">Permissions
+     * policy examples</a>.
      * </p>
      */
     private String resourcePolicy;
 
     /**
      * <p>
-     * (Optional) The identifier of the secret with the resource-based policy you want to validate. You can specify
-     * either the Amazon Resource Name (ARN) or the friendly name of the secret.
-     * </p>
-     * <p>
-     * For an ARN, we recommend that you specify a complete ARN rather than a partial ARN.
+     * This field is reserved for internal use.
      * </p>
      * 
      * @param secretId
-     *        (Optional) The identifier of the secret with the resource-based policy you want to validate. You can
-     *        specify either the Amazon Resource Name (ARN) or the friendly name of the secret.</p>
-     *        <p>
-     *        For an ARN, we recommend that you specify a complete ARN rather than a partial ARN.
+     *        This field is reserved for internal use.
      */
 
     public void setSecretId(String secretId) {
@@ -68,17 +56,10 @@ public class ValidateResourcePolicyRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * (Optional) The identifier of the secret with the resource-based policy you want to validate. You can specify
-     * either the Amazon Resource Name (ARN) or the friendly name of the secret.
-     * </p>
-     * <p>
-     * For an ARN, we recommend that you specify a complete ARN rather than a partial ARN.
+     * This field is reserved for internal use.
      * </p>
      * 
-     * @return (Optional) The identifier of the secret with the resource-based policy you want to validate. You can
-     *         specify either the Amazon Resource Name (ARN) or the friendly name of the secret.</p>
-     *         <p>
-     *         For an ARN, we recommend that you specify a complete ARN rather than a partial ARN.
+     * @return This field is reserved for internal use.
      */
 
     public String getSecretId() {
@@ -87,18 +68,11 @@ public class ValidateResourcePolicyRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * (Optional) The identifier of the secret with the resource-based policy you want to validate. You can specify
-     * either the Amazon Resource Name (ARN) or the friendly name of the secret.
-     * </p>
-     * <p>
-     * For an ARN, we recommend that you specify a complete ARN rather than a partial ARN.
+     * This field is reserved for internal use.
      * </p>
      * 
      * @param secretId
-     *        (Optional) The identifier of the secret with the resource-based policy you want to validate. You can
-     *        specify either the Amazon Resource Name (ARN) or the friendly name of the secret.</p>
-     *        <p>
-     *        For an ARN, we recommend that you specify a complete ARN rather than a partial ARN.
+     *        This field is reserved for internal use.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -109,20 +83,18 @@ public class ValidateResourcePolicyRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * A JSON-formatted string constructed according to the grammar and syntax for an Amazon Web Services resource-based
-     * policy. The policy in the string identifies who can access or manage this secret and its versions. For
-     * information on how to format a JSON parameter for the various command line tool environments, see <a
-     * href="http://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#cli-using-param-json">Using JSON for
-     * Parameters</a> in the <i>CLI User Guide</i>.publi
+     * A JSON-formatted string that contains an Amazon Web Services resource-based policy. The policy in the string
+     * identifies who can access or manage this secret and its versions. For example policies, see <a
+     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_examples.html">Permissions
+     * policy examples</a>.
      * </p>
      * 
      * @param resourcePolicy
-     *        A JSON-formatted string constructed according to the grammar and syntax for an Amazon Web Services
-     *        resource-based policy. The policy in the string identifies who can access or manage this secret and its
-     *        versions. For information on how to format a JSON parameter for the various command line tool
-     *        environments, see <a
-     *        href="http://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#cli-using-param-json">Using
-     *        JSON for Parameters</a> in the <i>CLI User Guide</i>.publi
+     *        A JSON-formatted string that contains an Amazon Web Services resource-based policy. The policy in the
+     *        string identifies who can access or manage this secret and its versions. For example policies, see <a
+     *        href=
+     *        "https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_examples.html">Permissions
+     *        policy examples</a>.
      */
 
     public void setResourcePolicy(String resourcePolicy) {
@@ -131,19 +103,17 @@ public class ValidateResourcePolicyRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * A JSON-formatted string constructed according to the grammar and syntax for an Amazon Web Services resource-based
-     * policy. The policy in the string identifies who can access or manage this secret and its versions. For
-     * information on how to format a JSON parameter for the various command line tool environments, see <a
-     * href="http://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#cli-using-param-json">Using JSON for
-     * Parameters</a> in the <i>CLI User Guide</i>.publi
+     * A JSON-formatted string that contains an Amazon Web Services resource-based policy. The policy in the string
+     * identifies who can access or manage this secret and its versions. For example policies, see <a
+     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_examples.html">Permissions
+     * policy examples</a>.
      * </p>
      * 
-     * @return A JSON-formatted string constructed according to the grammar and syntax for an Amazon Web Services
-     *         resource-based policy. The policy in the string identifies who can access or manage this secret and its
-     *         versions. For information on how to format a JSON parameter for the various command line tool
-     *         environments, see <a
-     *         href="http://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#cli-using-param-json">Using
-     *         JSON for Parameters</a> in the <i>CLI User Guide</i>.publi
+     * @return A JSON-formatted string that contains an Amazon Web Services resource-based policy. The policy in the
+     *         string identifies who can access or manage this secret and its versions. For example policies, see <a
+     *         href
+     *         ="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_examples.html">Permissions
+     *         policy examples</a>.
      */
 
     public String getResourcePolicy() {
@@ -152,20 +122,18 @@ public class ValidateResourcePolicyRequest extends com.amazonaws.AmazonWebServic
 
     /**
      * <p>
-     * A JSON-formatted string constructed according to the grammar and syntax for an Amazon Web Services resource-based
-     * policy. The policy in the string identifies who can access or manage this secret and its versions. For
-     * information on how to format a JSON parameter for the various command line tool environments, see <a
-     * href="http://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#cli-using-param-json">Using JSON for
-     * Parameters</a> in the <i>CLI User Guide</i>.publi
+     * A JSON-formatted string that contains an Amazon Web Services resource-based policy. The policy in the string
+     * identifies who can access or manage this secret and its versions. For example policies, see <a
+     * href="https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_examples.html">Permissions
+     * policy examples</a>.
      * </p>
      * 
      * @param resourcePolicy
-     *        A JSON-formatted string constructed according to the grammar and syntax for an Amazon Web Services
-     *        resource-based policy. The policy in the string identifies who can access or manage this secret and its
-     *        versions. For information on how to format a JSON parameter for the various command line tool
-     *        environments, see <a
-     *        href="http://docs.aws.amazon.com/cli/latest/userguide/cli-using-param.html#cli-using-param-json">Using
-     *        JSON for Parameters</a> in the <i>CLI User Guide</i>.publi
+     *        A JSON-formatted string that contains an Amazon Web Services resource-based policy. The policy in the
+     *        string identifies who can access or manage this secret and its versions. For example policies, see <a
+     *        href=
+     *        "https://docs.aws.amazon.com/secretsmanager/latest/userguide/auth-and-access_examples.html">Permissions
+     *        policy examples</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

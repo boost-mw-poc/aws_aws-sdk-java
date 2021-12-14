@@ -27,8 +27,7 @@ public class RotateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * Specifies the secret that you want to rotate. You can specify either the Amazon Resource Name (ARN) or the
-     * friendly name of the secret.
+     * The ARN or name of the secret to rotate.
      * </p>
      * <p>
      * For an ARN, we recommend that you specify a complete ARN rather than a partial ARN.
@@ -37,7 +36,9 @@ public class RotateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
     private String secretId;
     /**
      * <p>
-     * (Optional) Specifies a unique identifier for the new version of the secret that helps ensure idempotency.
+     * A unique identifier for the new version of the secret that helps ensure idempotency. Secrets Manager uses this
+     * value to prevent the accidental creation of duplicate versions if there are failures and retries during rotation.
+     * This value becomes the <code>VersionId</code> of the new version.
      * </p>
      * <p>
      * If you use the Amazon Web Services CLI or one of the Amazon Web Services SDK to call this operation, then you can
@@ -47,20 +48,16 @@ public class RotateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
      * value in the request.
      * </p>
      * <p>
-     * You only need to specify your own value if you implement your own retry logic and want to ensure that a given
-     * secret is not created twice. We recommend that you generate a <a
+     * You only need to specify this value if you implement your own retry logic and you want to ensure that Secrets
+     * Manager doesn't attempt to create a secret version twice. We recommend that you generate a <a
      * href="https://wikipedia.org/wiki/Universally_unique_identifier">UUID-type</a> value to ensure uniqueness within
      * the specified secret.
-     * </p>
-     * <p>
-     * Secrets Manager uses this value to prevent the accidental creation of duplicate versions if there are failures
-     * and retries during the function's processing. This value becomes the <code>VersionId</code> of the new version.
      * </p>
      */
     private String clientRequestToken;
     /**
      * <p>
-     * (Optional) Specifies the ARN of the Lambda function that can rotate the secret.
+     * The ARN of the Lambda rotation function that can rotate the secret.
      * </p>
      */
     private String rotationLambdaARN;
@@ -73,16 +70,14 @@ public class RotateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * Specifies the secret that you want to rotate. You can specify either the Amazon Resource Name (ARN) or the
-     * friendly name of the secret.
+     * The ARN or name of the secret to rotate.
      * </p>
      * <p>
      * For an ARN, we recommend that you specify a complete ARN rather than a partial ARN.
      * </p>
      * 
      * @param secretId
-     *        Specifies the secret that you want to rotate. You can specify either the Amazon Resource Name (ARN) or the
-     *        friendly name of the secret.</p>
+     *        The ARN or name of the secret to rotate.</p>
      *        <p>
      *        For an ARN, we recommend that you specify a complete ARN rather than a partial ARN.
      */
@@ -93,15 +88,13 @@ public class RotateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * Specifies the secret that you want to rotate. You can specify either the Amazon Resource Name (ARN) or the
-     * friendly name of the secret.
+     * The ARN or name of the secret to rotate.
      * </p>
      * <p>
      * For an ARN, we recommend that you specify a complete ARN rather than a partial ARN.
      * </p>
      * 
-     * @return Specifies the secret that you want to rotate. You can specify either the Amazon Resource Name (ARN) or
-     *         the friendly name of the secret.</p>
+     * @return The ARN or name of the secret to rotate.</p>
      *         <p>
      *         For an ARN, we recommend that you specify a complete ARN rather than a partial ARN.
      */
@@ -112,16 +105,14 @@ public class RotateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * Specifies the secret that you want to rotate. You can specify either the Amazon Resource Name (ARN) or the
-     * friendly name of the secret.
+     * The ARN or name of the secret to rotate.
      * </p>
      * <p>
      * For an ARN, we recommend that you specify a complete ARN rather than a partial ARN.
      * </p>
      * 
      * @param secretId
-     *        Specifies the secret that you want to rotate. You can specify either the Amazon Resource Name (ARN) or the
-     *        friendly name of the secret.</p>
+     *        The ARN or name of the secret to rotate.</p>
      *        <p>
      *        For an ARN, we recommend that you specify a complete ARN rather than a partial ARN.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -134,7 +125,9 @@ public class RotateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * (Optional) Specifies a unique identifier for the new version of the secret that helps ensure idempotency.
+     * A unique identifier for the new version of the secret that helps ensure idempotency. Secrets Manager uses this
+     * value to prevent the accidental creation of duplicate versions if there are failures and retries during rotation.
+     * This value becomes the <code>VersionId</code> of the new version.
      * </p>
      * <p>
      * If you use the Amazon Web Services CLI or one of the Amazon Web Services SDK to call this operation, then you can
@@ -144,19 +137,16 @@ public class RotateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
      * value in the request.
      * </p>
      * <p>
-     * You only need to specify your own value if you implement your own retry logic and want to ensure that a given
-     * secret is not created twice. We recommend that you generate a <a
+     * You only need to specify this value if you implement your own retry logic and you want to ensure that Secrets
+     * Manager doesn't attempt to create a secret version twice. We recommend that you generate a <a
      * href="https://wikipedia.org/wiki/Universally_unique_identifier">UUID-type</a> value to ensure uniqueness within
      * the specified secret.
      * </p>
-     * <p>
-     * Secrets Manager uses this value to prevent the accidental creation of duplicate versions if there are failures
-     * and retries during the function's processing. This value becomes the <code>VersionId</code> of the new version.
-     * </p>
      * 
      * @param clientRequestToken
-     *        (Optional) Specifies a unique identifier for the new version of the secret that helps ensure idempotency.
-     *        </p>
+     *        A unique identifier for the new version of the secret that helps ensure idempotency. Secrets Manager uses
+     *        this value to prevent the accidental creation of duplicate versions if there are failures and retries
+     *        during rotation. This value becomes the <code>VersionId</code> of the new version.</p>
      *        <p>
      *        If you use the Amazon Web Services CLI or one of the Amazon Web Services SDK to call this operation, then
      *        you can leave this parameter empty. The CLI or SDK generates a random UUID for you and includes that in
@@ -165,15 +155,10 @@ public class RotateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        new versions and include that value in the request.
      *        </p>
      *        <p>
-     *        You only need to specify your own value if you implement your own retry logic and want to ensure that a
-     *        given secret is not created twice. We recommend that you generate a <a
+     *        You only need to specify this value if you implement your own retry logic and you want to ensure that
+     *        Secrets Manager doesn't attempt to create a secret version twice. We recommend that you generate a <a
      *        href="https://wikipedia.org/wiki/Universally_unique_identifier">UUID-type</a> value to ensure uniqueness
      *        within the specified secret.
-     *        </p>
-     *        <p>
-     *        Secrets Manager uses this value to prevent the accidental creation of duplicate versions if there are
-     *        failures and retries during the function's processing. This value becomes the <code>VersionId</code> of
-     *        the new version.
      */
 
     public void setClientRequestToken(String clientRequestToken) {
@@ -182,7 +167,9 @@ public class RotateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * (Optional) Specifies a unique identifier for the new version of the secret that helps ensure idempotency.
+     * A unique identifier for the new version of the secret that helps ensure idempotency. Secrets Manager uses this
+     * value to prevent the accidental creation of duplicate versions if there are failures and retries during rotation.
+     * This value becomes the <code>VersionId</code> of the new version.
      * </p>
      * <p>
      * If you use the Amazon Web Services CLI or one of the Amazon Web Services SDK to call this operation, then you can
@@ -192,18 +179,15 @@ public class RotateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
      * value in the request.
      * </p>
      * <p>
-     * You only need to specify your own value if you implement your own retry logic and want to ensure that a given
-     * secret is not created twice. We recommend that you generate a <a
+     * You only need to specify this value if you implement your own retry logic and you want to ensure that Secrets
+     * Manager doesn't attempt to create a secret version twice. We recommend that you generate a <a
      * href="https://wikipedia.org/wiki/Universally_unique_identifier">UUID-type</a> value to ensure uniqueness within
      * the specified secret.
      * </p>
-     * <p>
-     * Secrets Manager uses this value to prevent the accidental creation of duplicate versions if there are failures
-     * and retries during the function's processing. This value becomes the <code>VersionId</code> of the new version.
-     * </p>
      * 
-     * @return (Optional) Specifies a unique identifier for the new version of the secret that helps ensure idempotency.
-     *         </p>
+     * @return A unique identifier for the new version of the secret that helps ensure idempotency. Secrets Manager uses
+     *         this value to prevent the accidental creation of duplicate versions if there are failures and retries
+     *         during rotation. This value becomes the <code>VersionId</code> of the new version.</p>
      *         <p>
      *         If you use the Amazon Web Services CLI or one of the Amazon Web Services SDK to call this operation, then
      *         you can leave this parameter empty. The CLI or SDK generates a random UUID for you and includes that in
@@ -212,15 +196,10 @@ public class RotateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
      *         new versions and include that value in the request.
      *         </p>
      *         <p>
-     *         You only need to specify your own value if you implement your own retry logic and want to ensure that a
-     *         given secret is not created twice. We recommend that you generate a <a
+     *         You only need to specify this value if you implement your own retry logic and you want to ensure that
+     *         Secrets Manager doesn't attempt to create a secret version twice. We recommend that you generate a <a
      *         href="https://wikipedia.org/wiki/Universally_unique_identifier">UUID-type</a> value to ensure uniqueness
      *         within the specified secret.
-     *         </p>
-     *         <p>
-     *         Secrets Manager uses this value to prevent the accidental creation of duplicate versions if there are
-     *         failures and retries during the function's processing. This value becomes the <code>VersionId</code> of
-     *         the new version.
      */
 
     public String getClientRequestToken() {
@@ -229,7 +208,9 @@ public class RotateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * (Optional) Specifies a unique identifier for the new version of the secret that helps ensure idempotency.
+     * A unique identifier for the new version of the secret that helps ensure idempotency. Secrets Manager uses this
+     * value to prevent the accidental creation of duplicate versions if there are failures and retries during rotation.
+     * This value becomes the <code>VersionId</code> of the new version.
      * </p>
      * <p>
      * If you use the Amazon Web Services CLI or one of the Amazon Web Services SDK to call this operation, then you can
@@ -239,19 +220,16 @@ public class RotateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
      * value in the request.
      * </p>
      * <p>
-     * You only need to specify your own value if you implement your own retry logic and want to ensure that a given
-     * secret is not created twice. We recommend that you generate a <a
+     * You only need to specify this value if you implement your own retry logic and you want to ensure that Secrets
+     * Manager doesn't attempt to create a secret version twice. We recommend that you generate a <a
      * href="https://wikipedia.org/wiki/Universally_unique_identifier">UUID-type</a> value to ensure uniqueness within
      * the specified secret.
      * </p>
-     * <p>
-     * Secrets Manager uses this value to prevent the accidental creation of duplicate versions if there are failures
-     * and retries during the function's processing. This value becomes the <code>VersionId</code> of the new version.
-     * </p>
      * 
      * @param clientRequestToken
-     *        (Optional) Specifies a unique identifier for the new version of the secret that helps ensure idempotency.
-     *        </p>
+     *        A unique identifier for the new version of the secret that helps ensure idempotency. Secrets Manager uses
+     *        this value to prevent the accidental creation of duplicate versions if there are failures and retries
+     *        during rotation. This value becomes the <code>VersionId</code> of the new version.</p>
      *        <p>
      *        If you use the Amazon Web Services CLI or one of the Amazon Web Services SDK to call this operation, then
      *        you can leave this parameter empty. The CLI or SDK generates a random UUID for you and includes that in
@@ -260,15 +238,10 @@ public class RotateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        new versions and include that value in the request.
      *        </p>
      *        <p>
-     *        You only need to specify your own value if you implement your own retry logic and want to ensure that a
-     *        given secret is not created twice. We recommend that you generate a <a
+     *        You only need to specify this value if you implement your own retry logic and you want to ensure that
+     *        Secrets Manager doesn't attempt to create a secret version twice. We recommend that you generate a <a
      *        href="https://wikipedia.org/wiki/Universally_unique_identifier">UUID-type</a> value to ensure uniqueness
      *        within the specified secret.
-     *        </p>
-     *        <p>
-     *        Secrets Manager uses this value to prevent the accidental creation of duplicate versions if there are
-     *        failures and retries during the function's processing. This value becomes the <code>VersionId</code> of
-     *        the new version.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -279,11 +252,11 @@ public class RotateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * (Optional) Specifies the ARN of the Lambda function that can rotate the secret.
+     * The ARN of the Lambda rotation function that can rotate the secret.
      * </p>
      * 
      * @param rotationLambdaARN
-     *        (Optional) Specifies the ARN of the Lambda function that can rotate the secret.
+     *        The ARN of the Lambda rotation function that can rotate the secret.
      */
 
     public void setRotationLambdaARN(String rotationLambdaARN) {
@@ -292,10 +265,10 @@ public class RotateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * (Optional) Specifies the ARN of the Lambda function that can rotate the secret.
+     * The ARN of the Lambda rotation function that can rotate the secret.
      * </p>
      * 
-     * @return (Optional) Specifies the ARN of the Lambda function that can rotate the secret.
+     * @return The ARN of the Lambda rotation function that can rotate the secret.
      */
 
     public String getRotationLambdaARN() {
@@ -304,11 +277,11 @@ public class RotateSecretRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * (Optional) Specifies the ARN of the Lambda function that can rotate the secret.
+     * The ARN of the Lambda rotation function that can rotate the secret.
      * </p>
      * 
      * @param rotationLambdaARN
-     *        (Optional) Specifies the ARN of the Lambda function that can rotate the secret.
+     *        The ARN of the Lambda rotation function that can rotate the secret.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

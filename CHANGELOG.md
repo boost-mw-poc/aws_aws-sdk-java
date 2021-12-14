@@ -1,3 +1,8 @@
+# __1.12.129__ __2021-12-13__
+## __AWS Secrets Manager__
+  - ### Features
+    - Documentation updates for Secrets Manager
+
 # __1.12.128__ __2021-12-09__
 ## __AWS Network Firewall__
   - ### Features

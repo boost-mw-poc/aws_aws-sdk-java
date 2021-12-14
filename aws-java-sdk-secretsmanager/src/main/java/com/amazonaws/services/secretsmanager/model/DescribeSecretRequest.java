@@ -27,8 +27,7 @@ public class DescribeSecretRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The identifier of the secret whose details you want to retrieve. You can specify either the Amazon Resource Name
-     * (ARN) or the friendly name of the secret.
+     * The ARN or name of the secret.
      * </p>
      * <p>
      * For an ARN, we recommend that you specify a complete ARN rather than a partial ARN.
@@ -38,16 +37,14 @@ public class DescribeSecretRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The identifier of the secret whose details you want to retrieve. You can specify either the Amazon Resource Name
-     * (ARN) or the friendly name of the secret.
+     * The ARN or name of the secret.
      * </p>
      * <p>
      * For an ARN, we recommend that you specify a complete ARN rather than a partial ARN.
      * </p>
      * 
      * @param secretId
-     *        The identifier of the secret whose details you want to retrieve. You can specify either the Amazon
-     *        Resource Name (ARN) or the friendly name of the secret.</p>
+     *        The ARN or name of the secret. </p>
      *        <p>
      *        For an ARN, we recommend that you specify a complete ARN rather than a partial ARN.
      */
@@ -58,15 +55,13 @@ public class DescribeSecretRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The identifier of the secret whose details you want to retrieve. You can specify either the Amazon Resource Name
-     * (ARN) or the friendly name of the secret.
+     * The ARN or name of the secret.
      * </p>
      * <p>
      * For an ARN, we recommend that you specify a complete ARN rather than a partial ARN.
      * </p>
      * 
-     * @return The identifier of the secret whose details you want to retrieve. You can specify either the Amazon
-     *         Resource Name (ARN) or the friendly name of the secret.</p>
+     * @return The ARN or name of the secret. </p>
      *         <p>
      *         For an ARN, we recommend that you specify a complete ARN rather than a partial ARN.
      */
@@ -77,16 +72,14 @@ public class DescribeSecretRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * The identifier of the secret whose details you want to retrieve. You can specify either the Amazon Resource Name
-     * (ARN) or the friendly name of the secret.
+     * The ARN or name of the secret.
      * </p>
      * <p>
      * For an ARN, we recommend that you specify a complete ARN rather than a partial ARN.
      * </p>
      * 
      * @param secretId
-     *        The identifier of the secret whose details you want to retrieve. You can specify either the Amazon
-     *        Resource Name (ARN) or the friendly name of the secret.</p>
+     *        The ARN or name of the secret. </p>
      *        <p>
      *        For an ARN, we recommend that you specify a complete ARN rather than a partial ARN.
      * @return Returns a reference to this object so that method calls can be chained together.

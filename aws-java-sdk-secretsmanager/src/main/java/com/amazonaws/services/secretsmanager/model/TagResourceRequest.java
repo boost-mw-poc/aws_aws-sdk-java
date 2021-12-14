@@ -27,8 +27,8 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The identifier for the secret that you want to attach tags to. You can specify either the Amazon Resource Name
-     * (ARN) or the friendly name of the secret.
+     * The identifier for the secret to attach tags to. You can specify either the Amazon Resource Name (ARN) or the
+     * friendly name of the secret.
      * </p>
      * <p>
      * For an ARN, we recommend that you specify a complete ARN rather than a partial ARN.
@@ -37,11 +37,8 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
     private String secretId;
     /**
      * <p>
-     * The tags to attach to the secret. Each element in the list consists of a <code>Key</code> and a
-     * <code>Value</code>.
-     * </p>
-     * <p>
-     * This parameter to the API requires a JSON text string argument.
+     * The tags to attach to the secret as a JSON text string argument. Each element in the list consists of a
+     * <code>Key</code> and a <code>Value</code>.
      * </p>
      * <p>
      * For storing multiple values, we recommend that you use a JSON text string argument and specify key/value pairs.
@@ -54,16 +51,16 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The identifier for the secret that you want to attach tags to. You can specify either the Amazon Resource Name
-     * (ARN) or the friendly name of the secret.
+     * The identifier for the secret to attach tags to. You can specify either the Amazon Resource Name (ARN) or the
+     * friendly name of the secret.
      * </p>
      * <p>
      * For an ARN, we recommend that you specify a complete ARN rather than a partial ARN.
      * </p>
      * 
      * @param secretId
-     *        The identifier for the secret that you want to attach tags to. You can specify either the Amazon Resource
-     *        Name (ARN) or the friendly name of the secret.</p>
+     *        The identifier for the secret to attach tags to. You can specify either the Amazon Resource Name (ARN) or
+     *        the friendly name of the secret.</p>
      *        <p>
      *        For an ARN, we recommend that you specify a complete ARN rather than a partial ARN.
      */
@@ -74,15 +71,15 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The identifier for the secret that you want to attach tags to. You can specify either the Amazon Resource Name
-     * (ARN) or the friendly name of the secret.
+     * The identifier for the secret to attach tags to. You can specify either the Amazon Resource Name (ARN) or the
+     * friendly name of the secret.
      * </p>
      * <p>
      * For an ARN, we recommend that you specify a complete ARN rather than a partial ARN.
      * </p>
      * 
-     * @return The identifier for the secret that you want to attach tags to. You can specify either the Amazon Resource
-     *         Name (ARN) or the friendly name of the secret.</p>
+     * @return The identifier for the secret to attach tags to. You can specify either the Amazon Resource Name (ARN) or
+     *         the friendly name of the secret.</p>
      *         <p>
      *         For an ARN, we recommend that you specify a complete ARN rather than a partial ARN.
      */
@@ -93,16 +90,16 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The identifier for the secret that you want to attach tags to. You can specify either the Amazon Resource Name
-     * (ARN) or the friendly name of the secret.
+     * The identifier for the secret to attach tags to. You can specify either the Amazon Resource Name (ARN) or the
+     * friendly name of the secret.
      * </p>
      * <p>
      * For an ARN, we recommend that you specify a complete ARN rather than a partial ARN.
      * </p>
      * 
      * @param secretId
-     *        The identifier for the secret that you want to attach tags to. You can specify either the Amazon Resource
-     *        Name (ARN) or the friendly name of the secret.</p>
+     *        The identifier for the secret to attach tags to. You can specify either the Amazon Resource Name (ARN) or
+     *        the friendly name of the secret.</p>
      *        <p>
      *        For an ARN, we recommend that you specify a complete ARN rather than a partial ARN.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -115,11 +112,8 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The tags to attach to the secret. Each element in the list consists of a <code>Key</code> and a
-     * <code>Value</code>.
-     * </p>
-     * <p>
-     * This parameter to the API requires a JSON text string argument.
+     * The tags to attach to the secret as a JSON text string argument. Each element in the list consists of a
+     * <code>Key</code> and a <code>Value</code>.
      * </p>
      * <p>
      * For storing multiple values, we recommend that you use a JSON text string argument and specify key/value pairs.
@@ -128,11 +122,8 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
      * the Amazon Web Services CLI</a> in the Amazon Web Services CLI User Guide.
      * </p>
      * 
-     * @return The tags to attach to the secret. Each element in the list consists of a <code>Key</code> and a
-     *         <code>Value</code>.</p>
-     *         <p>
-     *         This parameter to the API requires a JSON text string argument.
-     *         </p>
+     * @return The tags to attach to the secret as a JSON text string argument. Each element in the list consists of a
+     *         <code>Key</code> and a <code>Value</code>.</p>
      *         <p>
      *         For storing multiple values, we recommend that you use a JSON text string argument and specify key/value
      *         pairs. For more information, see <a
@@ -146,11 +137,8 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The tags to attach to the secret. Each element in the list consists of a <code>Key</code> and a
-     * <code>Value</code>.
-     * </p>
-     * <p>
-     * This parameter to the API requires a JSON text string argument.
+     * The tags to attach to the secret as a JSON text string argument. Each element in the list consists of a
+     * <code>Key</code> and a <code>Value</code>.
      * </p>
      * <p>
      * For storing multiple values, we recommend that you use a JSON text string argument and specify key/value pairs.
@@ -160,11 +148,8 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * 
      * @param tags
-     *        The tags to attach to the secret. Each element in the list consists of a <code>Key</code> and a
-     *        <code>Value</code>.</p>
-     *        <p>
-     *        This parameter to the API requires a JSON text string argument.
-     *        </p>
+     *        The tags to attach to the secret as a JSON text string argument. Each element in the list consists of a
+     *        <code>Key</code> and a <code>Value</code>.</p>
      *        <p>
      *        For storing multiple values, we recommend that you use a JSON text string argument and specify key/value
      *        pairs. For more information, see <a
@@ -183,11 +168,8 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The tags to attach to the secret. Each element in the list consists of a <code>Key</code> and a
-     * <code>Value</code>.
-     * </p>
-     * <p>
-     * This parameter to the API requires a JSON text string argument.
+     * The tags to attach to the secret as a JSON text string argument. Each element in the list consists of a
+     * <code>Key</code> and a <code>Value</code>.
      * </p>
      * <p>
      * For storing multiple values, we recommend that you use a JSON text string argument and specify key/value pairs.
@@ -202,11 +184,8 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * 
      * @param tags
-     *        The tags to attach to the secret. Each element in the list consists of a <code>Key</code> and a
-     *        <code>Value</code>.</p>
-     *        <p>
-     *        This parameter to the API requires a JSON text string argument.
-     *        </p>
+     *        The tags to attach to the secret as a JSON text string argument. Each element in the list consists of a
+     *        <code>Key</code> and a <code>Value</code>.</p>
      *        <p>
      *        For storing multiple values, we recommend that you use a JSON text string argument and specify key/value
      *        pairs. For more information, see <a
@@ -227,11 +206,8 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
 
     /**
      * <p>
-     * The tags to attach to the secret. Each element in the list consists of a <code>Key</code> and a
-     * <code>Value</code>.
-     * </p>
-     * <p>
-     * This parameter to the API requires a JSON text string argument.
+     * The tags to attach to the secret as a JSON text string argument. Each element in the list consists of a
+     * <code>Key</code> and a <code>Value</code>.
      * </p>
      * <p>
      * For storing multiple values, we recommend that you use a JSON text string argument and specify key/value pairs.
@@ -241,11 +217,8 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
      * </p>
      * 
      * @param tags
-     *        The tags to attach to the secret. Each element in the list consists of a <code>Key</code> and a
-     *        <code>Value</code>.</p>
-     *        <p>
-     *        This parameter to the API requires a JSON text string argument.
-     *        </p>
+     *        The tags to attach to the secret as a JSON text string argument. Each element in the list consists of a
+     *        <code>Key</code> and a <code>Value</code>.</p>
      *        <p>
      *        For storing multiple values, we recommend that you use a JSON text string argument and specify key/value
      *        pairs. For more information, see <a
