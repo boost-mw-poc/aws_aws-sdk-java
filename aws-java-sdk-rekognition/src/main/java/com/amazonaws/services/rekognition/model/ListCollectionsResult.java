@@ -33,9 +33,10 @@ public class ListCollectionsResult extends com.amazonaws.AmazonWebServiceResult<
     private String nextToken;
     /**
      * <p>
-     * Version numbers of the face detection models associated with the collections in the array
-     * <code>CollectionIds</code>. For example, the value of <code>FaceModelVersions[2]</code> is the version number for
-     * the face detection model used by the collection in <code>CollectionId[2]</code>.
+     * Latest face models being used with the corresponding collections in the array. For more information, see <a
+     * href="https://docs.aws.amazon.com/rekognition/latest/dg/face-detection-model.html">Model versioning</a>. For
+     * example, the value of <code>FaceModelVersions[2]</code> is the version number for the face detection model used
+     * by the collection in <code>CollectionId[2]</code>.
      * </p>
      */
     private java.util.List<String> faceModelVersions;
@@ -158,14 +159,16 @@ public class ListCollectionsResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * Version numbers of the face detection models associated with the collections in the array
-     * <code>CollectionIds</code>. For example, the value of <code>FaceModelVersions[2]</code> is the version number for
-     * the face detection model used by the collection in <code>CollectionId[2]</code>.
+     * Latest face models being used with the corresponding collections in the array. For more information, see <a
+     * href="https://docs.aws.amazon.com/rekognition/latest/dg/face-detection-model.html">Model versioning</a>. For
+     * example, the value of <code>FaceModelVersions[2]</code> is the version number for the face detection model used
+     * by the collection in <code>CollectionId[2]</code>.
      * </p>
      * 
-     * @return Version numbers of the face detection models associated with the collections in the array
-     *         <code>CollectionIds</code>. For example, the value of <code>FaceModelVersions[2]</code> is the version
-     *         number for the face detection model used by the collection in <code>CollectionId[2]</code>.
+     * @return Latest face models being used with the corresponding collections in the array. For more information, see
+     *         <a href="https://docs.aws.amazon.com/rekognition/latest/dg/face-detection-model.html">Model
+     *         versioning</a>. For example, the value of <code>FaceModelVersions[2]</code> is the version number for the
+     *         face detection model used by the collection in <code>CollectionId[2]</code>.
      */
 
     public java.util.List<String> getFaceModelVersions() {
@@ -174,15 +177,17 @@ public class ListCollectionsResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * Version numbers of the face detection models associated with the collections in the array
-     * <code>CollectionIds</code>. For example, the value of <code>FaceModelVersions[2]</code> is the version number for
-     * the face detection model used by the collection in <code>CollectionId[2]</code>.
+     * Latest face models being used with the corresponding collections in the array. For more information, see <a
+     * href="https://docs.aws.amazon.com/rekognition/latest/dg/face-detection-model.html">Model versioning</a>. For
+     * example, the value of <code>FaceModelVersions[2]</code> is the version number for the face detection model used
+     * by the collection in <code>CollectionId[2]</code>.
      * </p>
      * 
      * @param faceModelVersions
-     *        Version numbers of the face detection models associated with the collections in the array
-     *        <code>CollectionIds</code>. For example, the value of <code>FaceModelVersions[2]</code> is the version
-     *        number for the face detection model used by the collection in <code>CollectionId[2]</code>.
+     *        Latest face models being used with the corresponding collections in the array. For more information, see
+     *        <a href="https://docs.aws.amazon.com/rekognition/latest/dg/face-detection-model.html">Model
+     *        versioning</a>. For example, the value of <code>FaceModelVersions[2]</code> is the version number for the
+     *        face detection model used by the collection in <code>CollectionId[2]</code>.
      */
 
     public void setFaceModelVersions(java.util.Collection<String> faceModelVersions) {
@@ -196,9 +201,10 @@ public class ListCollectionsResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * Version numbers of the face detection models associated with the collections in the array
-     * <code>CollectionIds</code>. For example, the value of <code>FaceModelVersions[2]</code> is the version number for
-     * the face detection model used by the collection in <code>CollectionId[2]</code>.
+     * Latest face models being used with the corresponding collections in the array. For more information, see <a
+     * href="https://docs.aws.amazon.com/rekognition/latest/dg/face-detection-model.html">Model versioning</a>. For
+     * example, the value of <code>FaceModelVersions[2]</code> is the version number for the face detection model used
+     * by the collection in <code>CollectionId[2]</code>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -207,9 +213,10 @@ public class ListCollectionsResult extends com.amazonaws.AmazonWebServiceResult<
      * </p>
      * 
      * @param faceModelVersions
-     *        Version numbers of the face detection models associated with the collections in the array
-     *        <code>CollectionIds</code>. For example, the value of <code>FaceModelVersions[2]</code> is the version
-     *        number for the face detection model used by the collection in <code>CollectionId[2]</code>.
+     *        Latest face models being used with the corresponding collections in the array. For more information, see
+     *        <a href="https://docs.aws.amazon.com/rekognition/latest/dg/face-detection-model.html">Model
+     *        versioning</a>. For example, the value of <code>FaceModelVersions[2]</code> is the version number for the
+     *        face detection model used by the collection in <code>CollectionId[2]</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -225,15 +232,17 @@ public class ListCollectionsResult extends com.amazonaws.AmazonWebServiceResult<
 
     /**
      * <p>
-     * Version numbers of the face detection models associated with the collections in the array
-     * <code>CollectionIds</code>. For example, the value of <code>FaceModelVersions[2]</code> is the version number for
-     * the face detection model used by the collection in <code>CollectionId[2]</code>.
+     * Latest face models being used with the corresponding collections in the array. For more information, see <a
+     * href="https://docs.aws.amazon.com/rekognition/latest/dg/face-detection-model.html">Model versioning</a>. For
+     * example, the value of <code>FaceModelVersions[2]</code> is the version number for the face detection model used
+     * by the collection in <code>CollectionId[2]</code>.
      * </p>
      * 
      * @param faceModelVersions
-     *        Version numbers of the face detection models associated with the collections in the array
-     *        <code>CollectionIds</code>. For example, the value of <code>FaceModelVersions[2]</code> is the version
-     *        number for the face detection model used by the collection in <code>CollectionId[2]</code>.
+     *        Latest face models being used with the corresponding collections in the array. For more information, see
+     *        <a href="https://docs.aws.amazon.com/rekognition/latest/dg/face-detection-model.html">Model
+     *        versioning</a>. For example, the value of <code>FaceModelVersions[2]</code> is the version number for the
+     *        face detection model used by the collection in <code>CollectionId[2]</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

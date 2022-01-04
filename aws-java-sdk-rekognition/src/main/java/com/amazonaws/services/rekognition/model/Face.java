@@ -56,6 +56,12 @@ public class Face implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private Float confidence;
+    /**
+     * <p>
+     * The version of the face detect and storage model that was used when indexing the face vector.
+     * </p>
+     */
+    private String indexFacesModelVersion;
 
     /**
      * <p>
@@ -258,6 +264,46 @@ public class Face implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The version of the face detect and storage model that was used when indexing the face vector.
+     * </p>
+     * 
+     * @param indexFacesModelVersion
+     *        The version of the face detect and storage model that was used when indexing the face vector.
+     */
+
+    public void setIndexFacesModelVersion(String indexFacesModelVersion) {
+        this.indexFacesModelVersion = indexFacesModelVersion;
+    }
+
+    /**
+     * <p>
+     * The version of the face detect and storage model that was used when indexing the face vector.
+     * </p>
+     * 
+     * @return The version of the face detect and storage model that was used when indexing the face vector.
+     */
+
+    public String getIndexFacesModelVersion() {
+        return this.indexFacesModelVersion;
+    }
+
+    /**
+     * <p>
+     * The version of the face detect and storage model that was used when indexing the face vector.
+     * </p>
+     * 
+     * @param indexFacesModelVersion
+     *        The version of the face detect and storage model that was used when indexing the face vector.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Face withIndexFacesModelVersion(String indexFacesModelVersion) {
+        setIndexFacesModelVersion(indexFacesModelVersion);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -278,7 +324,9 @@ public class Face implements Serializable, Cloneable, StructuredPojo {
         if (getExternalImageId() != null)
             sb.append("ExternalImageId: ").append(getExternalImageId()).append(",");
         if (getConfidence() != null)
-            sb.append("Confidence: ").append(getConfidence());
+            sb.append("Confidence: ").append(getConfidence()).append(",");
+        if (getIndexFacesModelVersion() != null)
+            sb.append("IndexFacesModelVersion: ").append(getIndexFacesModelVersion());
         sb.append("}");
         return sb.toString();
     }
@@ -313,6 +361,10 @@ public class Face implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getConfidence() != null && other.getConfidence().equals(this.getConfidence()) == false)
             return false;
+        if (other.getIndexFacesModelVersion() == null ^ this.getIndexFacesModelVersion() == null)
+            return false;
+        if (other.getIndexFacesModelVersion() != null && other.getIndexFacesModelVersion().equals(this.getIndexFacesModelVersion()) == false)
+            return false;
         return true;
     }
 
@@ -326,6 +378,7 @@ public class Face implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getImageId() == null) ? 0 : getImageId().hashCode());
         hashCode = prime * hashCode + ((getExternalImageId() == null) ? 0 : getExternalImageId().hashCode());
         hashCode = prime * hashCode + ((getConfidence() == null) ? 0 : getConfidence().hashCode());
+        hashCode = prime * hashCode + ((getIndexFacesModelVersion() == null) ? 0 : getIndexFacesModelVersion().hashCode());
         return hashCode;
     }
 
