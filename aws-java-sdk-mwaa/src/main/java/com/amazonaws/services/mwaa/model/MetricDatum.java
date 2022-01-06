@@ -19,7 +19,9 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Internal only API.
+ * <b>Internal only</b>. Collects Apache Airflow metrics. To learn more about the metrics published to Amazon
+ * CloudWatch, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/cw-metrics.html">Amazon MWAA performance
+ * metrics in Amazon CloudWatch</a>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mwaa-2020-07-01/MetricDatum" target="_top">AWS API
@@ -30,43 +32,47 @@ public class MetricDatum implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Internal only API.
+     * <b>Internal only</b>. The dimensions associated with the metric.
      * </p>
      */
     private java.util.List<Dimension> dimensions;
     /**
      * <p>
-     * Internal only API.
+     * <b>Internal only</b>. The name of the metric.
      * </p>
      */
     private String metricName;
     /**
      * <p>
-     * Internal only API.
+     * <b>Internal only</b>. The statistical values for the metric.
      * </p>
      */
     private StatisticSet statisticValues;
     /**
      * <p>
-     * Internal only API.
+     * <b>Internal only</b>. The time the metric data was received.
      * </p>
      */
     private java.util.Date timestamp;
-
+    /**
+     * <p>
+     * <b>Internal only</b>. The unit used to store the metric.
+     * </p>
+     */
     private String unit;
     /**
      * <p>
-     * Internal only API.
+     * <b>Internal only</b>. The value for the metric.
      * </p>
      */
     private Double value;
 
     /**
      * <p>
-     * Internal only API.
+     * <b>Internal only</b>. The dimensions associated with the metric.
      * </p>
      * 
-     * @return Internal only API.
+     * @return <b>Internal only</b>. The dimensions associated with the metric.
      */
 
     public java.util.List<Dimension> getDimensions() {
@@ -75,11 +81,11 @@ public class MetricDatum implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Internal only API.
+     * <b>Internal only</b>. The dimensions associated with the metric.
      * </p>
      * 
      * @param dimensions
-     *        Internal only API.
+     *        <b>Internal only</b>. The dimensions associated with the metric.
      */
 
     public void setDimensions(java.util.Collection<Dimension> dimensions) {
@@ -93,7 +99,7 @@ public class MetricDatum implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Internal only API.
+     * <b>Internal only</b>. The dimensions associated with the metric.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -102,7 +108,7 @@ public class MetricDatum implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param dimensions
-     *        Internal only API.
+     *        <b>Internal only</b>. The dimensions associated with the metric.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -118,11 +124,11 @@ public class MetricDatum implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Internal only API.
+     * <b>Internal only</b>. The dimensions associated with the metric.
      * </p>
      * 
      * @param dimensions
-     *        Internal only API.
+     *        <b>Internal only</b>. The dimensions associated with the metric.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -133,11 +139,11 @@ public class MetricDatum implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Internal only API.
+     * <b>Internal only</b>. The name of the metric.
      * </p>
      * 
      * @param metricName
-     *        Internal only API.
+     *        <b>Internal only</b>. The name of the metric.
      */
 
     public void setMetricName(String metricName) {
@@ -146,10 +152,10 @@ public class MetricDatum implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Internal only API.
+     * <b>Internal only</b>. The name of the metric.
      * </p>
      * 
-     * @return Internal only API.
+     * @return <b>Internal only</b>. The name of the metric.
      */
 
     public String getMetricName() {
@@ -158,11 +164,11 @@ public class MetricDatum implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Internal only API.
+     * <b>Internal only</b>. The name of the metric.
      * </p>
      * 
      * @param metricName
-     *        Internal only API.
+     *        <b>Internal only</b>. The name of the metric.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -173,11 +179,11 @@ public class MetricDatum implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Internal only API.
+     * <b>Internal only</b>. The statistical values for the metric.
      * </p>
      * 
      * @param statisticValues
-     *        Internal only API.
+     *        <b>Internal only</b>. The statistical values for the metric.
      */
 
     public void setStatisticValues(StatisticSet statisticValues) {
@@ -186,10 +192,10 @@ public class MetricDatum implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Internal only API.
+     * <b>Internal only</b>. The statistical values for the metric.
      * </p>
      * 
-     * @return Internal only API.
+     * @return <b>Internal only</b>. The statistical values for the metric.
      */
 
     public StatisticSet getStatisticValues() {
@@ -198,11 +204,11 @@ public class MetricDatum implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Internal only API.
+     * <b>Internal only</b>. The statistical values for the metric.
      * </p>
      * 
      * @param statisticValues
-     *        Internal only API.
+     *        <b>Internal only</b>. The statistical values for the metric.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -213,11 +219,11 @@ public class MetricDatum implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Internal only API.
+     * <b>Internal only</b>. The time the metric data was received.
      * </p>
      * 
      * @param timestamp
-     *        Internal only API.
+     *        <b>Internal only</b>. The time the metric data was received.
      */
 
     public void setTimestamp(java.util.Date timestamp) {
@@ -226,10 +232,10 @@ public class MetricDatum implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Internal only API.
+     * <b>Internal only</b>. The time the metric data was received.
      * </p>
      * 
-     * @return Internal only API.
+     * @return <b>Internal only</b>. The time the metric data was received.
      */
 
     public java.util.Date getTimestamp() {
@@ -238,11 +244,11 @@ public class MetricDatum implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Internal only API.
+     * <b>Internal only</b>. The time the metric data was received.
      * </p>
      * 
      * @param timestamp
-     *        Internal only API.
+     *        <b>Internal only</b>. The time the metric data was received.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -252,7 +258,12 @@ public class MetricDatum implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * <b>Internal only</b>. The unit used to store the metric.
+     * </p>
+     * 
      * @param unit
+     *        <b>Internal only</b>. The unit used to store the metric.
      * @see Unit
      */
 
@@ -261,7 +272,11 @@ public class MetricDatum implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * <b>Internal only</b>. The unit used to store the metric.
+     * </p>
+     * 
+     * @return <b>Internal only</b>. The unit used to store the metric.
      * @see Unit
      */
 
@@ -270,7 +285,12 @@ public class MetricDatum implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * <b>Internal only</b>. The unit used to store the metric.
+     * </p>
+     * 
      * @param unit
+     *        <b>Internal only</b>. The unit used to store the metric.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Unit
      */
@@ -281,7 +301,12 @@ public class MetricDatum implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * <b>Internal only</b>. The unit used to store the metric.
+     * </p>
+     * 
      * @param unit
+     *        <b>Internal only</b>. The unit used to store the metric.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see Unit
      */
@@ -293,11 +318,11 @@ public class MetricDatum implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Internal only API.
+     * <b>Internal only</b>. The value for the metric.
      * </p>
      * 
      * @param value
-     *        Internal only API.
+     *        <b>Internal only</b>. The value for the metric.
      */
 
     public void setValue(Double value) {
@@ -306,10 +331,10 @@ public class MetricDatum implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Internal only API.
+     * <b>Internal only</b>. The value for the metric.
      * </p>
      * 
-     * @return Internal only API.
+     * @return <b>Internal only</b>. The value for the metric.
      */
 
     public Double getValue() {
@@ -318,11 +343,11 @@ public class MetricDatum implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Internal only API.
+     * <b>Internal only</b>. The value for the metric.
      * </p>
      * 
      * @param value
-     *        Internal only API.
+     *        <b>Internal only</b>. The value for the metric.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -47,6 +47,8 @@ public class ResolverMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("syncConfig").build();
     private static final MarshallingInfo<StructuredPojo> CACHINGCONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("cachingConfig").build();
+    private static final MarshallingInfo<Integer> MAXBATCHSIZE_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("maxBatchSize").build();
 
     private static final ResolverMarshaller instance = new ResolverMarshaller();
 
@@ -74,6 +76,7 @@ public class ResolverMarshaller {
             protocolMarshaller.marshall(resolver.getPipelineConfig(), PIPELINECONFIG_BINDING);
             protocolMarshaller.marshall(resolver.getSyncConfig(), SYNCCONFIG_BINDING);
             protocolMarshaller.marshall(resolver.getCachingConfig(), CACHINGCONFIG_BINDING);
+            protocolMarshaller.marshall(resolver.getMaxBatchSize(), MAXBATCHSIZE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -25,24 +25,24 @@ public class CreateCliTokenResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * Create an Airflow CLI login token response for the provided JWT token.
+     * An Airflow CLI login token.
      * </p>
      */
     private String cliToken;
     /**
      * <p>
-     * Create an Airflow CLI login token response for the provided webserver hostname.
+     * The Airflow web server hostname for the environment.
      * </p>
      */
     private String webServerHostname;
 
     /**
      * <p>
-     * Create an Airflow CLI login token response for the provided JWT token.
+     * An Airflow CLI login token.
      * </p>
      * 
      * @param cliToken
-     *        Create an Airflow CLI login token response for the provided JWT token.
+     *        An Airflow CLI login token.
      */
 
     public void setCliToken(String cliToken) {
@@ -51,10 +51,10 @@ public class CreateCliTokenResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * Create an Airflow CLI login token response for the provided JWT token.
+     * An Airflow CLI login token.
      * </p>
      * 
-     * @return Create an Airflow CLI login token response for the provided JWT token.
+     * @return An Airflow CLI login token.
      */
 
     public String getCliToken() {
@@ -63,11 +63,11 @@ public class CreateCliTokenResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * Create an Airflow CLI login token response for the provided JWT token.
+     * An Airflow CLI login token.
      * </p>
      * 
      * @param cliToken
-     *        Create an Airflow CLI login token response for the provided JWT token.
+     *        An Airflow CLI login token.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -78,11 +78,11 @@ public class CreateCliTokenResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * Create an Airflow CLI login token response for the provided webserver hostname.
+     * The Airflow web server hostname for the environment.
      * </p>
      * 
      * @param webServerHostname
-     *        Create an Airflow CLI login token response for the provided webserver hostname.
+     *        The Airflow web server hostname for the environment.
      */
 
     public void setWebServerHostname(String webServerHostname) {
@@ -91,10 +91,10 @@ public class CreateCliTokenResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * Create an Airflow CLI login token response for the provided webserver hostname.
+     * The Airflow web server hostname for the environment.
      * </p>
      * 
-     * @return Create an Airflow CLI login token response for the provided webserver hostname.
+     * @return The Airflow web server hostname for the environment.
      */
 
     public String getWebServerHostname() {
@@ -103,11 +103,11 @@ public class CreateCliTokenResult extends com.amazonaws.AmazonWebServiceResult<c
 
     /**
      * <p>
-     * Create an Airflow CLI login token response for the provided webserver hostname.
+     * The Airflow web server hostname for the environment.
      * </p>
      * 
      * @param webServerHostname
-     *        Create an Airflow CLI login token response for the provided webserver hostname.
+     *        The Airflow web server hostname for the environment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

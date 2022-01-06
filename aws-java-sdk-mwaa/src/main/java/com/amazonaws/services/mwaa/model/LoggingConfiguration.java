@@ -19,8 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Defines the Apache Airflow logs to send to CloudWatch Logs: <code>DagProcessingLogs</code>,
- * <code>SchedulerLogs</code>, <code>TaskLogs</code>, <code>WebserverLogs</code>, <code>WorkerLogs</code>.
+ * Describes the Apache Airflow log types that are published to CloudWatch Logs.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mwaa-2020-07-01/LoggingConfiguration" target="_top">AWS API
@@ -29,18 +28,44 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class LoggingConfiguration implements Serializable, Cloneable, StructuredPojo {
 
+    /**
+     * <p>
+     * The Airflow DAG processing logs published to CloudWatch Logs and the log level.
+     * </p>
+     */
     private ModuleLoggingConfiguration dagProcessingLogs;
-
+    /**
+     * <p>
+     * The Airflow scheduler logs published to CloudWatch Logs and the log level.
+     * </p>
+     */
     private ModuleLoggingConfiguration schedulerLogs;
-
+    /**
+     * <p>
+     * The Airflow task logs published to CloudWatch Logs and the log level.
+     * </p>
+     */
     private ModuleLoggingConfiguration taskLogs;
-
+    /**
+     * <p>
+     * The Airflow web server logs published to CloudWatch Logs and the log level.
+     * </p>
+     */
     private ModuleLoggingConfiguration webserverLogs;
-
+    /**
+     * <p>
+     * The Airflow worker logs published to CloudWatch Logs and the log level.
+     * </p>
+     */
     private ModuleLoggingConfiguration workerLogs;
 
     /**
+     * <p>
+     * The Airflow DAG processing logs published to CloudWatch Logs and the log level.
+     * </p>
+     * 
      * @param dagProcessingLogs
+     *        The Airflow DAG processing logs published to CloudWatch Logs and the log level.
      */
 
     public void setDagProcessingLogs(ModuleLoggingConfiguration dagProcessingLogs) {
@@ -48,7 +73,11 @@ public class LoggingConfiguration implements Serializable, Cloneable, Structured
     }
 
     /**
-     * @return
+     * <p>
+     * The Airflow DAG processing logs published to CloudWatch Logs and the log level.
+     * </p>
+     * 
+     * @return The Airflow DAG processing logs published to CloudWatch Logs and the log level.
      */
 
     public ModuleLoggingConfiguration getDagProcessingLogs() {
@@ -56,7 +85,12 @@ public class LoggingConfiguration implements Serializable, Cloneable, Structured
     }
 
     /**
+     * <p>
+     * The Airflow DAG processing logs published to CloudWatch Logs and the log level.
+     * </p>
+     * 
      * @param dagProcessingLogs
+     *        The Airflow DAG processing logs published to CloudWatch Logs and the log level.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -66,7 +100,12 @@ public class LoggingConfiguration implements Serializable, Cloneable, Structured
     }
 
     /**
+     * <p>
+     * The Airflow scheduler logs published to CloudWatch Logs and the log level.
+     * </p>
+     * 
      * @param schedulerLogs
+     *        The Airflow scheduler logs published to CloudWatch Logs and the log level.
      */
 
     public void setSchedulerLogs(ModuleLoggingConfiguration schedulerLogs) {
@@ -74,7 +113,11 @@ public class LoggingConfiguration implements Serializable, Cloneable, Structured
     }
 
     /**
-     * @return
+     * <p>
+     * The Airflow scheduler logs published to CloudWatch Logs and the log level.
+     * </p>
+     * 
+     * @return The Airflow scheduler logs published to CloudWatch Logs and the log level.
      */
 
     public ModuleLoggingConfiguration getSchedulerLogs() {
@@ -82,7 +125,12 @@ public class LoggingConfiguration implements Serializable, Cloneable, Structured
     }
 
     /**
+     * <p>
+     * The Airflow scheduler logs published to CloudWatch Logs and the log level.
+     * </p>
+     * 
      * @param schedulerLogs
+     *        The Airflow scheduler logs published to CloudWatch Logs and the log level.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -92,7 +140,12 @@ public class LoggingConfiguration implements Serializable, Cloneable, Structured
     }
 
     /**
+     * <p>
+     * The Airflow task logs published to CloudWatch Logs and the log level.
+     * </p>
+     * 
      * @param taskLogs
+     *        The Airflow task logs published to CloudWatch Logs and the log level.
      */
 
     public void setTaskLogs(ModuleLoggingConfiguration taskLogs) {
@@ -100,7 +153,11 @@ public class LoggingConfiguration implements Serializable, Cloneable, Structured
     }
 
     /**
-     * @return
+     * <p>
+     * The Airflow task logs published to CloudWatch Logs and the log level.
+     * </p>
+     * 
+     * @return The Airflow task logs published to CloudWatch Logs and the log level.
      */
 
     public ModuleLoggingConfiguration getTaskLogs() {
@@ -108,7 +165,12 @@ public class LoggingConfiguration implements Serializable, Cloneable, Structured
     }
 
     /**
+     * <p>
+     * The Airflow task logs published to CloudWatch Logs and the log level.
+     * </p>
+     * 
      * @param taskLogs
+     *        The Airflow task logs published to CloudWatch Logs and the log level.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -118,7 +180,12 @@ public class LoggingConfiguration implements Serializable, Cloneable, Structured
     }
 
     /**
+     * <p>
+     * The Airflow web server logs published to CloudWatch Logs and the log level.
+     * </p>
+     * 
      * @param webserverLogs
+     *        The Airflow web server logs published to CloudWatch Logs and the log level.
      */
 
     public void setWebserverLogs(ModuleLoggingConfiguration webserverLogs) {
@@ -126,7 +193,11 @@ public class LoggingConfiguration implements Serializable, Cloneable, Structured
     }
 
     /**
-     * @return
+     * <p>
+     * The Airflow web server logs published to CloudWatch Logs and the log level.
+     * </p>
+     * 
+     * @return The Airflow web server logs published to CloudWatch Logs and the log level.
      */
 
     public ModuleLoggingConfiguration getWebserverLogs() {
@@ -134,7 +205,12 @@ public class LoggingConfiguration implements Serializable, Cloneable, Structured
     }
 
     /**
+     * <p>
+     * The Airflow web server logs published to CloudWatch Logs and the log level.
+     * </p>
+     * 
      * @param webserverLogs
+     *        The Airflow web server logs published to CloudWatch Logs and the log level.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -144,7 +220,12 @@ public class LoggingConfiguration implements Serializable, Cloneable, Structured
     }
 
     /**
+     * <p>
+     * The Airflow worker logs published to CloudWatch Logs and the log level.
+     * </p>
+     * 
      * @param workerLogs
+     *        The Airflow worker logs published to CloudWatch Logs and the log level.
      */
 
     public void setWorkerLogs(ModuleLoggingConfiguration workerLogs) {
@@ -152,7 +233,11 @@ public class LoggingConfiguration implements Serializable, Cloneable, Structured
     }
 
     /**
-     * @return
+     * <p>
+     * The Airflow worker logs published to CloudWatch Logs and the log level.
+     * </p>
+     * 
+     * @return The Airflow worker logs published to CloudWatch Logs and the log level.
      */
 
     public ModuleLoggingConfiguration getWorkerLogs() {
@@ -160,7 +245,12 @@ public class LoggingConfiguration implements Serializable, Cloneable, Structured
     }
 
     /**
+     * <p>
+     * The Airflow worker logs published to CloudWatch Logs and the log level.
+     * </p>
+     * 
      * @param workerLogs
+     *        The Airflow worker logs published to CloudWatch Logs and the log level.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -62,6 +62,12 @@ public class PlacementGroup implements Serializable, Cloneable {
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<Tag> tags;
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the placement group.
+     * </p>
+     */
+    private String groupArn;
 
     /**
      * Default constructor for PlacementGroup object. Callers should use the setter or fluent setter (with...) methods
@@ -421,6 +427,46 @@ public class PlacementGroup implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the placement group.
+     * </p>
+     * 
+     * @param groupArn
+     *        The Amazon Resource Name (ARN) of the placement group.
+     */
+
+    public void setGroupArn(String groupArn) {
+        this.groupArn = groupArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the placement group.
+     * </p>
+     * 
+     * @return The Amazon Resource Name (ARN) of the placement group.
+     */
+
+    public String getGroupArn() {
+        return this.groupArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the placement group.
+     * </p>
+     * 
+     * @param groupArn
+     *        The Amazon Resource Name (ARN) of the placement group.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public PlacementGroup withGroupArn(String groupArn) {
+        setGroupArn(groupArn);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -443,7 +489,9 @@ public class PlacementGroup implements Serializable, Cloneable {
         if (getGroupId() != null)
             sb.append("GroupId: ").append(getGroupId()).append(",");
         if (getTags() != null)
-            sb.append("Tags: ").append(getTags());
+            sb.append("Tags: ").append(getTags()).append(",");
+        if (getGroupArn() != null)
+            sb.append("GroupArn: ").append(getGroupArn());
         sb.append("}");
         return sb.toString();
     }
@@ -482,6 +530,10 @@ public class PlacementGroup implements Serializable, Cloneable {
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
             return false;
+        if (other.getGroupArn() == null ^ this.getGroupArn() == null)
+            return false;
+        if (other.getGroupArn() != null && other.getGroupArn().equals(this.getGroupArn()) == false)
+            return false;
         return true;
     }
 
@@ -496,6 +548,7 @@ public class PlacementGroup implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getPartitionCount() == null) ? 0 : getPartitionCount().hashCode());
         hashCode = prime * hashCode + ((getGroupId() == null) ? 0 : getGroupId().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getGroupArn() == null) ? 0 : getGroupArn().hashCode());
         return hashCode;
     }
 

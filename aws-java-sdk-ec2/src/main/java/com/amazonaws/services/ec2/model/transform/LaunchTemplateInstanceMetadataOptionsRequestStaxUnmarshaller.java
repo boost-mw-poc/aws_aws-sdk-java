@@ -63,6 +63,11 @@ public class LaunchTemplateInstanceMetadataOptionsRequestStaxUnmarshaller implem
                     launchTemplateInstanceMetadataOptionsRequest.setHttpProtocolIpv6(StringStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("InstanceMetadataTags", targetDepth)) {
+                    launchTemplateInstanceMetadataOptionsRequest.setInstanceMetadataTags(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return launchTemplateInstanceMetadataOptionsRequest;

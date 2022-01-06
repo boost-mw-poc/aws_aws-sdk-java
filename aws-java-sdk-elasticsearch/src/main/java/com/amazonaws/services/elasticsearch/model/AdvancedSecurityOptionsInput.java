@@ -51,6 +51,13 @@ public class AdvancedSecurityOptionsInput implements Serializable, Cloneable, St
      * </p>
      */
     private SAMLOptionsInput sAMLOptions;
+    /**
+     * <p>
+     * True if Anonymous auth is enabled. Anonymous auth can be enabled only when AdvancedSecurity is enabled on
+     * existing domains.
+     * </p>
+     */
+    private Boolean anonymousAuthEnabled;
 
     /**
      * <p>
@@ -237,6 +244,66 @@ public class AdvancedSecurityOptionsInput implements Serializable, Cloneable, St
     }
 
     /**
+     * <p>
+     * True if Anonymous auth is enabled. Anonymous auth can be enabled only when AdvancedSecurity is enabled on
+     * existing domains.
+     * </p>
+     * 
+     * @param anonymousAuthEnabled
+     *        True if Anonymous auth is enabled. Anonymous auth can be enabled only when AdvancedSecurity is enabled on
+     *        existing domains.
+     */
+
+    public void setAnonymousAuthEnabled(Boolean anonymousAuthEnabled) {
+        this.anonymousAuthEnabled = anonymousAuthEnabled;
+    }
+
+    /**
+     * <p>
+     * True if Anonymous auth is enabled. Anonymous auth can be enabled only when AdvancedSecurity is enabled on
+     * existing domains.
+     * </p>
+     * 
+     * @return True if Anonymous auth is enabled. Anonymous auth can be enabled only when AdvancedSecurity is enabled on
+     *         existing domains.
+     */
+
+    public Boolean getAnonymousAuthEnabled() {
+        return this.anonymousAuthEnabled;
+    }
+
+    /**
+     * <p>
+     * True if Anonymous auth is enabled. Anonymous auth can be enabled only when AdvancedSecurity is enabled on
+     * existing domains.
+     * </p>
+     * 
+     * @param anonymousAuthEnabled
+     *        True if Anonymous auth is enabled. Anonymous auth can be enabled only when AdvancedSecurity is enabled on
+     *        existing domains.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AdvancedSecurityOptionsInput withAnonymousAuthEnabled(Boolean anonymousAuthEnabled) {
+        setAnonymousAuthEnabled(anonymousAuthEnabled);
+        return this;
+    }
+
+    /**
+     * <p>
+     * True if Anonymous auth is enabled. Anonymous auth can be enabled only when AdvancedSecurity is enabled on
+     * existing domains.
+     * </p>
+     * 
+     * @return True if Anonymous auth is enabled. Anonymous auth can be enabled only when AdvancedSecurity is enabled on
+     *         existing domains.
+     */
+
+    public Boolean isAnonymousAuthEnabled() {
+        return this.anonymousAuthEnabled;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -255,7 +322,9 @@ public class AdvancedSecurityOptionsInput implements Serializable, Cloneable, St
         if (getMasterUserOptions() != null)
             sb.append("MasterUserOptions: ").append(getMasterUserOptions()).append(",");
         if (getSAMLOptions() != null)
-            sb.append("SAMLOptions: ").append(getSAMLOptions());
+            sb.append("SAMLOptions: ").append(getSAMLOptions()).append(",");
+        if (getAnonymousAuthEnabled() != null)
+            sb.append("AnonymousAuthEnabled: ").append(getAnonymousAuthEnabled());
         sb.append("}");
         return sb.toString();
     }
@@ -286,6 +355,10 @@ public class AdvancedSecurityOptionsInput implements Serializable, Cloneable, St
             return false;
         if (other.getSAMLOptions() != null && other.getSAMLOptions().equals(this.getSAMLOptions()) == false)
             return false;
+        if (other.getAnonymousAuthEnabled() == null ^ this.getAnonymousAuthEnabled() == null)
+            return false;
+        if (other.getAnonymousAuthEnabled() != null && other.getAnonymousAuthEnabled().equals(this.getAnonymousAuthEnabled()) == false)
+            return false;
         return true;
     }
 
@@ -298,6 +371,7 @@ public class AdvancedSecurityOptionsInput implements Serializable, Cloneable, St
         hashCode = prime * hashCode + ((getInternalUserDatabaseEnabled() == null) ? 0 : getInternalUserDatabaseEnabled().hashCode());
         hashCode = prime * hashCode + ((getMasterUserOptions() == null) ? 0 : getMasterUserOptions().hashCode());
         hashCode = prime * hashCode + ((getSAMLOptions() == null) ? 0 : getSAMLOptions().hashCode());
+        hashCode = prime * hashCode + ((getAnonymousAuthEnabled() == null) ? 0 : getAnonymousAuthEnabled().hashCode());
         return hashCode;
     }
 

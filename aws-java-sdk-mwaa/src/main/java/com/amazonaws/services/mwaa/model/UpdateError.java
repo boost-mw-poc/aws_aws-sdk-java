@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * An object containing the error encountered with the last update: <code>ErrorCode</code>, <code>ErrorMessage</code>.
+ * Describes the error(s) encountered with the last update of the environment.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mwaa-2020-07-01/UpdateError" target="_top">AWS API

@@ -70,6 +70,12 @@ public class CreateFunctionRequest extends com.amazonaws.AmazonWebServiceRequest
     private String functionVersion;
 
     private SyncConfig syncConfig;
+    /**
+     * <p>
+     * The maximum batching size for a resolver.
+     * </p>
+     */
+    private Integer maxBatchSize;
 
     /**
      * <p>
@@ -384,6 +390,46 @@ public class CreateFunctionRequest extends com.amazonaws.AmazonWebServiceRequest
     }
 
     /**
+     * <p>
+     * The maximum batching size for a resolver.
+     * </p>
+     * 
+     * @param maxBatchSize
+     *        The maximum batching size for a resolver.
+     */
+
+    public void setMaxBatchSize(Integer maxBatchSize) {
+        this.maxBatchSize = maxBatchSize;
+    }
+
+    /**
+     * <p>
+     * The maximum batching size for a resolver.
+     * </p>
+     * 
+     * @return The maximum batching size for a resolver.
+     */
+
+    public Integer getMaxBatchSize() {
+        return this.maxBatchSize;
+    }
+
+    /**
+     * <p>
+     * The maximum batching size for a resolver.
+     * </p>
+     * 
+     * @param maxBatchSize
+     *        The maximum batching size for a resolver.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateFunctionRequest withMaxBatchSize(Integer maxBatchSize) {
+        setMaxBatchSize(maxBatchSize);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -410,7 +456,9 @@ public class CreateFunctionRequest extends com.amazonaws.AmazonWebServiceRequest
         if (getFunctionVersion() != null)
             sb.append("FunctionVersion: ").append(getFunctionVersion()).append(",");
         if (getSyncConfig() != null)
-            sb.append("SyncConfig: ").append(getSyncConfig());
+            sb.append("SyncConfig: ").append(getSyncConfig()).append(",");
+        if (getMaxBatchSize() != null)
+            sb.append("MaxBatchSize: ").append(getMaxBatchSize());
         sb.append("}");
         return sb.toString();
     }
@@ -457,6 +505,10 @@ public class CreateFunctionRequest extends com.amazonaws.AmazonWebServiceRequest
             return false;
         if (other.getSyncConfig() != null && other.getSyncConfig().equals(this.getSyncConfig()) == false)
             return false;
+        if (other.getMaxBatchSize() == null ^ this.getMaxBatchSize() == null)
+            return false;
+        if (other.getMaxBatchSize() != null && other.getMaxBatchSize().equals(this.getMaxBatchSize()) == false)
+            return false;
         return true;
     }
 
@@ -473,6 +525,7 @@ public class CreateFunctionRequest extends com.amazonaws.AmazonWebServiceRequest
         hashCode = prime * hashCode + ((getResponseMappingTemplate() == null) ? 0 : getResponseMappingTemplate().hashCode());
         hashCode = prime * hashCode + ((getFunctionVersion() == null) ? 0 : getFunctionVersion().hashCode());
         hashCode = prime * hashCode + ((getSyncConfig() == null) ? 0 : getSyncConfig().hashCode());
+        hashCode = prime * hashCode + ((getMaxBatchSize() == null) ? 0 : getMaxBatchSize().hashCode());
         return hashCode;
     }
 

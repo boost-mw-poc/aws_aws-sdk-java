@@ -63,18 +63,13 @@ public class DescribeCapacityReservationsRequest extends AmazonWebServiceRequest
      * </li>
      * <li>
      * <p>
-     * <code>availability-zone-id</code> - The Availability Zone ID of the Capacity Reservation.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * <code>instance-platform</code> - The type of operating system for which the Capacity Reservation reserves
      * capacity.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>availability-zone</code> - The Availability Zone ID of the Capacity Reservation.
+     * <code>availability-zone</code> - The Availability Zone of the Capacity Reservation.
      * </p>
      * </li>
      * <li>
@@ -378,18 +373,13 @@ public class DescribeCapacityReservationsRequest extends AmazonWebServiceRequest
      * </li>
      * <li>
      * <p>
-     * <code>availability-zone-id</code> - The Availability Zone ID of the Capacity Reservation.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * <code>instance-platform</code> - The type of operating system for which the Capacity Reservation reserves
      * capacity.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>availability-zone</code> - The Availability Zone ID of the Capacity Reservation.
+     * <code>availability-zone</code> - The Availability Zone of the Capacity Reservation.
      * </p>
      * </li>
      * <li>
@@ -523,18 +513,13 @@ public class DescribeCapacityReservationsRequest extends AmazonWebServiceRequest
      *         </li>
      *         <li>
      *         <p>
-     *         <code>availability-zone-id</code> - The Availability Zone ID of the Capacity Reservation.
-     *         </p>
-     *         </li>
-     *         <li>
-     *         <p>
      *         <code>instance-platform</code> - The type of operating system for which the Capacity Reservation reserves
      *         capacity.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>availability-zone</code> - The Availability Zone ID of the Capacity Reservation.
+     *         <code>availability-zone</code> - The Availability Zone of the Capacity Reservation.
      *         </p>
      *         </li>
      *         <li>
@@ -679,18 +664,13 @@ public class DescribeCapacityReservationsRequest extends AmazonWebServiceRequest
      * </li>
      * <li>
      * <p>
-     * <code>availability-zone-id</code> - The Availability Zone ID of the Capacity Reservation.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * <code>instance-platform</code> - The type of operating system for which the Capacity Reservation reserves
      * capacity.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>availability-zone</code> - The Availability Zone ID of the Capacity Reservation.
+     * <code>availability-zone</code> - The Availability Zone of the Capacity Reservation.
      * </p>
      * </li>
      * <li>
@@ -825,18 +805,13 @@ public class DescribeCapacityReservationsRequest extends AmazonWebServiceRequest
      *        </li>
      *        <li>
      *        <p>
-     *        <code>availability-zone-id</code> - The Availability Zone ID of the Capacity Reservation.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
      *        <code>instance-platform</code> - The type of operating system for which the Capacity Reservation reserves
      *        capacity.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>availability-zone</code> - The Availability Zone ID of the Capacity Reservation.
+     *        <code>availability-zone</code> - The Availability Zone of the Capacity Reservation.
      *        </p>
      *        </li>
      *        <li>
@@ -983,18 +958,13 @@ public class DescribeCapacityReservationsRequest extends AmazonWebServiceRequest
      * </li>
      * <li>
      * <p>
-     * <code>availability-zone-id</code> - The Availability Zone ID of the Capacity Reservation.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * <code>instance-platform</code> - The type of operating system for which the Capacity Reservation reserves
      * capacity.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>availability-zone</code> - The Availability Zone ID of the Capacity Reservation.
+     * <code>availability-zone</code> - The Availability Zone of the Capacity Reservation.
      * </p>
      * </li>
      * <li>
@@ -1134,18 +1104,13 @@ public class DescribeCapacityReservationsRequest extends AmazonWebServiceRequest
      *        </li>
      *        <li>
      *        <p>
-     *        <code>availability-zone-id</code> - The Availability Zone ID of the Capacity Reservation.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
      *        <code>instance-platform</code> - The type of operating system for which the Capacity Reservation reserves
      *        capacity.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>availability-zone</code> - The Availability Zone ID of the Capacity Reservation.
+     *        <code>availability-zone</code> - The Availability Zone of the Capacity Reservation.
      *        </p>
      *        </li>
      *        <li>
@@ -1294,18 +1259,13 @@ public class DescribeCapacityReservationsRequest extends AmazonWebServiceRequest
      * </li>
      * <li>
      * <p>
-     * <code>availability-zone-id</code> - The Availability Zone ID of the Capacity Reservation.
-     * </p>
-     * </li>
-     * <li>
-     * <p>
      * <code>instance-platform</code> - The type of operating system for which the Capacity Reservation reserves
      * capacity.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>availability-zone</code> - The Availability Zone ID of the Capacity Reservation.
+     * <code>availability-zone</code> - The Availability Zone of the Capacity Reservation.
      * </p>
      * </li>
      * <li>
@@ -1440,18 +1400,13 @@ public class DescribeCapacityReservationsRequest extends AmazonWebServiceRequest
      *        </li>
      *        <li>
      *        <p>
-     *        <code>availability-zone-id</code> - The Availability Zone ID of the Capacity Reservation.
-     *        </p>
-     *        </li>
-     *        <li>
-     *        <p>
      *        <code>instance-platform</code> - The type of operating system for which the Capacity Reservation reserves
      *        capacity.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>availability-zone</code> - The Availability Zone ID of the Capacity Reservation.
+     *        <code>availability-zone</code> - The Availability Zone of the Capacity Reservation.
      *        </p>
      *        </li>
      *        <li>

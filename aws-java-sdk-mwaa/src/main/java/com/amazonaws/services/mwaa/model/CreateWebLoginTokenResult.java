@@ -25,24 +25,24 @@ public class CreateWebLoginTokenResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * Create an Airflow Web UI login token response for the provided webserver hostname.
+     * The Airflow web server hostname for the environment.
      * </p>
      */
     private String webServerHostname;
     /**
      * <p>
-     * Create an Airflow Web UI login token response for the provided JWT token.
+     * An Airflow web server login token.
      * </p>
      */
     private String webToken;
 
     /**
      * <p>
-     * Create an Airflow Web UI login token response for the provided webserver hostname.
+     * The Airflow web server hostname for the environment.
      * </p>
      * 
      * @param webServerHostname
-     *        Create an Airflow Web UI login token response for the provided webserver hostname.
+     *        The Airflow web server hostname for the environment.
      */
 
     public void setWebServerHostname(String webServerHostname) {
@@ -51,10 +51,10 @@ public class CreateWebLoginTokenResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * Create an Airflow Web UI login token response for the provided webserver hostname.
+     * The Airflow web server hostname for the environment.
      * </p>
      * 
-     * @return Create an Airflow Web UI login token response for the provided webserver hostname.
+     * @return The Airflow web server hostname for the environment.
      */
 
     public String getWebServerHostname() {
@@ -63,11 +63,11 @@ public class CreateWebLoginTokenResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * Create an Airflow Web UI login token response for the provided webserver hostname.
+     * The Airflow web server hostname for the environment.
      * </p>
      * 
      * @param webServerHostname
-     *        Create an Airflow Web UI login token response for the provided webserver hostname.
+     *        The Airflow web server hostname for the environment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -78,11 +78,11 @@ public class CreateWebLoginTokenResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * Create an Airflow Web UI login token response for the provided JWT token.
+     * An Airflow web server login token.
      * </p>
      * 
      * @param webToken
-     *        Create an Airflow Web UI login token response for the provided JWT token.
+     *        An Airflow web server login token.
      */
 
     public void setWebToken(String webToken) {
@@ -91,10 +91,10 @@ public class CreateWebLoginTokenResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * Create an Airflow Web UI login token response for the provided JWT token.
+     * An Airflow web server login token.
      * </p>
      * 
-     * @return Create an Airflow Web UI login token response for the provided JWT token.
+     * @return An Airflow web server login token.
      */
 
     public String getWebToken() {
@@ -103,11 +103,11 @@ public class CreateWebLoginTokenResult extends com.amazonaws.AmazonWebServiceRes
 
     /**
      * <p>
-     * Create an Airflow Web UI login token response for the provided JWT token.
+     * An Airflow web server login token.
      * </p>
      * 
      * @param webToken
-     *        Create an Airflow Web UI login token response for the provided JWT token.
+     *        An Airflow web server login token.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

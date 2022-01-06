@@ -61,8 +61,8 @@ public class LaunchTemplateInstanceMetadataOptionsRequest implements Serializabl
     private Integer httpPutResponseHopLimit;
     /**
      * <p>
-     * This parameter enables or disables the HTTP metadata endpoint on your instances. If the parameter is not
-     * specified, the default state is <code>enabled</code>.
+     * Enables or disables the HTTP metadata endpoint on your instances. If the parameter is not specified, the default
+     * state is <code>enabled</code>.
      * </p>
      * <note>
      * <p>
@@ -80,6 +80,18 @@ public class LaunchTemplateInstanceMetadataOptionsRequest implements Serializabl
      * </p>
      */
     private String httpProtocolIpv6;
+    /**
+     * <p>
+     * Set to <code>enabled</code> to allow access to instance tags from the instance metadata. Set to
+     * <code>disabled</code> to turn off access to instance tags from the instance metadata. For more information, see
+     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#work-with-tags-in-IMDS">Work with
+     * instance tags using the instance metadata</a>.
+     * </p>
+     * <p>
+     * Default: <code>disabled</code>
+     * </p>
+     */
+    private String instanceMetadataTags;
 
     /**
      * <p>
@@ -313,8 +325,8 @@ public class LaunchTemplateInstanceMetadataOptionsRequest implements Serializabl
 
     /**
      * <p>
-     * This parameter enables or disables the HTTP metadata endpoint on your instances. If the parameter is not
-     * specified, the default state is <code>enabled</code>.
+     * Enables or disables the HTTP metadata endpoint on your instances. If the parameter is not specified, the default
+     * state is <code>enabled</code>.
      * </p>
      * <note>
      * <p>
@@ -323,8 +335,8 @@ public class LaunchTemplateInstanceMetadataOptionsRequest implements Serializabl
      * </note>
      * 
      * @param httpEndpoint
-     *        This parameter enables or disables the HTTP metadata endpoint on your instances. If the parameter is not
-     *        specified, the default state is <code>enabled</code>.</p> <note>
+     *        Enables or disables the HTTP metadata endpoint on your instances. If the parameter is not specified, the
+     *        default state is <code>enabled</code>.</p> <note>
      *        <p>
      *        If you specify a value of <code>disabled</code>, you will not be able to access your instance metadata.
      *        </p>
@@ -337,8 +349,8 @@ public class LaunchTemplateInstanceMetadataOptionsRequest implements Serializabl
 
     /**
      * <p>
-     * This parameter enables or disables the HTTP metadata endpoint on your instances. If the parameter is not
-     * specified, the default state is <code>enabled</code>.
+     * Enables or disables the HTTP metadata endpoint on your instances. If the parameter is not specified, the default
+     * state is <code>enabled</code>.
      * </p>
      * <note>
      * <p>
@@ -346,8 +358,8 @@ public class LaunchTemplateInstanceMetadataOptionsRequest implements Serializabl
      * </p>
      * </note>
      * 
-     * @return This parameter enables or disables the HTTP metadata endpoint on your instances. If the parameter is not
-     *         specified, the default state is <code>enabled</code>.</p> <note>
+     * @return Enables or disables the HTTP metadata endpoint on your instances. If the parameter is not specified, the
+     *         default state is <code>enabled</code>.</p> <note>
      *         <p>
      *         If you specify a value of <code>disabled</code>, you will not be able to access your instance metadata.
      *         </p>
@@ -360,8 +372,8 @@ public class LaunchTemplateInstanceMetadataOptionsRequest implements Serializabl
 
     /**
      * <p>
-     * This parameter enables or disables the HTTP metadata endpoint on your instances. If the parameter is not
-     * specified, the default state is <code>enabled</code>.
+     * Enables or disables the HTTP metadata endpoint on your instances. If the parameter is not specified, the default
+     * state is <code>enabled</code>.
      * </p>
      * <note>
      * <p>
@@ -370,8 +382,8 @@ public class LaunchTemplateInstanceMetadataOptionsRequest implements Serializabl
      * </note>
      * 
      * @param httpEndpoint
-     *        This parameter enables or disables the HTTP metadata endpoint on your instances. If the parameter is not
-     *        specified, the default state is <code>enabled</code>.</p> <note>
+     *        Enables or disables the HTTP metadata endpoint on your instances. If the parameter is not specified, the
+     *        default state is <code>enabled</code>.</p> <note>
      *        <p>
      *        If you specify a value of <code>disabled</code>, you will not be able to access your instance metadata.
      *        </p>
@@ -386,8 +398,8 @@ public class LaunchTemplateInstanceMetadataOptionsRequest implements Serializabl
 
     /**
      * <p>
-     * This parameter enables or disables the HTTP metadata endpoint on your instances. If the parameter is not
-     * specified, the default state is <code>enabled</code>.
+     * Enables or disables the HTTP metadata endpoint on your instances. If the parameter is not specified, the default
+     * state is <code>enabled</code>.
      * </p>
      * <note>
      * <p>
@@ -396,8 +408,8 @@ public class LaunchTemplateInstanceMetadataOptionsRequest implements Serializabl
      * </note>
      * 
      * @param httpEndpoint
-     *        This parameter enables or disables the HTTP metadata endpoint on your instances. If the parameter is not
-     *        specified, the default state is <code>enabled</code>.</p> <note>
+     *        Enables or disables the HTTP metadata endpoint on your instances. If the parameter is not specified, the
+     *        default state is <code>enabled</code>.</p> <note>
      *        <p>
      *        If you specify a value of <code>disabled</code>, you will not be able to access your instance metadata.
      *        </p>
@@ -490,6 +502,113 @@ public class LaunchTemplateInstanceMetadataOptionsRequest implements Serializabl
     }
 
     /**
+     * <p>
+     * Set to <code>enabled</code> to allow access to instance tags from the instance metadata. Set to
+     * <code>disabled</code> to turn off access to instance tags from the instance metadata. For more information, see
+     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#work-with-tags-in-IMDS">Work with
+     * instance tags using the instance metadata</a>.
+     * </p>
+     * <p>
+     * Default: <code>disabled</code>
+     * </p>
+     * 
+     * @param instanceMetadataTags
+     *        Set to <code>enabled</code> to allow access to instance tags from the instance metadata. Set to
+     *        <code>disabled</code> to turn off access to instance tags from the instance metadata. For more
+     *        information, see <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#work-with-tags-in-IMDS">Work
+     *        with instance tags using the instance metadata</a>.</p>
+     *        <p>
+     *        Default: <code>disabled</code>
+     * @see LaunchTemplateInstanceMetadataTagsState
+     */
+
+    public void setInstanceMetadataTags(String instanceMetadataTags) {
+        this.instanceMetadataTags = instanceMetadataTags;
+    }
+
+    /**
+     * <p>
+     * Set to <code>enabled</code> to allow access to instance tags from the instance metadata. Set to
+     * <code>disabled</code> to turn off access to instance tags from the instance metadata. For more information, see
+     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#work-with-tags-in-IMDS">Work with
+     * instance tags using the instance metadata</a>.
+     * </p>
+     * <p>
+     * Default: <code>disabled</code>
+     * </p>
+     * 
+     * @return Set to <code>enabled</code> to allow access to instance tags from the instance metadata. Set to
+     *         <code>disabled</code> to turn off access to instance tags from the instance metadata. For more
+     *         information, see <a
+     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#work-with-tags-in-IMDS">Work
+     *         with instance tags using the instance metadata</a>.</p>
+     *         <p>
+     *         Default: <code>disabled</code>
+     * @see LaunchTemplateInstanceMetadataTagsState
+     */
+
+    public String getInstanceMetadataTags() {
+        return this.instanceMetadataTags;
+    }
+
+    /**
+     * <p>
+     * Set to <code>enabled</code> to allow access to instance tags from the instance metadata. Set to
+     * <code>disabled</code> to turn off access to instance tags from the instance metadata. For more information, see
+     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#work-with-tags-in-IMDS">Work with
+     * instance tags using the instance metadata</a>.
+     * </p>
+     * <p>
+     * Default: <code>disabled</code>
+     * </p>
+     * 
+     * @param instanceMetadataTags
+     *        Set to <code>enabled</code> to allow access to instance tags from the instance metadata. Set to
+     *        <code>disabled</code> to turn off access to instance tags from the instance metadata. For more
+     *        information, see <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#work-with-tags-in-IMDS">Work
+     *        with instance tags using the instance metadata</a>.</p>
+     *        <p>
+     *        Default: <code>disabled</code>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see LaunchTemplateInstanceMetadataTagsState
+     */
+
+    public LaunchTemplateInstanceMetadataOptionsRequest withInstanceMetadataTags(String instanceMetadataTags) {
+        setInstanceMetadataTags(instanceMetadataTags);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Set to <code>enabled</code> to allow access to instance tags from the instance metadata. Set to
+     * <code>disabled</code> to turn off access to instance tags from the instance metadata. For more information, see
+     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#work-with-tags-in-IMDS">Work with
+     * instance tags using the instance metadata</a>.
+     * </p>
+     * <p>
+     * Default: <code>disabled</code>
+     * </p>
+     * 
+     * @param instanceMetadataTags
+     *        Set to <code>enabled</code> to allow access to instance tags from the instance metadata. Set to
+     *        <code>disabled</code> to turn off access to instance tags from the instance metadata. For more
+     *        information, see <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#work-with-tags-in-IMDS">Work
+     *        with instance tags using the instance metadata</a>.</p>
+     *        <p>
+     *        Default: <code>disabled</code>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see LaunchTemplateInstanceMetadataTagsState
+     */
+
+    public LaunchTemplateInstanceMetadataOptionsRequest withInstanceMetadataTags(LaunchTemplateInstanceMetadataTagsState instanceMetadataTags) {
+        this.instanceMetadataTags = instanceMetadataTags.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -508,7 +627,9 @@ public class LaunchTemplateInstanceMetadataOptionsRequest implements Serializabl
         if (getHttpEndpoint() != null)
             sb.append("HttpEndpoint: ").append(getHttpEndpoint()).append(",");
         if (getHttpProtocolIpv6() != null)
-            sb.append("HttpProtocolIpv6: ").append(getHttpProtocolIpv6());
+            sb.append("HttpProtocolIpv6: ").append(getHttpProtocolIpv6()).append(",");
+        if (getInstanceMetadataTags() != null)
+            sb.append("InstanceMetadataTags: ").append(getInstanceMetadataTags());
         sb.append("}");
         return sb.toString();
     }
@@ -539,6 +660,10 @@ public class LaunchTemplateInstanceMetadataOptionsRequest implements Serializabl
             return false;
         if (other.getHttpProtocolIpv6() != null && other.getHttpProtocolIpv6().equals(this.getHttpProtocolIpv6()) == false)
             return false;
+        if (other.getInstanceMetadataTags() == null ^ this.getInstanceMetadataTags() == null)
+            return false;
+        if (other.getInstanceMetadataTags() != null && other.getInstanceMetadataTags().equals(this.getInstanceMetadataTags()) == false)
+            return false;
         return true;
     }
 
@@ -551,6 +676,7 @@ public class LaunchTemplateInstanceMetadataOptionsRequest implements Serializabl
         hashCode = prime * hashCode + ((getHttpPutResponseHopLimit() == null) ? 0 : getHttpPutResponseHopLimit().hashCode());
         hashCode = prime * hashCode + ((getHttpEndpoint() == null) ? 0 : getHttpEndpoint().hashCode());
         hashCode = prime * hashCode + ((getHttpProtocolIpv6() == null) ? 0 : getHttpProtocolIpv6().hashCode());
+        hashCode = prime * hashCode + ((getInstanceMetadataTags() == null) ? 0 : getInstanceMetadataTags().hashCode());
         return hashCode;
     }
 

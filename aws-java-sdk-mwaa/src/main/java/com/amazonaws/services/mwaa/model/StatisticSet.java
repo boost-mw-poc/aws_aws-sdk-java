@@ -19,7 +19,10 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Internal only API.
+ * <b>Internal only</b>. Represents a set of statistics that describe a specific metric. To learn more about the metrics
+ * published to Amazon CloudWatch, see <a
+ * href="https://docs.aws.amazon.com/mwaa/latest/userguide/cw-metrics.html">Amazon MWAA performance metrics in Amazon
+ * CloudWatch</a>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mwaa-2020-07-01/StatisticSet" target="_top">AWS API
@@ -30,36 +33,36 @@ public class StatisticSet implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Internal only API.
+     * <b>Internal only</b>. The maximum value of the sample set.
      * </p>
      */
     private Double maximum;
     /**
      * <p>
-     * Internal only API.
+     * <b>Internal only</b>. The minimum value of the sample set.
      * </p>
      */
     private Double minimum;
     /**
      * <p>
-     * Internal only API.
+     * <b>Internal only</b>. The number of samples used for the statistic set.
      * </p>
      */
     private Integer sampleCount;
     /**
      * <p>
-     * Internal only API.
+     * <b>Internal only</b>. The sum of values for the sample set.
      * </p>
      */
     private Double sum;
 
     /**
      * <p>
-     * Internal only API.
+     * <b>Internal only</b>. The maximum value of the sample set.
      * </p>
      * 
      * @param maximum
-     *        Internal only API.
+     *        <b>Internal only</b>. The maximum value of the sample set.
      */
 
     public void setMaximum(Double maximum) {
@@ -68,10 +71,10 @@ public class StatisticSet implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Internal only API.
+     * <b>Internal only</b>. The maximum value of the sample set.
      * </p>
      * 
-     * @return Internal only API.
+     * @return <b>Internal only</b>. The maximum value of the sample set.
      */
 
     public Double getMaximum() {
@@ -80,11 +83,11 @@ public class StatisticSet implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Internal only API.
+     * <b>Internal only</b>. The maximum value of the sample set.
      * </p>
      * 
      * @param maximum
-     *        Internal only API.
+     *        <b>Internal only</b>. The maximum value of the sample set.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -95,11 +98,11 @@ public class StatisticSet implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Internal only API.
+     * <b>Internal only</b>. The minimum value of the sample set.
      * </p>
      * 
      * @param minimum
-     *        Internal only API.
+     *        <b>Internal only</b>. The minimum value of the sample set.
      */
 
     public void setMinimum(Double minimum) {
@@ -108,10 +111,10 @@ public class StatisticSet implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Internal only API.
+     * <b>Internal only</b>. The minimum value of the sample set.
      * </p>
      * 
-     * @return Internal only API.
+     * @return <b>Internal only</b>. The minimum value of the sample set.
      */
 
     public Double getMinimum() {
@@ -120,11 +123,11 @@ public class StatisticSet implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Internal only API.
+     * <b>Internal only</b>. The minimum value of the sample set.
      * </p>
      * 
      * @param minimum
-     *        Internal only API.
+     *        <b>Internal only</b>. The minimum value of the sample set.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -135,11 +138,11 @@ public class StatisticSet implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Internal only API.
+     * <b>Internal only</b>. The number of samples used for the statistic set.
      * </p>
      * 
      * @param sampleCount
-     *        Internal only API.
+     *        <b>Internal only</b>. The number of samples used for the statistic set.
      */
 
     public void setSampleCount(Integer sampleCount) {
@@ -148,10 +151,10 @@ public class StatisticSet implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Internal only API.
+     * <b>Internal only</b>. The number of samples used for the statistic set.
      * </p>
      * 
-     * @return Internal only API.
+     * @return <b>Internal only</b>. The number of samples used for the statistic set.
      */
 
     public Integer getSampleCount() {
@@ -160,11 +163,11 @@ public class StatisticSet implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Internal only API.
+     * <b>Internal only</b>. The number of samples used for the statistic set.
      * </p>
      * 
      * @param sampleCount
-     *        Internal only API.
+     *        <b>Internal only</b>. The number of samples used for the statistic set.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -175,11 +178,11 @@ public class StatisticSet implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Internal only API.
+     * <b>Internal only</b>. The sum of values for the sample set.
      * </p>
      * 
      * @param sum
-     *        Internal only API.
+     *        <b>Internal only</b>. The sum of values for the sample set.
      */
 
     public void setSum(Double sum) {
@@ -188,10 +191,10 @@ public class StatisticSet implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Internal only API.
+     * <b>Internal only</b>. The sum of values for the sample set.
      * </p>
      * 
-     * @return Internal only API.
+     * @return <b>Internal only</b>. The sum of values for the sample set.
      */
 
     public Double getSum() {
@@ -200,11 +203,11 @@ public class StatisticSet implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Internal only API.
+     * <b>Internal only</b>. The sum of values for the sample set.
      * </p>
      * 
      * @param sum
-     *        Internal only API.
+     *        <b>Internal only</b>. The sum of values for the sample set.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -164,7 +164,7 @@ public class VpnTunnelOptionsSpecification implements Serializable, Cloneable {
      * The number of seconds after which a DPD timeout occurs.
      * </p>
      * <p>
-     * Constraints: A value between 0 and 30.
+     * Constraints: A value greater than or equal to 30.
      * </p>
      * <p>
      * Default: <code>30</code>
@@ -1077,7 +1077,7 @@ public class VpnTunnelOptionsSpecification implements Serializable, Cloneable {
      * The number of seconds after which a DPD timeout occurs.
      * </p>
      * <p>
-     * Constraints: A value between 0 and 30.
+     * Constraints: A value greater than or equal to 30.
      * </p>
      * <p>
      * Default: <code>30</code>
@@ -1086,7 +1086,7 @@ public class VpnTunnelOptionsSpecification implements Serializable, Cloneable {
      * @param dPDTimeoutSeconds
      *        The number of seconds after which a DPD timeout occurs.</p>
      *        <p>
-     *        Constraints: A value between 0 and 30.
+     *        Constraints: A value greater than or equal to 30.
      *        </p>
      *        <p>
      *        Default: <code>30</code>
@@ -1101,7 +1101,7 @@ public class VpnTunnelOptionsSpecification implements Serializable, Cloneable {
      * The number of seconds after which a DPD timeout occurs.
      * </p>
      * <p>
-     * Constraints: A value between 0 and 30.
+     * Constraints: A value greater than or equal to 30.
      * </p>
      * <p>
      * Default: <code>30</code>
@@ -1109,7 +1109,7 @@ public class VpnTunnelOptionsSpecification implements Serializable, Cloneable {
      * 
      * @return The number of seconds after which a DPD timeout occurs.</p>
      *         <p>
-     *         Constraints: A value between 0 and 30.
+     *         Constraints: A value greater than or equal to 30.
      *         </p>
      *         <p>
      *         Default: <code>30</code>
@@ -1124,7 +1124,7 @@ public class VpnTunnelOptionsSpecification implements Serializable, Cloneable {
      * The number of seconds after which a DPD timeout occurs.
      * </p>
      * <p>
-     * Constraints: A value between 0 and 30.
+     * Constraints: A value greater than or equal to 30.
      * </p>
      * <p>
      * Default: <code>30</code>
@@ -1133,7 +1133,7 @@ public class VpnTunnelOptionsSpecification implements Serializable, Cloneable {
      * @param dPDTimeoutSeconds
      *        The number of seconds after which a DPD timeout occurs.</p>
      *        <p>
-     *        Constraints: A value between 0 and 30.
+     *        Constraints: A value greater than or equal to 30.
      *        </p>
      *        <p>
      *        Default: <code>30</code>

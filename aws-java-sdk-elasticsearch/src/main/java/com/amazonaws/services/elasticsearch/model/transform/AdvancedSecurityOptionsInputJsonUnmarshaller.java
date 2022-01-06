@@ -64,6 +64,10 @@ public class AdvancedSecurityOptionsInputJsonUnmarshaller implements Unmarshalle
                     context.nextToken();
                     advancedSecurityOptionsInput.setSAMLOptions(SAMLOptionsInputJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("AnonymousAuthEnabled", targetDepth)) {
+                    context.nextToken();
+                    advancedSecurityOptionsInput.setAnonymousAuthEnabled(context.getUnmarshaller(Boolean.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

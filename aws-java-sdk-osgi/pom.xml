@@ -5,7 +5,7 @@
   <parent>
     <groupId>com.amazonaws</groupId>
     <artifactId>aws-java-sdk-pom</artifactId>
-    <version>1.12.135-SNAPSHOT</version>
+    <version>1.12.135</version>
   </parent>
   <groupId>com.amazonaws</groupId>
   <artifactId>aws-java-sdk-osgi</artifactId>
@@ -3087,16 +3087,6 @@
                   <![CDATA[
                   <!-- This should be the first script -->
                   <script type="text/javascript" src="/assets/js/awsdocs-boot.js"></script>
-
-                  <!-- Scripts for Syntax Highlighter START-->
-                  <script id="syntaxhighlight_script_core" type="text/javascript" src = "https://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/resources/syntaxhighlight/scripts/shCore.js">
-                  </script>
-                  <script id="syntaxhighlight_script_java" type="text/javascript" src = "https://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/resources/syntaxhighlight/scripts/shBrushJava.js">
-                  </script>
-                  <!-- Script for GDPR highlighting -->
-                  <link id="syntaxhighlight_css_core" rel="stylesheet" type="text/css" href = "https://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/resources/syntaxhighlight/styles/shCoreDefault.css"/>
-                  <link id="syntaxhighlight_css_theme" rel="stylesheet" type="text/css" href = "https://docs.aws.amazon.com/AWSJavaSDK/latest/javadoc/resources/syntaxhighlight/styles/shThemeDefault.css"/>
-                  <!-- Scripts for Syntax Highlighter END-->
                   <div>
                       <!-- BEGIN-SECTION -->
                       <div id="divsearch" style="float:left;">
@@ -3158,15 +3148,6 @@
                           ]]>
                       </header>
                       <footer>
-                          <![CDATA[
-                          <div>
-                              <!-- Script for Syntax Highlighter START -->
-                              <script type="text/javascript">
-                                  SyntaxHighlighter.all()
-                              </script>
-                              <!-- Script for Syntax Highlighter END -->
-                          </div>
-                          ]]>
                           &lt;script src="https://a0.awsstatic.com/chrome/js/1.0.46/jquery.1.9.js" type="text/javascript">&lt;/script>
                           &lt;script>
                           jQuery(function ($) {

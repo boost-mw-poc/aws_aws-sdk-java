@@ -27,18 +27,18 @@ public class CreateCliTokenRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * Create a CLI token request for a MWAA environment.
+     * The name of the Amazon MWAA environment. For example, <code>MyMWAAEnvironment</code>.
      * </p>
      */
     private String name;
 
     /**
      * <p>
-     * Create a CLI token request for a MWAA environment.
+     * The name of the Amazon MWAA environment. For example, <code>MyMWAAEnvironment</code>.
      * </p>
      * 
      * @param name
-     *        Create a CLI token request for a MWAA environment.
+     *        The name of the Amazon MWAA environment. For example, <code>MyMWAAEnvironment</code>.
      */
 
     public void setName(String name) {
@@ -47,10 +47,10 @@ public class CreateCliTokenRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * Create a CLI token request for a MWAA environment.
+     * The name of the Amazon MWAA environment. For example, <code>MyMWAAEnvironment</code>.
      * </p>
      * 
-     * @return Create a CLI token request for a MWAA environment.
+     * @return The name of the Amazon MWAA environment. For example, <code>MyMWAAEnvironment</code>.
      */
 
     public String getName() {
@@ -59,11 +59,11 @@ public class CreateCliTokenRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * Create a CLI token request for a MWAA environment.
+     * The name of the Amazon MWAA environment. For example, <code>MyMWAAEnvironment</code>.
      * </p>
      * 
      * @param name
-     *        Create a CLI token request for a MWAA environment.
+     *        The name of the Amazon MWAA environment. For example, <code>MyMWAAEnvironment</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

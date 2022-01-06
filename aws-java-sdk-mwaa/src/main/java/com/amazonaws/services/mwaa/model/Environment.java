@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The Amazon Managed Workflows for Apache Airflow (MWAA) environment.
+ * Describes an Amazon Managed Workflows for Apache Airflow (MWAA) environment.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mwaa-2020-07-01/Environment" target="_top">AWS API
@@ -38,7 +38,7 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
     private java.util.Map<String, String> airflowConfigurationOptions;
     /**
      * <p>
-     * The Apache Airflow version on your environment. For example, <code>v1.10.12</code>.
+     * The Apache Airflow version on your environment. Valid values: <code>1.10.12</code>, <code>2.0.2</code>.
      * </p>
      */
     private String airflowVersion;
@@ -72,23 +72,28 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
     private String environmentClass;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the execution role in IAM that allows MWAA to access AWS resources in your
-     * environment. For example, <code>arn:aws:iam::123456789:role/my-execution-role</code>. To learn more, see <a
-     * href="https://docs.aws.amazon.com/mwaa/latest/userguide/mwaa-create-role.html">Amazon MWAA Execution role</a>.
+     * The Amazon Resource Name (ARN) of the execution role in IAM that allows MWAA to access Amazon Web Services
+     * resources in your environment. For example, <code>arn:aws:iam::123456789:role/my-execution-role</code>. To learn
+     * more, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/mwaa-create-role.html">Amazon MWAA Execution
+     * role</a>.
      * </p>
      */
     private String executionRoleArn;
     /**
      * <p>
-     * The Key Management Service (KMS) encryption key used to encrypt the data in your environment.
+     * The Amazon Web Services Key Management Service (KMS) encryption key used to encrypt the data in your environment.
      * </p>
      */
     private String kmsKey;
-
+    /**
+     * <p>
+     * The status of the last update on the environment.
+     * </p>
+     */
     private LastUpdate lastUpdate;
     /**
      * <p>
-     * The Apache Airflow logs being sent to CloudWatch Logs: <code>DagProcessingLogs</code>, <code>SchedulerLogs</code>, <code>TaskLogs</code>, <code>WebserverLogs</code>, <code>WorkerLogs</code>.
+     * The Apache Airflow logs published to CloudWatch Logs.
      * </p>
      */
     private LoggingConfiguration loggingConfiguration;
@@ -110,7 +115,14 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private String name;
-
+    /**
+     * <p>
+     * Describes the VPC networking components used to secure and enable network traffic between the Amazon Web Services
+     * resources for your environment. To learn more, see <a
+     * href="https://docs.aws.amazon.com/mwaa/latest/userguide/networking-about.html">About networking on Amazon
+     * MWAA</a>.
+     * </p>
+     */
     private NetworkConfiguration networkConfiguration;
     /**
      * <p>
@@ -228,8 +240,8 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The key-value tag pairs associated to your environment. For example, <code>"Environment": "Staging"</code>. To
-     * learn more, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging AWS
-     * resources</a>.
+     * learn more, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web
+     * Services resources</a>.
      * </p>
      */
     private java.util.Map<String, String> tags;
@@ -251,7 +263,8 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
     private String webserverUrl;
     /**
      * <p>
-     * The day and time of the week that weekly maintenance updates are scheduled. For example: <code>TUE:03:30</code>.
+     * The day and time of the week in Coordinated Universal Time (UTC) 24-hour standard time that weekly maintenance
+     * updates are scheduled. For example: <code>TUE:03:30</code>.
      * </p>
      */
     private String weeklyMaintenanceWindowStart;
@@ -341,11 +354,11 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Apache Airflow version on your environment. For example, <code>v1.10.12</code>.
+     * The Apache Airflow version on your environment. Valid values: <code>1.10.12</code>, <code>2.0.2</code>.
      * </p>
      * 
      * @param airflowVersion
-     *        The Apache Airflow version on your environment. For example, <code>v1.10.12</code>.
+     *        The Apache Airflow version on your environment. Valid values: <code>1.10.12</code>, <code>2.0.2</code>.
      */
 
     public void setAirflowVersion(String airflowVersion) {
@@ -354,10 +367,10 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Apache Airflow version on your environment. For example, <code>v1.10.12</code>.
+     * The Apache Airflow version on your environment. Valid values: <code>1.10.12</code>, <code>2.0.2</code>.
      * </p>
      * 
-     * @return The Apache Airflow version on your environment. For example, <code>v1.10.12</code>.
+     * @return The Apache Airflow version on your environment. Valid values: <code>1.10.12</code>, <code>2.0.2</code>.
      */
 
     public String getAirflowVersion() {
@@ -366,11 +379,11 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Apache Airflow version on your environment. For example, <code>v1.10.12</code>.
+     * The Apache Airflow version on your environment. Valid values: <code>1.10.12</code>, <code>2.0.2</code>.
      * </p>
      * 
      * @param airflowVersion
-     *        The Apache Airflow version on your environment. For example, <code>v1.10.12</code>.
+     *        The Apache Airflow version on your environment. Valid values: <code>1.10.12</code>, <code>2.0.2</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -568,16 +581,17 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the execution role in IAM that allows MWAA to access AWS resources in your
-     * environment. For example, <code>arn:aws:iam::123456789:role/my-execution-role</code>. To learn more, see <a
-     * href="https://docs.aws.amazon.com/mwaa/latest/userguide/mwaa-create-role.html">Amazon MWAA Execution role</a>.
+     * The Amazon Resource Name (ARN) of the execution role in IAM that allows MWAA to access Amazon Web Services
+     * resources in your environment. For example, <code>arn:aws:iam::123456789:role/my-execution-role</code>. To learn
+     * more, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/mwaa-create-role.html">Amazon MWAA Execution
+     * role</a>.
      * </p>
      * 
      * @param executionRoleArn
-     *        The Amazon Resource Name (ARN) of the execution role in IAM that allows MWAA to access AWS resources in
-     *        your environment. For example, <code>arn:aws:iam::123456789:role/my-execution-role</code>. To learn more,
-     *        see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/mwaa-create-role.html">Amazon MWAA
-     *        Execution role</a>.
+     *        The Amazon Resource Name (ARN) of the execution role in IAM that allows MWAA to access Amazon Web Services
+     *        resources in your environment. For example, <code>arn:aws:iam::123456789:role/my-execution-role</code>. To
+     *        learn more, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/mwaa-create-role.html">Amazon
+     *        MWAA Execution role</a>.
      */
 
     public void setExecutionRoleArn(String executionRoleArn) {
@@ -586,15 +600,17 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the execution role in IAM that allows MWAA to access AWS resources in your
-     * environment. For example, <code>arn:aws:iam::123456789:role/my-execution-role</code>. To learn more, see <a
-     * href="https://docs.aws.amazon.com/mwaa/latest/userguide/mwaa-create-role.html">Amazon MWAA Execution role</a>.
+     * The Amazon Resource Name (ARN) of the execution role in IAM that allows MWAA to access Amazon Web Services
+     * resources in your environment. For example, <code>arn:aws:iam::123456789:role/my-execution-role</code>. To learn
+     * more, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/mwaa-create-role.html">Amazon MWAA Execution
+     * role</a>.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the execution role in IAM that allows MWAA to access AWS resources in
-     *         your environment. For example, <code>arn:aws:iam::123456789:role/my-execution-role</code>. To learn more,
-     *         see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/mwaa-create-role.html">Amazon MWAA
-     *         Execution role</a>.
+     * @return The Amazon Resource Name (ARN) of the execution role in IAM that allows MWAA to access Amazon Web
+     *         Services resources in your environment. For example,
+     *         <code>arn:aws:iam::123456789:role/my-execution-role</code>. To learn more, see <a
+     *         href="https://docs.aws.amazon.com/mwaa/latest/userguide/mwaa-create-role.html">Amazon MWAA Execution
+     *         role</a>.
      */
 
     public String getExecutionRoleArn() {
@@ -603,16 +619,17 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the execution role in IAM that allows MWAA to access AWS resources in your
-     * environment. For example, <code>arn:aws:iam::123456789:role/my-execution-role</code>. To learn more, see <a
-     * href="https://docs.aws.amazon.com/mwaa/latest/userguide/mwaa-create-role.html">Amazon MWAA Execution role</a>.
+     * The Amazon Resource Name (ARN) of the execution role in IAM that allows MWAA to access Amazon Web Services
+     * resources in your environment. For example, <code>arn:aws:iam::123456789:role/my-execution-role</code>. To learn
+     * more, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/mwaa-create-role.html">Amazon MWAA Execution
+     * role</a>.
      * </p>
      * 
      * @param executionRoleArn
-     *        The Amazon Resource Name (ARN) of the execution role in IAM that allows MWAA to access AWS resources in
-     *        your environment. For example, <code>arn:aws:iam::123456789:role/my-execution-role</code>. To learn more,
-     *        see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/mwaa-create-role.html">Amazon MWAA
-     *        Execution role</a>.
+     *        The Amazon Resource Name (ARN) of the execution role in IAM that allows MWAA to access Amazon Web Services
+     *        resources in your environment. For example, <code>arn:aws:iam::123456789:role/my-execution-role</code>. To
+     *        learn more, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/mwaa-create-role.html">Amazon
+     *        MWAA Execution role</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -623,11 +640,12 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Key Management Service (KMS) encryption key used to encrypt the data in your environment.
+     * The Amazon Web Services Key Management Service (KMS) encryption key used to encrypt the data in your environment.
      * </p>
      * 
      * @param kmsKey
-     *        The Key Management Service (KMS) encryption key used to encrypt the data in your environment.
+     *        The Amazon Web Services Key Management Service (KMS) encryption key used to encrypt the data in your
+     *        environment.
      */
 
     public void setKmsKey(String kmsKey) {
@@ -636,10 +654,11 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Key Management Service (KMS) encryption key used to encrypt the data in your environment.
+     * The Amazon Web Services Key Management Service (KMS) encryption key used to encrypt the data in your environment.
      * </p>
      * 
-     * @return The Key Management Service (KMS) encryption key used to encrypt the data in your environment.
+     * @return The Amazon Web Services Key Management Service (KMS) encryption key used to encrypt the data in your
+     *         environment.
      */
 
     public String getKmsKey() {
@@ -648,11 +667,12 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Key Management Service (KMS) encryption key used to encrypt the data in your environment.
+     * The Amazon Web Services Key Management Service (KMS) encryption key used to encrypt the data in your environment.
      * </p>
      * 
      * @param kmsKey
-     *        The Key Management Service (KMS) encryption key used to encrypt the data in your environment.
+     *        The Amazon Web Services Key Management Service (KMS) encryption key used to encrypt the data in your
+     *        environment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -662,7 +682,12 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The status of the last update on the environment.
+     * </p>
+     * 
      * @param lastUpdate
+     *        The status of the last update on the environment.
      */
 
     public void setLastUpdate(LastUpdate lastUpdate) {
@@ -670,7 +695,11 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * The status of the last update on the environment.
+     * </p>
+     * 
+     * @return The status of the last update on the environment.
      */
 
     public LastUpdate getLastUpdate() {
@@ -678,7 +707,12 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The status of the last update on the environment.
+     * </p>
+     * 
      * @param lastUpdate
+     *        The status of the last update on the environment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -689,12 +723,11 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Apache Airflow logs being sent to CloudWatch Logs: <code>DagProcessingLogs</code>, <code>SchedulerLogs</code>, <code>TaskLogs</code>, <code>WebserverLogs</code>, <code>WorkerLogs</code>.
+     * The Apache Airflow logs published to CloudWatch Logs.
      * </p>
      * 
      * @param loggingConfiguration
-     *        The Apache Airflow logs being sent to CloudWatch Logs: <code>DagProcessingLogs</code>,
-     *        <code>SchedulerLogs</code>, <code>TaskLogs</code>, <code>WebserverLogs</code>, <code>WorkerLogs</code>.
+     *        The Apache Airflow logs published to CloudWatch Logs.
      */
 
     public void setLoggingConfiguration(LoggingConfiguration loggingConfiguration) {
@@ -703,11 +736,10 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Apache Airflow logs being sent to CloudWatch Logs: <code>DagProcessingLogs</code>, <code>SchedulerLogs</code>, <code>TaskLogs</code>, <code>WebserverLogs</code>, <code>WorkerLogs</code>.
+     * The Apache Airflow logs published to CloudWatch Logs.
      * </p>
      * 
-     * @return The Apache Airflow logs being sent to CloudWatch Logs: <code>DagProcessingLogs</code>,
-     *         <code>SchedulerLogs</code>, <code>TaskLogs</code>, <code>WebserverLogs</code>, <code>WorkerLogs</code>.
+     * @return The Apache Airflow logs published to CloudWatch Logs.
      */
 
     public LoggingConfiguration getLoggingConfiguration() {
@@ -716,12 +748,11 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The Apache Airflow logs being sent to CloudWatch Logs: <code>DagProcessingLogs</code>, <code>SchedulerLogs</code>, <code>TaskLogs</code>, <code>WebserverLogs</code>, <code>WorkerLogs</code>.
+     * The Apache Airflow logs published to CloudWatch Logs.
      * </p>
      * 
      * @param loggingConfiguration
-     *        The Apache Airflow logs being sent to CloudWatch Logs: <code>DagProcessingLogs</code>,
-     *        <code>SchedulerLogs</code>, <code>TaskLogs</code>, <code>WebserverLogs</code>, <code>WorkerLogs</code>.
+     *        The Apache Airflow logs published to CloudWatch Logs.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -851,7 +882,18 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Describes the VPC networking components used to secure and enable network traffic between the Amazon Web Services
+     * resources for your environment. To learn more, see <a
+     * href="https://docs.aws.amazon.com/mwaa/latest/userguide/networking-about.html">About networking on Amazon
+     * MWAA</a>.
+     * </p>
+     * 
      * @param networkConfiguration
+     *        Describes the VPC networking components used to secure and enable network traffic between the Amazon Web
+     *        Services resources for your environment. To learn more, see <a
+     *        href="https://docs.aws.amazon.com/mwaa/latest/userguide/networking-about.html">About networking on Amazon
+     *        MWAA</a>.
      */
 
     public void setNetworkConfiguration(NetworkConfiguration networkConfiguration) {
@@ -859,7 +901,17 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * @return
+     * <p>
+     * Describes the VPC networking components used to secure and enable network traffic between the Amazon Web Services
+     * resources for your environment. To learn more, see <a
+     * href="https://docs.aws.amazon.com/mwaa/latest/userguide/networking-about.html">About networking on Amazon
+     * MWAA</a>.
+     * </p>
+     * 
+     * @return Describes the VPC networking components used to secure and enable network traffic between the Amazon Web
+     *         Services resources for your environment. To learn more, see <a
+     *         href="https://docs.aws.amazon.com/mwaa/latest/userguide/networking-about.html">About networking on Amazon
+     *         MWAA</a>.
      */
 
     public NetworkConfiguration getNetworkConfiguration() {
@@ -867,7 +919,18 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * Describes the VPC networking components used to secure and enable network traffic between the Amazon Web Services
+     * resources for your environment. To learn more, see <a
+     * href="https://docs.aws.amazon.com/mwaa/latest/userguide/networking-about.html">About networking on Amazon
+     * MWAA</a>.
+     * </p>
+     * 
      * @param networkConfiguration
+     *        Describes the VPC networking components used to secure and enable network traffic between the Amazon Web
+     *        Services resources for your environment. To learn more, see <a
+     *        href="https://docs.aws.amazon.com/mwaa/latest/userguide/networking-about.html">About networking on Amazon
+     *        MWAA</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1709,13 +1772,14 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The key-value tag pairs associated to your environment. For example, <code>"Environment": "Staging"</code>. To
-     * learn more, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging AWS
-     * resources</a>.
+     * learn more, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web
+     * Services resources</a>.
      * </p>
      * 
      * @return The key-value tag pairs associated to your environment. For example,
      *         <code>"Environment": "Staging"</code>. To learn more, see <a
-     *         href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging AWS resources</a>.
+     *         href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web Services
+     *         resources</a>.
      */
 
     public java.util.Map<String, String> getTags() {
@@ -1725,14 +1789,14 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The key-value tag pairs associated to your environment. For example, <code>"Environment": "Staging"</code>. To
-     * learn more, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging AWS
-     * resources</a>.
+     * learn more, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web
+     * Services resources</a>.
      * </p>
      * 
      * @param tags
      *        The key-value tag pairs associated to your environment. For example, <code>"Environment": "Staging"</code>
-     *        . To learn more, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging AWS
-     *        resources</a>.
+     *        . To learn more, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging
+     *        Amazon Web Services resources</a>.
      */
 
     public void setTags(java.util.Map<String, String> tags) {
@@ -1742,14 +1806,14 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The key-value tag pairs associated to your environment. For example, <code>"Environment": "Staging"</code>. To
-     * learn more, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging AWS
-     * resources</a>.
+     * learn more, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web
+     * Services resources</a>.
      * </p>
      * 
      * @param tags
      *        The key-value tag pairs associated to your environment. For example, <code>"Environment": "Staging"</code>
-     *        . To learn more, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging AWS
-     *        resources</a>.
+     *        . To learn more, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging
+     *        Amazon Web Services resources</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1915,12 +1979,13 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The day and time of the week that weekly maintenance updates are scheduled. For example: <code>TUE:03:30</code>.
+     * The day and time of the week in Coordinated Universal Time (UTC) 24-hour standard time that weekly maintenance
+     * updates are scheduled. For example: <code>TUE:03:30</code>.
      * </p>
      * 
      * @param weeklyMaintenanceWindowStart
-     *        The day and time of the week that weekly maintenance updates are scheduled. For example:
-     *        <code>TUE:03:30</code>.
+     *        The day and time of the week in Coordinated Universal Time (UTC) 24-hour standard time that weekly
+     *        maintenance updates are scheduled. For example: <code>TUE:03:30</code>.
      */
 
     public void setWeeklyMaintenanceWindowStart(String weeklyMaintenanceWindowStart) {
@@ -1929,11 +1994,12 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The day and time of the week that weekly maintenance updates are scheduled. For example: <code>TUE:03:30</code>.
+     * The day and time of the week in Coordinated Universal Time (UTC) 24-hour standard time that weekly maintenance
+     * updates are scheduled. For example: <code>TUE:03:30</code>.
      * </p>
      * 
-     * @return The day and time of the week that weekly maintenance updates are scheduled. For example:
-     *         <code>TUE:03:30</code>.
+     * @return The day and time of the week in Coordinated Universal Time (UTC) 24-hour standard time that weekly
+     *         maintenance updates are scheduled. For example: <code>TUE:03:30</code>.
      */
 
     public String getWeeklyMaintenanceWindowStart() {
@@ -1942,12 +2008,13 @@ public class Environment implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The day and time of the week that weekly maintenance updates are scheduled. For example: <code>TUE:03:30</code>.
+     * The day and time of the week in Coordinated Universal Time (UTC) 24-hour standard time that weekly maintenance
+     * updates are scheduled. For example: <code>TUE:03:30</code>.
      * </p>
      * 
      * @param weeklyMaintenanceWindowStart
-     *        The day and time of the week that weekly maintenance updates are scheduled. For example:
-     *        <code>TUE:03:30</code>.
+     *        The day and time of the week in Coordinated Universal Time (UTC) 24-hour standard time that weekly
+     *        maintenance updates are scheduled. For example: <code>TUE:03:30</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

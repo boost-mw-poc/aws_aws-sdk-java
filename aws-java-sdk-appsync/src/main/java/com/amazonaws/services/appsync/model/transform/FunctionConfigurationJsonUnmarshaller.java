@@ -84,6 +84,10 @@ public class FunctionConfigurationJsonUnmarshaller implements Unmarshaller<Funct
                     context.nextToken();
                     functionConfiguration.setSyncConfig(SyncConfigJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("maxBatchSize", targetDepth)) {
+                    context.nextToken();
+                    functionConfiguration.setMaxBatchSize(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

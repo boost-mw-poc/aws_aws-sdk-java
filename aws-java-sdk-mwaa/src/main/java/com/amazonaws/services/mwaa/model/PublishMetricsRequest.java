@@ -27,25 +27,26 @@ public class PublishMetricsRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * Publishes environment metric data to Amazon CloudWatch.
+     * <b>Internal only</b>. The name of the environment.
      * </p>
      */
     private String environmentName;
     /**
      * <p>
-     * Publishes metric data points to Amazon CloudWatch. CloudWatch associates the data points with the specified
-     * metrica.
+     * <b>Internal only</b>. Publishes metrics to Amazon CloudWatch. To learn more about the metrics published to Amazon
+     * CloudWatch, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/cw-metrics.html">Amazon MWAA
+     * performance metrics in Amazon CloudWatch</a>.
      * </p>
      */
     private java.util.List<MetricDatum> metricData;
 
     /**
      * <p>
-     * Publishes environment metric data to Amazon CloudWatch.
+     * <b>Internal only</b>. The name of the environment.
      * </p>
      * 
      * @param environmentName
-     *        Publishes environment metric data to Amazon CloudWatch.
+     *        <b>Internal only</b>. The name of the environment.
      */
 
     public void setEnvironmentName(String environmentName) {
@@ -54,10 +55,10 @@ public class PublishMetricsRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * Publishes environment metric data to Amazon CloudWatch.
+     * <b>Internal only</b>. The name of the environment.
      * </p>
      * 
-     * @return Publishes environment metric data to Amazon CloudWatch.
+     * @return <b>Internal only</b>. The name of the environment.
      */
 
     public String getEnvironmentName() {
@@ -66,11 +67,11 @@ public class PublishMetricsRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * Publishes environment metric data to Amazon CloudWatch.
+     * <b>Internal only</b>. The name of the environment.
      * </p>
      * 
      * @param environmentName
-     *        Publishes environment metric data to Amazon CloudWatch.
+     *        <b>Internal only</b>. The name of the environment.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -81,12 +82,15 @@ public class PublishMetricsRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * Publishes metric data points to Amazon CloudWatch. CloudWatch associates the data points with the specified
-     * metrica.
+     * <b>Internal only</b>. Publishes metrics to Amazon CloudWatch. To learn more about the metrics published to Amazon
+     * CloudWatch, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/cw-metrics.html">Amazon MWAA
+     * performance metrics in Amazon CloudWatch</a>.
      * </p>
      * 
-     * @return Publishes metric data points to Amazon CloudWatch. CloudWatch associates the data points with the
-     *         specified metrica.
+     * @return <b>Internal only</b>. Publishes metrics to Amazon CloudWatch. To learn more about the metrics published
+     *         to Amazon CloudWatch, see <a
+     *         href="https://docs.aws.amazon.com/mwaa/latest/userguide/cw-metrics.html">Amazon MWAA performance metrics
+     *         in Amazon CloudWatch</a>.
      */
 
     public java.util.List<MetricDatum> getMetricData() {
@@ -95,13 +99,15 @@ public class PublishMetricsRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * Publishes metric data points to Amazon CloudWatch. CloudWatch associates the data points with the specified
-     * metrica.
+     * <b>Internal only</b>. Publishes metrics to Amazon CloudWatch. To learn more about the metrics published to Amazon
+     * CloudWatch, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/cw-metrics.html">Amazon MWAA
+     * performance metrics in Amazon CloudWatch</a>.
      * </p>
      * 
      * @param metricData
-     *        Publishes metric data points to Amazon CloudWatch. CloudWatch associates the data points with the
-     *        specified metrica.
+     *        <b>Internal only</b>. Publishes metrics to Amazon CloudWatch. To learn more about the metrics published to
+     *        Amazon CloudWatch, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/cw-metrics.html">Amazon
+     *        MWAA performance metrics in Amazon CloudWatch</a>.
      */
 
     public void setMetricData(java.util.Collection<MetricDatum> metricData) {
@@ -115,8 +121,9 @@ public class PublishMetricsRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * Publishes metric data points to Amazon CloudWatch. CloudWatch associates the data points with the specified
-     * metrica.
+     * <b>Internal only</b>. Publishes metrics to Amazon CloudWatch. To learn more about the metrics published to Amazon
+     * CloudWatch, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/cw-metrics.html">Amazon MWAA
+     * performance metrics in Amazon CloudWatch</a>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -125,8 +132,9 @@ public class PublishMetricsRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      * 
      * @param metricData
-     *        Publishes metric data points to Amazon CloudWatch. CloudWatch associates the data points with the
-     *        specified metrica.
+     *        <b>Internal only</b>. Publishes metrics to Amazon CloudWatch. To learn more about the metrics published to
+     *        Amazon CloudWatch, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/cw-metrics.html">Amazon
+     *        MWAA performance metrics in Amazon CloudWatch</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -142,13 +150,15 @@ public class PublishMetricsRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * Publishes metric data points to Amazon CloudWatch. CloudWatch associates the data points with the specified
-     * metrica.
+     * <b>Internal only</b>. Publishes metrics to Amazon CloudWatch. To learn more about the metrics published to Amazon
+     * CloudWatch, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/cw-metrics.html">Amazon MWAA
+     * performance metrics in Amazon CloudWatch</a>.
      * </p>
      * 
      * @param metricData
-     *        Publishes metric data points to Amazon CloudWatch. CloudWatch associates the data points with the
-     *        specified metrica.
+     *        <b>Internal only</b>. Publishes metrics to Amazon CloudWatch. To learn more about the metrics published to
+     *        Amazon CloudWatch, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/cw-metrics.html">Amazon
+     *        MWAA performance metrics in Amazon CloudWatch</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

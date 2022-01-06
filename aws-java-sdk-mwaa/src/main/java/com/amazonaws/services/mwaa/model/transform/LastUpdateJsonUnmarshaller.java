@@ -56,6 +56,10 @@ public class LastUpdateJsonUnmarshaller implements Unmarshaller<LastUpdate, Json
                     context.nextToken();
                     lastUpdate.setError(UpdateErrorJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("Source", targetDepth)) {
+                    context.nextToken();
+                    lastUpdate.setSource(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("Status", targetDepth)) {
                     context.nextToken();
                     lastUpdate.setStatus(context.getUnmarshaller(String.class).unmarshall(context));

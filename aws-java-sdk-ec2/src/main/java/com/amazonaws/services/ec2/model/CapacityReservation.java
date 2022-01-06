@@ -233,6 +233,14 @@ public class CapacityReservation implements Serializable, Cloneable {
      * </p>
      */
     private String capacityReservationFleetId;
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the cluster placement group in which the Capacity Reservation was created. For
+     * more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/cr-cpg.html"> Capacity
+     * Reservations for cluster placement groups</a> in the <i>Amazon EC2 User Guide</i>.
+     * </p>
+     */
+    private String placementGroupArn;
 
     /**
      * <p>
@@ -1864,6 +1872,61 @@ public class CapacityReservation implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the cluster placement group in which the Capacity Reservation was created. For
+     * more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/cr-cpg.html"> Capacity
+     * Reservations for cluster placement groups</a> in the <i>Amazon EC2 User Guide</i>.
+     * </p>
+     * 
+     * @param placementGroupArn
+     *        The Amazon Resource Name (ARN) of the cluster placement group in which the Capacity Reservation was
+     *        created. For more information, see <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/cr-cpg.html"> Capacity Reservations for cluster
+     *        placement groups</a> in the <i>Amazon EC2 User Guide</i>.
+     */
+
+    public void setPlacementGroupArn(String placementGroupArn) {
+        this.placementGroupArn = placementGroupArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the cluster placement group in which the Capacity Reservation was created. For
+     * more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/cr-cpg.html"> Capacity
+     * Reservations for cluster placement groups</a> in the <i>Amazon EC2 User Guide</i>.
+     * </p>
+     * 
+     * @return The Amazon Resource Name (ARN) of the cluster placement group in which the Capacity Reservation was
+     *         created. For more information, see <a
+     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/cr-cpg.html"> Capacity Reservations for cluster
+     *         placement groups</a> in the <i>Amazon EC2 User Guide</i>.
+     */
+
+    public String getPlacementGroupArn() {
+        return this.placementGroupArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the cluster placement group in which the Capacity Reservation was created. For
+     * more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/cr-cpg.html"> Capacity
+     * Reservations for cluster placement groups</a> in the <i>Amazon EC2 User Guide</i>.
+     * </p>
+     * 
+     * @param placementGroupArn
+     *        The Amazon Resource Name (ARN) of the cluster placement group in which the Capacity Reservation was
+     *        created. For more information, see <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/cr-cpg.html"> Capacity Reservations for cluster
+     *        placement groups</a> in the <i>Amazon EC2 User Guide</i>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CapacityReservation withPlacementGroupArn(String placementGroupArn) {
+        setPlacementGroupArn(placementGroupArn);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1916,7 +1979,9 @@ public class CapacityReservation implements Serializable, Cloneable {
         if (getOutpostArn() != null)
             sb.append("OutpostArn: ").append(getOutpostArn()).append(",");
         if (getCapacityReservationFleetId() != null)
-            sb.append("CapacityReservationFleetId: ").append(getCapacityReservationFleetId());
+            sb.append("CapacityReservationFleetId: ").append(getCapacityReservationFleetId()).append(",");
+        if (getPlacementGroupArn() != null)
+            sb.append("PlacementGroupArn: ").append(getPlacementGroupArn());
         sb.append("}");
         return sb.toString();
     }
@@ -2015,6 +2080,10 @@ public class CapacityReservation implements Serializable, Cloneable {
             return false;
         if (other.getCapacityReservationFleetId() != null && other.getCapacityReservationFleetId().equals(this.getCapacityReservationFleetId()) == false)
             return false;
+        if (other.getPlacementGroupArn() == null ^ this.getPlacementGroupArn() == null)
+            return false;
+        if (other.getPlacementGroupArn() != null && other.getPlacementGroupArn().equals(this.getPlacementGroupArn()) == false)
+            return false;
         return true;
     }
 
@@ -2044,6 +2113,7 @@ public class CapacityReservation implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getOutpostArn() == null) ? 0 : getOutpostArn().hashCode());
         hashCode = prime * hashCode + ((getCapacityReservationFleetId() == null) ? 0 : getCapacityReservationFleetId().hashCode());
+        hashCode = prime * hashCode + ((getPlacementGroupArn() == null) ? 0 : getPlacementGroupArn().hashCode());
         return hashCode;
     }
 

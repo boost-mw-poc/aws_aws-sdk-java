@@ -31,6 +31,8 @@ public class LastUpdateMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CreatedAt").timestampFormat("unixTimestamp").build();
     private static final MarshallingInfo<StructuredPojo> ERROR_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("Error").build();
+    private static final MarshallingInfo<String> SOURCE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Source").build();
     private static final MarshallingInfo<String> STATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Status").build();
 
@@ -52,6 +54,7 @@ public class LastUpdateMarshaller {
         try {
             protocolMarshaller.marshall(lastUpdate.getCreatedAt(), CREATEDAT_BINDING);
             protocolMarshaller.marshall(lastUpdate.getError(), ERROR_BINDING);
+            protocolMarshaller.marshall(lastUpdate.getSource(), SOURCE_BINDING);
             protocolMarshaller.marshall(lastUpdate.getStatus(), STATUS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

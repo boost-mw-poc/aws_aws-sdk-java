@@ -20,6 +20,10 @@ import javax.annotation.Generated;
  * A filter name and value pair that is used to return a more specific list of results from a describe operation.
  * Filters can be used to match a set of resources by specific criteria, such as tags, attributes, or IDs.
  * </p>
+ * <p>
+ * If you specify multiple filters, the filters are joined with an <code>AND</code>, and the request returns only
+ * results that match all of the specified filters.
+ * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ec2-2016-11-15/Filter" target="_top">AWS API Documentation</a>
  */
@@ -34,7 +38,8 @@ public class Filter implements Serializable, Cloneable {
     private String name;
     /**
      * <p>
-     * The filter values. Filter values are case-sensitive.
+     * The filter values. Filter values are case-sensitive. If you specify multiple values for a filter, the values are
+     * joined with an <code>OR</code>, and the request returns all results that match any of the specified values.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> values;
@@ -64,7 +69,9 @@ public class Filter implements Serializable, Cloneable {
      * @param name
      *        The name of the filter. Filter names are case-sensitive.
      * @param values
-     *        The filter values. Filter values are case-sensitive.
+     *        The filter values. Filter values are case-sensitive. If you specify multiple values for a filter, the
+     *        values are joined with an <code>OR</code>, and the request returns all results that match any of the
+     *        specified values.
      */
     public Filter(String name, java.util.List<String> values) {
         setName(name);
@@ -113,10 +120,13 @@ public class Filter implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The filter values. Filter values are case-sensitive.
+     * The filter values. Filter values are case-sensitive. If you specify multiple values for a filter, the values are
+     * joined with an <code>OR</code>, and the request returns all results that match any of the specified values.
      * </p>
      * 
-     * @return The filter values. Filter values are case-sensitive.
+     * @return The filter values. Filter values are case-sensitive. If you specify multiple values for a filter, the
+     *         values are joined with an <code>OR</code>, and the request returns all results that match any of the
+     *         specified values.
      */
 
     public java.util.List<String> getValues() {
@@ -128,11 +138,14 @@ public class Filter implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The filter values. Filter values are case-sensitive.
+     * The filter values. Filter values are case-sensitive. If you specify multiple values for a filter, the values are
+     * joined with an <code>OR</code>, and the request returns all results that match any of the specified values.
      * </p>
      * 
      * @param values
-     *        The filter values. Filter values are case-sensitive.
+     *        The filter values. Filter values are case-sensitive. If you specify multiple values for a filter, the
+     *        values are joined with an <code>OR</code>, and the request returns all results that match any of the
+     *        specified values.
      */
 
     public void setValues(java.util.Collection<String> values) {
@@ -146,7 +159,8 @@ public class Filter implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The filter values. Filter values are case-sensitive.
+     * The filter values. Filter values are case-sensitive. If you specify multiple values for a filter, the values are
+     * joined with an <code>OR</code>, and the request returns all results that match any of the specified values.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -155,7 +169,9 @@ public class Filter implements Serializable, Cloneable {
      * </p>
      * 
      * @param values
-     *        The filter values. Filter values are case-sensitive.
+     *        The filter values. Filter values are case-sensitive. If you specify multiple values for a filter, the
+     *        values are joined with an <code>OR</code>, and the request returns all results that match any of the
+     *        specified values.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -171,11 +187,14 @@ public class Filter implements Serializable, Cloneable {
 
     /**
      * <p>
-     * The filter values. Filter values are case-sensitive.
+     * The filter values. Filter values are case-sensitive. If you specify multiple values for a filter, the values are
+     * joined with an <code>OR</code>, and the request returns all results that match any of the specified values.
      * </p>
      * 
      * @param values
-     *        The filter values. Filter values are case-sensitive.
+     *        The filter values. Filter values are case-sensitive. If you specify multiple values for a filter, the
+     *        values are joined with an <code>OR</code>, and the request returns all results that match any of the
+     *        specified values.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

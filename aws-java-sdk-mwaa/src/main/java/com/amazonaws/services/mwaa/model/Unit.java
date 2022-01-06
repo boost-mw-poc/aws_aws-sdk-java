@@ -15,9 +15,7 @@ package com.amazonaws.services.mwaa.model;
 import javax.annotation.Generated;
 
 /**
- * <p>
- * Unit
- * </p>
+ * 
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public enum Unit {

@@ -25,7 +25,7 @@ public class ListEnvironmentsResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * Returns the list of Amazon MWAA environments.
+     * Returns a list of Amazon MWAA environments.
      * </p>
      */
     private java.util.List<String> environments;
@@ -38,10 +38,10 @@ public class ListEnvironmentsResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * Returns the list of Amazon MWAA environments.
+     * Returns a list of Amazon MWAA environments.
      * </p>
      * 
-     * @return Returns the list of Amazon MWAA environments.
+     * @return Returns a list of Amazon MWAA environments.
      */
 
     public java.util.List<String> getEnvironments() {
@@ -50,11 +50,11 @@ public class ListEnvironmentsResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * Returns the list of Amazon MWAA environments.
+     * Returns a list of Amazon MWAA environments.
      * </p>
      * 
      * @param environments
-     *        Returns the list of Amazon MWAA environments.
+     *        Returns a list of Amazon MWAA environments.
      */
 
     public void setEnvironments(java.util.Collection<String> environments) {
@@ -68,7 +68,7 @@ public class ListEnvironmentsResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * Returns the list of Amazon MWAA environments.
+     * Returns a list of Amazon MWAA environments.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -77,7 +77,7 @@ public class ListEnvironmentsResult extends com.amazonaws.AmazonWebServiceResult
      * </p>
      * 
      * @param environments
-     *        Returns the list of Amazon MWAA environments.
+     *        Returns a list of Amazon MWAA environments.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -93,11 +93,11 @@ public class ListEnvironmentsResult extends com.amazonaws.AmazonWebServiceResult
 
     /**
      * <p>
-     * Returns the list of Amazon MWAA environments.
+     * Returns a list of Amazon MWAA environments.
      * </p>
      * 
      * @param environments
-     *        Returns the list of Amazon MWAA environments.
+     *        Returns a list of Amazon MWAA environments.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

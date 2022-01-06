@@ -26,7 +26,20 @@ import java.util.concurrent.ExecutorService;
  * notification when an asynchronous operation completes.
  * <p>
  * <p>
- * AWS IoT Wireless API documentation
+ * AWS IoT Wireless provides bi-directional communication between internet-connected wireless devices and the AWS Cloud.
+ * To onboard both LoRaWAN and Sidewalk devices to AWS IoT, use the IoT Wireless API. These wireless devices use the Low
+ * Power Wide Area Networking (LPWAN) communication protocol to communicate with AWS IoT.
+ * </p>
+ * <p>
+ * Using the API, you can perform create, read, update, and delete operations for your wireless devices, gateways,
+ * destinations, and profiles. After onboarding your devices, you can use the API operations to set log levels and
+ * monitor your devices with CloudWatch.
+ * </p>
+ * <p>
+ * You can also use the API operations to create multicast groups and schedule a multicast session for sending a
+ * downlink message to devices in the group. By using Firmware Updates Over-The-Air (FUOTA) API operations, you can
+ * create a FUOTA task and schedule a session to update the firmware of individual devices or an entire group of devices
+ * in a multicast group.
  * </p>
  */
 @ThreadSafe
@@ -769,6 +782,39 @@ public class AWSIoTWirelessAsyncClient extends AWSIoTWirelessClient implements A
 
                 try {
                     result = executeDeleteMulticastGroup(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteQueuedMessagesResult> deleteQueuedMessagesAsync(DeleteQueuedMessagesRequest request) {
+
+        return deleteQueuedMessagesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteQueuedMessagesResult> deleteQueuedMessagesAsync(final DeleteQueuedMessagesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeleteQueuedMessagesRequest, DeleteQueuedMessagesResult> asyncHandler) {
+        final DeleteQueuedMessagesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeleteQueuedMessagesResult>() {
+            @Override
+            public DeleteQueuedMessagesResult call() throws Exception {
+                DeleteQueuedMessagesResult result = null;
+
+                try {
+                    result = executeDeleteQueuedMessages(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -2048,6 +2094,39 @@ public class AWSIoTWirelessAsyncClient extends AWSIoTWirelessClient implements A
 
                 try {
                     result = executeListPartnerAccounts(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListQueuedMessagesResult> listQueuedMessagesAsync(ListQueuedMessagesRequest request) {
+
+        return listQueuedMessagesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListQueuedMessagesResult> listQueuedMessagesAsync(final ListQueuedMessagesRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListQueuedMessagesRequest, ListQueuedMessagesResult> asyncHandler) {
+        final ListQueuedMessagesRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListQueuedMessagesResult>() {
+            @Override
+            public ListQueuedMessagesResult call() throws Exception {
+                ListQueuedMessagesResult result = null;
+
+                try {
+                    result = executeListQueuedMessages(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

@@ -33,6 +33,10 @@ public class AdvancedSecurityOptionsMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("InternalUserDatabaseEnabled").build();
     private static final MarshallingInfo<StructuredPojo> SAMLOPTIONS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SAMLOptions").build();
+    private static final MarshallingInfo<java.util.Date> ANONYMOUSAUTHDISABLEDATE_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AnonymousAuthDisableDate").timestampFormat("unixTimestamp").build();
+    private static final MarshallingInfo<Boolean> ANONYMOUSAUTHENABLED_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AnonymousAuthEnabled").build();
 
     private static final AdvancedSecurityOptionsMarshaller instance = new AdvancedSecurityOptionsMarshaller();
 
@@ -53,6 +57,8 @@ public class AdvancedSecurityOptionsMarshaller {
             protocolMarshaller.marshall(advancedSecurityOptions.getEnabled(), ENABLED_BINDING);
             protocolMarshaller.marshall(advancedSecurityOptions.getInternalUserDatabaseEnabled(), INTERNALUSERDATABASEENABLED_BINDING);
             protocolMarshaller.marshall(advancedSecurityOptions.getSAMLOptions(), SAMLOPTIONS_BINDING);
+            protocolMarshaller.marshall(advancedSecurityOptions.getAnonymousAuthDisableDate(), ANONYMOUSAUTHDISABLEDATE_BINDING);
+            protocolMarshaller.marshall(advancedSecurityOptions.getAnonymousAuthEnabled(), ANONYMOUSAUTHENABLED_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

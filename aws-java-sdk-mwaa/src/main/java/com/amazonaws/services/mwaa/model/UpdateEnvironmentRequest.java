@@ -36,8 +36,8 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
     private java.util.Map<String, String> airflowConfigurationOptions;
     /**
      * <p>
-     * The Apache Airflow version for your environment. For example, <code>v1.10.12</code>. If no value is specified,
-     * defaults to the latest version. Valid values: <code>v1.10.12</code>.
+     * The Apache Airflow version for your environment. If no value is specified, defaults to the latest version. Valid
+     * values: <code>1.10.12</code>, <code>2.0.2</code>.
      * </p>
      */
     private String airflowVersion;
@@ -59,16 +59,16 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
     private String environmentClass;
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the execution role in IAM that allows MWAA to access AWS resources in your
-     * environment. For example, <code>arn:aws:iam::123456789:role/my-execution-role</code>. To learn more, see <a
-     * href="https://docs.aws.amazon.com/mwaa/latest/userguide/mwaa-create-role.html">Amazon MWAA Execution role</a>.
+     * The Amazon Resource Name (ARN) of the execution role in IAM that allows MWAA to access Amazon Web Services
+     * resources in your environment. For example, <code>arn:aws:iam::123456789:role/my-execution-role</code>. To learn
+     * more, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/mwaa-create-role.html">Amazon MWAA Execution
+     * role</a>.
      * </p>
      */
     private String executionRoleArn;
     /**
      * <p>
-     * Defines the Apache Airflow logs to send to CloudWatch Logs: <code>DagProcessingLogs</code>,
-     * <code>SchedulerLogs</code>, <code>TaskLogs</code>, <code>WebserverLogs</code>, <code>WorkerLogs</code>.
+     * The Apache Airflow log types to send to CloudWatch Logs.
      * </p>
      */
     private LoggingConfigurationInput loggingConfiguration;
@@ -98,8 +98,8 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
     private String name;
     /**
      * <p>
-     * The VPC networking components used to secure and enable network traffic between the AWS resources for your
-     * environment. To learn more, see <a
+     * The VPC networking components used to secure and enable network traffic between the Amazon Web Services resources
+     * for your environment. To learn more, see <a
      * href="https://docs.aws.amazon.com/mwaa/latest/userguide/networking-about.html">About networking on Amazon
      * MWAA</a>.
      * </p>
@@ -166,17 +166,10 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
     private String webserverAccessMode;
     /**
      * <p>
-     * The day and time of the week to start weekly maintenance updates of your environment in the following format:
-     * <code>DAY:HH:MM</code>. For example: <code>TUE:03:30</code>. You can specify a start time in 30 minute increments
-     * only. Supported input includes the following:
+     * The day and time of the week in Coordinated Universal Time (UTC) 24-hour standard time to start weekly
+     * maintenance updates of your environment in the following format: <code>DAY:HH:MM</code>. For example:
+     * <code>TUE:03:30</code>. You can specify a start time in 30 minute increments only.
      * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * MON|TUE|WED|THU|FRI|SAT|SUN:([01]\\d|2[0-3]):(00|30)
-     * </p>
-     * </li>
-     * </ul>
      */
     private String weeklyMaintenanceWindowStart;
 
@@ -268,13 +261,13 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The Apache Airflow version for your environment. For example, <code>v1.10.12</code>. If no value is specified,
-     * defaults to the latest version. Valid values: <code>v1.10.12</code>.
+     * The Apache Airflow version for your environment. If no value is specified, defaults to the latest version. Valid
+     * values: <code>1.10.12</code>, <code>2.0.2</code>.
      * </p>
      * 
      * @param airflowVersion
-     *        The Apache Airflow version for your environment. For example, <code>v1.10.12</code>. If no value is
-     *        specified, defaults to the latest version. Valid values: <code>v1.10.12</code>.
+     *        The Apache Airflow version for your environment. If no value is specified, defaults to the latest version.
+     *        Valid values: <code>1.10.12</code>, <code>2.0.2</code>.
      */
 
     public void setAirflowVersion(String airflowVersion) {
@@ -283,12 +276,12 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The Apache Airflow version for your environment. For example, <code>v1.10.12</code>. If no value is specified,
-     * defaults to the latest version. Valid values: <code>v1.10.12</code>.
+     * The Apache Airflow version for your environment. If no value is specified, defaults to the latest version. Valid
+     * values: <code>1.10.12</code>, <code>2.0.2</code>.
      * </p>
      * 
-     * @return The Apache Airflow version for your environment. For example, <code>v1.10.12</code>. If no value is
-     *         specified, defaults to the latest version. Valid values: <code>v1.10.12</code>.
+     * @return The Apache Airflow version for your environment. If no value is specified, defaults to the latest
+     *         version. Valid values: <code>1.10.12</code>, <code>2.0.2</code>.
      */
 
     public String getAirflowVersion() {
@@ -297,13 +290,13 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The Apache Airflow version for your environment. For example, <code>v1.10.12</code>. If no value is specified,
-     * defaults to the latest version. Valid values: <code>v1.10.12</code>.
+     * The Apache Airflow version for your environment. If no value is specified, defaults to the latest version. Valid
+     * values: <code>1.10.12</code>, <code>2.0.2</code>.
      * </p>
      * 
      * @param airflowVersion
-     *        The Apache Airflow version for your environment. For example, <code>v1.10.12</code>. If no value is
-     *        specified, defaults to the latest version. Valid values: <code>v1.10.12</code>.
+     *        The Apache Airflow version for your environment. If no value is specified, defaults to the latest version.
+     *        Valid values: <code>1.10.12</code>, <code>2.0.2</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -421,16 +414,17 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the execution role in IAM that allows MWAA to access AWS resources in your
-     * environment. For example, <code>arn:aws:iam::123456789:role/my-execution-role</code>. To learn more, see <a
-     * href="https://docs.aws.amazon.com/mwaa/latest/userguide/mwaa-create-role.html">Amazon MWAA Execution role</a>.
+     * The Amazon Resource Name (ARN) of the execution role in IAM that allows MWAA to access Amazon Web Services
+     * resources in your environment. For example, <code>arn:aws:iam::123456789:role/my-execution-role</code>. To learn
+     * more, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/mwaa-create-role.html">Amazon MWAA Execution
+     * role</a>.
      * </p>
      * 
      * @param executionRoleArn
-     *        The Amazon Resource Name (ARN) of the execution role in IAM that allows MWAA to access AWS resources in
-     *        your environment. For example, <code>arn:aws:iam::123456789:role/my-execution-role</code>. To learn more,
-     *        see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/mwaa-create-role.html">Amazon MWAA
-     *        Execution role</a>.
+     *        The Amazon Resource Name (ARN) of the execution role in IAM that allows MWAA to access Amazon Web Services
+     *        resources in your environment. For example, <code>arn:aws:iam::123456789:role/my-execution-role</code>. To
+     *        learn more, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/mwaa-create-role.html">Amazon
+     *        MWAA Execution role</a>.
      */
 
     public void setExecutionRoleArn(String executionRoleArn) {
@@ -439,15 +433,17 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the execution role in IAM that allows MWAA to access AWS resources in your
-     * environment. For example, <code>arn:aws:iam::123456789:role/my-execution-role</code>. To learn more, see <a
-     * href="https://docs.aws.amazon.com/mwaa/latest/userguide/mwaa-create-role.html">Amazon MWAA Execution role</a>.
+     * The Amazon Resource Name (ARN) of the execution role in IAM that allows MWAA to access Amazon Web Services
+     * resources in your environment. For example, <code>arn:aws:iam::123456789:role/my-execution-role</code>. To learn
+     * more, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/mwaa-create-role.html">Amazon MWAA Execution
+     * role</a>.
      * </p>
      * 
-     * @return The Amazon Resource Name (ARN) of the execution role in IAM that allows MWAA to access AWS resources in
-     *         your environment. For example, <code>arn:aws:iam::123456789:role/my-execution-role</code>. To learn more,
-     *         see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/mwaa-create-role.html">Amazon MWAA
-     *         Execution role</a>.
+     * @return The Amazon Resource Name (ARN) of the execution role in IAM that allows MWAA to access Amazon Web
+     *         Services resources in your environment. For example,
+     *         <code>arn:aws:iam::123456789:role/my-execution-role</code>. To learn more, see <a
+     *         href="https://docs.aws.amazon.com/mwaa/latest/userguide/mwaa-create-role.html">Amazon MWAA Execution
+     *         role</a>.
      */
 
     public String getExecutionRoleArn() {
@@ -456,16 +452,17 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The Amazon Resource Name (ARN) of the execution role in IAM that allows MWAA to access AWS resources in your
-     * environment. For example, <code>arn:aws:iam::123456789:role/my-execution-role</code>. To learn more, see <a
-     * href="https://docs.aws.amazon.com/mwaa/latest/userguide/mwaa-create-role.html">Amazon MWAA Execution role</a>.
+     * The Amazon Resource Name (ARN) of the execution role in IAM that allows MWAA to access Amazon Web Services
+     * resources in your environment. For example, <code>arn:aws:iam::123456789:role/my-execution-role</code>. To learn
+     * more, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/mwaa-create-role.html">Amazon MWAA Execution
+     * role</a>.
      * </p>
      * 
      * @param executionRoleArn
-     *        The Amazon Resource Name (ARN) of the execution role in IAM that allows MWAA to access AWS resources in
-     *        your environment. For example, <code>arn:aws:iam::123456789:role/my-execution-role</code>. To learn more,
-     *        see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/mwaa-create-role.html">Amazon MWAA
-     *        Execution role</a>.
+     *        The Amazon Resource Name (ARN) of the execution role in IAM that allows MWAA to access Amazon Web Services
+     *        resources in your environment. For example, <code>arn:aws:iam::123456789:role/my-execution-role</code>. To
+     *        learn more, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/mwaa-create-role.html">Amazon
+     *        MWAA Execution role</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -476,13 +473,11 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * Defines the Apache Airflow logs to send to CloudWatch Logs: <code>DagProcessingLogs</code>,
-     * <code>SchedulerLogs</code>, <code>TaskLogs</code>, <code>WebserverLogs</code>, <code>WorkerLogs</code>.
+     * The Apache Airflow log types to send to CloudWatch Logs.
      * </p>
      * 
      * @param loggingConfiguration
-     *        Defines the Apache Airflow logs to send to CloudWatch Logs: <code>DagProcessingLogs</code>,
-     *        <code>SchedulerLogs</code>, <code>TaskLogs</code>, <code>WebserverLogs</code>, <code>WorkerLogs</code>.
+     *        The Apache Airflow log types to send to CloudWatch Logs.
      */
 
     public void setLoggingConfiguration(LoggingConfigurationInput loggingConfiguration) {
@@ -491,12 +486,10 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * Defines the Apache Airflow logs to send to CloudWatch Logs: <code>DagProcessingLogs</code>,
-     * <code>SchedulerLogs</code>, <code>TaskLogs</code>, <code>WebserverLogs</code>, <code>WorkerLogs</code>.
+     * The Apache Airflow log types to send to CloudWatch Logs.
      * </p>
      * 
-     * @return Defines the Apache Airflow logs to send to CloudWatch Logs: <code>DagProcessingLogs</code>,
-     *         <code>SchedulerLogs</code>, <code>TaskLogs</code>, <code>WebserverLogs</code>, <code>WorkerLogs</code>.
+     * @return The Apache Airflow log types to send to CloudWatch Logs.
      */
 
     public LoggingConfigurationInput getLoggingConfiguration() {
@@ -505,13 +498,11 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * Defines the Apache Airflow logs to send to CloudWatch Logs: <code>DagProcessingLogs</code>,
-     * <code>SchedulerLogs</code>, <code>TaskLogs</code>, <code>WebserverLogs</code>, <code>WorkerLogs</code>.
+     * The Apache Airflow log types to send to CloudWatch Logs.
      * </p>
      * 
      * @param loggingConfiguration
-     *        Defines the Apache Airflow logs to send to CloudWatch Logs: <code>DagProcessingLogs</code>,
-     *        <code>SchedulerLogs</code>, <code>TaskLogs</code>, <code>WebserverLogs</code>, <code>WorkerLogs</code>.
+     *        The Apache Airflow log types to send to CloudWatch Logs.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -681,15 +672,15 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The VPC networking components used to secure and enable network traffic between the AWS resources for your
-     * environment. To learn more, see <a
+     * The VPC networking components used to secure and enable network traffic between the Amazon Web Services resources
+     * for your environment. To learn more, see <a
      * href="https://docs.aws.amazon.com/mwaa/latest/userguide/networking-about.html">About networking on Amazon
      * MWAA</a>.
      * </p>
      * 
      * @param networkConfiguration
-     *        The VPC networking components used to secure and enable network traffic between the AWS resources for your
-     *        environment. To learn more, see <a
+     *        The VPC networking components used to secure and enable network traffic between the Amazon Web Services
+     *        resources for your environment. To learn more, see <a
      *        href="https://docs.aws.amazon.com/mwaa/latest/userguide/networking-about.html">About networking on Amazon
      *        MWAA</a>.
      */
@@ -700,14 +691,14 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The VPC networking components used to secure and enable network traffic between the AWS resources for your
-     * environment. To learn more, see <a
+     * The VPC networking components used to secure and enable network traffic between the Amazon Web Services resources
+     * for your environment. To learn more, see <a
      * href="https://docs.aws.amazon.com/mwaa/latest/userguide/networking-about.html">About networking on Amazon
      * MWAA</a>.
      * </p>
      * 
-     * @return The VPC networking components used to secure and enable network traffic between the AWS resources for
-     *         your environment. To learn more, see <a
+     * @return The VPC networking components used to secure and enable network traffic between the Amazon Web Services
+     *         resources for your environment. To learn more, see <a
      *         href="https://docs.aws.amazon.com/mwaa/latest/userguide/networking-about.html">About networking on Amazon
      *         MWAA</a>.
      */
@@ -718,15 +709,15 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The VPC networking components used to secure and enable network traffic between the AWS resources for your
-     * environment. To learn more, see <a
+     * The VPC networking components used to secure and enable network traffic between the Amazon Web Services resources
+     * for your environment. To learn more, see <a
      * href="https://docs.aws.amazon.com/mwaa/latest/userguide/networking-about.html">About networking on Amazon
      * MWAA</a>.
      * </p>
      * 
      * @param networkConfiguration
-     *        The VPC networking components used to secure and enable network traffic between the AWS resources for your
-     *        environment. To learn more, see <a
+     *        The VPC networking components used to secure and enable network traffic between the Amazon Web Services
+     *        resources for your environment. To learn more, see <a
      *        href="https://docs.aws.amazon.com/mwaa/latest/userguide/networking-about.html">About networking on Amazon
      *        MWAA</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -1144,28 +1135,15 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The day and time of the week to start weekly maintenance updates of your environment in the following format:
-     * <code>DAY:HH:MM</code>. For example: <code>TUE:03:30</code>. You can specify a start time in 30 minute increments
-     * only. Supported input includes the following:
+     * The day and time of the week in Coordinated Universal Time (UTC) 24-hour standard time to start weekly
+     * maintenance updates of your environment in the following format: <code>DAY:HH:MM</code>. For example:
+     * <code>TUE:03:30</code>. You can specify a start time in 30 minute increments only.
      * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * MON|TUE|WED|THU|FRI|SAT|SUN:([01]\\d|2[0-3]):(00|30)
-     * </p>
-     * </li>
-     * </ul>
      * 
      * @param weeklyMaintenanceWindowStart
-     *        The day and time of the week to start weekly maintenance updates of your environment in the following
-     *        format: <code>DAY:HH:MM</code>. For example: <code>TUE:03:30</code>. You can specify a start time in 30
-     *        minute increments only. Supported input includes the following:</p>
-     *        <ul>
-     *        <li>
-     *        <p>
-     *        MON|TUE|WED|THU|FRI|SAT|SUN:([01]\\d|2[0-3]):(00|30)
-     *        </p>
-     *        </li>
+     *        The day and time of the week in Coordinated Universal Time (UTC) 24-hour standard time to start weekly
+     *        maintenance updates of your environment in the following format: <code>DAY:HH:MM</code>. For example:
+     *        <code>TUE:03:30</code>. You can specify a start time in 30 minute increments only.
      */
 
     public void setWeeklyMaintenanceWindowStart(String weeklyMaintenanceWindowStart) {
@@ -1174,27 +1152,14 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The day and time of the week to start weekly maintenance updates of your environment in the following format:
-     * <code>DAY:HH:MM</code>. For example: <code>TUE:03:30</code>. You can specify a start time in 30 minute increments
-     * only. Supported input includes the following:
+     * The day and time of the week in Coordinated Universal Time (UTC) 24-hour standard time to start weekly
+     * maintenance updates of your environment in the following format: <code>DAY:HH:MM</code>. For example:
+     * <code>TUE:03:30</code>. You can specify a start time in 30 minute increments only.
      * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * MON|TUE|WED|THU|FRI|SAT|SUN:([01]\\d|2[0-3]):(00|30)
-     * </p>
-     * </li>
-     * </ul>
      * 
-     * @return The day and time of the week to start weekly maintenance updates of your environment in the following
-     *         format: <code>DAY:HH:MM</code>. For example: <code>TUE:03:30</code>. You can specify a start time in 30
-     *         minute increments only. Supported input includes the following:</p>
-     *         <ul>
-     *         <li>
-     *         <p>
-     *         MON|TUE|WED|THU|FRI|SAT|SUN:([01]\\d|2[0-3]):(00|30)
-     *         </p>
-     *         </li>
+     * @return The day and time of the week in Coordinated Universal Time (UTC) 24-hour standard time to start weekly
+     *         maintenance updates of your environment in the following format: <code>DAY:HH:MM</code>. For example:
+     *         <code>TUE:03:30</code>. You can specify a start time in 30 minute increments only.
      */
 
     public String getWeeklyMaintenanceWindowStart() {
@@ -1203,28 +1168,15 @@ public class UpdateEnvironmentRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The day and time of the week to start weekly maintenance updates of your environment in the following format:
-     * <code>DAY:HH:MM</code>. For example: <code>TUE:03:30</code>. You can specify a start time in 30 minute increments
-     * only. Supported input includes the following:
+     * The day and time of the week in Coordinated Universal Time (UTC) 24-hour standard time to start weekly
+     * maintenance updates of your environment in the following format: <code>DAY:HH:MM</code>. For example:
+     * <code>TUE:03:30</code>. You can specify a start time in 30 minute increments only.
      * </p>
-     * <ul>
-     * <li>
-     * <p>
-     * MON|TUE|WED|THU|FRI|SAT|SUN:([01]\\d|2[0-3]):(00|30)
-     * </p>
-     * </li>
-     * </ul>
      * 
      * @param weeklyMaintenanceWindowStart
-     *        The day and time of the week to start weekly maintenance updates of your environment in the following
-     *        format: <code>DAY:HH:MM</code>. For example: <code>TUE:03:30</code>. You can specify a start time in 30
-     *        minute increments only. Supported input includes the following:</p>
-     *        <ul>
-     *        <li>
-     *        <p>
-     *        MON|TUE|WED|THU|FRI|SAT|SUN:([01]\\d|2[0-3]):(00|30)
-     *        </p>
-     *        </li>
+     *        The day and time of the week in Coordinated Universal Time (UTC) 24-hour standard time to start weekly
+     *        maintenance updates of your environment in the following format: <code>DAY:HH:MM</code>. For example:
+     *        <code>TUE:03:30</code>. You can specify a start time in 30 minute increments only.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

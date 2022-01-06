@@ -133,6 +133,11 @@ public class AbstractAWSIoTWireless implements AWSIoTWireless {
     }
 
     @Override
+    public DeleteQueuedMessagesResult deleteQueuedMessages(DeleteQueuedMessagesRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DeleteServiceProfileResult deleteServiceProfile(DeleteServiceProfileRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -320,6 +325,11 @@ public class AbstractAWSIoTWireless implements AWSIoTWireless {
 
     @Override
     public ListPartnerAccountsResult listPartnerAccounts(ListPartnerAccountsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListQueuedMessagesResult listQueuedMessages(ListQueuedMessagesRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

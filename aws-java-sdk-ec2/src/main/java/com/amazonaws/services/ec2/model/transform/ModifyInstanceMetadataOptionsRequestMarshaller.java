@@ -62,6 +62,10 @@ public class ModifyInstanceMetadataOptionsRequestMarshaller implements
             request.addParameter("HttpProtocolIpv6", StringUtils.fromString(modifyInstanceMetadataOptionsRequest.getHttpProtocolIpv6()));
         }
 
+        if (modifyInstanceMetadataOptionsRequest.getInstanceMetadataTags() != null) {
+            request.addParameter("InstanceMetadataTags", StringUtils.fromString(modifyInstanceMetadataOptionsRequest.getInstanceMetadataTags()));
+        }
+
         return request;
     }
 

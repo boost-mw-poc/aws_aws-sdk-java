@@ -27,12 +27,13 @@ import com.amazonaws.services.ec2.model.*;
  * <p>
  * <fullname>Amazon Elastic Compute Cloud</fullname>
  * <p>
- * Amazon Elastic Compute Cloud (Amazon EC2) provides secure and resizable computing capacity in the AWS Cloud. Using
- * Amazon EC2 eliminates the need to invest in hardware up front, so you can develop and deploy applications faster.
- * Amazon Virtual Private Cloud (Amazon VPC) enables you to provision a logically isolated section of the AWS Cloud
- * where you can launch AWS resources in a virtual network that you've defined. Amazon Elastic Block Store (Amazon EBS)
- * provides block level storage volumes for use with EC2 instances. EBS volumes are highly available and reliable
- * storage volumes that can be attached to any running instance and used like a hard drive.
+ * Amazon Elastic Compute Cloud (Amazon EC2) provides secure and resizable computing capacity in the Amazon Web Services
+ * Cloud. Using Amazon EC2 eliminates the need to invest in hardware up front, so you can develop and deploy
+ * applications faster. Amazon Virtual Private Cloud (Amazon VPC) enables you to provision a logically isolated section
+ * of the Amazon Web Services Cloud where you can launch Amazon Web Services resources in a virtual network that you've
+ * defined. Amazon Elastic Block Store (Amazon EBS) provides block level storage volumes for use with EC2 instances. EBS
+ * volumes are highly available and reliable storage volumes that can be attached to any running instance and used like
+ * a hard drive.
  * </p>
  * <p>
  * To learn more, see the following resources:
@@ -58,8 +59,8 @@ import com.amazonaws.services.ec2.model.*;
  * </li>
  * <li>
  * <p>
- * AWS VPN: <a href="http://aws.amazon.com/vpn">AWS VPN product page</a>, <a
- * href="http://aws.amazon.com/documentation/vpn">AWS VPN documentation</a>
+ * Amazon Web Services VPN: <a href="http://aws.amazon.com/vpn">Amazon Web Services VPN product page</a>, <a
+ * href="http://aws.amazon.com/documentation/vpn">Amazon Web Services VPN documentation</a>
  * </p>
  * </li>
  * </ul>
@@ -9164,7 +9165,7 @@ public interface AmazonEC2Async extends AmazonEC2 {
 
     /**
      * <p>
-     * Describes attributes of your AWS account. The following are the supported account attributes:
+     * Describes attributes of your Amazon Web Services account. The following are the supported account attributes:
      * </p>
      * <ul>
      * <li>
@@ -9217,7 +9218,7 @@ public interface AmazonEC2Async extends AmazonEC2 {
 
     /**
      * <p>
-     * Describes attributes of your AWS account. The following are the supported account attributes:
+     * Describes attributes of your Amazon Web Services account. The following are the supported account attributes:
      * </p>
      * <ul>
      * <li>
@@ -14014,8 +14015,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
     /**
      * <p>
      * [VPC only] Describes the stale security group rules for security groups in a specified VPC. Rules are stale when
-     * they reference a deleted security group in a peer VPC, or a security group in a peer VPC for which the VPC
-     * peering connection has been deleted.
+     * they reference a deleted security group in the same VPC or in a peer VPC, or if they reference a security group
+     * in a peer VPC for which the VPC peering connection has been deleted.
      * </p>
      * 
      * @param describeStaleSecurityGroupsRequest
@@ -14030,8 +14031,8 @@ public interface AmazonEC2Async extends AmazonEC2 {
     /**
      * <p>
      * [VPC only] Describes the stale security group rules for security groups in a specified VPC. Rules are stale when
-     * they reference a deleted security group in a peer VPC, or a security group in a peer VPC for which the VPC
-     * peering connection has been deleted.
+     * they reference a deleted security group in the same VPC or in a peer VPC, or if they reference a security group
+     * in a peer VPC for which the VPC peering connection has been deleted.
      * </p>
      * 
      * @param describeStaleSecurityGroupsRequest

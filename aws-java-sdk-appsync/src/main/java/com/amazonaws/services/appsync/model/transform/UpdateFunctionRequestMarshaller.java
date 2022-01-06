@@ -45,6 +45,8 @@ public class UpdateFunctionRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("functionVersion").build();
     private static final MarshallingInfo<StructuredPojo> SYNCCONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("syncConfig").build();
+    private static final MarshallingInfo<Integer> MAXBATCHSIZE_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("maxBatchSize").build();
 
     private static final UpdateFunctionRequestMarshaller instance = new UpdateFunctionRequestMarshaller();
 
@@ -71,6 +73,7 @@ public class UpdateFunctionRequestMarshaller {
             protocolMarshaller.marshall(updateFunctionRequest.getResponseMappingTemplate(), RESPONSEMAPPINGTEMPLATE_BINDING);
             protocolMarshaller.marshall(updateFunctionRequest.getFunctionVersion(), FUNCTIONVERSION_BINDING);
             protocolMarshaller.marshall(updateFunctionRequest.getSyncConfig(), SYNCCONFIG_BINDING);
+            protocolMarshaller.marshall(updateFunctionRequest.getMaxBatchSize(), MAXBATCHSIZE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

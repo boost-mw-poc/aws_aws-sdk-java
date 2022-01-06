@@ -19,8 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The VPC networking components used to secure and enable network traffic between the AWS resources for your
- * environment. To learn more, see <a
+ * Describes the VPC networking components used to secure and enable network traffic between the Amazon Web Services
+ * resources for your environment. To learn more, see <a
  * href="https://docs.aws.amazon.com/mwaa/latest/userguide/networking-about.html">About networking on Amazon MWAA</a>.
  * </p>
  * 
@@ -32,8 +32,7 @@ public class NetworkConfiguration implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * A list of 1 or more security group IDs. Accepts up to 5 security group IDs. A security group must be attached to
-     * the same VPC as the subnets. To learn more, see <a
+     * A list of security group IDs. To learn more, see <a
      * href="https://docs.aws.amazon.com/mwaa/latest/userguide/vpc-security.html">Security in your VPC on Amazon
      * MWAA</a>.
      * </p>
@@ -41,22 +40,21 @@ public class NetworkConfiguration implements Serializable, Cloneable, Structured
     private java.util.List<String> securityGroupIds;
     /**
      * <p>
-     * A list of 2 subnet IDs. <b>Required</b> to create an environment. Must be private subnets in two different
-     * availability zones. A subnet must be attached to the same VPC as the security group.
+     * A list of subnet IDs. To learn more, see <a
+     * href="https://docs.aws.amazon.com/mwaa/latest/userguide/networking-about.html">About networking on Amazon
+     * MWAA</a>.
      * </p>
      */
     private java.util.List<String> subnetIds;
 
     /**
      * <p>
-     * A list of 1 or more security group IDs. Accepts up to 5 security group IDs. A security group must be attached to
-     * the same VPC as the subnets. To learn more, see <a
+     * A list of security group IDs. To learn more, see <a
      * href="https://docs.aws.amazon.com/mwaa/latest/userguide/vpc-security.html">Security in your VPC on Amazon
      * MWAA</a>.
      * </p>
      * 
-     * @return A list of 1 or more security group IDs. Accepts up to 5 security group IDs. A security group must be
-     *         attached to the same VPC as the subnets. To learn more, see <a
+     * @return A list of security group IDs. To learn more, see <a
      *         href="https://docs.aws.amazon.com/mwaa/latest/userguide/vpc-security.html">Security in your VPC on Amazon
      *         MWAA</a>.
      */
@@ -67,15 +65,13 @@ public class NetworkConfiguration implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * A list of 1 or more security group IDs. Accepts up to 5 security group IDs. A security group must be attached to
-     * the same VPC as the subnets. To learn more, see <a
+     * A list of security group IDs. To learn more, see <a
      * href="https://docs.aws.amazon.com/mwaa/latest/userguide/vpc-security.html">Security in your VPC on Amazon
      * MWAA</a>.
      * </p>
      * 
      * @param securityGroupIds
-     *        A list of 1 or more security group IDs. Accepts up to 5 security group IDs. A security group must be
-     *        attached to the same VPC as the subnets. To learn more, see <a
+     *        A list of security group IDs. To learn more, see <a
      *        href="https://docs.aws.amazon.com/mwaa/latest/userguide/vpc-security.html">Security in your VPC on Amazon
      *        MWAA</a>.
      */
@@ -91,8 +87,7 @@ public class NetworkConfiguration implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * A list of 1 or more security group IDs. Accepts up to 5 security group IDs. A security group must be attached to
-     * the same VPC as the subnets. To learn more, see <a
+     * A list of security group IDs. To learn more, see <a
      * href="https://docs.aws.amazon.com/mwaa/latest/userguide/vpc-security.html">Security in your VPC on Amazon
      * MWAA</a>.
      * </p>
@@ -103,8 +98,7 @@ public class NetworkConfiguration implements Serializable, Cloneable, Structured
      * </p>
      * 
      * @param securityGroupIds
-     *        A list of 1 or more security group IDs. Accepts up to 5 security group IDs. A security group must be
-     *        attached to the same VPC as the subnets. To learn more, see <a
+     *        A list of security group IDs. To learn more, see <a
      *        href="https://docs.aws.amazon.com/mwaa/latest/userguide/vpc-security.html">Security in your VPC on Amazon
      *        MWAA</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -122,15 +116,13 @@ public class NetworkConfiguration implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * A list of 1 or more security group IDs. Accepts up to 5 security group IDs. A security group must be attached to
-     * the same VPC as the subnets. To learn more, see <a
+     * A list of security group IDs. To learn more, see <a
      * href="https://docs.aws.amazon.com/mwaa/latest/userguide/vpc-security.html">Security in your VPC on Amazon
      * MWAA</a>.
      * </p>
      * 
      * @param securityGroupIds
-     *        A list of 1 or more security group IDs. Accepts up to 5 security group IDs. A security group must be
-     *        attached to the same VPC as the subnets. To learn more, see <a
+     *        A list of security group IDs. To learn more, see <a
      *        href="https://docs.aws.amazon.com/mwaa/latest/userguide/vpc-security.html">Security in your VPC on Amazon
      *        MWAA</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -143,12 +135,14 @@ public class NetworkConfiguration implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * A list of 2 subnet IDs. <b>Required</b> to create an environment. Must be private subnets in two different
-     * availability zones. A subnet must be attached to the same VPC as the security group.
+     * A list of subnet IDs. To learn more, see <a
+     * href="https://docs.aws.amazon.com/mwaa/latest/userguide/networking-about.html">About networking on Amazon
+     * MWAA</a>.
      * </p>
      * 
-     * @return A list of 2 subnet IDs. <b>Required</b> to create an environment. Must be private subnets in two
-     *         different availability zones. A subnet must be attached to the same VPC as the security group.
+     * @return A list of subnet IDs. To learn more, see <a
+     *         href="https://docs.aws.amazon.com/mwaa/latest/userguide/networking-about.html">About networking on Amazon
+     *         MWAA</a>.
      */
 
     public java.util.List<String> getSubnetIds() {
@@ -157,13 +151,15 @@ public class NetworkConfiguration implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * A list of 2 subnet IDs. <b>Required</b> to create an environment. Must be private subnets in two different
-     * availability zones. A subnet must be attached to the same VPC as the security group.
+     * A list of subnet IDs. To learn more, see <a
+     * href="https://docs.aws.amazon.com/mwaa/latest/userguide/networking-about.html">About networking on Amazon
+     * MWAA</a>.
      * </p>
      * 
      * @param subnetIds
-     *        A list of 2 subnet IDs. <b>Required</b> to create an environment. Must be private subnets in two different
-     *        availability zones. A subnet must be attached to the same VPC as the security group.
+     *        A list of subnet IDs. To learn more, see <a
+     *        href="https://docs.aws.amazon.com/mwaa/latest/userguide/networking-about.html">About networking on Amazon
+     *        MWAA</a>.
      */
 
     public void setSubnetIds(java.util.Collection<String> subnetIds) {
@@ -177,8 +173,9 @@ public class NetworkConfiguration implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * A list of 2 subnet IDs. <b>Required</b> to create an environment. Must be private subnets in two different
-     * availability zones. A subnet must be attached to the same VPC as the security group.
+     * A list of subnet IDs. To learn more, see <a
+     * href="https://docs.aws.amazon.com/mwaa/latest/userguide/networking-about.html">About networking on Amazon
+     * MWAA</a>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -187,8 +184,9 @@ public class NetworkConfiguration implements Serializable, Cloneable, Structured
      * </p>
      * 
      * @param subnetIds
-     *        A list of 2 subnet IDs. <b>Required</b> to create an environment. Must be private subnets in two different
-     *        availability zones. A subnet must be attached to the same VPC as the security group.
+     *        A list of subnet IDs. To learn more, see <a
+     *        href="https://docs.aws.amazon.com/mwaa/latest/userguide/networking-about.html">About networking on Amazon
+     *        MWAA</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -204,13 +202,15 @@ public class NetworkConfiguration implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * A list of 2 subnet IDs. <b>Required</b> to create an environment. Must be private subnets in two different
-     * availability zones. A subnet must be attached to the same VPC as the security group.
+     * A list of subnet IDs. To learn more, see <a
+     * href="https://docs.aws.amazon.com/mwaa/latest/userguide/networking-about.html">About networking on Amazon
+     * MWAA</a>.
      * </p>
      * 
      * @param subnetIds
-     *        A list of 2 subnet IDs. <b>Required</b> to create an environment. Must be private subnets in two different
-     *        availability zones. A subnet must be attached to the same VPC as the security group.
+     *        A list of subnet IDs. To learn more, see <a
+     *        href="https://docs.aws.amazon.com/mwaa/latest/userguide/networking-about.html">About networking on Amazon
+     *        MWAA</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

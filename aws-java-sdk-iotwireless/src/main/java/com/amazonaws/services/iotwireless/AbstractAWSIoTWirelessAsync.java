@@ -317,6 +317,19 @@ public class AbstractAWSIoTWirelessAsync extends AbstractAWSIoTWireless implemen
     }
 
     @Override
+    public java.util.concurrent.Future<DeleteQueuedMessagesResult> deleteQueuedMessagesAsync(DeleteQueuedMessagesRequest request) {
+
+        return deleteQueuedMessagesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeleteQueuedMessagesResult> deleteQueuedMessagesAsync(DeleteQueuedMessagesRequest request,
+            com.amazonaws.handlers.AsyncHandler<DeleteQueuedMessagesRequest, DeleteQueuedMessagesResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteServiceProfileResult> deleteServiceProfileAsync(DeleteServiceProfileRequest request) {
 
         return deleteServiceProfileAsync(request, null);
@@ -828,6 +841,19 @@ public class AbstractAWSIoTWirelessAsync extends AbstractAWSIoTWireless implemen
     @Override
     public java.util.concurrent.Future<ListPartnerAccountsResult> listPartnerAccountsAsync(ListPartnerAccountsRequest request,
             com.amazonaws.handlers.AsyncHandler<ListPartnerAccountsRequest, ListPartnerAccountsResult> asyncHandler) {
+
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListQueuedMessagesResult> listQueuedMessagesAsync(ListQueuedMessagesRequest request) {
+
+        return listQueuedMessagesAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListQueuedMessagesResult> listQueuedMessagesAsync(ListQueuedMessagesRequest request,
+            com.amazonaws.handlers.AsyncHandler<ListQueuedMessagesRequest, ListQueuedMessagesResult> asyncHandler) {
 
         throw new java.lang.UnsupportedOperationException();
     }

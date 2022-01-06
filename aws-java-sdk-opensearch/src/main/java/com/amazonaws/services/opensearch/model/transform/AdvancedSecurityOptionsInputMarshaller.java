@@ -35,6 +35,8 @@ public class AdvancedSecurityOptionsInputMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("MasterUserOptions").build();
     private static final MarshallingInfo<StructuredPojo> SAMLOPTIONS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SAMLOptions").build();
+    private static final MarshallingInfo<Boolean> ANONYMOUSAUTHENABLED_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("AnonymousAuthEnabled").build();
 
     private static final AdvancedSecurityOptionsInputMarshaller instance = new AdvancedSecurityOptionsInputMarshaller();
 
@@ -56,6 +58,7 @@ public class AdvancedSecurityOptionsInputMarshaller {
             protocolMarshaller.marshall(advancedSecurityOptionsInput.getInternalUserDatabaseEnabled(), INTERNALUSERDATABASEENABLED_BINDING);
             protocolMarshaller.marshall(advancedSecurityOptionsInput.getMasterUserOptions(), MASTERUSEROPTIONS_BINDING);
             protocolMarshaller.marshall(advancedSecurityOptionsInput.getSAMLOptions(), SAMLOPTIONS_BINDING);
+            protocolMarshaller.marshall(advancedSecurityOptionsInput.getAnonymousAuthEnabled(), ANONYMOUSAUTHENABLED_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

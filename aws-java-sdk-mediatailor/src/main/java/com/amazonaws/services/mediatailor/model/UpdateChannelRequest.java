@@ -33,6 +33,13 @@ public class UpdateChannelRequest extends com.amazonaws.AmazonWebServiceRequest 
     private String channelName;
     /**
      * <p>
+     * The slate used to fill gaps between programs in the schedule. You must configure filler slate if your channel
+     * uses the LINEAR PlaybackMode. MediaTailor doesn't support filler slate for channels using the LOOP PlaybackMode.
+     * </p>
+     */
+    private SlateSource fillerSlate;
+    /**
+     * <p>
      * The channel's output properties.
      * </p>
      */
@@ -75,6 +82,55 @@ public class UpdateChannelRequest extends com.amazonaws.AmazonWebServiceRequest 
 
     public UpdateChannelRequest withChannelName(String channelName) {
         setChannelName(channelName);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The slate used to fill gaps between programs in the schedule. You must configure filler slate if your channel
+     * uses the LINEAR PlaybackMode. MediaTailor doesn't support filler slate for channels using the LOOP PlaybackMode.
+     * </p>
+     * 
+     * @param fillerSlate
+     *        The slate used to fill gaps between programs in the schedule. You must configure filler slate if your
+     *        channel uses the LINEAR PlaybackMode. MediaTailor doesn't support filler slate for channels using the LOOP
+     *        PlaybackMode.
+     */
+
+    public void setFillerSlate(SlateSource fillerSlate) {
+        this.fillerSlate = fillerSlate;
+    }
+
+    /**
+     * <p>
+     * The slate used to fill gaps between programs in the schedule. You must configure filler slate if your channel
+     * uses the LINEAR PlaybackMode. MediaTailor doesn't support filler slate for channels using the LOOP PlaybackMode.
+     * </p>
+     * 
+     * @return The slate used to fill gaps between programs in the schedule. You must configure filler slate if your
+     *         channel uses the LINEAR PlaybackMode. MediaTailor doesn't support filler slate for channels using the
+     *         LOOP PlaybackMode.
+     */
+
+    public SlateSource getFillerSlate() {
+        return this.fillerSlate;
+    }
+
+    /**
+     * <p>
+     * The slate used to fill gaps between programs in the schedule. You must configure filler slate if your channel
+     * uses the LINEAR PlaybackMode. MediaTailor doesn't support filler slate for channels using the LOOP PlaybackMode.
+     * </p>
+     * 
+     * @param fillerSlate
+     *        The slate used to fill gaps between programs in the schedule. You must configure filler slate if your
+     *        channel uses the LINEAR PlaybackMode. MediaTailor doesn't support filler slate for channels using the LOOP
+     *        PlaybackMode.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateChannelRequest withFillerSlate(SlateSource fillerSlate) {
+        setFillerSlate(fillerSlate);
         return this;
     }
 
@@ -162,6 +218,8 @@ public class UpdateChannelRequest extends com.amazonaws.AmazonWebServiceRequest 
         sb.append("{");
         if (getChannelName() != null)
             sb.append("ChannelName: ").append(getChannelName()).append(",");
+        if (getFillerSlate() != null)
+            sb.append("FillerSlate: ").append(getFillerSlate()).append(",");
         if (getOutputs() != null)
             sb.append("Outputs: ").append(getOutputs());
         sb.append("}");
@@ -182,6 +240,10 @@ public class UpdateChannelRequest extends com.amazonaws.AmazonWebServiceRequest 
             return false;
         if (other.getChannelName() != null && other.getChannelName().equals(this.getChannelName()) == false)
             return false;
+        if (other.getFillerSlate() == null ^ this.getFillerSlate() == null)
+            return false;
+        if (other.getFillerSlate() != null && other.getFillerSlate().equals(this.getFillerSlate()) == false)
+            return false;
         if (other.getOutputs() == null ^ this.getOutputs() == null)
             return false;
         if (other.getOutputs() != null && other.getOutputs().equals(this.getOutputs()) == false)
@@ -195,6 +257,7 @@ public class UpdateChannelRequest extends com.amazonaws.AmazonWebServiceRequest 
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getChannelName() == null) ? 0 : getChannelName().hashCode());
+        hashCode = prime * hashCode + ((getFillerSlate() == null) ? 0 : getFillerSlate().hashCode());
         hashCode = prime * hashCode + ((getOutputs() == null) ? 0 : getOutputs().hashCode());
         return hashCode;
     }

@@ -101,6 +101,29 @@ public class DescribeLaunchTemplateVersionsRequest extends AmazonWebServiceReque
      * </li>
      * <li>
      * <p>
+     * <code>http-endpoint</code> - Indicates whether the HTTP metadata endpoint on your instances is enabled (
+     * <code>enabled</code> | <code>disabled</code>).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>http-protocol-ipv4</code> - Indicates whether the IPv4 endpoint for the instance metadata service is
+     * enabled (<code>enabled</code> | <code>disabled</code>).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>host-resource-group-arn</code> - The ARN of the host resource group in which to launch the instances.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>http-tokens</code> - The state of token usage for your instance metadata requests (<code>optional</code> |
+     * <code>required</code>).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>iam-instance-profile</code> - The ARN of the IAM instance profile.
      * </p>
      * </li>
@@ -123,6 +146,16 @@ public class DescribeLaunchTemplateVersionsRequest extends AmazonWebServiceReque
      * <li>
      * <p>
      * <code>kernel-id</code> - The kernel ID.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>license-configuration-arn</code> - The ARN of the license configuration.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-card-index</code> - The index of the network card.
      * </p>
      * </li>
      * <li>
@@ -578,6 +611,29 @@ public class DescribeLaunchTemplateVersionsRequest extends AmazonWebServiceReque
      * </li>
      * <li>
      * <p>
+     * <code>http-endpoint</code> - Indicates whether the HTTP metadata endpoint on your instances is enabled (
+     * <code>enabled</code> | <code>disabled</code>).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>http-protocol-ipv4</code> - Indicates whether the IPv4 endpoint for the instance metadata service is
+     * enabled (<code>enabled</code> | <code>disabled</code>).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>host-resource-group-arn</code> - The ARN of the host resource group in which to launch the instances.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>http-tokens</code> - The state of token usage for your instance metadata requests (<code>optional</code> |
+     * <code>required</code>).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>iam-instance-profile</code> - The ARN of the IAM instance profile.
      * </p>
      * </li>
@@ -604,6 +660,16 @@ public class DescribeLaunchTemplateVersionsRequest extends AmazonWebServiceReque
      * </li>
      * <li>
      * <p>
+     * <code>license-configuration-arn</code> - The ARN of the license configuration.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-card-index</code> - The index of the network card.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>ram-disk-id</code> - The RAM disk ID.
      * </p>
      * </li>
@@ -620,6 +686,30 @@ public class DescribeLaunchTemplateVersionsRequest extends AmazonWebServiceReque
      *         <p>
      *         <code>ebs-optimized</code> - A boolean that indicates whether the instance is optimized for Amazon EBS
      *         I/O.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>http-endpoint</code> - Indicates whether the HTTP metadata endpoint on your instances is enabled (
+     *         <code>enabled</code> | <code>disabled</code>).
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>http-protocol-ipv4</code> - Indicates whether the IPv4 endpoint for the instance metadata service
+     *         is enabled (<code>enabled</code> | <code>disabled</code>).
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>host-resource-group-arn</code> - The ARN of the host resource group in which to launch the
+     *         instances.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>http-tokens</code> - The state of token usage for your instance metadata requests (
+     *         <code>optional</code> | <code>required</code>).
      *         </p>
      *         </li>
      *         <li>
@@ -646,6 +736,16 @@ public class DescribeLaunchTemplateVersionsRequest extends AmazonWebServiceReque
      *         <li>
      *         <p>
      *         <code>kernel-id</code> - The kernel ID.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>license-configuration-arn</code> - The ARN of the license configuration.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>network-card-index</code> - The index of the network card.
      *         </p>
      *         </li>
      *         <li>
@@ -679,6 +779,29 @@ public class DescribeLaunchTemplateVersionsRequest extends AmazonWebServiceReque
      * </li>
      * <li>
      * <p>
+     * <code>http-endpoint</code> - Indicates whether the HTTP metadata endpoint on your instances is enabled (
+     * <code>enabled</code> | <code>disabled</code>).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>http-protocol-ipv4</code> - Indicates whether the IPv4 endpoint for the instance metadata service is
+     * enabled (<code>enabled</code> | <code>disabled</code>).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>host-resource-group-arn</code> - The ARN of the host resource group in which to launch the instances.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>http-tokens</code> - The state of token usage for your instance metadata requests (<code>optional</code> |
+     * <code>required</code>).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>iam-instance-profile</code> - The ARN of the IAM instance profile.
      * </p>
      * </li>
@@ -705,6 +828,16 @@ public class DescribeLaunchTemplateVersionsRequest extends AmazonWebServiceReque
      * </li>
      * <li>
      * <p>
+     * <code>license-configuration-arn</code> - The ARN of the license configuration.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-card-index</code> - The index of the network card.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>ram-disk-id</code> - The RAM disk ID.
      * </p>
      * </li>
@@ -722,6 +855,30 @@ public class DescribeLaunchTemplateVersionsRequest extends AmazonWebServiceReque
      *        <p>
      *        <code>ebs-optimized</code> - A boolean that indicates whether the instance is optimized for Amazon EBS
      *        I/O.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>http-endpoint</code> - Indicates whether the HTTP metadata endpoint on your instances is enabled (
+     *        <code>enabled</code> | <code>disabled</code>).
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>http-protocol-ipv4</code> - Indicates whether the IPv4 endpoint for the instance metadata service is
+     *        enabled (<code>enabled</code> | <code>disabled</code>).
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>host-resource-group-arn</code> - The ARN of the host resource group in which to launch the
+     *        instances.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>http-tokens</code> - The state of token usage for your instance metadata requests (
+     *        <code>optional</code> | <code>required</code>).
      *        </p>
      *        </li>
      *        <li>
@@ -748,6 +905,16 @@ public class DescribeLaunchTemplateVersionsRequest extends AmazonWebServiceReque
      *        <li>
      *        <p>
      *        <code>kernel-id</code> - The kernel ID.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>license-configuration-arn</code> - The ARN of the license configuration.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>network-card-index</code> - The index of the network card.
      *        </p>
      *        </li>
      *        <li>
@@ -783,6 +950,29 @@ public class DescribeLaunchTemplateVersionsRequest extends AmazonWebServiceReque
      * </li>
      * <li>
      * <p>
+     * <code>http-endpoint</code> - Indicates whether the HTTP metadata endpoint on your instances is enabled (
+     * <code>enabled</code> | <code>disabled</code>).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>http-protocol-ipv4</code> - Indicates whether the IPv4 endpoint for the instance metadata service is
+     * enabled (<code>enabled</code> | <code>disabled</code>).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>host-resource-group-arn</code> - The ARN of the host resource group in which to launch the instances.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>http-tokens</code> - The state of token usage for your instance metadata requests (<code>optional</code> |
+     * <code>required</code>).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>iam-instance-profile</code> - The ARN of the IAM instance profile.
      * </p>
      * </li>
@@ -805,6 +995,16 @@ public class DescribeLaunchTemplateVersionsRequest extends AmazonWebServiceReque
      * <li>
      * <p>
      * <code>kernel-id</code> - The kernel ID.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>license-configuration-arn</code> - The ARN of the license configuration.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-card-index</code> - The index of the network card.
      * </p>
      * </li>
      * <li>
@@ -835,6 +1035,30 @@ public class DescribeLaunchTemplateVersionsRequest extends AmazonWebServiceReque
      *        </li>
      *        <li>
      *        <p>
+     *        <code>http-endpoint</code> - Indicates whether the HTTP metadata endpoint on your instances is enabled (
+     *        <code>enabled</code> | <code>disabled</code>).
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>http-protocol-ipv4</code> - Indicates whether the IPv4 endpoint for the instance metadata service is
+     *        enabled (<code>enabled</code> | <code>disabled</code>).
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>host-resource-group-arn</code> - The ARN of the host resource group in which to launch the
+     *        instances.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>http-tokens</code> - The state of token usage for your instance metadata requests (
+     *        <code>optional</code> | <code>required</code>).
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
      *        <code>iam-instance-profile</code> - The ARN of the IAM instance profile.
      *        </p>
      *        </li>
@@ -857,6 +1081,16 @@ public class DescribeLaunchTemplateVersionsRequest extends AmazonWebServiceReque
      *        <li>
      *        <p>
      *        <code>kernel-id</code> - The kernel ID.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>license-configuration-arn</code> - The ARN of the license configuration.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>network-card-index</code> - The index of the network card.
      *        </p>
      *        </li>
      *        <li>
@@ -894,6 +1128,29 @@ public class DescribeLaunchTemplateVersionsRequest extends AmazonWebServiceReque
      * </li>
      * <li>
      * <p>
+     * <code>http-endpoint</code> - Indicates whether the HTTP metadata endpoint on your instances is enabled (
+     * <code>enabled</code> | <code>disabled</code>).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>http-protocol-ipv4</code> - Indicates whether the IPv4 endpoint for the instance metadata service is
+     * enabled (<code>enabled</code> | <code>disabled</code>).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>host-resource-group-arn</code> - The ARN of the host resource group in which to launch the instances.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>http-tokens</code> - The state of token usage for your instance metadata requests (<code>optional</code> |
+     * <code>required</code>).
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>iam-instance-profile</code> - The ARN of the IAM instance profile.
      * </p>
      * </li>
@@ -920,6 +1177,16 @@ public class DescribeLaunchTemplateVersionsRequest extends AmazonWebServiceReque
      * </li>
      * <li>
      * <p>
+     * <code>license-configuration-arn</code> - The ARN of the license configuration.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>network-card-index</code> - The index of the network card.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>ram-disk-id</code> - The RAM disk ID.
      * </p>
      * </li>
@@ -937,6 +1204,30 @@ public class DescribeLaunchTemplateVersionsRequest extends AmazonWebServiceReque
      *        <p>
      *        <code>ebs-optimized</code> - A boolean that indicates whether the instance is optimized for Amazon EBS
      *        I/O.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>http-endpoint</code> - Indicates whether the HTTP metadata endpoint on your instances is enabled (
+     *        <code>enabled</code> | <code>disabled</code>).
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>http-protocol-ipv4</code> - Indicates whether the IPv4 endpoint for the instance metadata service is
+     *        enabled (<code>enabled</code> | <code>disabled</code>).
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>host-resource-group-arn</code> - The ARN of the host resource group in which to launch the
+     *        instances.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>http-tokens</code> - The state of token usage for your instance metadata requests (
+     *        <code>optional</code> | <code>required</code>).
      *        </p>
      *        </li>
      *        <li>
@@ -963,6 +1254,16 @@ public class DescribeLaunchTemplateVersionsRequest extends AmazonWebServiceReque
      *        <li>
      *        <p>
      *        <code>kernel-id</code> - The kernel ID.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>license-configuration-arn</code> - The ARN of the license configuration.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>network-card-index</code> - The index of the network card.
      *        </p>
      *        </li>
      *        <li>

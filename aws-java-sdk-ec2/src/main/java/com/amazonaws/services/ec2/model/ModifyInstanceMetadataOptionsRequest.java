@@ -62,8 +62,8 @@ public class ModifyInstanceMetadataOptionsRequest extends AmazonWebServiceReques
     private Integer httpPutResponseHopLimit;
     /**
      * <p>
-     * Enables or disables the HTTP metadata endpoint on your instances. If the parameter is not specified, the existing
-     * state is maintained.
+     * Enables or disables the HTTP metadata endpoint on your instances. If this parameter is not specified, the
+     * existing state is maintained.
      * </p>
      * <p>
      * If you specify a value of <code>disabled</code>, you cannot access your instance metadata.
@@ -77,6 +77,18 @@ public class ModifyInstanceMetadataOptionsRequest extends AmazonWebServiceReques
      * </p>
      */
     private String httpProtocolIpv6;
+    /**
+     * <p>
+     * Set to <code>enabled</code> to allow access to instance tags from the instance metadata. Set to
+     * <code>disabled</code> to turn off access to instance tags from the instance metadata. For more information, see
+     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#work-with-tags-in-IMDS">Work with
+     * instance tags using the instance metadata</a>.
+     * </p>
+     * <p>
+     * Default: <code>disabled</code>
+     * </p>
+     */
+    private String instanceMetadataTags;
 
     /**
      * <p>
@@ -333,15 +345,15 @@ public class ModifyInstanceMetadataOptionsRequest extends AmazonWebServiceReques
 
     /**
      * <p>
-     * Enables or disables the HTTP metadata endpoint on your instances. If the parameter is not specified, the existing
-     * state is maintained.
+     * Enables or disables the HTTP metadata endpoint on your instances. If this parameter is not specified, the
+     * existing state is maintained.
      * </p>
      * <p>
      * If you specify a value of <code>disabled</code>, you cannot access your instance metadata.
      * </p>
      * 
      * @param httpEndpoint
-     *        Enables or disables the HTTP metadata endpoint on your instances. If the parameter is not specified, the
+     *        Enables or disables the HTTP metadata endpoint on your instances. If this parameter is not specified, the
      *        existing state is maintained.</p>
      *        <p>
      *        If you specify a value of <code>disabled</code>, you cannot access your instance metadata.
@@ -354,14 +366,14 @@ public class ModifyInstanceMetadataOptionsRequest extends AmazonWebServiceReques
 
     /**
      * <p>
-     * Enables or disables the HTTP metadata endpoint on your instances. If the parameter is not specified, the existing
-     * state is maintained.
+     * Enables or disables the HTTP metadata endpoint on your instances. If this parameter is not specified, the
+     * existing state is maintained.
      * </p>
      * <p>
      * If you specify a value of <code>disabled</code>, you cannot access your instance metadata.
      * </p>
      * 
-     * @return Enables or disables the HTTP metadata endpoint on your instances. If the parameter is not specified, the
+     * @return Enables or disables the HTTP metadata endpoint on your instances. If this parameter is not specified, the
      *         existing state is maintained.</p>
      *         <p>
      *         If you specify a value of <code>disabled</code>, you cannot access your instance metadata.
@@ -374,15 +386,15 @@ public class ModifyInstanceMetadataOptionsRequest extends AmazonWebServiceReques
 
     /**
      * <p>
-     * Enables or disables the HTTP metadata endpoint on your instances. If the parameter is not specified, the existing
-     * state is maintained.
+     * Enables or disables the HTTP metadata endpoint on your instances. If this parameter is not specified, the
+     * existing state is maintained.
      * </p>
      * <p>
      * If you specify a value of <code>disabled</code>, you cannot access your instance metadata.
      * </p>
      * 
      * @param httpEndpoint
-     *        Enables or disables the HTTP metadata endpoint on your instances. If the parameter is not specified, the
+     *        Enables or disables the HTTP metadata endpoint on your instances. If this parameter is not specified, the
      *        existing state is maintained.</p>
      *        <p>
      *        If you specify a value of <code>disabled</code>, you cannot access your instance metadata.
@@ -397,15 +409,15 @@ public class ModifyInstanceMetadataOptionsRequest extends AmazonWebServiceReques
 
     /**
      * <p>
-     * Enables or disables the HTTP metadata endpoint on your instances. If the parameter is not specified, the existing
-     * state is maintained.
+     * Enables or disables the HTTP metadata endpoint on your instances. If this parameter is not specified, the
+     * existing state is maintained.
      * </p>
      * <p>
      * If you specify a value of <code>disabled</code>, you cannot access your instance metadata.
      * </p>
      * 
      * @param httpEndpoint
-     *        Enables or disables the HTTP metadata endpoint on your instances. If the parameter is not specified, the
+     *        Enables or disables the HTTP metadata endpoint on your instances. If this parameter is not specified, the
      *        existing state is maintained.</p>
      *        <p>
      *        If you specify a value of <code>disabled</code>, you cannot access your instance metadata.
@@ -486,6 +498,113 @@ public class ModifyInstanceMetadataOptionsRequest extends AmazonWebServiceReques
     }
 
     /**
+     * <p>
+     * Set to <code>enabled</code> to allow access to instance tags from the instance metadata. Set to
+     * <code>disabled</code> to turn off access to instance tags from the instance metadata. For more information, see
+     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#work-with-tags-in-IMDS">Work with
+     * instance tags using the instance metadata</a>.
+     * </p>
+     * <p>
+     * Default: <code>disabled</code>
+     * </p>
+     * 
+     * @param instanceMetadataTags
+     *        Set to <code>enabled</code> to allow access to instance tags from the instance metadata. Set to
+     *        <code>disabled</code> to turn off access to instance tags from the instance metadata. For more
+     *        information, see <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#work-with-tags-in-IMDS">Work
+     *        with instance tags using the instance metadata</a>.</p>
+     *        <p>
+     *        Default: <code>disabled</code>
+     * @see InstanceMetadataTagsState
+     */
+
+    public void setInstanceMetadataTags(String instanceMetadataTags) {
+        this.instanceMetadataTags = instanceMetadataTags;
+    }
+
+    /**
+     * <p>
+     * Set to <code>enabled</code> to allow access to instance tags from the instance metadata. Set to
+     * <code>disabled</code> to turn off access to instance tags from the instance metadata. For more information, see
+     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#work-with-tags-in-IMDS">Work with
+     * instance tags using the instance metadata</a>.
+     * </p>
+     * <p>
+     * Default: <code>disabled</code>
+     * </p>
+     * 
+     * @return Set to <code>enabled</code> to allow access to instance tags from the instance metadata. Set to
+     *         <code>disabled</code> to turn off access to instance tags from the instance metadata. For more
+     *         information, see <a
+     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#work-with-tags-in-IMDS">Work
+     *         with instance tags using the instance metadata</a>.</p>
+     *         <p>
+     *         Default: <code>disabled</code>
+     * @see InstanceMetadataTagsState
+     */
+
+    public String getInstanceMetadataTags() {
+        return this.instanceMetadataTags;
+    }
+
+    /**
+     * <p>
+     * Set to <code>enabled</code> to allow access to instance tags from the instance metadata. Set to
+     * <code>disabled</code> to turn off access to instance tags from the instance metadata. For more information, see
+     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#work-with-tags-in-IMDS">Work with
+     * instance tags using the instance metadata</a>.
+     * </p>
+     * <p>
+     * Default: <code>disabled</code>
+     * </p>
+     * 
+     * @param instanceMetadataTags
+     *        Set to <code>enabled</code> to allow access to instance tags from the instance metadata. Set to
+     *        <code>disabled</code> to turn off access to instance tags from the instance metadata. For more
+     *        information, see <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#work-with-tags-in-IMDS">Work
+     *        with instance tags using the instance metadata</a>.</p>
+     *        <p>
+     *        Default: <code>disabled</code>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see InstanceMetadataTagsState
+     */
+
+    public ModifyInstanceMetadataOptionsRequest withInstanceMetadataTags(String instanceMetadataTags) {
+        setInstanceMetadataTags(instanceMetadataTags);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Set to <code>enabled</code> to allow access to instance tags from the instance metadata. Set to
+     * <code>disabled</code> to turn off access to instance tags from the instance metadata. For more information, see
+     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#work-with-tags-in-IMDS">Work with
+     * instance tags using the instance metadata</a>.
+     * </p>
+     * <p>
+     * Default: <code>disabled</code>
+     * </p>
+     * 
+     * @param instanceMetadataTags
+     *        Set to <code>enabled</code> to allow access to instance tags from the instance metadata. Set to
+     *        <code>disabled</code> to turn off access to instance tags from the instance metadata. For more
+     *        information, see <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#work-with-tags-in-IMDS">Work
+     *        with instance tags using the instance metadata</a>.</p>
+     *        <p>
+     *        Default: <code>disabled</code>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see InstanceMetadataTagsState
+     */
+
+    public ModifyInstanceMetadataOptionsRequest withInstanceMetadataTags(InstanceMetadataTagsState instanceMetadataTags) {
+        this.instanceMetadataTags = instanceMetadataTags.toString();
+        return this;
+    }
+
+    /**
      * This method is intended for internal use only. Returns the marshaled request configured with additional
      * parameters to enable operation dry-run.
      */
@@ -517,7 +636,9 @@ public class ModifyInstanceMetadataOptionsRequest extends AmazonWebServiceReques
         if (getHttpEndpoint() != null)
             sb.append("HttpEndpoint: ").append(getHttpEndpoint()).append(",");
         if (getHttpProtocolIpv6() != null)
-            sb.append("HttpProtocolIpv6: ").append(getHttpProtocolIpv6());
+            sb.append("HttpProtocolIpv6: ").append(getHttpProtocolIpv6()).append(",");
+        if (getInstanceMetadataTags() != null)
+            sb.append("InstanceMetadataTags: ").append(getInstanceMetadataTags());
         sb.append("}");
         return sb.toString();
     }
@@ -552,6 +673,10 @@ public class ModifyInstanceMetadataOptionsRequest extends AmazonWebServiceReques
             return false;
         if (other.getHttpProtocolIpv6() != null && other.getHttpProtocolIpv6().equals(this.getHttpProtocolIpv6()) == false)
             return false;
+        if (other.getInstanceMetadataTags() == null ^ this.getInstanceMetadataTags() == null)
+            return false;
+        if (other.getInstanceMetadataTags() != null && other.getInstanceMetadataTags().equals(this.getInstanceMetadataTags()) == false)
+            return false;
         return true;
     }
 
@@ -565,6 +690,7 @@ public class ModifyInstanceMetadataOptionsRequest extends AmazonWebServiceReques
         hashCode = prime * hashCode + ((getHttpPutResponseHopLimit() == null) ? 0 : getHttpPutResponseHopLimit().hashCode());
         hashCode = prime * hashCode + ((getHttpEndpoint() == null) ? 0 : getHttpEndpoint().hashCode());
         hashCode = prime * hashCode + ((getHttpProtocolIpv6() == null) ? 0 : getHttpProtocolIpv6().hashCode());
+        hashCode = prime * hashCode + ((getInstanceMetadataTags() == null) ? 0 : getInstanceMetadataTags().hashCode());
         return hashCode;
     }
 

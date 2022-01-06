@@ -41,8 +41,7 @@ public class InstanceMetadataOptionsResponse implements Serializable, Cloneable 
     private String state;
     /**
      * <p>
-     * The state of token usage for your instance metadata requests. If the parameter is not specified in the request,
-     * the default state is <code>optional</code>.
+     * The state of token usage for your instance metadata requests.
      * </p>
      * <p>
      * If the state is <code>optional</code>, you can choose to retrieve instance metadata with or without a signed
@@ -54,6 +53,9 @@ public class InstanceMetadataOptionsResponse implements Serializable, Cloneable 
      * If the state is <code>required</code>, you must send a signed token header with any instance metadata retrieval
      * requests. In this state, retrieving the IAM role credential always returns the version 2.0 credentials; the
      * version 1.0 credentials are not available.
+     * </p>
+     * <p>
+     * Default: <code>optional</code>
      * </p>
      */
     private String httpTokens;
@@ -74,6 +76,9 @@ public class InstanceMetadataOptionsResponse implements Serializable, Cloneable 
      * <p>
      * Indicates whether the HTTP metadata endpoint on your instances is enabled or disabled.
      * </p>
+     * <p>
+     * If the value is <code>disabled</code>, you cannot access your instance metadata.
+     * </p>
      */
     private String httpEndpoint;
     /**
@@ -82,6 +87,15 @@ public class InstanceMetadataOptionsResponse implements Serializable, Cloneable 
      * </p>
      */
     private String httpProtocolIpv6;
+    /**
+     * <p>
+     * Indicates whether access to instance tags from the instance metadata is enabled or disabled. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#work-with-tags-in-IMDS">Work with
+     * instance tags using the instance metadata</a>.
+     * </p>
+     */
+    private String instanceMetadataTags;
 
     /**
      * <p>
@@ -196,8 +210,7 @@ public class InstanceMetadataOptionsResponse implements Serializable, Cloneable 
 
     /**
      * <p>
-     * The state of token usage for your instance metadata requests. If the parameter is not specified in the request,
-     * the default state is <code>optional</code>.
+     * The state of token usage for your instance metadata requests.
      * </p>
      * <p>
      * If the state is <code>optional</code>, you can choose to retrieve instance metadata with or without a signed
@@ -210,10 +223,12 @@ public class InstanceMetadataOptionsResponse implements Serializable, Cloneable 
      * requests. In this state, retrieving the IAM role credential always returns the version 2.0 credentials; the
      * version 1.0 credentials are not available.
      * </p>
+     * <p>
+     * Default: <code>optional</code>
+     * </p>
      * 
      * @param httpTokens
-     *        The state of token usage for your instance metadata requests. If the parameter is not specified in the
-     *        request, the default state is <code>optional</code>.</p>
+     *        The state of token usage for your instance metadata requests.</p>
      *        <p>
      *        If the state is <code>optional</code>, you can choose to retrieve instance metadata with or without a
      *        signed token header on your request. If you retrieve the IAM role credentials without a token, the version
@@ -224,6 +239,9 @@ public class InstanceMetadataOptionsResponse implements Serializable, Cloneable 
      *        If the state is <code>required</code>, you must send a signed token header with any instance metadata
      *        retrieval requests. In this state, retrieving the IAM role credential always returns the version 2.0
      *        credentials; the version 1.0 credentials are not available.
+     *        </p>
+     *        <p>
+     *        Default: <code>optional</code>
      * @see HttpTokensState
      */
 
@@ -233,8 +251,7 @@ public class InstanceMetadataOptionsResponse implements Serializable, Cloneable 
 
     /**
      * <p>
-     * The state of token usage for your instance metadata requests. If the parameter is not specified in the request,
-     * the default state is <code>optional</code>.
+     * The state of token usage for your instance metadata requests.
      * </p>
      * <p>
      * If the state is <code>optional</code>, you can choose to retrieve instance metadata with or without a signed
@@ -247,9 +264,11 @@ public class InstanceMetadataOptionsResponse implements Serializable, Cloneable 
      * requests. In this state, retrieving the IAM role credential always returns the version 2.0 credentials; the
      * version 1.0 credentials are not available.
      * </p>
+     * <p>
+     * Default: <code>optional</code>
+     * </p>
      * 
-     * @return The state of token usage for your instance metadata requests. If the parameter is not specified in the
-     *         request, the default state is <code>optional</code>.</p>
+     * @return The state of token usage for your instance metadata requests.</p>
      *         <p>
      *         If the state is <code>optional</code>, you can choose to retrieve instance metadata with or without a
      *         signed token header on your request. If you retrieve the IAM role credentials without a token, the
@@ -260,6 +279,9 @@ public class InstanceMetadataOptionsResponse implements Serializable, Cloneable 
      *         If the state is <code>required</code>, you must send a signed token header with any instance metadata
      *         retrieval requests. In this state, retrieving the IAM role credential always returns the version 2.0
      *         credentials; the version 1.0 credentials are not available.
+     *         </p>
+     *         <p>
+     *         Default: <code>optional</code>
      * @see HttpTokensState
      */
 
@@ -269,8 +291,7 @@ public class InstanceMetadataOptionsResponse implements Serializable, Cloneable 
 
     /**
      * <p>
-     * The state of token usage for your instance metadata requests. If the parameter is not specified in the request,
-     * the default state is <code>optional</code>.
+     * The state of token usage for your instance metadata requests.
      * </p>
      * <p>
      * If the state is <code>optional</code>, you can choose to retrieve instance metadata with or without a signed
@@ -283,10 +304,12 @@ public class InstanceMetadataOptionsResponse implements Serializable, Cloneable 
      * requests. In this state, retrieving the IAM role credential always returns the version 2.0 credentials; the
      * version 1.0 credentials are not available.
      * </p>
+     * <p>
+     * Default: <code>optional</code>
+     * </p>
      * 
      * @param httpTokens
-     *        The state of token usage for your instance metadata requests. If the parameter is not specified in the
-     *        request, the default state is <code>optional</code>.</p>
+     *        The state of token usage for your instance metadata requests.</p>
      *        <p>
      *        If the state is <code>optional</code>, you can choose to retrieve instance metadata with or without a
      *        signed token header on your request. If you retrieve the IAM role credentials without a token, the version
@@ -297,6 +320,9 @@ public class InstanceMetadataOptionsResponse implements Serializable, Cloneable 
      *        If the state is <code>required</code>, you must send a signed token header with any instance metadata
      *        retrieval requests. In this state, retrieving the IAM role credential always returns the version 2.0
      *        credentials; the version 1.0 credentials are not available.
+     *        </p>
+     *        <p>
+     *        Default: <code>optional</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see HttpTokensState
      */
@@ -308,8 +334,7 @@ public class InstanceMetadataOptionsResponse implements Serializable, Cloneable 
 
     /**
      * <p>
-     * The state of token usage for your instance metadata requests. If the parameter is not specified in the request,
-     * the default state is <code>optional</code>.
+     * The state of token usage for your instance metadata requests.
      * </p>
      * <p>
      * If the state is <code>optional</code>, you can choose to retrieve instance metadata with or without a signed
@@ -322,10 +347,12 @@ public class InstanceMetadataOptionsResponse implements Serializable, Cloneable 
      * requests. In this state, retrieving the IAM role credential always returns the version 2.0 credentials; the
      * version 1.0 credentials are not available.
      * </p>
+     * <p>
+     * Default: <code>optional</code>
+     * </p>
      * 
      * @param httpTokens
-     *        The state of token usage for your instance metadata requests. If the parameter is not specified in the
-     *        request, the default state is <code>optional</code>.</p>
+     *        The state of token usage for your instance metadata requests.</p>
      *        <p>
      *        If the state is <code>optional</code>, you can choose to retrieve instance metadata with or without a
      *        signed token header on your request. If you retrieve the IAM role credentials without a token, the version
@@ -336,6 +363,9 @@ public class InstanceMetadataOptionsResponse implements Serializable, Cloneable 
      *        If the state is <code>required</code>, you must send a signed token header with any instance metadata
      *        retrieval requests. In this state, retrieving the IAM role credential always returns the version 2.0
      *        credentials; the version 1.0 credentials are not available.
+     *        </p>
+     *        <p>
+     *        Default: <code>optional</code>
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see HttpTokensState
      */
@@ -428,9 +458,14 @@ public class InstanceMetadataOptionsResponse implements Serializable, Cloneable 
      * <p>
      * Indicates whether the HTTP metadata endpoint on your instances is enabled or disabled.
      * </p>
+     * <p>
+     * If the value is <code>disabled</code>, you cannot access your instance metadata.
+     * </p>
      * 
      * @param httpEndpoint
-     *        Indicates whether the HTTP metadata endpoint on your instances is enabled or disabled.
+     *        Indicates whether the HTTP metadata endpoint on your instances is enabled or disabled.</p>
+     *        <p>
+     *        If the value is <code>disabled</code>, you cannot access your instance metadata.
      * @see InstanceMetadataEndpointState
      */
 
@@ -442,8 +477,13 @@ public class InstanceMetadataOptionsResponse implements Serializable, Cloneable 
      * <p>
      * Indicates whether the HTTP metadata endpoint on your instances is enabled or disabled.
      * </p>
+     * <p>
+     * If the value is <code>disabled</code>, you cannot access your instance metadata.
+     * </p>
      * 
-     * @return Indicates whether the HTTP metadata endpoint on your instances is enabled or disabled.
+     * @return Indicates whether the HTTP metadata endpoint on your instances is enabled or disabled.</p>
+     *         <p>
+     *         If the value is <code>disabled</code>, you cannot access your instance metadata.
      * @see InstanceMetadataEndpointState
      */
 
@@ -455,9 +495,14 @@ public class InstanceMetadataOptionsResponse implements Serializable, Cloneable 
      * <p>
      * Indicates whether the HTTP metadata endpoint on your instances is enabled or disabled.
      * </p>
+     * <p>
+     * If the value is <code>disabled</code>, you cannot access your instance metadata.
+     * </p>
      * 
      * @param httpEndpoint
-     *        Indicates whether the HTTP metadata endpoint on your instances is enabled or disabled.
+     *        Indicates whether the HTTP metadata endpoint on your instances is enabled or disabled.</p>
+     *        <p>
+     *        If the value is <code>disabled</code>, you cannot access your instance metadata.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see InstanceMetadataEndpointState
      */
@@ -471,9 +516,14 @@ public class InstanceMetadataOptionsResponse implements Serializable, Cloneable 
      * <p>
      * Indicates whether the HTTP metadata endpoint on your instances is enabled or disabled.
      * </p>
+     * <p>
+     * If the value is <code>disabled</code>, you cannot access your instance metadata.
+     * </p>
      * 
      * @param httpEndpoint
-     *        Indicates whether the HTTP metadata endpoint on your instances is enabled or disabled.
+     *        Indicates whether the HTTP metadata endpoint on your instances is enabled or disabled.</p>
+     *        <p>
+     *        If the value is <code>disabled</code>, you cannot access your instance metadata.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see InstanceMetadataEndpointState
      */
@@ -543,6 +593,89 @@ public class InstanceMetadataOptionsResponse implements Serializable, Cloneable 
     }
 
     /**
+     * <p>
+     * Indicates whether access to instance tags from the instance metadata is enabled or disabled. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#work-with-tags-in-IMDS">Work with
+     * instance tags using the instance metadata</a>.
+     * </p>
+     * 
+     * @param instanceMetadataTags
+     *        Indicates whether access to instance tags from the instance metadata is enabled or disabled. For more
+     *        information, see <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#work-with-tags-in-IMDS">Work
+     *        with instance tags using the instance metadata</a>.
+     * @see InstanceMetadataTagsState
+     */
+
+    public void setInstanceMetadataTags(String instanceMetadataTags) {
+        this.instanceMetadataTags = instanceMetadataTags;
+    }
+
+    /**
+     * <p>
+     * Indicates whether access to instance tags from the instance metadata is enabled or disabled. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#work-with-tags-in-IMDS">Work with
+     * instance tags using the instance metadata</a>.
+     * </p>
+     * 
+     * @return Indicates whether access to instance tags from the instance metadata is enabled or disabled. For more
+     *         information, see <a
+     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#work-with-tags-in-IMDS">Work
+     *         with instance tags using the instance metadata</a>.
+     * @see InstanceMetadataTagsState
+     */
+
+    public String getInstanceMetadataTags() {
+        return this.instanceMetadataTags;
+    }
+
+    /**
+     * <p>
+     * Indicates whether access to instance tags from the instance metadata is enabled or disabled. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#work-with-tags-in-IMDS">Work with
+     * instance tags using the instance metadata</a>.
+     * </p>
+     * 
+     * @param instanceMetadataTags
+     *        Indicates whether access to instance tags from the instance metadata is enabled or disabled. For more
+     *        information, see <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#work-with-tags-in-IMDS">Work
+     *        with instance tags using the instance metadata</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see InstanceMetadataTagsState
+     */
+
+    public InstanceMetadataOptionsResponse withInstanceMetadataTags(String instanceMetadataTags) {
+        setInstanceMetadataTags(instanceMetadataTags);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Indicates whether access to instance tags from the instance metadata is enabled or disabled. For more
+     * information, see <a
+     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#work-with-tags-in-IMDS">Work with
+     * instance tags using the instance metadata</a>.
+     * </p>
+     * 
+     * @param instanceMetadataTags
+     *        Indicates whether access to instance tags from the instance metadata is enabled or disabled. For more
+     *        information, see <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Using_Tags.html#work-with-tags-in-IMDS">Work
+     *        with instance tags using the instance metadata</a>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see InstanceMetadataTagsState
+     */
+
+    public InstanceMetadataOptionsResponse withInstanceMetadataTags(InstanceMetadataTagsState instanceMetadataTags) {
+        this.instanceMetadataTags = instanceMetadataTags.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -563,7 +696,9 @@ public class InstanceMetadataOptionsResponse implements Serializable, Cloneable 
         if (getHttpEndpoint() != null)
             sb.append("HttpEndpoint: ").append(getHttpEndpoint()).append(",");
         if (getHttpProtocolIpv6() != null)
-            sb.append("HttpProtocolIpv6: ").append(getHttpProtocolIpv6());
+            sb.append("HttpProtocolIpv6: ").append(getHttpProtocolIpv6()).append(",");
+        if (getInstanceMetadataTags() != null)
+            sb.append("InstanceMetadataTags: ").append(getInstanceMetadataTags());
         sb.append("}");
         return sb.toString();
     }
@@ -598,6 +733,10 @@ public class InstanceMetadataOptionsResponse implements Serializable, Cloneable 
             return false;
         if (other.getHttpProtocolIpv6() != null && other.getHttpProtocolIpv6().equals(this.getHttpProtocolIpv6()) == false)
             return false;
+        if (other.getInstanceMetadataTags() == null ^ this.getInstanceMetadataTags() == null)
+            return false;
+        if (other.getInstanceMetadataTags() != null && other.getInstanceMetadataTags().equals(this.getInstanceMetadataTags()) == false)
+            return false;
         return true;
     }
 
@@ -611,6 +750,7 @@ public class InstanceMetadataOptionsResponse implements Serializable, Cloneable 
         hashCode = prime * hashCode + ((getHttpPutResponseHopLimit() == null) ? 0 : getHttpPutResponseHopLimit().hashCode());
         hashCode = prime * hashCode + ((getHttpEndpoint() == null) ? 0 : getHttpEndpoint().hashCode());
         hashCode = prime * hashCode + ((getHttpProtocolIpv6() == null) ? 0 : getHttpProtocolIpv6().hashCode());
+        hashCode = prime * hashCode + ((getInstanceMetadataTags() == null) ? 0 : getInstanceMetadataTags().hashCode());
         return hashCode;
     }
 

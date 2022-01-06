@@ -19,7 +19,9 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Internal only API.
+ * <b>Internal only</b>. Represents the dimensions of a metric. To learn more about the metrics published to Amazon
+ * CloudWatch, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/cw-metrics.html">Amazon MWAA performance
+ * metrics in Amazon CloudWatch</a>.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mwaa-2020-07-01/Dimension" target="_top">AWS API
@@ -30,24 +32,24 @@ public class Dimension implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Internal only API.
+     * <b>Internal only</b>. The name of the dimension.
      * </p>
      */
     private String name;
     /**
      * <p>
-     * Internal only API.
+     * <b>Internal only</b>. The value of the dimension.
      * </p>
      */
     private String value;
 
     /**
      * <p>
-     * Internal only API.
+     * <b>Internal only</b>. The name of the dimension.
      * </p>
      * 
      * @param name
-     *        Internal only API.
+     *        <b>Internal only</b>. The name of the dimension.
      */
 
     public void setName(String name) {
@@ -56,10 +58,10 @@ public class Dimension implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Internal only API.
+     * <b>Internal only</b>. The name of the dimension.
      * </p>
      * 
-     * @return Internal only API.
+     * @return <b>Internal only</b>. The name of the dimension.
      */
 
     public String getName() {
@@ -68,11 +70,11 @@ public class Dimension implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Internal only API.
+     * <b>Internal only</b>. The name of the dimension.
      * </p>
      * 
      * @param name
-     *        Internal only API.
+     *        <b>Internal only</b>. The name of the dimension.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -83,11 +85,11 @@ public class Dimension implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Internal only API.
+     * <b>Internal only</b>. The value of the dimension.
      * </p>
      * 
      * @param value
-     *        Internal only API.
+     *        <b>Internal only</b>. The value of the dimension.
      */
 
     public void setValue(String value) {
@@ -96,10 +98,10 @@ public class Dimension implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Internal only API.
+     * <b>Internal only</b>. The value of the dimension.
      * </p>
      * 
-     * @return Internal only API.
+     * @return <b>Internal only</b>. The value of the dimension.
      */
 
     public String getValue() {
@@ -108,11 +110,11 @@ public class Dimension implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Internal only API.
+     * <b>Internal only</b>. The value of the dimension.
      * </p>
      * 
      * @param value
-     *        Internal only API.
+     *        <b>Internal only</b>. The value of the dimension.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

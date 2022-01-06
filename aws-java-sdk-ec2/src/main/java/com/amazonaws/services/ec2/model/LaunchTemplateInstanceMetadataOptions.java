@@ -74,8 +74,8 @@ public class LaunchTemplateInstanceMetadataOptions implements Serializable, Clon
     private Integer httpPutResponseHopLimit;
     /**
      * <p>
-     * This parameter enables or disables the HTTP metadata endpoint on your instances. If the parameter is not
-     * specified, the default state is <code>enabled</code>.
+     * Enables or disables the HTTP metadata endpoint on your instances. If the parameter is not specified, the default
+     * state is <code>enabled</code>.
      * </p>
      * <note>
      * <p>
@@ -93,6 +93,11 @@ public class LaunchTemplateInstanceMetadataOptions implements Serializable, Clon
      * </p>
      */
     private String httpProtocolIpv6;
+    /**
+     * <p>
+     * </p>
+     */
+    private String instanceMetadataTags;
 
     /**
      * <p>
@@ -437,8 +442,8 @@ public class LaunchTemplateInstanceMetadataOptions implements Serializable, Clon
 
     /**
      * <p>
-     * This parameter enables or disables the HTTP metadata endpoint on your instances. If the parameter is not
-     * specified, the default state is <code>enabled</code>.
+     * Enables or disables the HTTP metadata endpoint on your instances. If the parameter is not specified, the default
+     * state is <code>enabled</code>.
      * </p>
      * <note>
      * <p>
@@ -447,8 +452,8 @@ public class LaunchTemplateInstanceMetadataOptions implements Serializable, Clon
      * </note>
      * 
      * @param httpEndpoint
-     *        This parameter enables or disables the HTTP metadata endpoint on your instances. If the parameter is not
-     *        specified, the default state is <code>enabled</code>.</p> <note>
+     *        Enables or disables the HTTP metadata endpoint on your instances. If the parameter is not specified, the
+     *        default state is <code>enabled</code>.</p> <note>
      *        <p>
      *        If you specify a value of <code>disabled</code>, you will not be able to access your instance metadata.
      *        </p>
@@ -461,8 +466,8 @@ public class LaunchTemplateInstanceMetadataOptions implements Serializable, Clon
 
     /**
      * <p>
-     * This parameter enables or disables the HTTP metadata endpoint on your instances. If the parameter is not
-     * specified, the default state is <code>enabled</code>.
+     * Enables or disables the HTTP metadata endpoint on your instances. If the parameter is not specified, the default
+     * state is <code>enabled</code>.
      * </p>
      * <note>
      * <p>
@@ -470,8 +475,8 @@ public class LaunchTemplateInstanceMetadataOptions implements Serializable, Clon
      * </p>
      * </note>
      * 
-     * @return This parameter enables or disables the HTTP metadata endpoint on your instances. If the parameter is not
-     *         specified, the default state is <code>enabled</code>.</p> <note>
+     * @return Enables or disables the HTTP metadata endpoint on your instances. If the parameter is not specified, the
+     *         default state is <code>enabled</code>.</p> <note>
      *         <p>
      *         If you specify a value of <code>disabled</code>, you will not be able to access your instance metadata.
      *         </p>
@@ -484,8 +489,8 @@ public class LaunchTemplateInstanceMetadataOptions implements Serializable, Clon
 
     /**
      * <p>
-     * This parameter enables or disables the HTTP metadata endpoint on your instances. If the parameter is not
-     * specified, the default state is <code>enabled</code>.
+     * Enables or disables the HTTP metadata endpoint on your instances. If the parameter is not specified, the default
+     * state is <code>enabled</code>.
      * </p>
      * <note>
      * <p>
@@ -494,8 +499,8 @@ public class LaunchTemplateInstanceMetadataOptions implements Serializable, Clon
      * </note>
      * 
      * @param httpEndpoint
-     *        This parameter enables or disables the HTTP metadata endpoint on your instances. If the parameter is not
-     *        specified, the default state is <code>enabled</code>.</p> <note>
+     *        Enables or disables the HTTP metadata endpoint on your instances. If the parameter is not specified, the
+     *        default state is <code>enabled</code>.</p> <note>
      *        <p>
      *        If you specify a value of <code>disabled</code>, you will not be able to access your instance metadata.
      *        </p>
@@ -510,8 +515,8 @@ public class LaunchTemplateInstanceMetadataOptions implements Serializable, Clon
 
     /**
      * <p>
-     * This parameter enables or disables the HTTP metadata endpoint on your instances. If the parameter is not
-     * specified, the default state is <code>enabled</code>.
+     * Enables or disables the HTTP metadata endpoint on your instances. If the parameter is not specified, the default
+     * state is <code>enabled</code>.
      * </p>
      * <note>
      * <p>
@@ -520,8 +525,8 @@ public class LaunchTemplateInstanceMetadataOptions implements Serializable, Clon
      * </note>
      * 
      * @param httpEndpoint
-     *        This parameter enables or disables the HTTP metadata endpoint on your instances. If the parameter is not
-     *        specified, the default state is <code>enabled</code>.</p> <note>
+     *        Enables or disables the HTTP metadata endpoint on your instances. If the parameter is not specified, the
+     *        default state is <code>enabled</code>.</p> <note>
      *        <p>
      *        If you specify a value of <code>disabled</code>, you will not be able to access your instance metadata.
      *        </p>
@@ -614,6 +619,58 @@ public class LaunchTemplateInstanceMetadataOptions implements Serializable, Clon
     }
 
     /**
+     * <p>
+     * </p>
+     * 
+     * @param instanceMetadataTags
+     * @see LaunchTemplateInstanceMetadataTagsState
+     */
+
+    public void setInstanceMetadataTags(String instanceMetadataTags) {
+        this.instanceMetadataTags = instanceMetadataTags;
+    }
+
+    /**
+     * <p>
+     * </p>
+     * 
+     * @return
+     * @see LaunchTemplateInstanceMetadataTagsState
+     */
+
+    public String getInstanceMetadataTags() {
+        return this.instanceMetadataTags;
+    }
+
+    /**
+     * <p>
+     * </p>
+     * 
+     * @param instanceMetadataTags
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see LaunchTemplateInstanceMetadataTagsState
+     */
+
+    public LaunchTemplateInstanceMetadataOptions withInstanceMetadataTags(String instanceMetadataTags) {
+        setInstanceMetadataTags(instanceMetadataTags);
+        return this;
+    }
+
+    /**
+     * <p>
+     * </p>
+     * 
+     * @param instanceMetadataTags
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see LaunchTemplateInstanceMetadataTagsState
+     */
+
+    public LaunchTemplateInstanceMetadataOptions withInstanceMetadataTags(LaunchTemplateInstanceMetadataTagsState instanceMetadataTags) {
+        this.instanceMetadataTags = instanceMetadataTags.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -634,7 +691,9 @@ public class LaunchTemplateInstanceMetadataOptions implements Serializable, Clon
         if (getHttpEndpoint() != null)
             sb.append("HttpEndpoint: ").append(getHttpEndpoint()).append(",");
         if (getHttpProtocolIpv6() != null)
-            sb.append("HttpProtocolIpv6: ").append(getHttpProtocolIpv6());
+            sb.append("HttpProtocolIpv6: ").append(getHttpProtocolIpv6()).append(",");
+        if (getInstanceMetadataTags() != null)
+            sb.append("InstanceMetadataTags: ").append(getInstanceMetadataTags());
         sb.append("}");
         return sb.toString();
     }
@@ -669,6 +728,10 @@ public class LaunchTemplateInstanceMetadataOptions implements Serializable, Clon
             return false;
         if (other.getHttpProtocolIpv6() != null && other.getHttpProtocolIpv6().equals(this.getHttpProtocolIpv6()) == false)
             return false;
+        if (other.getInstanceMetadataTags() == null ^ this.getInstanceMetadataTags() == null)
+            return false;
+        if (other.getInstanceMetadataTags() != null && other.getInstanceMetadataTags().equals(this.getInstanceMetadataTags()) == false)
+            return false;
         return true;
     }
 
@@ -682,6 +745,7 @@ public class LaunchTemplateInstanceMetadataOptions implements Serializable, Clon
         hashCode = prime * hashCode + ((getHttpPutResponseHopLimit() == null) ? 0 : getHttpPutResponseHopLimit().hashCode());
         hashCode = prime * hashCode + ((getHttpEndpoint() == null) ? 0 : getHttpEndpoint().hashCode());
         hashCode = prime * hashCode + ((getHttpProtocolIpv6() == null) ? 0 : getHttpProtocolIpv6().hashCode());
+        hashCode = prime * hashCode + ((getInstanceMetadataTags() == null) ? 0 : getInstanceMetadataTags().hashCode());
         return hashCode;
     }
 

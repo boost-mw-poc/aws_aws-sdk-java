@@ -51,7 +51,20 @@ import com.amazonaws.services.iotwireless.model.transform.*;
  * until the service call completes.
  * <p>
  * <p>
- * AWS IoT Wireless API documentation
+ * AWS IoT Wireless provides bi-directional communication between internet-connected wireless devices and the AWS Cloud.
+ * To onboard both LoRaWAN and Sidewalk devices to AWS IoT, use the IoT Wireless API. These wireless devices use the Low
+ * Power Wide Area Networking (LPWAN) communication protocol to communicate with AWS IoT.
+ * </p>
+ * <p>
+ * Using the API, you can perform create, read, update, and delete operations for your wireless devices, gateways,
+ * destinations, and profiles. After onboarding your devices, you can use the API operations to set log levels and
+ * monitor your devices with CloudWatch.
+ * </p>
+ * <p>
+ * You can also use the API operations to create multicast groups and schedule a multicast session for sending a
+ * downlink message to devices in the group. By using Firmware Updates Over-The-Air (FUOTA) API operations, you can
+ * create a FUOTA task and schedule a session to update the firmware of individual devices or an entire group of devices
+ * in a multicast group.
  * </p>
  */
 @ThreadSafe
@@ -1567,6 +1580,71 @@ public class AWSIoTWirelessClient extends AmazonWebServiceClient implements AWSI
 
             HttpResponseHandler<AmazonWebServiceResponse<DeleteMulticastGroupResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DeleteMulticastGroupResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * The operation to delete queued messages.
+     * </p>
+     * 
+     * @param deleteQueuedMessagesRequest
+     * @return Result of the DeleteQueuedMessages operation returned by the service.
+     * @throws ValidationException
+     *         The input did not meet the specified constraints.
+     * @throws ResourceNotFoundException
+     *         Resource does not exist.
+     * @throws ThrottlingException
+     *         The request was denied because it exceeded the allowed API request rate.
+     * @throws InternalServerException
+     *         An unexpected error occurred while processing a request.
+     * @throws AccessDeniedException
+     *         User does not have permission to perform this action.
+     * @sample AWSIoTWireless.DeleteQueuedMessages
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotwireless-2020-11-22/DeleteQueuedMessages"
+     *      target="_top">AWS API Documentation</a>
+     */
+    @Override
+    public DeleteQueuedMessagesResult deleteQueuedMessages(DeleteQueuedMessagesRequest request) {
+        request = beforeClientExecution(request);
+        return executeDeleteQueuedMessages(request);
+    }
+
+    @SdkInternalApi
+    final DeleteQueuedMessagesResult executeDeleteQueuedMessages(DeleteQueuedMessagesRequest deleteQueuedMessagesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(deleteQueuedMessagesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DeleteQueuedMessagesRequest> request = null;
+        Response<DeleteQueuedMessagesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DeleteQueuedMessagesRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(deleteQueuedMessagesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "IoT Wireless");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DeleteQueuedMessages");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DeleteQueuedMessagesResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new DeleteQueuedMessagesResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();
@@ -4093,6 +4171,71 @@ public class AWSIoTWirelessClient extends AmazonWebServiceClient implements AWSI
 
             HttpResponseHandler<AmazonWebServiceResponse<ListPartnerAccountsResult>> responseHandler = protocolFactory.createResponseHandler(
                     new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListPartnerAccountsResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
+     * The operation to list queued messages.
+     * </p>
+     * 
+     * @param listQueuedMessagesRequest
+     * @return Result of the ListQueuedMessages operation returned by the service.
+     * @throws ValidationException
+     *         The input did not meet the specified constraints.
+     * @throws ResourceNotFoundException
+     *         Resource does not exist.
+     * @throws InternalServerException
+     *         An unexpected error occurred while processing a request.
+     * @throws ThrottlingException
+     *         The request was denied because it exceeded the allowed API request rate.
+     * @throws AccessDeniedException
+     *         User does not have permission to perform this action.
+     * @sample AWSIoTWireless.ListQueuedMessages
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotwireless-2020-11-22/ListQueuedMessages" target="_top">AWS
+     *      API Documentation</a>
+     */
+    @Override
+    public ListQueuedMessagesResult listQueuedMessages(ListQueuedMessagesRequest request) {
+        request = beforeClientExecution(request);
+        return executeListQueuedMessages(request);
+    }
+
+    @SdkInternalApi
+    final ListQueuedMessagesResult executeListQueuedMessages(ListQueuedMessagesRequest listQueuedMessagesRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(listQueuedMessagesRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<ListQueuedMessagesRequest> request = null;
+        Response<ListQueuedMessagesResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new ListQueuedMessagesRequestProtocolMarshaller(protocolFactory).marshall(super.beforeMarshalling(listQueuedMessagesRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "IoT Wireless");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "ListQueuedMessages");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<ListQueuedMessagesResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false), new ListQueuedMessagesResultJsonUnmarshaller());
             response = invoke(request, responseHandler, executionContext);
 
             return response.getAwsResponse();

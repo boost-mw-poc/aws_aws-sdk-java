@@ -30,6 +30,8 @@ public class UpdateChannelRequestMarshaller {
 
     private static final MarshallingInfo<String> CHANNELNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
             .marshallLocationName("channelName").build();
+    private static final MarshallingInfo<StructuredPojo> FILLERSLATE_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("FillerSlate").build();
     private static final MarshallingInfo<List> OUTPUTS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Outputs").build();
 
@@ -50,6 +52,7 @@ public class UpdateChannelRequestMarshaller {
 
         try {
             protocolMarshaller.marshall(updateChannelRequest.getChannelName(), CHANNELNAME_BINDING);
+            protocolMarshaller.marshall(updateChannelRequest.getFillerSlate(), FILLERSLATE_BINDING);
             protocolMarshaller.marshall(updateChannelRequest.getOutputs(), OUTPUTS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

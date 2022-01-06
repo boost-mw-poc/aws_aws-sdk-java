@@ -80,6 +80,10 @@ public class PlacementGroupStaxUnmarshaller implements Unmarshaller<PlacementGro
                     continue;
                 }
 
+                if (context.testExpression("groupArn", targetDepth)) {
+                    placementGroup.setGroupArn(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return placementGroup;

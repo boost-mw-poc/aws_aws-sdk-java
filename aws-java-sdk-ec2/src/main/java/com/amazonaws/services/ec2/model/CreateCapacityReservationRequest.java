@@ -181,6 +181,14 @@ public class CreateCapacityReservationRequest extends AmazonWebServiceRequest im
      * </p>
      */
     private String outpostArn;
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the cluster placement group in which to create the Capacity Reservation. For
+     * more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/cr-cpg.html"> Capacity
+     * Reservations for cluster placement groups</a> in the <i>Amazon EC2 User Guide</i>.
+     * </p>
+     */
+    private String placementGroupArn;
 
     /**
      * <p>
@@ -1388,6 +1396,59 @@ public class CreateCapacityReservationRequest extends AmazonWebServiceRequest im
     }
 
     /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the cluster placement group in which to create the Capacity Reservation. For
+     * more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/cr-cpg.html"> Capacity
+     * Reservations for cluster placement groups</a> in the <i>Amazon EC2 User Guide</i>.
+     * </p>
+     * 
+     * @param placementGroupArn
+     *        The Amazon Resource Name (ARN) of the cluster placement group in which to create the Capacity Reservation.
+     *        For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/cr-cpg.html">
+     *        Capacity Reservations for cluster placement groups</a> in the <i>Amazon EC2 User Guide</i>.
+     */
+
+    public void setPlacementGroupArn(String placementGroupArn) {
+        this.placementGroupArn = placementGroupArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the cluster placement group in which to create the Capacity Reservation. For
+     * more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/cr-cpg.html"> Capacity
+     * Reservations for cluster placement groups</a> in the <i>Amazon EC2 User Guide</i>.
+     * </p>
+     * 
+     * @return The Amazon Resource Name (ARN) of the cluster placement group in which to create the Capacity
+     *         Reservation. For more information, see <a
+     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/cr-cpg.html"> Capacity Reservations for cluster
+     *         placement groups</a> in the <i>Amazon EC2 User Guide</i>.
+     */
+
+    public String getPlacementGroupArn() {
+        return this.placementGroupArn;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Name (ARN) of the cluster placement group in which to create the Capacity Reservation. For
+     * more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/cr-cpg.html"> Capacity
+     * Reservations for cluster placement groups</a> in the <i>Amazon EC2 User Guide</i>.
+     * </p>
+     * 
+     * @param placementGroupArn
+     *        The Amazon Resource Name (ARN) of the cluster placement group in which to create the Capacity Reservation.
+     *        For more information, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/cr-cpg.html">
+     *        Capacity Reservations for cluster placement groups</a> in the <i>Amazon EC2 User Guide</i>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateCapacityReservationRequest withPlacementGroupArn(String placementGroupArn) {
+        setPlacementGroupArn(placementGroupArn);
+        return this;
+    }
+
+    /**
      * This method is intended for internal use only. Returns the marshaled request configured with additional
      * parameters to enable operation dry-run.
      */
@@ -1437,7 +1498,9 @@ public class CreateCapacityReservationRequest extends AmazonWebServiceRequest im
         if (getTagSpecifications() != null)
             sb.append("TagSpecifications: ").append(getTagSpecifications()).append(",");
         if (getOutpostArn() != null)
-            sb.append("OutpostArn: ").append(getOutpostArn());
+            sb.append("OutpostArn: ").append(getOutpostArn()).append(",");
+        if (getPlacementGroupArn() != null)
+            sb.append("PlacementGroupArn: ").append(getPlacementGroupArn());
         sb.append("}");
         return sb.toString();
     }
@@ -1508,6 +1571,10 @@ public class CreateCapacityReservationRequest extends AmazonWebServiceRequest im
             return false;
         if (other.getOutpostArn() != null && other.getOutpostArn().equals(this.getOutpostArn()) == false)
             return false;
+        if (other.getPlacementGroupArn() == null ^ this.getPlacementGroupArn() == null)
+            return false;
+        if (other.getPlacementGroupArn() != null && other.getPlacementGroupArn().equals(this.getPlacementGroupArn()) == false)
+            return false;
         return true;
     }
 
@@ -1530,6 +1597,7 @@ public class CreateCapacityReservationRequest extends AmazonWebServiceRequest im
         hashCode = prime * hashCode + ((getInstanceMatchCriteria() == null) ? 0 : getInstanceMatchCriteria().hashCode());
         hashCode = prime * hashCode + ((getTagSpecifications() == null) ? 0 : getTagSpecifications().hashCode());
         hashCode = prime * hashCode + ((getOutpostArn() == null) ? 0 : getOutpostArn().hashCode());
+        hashCode = prime * hashCode + ((getPlacementGroupArn() == null) ? 0 : getPlacementGroupArn().hashCode());
         return hashCode;
     }
 

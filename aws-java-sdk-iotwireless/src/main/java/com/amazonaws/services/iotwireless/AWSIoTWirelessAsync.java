@@ -26,7 +26,20 @@ import com.amazonaws.services.iotwireless.model.*;
  * </p>
  * <p>
  * <p>
- * AWS IoT Wireless API documentation
+ * AWS IoT Wireless provides bi-directional communication between internet-connected wireless devices and the AWS Cloud.
+ * To onboard both LoRaWAN and Sidewalk devices to AWS IoT, use the IoT Wireless API. These wireless devices use the Low
+ * Power Wide Area Networking (LPWAN) communication protocol to communicate with AWS IoT.
+ * </p>
+ * <p>
+ * Using the API, you can perform create, read, update, and delete operations for your wireless devices, gateways,
+ * destinations, and profiles. After onboarding your devices, you can use the API operations to set log levels and
+ * monitor your devices with CloudWatch.
+ * </p>
+ * <p>
+ * You can also use the API operations to create multicast groups and schedule a multicast session for sending a
+ * downlink message to devices in the group. By using Firmware Updates Over-The-Air (FUOTA) API operations, you can
+ * create a FUOTA task and schedule a session to update the firmware of individual devices or an entire group of devices
+ * in a multicast group.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
@@ -724,6 +737,37 @@ public interface AWSIoTWirelessAsync extends AWSIoTWireless {
      */
     java.util.concurrent.Future<DeleteMulticastGroupResult> deleteMulticastGroupAsync(DeleteMulticastGroupRequest deleteMulticastGroupRequest,
             com.amazonaws.handlers.AsyncHandler<DeleteMulticastGroupRequest, DeleteMulticastGroupResult> asyncHandler);
+
+    /**
+     * <p>
+     * The operation to delete queued messages.
+     * </p>
+     * 
+     * @param deleteQueuedMessagesRequest
+     * @return A Java Future containing the result of the DeleteQueuedMessages operation returned by the service.
+     * @sample AWSIoTWirelessAsync.DeleteQueuedMessages
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotwireless-2020-11-22/DeleteQueuedMessages"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteQueuedMessagesResult> deleteQueuedMessagesAsync(DeleteQueuedMessagesRequest deleteQueuedMessagesRequest);
+
+    /**
+     * <p>
+     * The operation to delete queued messages.
+     * </p>
+     * 
+     * @param deleteQueuedMessagesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeleteQueuedMessages operation returned by the service.
+     * @sample AWSIoTWirelessAsyncHandler.DeleteQueuedMessages
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotwireless-2020-11-22/DeleteQueuedMessages"
+     *      target="_top">AWS API Documentation</a>
+     */
+    java.util.concurrent.Future<DeleteQueuedMessagesResult> deleteQueuedMessagesAsync(DeleteQueuedMessagesRequest deleteQueuedMessagesRequest,
+            com.amazonaws.handlers.AsyncHandler<DeleteQueuedMessagesRequest, DeleteQueuedMessagesResult> asyncHandler);
 
     /**
      * <p>
@@ -1992,6 +2036,37 @@ public interface AWSIoTWirelessAsync extends AWSIoTWireless {
      */
     java.util.concurrent.Future<ListPartnerAccountsResult> listPartnerAccountsAsync(ListPartnerAccountsRequest listPartnerAccountsRequest,
             com.amazonaws.handlers.AsyncHandler<ListPartnerAccountsRequest, ListPartnerAccountsResult> asyncHandler);
+
+    /**
+     * <p>
+     * The operation to list queued messages.
+     * </p>
+     * 
+     * @param listQueuedMessagesRequest
+     * @return A Java Future containing the result of the ListQueuedMessages operation returned by the service.
+     * @sample AWSIoTWirelessAsync.ListQueuedMessages
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotwireless-2020-11-22/ListQueuedMessages" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListQueuedMessagesResult> listQueuedMessagesAsync(ListQueuedMessagesRequest listQueuedMessagesRequest);
+
+    /**
+     * <p>
+     * The operation to list queued messages.
+     * </p>
+     * 
+     * @param listQueuedMessagesRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListQueuedMessages operation returned by the service.
+     * @sample AWSIoTWirelessAsyncHandler.ListQueuedMessages
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/iotwireless-2020-11-22/ListQueuedMessages" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListQueuedMessagesResult> listQueuedMessagesAsync(ListQueuedMessagesRequest listQueuedMessagesRequest,
+            com.amazonaws.handlers.AsyncHandler<ListQueuedMessagesRequest, ListQueuedMessagesResult> asyncHandler);
 
     /**
      * <p>

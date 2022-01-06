@@ -19,8 +19,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The VPC networking components used to secure and enable network traffic between the AWS resources for your
- * environment. To learn more, see <a
+ * Defines the VPC networking components used to secure and enable network traffic between the Amazon Web Services
+ * resources for your environment. To learn more, see <a
  * href="https://docs.aws.amazon.com/mwaa/latest/userguide/networking-about.html">About networking on Amazon MWAA</a>.
  * </p>
  * 
@@ -32,9 +32,8 @@ public class UpdateNetworkConfigurationInput implements Serializable, Cloneable,
 
     /**
      * <p>
-     * A list of 1 or more security group IDs. Accepts up to 5 security group IDs. A security group must be attached to
-     * the same VPC as the subnets. To learn more, see <a
-     * href="https://docs.aws.amazon.com/mwaa/latest/userguide/vpc-security.html">Security in your VPC on Amazon
+     * A list of security group IDs. A security group must be attached to the same VPC as the subnets. To learn more,
+     * see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/vpc-security.html">Security in your VPC on Amazon
      * MWAA</a>.
      * </p>
      */
@@ -42,16 +41,14 @@ public class UpdateNetworkConfigurationInput implements Serializable, Cloneable,
 
     /**
      * <p>
-     * A list of 1 or more security group IDs. Accepts up to 5 security group IDs. A security group must be attached to
-     * the same VPC as the subnets. To learn more, see <a
-     * href="https://docs.aws.amazon.com/mwaa/latest/userguide/vpc-security.html">Security in your VPC on Amazon
+     * A list of security group IDs. A security group must be attached to the same VPC as the subnets. To learn more,
+     * see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/vpc-security.html">Security in your VPC on Amazon
      * MWAA</a>.
      * </p>
      * 
-     * @return A list of 1 or more security group IDs. Accepts up to 5 security group IDs. A security group must be
-     *         attached to the same VPC as the subnets. To learn more, see <a
-     *         href="https://docs.aws.amazon.com/mwaa/latest/userguide/vpc-security.html">Security in your VPC on Amazon
-     *         MWAA</a>.
+     * @return A list of security group IDs. A security group must be attached to the same VPC as the subnets. To learn
+     *         more, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/vpc-security.html">Security in your
+     *         VPC on Amazon MWAA</a>.
      */
 
     public java.util.List<String> getSecurityGroupIds() {
@@ -60,17 +57,15 @@ public class UpdateNetworkConfigurationInput implements Serializable, Cloneable,
 
     /**
      * <p>
-     * A list of 1 or more security group IDs. Accepts up to 5 security group IDs. A security group must be attached to
-     * the same VPC as the subnets. To learn more, see <a
-     * href="https://docs.aws.amazon.com/mwaa/latest/userguide/vpc-security.html">Security in your VPC on Amazon
+     * A list of security group IDs. A security group must be attached to the same VPC as the subnets. To learn more,
+     * see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/vpc-security.html">Security in your VPC on Amazon
      * MWAA</a>.
      * </p>
      * 
      * @param securityGroupIds
-     *        A list of 1 or more security group IDs. Accepts up to 5 security group IDs. A security group must be
-     *        attached to the same VPC as the subnets. To learn more, see <a
-     *        href="https://docs.aws.amazon.com/mwaa/latest/userguide/vpc-security.html">Security in your VPC on Amazon
-     *        MWAA</a>.
+     *        A list of security group IDs. A security group must be attached to the same VPC as the subnets. To learn
+     *        more, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/vpc-security.html">Security in your
+     *        VPC on Amazon MWAA</a>.
      */
 
     public void setSecurityGroupIds(java.util.Collection<String> securityGroupIds) {
@@ -84,9 +79,8 @@ public class UpdateNetworkConfigurationInput implements Serializable, Cloneable,
 
     /**
      * <p>
-     * A list of 1 or more security group IDs. Accepts up to 5 security group IDs. A security group must be attached to
-     * the same VPC as the subnets. To learn more, see <a
-     * href="https://docs.aws.amazon.com/mwaa/latest/userguide/vpc-security.html">Security in your VPC on Amazon
+     * A list of security group IDs. A security group must be attached to the same VPC as the subnets. To learn more,
+     * see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/vpc-security.html">Security in your VPC on Amazon
      * MWAA</a>.
      * </p>
      * <p>
@@ -96,10 +90,9 @@ public class UpdateNetworkConfigurationInput implements Serializable, Cloneable,
      * </p>
      * 
      * @param securityGroupIds
-     *        A list of 1 or more security group IDs. Accepts up to 5 security group IDs. A security group must be
-     *        attached to the same VPC as the subnets. To learn more, see <a
-     *        href="https://docs.aws.amazon.com/mwaa/latest/userguide/vpc-security.html">Security in your VPC on Amazon
-     *        MWAA</a>.
+     *        A list of security group IDs. A security group must be attached to the same VPC as the subnets. To learn
+     *        more, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/vpc-security.html">Security in your
+     *        VPC on Amazon MWAA</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -115,17 +108,15 @@ public class UpdateNetworkConfigurationInput implements Serializable, Cloneable,
 
     /**
      * <p>
-     * A list of 1 or more security group IDs. Accepts up to 5 security group IDs. A security group must be attached to
-     * the same VPC as the subnets. To learn more, see <a
-     * href="https://docs.aws.amazon.com/mwaa/latest/userguide/vpc-security.html">Security in your VPC on Amazon
+     * A list of security group IDs. A security group must be attached to the same VPC as the subnets. To learn more,
+     * see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/vpc-security.html">Security in your VPC on Amazon
      * MWAA</a>.
      * </p>
      * 
      * @param securityGroupIds
-     *        A list of 1 or more security group IDs. Accepts up to 5 security group IDs. A security group must be
-     *        attached to the same VPC as the subnets. To learn more, see <a
-     *        href="https://docs.aws.amazon.com/mwaa/latest/userguide/vpc-security.html">Security in your VPC on Amazon
-     *        MWAA</a>.
+     *        A list of security group IDs. A security group must be attached to the same VPC as the subnets. To learn
+     *        more, see <a href="https://docs.aws.amazon.com/mwaa/latest/userguide/vpc-security.html">Security in your
+     *        VPC on Amazon MWAA</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The status of the last update on the environment, and any errors that were encountered.
+ * Describes the status of the last update on the environment, and any errors that were encountered.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/mwaa-2020-07-01/LastUpdate" target="_top">AWS API
@@ -42,8 +42,14 @@ public class LastUpdate implements Serializable, Cloneable, StructuredPojo {
     private UpdateError error;
     /**
      * <p>
-     * The status of the last update on the environment. Valid values: <code>SUCCESS</code>, <code>PENDING</code>,
-     * <code>FAILED</code>.
+     * The source of the last update to the environment. Includes internal processes by Amazon MWAA, such as an
+     * environment maintenance update.
+     * </p>
+     */
+    private String source;
+    /**
+     * <p>
+     * The status of the last update on the environment.
      * </p>
      */
     private String status;
@@ -130,13 +136,57 @@ public class LastUpdate implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The status of the last update on the environment. Valid values: <code>SUCCESS</code>, <code>PENDING</code>,
-     * <code>FAILED</code>.
+     * The source of the last update to the environment. Includes internal processes by Amazon MWAA, such as an
+     * environment maintenance update.
+     * </p>
+     * 
+     * @param source
+     *        The source of the last update to the environment. Includes internal processes by Amazon MWAA, such as an
+     *        environment maintenance update.
+     */
+
+    public void setSource(String source) {
+        this.source = source;
+    }
+
+    /**
+     * <p>
+     * The source of the last update to the environment. Includes internal processes by Amazon MWAA, such as an
+     * environment maintenance update.
+     * </p>
+     * 
+     * @return The source of the last update to the environment. Includes internal processes by Amazon MWAA, such as an
+     *         environment maintenance update.
+     */
+
+    public String getSource() {
+        return this.source;
+    }
+
+    /**
+     * <p>
+     * The source of the last update to the environment. Includes internal processes by Amazon MWAA, such as an
+     * environment maintenance update.
+     * </p>
+     * 
+     * @param source
+     *        The source of the last update to the environment. Includes internal processes by Amazon MWAA, such as an
+     *        environment maintenance update.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public LastUpdate withSource(String source) {
+        setSource(source);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The status of the last update on the environment.
      * </p>
      * 
      * @param status
-     *        The status of the last update on the environment. Valid values: <code>SUCCESS</code>, <code>PENDING</code>
-     *        , <code>FAILED</code>.
+     *        The status of the last update on the environment.
      * @see UpdateStatus
      */
 
@@ -146,12 +196,10 @@ public class LastUpdate implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The status of the last update on the environment. Valid values: <code>SUCCESS</code>, <code>PENDING</code>,
-     * <code>FAILED</code>.
+     * The status of the last update on the environment.
      * </p>
      * 
-     * @return The status of the last update on the environment. Valid values: <code>SUCCESS</code>,
-     *         <code>PENDING</code>, <code>FAILED</code>.
+     * @return The status of the last update on the environment.
      * @see UpdateStatus
      */
 
@@ -161,13 +209,11 @@ public class LastUpdate implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The status of the last update on the environment. Valid values: <code>SUCCESS</code>, <code>PENDING</code>,
-     * <code>FAILED</code>.
+     * The status of the last update on the environment.
      * </p>
      * 
      * @param status
-     *        The status of the last update on the environment. Valid values: <code>SUCCESS</code>, <code>PENDING</code>
-     *        , <code>FAILED</code>.
+     *        The status of the last update on the environment.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see UpdateStatus
      */
@@ -179,13 +225,11 @@ public class LastUpdate implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The status of the last update on the environment. Valid values: <code>SUCCESS</code>, <code>PENDING</code>,
-     * <code>FAILED</code>.
+     * The status of the last update on the environment.
      * </p>
      * 
      * @param status
-     *        The status of the last update on the environment. Valid values: <code>SUCCESS</code>, <code>PENDING</code>
-     *        , <code>FAILED</code>.
+     *        The status of the last update on the environment.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see UpdateStatus
      */
@@ -211,6 +255,8 @@ public class LastUpdate implements Serializable, Cloneable, StructuredPojo {
             sb.append("CreatedAt: ").append(getCreatedAt()).append(",");
         if (getError() != null)
             sb.append("Error: ").append(getError()).append(",");
+        if (getSource() != null)
+            sb.append("Source: ").append(getSource()).append(",");
         if (getStatus() != null)
             sb.append("Status: ").append(getStatus());
         sb.append("}");
@@ -235,6 +281,10 @@ public class LastUpdate implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getError() != null && other.getError().equals(this.getError()) == false)
             return false;
+        if (other.getSource() == null ^ this.getSource() == null)
+            return false;
+        if (other.getSource() != null && other.getSource().equals(this.getSource()) == false)
+            return false;
         if (other.getStatus() == null ^ this.getStatus() == null)
             return false;
         if (other.getStatus() != null && other.getStatus().equals(this.getStatus()) == false)
@@ -249,6 +299,7 @@ public class LastUpdate implements Serializable, Cloneable, StructuredPojo {
 
         hashCode = prime * hashCode + ((getCreatedAt() == null) ? 0 : getCreatedAt().hashCode());
         hashCode = prime * hashCode + ((getError() == null) ? 0 : getError().hashCode());
+        hashCode = prime * hashCode + ((getSource() == null) ? 0 : getSource().hashCode());
         hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
         return hashCode;
     }

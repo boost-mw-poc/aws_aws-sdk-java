@@ -26,7 +26,7 @@ public class ListTagsForResourceResult extends com.amazonaws.AmazonWebServiceRes
     /**
      * <p>
      * The key-value tag pairs associated to your environment. To learn more, see <a
-     * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging AWS resources</a>.
+     * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web Services resources</a>.
      * </p>
      */
     private java.util.Map<String, String> tags;
@@ -34,11 +34,12 @@ public class ListTagsForResourceResult extends com.amazonaws.AmazonWebServiceRes
     /**
      * <p>
      * The key-value tag pairs associated to your environment. To learn more, see <a
-     * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging AWS resources</a>.
+     * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web Services resources</a>.
      * </p>
      * 
      * @return The key-value tag pairs associated to your environment. To learn more, see <a
-     *         href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging AWS resources</a>.
+     *         href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web Services
+     *         resources</a>.
      */
 
     public java.util.Map<String, String> getTags() {
@@ -48,12 +49,13 @@ public class ListTagsForResourceResult extends com.amazonaws.AmazonWebServiceRes
     /**
      * <p>
      * The key-value tag pairs associated to your environment. To learn more, see <a
-     * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging AWS resources</a>.
+     * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web Services resources</a>.
      * </p>
      * 
      * @param tags
      *        The key-value tag pairs associated to your environment. To learn more, see <a
-     *        href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging AWS resources</a>.
+     *        href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web Services
+     *        resources</a>.
      */
 
     public void setTags(java.util.Map<String, String> tags) {
@@ -63,12 +65,13 @@ public class ListTagsForResourceResult extends com.amazonaws.AmazonWebServiceRes
     /**
      * <p>
      * The key-value tag pairs associated to your environment. To learn more, see <a
-     * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging AWS resources</a>.
+     * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web Services resources</a>.
      * </p>
      * 
      * @param tags
      *        The key-value tag pairs associated to your environment. To learn more, see <a
-     *        href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging AWS resources</a>.
+     *        href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web Services
+     *        resources</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

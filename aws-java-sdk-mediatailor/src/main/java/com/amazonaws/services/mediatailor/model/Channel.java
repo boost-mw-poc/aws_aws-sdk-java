@@ -54,8 +54,8 @@ public class Channel implements Serializable, Cloneable, StructuredPojo {
     private java.util.Date creationTime;
     /**
      * <p>
-     * Contains information about the slate used to fill gaps between programs in the schedule. You must configure
-     * FillerSlate if your channel uses an LINEAR PlaybackMode.
+     * The slate used to fill gaps between programs in the schedule. You must configure filler slate if your channel
+     * uses the LINEAR PlaybackMode. MediaTailor doesn't support filler slate for channels using the LOOP PlaybackMode.
      * </p>
      */
     private SlateSource fillerSlate;
@@ -253,13 +253,14 @@ public class Channel implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Contains information about the slate used to fill gaps between programs in the schedule. You must configure
-     * FillerSlate if your channel uses an LINEAR PlaybackMode.
+     * The slate used to fill gaps between programs in the schedule. You must configure filler slate if your channel
+     * uses the LINEAR PlaybackMode. MediaTailor doesn't support filler slate for channels using the LOOP PlaybackMode.
      * </p>
      * 
      * @param fillerSlate
-     *        Contains information about the slate used to fill gaps between programs in the schedule. You must
-     *        configure FillerSlate if your channel uses an LINEAR PlaybackMode.
+     *        The slate used to fill gaps between programs in the schedule. You must configure filler slate if your
+     *        channel uses the LINEAR PlaybackMode. MediaTailor doesn't support filler slate for channels using the LOOP
+     *        PlaybackMode.
      */
 
     public void setFillerSlate(SlateSource fillerSlate) {
@@ -268,12 +269,13 @@ public class Channel implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Contains information about the slate used to fill gaps between programs in the schedule. You must configure
-     * FillerSlate if your channel uses an LINEAR PlaybackMode.
+     * The slate used to fill gaps between programs in the schedule. You must configure filler slate if your channel
+     * uses the LINEAR PlaybackMode. MediaTailor doesn't support filler slate for channels using the LOOP PlaybackMode.
      * </p>
      * 
-     * @return Contains information about the slate used to fill gaps between programs in the schedule. You must
-     *         configure FillerSlate if your channel uses an LINEAR PlaybackMode.
+     * @return The slate used to fill gaps between programs in the schedule. You must configure filler slate if your
+     *         channel uses the LINEAR PlaybackMode. MediaTailor doesn't support filler slate for channels using the
+     *         LOOP PlaybackMode.
      */
 
     public SlateSource getFillerSlate() {
@@ -282,13 +284,14 @@ public class Channel implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Contains information about the slate used to fill gaps between programs in the schedule. You must configure
-     * FillerSlate if your channel uses an LINEAR PlaybackMode.
+     * The slate used to fill gaps between programs in the schedule. You must configure filler slate if your channel
+     * uses the LINEAR PlaybackMode. MediaTailor doesn't support filler slate for channels using the LOOP PlaybackMode.
      * </p>
      * 
      * @param fillerSlate
-     *        Contains information about the slate used to fill gaps between programs in the schedule. You must
-     *        configure FillerSlate if your channel uses an LINEAR PlaybackMode.
+     *        The slate used to fill gaps between programs in the schedule. You must configure filler slate if your
+     *        channel uses the LINEAR PlaybackMode. MediaTailor doesn't support filler slate for channels using the LOOP
+     *        PlaybackMode.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

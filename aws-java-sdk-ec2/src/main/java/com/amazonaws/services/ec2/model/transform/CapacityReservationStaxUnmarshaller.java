@@ -154,6 +154,11 @@ public class CapacityReservationStaxUnmarshaller implements Unmarshaller<Capacit
                     capacityReservation.setCapacityReservationFleetId(StringStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("placementGroupArn", targetDepth)) {
+                    capacityReservation.setPlacementGroupArn(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return capacityReservation;
