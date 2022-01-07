@@ -184,11 +184,21 @@ public class HlsGroupSettings implements Serializable, Cloneable, StructuredPojo
      */
     private String outputSelection;
     /**
-     * Includes or excludes EXT-X-PROGRAM-DATE-TIME tag in .m3u8 manifest files. The value is calculated as follows:
-     * either the program date and time are initialized using the input timecode source, or the time is initialized
-     * using the input timecode source and the date is initialized using the timestampOffset.
+     * Includes or excludes EXT-X-PROGRAM-DATE-TIME tag in .m3u8 manifest files. The value is calculated using the
+     * program date time clock.
      */
     private String programDateTime;
+    /**
+     * Specifies the algorithm used to drive the HLS EXT-X-PROGRAM-DATE-TIME clock. Options include:
+     * 
+     * INITIALIZE_FROM_OUTPUT_TIMECODE: The PDT clock is initialized as a function of the first output timecode, then
+     * incremented by the EXTINF duration of each encoded segment.
+     * 
+     * SYSTEM_CLOCK: The PDT clock is initialized as a function of the UTC wall clock, then incremented by the EXTINF
+     * duration of each encoded segment. If the PDT clock diverges from the wall clock by more than 500ms, it is
+     * resynchronized to the wall clock.
+     */
+    private String programDateTimeClock;
     /** Period of insertion of EXT-X-PROGRAM-DATE-TIME entry, in seconds. */
     private Integer programDateTimePeriod;
     /**
@@ -2079,14 +2089,12 @@ public class HlsGroupSettings implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
-     * Includes or excludes EXT-X-PROGRAM-DATE-TIME tag in .m3u8 manifest files. The value is calculated as follows:
-     * either the program date and time are initialized using the input timecode source, or the time is initialized
-     * using the input timecode source and the date is initialized using the timestampOffset.
+     * Includes or excludes EXT-X-PROGRAM-DATE-TIME tag in .m3u8 manifest files. The value is calculated using the
+     * program date time clock.
      * 
      * @param programDateTime
-     *        Includes or excludes EXT-X-PROGRAM-DATE-TIME tag in .m3u8 manifest files. The value is calculated as
-     *        follows: either the program date and time are initialized using the input timecode source, or the time is
-     *        initialized using the input timecode source and the date is initialized using the timestampOffset.
+     *        Includes or excludes EXT-X-PROGRAM-DATE-TIME tag in .m3u8 manifest files. The value is calculated using
+     *        the program date time clock.
      * @see HlsProgramDateTime
      */
 
@@ -2095,13 +2103,11 @@ public class HlsGroupSettings implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
-     * Includes or excludes EXT-X-PROGRAM-DATE-TIME tag in .m3u8 manifest files. The value is calculated as follows:
-     * either the program date and time are initialized using the input timecode source, or the time is initialized
-     * using the input timecode source and the date is initialized using the timestampOffset.
+     * Includes or excludes EXT-X-PROGRAM-DATE-TIME tag in .m3u8 manifest files. The value is calculated using the
+     * program date time clock.
      * 
-     * @return Includes or excludes EXT-X-PROGRAM-DATE-TIME tag in .m3u8 manifest files. The value is calculated as
-     *         follows: either the program date and time are initialized using the input timecode source, or the time is
-     *         initialized using the input timecode source and the date is initialized using the timestampOffset.
+     * @return Includes or excludes EXT-X-PROGRAM-DATE-TIME tag in .m3u8 manifest files. The value is calculated using
+     *         the program date time clock.
      * @see HlsProgramDateTime
      */
 
@@ -2110,14 +2116,12 @@ public class HlsGroupSettings implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
-     * Includes or excludes EXT-X-PROGRAM-DATE-TIME tag in .m3u8 manifest files. The value is calculated as follows:
-     * either the program date and time are initialized using the input timecode source, or the time is initialized
-     * using the input timecode source and the date is initialized using the timestampOffset.
+     * Includes or excludes EXT-X-PROGRAM-DATE-TIME tag in .m3u8 manifest files. The value is calculated using the
+     * program date time clock.
      * 
      * @param programDateTime
-     *        Includes or excludes EXT-X-PROGRAM-DATE-TIME tag in .m3u8 manifest files. The value is calculated as
-     *        follows: either the program date and time are initialized using the input timecode source, or the time is
-     *        initialized using the input timecode source and the date is initialized using the timestampOffset.
+     *        Includes or excludes EXT-X-PROGRAM-DATE-TIME tag in .m3u8 manifest files. The value is calculated using
+     *        the program date time clock.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see HlsProgramDateTime
      */
@@ -2128,20 +2132,125 @@ public class HlsGroupSettings implements Serializable, Cloneable, StructuredPojo
     }
 
     /**
-     * Includes or excludes EXT-X-PROGRAM-DATE-TIME tag in .m3u8 manifest files. The value is calculated as follows:
-     * either the program date and time are initialized using the input timecode source, or the time is initialized
-     * using the input timecode source and the date is initialized using the timestampOffset.
+     * Includes or excludes EXT-X-PROGRAM-DATE-TIME tag in .m3u8 manifest files. The value is calculated using the
+     * program date time clock.
      * 
      * @param programDateTime
-     *        Includes or excludes EXT-X-PROGRAM-DATE-TIME tag in .m3u8 manifest files. The value is calculated as
-     *        follows: either the program date and time are initialized using the input timecode source, or the time is
-     *        initialized using the input timecode source and the date is initialized using the timestampOffset.
+     *        Includes or excludes EXT-X-PROGRAM-DATE-TIME tag in .m3u8 manifest files. The value is calculated using
+     *        the program date time clock.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see HlsProgramDateTime
      */
 
     public HlsGroupSettings withProgramDateTime(HlsProgramDateTime programDateTime) {
         this.programDateTime = programDateTime.toString();
+        return this;
+    }
+
+    /**
+     * Specifies the algorithm used to drive the HLS EXT-X-PROGRAM-DATE-TIME clock. Options include:
+     * 
+     * INITIALIZE_FROM_OUTPUT_TIMECODE: The PDT clock is initialized as a function of the first output timecode, then
+     * incremented by the EXTINF duration of each encoded segment.
+     * 
+     * SYSTEM_CLOCK: The PDT clock is initialized as a function of the UTC wall clock, then incremented by the EXTINF
+     * duration of each encoded segment. If the PDT clock diverges from the wall clock by more than 500ms, it is
+     * resynchronized to the wall clock.
+     * 
+     * @param programDateTimeClock
+     *        Specifies the algorithm used to drive the HLS EXT-X-PROGRAM-DATE-TIME clock. Options include:
+     * 
+     *        INITIALIZE_FROM_OUTPUT_TIMECODE: The PDT clock is initialized as a function of the first output timecode,
+     *        then incremented by the EXTINF duration of each encoded segment.
+     * 
+     *        SYSTEM_CLOCK: The PDT clock is initialized as a function of the UTC wall clock, then incremented by the
+     *        EXTINF duration of each encoded segment. If the PDT clock diverges from the wall clock by more than 500ms,
+     *        it is resynchronized to the wall clock.
+     * @see HlsProgramDateTimeClock
+     */
+
+    public void setProgramDateTimeClock(String programDateTimeClock) {
+        this.programDateTimeClock = programDateTimeClock;
+    }
+
+    /**
+     * Specifies the algorithm used to drive the HLS EXT-X-PROGRAM-DATE-TIME clock. Options include:
+     * 
+     * INITIALIZE_FROM_OUTPUT_TIMECODE: The PDT clock is initialized as a function of the first output timecode, then
+     * incremented by the EXTINF duration of each encoded segment.
+     * 
+     * SYSTEM_CLOCK: The PDT clock is initialized as a function of the UTC wall clock, then incremented by the EXTINF
+     * duration of each encoded segment. If the PDT clock diverges from the wall clock by more than 500ms, it is
+     * resynchronized to the wall clock.
+     * 
+     * @return Specifies the algorithm used to drive the HLS EXT-X-PROGRAM-DATE-TIME clock. Options include:
+     * 
+     *         INITIALIZE_FROM_OUTPUT_TIMECODE: The PDT clock is initialized as a function of the first output timecode,
+     *         then incremented by the EXTINF duration of each encoded segment.
+     * 
+     *         SYSTEM_CLOCK: The PDT clock is initialized as a function of the UTC wall clock, then incremented by the
+     *         EXTINF duration of each encoded segment. If the PDT clock diverges from the wall clock by more than
+     *         500ms, it is resynchronized to the wall clock.
+     * @see HlsProgramDateTimeClock
+     */
+
+    public String getProgramDateTimeClock() {
+        return this.programDateTimeClock;
+    }
+
+    /**
+     * Specifies the algorithm used to drive the HLS EXT-X-PROGRAM-DATE-TIME clock. Options include:
+     * 
+     * INITIALIZE_FROM_OUTPUT_TIMECODE: The PDT clock is initialized as a function of the first output timecode, then
+     * incremented by the EXTINF duration of each encoded segment.
+     * 
+     * SYSTEM_CLOCK: The PDT clock is initialized as a function of the UTC wall clock, then incremented by the EXTINF
+     * duration of each encoded segment. If the PDT clock diverges from the wall clock by more than 500ms, it is
+     * resynchronized to the wall clock.
+     * 
+     * @param programDateTimeClock
+     *        Specifies the algorithm used to drive the HLS EXT-X-PROGRAM-DATE-TIME clock. Options include:
+     * 
+     *        INITIALIZE_FROM_OUTPUT_TIMECODE: The PDT clock is initialized as a function of the first output timecode,
+     *        then incremented by the EXTINF duration of each encoded segment.
+     * 
+     *        SYSTEM_CLOCK: The PDT clock is initialized as a function of the UTC wall clock, then incremented by the
+     *        EXTINF duration of each encoded segment. If the PDT clock diverges from the wall clock by more than 500ms,
+     *        it is resynchronized to the wall clock.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see HlsProgramDateTimeClock
+     */
+
+    public HlsGroupSettings withProgramDateTimeClock(String programDateTimeClock) {
+        setProgramDateTimeClock(programDateTimeClock);
+        return this;
+    }
+
+    /**
+     * Specifies the algorithm used to drive the HLS EXT-X-PROGRAM-DATE-TIME clock. Options include:
+     * 
+     * INITIALIZE_FROM_OUTPUT_TIMECODE: The PDT clock is initialized as a function of the first output timecode, then
+     * incremented by the EXTINF duration of each encoded segment.
+     * 
+     * SYSTEM_CLOCK: The PDT clock is initialized as a function of the UTC wall clock, then incremented by the EXTINF
+     * duration of each encoded segment. If the PDT clock diverges from the wall clock by more than 500ms, it is
+     * resynchronized to the wall clock.
+     * 
+     * @param programDateTimeClock
+     *        Specifies the algorithm used to drive the HLS EXT-X-PROGRAM-DATE-TIME clock. Options include:
+     * 
+     *        INITIALIZE_FROM_OUTPUT_TIMECODE: The PDT clock is initialized as a function of the first output timecode,
+     *        then incremented by the EXTINF duration of each encoded segment.
+     * 
+     *        SYSTEM_CLOCK: The PDT clock is initialized as a function of the UTC wall clock, then incremented by the
+     *        EXTINF duration of each encoded segment. If the PDT clock diverges from the wall clock by more than 500ms,
+     *        it is resynchronized to the wall clock.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see HlsProgramDateTimeClock
+     */
+
+    public HlsGroupSettings withProgramDateTimeClock(HlsProgramDateTimeClock programDateTimeClock) {
+        this.programDateTimeClock = programDateTimeClock.toString();
         return this;
     }
 
@@ -2778,6 +2887,8 @@ public class HlsGroupSettings implements Serializable, Cloneable, StructuredPojo
             sb.append("OutputSelection: ").append(getOutputSelection()).append(",");
         if (getProgramDateTime() != null)
             sb.append("ProgramDateTime: ").append(getProgramDateTime()).append(",");
+        if (getProgramDateTimeClock() != null)
+            sb.append("ProgramDateTimeClock: ").append(getProgramDateTimeClock()).append(",");
         if (getProgramDateTimePeriod() != null)
             sb.append("ProgramDateTimePeriod: ").append(getProgramDateTimePeriod()).append(",");
         if (getRedundantManifest() != null)
@@ -2940,6 +3051,10 @@ public class HlsGroupSettings implements Serializable, Cloneable, StructuredPojo
             return false;
         if (other.getProgramDateTime() != null && other.getProgramDateTime().equals(this.getProgramDateTime()) == false)
             return false;
+        if (other.getProgramDateTimeClock() == null ^ this.getProgramDateTimeClock() == null)
+            return false;
+        if (other.getProgramDateTimeClock() != null && other.getProgramDateTimeClock().equals(this.getProgramDateTimeClock()) == false)
+            return false;
         if (other.getProgramDateTimePeriod() == null ^ this.getProgramDateTimePeriod() == null)
             return false;
         if (other.getProgramDateTimePeriod() != null && other.getProgramDateTimePeriod().equals(this.getProgramDateTimePeriod()) == false)
@@ -3020,6 +3135,7 @@ public class HlsGroupSettings implements Serializable, Cloneable, StructuredPojo
         hashCode = prime * hashCode + ((getMode() == null) ? 0 : getMode().hashCode());
         hashCode = prime * hashCode + ((getOutputSelection() == null) ? 0 : getOutputSelection().hashCode());
         hashCode = prime * hashCode + ((getProgramDateTime() == null) ? 0 : getProgramDateTime().hashCode());
+        hashCode = prime * hashCode + ((getProgramDateTimeClock() == null) ? 0 : getProgramDateTimeClock().hashCode());
         hashCode = prime * hashCode + ((getProgramDateTimePeriod() == null) ? 0 : getProgramDateTimePeriod().hashCode());
         hashCode = prime * hashCode + ((getRedundantManifest() == null) ? 0 : getRedundantManifest().hashCode());
         hashCode = prime * hashCode + ((getSegmentLength() == null) ? 0 : getSegmentLength().hashCode());

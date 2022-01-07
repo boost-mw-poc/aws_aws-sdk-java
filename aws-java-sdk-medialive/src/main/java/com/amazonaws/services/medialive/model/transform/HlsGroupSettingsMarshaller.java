@@ -92,6 +92,8 @@ public class HlsGroupSettingsMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("outputSelection").build();
     private static final MarshallingInfo<String> PROGRAMDATETIME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("programDateTime").build();
+    private static final MarshallingInfo<String> PROGRAMDATETIMECLOCK_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("programDateTimeClock").build();
     private static final MarshallingInfo<Integer> PROGRAMDATETIMEPERIOD_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("programDateTimePeriod").build();
     private static final MarshallingInfo<String> REDUNDANTMANIFEST_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
@@ -161,6 +163,7 @@ public class HlsGroupSettingsMarshaller {
             protocolMarshaller.marshall(hlsGroupSettings.getMode(), MODE_BINDING);
             protocolMarshaller.marshall(hlsGroupSettings.getOutputSelection(), OUTPUTSELECTION_BINDING);
             protocolMarshaller.marshall(hlsGroupSettings.getProgramDateTime(), PROGRAMDATETIME_BINDING);
+            protocolMarshaller.marshall(hlsGroupSettings.getProgramDateTimeClock(), PROGRAMDATETIMECLOCK_BINDING);
             protocolMarshaller.marshall(hlsGroupSettings.getProgramDateTimePeriod(), PROGRAMDATETIMEPERIOD_BINDING);
             protocolMarshaller.marshall(hlsGroupSettings.getRedundantManifest(), REDUNDANTMANIFEST_BINDING);
             protocolMarshaller.marshall(hlsGroupSettings.getSegmentLength(), SEGMENTLENGTH_BINDING);

@@ -181,6 +181,10 @@ public class HlsGroupSettingsJsonUnmarshaller implements Unmarshaller<HlsGroupSe
                     context.nextToken();
                     hlsGroupSettings.setProgramDateTime(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("programDateTimeClock", targetDepth)) {
+                    context.nextToken();
+                    hlsGroupSettings.setProgramDateTimeClock(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("programDateTimePeriod", targetDepth)) {
                     context.nextToken();
                     hlsGroupSettings.setProgramDateTimePeriod(context.getUnmarshaller(Integer.class).unmarshall(context));

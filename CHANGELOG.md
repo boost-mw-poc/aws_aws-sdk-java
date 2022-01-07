@@ -1,3 +1,8 @@
+# __1.12.136__ __2022-01-07__
+## __AWS Elemental MediaLive__
+  - ### Features
+    - This release adds support for selecting the Program Date Time (PDT) Clock source algorithm for HLS outputs.
+
 # __1.12.135__ __2022-01-06__
 ## __AWS AppSync__
   - ### Features
