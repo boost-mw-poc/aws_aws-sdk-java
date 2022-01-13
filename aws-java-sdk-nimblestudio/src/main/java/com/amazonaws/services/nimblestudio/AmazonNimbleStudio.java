@@ -719,7 +719,7 @@ public interface AmazonNimbleStudio {
      * Gets StreamingSession resource.
      * </p>
      * <p>
-     * anvoke this operation to poll for a streaming session state while creating or deleting a session.
+     * Invoke this operation to poll for a streaming session state while creating or deleting a session.
      * </p>
      * 
      * @param getStreamingSessionRequest

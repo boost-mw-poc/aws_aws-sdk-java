@@ -1,3 +1,28 @@
+# __1.12.140__ __2022-01-13__
+## __AWS Glue__
+  - ### Features
+    - This SDK release adds support to pass run properties when starting a workflow run
+
+## __Amazon ElastiCache__
+  - ### Features
+    - AWS ElastiCache for Redis has added a new Engine Log LogType in LogDelivery feature. You can now publish the Engine Log from your Amazon ElastiCache for Redis clusters to Amazon CloudWatch Logs and Amazon Kinesis Data Firehose.
+
+## __Amazon Lex Runtime V2__
+  - ### Features
+    - This release adds support for sending hints to Amazon Lex V2 runtime APIs. Bot developers can provide runtime hints to help improve the recognition of slot values.
+
+## __Amazon Pinpoint__
+  - ### Features
+    - Adds JourneyChannelSettings to WriteJourneyRequest
+
+## __Amazon Simple Systems Manager (SSM)__
+  - ### Features
+    - AWS Systems Manager adds category support for DescribeDocument API
+
+## __AmazonNimbleStudio__
+  - ### Features
+    - Amazon Nimble Studio now supports validation for Launch Profiles. Launch Profiles now report static validation results after create/update to detect errors in network or active directory configuration.
+
 # __1.12.139__ __2022-01-12__
 ## __AWS Performance Insights__
   - ### Features

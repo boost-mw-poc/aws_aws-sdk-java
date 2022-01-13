@@ -54,8 +54,19 @@ public class SessionState implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private java.util.Map<String, String> sessionAttributes;
-    /** <p/> */
+    /**
+     * <p>
+     * A unique identifier for a specific request.
+     * </p>
+     */
     private String originatingRequestId;
+    /**
+     * <p>
+     * Hints for phrases that a customer is likely to use for a slot. Amazon Lex V2 uses the hints to help determine the
+     * correct value of a slot.
+     * </p>
+     */
+    private RuntimeHints runtimeHints;
 
     /**
      * <p>
@@ -290,9 +301,12 @@ public class SessionState implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * A unique identifier for a specific request.
+     * </p>
      * 
      * @param originatingRequestId
+     *        A unique identifier for a specific request.
      */
 
     public void setOriginatingRequestId(String originatingRequestId) {
@@ -300,9 +314,11 @@ public class SessionState implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * A unique identifier for a specific request.
+     * </p>
      * 
-     * @return
+     * @return A unique identifier for a specific request.
      */
 
     public String getOriginatingRequestId() {
@@ -310,14 +326,63 @@ public class SessionState implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
-     * <p/>
+     * <p>
+     * A unique identifier for a specific request.
+     * </p>
      * 
      * @param originatingRequestId
+     *        A unique identifier for a specific request.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public SessionState withOriginatingRequestId(String originatingRequestId) {
         setOriginatingRequestId(originatingRequestId);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Hints for phrases that a customer is likely to use for a slot. Amazon Lex V2 uses the hints to help determine the
+     * correct value of a slot.
+     * </p>
+     * 
+     * @param runtimeHints
+     *        Hints for phrases that a customer is likely to use for a slot. Amazon Lex V2 uses the hints to help
+     *        determine the correct value of a slot.
+     */
+
+    public void setRuntimeHints(RuntimeHints runtimeHints) {
+        this.runtimeHints = runtimeHints;
+    }
+
+    /**
+     * <p>
+     * Hints for phrases that a customer is likely to use for a slot. Amazon Lex V2 uses the hints to help determine the
+     * correct value of a slot.
+     * </p>
+     * 
+     * @return Hints for phrases that a customer is likely to use for a slot. Amazon Lex V2 uses the hints to help
+     *         determine the correct value of a slot.
+     */
+
+    public RuntimeHints getRuntimeHints() {
+        return this.runtimeHints;
+    }
+
+    /**
+     * <p>
+     * Hints for phrases that a customer is likely to use for a slot. Amazon Lex V2 uses the hints to help determine the
+     * correct value of a slot.
+     * </p>
+     * 
+     * @param runtimeHints
+     *        Hints for phrases that a customer is likely to use for a slot. Amazon Lex V2 uses the hints to help
+     *        determine the correct value of a slot.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public SessionState withRuntimeHints(RuntimeHints runtimeHints) {
+        setRuntimeHints(runtimeHints);
         return this;
     }
 
@@ -342,7 +407,9 @@ public class SessionState implements Serializable, Cloneable, StructuredPojo {
         if (getSessionAttributes() != null)
             sb.append("SessionAttributes: ").append(getSessionAttributes()).append(",");
         if (getOriginatingRequestId() != null)
-            sb.append("OriginatingRequestId: ").append(getOriginatingRequestId());
+            sb.append("OriginatingRequestId: ").append(getOriginatingRequestId()).append(",");
+        if (getRuntimeHints() != null)
+            sb.append("RuntimeHints: ").append(getRuntimeHints());
         sb.append("}");
         return sb.toString();
     }
@@ -377,6 +444,10 @@ public class SessionState implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getOriginatingRequestId() != null && other.getOriginatingRequestId().equals(this.getOriginatingRequestId()) == false)
             return false;
+        if (other.getRuntimeHints() == null ^ this.getRuntimeHints() == null)
+            return false;
+        if (other.getRuntimeHints() != null && other.getRuntimeHints().equals(this.getRuntimeHints()) == false)
+            return false;
         return true;
     }
 
@@ -390,6 +461,7 @@ public class SessionState implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getActiveContexts() == null) ? 0 : getActiveContexts().hashCode());
         hashCode = prime * hashCode + ((getSessionAttributes() == null) ? 0 : getSessionAttributes().hashCode());
         hashCode = prime * hashCode + ((getOriginatingRequestId() == null) ? 0 : getOriginatingRequestId().hashCode());
+        hashCode = prime * hashCode + ((getRuntimeHints() == null) ? 0 : getRuntimeHints().hashCode());
         return hashCode;
     }
 

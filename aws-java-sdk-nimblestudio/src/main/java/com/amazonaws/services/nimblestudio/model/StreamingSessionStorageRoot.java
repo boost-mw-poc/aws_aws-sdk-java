@@ -30,26 +30,24 @@ public class StreamingSessionStorageRoot implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The folder path in Linux workstations where files are uploaded. The default path is <code>$HOME/Downloads</code>.
+     * The folder path in Linux workstations where files are uploaded.
      * </p>
      */
     private String linux;
     /**
      * <p>
-     * The folder path in Windows workstations where files are uploaded. The default path is
-     * <code>%HOMEPATH%\Downloads</code>.
+     * The folder path in Windows workstations where files are uploaded.
      * </p>
      */
     private String windows;
 
     /**
      * <p>
-     * The folder path in Linux workstations where files are uploaded. The default path is <code>$HOME/Downloads</code>.
+     * The folder path in Linux workstations where files are uploaded.
      * </p>
      * 
      * @param linux
-     *        The folder path in Linux workstations where files are uploaded. The default path is
-     *        <code>$HOME/Downloads</code>.
+     *        The folder path in Linux workstations where files are uploaded.
      */
 
     public void setLinux(String linux) {
@@ -58,11 +56,10 @@ public class StreamingSessionStorageRoot implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The folder path in Linux workstations where files are uploaded. The default path is <code>$HOME/Downloads</code>.
+     * The folder path in Linux workstations where files are uploaded.
      * </p>
      * 
-     * @return The folder path in Linux workstations where files are uploaded. The default path is
-     *         <code>$HOME/Downloads</code>.
+     * @return The folder path in Linux workstations where files are uploaded.
      */
 
     public String getLinux() {
@@ -71,12 +68,11 @@ public class StreamingSessionStorageRoot implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The folder path in Linux workstations where files are uploaded. The default path is <code>$HOME/Downloads</code>.
+     * The folder path in Linux workstations where files are uploaded.
      * </p>
      * 
      * @param linux
-     *        The folder path in Linux workstations where files are uploaded. The default path is
-     *        <code>$HOME/Downloads</code>.
+     *        The folder path in Linux workstations where files are uploaded.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -87,13 +83,11 @@ public class StreamingSessionStorageRoot implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The folder path in Windows workstations where files are uploaded. The default path is
-     * <code>%HOMEPATH%\Downloads</code>.
+     * The folder path in Windows workstations where files are uploaded.
      * </p>
      * 
      * @param windows
-     *        The folder path in Windows workstations where files are uploaded. The default path is
-     *        <code>%HOMEPATH%\Downloads</code>.
+     *        The folder path in Windows workstations where files are uploaded.
      */
 
     public void setWindows(String windows) {
@@ -102,12 +96,10 @@ public class StreamingSessionStorageRoot implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The folder path in Windows workstations where files are uploaded. The default path is
-     * <code>%HOMEPATH%\Downloads</code>.
+     * The folder path in Windows workstations where files are uploaded.
      * </p>
      * 
-     * @return The folder path in Windows workstations where files are uploaded. The default path is
-     *         <code>%HOMEPATH%\Downloads</code>.
+     * @return The folder path in Windows workstations where files are uploaded.
      */
 
     public String getWindows() {
@@ -116,13 +108,11 @@ public class StreamingSessionStorageRoot implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The folder path in Windows workstations where files are uploaded. The default path is
-     * <code>%HOMEPATH%\Downloads</code>.
+     * The folder path in Windows workstations where files are uploaded.
      * </p>
      * 
      * @param windows
-     *        The folder path in Windows workstations where files are uploaded. The default path is
-     *        <code>%HOMEPATH%\Downloads</code>.
+     *        The folder path in Windows workstations where files are uploaded.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

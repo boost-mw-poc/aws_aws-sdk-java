@@ -50,7 +50,8 @@ public class StreamingSessionStream implements Serializable, Cloneable, Structur
     private java.util.Date expiresAt;
     /**
      * <p>
-     * The user ID of the user that owns the streaming session.
+     * The user ID of the user that owns the streaming session. The user that owns the session will be logging into the
+     * session and interacting with the virtual workstation.
      * </p>
      */
     private String ownedBy;
@@ -201,11 +202,13 @@ public class StreamingSessionStream implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The user ID of the user that owns the streaming session.
+     * The user ID of the user that owns the streaming session. The user that owns the session will be logging into the
+     * session and interacting with the virtual workstation.
      * </p>
      * 
      * @param ownedBy
-     *        The user ID of the user that owns the streaming session.
+     *        The user ID of the user that owns the streaming session. The user that owns the session will be logging
+     *        into the session and interacting with the virtual workstation.
      */
 
     public void setOwnedBy(String ownedBy) {
@@ -214,10 +217,12 @@ public class StreamingSessionStream implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The user ID of the user that owns the streaming session.
+     * The user ID of the user that owns the streaming session. The user that owns the session will be logging into the
+     * session and interacting with the virtual workstation.
      * </p>
      * 
-     * @return The user ID of the user that owns the streaming session.
+     * @return The user ID of the user that owns the streaming session. The user that owns the session will be logging
+     *         into the session and interacting with the virtual workstation.
      */
 
     public String getOwnedBy() {
@@ -226,11 +231,13 @@ public class StreamingSessionStream implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The user ID of the user that owns the streaming session.
+     * The user ID of the user that owns the streaming session. The user that owns the session will be logging into the
+     * session and interacting with the virtual workstation.
      * </p>
      * 
      * @param ownedBy
-     *        The user ID of the user that owns the streaming session.
+     *        The user ID of the user that owns the streaming session. The user that owns the session will be logging
+     *        into the session and interacting with the virtual workstation.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

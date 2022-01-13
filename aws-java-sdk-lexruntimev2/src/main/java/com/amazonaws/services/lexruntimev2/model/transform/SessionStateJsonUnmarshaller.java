@@ -71,6 +71,10 @@ public class SessionStateJsonUnmarshaller implements Unmarshaller<SessionState, 
                     context.nextToken();
                     sessionState.setOriginatingRequestId(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("runtimeHints", targetDepth)) {
+                    context.nextToken();
+                    sessionState.setRuntimeHints(RuntimeHintsJsonUnmarshaller.getInstance().unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

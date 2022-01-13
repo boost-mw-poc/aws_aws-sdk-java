@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Describes a Amazon Web Services Systems Manager document (SSM document).
+ * Describes an Amazon Web Services Systems Manager document (SSM document).
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/ssm-2014-11-06/DocumentDescription" target="_top">AWS API
@@ -121,7 +121,7 @@ public class DocumentDescription implements Serializable, Cloneable, StructuredP
     private com.amazonaws.internal.SdkInternalList<DocumentParameter> parameters;
     /**
      * <p>
-     * The list of OS platforms compatible with this SSM document.
+     * The list of operating system (OS) platforms compatible with this SSM document.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> platformTypes;
@@ -213,6 +213,18 @@ public class DocumentDescription implements Serializable, Cloneable, StructuredP
      * </p>
      */
     private String reviewStatus;
+    /**
+     * <p>
+     * The classification of a document to help you identify and categorize its use.
+     * </p>
+     */
+    private com.amazonaws.internal.SdkInternalList<String> category;
+    /**
+     * <p>
+     * The value that identifies a document's category.
+     * </p>
+     */
+    private com.amazonaws.internal.SdkInternalList<String> categoryEnum;
 
     /**
      * <p>
@@ -917,10 +929,10 @@ public class DocumentDescription implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The list of OS platforms compatible with this SSM document.
+     * The list of operating system (OS) platforms compatible with this SSM document.
      * </p>
      * 
-     * @return The list of OS platforms compatible with this SSM document.
+     * @return The list of operating system (OS) platforms compatible with this SSM document.
      * @see PlatformType
      */
 
@@ -933,11 +945,11 @@ public class DocumentDescription implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The list of OS platforms compatible with this SSM document.
+     * The list of operating system (OS) platforms compatible with this SSM document.
      * </p>
      * 
      * @param platformTypes
-     *        The list of OS platforms compatible with this SSM document.
+     *        The list of operating system (OS) platforms compatible with this SSM document.
      * @see PlatformType
      */
 
@@ -952,7 +964,7 @@ public class DocumentDescription implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The list of OS platforms compatible with this SSM document.
+     * The list of operating system (OS) platforms compatible with this SSM document.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -961,7 +973,7 @@ public class DocumentDescription implements Serializable, Cloneable, StructuredP
      * </p>
      * 
      * @param platformTypes
-     *        The list of OS platforms compatible with this SSM document.
+     *        The list of operating system (OS) platforms compatible with this SSM document.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PlatformType
      */
@@ -978,11 +990,11 @@ public class DocumentDescription implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The list of OS platforms compatible with this SSM document.
+     * The list of operating system (OS) platforms compatible with this SSM document.
      * </p>
      * 
      * @param platformTypes
-     *        The list of OS platforms compatible with this SSM document.
+     *        The list of operating system (OS) platforms compatible with this SSM document.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PlatformType
      */
@@ -994,11 +1006,11 @@ public class DocumentDescription implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * The list of OS platforms compatible with this SSM document.
+     * The list of operating system (OS) platforms compatible with this SSM document.
      * </p>
      * 
      * @param platformTypes
-     *        The list of OS platforms compatible with this SSM document.
+     *        The list of operating system (OS) platforms compatible with this SSM document.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see PlatformType
      */
@@ -1834,6 +1846,152 @@ public class DocumentDescription implements Serializable, Cloneable, StructuredP
     }
 
     /**
+     * <p>
+     * The classification of a document to help you identify and categorize its use.
+     * </p>
+     * 
+     * @return The classification of a document to help you identify and categorize its use.
+     */
+
+    public java.util.List<String> getCategory() {
+        if (category == null) {
+            category = new com.amazonaws.internal.SdkInternalList<String>();
+        }
+        return category;
+    }
+
+    /**
+     * <p>
+     * The classification of a document to help you identify and categorize its use.
+     * </p>
+     * 
+     * @param category
+     *        The classification of a document to help you identify and categorize its use.
+     */
+
+    public void setCategory(java.util.Collection<String> category) {
+        if (category == null) {
+            this.category = null;
+            return;
+        }
+
+        this.category = new com.amazonaws.internal.SdkInternalList<String>(category);
+    }
+
+    /**
+     * <p>
+     * The classification of a document to help you identify and categorize its use.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setCategory(java.util.Collection)} or {@link #withCategory(java.util.Collection)} if you want to override
+     * the existing values.
+     * </p>
+     * 
+     * @param category
+     *        The classification of a document to help you identify and categorize its use.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DocumentDescription withCategory(String... category) {
+        if (this.category == null) {
+            setCategory(new com.amazonaws.internal.SdkInternalList<String>(category.length));
+        }
+        for (String ele : category) {
+            this.category.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The classification of a document to help you identify and categorize its use.
+     * </p>
+     * 
+     * @param category
+     *        The classification of a document to help you identify and categorize its use.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DocumentDescription withCategory(java.util.Collection<String> category) {
+        setCategory(category);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The value that identifies a document's category.
+     * </p>
+     * 
+     * @return The value that identifies a document's category.
+     */
+
+    public java.util.List<String> getCategoryEnum() {
+        if (categoryEnum == null) {
+            categoryEnum = new com.amazonaws.internal.SdkInternalList<String>();
+        }
+        return categoryEnum;
+    }
+
+    /**
+     * <p>
+     * The value that identifies a document's category.
+     * </p>
+     * 
+     * @param categoryEnum
+     *        The value that identifies a document's category.
+     */
+
+    public void setCategoryEnum(java.util.Collection<String> categoryEnum) {
+        if (categoryEnum == null) {
+            this.categoryEnum = null;
+            return;
+        }
+
+        this.categoryEnum = new com.amazonaws.internal.SdkInternalList<String>(categoryEnum);
+    }
+
+    /**
+     * <p>
+     * The value that identifies a document's category.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setCategoryEnum(java.util.Collection)} or {@link #withCategoryEnum(java.util.Collection)} if you want to
+     * override the existing values.
+     * </p>
+     * 
+     * @param categoryEnum
+     *        The value that identifies a document's category.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DocumentDescription withCategoryEnum(String... categoryEnum) {
+        if (this.categoryEnum == null) {
+            setCategoryEnum(new com.amazonaws.internal.SdkInternalList<String>(categoryEnum.length));
+        }
+        for (String ele : categoryEnum) {
+            this.categoryEnum.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The value that identifies a document's category.
+     * </p>
+     * 
+     * @param categoryEnum
+     *        The value that identifies a document's category.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DocumentDescription withCategoryEnum(java.util.Collection<String> categoryEnum) {
+        setCategoryEnum(categoryEnum);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1900,7 +2058,11 @@ public class DocumentDescription implements Serializable, Cloneable, StructuredP
         if (getPendingReviewVersion() != null)
             sb.append("PendingReviewVersion: ").append(getPendingReviewVersion()).append(",");
         if (getReviewStatus() != null)
-            sb.append("ReviewStatus: ").append(getReviewStatus());
+            sb.append("ReviewStatus: ").append(getReviewStatus()).append(",");
+        if (getCategory() != null)
+            sb.append("Category: ").append(getCategory()).append(",");
+        if (getCategoryEnum() != null)
+            sb.append("CategoryEnum: ").append(getCategoryEnum());
         sb.append("}");
         return sb.toString();
     }
@@ -2027,6 +2189,14 @@ public class DocumentDescription implements Serializable, Cloneable, StructuredP
             return false;
         if (other.getReviewStatus() != null && other.getReviewStatus().equals(this.getReviewStatus()) == false)
             return false;
+        if (other.getCategory() == null ^ this.getCategory() == null)
+            return false;
+        if (other.getCategory() != null && other.getCategory().equals(this.getCategory()) == false)
+            return false;
+        if (other.getCategoryEnum() == null ^ this.getCategoryEnum() == null)
+            return false;
+        if (other.getCategoryEnum() != null && other.getCategoryEnum().equals(this.getCategoryEnum()) == false)
+            return false;
         return true;
     }
 
@@ -2063,6 +2233,8 @@ public class DocumentDescription implements Serializable, Cloneable, StructuredP
         hashCode = prime * hashCode + ((getApprovedVersion() == null) ? 0 : getApprovedVersion().hashCode());
         hashCode = prime * hashCode + ((getPendingReviewVersion() == null) ? 0 : getPendingReviewVersion().hashCode());
         hashCode = prime * hashCode + ((getReviewStatus() == null) ? 0 : getReviewStatus().hashCode());
+        hashCode = prime * hashCode + ((getCategory() == null) ? 0 : getCategory().hashCode());
+        hashCode = prime * hashCode + ((getCategoryEnum() == null) ? 0 : getCategoryEnum().hashCode());
         return hashCode;
     }
 

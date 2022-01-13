@@ -37,9 +37,9 @@ import com.amazonaws.services.simplesystemsmanagement.waiters.AWSSimpleSystemsMa
  * </p>
  * <note>
  * <p>
- * With support for IoT Greengrass Version 2 devices, the phrase <i>managed instance</i> has been changed to <i>managed
+ * With support for IoT Greengrass core devices, the phrase <i>managed instance</i> has been changed to <i>managed
  * node</i> in most of the Systems Manager documentation. The Systems Manager console, API calls, error messages, and
- * SSM documents still use the term instance.
+ * SSM documents still use the term <i>instance</i>.
  * </p>
  * </note>
  * <p>
@@ -3813,7 +3813,12 @@ public interface AWSSimpleSystemsManagement {
     /**
      * <p>
      * Updates an association. You can update the association name and version, the document version, schedule,
-     * parameters, and Amazon Simple Storage Service (Amazon S3) output.
+     * parameters, and Amazon Simple Storage Service (Amazon S3) output. When you call <code>UpdateAssociation</code>,
+     * the system drops all optional parameters from the request and overwrites the association with null values for
+     * those parameters. This is by design. You must specify all optional parameters in the call, even if you are not
+     * changing the parameters. This includes the <code>Name</code> parameter. Before calling this API action, we
+     * recommend that you call the <a>DescribeAssociation</a> API operation and make a note of all optional parameters
+     * required for your <code>UpdateAssociation</code> call.
      * </p>
      * <p>
      * In order to call this API operation, your Identity and Access Management (IAM) user account, group, or role must
@@ -3823,7 +3828,8 @@ public interface AWSSimpleSystemsManagement {
      * </p>
      * <important>
      * <p>
-     * When you update an association, the association immediately runs against the specified targets.
+     * When you update an association, the association immediately runs against the specified targets. You can add the
+     * <code>ApplyOnlyAtCronInterval</code> parameter to run the association during the next schedule run.
      * </p>
      * </important>
      * 

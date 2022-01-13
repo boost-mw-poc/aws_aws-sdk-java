@@ -162,6 +162,12 @@ public class WriteJourneyRequest implements Serializable, Cloneable, StructuredP
      * </p>
      */
     private Boolean refreshOnSegmentUpdate;
+    /**
+     * <p>
+     * The channel-specific configurations for the journey.
+     * </p>
+     */
+    private JourneyChannelSettings journeyChannelSettings;
 
     /**
      * <p>
@@ -1143,6 +1149,46 @@ public class WriteJourneyRequest implements Serializable, Cloneable, StructuredP
     }
 
     /**
+     * <p>
+     * The channel-specific configurations for the journey.
+     * </p>
+     * 
+     * @param journeyChannelSettings
+     *        The channel-specific configurations for the journey.
+     */
+
+    public void setJourneyChannelSettings(JourneyChannelSettings journeyChannelSettings) {
+        this.journeyChannelSettings = journeyChannelSettings;
+    }
+
+    /**
+     * <p>
+     * The channel-specific configurations for the journey.
+     * </p>
+     * 
+     * @return The channel-specific configurations for the journey.
+     */
+
+    public JourneyChannelSettings getJourneyChannelSettings() {
+        return this.journeyChannelSettings;
+    }
+
+    /**
+     * <p>
+     * The channel-specific configurations for the journey.
+     * </p>
+     * 
+     * @param journeyChannelSettings
+     *        The channel-specific configurations for the journey.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public WriteJourneyRequest withJourneyChannelSettings(JourneyChannelSettings journeyChannelSettings) {
+        setJourneyChannelSettings(journeyChannelSettings);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1181,7 +1227,9 @@ public class WriteJourneyRequest implements Serializable, Cloneable, StructuredP
         if (getWaitForQuietTime() != null)
             sb.append("WaitForQuietTime: ").append(getWaitForQuietTime()).append(",");
         if (getRefreshOnSegmentUpdate() != null)
-            sb.append("RefreshOnSegmentUpdate: ").append(getRefreshOnSegmentUpdate());
+            sb.append("RefreshOnSegmentUpdate: ").append(getRefreshOnSegmentUpdate()).append(",");
+        if (getJourneyChannelSettings() != null)
+            sb.append("JourneyChannelSettings: ").append(getJourneyChannelSettings());
         sb.append("}");
         return sb.toString();
     }
@@ -1252,6 +1300,10 @@ public class WriteJourneyRequest implements Serializable, Cloneable, StructuredP
             return false;
         if (other.getRefreshOnSegmentUpdate() != null && other.getRefreshOnSegmentUpdate().equals(this.getRefreshOnSegmentUpdate()) == false)
             return false;
+        if (other.getJourneyChannelSettings() == null ^ this.getJourneyChannelSettings() == null)
+            return false;
+        if (other.getJourneyChannelSettings() != null && other.getJourneyChannelSettings().equals(this.getJourneyChannelSettings()) == false)
+            return false;
         return true;
     }
 
@@ -1274,6 +1326,7 @@ public class WriteJourneyRequest implements Serializable, Cloneable, StructuredP
         hashCode = prime * hashCode + ((getState() == null) ? 0 : getState().hashCode());
         hashCode = prime * hashCode + ((getWaitForQuietTime() == null) ? 0 : getWaitForQuietTime().hashCode());
         hashCode = prime * hashCode + ((getRefreshOnSegmentUpdate() == null) ? 0 : getRefreshOnSegmentUpdate().hashCode());
+        hashCode = prime * hashCode + ((getJourneyChannelSettings() == null) ? 0 : getJourneyChannelSettings().hashCode());
         return hashCode;
     }
 

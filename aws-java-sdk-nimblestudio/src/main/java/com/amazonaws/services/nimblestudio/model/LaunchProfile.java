@@ -130,6 +130,12 @@ public class LaunchProfile implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private String updatedBy;
+    /**
+     * <p>
+     * The list of the latest validation results.
+     * </p>
+     */
+    private java.util.List<ValidationResult> validationResults;
 
     /**
      * <p>
@@ -932,6 +938,76 @@ public class LaunchProfile implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The list of the latest validation results.
+     * </p>
+     * 
+     * @return The list of the latest validation results.
+     */
+
+    public java.util.List<ValidationResult> getValidationResults() {
+        return validationResults;
+    }
+
+    /**
+     * <p>
+     * The list of the latest validation results.
+     * </p>
+     * 
+     * @param validationResults
+     *        The list of the latest validation results.
+     */
+
+    public void setValidationResults(java.util.Collection<ValidationResult> validationResults) {
+        if (validationResults == null) {
+            this.validationResults = null;
+            return;
+        }
+
+        this.validationResults = new java.util.ArrayList<ValidationResult>(validationResults);
+    }
+
+    /**
+     * <p>
+     * The list of the latest validation results.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setValidationResults(java.util.Collection)} or {@link #withValidationResults(java.util.Collection)} if
+     * you want to override the existing values.
+     * </p>
+     * 
+     * @param validationResults
+     *        The list of the latest validation results.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public LaunchProfile withValidationResults(ValidationResult... validationResults) {
+        if (this.validationResults == null) {
+            setValidationResults(new java.util.ArrayList<ValidationResult>(validationResults.length));
+        }
+        for (ValidationResult ele : validationResults) {
+            this.validationResults.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The list of the latest validation results.
+     * </p>
+     * 
+     * @param validationResults
+     *        The list of the latest validation results.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public LaunchProfile withValidationResults(java.util.Collection<ValidationResult> validationResults) {
+        setValidationResults(validationResults);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -974,7 +1050,9 @@ public class LaunchProfile implements Serializable, Cloneable, StructuredPojo {
         if (getUpdatedAt() != null)
             sb.append("UpdatedAt: ").append(getUpdatedAt()).append(",");
         if (getUpdatedBy() != null)
-            sb.append("UpdatedBy: ").append(getUpdatedBy());
+            sb.append("UpdatedBy: ").append(getUpdatedBy()).append(",");
+        if (getValidationResults() != null)
+            sb.append("ValidationResults: ").append(getValidationResults());
         sb.append("}");
         return sb.toString();
     }
@@ -1054,6 +1132,10 @@ public class LaunchProfile implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getUpdatedBy() != null && other.getUpdatedBy().equals(this.getUpdatedBy()) == false)
             return false;
+        if (other.getValidationResults() == null ^ this.getValidationResults() == null)
+            return false;
+        if (other.getValidationResults() != null && other.getValidationResults().equals(this.getValidationResults()) == false)
+            return false;
         return true;
     }
 
@@ -1078,6 +1160,7 @@ public class LaunchProfile implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getUpdatedAt() == null) ? 0 : getUpdatedAt().hashCode());
         hashCode = prime * hashCode + ((getUpdatedBy() == null) ? 0 : getUpdatedBy().hashCode());
+        hashCode = prime * hashCode + ((getValidationResults() == null) ? 0 : getValidationResults().hashCode());
         return hashCode;
     }
 

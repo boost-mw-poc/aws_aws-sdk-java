@@ -84,6 +84,10 @@ public class DocumentDescriptionMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PendingReviewVersion").build();
     private static final MarshallingInfo<String> REVIEWSTATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("ReviewStatus").build();
+    private static final MarshallingInfo<List> CATEGORY_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Category").build();
+    private static final MarshallingInfo<List> CATEGORYENUM_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("CategoryEnum").build();
 
     private static final DocumentDescriptionMarshaller instance = new DocumentDescriptionMarshaller();
 
@@ -129,6 +133,8 @@ public class DocumentDescriptionMarshaller {
             protocolMarshaller.marshall(documentDescription.getApprovedVersion(), APPROVEDVERSION_BINDING);
             protocolMarshaller.marshall(documentDescription.getPendingReviewVersion(), PENDINGREVIEWVERSION_BINDING);
             protocolMarshaller.marshall(documentDescription.getReviewStatus(), REVIEWSTATUS_BINDING);
+            protocolMarshaller.marshall(documentDescription.getCategory(), CATEGORY_BINDING);
+            protocolMarshaller.marshall(documentDescription.getCategoryEnum(), CATEGORYENUM_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

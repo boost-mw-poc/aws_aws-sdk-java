@@ -173,6 +173,18 @@ public class DocumentDescriptionJsonUnmarshaller implements Unmarshaller<Documen
                     context.nextToken();
                     documentDescription.setReviewStatus(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("Category", targetDepth)) {
+                    context.nextToken();
+                    documentDescription.setCategory(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
+
+                    .unmarshall(context));
+                }
+                if (context.testExpression("CategoryEnum", targetDepth)) {
+                    context.nextToken();
+                    documentDescription.setCategoryEnum(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

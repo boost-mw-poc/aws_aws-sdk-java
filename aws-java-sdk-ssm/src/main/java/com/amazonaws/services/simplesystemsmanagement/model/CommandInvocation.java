@@ -129,7 +129,7 @@ public class CommandInvocation implements Serializable, Cloneable, StructuredPoj
      * </li>
      * <li>
      * <p>
-     * Canceled: The command was terminated before it was completed. This is a terminal state.
+     * Cancelled: The command was terminated before it was completed. This is a terminal state.
      * </p>
      * </li>
      * <li>
@@ -600,7 +600,7 @@ public class CommandInvocation implements Serializable, Cloneable, StructuredPoj
      * </li>
      * <li>
      * <p>
-     * Canceled: The command was terminated before it was completed. This is a terminal state.
+     * Cancelled: The command was terminated before it was completed. This is a terminal state.
      * </p>
      * </li>
      * <li>
@@ -666,7 +666,7 @@ public class CommandInvocation implements Serializable, Cloneable, StructuredPoj
      *        </li>
      *        <li>
      *        <p>
-     *        Canceled: The command was terminated before it was completed. This is a terminal state.
+     *        Cancelled: The command was terminated before it was completed. This is a terminal state.
      *        </p>
      *        </li>
      *        <li>
@@ -739,7 +739,7 @@ public class CommandInvocation implements Serializable, Cloneable, StructuredPoj
      * </li>
      * <li>
      * <p>
-     * Canceled: The command was terminated before it was completed. This is a terminal state.
+     * Cancelled: The command was terminated before it was completed. This is a terminal state.
      * </p>
      * </li>
      * <li>
@@ -804,7 +804,7 @@ public class CommandInvocation implements Serializable, Cloneable, StructuredPoj
      *         </li>
      *         <li>
      *         <p>
-     *         Canceled: The command was terminated before it was completed. This is a terminal state.
+     *         Cancelled: The command was terminated before it was completed. This is a terminal state.
      *         </p>
      *         </li>
      *         <li>
@@ -877,7 +877,7 @@ public class CommandInvocation implements Serializable, Cloneable, StructuredPoj
      * </li>
      * <li>
      * <p>
-     * Canceled: The command was terminated before it was completed. This is a terminal state.
+     * Cancelled: The command was terminated before it was completed. This is a terminal state.
      * </p>
      * </li>
      * <li>
@@ -943,7 +943,7 @@ public class CommandInvocation implements Serializable, Cloneable, StructuredPoj
      *        </li>
      *        <li>
      *        <p>
-     *        Canceled: The command was terminated before it was completed. This is a terminal state.
+     *        Cancelled: The command was terminated before it was completed. This is a terminal state.
      *        </p>
      *        </li>
      *        <li>

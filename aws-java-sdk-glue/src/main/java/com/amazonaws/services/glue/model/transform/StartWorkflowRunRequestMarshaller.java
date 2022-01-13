@@ -12,6 +12,8 @@
  */
 package com.amazonaws.services.glue.model.transform;
 
+import java.util.Map;
+
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -29,6 +31,8 @@ public class StartWorkflowRunRequestMarshaller {
 
     private static final MarshallingInfo<String> NAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Name").build();
+    private static final MarshallingInfo<Map> RUNPROPERTIES_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("RunProperties").build();
 
     private static final StartWorkflowRunRequestMarshaller instance = new StartWorkflowRunRequestMarshaller();
 
@@ -47,6 +51,7 @@ public class StartWorkflowRunRequestMarshaller {
 
         try {
             protocolMarshaller.marshall(startWorkflowRunRequest.getName(), NAME_BINDING);
+            protocolMarshaller.marshall(startWorkflowRunRequest.getRunProperties(), RUNPROPERTIES_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

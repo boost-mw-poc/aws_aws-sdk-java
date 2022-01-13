@@ -166,7 +166,7 @@ public class GetCommandInvocationResult extends com.amazonaws.AmazonWebServiceRe
      * </li>
      * <li>
      * <p>
-     * Canceled: The command was terminated before it was completed. This is a terminal state.
+     * Cancelled: The command was terminated before it was completed. This is a terminal state.
      * </p>
      * </li>
      * <li>
@@ -864,7 +864,7 @@ public class GetCommandInvocationResult extends com.amazonaws.AmazonWebServiceRe
      * </li>
      * <li>
      * <p>
-     * Canceled: The command was terminated before it was completed. This is a terminal state.
+     * Cancelled: The command was terminated before it was completed. This is a terminal state.
      * </p>
      * </li>
      * <li>
@@ -937,7 +937,7 @@ public class GetCommandInvocationResult extends com.amazonaws.AmazonWebServiceRe
      *        </li>
      *        <li>
      *        <p>
-     *        Canceled: The command was terminated before it was completed. This is a terminal state.
+     *        Cancelled: The command was terminated before it was completed. This is a terminal state.
      *        </p>
      *        </li>
      *        <li>
@@ -1017,7 +1017,7 @@ public class GetCommandInvocationResult extends com.amazonaws.AmazonWebServiceRe
      * </li>
      * <li>
      * <p>
-     * Canceled: The command was terminated before it was completed. This is a terminal state.
+     * Cancelled: The command was terminated before it was completed. This is a terminal state.
      * </p>
      * </li>
      * <li>
@@ -1089,7 +1089,7 @@ public class GetCommandInvocationResult extends com.amazonaws.AmazonWebServiceRe
      *         </li>
      *         <li>
      *         <p>
-     *         Canceled: The command was terminated before it was completed. This is a terminal state.
+     *         Cancelled: The command was terminated before it was completed. This is a terminal state.
      *         </p>
      *         </li>
      *         <li>
@@ -1169,7 +1169,7 @@ public class GetCommandInvocationResult extends com.amazonaws.AmazonWebServiceRe
      * </li>
      * <li>
      * <p>
-     * Canceled: The command was terminated before it was completed. This is a terminal state.
+     * Cancelled: The command was terminated before it was completed. This is a terminal state.
      * </p>
      * </li>
      * <li>
@@ -1242,7 +1242,7 @@ public class GetCommandInvocationResult extends com.amazonaws.AmazonWebServiceRe
      *        </li>
      *        <li>
      *        <p>
-     *        Canceled: The command was terminated before it was completed. This is a terminal state.
+     *        Cancelled: The command was terminated before it was completed. This is a terminal state.
      *        </p>
      *        </li>
      *        <li>

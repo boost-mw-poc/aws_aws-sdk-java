@@ -57,6 +57,8 @@ public class WriteJourneyRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("WaitForQuietTime").build();
     private static final MarshallingInfo<Boolean> REFRESHONSEGMENTUPDATE_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RefreshOnSegmentUpdate").build();
+    private static final MarshallingInfo<StructuredPojo> JOURNEYCHANNELSETTINGS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("JourneyChannelSettings").build();
 
     private static final WriteJourneyRequestMarshaller instance = new WriteJourneyRequestMarshaller();
 
@@ -88,6 +90,7 @@ public class WriteJourneyRequestMarshaller {
             protocolMarshaller.marshall(writeJourneyRequest.getState(), STATE_BINDING);
             protocolMarshaller.marshall(writeJourneyRequest.getWaitForQuietTime(), WAITFORQUIETTIME_BINDING);
             protocolMarshaller.marshall(writeJourneyRequest.getRefreshOnSegmentUpdate(), REFRESHONSEGMENTUPDATE_BINDING);
+            protocolMarshaller.marshall(writeJourneyRequest.getJourneyChannelSettings(), JOURNEYCHANNELSETTINGS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

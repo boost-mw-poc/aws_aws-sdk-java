@@ -140,7 +140,7 @@ public class Command implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * Canceled: The command was terminated before it was completed. This is a terminal state.
+     * Cancelled: The command was terminated before it was completed. This is a terminal state.
      * </p>
      * </li>
      * <li>
@@ -202,7 +202,7 @@ public class Command implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The number of targets for which the command invocation reached a terminal state. Terminal states include the
-     * following: Success, Failed, Execution Timed Out, Delivery Timed Out, Canceled, Terminated, or Undeliverable.
+     * following: Success, Failed, Execution Timed Out, Delivery Timed Out, Cancelled, Terminated, or Undeliverable.
      * </p>
      */
     private Integer completedCount;
@@ -836,7 +836,7 @@ public class Command implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * Canceled: The command was terminated before it was completed. This is a terminal state.
+     * Cancelled: The command was terminated before it was completed. This is a terminal state.
      * </p>
      * </li>
      * <li>
@@ -898,7 +898,7 @@ public class Command implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        Canceled: The command was terminated before it was completed. This is a terminal state.
+     *        Cancelled: The command was terminated before it was completed. This is a terminal state.
      *        </p>
      *        </li>
      *        <li>
@@ -965,7 +965,7 @@ public class Command implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * Canceled: The command was terminated before it was completed. This is a terminal state.
+     * Cancelled: The command was terminated before it was completed. This is a terminal state.
      * </p>
      * </li>
      * <li>
@@ -1026,7 +1026,7 @@ public class Command implements Serializable, Cloneable, StructuredPojo {
      *         </li>
      *         <li>
      *         <p>
-     *         Canceled: The command was terminated before it was completed. This is a terminal state.
+     *         Cancelled: The command was terminated before it was completed. This is a terminal state.
      *         </p>
      *         </li>
      *         <li>
@@ -1093,7 +1093,7 @@ public class Command implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * <li>
      * <p>
-     * Canceled: The command was terminated before it was completed. This is a terminal state.
+     * Cancelled: The command was terminated before it was completed. This is a terminal state.
      * </p>
      * </li>
      * <li>
@@ -1155,7 +1155,7 @@ public class Command implements Serializable, Cloneable, StructuredPojo {
      *        </li>
      *        <li>
      *        <p>
-     *        Canceled: The command was terminated before it was completed. This is a terminal state.
+     *        Cancelled: The command was terminated before it was completed. This is a terminal state.
      *        </p>
      *        </li>
      *        <li>
@@ -1482,12 +1482,12 @@ public class Command implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The number of targets for which the command invocation reached a terminal state. Terminal states include the
-     * following: Success, Failed, Execution Timed Out, Delivery Timed Out, Canceled, Terminated, or Undeliverable.
+     * following: Success, Failed, Execution Timed Out, Delivery Timed Out, Cancelled, Terminated, or Undeliverable.
      * </p>
      * 
      * @param completedCount
      *        The number of targets for which the command invocation reached a terminal state. Terminal states include
-     *        the following: Success, Failed, Execution Timed Out, Delivery Timed Out, Canceled, Terminated, or
+     *        the following: Success, Failed, Execution Timed Out, Delivery Timed Out, Cancelled, Terminated, or
      *        Undeliverable.
      */
 
@@ -1498,11 +1498,11 @@ public class Command implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The number of targets for which the command invocation reached a terminal state. Terminal states include the
-     * following: Success, Failed, Execution Timed Out, Delivery Timed Out, Canceled, Terminated, or Undeliverable.
+     * following: Success, Failed, Execution Timed Out, Delivery Timed Out, Cancelled, Terminated, or Undeliverable.
      * </p>
      * 
      * @return The number of targets for which the command invocation reached a terminal state. Terminal states include
-     *         the following: Success, Failed, Execution Timed Out, Delivery Timed Out, Canceled, Terminated, or
+     *         the following: Success, Failed, Execution Timed Out, Delivery Timed Out, Cancelled, Terminated, or
      *         Undeliverable.
      */
 
@@ -1513,12 +1513,12 @@ public class Command implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * The number of targets for which the command invocation reached a terminal state. Terminal states include the
-     * following: Success, Failed, Execution Timed Out, Delivery Timed Out, Canceled, Terminated, or Undeliverable.
+     * following: Success, Failed, Execution Timed Out, Delivery Timed Out, Cancelled, Terminated, or Undeliverable.
      * </p>
      * 
      * @param completedCount
      *        The number of targets for which the command invocation reached a terminal state. Terminal states include
-     *        the following: Success, Failed, Execution Timed Out, Delivery Timed Out, Canceled, Terminated, or
+     *        the following: Success, Failed, Execution Timed Out, Delivery Timed Out, Cancelled, Terminated, or
      *        Undeliverable.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

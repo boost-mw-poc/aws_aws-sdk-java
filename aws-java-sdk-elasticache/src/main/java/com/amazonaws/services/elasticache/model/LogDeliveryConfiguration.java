@@ -28,7 +28,7 @@ public class LogDeliveryConfiguration implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Refers to <a href="https://redis.io/commands/slowlog">slow-log</a>.
+     * Refers to <a href="https://redis.io/commands/slowlog">slow-log</a> or engine-log.
      * </p>
      */
     private String logType;
@@ -66,11 +66,11 @@ public class LogDeliveryConfiguration implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Refers to <a href="https://redis.io/commands/slowlog">slow-log</a>.
+     * Refers to <a href="https://redis.io/commands/slowlog">slow-log</a> or engine-log.
      * </p>
      * 
      * @param logType
-     *        Refers to <a href="https://redis.io/commands/slowlog">slow-log</a>.
+     *        Refers to <a href="https://redis.io/commands/slowlog">slow-log</a> or engine-log.
      * @see LogType
      */
 
@@ -80,10 +80,10 @@ public class LogDeliveryConfiguration implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Refers to <a href="https://redis.io/commands/slowlog">slow-log</a>.
+     * Refers to <a href="https://redis.io/commands/slowlog">slow-log</a> or engine-log.
      * </p>
      * 
-     * @return Refers to <a href="https://redis.io/commands/slowlog">slow-log</a>.
+     * @return Refers to <a href="https://redis.io/commands/slowlog">slow-log</a> or engine-log.
      * @see LogType
      */
 
@@ -93,11 +93,11 @@ public class LogDeliveryConfiguration implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Refers to <a href="https://redis.io/commands/slowlog">slow-log</a>.
+     * Refers to <a href="https://redis.io/commands/slowlog">slow-log</a> or engine-log.
      * </p>
      * 
      * @param logType
-     *        Refers to <a href="https://redis.io/commands/slowlog">slow-log</a>.
+     *        Refers to <a href="https://redis.io/commands/slowlog">slow-log</a> or engine-log.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see LogType
      */
@@ -109,11 +109,11 @@ public class LogDeliveryConfiguration implements Serializable, Cloneable {
 
     /**
      * <p>
-     * Refers to <a href="https://redis.io/commands/slowlog">slow-log</a>.
+     * Refers to <a href="https://redis.io/commands/slowlog">slow-log</a> or engine-log.
      * </p>
      * 
      * @param logType
-     *        Refers to <a href="https://redis.io/commands/slowlog">slow-log</a>.
+     *        Refers to <a href="https://redis.io/commands/slowlog">slow-log</a> or engine-log.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see LogType
      */

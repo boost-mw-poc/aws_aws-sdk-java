@@ -119,6 +119,12 @@ public class LaunchProfileJsonUnmarshaller implements Unmarshaller<LaunchProfile
                     context.nextToken();
                     launchProfile.setUpdatedBy(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("validationResults", targetDepth)) {
+                    context.nextToken();
+                    launchProfile.setValidationResults(new ListUnmarshaller<ValidationResult>(ValidationResultJsonUnmarshaller.getInstance())
+
+                    .unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

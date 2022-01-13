@@ -142,6 +142,7 @@ public class ListStudioComponentsRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * 
      * @return Filters the request to studio components that are in one of the given states.
+     * @see StudioComponentState
      */
 
     public java.util.List<String> getStates() {
@@ -155,6 +156,7 @@ public class ListStudioComponentsRequest extends com.amazonaws.AmazonWebServiceR
      * 
      * @param states
      *        Filters the request to studio components that are in one of the given states.
+     * @see StudioComponentState
      */
 
     public void setStates(java.util.Collection<String> states) {
@@ -179,6 +181,7 @@ public class ListStudioComponentsRequest extends com.amazonaws.AmazonWebServiceR
      * @param states
      *        Filters the request to studio components that are in one of the given states.
      * @return Returns a reference to this object so that method calls can be chained together.
+     * @see StudioComponentState
      */
 
     public ListStudioComponentsRequest withStates(String... states) {
@@ -199,10 +202,35 @@ public class ListStudioComponentsRequest extends com.amazonaws.AmazonWebServiceR
      * @param states
      *        Filters the request to studio components that are in one of the given states.
      * @return Returns a reference to this object so that method calls can be chained together.
+     * @see StudioComponentState
      */
 
     public ListStudioComponentsRequest withStates(java.util.Collection<String> states) {
         setStates(states);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Filters the request to studio components that are in one of the given states.
+     * </p>
+     * 
+     * @param states
+     *        Filters the request to studio components that are in one of the given states.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see StudioComponentState
+     */
+
+    public ListStudioComponentsRequest withStates(StudioComponentState... states) {
+        java.util.ArrayList<String> statesCopy = new java.util.ArrayList<String>(states.length);
+        for (StudioComponentState value : states) {
+            statesCopy.add(value.toString());
+        }
+        if (getStates() == null) {
+            setStates(statesCopy);
+        } else {
+            getStates().addAll(statesCopy);
+        }
         return this;
     }
 
@@ -252,6 +280,7 @@ public class ListStudioComponentsRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * 
      * @return Filters the request to studio components that are of one of the given types.
+     * @see StudioComponentType
      */
 
     public java.util.List<String> getTypes() {
@@ -265,6 +294,7 @@ public class ListStudioComponentsRequest extends com.amazonaws.AmazonWebServiceR
      * 
      * @param types
      *        Filters the request to studio components that are of one of the given types.
+     * @see StudioComponentType
      */
 
     public void setTypes(java.util.Collection<String> types) {
@@ -289,6 +319,7 @@ public class ListStudioComponentsRequest extends com.amazonaws.AmazonWebServiceR
      * @param types
      *        Filters the request to studio components that are of one of the given types.
      * @return Returns a reference to this object so that method calls can be chained together.
+     * @see StudioComponentType
      */
 
     public ListStudioComponentsRequest withTypes(String... types) {
@@ -309,10 +340,35 @@ public class ListStudioComponentsRequest extends com.amazonaws.AmazonWebServiceR
      * @param types
      *        Filters the request to studio components that are of one of the given types.
      * @return Returns a reference to this object so that method calls can be chained together.
+     * @see StudioComponentType
      */
 
     public ListStudioComponentsRequest withTypes(java.util.Collection<String> types) {
         setTypes(types);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Filters the request to studio components that are of one of the given types.
+     * </p>
+     * 
+     * @param types
+     *        Filters the request to studio components that are of one of the given types.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see StudioComponentType
+     */
+
+    public ListStudioComponentsRequest withTypes(StudioComponentType... types) {
+        java.util.ArrayList<String> typesCopy = new java.util.ArrayList<String>(types.length);
+        for (StudioComponentType value : types) {
+            typesCopy.add(value.toString());
+        }
+        if (getTypes() == null) {
+            setTypes(typesCopy);
+        } else {
+            getTypes().addAll(typesCopy);
+        }
         return this;
     }
 

@@ -57,6 +57,15 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
      * <p>
      * The document version you want to associate with the target(s). Can be a specific version or the default version.
      * </p>
+     * <important>
+     * <p>
+     * State Manager doesn't support running associations that use a new version of a document if that document is
+     * shared from another account. State Manager always runs the <code>default</code> version of a document if shared
+     * from another account, even though the Systems Manager console shows that a new version was processed. If you want
+     * to run an association using a new version of a document shared form another account, you must set the document
+     * version to <code>default</code>.
+     * </p>
+     * </important>
      */
     private String documentVersion;
     /**
@@ -371,10 +380,26 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
      * <p>
      * The document version you want to associate with the target(s). Can be a specific version or the default version.
      * </p>
+     * <important>
+     * <p>
+     * State Manager doesn't support running associations that use a new version of a document if that document is
+     * shared from another account. State Manager always runs the <code>default</code> version of a document if shared
+     * from another account, even though the Systems Manager console shows that a new version was processed. If you want
+     * to run an association using a new version of a document shared form another account, you must set the document
+     * version to <code>default</code>.
+     * </p>
+     * </important>
      * 
      * @param documentVersion
      *        The document version you want to associate with the target(s). Can be a specific version or the default
-     *        version.
+     *        version.</p> <important>
+     *        <p>
+     *        State Manager doesn't support running associations that use a new version of a document if that document
+     *        is shared from another account. State Manager always runs the <code>default</code> version of a document
+     *        if shared from another account, even though the Systems Manager console shows that a new version was
+     *        processed. If you want to run an association using a new version of a document shared form another
+     *        account, you must set the document version to <code>default</code>.
+     *        </p>
      */
 
     public void setDocumentVersion(String documentVersion) {
@@ -385,9 +410,25 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
      * <p>
      * The document version you want to associate with the target(s). Can be a specific version or the default version.
      * </p>
+     * <important>
+     * <p>
+     * State Manager doesn't support running associations that use a new version of a document if that document is
+     * shared from another account. State Manager always runs the <code>default</code> version of a document if shared
+     * from another account, even though the Systems Manager console shows that a new version was processed. If you want
+     * to run an association using a new version of a document shared form another account, you must set the document
+     * version to <code>default</code>.
+     * </p>
+     * </important>
      * 
      * @return The document version you want to associate with the target(s). Can be a specific version or the default
-     *         version.
+     *         version.</p> <important>
+     *         <p>
+     *         State Manager doesn't support running associations that use a new version of a document if that document
+     *         is shared from another account. State Manager always runs the <code>default</code> version of a document
+     *         if shared from another account, even though the Systems Manager console shows that a new version was
+     *         processed. If you want to run an association using a new version of a document shared form another
+     *         account, you must set the document version to <code>default</code>.
+     *         </p>
      */
 
     public String getDocumentVersion() {
@@ -398,10 +439,26 @@ public class CreateAssociationRequest extends com.amazonaws.AmazonWebServiceRequ
      * <p>
      * The document version you want to associate with the target(s). Can be a specific version or the default version.
      * </p>
+     * <important>
+     * <p>
+     * State Manager doesn't support running associations that use a new version of a document if that document is
+     * shared from another account. State Manager always runs the <code>default</code> version of a document if shared
+     * from another account, even though the Systems Manager console shows that a new version was processed. If you want
+     * to run an association using a new version of a document shared form another account, you must set the document
+     * version to <code>default</code>.
+     * </p>
+     * </important>
      * 
      * @param documentVersion
      *        The document version you want to associate with the target(s). Can be a specific version or the default
-     *        version.
+     *        version.</p> <important>
+     *        <p>
+     *        State Manager doesn't support running associations that use a new version of a document if that document
+     *        is shared from another account. State Manager always runs the <code>default</code> version of a document
+     *        if shared from another account, even though the Systems Manager console shows that a new version was
+     *        processed. If you want to run an association using a new version of a document shared form another
+     *        account, you must set the document version to <code>default</code>.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

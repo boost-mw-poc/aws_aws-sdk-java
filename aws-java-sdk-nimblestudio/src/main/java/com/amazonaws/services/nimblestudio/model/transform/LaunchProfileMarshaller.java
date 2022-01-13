@@ -61,6 +61,8 @@ public class LaunchProfileMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("updatedAt").timestampFormat("iso8601").build();
     private static final MarshallingInfo<String> UPDATEDBY_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("updatedBy").build();
+    private static final MarshallingInfo<List> VALIDATIONRESULTS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("validationResults").build();
 
     private static final LaunchProfileMarshaller instance = new LaunchProfileMarshaller();
 
@@ -94,6 +96,7 @@ public class LaunchProfileMarshaller {
             protocolMarshaller.marshall(launchProfile.getTags(), TAGS_BINDING);
             protocolMarshaller.marshall(launchProfile.getUpdatedAt(), UPDATEDAT_BINDING);
             protocolMarshaller.marshall(launchProfile.getUpdatedBy(), UPDATEDBY_BINDING);
+            protocolMarshaller.marshall(launchProfile.getValidationResults(), VALIDATIONRESULTS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

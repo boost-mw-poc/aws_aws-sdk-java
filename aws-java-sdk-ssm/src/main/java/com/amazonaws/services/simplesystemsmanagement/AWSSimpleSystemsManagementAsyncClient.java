@@ -40,9 +40,9 @@ import com.amazonaws.auth.DefaultAWSCredentialsProviderChain;
  * </p>
  * <note>
  * <p>
- * With support for IoT Greengrass Version 2 devices, the phrase <i>managed instance</i> has been changed to <i>managed
+ * With support for IoT Greengrass core devices, the phrase <i>managed instance</i> has been changed to <i>managed
  * node</i> in most of the Systems Manager documentation. The Systems Manager console, API calls, error messages, and
- * SSM documents still use the term instance.
+ * SSM documents still use the term <i>instance</i>.
  * </p>
  * </note>
  * <p>

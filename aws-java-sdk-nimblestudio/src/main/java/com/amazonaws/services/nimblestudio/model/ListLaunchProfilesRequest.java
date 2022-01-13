@@ -182,6 +182,7 @@ public class ListLaunchProfilesRequest extends com.amazonaws.AmazonWebServiceReq
      * </p>
      * 
      * @return Filter this request to launch profiles in any of the given states.
+     * @see LaunchProfileState
      */
 
     public java.util.List<String> getStates() {
@@ -195,6 +196,7 @@ public class ListLaunchProfilesRequest extends com.amazonaws.AmazonWebServiceReq
      * 
      * @param states
      *        Filter this request to launch profiles in any of the given states.
+     * @see LaunchProfileState
      */
 
     public void setStates(java.util.Collection<String> states) {
@@ -219,6 +221,7 @@ public class ListLaunchProfilesRequest extends com.amazonaws.AmazonWebServiceReq
      * @param states
      *        Filter this request to launch profiles in any of the given states.
      * @return Returns a reference to this object so that method calls can be chained together.
+     * @see LaunchProfileState
      */
 
     public ListLaunchProfilesRequest withStates(String... states) {
@@ -239,10 +242,35 @@ public class ListLaunchProfilesRequest extends com.amazonaws.AmazonWebServiceReq
      * @param states
      *        Filter this request to launch profiles in any of the given states.
      * @return Returns a reference to this object so that method calls can be chained together.
+     * @see LaunchProfileState
      */
 
     public ListLaunchProfilesRequest withStates(java.util.Collection<String> states) {
         setStates(states);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Filter this request to launch profiles in any of the given states.
+     * </p>
+     * 
+     * @param states
+     *        Filter this request to launch profiles in any of the given states.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see LaunchProfileState
+     */
+
+    public ListLaunchProfilesRequest withStates(LaunchProfileState... states) {
+        java.util.ArrayList<String> statesCopy = new java.util.ArrayList<String>(states.length);
+        for (LaunchProfileState value : states) {
+            statesCopy.add(value.toString());
+        }
+        if (getStates() == null) {
+            setStates(statesCopy);
+        } else {
+            getStates().addAll(statesCopy);
+        }
         return this;
     }
 

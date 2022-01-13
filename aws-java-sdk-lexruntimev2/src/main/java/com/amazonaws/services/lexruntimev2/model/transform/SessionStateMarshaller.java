@@ -39,6 +39,8 @@ public class SessionStateMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("sessionAttributes").build();
     private static final MarshallingInfo<String> ORIGINATINGREQUESTID_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("originatingRequestId").build();
+    private static final MarshallingInfo<StructuredPojo> RUNTIMEHINTS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("runtimeHints").build();
 
     private static final SessionStateMarshaller instance = new SessionStateMarshaller();
 
@@ -61,6 +63,7 @@ public class SessionStateMarshaller {
             protocolMarshaller.marshall(sessionState.getActiveContexts(), ACTIVECONTEXTS_BINDING);
             protocolMarshaller.marshall(sessionState.getSessionAttributes(), SESSIONATTRIBUTES_BINDING);
             protocolMarshaller.marshall(sessionState.getOriginatingRequestId(), ORIGINATINGREQUESTID_BINDING);
+            protocolMarshaller.marshall(sessionState.getRuntimeHints(), RUNTIMEHINTS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }
