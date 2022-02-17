@@ -231,6 +231,8 @@ public interface AmazonCloudWatchEvidently {
      * 
      * @param deleteExperimentRequest
      * @return Result of the DeleteExperiment operation returned by the service.
+     * @throws ValidationException
+     *         The value of a parameter in the request caused an error.
      * @throws InternalServerException
      *         Unexpected error while processing the request. Retry the request.
      * @throws ConflictException
@@ -375,6 +377,8 @@ public interface AmazonCloudWatchEvidently {
      * @return Result of the GetExperiment operation returned by the service.
      * @throws ThrottlingException
      *         The request was denied because of request throttling. Retry the request.
+     * @throws ValidationException
+     *         The value of a parameter in the request caused an error.
      * @throws ResourceNotFoundException
      *         The request references a resource that does not exist.
      * @throws AccessDeniedException
@@ -444,6 +448,8 @@ public interface AmazonCloudWatchEvidently {
      * @return Result of the GetLaunch operation returned by the service.
      * @throws ThrottlingException
      *         The request was denied because of request throttling. Retry the request.
+     * @throws ValidationException
+     *         The value of a parameter in the request caused an error.
      * @throws ResourceNotFoundException
      *         The request references a resource that does not exist.
      * @throws AccessDeniedException
@@ -489,6 +495,8 @@ public interface AmazonCloudWatchEvidently {
      *         The value of a parameter in the request caused an error.
      * @throws ResourceNotFoundException
      *         The request references a resource that does not exist.
+     * @throws AccessDeniedException
+     *         You do not have sufficient permissions to perform this action.
      * @sample AmazonCloudWatchEvidently.ListExperiments
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/evidently-2021-02-01/ListExperiments" target="_top">AWS API
      *      Documentation</a>
@@ -634,6 +642,8 @@ public interface AmazonCloudWatchEvidently {
      *         The request was denied because of request throttling. Retry the request.
      * @throws ValidationException
      *         The value of a parameter in the request caused an error.
+     * @throws ConflictException
+     *         A resource was in an inconsistent state during an update or a deletion.
      * @throws ServiceQuotaExceededException
      *         The request would cause a service quota to be exceeded.
      * @throws ResourceNotFoundException

@@ -54,6 +54,10 @@ public class DisassociateDataShareConsumerRequestMarshaller implements
             request.addParameter("ConsumerArn", StringUtils.fromString(disassociateDataShareConsumerRequest.getConsumerArn()));
         }
 
+        if (disassociateDataShareConsumerRequest.getConsumerRegion() != null) {
+            request.addParameter("ConsumerRegion", StringUtils.fromString(disassociateDataShareConsumerRequest.getConsumerRegion()));
+        }
+
         return request;
     }
 

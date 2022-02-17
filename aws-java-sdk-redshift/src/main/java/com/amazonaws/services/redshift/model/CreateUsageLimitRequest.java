@@ -42,7 +42,8 @@ public class CreateUsageLimitRequest extends com.amazonaws.AmazonWebServiceReque
      * The type of limit. Depending on the feature type, this can be based on a time duration or data size. If
      * <code>FeatureType</code> is <code>spectrum</code>, then <code>LimitType</code> must be <code>data-scanned</code>.
      * If <code>FeatureType</code> is <code>concurrency-scaling</code>, then <code>LimitType</code> must be
-     * <code>time</code>.
+     * <code>time</code>. If <code>FeatureType</code> is <code>cross-region-datasharing</code>, then
+     * <code>LimitType</code> must be <code>data-scanned</code>.
      * </p>
      */
     private String limitType;
@@ -178,14 +179,16 @@ public class CreateUsageLimitRequest extends com.amazonaws.AmazonWebServiceReque
      * The type of limit. Depending on the feature type, this can be based on a time duration or data size. If
      * <code>FeatureType</code> is <code>spectrum</code>, then <code>LimitType</code> must be <code>data-scanned</code>.
      * If <code>FeatureType</code> is <code>concurrency-scaling</code>, then <code>LimitType</code> must be
-     * <code>time</code>.
+     * <code>time</code>. If <code>FeatureType</code> is <code>cross-region-datasharing</code>, then
+     * <code>LimitType</code> must be <code>data-scanned</code>.
      * </p>
      * 
      * @param limitType
      *        The type of limit. Depending on the feature type, this can be based on a time duration or data size. If
      *        <code>FeatureType</code> is <code>spectrum</code>, then <code>LimitType</code> must be
      *        <code>data-scanned</code>. If <code>FeatureType</code> is <code>concurrency-scaling</code>, then
-     *        <code>LimitType</code> must be <code>time</code>.
+     *        <code>LimitType</code> must be <code>time</code>. If <code>FeatureType</code> is
+     *        <code>cross-region-datasharing</code>, then <code>LimitType</code> must be <code>data-scanned</code>.
      * @see UsageLimitLimitType
      */
 
@@ -198,13 +201,15 @@ public class CreateUsageLimitRequest extends com.amazonaws.AmazonWebServiceReque
      * The type of limit. Depending on the feature type, this can be based on a time duration or data size. If
      * <code>FeatureType</code> is <code>spectrum</code>, then <code>LimitType</code> must be <code>data-scanned</code>.
      * If <code>FeatureType</code> is <code>concurrency-scaling</code>, then <code>LimitType</code> must be
-     * <code>time</code>.
+     * <code>time</code>. If <code>FeatureType</code> is <code>cross-region-datasharing</code>, then
+     * <code>LimitType</code> must be <code>data-scanned</code>.
      * </p>
      * 
      * @return The type of limit. Depending on the feature type, this can be based on a time duration or data size. If
      *         <code>FeatureType</code> is <code>spectrum</code>, then <code>LimitType</code> must be
      *         <code>data-scanned</code>. If <code>FeatureType</code> is <code>concurrency-scaling</code>, then
-     *         <code>LimitType</code> must be <code>time</code>.
+     *         <code>LimitType</code> must be <code>time</code>. If <code>FeatureType</code> is
+     *         <code>cross-region-datasharing</code>, then <code>LimitType</code> must be <code>data-scanned</code>.
      * @see UsageLimitLimitType
      */
 
@@ -217,14 +222,16 @@ public class CreateUsageLimitRequest extends com.amazonaws.AmazonWebServiceReque
      * The type of limit. Depending on the feature type, this can be based on a time duration or data size. If
      * <code>FeatureType</code> is <code>spectrum</code>, then <code>LimitType</code> must be <code>data-scanned</code>.
      * If <code>FeatureType</code> is <code>concurrency-scaling</code>, then <code>LimitType</code> must be
-     * <code>time</code>.
+     * <code>time</code>. If <code>FeatureType</code> is <code>cross-region-datasharing</code>, then
+     * <code>LimitType</code> must be <code>data-scanned</code>.
      * </p>
      * 
      * @param limitType
      *        The type of limit. Depending on the feature type, this can be based on a time duration or data size. If
      *        <code>FeatureType</code> is <code>spectrum</code>, then <code>LimitType</code> must be
      *        <code>data-scanned</code>. If <code>FeatureType</code> is <code>concurrency-scaling</code>, then
-     *        <code>LimitType</code> must be <code>time</code>.
+     *        <code>LimitType</code> must be <code>time</code>. If <code>FeatureType</code> is
+     *        <code>cross-region-datasharing</code>, then <code>LimitType</code> must be <code>data-scanned</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see UsageLimitLimitType
      */
@@ -239,14 +246,16 @@ public class CreateUsageLimitRequest extends com.amazonaws.AmazonWebServiceReque
      * The type of limit. Depending on the feature type, this can be based on a time duration or data size. If
      * <code>FeatureType</code> is <code>spectrum</code>, then <code>LimitType</code> must be <code>data-scanned</code>.
      * If <code>FeatureType</code> is <code>concurrency-scaling</code>, then <code>LimitType</code> must be
-     * <code>time</code>.
+     * <code>time</code>. If <code>FeatureType</code> is <code>cross-region-datasharing</code>, then
+     * <code>LimitType</code> must be <code>data-scanned</code>.
      * </p>
      * 
      * @param limitType
      *        The type of limit. Depending on the feature type, this can be based on a time duration or data size. If
      *        <code>FeatureType</code> is <code>spectrum</code>, then <code>LimitType</code> must be
      *        <code>data-scanned</code>. If <code>FeatureType</code> is <code>concurrency-scaling</code>, then
-     *        <code>LimitType</code> must be <code>time</code>.
+     *        <code>LimitType</code> must be <code>time</code>. If <code>FeatureType</code> is
+     *        <code>cross-region-datasharing</code>, then <code>LimitType</code> must be <code>data-scanned</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see UsageLimitLimitType
      */

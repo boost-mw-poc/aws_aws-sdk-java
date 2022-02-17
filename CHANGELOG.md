@@ -1,3 +1,20 @@
+# __1.12.161__ __2022-02-17__
+## __AWS Backup__
+  - ### Features
+    - AWS Backup add new S3_BACKUP_OBJECT_FAILED and S3_RESTORE_OBJECT_FAILED event types in BackupVaultNotifications events list.
+
+## __AWS Identity and Access Management__
+  - ### Features
+    - Documentation updates for AWS Identity and Access Management (IAM).
+
+## __Amazon CloudWatch Evidently__
+  - ### Features
+    - Add support for filtering list of experiments and launches by status
+
+## __Amazon Redshift__
+  - ### Features
+    - SDK release for Cross region datasharing and cost-control for cross region datasharing
+
 # __1.12.160__ __2022-02-16__
 ## __AWS Budgets__
   - ### Features

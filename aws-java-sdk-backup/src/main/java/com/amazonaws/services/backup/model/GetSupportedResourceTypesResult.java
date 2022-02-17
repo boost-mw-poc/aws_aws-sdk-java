@@ -68,6 +68,16 @@ public class GetSupportedResourceTypesResult extends com.amazonaws.AmazonWebServ
      * <code>Storage Gateway</code> for Storage Gateway
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>DocDB</code> for Amazon DocumentDB (with MongoDB compatibility)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Neptune</code> for Amazon Neptune
+     * </p>
+     * </li>
      * </ul>
      */
     private java.util.List<String> resourceTypes;
@@ -117,6 +127,16 @@ public class GetSupportedResourceTypesResult extends com.amazonaws.AmazonWebServ
      * <code>Storage Gateway</code> for Storage Gateway
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>DocDB</code> for Amazon DocumentDB (with MongoDB compatibility)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Neptune</code> for Amazon Neptune
+     * </p>
+     * </li>
      * </ul>
      * 
      * @return Contains a string with the supported Amazon Web Services resource types:</p>
@@ -159,6 +179,16 @@ public class GetSupportedResourceTypesResult extends com.amazonaws.AmazonWebServ
      *         <li>
      *         <p>
      *         <code>Storage Gateway</code> for Storage Gateway
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>DocDB</code> for Amazon DocumentDB (with MongoDB compatibility)
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>Neptune</code> for Amazon Neptune
      *         </p>
      *         </li>
      */
@@ -212,6 +242,16 @@ public class GetSupportedResourceTypesResult extends com.amazonaws.AmazonWebServ
      * <code>Storage Gateway</code> for Storage Gateway
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>DocDB</code> for Amazon DocumentDB (with MongoDB compatibility)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Neptune</code> for Amazon Neptune
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param resourceTypes
@@ -255,6 +295,16 @@ public class GetSupportedResourceTypesResult extends com.amazonaws.AmazonWebServ
      *        <li>
      *        <p>
      *        <code>Storage Gateway</code> for Storage Gateway
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>DocDB</code> for Amazon DocumentDB (with MongoDB compatibility)
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>Neptune</code> for Amazon Neptune
      *        </p>
      *        </li>
      */
@@ -313,6 +363,16 @@ public class GetSupportedResourceTypesResult extends com.amazonaws.AmazonWebServ
      * <code>Storage Gateway</code> for Storage Gateway
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>DocDB</code> for Amazon DocumentDB (with MongoDB compatibility)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Neptune</code> for Amazon Neptune
+     * </p>
+     * </li>
      * </ul>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -361,6 +421,16 @@ public class GetSupportedResourceTypesResult extends com.amazonaws.AmazonWebServ
      *        <li>
      *        <p>
      *        <code>Storage Gateway</code> for Storage Gateway
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>DocDB</code> for Amazon DocumentDB (with MongoDB compatibility)
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>Neptune</code> for Amazon Neptune
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -421,6 +491,16 @@ public class GetSupportedResourceTypesResult extends com.amazonaws.AmazonWebServ
      * <code>Storage Gateway</code> for Storage Gateway
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>DocDB</code> for Amazon DocumentDB (with MongoDB compatibility)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Neptune</code> for Amazon Neptune
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param resourceTypes
@@ -464,6 +544,16 @@ public class GetSupportedResourceTypesResult extends com.amazonaws.AmazonWebServ
      *        <li>
      *        <p>
      *        <code>Storage Gateway</code> for Storage Gateway
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>DocDB</code> for Amazon DocumentDB (with MongoDB compatibility)
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>Neptune</code> for Amazon Neptune
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

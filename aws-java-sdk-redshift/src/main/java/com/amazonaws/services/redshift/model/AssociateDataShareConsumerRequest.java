@@ -43,6 +43,13 @@ public class AssociateDataShareConsumerRequest extends com.amazonaws.AmazonWebSe
      * </p>
      */
     private String consumerArn;
+    /**
+     * <p>
+     * From a datashare consumer account, associates a datashare with all existing and future namespaces in the
+     * specified Amazon Web Services Region.
+     * </p>
+     */
+    private String consumerRegion;
 
     /**
      * <p>
@@ -180,6 +187,52 @@ public class AssociateDataShareConsumerRequest extends com.amazonaws.AmazonWebSe
     }
 
     /**
+     * <p>
+     * From a datashare consumer account, associates a datashare with all existing and future namespaces in the
+     * specified Amazon Web Services Region.
+     * </p>
+     * 
+     * @param consumerRegion
+     *        From a datashare consumer account, associates a datashare with all existing and future namespaces in the
+     *        specified Amazon Web Services Region.
+     */
+
+    public void setConsumerRegion(String consumerRegion) {
+        this.consumerRegion = consumerRegion;
+    }
+
+    /**
+     * <p>
+     * From a datashare consumer account, associates a datashare with all existing and future namespaces in the
+     * specified Amazon Web Services Region.
+     * </p>
+     * 
+     * @return From a datashare consumer account, associates a datashare with all existing and future namespaces in the
+     *         specified Amazon Web Services Region.
+     */
+
+    public String getConsumerRegion() {
+        return this.consumerRegion;
+    }
+
+    /**
+     * <p>
+     * From a datashare consumer account, associates a datashare with all existing and future namespaces in the
+     * specified Amazon Web Services Region.
+     * </p>
+     * 
+     * @param consumerRegion
+     *        From a datashare consumer account, associates a datashare with all existing and future namespaces in the
+     *        specified Amazon Web Services Region.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public AssociateDataShareConsumerRequest withConsumerRegion(String consumerRegion) {
+        setConsumerRegion(consumerRegion);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -196,7 +249,9 @@ public class AssociateDataShareConsumerRequest extends com.amazonaws.AmazonWebSe
         if (getAssociateEntireAccount() != null)
             sb.append("AssociateEntireAccount: ").append(getAssociateEntireAccount()).append(",");
         if (getConsumerArn() != null)
-            sb.append("ConsumerArn: ").append(getConsumerArn());
+            sb.append("ConsumerArn: ").append(getConsumerArn()).append(",");
+        if (getConsumerRegion() != null)
+            sb.append("ConsumerRegion: ").append(getConsumerRegion());
         sb.append("}");
         return sb.toString();
     }
@@ -223,6 +278,10 @@ public class AssociateDataShareConsumerRequest extends com.amazonaws.AmazonWebSe
             return false;
         if (other.getConsumerArn() != null && other.getConsumerArn().equals(this.getConsumerArn()) == false)
             return false;
+        if (other.getConsumerRegion() == null ^ this.getConsumerRegion() == null)
+            return false;
+        if (other.getConsumerRegion() != null && other.getConsumerRegion().equals(this.getConsumerRegion()) == false)
+            return false;
         return true;
     }
 
@@ -234,6 +293,7 @@ public class AssociateDataShareConsumerRequest extends com.amazonaws.AmazonWebSe
         hashCode = prime * hashCode + ((getDataShareArn() == null) ? 0 : getDataShareArn().hashCode());
         hashCode = prime * hashCode + ((getAssociateEntireAccount() == null) ? 0 : getAssociateEntireAccount().hashCode());
         hashCode = prime * hashCode + ((getConsumerArn() == null) ? 0 : getConsumerArn().hashCode());
+        hashCode = prime * hashCode + ((getConsumerRegion() == null) ? 0 : getConsumerRegion().hashCode());
         return hashCode;
     }
 

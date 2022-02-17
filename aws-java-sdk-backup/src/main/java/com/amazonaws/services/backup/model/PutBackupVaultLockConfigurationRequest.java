@@ -44,8 +44,8 @@ public class PutBackupVaultLockConfigurationRequest extends com.amazonaws.Amazon
      * If this parameter is specified, any backup or copy job to the vault must have a lifecycle policy with a retention
      * period equal to or longer than the minimum retention period. If the job's retention period is shorter than that
      * minimum retention period, then the vault fails that backup or copy job, and you should either modify your
-     * lifecycle settings or use a different vault. Recovery points already saved in the vault prior to Vault Lock are
-     * not affected.
+     * lifecycle settings or use a different vault. The shortest minimum retention period you can specify is 1 day.
+     * Recovery points already saved in the vault prior to Vault Lock are not affected.
      * </p>
      */
     private Long minRetentionDays;
@@ -64,8 +64,8 @@ public class PutBackupVaultLockConfigurationRequest extends com.amazonaws.Amazon
      * If this parameter is specified, any backup or copy job to the vault must have a lifecycle policy with a retention
      * period equal to or shorter than the maximum retention period. If the job's retention period is longer than that
      * maximum retention period, then the vault fails the backup or copy job, and you should either modify your
-     * lifecycle settings or use a different vault. Recovery points already saved in the vault prior to Vault Lock are
-     * not affected.
+     * lifecycle settings or use a different vault. The longest maximum retention period you can specify is 36500 days
+     * (approximately 100 years). Recovery points already saved in the vault prior to Vault Lock are not affected.
      * </p>
      */
     private Long maxRetentionDays;
@@ -146,8 +146,8 @@ public class PutBackupVaultLockConfigurationRequest extends com.amazonaws.Amazon
      * If this parameter is specified, any backup or copy job to the vault must have a lifecycle policy with a retention
      * period equal to or longer than the minimum retention period. If the job's retention period is shorter than that
      * minimum retention period, then the vault fails that backup or copy job, and you should either modify your
-     * lifecycle settings or use a different vault. Recovery points already saved in the vault prior to Vault Lock are
-     * not affected.
+     * lifecycle settings or use a different vault. The shortest minimum retention period you can specify is 1 day.
+     * Recovery points already saved in the vault prior to Vault Lock are not affected.
      * </p>
      * 
      * @param minRetentionDays
@@ -161,8 +161,8 @@ public class PutBackupVaultLockConfigurationRequest extends com.amazonaws.Amazon
      *        If this parameter is specified, any backup or copy job to the vault must have a lifecycle policy with a
      *        retention period equal to or longer than the minimum retention period. If the job's retention period is
      *        shorter than that minimum retention period, then the vault fails that backup or copy job, and you should
-     *        either modify your lifecycle settings or use a different vault. Recovery points already saved in the vault
-     *        prior to Vault Lock are not affected.
+     *        either modify your lifecycle settings or use a different vault. The shortest minimum retention period you
+     *        can specify is 1 day. Recovery points already saved in the vault prior to Vault Lock are not affected.
      */
 
     public void setMinRetentionDays(Long minRetentionDays) {
@@ -182,8 +182,8 @@ public class PutBackupVaultLockConfigurationRequest extends com.amazonaws.Amazon
      * If this parameter is specified, any backup or copy job to the vault must have a lifecycle policy with a retention
      * period equal to or longer than the minimum retention period. If the job's retention period is shorter than that
      * minimum retention period, then the vault fails that backup or copy job, and you should either modify your
-     * lifecycle settings or use a different vault. Recovery points already saved in the vault prior to Vault Lock are
-     * not affected.
+     * lifecycle settings or use a different vault. The shortest minimum retention period you can specify is 1 day.
+     * Recovery points already saved in the vault prior to Vault Lock are not affected.
      * </p>
      * 
      * @return The Backup Vault Lock configuration that specifies the minimum retention period that the vault retains
@@ -196,8 +196,8 @@ public class PutBackupVaultLockConfigurationRequest extends com.amazonaws.Amazon
      *         If this parameter is specified, any backup or copy job to the vault must have a lifecycle policy with a
      *         retention period equal to or longer than the minimum retention period. If the job's retention period is
      *         shorter than that minimum retention period, then the vault fails that backup or copy job, and you should
-     *         either modify your lifecycle settings or use a different vault. Recovery points already saved in the
-     *         vault prior to Vault Lock are not affected.
+     *         either modify your lifecycle settings or use a different vault. The shortest minimum retention period you
+     *         can specify is 1 day. Recovery points already saved in the vault prior to Vault Lock are not affected.
      */
 
     public Long getMinRetentionDays() {
@@ -217,8 +217,8 @@ public class PutBackupVaultLockConfigurationRequest extends com.amazonaws.Amazon
      * If this parameter is specified, any backup or copy job to the vault must have a lifecycle policy with a retention
      * period equal to or longer than the minimum retention period. If the job's retention period is shorter than that
      * minimum retention period, then the vault fails that backup or copy job, and you should either modify your
-     * lifecycle settings or use a different vault. Recovery points already saved in the vault prior to Vault Lock are
-     * not affected.
+     * lifecycle settings or use a different vault. The shortest minimum retention period you can specify is 1 day.
+     * Recovery points already saved in the vault prior to Vault Lock are not affected.
      * </p>
      * 
      * @param minRetentionDays
@@ -232,8 +232,8 @@ public class PutBackupVaultLockConfigurationRequest extends com.amazonaws.Amazon
      *        If this parameter is specified, any backup or copy job to the vault must have a lifecycle policy with a
      *        retention period equal to or longer than the minimum retention period. If the job's retention period is
      *        shorter than that minimum retention period, then the vault fails that backup or copy job, and you should
-     *        either modify your lifecycle settings or use a different vault. Recovery points already saved in the vault
-     *        prior to Vault Lock are not affected.
+     *        either modify your lifecycle settings or use a different vault. The shortest minimum retention period you
+     *        can specify is 1 day. Recovery points already saved in the vault prior to Vault Lock are not affected.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -257,8 +257,8 @@ public class PutBackupVaultLockConfigurationRequest extends com.amazonaws.Amazon
      * If this parameter is specified, any backup or copy job to the vault must have a lifecycle policy with a retention
      * period equal to or shorter than the maximum retention period. If the job's retention period is longer than that
      * maximum retention period, then the vault fails the backup or copy job, and you should either modify your
-     * lifecycle settings or use a different vault. Recovery points already saved in the vault prior to Vault Lock are
-     * not affected.
+     * lifecycle settings or use a different vault. The longest maximum retention period you can specify is 36500 days
+     * (approximately 100 years). Recovery points already saved in the vault prior to Vault Lock are not affected.
      * </p>
      * 
      * @param maxRetentionDays
@@ -274,8 +274,9 @@ public class PutBackupVaultLockConfigurationRequest extends com.amazonaws.Amazon
      *        If this parameter is specified, any backup or copy job to the vault must have a lifecycle policy with a
      *        retention period equal to or shorter than the maximum retention period. If the job's retention period is
      *        longer than that maximum retention period, then the vault fails the backup or copy job, and you should
-     *        either modify your lifecycle settings or use a different vault. Recovery points already saved in the vault
-     *        prior to Vault Lock are not affected.
+     *        either modify your lifecycle settings or use a different vault. The longest maximum retention period you
+     *        can specify is 36500 days (approximately 100 years). Recovery points already saved in the vault prior to
+     *        Vault Lock are not affected.
      */
 
     public void setMaxRetentionDays(Long maxRetentionDays) {
@@ -297,8 +298,8 @@ public class PutBackupVaultLockConfigurationRequest extends com.amazonaws.Amazon
      * If this parameter is specified, any backup or copy job to the vault must have a lifecycle policy with a retention
      * period equal to or shorter than the maximum retention period. If the job's retention period is longer than that
      * maximum retention period, then the vault fails the backup or copy job, and you should either modify your
-     * lifecycle settings or use a different vault. Recovery points already saved in the vault prior to Vault Lock are
-     * not affected.
+     * lifecycle settings or use a different vault. The longest maximum retention period you can specify is 36500 days
+     * (approximately 100 years). Recovery points already saved in the vault prior to Vault Lock are not affected.
      * </p>
      * 
      * @return The Backup Vault Lock configuration that specifies the maximum retention period that the vault retains
@@ -313,8 +314,9 @@ public class PutBackupVaultLockConfigurationRequest extends com.amazonaws.Amazon
      *         If this parameter is specified, any backup or copy job to the vault must have a lifecycle policy with a
      *         retention period equal to or shorter than the maximum retention period. If the job's retention period is
      *         longer than that maximum retention period, then the vault fails the backup or copy job, and you should
-     *         either modify your lifecycle settings or use a different vault. Recovery points already saved in the
-     *         vault prior to Vault Lock are not affected.
+     *         either modify your lifecycle settings or use a different vault. The longest maximum retention period you
+     *         can specify is 36500 days (approximately 100 years). Recovery points already saved in the vault prior to
+     *         Vault Lock are not affected.
      */
 
     public Long getMaxRetentionDays() {
@@ -336,8 +338,8 @@ public class PutBackupVaultLockConfigurationRequest extends com.amazonaws.Amazon
      * If this parameter is specified, any backup or copy job to the vault must have a lifecycle policy with a retention
      * period equal to or shorter than the maximum retention period. If the job's retention period is longer than that
      * maximum retention period, then the vault fails the backup or copy job, and you should either modify your
-     * lifecycle settings or use a different vault. Recovery points already saved in the vault prior to Vault Lock are
-     * not affected.
+     * lifecycle settings or use a different vault. The longest maximum retention period you can specify is 36500 days
+     * (approximately 100 years). Recovery points already saved in the vault prior to Vault Lock are not affected.
      * </p>
      * 
      * @param maxRetentionDays
@@ -353,8 +355,9 @@ public class PutBackupVaultLockConfigurationRequest extends com.amazonaws.Amazon
      *        If this parameter is specified, any backup or copy job to the vault must have a lifecycle policy with a
      *        retention period equal to or shorter than the maximum retention period. If the job's retention period is
      *        longer than that maximum retention period, then the vault fails the backup or copy job, and you should
-     *        either modify your lifecycle settings or use a different vault. Recovery points already saved in the vault
-     *        prior to Vault Lock are not affected.
+     *        either modify your lifecycle settings or use a different vault. The longest maximum retention period you
+     *        can specify is 36500 days (approximately 100 years). Recovery points already saved in the vault prior to
+     *        Vault Lock are not affected.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

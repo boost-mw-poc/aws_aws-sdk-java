@@ -40,6 +40,12 @@ public class DataShareAssociation implements Serializable, Cloneable {
     private String status;
     /**
      * <p>
+     * The Amazon Web Services Region of the consumer accounts that have an association with a producer datashare.
+     * </p>
+     */
+    private String consumerRegion;
+    /**
+     * <p>
      * The creation date of the datashare that is associated.
      * </p>
      */
@@ -152,6 +158,49 @@ public class DataShareAssociation implements Serializable, Cloneable {
 
     /**
      * <p>
+     * The Amazon Web Services Region of the consumer accounts that have an association with a producer datashare.
+     * </p>
+     * 
+     * @param consumerRegion
+     *        The Amazon Web Services Region of the consumer accounts that have an association with a producer
+     *        datashare.
+     */
+
+    public void setConsumerRegion(String consumerRegion) {
+        this.consumerRegion = consumerRegion;
+    }
+
+    /**
+     * <p>
+     * The Amazon Web Services Region of the consumer accounts that have an association with a producer datashare.
+     * </p>
+     * 
+     * @return The Amazon Web Services Region of the consumer accounts that have an association with a producer
+     *         datashare.
+     */
+
+    public String getConsumerRegion() {
+        return this.consumerRegion;
+    }
+
+    /**
+     * <p>
+     * The Amazon Web Services Region of the consumer accounts that have an association with a producer datashare.
+     * </p>
+     * 
+     * @param consumerRegion
+     *        The Amazon Web Services Region of the consumer accounts that have an association with a producer
+     *        datashare.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public DataShareAssociation withConsumerRegion(String consumerRegion) {
+        setConsumerRegion(consumerRegion);
+        return this;
+    }
+
+    /**
+     * <p>
      * The creation date of the datashare that is associated.
      * </p>
      * 
@@ -246,6 +295,8 @@ public class DataShareAssociation implements Serializable, Cloneable {
             sb.append("ConsumerIdentifier: ").append(getConsumerIdentifier()).append(",");
         if (getStatus() != null)
             sb.append("Status: ").append(getStatus()).append(",");
+        if (getConsumerRegion() != null)
+            sb.append("ConsumerRegion: ").append(getConsumerRegion()).append(",");
         if (getCreatedDate() != null)
             sb.append("CreatedDate: ").append(getCreatedDate()).append(",");
         if (getStatusChangeDate() != null)
@@ -272,6 +323,10 @@ public class DataShareAssociation implements Serializable, Cloneable {
             return false;
         if (other.getStatus() != null && other.getStatus().equals(this.getStatus()) == false)
             return false;
+        if (other.getConsumerRegion() == null ^ this.getConsumerRegion() == null)
+            return false;
+        if (other.getConsumerRegion() != null && other.getConsumerRegion().equals(this.getConsumerRegion()) == false)
+            return false;
         if (other.getCreatedDate() == null ^ this.getCreatedDate() == null)
             return false;
         if (other.getCreatedDate() != null && other.getCreatedDate().equals(this.getCreatedDate()) == false)
@@ -290,6 +345,7 @@ public class DataShareAssociation implements Serializable, Cloneable {
 
         hashCode = prime * hashCode + ((getConsumerIdentifier() == null) ? 0 : getConsumerIdentifier().hashCode());
         hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
+        hashCode = prime * hashCode + ((getConsumerRegion() == null) ? 0 : getConsumerRegion().hashCode());
         hashCode = prime * hashCode + ((getCreatedDate() == null) ? 0 : getCreatedDate().hashCode());
         hashCode = prime * hashCode + ((getStatusChangeDate() == null) ? 0 : getStatusChangeDate().hashCode());
         return hashCode;

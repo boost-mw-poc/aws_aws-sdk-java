@@ -64,8 +64,8 @@ public class StartBackupJobRequest extends com.amazonaws.AmazonWebServiceRequest
     private Long startWindowMinutes;
     /**
      * <p>
-     * A value in minutes during which a successfully started backup must complete, or else AWS Backup will cancel the
-     * job. This value is optional. This value begins counting down from when the backup was scheduled. It does not add
+     * A value in minutes during which a successfully started backup must complete, or else Backup will cancel the job.
+     * This value is optional. This value begins counting down from when the backup was scheduled. It does not add
      * additional time for <code>StartWindowMinutes</code>, or if the backup started later than scheduled.
      * </p>
      */
@@ -77,11 +77,14 @@ public class StartBackupJobRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      * <p>
      * Backups transitioned to cold storage must be stored in cold storage for a minimum of 90 days. Therefore, the
-     * “expire after days” setting must be 90 days greater than the “transition to cold after days” setting. The
-     * “transition to cold after days” setting cannot be changed after a backup has been transitioned to cold.
+     * “retention” setting must be 90 days greater than the “transition to cold after days” setting. The “transition to
+     * cold after days” setting cannot be changed after a backup has been transitioned to cold.
      * </p>
      * <p>
-     * Only Amazon EFS file system backups can be transitioned to cold storage.
+     * Only resource types that support full Backup management can transition their backups to cold storage. Those
+     * resource types are listed in the "Full Backup management" section of the <a
+     * href="https://docs.aws.amazon.com/aws-backup/latest/devguide/whatisbackup.html#features-by-resource"> Feature
+     * availability by resource</a> table. Backup ignores this expression for other resource types.
      * </p>
      */
     private Lifecycle lifecycle;
@@ -349,16 +352,16 @@ public class StartBackupJobRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * A value in minutes during which a successfully started backup must complete, or else AWS Backup will cancel the
-     * job. This value is optional. This value begins counting down from when the backup was scheduled. It does not add
+     * A value in minutes during which a successfully started backup must complete, or else Backup will cancel the job.
+     * This value is optional. This value begins counting down from when the backup was scheduled. It does not add
      * additional time for <code>StartWindowMinutes</code>, or if the backup started later than scheduled.
      * </p>
      * 
      * @param completeWindowMinutes
-     *        A value in minutes during which a successfully started backup must complete, or else AWS Backup will
-     *        cancel the job. This value is optional. This value begins counting down from when the backup was
-     *        scheduled. It does not add additional time for <code>StartWindowMinutes</code>, or if the backup started
-     *        later than scheduled.
+     *        A value in minutes during which a successfully started backup must complete, or else Backup will cancel
+     *        the job. This value is optional. This value begins counting down from when the backup was scheduled. It
+     *        does not add additional time for <code>StartWindowMinutes</code>, or if the backup started later than
+     *        scheduled.
      */
 
     public void setCompleteWindowMinutes(Long completeWindowMinutes) {
@@ -367,15 +370,15 @@ public class StartBackupJobRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * A value in minutes during which a successfully started backup must complete, or else AWS Backup will cancel the
-     * job. This value is optional. This value begins counting down from when the backup was scheduled. It does not add
+     * A value in minutes during which a successfully started backup must complete, or else Backup will cancel the job.
+     * This value is optional. This value begins counting down from when the backup was scheduled. It does not add
      * additional time for <code>StartWindowMinutes</code>, or if the backup started later than scheduled.
      * </p>
      * 
-     * @return A value in minutes during which a successfully started backup must complete, or else AWS Backup will
-     *         cancel the job. This value is optional. This value begins counting down from when the backup was
-     *         scheduled. It does not add additional time for <code>StartWindowMinutes</code>, or if the backup started
-     *         later than scheduled.
+     * @return A value in minutes during which a successfully started backup must complete, or else Backup will cancel
+     *         the job. This value is optional. This value begins counting down from when the backup was scheduled. It
+     *         does not add additional time for <code>StartWindowMinutes</code>, or if the backup started later than
+     *         scheduled.
      */
 
     public Long getCompleteWindowMinutes() {
@@ -384,16 +387,16 @@ public class StartBackupJobRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * A value in minutes during which a successfully started backup must complete, or else AWS Backup will cancel the
-     * job. This value is optional. This value begins counting down from when the backup was scheduled. It does not add
+     * A value in minutes during which a successfully started backup must complete, or else Backup will cancel the job.
+     * This value is optional. This value begins counting down from when the backup was scheduled. It does not add
      * additional time for <code>StartWindowMinutes</code>, or if the backup started later than scheduled.
      * </p>
      * 
      * @param completeWindowMinutes
-     *        A value in minutes during which a successfully started backup must complete, or else AWS Backup will
-     *        cancel the job. This value is optional. This value begins counting down from when the backup was
-     *        scheduled. It does not add additional time for <code>StartWindowMinutes</code>, or if the backup started
-     *        later than scheduled.
+     *        A value in minutes during which a successfully started backup must complete, or else Backup will cancel
+     *        the job. This value is optional. This value begins counting down from when the backup was scheduled. It
+     *        does not add additional time for <code>StartWindowMinutes</code>, or if the backup started later than
+     *        scheduled.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -409,11 +412,14 @@ public class StartBackupJobRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      * <p>
      * Backups transitioned to cold storage must be stored in cold storage for a minimum of 90 days. Therefore, the
-     * “expire after days” setting must be 90 days greater than the “transition to cold after days” setting. The
-     * “transition to cold after days” setting cannot be changed after a backup has been transitioned to cold.
+     * “retention” setting must be 90 days greater than the “transition to cold after days” setting. The “transition to
+     * cold after days” setting cannot be changed after a backup has been transitioned to cold.
      * </p>
      * <p>
-     * Only Amazon EFS file system backups can be transitioned to cold storage.
+     * Only resource types that support full Backup management can transition their backups to cold storage. Those
+     * resource types are listed in the "Full Backup management" section of the <a
+     * href="https://docs.aws.amazon.com/aws-backup/latest/devguide/whatisbackup.html#features-by-resource"> Feature
+     * availability by resource</a> table. Backup ignores this expression for other resource types.
      * </p>
      * 
      * @param lifecycle
@@ -421,12 +427,14 @@ public class StartBackupJobRequest extends com.amazonaws.AmazonWebServiceRequest
      *        Backup will transition and expire backups automatically according to the lifecycle that you define. </p>
      *        <p>
      *        Backups transitioned to cold storage must be stored in cold storage for a minimum of 90 days. Therefore,
-     *        the “expire after days” setting must be 90 days greater than the “transition to cold after days” setting.
-     *        The “transition to cold after days” setting cannot be changed after a backup has been transitioned to
-     *        cold.
+     *        the “retention” setting must be 90 days greater than the “transition to cold after days” setting. The
+     *        “transition to cold after days” setting cannot be changed after a backup has been transitioned to cold.
      *        </p>
      *        <p>
-     *        Only Amazon EFS file system backups can be transitioned to cold storage.
+     *        Only resource types that support full Backup management can transition their backups to cold storage.
+     *        Those resource types are listed in the "Full Backup management" section of the <a
+     *        href="https://docs.aws.amazon.com/aws-backup/latest/devguide/whatisbackup.html#features-by-resource">
+     *        Feature availability by resource</a> table. Backup ignores this expression for other resource types.
      */
 
     public void setLifecycle(Lifecycle lifecycle) {
@@ -440,23 +448,28 @@ public class StartBackupJobRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      * <p>
      * Backups transitioned to cold storage must be stored in cold storage for a minimum of 90 days. Therefore, the
-     * “expire after days” setting must be 90 days greater than the “transition to cold after days” setting. The
-     * “transition to cold after days” setting cannot be changed after a backup has been transitioned to cold.
+     * “retention” setting must be 90 days greater than the “transition to cold after days” setting. The “transition to
+     * cold after days” setting cannot be changed after a backup has been transitioned to cold.
      * </p>
      * <p>
-     * Only Amazon EFS file system backups can be transitioned to cold storage.
+     * Only resource types that support full Backup management can transition their backups to cold storage. Those
+     * resource types are listed in the "Full Backup management" section of the <a
+     * href="https://docs.aws.amazon.com/aws-backup/latest/devguide/whatisbackup.html#features-by-resource"> Feature
+     * availability by resource</a> table. Backup ignores this expression for other resource types.
      * </p>
      * 
      * @return The lifecycle defines when a protected resource is transitioned to cold storage and when it expires.
      *         Backup will transition and expire backups automatically according to the lifecycle that you define. </p>
      *         <p>
      *         Backups transitioned to cold storage must be stored in cold storage for a minimum of 90 days. Therefore,
-     *         the “expire after days” setting must be 90 days greater than the “transition to cold after days” setting.
-     *         The “transition to cold after days” setting cannot be changed after a backup has been transitioned to
-     *         cold.
+     *         the “retention” setting must be 90 days greater than the “transition to cold after days” setting. The
+     *         “transition to cold after days” setting cannot be changed after a backup has been transitioned to cold.
      *         </p>
      *         <p>
-     *         Only Amazon EFS file system backups can be transitioned to cold storage.
+     *         Only resource types that support full Backup management can transition their backups to cold storage.
+     *         Those resource types are listed in the "Full Backup management" section of the <a
+     *         href="https://docs.aws.amazon.com/aws-backup/latest/devguide/whatisbackup.html#features-by-resource">
+     *         Feature availability by resource</a> table. Backup ignores this expression for other resource types.
      */
 
     public Lifecycle getLifecycle() {
@@ -470,11 +483,14 @@ public class StartBackupJobRequest extends com.amazonaws.AmazonWebServiceRequest
      * </p>
      * <p>
      * Backups transitioned to cold storage must be stored in cold storage for a minimum of 90 days. Therefore, the
-     * “expire after days” setting must be 90 days greater than the “transition to cold after days” setting. The
-     * “transition to cold after days” setting cannot be changed after a backup has been transitioned to cold.
+     * “retention” setting must be 90 days greater than the “transition to cold after days” setting. The “transition to
+     * cold after days” setting cannot be changed after a backup has been transitioned to cold.
      * </p>
      * <p>
-     * Only Amazon EFS file system backups can be transitioned to cold storage.
+     * Only resource types that support full Backup management can transition their backups to cold storage. Those
+     * resource types are listed in the "Full Backup management" section of the <a
+     * href="https://docs.aws.amazon.com/aws-backup/latest/devguide/whatisbackup.html#features-by-resource"> Feature
+     * availability by resource</a> table. Backup ignores this expression for other resource types.
      * </p>
      * 
      * @param lifecycle
@@ -482,12 +498,14 @@ public class StartBackupJobRequest extends com.amazonaws.AmazonWebServiceRequest
      *        Backup will transition and expire backups automatically according to the lifecycle that you define. </p>
      *        <p>
      *        Backups transitioned to cold storage must be stored in cold storage for a minimum of 90 days. Therefore,
-     *        the “expire after days” setting must be 90 days greater than the “transition to cold after days” setting.
-     *        The “transition to cold after days” setting cannot be changed after a backup has been transitioned to
-     *        cold.
+     *        the “retention” setting must be 90 days greater than the “transition to cold after days” setting. The
+     *        “transition to cold after days” setting cannot be changed after a backup has been transitioned to cold.
      *        </p>
      *        <p>
-     *        Only Amazon EFS file system backups can be transitioned to cold storage.
+     *        Only resource types that support full Backup management can transition their backups to cold storage.
+     *        Those resource types are listed in the "Full Backup management" section of the <a
+     *        href="https://docs.aws.amazon.com/aws-backup/latest/devguide/whatisbackup.html#features-by-resource">
+     *        Feature availability by resource</a> table. Backup ignores this expression for other resource types.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

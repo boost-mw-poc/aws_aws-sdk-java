@@ -114,6 +114,16 @@ public class StartRestoreJobRequest extends com.amazonaws.AmazonWebServiceReques
      * <ul>
      * <li>
      * <p>
+     * <code>Aurora</code> for Amazon Aurora
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>DocumentDB</code> for Amazon DocumentDB (with MongoDB compatibility)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>DynamoDB</code> for Amazon DynamoDB
      * </p>
      * </li>
@@ -134,17 +144,32 @@ public class StartRestoreJobRequest extends com.amazonaws.AmazonWebServiceReques
      * </li>
      * <li>
      * <p>
+     * <code>FSx</code> for Amazon FSx
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>Neptune</code> for Amazon Neptune
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>RDS</code> for Amazon Relational Database Service
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>Aurora</code> for Amazon Aurora
+     * <code>Storage Gateway</code> for Storage Gateway
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>Storage Gateway</code> for Storage Gateway
+     * <code>S3</code> for Amazon S3
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>VirtualMachine</code> for virtual machines
      * </p>
      * </li>
      * </ul>
@@ -694,6 +719,16 @@ public class StartRestoreJobRequest extends com.amazonaws.AmazonWebServiceReques
      * <ul>
      * <li>
      * <p>
+     * <code>Aurora</code> for Amazon Aurora
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>DocumentDB</code> for Amazon DocumentDB (with MongoDB compatibility)
+     * </p>
+     * </li>
+     * <li>
+     * <p>
      * <code>DynamoDB</code> for Amazon DynamoDB
      * </p>
      * </li>
@@ -714,12 +749,17 @@ public class StartRestoreJobRequest extends com.amazonaws.AmazonWebServiceReques
      * </li>
      * <li>
      * <p>
-     * <code>RDS</code> for Amazon Relational Database Service
+     * <code>FSx</code> for Amazon FSx
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>Aurora</code> for Amazon Aurora
+     * <code>Neptune</code> for Amazon Neptune
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>RDS</code> for Amazon Relational Database Service
      * </p>
      * </li>
      * <li>
@@ -727,11 +767,31 @@ public class StartRestoreJobRequest extends com.amazonaws.AmazonWebServiceReques
      * <code>Storage Gateway</code> for Storage Gateway
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>S3</code> for Amazon S3
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>VirtualMachine</code> for virtual machines
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param resourceType
      *        Starts a job to restore a recovery point for one of the following resources:</p>
      *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>Aurora</code> for Amazon Aurora
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>DocumentDB</code> for Amazon DocumentDB (with MongoDB compatibility)
+     *        </p>
+     *        </li>
      *        <li>
      *        <p>
      *        <code>DynamoDB</code> for Amazon DynamoDB
@@ -754,17 +814,32 @@ public class StartRestoreJobRequest extends com.amazonaws.AmazonWebServiceReques
      *        </li>
      *        <li>
      *        <p>
+     *        <code>FSx</code> for Amazon FSx
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>Neptune</code> for Amazon Neptune
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
      *        <code>RDS</code> for Amazon Relational Database Service
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>Aurora</code> for Amazon Aurora
+     *        <code>Storage Gateway</code> for Storage Gateway
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>Storage Gateway</code> for Storage Gateway
+     *        <code>S3</code> for Amazon S3
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>VirtualMachine</code> for virtual machines
      *        </p>
      *        </li>
      */
@@ -778,6 +853,16 @@ public class StartRestoreJobRequest extends com.amazonaws.AmazonWebServiceReques
      * Starts a job to restore a recovery point for one of the following resources:
      * </p>
      * <ul>
+     * <li>
+     * <p>
+     * <code>Aurora</code> for Amazon Aurora
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>DocumentDB</code> for Amazon DocumentDB (with MongoDB compatibility)
+     * </p>
+     * </li>
      * <li>
      * <p>
      * <code>DynamoDB</code> for Amazon DynamoDB
@@ -800,12 +885,17 @@ public class StartRestoreJobRequest extends com.amazonaws.AmazonWebServiceReques
      * </li>
      * <li>
      * <p>
-     * <code>RDS</code> for Amazon Relational Database Service
+     * <code>FSx</code> for Amazon FSx
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>Aurora</code> for Amazon Aurora
+     * <code>Neptune</code> for Amazon Neptune
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>RDS</code> for Amazon Relational Database Service
      * </p>
      * </li>
      * <li>
@@ -813,10 +903,30 @@ public class StartRestoreJobRequest extends com.amazonaws.AmazonWebServiceReques
      * <code>Storage Gateway</code> for Storage Gateway
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>S3</code> for Amazon S3
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>VirtualMachine</code> for virtual machines
+     * </p>
+     * </li>
      * </ul>
      * 
      * @return Starts a job to restore a recovery point for one of the following resources:</p>
      *         <ul>
+     *         <li>
+     *         <p>
+     *         <code>Aurora</code> for Amazon Aurora
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>DocumentDB</code> for Amazon DocumentDB (with MongoDB compatibility)
+     *         </p>
+     *         </li>
      *         <li>
      *         <p>
      *         <code>DynamoDB</code> for Amazon DynamoDB
@@ -839,17 +949,32 @@ public class StartRestoreJobRequest extends com.amazonaws.AmazonWebServiceReques
      *         </li>
      *         <li>
      *         <p>
+     *         <code>FSx</code> for Amazon FSx
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>Neptune</code> for Amazon Neptune
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
      *         <code>RDS</code> for Amazon Relational Database Service
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>Aurora</code> for Amazon Aurora
+     *         <code>Storage Gateway</code> for Storage Gateway
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>Storage Gateway</code> for Storage Gateway
+     *         <code>S3</code> for Amazon S3
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>VirtualMachine</code> for virtual machines
      *         </p>
      *         </li>
      */
@@ -863,6 +988,16 @@ public class StartRestoreJobRequest extends com.amazonaws.AmazonWebServiceReques
      * Starts a job to restore a recovery point for one of the following resources:
      * </p>
      * <ul>
+     * <li>
+     * <p>
+     * <code>Aurora</code> for Amazon Aurora
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>DocumentDB</code> for Amazon DocumentDB (with MongoDB compatibility)
+     * </p>
+     * </li>
      * <li>
      * <p>
      * <code>DynamoDB</code> for Amazon DynamoDB
@@ -885,12 +1020,17 @@ public class StartRestoreJobRequest extends com.amazonaws.AmazonWebServiceReques
      * </li>
      * <li>
      * <p>
-     * <code>RDS</code> for Amazon Relational Database Service
+     * <code>FSx</code> for Amazon FSx
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>Aurora</code> for Amazon Aurora
+     * <code>Neptune</code> for Amazon Neptune
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>RDS</code> for Amazon Relational Database Service
      * </p>
      * </li>
      * <li>
@@ -898,11 +1038,31 @@ public class StartRestoreJobRequest extends com.amazonaws.AmazonWebServiceReques
      * <code>Storage Gateway</code> for Storage Gateway
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>S3</code> for Amazon S3
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>VirtualMachine</code> for virtual machines
+     * </p>
+     * </li>
      * </ul>
      * 
      * @param resourceType
      *        Starts a job to restore a recovery point for one of the following resources:</p>
      *        <ul>
+     *        <li>
+     *        <p>
+     *        <code>Aurora</code> for Amazon Aurora
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>DocumentDB</code> for Amazon DocumentDB (with MongoDB compatibility)
+     *        </p>
+     *        </li>
      *        <li>
      *        <p>
      *        <code>DynamoDB</code> for Amazon DynamoDB
@@ -925,17 +1085,32 @@ public class StartRestoreJobRequest extends com.amazonaws.AmazonWebServiceReques
      *        </li>
      *        <li>
      *        <p>
+     *        <code>FSx</code> for Amazon FSx
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>Neptune</code> for Amazon Neptune
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
      *        <code>RDS</code> for Amazon Relational Database Service
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>Aurora</code> for Amazon Aurora
+     *        <code>Storage Gateway</code> for Storage Gateway
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>Storage Gateway</code> for Storage Gateway
+     *        <code>S3</code> for Amazon S3
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>VirtualMachine</code> for virtual machines
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

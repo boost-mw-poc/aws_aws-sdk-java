@@ -33,6 +33,8 @@ public class ListExperimentsRequestMarshaller {
             .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("nextToken").build();
     private static final MarshallingInfo<String> PROJECT_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PATH)
             .marshallLocationName("project").build();
+    private static final MarshallingInfo<String> STATUS_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("status").build();
 
     private static final ListExperimentsRequestMarshaller instance = new ListExperimentsRequestMarshaller();
 
@@ -53,6 +55,7 @@ public class ListExperimentsRequestMarshaller {
             protocolMarshaller.marshall(listExperimentsRequest.getMaxResults(), MAXRESULTS_BINDING);
             protocolMarshaller.marshall(listExperimentsRequest.getNextToken(), NEXTTOKEN_BINDING);
             protocolMarshaller.marshall(listExperimentsRequest.getProject(), PROJECT_BINDING);
+            protocolMarshaller.marshall(listExperimentsRequest.getStatus(), STATUS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

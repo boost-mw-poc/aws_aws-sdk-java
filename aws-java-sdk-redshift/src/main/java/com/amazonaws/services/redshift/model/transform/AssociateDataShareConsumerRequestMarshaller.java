@@ -53,6 +53,10 @@ public class AssociateDataShareConsumerRequestMarshaller implements Marshaller<R
             request.addParameter("ConsumerArn", StringUtils.fromString(associateDataShareConsumerRequest.getConsumerArn()));
         }
 
+        if (associateDataShareConsumerRequest.getConsumerRegion() != null) {
+            request.addParameter("ConsumerRegion", StringUtils.fromString(associateDataShareConsumerRequest.getConsumerRegion()));
+        }
+
         return request;
     }
 

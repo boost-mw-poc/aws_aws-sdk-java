@@ -44,6 +44,13 @@ public class ListExperimentsRequest extends com.amazonaws.AmazonWebServiceReques
      * </p>
      */
     private String project;
+    /**
+     * <p>
+     * Use this optional parameter to limit the returned results to only the experiments with the status that you
+     * specify here.
+     * </p>
+     */
+    private String status;
 
     /**
      * <p>
@@ -172,6 +179,73 @@ public class ListExperimentsRequest extends com.amazonaws.AmazonWebServiceReques
     }
 
     /**
+     * <p>
+     * Use this optional parameter to limit the returned results to only the experiments with the status that you
+     * specify here.
+     * </p>
+     * 
+     * @param status
+     *        Use this optional parameter to limit the returned results to only the experiments with the status that you
+     *        specify here.
+     * @see ExperimentStatus
+     */
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    /**
+     * <p>
+     * Use this optional parameter to limit the returned results to only the experiments with the status that you
+     * specify here.
+     * </p>
+     * 
+     * @return Use this optional parameter to limit the returned results to only the experiments with the status that
+     *         you specify here.
+     * @see ExperimentStatus
+     */
+
+    public String getStatus() {
+        return this.status;
+    }
+
+    /**
+     * <p>
+     * Use this optional parameter to limit the returned results to only the experiments with the status that you
+     * specify here.
+     * </p>
+     * 
+     * @param status
+     *        Use this optional parameter to limit the returned results to only the experiments with the status that you
+     *        specify here.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ExperimentStatus
+     */
+
+    public ListExperimentsRequest withStatus(String status) {
+        setStatus(status);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Use this optional parameter to limit the returned results to only the experiments with the status that you
+     * specify here.
+     * </p>
+     * 
+     * @param status
+     *        Use this optional parameter to limit the returned results to only the experiments with the status that you
+     *        specify here.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see ExperimentStatus
+     */
+
+    public ListExperimentsRequest withStatus(ExperimentStatus status) {
+        this.status = status.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -188,7 +262,9 @@ public class ListExperimentsRequest extends com.amazonaws.AmazonWebServiceReques
         if (getNextToken() != null)
             sb.append("NextToken: ").append(getNextToken()).append(",");
         if (getProject() != null)
-            sb.append("Project: ").append(getProject());
+            sb.append("Project: ").append(getProject()).append(",");
+        if (getStatus() != null)
+            sb.append("Status: ").append(getStatus());
         sb.append("}");
         return sb.toString();
     }
@@ -215,6 +291,10 @@ public class ListExperimentsRequest extends com.amazonaws.AmazonWebServiceReques
             return false;
         if (other.getProject() != null && other.getProject().equals(this.getProject()) == false)
             return false;
+        if (other.getStatus() == null ^ this.getStatus() == null)
+            return false;
+        if (other.getStatus() != null && other.getStatus().equals(this.getStatus()) == false)
+            return false;
         return true;
     }
 
@@ -226,6 +306,7 @@ public class ListExperimentsRequest extends com.amazonaws.AmazonWebServiceReques
         hashCode = prime * hashCode + ((getMaxResults() == null) ? 0 : getMaxResults().hashCode());
         hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
         hashCode = prime * hashCode + ((getProject() == null) ? 0 : getProject().hashCode());
+        hashCode = prime * hashCode + ((getStatus() == null) ? 0 : getStatus().hashCode());
         return hashCode;
     }
 

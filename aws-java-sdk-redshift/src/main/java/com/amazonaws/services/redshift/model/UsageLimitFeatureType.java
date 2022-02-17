@@ -21,7 +21,8 @@ import javax.annotation.Generated;
 public enum UsageLimitFeatureType {
 
     Spectrum("spectrum"),
-    ConcurrencyScaling("concurrency-scaling");
+    ConcurrencyScaling("concurrency-scaling"),
+    CrossRegionDatasharing("cross-region-datasharing");
 
     private String value;
 

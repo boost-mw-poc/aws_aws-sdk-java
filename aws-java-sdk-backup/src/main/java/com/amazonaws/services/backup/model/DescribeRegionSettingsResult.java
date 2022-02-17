@@ -31,9 +31,22 @@ public class DescribeRegionSettingsResult extends com.amazonaws.AmazonWebService
     private java.util.Map<String, Boolean> resourceTypeOptInPreference;
     /**
      * <p>
-     * Returns whether a DynamoDB recovery point was taken using <a
-     * href="https://docs.aws.amazon.com/aws-backup/latest/devguide/advanced-ddb-backup.html"> Backup's advanced
-     * DynamoDB backup features</a>.
+     * Returns whether Backup fully manages the backups for a resource type.
+     * </p>
+     * <p>
+     * For the benefits of full Backup management, see <a
+     * href="https://docs.aws.amazon.com/aws-backup/latest/devguide/whatisbackup.html#full-management"> Full Backup
+     * management</a>.
+     * </p>
+     * <p>
+     * For a list of resource types and whether each supports full Backup management, see the <a
+     * href="https://docs.aws.amazon.com/aws-backup/latest/devguide/whatisbackup.html#features-by-resource"> Feature
+     * availability by resource</a> table.
+     * </p>
+     * <p>
+     * If <code>"DynamoDB":false</code>, you can enable full Backup management for DynamoDB backup by enabling <a href=
+     * "https://docs.aws.amazon.com/aws-backup/latest/devguide/advanced-ddb-backup.html#advanced-ddb-backup-enable-cli">
+     * Backup's advanced DynamoDB backup features</a>.
      * </p>
      */
     private java.util.Map<String, Boolean> resourceTypeManagementPreference;
@@ -108,14 +121,40 @@ public class DescribeRegionSettingsResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * Returns whether a DynamoDB recovery point was taken using <a
-     * href="https://docs.aws.amazon.com/aws-backup/latest/devguide/advanced-ddb-backup.html"> Backup's advanced
-     * DynamoDB backup features</a>.
+     * Returns whether Backup fully manages the backups for a resource type.
+     * </p>
+     * <p>
+     * For the benefits of full Backup management, see <a
+     * href="https://docs.aws.amazon.com/aws-backup/latest/devguide/whatisbackup.html#full-management"> Full Backup
+     * management</a>.
+     * </p>
+     * <p>
+     * For a list of resource types and whether each supports full Backup management, see the <a
+     * href="https://docs.aws.amazon.com/aws-backup/latest/devguide/whatisbackup.html#features-by-resource"> Feature
+     * availability by resource</a> table.
+     * </p>
+     * <p>
+     * If <code>"DynamoDB":false</code>, you can enable full Backup management for DynamoDB backup by enabling <a href=
+     * "https://docs.aws.amazon.com/aws-backup/latest/devguide/advanced-ddb-backup.html#advanced-ddb-backup-enable-cli">
+     * Backup's advanced DynamoDB backup features</a>.
      * </p>
      * 
-     * @return Returns whether a DynamoDB recovery point was taken using <a
-     *         href="https://docs.aws.amazon.com/aws-backup/latest/devguide/advanced-ddb-backup.html"> Backup's advanced
-     *         DynamoDB backup features</a>.
+     * @return Returns whether Backup fully manages the backups for a resource type.</p>
+     *         <p>
+     *         For the benefits of full Backup management, see <a
+     *         href="https://docs.aws.amazon.com/aws-backup/latest/devguide/whatisbackup.html#full-management"> Full
+     *         Backup management</a>.
+     *         </p>
+     *         <p>
+     *         For a list of resource types and whether each supports full Backup management, see the <a
+     *         href="https://docs.aws.amazon.com/aws-backup/latest/devguide/whatisbackup.html#features-by-resource">
+     *         Feature availability by resource</a> table.
+     *         </p>
+     *         <p>
+     *         If <code>"DynamoDB":false</code>, you can enable full Backup management for DynamoDB backup by enabling
+     *         <a href=
+     *         "https://docs.aws.amazon.com/aws-backup/latest/devguide/advanced-ddb-backup.html#advanced-ddb-backup-enable-cli"
+     *         > Backup's advanced DynamoDB backup features</a>.
      */
 
     public java.util.Map<String, Boolean> getResourceTypeManagementPreference() {
@@ -124,15 +163,41 @@ public class DescribeRegionSettingsResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * Returns whether a DynamoDB recovery point was taken using <a
-     * href="https://docs.aws.amazon.com/aws-backup/latest/devguide/advanced-ddb-backup.html"> Backup's advanced
-     * DynamoDB backup features</a>.
+     * Returns whether Backup fully manages the backups for a resource type.
+     * </p>
+     * <p>
+     * For the benefits of full Backup management, see <a
+     * href="https://docs.aws.amazon.com/aws-backup/latest/devguide/whatisbackup.html#full-management"> Full Backup
+     * management</a>.
+     * </p>
+     * <p>
+     * For a list of resource types and whether each supports full Backup management, see the <a
+     * href="https://docs.aws.amazon.com/aws-backup/latest/devguide/whatisbackup.html#features-by-resource"> Feature
+     * availability by resource</a> table.
+     * </p>
+     * <p>
+     * If <code>"DynamoDB":false</code>, you can enable full Backup management for DynamoDB backup by enabling <a href=
+     * "https://docs.aws.amazon.com/aws-backup/latest/devguide/advanced-ddb-backup.html#advanced-ddb-backup-enable-cli">
+     * Backup's advanced DynamoDB backup features</a>.
      * </p>
      * 
      * @param resourceTypeManagementPreference
-     *        Returns whether a DynamoDB recovery point was taken using <a
-     *        href="https://docs.aws.amazon.com/aws-backup/latest/devguide/advanced-ddb-backup.html"> Backup's advanced
-     *        DynamoDB backup features</a>.
+     *        Returns whether Backup fully manages the backups for a resource type.</p>
+     *        <p>
+     *        For the benefits of full Backup management, see <a
+     *        href="https://docs.aws.amazon.com/aws-backup/latest/devguide/whatisbackup.html#full-management"> Full
+     *        Backup management</a>.
+     *        </p>
+     *        <p>
+     *        For a list of resource types and whether each supports full Backup management, see the <a
+     *        href="https://docs.aws.amazon.com/aws-backup/latest/devguide/whatisbackup.html#features-by-resource">
+     *        Feature availability by resource</a> table.
+     *        </p>
+     *        <p>
+     *        If <code>"DynamoDB":false</code>, you can enable full Backup management for DynamoDB backup by enabling <a
+     *        href=
+     *        "https://docs.aws.amazon.com/aws-backup/latest/devguide/advanced-ddb-backup.html#advanced-ddb-backup-enable-cli"
+     *        > Backup's advanced DynamoDB backup features</a>.
      */
 
     public void setResourceTypeManagementPreference(java.util.Map<String, Boolean> resourceTypeManagementPreference) {
@@ -141,15 +206,41 @@ public class DescribeRegionSettingsResult extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * Returns whether a DynamoDB recovery point was taken using <a
-     * href="https://docs.aws.amazon.com/aws-backup/latest/devguide/advanced-ddb-backup.html"> Backup's advanced
-     * DynamoDB backup features</a>.
+     * Returns whether Backup fully manages the backups for a resource type.
+     * </p>
+     * <p>
+     * For the benefits of full Backup management, see <a
+     * href="https://docs.aws.amazon.com/aws-backup/latest/devguide/whatisbackup.html#full-management"> Full Backup
+     * management</a>.
+     * </p>
+     * <p>
+     * For a list of resource types and whether each supports full Backup management, see the <a
+     * href="https://docs.aws.amazon.com/aws-backup/latest/devguide/whatisbackup.html#features-by-resource"> Feature
+     * availability by resource</a> table.
+     * </p>
+     * <p>
+     * If <code>"DynamoDB":false</code>, you can enable full Backup management for DynamoDB backup by enabling <a href=
+     * "https://docs.aws.amazon.com/aws-backup/latest/devguide/advanced-ddb-backup.html#advanced-ddb-backup-enable-cli">
+     * Backup's advanced DynamoDB backup features</a>.
      * </p>
      * 
      * @param resourceTypeManagementPreference
-     *        Returns whether a DynamoDB recovery point was taken using <a
-     *        href="https://docs.aws.amazon.com/aws-backup/latest/devguide/advanced-ddb-backup.html"> Backup's advanced
-     *        DynamoDB backup features</a>.
+     *        Returns whether Backup fully manages the backups for a resource type.</p>
+     *        <p>
+     *        For the benefits of full Backup management, see <a
+     *        href="https://docs.aws.amazon.com/aws-backup/latest/devguide/whatisbackup.html#full-management"> Full
+     *        Backup management</a>.
+     *        </p>
+     *        <p>
+     *        For a list of resource types and whether each supports full Backup management, see the <a
+     *        href="https://docs.aws.amazon.com/aws-backup/latest/devguide/whatisbackup.html#features-by-resource">
+     *        Feature availability by resource</a> table.
+     *        </p>
+     *        <p>
+     *        If <code>"DynamoDB":false</code>, you can enable full Backup management for DynamoDB backup by enabling <a
+     *        href=
+     *        "https://docs.aws.amazon.com/aws-backup/latest/devguide/advanced-ddb-backup.html#advanced-ddb-backup-enable-cli"
+     *        > Backup's advanced DynamoDB backup features</a>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

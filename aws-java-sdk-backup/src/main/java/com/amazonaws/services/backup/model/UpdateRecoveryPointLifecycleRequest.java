@@ -47,8 +47,8 @@ public class UpdateRecoveryPointLifecycleRequest extends com.amazonaws.AmazonWeb
      * </p>
      * <p>
      * Backups transitioned to cold storage must be stored in cold storage for a minimum of 90 days. Therefore, the
-     * “expire after days” setting must be 90 days greater than the “transition to cold after days” setting. The
-     * “transition to cold after days” setting cannot be changed after a backup has been transitioned to cold.
+     * “retention” setting must be 90 days greater than the “transition to cold after days” setting. The “transition to
+     * cold after days” setting cannot be changed after a backup has been transitioned to cold.
      * </p>
      */
     private Lifecycle lifecycle;
@@ -158,8 +158,8 @@ public class UpdateRecoveryPointLifecycleRequest extends com.amazonaws.AmazonWeb
      * </p>
      * <p>
      * Backups transitioned to cold storage must be stored in cold storage for a minimum of 90 days. Therefore, the
-     * “expire after days” setting must be 90 days greater than the “transition to cold after days” setting. The
-     * “transition to cold after days” setting cannot be changed after a backup has been transitioned to cold.
+     * “retention” setting must be 90 days greater than the “transition to cold after days” setting. The “transition to
+     * cold after days” setting cannot be changed after a backup has been transitioned to cold.
      * </p>
      * 
      * @param lifecycle
@@ -167,9 +167,8 @@ public class UpdateRecoveryPointLifecycleRequest extends com.amazonaws.AmazonWeb
      *        Backup transitions and expires backups automatically according to the lifecycle that you define. </p>
      *        <p>
      *        Backups transitioned to cold storage must be stored in cold storage for a minimum of 90 days. Therefore,
-     *        the “expire after days” setting must be 90 days greater than the “transition to cold after days” setting.
-     *        The “transition to cold after days” setting cannot be changed after a backup has been transitioned to
-     *        cold.
+     *        the “retention” setting must be 90 days greater than the “transition to cold after days” setting. The
+     *        “transition to cold after days” setting cannot be changed after a backup has been transitioned to cold.
      */
 
     public void setLifecycle(Lifecycle lifecycle) {
@@ -183,17 +182,16 @@ public class UpdateRecoveryPointLifecycleRequest extends com.amazonaws.AmazonWeb
      * </p>
      * <p>
      * Backups transitioned to cold storage must be stored in cold storage for a minimum of 90 days. Therefore, the
-     * “expire after days” setting must be 90 days greater than the “transition to cold after days” setting. The
-     * “transition to cold after days” setting cannot be changed after a backup has been transitioned to cold.
+     * “retention” setting must be 90 days greater than the “transition to cold after days” setting. The “transition to
+     * cold after days” setting cannot be changed after a backup has been transitioned to cold.
      * </p>
      * 
      * @return The lifecycle defines when a protected resource is transitioned to cold storage and when it expires.
      *         Backup transitions and expires backups automatically according to the lifecycle that you define. </p>
      *         <p>
      *         Backups transitioned to cold storage must be stored in cold storage for a minimum of 90 days. Therefore,
-     *         the “expire after days” setting must be 90 days greater than the “transition to cold after days” setting.
-     *         The “transition to cold after days” setting cannot be changed after a backup has been transitioned to
-     *         cold.
+     *         the “retention” setting must be 90 days greater than the “transition to cold after days” setting. The
+     *         “transition to cold after days” setting cannot be changed after a backup has been transitioned to cold.
      */
 
     public Lifecycle getLifecycle() {
@@ -207,8 +205,8 @@ public class UpdateRecoveryPointLifecycleRequest extends com.amazonaws.AmazonWeb
      * </p>
      * <p>
      * Backups transitioned to cold storage must be stored in cold storage for a minimum of 90 days. Therefore, the
-     * “expire after days” setting must be 90 days greater than the “transition to cold after days” setting. The
-     * “transition to cold after days” setting cannot be changed after a backup has been transitioned to cold.
+     * “retention” setting must be 90 days greater than the “transition to cold after days” setting. The “transition to
+     * cold after days” setting cannot be changed after a backup has been transitioned to cold.
      * </p>
      * 
      * @param lifecycle
@@ -216,9 +214,8 @@ public class UpdateRecoveryPointLifecycleRequest extends com.amazonaws.AmazonWeb
      *        Backup transitions and expires backups automatically according to the lifecycle that you define. </p>
      *        <p>
      *        Backups transitioned to cold storage must be stored in cold storage for a minimum of 90 days. Therefore,
-     *        the “expire after days” setting must be 90 days greater than the “transition to cold after days” setting.
-     *        The “transition to cold after days” setting cannot be changed after a backup has been transitioned to
-     *        cold.
+     *        the “retention” setting must be 90 days greater than the “transition to cold after days” setting. The
+     *        “transition to cold after days” setting cannot be changed after a backup has been transitioned to cold.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

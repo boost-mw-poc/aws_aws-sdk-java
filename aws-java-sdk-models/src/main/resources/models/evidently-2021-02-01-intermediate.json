@@ -20,7 +20,7 @@
     "customServiceMetadata" : null,
     "customServiceNameForRequest" : null,
     "customSignerProvider" : null,
-    "deprecatedSuppressions" : [ "ClientConstructors", "EnumSetterOverload", "ClientMutationMethods" ],
+    "deprecatedSuppressions" : [ "EnumSetterOverload", "ClientMutationMethods", "ClientConstructors" ],
     "emitLegacyEnumSetterFor" : null,
     "operationModifiers" : null,
     "operationsWithResponseStreamContentLengthValidation" : null,
@@ -360,6 +360,10 @@
       "endpointOperation" : false,
       "endpointTrait" : null,
       "exceptions" : [ {
+        "exceptionName" : "ValidationException",
+        "documentation" : "<p>The value of a parameter in the request caused an error.</p>",
+        "httpStatusCode" : 400
+      }, {
         "exceptionName" : "InternalServerException",
         "documentation" : "<p>Unexpected error while processing the request. Retry the request.</p>",
         "httpStatusCode" : 500
@@ -630,6 +634,10 @@
         "documentation" : "<p>The request was denied because of request throttling. Retry the request.</p>",
         "httpStatusCode" : 429
       }, {
+        "exceptionName" : "ValidationException",
+        "documentation" : "<p>The value of a parameter in the request caused an error.</p>",
+        "httpStatusCode" : 400
+      }, {
         "exceptionName" : "ResourceNotFoundException",
         "documentation" : "<p>The request references a resource that does not exist.</p>",
         "httpStatusCode" : 404
@@ -777,6 +785,10 @@
         "documentation" : "<p>The request was denied because of request throttling. Retry the request.</p>",
         "httpStatusCode" : 429
       }, {
+        "exceptionName" : "ValidationException",
+        "documentation" : "<p>The value of a parameter in the request caused an error.</p>",
+        "httpStatusCode" : 400
+      }, {
         "exceptionName" : "ResourceNotFoundException",
         "documentation" : "<p>The request references a resource that does not exist.</p>",
         "httpStatusCode" : 404
@@ -874,6 +886,10 @@
         "exceptionName" : "ResourceNotFoundException",
         "documentation" : "<p>The request references a resource that does not exist.</p>",
         "httpStatusCode" : 404
+      }, {
+        "exceptionName" : "AccessDeniedException",
+        "documentation" : "<p>You do not have sufficient permissions to perform this action. </p>",
+        "httpStatusCode" : 403
       } ],
       "hasBlobMemberAsPayload" : false,
       "hostPrefixProcessor" : null,
@@ -1210,6 +1226,10 @@
         "exceptionName" : "ValidationException",
         "documentation" : "<p>The value of a parameter in the request caused an error.</p>",
         "httpStatusCode" : 400
+      }, {
+        "exceptionName" : "ConflictException",
+        "documentation" : "<p>A resource was in an inconsistent state during an update or a deletion.</p>",
+        "httpStatusCode" : 409
       }, {
         "exceptionName" : "ServiceQuotaExceededException",
         "documentation" : "<p>The request would cause a service quota to be exceeded.</p>",
@@ -34118,6 +34138,75 @@
           "variableSetterType" : "String"
         },
         "xmlNameSpaceUri" : null
+      }, {
+        "c2jName" : "status",
+        "c2jShape" : "ExperimentStatus",
+        "deprecated" : false,
+        "documentation" : "<p>Use this optional parameter to limit the returned results to only the experiments with the status that you specify here.</p>",
+        "endpointDiscoveryId" : false,
+        "enumType" : "ExperimentStatus",
+        "fluentSetterDocumentation" : "/**<p>Use this optional parameter to limit the returned results to only the experiments with the status that you specify here.</p>\n@param status Use this optional parameter to limit the returned results to only the experiments with the status that you specify here.\n@return Returns a reference to this object so that method calls can be chained together.\n@see ExperimentStatus*/",
+        "fluentSetterMethodName" : "withStatus",
+        "getterDocumentation" : "/**<p>Use this optional parameter to limit the returned results to only the experiments with the status that you specify here.</p>\n@return Use this optional parameter to limit the returned results to only the experiments with the status that you specify here.\n@see ExperimentStatus*/",
+        "getterMethodName" : "getStatus",
+        "getterModel" : {
+          "returnType" : "String",
+          "documentation" : null
+        },
+        "http" : {
+          "additionalMarshallingPath" : null,
+          "additionalUnmarshallingPath" : null,
+          "flattened" : false,
+          "greedy" : false,
+          "header" : false,
+          "isPayload" : false,
+          "isStreaming" : false,
+          "location" : "querystring",
+          "marshallLocation" : "QUERY_PARAM",
+          "marshallLocationName" : "status",
+          "queryString" : true,
+          "requiresLength" : false,
+          "statusCode" : false,
+          "unmarshallLocationName" : "status",
+          "uri" : false
+        },
+        "idempotencyToken" : false,
+        "isBinary" : false,
+        "jsonValue" : false,
+        "list" : false,
+        "listModel" : null,
+        "map" : false,
+        "mapModel" : null,
+        "marshallingTargetClass" : "String",
+        "marshallingType" : "STRING",
+        "name" : "Status",
+        "sensitive" : false,
+        "setterDocumentation" : "/**<p>Use this optional parameter to limit the returned results to only the experiments with the status that you specify here.</p>\n@param status Use this optional parameter to limit the returned results to only the experiments with the status that you specify here.\n@see ExperimentStatus*/",
+        "setterMethodName" : "setStatus",
+        "setterModel" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "String",
+          "variableName" : "status",
+          "variableType" : "String",
+          "documentation" : "",
+          "simpleType" : "String",
+          "variableSetterType" : "String"
+        },
+        "shouldEmitLegacyEnumSetter" : false,
+        "shouldFullyQualify" : false,
+        "simple" : true,
+        "unmarshallingType" : null,
+        "varargSetterDocumentation" : "/**<p>Use this optional parameter to limit the returned results to only the experiments with the status that you specify here.</p>\n@param status Use this optional parameter to limit the returned results to only the experiments with the status that you specify here.\n@return Returns a reference to this object so that method calls can be chained together.\n@see ExperimentStatus*/",
+        "variable" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "String",
+          "variableName" : "status",
+          "variableType" : "String",
+          "documentation" : "<p>Use this optional parameter to limit the returned results to only the experiments with the status that you specify here.</p>",
+          "simpleType" : "String",
+          "variableSetterType" : "String"
+        },
+        "xmlNameSpaceUri" : null
       } ],
       "membersAsMap" : {
         "MaxResults" : {
@@ -34325,6 +34414,76 @@
             "variableName" : "project",
             "variableType" : "String",
             "documentation" : "<p>The name or ARN of the project to return the experiment list from.</p>",
+            "simpleType" : "String",
+            "variableSetterType" : "String"
+          },
+          "xmlNameSpaceUri" : null
+        },
+        "Status" : {
+          "c2jName" : "status",
+          "c2jShape" : "ExperimentStatus",
+          "deprecated" : false,
+          "documentation" : "<p>Use this optional parameter to limit the returned results to only the experiments with the status that you specify here.</p>",
+          "endpointDiscoveryId" : false,
+          "enumType" : "ExperimentStatus",
+          "fluentSetterDocumentation" : "/**<p>Use this optional parameter to limit the returned results to only the experiments with the status that you specify here.</p>\n@param status Use this optional parameter to limit the returned results to only the experiments with the status that you specify here.\n@return Returns a reference to this object so that method calls can be chained together.\n@see ExperimentStatus*/",
+          "fluentSetterMethodName" : "withStatus",
+          "getterDocumentation" : "/**<p>Use this optional parameter to limit the returned results to only the experiments with the status that you specify here.</p>\n@return Use this optional parameter to limit the returned results to only the experiments with the status that you specify here.\n@see ExperimentStatus*/",
+          "getterMethodName" : "getStatus",
+          "getterModel" : {
+            "returnType" : "String",
+            "documentation" : null
+          },
+          "http" : {
+            "additionalMarshallingPath" : null,
+            "additionalUnmarshallingPath" : null,
+            "flattened" : false,
+            "greedy" : false,
+            "header" : false,
+            "isPayload" : false,
+            "isStreaming" : false,
+            "location" : "querystring",
+            "marshallLocation" : "QUERY_PARAM",
+            "marshallLocationName" : "status",
+            "queryString" : true,
+            "requiresLength" : false,
+            "statusCode" : false,
+            "unmarshallLocationName" : "status",
+            "uri" : false
+          },
+          "idempotencyToken" : false,
+          "isBinary" : false,
+          "jsonValue" : false,
+          "list" : false,
+          "listModel" : null,
+          "map" : false,
+          "mapModel" : null,
+          "marshallingTargetClass" : "String",
+          "marshallingType" : "STRING",
+          "name" : "Status",
+          "sensitive" : false,
+          "setterDocumentation" : "/**<p>Use this optional parameter to limit the returned results to only the experiments with the status that you specify here.</p>\n@param status Use this optional parameter to limit the returned results to only the experiments with the status that you specify here.\n@see ExperimentStatus*/",
+          "setterMethodName" : "setStatus",
+          "setterModel" : {
+            "timestampFormat" : null,
+            "variableDeclarationType" : "String",
+            "variableName" : "status",
+            "variableType" : "String",
+            "documentation" : "",
+            "simpleType" : "String",
+            "variableSetterType" : "String"
+          },
+          "shouldEmitLegacyEnumSetter" : false,
+          "shouldFullyQualify" : false,
+          "simple" : true,
+          "unmarshallingType" : null,
+          "varargSetterDocumentation" : "/**<p>Use this optional parameter to limit the returned results to only the experiments with the status that you specify here.</p>\n@param status Use this optional parameter to limit the returned results to only the experiments with the status that you specify here.\n@return Returns a reference to this object so that method calls can be chained together.\n@see ExperimentStatus*/",
+          "variable" : {
+            "timestampFormat" : null,
+            "variableDeclarationType" : "String",
+            "variableName" : "status",
+            "variableType" : "String",
+            "documentation" : "<p>Use this optional parameter to limit the returned results to only the experiments with the status that you specify here.</p>",
             "simpleType" : "String",
             "variableSetterType" : "String"
           },
@@ -36032,6 +36191,75 @@
           "variableSetterType" : "String"
         },
         "xmlNameSpaceUri" : null
+      }, {
+        "c2jName" : "status",
+        "c2jShape" : "LaunchStatus",
+        "deprecated" : false,
+        "documentation" : "<p>Use this optional parameter to limit the returned results to only the launches with the status that you specify here.</p>",
+        "endpointDiscoveryId" : false,
+        "enumType" : "LaunchStatus",
+        "fluentSetterDocumentation" : "/**<p>Use this optional parameter to limit the returned results to only the launches with the status that you specify here.</p>\n@param status Use this optional parameter to limit the returned results to only the launches with the status that you specify here.\n@return Returns a reference to this object so that method calls can be chained together.\n@see LaunchStatus*/",
+        "fluentSetterMethodName" : "withStatus",
+        "getterDocumentation" : "/**<p>Use this optional parameter to limit the returned results to only the launches with the status that you specify here.</p>\n@return Use this optional parameter to limit the returned results to only the launches with the status that you specify here.\n@see LaunchStatus*/",
+        "getterMethodName" : "getStatus",
+        "getterModel" : {
+          "returnType" : "String",
+          "documentation" : null
+        },
+        "http" : {
+          "additionalMarshallingPath" : null,
+          "additionalUnmarshallingPath" : null,
+          "flattened" : false,
+          "greedy" : false,
+          "header" : false,
+          "isPayload" : false,
+          "isStreaming" : false,
+          "location" : "querystring",
+          "marshallLocation" : "QUERY_PARAM",
+          "marshallLocationName" : "status",
+          "queryString" : true,
+          "requiresLength" : false,
+          "statusCode" : false,
+          "unmarshallLocationName" : "status",
+          "uri" : false
+        },
+        "idempotencyToken" : false,
+        "isBinary" : false,
+        "jsonValue" : false,
+        "list" : false,
+        "listModel" : null,
+        "map" : false,
+        "mapModel" : null,
+        "marshallingTargetClass" : "String",
+        "marshallingType" : "STRING",
+        "name" : "Status",
+        "sensitive" : false,
+        "setterDocumentation" : "/**<p>Use this optional parameter to limit the returned results to only the launches with the status that you specify here.</p>\n@param status Use this optional parameter to limit the returned results to only the launches with the status that you specify here.\n@see LaunchStatus*/",
+        "setterMethodName" : "setStatus",
+        "setterModel" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "String",
+          "variableName" : "status",
+          "variableType" : "String",
+          "documentation" : "",
+          "simpleType" : "String",
+          "variableSetterType" : "String"
+        },
+        "shouldEmitLegacyEnumSetter" : false,
+        "shouldFullyQualify" : false,
+        "simple" : true,
+        "unmarshallingType" : null,
+        "varargSetterDocumentation" : "/**<p>Use this optional parameter to limit the returned results to only the launches with the status that you specify here.</p>\n@param status Use this optional parameter to limit the returned results to only the launches with the status that you specify here.\n@return Returns a reference to this object so that method calls can be chained together.\n@see LaunchStatus*/",
+        "variable" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "String",
+          "variableName" : "status",
+          "variableType" : "String",
+          "documentation" : "<p>Use this optional parameter to limit the returned results to only the launches with the status that you specify here.</p>",
+          "simpleType" : "String",
+          "variableSetterType" : "String"
+        },
+        "xmlNameSpaceUri" : null
       } ],
       "membersAsMap" : {
         "MaxResults" : {
@@ -36239,6 +36467,76 @@
             "variableName" : "project",
             "variableType" : "String",
             "documentation" : "<p>The name or ARN of the project to return the launch list from.</p>",
+            "simpleType" : "String",
+            "variableSetterType" : "String"
+          },
+          "xmlNameSpaceUri" : null
+        },
+        "Status" : {
+          "c2jName" : "status",
+          "c2jShape" : "LaunchStatus",
+          "deprecated" : false,
+          "documentation" : "<p>Use this optional parameter to limit the returned results to only the launches with the status that you specify here.</p>",
+          "endpointDiscoveryId" : false,
+          "enumType" : "LaunchStatus",
+          "fluentSetterDocumentation" : "/**<p>Use this optional parameter to limit the returned results to only the launches with the status that you specify here.</p>\n@param status Use this optional parameter to limit the returned results to only the launches with the status that you specify here.\n@return Returns a reference to this object so that method calls can be chained together.\n@see LaunchStatus*/",
+          "fluentSetterMethodName" : "withStatus",
+          "getterDocumentation" : "/**<p>Use this optional parameter to limit the returned results to only the launches with the status that you specify here.</p>\n@return Use this optional parameter to limit the returned results to only the launches with the status that you specify here.\n@see LaunchStatus*/",
+          "getterMethodName" : "getStatus",
+          "getterModel" : {
+            "returnType" : "String",
+            "documentation" : null
+          },
+          "http" : {
+            "additionalMarshallingPath" : null,
+            "additionalUnmarshallingPath" : null,
+            "flattened" : false,
+            "greedy" : false,
+            "header" : false,
+            "isPayload" : false,
+            "isStreaming" : false,
+            "location" : "querystring",
+            "marshallLocation" : "QUERY_PARAM",
+            "marshallLocationName" : "status",
+            "queryString" : true,
+            "requiresLength" : false,
+            "statusCode" : false,
+            "unmarshallLocationName" : "status",
+            "uri" : false
+          },
+          "idempotencyToken" : false,
+          "isBinary" : false,
+          "jsonValue" : false,
+          "list" : false,
+          "listModel" : null,
+          "map" : false,
+          "mapModel" : null,
+          "marshallingTargetClass" : "String",
+          "marshallingType" : "STRING",
+          "name" : "Status",
+          "sensitive" : false,
+          "setterDocumentation" : "/**<p>Use this optional parameter to limit the returned results to only the launches with the status that you specify here.</p>\n@param status Use this optional parameter to limit the returned results to only the launches with the status that you specify here.\n@see LaunchStatus*/",
+          "setterMethodName" : "setStatus",
+          "setterModel" : {
+            "timestampFormat" : null,
+            "variableDeclarationType" : "String",
+            "variableName" : "status",
+            "variableType" : "String",
+            "documentation" : "",
+            "simpleType" : "String",
+            "variableSetterType" : "String"
+          },
+          "shouldEmitLegacyEnumSetter" : false,
+          "shouldFullyQualify" : false,
+          "simple" : true,
+          "unmarshallingType" : null,
+          "varargSetterDocumentation" : "/**<p>Use this optional parameter to limit the returned results to only the launches with the status that you specify here.</p>\n@param status Use this optional parameter to limit the returned results to only the launches with the status that you specify here.\n@return Returns a reference to this object so that method calls can be chained together.\n@see LaunchStatus*/",
+          "variable" : {
+            "timestampFormat" : null,
+            "variableDeclarationType" : "String",
+            "variableName" : "status",
+            "variableType" : "String",
+            "documentation" : "<p>Use this optional parameter to limit the returned results to only the launches with the status that you specify here.</p>",
             "simpleType" : "String",
             "variableSetterType" : "String"
           },
@@ -39574,7 +39872,7 @@
       "packageName" : "com.amazonaws.services.cloudwatchevidently.model",
       "requestSignerAware" : false,
       "requestSignerClassFqcn" : null,
-      "required" : [ ],
+      "required" : [ "entityIdKey", "name", "valueKey" ],
       "shapeName" : "MetricDefinitionConfig",
       "signerAware" : false,
       "signerType" : null,

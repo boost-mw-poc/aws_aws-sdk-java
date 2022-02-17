@@ -198,8 +198,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </li>
      * <li>
      * <p>
-     * Can be any printable ASCII character (ASCII code 33 to 126) except ' (single quote), " (double quote), \, /, @,
-     * or space.
+     * Can be any printable ASCII character (ASCII code 33-126) except ' (single quote), " (double quote), \, /, or @.
      * </p>
      * </li>
      * </ul>
@@ -474,11 +473,12 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
     /**
      * <p>
      * A list of Identity and Access Management (IAM) roles that can be used by the cluster to access other Amazon Web
-     * Services services. You must supply the IAM roles in their Amazon Resource Name (ARN) format. You can supply up to
-     * 10 IAM roles in a single request.
+     * Services services. You must supply the IAM roles in their Amazon Resource Name (ARN) format.
      * </p>
      * <p>
-     * A cluster can have up to 10 IAM roles associated with it at any time.
+     * The maximum number of IAM roles that you can associate is subject to a quota. For more information, go to <a
+     * href="https://docs.aws.amazon.com/redshift/latest/mgmt/amazon-redshift-limits.html">Quotas and limits</a> in the
+     * <i>Amazon Redshift Cluster Management Guide</i>.
      * </p>
      */
     private com.amazonaws.internal.SdkInternalList<String> iamRoles;
@@ -1424,8 +1424,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </li>
      * <li>
      * <p>
-     * Can be any printable ASCII character (ASCII code 33 to 126) except ' (single quote), " (double quote), \, /, @,
-     * or space.
+     * Can be any printable ASCII character (ASCII code 33-126) except ' (single quote), " (double quote), \, /, or @.
      * </p>
      * </li>
      * </ul>
@@ -1458,8 +1457,8 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        </li>
      *        <li>
      *        <p>
-     *        Can be any printable ASCII character (ASCII code 33 to 126) except ' (single quote), " (double quote), \,
-     *        /, @, or space.
+     *        Can be any printable ASCII character (ASCII code 33-126) except ' (single quote), " (double quote), \, /,
+     *        or @.
      *        </p>
      *        </li>
      */
@@ -1498,8 +1497,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </li>
      * <li>
      * <p>
-     * Can be any printable ASCII character (ASCII code 33 to 126) except ' (single quote), " (double quote), \, /, @,
-     * or space.
+     * Can be any printable ASCII character (ASCII code 33-126) except ' (single quote), " (double quote), \, /, or @.
      * </p>
      * </li>
      * </ul>
@@ -1531,8 +1529,8 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      *         </li>
      *         <li>
      *         <p>
-     *         Can be any printable ASCII character (ASCII code 33 to 126) except ' (single quote), " (double quote), \,
-     *         /, @, or space.
+     *         Can be any printable ASCII character (ASCII code 33-126) except ' (single quote), " (double quote), \, /,
+     *         or @.
      *         </p>
      *         </li>
      */
@@ -1571,8 +1569,7 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * </li>
      * <li>
      * <p>
-     * Can be any printable ASCII character (ASCII code 33 to 126) except ' (single quote), " (double quote), \, /, @,
-     * or space.
+     * Can be any printable ASCII character (ASCII code 33-126) except ' (single quote), " (double quote), \, /, or @.
      * </p>
      * </li>
      * </ul>
@@ -1605,8 +1602,8 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        </li>
      *        <li>
      *        <p>
-     *        Can be any printable ASCII character (ASCII code 33 to 126) except ' (single quote), " (double quote), \,
-     *        /, @, or space.
+     *        Can be any printable ASCII character (ASCII code 33-126) except ' (single quote), " (double quote), \, /,
+     *        or @.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -3460,18 +3457,21 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
     /**
      * <p>
      * A list of Identity and Access Management (IAM) roles that can be used by the cluster to access other Amazon Web
-     * Services services. You must supply the IAM roles in their Amazon Resource Name (ARN) format. You can supply up to
-     * 10 IAM roles in a single request.
+     * Services services. You must supply the IAM roles in their Amazon Resource Name (ARN) format.
      * </p>
      * <p>
-     * A cluster can have up to 10 IAM roles associated with it at any time.
+     * The maximum number of IAM roles that you can associate is subject to a quota. For more information, go to <a
+     * href="https://docs.aws.amazon.com/redshift/latest/mgmt/amazon-redshift-limits.html">Quotas and limits</a> in the
+     * <i>Amazon Redshift Cluster Management Guide</i>.
      * </p>
      * 
      * @return A list of Identity and Access Management (IAM) roles that can be used by the cluster to access other
      *         Amazon Web Services services. You must supply the IAM roles in their Amazon Resource Name (ARN) format.
-     *         You can supply up to 10 IAM roles in a single request.</p>
+     *         </p>
      *         <p>
-     *         A cluster can have up to 10 IAM roles associated with it at any time.
+     *         The maximum number of IAM roles that you can associate is subject to a quota. For more information, go to
+     *         <a href="https://docs.aws.amazon.com/redshift/latest/mgmt/amazon-redshift-limits.html">Quotas and
+     *         limits</a> in the <i>Amazon Redshift Cluster Management Guide</i>.
      */
 
     public java.util.List<String> getIamRoles() {
@@ -3484,19 +3484,22 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
     /**
      * <p>
      * A list of Identity and Access Management (IAM) roles that can be used by the cluster to access other Amazon Web
-     * Services services. You must supply the IAM roles in their Amazon Resource Name (ARN) format. You can supply up to
-     * 10 IAM roles in a single request.
+     * Services services. You must supply the IAM roles in their Amazon Resource Name (ARN) format.
      * </p>
      * <p>
-     * A cluster can have up to 10 IAM roles associated with it at any time.
+     * The maximum number of IAM roles that you can associate is subject to a quota. For more information, go to <a
+     * href="https://docs.aws.amazon.com/redshift/latest/mgmt/amazon-redshift-limits.html">Quotas and limits</a> in the
+     * <i>Amazon Redshift Cluster Management Guide</i>.
      * </p>
      * 
      * @param iamRoles
      *        A list of Identity and Access Management (IAM) roles that can be used by the cluster to access other
      *        Amazon Web Services services. You must supply the IAM roles in their Amazon Resource Name (ARN) format.
-     *        You can supply up to 10 IAM roles in a single request.</p>
+     *        </p>
      *        <p>
-     *        A cluster can have up to 10 IAM roles associated with it at any time.
+     *        The maximum number of IAM roles that you can associate is subject to a quota. For more information, go to
+     *        <a href="https://docs.aws.amazon.com/redshift/latest/mgmt/amazon-redshift-limits.html">Quotas and
+     *        limits</a> in the <i>Amazon Redshift Cluster Management Guide</i>.
      */
 
     public void setIamRoles(java.util.Collection<String> iamRoles) {
@@ -3511,11 +3514,12 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
     /**
      * <p>
      * A list of Identity and Access Management (IAM) roles that can be used by the cluster to access other Amazon Web
-     * Services services. You must supply the IAM roles in their Amazon Resource Name (ARN) format. You can supply up to
-     * 10 IAM roles in a single request.
+     * Services services. You must supply the IAM roles in their Amazon Resource Name (ARN) format.
      * </p>
      * <p>
-     * A cluster can have up to 10 IAM roles associated with it at any time.
+     * The maximum number of IAM roles that you can associate is subject to a quota. For more information, go to <a
+     * href="https://docs.aws.amazon.com/redshift/latest/mgmt/amazon-redshift-limits.html">Quotas and limits</a> in the
+     * <i>Amazon Redshift Cluster Management Guide</i>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -3526,9 +3530,11 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
      * @param iamRoles
      *        A list of Identity and Access Management (IAM) roles that can be used by the cluster to access other
      *        Amazon Web Services services. You must supply the IAM roles in their Amazon Resource Name (ARN) format.
-     *        You can supply up to 10 IAM roles in a single request.</p>
+     *        </p>
      *        <p>
-     *        A cluster can have up to 10 IAM roles associated with it at any time.
+     *        The maximum number of IAM roles that you can associate is subject to a quota. For more information, go to
+     *        <a href="https://docs.aws.amazon.com/redshift/latest/mgmt/amazon-redshift-limits.html">Quotas and
+     *        limits</a> in the <i>Amazon Redshift Cluster Management Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -3545,19 +3551,22 @@ public class CreateClusterRequest extends com.amazonaws.AmazonWebServiceRequest 
     /**
      * <p>
      * A list of Identity and Access Management (IAM) roles that can be used by the cluster to access other Amazon Web
-     * Services services. You must supply the IAM roles in their Amazon Resource Name (ARN) format. You can supply up to
-     * 10 IAM roles in a single request.
+     * Services services. You must supply the IAM roles in their Amazon Resource Name (ARN) format.
      * </p>
      * <p>
-     * A cluster can have up to 10 IAM roles associated with it at any time.
+     * The maximum number of IAM roles that you can associate is subject to a quota. For more information, go to <a
+     * href="https://docs.aws.amazon.com/redshift/latest/mgmt/amazon-redshift-limits.html">Quotas and limits</a> in the
+     * <i>Amazon Redshift Cluster Management Guide</i>.
      * </p>
      * 
      * @param iamRoles
      *        A list of Identity and Access Management (IAM) roles that can be used by the cluster to access other
      *        Amazon Web Services services. You must supply the IAM roles in their Amazon Resource Name (ARN) format.
-     *        You can supply up to 10 IAM roles in a single request.</p>
+     *        </p>
      *        <p>
-     *        A cluster can have up to 10 IAM roles associated with it at any time.
+     *        The maximum number of IAM roles that you can associate is subject to a quota. For more information, go to
+     *        <a href="https://docs.aws.amazon.com/redshift/latest/mgmt/amazon-redshift-limits.html">Quotas and
+     *        limits</a> in the <i>Amazon Redshift Cluster Management Guide</i>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

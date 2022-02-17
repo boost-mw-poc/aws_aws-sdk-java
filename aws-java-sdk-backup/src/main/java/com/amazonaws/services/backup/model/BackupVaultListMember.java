@@ -53,8 +53,16 @@ public class BackupVaultListMember implements Serializable, Cloneable, Structure
     private java.util.Date creationDate;
     /**
      * <p>
-     * The server-side encryption key that is used to protect your backups; for example,
-     * <code>arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab</code>.
+     * A server-side encryption key you can specify to encrypt your backups from services that support full Backup
+     * management; for example, <code>arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab</code>
+     * . If you specify a key, you must specify its ARN, not its alias. If you do not specify a key, Backup creates a
+     * KMS key for you by default.
+     * </p>
+     * <p>
+     * To learn which Backup services support full Backup management and how Backup handles encryption for backups from
+     * services that do not yet support full Backup, see <a
+     * href="https://docs.aws.amazon.com/aws-backup/latest/devguide/encryption.html"> Encryption for backups in
+     * Backup</a>
      * </p>
      */
     private String encryptionKeyArn;
@@ -276,13 +284,29 @@ public class BackupVaultListMember implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The server-side encryption key that is used to protect your backups; for example,
-     * <code>arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab</code>.
+     * A server-side encryption key you can specify to encrypt your backups from services that support full Backup
+     * management; for example, <code>arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab</code>
+     * . If you specify a key, you must specify its ARN, not its alias. If you do not specify a key, Backup creates a
+     * KMS key for you by default.
+     * </p>
+     * <p>
+     * To learn which Backup services support full Backup management and how Backup handles encryption for backups from
+     * services that do not yet support full Backup, see <a
+     * href="https://docs.aws.amazon.com/aws-backup/latest/devguide/encryption.html"> Encryption for backups in
+     * Backup</a>
      * </p>
      * 
      * @param encryptionKeyArn
-     *        The server-side encryption key that is used to protect your backups; for example,
-     *        <code>arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab</code>.
+     *        A server-side encryption key you can specify to encrypt your backups from services that support full
+     *        Backup management; for example,
+     *        <code>arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab</code>. If you specify a
+     *        key, you must specify its ARN, not its alias. If you do not specify a key, Backup creates a KMS key for
+     *        you by default.</p>
+     *        <p>
+     *        To learn which Backup services support full Backup management and how Backup handles encryption for
+     *        backups from services that do not yet support full Backup, see <a
+     *        href="https://docs.aws.amazon.com/aws-backup/latest/devguide/encryption.html"> Encryption for backups in
+     *        Backup</a>
      */
 
     public void setEncryptionKeyArn(String encryptionKeyArn) {
@@ -291,12 +315,28 @@ public class BackupVaultListMember implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The server-side encryption key that is used to protect your backups; for example,
-     * <code>arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab</code>.
+     * A server-side encryption key you can specify to encrypt your backups from services that support full Backup
+     * management; for example, <code>arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab</code>
+     * . If you specify a key, you must specify its ARN, not its alias. If you do not specify a key, Backup creates a
+     * KMS key for you by default.
+     * </p>
+     * <p>
+     * To learn which Backup services support full Backup management and how Backup handles encryption for backups from
+     * services that do not yet support full Backup, see <a
+     * href="https://docs.aws.amazon.com/aws-backup/latest/devguide/encryption.html"> Encryption for backups in
+     * Backup</a>
      * </p>
      * 
-     * @return The server-side encryption key that is used to protect your backups; for example,
-     *         <code>arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab</code>.
+     * @return A server-side encryption key you can specify to encrypt your backups from services that support full
+     *         Backup management; for example,
+     *         <code>arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab</code>. If you specify
+     *         a key, you must specify its ARN, not its alias. If you do not specify a key, Backup creates a KMS key for
+     *         you by default.</p>
+     *         <p>
+     *         To learn which Backup services support full Backup management and how Backup handles encryption for
+     *         backups from services that do not yet support full Backup, see <a
+     *         href="https://docs.aws.amazon.com/aws-backup/latest/devguide/encryption.html"> Encryption for backups in
+     *         Backup</a>
      */
 
     public String getEncryptionKeyArn() {
@@ -305,13 +345,29 @@ public class BackupVaultListMember implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The server-side encryption key that is used to protect your backups; for example,
-     * <code>arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab</code>.
+     * A server-side encryption key you can specify to encrypt your backups from services that support full Backup
+     * management; for example, <code>arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab</code>
+     * . If you specify a key, you must specify its ARN, not its alias. If you do not specify a key, Backup creates a
+     * KMS key for you by default.
+     * </p>
+     * <p>
+     * To learn which Backup services support full Backup management and how Backup handles encryption for backups from
+     * services that do not yet support full Backup, see <a
+     * href="https://docs.aws.amazon.com/aws-backup/latest/devguide/encryption.html"> Encryption for backups in
+     * Backup</a>
      * </p>
      * 
      * @param encryptionKeyArn
-     *        The server-side encryption key that is used to protect your backups; for example,
-     *        <code>arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab</code>.
+     *        A server-side encryption key you can specify to encrypt your backups from services that support full
+     *        Backup management; for example,
+     *        <code>arn:aws:kms:us-west-2:111122223333:key/1234abcd-12ab-34cd-56ef-1234567890ab</code>. If you specify a
+     *        key, you must specify its ARN, not its alias. If you do not specify a key, Backup creates a KMS key for
+     *        you by default.</p>
+     *        <p>
+     *        To learn which Backup services support full Backup management and how Backup handles encryption for
+     *        backups from services that do not yet support full Backup, see <a
+     *        href="https://docs.aws.amazon.com/aws-backup/latest/devguide/encryption.html"> Encryption for backups in
+     *        Backup</a>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

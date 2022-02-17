@@ -68,6 +68,11 @@ public class PutBackupVaultNotificationsRequest extends com.amazonaws.AmazonWebS
      * <code>RESTORE_JOB_STARTED</code> | <code>RESTORE_JOB_COMPLETED</code> | <code>RECOVERY_POINT_MODIFIED</code>
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>S3_BACKUP_OBJECT_FAILED</code> | <code>S3_RESTORE_OBJECT_FAILED</code>
+     * </p>
+     * </li>
      * </ul>
      * <note>
      * <p>
@@ -203,6 +208,11 @@ public class PutBackupVaultNotificationsRequest extends com.amazonaws.AmazonWebS
      * <code>RESTORE_JOB_STARTED</code> | <code>RESTORE_JOB_COMPLETED</code> | <code>RECOVERY_POINT_MODIFIED</code>
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>S3_BACKUP_OBJECT_FAILED</code> | <code>S3_RESTORE_OBJECT_FAILED</code>
+     * </p>
+     * </li>
      * </ul>
      * <note>
      * <p>
@@ -234,6 +244,11 @@ public class PutBackupVaultNotificationsRequest extends com.amazonaws.AmazonWebS
      *         <p>
      *         <code>RESTORE_JOB_STARTED</code> | <code>RESTORE_JOB_COMPLETED</code> |
      *         <code>RECOVERY_POINT_MODIFIED</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>S3_BACKUP_OBJECT_FAILED</code> | <code>S3_RESTORE_OBJECT_FAILED</code>
      *         </p>
      *         </li>
      *         </ul>
@@ -276,6 +291,11 @@ public class PutBackupVaultNotificationsRequest extends com.amazonaws.AmazonWebS
      * <code>RESTORE_JOB_STARTED</code> | <code>RESTORE_JOB_COMPLETED</code> | <code>RECOVERY_POINT_MODIFIED</code>
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>S3_BACKUP_OBJECT_FAILED</code> | <code>S3_RESTORE_OBJECT_FAILED</code>
+     * </p>
+     * </li>
      * </ul>
      * <note>
      * <p>
@@ -308,6 +328,11 @@ public class PutBackupVaultNotificationsRequest extends com.amazonaws.AmazonWebS
      *        <p>
      *        <code>RESTORE_JOB_STARTED</code> | <code>RESTORE_JOB_COMPLETED</code> |
      *        <code>RECOVERY_POINT_MODIFIED</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>S3_BACKUP_OBJECT_FAILED</code> | <code>S3_RESTORE_OBJECT_FAILED</code>
      *        </p>
      *        </li>
      *        </ul>
@@ -355,6 +380,11 @@ public class PutBackupVaultNotificationsRequest extends com.amazonaws.AmazonWebS
      * <code>RESTORE_JOB_STARTED</code> | <code>RESTORE_JOB_COMPLETED</code> | <code>RECOVERY_POINT_MODIFIED</code>
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>S3_BACKUP_OBJECT_FAILED</code> | <code>S3_RESTORE_OBJECT_FAILED</code>
+     * </p>
+     * </li>
      * </ul>
      * <note>
      * <p>
@@ -392,6 +422,11 @@ public class PutBackupVaultNotificationsRequest extends com.amazonaws.AmazonWebS
      *        <p>
      *        <code>RESTORE_JOB_STARTED</code> | <code>RESTORE_JOB_COMPLETED</code> |
      *        <code>RECOVERY_POINT_MODIFIED</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>S3_BACKUP_OBJECT_FAILED</code> | <code>S3_RESTORE_OBJECT_FAILED</code>
      *        </p>
      *        </li>
      *        </ul>
@@ -441,6 +476,11 @@ public class PutBackupVaultNotificationsRequest extends com.amazonaws.AmazonWebS
      * <code>RESTORE_JOB_STARTED</code> | <code>RESTORE_JOB_COMPLETED</code> | <code>RECOVERY_POINT_MODIFIED</code>
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>S3_BACKUP_OBJECT_FAILED</code> | <code>S3_RESTORE_OBJECT_FAILED</code>
+     * </p>
+     * </li>
      * </ul>
      * <note>
      * <p>
@@ -473,6 +513,11 @@ public class PutBackupVaultNotificationsRequest extends com.amazonaws.AmazonWebS
      *        <p>
      *        <code>RESTORE_JOB_STARTED</code> | <code>RESTORE_JOB_COMPLETED</code> |
      *        <code>RECOVERY_POINT_MODIFIED</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>S3_BACKUP_OBJECT_FAILED</code> | <code>S3_RESTORE_OBJECT_FAILED</code>
      *        </p>
      *        </li>
      *        </ul>
@@ -517,6 +562,11 @@ public class PutBackupVaultNotificationsRequest extends com.amazonaws.AmazonWebS
      * <code>RESTORE_JOB_STARTED</code> | <code>RESTORE_JOB_COMPLETED</code> | <code>RECOVERY_POINT_MODIFIED</code>
      * </p>
      * </li>
+     * <li>
+     * <p>
+     * <code>S3_BACKUP_OBJECT_FAILED</code> | <code>S3_RESTORE_OBJECT_FAILED</code>
+     * </p>
+     * </li>
      * </ul>
      * <note>
      * <p>
@@ -549,6 +599,11 @@ public class PutBackupVaultNotificationsRequest extends com.amazonaws.AmazonWebS
      *        <p>
      *        <code>RESTORE_JOB_STARTED</code> | <code>RESTORE_JOB_COMPLETED</code> |
      *        <code>RECOVERY_POINT_MODIFIED</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>S3_BACKUP_OBJECT_FAILED</code> | <code>S3_RESTORE_OBJECT_FAILED</code>
      *        </p>
      *        </li>
      *        </ul>

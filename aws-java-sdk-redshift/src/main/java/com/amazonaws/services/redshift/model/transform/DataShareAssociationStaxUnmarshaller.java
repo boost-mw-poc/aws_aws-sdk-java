@@ -53,6 +53,11 @@ public class DataShareAssociationStaxUnmarshaller implements Unmarshaller<DataSh
                     continue;
                 }
 
+                if (context.testExpression("ConsumerRegion", targetDepth)) {
+                    dataShareAssociation.setConsumerRegion(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
+
                 if (context.testExpression("CreatedDate", targetDepth)) {
                     dataShareAssociation.setCreatedDate(DateStaxUnmarshallerFactory.getInstance("iso8601").unmarshall(context));
                     continue;
