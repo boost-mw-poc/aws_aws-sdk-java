@@ -155,10 +155,10 @@ public class ScalingPolicy implements Serializable, Cloneable, StructuredPojo {
     private Integer evaluationPeriods;
     /**
      * <p>
-     * Name of the Amazon GameLift-defined metric that is used to trigger a scaling adjustment. For detailed
+     * Name of the Amazon Web Services-defined metric that is used to trigger a scaling adjustment. For detailed
      * descriptions of fleet metrics, see <a
-     * href="https://docs.aws.amazon.com/gamelift/latest/developerguide/monitoring-cloudwatch.html">Monitor Amazon
-     * GameLift with Amazon CloudWatch</a>.
+     * href="https://docs.aws.amazon.com/gamelift/latest/developerguide/monitoring-cloudwatch.html">Monitor Amazon Web
+     * Services with Amazon CloudWatch</a>.
      * </p>
      * <ul>
      * <li>
@@ -251,6 +251,7 @@ public class ScalingPolicy implements Serializable, Cloneable, StructuredPojo {
     private String updateStatus;
     /**
      * <p>
+     * The fleet location.
      * </p>
      */
     private String location;
@@ -1312,10 +1313,10 @@ public class ScalingPolicy implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Name of the Amazon GameLift-defined metric that is used to trigger a scaling adjustment. For detailed
+     * Name of the Amazon Web Services-defined metric that is used to trigger a scaling adjustment. For detailed
      * descriptions of fleet metrics, see <a
-     * href="https://docs.aws.amazon.com/gamelift/latest/developerguide/monitoring-cloudwatch.html">Monitor Amazon
-     * GameLift with Amazon CloudWatch</a>.
+     * href="https://docs.aws.amazon.com/gamelift/latest/developerguide/monitoring-cloudwatch.html">Monitor Amazon Web
+     * Services with Amazon CloudWatch</a>.
      * </p>
      * <ul>
      * <li>
@@ -1383,10 +1384,10 @@ public class ScalingPolicy implements Serializable, Cloneable, StructuredPojo {
      * </ul>
      * 
      * @param metricName
-     *        Name of the Amazon GameLift-defined metric that is used to trigger a scaling adjustment. For detailed
+     *        Name of the Amazon Web Services-defined metric that is used to trigger a scaling adjustment. For detailed
      *        descriptions of fleet metrics, see <a
      *        href="https://docs.aws.amazon.com/gamelift/latest/developerguide/monitoring-cloudwatch.html">Monitor
-     *        Amazon GameLift with Amazon CloudWatch</a>. </p>
+     *        Amazon Web Services with Amazon CloudWatch</a>. </p>
      *        <ul>
      *        <li>
      *        <p>
@@ -1459,10 +1460,10 @@ public class ScalingPolicy implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Name of the Amazon GameLift-defined metric that is used to trigger a scaling adjustment. For detailed
+     * Name of the Amazon Web Services-defined metric that is used to trigger a scaling adjustment. For detailed
      * descriptions of fleet metrics, see <a
-     * href="https://docs.aws.amazon.com/gamelift/latest/developerguide/monitoring-cloudwatch.html">Monitor Amazon
-     * GameLift with Amazon CloudWatch</a>.
+     * href="https://docs.aws.amazon.com/gamelift/latest/developerguide/monitoring-cloudwatch.html">Monitor Amazon Web
+     * Services with Amazon CloudWatch</a>.
      * </p>
      * <ul>
      * <li>
@@ -1529,10 +1530,10 @@ public class ScalingPolicy implements Serializable, Cloneable, StructuredPojo {
      * </li>
      * </ul>
      * 
-     * @return Name of the Amazon GameLift-defined metric that is used to trigger a scaling adjustment. For detailed
+     * @return Name of the Amazon Web Services-defined metric that is used to trigger a scaling adjustment. For detailed
      *         descriptions of fleet metrics, see <a
      *         href="https://docs.aws.amazon.com/gamelift/latest/developerguide/monitoring-cloudwatch.html">Monitor
-     *         Amazon GameLift with Amazon CloudWatch</a>. </p>
+     *         Amazon Web Services with Amazon CloudWatch</a>. </p>
      *         <ul>
      *         <li>
      *         <p>
@@ -1606,10 +1607,10 @@ public class ScalingPolicy implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Name of the Amazon GameLift-defined metric that is used to trigger a scaling adjustment. For detailed
+     * Name of the Amazon Web Services-defined metric that is used to trigger a scaling adjustment. For detailed
      * descriptions of fleet metrics, see <a
-     * href="https://docs.aws.amazon.com/gamelift/latest/developerguide/monitoring-cloudwatch.html">Monitor Amazon
-     * GameLift with Amazon CloudWatch</a>.
+     * href="https://docs.aws.amazon.com/gamelift/latest/developerguide/monitoring-cloudwatch.html">Monitor Amazon Web
+     * Services with Amazon CloudWatch</a>.
      * </p>
      * <ul>
      * <li>
@@ -1677,10 +1678,10 @@ public class ScalingPolicy implements Serializable, Cloneable, StructuredPojo {
      * </ul>
      * 
      * @param metricName
-     *        Name of the Amazon GameLift-defined metric that is used to trigger a scaling adjustment. For detailed
+     *        Name of the Amazon Web Services-defined metric that is used to trigger a scaling adjustment. For detailed
      *        descriptions of fleet metrics, see <a
      *        href="https://docs.aws.amazon.com/gamelift/latest/developerguide/monitoring-cloudwatch.html">Monitor
-     *        Amazon GameLift with Amazon CloudWatch</a>. </p>
+     *        Amazon Web Services with Amazon CloudWatch</a>. </p>
      *        <ul>
      *        <li>
      *        <p>
@@ -1755,10 +1756,10 @@ public class ScalingPolicy implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Name of the Amazon GameLift-defined metric that is used to trigger a scaling adjustment. For detailed
+     * Name of the Amazon Web Services-defined metric that is used to trigger a scaling adjustment. For detailed
      * descriptions of fleet metrics, see <a
-     * href="https://docs.aws.amazon.com/gamelift/latest/developerguide/monitoring-cloudwatch.html">Monitor Amazon
-     * GameLift with Amazon CloudWatch</a>.
+     * href="https://docs.aws.amazon.com/gamelift/latest/developerguide/monitoring-cloudwatch.html">Monitor Amazon Web
+     * Services with Amazon CloudWatch</a>.
      * </p>
      * <ul>
      * <li>
@@ -1826,10 +1827,10 @@ public class ScalingPolicy implements Serializable, Cloneable, StructuredPojo {
      * </ul>
      * 
      * @param metricName
-     *        Name of the Amazon GameLift-defined metric that is used to trigger a scaling adjustment. For detailed
+     *        Name of the Amazon Web Services-defined metric that is used to trigger a scaling adjustment. For detailed
      *        descriptions of fleet metrics, see <a
      *        href="https://docs.aws.amazon.com/gamelift/latest/developerguide/monitoring-cloudwatch.html">Monitor
-     *        Amazon GameLift with Amazon CloudWatch</a>. </p>
+     *        Amazon Web Services with Amazon CloudWatch</a>. </p>
      *        <ul>
      *        <li>
      *        <p>
@@ -1902,10 +1903,10 @@ public class ScalingPolicy implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Name of the Amazon GameLift-defined metric that is used to trigger a scaling adjustment. For detailed
+     * Name of the Amazon Web Services-defined metric that is used to trigger a scaling adjustment. For detailed
      * descriptions of fleet metrics, see <a
-     * href="https://docs.aws.amazon.com/gamelift/latest/developerguide/monitoring-cloudwatch.html">Monitor Amazon
-     * GameLift with Amazon CloudWatch</a>.
+     * href="https://docs.aws.amazon.com/gamelift/latest/developerguide/monitoring-cloudwatch.html">Monitor Amazon Web
+     * Services with Amazon CloudWatch</a>.
      * </p>
      * <ul>
      * <li>
@@ -1973,10 +1974,10 @@ public class ScalingPolicy implements Serializable, Cloneable, StructuredPojo {
      * </ul>
      * 
      * @param metricName
-     *        Name of the Amazon GameLift-defined metric that is used to trigger a scaling adjustment. For detailed
+     *        Name of the Amazon Web Services-defined metric that is used to trigger a scaling adjustment. For detailed
      *        descriptions of fleet metrics, see <a
      *        href="https://docs.aws.amazon.com/gamelift/latest/developerguide/monitoring-cloudwatch.html">Monitor
-     *        Amazon GameLift with Amazon CloudWatch</a>. </p>
+     *        Amazon Web Services with Amazon CloudWatch</a>. </p>
      *        <ul>
      *        <li>
      *        <p>
@@ -2287,9 +2288,11 @@ public class ScalingPolicy implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
+     * The fleet location.
      * </p>
      * 
      * @param location
+     *        The fleet location.
      */
 
     public void setLocation(String location) {
@@ -2298,9 +2301,10 @@ public class ScalingPolicy implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
+     * The fleet location.
      * </p>
      * 
-     * @return
+     * @return The fleet location.
      */
 
     public String getLocation() {
@@ -2309,9 +2313,11 @@ public class ScalingPolicy implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
+     * The fleet location.
      * </p>
      * 
      * @param location
+     *        The fleet location.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

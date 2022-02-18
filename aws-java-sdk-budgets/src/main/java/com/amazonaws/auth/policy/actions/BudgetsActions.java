@@ -51,6 +51,8 @@ public enum BudgetsActions implements Action {
     DescribeBudgetActionsForAccount("budgets:DescribeBudgetActionsForAccount"),
     /** Action for the DescribeBudgetActionsForBudget operation. */
     DescribeBudgetActionsForBudget("budgets:DescribeBudgetActionsForBudget"),
+    /** Action for the DescribeBudgetNotificationsForAccount operation. */
+    DescribeBudgetNotificationsForAccount("budgets:DescribeBudgetNotificationsForAccount"),
     /** Action for the DescribeBudgetPerformanceHistory operation. */
     DescribeBudgetPerformanceHistory("budgets:DescribeBudgetPerformanceHistory"),
     /** Action for the DescribeBudgets operation. */

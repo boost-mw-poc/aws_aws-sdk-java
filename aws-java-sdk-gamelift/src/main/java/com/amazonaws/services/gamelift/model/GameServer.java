@@ -60,7 +60,7 @@ public class GameServer implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * A custom string that uniquely identifies the game server. Game server IDs are developer-defined and are unique
-     * across all game server groups in an AWS account.
+     * across all game server groups in an Amazon Web Services account.
      * </p>
      */
     private String gameServerId;
@@ -226,12 +226,12 @@ public class GameServer implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * A custom string that uniquely identifies the game server. Game server IDs are developer-defined and are unique
-     * across all game server groups in an AWS account.
+     * across all game server groups in an Amazon Web Services account.
      * </p>
      * 
      * @param gameServerId
      *        A custom string that uniquely identifies the game server. Game server IDs are developer-defined and are
-     *        unique across all game server groups in an AWS account.
+     *        unique across all game server groups in an Amazon Web Services account.
      */
 
     public void setGameServerId(String gameServerId) {
@@ -241,11 +241,11 @@ public class GameServer implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * A custom string that uniquely identifies the game server. Game server IDs are developer-defined and are unique
-     * across all game server groups in an AWS account.
+     * across all game server groups in an Amazon Web Services account.
      * </p>
      * 
      * @return A custom string that uniquely identifies the game server. Game server IDs are developer-defined and are
-     *         unique across all game server groups in an AWS account.
+     *         unique across all game server groups in an Amazon Web Services account.
      */
 
     public String getGameServerId() {
@@ -255,12 +255,12 @@ public class GameServer implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * A custom string that uniquely identifies the game server. Game server IDs are developer-defined and are unique
-     * across all game server groups in an AWS account.
+     * across all game server groups in an Amazon Web Services account.
      * </p>
      * 
      * @param gameServerId
      *        A custom string that uniquely identifies the game server. Game server IDs are developer-defined and are
-     *        unique across all game server groups in an AWS account.
+     *        unique across all game server groups in an Amazon Web Services account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

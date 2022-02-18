@@ -36,8 +36,8 @@ public class DescribeFleetPortSettingsRequest extends com.amazonaws.AmazonWebSer
     private String fleetId;
     /**
      * <p>
-     * A remote location to check for status of port setting updates. Use the AWS Region code format, such as
-     * <code>us-west-2</code>.
+     * A remote location to check for status of port setting updates. Use the Amazon Web Services Region code format,
+     * such as <code>us-west-2</code>.
      * </p>
      */
     private String location;
@@ -87,13 +87,13 @@ public class DescribeFleetPortSettingsRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * A remote location to check for status of port setting updates. Use the AWS Region code format, such as
-     * <code>us-west-2</code>.
+     * A remote location to check for status of port setting updates. Use the Amazon Web Services Region code format,
+     * such as <code>us-west-2</code>.
      * </p>
      * 
      * @param location
-     *        A remote location to check for status of port setting updates. Use the AWS Region code format, such as
-     *        <code>us-west-2</code>.
+     *        A remote location to check for status of port setting updates. Use the Amazon Web Services Region code
+     *        format, such as <code>us-west-2</code>.
      */
 
     public void setLocation(String location) {
@@ -102,12 +102,12 @@ public class DescribeFleetPortSettingsRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * A remote location to check for status of port setting updates. Use the AWS Region code format, such as
-     * <code>us-west-2</code>.
+     * A remote location to check for status of port setting updates. Use the Amazon Web Services Region code format,
+     * such as <code>us-west-2</code>.
      * </p>
      * 
-     * @return A remote location to check for status of port setting updates. Use the AWS Region code format, such as
-     *         <code>us-west-2</code>.
+     * @return A remote location to check for status of port setting updates. Use the Amazon Web Services Region code
+     *         format, such as <code>us-west-2</code>.
      */
 
     public String getLocation() {
@@ -116,13 +116,13 @@ public class DescribeFleetPortSettingsRequest extends com.amazonaws.AmazonWebSer
 
     /**
      * <p>
-     * A remote location to check for status of port setting updates. Use the AWS Region code format, such as
-     * <code>us-west-2</code>.
+     * A remote location to check for status of port setting updates. Use the Amazon Web Services Region code format,
+     * such as <code>us-west-2</code>.
      * </p>
      * 
      * @param location
-     *        A remote location to check for status of port setting updates. Use the AWS Region code format, such as
-     *        <code>us-west-2</code>.
+     *        A remote location to check for status of port setting updates. Use the Amazon Web Services Region code
+     *        format, such as <code>us-west-2</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

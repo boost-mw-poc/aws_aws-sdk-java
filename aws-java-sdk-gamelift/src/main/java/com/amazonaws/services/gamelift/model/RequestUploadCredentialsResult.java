@@ -28,8 +28,8 @@ public class RequestUploadCredentialsResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * AWS credentials required when uploading a game build to the storage location. These credentials have a limited
-     * lifespan and are valid only for the build they were issued for.
+     * Amazon Web Services credentials required when uploading a game build to the storage location. These credentials
+     * have a limited lifespan and are valid only for the build they were issued for.
      * </p>
      */
     private Credentials uploadCredentials;
@@ -42,13 +42,13 @@ public class RequestUploadCredentialsResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * AWS credentials required when uploading a game build to the storage location. These credentials have a limited
-     * lifespan and are valid only for the build they were issued for.
+     * Amazon Web Services credentials required when uploading a game build to the storage location. These credentials
+     * have a limited lifespan and are valid only for the build they were issued for.
      * </p>
      * 
      * @param uploadCredentials
-     *        AWS credentials required when uploading a game build to the storage location. These credentials have a
-     *        limited lifespan and are valid only for the build they were issued for.
+     *        Amazon Web Services credentials required when uploading a game build to the storage location. These
+     *        credentials have a limited lifespan and are valid only for the build they were issued for.
      */
 
     public void setUploadCredentials(Credentials uploadCredentials) {
@@ -57,12 +57,12 @@ public class RequestUploadCredentialsResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * AWS credentials required when uploading a game build to the storage location. These credentials have a limited
-     * lifespan and are valid only for the build they were issued for.
+     * Amazon Web Services credentials required when uploading a game build to the storage location. These credentials
+     * have a limited lifespan and are valid only for the build they were issued for.
      * </p>
      * 
-     * @return AWS credentials required when uploading a game build to the storage location. These credentials have a
-     *         limited lifespan and are valid only for the build they were issued for.
+     * @return Amazon Web Services credentials required when uploading a game build to the storage location. These
+     *         credentials have a limited lifespan and are valid only for the build they were issued for.
      */
 
     public Credentials getUploadCredentials() {
@@ -71,13 +71,13 @@ public class RequestUploadCredentialsResult extends com.amazonaws.AmazonWebServi
 
     /**
      * <p>
-     * AWS credentials required when uploading a game build to the storage location. These credentials have a limited
-     * lifespan and are valid only for the build they were issued for.
+     * Amazon Web Services credentials required when uploading a game build to the storage location. These credentials
+     * have a limited lifespan and are valid only for the build they were issued for.
      * </p>
      * 
      * @param uploadCredentials
-     *        AWS credentials required when uploading a game build to the storage location. These credentials have a
-     *        limited lifespan and are valid only for the build they were issued for.
+     *        Amazon Web Services credentials required when uploading a game build to the storage location. These
+     *        credentials have a limited lifespan and are valid only for the build they were issued for.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -43,8 +43,8 @@ public class CreateScriptRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <p>
      * The location of the Amazon S3 bucket where a zipped file containing your Realtime scripts is stored. The storage
      * location must specify the Amazon S3 bucket name, the zip file name (the "key"), and a role ARN that allows Amazon
-     * GameLift to access the Amazon S3 storage location. The S3 bucket must be in the same Region where you want to
-     * create a new script. By default, Amazon GameLift uploads the latest version of the zip file; if you have S3
+     * Web Services to access the Amazon S3 storage location. The S3 bucket must be in the same Region where you want to
+     * create a new script. By default, Amazon Web Services uploads the latest version of the zip file; if you have S3
      * object versioning turned on, you can use the <code>ObjectVersion</code> parameter to specify an earlier version.
      * </p>
      */
@@ -55,20 +55,21 @@ public class CreateScriptRequest extends com.amazonaws.AmazonWebServiceRequest i
      * multiple files. Maximum size of a zip file is 5 MB.
      * </p>
      * <p>
-     * When using the AWS CLI tool to create a script, this parameter is set to the zip file name. It must be prepended
-     * with the string "fileb://" to indicate that the file data is a binary object. For example:
+     * When using the Amazon Web Services CLI tool to create a script, this parameter is set to the zip file name. It
+     * must be prepended with the string "fileb://" to indicate that the file data is a binary object. For example:
      * <code>--zip-file fileb://myRealtimeScript.zip</code>.
      * </p>
      */
     private java.nio.ByteBuffer zipFile;
     /**
      * <p>
-     * A list of labels to assign to the new script resource. Tags are developer-defined key-value pairs. Tagging AWS
-     * resources are useful for resource management, access management and cost allocation. For more information, see <a
-     * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"> Tagging AWS Resources</a> in the <i>AWS
-     * General Reference</i>. Once the resource is created, you can use <a>TagResource</a>, <a>UntagResource</a>, and
-     * <a>ListTagsForResource</a> to add, remove, and view tags. The maximum tag limit may be lower than stated. See the
-     * AWS General Reference for actual tagging limits.
+     * A list of labels to assign to the new script resource. Tags are developer-defined key-value pairs. Tagging Amazon
+     * Web Services resources are useful for resource management, access management and cost allocation. For more
+     * information, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"> Tagging Amazon Web
+     * Services Resources</a> in the <i>Amazon Web Services General Reference</i>. Once the resource is created, you can
+     * use <a>TagResource</a>, <a>UntagResource</a>, and <a>ListTagsForResource</a> to add, remove, and view tags. The
+     * maximum tag limit may be lower than stated. See the Amazon Web Services General Reference for actual tagging
+     * limits.
      * </p>
      */
     private java.util.List<Tag> tags;
@@ -169,18 +170,18 @@ public class CreateScriptRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <p>
      * The location of the Amazon S3 bucket where a zipped file containing your Realtime scripts is stored. The storage
      * location must specify the Amazon S3 bucket name, the zip file name (the "key"), and a role ARN that allows Amazon
-     * GameLift to access the Amazon S3 storage location. The S3 bucket must be in the same Region where you want to
-     * create a new script. By default, Amazon GameLift uploads the latest version of the zip file; if you have S3
+     * Web Services to access the Amazon S3 storage location. The S3 bucket must be in the same Region where you want to
+     * create a new script. By default, Amazon Web Services uploads the latest version of the zip file; if you have S3
      * object versioning turned on, you can use the <code>ObjectVersion</code> parameter to specify an earlier version.
      * </p>
      * 
      * @param storageLocation
      *        The location of the Amazon S3 bucket where a zipped file containing your Realtime scripts is stored. The
      *        storage location must specify the Amazon S3 bucket name, the zip file name (the "key"), and a role ARN
-     *        that allows Amazon GameLift to access the Amazon S3 storage location. The S3 bucket must be in the same
-     *        Region where you want to create a new script. By default, Amazon GameLift uploads the latest version of
-     *        the zip file; if you have S3 object versioning turned on, you can use the <code>ObjectVersion</code>
-     *        parameter to specify an earlier version.
+     *        that allows Amazon Web Services to access the Amazon S3 storage location. The S3 bucket must be in the
+     *        same Region where you want to create a new script. By default, Amazon Web Services uploads the latest
+     *        version of the zip file; if you have S3 object versioning turned on, you can use the
+     *        <code>ObjectVersion</code> parameter to specify an earlier version.
      */
 
     public void setStorageLocation(S3Location storageLocation) {
@@ -191,17 +192,17 @@ public class CreateScriptRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <p>
      * The location of the Amazon S3 bucket where a zipped file containing your Realtime scripts is stored. The storage
      * location must specify the Amazon S3 bucket name, the zip file name (the "key"), and a role ARN that allows Amazon
-     * GameLift to access the Amazon S3 storage location. The S3 bucket must be in the same Region where you want to
-     * create a new script. By default, Amazon GameLift uploads the latest version of the zip file; if you have S3
+     * Web Services to access the Amazon S3 storage location. The S3 bucket must be in the same Region where you want to
+     * create a new script. By default, Amazon Web Services uploads the latest version of the zip file; if you have S3
      * object versioning turned on, you can use the <code>ObjectVersion</code> parameter to specify an earlier version.
      * </p>
      * 
      * @return The location of the Amazon S3 bucket where a zipped file containing your Realtime scripts is stored. The
      *         storage location must specify the Amazon S3 bucket name, the zip file name (the "key"), and a role ARN
-     *         that allows Amazon GameLift to access the Amazon S3 storage location. The S3 bucket must be in the same
-     *         Region where you want to create a new script. By default, Amazon GameLift uploads the latest version of
-     *         the zip file; if you have S3 object versioning turned on, you can use the <code>ObjectVersion</code>
-     *         parameter to specify an earlier version.
+     *         that allows Amazon Web Services to access the Amazon S3 storage location. The S3 bucket must be in the
+     *         same Region where you want to create a new script. By default, Amazon Web Services uploads the latest
+     *         version of the zip file; if you have S3 object versioning turned on, you can use the
+     *         <code>ObjectVersion</code> parameter to specify an earlier version.
      */
 
     public S3Location getStorageLocation() {
@@ -212,18 +213,18 @@ public class CreateScriptRequest extends com.amazonaws.AmazonWebServiceRequest i
      * <p>
      * The location of the Amazon S3 bucket where a zipped file containing your Realtime scripts is stored. The storage
      * location must specify the Amazon S3 bucket name, the zip file name (the "key"), and a role ARN that allows Amazon
-     * GameLift to access the Amazon S3 storage location. The S3 bucket must be in the same Region where you want to
-     * create a new script. By default, Amazon GameLift uploads the latest version of the zip file; if you have S3
+     * Web Services to access the Amazon S3 storage location. The S3 bucket must be in the same Region where you want to
+     * create a new script. By default, Amazon Web Services uploads the latest version of the zip file; if you have S3
      * object versioning turned on, you can use the <code>ObjectVersion</code> parameter to specify an earlier version.
      * </p>
      * 
      * @param storageLocation
      *        The location of the Amazon S3 bucket where a zipped file containing your Realtime scripts is stored. The
      *        storage location must specify the Amazon S3 bucket name, the zip file name (the "key"), and a role ARN
-     *        that allows Amazon GameLift to access the Amazon S3 storage location. The S3 bucket must be in the same
-     *        Region where you want to create a new script. By default, Amazon GameLift uploads the latest version of
-     *        the zip file; if you have S3 object versioning turned on, you can use the <code>ObjectVersion</code>
-     *        parameter to specify an earlier version.
+     *        that allows Amazon Web Services to access the Amazon S3 storage location. The S3 bucket must be in the
+     *        same Region where you want to create a new script. By default, Amazon Web Services uploads the latest
+     *        version of the zip file; if you have S3 object versioning turned on, you can use the
+     *        <code>ObjectVersion</code> parameter to specify an earlier version.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -238,8 +239,8 @@ public class CreateScriptRequest extends com.amazonaws.AmazonWebServiceRequest i
      * multiple files. Maximum size of a zip file is 5 MB.
      * </p>
      * <p>
-     * When using the AWS CLI tool to create a script, this parameter is set to the zip file name. It must be prepended
-     * with the string "fileb://" to indicate that the file data is a binary object. For example:
+     * When using the Amazon Web Services CLI tool to create a script, this parameter is set to the zip file name. It
+     * must be prepended with the string "fileb://" to indicate that the file data is a binary object. For example:
      * <code>--zip-file fileb://myRealtimeScript.zip</code>.
      * </p>
      * <p>
@@ -257,9 +258,9 @@ public class CreateScriptRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        A data object containing your Realtime scripts and dependencies as a zip file. The zip file can have one
      *        or multiple files. Maximum size of a zip file is 5 MB.</p>
      *        <p>
-     *        When using the AWS CLI tool to create a script, this parameter is set to the zip file name. It must be
-     *        prepended with the string "fileb://" to indicate that the file data is a binary object. For example:
-     *        <code>--zip-file fileb://myRealtimeScript.zip</code>.
+     *        When using the Amazon Web Services CLI tool to create a script, this parameter is set to the zip file
+     *        name. It must be prepended with the string "fileb://" to indicate that the file data is a binary object.
+     *        For example: <code>--zip-file fileb://myRealtimeScript.zip</code>.
      */
 
     public void setZipFile(java.nio.ByteBuffer zipFile) {
@@ -272,8 +273,8 @@ public class CreateScriptRequest extends com.amazonaws.AmazonWebServiceRequest i
      * multiple files. Maximum size of a zip file is 5 MB.
      * </p>
      * <p>
-     * When using the AWS CLI tool to create a script, this parameter is set to the zip file name. It must be prepended
-     * with the string "fileb://" to indicate that the file data is a binary object. For example:
+     * When using the Amazon Web Services CLI tool to create a script, this parameter is set to the zip file name. It
+     * must be prepended with the string "fileb://" to indicate that the file data is a binary object. For example:
      * <code>--zip-file fileb://myRealtimeScript.zip</code>.
      * </p>
      * <p>
@@ -287,9 +288,9 @@ public class CreateScriptRequest extends com.amazonaws.AmazonWebServiceRequest i
      * @return A data object containing your Realtime scripts and dependencies as a zip file. The zip file can have one
      *         or multiple files. Maximum size of a zip file is 5 MB.</p>
      *         <p>
-     *         When using the AWS CLI tool to create a script, this parameter is set to the zip file name. It must be
-     *         prepended with the string "fileb://" to indicate that the file data is a binary object. For example:
-     *         <code>--zip-file fileb://myRealtimeScript.zip</code>.
+     *         When using the Amazon Web Services CLI tool to create a script, this parameter is set to the zip file
+     *         name. It must be prepended with the string "fileb://" to indicate that the file data is a binary object.
+     *         For example: <code>--zip-file fileb://myRealtimeScript.zip</code>.
      */
 
     public java.nio.ByteBuffer getZipFile() {
@@ -302,8 +303,8 @@ public class CreateScriptRequest extends com.amazonaws.AmazonWebServiceRequest i
      * multiple files. Maximum size of a zip file is 5 MB.
      * </p>
      * <p>
-     * When using the AWS CLI tool to create a script, this parameter is set to the zip file name. It must be prepended
-     * with the string "fileb://" to indicate that the file data is a binary object. For example:
+     * When using the Amazon Web Services CLI tool to create a script, this parameter is set to the zip file name. It
+     * must be prepended with the string "fileb://" to indicate that the file data is a binary object. For example:
      * <code>--zip-file fileb://myRealtimeScript.zip</code>.
      * </p>
      * <p>
@@ -321,9 +322,9 @@ public class CreateScriptRequest extends com.amazonaws.AmazonWebServiceRequest i
      *        A data object containing your Realtime scripts and dependencies as a zip file. The zip file can have one
      *        or multiple files. Maximum size of a zip file is 5 MB.</p>
      *        <p>
-     *        When using the AWS CLI tool to create a script, this parameter is set to the zip file name. It must be
-     *        prepended with the string "fileb://" to indicate that the file data is a binary object. For example:
-     *        <code>--zip-file fileb://myRealtimeScript.zip</code>.
+     *        When using the Amazon Web Services CLI tool to create a script, this parameter is set to the zip file
+     *        name. It must be prepended with the string "fileb://" to indicate that the file data is a binary object.
+     *        For example: <code>--zip-file fileb://myRealtimeScript.zip</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -334,20 +335,23 @@ public class CreateScriptRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * A list of labels to assign to the new script resource. Tags are developer-defined key-value pairs. Tagging AWS
-     * resources are useful for resource management, access management and cost allocation. For more information, see <a
-     * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"> Tagging AWS Resources</a> in the <i>AWS
-     * General Reference</i>. Once the resource is created, you can use <a>TagResource</a>, <a>UntagResource</a>, and
-     * <a>ListTagsForResource</a> to add, remove, and view tags. The maximum tag limit may be lower than stated. See the
-     * AWS General Reference for actual tagging limits.
+     * A list of labels to assign to the new script resource. Tags are developer-defined key-value pairs. Tagging Amazon
+     * Web Services resources are useful for resource management, access management and cost allocation. For more
+     * information, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"> Tagging Amazon Web
+     * Services Resources</a> in the <i>Amazon Web Services General Reference</i>. Once the resource is created, you can
+     * use <a>TagResource</a>, <a>UntagResource</a>, and <a>ListTagsForResource</a> to add, remove, and view tags. The
+     * maximum tag limit may be lower than stated. See the Amazon Web Services General Reference for actual tagging
+     * limits.
      * </p>
      * 
      * @return A list of labels to assign to the new script resource. Tags are developer-defined key-value pairs.
-     *         Tagging AWS resources are useful for resource management, access management and cost allocation. For more
-     *         information, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"> Tagging AWS
-     *         Resources</a> in the <i>AWS General Reference</i>. Once the resource is created, you can use
-     *         <a>TagResource</a>, <a>UntagResource</a>, and <a>ListTagsForResource</a> to add, remove, and view tags.
-     *         The maximum tag limit may be lower than stated. See the AWS General Reference for actual tagging limits.
+     *         Tagging Amazon Web Services resources are useful for resource management, access management and cost
+     *         allocation. For more information, see <a
+     *         href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"> Tagging Amazon Web Services
+     *         Resources</a> in the <i>Amazon Web Services General Reference</i>. Once the resource is created, you can
+     *         use <a>TagResource</a>, <a>UntagResource</a>, and <a>ListTagsForResource</a> to add, remove, and view
+     *         tags. The maximum tag limit may be lower than stated. See the Amazon Web Services General Reference for
+     *         actual tagging limits.
      */
 
     public java.util.List<Tag> getTags() {
@@ -356,21 +360,23 @@ public class CreateScriptRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * A list of labels to assign to the new script resource. Tags are developer-defined key-value pairs. Tagging AWS
-     * resources are useful for resource management, access management and cost allocation. For more information, see <a
-     * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"> Tagging AWS Resources</a> in the <i>AWS
-     * General Reference</i>. Once the resource is created, you can use <a>TagResource</a>, <a>UntagResource</a>, and
-     * <a>ListTagsForResource</a> to add, remove, and view tags. The maximum tag limit may be lower than stated. See the
-     * AWS General Reference for actual tagging limits.
+     * A list of labels to assign to the new script resource. Tags are developer-defined key-value pairs. Tagging Amazon
+     * Web Services resources are useful for resource management, access management and cost allocation. For more
+     * information, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"> Tagging Amazon Web
+     * Services Resources</a> in the <i>Amazon Web Services General Reference</i>. Once the resource is created, you can
+     * use <a>TagResource</a>, <a>UntagResource</a>, and <a>ListTagsForResource</a> to add, remove, and view tags. The
+     * maximum tag limit may be lower than stated. See the Amazon Web Services General Reference for actual tagging
+     * limits.
      * </p>
      * 
      * @param tags
      *        A list of labels to assign to the new script resource. Tags are developer-defined key-value pairs. Tagging
-     *        AWS resources are useful for resource management, access management and cost allocation. For more
-     *        information, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"> Tagging AWS
-     *        Resources</a> in the <i>AWS General Reference</i>. Once the resource is created, you can use
-     *        <a>TagResource</a>, <a>UntagResource</a>, and <a>ListTagsForResource</a> to add, remove, and view tags.
-     *        The maximum tag limit may be lower than stated. See the AWS General Reference for actual tagging limits.
+     *        Amazon Web Services resources are useful for resource management, access management and cost allocation.
+     *        For more information, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">
+     *        Tagging Amazon Web Services Resources</a> in the <i>Amazon Web Services General Reference</i>. Once the
+     *        resource is created, you can use <a>TagResource</a>, <a>UntagResource</a>, and <a>ListTagsForResource</a>
+     *        to add, remove, and view tags. The maximum tag limit may be lower than stated. See the Amazon Web Services
+     *        General Reference for actual tagging limits.
      */
 
     public void setTags(java.util.Collection<Tag> tags) {
@@ -384,12 +390,13 @@ public class CreateScriptRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * A list of labels to assign to the new script resource. Tags are developer-defined key-value pairs. Tagging AWS
-     * resources are useful for resource management, access management and cost allocation. For more information, see <a
-     * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"> Tagging AWS Resources</a> in the <i>AWS
-     * General Reference</i>. Once the resource is created, you can use <a>TagResource</a>, <a>UntagResource</a>, and
-     * <a>ListTagsForResource</a> to add, remove, and view tags. The maximum tag limit may be lower than stated. See the
-     * AWS General Reference for actual tagging limits.
+     * A list of labels to assign to the new script resource. Tags are developer-defined key-value pairs. Tagging Amazon
+     * Web Services resources are useful for resource management, access management and cost allocation. For more
+     * information, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"> Tagging Amazon Web
+     * Services Resources</a> in the <i>Amazon Web Services General Reference</i>. Once the resource is created, you can
+     * use <a>TagResource</a>, <a>UntagResource</a>, and <a>ListTagsForResource</a> to add, remove, and view tags. The
+     * maximum tag limit may be lower than stated. See the Amazon Web Services General Reference for actual tagging
+     * limits.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -399,11 +406,12 @@ public class CreateScriptRequest extends com.amazonaws.AmazonWebServiceRequest i
      * 
      * @param tags
      *        A list of labels to assign to the new script resource. Tags are developer-defined key-value pairs. Tagging
-     *        AWS resources are useful for resource management, access management and cost allocation. For more
-     *        information, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"> Tagging AWS
-     *        Resources</a> in the <i>AWS General Reference</i>. Once the resource is created, you can use
-     *        <a>TagResource</a>, <a>UntagResource</a>, and <a>ListTagsForResource</a> to add, remove, and view tags.
-     *        The maximum tag limit may be lower than stated. See the AWS General Reference for actual tagging limits.
+     *        Amazon Web Services resources are useful for resource management, access management and cost allocation.
+     *        For more information, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">
+     *        Tagging Amazon Web Services Resources</a> in the <i>Amazon Web Services General Reference</i>. Once the
+     *        resource is created, you can use <a>TagResource</a>, <a>UntagResource</a>, and <a>ListTagsForResource</a>
+     *        to add, remove, and view tags. The maximum tag limit may be lower than stated. See the Amazon Web Services
+     *        General Reference for actual tagging limits.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -419,21 +427,23 @@ public class CreateScriptRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * A list of labels to assign to the new script resource. Tags are developer-defined key-value pairs. Tagging AWS
-     * resources are useful for resource management, access management and cost allocation. For more information, see <a
-     * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"> Tagging AWS Resources</a> in the <i>AWS
-     * General Reference</i>. Once the resource is created, you can use <a>TagResource</a>, <a>UntagResource</a>, and
-     * <a>ListTagsForResource</a> to add, remove, and view tags. The maximum tag limit may be lower than stated. See the
-     * AWS General Reference for actual tagging limits.
+     * A list of labels to assign to the new script resource. Tags are developer-defined key-value pairs. Tagging Amazon
+     * Web Services resources are useful for resource management, access management and cost allocation. For more
+     * information, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"> Tagging Amazon Web
+     * Services Resources</a> in the <i>Amazon Web Services General Reference</i>. Once the resource is created, you can
+     * use <a>TagResource</a>, <a>UntagResource</a>, and <a>ListTagsForResource</a> to add, remove, and view tags. The
+     * maximum tag limit may be lower than stated. See the Amazon Web Services General Reference for actual tagging
+     * limits.
      * </p>
      * 
      * @param tags
      *        A list of labels to assign to the new script resource. Tags are developer-defined key-value pairs. Tagging
-     *        AWS resources are useful for resource management, access management and cost allocation. For more
-     *        information, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"> Tagging AWS
-     *        Resources</a> in the <i>AWS General Reference</i>. Once the resource is created, you can use
-     *        <a>TagResource</a>, <a>UntagResource</a>, and <a>ListTagsForResource</a> to add, remove, and view tags.
-     *        The maximum tag limit may be lower than stated. See the AWS General Reference for actual tagging limits.
+     *        Amazon Web Services resources are useful for resource management, access management and cost allocation.
+     *        For more information, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">
+     *        Tagging Amazon Web Services Resources</a> in the <i>Amazon Web Services General Reference</i>. Once the
+     *        resource is created, you can use <a>TagResource</a>, <a>UntagResource</a>, and <a>ListTagsForResource</a>
+     *        to add, remove, and view tags. The maximum tag limit may be lower than stated. See the Amazon Web Services
+     *        General Reference for actual tagging limits.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

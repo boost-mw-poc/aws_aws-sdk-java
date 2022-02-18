@@ -58,8 +58,8 @@ public class DescribeInstancesRequest extends com.amazonaws.AmazonWebServiceRequ
     private String nextToken;
     /**
      * <p>
-     * The name of a location to retrieve instance information for, in the form of an AWS Region code such as
-     * <code>us-west-2</code>.
+     * The name of a location to retrieve instance information for, in the form of an Amazon Web Services Region code
+     * such as <code>us-west-2</code>.
      * </p>
      */
     private String location;
@@ -253,13 +253,13 @@ public class DescribeInstancesRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The name of a location to retrieve instance information for, in the form of an AWS Region code such as
-     * <code>us-west-2</code>.
+     * The name of a location to retrieve instance information for, in the form of an Amazon Web Services Region code
+     * such as <code>us-west-2</code>.
      * </p>
      * 
      * @param location
-     *        The name of a location to retrieve instance information for, in the form of an AWS Region code such as
-     *        <code>us-west-2</code>.
+     *        The name of a location to retrieve instance information for, in the form of an Amazon Web Services Region
+     *        code such as <code>us-west-2</code>.
      */
 
     public void setLocation(String location) {
@@ -268,12 +268,12 @@ public class DescribeInstancesRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The name of a location to retrieve instance information for, in the form of an AWS Region code such as
-     * <code>us-west-2</code>.
+     * The name of a location to retrieve instance information for, in the form of an Amazon Web Services Region code
+     * such as <code>us-west-2</code>.
      * </p>
      * 
-     * @return The name of a location to retrieve instance information for, in the form of an AWS Region code such as
-     *         <code>us-west-2</code>.
+     * @return The name of a location to retrieve instance information for, in the form of an Amazon Web Services Region
+     *         code such as <code>us-west-2</code>.
      */
 
     public String getLocation() {
@@ -282,13 +282,13 @@ public class DescribeInstancesRequest extends com.amazonaws.AmazonWebServiceRequ
 
     /**
      * <p>
-     * The name of a location to retrieve instance information for, in the form of an AWS Region code such as
-     * <code>us-west-2</code>.
+     * The name of a location to retrieve instance information for, in the form of an Amazon Web Services Region code
+     * such as <code>us-west-2</code>.
      * </p>
      * 
      * @param location
-     *        The name of a location to retrieve instance information for, in the form of an AWS Region code such as
-     *        <code>us-west-2</code>.
+     *        The name of a location to retrieve instance information for, in the form of an Amazon Web Services Region
+     *        code such as <code>us-west-2</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

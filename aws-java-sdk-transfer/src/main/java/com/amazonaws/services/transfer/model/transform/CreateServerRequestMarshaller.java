@@ -44,6 +44,10 @@ public class CreateServerRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("IdentityProviderType").build();
     private static final MarshallingInfo<String> LOGGINGROLE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LoggingRole").build();
+    private static final MarshallingInfo<String> POSTAUTHENTICATIONLOGINBANNER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PostAuthenticationLoginBanner").build();
+    private static final MarshallingInfo<String> PREAUTHENTICATIONLOGINBANNER_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("PreAuthenticationLoginBanner").build();
     private static final MarshallingInfo<List> PROTOCOLS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Protocols").build();
     private static final MarshallingInfo<StructuredPojo> PROTOCOLDETAILS_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
@@ -79,6 +83,8 @@ public class CreateServerRequestMarshaller {
             protocolMarshaller.marshall(createServerRequest.getIdentityProviderDetails(), IDENTITYPROVIDERDETAILS_BINDING);
             protocolMarshaller.marshall(createServerRequest.getIdentityProviderType(), IDENTITYPROVIDERTYPE_BINDING);
             protocolMarshaller.marshall(createServerRequest.getLoggingRole(), LOGGINGROLE_BINDING);
+            protocolMarshaller.marshall(createServerRequest.getPostAuthenticationLoginBanner(), POSTAUTHENTICATIONLOGINBANNER_BINDING);
+            protocolMarshaller.marshall(createServerRequest.getPreAuthenticationLoginBanner(), PREAUTHENTICATIONLOGINBANNER_BINDING);
             protocolMarshaller.marshall(createServerRequest.getProtocols(), PROTOCOLS_BINDING);
             protocolMarshaller.marshall(createServerRequest.getProtocolDetails(), PROTOCOLDETAILS_BINDING);
             protocolMarshaller.marshall(createServerRequest.getSecurityPolicyName(), SECURITYPOLICYNAME_BINDING);

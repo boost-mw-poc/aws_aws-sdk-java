@@ -549,6 +549,37 @@ public interface AWSBudgetsAsync extends AWSBudgets {
 
     /**
      * <p>
+     * Lists the budget names and notifications that are associated with an account.
+     * </p>
+     * 
+     * @param describeBudgetNotificationsForAccountRequest
+     * @return A Java Future containing the result of the DescribeBudgetNotificationsForAccount operation returned by
+     *         the service.
+     * @sample AWSBudgetsAsync.DescribeBudgetNotificationsForAccount
+     */
+    java.util.concurrent.Future<DescribeBudgetNotificationsForAccountResult> describeBudgetNotificationsForAccountAsync(
+            DescribeBudgetNotificationsForAccountRequest describeBudgetNotificationsForAccountRequest);
+
+    /**
+     * <p>
+     * Lists the budget names and notifications that are associated with an account.
+     * </p>
+     * 
+     * @param describeBudgetNotificationsForAccountRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DescribeBudgetNotificationsForAccount operation returned by
+     *         the service.
+     * @sample AWSBudgetsAsyncHandler.DescribeBudgetNotificationsForAccount
+     */
+    java.util.concurrent.Future<DescribeBudgetNotificationsForAccountResult> describeBudgetNotificationsForAccountAsync(
+            DescribeBudgetNotificationsForAccountRequest describeBudgetNotificationsForAccountRequest,
+            com.amazonaws.handlers.AsyncHandler<DescribeBudgetNotificationsForAccountRequest, DescribeBudgetNotificationsForAccountResult> asyncHandler);
+
+    /**
+     * <p>
      * Describes the history for <code>DAILY</code>, <code>MONTHLY</code>, and <code>QUARTERLY</code> budgets. Budget
      * history isn't available for <code>ANNUAL</code> budgets.
      * </p>

@@ -94,8 +94,8 @@ public class Build implements Serializable, Cloneable, StructuredPojo {
     private String status;
     /**
      * <p>
-     * File size of the uploaded game build, expressed in bytes. When the build status is <code>INITIALIZED</code>, this
-     * value is 0.
+     * File size of the uploaded game build, expressed in bytes. When the build status is <code>INITIALIZED</code> or
+     * when using a custom Amazon S3 storage location, this value is 0.
      * </p>
      */
     private Long sizeOnDisk;
@@ -597,13 +597,13 @@ public class Build implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * File size of the uploaded game build, expressed in bytes. When the build status is <code>INITIALIZED</code>, this
-     * value is 0.
+     * File size of the uploaded game build, expressed in bytes. When the build status is <code>INITIALIZED</code> or
+     * when using a custom Amazon S3 storage location, this value is 0.
      * </p>
      * 
      * @param sizeOnDisk
      *        File size of the uploaded game build, expressed in bytes. When the build status is
-     *        <code>INITIALIZED</code>, this value is 0.
+     *        <code>INITIALIZED</code> or when using a custom Amazon S3 storage location, this value is 0.
      */
 
     public void setSizeOnDisk(Long sizeOnDisk) {
@@ -612,12 +612,12 @@ public class Build implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * File size of the uploaded game build, expressed in bytes. When the build status is <code>INITIALIZED</code>, this
-     * value is 0.
+     * File size of the uploaded game build, expressed in bytes. When the build status is <code>INITIALIZED</code> or
+     * when using a custom Amazon S3 storage location, this value is 0.
      * </p>
      * 
      * @return File size of the uploaded game build, expressed in bytes. When the build status is
-     *         <code>INITIALIZED</code>, this value is 0.
+     *         <code>INITIALIZED</code> or when using a custom Amazon S3 storage location, this value is 0.
      */
 
     public Long getSizeOnDisk() {
@@ -626,13 +626,13 @@ public class Build implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * File size of the uploaded game build, expressed in bytes. When the build status is <code>INITIALIZED</code>, this
-     * value is 0.
+     * File size of the uploaded game build, expressed in bytes. When the build status is <code>INITIALIZED</code> or
+     * when using a custom Amazon S3 storage location, this value is 0.
      * </p>
      * 
      * @param sizeOnDisk
      *        File size of the uploaded game build, expressed in bytes. When the build status is
-     *        <code>INITIALIZED</code>, this value is 0.
+     *        <code>INITIALIZED</code> or when using a custom Amazon S3 storage location, this value is 0.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

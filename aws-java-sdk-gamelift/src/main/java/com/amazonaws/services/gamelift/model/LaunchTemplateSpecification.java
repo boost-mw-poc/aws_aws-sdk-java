@@ -22,8 +22,8 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * <b>This data type is used with the GameLift FleetIQ and game server groups.</b>
  * </p>
  * <p>
- * An EC2 launch template that contains configuration settings and game server code to be deployed to all instances in a
- * game server group. The launch template is specified when creating a new game server group with
+ * An Amazon EC2 launch template that contains configuration settings and game server code to be deployed to all
+ * instances in a game server group. The launch template is specified when creating a new game server group with
  * <a>CreateGameServerGroup</a>.
  * </p>
  * 
@@ -35,32 +35,32 @@ public class LaunchTemplateSpecification implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * A unique identifier for an existing EC2 launch template.
+     * A unique identifier for an existing Amazon EC2 launch template.
      * </p>
      */
     private String launchTemplateId;
     /**
      * <p>
-     * A readable identifier for an existing EC2 launch template.
+     * A readable identifier for an existing Amazon EC2 launch template.
      * </p>
      */
     private String launchTemplateName;
     /**
      * <p>
-     * The version of the EC2 launch template to use. If no version is specified, the default version will be used. With
-     * Amazon EC2, you can specify a default version for a launch template. If none is set, the default is the first
-     * version created.
+     * The version of the Amazon EC2 launch template to use. If no version is specified, the default version will be
+     * used. With Amazon Elastic Compute Cloud, you can specify a default version for a launch template. If none is set,
+     * the default is the first version created.
      * </p>
      */
     private String version;
 
     /**
      * <p>
-     * A unique identifier for an existing EC2 launch template.
+     * A unique identifier for an existing Amazon EC2 launch template.
      * </p>
      * 
      * @param launchTemplateId
-     *        A unique identifier for an existing EC2 launch template.
+     *        A unique identifier for an existing Amazon EC2 launch template.
      */
 
     public void setLaunchTemplateId(String launchTemplateId) {
@@ -69,10 +69,10 @@ public class LaunchTemplateSpecification implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * A unique identifier for an existing EC2 launch template.
+     * A unique identifier for an existing Amazon EC2 launch template.
      * </p>
      * 
-     * @return A unique identifier for an existing EC2 launch template.
+     * @return A unique identifier for an existing Amazon EC2 launch template.
      */
 
     public String getLaunchTemplateId() {
@@ -81,11 +81,11 @@ public class LaunchTemplateSpecification implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * A unique identifier for an existing EC2 launch template.
+     * A unique identifier for an existing Amazon EC2 launch template.
      * </p>
      * 
      * @param launchTemplateId
-     *        A unique identifier for an existing EC2 launch template.
+     *        A unique identifier for an existing Amazon EC2 launch template.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -96,11 +96,11 @@ public class LaunchTemplateSpecification implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * A readable identifier for an existing EC2 launch template.
+     * A readable identifier for an existing Amazon EC2 launch template.
      * </p>
      * 
      * @param launchTemplateName
-     *        A readable identifier for an existing EC2 launch template.
+     *        A readable identifier for an existing Amazon EC2 launch template.
      */
 
     public void setLaunchTemplateName(String launchTemplateName) {
@@ -109,10 +109,10 @@ public class LaunchTemplateSpecification implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * A readable identifier for an existing EC2 launch template.
+     * A readable identifier for an existing Amazon EC2 launch template.
      * </p>
      * 
-     * @return A readable identifier for an existing EC2 launch template.
+     * @return A readable identifier for an existing Amazon EC2 launch template.
      */
 
     public String getLaunchTemplateName() {
@@ -121,11 +121,11 @@ public class LaunchTemplateSpecification implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * A readable identifier for an existing EC2 launch template.
+     * A readable identifier for an existing Amazon EC2 launch template.
      * </p>
      * 
      * @param launchTemplateName
-     *        A readable identifier for an existing EC2 launch template.
+     *        A readable identifier for an existing Amazon EC2 launch template.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -136,15 +136,15 @@ public class LaunchTemplateSpecification implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The version of the EC2 launch template to use. If no version is specified, the default version will be used. With
-     * Amazon EC2, you can specify a default version for a launch template. If none is set, the default is the first
-     * version created.
+     * The version of the Amazon EC2 launch template to use. If no version is specified, the default version will be
+     * used. With Amazon Elastic Compute Cloud, you can specify a default version for a launch template. If none is set,
+     * the default is the first version created.
      * </p>
      * 
      * @param version
-     *        The version of the EC2 launch template to use. If no version is specified, the default version will be
-     *        used. With Amazon EC2, you can specify a default version for a launch template. If none is set, the
-     *        default is the first version created.
+     *        The version of the Amazon EC2 launch template to use. If no version is specified, the default version will
+     *        be used. With Amazon Elastic Compute Cloud, you can specify a default version for a launch template. If
+     *        none is set, the default is the first version created.
      */
 
     public void setVersion(String version) {
@@ -153,14 +153,14 @@ public class LaunchTemplateSpecification implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The version of the EC2 launch template to use. If no version is specified, the default version will be used. With
-     * Amazon EC2, you can specify a default version for a launch template. If none is set, the default is the first
-     * version created.
+     * The version of the Amazon EC2 launch template to use. If no version is specified, the default version will be
+     * used. With Amazon Elastic Compute Cloud, you can specify a default version for a launch template. If none is set,
+     * the default is the first version created.
      * </p>
      * 
-     * @return The version of the EC2 launch template to use. If no version is specified, the default version will be
-     *         used. With Amazon EC2, you can specify a default version for a launch template. If none is set, the
-     *         default is the first version created.
+     * @return The version of the Amazon EC2 launch template to use. If no version is specified, the default version
+     *         will be used. With Amazon Elastic Compute Cloud, you can specify a default version for a launch template.
+     *         If none is set, the default is the first version created.
      */
 
     public String getVersion() {
@@ -169,15 +169,15 @@ public class LaunchTemplateSpecification implements Serializable, Cloneable, Str
 
     /**
      * <p>
-     * The version of the EC2 launch template to use. If no version is specified, the default version will be used. With
-     * Amazon EC2, you can specify a default version for a launch template. If none is set, the default is the first
-     * version created.
+     * The version of the Amazon EC2 launch template to use. If no version is specified, the default version will be
+     * used. With Amazon Elastic Compute Cloud, you can specify a default version for a launch template. If none is set,
+     * the default is the first version created.
      * </p>
      * 
      * @param version
-     *        The version of the EC2 launch template to use. If no version is specified, the default version will be
-     *        used. With Amazon EC2, you can specify a default version for a launch template. If none is set, the
-     *        default is the first version created.
+     *        The version of the Amazon EC2 launch template to use. If no version is specified, the default version will
+     *        be used. With Amazon Elastic Compute Cloud, you can specify a default version for a launch template. If
+     *        none is set, the default is the first version created.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

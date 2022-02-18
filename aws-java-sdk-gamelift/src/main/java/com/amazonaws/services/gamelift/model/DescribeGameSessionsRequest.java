@@ -50,7 +50,7 @@ public class DescribeGameSessionsRequest extends com.amazonaws.AmazonWebServiceR
     /**
      * <p>
      * A fleet location to get game session details for. You can specify a fleet's home Region or a remote location. Use
-     * the AWS Region code format, such as <code>us-west-2</code>.
+     * the Amazon Web Services Region code format, such as <code>us-west-2</code>.
      * </p>
      */
     private String location;
@@ -209,12 +209,12 @@ public class DescribeGameSessionsRequest extends com.amazonaws.AmazonWebServiceR
     /**
      * <p>
      * A fleet location to get game session details for. You can specify a fleet's home Region or a remote location. Use
-     * the AWS Region code format, such as <code>us-west-2</code>.
+     * the Amazon Web Services Region code format, such as <code>us-west-2</code>.
      * </p>
      * 
      * @param location
      *        A fleet location to get game session details for. You can specify a fleet's home Region or a remote
-     *        location. Use the AWS Region code format, such as <code>us-west-2</code>.
+     *        location. Use the Amazon Web Services Region code format, such as <code>us-west-2</code>.
      */
 
     public void setLocation(String location) {
@@ -224,11 +224,11 @@ public class DescribeGameSessionsRequest extends com.amazonaws.AmazonWebServiceR
     /**
      * <p>
      * A fleet location to get game session details for. You can specify a fleet's home Region or a remote location. Use
-     * the AWS Region code format, such as <code>us-west-2</code>.
+     * the Amazon Web Services Region code format, such as <code>us-west-2</code>.
      * </p>
      * 
      * @return A fleet location to get game session details for. You can specify a fleet's home Region or a remote
-     *         location. Use the AWS Region code format, such as <code>us-west-2</code>.
+     *         location. Use the Amazon Web Services Region code format, such as <code>us-west-2</code>.
      */
 
     public String getLocation() {
@@ -238,12 +238,12 @@ public class DescribeGameSessionsRequest extends com.amazonaws.AmazonWebServiceR
     /**
      * <p>
      * A fleet location to get game session details for. You can specify a fleet's home Region or a remote location. Use
-     * the AWS Region code format, such as <code>us-west-2</code>.
+     * the Amazon Web Services Region code format, such as <code>us-west-2</code>.
      * </p>
      * 
      * @param location
      *        A fleet location to get game session details for. You can specify a fleet's home Region or a remote
-     *        location. Use the AWS Region code format, such as <code>us-west-2</code>.
+     *        location. Use the Amazon Web Services Region code format, such as <code>us-west-2</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

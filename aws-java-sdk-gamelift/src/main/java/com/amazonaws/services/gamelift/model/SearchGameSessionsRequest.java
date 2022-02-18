@@ -45,7 +45,7 @@ public class SearchGameSessionsRequest extends com.amazonaws.AmazonWebServiceReq
     /**
      * <p>
      * A fleet location to search for game sessions. You can specify a fleet's home Region or a remote location. Use the
-     * AWS Region code format, such as <code>us-west-2</code>.
+     * Amazon Web Services Region code format, such as <code>us-west-2</code>.
      * </p>
      * <p>
      * </p>
@@ -265,14 +265,14 @@ public class SearchGameSessionsRequest extends com.amazonaws.AmazonWebServiceReq
     /**
      * <p>
      * A fleet location to search for game sessions. You can specify a fleet's home Region or a remote location. Use the
-     * AWS Region code format, such as <code>us-west-2</code>.
+     * Amazon Web Services Region code format, such as <code>us-west-2</code>.
      * </p>
      * <p>
      * </p>
      * 
      * @param location
      *        A fleet location to search for game sessions. You can specify a fleet's home Region or a remote location.
-     *        Use the AWS Region code format, such as <code>us-west-2</code>. </p>
+     *        Use the Amazon Web Services Region code format, such as <code>us-west-2</code>. </p>
      *        <p>
      */
 
@@ -283,13 +283,13 @@ public class SearchGameSessionsRequest extends com.amazonaws.AmazonWebServiceReq
     /**
      * <p>
      * A fleet location to search for game sessions. You can specify a fleet's home Region or a remote location. Use the
-     * AWS Region code format, such as <code>us-west-2</code>.
+     * Amazon Web Services Region code format, such as <code>us-west-2</code>.
      * </p>
      * <p>
      * </p>
      * 
      * @return A fleet location to search for game sessions. You can specify a fleet's home Region or a remote location.
-     *         Use the AWS Region code format, such as <code>us-west-2</code>. </p>
+     *         Use the Amazon Web Services Region code format, such as <code>us-west-2</code>. </p>
      *         <p>
      */
 
@@ -300,14 +300,14 @@ public class SearchGameSessionsRequest extends com.amazonaws.AmazonWebServiceReq
     /**
      * <p>
      * A fleet location to search for game sessions. You can specify a fleet's home Region or a remote location. Use the
-     * AWS Region code format, such as <code>us-west-2</code>.
+     * Amazon Web Services Region code format, such as <code>us-west-2</code>.
      * </p>
      * <p>
      * </p>
      * 
      * @param location
      *        A fleet location to search for game sessions. You can specify a fleet's home Region or a remote location.
-     *        Use the AWS Region code format, such as <code>us-west-2</code>. </p>
+     *        Use the Amazon Web Services Region code format, such as <code>us-west-2</code>. </p>
      *        <p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */

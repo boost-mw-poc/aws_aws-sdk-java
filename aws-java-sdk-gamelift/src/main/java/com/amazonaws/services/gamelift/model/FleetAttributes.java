@@ -57,9 +57,10 @@ public class FleetAttributes implements Serializable, Cloneable, StructuredPojo 
     private String fleetType;
     /**
      * <p>
-     * The EC2 instance type that determines the computing resources of each instance in the fleet. Instance type
+     * The Amazon EC2 instance type that determines the computing resources of each instance in the fleet. Instance type
      * defines the CPU, memory, storage, and networking capacity. See <a
-     * href="http://aws.amazon.com/ec2/instance-types/">Amazon EC2 Instance Types</a> for detailed descriptions.
+     * href="http://aws.amazon.com/ec2/instance-types/">Amazon Elastic Compute Cloud Instance Types</a> for detailed
+     * descriptions.
      * </p>
      */
     private String instanceType;
@@ -226,11 +227,11 @@ public class FleetAttributes implements Serializable, Cloneable, StructuredPojo 
     private java.util.List<String> stoppedActions;
     /**
      * <p>
-     * A unique identifier for an AWS IAM role that manages access to your AWS services. With an instance role ARN set,
-     * any application that runs on an instance in this fleet can assume the role, including install scripts, server
-     * processes, and daemons (background processes). Create a role or look up a role's ARN by using the <a
-     * href="https://console.aws.amazon.com/iam/">IAM dashboard</a> in the AWS Management Console. Learn more about
-     * using on-box credentials for your game servers at <a
+     * A unique identifier for an IAM role that manages access to your Amazon Web Services services. With an instance
+     * role ARN set, any application that runs on an instance in this fleet can assume the role, including install
+     * scripts, server processes, and daemons (background processes). Create a role or look up a role's ARN by using the
+     * <a href="https://console.aws.amazon.com/iam/">IAM dashboard</a> in the Amazon Web Services Management Console.
+     * Learn more about using on-box credentials for your game servers at <a
      * href="https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-sdk-server-resources.html"> Access
      * external resources from a game server</a>.
      * </p>
@@ -419,15 +420,17 @@ public class FleetAttributes implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The EC2 instance type that determines the computing resources of each instance in the fleet. Instance type
+     * The Amazon EC2 instance type that determines the computing resources of each instance in the fleet. Instance type
      * defines the CPU, memory, storage, and networking capacity. See <a
-     * href="http://aws.amazon.com/ec2/instance-types/">Amazon EC2 Instance Types</a> for detailed descriptions.
+     * href="http://aws.amazon.com/ec2/instance-types/">Amazon Elastic Compute Cloud Instance Types</a> for detailed
+     * descriptions.
      * </p>
      * 
      * @param instanceType
-     *        The EC2 instance type that determines the computing resources of each instance in the fleet. Instance type
-     *        defines the CPU, memory, storage, and networking capacity. See <a
-     *        href="http://aws.amazon.com/ec2/instance-types/">Amazon EC2 Instance Types</a> for detailed descriptions.
+     *        The Amazon EC2 instance type that determines the computing resources of each instance in the fleet.
+     *        Instance type defines the CPU, memory, storage, and networking capacity. See <a
+     *        href="http://aws.amazon.com/ec2/instance-types/">Amazon Elastic Compute Cloud Instance Types</a> for
+     *        detailed descriptions.
      * @see EC2InstanceType
      */
 
@@ -437,14 +440,16 @@ public class FleetAttributes implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The EC2 instance type that determines the computing resources of each instance in the fleet. Instance type
+     * The Amazon EC2 instance type that determines the computing resources of each instance in the fleet. Instance type
      * defines the CPU, memory, storage, and networking capacity. See <a
-     * href="http://aws.amazon.com/ec2/instance-types/">Amazon EC2 Instance Types</a> for detailed descriptions.
+     * href="http://aws.amazon.com/ec2/instance-types/">Amazon Elastic Compute Cloud Instance Types</a> for detailed
+     * descriptions.
      * </p>
      * 
-     * @return The EC2 instance type that determines the computing resources of each instance in the fleet. Instance
-     *         type defines the CPU, memory, storage, and networking capacity. See <a
-     *         href="http://aws.amazon.com/ec2/instance-types/">Amazon EC2 Instance Types</a> for detailed descriptions.
+     * @return The Amazon EC2 instance type that determines the computing resources of each instance in the fleet.
+     *         Instance type defines the CPU, memory, storage, and networking capacity. See <a
+     *         href="http://aws.amazon.com/ec2/instance-types/">Amazon Elastic Compute Cloud Instance Types</a> for
+     *         detailed descriptions.
      * @see EC2InstanceType
      */
 
@@ -454,15 +459,17 @@ public class FleetAttributes implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The EC2 instance type that determines the computing resources of each instance in the fleet. Instance type
+     * The Amazon EC2 instance type that determines the computing resources of each instance in the fleet. Instance type
      * defines the CPU, memory, storage, and networking capacity. See <a
-     * href="http://aws.amazon.com/ec2/instance-types/">Amazon EC2 Instance Types</a> for detailed descriptions.
+     * href="http://aws.amazon.com/ec2/instance-types/">Amazon Elastic Compute Cloud Instance Types</a> for detailed
+     * descriptions.
      * </p>
      * 
      * @param instanceType
-     *        The EC2 instance type that determines the computing resources of each instance in the fleet. Instance type
-     *        defines the CPU, memory, storage, and networking capacity. See <a
-     *        href="http://aws.amazon.com/ec2/instance-types/">Amazon EC2 Instance Types</a> for detailed descriptions.
+     *        The Amazon EC2 instance type that determines the computing resources of each instance in the fleet.
+     *        Instance type defines the CPU, memory, storage, and networking capacity. See <a
+     *        href="http://aws.amazon.com/ec2/instance-types/">Amazon Elastic Compute Cloud Instance Types</a> for
+     *        detailed descriptions.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see EC2InstanceType
      */
@@ -474,15 +481,17 @@ public class FleetAttributes implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The EC2 instance type that determines the computing resources of each instance in the fleet. Instance type
+     * The Amazon EC2 instance type that determines the computing resources of each instance in the fleet. Instance type
      * defines the CPU, memory, storage, and networking capacity. See <a
-     * href="http://aws.amazon.com/ec2/instance-types/">Amazon EC2 Instance Types</a> for detailed descriptions.
+     * href="http://aws.amazon.com/ec2/instance-types/">Amazon Elastic Compute Cloud Instance Types</a> for detailed
+     * descriptions.
      * </p>
      * 
      * @param instanceType
-     *        The EC2 instance type that determines the computing resources of each instance in the fleet. Instance type
-     *        defines the CPU, memory, storage, and networking capacity. See <a
-     *        href="http://aws.amazon.com/ec2/instance-types/">Amazon EC2 Instance Types</a> for detailed descriptions.
+     *        The Amazon EC2 instance type that determines the computing resources of each instance in the fleet.
+     *        Instance type defines the CPU, memory, storage, and networking capacity. See <a
+     *        href="http://aws.amazon.com/ec2/instance-types/">Amazon Elastic Compute Cloud Instance Types</a> for
+     *        detailed descriptions.
      * @see EC2InstanceType
      */
 
@@ -492,15 +501,17 @@ public class FleetAttributes implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The EC2 instance type that determines the computing resources of each instance in the fleet. Instance type
+     * The Amazon EC2 instance type that determines the computing resources of each instance in the fleet. Instance type
      * defines the CPU, memory, storage, and networking capacity. See <a
-     * href="http://aws.amazon.com/ec2/instance-types/">Amazon EC2 Instance Types</a> for detailed descriptions.
+     * href="http://aws.amazon.com/ec2/instance-types/">Amazon Elastic Compute Cloud Instance Types</a> for detailed
+     * descriptions.
      * </p>
      * 
      * @param instanceType
-     *        The EC2 instance type that determines the computing resources of each instance in the fleet. Instance type
-     *        defines the CPU, memory, storage, and networking capacity. See <a
-     *        href="http://aws.amazon.com/ec2/instance-types/">Amazon EC2 Instance Types</a> for detailed descriptions.
+     *        The Amazon EC2 instance type that determines the computing resources of each instance in the fleet.
+     *        Instance type defines the CPU, memory, storage, and networking capacity. See <a
+     *        href="http://aws.amazon.com/ec2/instance-types/">Amazon Elastic Compute Cloud Instance Types</a> for
+     *        detailed descriptions.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see EC2InstanceType
      */
@@ -1967,21 +1978,21 @@ public class FleetAttributes implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * A unique identifier for an AWS IAM role that manages access to your AWS services. With an instance role ARN set,
-     * any application that runs on an instance in this fleet can assume the role, including install scripts, server
-     * processes, and daemons (background processes). Create a role or look up a role's ARN by using the <a
-     * href="https://console.aws.amazon.com/iam/">IAM dashboard</a> in the AWS Management Console. Learn more about
-     * using on-box credentials for your game servers at <a
+     * A unique identifier for an IAM role that manages access to your Amazon Web Services services. With an instance
+     * role ARN set, any application that runs on an instance in this fleet can assume the role, including install
+     * scripts, server processes, and daemons (background processes). Create a role or look up a role's ARN by using the
+     * <a href="https://console.aws.amazon.com/iam/">IAM dashboard</a> in the Amazon Web Services Management Console.
+     * Learn more about using on-box credentials for your game servers at <a
      * href="https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-sdk-server-resources.html"> Access
      * external resources from a game server</a>.
      * </p>
      * 
      * @param instanceRoleArn
-     *        A unique identifier for an AWS IAM role that manages access to your AWS services. With an instance role
-     *        ARN set, any application that runs on an instance in this fleet can assume the role, including install
-     *        scripts, server processes, and daemons (background processes). Create a role or look up a role's ARN by
-     *        using the <a href="https://console.aws.amazon.com/iam/">IAM dashboard</a> in the AWS Management Console.
-     *        Learn more about using on-box credentials for your game servers at <a
+     *        A unique identifier for an IAM role that manages access to your Amazon Web Services services. With an
+     *        instance role ARN set, any application that runs on an instance in this fleet can assume the role,
+     *        including install scripts, server processes, and daemons (background processes). Create a role or look up
+     *        a role's ARN by using the <a href="https://console.aws.amazon.com/iam/">IAM dashboard</a> in the Amazon
+     *        Web Services Management Console. Learn more about using on-box credentials for your game servers at <a
      *        href="https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-sdk-server-resources.html">
      *        Access external resources from a game server</a>.
      */
@@ -1992,20 +2003,20 @@ public class FleetAttributes implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * A unique identifier for an AWS IAM role that manages access to your AWS services. With an instance role ARN set,
-     * any application that runs on an instance in this fleet can assume the role, including install scripts, server
-     * processes, and daemons (background processes). Create a role or look up a role's ARN by using the <a
-     * href="https://console.aws.amazon.com/iam/">IAM dashboard</a> in the AWS Management Console. Learn more about
-     * using on-box credentials for your game servers at <a
+     * A unique identifier for an IAM role that manages access to your Amazon Web Services services. With an instance
+     * role ARN set, any application that runs on an instance in this fleet can assume the role, including install
+     * scripts, server processes, and daemons (background processes). Create a role or look up a role's ARN by using the
+     * <a href="https://console.aws.amazon.com/iam/">IAM dashboard</a> in the Amazon Web Services Management Console.
+     * Learn more about using on-box credentials for your game servers at <a
      * href="https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-sdk-server-resources.html"> Access
      * external resources from a game server</a>.
      * </p>
      * 
-     * @return A unique identifier for an AWS IAM role that manages access to your AWS services. With an instance role
-     *         ARN set, any application that runs on an instance in this fleet can assume the role, including install
-     *         scripts, server processes, and daemons (background processes). Create a role or look up a role's ARN by
-     *         using the <a href="https://console.aws.amazon.com/iam/">IAM dashboard</a> in the AWS Management Console.
-     *         Learn more about using on-box credentials for your game servers at <a
+     * @return A unique identifier for an IAM role that manages access to your Amazon Web Services services. With an
+     *         instance role ARN set, any application that runs on an instance in this fleet can assume the role,
+     *         including install scripts, server processes, and daemons (background processes). Create a role or look up
+     *         a role's ARN by using the <a href="https://console.aws.amazon.com/iam/">IAM dashboard</a> in the Amazon
+     *         Web Services Management Console. Learn more about using on-box credentials for your game servers at <a
      *         href="https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-sdk-server-resources.html">
      *         Access external resources from a game server</a>.
      */
@@ -2016,21 +2027,21 @@ public class FleetAttributes implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * A unique identifier for an AWS IAM role that manages access to your AWS services. With an instance role ARN set,
-     * any application that runs on an instance in this fleet can assume the role, including install scripts, server
-     * processes, and daemons (background processes). Create a role or look up a role's ARN by using the <a
-     * href="https://console.aws.amazon.com/iam/">IAM dashboard</a> in the AWS Management Console. Learn more about
-     * using on-box credentials for your game servers at <a
+     * A unique identifier for an IAM role that manages access to your Amazon Web Services services. With an instance
+     * role ARN set, any application that runs on an instance in this fleet can assume the role, including install
+     * scripts, server processes, and daemons (background processes). Create a role or look up a role's ARN by using the
+     * <a href="https://console.aws.amazon.com/iam/">IAM dashboard</a> in the Amazon Web Services Management Console.
+     * Learn more about using on-box credentials for your game servers at <a
      * href="https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-sdk-server-resources.html"> Access
      * external resources from a game server</a>.
      * </p>
      * 
      * @param instanceRoleArn
-     *        A unique identifier for an AWS IAM role that manages access to your AWS services. With an instance role
-     *        ARN set, any application that runs on an instance in this fleet can assume the role, including install
-     *        scripts, server processes, and daemons (background processes). Create a role or look up a role's ARN by
-     *        using the <a href="https://console.aws.amazon.com/iam/">IAM dashboard</a> in the AWS Management Console.
-     *        Learn more about using on-box credentials for your game servers at <a
+     *        A unique identifier for an IAM role that manages access to your Amazon Web Services services. With an
+     *        instance role ARN set, any application that runs on an instance in this fleet can assume the role,
+     *        including install scripts, server processes, and daemons (background processes). Create a role or look up
+     *        a role's ARN by using the <a href="https://console.aws.amazon.com/iam/">IAM dashboard</a> in the Amazon
+     *        Web Services Management Console. Learn more about using on-box credentials for your game servers at <a
      *        href="https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-sdk-server-resources.html">
      *        Access external resources from a game server</a>.
      * @return Returns a reference to this object so that method calls can be chained together.

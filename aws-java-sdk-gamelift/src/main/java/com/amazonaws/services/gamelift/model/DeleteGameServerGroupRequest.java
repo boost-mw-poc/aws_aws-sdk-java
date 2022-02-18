@@ -38,19 +38,20 @@ public class DeleteGameServerGroupRequest extends com.amazonaws.AmazonWebService
      * <ul>
      * <li>
      * <p>
-     * <code>SAFE_DELETE</code> – (default) Terminates the game server group and EC2 Auto Scaling group only when it has
-     * no game servers that are in <code>UTILIZED</code> status.
+     * <code>SAFE_DELETE</code> – (default) Terminates the game server group and Amazon EC2 Auto Scaling group only when
+     * it has no game servers that are in <code>UTILIZED</code> status.
      * </p>
      * </li>
      * <li>
      * <p>
      * <code>FORCE_DELETE</code> – Terminates the game server group, including all active game servers regardless of
-     * their utilization status, and the EC2 Auto Scaling group.
+     * their utilization status, and the Amazon EC2 Auto Scaling group.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>RETAIN</code> – Does a safe delete of the game server group but retains the EC2 Auto Scaling group as is.
+     * <code>RETAIN</code> – Does a safe delete of the game server group but retains the Amazon EC2 Auto Scaling group
+     * as is.
      * </p>
      * </li>
      * </ul>
@@ -104,19 +105,20 @@ public class DeleteGameServerGroupRequest extends com.amazonaws.AmazonWebService
      * <ul>
      * <li>
      * <p>
-     * <code>SAFE_DELETE</code> – (default) Terminates the game server group and EC2 Auto Scaling group only when it has
-     * no game servers that are in <code>UTILIZED</code> status.
+     * <code>SAFE_DELETE</code> – (default) Terminates the game server group and Amazon EC2 Auto Scaling group only when
+     * it has no game servers that are in <code>UTILIZED</code> status.
      * </p>
      * </li>
      * <li>
      * <p>
      * <code>FORCE_DELETE</code> – Terminates the game server group, including all active game servers regardless of
-     * their utilization status, and the EC2 Auto Scaling group.
+     * their utilization status, and the Amazon EC2 Auto Scaling group.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>RETAIN</code> – Does a safe delete of the game server group but retains the EC2 Auto Scaling group as is.
+     * <code>RETAIN</code> – Does a safe delete of the game server group but retains the Amazon EC2 Auto Scaling group
+     * as is.
      * </p>
      * </li>
      * </ul>
@@ -126,20 +128,20 @@ public class DeleteGameServerGroupRequest extends com.amazonaws.AmazonWebService
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>SAFE_DELETE</code> – (default) Terminates the game server group and EC2 Auto Scaling group only when
-     *        it has no game servers that are in <code>UTILIZED</code> status.
+     *        <code>SAFE_DELETE</code> – (default) Terminates the game server group and Amazon EC2 Auto Scaling group
+     *        only when it has no game servers that are in <code>UTILIZED</code> status.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <code>FORCE_DELETE</code> – Terminates the game server group, including all active game servers regardless
-     *        of their utilization status, and the EC2 Auto Scaling group.
+     *        of their utilization status, and the Amazon EC2 Auto Scaling group.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>RETAIN</code> – Does a safe delete of the game server group but retains the EC2 Auto Scaling group
-     *        as is.
+     *        <code>RETAIN</code> – Does a safe delete of the game server group but retains the Amazon EC2 Auto Scaling
+     *        group as is.
      *        </p>
      *        </li>
      * @see GameServerGroupDeleteOption
@@ -156,19 +158,20 @@ public class DeleteGameServerGroupRequest extends com.amazonaws.AmazonWebService
      * <ul>
      * <li>
      * <p>
-     * <code>SAFE_DELETE</code> – (default) Terminates the game server group and EC2 Auto Scaling group only when it has
-     * no game servers that are in <code>UTILIZED</code> status.
+     * <code>SAFE_DELETE</code> – (default) Terminates the game server group and Amazon EC2 Auto Scaling group only when
+     * it has no game servers that are in <code>UTILIZED</code> status.
      * </p>
      * </li>
      * <li>
      * <p>
      * <code>FORCE_DELETE</code> – Terminates the game server group, including all active game servers regardless of
-     * their utilization status, and the EC2 Auto Scaling group.
+     * their utilization status, and the Amazon EC2 Auto Scaling group.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>RETAIN</code> – Does a safe delete of the game server group but retains the EC2 Auto Scaling group as is.
+     * <code>RETAIN</code> – Does a safe delete of the game server group but retains the Amazon EC2 Auto Scaling group
+     * as is.
      * </p>
      * </li>
      * </ul>
@@ -177,20 +180,20 @@ public class DeleteGameServerGroupRequest extends com.amazonaws.AmazonWebService
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>SAFE_DELETE</code> – (default) Terminates the game server group and EC2 Auto Scaling group only
-     *         when it has no game servers that are in <code>UTILIZED</code> status.
+     *         <code>SAFE_DELETE</code> – (default) Terminates the game server group and Amazon EC2 Auto Scaling group
+     *         only when it has no game servers that are in <code>UTILIZED</code> status.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
      *         <code>FORCE_DELETE</code> – Terminates the game server group, including all active game servers
-     *         regardless of their utilization status, and the EC2 Auto Scaling group.
+     *         regardless of their utilization status, and the Amazon EC2 Auto Scaling group.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>RETAIN</code> – Does a safe delete of the game server group but retains the EC2 Auto Scaling group
-     *         as is.
+     *         <code>RETAIN</code> – Does a safe delete of the game server group but retains the Amazon EC2 Auto Scaling
+     *         group as is.
      *         </p>
      *         </li>
      * @see GameServerGroupDeleteOption
@@ -207,19 +210,20 @@ public class DeleteGameServerGroupRequest extends com.amazonaws.AmazonWebService
      * <ul>
      * <li>
      * <p>
-     * <code>SAFE_DELETE</code> – (default) Terminates the game server group and EC2 Auto Scaling group only when it has
-     * no game servers that are in <code>UTILIZED</code> status.
+     * <code>SAFE_DELETE</code> – (default) Terminates the game server group and Amazon EC2 Auto Scaling group only when
+     * it has no game servers that are in <code>UTILIZED</code> status.
      * </p>
      * </li>
      * <li>
      * <p>
      * <code>FORCE_DELETE</code> – Terminates the game server group, including all active game servers regardless of
-     * their utilization status, and the EC2 Auto Scaling group.
+     * their utilization status, and the Amazon EC2 Auto Scaling group.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>RETAIN</code> – Does a safe delete of the game server group but retains the EC2 Auto Scaling group as is.
+     * <code>RETAIN</code> – Does a safe delete of the game server group but retains the Amazon EC2 Auto Scaling group
+     * as is.
      * </p>
      * </li>
      * </ul>
@@ -229,20 +233,20 @@ public class DeleteGameServerGroupRequest extends com.amazonaws.AmazonWebService
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>SAFE_DELETE</code> – (default) Terminates the game server group and EC2 Auto Scaling group only when
-     *        it has no game servers that are in <code>UTILIZED</code> status.
+     *        <code>SAFE_DELETE</code> – (default) Terminates the game server group and Amazon EC2 Auto Scaling group
+     *        only when it has no game servers that are in <code>UTILIZED</code> status.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <code>FORCE_DELETE</code> – Terminates the game server group, including all active game servers regardless
-     *        of their utilization status, and the EC2 Auto Scaling group.
+     *        of their utilization status, and the Amazon EC2 Auto Scaling group.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>RETAIN</code> – Does a safe delete of the game server group but retains the EC2 Auto Scaling group
-     *        as is.
+     *        <code>RETAIN</code> – Does a safe delete of the game server group but retains the Amazon EC2 Auto Scaling
+     *        group as is.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -261,19 +265,20 @@ public class DeleteGameServerGroupRequest extends com.amazonaws.AmazonWebService
      * <ul>
      * <li>
      * <p>
-     * <code>SAFE_DELETE</code> – (default) Terminates the game server group and EC2 Auto Scaling group only when it has
-     * no game servers that are in <code>UTILIZED</code> status.
+     * <code>SAFE_DELETE</code> – (default) Terminates the game server group and Amazon EC2 Auto Scaling group only when
+     * it has no game servers that are in <code>UTILIZED</code> status.
      * </p>
      * </li>
      * <li>
      * <p>
      * <code>FORCE_DELETE</code> – Terminates the game server group, including all active game servers regardless of
-     * their utilization status, and the EC2 Auto Scaling group.
+     * their utilization status, and the Amazon EC2 Auto Scaling group.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>RETAIN</code> – Does a safe delete of the game server group but retains the EC2 Auto Scaling group as is.
+     * <code>RETAIN</code> – Does a safe delete of the game server group but retains the Amazon EC2 Auto Scaling group
+     * as is.
      * </p>
      * </li>
      * </ul>
@@ -283,20 +288,20 @@ public class DeleteGameServerGroupRequest extends com.amazonaws.AmazonWebService
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>SAFE_DELETE</code> – (default) Terminates the game server group and EC2 Auto Scaling group only when
-     *        it has no game servers that are in <code>UTILIZED</code> status.
+     *        <code>SAFE_DELETE</code> – (default) Terminates the game server group and Amazon EC2 Auto Scaling group
+     *        only when it has no game servers that are in <code>UTILIZED</code> status.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <code>FORCE_DELETE</code> – Terminates the game server group, including all active game servers regardless
-     *        of their utilization status, and the EC2 Auto Scaling group.
+     *        of their utilization status, and the Amazon EC2 Auto Scaling group.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>RETAIN</code> – Does a safe delete of the game server group but retains the EC2 Auto Scaling group
-     *        as is.
+     *        <code>RETAIN</code> – Does a safe delete of the game server group but retains the Amazon EC2 Auto Scaling
+     *        group as is.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

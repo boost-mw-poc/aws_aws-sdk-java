@@ -1240,6 +1240,74 @@ public class AWSBudgetsClient extends AmazonWebServiceClient implements AWSBudge
 
     /**
      * <p>
+     * Lists the budget names and notifications that are associated with an account.
+     * </p>
+     * 
+     * @param describeBudgetNotificationsForAccountRequest
+     * @return Result of the DescribeBudgetNotificationsForAccount operation returned by the service.
+     * @throws InternalErrorException
+     *         An error on the server occurred during the processing of your request. Try again later.
+     * @throws InvalidParameterException
+     *         An error on the client occurred. Typically, the cause is an invalid input value.
+     * @throws NotFoundException
+     *         We can’t locate the resource that you specified.
+     * @throws InvalidNextTokenException
+     *         The pagination token is invalid.
+     * @throws ExpiredNextTokenException
+     *         The pagination token expired.
+     * @throws AccessDeniedException
+     *         You are not authorized to use this operation with the given parameters.
+     * @sample AWSBudgets.DescribeBudgetNotificationsForAccount
+     */
+    @Override
+    public DescribeBudgetNotificationsForAccountResult describeBudgetNotificationsForAccount(DescribeBudgetNotificationsForAccountRequest request) {
+        request = beforeClientExecution(request);
+        return executeDescribeBudgetNotificationsForAccount(request);
+    }
+
+    @SdkInternalApi
+    final DescribeBudgetNotificationsForAccountResult executeDescribeBudgetNotificationsForAccount(
+            DescribeBudgetNotificationsForAccountRequest describeBudgetNotificationsForAccountRequest) {
+
+        ExecutionContext executionContext = createExecutionContext(describeBudgetNotificationsForAccountRequest);
+        AWSRequestMetrics awsRequestMetrics = executionContext.getAwsRequestMetrics();
+        awsRequestMetrics.startEvent(Field.ClientExecuteTime);
+        Request<DescribeBudgetNotificationsForAccountRequest> request = null;
+        Response<DescribeBudgetNotificationsForAccountResult> response = null;
+
+        try {
+            awsRequestMetrics.startEvent(Field.RequestMarshallTime);
+            try {
+                request = new DescribeBudgetNotificationsForAccountRequestProtocolMarshaller(protocolFactory).marshall(super
+                        .beforeMarshalling(describeBudgetNotificationsForAccountRequest));
+                // Binds the request metrics to the current request.
+                request.setAWSRequestMetrics(awsRequestMetrics);
+                request.addHandlerContext(HandlerContextKey.CLIENT_ENDPOINT, endpoint);
+                request.addHandlerContext(HandlerContextKey.ENDPOINT_OVERRIDDEN, isEndpointOverridden());
+                request.addHandlerContext(HandlerContextKey.SIGNING_REGION, getSigningRegion());
+                request.addHandlerContext(HandlerContextKey.SERVICE_ID, "Budgets");
+                request.addHandlerContext(HandlerContextKey.OPERATION_NAME, "DescribeBudgetNotificationsForAccount");
+                request.addHandlerContext(HandlerContextKey.ADVANCED_CONFIG, advancedConfig);
+
+            } finally {
+                awsRequestMetrics.endEvent(Field.RequestMarshallTime);
+            }
+
+            HttpResponseHandler<AmazonWebServiceResponse<DescribeBudgetNotificationsForAccountResult>> responseHandler = protocolFactory.createResponseHandler(
+                    new JsonOperationMetadata().withPayloadJson(true).withHasStreamingSuccessResponse(false),
+                    new DescribeBudgetNotificationsForAccountResultJsonUnmarshaller());
+            response = invoke(request, responseHandler, executionContext);
+
+            return response.getAwsResponse();
+
+        } finally {
+
+            endClientExecution(awsRequestMetrics, request, response);
+        }
+    }
+
+    /**
+     * <p>
      * Describes the history for <code>DAILY</code>, <code>MONTHLY</code>, and <code>QUARTERLY</code> budgets. Budget
      * history isn't available for <code>ANNUAL</code> budgets.
      * </p>

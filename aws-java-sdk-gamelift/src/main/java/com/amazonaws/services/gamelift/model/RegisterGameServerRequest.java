@@ -35,7 +35,7 @@ public class RegisterGameServerRequest extends com.amazonaws.AmazonWebServiceReq
     /**
      * <p>
      * A custom string that uniquely identifies the game server to register. Game server IDs are developer-defined and
-     * must be unique across all game server groups in your AWS account.
+     * must be unique across all game server groups in your Amazon Web Services account.
      * </p>
      */
     private String gameServerId;
@@ -110,12 +110,12 @@ public class RegisterGameServerRequest extends com.amazonaws.AmazonWebServiceReq
     /**
      * <p>
      * A custom string that uniquely identifies the game server to register. Game server IDs are developer-defined and
-     * must be unique across all game server groups in your AWS account.
+     * must be unique across all game server groups in your Amazon Web Services account.
      * </p>
      * 
      * @param gameServerId
      *        A custom string that uniquely identifies the game server to register. Game server IDs are
-     *        developer-defined and must be unique across all game server groups in your AWS account.
+     *        developer-defined and must be unique across all game server groups in your Amazon Web Services account.
      */
 
     public void setGameServerId(String gameServerId) {
@@ -125,11 +125,11 @@ public class RegisterGameServerRequest extends com.amazonaws.AmazonWebServiceReq
     /**
      * <p>
      * A custom string that uniquely identifies the game server to register. Game server IDs are developer-defined and
-     * must be unique across all game server groups in your AWS account.
+     * must be unique across all game server groups in your Amazon Web Services account.
      * </p>
      * 
      * @return A custom string that uniquely identifies the game server to register. Game server IDs are
-     *         developer-defined and must be unique across all game server groups in your AWS account.
+     *         developer-defined and must be unique across all game server groups in your Amazon Web Services account.
      */
 
     public String getGameServerId() {
@@ -139,12 +139,12 @@ public class RegisterGameServerRequest extends com.amazonaws.AmazonWebServiceReq
     /**
      * <p>
      * A custom string that uniquely identifies the game server to register. Game server IDs are developer-defined and
-     * must be unique across all game server groups in your AWS account.
+     * must be unique across all game server groups in your Amazon Web Services account.
      * </p>
      * 
      * @param gameServerId
      *        A custom string that uniquely identifies the game server to register. Game server IDs are
-     *        developer-defined and must be unique across all game server groups in your AWS account.
+     *        developer-defined and must be unique across all game server groups in your Amazon Web Services account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

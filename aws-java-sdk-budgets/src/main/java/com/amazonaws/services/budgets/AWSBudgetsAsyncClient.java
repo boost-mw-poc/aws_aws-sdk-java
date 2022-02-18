@@ -763,6 +763,41 @@ public class AWSBudgetsAsyncClient extends AWSBudgetsClient implements AWSBudget
     }
 
     @Override
+    public java.util.concurrent.Future<DescribeBudgetNotificationsForAccountResult> describeBudgetNotificationsForAccountAsync(
+            DescribeBudgetNotificationsForAccountRequest request) {
+
+        return describeBudgetNotificationsForAccountAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DescribeBudgetNotificationsForAccountResult> describeBudgetNotificationsForAccountAsync(
+            final DescribeBudgetNotificationsForAccountRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DescribeBudgetNotificationsForAccountRequest, DescribeBudgetNotificationsForAccountResult> asyncHandler) {
+        final DescribeBudgetNotificationsForAccountRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DescribeBudgetNotificationsForAccountResult>() {
+            @Override
+            public DescribeBudgetNotificationsForAccountResult call() throws Exception {
+                DescribeBudgetNotificationsForAccountResult result = null;
+
+                try {
+                    result = executeDescribeBudgetNotificationsForAccount(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DescribeBudgetPerformanceHistoryResult> describeBudgetPerformanceHistoryAsync(
             DescribeBudgetPerformanceHistoryRequest request) {
 

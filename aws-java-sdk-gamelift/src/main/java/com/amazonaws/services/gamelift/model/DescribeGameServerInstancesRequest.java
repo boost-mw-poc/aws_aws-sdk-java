@@ -33,9 +33,9 @@ public class DescribeGameServerInstancesRequest extends com.amazonaws.AmazonWebS
     private String gameServerGroupName;
     /**
      * <p>
-     * The EC2 instance IDs that you want to retrieve status on. EC2 instance IDs use a 17-character format, for
-     * example: <code>i-1234567890abcdef0</code>. To retrieve all instances in the game server group, leave this
-     * parameter empty.
+     * The Amazon EC2 instance IDs that you want to retrieve status on. Amazon EC2 instance IDs use a 17-character
+     * format, for example: <code>i-1234567890abcdef0</code>. To retrieve all instances in the game server group, leave
+     * this parameter empty.
      * </p>
      */
     private java.util.List<String> instanceIds;
@@ -96,14 +96,14 @@ public class DescribeGameServerInstancesRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The EC2 instance IDs that you want to retrieve status on. EC2 instance IDs use a 17-character format, for
-     * example: <code>i-1234567890abcdef0</code>. To retrieve all instances in the game server group, leave this
-     * parameter empty.
+     * The Amazon EC2 instance IDs that you want to retrieve status on. Amazon EC2 instance IDs use a 17-character
+     * format, for example: <code>i-1234567890abcdef0</code>. To retrieve all instances in the game server group, leave
+     * this parameter empty.
      * </p>
      * 
-     * @return The EC2 instance IDs that you want to retrieve status on. EC2 instance IDs use a 17-character format, for
-     *         example: <code>i-1234567890abcdef0</code>. To retrieve all instances in the game server group, leave this
-     *         parameter empty.
+     * @return The Amazon EC2 instance IDs that you want to retrieve status on. Amazon EC2 instance IDs use a
+     *         17-character format, for example: <code>i-1234567890abcdef0</code>. To retrieve all instances in the game
+     *         server group, leave this parameter empty.
      */
 
     public java.util.List<String> getInstanceIds() {
@@ -112,15 +112,15 @@ public class DescribeGameServerInstancesRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The EC2 instance IDs that you want to retrieve status on. EC2 instance IDs use a 17-character format, for
-     * example: <code>i-1234567890abcdef0</code>. To retrieve all instances in the game server group, leave this
-     * parameter empty.
+     * The Amazon EC2 instance IDs that you want to retrieve status on. Amazon EC2 instance IDs use a 17-character
+     * format, for example: <code>i-1234567890abcdef0</code>. To retrieve all instances in the game server group, leave
+     * this parameter empty.
      * </p>
      * 
      * @param instanceIds
-     *        The EC2 instance IDs that you want to retrieve status on. EC2 instance IDs use a 17-character format, for
-     *        example: <code>i-1234567890abcdef0</code>. To retrieve all instances in the game server group, leave this
-     *        parameter empty.
+     *        The Amazon EC2 instance IDs that you want to retrieve status on. Amazon EC2 instance IDs use a
+     *        17-character format, for example: <code>i-1234567890abcdef0</code>. To retrieve all instances in the game
+     *        server group, leave this parameter empty.
      */
 
     public void setInstanceIds(java.util.Collection<String> instanceIds) {
@@ -134,9 +134,9 @@ public class DescribeGameServerInstancesRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The EC2 instance IDs that you want to retrieve status on. EC2 instance IDs use a 17-character format, for
-     * example: <code>i-1234567890abcdef0</code>. To retrieve all instances in the game server group, leave this
-     * parameter empty.
+     * The Amazon EC2 instance IDs that you want to retrieve status on. Amazon EC2 instance IDs use a 17-character
+     * format, for example: <code>i-1234567890abcdef0</code>. To retrieve all instances in the game server group, leave
+     * this parameter empty.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -145,9 +145,9 @@ public class DescribeGameServerInstancesRequest extends com.amazonaws.AmazonWebS
      * </p>
      * 
      * @param instanceIds
-     *        The EC2 instance IDs that you want to retrieve status on. EC2 instance IDs use a 17-character format, for
-     *        example: <code>i-1234567890abcdef0</code>. To retrieve all instances in the game server group, leave this
-     *        parameter empty.
+     *        The Amazon EC2 instance IDs that you want to retrieve status on. Amazon EC2 instance IDs use a
+     *        17-character format, for example: <code>i-1234567890abcdef0</code>. To retrieve all instances in the game
+     *        server group, leave this parameter empty.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -163,15 +163,15 @@ public class DescribeGameServerInstancesRequest extends com.amazonaws.AmazonWebS
 
     /**
      * <p>
-     * The EC2 instance IDs that you want to retrieve status on. EC2 instance IDs use a 17-character format, for
-     * example: <code>i-1234567890abcdef0</code>. To retrieve all instances in the game server group, leave this
-     * parameter empty.
+     * The Amazon EC2 instance IDs that you want to retrieve status on. Amazon EC2 instance IDs use a 17-character
+     * format, for example: <code>i-1234567890abcdef0</code>. To retrieve all instances in the game server group, leave
+     * this parameter empty.
      * </p>
      * 
      * @param instanceIds
-     *        The EC2 instance IDs that you want to retrieve status on. EC2 instance IDs use a 17-character format, for
-     *        example: <code>i-1234567890abcdef0</code>. To retrieve all instances in the game server group, leave this
-     *        parameter empty.
+     *        The Amazon EC2 instance IDs that you want to retrieve status on. Amazon EC2 instance IDs use a
+     *        17-character format, for example: <code>i-1234567890abcdef0</code>. To retrieve all instances in the game
+     *        server group, leave this parameter empty.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

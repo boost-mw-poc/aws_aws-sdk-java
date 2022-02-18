@@ -48,7 +48,7 @@ public class GameServerInstance implements Serializable, Cloneable, StructuredPo
     /**
      * <p>
      * A developer-defined identifier for the game server group that includes the game server instance. The name is
-     * unique for each Region in each AWS account.
+     * unique for each Region in each Amazon Web Services account.
      * </p>
      */
     private String gameServerGroupName;
@@ -96,12 +96,12 @@ public class GameServerInstance implements Serializable, Cloneable, StructuredPo
     /**
      * <p>
      * A developer-defined identifier for the game server group that includes the game server instance. The name is
-     * unique for each Region in each AWS account.
+     * unique for each Region in each Amazon Web Services account.
      * </p>
      * 
      * @param gameServerGroupName
      *        A developer-defined identifier for the game server group that includes the game server instance. The name
-     *        is unique for each Region in each AWS account.
+     *        is unique for each Region in each Amazon Web Services account.
      */
 
     public void setGameServerGroupName(String gameServerGroupName) {
@@ -111,11 +111,11 @@ public class GameServerInstance implements Serializable, Cloneable, StructuredPo
     /**
      * <p>
      * A developer-defined identifier for the game server group that includes the game server instance. The name is
-     * unique for each Region in each AWS account.
+     * unique for each Region in each Amazon Web Services account.
      * </p>
      * 
      * @return A developer-defined identifier for the game server group that includes the game server instance. The name
-     *         is unique for each Region in each AWS account.
+     *         is unique for each Region in each Amazon Web Services account.
      */
 
     public String getGameServerGroupName() {
@@ -125,12 +125,12 @@ public class GameServerInstance implements Serializable, Cloneable, StructuredPo
     /**
      * <p>
      * A developer-defined identifier for the game server group that includes the game server instance. The name is
-     * unique for each Region in each AWS account.
+     * unique for each Region in each Amazon Web Services account.
      * </p>
      * 
      * @param gameServerGroupName
      *        A developer-defined identifier for the game server group that includes the game server instance. The name
-     *        is unique for each Region in each AWS account.
+     *        is unique for each Region in each Amazon Web Services account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

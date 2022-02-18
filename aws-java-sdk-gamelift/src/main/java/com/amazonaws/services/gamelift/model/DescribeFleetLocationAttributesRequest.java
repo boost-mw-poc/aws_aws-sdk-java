@@ -36,8 +36,8 @@ public class DescribeFleetLocationAttributesRequest extends com.amazonaws.Amazon
     private String fleetId;
     /**
      * <p>
-     * A list of fleet locations to retrieve information for. Specify locations in the form of an AWS Region code, such
-     * as <code>us-west-2</code>.
+     * A list of fleet locations to retrieve information for. Specify locations in the form of an Amazon Web Services
+     * Region code, such as <code>us-west-2</code>.
      * </p>
      */
     private java.util.List<String> locations;
@@ -101,12 +101,12 @@ public class DescribeFleetLocationAttributesRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * A list of fleet locations to retrieve information for. Specify locations in the form of an AWS Region code, such
-     * as <code>us-west-2</code>.
+     * A list of fleet locations to retrieve information for. Specify locations in the form of an Amazon Web Services
+     * Region code, such as <code>us-west-2</code>.
      * </p>
      * 
-     * @return A list of fleet locations to retrieve information for. Specify locations in the form of an AWS Region
-     *         code, such as <code>us-west-2</code>.
+     * @return A list of fleet locations to retrieve information for. Specify locations in the form of an Amazon Web
+     *         Services Region code, such as <code>us-west-2</code>.
      */
 
     public java.util.List<String> getLocations() {
@@ -115,13 +115,13 @@ public class DescribeFleetLocationAttributesRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * A list of fleet locations to retrieve information for. Specify locations in the form of an AWS Region code, such
-     * as <code>us-west-2</code>.
+     * A list of fleet locations to retrieve information for. Specify locations in the form of an Amazon Web Services
+     * Region code, such as <code>us-west-2</code>.
      * </p>
      * 
      * @param locations
-     *        A list of fleet locations to retrieve information for. Specify locations in the form of an AWS Region
-     *        code, such as <code>us-west-2</code>.
+     *        A list of fleet locations to retrieve information for. Specify locations in the form of an Amazon Web
+     *        Services Region code, such as <code>us-west-2</code>.
      */
 
     public void setLocations(java.util.Collection<String> locations) {
@@ -135,8 +135,8 @@ public class DescribeFleetLocationAttributesRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * A list of fleet locations to retrieve information for. Specify locations in the form of an AWS Region code, such
-     * as <code>us-west-2</code>.
+     * A list of fleet locations to retrieve information for. Specify locations in the form of an Amazon Web Services
+     * Region code, such as <code>us-west-2</code>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -145,8 +145,8 @@ public class DescribeFleetLocationAttributesRequest extends com.amazonaws.Amazon
      * </p>
      * 
      * @param locations
-     *        A list of fleet locations to retrieve information for. Specify locations in the form of an AWS Region
-     *        code, such as <code>us-west-2</code>.
+     *        A list of fleet locations to retrieve information for. Specify locations in the form of an Amazon Web
+     *        Services Region code, such as <code>us-west-2</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -162,13 +162,13 @@ public class DescribeFleetLocationAttributesRequest extends com.amazonaws.Amazon
 
     /**
      * <p>
-     * A list of fleet locations to retrieve information for. Specify locations in the form of an AWS Region code, such
-     * as <code>us-west-2</code>.
+     * A list of fleet locations to retrieve information for. Specify locations in the form of an Amazon Web Services
+     * Region code, such as <code>us-west-2</code>.
      * </p>
      * 
      * @param locations
-     *        A list of fleet locations to retrieve information for. Specify locations in the form of an AWS Region
-     *        code, such as <code>us-west-2</code>.
+     *        A list of fleet locations to retrieve information for. Specify locations in the form of an Amazon Web
+     *        Services Region code, such as <code>us-west-2</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

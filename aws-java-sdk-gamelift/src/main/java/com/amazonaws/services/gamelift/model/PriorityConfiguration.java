@@ -89,8 +89,8 @@ public class PriorityConfiguration implements Serializable, Cloneable, Structure
     /**
      * <p>
      * The prioritization order to use for fleet locations, when the <code>PriorityOrder</code> property includes
-     * <code>LOCATION</code>. Locations are identified by AWS Region codes such as <code>us-west-2</code>. Each location
-     * can only be listed once.
+     * <code>LOCATION</code>. Locations are identified by Amazon Web Services Region codes such as
+     * <code>us-west-2</code>. Each location can only be listed once.
      * </p>
      */
     private java.util.List<String> locationOrder;
@@ -466,12 +466,12 @@ public class PriorityConfiguration implements Serializable, Cloneable, Structure
     /**
      * <p>
      * The prioritization order to use for fleet locations, when the <code>PriorityOrder</code> property includes
-     * <code>LOCATION</code>. Locations are identified by AWS Region codes such as <code>us-west-2</code>. Each location
-     * can only be listed once.
+     * <code>LOCATION</code>. Locations are identified by Amazon Web Services Region codes such as
+     * <code>us-west-2</code>. Each location can only be listed once.
      * </p>
      * 
      * @return The prioritization order to use for fleet locations, when the <code>PriorityOrder</code> property
-     *         includes <code>LOCATION</code>. Locations are identified by AWS Region codes such as
+     *         includes <code>LOCATION</code>. Locations are identified by Amazon Web Services Region codes such as
      *         <code>us-west-2</code>. Each location can only be listed once.
      */
 
@@ -482,14 +482,14 @@ public class PriorityConfiguration implements Serializable, Cloneable, Structure
     /**
      * <p>
      * The prioritization order to use for fleet locations, when the <code>PriorityOrder</code> property includes
-     * <code>LOCATION</code>. Locations are identified by AWS Region codes such as <code>us-west-2</code>. Each location
-     * can only be listed once.
+     * <code>LOCATION</code>. Locations are identified by Amazon Web Services Region codes such as
+     * <code>us-west-2</code>. Each location can only be listed once.
      * </p>
      * 
      * @param locationOrder
      *        The prioritization order to use for fleet locations, when the <code>PriorityOrder</code> property includes
-     *        <code>LOCATION</code>. Locations are identified by AWS Region codes such as <code>us-west-2</code>. Each
-     *        location can only be listed once.
+     *        <code>LOCATION</code>. Locations are identified by Amazon Web Services Region codes such as
+     *        <code>us-west-2</code>. Each location can only be listed once.
      */
 
     public void setLocationOrder(java.util.Collection<String> locationOrder) {
@@ -504,8 +504,8 @@ public class PriorityConfiguration implements Serializable, Cloneable, Structure
     /**
      * <p>
      * The prioritization order to use for fleet locations, when the <code>PriorityOrder</code> property includes
-     * <code>LOCATION</code>. Locations are identified by AWS Region codes such as <code>us-west-2</code>. Each location
-     * can only be listed once.
+     * <code>LOCATION</code>. Locations are identified by Amazon Web Services Region codes such as
+     * <code>us-west-2</code>. Each location can only be listed once.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -515,8 +515,8 @@ public class PriorityConfiguration implements Serializable, Cloneable, Structure
      * 
      * @param locationOrder
      *        The prioritization order to use for fleet locations, when the <code>PriorityOrder</code> property includes
-     *        <code>LOCATION</code>. Locations are identified by AWS Region codes such as <code>us-west-2</code>. Each
-     *        location can only be listed once.
+     *        <code>LOCATION</code>. Locations are identified by Amazon Web Services Region codes such as
+     *        <code>us-west-2</code>. Each location can only be listed once.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -533,14 +533,14 @@ public class PriorityConfiguration implements Serializable, Cloneable, Structure
     /**
      * <p>
      * The prioritization order to use for fleet locations, when the <code>PriorityOrder</code> property includes
-     * <code>LOCATION</code>. Locations are identified by AWS Region codes such as <code>us-west-2</code>. Each location
-     * can only be listed once.
+     * <code>LOCATION</code>. Locations are identified by Amazon Web Services Region codes such as
+     * <code>us-west-2</code>. Each location can only be listed once.
      * </p>
      * 
      * @param locationOrder
      *        The prioritization order to use for fleet locations, when the <code>PriorityOrder</code> property includes
-     *        <code>LOCATION</code>. Locations are identified by AWS Region codes such as <code>us-west-2</code>. Each
-     *        location can only be listed once.
+     *        <code>LOCATION</code>. Locations are identified by Amazon Web Services Region codes such as
+     *        <code>us-west-2</code>. Each location can only be listed once.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -36,8 +36,8 @@ public class DeleteFleetLocationsRequest extends com.amazonaws.AmazonWebServiceR
     private String fleetId;
     /**
      * <p>
-     * The list of fleet locations to delete. Specify locations in the form of an AWS Region code, such as
-     * <code>us-west-2</code>.
+     * The list of fleet locations to delete. Specify locations in the form of an Amazon Web Services Region code, such
+     * as <code>us-west-2</code>.
      * </p>
      */
     private java.util.List<String> locations;
@@ -84,12 +84,12 @@ public class DeleteFleetLocationsRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The list of fleet locations to delete. Specify locations in the form of an AWS Region code, such as
-     * <code>us-west-2</code>.
+     * The list of fleet locations to delete. Specify locations in the form of an Amazon Web Services Region code, such
+     * as <code>us-west-2</code>.
      * </p>
      * 
-     * @return The list of fleet locations to delete. Specify locations in the form of an AWS Region code, such as
-     *         <code>us-west-2</code>.
+     * @return The list of fleet locations to delete. Specify locations in the form of an Amazon Web Services Region
+     *         code, such as <code>us-west-2</code>.
      */
 
     public java.util.List<String> getLocations() {
@@ -98,13 +98,13 @@ public class DeleteFleetLocationsRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The list of fleet locations to delete. Specify locations in the form of an AWS Region code, such as
-     * <code>us-west-2</code>.
+     * The list of fleet locations to delete. Specify locations in the form of an Amazon Web Services Region code, such
+     * as <code>us-west-2</code>.
      * </p>
      * 
      * @param locations
-     *        The list of fleet locations to delete. Specify locations in the form of an AWS Region code, such as
-     *        <code>us-west-2</code>.
+     *        The list of fleet locations to delete. Specify locations in the form of an Amazon Web Services Region
+     *        code, such as <code>us-west-2</code>.
      */
 
     public void setLocations(java.util.Collection<String> locations) {
@@ -118,8 +118,8 @@ public class DeleteFleetLocationsRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The list of fleet locations to delete. Specify locations in the form of an AWS Region code, such as
-     * <code>us-west-2</code>.
+     * The list of fleet locations to delete. Specify locations in the form of an Amazon Web Services Region code, such
+     * as <code>us-west-2</code>.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -128,8 +128,8 @@ public class DeleteFleetLocationsRequest extends com.amazonaws.AmazonWebServiceR
      * </p>
      * 
      * @param locations
-     *        The list of fleet locations to delete. Specify locations in the form of an AWS Region code, such as
-     *        <code>us-west-2</code>.
+     *        The list of fleet locations to delete. Specify locations in the form of an Amazon Web Services Region
+     *        code, such as <code>us-west-2</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -145,13 +145,13 @@ public class DeleteFleetLocationsRequest extends com.amazonaws.AmazonWebServiceR
 
     /**
      * <p>
-     * The list of fleet locations to delete. Specify locations in the form of an AWS Region code, such as
-     * <code>us-west-2</code>.
+     * The list of fleet locations to delete. Specify locations in the form of an Amazon Web Services Region code, such
+     * as <code>us-west-2</code>.
      * </p>
      * 
      * @param locations
-     *        The list of fleet locations to delete. Specify locations in the form of an AWS Region code, such as
-     *        <code>us-west-2</code>.
+     *        The list of fleet locations to delete. Specify locations in the form of an Amazon Web Services Region
+     *        code, such as <code>us-west-2</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -36,8 +36,8 @@ public class UpdateFleetCapacityRequest extends com.amazonaws.AmazonWebServiceRe
     private String fleetId;
     /**
      * <p>
-     * The number of EC2 instances you want to maintain in the specified fleet location. This value must fall between
-     * the minimum and maximum size limits.
+     * The number of Amazon EC2 instances you want to maintain in the specified fleet location. This value must fall
+     * between the minimum and maximum size limits.
      * </p>
      */
     private Integer desiredInstances;
@@ -57,8 +57,8 @@ public class UpdateFleetCapacityRequest extends com.amazonaws.AmazonWebServiceRe
     private Integer maxSize;
     /**
      * <p>
-     * The name of a remote location to update fleet capacity settings for, in the form of an AWS Region code such as
-     * <code>us-west-2</code>.
+     * The name of a remote location to update fleet capacity settings for, in the form of an Amazon Web Services Region
+     * code such as <code>us-west-2</code>.
      * </p>
      */
     private String location;
@@ -108,13 +108,13 @@ public class UpdateFleetCapacityRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The number of EC2 instances you want to maintain in the specified fleet location. This value must fall between
-     * the minimum and maximum size limits.
+     * The number of Amazon EC2 instances you want to maintain in the specified fleet location. This value must fall
+     * between the minimum and maximum size limits.
      * </p>
      * 
      * @param desiredInstances
-     *        The number of EC2 instances you want to maintain in the specified fleet location. This value must fall
-     *        between the minimum and maximum size limits.
+     *        The number of Amazon EC2 instances you want to maintain in the specified fleet location. This value must
+     *        fall between the minimum and maximum size limits.
      */
 
     public void setDesiredInstances(Integer desiredInstances) {
@@ -123,12 +123,12 @@ public class UpdateFleetCapacityRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The number of EC2 instances you want to maintain in the specified fleet location. This value must fall between
-     * the minimum and maximum size limits.
+     * The number of Amazon EC2 instances you want to maintain in the specified fleet location. This value must fall
+     * between the minimum and maximum size limits.
      * </p>
      * 
-     * @return The number of EC2 instances you want to maintain in the specified fleet location. This value must fall
-     *         between the minimum and maximum size limits.
+     * @return The number of Amazon EC2 instances you want to maintain in the specified fleet location. This value must
+     *         fall between the minimum and maximum size limits.
      */
 
     public Integer getDesiredInstances() {
@@ -137,13 +137,13 @@ public class UpdateFleetCapacityRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The number of EC2 instances you want to maintain in the specified fleet location. This value must fall between
-     * the minimum and maximum size limits.
+     * The number of Amazon EC2 instances you want to maintain in the specified fleet location. This value must fall
+     * between the minimum and maximum size limits.
      * </p>
      * 
      * @param desiredInstances
-     *        The number of EC2 instances you want to maintain in the specified fleet location. This value must fall
-     *        between the minimum and maximum size limits.
+     *        The number of Amazon EC2 instances you want to maintain in the specified fleet location. This value must
+     *        fall between the minimum and maximum size limits.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -246,13 +246,13 @@ public class UpdateFleetCapacityRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The name of a remote location to update fleet capacity settings for, in the form of an AWS Region code such as
-     * <code>us-west-2</code>.
+     * The name of a remote location to update fleet capacity settings for, in the form of an Amazon Web Services Region
+     * code such as <code>us-west-2</code>.
      * </p>
      * 
      * @param location
-     *        The name of a remote location to update fleet capacity settings for, in the form of an AWS Region code
-     *        such as <code>us-west-2</code>.
+     *        The name of a remote location to update fleet capacity settings for, in the form of an Amazon Web Services
+     *        Region code such as <code>us-west-2</code>.
      */
 
     public void setLocation(String location) {
@@ -261,12 +261,12 @@ public class UpdateFleetCapacityRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The name of a remote location to update fleet capacity settings for, in the form of an AWS Region code such as
-     * <code>us-west-2</code>.
+     * The name of a remote location to update fleet capacity settings for, in the form of an Amazon Web Services Region
+     * code such as <code>us-west-2</code>.
      * </p>
      * 
-     * @return The name of a remote location to update fleet capacity settings for, in the form of an AWS Region code
-     *         such as <code>us-west-2</code>.
+     * @return The name of a remote location to update fleet capacity settings for, in the form of an Amazon Web
+     *         Services Region code such as <code>us-west-2</code>.
      */
 
     public String getLocation() {
@@ -275,13 +275,13 @@ public class UpdateFleetCapacityRequest extends com.amazonaws.AmazonWebServiceRe
 
     /**
      * <p>
-     * The name of a remote location to update fleet capacity settings for, in the form of an AWS Region code such as
-     * <code>us-west-2</code>.
+     * The name of a remote location to update fleet capacity settings for, in the form of an Amazon Web Services Region
+     * code such as <code>us-west-2</code>.
      * </p>
      * 
      * @param location
-     *        The name of a remote location to update fleet capacity settings for, in the form of an AWS Region code
-     *        such as <code>us-west-2</code>.
+     *        The name of a remote location to update fleet capacity settings for, in the form of an Amazon Web Services
+     *        Region code such as <code>us-west-2</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

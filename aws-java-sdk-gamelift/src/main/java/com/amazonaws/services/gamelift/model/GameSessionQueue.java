@@ -26,7 +26,12 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * <b>Related actions</b>
  * </p>
  * <p>
- * <a>CreateGameSessionQueue</a> | <a>DescribeGameSessionQueues</a> | <a>UpdateGameSessionQueue</a>
+ * <a href="https://docs.aws.amazon.com/gamelift/latest/apireference/API_CreateGameSessionQueue.html">
+ * CreateGameSessionQueue</a> | <a
+ * href="https://docs.aws.amazon.com/gamelift/latest/apireference/API_DescribeGameSessionQueues.html"
+ * >DescribeGameSessionQueues</a> | <a
+ * href="https://docs.aws.amazon.com/gamelift/latest/apireference/API_UpdateGameSessionQueue.html"
+ * >UpdateGameSessionQueue</a>
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/GameSessionQueue" target="_top">AWS API
@@ -77,8 +82,8 @@ public class GameSessionQueue implements Serializable, Cloneable, StructuredPojo
     /**
      * <p>
      * A list of locations where a queue is allowed to place new game sessions. Locations are specified in the form of
-     * AWS Region codes, such as <code>us-west-2</code>. If this parameter is not set, game sessions can be placed in
-     * any queue location.
+     * Amazon Web Services Region codes, such as <code>us-west-2</code>. If this parameter is not set, game sessions can
+     * be placed in any queue location.
      * </p>
      */
     private FilterConfiguration filterConfiguration;
@@ -442,14 +447,14 @@ public class GameSessionQueue implements Serializable, Cloneable, StructuredPojo
     /**
      * <p>
      * A list of locations where a queue is allowed to place new game sessions. Locations are specified in the form of
-     * AWS Region codes, such as <code>us-west-2</code>. If this parameter is not set, game sessions can be placed in
-     * any queue location.
+     * Amazon Web Services Region codes, such as <code>us-west-2</code>. If this parameter is not set, game sessions can
+     * be placed in any queue location.
      * </p>
      * 
      * @param filterConfiguration
      *        A list of locations where a queue is allowed to place new game sessions. Locations are specified in the
-     *        form of AWS Region codes, such as <code>us-west-2</code>. If this parameter is not set, game sessions can
-     *        be placed in any queue location.
+     *        form of Amazon Web Services Region codes, such as <code>us-west-2</code>. If this parameter is not set,
+     *        game sessions can be placed in any queue location.
      */
 
     public void setFilterConfiguration(FilterConfiguration filterConfiguration) {
@@ -459,13 +464,13 @@ public class GameSessionQueue implements Serializable, Cloneable, StructuredPojo
     /**
      * <p>
      * A list of locations where a queue is allowed to place new game sessions. Locations are specified in the form of
-     * AWS Region codes, such as <code>us-west-2</code>. If this parameter is not set, game sessions can be placed in
-     * any queue location.
+     * Amazon Web Services Region codes, such as <code>us-west-2</code>. If this parameter is not set, game sessions can
+     * be placed in any queue location.
      * </p>
      * 
      * @return A list of locations where a queue is allowed to place new game sessions. Locations are specified in the
-     *         form of AWS Region codes, such as <code>us-west-2</code>. If this parameter is not set, game sessions can
-     *         be placed in any queue location.
+     *         form of Amazon Web Services Region codes, such as <code>us-west-2</code>. If this parameter is not set,
+     *         game sessions can be placed in any queue location.
      */
 
     public FilterConfiguration getFilterConfiguration() {
@@ -475,14 +480,14 @@ public class GameSessionQueue implements Serializable, Cloneable, StructuredPojo
     /**
      * <p>
      * A list of locations where a queue is allowed to place new game sessions. Locations are specified in the form of
-     * AWS Region codes, such as <code>us-west-2</code>. If this parameter is not set, game sessions can be placed in
-     * any queue location.
+     * Amazon Web Services Region codes, such as <code>us-west-2</code>. If this parameter is not set, game sessions can
+     * be placed in any queue location.
      * </p>
      * 
      * @param filterConfiguration
      *        A list of locations where a queue is allowed to place new game sessions. Locations are specified in the
-     *        form of AWS Region codes, such as <code>us-west-2</code>. If this parameter is not set, game sessions can
-     *        be placed in any queue location.
+     *        form of Amazon Web Services Region codes, such as <code>us-west-2</code>. If this parameter is not set,
+     *        game sessions can be placed in any queue location.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

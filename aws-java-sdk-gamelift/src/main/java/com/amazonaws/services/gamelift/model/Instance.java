@@ -93,7 +93,7 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
     private String operatingSystem;
     /**
      * <p>
-     * EC2 instance type that defines the computing resources of this instance.
+     * Amazon EC2 instance type that defines the computing resources of this instance.
      * </p>
      */
     private String type;
@@ -133,7 +133,8 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
     private java.util.Date creationTime;
     /**
      * <p>
-     * The fleet location of the instance, expressed as an AWS Region code, such as <code>us-west-2</code>.
+     * The fleet location of the instance, expressed as an Amazon Web Services Region code, such as
+     * <code>us-west-2</code>.
      * </p>
      */
     private String location;
@@ -536,11 +537,11 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * EC2 instance type that defines the computing resources of this instance.
+     * Amazon EC2 instance type that defines the computing resources of this instance.
      * </p>
      * 
      * @param type
-     *        EC2 instance type that defines the computing resources of this instance.
+     *        Amazon EC2 instance type that defines the computing resources of this instance.
      * @see EC2InstanceType
      */
 
@@ -550,10 +551,10 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * EC2 instance type that defines the computing resources of this instance.
+     * Amazon EC2 instance type that defines the computing resources of this instance.
      * </p>
      * 
-     * @return EC2 instance type that defines the computing resources of this instance.
+     * @return Amazon EC2 instance type that defines the computing resources of this instance.
      * @see EC2InstanceType
      */
 
@@ -563,11 +564,11 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * EC2 instance type that defines the computing resources of this instance.
+     * Amazon EC2 instance type that defines the computing resources of this instance.
      * </p>
      * 
      * @param type
-     *        EC2 instance type that defines the computing resources of this instance.
+     *        Amazon EC2 instance type that defines the computing resources of this instance.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see EC2InstanceType
      */
@@ -579,11 +580,11 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * EC2 instance type that defines the computing resources of this instance.
+     * Amazon EC2 instance type that defines the computing resources of this instance.
      * </p>
      * 
      * @param type
-     *        EC2 instance type that defines the computing resources of this instance.
+     *        Amazon EC2 instance type that defines the computing resources of this instance.
      * @see EC2InstanceType
      */
 
@@ -593,11 +594,11 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * EC2 instance type that defines the computing resources of this instance.
+     * Amazon EC2 instance type that defines the computing resources of this instance.
      * </p>
      * 
      * @param type
-     *        EC2 instance type that defines the computing resources of this instance.
+     *        Amazon EC2 instance type that defines the computing resources of this instance.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see EC2InstanceType
      */
@@ -933,11 +934,13 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The fleet location of the instance, expressed as an AWS Region code, such as <code>us-west-2</code>.
+     * The fleet location of the instance, expressed as an Amazon Web Services Region code, such as
+     * <code>us-west-2</code>.
      * </p>
      * 
      * @param location
-     *        The fleet location of the instance, expressed as an AWS Region code, such as <code>us-west-2</code>.
+     *        The fleet location of the instance, expressed as an Amazon Web Services Region code, such as
+     *        <code>us-west-2</code>.
      */
 
     public void setLocation(String location) {
@@ -946,10 +949,12 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The fleet location of the instance, expressed as an AWS Region code, such as <code>us-west-2</code>.
+     * The fleet location of the instance, expressed as an Amazon Web Services Region code, such as
+     * <code>us-west-2</code>.
      * </p>
      * 
-     * @return The fleet location of the instance, expressed as an AWS Region code, such as <code>us-west-2</code>.
+     * @return The fleet location of the instance, expressed as an Amazon Web Services Region code, such as
+     *         <code>us-west-2</code>.
      */
 
     public String getLocation() {
@@ -958,11 +963,13 @@ public class Instance implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The fleet location of the instance, expressed as an AWS Region code, such as <code>us-west-2</code>.
+     * The fleet location of the instance, expressed as an Amazon Web Services Region code, such as
+     * <code>us-west-2</code>.
      * </p>
      * 
      * @param location
-     *        The fleet location of the instance, expressed as an AWS Region code, such as <code>us-west-2</code>.
+     *        The fleet location of the instance, expressed as an Amazon Web Services Region code, such as
+     *        <code>us-west-2</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

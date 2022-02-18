@@ -44,7 +44,7 @@ public class AttributeValue implements Serializable, Cloneable, StructuredPojo {
     private Double n;
     /**
      * <p>
-     * For a list of up to 10 strings. Maximum length for each string is 100 characters. Duplicate values are not
+     * For a list of up to 100 strings. Maximum length for each string is 100 characters. Duplicate values are not
      * recognized; all occurrences of the repeated value after the first of a repeated value are ignored.
      * </p>
      */
@@ -138,11 +138,11 @@ public class AttributeValue implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * For a list of up to 10 strings. Maximum length for each string is 100 characters. Duplicate values are not
+     * For a list of up to 100 strings. Maximum length for each string is 100 characters. Duplicate values are not
      * recognized; all occurrences of the repeated value after the first of a repeated value are ignored.
      * </p>
      * 
-     * @return For a list of up to 10 strings. Maximum length for each string is 100 characters. Duplicate values are
+     * @return For a list of up to 100 strings. Maximum length for each string is 100 characters. Duplicate values are
      *         not recognized; all occurrences of the repeated value after the first of a repeated value are ignored.
      */
 
@@ -152,13 +152,13 @@ public class AttributeValue implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * For a list of up to 10 strings. Maximum length for each string is 100 characters. Duplicate values are not
+     * For a list of up to 100 strings. Maximum length for each string is 100 characters. Duplicate values are not
      * recognized; all occurrences of the repeated value after the first of a repeated value are ignored.
      * </p>
      * 
      * @param sL
-     *        For a list of up to 10 strings. Maximum length for each string is 100 characters. Duplicate values are not
-     *        recognized; all occurrences of the repeated value after the first of a repeated value are ignored.
+     *        For a list of up to 100 strings. Maximum length for each string is 100 characters. Duplicate values are
+     *        not recognized; all occurrences of the repeated value after the first of a repeated value are ignored.
      */
 
     public void setSL(java.util.Collection<String> sL) {
@@ -172,7 +172,7 @@ public class AttributeValue implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * For a list of up to 10 strings. Maximum length for each string is 100 characters. Duplicate values are not
+     * For a list of up to 100 strings. Maximum length for each string is 100 characters. Duplicate values are not
      * recognized; all occurrences of the repeated value after the first of a repeated value are ignored.
      * </p>
      * <p>
@@ -182,8 +182,8 @@ public class AttributeValue implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @param sL
-     *        For a list of up to 10 strings. Maximum length for each string is 100 characters. Duplicate values are not
-     *        recognized; all occurrences of the repeated value after the first of a repeated value are ignored.
+     *        For a list of up to 100 strings. Maximum length for each string is 100 characters. Duplicate values are
+     *        not recognized; all occurrences of the repeated value after the first of a repeated value are ignored.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -199,13 +199,13 @@ public class AttributeValue implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * For a list of up to 10 strings. Maximum length for each string is 100 characters. Duplicate values are not
+     * For a list of up to 100 strings. Maximum length for each string is 100 characters. Duplicate values are not
      * recognized; all occurrences of the repeated value after the first of a repeated value are ignored.
      * </p>
      * 
      * @param sL
-     *        For a list of up to 10 strings. Maximum length for each string is 100 characters. Duplicate values are not
-     *        recognized; all occurrences of the repeated value after the first of a repeated value are ignored.
+     *        For a list of up to 100 strings. Maximum length for each string is 100 characters. Duplicate values are
+     *        not recognized; all occurrences of the repeated value after the first of a repeated value are ignored.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

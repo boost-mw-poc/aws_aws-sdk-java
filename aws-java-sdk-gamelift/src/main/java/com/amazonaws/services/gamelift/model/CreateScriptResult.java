@@ -28,7 +28,7 @@ public class CreateScriptResult extends com.amazonaws.AmazonWebServiceResult<com
      * The newly created script record with a unique script ID and ARN. The new script's storage location reflects an
      * Amazon S3 location: (1) If the script was uploaded from an S3 bucket under your account, the storage location
      * reflects the information that was provided in the <i>CreateScript</i> request; (2) If the script file was
-     * uploaded from a local zip file, the storage location reflects an S3 location controls by the Amazon GameLift
+     * uploaded from a local zip file, the storage location reflects an S3 location controls by the Amazon Web Services
      * service.
      * </p>
      */
@@ -39,7 +39,7 @@ public class CreateScriptResult extends com.amazonaws.AmazonWebServiceResult<com
      * The newly created script record with a unique script ID and ARN. The new script's storage location reflects an
      * Amazon S3 location: (1) If the script was uploaded from an S3 bucket under your account, the storage location
      * reflects the information that was provided in the <i>CreateScript</i> request; (2) If the script file was
-     * uploaded from a local zip file, the storage location reflects an S3 location controls by the Amazon GameLift
+     * uploaded from a local zip file, the storage location reflects an S3 location controls by the Amazon Web Services
      * service.
      * </p>
      * 
@@ -48,7 +48,7 @@ public class CreateScriptResult extends com.amazonaws.AmazonWebServiceResult<com
      *        reflects an Amazon S3 location: (1) If the script was uploaded from an S3 bucket under your account, the
      *        storage location reflects the information that was provided in the <i>CreateScript</i> request; (2) If the
      *        script file was uploaded from a local zip file, the storage location reflects an S3 location controls by
-     *        the Amazon GameLift service.
+     *        the Amazon Web Services service.
      */
 
     public void setScript(Script script) {
@@ -60,7 +60,7 @@ public class CreateScriptResult extends com.amazonaws.AmazonWebServiceResult<com
      * The newly created script record with a unique script ID and ARN. The new script's storage location reflects an
      * Amazon S3 location: (1) If the script was uploaded from an S3 bucket under your account, the storage location
      * reflects the information that was provided in the <i>CreateScript</i> request; (2) If the script file was
-     * uploaded from a local zip file, the storage location reflects an S3 location controls by the Amazon GameLift
+     * uploaded from a local zip file, the storage location reflects an S3 location controls by the Amazon Web Services
      * service.
      * </p>
      * 
@@ -68,7 +68,7 @@ public class CreateScriptResult extends com.amazonaws.AmazonWebServiceResult<com
      *         reflects an Amazon S3 location: (1) If the script was uploaded from an S3 bucket under your account, the
      *         storage location reflects the information that was provided in the <i>CreateScript</i> request; (2) If
      *         the script file was uploaded from a local zip file, the storage location reflects an S3 location controls
-     *         by the Amazon GameLift service.
+     *         by the Amazon Web Services service.
      */
 
     public Script getScript() {
@@ -80,7 +80,7 @@ public class CreateScriptResult extends com.amazonaws.AmazonWebServiceResult<com
      * The newly created script record with a unique script ID and ARN. The new script's storage location reflects an
      * Amazon S3 location: (1) If the script was uploaded from an S3 bucket under your account, the storage location
      * reflects the information that was provided in the <i>CreateScript</i> request; (2) If the script file was
-     * uploaded from a local zip file, the storage location reflects an S3 location controls by the Amazon GameLift
+     * uploaded from a local zip file, the storage location reflects an S3 location controls by the Amazon Web Services
      * service.
      * </p>
      * 
@@ -89,7 +89,7 @@ public class CreateScriptResult extends com.amazonaws.AmazonWebServiceResult<com
      *        reflects an Amazon S3 location: (1) If the script was uploaded from an S3 bucket under your account, the
      *        storage location reflects the information that was provided in the <i>CreateScript</i> request; (2) If the
      *        script file was uploaded from a local zip file, the storage location reflects an S3 location controls by
-     *        the Amazon GameLift service.
+     *        the Amazon Web Services service.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

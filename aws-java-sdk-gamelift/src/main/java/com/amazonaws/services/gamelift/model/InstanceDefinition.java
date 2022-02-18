@@ -35,7 +35,7 @@ public class InstanceDefinition implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * An EC2 instance type designation.
+     * An Amazon EC2 instance type designation.
      * </p>
      */
     private String instanceType;
@@ -45,18 +45,18 @@ public class InstanceDefinition implements Serializable, Cloneable, StructuredPo
      * group. Instance weights are used by GameLift FleetIQ to calculate the instance type's cost per unit hour and
      * better identify the most cost-effective options. For detailed information on weighting instance capacity, see <a
      * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-instance-weighting.html">Instance Weighting</a>
-     * in the <i>Amazon EC2 Auto Scaling User Guide</i>. Default value is "1".
+     * in the <i>Amazon Elastic Compute Cloud Auto Scaling User Guide</i>. Default value is "1".
      * </p>
      */
     private String weightedCapacity;
 
     /**
      * <p>
-     * An EC2 instance type designation.
+     * An Amazon EC2 instance type designation.
      * </p>
      * 
      * @param instanceType
-     *        An EC2 instance type designation.
+     *        An Amazon EC2 instance type designation.
      * @see GameServerGroupInstanceType
      */
 
@@ -66,10 +66,10 @@ public class InstanceDefinition implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * An EC2 instance type designation.
+     * An Amazon EC2 instance type designation.
      * </p>
      * 
-     * @return An EC2 instance type designation.
+     * @return An Amazon EC2 instance type designation.
      * @see GameServerGroupInstanceType
      */
 
@@ -79,11 +79,11 @@ public class InstanceDefinition implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * An EC2 instance type designation.
+     * An Amazon EC2 instance type designation.
      * </p>
      * 
      * @param instanceType
-     *        An EC2 instance type designation.
+     *        An Amazon EC2 instance type designation.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see GameServerGroupInstanceType
      */
@@ -95,11 +95,11 @@ public class InstanceDefinition implements Serializable, Cloneable, StructuredPo
 
     /**
      * <p>
-     * An EC2 instance type designation.
+     * An Amazon EC2 instance type designation.
      * </p>
      * 
      * @param instanceType
-     *        An EC2 instance type designation.
+     *        An Amazon EC2 instance type designation.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see GameServerGroupInstanceType
      */
@@ -115,7 +115,7 @@ public class InstanceDefinition implements Serializable, Cloneable, StructuredPo
      * group. Instance weights are used by GameLift FleetIQ to calculate the instance type's cost per unit hour and
      * better identify the most cost-effective options. For detailed information on weighting instance capacity, see <a
      * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-instance-weighting.html">Instance Weighting</a>
-     * in the <i>Amazon EC2 Auto Scaling User Guide</i>. Default value is "1".
+     * in the <i>Amazon Elastic Compute Cloud Auto Scaling User Guide</i>. Default value is "1".
      * </p>
      * 
      * @param weightedCapacity
@@ -124,7 +124,7 @@ public class InstanceDefinition implements Serializable, Cloneable, StructuredPo
      *        hour and better identify the most cost-effective options. For detailed information on weighting instance
      *        capacity, see <a
      *        href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-instance-weighting.html">Instance
-     *        Weighting</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>. Default value is "1".
+     *        Weighting</a> in the <i>Amazon Elastic Compute Cloud Auto Scaling User Guide</i>. Default value is "1".
      */
 
     public void setWeightedCapacity(String weightedCapacity) {
@@ -137,7 +137,7 @@ public class InstanceDefinition implements Serializable, Cloneable, StructuredPo
      * group. Instance weights are used by GameLift FleetIQ to calculate the instance type's cost per unit hour and
      * better identify the most cost-effective options. For detailed information on weighting instance capacity, see <a
      * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-instance-weighting.html">Instance Weighting</a>
-     * in the <i>Amazon EC2 Auto Scaling User Guide</i>. Default value is "1".
+     * in the <i>Amazon Elastic Compute Cloud Auto Scaling User Guide</i>. Default value is "1".
      * </p>
      * 
      * @return Instance weighting that indicates how much this instance type contributes to the total capacity of a game
@@ -145,7 +145,7 @@ public class InstanceDefinition implements Serializable, Cloneable, StructuredPo
      *         unit hour and better identify the most cost-effective options. For detailed information on weighting
      *         instance capacity, see <a
      *         href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-instance-weighting.html">Instance
-     *         Weighting</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>. Default value is "1".
+     *         Weighting</a> in the <i>Amazon Elastic Compute Cloud Auto Scaling User Guide</i>. Default value is "1".
      */
 
     public String getWeightedCapacity() {
@@ -158,7 +158,7 @@ public class InstanceDefinition implements Serializable, Cloneable, StructuredPo
      * group. Instance weights are used by GameLift FleetIQ to calculate the instance type's cost per unit hour and
      * better identify the most cost-effective options. For detailed information on weighting instance capacity, see <a
      * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-instance-weighting.html">Instance Weighting</a>
-     * in the <i>Amazon EC2 Auto Scaling User Guide</i>. Default value is "1".
+     * in the <i>Amazon Elastic Compute Cloud Auto Scaling User Guide</i>. Default value is "1".
      * </p>
      * 
      * @param weightedCapacity
@@ -167,7 +167,7 @@ public class InstanceDefinition implements Serializable, Cloneable, StructuredPo
      *        hour and better identify the most cost-effective options. For detailed information on weighting instance
      *        capacity, see <a
      *        href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-instance-weighting.html">Instance
-     *        Weighting</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>. Default value is "1".
+     *        Weighting</a> in the <i>Amazon Elastic Compute Cloud Auto Scaling User Guide</i>. Default value is "1".
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

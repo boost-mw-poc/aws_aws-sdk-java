@@ -27,44 +27,45 @@ public class CreateGameServerGroupRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * An identifier for the new game server group. This value is used to generate unique ARN identifiers for the EC2
-     * Auto Scaling group and the GameLift FleetIQ game server group. The name must be unique per Region per AWS
-     * account.
+     * An identifier for the new game server group. This value is used to generate unique ARN identifiers for the Amazon
+     * EC2 Auto Scaling group and the GameLift FleetIQ game server group. The name must be unique per Region per Amazon
+     * Web Services account.
      * </p>
      */
     private String gameServerGroupName;
     /**
      * <p>
      * The Amazon Resource Name (<a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>)
-     * for an IAM role that allows Amazon GameLift to access your EC2 Auto Scaling groups.
+     * for an IAM role that allows Amazon Web Services to access your Amazon EC2 Auto Scaling groups.
      * </p>
      */
     private String roleArn;
     /**
      * <p>
-     * The minimum number of instances allowed in the EC2 Auto Scaling group. During automatic scaling events, GameLift
-     * FleetIQ and EC2 do not scale down the group below this minimum. In production, this value should be set to at
-     * least 1. After the Auto Scaling group is created, update this value directly in the Auto Scaling group using the
-     * AWS console or APIs.
+     * The minimum number of instances allowed in the Amazon EC2 Auto Scaling group. During automatic scaling events,
+     * GameLift FleetIQ and Amazon EC2 do not scale down the group below this minimum. In production, this value should
+     * be set to at least 1. After the Auto Scaling group is created, update this value directly in the Auto Scaling
+     * group using the Amazon Web Services console or APIs.
      * </p>
      */
     private Integer minSize;
     /**
      * <p>
-     * The maximum number of instances allowed in the EC2 Auto Scaling group. During automatic scaling events, GameLift
-     * FleetIQ and EC2 do not scale up the group above this maximum. After the Auto Scaling group is created, update
-     * this value directly in the Auto Scaling group using the AWS console or APIs.
+     * The maximum number of instances allowed in the Amazon EC2 Auto Scaling group. During automatic scaling events,
+     * GameLift FleetIQ and EC2 do not scale up the group above this maximum. After the Auto Scaling group is created,
+     * update this value directly in the Auto Scaling group using the Amazon Web Services console or APIs.
      * </p>
      */
     private Integer maxSize;
     /**
      * <p>
-     * The EC2 launch template that contains configuration settings and game server code to be deployed to all instances
-     * in the game server group. You can specify the template using either the template name or ID. For help with
-     * creating a launch template, see <a
+     * The Amazon EC2 launch template that contains configuration settings and game server code to be deployed to all
+     * instances in the game server group. You can specify the template using either the template name or ID. For help
+     * with creating a launch template, see <a
      * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-launch-template.html">Creating a Launch
-     * Template for an Auto Scaling Group</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>. After the Auto Scaling
-     * group is created, update this value directly in the Auto Scaling group using the AWS console or APIs.
+     * Template for an Auto Scaling Group</a> in the <i>Amazon Elastic Compute Cloud Auto Scaling User Guide</i>. After
+     * the Auto Scaling group is created, update this value directly in the Auto Scaling group using the Amazon Web
+     * Services console or APIs.
      * </p>
      * <note>
      * <p>
@@ -77,13 +78,14 @@ public class CreateGameServerGroupRequest extends com.amazonaws.AmazonWebService
     private LaunchTemplateSpecification launchTemplate;
     /**
      * <p>
-     * The EC2 instance types and sizes to use in the Auto Scaling group. The instance definitions must specify at least
-     * two different instance types that are supported by GameLift FleetIQ. For more information on instance types, see
-     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">EC2 Instance Types</a> in the
-     * <i>Amazon EC2 User Guide</i>. You can optionally specify capacity weighting for each instance type. If no weight
-     * value is specified for an instance type, it is set to the default value "1". For more information about capacity
-     * weighting, see <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-instance-weighting.html">
-     * Instance Weighting for Amazon EC2 Auto Scaling</a> in the Amazon EC2 Auto Scaling User Guide.
+     * The Amazon EC2 instance types and sizes to use in the Auto Scaling group. The instance definitions must specify
+     * at least two different instance types that are supported by GameLift FleetIQ. For more information on instance
+     * types, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">EC2 Instance
+     * Types</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>. You can optionally specify capacity weighting
+     * for each instance type. If no weight value is specified for an instance type, it is set to the default value "1".
+     * For more information about capacity weighting, see <a
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-instance-weighting.html"> Instance Weighting for
+     * Amazon EC2 Auto Scaling</a> in the Amazon EC2 Auto Scaling User Guide.
      * </p>
      */
     private java.util.List<InstanceDefinition> instanceDefinitions;
@@ -92,7 +94,7 @@ public class CreateGameServerGroupRequest extends com.amazonaws.AmazonWebService
      * Configuration settings to define a scaling policy for the Auto Scaling group that is optimized for game hosting.
      * The scaling policy uses the metric <code>"PercentUtilizedGameServers"</code> to maintain a buffer of idle game
      * servers that can immediately accommodate new games and players. After the Auto Scaling group is created, update
-     * this value directly in the Auto Scaling group using the AWS console or APIs.
+     * this value directly in the Auto Scaling group using the Amazon Web Services console or APIs.
      * </p>
      */
     private GameServerGroupAutoScalingPolicy autoScalingPolicy;
@@ -133,8 +135,8 @@ public class CreateGameServerGroupRequest extends com.amazonaws.AmazonWebService
      * Unprotected instances that have active game servers running might be terminated during a scale-down event,
      * causing players to be dropped from the game. Protected instances cannot be terminated while there are active game
      * servers running except in the event of a forced game server group deletion (see ). An exception to this is with
-     * Spot Instances, which can be terminated by AWS regardless of protection status. This property is set to
-     * <code>NO_PROTECTION</code> by default.
+     * Spot Instances, which can be terminated by Amazon Web Services regardless of protection status. This property is
+     * set to <code>NO_PROTECTION</code> by default.
      * </p>
      */
     private String gameServerProtectionPolicy;
@@ -151,26 +153,27 @@ public class CreateGameServerGroupRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * A list of labels to assign to the new game server group resource. Tags are developer-defined key-value pairs.
-     * Tagging AWS resources is useful for resource management, access management, and cost allocation. For more
-     * information, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"> Tagging AWS
-     * Resources</a> in the <i>AWS General Reference</i>. Once the resource is created, you can use <a>TagResource</a>,
-     * <a>UntagResource</a>, and <a>ListTagsForResource</a> to add, remove, and view tags, respectively. The maximum tag
-     * limit may be lower than stated. See the AWS General Reference for actual tagging limits.
+     * Tagging Amazon Web Services resources is useful for resource management, access management, and cost allocation.
+     * For more information, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"> Tagging
+     * Amazon Web Services Resources</a> in the <i>Amazon Web Services General Reference</i>. Once the resource is
+     * created, you can use <a>TagResource</a>, <a>UntagResource</a>, and <a>ListTagsForResource</a> to add, remove, and
+     * view tags, respectively. The maximum tag limit may be lower than stated. See the Amazon Web Services General
+     * Reference for actual tagging limits.
      * </p>
      */
     private java.util.List<Tag> tags;
 
     /**
      * <p>
-     * An identifier for the new game server group. This value is used to generate unique ARN identifiers for the EC2
-     * Auto Scaling group and the GameLift FleetIQ game server group. The name must be unique per Region per AWS
-     * account.
+     * An identifier for the new game server group. This value is used to generate unique ARN identifiers for the Amazon
+     * EC2 Auto Scaling group and the GameLift FleetIQ game server group. The name must be unique per Region per Amazon
+     * Web Services account.
      * </p>
      * 
      * @param gameServerGroupName
      *        An identifier for the new game server group. This value is used to generate unique ARN identifiers for the
-     *        EC2 Auto Scaling group and the GameLift FleetIQ game server group. The name must be unique per Region per
-     *        AWS account.
+     *        Amazon EC2 Auto Scaling group and the GameLift FleetIQ game server group. The name must be unique per
+     *        Region per Amazon Web Services account.
      */
 
     public void setGameServerGroupName(String gameServerGroupName) {
@@ -179,14 +182,14 @@ public class CreateGameServerGroupRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * An identifier for the new game server group. This value is used to generate unique ARN identifiers for the EC2
-     * Auto Scaling group and the GameLift FleetIQ game server group. The name must be unique per Region per AWS
-     * account.
+     * An identifier for the new game server group. This value is used to generate unique ARN identifiers for the Amazon
+     * EC2 Auto Scaling group and the GameLift FleetIQ game server group. The name must be unique per Region per Amazon
+     * Web Services account.
      * </p>
      * 
      * @return An identifier for the new game server group. This value is used to generate unique ARN identifiers for
-     *         the EC2 Auto Scaling group and the GameLift FleetIQ game server group. The name must be unique per Region
-     *         per AWS account.
+     *         the Amazon EC2 Auto Scaling group and the GameLift FleetIQ game server group. The name must be unique per
+     *         Region per Amazon Web Services account.
      */
 
     public String getGameServerGroupName() {
@@ -195,15 +198,15 @@ public class CreateGameServerGroupRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * An identifier for the new game server group. This value is used to generate unique ARN identifiers for the EC2
-     * Auto Scaling group and the GameLift FleetIQ game server group. The name must be unique per Region per AWS
-     * account.
+     * An identifier for the new game server group. This value is used to generate unique ARN identifiers for the Amazon
+     * EC2 Auto Scaling group and the GameLift FleetIQ game server group. The name must be unique per Region per Amazon
+     * Web Services account.
      * </p>
      * 
      * @param gameServerGroupName
      *        An identifier for the new game server group. This value is used to generate unique ARN identifiers for the
-     *        EC2 Auto Scaling group and the GameLift FleetIQ game server group. The name must be unique per Region per
-     *        AWS account.
+     *        Amazon EC2 Auto Scaling group and the GameLift FleetIQ game server group. The name must be unique per
+     *        Region per Amazon Web Services account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -215,13 +218,13 @@ public class CreateGameServerGroupRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * The Amazon Resource Name (<a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>)
-     * for an IAM role that allows Amazon GameLift to access your EC2 Auto Scaling groups.
+     * for an IAM role that allows Amazon Web Services to access your Amazon EC2 Auto Scaling groups.
      * </p>
      * 
      * @param roleArn
      *        The Amazon Resource Name (<a
      *        href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>) for an IAM role that
-     *        allows Amazon GameLift to access your EC2 Auto Scaling groups.
+     *        allows Amazon Web Services to access your Amazon EC2 Auto Scaling groups.
      */
 
     public void setRoleArn(String roleArn) {
@@ -231,12 +234,12 @@ public class CreateGameServerGroupRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * The Amazon Resource Name (<a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>)
-     * for an IAM role that allows Amazon GameLift to access your EC2 Auto Scaling groups.
+     * for an IAM role that allows Amazon Web Services to access your Amazon EC2 Auto Scaling groups.
      * </p>
      * 
      * @return The Amazon Resource Name (<a
      *         href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>) for an IAM role that
-     *         allows Amazon GameLift to access your EC2 Auto Scaling groups.
+     *         allows Amazon Web Services to access your Amazon EC2 Auto Scaling groups.
      */
 
     public String getRoleArn() {
@@ -246,13 +249,13 @@ public class CreateGameServerGroupRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * The Amazon Resource Name (<a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>)
-     * for an IAM role that allows Amazon GameLift to access your EC2 Auto Scaling groups.
+     * for an IAM role that allows Amazon Web Services to access your Amazon EC2 Auto Scaling groups.
      * </p>
      * 
      * @param roleArn
      *        The Amazon Resource Name (<a
      *        href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>) for an IAM role that
-     *        allows Amazon GameLift to access your EC2 Auto Scaling groups.
+     *        allows Amazon Web Services to access your Amazon EC2 Auto Scaling groups.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -263,17 +266,17 @@ public class CreateGameServerGroupRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The minimum number of instances allowed in the EC2 Auto Scaling group. During automatic scaling events, GameLift
-     * FleetIQ and EC2 do not scale down the group below this minimum. In production, this value should be set to at
-     * least 1. After the Auto Scaling group is created, update this value directly in the Auto Scaling group using the
-     * AWS console or APIs.
+     * The minimum number of instances allowed in the Amazon EC2 Auto Scaling group. During automatic scaling events,
+     * GameLift FleetIQ and Amazon EC2 do not scale down the group below this minimum. In production, this value should
+     * be set to at least 1. After the Auto Scaling group is created, update this value directly in the Auto Scaling
+     * group using the Amazon Web Services console or APIs.
      * </p>
      * 
      * @param minSize
-     *        The minimum number of instances allowed in the EC2 Auto Scaling group. During automatic scaling events,
-     *        GameLift FleetIQ and EC2 do not scale down the group below this minimum. In production, this value should
-     *        be set to at least 1. After the Auto Scaling group is created, update this value directly in the Auto
-     *        Scaling group using the AWS console or APIs.
+     *        The minimum number of instances allowed in the Amazon EC2 Auto Scaling group. During automatic scaling
+     *        events, GameLift FleetIQ and Amazon EC2 do not scale down the group below this minimum. In production,
+     *        this value should be set to at least 1. After the Auto Scaling group is created, update this value
+     *        directly in the Auto Scaling group using the Amazon Web Services console or APIs.
      */
 
     public void setMinSize(Integer minSize) {
@@ -282,16 +285,16 @@ public class CreateGameServerGroupRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The minimum number of instances allowed in the EC2 Auto Scaling group. During automatic scaling events, GameLift
-     * FleetIQ and EC2 do not scale down the group below this minimum. In production, this value should be set to at
-     * least 1. After the Auto Scaling group is created, update this value directly in the Auto Scaling group using the
-     * AWS console or APIs.
+     * The minimum number of instances allowed in the Amazon EC2 Auto Scaling group. During automatic scaling events,
+     * GameLift FleetIQ and Amazon EC2 do not scale down the group below this minimum. In production, this value should
+     * be set to at least 1. After the Auto Scaling group is created, update this value directly in the Auto Scaling
+     * group using the Amazon Web Services console or APIs.
      * </p>
      * 
-     * @return The minimum number of instances allowed in the EC2 Auto Scaling group. During automatic scaling events,
-     *         GameLift FleetIQ and EC2 do not scale down the group below this minimum. In production, this value should
-     *         be set to at least 1. After the Auto Scaling group is created, update this value directly in the Auto
-     *         Scaling group using the AWS console or APIs.
+     * @return The minimum number of instances allowed in the Amazon EC2 Auto Scaling group. During automatic scaling
+     *         events, GameLift FleetIQ and Amazon EC2 do not scale down the group below this minimum. In production,
+     *         this value should be set to at least 1. After the Auto Scaling group is created, update this value
+     *         directly in the Auto Scaling group using the Amazon Web Services console or APIs.
      */
 
     public Integer getMinSize() {
@@ -300,17 +303,17 @@ public class CreateGameServerGroupRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The minimum number of instances allowed in the EC2 Auto Scaling group. During automatic scaling events, GameLift
-     * FleetIQ and EC2 do not scale down the group below this minimum. In production, this value should be set to at
-     * least 1. After the Auto Scaling group is created, update this value directly in the Auto Scaling group using the
-     * AWS console or APIs.
+     * The minimum number of instances allowed in the Amazon EC2 Auto Scaling group. During automatic scaling events,
+     * GameLift FleetIQ and Amazon EC2 do not scale down the group below this minimum. In production, this value should
+     * be set to at least 1. After the Auto Scaling group is created, update this value directly in the Auto Scaling
+     * group using the Amazon Web Services console or APIs.
      * </p>
      * 
      * @param minSize
-     *        The minimum number of instances allowed in the EC2 Auto Scaling group. During automatic scaling events,
-     *        GameLift FleetIQ and EC2 do not scale down the group below this minimum. In production, this value should
-     *        be set to at least 1. After the Auto Scaling group is created, update this value directly in the Auto
-     *        Scaling group using the AWS console or APIs.
+     *        The minimum number of instances allowed in the Amazon EC2 Auto Scaling group. During automatic scaling
+     *        events, GameLift FleetIQ and Amazon EC2 do not scale down the group below this minimum. In production,
+     *        this value should be set to at least 1. After the Auto Scaling group is created, update this value
+     *        directly in the Auto Scaling group using the Amazon Web Services console or APIs.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -321,15 +324,16 @@ public class CreateGameServerGroupRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The maximum number of instances allowed in the EC2 Auto Scaling group. During automatic scaling events, GameLift
-     * FleetIQ and EC2 do not scale up the group above this maximum. After the Auto Scaling group is created, update
-     * this value directly in the Auto Scaling group using the AWS console or APIs.
+     * The maximum number of instances allowed in the Amazon EC2 Auto Scaling group. During automatic scaling events,
+     * GameLift FleetIQ and EC2 do not scale up the group above this maximum. After the Auto Scaling group is created,
+     * update this value directly in the Auto Scaling group using the Amazon Web Services console or APIs.
      * </p>
      * 
      * @param maxSize
-     *        The maximum number of instances allowed in the EC2 Auto Scaling group. During automatic scaling events,
-     *        GameLift FleetIQ and EC2 do not scale up the group above this maximum. After the Auto Scaling group is
-     *        created, update this value directly in the Auto Scaling group using the AWS console or APIs.
+     *        The maximum number of instances allowed in the Amazon EC2 Auto Scaling group. During automatic scaling
+     *        events, GameLift FleetIQ and EC2 do not scale up the group above this maximum. After the Auto Scaling
+     *        group is created, update this value directly in the Auto Scaling group using the Amazon Web Services
+     *        console or APIs.
      */
 
     public void setMaxSize(Integer maxSize) {
@@ -338,14 +342,15 @@ public class CreateGameServerGroupRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The maximum number of instances allowed in the EC2 Auto Scaling group. During automatic scaling events, GameLift
-     * FleetIQ and EC2 do not scale up the group above this maximum. After the Auto Scaling group is created, update
-     * this value directly in the Auto Scaling group using the AWS console or APIs.
+     * The maximum number of instances allowed in the Amazon EC2 Auto Scaling group. During automatic scaling events,
+     * GameLift FleetIQ and EC2 do not scale up the group above this maximum. After the Auto Scaling group is created,
+     * update this value directly in the Auto Scaling group using the Amazon Web Services console or APIs.
      * </p>
      * 
-     * @return The maximum number of instances allowed in the EC2 Auto Scaling group. During automatic scaling events,
-     *         GameLift FleetIQ and EC2 do not scale up the group above this maximum. After the Auto Scaling group is
-     *         created, update this value directly in the Auto Scaling group using the AWS console or APIs.
+     * @return The maximum number of instances allowed in the Amazon EC2 Auto Scaling group. During automatic scaling
+     *         events, GameLift FleetIQ and EC2 do not scale up the group above this maximum. After the Auto Scaling
+     *         group is created, update this value directly in the Auto Scaling group using the Amazon Web Services
+     *         console or APIs.
      */
 
     public Integer getMaxSize() {
@@ -354,15 +359,16 @@ public class CreateGameServerGroupRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The maximum number of instances allowed in the EC2 Auto Scaling group. During automatic scaling events, GameLift
-     * FleetIQ and EC2 do not scale up the group above this maximum. After the Auto Scaling group is created, update
-     * this value directly in the Auto Scaling group using the AWS console or APIs.
+     * The maximum number of instances allowed in the Amazon EC2 Auto Scaling group. During automatic scaling events,
+     * GameLift FleetIQ and EC2 do not scale up the group above this maximum. After the Auto Scaling group is created,
+     * update this value directly in the Auto Scaling group using the Amazon Web Services console or APIs.
      * </p>
      * 
      * @param maxSize
-     *        The maximum number of instances allowed in the EC2 Auto Scaling group. During automatic scaling events,
-     *        GameLift FleetIQ and EC2 do not scale up the group above this maximum. After the Auto Scaling group is
-     *        created, update this value directly in the Auto Scaling group using the AWS console or APIs.
+     *        The maximum number of instances allowed in the Amazon EC2 Auto Scaling group. During automatic scaling
+     *        events, GameLift FleetIQ and EC2 do not scale up the group above this maximum. After the Auto Scaling
+     *        group is created, update this value directly in the Auto Scaling group using the Amazon Web Services
+     *        console or APIs.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -373,12 +379,13 @@ public class CreateGameServerGroupRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The EC2 launch template that contains configuration settings and game server code to be deployed to all instances
-     * in the game server group. You can specify the template using either the template name or ID. For help with
-     * creating a launch template, see <a
+     * The Amazon EC2 launch template that contains configuration settings and game server code to be deployed to all
+     * instances in the game server group. You can specify the template using either the template name or ID. For help
+     * with creating a launch template, see <a
      * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-launch-template.html">Creating a Launch
-     * Template for an Auto Scaling Group</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>. After the Auto Scaling
-     * group is created, update this value directly in the Auto Scaling group using the AWS console or APIs.
+     * Template for an Auto Scaling Group</a> in the <i>Amazon Elastic Compute Cloud Auto Scaling User Guide</i>. After
+     * the Auto Scaling group is created, update this value directly in the Auto Scaling group using the Amazon Web
+     * Services console or APIs.
      * </p>
      * <note>
      * <p>
@@ -389,13 +396,13 @@ public class CreateGameServerGroupRequest extends com.amazonaws.AmazonWebService
      * </note>
      * 
      * @param launchTemplate
-     *        The EC2 launch template that contains configuration settings and game server code to be deployed to all
-     *        instances in the game server group. You can specify the template using either the template name or ID. For
-     *        help with creating a launch template, see <a
+     *        The Amazon EC2 launch template that contains configuration settings and game server code to be deployed to
+     *        all instances in the game server group. You can specify the template using either the template name or ID.
+     *        For help with creating a launch template, see <a
      *        href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-launch-template.html">Creating a Launch
-     *        Template for an Auto Scaling Group</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>. After the Auto
-     *        Scaling group is created, update this value directly in the Auto Scaling group using the AWS console or
-     *        APIs.</p> <note>
+     *        Template for an Auto Scaling Group</a> in the <i>Amazon Elastic Compute Cloud Auto Scaling User Guide</i>.
+     *        After the Auto Scaling group is created, update this value directly in the Auto Scaling group using the
+     *        Amazon Web Services console or APIs.</p> <note>
      *        <p>
      *        If you specify network interfaces in your launch template, you must explicitly set the property
      *        <code>AssociatePublicIpAddress</code> to "true". If no network interface is specified in the launch
@@ -409,12 +416,13 @@ public class CreateGameServerGroupRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The EC2 launch template that contains configuration settings and game server code to be deployed to all instances
-     * in the game server group. You can specify the template using either the template name or ID. For help with
-     * creating a launch template, see <a
+     * The Amazon EC2 launch template that contains configuration settings and game server code to be deployed to all
+     * instances in the game server group. You can specify the template using either the template name or ID. For help
+     * with creating a launch template, see <a
      * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-launch-template.html">Creating a Launch
-     * Template for an Auto Scaling Group</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>. After the Auto Scaling
-     * group is created, update this value directly in the Auto Scaling group using the AWS console or APIs.
+     * Template for an Auto Scaling Group</a> in the <i>Amazon Elastic Compute Cloud Auto Scaling User Guide</i>. After
+     * the Auto Scaling group is created, update this value directly in the Auto Scaling group using the Amazon Web
+     * Services console or APIs.
      * </p>
      * <note>
      * <p>
@@ -424,13 +432,13 @@ public class CreateGameServerGroupRequest extends com.amazonaws.AmazonWebService
      * </p>
      * </note>
      * 
-     * @return The EC2 launch template that contains configuration settings and game server code to be deployed to all
-     *         instances in the game server group. You can specify the template using either the template name or ID.
-     *         For help with creating a launch template, see <a
+     * @return The Amazon EC2 launch template that contains configuration settings and game server code to be deployed
+     *         to all instances in the game server group. You can specify the template using either the template name or
+     *         ID. For help with creating a launch template, see <a
      *         href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-launch-template.html">Creating a
-     *         Launch Template for an Auto Scaling Group</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>. After the
-     *         Auto Scaling group is created, update this value directly in the Auto Scaling group using the AWS console
-     *         or APIs.</p> <note>
+     *         Launch Template for an Auto Scaling Group</a> in the <i>Amazon Elastic Compute Cloud Auto Scaling User
+     *         Guide</i>. After the Auto Scaling group is created, update this value directly in the Auto Scaling group
+     *         using the Amazon Web Services console or APIs.</p> <note>
      *         <p>
      *         If you specify network interfaces in your launch template, you must explicitly set the property
      *         <code>AssociatePublicIpAddress</code> to "true". If no network interface is specified in the launch
@@ -444,12 +452,13 @@ public class CreateGameServerGroupRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The EC2 launch template that contains configuration settings and game server code to be deployed to all instances
-     * in the game server group. You can specify the template using either the template name or ID. For help with
-     * creating a launch template, see <a
+     * The Amazon EC2 launch template that contains configuration settings and game server code to be deployed to all
+     * instances in the game server group. You can specify the template using either the template name or ID. For help
+     * with creating a launch template, see <a
      * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-launch-template.html">Creating a Launch
-     * Template for an Auto Scaling Group</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>. After the Auto Scaling
-     * group is created, update this value directly in the Auto Scaling group using the AWS console or APIs.
+     * Template for an Auto Scaling Group</a> in the <i>Amazon Elastic Compute Cloud Auto Scaling User Guide</i>. After
+     * the Auto Scaling group is created, update this value directly in the Auto Scaling group using the Amazon Web
+     * Services console or APIs.
      * </p>
      * <note>
      * <p>
@@ -460,13 +469,13 @@ public class CreateGameServerGroupRequest extends com.amazonaws.AmazonWebService
      * </note>
      * 
      * @param launchTemplate
-     *        The EC2 launch template that contains configuration settings and game server code to be deployed to all
-     *        instances in the game server group. You can specify the template using either the template name or ID. For
-     *        help with creating a launch template, see <a
+     *        The Amazon EC2 launch template that contains configuration settings and game server code to be deployed to
+     *        all instances in the game server group. You can specify the template using either the template name or ID.
+     *        For help with creating a launch template, see <a
      *        href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/create-launch-template.html">Creating a Launch
-     *        Template for an Auto Scaling Group</a> in the <i>Amazon EC2 Auto Scaling User Guide</i>. After the Auto
-     *        Scaling group is created, update this value directly in the Auto Scaling group using the AWS console or
-     *        APIs.</p> <note>
+     *        Template for an Auto Scaling Group</a> in the <i>Amazon Elastic Compute Cloud Auto Scaling User Guide</i>.
+     *        After the Auto Scaling group is created, update this value directly in the Auto Scaling group using the
+     *        Amazon Web Services console or APIs.</p> <note>
      *        <p>
      *        If you specify network interfaces in your launch template, you must explicitly set the property
      *        <code>AssociatePublicIpAddress</code> to "true". If no network interface is specified in the launch
@@ -482,19 +491,21 @@ public class CreateGameServerGroupRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The EC2 instance types and sizes to use in the Auto Scaling group. The instance definitions must specify at least
-     * two different instance types that are supported by GameLift FleetIQ. For more information on instance types, see
-     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">EC2 Instance Types</a> in the
-     * <i>Amazon EC2 User Guide</i>. You can optionally specify capacity weighting for each instance type. If no weight
-     * value is specified for an instance type, it is set to the default value "1". For more information about capacity
-     * weighting, see <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-instance-weighting.html">
-     * Instance Weighting for Amazon EC2 Auto Scaling</a> in the Amazon EC2 Auto Scaling User Guide.
+     * The Amazon EC2 instance types and sizes to use in the Auto Scaling group. The instance definitions must specify
+     * at least two different instance types that are supported by GameLift FleetIQ. For more information on instance
+     * types, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">EC2 Instance
+     * Types</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>. You can optionally specify capacity weighting
+     * for each instance type. If no weight value is specified for an instance type, it is set to the default value "1".
+     * For more information about capacity weighting, see <a
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-instance-weighting.html"> Instance Weighting for
+     * Amazon EC2 Auto Scaling</a> in the Amazon EC2 Auto Scaling User Guide.
      * </p>
      * 
-     * @return The EC2 instance types and sizes to use in the Auto Scaling group. The instance definitions must specify
-     *         at least two different instance types that are supported by GameLift FleetIQ. For more information on
-     *         instance types, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">EC2
-     *         Instance Types</a> in the <i>Amazon EC2 User Guide</i>. You can optionally specify capacity weighting for
+     * @return The Amazon EC2 instance types and sizes to use in the Auto Scaling group. The instance definitions must
+     *         specify at least two different instance types that are supported by GameLift FleetIQ. For more
+     *         information on instance types, see <a
+     *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">EC2 Instance Types</a> in
+     *         the <i>Amazon Elastic Compute Cloud User Guide</i>. You can optionally specify capacity weighting for
      *         each instance type. If no weight value is specified for an instance type, it is set to the default value
      *         "1". For more information about capacity weighting, see <a
      *         href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-instance-weighting.html"> Instance
@@ -507,22 +518,24 @@ public class CreateGameServerGroupRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The EC2 instance types and sizes to use in the Auto Scaling group. The instance definitions must specify at least
-     * two different instance types that are supported by GameLift FleetIQ. For more information on instance types, see
-     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">EC2 Instance Types</a> in the
-     * <i>Amazon EC2 User Guide</i>. You can optionally specify capacity weighting for each instance type. If no weight
-     * value is specified for an instance type, it is set to the default value "1". For more information about capacity
-     * weighting, see <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-instance-weighting.html">
-     * Instance Weighting for Amazon EC2 Auto Scaling</a> in the Amazon EC2 Auto Scaling User Guide.
+     * The Amazon EC2 instance types and sizes to use in the Auto Scaling group. The instance definitions must specify
+     * at least two different instance types that are supported by GameLift FleetIQ. For more information on instance
+     * types, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">EC2 Instance
+     * Types</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>. You can optionally specify capacity weighting
+     * for each instance type. If no weight value is specified for an instance type, it is set to the default value "1".
+     * For more information about capacity weighting, see <a
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-instance-weighting.html"> Instance Weighting for
+     * Amazon EC2 Auto Scaling</a> in the Amazon EC2 Auto Scaling User Guide.
      * </p>
      * 
      * @param instanceDefinitions
-     *        The EC2 instance types and sizes to use in the Auto Scaling group. The instance definitions must specify
-     *        at least two different instance types that are supported by GameLift FleetIQ. For more information on
-     *        instance types, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">EC2
-     *        Instance Types</a> in the <i>Amazon EC2 User Guide</i>. You can optionally specify capacity weighting for
-     *        each instance type. If no weight value is specified for an instance type, it is set to the default value
-     *        "1". For more information about capacity weighting, see <a
+     *        The Amazon EC2 instance types and sizes to use in the Auto Scaling group. The instance definitions must
+     *        specify at least two different instance types that are supported by GameLift FleetIQ. For more information
+     *        on instance types, see <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">EC2 Instance Types</a> in
+     *        the <i>Amazon Elastic Compute Cloud User Guide</i>. You can optionally specify capacity weighting for each
+     *        instance type. If no weight value is specified for an instance type, it is set to the default value "1".
+     *        For more information about capacity weighting, see <a
      *        href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-instance-weighting.html"> Instance
      *        Weighting for Amazon EC2 Auto Scaling</a> in the Amazon EC2 Auto Scaling User Guide.
      */
@@ -538,13 +551,14 @@ public class CreateGameServerGroupRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The EC2 instance types and sizes to use in the Auto Scaling group. The instance definitions must specify at least
-     * two different instance types that are supported by GameLift FleetIQ. For more information on instance types, see
-     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">EC2 Instance Types</a> in the
-     * <i>Amazon EC2 User Guide</i>. You can optionally specify capacity weighting for each instance type. If no weight
-     * value is specified for an instance type, it is set to the default value "1". For more information about capacity
-     * weighting, see <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-instance-weighting.html">
-     * Instance Weighting for Amazon EC2 Auto Scaling</a> in the Amazon EC2 Auto Scaling User Guide.
+     * The Amazon EC2 instance types and sizes to use in the Auto Scaling group. The instance definitions must specify
+     * at least two different instance types that are supported by GameLift FleetIQ. For more information on instance
+     * types, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">EC2 Instance
+     * Types</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>. You can optionally specify capacity weighting
+     * for each instance type. If no weight value is specified for an instance type, it is set to the default value "1".
+     * For more information about capacity weighting, see <a
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-instance-weighting.html"> Instance Weighting for
+     * Amazon EC2 Auto Scaling</a> in the Amazon EC2 Auto Scaling User Guide.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -553,12 +567,13 @@ public class CreateGameServerGroupRequest extends com.amazonaws.AmazonWebService
      * </p>
      * 
      * @param instanceDefinitions
-     *        The EC2 instance types and sizes to use in the Auto Scaling group. The instance definitions must specify
-     *        at least two different instance types that are supported by GameLift FleetIQ. For more information on
-     *        instance types, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">EC2
-     *        Instance Types</a> in the <i>Amazon EC2 User Guide</i>. You can optionally specify capacity weighting for
-     *        each instance type. If no weight value is specified for an instance type, it is set to the default value
-     *        "1". For more information about capacity weighting, see <a
+     *        The Amazon EC2 instance types and sizes to use in the Auto Scaling group. The instance definitions must
+     *        specify at least two different instance types that are supported by GameLift FleetIQ. For more information
+     *        on instance types, see <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">EC2 Instance Types</a> in
+     *        the <i>Amazon Elastic Compute Cloud User Guide</i>. You can optionally specify capacity weighting for each
+     *        instance type. If no weight value is specified for an instance type, it is set to the default value "1".
+     *        For more information about capacity weighting, see <a
      *        href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-instance-weighting.html"> Instance
      *        Weighting for Amazon EC2 Auto Scaling</a> in the Amazon EC2 Auto Scaling User Guide.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -576,22 +591,24 @@ public class CreateGameServerGroupRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * The EC2 instance types and sizes to use in the Auto Scaling group. The instance definitions must specify at least
-     * two different instance types that are supported by GameLift FleetIQ. For more information on instance types, see
-     * <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">EC2 Instance Types</a> in the
-     * <i>Amazon EC2 User Guide</i>. You can optionally specify capacity weighting for each instance type. If no weight
-     * value is specified for an instance type, it is set to the default value "1". For more information about capacity
-     * weighting, see <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-instance-weighting.html">
-     * Instance Weighting for Amazon EC2 Auto Scaling</a> in the Amazon EC2 Auto Scaling User Guide.
+     * The Amazon EC2 instance types and sizes to use in the Auto Scaling group. The instance definitions must specify
+     * at least two different instance types that are supported by GameLift FleetIQ. For more information on instance
+     * types, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">EC2 Instance
+     * Types</a> in the <i>Amazon Elastic Compute Cloud User Guide</i>. You can optionally specify capacity weighting
+     * for each instance type. If no weight value is specified for an instance type, it is set to the default value "1".
+     * For more information about capacity weighting, see <a
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-instance-weighting.html"> Instance Weighting for
+     * Amazon EC2 Auto Scaling</a> in the Amazon EC2 Auto Scaling User Guide.
      * </p>
      * 
      * @param instanceDefinitions
-     *        The EC2 instance types and sizes to use in the Auto Scaling group. The instance definitions must specify
-     *        at least two different instance types that are supported by GameLift FleetIQ. For more information on
-     *        instance types, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">EC2
-     *        Instance Types</a> in the <i>Amazon EC2 User Guide</i>. You can optionally specify capacity weighting for
-     *        each instance type. If no weight value is specified for an instance type, it is set to the default value
-     *        "1". For more information about capacity weighting, see <a
+     *        The Amazon EC2 instance types and sizes to use in the Auto Scaling group. The instance definitions must
+     *        specify at least two different instance types that are supported by GameLift FleetIQ. For more information
+     *        on instance types, see <a
+     *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">EC2 Instance Types</a> in
+     *        the <i>Amazon Elastic Compute Cloud User Guide</i>. You can optionally specify capacity weighting for each
+     *        instance type. If no weight value is specified for an instance type, it is set to the default value "1".
+     *        For more information about capacity weighting, see <a
      *        href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-instance-weighting.html"> Instance
      *        Weighting for Amazon EC2 Auto Scaling</a> in the Amazon EC2 Auto Scaling User Guide.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -607,14 +624,15 @@ public class CreateGameServerGroupRequest extends com.amazonaws.AmazonWebService
      * Configuration settings to define a scaling policy for the Auto Scaling group that is optimized for game hosting.
      * The scaling policy uses the metric <code>"PercentUtilizedGameServers"</code> to maintain a buffer of idle game
      * servers that can immediately accommodate new games and players. After the Auto Scaling group is created, update
-     * this value directly in the Auto Scaling group using the AWS console or APIs.
+     * this value directly in the Auto Scaling group using the Amazon Web Services console or APIs.
      * </p>
      * 
      * @param autoScalingPolicy
      *        Configuration settings to define a scaling policy for the Auto Scaling group that is optimized for game
      *        hosting. The scaling policy uses the metric <code>"PercentUtilizedGameServers"</code> to maintain a buffer
      *        of idle game servers that can immediately accommodate new games and players. After the Auto Scaling group
-     *        is created, update this value directly in the Auto Scaling group using the AWS console or APIs.
+     *        is created, update this value directly in the Auto Scaling group using the Amazon Web Services console or
+     *        APIs.
      */
 
     public void setAutoScalingPolicy(GameServerGroupAutoScalingPolicy autoScalingPolicy) {
@@ -626,14 +644,14 @@ public class CreateGameServerGroupRequest extends com.amazonaws.AmazonWebService
      * Configuration settings to define a scaling policy for the Auto Scaling group that is optimized for game hosting.
      * The scaling policy uses the metric <code>"PercentUtilizedGameServers"</code> to maintain a buffer of idle game
      * servers that can immediately accommodate new games and players. After the Auto Scaling group is created, update
-     * this value directly in the Auto Scaling group using the AWS console or APIs.
+     * this value directly in the Auto Scaling group using the Amazon Web Services console or APIs.
      * </p>
      * 
      * @return Configuration settings to define a scaling policy for the Auto Scaling group that is optimized for game
      *         hosting. The scaling policy uses the metric <code>"PercentUtilizedGameServers"</code> to maintain a
      *         buffer of idle game servers that can immediately accommodate new games and players. After the Auto
-     *         Scaling group is created, update this value directly in the Auto Scaling group using the AWS console or
-     *         APIs.
+     *         Scaling group is created, update this value directly in the Auto Scaling group using the Amazon Web
+     *         Services console or APIs.
      */
 
     public GameServerGroupAutoScalingPolicy getAutoScalingPolicy() {
@@ -645,14 +663,15 @@ public class CreateGameServerGroupRequest extends com.amazonaws.AmazonWebService
      * Configuration settings to define a scaling policy for the Auto Scaling group that is optimized for game hosting.
      * The scaling policy uses the metric <code>"PercentUtilizedGameServers"</code> to maintain a buffer of idle game
      * servers that can immediately accommodate new games and players. After the Auto Scaling group is created, update
-     * this value directly in the Auto Scaling group using the AWS console or APIs.
+     * this value directly in the Auto Scaling group using the Amazon Web Services console or APIs.
      * </p>
      * 
      * @param autoScalingPolicy
      *        Configuration settings to define a scaling policy for the Auto Scaling group that is optimized for game
      *        hosting. The scaling policy uses the metric <code>"PercentUtilizedGameServers"</code> to maintain a buffer
      *        of idle game servers that can immediately accommodate new games and players. After the Auto Scaling group
-     *        is created, update this value directly in the Auto Scaling group using the AWS console or APIs.
+     *        is created, update this value directly in the Auto Scaling group using the Amazon Web Services console or
+     *        APIs.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -922,8 +941,8 @@ public class CreateGameServerGroupRequest extends com.amazonaws.AmazonWebService
      * Unprotected instances that have active game servers running might be terminated during a scale-down event,
      * causing players to be dropped from the game. Protected instances cannot be terminated while there are active game
      * servers running except in the event of a forced game server group deletion (see ). An exception to this is with
-     * Spot Instances, which can be terminated by AWS regardless of protection status. This property is set to
-     * <code>NO_PROTECTION</code> by default.
+     * Spot Instances, which can be terminated by Amazon Web Services regardless of protection status. This property is
+     * set to <code>NO_PROTECTION</code> by default.
      * </p>
      * 
      * @param gameServerProtectionPolicy
@@ -931,8 +950,8 @@ public class CreateGameServerGroupRequest extends com.amazonaws.AmazonWebService
      *        Unprotected instances that have active game servers running might be terminated during a scale-down event,
      *        causing players to be dropped from the game. Protected instances cannot be terminated while there are
      *        active game servers running except in the event of a forced game server group deletion (see ). An
-     *        exception to this is with Spot Instances, which can be terminated by AWS regardless of protection status.
-     *        This property is set to <code>NO_PROTECTION</code> by default.
+     *        exception to this is with Spot Instances, which can be terminated by Amazon Web Services regardless of
+     *        protection status. This property is set to <code>NO_PROTECTION</code> by default.
      * @see GameServerProtectionPolicy
      */
 
@@ -946,16 +965,16 @@ public class CreateGameServerGroupRequest extends com.amazonaws.AmazonWebService
      * Unprotected instances that have active game servers running might be terminated during a scale-down event,
      * causing players to be dropped from the game. Protected instances cannot be terminated while there are active game
      * servers running except in the event of a forced game server group deletion (see ). An exception to this is with
-     * Spot Instances, which can be terminated by AWS regardless of protection status. This property is set to
-     * <code>NO_PROTECTION</code> by default.
+     * Spot Instances, which can be terminated by Amazon Web Services regardless of protection status. This property is
+     * set to <code>NO_PROTECTION</code> by default.
      * </p>
      * 
      * @return A flag that indicates whether instances in the game server group are protected from early termination.
      *         Unprotected instances that have active game servers running might be terminated during a scale-down
      *         event, causing players to be dropped from the game. Protected instances cannot be terminated while there
      *         are active game servers running except in the event of a forced game server group deletion (see ). An
-     *         exception to this is with Spot Instances, which can be terminated by AWS regardless of protection status.
-     *         This property is set to <code>NO_PROTECTION</code> by default.
+     *         exception to this is with Spot Instances, which can be terminated by Amazon Web Services regardless of
+     *         protection status. This property is set to <code>NO_PROTECTION</code> by default.
      * @see GameServerProtectionPolicy
      */
 
@@ -969,8 +988,8 @@ public class CreateGameServerGroupRequest extends com.amazonaws.AmazonWebService
      * Unprotected instances that have active game servers running might be terminated during a scale-down event,
      * causing players to be dropped from the game. Protected instances cannot be terminated while there are active game
      * servers running except in the event of a forced game server group deletion (see ). An exception to this is with
-     * Spot Instances, which can be terminated by AWS regardless of protection status. This property is set to
-     * <code>NO_PROTECTION</code> by default.
+     * Spot Instances, which can be terminated by Amazon Web Services regardless of protection status. This property is
+     * set to <code>NO_PROTECTION</code> by default.
      * </p>
      * 
      * @param gameServerProtectionPolicy
@@ -978,8 +997,8 @@ public class CreateGameServerGroupRequest extends com.amazonaws.AmazonWebService
      *        Unprotected instances that have active game servers running might be terminated during a scale-down event,
      *        causing players to be dropped from the game. Protected instances cannot be terminated while there are
      *        active game servers running except in the event of a forced game server group deletion (see ). An
-     *        exception to this is with Spot Instances, which can be terminated by AWS regardless of protection status.
-     *        This property is set to <code>NO_PROTECTION</code> by default.
+     *        exception to this is with Spot Instances, which can be terminated by Amazon Web Services regardless of
+     *        protection status. This property is set to <code>NO_PROTECTION</code> by default.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see GameServerProtectionPolicy
      */
@@ -995,8 +1014,8 @@ public class CreateGameServerGroupRequest extends com.amazonaws.AmazonWebService
      * Unprotected instances that have active game servers running might be terminated during a scale-down event,
      * causing players to be dropped from the game. Protected instances cannot be terminated while there are active game
      * servers running except in the event of a forced game server group deletion (see ). An exception to this is with
-     * Spot Instances, which can be terminated by AWS regardless of protection status. This property is set to
-     * <code>NO_PROTECTION</code> by default.
+     * Spot Instances, which can be terminated by Amazon Web Services regardless of protection status. This property is
+     * set to <code>NO_PROTECTION</code> by default.
      * </p>
      * 
      * @param gameServerProtectionPolicy
@@ -1004,8 +1023,8 @@ public class CreateGameServerGroupRequest extends com.amazonaws.AmazonWebService
      *        Unprotected instances that have active game servers running might be terminated during a scale-down event,
      *        causing players to be dropped from the game. Protected instances cannot be terminated while there are
      *        active game servers running except in the event of a forced game server group deletion (see ). An
-     *        exception to this is with Spot Instances, which can be terminated by AWS regardless of protection status.
-     *        This property is set to <code>NO_PROTECTION</code> by default.
+     *        exception to this is with Spot Instances, which can be terminated by Amazon Web Services regardless of
+     *        protection status. This property is set to <code>NO_PROTECTION</code> by default.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see GameServerProtectionPolicy
      */
@@ -1120,20 +1139,22 @@ public class CreateGameServerGroupRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * A list of labels to assign to the new game server group resource. Tags are developer-defined key-value pairs.
-     * Tagging AWS resources is useful for resource management, access management, and cost allocation. For more
-     * information, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"> Tagging AWS
-     * Resources</a> in the <i>AWS General Reference</i>. Once the resource is created, you can use <a>TagResource</a>,
-     * <a>UntagResource</a>, and <a>ListTagsForResource</a> to add, remove, and view tags, respectively. The maximum tag
-     * limit may be lower than stated. See the AWS General Reference for actual tagging limits.
+     * Tagging Amazon Web Services resources is useful for resource management, access management, and cost allocation.
+     * For more information, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"> Tagging
+     * Amazon Web Services Resources</a> in the <i>Amazon Web Services General Reference</i>. Once the resource is
+     * created, you can use <a>TagResource</a>, <a>UntagResource</a>, and <a>ListTagsForResource</a> to add, remove, and
+     * view tags, respectively. The maximum tag limit may be lower than stated. See the Amazon Web Services General
+     * Reference for actual tagging limits.
      * </p>
      * 
      * @return A list of labels to assign to the new game server group resource. Tags are developer-defined key-value
-     *         pairs. Tagging AWS resources is useful for resource management, access management, and cost allocation.
-     *         For more information, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">
-     *         Tagging AWS Resources</a> in the <i>AWS General Reference</i>. Once the resource is created, you can use
-     *         <a>TagResource</a>, <a>UntagResource</a>, and <a>ListTagsForResource</a> to add, remove, and view tags,
-     *         respectively. The maximum tag limit may be lower than stated. See the AWS General Reference for actual
-     *         tagging limits.
+     *         pairs. Tagging Amazon Web Services resources is useful for resource management, access management, and
+     *         cost allocation. For more information, see <a
+     *         href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"> Tagging Amazon Web Services
+     *         Resources</a> in the <i>Amazon Web Services General Reference</i>. Once the resource is created, you can
+     *         use <a>TagResource</a>, <a>UntagResource</a>, and <a>ListTagsForResource</a> to add, remove, and view
+     *         tags, respectively. The maximum tag limit may be lower than stated. See the Amazon Web Services General
+     *         Reference for actual tagging limits.
      */
 
     public java.util.List<Tag> getTags() {
@@ -1143,21 +1164,23 @@ public class CreateGameServerGroupRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * A list of labels to assign to the new game server group resource. Tags are developer-defined key-value pairs.
-     * Tagging AWS resources is useful for resource management, access management, and cost allocation. For more
-     * information, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"> Tagging AWS
-     * Resources</a> in the <i>AWS General Reference</i>. Once the resource is created, you can use <a>TagResource</a>,
-     * <a>UntagResource</a>, and <a>ListTagsForResource</a> to add, remove, and view tags, respectively. The maximum tag
-     * limit may be lower than stated. See the AWS General Reference for actual tagging limits.
+     * Tagging Amazon Web Services resources is useful for resource management, access management, and cost allocation.
+     * For more information, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"> Tagging
+     * Amazon Web Services Resources</a> in the <i>Amazon Web Services General Reference</i>. Once the resource is
+     * created, you can use <a>TagResource</a>, <a>UntagResource</a>, and <a>ListTagsForResource</a> to add, remove, and
+     * view tags, respectively. The maximum tag limit may be lower than stated. See the Amazon Web Services General
+     * Reference for actual tagging limits.
      * </p>
      * 
      * @param tags
      *        A list of labels to assign to the new game server group resource. Tags are developer-defined key-value
-     *        pairs. Tagging AWS resources is useful for resource management, access management, and cost allocation.
-     *        For more information, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">
-     *        Tagging AWS Resources</a> in the <i>AWS General Reference</i>. Once the resource is created, you can use
-     *        <a>TagResource</a>, <a>UntagResource</a>, and <a>ListTagsForResource</a> to add, remove, and view tags,
-     *        respectively. The maximum tag limit may be lower than stated. See the AWS General Reference for actual
-     *        tagging limits.
+     *        pairs. Tagging Amazon Web Services resources is useful for resource management, access management, and
+     *        cost allocation. For more information, see <a
+     *        href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"> Tagging Amazon Web Services
+     *        Resources</a> in the <i>Amazon Web Services General Reference</i>. Once the resource is created, you can
+     *        use <a>TagResource</a>, <a>UntagResource</a>, and <a>ListTagsForResource</a> to add, remove, and view
+     *        tags, respectively. The maximum tag limit may be lower than stated. See the Amazon Web Services General
+     *        Reference for actual tagging limits.
      */
 
     public void setTags(java.util.Collection<Tag> tags) {
@@ -1172,11 +1195,12 @@ public class CreateGameServerGroupRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * A list of labels to assign to the new game server group resource. Tags are developer-defined key-value pairs.
-     * Tagging AWS resources is useful for resource management, access management, and cost allocation. For more
-     * information, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"> Tagging AWS
-     * Resources</a> in the <i>AWS General Reference</i>. Once the resource is created, you can use <a>TagResource</a>,
-     * <a>UntagResource</a>, and <a>ListTagsForResource</a> to add, remove, and view tags, respectively. The maximum tag
-     * limit may be lower than stated. See the AWS General Reference for actual tagging limits.
+     * Tagging Amazon Web Services resources is useful for resource management, access management, and cost allocation.
+     * For more information, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"> Tagging
+     * Amazon Web Services Resources</a> in the <i>Amazon Web Services General Reference</i>. Once the resource is
+     * created, you can use <a>TagResource</a>, <a>UntagResource</a>, and <a>ListTagsForResource</a> to add, remove, and
+     * view tags, respectively. The maximum tag limit may be lower than stated. See the Amazon Web Services General
+     * Reference for actual tagging limits.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -1186,12 +1210,13 @@ public class CreateGameServerGroupRequest extends com.amazonaws.AmazonWebService
      * 
      * @param tags
      *        A list of labels to assign to the new game server group resource. Tags are developer-defined key-value
-     *        pairs. Tagging AWS resources is useful for resource management, access management, and cost allocation.
-     *        For more information, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">
-     *        Tagging AWS Resources</a> in the <i>AWS General Reference</i>. Once the resource is created, you can use
-     *        <a>TagResource</a>, <a>UntagResource</a>, and <a>ListTagsForResource</a> to add, remove, and view tags,
-     *        respectively. The maximum tag limit may be lower than stated. See the AWS General Reference for actual
-     *        tagging limits.
+     *        pairs. Tagging Amazon Web Services resources is useful for resource management, access management, and
+     *        cost allocation. For more information, see <a
+     *        href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"> Tagging Amazon Web Services
+     *        Resources</a> in the <i>Amazon Web Services General Reference</i>. Once the resource is created, you can
+     *        use <a>TagResource</a>, <a>UntagResource</a>, and <a>ListTagsForResource</a> to add, remove, and view
+     *        tags, respectively. The maximum tag limit may be lower than stated. See the Amazon Web Services General
+     *        Reference for actual tagging limits.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1208,21 +1233,23 @@ public class CreateGameServerGroupRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * A list of labels to assign to the new game server group resource. Tags are developer-defined key-value pairs.
-     * Tagging AWS resources is useful for resource management, access management, and cost allocation. For more
-     * information, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"> Tagging AWS
-     * Resources</a> in the <i>AWS General Reference</i>. Once the resource is created, you can use <a>TagResource</a>,
-     * <a>UntagResource</a>, and <a>ListTagsForResource</a> to add, remove, and view tags, respectively. The maximum tag
-     * limit may be lower than stated. See the AWS General Reference for actual tagging limits.
+     * Tagging Amazon Web Services resources is useful for resource management, access management, and cost allocation.
+     * For more information, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"> Tagging
+     * Amazon Web Services Resources</a> in the <i>Amazon Web Services General Reference</i>. Once the resource is
+     * created, you can use <a>TagResource</a>, <a>UntagResource</a>, and <a>ListTagsForResource</a> to add, remove, and
+     * view tags, respectively. The maximum tag limit may be lower than stated. See the Amazon Web Services General
+     * Reference for actual tagging limits.
      * </p>
      * 
      * @param tags
      *        A list of labels to assign to the new game server group resource. Tags are developer-defined key-value
-     *        pairs. Tagging AWS resources is useful for resource management, access management, and cost allocation.
-     *        For more information, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">
-     *        Tagging AWS Resources</a> in the <i>AWS General Reference</i>. Once the resource is created, you can use
-     *        <a>TagResource</a>, <a>UntagResource</a>, and <a>ListTagsForResource</a> to add, remove, and view tags,
-     *        respectively. The maximum tag limit may be lower than stated. See the AWS General Reference for actual
-     *        tagging limits.
+     *        pairs. Tagging Amazon Web Services resources is useful for resource management, access management, and
+     *        cost allocation. For more information, see <a
+     *        href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"> Tagging Amazon Web Services
+     *        Resources</a> in the <i>Amazon Web Services General Reference</i>. Once the resource is created, you can
+     *        use <a>TagResource</a>, <a>UntagResource</a>, and <a>ListTagsForResource</a> to add, remove, and view
+     *        tags, respectively. The maximum tag limit may be lower than stated. See the Amazon Web Services General
+     *        Reference for actual tagging limits.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

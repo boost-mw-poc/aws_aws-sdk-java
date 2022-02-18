@@ -88,6 +88,14 @@ public class DescribedServerJsonUnmarshaller implements Unmarshaller<DescribedSe
                     context.nextToken();
                     describedServer.setLoggingRole(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("PostAuthenticationLoginBanner", targetDepth)) {
+                    context.nextToken();
+                    describedServer.setPostAuthenticationLoginBanner(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("PreAuthenticationLoginBanner", targetDepth)) {
+                    context.nextToken();
+                    describedServer.setPreAuthenticationLoginBanner(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("Protocols", targetDepth)) {
                     context.nextToken();
                     describedServer.setProtocols(new ListUnmarshaller<String>(context.getUnmarshaller(String.class))

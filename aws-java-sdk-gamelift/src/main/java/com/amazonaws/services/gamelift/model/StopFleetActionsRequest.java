@@ -42,8 +42,8 @@ public class StopFleetActionsRequest extends com.amazonaws.AmazonWebServiceReque
     private java.util.List<String> actions;
     /**
      * <p>
-     * The fleet location to stop fleet actions for. Specify a location in the form of an AWS Region code, such as
-     * <code>us-west-2</code>.
+     * The fleet location to stop fleet actions for. Specify a location in the form of an Amazon Web Services Region
+     * code, such as <code>us-west-2</code>.
      * </p>
      */
     private String location;
@@ -188,13 +188,13 @@ public class StopFleetActionsRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The fleet location to stop fleet actions for. Specify a location in the form of an AWS Region code, such as
-     * <code>us-west-2</code>.
+     * The fleet location to stop fleet actions for. Specify a location in the form of an Amazon Web Services Region
+     * code, such as <code>us-west-2</code>.
      * </p>
      * 
      * @param location
-     *        The fleet location to stop fleet actions for. Specify a location in the form of an AWS Region code, such
-     *        as <code>us-west-2</code>.
+     *        The fleet location to stop fleet actions for. Specify a location in the form of an Amazon Web Services
+     *        Region code, such as <code>us-west-2</code>.
      */
 
     public void setLocation(String location) {
@@ -203,12 +203,12 @@ public class StopFleetActionsRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The fleet location to stop fleet actions for. Specify a location in the form of an AWS Region code, such as
-     * <code>us-west-2</code>.
+     * The fleet location to stop fleet actions for. Specify a location in the form of an Amazon Web Services Region
+     * code, such as <code>us-west-2</code>.
      * </p>
      * 
-     * @return The fleet location to stop fleet actions for. Specify a location in the form of an AWS Region code, such
-     *         as <code>us-west-2</code>.
+     * @return The fleet location to stop fleet actions for. Specify a location in the form of an Amazon Web Services
+     *         Region code, such as <code>us-west-2</code>.
      */
 
     public String getLocation() {
@@ -217,13 +217,13 @@ public class StopFleetActionsRequest extends com.amazonaws.AmazonWebServiceReque
 
     /**
      * <p>
-     * The fleet location to stop fleet actions for. Specify a location in the form of an AWS Region code, such as
-     * <code>us-west-2</code>.
+     * The fleet location to stop fleet actions for. Specify a location in the form of an Amazon Web Services Region
+     * code, such as <code>us-west-2</code>.
      * </p>
      * 
      * @param location
-     *        The fleet location to stop fleet actions for. Specify a location in the form of an AWS Region code, such
-     *        as <code>us-west-2</code>.
+     *        The fleet location to stop fleet actions for. Specify a location in the form of an Amazon Web Services
+     *        Region code, such as <code>us-west-2</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

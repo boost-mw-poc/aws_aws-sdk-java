@@ -35,7 +35,7 @@ public class FilterConfiguration implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * A list of locations to allow game session placement in, in the form of AWS Region codes such as
+     * A list of locations to allow game session placement in, in the form of Amazon Web Services Region codes such as
      * <code>us-west-2</code>.
      * </p>
      */
@@ -43,12 +43,12 @@ public class FilterConfiguration implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * A list of locations to allow game session placement in, in the form of AWS Region codes such as
+     * A list of locations to allow game session placement in, in the form of Amazon Web Services Region codes such as
      * <code>us-west-2</code>.
      * </p>
      * 
-     * @return A list of locations to allow game session placement in, in the form of AWS Region codes such as
-     *         <code>us-west-2</code>.
+     * @return A list of locations to allow game session placement in, in the form of Amazon Web Services Region codes
+     *         such as <code>us-west-2</code>.
      */
 
     public java.util.List<String> getAllowedLocations() {
@@ -57,13 +57,13 @@ public class FilterConfiguration implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * A list of locations to allow game session placement in, in the form of AWS Region codes such as
+     * A list of locations to allow game session placement in, in the form of Amazon Web Services Region codes such as
      * <code>us-west-2</code>.
      * </p>
      * 
      * @param allowedLocations
-     *        A list of locations to allow game session placement in, in the form of AWS Region codes such as
-     *        <code>us-west-2</code>.
+     *        A list of locations to allow game session placement in, in the form of Amazon Web Services Region codes
+     *        such as <code>us-west-2</code>.
      */
 
     public void setAllowedLocations(java.util.Collection<String> allowedLocations) {
@@ -77,7 +77,7 @@ public class FilterConfiguration implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * A list of locations to allow game session placement in, in the form of AWS Region codes such as
+     * A list of locations to allow game session placement in, in the form of Amazon Web Services Region codes such as
      * <code>us-west-2</code>.
      * </p>
      * <p>
@@ -87,8 +87,8 @@ public class FilterConfiguration implements Serializable, Cloneable, StructuredP
      * </p>
      * 
      * @param allowedLocations
-     *        A list of locations to allow game session placement in, in the form of AWS Region codes such as
-     *        <code>us-west-2</code>.
+     *        A list of locations to allow game session placement in, in the form of Amazon Web Services Region codes
+     *        such as <code>us-west-2</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -104,13 +104,13 @@ public class FilterConfiguration implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
-     * A list of locations to allow game session placement in, in the form of AWS Region codes such as
+     * A list of locations to allow game session placement in, in the form of Amazon Web Services Region codes such as
      * <code>us-west-2</code>.
      * </p>
      * 
      * @param allowedLocations
-     *        A list of locations to allow game session placement in, in the form of AWS Region codes such as
-     *        <code>us-west-2</code>.
+     *        A list of locations to allow game session placement in, in the form of Amazon Web Services Region codes
+     *        such as <code>us-west-2</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

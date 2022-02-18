@@ -475,6 +475,30 @@ public interface AWSBudgets {
 
     /**
      * <p>
+     * Lists the budget names and notifications that are associated with an account.
+     * </p>
+     * 
+     * @param describeBudgetNotificationsForAccountRequest
+     * @return Result of the DescribeBudgetNotificationsForAccount operation returned by the service.
+     * @throws InternalErrorException
+     *         An error on the server occurred during the processing of your request. Try again later.
+     * @throws InvalidParameterException
+     *         An error on the client occurred. Typically, the cause is an invalid input value.
+     * @throws NotFoundException
+     *         We can’t locate the resource that you specified.
+     * @throws InvalidNextTokenException
+     *         The pagination token is invalid.
+     * @throws ExpiredNextTokenException
+     *         The pagination token expired.
+     * @throws AccessDeniedException
+     *         You are not authorized to use this operation with the given parameters.
+     * @sample AWSBudgets.DescribeBudgetNotificationsForAccount
+     */
+    DescribeBudgetNotificationsForAccountResult describeBudgetNotificationsForAccount(
+            DescribeBudgetNotificationsForAccountRequest describeBudgetNotificationsForAccountRequest);
+
+    /**
+     * <p>
      * Describes the history for <code>DAILY</code>, <code>MONTHLY</code>, and <code>QUARTERLY</code> budgets. Budget
      * history isn't available for <code>ANNUAL</code> budgets.
      * </p>

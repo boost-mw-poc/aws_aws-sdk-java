@@ -189,6 +189,10 @@ public class CreateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
      * </p>
      */
     private String loggingRole;
+
+    private String postAuthenticationLoginBanner;
+
+    private String preAuthenticationLoginBanner;
     /**
      * <p>
      * Specifies the file transfer protocol or protocols over which your file transfer protocol client can connect to
@@ -1412,6 +1416,58 @@ public class CreateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
     }
 
     /**
+     * @param postAuthenticationLoginBanner
+     */
+
+    public void setPostAuthenticationLoginBanner(String postAuthenticationLoginBanner) {
+        this.postAuthenticationLoginBanner = postAuthenticationLoginBanner;
+    }
+
+    /**
+     * @return
+     */
+
+    public String getPostAuthenticationLoginBanner() {
+        return this.postAuthenticationLoginBanner;
+    }
+
+    /**
+     * @param postAuthenticationLoginBanner
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateServerRequest withPostAuthenticationLoginBanner(String postAuthenticationLoginBanner) {
+        setPostAuthenticationLoginBanner(postAuthenticationLoginBanner);
+        return this;
+    }
+
+    /**
+     * @param preAuthenticationLoginBanner
+     */
+
+    public void setPreAuthenticationLoginBanner(String preAuthenticationLoginBanner) {
+        this.preAuthenticationLoginBanner = preAuthenticationLoginBanner;
+    }
+
+    /**
+     * @return
+     */
+
+    public String getPreAuthenticationLoginBanner() {
+        return this.preAuthenticationLoginBanner;
+    }
+
+    /**
+     * @param preAuthenticationLoginBanner
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateServerRequest withPreAuthenticationLoginBanner(String preAuthenticationLoginBanner) {
+        setPreAuthenticationLoginBanner(preAuthenticationLoginBanner);
+        return this;
+    }
+
+    /**
      * <p>
      * Specifies the file transfer protocol or protocols over which your file transfer protocol client can connect to
      * your server's endpoint. The available protocols are:
@@ -2135,6 +2191,10 @@ public class CreateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
             sb.append("IdentityProviderType: ").append(getIdentityProviderType()).append(",");
         if (getLoggingRole() != null)
             sb.append("LoggingRole: ").append(getLoggingRole()).append(",");
+        if (getPostAuthenticationLoginBanner() != null)
+            sb.append("PostAuthenticationLoginBanner: ").append(getPostAuthenticationLoginBanner()).append(",");
+        if (getPreAuthenticationLoginBanner() != null)
+            sb.append("PreAuthenticationLoginBanner: ").append(getPreAuthenticationLoginBanner()).append(",");
         if (getProtocols() != null)
             sb.append("Protocols: ").append(getProtocols()).append(",");
         if (getProtocolDetails() != null)
@@ -2191,6 +2251,15 @@ public class CreateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
             return false;
         if (other.getLoggingRole() != null && other.getLoggingRole().equals(this.getLoggingRole()) == false)
             return false;
+        if (other.getPostAuthenticationLoginBanner() == null ^ this.getPostAuthenticationLoginBanner() == null)
+            return false;
+        if (other.getPostAuthenticationLoginBanner() != null
+                && other.getPostAuthenticationLoginBanner().equals(this.getPostAuthenticationLoginBanner()) == false)
+            return false;
+        if (other.getPreAuthenticationLoginBanner() == null ^ this.getPreAuthenticationLoginBanner() == null)
+            return false;
+        if (other.getPreAuthenticationLoginBanner() != null && other.getPreAuthenticationLoginBanner().equals(this.getPreAuthenticationLoginBanner()) == false)
+            return false;
         if (other.getProtocols() == null ^ this.getProtocols() == null)
             return false;
         if (other.getProtocols() != null && other.getProtocols().equals(this.getProtocols()) == false)
@@ -2227,6 +2296,8 @@ public class CreateServerRequest extends com.amazonaws.AmazonWebServiceRequest i
         hashCode = prime * hashCode + ((getIdentityProviderDetails() == null) ? 0 : getIdentityProviderDetails().hashCode());
         hashCode = prime * hashCode + ((getIdentityProviderType() == null) ? 0 : getIdentityProviderType().hashCode());
         hashCode = prime * hashCode + ((getLoggingRole() == null) ? 0 : getLoggingRole().hashCode());
+        hashCode = prime * hashCode + ((getPostAuthenticationLoginBanner() == null) ? 0 : getPostAuthenticationLoginBanner().hashCode());
+        hashCode = prime * hashCode + ((getPreAuthenticationLoginBanner() == null) ? 0 : getPreAuthenticationLoginBanner().hashCode());
         hashCode = prime * hashCode + ((getProtocols() == null) ? 0 : getProtocols().hashCode());
         hashCode = prime * hashCode + ((getProtocolDetails() == null) ? 0 : getProtocolDetails().hashCode());
         hashCode = prime * hashCode + ((getSecurityPolicyName() == null) ? 0 : getSecurityPolicyName().hashCode());

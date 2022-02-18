@@ -25,7 +25,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * <b>Related actions</b>
  * </p>
  * <p>
- * <a>CreateFleet</a>
+ * <a href="https://docs.aws.amazon.com/gamelift/latest/apireference/API_CreateFleet.html">CreateFleet</a>
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/LocationConfiguration" target="_top">AWS API
@@ -36,18 +36,18 @@ public class LocationConfiguration implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * An AWS Region code, such as <code>us-west-2</code>.
+     * An Amazon Web Services Region code, such as <code>us-west-2</code>.
      * </p>
      */
     private String location;
 
     /**
      * <p>
-     * An AWS Region code, such as <code>us-west-2</code>.
+     * An Amazon Web Services Region code, such as <code>us-west-2</code>.
      * </p>
      * 
      * @param location
-     *        An AWS Region code, such as <code>us-west-2</code>.
+     *        An Amazon Web Services Region code, such as <code>us-west-2</code>.
      */
 
     public void setLocation(String location) {
@@ -56,10 +56,10 @@ public class LocationConfiguration implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * An AWS Region code, such as <code>us-west-2</code>.
+     * An Amazon Web Services Region code, such as <code>us-west-2</code>.
      * </p>
      * 
-     * @return An AWS Region code, such as <code>us-west-2</code>.
+     * @return An Amazon Web Services Region code, such as <code>us-west-2</code>.
      */
 
     public String getLocation() {
@@ -68,11 +68,11 @@ public class LocationConfiguration implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * An AWS Region code, such as <code>us-west-2</code>.
+     * An Amazon Web Services Region code, such as <code>us-west-2</code>.
      * </p>
      * 
      * @param location
-     *        An AWS Region code, such as <code>us-west-2</code>.
+     *        An Amazon Web Services Region code, such as <code>us-west-2</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

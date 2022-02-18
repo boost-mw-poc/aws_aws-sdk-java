@@ -56,7 +56,7 @@ public class DescribeFleetPortSettingsResult extends com.amazonaws.AmazonWebServ
     private String updateStatus;
     /**
      * <p>
-     * The requested fleet location, expressed as an AWS Region code, such as <code>us-west-2</code>.
+     * The requested fleet location, expressed as an Amazon Web Services Region code, such as <code>us-west-2</code>.
      * </p>
      */
     private String location;
@@ -303,11 +303,12 @@ public class DescribeFleetPortSettingsResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The requested fleet location, expressed as an AWS Region code, such as <code>us-west-2</code>.
+     * The requested fleet location, expressed as an Amazon Web Services Region code, such as <code>us-west-2</code>.
      * </p>
      * 
      * @param location
-     *        The requested fleet location, expressed as an AWS Region code, such as <code>us-west-2</code>.
+     *        The requested fleet location, expressed as an Amazon Web Services Region code, such as
+     *        <code>us-west-2</code>.
      */
 
     public void setLocation(String location) {
@@ -316,10 +317,11 @@ public class DescribeFleetPortSettingsResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The requested fleet location, expressed as an AWS Region code, such as <code>us-west-2</code>.
+     * The requested fleet location, expressed as an Amazon Web Services Region code, such as <code>us-west-2</code>.
      * </p>
      * 
-     * @return The requested fleet location, expressed as an AWS Region code, such as <code>us-west-2</code>.
+     * @return The requested fleet location, expressed as an Amazon Web Services Region code, such as
+     *         <code>us-west-2</code>.
      */
 
     public String getLocation() {
@@ -328,11 +330,12 @@ public class DescribeFleetPortSettingsResult extends com.amazonaws.AmazonWebServ
 
     /**
      * <p>
-     * The requested fleet location, expressed as an AWS Region code, such as <code>us-west-2</code>.
+     * The requested fleet location, expressed as an Amazon Web Services Region code, such as <code>us-west-2</code>.
      * </p>
      * 
      * @param location
-     *        The requested fleet location, expressed as an AWS Region code, such as <code>us-west-2</code>.
+     *        The requested fleet location, expressed as an Amazon Web Services Region code, such as
+     *        <code>us-west-2</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

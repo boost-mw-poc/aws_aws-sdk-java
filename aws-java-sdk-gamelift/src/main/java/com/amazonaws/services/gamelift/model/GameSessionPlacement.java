@@ -143,7 +143,7 @@ public class GameSessionPlacement implements Serializable, Cloneable, Structured
     /**
      * <p>
      * A set of values, expressed in milliseconds, that indicates the amount of latency that a player experiences when
-     * connected to AWS Regions.
+     * connected to @aws; Regions.
      * </p>
      */
     private java.util.List<PlayerLatency> playerLatencies;
@@ -1009,11 +1009,11 @@ public class GameSessionPlacement implements Serializable, Cloneable, Structured
     /**
      * <p>
      * A set of values, expressed in milliseconds, that indicates the amount of latency that a player experiences when
-     * connected to AWS Regions.
+     * connected to @aws; Regions.
      * </p>
      * 
      * @return A set of values, expressed in milliseconds, that indicates the amount of latency that a player
-     *         experiences when connected to AWS Regions.
+     *         experiences when connected to @aws; Regions.
      */
 
     public java.util.List<PlayerLatency> getPlayerLatencies() {
@@ -1023,12 +1023,12 @@ public class GameSessionPlacement implements Serializable, Cloneable, Structured
     /**
      * <p>
      * A set of values, expressed in milliseconds, that indicates the amount of latency that a player experiences when
-     * connected to AWS Regions.
+     * connected to @aws; Regions.
      * </p>
      * 
      * @param playerLatencies
      *        A set of values, expressed in milliseconds, that indicates the amount of latency that a player experiences
-     *        when connected to AWS Regions.
+     *        when connected to @aws; Regions.
      */
 
     public void setPlayerLatencies(java.util.Collection<PlayerLatency> playerLatencies) {
@@ -1043,7 +1043,7 @@ public class GameSessionPlacement implements Serializable, Cloneable, Structured
     /**
      * <p>
      * A set of values, expressed in milliseconds, that indicates the amount of latency that a player experiences when
-     * connected to AWS Regions.
+     * connected to @aws; Regions.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -1053,7 +1053,7 @@ public class GameSessionPlacement implements Serializable, Cloneable, Structured
      * 
      * @param playerLatencies
      *        A set of values, expressed in milliseconds, that indicates the amount of latency that a player experiences
-     *        when connected to AWS Regions.
+     *        when connected to @aws; Regions.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1070,12 +1070,12 @@ public class GameSessionPlacement implements Serializable, Cloneable, Structured
     /**
      * <p>
      * A set of values, expressed in milliseconds, that indicates the amount of latency that a player experiences when
-     * connected to AWS Regions.
+     * connected to @aws; Regions.
      * </p>
      * 
      * @param playerLatencies
      *        A set of values, expressed in milliseconds, that indicates the amount of latency that a player experiences
-     *        when connected to AWS Regions.
+     *        when connected to @aws; Regions.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

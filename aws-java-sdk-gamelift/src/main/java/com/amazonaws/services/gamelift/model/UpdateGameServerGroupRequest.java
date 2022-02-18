@@ -34,20 +34,21 @@ public class UpdateGameServerGroupRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * The Amazon Resource Name (<a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>)
-     * for an IAM role that allows Amazon GameLift to access your EC2 Auto Scaling groups.
+     * for an IAM role that allows Amazon Web Services to access your Amazon EC2 Auto Scaling groups.
      * </p>
      */
     private String roleArn;
     /**
      * <p>
-     * An updated list of EC2 instance types to use in the Auto Scaling group. The instance definitions must specify at
-     * least two different instance types that are supported by GameLift FleetIQ. This updated list replaces the entire
-     * current list of instance definitions for the game server group. For more information on instance types, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">EC2 Instance Types</a> in the
-     * <i>Amazon EC2 User Guide</i>. You can optionally specify capacity weighting for each instance type. If no weight
-     * value is specified for an instance type, it is set to the default value "1". For more information about capacity
-     * weighting, see <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-instance-weighting.html">
-     * Instance Weighting for Amazon EC2 Auto Scaling</a> in the Amazon EC2 Auto Scaling User Guide.
+     * An updated list of Amazon EC2 instance types to use in the Auto Scaling group. The instance definitions must
+     * specify at least two different instance types that are supported by GameLift FleetIQ. This updated list replaces
+     * the entire current list of instance definitions for the game server group. For more information on instance
+     * types, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">EC2 Instance
+     * Types</a> in the <i>Amazon EC2 User Guide</i>. You can optionally specify capacity weighting for each instance
+     * type. If no weight value is specified for an instance type, it is set to the default value "1". For more
+     * information about capacity weighting, see <a
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-instance-weighting.html"> Instance Weighting for
+     * Amazon EC2 Auto Scaling</a> in the Amazon EC2 Auto Scaling User Guide.
      * </p>
      */
     private java.util.List<InstanceDefinition> instanceDefinitions;
@@ -57,8 +58,8 @@ public class UpdateGameServerGroupRequest extends com.amazonaws.AmazonWebService
      * Unprotected instances that have active game servers running might be terminated during a scale-down event,
      * causing players to be dropped from the game. Protected instances cannot be terminated while there are active game
      * servers running except in the event of a forced game server group deletion (see ). An exception to this is with
-     * Spot Instances, which can be terminated by AWS regardless of protection status. This property is set to
-     * <code>NO_PROTECTION</code> by default.
+     * Spot Instances, which can be terminated by Amazon Web Services regardless of protection status. This property is
+     * set to <code>NO_PROTECTION</code> by default.
      * </p>
      */
     private String gameServerProtectionPolicy;
@@ -137,13 +138,13 @@ public class UpdateGameServerGroupRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * The Amazon Resource Name (<a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>)
-     * for an IAM role that allows Amazon GameLift to access your EC2 Auto Scaling groups.
+     * for an IAM role that allows Amazon Web Services to access your Amazon EC2 Auto Scaling groups.
      * </p>
      * 
      * @param roleArn
      *        The Amazon Resource Name (<a
      *        href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>) for an IAM role that
-     *        allows Amazon GameLift to access your EC2 Auto Scaling groups.
+     *        allows Amazon Web Services to access your Amazon EC2 Auto Scaling groups.
      */
 
     public void setRoleArn(String roleArn) {
@@ -153,12 +154,12 @@ public class UpdateGameServerGroupRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * The Amazon Resource Name (<a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>)
-     * for an IAM role that allows Amazon GameLift to access your EC2 Auto Scaling groups.
+     * for an IAM role that allows Amazon Web Services to access your Amazon EC2 Auto Scaling groups.
      * </p>
      * 
      * @return The Amazon Resource Name (<a
      *         href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>) for an IAM role that
-     *         allows Amazon GameLift to access your EC2 Auto Scaling groups.
+     *         allows Amazon Web Services to access your Amazon EC2 Auto Scaling groups.
      */
 
     public String getRoleArn() {
@@ -168,13 +169,13 @@ public class UpdateGameServerGroupRequest extends com.amazonaws.AmazonWebService
     /**
      * <p>
      * The Amazon Resource Name (<a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>)
-     * for an IAM role that allows Amazon GameLift to access your EC2 Auto Scaling groups.
+     * for an IAM role that allows Amazon Web Services to access your Amazon EC2 Auto Scaling groups.
      * </p>
      * 
      * @param roleArn
      *        The Amazon Resource Name (<a
      *        href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>) for an IAM role that
-     *        allows Amazon GameLift to access your EC2 Auto Scaling groups.
+     *        allows Amazon Web Services to access your Amazon EC2 Auto Scaling groups.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -185,20 +186,21 @@ public class UpdateGameServerGroupRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * An updated list of EC2 instance types to use in the Auto Scaling group. The instance definitions must specify at
-     * least two different instance types that are supported by GameLift FleetIQ. This updated list replaces the entire
-     * current list of instance definitions for the game server group. For more information on instance types, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">EC2 Instance Types</a> in the
-     * <i>Amazon EC2 User Guide</i>. You can optionally specify capacity weighting for each instance type. If no weight
-     * value is specified for an instance type, it is set to the default value "1". For more information about capacity
-     * weighting, see <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-instance-weighting.html">
-     * Instance Weighting for Amazon EC2 Auto Scaling</a> in the Amazon EC2 Auto Scaling User Guide.
+     * An updated list of Amazon EC2 instance types to use in the Auto Scaling group. The instance definitions must
+     * specify at least two different instance types that are supported by GameLift FleetIQ. This updated list replaces
+     * the entire current list of instance definitions for the game server group. For more information on instance
+     * types, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">EC2 Instance
+     * Types</a> in the <i>Amazon EC2 User Guide</i>. You can optionally specify capacity weighting for each instance
+     * type. If no weight value is specified for an instance type, it is set to the default value "1". For more
+     * information about capacity weighting, see <a
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-instance-weighting.html"> Instance Weighting for
+     * Amazon EC2 Auto Scaling</a> in the Amazon EC2 Auto Scaling User Guide.
      * </p>
      * 
-     * @return An updated list of EC2 instance types to use in the Auto Scaling group. The instance definitions must
-     *         specify at least two different instance types that are supported by GameLift FleetIQ. This updated list
-     *         replaces the entire current list of instance definitions for the game server group. For more information
-     *         on instance types, see <a
+     * @return An updated list of Amazon EC2 instance types to use in the Auto Scaling group. The instance definitions
+     *         must specify at least two different instance types that are supported by GameLift FleetIQ. This updated
+     *         list replaces the entire current list of instance definitions for the game server group. For more
+     *         information on instance types, see <a
      *         href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">EC2 Instance Types</a> in
      *         the <i>Amazon EC2 User Guide</i>. You can optionally specify capacity weighting for each instance type.
      *         If no weight value is specified for an instance type, it is set to the default value "1". For more
@@ -213,21 +215,22 @@ public class UpdateGameServerGroupRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * An updated list of EC2 instance types to use in the Auto Scaling group. The instance definitions must specify at
-     * least two different instance types that are supported by GameLift FleetIQ. This updated list replaces the entire
-     * current list of instance definitions for the game server group. For more information on instance types, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">EC2 Instance Types</a> in the
-     * <i>Amazon EC2 User Guide</i>. You can optionally specify capacity weighting for each instance type. If no weight
-     * value is specified for an instance type, it is set to the default value "1". For more information about capacity
-     * weighting, see <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-instance-weighting.html">
-     * Instance Weighting for Amazon EC2 Auto Scaling</a> in the Amazon EC2 Auto Scaling User Guide.
+     * An updated list of Amazon EC2 instance types to use in the Auto Scaling group. The instance definitions must
+     * specify at least two different instance types that are supported by GameLift FleetIQ. This updated list replaces
+     * the entire current list of instance definitions for the game server group. For more information on instance
+     * types, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">EC2 Instance
+     * Types</a> in the <i>Amazon EC2 User Guide</i>. You can optionally specify capacity weighting for each instance
+     * type. If no weight value is specified for an instance type, it is set to the default value "1". For more
+     * information about capacity weighting, see <a
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-instance-weighting.html"> Instance Weighting for
+     * Amazon EC2 Auto Scaling</a> in the Amazon EC2 Auto Scaling User Guide.
      * </p>
      * 
      * @param instanceDefinitions
-     *        An updated list of EC2 instance types to use in the Auto Scaling group. The instance definitions must
-     *        specify at least two different instance types that are supported by GameLift FleetIQ. This updated list
-     *        replaces the entire current list of instance definitions for the game server group. For more information
-     *        on instance types, see <a
+     *        An updated list of Amazon EC2 instance types to use in the Auto Scaling group. The instance definitions
+     *        must specify at least two different instance types that are supported by GameLift FleetIQ. This updated
+     *        list replaces the entire current list of instance definitions for the game server group. For more
+     *        information on instance types, see <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">EC2 Instance Types</a> in
      *        the <i>Amazon EC2 User Guide</i>. You can optionally specify capacity weighting for each instance type. If
      *        no weight value is specified for an instance type, it is set to the default value "1". For more
@@ -247,14 +250,15 @@ public class UpdateGameServerGroupRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * An updated list of EC2 instance types to use in the Auto Scaling group. The instance definitions must specify at
-     * least two different instance types that are supported by GameLift FleetIQ. This updated list replaces the entire
-     * current list of instance definitions for the game server group. For more information on instance types, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">EC2 Instance Types</a> in the
-     * <i>Amazon EC2 User Guide</i>. You can optionally specify capacity weighting for each instance type. If no weight
-     * value is specified for an instance type, it is set to the default value "1". For more information about capacity
-     * weighting, see <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-instance-weighting.html">
-     * Instance Weighting for Amazon EC2 Auto Scaling</a> in the Amazon EC2 Auto Scaling User Guide.
+     * An updated list of Amazon EC2 instance types to use in the Auto Scaling group. The instance definitions must
+     * specify at least two different instance types that are supported by GameLift FleetIQ. This updated list replaces
+     * the entire current list of instance definitions for the game server group. For more information on instance
+     * types, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">EC2 Instance
+     * Types</a> in the <i>Amazon EC2 User Guide</i>. You can optionally specify capacity weighting for each instance
+     * type. If no weight value is specified for an instance type, it is set to the default value "1". For more
+     * information about capacity weighting, see <a
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-instance-weighting.html"> Instance Weighting for
+     * Amazon EC2 Auto Scaling</a> in the Amazon EC2 Auto Scaling User Guide.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -263,10 +267,10 @@ public class UpdateGameServerGroupRequest extends com.amazonaws.AmazonWebService
      * </p>
      * 
      * @param instanceDefinitions
-     *        An updated list of EC2 instance types to use in the Auto Scaling group. The instance definitions must
-     *        specify at least two different instance types that are supported by GameLift FleetIQ. This updated list
-     *        replaces the entire current list of instance definitions for the game server group. For more information
-     *        on instance types, see <a
+     *        An updated list of Amazon EC2 instance types to use in the Auto Scaling group. The instance definitions
+     *        must specify at least two different instance types that are supported by GameLift FleetIQ. This updated
+     *        list replaces the entire current list of instance definitions for the game server group. For more
+     *        information on instance types, see <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">EC2 Instance Types</a> in
      *        the <i>Amazon EC2 User Guide</i>. You can optionally specify capacity weighting for each instance type. If
      *        no weight value is specified for an instance type, it is set to the default value "1". For more
@@ -288,21 +292,22 @@ public class UpdateGameServerGroupRequest extends com.amazonaws.AmazonWebService
 
     /**
      * <p>
-     * An updated list of EC2 instance types to use in the Auto Scaling group. The instance definitions must specify at
-     * least two different instance types that are supported by GameLift FleetIQ. This updated list replaces the entire
-     * current list of instance definitions for the game server group. For more information on instance types, see <a
-     * href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">EC2 Instance Types</a> in the
-     * <i>Amazon EC2 User Guide</i>. You can optionally specify capacity weighting for each instance type. If no weight
-     * value is specified for an instance type, it is set to the default value "1". For more information about capacity
-     * weighting, see <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-instance-weighting.html">
-     * Instance Weighting for Amazon EC2 Auto Scaling</a> in the Amazon EC2 Auto Scaling User Guide.
+     * An updated list of Amazon EC2 instance types to use in the Auto Scaling group. The instance definitions must
+     * specify at least two different instance types that are supported by GameLift FleetIQ. This updated list replaces
+     * the entire current list of instance definitions for the game server group. For more information on instance
+     * types, see <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">EC2 Instance
+     * Types</a> in the <i>Amazon EC2 User Guide</i>. You can optionally specify capacity weighting for each instance
+     * type. If no weight value is specified for an instance type, it is set to the default value "1". For more
+     * information about capacity weighting, see <a
+     * href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/asg-instance-weighting.html"> Instance Weighting for
+     * Amazon EC2 Auto Scaling</a> in the Amazon EC2 Auto Scaling User Guide.
      * </p>
      * 
      * @param instanceDefinitions
-     *        An updated list of EC2 instance types to use in the Auto Scaling group. The instance definitions must
-     *        specify at least two different instance types that are supported by GameLift FleetIQ. This updated list
-     *        replaces the entire current list of instance definitions for the game server group. For more information
-     *        on instance types, see <a
+     *        An updated list of Amazon EC2 instance types to use in the Auto Scaling group. The instance definitions
+     *        must specify at least two different instance types that are supported by GameLift FleetIQ. This updated
+     *        list replaces the entire current list of instance definitions for the game server group. For more
+     *        information on instance types, see <a
      *        href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html">EC2 Instance Types</a> in
      *        the <i>Amazon EC2 User Guide</i>. You can optionally specify capacity weighting for each instance type. If
      *        no weight value is specified for an instance type, it is set to the default value "1". For more
@@ -323,8 +328,8 @@ public class UpdateGameServerGroupRequest extends com.amazonaws.AmazonWebService
      * Unprotected instances that have active game servers running might be terminated during a scale-down event,
      * causing players to be dropped from the game. Protected instances cannot be terminated while there are active game
      * servers running except in the event of a forced game server group deletion (see ). An exception to this is with
-     * Spot Instances, which can be terminated by AWS regardless of protection status. This property is set to
-     * <code>NO_PROTECTION</code> by default.
+     * Spot Instances, which can be terminated by Amazon Web Services regardless of protection status. This property is
+     * set to <code>NO_PROTECTION</code> by default.
      * </p>
      * 
      * @param gameServerProtectionPolicy
@@ -332,8 +337,8 @@ public class UpdateGameServerGroupRequest extends com.amazonaws.AmazonWebService
      *        Unprotected instances that have active game servers running might be terminated during a scale-down event,
      *        causing players to be dropped from the game. Protected instances cannot be terminated while there are
      *        active game servers running except in the event of a forced game server group deletion (see ). An
-     *        exception to this is with Spot Instances, which can be terminated by AWS regardless of protection status.
-     *        This property is set to <code>NO_PROTECTION</code> by default.
+     *        exception to this is with Spot Instances, which can be terminated by Amazon Web Services regardless of
+     *        protection status. This property is set to <code>NO_PROTECTION</code> by default.
      * @see GameServerProtectionPolicy
      */
 
@@ -347,16 +352,16 @@ public class UpdateGameServerGroupRequest extends com.amazonaws.AmazonWebService
      * Unprotected instances that have active game servers running might be terminated during a scale-down event,
      * causing players to be dropped from the game. Protected instances cannot be terminated while there are active game
      * servers running except in the event of a forced game server group deletion (see ). An exception to this is with
-     * Spot Instances, which can be terminated by AWS regardless of protection status. This property is set to
-     * <code>NO_PROTECTION</code> by default.
+     * Spot Instances, which can be terminated by Amazon Web Services regardless of protection status. This property is
+     * set to <code>NO_PROTECTION</code> by default.
      * </p>
      * 
      * @return A flag that indicates whether instances in the game server group are protected from early termination.
      *         Unprotected instances that have active game servers running might be terminated during a scale-down
      *         event, causing players to be dropped from the game. Protected instances cannot be terminated while there
      *         are active game servers running except in the event of a forced game server group deletion (see ). An
-     *         exception to this is with Spot Instances, which can be terminated by AWS regardless of protection status.
-     *         This property is set to <code>NO_PROTECTION</code> by default.
+     *         exception to this is with Spot Instances, which can be terminated by Amazon Web Services regardless of
+     *         protection status. This property is set to <code>NO_PROTECTION</code> by default.
      * @see GameServerProtectionPolicy
      */
 
@@ -370,8 +375,8 @@ public class UpdateGameServerGroupRequest extends com.amazonaws.AmazonWebService
      * Unprotected instances that have active game servers running might be terminated during a scale-down event,
      * causing players to be dropped from the game. Protected instances cannot be terminated while there are active game
      * servers running except in the event of a forced game server group deletion (see ). An exception to this is with
-     * Spot Instances, which can be terminated by AWS regardless of protection status. This property is set to
-     * <code>NO_PROTECTION</code> by default.
+     * Spot Instances, which can be terminated by Amazon Web Services regardless of protection status. This property is
+     * set to <code>NO_PROTECTION</code> by default.
      * </p>
      * 
      * @param gameServerProtectionPolicy
@@ -379,8 +384,8 @@ public class UpdateGameServerGroupRequest extends com.amazonaws.AmazonWebService
      *        Unprotected instances that have active game servers running might be terminated during a scale-down event,
      *        causing players to be dropped from the game. Protected instances cannot be terminated while there are
      *        active game servers running except in the event of a forced game server group deletion (see ). An
-     *        exception to this is with Spot Instances, which can be terminated by AWS regardless of protection status.
-     *        This property is set to <code>NO_PROTECTION</code> by default.
+     *        exception to this is with Spot Instances, which can be terminated by Amazon Web Services regardless of
+     *        protection status. This property is set to <code>NO_PROTECTION</code> by default.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see GameServerProtectionPolicy
      */
@@ -396,8 +401,8 @@ public class UpdateGameServerGroupRequest extends com.amazonaws.AmazonWebService
      * Unprotected instances that have active game servers running might be terminated during a scale-down event,
      * causing players to be dropped from the game. Protected instances cannot be terminated while there are active game
      * servers running except in the event of a forced game server group deletion (see ). An exception to this is with
-     * Spot Instances, which can be terminated by AWS regardless of protection status. This property is set to
-     * <code>NO_PROTECTION</code> by default.
+     * Spot Instances, which can be terminated by Amazon Web Services regardless of protection status. This property is
+     * set to <code>NO_PROTECTION</code> by default.
      * </p>
      * 
      * @param gameServerProtectionPolicy
@@ -405,8 +410,8 @@ public class UpdateGameServerGroupRequest extends com.amazonaws.AmazonWebService
      *        Unprotected instances that have active game servers running might be terminated during a scale-down event,
      *        causing players to be dropped from the game. Protected instances cannot be terminated while there are
      *        active game servers running except in the event of a forced game server group deletion (see ). An
-     *        exception to this is with Spot Instances, which can be terminated by AWS regardless of protection status.
-     *        This property is set to <code>NO_PROTECTION</code> by default.
+     *        exception to this is with Spot Instances, which can be terminated by Amazon Web Services regardless of
+     *        protection status. This property is set to <code>NO_PROTECTION</code> by default.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see GameServerProtectionPolicy
      */

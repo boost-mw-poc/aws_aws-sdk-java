@@ -26,7 +26,11 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * <b>Related actions</b>
  * </p>
  * <p>
- * <a>DescribeFleetCapacity</a> | <a>DescribeFleetLocationCapacity</a> | <a>UpdateFleetCapacity</a>
+ * <a href="https://docs.aws.amazon.com/gamelift/latest/apireference/API_DescribeFleetCapacity.html">
+ * DescribeFleetCapacity</a> | <a
+ * href="https://docs.aws.amazon.com/gamelift/latest/apireference/API_DescribeFleetLocationCapacity.html"
+ * >DescribeFleetLocationCapacity</a> | <a
+ * href="https://docs.aws.amazon.com/gamelift/latest/apireference/API_UpdateFleetCapacity.html">UpdateFleetCapacity</a>
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/gamelift-2015-10-01/FleetCapacity" target="_top">AWS API
@@ -51,9 +55,10 @@ public class FleetCapacity implements Serializable, Cloneable, StructuredPojo {
     private String fleetArn;
     /**
      * <p>
-     * The EC2 instance type that is used for all instances in a fleet. The instance type determines the computing
-     * resources in use, including CPU, memory, storage, and networking capacity. See <a
-     * href="http://aws.amazon.com/ec2/instance-types/">Amazon EC2 Instance Types</a> for detailed descriptions.
+     * The Amazon EC2 instance type that is used for all instances in a fleet. The instance type determines the
+     * computing resources in use, including CPU, memory, storage, and networking capacity. See <a
+     * href="http://aws.amazon.com/ec2/instance-types/">Amazon Elastic Compute Cloud Instance Types</a> for detailed
+     * descriptions.
      * </p>
      */
     private String instanceType;
@@ -65,7 +70,7 @@ public class FleetCapacity implements Serializable, Cloneable, StructuredPojo {
     private EC2InstanceCounts instanceCounts;
     /**
      * <p>
-     * The fleet location for the instance count information, expressed as an AWS Region code, such as
+     * The fleet location for the instance count information, expressed as an Amazon Web Services Region code, such as
      * <code>us-west-2</code>.
      * </p>
      */
@@ -168,15 +173,17 @@ public class FleetCapacity implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The EC2 instance type that is used for all instances in a fleet. The instance type determines the computing
-     * resources in use, including CPU, memory, storage, and networking capacity. See <a
-     * href="http://aws.amazon.com/ec2/instance-types/">Amazon EC2 Instance Types</a> for detailed descriptions.
+     * The Amazon EC2 instance type that is used for all instances in a fleet. The instance type determines the
+     * computing resources in use, including CPU, memory, storage, and networking capacity. See <a
+     * href="http://aws.amazon.com/ec2/instance-types/">Amazon Elastic Compute Cloud Instance Types</a> for detailed
+     * descriptions.
      * </p>
      * 
      * @param instanceType
-     *        The EC2 instance type that is used for all instances in a fleet. The instance type determines the
+     *        The Amazon EC2 instance type that is used for all instances in a fleet. The instance type determines the
      *        computing resources in use, including CPU, memory, storage, and networking capacity. See <a
-     *        href="http://aws.amazon.com/ec2/instance-types/">Amazon EC2 Instance Types</a> for detailed descriptions.
+     *        href="http://aws.amazon.com/ec2/instance-types/">Amazon Elastic Compute Cloud Instance Types</a> for
+     *        detailed descriptions.
      * @see EC2InstanceType
      */
 
@@ -186,14 +193,16 @@ public class FleetCapacity implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The EC2 instance type that is used for all instances in a fleet. The instance type determines the computing
-     * resources in use, including CPU, memory, storage, and networking capacity. See <a
-     * href="http://aws.amazon.com/ec2/instance-types/">Amazon EC2 Instance Types</a> for detailed descriptions.
+     * The Amazon EC2 instance type that is used for all instances in a fleet. The instance type determines the
+     * computing resources in use, including CPU, memory, storage, and networking capacity. See <a
+     * href="http://aws.amazon.com/ec2/instance-types/">Amazon Elastic Compute Cloud Instance Types</a> for detailed
+     * descriptions.
      * </p>
      * 
-     * @return The EC2 instance type that is used for all instances in a fleet. The instance type determines the
+     * @return The Amazon EC2 instance type that is used for all instances in a fleet. The instance type determines the
      *         computing resources in use, including CPU, memory, storage, and networking capacity. See <a
-     *         href="http://aws.amazon.com/ec2/instance-types/">Amazon EC2 Instance Types</a> for detailed descriptions.
+     *         href="http://aws.amazon.com/ec2/instance-types/">Amazon Elastic Compute Cloud Instance Types</a> for
+     *         detailed descriptions.
      * @see EC2InstanceType
      */
 
@@ -203,15 +212,17 @@ public class FleetCapacity implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The EC2 instance type that is used for all instances in a fleet. The instance type determines the computing
-     * resources in use, including CPU, memory, storage, and networking capacity. See <a
-     * href="http://aws.amazon.com/ec2/instance-types/">Amazon EC2 Instance Types</a> for detailed descriptions.
+     * The Amazon EC2 instance type that is used for all instances in a fleet. The instance type determines the
+     * computing resources in use, including CPU, memory, storage, and networking capacity. See <a
+     * href="http://aws.amazon.com/ec2/instance-types/">Amazon Elastic Compute Cloud Instance Types</a> for detailed
+     * descriptions.
      * </p>
      * 
      * @param instanceType
-     *        The EC2 instance type that is used for all instances in a fleet. The instance type determines the
+     *        The Amazon EC2 instance type that is used for all instances in a fleet. The instance type determines the
      *        computing resources in use, including CPU, memory, storage, and networking capacity. See <a
-     *        href="http://aws.amazon.com/ec2/instance-types/">Amazon EC2 Instance Types</a> for detailed descriptions.
+     *        href="http://aws.amazon.com/ec2/instance-types/">Amazon Elastic Compute Cloud Instance Types</a> for
+     *        detailed descriptions.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see EC2InstanceType
      */
@@ -223,15 +234,17 @@ public class FleetCapacity implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The EC2 instance type that is used for all instances in a fleet. The instance type determines the computing
-     * resources in use, including CPU, memory, storage, and networking capacity. See <a
-     * href="http://aws.amazon.com/ec2/instance-types/">Amazon EC2 Instance Types</a> for detailed descriptions.
+     * The Amazon EC2 instance type that is used for all instances in a fleet. The instance type determines the
+     * computing resources in use, including CPU, memory, storage, and networking capacity. See <a
+     * href="http://aws.amazon.com/ec2/instance-types/">Amazon Elastic Compute Cloud Instance Types</a> for detailed
+     * descriptions.
      * </p>
      * 
      * @param instanceType
-     *        The EC2 instance type that is used for all instances in a fleet. The instance type determines the
+     *        The Amazon EC2 instance type that is used for all instances in a fleet. The instance type determines the
      *        computing resources in use, including CPU, memory, storage, and networking capacity. See <a
-     *        href="http://aws.amazon.com/ec2/instance-types/">Amazon EC2 Instance Types</a> for detailed descriptions.
+     *        href="http://aws.amazon.com/ec2/instance-types/">Amazon Elastic Compute Cloud Instance Types</a> for
+     *        detailed descriptions.
      * @see EC2InstanceType
      */
 
@@ -241,15 +254,17 @@ public class FleetCapacity implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The EC2 instance type that is used for all instances in a fleet. The instance type determines the computing
-     * resources in use, including CPU, memory, storage, and networking capacity. See <a
-     * href="http://aws.amazon.com/ec2/instance-types/">Amazon EC2 Instance Types</a> for detailed descriptions.
+     * The Amazon EC2 instance type that is used for all instances in a fleet. The instance type determines the
+     * computing resources in use, including CPU, memory, storage, and networking capacity. See <a
+     * href="http://aws.amazon.com/ec2/instance-types/">Amazon Elastic Compute Cloud Instance Types</a> for detailed
+     * descriptions.
      * </p>
      * 
      * @param instanceType
-     *        The EC2 instance type that is used for all instances in a fleet. The instance type determines the
+     *        The Amazon EC2 instance type that is used for all instances in a fleet. The instance type determines the
      *        computing resources in use, including CPU, memory, storage, and networking capacity. See <a
-     *        href="http://aws.amazon.com/ec2/instance-types/">Amazon EC2 Instance Types</a> for detailed descriptions.
+     *        href="http://aws.amazon.com/ec2/instance-types/">Amazon Elastic Compute Cloud Instance Types</a> for
+     *        detailed descriptions.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see EC2InstanceType
      */
@@ -301,13 +316,13 @@ public class FleetCapacity implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The fleet location for the instance count information, expressed as an AWS Region code, such as
+     * The fleet location for the instance count information, expressed as an Amazon Web Services Region code, such as
      * <code>us-west-2</code>.
      * </p>
      * 
      * @param location
-     *        The fleet location for the instance count information, expressed as an AWS Region code, such as
-     *        <code>us-west-2</code>.
+     *        The fleet location for the instance count information, expressed as an Amazon Web Services Region code,
+     *        such as <code>us-west-2</code>.
      */
 
     public void setLocation(String location) {
@@ -316,12 +331,12 @@ public class FleetCapacity implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The fleet location for the instance count information, expressed as an AWS Region code, such as
+     * The fleet location for the instance count information, expressed as an Amazon Web Services Region code, such as
      * <code>us-west-2</code>.
      * </p>
      * 
-     * @return The fleet location for the instance count information, expressed as an AWS Region code, such as
-     *         <code>us-west-2</code>.
+     * @return The fleet location for the instance count information, expressed as an Amazon Web Services Region code,
+     *         such as <code>us-west-2</code>.
      */
 
     public String getLocation() {
@@ -330,13 +345,13 @@ public class FleetCapacity implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The fleet location for the instance count information, expressed as an AWS Region code, such as
+     * The fleet location for the instance count information, expressed as an Amazon Web Services Region code, such as
      * <code>us-west-2</code>.
      * </p>
      * 
      * @param location
-     *        The fleet location for the instance count information, expressed as an AWS Region code, such as
-     *        <code>us-west-2</code>.
+     *        The fleet location for the instance count information, expressed as an Amazon Web Services Region code,
+     *        such as <code>us-west-2</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

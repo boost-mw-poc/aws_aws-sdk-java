@@ -162,11 +162,12 @@ public class CreateMatchmakingConfigurationRequest extends com.amazonaws.AmazonW
     /**
      * <p>
      * A list of labels to assign to the new matchmaking configuration resource. Tags are developer-defined key-value
-     * pairs. Tagging AWS resources are useful for resource management, access management and cost allocation. For more
-     * information, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"> Tagging AWS
-     * Resources</a> in the <i>AWS General Reference</i>. Once the resource is created, you can use <a>TagResource</a>,
-     * <a>UntagResource</a>, and <a>ListTagsForResource</a> to add, remove, and view tags. The maximum tag limit may be
-     * lower than stated. See the AWS General Reference for actual tagging limits.
+     * pairs. Tagging Amazon Web Services resources are useful for resource management, access management and cost
+     * allocation. For more information, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">
+     * Tagging Amazon Web Services Resources</a> in the <i>Amazon Web Services General Reference</i>. Once the resource
+     * is created, you can use <a>TagResource</a>, <a>UntagResource</a>, and <a>ListTagsForResource</a> to add, remove,
+     * and view tags. The maximum tag limit may be lower than stated. See the Amazon Web Services General Reference for
+     * actual tagging limits.
      * </p>
      */
     private java.util.List<Tag> tags;
@@ -1212,20 +1213,22 @@ public class CreateMatchmakingConfigurationRequest extends com.amazonaws.AmazonW
     /**
      * <p>
      * A list of labels to assign to the new matchmaking configuration resource. Tags are developer-defined key-value
-     * pairs. Tagging AWS resources are useful for resource management, access management and cost allocation. For more
-     * information, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"> Tagging AWS
-     * Resources</a> in the <i>AWS General Reference</i>. Once the resource is created, you can use <a>TagResource</a>,
-     * <a>UntagResource</a>, and <a>ListTagsForResource</a> to add, remove, and view tags. The maximum tag limit may be
-     * lower than stated. See the AWS General Reference for actual tagging limits.
+     * pairs. Tagging Amazon Web Services resources are useful for resource management, access management and cost
+     * allocation. For more information, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">
+     * Tagging Amazon Web Services Resources</a> in the <i>Amazon Web Services General Reference</i>. Once the resource
+     * is created, you can use <a>TagResource</a>, <a>UntagResource</a>, and <a>ListTagsForResource</a> to add, remove,
+     * and view tags. The maximum tag limit may be lower than stated. See the Amazon Web Services General Reference for
+     * actual tagging limits.
      * </p>
      * 
      * @return A list of labels to assign to the new matchmaking configuration resource. Tags are developer-defined
-     *         key-value pairs. Tagging AWS resources are useful for resource management, access management and cost
-     *         allocation. For more information, see <a
-     *         href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"> Tagging AWS Resources</a> in the
-     *         <i>AWS General Reference</i>. Once the resource is created, you can use <a>TagResource</a>,
-     *         <a>UntagResource</a>, and <a>ListTagsForResource</a> to add, remove, and view tags. The maximum tag limit
-     *         may be lower than stated. See the AWS General Reference for actual tagging limits.
+     *         key-value pairs. Tagging Amazon Web Services resources are useful for resource management, access
+     *         management and cost allocation. For more information, see <a
+     *         href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"> Tagging Amazon Web Services
+     *         Resources</a> in the <i>Amazon Web Services General Reference</i>. Once the resource is created, you can
+     *         use <a>TagResource</a>, <a>UntagResource</a>, and <a>ListTagsForResource</a> to add, remove, and view
+     *         tags. The maximum tag limit may be lower than stated. See the Amazon Web Services General Reference for
+     *         actual tagging limits.
      */
 
     public java.util.List<Tag> getTags() {
@@ -1235,21 +1238,23 @@ public class CreateMatchmakingConfigurationRequest extends com.amazonaws.AmazonW
     /**
      * <p>
      * A list of labels to assign to the new matchmaking configuration resource. Tags are developer-defined key-value
-     * pairs. Tagging AWS resources are useful for resource management, access management and cost allocation. For more
-     * information, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"> Tagging AWS
-     * Resources</a> in the <i>AWS General Reference</i>. Once the resource is created, you can use <a>TagResource</a>,
-     * <a>UntagResource</a>, and <a>ListTagsForResource</a> to add, remove, and view tags. The maximum tag limit may be
-     * lower than stated. See the AWS General Reference for actual tagging limits.
+     * pairs. Tagging Amazon Web Services resources are useful for resource management, access management and cost
+     * allocation. For more information, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">
+     * Tagging Amazon Web Services Resources</a> in the <i>Amazon Web Services General Reference</i>. Once the resource
+     * is created, you can use <a>TagResource</a>, <a>UntagResource</a>, and <a>ListTagsForResource</a> to add, remove,
+     * and view tags. The maximum tag limit may be lower than stated. See the Amazon Web Services General Reference for
+     * actual tagging limits.
      * </p>
      * 
      * @param tags
      *        A list of labels to assign to the new matchmaking configuration resource. Tags are developer-defined
-     *        key-value pairs. Tagging AWS resources are useful for resource management, access management and cost
-     *        allocation. For more information, see <a
-     *        href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"> Tagging AWS Resources</a> in the
-     *        <i>AWS General Reference</i>. Once the resource is created, you can use <a>TagResource</a>,
-     *        <a>UntagResource</a>, and <a>ListTagsForResource</a> to add, remove, and view tags. The maximum tag limit
-     *        may be lower than stated. See the AWS General Reference for actual tagging limits.
+     *        key-value pairs. Tagging Amazon Web Services resources are useful for resource management, access
+     *        management and cost allocation. For more information, see <a
+     *        href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"> Tagging Amazon Web Services
+     *        Resources</a> in the <i>Amazon Web Services General Reference</i>. Once the resource is created, you can
+     *        use <a>TagResource</a>, <a>UntagResource</a>, and <a>ListTagsForResource</a> to add, remove, and view
+     *        tags. The maximum tag limit may be lower than stated. See the Amazon Web Services General Reference for
+     *        actual tagging limits.
      */
 
     public void setTags(java.util.Collection<Tag> tags) {
@@ -1264,11 +1269,12 @@ public class CreateMatchmakingConfigurationRequest extends com.amazonaws.AmazonW
     /**
      * <p>
      * A list of labels to assign to the new matchmaking configuration resource. Tags are developer-defined key-value
-     * pairs. Tagging AWS resources are useful for resource management, access management and cost allocation. For more
-     * information, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"> Tagging AWS
-     * Resources</a> in the <i>AWS General Reference</i>. Once the resource is created, you can use <a>TagResource</a>,
-     * <a>UntagResource</a>, and <a>ListTagsForResource</a> to add, remove, and view tags. The maximum tag limit may be
-     * lower than stated. See the AWS General Reference for actual tagging limits.
+     * pairs. Tagging Amazon Web Services resources are useful for resource management, access management and cost
+     * allocation. For more information, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">
+     * Tagging Amazon Web Services Resources</a> in the <i>Amazon Web Services General Reference</i>. Once the resource
+     * is created, you can use <a>TagResource</a>, <a>UntagResource</a>, and <a>ListTagsForResource</a> to add, remove,
+     * and view tags. The maximum tag limit may be lower than stated. See the Amazon Web Services General Reference for
+     * actual tagging limits.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -1278,12 +1284,13 @@ public class CreateMatchmakingConfigurationRequest extends com.amazonaws.AmazonW
      * 
      * @param tags
      *        A list of labels to assign to the new matchmaking configuration resource. Tags are developer-defined
-     *        key-value pairs. Tagging AWS resources are useful for resource management, access management and cost
-     *        allocation. For more information, see <a
-     *        href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"> Tagging AWS Resources</a> in the
-     *        <i>AWS General Reference</i>. Once the resource is created, you can use <a>TagResource</a>,
-     *        <a>UntagResource</a>, and <a>ListTagsForResource</a> to add, remove, and view tags. The maximum tag limit
-     *        may be lower than stated. See the AWS General Reference for actual tagging limits.
+     *        key-value pairs. Tagging Amazon Web Services resources are useful for resource management, access
+     *        management and cost allocation. For more information, see <a
+     *        href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"> Tagging Amazon Web Services
+     *        Resources</a> in the <i>Amazon Web Services General Reference</i>. Once the resource is created, you can
+     *        use <a>TagResource</a>, <a>UntagResource</a>, and <a>ListTagsForResource</a> to add, remove, and view
+     *        tags. The maximum tag limit may be lower than stated. See the Amazon Web Services General Reference for
+     *        actual tagging limits.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1300,21 +1307,23 @@ public class CreateMatchmakingConfigurationRequest extends com.amazonaws.AmazonW
     /**
      * <p>
      * A list of labels to assign to the new matchmaking configuration resource. Tags are developer-defined key-value
-     * pairs. Tagging AWS resources are useful for resource management, access management and cost allocation. For more
-     * information, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"> Tagging AWS
-     * Resources</a> in the <i>AWS General Reference</i>. Once the resource is created, you can use <a>TagResource</a>,
-     * <a>UntagResource</a>, and <a>ListTagsForResource</a> to add, remove, and view tags. The maximum tag limit may be
-     * lower than stated. See the AWS General Reference for actual tagging limits.
+     * pairs. Tagging Amazon Web Services resources are useful for resource management, access management and cost
+     * allocation. For more information, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">
+     * Tagging Amazon Web Services Resources</a> in the <i>Amazon Web Services General Reference</i>. Once the resource
+     * is created, you can use <a>TagResource</a>, <a>UntagResource</a>, and <a>ListTagsForResource</a> to add, remove,
+     * and view tags. The maximum tag limit may be lower than stated. See the Amazon Web Services General Reference for
+     * actual tagging limits.
      * </p>
      * 
      * @param tags
      *        A list of labels to assign to the new matchmaking configuration resource. Tags are developer-defined
-     *        key-value pairs. Tagging AWS resources are useful for resource management, access management and cost
-     *        allocation. For more information, see <a
-     *        href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"> Tagging AWS Resources</a> in the
-     *        <i>AWS General Reference</i>. Once the resource is created, you can use <a>TagResource</a>,
-     *        <a>UntagResource</a>, and <a>ListTagsForResource</a> to add, remove, and view tags. The maximum tag limit
-     *        may be lower than stated. See the AWS General Reference for actual tagging limits.
+     *        key-value pairs. Tagging Amazon Web Services resources are useful for resource management, access
+     *        management and cost allocation. For more information, see <a
+     *        href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"> Tagging Amazon Web Services
+     *        Resources</a> in the <i>Amazon Web Services General Reference</i>. Once the resource is created, you can
+     *        use <a>TagResource</a>, <a>UntagResource</a>, and <a>ListTagsForResource</a> to add, remove, and view
+     *        tags. The maximum tag limit may be lower than stated. See the Amazon Web Services General Reference for
+     *        actual tagging limits.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

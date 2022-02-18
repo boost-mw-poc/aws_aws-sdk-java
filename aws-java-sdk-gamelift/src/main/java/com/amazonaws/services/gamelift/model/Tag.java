@@ -25,11 +25,12 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * <b>Learn more</b>
  * </p>
  * <p>
- * <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging AWS Resources</a> in the <i>AWS
- * General Reference</i>
+ * <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">Tagging Amazon Web Services Resources</a> in
+ * the <i>Amazon Web Services General Reference</i>
  * </p>
  * <p>
- * <a href="http://aws.amazon.com/answers/account-management/aws-tagging-strategies/"> AWS Tagging Strategies</a>
+ * <a href="http://aws.amazon.com/answers/account-management/aws-tagging-strategies/"> Amazon Web Services Tagging
+ * Strategies</a>
  * </p>
  * <p>
  * <b>Related actions</b>
@@ -47,24 +48,24 @@ public class Tag implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The key for a developer-defined key:value pair for tagging an AWS resource.
+     * The key for a developer-defined key:value pair for tagging an Amazon Web Services resource.
      * </p>
      */
     private String key;
     /**
      * <p>
-     * The value for a developer-defined key:value pair for tagging an AWS resource.
+     * The value for a developer-defined key:value pair for tagging an Amazon Web Services resource.
      * </p>
      */
     private String value;
 
     /**
      * <p>
-     * The key for a developer-defined key:value pair for tagging an AWS resource.
+     * The key for a developer-defined key:value pair for tagging an Amazon Web Services resource.
      * </p>
      * 
      * @param key
-     *        The key for a developer-defined key:value pair for tagging an AWS resource.
+     *        The key for a developer-defined key:value pair for tagging an Amazon Web Services resource.
      */
 
     public void setKey(String key) {
@@ -73,10 +74,10 @@ public class Tag implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The key for a developer-defined key:value pair for tagging an AWS resource.
+     * The key for a developer-defined key:value pair for tagging an Amazon Web Services resource.
      * </p>
      * 
-     * @return The key for a developer-defined key:value pair for tagging an AWS resource.
+     * @return The key for a developer-defined key:value pair for tagging an Amazon Web Services resource.
      */
 
     public String getKey() {
@@ -85,11 +86,11 @@ public class Tag implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The key for a developer-defined key:value pair for tagging an AWS resource.
+     * The key for a developer-defined key:value pair for tagging an Amazon Web Services resource.
      * </p>
      * 
      * @param key
-     *        The key for a developer-defined key:value pair for tagging an AWS resource.
+     *        The key for a developer-defined key:value pair for tagging an Amazon Web Services resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -100,11 +101,11 @@ public class Tag implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The value for a developer-defined key:value pair for tagging an AWS resource.
+     * The value for a developer-defined key:value pair for tagging an Amazon Web Services resource.
      * </p>
      * 
      * @param value
-     *        The value for a developer-defined key:value pair for tagging an AWS resource.
+     *        The value for a developer-defined key:value pair for tagging an Amazon Web Services resource.
      */
 
     public void setValue(String value) {
@@ -113,10 +114,10 @@ public class Tag implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The value for a developer-defined key:value pair for tagging an AWS resource.
+     * The value for a developer-defined key:value pair for tagging an Amazon Web Services resource.
      * </p>
      * 
-     * @return The value for a developer-defined key:value pair for tagging an AWS resource.
+     * @return The value for a developer-defined key:value pair for tagging an Amazon Web Services resource.
      */
 
     public String getValue() {
@@ -125,11 +126,11 @@ public class Tag implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The value for a developer-defined key:value pair for tagging an AWS resource.
+     * The value for a developer-defined key:value pair for tagging an Amazon Web Services resource.
      * </p>
      * 
      * @param value
-     *        The value for a developer-defined key:value pair for tagging an AWS resource.
+     *        The value for a developer-defined key:value pair for tagging an Amazon Web Services resource.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

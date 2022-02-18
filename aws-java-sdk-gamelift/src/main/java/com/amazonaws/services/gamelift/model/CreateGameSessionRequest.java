@@ -57,7 +57,9 @@ public class CreateGameSessionRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * A set of custom properties for a game session, formatted as key:value pairs. These properties are passed to a
-     * game server process in the <a>GameSession</a> object with a request to start a new game session.
+     * game server process in the <a>GameSession</a> object with a request to start a new game session (see <a href=
+     * "https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-sdk-server-api.html#gamelift-sdk-server-startsession"
+     * >Start a Game Session</a>).
      * </p>
      */
     private java.util.List<GameProperty> gameProperties;
@@ -94,14 +96,16 @@ public class CreateGameSessionRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * A set of custom game session properties, formatted as a single string value. This data is passed to a game server
-     * process in the <a>GameSession</a> object with a request to start a new game session.
+     * process in the <a>GameSession</a> object with a request to start a new game session (see <a href=
+     * "https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-sdk-server-api.html#gamelift-sdk-server-startsession"
+     * >Start a Game Session</a>).
      * </p>
      */
     private String gameSessionData;
     /**
      * <p>
      * A fleet's remote location to place the new game session in. If this parameter is not set, the new game session is
-     * placed in the fleet's home Region. Specify a remote location with an AWS Region code such as
+     * placed in the fleet's home Region. Specify a remote location with an Amazon Web Services Region code such as
      * <code>us-west-2</code>.
      * </p>
      */
@@ -283,11 +287,16 @@ public class CreateGameSessionRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * A set of custom properties for a game session, formatted as key:value pairs. These properties are passed to a
-     * game server process in the <a>GameSession</a> object with a request to start a new game session.
+     * game server process in the <a>GameSession</a> object with a request to start a new game session (see <a href=
+     * "https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-sdk-server-api.html#gamelift-sdk-server-startsession"
+     * >Start a Game Session</a>).
      * </p>
      * 
      * @return A set of custom properties for a game session, formatted as key:value pairs. These properties are passed
-     *         to a game server process in the <a>GameSession</a> object with a request to start a new game session.
+     *         to a game server process in the <a>GameSession</a> object with a request to start a new game session (see
+     *         <a href=
+     *         "https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-sdk-server-api.html#gamelift-sdk-server-startsession"
+     *         >Start a Game Session</a>).
      */
 
     public java.util.List<GameProperty> getGameProperties() {
@@ -297,12 +306,17 @@ public class CreateGameSessionRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * A set of custom properties for a game session, formatted as key:value pairs. These properties are passed to a
-     * game server process in the <a>GameSession</a> object with a request to start a new game session.
+     * game server process in the <a>GameSession</a> object with a request to start a new game session (see <a href=
+     * "https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-sdk-server-api.html#gamelift-sdk-server-startsession"
+     * >Start a Game Session</a>).
      * </p>
      * 
      * @param gameProperties
      *        A set of custom properties for a game session, formatted as key:value pairs. These properties are passed
-     *        to a game server process in the <a>GameSession</a> object with a request to start a new game session.
+     *        to a game server process in the <a>GameSession</a> object with a request to start a new game session (see
+     *        <a href=
+     *        "https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-sdk-server-api.html#gamelift-sdk-server-startsession"
+     *        >Start a Game Session</a>).
      */
 
     public void setGameProperties(java.util.Collection<GameProperty> gameProperties) {
@@ -317,7 +331,9 @@ public class CreateGameSessionRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * A set of custom properties for a game session, formatted as key:value pairs. These properties are passed to a
-     * game server process in the <a>GameSession</a> object with a request to start a new game session.
+     * game server process in the <a>GameSession</a> object with a request to start a new game session (see <a href=
+     * "https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-sdk-server-api.html#gamelift-sdk-server-startsession"
+     * >Start a Game Session</a>).
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -327,7 +343,10 @@ public class CreateGameSessionRequest extends com.amazonaws.AmazonWebServiceRequ
      * 
      * @param gameProperties
      *        A set of custom properties for a game session, formatted as key:value pairs. These properties are passed
-     *        to a game server process in the <a>GameSession</a> object with a request to start a new game session.
+     *        to a game server process in the <a>GameSession</a> object with a request to start a new game session (see
+     *        <a href=
+     *        "https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-sdk-server-api.html#gamelift-sdk-server-startsession"
+     *        >Start a Game Session</a>).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -344,12 +363,17 @@ public class CreateGameSessionRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * A set of custom properties for a game session, formatted as key:value pairs. These properties are passed to a
-     * game server process in the <a>GameSession</a> object with a request to start a new game session.
+     * game server process in the <a>GameSession</a> object with a request to start a new game session (see <a href=
+     * "https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-sdk-server-api.html#gamelift-sdk-server-startsession"
+     * >Start a Game Session</a>).
      * </p>
      * 
      * @param gameProperties
      *        A set of custom properties for a game session, formatted as key:value pairs. These properties are passed
-     *        to a game server process in the <a>GameSession</a> object with a request to start a new game session.
+     *        to a game server process in the <a>GameSession</a> object with a request to start a new game session (see
+     *        <a href=
+     *        "https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-sdk-server-api.html#gamelift-sdk-server-startsession"
+     *        >Start a Game Session</a>).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -553,12 +577,16 @@ public class CreateGameSessionRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * A set of custom game session properties, formatted as a single string value. This data is passed to a game server
-     * process in the <a>GameSession</a> object with a request to start a new game session.
+     * process in the <a>GameSession</a> object with a request to start a new game session (see <a href=
+     * "https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-sdk-server-api.html#gamelift-sdk-server-startsession"
+     * >Start a Game Session</a>).
      * </p>
      * 
      * @param gameSessionData
      *        A set of custom game session properties, formatted as a single string value. This data is passed to a game
-     *        server process in the <a>GameSession</a> object with a request to start a new game session.
+     *        server process in the <a>GameSession</a> object with a request to start a new game session (see <a href=
+     *        "https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-sdk-server-api.html#gamelift-sdk-server-startsession"
+     *        >Start a Game Session</a>).
      */
 
     public void setGameSessionData(String gameSessionData) {
@@ -568,11 +596,16 @@ public class CreateGameSessionRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * A set of custom game session properties, formatted as a single string value. This data is passed to a game server
-     * process in the <a>GameSession</a> object with a request to start a new game session.
+     * process in the <a>GameSession</a> object with a request to start a new game session (see <a href=
+     * "https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-sdk-server-api.html#gamelift-sdk-server-startsession"
+     * >Start a Game Session</a>).
      * </p>
      * 
      * @return A set of custom game session properties, formatted as a single string value. This data is passed to a
-     *         game server process in the <a>GameSession</a> object with a request to start a new game session.
+     *         game server process in the <a>GameSession</a> object with a request to start a new game session (see <a
+     *         href=
+     *         "https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-sdk-server-api.html#gamelift-sdk-server-startsession"
+     *         >Start a Game Session</a>).
      */
 
     public String getGameSessionData() {
@@ -582,12 +615,16 @@ public class CreateGameSessionRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * A set of custom game session properties, formatted as a single string value. This data is passed to a game server
-     * process in the <a>GameSession</a> object with a request to start a new game session.
+     * process in the <a>GameSession</a> object with a request to start a new game session (see <a href=
+     * "https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-sdk-server-api.html#gamelift-sdk-server-startsession"
+     * >Start a Game Session</a>).
      * </p>
      * 
      * @param gameSessionData
      *        A set of custom game session properties, formatted as a single string value. This data is passed to a game
-     *        server process in the <a>GameSession</a> object with a request to start a new game session.
+     *        server process in the <a>GameSession</a> object with a request to start a new game session (see <a href=
+     *        "https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-sdk-server-api.html#gamelift-sdk-server-startsession"
+     *        >Start a Game Session</a>).
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -599,14 +636,14 @@ public class CreateGameSessionRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * A fleet's remote location to place the new game session in. If this parameter is not set, the new game session is
-     * placed in the fleet's home Region. Specify a remote location with an AWS Region code such as
+     * placed in the fleet's home Region. Specify a remote location with an Amazon Web Services Region code such as
      * <code>us-west-2</code>.
      * </p>
      * 
      * @param location
      *        A fleet's remote location to place the new game session in. If this parameter is not set, the new game
-     *        session is placed in the fleet's home Region. Specify a remote location with an AWS Region code such as
-     *        <code>us-west-2</code>.
+     *        session is placed in the fleet's home Region. Specify a remote location with an Amazon Web Services Region
+     *        code such as <code>us-west-2</code>.
      */
 
     public void setLocation(String location) {
@@ -616,13 +653,13 @@ public class CreateGameSessionRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * A fleet's remote location to place the new game session in. If this parameter is not set, the new game session is
-     * placed in the fleet's home Region. Specify a remote location with an AWS Region code such as
+     * placed in the fleet's home Region. Specify a remote location with an Amazon Web Services Region code such as
      * <code>us-west-2</code>.
      * </p>
      * 
      * @return A fleet's remote location to place the new game session in. If this parameter is not set, the new game
-     *         session is placed in the fleet's home Region. Specify a remote location with an AWS Region code such as
-     *         <code>us-west-2</code>.
+     *         session is placed in the fleet's home Region. Specify a remote location with an Amazon Web Services
+     *         Region code such as <code>us-west-2</code>.
      */
 
     public String getLocation() {
@@ -632,14 +669,14 @@ public class CreateGameSessionRequest extends com.amazonaws.AmazonWebServiceRequ
     /**
      * <p>
      * A fleet's remote location to place the new game session in. If this parameter is not set, the new game session is
-     * placed in the fleet's home Region. Specify a remote location with an AWS Region code such as
+     * placed in the fleet's home Region. Specify a remote location with an Amazon Web Services Region code such as
      * <code>us-west-2</code>.
      * </p>
      * 
      * @param location
      *        A fleet's remote location to place the new game session in. If this parameter is not set, the new game
-     *        session is placed in the fleet's home Region. Specify a remote location with an AWS Region code such as
-     *        <code>us-west-2</code>.
+     *        session is placed in the fleet's home Region. Specify a remote location with an Amazon Web Services Region
+     *        code such as <code>us-west-2</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

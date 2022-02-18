@@ -38,8 +38,8 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * A list of one or more tags to assign to the specified GameLift resource. Tags are developer-defined and
      * structured as key-value pairs. The maximum tag limit may be lower than stated. See <a
-     * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"> Tagging AWS Resources</a> for actual
-     * tagging limits.
+     * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"> Tagging Amazon Web Services Resources</a>
+     * for actual tagging limits.
      * </p>
      */
     private java.util.List<Tag> tags;
@@ -109,14 +109,14 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * A list of one or more tags to assign to the specified GameLift resource. Tags are developer-defined and
      * structured as key-value pairs. The maximum tag limit may be lower than stated. See <a
-     * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"> Tagging AWS Resources</a> for actual
-     * tagging limits.
+     * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"> Tagging Amazon Web Services Resources</a>
+     * for actual tagging limits.
      * </p>
      * 
      * @return A list of one or more tags to assign to the specified GameLift resource. Tags are developer-defined and
      *         structured as key-value pairs. The maximum tag limit may be lower than stated. See <a
-     *         href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"> Tagging AWS Resources</a> for
-     *         actual tagging limits.
+     *         href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"> Tagging Amazon Web Services
+     *         Resources</a> for actual tagging limits.
      */
 
     public java.util.List<Tag> getTags() {
@@ -127,15 +127,15 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * A list of one or more tags to assign to the specified GameLift resource. Tags are developer-defined and
      * structured as key-value pairs. The maximum tag limit may be lower than stated. See <a
-     * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"> Tagging AWS Resources</a> for actual
-     * tagging limits.
+     * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"> Tagging Amazon Web Services Resources</a>
+     * for actual tagging limits.
      * </p>
      * 
      * @param tags
      *        A list of one or more tags to assign to the specified GameLift resource. Tags are developer-defined and
      *        structured as key-value pairs. The maximum tag limit may be lower than stated. See <a
-     *        href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"> Tagging AWS Resources</a> for
-     *        actual tagging limits.
+     *        href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"> Tagging Amazon Web Services
+     *        Resources</a> for actual tagging limits.
      */
 
     public void setTags(java.util.Collection<Tag> tags) {
@@ -151,8 +151,8 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * A list of one or more tags to assign to the specified GameLift resource. Tags are developer-defined and
      * structured as key-value pairs. The maximum tag limit may be lower than stated. See <a
-     * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"> Tagging AWS Resources</a> for actual
-     * tagging limits.
+     * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"> Tagging Amazon Web Services Resources</a>
+     * for actual tagging limits.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -163,8 +163,8 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
      * @param tags
      *        A list of one or more tags to assign to the specified GameLift resource. Tags are developer-defined and
      *        structured as key-value pairs. The maximum tag limit may be lower than stated. See <a
-     *        href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"> Tagging AWS Resources</a> for
-     *        actual tagging limits.
+     *        href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"> Tagging Amazon Web Services
+     *        Resources</a> for actual tagging limits.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -182,15 +182,15 @@ public class TagResourceRequest extends com.amazonaws.AmazonWebServiceRequest im
      * <p>
      * A list of one or more tags to assign to the specified GameLift resource. Tags are developer-defined and
      * structured as key-value pairs. The maximum tag limit may be lower than stated. See <a
-     * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"> Tagging AWS Resources</a> for actual
-     * tagging limits.
+     * href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"> Tagging Amazon Web Services Resources</a>
+     * for actual tagging limits.
      * </p>
      * 
      * @param tags
      *        A list of one or more tags to assign to the specified GameLift resource. Tags are developer-defined and
      *        structured as key-value pairs. The maximum tag limit may be lower than stated. See <a
-     *        href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"> Tagging AWS Resources</a> for
-     *        actual tagging limits.
+     *        href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"> Tagging Amazon Web Services
+     *        Resources</a> for actual tagging limits.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

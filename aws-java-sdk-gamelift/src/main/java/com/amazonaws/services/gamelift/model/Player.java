@@ -52,8 +52,8 @@ public class Player implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * A set of values, expressed in milliseconds, that indicates the amount of latency that a player experiences when
-     * connected to AWS Regions. If this property is present, FlexMatch considers placing the match only in Regions for
-     * which latency is reported.
+     * connected to @aws; Regions. If this property is present, FlexMatch considers placing the match only in Regions
+     * for which latency is reported.
      * </p>
      * <p>
      * If a matchmaker has a rule that evaluates player latency, players must report latency in order to be matched. If
@@ -229,8 +229,8 @@ public class Player implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * A set of values, expressed in milliseconds, that indicates the amount of latency that a player experiences when
-     * connected to AWS Regions. If this property is present, FlexMatch considers placing the match only in Regions for
-     * which latency is reported.
+     * connected to @aws; Regions. If this property is present, FlexMatch considers placing the match only in Regions
+     * for which latency is reported.
      * </p>
      * <p>
      * If a matchmaker has a rule that evaluates player latency, players must report latency in order to be matched. If
@@ -239,7 +239,7 @@ public class Player implements Serializable, Cloneable, StructuredPojo {
      * </p>
      * 
      * @return A set of values, expressed in milliseconds, that indicates the amount of latency that a player
-     *         experiences when connected to AWS Regions. If this property is present, FlexMatch considers placing the
+     *         experiences when connected to @aws; Regions. If this property is present, FlexMatch considers placing the
      *         match only in Regions for which latency is reported. </p>
      *         <p>
      *         If a matchmaker has a rule that evaluates player latency, players must report latency in order to be
@@ -254,8 +254,8 @@ public class Player implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * A set of values, expressed in milliseconds, that indicates the amount of latency that a player experiences when
-     * connected to AWS Regions. If this property is present, FlexMatch considers placing the match only in Regions for
-     * which latency is reported.
+     * connected to @aws; Regions. If this property is present, FlexMatch considers placing the match only in Regions
+     * for which latency is reported.
      * </p>
      * <p>
      * If a matchmaker has a rule that evaluates player latency, players must report latency in order to be matched. If
@@ -265,8 +265,8 @@ public class Player implements Serializable, Cloneable, StructuredPojo {
      * 
      * @param latencyInMs
      *        A set of values, expressed in milliseconds, that indicates the amount of latency that a player experiences
-     *        when connected to AWS Regions. If this property is present, FlexMatch considers placing the match only in
-     *        Regions for which latency is reported. </p>
+     *        when connected to @aws; Regions. If this property is present, FlexMatch considers placing the match only
+     *        in Regions for which latency is reported. </p>
      *        <p>
      *        If a matchmaker has a rule that evaluates player latency, players must report latency in order to be
      *        matched. If no latency is reported in this scenario, FlexMatch assumes that no Regions are available to
@@ -280,8 +280,8 @@ public class Player implements Serializable, Cloneable, StructuredPojo {
     /**
      * <p>
      * A set of values, expressed in milliseconds, that indicates the amount of latency that a player experiences when
-     * connected to AWS Regions. If this property is present, FlexMatch considers placing the match only in Regions for
-     * which latency is reported.
+     * connected to @aws; Regions. If this property is present, FlexMatch considers placing the match only in Regions
+     * for which latency is reported.
      * </p>
      * <p>
      * If a matchmaker has a rule that evaluates player latency, players must report latency in order to be matched. If
@@ -291,8 +291,8 @@ public class Player implements Serializable, Cloneable, StructuredPojo {
      * 
      * @param latencyInMs
      *        A set of values, expressed in milliseconds, that indicates the amount of latency that a player experiences
-     *        when connected to AWS Regions. If this property is present, FlexMatch considers placing the match only in
-     *        Regions for which latency is reported. </p>
+     *        when connected to @aws; Regions. If this property is present, FlexMatch considers placing the match only
+     *        in Regions for which latency is reported. </p>
      *        <p>
      *        If a matchmaker has a rule that evaluates player latency, players must report latency in order to be
      *        matched. If no latency is reported in this scenario, FlexMatch assumes that no Regions are available to

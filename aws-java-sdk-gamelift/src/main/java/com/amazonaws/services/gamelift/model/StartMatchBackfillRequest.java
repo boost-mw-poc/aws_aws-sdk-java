@@ -30,9 +30,9 @@ public class StartMatchBackfillRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * A unique identifier for a matchmaking ticket. If no ticket ID is specified here, Amazon GameLift will generate
-     * one in the form of a UUID. Use this identifier to track the match backfill ticket status and retrieve match
-     * results.
+     * A unique identifier for a matchmaking ticket. If no ticket ID is specified here, Amazon Web Services will
+     * generate one in the form of a UUID. Use this identifier to track the match backfill ticket status and retrieve
+     * match results.
      * </p>
      */
     private String ticketId;
@@ -65,6 +65,10 @@ public class StartMatchBackfillRequest extends com.amazonaws.AmazonWebServiceReq
      * href="https://docs.aws.amazon.com/gamelift/latest/flexmatchguide/match-server.html#match-server-data"> Match
      * Data</a>.
      * </p>
+     * <p>
+     * The backfill request must specify the team membership for every player. Do not specify team if you are not using
+     * backfill.
+     * </p>
      * </li>
      * <li>
      * <p>
@@ -78,13 +82,13 @@ public class StartMatchBackfillRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * A unique identifier for a matchmaking ticket. If no ticket ID is specified here, Amazon GameLift will generate
-     * one in the form of a UUID. Use this identifier to track the match backfill ticket status and retrieve match
-     * results.
+     * A unique identifier for a matchmaking ticket. If no ticket ID is specified here, Amazon Web Services will
+     * generate one in the form of a UUID. Use this identifier to track the match backfill ticket status and retrieve
+     * match results.
      * </p>
      * 
      * @param ticketId
-     *        A unique identifier for a matchmaking ticket. If no ticket ID is specified here, Amazon GameLift will
+     *        A unique identifier for a matchmaking ticket. If no ticket ID is specified here, Amazon Web Services will
      *        generate one in the form of a UUID. Use this identifier to track the match backfill ticket status and
      *        retrieve match results.
      */
@@ -95,12 +99,12 @@ public class StartMatchBackfillRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * A unique identifier for a matchmaking ticket. If no ticket ID is specified here, Amazon GameLift will generate
-     * one in the form of a UUID. Use this identifier to track the match backfill ticket status and retrieve match
-     * results.
+     * A unique identifier for a matchmaking ticket. If no ticket ID is specified here, Amazon Web Services will
+     * generate one in the form of a UUID. Use this identifier to track the match backfill ticket status and retrieve
+     * match results.
      * </p>
      * 
-     * @return A unique identifier for a matchmaking ticket. If no ticket ID is specified here, Amazon GameLift will
+     * @return A unique identifier for a matchmaking ticket. If no ticket ID is specified here, Amazon Web Services will
      *         generate one in the form of a UUID. Use this identifier to track the match backfill ticket status and
      *         retrieve match results.
      */
@@ -111,13 +115,13 @@ public class StartMatchBackfillRequest extends com.amazonaws.AmazonWebServiceReq
 
     /**
      * <p>
-     * A unique identifier for a matchmaking ticket. If no ticket ID is specified here, Amazon GameLift will generate
-     * one in the form of a UUID. Use this identifier to track the match backfill ticket status and retrieve match
-     * results.
+     * A unique identifier for a matchmaking ticket. If no ticket ID is specified here, Amazon Web Services will
+     * generate one in the form of a UUID. Use this identifier to track the match backfill ticket status and retrieve
+     * match results.
      * </p>
      * 
      * @param ticketId
-     *        A unique identifier for a matchmaking ticket. If no ticket ID is specified here, Amazon GameLift will
+     *        A unique identifier for a matchmaking ticket. If no ticket ID is specified here, Amazon Web Services will
      *        generate one in the form of a UUID. Use this identifier to track the match backfill ticket status and
      *        retrieve match results.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -240,6 +244,10 @@ public class StartMatchBackfillRequest extends com.amazonaws.AmazonWebServiceReq
      * href="https://docs.aws.amazon.com/gamelift/latest/flexmatchguide/match-server.html#match-server-data"> Match
      * Data</a>.
      * </p>
+     * <p>
+     * The backfill request must specify the team membership for every player. Do not specify team if you are not using
+     * backfill.
+     * </p>
      * </li>
      * <li>
      * <p>
@@ -259,6 +267,10 @@ public class StartMatchBackfillRequest extends com.amazonaws.AmazonWebServiceReq
      *         matchmaker data is in JSON syntax, formatted as a string. For more details, see <a
      *         href="https://docs.aws.amazon.com/gamelift/latest/flexmatchguide/match-server.html#match-server-data">
      *         Match Data</a>.
+     *         </p>
+     *         <p>
+     *         The backfill request must specify the team membership for every player. Do not specify team if you are
+     *         not using backfill.
      *         </p>
      *         </li>
      *         <li>
@@ -287,6 +299,10 @@ public class StartMatchBackfillRequest extends com.amazonaws.AmazonWebServiceReq
      * href="https://docs.aws.amazon.com/gamelift/latest/flexmatchguide/match-server.html#match-server-data"> Match
      * Data</a>.
      * </p>
+     * <p>
+     * The backfill request must specify the team membership for every player. Do not specify team if you are not using
+     * backfill.
+     * </p>
      * </li>
      * <li>
      * <p>
@@ -307,6 +323,10 @@ public class StartMatchBackfillRequest extends com.amazonaws.AmazonWebServiceReq
      *        matchmaker data is in JSON syntax, formatted as a string. For more details, see <a
      *        href="https://docs.aws.amazon.com/gamelift/latest/flexmatchguide/match-server.html#match-server-data">
      *        Match Data</a>.
+     *        </p>
+     *        <p>
+     *        The backfill request must specify the team membership for every player. Do not specify team if you are not
+     *        using backfill.
      *        </p>
      *        </li>
      *        <li>
@@ -340,6 +360,10 @@ public class StartMatchBackfillRequest extends com.amazonaws.AmazonWebServiceReq
      * href="https://docs.aws.amazon.com/gamelift/latest/flexmatchguide/match-server.html#match-server-data"> Match
      * Data</a>.
      * </p>
+     * <p>
+     * The backfill request must specify the team membership for every player. Do not specify team if you are not using
+     * backfill.
+     * </p>
      * </li>
      * <li>
      * <p>
@@ -365,6 +389,10 @@ public class StartMatchBackfillRequest extends com.amazonaws.AmazonWebServiceReq
      *        matchmaker data is in JSON syntax, formatted as a string. For more details, see <a
      *        href="https://docs.aws.amazon.com/gamelift/latest/flexmatchguide/match-server.html#match-server-data">
      *        Match Data</a>.
+     *        </p>
+     *        <p>
+     *        The backfill request must specify the team membership for every player. Do not specify team if you are not
+     *        using backfill.
      *        </p>
      *        </li>
      *        <li>
@@ -400,6 +428,10 @@ public class StartMatchBackfillRequest extends com.amazonaws.AmazonWebServiceReq
      * href="https://docs.aws.amazon.com/gamelift/latest/flexmatchguide/match-server.html#match-server-data"> Match
      * Data</a>.
      * </p>
+     * <p>
+     * The backfill request must specify the team membership for every player. Do not specify team if you are not using
+     * backfill.
+     * </p>
      * </li>
      * <li>
      * <p>
@@ -420,6 +452,10 @@ public class StartMatchBackfillRequest extends com.amazonaws.AmazonWebServiceReq
      *        matchmaker data is in JSON syntax, formatted as a string. For more details, see <a
      *        href="https://docs.aws.amazon.com/gamelift/latest/flexmatchguide/match-server.html#match-server-data">
      *        Match Data</a>.
+     *        </p>
+     *        <p>
+     *        The backfill request must specify the team membership for every player. Do not specify team if you are not
+     *        using backfill.
      *        </p>
      *        </li>
      *        <li>

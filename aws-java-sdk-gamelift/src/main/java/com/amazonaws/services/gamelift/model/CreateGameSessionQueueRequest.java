@@ -61,8 +61,8 @@ public class CreateGameSessionQueueRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * A list of locations where a queue is allowed to place new game sessions. Locations are specified in the form of
-     * AWS Region codes, such as <code>us-west-2</code>. If this parameter is not set, game sessions can be placed in
-     * any queue location.
+     * Amazon Web Services Region codes, such as <code>us-west-2</code>. If this parameter is not set, game sessions can
+     * be placed in any queue location.
      * </p>
      */
     private FilterConfiguration filterConfiguration;
@@ -91,11 +91,12 @@ public class CreateGameSessionQueueRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * A list of labels to assign to the new game session queue resource. Tags are developer-defined key-value pairs.
-     * Tagging AWS resources are useful for resource management, access management and cost allocation. For more
-     * information, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"> Tagging AWS
-     * Resources</a> in the <i>AWS General Reference</i>. Once the resource is created, you can use <a>TagResource</a>,
-     * <a>UntagResource</a>, and <a>ListTagsForResource</a> to add, remove, and view tags. The maximum tag limit may be
-     * lower than stated. See the AWS General Reference for actual tagging limits.
+     * Tagging Amazon Web Services resources are useful for resource management, access management and cost allocation.
+     * For more information, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"> Tagging
+     * Amazon Web Services Resources</a> in the <i>Amazon Web Services General Reference</i>. Once the resource is
+     * created, you can use <a>TagResource</a>, <a>UntagResource</a>, and <a>ListTagsForResource</a> to add, remove, and
+     * view tags. The maximum tag limit may be lower than stated. See the Amazon Web Services General Reference for
+     * actual tagging limits.
      * </p>
      */
     private java.util.List<Tag> tags;
@@ -376,14 +377,14 @@ public class CreateGameSessionQueueRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * A list of locations where a queue is allowed to place new game sessions. Locations are specified in the form of
-     * AWS Region codes, such as <code>us-west-2</code>. If this parameter is not set, game sessions can be placed in
-     * any queue location.
+     * Amazon Web Services Region codes, such as <code>us-west-2</code>. If this parameter is not set, game sessions can
+     * be placed in any queue location.
      * </p>
      * 
      * @param filterConfiguration
      *        A list of locations where a queue is allowed to place new game sessions. Locations are specified in the
-     *        form of AWS Region codes, such as <code>us-west-2</code>. If this parameter is not set, game sessions can
-     *        be placed in any queue location.
+     *        form of Amazon Web Services Region codes, such as <code>us-west-2</code>. If this parameter is not set,
+     *        game sessions can be placed in any queue location.
      */
 
     public void setFilterConfiguration(FilterConfiguration filterConfiguration) {
@@ -393,13 +394,13 @@ public class CreateGameSessionQueueRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * A list of locations where a queue is allowed to place new game sessions. Locations are specified in the form of
-     * AWS Region codes, such as <code>us-west-2</code>. If this parameter is not set, game sessions can be placed in
-     * any queue location.
+     * Amazon Web Services Region codes, such as <code>us-west-2</code>. If this parameter is not set, game sessions can
+     * be placed in any queue location.
      * </p>
      * 
      * @return A list of locations where a queue is allowed to place new game sessions. Locations are specified in the
-     *         form of AWS Region codes, such as <code>us-west-2</code>. If this parameter is not set, game sessions can
-     *         be placed in any queue location.
+     *         form of Amazon Web Services Region codes, such as <code>us-west-2</code>. If this parameter is not set,
+     *         game sessions can be placed in any queue location.
      */
 
     public FilterConfiguration getFilterConfiguration() {
@@ -409,14 +410,14 @@ public class CreateGameSessionQueueRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * A list of locations where a queue is allowed to place new game sessions. Locations are specified in the form of
-     * AWS Region codes, such as <code>us-west-2</code>. If this parameter is not set, game sessions can be placed in
-     * any queue location.
+     * Amazon Web Services Region codes, such as <code>us-west-2</code>. If this parameter is not set, game sessions can
+     * be placed in any queue location.
      * </p>
      * 
      * @param filterConfiguration
      *        A list of locations where a queue is allowed to place new game sessions. Locations are specified in the
-     *        form of AWS Region codes, such as <code>us-west-2</code>. If this parameter is not set, game sessions can
-     *        be placed in any queue location.
+     *        form of Amazon Web Services Region codes, such as <code>us-west-2</code>. If this parameter is not set,
+     *        game sessions can be placed in any queue location.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -572,19 +573,22 @@ public class CreateGameSessionQueueRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * A list of labels to assign to the new game session queue resource. Tags are developer-defined key-value pairs.
-     * Tagging AWS resources are useful for resource management, access management and cost allocation. For more
-     * information, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"> Tagging AWS
-     * Resources</a> in the <i>AWS General Reference</i>. Once the resource is created, you can use <a>TagResource</a>,
-     * <a>UntagResource</a>, and <a>ListTagsForResource</a> to add, remove, and view tags. The maximum tag limit may be
-     * lower than stated. See the AWS General Reference for actual tagging limits.
+     * Tagging Amazon Web Services resources are useful for resource management, access management and cost allocation.
+     * For more information, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"> Tagging
+     * Amazon Web Services Resources</a> in the <i>Amazon Web Services General Reference</i>. Once the resource is
+     * created, you can use <a>TagResource</a>, <a>UntagResource</a>, and <a>ListTagsForResource</a> to add, remove, and
+     * view tags. The maximum tag limit may be lower than stated. See the Amazon Web Services General Reference for
+     * actual tagging limits.
      * </p>
      * 
      * @return A list of labels to assign to the new game session queue resource. Tags are developer-defined key-value
-     *         pairs. Tagging AWS resources are useful for resource management, access management and cost allocation.
-     *         For more information, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">
-     *         Tagging AWS Resources</a> in the <i>AWS General Reference</i>. Once the resource is created, you can use
-     *         <a>TagResource</a>, <a>UntagResource</a>, and <a>ListTagsForResource</a> to add, remove, and view tags.
-     *         The maximum tag limit may be lower than stated. See the AWS General Reference for actual tagging limits.
+     *         pairs. Tagging Amazon Web Services resources are useful for resource management, access management and
+     *         cost allocation. For more information, see <a
+     *         href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"> Tagging Amazon Web Services
+     *         Resources</a> in the <i>Amazon Web Services General Reference</i>. Once the resource is created, you can
+     *         use <a>TagResource</a>, <a>UntagResource</a>, and <a>ListTagsForResource</a> to add, remove, and view
+     *         tags. The maximum tag limit may be lower than stated. See the Amazon Web Services General Reference for
+     *         actual tagging limits.
      */
 
     public java.util.List<Tag> getTags() {
@@ -594,20 +598,23 @@ public class CreateGameSessionQueueRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * A list of labels to assign to the new game session queue resource. Tags are developer-defined key-value pairs.
-     * Tagging AWS resources are useful for resource management, access management and cost allocation. For more
-     * information, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"> Tagging AWS
-     * Resources</a> in the <i>AWS General Reference</i>. Once the resource is created, you can use <a>TagResource</a>,
-     * <a>UntagResource</a>, and <a>ListTagsForResource</a> to add, remove, and view tags. The maximum tag limit may be
-     * lower than stated. See the AWS General Reference for actual tagging limits.
+     * Tagging Amazon Web Services resources are useful for resource management, access management and cost allocation.
+     * For more information, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"> Tagging
+     * Amazon Web Services Resources</a> in the <i>Amazon Web Services General Reference</i>. Once the resource is
+     * created, you can use <a>TagResource</a>, <a>UntagResource</a>, and <a>ListTagsForResource</a> to add, remove, and
+     * view tags. The maximum tag limit may be lower than stated. See the Amazon Web Services General Reference for
+     * actual tagging limits.
      * </p>
      * 
      * @param tags
      *        A list of labels to assign to the new game session queue resource. Tags are developer-defined key-value
-     *        pairs. Tagging AWS resources are useful for resource management, access management and cost allocation.
-     *        For more information, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">
-     *        Tagging AWS Resources</a> in the <i>AWS General Reference</i>. Once the resource is created, you can use
-     *        <a>TagResource</a>, <a>UntagResource</a>, and <a>ListTagsForResource</a> to add, remove, and view tags.
-     *        The maximum tag limit may be lower than stated. See the AWS General Reference for actual tagging limits.
+     *        pairs. Tagging Amazon Web Services resources are useful for resource management, access management and
+     *        cost allocation. For more information, see <a
+     *        href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"> Tagging Amazon Web Services
+     *        Resources</a> in the <i>Amazon Web Services General Reference</i>. Once the resource is created, you can
+     *        use <a>TagResource</a>, <a>UntagResource</a>, and <a>ListTagsForResource</a> to add, remove, and view
+     *        tags. The maximum tag limit may be lower than stated. See the Amazon Web Services General Reference for
+     *        actual tagging limits.
      */
 
     public void setTags(java.util.Collection<Tag> tags) {
@@ -622,11 +629,12 @@ public class CreateGameSessionQueueRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * A list of labels to assign to the new game session queue resource. Tags are developer-defined key-value pairs.
-     * Tagging AWS resources are useful for resource management, access management and cost allocation. For more
-     * information, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"> Tagging AWS
-     * Resources</a> in the <i>AWS General Reference</i>. Once the resource is created, you can use <a>TagResource</a>,
-     * <a>UntagResource</a>, and <a>ListTagsForResource</a> to add, remove, and view tags. The maximum tag limit may be
-     * lower than stated. See the AWS General Reference for actual tagging limits.
+     * Tagging Amazon Web Services resources are useful for resource management, access management and cost allocation.
+     * For more information, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"> Tagging
+     * Amazon Web Services Resources</a> in the <i>Amazon Web Services General Reference</i>. Once the resource is
+     * created, you can use <a>TagResource</a>, <a>UntagResource</a>, and <a>ListTagsForResource</a> to add, remove, and
+     * view tags. The maximum tag limit may be lower than stated. See the Amazon Web Services General Reference for
+     * actual tagging limits.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -636,11 +644,13 @@ public class CreateGameSessionQueueRequest extends com.amazonaws.AmazonWebServic
      * 
      * @param tags
      *        A list of labels to assign to the new game session queue resource. Tags are developer-defined key-value
-     *        pairs. Tagging AWS resources are useful for resource management, access management and cost allocation.
-     *        For more information, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">
-     *        Tagging AWS Resources</a> in the <i>AWS General Reference</i>. Once the resource is created, you can use
-     *        <a>TagResource</a>, <a>UntagResource</a>, and <a>ListTagsForResource</a> to add, remove, and view tags.
-     *        The maximum tag limit may be lower than stated. See the AWS General Reference for actual tagging limits.
+     *        pairs. Tagging Amazon Web Services resources are useful for resource management, access management and
+     *        cost allocation. For more information, see <a
+     *        href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"> Tagging Amazon Web Services
+     *        Resources</a> in the <i>Amazon Web Services General Reference</i>. Once the resource is created, you can
+     *        use <a>TagResource</a>, <a>UntagResource</a>, and <a>ListTagsForResource</a> to add, remove, and view
+     *        tags. The maximum tag limit may be lower than stated. See the Amazon Web Services General Reference for
+     *        actual tagging limits.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -657,20 +667,23 @@ public class CreateGameSessionQueueRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * A list of labels to assign to the new game session queue resource. Tags are developer-defined key-value pairs.
-     * Tagging AWS resources are useful for resource management, access management and cost allocation. For more
-     * information, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"> Tagging AWS
-     * Resources</a> in the <i>AWS General Reference</i>. Once the resource is created, you can use <a>TagResource</a>,
-     * <a>UntagResource</a>, and <a>ListTagsForResource</a> to add, remove, and view tags. The maximum tag limit may be
-     * lower than stated. See the AWS General Reference for actual tagging limits.
+     * Tagging Amazon Web Services resources are useful for resource management, access management and cost allocation.
+     * For more information, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"> Tagging
+     * Amazon Web Services Resources</a> in the <i>Amazon Web Services General Reference</i>. Once the resource is
+     * created, you can use <a>TagResource</a>, <a>UntagResource</a>, and <a>ListTagsForResource</a> to add, remove, and
+     * view tags. The maximum tag limit may be lower than stated. See the Amazon Web Services General Reference for
+     * actual tagging limits.
      * </p>
      * 
      * @param tags
      *        A list of labels to assign to the new game session queue resource. Tags are developer-defined key-value
-     *        pairs. Tagging AWS resources are useful for resource management, access management and cost allocation.
-     *        For more information, see <a href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html">
-     *        Tagging AWS Resources</a> in the <i>AWS General Reference</i>. Once the resource is created, you can use
-     *        <a>TagResource</a>, <a>UntagResource</a>, and <a>ListTagsForResource</a> to add, remove, and view tags.
-     *        The maximum tag limit may be lower than stated. See the AWS General Reference for actual tagging limits.
+     *        pairs. Tagging Amazon Web Services resources are useful for resource management, access management and
+     *        cost allocation. For more information, see <a
+     *        href="https://docs.aws.amazon.com/general/latest/gr/aws_tagging.html"> Tagging Amazon Web Services
+     *        Resources</a> in the <i>Amazon Web Services General Reference</i>. Once the resource is created, you can
+     *        use <a>TagResource</a>, <a>UntagResource</a>, and <a>ListTagsForResource</a> to add, remove, and view
+     *        tags. The maximum tag limit may be lower than stated. See the Amazon Web Services General Reference for
+     *        actual tagging limits.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

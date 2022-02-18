@@ -66,7 +66,7 @@ public class StartGameSessionPlacementRequest extends com.amazonaws.AmazonWebSer
     /**
      * <p>
      * A set of values, expressed in milliseconds, that indicates the amount of latency that a player experiences when
-     * connected to AWS Regions. This information is used to try to place the new game session where it can offer the
+     * connected to @aws; Regions. This information is used to try to place the new game session where it can offer the
      * best possible gameplay experience for the players.
      * </p>
      */
@@ -360,13 +360,13 @@ public class StartGameSessionPlacementRequest extends com.amazonaws.AmazonWebSer
     /**
      * <p>
      * A set of values, expressed in milliseconds, that indicates the amount of latency that a player experiences when
-     * connected to AWS Regions. This information is used to try to place the new game session where it can offer the
+     * connected to @aws; Regions. This information is used to try to place the new game session where it can offer the
      * best possible gameplay experience for the players.
      * </p>
      * 
      * @return A set of values, expressed in milliseconds, that indicates the amount of latency that a player
-     *         experiences when connected to AWS Regions. This information is used to try to place the new game session
-     *         where it can offer the best possible gameplay experience for the players.
+     *         experiences when connected to @aws; Regions. This information is used to try to place the new game
+     *         session where it can offer the best possible gameplay experience for the players.
      */
 
     public java.util.List<PlayerLatency> getPlayerLatencies() {
@@ -376,14 +376,14 @@ public class StartGameSessionPlacementRequest extends com.amazonaws.AmazonWebSer
     /**
      * <p>
      * A set of values, expressed in milliseconds, that indicates the amount of latency that a player experiences when
-     * connected to AWS Regions. This information is used to try to place the new game session where it can offer the
+     * connected to @aws; Regions. This information is used to try to place the new game session where it can offer the
      * best possible gameplay experience for the players.
      * </p>
      * 
      * @param playerLatencies
      *        A set of values, expressed in milliseconds, that indicates the amount of latency that a player experiences
-     *        when connected to AWS Regions. This information is used to try to place the new game session where it can
-     *        offer the best possible gameplay experience for the players.
+     *        when connected to @aws; Regions. This information is used to try to place the new game session where it
+     *        can offer the best possible gameplay experience for the players.
      */
 
     public void setPlayerLatencies(java.util.Collection<PlayerLatency> playerLatencies) {
@@ -398,7 +398,7 @@ public class StartGameSessionPlacementRequest extends com.amazonaws.AmazonWebSer
     /**
      * <p>
      * A set of values, expressed in milliseconds, that indicates the amount of latency that a player experiences when
-     * connected to AWS Regions. This information is used to try to place the new game session where it can offer the
+     * connected to @aws; Regions. This information is used to try to place the new game session where it can offer the
      * best possible gameplay experience for the players.
      * </p>
      * <p>
@@ -409,8 +409,8 @@ public class StartGameSessionPlacementRequest extends com.amazonaws.AmazonWebSer
      * 
      * @param playerLatencies
      *        A set of values, expressed in milliseconds, that indicates the amount of latency that a player experiences
-     *        when connected to AWS Regions. This information is used to try to place the new game session where it can
-     *        offer the best possible gameplay experience for the players.
+     *        when connected to @aws; Regions. This information is used to try to place the new game session where it
+     *        can offer the best possible gameplay experience for the players.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -427,14 +427,14 @@ public class StartGameSessionPlacementRequest extends com.amazonaws.AmazonWebSer
     /**
      * <p>
      * A set of values, expressed in milliseconds, that indicates the amount of latency that a player experiences when
-     * connected to AWS Regions. This information is used to try to place the new game session where it can offer the
+     * connected to @aws; Regions. This information is used to try to place the new game session where it can offer the
      * best possible gameplay experience for the players.
      * </p>
      * 
      * @param playerLatencies
      *        A set of values, expressed in milliseconds, that indicates the amount of latency that a player experiences
-     *        when connected to AWS Regions. This information is used to try to place the new game session where it can
-     *        offer the best possible gameplay experience for the players.
+     *        when connected to @aws; Regions. This information is used to try to place the new game session where it
+     *        can offer the best possible gameplay experience for the players.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

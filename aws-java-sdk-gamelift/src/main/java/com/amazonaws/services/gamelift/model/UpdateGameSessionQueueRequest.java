@@ -63,8 +63,8 @@ public class UpdateGameSessionQueueRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * A list of locations where a queue is allowed to place new game sessions. Locations are specified in the form of
-     * AWS Region codes, such as <code>us-west-2</code>. If this parameter is not set, game sessions can be placed in
-     * any queue location. To remove an existing filter configuration, pass in an empty set.
+     * Amazon Web Services Region codes, such as <code>us-west-2</code>. If this parameter is not set, game sessions can
+     * be placed in any queue location. To remove an existing filter configuration, pass in an empty set.
      * </p>
      */
     private FilterConfiguration filterConfiguration;
@@ -375,14 +375,15 @@ public class UpdateGameSessionQueueRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * A list of locations where a queue is allowed to place new game sessions. Locations are specified in the form of
-     * AWS Region codes, such as <code>us-west-2</code>. If this parameter is not set, game sessions can be placed in
-     * any queue location. To remove an existing filter configuration, pass in an empty set.
+     * Amazon Web Services Region codes, such as <code>us-west-2</code>. If this parameter is not set, game sessions can
+     * be placed in any queue location. To remove an existing filter configuration, pass in an empty set.
      * </p>
      * 
      * @param filterConfiguration
      *        A list of locations where a queue is allowed to place new game sessions. Locations are specified in the
-     *        form of AWS Region codes, such as <code>us-west-2</code>. If this parameter is not set, game sessions can
-     *        be placed in any queue location. To remove an existing filter configuration, pass in an empty set.
+     *        form of Amazon Web Services Region codes, such as <code>us-west-2</code>. If this parameter is not set,
+     *        game sessions can be placed in any queue location. To remove an existing filter configuration, pass in an
+     *        empty set.
      */
 
     public void setFilterConfiguration(FilterConfiguration filterConfiguration) {
@@ -392,13 +393,14 @@ public class UpdateGameSessionQueueRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * A list of locations where a queue is allowed to place new game sessions. Locations are specified in the form of
-     * AWS Region codes, such as <code>us-west-2</code>. If this parameter is not set, game sessions can be placed in
-     * any queue location. To remove an existing filter configuration, pass in an empty set.
+     * Amazon Web Services Region codes, such as <code>us-west-2</code>. If this parameter is not set, game sessions can
+     * be placed in any queue location. To remove an existing filter configuration, pass in an empty set.
      * </p>
      * 
      * @return A list of locations where a queue is allowed to place new game sessions. Locations are specified in the
-     *         form of AWS Region codes, such as <code>us-west-2</code>. If this parameter is not set, game sessions can
-     *         be placed in any queue location. To remove an existing filter configuration, pass in an empty set.
+     *         form of Amazon Web Services Region codes, such as <code>us-west-2</code>. If this parameter is not set,
+     *         game sessions can be placed in any queue location. To remove an existing filter configuration, pass in an
+     *         empty set.
      */
 
     public FilterConfiguration getFilterConfiguration() {
@@ -408,14 +410,15 @@ public class UpdateGameSessionQueueRequest extends com.amazonaws.AmazonWebServic
     /**
      * <p>
      * A list of locations where a queue is allowed to place new game sessions. Locations are specified in the form of
-     * AWS Region codes, such as <code>us-west-2</code>. If this parameter is not set, game sessions can be placed in
-     * any queue location. To remove an existing filter configuration, pass in an empty set.
+     * Amazon Web Services Region codes, such as <code>us-west-2</code>. If this parameter is not set, game sessions can
+     * be placed in any queue location. To remove an existing filter configuration, pass in an empty set.
      * </p>
      * 
      * @param filterConfiguration
      *        A list of locations where a queue is allowed to place new game sessions. Locations are specified in the
-     *        form of AWS Region codes, such as <code>us-west-2</code>. If this parameter is not set, game sessions can
-     *        be placed in any queue location. To remove an existing filter configuration, pass in an empty set.
+     *        form of Amazon Web Services Region codes, such as <code>us-west-2</code>. If this parameter is not set,
+     *        game sessions can be placed in any queue location. To remove an existing filter configuration, pass in an
+     *        empty set.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

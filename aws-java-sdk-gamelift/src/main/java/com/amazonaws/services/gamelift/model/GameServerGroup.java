@@ -23,7 +23,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * </p>
  * <p>
  * Properties that describe a game server group resource. A game server group manages certain properties related to a
- * corresponding EC2 Auto Scaling group.
+ * corresponding Amazon EC2 Auto Scaling group.
  * </p>
  * <p>
  * A game server group is created by a successful call to <code>CreateGameServerGroup</code> and deleted by calling
@@ -48,7 +48,8 @@ public class GameServerGroup implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * A developer-defined identifier for the game server group. The name is unique for each Region in each AWS account.
+     * A developer-defined identifier for the game server group. The name is unique for each Region in each Amazon Web
+     * Services account.
      * </p>
      */
     private String gameServerGroupName;
@@ -61,14 +62,14 @@ public class GameServerGroup implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * The Amazon Resource Name (<a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>)
-     * for an IAM role that allows Amazon GameLift to access your EC2 Auto Scaling groups.
+     * for an IAM role that allows Amazon Web Services to access your Amazon EC2 Auto Scaling groups.
      * </p>
      */
     private String roleArn;
     /**
      * <p>
-     * The set of EC2 instance types that GameLift FleetIQ can use when balancing and automatically scaling instances in
-     * the corresponding Auto Scaling group.
+     * The set of Amazon EC2 instance types that GameLift FleetIQ can use when balancing and automatically scaling
+     * instances in the corresponding Auto Scaling group.
      * </p>
      */
     private java.util.List<InstanceDefinition> instanceDefinitions;
@@ -109,13 +110,13 @@ public class GameServerGroup implements Serializable, Cloneable, StructuredPojo 
      * Unprotected instances that have active game servers running might be terminated during a scale-down event,
      * causing players to be dropped from the game. Protected instances cannot be terminated while there are active game
      * servers running except in the event of a forced game server group deletion (see ). An exception to this is with
-     * Spot Instances, which can be terminated by AWS regardless of protection status.
+     * Spot Instances, which can be terminated by Amazon Web Services regardless of protection status.
      * </p>
      */
     private String gameServerProtectionPolicy;
     /**
      * <p>
-     * A generated unique ID for the EC2 Auto Scaling group that is associated with this game server group.
+     * A generated unique ID for the Amazon EC2 Auto Scaling group that is associated with this game server group.
      * </p>
      */
     private String autoScalingGroupArn;
@@ -132,7 +133,7 @@ public class GameServerGroup implements Serializable, Cloneable, StructuredPojo 
      * <li>
      * <p>
      * <code>ACTIVATING</code> - GameLift FleetIQ is setting up a game server group, which includes creating an Auto
-     * Scaling group in your AWS account.
+     * Scaling group in your Amazon Web Services account.
      * </p>
      * </li>
      * <li>
@@ -196,12 +197,13 @@ public class GameServerGroup implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * A developer-defined identifier for the game server group. The name is unique for each Region in each AWS account.
+     * A developer-defined identifier for the game server group. The name is unique for each Region in each Amazon Web
+     * Services account.
      * </p>
      * 
      * @param gameServerGroupName
-     *        A developer-defined identifier for the game server group. The name is unique for each Region in each AWS
-     *        account.
+     *        A developer-defined identifier for the game server group. The name is unique for each Region in each
+     *        Amazon Web Services account.
      */
 
     public void setGameServerGroupName(String gameServerGroupName) {
@@ -210,11 +212,12 @@ public class GameServerGroup implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * A developer-defined identifier for the game server group. The name is unique for each Region in each AWS account.
+     * A developer-defined identifier for the game server group. The name is unique for each Region in each Amazon Web
+     * Services account.
      * </p>
      * 
-     * @return A developer-defined identifier for the game server group. The name is unique for each Region in each AWS
-     *         account.
+     * @return A developer-defined identifier for the game server group. The name is unique for each Region in each
+     *         Amazon Web Services account.
      */
 
     public String getGameServerGroupName() {
@@ -223,12 +226,13 @@ public class GameServerGroup implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * A developer-defined identifier for the game server group. The name is unique for each Region in each AWS account.
+     * A developer-defined identifier for the game server group. The name is unique for each Region in each Amazon Web
+     * Services account.
      * </p>
      * 
      * @param gameServerGroupName
-     *        A developer-defined identifier for the game server group. The name is unique for each Region in each AWS
-     *        account.
+     *        A developer-defined identifier for the game server group. The name is unique for each Region in each
+     *        Amazon Web Services account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -280,13 +284,13 @@ public class GameServerGroup implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * The Amazon Resource Name (<a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>)
-     * for an IAM role that allows Amazon GameLift to access your EC2 Auto Scaling groups.
+     * for an IAM role that allows Amazon Web Services to access your Amazon EC2 Auto Scaling groups.
      * </p>
      * 
      * @param roleArn
      *        The Amazon Resource Name (<a
      *        href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>) for an IAM role that
-     *        allows Amazon GameLift to access your EC2 Auto Scaling groups.
+     *        allows Amazon Web Services to access your Amazon EC2 Auto Scaling groups.
      */
 
     public void setRoleArn(String roleArn) {
@@ -296,12 +300,12 @@ public class GameServerGroup implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * The Amazon Resource Name (<a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>)
-     * for an IAM role that allows Amazon GameLift to access your EC2 Auto Scaling groups.
+     * for an IAM role that allows Amazon Web Services to access your Amazon EC2 Auto Scaling groups.
      * </p>
      * 
      * @return The Amazon Resource Name (<a
      *         href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>) for an IAM role that
-     *         allows Amazon GameLift to access your EC2 Auto Scaling groups.
+     *         allows Amazon Web Services to access your Amazon EC2 Auto Scaling groups.
      */
 
     public String getRoleArn() {
@@ -311,13 +315,13 @@ public class GameServerGroup implements Serializable, Cloneable, StructuredPojo 
     /**
      * <p>
      * The Amazon Resource Name (<a href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>)
-     * for an IAM role that allows Amazon GameLift to access your EC2 Auto Scaling groups.
+     * for an IAM role that allows Amazon Web Services to access your Amazon EC2 Auto Scaling groups.
      * </p>
      * 
      * @param roleArn
      *        The Amazon Resource Name (<a
      *        href="https://docs.aws.amazon.com/AmazonS3/latest/dev/s3-arn-format.html">ARN</a>) for an IAM role that
-     *        allows Amazon GameLift to access your EC2 Auto Scaling groups.
+     *        allows Amazon Web Services to access your Amazon EC2 Auto Scaling groups.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -328,12 +332,12 @@ public class GameServerGroup implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The set of EC2 instance types that GameLift FleetIQ can use when balancing and automatically scaling instances in
-     * the corresponding Auto Scaling group.
+     * The set of Amazon EC2 instance types that GameLift FleetIQ can use when balancing and automatically scaling
+     * instances in the corresponding Auto Scaling group.
      * </p>
      * 
-     * @return The set of EC2 instance types that GameLift FleetIQ can use when balancing and automatically scaling
-     *         instances in the corresponding Auto Scaling group.
+     * @return The set of Amazon EC2 instance types that GameLift FleetIQ can use when balancing and automatically
+     *         scaling instances in the corresponding Auto Scaling group.
      */
 
     public java.util.List<InstanceDefinition> getInstanceDefinitions() {
@@ -342,13 +346,13 @@ public class GameServerGroup implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The set of EC2 instance types that GameLift FleetIQ can use when balancing and automatically scaling instances in
-     * the corresponding Auto Scaling group.
+     * The set of Amazon EC2 instance types that GameLift FleetIQ can use when balancing and automatically scaling
+     * instances in the corresponding Auto Scaling group.
      * </p>
      * 
      * @param instanceDefinitions
-     *        The set of EC2 instance types that GameLift FleetIQ can use when balancing and automatically scaling
-     *        instances in the corresponding Auto Scaling group.
+     *        The set of Amazon EC2 instance types that GameLift FleetIQ can use when balancing and automatically
+     *        scaling instances in the corresponding Auto Scaling group.
      */
 
     public void setInstanceDefinitions(java.util.Collection<InstanceDefinition> instanceDefinitions) {
@@ -362,8 +366,8 @@ public class GameServerGroup implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The set of EC2 instance types that GameLift FleetIQ can use when balancing and automatically scaling instances in
-     * the corresponding Auto Scaling group.
+     * The set of Amazon EC2 instance types that GameLift FleetIQ can use when balancing and automatically scaling
+     * instances in the corresponding Auto Scaling group.
      * </p>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
@@ -372,8 +376,8 @@ public class GameServerGroup implements Serializable, Cloneable, StructuredPojo 
      * </p>
      * 
      * @param instanceDefinitions
-     *        The set of EC2 instance types that GameLift FleetIQ can use when balancing and automatically scaling
-     *        instances in the corresponding Auto Scaling group.
+     *        The set of Amazon EC2 instance types that GameLift FleetIQ can use when balancing and automatically
+     *        scaling instances in the corresponding Auto Scaling group.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -389,13 +393,13 @@ public class GameServerGroup implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * The set of EC2 instance types that GameLift FleetIQ can use when balancing and automatically scaling instances in
-     * the corresponding Auto Scaling group.
+     * The set of Amazon EC2 instance types that GameLift FleetIQ can use when balancing and automatically scaling
+     * instances in the corresponding Auto Scaling group.
      * </p>
      * 
      * @param instanceDefinitions
-     *        The set of EC2 instance types that GameLift FleetIQ can use when balancing and automatically scaling
-     *        instances in the corresponding Auto Scaling group.
+     *        The set of Amazon EC2 instance types that GameLift FleetIQ can use when balancing and automatically
+     *        scaling instances in the corresponding Auto Scaling group.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -665,7 +669,7 @@ public class GameServerGroup implements Serializable, Cloneable, StructuredPojo 
      * Unprotected instances that have active game servers running might be terminated during a scale-down event,
      * causing players to be dropped from the game. Protected instances cannot be terminated while there are active game
      * servers running except in the event of a forced game server group deletion (see ). An exception to this is with
-     * Spot Instances, which can be terminated by AWS regardless of protection status.
+     * Spot Instances, which can be terminated by Amazon Web Services regardless of protection status.
      * </p>
      * 
      * @param gameServerProtectionPolicy
@@ -673,7 +677,8 @@ public class GameServerGroup implements Serializable, Cloneable, StructuredPojo 
      *        Unprotected instances that have active game servers running might be terminated during a scale-down event,
      *        causing players to be dropped from the game. Protected instances cannot be terminated while there are
      *        active game servers running except in the event of a forced game server group deletion (see ). An
-     *        exception to this is with Spot Instances, which can be terminated by AWS regardless of protection status.
+     *        exception to this is with Spot Instances, which can be terminated by Amazon Web Services regardless of
+     *        protection status.
      * @see GameServerProtectionPolicy
      */
 
@@ -687,14 +692,15 @@ public class GameServerGroup implements Serializable, Cloneable, StructuredPojo 
      * Unprotected instances that have active game servers running might be terminated during a scale-down event,
      * causing players to be dropped from the game. Protected instances cannot be terminated while there are active game
      * servers running except in the event of a forced game server group deletion (see ). An exception to this is with
-     * Spot Instances, which can be terminated by AWS regardless of protection status.
+     * Spot Instances, which can be terminated by Amazon Web Services regardless of protection status.
      * </p>
      * 
      * @return A flag that indicates whether instances in the game server group are protected from early termination.
      *         Unprotected instances that have active game servers running might be terminated during a scale-down
      *         event, causing players to be dropped from the game. Protected instances cannot be terminated while there
      *         are active game servers running except in the event of a forced game server group deletion (see ). An
-     *         exception to this is with Spot Instances, which can be terminated by AWS regardless of protection status.
+     *         exception to this is with Spot Instances, which can be terminated by Amazon Web Services regardless of
+     *         protection status.
      * @see GameServerProtectionPolicy
      */
 
@@ -708,7 +714,7 @@ public class GameServerGroup implements Serializable, Cloneable, StructuredPojo 
      * Unprotected instances that have active game servers running might be terminated during a scale-down event,
      * causing players to be dropped from the game. Protected instances cannot be terminated while there are active game
      * servers running except in the event of a forced game server group deletion (see ). An exception to this is with
-     * Spot Instances, which can be terminated by AWS regardless of protection status.
+     * Spot Instances, which can be terminated by Amazon Web Services regardless of protection status.
      * </p>
      * 
      * @param gameServerProtectionPolicy
@@ -716,7 +722,8 @@ public class GameServerGroup implements Serializable, Cloneable, StructuredPojo 
      *        Unprotected instances that have active game servers running might be terminated during a scale-down event,
      *        causing players to be dropped from the game. Protected instances cannot be terminated while there are
      *        active game servers running except in the event of a forced game server group deletion (see ). An
-     *        exception to this is with Spot Instances, which can be terminated by AWS regardless of protection status.
+     *        exception to this is with Spot Instances, which can be terminated by Amazon Web Services regardless of
+     *        protection status.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see GameServerProtectionPolicy
      */
@@ -732,7 +739,7 @@ public class GameServerGroup implements Serializable, Cloneable, StructuredPojo 
      * Unprotected instances that have active game servers running might be terminated during a scale-down event,
      * causing players to be dropped from the game. Protected instances cannot be terminated while there are active game
      * servers running except in the event of a forced game server group deletion (see ). An exception to this is with
-     * Spot Instances, which can be terminated by AWS regardless of protection status.
+     * Spot Instances, which can be terminated by Amazon Web Services regardless of protection status.
      * </p>
      * 
      * @param gameServerProtectionPolicy
@@ -740,7 +747,8 @@ public class GameServerGroup implements Serializable, Cloneable, StructuredPojo 
      *        Unprotected instances that have active game servers running might be terminated during a scale-down event,
      *        causing players to be dropped from the game. Protected instances cannot be terminated while there are
      *        active game servers running except in the event of a forced game server group deletion (see ). An
-     *        exception to this is with Spot Instances, which can be terminated by AWS regardless of protection status.
+     *        exception to this is with Spot Instances, which can be terminated by Amazon Web Services regardless of
+     *        protection status.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see GameServerProtectionPolicy
      */
@@ -752,11 +760,12 @@ public class GameServerGroup implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * A generated unique ID for the EC2 Auto Scaling group that is associated with this game server group.
+     * A generated unique ID for the Amazon EC2 Auto Scaling group that is associated with this game server group.
      * </p>
      * 
      * @param autoScalingGroupArn
-     *        A generated unique ID for the EC2 Auto Scaling group that is associated with this game server group.
+     *        A generated unique ID for the Amazon EC2 Auto Scaling group that is associated with this game server
+     *        group.
      */
 
     public void setAutoScalingGroupArn(String autoScalingGroupArn) {
@@ -765,10 +774,11 @@ public class GameServerGroup implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * A generated unique ID for the EC2 Auto Scaling group that is associated with this game server group.
+     * A generated unique ID for the Amazon EC2 Auto Scaling group that is associated with this game server group.
      * </p>
      * 
-     * @return A generated unique ID for the EC2 Auto Scaling group that is associated with this game server group.
+     * @return A generated unique ID for the Amazon EC2 Auto Scaling group that is associated with this game server
+     *         group.
      */
 
     public String getAutoScalingGroupArn() {
@@ -777,11 +787,12 @@ public class GameServerGroup implements Serializable, Cloneable, StructuredPojo 
 
     /**
      * <p>
-     * A generated unique ID for the EC2 Auto Scaling group that is associated with this game server group.
+     * A generated unique ID for the Amazon EC2 Auto Scaling group that is associated with this game server group.
      * </p>
      * 
      * @param autoScalingGroupArn
-     *        A generated unique ID for the EC2 Auto Scaling group that is associated with this game server group.
+     *        A generated unique ID for the Amazon EC2 Auto Scaling group that is associated with this game server
+     *        group.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -803,7 +814,7 @@ public class GameServerGroup implements Serializable, Cloneable, StructuredPojo 
      * <li>
      * <p>
      * <code>ACTIVATING</code> - GameLift FleetIQ is setting up a game server group, which includes creating an Auto
-     * Scaling group in your AWS account.
+     * Scaling group in your Amazon Web Services account.
      * </p>
      * </li>
      * <li>
@@ -847,7 +858,7 @@ public class GameServerGroup implements Serializable, Cloneable, StructuredPojo 
      *        <li>
      *        <p>
      *        <code>ACTIVATING</code> - GameLift FleetIQ is setting up a game server group, which includes creating an
-     *        Auto Scaling group in your AWS account.
+     *        Auto Scaling group in your Amazon Web Services account.
      *        </p>
      *        </li>
      *        <li>
@@ -898,7 +909,7 @@ public class GameServerGroup implements Serializable, Cloneable, StructuredPojo 
      * <li>
      * <p>
      * <code>ACTIVATING</code> - GameLift FleetIQ is setting up a game server group, which includes creating an Auto
-     * Scaling group in your AWS account.
+     * Scaling group in your Amazon Web Services account.
      * </p>
      * </li>
      * <li>
@@ -941,7 +952,7 @@ public class GameServerGroup implements Serializable, Cloneable, StructuredPojo 
      *         <li>
      *         <p>
      *         <code>ACTIVATING</code> - GameLift FleetIQ is setting up a game server group, which includes creating an
-     *         Auto Scaling group in your AWS account.
+     *         Auto Scaling group in your Amazon Web Services account.
      *         </p>
      *         </li>
      *         <li>
@@ -992,7 +1003,7 @@ public class GameServerGroup implements Serializable, Cloneable, StructuredPojo 
      * <li>
      * <p>
      * <code>ACTIVATING</code> - GameLift FleetIQ is setting up a game server group, which includes creating an Auto
-     * Scaling group in your AWS account.
+     * Scaling group in your Amazon Web Services account.
      * </p>
      * </li>
      * <li>
@@ -1036,7 +1047,7 @@ public class GameServerGroup implements Serializable, Cloneable, StructuredPojo 
      *        <li>
      *        <p>
      *        <code>ACTIVATING</code> - GameLift FleetIQ is setting up a game server group, which includes creating an
-     *        Auto Scaling group in your AWS account.
+     *        Auto Scaling group in your Amazon Web Services account.
      *        </p>
      *        </li>
      *        <li>
@@ -1089,7 +1100,7 @@ public class GameServerGroup implements Serializable, Cloneable, StructuredPojo 
      * <li>
      * <p>
      * <code>ACTIVATING</code> - GameLift FleetIQ is setting up a game server group, which includes creating an Auto
-     * Scaling group in your AWS account.
+     * Scaling group in your Amazon Web Services account.
      * </p>
      * </li>
      * <li>
@@ -1133,7 +1144,7 @@ public class GameServerGroup implements Serializable, Cloneable, StructuredPojo 
      *        <li>
      *        <p>
      *        <code>ACTIVATING</code> - GameLift FleetIQ is setting up a game server group, which includes creating an
-     *        Auto Scaling group in your AWS account.
+     *        Auto Scaling group in your Amazon Web Services account.
      *        </p>
      *        </li>
      *        <li>

@@ -19,9 +19,10 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The GameLift service limits for an EC2 instance type and current utilization. GameLift allows AWS accounts a maximum
- * number of instances, per instance type, per AWS Region or location, for use with GameLift. You can request an limit
- * increase for your account by using the <b>Service limits</b> page in the GameLift console.
+ * The GameLift service limits for an Amazon EC2 instance type and current utilization. GameLift allows Amazon Web
+ * Services accounts a maximum number of instances, per instance type, per Amazon Web Services Region or location, for
+ * use with GameLift. You can request an limit increase for your account by using the <b>Service limits</b> page in the
+ * GameLift console.
  * </p>
  * <p>
  * <b>Related actions</b>
@@ -38,14 +39,15 @@ public class EC2InstanceLimit implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The name of an EC2 instance type. See <a href="http://aws.amazon.com/ec2/instance-types/">Amazon EC2 Instance
-     * Types</a> for detailed descriptions.
+     * The name of an Amazon EC2 instance type. See <a href="http://aws.amazon.com/ec2/instance-types/">Amazon Elastic
+     * Compute Cloud Instance Types</a> for detailed descriptions.
      * </p>
      */
     private String eC2InstanceType;
     /**
      * <p>
-     * The number of instances for the specified type and location that are currently being used by the AWS account.
+     * The number of instances for the specified type and location that are currently being used by the Amazon Web
+     * Services account.
      * </p>
      */
     private Integer currentInstances;
@@ -57,20 +59,20 @@ public class EC2InstanceLimit implements Serializable, Cloneable, StructuredPojo
     private Integer instanceLimit;
     /**
      * <p>
-     * An AWS Region code, such as <code>us-west-2</code>.
+     * An Amazon Web Services Region code, such as <code>us-west-2</code>.
      * </p>
      */
     private String location;
 
     /**
      * <p>
-     * The name of an EC2 instance type. See <a href="http://aws.amazon.com/ec2/instance-types/">Amazon EC2 Instance
-     * Types</a> for detailed descriptions.
+     * The name of an Amazon EC2 instance type. See <a href="http://aws.amazon.com/ec2/instance-types/">Amazon Elastic
+     * Compute Cloud Instance Types</a> for detailed descriptions.
      * </p>
      * 
      * @param eC2InstanceType
-     *        The name of an EC2 instance type. See <a href="http://aws.amazon.com/ec2/instance-types/">Amazon EC2
-     *        Instance Types</a> for detailed descriptions.
+     *        The name of an Amazon EC2 instance type. See <a href="http://aws.amazon.com/ec2/instance-types/">Amazon
+     *        Elastic Compute Cloud Instance Types</a> for detailed descriptions.
      * @see EC2InstanceType
      */
 
@@ -80,12 +82,12 @@ public class EC2InstanceLimit implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The name of an EC2 instance type. See <a href="http://aws.amazon.com/ec2/instance-types/">Amazon EC2 Instance
-     * Types</a> for detailed descriptions.
+     * The name of an Amazon EC2 instance type. See <a href="http://aws.amazon.com/ec2/instance-types/">Amazon Elastic
+     * Compute Cloud Instance Types</a> for detailed descriptions.
      * </p>
      * 
-     * @return The name of an EC2 instance type. See <a href="http://aws.amazon.com/ec2/instance-types/">Amazon EC2
-     *         Instance Types</a> for detailed descriptions.
+     * @return The name of an Amazon EC2 instance type. See <a href="http://aws.amazon.com/ec2/instance-types/">Amazon
+     *         Elastic Compute Cloud Instance Types</a> for detailed descriptions.
      * @see EC2InstanceType
      */
 
@@ -95,13 +97,13 @@ public class EC2InstanceLimit implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The name of an EC2 instance type. See <a href="http://aws.amazon.com/ec2/instance-types/">Amazon EC2 Instance
-     * Types</a> for detailed descriptions.
+     * The name of an Amazon EC2 instance type. See <a href="http://aws.amazon.com/ec2/instance-types/">Amazon Elastic
+     * Compute Cloud Instance Types</a> for detailed descriptions.
      * </p>
      * 
      * @param eC2InstanceType
-     *        The name of an EC2 instance type. See <a href="http://aws.amazon.com/ec2/instance-types/">Amazon EC2
-     *        Instance Types</a> for detailed descriptions.
+     *        The name of an Amazon EC2 instance type. See <a href="http://aws.amazon.com/ec2/instance-types/">Amazon
+     *        Elastic Compute Cloud Instance Types</a> for detailed descriptions.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see EC2InstanceType
      */
@@ -113,13 +115,13 @@ public class EC2InstanceLimit implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The name of an EC2 instance type. See <a href="http://aws.amazon.com/ec2/instance-types/">Amazon EC2 Instance
-     * Types</a> for detailed descriptions.
+     * The name of an Amazon EC2 instance type. See <a href="http://aws.amazon.com/ec2/instance-types/">Amazon Elastic
+     * Compute Cloud Instance Types</a> for detailed descriptions.
      * </p>
      * 
      * @param eC2InstanceType
-     *        The name of an EC2 instance type. See <a href="http://aws.amazon.com/ec2/instance-types/">Amazon EC2
-     *        Instance Types</a> for detailed descriptions.
+     *        The name of an Amazon EC2 instance type. See <a href="http://aws.amazon.com/ec2/instance-types/">Amazon
+     *        Elastic Compute Cloud Instance Types</a> for detailed descriptions.
      * @see EC2InstanceType
      */
 
@@ -129,13 +131,13 @@ public class EC2InstanceLimit implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The name of an EC2 instance type. See <a href="http://aws.amazon.com/ec2/instance-types/">Amazon EC2 Instance
-     * Types</a> for detailed descriptions.
+     * The name of an Amazon EC2 instance type. See <a href="http://aws.amazon.com/ec2/instance-types/">Amazon Elastic
+     * Compute Cloud Instance Types</a> for detailed descriptions.
      * </p>
      * 
      * @param eC2InstanceType
-     *        The name of an EC2 instance type. See <a href="http://aws.amazon.com/ec2/instance-types/">Amazon EC2
-     *        Instance Types</a> for detailed descriptions.
+     *        The name of an Amazon EC2 instance type. See <a href="http://aws.amazon.com/ec2/instance-types/">Amazon
+     *        Elastic Compute Cloud Instance Types</a> for detailed descriptions.
      * @return Returns a reference to this object so that method calls can be chained together.
      * @see EC2InstanceType
      */
@@ -147,12 +149,13 @@ public class EC2InstanceLimit implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The number of instances for the specified type and location that are currently being used by the AWS account.
+     * The number of instances for the specified type and location that are currently being used by the Amazon Web
+     * Services account.
      * </p>
      * 
      * @param currentInstances
-     *        The number of instances for the specified type and location that are currently being used by the AWS
-     *        account.
+     *        The number of instances for the specified type and location that are currently being used by the Amazon
+     *        Web Services account.
      */
 
     public void setCurrentInstances(Integer currentInstances) {
@@ -161,11 +164,12 @@ public class EC2InstanceLimit implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The number of instances for the specified type and location that are currently being used by the AWS account.
+     * The number of instances for the specified type and location that are currently being used by the Amazon Web
+     * Services account.
      * </p>
      * 
-     * @return The number of instances for the specified type and location that are currently being used by the AWS
-     *         account.
+     * @return The number of instances for the specified type and location that are currently being used by the Amazon
+     *         Web Services account.
      */
 
     public Integer getCurrentInstances() {
@@ -174,12 +178,13 @@ public class EC2InstanceLimit implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The number of instances for the specified type and location that are currently being used by the AWS account.
+     * The number of instances for the specified type and location that are currently being used by the Amazon Web
+     * Services account.
      * </p>
      * 
      * @param currentInstances
-     *        The number of instances for the specified type and location that are currently being used by the AWS
-     *        account.
+     *        The number of instances for the specified type and location that are currently being used by the Amazon
+     *        Web Services account.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -230,11 +235,11 @@ public class EC2InstanceLimit implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * An AWS Region code, such as <code>us-west-2</code>.
+     * An Amazon Web Services Region code, such as <code>us-west-2</code>.
      * </p>
      * 
      * @param location
-     *        An AWS Region code, such as <code>us-west-2</code>.
+     *        An Amazon Web Services Region code, such as <code>us-west-2</code>.
      */
 
     public void setLocation(String location) {
@@ -243,10 +248,10 @@ public class EC2InstanceLimit implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * An AWS Region code, such as <code>us-west-2</code>.
+     * An Amazon Web Services Region code, such as <code>us-west-2</code>.
      * </p>
      * 
-     * @return An AWS Region code, such as <code>us-west-2</code>.
+     * @return An Amazon Web Services Region code, such as <code>us-west-2</code>.
      */
 
     public String getLocation() {
@@ -255,11 +260,11 @@ public class EC2InstanceLimit implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * An AWS Region code, such as <code>us-west-2</code>.
+     * An Amazon Web Services Region code, such as <code>us-west-2</code>.
      * </p>
      * 
      * @param location
-     *        An AWS Region code, such as <code>us-west-2</code>.
+     *        An Amazon Web Services Region code, such as <code>us-west-2</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
