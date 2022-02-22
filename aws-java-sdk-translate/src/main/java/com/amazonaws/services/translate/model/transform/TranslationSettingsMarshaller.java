@@ -27,6 +27,8 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class TranslationSettingsMarshaller {
 
+    private static final MarshallingInfo<String> FORMALITY_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Formality").build();
     private static final MarshallingInfo<String> PROFANITY_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Profanity").build();
 
@@ -46,6 +48,7 @@ public class TranslationSettingsMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(translationSettings.getFormality(), FORMALITY_BINDING);
             protocolMarshaller.marshall(translationSettings.getProfanity(), PROFANITY_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);

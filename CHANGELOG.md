@@ -1,3 +1,16 @@
+# __1.12.164__ __2022-02-22__
+## __AWS App Runner__
+  - ### Features
+    - AWS App Runner adds a Java platform (Corretto 8, Corretto 11 runtimes) and a Node.js 14 runtime.
+
+## __AWS WAFV2__
+  - ### Features
+    - Updated descriptions for logging configuration.
+
+## __Amazon Translate__
+  - ### Features
+    - This release enables customers to use translation settings for formality customization in their synchronous translation output.
+
 # __1.12.163__ __2022-02-21__
 ## __Amazon Connect Customer Profiles__
   - ### Features

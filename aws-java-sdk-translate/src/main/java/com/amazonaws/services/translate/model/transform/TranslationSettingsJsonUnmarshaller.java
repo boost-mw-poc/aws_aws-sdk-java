@@ -48,6 +48,10 @@ public class TranslationSettingsJsonUnmarshaller implements Unmarshaller<Transla
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("Formality", targetDepth)) {
+                    context.nextToken();
+                    translationSettings.setFormality(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("Profanity", targetDepth)) {
                     context.nextToken();
                     translationSettings.setProfanity(context.getUnmarshaller(String.class).unmarshall(context));

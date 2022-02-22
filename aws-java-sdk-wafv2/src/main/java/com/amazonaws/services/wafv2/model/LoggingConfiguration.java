@@ -23,8 +23,38 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * association, you can specify parts of the standard logging fields to keep out of the logs and you can specify filters
  * so that you log only a subset of the logging records.
  * </p>
+ * <note>
  * <p>
- * For information about configuring web ACL logging destinations, see <a
+ * You can define one logging destination per web ACL.
+ * </p>
+ * </note>
+ * <p>
+ * You can access information about the traffic that WAF inspects using the following steps:
+ * </p>
+ * <ol>
+ * <li>
+ * <p>
+ * Create your logging destination. You can use an Amazon CloudWatch Logs log group, an Amazon Simple Storage Service
+ * (Amazon S3) bucket, or an Amazon Kinesis Data Firehose. For information about configuring logging destinations and
+ * the permissions that are required for each, see <a
+ * href="https://docs.aws.amazon.com/waf/latest/developerguide/logging.html">Logging web ACL traffic information</a> in
+ * the <i>WAF Developer Guide</i>.
+ * </p>
+ * </li>
+ * <li>
+ * <p>
+ * Associate your logging destination to your web ACL using a <code>PutLoggingConfiguration</code> request.
+ * </p>
+ * </li>
+ * </ol>
+ * <p>
+ * When you successfully enable logging using a <code>PutLoggingConfiguration</code> request, WAF creates an additional
+ * role or policy that is required to write logs to the logging destination. For an Amazon CloudWatch Logs log group,
+ * WAF creates a resource policy on the log group. For an Amazon S3 bucket, WAF creates a bucket policy. For an Amazon
+ * Kinesis Data Firehose, WAF creates a service-linked role.
+ * </p>
+ * <p>
+ * For additional information about web ACL logging, see <a
  * href="https://docs.aws.amazon.com/waf/latest/developerguide/logging.html">Logging web ACL traffic information</a> in
  * the <i>WAF Developer Guide</i>.
  * </p>
@@ -43,8 +73,13 @@ public class LoggingConfiguration implements Serializable, Cloneable, Structured
     private String resourceArn;
     /**
      * <p>
-     * The Amazon Resource Names (ARNs) of the logging destinations that you want to associate with the web ACL.
+     * The logging destination configuration that you want to associate with the web ACL.
      * </p>
+     * <note>
+     * <p>
+     * You can associate one logging destination to a web ACL.
+     * </p>
+     * </note>
      */
     private java.util.List<String> logDestinationConfigs;
     /**
@@ -120,10 +155,18 @@ public class LoggingConfiguration implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The Amazon Resource Names (ARNs) of the logging destinations that you want to associate with the web ACL.
+     * The logging destination configuration that you want to associate with the web ACL.
      * </p>
+     * <note>
+     * <p>
+     * You can associate one logging destination to a web ACL.
+     * </p>
+     * </note>
      * 
-     * @return The Amazon Resource Names (ARNs) of the logging destinations that you want to associate with the web ACL.
+     * @return The logging destination configuration that you want to associate with the web ACL.</p> <note>
+     *         <p>
+     *         You can associate one logging destination to a web ACL.
+     *         </p>
      */
 
     public java.util.List<String> getLogDestinationConfigs() {
@@ -132,11 +175,19 @@ public class LoggingConfiguration implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The Amazon Resource Names (ARNs) of the logging destinations that you want to associate with the web ACL.
+     * The logging destination configuration that you want to associate with the web ACL.
      * </p>
+     * <note>
+     * <p>
+     * You can associate one logging destination to a web ACL.
+     * </p>
+     * </note>
      * 
      * @param logDestinationConfigs
-     *        The Amazon Resource Names (ARNs) of the logging destinations that you want to associate with the web ACL.
+     *        The logging destination configuration that you want to associate with the web ACL.</p> <note>
+     *        <p>
+     *        You can associate one logging destination to a web ACL.
+     *        </p>
      */
 
     public void setLogDestinationConfigs(java.util.Collection<String> logDestinationConfigs) {
@@ -150,8 +201,13 @@ public class LoggingConfiguration implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The Amazon Resource Names (ARNs) of the logging destinations that you want to associate with the web ACL.
+     * The logging destination configuration that you want to associate with the web ACL.
      * </p>
+     * <note>
+     * <p>
+     * You can associate one logging destination to a web ACL.
+     * </p>
+     * </note>
      * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setLogDestinationConfigs(java.util.Collection)} or
@@ -159,7 +215,10 @@ public class LoggingConfiguration implements Serializable, Cloneable, Structured
      * </p>
      * 
      * @param logDestinationConfigs
-     *        The Amazon Resource Names (ARNs) of the logging destinations that you want to associate with the web ACL.
+     *        The logging destination configuration that you want to associate with the web ACL.</p> <note>
+     *        <p>
+     *        You can associate one logging destination to a web ACL.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -175,11 +234,19 @@ public class LoggingConfiguration implements Serializable, Cloneable, Structured
 
     /**
      * <p>
-     * The Amazon Resource Names (ARNs) of the logging destinations that you want to associate with the web ACL.
+     * The logging destination configuration that you want to associate with the web ACL.
      * </p>
+     * <note>
+     * <p>
+     * You can associate one logging destination to a web ACL.
+     * </p>
+     * </note>
      * 
      * @param logDestinationConfigs
-     *        The Amazon Resource Names (ARNs) of the logging destinations that you want to associate with the web ACL.
+     *        The logging destination configuration that you want to associate with the web ACL.</p> <note>
+     *        <p>
+     *        You can associate one logging destination to a web ACL.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

@@ -28,6 +28,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public class TranslationSettings implements Serializable, Cloneable, StructuredPojo {
 
+    private String formality;
     /**
      * <p>
      * Enable the profanity setting if you want Amazon Translate to mask profane words and phrases in your translation
@@ -45,6 +46,46 @@ public class TranslationSettings implements Serializable, Cloneable, StructuredP
      * </p>
      */
     private String profanity;
+
+    /**
+     * @param formality
+     * @see Formality
+     */
+
+    public void setFormality(String formality) {
+        this.formality = formality;
+    }
+
+    /**
+     * @return
+     * @see Formality
+     */
+
+    public String getFormality() {
+        return this.formality;
+    }
+
+    /**
+     * @param formality
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see Formality
+     */
+
+    public TranslationSettings withFormality(String formality) {
+        setFormality(formality);
+        return this;
+    }
+
+    /**
+     * @param formality
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see Formality
+     */
+
+    public TranslationSettings withFormality(Formality formality) {
+        this.formality = formality.toString();
+        return this;
+    }
 
     /**
      * <p>
@@ -202,6 +243,8 @@ public class TranslationSettings implements Serializable, Cloneable, StructuredP
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getFormality() != null)
+            sb.append("Formality: ").append(getFormality()).append(",");
         if (getProfanity() != null)
             sb.append("Profanity: ").append(getProfanity());
         sb.append("}");
@@ -218,6 +261,10 @@ public class TranslationSettings implements Serializable, Cloneable, StructuredP
         if (obj instanceof TranslationSettings == false)
             return false;
         TranslationSettings other = (TranslationSettings) obj;
+        if (other.getFormality() == null ^ this.getFormality() == null)
+            return false;
+        if (other.getFormality() != null && other.getFormality().equals(this.getFormality()) == false)
+            return false;
         if (other.getProfanity() == null ^ this.getProfanity() == null)
             return false;
         if (other.getProfanity() != null && other.getProfanity().equals(this.getProfanity()) == false)
@@ -230,6 +277,7 @@ public class TranslationSettings implements Serializable, Cloneable, StructuredP
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getFormality() == null) ? 0 : getFormality().hashCode());
         hashCode = prime * hashCode + ((getProfanity() == null) ? 0 : getProfanity().hashCode());
         return hashCode;
     }

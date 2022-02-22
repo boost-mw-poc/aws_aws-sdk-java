@@ -34,7 +34,8 @@ public class ManagedRuleGroupConfig implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The login endpoint for your application. For example <code>https://example.com/web/login</code>.
+     * The path of the login endpoint for your application. For example, for the URL
+     * <code>https://example.com/web/login</code>, you would provide the path <code>/web/login</code>.
      * </p>
      */
     private String loginPath;
@@ -59,11 +60,13 @@ public class ManagedRuleGroupConfig implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The login endpoint for your application. For example <code>https://example.com/web/login</code>.
+     * The path of the login endpoint for your application. For example, for the URL
+     * <code>https://example.com/web/login</code>, you would provide the path <code>/web/login</code>.
      * </p>
      * 
      * @param loginPath
-     *        The login endpoint for your application. For example <code>https://example.com/web/login</code>.
+     *        The path of the login endpoint for your application. For example, for the URL
+     *        <code>https://example.com/web/login</code>, you would provide the path <code>/web/login</code>.
      */
 
     public void setLoginPath(String loginPath) {
@@ -72,10 +75,12 @@ public class ManagedRuleGroupConfig implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The login endpoint for your application. For example <code>https://example.com/web/login</code>.
+     * The path of the login endpoint for your application. For example, for the URL
+     * <code>https://example.com/web/login</code>, you would provide the path <code>/web/login</code>.
      * </p>
      * 
-     * @return The login endpoint for your application. For example <code>https://example.com/web/login</code>.
+     * @return The path of the login endpoint for your application. For example, for the URL
+     *         <code>https://example.com/web/login</code>, you would provide the path <code>/web/login</code>.
      */
 
     public String getLoginPath() {
@@ -84,11 +89,13 @@ public class ManagedRuleGroupConfig implements Serializable, Cloneable, Structur
 
     /**
      * <p>
-     * The login endpoint for your application. For example <code>https://example.com/web/login</code>.
+     * The path of the login endpoint for your application. For example, for the URL
+     * <code>https://example.com/web/login</code>, you would provide the path <code>/web/login</code>.
      * </p>
      * 
      * @param loginPath
-     *        The login endpoint for your application. For example <code>https://example.com/web/login</code>.
+     *        The path of the login endpoint for your application. For example, for the URL
+     *        <code>https://example.com/web/login</code>, you would provide the path <code>/web/login</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

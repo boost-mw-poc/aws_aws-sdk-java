@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Contains one or more IP addresses or blocks of IP addresses specified in Classless Inter-Domain Routing (CIDR)
+ * Contains zero or more IP addresses or blocks of IP addresses specified in Classless Inter-Domain Routing (CIDR)
  * notation. WAF supports all IPv4 and IPv6 CIDR ranges except for /0. For information about CIDR notation, see the
  * Wikipedia entry <a href="https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing">Classless Inter-Domain
  * Routing</a>.
@@ -67,11 +67,11 @@ public class IPSet implements Serializable, Cloneable, StructuredPojo {
     private String iPAddressVersion;
     /**
      * <p>
-     * Contains an array of strings that specify one or more IP addresses or blocks of IP addresses in Classless
+     * Contains an array of strings that specifies zero or more IP addresses or blocks of IP addresses in Classless
      * Inter-Domain Routing (CIDR) notation. WAF supports all IPv4 and IPv6 CIDR ranges except for /0.
      * </p>
      * <p>
-     * Examples:
+     * Example address strings:
      * </p>
      * <ul>
      * <li>
@@ -104,6 +104,31 @@ public class IPSet implements Serializable, Cloneable, StructuredPojo {
      * For more information about CIDR notation, see the Wikipedia entry <a
      * href="https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing">Classless Inter-Domain Routing</a>.
      * </p>
+     * <p>
+     * Example JSON <code>Addresses</code> specifications:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Empty array: <code>"Addresses": []</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Array with one address: <code>"Addresses": ["192.0.2.44/32"]</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Array with three addresses: <code>"Addresses": ["192.0.2.44/32", "192.0.2.0/24", "192.0.0.0/16"]</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * INVALID specification: <code>"Addresses": [""]</code> INVALID
+     * </p>
+     * </li>
+     * </ul>
      */
     private java.util.List<String> addresses;
 
@@ -334,11 +359,11 @@ public class IPSet implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Contains an array of strings that specify one or more IP addresses or blocks of IP addresses in Classless
+     * Contains an array of strings that specifies zero or more IP addresses or blocks of IP addresses in Classless
      * Inter-Domain Routing (CIDR) notation. WAF supports all IPv4 and IPv6 CIDR ranges except for /0.
      * </p>
      * <p>
-     * Examples:
+     * Example address strings:
      * </p>
      * <ul>
      * <li>
@@ -371,11 +396,37 @@ public class IPSet implements Serializable, Cloneable, StructuredPojo {
      * For more information about CIDR notation, see the Wikipedia entry <a
      * href="https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing">Classless Inter-Domain Routing</a>.
      * </p>
+     * <p>
+     * Example JSON <code>Addresses</code> specifications:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Empty array: <code>"Addresses": []</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Array with one address: <code>"Addresses": ["192.0.2.44/32"]</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Array with three addresses: <code>"Addresses": ["192.0.2.44/32", "192.0.2.0/24", "192.0.0.0/16"]</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * INVALID specification: <code>"Addresses": [""]</code> INVALID
+     * </p>
+     * </li>
+     * </ul>
      * 
-     * @return Contains an array of strings that specify one or more IP addresses or blocks of IP addresses in Classless
-     *         Inter-Domain Routing (CIDR) notation. WAF supports all IPv4 and IPv6 CIDR ranges except for /0. </p>
+     * @return Contains an array of strings that specifies zero or more IP addresses or blocks of IP addresses in
+     *         Classless Inter-Domain Routing (CIDR) notation. WAF supports all IPv4 and IPv6 CIDR ranges except for /0.
+     *         </p>
      *         <p>
-     *         Examples:
+     *         Example address strings:
      *         </p>
      *         <ul>
      *         <li>
@@ -408,6 +459,31 @@ public class IPSet implements Serializable, Cloneable, StructuredPojo {
      *         <p>
      *         For more information about CIDR notation, see the Wikipedia entry <a
      *         href="https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing">Classless Inter-Domain Routing</a>.
+     *         </p>
+     *         <p>
+     *         Example JSON <code>Addresses</code> specifications:
+     *         </p>
+     *         <ul>
+     *         <li>
+     *         <p>
+     *         Empty array: <code>"Addresses": []</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Array with one address: <code>"Addresses": ["192.0.2.44/32"]</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         Array with three addresses: <code>"Addresses": ["192.0.2.44/32", "192.0.2.0/24", "192.0.0.0/16"]</code>
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         INVALID specification: <code>"Addresses": [""]</code> INVALID
+     *         </p>
+     *         </li>
      */
 
     public java.util.List<String> getAddresses() {
@@ -416,11 +492,11 @@ public class IPSet implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Contains an array of strings that specify one or more IP addresses or blocks of IP addresses in Classless
+     * Contains an array of strings that specifies zero or more IP addresses or blocks of IP addresses in Classless
      * Inter-Domain Routing (CIDR) notation. WAF supports all IPv4 and IPv6 CIDR ranges except for /0.
      * </p>
      * <p>
-     * Examples:
+     * Example address strings:
      * </p>
      * <ul>
      * <li>
@@ -453,12 +529,38 @@ public class IPSet implements Serializable, Cloneable, StructuredPojo {
      * For more information about CIDR notation, see the Wikipedia entry <a
      * href="https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing">Classless Inter-Domain Routing</a>.
      * </p>
+     * <p>
+     * Example JSON <code>Addresses</code> specifications:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Empty array: <code>"Addresses": []</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Array with one address: <code>"Addresses": ["192.0.2.44/32"]</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Array with three addresses: <code>"Addresses": ["192.0.2.44/32", "192.0.2.0/24", "192.0.0.0/16"]</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * INVALID specification: <code>"Addresses": [""]</code> INVALID
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param addresses
-     *        Contains an array of strings that specify one or more IP addresses or blocks of IP addresses in Classless
-     *        Inter-Domain Routing (CIDR) notation. WAF supports all IPv4 and IPv6 CIDR ranges except for /0. </p>
+     *        Contains an array of strings that specifies zero or more IP addresses or blocks of IP addresses in
+     *        Classless Inter-Domain Routing (CIDR) notation. WAF supports all IPv4 and IPv6 CIDR ranges except for /0.
+     *        </p>
      *        <p>
-     *        Examples:
+     *        Example address strings:
      *        </p>
      *        <ul>
      *        <li>
@@ -490,6 +592,31 @@ public class IPSet implements Serializable, Cloneable, StructuredPojo {
      *        <p>
      *        For more information about CIDR notation, see the Wikipedia entry <a
      *        href="https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing">Classless Inter-Domain Routing</a>.
+     *        </p>
+     *        <p>
+     *        Example JSON <code>Addresses</code> specifications:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        Empty array: <code>"Addresses": []</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Array with one address: <code>"Addresses": ["192.0.2.44/32"]</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Array with three addresses: <code>"Addresses": ["192.0.2.44/32", "192.0.2.0/24", "192.0.0.0/16"]</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        INVALID specification: <code>"Addresses": [""]</code> INVALID
+     *        </p>
+     *        </li>
      */
 
     public void setAddresses(java.util.Collection<String> addresses) {
@@ -503,11 +630,11 @@ public class IPSet implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Contains an array of strings that specify one or more IP addresses or blocks of IP addresses in Classless
+     * Contains an array of strings that specifies zero or more IP addresses or blocks of IP addresses in Classless
      * Inter-Domain Routing (CIDR) notation. WAF supports all IPv4 and IPv6 CIDR ranges except for /0.
      * </p>
      * <p>
-     * Examples:
+     * Example address strings:
      * </p>
      * <ul>
      * <li>
@@ -541,16 +668,42 @@ public class IPSet implements Serializable, Cloneable, StructuredPojo {
      * href="https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing">Classless Inter-Domain Routing</a>.
      * </p>
      * <p>
+     * Example JSON <code>Addresses</code> specifications:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Empty array: <code>"Addresses": []</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Array with one address: <code>"Addresses": ["192.0.2.44/32"]</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Array with three addresses: <code>"Addresses": ["192.0.2.44/32", "192.0.2.0/24", "192.0.0.0/16"]</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * INVALID specification: <code>"Addresses": [""]</code> INVALID
+     * </p>
+     * </li>
+     * </ul>
+     * <p>
      * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
      * {@link #setAddresses(java.util.Collection)} or {@link #withAddresses(java.util.Collection)} if you want to
      * override the existing values.
      * </p>
      * 
      * @param addresses
-     *        Contains an array of strings that specify one or more IP addresses or blocks of IP addresses in Classless
-     *        Inter-Domain Routing (CIDR) notation. WAF supports all IPv4 and IPv6 CIDR ranges except for /0. </p>
+     *        Contains an array of strings that specifies zero or more IP addresses or blocks of IP addresses in
+     *        Classless Inter-Domain Routing (CIDR) notation. WAF supports all IPv4 and IPv6 CIDR ranges except for /0.
+     *        </p>
      *        <p>
-     *        Examples:
+     *        Example address strings:
      *        </p>
      *        <ul>
      *        <li>
@@ -582,6 +735,31 @@ public class IPSet implements Serializable, Cloneable, StructuredPojo {
      *        <p>
      *        For more information about CIDR notation, see the Wikipedia entry <a
      *        href="https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing">Classless Inter-Domain Routing</a>.
+     *        </p>
+     *        <p>
+     *        Example JSON <code>Addresses</code> specifications:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        Empty array: <code>"Addresses": []</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Array with one address: <code>"Addresses": ["192.0.2.44/32"]</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Array with three addresses: <code>"Addresses": ["192.0.2.44/32", "192.0.2.0/24", "192.0.0.0/16"]</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        INVALID specification: <code>"Addresses": [""]</code> INVALID
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -597,11 +775,11 @@ public class IPSet implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Contains an array of strings that specify one or more IP addresses or blocks of IP addresses in Classless
+     * Contains an array of strings that specifies zero or more IP addresses or blocks of IP addresses in Classless
      * Inter-Domain Routing (CIDR) notation. WAF supports all IPv4 and IPv6 CIDR ranges except for /0.
      * </p>
      * <p>
-     * Examples:
+     * Example address strings:
      * </p>
      * <ul>
      * <li>
@@ -634,12 +812,38 @@ public class IPSet implements Serializable, Cloneable, StructuredPojo {
      * For more information about CIDR notation, see the Wikipedia entry <a
      * href="https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing">Classless Inter-Domain Routing</a>.
      * </p>
+     * <p>
+     * Example JSON <code>Addresses</code> specifications:
+     * </p>
+     * <ul>
+     * <li>
+     * <p>
+     * Empty array: <code>"Addresses": []</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Array with one address: <code>"Addresses": ["192.0.2.44/32"]</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * Array with three addresses: <code>"Addresses": ["192.0.2.44/32", "192.0.2.0/24", "192.0.0.0/16"]</code>
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * INVALID specification: <code>"Addresses": [""]</code> INVALID
+     * </p>
+     * </li>
+     * </ul>
      * 
      * @param addresses
-     *        Contains an array of strings that specify one or more IP addresses or blocks of IP addresses in Classless
-     *        Inter-Domain Routing (CIDR) notation. WAF supports all IPv4 and IPv6 CIDR ranges except for /0. </p>
+     *        Contains an array of strings that specifies zero or more IP addresses or blocks of IP addresses in
+     *        Classless Inter-Domain Routing (CIDR) notation. WAF supports all IPv4 and IPv6 CIDR ranges except for /0.
+     *        </p>
      *        <p>
-     *        Examples:
+     *        Example address strings:
      *        </p>
      *        <ul>
      *        <li>
@@ -671,6 +875,31 @@ public class IPSet implements Serializable, Cloneable, StructuredPojo {
      *        <p>
      *        For more information about CIDR notation, see the Wikipedia entry <a
      *        href="https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing">Classless Inter-Domain Routing</a>.
+     *        </p>
+     *        <p>
+     *        Example JSON <code>Addresses</code> specifications:
+     *        </p>
+     *        <ul>
+     *        <li>
+     *        <p>
+     *        Empty array: <code>"Addresses": []</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Array with one address: <code>"Addresses": ["192.0.2.44/32"]</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        Array with three addresses: <code>"Addresses": ["192.0.2.44/32", "192.0.2.0/24", "192.0.0.0/16"]</code>
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        INVALID specification: <code>"Addresses": [""]</code> INVALID
+     *        </p>
+     *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

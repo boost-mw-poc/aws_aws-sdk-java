@@ -20,7 +20,7 @@
     "customServiceMetadata" : null,
     "customServiceNameForRequest" : null,
     "customSignerProvider" : null,
-    "deprecatedSuppressions" : [ "ClientConstructors", "ClientMutationMethods", "EnumSetterOverload" ],
+    "deprecatedSuppressions" : [ "EnumSetterOverload", "ClientConstructors", "ClientMutationMethods" ],
     "emitLegacyEnumSetterFor" : null,
     "operationModifiers" : null,
     "operationsWithResponseStreamContentLengthValidation" : null,
@@ -29716,6 +29716,15 @@
       }, {
         "name" : "NODEJS_12",
         "value" : "NODEJS_12"
+      }, {
+        "name" : "NODEJS_14",
+        "value" : "NODEJS_14"
+      }, {
+        "name" : "CORRETTO_8",
+        "value" : "CORRETTO_8"
+      }, {
+        "name" : "CORRETTO_11",
+        "value" : "CORRETTO_11"
       } ],
       "errorCode" : null,
       "fullyQualifiedName" : "com.amazonaws.services.apprunner.enum.Runtime",

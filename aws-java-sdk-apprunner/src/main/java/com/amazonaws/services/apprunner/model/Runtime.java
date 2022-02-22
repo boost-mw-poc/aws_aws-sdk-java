@@ -21,7 +21,10 @@ import javax.annotation.Generated;
 public enum Runtime {
 
     PYTHON_3("PYTHON_3"),
-    NODEJS_12("NODEJS_12");
+    NODEJS_12("NODEJS_12"),
+    NODEJS_14("NODEJS_14"),
+    CORRETTO_8("CORRETTO_8"),
+    CORRETTO_11("CORRETTO_11");
 
     private String value;
 
