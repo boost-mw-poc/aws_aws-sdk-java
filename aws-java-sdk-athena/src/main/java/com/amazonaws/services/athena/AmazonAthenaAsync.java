@@ -1181,6 +1181,37 @@ public interface AmazonAthenaAsync extends AmazonAthena {
 
     /**
      * <p>
+     * Updates a <a>NamedQuery</a> object. The database or workgroup cannot be updated.
+     * </p>
+     * 
+     * @param updateNamedQueryRequest
+     * @return A Java Future containing the result of the UpdateNamedQuery operation returned by the service.
+     * @sample AmazonAthenaAsync.UpdateNamedQuery
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/athena-2017-05-18/UpdateNamedQuery" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateNamedQueryResult> updateNamedQueryAsync(UpdateNamedQueryRequest updateNamedQueryRequest);
+
+    /**
+     * <p>
+     * Updates a <a>NamedQuery</a> object. The database or workgroup cannot be updated.
+     * </p>
+     * 
+     * @param updateNamedQueryRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateNamedQuery operation returned by the service.
+     * @sample AmazonAthenaAsyncHandler.UpdateNamedQuery
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/athena-2017-05-18/UpdateNamedQuery" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateNamedQueryResult> updateNamedQueryAsync(UpdateNamedQueryRequest updateNamedQueryRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateNamedQueryRequest, UpdateNamedQueryResult> asyncHandler);
+
+    /**
+     * <p>
      * Updates a prepared statement.
      * </p>
      * 

@@ -1077,7 +1077,7 @@ public class CreateBranchRequest extends com.amazonaws.AmazonWebServiceRequest i
         if (getTags() != null)
             sb.append("Tags: ").append(getTags()).append(",");
         if (getBuildSpec() != null)
-            sb.append("BuildSpec: ").append(getBuildSpec()).append(",");
+            sb.append("BuildSpec: ").append("***Sensitive Data Redacted***").append(",");
         if (getTtl() != null)
             sb.append("Ttl: ").append(getTtl()).append(",");
         if (getDisplayName() != null)

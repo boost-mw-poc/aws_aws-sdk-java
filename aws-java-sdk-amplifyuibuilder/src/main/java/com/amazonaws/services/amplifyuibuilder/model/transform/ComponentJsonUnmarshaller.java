@@ -81,6 +81,11 @@ public class ComponentJsonUnmarshaller implements Unmarshaller<Component, JsonUn
                     context.nextToken();
                     component.setEnvironmentName(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("events", targetDepth)) {
+                    context.nextToken();
+                    component.setEvents(new MapUnmarshaller<String, ComponentEvent>(context.getUnmarshaller(String.class), ComponentEventJsonUnmarshaller
+                            .getInstance()).unmarshall(context));
+                }
                 if (context.testExpression("id", targetDepth)) {
                     context.nextToken();
                     component.setId(context.getUnmarshaller(String.class).unmarshall(context));
@@ -103,6 +108,10 @@ public class ComponentJsonUnmarshaller implements Unmarshaller<Component, JsonUn
                     context.nextToken();
                     component.setProperties(new MapUnmarshaller<String, ComponentProperty>(context.getUnmarshaller(String.class),
                             ComponentPropertyJsonUnmarshaller.getInstance()).unmarshall(context));
+                }
+                if (context.testExpression("schemaVersion", targetDepth)) {
+                    context.nextToken();
+                    component.setSchemaVersion(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("sourceId", targetDepth)) {
                     context.nextToken();

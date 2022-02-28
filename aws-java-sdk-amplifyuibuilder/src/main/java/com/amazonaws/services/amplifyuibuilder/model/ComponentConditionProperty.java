@@ -49,6 +49,12 @@ public class ComponentConditionProperty implements Serializable, Cloneable, Stru
     private String operand;
     /**
      * <p>
+     * The type of the property to evaluate.
+     * </p>
+     */
+    private String operandType;
+    /**
+     * <p>
      * The operator to use to perform the evaluation, such as <code>eq</code> to represent equals.
      * </p>
      */
@@ -183,6 +189,46 @@ public class ComponentConditionProperty implements Serializable, Cloneable, Stru
 
     public ComponentConditionProperty withOperand(String operand) {
         setOperand(operand);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The type of the property to evaluate.
+     * </p>
+     * 
+     * @param operandType
+     *        The type of the property to evaluate.
+     */
+
+    public void setOperandType(String operandType) {
+        this.operandType = operandType;
+    }
+
+    /**
+     * <p>
+     * The type of the property to evaluate.
+     * </p>
+     * 
+     * @return The type of the property to evaluate.
+     */
+
+    public String getOperandType() {
+        return this.operandType;
+    }
+
+    /**
+     * <p>
+     * The type of the property to evaluate.
+     * </p>
+     * 
+     * @param operandType
+     *        The type of the property to evaluate.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ComponentConditionProperty withOperandType(String operandType) {
+        setOperandType(operandType);
         return this;
     }
 
@@ -324,6 +370,8 @@ public class ComponentConditionProperty implements Serializable, Cloneable, Stru
             sb.append("Field: ").append(getField()).append(",");
         if (getOperand() != null)
             sb.append("Operand: ").append(getOperand()).append(",");
+        if (getOperandType() != null)
+            sb.append("OperandType: ").append(getOperandType()).append(",");
         if (getOperator() != null)
             sb.append("Operator: ").append(getOperator()).append(",");
         if (getProperty() != null)
@@ -356,6 +404,10 @@ public class ComponentConditionProperty implements Serializable, Cloneable, Stru
             return false;
         if (other.getOperand() != null && other.getOperand().equals(this.getOperand()) == false)
             return false;
+        if (other.getOperandType() == null ^ this.getOperandType() == null)
+            return false;
+        if (other.getOperandType() != null && other.getOperandType().equals(this.getOperandType()) == false)
+            return false;
         if (other.getOperator() == null ^ this.getOperator() == null)
             return false;
         if (other.getOperator() != null && other.getOperator().equals(this.getOperator()) == false)
@@ -379,6 +431,7 @@ public class ComponentConditionProperty implements Serializable, Cloneable, Stru
         hashCode = prime * hashCode + ((getElse() == null) ? 0 : getElse().hashCode());
         hashCode = prime * hashCode + ((getField() == null) ? 0 : getField().hashCode());
         hashCode = prime * hashCode + ((getOperand() == null) ? 0 : getOperand().hashCode());
+        hashCode = prime * hashCode + ((getOperandType() == null) ? 0 : getOperandType().hashCode());
         hashCode = prime * hashCode + ((getOperator() == null) ? 0 : getOperator().hashCode());
         hashCode = prime * hashCode + ((getProperty() == null) ? 0 : getProperty().hashCode());
         hashCode = prime * hashCode + ((getThen() == null) ? 0 : getThen().hashCode());

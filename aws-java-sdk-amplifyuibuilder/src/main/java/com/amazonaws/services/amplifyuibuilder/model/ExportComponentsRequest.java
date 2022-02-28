@@ -37,6 +37,12 @@ public class ExportComponentsRequest extends com.amazonaws.AmazonWebServiceReque
      * </p>
      */
     private String environmentName;
+    /**
+     * <p>
+     * The token to request the next page of results.
+     * </p>
+     */
+    private String nextToken;
 
     /**
      * <p>
@@ -119,6 +125,46 @@ public class ExportComponentsRequest extends com.amazonaws.AmazonWebServiceReque
     }
 
     /**
+     * <p>
+     * The token to request the next page of results.
+     * </p>
+     * 
+     * @param nextToken
+     *        The token to request the next page of results.
+     */
+
+    public void setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+    }
+
+    /**
+     * <p>
+     * The token to request the next page of results.
+     * </p>
+     * 
+     * @return The token to request the next page of results.
+     */
+
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    /**
+     * <p>
+     * The token to request the next page of results.
+     * </p>
+     * 
+     * @param nextToken
+     *        The token to request the next page of results.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ExportComponentsRequest withNextToken(String nextToken) {
+        setNextToken(nextToken);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -133,7 +179,9 @@ public class ExportComponentsRequest extends com.amazonaws.AmazonWebServiceReque
         if (getAppId() != null)
             sb.append("AppId: ").append(getAppId()).append(",");
         if (getEnvironmentName() != null)
-            sb.append("EnvironmentName: ").append(getEnvironmentName());
+            sb.append("EnvironmentName: ").append(getEnvironmentName()).append(",");
+        if (getNextToken() != null)
+            sb.append("NextToken: ").append(getNextToken());
         sb.append("}");
         return sb.toString();
     }
@@ -156,6 +204,10 @@ public class ExportComponentsRequest extends com.amazonaws.AmazonWebServiceReque
             return false;
         if (other.getEnvironmentName() != null && other.getEnvironmentName().equals(this.getEnvironmentName()) == false)
             return false;
+        if (other.getNextToken() == null ^ this.getNextToken() == null)
+            return false;
+        if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
+            return false;
         return true;
     }
 
@@ -166,6 +218,7 @@ public class ExportComponentsRequest extends com.amazonaws.AmazonWebServiceReque
 
         hashCode = prime * hashCode + ((getAppId() == null) ? 0 : getAppId().hashCode());
         hashCode = prime * hashCode + ((getEnvironmentName() == null) ? 0 : getEnvironmentName().hashCode());
+        hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
         return hashCode;
     }
 

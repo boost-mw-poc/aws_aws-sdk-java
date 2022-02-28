@@ -2417,12 +2417,12 @@
         "c2jName" : "repository",
         "c2jShape" : "Repository",
         "deprecated" : false,
-        "documentation" : "<p> The repository for the Amplify app. </p>",
+        "documentation" : "<p> The Git repository for the Amplify app. </p>",
         "endpointDiscoveryId" : false,
         "enumType" : null,
-        "fluentSetterDocumentation" : "/**<p> The repository for the Amplify app. </p>\n@param repository The repository for the Amplify app.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "fluentSetterDocumentation" : "/**<p> The Git repository for the Amplify app. </p>\n@param repository The Git repository for the Amplify app.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "fluentSetterMethodName" : "withRepository",
-        "getterDocumentation" : "/**<p> The repository for the Amplify app. </p>\n@return The repository for the Amplify app.*/",
+        "getterDocumentation" : "/**<p> The Git repository for the Amplify app. </p>\n@return The Git repository for the Amplify app.*/",
         "getterMethodName" : "getRepository",
         "getterModel" : {
           "returnType" : "String",
@@ -2456,7 +2456,7 @@
         "marshallingType" : "STRING",
         "name" : "Repository",
         "sensitive" : false,
-        "setterDocumentation" : "/**<p> The repository for the Amplify app. </p>\n@param repository The repository for the Amplify app.*/",
+        "setterDocumentation" : "/**<p> The Git repository for the Amplify app. </p>\n@param repository The Git repository for the Amplify app.*/",
         "setterMethodName" : "setRepository",
         "setterModel" : {
           "timestampFormat" : null,
@@ -2471,13 +2471,13 @@
         "shouldFullyQualify" : false,
         "simple" : true,
         "unmarshallingType" : null,
-        "varargSetterDocumentation" : "/**<p> The repository for the Amplify app. </p>\n@param repository The repository for the Amplify app.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+        "varargSetterDocumentation" : "/**<p> The Git repository for the Amplify app. </p>\n@param repository The Git repository for the Amplify app.\n@return Returns a reference to this object so that method calls can be chained together.*/",
         "variable" : {
           "timestampFormat" : null,
           "variableDeclarationType" : "String",
           "variableName" : "repository",
           "variableType" : "String",
-          "documentation" : "<p> The repository for the Amplify app. </p>",
+          "documentation" : "<p> The Git repository for the Amplify app. </p>",
           "simpleType" : "String",
           "variableSetterType" : "String"
         },
@@ -3520,7 +3520,7 @@
         "marshallingTargetClass" : "String",
         "marshallingType" : "STRING",
         "name" : "BuildSpec",
-        "sensitive" : false,
+        "sensitive" : true,
         "setterDocumentation" : "/**<p> Describes the content of the build specification (build spec) for the Amplify app. </p>\n@param buildSpec Describes the content of the build specification (build spec) for the Amplify app.*/",
         "setterMethodName" : "setBuildSpec",
         "setterModel" : {
@@ -3905,6 +3905,75 @@
           "documentation" : "<p> Describes the automated branch creation configuration for the Amplify app. </p>",
           "simpleType" : "AutoBranchCreationConfig",
           "variableSetterType" : "AutoBranchCreationConfig"
+        },
+        "xmlNameSpaceUri" : null
+      }, {
+        "c2jName" : "repositoryCloneMethod",
+        "c2jShape" : "RepositoryCloneMethod",
+        "deprecated" : false,
+        "documentation" : "<p>The authentication protocol to use to access the Git repository for an Amplify app. For a GitHub repository, specify <code>TOKEN</code>. For an Amazon Web Services CodeCommit repository, specify <code>SIGV4</code>. For GitLab and Bitbucket repositories, specify <code>SSH</code>.</p>",
+        "endpointDiscoveryId" : false,
+        "enumType" : "RepositoryCloneMethod",
+        "fluentSetterDocumentation" : "/**<p>The authentication protocol to use to access the Git repository for an Amplify app. For a GitHub repository, specify <code>TOKEN</code>. For an Amazon Web Services CodeCommit repository, specify <code>SIGV4</code>. For GitLab and Bitbucket repositories, specify <code>SSH</code>.</p>\n@param repositoryCloneMethod The authentication protocol to use to access the Git repository for an Amplify app. For a GitHub repository, specify <code>TOKEN</code>. For an Amazon Web Services CodeCommit repository, specify <code>SIGV4</code>. For GitLab and Bitbucket repositories, specify <code>SSH</code>.\n@return Returns a reference to this object so that method calls can be chained together.\n@see RepositoryCloneMethod*/",
+        "fluentSetterMethodName" : "withRepositoryCloneMethod",
+        "getterDocumentation" : "/**<p>The authentication protocol to use to access the Git repository for an Amplify app. For a GitHub repository, specify <code>TOKEN</code>. For an Amazon Web Services CodeCommit repository, specify <code>SIGV4</code>. For GitLab and Bitbucket repositories, specify <code>SSH</code>.</p>\n@return The authentication protocol to use to access the Git repository for an Amplify app. For a GitHub repository, specify <code>TOKEN</code>. For an Amazon Web Services CodeCommit repository, specify <code>SIGV4</code>. For GitLab and Bitbucket repositories, specify <code>SSH</code>.\n@see RepositoryCloneMethod*/",
+        "getterMethodName" : "getRepositoryCloneMethod",
+        "getterModel" : {
+          "returnType" : "String",
+          "documentation" : null
+        },
+        "http" : {
+          "additionalMarshallingPath" : null,
+          "additionalUnmarshallingPath" : null,
+          "flattened" : false,
+          "greedy" : false,
+          "header" : false,
+          "isPayload" : false,
+          "isStreaming" : false,
+          "location" : null,
+          "marshallLocation" : "PAYLOAD",
+          "marshallLocationName" : "repositoryCloneMethod",
+          "queryString" : false,
+          "requiresLength" : false,
+          "statusCode" : false,
+          "unmarshallLocationName" : "repositoryCloneMethod",
+          "uri" : false
+        },
+        "idempotencyToken" : false,
+        "isBinary" : false,
+        "jsonValue" : false,
+        "list" : false,
+        "listModel" : null,
+        "map" : false,
+        "mapModel" : null,
+        "marshallingTargetClass" : "String",
+        "marshallingType" : "STRING",
+        "name" : "RepositoryCloneMethod",
+        "sensitive" : false,
+        "setterDocumentation" : "/**<p>The authentication protocol to use to access the Git repository for an Amplify app. For a GitHub repository, specify <code>TOKEN</code>. For an Amazon Web Services CodeCommit repository, specify <code>SIGV4</code>. For GitLab and Bitbucket repositories, specify <code>SSH</code>.</p>\n@param repositoryCloneMethod The authentication protocol to use to access the Git repository for an Amplify app. For a GitHub repository, specify <code>TOKEN</code>. For an Amazon Web Services CodeCommit repository, specify <code>SIGV4</code>. For GitLab and Bitbucket repositories, specify <code>SSH</code>.\n@see RepositoryCloneMethod*/",
+        "setterMethodName" : "setRepositoryCloneMethod",
+        "setterModel" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "String",
+          "variableName" : "repositoryCloneMethod",
+          "variableType" : "String",
+          "documentation" : "",
+          "simpleType" : "String",
+          "variableSetterType" : "String"
+        },
+        "shouldEmitLegacyEnumSetter" : false,
+        "shouldFullyQualify" : false,
+        "simple" : true,
+        "unmarshallingType" : null,
+        "varargSetterDocumentation" : "/**<p>The authentication protocol to use to access the Git repository for an Amplify app. For a GitHub repository, specify <code>TOKEN</code>. For an Amazon Web Services CodeCommit repository, specify <code>SIGV4</code>. For GitLab and Bitbucket repositories, specify <code>SSH</code>.</p>\n@param repositoryCloneMethod The authentication protocol to use to access the Git repository for an Amplify app. For a GitHub repository, specify <code>TOKEN</code>. For an Amazon Web Services CodeCommit repository, specify <code>SIGV4</code>. For GitLab and Bitbucket repositories, specify <code>SSH</code>.\n@return Returns a reference to this object so that method calls can be chained together.\n@see RepositoryCloneMethod*/",
+        "variable" : {
+          "timestampFormat" : null,
+          "variableDeclarationType" : "String",
+          "variableName" : "repositoryCloneMethod",
+          "variableType" : "String",
+          "documentation" : "<p>The authentication protocol to use to access the Git repository for an Amplify app. For a GitHub repository, specify <code>TOKEN</code>. For an Amazon Web Services CodeCommit repository, specify <code>SIGV4</code>. For GitLab and Bitbucket repositories, specify <code>SSH</code>.</p>",
+          "simpleType" : "String",
+          "variableSetterType" : "String"
         },
         "xmlNameSpaceUri" : null
       } ],
@@ -4385,7 +4454,7 @@
           "marshallingTargetClass" : "String",
           "marshallingType" : "STRING",
           "name" : "BuildSpec",
-          "sensitive" : false,
+          "sensitive" : true,
           "setterDocumentation" : "/**<p> Describes the content of the build specification (build spec) for the Amplify app. </p>\n@param buildSpec Describes the content of the build specification (build spec) for the Amplify app.*/",
           "setterMethodName" : "setBuildSpec",
           "setterModel" : {
@@ -5565,12 +5634,12 @@
           "c2jName" : "repository",
           "c2jShape" : "Repository",
           "deprecated" : false,
-          "documentation" : "<p> The repository for the Amplify app. </p>",
+          "documentation" : "<p> The Git repository for the Amplify app. </p>",
           "endpointDiscoveryId" : false,
           "enumType" : null,
-          "fluentSetterDocumentation" : "/**<p> The repository for the Amplify app. </p>\n@param repository The repository for the Amplify app.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "fluentSetterDocumentation" : "/**<p> The Git repository for the Amplify app. </p>\n@param repository The Git repository for the Amplify app.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "fluentSetterMethodName" : "withRepository",
-          "getterDocumentation" : "/**<p> The repository for the Amplify app. </p>\n@return The repository for the Amplify app.*/",
+          "getterDocumentation" : "/**<p> The Git repository for the Amplify app. </p>\n@return The Git repository for the Amplify app.*/",
           "getterMethodName" : "getRepository",
           "getterModel" : {
             "returnType" : "String",
@@ -5604,7 +5673,7 @@
           "marshallingType" : "STRING",
           "name" : "Repository",
           "sensitive" : false,
-          "setterDocumentation" : "/**<p> The repository for the Amplify app. </p>\n@param repository The repository for the Amplify app.*/",
+          "setterDocumentation" : "/**<p> The Git repository for the Amplify app. </p>\n@param repository The Git repository for the Amplify app.*/",
           "setterMethodName" : "setRepository",
           "setterModel" : {
             "timestampFormat" : null,
@@ -5619,13 +5688,83 @@
           "shouldFullyQualify" : false,
           "simple" : true,
           "unmarshallingType" : null,
-          "varargSetterDocumentation" : "/**<p> The repository for the Amplify app. </p>\n@param repository The repository for the Amplify app.\n@return Returns a reference to this object so that method calls can be chained together.*/",
+          "varargSetterDocumentation" : "/**<p> The Git repository for the Amplify app. </p>\n@param repository The Git repository for the Amplify app.\n@return Returns a reference to this object so that method calls can be chained together.*/",
           "variable" : {
             "timestampFormat" : null,
             "variableDeclarationType" : "String",
             "variableName" : "repository",
             "variableType" : "String",
-            "documentation" : "<p> The repository for the Amplify app. </p>",
+            "documentation" : "<p> The Git repository for the Amplify app. </p>",
+            "simpleType" : "String",
+            "variableSetterType" : "String"
+          },
+          "xmlNameSpaceUri" : null
+        },
+        "RepositoryCloneMethod" : {
+          "c2jName" : "repositoryCloneMethod",
+          "c2jShape" : "RepositoryCloneMethod",
+          "deprecated" : false,
+          "documentation" : "<p>The authentication protocol to use to access the Git repository for an Amplify app. For a GitHub repository, specify <code>TOKEN</code>. For an Amazon Web Services CodeCommit repository, specify <code>SIGV4</code>. For GitLab and Bitbucket repositories, specify <code>SSH</code>.</p>",
+          "endpointDiscoveryId" : false,
+          "enumType" : "RepositoryCloneMethod",
+          "fluentSetterDocumentation" : "/**<p>The authentication protocol to use to access the Git repository for an Amplify app. For a GitHub repository, specify <code>TOKEN</code>. For an Amazon Web Services CodeCommit repository, specify <code>SIGV4</code>. For GitLab and Bitbucket repositories, specify <code>SSH</code>.</p>\n@param repositoryCloneMethod The authentication protocol to use to access the Git repository for an Amplify app. For a GitHub repository, specify <code>TOKEN</code>. For an Amazon Web Services CodeCommit repository, specify <code>SIGV4</code>. For GitLab and Bitbucket repositories, specify <code>SSH</code>.\n@return Returns a reference to this object so that method calls can be chained together.\n@see RepositoryCloneMethod*/",
+          "fluentSetterMethodName" : "withRepositoryCloneMethod",
+          "getterDocumentation" : "/**<p>The authentication protocol to use to access the Git repository for an Amplify app. For a GitHub repository, specify <code>TOKEN</code>. For an Amazon Web Services CodeCommit repository, specify <code>SIGV4</code>. For GitLab and Bitbucket repositories, specify <code>SSH</code>.</p>\n@return The authentication protocol to use to access the Git repository for an Amplify app. For a GitHub repository, specify <code>TOKEN</code>. For an Amazon Web Services CodeCommit repository, specify <code>SIGV4</code>. For GitLab and Bitbucket repositories, specify <code>SSH</code>.\n@see RepositoryCloneMethod*/",
+          "getterMethodName" : "getRepositoryCloneMethod",
+          "getterModel" : {
+            "returnType" : "String",
+            "documentation" : null
+          },
+          "http" : {
+            "additionalMarshallingPath" : null,
+            "additionalUnmarshallingPath" : null,
+            "flattened" : false,
+            "greedy" : false,
+            "header" : false,
+            "isPayload" : false,
+            "isStreaming" : false,
+            "location" : null,
+            "marshallLocation" : "PAYLOAD",
+            "marshallLocationName" : "repositoryCloneMethod",
+            "queryString" : false,
+            "requiresLength" : false,
+            "statusCode" : false,
+            "unmarshallLocationName" : "repositoryCloneMethod",
+            "uri" : false
+          },
+          "idempotencyToken" : false,
+          "isBinary" : false,
+          "jsonValue" : false,
+          "list" : false,
+          "listModel" : null,
+          "map" : false,
+          "mapModel" : null,
+          "marshallingTargetClass" : "String",
+          "marshallingType" : "STRING",
+          "name" : "RepositoryCloneMethod",
+          "sensitive" : false,
+          "setterDocumentation" : "/**<p>The authentication protocol to use to access the Git repository for an Amplify app. For a GitHub repository, specify <code>TOKEN</code>. For an Amazon Web Services CodeCommit repository, specify <code>SIGV4</code>. For GitLab and Bitbucket repositories, specify <code>SSH</code>.</p>\n@param repositoryCloneMethod The authentication protocol to use to access the Git repository for an Amplify app. For a GitHub repository, specify <code>TOKEN</code>. For an Amazon Web Services CodeCommit repository, specify <code>SIGV4</code>. For GitLab and Bitbucket repositories, specify <code>SSH</code>.\n@see RepositoryCloneMethod*/",
+          "setterMethodName" : "setRepositoryCloneMethod",
+          "setterModel" : {
+            "timestampFormat" : null,
+            "variableDeclarationType" : "String",
+            "variableName" : "repositoryCloneMethod",
+            "variableType" : "String",
+            "documentation" : "",
+            "simpleType" : "String",
+            "variableSetterType" : "String"
+          },
+          "shouldEmitLegacyEnumSetter" : false,
+          "shouldFullyQualify" : false,
+          "simple" : true,
+          "unmarshallingType" : null,
+          "varargSetterDocumentation" : "/**<p>The authentication protocol to use to access the Git repository for an Amplify app. For a GitHub repository, specify <code>TOKEN</code>. For an Amazon Web Services CodeCommit repository, specify <code>SIGV4</code>. For GitLab and Bitbucket repositories, specify <code>SSH</code>.</p>\n@param repositoryCloneMethod The authentication protocol to use to access the Git repository for an Amplify app. For a GitHub repository, specify <code>TOKEN</code>. For an Amazon Web Services CodeCommit repository, specify <code>SIGV4</code>. For GitLab and Bitbucket repositories, specify <code>SSH</code>.\n@return Returns a reference to this object so that method calls can be chained together.\n@see RepositoryCloneMethod*/",
+          "variable" : {
+            "timestampFormat" : null,
+            "variableDeclarationType" : "String",
+            "variableName" : "repositoryCloneMethod",
+            "variableType" : "String",
+            "documentation" : "<p>The authentication protocol to use to access the Git repository for an Amplify app. For a GitHub repository, specify <code>TOKEN</code>. For an Amazon Web Services CodeCommit repository, specify <code>SIGV4</code>. For GitLab and Bitbucket repositories, specify <code>SSH</code>.</p>",
             "simpleType" : "String",
             "variableSetterType" : "String"
           },
@@ -6830,7 +6969,7 @@
         "marshallingTargetClass" : "String",
         "marshallingType" : "STRING",
         "name" : "BuildSpec",
-        "sensitive" : false,
+        "sensitive" : true,
         "setterDocumentation" : "/**<p> The build specification (build spec) for the autocreated branch. </p>\n@param buildSpec The build specification (build spec) for the autocreated branch.*/",
         "setterMethodName" : "setBuildSpec",
         "setterModel" : {
@@ -7109,7 +7248,7 @@
           "marshallingTargetClass" : "String",
           "marshallingType" : "STRING",
           "name" : "BuildSpec",
-          "sensitive" : false,
+          "sensitive" : true,
           "setterDocumentation" : "/**<p> The build specification (build spec) for the autocreated branch. </p>\n@param buildSpec The build specification (build spec) for the autocreated branch.*/",
           "setterMethodName" : "setBuildSpec",
           "setterModel" : {
@@ -10349,7 +10488,7 @@
         "marshallingTargetClass" : "String",
         "marshallingType" : "STRING",
         "name" : "BuildSpec",
-        "sensitive" : false,
+        "sensitive" : true,
         "setterDocumentation" : "/**<p> The build specification (build spec) content for the branch of an Amplify app. </p>\n@param buildSpec The build specification (build spec) content for the branch of an Amplify app.*/",
         "setterMethodName" : "setBuildSpec",
         "setterModel" : {
@@ -11491,7 +11630,7 @@
           "marshallingTargetClass" : "String",
           "marshallingType" : "STRING",
           "name" : "BuildSpec",
-          "sensitive" : false,
+          "sensitive" : true,
           "setterDocumentation" : "/**<p> The build specification (build spec) content for the branch of an Amplify app. </p>\n@param buildSpec The build specification (build spec) content for the branch of an Amplify app.*/",
           "setterMethodName" : "setBuildSpec",
           "setterModel" : {
@@ -14481,7 +14620,7 @@
         "marshallingTargetClass" : "String",
         "marshallingType" : "STRING",
         "name" : "BuildSpec",
-        "sensitive" : false,
+        "sensitive" : true,
         "setterDocumentation" : "/**<p> The build specification (build spec) for an Amplify app. </p>\n@param buildSpec The build specification (build spec) for an Amplify app.*/",
         "setterMethodName" : "setBuildSpec",
         "setterModel" : {
@@ -15276,7 +15415,7 @@
           "marshallingTargetClass" : "String",
           "marshallingType" : "STRING",
           "name" : "BuildSpec",
-          "sensitive" : false,
+          "sensitive" : true,
           "setterDocumentation" : "/**<p> The build specification (build spec) for an Amplify app. </p>\n@param buildSpec The build specification (build spec) for an Amplify app.*/",
           "setterMethodName" : "setBuildSpec",
           "setterModel" : {
@@ -18594,7 +18733,7 @@
         "marshallingTargetClass" : "String",
         "marshallingType" : "STRING",
         "name" : "BuildSpec",
-        "sensitive" : false,
+        "sensitive" : true,
         "setterDocumentation" : "/**<p> The build specification (build spec) for the branch. </p>\n@param buildSpec The build specification (build spec) for the branch.*/",
         "setterMethodName" : "setBuildSpec",
         "setterModel" : {
@@ -19290,7 +19429,7 @@
           "marshallingTargetClass" : "String",
           "marshallingType" : "STRING",
           "name" : "BuildSpec",
-          "sensitive" : false,
+          "sensitive" : true,
           "setterDocumentation" : "/**<p> The build specification (build spec) for the branch. </p>\n@param buildSpec The build specification (build spec) for the branch.*/",
           "setterMethodName" : "setBuildSpec",
           "setterModel" : {
@@ -43114,6 +43253,9 @@
       "enums" : [ {
         "name" : "WEB",
         "value" : "WEB"
+      }, {
+        "name" : "WEB_DYNAMIC",
+        "value" : "WEB_DYNAMIC"
       } ],
       "errorCode" : null,
       "fullyQualifiedName" : "com.amazonaws.services.amplify.enum.Platform",
@@ -43745,6 +43887,59 @@
         "documentation" : null,
         "simpleType" : "ProductionBranch",
         "variableSetterType" : "ProductionBranch"
+      },
+      "wrapper" : false
+    },
+    "RepositoryCloneMethod" : {
+      "c2jName" : "RepositoryCloneMethod",
+      "customization" : {
+        "artificialResultWrapper" : null,
+        "skipGeneratingMarshaller" : false,
+        "skipGeneratingModelClass" : false,
+        "skipGeneratingUnmarshaller" : false
+      },
+      "deprecated" : false,
+      "documentation" : "",
+      "endpointDiscoveryMembers" : null,
+      "enums" : [ {
+        "name" : "SSH",
+        "value" : "SSH"
+      }, {
+        "name" : "TOKEN",
+        "value" : "TOKEN"
+      }, {
+        "name" : "SIGV4",
+        "value" : "SIGV4"
+      } ],
+      "errorCode" : null,
+      "fullyQualifiedName" : "com.amazonaws.services.amplify.enum.RepositoryCloneMethod",
+      "hasHeaderMember" : false,
+      "hasPayloadMember" : false,
+      "hasRequiresLengthMember" : false,
+      "hasStatusCodeMember" : false,
+      "hasStreamingMember" : false,
+      "marshaller" : null,
+      "members" : null,
+      "membersAsMap" : { },
+      "packageName" : "com.amazonaws.services.amplify.enum",
+      "requestSignerAware" : false,
+      "requestSignerClassFqcn" : null,
+      "required" : [ ],
+      "shapeName" : "RepositoryCloneMethod",
+      "signerAware" : false,
+      "signerType" : null,
+      "unmarshaller" : {
+        "flattened" : false,
+        "resultWrapper" : null
+      },
+      "variable" : {
+        "timestampFormat" : null,
+        "variableDeclarationType" : "RepositoryCloneMethod",
+        "variableName" : "repositoryCloneMethod",
+        "variableType" : "RepositoryCloneMethod",
+        "documentation" : null,
+        "simpleType" : "RepositoryCloneMethod",
+        "variableSetterType" : "RepositoryCloneMethod"
       },
       "wrapper" : false
     },
@@ -51414,7 +51609,7 @@
         "marshallingTargetClass" : "String",
         "marshallingType" : "STRING",
         "name" : "BuildSpec",
-        "sensitive" : false,
+        "sensitive" : true,
         "setterDocumentation" : "/**<p> The build specification (build spec) for an Amplify app. </p>\n@param buildSpec The build specification (build spec) for an Amplify app.*/",
         "setterMethodName" : "setBuildSpec",
         "setterModel" : {
@@ -52486,7 +52681,7 @@
           "marshallingTargetClass" : "String",
           "marshallingType" : "STRING",
           "name" : "BuildSpec",
-          "sensitive" : false,
+          "sensitive" : true,
           "setterDocumentation" : "/**<p> The build specification (build spec) for an Amplify app. </p>\n@param buildSpec The build specification (build spec) for an Amplify app.*/",
           "setterMethodName" : "setBuildSpec",
           "setterModel" : {
@@ -54708,7 +54903,7 @@
         "marshallingTargetClass" : "String",
         "marshallingType" : "STRING",
         "name" : "BuildSpec",
-        "sensitive" : false,
+        "sensitive" : true,
         "setterDocumentation" : "/**<p> The build specification (build spec) for the branch. </p>\n@param buildSpec The build specification (build spec) for the branch.*/",
         "setterMethodName" : "setBuildSpec",
         "setterModel" : {
@@ -55404,7 +55599,7 @@
           "marshallingTargetClass" : "String",
           "marshallingType" : "STRING",
           "name" : "BuildSpec",
-          "sensitive" : false,
+          "sensitive" : true,
           "setterDocumentation" : "/**<p> The build specification (build spec) for the branch. </p>\n@param buildSpec The build specification (build spec) for the branch.*/",
           "setterMethodName" : "setBuildSpec",
           "setterModel" : {
@@ -57763,7 +57958,7 @@
       "packageName" : "com.amazonaws.services.amplify.request",
       "requestSignerAware" : false,
       "requestSignerClassFqcn" : null,
-      "required" : [ "appId", "domainName", "subDomainSettings" ],
+      "required" : [ "appId", "domainName" ],
       "shapeName" : "UpdateDomainAssociationRequest",
       "signerAware" : false,
       "signerType" : null,

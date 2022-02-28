@@ -22789,7 +22789,7 @@
       }, {
         "c2jName" : "name",
         "c2jShape" : "Name",
-        "deprecated" : false,
+        "deprecated" : true,
         "documentation" : "<p>The new name of the application. The name must be unique in the region in which you are updating the application.</p>",
         "endpointDiscoveryId" : false,
         "enumType" : null,
@@ -23069,7 +23069,7 @@
         "Name" : {
           "c2jName" : "name",
           "c2jShape" : "Name",
-          "deprecated" : false,
+          "deprecated" : true,
           "documentation" : "<p>The new name of the application. The name must be unique in the region in which you are updating the application.</p>",
           "endpointDiscoveryId" : false,
           "enumType" : null,
@@ -23439,7 +23439,7 @@
       }, {
         "c2jName" : "name",
         "c2jShape" : "Name",
-        "deprecated" : false,
+        "deprecated" : true,
         "documentation" : "<p>The new name of the attribute group. The name must be unique in the region in which you are updating the attribute group.</p>",
         "endpointDiscoveryId" : false,
         "enumType" : null,
@@ -23858,7 +23858,7 @@
         "Name" : {
           "c2jName" : "name",
           "c2jShape" : "Name",
-          "deprecated" : false,
+          "deprecated" : true,
           "documentation" : "<p>The new name of the attribute group. The name must be unique in the region in which you are updating the attribute group.</p>",
           "endpointDiscoveryId" : false,
           "enumType" : null,

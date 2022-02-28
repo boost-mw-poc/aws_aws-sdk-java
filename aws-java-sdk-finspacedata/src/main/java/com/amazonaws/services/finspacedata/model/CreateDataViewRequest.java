@@ -58,7 +58,7 @@ public class CreateDataViewRequest extends com.amazonaws.AmazonWebServiceRequest
     private java.util.List<String> partitionColumns;
     /**
      * <p>
-     * Beginning time to use for the Dataview. The value is determined as Epoch time in milliseconds. For example, the
+     * Beginning time to use for the Dataview. The value is determined as epoch time in milliseconds. For example, the
      * value for Monday, November 1, 2021 12:00:00 PM UTC is specified as 1635768000000.
      * </p>
      */
@@ -344,12 +344,12 @@ public class CreateDataViewRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * Beginning time to use for the Dataview. The value is determined as Epoch time in milliseconds. For example, the
+     * Beginning time to use for the Dataview. The value is determined as epoch time in milliseconds. For example, the
      * value for Monday, November 1, 2021 12:00:00 PM UTC is specified as 1635768000000.
      * </p>
      * 
      * @param asOfTimestamp
-     *        Beginning time to use for the Dataview. The value is determined as Epoch time in milliseconds. For
+     *        Beginning time to use for the Dataview. The value is determined as epoch time in milliseconds. For
      *        example, the value for Monday, November 1, 2021 12:00:00 PM UTC is specified as 1635768000000.
      */
 
@@ -359,11 +359,11 @@ public class CreateDataViewRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * Beginning time to use for the Dataview. The value is determined as Epoch time in milliseconds. For example, the
+     * Beginning time to use for the Dataview. The value is determined as epoch time in milliseconds. For example, the
      * value for Monday, November 1, 2021 12:00:00 PM UTC is specified as 1635768000000.
      * </p>
      * 
-     * @return Beginning time to use for the Dataview. The value is determined as Epoch time in milliseconds. For
+     * @return Beginning time to use for the Dataview. The value is determined as epoch time in milliseconds. For
      *         example, the value for Monday, November 1, 2021 12:00:00 PM UTC is specified as 1635768000000.
      */
 
@@ -373,12 +373,12 @@ public class CreateDataViewRequest extends com.amazonaws.AmazonWebServiceRequest
 
     /**
      * <p>
-     * Beginning time to use for the Dataview. The value is determined as Epoch time in milliseconds. For example, the
+     * Beginning time to use for the Dataview. The value is determined as epoch time in milliseconds. For example, the
      * value for Monday, November 1, 2021 12:00:00 PM UTC is specified as 1635768000000.
      * </p>
      * 
      * @param asOfTimestamp
-     *        Beginning time to use for the Dataview. The value is determined as Epoch time in milliseconds. For
+     *        Beginning time to use for the Dataview. The value is determined as epoch time in milliseconds. For
      *        example, the value for Monday, November 1, 2021 12:00:00 PM UTC is specified as 1635768000000.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

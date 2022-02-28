@@ -43,6 +43,8 @@ public class ComponentMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("createdAt").timestampFormat("iso8601").build();
     private static final MarshallingInfo<String> ENVIRONMENTNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("environmentName").build();
+    private static final MarshallingInfo<Map> EVENTS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("events").build();
     private static final MarshallingInfo<String> ID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("id").build();
     private static final MarshallingInfo<java.util.Date> MODIFIEDAT_BINDING = MarshallingInfo.builder(MarshallingType.DATE)
@@ -53,6 +55,8 @@ public class ComponentMarshaller {
             .marshallLocationName("overrides").build();
     private static final MarshallingInfo<Map> PROPERTIES_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("properties").build();
+    private static final MarshallingInfo<String> SCHEMAVERSION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("schemaVersion").build();
     private static final MarshallingInfo<String> SOURCEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("sourceId").build();
     private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
@@ -83,11 +87,13 @@ public class ComponentMarshaller {
             protocolMarshaller.marshall(component.getComponentType(), COMPONENTTYPE_BINDING);
             protocolMarshaller.marshall(component.getCreatedAt(), CREATEDAT_BINDING);
             protocolMarshaller.marshall(component.getEnvironmentName(), ENVIRONMENTNAME_BINDING);
+            protocolMarshaller.marshall(component.getEvents(), EVENTS_BINDING);
             protocolMarshaller.marshall(component.getId(), ID_BINDING);
             protocolMarshaller.marshall(component.getModifiedAt(), MODIFIEDAT_BINDING);
             protocolMarshaller.marshall(component.getName(), NAME_BINDING);
             protocolMarshaller.marshall(component.getOverrides(), OVERRIDES_BINDING);
             protocolMarshaller.marshall(component.getProperties(), PROPERTIES_BINDING);
+            protocolMarshaller.marshall(component.getSchemaVersion(), SCHEMAVERSION_BINDING);
             protocolMarshaller.marshall(component.getSourceId(), SOURCEID_BINDING);
             protocolMarshaller.marshall(component.getTags(), TAGS_BINDING);
             protocolMarshaller.marshall(component.getVariants(), VARIANTS_BINDING);

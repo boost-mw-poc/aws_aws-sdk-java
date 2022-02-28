@@ -20,7 +20,8 @@ import javax.annotation.Generated;
 @Generated("com.amazonaws:aws-java-sdk-code-generator")
 public enum Platform {
 
-    WEB("WEB");
+    WEB("WEB"),
+    WEB_DYNAMIC("WEB_DYNAMIC");
 
     private String value;
 

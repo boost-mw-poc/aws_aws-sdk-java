@@ -36,6 +36,7 @@ public class UpdateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
      * The new name of the application. The name must be unique in the region in which you are updating the application.
      * </p>
      */
+    @Deprecated
     private String name;
     /**
      * <p>
@@ -93,7 +94,7 @@ public class UpdateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
      *        The new name of the application. The name must be unique in the region in which you are updating the
      *        application.
      */
-
+    @Deprecated
     public void setName(String name) {
         this.name = name;
     }
@@ -106,7 +107,7 @@ public class UpdateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
      * @return The new name of the application. The name must be unique in the region in which you are updating the
      *         application.
      */
-
+    @Deprecated
     public String getName() {
         return this.name;
     }
@@ -121,7 +122,7 @@ public class UpdateApplicationRequest extends com.amazonaws.AmazonWebServiceRequ
      *        application.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
-
+    @Deprecated
     public UpdateApplicationRequest withName(String name) {
         setName(name);
         return this;

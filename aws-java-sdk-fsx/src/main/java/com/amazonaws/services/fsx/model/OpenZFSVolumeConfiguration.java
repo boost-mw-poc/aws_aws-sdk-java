@@ -56,19 +56,33 @@ public class OpenZFSVolumeConfiguration implements Serializable, Cloneable, Stru
     private Integer storageCapacityQuotaGiB;
     /**
      * <p>
-     * The method used to compress the data on the volume. Unless a compression type is specified, volumes inherit the
-     * <code>DataCompressionType</code> value of their parent volume.
+     * The record size of an OpenZFS volume, in kibibytes (KiB). Valid values are 4, 8, 16, 32, 64, 128, 256, 512, or
+     * 1024 KiB. The default is 128 KiB. Most workloads should use the default record size. For guidance on when to set
+     * a custom record size, see the <i>Amazon FSx for OpenZFS User Guide</i>.
+     * </p>
+     */
+    private Integer recordSizeKiB;
+    /**
+     * <p>
+     * Specifies the method used to compress the data on the volume. The compression type is <code>NONE</code> by
+     * default.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>NONE</code> - Doesn't compress the data on the volume.
+     * <code>NONE</code> - Doesn't compress the data on the volume. <code>NONE</code> is the default.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>ZSTD</code> - Compresses the data in the volume using the Zstandard (ZSTD) compression algorithm. This
-     * algorithm reduces the amount of space used on your volume and has very little impact on compute resources.
+     * <code>ZSTD</code> - Compresses the data in the volume using the Zstandard (ZSTD) compression algorithm. Compared
+     * to LZ4, Z-Standard provides a better compression ratio to minimize on-disk storage utilization.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>LZ4</code> - Compresses the data in the volume using the LZ4 compression algorithm. Compared to Z-Standard,
+     * LZ4 is less compute-intensive and delivers higher write throughput speeds.
      * </p>
      * </li>
      * </ul>
@@ -283,37 +297,100 @@ public class OpenZFSVolumeConfiguration implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The method used to compress the data on the volume. Unless a compression type is specified, volumes inherit the
-     * <code>DataCompressionType</code> value of their parent volume.
+     * The record size of an OpenZFS volume, in kibibytes (KiB). Valid values are 4, 8, 16, 32, 64, 128, 256, 512, or
+     * 1024 KiB. The default is 128 KiB. Most workloads should use the default record size. For guidance on when to set
+     * a custom record size, see the <i>Amazon FSx for OpenZFS User Guide</i>.
+     * </p>
+     * 
+     * @param recordSizeKiB
+     *        The record size of an OpenZFS volume, in kibibytes (KiB). Valid values are 4, 8, 16, 32, 64, 128, 256,
+     *        512, or 1024 KiB. The default is 128 KiB. Most workloads should use the default record size. For guidance
+     *        on when to set a custom record size, see the <i>Amazon FSx for OpenZFS User Guide</i>.
+     */
+
+    public void setRecordSizeKiB(Integer recordSizeKiB) {
+        this.recordSizeKiB = recordSizeKiB;
+    }
+
+    /**
+     * <p>
+     * The record size of an OpenZFS volume, in kibibytes (KiB). Valid values are 4, 8, 16, 32, 64, 128, 256, 512, or
+     * 1024 KiB. The default is 128 KiB. Most workloads should use the default record size. For guidance on when to set
+     * a custom record size, see the <i>Amazon FSx for OpenZFS User Guide</i>.
+     * </p>
+     * 
+     * @return The record size of an OpenZFS volume, in kibibytes (KiB). Valid values are 4, 8, 16, 32, 64, 128, 256,
+     *         512, or 1024 KiB. The default is 128 KiB. Most workloads should use the default record size. For guidance
+     *         on when to set a custom record size, see the <i>Amazon FSx for OpenZFS User Guide</i>.
+     */
+
+    public Integer getRecordSizeKiB() {
+        return this.recordSizeKiB;
+    }
+
+    /**
+     * <p>
+     * The record size of an OpenZFS volume, in kibibytes (KiB). Valid values are 4, 8, 16, 32, 64, 128, 256, 512, or
+     * 1024 KiB. The default is 128 KiB. Most workloads should use the default record size. For guidance on when to set
+     * a custom record size, see the <i>Amazon FSx for OpenZFS User Guide</i>.
+     * </p>
+     * 
+     * @param recordSizeKiB
+     *        The record size of an OpenZFS volume, in kibibytes (KiB). Valid values are 4, 8, 16, 32, 64, 128, 256,
+     *        512, or 1024 KiB. The default is 128 KiB. Most workloads should use the default record size. For guidance
+     *        on when to set a custom record size, see the <i>Amazon FSx for OpenZFS User Guide</i>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public OpenZFSVolumeConfiguration withRecordSizeKiB(Integer recordSizeKiB) {
+        setRecordSizeKiB(recordSizeKiB);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies the method used to compress the data on the volume. The compression type is <code>NONE</code> by
+     * default.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>NONE</code> - Doesn't compress the data on the volume.
+     * <code>NONE</code> - Doesn't compress the data on the volume. <code>NONE</code> is the default.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>ZSTD</code> - Compresses the data in the volume using the Zstandard (ZSTD) compression algorithm. This
-     * algorithm reduces the amount of space used on your volume and has very little impact on compute resources.
+     * <code>ZSTD</code> - Compresses the data in the volume using the Zstandard (ZSTD) compression algorithm. Compared
+     * to LZ4, Z-Standard provides a better compression ratio to minimize on-disk storage utilization.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>LZ4</code> - Compresses the data in the volume using the LZ4 compression algorithm. Compared to Z-Standard,
+     * LZ4 is less compute-intensive and delivers higher write throughput speeds.
      * </p>
      * </li>
      * </ul>
      * 
      * @param dataCompressionType
-     *        The method used to compress the data on the volume. Unless a compression type is specified, volumes
-     *        inherit the <code>DataCompressionType</code> value of their parent volume.</p>
+     *        Specifies the method used to compress the data on the volume. The compression type is <code>NONE</code> by
+     *        default.</p>
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>NONE</code> - Doesn't compress the data on the volume.
+     *        <code>NONE</code> - Doesn't compress the data on the volume. <code>NONE</code> is the default.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <code>ZSTD</code> - Compresses the data in the volume using the Zstandard (ZSTD) compression algorithm.
-     *        This algorithm reduces the amount of space used on your volume and has very little impact on compute
-     *        resources.
+     *        Compared to LZ4, Z-Standard provides a better compression ratio to minimize on-disk storage utilization.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>LZ4</code> - Compresses the data in the volume using the LZ4 compression algorithm. Compared to
+     *        Z-Standard, LZ4 is less compute-intensive and delivers higher write throughput speeds.
      *        </p>
      *        </li>
      * @see OpenZFSDataCompressionType
@@ -325,36 +402,47 @@ public class OpenZFSVolumeConfiguration implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The method used to compress the data on the volume. Unless a compression type is specified, volumes inherit the
-     * <code>DataCompressionType</code> value of their parent volume.
+     * Specifies the method used to compress the data on the volume. The compression type is <code>NONE</code> by
+     * default.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>NONE</code> - Doesn't compress the data on the volume.
+     * <code>NONE</code> - Doesn't compress the data on the volume. <code>NONE</code> is the default.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>ZSTD</code> - Compresses the data in the volume using the Zstandard (ZSTD) compression algorithm. This
-     * algorithm reduces the amount of space used on your volume and has very little impact on compute resources.
+     * <code>ZSTD</code> - Compresses the data in the volume using the Zstandard (ZSTD) compression algorithm. Compared
+     * to LZ4, Z-Standard provides a better compression ratio to minimize on-disk storage utilization.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>LZ4</code> - Compresses the data in the volume using the LZ4 compression algorithm. Compared to Z-Standard,
+     * LZ4 is less compute-intensive and delivers higher write throughput speeds.
      * </p>
      * </li>
      * </ul>
      * 
-     * @return The method used to compress the data on the volume. Unless a compression type is specified, volumes
-     *         inherit the <code>DataCompressionType</code> value of their parent volume.</p>
+     * @return Specifies the method used to compress the data on the volume. The compression type is <code>NONE</code>
+     *         by default.</p>
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>NONE</code> - Doesn't compress the data on the volume.
+     *         <code>NONE</code> - Doesn't compress the data on the volume. <code>NONE</code> is the default.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
      *         <code>ZSTD</code> - Compresses the data in the volume using the Zstandard (ZSTD) compression algorithm.
-     *         This algorithm reduces the amount of space used on your volume and has very little impact on compute
-     *         resources.
+     *         Compared to LZ4, Z-Standard provides a better compression ratio to minimize on-disk storage utilization.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>LZ4</code> - Compresses the data in the volume using the LZ4 compression algorithm. Compared to
+     *         Z-Standard, LZ4 is less compute-intensive and delivers higher write throughput speeds.
      *         </p>
      *         </li>
      * @see OpenZFSDataCompressionType
@@ -366,37 +454,48 @@ public class OpenZFSVolumeConfiguration implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The method used to compress the data on the volume. Unless a compression type is specified, volumes inherit the
-     * <code>DataCompressionType</code> value of their parent volume.
+     * Specifies the method used to compress the data on the volume. The compression type is <code>NONE</code> by
+     * default.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>NONE</code> - Doesn't compress the data on the volume.
+     * <code>NONE</code> - Doesn't compress the data on the volume. <code>NONE</code> is the default.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>ZSTD</code> - Compresses the data in the volume using the Zstandard (ZSTD) compression algorithm. This
-     * algorithm reduces the amount of space used on your volume and has very little impact on compute resources.
+     * <code>ZSTD</code> - Compresses the data in the volume using the Zstandard (ZSTD) compression algorithm. Compared
+     * to LZ4, Z-Standard provides a better compression ratio to minimize on-disk storage utilization.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>LZ4</code> - Compresses the data in the volume using the LZ4 compression algorithm. Compared to Z-Standard,
+     * LZ4 is less compute-intensive and delivers higher write throughput speeds.
      * </p>
      * </li>
      * </ul>
      * 
      * @param dataCompressionType
-     *        The method used to compress the data on the volume. Unless a compression type is specified, volumes
-     *        inherit the <code>DataCompressionType</code> value of their parent volume.</p>
+     *        Specifies the method used to compress the data on the volume. The compression type is <code>NONE</code> by
+     *        default.</p>
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>NONE</code> - Doesn't compress the data on the volume.
+     *        <code>NONE</code> - Doesn't compress the data on the volume. <code>NONE</code> is the default.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <code>ZSTD</code> - Compresses the data in the volume using the Zstandard (ZSTD) compression algorithm.
-     *        This algorithm reduces the amount of space used on your volume and has very little impact on compute
-     *        resources.
+     *        Compared to LZ4, Z-Standard provides a better compression ratio to minimize on-disk storage utilization.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>LZ4</code> - Compresses the data in the volume using the LZ4 compression algorithm. Compared to
+     *        Z-Standard, LZ4 is less compute-intensive and delivers higher write throughput speeds.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -410,37 +509,48 @@ public class OpenZFSVolumeConfiguration implements Serializable, Cloneable, Stru
 
     /**
      * <p>
-     * The method used to compress the data on the volume. Unless a compression type is specified, volumes inherit the
-     * <code>DataCompressionType</code> value of their parent volume.
+     * Specifies the method used to compress the data on the volume. The compression type is <code>NONE</code> by
+     * default.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>NONE</code> - Doesn't compress the data on the volume.
+     * <code>NONE</code> - Doesn't compress the data on the volume. <code>NONE</code> is the default.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>ZSTD</code> - Compresses the data in the volume using the Zstandard (ZSTD) compression algorithm. This
-     * algorithm reduces the amount of space used on your volume and has very little impact on compute resources.
+     * <code>ZSTD</code> - Compresses the data in the volume using the Zstandard (ZSTD) compression algorithm. Compared
+     * to LZ4, Z-Standard provides a better compression ratio to minimize on-disk storage utilization.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>LZ4</code> - Compresses the data in the volume using the LZ4 compression algorithm. Compared to Z-Standard,
+     * LZ4 is less compute-intensive and delivers higher write throughput speeds.
      * </p>
      * </li>
      * </ul>
      * 
      * @param dataCompressionType
-     *        The method used to compress the data on the volume. Unless a compression type is specified, volumes
-     *        inherit the <code>DataCompressionType</code> value of their parent volume.</p>
+     *        Specifies the method used to compress the data on the volume. The compression type is <code>NONE</code> by
+     *        default.</p>
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>NONE</code> - Doesn't compress the data on the volume.
+     *        <code>NONE</code> - Doesn't compress the data on the volume. <code>NONE</code> is the default.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <code>ZSTD</code> - Compresses the data in the volume using the Zstandard (ZSTD) compression algorithm.
-     *        This algorithm reduces the amount of space used on your volume and has very little impact on compute
-     *        resources.
+     *        Compared to LZ4, Z-Standard provides a better compression ratio to minimize on-disk storage utilization.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>LZ4</code> - Compresses the data in the volume using the LZ4 compression algorithm. Compared to
+     *        Z-Standard, LZ4 is less compute-intensive and delivers higher write throughput speeds.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -788,6 +898,8 @@ public class OpenZFSVolumeConfiguration implements Serializable, Cloneable, Stru
             sb.append("StorageCapacityReservationGiB: ").append(getStorageCapacityReservationGiB()).append(",");
         if (getStorageCapacityQuotaGiB() != null)
             sb.append("StorageCapacityQuotaGiB: ").append(getStorageCapacityQuotaGiB()).append(",");
+        if (getRecordSizeKiB() != null)
+            sb.append("RecordSizeKiB: ").append(getRecordSizeKiB()).append(",");
         if (getDataCompressionType() != null)
             sb.append("DataCompressionType: ").append(getDataCompressionType()).append(",");
         if (getCopyTagsToSnapshots() != null)
@@ -831,6 +943,10 @@ public class OpenZFSVolumeConfiguration implements Serializable, Cloneable, Stru
             return false;
         if (other.getStorageCapacityQuotaGiB() != null && other.getStorageCapacityQuotaGiB().equals(this.getStorageCapacityQuotaGiB()) == false)
             return false;
+        if (other.getRecordSizeKiB() == null ^ this.getRecordSizeKiB() == null)
+            return false;
+        if (other.getRecordSizeKiB() != null && other.getRecordSizeKiB().equals(this.getRecordSizeKiB()) == false)
+            return false;
         if (other.getDataCompressionType() == null ^ this.getDataCompressionType() == null)
             return false;
         if (other.getDataCompressionType() != null && other.getDataCompressionType().equals(this.getDataCompressionType()) == false)
@@ -867,6 +983,7 @@ public class OpenZFSVolumeConfiguration implements Serializable, Cloneable, Stru
         hashCode = prime * hashCode + ((getVolumePath() == null) ? 0 : getVolumePath().hashCode());
         hashCode = prime * hashCode + ((getStorageCapacityReservationGiB() == null) ? 0 : getStorageCapacityReservationGiB().hashCode());
         hashCode = prime * hashCode + ((getStorageCapacityQuotaGiB() == null) ? 0 : getStorageCapacityQuotaGiB().hashCode());
+        hashCode = prime * hashCode + ((getRecordSizeKiB() == null) ? 0 : getRecordSizeKiB().hashCode());
         hashCode = prime * hashCode + ((getDataCompressionType() == null) ? 0 : getDataCompressionType().hashCode());
         hashCode = prime * hashCode + ((getCopyTagsToSnapshots() == null) ? 0 : getCopyTagsToSnapshots().hashCode());
         hashCode = prime * hashCode + ((getOriginSnapshot() == null) ? 0 : getOriginSnapshot().hashCode());

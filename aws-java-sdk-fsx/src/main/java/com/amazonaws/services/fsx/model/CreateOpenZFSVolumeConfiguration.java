@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * Specifies the configuration of the OpenZFS volume that you are creating.
+ * Specifies the configuration of the Amazon FSx for OpenZFS volume that you are creating.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/CreateOpenZFSVolumeConfiguration"
@@ -37,32 +37,50 @@ public class CreateOpenZFSVolumeConfiguration implements Serializable, Cloneable
     /**
      * <p>
      * The amount of storage in gibibytes (GiB) to reserve from the parent volume. You can't reserve more storage than
-     * the parent volume has reserved.
+     * the parent volume has reserved. To not specify a storage capacity reservation, set this to <code>-1</code>.
      * </p>
      */
     private Integer storageCapacityReservationGiB;
     /**
      * <p>
-     * The maximum amount of storage in gibibytes (GiB) that the volume can use from its parent. You can specify a quota
-     * larger than the storage on the parent volume.
+     * The maximum amount of storage in gibibytes (GiB) that the volume can use from its parent. You can't specify a
+     * quota larger than the storage on the parent volume. To not specify a storage capacity quota, set this to
+     * <code>-1</code>.
      * </p>
      */
     private Integer storageCapacityQuotaGiB;
     /**
      * <p>
-     * Specifies the method used to compress the data on the volume. Unless the compression type is specified, volumes
-     * inherit the <code>DataCompressionType</code> value of their parent volume.
+     * Specifies the record size of an OpenZFS volume, in kibibytes (KiB). Valid values are 4, 8, 16, 32, 64, 128, 256,
+     * 512, or 1024 KiB. The default is 128 KiB. Most workloads should use the default record size. Database workflows
+     * can benefit from a smaller record size, while streaming workflows can benefit from a larger record size. For
+     * additional guidance on when to set a custom record size, see <a
+     * href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/performance.html#performance-tips-zfs"> Tips for
+     * maximizing performance</a> in the <i>Amazon FSx for OpenZFS User Guide</i>.
+     * </p>
+     */
+    private Integer recordSizeKiB;
+    /**
+     * <p>
+     * Specifies the method used to compress the data on the volume. The compression type is <code>NONE</code> by
+     * default.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>NONE</code> - Doesn't compress the data on the volume.
+     * <code>NONE</code> - Doesn't compress the data on the volume. <code>NONE</code> is the default.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>ZSTD</code> - Compresses the data in the volume using the Zstandard (ZSTD) compression algorithm. This
-     * algorithm reduces the amount of space used on your volume and has very little impact on compute resources.
+     * <code>ZSTD</code> - Compresses the data in the volume using the Zstandard (ZSTD) compression algorithm. Compared
+     * to LZ4, Z-Standard provides a better compression ratio to minimize on-disk storage utilization.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>LZ4</code> - Compresses the data in the volume using the LZ4 compression algorithm. Compared to Z-Standard,
+     * LZ4 is less compute-intensive and delivers higher write throughput speeds.
      * </p>
      * </li>
      * </ul>
@@ -146,12 +164,13 @@ public class CreateOpenZFSVolumeConfiguration implements Serializable, Cloneable
     /**
      * <p>
      * The amount of storage in gibibytes (GiB) to reserve from the parent volume. You can't reserve more storage than
-     * the parent volume has reserved.
+     * the parent volume has reserved. To not specify a storage capacity reservation, set this to <code>-1</code>.
      * </p>
      * 
      * @param storageCapacityReservationGiB
      *        The amount of storage in gibibytes (GiB) to reserve from the parent volume. You can't reserve more storage
-     *        than the parent volume has reserved.
+     *        than the parent volume has reserved. To not specify a storage capacity reservation, set this to
+     *        <code>-1</code>.
      */
 
     public void setStorageCapacityReservationGiB(Integer storageCapacityReservationGiB) {
@@ -161,11 +180,12 @@ public class CreateOpenZFSVolumeConfiguration implements Serializable, Cloneable
     /**
      * <p>
      * The amount of storage in gibibytes (GiB) to reserve from the parent volume. You can't reserve more storage than
-     * the parent volume has reserved.
+     * the parent volume has reserved. To not specify a storage capacity reservation, set this to <code>-1</code>.
      * </p>
      * 
      * @return The amount of storage in gibibytes (GiB) to reserve from the parent volume. You can't reserve more
-     *         storage than the parent volume has reserved.
+     *         storage than the parent volume has reserved. To not specify a storage capacity reservation, set this to
+     *         <code>-1</code>.
      */
 
     public Integer getStorageCapacityReservationGiB() {
@@ -175,12 +195,13 @@ public class CreateOpenZFSVolumeConfiguration implements Serializable, Cloneable
     /**
      * <p>
      * The amount of storage in gibibytes (GiB) to reserve from the parent volume. You can't reserve more storage than
-     * the parent volume has reserved.
+     * the parent volume has reserved. To not specify a storage capacity reservation, set this to <code>-1</code>.
      * </p>
      * 
      * @param storageCapacityReservationGiB
      *        The amount of storage in gibibytes (GiB) to reserve from the parent volume. You can't reserve more storage
-     *        than the parent volume has reserved.
+     *        than the parent volume has reserved. To not specify a storage capacity reservation, set this to
+     *        <code>-1</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -191,13 +212,15 @@ public class CreateOpenZFSVolumeConfiguration implements Serializable, Cloneable
 
     /**
      * <p>
-     * The maximum amount of storage in gibibytes (GiB) that the volume can use from its parent. You can specify a quota
-     * larger than the storage on the parent volume.
+     * The maximum amount of storage in gibibytes (GiB) that the volume can use from its parent. You can't specify a
+     * quota larger than the storage on the parent volume. To not specify a storage capacity quota, set this to
+     * <code>-1</code>.
      * </p>
      * 
      * @param storageCapacityQuotaGiB
-     *        The maximum amount of storage in gibibytes (GiB) that the volume can use from its parent. You can specify
-     *        a quota larger than the storage on the parent volume.
+     *        The maximum amount of storage in gibibytes (GiB) that the volume can use from its parent. You can't
+     *        specify a quota larger than the storage on the parent volume. To not specify a storage capacity quota, set
+     *        this to <code>-1</code>.
      */
 
     public void setStorageCapacityQuotaGiB(Integer storageCapacityQuotaGiB) {
@@ -206,12 +229,14 @@ public class CreateOpenZFSVolumeConfiguration implements Serializable, Cloneable
 
     /**
      * <p>
-     * The maximum amount of storage in gibibytes (GiB) that the volume can use from its parent. You can specify a quota
-     * larger than the storage on the parent volume.
+     * The maximum amount of storage in gibibytes (GiB) that the volume can use from its parent. You can't specify a
+     * quota larger than the storage on the parent volume. To not specify a storage capacity quota, set this to
+     * <code>-1</code>.
      * </p>
      * 
-     * @return The maximum amount of storage in gibibytes (GiB) that the volume can use from its parent. You can specify
-     *         a quota larger than the storage on the parent volume.
+     * @return The maximum amount of storage in gibibytes (GiB) that the volume can use from its parent. You can't
+     *         specify a quota larger than the storage on the parent volume. To not specify a storage capacity quota,
+     *         set this to <code>-1</code>.
      */
 
     public Integer getStorageCapacityQuotaGiB() {
@@ -220,13 +245,15 @@ public class CreateOpenZFSVolumeConfiguration implements Serializable, Cloneable
 
     /**
      * <p>
-     * The maximum amount of storage in gibibytes (GiB) that the volume can use from its parent. You can specify a quota
-     * larger than the storage on the parent volume.
+     * The maximum amount of storage in gibibytes (GiB) that the volume can use from its parent. You can't specify a
+     * quota larger than the storage on the parent volume. To not specify a storage capacity quota, set this to
+     * <code>-1</code>.
      * </p>
      * 
      * @param storageCapacityQuotaGiB
-     *        The maximum amount of storage in gibibytes (GiB) that the volume can use from its parent. You can specify
-     *        a quota larger than the storage on the parent volume.
+     *        The maximum amount of storage in gibibytes (GiB) that the volume can use from its parent. You can't
+     *        specify a quota larger than the storage on the parent volume. To not specify a storage capacity quota, set
+     *        this to <code>-1</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -237,37 +264,118 @@ public class CreateOpenZFSVolumeConfiguration implements Serializable, Cloneable
 
     /**
      * <p>
-     * Specifies the method used to compress the data on the volume. Unless the compression type is specified, volumes
-     * inherit the <code>DataCompressionType</code> value of their parent volume.
+     * Specifies the record size of an OpenZFS volume, in kibibytes (KiB). Valid values are 4, 8, 16, 32, 64, 128, 256,
+     * 512, or 1024 KiB. The default is 128 KiB. Most workloads should use the default record size. Database workflows
+     * can benefit from a smaller record size, while streaming workflows can benefit from a larger record size. For
+     * additional guidance on when to set a custom record size, see <a
+     * href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/performance.html#performance-tips-zfs"> Tips for
+     * maximizing performance</a> in the <i>Amazon FSx for OpenZFS User Guide</i>.
+     * </p>
+     * 
+     * @param recordSizeKiB
+     *        Specifies the record size of an OpenZFS volume, in kibibytes (KiB). Valid values are 4, 8, 16, 32, 64,
+     *        128, 256, 512, or 1024 KiB. The default is 128 KiB. Most workloads should use the default record size.
+     *        Database workflows can benefit from a smaller record size, while streaming workflows can benefit from a
+     *        larger record size. For additional guidance on when to set a custom record size, see <a
+     *        href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/performance.html#performance-tips-zfs"> Tips for
+     *        maximizing performance</a> in the <i>Amazon FSx for OpenZFS User Guide</i>.
+     */
+
+    public void setRecordSizeKiB(Integer recordSizeKiB) {
+        this.recordSizeKiB = recordSizeKiB;
+    }
+
+    /**
+     * <p>
+     * Specifies the record size of an OpenZFS volume, in kibibytes (KiB). Valid values are 4, 8, 16, 32, 64, 128, 256,
+     * 512, or 1024 KiB. The default is 128 KiB. Most workloads should use the default record size. Database workflows
+     * can benefit from a smaller record size, while streaming workflows can benefit from a larger record size. For
+     * additional guidance on when to set a custom record size, see <a
+     * href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/performance.html#performance-tips-zfs"> Tips for
+     * maximizing performance</a> in the <i>Amazon FSx for OpenZFS User Guide</i>.
+     * </p>
+     * 
+     * @return Specifies the record size of an OpenZFS volume, in kibibytes (KiB). Valid values are 4, 8, 16, 32, 64,
+     *         128, 256, 512, or 1024 KiB. The default is 128 KiB. Most workloads should use the default record size.
+     *         Database workflows can benefit from a smaller record size, while streaming workflows can benefit from a
+     *         larger record size. For additional guidance on when to set a custom record size, see <a
+     *         href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/performance.html#performance-tips-zfs"> Tips
+     *         for maximizing performance</a> in the <i>Amazon FSx for OpenZFS User Guide</i>.
+     */
+
+    public Integer getRecordSizeKiB() {
+        return this.recordSizeKiB;
+    }
+
+    /**
+     * <p>
+     * Specifies the record size of an OpenZFS volume, in kibibytes (KiB). Valid values are 4, 8, 16, 32, 64, 128, 256,
+     * 512, or 1024 KiB. The default is 128 KiB. Most workloads should use the default record size. Database workflows
+     * can benefit from a smaller record size, while streaming workflows can benefit from a larger record size. For
+     * additional guidance on when to set a custom record size, see <a
+     * href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/performance.html#performance-tips-zfs"> Tips for
+     * maximizing performance</a> in the <i>Amazon FSx for OpenZFS User Guide</i>.
+     * </p>
+     * 
+     * @param recordSizeKiB
+     *        Specifies the record size of an OpenZFS volume, in kibibytes (KiB). Valid values are 4, 8, 16, 32, 64,
+     *        128, 256, 512, or 1024 KiB. The default is 128 KiB. Most workloads should use the default record size.
+     *        Database workflows can benefit from a smaller record size, while streaming workflows can benefit from a
+     *        larger record size. For additional guidance on when to set a custom record size, see <a
+     *        href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/performance.html#performance-tips-zfs"> Tips for
+     *        maximizing performance</a> in the <i>Amazon FSx for OpenZFS User Guide</i>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public CreateOpenZFSVolumeConfiguration withRecordSizeKiB(Integer recordSizeKiB) {
+        setRecordSizeKiB(recordSizeKiB);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies the method used to compress the data on the volume. The compression type is <code>NONE</code> by
+     * default.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>NONE</code> - Doesn't compress the data on the volume.
+     * <code>NONE</code> - Doesn't compress the data on the volume. <code>NONE</code> is the default.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>ZSTD</code> - Compresses the data in the volume using the Zstandard (ZSTD) compression algorithm. This
-     * algorithm reduces the amount of space used on your volume and has very little impact on compute resources.
+     * <code>ZSTD</code> - Compresses the data in the volume using the Zstandard (ZSTD) compression algorithm. Compared
+     * to LZ4, Z-Standard provides a better compression ratio to minimize on-disk storage utilization.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>LZ4</code> - Compresses the data in the volume using the LZ4 compression algorithm. Compared to Z-Standard,
+     * LZ4 is less compute-intensive and delivers higher write throughput speeds.
      * </p>
      * </li>
      * </ul>
      * 
      * @param dataCompressionType
-     *        Specifies the method used to compress the data on the volume. Unless the compression type is specified,
-     *        volumes inherit the <code>DataCompressionType</code> value of their parent volume.</p>
+     *        Specifies the method used to compress the data on the volume. The compression type is <code>NONE</code> by
+     *        default.</p>
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>NONE</code> - Doesn't compress the data on the volume.
+     *        <code>NONE</code> - Doesn't compress the data on the volume. <code>NONE</code> is the default.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <code>ZSTD</code> - Compresses the data in the volume using the Zstandard (ZSTD) compression algorithm.
-     *        This algorithm reduces the amount of space used on your volume and has very little impact on compute
-     *        resources.
+     *        Compared to LZ4, Z-Standard provides a better compression ratio to minimize on-disk storage utilization.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>LZ4</code> - Compresses the data in the volume using the LZ4 compression algorithm. Compared to
+     *        Z-Standard, LZ4 is less compute-intensive and delivers higher write throughput speeds.
      *        </p>
      *        </li>
      * @see OpenZFSDataCompressionType
@@ -279,36 +387,47 @@ public class CreateOpenZFSVolumeConfiguration implements Serializable, Cloneable
 
     /**
      * <p>
-     * Specifies the method used to compress the data on the volume. Unless the compression type is specified, volumes
-     * inherit the <code>DataCompressionType</code> value of their parent volume.
+     * Specifies the method used to compress the data on the volume. The compression type is <code>NONE</code> by
+     * default.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>NONE</code> - Doesn't compress the data on the volume.
+     * <code>NONE</code> - Doesn't compress the data on the volume. <code>NONE</code> is the default.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>ZSTD</code> - Compresses the data in the volume using the Zstandard (ZSTD) compression algorithm. This
-     * algorithm reduces the amount of space used on your volume and has very little impact on compute resources.
+     * <code>ZSTD</code> - Compresses the data in the volume using the Zstandard (ZSTD) compression algorithm. Compared
+     * to LZ4, Z-Standard provides a better compression ratio to minimize on-disk storage utilization.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>LZ4</code> - Compresses the data in the volume using the LZ4 compression algorithm. Compared to Z-Standard,
+     * LZ4 is less compute-intensive and delivers higher write throughput speeds.
      * </p>
      * </li>
      * </ul>
      * 
-     * @return Specifies the method used to compress the data on the volume. Unless the compression type is specified,
-     *         volumes inherit the <code>DataCompressionType</code> value of their parent volume.</p>
+     * @return Specifies the method used to compress the data on the volume. The compression type is <code>NONE</code>
+     *         by default.</p>
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>NONE</code> - Doesn't compress the data on the volume.
+     *         <code>NONE</code> - Doesn't compress the data on the volume. <code>NONE</code> is the default.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
      *         <code>ZSTD</code> - Compresses the data in the volume using the Zstandard (ZSTD) compression algorithm.
-     *         This algorithm reduces the amount of space used on your volume and has very little impact on compute
-     *         resources.
+     *         Compared to LZ4, Z-Standard provides a better compression ratio to minimize on-disk storage utilization.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>LZ4</code> - Compresses the data in the volume using the LZ4 compression algorithm. Compared to
+     *         Z-Standard, LZ4 is less compute-intensive and delivers higher write throughput speeds.
      *         </p>
      *         </li>
      * @see OpenZFSDataCompressionType
@@ -320,37 +439,48 @@ public class CreateOpenZFSVolumeConfiguration implements Serializable, Cloneable
 
     /**
      * <p>
-     * Specifies the method used to compress the data on the volume. Unless the compression type is specified, volumes
-     * inherit the <code>DataCompressionType</code> value of their parent volume.
+     * Specifies the method used to compress the data on the volume. The compression type is <code>NONE</code> by
+     * default.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>NONE</code> - Doesn't compress the data on the volume.
+     * <code>NONE</code> - Doesn't compress the data on the volume. <code>NONE</code> is the default.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>ZSTD</code> - Compresses the data in the volume using the Zstandard (ZSTD) compression algorithm. This
-     * algorithm reduces the amount of space used on your volume and has very little impact on compute resources.
+     * <code>ZSTD</code> - Compresses the data in the volume using the Zstandard (ZSTD) compression algorithm. Compared
+     * to LZ4, Z-Standard provides a better compression ratio to minimize on-disk storage utilization.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>LZ4</code> - Compresses the data in the volume using the LZ4 compression algorithm. Compared to Z-Standard,
+     * LZ4 is less compute-intensive and delivers higher write throughput speeds.
      * </p>
      * </li>
      * </ul>
      * 
      * @param dataCompressionType
-     *        Specifies the method used to compress the data on the volume. Unless the compression type is specified,
-     *        volumes inherit the <code>DataCompressionType</code> value of their parent volume.</p>
+     *        Specifies the method used to compress the data on the volume. The compression type is <code>NONE</code> by
+     *        default.</p>
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>NONE</code> - Doesn't compress the data on the volume.
+     *        <code>NONE</code> - Doesn't compress the data on the volume. <code>NONE</code> is the default.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <code>ZSTD</code> - Compresses the data in the volume using the Zstandard (ZSTD) compression algorithm.
-     *        This algorithm reduces the amount of space used on your volume and has very little impact on compute
-     *        resources.
+     *        Compared to LZ4, Z-Standard provides a better compression ratio to minimize on-disk storage utilization.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>LZ4</code> - Compresses the data in the volume using the LZ4 compression algorithm. Compared to
+     *        Z-Standard, LZ4 is less compute-intensive and delivers higher write throughput speeds.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -364,37 +494,48 @@ public class CreateOpenZFSVolumeConfiguration implements Serializable, Cloneable
 
     /**
      * <p>
-     * Specifies the method used to compress the data on the volume. Unless the compression type is specified, volumes
-     * inherit the <code>DataCompressionType</code> value of their parent volume.
+     * Specifies the method used to compress the data on the volume. The compression type is <code>NONE</code> by
+     * default.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>NONE</code> - Doesn't compress the data on the volume.
+     * <code>NONE</code> - Doesn't compress the data on the volume. <code>NONE</code> is the default.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>ZSTD</code> - Compresses the data in the volume using the Zstandard (ZSTD) compression algorithm. This
-     * algorithm reduces the amount of space used on your volume and has very little impact on compute resources.
+     * <code>ZSTD</code> - Compresses the data in the volume using the Zstandard (ZSTD) compression algorithm. Compared
+     * to LZ4, Z-Standard provides a better compression ratio to minimize on-disk storage utilization.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>LZ4</code> - Compresses the data in the volume using the LZ4 compression algorithm. Compared to Z-Standard,
+     * LZ4 is less compute-intensive and delivers higher write throughput speeds.
      * </p>
      * </li>
      * </ul>
      * 
      * @param dataCompressionType
-     *        Specifies the method used to compress the data on the volume. Unless the compression type is specified,
-     *        volumes inherit the <code>DataCompressionType</code> value of their parent volume.</p>
+     *        Specifies the method used to compress the data on the volume. The compression type is <code>NONE</code> by
+     *        default.</p>
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>NONE</code> - Doesn't compress the data on the volume.
+     *        <code>NONE</code> - Doesn't compress the data on the volume. <code>NONE</code> is the default.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
      *        <code>ZSTD</code> - Compresses the data in the volume using the Zstandard (ZSTD) compression algorithm.
-     *        This algorithm reduces the amount of space used on your volume and has very little impact on compute
-     *        resources.
+     *        Compared to LZ4, Z-Standard provides a better compression ratio to minimize on-disk storage utilization.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>LZ4</code> - Compresses the data in the volume using the LZ4 compression algorithm. Compared to
+     *        Z-Standard, LZ4 is less compute-intensive and delivers higher write throughput speeds.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -740,6 +881,8 @@ public class CreateOpenZFSVolumeConfiguration implements Serializable, Cloneable
             sb.append("StorageCapacityReservationGiB: ").append(getStorageCapacityReservationGiB()).append(",");
         if (getStorageCapacityQuotaGiB() != null)
             sb.append("StorageCapacityQuotaGiB: ").append(getStorageCapacityQuotaGiB()).append(",");
+        if (getRecordSizeKiB() != null)
+            sb.append("RecordSizeKiB: ").append(getRecordSizeKiB()).append(",");
         if (getDataCompressionType() != null)
             sb.append("DataCompressionType: ").append(getDataCompressionType()).append(",");
         if (getCopyTagsToSnapshots() != null)
@@ -779,6 +922,10 @@ public class CreateOpenZFSVolumeConfiguration implements Serializable, Cloneable
             return false;
         if (other.getStorageCapacityQuotaGiB() != null && other.getStorageCapacityQuotaGiB().equals(this.getStorageCapacityQuotaGiB()) == false)
             return false;
+        if (other.getRecordSizeKiB() == null ^ this.getRecordSizeKiB() == null)
+            return false;
+        if (other.getRecordSizeKiB() != null && other.getRecordSizeKiB().equals(this.getRecordSizeKiB()) == false)
+            return false;
         if (other.getDataCompressionType() == null ^ this.getDataCompressionType() == null)
             return false;
         if (other.getDataCompressionType() != null && other.getDataCompressionType().equals(this.getDataCompressionType()) == false)
@@ -814,6 +961,7 @@ public class CreateOpenZFSVolumeConfiguration implements Serializable, Cloneable
         hashCode = prime * hashCode + ((getParentVolumeId() == null) ? 0 : getParentVolumeId().hashCode());
         hashCode = prime * hashCode + ((getStorageCapacityReservationGiB() == null) ? 0 : getStorageCapacityReservationGiB().hashCode());
         hashCode = prime * hashCode + ((getStorageCapacityQuotaGiB() == null) ? 0 : getStorageCapacityQuotaGiB().hashCode());
+        hashCode = prime * hashCode + ((getRecordSizeKiB() == null) ? 0 : getRecordSizeKiB().hashCode());
         hashCode = prime * hashCode + ((getDataCompressionType() == null) ? 0 : getDataCompressionType().hashCode());
         hashCode = prime * hashCode + ((getCopyTagsToSnapshots() == null) ? 0 : getCopyTagsToSnapshots().hashCode());
         hashCode = prime * hashCode + ((getOriginSnapshot() == null) ? 0 : getOriginSnapshot().hashCode());

@@ -22,7 +22,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
  * Provides information about an Athena query error. The <code>AthenaError</code> feature provides standardized error
  * information to help you understand failed queries and take steps after a query failure occurs.
  * <code>AthenaError</code> includes an <code>ErrorCategory</code> field that specifies whether the cause of the failed
- * query is due to system error, user error, or unknown error.
+ * query is due to system error, user error, or other error.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/athena-2017-05-18/AthenaError" target="_top">AWS API
@@ -43,7 +43,7 @@ public class AthenaError implements Serializable, Cloneable, StructuredPojo {
      * <b>2</b> - User
      * </p>
      * <p>
-     * <b>3</b> - Unknown
+     * <b>3</b> - Other
      * </p>
      */
     private Integer errorCategory;
@@ -69,7 +69,7 @@ public class AthenaError implements Serializable, Cloneable, StructuredPojo {
      * <b>2</b> - User
      * </p>
      * <p>
-     * <b>3</b> - Unknown
+     * <b>3</b> - Other
      * </p>
      * 
      * @param errorCategory
@@ -82,7 +82,7 @@ public class AthenaError implements Serializable, Cloneable, StructuredPojo {
      *        <b>2</b> - User
      *        </p>
      *        <p>
-     *        <b>3</b> - Unknown
+     *        <b>3</b> - Other
      */
 
     public void setErrorCategory(Integer errorCategory) {
@@ -101,7 +101,7 @@ public class AthenaError implements Serializable, Cloneable, StructuredPojo {
      * <b>2</b> - User
      * </p>
      * <p>
-     * <b>3</b> - Unknown
+     * <b>3</b> - Other
      * </p>
      * 
      * @return An integer value that specifies the category of a query failure error. The following list shows the
@@ -113,7 +113,7 @@ public class AthenaError implements Serializable, Cloneable, StructuredPojo {
      *         <b>2</b> - User
      *         </p>
      *         <p>
-     *         <b>3</b> - Unknown
+     *         <b>3</b> - Other
      */
 
     public Integer getErrorCategory() {
@@ -132,7 +132,7 @@ public class AthenaError implements Serializable, Cloneable, StructuredPojo {
      * <b>2</b> - User
      * </p>
      * <p>
-     * <b>3</b> - Unknown
+     * <b>3</b> - Other
      * </p>
      * 
      * @param errorCategory
@@ -145,7 +145,7 @@ public class AthenaError implements Serializable, Cloneable, StructuredPojo {
      *        <b>2</b> - User
      *        </p>
      *        <p>
-     *        <b>3</b> - Unknown
+     *        <b>3</b> - Other
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

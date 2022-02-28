@@ -30,24 +30,27 @@ public class ComponentVariant implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The properties of the component variant that can be overriden when customizing an instance of the component.
+     * The properties of the component variant that can be overriden when customizing an instance of the component. You
+     * can't specify <code>tags</code> as a valid property for <code>overrides</code>.
      * </p>
      */
     private java.util.Map<String, java.util.Map<String, String>> overrides;
     /**
      * <p>
-     * The combination of variants that comprise this variant.
+     * The combination of variants that comprise this variant. You can't specify <code>tags</code> as a valid property
+     * for <code>variantValues</code>.
      * </p>
      */
     private java.util.Map<String, String> variantValues;
 
     /**
      * <p>
-     * The properties of the component variant that can be overriden when customizing an instance of the component.
+     * The properties of the component variant that can be overriden when customizing an instance of the component. You
+     * can't specify <code>tags</code> as a valid property for <code>overrides</code>.
      * </p>
      * 
      * @return The properties of the component variant that can be overriden when customizing an instance of the
-     *         component.
+     *         component. You can't specify <code>tags</code> as a valid property for <code>overrides</code>.
      */
 
     public java.util.Map<String, java.util.Map<String, String>> getOverrides() {
@@ -56,12 +59,13 @@ public class ComponentVariant implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The properties of the component variant that can be overriden when customizing an instance of the component.
+     * The properties of the component variant that can be overriden when customizing an instance of the component. You
+     * can't specify <code>tags</code> as a valid property for <code>overrides</code>.
      * </p>
      * 
      * @param overrides
      *        The properties of the component variant that can be overriden when customizing an instance of the
-     *        component.
+     *        component. You can't specify <code>tags</code> as a valid property for <code>overrides</code>.
      */
 
     public void setOverrides(java.util.Map<String, java.util.Map<String, String>> overrides) {
@@ -70,12 +74,13 @@ public class ComponentVariant implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The properties of the component variant that can be overriden when customizing an instance of the component.
+     * The properties of the component variant that can be overriden when customizing an instance of the component. You
+     * can't specify <code>tags</code> as a valid property for <code>overrides</code>.
      * </p>
      * 
      * @param overrides
      *        The properties of the component variant that can be overriden when customizing an instance of the
-     *        component.
+     *        component. You can't specify <code>tags</code> as a valid property for <code>overrides</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -114,10 +119,12 @@ public class ComponentVariant implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The combination of variants that comprise this variant.
+     * The combination of variants that comprise this variant. You can't specify <code>tags</code> as a valid property
+     * for <code>variantValues</code>.
      * </p>
      * 
-     * @return The combination of variants that comprise this variant.
+     * @return The combination of variants that comprise this variant. You can't specify <code>tags</code> as a valid
+     *         property for <code>variantValues</code>.
      */
 
     public java.util.Map<String, String> getVariantValues() {
@@ -126,11 +133,13 @@ public class ComponentVariant implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The combination of variants that comprise this variant.
+     * The combination of variants that comprise this variant. You can't specify <code>tags</code> as a valid property
+     * for <code>variantValues</code>.
      * </p>
      * 
      * @param variantValues
-     *        The combination of variants that comprise this variant.
+     *        The combination of variants that comprise this variant. You can't specify <code>tags</code> as a valid
+     *        property for <code>variantValues</code>.
      */
 
     public void setVariantValues(java.util.Map<String, String> variantValues) {
@@ -139,11 +148,13 @@ public class ComponentVariant implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The combination of variants that comprise this variant.
+     * The combination of variants that comprise this variant. You can't specify <code>tags</code> as a valid property
+     * for <code>variantValues</code>.
      * </p>
      * 
      * @param variantValues
-     *        The combination of variants that comprise this variant.
+     *        The combination of variants that comprise this variant. You can't specify <code>tags</code> as a valid
+     *        property for <code>variantValues</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

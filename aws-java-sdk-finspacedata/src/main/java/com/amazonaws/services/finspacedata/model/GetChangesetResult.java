@@ -49,17 +49,17 @@ public class GetChangesetResult extends com.amazonaws.AmazonWebServiceResult<com
      * <ul>
      * <li>
      * <p>
-     * <code>REPLACE</code> - Changeset is considered as a replacement to all prior loaded Changesets.
+     * <code>REPLACE</code> – Changeset is considered as a replacement to all prior loaded Changesets.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>APPEND</code> - Changeset is considered as an addition to the end of all prior loaded Changesets.
+     * <code>APPEND</code> – Changeset is considered as an addition to the end of all prior loaded Changesets.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>MODIFY</code> - Changeset is considered as a replacement to a specific prior ingested Changeset.
+     * <code>MODIFY</code> – Changeset is considered as a replacement to a specific prior ingested Changeset.
      * </p>
      * </li>
      * </ul>
@@ -79,7 +79,7 @@ public class GetChangesetResult extends com.amazonaws.AmazonWebServiceResult<com
     private java.util.Map<String, String> formatParams;
     /**
      * <p>
-     * The timestamp at which the Changeset was created in FinSpace. The value is determined as Epoch time in
+     * The timestamp at which the Changeset was created in FinSpace. The value is determined as epoch time in
      * milliseconds. For example, the value for Monday, November 1, 2021 12:00:00 PM UTC is specified as 1635768000000.
      * </p>
      */
@@ -98,14 +98,14 @@ public class GetChangesetResult extends com.amazonaws.AmazonWebServiceResult<com
     private ChangesetErrorInfo errorInfo;
     /**
      * <p>
-     * Time until which the Changeset is active. The value is determined as Epoch time in milliseconds. For example, the
+     * Time until which the Changeset is active. The value is determined as epoch time in milliseconds. For example, the
      * value for Monday, November 1, 2021 12:00:00 PM UTC is specified as 1635768000000.
      * </p>
      */
     private Long activeUntilTimestamp;
     /**
      * <p>
-     * Beginning time from which the Changeset is active. The value is determined as Epoch time in milliseconds. For
+     * Beginning time from which the Changeset is active. The value is determined as epoch time in milliseconds. For
      * example, the value for Monday, November 1, 2021 12:00:00 PM UTC is specified as 1635768000000.
      * </p>
      */
@@ -250,17 +250,17 @@ public class GetChangesetResult extends com.amazonaws.AmazonWebServiceResult<com
      * <ul>
      * <li>
      * <p>
-     * <code>REPLACE</code> - Changeset is considered as a replacement to all prior loaded Changesets.
+     * <code>REPLACE</code> – Changeset is considered as a replacement to all prior loaded Changesets.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>APPEND</code> - Changeset is considered as an addition to the end of all prior loaded Changesets.
+     * <code>APPEND</code> – Changeset is considered as an addition to the end of all prior loaded Changesets.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>MODIFY</code> - Changeset is considered as a replacement to a specific prior ingested Changeset.
+     * <code>MODIFY</code> – Changeset is considered as a replacement to a specific prior ingested Changeset.
      * </p>
      * </li>
      * </ul>
@@ -270,17 +270,17 @@ public class GetChangesetResult extends com.amazonaws.AmazonWebServiceResult<com
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>REPLACE</code> - Changeset is considered as a replacement to all prior loaded Changesets.
+     *        <code>REPLACE</code> – Changeset is considered as a replacement to all prior loaded Changesets.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>APPEND</code> - Changeset is considered as an addition to the end of all prior loaded Changesets.
+     *        <code>APPEND</code> – Changeset is considered as an addition to the end of all prior loaded Changesets.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>MODIFY</code> - Changeset is considered as a replacement to a specific prior ingested Changeset.
+     *        <code>MODIFY</code> – Changeset is considered as a replacement to a specific prior ingested Changeset.
      *        </p>
      *        </li>
      * @see ChangeType
@@ -297,17 +297,17 @@ public class GetChangesetResult extends com.amazonaws.AmazonWebServiceResult<com
      * <ul>
      * <li>
      * <p>
-     * <code>REPLACE</code> - Changeset is considered as a replacement to all prior loaded Changesets.
+     * <code>REPLACE</code> – Changeset is considered as a replacement to all prior loaded Changesets.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>APPEND</code> - Changeset is considered as an addition to the end of all prior loaded Changesets.
+     * <code>APPEND</code> – Changeset is considered as an addition to the end of all prior loaded Changesets.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>MODIFY</code> - Changeset is considered as a replacement to a specific prior ingested Changeset.
+     * <code>MODIFY</code> – Changeset is considered as a replacement to a specific prior ingested Changeset.
      * </p>
      * </li>
      * </ul>
@@ -316,17 +316,17 @@ public class GetChangesetResult extends com.amazonaws.AmazonWebServiceResult<com
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>REPLACE</code> - Changeset is considered as a replacement to all prior loaded Changesets.
+     *         <code>REPLACE</code> – Changeset is considered as a replacement to all prior loaded Changesets.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>APPEND</code> - Changeset is considered as an addition to the end of all prior loaded Changesets.
+     *         <code>APPEND</code> – Changeset is considered as an addition to the end of all prior loaded Changesets.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>MODIFY</code> - Changeset is considered as a replacement to a specific prior ingested Changeset.
+     *         <code>MODIFY</code> – Changeset is considered as a replacement to a specific prior ingested Changeset.
      *         </p>
      *         </li>
      * @see ChangeType
@@ -343,17 +343,17 @@ public class GetChangesetResult extends com.amazonaws.AmazonWebServiceResult<com
      * <ul>
      * <li>
      * <p>
-     * <code>REPLACE</code> - Changeset is considered as a replacement to all prior loaded Changesets.
+     * <code>REPLACE</code> – Changeset is considered as a replacement to all prior loaded Changesets.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>APPEND</code> - Changeset is considered as an addition to the end of all prior loaded Changesets.
+     * <code>APPEND</code> – Changeset is considered as an addition to the end of all prior loaded Changesets.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>MODIFY</code> - Changeset is considered as a replacement to a specific prior ingested Changeset.
+     * <code>MODIFY</code> – Changeset is considered as a replacement to a specific prior ingested Changeset.
      * </p>
      * </li>
      * </ul>
@@ -363,17 +363,17 @@ public class GetChangesetResult extends com.amazonaws.AmazonWebServiceResult<com
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>REPLACE</code> - Changeset is considered as a replacement to all prior loaded Changesets.
+     *        <code>REPLACE</code> – Changeset is considered as a replacement to all prior loaded Changesets.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>APPEND</code> - Changeset is considered as an addition to the end of all prior loaded Changesets.
+     *        <code>APPEND</code> – Changeset is considered as an addition to the end of all prior loaded Changesets.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>MODIFY</code> - Changeset is considered as a replacement to a specific prior ingested Changeset.
+     *        <code>MODIFY</code> – Changeset is considered as a replacement to a specific prior ingested Changeset.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -392,17 +392,17 @@ public class GetChangesetResult extends com.amazonaws.AmazonWebServiceResult<com
      * <ul>
      * <li>
      * <p>
-     * <code>REPLACE</code> - Changeset is considered as a replacement to all prior loaded Changesets.
+     * <code>REPLACE</code> – Changeset is considered as a replacement to all prior loaded Changesets.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>APPEND</code> - Changeset is considered as an addition to the end of all prior loaded Changesets.
+     * <code>APPEND</code> – Changeset is considered as an addition to the end of all prior loaded Changesets.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>MODIFY</code> - Changeset is considered as a replacement to a specific prior ingested Changeset.
+     * <code>MODIFY</code> – Changeset is considered as a replacement to a specific prior ingested Changeset.
      * </p>
      * </li>
      * </ul>
@@ -412,17 +412,17 @@ public class GetChangesetResult extends com.amazonaws.AmazonWebServiceResult<com
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>REPLACE</code> - Changeset is considered as a replacement to all prior loaded Changesets.
+     *        <code>REPLACE</code> – Changeset is considered as a replacement to all prior loaded Changesets.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>APPEND</code> - Changeset is considered as an addition to the end of all prior loaded Changesets.
+     *        <code>APPEND</code> – Changeset is considered as an addition to the end of all prior loaded Changesets.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>MODIFY</code> - Changeset is considered as a replacement to a specific prior ingested Changeset.
+     *        <code>MODIFY</code> – Changeset is considered as a replacement to a specific prior ingested Changeset.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -572,12 +572,12 @@ public class GetChangesetResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The timestamp at which the Changeset was created in FinSpace. The value is determined as Epoch time in
+     * The timestamp at which the Changeset was created in FinSpace. The value is determined as epoch time in
      * milliseconds. For example, the value for Monday, November 1, 2021 12:00:00 PM UTC is specified as 1635768000000.
      * </p>
      * 
      * @param createTime
-     *        The timestamp at which the Changeset was created in FinSpace. The value is determined as Epoch time in
+     *        The timestamp at which the Changeset was created in FinSpace. The value is determined as epoch time in
      *        milliseconds. For example, the value for Monday, November 1, 2021 12:00:00 PM UTC is specified as
      *        1635768000000.
      */
@@ -588,11 +588,11 @@ public class GetChangesetResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The timestamp at which the Changeset was created in FinSpace. The value is determined as Epoch time in
+     * The timestamp at which the Changeset was created in FinSpace. The value is determined as epoch time in
      * milliseconds. For example, the value for Monday, November 1, 2021 12:00:00 PM UTC is specified as 1635768000000.
      * </p>
      * 
-     * @return The timestamp at which the Changeset was created in FinSpace. The value is determined as Epoch time in
+     * @return The timestamp at which the Changeset was created in FinSpace. The value is determined as epoch time in
      *         milliseconds. For example, the value for Monday, November 1, 2021 12:00:00 PM UTC is specified as
      *         1635768000000.
      */
@@ -603,12 +603,12 @@ public class GetChangesetResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * The timestamp at which the Changeset was created in FinSpace. The value is determined as Epoch time in
+     * The timestamp at which the Changeset was created in FinSpace. The value is determined as epoch time in
      * milliseconds. For example, the value for Monday, November 1, 2021 12:00:00 PM UTC is specified as 1635768000000.
      * </p>
      * 
      * @param createTime
-     *        The timestamp at which the Changeset was created in FinSpace. The value is determined as Epoch time in
+     *        The timestamp at which the Changeset was created in FinSpace. The value is determined as epoch time in
      *        milliseconds. For example, the value for Monday, November 1, 2021 12:00:00 PM UTC is specified as
      *        1635768000000.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -720,12 +720,12 @@ public class GetChangesetResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * Time until which the Changeset is active. The value is determined as Epoch time in milliseconds. For example, the
+     * Time until which the Changeset is active. The value is determined as epoch time in milliseconds. For example, the
      * value for Monday, November 1, 2021 12:00:00 PM UTC is specified as 1635768000000.
      * </p>
      * 
      * @param activeUntilTimestamp
-     *        Time until which the Changeset is active. The value is determined as Epoch time in milliseconds. For
+     *        Time until which the Changeset is active. The value is determined as epoch time in milliseconds. For
      *        example, the value for Monday, November 1, 2021 12:00:00 PM UTC is specified as 1635768000000.
      */
 
@@ -735,11 +735,11 @@ public class GetChangesetResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * Time until which the Changeset is active. The value is determined as Epoch time in milliseconds. For example, the
+     * Time until which the Changeset is active. The value is determined as epoch time in milliseconds. For example, the
      * value for Monday, November 1, 2021 12:00:00 PM UTC is specified as 1635768000000.
      * </p>
      * 
-     * @return Time until which the Changeset is active. The value is determined as Epoch time in milliseconds. For
+     * @return Time until which the Changeset is active. The value is determined as epoch time in milliseconds. For
      *         example, the value for Monday, November 1, 2021 12:00:00 PM UTC is specified as 1635768000000.
      */
 
@@ -749,12 +749,12 @@ public class GetChangesetResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * Time until which the Changeset is active. The value is determined as Epoch time in milliseconds. For example, the
+     * Time until which the Changeset is active. The value is determined as epoch time in milliseconds. For example, the
      * value for Monday, November 1, 2021 12:00:00 PM UTC is specified as 1635768000000.
      * </p>
      * 
      * @param activeUntilTimestamp
-     *        Time until which the Changeset is active. The value is determined as Epoch time in milliseconds. For
+     *        Time until which the Changeset is active. The value is determined as epoch time in milliseconds. For
      *        example, the value for Monday, November 1, 2021 12:00:00 PM UTC is specified as 1635768000000.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -766,12 +766,12 @@ public class GetChangesetResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * Beginning time from which the Changeset is active. The value is determined as Epoch time in milliseconds. For
+     * Beginning time from which the Changeset is active. The value is determined as epoch time in milliseconds. For
      * example, the value for Monday, November 1, 2021 12:00:00 PM UTC is specified as 1635768000000.
      * </p>
      * 
      * @param activeFromTimestamp
-     *        Beginning time from which the Changeset is active. The value is determined as Epoch time in milliseconds.
+     *        Beginning time from which the Changeset is active. The value is determined as epoch time in milliseconds.
      *        For example, the value for Monday, November 1, 2021 12:00:00 PM UTC is specified as 1635768000000.
      */
 
@@ -781,11 +781,11 @@ public class GetChangesetResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * Beginning time from which the Changeset is active. The value is determined as Epoch time in milliseconds. For
+     * Beginning time from which the Changeset is active. The value is determined as epoch time in milliseconds. For
      * example, the value for Monday, November 1, 2021 12:00:00 PM UTC is specified as 1635768000000.
      * </p>
      * 
-     * @return Beginning time from which the Changeset is active. The value is determined as Epoch time in milliseconds.
+     * @return Beginning time from which the Changeset is active. The value is determined as epoch time in milliseconds.
      *         For example, the value for Monday, November 1, 2021 12:00:00 PM UTC is specified as 1635768000000.
      */
 
@@ -795,12 +795,12 @@ public class GetChangesetResult extends com.amazonaws.AmazonWebServiceResult<com
 
     /**
      * <p>
-     * Beginning time from which the Changeset is active. The value is determined as Epoch time in milliseconds. For
+     * Beginning time from which the Changeset is active. The value is determined as epoch time in milliseconds. For
      * example, the value for Monday, November 1, 2021 12:00:00 PM UTC is specified as 1635768000000.
      * </p>
      * 
      * @param activeFromTimestamp
-     *        Beginning time from which the Changeset is active. The value is determined as Epoch time in milliseconds.
+     *        Beginning time from which the Changeset is active. The value is determined as epoch time in milliseconds.
      *        For example, the value for Monday, November 1, 2021 12:00:00 PM UTC is specified as 1635768000000.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

@@ -21,7 +21,8 @@ import javax.annotation.Generated;
 public enum OpenZFSDataCompressionType {
 
     NONE("NONE"),
-    ZSTD("ZSTD");
+    ZSTD("ZSTD"),
+    LZ4("LZ4");
 
     private String value;
 

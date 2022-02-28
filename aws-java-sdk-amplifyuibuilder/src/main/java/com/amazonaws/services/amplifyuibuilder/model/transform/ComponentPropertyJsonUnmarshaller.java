@@ -61,6 +61,10 @@ public class ComponentPropertyJsonUnmarshaller implements Unmarshaller<Component
                     context.nextToken();
                     componentProperty.setCollectionBindingProperties(ComponentPropertyBindingPropertiesJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("componentName", targetDepth)) {
+                    context.nextToken();
+                    componentProperty.setComponentName(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("concat", targetDepth)) {
                     context.nextToken();
                     componentProperty.setConcat(new ListUnmarshaller<ComponentProperty>(ComponentPropertyJsonUnmarshaller.getInstance())
@@ -90,6 +94,10 @@ public class ComponentPropertyJsonUnmarshaller implements Unmarshaller<Component
                 if (context.testExpression("model", targetDepth)) {
                     context.nextToken();
                     componentProperty.setModel(context.getUnmarshaller(String.class).unmarshall(context));
+                }
+                if (context.testExpression("property", targetDepth)) {
+                    context.nextToken();
+                    componentProperty.setProperty(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("type", targetDepth)) {
                     context.nextToken();

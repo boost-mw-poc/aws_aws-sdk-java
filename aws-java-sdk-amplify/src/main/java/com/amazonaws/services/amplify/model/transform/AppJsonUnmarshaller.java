@@ -146,6 +146,10 @@ public class AppJsonUnmarshaller implements Unmarshaller<App, JsonUnmarshallerCo
                     context.nextToken();
                     app.setAutoBranchCreationConfig(AutoBranchCreationConfigJsonUnmarshaller.getInstance().unmarshall(context));
                 }
+                if (context.testExpression("repositoryCloneMethod", targetDepth)) {
+                    context.nextToken();
+                    app.setRepositoryCloneMethod(context.getUnmarshaller(String.class).unmarshall(context));
+                }
             } else if (token == END_ARRAY || token == END_OBJECT) {
                 if (context.getLastParsedParentElement() == null || context.getLastParsedParentElement().equals(currentParentElement)) {
                     if (context.getCurrentDepth() <= originalDepth)

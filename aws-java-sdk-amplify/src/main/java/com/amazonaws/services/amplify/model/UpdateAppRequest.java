@@ -1118,7 +1118,7 @@ public class UpdateAppRequest extends com.amazonaws.AmazonWebServiceRequest impl
         if (getCustomRules() != null)
             sb.append("CustomRules: ").append(getCustomRules()).append(",");
         if (getBuildSpec() != null)
-            sb.append("BuildSpec: ").append(getBuildSpec()).append(",");
+            sb.append("BuildSpec: ").append("***Sensitive Data Redacted***").append(",");
         if (getCustomHeaders() != null)
             sb.append("CustomHeaders: ").append(getCustomHeaders()).append(",");
         if (getEnableAutoBranchCreation() != null)

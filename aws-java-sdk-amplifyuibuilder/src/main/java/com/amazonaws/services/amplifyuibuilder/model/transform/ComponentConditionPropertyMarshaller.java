@@ -33,6 +33,8 @@ public class ComponentConditionPropertyMarshaller {
             .marshallLocationName("field").build();
     private static final MarshallingInfo<String> OPERAND_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("operand").build();
+    private static final MarshallingInfo<String> OPERANDTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("operandType").build();
     private static final MarshallingInfo<String> OPERATOR_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("operator").build();
     private static final MarshallingInfo<String> PROPERTY_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
@@ -59,6 +61,7 @@ public class ComponentConditionPropertyMarshaller {
             protocolMarshaller.marshall(componentConditionProperty.getElse(), ELSE_BINDING);
             protocolMarshaller.marshall(componentConditionProperty.getField(), FIELD_BINDING);
             protocolMarshaller.marshall(componentConditionProperty.getOperand(), OPERAND_BINDING);
+            protocolMarshaller.marshall(componentConditionProperty.getOperandType(), OPERANDTYPE_BINDING);
             protocolMarshaller.marshall(componentConditionProperty.getOperator(), OPERATOR_BINDING);
             protocolMarshaller.marshall(componentConditionProperty.getProperty(), PROPERTY_BINDING);
             protocolMarshaller.marshall(componentConditionProperty.getThen(), THEN_BINDING);

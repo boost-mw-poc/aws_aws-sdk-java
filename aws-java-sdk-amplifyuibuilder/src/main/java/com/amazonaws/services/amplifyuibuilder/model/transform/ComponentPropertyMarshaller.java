@@ -35,6 +35,8 @@ public class ComponentPropertyMarshaller {
             .marshallLocationName("bindings").build();
     private static final MarshallingInfo<StructuredPojo> COLLECTIONBINDINGPROPERTIES_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("collectionBindingProperties").build();
+    private static final MarshallingInfo<String> COMPONENTNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("componentName").build();
     private static final MarshallingInfo<List> CONCAT_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("concat").build();
     private static final MarshallingInfo<StructuredPojo> CONDITION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
@@ -49,6 +51,8 @@ public class ComponentPropertyMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("importedValue").build();
     private static final MarshallingInfo<String> MODEL_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("model").build();
+    private static final MarshallingInfo<String> PROPERTY_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("property").build();
     private static final MarshallingInfo<String> TYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("type").build();
     private static final MarshallingInfo<String> USERATTRIBUTE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
@@ -75,6 +79,7 @@ public class ComponentPropertyMarshaller {
             protocolMarshaller.marshall(componentProperty.getBindingProperties(), BINDINGPROPERTIES_BINDING);
             protocolMarshaller.marshall(componentProperty.getBindings(), BINDINGS_BINDING);
             protocolMarshaller.marshall(componentProperty.getCollectionBindingProperties(), COLLECTIONBINDINGPROPERTIES_BINDING);
+            protocolMarshaller.marshall(componentProperty.getComponentName(), COMPONENTNAME_BINDING);
             protocolMarshaller.marshall(componentProperty.getConcat(), CONCAT_BINDING);
             protocolMarshaller.marshall(componentProperty.getCondition(), CONDITION_BINDING);
             protocolMarshaller.marshall(componentProperty.getConfigured(), CONFIGURED_BINDING);
@@ -82,6 +87,7 @@ public class ComponentPropertyMarshaller {
             protocolMarshaller.marshall(componentProperty.getEvent(), EVENT_BINDING);
             protocolMarshaller.marshall(componentProperty.getImportedValue(), IMPORTEDVALUE_BINDING);
             protocolMarshaller.marshall(componentProperty.getModel(), MODEL_BINDING);
+            protocolMarshaller.marshall(componentProperty.getProperty(), PROPERTY_BINDING);
             protocolMarshaller.marshall(componentProperty.getType(), TYPE_BINDING);
             protocolMarshaller.marshall(componentProperty.getUserAttribute(), USERATTRIBUTE_BINDING);
             protocolMarshaller.marshall(componentProperty.getValue(), VALUE_BINDING);

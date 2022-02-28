@@ -43,7 +43,32 @@ public class AbstractAWSFinSpaceData implements AWSFinSpaceData {
     }
 
     @Override
+    public CreatePermissionGroupResult createPermissionGroup(CreatePermissionGroupRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public CreateUserResult createUser(CreateUserRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public DeleteDatasetResult deleteDataset(DeleteDatasetRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DeletePermissionGroupResult deletePermissionGroup(DeletePermissionGroupRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public DisableUserResult disableUser(DisableUserRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public EnableUserResult enableUser(EnableUserRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
@@ -68,6 +93,11 @@ public class AbstractAWSFinSpaceData implements AWSFinSpaceData {
     }
 
     @Override
+    public GetUserResult getUser(GetUserRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public GetWorkingLocationResult getWorkingLocation(GetWorkingLocationRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
@@ -88,12 +118,37 @@ public class AbstractAWSFinSpaceData implements AWSFinSpaceData {
     }
 
     @Override
+    public ListPermissionGroupsResult listPermissionGroups(ListPermissionGroupsRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ListUsersResult listUsers(ListUsersRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public ResetUserPasswordResult resetUserPassword(ResetUserPasswordRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public UpdateChangesetResult updateChangeset(UpdateChangesetRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 
     @Override
     public UpdateDatasetResult updateDataset(UpdateDatasetRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdatePermissionGroupResult updatePermissionGroup(UpdatePermissionGroupRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
+    public UpdateUserResult updateUser(UpdateUserRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }
 

@@ -27,7 +27,8 @@ public enum ImageAttributeName {
     ProductCodes("productCodes"),
     BlockDeviceMapping("blockDeviceMapping"),
     SriovNetSupport("sriovNetSupport"),
-    BootMode("bootMode");
+    BootMode("bootMode"),
+    LastLaunchedTime("lastLaunchedTime");
 
     private String value;
 

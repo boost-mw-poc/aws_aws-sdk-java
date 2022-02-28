@@ -1145,6 +1145,39 @@ public class AmazonAthenaAsyncClient extends AmazonAthenaClient implements Amazo
     }
 
     @Override
+    public java.util.concurrent.Future<UpdateNamedQueryResult> updateNamedQueryAsync(UpdateNamedQueryRequest request) {
+
+        return updateNamedQueryAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateNamedQueryResult> updateNamedQueryAsync(final UpdateNamedQueryRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateNamedQueryRequest, UpdateNamedQueryResult> asyncHandler) {
+        final UpdateNamedQueryRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateNamedQueryResult>() {
+            @Override
+            public UpdateNamedQueryResult call() throws Exception {
+                UpdateNamedQueryResult result = null;
+
+                try {
+                    result = executeUpdateNamedQuery(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<UpdatePreparedStatementResult> updatePreparedStatementAsync(UpdatePreparedStatementRequest request) {
 
         return updatePreparedStatementAsync(request, null);

@@ -31,6 +31,8 @@ public class ExportComponentsRequestMarshaller {
             .marshallLocationName("appId").build();
     private static final MarshallingInfo<String> ENVIRONMENTNAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PATH).marshallLocationName("environmentName").build();
+    private static final MarshallingInfo<String> NEXTTOKEN_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.QUERY_PARAM).marshallLocationName("nextToken").build();
 
     private static final ExportComponentsRequestMarshaller instance = new ExportComponentsRequestMarshaller();
 
@@ -50,6 +52,7 @@ public class ExportComponentsRequestMarshaller {
         try {
             protocolMarshaller.marshall(exportComponentsRequest.getAppId(), APPID_BINDING);
             protocolMarshaller.marshall(exportComponentsRequest.getEnvironmentName(), ENVIRONMENTNAME_BINDING);
+            protocolMarshaller.marshall(exportComponentsRequest.getNextToken(), NEXTTOKEN_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

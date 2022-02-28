@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * A routing control state.
+ * A routing control state entry.
  * </p>
  * 
  * @see <a
@@ -31,7 +31,7 @@ public class UpdateRoutingControlStateEntry implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The Amazon Resource Number (ARN) for the routing control state entry.
+     * The Amazon Resource Number (ARN) for a routing control state entry.
      * </p>
      */
     private String routingControlArn;
@@ -44,11 +44,11 @@ public class UpdateRoutingControlStateEntry implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The Amazon Resource Number (ARN) for the routing control state entry.
+     * The Amazon Resource Number (ARN) for a routing control state entry.
      * </p>
      * 
      * @param routingControlArn
-     *        The Amazon Resource Number (ARN) for the routing control state entry.
+     *        The Amazon Resource Number (ARN) for a routing control state entry.
      */
 
     public void setRoutingControlArn(String routingControlArn) {
@@ -57,10 +57,10 @@ public class UpdateRoutingControlStateEntry implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The Amazon Resource Number (ARN) for the routing control state entry.
+     * The Amazon Resource Number (ARN) for a routing control state entry.
      * </p>
      * 
-     * @return The Amazon Resource Number (ARN) for the routing control state entry.
+     * @return The Amazon Resource Number (ARN) for a routing control state entry.
      */
 
     public String getRoutingControlArn() {
@@ -69,11 +69,11 @@ public class UpdateRoutingControlStateEntry implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The Amazon Resource Number (ARN) for the routing control state entry.
+     * The Amazon Resource Number (ARN) for a routing control state entry.
      * </p>
      * 
      * @param routingControlArn
-     *        The Amazon Resource Number (ARN) for the routing control state entry.
+     *        The Amazon Resource Number (ARN) for a routing control state entry.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

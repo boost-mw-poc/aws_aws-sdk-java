@@ -75,6 +75,8 @@ public class AppMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("autoBranchCreationPatterns").build();
     private static final MarshallingInfo<StructuredPojo> AUTOBRANCHCREATIONCONFIG_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("autoBranchCreationConfig").build();
+    private static final MarshallingInfo<String> REPOSITORYCLONEMETHOD_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("repositoryCloneMethod").build();
 
     private static final AppMarshaller instance = new AppMarshaller();
 
@@ -115,6 +117,7 @@ public class AppMarshaller {
             protocolMarshaller.marshall(app.getEnableAutoBranchCreation(), ENABLEAUTOBRANCHCREATION_BINDING);
             protocolMarshaller.marshall(app.getAutoBranchCreationPatterns(), AUTOBRANCHCREATIONPATTERNS_BINDING);
             protocolMarshaller.marshall(app.getAutoBranchCreationConfig(), AUTOBRANCHCREATIONCONFIG_BINDING);
+            protocolMarshaller.marshall(app.getRepositoryCloneMethod(), REPOSITORYCLONEMETHOD_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

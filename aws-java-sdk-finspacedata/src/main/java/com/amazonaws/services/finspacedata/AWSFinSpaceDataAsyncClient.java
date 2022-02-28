@@ -173,6 +173,72 @@ public class AWSFinSpaceDataAsyncClient extends AWSFinSpaceDataClient implements
     }
 
     @Override
+    public java.util.concurrent.Future<CreatePermissionGroupResult> createPermissionGroupAsync(CreatePermissionGroupRequest request) {
+
+        return createPermissionGroupAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreatePermissionGroupResult> createPermissionGroupAsync(final CreatePermissionGroupRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreatePermissionGroupRequest, CreatePermissionGroupResult> asyncHandler) {
+        final CreatePermissionGroupRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreatePermissionGroupResult>() {
+            @Override
+            public CreatePermissionGroupResult call() throws Exception {
+                CreatePermissionGroupResult result = null;
+
+                try {
+                    result = executeCreatePermissionGroup(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateUserResult> createUserAsync(CreateUserRequest request) {
+
+        return createUserAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<CreateUserResult> createUserAsync(final CreateUserRequest request,
+            final com.amazonaws.handlers.AsyncHandler<CreateUserRequest, CreateUserResult> asyncHandler) {
+        final CreateUserRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<CreateUserResult>() {
+            @Override
+            public CreateUserResult call() throws Exception {
+                CreateUserResult result = null;
+
+                try {
+                    result = executeCreateUser(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<DeleteDatasetResult> deleteDatasetAsync(DeleteDatasetRequest request) {
 
         return deleteDatasetAsync(request, null);
@@ -190,6 +256,105 @@ public class AWSFinSpaceDataAsyncClient extends AWSFinSpaceDataClient implements
 
                 try {
                     result = executeDeleteDataset(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeletePermissionGroupResult> deletePermissionGroupAsync(DeletePermissionGroupRequest request) {
+
+        return deletePermissionGroupAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DeletePermissionGroupResult> deletePermissionGroupAsync(final DeletePermissionGroupRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DeletePermissionGroupRequest, DeletePermissionGroupResult> asyncHandler) {
+        final DeletePermissionGroupRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DeletePermissionGroupResult>() {
+            @Override
+            public DeletePermissionGroupResult call() throws Exception {
+                DeletePermissionGroupResult result = null;
+
+                try {
+                    result = executeDeletePermissionGroup(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<DisableUserResult> disableUserAsync(DisableUserRequest request) {
+
+        return disableUserAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<DisableUserResult> disableUserAsync(final DisableUserRequest request,
+            final com.amazonaws.handlers.AsyncHandler<DisableUserRequest, DisableUserResult> asyncHandler) {
+        final DisableUserRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<DisableUserResult>() {
+            @Override
+            public DisableUserResult call() throws Exception {
+                DisableUserResult result = null;
+
+                try {
+                    result = executeDisableUser(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<EnableUserResult> enableUserAsync(EnableUserRequest request) {
+
+        return enableUserAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<EnableUserResult> enableUserAsync(final EnableUserRequest request,
+            final com.amazonaws.handlers.AsyncHandler<EnableUserRequest, EnableUserResult> asyncHandler) {
+        final EnableUserRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<EnableUserResult>() {
+            @Override
+            public EnableUserResult call() throws Exception {
+                EnableUserResult result = null;
+
+                try {
+                    result = executeEnableUser(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);
@@ -340,6 +505,39 @@ public class AWSFinSpaceDataAsyncClient extends AWSFinSpaceDataClient implements
     }
 
     @Override
+    public java.util.concurrent.Future<GetUserResult> getUserAsync(GetUserRequest request) {
+
+        return getUserAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<GetUserResult> getUserAsync(final GetUserRequest request,
+            final com.amazonaws.handlers.AsyncHandler<GetUserRequest, GetUserResult> asyncHandler) {
+        final GetUserRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<GetUserResult>() {
+            @Override
+            public GetUserResult call() throws Exception {
+                GetUserResult result = null;
+
+                try {
+                    result = executeGetUser(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<GetWorkingLocationResult> getWorkingLocationAsync(GetWorkingLocationRequest request) {
 
         return getWorkingLocationAsync(request, null);
@@ -472,6 +670,105 @@ public class AWSFinSpaceDataAsyncClient extends AWSFinSpaceDataClient implements
     }
 
     @Override
+    public java.util.concurrent.Future<ListPermissionGroupsResult> listPermissionGroupsAsync(ListPermissionGroupsRequest request) {
+
+        return listPermissionGroupsAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListPermissionGroupsResult> listPermissionGroupsAsync(final ListPermissionGroupsRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListPermissionGroupsRequest, ListPermissionGroupsResult> asyncHandler) {
+        final ListPermissionGroupsRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListPermissionGroupsResult>() {
+            @Override
+            public ListPermissionGroupsResult call() throws Exception {
+                ListPermissionGroupsResult result = null;
+
+                try {
+                    result = executeListPermissionGroups(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListUsersResult> listUsersAsync(ListUsersRequest request) {
+
+        return listUsersAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ListUsersResult> listUsersAsync(final ListUsersRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ListUsersRequest, ListUsersResult> asyncHandler) {
+        final ListUsersRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ListUsersResult>() {
+            @Override
+            public ListUsersResult call() throws Exception {
+                ListUsersResult result = null;
+
+                try {
+                    result = executeListUsers(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<ResetUserPasswordResult> resetUserPasswordAsync(ResetUserPasswordRequest request) {
+
+        return resetUserPasswordAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<ResetUserPasswordResult> resetUserPasswordAsync(final ResetUserPasswordRequest request,
+            final com.amazonaws.handlers.AsyncHandler<ResetUserPasswordRequest, ResetUserPasswordResult> asyncHandler) {
+        final ResetUserPasswordRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<ResetUserPasswordResult>() {
+            @Override
+            public ResetUserPasswordResult call() throws Exception {
+                ResetUserPasswordResult result = null;
+
+                try {
+                    result = executeResetUserPassword(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
     public java.util.concurrent.Future<UpdateChangesetResult> updateChangesetAsync(UpdateChangesetRequest request) {
 
         return updateChangesetAsync(request, null);
@@ -522,6 +819,72 @@ public class AWSFinSpaceDataAsyncClient extends AWSFinSpaceDataClient implements
 
                 try {
                     result = executeUpdateDataset(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdatePermissionGroupResult> updatePermissionGroupAsync(UpdatePermissionGroupRequest request) {
+
+        return updatePermissionGroupAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdatePermissionGroupResult> updatePermissionGroupAsync(final UpdatePermissionGroupRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdatePermissionGroupRequest, UpdatePermissionGroupResult> asyncHandler) {
+        final UpdatePermissionGroupRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdatePermissionGroupResult>() {
+            @Override
+            public UpdatePermissionGroupResult call() throws Exception {
+                UpdatePermissionGroupResult result = null;
+
+                try {
+                    result = executeUpdatePermissionGroup(finalRequest);
+                } catch (Exception ex) {
+                    if (asyncHandler != null) {
+                        asyncHandler.onError(ex);
+                    }
+                    throw ex;
+                }
+
+                if (asyncHandler != null) {
+                    asyncHandler.onSuccess(finalRequest, result);
+                }
+                return result;
+            }
+        });
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateUserResult> updateUserAsync(UpdateUserRequest request) {
+
+        return updateUserAsync(request, null);
+    }
+
+    @Override
+    public java.util.concurrent.Future<UpdateUserResult> updateUserAsync(final UpdateUserRequest request,
+            final com.amazonaws.handlers.AsyncHandler<UpdateUserRequest, UpdateUserResult> asyncHandler) {
+        final UpdateUserRequest finalRequest = beforeClientExecution(request);
+
+        return executorService.submit(new java.util.concurrent.Callable<UpdateUserResult>() {
+            @Override
+            public UpdateUserResult call() throws Exception {
+                UpdateUserResult result = null;
+
+                try {
+                    result = executeUpdateUser(finalRequest);
                 } catch (Exception ex) {
                     if (asyncHandler != null) {
                         asyncHandler.onError(ex);

@@ -104,6 +104,11 @@ public class ImageAttributeStaxUnmarshaller implements Unmarshaller<ImageAttribu
                     imageAttribute.setBootMode(StringStaxUnmarshaller.getInstance().unmarshall(context));
                     continue;
                 }
+
+                if (context.testExpression("lastLaunchedTime/value", targetDepth)) {
+                    imageAttribute.setLastLaunchedTime(StringStaxUnmarshaller.getInstance().unmarshall(context));
+                    continue;
+                }
             } else if (xmlEvent.isEndElement()) {
                 if (context.getCurrentDepth() < originalDepth) {
                     return imageAttribute;

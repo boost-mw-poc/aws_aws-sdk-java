@@ -78,22 +78,22 @@ public class UpdateChangesetRequest extends com.amazonaws.AmazonWebServiceReques
      * <ul>
      * <li>
      * <p>
-     * <code>PARQUET</code> - Parquet source file format.
+     * <code>PARQUET</code> – Parquet source file format.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>CSV</code> - CSV source file format.
+     * <code>CSV</code> – CSV source file format.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>JSON</code> - JSON source file format.
+     * <code>JSON</code> – JSON source file format.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>XML</code> - XML source file format.
+     * <code>XML</code> – XML source file format.
      * </p>
      * </li>
      * </ul>
@@ -411,22 +411,22 @@ public class UpdateChangesetRequest extends com.amazonaws.AmazonWebServiceReques
      * <ul>
      * <li>
      * <p>
-     * <code>PARQUET</code> - Parquet source file format.
+     * <code>PARQUET</code> – Parquet source file format.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>CSV</code> - CSV source file format.
+     * <code>CSV</code> – CSV source file format.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>JSON</code> - JSON source file format.
+     * <code>JSON</code> – JSON source file format.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>XML</code> - XML source file format.
+     * <code>XML</code> – XML source file format.
      * </p>
      * </li>
      * </ul>
@@ -458,22 +458,22 @@ public class UpdateChangesetRequest extends com.amazonaws.AmazonWebServiceReques
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>PARQUET</code> - Parquet source file format.
+     *         <code>PARQUET</code> – Parquet source file format.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>CSV</code> - CSV source file format.
+     *         <code>CSV</code> – CSV source file format.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>JSON</code> - JSON source file format.
+     *         <code>JSON</code> – JSON source file format.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>XML</code> - XML source file format.
+     *         <code>XML</code> – XML source file format.
      *         </p>
      *         </li>
      *         </ul>
@@ -512,22 +512,22 @@ public class UpdateChangesetRequest extends com.amazonaws.AmazonWebServiceReques
      * <ul>
      * <li>
      * <p>
-     * <code>PARQUET</code> - Parquet source file format.
+     * <code>PARQUET</code> – Parquet source file format.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>CSV</code> - CSV source file format.
+     * <code>CSV</code> – CSV source file format.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>JSON</code> - JSON source file format.
+     * <code>JSON</code> – JSON source file format.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>XML</code> - XML source file format.
+     * <code>XML</code> – XML source file format.
      * </p>
      * </li>
      * </ul>
@@ -560,22 +560,22 @@ public class UpdateChangesetRequest extends com.amazonaws.AmazonWebServiceReques
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>PARQUET</code> - Parquet source file format.
+     *        <code>PARQUET</code> – Parquet source file format.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>CSV</code> - CSV source file format.
+     *        <code>CSV</code> – CSV source file format.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>JSON</code> - JSON source file format.
+     *        <code>JSON</code> – JSON source file format.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>XML</code> - XML source file format.
+     *        <code>XML</code> – XML source file format.
      *        </p>
      *        </li>
      *        </ul>
@@ -614,22 +614,22 @@ public class UpdateChangesetRequest extends com.amazonaws.AmazonWebServiceReques
      * <ul>
      * <li>
      * <p>
-     * <code>PARQUET</code> - Parquet source file format.
+     * <code>PARQUET</code> – Parquet source file format.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>CSV</code> - CSV source file format.
+     * <code>CSV</code> – CSV source file format.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>JSON</code> - JSON source file format.
+     * <code>JSON</code> – JSON source file format.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>XML</code> - XML source file format.
+     * <code>XML</code> – XML source file format.
      * </p>
      * </li>
      * </ul>
@@ -662,22 +662,22 @@ public class UpdateChangesetRequest extends com.amazonaws.AmazonWebServiceReques
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>PARQUET</code> - Parquet source file format.
+     *        <code>PARQUET</code> – Parquet source file format.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>CSV</code> - CSV source file format.
+     *        <code>CSV</code> – CSV source file format.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>JSON</code> - JSON source file format.
+     *        <code>JSON</code> – JSON source file format.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>XML</code> - XML source file format.
+     *        <code>XML</code> – XML source file format.
      *        </p>
      *        </li>
      *        </ul>

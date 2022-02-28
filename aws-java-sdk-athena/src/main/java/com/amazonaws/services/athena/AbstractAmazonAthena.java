@@ -188,6 +188,11 @@ public class AbstractAmazonAthena implements AmazonAthena {
     }
 
     @Override
+    public UpdateNamedQueryResult updateNamedQuery(UpdateNamedQueryRequest request) {
+        throw new java.lang.UnsupportedOperationException();
+    }
+
+    @Override
     public UpdatePreparedStatementResult updatePreparedStatement(UpdatePreparedStatementRequest request) {
         throw new java.lang.UnsupportedOperationException();
     }

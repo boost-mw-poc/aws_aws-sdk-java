@@ -95,6 +95,12 @@ public class Experiment implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private java.util.Map<String, String> tags;
+    /**
+     * <p>
+     * The configuration for experiment logging.
+     * </p>
+     */
+    private ExperimentLogConfiguration logConfiguration;
 
     /**
      * <p>
@@ -657,6 +663,46 @@ public class Experiment implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The configuration for experiment logging.
+     * </p>
+     * 
+     * @param logConfiguration
+     *        The configuration for experiment logging.
+     */
+
+    public void setLogConfiguration(ExperimentLogConfiguration logConfiguration) {
+        this.logConfiguration = logConfiguration;
+    }
+
+    /**
+     * <p>
+     * The configuration for experiment logging.
+     * </p>
+     * 
+     * @return The configuration for experiment logging.
+     */
+
+    public ExperimentLogConfiguration getLogConfiguration() {
+        return this.logConfiguration;
+    }
+
+    /**
+     * <p>
+     * The configuration for experiment logging.
+     * </p>
+     * 
+     * @param logConfiguration
+     *        The configuration for experiment logging.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Experiment withLogConfiguration(ExperimentLogConfiguration logConfiguration) {
+        setLogConfiguration(logConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -689,7 +735,9 @@ public class Experiment implements Serializable, Cloneable, StructuredPojo {
         if (getEndTime() != null)
             sb.append("EndTime: ").append(getEndTime()).append(",");
         if (getTags() != null)
-            sb.append("Tags: ").append(getTags());
+            sb.append("Tags: ").append(getTags()).append(",");
+        if (getLogConfiguration() != null)
+            sb.append("LogConfiguration: ").append(getLogConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -748,6 +796,10 @@ public class Experiment implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
             return false;
+        if (other.getLogConfiguration() == null ^ this.getLogConfiguration() == null)
+            return false;
+        if (other.getLogConfiguration() != null && other.getLogConfiguration().equals(this.getLogConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -767,6 +819,7 @@ public class Experiment implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getStartTime() == null) ? 0 : getStartTime().hashCode());
         hashCode = prime * hashCode + ((getEndTime() == null) ? 0 : getEndTime().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getLogConfiguration() == null) ? 0 : getLogConfiguration().hashCode());
         return hashCode;
     }
 

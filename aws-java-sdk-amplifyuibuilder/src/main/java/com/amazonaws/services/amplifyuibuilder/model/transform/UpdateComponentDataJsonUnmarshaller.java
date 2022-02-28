@@ -69,6 +69,11 @@ public class UpdateComponentDataJsonUnmarshaller implements Unmarshaller<UpdateC
                     context.nextToken();
                     updateComponentData.setComponentType(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("events", targetDepth)) {
+                    context.nextToken();
+                    updateComponentData.setEvents(new MapUnmarshaller<String, ComponentEvent>(context.getUnmarshaller(String.class),
+                            ComponentEventJsonUnmarshaller.getInstance()).unmarshall(context));
+                }
                 if (context.testExpression("id", targetDepth)) {
                     context.nextToken();
                     updateComponentData.setId(context.getUnmarshaller(String.class).unmarshall(context));
@@ -87,6 +92,10 @@ public class UpdateComponentDataJsonUnmarshaller implements Unmarshaller<UpdateC
                     context.nextToken();
                     updateComponentData.setProperties(new MapUnmarshaller<String, ComponentProperty>(context.getUnmarshaller(String.class),
                             ComponentPropertyJsonUnmarshaller.getInstance()).unmarshall(context));
+                }
+                if (context.testExpression("schemaVersion", targetDepth)) {
+                    context.nextToken();
+                    updateComponentData.setSchemaVersion(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("sourceId", targetDepth)) {
                     context.nextToken();

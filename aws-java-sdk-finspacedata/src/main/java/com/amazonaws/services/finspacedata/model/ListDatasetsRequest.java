@@ -28,7 +28,7 @@ public class ListDatasetsRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * A token indicating where a results page should begin.
+     * A token that indicates where a results page should begin.
      * </p>
      */
     private String nextToken;
@@ -41,11 +41,11 @@ public class ListDatasetsRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * A token indicating where a results page should begin.
+     * A token that indicates where a results page should begin.
      * </p>
      * 
      * @param nextToken
-     *        A token indicating where a results page should begin.
+     *        A token that indicates where a results page should begin.
      */
 
     public void setNextToken(String nextToken) {
@@ -54,10 +54,10 @@ public class ListDatasetsRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * A token indicating where a results page should begin.
+     * A token that indicates where a results page should begin.
      * </p>
      * 
-     * @return A token indicating where a results page should begin.
+     * @return A token that indicates where a results page should begin.
      */
 
     public String getNextToken() {
@@ -66,11 +66,11 @@ public class ListDatasetsRequest extends com.amazonaws.AmazonWebServiceRequest i
 
     /**
      * <p>
-     * A token indicating where a results page should begin.
+     * A token that indicates where a results page should begin.
      * </p>
      * 
      * @param nextToken
-     *        A token indicating where a results page should begin.
+     *        A token that indicates where a results page should begin.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

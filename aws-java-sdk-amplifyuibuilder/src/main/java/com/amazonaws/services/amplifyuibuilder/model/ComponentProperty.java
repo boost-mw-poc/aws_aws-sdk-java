@@ -49,13 +49,19 @@ public class ComponentProperty implements Serializable, Cloneable, StructuredPoj
     private ComponentPropertyBindingProperties collectionBindingProperties;
     /**
      * <p>
+     * The name of the component that is affected by an event.
+     * </p>
+     */
+    private String componentName;
+    /**
+     * <p>
      * A list of component properties to concatenate to create the value to assign to this component property.
      * </p>
      */
     private java.util.List<ComponentProperty> concat;
     /**
      * <p>
-     * The conditional expression to use to assign a value to the component property..
+     * The conditional expression to use to assign a value to the component property.
      * </p>
      */
     private ComponentConditionProperty condition;
@@ -79,7 +85,7 @@ public class ComponentProperty implements Serializable, Cloneable, StructuredPoj
     private String event;
     /**
      * <p>
-     * The default value assigned to property when the component is imported into an app.
+     * The default value assigned to the property when the component is imported into an app.
      * </p>
      */
     private String importedValue;
@@ -89,6 +95,12 @@ public class ComponentProperty implements Serializable, Cloneable, StructuredPoj
      * </p>
      */
     private String model;
+    /**
+     * <p>
+     * The name of the component's property that is affected by an event.
+     * </p>
+     */
+    private String property;
     /**
      * <p>
      * The component type.
@@ -258,6 +270,46 @@ public class ComponentProperty implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
+     * The name of the component that is affected by an event.
+     * </p>
+     * 
+     * @param componentName
+     *        The name of the component that is affected by an event.
+     */
+
+    public void setComponentName(String componentName) {
+        this.componentName = componentName;
+    }
+
+    /**
+     * <p>
+     * The name of the component that is affected by an event.
+     * </p>
+     * 
+     * @return The name of the component that is affected by an event.
+     */
+
+    public String getComponentName() {
+        return this.componentName;
+    }
+
+    /**
+     * <p>
+     * The name of the component that is affected by an event.
+     * </p>
+     * 
+     * @param componentName
+     *        The name of the component that is affected by an event.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ComponentProperty withComponentName(String componentName) {
+        setComponentName(componentName);
+        return this;
+    }
+
+    /**
+     * <p>
      * A list of component properties to concatenate to create the value to assign to this component property.
      * </p>
      * 
@@ -328,11 +380,11 @@ public class ComponentProperty implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The conditional expression to use to assign a value to the component property..
+     * The conditional expression to use to assign a value to the component property.
      * </p>
      * 
      * @param condition
-     *        The conditional expression to use to assign a value to the component property..
+     *        The conditional expression to use to assign a value to the component property.
      */
 
     public void setCondition(ComponentConditionProperty condition) {
@@ -341,10 +393,10 @@ public class ComponentProperty implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The conditional expression to use to assign a value to the component property..
+     * The conditional expression to use to assign a value to the component property.
      * </p>
      * 
-     * @return The conditional expression to use to assign a value to the component property..
+     * @return The conditional expression to use to assign a value to the component property.
      */
 
     public ComponentConditionProperty getCondition() {
@@ -353,11 +405,11 @@ public class ComponentProperty implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The conditional expression to use to assign a value to the component property..
+     * The conditional expression to use to assign a value to the component property.
      * </p>
      * 
      * @param condition
-     *        The conditional expression to use to assign a value to the component property..
+     *        The conditional expression to use to assign a value to the component property.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -500,11 +552,11 @@ public class ComponentProperty implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The default value assigned to property when the component is imported into an app.
+     * The default value assigned to the property when the component is imported into an app.
      * </p>
      * 
      * @param importedValue
-     *        The default value assigned to property when the component is imported into an app.
+     *        The default value assigned to the property when the component is imported into an app.
      */
 
     public void setImportedValue(String importedValue) {
@@ -513,10 +565,10 @@ public class ComponentProperty implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The default value assigned to property when the component is imported into an app.
+     * The default value assigned to the property when the component is imported into an app.
      * </p>
      * 
-     * @return The default value assigned to property when the component is imported into an app.
+     * @return The default value assigned to the property when the component is imported into an app.
      */
 
     public String getImportedValue() {
@@ -525,11 +577,11 @@ public class ComponentProperty implements Serializable, Cloneable, StructuredPoj
 
     /**
      * <p>
-     * The default value assigned to property when the component is imported into an app.
+     * The default value assigned to the property when the component is imported into an app.
      * </p>
      * 
      * @param importedValue
-     *        The default value assigned to property when the component is imported into an app.
+     *        The default value assigned to the property when the component is imported into an app.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -575,6 +627,46 @@ public class ComponentProperty implements Serializable, Cloneable, StructuredPoj
 
     public ComponentProperty withModel(String model) {
         setModel(model);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The name of the component's property that is affected by an event.
+     * </p>
+     * 
+     * @param property
+     *        The name of the component's property that is affected by an event.
+     */
+
+    public void setProperty(String property) {
+        this.property = property;
+    }
+
+    /**
+     * <p>
+     * The name of the component's property that is affected by an event.
+     * </p>
+     * 
+     * @return The name of the component's property that is affected by an event.
+     */
+
+    public String getProperty() {
+        return this.property;
+    }
+
+    /**
+     * <p>
+     * The name of the component's property that is affected by an event.
+     * </p>
+     * 
+     * @param property
+     *        The name of the component's property that is affected by an event.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ComponentProperty withProperty(String property) {
+        setProperty(property);
         return this;
     }
 
@@ -716,6 +808,8 @@ public class ComponentProperty implements Serializable, Cloneable, StructuredPoj
             sb.append("Bindings: ").append(getBindings()).append(",");
         if (getCollectionBindingProperties() != null)
             sb.append("CollectionBindingProperties: ").append(getCollectionBindingProperties()).append(",");
+        if (getComponentName() != null)
+            sb.append("ComponentName: ").append(getComponentName()).append(",");
         if (getConcat() != null)
             sb.append("Concat: ").append(getConcat()).append(",");
         if (getCondition() != null)
@@ -730,6 +824,8 @@ public class ComponentProperty implements Serializable, Cloneable, StructuredPoj
             sb.append("ImportedValue: ").append(getImportedValue()).append(",");
         if (getModel() != null)
             sb.append("Model: ").append(getModel()).append(",");
+        if (getProperty() != null)
+            sb.append("Property: ").append(getProperty()).append(",");
         if (getType() != null)
             sb.append("Type: ").append(getType()).append(",");
         if (getUserAttribute() != null)
@@ -762,6 +858,10 @@ public class ComponentProperty implements Serializable, Cloneable, StructuredPoj
             return false;
         if (other.getCollectionBindingProperties() != null && other.getCollectionBindingProperties().equals(this.getCollectionBindingProperties()) == false)
             return false;
+        if (other.getComponentName() == null ^ this.getComponentName() == null)
+            return false;
+        if (other.getComponentName() != null && other.getComponentName().equals(this.getComponentName()) == false)
+            return false;
         if (other.getConcat() == null ^ this.getConcat() == null)
             return false;
         if (other.getConcat() != null && other.getConcat().equals(this.getConcat()) == false)
@@ -790,6 +890,10 @@ public class ComponentProperty implements Serializable, Cloneable, StructuredPoj
             return false;
         if (other.getModel() != null && other.getModel().equals(this.getModel()) == false)
             return false;
+        if (other.getProperty() == null ^ this.getProperty() == null)
+            return false;
+        if (other.getProperty() != null && other.getProperty().equals(this.getProperty()) == false)
+            return false;
         if (other.getType() == null ^ this.getType() == null)
             return false;
         if (other.getType() != null && other.getType().equals(this.getType()) == false)
@@ -813,6 +917,7 @@ public class ComponentProperty implements Serializable, Cloneable, StructuredPoj
         hashCode = prime * hashCode + ((getBindingProperties() == null) ? 0 : getBindingProperties().hashCode());
         hashCode = prime * hashCode + ((getBindings() == null) ? 0 : getBindings().hashCode());
         hashCode = prime * hashCode + ((getCollectionBindingProperties() == null) ? 0 : getCollectionBindingProperties().hashCode());
+        hashCode = prime * hashCode + ((getComponentName() == null) ? 0 : getComponentName().hashCode());
         hashCode = prime * hashCode + ((getConcat() == null) ? 0 : getConcat().hashCode());
         hashCode = prime * hashCode + ((getCondition() == null) ? 0 : getCondition().hashCode());
         hashCode = prime * hashCode + ((getConfigured() == null) ? 0 : getConfigured().hashCode());
@@ -820,6 +925,7 @@ public class ComponentProperty implements Serializable, Cloneable, StructuredPoj
         hashCode = prime * hashCode + ((getEvent() == null) ? 0 : getEvent().hashCode());
         hashCode = prime * hashCode + ((getImportedValue() == null) ? 0 : getImportedValue().hashCode());
         hashCode = prime * hashCode + ((getModel() == null) ? 0 : getModel().hashCode());
+        hashCode = prime * hashCode + ((getProperty() == null) ? 0 : getProperty().hashCode());
         hashCode = prime * hashCode + ((getType() == null) ? 0 : getType().hashCode());
         hashCode = prime * hashCode + ((getUserAttribute() == null) ? 0 : getUserAttribute().hashCode());
         hashCode = prime * hashCode + ((getValue() == null) ? 0 : getValue().hashCode());

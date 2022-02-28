@@ -53,17 +53,17 @@ public class ChangesetSummary implements Serializable, Cloneable, StructuredPojo
      * <ul>
      * <li>
      * <p>
-     * <code>REPLACE</code> - Changeset is considered as a replacement to all prior loaded Changesets.
+     * <code>REPLACE</code> – Changeset is considered as a replacement to all prior loaded Changesets.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>APPEND</code> - Changeset is considered as an addition to the end of all prior loaded Changesets.
+     * <code>APPEND</code> – Changeset is considered as an addition to the end of all prior loaded Changesets.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>MODIFY</code> - Changeset is considered as a replacement to a specific prior ingested Changeset.
+     * <code>MODIFY</code> – Changeset is considered as a replacement to a specific prior ingested Changeset.
      * </p>
      * </li>
      * </ul>
@@ -83,7 +83,7 @@ public class ChangesetSummary implements Serializable, Cloneable, StructuredPojo
     private java.util.Map<String, String> formatParams;
     /**
      * <p>
-     * The timestamp at which the Changeset was created in FinSpace. The value is determined as Epoch time in
+     * The timestamp at which the Changeset was created in FinSpace. The value is determined as epoch time in
      * milliseconds. For example, the value for Monday, November 1, 2021 12:00:00 PM UTC is specified as 1635768000000.
      * </p>
      */
@@ -95,27 +95,27 @@ public class ChangesetSummary implements Serializable, Cloneable, StructuredPojo
      * <ul>
      * <li>
      * <p>
-     * <code>PENDING</code> - Changeset is pending creation.
+     * <code>PENDING</code> – Changeset is pending creation.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>FAILED</code> - Changeset creation has failed.
+     * <code>FAILED</code> – Changeset creation has failed.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>SUCCESS</code> - Changeset creation has succeeded.
+     * <code>SUCCESS</code> – Changeset creation has succeeded.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>RUNNING</code> - Changeset creation is running.
+     * <code>RUNNING</code> – Changeset creation is running.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>STOP_REQUESTED</code> - User requested Changeset creation to stop.
+     * <code>STOP_REQUESTED</code> – User requested Changeset creation to stop.
      * </p>
      * </li>
      * </ul>
@@ -129,14 +129,14 @@ public class ChangesetSummary implements Serializable, Cloneable, StructuredPojo
     private ChangesetErrorInfo errorInfo;
     /**
      * <p>
-     * Time until which the Changeset is active. The value is determined as Epoch time in milliseconds. For example, the
+     * Time until which the Changeset is active. The value is determined as epoch time in milliseconds. For example, the
      * value for Monday, November 1, 2021 12:00:00 PM UTC is specified as 1635768000000.
      * </p>
      */
     private Long activeUntilTimestamp;
     /**
      * <p>
-     * Beginning time from which the Changeset is active. The value is determined as Epoch time in milliseconds. For
+     * Beginning time from which the Changeset is active. The value is determined as epoch time in milliseconds. For
      * example, the value for Monday, November 1, 2021 12:00:00 PM UTC is specified as 1635768000000.
      * </p>
      */
@@ -281,17 +281,17 @@ public class ChangesetSummary implements Serializable, Cloneable, StructuredPojo
      * <ul>
      * <li>
      * <p>
-     * <code>REPLACE</code> - Changeset is considered as a replacement to all prior loaded Changesets.
+     * <code>REPLACE</code> – Changeset is considered as a replacement to all prior loaded Changesets.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>APPEND</code> - Changeset is considered as an addition to the end of all prior loaded Changesets.
+     * <code>APPEND</code> – Changeset is considered as an addition to the end of all prior loaded Changesets.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>MODIFY</code> - Changeset is considered as a replacement to a specific prior ingested Changeset.
+     * <code>MODIFY</code> – Changeset is considered as a replacement to a specific prior ingested Changeset.
      * </p>
      * </li>
      * </ul>
@@ -301,17 +301,17 @@ public class ChangesetSummary implements Serializable, Cloneable, StructuredPojo
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>REPLACE</code> - Changeset is considered as a replacement to all prior loaded Changesets.
+     *        <code>REPLACE</code> – Changeset is considered as a replacement to all prior loaded Changesets.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>APPEND</code> - Changeset is considered as an addition to the end of all prior loaded Changesets.
+     *        <code>APPEND</code> – Changeset is considered as an addition to the end of all prior loaded Changesets.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>MODIFY</code> - Changeset is considered as a replacement to a specific prior ingested Changeset.
+     *        <code>MODIFY</code> – Changeset is considered as a replacement to a specific prior ingested Changeset.
      *        </p>
      *        </li>
      * @see ChangeType
@@ -328,17 +328,17 @@ public class ChangesetSummary implements Serializable, Cloneable, StructuredPojo
      * <ul>
      * <li>
      * <p>
-     * <code>REPLACE</code> - Changeset is considered as a replacement to all prior loaded Changesets.
+     * <code>REPLACE</code> – Changeset is considered as a replacement to all prior loaded Changesets.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>APPEND</code> - Changeset is considered as an addition to the end of all prior loaded Changesets.
+     * <code>APPEND</code> – Changeset is considered as an addition to the end of all prior loaded Changesets.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>MODIFY</code> - Changeset is considered as a replacement to a specific prior ingested Changeset.
+     * <code>MODIFY</code> – Changeset is considered as a replacement to a specific prior ingested Changeset.
      * </p>
      * </li>
      * </ul>
@@ -347,17 +347,17 @@ public class ChangesetSummary implements Serializable, Cloneable, StructuredPojo
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>REPLACE</code> - Changeset is considered as a replacement to all prior loaded Changesets.
+     *         <code>REPLACE</code> – Changeset is considered as a replacement to all prior loaded Changesets.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>APPEND</code> - Changeset is considered as an addition to the end of all prior loaded Changesets.
+     *         <code>APPEND</code> – Changeset is considered as an addition to the end of all prior loaded Changesets.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>MODIFY</code> - Changeset is considered as a replacement to a specific prior ingested Changeset.
+     *         <code>MODIFY</code> – Changeset is considered as a replacement to a specific prior ingested Changeset.
      *         </p>
      *         </li>
      * @see ChangeType
@@ -374,17 +374,17 @@ public class ChangesetSummary implements Serializable, Cloneable, StructuredPojo
      * <ul>
      * <li>
      * <p>
-     * <code>REPLACE</code> - Changeset is considered as a replacement to all prior loaded Changesets.
+     * <code>REPLACE</code> – Changeset is considered as a replacement to all prior loaded Changesets.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>APPEND</code> - Changeset is considered as an addition to the end of all prior loaded Changesets.
+     * <code>APPEND</code> – Changeset is considered as an addition to the end of all prior loaded Changesets.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>MODIFY</code> - Changeset is considered as a replacement to a specific prior ingested Changeset.
+     * <code>MODIFY</code> – Changeset is considered as a replacement to a specific prior ingested Changeset.
      * </p>
      * </li>
      * </ul>
@@ -394,17 +394,17 @@ public class ChangesetSummary implements Serializable, Cloneable, StructuredPojo
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>REPLACE</code> - Changeset is considered as a replacement to all prior loaded Changesets.
+     *        <code>REPLACE</code> – Changeset is considered as a replacement to all prior loaded Changesets.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>APPEND</code> - Changeset is considered as an addition to the end of all prior loaded Changesets.
+     *        <code>APPEND</code> – Changeset is considered as an addition to the end of all prior loaded Changesets.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>MODIFY</code> - Changeset is considered as a replacement to a specific prior ingested Changeset.
+     *        <code>MODIFY</code> – Changeset is considered as a replacement to a specific prior ingested Changeset.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -423,17 +423,17 @@ public class ChangesetSummary implements Serializable, Cloneable, StructuredPojo
      * <ul>
      * <li>
      * <p>
-     * <code>REPLACE</code> - Changeset is considered as a replacement to all prior loaded Changesets.
+     * <code>REPLACE</code> – Changeset is considered as a replacement to all prior loaded Changesets.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>APPEND</code> - Changeset is considered as an addition to the end of all prior loaded Changesets.
+     * <code>APPEND</code> – Changeset is considered as an addition to the end of all prior loaded Changesets.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>MODIFY</code> - Changeset is considered as a replacement to a specific prior ingested Changeset.
+     * <code>MODIFY</code> – Changeset is considered as a replacement to a specific prior ingested Changeset.
      * </p>
      * </li>
      * </ul>
@@ -443,17 +443,17 @@ public class ChangesetSummary implements Serializable, Cloneable, StructuredPojo
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>REPLACE</code> - Changeset is considered as a replacement to all prior loaded Changesets.
+     *        <code>REPLACE</code> – Changeset is considered as a replacement to all prior loaded Changesets.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>APPEND</code> - Changeset is considered as an addition to the end of all prior loaded Changesets.
+     *        <code>APPEND</code> – Changeset is considered as an addition to the end of all prior loaded Changesets.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>MODIFY</code> - Changeset is considered as a replacement to a specific prior ingested Changeset.
+     *        <code>MODIFY</code> – Changeset is considered as a replacement to a specific prior ingested Changeset.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -603,12 +603,12 @@ public class ChangesetSummary implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The timestamp at which the Changeset was created in FinSpace. The value is determined as Epoch time in
+     * The timestamp at which the Changeset was created in FinSpace. The value is determined as epoch time in
      * milliseconds. For example, the value for Monday, November 1, 2021 12:00:00 PM UTC is specified as 1635768000000.
      * </p>
      * 
      * @param createTime
-     *        The timestamp at which the Changeset was created in FinSpace. The value is determined as Epoch time in
+     *        The timestamp at which the Changeset was created in FinSpace. The value is determined as epoch time in
      *        milliseconds. For example, the value for Monday, November 1, 2021 12:00:00 PM UTC is specified as
      *        1635768000000.
      */
@@ -619,11 +619,11 @@ public class ChangesetSummary implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The timestamp at which the Changeset was created in FinSpace. The value is determined as Epoch time in
+     * The timestamp at which the Changeset was created in FinSpace. The value is determined as epoch time in
      * milliseconds. For example, the value for Monday, November 1, 2021 12:00:00 PM UTC is specified as 1635768000000.
      * </p>
      * 
-     * @return The timestamp at which the Changeset was created in FinSpace. The value is determined as Epoch time in
+     * @return The timestamp at which the Changeset was created in FinSpace. The value is determined as epoch time in
      *         milliseconds. For example, the value for Monday, November 1, 2021 12:00:00 PM UTC is specified as
      *         1635768000000.
      */
@@ -634,12 +634,12 @@ public class ChangesetSummary implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * The timestamp at which the Changeset was created in FinSpace. The value is determined as Epoch time in
+     * The timestamp at which the Changeset was created in FinSpace. The value is determined as epoch time in
      * milliseconds. For example, the value for Monday, November 1, 2021 12:00:00 PM UTC is specified as 1635768000000.
      * </p>
      * 
      * @param createTime
-     *        The timestamp at which the Changeset was created in FinSpace. The value is determined as Epoch time in
+     *        The timestamp at which the Changeset was created in FinSpace. The value is determined as epoch time in
      *        milliseconds. For example, the value for Monday, November 1, 2021 12:00:00 PM UTC is specified as
      *        1635768000000.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -657,27 +657,27 @@ public class ChangesetSummary implements Serializable, Cloneable, StructuredPojo
      * <ul>
      * <li>
      * <p>
-     * <code>PENDING</code> - Changeset is pending creation.
+     * <code>PENDING</code> – Changeset is pending creation.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>FAILED</code> - Changeset creation has failed.
+     * <code>FAILED</code> – Changeset creation has failed.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>SUCCESS</code> - Changeset creation has succeeded.
+     * <code>SUCCESS</code> – Changeset creation has succeeded.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>RUNNING</code> - Changeset creation is running.
+     * <code>RUNNING</code> – Changeset creation is running.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>STOP_REQUESTED</code> - User requested Changeset creation to stop.
+     * <code>STOP_REQUESTED</code> – User requested Changeset creation to stop.
      * </p>
      * </li>
      * </ul>
@@ -687,27 +687,27 @@ public class ChangesetSummary implements Serializable, Cloneable, StructuredPojo
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>PENDING</code> - Changeset is pending creation.
+     *        <code>PENDING</code> – Changeset is pending creation.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>FAILED</code> - Changeset creation has failed.
+     *        <code>FAILED</code> – Changeset creation has failed.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>SUCCESS</code> - Changeset creation has succeeded.
+     *        <code>SUCCESS</code> – Changeset creation has succeeded.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>RUNNING</code> - Changeset creation is running.
+     *        <code>RUNNING</code> – Changeset creation is running.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>STOP_REQUESTED</code> - User requested Changeset creation to stop.
+     *        <code>STOP_REQUESTED</code> – User requested Changeset creation to stop.
      *        </p>
      *        </li>
      * @see IngestionStatus
@@ -724,27 +724,27 @@ public class ChangesetSummary implements Serializable, Cloneable, StructuredPojo
      * <ul>
      * <li>
      * <p>
-     * <code>PENDING</code> - Changeset is pending creation.
+     * <code>PENDING</code> – Changeset is pending creation.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>FAILED</code> - Changeset creation has failed.
+     * <code>FAILED</code> – Changeset creation has failed.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>SUCCESS</code> - Changeset creation has succeeded.
+     * <code>SUCCESS</code> – Changeset creation has succeeded.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>RUNNING</code> - Changeset creation is running.
+     * <code>RUNNING</code> – Changeset creation is running.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>STOP_REQUESTED</code> - User requested Changeset creation to stop.
+     * <code>STOP_REQUESTED</code> – User requested Changeset creation to stop.
      * </p>
      * </li>
      * </ul>
@@ -753,27 +753,27 @@ public class ChangesetSummary implements Serializable, Cloneable, StructuredPojo
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>PENDING</code> - Changeset is pending creation.
+     *         <code>PENDING</code> – Changeset is pending creation.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>FAILED</code> - Changeset creation has failed.
+     *         <code>FAILED</code> – Changeset creation has failed.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>SUCCESS</code> - Changeset creation has succeeded.
+     *         <code>SUCCESS</code> – Changeset creation has succeeded.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>RUNNING</code> - Changeset creation is running.
+     *         <code>RUNNING</code> – Changeset creation is running.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>STOP_REQUESTED</code> - User requested Changeset creation to stop.
+     *         <code>STOP_REQUESTED</code> – User requested Changeset creation to stop.
      *         </p>
      *         </li>
      * @see IngestionStatus
@@ -790,27 +790,27 @@ public class ChangesetSummary implements Serializable, Cloneable, StructuredPojo
      * <ul>
      * <li>
      * <p>
-     * <code>PENDING</code> - Changeset is pending creation.
+     * <code>PENDING</code> – Changeset is pending creation.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>FAILED</code> - Changeset creation has failed.
+     * <code>FAILED</code> – Changeset creation has failed.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>SUCCESS</code> - Changeset creation has succeeded.
+     * <code>SUCCESS</code> – Changeset creation has succeeded.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>RUNNING</code> - Changeset creation is running.
+     * <code>RUNNING</code> – Changeset creation is running.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>STOP_REQUESTED</code> - User requested Changeset creation to stop.
+     * <code>STOP_REQUESTED</code> – User requested Changeset creation to stop.
      * </p>
      * </li>
      * </ul>
@@ -820,27 +820,27 @@ public class ChangesetSummary implements Serializable, Cloneable, StructuredPojo
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>PENDING</code> - Changeset is pending creation.
+     *        <code>PENDING</code> – Changeset is pending creation.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>FAILED</code> - Changeset creation has failed.
+     *        <code>FAILED</code> – Changeset creation has failed.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>SUCCESS</code> - Changeset creation has succeeded.
+     *        <code>SUCCESS</code> – Changeset creation has succeeded.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>RUNNING</code> - Changeset creation is running.
+     *        <code>RUNNING</code> – Changeset creation is running.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>STOP_REQUESTED</code> - User requested Changeset creation to stop.
+     *        <code>STOP_REQUESTED</code> – User requested Changeset creation to stop.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -859,27 +859,27 @@ public class ChangesetSummary implements Serializable, Cloneable, StructuredPojo
      * <ul>
      * <li>
      * <p>
-     * <code>PENDING</code> - Changeset is pending creation.
+     * <code>PENDING</code> – Changeset is pending creation.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>FAILED</code> - Changeset creation has failed.
+     * <code>FAILED</code> – Changeset creation has failed.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>SUCCESS</code> - Changeset creation has succeeded.
+     * <code>SUCCESS</code> – Changeset creation has succeeded.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>RUNNING</code> - Changeset creation is running.
+     * <code>RUNNING</code> – Changeset creation is running.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>STOP_REQUESTED</code> - User requested Changeset creation to stop.
+     * <code>STOP_REQUESTED</code> – User requested Changeset creation to stop.
      * </p>
      * </li>
      * </ul>
@@ -889,27 +889,27 @@ public class ChangesetSummary implements Serializable, Cloneable, StructuredPojo
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>PENDING</code> - Changeset is pending creation.
+     *        <code>PENDING</code> – Changeset is pending creation.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>FAILED</code> - Changeset creation has failed.
+     *        <code>FAILED</code> – Changeset creation has failed.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>SUCCESS</code> - Changeset creation has succeeded.
+     *        <code>SUCCESS</code> – Changeset creation has succeeded.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>RUNNING</code> - Changeset creation is running.
+     *        <code>RUNNING</code> – Changeset creation is running.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>STOP_REQUESTED</code> - User requested Changeset creation to stop.
+     *        <code>STOP_REQUESTED</code> – User requested Changeset creation to stop.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -963,12 +963,12 @@ public class ChangesetSummary implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * Time until which the Changeset is active. The value is determined as Epoch time in milliseconds. For example, the
+     * Time until which the Changeset is active. The value is determined as epoch time in milliseconds. For example, the
      * value for Monday, November 1, 2021 12:00:00 PM UTC is specified as 1635768000000.
      * </p>
      * 
      * @param activeUntilTimestamp
-     *        Time until which the Changeset is active. The value is determined as Epoch time in milliseconds. For
+     *        Time until which the Changeset is active. The value is determined as epoch time in milliseconds. For
      *        example, the value for Monday, November 1, 2021 12:00:00 PM UTC is specified as 1635768000000.
      */
 
@@ -978,11 +978,11 @@ public class ChangesetSummary implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * Time until which the Changeset is active. The value is determined as Epoch time in milliseconds. For example, the
+     * Time until which the Changeset is active. The value is determined as epoch time in milliseconds. For example, the
      * value for Monday, November 1, 2021 12:00:00 PM UTC is specified as 1635768000000.
      * </p>
      * 
-     * @return Time until which the Changeset is active. The value is determined as Epoch time in milliseconds. For
+     * @return Time until which the Changeset is active. The value is determined as epoch time in milliseconds. For
      *         example, the value for Monday, November 1, 2021 12:00:00 PM UTC is specified as 1635768000000.
      */
 
@@ -992,12 +992,12 @@ public class ChangesetSummary implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * Time until which the Changeset is active. The value is determined as Epoch time in milliseconds. For example, the
+     * Time until which the Changeset is active. The value is determined as epoch time in milliseconds. For example, the
      * value for Monday, November 1, 2021 12:00:00 PM UTC is specified as 1635768000000.
      * </p>
      * 
      * @param activeUntilTimestamp
-     *        Time until which the Changeset is active. The value is determined as Epoch time in milliseconds. For
+     *        Time until which the Changeset is active. The value is determined as epoch time in milliseconds. For
      *        example, the value for Monday, November 1, 2021 12:00:00 PM UTC is specified as 1635768000000.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -1009,12 +1009,12 @@ public class ChangesetSummary implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * Beginning time from which the Changeset is active. The value is determined as Epoch time in milliseconds. For
+     * Beginning time from which the Changeset is active. The value is determined as epoch time in milliseconds. For
      * example, the value for Monday, November 1, 2021 12:00:00 PM UTC is specified as 1635768000000.
      * </p>
      * 
      * @param activeFromTimestamp
-     *        Beginning time from which the Changeset is active. The value is determined as Epoch time in milliseconds.
+     *        Beginning time from which the Changeset is active. The value is determined as epoch time in milliseconds.
      *        For example, the value for Monday, November 1, 2021 12:00:00 PM UTC is specified as 1635768000000.
      */
 
@@ -1024,11 +1024,11 @@ public class ChangesetSummary implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * Beginning time from which the Changeset is active. The value is determined as Epoch time in milliseconds. For
+     * Beginning time from which the Changeset is active. The value is determined as epoch time in milliseconds. For
      * example, the value for Monday, November 1, 2021 12:00:00 PM UTC is specified as 1635768000000.
      * </p>
      * 
-     * @return Beginning time from which the Changeset is active. The value is determined as Epoch time in milliseconds.
+     * @return Beginning time from which the Changeset is active. The value is determined as epoch time in milliseconds.
      *         For example, the value for Monday, November 1, 2021 12:00:00 PM UTC is specified as 1635768000000.
      */
 
@@ -1038,12 +1038,12 @@ public class ChangesetSummary implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * Beginning time from which the Changeset is active. The value is determined as Epoch time in milliseconds. For
+     * Beginning time from which the Changeset is active. The value is determined as epoch time in milliseconds. For
      * example, the value for Monday, November 1, 2021 12:00:00 PM UTC is specified as 1635768000000.
      * </p>
      * 
      * @param activeFromTimestamp
-     *        Beginning time from which the Changeset is active. The value is determined as Epoch time in milliseconds.
+     *        Beginning time from which the Changeset is active. The value is determined as epoch time in milliseconds.
      *        For example, the value for Monday, November 1, 2021 12:00:00 PM UTC is specified as 1635768000000.
      * @return Returns a reference to this object so that method calls can be chained together.
      */

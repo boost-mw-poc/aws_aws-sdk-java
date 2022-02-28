@@ -1565,7 +1565,7 @@ public class Branch implements Serializable, Cloneable, StructuredPojo {
         if (getBasicAuthCredentials() != null)
             sb.append("BasicAuthCredentials: ").append("***Sensitive Data Redacted***").append(",");
         if (getBuildSpec() != null)
-            sb.append("BuildSpec: ").append(getBuildSpec()).append(",");
+            sb.append("BuildSpec: ").append("***Sensitive Data Redacted***").append(",");
         if (getTtl() != null)
             sb.append("Ttl: ").append(getTtl()).append(",");
         if (getAssociatedResources() != null)

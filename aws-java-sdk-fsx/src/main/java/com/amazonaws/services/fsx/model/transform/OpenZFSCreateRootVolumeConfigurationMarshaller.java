@@ -28,6 +28,8 @@ import com.amazonaws.annotation.SdkInternalApi;
 @SdkInternalApi
 public class OpenZFSCreateRootVolumeConfigurationMarshaller {
 
+    private static final MarshallingInfo<Integer> RECORDSIZEKIB_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RecordSizeKiB").build();
     private static final MarshallingInfo<String> DATACOMPRESSIONTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DataCompressionType").build();
     private static final MarshallingInfo<List> NFSEXPORTS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
@@ -55,6 +57,7 @@ public class OpenZFSCreateRootVolumeConfigurationMarshaller {
         }
 
         try {
+            protocolMarshaller.marshall(openZFSCreateRootVolumeConfiguration.getRecordSizeKiB(), RECORDSIZEKIB_BINDING);
             protocolMarshaller.marshall(openZFSCreateRootVolumeConfiguration.getDataCompressionType(), DATACOMPRESSIONTYPE_BINDING);
             protocolMarshaller.marshall(openZFSCreateRootVolumeConfiguration.getNfsExports(), NFSEXPORTS_BINDING);
             protocolMarshaller.marshall(openZFSCreateRootVolumeConfiguration.getUserAndGroupQuotas(), USERANDGROUPQUOTAS_BINDING);

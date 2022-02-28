@@ -62,6 +62,12 @@ public class UpdateExperimentTemplateRequest extends com.amazonaws.AmazonWebServ
      * </p>
      */
     private String roleArn;
+    /**
+     * <p>
+     * The configuration for experiment logging.
+     * </p>
+     */
+    private UpdateExperimentTemplateLogConfigurationInput logConfiguration;
 
     /**
      * <p>
@@ -396,6 +402,46 @@ public class UpdateExperimentTemplateRequest extends com.amazonaws.AmazonWebServ
     }
 
     /**
+     * <p>
+     * The configuration for experiment logging.
+     * </p>
+     * 
+     * @param logConfiguration
+     *        The configuration for experiment logging.
+     */
+
+    public void setLogConfiguration(UpdateExperimentTemplateLogConfigurationInput logConfiguration) {
+        this.logConfiguration = logConfiguration;
+    }
+
+    /**
+     * <p>
+     * The configuration for experiment logging.
+     * </p>
+     * 
+     * @return The configuration for experiment logging.
+     */
+
+    public UpdateExperimentTemplateLogConfigurationInput getLogConfiguration() {
+        return this.logConfiguration;
+    }
+
+    /**
+     * <p>
+     * The configuration for experiment logging.
+     * </p>
+     * 
+     * @param logConfiguration
+     *        The configuration for experiment logging.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateExperimentTemplateRequest withLogConfiguration(UpdateExperimentTemplateLogConfigurationInput logConfiguration) {
+        setLogConfiguration(logConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -418,7 +464,9 @@ public class UpdateExperimentTemplateRequest extends com.amazonaws.AmazonWebServ
         if (getActions() != null)
             sb.append("Actions: ").append(getActions()).append(",");
         if (getRoleArn() != null)
-            sb.append("RoleArn: ").append(getRoleArn());
+            sb.append("RoleArn: ").append(getRoleArn()).append(",");
+        if (getLogConfiguration() != null)
+            sb.append("LogConfiguration: ").append(getLogConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -457,6 +505,10 @@ public class UpdateExperimentTemplateRequest extends com.amazonaws.AmazonWebServ
             return false;
         if (other.getRoleArn() != null && other.getRoleArn().equals(this.getRoleArn()) == false)
             return false;
+        if (other.getLogConfiguration() == null ^ this.getLogConfiguration() == null)
+            return false;
+        if (other.getLogConfiguration() != null && other.getLogConfiguration().equals(this.getLogConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -471,6 +523,7 @@ public class UpdateExperimentTemplateRequest extends com.amazonaws.AmazonWebServ
         hashCode = prime * hashCode + ((getTargets() == null) ? 0 : getTargets().hashCode());
         hashCode = prime * hashCode + ((getActions() == null) ? 0 : getActions().hashCode());
         hashCode = prime * hashCode + ((getRoleArn() == null) ? 0 : getRoleArn().hashCode());
+        hashCode = prime * hashCode + ((getLogConfiguration() == null) ? 0 : getLogConfiguration().hashCode());
         return hashCode;
     }
 

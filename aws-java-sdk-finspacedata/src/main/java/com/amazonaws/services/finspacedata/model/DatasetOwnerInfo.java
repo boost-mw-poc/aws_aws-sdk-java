@@ -30,7 +30,7 @@ public class DatasetOwnerInfo implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * Name of the Dataset owner.
+     * The name of the Dataset owner.
      * </p>
      */
     private String name;
@@ -49,11 +49,11 @@ public class DatasetOwnerInfo implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * Name of the Dataset owner.
+     * The name of the Dataset owner.
      * </p>
      * 
      * @param name
-     *        Name of the Dataset owner.
+     *        The name of the Dataset owner.
      */
 
     public void setName(String name) {
@@ -62,10 +62,10 @@ public class DatasetOwnerInfo implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * Name of the Dataset owner.
+     * The name of the Dataset owner.
      * </p>
      * 
-     * @return Name of the Dataset owner.
+     * @return The name of the Dataset owner.
      */
 
     public String getName() {
@@ -74,11 +74,11 @@ public class DatasetOwnerInfo implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * Name of the Dataset owner.
+     * The name of the Dataset owner.
      * </p>
      * 
      * @param name
-     *        Name of the Dataset owner.
+     *        The name of the Dataset owner.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -184,7 +184,7 @@ public class DatasetOwnerInfo implements Serializable, Cloneable, StructuredPojo
         if (getPhoneNumber() != null)
             sb.append("PhoneNumber: ").append(getPhoneNumber()).append(",");
         if (getEmail() != null)
-            sb.append("Email: ").append(getEmail());
+            sb.append("Email: ").append("***Sensitive Data Redacted***");
         sb.append("}");
         return sb.toString();
     }

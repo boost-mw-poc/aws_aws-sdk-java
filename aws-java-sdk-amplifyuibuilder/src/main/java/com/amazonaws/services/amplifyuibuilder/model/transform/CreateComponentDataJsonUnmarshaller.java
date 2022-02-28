@@ -69,6 +69,11 @@ public class CreateComponentDataJsonUnmarshaller implements Unmarshaller<CreateC
                     context.nextToken();
                     createComponentData.setComponentType(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("events", targetDepth)) {
+                    context.nextToken();
+                    createComponentData.setEvents(new MapUnmarshaller<String, ComponentEvent>(context.getUnmarshaller(String.class),
+                            ComponentEventJsonUnmarshaller.getInstance()).unmarshall(context));
+                }
                 if (context.testExpression("name", targetDepth)) {
                     context.nextToken();
                     createComponentData.setName(context.getUnmarshaller(String.class).unmarshall(context));
@@ -83,6 +88,10 @@ public class CreateComponentDataJsonUnmarshaller implements Unmarshaller<CreateC
                     context.nextToken();
                     createComponentData.setProperties(new MapUnmarshaller<String, ComponentProperty>(context.getUnmarshaller(String.class),
                             ComponentPropertyJsonUnmarshaller.getInstance()).unmarshall(context));
+                }
+                if (context.testExpression("schemaVersion", targetDepth)) {
+                    context.nextToken();
+                    createComponentData.setSchemaVersion(context.getUnmarshaller(String.class).unmarshall(context));
                 }
                 if (context.testExpression("sourceId", targetDepth)) {
                     context.nextToken();

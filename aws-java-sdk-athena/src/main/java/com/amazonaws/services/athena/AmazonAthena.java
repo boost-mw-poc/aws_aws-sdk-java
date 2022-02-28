@@ -736,6 +736,24 @@ public interface AmazonAthena {
 
     /**
      * <p>
+     * Updates a <a>NamedQuery</a> object. The database or workgroup cannot be updated.
+     * </p>
+     * 
+     * @param updateNamedQueryRequest
+     * @return Result of the UpdateNamedQuery operation returned by the service.
+     * @throws InternalServerException
+     *         Indicates a platform issue, which may be due to a transient condition or outage.
+     * @throws InvalidRequestException
+     *         Indicates that something is wrong with the input to the request. For example, a required parameter may be
+     *         missing or out of range.
+     * @sample AmazonAthena.UpdateNamedQuery
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/athena-2017-05-18/UpdateNamedQuery" target="_top">AWS API
+     *      Documentation</a>
+     */
+    UpdateNamedQueryResult updateNamedQuery(UpdateNamedQueryRequest updateNamedQueryRequest);
+
+    /**
+     * <p>
      * Updates a prepared statement.
      * </p>
      * 

@@ -32,13 +32,13 @@ public class GetWorkingLocationRequest extends com.amazonaws.AmazonWebServiceReq
      * <ul>
      * <li>
      * <p>
-     * <code>SAGEMAKER</code> - Use the Amazon S3 location as a temporary location to store data content when working
+     * <code>SAGEMAKER</code> – Use the Amazon S3 location as a temporary location to store data content when working
      * with FinSpace Notebooks that run on SageMaker studio.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>INGESTION</code> - Use the Amazon S3 location as a staging location to copy your data content and then use
+     * <code>INGESTION</code> – Use the Amazon S3 location as a staging location to copy your data content and then use
      * the location with the Changeset creation operation.
      * </p>
      * </li>
@@ -53,13 +53,13 @@ public class GetWorkingLocationRequest extends com.amazonaws.AmazonWebServiceReq
      * <ul>
      * <li>
      * <p>
-     * <code>SAGEMAKER</code> - Use the Amazon S3 location as a temporary location to store data content when working
+     * <code>SAGEMAKER</code> – Use the Amazon S3 location as a temporary location to store data content when working
      * with FinSpace Notebooks that run on SageMaker studio.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>INGESTION</code> - Use the Amazon S3 location as a staging location to copy your data content and then use
+     * <code>INGESTION</code> – Use the Amazon S3 location as a staging location to copy your data content and then use
      * the location with the Changeset creation operation.
      * </p>
      * </li>
@@ -70,13 +70,13 @@ public class GetWorkingLocationRequest extends com.amazonaws.AmazonWebServiceReq
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>SAGEMAKER</code> - Use the Amazon S3 location as a temporary location to store data content when
+     *        <code>SAGEMAKER</code> – Use the Amazon S3 location as a temporary location to store data content when
      *        working with FinSpace Notebooks that run on SageMaker studio.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>INGESTION</code> - Use the Amazon S3 location as a staging location to copy your data content and
+     *        <code>INGESTION</code> – Use the Amazon S3 location as a staging location to copy your data content and
      *        then use the location with the Changeset creation operation.
      *        </p>
      *        </li>
@@ -94,13 +94,13 @@ public class GetWorkingLocationRequest extends com.amazonaws.AmazonWebServiceReq
      * <ul>
      * <li>
      * <p>
-     * <code>SAGEMAKER</code> - Use the Amazon S3 location as a temporary location to store data content when working
+     * <code>SAGEMAKER</code> – Use the Amazon S3 location as a temporary location to store data content when working
      * with FinSpace Notebooks that run on SageMaker studio.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>INGESTION</code> - Use the Amazon S3 location as a staging location to copy your data content and then use
+     * <code>INGESTION</code> – Use the Amazon S3 location as a staging location to copy your data content and then use
      * the location with the Changeset creation operation.
      * </p>
      * </li>
@@ -110,13 +110,13 @@ public class GetWorkingLocationRequest extends com.amazonaws.AmazonWebServiceReq
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>SAGEMAKER</code> - Use the Amazon S3 location as a temporary location to store data content when
+     *         <code>SAGEMAKER</code> – Use the Amazon S3 location as a temporary location to store data content when
      *         working with FinSpace Notebooks that run on SageMaker studio.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>INGESTION</code> - Use the Amazon S3 location as a staging location to copy your data content and
+     *         <code>INGESTION</code> – Use the Amazon S3 location as a staging location to copy your data content and
      *         then use the location with the Changeset creation operation.
      *         </p>
      *         </li>
@@ -134,13 +134,13 @@ public class GetWorkingLocationRequest extends com.amazonaws.AmazonWebServiceReq
      * <ul>
      * <li>
      * <p>
-     * <code>SAGEMAKER</code> - Use the Amazon S3 location as a temporary location to store data content when working
+     * <code>SAGEMAKER</code> – Use the Amazon S3 location as a temporary location to store data content when working
      * with FinSpace Notebooks that run on SageMaker studio.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>INGESTION</code> - Use the Amazon S3 location as a staging location to copy your data content and then use
+     * <code>INGESTION</code> – Use the Amazon S3 location as a staging location to copy your data content and then use
      * the location with the Changeset creation operation.
      * </p>
      * </li>
@@ -151,13 +151,13 @@ public class GetWorkingLocationRequest extends com.amazonaws.AmazonWebServiceReq
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>SAGEMAKER</code> - Use the Amazon S3 location as a temporary location to store data content when
+     *        <code>SAGEMAKER</code> – Use the Amazon S3 location as a temporary location to store data content when
      *        working with FinSpace Notebooks that run on SageMaker studio.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>INGESTION</code> - Use the Amazon S3 location as a staging location to copy your data content and
+     *        <code>INGESTION</code> – Use the Amazon S3 location as a staging location to copy your data content and
      *        then use the location with the Changeset creation operation.
      *        </p>
      *        </li>
@@ -177,13 +177,13 @@ public class GetWorkingLocationRequest extends com.amazonaws.AmazonWebServiceReq
      * <ul>
      * <li>
      * <p>
-     * <code>SAGEMAKER</code> - Use the Amazon S3 location as a temporary location to store data content when working
+     * <code>SAGEMAKER</code> – Use the Amazon S3 location as a temporary location to store data content when working
      * with FinSpace Notebooks that run on SageMaker studio.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>INGESTION</code> - Use the Amazon S3 location as a staging location to copy your data content and then use
+     * <code>INGESTION</code> – Use the Amazon S3 location as a staging location to copy your data content and then use
      * the location with the Changeset creation operation.
      * </p>
      * </li>
@@ -194,13 +194,13 @@ public class GetWorkingLocationRequest extends com.amazonaws.AmazonWebServiceReq
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>SAGEMAKER</code> - Use the Amazon S3 location as a temporary location to store data content when
+     *        <code>SAGEMAKER</code> – Use the Amazon S3 location as a temporary location to store data content when
      *        working with FinSpace Notebooks that run on SageMaker studio.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>INGESTION</code> - Use the Amazon S3 location as a staging location to copy your data content and
+     *        <code>INGESTION</code> – Use the Amazon S3 location as a staging location to copy your data content and
      *        then use the location with the Changeset creation operation.
      *        </p>
      *        </li>

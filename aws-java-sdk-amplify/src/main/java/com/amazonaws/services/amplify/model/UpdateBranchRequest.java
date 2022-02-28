@@ -1001,7 +1001,7 @@ public class UpdateBranchRequest extends com.amazonaws.AmazonWebServiceRequest i
         if (getEnablePerformanceMode() != null)
             sb.append("EnablePerformanceMode: ").append(getEnablePerformanceMode()).append(",");
         if (getBuildSpec() != null)
-            sb.append("BuildSpec: ").append(getBuildSpec()).append(",");
+            sb.append("BuildSpec: ").append("***Sensitive Data Redacted***").append(",");
         if (getTtl() != null)
             sb.append("Ttl: ").append(getTtl()).append(",");
         if (getDisplayName() != null)

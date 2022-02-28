@@ -29,6 +29,12 @@ public class ExportThemesResult extends com.amazonaws.AmazonWebServiceResult<com
      * </p>
      */
     private java.util.List<Theme> entities;
+    /**
+     * <p>
+     * The pagination token that's included if more results are available.
+     * </p>
+     */
+    private String nextToken;
 
     /**
      * <p>
@@ -101,6 +107,46 @@ public class ExportThemesResult extends com.amazonaws.AmazonWebServiceResult<com
     }
 
     /**
+     * <p>
+     * The pagination token that's included if more results are available.
+     * </p>
+     * 
+     * @param nextToken
+     *        The pagination token that's included if more results are available.
+     */
+
+    public void setNextToken(String nextToken) {
+        this.nextToken = nextToken;
+    }
+
+    /**
+     * <p>
+     * The pagination token that's included if more results are available.
+     * </p>
+     * 
+     * @return The pagination token that's included if more results are available.
+     */
+
+    public String getNextToken() {
+        return this.nextToken;
+    }
+
+    /**
+     * <p>
+     * The pagination token that's included if more results are available.
+     * </p>
+     * 
+     * @param nextToken
+     *        The pagination token that's included if more results are available.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ExportThemesResult withNextToken(String nextToken) {
+        setNextToken(nextToken);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -113,7 +159,9 @@ public class ExportThemesResult extends com.amazonaws.AmazonWebServiceResult<com
         StringBuilder sb = new StringBuilder();
         sb.append("{");
         if (getEntities() != null)
-            sb.append("Entities: ").append(getEntities());
+            sb.append("Entities: ").append(getEntities()).append(",");
+        if (getNextToken() != null)
+            sb.append("NextToken: ").append(getNextToken());
         sb.append("}");
         return sb.toString();
     }
@@ -132,6 +180,10 @@ public class ExportThemesResult extends com.amazonaws.AmazonWebServiceResult<com
             return false;
         if (other.getEntities() != null && other.getEntities().equals(this.getEntities()) == false)
             return false;
+        if (other.getNextToken() == null ^ this.getNextToken() == null)
+            return false;
+        if (other.getNextToken() != null && other.getNextToken().equals(this.getNextToken()) == false)
+            return false;
         return true;
     }
 
@@ -141,6 +193,7 @@ public class ExportThemesResult extends com.amazonaws.AmazonWebServiceResult<com
         int hashCode = 1;
 
         hashCode = prime * hashCode + ((getEntities() == null) ? 0 : getEntities().hashCode());
+        hashCode = prime * hashCode + ((getNextToken() == null) ? 0 : getNextToken().hashCode());
         return hashCode;
     }
 

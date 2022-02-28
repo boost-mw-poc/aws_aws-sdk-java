@@ -36,7 +36,7 @@ public class PermissionGroupParams implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The unique identifier of the PermissionGroup.
+     * The unique identifier for the <code>PermissionGroup</code>.
      * </p>
      */
     private String permissionGroupId;
@@ -49,11 +49,11 @@ public class PermissionGroupParams implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The unique identifier of the PermissionGroup.
+     * The unique identifier for the <code>PermissionGroup</code>.
      * </p>
      * 
      * @param permissionGroupId
-     *        The unique identifier of the PermissionGroup.
+     *        The unique identifier for the <code>PermissionGroup</code>.
      */
 
     public void setPermissionGroupId(String permissionGroupId) {
@@ -62,10 +62,10 @@ public class PermissionGroupParams implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The unique identifier of the PermissionGroup.
+     * The unique identifier for the <code>PermissionGroup</code>.
      * </p>
      * 
-     * @return The unique identifier of the PermissionGroup.
+     * @return The unique identifier for the <code>PermissionGroup</code>.
      */
 
     public String getPermissionGroupId() {
@@ -74,11 +74,11 @@ public class PermissionGroupParams implements Serializable, Cloneable, Structure
 
     /**
      * <p>
-     * The unique identifier of the PermissionGroup.
+     * The unique identifier for the <code>PermissionGroup</code>.
      * </p>
      * 
      * @param permissionGroupId
-     *        The unique identifier of the PermissionGroup.
+     *        The unique identifier for the <code>PermissionGroup</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

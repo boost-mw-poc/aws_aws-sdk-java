@@ -32,6 +32,8 @@ public class DeleteFileSystemOpenZFSConfigurationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SkipFinalBackup").build();
     private static final MarshallingInfo<List> FINALBACKUPTAGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("FinalBackupTags").build();
+    private static final MarshallingInfo<List> OPTIONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("Options").build();
 
     private static final DeleteFileSystemOpenZFSConfigurationMarshaller instance = new DeleteFileSystemOpenZFSConfigurationMarshaller();
 
@@ -51,6 +53,7 @@ public class DeleteFileSystemOpenZFSConfigurationMarshaller {
         try {
             protocolMarshaller.marshall(deleteFileSystemOpenZFSConfiguration.getSkipFinalBackup(), SKIPFINALBACKUP_BINDING);
             protocolMarshaller.marshall(deleteFileSystemOpenZFSConfiguration.getFinalBackupTags(), FINALBACKUPTAGS_BINDING);
+            protocolMarshaller.marshall(deleteFileSystemOpenZFSConfiguration.getOptions(), OPTIONS_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

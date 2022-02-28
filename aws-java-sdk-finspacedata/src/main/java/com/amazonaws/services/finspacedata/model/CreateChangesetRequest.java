@@ -40,22 +40,22 @@ public class CreateChangesetRequest extends com.amazonaws.AmazonWebServiceReques
     private String datasetId;
     /**
      * <p>
-     * Option to indicate how a Changeset will be applied to a Dataset.
+     * The option to indicate how a Changeset will be applied to a Dataset.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>REPLACE</code> - Changeset will be considered as a replacement to all prior loaded Changesets.
+     * <code>REPLACE</code> – Changeset will be considered as a replacement to all prior loaded Changesets.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>APPEND</code> - Changeset will be considered as an addition to the end of all prior loaded Changesets.
+     * <code>APPEND</code> – Changeset will be considered as an addition to the end of all prior loaded Changesets.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>MODIFY</code> - Changeset is considered as a replacement to a specific prior ingested Changeset.
+     * <code>MODIFY</code> – Changeset is considered as a replacement to a specific prior ingested Changeset.
      * </p>
      * </li>
      * </ul>
@@ -79,7 +79,7 @@ public class CreateChangesetRequest extends com.amazonaws.AmazonWebServiceReques
      * The S3 path that you specify must allow the FinSpace role access. To do that, you first need to configure the IAM
      * policy on S3 bucket. For more information, see <a
      * href="https://docs.aws.amazon.com/finspace/latest/data-api/fs-using-the-finspace-api.html#access-s3-buckets"
-     * >Loading data from an Amazon S3 Bucket using the FinSpace API</a>section.
+     * >Loading data from an Amazon S3 Bucket using the FinSpace API</a> section.
      * </p>
      */
     private java.util.Map<String, String> sourceParams;
@@ -95,22 +95,22 @@ public class CreateChangesetRequest extends com.amazonaws.AmazonWebServiceReques
      * <ul>
      * <li>
      * <p>
-     * <code>PARQUET</code> - Parquet source file format.
+     * <code>PARQUET</code> – Parquet source file format.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>CSV</code> - CSV source file format.
+     * <code>CSV</code> – CSV source file format.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>JSON</code> - JSON source file format.
+     * <code>JSON</code> – JSON source file format.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>XML</code> - XML source file format.
+     * <code>XML</code> – XML source file format.
      * </p>
      * </li>
      * </ul>
@@ -217,43 +217,43 @@ public class CreateChangesetRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * Option to indicate how a Changeset will be applied to a Dataset.
+     * The option to indicate how a Changeset will be applied to a Dataset.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>REPLACE</code> - Changeset will be considered as a replacement to all prior loaded Changesets.
+     * <code>REPLACE</code> – Changeset will be considered as a replacement to all prior loaded Changesets.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>APPEND</code> - Changeset will be considered as an addition to the end of all prior loaded Changesets.
+     * <code>APPEND</code> – Changeset will be considered as an addition to the end of all prior loaded Changesets.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>MODIFY</code> - Changeset is considered as a replacement to a specific prior ingested Changeset.
+     * <code>MODIFY</code> – Changeset is considered as a replacement to a specific prior ingested Changeset.
      * </p>
      * </li>
      * </ul>
      * 
      * @param changeType
-     *        Option to indicate how a Changeset will be applied to a Dataset.</p>
+     *        The option to indicate how a Changeset will be applied to a Dataset.</p>
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>REPLACE</code> - Changeset will be considered as a replacement to all prior loaded Changesets.
+     *        <code>REPLACE</code> – Changeset will be considered as a replacement to all prior loaded Changesets.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>APPEND</code> - Changeset will be considered as an addition to the end of all prior loaded
+     *        <code>APPEND</code> – Changeset will be considered as an addition to the end of all prior loaded
      *        Changesets.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>MODIFY</code> - Changeset is considered as a replacement to a specific prior ingested Changeset.
+     *        <code>MODIFY</code> – Changeset is considered as a replacement to a specific prior ingested Changeset.
      *        </p>
      *        </li>
      * @see ChangeType
@@ -265,42 +265,42 @@ public class CreateChangesetRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * Option to indicate how a Changeset will be applied to a Dataset.
+     * The option to indicate how a Changeset will be applied to a Dataset.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>REPLACE</code> - Changeset will be considered as a replacement to all prior loaded Changesets.
+     * <code>REPLACE</code> – Changeset will be considered as a replacement to all prior loaded Changesets.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>APPEND</code> - Changeset will be considered as an addition to the end of all prior loaded Changesets.
+     * <code>APPEND</code> – Changeset will be considered as an addition to the end of all prior loaded Changesets.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>MODIFY</code> - Changeset is considered as a replacement to a specific prior ingested Changeset.
+     * <code>MODIFY</code> – Changeset is considered as a replacement to a specific prior ingested Changeset.
      * </p>
      * </li>
      * </ul>
      * 
-     * @return Option to indicate how a Changeset will be applied to a Dataset.</p>
+     * @return The option to indicate how a Changeset will be applied to a Dataset.</p>
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>REPLACE</code> - Changeset will be considered as a replacement to all prior loaded Changesets.
+     *         <code>REPLACE</code> – Changeset will be considered as a replacement to all prior loaded Changesets.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>APPEND</code> - Changeset will be considered as an addition to the end of all prior loaded
+     *         <code>APPEND</code> – Changeset will be considered as an addition to the end of all prior loaded
      *         Changesets.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>MODIFY</code> - Changeset is considered as a replacement to a specific prior ingested Changeset.
+     *         <code>MODIFY</code> – Changeset is considered as a replacement to a specific prior ingested Changeset.
      *         </p>
      *         </li>
      * @see ChangeType
@@ -312,43 +312,43 @@ public class CreateChangesetRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * Option to indicate how a Changeset will be applied to a Dataset.
+     * The option to indicate how a Changeset will be applied to a Dataset.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>REPLACE</code> - Changeset will be considered as a replacement to all prior loaded Changesets.
+     * <code>REPLACE</code> – Changeset will be considered as a replacement to all prior loaded Changesets.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>APPEND</code> - Changeset will be considered as an addition to the end of all prior loaded Changesets.
+     * <code>APPEND</code> – Changeset will be considered as an addition to the end of all prior loaded Changesets.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>MODIFY</code> - Changeset is considered as a replacement to a specific prior ingested Changeset.
+     * <code>MODIFY</code> – Changeset is considered as a replacement to a specific prior ingested Changeset.
      * </p>
      * </li>
      * </ul>
      * 
      * @param changeType
-     *        Option to indicate how a Changeset will be applied to a Dataset.</p>
+     *        The option to indicate how a Changeset will be applied to a Dataset.</p>
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>REPLACE</code> - Changeset will be considered as a replacement to all prior loaded Changesets.
+     *        <code>REPLACE</code> – Changeset will be considered as a replacement to all prior loaded Changesets.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>APPEND</code> - Changeset will be considered as an addition to the end of all prior loaded
+     *        <code>APPEND</code> – Changeset will be considered as an addition to the end of all prior loaded
      *        Changesets.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>MODIFY</code> - Changeset is considered as a replacement to a specific prior ingested Changeset.
+     *        <code>MODIFY</code> – Changeset is considered as a replacement to a specific prior ingested Changeset.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -362,43 +362,43 @@ public class CreateChangesetRequest extends com.amazonaws.AmazonWebServiceReques
 
     /**
      * <p>
-     * Option to indicate how a Changeset will be applied to a Dataset.
+     * The option to indicate how a Changeset will be applied to a Dataset.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>REPLACE</code> - Changeset will be considered as a replacement to all prior loaded Changesets.
+     * <code>REPLACE</code> – Changeset will be considered as a replacement to all prior loaded Changesets.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>APPEND</code> - Changeset will be considered as an addition to the end of all prior loaded Changesets.
+     * <code>APPEND</code> – Changeset will be considered as an addition to the end of all prior loaded Changesets.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>MODIFY</code> - Changeset is considered as a replacement to a specific prior ingested Changeset.
+     * <code>MODIFY</code> – Changeset is considered as a replacement to a specific prior ingested Changeset.
      * </p>
      * </li>
      * </ul>
      * 
      * @param changeType
-     *        Option to indicate how a Changeset will be applied to a Dataset.</p>
+     *        The option to indicate how a Changeset will be applied to a Dataset.</p>
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>REPLACE</code> - Changeset will be considered as a replacement to all prior loaded Changesets.
+     *        <code>REPLACE</code> – Changeset will be considered as a replacement to all prior loaded Changesets.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>APPEND</code> - Changeset will be considered as an addition to the end of all prior loaded
+     *        <code>APPEND</code> – Changeset will be considered as an addition to the end of all prior loaded
      *        Changesets.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>MODIFY</code> - Changeset is considered as a replacement to a specific prior ingested Changeset.
+     *        <code>MODIFY</code> – Changeset is considered as a replacement to a specific prior ingested Changeset.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -428,7 +428,7 @@ public class CreateChangesetRequest extends com.amazonaws.AmazonWebServiceReques
      * The S3 path that you specify must allow the FinSpace role access. To do that, you first need to configure the IAM
      * policy on S3 bucket. For more information, see <a
      * href="https://docs.aws.amazon.com/finspace/latest/data-api/fs-using-the-finspace-api.html#access-s3-buckets"
-     * >Loading data from an Amazon S3 Bucket using the FinSpace API</a>section.
+     * >Loading data from an Amazon S3 Bucket using the FinSpace API</a> section.
      * </p>
      * 
      * @return Options that define the location of the data being ingested (<code>s3SourcePath</code>) and the source of
@@ -446,7 +446,7 @@ public class CreateChangesetRequest extends com.amazonaws.AmazonWebServiceReques
      *         The S3 path that you specify must allow the FinSpace role access. To do that, you first need to configure
      *         the IAM policy on S3 bucket. For more information, see <a href=
      *         "https://docs.aws.amazon.com/finspace/latest/data-api/fs-using-the-finspace-api.html#access-s3-buckets"
-     *         >Loading data from an Amazon S3 Bucket using the FinSpace API</a>section.
+     *         >Loading data from an Amazon S3 Bucket using the FinSpace API</a> section.
      */
 
     public java.util.Map<String, String> getSourceParams() {
@@ -471,7 +471,7 @@ public class CreateChangesetRequest extends com.amazonaws.AmazonWebServiceReques
      * The S3 path that you specify must allow the FinSpace role access. To do that, you first need to configure the IAM
      * policy on S3 bucket. For more information, see <a
      * href="https://docs.aws.amazon.com/finspace/latest/data-api/fs-using-the-finspace-api.html#access-s3-buckets"
-     * >Loading data from an Amazon S3 Bucket using the FinSpace API</a>section.
+     * >Loading data from an Amazon S3 Bucket using the FinSpace API</a> section.
      * </p>
      * 
      * @param sourceParams
@@ -490,7 +490,7 @@ public class CreateChangesetRequest extends com.amazonaws.AmazonWebServiceReques
      *        The S3 path that you specify must allow the FinSpace role access. To do that, you first need to configure
      *        the IAM policy on S3 bucket. For more information, see <a href=
      *        "https://docs.aws.amazon.com/finspace/latest/data-api/fs-using-the-finspace-api.html#access-s3-buckets"
-     *        >Loading data from an Amazon S3 Bucket using the FinSpace API</a>section.
+     *        >Loading data from an Amazon S3 Bucket using the FinSpace API</a> section.
      */
 
     public void setSourceParams(java.util.Map<String, String> sourceParams) {
@@ -515,7 +515,7 @@ public class CreateChangesetRequest extends com.amazonaws.AmazonWebServiceReques
      * The S3 path that you specify must allow the FinSpace role access. To do that, you first need to configure the IAM
      * policy on S3 bucket. For more information, see <a
      * href="https://docs.aws.amazon.com/finspace/latest/data-api/fs-using-the-finspace-api.html#access-s3-buckets"
-     * >Loading data from an Amazon S3 Bucket using the FinSpace API</a>section.
+     * >Loading data from an Amazon S3 Bucket using the FinSpace API</a> section.
      * </p>
      * 
      * @param sourceParams
@@ -534,7 +534,7 @@ public class CreateChangesetRequest extends com.amazonaws.AmazonWebServiceReques
      *        The S3 path that you specify must allow the FinSpace role access. To do that, you first need to configure
      *        the IAM policy on S3 bucket. For more information, see <a href=
      *        "https://docs.aws.amazon.com/finspace/latest/data-api/fs-using-the-finspace-api.html#access-s3-buckets"
-     *        >Loading data from an Amazon S3 Bucket using the FinSpace API</a>section.
+     *        >Loading data from an Amazon S3 Bucket using the FinSpace API</a> section.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -583,22 +583,22 @@ public class CreateChangesetRequest extends com.amazonaws.AmazonWebServiceReques
      * <ul>
      * <li>
      * <p>
-     * <code>PARQUET</code> - Parquet source file format.
+     * <code>PARQUET</code> – Parquet source file format.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>CSV</code> - CSV source file format.
+     * <code>CSV</code> – CSV source file format.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>JSON</code> - JSON source file format.
+     * <code>JSON</code> – JSON source file format.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>XML</code> - XML source file format.
+     * <code>XML</code> – XML source file format.
      * </p>
      * </li>
      * </ul>
@@ -630,22 +630,22 @@ public class CreateChangesetRequest extends com.amazonaws.AmazonWebServiceReques
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>PARQUET</code> - Parquet source file format.
+     *         <code>PARQUET</code> – Parquet source file format.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>CSV</code> - CSV source file format.
+     *         <code>CSV</code> – CSV source file format.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>JSON</code> - JSON source file format.
+     *         <code>JSON</code> – JSON source file format.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>XML</code> - XML source file format.
+     *         <code>XML</code> – XML source file format.
      *         </p>
      *         </li>
      *         </ul>
@@ -684,22 +684,22 @@ public class CreateChangesetRequest extends com.amazonaws.AmazonWebServiceReques
      * <ul>
      * <li>
      * <p>
-     * <code>PARQUET</code> - Parquet source file format.
+     * <code>PARQUET</code> – Parquet source file format.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>CSV</code> - CSV source file format.
+     * <code>CSV</code> – CSV source file format.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>JSON</code> - JSON source file format.
+     * <code>JSON</code> – JSON source file format.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>XML</code> - XML source file format.
+     * <code>XML</code> – XML source file format.
      * </p>
      * </li>
      * </ul>
@@ -732,22 +732,22 @@ public class CreateChangesetRequest extends com.amazonaws.AmazonWebServiceReques
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>PARQUET</code> - Parquet source file format.
+     *        <code>PARQUET</code> – Parquet source file format.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>CSV</code> - CSV source file format.
+     *        <code>CSV</code> – CSV source file format.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>JSON</code> - JSON source file format.
+     *        <code>JSON</code> – JSON source file format.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>XML</code> - XML source file format.
+     *        <code>XML</code> – XML source file format.
      *        </p>
      *        </li>
      *        </ul>
@@ -786,22 +786,22 @@ public class CreateChangesetRequest extends com.amazonaws.AmazonWebServiceReques
      * <ul>
      * <li>
      * <p>
-     * <code>PARQUET</code> - Parquet source file format.
+     * <code>PARQUET</code> – Parquet source file format.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>CSV</code> - CSV source file format.
+     * <code>CSV</code> – CSV source file format.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>JSON</code> - JSON source file format.
+     * <code>JSON</code> – JSON source file format.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>XML</code> - XML source file format.
+     * <code>XML</code> – XML source file format.
      * </p>
      * </li>
      * </ul>
@@ -834,22 +834,22 @@ public class CreateChangesetRequest extends com.amazonaws.AmazonWebServiceReques
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>PARQUET</code> - Parquet source file format.
+     *        <code>PARQUET</code> – Parquet source file format.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>CSV</code> - CSV source file format.
+     *        <code>CSV</code> – CSV source file format.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>JSON</code> - JSON source file format.
+     *        <code>JSON</code> – JSON source file format.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>XML</code> - XML source file format.
+     *        <code>XML</code> – XML source file format.
      *        </p>
      *        </li>
      *        </ul>

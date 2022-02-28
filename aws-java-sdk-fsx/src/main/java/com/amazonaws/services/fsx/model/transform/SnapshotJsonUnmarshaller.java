@@ -72,6 +72,10 @@ public class SnapshotJsonUnmarshaller implements Unmarshaller<Snapshot, JsonUnma
                     context.nextToken();
                     snapshot.setLifecycle(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("LifecycleTransitionReason", targetDepth)) {
+                    context.nextToken();
+                    snapshot.setLifecycleTransitionReason(LifecycleTransitionReasonJsonUnmarshaller.getInstance().unmarshall(context));
+                }
                 if (context.testExpression("Tags", targetDepth)) {
                     context.nextToken();
                     snapshot.setTags(new ListUnmarshaller<Tag>(TagJsonUnmarshaller.getInstance())

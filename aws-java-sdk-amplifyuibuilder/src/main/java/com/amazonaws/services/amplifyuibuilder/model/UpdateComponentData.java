@@ -54,6 +54,13 @@ public class UpdateComponentData implements Serializable, Cloneable, StructuredP
     private String componentType;
     /**
      * <p>
+     * The event configuration for the component. Use for the workflow feature in Amplify Studio that allows you to bind
+     * events and actions to components.
+     * </p>
+     */
+    private java.util.Map<String, ComponentEvent> events;
+    /**
+     * <p>
      * The unique ID of the component to update.
      * </p>
      */
@@ -76,6 +83,12 @@ public class UpdateComponentData implements Serializable, Cloneable, StructuredP
      * </p>
      */
     private java.util.Map<String, ComponentProperty> properties;
+    /**
+     * <p>
+     * The schema version of the component when it was imported.
+     * </p>
+     */
+    private String schemaVersion;
     /**
      * <p>
      * The unique ID of the component in its original source system, such as Figma.
@@ -340,6 +353,80 @@ public class UpdateComponentData implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
+     * The event configuration for the component. Use for the workflow feature in Amplify Studio that allows you to bind
+     * events and actions to components.
+     * </p>
+     * 
+     * @return The event configuration for the component. Use for the workflow feature in Amplify Studio that allows you
+     *         to bind events and actions to components.
+     */
+
+    public java.util.Map<String, ComponentEvent> getEvents() {
+        return events;
+    }
+
+    /**
+     * <p>
+     * The event configuration for the component. Use for the workflow feature in Amplify Studio that allows you to bind
+     * events and actions to components.
+     * </p>
+     * 
+     * @param events
+     *        The event configuration for the component. Use for the workflow feature in Amplify Studio that allows you
+     *        to bind events and actions to components.
+     */
+
+    public void setEvents(java.util.Map<String, ComponentEvent> events) {
+        this.events = events;
+    }
+
+    /**
+     * <p>
+     * The event configuration for the component. Use for the workflow feature in Amplify Studio that allows you to bind
+     * events and actions to components.
+     * </p>
+     * 
+     * @param events
+     *        The event configuration for the component. Use for the workflow feature in Amplify Studio that allows you
+     *        to bind events and actions to components.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateComponentData withEvents(java.util.Map<String, ComponentEvent> events) {
+        setEvents(events);
+        return this;
+    }
+
+    /**
+     * Add a single Events entry
+     *
+     * @see UpdateComponentData#withEvents
+     * @returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateComponentData addEventsEntry(String key, ComponentEvent value) {
+        if (null == this.events) {
+            this.events = new java.util.HashMap<String, ComponentEvent>();
+        }
+        if (this.events.containsKey(key))
+            throw new IllegalArgumentException("Duplicated keys (" + key.toString() + ") are provided.");
+        this.events.put(key, value);
+        return this;
+    }
+
+    /**
+     * Removes all the entries added into Events.
+     *
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateComponentData clearEventsEntries() {
+        this.events = null;
+        return this;
+    }
+
+    /**
+     * <p>
      * The unique ID of the component to update.
      * </p>
      * 
@@ -556,6 +643,46 @@ public class UpdateComponentData implements Serializable, Cloneable, StructuredP
 
     /**
      * <p>
+     * The schema version of the component when it was imported.
+     * </p>
+     * 
+     * @param schemaVersion
+     *        The schema version of the component when it was imported.
+     */
+
+    public void setSchemaVersion(String schemaVersion) {
+        this.schemaVersion = schemaVersion;
+    }
+
+    /**
+     * <p>
+     * The schema version of the component when it was imported.
+     * </p>
+     * 
+     * @return The schema version of the component when it was imported.
+     */
+
+    public String getSchemaVersion() {
+        return this.schemaVersion;
+    }
+
+    /**
+     * <p>
+     * The schema version of the component when it was imported.
+     * </p>
+     * 
+     * @param schemaVersion
+     *        The schema version of the component when it was imported.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateComponentData withSchemaVersion(String schemaVersion) {
+        setSchemaVersion(schemaVersion);
+        return this;
+    }
+
+    /**
+     * <p>
      * The unique ID of the component in its original source system, such as Figma.
      * </p>
      * 
@@ -684,6 +811,8 @@ public class UpdateComponentData implements Serializable, Cloneable, StructuredP
             sb.append("CollectionProperties: ").append(getCollectionProperties()).append(",");
         if (getComponentType() != null)
             sb.append("ComponentType: ").append(getComponentType()).append(",");
+        if (getEvents() != null)
+            sb.append("Events: ").append(getEvents()).append(",");
         if (getId() != null)
             sb.append("Id: ").append(getId()).append(",");
         if (getName() != null)
@@ -692,6 +821,8 @@ public class UpdateComponentData implements Serializable, Cloneable, StructuredP
             sb.append("Overrides: ").append(getOverrides()).append(",");
         if (getProperties() != null)
             sb.append("Properties: ").append(getProperties()).append(",");
+        if (getSchemaVersion() != null)
+            sb.append("SchemaVersion: ").append(getSchemaVersion()).append(",");
         if (getSourceId() != null)
             sb.append("SourceId: ").append(getSourceId()).append(",");
         if (getVariants() != null)
@@ -726,6 +857,10 @@ public class UpdateComponentData implements Serializable, Cloneable, StructuredP
             return false;
         if (other.getComponentType() != null && other.getComponentType().equals(this.getComponentType()) == false)
             return false;
+        if (other.getEvents() == null ^ this.getEvents() == null)
+            return false;
+        if (other.getEvents() != null && other.getEvents().equals(this.getEvents()) == false)
+            return false;
         if (other.getId() == null ^ this.getId() == null)
             return false;
         if (other.getId() != null && other.getId().equals(this.getId()) == false)
@@ -741,6 +876,10 @@ public class UpdateComponentData implements Serializable, Cloneable, StructuredP
         if (other.getProperties() == null ^ this.getProperties() == null)
             return false;
         if (other.getProperties() != null && other.getProperties().equals(this.getProperties()) == false)
+            return false;
+        if (other.getSchemaVersion() == null ^ this.getSchemaVersion() == null)
+            return false;
+        if (other.getSchemaVersion() != null && other.getSchemaVersion().equals(this.getSchemaVersion()) == false)
             return false;
         if (other.getSourceId() == null ^ this.getSourceId() == null)
             return false;
@@ -762,10 +901,12 @@ public class UpdateComponentData implements Serializable, Cloneable, StructuredP
         hashCode = prime * hashCode + ((getChildren() == null) ? 0 : getChildren().hashCode());
         hashCode = prime * hashCode + ((getCollectionProperties() == null) ? 0 : getCollectionProperties().hashCode());
         hashCode = prime * hashCode + ((getComponentType() == null) ? 0 : getComponentType().hashCode());
+        hashCode = prime * hashCode + ((getEvents() == null) ? 0 : getEvents().hashCode());
         hashCode = prime * hashCode + ((getId() == null) ? 0 : getId().hashCode());
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
         hashCode = prime * hashCode + ((getOverrides() == null) ? 0 : getOverrides().hashCode());
         hashCode = prime * hashCode + ((getProperties() == null) ? 0 : getProperties().hashCode());
+        hashCode = prime * hashCode + ((getSchemaVersion() == null) ? 0 : getSchemaVersion().hashCode());
         hashCode = prime * hashCode + ((getSourceId() == null) ? 0 : getSourceId().hashCode());
         hashCode = prime * hashCode + ((getVariants() == null) ? 0 : getVariants().hashCode());
         return hashCode;

@@ -77,6 +77,8 @@ public class Snapshot implements Serializable, Cloneable, StructuredPojo {
      */
     private String lifecycle;
 
+    private LifecycleTransitionReason lifecycleTransitionReason;
+
     private java.util.List<Tag> tags;
     /**
      * <p>
@@ -490,6 +492,32 @@ public class Snapshot implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * @param lifecycleTransitionReason
+     */
+
+    public void setLifecycleTransitionReason(LifecycleTransitionReason lifecycleTransitionReason) {
+        this.lifecycleTransitionReason = lifecycleTransitionReason;
+    }
+
+    /**
+     * @return
+     */
+
+    public LifecycleTransitionReason getLifecycleTransitionReason() {
+        return this.lifecycleTransitionReason;
+    }
+
+    /**
+     * @param lifecycleTransitionReason
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Snapshot withLifecycleTransitionReason(LifecycleTransitionReason lifecycleTransitionReason) {
+        setLifecycleTransitionReason(lifecycleTransitionReason);
+        return this;
+    }
+
+    /**
      * @return
      */
 
@@ -643,6 +671,8 @@ public class Snapshot implements Serializable, Cloneable, StructuredPojo {
             sb.append("CreationTime: ").append(getCreationTime()).append(",");
         if (getLifecycle() != null)
             sb.append("Lifecycle: ").append(getLifecycle()).append(",");
+        if (getLifecycleTransitionReason() != null)
+            sb.append("LifecycleTransitionReason: ").append(getLifecycleTransitionReason()).append(",");
         if (getTags() != null)
             sb.append("Tags: ").append(getTags()).append(",");
         if (getAdministrativeActions() != null)
@@ -685,6 +715,10 @@ public class Snapshot implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getLifecycle() != null && other.getLifecycle().equals(this.getLifecycle()) == false)
             return false;
+        if (other.getLifecycleTransitionReason() == null ^ this.getLifecycleTransitionReason() == null)
+            return false;
+        if (other.getLifecycleTransitionReason() != null && other.getLifecycleTransitionReason().equals(this.getLifecycleTransitionReason()) == false)
+            return false;
         if (other.getTags() == null ^ this.getTags() == null)
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
@@ -707,6 +741,7 @@ public class Snapshot implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getVolumeId() == null) ? 0 : getVolumeId().hashCode());
         hashCode = prime * hashCode + ((getCreationTime() == null) ? 0 : getCreationTime().hashCode());
         hashCode = prime * hashCode + ((getLifecycle() == null) ? 0 : getLifecycle().hashCode());
+        hashCode = prime * hashCode + ((getLifecycleTransitionReason() == null) ? 0 : getLifecycleTransitionReason().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getAdministrativeActions() == null) ? 0 : getAdministrativeActions().hashCode());
         return hashCode;

@@ -133,6 +133,68 @@ public interface AWSFinSpaceDataAsync extends AWSFinSpaceData {
 
     /**
      * <p>
+     * Creates a group of permissions for various actions that a user can perform in FinSpace.
+     * </p>
+     * 
+     * @param createPermissionGroupRequest
+     * @return A Java Future containing the result of the CreatePermissionGroup operation returned by the service.
+     * @sample AWSFinSpaceDataAsync.CreatePermissionGroup
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/CreatePermissionGroup" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<CreatePermissionGroupResult> createPermissionGroupAsync(CreatePermissionGroupRequest createPermissionGroupRequest);
+
+    /**
+     * <p>
+     * Creates a group of permissions for various actions that a user can perform in FinSpace.
+     * </p>
+     * 
+     * @param createPermissionGroupRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreatePermissionGroup operation returned by the service.
+     * @sample AWSFinSpaceDataAsyncHandler.CreatePermissionGroup
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/CreatePermissionGroup" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<CreatePermissionGroupResult> createPermissionGroupAsync(CreatePermissionGroupRequest createPermissionGroupRequest,
+            com.amazonaws.handlers.AsyncHandler<CreatePermissionGroupRequest, CreatePermissionGroupResult> asyncHandler);
+
+    /**
+     * <p>
+     * Creates a new user in FinSpace.
+     * </p>
+     * 
+     * @param createUserRequest
+     * @return A Java Future containing the result of the CreateUser operation returned by the service.
+     * @sample AWSFinSpaceDataAsync.CreateUser
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/CreateUser" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<CreateUserResult> createUserAsync(CreateUserRequest createUserRequest);
+
+    /**
+     * <p>
+     * Creates a new user in FinSpace.
+     * </p>
+     * 
+     * @param createUserRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the CreateUser operation returned by the service.
+     * @sample AWSFinSpaceDataAsyncHandler.CreateUser
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/CreateUser" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<CreateUserResult> createUserAsync(CreateUserRequest createUserRequest,
+            com.amazonaws.handlers.AsyncHandler<CreateUserRequest, CreateUserResult> asyncHandler);
+
+    /**
+     * <p>
      * Deletes a FinSpace Dataset.
      * </p>
      * 
@@ -163,6 +225,99 @@ public interface AWSFinSpaceDataAsync extends AWSFinSpaceData {
      */
     java.util.concurrent.Future<DeleteDatasetResult> deleteDatasetAsync(DeleteDatasetRequest deleteDatasetRequest,
             com.amazonaws.handlers.AsyncHandler<DeleteDatasetRequest, DeleteDatasetResult> asyncHandler);
+
+    /**
+     * <p>
+     * Deletes a permission group. This action is irreversible.
+     * </p>
+     * 
+     * @param deletePermissionGroupRequest
+     * @return A Java Future containing the result of the DeletePermissionGroup operation returned by the service.
+     * @sample AWSFinSpaceDataAsync.DeletePermissionGroup
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/DeletePermissionGroup" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DeletePermissionGroupResult> deletePermissionGroupAsync(DeletePermissionGroupRequest deletePermissionGroupRequest);
+
+    /**
+     * <p>
+     * Deletes a permission group. This action is irreversible.
+     * </p>
+     * 
+     * @param deletePermissionGroupRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DeletePermissionGroup operation returned by the service.
+     * @sample AWSFinSpaceDataAsyncHandler.DeletePermissionGroup
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/DeletePermissionGroup" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<DeletePermissionGroupResult> deletePermissionGroupAsync(DeletePermissionGroupRequest deletePermissionGroupRequest,
+            com.amazonaws.handlers.AsyncHandler<DeletePermissionGroupRequest, DeletePermissionGroupResult> asyncHandler);
+
+    /**
+     * <p>
+     * Denies access to the FinSpace web application and API for the specified user.
+     * </p>
+     * 
+     * @param disableUserRequest
+     * @return A Java Future containing the result of the DisableUser operation returned by the service.
+     * @sample AWSFinSpaceDataAsync.DisableUser
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/DisableUser" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DisableUserResult> disableUserAsync(DisableUserRequest disableUserRequest);
+
+    /**
+     * <p>
+     * Denies access to the FinSpace web application and API for the specified user.
+     * </p>
+     * 
+     * @param disableUserRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the DisableUser operation returned by the service.
+     * @sample AWSFinSpaceDataAsyncHandler.DisableUser
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/DisableUser" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<DisableUserResult> disableUserAsync(DisableUserRequest disableUserRequest,
+            com.amazonaws.handlers.AsyncHandler<DisableUserRequest, DisableUserResult> asyncHandler);
+
+    /**
+     * <p>
+     * Allows the specified user to access the FinSpace web application and API.
+     * </p>
+     * 
+     * @param enableUserRequest
+     * @return A Java Future containing the result of the EnableUser operation returned by the service.
+     * @sample AWSFinSpaceDataAsync.EnableUser
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/EnableUser" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<EnableUserResult> enableUserAsync(EnableUserRequest enableUserRequest);
+
+    /**
+     * <p>
+     * Allows the specified user to access the FinSpace web application and API.
+     * </p>
+     * 
+     * @param enableUserRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the EnableUser operation returned by the service.
+     * @sample AWSFinSpaceDataAsyncHandler.EnableUser
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/EnableUser" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<EnableUserResult> enableUserAsync(EnableUserRequest enableUserRequest,
+            com.amazonaws.handlers.AsyncHandler<EnableUserRequest, EnableUserResult> asyncHandler);
 
     /**
      * <p>
@@ -302,6 +457,37 @@ public interface AWSFinSpaceDataAsync extends AWSFinSpaceData {
 
     /**
      * <p>
+     * Retrieves details for a specific user.
+     * </p>
+     * 
+     * @param getUserRequest
+     * @return A Java Future containing the result of the GetUser operation returned by the service.
+     * @sample AWSFinSpaceDataAsync.GetUser
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/GetUser" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetUserResult> getUserAsync(GetUserRequest getUserRequest);
+
+    /**
+     * <p>
+     * Retrieves details for a specific user.
+     * </p>
+     * 
+     * @param getUserRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the GetUser operation returned by the service.
+     * @sample AWSFinSpaceDataAsyncHandler.GetUser
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/GetUser" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<GetUserResult> getUserAsync(GetUserRequest getUserRequest,
+            com.amazonaws.handlers.AsyncHandler<GetUserRequest, GetUserResult> asyncHandler);
+
+    /**
+     * <p>
      * A temporary Amazon S3 location, where you can copy your files from a source location to stage or use as a scratch
      * space in FinSpace notebook.
      * </p>
@@ -434,6 +620,101 @@ public interface AWSFinSpaceDataAsync extends AWSFinSpaceData {
 
     /**
      * <p>
+     * Lists all available permission groups in FinSpace.
+     * </p>
+     * 
+     * @param listPermissionGroupsRequest
+     * @return A Java Future containing the result of the ListPermissionGroups operation returned by the service.
+     * @sample AWSFinSpaceDataAsync.ListPermissionGroups
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/ListPermissionGroups" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListPermissionGroupsResult> listPermissionGroupsAsync(ListPermissionGroupsRequest listPermissionGroupsRequest);
+
+    /**
+     * <p>
+     * Lists all available permission groups in FinSpace.
+     * </p>
+     * 
+     * @param listPermissionGroupsRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListPermissionGroups operation returned by the service.
+     * @sample AWSFinSpaceDataAsyncHandler.ListPermissionGroups
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/ListPermissionGroups" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<ListPermissionGroupsResult> listPermissionGroupsAsync(ListPermissionGroupsRequest listPermissionGroupsRequest,
+            com.amazonaws.handlers.AsyncHandler<ListPermissionGroupsRequest, ListPermissionGroupsResult> asyncHandler);
+
+    /**
+     * <p>
+     * Lists all available user accounts in FinSpace.
+     * </p>
+     * 
+     * @param listUsersRequest
+     * @return A Java Future containing the result of the ListUsers operation returned by the service.
+     * @sample AWSFinSpaceDataAsync.ListUsers
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/ListUsers" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListUsersResult> listUsersAsync(ListUsersRequest listUsersRequest);
+
+    /**
+     * <p>
+     * Lists all available user accounts in FinSpace.
+     * </p>
+     * 
+     * @param listUsersRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ListUsers operation returned by the service.
+     * @sample AWSFinSpaceDataAsyncHandler.ListUsers
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/ListUsers" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ListUsersResult> listUsersAsync(ListUsersRequest listUsersRequest,
+            com.amazonaws.handlers.AsyncHandler<ListUsersRequest, ListUsersResult> asyncHandler);
+
+    /**
+     * <p>
+     * Resets the password for a specified user ID and generates a temporary one. Only a superuser can reset password
+     * for other users. Resetting the password immediately invalidates the previous password associated with the user.
+     * </p>
+     * 
+     * @param resetUserPasswordRequest
+     * @return A Java Future containing the result of the ResetUserPassword operation returned by the service.
+     * @sample AWSFinSpaceDataAsync.ResetUserPassword
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/ResetUserPassword" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ResetUserPasswordResult> resetUserPasswordAsync(ResetUserPasswordRequest resetUserPasswordRequest);
+
+    /**
+     * <p>
+     * Resets the password for a specified user ID and generates a temporary one. Only a superuser can reset password
+     * for other users. Resetting the password immediately invalidates the previous password associated with the user.
+     * </p>
+     * 
+     * @param resetUserPasswordRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the ResetUserPassword operation returned by the service.
+     * @sample AWSFinSpaceDataAsyncHandler.ResetUserPassword
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/ResetUserPassword" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<ResetUserPasswordResult> resetUserPasswordAsync(ResetUserPasswordRequest resetUserPasswordRequest,
+            com.amazonaws.handlers.AsyncHandler<ResetUserPasswordRequest, ResetUserPasswordResult> asyncHandler);
+
+    /**
+     * <p>
      * Updates a FinSpace Changeset.
      * </p>
      * 
@@ -497,5 +778,67 @@ public interface AWSFinSpaceDataAsync extends AWSFinSpaceData {
      */
     java.util.concurrent.Future<UpdateDatasetResult> updateDatasetAsync(UpdateDatasetRequest updateDatasetRequest,
             com.amazonaws.handlers.AsyncHandler<UpdateDatasetRequest, UpdateDatasetResult> asyncHandler);
+
+    /**
+     * <p>
+     * Modifies the details of a permission group. You cannot modify a <code>permissionGroupID</code>.
+     * </p>
+     * 
+     * @param updatePermissionGroupRequest
+     * @return A Java Future containing the result of the UpdatePermissionGroup operation returned by the service.
+     * @sample AWSFinSpaceDataAsync.UpdatePermissionGroup
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/UpdatePermissionGroup" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdatePermissionGroupResult> updatePermissionGroupAsync(UpdatePermissionGroupRequest updatePermissionGroupRequest);
+
+    /**
+     * <p>
+     * Modifies the details of a permission group. You cannot modify a <code>permissionGroupID</code>.
+     * </p>
+     * 
+     * @param updatePermissionGroupRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdatePermissionGroup operation returned by the service.
+     * @sample AWSFinSpaceDataAsyncHandler.UpdatePermissionGroup
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/UpdatePermissionGroup" target="_top">AWS
+     *      API Documentation</a>
+     */
+    java.util.concurrent.Future<UpdatePermissionGroupResult> updatePermissionGroupAsync(UpdatePermissionGroupRequest updatePermissionGroupRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdatePermissionGroupRequest, UpdatePermissionGroupResult> asyncHandler);
+
+    /**
+     * <p>
+     * Modifies the details of the specified user account. You cannot update the <code>userId</code> for a user.
+     * </p>
+     * 
+     * @param updateUserRequest
+     * @return A Java Future containing the result of the UpdateUser operation returned by the service.
+     * @sample AWSFinSpaceDataAsync.UpdateUser
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/UpdateUser" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateUserResult> updateUserAsync(UpdateUserRequest updateUserRequest);
+
+    /**
+     * <p>
+     * Modifies the details of the specified user account. You cannot update the <code>userId</code> for a user.
+     * </p>
+     * 
+     * @param updateUserRequest
+     * @param asyncHandler
+     *        Asynchronous callback handler for events in the lifecycle of the request. Users can provide an
+     *        implementation of the callback methods in this interface to receive notification of successful or
+     *        unsuccessful completion of the operation.
+     * @return A Java Future containing the result of the UpdateUser operation returned by the service.
+     * @sample AWSFinSpaceDataAsyncHandler.UpdateUser
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/UpdateUser" target="_top">AWS API
+     *      Documentation</a>
+     */
+    java.util.concurrent.Future<UpdateUserResult> updateUserAsync(UpdateUserRequest updateUserRequest,
+            com.amazonaws.handlers.AsyncHandler<UpdateUserRequest, UpdateUserResult> asyncHandler);
 
 }

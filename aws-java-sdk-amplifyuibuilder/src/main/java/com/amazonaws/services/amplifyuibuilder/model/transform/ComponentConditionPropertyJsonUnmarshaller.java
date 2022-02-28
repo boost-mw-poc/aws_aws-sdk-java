@@ -60,6 +60,10 @@ public class ComponentConditionPropertyJsonUnmarshaller implements Unmarshaller<
                     context.nextToken();
                     componentConditionProperty.setOperand(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("operandType", targetDepth)) {
+                    context.nextToken();
+                    componentConditionProperty.setOperandType(context.getUnmarshaller(String.class).unmarshall(context));
+                }
                 if (context.testExpression("operator", targetDepth)) {
                     context.nextToken();
                     componentConditionProperty.setOperator(context.getUnmarshaller(String.class).unmarshall(context));

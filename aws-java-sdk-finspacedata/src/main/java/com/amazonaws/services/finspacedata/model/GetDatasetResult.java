@@ -49,12 +49,12 @@ public class GetDatasetResult extends com.amazonaws.AmazonWebServiceResult<com.a
      * <ul>
      * <li>
      * <p>
-     * <code>TABULAR</code> - Data is structured in a tabular format.
+     * <code>TABULAR</code> – Data is structured in a tabular format.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>NON_TABULAR</code> - Data is structured in a non-tabular format.
+     * <code>NON_TABULAR</code> – Data is structured in a non-tabular format.
      * </p>
      * </li>
      * </ul>
@@ -68,14 +68,14 @@ public class GetDatasetResult extends com.amazonaws.AmazonWebServiceResult<com.a
     private String datasetDescription;
     /**
      * <p>
-     * The timestamp at which the Dataset was created in FinSpace. The value is determined as Epoch time in
+     * The timestamp at which the Dataset was created in FinSpace. The value is determined as epoch time in
      * milliseconds. For example, the value for Monday, November 1, 2021 12:00:00 PM UTC is specified as 1635768000000.
      * </p>
      */
     private Long createTime;
     /**
      * <p>
-     * The last time that the Dataset was modified. The value is determined as Epoch time in milliseconds. For example,
+     * The last time that the Dataset was modified. The value is determined as epoch time in milliseconds. For example,
      * the value for Monday, November 1, 2021 12:00:00 PM UTC is specified as 1635768000000.
      * </p>
      */
@@ -99,22 +99,22 @@ public class GetDatasetResult extends com.amazonaws.AmazonWebServiceResult<com.a
      * <ul>
      * <li>
      * <p>
-     * <code>PENDING</code> - Dataset is pending creation.
+     * <code>PENDING</code> – Dataset is pending creation.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>FAILED</code> - Dataset creation has failed.
+     * <code>FAILED</code> – Dataset creation has failed.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>SUCCESS</code> - Dataset creation has succeeded.
+     * <code>SUCCESS</code> – Dataset creation has succeeded.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>RUNNING</code> - Dataset creation is running.
+     * <code>RUNNING</code> – Dataset creation is running.
      * </p>
      * </li>
      * </ul>
@@ -248,12 +248,12 @@ public class GetDatasetResult extends com.amazonaws.AmazonWebServiceResult<com.a
      * <ul>
      * <li>
      * <p>
-     * <code>TABULAR</code> - Data is structured in a tabular format.
+     * <code>TABULAR</code> – Data is structured in a tabular format.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>NON_TABULAR</code> - Data is structured in a non-tabular format.
+     * <code>NON_TABULAR</code> – Data is structured in a non-tabular format.
      * </p>
      * </li>
      * </ul>
@@ -263,12 +263,12 @@ public class GetDatasetResult extends com.amazonaws.AmazonWebServiceResult<com.a
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>TABULAR</code> - Data is structured in a tabular format.
+     *        <code>TABULAR</code> – Data is structured in a tabular format.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>NON_TABULAR</code> - Data is structured in a non-tabular format.
+     *        <code>NON_TABULAR</code> – Data is structured in a non-tabular format.
      *        </p>
      *        </li>
      * @see DatasetKind
@@ -285,12 +285,12 @@ public class GetDatasetResult extends com.amazonaws.AmazonWebServiceResult<com.a
      * <ul>
      * <li>
      * <p>
-     * <code>TABULAR</code> - Data is structured in a tabular format.
+     * <code>TABULAR</code> – Data is structured in a tabular format.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>NON_TABULAR</code> - Data is structured in a non-tabular format.
+     * <code>NON_TABULAR</code> – Data is structured in a non-tabular format.
      * </p>
      * </li>
      * </ul>
@@ -299,12 +299,12 @@ public class GetDatasetResult extends com.amazonaws.AmazonWebServiceResult<com.a
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>TABULAR</code> - Data is structured in a tabular format.
+     *         <code>TABULAR</code> – Data is structured in a tabular format.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>NON_TABULAR</code> - Data is structured in a non-tabular format.
+     *         <code>NON_TABULAR</code> – Data is structured in a non-tabular format.
      *         </p>
      *         </li>
      * @see DatasetKind
@@ -321,12 +321,12 @@ public class GetDatasetResult extends com.amazonaws.AmazonWebServiceResult<com.a
      * <ul>
      * <li>
      * <p>
-     * <code>TABULAR</code> - Data is structured in a tabular format.
+     * <code>TABULAR</code> – Data is structured in a tabular format.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>NON_TABULAR</code> - Data is structured in a non-tabular format.
+     * <code>NON_TABULAR</code> – Data is structured in a non-tabular format.
      * </p>
      * </li>
      * </ul>
@@ -336,12 +336,12 @@ public class GetDatasetResult extends com.amazonaws.AmazonWebServiceResult<com.a
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>TABULAR</code> - Data is structured in a tabular format.
+     *        <code>TABULAR</code> – Data is structured in a tabular format.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>NON_TABULAR</code> - Data is structured in a non-tabular format.
+     *        <code>NON_TABULAR</code> – Data is structured in a non-tabular format.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -360,12 +360,12 @@ public class GetDatasetResult extends com.amazonaws.AmazonWebServiceResult<com.a
      * <ul>
      * <li>
      * <p>
-     * <code>TABULAR</code> - Data is structured in a tabular format.
+     * <code>TABULAR</code> – Data is structured in a tabular format.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>NON_TABULAR</code> - Data is structured in a non-tabular format.
+     * <code>NON_TABULAR</code> – Data is structured in a non-tabular format.
      * </p>
      * </li>
      * </ul>
@@ -375,12 +375,12 @@ public class GetDatasetResult extends com.amazonaws.AmazonWebServiceResult<com.a
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>TABULAR</code> - Data is structured in a tabular format.
+     *        <code>TABULAR</code> – Data is structured in a tabular format.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>NON_TABULAR</code> - Data is structured in a non-tabular format.
+     *        <code>NON_TABULAR</code> – Data is structured in a non-tabular format.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -434,12 +434,12 @@ public class GetDatasetResult extends com.amazonaws.AmazonWebServiceResult<com.a
 
     /**
      * <p>
-     * The timestamp at which the Dataset was created in FinSpace. The value is determined as Epoch time in
+     * The timestamp at which the Dataset was created in FinSpace. The value is determined as epoch time in
      * milliseconds. For example, the value for Monday, November 1, 2021 12:00:00 PM UTC is specified as 1635768000000.
      * </p>
      * 
      * @param createTime
-     *        The timestamp at which the Dataset was created in FinSpace. The value is determined as Epoch time in
+     *        The timestamp at which the Dataset was created in FinSpace. The value is determined as epoch time in
      *        milliseconds. For example, the value for Monday, November 1, 2021 12:00:00 PM UTC is specified as
      *        1635768000000.
      */
@@ -450,11 +450,11 @@ public class GetDatasetResult extends com.amazonaws.AmazonWebServiceResult<com.a
 
     /**
      * <p>
-     * The timestamp at which the Dataset was created in FinSpace. The value is determined as Epoch time in
+     * The timestamp at which the Dataset was created in FinSpace. The value is determined as epoch time in
      * milliseconds. For example, the value for Monday, November 1, 2021 12:00:00 PM UTC is specified as 1635768000000.
      * </p>
      * 
-     * @return The timestamp at which the Dataset was created in FinSpace. The value is determined as Epoch time in
+     * @return The timestamp at which the Dataset was created in FinSpace. The value is determined as epoch time in
      *         milliseconds. For example, the value for Monday, November 1, 2021 12:00:00 PM UTC is specified as
      *         1635768000000.
      */
@@ -465,12 +465,12 @@ public class GetDatasetResult extends com.amazonaws.AmazonWebServiceResult<com.a
 
     /**
      * <p>
-     * The timestamp at which the Dataset was created in FinSpace. The value is determined as Epoch time in
+     * The timestamp at which the Dataset was created in FinSpace. The value is determined as epoch time in
      * milliseconds. For example, the value for Monday, November 1, 2021 12:00:00 PM UTC is specified as 1635768000000.
      * </p>
      * 
      * @param createTime
-     *        The timestamp at which the Dataset was created in FinSpace. The value is determined as Epoch time in
+     *        The timestamp at which the Dataset was created in FinSpace. The value is determined as epoch time in
      *        milliseconds. For example, the value for Monday, November 1, 2021 12:00:00 PM UTC is specified as
      *        1635768000000.
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -483,12 +483,12 @@ public class GetDatasetResult extends com.amazonaws.AmazonWebServiceResult<com.a
 
     /**
      * <p>
-     * The last time that the Dataset was modified. The value is determined as Epoch time in milliseconds. For example,
+     * The last time that the Dataset was modified. The value is determined as epoch time in milliseconds. For example,
      * the value for Monday, November 1, 2021 12:00:00 PM UTC is specified as 1635768000000.
      * </p>
      * 
      * @param lastModifiedTime
-     *        The last time that the Dataset was modified. The value is determined as Epoch time in milliseconds. For
+     *        The last time that the Dataset was modified. The value is determined as epoch time in milliseconds. For
      *        example, the value for Monday, November 1, 2021 12:00:00 PM UTC is specified as 1635768000000.
      */
 
@@ -498,11 +498,11 @@ public class GetDatasetResult extends com.amazonaws.AmazonWebServiceResult<com.a
 
     /**
      * <p>
-     * The last time that the Dataset was modified. The value is determined as Epoch time in milliseconds. For example,
+     * The last time that the Dataset was modified. The value is determined as epoch time in milliseconds. For example,
      * the value for Monday, November 1, 2021 12:00:00 PM UTC is specified as 1635768000000.
      * </p>
      * 
-     * @return The last time that the Dataset was modified. The value is determined as Epoch time in milliseconds. For
+     * @return The last time that the Dataset was modified. The value is determined as epoch time in milliseconds. For
      *         example, the value for Monday, November 1, 2021 12:00:00 PM UTC is specified as 1635768000000.
      */
 
@@ -512,12 +512,12 @@ public class GetDatasetResult extends com.amazonaws.AmazonWebServiceResult<com.a
 
     /**
      * <p>
-     * The last time that the Dataset was modified. The value is determined as Epoch time in milliseconds. For example,
+     * The last time that the Dataset was modified. The value is determined as epoch time in milliseconds. For example,
      * the value for Monday, November 1, 2021 12:00:00 PM UTC is specified as 1635768000000.
      * </p>
      * 
      * @param lastModifiedTime
-     *        The last time that the Dataset was modified. The value is determined as Epoch time in milliseconds. For
+     *        The last time that the Dataset was modified. The value is determined as epoch time in milliseconds. For
      *        example, the value for Monday, November 1, 2021 12:00:00 PM UTC is specified as 1635768000000.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -614,22 +614,22 @@ public class GetDatasetResult extends com.amazonaws.AmazonWebServiceResult<com.a
      * <ul>
      * <li>
      * <p>
-     * <code>PENDING</code> - Dataset is pending creation.
+     * <code>PENDING</code> – Dataset is pending creation.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>FAILED</code> - Dataset creation has failed.
+     * <code>FAILED</code> – Dataset creation has failed.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>SUCCESS</code> - Dataset creation has succeeded.
+     * <code>SUCCESS</code> – Dataset creation has succeeded.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>RUNNING</code> - Dataset creation is running.
+     * <code>RUNNING</code> – Dataset creation is running.
      * </p>
      * </li>
      * </ul>
@@ -639,22 +639,22 @@ public class GetDatasetResult extends com.amazonaws.AmazonWebServiceResult<com.a
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>PENDING</code> - Dataset is pending creation.
+     *        <code>PENDING</code> – Dataset is pending creation.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>FAILED</code> - Dataset creation has failed.
+     *        <code>FAILED</code> – Dataset creation has failed.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>SUCCESS</code> - Dataset creation has succeeded.
+     *        <code>SUCCESS</code> – Dataset creation has succeeded.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>RUNNING</code> - Dataset creation is running.
+     *        <code>RUNNING</code> – Dataset creation is running.
      *        </p>
      *        </li>
      * @see DatasetStatus
@@ -671,22 +671,22 @@ public class GetDatasetResult extends com.amazonaws.AmazonWebServiceResult<com.a
      * <ul>
      * <li>
      * <p>
-     * <code>PENDING</code> - Dataset is pending creation.
+     * <code>PENDING</code> – Dataset is pending creation.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>FAILED</code> - Dataset creation has failed.
+     * <code>FAILED</code> – Dataset creation has failed.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>SUCCESS</code> - Dataset creation has succeeded.
+     * <code>SUCCESS</code> – Dataset creation has succeeded.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>RUNNING</code> - Dataset creation is running.
+     * <code>RUNNING</code> – Dataset creation is running.
      * </p>
      * </li>
      * </ul>
@@ -695,22 +695,22 @@ public class GetDatasetResult extends com.amazonaws.AmazonWebServiceResult<com.a
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>PENDING</code> - Dataset is pending creation.
+     *         <code>PENDING</code> – Dataset is pending creation.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>FAILED</code> - Dataset creation has failed.
+     *         <code>FAILED</code> – Dataset creation has failed.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>SUCCESS</code> - Dataset creation has succeeded.
+     *         <code>SUCCESS</code> – Dataset creation has succeeded.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>RUNNING</code> - Dataset creation is running.
+     *         <code>RUNNING</code> – Dataset creation is running.
      *         </p>
      *         </li>
      * @see DatasetStatus
@@ -727,22 +727,22 @@ public class GetDatasetResult extends com.amazonaws.AmazonWebServiceResult<com.a
      * <ul>
      * <li>
      * <p>
-     * <code>PENDING</code> - Dataset is pending creation.
+     * <code>PENDING</code> – Dataset is pending creation.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>FAILED</code> - Dataset creation has failed.
+     * <code>FAILED</code> – Dataset creation has failed.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>SUCCESS</code> - Dataset creation has succeeded.
+     * <code>SUCCESS</code> – Dataset creation has succeeded.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>RUNNING</code> - Dataset creation is running.
+     * <code>RUNNING</code> – Dataset creation is running.
      * </p>
      * </li>
      * </ul>
@@ -752,22 +752,22 @@ public class GetDatasetResult extends com.amazonaws.AmazonWebServiceResult<com.a
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>PENDING</code> - Dataset is pending creation.
+     *        <code>PENDING</code> – Dataset is pending creation.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>FAILED</code> - Dataset creation has failed.
+     *        <code>FAILED</code> – Dataset creation has failed.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>SUCCESS</code> - Dataset creation has succeeded.
+     *        <code>SUCCESS</code> – Dataset creation has succeeded.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>RUNNING</code> - Dataset creation is running.
+     *        <code>RUNNING</code> – Dataset creation is running.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -786,22 +786,22 @@ public class GetDatasetResult extends com.amazonaws.AmazonWebServiceResult<com.a
      * <ul>
      * <li>
      * <p>
-     * <code>PENDING</code> - Dataset is pending creation.
+     * <code>PENDING</code> – Dataset is pending creation.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>FAILED</code> - Dataset creation has failed.
+     * <code>FAILED</code> – Dataset creation has failed.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>SUCCESS</code> - Dataset creation has succeeded.
+     * <code>SUCCESS</code> – Dataset creation has succeeded.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>RUNNING</code> - Dataset creation is running.
+     * <code>RUNNING</code> – Dataset creation is running.
      * </p>
      * </li>
      * </ul>
@@ -811,22 +811,22 @@ public class GetDatasetResult extends com.amazonaws.AmazonWebServiceResult<com.a
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>PENDING</code> - Dataset is pending creation.
+     *        <code>PENDING</code> – Dataset is pending creation.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>FAILED</code> - Dataset creation has failed.
+     *        <code>FAILED</code> – Dataset creation has failed.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>SUCCESS</code> - Dataset creation has succeeded.
+     *        <code>SUCCESS</code> – Dataset creation has succeeded.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>RUNNING</code> - Dataset creation is running.
+     *        <code>RUNNING</code> – Dataset creation is running.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

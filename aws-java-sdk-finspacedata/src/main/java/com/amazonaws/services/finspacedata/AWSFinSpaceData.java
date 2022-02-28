@@ -125,6 +125,56 @@ public interface AWSFinSpaceData {
 
     /**
      * <p>
+     * Creates a group of permissions for various actions that a user can perform in FinSpace.
+     * </p>
+     * 
+     * @param createPermissionGroupRequest
+     * @return Result of the CreatePermissionGroup operation returned by the service.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws LimitExceededException
+     *         A limit has exceeded.
+     * @throws ConflictException
+     *         The request conflicts with an existing resource.
+     * @sample AWSFinSpaceData.CreatePermissionGroup
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/CreatePermissionGroup" target="_top">AWS
+     *      API Documentation</a>
+     */
+    CreatePermissionGroupResult createPermissionGroup(CreatePermissionGroupRequest createPermissionGroupRequest);
+
+    /**
+     * <p>
+     * Creates a new user in FinSpace.
+     * </p>
+     * 
+     * @param createUserRequest
+     * @return Result of the CreateUser operation returned by the service.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws LimitExceededException
+     *         A limit has exceeded.
+     * @throws ConflictException
+     *         The request conflicts with an existing resource.
+     * @sample AWSFinSpaceData.CreateUser
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/CreateUser" target="_top">AWS API
+     *      Documentation</a>
+     */
+    CreateUserResult createUser(CreateUserRequest createUserRequest);
+
+    /**
+     * <p>
      * Deletes a FinSpace Dataset.
      * </p>
      * 
@@ -150,6 +200,85 @@ public interface AWSFinSpaceData {
      *      Documentation</a>
      */
     DeleteDatasetResult deleteDataset(DeleteDatasetRequest deleteDatasetRequest);
+
+    /**
+     * <p>
+     * Deletes a permission group. This action is irreversible.
+     * </p>
+     * 
+     * @param deletePermissionGroupRequest
+     * @return Result of the DeletePermissionGroup operation returned by the service.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ResourceNotFoundException
+     *         One or more resources can't be found.
+     * @throws LimitExceededException
+     *         A limit has exceeded.
+     * @throws ConflictException
+     *         The request conflicts with an existing resource.
+     * @sample AWSFinSpaceData.DeletePermissionGroup
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/DeletePermissionGroup" target="_top">AWS
+     *      API Documentation</a>
+     */
+    DeletePermissionGroupResult deletePermissionGroup(DeletePermissionGroupRequest deletePermissionGroupRequest);
+
+    /**
+     * <p>
+     * Denies access to the FinSpace web application and API for the specified user.
+     * </p>
+     * 
+     * @param disableUserRequest
+     * @return Result of the DisableUser operation returned by the service.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ResourceNotFoundException
+     *         One or more resources can't be found.
+     * @throws ConflictException
+     *         The request conflicts with an existing resource.
+     * @sample AWSFinSpaceData.DisableUser
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/DisableUser" target="_top">AWS API
+     *      Documentation</a>
+     */
+    DisableUserResult disableUser(DisableUserRequest disableUserRequest);
+
+    /**
+     * <p>
+     * Allows the specified user to access the FinSpace web application and API.
+     * </p>
+     * 
+     * @param enableUserRequest
+     * @return Result of the EnableUser operation returned by the service.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ResourceNotFoundException
+     *         One or more resources can't be found.
+     * @throws LimitExceededException
+     *         A limit has exceeded.
+     * @throws ConflictException
+     *         The request conflicts with an existing resource.
+     * @sample AWSFinSpaceData.EnableUser
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/EnableUser" target="_top">AWS API
+     *      Documentation</a>
+     */
+    EnableUserResult enableUser(EnableUserRequest enableUserRequest);
 
     /**
      * <p>
@@ -251,6 +380,29 @@ public interface AWSFinSpaceData {
 
     /**
      * <p>
+     * Retrieves details for a specific user.
+     * </p>
+     * 
+     * @param getUserRequest
+     * @return Result of the GetUser operation returned by the service.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ResourceNotFoundException
+     *         One or more resources can't be found.
+     * @sample AWSFinSpaceData.GetUser
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/GetUser" target="_top">AWS API
+     *      Documentation</a>
+     */
+    GetUserResult getUser(GetUserRequest getUserRequest);
+
+    /**
+     * <p>
      * A temporary Amazon S3 location, where you can copy your files from a source location to stage or use as a scratch
      * space in FinSpace notebook.
      * </p>
@@ -347,6 +499,74 @@ public interface AWSFinSpaceData {
 
     /**
      * <p>
+     * Lists all available permission groups in FinSpace.
+     * </p>
+     * 
+     * @param listPermissionGroupsRequest
+     * @return Result of the ListPermissionGroups operation returned by the service.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @sample AWSFinSpaceData.ListPermissionGroups
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/ListPermissionGroups" target="_top">AWS
+     *      API Documentation</a>
+     */
+    ListPermissionGroupsResult listPermissionGroups(ListPermissionGroupsRequest listPermissionGroupsRequest);
+
+    /**
+     * <p>
+     * Lists all available user accounts in FinSpace.
+     * </p>
+     * 
+     * @param listUsersRequest
+     * @return Result of the ListUsers operation returned by the service.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @sample AWSFinSpaceData.ListUsers
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/ListUsers" target="_top">AWS API
+     *      Documentation</a>
+     */
+    ListUsersResult listUsers(ListUsersRequest listUsersRequest);
+
+    /**
+     * <p>
+     * Resets the password for a specified user ID and generates a temporary one. Only a superuser can reset password
+     * for other users. Resetting the password immediately invalidates the previous password associated with the user.
+     * </p>
+     * 
+     * @param resetUserPasswordRequest
+     * @return Result of the ResetUserPassword operation returned by the service.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ResourceNotFoundException
+     *         One or more resources can't be found.
+     * @throws ConflictException
+     *         The request conflicts with an existing resource.
+     * @sample AWSFinSpaceData.ResetUserPassword
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/ResetUserPassword" target="_top">AWS API
+     *      Documentation</a>
+     */
+    ResetUserPasswordResult resetUserPassword(ResetUserPasswordRequest resetUserPasswordRequest);
+
+    /**
+     * <p>
      * Updates a FinSpace Changeset.
      * </p>
      * 
@@ -396,6 +616,56 @@ public interface AWSFinSpaceData {
      *      Documentation</a>
      */
     UpdateDatasetResult updateDataset(UpdateDatasetRequest updateDatasetRequest);
+
+    /**
+     * <p>
+     * Modifies the details of a permission group. You cannot modify a <code>permissionGroupID</code>.
+     * </p>
+     * 
+     * @param updatePermissionGroupRequest
+     * @return Result of the UpdatePermissionGroup operation returned by the service.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ResourceNotFoundException
+     *         One or more resources can't be found.
+     * @throws ConflictException
+     *         The request conflicts with an existing resource.
+     * @sample AWSFinSpaceData.UpdatePermissionGroup
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/UpdatePermissionGroup" target="_top">AWS
+     *      API Documentation</a>
+     */
+    UpdatePermissionGroupResult updatePermissionGroup(UpdatePermissionGroupRequest updatePermissionGroupRequest);
+
+    /**
+     * <p>
+     * Modifies the details of the specified user account. You cannot update the <code>userId</code> for a user.
+     * </p>
+     * 
+     * @param updateUserRequest
+     * @return Result of the UpdateUser operation returned by the service.
+     * @throws InternalServerException
+     *         The request processing has failed because of an unknown error, exception or failure.
+     * @throws ValidationException
+     *         The input fails to satisfy the constraints specified by an AWS service.
+     * @throws ThrottlingException
+     *         The request was denied due to request throttling.
+     * @throws AccessDeniedException
+     *         You do not have sufficient access to perform this action.
+     * @throws ResourceNotFoundException
+     *         One or more resources can't be found.
+     * @throws ConflictException
+     *         The request conflicts with an existing resource.
+     * @sample AWSFinSpaceData.UpdateUser
+     * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/finspace-2020-07-13/UpdateUser" target="_top">AWS API
+     *      Documentation</a>
+     */
+    UpdateUserResult updateUser(UpdateUserRequest updateUserRequest);
 
     /**
      * Shuts down this client object, releasing any resources that might be held open. This is an optional method, and

@@ -33,6 +33,8 @@ public class ComponentChildMarshaller {
             .marshallLocationName("children").build();
     private static final MarshallingInfo<String> COMPONENTTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("componentType").build();
+    private static final MarshallingInfo<Map> EVENTS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("events").build();
     private static final MarshallingInfo<String> NAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("name").build();
     private static final MarshallingInfo<Map> PROPERTIES_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
@@ -56,6 +58,7 @@ public class ComponentChildMarshaller {
         try {
             protocolMarshaller.marshall(componentChild.getChildren(), CHILDREN_BINDING);
             protocolMarshaller.marshall(componentChild.getComponentType(), COMPONENTTYPE_BINDING);
+            protocolMarshaller.marshall(componentChild.getEvents(), EVENTS_BINDING);
             protocolMarshaller.marshall(componentChild.getName(), NAME_BINDING);
             protocolMarshaller.marshall(componentChild.getProperties(), PROPERTIES_BINDING);
         } catch (Exception e) {

@@ -48,6 +48,10 @@ public class OpenZFSCreateRootVolumeConfigurationJsonUnmarshaller implements Unm
                 break;
 
             if (token == FIELD_NAME || token == START_OBJECT) {
+                if (context.testExpression("RecordSizeKiB", targetDepth)) {
+                    context.nextToken();
+                    openZFSCreateRootVolumeConfiguration.setRecordSizeKiB(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
                 if (context.testExpression("DataCompressionType", targetDepth)) {
                     context.nextToken();
                     openZFSCreateRootVolumeConfiguration.setDataCompressionType(context.getUnmarshaller(String.class).unmarshall(context));

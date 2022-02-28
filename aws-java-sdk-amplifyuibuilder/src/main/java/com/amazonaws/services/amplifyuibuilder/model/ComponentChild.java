@@ -42,13 +42,21 @@ public class ComponentChild implements Serializable, Cloneable, StructuredPojo {
     private String componentType;
     /**
      * <p>
+     * Describes the events that can be raised on the child component. Use for the workflow feature in Amplify Studio
+     * that allows you to bind events and actions to components.
+     * </p>
+     */
+    private java.util.Map<String, ComponentEvent> events;
+    /**
+     * <p>
      * The name of the child component.
      * </p>
      */
     private String name;
     /**
      * <p>
-     * Describes the properties of the child component.
+     * Describes the properties of the child component. You can't specify <code>tags</code> as a valid property for
+     * <code>properties</code>.
      * </p>
      */
     private java.util.Map<String, ComponentProperty> properties;
@@ -165,6 +173,80 @@ public class ComponentChild implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
+     * Describes the events that can be raised on the child component. Use for the workflow feature in Amplify Studio
+     * that allows you to bind events and actions to components.
+     * </p>
+     * 
+     * @return Describes the events that can be raised on the child component. Use for the workflow feature in Amplify
+     *         Studio that allows you to bind events and actions to components.
+     */
+
+    public java.util.Map<String, ComponentEvent> getEvents() {
+        return events;
+    }
+
+    /**
+     * <p>
+     * Describes the events that can be raised on the child component. Use for the workflow feature in Amplify Studio
+     * that allows you to bind events and actions to components.
+     * </p>
+     * 
+     * @param events
+     *        Describes the events that can be raised on the child component. Use for the workflow feature in Amplify
+     *        Studio that allows you to bind events and actions to components.
+     */
+
+    public void setEvents(java.util.Map<String, ComponentEvent> events) {
+        this.events = events;
+    }
+
+    /**
+     * <p>
+     * Describes the events that can be raised on the child component. Use for the workflow feature in Amplify Studio
+     * that allows you to bind events and actions to components.
+     * </p>
+     * 
+     * @param events
+     *        Describes the events that can be raised on the child component. Use for the workflow feature in Amplify
+     *        Studio that allows you to bind events and actions to components.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ComponentChild withEvents(java.util.Map<String, ComponentEvent> events) {
+        setEvents(events);
+        return this;
+    }
+
+    /**
+     * Add a single Events entry
+     *
+     * @see ComponentChild#withEvents
+     * @returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ComponentChild addEventsEntry(String key, ComponentEvent value) {
+        if (null == this.events) {
+            this.events = new java.util.HashMap<String, ComponentEvent>();
+        }
+        if (this.events.containsKey(key))
+            throw new IllegalArgumentException("Duplicated keys (" + key.toString() + ") are provided.");
+        this.events.put(key, value);
+        return this;
+    }
+
+    /**
+     * Removes all the entries added into Events.
+     *
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ComponentChild clearEventsEntries() {
+        this.events = null;
+        return this;
+    }
+
+    /**
+     * <p>
      * The name of the child component.
      * </p>
      * 
@@ -205,10 +287,12 @@ public class ComponentChild implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Describes the properties of the child component.
+     * Describes the properties of the child component. You can't specify <code>tags</code> as a valid property for
+     * <code>properties</code>.
      * </p>
      * 
-     * @return Describes the properties of the child component.
+     * @return Describes the properties of the child component. You can't specify <code>tags</code> as a valid property
+     *         for <code>properties</code>.
      */
 
     public java.util.Map<String, ComponentProperty> getProperties() {
@@ -217,11 +301,13 @@ public class ComponentChild implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Describes the properties of the child component.
+     * Describes the properties of the child component. You can't specify <code>tags</code> as a valid property for
+     * <code>properties</code>.
      * </p>
      * 
      * @param properties
-     *        Describes the properties of the child component.
+     *        Describes the properties of the child component. You can't specify <code>tags</code> as a valid property
+     *        for <code>properties</code>.
      */
 
     public void setProperties(java.util.Map<String, ComponentProperty> properties) {
@@ -230,11 +316,13 @@ public class ComponentChild implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Describes the properties of the child component.
+     * Describes the properties of the child component. You can't specify <code>tags</code> as a valid property for
+     * <code>properties</code>.
      * </p>
      * 
      * @param properties
-     *        Describes the properties of the child component.
+     *        Describes the properties of the child component. You can't specify <code>tags</code> as a valid property
+     *        for <code>properties</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -287,6 +375,8 @@ public class ComponentChild implements Serializable, Cloneable, StructuredPojo {
             sb.append("Children: ").append(getChildren()).append(",");
         if (getComponentType() != null)
             sb.append("ComponentType: ").append(getComponentType()).append(",");
+        if (getEvents() != null)
+            sb.append("Events: ").append(getEvents()).append(",");
         if (getName() != null)
             sb.append("Name: ").append(getName()).append(",");
         if (getProperties() != null)
@@ -313,6 +403,10 @@ public class ComponentChild implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getComponentType() != null && other.getComponentType().equals(this.getComponentType()) == false)
             return false;
+        if (other.getEvents() == null ^ this.getEvents() == null)
+            return false;
+        if (other.getEvents() != null && other.getEvents().equals(this.getEvents()) == false)
+            return false;
         if (other.getName() == null ^ this.getName() == null)
             return false;
         if (other.getName() != null && other.getName().equals(this.getName()) == false)
@@ -331,6 +425,7 @@ public class ComponentChild implements Serializable, Cloneable, StructuredPojo {
 
         hashCode = prime * hashCode + ((getChildren() == null) ? 0 : getChildren().hashCode());
         hashCode = prime * hashCode + ((getComponentType() == null) ? 0 : getComponentType().hashCode());
+        hashCode = prime * hashCode + ((getEvents() == null) ? 0 : getEvents().hashCode());
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
         hashCode = prime * hashCode + ((getProperties() == null) ? 0 : getProperties().hashCode());
         return hashCode;

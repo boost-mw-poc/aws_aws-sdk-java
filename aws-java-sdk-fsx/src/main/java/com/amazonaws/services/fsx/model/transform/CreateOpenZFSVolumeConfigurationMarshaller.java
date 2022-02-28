@@ -34,6 +34,8 @@ public class CreateOpenZFSVolumeConfigurationMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("StorageCapacityReservationGiB").build();
     private static final MarshallingInfo<Integer> STORAGECAPACITYQUOTAGIB_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("StorageCapacityQuotaGiB").build();
+    private static final MarshallingInfo<Integer> RECORDSIZEKIB_BINDING = MarshallingInfo.builder(MarshallingType.INTEGER)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RecordSizeKiB").build();
     private static final MarshallingInfo<String> DATACOMPRESSIONTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("DataCompressionType").build();
     private static final MarshallingInfo<Boolean> COPYTAGSTOSNAPSHOTS_BINDING = MarshallingInfo.builder(MarshallingType.BOOLEAN)
@@ -66,6 +68,7 @@ public class CreateOpenZFSVolumeConfigurationMarshaller {
             protocolMarshaller.marshall(createOpenZFSVolumeConfiguration.getParentVolumeId(), PARENTVOLUMEID_BINDING);
             protocolMarshaller.marshall(createOpenZFSVolumeConfiguration.getStorageCapacityReservationGiB(), STORAGECAPACITYRESERVATIONGIB_BINDING);
             protocolMarshaller.marshall(createOpenZFSVolumeConfiguration.getStorageCapacityQuotaGiB(), STORAGECAPACITYQUOTAGIB_BINDING);
+            protocolMarshaller.marshall(createOpenZFSVolumeConfiguration.getRecordSizeKiB(), RECORDSIZEKIB_BINDING);
             protocolMarshaller.marshall(createOpenZFSVolumeConfiguration.getDataCompressionType(), DATACOMPRESSIONTYPE_BINDING);
             protocolMarshaller.marshall(createOpenZFSVolumeConfiguration.getCopyTagsToSnapshots(), COPYTAGSTOSNAPSHOTS_BINDING);
             protocolMarshaller.marshall(createOpenZFSVolumeConfiguration.getOriginSnapshot(), ORIGINSNAPSHOT_BINDING);

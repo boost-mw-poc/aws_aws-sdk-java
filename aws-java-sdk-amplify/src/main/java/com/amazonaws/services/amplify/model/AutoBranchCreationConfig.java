@@ -659,7 +659,7 @@ public class AutoBranchCreationConfig implements Serializable, Cloneable, Struct
         if (getEnablePerformanceMode() != null)
             sb.append("EnablePerformanceMode: ").append(getEnablePerformanceMode()).append(",");
         if (getBuildSpec() != null)
-            sb.append("BuildSpec: ").append(getBuildSpec()).append(",");
+            sb.append("BuildSpec: ").append("***Sensitive Data Redacted***").append(",");
         if (getEnablePullRequestPreview() != null)
             sb.append("EnablePullRequestPreview: ").append(getEnablePullRequestPreview()).append(",");
         if (getPullRequestEnvironmentName() != null)

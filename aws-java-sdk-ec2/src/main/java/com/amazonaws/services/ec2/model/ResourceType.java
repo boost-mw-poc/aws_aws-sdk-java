@@ -71,6 +71,7 @@ public enum ResourceType {
     SpotFleetRequest("spot-fleet-request"),
     SpotInstancesRequest("spot-instances-request"),
     Subnet("subnet"),
+    SubnetCidrReservation("subnet-cidr-reservation"),
     TrafficMirrorFilter("traffic-mirror-filter"),
     TrafficMirrorSession("traffic-mirror-session"),
     TrafficMirrorTarget("traffic-mirror-target"),

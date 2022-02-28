@@ -30,19 +30,36 @@ public class OpenZFSCreateRootVolumeConfiguration implements Serializable, Clone
 
     /**
      * <p>
-     * Specifies the method used to compress the data on the volume. Unless the compression type is specified, volumes
-     * inherit the <code>DataCompressionType</code> value of their parent volume.
+     * Specifies the record size of an OpenZFS root volume, in kibibytes (KiB). Valid values are 4, 8, 16, 32, 64, 128,
+     * 256, 512, or 1024 KiB. The default is 128 KiB. Most workloads should use the default record size. Database
+     * workflows can benefit from a smaller record size, while streaming workflows can benefit from a larger record
+     * size. For additional guidance on setting a custom record size, see <a
+     * href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/performance.html#performance-tips-zfs"> Tips for
+     * maximizing performance</a> in the <i>Amazon FSx for OpenZFS User Guide</i>.
+     * </p>
+     */
+    private Integer recordSizeKiB;
+    /**
+     * <p>
+     * Specifies the method used to compress the data on the volume. The compression type is <code>NONE</code> by
+     * default.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>NONE</code> - Doesn't compress the data on the volume.
+     * <code>NONE</code> - Doesn't compress the data on the volume. <code>NONE</code> is the default.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>ZSTD</code> - Compresses the data in the volume using the ZStandard (ZSTD) compression algorithm. This
-     * algorithm reduces the amount of space used on your volume and has very little impact on compute resources.
+     * <code>ZSTD</code> - Compresses the data in the volume using the Zstandard (ZSTD) compression algorithm. Compared
+     * to LZ4, Z-Standard provides a better compression ratio to minimize on-disk storage utilization.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>LZ4</code> - Compresses the data in the volume using the LZ4 compression algorithm. Compared to Z-Standard,
+     * LZ4 is less compute-intensive and delivers higher write throughput speeds.
      * </p>
      * </li>
      * </ul>
@@ -62,11 +79,11 @@ public class OpenZFSCreateRootVolumeConfiguration implements Serializable, Clone
     private java.util.List<OpenZFSUserOrGroupQuota> userAndGroupQuotas;
     /**
      * <p>
-     * A Boolean value indicating whether tags for the volume should be copied to snapshots. This value defaults to
-     * <code>false</code>. If it's set to <code>true</code>, all tags for the volume are copied to snapshots where the
-     * user doesn't specify tags. If this value is <code>true</code> and you specify one or more tags, only the
-     * specified tags are copied to snapshots. If you specify one or more tags when creating the snapshot, no tags are
-     * copied from the volume, regardless of this value.
+     * A Boolean value indicating whether tags for the volume should be copied to snapshots of the volume. This value
+     * defaults to <code>false</code>. If it's set to <code>true</code>, all tags for the volume are copied to snapshots
+     * where the user doesn't specify tags. If this value is <code>true</code> and you specify one or more tags, only
+     * the specified tags are copied to snapshots. If you specify one or more tags when creating the snapshot, no tags
+     * are copied from the volume, regardless of this value.
      * </p>
      */
     private Boolean copyTagsToSnapshots;
@@ -80,37 +97,118 @@ public class OpenZFSCreateRootVolumeConfiguration implements Serializable, Clone
 
     /**
      * <p>
-     * Specifies the method used to compress the data on the volume. Unless the compression type is specified, volumes
-     * inherit the <code>DataCompressionType</code> value of their parent volume.
+     * Specifies the record size of an OpenZFS root volume, in kibibytes (KiB). Valid values are 4, 8, 16, 32, 64, 128,
+     * 256, 512, or 1024 KiB. The default is 128 KiB. Most workloads should use the default record size. Database
+     * workflows can benefit from a smaller record size, while streaming workflows can benefit from a larger record
+     * size. For additional guidance on setting a custom record size, see <a
+     * href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/performance.html#performance-tips-zfs"> Tips for
+     * maximizing performance</a> in the <i>Amazon FSx for OpenZFS User Guide</i>.
+     * </p>
+     * 
+     * @param recordSizeKiB
+     *        Specifies the record size of an OpenZFS root volume, in kibibytes (KiB). Valid values are 4, 8, 16, 32,
+     *        64, 128, 256, 512, or 1024 KiB. The default is 128 KiB. Most workloads should use the default record size.
+     *        Database workflows can benefit from a smaller record size, while streaming workflows can benefit from a
+     *        larger record size. For additional guidance on setting a custom record size, see <a
+     *        href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/performance.html#performance-tips-zfs"> Tips for
+     *        maximizing performance</a> in the <i>Amazon FSx for OpenZFS User Guide</i>.
+     */
+
+    public void setRecordSizeKiB(Integer recordSizeKiB) {
+        this.recordSizeKiB = recordSizeKiB;
+    }
+
+    /**
+     * <p>
+     * Specifies the record size of an OpenZFS root volume, in kibibytes (KiB). Valid values are 4, 8, 16, 32, 64, 128,
+     * 256, 512, or 1024 KiB. The default is 128 KiB. Most workloads should use the default record size. Database
+     * workflows can benefit from a smaller record size, while streaming workflows can benefit from a larger record
+     * size. For additional guidance on setting a custom record size, see <a
+     * href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/performance.html#performance-tips-zfs"> Tips for
+     * maximizing performance</a> in the <i>Amazon FSx for OpenZFS User Guide</i>.
+     * </p>
+     * 
+     * @return Specifies the record size of an OpenZFS root volume, in kibibytes (KiB). Valid values are 4, 8, 16, 32,
+     *         64, 128, 256, 512, or 1024 KiB. The default is 128 KiB. Most workloads should use the default record
+     *         size. Database workflows can benefit from a smaller record size, while streaming workflows can benefit
+     *         from a larger record size. For additional guidance on setting a custom record size, see <a
+     *         href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/performance.html#performance-tips-zfs"> Tips
+     *         for maximizing performance</a> in the <i>Amazon FSx for OpenZFS User Guide</i>.
+     */
+
+    public Integer getRecordSizeKiB() {
+        return this.recordSizeKiB;
+    }
+
+    /**
+     * <p>
+     * Specifies the record size of an OpenZFS root volume, in kibibytes (KiB). Valid values are 4, 8, 16, 32, 64, 128,
+     * 256, 512, or 1024 KiB. The default is 128 KiB. Most workloads should use the default record size. Database
+     * workflows can benefit from a smaller record size, while streaming workflows can benefit from a larger record
+     * size. For additional guidance on setting a custom record size, see <a
+     * href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/performance.html#performance-tips-zfs"> Tips for
+     * maximizing performance</a> in the <i>Amazon FSx for OpenZFS User Guide</i>.
+     * </p>
+     * 
+     * @param recordSizeKiB
+     *        Specifies the record size of an OpenZFS root volume, in kibibytes (KiB). Valid values are 4, 8, 16, 32,
+     *        64, 128, 256, 512, or 1024 KiB. The default is 128 KiB. Most workloads should use the default record size.
+     *        Database workflows can benefit from a smaller record size, while streaming workflows can benefit from a
+     *        larger record size. For additional guidance on setting a custom record size, see <a
+     *        href="https://docs.aws.amazon.com/fsx/latest/OpenZFSGuide/performance.html#performance-tips-zfs"> Tips for
+     *        maximizing performance</a> in the <i>Amazon FSx for OpenZFS User Guide</i>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public OpenZFSCreateRootVolumeConfiguration withRecordSizeKiB(Integer recordSizeKiB) {
+        setRecordSizeKiB(recordSizeKiB);
+        return this;
+    }
+
+    /**
+     * <p>
+     * Specifies the method used to compress the data on the volume. The compression type is <code>NONE</code> by
+     * default.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>NONE</code> - Doesn't compress the data on the volume.
+     * <code>NONE</code> - Doesn't compress the data on the volume. <code>NONE</code> is the default.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>ZSTD</code> - Compresses the data in the volume using the ZStandard (ZSTD) compression algorithm. This
-     * algorithm reduces the amount of space used on your volume and has very little impact on compute resources.
+     * <code>ZSTD</code> - Compresses the data in the volume using the Zstandard (ZSTD) compression algorithm. Compared
+     * to LZ4, Z-Standard provides a better compression ratio to minimize on-disk storage utilization.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>LZ4</code> - Compresses the data in the volume using the LZ4 compression algorithm. Compared to Z-Standard,
+     * LZ4 is less compute-intensive and delivers higher write throughput speeds.
      * </p>
      * </li>
      * </ul>
      * 
      * @param dataCompressionType
-     *        Specifies the method used to compress the data on the volume. Unless the compression type is specified,
-     *        volumes inherit the <code>DataCompressionType</code> value of their parent volume.</p>
+     *        Specifies the method used to compress the data on the volume. The compression type is <code>NONE</code> by
+     *        default.</p>
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>NONE</code> - Doesn't compress the data on the volume.
+     *        <code>NONE</code> - Doesn't compress the data on the volume. <code>NONE</code> is the default.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>ZSTD</code> - Compresses the data in the volume using the ZStandard (ZSTD) compression algorithm.
-     *        This algorithm reduces the amount of space used on your volume and has very little impact on compute
-     *        resources.
+     *        <code>ZSTD</code> - Compresses the data in the volume using the Zstandard (ZSTD) compression algorithm.
+     *        Compared to LZ4, Z-Standard provides a better compression ratio to minimize on-disk storage utilization.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>LZ4</code> - Compresses the data in the volume using the LZ4 compression algorithm. Compared to
+     *        Z-Standard, LZ4 is less compute-intensive and delivers higher write throughput speeds.
      *        </p>
      *        </li>
      * @see OpenZFSDataCompressionType
@@ -122,36 +220,47 @@ public class OpenZFSCreateRootVolumeConfiguration implements Serializable, Clone
 
     /**
      * <p>
-     * Specifies the method used to compress the data on the volume. Unless the compression type is specified, volumes
-     * inherit the <code>DataCompressionType</code> value of their parent volume.
+     * Specifies the method used to compress the data on the volume. The compression type is <code>NONE</code> by
+     * default.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>NONE</code> - Doesn't compress the data on the volume.
+     * <code>NONE</code> - Doesn't compress the data on the volume. <code>NONE</code> is the default.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>ZSTD</code> - Compresses the data in the volume using the ZStandard (ZSTD) compression algorithm. This
-     * algorithm reduces the amount of space used on your volume and has very little impact on compute resources.
+     * <code>ZSTD</code> - Compresses the data in the volume using the Zstandard (ZSTD) compression algorithm. Compared
+     * to LZ4, Z-Standard provides a better compression ratio to minimize on-disk storage utilization.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>LZ4</code> - Compresses the data in the volume using the LZ4 compression algorithm. Compared to Z-Standard,
+     * LZ4 is less compute-intensive and delivers higher write throughput speeds.
      * </p>
      * </li>
      * </ul>
      * 
-     * @return Specifies the method used to compress the data on the volume. Unless the compression type is specified,
-     *         volumes inherit the <code>DataCompressionType</code> value of their parent volume.</p>
+     * @return Specifies the method used to compress the data on the volume. The compression type is <code>NONE</code>
+     *         by default.</p>
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>NONE</code> - Doesn't compress the data on the volume.
+     *         <code>NONE</code> - Doesn't compress the data on the volume. <code>NONE</code> is the default.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>ZSTD</code> - Compresses the data in the volume using the ZStandard (ZSTD) compression algorithm.
-     *         This algorithm reduces the amount of space used on your volume and has very little impact on compute
-     *         resources.
+     *         <code>ZSTD</code> - Compresses the data in the volume using the Zstandard (ZSTD) compression algorithm.
+     *         Compared to LZ4, Z-Standard provides a better compression ratio to minimize on-disk storage utilization.
+     *         </p>
+     *         </li>
+     *         <li>
+     *         <p>
+     *         <code>LZ4</code> - Compresses the data in the volume using the LZ4 compression algorithm. Compared to
+     *         Z-Standard, LZ4 is less compute-intensive and delivers higher write throughput speeds.
      *         </p>
      *         </li>
      * @see OpenZFSDataCompressionType
@@ -163,37 +272,48 @@ public class OpenZFSCreateRootVolumeConfiguration implements Serializable, Clone
 
     /**
      * <p>
-     * Specifies the method used to compress the data on the volume. Unless the compression type is specified, volumes
-     * inherit the <code>DataCompressionType</code> value of their parent volume.
+     * Specifies the method used to compress the data on the volume. The compression type is <code>NONE</code> by
+     * default.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>NONE</code> - Doesn't compress the data on the volume.
+     * <code>NONE</code> - Doesn't compress the data on the volume. <code>NONE</code> is the default.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>ZSTD</code> - Compresses the data in the volume using the ZStandard (ZSTD) compression algorithm. This
-     * algorithm reduces the amount of space used on your volume and has very little impact on compute resources.
+     * <code>ZSTD</code> - Compresses the data in the volume using the Zstandard (ZSTD) compression algorithm. Compared
+     * to LZ4, Z-Standard provides a better compression ratio to minimize on-disk storage utilization.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>LZ4</code> - Compresses the data in the volume using the LZ4 compression algorithm. Compared to Z-Standard,
+     * LZ4 is less compute-intensive and delivers higher write throughput speeds.
      * </p>
      * </li>
      * </ul>
      * 
      * @param dataCompressionType
-     *        Specifies the method used to compress the data on the volume. Unless the compression type is specified,
-     *        volumes inherit the <code>DataCompressionType</code> value of their parent volume.</p>
+     *        Specifies the method used to compress the data on the volume. The compression type is <code>NONE</code> by
+     *        default.</p>
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>NONE</code> - Doesn't compress the data on the volume.
+     *        <code>NONE</code> - Doesn't compress the data on the volume. <code>NONE</code> is the default.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>ZSTD</code> - Compresses the data in the volume using the ZStandard (ZSTD) compression algorithm.
-     *        This algorithm reduces the amount of space used on your volume and has very little impact on compute
-     *        resources.
+     *        <code>ZSTD</code> - Compresses the data in the volume using the Zstandard (ZSTD) compression algorithm.
+     *        Compared to LZ4, Z-Standard provides a better compression ratio to minimize on-disk storage utilization.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>LZ4</code> - Compresses the data in the volume using the LZ4 compression algorithm. Compared to
+     *        Z-Standard, LZ4 is less compute-intensive and delivers higher write throughput speeds.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -207,37 +327,48 @@ public class OpenZFSCreateRootVolumeConfiguration implements Serializable, Clone
 
     /**
      * <p>
-     * Specifies the method used to compress the data on the volume. Unless the compression type is specified, volumes
-     * inherit the <code>DataCompressionType</code> value of their parent volume.
+     * Specifies the method used to compress the data on the volume. The compression type is <code>NONE</code> by
+     * default.
      * </p>
      * <ul>
      * <li>
      * <p>
-     * <code>NONE</code> - Doesn't compress the data on the volume.
+     * <code>NONE</code> - Doesn't compress the data on the volume. <code>NONE</code> is the default.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>ZSTD</code> - Compresses the data in the volume using the ZStandard (ZSTD) compression algorithm. This
-     * algorithm reduces the amount of space used on your volume and has very little impact on compute resources.
+     * <code>ZSTD</code> - Compresses the data in the volume using the Zstandard (ZSTD) compression algorithm. Compared
+     * to LZ4, Z-Standard provides a better compression ratio to minimize on-disk storage utilization.
+     * </p>
+     * </li>
+     * <li>
+     * <p>
+     * <code>LZ4</code> - Compresses the data in the volume using the LZ4 compression algorithm. Compared to Z-Standard,
+     * LZ4 is less compute-intensive and delivers higher write throughput speeds.
      * </p>
      * </li>
      * </ul>
      * 
      * @param dataCompressionType
-     *        Specifies the method used to compress the data on the volume. Unless the compression type is specified,
-     *        volumes inherit the <code>DataCompressionType</code> value of their parent volume.</p>
+     *        Specifies the method used to compress the data on the volume. The compression type is <code>NONE</code> by
+     *        default.</p>
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>NONE</code> - Doesn't compress the data on the volume.
+     *        <code>NONE</code> - Doesn't compress the data on the volume. <code>NONE</code> is the default.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>ZSTD</code> - Compresses the data in the volume using the ZStandard (ZSTD) compression algorithm.
-     *        This algorithm reduces the amount of space used on your volume and has very little impact on compute
-     *        resources.
+     *        <code>ZSTD</code> - Compresses the data in the volume using the Zstandard (ZSTD) compression algorithm.
+     *        Compared to LZ4, Z-Standard provides a better compression ratio to minimize on-disk storage utilization.
+     *        </p>
+     *        </li>
+     *        <li>
+     *        <p>
+     *        <code>LZ4</code> - Compresses the data in the volume using the LZ4 compression algorithm. Compared to
+     *        Z-Standard, LZ4 is less compute-intensive and delivers higher write throughput speeds.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -391,19 +522,19 @@ public class OpenZFSCreateRootVolumeConfiguration implements Serializable, Clone
 
     /**
      * <p>
-     * A Boolean value indicating whether tags for the volume should be copied to snapshots. This value defaults to
-     * <code>false</code>. If it's set to <code>true</code>, all tags for the volume are copied to snapshots where the
-     * user doesn't specify tags. If this value is <code>true</code> and you specify one or more tags, only the
-     * specified tags are copied to snapshots. If you specify one or more tags when creating the snapshot, no tags are
-     * copied from the volume, regardless of this value.
+     * A Boolean value indicating whether tags for the volume should be copied to snapshots of the volume. This value
+     * defaults to <code>false</code>. If it's set to <code>true</code>, all tags for the volume are copied to snapshots
+     * where the user doesn't specify tags. If this value is <code>true</code> and you specify one or more tags, only
+     * the specified tags are copied to snapshots. If you specify one or more tags when creating the snapshot, no tags
+     * are copied from the volume, regardless of this value.
      * </p>
      * 
      * @param copyTagsToSnapshots
-     *        A Boolean value indicating whether tags for the volume should be copied to snapshots. This value defaults
-     *        to <code>false</code>. If it's set to <code>true</code>, all tags for the volume are copied to snapshots
-     *        where the user doesn't specify tags. If this value is <code>true</code> and you specify one or more tags,
-     *        only the specified tags are copied to snapshots. If you specify one or more tags when creating the
-     *        snapshot, no tags are copied from the volume, regardless of this value.
+     *        A Boolean value indicating whether tags for the volume should be copied to snapshots of the volume. This
+     *        value defaults to <code>false</code>. If it's set to <code>true</code>, all tags for the volume are copied
+     *        to snapshots where the user doesn't specify tags. If this value is <code>true</code> and you specify one
+     *        or more tags, only the specified tags are copied to snapshots. If you specify one or more tags when
+     *        creating the snapshot, no tags are copied from the volume, regardless of this value.
      */
 
     public void setCopyTagsToSnapshots(Boolean copyTagsToSnapshots) {
@@ -412,18 +543,18 @@ public class OpenZFSCreateRootVolumeConfiguration implements Serializable, Clone
 
     /**
      * <p>
-     * A Boolean value indicating whether tags for the volume should be copied to snapshots. This value defaults to
-     * <code>false</code>. If it's set to <code>true</code>, all tags for the volume are copied to snapshots where the
-     * user doesn't specify tags. If this value is <code>true</code> and you specify one or more tags, only the
-     * specified tags are copied to snapshots. If you specify one or more tags when creating the snapshot, no tags are
-     * copied from the volume, regardless of this value.
+     * A Boolean value indicating whether tags for the volume should be copied to snapshots of the volume. This value
+     * defaults to <code>false</code>. If it's set to <code>true</code>, all tags for the volume are copied to snapshots
+     * where the user doesn't specify tags. If this value is <code>true</code> and you specify one or more tags, only
+     * the specified tags are copied to snapshots. If you specify one or more tags when creating the snapshot, no tags
+     * are copied from the volume, regardless of this value.
      * </p>
      * 
-     * @return A Boolean value indicating whether tags for the volume should be copied to snapshots. This value defaults
-     *         to <code>false</code>. If it's set to <code>true</code>, all tags for the volume are copied to snapshots
-     *         where the user doesn't specify tags. If this value is <code>true</code> and you specify one or more tags,
-     *         only the specified tags are copied to snapshots. If you specify one or more tags when creating the
-     *         snapshot, no tags are copied from the volume, regardless of this value.
+     * @return A Boolean value indicating whether tags for the volume should be copied to snapshots of the volume. This
+     *         value defaults to <code>false</code>. If it's set to <code>true</code>, all tags for the volume are
+     *         copied to snapshots where the user doesn't specify tags. If this value is <code>true</code> and you
+     *         specify one or more tags, only the specified tags are copied to snapshots. If you specify one or more
+     *         tags when creating the snapshot, no tags are copied from the volume, regardless of this value.
      */
 
     public Boolean getCopyTagsToSnapshots() {
@@ -432,19 +563,19 @@ public class OpenZFSCreateRootVolumeConfiguration implements Serializable, Clone
 
     /**
      * <p>
-     * A Boolean value indicating whether tags for the volume should be copied to snapshots. This value defaults to
-     * <code>false</code>. If it's set to <code>true</code>, all tags for the volume are copied to snapshots where the
-     * user doesn't specify tags. If this value is <code>true</code> and you specify one or more tags, only the
-     * specified tags are copied to snapshots. If you specify one or more tags when creating the snapshot, no tags are
-     * copied from the volume, regardless of this value.
+     * A Boolean value indicating whether tags for the volume should be copied to snapshots of the volume. This value
+     * defaults to <code>false</code>. If it's set to <code>true</code>, all tags for the volume are copied to snapshots
+     * where the user doesn't specify tags. If this value is <code>true</code> and you specify one or more tags, only
+     * the specified tags are copied to snapshots. If you specify one or more tags when creating the snapshot, no tags
+     * are copied from the volume, regardless of this value.
      * </p>
      * 
      * @param copyTagsToSnapshots
-     *        A Boolean value indicating whether tags for the volume should be copied to snapshots. This value defaults
-     *        to <code>false</code>. If it's set to <code>true</code>, all tags for the volume are copied to snapshots
-     *        where the user doesn't specify tags. If this value is <code>true</code> and you specify one or more tags,
-     *        only the specified tags are copied to snapshots. If you specify one or more tags when creating the
-     *        snapshot, no tags are copied from the volume, regardless of this value.
+     *        A Boolean value indicating whether tags for the volume should be copied to snapshots of the volume. This
+     *        value defaults to <code>false</code>. If it's set to <code>true</code>, all tags for the volume are copied
+     *        to snapshots where the user doesn't specify tags. If this value is <code>true</code> and you specify one
+     *        or more tags, only the specified tags are copied to snapshots. If you specify one or more tags when
+     *        creating the snapshot, no tags are copied from the volume, regardless of this value.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -455,18 +586,18 @@ public class OpenZFSCreateRootVolumeConfiguration implements Serializable, Clone
 
     /**
      * <p>
-     * A Boolean value indicating whether tags for the volume should be copied to snapshots. This value defaults to
-     * <code>false</code>. If it's set to <code>true</code>, all tags for the volume are copied to snapshots where the
-     * user doesn't specify tags. If this value is <code>true</code> and you specify one or more tags, only the
-     * specified tags are copied to snapshots. If you specify one or more tags when creating the snapshot, no tags are
-     * copied from the volume, regardless of this value.
+     * A Boolean value indicating whether tags for the volume should be copied to snapshots of the volume. This value
+     * defaults to <code>false</code>. If it's set to <code>true</code>, all tags for the volume are copied to snapshots
+     * where the user doesn't specify tags. If this value is <code>true</code> and you specify one or more tags, only
+     * the specified tags are copied to snapshots. If you specify one or more tags when creating the snapshot, no tags
+     * are copied from the volume, regardless of this value.
      * </p>
      * 
-     * @return A Boolean value indicating whether tags for the volume should be copied to snapshots. This value defaults
-     *         to <code>false</code>. If it's set to <code>true</code>, all tags for the volume are copied to snapshots
-     *         where the user doesn't specify tags. If this value is <code>true</code> and you specify one or more tags,
-     *         only the specified tags are copied to snapshots. If you specify one or more tags when creating the
-     *         snapshot, no tags are copied from the volume, regardless of this value.
+     * @return A Boolean value indicating whether tags for the volume should be copied to snapshots of the volume. This
+     *         value defaults to <code>false</code>. If it's set to <code>true</code>, all tags for the volume are
+     *         copied to snapshots where the user doesn't specify tags. If this value is <code>true</code> and you
+     *         specify one or more tags, only the specified tags are copied to snapshots. If you specify one or more
+     *         tags when creating the snapshot, no tags are copied from the volume, regardless of this value.
      */
 
     public Boolean isCopyTagsToSnapshots() {
@@ -545,6 +676,8 @@ public class OpenZFSCreateRootVolumeConfiguration implements Serializable, Clone
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("{");
+        if (getRecordSizeKiB() != null)
+            sb.append("RecordSizeKiB: ").append(getRecordSizeKiB()).append(",");
         if (getDataCompressionType() != null)
             sb.append("DataCompressionType: ").append(getDataCompressionType()).append(",");
         if (getNfsExports() != null)
@@ -569,6 +702,10 @@ public class OpenZFSCreateRootVolumeConfiguration implements Serializable, Clone
         if (obj instanceof OpenZFSCreateRootVolumeConfiguration == false)
             return false;
         OpenZFSCreateRootVolumeConfiguration other = (OpenZFSCreateRootVolumeConfiguration) obj;
+        if (other.getRecordSizeKiB() == null ^ this.getRecordSizeKiB() == null)
+            return false;
+        if (other.getRecordSizeKiB() != null && other.getRecordSizeKiB().equals(this.getRecordSizeKiB()) == false)
+            return false;
         if (other.getDataCompressionType() == null ^ this.getDataCompressionType() == null)
             return false;
         if (other.getDataCompressionType() != null && other.getDataCompressionType().equals(this.getDataCompressionType()) == false)
@@ -597,6 +734,7 @@ public class OpenZFSCreateRootVolumeConfiguration implements Serializable, Clone
         final int prime = 31;
         int hashCode = 1;
 
+        hashCode = prime * hashCode + ((getRecordSizeKiB() == null) ? 0 : getRecordSizeKiB().hashCode());
         hashCode = prime * hashCode + ((getDataCompressionType() == null) ? 0 : getDataCompressionType().hashCode());
         hashCode = prime * hashCode + ((getNfsExports() == null) ? 0 : getNfsExports().hashCode());
         hashCode = prime * hashCode + ((getUserAndGroupQuotas() == null) ? 0 : getUserAndGroupQuotas().hashCode());

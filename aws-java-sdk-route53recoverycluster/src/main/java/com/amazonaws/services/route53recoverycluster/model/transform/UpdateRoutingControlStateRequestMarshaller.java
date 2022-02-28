@@ -12,6 +12,7 @@
  */
 package com.amazonaws.services.route53recoverycluster.model.transform;
 
+import java.util.List;
 import javax.annotation.Generated;
 
 import com.amazonaws.SdkClientException;
@@ -31,6 +32,8 @@ public class UpdateRoutingControlStateRequestMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RoutingControlArn").build();
     private static final MarshallingInfo<String> ROUTINGCONTROLSTATE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("RoutingControlState").build();
+    private static final MarshallingInfo<List> SAFETYRULESTOOVERRIDE_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SafetyRulesToOverride").build();
 
     private static final UpdateRoutingControlStateRequestMarshaller instance = new UpdateRoutingControlStateRequestMarshaller();
 
@@ -50,6 +53,7 @@ public class UpdateRoutingControlStateRequestMarshaller {
         try {
             protocolMarshaller.marshall(updateRoutingControlStateRequest.getRoutingControlArn(), ROUTINGCONTROLARN_BINDING);
             protocolMarshaller.marshall(updateRoutingControlStateRequest.getRoutingControlState(), ROUTINGCONTROLSTATE_BINDING);
+            protocolMarshaller.marshall(updateRoutingControlStateRequest.getSafetyRulesToOverride(), SAFETYRULESTOOVERRIDE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

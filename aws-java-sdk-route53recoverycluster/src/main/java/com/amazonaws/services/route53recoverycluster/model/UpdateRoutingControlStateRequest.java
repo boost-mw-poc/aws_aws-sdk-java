@@ -37,6 +37,19 @@ public class UpdateRoutingControlStateRequest extends com.amazonaws.AmazonWebSer
      * </p>
      */
     private String routingControlState;
+    /**
+     * <p>
+     * The Amazon Resource Numbers (ARNs) for the safety rules that you want to override when you're updating the state
+     * of a routing control. You can override one safety rule or multiple safety rules by including one or more ARNs,
+     * separated by commas.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/r53recovery/latest/dg/routing-control.override-safety-rule.html"> Override
+     * safety rules to reroute traffic</a> in the Amazon Route 53 Application Recovery Controller Developer Guide.
+     * </p>
+     */
+    private java.util.List<String> safetyRulesToOverride;
 
     /**
      * <p>
@@ -138,6 +151,132 @@ public class UpdateRoutingControlStateRequest extends com.amazonaws.AmazonWebSer
     }
 
     /**
+     * <p>
+     * The Amazon Resource Numbers (ARNs) for the safety rules that you want to override when you're updating the state
+     * of a routing control. You can override one safety rule or multiple safety rules by including one or more ARNs,
+     * separated by commas.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/r53recovery/latest/dg/routing-control.override-safety-rule.html"> Override
+     * safety rules to reroute traffic</a> in the Amazon Route 53 Application Recovery Controller Developer Guide.
+     * </p>
+     * 
+     * @return The Amazon Resource Numbers (ARNs) for the safety rules that you want to override when you're updating
+     *         the state of a routing control. You can override one safety rule or multiple safety rules by including
+     *         one or more ARNs, separated by commas.</p>
+     *         <p>
+     *         For more information, see <a
+     *         href="https://docs.aws.amazon.com/r53recovery/latest/dg/routing-control.override-safety-rule.html">
+     *         Override safety rules to reroute traffic</a> in the Amazon Route 53 Application Recovery Controller
+     *         Developer Guide.
+     */
+
+    public java.util.List<String> getSafetyRulesToOverride() {
+        return safetyRulesToOverride;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Numbers (ARNs) for the safety rules that you want to override when you're updating the state
+     * of a routing control. You can override one safety rule or multiple safety rules by including one or more ARNs,
+     * separated by commas.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/r53recovery/latest/dg/routing-control.override-safety-rule.html"> Override
+     * safety rules to reroute traffic</a> in the Amazon Route 53 Application Recovery Controller Developer Guide.
+     * </p>
+     * 
+     * @param safetyRulesToOverride
+     *        The Amazon Resource Numbers (ARNs) for the safety rules that you want to override when you're updating the
+     *        state of a routing control. You can override one safety rule or multiple safety rules by including one or
+     *        more ARNs, separated by commas.</p>
+     *        <p>
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/r53recovery/latest/dg/routing-control.override-safety-rule.html">
+     *        Override safety rules to reroute traffic</a> in the Amazon Route 53 Application Recovery Controller
+     *        Developer Guide.
+     */
+
+    public void setSafetyRulesToOverride(java.util.Collection<String> safetyRulesToOverride) {
+        if (safetyRulesToOverride == null) {
+            this.safetyRulesToOverride = null;
+            return;
+        }
+
+        this.safetyRulesToOverride = new java.util.ArrayList<String>(safetyRulesToOverride);
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Numbers (ARNs) for the safety rules that you want to override when you're updating the state
+     * of a routing control. You can override one safety rule or multiple safety rules by including one or more ARNs,
+     * separated by commas.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/r53recovery/latest/dg/routing-control.override-safety-rule.html"> Override
+     * safety rules to reroute traffic</a> in the Amazon Route 53 Application Recovery Controller Developer Guide.
+     * </p>
+     * <p>
+     * <b>NOTE:</b> This method appends the values to the existing list (if any). Use
+     * {@link #setSafetyRulesToOverride(java.util.Collection)} or
+     * {@link #withSafetyRulesToOverride(java.util.Collection)} if you want to override the existing values.
+     * </p>
+     * 
+     * @param safetyRulesToOverride
+     *        The Amazon Resource Numbers (ARNs) for the safety rules that you want to override when you're updating the
+     *        state of a routing control. You can override one safety rule or multiple safety rules by including one or
+     *        more ARNs, separated by commas.</p>
+     *        <p>
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/r53recovery/latest/dg/routing-control.override-safety-rule.html">
+     *        Override safety rules to reroute traffic</a> in the Amazon Route 53 Application Recovery Controller
+     *        Developer Guide.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateRoutingControlStateRequest withSafetyRulesToOverride(String... safetyRulesToOverride) {
+        if (this.safetyRulesToOverride == null) {
+            setSafetyRulesToOverride(new java.util.ArrayList<String>(safetyRulesToOverride.length));
+        }
+        for (String ele : safetyRulesToOverride) {
+            this.safetyRulesToOverride.add(ele);
+        }
+        return this;
+    }
+
+    /**
+     * <p>
+     * The Amazon Resource Numbers (ARNs) for the safety rules that you want to override when you're updating the state
+     * of a routing control. You can override one safety rule or multiple safety rules by including one or more ARNs,
+     * separated by commas.
+     * </p>
+     * <p>
+     * For more information, see <a
+     * href="https://docs.aws.amazon.com/r53recovery/latest/dg/routing-control.override-safety-rule.html"> Override
+     * safety rules to reroute traffic</a> in the Amazon Route 53 Application Recovery Controller Developer Guide.
+     * </p>
+     * 
+     * @param safetyRulesToOverride
+     *        The Amazon Resource Numbers (ARNs) for the safety rules that you want to override when you're updating the
+     *        state of a routing control. You can override one safety rule or multiple safety rules by including one or
+     *        more ARNs, separated by commas.</p>
+     *        <p>
+     *        For more information, see <a
+     *        href="https://docs.aws.amazon.com/r53recovery/latest/dg/routing-control.override-safety-rule.html">
+     *        Override safety rules to reroute traffic</a> in the Amazon Route 53 Application Recovery Controller
+     *        Developer Guide.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public UpdateRoutingControlStateRequest withSafetyRulesToOverride(java.util.Collection<String> safetyRulesToOverride) {
+        setSafetyRulesToOverride(safetyRulesToOverride);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -152,7 +291,9 @@ public class UpdateRoutingControlStateRequest extends com.amazonaws.AmazonWebSer
         if (getRoutingControlArn() != null)
             sb.append("RoutingControlArn: ").append(getRoutingControlArn()).append(",");
         if (getRoutingControlState() != null)
-            sb.append("RoutingControlState: ").append(getRoutingControlState());
+            sb.append("RoutingControlState: ").append(getRoutingControlState()).append(",");
+        if (getSafetyRulesToOverride() != null)
+            sb.append("SafetyRulesToOverride: ").append(getSafetyRulesToOverride());
         sb.append("}");
         return sb.toString();
     }
@@ -175,6 +316,10 @@ public class UpdateRoutingControlStateRequest extends com.amazonaws.AmazonWebSer
             return false;
         if (other.getRoutingControlState() != null && other.getRoutingControlState().equals(this.getRoutingControlState()) == false)
             return false;
+        if (other.getSafetyRulesToOverride() == null ^ this.getSafetyRulesToOverride() == null)
+            return false;
+        if (other.getSafetyRulesToOverride() != null && other.getSafetyRulesToOverride().equals(this.getSafetyRulesToOverride()) == false)
+            return false;
         return true;
     }
 
@@ -185,6 +330,7 @@ public class UpdateRoutingControlStateRequest extends com.amazonaws.AmazonWebSer
 
         hashCode = prime * hashCode + ((getRoutingControlArn() == null) ? 0 : getRoutingControlArn().hashCode());
         hashCode = prime * hashCode + ((getRoutingControlState() == null) ? 0 : getRoutingControlState().hashCode());
+        hashCode = prime * hashCode + ((getSafetyRulesToOverride() == null) ? 0 : getSafetyRulesToOverride().hashCode());
         return hashCode;
     }
 

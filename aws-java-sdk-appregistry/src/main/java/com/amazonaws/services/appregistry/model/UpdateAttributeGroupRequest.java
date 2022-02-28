@@ -37,6 +37,7 @@ public class UpdateAttributeGroupRequest extends com.amazonaws.AmazonWebServiceR
      * attribute group.
      * </p>
      */
+    @Deprecated
     private String name;
     /**
      * <p>
@@ -102,7 +103,7 @@ public class UpdateAttributeGroupRequest extends com.amazonaws.AmazonWebServiceR
      *        The new name of the attribute group. The name must be unique in the region in which you are updating the
      *        attribute group.
      */
-
+    @Deprecated
     public void setName(String name) {
         this.name = name;
     }
@@ -116,7 +117,7 @@ public class UpdateAttributeGroupRequest extends com.amazonaws.AmazonWebServiceR
      * @return The new name of the attribute group. The name must be unique in the region in which you are updating the
      *         attribute group.
      */
-
+    @Deprecated
     public String getName() {
         return this.name;
     }
@@ -132,7 +133,7 @@ public class UpdateAttributeGroupRequest extends com.amazonaws.AmazonWebServiceR
      *        attribute group.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
-
+    @Deprecated
     public UpdateAttributeGroupRequest withName(String name) {
         setName(name);
         return this;

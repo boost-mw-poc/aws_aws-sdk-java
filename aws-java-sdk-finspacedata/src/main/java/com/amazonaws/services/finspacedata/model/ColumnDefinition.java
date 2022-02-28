@@ -35,40 +35,40 @@ public class ColumnDefinition implements Serializable, Cloneable, StructuredPojo
      * <ul>
      * <li>
      * <p>
-     * <code>STRING</code> - A String data type.
+     * <code>STRING</code> – A String data type.
      * </p>
      * <p>
-     * <code>CHAR</code> - A char data type.
+     * <code>CHAR</code> – A char data type.
      * </p>
      * <p>
-     * <code>INTEGER</code> - An integer data type.
+     * <code>INTEGER</code> – An integer data type.
      * </p>
      * <p>
-     * <code>TINYINT</code> - A tinyint data type.
+     * <code>TINYINT</code> – A tinyint data type.
      * </p>
      * <p>
-     * <code>SMALLINT</code> - A smallint data type.
+     * <code>SMALLINT</code> – A smallint data type.
      * </p>
      * <p>
-     * <code>BIGINT</code> - A bigint data type.
+     * <code>BIGINT</code> – A bigint data type.
      * </p>
      * <p>
-     * <code>FLOAT</code> - A float data type.
+     * <code>FLOAT</code> – A float data type.
      * </p>
      * <p>
-     * <code>DOUBLE</code> - A double data type.
+     * <code>DOUBLE</code> – A double data type.
      * </p>
      * <p>
-     * <code>DATE</code> - A date data type.
+     * <code>DATE</code> – A date data type.
      * </p>
      * <p>
-     * <code>DATETIME</code> - A datetime data type.
+     * <code>DATETIME</code> – A datetime data type.
      * </p>
      * <p>
-     * <code>BOOLEAN</code> - A boolean data type.
+     * <code>BOOLEAN</code> – A boolean data type.
      * </p>
      * <p>
-     * <code>BINARY</code> - A binary data type.
+     * <code>BINARY</code> – A binary data type.
      * </p>
      * </li>
      * </ul>
@@ -76,7 +76,7 @@ public class ColumnDefinition implements Serializable, Cloneable, StructuredPojo
     private String dataType;
     /**
      * <p>
-     * Name for a column.
+     * The name of a column.
      * </p>
      */
     private String columnName;
@@ -94,40 +94,40 @@ public class ColumnDefinition implements Serializable, Cloneable, StructuredPojo
      * <ul>
      * <li>
      * <p>
-     * <code>STRING</code> - A String data type.
+     * <code>STRING</code> – A String data type.
      * </p>
      * <p>
-     * <code>CHAR</code> - A char data type.
+     * <code>CHAR</code> – A char data type.
      * </p>
      * <p>
-     * <code>INTEGER</code> - An integer data type.
+     * <code>INTEGER</code> – An integer data type.
      * </p>
      * <p>
-     * <code>TINYINT</code> - A tinyint data type.
+     * <code>TINYINT</code> – A tinyint data type.
      * </p>
      * <p>
-     * <code>SMALLINT</code> - A smallint data type.
+     * <code>SMALLINT</code> – A smallint data type.
      * </p>
      * <p>
-     * <code>BIGINT</code> - A bigint data type.
+     * <code>BIGINT</code> – A bigint data type.
      * </p>
      * <p>
-     * <code>FLOAT</code> - A float data type.
+     * <code>FLOAT</code> – A float data type.
      * </p>
      * <p>
-     * <code>DOUBLE</code> - A double data type.
+     * <code>DOUBLE</code> – A double data type.
      * </p>
      * <p>
-     * <code>DATE</code> - A date data type.
+     * <code>DATE</code> – A date data type.
      * </p>
      * <p>
-     * <code>DATETIME</code> - A datetime data type.
+     * <code>DATETIME</code> – A datetime data type.
      * </p>
      * <p>
-     * <code>BOOLEAN</code> - A boolean data type.
+     * <code>BOOLEAN</code> – A boolean data type.
      * </p>
      * <p>
-     * <code>BINARY</code> - A binary data type.
+     * <code>BINARY</code> – A binary data type.
      * </p>
      * </li>
      * </ul>
@@ -137,40 +137,40 @@ public class ColumnDefinition implements Serializable, Cloneable, StructuredPojo
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>STRING</code> - A String data type.
+     *        <code>STRING</code> – A String data type.
      *        </p>
      *        <p>
-     *        <code>CHAR</code> - A char data type.
+     *        <code>CHAR</code> – A char data type.
      *        </p>
      *        <p>
-     *        <code>INTEGER</code> - An integer data type.
+     *        <code>INTEGER</code> – An integer data type.
      *        </p>
      *        <p>
-     *        <code>TINYINT</code> - A tinyint data type.
+     *        <code>TINYINT</code> – A tinyint data type.
      *        </p>
      *        <p>
-     *        <code>SMALLINT</code> - A smallint data type.
+     *        <code>SMALLINT</code> – A smallint data type.
      *        </p>
      *        <p>
-     *        <code>BIGINT</code> - A bigint data type.
+     *        <code>BIGINT</code> – A bigint data type.
      *        </p>
      *        <p>
-     *        <code>FLOAT</code> - A float data type.
+     *        <code>FLOAT</code> – A float data type.
      *        </p>
      *        <p>
-     *        <code>DOUBLE</code> - A double data type.
+     *        <code>DOUBLE</code> – A double data type.
      *        </p>
      *        <p>
-     *        <code>DATE</code> - A date data type.
+     *        <code>DATE</code> – A date data type.
      *        </p>
      *        <p>
-     *        <code>DATETIME</code> - A datetime data type.
+     *        <code>DATETIME</code> – A datetime data type.
      *        </p>
      *        <p>
-     *        <code>BOOLEAN</code> - A boolean data type.
+     *        <code>BOOLEAN</code> – A boolean data type.
      *        </p>
      *        <p>
-     *        <code>BINARY</code> - A binary data type.
+     *        <code>BINARY</code> – A binary data type.
      *        </p>
      *        </li>
      * @see ColumnDataType
@@ -187,40 +187,40 @@ public class ColumnDefinition implements Serializable, Cloneable, StructuredPojo
      * <ul>
      * <li>
      * <p>
-     * <code>STRING</code> - A String data type.
+     * <code>STRING</code> – A String data type.
      * </p>
      * <p>
-     * <code>CHAR</code> - A char data type.
+     * <code>CHAR</code> – A char data type.
      * </p>
      * <p>
-     * <code>INTEGER</code> - An integer data type.
+     * <code>INTEGER</code> – An integer data type.
      * </p>
      * <p>
-     * <code>TINYINT</code> - A tinyint data type.
+     * <code>TINYINT</code> – A tinyint data type.
      * </p>
      * <p>
-     * <code>SMALLINT</code> - A smallint data type.
+     * <code>SMALLINT</code> – A smallint data type.
      * </p>
      * <p>
-     * <code>BIGINT</code> - A bigint data type.
+     * <code>BIGINT</code> – A bigint data type.
      * </p>
      * <p>
-     * <code>FLOAT</code> - A float data type.
+     * <code>FLOAT</code> – A float data type.
      * </p>
      * <p>
-     * <code>DOUBLE</code> - A double data type.
+     * <code>DOUBLE</code> – A double data type.
      * </p>
      * <p>
-     * <code>DATE</code> - A date data type.
+     * <code>DATE</code> – A date data type.
      * </p>
      * <p>
-     * <code>DATETIME</code> - A datetime data type.
+     * <code>DATETIME</code> – A datetime data type.
      * </p>
      * <p>
-     * <code>BOOLEAN</code> - A boolean data type.
+     * <code>BOOLEAN</code> – A boolean data type.
      * </p>
      * <p>
-     * <code>BINARY</code> - A binary data type.
+     * <code>BINARY</code> – A binary data type.
      * </p>
      * </li>
      * </ul>
@@ -229,40 +229,40 @@ public class ColumnDefinition implements Serializable, Cloneable, StructuredPojo
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>STRING</code> - A String data type.
+     *         <code>STRING</code> – A String data type.
      *         </p>
      *         <p>
-     *         <code>CHAR</code> - A char data type.
+     *         <code>CHAR</code> – A char data type.
      *         </p>
      *         <p>
-     *         <code>INTEGER</code> - An integer data type.
+     *         <code>INTEGER</code> – An integer data type.
      *         </p>
      *         <p>
-     *         <code>TINYINT</code> - A tinyint data type.
+     *         <code>TINYINT</code> – A tinyint data type.
      *         </p>
      *         <p>
-     *         <code>SMALLINT</code> - A smallint data type.
+     *         <code>SMALLINT</code> – A smallint data type.
      *         </p>
      *         <p>
-     *         <code>BIGINT</code> - A bigint data type.
+     *         <code>BIGINT</code> – A bigint data type.
      *         </p>
      *         <p>
-     *         <code>FLOAT</code> - A float data type.
+     *         <code>FLOAT</code> – A float data type.
      *         </p>
      *         <p>
-     *         <code>DOUBLE</code> - A double data type.
+     *         <code>DOUBLE</code> – A double data type.
      *         </p>
      *         <p>
-     *         <code>DATE</code> - A date data type.
+     *         <code>DATE</code> – A date data type.
      *         </p>
      *         <p>
-     *         <code>DATETIME</code> - A datetime data type.
+     *         <code>DATETIME</code> – A datetime data type.
      *         </p>
      *         <p>
-     *         <code>BOOLEAN</code> - A boolean data type.
+     *         <code>BOOLEAN</code> – A boolean data type.
      *         </p>
      *         <p>
-     *         <code>BINARY</code> - A binary data type.
+     *         <code>BINARY</code> – A binary data type.
      *         </p>
      *         </li>
      * @see ColumnDataType
@@ -279,40 +279,40 @@ public class ColumnDefinition implements Serializable, Cloneable, StructuredPojo
      * <ul>
      * <li>
      * <p>
-     * <code>STRING</code> - A String data type.
+     * <code>STRING</code> – A String data type.
      * </p>
      * <p>
-     * <code>CHAR</code> - A char data type.
+     * <code>CHAR</code> – A char data type.
      * </p>
      * <p>
-     * <code>INTEGER</code> - An integer data type.
+     * <code>INTEGER</code> – An integer data type.
      * </p>
      * <p>
-     * <code>TINYINT</code> - A tinyint data type.
+     * <code>TINYINT</code> – A tinyint data type.
      * </p>
      * <p>
-     * <code>SMALLINT</code> - A smallint data type.
+     * <code>SMALLINT</code> – A smallint data type.
      * </p>
      * <p>
-     * <code>BIGINT</code> - A bigint data type.
+     * <code>BIGINT</code> – A bigint data type.
      * </p>
      * <p>
-     * <code>FLOAT</code> - A float data type.
+     * <code>FLOAT</code> – A float data type.
      * </p>
      * <p>
-     * <code>DOUBLE</code> - A double data type.
+     * <code>DOUBLE</code> – A double data type.
      * </p>
      * <p>
-     * <code>DATE</code> - A date data type.
+     * <code>DATE</code> – A date data type.
      * </p>
      * <p>
-     * <code>DATETIME</code> - A datetime data type.
+     * <code>DATETIME</code> – A datetime data type.
      * </p>
      * <p>
-     * <code>BOOLEAN</code> - A boolean data type.
+     * <code>BOOLEAN</code> – A boolean data type.
      * </p>
      * <p>
-     * <code>BINARY</code> - A binary data type.
+     * <code>BINARY</code> – A binary data type.
      * </p>
      * </li>
      * </ul>
@@ -322,40 +322,40 @@ public class ColumnDefinition implements Serializable, Cloneable, StructuredPojo
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>STRING</code> - A String data type.
+     *        <code>STRING</code> – A String data type.
      *        </p>
      *        <p>
-     *        <code>CHAR</code> - A char data type.
+     *        <code>CHAR</code> – A char data type.
      *        </p>
      *        <p>
-     *        <code>INTEGER</code> - An integer data type.
+     *        <code>INTEGER</code> – An integer data type.
      *        </p>
      *        <p>
-     *        <code>TINYINT</code> - A tinyint data type.
+     *        <code>TINYINT</code> – A tinyint data type.
      *        </p>
      *        <p>
-     *        <code>SMALLINT</code> - A smallint data type.
+     *        <code>SMALLINT</code> – A smallint data type.
      *        </p>
      *        <p>
-     *        <code>BIGINT</code> - A bigint data type.
+     *        <code>BIGINT</code> – A bigint data type.
      *        </p>
      *        <p>
-     *        <code>FLOAT</code> - A float data type.
+     *        <code>FLOAT</code> – A float data type.
      *        </p>
      *        <p>
-     *        <code>DOUBLE</code> - A double data type.
+     *        <code>DOUBLE</code> – A double data type.
      *        </p>
      *        <p>
-     *        <code>DATE</code> - A date data type.
+     *        <code>DATE</code> – A date data type.
      *        </p>
      *        <p>
-     *        <code>DATETIME</code> - A datetime data type.
+     *        <code>DATETIME</code> – A datetime data type.
      *        </p>
      *        <p>
-     *        <code>BOOLEAN</code> - A boolean data type.
+     *        <code>BOOLEAN</code> – A boolean data type.
      *        </p>
      *        <p>
-     *        <code>BINARY</code> - A binary data type.
+     *        <code>BINARY</code> – A binary data type.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -374,40 +374,40 @@ public class ColumnDefinition implements Serializable, Cloneable, StructuredPojo
      * <ul>
      * <li>
      * <p>
-     * <code>STRING</code> - A String data type.
+     * <code>STRING</code> – A String data type.
      * </p>
      * <p>
-     * <code>CHAR</code> - A char data type.
+     * <code>CHAR</code> – A char data type.
      * </p>
      * <p>
-     * <code>INTEGER</code> - An integer data type.
+     * <code>INTEGER</code> – An integer data type.
      * </p>
      * <p>
-     * <code>TINYINT</code> - A tinyint data type.
+     * <code>TINYINT</code> – A tinyint data type.
      * </p>
      * <p>
-     * <code>SMALLINT</code> - A smallint data type.
+     * <code>SMALLINT</code> – A smallint data type.
      * </p>
      * <p>
-     * <code>BIGINT</code> - A bigint data type.
+     * <code>BIGINT</code> – A bigint data type.
      * </p>
      * <p>
-     * <code>FLOAT</code> - A float data type.
+     * <code>FLOAT</code> – A float data type.
      * </p>
      * <p>
-     * <code>DOUBLE</code> - A double data type.
+     * <code>DOUBLE</code> – A double data type.
      * </p>
      * <p>
-     * <code>DATE</code> - A date data type.
+     * <code>DATE</code> – A date data type.
      * </p>
      * <p>
-     * <code>DATETIME</code> - A datetime data type.
+     * <code>DATETIME</code> – A datetime data type.
      * </p>
      * <p>
-     * <code>BOOLEAN</code> - A boolean data type.
+     * <code>BOOLEAN</code> – A boolean data type.
      * </p>
      * <p>
-     * <code>BINARY</code> - A binary data type.
+     * <code>BINARY</code> – A binary data type.
      * </p>
      * </li>
      * </ul>
@@ -417,40 +417,40 @@ public class ColumnDefinition implements Serializable, Cloneable, StructuredPojo
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>STRING</code> - A String data type.
+     *        <code>STRING</code> – A String data type.
      *        </p>
      *        <p>
-     *        <code>CHAR</code> - A char data type.
+     *        <code>CHAR</code> – A char data type.
      *        </p>
      *        <p>
-     *        <code>INTEGER</code> - An integer data type.
+     *        <code>INTEGER</code> – An integer data type.
      *        </p>
      *        <p>
-     *        <code>TINYINT</code> - A tinyint data type.
+     *        <code>TINYINT</code> – A tinyint data type.
      *        </p>
      *        <p>
-     *        <code>SMALLINT</code> - A smallint data type.
+     *        <code>SMALLINT</code> – A smallint data type.
      *        </p>
      *        <p>
-     *        <code>BIGINT</code> - A bigint data type.
+     *        <code>BIGINT</code> – A bigint data type.
      *        </p>
      *        <p>
-     *        <code>FLOAT</code> - A float data type.
+     *        <code>FLOAT</code> – A float data type.
      *        </p>
      *        <p>
-     *        <code>DOUBLE</code> - A double data type.
+     *        <code>DOUBLE</code> – A double data type.
      *        </p>
      *        <p>
-     *        <code>DATE</code> - A date data type.
+     *        <code>DATE</code> – A date data type.
      *        </p>
      *        <p>
-     *        <code>DATETIME</code> - A datetime data type.
+     *        <code>DATETIME</code> – A datetime data type.
      *        </p>
      *        <p>
-     *        <code>BOOLEAN</code> - A boolean data type.
+     *        <code>BOOLEAN</code> – A boolean data type.
      *        </p>
      *        <p>
-     *        <code>BINARY</code> - A binary data type.
+     *        <code>BINARY</code> – A binary data type.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -464,11 +464,11 @@ public class ColumnDefinition implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * Name for a column.
+     * The name of a column.
      * </p>
      * 
      * @param columnName
-     *        Name for a column.
+     *        The name of a column.
      */
 
     public void setColumnName(String columnName) {
@@ -477,10 +477,10 @@ public class ColumnDefinition implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * Name for a column.
+     * The name of a column.
      * </p>
      * 
-     * @return Name for a column.
+     * @return The name of a column.
      */
 
     public String getColumnName() {
@@ -489,11 +489,11 @@ public class ColumnDefinition implements Serializable, Cloneable, StructuredPojo
 
     /**
      * <p>
-     * Name for a column.
+     * The name of a column.
      * </p>
      * 
      * @param columnName
-     *        Name for a column.
+     *        The name of a column.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

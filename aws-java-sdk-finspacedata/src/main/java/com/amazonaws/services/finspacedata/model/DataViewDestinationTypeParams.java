@@ -35,12 +35,12 @@ public class DataViewDestinationTypeParams implements Serializable, Cloneable, S
      * <ul>
      * <li>
      * <p>
-     * <code>GLUE_TABLE</code> - Glue table destination type.
+     * <code>GLUE_TABLE</code> – Glue table destination type.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>S3</code> - S3 destination type.
+     * <code>S3</code> – S3 destination type.
      * </p>
      * </li>
      * </ul>
@@ -53,12 +53,12 @@ public class DataViewDestinationTypeParams implements Serializable, Cloneable, S
      * <ul>
      * <li>
      * <p>
-     * <code>PARQUET</code> - Parquet export file format.
+     * <code>PARQUET</code> – Parquet export file format.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>DELIMITED_TEXT</code> - Delimited text export file format.
+     * <code>DELIMITED_TEXT</code> – Delimited text export file format.
      * </p>
      * </li>
      * </ul>
@@ -84,12 +84,12 @@ public class DataViewDestinationTypeParams implements Serializable, Cloneable, S
      * <ul>
      * <li>
      * <p>
-     * <code>GLUE_TABLE</code> - Glue table destination type.
+     * <code>GLUE_TABLE</code> – Glue table destination type.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>S3</code> - S3 destination type.
+     * <code>S3</code> – S3 destination type.
      * </p>
      * </li>
      * </ul>
@@ -99,12 +99,12 @@ public class DataViewDestinationTypeParams implements Serializable, Cloneable, S
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>GLUE_TABLE</code> - Glue table destination type.
+     *        <code>GLUE_TABLE</code> – Glue table destination type.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>S3</code> - S3 destination type.
+     *        <code>S3</code> – S3 destination type.
      *        </p>
      *        </li>
      */
@@ -120,12 +120,12 @@ public class DataViewDestinationTypeParams implements Serializable, Cloneable, S
      * <ul>
      * <li>
      * <p>
-     * <code>GLUE_TABLE</code> - Glue table destination type.
+     * <code>GLUE_TABLE</code> – Glue table destination type.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>S3</code> - S3 destination type.
+     * <code>S3</code> – S3 destination type.
      * </p>
      * </li>
      * </ul>
@@ -134,12 +134,12 @@ public class DataViewDestinationTypeParams implements Serializable, Cloneable, S
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>GLUE_TABLE</code> - Glue table destination type.
+     *         <code>GLUE_TABLE</code> – Glue table destination type.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>S3</code> - S3 destination type.
+     *         <code>S3</code> – S3 destination type.
      *         </p>
      *         </li>
      */
@@ -155,12 +155,12 @@ public class DataViewDestinationTypeParams implements Serializable, Cloneable, S
      * <ul>
      * <li>
      * <p>
-     * <code>GLUE_TABLE</code> - Glue table destination type.
+     * <code>GLUE_TABLE</code> – Glue table destination type.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>S3</code> - S3 destination type.
+     * <code>S3</code> – S3 destination type.
      * </p>
      * </li>
      * </ul>
@@ -170,12 +170,12 @@ public class DataViewDestinationTypeParams implements Serializable, Cloneable, S
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>GLUE_TABLE</code> - Glue table destination type.
+     *        <code>GLUE_TABLE</code> – Glue table destination type.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>S3</code> - S3 destination type.
+     *        <code>S3</code> – S3 destination type.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -193,12 +193,12 @@ public class DataViewDestinationTypeParams implements Serializable, Cloneable, S
      * <ul>
      * <li>
      * <p>
-     * <code>PARQUET</code> - Parquet export file format.
+     * <code>PARQUET</code> – Parquet export file format.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>DELIMITED_TEXT</code> - Delimited text export file format.
+     * <code>DELIMITED_TEXT</code> – Delimited text export file format.
      * </p>
      * </li>
      * </ul>
@@ -208,12 +208,12 @@ public class DataViewDestinationTypeParams implements Serializable, Cloneable, S
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>PARQUET</code> - Parquet export file format.
+     *        <code>PARQUET</code> – Parquet export file format.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>DELIMITED_TEXT</code> - Delimited text export file format.
+     *        <code>DELIMITED_TEXT</code> – Delimited text export file format.
      *        </p>
      *        </li>
      * @see ExportFileFormat
@@ -230,12 +230,12 @@ public class DataViewDestinationTypeParams implements Serializable, Cloneable, S
      * <ul>
      * <li>
      * <p>
-     * <code>PARQUET</code> - Parquet export file format.
+     * <code>PARQUET</code> – Parquet export file format.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>DELIMITED_TEXT</code> - Delimited text export file format.
+     * <code>DELIMITED_TEXT</code> – Delimited text export file format.
      * </p>
      * </li>
      * </ul>
@@ -244,12 +244,12 @@ public class DataViewDestinationTypeParams implements Serializable, Cloneable, S
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>PARQUET</code> - Parquet export file format.
+     *         <code>PARQUET</code> – Parquet export file format.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>DELIMITED_TEXT</code> - Delimited text export file format.
+     *         <code>DELIMITED_TEXT</code> – Delimited text export file format.
      *         </p>
      *         </li>
      * @see ExportFileFormat
@@ -266,12 +266,12 @@ public class DataViewDestinationTypeParams implements Serializable, Cloneable, S
      * <ul>
      * <li>
      * <p>
-     * <code>PARQUET</code> - Parquet export file format.
+     * <code>PARQUET</code> – Parquet export file format.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>DELIMITED_TEXT</code> - Delimited text export file format.
+     * <code>DELIMITED_TEXT</code> – Delimited text export file format.
      * </p>
      * </li>
      * </ul>
@@ -281,12 +281,12 @@ public class DataViewDestinationTypeParams implements Serializable, Cloneable, S
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>PARQUET</code> - Parquet export file format.
+     *        <code>PARQUET</code> – Parquet export file format.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>DELIMITED_TEXT</code> - Delimited text export file format.
+     *        <code>DELIMITED_TEXT</code> – Delimited text export file format.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -305,12 +305,12 @@ public class DataViewDestinationTypeParams implements Serializable, Cloneable, S
      * <ul>
      * <li>
      * <p>
-     * <code>PARQUET</code> - Parquet export file format.
+     * <code>PARQUET</code> – Parquet export file format.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>DELIMITED_TEXT</code> - Delimited text export file format.
+     * <code>DELIMITED_TEXT</code> – Delimited text export file format.
      * </p>
      * </li>
      * </ul>
@@ -320,12 +320,12 @@ public class DataViewDestinationTypeParams implements Serializable, Cloneable, S
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>PARQUET</code> - Parquet export file format.
+     *        <code>PARQUET</code> – Parquet export file format.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>DELIMITED_TEXT</code> - Delimited text export file format.
+     *        <code>DELIMITED_TEXT</code> – Delimited text export file format.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

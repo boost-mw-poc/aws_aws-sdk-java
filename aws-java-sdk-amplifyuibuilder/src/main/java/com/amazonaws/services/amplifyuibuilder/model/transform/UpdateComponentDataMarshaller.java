@@ -37,6 +37,8 @@ public class UpdateComponentDataMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("collectionProperties").build();
     private static final MarshallingInfo<String> COMPONENTTYPE_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("componentType").build();
+    private static final MarshallingInfo<Map> EVENTS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
+            .marshallLocationName("events").build();
     private static final MarshallingInfo<String> ID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("id").build();
     private static final MarshallingInfo<String> NAME_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
@@ -45,6 +47,8 @@ public class UpdateComponentDataMarshaller {
             .marshallLocationName("overrides").build();
     private static final MarshallingInfo<Map> PROPERTIES_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("properties").build();
+    private static final MarshallingInfo<String> SCHEMAVERSION_BINDING = MarshallingInfo.builder(MarshallingType.STRING)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("schemaVersion").build();
     private static final MarshallingInfo<String> SOURCEID_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("sourceId").build();
     private static final MarshallingInfo<List> VARIANTS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
@@ -70,10 +74,12 @@ public class UpdateComponentDataMarshaller {
             protocolMarshaller.marshall(updateComponentData.getChildren(), CHILDREN_BINDING);
             protocolMarshaller.marshall(updateComponentData.getCollectionProperties(), COLLECTIONPROPERTIES_BINDING);
             protocolMarshaller.marshall(updateComponentData.getComponentType(), COMPONENTTYPE_BINDING);
+            protocolMarshaller.marshall(updateComponentData.getEvents(), EVENTS_BINDING);
             protocolMarshaller.marshall(updateComponentData.getId(), ID_BINDING);
             protocolMarshaller.marshall(updateComponentData.getName(), NAME_BINDING);
             protocolMarshaller.marshall(updateComponentData.getOverrides(), OVERRIDES_BINDING);
             protocolMarshaller.marshall(updateComponentData.getProperties(), PROPERTIES_BINDING);
+            protocolMarshaller.marshall(updateComponentData.getSchemaVersion(), SCHEMAVERSION_BINDING);
             protocolMarshaller.marshall(updateComponentData.getSourceId(), SOURCEID_BINDING);
             protocolMarshaller.marshall(updateComponentData.getVariants(), VARIANTS_BINDING);
         } catch (Exception e) {

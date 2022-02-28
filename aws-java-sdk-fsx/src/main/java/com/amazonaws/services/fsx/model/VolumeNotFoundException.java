@@ -16,7 +16,7 @@ import javax.annotation.Generated;
 
 /**
  * <p>
- * No Amazon FSx for NetApp ONTAP volumes were found based upon the supplied parameters.
+ * No Amazon FSx volumes were found based upon the supplied parameters.
  * </p>
  */
 @Generated("com.amazonaws:aws-java-sdk-code-generator")

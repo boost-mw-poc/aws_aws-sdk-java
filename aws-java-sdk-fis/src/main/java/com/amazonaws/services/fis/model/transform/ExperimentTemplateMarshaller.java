@@ -47,6 +47,8 @@ public class ExperimentTemplateMarshaller {
             .marshallLocationName("roleArn").build();
     private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("tags").build();
+    private static final MarshallingInfo<StructuredPojo> LOGCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("logConfiguration").build();
 
     private static final ExperimentTemplateMarshaller instance = new ExperimentTemplateMarshaller();
 
@@ -73,6 +75,7 @@ public class ExperimentTemplateMarshaller {
             protocolMarshaller.marshall(experimentTemplate.getLastUpdateTime(), LASTUPDATETIME_BINDING);
             protocolMarshaller.marshall(experimentTemplate.getRoleArn(), ROLEARN_BINDING);
             protocolMarshaller.marshall(experimentTemplate.getTags(), TAGS_BINDING);
+            protocolMarshaller.marshall(experimentTemplate.getLogConfiguration(), LOGCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

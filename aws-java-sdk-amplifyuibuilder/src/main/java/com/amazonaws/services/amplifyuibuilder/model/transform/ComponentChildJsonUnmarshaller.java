@@ -58,6 +58,11 @@ public class ComponentChildJsonUnmarshaller implements Unmarshaller<ComponentChi
                     context.nextToken();
                     componentChild.setComponentType(context.getUnmarshaller(String.class).unmarshall(context));
                 }
+                if (context.testExpression("events", targetDepth)) {
+                    context.nextToken();
+                    componentChild.setEvents(new MapUnmarshaller<String, ComponentEvent>(context.getUnmarshaller(String.class), ComponentEventJsonUnmarshaller
+                            .getInstance()).unmarshall(context));
+                }
                 if (context.testExpression("name", targetDepth)) {
                     context.nextToken();
                     componentChild.setName(context.getUnmarshaller(String.class).unmarshall(context));

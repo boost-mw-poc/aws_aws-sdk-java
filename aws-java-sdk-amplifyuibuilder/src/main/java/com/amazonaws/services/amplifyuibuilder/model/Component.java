@@ -39,8 +39,10 @@ public class Component implements Serializable, Cloneable, StructuredPojo {
     private String appId;
     /**
      * <p>
-     * The information to connect a component's properties to data at runtime.
+     * The information to connect a component's properties to data at runtime. You can't specify <code>tags</code> as a
+     * valid property for <code>bindingProperties</code>.
      * </p>
+     * <p/>
      */
     private java.util.Map<String, ComponentBindingPropertiesValue> bindingProperties;
     /**
@@ -51,7 +53,8 @@ public class Component implements Serializable, Cloneable, StructuredPojo {
     private java.util.List<ComponentChild> children;
     /**
      * <p>
-     * The data binding configuration for the component's properties. Use this for a collection component.
+     * The data binding configuration for the component's properties. Use this for a collection component. You can't
+     * specify <code>tags</code> as a valid property for <code>collectionProperties</code>.
      * </p>
      */
     private java.util.Map<String, ComponentDataConfiguration> collectionProperties;
@@ -75,6 +78,13 @@ public class Component implements Serializable, Cloneable, StructuredPojo {
     private String environmentName;
     /**
      * <p>
+     * Describes the events that can be raised on the component. Use for the workflow feature in Amplify Studio that
+     * allows you to bind events and actions to components.
+     * </p>
+     */
+    private java.util.Map<String, ComponentEvent> events;
+    /**
+     * <p>
      * The unique ID of the component.
      * </p>
      */
@@ -93,16 +103,24 @@ public class Component implements Serializable, Cloneable, StructuredPojo {
     private String name;
     /**
      * <p>
-     * Describes the component's properties that can be overriden in a customized instance of the component.
+     * Describes the component's properties that can be overriden in a customized instance of the component. You can't
+     * specify <code>tags</code> as a valid property for <code>overrides</code>.
      * </p>
      */
     private java.util.Map<String, java.util.Map<String, String>> overrides;
     /**
      * <p>
-     * Describes the component's properties.
+     * Describes the component's properties. You can't specify <code>tags</code> as a valid property for
+     * <code>properties</code>.
      * </p>
      */
     private java.util.Map<String, ComponentProperty> properties;
+    /**
+     * <p>
+     * The schema version of the component when it was imported.
+     * </p>
+     */
+    private String schemaVersion;
     /**
      * <p>
      * The unique ID of the component in its original source system, such as Figma.
@@ -164,10 +182,14 @@ public class Component implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The information to connect a component's properties to data at runtime.
+     * The information to connect a component's properties to data at runtime. You can't specify <code>tags</code> as a
+     * valid property for <code>bindingProperties</code>.
      * </p>
+     * <p/>
      * 
-     * @return The information to connect a component's properties to data at runtime.
+     * @return The information to connect a component's properties to data at runtime. You can't specify
+     *         <code>tags</code> as a valid property for <code>bindingProperties</code>.
+     *         </p>
      */
 
     public java.util.Map<String, ComponentBindingPropertiesValue> getBindingProperties() {
@@ -176,11 +198,15 @@ public class Component implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The information to connect a component's properties to data at runtime.
+     * The information to connect a component's properties to data at runtime. You can't specify <code>tags</code> as a
+     * valid property for <code>bindingProperties</code>.
      * </p>
+     * <p/>
      * 
      * @param bindingProperties
-     *        The information to connect a component's properties to data at runtime.
+     *        The information to connect a component's properties to data at runtime. You can't specify
+     *        <code>tags</code> as a valid property for <code>bindingProperties</code>.
+     *        </p>
      */
 
     public void setBindingProperties(java.util.Map<String, ComponentBindingPropertiesValue> bindingProperties) {
@@ -189,11 +215,15 @@ public class Component implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The information to connect a component's properties to data at runtime.
+     * The information to connect a component's properties to data at runtime. You can't specify <code>tags</code> as a
+     * valid property for <code>bindingProperties</code>.
      * </p>
+     * <p/>
      * 
      * @param bindingProperties
-     *        The information to connect a component's properties to data at runtime.
+     *        The information to connect a component's properties to data at runtime. You can't specify
+     *        <code>tags</code> as a valid property for <code>bindingProperties</code>.
+     *        </p>
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -302,10 +332,12 @@ public class Component implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The data binding configuration for the component's properties. Use this for a collection component.
+     * The data binding configuration for the component's properties. Use this for a collection component. You can't
+     * specify <code>tags</code> as a valid property for <code>collectionProperties</code>.
      * </p>
      * 
-     * @return The data binding configuration for the component's properties. Use this for a collection component.
+     * @return The data binding configuration for the component's properties. Use this for a collection component. You
+     *         can't specify <code>tags</code> as a valid property for <code>collectionProperties</code>.
      */
 
     public java.util.Map<String, ComponentDataConfiguration> getCollectionProperties() {
@@ -314,11 +346,13 @@ public class Component implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The data binding configuration for the component's properties. Use this for a collection component.
+     * The data binding configuration for the component's properties. Use this for a collection component. You can't
+     * specify <code>tags</code> as a valid property for <code>collectionProperties</code>.
      * </p>
      * 
      * @param collectionProperties
-     *        The data binding configuration for the component's properties. Use this for a collection component.
+     *        The data binding configuration for the component's properties. Use this for a collection component. You
+     *        can't specify <code>tags</code> as a valid property for <code>collectionProperties</code>.
      */
 
     public void setCollectionProperties(java.util.Map<String, ComponentDataConfiguration> collectionProperties) {
@@ -327,11 +361,13 @@ public class Component implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The data binding configuration for the component's properties. Use this for a collection component.
+     * The data binding configuration for the component's properties. Use this for a collection component. You can't
+     * specify <code>tags</code> as a valid property for <code>collectionProperties</code>.
      * </p>
      * 
      * @param collectionProperties
-     *        The data binding configuration for the component's properties. Use this for a collection component.
+     *        The data binding configuration for the component's properties. Use this for a collection component. You
+     *        can't specify <code>tags</code> as a valid property for <code>collectionProperties</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -490,6 +526,80 @@ public class Component implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
+     * Describes the events that can be raised on the component. Use for the workflow feature in Amplify Studio that
+     * allows you to bind events and actions to components.
+     * </p>
+     * 
+     * @return Describes the events that can be raised on the component. Use for the workflow feature in Amplify Studio
+     *         that allows you to bind events and actions to components.
+     */
+
+    public java.util.Map<String, ComponentEvent> getEvents() {
+        return events;
+    }
+
+    /**
+     * <p>
+     * Describes the events that can be raised on the component. Use for the workflow feature in Amplify Studio that
+     * allows you to bind events and actions to components.
+     * </p>
+     * 
+     * @param events
+     *        Describes the events that can be raised on the component. Use for the workflow feature in Amplify Studio
+     *        that allows you to bind events and actions to components.
+     */
+
+    public void setEvents(java.util.Map<String, ComponentEvent> events) {
+        this.events = events;
+    }
+
+    /**
+     * <p>
+     * Describes the events that can be raised on the component. Use for the workflow feature in Amplify Studio that
+     * allows you to bind events and actions to components.
+     * </p>
+     * 
+     * @param events
+     *        Describes the events that can be raised on the component. Use for the workflow feature in Amplify Studio
+     *        that allows you to bind events and actions to components.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Component withEvents(java.util.Map<String, ComponentEvent> events) {
+        setEvents(events);
+        return this;
+    }
+
+    /**
+     * Add a single Events entry
+     *
+     * @see Component#withEvents
+     * @returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Component addEventsEntry(String key, ComponentEvent value) {
+        if (null == this.events) {
+            this.events = new java.util.HashMap<String, ComponentEvent>();
+        }
+        if (this.events.containsKey(key))
+            throw new IllegalArgumentException("Duplicated keys (" + key.toString() + ") are provided.");
+        this.events.put(key, value);
+        return this;
+    }
+
+    /**
+     * Removes all the entries added into Events.
+     *
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Component clearEventsEntries() {
+        this.events = null;
+        return this;
+    }
+
+    /**
+     * <p>
      * The unique ID of the component.
      * </p>
      * 
@@ -610,10 +720,12 @@ public class Component implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Describes the component's properties that can be overriden in a customized instance of the component.
+     * Describes the component's properties that can be overriden in a customized instance of the component. You can't
+     * specify <code>tags</code> as a valid property for <code>overrides</code>.
      * </p>
      * 
-     * @return Describes the component's properties that can be overriden in a customized instance of the component.
+     * @return Describes the component's properties that can be overriden in a customized instance of the component. You
+     *         can't specify <code>tags</code> as a valid property for <code>overrides</code>.
      */
 
     public java.util.Map<String, java.util.Map<String, String>> getOverrides() {
@@ -622,11 +734,13 @@ public class Component implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Describes the component's properties that can be overriden in a customized instance of the component.
+     * Describes the component's properties that can be overriden in a customized instance of the component. You can't
+     * specify <code>tags</code> as a valid property for <code>overrides</code>.
      * </p>
      * 
      * @param overrides
-     *        Describes the component's properties that can be overriden in a customized instance of the component.
+     *        Describes the component's properties that can be overriden in a customized instance of the component. You
+     *        can't specify <code>tags</code> as a valid property for <code>overrides</code>.
      */
 
     public void setOverrides(java.util.Map<String, java.util.Map<String, String>> overrides) {
@@ -635,11 +749,13 @@ public class Component implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Describes the component's properties that can be overriden in a customized instance of the component.
+     * Describes the component's properties that can be overriden in a customized instance of the component. You can't
+     * specify <code>tags</code> as a valid property for <code>overrides</code>.
      * </p>
      * 
      * @param overrides
-     *        Describes the component's properties that can be overriden in a customized instance of the component.
+     *        Describes the component's properties that can be overriden in a customized instance of the component. You
+     *        can't specify <code>tags</code> as a valid property for <code>overrides</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -678,10 +794,12 @@ public class Component implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Describes the component's properties.
+     * Describes the component's properties. You can't specify <code>tags</code> as a valid property for
+     * <code>properties</code>.
      * </p>
      * 
-     * @return Describes the component's properties.
+     * @return Describes the component's properties. You can't specify <code>tags</code> as a valid property for
+     *         <code>properties</code>.
      */
 
     public java.util.Map<String, ComponentProperty> getProperties() {
@@ -690,11 +808,13 @@ public class Component implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Describes the component's properties.
+     * Describes the component's properties. You can't specify <code>tags</code> as a valid property for
+     * <code>properties</code>.
      * </p>
      * 
      * @param properties
-     *        Describes the component's properties.
+     *        Describes the component's properties. You can't specify <code>tags</code> as a valid property for
+     *        <code>properties</code>.
      */
 
     public void setProperties(java.util.Map<String, ComponentProperty> properties) {
@@ -703,11 +823,13 @@ public class Component implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * Describes the component's properties.
+     * Describes the component's properties. You can't specify <code>tags</code> as a valid property for
+     * <code>properties</code>.
      * </p>
      * 
      * @param properties
-     *        Describes the component's properties.
+     *        Describes the component's properties. You can't specify <code>tags</code> as a valid property for
+     *        <code>properties</code>.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -741,6 +863,46 @@ public class Component implements Serializable, Cloneable, StructuredPojo {
 
     public Component clearPropertiesEntries() {
         this.properties = null;
+        return this;
+    }
+
+    /**
+     * <p>
+     * The schema version of the component when it was imported.
+     * </p>
+     * 
+     * @param schemaVersion
+     *        The schema version of the component when it was imported.
+     */
+
+    public void setSchemaVersion(String schemaVersion) {
+        this.schemaVersion = schemaVersion;
+    }
+
+    /**
+     * <p>
+     * The schema version of the component when it was imported.
+     * </p>
+     * 
+     * @return The schema version of the component when it was imported.
+     */
+
+    public String getSchemaVersion() {
+        return this.schemaVersion;
+    }
+
+    /**
+     * <p>
+     * The schema version of the component when it was imported.
+     * </p>
+     * 
+     * @param schemaVersion
+     *        The schema version of the component when it was imported.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public Component withSchemaVersion(String schemaVersion) {
+        setSchemaVersion(schemaVersion);
         return this;
     }
 
@@ -948,6 +1110,8 @@ public class Component implements Serializable, Cloneable, StructuredPojo {
             sb.append("CreatedAt: ").append(getCreatedAt()).append(",");
         if (getEnvironmentName() != null)
             sb.append("EnvironmentName: ").append(getEnvironmentName()).append(",");
+        if (getEvents() != null)
+            sb.append("Events: ").append(getEvents()).append(",");
         if (getId() != null)
             sb.append("Id: ").append(getId()).append(",");
         if (getModifiedAt() != null)
@@ -958,6 +1122,8 @@ public class Component implements Serializable, Cloneable, StructuredPojo {
             sb.append("Overrides: ").append(getOverrides()).append(",");
         if (getProperties() != null)
             sb.append("Properties: ").append(getProperties()).append(",");
+        if (getSchemaVersion() != null)
+            sb.append("SchemaVersion: ").append(getSchemaVersion()).append(",");
         if (getSourceId() != null)
             sb.append("SourceId: ").append(getSourceId()).append(",");
         if (getTags() != null)
@@ -1006,6 +1172,10 @@ public class Component implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getEnvironmentName() != null && other.getEnvironmentName().equals(this.getEnvironmentName()) == false)
             return false;
+        if (other.getEvents() == null ^ this.getEvents() == null)
+            return false;
+        if (other.getEvents() != null && other.getEvents().equals(this.getEvents()) == false)
+            return false;
         if (other.getId() == null ^ this.getId() == null)
             return false;
         if (other.getId() != null && other.getId().equals(this.getId()) == false)
@@ -1025,6 +1195,10 @@ public class Component implements Serializable, Cloneable, StructuredPojo {
         if (other.getProperties() == null ^ this.getProperties() == null)
             return false;
         if (other.getProperties() != null && other.getProperties().equals(this.getProperties()) == false)
+            return false;
+        if (other.getSchemaVersion() == null ^ this.getSchemaVersion() == null)
+            return false;
+        if (other.getSchemaVersion() != null && other.getSchemaVersion().equals(this.getSchemaVersion()) == false)
             return false;
         if (other.getSourceId() == null ^ this.getSourceId() == null)
             return false;
@@ -1053,11 +1227,13 @@ public class Component implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getComponentType() == null) ? 0 : getComponentType().hashCode());
         hashCode = prime * hashCode + ((getCreatedAt() == null) ? 0 : getCreatedAt().hashCode());
         hashCode = prime * hashCode + ((getEnvironmentName() == null) ? 0 : getEnvironmentName().hashCode());
+        hashCode = prime * hashCode + ((getEvents() == null) ? 0 : getEvents().hashCode());
         hashCode = prime * hashCode + ((getId() == null) ? 0 : getId().hashCode());
         hashCode = prime * hashCode + ((getModifiedAt() == null) ? 0 : getModifiedAt().hashCode());
         hashCode = prime * hashCode + ((getName() == null) ? 0 : getName().hashCode());
         hashCode = prime * hashCode + ((getOverrides() == null) ? 0 : getOverrides().hashCode());
         hashCode = prime * hashCode + ((getProperties() == null) ? 0 : getProperties().hashCode());
+        hashCode = prime * hashCode + ((getSchemaVersion() == null) ? 0 : getSchemaVersion().hashCode());
         hashCode = prime * hashCode + ((getSourceId() == null) ? 0 : getSourceId().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
         hashCode = prime * hashCode + ((getVariants() == null) ? 0 : getVariants().hashCode());

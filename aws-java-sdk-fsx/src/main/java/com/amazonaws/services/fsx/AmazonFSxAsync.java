@@ -729,8 +729,8 @@ public interface AmazonFSxAsync extends AmazonFSx {
      * </p>
      * <p>
      * If a file system with the specified client request token exists and the parameters match, this operation returns
-     * the description of the file system. If a client request token with the specified by the file system exists and
-     * the parameters don't match, this call returns <code>IncompatibleParameterError</code>. If a file system with the
+     * the description of the file system. If a file system with the specified client request token exists but the
+     * parameters don't match, this call returns <code>IncompatibleParameterError</code>. If a file system with the
      * specified client request token doesn't exist, this operation does the following:
      * </p>
      * <ul>
@@ -783,8 +783,8 @@ public interface AmazonFSxAsync extends AmazonFSx {
      * </p>
      * <p>
      * If a file system with the specified client request token exists and the parameters match, this operation returns
-     * the description of the file system. If a client request token with the specified by the file system exists and
-     * the parameters don't match, this call returns <code>IncompatibleParameterError</code>. If a file system with the
+     * the description of the file system. If a file system with the specified client request token exists but the
+     * parameters don't match, this call returns <code>IncompatibleParameterError</code>. If a file system with the
      * specified client request token doesn't exist, this operation does the following:
      * </p>
      * <ul>
@@ -837,8 +837,8 @@ public interface AmazonFSxAsync extends AmazonFSx {
 
     /**
      * <p>
-     * Creates a snapshot of an existing Amazon FSx for OpenZFS file system. With snapshots, you can easily undo file
-     * changes and compare file versions by restoring the volume to a previous version.
+     * Creates a snapshot of an existing Amazon FSx for OpenZFS volume. With snapshots, you can easily undo file changes
+     * and compare file versions by restoring the volume to a previous version.
      * </p>
      * <p>
      * If a snapshot with the specified client request token exists, and the parameters match, this operation returns
@@ -881,8 +881,8 @@ public interface AmazonFSxAsync extends AmazonFSx {
 
     /**
      * <p>
-     * Creates a snapshot of an existing Amazon FSx for OpenZFS file system. With snapshots, you can easily undo file
-     * changes and compare file versions by restoring the volume to a previous version.
+     * Creates a snapshot of an existing Amazon FSx for OpenZFS volume. With snapshots, you can easily undo file changes
+     * and compare file versions by restoring the volume to a previous version.
      * </p>
      * <p>
      * If a snapshot with the specified client request token exists, and the parameters match, this operation returns
@@ -1204,8 +1204,8 @@ public interface AmazonFSxAsync extends AmazonFSx {
 
     /**
      * <p>
-     * Deletes the Amazon FSx snapshot. After deletion, the snapshot no longer exists, and its data is gone. Deleting a
-     * snapshot doesn't affect snapshots stored in a file system backup.
+     * Deletes an Amazon FSx for OpenZFS snapshot. After deletion, the snapshot no longer exists, and its data is gone.
+     * Deleting a snapshot doesn't affect snapshots stored in a file system backup.
      * </p>
      * <p>
      * The <code>DeleteSnapshot</code> operation returns instantly. The snapshot appears with the lifecycle status of
@@ -1222,8 +1222,8 @@ public interface AmazonFSxAsync extends AmazonFSx {
 
     /**
      * <p>
-     * Deletes the Amazon FSx snapshot. After deletion, the snapshot no longer exists, and its data is gone. Deleting a
-     * snapshot doesn't affect snapshots stored in a file system backup.
+     * Deletes an Amazon FSx for OpenZFS snapshot. After deletion, the snapshot no longer exists, and its data is gone.
+     * Deleting a snapshot doesn't affect snapshots stored in a file system backup.
      * </p>
      * <p>
      * The <code>DeleteSnapshot</code> operation returns instantly. The snapshot appears with the lifecycle status of
@@ -1660,9 +1660,9 @@ public interface AmazonFSxAsync extends AmazonFSx {
 
     /**
      * <p>
-     * Returns the description of specific Amazon FSx snapshots, if a <code>SnapshotIds</code> value is provided.
-     * Otherwise, this operation returns all snapshots owned by your Amazon Web Services account in the Amazon Web
-     * Services Region of the endpoint that you're calling.
+     * Returns the description of specific Amazon FSx for OpenZFS snapshots, if a <code>SnapshotIds</code> value is
+     * provided. Otherwise, this operation returns all snapshots owned by your Amazon Web Services account in the Amazon
+     * Web Services Region of the endpoint that you're calling.
      * </p>
      * <p>
      * When retrieving all snapshots, you can optionally specify the <code>MaxResults</code> parameter to limit the
@@ -1704,9 +1704,9 @@ public interface AmazonFSxAsync extends AmazonFSx {
 
     /**
      * <p>
-     * Returns the description of specific Amazon FSx snapshots, if a <code>SnapshotIds</code> value is provided.
-     * Otherwise, this operation returns all snapshots owned by your Amazon Web Services account in the Amazon Web
-     * Services Region of the endpoint that you're calling.
+     * Returns the description of specific Amazon FSx for OpenZFS snapshots, if a <code>SnapshotIds</code> value is
+     * provided. Otherwise, this operation returns all snapshots owned by your Amazon Web Services account in the Amazon
+     * Web Services Region of the endpoint that you're calling.
      * </p>
      * <p>
      * When retrieving all snapshots, you can optionally specify the <code>MaxResults</code> parameter to limit the
@@ -2461,7 +2461,7 @@ public interface AmazonFSxAsync extends AmazonFSx {
 
     /**
      * <p>
-     * Updates the name of a snapshot.
+     * Updates the name of an Amazon FSx for OpenZFS snapshot.
      * </p>
      * 
      * @param updateSnapshotRequest
@@ -2474,7 +2474,7 @@ public interface AmazonFSxAsync extends AmazonFSx {
 
     /**
      * <p>
-     * Updates the name of a snapshot.
+     * Updates the name of an Amazon FSx for OpenZFS snapshot.
      * </p>
      * 
      * @param updateSnapshotRequest

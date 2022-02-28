@@ -19,7 +19,7 @@ import com.amazonaws.protocol.ProtocolMarshaller;
 
 /**
  * <p>
- * The OpenZFS configuration properties for the file system that you are creating.
+ * The Amazon FSx for OpenZFS configuration properties for the file system that you are creating.
  * </p>
  * 
  * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/CreateFileSystemOpenZFSConfiguration"

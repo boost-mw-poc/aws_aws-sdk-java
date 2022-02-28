@@ -593,7 +593,7 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
      * @throws FileSystemNotFoundException
      *         No Amazon FSx file systems were found based upon supplied parameters.
      * @throws VolumeNotFoundException
-     *         No Amazon FSx for NetApp ONTAP volumes were found based upon the supplied parameters.
+     *         No Amazon FSx volumes were found based upon the supplied parameters.
      * @throws BackupInProgressException
      *         Another backup is already under way. Wait for completion before initiating additional backups of this
      *         file system.
@@ -973,8 +973,8 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
      * </p>
      * <p>
      * If a file system with the specified client request token exists and the parameters match, this operation returns
-     * the description of the file system. If a client request token with the specified by the file system exists and
-     * the parameters don't match, this call returns <code>IncompatibleParameterError</code>. If a file system with the
+     * the description of the file system. If a file system with the specified client request token exists but the
+     * parameters don't match, this call returns <code>IncompatibleParameterError</code>. If a file system with the
      * specified client request token doesn't exist, this operation does the following:
      * </p>
      * <ul>
@@ -1086,8 +1086,8 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
 
     /**
      * <p>
-     * Creates a snapshot of an existing Amazon FSx for OpenZFS file system. With snapshots, you can easily undo file
-     * changes and compare file versions by restoring the volume to a previous version.
+     * Creates a snapshot of an existing Amazon FSx for OpenZFS volume. With snapshots, you can easily undo file changes
+     * and compare file versions by restoring the volume to a previous version.
      * </p>
      * <p>
      * If a snapshot with the specified client request token exists, and the parameters match, this operation returns
@@ -1125,7 +1125,7 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
      * @throws BadRequestException
      *         A generic error indicating a failure with a client request.
      * @throws VolumeNotFoundException
-     *         No Amazon FSx for NetApp ONTAP volumes were found based upon the supplied parameters.
+     *         No Amazon FSx volumes were found based upon the supplied parameters.
      * @throws ServiceLimitExceededException
      *         An error indicating that a particular service limit was exceeded. You can increase some service limits by
      *         contacting Amazon Web Services Support.
@@ -1650,8 +1650,8 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
 
     /**
      * <p>
-     * Deletes the Amazon FSx snapshot. After deletion, the snapshot no longer exists, and its data is gone. Deleting a
-     * snapshot doesn't affect snapshots stored in a file system backup.
+     * Deletes an Amazon FSx for OpenZFS snapshot. After deletion, the snapshot no longer exists, and its data is gone.
+     * Deleting a snapshot doesn't affect snapshots stored in a file system backup.
      * </p>
      * <p>
      * The <code>DeleteSnapshot</code> operation returns instantly. The snapshot appears with the lifecycle status of
@@ -1796,7 +1796,7 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
      * @throws InternalServerErrorException
      *         A generic error indicating a server-side failure.
      * @throws VolumeNotFoundException
-     *         No Amazon FSx for NetApp ONTAP volumes were found based upon the supplied parameters.
+     *         No Amazon FSx volumes were found based upon the supplied parameters.
      * @sample AmazonFSx.DeleteVolume
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/DeleteVolume" target="_top">AWS API
      *      Documentation</a>
@@ -1889,7 +1889,7 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
      * @throws FileSystemNotFoundException
      *         No Amazon FSx file systems were found based upon supplied parameters.
      * @throws VolumeNotFoundException
-     *         No Amazon FSx for NetApp ONTAP volumes were found based upon the supplied parameters.
+     *         No Amazon FSx volumes were found based upon the supplied parameters.
      * @throws BackupNotFoundException
      *         No Amazon FSx backups were found based upon the supplied parameters.
      * @throws InternalServerErrorException
@@ -2262,9 +2262,9 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
 
     /**
      * <p>
-     * Returns the description of specific Amazon FSx snapshots, if a <code>SnapshotIds</code> value is provided.
-     * Otherwise, this operation returns all snapshots owned by your Amazon Web Services account in the Amazon Web
-     * Services Region of the endpoint that you're calling.
+     * Returns the description of specific Amazon FSx for OpenZFS snapshots, if a <code>SnapshotIds</code> value is
+     * provided. Otherwise, this operation returns all snapshots owned by your Amazon Web Services account in the Amazon
+     * Web Services Region of the endpoint that you're calling.
      * </p>
      * <p>
      * When retrieving all snapshots, you can optionally specify the <code>MaxResults</code> parameter to limit the
@@ -2427,7 +2427,7 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
      * @throws InternalServerErrorException
      *         A generic error indicating a server-side failure.
      * @throws VolumeNotFoundException
-     *         No Amazon FSx for NetApp ONTAP volumes were found based upon the supplied parameters.
+     *         No Amazon FSx volumes were found based upon the supplied parameters.
      * @sample AmazonFSx.DescribeVolumes
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/DescribeVolumes" target="_top">AWS API
      *      Documentation</a>
@@ -2726,7 +2726,7 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
      * @throws InternalServerErrorException
      *         A generic error indicating a server-side failure.
      * @throws VolumeNotFoundException
-     *         No Amazon FSx for NetApp ONTAP volumes were found based upon the supplied parameters.
+     *         No Amazon FSx volumes were found based upon the supplied parameters.
      * @sample AmazonFSx.RestoreVolumeFromSnapshot
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/RestoreVolumeFromSnapshot" target="_top">AWS
      *      API Documentation</a>
@@ -3203,7 +3203,7 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
 
     /**
      * <p>
-     * Updates the name of a snapshot.
+     * Updates the name of an Amazon FSx for OpenZFS snapshot.
      * </p>
      * 
      * @param updateSnapshotRequest
@@ -3347,7 +3347,7 @@ public class AmazonFSxClient extends AmazonWebServiceClient implements AmazonFSx
      * @throws MissingVolumeConfigurationException
      *         A volume configuration is required for this operation.
      * @throws VolumeNotFoundException
-     *         No Amazon FSx for NetApp ONTAP volumes were found based upon the supplied parameters.
+     *         No Amazon FSx volumes were found based upon the supplied parameters.
      * @sample AmazonFSx.UpdateVolume
      * @see <a href="http://docs.aws.amazon.com/goto/WebAPI/fsx-2018-03-01/UpdateVolume" target="_top">AWS API
      *      Documentation</a>

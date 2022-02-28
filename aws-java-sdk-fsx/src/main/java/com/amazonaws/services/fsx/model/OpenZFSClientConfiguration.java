@@ -31,7 +31,7 @@ public class OpenZFSClientConfiguration implements Serializable, Cloneable, Stru
     /**
      * <p>
      * A value that specifies who can mount the file system. You can provide a wildcard character (<code>*</code>), an
-     * IP address (<code>0.0.0.0</code>), or a CIDR address (<code>192.0.2.0/24</code>. By default, Amazon FSx uses the
+     * IP address (<code>0.0.0.0</code>), or a CIDR address (<code>192.0.2.0/24</code>). By default, Amazon FSx uses the
      * wildcard character when specifying the client.
      * </p>
      */
@@ -45,7 +45,7 @@ public class OpenZFSClientConfiguration implements Serializable, Cloneable, Stru
      * <ul>
      * <li>
      * <p>
-     * <code>crossmount</code> is used by default. If you don't specify <code>crossmount</code> when changing the client
+     * <code>crossmnt</code> is used by default. If you don't specify <code>crossmnt</code> when changing the client
      * configuration, you won't be able to see or access snapshots in your file system's snapshot directory.
      * </p>
      * </li>
@@ -62,13 +62,13 @@ public class OpenZFSClientConfiguration implements Serializable, Cloneable, Stru
     /**
      * <p>
      * A value that specifies who can mount the file system. You can provide a wildcard character (<code>*</code>), an
-     * IP address (<code>0.0.0.0</code>), or a CIDR address (<code>192.0.2.0/24</code>. By default, Amazon FSx uses the
+     * IP address (<code>0.0.0.0</code>), or a CIDR address (<code>192.0.2.0/24</code>). By default, Amazon FSx uses the
      * wildcard character when specifying the client.
      * </p>
      * 
      * @param clients
      *        A value that specifies who can mount the file system. You can provide a wildcard character (<code>*</code>
-     *        ), an IP address (<code>0.0.0.0</code>), or a CIDR address (<code>192.0.2.0/24</code>. By default, Amazon
+     *        ), an IP address (<code>0.0.0.0</code>), or a CIDR address (<code>192.0.2.0/24</code>). By default, Amazon
      *        FSx uses the wildcard character when specifying the client.
      */
 
@@ -79,12 +79,12 @@ public class OpenZFSClientConfiguration implements Serializable, Cloneable, Stru
     /**
      * <p>
      * A value that specifies who can mount the file system. You can provide a wildcard character (<code>*</code>), an
-     * IP address (<code>0.0.0.0</code>), or a CIDR address (<code>192.0.2.0/24</code>. By default, Amazon FSx uses the
+     * IP address (<code>0.0.0.0</code>), or a CIDR address (<code>192.0.2.0/24</code>). By default, Amazon FSx uses the
      * wildcard character when specifying the client.
      * </p>
      * 
      * @return A value that specifies who can mount the file system. You can provide a wildcard character (
-     *         <code>*</code>), an IP address (<code>0.0.0.0</code>), or a CIDR address (<code>192.0.2.0/24</code>. By
+     *         <code>*</code>), an IP address (<code>0.0.0.0</code>), or a CIDR address (<code>192.0.2.0/24</code>). By
      *         default, Amazon FSx uses the wildcard character when specifying the client.
      */
 
@@ -95,13 +95,13 @@ public class OpenZFSClientConfiguration implements Serializable, Cloneable, Stru
     /**
      * <p>
      * A value that specifies who can mount the file system. You can provide a wildcard character (<code>*</code>), an
-     * IP address (<code>0.0.0.0</code>), or a CIDR address (<code>192.0.2.0/24</code>. By default, Amazon FSx uses the
+     * IP address (<code>0.0.0.0</code>), or a CIDR address (<code>192.0.2.0/24</code>). By default, Amazon FSx uses the
      * wildcard character when specifying the client.
      * </p>
      * 
      * @param clients
      *        A value that specifies who can mount the file system. You can provide a wildcard character (<code>*</code>
-     *        ), an IP address (<code>0.0.0.0</code>), or a CIDR address (<code>192.0.2.0/24</code>. By default, Amazon
+     *        ), an IP address (<code>0.0.0.0</code>), or a CIDR address (<code>192.0.2.0/24</code>). By default, Amazon
      *        FSx uses the wildcard character when specifying the client.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
@@ -120,7 +120,7 @@ public class OpenZFSClientConfiguration implements Serializable, Cloneable, Stru
      * <ul>
      * <li>
      * <p>
-     * <code>crossmount</code> is used by default. If you don't specify <code>crossmount</code> when changing the client
+     * <code>crossmnt</code> is used by default. If you don't specify <code>crossmnt</code> when changing the client
      * configuration, you won't be able to see or access snapshots in your file system's snapshot directory.
      * </p>
      * </li>
@@ -138,8 +138,8 @@ public class OpenZFSClientConfiguration implements Serializable, Cloneable, Stru
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>crossmount</code> is used by default. If you don't specify <code>crossmount</code> when changing
-     *         the client configuration, you won't be able to see or access snapshots in your file system's snapshot
+     *         <code>crossmnt</code> is used by default. If you don't specify <code>crossmnt</code> when changing the
+     *         client configuration, you won't be able to see or access snapshots in your file system's snapshot
      *         directory.
      *         </p>
      *         </li>
@@ -165,7 +165,7 @@ public class OpenZFSClientConfiguration implements Serializable, Cloneable, Stru
      * <ul>
      * <li>
      * <p>
-     * <code>crossmount</code> is used by default. If you don't specify <code>crossmount</code> when changing the client
+     * <code>crossmnt</code> is used by default. If you don't specify <code>crossmnt</code> when changing the client
      * configuration, you won't be able to see or access snapshots in your file system's snapshot directory.
      * </p>
      * </li>
@@ -184,7 +184,7 @@ public class OpenZFSClientConfiguration implements Serializable, Cloneable, Stru
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>crossmount</code> is used by default. If you don't specify <code>crossmount</code> when changing the
+     *        <code>crossmnt</code> is used by default. If you don't specify <code>crossmnt</code> when changing the
      *        client configuration, you won't be able to see or access snapshots in your file system's snapshot
      *        directory.
      *        </p>
@@ -216,7 +216,7 @@ public class OpenZFSClientConfiguration implements Serializable, Cloneable, Stru
      * <ul>
      * <li>
      * <p>
-     * <code>crossmount</code> is used by default. If you don't specify <code>crossmount</code> when changing the client
+     * <code>crossmnt</code> is used by default. If you don't specify <code>crossmnt</code> when changing the client
      * configuration, you won't be able to see or access snapshots in your file system's snapshot directory.
      * </p>
      * </li>
@@ -240,7 +240,7 @@ public class OpenZFSClientConfiguration implements Serializable, Cloneable, Stru
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>crossmount</code> is used by default. If you don't specify <code>crossmount</code> when changing the
+     *        <code>crossmnt</code> is used by default. If you don't specify <code>crossmnt</code> when changing the
      *        client configuration, you won't be able to see or access snapshots in your file system's snapshot
      *        directory.
      *        </p>
@@ -274,7 +274,7 @@ public class OpenZFSClientConfiguration implements Serializable, Cloneable, Stru
      * <ul>
      * <li>
      * <p>
-     * <code>crossmount</code> is used by default. If you don't specify <code>crossmount</code> when changing the client
+     * <code>crossmnt</code> is used by default. If you don't specify <code>crossmnt</code> when changing the client
      * configuration, you won't be able to see or access snapshots in your file system's snapshot directory.
      * </p>
      * </li>
@@ -293,7 +293,7 @@ public class OpenZFSClientConfiguration implements Serializable, Cloneable, Stru
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>crossmount</code> is used by default. If you don't specify <code>crossmount</code> when changing the
+     *        <code>crossmnt</code> is used by default. If you don't specify <code>crossmnt</code> when changing the
      *        client configuration, you won't be able to see or access snapshots in your file system's snapshot
      *        directory.
      *        </p>

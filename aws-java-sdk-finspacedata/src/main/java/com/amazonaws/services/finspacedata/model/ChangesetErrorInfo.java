@@ -41,43 +41,43 @@ public class ChangesetErrorInfo implements Serializable, Cloneable, StructuredPo
      * <ul>
      * <li>
      * <p>
-     * <code>VALIDATION</code> -The inputs to this request are invalid.
+     * <code>VALIDATION</code> – The inputs to this request are invalid.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>SERVICE_QUOTA_EXCEEDED</code> - Service quotas have been exceeded. Please contact AWS support to increase
+     * <code>SERVICE_QUOTA_EXCEEDED</code> – Service quotas have been exceeded. Please contact AWS support to increase
      * quotas.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>ACCESS_DENIED</code> - Missing required permission to perform this request.
+     * <code>ACCESS_DENIED</code> – Missing required permission to perform this request.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>RESOURCE_NOT_FOUND</code> - One or more inputs to this request were not found.
+     * <code>RESOURCE_NOT_FOUND</code> – One or more inputs to this request were not found.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>THROTTLING</code> - The system temporarily lacks sufficient resources to process the request.
+     * <code>THROTTLING</code> – The system temporarily lacks sufficient resources to process the request.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>INTERNAL_SERVICE_EXCEPTION</code> - An internal service error has occurred.
+     * <code>INTERNAL_SERVICE_EXCEPTION</code> – An internal service error has occurred.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>CANCELLED</code> - Cancelled.
+     * <code>CANCELLED</code> – Cancelled.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>USER_RECOVERABLE</code> - A user recoverable error has occurred.
+     * <code>USER_RECOVERABLE</code> – A user recoverable error has occurred.
      * </p>
      * </li>
      * </ul>
@@ -131,43 +131,43 @@ public class ChangesetErrorInfo implements Serializable, Cloneable, StructuredPo
      * <ul>
      * <li>
      * <p>
-     * <code>VALIDATION</code> -The inputs to this request are invalid.
+     * <code>VALIDATION</code> – The inputs to this request are invalid.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>SERVICE_QUOTA_EXCEEDED</code> - Service quotas have been exceeded. Please contact AWS support to increase
+     * <code>SERVICE_QUOTA_EXCEEDED</code> – Service quotas have been exceeded. Please contact AWS support to increase
      * quotas.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>ACCESS_DENIED</code> - Missing required permission to perform this request.
+     * <code>ACCESS_DENIED</code> – Missing required permission to perform this request.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>RESOURCE_NOT_FOUND</code> - One or more inputs to this request were not found.
+     * <code>RESOURCE_NOT_FOUND</code> – One or more inputs to this request were not found.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>THROTTLING</code> - The system temporarily lacks sufficient resources to process the request.
+     * <code>THROTTLING</code> – The system temporarily lacks sufficient resources to process the request.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>INTERNAL_SERVICE_EXCEPTION</code> - An internal service error has occurred.
+     * <code>INTERNAL_SERVICE_EXCEPTION</code> – An internal service error has occurred.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>CANCELLED</code> - Cancelled.
+     * <code>CANCELLED</code> – Cancelled.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>USER_RECOVERABLE</code> - A user recoverable error has occurred.
+     * <code>USER_RECOVERABLE</code> – A user recoverable error has occurred.
      * </p>
      * </li>
      * </ul>
@@ -177,43 +177,43 @@ public class ChangesetErrorInfo implements Serializable, Cloneable, StructuredPo
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>VALIDATION</code> -The inputs to this request are invalid.
+     *        <code>VALIDATION</code> – The inputs to this request are invalid.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>SERVICE_QUOTA_EXCEEDED</code> - Service quotas have been exceeded. Please contact AWS support to
+     *        <code>SERVICE_QUOTA_EXCEEDED</code> – Service quotas have been exceeded. Please contact AWS support to
      *        increase quotas.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>ACCESS_DENIED</code> - Missing required permission to perform this request.
+     *        <code>ACCESS_DENIED</code> – Missing required permission to perform this request.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>RESOURCE_NOT_FOUND</code> - One or more inputs to this request were not found.
+     *        <code>RESOURCE_NOT_FOUND</code> – One or more inputs to this request were not found.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>THROTTLING</code> - The system temporarily lacks sufficient resources to process the request.
+     *        <code>THROTTLING</code> – The system temporarily lacks sufficient resources to process the request.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>INTERNAL_SERVICE_EXCEPTION</code> - An internal service error has occurred.
+     *        <code>INTERNAL_SERVICE_EXCEPTION</code> – An internal service error has occurred.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>CANCELLED</code> - Cancelled.
+     *        <code>CANCELLED</code> – Cancelled.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>USER_RECOVERABLE</code> - A user recoverable error has occurred.
+     *        <code>USER_RECOVERABLE</code> – A user recoverable error has occurred.
      *        </p>
      *        </li>
      * @see ErrorCategory
@@ -230,43 +230,43 @@ public class ChangesetErrorInfo implements Serializable, Cloneable, StructuredPo
      * <ul>
      * <li>
      * <p>
-     * <code>VALIDATION</code> -The inputs to this request are invalid.
+     * <code>VALIDATION</code> – The inputs to this request are invalid.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>SERVICE_QUOTA_EXCEEDED</code> - Service quotas have been exceeded. Please contact AWS support to increase
+     * <code>SERVICE_QUOTA_EXCEEDED</code> – Service quotas have been exceeded. Please contact AWS support to increase
      * quotas.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>ACCESS_DENIED</code> - Missing required permission to perform this request.
+     * <code>ACCESS_DENIED</code> – Missing required permission to perform this request.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>RESOURCE_NOT_FOUND</code> - One or more inputs to this request were not found.
+     * <code>RESOURCE_NOT_FOUND</code> – One or more inputs to this request were not found.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>THROTTLING</code> - The system temporarily lacks sufficient resources to process the request.
+     * <code>THROTTLING</code> – The system temporarily lacks sufficient resources to process the request.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>INTERNAL_SERVICE_EXCEPTION</code> - An internal service error has occurred.
+     * <code>INTERNAL_SERVICE_EXCEPTION</code> – An internal service error has occurred.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>CANCELLED</code> - Cancelled.
+     * <code>CANCELLED</code> – Cancelled.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>USER_RECOVERABLE</code> - A user recoverable error has occurred.
+     * <code>USER_RECOVERABLE</code> – A user recoverable error has occurred.
      * </p>
      * </li>
      * </ul>
@@ -275,43 +275,43 @@ public class ChangesetErrorInfo implements Serializable, Cloneable, StructuredPo
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>VALIDATION</code> -The inputs to this request are invalid.
+     *         <code>VALIDATION</code> – The inputs to this request are invalid.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>SERVICE_QUOTA_EXCEEDED</code> - Service quotas have been exceeded. Please contact AWS support to
+     *         <code>SERVICE_QUOTA_EXCEEDED</code> – Service quotas have been exceeded. Please contact AWS support to
      *         increase quotas.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>ACCESS_DENIED</code> - Missing required permission to perform this request.
+     *         <code>ACCESS_DENIED</code> – Missing required permission to perform this request.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>RESOURCE_NOT_FOUND</code> - One or more inputs to this request were not found.
+     *         <code>RESOURCE_NOT_FOUND</code> – One or more inputs to this request were not found.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>THROTTLING</code> - The system temporarily lacks sufficient resources to process the request.
+     *         <code>THROTTLING</code> – The system temporarily lacks sufficient resources to process the request.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>INTERNAL_SERVICE_EXCEPTION</code> - An internal service error has occurred.
+     *         <code>INTERNAL_SERVICE_EXCEPTION</code> – An internal service error has occurred.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>CANCELLED</code> - Cancelled.
+     *         <code>CANCELLED</code> – Cancelled.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>USER_RECOVERABLE</code> - A user recoverable error has occurred.
+     *         <code>USER_RECOVERABLE</code> – A user recoverable error has occurred.
      *         </p>
      *         </li>
      * @see ErrorCategory
@@ -328,43 +328,43 @@ public class ChangesetErrorInfo implements Serializable, Cloneable, StructuredPo
      * <ul>
      * <li>
      * <p>
-     * <code>VALIDATION</code> -The inputs to this request are invalid.
+     * <code>VALIDATION</code> – The inputs to this request are invalid.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>SERVICE_QUOTA_EXCEEDED</code> - Service quotas have been exceeded. Please contact AWS support to increase
+     * <code>SERVICE_QUOTA_EXCEEDED</code> – Service quotas have been exceeded. Please contact AWS support to increase
      * quotas.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>ACCESS_DENIED</code> - Missing required permission to perform this request.
+     * <code>ACCESS_DENIED</code> – Missing required permission to perform this request.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>RESOURCE_NOT_FOUND</code> - One or more inputs to this request were not found.
+     * <code>RESOURCE_NOT_FOUND</code> – One or more inputs to this request were not found.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>THROTTLING</code> - The system temporarily lacks sufficient resources to process the request.
+     * <code>THROTTLING</code> – The system temporarily lacks sufficient resources to process the request.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>INTERNAL_SERVICE_EXCEPTION</code> - An internal service error has occurred.
+     * <code>INTERNAL_SERVICE_EXCEPTION</code> – An internal service error has occurred.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>CANCELLED</code> - Cancelled.
+     * <code>CANCELLED</code> – Cancelled.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>USER_RECOVERABLE</code> - A user recoverable error has occurred.
+     * <code>USER_RECOVERABLE</code> – A user recoverable error has occurred.
      * </p>
      * </li>
      * </ul>
@@ -374,43 +374,43 @@ public class ChangesetErrorInfo implements Serializable, Cloneable, StructuredPo
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>VALIDATION</code> -The inputs to this request are invalid.
+     *        <code>VALIDATION</code> – The inputs to this request are invalid.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>SERVICE_QUOTA_EXCEEDED</code> - Service quotas have been exceeded. Please contact AWS support to
+     *        <code>SERVICE_QUOTA_EXCEEDED</code> – Service quotas have been exceeded. Please contact AWS support to
      *        increase quotas.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>ACCESS_DENIED</code> - Missing required permission to perform this request.
+     *        <code>ACCESS_DENIED</code> – Missing required permission to perform this request.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>RESOURCE_NOT_FOUND</code> - One or more inputs to this request were not found.
+     *        <code>RESOURCE_NOT_FOUND</code> – One or more inputs to this request were not found.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>THROTTLING</code> - The system temporarily lacks sufficient resources to process the request.
+     *        <code>THROTTLING</code> – The system temporarily lacks sufficient resources to process the request.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>INTERNAL_SERVICE_EXCEPTION</code> - An internal service error has occurred.
+     *        <code>INTERNAL_SERVICE_EXCEPTION</code> – An internal service error has occurred.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>CANCELLED</code> - Cancelled.
+     *        <code>CANCELLED</code> – Cancelled.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>USER_RECOVERABLE</code> - A user recoverable error has occurred.
+     *        <code>USER_RECOVERABLE</code> – A user recoverable error has occurred.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -429,43 +429,43 @@ public class ChangesetErrorInfo implements Serializable, Cloneable, StructuredPo
      * <ul>
      * <li>
      * <p>
-     * <code>VALIDATION</code> -The inputs to this request are invalid.
+     * <code>VALIDATION</code> – The inputs to this request are invalid.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>SERVICE_QUOTA_EXCEEDED</code> - Service quotas have been exceeded. Please contact AWS support to increase
+     * <code>SERVICE_QUOTA_EXCEEDED</code> – Service quotas have been exceeded. Please contact AWS support to increase
      * quotas.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>ACCESS_DENIED</code> - Missing required permission to perform this request.
+     * <code>ACCESS_DENIED</code> – Missing required permission to perform this request.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>RESOURCE_NOT_FOUND</code> - One or more inputs to this request were not found.
+     * <code>RESOURCE_NOT_FOUND</code> – One or more inputs to this request were not found.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>THROTTLING</code> - The system temporarily lacks sufficient resources to process the request.
+     * <code>THROTTLING</code> – The system temporarily lacks sufficient resources to process the request.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>INTERNAL_SERVICE_EXCEPTION</code> - An internal service error has occurred.
+     * <code>INTERNAL_SERVICE_EXCEPTION</code> – An internal service error has occurred.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>CANCELLED</code> - Cancelled.
+     * <code>CANCELLED</code> – Cancelled.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>USER_RECOVERABLE</code> - A user recoverable error has occurred.
+     * <code>USER_RECOVERABLE</code> – A user recoverable error has occurred.
      * </p>
      * </li>
      * </ul>
@@ -475,43 +475,43 @@ public class ChangesetErrorInfo implements Serializable, Cloneable, StructuredPo
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>VALIDATION</code> -The inputs to this request are invalid.
+     *        <code>VALIDATION</code> – The inputs to this request are invalid.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>SERVICE_QUOTA_EXCEEDED</code> - Service quotas have been exceeded. Please contact AWS support to
+     *        <code>SERVICE_QUOTA_EXCEEDED</code> – Service quotas have been exceeded. Please contact AWS support to
      *        increase quotas.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>ACCESS_DENIED</code> - Missing required permission to perform this request.
+     *        <code>ACCESS_DENIED</code> – Missing required permission to perform this request.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>RESOURCE_NOT_FOUND</code> - One or more inputs to this request were not found.
+     *        <code>RESOURCE_NOT_FOUND</code> – One or more inputs to this request were not found.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>THROTTLING</code> - The system temporarily lacks sufficient resources to process the request.
+     *        <code>THROTTLING</code> – The system temporarily lacks sufficient resources to process the request.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>INTERNAL_SERVICE_EXCEPTION</code> - An internal service error has occurred.
+     *        <code>INTERNAL_SERVICE_EXCEPTION</code> – An internal service error has occurred.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>CANCELLED</code> - Cancelled.
+     *        <code>CANCELLED</code> – Cancelled.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>USER_RECOVERABLE</code> - A user recoverable error has occurred.
+     *        <code>USER_RECOVERABLE</code> – A user recoverable error has occurred.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

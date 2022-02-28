@@ -60,8 +60,8 @@ public class OpenZFSFileSystemConfiguration implements Serializable, Cloneable, 
     private String deploymentType;
     /**
      * <p>
-     * The throughput of an Amazon FSx file system, measured in megabytes per second (MBps), in 2 to the nth increments,
-     * between 2^3 (8) and 2^11 (2048).
+     * The throughput of an Amazon FSx file system, measured in megabytes per second (MBps). Valid values are 64, 128,
+     * 256, 512, 1024, 2048, 3072, or 4096 MB/s.
      * </p>
      */
     private Integer throughputCapacity;
@@ -365,13 +365,13 @@ public class OpenZFSFileSystemConfiguration implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The throughput of an Amazon FSx file system, measured in megabytes per second (MBps), in 2 to the nth increments,
-     * between 2^3 (8) and 2^11 (2048).
+     * The throughput of an Amazon FSx file system, measured in megabytes per second (MBps). Valid values are 64, 128,
+     * 256, 512, 1024, 2048, 3072, or 4096 MB/s.
      * </p>
      * 
      * @param throughputCapacity
-     *        The throughput of an Amazon FSx file system, measured in megabytes per second (MBps), in 2 to the nth
-     *        increments, between 2^3 (8) and 2^11 (2048).
+     *        The throughput of an Amazon FSx file system, measured in megabytes per second (MBps). Valid values are 64,
+     *        128, 256, 512, 1024, 2048, 3072, or 4096 MB/s.
      */
 
     public void setThroughputCapacity(Integer throughputCapacity) {
@@ -380,12 +380,12 @@ public class OpenZFSFileSystemConfiguration implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The throughput of an Amazon FSx file system, measured in megabytes per second (MBps), in 2 to the nth increments,
-     * between 2^3 (8) and 2^11 (2048).
+     * The throughput of an Amazon FSx file system, measured in megabytes per second (MBps). Valid values are 64, 128,
+     * 256, 512, 1024, 2048, 3072, or 4096 MB/s.
      * </p>
      * 
-     * @return The throughput of an Amazon FSx file system, measured in megabytes per second (MBps), in 2 to the nth
-     *         increments, between 2^3 (8) and 2^11 (2048).
+     * @return The throughput of an Amazon FSx file system, measured in megabytes per second (MBps). Valid values are
+     *         64, 128, 256, 512, 1024, 2048, 3072, or 4096 MB/s.
      */
 
     public Integer getThroughputCapacity() {
@@ -394,13 +394,13 @@ public class OpenZFSFileSystemConfiguration implements Serializable, Cloneable, 
 
     /**
      * <p>
-     * The throughput of an Amazon FSx file system, measured in megabytes per second (MBps), in 2 to the nth increments,
-     * between 2^3 (8) and 2^11 (2048).
+     * The throughput of an Amazon FSx file system, measured in megabytes per second (MBps). Valid values are 64, 128,
+     * 256, 512, 1024, 2048, 3072, or 4096 MB/s.
      * </p>
      * 
      * @param throughputCapacity
-     *        The throughput of an Amazon FSx file system, measured in megabytes per second (MBps), in 2 to the nth
-     *        increments, between 2^3 (8) and 2^11 (2048).
+     *        The throughput of an Amazon FSx file system, measured in megabytes per second (MBps). Valid values are 64,
+     *        128, 256, 512, 1024, 2048, 3072, or 4096 MB/s.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 

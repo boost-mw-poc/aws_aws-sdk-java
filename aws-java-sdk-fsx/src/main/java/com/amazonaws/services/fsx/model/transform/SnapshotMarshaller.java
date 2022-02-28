@@ -40,6 +40,8 @@ public class SnapshotMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("CreationTime").timestampFormat("unixTimestamp").build();
     private static final MarshallingInfo<String> LIFECYCLE_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Lifecycle").build();
+    private static final MarshallingInfo<StructuredPojo> LIFECYCLETRANSITIONREASON_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("LifecycleTransitionReason").build();
     private static final MarshallingInfo<List> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.LIST).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("Tags").build();
     private static final MarshallingInfo<List> ADMINISTRATIVEACTIONS_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
@@ -67,6 +69,7 @@ public class SnapshotMarshaller {
             protocolMarshaller.marshall(snapshot.getVolumeId(), VOLUMEID_BINDING);
             protocolMarshaller.marshall(snapshot.getCreationTime(), CREATIONTIME_BINDING);
             protocolMarshaller.marshall(snapshot.getLifecycle(), LIFECYCLE_BINDING);
+            protocolMarshaller.marshall(snapshot.getLifecycleTransitionReason(), LIFECYCLETRANSITIONREASON_BINDING);
             protocolMarshaller.marshall(snapshot.getTags(), TAGS_BINDING);
             protocolMarshaller.marshall(snapshot.getAdministrativeActions(), ADMINISTRATIVEACTIONS_BINDING);
         } catch (Exception e) {

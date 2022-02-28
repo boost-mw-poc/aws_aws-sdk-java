@@ -41,6 +41,8 @@ public class UpdateExperimentTemplateRequestMarshaller {
             .marshallLocationName("actions").build();
     private static final MarshallingInfo<String> ROLEARN_BINDING = MarshallingInfo.builder(MarshallingType.STRING).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("roleArn").build();
+    private static final MarshallingInfo<StructuredPojo> LOGCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("logConfiguration").build();
 
     private static final UpdateExperimentTemplateRequestMarshaller instance = new UpdateExperimentTemplateRequestMarshaller();
 
@@ -64,6 +66,7 @@ public class UpdateExperimentTemplateRequestMarshaller {
             protocolMarshaller.marshall(updateExperimentTemplateRequest.getTargets(), TARGETS_BINDING);
             protocolMarshaller.marshall(updateExperimentTemplateRequest.getActions(), ACTIONS_BINDING);
             protocolMarshaller.marshall(updateExperimentTemplateRequest.getRoleArn(), ROLEARN_BINDING);
+            protocolMarshaller.marshall(updateExperimentTemplateRequest.getLogConfiguration(), LOGCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

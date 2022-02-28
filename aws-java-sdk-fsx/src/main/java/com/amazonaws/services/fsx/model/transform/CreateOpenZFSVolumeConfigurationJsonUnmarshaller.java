@@ -60,6 +60,10 @@ public class CreateOpenZFSVolumeConfigurationJsonUnmarshaller implements Unmarsh
                     context.nextToken();
                     createOpenZFSVolumeConfiguration.setStorageCapacityQuotaGiB(context.getUnmarshaller(Integer.class).unmarshall(context));
                 }
+                if (context.testExpression("RecordSizeKiB", targetDepth)) {
+                    context.nextToken();
+                    createOpenZFSVolumeConfiguration.setRecordSizeKiB(context.getUnmarshaller(Integer.class).unmarshall(context));
+                }
                 if (context.testExpression("DataCompressionType", targetDepth)) {
                     context.nextToken();
                     createOpenZFSVolumeConfiguration.setDataCompressionType(context.getUnmarshaller(String.class).unmarshall(context));

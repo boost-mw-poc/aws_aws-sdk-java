@@ -45,12 +45,12 @@ public class CreateDatasetRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <ul>
      * <li>
      * <p>
-     * <code>TABULAR</code> - Data is structured in a tabular format.
+     * <code>TABULAR</code> – Data is structured in a tabular format.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>NON_TABULAR</code> - Data is structured in a non-tabular format.
+     * <code>NON_TABULAR</code> – Data is structured in a non-tabular format.
      * </p>
      * </li>
      * </ul>
@@ -174,12 +174,12 @@ public class CreateDatasetRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <ul>
      * <li>
      * <p>
-     * <code>TABULAR</code> - Data is structured in a tabular format.
+     * <code>TABULAR</code> – Data is structured in a tabular format.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>NON_TABULAR</code> - Data is structured in a non-tabular format.
+     * <code>NON_TABULAR</code> – Data is structured in a non-tabular format.
      * </p>
      * </li>
      * </ul>
@@ -189,12 +189,12 @@ public class CreateDatasetRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>TABULAR</code> - Data is structured in a tabular format.
+     *        <code>TABULAR</code> – Data is structured in a tabular format.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>NON_TABULAR</code> - Data is structured in a non-tabular format.
+     *        <code>NON_TABULAR</code> – Data is structured in a non-tabular format.
      *        </p>
      *        </li>
      * @see DatasetKind
@@ -211,12 +211,12 @@ public class CreateDatasetRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <ul>
      * <li>
      * <p>
-     * <code>TABULAR</code> - Data is structured in a tabular format.
+     * <code>TABULAR</code> – Data is structured in a tabular format.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>NON_TABULAR</code> - Data is structured in a non-tabular format.
+     * <code>NON_TABULAR</code> – Data is structured in a non-tabular format.
      * </p>
      * </li>
      * </ul>
@@ -225,12 +225,12 @@ public class CreateDatasetRequest extends com.amazonaws.AmazonWebServiceRequest 
      *         <ul>
      *         <li>
      *         <p>
-     *         <code>TABULAR</code> - Data is structured in a tabular format.
+     *         <code>TABULAR</code> – Data is structured in a tabular format.
      *         </p>
      *         </li>
      *         <li>
      *         <p>
-     *         <code>NON_TABULAR</code> - Data is structured in a non-tabular format.
+     *         <code>NON_TABULAR</code> – Data is structured in a non-tabular format.
      *         </p>
      *         </li>
      * @see DatasetKind
@@ -247,12 +247,12 @@ public class CreateDatasetRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <ul>
      * <li>
      * <p>
-     * <code>TABULAR</code> - Data is structured in a tabular format.
+     * <code>TABULAR</code> – Data is structured in a tabular format.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>NON_TABULAR</code> - Data is structured in a non-tabular format.
+     * <code>NON_TABULAR</code> – Data is structured in a non-tabular format.
      * </p>
      * </li>
      * </ul>
@@ -262,12 +262,12 @@ public class CreateDatasetRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>TABULAR</code> - Data is structured in a tabular format.
+     *        <code>TABULAR</code> – Data is structured in a tabular format.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>NON_TABULAR</code> - Data is structured in a non-tabular format.
+     *        <code>NON_TABULAR</code> – Data is structured in a non-tabular format.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.
@@ -286,12 +286,12 @@ public class CreateDatasetRequest extends com.amazonaws.AmazonWebServiceRequest 
      * <ul>
      * <li>
      * <p>
-     * <code>TABULAR</code> - Data is structured in a tabular format.
+     * <code>TABULAR</code> – Data is structured in a tabular format.
      * </p>
      * </li>
      * <li>
      * <p>
-     * <code>NON_TABULAR</code> - Data is structured in a non-tabular format.
+     * <code>NON_TABULAR</code> – Data is structured in a non-tabular format.
      * </p>
      * </li>
      * </ul>
@@ -301,12 +301,12 @@ public class CreateDatasetRequest extends com.amazonaws.AmazonWebServiceRequest 
      *        <ul>
      *        <li>
      *        <p>
-     *        <code>TABULAR</code> - Data is structured in a tabular format.
+     *        <code>TABULAR</code> – Data is structured in a tabular format.
      *        </p>
      *        </li>
      *        <li>
      *        <p>
-     *        <code>NON_TABULAR</code> - Data is structured in a non-tabular format.
+     *        <code>NON_TABULAR</code> – Data is structured in a non-tabular format.
      *        </p>
      *        </li>
      * @return Returns a reference to this object so that method calls can be chained together.

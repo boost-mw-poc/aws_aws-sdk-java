@@ -82,6 +82,12 @@ public class ExperimentTemplate implements Serializable, Cloneable, StructuredPo
      * </p>
      */
     private java.util.Map<String, String> tags;
+    /**
+     * <p>
+     * The configuration for experiment logging.
+     * </p>
+     */
+    private ExperimentTemplateLogConfiguration logConfiguration;
 
     /**
      * <p>
@@ -558,6 +564,46 @@ public class ExperimentTemplate implements Serializable, Cloneable, StructuredPo
     }
 
     /**
+     * <p>
+     * The configuration for experiment logging.
+     * </p>
+     * 
+     * @param logConfiguration
+     *        The configuration for experiment logging.
+     */
+
+    public void setLogConfiguration(ExperimentTemplateLogConfiguration logConfiguration) {
+        this.logConfiguration = logConfiguration;
+    }
+
+    /**
+     * <p>
+     * The configuration for experiment logging.
+     * </p>
+     * 
+     * @return The configuration for experiment logging.
+     */
+
+    public ExperimentTemplateLogConfiguration getLogConfiguration() {
+        return this.logConfiguration;
+    }
+
+    /**
+     * <p>
+     * The configuration for experiment logging.
+     * </p>
+     * 
+     * @param logConfiguration
+     *        The configuration for experiment logging.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ExperimentTemplate withLogConfiguration(ExperimentTemplateLogConfiguration logConfiguration) {
+        setLogConfiguration(logConfiguration);
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -586,7 +632,9 @@ public class ExperimentTemplate implements Serializable, Cloneable, StructuredPo
         if (getRoleArn() != null)
             sb.append("RoleArn: ").append(getRoleArn()).append(",");
         if (getTags() != null)
-            sb.append("Tags: ").append(getTags());
+            sb.append("Tags: ").append(getTags()).append(",");
+        if (getLogConfiguration() != null)
+            sb.append("LogConfiguration: ").append(getLogConfiguration());
         sb.append("}");
         return sb.toString();
     }
@@ -637,6 +685,10 @@ public class ExperimentTemplate implements Serializable, Cloneable, StructuredPo
             return false;
         if (other.getTags() != null && other.getTags().equals(this.getTags()) == false)
             return false;
+        if (other.getLogConfiguration() == null ^ this.getLogConfiguration() == null)
+            return false;
+        if (other.getLogConfiguration() != null && other.getLogConfiguration().equals(this.getLogConfiguration()) == false)
+            return false;
         return true;
     }
 
@@ -654,6 +706,7 @@ public class ExperimentTemplate implements Serializable, Cloneable, StructuredPo
         hashCode = prime * hashCode + ((getLastUpdateTime() == null) ? 0 : getLastUpdateTime().hashCode());
         hashCode = prime * hashCode + ((getRoleArn() == null) ? 0 : getRoleArn().hashCode());
         hashCode = prime * hashCode + ((getTags() == null) ? 0 : getTags().hashCode());
+        hashCode = prime * hashCode + ((getLogConfiguration() == null) ? 0 : getLogConfiguration().hashCode());
         return hashCode;
     }
 

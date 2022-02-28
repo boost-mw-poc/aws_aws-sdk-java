@@ -30,6 +30,8 @@ public class UpdateRoutingControlStatesRequestMarshaller {
 
     private static final MarshallingInfo<List> UPDATEROUTINGCONTROLSTATEENTRIES_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("UpdateRoutingControlStateEntries").build();
+    private static final MarshallingInfo<List> SAFETYRULESTOOVERRIDE_BINDING = MarshallingInfo.builder(MarshallingType.LIST)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("SafetyRulesToOverride").build();
 
     private static final UpdateRoutingControlStatesRequestMarshaller instance = new UpdateRoutingControlStatesRequestMarshaller();
 
@@ -48,6 +50,7 @@ public class UpdateRoutingControlStatesRequestMarshaller {
 
         try {
             protocolMarshaller.marshall(updateRoutingControlStatesRequest.getUpdateRoutingControlStateEntries(), UPDATEROUTINGCONTROLSTATEENTRIES_BINDING);
+            protocolMarshaller.marshall(updateRoutingControlStatesRequest.getSafetyRulesToOverride(), SAFETYRULESTOOVERRIDE_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

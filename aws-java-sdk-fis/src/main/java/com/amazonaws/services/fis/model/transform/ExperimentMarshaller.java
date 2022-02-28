@@ -51,6 +51,8 @@ public class ExperimentMarshaller {
             .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("endTime").timestampFormat("unixTimestamp").build();
     private static final MarshallingInfo<Map> TAGS_BINDING = MarshallingInfo.builder(MarshallingType.MAP).marshallLocation(MarshallLocation.PAYLOAD)
             .marshallLocationName("tags").build();
+    private static final MarshallingInfo<StructuredPojo> LOGCONFIGURATION_BINDING = MarshallingInfo.builder(MarshallingType.STRUCTURED)
+            .marshallLocation(MarshallLocation.PAYLOAD).marshallLocationName("logConfiguration").build();
 
     private static final ExperimentMarshaller instance = new ExperimentMarshaller();
 
@@ -79,6 +81,7 @@ public class ExperimentMarshaller {
             protocolMarshaller.marshall(experiment.getStartTime(), STARTTIME_BINDING);
             protocolMarshaller.marshall(experiment.getEndTime(), ENDTIME_BINDING);
             protocolMarshaller.marshall(experiment.getTags(), TAGS_BINDING);
+            protocolMarshaller.marshall(experiment.getLogConfiguration(), LOGCONFIGURATION_BINDING);
         } catch (Exception e) {
             throw new SdkClientException("Unable to marshall request to JSON: " + e.getMessage(), e);
         }

@@ -74,8 +74,25 @@ public class ImageAttribute implements Serializable, Cloneable {
      * </p>
      */
     private String sriovNetSupport;
-
+    /**
+     * <p>
+     * The boot mode.
+     * </p>
+     */
     private String bootMode;
+    /**
+     * <p>
+     * The date and time, in <a href="http://www.iso.org/iso/iso8601">ISO 8601 date-time format</a>, when the AMI was
+     * last used to launch an EC2 instance. When the AMI is used, there is a 24-hour delay before that usage is
+     * reported.
+     * </p>
+     * <note>
+     * <p>
+     * <code>lastLaunchedTime</code> data is available starting April 2017.
+     * </p>
+     * </note>
+     */
+    private String lastLaunchedTime;
 
     /**
      * <p>
@@ -497,7 +514,12 @@ public class ImageAttribute implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * The boot mode.
+     * </p>
+     * 
      * @param bootMode
+     *        The boot mode.
      */
 
     public void setBootMode(String bootMode) {
@@ -505,7 +527,11 @@ public class ImageAttribute implements Serializable, Cloneable {
     }
 
     /**
-     * @return
+     * <p>
+     * The boot mode.
+     * </p>
+     * 
+     * @return The boot mode.
      */
 
     public String getBootMode() {
@@ -513,12 +539,93 @@ public class ImageAttribute implements Serializable, Cloneable {
     }
 
     /**
+     * <p>
+     * The boot mode.
+     * </p>
+     * 
      * @param bootMode
+     *        The boot mode.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
     public ImageAttribute withBootMode(String bootMode) {
         setBootMode(bootMode);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The date and time, in <a href="http://www.iso.org/iso/iso8601">ISO 8601 date-time format</a>, when the AMI was
+     * last used to launch an EC2 instance. When the AMI is used, there is a 24-hour delay before that usage is
+     * reported.
+     * </p>
+     * <note>
+     * <p>
+     * <code>lastLaunchedTime</code> data is available starting April 2017.
+     * </p>
+     * </note>
+     * 
+     * @param lastLaunchedTime
+     *        The date and time, in <a href="http://www.iso.org/iso/iso8601">ISO 8601 date-time format</a>, when the AMI
+     *        was last used to launch an EC2 instance. When the AMI is used, there is a 24-hour delay before that usage
+     *        is reported.</p> <note>
+     *        <p>
+     *        <code>lastLaunchedTime</code> data is available starting April 2017.
+     *        </p>
+     */
+
+    public void setLastLaunchedTime(String lastLaunchedTime) {
+        this.lastLaunchedTime = lastLaunchedTime;
+    }
+
+    /**
+     * <p>
+     * The date and time, in <a href="http://www.iso.org/iso/iso8601">ISO 8601 date-time format</a>, when the AMI was
+     * last used to launch an EC2 instance. When the AMI is used, there is a 24-hour delay before that usage is
+     * reported.
+     * </p>
+     * <note>
+     * <p>
+     * <code>lastLaunchedTime</code> data is available starting April 2017.
+     * </p>
+     * </note>
+     * 
+     * @return The date and time, in <a href="http://www.iso.org/iso/iso8601">ISO 8601 date-time format</a>, when the
+     *         AMI was last used to launch an EC2 instance. When the AMI is used, there is a 24-hour delay before that
+     *         usage is reported.</p> <note>
+     *         <p>
+     *         <code>lastLaunchedTime</code> data is available starting April 2017.
+     *         </p>
+     */
+
+    public String getLastLaunchedTime() {
+        return this.lastLaunchedTime;
+    }
+
+    /**
+     * <p>
+     * The date and time, in <a href="http://www.iso.org/iso/iso8601">ISO 8601 date-time format</a>, when the AMI was
+     * last used to launch an EC2 instance. When the AMI is used, there is a 24-hour delay before that usage is
+     * reported.
+     * </p>
+     * <note>
+     * <p>
+     * <code>lastLaunchedTime</code> data is available starting April 2017.
+     * </p>
+     * </note>
+     * 
+     * @param lastLaunchedTime
+     *        The date and time, in <a href="http://www.iso.org/iso/iso8601">ISO 8601 date-time format</a>, when the AMI
+     *        was last used to launch an EC2 instance. When the AMI is used, there is a 24-hour delay before that usage
+     *        is reported.</p> <note>
+     *        <p>
+     *        <code>lastLaunchedTime</code> data is available starting April 2017.
+     *        </p>
+     * @return Returns a reference to this object so that method calls can be chained together.
+     */
+
+    public ImageAttribute withLastLaunchedTime(String lastLaunchedTime) {
+        setLastLaunchedTime(lastLaunchedTime);
         return this;
     }
 
@@ -551,7 +658,9 @@ public class ImageAttribute implements Serializable, Cloneable {
         if (getSriovNetSupport() != null)
             sb.append("SriovNetSupport: ").append(getSriovNetSupport()).append(",");
         if (getBootMode() != null)
-            sb.append("BootMode: ").append(getBootMode());
+            sb.append("BootMode: ").append(getBootMode()).append(",");
+        if (getLastLaunchedTime() != null)
+            sb.append("LastLaunchedTime: ").append(getLastLaunchedTime());
         sb.append("}");
         return sb.toString();
     }
@@ -602,6 +711,10 @@ public class ImageAttribute implements Serializable, Cloneable {
             return false;
         if (other.getBootMode() != null && other.getBootMode().equals(this.getBootMode()) == false)
             return false;
+        if (other.getLastLaunchedTime() == null ^ this.getLastLaunchedTime() == null)
+            return false;
+        if (other.getLastLaunchedTime() != null && other.getLastLaunchedTime().equals(this.getLastLaunchedTime()) == false)
+            return false;
         return true;
     }
 
@@ -619,6 +732,7 @@ public class ImageAttribute implements Serializable, Cloneable {
         hashCode = prime * hashCode + ((getRamdiskId() == null) ? 0 : getRamdiskId().hashCode());
         hashCode = prime * hashCode + ((getSriovNetSupport() == null) ? 0 : getSriovNetSupport().hashCode());
         hashCode = prime * hashCode + ((getBootMode() == null) ? 0 : getBootMode().hashCode());
+        hashCode = prime * hashCode + ((getLastLaunchedTime() == null) ? 0 : getLastLaunchedTime().hashCode());
         return hashCode;
     }
 

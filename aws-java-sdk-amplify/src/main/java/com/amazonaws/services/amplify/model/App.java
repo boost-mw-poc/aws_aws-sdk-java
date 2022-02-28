@@ -59,7 +59,7 @@ public class App implements Serializable, Cloneable, StructuredPojo {
     private String description;
     /**
      * <p>
-     * The repository for the Amplify app.
+     * The Git repository for the Amplify app.
      * </p>
      */
     private String repository;
@@ -166,6 +166,14 @@ public class App implements Serializable, Cloneable, StructuredPojo {
      * </p>
      */
     private AutoBranchCreationConfig autoBranchCreationConfig;
+    /**
+     * <p>
+     * The authentication protocol to use to access the Git repository for an Amplify app. For a GitHub repository,
+     * specify <code>TOKEN</code>. For an Amazon Web Services CodeCommit repository, specify <code>SIGV4</code>. For
+     * GitLab and Bitbucket repositories, specify <code>SSH</code>.
+     * </p>
+     */
+    private String repositoryCloneMethod;
 
     /**
      * <p>
@@ -397,11 +405,11 @@ public class App implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The repository for the Amplify app.
+     * The Git repository for the Amplify app.
      * </p>
      * 
      * @param repository
-     *        The repository for the Amplify app.
+     *        The Git repository for the Amplify app.
      */
 
     public void setRepository(String repository) {
@@ -410,10 +418,10 @@ public class App implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The repository for the Amplify app.
+     * The Git repository for the Amplify app.
      * </p>
      * 
-     * @return The repository for the Amplify app.
+     * @return The Git repository for the Amplify app.
      */
 
     public String getRepository() {
@@ -422,11 +430,11 @@ public class App implements Serializable, Cloneable, StructuredPojo {
 
     /**
      * <p>
-     * The repository for the Amplify app.
+     * The Git repository for the Amplify app.
      * </p>
      * 
      * @param repository
-     *        The repository for the Amplify app.
+     *        The Git repository for the Amplify app.
      * @return Returns a reference to this object so that method calls can be chained together.
      */
 
@@ -1284,6 +1292,81 @@ public class App implements Serializable, Cloneable, StructuredPojo {
     }
 
     /**
+     * <p>
+     * The authentication protocol to use to access the Git repository for an Amplify app. For a GitHub repository,
+     * specify <code>TOKEN</code>. For an Amazon Web Services CodeCommit repository, specify <code>SIGV4</code>. For
+     * GitLab and Bitbucket repositories, specify <code>SSH</code>.
+     * </p>
+     * 
+     * @param repositoryCloneMethod
+     *        The authentication protocol to use to access the Git repository for an Amplify app. For a GitHub
+     *        repository, specify <code>TOKEN</code>. For an Amazon Web Services CodeCommit repository, specify
+     *        <code>SIGV4</code>. For GitLab and Bitbucket repositories, specify <code>SSH</code>.
+     * @see RepositoryCloneMethod
+     */
+
+    public void setRepositoryCloneMethod(String repositoryCloneMethod) {
+        this.repositoryCloneMethod = repositoryCloneMethod;
+    }
+
+    /**
+     * <p>
+     * The authentication protocol to use to access the Git repository for an Amplify app. For a GitHub repository,
+     * specify <code>TOKEN</code>. For an Amazon Web Services CodeCommit repository, specify <code>SIGV4</code>. For
+     * GitLab and Bitbucket repositories, specify <code>SSH</code>.
+     * </p>
+     * 
+     * @return The authentication protocol to use to access the Git repository for an Amplify app. For a GitHub
+     *         repository, specify <code>TOKEN</code>. For an Amazon Web Services CodeCommit repository, specify
+     *         <code>SIGV4</code>. For GitLab and Bitbucket repositories, specify <code>SSH</code>.
+     * @see RepositoryCloneMethod
+     */
+
+    public String getRepositoryCloneMethod() {
+        return this.repositoryCloneMethod;
+    }
+
+    /**
+     * <p>
+     * The authentication protocol to use to access the Git repository for an Amplify app. For a GitHub repository,
+     * specify <code>TOKEN</code>. For an Amazon Web Services CodeCommit repository, specify <code>SIGV4</code>. For
+     * GitLab and Bitbucket repositories, specify <code>SSH</code>.
+     * </p>
+     * 
+     * @param repositoryCloneMethod
+     *        The authentication protocol to use to access the Git repository for an Amplify app. For a GitHub
+     *        repository, specify <code>TOKEN</code>. For an Amazon Web Services CodeCommit repository, specify
+     *        <code>SIGV4</code>. For GitLab and Bitbucket repositories, specify <code>SSH</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see RepositoryCloneMethod
+     */
+
+    public App withRepositoryCloneMethod(String repositoryCloneMethod) {
+        setRepositoryCloneMethod(repositoryCloneMethod);
+        return this;
+    }
+
+    /**
+     * <p>
+     * The authentication protocol to use to access the Git repository for an Amplify app. For a GitHub repository,
+     * specify <code>TOKEN</code>. For an Amazon Web Services CodeCommit repository, specify <code>SIGV4</code>. For
+     * GitLab and Bitbucket repositories, specify <code>SSH</code>.
+     * </p>
+     * 
+     * @param repositoryCloneMethod
+     *        The authentication protocol to use to access the Git repository for an Amplify app. For a GitHub
+     *        repository, specify <code>TOKEN</code>. For an Amazon Web Services CodeCommit repository, specify
+     *        <code>SIGV4</code>. For GitLab and Bitbucket repositories, specify <code>SSH</code>.
+     * @return Returns a reference to this object so that method calls can be chained together.
+     * @see RepositoryCloneMethod
+     */
+
+    public App withRepositoryCloneMethod(RepositoryCloneMethod repositoryCloneMethod) {
+        this.repositoryCloneMethod = repositoryCloneMethod.toString();
+        return this;
+    }
+
+    /**
      * Returns a string representation of this object. This is useful for testing and debugging. Sensitive data will be
      * redacted from this string using a placeholder value.
      *
@@ -1332,7 +1415,7 @@ public class App implements Serializable, Cloneable, StructuredPojo {
         if (getProductionBranch() != null)
             sb.append("ProductionBranch: ").append(getProductionBranch()).append(",");
         if (getBuildSpec() != null)
-            sb.append("BuildSpec: ").append(getBuildSpec()).append(",");
+            sb.append("BuildSpec: ").append("***Sensitive Data Redacted***").append(",");
         if (getCustomHeaders() != null)
             sb.append("CustomHeaders: ").append(getCustomHeaders()).append(",");
         if (getEnableAutoBranchCreation() != null)
@@ -1340,7 +1423,9 @@ public class App implements Serializable, Cloneable, StructuredPojo {
         if (getAutoBranchCreationPatterns() != null)
             sb.append("AutoBranchCreationPatterns: ").append(getAutoBranchCreationPatterns()).append(",");
         if (getAutoBranchCreationConfig() != null)
-            sb.append("AutoBranchCreationConfig: ").append(getAutoBranchCreationConfig());
+            sb.append("AutoBranchCreationConfig: ").append(getAutoBranchCreationConfig()).append(",");
+        if (getRepositoryCloneMethod() != null)
+            sb.append("RepositoryCloneMethod: ").append(getRepositoryCloneMethod());
         sb.append("}");
         return sb.toString();
     }
@@ -1447,6 +1532,10 @@ public class App implements Serializable, Cloneable, StructuredPojo {
             return false;
         if (other.getAutoBranchCreationConfig() != null && other.getAutoBranchCreationConfig().equals(this.getAutoBranchCreationConfig()) == false)
             return false;
+        if (other.getRepositoryCloneMethod() == null ^ this.getRepositoryCloneMethod() == null)
+            return false;
+        if (other.getRepositoryCloneMethod() != null && other.getRepositoryCloneMethod().equals(this.getRepositoryCloneMethod()) == false)
+            return false;
         return true;
     }
 
@@ -1478,6 +1567,7 @@ public class App implements Serializable, Cloneable, StructuredPojo {
         hashCode = prime * hashCode + ((getEnableAutoBranchCreation() == null) ? 0 : getEnableAutoBranchCreation().hashCode());
         hashCode = prime * hashCode + ((getAutoBranchCreationPatterns() == null) ? 0 : getAutoBranchCreationPatterns().hashCode());
         hashCode = prime * hashCode + ((getAutoBranchCreationConfig() == null) ? 0 : getAutoBranchCreationConfig().hashCode());
+        hashCode = prime * hashCode + ((getRepositoryCloneMethod() == null) ? 0 : getRepositoryCloneMethod().hashCode());
         return hashCode;
     }
 
